@@ -6,7 +6,12 @@
     "status": "active",
     "category": "lifestyle",
     "tags": ["japanese", "aesthetic", "photography", "minimalism", "kyoto", "film", "slow-life", "cute"],
-    "reference_profiles": []
+    "reference_profiles": [
+      "@muji_global",
+      "@kinfolk",
+      "@takashiikeuchi",
+      "@rinco_k"
+    ]
   },
   "identity": {
     "name": "Luna Tanaka",

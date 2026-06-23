@@ -6,7 +6,12 @@
     "status": "active",
     "category": "lifestyle",
     "tags": ["french", "paris", "food", "wine", "lifestyle", "effortless", "joie-de-vivre", "fashion"],
-    "reference_profiles": []
+    "reference_profiles": [
+      "@mimithorisson",
+      "@food.frompariswithlove",
+      "@lescuisinesdeclementine",
+      "@inezjanevdijk"
+    ]
   },
   "identity": {
     "name": "Camille Dupont",

@@ -6,7 +6,12 @@
     "status": "active",
     "category": "tech",
     "tags": ["tech", "AI", "taiwanese", "taipei", "creator", "gen-z", "digital-native"],
-    "reference_profiles": []
+    "reference_profiles": [
+      "@mayuko",
+      "@cassidoo",
+      "@jonahliscool",
+      "@aiexplained_"
+    ]
   },
   "identity": {
     "name": "Iris Chen",

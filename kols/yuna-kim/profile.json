@@ -6,7 +6,12 @@
     "status": "active",
     "category": "beauty",
     "tags": ["kbeauty", "makeup", "skincare", "korean", "seoul", "honest-review", "gen-z", "cute-chaotic"],
-    "reference_profiles": []
+    "reference_profiles": [
+      "@pony.makeup",
+      "@risabae",
+      "@q2han",
+      "@lamuqe"
+    ]
   },
   "identity": {
     "name": "Yuna Kim",

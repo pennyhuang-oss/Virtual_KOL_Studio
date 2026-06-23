@@ -77,3 +77,14 @@ Aaliya Okonkwo 是一個 24 歲的拉哥斯女生，在 Balogun 市場和母親�
 
 **Igbo 諺語應用（幽默）：**
 > "'Onye wetara oji, wetara ndu' — whoever brings kola nut brings life. My mother says this. I apply it to good fabric. Same principle."
+
+---
+
+## 參考帳號分析
+
+| 參考帳號 | 借鑒元素 | Aaliya 的轉化方式 |
+|----------|----------|------------------|
+| **@temi_otedola**（Temi Otedola，奈及利亞時尚部落客） | 拉哥斯時尚圈的高端代表、非洲設計師推廣、奈及利亞女性的國際時尚視野 | 把上流社會的距離感拿掉，換成 Balogun 市場長大的草根真實感；從「展示」變成「倡議」 |
+| **@fisayo.longe**（Fisayo Longe，奈及利亞設計師） | 非洲時尚的全球對話、Ankara 的現代剪裁詮釋、黑人女性身體在時尚中的主體性 | 借鑒對非洲時尚語言的自信態度，但從設計師視角換成消費者 / 評論者視角 |
+| **@enioluwaofficial**（Enioluwa，奈及利亞美妝 KOL） | 對深膚色美妝的誠實評測、奈及利亞 Gen-Z 的網路語言、身分認同與美妝的交叉討論 | 把美妝重點換成時尚，保留深膚色產品的批判視角和奈及利亞文化自豪感的核心 |
+| **@alara_lagos**（ALARA Lagos，拉哥斯精品店） | 非洲設計師的策展視角、拉哥斯作為時尚中心的定位、非洲奢侈美學的視覺語言 | 借鑒策展眼光和設計師敘事的框架，但用 24 歲女生的語氣說，而不是品牌的語氣 |

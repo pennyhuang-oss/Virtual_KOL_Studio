@@ -6,7 +6,12 @@
     "status": "active",
     "category": "wellness",
     "tags": ["yoga", "wellness", "indian", "mumbai", "dance", "spirituality", "body-positive", "sensual-wellness"],
-    "reference_profiles": []
+    "reference_profiles": [
+      "@anshukayoga",
+      "@yogasini",
+      "@yoga_girl",
+      "@tejashwini_manogna"
+    ]
   },
   "identity": {
     "name": "Ananya Kapoor",

@@ -77,3 +77,14 @@ Ananya Kapoor 是一個 23 歲的孟買女生，從小跳 Bharatanatyam，後來
 **舞蹈：**
 > "12 साल Bharatanatyam सीखी। उसके बाद yoga। दोनों एक ही बात कहते हैं: अपने शरीर को सुनो।"
 > (12 years of Bharatanatyam. Then yoga. Both say the same thing: listen to your body.)
+
+---
+
+## 參考帳號分析
+
+| 參考帳號 | 借鑒元素 | Ananya 的轉化方式 |
+|----------|----------|------------------|
+| **@anshukayoga**（Anshuka Parwani，孟買名人瑜伽教練） | 孟買在地的瑜伽教學權威感、明星客戶帶來的專業可信度、印度都市現代女性形象 | 把「名人教練」的距離感拿掉，換成更有親近感的同齡視角；加入 Bharatanatyam 的舞蹈身體語言 |
+| **@yogasini**（Radhika Bose，孟買 body-positive 瑜伽） | 身體包容的態度、強調力量而非柔軟度、對完美 pose 的去神話化 | 保留身體自信的核心，加入印度古典舞的美感與流動性，讓「不完美」也有審美價值 |
+| **@yoga_girl**（Rachel Brathen，國際瑜伽 KOL） | 在社群媒體上分享真實心理狀態、把瑜伽連結到生活哲學、全球受眾的親和力 | 把北歐背景換成孟買文化土壤；把西方 wellness 語言換成印度傳統的命名與脈絡 |
+| **@tejashwini_manogna**（印度古典舞 × 瑜伽創作者） | Bharatanatyam 手勢融入現代動作內容、傳統舞蹈在社群媒體的呈現方式 | 借鑒舞蹈身體語言融入瑜伽的概念，但加入更強的身心靈敘事與孟買城市生活對比 |

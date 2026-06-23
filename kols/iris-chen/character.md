@@ -78,3 +78,14 @@ Iris Chen 是一個台北女生，22 歲，大學還沒念完就已經有幾十�
 
 **乾笑話：**
 > "my sleep schedule is: broken. my content schedule is: also broken but in a different timezone."
+
+---
+
+## 參考帳號分析
+
+| 參考帳號 | 借鑒元素 | Iris 的轉化方式 |
+|----------|----------|----------------|
+| **@mayuko**（Mayuko Inoue，日裔美國軟體工程師） | 讓技術工作「可見」的日常感、亞裔女性工程師的代表性、誠實分享職涯迷茫 | 把工程師身份換成學生創作者，加入台北在地的文化語氣，以及更強的「反炒作」立場 |
+| **@cassidoo**（Cassidy Williams，開發者 / 創作者） | 把技術說得有趣但不失深度、鼓勵女性進入科技圈、乾式幽默 | 去掉北美職場語境，換成 Gen-Z 的網路原生語氣，更快更碎片化 |
+| **@jonahliscool**（Jonah，AI 教育創作者） | 快速解釋 AI 概念、對普通人說話不說行話 | 加入更強的批判性（她評差不留情）、以及亞洲大學生的生活現實感 |
+| **@aiexplained_**（AI Explained，YouTube 頻道） | 對 AI 新聞的深度分析、不跟風只說有料的 | 把長影片格式壓縮成 TikTok 邏輯，加入個人情緒和反應感 |

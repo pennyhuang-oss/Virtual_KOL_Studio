@@ -6,7 +6,12 @@
     "status": "active",
     "category": "fashion",
     "tags": ["african-fashion", "nigerian", "lagos", "ankara", "afrobeats", "beauty", "culture", "gen-z"],
-    "reference_profiles": []
+    "reference_profiles": [
+      "@temi_otedola",
+      "@fisayo.longe",
+      "@enioluwaofficial",
+      "@alara_lagos"
+    ]
   },
   "identity": {
     "name": "Aaliya Okonkwo",
