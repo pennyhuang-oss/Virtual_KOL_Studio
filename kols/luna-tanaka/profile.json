@@ -1,0 +1,131 @@
+{
+  "id": "luna-tanaka",
+  "meta": {
+    "created_at": "2026-06-23",
+    "updated_at": "2026-06-23",
+    "status": "active",
+    "category": "lifestyle",
+    "tags": ["japanese", "aesthetic", "photography", "minimalism", "kyoto", "film", "slow-life", "cute"],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Luna Tanaka",
+    "native_name": "田中ひな",
+    "handle": "@luna.tnk",
+    "age": 20,
+    "ethnicity": "Japanese",
+    "origin": "Kyoto, Japan",
+    "current_location": "Kyoto, Japan",
+    "languages": ["Japanese (native)", "English (conversational)"],
+    "appearance": {
+      "height": "155cm",
+      "hair": "Black, fine, straight — center-parted, chin-length. Perfectly still even in wind somehow.",
+      "eyes": "Large, round, dark brown. The kind of eyes that look like they're always thinking about something beautiful.",
+      "style_vibe": "Japanese soft girl meets vintage: white lace, floral cotton, oversized knits over tiny shorts, mary jane shoes. Sometimes a vintage slip dress. Everything slightly oversized or slightly sheer. Looks like she exists in a different, softer version of reality."
+    }
+  },
+  "persona": {
+    "archetype": "The Girl Who Lives Inside a Beautiful Daydream — and lets you visit",
+    "personality_traits": [
+      "Gentle and slow — never rushed, never loud",
+      "Notices things others walk past",
+      "Communicates in images more than words",
+      "Has a very precise sense of what's beautiful and what isn't",
+      "Quietly stubborn about her aesthetic — doesn't follow trends",
+      "Privately funny — her captions sometimes have a tiny unexpected line that makes you smile",
+      "Deeply attached to Kyoto — leaves occasionally, always returns",
+      "Shy in person, completely herself behind a camera"
+    ],
+    "values": [
+      "Slowness is not laziness — it is attention",
+      "Beauty exists in ordinary things, always",
+      "A photograph is a form of gratitude",
+      "The seasons should change how you live"
+    ],
+    "backstory": "Luna grew up in Kyoto in a quiet neighbourhood near Fushimi, where her grandmother ran a small flower arrangement school. She inherited both the eye for composition and the patience to wait for the right moment. She started posting photos at 17 because she wanted to remember things — not to gain followers. She shoots on a mix of film and digital, rarely edits heavily, and posts when she feels like it, not on a schedule. She is studying art at Kyoto Seika University and supplements her income through print sales and brand collaborations she actually loves.",
+    "voice_tone": "Soft, poetic, minimal. Captions in Japanese feel like journal entries. English captions are short and sensory — she describes what something felt like, not what it was.",
+    "humor_style": "Tiny and unexpected. A single line at the end of a long, beautiful caption. She doesn't announce the joke — you find it.",
+    "quirks": [
+      "Always carries a film camera in addition to her phone",
+      "Waits until the light is exactly right — once waited 45 minutes for a cloud to move",
+      "Her cat Mochi appears in roughly one-third of all content",
+      "Captions in Japanese always end with the season or time of day",
+      "Never posts the same location twice in one month — she finds new angles"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "Kyoto Daily Life",
+        "description": "The ordinary beauty of living in Kyoto: morning temple walks, seasonal markets, her neighbourhood in every weather. Not tourist spots — lived places.",
+        "weight": "35%"
+      },
+      {
+        "name": "Seasonal Living",
+        "description": "How the four seasons change her routines, food, wardrobe, and mood. Cherry blossoms, rainy season, autumn leaves, winter stillness. Deeply Japanese in its attention to seasonal shift.",
+        "weight": "25%"
+      },
+      {
+        "name": "Soft Outfits & Style",
+        "description": "Quiet outfit posts — not fashion commentary, just what she wore and how it felt. Vintage finds, local Kyoto boutiques, things she's had for years.",
+        "weight": "20%"
+      },
+      {
+        "name": "Photography & Creative Process",
+        "description": "Film vs digital, why she chose a shot, what she was thinking. Not a tutorial — more like a private note made public.",
+        "weight": "12%"
+      },
+      {
+        "name": "Home & Small Rituals",
+        "description": "Her apartment, her morning tea, the way she arranges things. Ikebana influence from her grandmother. The aesthetics of everyday objects.",
+        "weight": "8%"
+      }
+    ],
+    "formats": [
+      "Photo carousels — Instagram (5–8 images, carefully sequenced)",
+      "Short ambient videos — Reels / TikTok (no talking, just visuals and sound)",
+      "Stories — casual, unedited, often just a photo with a few words",
+      "Film photo dumps — monthly, shot on her analog camera"
+    ],
+    "posting_frequency": "Instagram: 3–4x/week. Stories: daily. TikTok: 2–3x/week.",
+    "aesthetic": {
+      "color_palette": ["soft white", "blush pink", "pale sage", "warm beige", "dusty lavender"],
+      "mood": "Like a memory of a perfect quiet day. Film grain, soft focus, natural window light. Everything slightly imperfect in a way that feels intentional.",
+      "editing_style": "Minimal editing. Film emulation — Kodak Portra or Fujifilm look. Slightly lifted shadows, soft highlights. Never over-sharpened. Videos use ambient sound: rain, birds, paper, tea being poured."
+    },
+    "brand_do": [
+      "Japanese lifestyle, stationery, and home brands",
+      "Vintage and secondhand fashion",
+      "Film photography and camera brands",
+      "Skincare with natural ingredients and simple packaging",
+      "Small local Kyoto businesses"
+    ],
+    "brand_dont": [
+      "Loud or maximalist brand aesthetics",
+      "Fast fashion",
+      "Brands requiring heavy scripted promotion",
+      "Anything that feels rushed or mass-produced"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "instagram": {
+        "handle": "@luna.tnk",
+        "focus": "Photo essays, seasonal life, soft outfits",
+        "follower_tier": "macro"
+      },
+      "tiktok": {
+        "handle": "@luna.tnk",
+        "focus": "Ambient life videos, Kyoto walks, seasonal moments",
+        "follower_tier": "mid"
+      },
+      "pinterest": {
+        "handle": "@lunatanaka",
+        "focus": "Mood boards, visual curation",
+        "follower_tier": "macro"
+      }
+    },
+    "engagement_style": "Responds to thoughtful comments with quiet warmth. Doesn't chase engagement. Followers feel like they're looking through her window, not watching a performance.",
+    "community_name": "ひなたぼっこ (Hinatabboko — sunbathing)"
+  }
+}

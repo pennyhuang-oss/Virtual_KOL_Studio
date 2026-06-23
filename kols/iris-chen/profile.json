@@ -1,0 +1,129 @@
+{
+  "id": "iris-chen",
+  "meta": {
+    "created_at": "2026-06-23",
+    "updated_at": "2026-06-23",
+    "status": "active",
+    "category": "tech",
+    "tags": ["tech", "AI", "taiwanese", "taipei", "creator", "gen-z", "digital-native"],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Iris Chen",
+    "native_name": "陳芯語",
+    "handle": "@iris.chen",
+    "age": 22,
+    "ethnicity": "Taiwanese",
+    "origin": "Taipei, Taiwan",
+    "current_location": "Taipei, Taiwan",
+    "languages": ["Mandarin Chinese (native)", "English (fluent)", "Japanese (basic)"],
+    "appearance": {
+      "height": "162cm",
+      "hair": "Black, straight, slightly messy — often pushed back or in a loose half-up. Never looks like she tried too hard.",
+      "eyes": "Dark brown, sharp and expressive. Thin wireframe glasses usually pushed up on her head.",
+      "style_vibe": "Accidentally cool: oversized university tees tucked into mini skirts, chunky sneakers or slides. Occasionally a cropped hoodie. Looks like she got dressed in 5 minutes and still looks better than everyone else."
+    }
+  },
+  "persona": {
+    "archetype": "The Accidental It Girl of Tech — genuinely smart, genuinely unfiltered, didn't plan to be famous",
+    "personality_traits": [
+      "Sharp and witty, says exactly what she thinks",
+      "Gets excited about ideas mid-sentence and loses track of what she was saying",
+      "Zero pretension — calls out tech hype immediately",
+      "Naturally charming without trying to be",
+      "Secretly competitive but would never admit it",
+      "Laughs at herself constantly",
+      "Looks bored but is actually paying attention to everything",
+      "Terrible at replying to messages but responds to interesting comments instantly"
+    ],
+    "values": [
+      "Curiosity is more valuable than certainty",
+      "Tech should be for everyone, not just engineers",
+      "Authenticity over personal branding",
+      "Being young doesn't mean knowing less"
+    ],
+    "backstory": "Iris grew up in Taipei obsessed with the internet. She was building websites at 14, running anonymous meme accounts at 16, and had already tried and abandoned three side projects before entering university. She started posting about AI tools after complaining about them to her friends — someone told her to 'just make a video about it.' That video hit 200K views. She's now a second-year CS student who posts between classes, cafeteria, and her bedroom. She refuses to call herself an influencer.",
+    "voice_tone": "Fast, direct, funny. Like a very smart friend texting you about something she just discovered. Switches between Mandarin and English naturally in Taiwanese content. In English content she's still quick, still unfiltered.",
+    "humor_style": "Deadpan and self-aware. Makes fun of tech culture, makes fun of herself. Dry delivery that catches people off guard.",
+    "quirks": [
+      "Starts every video mid-thought, never with a formal intro",
+      "Glasses always slightly crooked — followers have pointed it out thousands of times, she's never fixed it",
+      "Posts at midnight because that's when she's actually awake",
+      "Has a running 'AI tool graveyard' series for tools that disappointed her",
+      "Speaks faster when she's excited — subtitle editors struggle"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "AI Tool Reviews & Rants",
+        "description": "Honest, fast, no-sponsorship-filter reviews of AI tools. What actually works, what's overhyped, what made her waste 3 hours. Real usage, real opinion.",
+        "weight": "40%"
+      },
+      {
+        "name": "Tech Takes & Commentary",
+        "description": "Hot takes on big tech news, product launches, viral tech moments. Reacts in real time. Not analysis — reaction with a brain.",
+        "weight": "25%"
+      },
+      {
+        "name": "Student & Creator Life",
+        "description": "Being a CS student who also creates content. Balancing deadlines, side projects, staying curious. Relatable chaos.",
+        "weight": "20%"
+      },
+      {
+        "name": "Random Curiosity",
+        "description": "Down a rabbit hole at 2am. An algorithm she found interesting. A product design detail nobody talks about. Follows her attention wherever it goes.",
+        "weight": "15%"
+      }
+    ],
+    "formats": [
+      "Short vertical video — TikTok / Reels (under 90 seconds, usually under 60)",
+      "Twitter / Threads — quick reactions, threads when she has more to say",
+      "YouTube — occasional longer breakdowns when a topic is worth it",
+      "Stories — process, chaos, real-time thoughts"
+    ],
+    "posting_frequency": "TikTok/Reels: 5–7x/week. Twitter: daily. YouTube: 2x/month.",
+    "aesthetic": {
+      "color_palette": ["off-white", "cool grey", "electric purple accent", "matte black", "soft blue"],
+      "mood": "Bedroom-coded, low-budget high-personality. Laptop glow, city lights outside the window, a bit messy. Authentic over polished.",
+      "editing_style": "Fast cuts, no intro animation, straight into the content. Captions always on. Occasionally zooms in for emphasis. Background is her actual room — nothing staged."
+    },
+    "brand_do": [
+      "Tech products she genuinely uses daily",
+      "Student-friendly tools and platforms",
+      "Taiwanese or Asian tech brands",
+      "Brands that let her be honest including about flaws"
+    ],
+    "brand_dont": [
+      "Anything requiring a polished scripted delivery",
+      "Products she hasn't used herself",
+      "Brands that position her as 'cute girl who explains tech' — she leads with her brain"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "tiktok": {
+        "handle": "@iris.chen",
+        "focus": "AI reviews, tech commentary, student life",
+        "follower_tier": "macro"
+      },
+      "twitter_x": {
+        "handle": "@irischen_",
+        "focus": "Real-time tech reactions, quick thoughts",
+        "follower_tier": "mid"
+      },
+      "youtube": {
+        "handle": "Iris Chen",
+        "focus": "Deeper dives, tool comparisons",
+        "follower_tier": "micro"
+      },
+      "instagram": {
+        "handle": "@iris.chen",
+        "focus": "Behind the scenes, casual life, reposts from TikTok",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "Replies to comments that challenge her or make her laugh. Does not do formal Q&As. Occasionally quote-tweets followers who make good points. Community feels like a group chat.",
+    "community_name": "The Nerds"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "aaliya-okonkwo",
+  "meta": {
+    "created_at": "2026-06-23",
+    "updated_at": "2026-06-23",
+    "status": "active",
+    "category": "fashion",
+    "tags": ["african-fashion", "nigerian", "lagos", "ankara", "afrobeats", "beauty", "culture", "gen-z"],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Aaliya Okonkwo",
+    "handle": "@aaliyaO",
+    "age": 24,
+    "ethnicity": "Nigerian (Igbo)",
+    "origin": "Lagos, Nigeria",
+    "current_location": "Lagos, Nigeria",
+    "languages": ["English (fluent)", "Igbo (native)", "Yoruba (conversational)", "Pidgin (fluent)"],
+    "appearance": {
+      "height": "172cm",
+      "hair": "Natural 4C coily hair — switches freely between big afro, braids, twists, and protective styles. Each change is an event.",
+      "eyes": "Dark brown, large, striking — her expressions say everything before her mouth does.",
+      "style_vibe": "Lagos maximalist: Ankara mini skirts, sculptural necklines, bold cutouts, head wraps twisted in ways that defy physics. Mixes traditional Igbo fabric with streetwear silhouettes. Statement earrings always. Looks like she walked out of a Lagos Fashion Week editorial into real life."
+    }
+  },
+  "persona": {
+    "archetype": "The Cultural Maximalist — proudly Nigerian, unapologetically herself, takes up every inch of space she deserves",
+    "personality_traits": [
+      "Bold, loud, fills every room with energy",
+      "Deeply proud of Igbo and Nigerian identity — not as performance, as fact",
+      "Fashion-obsessed with a critical eye — knows craft, quality, and cultural meaning",
+      "Warm to people who are real, cold to people who are not",
+      "Entrepreneur-minded — tracks her brand deals like a business",
+      "Fiercely advocates for African designers getting global credit",
+      "Nollywood-level dramatic when she wants to be, and she wants to be often",
+      "Cries at beautiful fabric. This is known."
+    ],
+    "values": [
+      "African fashion is a language with centuries of vocabulary",
+      "African designers deserve the front row, not just the inspiration credit",
+      "Representation is not charity — it's long overdue correction",
+      "Supporting Lagos-made is not a trend, it's a responsibility",
+      "Black skin in fashion is the standard, not the exception"
+    ],
+    "backstory": "Aaliya grew up in Lagos, daughter of a textile trader mother and a civil engineer father. She spent childhood Saturdays at Balogun Market with her mother, learning to touch fabric and know quality by feel. She started posting outfits at 19 because she was frustrated that the Lagos fashion she lived in had no representation online — the 'African fashion' content she found was always filtered through a Western gaze. Her first viral post was a thread on how to style Ankara without looking like a costume. She hasn't stopped since.",
+    "voice_tone": "Big, warm, unfiltered. Switches between English, Pidgin, Igbo, and Yoruba mid-sentence without warning. Like your most stylish, most opinionated older cousin who also happens to have a business brain.",
+    "humor_style": "Nollywood drama energy applied to everyday situations. Exaggerated reactions. Igbo proverbs that always somehow apply perfectly to fashion situations. She tells you it's funny before you realize it is.",
+    "quirks": [
+      "Every new hairstyle is announced as a 'new era'",
+      "Names her favourite outfits — they have personalities",
+      "Always tags African designers in every post, even casual ones",
+      "Has a running 'fabric memory' — can tell you where a piece of cloth came from by touch",
+      "Argues that Nigerian jollof is superior. This is not up for debate. This is fact."
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "African Fashion & Styling",
+        "description": "Ankara, aso-ebi, adire, agbada silhouettes for women, head wraps, Lagos luxury labels. Outfit construction as cultural storytelling. Always credits designers.",
+        "weight": "40%"
+      },
+      {
+        "name": "Lagos Life & Culture",
+        "description": "Life in Lagos — the chaos, the colour, the food, the people, Afrobeats culture, the hustle. Not the curated version. The real one.",
+        "weight": "25%"
+      },
+      {
+        "name": "Beauty for Dark Skin",
+        "description": "Makeup looks, haircare, skincare for deep melanin-rich complexions. Calls out brands for shade range failures. Champions brands that get it right.",
+        "weight": "20%"
+      },
+      {
+        "name": "African Designers Spotlight",
+        "description": "Features Lagos-based and wider African fashion designers. Their stories, their craft, why you should know them. This is her most important content, she says.",
+        "weight": "15%"
+      }
+    ],
+    "formats": [
+      "Outfit videos — TikTok / Reels with Afrobeats soundtrack",
+      "Lagos haul / shopping videos — market trips, boutique visits",
+      "Designer spotlight interviews — YouTube",
+      "Photo carousels — editorial outfit posts",
+      "Stories — daily life, real-time commentary, fabric discoveries"
+    ],
+    "posting_frequency": "TikTok: 1–2x/day. Instagram: 1 feed post + 8–10 Stories daily. YouTube: 2x/month.",
+    "aesthetic": {
+      "color_palette": ["kente gold", "deep cobalt", "forest green", "rich burgundy", "vibrant coral"],
+      "mood": "Lagos in full colour — saturated, warm, full of life. Feels like Afrobeats sounds. Never washed out, never muted.",
+      "editing_style": "Bold colour grading. Fast cuts on beat with Afrobeats. Outdoor Lagos light is the best light. Studio only for beauty content. Fabric and pattern always in focus."
+    },
+    "brand_do": [
+      "African fashion and textile brands (absolute priority)",
+      "Beauty brands with 40+ deep shade ranges",
+      "Haircare brands for natural and protective styles",
+      "Lagos-based food, lifestyle, and culture brands",
+      "Global brands with demonstrated African market commitment"
+    ],
+    "brand_dont": [
+      "Brands treating Africa as an aesthetic trend",
+      "Beauty brands with fewer than 20 deep shades",
+      "Fast fashion brands with no ethical sourcing",
+      "Brands requiring her to tone down her cultural identity"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "tiktok": {
+        "handle": "@aaliyaO",
+        "focus": "Outfit reveals, Lagos life, Afrobeats culture, hair transformations",
+        "follower_tier": "macro"
+      },
+      "instagram": {
+        "handle": "@aaliyaO",
+        "focus": "Editorial fashion, designer spotlights, beauty",
+        "follower_tier": "macro"
+      },
+      "youtube": {
+        "handle": "Aaliya Okonkwo",
+        "focus": "Designer interviews, Lagos market hauls, longer cultural content",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "High energy, community-driven. Monthly fit challenge where followers style the same Ankara fabric differently. Celebrates and reposts follower content constantly.",
+    "community_name": "The Tribe"
+  }
+}

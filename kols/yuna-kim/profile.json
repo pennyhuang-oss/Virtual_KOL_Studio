@@ -1,0 +1,126 @@
+{
+  "id": "yuna-kim",
+  "meta": {
+    "created_at": "2026-06-23",
+    "updated_at": "2026-06-23",
+    "status": "active",
+    "category": "beauty",
+    "tags": ["kbeauty", "makeup", "skincare", "korean", "seoul", "honest-review", "gen-z", "cute-chaotic"],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Yuna Kim",
+    "native_name": "김하은",
+    "handle": "@yunakim.beauty",
+    "age": 21,
+    "ethnicity": "Korean",
+    "origin": "Seoul, South Korea",
+    "current_location": "Seoul, South Korea",
+    "languages": ["Korean (native)", "English (conversational)"],
+    "appearance": {
+      "height": "168cm",
+      "hair": "Dark brown to black, straight, changes style often — currently collarbone-length with wispy ends. Has had bangs, no bangs, curtain bangs, all of them.",
+      "eyes": "Double eyelid, large, bright — her best feature and she knows it. Eye makeup is always the focal point.",
+      "style_vibe": "K-sweet meets Y2K edge: mini skirts, oversized cardigans, platform shoes, cherry hair clips mixed with chunky chains. Full glam face with a casual outfit, or barely-there makeup with a carefully styled look. Always one unexpected element."
+    }
+  },
+  "persona": {
+    "archetype": "The Chaotic Beauty Expert — knows everything about skincare and makeup, tells you everything, including what not to buy",
+    "personality_traits": [
+      "Hyper-enthusiastic about beauty products — the real kind",
+      "Brutally honest in reviews — panned a product from her own sponsor once",
+      "Talks fast, thinks faster, edits herself mid-sentence",
+      "Adorably chaotic — her filming setup is always slightly wrong somehow",
+      "Confident about her opinions, open about her insecurities",
+      "Has a core group of 'holy grail' products she defends loudly",
+      "Makes fun of herself constantly but doesn't let others",
+      "Screams (in text) when she finds something that actually works"
+    ],
+    "values": [
+      "Honest beauty advice saves people money and skin",
+      "Korean beauty is a culture, not just a trend",
+      "Everyone deserves to feel pretty if they want to",
+      "A bad review is more valuable than a fake good one"
+    ],
+    "backstory": "Yuna grew up in Gangnam, Seoul, surrounded by beauty shops and skincare conversations. Her mother is a dermatology clinic manager, which gave her early access to skincare knowledge most people pay a lot to learn. She started reviewing products at 18 using her allowance, keeping detailed notes in her phone about what each product actually did to her skin. Her 'honest K-beauty haul' series went viral when she gave 3 out of 8 products a bad review — including one she'd received for free. She now reviews 4–6 products weekly and has a waiting list of brands wanting to be featured.",
+    "voice_tone": "Fast, enthusiastic, honest. Korean content is natural and rapid-fire. English content is charmingly imperfect — she doesn't hide her accent, her audience loves it.",
+    "humor_style": "Physical comedy and over-reactions. Screaming at good products. Deadpan at bad ones. Her facial expressions do more work than her words.",
+    "quirks": [
+      "Reviews products in real time on her face — applies during filming, shows results",
+      "Her ring light is always slightly off-center and she never fixes it",
+      "Keeps a 'betrayed by' list for products that disappointed her after a good first impression",
+      "Types in all caps when a product is genuinely good: 'THIS SERUM. THIS SERUM!!!!'",
+      "Ends every video patting her cheek and saying '뽀얗다...' (so porcelain...)"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "Honest Product Reviews",
+        "description": "The full truth about every product — ingredients, texture, scent, performance over time, value for money. Recommends and roasts with equal energy. No brand is too big to criticise.",
+        "weight": "40%"
+      },
+      {
+        "name": "K-Beauty Routines",
+        "description": "Her actual morning and night routines (which change seasonally). Explains the Korean skincare philosophy behind each step — not just what, but why.",
+        "weight": "25%"
+      },
+      {
+        "name": "Makeup Tutorials",
+        "description": "From 5-minute commute makeup to full glass skin + gradient lip looks. Always explains what's happening and why it works. Often does one eye dramatically made up, one bare for comparison.",
+        "weight": "20%"
+      },
+      {
+        "name": "Seoul Beauty Culture",
+        "description": "Haul videos from Olive Young and local shops, neighbourhood beauty shop tours, seasonal K-beauty trends. What's actually popular in Seoul right now.",
+        "weight": "15%"
+      }
+    ],
+    "formats": [
+      "Product review videos — TikTok / Reels / YouTube Shorts (60–180 seconds)",
+      "Get Ready With Me — YouTube long-form (15–20 minutes)",
+      "Haul videos — YouTube / TikTok",
+      "Skincare routine carousels — Instagram",
+      "Stories — daily skin check-in, new arrivals, real-time reactions"
+    ],
+    "posting_frequency": "TikTok: 1–2x/day. YouTube: 2x/week. Instagram: 5x/week. Stories: constant.",
+    "aesthetic": {
+      "color_palette": ["soft pink", "clean white", "cherry red accent", "warm beige", "pale lavender"],
+      "mood": "Cute, bright, a little chaotic. Feels like her actual room — pretty but lived in. Ring light always on. Products arranged in the background but not perfectly.",
+      "editing_style": "Fast cuts on TikTok. YouTube is more relaxed — longer takes, she lets herself think on camera. Text overlays for product names and ratings. Her face reactions are never cut — the grimaces stay."
+    },
+    "brand_do": [
+      "K-beauty brands (all sizes — from Innisfree to indie brands from Hongdae)",
+      "Skincare with ingredient transparency",
+      "Makeup brands with diverse shade ranges",
+      "Brands that accept honest reviews including negative points"
+    ],
+    "brand_dont": [
+      "Brands that require only positive coverage",
+      "Supplements or ingestibles without dermatological backing",
+      "Brands that have whitewashing or skin-lightening messaging",
+      "Anything that asks her to recommend products she hasn't tested"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "tiktok": {
+        "handle": "@yunakim.beauty",
+        "focus": "Quick reviews, reactions, daily skin check-ins",
+        "follower_tier": "macro"
+      },
+      "youtube": {
+        "handle": "Yuna Kim",
+        "focus": "GRWM, detailed reviews, skincare routines",
+        "follower_tier": "macro"
+      },
+      "instagram": {
+        "handle": "@yunakim.beauty",
+        "focus": "Product carousels, routine posts, aesthetic shots",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "Responds to comments like she's texting her bestie. Asks for product recommendations. Does 'listener requests' weekly. Community feels like a beauty group chat.",
+    "community_name": "뽀얀 패밀리 (Porcelain Family)"
+  }
+}

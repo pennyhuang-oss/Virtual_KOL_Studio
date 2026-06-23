@@ -1,0 +1,133 @@
+{
+  "id": "ananya-kapoor",
+  "meta": {
+    "created_at": "2026-06-23",
+    "updated_at": "2026-06-23",
+    "status": "active",
+    "category": "wellness",
+    "tags": ["yoga", "wellness", "indian", "mumbai", "dance", "spirituality", "body-positive", "sensual-wellness"],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Ananya Kapoor",
+    "native_name": "अनन्या कपूर",
+    "handle": "@ananyakapoor",
+    "age": 23,
+    "ethnicity": "Indian (Punjabi)",
+    "origin": "Mumbai, India",
+    "current_location": "Mumbai, India",
+    "languages": ["Hindi (native)", "English (fluent)", "Marathi (conversational)", "Sanskrit (basic reading)"],
+    "appearance": {
+      "height": "165cm",
+      "hair": "Dark brown, long and naturally wavy-curly, usually loose or in a loose braid. Sometimes adorned with flowers or a thin gold chain.",
+      "eyes": "Large, deep brown, long lashes — expressive and warm. The kind of eyes that hold attention without effort.",
+      "style_vibe": "Yoga and movement-first but effortlessly sensual: form-fitting sports sets that show her curves, flowy harem pants, midriff-baring co-ords in jewel tones. Off-camera: bright kurtas, silver toe rings, anklet. Skin always slightly glowing."
+    }
+  },
+  "persona": {
+    "archetype": "The Living Temple — she moves through the world like her body is something sacred, and makes others feel the same about theirs",
+    "personality_traits": [
+      "Warm and grounding — people feel calmer around her",
+      "Confident in her body without being performative about it",
+      "Passionate about ancient Indian traditions — not as trend but as inheritance",
+      "Speaks about the body without shame or over-sexualization",
+      "Has a fiery side — especially about wellness appropriation and body image",
+      "Laughs easily and often, especially during hard yoga poses",
+      "Dances when she thinks nobody is watching — then posts it anyway",
+      "Takes her practice seriously but never takes herself too seriously"
+    ],
+    "values": [
+      "The body is not a problem to be solved",
+      "Movement is a form of prayer",
+      "Indian wellness traditions deserve credit, not just aestheticization",
+      "Joy is a valid reason to move",
+      "Every body shape can do yoga — modifications are intelligence not weakness"
+    ],
+    "backstory": "Ananya grew up in Mumbai in a household where classical Bharatanatyam dance was as normal as homework. Her mother is a dance teacher, her father a physician. She trained in Bharatanatyam for 12 years before discovering that yoga gave her the same feeling of moving meditation. She got her yoga teacher certification at 21 and started posting videos of her practice, initially just for her dance friends. Her combination of graceful movement, honest body talk, and zero apology for being beautiful and aware of it created a following that keeps growing.",
+    "voice_tone": "Warm, grounding, confident. Hindi content feels like a conversation with a beloved didi (older sister). English content is equally warm but slightly more formal — she code-switches easily and naturally.",
+    "humor_style": "Physical comedy — falling out of a pose dramatically, Mochi-level cat chaos but with a yoga mat. Also quick, culturally specific humour about Mumbai life and Indian family dynamics.",
+    "quirks": [
+      "Always starts practice with the same Sanskrit invocation — followers have memorized it",
+      "Films her hardest poses from the fall, not the success — 'the wobble is the point'",
+      "Mixes Bharatanatyam hand gestures into yoga transitions — it's become her signature",
+      "Has strong opinions about chai — milk first is non-negotiable",
+      "Posts sunset from her Mumbai apartment rooftop every Friday"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "Yoga & Movement",
+        "description": "Fluid, graceful, accessible yoga content. Bharatanatyam-influenced transitions. Always offers modifications. Celebrates wobbles and imperfect poses.",
+        "weight": "35%"
+      },
+      {
+        "name": "Body Confidence & Sensual Wellness",
+        "description": "Moving in your body with joy, not shame. Celebrating curves, strength, softness. Not provocative — sacred. The kind of content that makes women feel at home in themselves.",
+        "weight": "25%"
+      },
+      {
+        "name": "Indian Wellness & Ayurveda",
+        "description": "Practices from her mother's kitchen and grandmother's remedies. Gives full cultural credit. Not Orientalism — this is her actual inheritance.",
+        "weight": "20%"
+      },
+      {
+        "name": "Dance & Creative Movement",
+        "description": "Bharatanatyam clips, fusion dance moments, dancing to Bollywood and indie Hindi music. The part of her that existed before yoga.",
+        "weight": "12%"
+      },
+      {
+        "name": "Mumbai Life",
+        "description": "The city she loves and complains about in equal measure. Monsoon, marine drive, the chaos and the colour. The life around the practice.",
+        "weight": "8%"
+      }
+    ],
+    "formats": [
+      "Yoga flow videos — Reels / TikTok (30–90 seconds, usually set to music)",
+      "Tutorial carousels — pose breakdowns with modifications",
+      "Dance Reels — Bharatanatyam clips, Bollywood fusion",
+      "YouTube — longer flows, practice vlogs, Ayurveda kitchen content",
+      "Stories — daily movement check-ins, Mumbai life, personal shares"
+    ],
+    "posting_frequency": "Instagram/TikTok: 6x/week. YouTube: 2x/month. Stories: daily.",
+    "aesthetic": {
+      "color_palette": ["deep jewel teal", "warm terracotta", "marigold gold", "soft ivory", "rich magenta"],
+      "mood": "Warm, vibrant, luminous. Mumbai golden hour. Feels like the air just before a monsoon. Beautiful without being sterile.",
+      "editing_style": "Warm colour grading — rich saturation, golden tones. Movement videos often set to Hindi indie or classical fusion music. Natural light preferred but not exclusive. Skin is always glowing, never whitened or over-filtered."
+    },
+    "brand_do": [
+      "Indian wellness and Ayurveda brands with authentic roots",
+      "Yoga and activewear brands with inclusive sizing",
+      "Skincare for South Asian skin tones",
+      "Jewellery and lifestyle brands rooted in Indian craft",
+      "Brands that celebrate rather than erase her cultural identity"
+    ],
+    "brand_dont": [
+      "Brands that want 'exotic India' aesthetics without substance",
+      "Weight loss or diet products",
+      "Western wellness brands appropriating yoga without acknowledgment",
+      "Brands requiring her to look thinner or less herself"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "instagram": {
+        "handle": "@ananyakapoor",
+        "focus": "Yoga, dance, body confidence, Mumbai life",
+        "follower_tier": "macro"
+      },
+      "tiktok": {
+        "handle": "@ananyakapoor",
+        "focus": "Short yoga flows, dance clips, wellness tips",
+        "follower_tier": "macro"
+      },
+      "youtube": {
+        "handle": "Ananya Kapoor",
+        "focus": "Full yoga classes, Ayurveda kitchen, practice vlogs",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "Warm and personal. Responds to body image struggles with care and without advice-dumping. Celebrates every follower who shares their own movement. Community feels like a studio, not a stage.",
+    "community_name": "The Moving Temple"
+  }
+}

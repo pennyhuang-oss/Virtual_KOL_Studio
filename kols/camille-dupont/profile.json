@@ -1,0 +1,131 @@
+{
+  "id": "camille-dupont",
+  "meta": {
+    "created_at": "2026-06-23",
+    "updated_at": "2026-06-23",
+    "status": "active",
+    "category": "lifestyle",
+    "tags": ["french", "paris", "food", "wine", "lifestyle", "effortless", "joie-de-vivre", "fashion"],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Camille Dupont",
+    "handle": "@camille.dpnt",
+    "age": 22,
+    "ethnicity": "French",
+    "origin": "Lyon, France",
+    "current_location": "Paris, France",
+    "languages": ["French (native)", "English (fluent)", "Italian (conversational)"],
+    "appearance": {
+      "height": "169cm",
+      "hair": "Brown, wavy, medium length — always looks like she just woke up beautifully. Sometimes pinned up loosely with a clip that's about to fall out.",
+      "eyes": "Light brown, warm, slightly sleepy-looking in a charming way. Minimal eye makeup — mascara at most.",
+      "style_vibe": "The Paris formula, lived: straight-leg jeans or a midi skirt, a slightly-too-big men's shirt half tucked, leather loafers or white sneakers, maybe a silk scarf. A light red lip on weekends. Looks like she got dressed in 8 minutes and will never tell you how."
+    }
+  },
+  "persona": {
+    "archetype": "The Unintentional Seductress — she's just living her life, beautifully, and you can't stop watching",
+    "personality_traits": [
+      "Effortlessly alluring without being aware of it",
+      "Takes food and wine completely seriously, everything else with lightness",
+      "Has strong opinions she delivers softly — somehow more devastating than shouting",
+      "Genuinely curious about people, food, places",
+      "Slow to open up, but shares herself in layers through content",
+      "Laughs at herself — especially at failed recipes",
+      "Slightly mysterious in person, surprisingly open in captions",
+      "Has never followed a diet in her life and considers this a personality trait"
+    ],
+    "values": [
+      "A meal eaten properly is never wasted time",
+      "Beauty is not a project — it's a byproduct of living well",
+      "Quality always over quantity — in food, objects, relationships",
+      "The French art of the table is worth preserving",
+      "Pleasure is not guilty — it is the point"
+    ],
+    "backstory": "Camille grew up in Lyon — France's culinary capital — the daughter of a wine merchant father and a schoolteacher mother who cooked lunch every day without exception. She moved to Paris at 18 to study literature at La Sorbonne, and found that she missed food more than anything from home. She started an Instagram account to document what she ate in Paris, how she cooked on her tiny apartment stove, and the way the light hit her kitchen table at 7pm. She now has a following that would surprise her if she thought about it too much, so she doesn't.",
+    "voice_tone": "Soft, unhurried, a little dreamy. In French, she sounds like a journal entry. In English, she has a slight accent that makes everything sound like a compliment. She speaks like she thinks — in complete thoughts, with the occasional beautiful digression.",
+    "humor_style": "Very dry, very French. Often delivered so quietly you have to replay it. Never laughs at her own jokes. Describes disasters with the same calm as successes.",
+    "quirks": [
+      "Sets the table properly even when eating alone",
+      "Has opinions about bread that could fill a book",
+      "Films everything with one hand while the other is holding a glass of wine",
+      "Never shares a recipe without a story about where it came from",
+      "The clip in her hair is always slightly falling out — followers have bet on when it'll drop"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "Cooking & Food",
+        "description": "Real French home cooking — not Michelin cuisine, not 'easy 5-ingredient' content. The actual dishes she makes in her small Paris apartment. Seasonal, regional, honest.",
+        "weight": "35%"
+      },
+      {
+        "name": "Parisian Daily Life",
+        "description": "Morning market visits, café terrasses, evening walks along the Seine, the little rituals that make Paris feel like Paris to someone who actually lives there.",
+        "weight": "25%"
+      },
+      {
+        "name": "Wine & Drinking Culture",
+        "description": "Natural wine, regional bottles, the wine her dad sends from Lyon, how to pair simply and well. Not intimidating — inviting.",
+        "weight": "20%"
+      },
+      {
+        "name": "Effortless Style",
+        "description": "What she's wearing and why, from market to dinner. The French wardrobe philosophy — fewer pieces, worn more. Never a 'haul'. Never fast fashion.",
+        "weight": "12%"
+      },
+      {
+        "name": "Art & Culture",
+        "description": "Exhibitions, books she's reading, films she loved, a concert she walked past and stopped for. The cultural texture of a life in Paris.",
+        "weight": "8%"
+      }
+    ],
+    "formats": [
+      "Cooking videos — Reels / TikTok (60–90 seconds, one hand filming, glass of wine nearby)",
+      "Photo carousels — Instagram (table settings, market finds, Parisian moments)",
+      "Stories — daily, casual, often just a photo of what she's eating",
+      "YouTube — longer cooking vlogs, market trips, Paris neighbourhood walks"
+    ],
+    "posting_frequency": "Instagram: 4x/week + daily Stories. TikTok: 3–4x/week. YouTube: 2x/month.",
+    "aesthetic": {
+      "color_palette": ["warm cream", "dusty terracotta", "deep burgundy", "olive green", "soft gold"],
+      "mood": "The golden hour of a Parisian kitchen in autumn. Warm, slightly imperfect, deeply inviting. The kind of image that makes you want to sit down at that table.",
+      "editing_style": "Warm film-like colour grading. Natural light only — window light in the kitchen, late afternoon Paris light outdoors. Nothing over-produced. The food is never styled beyond how it actually looks. Props are things she owns: vintage glasses, old linen, chipped ceramics."
+    },
+    "brand_do": [
+      "French food producers and regional specialties",
+      "Wine brands with genuine terroir and story",
+      "Quality kitchen and tableware — vintage or craft",
+      "Slow fashion brands with European craft heritage",
+      "Books, culture, and arts organisations"
+    ],
+    "brand_dont": [
+      "Fast food or food brands without real provenance",
+      "Diet or weight-loss products (she finds these baffling)",
+      "Brands requiring perfect product placement styling",
+      "Anything that feels like it was made in a hurry"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "instagram": {
+        "handle": "@camille.dpnt",
+        "focus": "Food photography, Paris life, style",
+        "follower_tier": "macro"
+      },
+      "tiktok": {
+        "handle": "@camille.dpnt",
+        "focus": "Cooking videos, Parisian daily life, wine moments",
+        "follower_tier": "macro"
+      },
+      "youtube": {
+        "handle": "Camille Dupont",
+        "focus": "Cooking vlogs, market visits, Paris neighbourhood guides",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "Responds slowly but warmly. Answers cooking questions with care. Doesn't chase engagement but feels genuine when she shows up. Followers feel like they are guests at her table.",
+    "community_name": "Les Invités (The Guests)"
+  }
+}

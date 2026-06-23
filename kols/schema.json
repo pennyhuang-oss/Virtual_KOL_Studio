@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KOL Profile Schema",
+  "description": "Standard schema for all KOL character profiles in this database",
+  "type": "object",
+  "required": ["id", "meta", "identity", "persona", "content", "social"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique slug identifier, e.g. emma-chen"
+    },
+    "ai_assets": {
+      "type": "object",
+      "description": "AI generation assets — Soul models, training images, etc.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "higgsfield_soul_id": { "type": "string" },
+          "soul_model": { "type": "string" },
+          "soul_status": { "type": "string", "enum": ["pending", "training", "ready", "failed"] },
+          "training_image_count": { "type": "integer" },
+          "training_images_path": { "type": "string" }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": ["created_at", "updated_at", "status", "category"],
+      "properties": {
+        "created_at": { "type": "string", "format": "date" },
+        "updated_at": { "type": "string", "format": "date" },
+        "status": { "type": "string", "enum": ["active", "draft", "archived"] },
+        "category": { "type": "string", "description": "Primary KOL category, e.g. lifestyle, tech, fitness" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "reference_profiles": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Real-world social handles that inspired this persona"
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "required": ["name", "handle", "age", "ethnicity", "origin", "current_location", "languages"],
+      "properties": {
+        "name": { "type": "string" },
+        "handle": { "type": "string", "description": "Primary social handle" },
+        "age": { "type": "integer" },
+        "ethnicity": { "type": "string" },
+        "origin": { "type": "string" },
+        "current_location": { "type": "string" },
+        "languages": { "type": "array", "items": { "type": "string" } },
+        "appearance": {
+          "type": "object",
+          "properties": {
+            "height": { "type": "string" },
+            "hair": { "type": "string" },
+            "eyes": { "type": "string" },
+            "style_vibe": { "type": "string" }
+          }
+        }
+      }
+    },
+    "persona": {
+      "type": "object",
+      "required": ["archetype", "personality_traits", "values", "backstory", "voice_tone"],
+      "properties": {
+        "archetype": { "type": "string" },
+        "personality_traits": { "type": "array", "items": { "type": "string" } },
+        "values": { "type": "array", "items": { "type": "string" } },
+        "backstory": { "type": "string" },
+        "voice_tone": { "type": "string" },
+        "humor_style": { "type": "string" },
+        "quirks": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["pillars", "formats", "posting_frequency", "aesthetic"],
+      "properties": {
+        "pillars": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "weight": { "type": "string" }
+            }
+          }
+        },
+        "formats": { "type": "array", "items": { "type": "string" } },
+        "posting_frequency": { "type": "string" },
+        "aesthetic": {
+          "type": "object",
+          "properties": {
+            "color_palette": { "type": "array", "items": { "type": "string" } },
+            "mood": { "type": "string" },
+            "editing_style": { "type": "string" }
+          }
+        },
+        "brand_do": { "type": "array", "items": { "type": "string" } },
+        "brand_dont": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "social": {
+      "type": "object",
+      "properties": {
+        "platforms": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "handle": { "type": "string" },
+              "focus": { "type": "string" },
+              "follower_tier": { "type": "string", "enum": ["nano", "micro", "mid", "macro", "mega"] }
+            }
+          }
+        },
+        "engagement_style": { "type": "string" },
+        "community_name": { "type": "string" }
+      }
+    },
+    "productions": {
+      "type": "object",
+      "description": "Video production records",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "script": { "type": "string" },
+          "format": { "type": "string" },
+          "status": { "type": "string", "enum": ["planned", "in_progress", "complete"] },
+          "shots": { "type": "array" }
+        }
+      }
+    }
+  }
+}

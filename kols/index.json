@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "description": "Master index of all KOL profiles in this database",
+  "kols": [
+    {
+      "id": "iris-chen",
+      "name": "Iris Chen",
+      "native_name": "陳芯語",
+      "handle": "@iris.chen",
+      "category": "tech",
+      "age": 22,
+      "ethnicity": "Taiwanese",
+      "location": "Taipei, Taiwan",
+      "style": "Tech / AI Creator",
+      "status": "active",
+      "created_at": "2026-06-23",
+      "path": "kols/iris-chen/"
+    },
+    {
+      "id": "luna-tanaka",
+      "name": "Luna Tanaka",
+      "native_name": "田中ひな",
+      "handle": "@luna.tnk",
+      "category": "lifestyle",
+      "age": 20,
+      "ethnicity": "Japanese",
+      "location": "Kyoto, Japan",
+      "style": "Life Aesthetics / Photography",
+      "status": "active",
+      "created_at": "2026-06-23",
+      "path": "kols/luna-tanaka/"
+    },
+    {
+      "id": "ananya-kapoor",
+      "name": "Ananya Kapoor",
+      "native_name": "अनन्या कपूर",
+      "handle": "@ananyakapoor",
+      "category": "wellness",
+      "age": 23,
+      "ethnicity": "Indian (Punjabi)",
+      "location": "Mumbai, India",
+      "style": "Yoga / Sensual Wellness",
+      "status": "active",
+      "created_at": "2026-06-23",
+      "path": "kols/ananya-kapoor/"
+    },
+    {
+      "id": "yuna-kim",
+      "name": "Yuna Kim",
+      "native_name": "김하은",
+      "handle": "@yunakim.beauty",
+      "category": "beauty",
+      "age": 21,
+      "ethnicity": "Korean",
+      "location": "Seoul, South Korea",
+      "style": "K-beauty / Honest Reviews",
+      "status": "active",
+      "created_at": "2026-06-23",
+      "path": "kols/yuna-kim/"
+    },
+    {
+      "id": "aaliya-okonkwo",
+      "name": "Aaliya Okonkwo",
+      "handle": "@aaliyaO",
+      "category": "fashion",
+      "age": 24,
+      "ethnicity": "Nigerian (Igbo)",
+      "location": "Lagos, Nigeria",
+      "style": "African Fashion / Culture",
+      "status": "active",
+      "created_at": "2026-06-23",
+      "path": "kols/aaliya-okonkwo/"
+    },
+    {
+      "id": "camille-dupont",
+      "name": "Camille Dupont",
+      "handle": "@camille.dpnt",
+      "category": "lifestyle",
+      "age": 22,
+      "ethnicity": "French",
+      "location": "Paris, France",
+      "style": "Food / Wine / Parisian Life",
+      "status": "active",
+      "created_at": "2026-06-23",
+      "path": "kols/camille-dupont/"
+    }
+  ]
+}
