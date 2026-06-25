@@ -174,11 +174,13 @@
         }
       ],
       "soul_training": {
-        "status": "pending",
+        "status": "training",
         "platform": "Higgsfield.ai",
         "model": "Soul 2.0",
+        "soul_id": "5fe3b6ba-1277-4822-9141-fb06eb3b93a0",
         "training_image_count": 14,
-        "note": "待進行 Soul 訓練，使用 training_v1 全部14張。"
+        "started_at": "2026-06-25",
+        "note": "Soul 訓練進行中，使用 training_v1 全部14張。"
       }
     }
   }
