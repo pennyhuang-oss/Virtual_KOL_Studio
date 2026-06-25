@@ -2,7 +2,7 @@
   "id": "iris-chen",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-25",
     "status": "active",
     "category": "tech",
     "tags": ["tech", "AI", "taiwanese", "taipei", "creator", "gen-z", "digital-native"],
@@ -24,9 +24,12 @@
     "languages": ["Mandarin Chinese (native)", "English (fluent)", "Japanese (basic)"],
     "appearance": {
       "height": "162cm",
-      "hair": "Black, straight, slightly messy — often pushed back or in a loose half-up. Never looks like she tried too hard.",
-      "eyes": "Dark brown, sharp and expressive. Thin wireframe glasses usually pushed up on her head.",
-      "style_vibe": "Accidentally cool: oversized university tees tucked into mini skirts, chunky sneakers or slides. Occasionally a cropped hoodie. Looks like she got dressed in 5 minutes and still looks better than everyone else."
+      "face_type": "Round, sweet — 甜美型。參考臉型：熊熊（台灣藝人）。圓臉、大雙眼皮眼睛、精緻鼻梁、飽滿嘴唇、小下巴。",
+      "figure": "嬌小前凸後翹，胸部飽滿、腰細、臀部有形（hourglass）。",
+      "hair": "Black silky straight hair, naturally down — occasionally half-up. No notable styling effort.",
+      "eyes": "Large, bright double-eyelid dark brown eyes — expressive and photogenic.",
+      "glasses": "None.",
+      "style_vibe": "Hot girl casual: tube tops, spaghetti strap crop tops, mini skirts, black shorts, crop hoodies. Sexy but effortless — looks like she threw it on in 5 minutes and it works perfectly. No glasses, no heavy accessories."
     }
   },
   "persona": {
@@ -130,5 +133,53 @@
     },
     "engagement_style": "Replies to comments that challenge her or make her laugh. Does not do formal Q&As. Occasionally quote-tweets followers who make good points. Community feels like a group chat.",
     "community_name": "The Nerds"
+  },
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 14,
+      "images_path": "kols/iris-chen/images/training_v1/",
+      "collected_at": "2026-06-25",
+      "note": "14張訓練圖，跨4個場景批次。用於後續 Higgsfield Soul 訓練。",
+      "core_prompt_base": "22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down",
+      "style_keywords": "film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style",
+      "batches": [
+        {
+          "batch": 1,
+          "scene": "台北街頭 3/4 身",
+          "image_count": 4,
+          "prompt_scene": "standing on Taipei street, wearing white spaghetti strap crop top and high-waist denim mini skirt, slight smile looking at camera, 3/4 angle, natural daylight"
+        },
+        {
+          "batch": 2,
+          "scene": "咖啡廳窗邊正面近景",
+          "image_count": 4,
+          "prompt_scene": "sitting by cafe window, wearing light pink tube top, looking at camera with warm natural smile, front view close-up, golden afternoon light through window"
+        },
+        {
+          "batch": 3,
+          "scene": "公園黃金時段全身",
+          "image_count": 4,
+          "prompt_scene": "standing in park during golden hour, wearing black mini shorts and fitted white crop hoodie, full body shot, looking back at camera over shoulder, warm golden backlight through trees"
+        },
+        {
+          "batch": 4,
+          "scene": "車內自拍視角",
+          "image_count": 2,
+          "prompt_scene": "close-up front-facing selfie shot, slightly overhead angle looking down at camera, natural relaxed smile, sitting in car interior background, wearing casual black spaghetti strap top, warm sunny light",
+          "note": "重要：prompt 描述的是照片本身的視角（前鏡頭角度），不是描述她在拍自拍的動作。不要出現手機。"
+        }
+      ],
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "Soul 2.0",
+        "training_image_count": 14,
+        "note": "待進行 Soul 訓練，使用 training_v1 全部14張。"
+      }
+    }
   }
 }
