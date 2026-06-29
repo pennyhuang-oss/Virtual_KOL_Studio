@@ -162,3 +162,57 @@ Yuna Kim 是首爾那種走出地鐵站你會多看一眼的女生。
 一個首爾女生，注重保養，生活很有質感，把她覺得好的東西分享出來。你來看她的帳號，是因為你喜歡她的皮膚、她的妝感、她的首爾生活的樣子。
 
 這樣就夠了。
+
+---
+
+## 社群平台 & Benchmark 帳號
+
+### 為什麼經營這三個平台
+
+**Instagram**：K-beauty 帳號的核心陣地，沒有例外。這是護膚品牌合作發生的平台，也是 Yuna 的視覺資產（皮膚狀態、妝感、首爾場景）最適合展示的地方。Korean beauty influencer 的主力戰場就在這裡。
+
+**TikTok**：K-beauty 在 TikTok 上是全球最熱的美妝話題之一。Yuna 的護膚 routine、before/after、新品試用——這些內容在 TikTok 上的傳播速度遠超 Instagram。她的成長引擎。
+
+**X（Twitter）**：K-pop 和 K-beauty 的粉絲社群在 Twitter 非常活躍。Yuna 偶爾在這裡說說今天的保養感受、推薦一個成分、曬一張剛拍的自拍——這是她在 IG 和 TikTok 以外接觸粉絲的溫度補充，也讓她的人設更立體真實。
+
+---
+
+### Instagram Benchmark
+
+| 帳號 | 效仿原因 |
+|------|---------|
+| **@pony.makeup**（PONY，朴惠敏） | K-beauty Instagram 的頂級標竿。她的帳號展示了美妝 creator 如何用靜態圖呈現彩妝結果——光線、角度、皮膚質感的真實呈現——是 Yuna 美妝照的直接參考框架。 |
+| **@risabae**（李沙裴） | 韓國 Reels 美妝 creator，短影片呈現彩妝技巧的頂級示範。她的 Reels 如何開場、切換、結尾都值得逐格拆解。 |
+| **@heizle**（李海主） | 韓國 beauty influencer，護膚+彩妝並重的帳號，跟 Yuna 的定位最接近。了解她如何平衡「教學感」和「生活感」。 |
+| **@imjennim**（Jenn Im） | 韓裔美女 lifestyle IG，美妝+穿搭+首爾生活的帳號比例，是 Yuna 帳號結構的最佳參考。 |
+| **@koyounjung**（高允貞） | Yuna 外型設定的對標人物。她的 IG 告訴我們這個臉型、這個氣質的人應該如何取景、什麼角度最好看。 |
+| **@kang.hyewon** | 韓國女 idol，IG 美學精緻，自拍和日常照的比例、構圖是 Yuna 帳號的視覺風格參考。 |
+| **@liah.yoo**（Liah Yoo） | 韓國護膚 creator，成分知識+日常使用的混搭，讓「懂護膚」這件事可以不無聊——Yuna 帳號的知識性內容可以參考她。 |
+
+**生成素材時仿造重點**：護膚品的桌面平拍（白色底+自然光）、自拍的冷白光線角度、「妝前妝後」的對比構圖方式
+
+---
+
+### TikTok Benchmark
+
+| 帳號 | 效仿原因 |
+|------|---------|
+| **@risabae** | K-beauty TikTok 的節奏示範——她的影片如何在 15–30 秒內把一個妝效說清楚，before/after 的剪輯卡點。 |
+| **@pony.makeup** | 了解頂級 K-beauty creator 的 TikTok 包裝方式，跟她的 IG 內容如何差異化。 |
+| **@hyram**（Hyram Yarbro） | 護膚品評測的 TikTok 公式——快節奏、直接說結論、用肢體語言強化重點。Yuna 的護膚評測可以借這個節奏。 |
+| **@gothamista** | 護膚成分分析類 TikTok，了解「說到有知識感但不無聊」的剪輯技巧。 |
+| **@koyounjung** | 了解高允貞類型的女生在 TikTok 上如何出鏡，日常感強的自拍/日常影片格式。 |
+
+**生成素材時仿造重點**：開場 2 秒的臉部特寫 hook、護膚 routine 影片的鏡頭切換節奏、韓文字幕的視覺設計
+
+---
+
+### X（Twitter）Benchmark
+
+| 帳號 | 效仿原因 |
+|------|---------|
+| **@pony.makeup** | 了解 K-beauty creator 在 Twitter 的語氣——偏專業但有溫度，護膚成分的討論不死板。 |
+| **@risabae** | 韓國 beauty creator 的 Twitter 互動方式——用韓文跟粉絲說話的節奏，偶爾英文讓國際受眾也接得到。 |
+| **@koyounjung** | 了解韓國女藝人的 Twitter 使用方式，語氣輕鬆、隨手曬圖、不正式。 |
+
+**發文基調**：韓文為主偶爾英文，「오늘 이 크림 써봤는데...」這類隨口一句，偶爾放一張剛用完產品的自拍

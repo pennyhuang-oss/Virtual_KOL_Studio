@@ -139,3 +139,57 @@ LA 的光——充足、暖、直接。戶外的陽光、餐廳的暖燈、游�
 她的帳號就是她——一個在 LA 生活的拉丁裔美女，生活有聲音，穿搭很好看，跟朋友玩得很開心。你來看她，是因為你喜歡她的樣子和她的生活能量。
 
 這樣就夠了。
+
+---
+
+## 社群平台 & Benchmark 帳號
+
+### 為什麼經營這三個平台
+
+**Instagram**：Aaliya 的身材、穿搭、LA 場景——這些需要高質感靜態圖和 Reels 來呈現。Instagram 是她的主要「我長這樣、我這樣生活」的展示台，也是品牌合作（時尚/美妝/生活風格）最主要的發生地。
+
+**TikTok**：Aaliya 天生就是 TikTok 人。她的能量高、有存在感、跟朋友出去就是鏡頭感——這些在短影片裡比靜態圖更能傳達。TikTok 讓她接觸到跟她一樣喜歡 LA lifestyle 的年輕受眾，是她最大的成長引擎。
+
+**X（Twitter）**：Aaliya 說話快、直接、有時嘴很損——這種語氣完美適合 Twitter。她的 X 是她最「本人」的地方：今天這套好看不好看、朋友又搞笑了什麼、對某件事的即時反應——粉絲喜歡這種真實感，這也是讓她的 IG/TikTok 人設有溫度的關鍵補充。
+
+---
+
+### Instagram Benchmark
+
+| 帳號 | 效仿原因 |
+|------|---------|
+| **@dollycastro**（Dolly Castro） | 拉丁裔 fitness model，hourglass 身材展示的頂級示範。她的帳號告訴你：這個身材應該從哪個角度拍、什麼穿搭最能呈現比例——是 Aaliya 身材照最直接的構圖參考。 |
+| **@desiperkins**（Desi Perkins） | 拉丁裔 LA lifestyle & beauty influencer，帳號最成熟。美妝+穿搭+生活的比例、合作品牌的選擇方式、IG 版面的一致性——Aaliya 帳號的整體架構對標她。 |
+| **@alexisren**（Alexis Ren） | LA 系美女，bikini/lifestyle 自然混搭，身材展示從不刻意但永遠好看。她解決了「怎麼讓泳裝照不顯假」這個問題——Aaliya 的泳池照直接參考。 |
+| **@lele.pons**（Lele Pons） | 委內瑞拉裔 LA creator，了解 Latina 能量在 IG 上的包裝方式——高能量但有質感，不是鬧，是自信。 |
+| **@danielabelmo**（Daniela Belmo） | 拉丁裔 body positive creator，展示 hourglass 身材的方式直接且自信——這種「我就是這樣，看夠了嗎」的態度是 Aaliya 的核心精神。 |
+| **@sophieele** | LA 系 Latina influencer，派對/穿搭/生活，能量接近 Aaliya 但帳號規模中型，可以觀察她如何在資源有限的情況下維持質感。 |
+| **@salicerose** | 拉丁裔 LA creator，朋友圈文化強，讓人看了想跟她出去——Aaliya 的「跟朋友出去」內容章節的直接參考。 |
+
+**生成素材時仿造重點**：hourglass 身材的最佳拍攝角度（略低仰角呈現身材比例）、LA 泳池/餐廳/戶外的暖色飽和調、緊身洋裝和比基尼在不同場景裡的構圖差異
+
+---
+
+### TikTok Benchmark
+
+| 帳號 | 效仿原因 |
+|------|---------|
+| **@lele.pons** | Latina 能量在 TikTok 上的包裝公式——如何讓高能量內容有節奏感而不是亂。 |
+| **@dollycastro** | fitness/lifestyle 身材展示短影片的拍攝方式，了解「展示身體」的 TikTok 格式。 |
+| **@salicerose** | 拉丁裔 LA TikTok 的日常感——朋友、派對、出遊的剪輯節奏，raw 又好看。 |
+| **@brendatrindade** | 巴西系性感 TikToker，了解拉丁美女在 TikTok 上穿搭展示的鏡頭方式和剪輯風格。 |
+| **@jadapink** | 美國 Latina fashion TikTok，穿搭展示的快節奏剪輯，適合 Aaliya 的穿搭內容參考。 |
+
+**生成素材時仿造重點**：出場方式（從車裡/門口/走廊進鏡的感覺）、朋友一起出現的多鏡頭剪輯、BGM 選擇（拉丁節拍+流行混搭）
+
+---
+
+### X（Twitter）Benchmark
+
+| 帳號 | 效仿原因 |
+|------|---------|
+| **@lele.pons** | 了解 Latina creator 在 X 上的語氣——快、直接、有時嘴損、讓人哈哈大笑。這是 Aaliya X 的基調。 |
+| **@dollycastro** | 自信展示自己的 Twitter 語氣，不解釋、不道歉——「looked good, felt good.」就這樣。 |
+| **@salicerose** | 拉丁裔 LA 女生的 Twitter 日常——朋友截圖、隨口抱怨、出遊前的興奮發文。 |
+
+**發文基調**：直接、俏皮、偶爾嘴損——「wore this and felt unstoppable. that's the whole post.」——一句話配一張圖，不多說
