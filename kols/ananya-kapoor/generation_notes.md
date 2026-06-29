@@ -40,7 +40,7 @@
 - [圖 5](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_162358_3c7d4d2e-dd21-4839-b749-ac061e86c9ff.png)
 - [圖 6](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_162358_c58e00c3-b3d1-425c-bda4-9b0acfe5112d.png)
 
-> ⚠️ 注意：測試圖檔案因雲端 session CDN 限制尚未上傳至 `images/soul_test_v1/`，CDN URL 已記錄於上方，可從本機 session 下載後補傳。
+> ✅ 測試圖已上傳至 `images/soul_test_v1/`（共 6 張）。
 
 ### 測試用 Prompt 結構
 

@@ -26,7 +26,14 @@
       "hair": "Long, dark brown wavy hair — worn loose most of the time. Sometimes in a high ponytail or braided. Her hair has natural volume and movement.",
       "eyes": "Dark, almond-shaped eyes — deep and expressive. Her eye contact means something.",
       "body": "Hourglass figure — curvy, confident, naturally full. She knows how to dress for her body, and her body looks good in everything.",
-      "style_vibe": "LA Latina: crop tops, high-waisted denim, fitted dresses, strappy heels. Sexy but effortless — never overdone. Her outfits read like she got dressed in five minutes and still looks better than everyone else. Always has an accessory that makes the whole look."
+      "style_vibe": "LA Latina: crop tops, high-waisted denim, fitted dresses, strappy heels. Sexy but effortless — never overdone. Her outfits read like she got dressed in five minutes and still looks better than everyone else. Always has an accessory that makes the whole look.",
+      "ai_generation": {
+        "soul_id": "97f5c6cd-1c0c-4432-83d0-dd42210ecada",
+        "model": "soul_2",
+        "platform": "Higgsfield",
+        "status": "ready",
+        "trained_at": "2026-06-29"
+      }
     }
   },
   "persona": {

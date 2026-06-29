@@ -2,7 +2,7 @@
   "id": "yuna-kim",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-29",
     "status": "active",
     "category": "beauty",
     "tags": ["kbeauty", "makeup", "skincare", "korean", "seoul", "honest-review", "gen-z", "cute-chaotic"],
@@ -26,7 +26,14 @@
       "height": "168cm",
       "hair": "Dark brown to black, straight, changes style often — currently collarbone-length with wispy ends. Has had bangs, no bangs, curtain bangs, all of them.",
       "eyes": "Double eyelid, large, bright — her best feature and she knows it. Eye makeup is always the focal point.",
-      "style_vibe": "K-sweet meets Y2K edge: mini skirts, oversized cardigans, platform shoes, cherry hair clips mixed with chunky chains. Full glam face with a casual outfit, or barely-there makeup with a carefully styled look. Always one unexpected element."
+      "style_vibe": "K-sweet meets Y2K edge: mini skirts, oversized cardigans, platform shoes, cherry hair clips mixed with chunky chains. Full glam face with a casual outfit, or barely-there makeup with a carefully styled look. Always one unexpected element.",
+      "ai_generation": {
+        "soul_id": "235794a5-2eff-45fb-91b4-3232910afefa",
+        "model": "soul_2",
+        "platform": "Higgsfield",
+        "status": "ready",
+        "trained_at": "2026-06-29"
+      }
     }
   },
   "persona": {

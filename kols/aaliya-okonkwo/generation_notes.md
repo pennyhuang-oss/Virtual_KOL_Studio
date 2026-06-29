@@ -4,7 +4,7 @@
 
 - **Soul ID**: `97f5c6cd-1c0c-4432-83d0-dd42210ecada`
 - **Model**: `soul_2`
-- **Status**: Training initiated 2026-06-29
+- **Status**: Training completed 2026-06-29
 - **Training images** (5 total):
   - 4 face reference images from `images/face_reference/` (ref_01 through ref_04)
   - 1 supplementary image generated with `seedream_v4_5` (Latina portrait, natural makeup):
@@ -33,4 +33,4 @@ generate_image(
 )
 ```
 
-> ⚠️ 測試圖待訓練完成後生成，需等 Soul 訓練完畢（約 10 分鐘）。
+> ⏳ 訓練完成，等使用者確認場景後生成測試圖。
