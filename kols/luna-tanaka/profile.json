@@ -2,7 +2,7 @@
   "id": "luna-tanaka",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-29",
     "status": "active",
     "category": "lifestyle",
     "tags": ["japanese", "aesthetic", "photography", "minimalism", "kyoto", "film", "slow-life", "cute"],
@@ -26,7 +26,15 @@
       "height": "155cm",
       "hair": "Black, fine, straight — center-parted, chin-length. Perfectly still even in wind somehow.",
       "eyes": "Large, round, dark brown. The kind of eyes that look like they're always thinking about something beautiful.",
-      "style_vibe": "Japanese soft girl meets vintage: white lace, floral cotton, oversized knits over tiny shorts, mary jane shoes. Sometimes a vintage slip dress. Everything slightly oversized or slightly sheer. Looks like she exists in a different, softer version of reality."
+      "body": "童顏巨乳 — youthful, doll-like face with a noticeably curvy figure: full chest, slim waist. The contrast is intentional and distinctive.",
+      "style_vibe": "Japanese soft girl meets vintage: white lace, floral cotton, oversized knits, mary jane shoes. Sometimes a vintage slip dress. Clean and fresh with a subtle sensuality — never gaudy. Everything slightly oversized or slightly sheer.",
+      "ai_generation": {
+        "soul_id": "1bfab2ce-cfa5-4026-93fa-e5c91b469c7a",
+        "model": "soul_2",
+        "platform": "Higgsfield",
+        "status": "ready",
+        "trained_at": "2026-06-29"
+      }
     }
   },
   "persona": {
