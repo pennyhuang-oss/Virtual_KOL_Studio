@@ -2,7 +2,7 @@
   "id": "ananya-kapoor",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-29",
     "status": "active",
     "category": "wellness",
     "tags": ["yoga", "wellness", "indian", "mumbai", "dance", "spirituality", "body-positive", "sensual-wellness"],
@@ -26,7 +26,14 @@
       "height": "165cm",
       "hair": "Dark brown, long and naturally wavy-curly, usually loose or in a loose braid. Sometimes adorned with flowers or a thin gold chain.",
       "eyes": "Large, deep brown, long lashes — expressive and warm. The kind of eyes that hold attention without effort.",
-      "style_vibe": "Yoga and movement-first but effortlessly sensual: form-fitting sports sets that show her curves, flowy harem pants, midriff-baring co-ords in jewel tones. Off-camera: bright kurtas, silver toe rings, anklet. Skin always slightly glowing."
+      "style_vibe": "Yoga and movement-first but effortlessly sensual: form-fitting sports sets that show her curves, flowy harem pants, midriff-baring co-ords in jewel tones. Off-camera: bright kurtas, silver toe rings, anklet. Skin always slightly glowing.",
+      "ai_generation": {
+        "soul_id": "fac82296-8c69-4c34-b352-1b398c8b8e1c",
+        "model": "soul_2",
+        "platform": "Higgsfield",
+        "status": "ready",
+        "trained_at": "2026-06-29"
+      }
     }
   },
   "persona": {
