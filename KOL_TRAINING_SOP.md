@@ -43,6 +43,7 @@
    - 若使用者想重新生成，需先確認新場景
 
 ### 注意事項（每次生成前必讀）
+- **Iris Chen 是所有 KOL 的標準範本**：她是第一個完成的人格，後續每一個 KOL 的訓練規格、文件規模、步驟流程，全部以她為基準。不確定某個步驟怎麼做、某份文件要寫到什麼程度，就去看 `kols/iris-chen/` 的結構和內容對齊。
 - **生成測試圖前，必須先列出預計場景讓使用者確認**，同意後才執行
 - 圖片無法從雲端 session 下載 Higgsfield CDN，需使用者先上傳到 GitHub，再由 Claude 用 `raw.githubusercontent.com` 搬到正確資料夾
 - 所有 push 都在 branch：`claude/kol-personality-training-9otdaw`
