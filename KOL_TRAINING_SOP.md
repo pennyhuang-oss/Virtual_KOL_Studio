@@ -13,7 +13,7 @@
 | Ananya Kapoor | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | 🔄 訓練完成，測試圖已上傳，場景待使用者下次確認 |
 | Yuna Kim | `235794a5-2eff-45fb-91b4-3232910afefa` | 🔄 訓練完成，測試圖場景待確認 |
 | Aaliya Rivera | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | 🔄 訓練完成，測試圖場景待確認 |
-| Camille Dupont | — | ⏳ 待處理 |
+| Camille Dupont | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | ✅ 完成 |
 
 訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Rivera → Camille Dupont
 
@@ -34,11 +34,7 @@
    - 訓練已完成（Soul ID: `97f5c6cd-1c0c-4432-83d0-dd42210ecada`）
    - 同上流程，先確認場景再生成
 
-3. **Camille Dupont — 開始訓練流程**
-   - 尚未開始，讀取 `kols/camille-dupont/character.md` 和 `profile.json`
-   - 確認臉部參考圖 → 補充圖（如不足 5 張）→ 送 Soul 訓練 → 詢問場景 → 生成測試圖 → 更新文件
-
-4. **Ananya Kapoor — 使用者確認測試圖是否滿意**
+3. **Ananya Kapoor — 使用者確認測試圖是否滿意**
    - 測試圖已上傳（`kols/ananya-kapoor/images/soul_test_v1/`），但使用者未確認場景是否OK
    - 若使用者想重新生成，需先確認新場景
 
