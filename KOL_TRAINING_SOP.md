@@ -15,7 +15,37 @@
 | Aaliya Rivera | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | 🔄 訓練完成，測試圖場景待確認 |
 | Camille Dupont | — | ⏳ 待處理 |
 
-訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Okonkwo → Camille Dupont
+訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Rivera → Camille Dupont
+
+---
+
+## ⚡ 新 Session 啟動時，立刻做這件事
+
+> 讀完這份文件後，直接照以下清單執行，不用等使用者再說明。
+
+### 現在的待辦（依優先順序）
+
+1. **Yuna Kim — 詢問測試圖場景**
+   - 訓練已完成（Soul ID: `235794a5-2eff-45fb-91b4-3232910afefa`）
+   - 尚未生成測試圖，**必須先問使用者想要哪 3 個場景（含穿搭、構圖）再生成**
+   - 生成完成後：圖片 push 到 `kols/yuna-kim/images/soul_test_v1/`，更新 `character.md`、`profile.json`、`generation_notes.md`
+
+2. **Aaliya Rivera — 詢問測試圖場景**
+   - 訓練已完成（Soul ID: `97f5c6cd-1c0c-4432-83d0-dd42210ecada`）
+   - 同上流程，先確認場景再生成
+
+3. **Camille Dupont — 開始訓練流程**
+   - 尚未開始，讀取 `kols/camille-dupont/character.md` 和 `profile.json`
+   - 確認臉部參考圖 → 補充圖（如不足 5 張）→ 送 Soul 訓練 → 詢問場景 → 生成測試圖 → 更新文件
+
+4. **Ananya Kapoor — 使用者確認測試圖是否滿意**
+   - 測試圖已上傳（`kols/ananya-kapoor/images/soul_test_v1/`），但使用者未確認場景是否OK
+   - 若使用者想重新生成，需先確認新場景
+
+### 注意事項（每次生成前必讀）
+- **生成測試圖前，必須先列出預計場景讓使用者確認**，同意後才執行
+- 圖片無法從雲端 session 下載 Higgsfield CDN，需使用者先上傳到 GitHub，再由 Claude 用 `raw.githubusercontent.com` 搬到正確資料夾
+- 所有 push 都在 branch：`claude/kol-personality-training-9otdaw`
 
 ---
 
