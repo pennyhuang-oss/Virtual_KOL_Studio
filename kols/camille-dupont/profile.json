@@ -112,6 +112,12 @@
       "Anything that feels like it was made in a hurry"
     ]
   },
+  "ai_generation": {
+    "soul_id": "f19dafcc-5bc8-4d8f-af1d-ee48084ac398",
+    "model": "soul_2",
+    "platform": "Higgsfield Soul V2",
+    "trained_at": "2026-06-29"
+  },
   "social": {
     "platforms": {
       "instagram": {
