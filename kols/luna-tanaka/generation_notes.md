@@ -24,6 +24,34 @@
 - **Body**: 童顏巨乳 (youthful face, curvaceous figure)
 - **Style**: Japanese soft girl meets vintage — white lace, floral cotton, oversized knits, mary jane shoes, cream/beige palette
 
+## 訓練後測試生成（2026-06-29）
+
+訓練完成後用 Soul ID 生成 6 張測試圖，確認身份一致性，結果通過。
+
+### 場景 1 — 東京街頭（白色蕾絲上衣 + 碎花裙）
+
+- [圖 1](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154140_dd6cb5c5-9ec5-465f-9db0-bf2209b46132.png)
+- [圖 2](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154140_92c8e138-8940-42a5-a51c-b1654f8ce8ad.png)
+
+### 場景 2 — 咖啡廳窗邊（奶油色 oversized 毛衣）
+
+- [圖 3](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154146_b01362a2-1483-4281-955d-6da5e04d4343.png)
+- [圖 4](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154147_ce1d5af4-5c36-4914-b716-44a2cac263cb.png)
+
+### 場景 3 — 公園黃金時段全身（白色碎花洋裝）
+
+- [圖 5](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154152_1c07c5db-9dba-45c2-860a-80657087dbf1.png)
+- [圖 6](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154152_762d6881-9ab9-493e-af66-cf9cbc4f42fe.png)
+
+### 測試用 Prompt 結構
+
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes,
+fair porcelain skin, petite curvy figure with full chest and slim waist,
+[SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING],
+film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
 ## Usage
 
 ```python
@@ -31,6 +59,6 @@
 generate_image(
     model="soul_2",
     soul_id="1bfab2ce-cfa5-4026-93fa-e5c91b469c7a",
-    prompt="Luna Tanaka, Japanese soft girl style, ..."
+    prompt="20-year-old Japanese girl, black center-parted chin-length bob, ..."
 )
 ```
