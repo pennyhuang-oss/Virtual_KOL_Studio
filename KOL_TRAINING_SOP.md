@@ -10,9 +10,9 @@
 |-----|---------|------|
 | Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ✅ 完成 |
 | Luna Tanaka | `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a` | ✅ 完成 |
-| Ananya Kapoor | — | ⏳ 待處理 |
-| Yuna Kim | — | ⏳ 待處理 |
-| Aaliya Okonkwo | — | ⏳ 待處理 |
+| Ananya Kapoor | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | 🔄 訓練完成，測試圖場景待確認 |
+| Yuna Kim | `235794a5-2eff-45fb-91b4-3232910afefa` | 🔄 訓練中 |
+| Aaliya Rivera | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | 🔄 訓練中 |
 | Camille Dupont | — | ⏳ 待處理 |
 
 訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Okonkwo → Camille Dupont
@@ -82,6 +82,15 @@ show_characters(action='status', soul_id='<soul_id>')
 
 ### 第五步：生成測試圖確認成果
 
+> ⚠️ **重要規則：訓練完成後，必須先向使用者確認場景，待使用者同意後才能開始生成。**
+> 
+> 確認項目：
+> - 場景名稱（例如：街頭、咖啡廳、公園、海邊、室內等）
+> - 穿搭描述（每個場景分別確認）
+> - 角度與構圖（全身、3/4、特寫等）
+>
+> 確認過後再執行以下生成步驟。
+
 訓練完成後，用 Soul ID 生成至少 6 張不同場景的測試圖，確認身份一致性：
 
 ```
@@ -94,7 +103,7 @@ generate_image(
 )
 ```
 
-建議場景：街頭、咖啡廳、公園（每個場景 2 張，共 6 張）。
+建議場景：依使用者確認的場景為準（每個場景 2 張，至少 3 個場景共 6 張）。
 
 Prompt 結構：
 ```
