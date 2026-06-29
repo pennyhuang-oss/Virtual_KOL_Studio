@@ -42,6 +42,19 @@
 
 > ✅ 測試圖已上傳至 `images/soul_test_v1/`（共 6 張）。
 
+## 使用者回饋（2026-06-30）
+
+### 場景 1（孟買街頭）— ❌ 穿搭不滿意
+- `flowy floral kurta + wide-leg trousers` 這類造型**以後不要再用**，很不好看
+- Ananya 的穿搭應以 yoga set、crop top、midriff-baring co-ords、緊身褲/棉質短裙為主，保持身材線條可見
+
+### 場景 2（咖啡廳窗邊）— ✅ 可以
+
+### 場景 3（公園黃金時段）— ⚠️ 構圖雷同
+- 兩張圖拍攝角度、人物比例幾乎相同，看起來像同一套圖
+- 同一場景的兩張圖必須刻意安排不同構圖（例如：一張廣角/一張近景，或一張正面/一張側面回眸）
+- 參見 [[feedback-image-composition-variety]]
+
 ### 測試用 Prompt 結構
 
 ```
