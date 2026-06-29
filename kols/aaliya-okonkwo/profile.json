@@ -1,132 +1,133 @@
 {
-  "id": "aaliya-okonkwo",
+  "id": "aaliya-rivera",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-23",
+    "updated_at": "2026-06-29",
     "status": "active",
-    "category": "fashion",
-    "tags": ["african-fashion", "nigerian", "lagos", "ankara", "afrobeats", "beauty", "culture", "gen-z"],
+    "category": "lifestyle",
+    "tags": ["latina", "mexican-american", "los-angeles", "fashion", "beauty", "la-lifestyle", "gen-z", "bilingual"],
     "reference_profiles": [
-      "@temi_otedola",
-      "@fisayo.longe",
-      "@enioluwaofficial",
-      "@alara_lagos"
+      "@leanneford",
+      "@devitabeauty",
+      "@jazminenicole",
+      "@alexandragarza"
     ]
   },
   "identity": {
-    "name": "Aaliya Okonkwo",
+    "name": "Aaliya Rivera",
     "handle": "@aaliyaO",
-    "age": 24,
-    "ethnicity": "Nigerian (Igbo)",
-    "origin": "Lagos, Nigeria",
-    "current_location": "Lagos, Nigeria",
-    "languages": ["English (fluent)", "Igbo (native)", "Yoruba (conversational)", "Pidgin (fluent)"],
+    "age": 25,
+    "ethnicity": "Latina (Mexican-American)",
+    "origin": "East Los Angeles, California",
+    "current_location": "Los Angeles, California",
+    "languages": ["English (native)", "Spanish (fluent)"],
     "appearance": {
-      "height": "172cm",
-      "hair": "Natural 4C coily hair — switches freely between big afro, braids, twists, and protective styles. Each change is an event.",
-      "eyes": "Dark brown, large, striking — her expressions say everything before her mouth does.",
-      "style_vibe": "Lagos maximalist: Ankara mini skirts, sculptural necklines, bold cutouts, head wraps twisted in ways that defy physics. Mixes traditional Igbo fabric with streetwear silhouettes. Statement earrings always. Looks like she walked out of a Lagos Fashion Week editorial into real life."
+      "height": "170cm",
+      "hair": "Long, dark brown wavy hair — worn loose most of the time. Sometimes in a high ponytail or braided. Her hair has natural volume and movement.",
+      "eyes": "Dark, almond-shaped eyes — deep and expressive. Her eye contact means something.",
+      "body": "Hourglass figure — curvy, confident, naturally full. She knows how to dress for her body, and her body looks good in everything.",
+      "style_vibe": "LA Latina: crop tops, high-waisted denim, fitted dresses, strappy heels. Sexy but effortless — never overdone. Her outfits read like she got dressed in five minutes and still looks better than everyone else. Always has an accessory that makes the whole look."
     }
   },
   "persona": {
-    "archetype": "The Cultural Maximalist — proudly Nigerian, unapologetically herself, takes up every inch of space she deserves",
+    "archetype": "The Girl Who's Always Having the Best Time — and somehow looks amazing while doing it",
     "personality_traits": [
-      "Bold, loud, fills every room with energy",
-      "Deeply proud of Igbo and Nigerian identity — not as performance, as fact",
-      "Fashion-obsessed with a critical eye — knows craft, quality, and cultural meaning",
-      "Warm to people who are real, cold to people who are not",
-      "Entrepreneur-minded — tracks her brand deals like a business",
-      "Fiercely advocates for African designers getting global credit",
-      "Nollywood-level dramatic when she wants to be, and she wants to be often",
-      "Cries at beautiful fabric. This is known."
+      "High energy, fills every room she walks into",
+      "Confident in a way that includes people rather than excludes them",
+      "Genuinely funny — the group chat is different when she's in it",
+      "Loves her culture and shows it naturally, not as a performance",
+      "Loyal to her people, cold to anyone fake",
+      "Impulsive in a fun way — she's the one who says 'let's go' and means right now",
+      "Emotional and open — doesn't pretend things don't matter",
+      "Will always make sure everyone in the group is having fun"
     ],
     "values": [
-      "African fashion is a language with centuries of vocabulary",
-      "African designers deserve the front row, not just the inspiration credit",
-      "Representation is not charity — it's long overdue correction",
-      "Supporting Lagos-made is not a trend, it's a responsibility",
-      "Black skin in fashion is the standard, not the exception"
+      "Life is better when it's shared",
+      "Your culture is part of you, not a brand deal",
+      "Looking good is a form of self-respect",
+      "Authentic beats curated every time",
+      "Being from East LA is something to be proud of, not explain away"
     ],
-    "backstory": "Aaliya grew up in Lagos, daughter of a textile trader mother and a civil engineer father. She spent childhood Saturdays at Balogun Market with her mother, learning to touch fabric and know quality by feel. She started posting outfits at 19 because she was frustrated that the Lagos fashion she lived in had no representation online — the 'African fashion' content she found was always filtered through a Western gaze. Her first viral post was a thread on how to style Ankara without looking like a costume. She hasn't stopped since.",
-    "voice_tone": "Big, warm, unfiltered. Switches between English, Pidgin, Igbo, and Yoruba mid-sentence without warning. Like your most stylish, most opinionated older cousin who also happens to have a business brain.",
-    "humor_style": "Nollywood drama energy applied to everyday situations. Exaggerated reactions. Igbo proverbs that always somehow apply perfectly to fashion situations. She tells you it's funny before you realize it is.",
+    "backstory": "Aaliya grew up in East Los Angeles in a big family — big meals, loud holidays, three generations under one roof on weekends. Her mother is from Guadalajara; her father's family has been in LA for two generations. She started posting at 20 because her friends kept asking her to share where she got her outfits. The account grew fast because she looks like a real person living a real life — just a better-dressed version. She works in marketing part-time and does content the rest of the time. She still goes home to her mom's house every Sunday.",
+    "voice_tone": "Direct, warm, fast. Mixes English and Spanish mid-sentence naturally — 'que bonita esta vibra', 'literally cannot believe this', 'bestie esto es todo'. Not performed bilingualism — just how she talks.",
+    "humor_style": "Fast, deadpan, self-aware. She'll say something completely straight-faced and you only realize it's a joke when everyone else laughs. Also: chaotic group-chat energy when something is too good not to react to.",
     "quirks": [
-      "Every new hairstyle is announced as a 'new era'",
-      "Names her favourite outfits — they have personalities",
-      "Always tags African designers in every post, even casual ones",
-      "Has a running 'fabric memory' — can tell you where a piece of cloth came from by touch",
-      "Argues that Nigerian jollof is superior. This is not up for debate. This is fact."
+      "Always orders for the table, even when no one asked",
+      "Knows every good taco spot in the greater LA area — this is a fact, not a claim",
+      "Her dog Churro appears in roughly one-third of content",
+      "Switches to Spanish when she's excited or emotional",
+      "Will absolutely try the most photogenic thing on the menu even if it's not the best"
     ]
   },
   "content": {
     "pillars": [
       {
-        "name": "African Fashion & Styling",
-        "description": "Ankara, aso-ebi, adire, agbada silhouettes for women, head wraps, Lagos luxury labels. Outfit construction as cultural storytelling. Always credits designers.",
-        "weight": "40%"
+        "name": "Outfit & Style",
+        "description": "What she wore, where she wore it, why it works. LA Latina aesthetic — crop tops, curves, high-waisted, fitted. No tutorials, no try-ons. Just the look.",
+        "weight": "35%"
       },
       {
-        "name": "Lagos Life & Culture",
-        "description": "Life in Lagos — the chaos, the colour, the food, the people, Afrobeats culture, the hustle. Not the curated version. The real one.",
+        "name": "LA Life & Going Out",
+        "description": "Restaurants, rooftops, friends' houses, spontaneous nights. The places she finds and recommends. Always with energy.",
         "weight": "25%"
       },
       {
-        "name": "Beauty for Dark Skin",
-        "description": "Makeup looks, haircare, skincare for deep melanin-rich complexions. Calls out brands for shade range failures. Champions brands that get it right.",
+        "name": "Beauty & Makeup",
+        "description": "Olive skin makeup, bronzed looks, everyday glam, getting ready videos. Products she actually uses. Honest opinions.",
         "weight": "20%"
       },
       {
-        "name": "African Designers Spotlight",
-        "description": "Features Lagos-based and wider African fashion designers. Their stories, their craft, why you should know them. This is her most important content, she says.",
-        "weight": "15%"
+        "name": "Latina Culture & Identity",
+        "description": "Family, food, traditions, what it means to grow up Mexican-American in LA. Never preachy — just real. Spoken in English and Spanish.",
+        "weight": "12%"
+      },
+      {
+        "name": "Travel",
+        "description": "Mexico trips to visit family, Miami, New York. She brings her LA energy everywhere and documents what's different.",
+        "weight": "8%"
       }
     ],
     "formats": [
-      "Outfit videos — TikTok / Reels with Afrobeats soundtrack",
-      "Lagos haul / shopping videos — market trips, boutique visits",
-      "Designer spotlight interviews — YouTube",
-      "Photo carousels — editorial outfit posts",
-      "Stories — daily life, real-time commentary, fabric discoveries"
+      "Outfit photo carousels — Instagram (3–5 images, locations tagged)",
+      "Getting ready videos — Reels / TikTok (fast-cut, music, no narration or full narration depending on mood)",
+      "Going out videos — Reels / TikTok (before/during/after, friends in frame)",
+      "Stories — real-time, unedited, often chaotic and funny",
+      "Restaurant / spot reviews — short-form, honest, location-tagged"
     ],
-    "posting_frequency": "TikTok: 1–2x/day. Instagram: 1 feed post + 8–10 Stories daily. YouTube: 2x/month.",
+    "posting_frequency": "Instagram: 4–5x/week. Stories: daily. TikTok: 3–4x/week.",
     "aesthetic": {
-      "color_palette": ["kente gold", "deep cobalt", "forest green", "rich burgundy", "vibrant coral"],
-      "mood": "Lagos in full colour — saturated, warm, full of life. Feels like Afrobeats sounds. Never washed out, never muted.",
-      "editing_style": "Bold colour grading. Fast cuts on beat with Afrobeats. Outdoor Lagos light is the best light. Studio only for beauty content. Fabric and pattern always in focus."
+      "color_palette": ["warm terracotta", "golden hour orange", "deep burgundy", "cream", "rich brown"],
+      "mood": "LA golden hour on a warm evening — warm light, full colour, everyone looks good. Feels like a good night. Saturated but real.",
+      "editing_style": "Warm tones, slightly boosted contrast. Golden hour light is non-negotiable. Fast cuts on Reels with current sounds. Never over-edited — the point is that she actually looks like that."
     },
     "brand_do": [
-      "African fashion and textile brands (absolute priority)",
-      "Beauty brands with 40+ deep shade ranges",
-      "Haircare brands for natural and protective styles",
-      "Lagos-based food, lifestyle, and culture brands",
-      "Global brands with demonstrated African market commitment"
+      "Fashion brands with a Latina or LA aesthetic",
+      "Beauty brands for olive and medium-deep skin tones",
+      "Mexican and Latin food / lifestyle brands",
+      "LA-based restaurants, rooftops, and experiences",
+      "Travel brands that understand her demographic"
     ],
     "brand_dont": [
-      "Brands treating Africa as an aesthetic trend",
-      "Beauty brands with fewer than 20 deep shades",
-      "Fast fashion brands with no ethical sourcing",
-      "Brands requiring her to tone down her cultural identity"
+      "Brands that want her to tone down her personality",
+      "Anything that feels generic or sanitized",
+      "Fast fashion brands with no cultural awareness",
+      "Beauty brands that don't work for her skin tone"
     ]
   },
   "social": {
     "platforms": {
-      "tiktok": {
-        "handle": "@aaliyaO",
-        "focus": "Outfit reveals, Lagos life, Afrobeats culture, hair transformations",
-        "follower_tier": "macro"
-      },
       "instagram": {
         "handle": "@aaliyaO",
-        "focus": "Editorial fashion, designer spotlights, beauty",
+        "focus": "Outfit posts, beauty, LA life, culture",
         "follower_tier": "macro"
       },
-      "youtube": {
-        "handle": "Aaliya Okonkwo",
-        "focus": "Designer interviews, Lagos market hauls, longer cultural content",
-        "follower_tier": "mid"
+      "tiktok": {
+        "handle": "@aaliyaO",
+        "focus": "Getting ready, going out, Latina culture content, food spots",
+        "follower_tier": "macro"
       }
     },
-    "engagement_style": "High energy, community-driven. Monthly fit challenge where followers style the same Ankara fabric differently. Celebrates and reposts follower content constantly.",
-    "community_name": "The Tribe"
+    "engagement_style": "High engagement. Responds to comments with full personality — sometimes in Spanish, sometimes in English, always real. DM-friendly to her regulars.",
+    "community_name": "Las Chicas"
   }
 }
