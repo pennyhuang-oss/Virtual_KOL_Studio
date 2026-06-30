@@ -50,10 +50,52 @@
 
 ### 場景 2（咖啡廳窗邊）— ✅ 可以
 
-### 場景 3（公園黃金時段）— ⚠️ 構圖雷同
+### 場景 3（公園黃金時段）— ⚠️ 構圖雷同（已廢棄，見下方重生成版本）
 - 兩張圖拍攝角度、人物比例幾乎相同，看起來像同一套圖
 - 同一場景的兩張圖必須刻意安排不同構圖（例如：一張廣角/一張近景，或一張正面/一張側面回眸）
 - 參見 [[feedback-image-composition-variety]]
+
+---
+
+## 重生成批次（2026-06-30）
+
+### 場景 1 v2 — 孟買咖啡廳（深寶石藍 wrap dress）✅ 通過
+
+**穿搭**：deep jewel blue fitted wrap dress with V-neckline
+
+| 構圖 | Job ID | CDN URL |
+|------|--------|---------|
+| 3/4 身，窗邊坐姿，面朝鏡頭 | `c9d7cc37-be7f-4bd8-a4e9-c17434173bdc` | https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260630_131514_c9d7cc37-be7f-4bd8-a4e9-c17434173bdc.png |
+| 臉部近景，側臉望窗，bokeh 背景 | `64e02c03-a868-4b08-87ed-0fe9bb417f13` | https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260630_131518_64e02c03-a868-4b08-87ed-0fe9bb417f13.png |
+
+**Prompts：**
+```
+# 圖1（3/4 身）
+23-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes, elegant facial features, graceful curvy figure, sitting by large window in upscale Mumbai café, wearing deep jewel blue fitted wrap dress with V-neckline that hugs her curves, 3/4 body shot, slight smile looking at camera, soft natural window light, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+
+# 圖2（臉部近景）
+23-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes, elegant facial features, graceful curvy figure, inside upscale Mumbai café, wearing deep jewel blue fitted wrap dress with V-neckline, close-up portrait shot from shoulders up, slightly turned profile gazing toward window light, warm ambient bokeh background, confident relaxed expression, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+---
+
+### 場景 3 v2 — Marine Drive 海岸散步道（鏽紅 crop top + 白色闊腿褲）✅ 通過
+
+**穿搭**：rust terracotta fitted crop top + high-waist white wide-leg trousers
+
+| 構圖 | Job ID | CDN URL |
+|------|--------|---------|
+| 廣角，人物小，海岸線天際線為主 | `abd00952-004c-480d-bb92-cc9223f54775` | https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260630_131744_abd00952-004c-480d-bb92-cc9223f54775.png |
+| 臉部近景，海景 bokeh，黃金時段側光 | `4e00d579-15c3-488f-839f-5ff802078d13` | https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260630_131750_4e00d579-15c3-488f-839f-5ff802078d13.png |
+
+**Prompts：**
+```
+# 圖1（廣角）
+23-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes, graceful curvy figure, standing on Marine Drive promenade Mumbai, wearing rust terracotta fitted crop top and high-waist white wide-leg trousers, wide angle shot with person relatively small in frame, Mumbai skyline and Arabian Sea in background, golden hour warm light, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+
+# 圖2（臉部近景）
+23-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes, graceful curvy figure, on Marine Drive promenade Mumbai, wearing rust terracotta fitted crop top and high-waist white wide-leg trousers, close-up portrait from shoulders up, relaxed confident expression slightly looking away, Arabian Sea soft bokeh background, golden hour warm light, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
 
 ### 測試用 Prompt 結構
 
