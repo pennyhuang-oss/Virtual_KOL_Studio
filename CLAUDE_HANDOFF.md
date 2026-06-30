@@ -204,19 +204,134 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ## 其他待辦
 
-### 圖片生成（下一步重點）
-- [ ] **Camille Dupont** — `self_intro_v1` 已有 4 張，需補足 script 其餘場景（shot05–shot10）
-- [ ] **Iris Chen** — `soul_v1_showcase` 資料夾存在但空，需開始生成
+### 影片生成（目前進行中）
+- [ ] **Iris Chen** — `cafe_test_v1` 完成（3 支），下一步：製作其他場景日常影片（非自我介紹）
+- [ ] **其他 5 個 KOL** — 影片生成尚未開始，待 Iris 工作流程穩定後依序執行
+
+### 圖片生成
 - [ ] **Ananya Kapoor** — 需要重新生成場景一（正確穿搭）和場景三（修正構圖多樣性）
 - [ ] **Luna Tanaka / Yuna Kim / Aaliya Rivera** — 自我介紹圖片尚未生成
 
 ### 文件補齊
+- [ ] **Iris Chen** — `character.md` 的 benchmark 帳號區塊需更新（現有的 4 個帳號都是靜音美學型，不符合 Iris 新的說話+多元內容方向）
 - [ ] **Luna Tanaka** — 缺少 `edit_timeline_self_intro.md`
 - [ ] **Yuna Kim** — 缺少 `edit_timeline_self_intro.md`
 - [ ] **Aaliya Rivera `generation_notes.md`** — 尚未建立，需要補上（參考 `kols/camille-dupont/generation_notes.md` 的格式）
 
 ### 其他
 - [ ] **Yuna Kim / Aaliya Rivera** — `KOL_TRAINING_SOP.md` 的狀態確認測試圖 approved 後改為 ✅
+
+---
+
+## 影片生成技術規範（2026-06-30 確立）
+
+### 工作流程
+
+```
+Step 1: Soul V2 生成 start frame 靜態圖（臉部鎖定）
+Step 2: cinematic_studio_video_v2 動態化（多鏡頭）
+Step 3: 後製疊加 BGM + 環境音（CapCut）
+Step 4: （未來）疊加中文 VO（ElevenLabs 或 Azure TTS）
+```
+
+### 推薦模型：`cinematic_studio_video_v2`
+
+這是目前測試結果最好的影片模型（Iris `cafe_test_v1` v3 通過）。
+
+```
+model: cinematic_studio_video_v2
+multi_shots: true
+multi_shot_mode: auto        ← 必須 auto，不能 custom（custom+空prompt會卡死）
+genre: intimate
+mode: pro
+sound: on
+aspect_ratio: 9:16
+duration: 12                 ← 最短 10s，建議 12s
+```
+
+### Prompt 模板
+
+```
+Shot 1: [場景進入動作，全身或中景]
+Shot 2: [主要行為，中景]
+Shot 3: [特寫細節，手/道具/表情]
+Shot 4: [收尾情緒鏡頭，側臉或望遠]
+Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening,
+natural lighting, stable camera, feels like a real person filmed this.
+```
+
+### 影片生成注意事項
+
+| 項目 | 規則 |
+|------|------|
+| 解析度 | **720p**（480p 太低，手機感靠 prompt 不靠降解析度） |
+| 時長 | **12 秒**，最短不低於 10 秒 |
+| 鏡頭穩定 | **禁止** `handheld`, `camera shake`, `motion blur`, `NOT tripod perfect` |
+| 手機感 | 用 `shot on iPhone, warm soft grain, no over-sharpening` |
+| 內容 | 必須有 3–4 個連續動作，有敘事起伏，不能只有一個動作 |
+| multi-shot | `multi_shot_mode: auto`，把各鏡頭描述寫進主 prompt |
+
+---
+
+## 聲音生成技術限制（重要）
+
+### Higgsfield TTS — 不適合中文 ❌
+
+Higgsfield 的所有 preset 聲音都是英語聲音（Tallulah、Skye、Chloe 等西方名字）。
+測試過 `minimax`、`seed_speech`、`elevenlabs` 三個引擎，全部結論：**聽起來像外國人說中文，語調、語氣完全不自然，不可使用。**
+
+### 解決方案（尚未執行）
+
+| 工具 | 狀態 | 說明 |
+|------|------|------|
+| **Azure TTS** | 需要 Azure 訂閱（目前無） | `zh-TW-HsiaoChenNeural` 是最接近台灣 22 歲女生的聲音 |
+| **ElevenLabs** | 有免費額度但有限 | 支援中文 clone 聲音，月費後續考慮 |
+| **暫時方案** | ✅ 目前採用 | 先做純視覺影片，聲音問題延後解決 |
+
+### 聲音一致性機制（待執行）
+
+每個 KOL 只需設定一次聲音 → 存入 `profile.json` 的 `voice_id` → 之後每支 VO 都用同一個 ID，聲音永遠一致。確定工具後再執行。
+
+---
+
+## KOL 內容方向更新：Iris Chen
+
+### 原始設定 vs 更新後
+
+**原始 benchmark 帳號**（@lalaochh、@syusyu21、@yuyustudio\_、@tzuyu\_hair）：
+- 全部都是**靜音美學型**創作者——無 VO、無對鏡說話、純視覺 montage + BGM
+- 這個風格不符合實際需求
+
+**更新後的 Iris 內容方向**：
+1. **日常剪輯影片**（多鏡頭，搭配不同場景和腳本，有時會說話）
+2. **熱門短影音舞蹈**（偶爾跟跳 trending dance）
+3. **純視覺美學 clip**（穿搭、街頭，無 VO，搭 BGM）
+
+→ `character.md` 的 benchmark 帳號區塊需要更換成符合這個多元方向的帳號（**待辦**）。
+
+---
+
+## 工作流程規範（用戶要求）
+
+### 每個段落結束後的固定動作
+
+每完成一個工作段落，**必須執行以下步驟再繼續**：
+
+1. **一致性檢查**：確認所有相關檔案描述統一（特別是人格設定）
+2. **更新 CLAUDE_HANDOFF.md**：把本段落的決策、規則、待辦都記錄進來
+3. **Git commit & push**：所有變更一次推上去
+
+### 檔案一致性原則
+
+**每次更新人格設定，必須同步檢查並更新以下所有檔案**：
+- `character.md`
+- `profile.json`
+- `content_style.md`
+- `script_self_intro.md`
+- `edit_timeline_self_intro.md`
+- `generation_notes.md`（如果存在）
+
+**已知衝突案例**：Aaliya Rivera（資料夾名稱仍是 `aaliya-okonkwo`，人格已改為 LA 拉丁裔）。這是人格中途更換但只有部分檔案同步的結果。每次更新必須全檔案掃描，不能只改一個檔案。
 
 ---
 
@@ -231,15 +346,18 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 ### 檔案操作規則
 - 用 Edit tool 修改檔案前，**必須先用 Read tool 讀取**
 - 多個 KOL 的相同操作可以並行執行（同時 Read 6 個檔案，同時 Edit 6 個檔案）
+- **每個段落結束都要做全檔案一致性確認再 push**
 
 ### Higgsfield MCP
 - `show_generations` → 取得完整 UUID（不要用短 ID）
-- `job_display` → 顯示已生成的圖片
+- `job_display` → 顯示已生成的圖片/影片
 - `generate_image` with `model: soul_2` + `soul_id` 參數
-- Higgsfield CloudFront 圖片在 Windows 本機可讀；雲端 session 需用 `raw.githubusercontent.com`
+- `generate_video` with `model: cinematic_studio_video_v2` → 影片生成首選
+- Higgsfield CloudFront 圖片在 macOS 本機可直接 `curl` 下載
 
 ### 工作方式偏好
 - 一次更新全部 6 個人格，不要一個個做
 - 每個 Step 完成後 commit & push，再繼續下一步
 - 不需要問確認就可以繼續下一個 Step，除非有需要用戶決策的事項
-- 圖片生成完後再請用戶審閱，不要提前做過多假設
+- 圖片/影片生成完後再請用戶審閱，不要提前做過多假設
+- **每個段落結束 = 一致性檢查 + 更新 CLAUDE_HANDOFF.md + push，這是固定流程**
