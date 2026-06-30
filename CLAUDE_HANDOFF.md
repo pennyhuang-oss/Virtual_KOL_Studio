@@ -224,12 +224,12 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ### 文件補齊
 - [ ] **Iris Chen** — `character.md` 的 benchmark 帳號區塊需更新（現有的 4 個帳號都是靜音美學型，不符合 Iris 新的說話+多元內容方向）
-- [ ] **Luna Tanaka** — 缺少 `edit_timeline_self_intro.md`
-- [ ] **Yuna Kim** — 缺少 `edit_timeline_self_intro.md`
-- [ ] **Aaliya Rivera `generation_notes.md`** — 尚未建立，需要補上（參考 `kols/camille-dupont/generation_notes.md` 的格式）
+- [x] **Luna Tanaka** — `edit_timeline_self_intro.md` 已存在 ✅
+- [x] **Yuna Kim** — `edit_timeline_self_intro.md` 已存在 ✅
+- [x] **Aaliya Rivera `generation_notes.md`** — 已補上測試圖記錄（2026-06-30）✅
 
 ### 其他
-- [ ] **Yuna Kim / Aaliya Rivera** — `KOL_TRAINING_SOP.md` 的狀態確認測試圖 approved 後改為 ✅
+- [x] **KOL_TRAINING_SOP.md 狀態表** — 已全面更新至最新進度（2026-06-30）✅
 
 ---
 
@@ -327,7 +327,12 @@ Higgsfield 的所有 preset 聲音都是英語聲音（Tallulah、Skye、Chloe �
 
 每完成一個工作段落，**必須執行以下步驟再繼續**：
 
-1. **一致性檢查**：確認所有相關檔案描述統一（特別是人格設定）
+1. **全檔案一致性確認**：push 前必須確認以下所有文件都已同步到最新狀態，不允許只改其中一個：
+   - `CLAUDE_HANDOFF.md`（整體進度、待辦、已完成工作）
+   - `KOL_TRAINING_SOP.md`（狀態總覽表、新 Session 待辦清單）
+   - 涉及的各 KOL `generation_notes.md`（生成記錄）
+   - 涉及的各 KOL `character.md` / `profile.json`（如有修改）
+   > ⚠️ 不同文件之間的狀態描述若有衝突，Claude 在下一個 session 讀取時會產生錯誤判斷，執行出不符合預期的結果。這是嚴重的工作流程問題。
 2. **更新 CLAUDE_HANDOFF.md**：把本段落的決策、規則、待辦都記錄進來
 3. **Git commit & push**：所有變更一次推上去
 

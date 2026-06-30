@@ -6,14 +6,14 @@
 
 ## 目前進度總覽
 
-| KOL | Soul ID | 狀態 |
-|-----|---------|------|
-| Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ✅ 完成 |
-| Luna Tanaka | `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a` | ✅ 完成 |
-| Ananya Kapoor | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | 🔄 訓練完成，測試圖已上傳，場景待使用者下次確認 |
-| Yuna Kim | `235794a5-2eff-45fb-91b4-3232910afefa` | 🔄 訓練完成，測試圖場景待確認 |
-| Aaliya Rivera | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | 🔄 訓練完成，測試圖場景待確認 |
-| Camille Dupont | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | ✅ 完成 |
+| KOL | Soul ID | Soul 訓練 | 測試圖 | 自介素材 | 狀態 |
+|-----|---------|----------|--------|---------|------|
+| Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ✅ | ✅ 14 張 | ✅ 影片 v3 通過 | ✅ 完成 |
+| Luna Tanaka | `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a` | ✅ | ✅ 6 張 | ❌ 待生成 | 🔄 進行中 |
+| Ananya Kapoor | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | ✅ | ✅ 6 張（場景 1+3 已重生成） | ❌ 待生成 | 🔄 進行中 |
+| Yuna Kim | `235794a5-2eff-45fb-91b4-3232910afefa` | ✅ | ✅ 6 張 | ❌ 待生成 | 🔄 進行中 |
+| Aaliya Rivera | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | ✅ | ✅ 8 張 | ❌ 待生成 | 🔄 進行中 |
+| Camille Dupont | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | ✅ | ✅ 12 張 | ✅ 4 張通過 | ✅ 完成（影片素材待生成）|
 
 訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Rivera → Camille Dupont
 
@@ -25,18 +25,25 @@
 
 ### 現在的待辦（依優先順序）
 
-1. **Yuna Kim — 詢問測試圖場景**
-   - 訓練已完成（Soul ID: `235794a5-2eff-45fb-91b4-3232910afefa`）
-   - 尚未生成測試圖，**必須先問使用者想要哪 3 個場景（含穿搭、構圖）再生成**
-   - 生成完成後：圖片 push 到 `kols/yuna-kim/images/soul_test_v1/`，更新 `character.md`、`profile.json`、`generation_notes.md`
+> 最後更新：2026-06-30
 
-2. **Aaliya Rivera — 詢問測試圖場景**
-   - 訓練已完成（Soul ID: `97f5c6cd-1c0c-4432-83d0-dd42210ecada`）
-   - 同上流程，先確認場景再生成
+1. **Luna Tanaka — 自我介紹素材圖生成**
+   - Soul 訓練 ✅，測試圖 ✅，尚未生成自介素材（參考 Camille 的 `self_intro_v1` 流程）
+   - 生成前先確認場景與穿搭，每個場景兩張，構圖必須不同
 
-3. **Ananya Kapoor — 使用者確認測試圖是否滿意**
-   - 測試圖已上傳（`kols/ananya-kapoor/images/soul_test_v1/`），但使用者未確認場景是否OK
-   - 若使用者想重新生成，需先確認新場景
+2. **Yuna Kim — 自我介紹素材圖生成**
+   - Soul 訓練 ✅，測試圖 ✅（selfie、江南咖啡廳、弘大街頭各 2 張）
+   - 同上流程
+
+3. **Aaliya Rivera — 自我介紹素材圖生成**
+   - Soul 訓練 ✅，測試圖 ✅（poolside、restaurant、selfie 共 8 張）
+   - 同上流程
+
+4. **Iris Chen — benchmark 帳號更新**
+   - `character.md` 現有 benchmark 帳號為靜音美學型，不符合多媒體內容方向，需更換
+
+5. **Camille Dupont — 自我介紹影片素材生成**
+   - 自介圖 4 張已通過，剪輯時間軸已完成，影片素材（10 個 shot）尚未生成
 
 ### 注意事項（每次生成前必讀）
 - **Iris Chen 是所有 KOL 的標準範本**：她是第一個完成的人格，後續每一個 KOL 的訓練規格、文件規模、步驟流程，全部以她為基準。不確定某個步驟怎麼做、某份文件要寫到什麼程度，就去看 `kols/iris-chen/` 的結構和內容對齊。
