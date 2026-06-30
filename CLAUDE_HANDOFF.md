@@ -125,6 +125,22 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ## 接下來要做的工作（按優先順序）
 
+### ✅ Benchmark 帳號全面更新（已完成，2026-06-30）
+
+**更新方向**：將 5 個 KOL 的 benchmark 帳號從明星/Idol 類型，全面替換為「性感身材展示型」的真實網紅帳號（依各自國籍/市場精準對標）。
+
+**變更摘要**：
+- **Iris Chen**：原帳號保留（用戶滿意），新增素材生成規則 preamble
+- **Luna Tanaka**：換成日本 AV 女優 IG 帳號（@yua_mikami、@asukakiraran、@kana_momonogi、@eimi0318）
+- **Ananya Kapoor**：換成印度性感身材展示網紅（@poonampandeyreal、@sherlynchopra）
+- **Yuna Kim**：移除全部彩妝師帳號，換成韓國性感身材系（@euddeume_、@nana.un、@lucypark.official 等）
+- **Aaliya Rivera**：精簡為核心性感身材帳號（@dollycastro、@danielabelmo、@alexisren）
+- **Camille Dupont**：換成歐美性感白人女性帳號（@lanarhoades、@dangershewrote、@instavalentinanappi、@theevaelfie）
+
+**新增全局規則**：所有素材生成（圖片+影音）必須參考該 KOL 的 Benchmark 帳號（詳見 `KOL_TRAINING_SOP.md` 及各 `character.md`）
+
+---
+
 ### ✅ Step 1 — 最高優先（已完成）
 為全部 6 個 KOL 新增 `## 視覺生成指南`（表情與肢體語言 + 服裝公式 + 鏡頭公式）。
 

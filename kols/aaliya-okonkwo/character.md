@@ -341,40 +341,39 @@ LA 的光——充足、暖、直接。戶外的陽光、餐廳的暖燈、游�
 
 ### Instagram Benchmark
 
+> ⚠️ **素材生成規則**：生成圖片素材前，必須參考以下 Benchmark 帳號發布的圖文，以其風格、構圖、身材展示方式作為 prompt 方向依據。
+
 | 帳號 | 效仿原因 |
 |------|---------|
-| **@dollycastro**（Dolly Castro） | 拉丁裔 fitness model，hourglass 身材展示的頂級示範。她的帳號告訴你：這個身材應該從哪個角度拍、什麼穿搭最能呈現比例——是 Aaliya 身材照最直接的構圖參考。 |
-| **@desiperkins**（Desi Perkins） | 拉丁裔 LA lifestyle & beauty influencer，帳號最成熟。美妝+穿搭+生活的比例、合作品牌的選擇方式、IG 版面的一致性——Aaliya 帳號的整體架構對標她。 |
-| **@alexisren**（Alexis Ren） | LA 系美女，bikini/lifestyle 自然混搭，身材展示從不刻意但永遠好看。她解決了「怎麼讓泳裝照不顯假」這個問題——Aaliya 的泳池照直接參考。 |
-| **@lele.pons**（Lele Pons） | 委內瑞拉裔 LA creator，了解 Latina 能量在 IG 上的包裝方式——高能量但有質感，不是鬧，是自信。 |
-| **@danielabelmo**（Daniela Belmo） | 拉丁裔 body positive creator，展示 hourglass 身材的方式直接且自信——這種「我就是這樣，看夠了嗎」的態度是 Aaliya 的核心精神。 |
-| **@sophieele** | LA 系 Latina influencer，派對/穿搭/生活，能量接近 Aaliya 但帳號規模中型，可以觀察她如何在資源有限的情況下維持質感。 |
-| **@salicerose** | 拉丁裔 LA creator，朋友圈文化強，讓人看了想跟她出去——Aaliya 的「跟朋友出去」內容章節的直接參考。 |
+| **@dollycastro**（Dolly Castro） | 拉丁裔 hourglass 身材展示的頂級示範。她的帳號告訴你：這個身材應該從哪個角度拍、什麼穿搭最能呈現比例——是 Aaliya 身材照最直接的構圖參考。比基尼+緊身穿搭的鏡頭邏輯完全對標。 |
+| **@danielabelmo**（Daniela Belmo） | 拉丁裔曲線展示帳號，展示 hourglass 身材的方式直接且自信——這種「我就是這樣，看夠了嗎」的態度是 Aaliya 的核心精神。研究她的姿勢、角度、場景選擇。 |
+| **@alexisren**（Alexis Ren） | LA 系美女，bikini/lifestyle 自然混搭，身材展示從不刻意但永遠好看。了解如何讓泳裝照和比基尼照不顯得刻意——Aaliya 的泳池場景直接對標。 |
 
-**生成素材時仿造重點**：hourglass 身材的最佳拍攝角度（略低仰角呈現身材比例）、LA 泳池/餐廳/戶外的暖色飽和調、緊身洋裝和比基尼在不同場景裡的構圖差異
+**生成素材時仿造重點**：hourglass 身材的最佳拍攝角度（略低仰角呈現身材比例）、LA 泳池/戶外的暖色飽和調、緊身洋裝和比基尼在不同場景裡的構圖差異
 
 ---
 
 ### TikTok Benchmark
 
+> ⚠️ **素材生成規則**：生成影音素材前，必須參考以下 Benchmark 帳號發布的影片，以其拍攝方式、剪輯節奏、出場方式作為腳本方向依據。
+
 | 帳號 | 效仿原因 |
 |------|---------|
-| **@lele.pons** | Latina 能量在 TikTok 上的包裝公式——如何讓高能量內容有節奏感而不是亂。 |
-| **@dollycastro** | fitness/lifestyle 身材展示短影片的拍攝方式，了解「展示身體」的 TikTok 格式。 |
-| **@salicerose** | 拉丁裔 LA TikTok 的日常感——朋友、派對、出遊的剪輯節奏，raw 又好看。 |
+| **@dollycastro** | fitness/lifestyle 身材展示短影片的拍攝方式，了解「展示身體」的 TikTok 格式——首幀、BGM、展示角度。 |
 | **@brendatrindade** | 巴西系性感 TikToker，了解拉丁美女在 TikTok 上穿搭展示的鏡頭方式和剪輯風格。 |
-| **@jadapink** | 美國 Latina fashion TikTok，穿搭展示的快節奏剪輯，適合 Aaliya 的穿搭內容參考。 |
+| **@alexisren** | LA 系身材展示短影片的自然感——如何讓比基尼/泳裝影片不顯得刻意。 |
 
-**生成素材時仿造重點**：出場方式（從車裡/門口/走廊進鏡的感覺）、朋友一起出現的多鏡頭剪輯、BGM 選擇（拉丁節拍+流行混搭）
+**生成素材時仿造重點**：出場方式（從車裡/門口/走廊進鏡的感覺）、身材在不同角度下的鏡頭選擇、BGM（拉丁節拍+流行混搭）
 
 ---
 
 ### X（Twitter）Benchmark
 
+> ⚠️ **素材生成規則**：發文語氣和配圖風格參考以下帳號的 X 發文方式。
+
 | 帳號 | 效仿原因 |
 |------|---------|
-| **@lele.pons** | 了解 Latina creator 在 X 上的語氣——快、直接、有時嘴損、讓人哈哈大笑。這是 Aaliya X 的基調。 |
 | **@dollycastro** | 自信展示自己的 Twitter 語氣，不解釋、不道歉——「looked good, felt good.」就這樣。 |
-| **@salicerose** | 拉丁裔 LA 女生的 Twitter 日常——朋友截圖、隨口抱怨、出遊前的興奮發文。 |
+| **@danielabelmo** | 拉丁裔曲線展示帳號的 X 語氣，直接、有個性、知道自己好看。 |
 
 **發文基調**：直接、俏皮、偶爾嘴損——「wore this and felt unstoppable. that's the whole post.」——一句話配一張圖，不多說
