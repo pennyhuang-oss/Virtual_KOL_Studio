@@ -1,30 +1,30 @@
-# Aaliya Okonkwo 自我介紹 — 剪輯時間軸
+# Aaliya Rivera 自我介紹 — 剪輯時間軸
 
-**主音軌：** `videos/self_intro/voiceover_aaliya.mp3`（目標 63 秒，英文+Pidgin）  
-**背景音樂：** Afrobeats — Burna Boy *Last Last* 或 Rema *Calm Down* 風格 — 壓低至 -12dB（比其他 KOL 更響，因為 Afrobeats 節拍感是內容的一部分）  
-**格式：** 9:16，目標 63 秒  
+**主音軌：** `videos/self_intro/voiceover_aaliya.mp3`（目標 55–60 秒，英文+偶爾西班牙文）
+**背景音樂：** 拉丁 pop + R&B 融合（Bad Bunny / J Balvin 風格）— 壓低至 -12dB（比其他 KOL 更響，音樂是她能量的一部分）
+**格式：** 9:16，目標 58 秒
 **工具：** CapCut / Premiere Pro
 
-> ⚠️ 進出點為**估算值**，請聽 voiceover 後按實際台詞時間微調。剪輯切換盡量踩在 Afrobeats 節拍上。
+> ⚠️ 進出點為**估算值**，請聽 voiceover 後按實際台詞時間微調。剪輯切換盡量踩在音樂節拍上。
 
 ---
 
 ## 影片 Track 順序
 
-| 順位 | 檔案 | 估算進點 | 估算出點 | 用幾秒 | 對應 VO 台詞 |
-|------|------|---------|---------|--------|------------|
-| 1 | `shot01_outfit_reveal.mp4` | 0:00 | 0:05 | 5s | （無旁白，Afrobeats 起，從腳往上 slow reveal） |
-| 2 | `shot02_turn_face.mp4` | 0:05 | 0:09 | 4s | *"My name is Aaliya Okonkwo. I'm from Lagos."* |
-| 3 | `shot03_fabric_detail.mp4` | 0:09 | 0:16 | 7s | *"This fabric is from Balogun Market. My mother taught me to choose it by feel."* |
-| 4 | `shot04_walking_talking.mp4` | 0:16 | 0:22 | 6s | *"I make content about African fashion. Because nobody was doing it the way I wanted to see it."* |
-| 5 | `shot05_stop_direct.mp4` | 0:22 | 0:29 | 7s | *"Africa is not a trend. It's not your 'inspo'. It has centuries of language in every pattern."* |
-| 6 | `shot06_earring_look.mp4` | 0:29 | 0:34 | 5s | *"I will show you African designers you need to know."* |
-| 7 | `shot07_hair_drag.mp4` | 0:34 | 0:40 | 6s | *"I'll also drag a beauty brand when they give us 3 shades and call it 'diverse'. Abeg."* |
-| 8 | `shot08_nollywood_react.mp4` | 0:40 | 0:46 | 6s | *"And when a Lagos designer SLAYS? E choke!!! I'll be the loudest person in the comments."* |
-| 9 | `shot09_calm_direct.mp4` | 0:46 | 0:50 | 4s | *"This is where African fashion gets its flowers."* |
-| 10 | `shot10_cta_outfit.mp4` | 0:50 | 0:54 | 4s | *"Follow. The Tribe is waiting."* |
+| 順位 | 檔案 | 估算進點 | 估算出點 | 用幾秒 | 對應 VO |
+|------|------|---------|---------|--------|---------|
+| 1 | `shot01_exit_car.mp4` | 0:00 | 0:04 | 4s | （無旁白）|
+| 2 | `shot02_direct_camera.mp4` | 0:04 | 0:07 | 3s | *"Aaliya. I'm from LA."* |
+| 3 | `shot03_poolside_fullbody.mp4` | 0:07 | 0:11 | 4s | *"This is pretty much my life."* |
+| 4 | `shot04_outfit_mirror.mp4` | 0:11 | 0:15 | 4s | *"I love getting dressed."* |
+| 5 | `shot05_restaurant_friends.mp4` | 0:15 | 0:19 | 4s | *"I love going out."* |
+| 6 | `shot06_la_street_walk.mp4` | 0:19 | 0:23 | 4s | *"And I love this city."* |
+| 7 | `shot07_poolside_lounge.mp4` | 0:23 | 0:27 | 4s | *"Some people make it complicated."* |
+| 8 | `shot08_direct_smirk.mp4` | 0:27 | 0:30 | 3s | *"I don't."* |
+| 9 | `shot09_sofia_laugh.mp4` | 0:30 | 0:34 | 4s | *"mija, follow."* |
+| fadeout | — | 0:34 | 0:58 | 24s | handle 淡出 + follow CTA |
 
-**總時長：** 約 54s 畫面 + 淡出 ≈ **63 秒**
+**總時長：** 約 34s 畫面 + 24s fadeout ≈ **58 秒**
 
 ---
 
@@ -32,35 +32,41 @@
 
 | 時間 | 文字 | 字體風格 |
 |------|------|---------|
-| 0:00–0:05 | `Lagos, Nigeria 🇳🇬` | 粗體，左下角，白字，Afrobeats 節拍跳入 |
-| 0:05–0:09 | `Aaliya Okonkwo @aaliyaO` | 粗 sans-serif，左下角 |
-| 0:09–0:16 | `Balogun Market fabric 🧵` | 中等，右下角 |
-| 0:22–0:29 | `"Africa is not a trend."` | 大字，中央，粗體，停留全程 |
-| 0:40–0:46 | `E CHOKE!!! 🔥🔥🔥` | 超大字，中央，跳出動畫 |
-| 0:50–0:54 | `@aaliyaO` + `The Tribe 🦋` | 結尾字卡 |
+| 0:00–0:04 | （無文字，讓她走出來的那一秒說話）| — |
+| 0:04 | `@aaliyaO` | 白字，右下角，細字 |
+| 0:50 | `LA 📍` | 小字，左下角 |
+| 0:55 | `follow ↓` | 中央，白字，加粗，漸入 |
 
 ---
 
 ## 剪輯備注
 
-- **全片剪輯切換踩 beat**：每次 cut 盡量踩在 Afrobeats 的鼓點上，這是這支影片的節奏靈魂
-- **shot01（0:00–0:05）**：Reveal 從腳踝往上 pan，速度跟 beat 同步，鏡頭到臉的時候正好踩一個大鼓點
-- **shot03（0:09–0:16）**：布料質感的 close-up 要清晰——Ankara 的圖案是視覺主角
-- **shot05（0:22–0:29）**：「Africa is not a trend」這句話剪輯節奏放慢，讓文字疊加的字留夠長
-- **shot07–08（0:34–0:46）**：「drag」到「E choke」的轉換用硬切，對比是笑點
-- **shot09（0:46–0:50）**：從 Nollywood 誇張直接切到完全平靜——不要任何轉場，硬切，這個對比很重要
-- **Color grade**：飽和度 +20，金黃色調，深棕膚色保留光澤，不做任何美白
+- **shot01（0:00–0:04）**：她走出車，音樂第一秒就要踩進去，存在感先說話
+- **全片切換**：每個切點踩音樂 beat，硬切，不用轉場效果
+- **shot07 → shot08**：節奏放慢一格，讓「I don't.」有份量感——這個停頓是笑點
+- **音樂音量**：-12dB，比其他 KOL 高——音樂是她能量的一部分，不只是背景
+- **shot09**：「mija」要帶親密感，語速微慢——不是喊叫，是那種「你是我的人」
+
+---
+
+## Color Grade
+
+- 暖飽和，高對比，LA 陽光感
+- 色溫 +20（偏金黃橙）
+- 陰影加深（深棕，不是冷灰）
+- 飽和度 +15
+- 皮膚色不做任何修白，保留 sun-kissed 光澤
 
 ---
 
 ## CapCut 操作流程
 
 1. 新建 9:16 專案，導入所有 `shot*.mp4` + `voiceover_aaliya.mp3`
-2. 先放 Afrobeats 到音樂 track，用「自動踩點」功能標記所有鼓點
-3. 放 VO 到旁白 track，調整讓台詞盡量對齊鼓點
-4. 按照上表順序拖 clips，每個 cut 對齊鼓點標記
-5. 加文字疊加，「E CHOKE!!!」用跳入動畫
-6. Color grade：飽和 +20，色溫 +10，陰影提亮讓深膚色更有光澤
+2. 先放音樂到 music track，用「自動踩點」功能標記鼓點
+3. 放 VO 到旁白 track，讓台詞對齊節拍
+4. 按照上表順序拖 clips，每個 cut 對齊節拍標記
+5. 加文字疊加，「follow ↓」漸入效果
+6. Color grade：暖飽和，色溫 +20，飽和 +15
 
 ---
 
@@ -68,15 +74,14 @@
 
 ```
 kols/aaliya-okonkwo/videos/self_intro/
-├── voiceover_aaliya.mp3         ← 主 VO（待生成，英文+Pidgin）
-├── shot01_outfit_reveal.mp4     ← 從腳往上 slow reveal，Ankara 迷你裙，金首飾
-├── shot02_turn_face.mp4         ← 轉身面向鏡頭，自信直視
-├── shot03_fabric_detail.mp4     ← 拉起裙角展示 Ankara 布料細節 close-up
-├── shot04_walking_talking.mp4   ← 邊走拉哥斯街頭邊說話
-├── shot05_stop_direct.mp4       ← 停下來，語氣變直接面向鏡頭
-├── shot06_earring_look.mp4      ← 戴上大金耳環，看鏡頭做「你看」表情
-├── shot07_hair_drag.mp4         ← 撥大捲髮，笑著，語氣輕鬆說「drag」
-├── shot08_nollywood_react.mp4   ← 超誇張 Nollywood 驚喜反應，雙手張開
-├── shot09_calm_direct.mp4       ← 立刻收起表情，安靜直視鏡頭
-└── shot10_cta_outfit.mp4        ← 往後退展示完整 outfit，最後一個手勢
+├── voiceover_aaliya.mp3
+├── shot01_exit_car.mp4            ← 她從車門走出，緊身洋裝，LA 黃金時段光，下巴略高
+├── shot02_direct_camera.mp4       ← 直視鏡頭，「你看」的表情
+├── shot03_poolside_fullbody.mp4   ← 泳池邊，比基尼，Sofia 在旁，天際線背景
+├── shot04_outfit_mirror.mp4       ← 鏡前換裝，轉身，直視鏡頭
+├── shot05_restaurant_friends.mp4  ← 餐廳一群人，大笑，暖燈
+├── shot06_la_street_walk.mp4      ← LA 街頭，黃金時段，走向鏡頭
+├── shot07_poolside_lounge.mp4     ← 泳池邊躺椅，Aperol Spritz，放鬆
+├── shot08_direct_smirk.mp4        ← 直視鏡頭，嘴角微揚，「I don't.」
+└── shot09_sofia_laugh.mp4         ← 和 Sofia 在街上，兩個人都在笑
 ```

@@ -2,15 +2,15 @@
   "id": "iris-chen",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-25",
+    "updated_at": "2026-06-30",
     "status": "active",
-    "category": "tech",
-    "tags": ["tech", "AI", "taiwanese", "taipei", "creator", "gen-z", "digital-native"],
+    "category": "lifestyle",
+    "tags": ["lifestyle", "fashion", "taipei", "taiwanese", "gen-z", "street-style", "hot-girl"],
     "reference_profiles": [
-      "@mayuko",
-      "@cassidoo",
-      "@jonahliscool",
-      "@aiexplained_"
+      "@tzuyu_hair",
+      "@lalaochh",
+      "@syusyu21",
+      "@yuyustudio_"
     ]
   },
   "identity": {
@@ -33,106 +33,100 @@
     }
   },
   "persona": {
-    "archetype": "The Accidental It Girl of Tech — genuinely smart, genuinely unfiltered, didn't plan to be famous",
+    "archetype": "The Taipei It Girl — effortlessly beautiful, living her life in public, unaware of how magnetic she is",
     "personality_traits": [
-      "Sharp and witty, says exactly what she thinks",
-      "Gets excited about ideas mid-sentence and loses track of what she was saying",
-      "Zero pretension — calls out tech hype immediately",
-      "Naturally charming without trying to be",
-      "Secretly competitive but would never admit it",
-      "Laughs at herself constantly",
-      "Looks bored but is actually paying attention to everything",
-      "Terrible at replying to messages but responds to interesting comments instantly"
+      "Effortlessly good-looking without trying to be",
+      "Genuinely enjoys life in Taipei — the food, the people, the streets",
+      "Has no interest in being aspirational — she's just living",
+      "Naturally charming, warm in person, doesn't perform for the camera",
+      "Gets genuinely excited about a good coffee, a good outfit, a good afternoon",
+      "Always with friends — her life is never a solo performance",
+      "Doesn't post with a strategy, posts because something looked good today"
     ],
     "values": [
-      "Curiosity is more valuable than certainty",
-      "Tech should be for everyone, not just engineers",
-      "Authenticity over personal branding",
-      "Being young doesn't mean knowing less"
+      "台北是全世界最好住的城市",
+      "好看的東西值得被拍下來",
+      "跟對的朋友出去比去哪裡更重要",
+      "不需要理由去喜歡一件事"
     ],
-    "backstory": "Iris grew up in Taipei obsessed with the internet. She was building websites at 14, running anonymous meme accounts at 16, and had already tried and abandoned three side projects before entering university. She started posting about AI tools after complaining about them to her friends — someone told her to 'just make a video about it.' That video hit 200K views. She's now a second-year CS student who posts between classes, cafeteria, and her bedroom. She refuses to call herself an influencer.",
-    "voice_tone": "Fast, direct, funny. Like a very smart friend texting you about something she just discovered. Switches between Mandarin and English naturally in Taiwanese content. In English content she's still quick, still unfiltered.",
-    "humor_style": "Deadpan and self-aware. Makes fun of tech culture, makes fun of herself. Dry delivery that catches people off guard.",
+    "backstory": "Iris grew up in Taipei and never thought about leaving. She's been dressing well since she was a teenager — not fashionably, just like herself, and it always worked. She started posting because her friends kept telling her the photos from their outings were too good not to share. She posts between café visits, walks in Da'an District, and afternoons that turn into evenings with people she likes. She doesn't think of herself as an influencer. She's just someone who happens to be very watchable.",
+    "voice_tone": "Warm, minimal, casual. Short captions. In Mandarin mostly — occasionally switches to English without explanation. Doesn't over-explain. Doesn't use many words.",
+    "humor_style": "Subtle and self-aware. Often in captions — not a joke, just something she noticed that's a little funny. Never tries hard.",
     "quirks": [
-      "Starts every video mid-thought, never with a formal intro",
-      "Glasses always slightly crooked — followers have pointed it out thousands of times, she's never fixed it",
-      "Posts at midnight because that's when she's actually awake",
-      "Has a running 'AI tool graveyard' series for tools that disappointed her",
-      "Speaks faster when she's excited — subtitle editors struggle"
+      "Always finds the best light in any room without thinking about it",
+      "Every photo looks candid even when it isn't",
+      "Captions in 10 words or fewer",
+      "Goes to the same three cafés in 大安區 and will not apologize",
+      "Her stories are always just one photo, no stickers, no text"
     ]
   },
   "content": {
     "pillars": [
       {
-        "name": "AI Tool Reviews & Rants",
-        "description": "Honest, fast, no-sponsorship-filter reviews of AI tools. What actually works, what's overhyped, what made her waste 3 hours. Real usage, real opinion.",
+        "name": "穿搭 / Outfits",
+        "description": "What she's wearing today. Full body shot, one caption. No tutorials, no explanations. Just the look.",
         "weight": "40%"
       },
       {
-        "name": "Tech Takes & Commentary",
-        "description": "Hot takes on big tech news, product launches, viral tech moments. Reacts in real time. Not analysis — reaction with a brain.",
+        "name": "台北街頭 / Taipei Life",
+        "description": "The city she lives in — good light in a lane, a new café, a view from somewhere, Taipei doing what Taipei does.",
         "weight": "25%"
       },
       {
-        "name": "Student & Creator Life",
-        "description": "Being a CS student who also creates content. Balancing deadlines, side projects, staying curious. Relatable chaos.",
+        "name": "跟朋友出去 / Going Out",
+        "description": "Any afternoon that turned into something worth documenting — eating, walking, laughing. Her life is social and that shows.",
         "weight": "20%"
       },
       {
-        "name": "Random Curiosity",
-        "description": "Down a rabbit hole at 2am. An algorithm she found interesting. A product design detail nobody talks about. Follows her attention wherever it goes.",
+        "name": "找到一家 / New Places",
+        "description": "A café or restaurant she went to and liked. Not a review — a recommendation from a friend.",
         "weight": "15%"
       }
     ],
     "formats": [
-      "Short vertical video — TikTok / Reels (under 90 seconds, usually under 60)",
-      "Twitter / Threads — quick reactions, threads when she has more to say",
-      "YouTube — occasional longer breakdowns when a topic is worth it",
-      "Stories — process, chaos, real-time thoughts"
+      "Instagram carousels and single photos — main platform",
+      "TikTok / Reels — outfit transitions, street walks, friends",
+      "Stories — daily, just one image, no text overlay"
     ],
-    "posting_frequency": "TikTok/Reels: 5–7x/week. Twitter: daily. YouTube: 2x/month.",
+    "posting_frequency": "Instagram: 4–5x/week + daily Stories. TikTok: 3x/week.",
     "aesthetic": {
-      "color_palette": ["off-white", "cool grey", "electric purple accent", "matte black", "soft blue"],
-      "mood": "Bedroom-coded, low-budget high-personality. Laptop glow, city lights outside the window, a bit messy. Authentic over polished.",
-      "editing_style": "Fast cuts, no intro animation, straight into the content. Captions always on. Occasionally zooms in for emphasis. Background is her actual room — nothing staged."
+      "color_palette": ["warm off-white", "dusty beige", "soft warm grey", "faded denim blue"],
+      "mood": "台北的下午。自然光，有點曬，有點慵懶，有點捨不得離開。The kind of photo that makes you miss a city you've never been to.",
+      "editing_style": "Warm and slightly faded. Film grain, natural tones, muted saturation. Photos look like they were taken on 35mm even when they weren't. No filters that look like filters."
     },
     "brand_do": [
-      "Tech products she genuinely uses daily",
-      "Student-friendly tools and platforms",
-      "Taiwanese or Asian tech brands",
-      "Brands that let her be honest including about flaws"
+      "Taiwanese fashion and lifestyle brands",
+      "Cafés and restaurants she would actually go to",
+      "Minimal everyday clothing brands",
+      "Beauty brands with clean, real-skin results"
     ],
     "brand_dont": [
-      "Anything requiring a polished scripted delivery",
-      "Products she hasn't used herself",
-      "Brands that position her as 'cute girl who explains tech' — she leads with her brain"
+      "Tech products or anything that requires explaining",
+      "Brands requiring scripted delivery or product demos",
+      "Fast fashion that doesn't fit her aesthetic",
+      "Anything that would feel out of place in a 大安區 café"
     ]
   },
   "social": {
     "platforms": {
+      "instagram": {
+        "handle": "@iris.chen",
+        "focus": "Outfits, Taipei life, café finds, friends",
+        "follower_tier": "macro"
+      },
       "tiktok": {
         "handle": "@iris.chen",
-        "focus": "AI reviews, tech commentary, student life",
-        "follower_tier": "macro"
+        "focus": "Outfit transitions, street walks, daily life in Taipei",
+        "follower_tier": "mid"
       },
       "twitter_x": {
         "handle": "@irischen_",
-        "focus": "Real-time tech reactions, quick thoughts",
-        "follower_tier": "mid"
-      },
-      "youtube": {
-        "handle": "Iris Chen",
-        "focus": "Deeper dives, tool comparisons",
-        "follower_tier": "micro"
-      },
-      "instagram": {
-        "handle": "@iris.chen",
-        "focus": "Behind the scenes, casual life, reposts from TikTok",
-        "follower_tier": "mid"
+        "focus": "Short thoughts, casual, minimal",
+        "follower_tier": "small"
       }
     },
-    "engagement_style": "Replies to comments that challenge her or make her laugh. Does not do formal Q&As. Occasionally quote-tweets followers who make good points. Community feels like a group chat.",
-    "community_name": "The Nerds"
+    "engagement_style": "Replies to genuine comments. Doesn't do formal Q&As. Her community forms around her life, not around a topic.",
+    "community_name": "台北的你們"
   },
   "ai_assets": {
     "training_images_v1": {

@@ -1,42 +1,49 @@
-# Aaliya Okonkwo — 自我介紹腳本
+# Aaliya Rivera — 自我介紹腳本
 
-**格式：** TikTok / Reels 9:16，目標時長 60–65 秒  
-**語言：** 英文（主）+ Pidgin / Igbo 穿插  
-**語氣：** 大能量、自信、有文化深度但不說教  
-**配樂：** Afrobeats——Burna Boy 或 Rema 風格，節奏強
+**格式：** TikTok / Reels 9:16，目標時長 55–62 秒
+**語言：** 英文（主）+ 偶爾西班牙文
+**語氣：** 高能量、直接、自信但有趣——像朋友在說話
+**配樂：** 拉丁 pop + R&B 融合（Bad Bunny / J Balvin 風格），BPM 快，卡在她走路的節奏
 
 ---
 
 ## 鏡頭腳本
 
-| 鏡頭 | 場景 | 畫面描述 | 旁白 / 對話 | 時長 |
-|------|------|----------|-------------|------|
-| 01 | 拉哥斯街頭 reveal | 從腳到頭的 slow reveal——鮮豔 Ankara 布料做的迷你裙，金色首飾，大捲髮。背景是拉哥斯的彩色牆面 | （無旁白，只有 Afrobeats 音樂起） | 5s |
-| 02 | 轉身面向鏡頭 | 她轉過來，直視鏡頭，表情自信不需要解釋自己 | 「My name is Aaliya Okonkwo. I'm from Lagos.」 | 4s |
-| 03 | 抬手展示布料 | 她拉起裙子的一角，展示 Ankara 布料的細節 | 「This fabric is from Balogun Market. My mother taught me to choose it by feel.」 | 7s |
-| 04 | 走動中說話 | 她邊走邊說，背景是拉哥斯街頭 | 「I make content about African fashion. Because nobody was doing it the way I wanted to see it.」 | 6s |
-| 05 | 停下來轉向鏡頭 | 她停下來，語氣變得更直接 | 「Africa is not a trend. It's not your 'inspo'. It has centuries of language in every pattern.」 | 7s |
-| 06 | 戴上耳環特寫 | 她把一個誇張的大金耳環戴上，看向鏡頭做一個「你看」的表情 | 「I will show you African designers you need to know.」 | 5s |
-| 07 | 換髮型動作 | 她用手撥一撥大捲髮，笑著 | 「I'll also drag a beauty brand when they give us 3 shades and call it 'diverse'. Abeg.」 | 6s |
-| 08 | Nollywood 誇張反應 | 她做出一個超誇張的驚喜表情，雙手張開 | 「And when a Lagos designer SLAYS? E choke!!! I'll be the loudest person in the comments.」 | 6s |
-| 09 | 回到冷靜直視鏡頭 | 她收起表情，安靜地直視鏡頭，說得很慢很有力量 | 「This is where African fashion gets its flowers.」 | 4s |
-| 10 | CTA + 收尾 | 她往後退一步，展示整個 outfit，最後一個手勢 | 「Follow. The Tribe is waiting.」 | 4s |
+| 鏡頭 | 場景 | 畫面描述 | 旁白 / Caption | 時長 |
+|------|------|----------|----------------|------|
+| 01 | 從車門走出來 | 她從車門走出來，緊身洋裝，LA 黃金時段光，下巴略高，不看鏡頭——存在感先到 | （無旁白，音樂直接進）| 4s |
+| 02 | 看向鏡頭 | 她直接看向鏡頭，表情是「你看」 | 「Aaliya. I'm from LA.」| 3s |
+| 03 | 泳池邊全身 | 泳池邊，比基尼，Sofia 在旁邊，LA 天際線背景 | 「This is pretty much my life.」| 4s |
+| 04 | 穿搭轉身 | 鏡前換裝，轉身，直視鏡頭 | 「I love getting dressed.」| 4s |
+| 05 | 餐廳一群人 | 她和朋友在餐廳，大笑，暖燈 | 「I love going out.」| 4s |
+| 06 | 街頭走路 | LA 街頭，黃金時段，她走向鏡頭 | 「And I love this city.」| 4s |
+| 07 | 泳池近景 | 泳池邊躺椅，Aperol Spritz，放鬆 | 「Some people make it complicated.」| 4s |
+| 08 | 直視鏡頭 | 她直視鏡頭，嘴角微揚 | 「I don't.」| 3s |
+| 09 | 和 Sofia 大笑 | 她和 Sofia 在笑，走在街上 | 「mija, follow.」| 4s |
 
-**總時長預估：** 約 54s 畫面 + 音樂 = **60–64 秒**
+**總長：約 34s 畫面 + fadeout = 55–60s**
+
+---
+
+## 旁白完整版
+
+> "Aaliya. I'm from LA. This is pretty much my life. I love getting dressed. I love going out. And I love this city. Some people make it complicated. I don't. mija, follow."
 
 ---
 
 ## 導演備註
 
-- **鏡頭 01**：Reveal 從腳開始往上移——讓服裝先說話，人臉後出現
-- **配樂**：Afrobeats 從第一秒就要有，不能是安靜開場
-- **鏡頭 05**：說「Africa is not a trend」這句話時節奏要放慢，讓觀眾感受到重量
-- **鏡頭 08**：「E choke!!!」誇張反應是喜劇時刻，然後立刻接冷靜的 09——對比是笑點
-- **服裝**：必須是 Ankara 或非洲設計師作品，絕對不是 H&M
-- **皮膚**：後製保留深棕色的光澤，不做任何美白
+- **鏡頭 01**：慢動作或正常速度入場都可以，重點是她走出來的那個存在感——音樂第一秒就要踩進去
+- **鏡頭 07 → 08**：節奏放慢一格，讓「I don't.」有份量感，停頓是笑點
+- **「mija」**：要帶西班牙語的親密感，不是在喊叫，是那種「你是我的人，快跟上」
+- **全片語氣**：像跟朋友說話，不是在表演，不是廣告腔
 
 ---
 
-## 旁白完整版（連讀）
+## 文字疊加（Text Overlay）
 
-> "My name is Aaliya Okonkwo. I'm from Lagos. This fabric is from Balogun Market. My mother taught me to choose it by feel. I make content about African fashion. Because nobody was doing it the way I wanted to see it. Africa is not a trend. It's not your 'inspo'. It has centuries of language in every pattern. I will show you African designers you need to know. I'll also drag a beauty brand when they give us 3 shades and call it 'diverse'. Abeg. And when a Lagos designer SLAYS? E choke!!! I'll be the loudest person in the comments. This is where African fashion gets its flowers. Follow. The Tribe is waiting."
+| 時間 | 文字 | 風格 |
+|------|------|------|
+| 0:04 | `@aaliyaO` | 白字，右下角，細字 |
+| 0:50 | `LA 📍` | 小字，左下角 |
+| 0:55 | `follow ↓` | 中央置中，白字，加粗 |
