@@ -114,3 +114,76 @@ localStorage.setItem('hf:image-form-upd', JSON.stringify(data));
 - 場景要自然（街頭、咖啡廳、公園、車內）
 - 不要過度打光或過於精緻的構圖
 - 身材曲線要明顯但風格要 casual，不是刻意擺姿勢
+
+---
+
+## 影片生成記錄與規則（2026-06-30）
+
+### 使用模型
+
+| 模型 | 特性 | 適用場景 |
+|------|------|---------|
+| `seedance_2_0` | 身份一致性最強（接受 start_image），單鏡頭 | 近景情緒鏡頭、細節特寫 |
+| `cinematic_studio_video_v2` | 原生 multi-shot，鏡頭切換自然 | 需要多鏡頭剪輯感的日常內容 ✅ 首選 |
+
+### 測試結果（咖啡廳場景，`cafe_test_v1`）
+
+| 版本 | 模型 | 時長 | 解析度 | 評價 | 檔案 |
+|------|------|------|--------|------|------|
+| v1 | seedance_2_0 | 8s | 720p | 普通。內容太短，動作單一，AI 銳化感重 | `v1_seedance_8s_720p.mp4` |
+| v2 | seedance_2_0 | 12s | 480p | 不錯，保留。自然感提升，但 480p 畫質太低 | `v2_seedance_12s_480p.mp4` |
+| v3 | cinematic_studio_video_v2 | 12s | 720p | **最佳。** 多鏡頭剪切自然，有真實影片感 | `v3_cinematic_multishot_12s_720p.mp4` |
+
+**Start frame 圖片**：`images/video_startframes_v1/frame01_cafe_seated.png`（Soul V2，job `b596e95e`）
+
+### 影片生成注意事項（從測試中學到）
+
+**模型參數規則**
+
+1. **`cinematic_studio_video_v2` 的 multi-shot 必須用 `auto` 模式**
+   - `multi_shot_mode: custom` + 空白 `multi_prompt` 會導致任務卡死無法完成
+   - 正確做法：`multi_shots: true, multi_shot_mode: auto`，把各鏡頭描述寫進主 prompt
+
+2. **解析度**：統一用 **720p**
+   - 480p 畫質太低（現代手機不會只有 480p）
+   - 「手機感」靠 prompt 關鍵詞達成，不靠降解析度
+
+**Prompt 關鍵詞規則**
+
+3. **要加入的手機感關鍵詞**（讓影片不像 AI 棚拍）：
+   `shot on iPhone, warm soft grain, warm faded tones, no over-sharpening, natural lighting, feels like a real person filmed this`
+
+4. **禁止加入鏡頭晃動關鍵詞**：
+   - ❌ `handheld casual filming, natural slight camera movement, NOT tripod perfect, motion blur`
+   - 這些關鍵詞會產生鏡頭晃動感，不符合需求
+   - ✅ 鏡頭要穩定，不要有任何 camera shake
+
+5. **內容要有完整敘事**，不能只描述一個動作：
+   - ❌ 錯誤：`she picks up coffee cup and takes a sip`（太短，8 秒就結束）
+   - ✅ 正確：描述 3–4 個連續動作，有起伏（如：看手機→抬頭→喝咖啡→望窗外）
+
+6. **時長**：日常內容影片建議 **12 秒**，最短不低於 10 秒
+
+### 最佳 Prompt 模板（cinematic_studio_video_v2）
+
+```
+Shot 1: [場景進入動作，全身或中景]
+Shot 2: [主要行為，中景]
+Shot 3: [特寫細節，手/道具/表情]
+Shot 4: [收尾情緒鏡頭，側臉或望遠]
+Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening,
+natural lighting, stable camera, feels like a real person filmed this.
+```
+
+```python
+# 對應 API 參數
+model = "cinematic_studio_video_v2"
+multi_shots = True
+multi_shot_mode = "auto"
+genre = "intimate"
+mode = "pro"
+sound = "on"
+aspect_ratio = "9:16"
+duration = 12
+resolution = "720p"  # cinematic v2 不直接支援此參數，走預設
+```
