@@ -12,7 +12,7 @@
 
 ## Appearance Summary
 
-- **Age**: 22–23
+- **Age**: 23
 - **Ethnicity**: Indian (Punjabi)
 - **Height**: 165cm
 - **Hair**: Dark brown, long, naturally wavy-curly, loose or loose braid

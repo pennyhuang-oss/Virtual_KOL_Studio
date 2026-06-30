@@ -28,7 +28,7 @@
 
 訓練完成後用 Soul ID 生成 6 張測試圖，確認身份一致性，結果通過。
 
-### 場景 1 — 東京街頭（白色蕾絲上衣 + 碎花裙）
+### 場景 1 — 京都街頭（白色蕾絲上衣 + 碎花裙）
 
 - [圖 1](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154140_dd6cb5c5-9ec5-465f-9db0-bf2209b46132.png)
 - [圖 2](https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20260629_154140_92c8e138-8940-42a5-a51c-b1654f8ce8ad.png)

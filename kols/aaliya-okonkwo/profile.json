@@ -124,14 +124,19 @@
   "social": {
     "platforms": {
       "instagram": {
-        "handle": "@aaliyaO",
+        "handle": "@aaliyarivera",
         "focus": "Outfit posts, beauty, LA life, culture",
         "follower_tier": "macro"
       },
       "tiktok": {
-        "handle": "@aaliyaO",
+        "handle": "@aaliyarivera",
         "focus": "Getting ready, going out, Latina culture content, food spots",
         "follower_tier": "macro"
+      },
+      "x_twitter": {
+        "handle": "@aaliyarivera",
+        "focus": "Fast, direct, sometimes ruthless — real reactions, outfit verdicts, going-out commentary",
+        "follower_tier": "mid"
       }
     },
     "engagement_style": "High engagement. Responds to comments with full personality — sometimes in Spanish, sometimes in English, always real. DM-friendly to her regulars.",
