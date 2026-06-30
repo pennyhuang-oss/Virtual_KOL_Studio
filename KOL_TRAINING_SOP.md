@@ -39,10 +39,7 @@
    - Soul 訓練 ✅，測試圖 ✅（poolside、restaurant、selfie 共 8 張）
    - 同上流程
 
-4. **Iris Chen — benchmark 帳號更新**
-   - `character.md` 現有 benchmark 帳號為靜音美學型，不符合多媒體內容方向，需更換
-
-5. **Camille Dupont — 自我介紹影片素材生成**
+4. **Camille Dupont — 自我介紹影片素材生成**
    - 自介圖 4 張已通過，剪輯時間軸已完成，影片素材（10 個 shot）尚未生成
 
 ### 注意事項（每次生成前必讀）
