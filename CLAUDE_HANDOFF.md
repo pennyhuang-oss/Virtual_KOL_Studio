@@ -147,6 +147,39 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ---
 
+### ✅ Step 4 — 文件修正（已完成，2026-06-30）
+
+修正 4 個人格的文件，使其與當前人格設定一致：
+
+- **Iris Chen**：全面改寫（`content_style.md`、`script_self_intro.md`、`edit_timeline_self_intro.md`、`profile.json`），從科技評測人格改為台北 IT Girl 生活風格。
+- **Aaliya Rivera**（原資料夾名 `aaliya-okonkwo`）：改寫 `content_style.md`、`script_self_intro.md`、`edit_timeline_self_intro.md`，移除奈及利亞/Afrobeats 元素，改為 LA 拉丁裔設定。
+- **Camille Dupont**：修正 `profile.json` 髮色（brown wavy → long straight honey blonde）；改寫 `edit_timeline_self_intro.md` 使其與 script（切洋蔥版）一致，移除原本的 tart 場景。
+- **Yuna Kim**：修正 `content_style.md`，移除環形燈，改為冷白自然光（首爾窗邊日光）。
+
+已 commit：`df004dd`（10 個檔案）
+
+---
+
+### ✅ Camille 自我介紹圖片 v1（已完成，2026-06-30）
+
+生成 4 張通過圖片，存於 `kols/camille-dupont/images/self_intro_v1/`：
+
+| 檔案 | 場景 | 狀態 |
+|------|------|------|
+| `shot01_kitchen_chop_onion.png` | 廚房切洋蔥，不看鏡頭 | ✅ 通過 |
+| `shot02_taste_sauce.png` | 嚐醬汁，側臉 | ✅ 通過 |
+| `shot03_cafe_terrace.png` | 咖啡廳露台，望向街道 | ✅ 通過 |
+| `shot04_window_gaze.png` | 窗邊，下巴靠手，看窗外 | ✅ 通過 |
+
+本批生成共 3 輪（Batch 1–3），各有問題需修正後才通過：
+- Batch 1 問題：未指定服裝 → 只穿內衣；紅酒杯浮空
+- Batch 2 問題：所有圖都看鏡頭、構圖雷同
+- Batch 3：修正後通過（加 candid 關鍵詞、指定服裝、場景多元化）
+
+**新規則詳情見 `kols/camille-dupont/generation_notes.md`**
+
+---
+
 ### ✅ Step 3 — 補充優先（已完成，2026-06-30）
 
 為全部 6 個 KOL 的 `character.md` 新增以下三個章節：
@@ -171,9 +204,19 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ## 其他待辦
 
+### 圖片生成（下一步重點）
+- [ ] **Camille Dupont** — `self_intro_v1` 已有 4 張，需補足 script 其餘場景（shot05–shot10）
+- [ ] **Iris Chen** — `soul_v1_showcase` 資料夾存在但空，需開始生成
 - [ ] **Ananya Kapoor** — 需要重新生成場景一（正確穿搭）和場景三（修正構圖多樣性）
-- [ ] **Yuna Kim / Aaliya Rivera** — `KOL_TRAINING_SOP.md` 的狀態確認測試圖 approved 後改為 ✅
+- [ ] **Luna Tanaka / Yuna Kim / Aaliya Rivera** — 自我介紹圖片尚未生成
+
+### 文件補齊
+- [ ] **Luna Tanaka** — 缺少 `edit_timeline_self_intro.md`
+- [ ] **Yuna Kim** — 缺少 `edit_timeline_self_intro.md`
 - [ ] **Aaliya Rivera `generation_notes.md`** — 尚未建立，需要補上（參考 `kols/camille-dupont/generation_notes.md` 的格式）
+
+### 其他
+- [ ] **Yuna Kim / Aaliya Rivera** — `KOL_TRAINING_SOP.md` 的狀態確認測試圖 approved 後改為 ✅
 
 ---
 
@@ -181,7 +224,7 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ### Git 操作
 - **一律用 Bash tool 執行 git 指令**（不要用 PowerShell）
-- repo 本地路徑：`C:\Users\User\AppData\Local\Temp\claude\Virtual_KOL_Studio`
+- repo 本地路徑：`/Users/huangpinxuan/Virtual_KOL_Studio`
 - 目前使用分支：`claude/kol-personality-training-9otdaw`
 - user.email: `penny.huang@insight-software.com` / user.name: `Penny Huang`
 

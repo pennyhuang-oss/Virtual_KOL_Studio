@@ -46,3 +46,33 @@
 2. **構圖多樣**：一組多張圖要明確設定不同的 shot size（wide/3/4/close-up）和角度（正面/側面/仰角/俯角）。
 3. **性感身材**：廣角或遠景構圖時，人物比例小，身材細節不明顯——需在場景比例和身材展示之間取得平衡。
 4. **真實感**：加入 `film grain, shot on 35mm, slightly off-center composition` 等避免過於 CGI。
+5. **服裝必須明確寫出**：不寫服裝 = 模型往最少衣服方向走。Camille 的標準在家服裝：`loose cream linen button-down shirt with sleeves rolled up, high-waist straight trousers`。
+6. **道具物理位置**：道具必須明確說位置，例如「wine glass placed and resting ON THE COUNTER surface」，否則容易浮空。
+7. **自然感關鍵詞**：要呈現不擺拍的感覺，加入 `NOT looking at camera`、`candid unposed moment`、`completely absorbed in [activity]`、`unaware of being photographed`。
+8. **場景多元化**：不要所有 shots 都在廚房——主動規劃不同場景（廚房、咖啡廳露台、市場、窗邊、客廳）。
+
+---
+
+## 自我介紹素材 v1（self_intro_v1）— 2026-06-30 通過
+
+**路徑：** `images/self_intro_v1/`  
+**本批通過 4 張，放棄 2 張（市場、沙發看書）。**
+
+| 圖片檔案 | 場景 | 她的狀態 | Higgsfield Job ID |
+|---------|------|---------|-----------------|
+| `shot01_kitchen_chop_onion.png` | 廚房，切洋蔥 | 看向砧板，不看鏡頭，專注 | `5acafb87-88c8-40c0-93ff-4365d6780e98` |
+| `shot02_taste_sauce.png` | 廚房爐邊，嚐醬汁 | 側臉，木匙到嘴邊，眉頭微皺在判斷味道 | `04918350-d8a6-4a6e-bc7a-5996a921aedd` |
+| `shot03_cafe_terrace.png` | 巴黎咖啡廳露台 | 望向街上行人，有一個自己的小微笑 | `0e02bbad-3967-4ab7-8d52-86188531c6a7` |
+| `shot04_window_gaze.png` | 公寓窗邊，下巴靠手 | 看向窗外巴黎，完全沉浸在自己的思緒裡 | `6761b6ae-ad56-42c5-abb3-64d64ca9f83a` |
+
+### 通過的 Prompt 公式
+
+```
+22-year-old French woman, long straight blonde hair natural honey golden color,
+light fair skin, warm hazel light brown eyes, slender figure,
+wearing [具體服裝],
+[場景描述], [具體動作],
+[表情/狀態], NOT looking at camera, [吸收在什麼事情上],
+candid unposed moment, [景別], [光線],
+Fuji 400H film grain, warm cream tones, shot on 35mm
+```
