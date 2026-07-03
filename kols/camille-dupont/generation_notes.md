@@ -76,3 +76,115 @@ wearing [具體服裝],
 candid unposed moment, [景別], [光線],
 Fuji 400H film grain, warm cream tones, shot on 35mm
 ```
+
+---
+
+## 親密場景模板（2026-07 新增）
+
+> 方向更新後的新場景類型：臥室早晨、浴室鏡前、居家放鬆、飯店房間。
+
+**重要**：每個 prompt 必須寫 `long straight blonde hair, natural honey golden color`，Soul V2 不會自動繼承。
+
+### 核心 Prompt 基礎結構（不變）
+
+```
+22-year-old French woman, long straight blonde hair natural honey golden color, light fair skin, warm hazel light brown eyes, 169cm slender figure with curves, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], Fuji 400H film grain, warm cream tones, shot on 35mm
+```
+
+---
+
+### 場景 1 — 臥室早晨（Bedroom Morning）
+
+**氛圍**：巴黎公寓的早晨，Haussmann 建築的窗戶，白色亞麻床鋪，她在裡面，金色頭髮散在枕頭上，Paris morning 的柔光。不刻意，不在意有人在看。
+
+**Prompt（圖片）**：
+```
+22-year-old French woman, long straight blonde hair natural honey golden color loosely spread on white pillow, light fair skin, warm hazel light brown eyes, 169cm slender figure, lying in bed in Paris apartment on white linen bedding, soft morning light through tall Haussmann windows, wearing thin white silk slip top, eyes half-open looking toward window (NOT looking at camera), one arm resting on pillow beside her head, completely absorbed in the morning quiet, candid unposed moment, medium close-up, soft diffused morning light, Fuji 400H film grain, warm cream tones, shot on 35mm
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Paris apartment bedroom, soft morning light through tall windows, she lies in white linen bed, blonde hair on pillow, still and quiet.
+Shot 2: She shifts slightly, pulling linen sheet up, looking toward window light, absorbed in her thoughts, not aware of camera.
+Shot 3: Close-up of her face, warm morning light on fair skin, hazel eyes soft and unfocused, blonde hair catching the light.
+Shot 4: She reaches for a glass of water on bedside table, takes a slow sip, settles back into pillow, at peace.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, Paris morning light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：
+```python
+model = "cinematic_studio_video_v2"
+multi_shots = True
+multi_shot_mode = "auto"
+genre = "intimate"
+mode = "pro"
+sound = "on"
+aspect_ratio = "9:16"
+duration = 12
+```
+
+---
+
+### 場景 2 — 浴室鏡前（Bathroom Mirror）
+
+**氛圍**：巴黎公寓的浴室，老式磁磚，她洗完澡，金色頭髮濕了，浴巾，鏡中的她在思考什麼，不在意有人在看。
+
+**Prompt（圖片）**：
+```
+22-year-old French woman, long straight blonde hair natural honey golden color wet and damp from shower, light fair skin, warm hazel light brown eyes, 169cm slender figure, standing in front of Parisian bathroom mirror with vintage tiles, wearing white bath towel wrapped around body, slight steam on mirror edges, reaching up to squeeze water from wet blonde hair, looking at reflection absorbed in thought (NOT looking at camera), candid unposed moment, medium shot, warm bathroom light, Fuji 400H film grain, warm cream tones, shot on 35mm
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Paris bathroom with vintage tiles, she stands in white towel before mirror, wet blonde hair, steam clearing from mirror surface.
+Shot 2: She slowly works fingers through damp blonde hair, studying her reflection, completely absorbed.
+Shot 3: Close-up of her face in mirror, fair skin post-shower, hazel eyes thoughtful, not performing for anyone.
+Shot 4: She picks up a small skincare bottle from counter, opens it, applies to skin — routine, private, real.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, warm bathroom light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 3 — 居家放鬆（Home Lounging）
+
+**氛圍**：巴黎公寓，窗邊或沙發，她在最不在意被看的狀態，linen 家居服或輕薄的在家穿著，午後的光。
+
+**Prompt（圖片）**：
+```
+22-year-old French woman, long straight blonde hair natural honey golden color loosely falling, light fair skin, warm hazel light brown eyes, 169cm slender figure, sitting cross-legged on sofa in Paris apartment, wearing loose cream linen button-down shirt with sleeves rolled up (a few buttons undone at top), reading or looking out window, completely absorbed in her own world (NOT looking at camera), soft afternoon light, candid unposed moment, 3/4 medium shot, Fuji 400H film grain, warm cream tones, shot on 35mm
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Paris apartment sofa, afternoon light, she sits cross-legged in linen shirt, book in lap, completely at ease.
+Shot 2: She turns a page, reaches up to push blonde hair behind ear, glances toward window.
+Shot 3: Close-up of her profile, warm light on fair skin, lost in thought, the kind of moment she doesn't know is being captured.
+Shot 4: She sets book down, stretches arms overhead slightly, settles back — unhurried, real.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, Paris afternoon light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 4 — 飯店房間（Hotel Room）
+
+**氛圍**：巴黎以外——里昂、Nice、或出差到倫敦、羅馬——飯店的整潔白床，她坐在上面，窗外是不熟悉的城市。
+
+**Prompt（圖片）**：
+```
+22-year-old French woman, long straight blonde hair natural honey golden color, light fair skin, warm hazel light brown eyes, 169cm slender figure, sitting on hotel bed with crisp white bedding, clean modern hotel room with large window showing city or seaside view, wearing thin cream silk camisole top, looking toward window with quiet introspective expression (NOT looking at camera), absorbed in the view outside, candid unposed moment, 3/4 medium shot, hotel warm ambient light mixed with window light, Fuji 400H film grain, warm cream tones, shot on 35mm
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Hotel room, white bed, large window with city or coastal view, she sits looking out, blonde hair falling forward, quiet.
+Shot 2: She stands and walks to window, places hand lightly on glass, looking at city below, absorbed.
+Shot 3: Profile close-up, warm light on fair skin, hazel eyes soft, seeing something we can't see.
+Shot 4: She turns slowly from window — not quite looking at camera, still half in thought.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, hotel ambient and window light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。

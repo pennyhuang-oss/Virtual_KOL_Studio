@@ -1,204 +1,434 @@
-# 性感場景庫 — Sexy Scene Library
+# Virtual KOL Studio — Sexy Scene Library
 
-> 適用於所有 KOL 人格角色的性感場景參考指南。
-> 生成前請依各角色的 `character.md` 調整 outfit 與細節，確保風格一致。
+> 親密生活風格場景庫。所有場景以 SFW 為前提，強調身體存在感、自然親密感與寄生社交效果。
+> 生成前請依各角色的 `character.md` 調整 outfit 細節、光線偏好與鏡頭公式。
 
 ---
 
 ## 使用原則
 
-- **真實感優先**：描述「輸出視角」而非動作，避免完美對稱構圖，加入 `slightly off-center composition`、`natural imperfect framing like a friend took the photo`
-- **Prompt 結構**：`[角色基本描述], [場景], [outfit], [動作/姿態], [光線], [構圖], film grain, candid lifestyle photo, shot on 35mm`
-- **避免 P 圖感**：加入 `candid moment`、`warm film grain`、`slightly imperfect framing`；避免過度飽和、完美站姿
+- **視角是輸出照片的視角，不是拍攝動作**：不要描述「她拿著手機自拍」，而是描述「close-up front-facing selfie shot, slightly overhead angle looking down at camera」
+- **真實感優先**：加入 `candid moment`、`slightly off-center composition`、`film grain`，避免完美置中構圖
+- **光線是主角**：每個場景的光線描述比服裝描述更重要，光線決定氛圍
+- **Prompt 結尾標配**：所有場景在 prompt 末尾加入 `film grain, candid lifestyle photo, shot on 35mm, warm tones, slightly off-center composition`
 
 ---
 
 ## 場景庫
 
-### 💧 水邊系列
+---
 
-#### 1. 泳池邊坐姿（Poolside Sitting）✅ Aaliya 已驗證
-**適合：** Aaliya Rivera、Ananya Kapoor、Iris Chen
-**設定：** Rooftop pool，坐在池邊，腿垂入水，看水面或望向遠處
-**Outfit：** 一件式泳衣（black / minimal）
-**關鍵描述：**
+### 一、Morning / Waking Up（晨起系列）20%
+
+#### Scene M-1：床上晨起，直視鏡頭
+
+**場景描述**：剛醒來的樣子，躺在白色棉麻床單上，枕頭有壓過的痕跡，頭髮略亂但好看。
+**服裝**：oversized 白色棉T or 絲質細肩帶睡衣（米白 / 淡粉）
+**燈光**：早晨窗邊側光（7–9am），漫射、柔和，不強烈直射
+**鏡頭角度**：臉部至上半身，從略高俯角向下拍（床上視角），直視鏡頭
+**情緒**：慵懶、剛醒、眼神半睜、不用力
+
 ```
-sitting on the edge of a rooftop pool, legs dangling in the water,
-wearing a one-piece [color] swimsuit, looking down at the water or slightly off to the side,
-relaxed candid moment, afternoon sun, city skyline in the background,
+lying on white linen bed, morning sunlight streaming softly through window,
+wearing oversized white cotton t-shirt, sleepy half-lidded eyes looking directly at camera,
+hair slightly messy on pillow, one arm stretched above head, close-up chest-to-face,
+slightly overhead angle, warm diffused morning light, intimate bedroom atmosphere
+```
+
+---
+
+#### Scene M-2：鏡前晨間，梳整頭髮
+
+**場景描述**：早晨站在衛浴或臥室鏡前，梳頭髮或撥頭髮，半側面，沒有意識到被拍。
+**服裝**：薄棉細肩帶背心 + 短褲，或只穿細肩帶睡衣上身
+**燈光**：冷白浴室自然光 or 暖黃臥室晨光，取決於角色
+**鏡頭角度**：從側後方拍，鏡子裡能看到她的正面，形成雙重視角
+**情緒**：自然、不表演、沉浸在自己的事情裡
+
+```
+standing in front of large bedroom mirror in the morning, wearing thin cotton cami top and shorts,
+hands lifting hair to tie it up or letting it fall, looking at her own reflection not at camera,
+soft warm morning light from window casting gentle shadow, 3/4 angle from behind showing mirror reflection,
+candid unposed moment, natural relaxed posture
+```
+
+---
+
+#### Scene M-3：窗邊發呆，手拿咖啡杯
+
+**場景描述**：早晨靠著窗邊，捧著咖啡杯，望向窗外，什麼都不想。
+**服裝**：oversized 男友款針織毛衣（下身若隱若現）or 薄紗睡袍
+**燈光**：早晨窗邊強逆光（backlit silhouette 感）or 側光打在臉部輪廓
+**鏡頭角度**：從室內平視拍向窗邊，半身或全身，逆光讓輪廓發光
+**情緒**：靜止、思緒飄遠、沉浸在自己的早晨
+
+```
+standing by window in morning, holding ceramic coffee mug with both hands,
+wearing oversized knit sweater that barely covers, gazing out at the view not at camera,
+strong backlit window light creating soft glowing outline, 3/4 body shot from inside the room,
+dreamy quiet morning energy, slightly soft focus on background
+```
+
+---
+
+#### Scene M-4：床上坐起，剛睡醒的懶散
+
+**場景描述**：坐起來但還沒真正醒，腿收在胸前，頭靠在膝蓋上，或者撐著床頭板。
+**服裝**：短版睡衣套裝（棉質細肩帶 + 短褲）或單穿細肩帶
+**燈光**：窗簾沒完全拉開，漫射的柔和室內光，有點昏暗但溫暖
+**鏡頭角度**：從床腳方向平視拍，全身，她在畫面一角
+**情緒**：剛醒、軟、有一點可愛的困惑感
+
+```
+sitting up on bed with knees pulled to chest, wearing cotton cami and shorts set,
+head tilted to one side, eyes slightly unfocused just woken up, morning light filtering through curtains,
+full body shot from end of bed, off-center composition with negative space,
+rumpled white bedding around her, intimate domestic atmosphere
+```
+
+---
+
+### 二、Outfit / Changing（換裝系列）20%
+
+#### Scene O-1：鏡前試穿，檢視全身
+
+**場景描述**：站在全身鏡前，正在看自己的穿搭，頭微側，表情是在評估。
+**服裝**：今天的穿搭（依角色的服裝公式選擇），上衣或洋裝
+**燈光**：室內自然光 or 窗邊側光，讓穿搭的細節和身材比例清晰
+**鏡頭角度**：鏡面正面拍（從鏡子裡看她），或從側面拍她看鏡子，雙版本各有效果
+**情緒**：自我評估、安靜的自信、沒有為鏡頭表演
+
+```
+standing in front of full-length mirror looking at her reflection, head slightly tilted assessing the outfit,
+wearing [outfit], natural indoor light from nearby window,
+mirror selfie shot — camera visible in mirror reflection held casually at chest height,
+slightly off-center, neutral expression with hint of satisfaction, body visible from head to toe
+```
+
+---
+
+#### Scene O-2：換裝中途，只穿內搭
+
+**場景描述**：換衣服換到一半，只穿內搭（細肩帶或運動背心），下一件衣服還拿在手上。
+**服裝**：棉質細肩帶或 bralette（SFW），手上拿著還沒穿的外衣
+**燈光**：臥室窗邊自然光，柔和直接
+**鏡頭角度**：3/4 身，平視，她側對著鏡頭
+**情緒**：隨意、自然，不是在表演性感，就是在換衣服
+
+```
+mid-outfit-change, wearing just a cotton cami or bralette, holding a shirt in one hand not yet put on,
+turning slightly to grab something off the bed, 3/4 body angle, casual and unaware,
+bedroom natural light, clothes visible on bed in background suggesting she's been trying things on,
+natural relaxed posture, candid moment
+```
+
+---
+
+#### Scene O-3：坐在床邊穿鞋，低頭綁鞋帶
+
+**場景描述**：快要出門，坐在床邊穿鞋或綁鞋帶，低頭，整套穿搭清晰可見。
+**服裝**：完整的當日穿搭，腿部可見（短裙 / 短褲 / 緊身褲）
+**燈光**：室內暖光 or 窗邊午前光
+**鏡頭角度**：從斜前方平視，全身坐姿，腿部比例清楚
+**情緒**：準備出門的最後一刻，專心、不看鏡頭
+
+```
+sitting on edge of bed putting on sneakers, wearing [full outfit] showing legs clearly,
+leaning forward to tie laces, focused on shoes not camera,
+bedroom ambient light, full body sitting shot from slightly in front and to the side,
+outfit fully visible, candid getting-ready moment before going out
+```
+
+---
+
+#### Scene O-4：衣服掛滿，站在衣櫃前考慮
+
+**場景描述**：站在打開的衣櫃前，手放在衣架上，思考今天要穿什麼。只穿著睡衣或內搭。
+**服裝**：晨間睡衣或細肩帶，背對或側對鏡頭
+**燈光**：臥室窗光或衣櫃燈的暖黃光
+**鏡頭角度**：從床側拍她的背影或側面，衣櫃填滿背景
+**情緒**：日常選擇的糾結，安靜、不為人看的狀態
+
+```
+standing in front of open wardrobe in morning, wearing cami and shorts or silk slip,
+hand resting on hanging clothes looking at options, back or side profile facing the wardrobe,
+warm soft light from bedside lamp or window, full body or 3/4 shot,
+intimate domestic scene, clothes clearly hanging in background, no awareness of camera
+```
+
+---
+
+### 三、Bathroom / After Shower（浴後系列）15%
+
+#### Scene B-1：浴後白巾，浴室鏡前
+
+**場景描述**：洗完澡，白色浴巾包裹身體，站在浴室鏡前，頭髮濕潤，皮膚微紅。
+**服裝**：白色浴巾（從胸部包到大腿），或浴袍
+**燈光**：浴室柔和燈光（不是刺眼白光），或窗邊透進的自然光，有蒸氣感
+**鏡頭角度**：平視，半身或全身，可以是鏡中反射
+**情緒**：剛洗完澡的放鬆、皮膚有水份的光澤、不刻意
+
+```
+standing in bathroom after shower, wrapped in white towel tucked at chest,
+damp hair, skin slightly flushed, facing bathroom mirror with relaxed expression,
+soft warm bathroom light with faint steam in air, medium shot mirror reflection visible,
+natural post-shower state, one hand touching damp hair, calm and unhurried
+```
+
+---
+
+#### Scene B-2：護膚例行，棉T站在浴室
+
+**場景描述**：洗完澡換上棉T短褲，站在浴室或梳妝台前做護膚，拍眼霜或塗乳液。
+**服裝**：短版棉T + 短褲，或細肩帶背心，皮膚剛洗完澡的狀態
+**燈光**：浴室冷白自然光（Yuna 類型）或暖黃窗邊光（Camille 類型）
+**鏡頭角度**：臉部至上半身近景，她看向鏡子而不是鏡頭
+**情緒**：專注、護膚中、沉浸在自己的事情
+
+```
+standing at bathroom vanity doing skincare, wearing cotton cami and shorts,
+applying moisturizer with fingertips, eyes focused on mirror reflection not camera,
+clean bathroom light, close-up chest to face, skin visibly clean and freshly washed,
+peaceful skincare routine moment, minimal products visible on counter
+```
+
+---
+
+#### Scene B-3：浴缸邊，腿伸出來
+
+**場景描述**：泡澡中，側躺在浴缸邊緣，腿伸出來，手臂放在浴缸邊，眼睛閉著或望向上方。
+**服裝**：無（泡泡浴遮蓋），或薄棉睡袍放在浴缸邊
+**燈光**：蠟燭暖光 or 浴室晨光，整體昏暗而溫暖
+**鏡頭角度**：從浴缸側面拍，半身，腿部清晰可見
+**情緒**：完全放鬆、奢侈的獨處時刻、慵懶而滿足
+
+```
+lying in bathtub with foam bubbles, one leg resting on the edge of the tub,
+arm draped over the side, eyes closed or looking upward with relaxed expression,
+warm candlelight or soft bathroom window light, medium shot from the side showing profile and leg,
+steamy intimate bathroom atmosphere, small candles or greenery visible in background
+```
+
+---
+
+### 四、Home Lounging（居家閒躺系列）20%
+
+#### Scene L-1：沙發上的懶散，滑手機
+
+**場景描述**：窩在沙發上，腿搭在扶手上或橫躺著，滑手機，完全不在意被拍。
+**服裝**：oversized 棉T + 短褲，或細肩帶 + 短褲，光腳
+**燈光**：午後客廳自然光（窗簾沒完全拉），或傍晚落地燈的暖光
+**鏡頭角度**：從沙發正前方或斜前方平視，全身可見，偏側臥姿
+**情緒**：完全放鬆、無聊但自在、這是她家她最隨意的樣子
+
+```
+lying on sofa with legs up over the armrest, scrolling phone held above face,
+wearing oversized cotton tee and shorts, barefoot, hair loose and casual,
+afternoon living room light through curtains, full body side-lying shot from in front of couch,
+comfortable domestic laziness, zero performance for camera, phone screen slightly glowing
+```
+
+---
+
+#### Scene L-2：地板坐著，吃零食看電視
+
+**場景描述**：坐在客廳地板上，背靠沙發，吃零食，面前可能有筆電或電視。
+**服裝**：短版棉T + 緊身短褲，或運動短褲，光腳
+**燈光**：電視 / 螢幕的藍光 + 室內暖燈，兩種光同時存在
+**鏡頭角度**：從斜側面平視，半身至全身，她面對螢幕而非鏡頭
+**情緒**：完全在自己的世界裡、有點懶、有點放空
+
+```
+sitting on living room floor with back against sofa, eating snacks from a bowl,
+wearing crop tee and tight shorts, legs stretched out or crossed,
+TV or laptop screen light mixing with warm lamp in background,
+3/4 shot from the side, completely absorbed in screen, natural domestic scene
+```
+
+---
+
+#### Scene L-3：臥室地板，看書或發呆
+
+**場景描述**：坐在臥室地板上，背靠床，腿伸直，手拿一本書或什麼都不做，望向遠處。
+**服裝**：細肩帶背心 + 短褲，光腳，頭髮鬆散
+**燈光**：午後臥室窗邊散射光，整體柔和暖黃
+**鏡頭角度**：從正前方或斜前方平視，全身，腿部比例清楚
+**情緒**：沉靜、一個人的時光、完全不需要表演
+
+```
+sitting on bedroom floor leaning against the bed, legs stretched out, reading a book or looking into distance,
+wearing cami top and shorts, barefoot, hair loosely tied or down,
+soft afternoon light from window, full body front-facing shot showing long legs,
+quiet introspective mood, entirely alone in her own world
+```
+
+---
+
+#### Scene L-4：床上捲縮，抱枕頭，電話中
+
+**場景描述**：側躺在床上，抱著枕頭，講電話或聽音樂，身體捲縮但放鬆。
+**服裝**：絲質細肩帶睡衣 or 棉質短版睡衣套裝
+**燈光**：傍晚臥室暖燈光，溫柔而昏黃
+**鏡頭角度**：從床側拍，全身側躺，她面對另一個方向
+**情緒**：放鬆、溫暖、像好朋友偷偷拍到的她
+
+```
+lying on side on bed hugging pillow, on phone or listening to music with earphones,
+wearing silk slip or cotton pajama set, knees slightly bent, body curled comfortably,
+warm evening bedroom lamp light, full body shot from side of bed,
+she's facing away from camera or turned slightly, intimate cozy evening at home
+```
+
+---
+
+### 五、Hotel / Travel（飯店旅行系列）15%
+
+#### Scene H-1：飯店大床，剛到房間
+
+**場景描述**：剛到飯店，直接倒在大床上，仰躺或趴著，行李還放在旁邊。
+**服裝**：出門的當日穿搭（不用特別換），或剛換上飯店睡袍
+**燈光**：飯店房間的暖黃燈光，或窗外的城市光線透進來
+**鏡頭角度**：從床腳方向拍，全身，她倒在床上，城市窗景在背景
+**情緒**：旅行抵達的放鬆感、終於可以倒下、有點興奮
+
+```
+just arrived at hotel room, flopped on the large bed face-up or face-down,
+wearing travel outfit still, arms out to the sides, shoes possibly still on one foot,
+warm hotel room lighting with city view visible through window,
+full body shot from foot of bed looking toward the window, bags visible to the side,
+arrival relief energy, genuine exhausted-but-happy
+```
+
+---
+
+#### Scene H-2：飯店浴袍，窗邊看夜景
+
+**場景描述**：穿著飯店白色浴袍，站在落地窗前，一手拿著酒杯或咖啡，看著城市夜景。
+**服裝**：白色飯店浴袍，寬鬆，腰帶輕繫
+**燈光**：室內暖燈 + 窗外城市燈光，對比鮮明
+**鏡頭角度**：從房間內側拍，半身或全身，她面對窗戶背對鏡頭，或側面
+**情緒**：有點孤獨也有點自在、城市在腳下、這個夜晚是她自己的
+
+```
+wearing white hotel robe loosely belted, standing at floor-to-ceiling window holding a wine glass,
+looking out at city lights below, back or profile to camera,
+warm amber room lighting contrasting with blue-lit city outside,
+full body or 3/4 shot from inside the room, cinematic quiet night energy
+```
+
+---
+
+#### Scene H-3：飯店泳池，躺椅邊
+
+**場景描述**：飯店屋頂泳池，坐或躺在白色躺椅上，腿垂入水或晒太陽，有飲料在旁邊。
+**服裝**：一件式泳衣 or 比基尼（依角色選擇），太陽眼鏡
+**燈光**：下午陽光（3–5pm），直射或城市天際線背景
+**鏡頭角度**：從旁邊平視拍，全身或半身，腿部比例清楚
+**情緒**：vacation mode、陽光、完全不想事情
+
+```
+sitting on poolside lounger at hotel rooftop pool, legs dangling in turquoise water,
+wearing one-piece swimsuit [or bikini], sunglasses on, hand resting on armrest with drink nearby,
+afternoon sun casting warm shadows, city skyline visible in background,
+3/4 body shot from poolside, relaxed confident vacation energy, slightly squinting in the sun
+```
+
+---
+
+#### Scene H-4：飯店床上，深夜獨處
+
+**場景描述**：飯店房間深夜或清晨，在床上吃簡單的東西或喝東西，手機在旁邊，燈光很暗。
+**服裝**：飯店睡袍 or 自帶的細肩帶睡衣
+**燈光**：床頭燈的暖黃光，只有一個光源，整體很暗但溫暖
+**鏡頭角度**：從床側拍，半身，她看著手機或看向食物，不看鏡頭
+**情緒**：旅行時的那種「不想睡」、獨自在陌生城市的夜晚感
+
+```
+late night in hotel room sitting on bed eating room service snacks or drinking tea,
+wearing silk slip or hotel robe, phone lit beside her on the bed,
+only bedside lamp on creating warm intimate pool of light in otherwise dark room,
+medium shot from beside the bed, she's focused on her phone not camera,
+quiet solo traveler night energy, city outside the window dark and distant
+```
+
+---
+
+### 六、Fitness / Active（運動系列）10%
+
+#### Scene F-1：瑜伽後躺在地墊上
+
+**場景描述**：瑜伽做完，仰躺在瑜伽墊上，手臂張開，閉眼放鬆，做最後的攤屍式。
+**服裝**：瑜伽套裝（高腰緊身褲 + 運動背心 or sports bra）
+**燈光**：室內瑜伽空間的自然漫射光，或晨間木地板上的斜射光
+**鏡頭角度**：從正上方俯拍（鳥瞰），全身，她在地墊上
+**情緒**：運動後的完全放鬆、什麼都不想、身體在地板上融化
+
+```
+lying flat on yoga mat after practice in savasana pose, arms slightly out to sides, eyes closed,
+wearing high-waist yoga leggings and sports bra, visible muscle definition,
+soft natural light on wooden floor, overhead bird's eye shot looking down at her on the mat,
+complete post-workout surrender, slight sheen of sweat, peaceful exhaustion
+```
+
+---
+
+#### Scene F-2：鏡前伸展，側面線條
+
+**場景描述**：對著大鏡子做伸展，側面拍到她的身體線條，表情專注，沒有對鏡頭。
+**服裝**：高腰緊身瑜伽褲 + 細肩帶運動上衣，光腳
+**燈光**：健身空間的自然光 or 大窗側光，強調身體線條的立體感
+**鏡頭角度**：側面拍，全身，身體的伸展線條是主角
+**情緒**：專注、身體的力量感、完全沉浸在動作裡
+
+```
+stretching in front of large mirror, side profile showing full body extension,
+wearing high-waist leggings and fitted sports top, barefoot on wood floor,
+strong natural side light from window accentuating muscle lines and curves,
+full body side shot, expression focused and absorbed in the stretch, not looking at camera
+```
+
+---
+
+#### Scene F-3：運動後，坐在地板喝水
+
+**場景描述**：健身或跑步完，坐在地板上，腿伸直，大口喝水，頭髮有些凌亂，臉上有汗。
+**服裝**：運動套裝（緊身褲 + 運動背心），可能有外套半脫在腰上
+**燈光**：戶外黃金時段光 or 室內健身空間自然光
+**鏡頭角度**：從斜前方平視，半身至全身，她正在喝水，不看鏡頭
+**情緒**：運動完的真實疲憊感、有汗有氣、這個狀態比刻意擺拍更吸引人
+
+```
+sitting on floor after workout, legs stretched out, drinking from water bottle,
+wearing athletic set, hair slightly disheveled, light sweat visible on skin,
+golden hour outdoor light or gym window light, 3/4 body shot from slightly in front,
+looking at something off-frame not camera, genuine post-exercise fatigue and satisfaction,
+sports jacket or hoodie loosely around waist
+```
+
+---
+
+## 各角色推薦組合
+
+| KOL | 最適配場景（按角色美學） |
+|-----|----------------------|
+| **Iris Chen** 台北熱辣 | O-1 鏡前穿搭、M-1 床上晨起直視鏡頭、H-3 飯店泳池 |
+| **Luna Tanaka** 京都安靜 | M-3 窗邊發呆、B-3 浴缸邊、L-3 臥室地板看書 |
+| **Ananya Kapoor** 孟買舞者 | F-1 瑜伽後躺墊、F-2 鏡前伸展、M-3 窗邊（晨間海邊版） |
+| **Yuna Kim** 首爾美妝 | B-2 護膚例行、M-2 鏡前梳整、O-1 鏡前穿搭 |
+| **Aaliya Rivera** LA 拉丁 | H-3 飯店泳池、O-2 換裝中途、L-1 沙發懶散 |
+| **Camille Dupont** 巴黎慢活 | M-3 窗邊（薄紗睡袍版）、H-2 浴袍看夜景、B-3 浴缸泡澡 |
+
+---
+
+## Prompt 通用結尾模板
+
+所有場景加上以下結尾效果更佳：
+
+```
+film grain, candid lifestyle photo, shot on 35mm, warm tones,
 slightly off-center composition, natural imperfect framing like a friend took the photo
 ```
 
-#### 2. 海灘躺椅（Beach Lounger）
-**適合：** Aaliya Rivera、Camille Dupont、Luna Tanaka
-**設定：** 沙灘躺椅，墨鏡，陽光直打
-**Outfit：** 比基尼，或比基尼上衣 + 薄紗沙龍裙
-**關鍵描述：**
-```
-lying on a beach lounger, wearing [bikini style], sunglasses pushed up,
-golden afternoon sun casting warm shadows, relaxed one arm behind head,
-slightly tilted framing, beach background with soft bokeh waves
-```
-
-#### 3. 浴缸泡澡（Bathtub Soak）
-**適合：** Luna Tanaka、Camille Dupont、Yuna Kim
-**設定：** 白色浴缸，泡泡浴或花瓣浴，燭光或晨光
-**Outfit：** 無（泡泡遮蓋），或細肩帶浴後狀態
-**關鍵描述：**
-```
-in a white bathtub with [bubbles/rose petals], side profile leaning head on bath edge,
-[candlelight warm glow / soft morning window light],
-dreamy expression, steam atmosphere, close-up to 3/4 body
-```
-
-#### 4. 淋浴後（Post-Shower）
-**適合：** Yuna Kim、Iris Chen、Aaliya Rivera
-**設定：** 浴室，白色浴巾，蒸氣，鏡子
-**Outfit：** 白色浴巾包裹，或浴袍
-**關鍵描述：**
-```
-standing in bathroom after shower, wrapped in white towel,
-wet hair, steam in the air, facing or slightly turned away from mirror,
-soft warm bathroom light, candid relaxed expression
-```
-
 ---
 
-### 🌅 晨間系列
-
-#### 5. 床上晨起（Morning Bed）
-**適合：** 全人格
-**設定：** 白色棉質床單，晨光從窗灑入
-**Outfit：** Oversized 男友款 T / 絲質細肩帶睡衣 / 無袖背心
-**關鍵描述：**
-```
-lying or sitting on white linen bed, morning sunlight streaming through window,
-wearing [oversized white tee / silk slip], relaxed sleepy expression,
-hair slightly messy, warm golden morning light, intimate candid framing
-```
-
-#### 6. 窗邊晨光（Window Morning Light）
-**適合：** Camille Dupont、Luna Tanaka、Iris Chen
-**設定：** 大落地窗，薄紗或逆光剪影感
-**Outfit：** 薄紗睡袍、絲質吊帶，或 oversized 白色棉襯衫
-**關鍵描述：**
-```
-standing by floor-to-ceiling window, soft backlit silhouette,
-wearing [sheer robe / silk slip / oversized white shirt],
-looking out the window or slightly turning, city view background,
-warm hazy morning light, dreamy atmosphere
-```
-
-#### 7. 鏡前護膚（Mirror Skincare）
-**適合：** Yuna Kim、Ananya Kapoor、Iris Chen
-**設定：** 浴室大鏡，只穿內衣或細肩帶，護膚動作
-**Outfit：** 棉質內衣 / 細肩帶 / 小背心
-**關鍵描述：**
-```
-standing in front of bathroom mirror, wearing [minimal outfit],
-hands gently touching face in skincare routine, natural makeup or bare skin,
-soft warm vanity lighting, candid natural expression
-```
-
----
-
-### 🌙 夜晚系列
-
-#### 8. 雞尾酒吧（Cocktail Bar）
-**適合：** Aaliya Rivera、Camille Dupont、Yuna Kim
-**設定：** 高端酒吧，高腳椅，昏黃燈光
-**Outfit：** 貼身洋裝 / 低胸上衣 + 高腰裙，手持酒杯
-**關鍵描述：**
-```
-sitting at a stylish cocktail bar on a high stool, wearing [fitted dress],
-holding a cocktail glass, warm dim bar lighting with bokeh background,
-slightly turned to camera with confident relaxed expression,
-cinematic warm tones, film grain
-```
-
-#### 9. 飯店房間（Hotel Room）
-**適合：** 全人格
-**設定：** 五星飯店，大床，城市夜景窗
-**Outfit：** 性感小禮服、絲質睡衣、或細肩帶連身裙
-**關鍵描述：**
-```
-in a luxury hotel room, sitting on the edge of the bed or by the window,
-wearing [silk slip / mini dress], city night lights visible through window,
-warm hotel room ambient lighting, intimate atmosphere,
-3/4 body or close-up, candid relaxed pose
-```
-
-#### 10. 露台夜景（Rooftop Night）
-**適合：** Aaliya Rivera、Iris Chen、Ananya Kapoor
-**設定：** 高樓露台，城市夜景，微風吹頭髮
-**Outfit：** 低胸洋裝 / 細肩帶洋裝，裙擺被風吹動
-**關鍵描述：**
-```
-standing on rooftop terrace at night, city lights glowing in background,
-wearing [strappy/low-cut dress], hair gently blowing in the breeze,
-looking out at the view or slightly back at camera,
-warm ambient city light, cinematic mood
-```
-
----
-
-### ☀️ 戶外自然系列
-
-#### 11. 黃金時段草地（Golden Hour Grass）
-**適合：** Ananya Kapoor、Luna Tanaka、Camille Dupont
-**設定：** 草地，黃金時段側光，放鬆坐或躺姿
-**Outfit：** 棉質洋裝 / 短褲 + 細肩帶上衣
-**關鍵描述：**
-```
-sitting or lying on green grass, golden hour sunlight from the side,
-wearing [light summer dress / shorts and cami top],
-relaxed natural pose, warm orange-golden light hitting face and skin,
-candid outdoor shot, film grain
-```
-
-#### 12. 別墅露台（Villa Terrace）
-**適合：** Camille Dupont、Ananya Kapoor、Luna Tanaka
-**設定：** 地中海或峇里島風格露台，海景或山景，日間
-**Outfit：** 薄紗罩衫 / 白色亞麻洋裝 / 比基尼 + 罩衫
-**關鍵描述：**
-```
-on a villa terrace with [ocean/mountain] view,
-wearing [white linen dress / sheer coverup over bikini],
-leaning on railing or sitting at outdoor table,
-bright natural daylight with soft shadows, Mediterranean or tropical atmosphere
-```
-
-#### 13. 花園溫室（Garden Greenhouse）
-**適合：** Luna Tanaka、Camille Dupont、Ananya Kapoor
-**設定：** 熱帶植物，溫室玻璃光，綠意背景
-**Outfit：** 清涼輕薄洋裝 / 細肩帶上衣 + 短裙
-**關鍵描述：**
-```
-inside a lush greenhouse surrounded by tropical plants,
-wearing [light flowy dress / cami and skirt],
-soft diffused greenhouse light, green bokeh background,
-natural relaxed pose, candid lifestyle feel
-```
-
----
-
-## 各人格推薦組合
-
-| KOL | 最適配場景（依人格風格） |
-|---|---|
-| **Iris Chen** 台灣科技 | 窗邊晨光、鏡前護膚、飯店房間 |
-| **Luna Tanaka** 日系生活 | 浴缸泡澡、花園溫室、床上晨起 |
-| **Ananya Kapoor** 瑜珈養生 | 黃金時段草地、別墅露台、窗邊晨光 |
-| **Yuna Kim** K-beauty | 鏡前護膚、床上晨起、浴後白巾 |
-| **Aaliya Rivera** LA Latina | 泳池邊坐姿 ✅、雞尾酒吧、露台夜景 |
-| **Camille Dupont** 法式生活 | 浴缸泡澡、窗邊晨光、別墅露台 |
-
----
-
-## 通用 Prompt 結尾標配
-
-所有性感場景加上以下結尾效果更佳：
-```
-film grain, candid lifestyle photo, shot on 35mm, warm tones, Instagram style,
-slightly off-center composition, natural imperfect framing
-```
+*最後更新：2026-07-01*

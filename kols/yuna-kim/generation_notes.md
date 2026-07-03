@@ -66,3 +66,113 @@ generate_image(
     prompt="21-year-old Korean woman, fair porcelain skin, large double-eyelid eyes, ..."
 )
 ```
+
+---
+
+## 親密場景模板（2026-07 新增）
+
+> 方向更新後的新場景類型：臥室早晨、浴室鏡前、居家慵懶、飯店房間。
+
+### 核心 Prompt 基礎結構（不變）
+
+```
+21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair with wispy ends, 168cm, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, shot on 35mm, Instagram style
+```
+
+---
+
+### 場景 1 — 臥室早晨（Bedroom Morning）
+
+**氛圍**：首爾的早晨，她還在床上，tall slender 身材在白色寢具裡，cherry hair clips 散落在枕頭邊，有點賴床的少女感。
+
+**Prompt（圖片）**：
+```
+21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair with wispy ends, 168cm, lying in bed on white fluffy bedding in Seoul apartment, morning soft light from window, wearing oversized white cotton sleep top, hair loosely spread on pillow with a few small hair clips tangled in, drowsy half-awake expression, slightly overhead angle looking down at camera, warm tones, film grain, candid lifestyle photo, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Seoul apartment bedroom, she lies under white fluffy bedding, morning light soft through curtains, dark hair spread on pillow.
+Shot 2: She stirs, pulls blanket up to cover chin, eyes slowly opening, still half-asleep.
+Shot 3: Close-up of her large double-lidded eyes blinking, fair skin with slight sleep flush, totally natural.
+Shot 4: She reaches up to touch her hair absently, then notices camera and gives a lazy half-smile.
+Shot on iPhone, warm soft grain, warm tones, no over-sharpening, soft morning light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：
+```python
+model = "cinematic_studio_video_v2"
+multi_shots = True
+multi_shot_mode = "auto"
+genre = "intimate"
+mode = "pro"
+sound = "on"
+aspect_ratio = "9:16"
+duration = 12
+```
+
+---
+
+### 場景 2 — 浴室鏡前（Bathroom Mirror）
+
+**氛圍**：洗完澡，K-beauty skincare 程序，浴室鏡前，濕髮，白瓷皮膚，那種韓國女生洗完澡很認真保養的感覺。
+
+**Prompt（圖片）**：
+```
+21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair wet and damp, 168cm, standing in front of bathroom mirror, wearing white bath towel wrapped around slender body, applying skincare or toner to face with hand, slight steam on mirror, bathroom warm light, relaxed concentrated expression looking at reflection, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Bathroom mirror, she stands in white towel, damp dark hair, patting skincare product onto face.
+Shot 2: She tilts head slightly, checking her reflection, smoothing product along jawline.
+Shot 3: Close-up of her face in mirror, porcelain skin post-shower, no makeup, large eyes clear and relaxed.
+Shot 4: She catches her own gaze in mirror, then glances toward camera with a natural small smile.
+Shot on iPhone, warm soft grain, warm tones, no over-sharpening, warm bathroom light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 3 — 居家慵懶（Home Lounging）
+
+**氛圍**：首爾公寓，Y2K 風格家居，沙發上，oversized 衣服，高挑的身材窩在沙發裡的反差感。
+
+**Prompt（圖片）**：
+```
+21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair with wispy ends, 168cm, curled up on sofa in Seoul apartment, wearing oversized pastel cardigan and mini shorts, knees pulled to chest, phone in hand, warm afternoon light from window, relaxed unguarded expression, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Seoul apartment sofa, she curls up with knees to chest, oversized cardigan, scrolling phone, afternoon light.
+Shot 2: She shifts to lean sideways, long legs tucked, looking toward window with dreamy expression.
+Shot 3: Close-up of her face, soft light on fair skin, large eyes slightly unfocused, at ease.
+Shot 4: She notices camera, tucks hair behind ear, gives a natural unposed look.
+Shot on iPhone, warm soft grain, warm tones, no over-sharpening, afternoon natural light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 4 — 飯店房間（Hotel Room）
+
+**氛圍**：首爾以外的城市——東京、上海——飯店的現代感，白床，她的高挑身材在乾淨的飯店空間裡。
+
+**Prompt（圖片）**：
+```
+21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair with wispy ends, 168cm, sitting on hotel bed with crisp white bedding, modern hotel room with large window showing city view, wearing white fitted cotton sleep top, looking toward window with thoughtful expression, hotel room ambient warm lighting, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Modern hotel room, she sits on white bed looking out large window, city skyline visible, elegant and composed.
+Shot 2: She moves to window, stands looking out, tall slender figure against floor-to-ceiling glass.
+Shot 3: Profile close-up of her face, city lights or daylight on fair skin, hair slightly falling forward.
+Shot 4: She turns to camera slowly, natural expression, the kind of look she gives when she forgets anyone is watching.
+Shot on iPhone, warm soft grain, warm tones, no over-sharpening, hotel and city light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。

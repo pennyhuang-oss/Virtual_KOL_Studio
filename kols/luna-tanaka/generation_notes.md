@@ -62,3 +62,113 @@ generate_image(
     prompt="20-year-old Japanese girl, black center-parted chin-length bob, ..."
 )
 ```
+
+---
+
+## 親密場景模板（2026-07 新增）
+
+> 方向更新後的新場景類型：臥室早晨、浴室鏡前、居家窩著、飯店房間。
+
+### 核心 Prompt 基礎結構（不變）
+
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+---
+
+### 場景 1 — 臥室早晨（Bedroom Morning）
+
+**氛圍**：京都的早晨，安靜，紙拉門或薄窗簾透進的柔光，她在白色被子裡慢慢醒來。
+
+**Prompt（圖片）**：
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist, lying in bed on white linen bedding in a Kyoto room, soft diffused morning light through shoji screen or sheer white curtain, wearing thin white cotton slip or camisole, hair slightly disheveled from sleep, drowsy soft expression looking at camera, slightly overhead angle, film grain, candid lifestyle photo, warm cream tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Soft morning light filtering through shoji screen, her face half-hidden under white linen blanket, eyes slowly opening.
+Shot 2: She shifts slightly in bed, pulling blanket up to chin, revealing only her face and bare shoulders.
+Shot 3: Close-up of her large round eyes looking sleepily at camera, black hair splayed softly on pillow.
+Shot 4: She stretches one arm out from blanket, settles back into pillow, eyes closing slightly again.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, gentle morning light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：
+```python
+model = "cinematic_studio_video_v2"
+multi_shots = True
+multi_shot_mode = "auto"
+genre = "intimate"
+mode = "pro"
+sound = "on"
+aspect_ratio = "9:16"
+duration = 12
+```
+
+---
+
+### 場景 2 — 浴室鏡前（Bathroom Mirror）
+
+**氛圍**：洗完澡，白瓷般的皮膚，濕的黑色短髮，浴巾，浴室鏡，極安靜。
+
+**Prompt（圖片）**：
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist, standing in front of bathroom mirror, hair wet and damp from shower, wearing white bath towel wrapped around body, slight steam on bathroom mirror edges, looking at reflection with soft quiet expression, warm bathroom lighting, film grain, candid lifestyle photo, warm cream tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Bathroom mirror showing her reflection in white towel, damp black hair, steamy mirror edges.
+Shot 2: She gently squeezes water from her hair with towel, looking down, then up at mirror.
+Shot 3: Close-up of her fair porcelain face in mirror, post-shower natural skin, no makeup.
+Shot 4: She meets her own gaze in mirror, then glances toward camera, soft quiet expression.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, warm bathroom light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 3 — 居家窩著（Home Lounging）
+
+**氛圍**：京都老公寓，木地板或榻榻米，她在最放鬆的狀態，Mochi 可能在旁邊，輕薄的家居服。
+
+**Prompt（圖片）**：
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist, sitting cross-legged on wooden floor of Kyoto apartment, wearing thin white cotton camisole and light linen shorts, afternoon light through window casting soft shadows, small cat curled nearby, relaxed natural expression looking at camera, film grain, candid lifestyle photo, warm cream tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Wide shot of Kyoto apartment wooden floor, she sits cross-legged in light home clothes, cat nearby.
+Shot 2: She picks up teacup, holds it in both hands, looks out window, at ease.
+Shot 3: Close-up of her face, warm afternoon light on fair skin, small content smile.
+Shot 4: Cat walks into frame, she reaches down to pet it, looks up at camera with soft eyes.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, afternoon natural light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 4 — 飯店房間（Hotel Room）
+
+**氛圍**：東京或大阪出差 / 旅行，飯店的白床，城市夜景，那種陌生城市裡一個人的安靜感。
+
+**Prompt（圖片）**：
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist, sitting on hotel bed with white crisp bedding, Tokyo or Osaka city view through floor-to-ceiling window behind her, wearing white lace camisole or thin cotton pajama top, looking toward window with quiet introspective expression, hotel warm ambient lighting mixed with city glow, film grain, candid lifestyle photo, warm cream tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Hotel room with city lights through large window, she sits on white bed, looking at the city view.
+Shot 2: She moves to window, places one hand on glass, looking down at the city below.
+Shot 3: Close-up of her face from the side, soft hotel light, city glow reflecting on her skin.
+Shot 4: She turns slowly to look at camera, quiet and calm, city lights visible behind her.
+Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, hotel ambient and city glow lighting, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。

@@ -65,24 +65,34 @@
   "content": {
     "pillars": [
       {
-        "name": "護膚日常",
-        "description": "She shares what she's currently using — not a review, just what's on her bathroom counter. 'This cream has been in my routine for two months.' One product, one sentence verdict, a close-up of her skin. Not a tutorial.",
-        "weight": "35%"
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Seoul apartment mornings — she's still in bed, white bedding, cherry hair clips tangled in hair. Tall and sleepy, not performing anything. The most watchable she is.",
+        "weight": "20%"
       },
       {
-        "name": "妝容分享",
-        "description": "Today's makeup. A face close-up, maybe a product name, maybe nothing. She likes her makeup and posts it. Not a tutorial, not a transformation — just her face looking good.",
-        "weight": "25%"
+        "name": "穿搭 / Outfit & Changing",
+        "description": "K-sweet meets Y2K: mini skirts, oversized cardigans, platform shoes. Getting dressed in front of the mirror. She decides fast and looks good immediately.",
+        "weight": "20%"
       },
       {
-        "name": "首爾生活",
-        "description": "The cafés she goes to, what she wore that day, an afternoon with friends. Gangnam, Hongdae, the hanjeungmak on weekends. Her life in Seoul has a quality to it and it shows naturally.",
-        "weight": "25%"
-      },
-      {
-        "name": "穿搭 / 身材",
-        "description": "Outfit photos and the occasional mirror shot. Korean urban minimal. She knows her body looks good and doesn't hide it — but it's always tasteful, never performative.",
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Post-shower K-beauty skincare routine in the bathroom mirror — her porcelain skin, damp dark hair, applying toner with her hands. This is where she actually takes care of herself.",
         "weight": "15%"
+      },
+      {
+        "name": "在家 / Home Lounging",
+        "description": "Curled up on the sofa with her long legs tucked under her, oversized cardigan, scrolling phone or looking out the window. Seoul apartment, quiet afternoon.",
+        "weight": "20%"
+      },
+      {
+        "name": "飯店 / Hotel & Travel",
+        "description": "Tokyo, Shanghai, or wherever she goes — modern hotel rooms, city views, her tall slender figure on crisp white hotel beds.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Light gym sessions or outdoor walks — fitted activewear, clean and minimal. Not intense, just consistent. The way she takes care of her body without making it a story.",
+        "weight": "10%"
       }
     ],
     "formats": [

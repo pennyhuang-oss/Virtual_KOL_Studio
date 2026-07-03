@@ -117,6 +117,116 @@ localStorage.setItem('hf:image-form-upd', JSON.stringify(data));
 
 ---
 
+## 親密場景模板（2026-07 新增）
+
+> 方向更新後的新場景類型：臥室早晨、浴室鏡前、居家沙發、飯店房間。
+
+### 核心 Prompt 基礎結構（不變）
+
+```
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+---
+
+### 場景 1 — 臥室早晨（Bedroom Morning）
+
+**氛圍**：剛睡醒，床上，台北早晨的窗光，頭髮散亂，被子，自然素顏。
+
+**Prompt（圖片）**：
+```
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair loosely disheveled from sleep, lying in bed on white cotton bedding, morning light filtering through sheer curtains, wearing thin white cotton camisole sleep top, slightly drowsy gaze toward camera, slightly overhead angle looking down, soft warm morning sunlight, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Close-up of her face on white pillow, eyes slowly opening, morning light filtering through curtains, hair disheveled from sleep.
+Shot 2: She slowly sits up in bed, white bedding sliding, stretching arms slightly, drowsy expression.
+Shot 3: Close-up of her hand reaching for phone on bedside table, morning light casting soft shadows.
+Shot 4: She glances at camera with a sleepy half-smile, still nestled in white bedding.
+Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening, natural lighting, stable camera, feels like a real person filmed this.
+```
+
+**參數**：
+```python
+model = "cinematic_studio_video_v2"
+multi_shots = True
+multi_shot_mode = "auto"
+genre = "intimate"
+mode = "pro"
+sound = "on"
+aspect_ratio = "9:16"
+duration = 12
+```
+
+---
+
+### 場景 2 — 浴室鏡前（Bathroom Mirror）
+
+**氛圍**：洗完澡，浴巾，濕髮，浴室鏡前，霧氣，素顏。
+
+**Prompt（圖片）**：
+```
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black hair wet and slightly damp from shower, standing in front of bathroom mirror, wearing white towel wrapped around body, slight steam on mirror edges, looking at reflection with relaxed natural expression, bathroom warm lighting, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Bathroom mirror reflection showing her in white towel, damp black hair, wiping mirror condensation with hand.
+Shot 2: She tilts head slightly, running fingers through wet hair, looking at her reflection.
+Shot 3: Close-up of her face in mirror, natural skin with slight post-shower flush, no makeup.
+Shot 4: She glances from mirror to camera, relaxed soft expression, bathroom warm light.
+Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening, natural bathroom lighting, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 3 — 沙發居家（Sofa/Home Lounging）
+
+**氛圍**：家裡最放鬆的狀態，沙發上，家居服，台北公寓的下午光。
+
+**Prompt（圖片）**：
+```
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down, sitting curled up on sofa in Taipei apartment, wearing black cotton short shorts and fitted white crop tee, phone in hand, relaxed casual pose, warm afternoon light from window, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Wide shot of her curled up on sofa in cozy Taipei apartment, afternoon light through window, scrolling phone.
+Shot 2: Medium shot of her pulling knees to chest, glancing up from phone toward camera.
+Shot 3: Close-up of her face and shoulders, warm afternoon light on skin, relaxed expression.
+Shot 4: She shifts slightly, tucking legs under, looking out the window, unaware of camera.
+Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening, natural afternoon lighting, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 4 — 飯店房間（Hotel Room）
+
+**氛圍**：飯店床，飯店浴室，落地窗，旅行的陌生感。台灣出發到日本或其他城市。
+
+**Prompt（圖片）**：
+```
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down, sitting on hotel bed with crisp white bedding, city view through floor-to-ceiling window, wearing black spaghetti strap pajama top, looking toward window with relaxed expression, hotel room warm lighting mixed with city glow, film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Wide shot of hotel room, she sits on white bed, city view through large window behind her, golden evening light.
+Shot 2: She walks to floor-to-ceiling window, looks out at city below, back to camera.
+Shot 3: Close-up of her face reflected in dark window glass, city lights behind her reflection.
+Shot 4: She turns from window to look at camera, soft hotel room light on her face.
+Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening, hotel ambient lighting, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
 ## 影片生成記錄與規則（2026-06-30）
 
 ### 使用模型

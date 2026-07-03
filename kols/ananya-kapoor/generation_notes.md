@@ -116,3 +116,115 @@ generate_image(
     prompt="22-year-old Indian woman, warm golden-brown skin, long dark black hair, ..."
 )
 ```
+
+---
+
+## 親密場景模板（2026-07 新增）
+
+> 方向更新後的新場景類型：臥室早晨、浴室鏡前、居家放鬆、飯店房間。
+
+### 核心 Prompt 基礎結構（不變）
+
+```
+22-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes (not dramatic), elegant facial features, slender graceful figure, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+```
+
+**穿搭禁止**：`flowy floral kurta + wide-leg trousers` 類型不再使用。改以 yoga set、crop top、midriff-baring co-ords、緊身褲 / 棉質短裙為主。
+
+---
+
+### 場景 1 — 臥室早晨（Bedroom Morning）
+
+**氛圍**：孟買的早晨是熱的，她在薄被子裡醒來，吊扇在轉，深色皮膚在晨光下的金色感。
+
+**Prompt（圖片）**：
+```
+22-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes, elegant facial features, slender graceful figure, lying in bed on white cotton bedding in Mumbai apartment, thin ceiling fan visible above, warm tropical morning light from window, wearing thin cotton sleeveless top and light cotton sleep shorts, hair loosely spread on pillow, drowsy relaxed expression looking at camera, slightly overhead angle, film grain, candid lifestyle photo, warm golden tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Warm Mumbai morning light, she lies in bed under thin white sheet, ceiling fan slowly turning, long dark hair on pillow.
+Shot 2: She stretches her arms above her head, arching slightly, then settles back into bed.
+Shot 3: Close-up of her face, warm golden-brown skin catching morning light, eyes half-open, no makeup.
+Shot 4: She rolls to her side, looks directly at camera with a slow confident gaze, completely at ease.
+Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, tropical morning light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：
+```python
+model = "cinematic_studio_video_v2"
+multi_shots = True
+multi_shot_mode = "auto"
+genre = "intimate"
+mode = "pro"
+sound = "on"
+aspect_ratio = "9:16"
+duration = 12
+```
+
+---
+
+### 場景 2 — 浴室鏡前（Bathroom Mirror）
+
+**氛圍**：洗完澡，深色皮膚在浴室暖燈下的自然光澤感，濕的長捲髮，浴巾，完全自在。
+
+**Prompt（圖片）**：
+```
+22-year-old Indian woman, warm golden-brown skin, long dark black hair wet and damp from shower, large expressive dark eyes, natural lashes, elegant facial features, slender graceful figure with visible curves, standing in front of bathroom mirror, wearing white bath towel wrapped around body, slight steam on mirror edges, looking at reflection with confident relaxed expression, warm bathroom lighting highlighting skin's natural glow, film grain, candid lifestyle photo, warm golden tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Bathroom mirror showing her in white towel, long dark wavy hair wet and heavy, steamy edges.
+Shot 2: She gathers her wet hair to one side, glancing at her reflection, unhurried.
+Shot 3: Close-up of her face in mirror, warm golden-brown skin with natural post-shower glow, completely bare of makeup.
+Shot 4: She meets her own eyes in mirror confidently, then looks toward camera with a subtle smile.
+Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, warm bathroom light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 3 — 居家放鬆（Home Lounging）
+
+**氛圍**：孟買公寓，瑜伽墊旁，最少的衣服，最真實的狀態，她在這裡完全是自己。
+
+**Prompt（圖片）**：
+```
+22-year-old Indian woman, warm golden-brown skin, long dark black hair loosely tied or down, large expressive dark eyes, natural lashes, elegant facial features, slender graceful figure, sitting cross-legged on yoga mat or wooden floor in Mumbai apartment, wearing black sports bra and cotton high-waist shorts, afternoon light from window, relaxed natural expression, looking at camera with easy confidence, film grain, candid lifestyle photo, warm golden tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Mumbai apartment floor, she sits cross-legged on yoga mat, natural afternoon light, wearing crop top and shorts.
+Shot 2: She leans back on her hands, legs stretched out, looking up at ceiling, completely relaxed.
+Shot 3: Close-up of her face, warm golden light on skin, a quiet confident expression.
+Shot 4: She glances at camera directly, unhurried, completely comfortable in her own space.
+Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, afternoon natural light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。
+
+---
+
+### 場景 4 — 飯店房間（Hotel Room）
+
+**氛圍**：Goa、Bali 或出差城市，飯店的白床和她深色皮膚的天然對比，窗外是海或城市。
+
+**Prompt（圖片）**：
+```
+22-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes, elegant facial features, slender graceful figure, sitting on hotel bed with crisp white bedding, tropical resort or city hotel setting, floor-to-ceiling window with sea view or city view behind her, wearing black cotton sleeveless crop top, looking toward window with relaxed expression, hotel warm lighting, film grain, candid lifestyle photo, warm golden tones, shot on 35mm, Instagram style
+```
+
+**Prompt（影片，cinematic_studio_video_v2）**：
+```
+Shot 1: Hotel room, she sits on white bed, tropical light through large window, deep contrast of her skin against white bedding.
+Shot 2: She moves to window, leans against frame, looking out at sea or city, confident and unhurried.
+Shot 3: Close-up of her face in profile, warm light on golden-brown skin, city or ocean visible behind.
+Shot 4: She turns from window, makes eye contact with camera, easy and direct.
+Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, hotel ambient and natural light, stable camera, feels like a real person filmed this.
+```
+
+**參數**：同場景 1。

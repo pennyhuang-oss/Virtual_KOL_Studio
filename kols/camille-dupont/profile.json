@@ -61,29 +61,34 @@
   "content": {
     "pillars": [
       {
-        "name": "Cooking & Food",
-        "description": "Real French home cooking — not Michelin cuisine, not 'easy 5-ingredient' content. The actual dishes she makes in her small Paris apartment. Seasonal, regional, honest.",
-        "weight": "35%"
-      },
-      {
-        "name": "Parisian Daily Life",
-        "description": "Morning market visits, café terrasses, evening walks along the Seine, the little rituals that make Paris feel like Paris to someone who actually lives there.",
-        "weight": "25%"
-      },
-      {
-        "name": "Wine & Drinking Culture",
-        "description": "Natural wine, regional bottles, the wine her dad sends from Lyon, how to pair simply and well. Not intimidating — inviting.",
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Paris apartment mornings — white linen, Haussmann window light, blonde hair on the pillow. She wakes up slowly, beautifully, without knowing anyone is watching.",
         "weight": "20%"
       },
       {
-        "name": "Effortless Style",
-        "description": "What she's wearing and why, from market to dinner. The French wardrobe philosophy — fewer pieces, worn more. Never a 'haul'. Never fast fashion.",
-        "weight": "12%"
+        "name": "穿搭 / Outfit & Changing",
+        "description": "The French way of getting dressed — linen shirts, silk slips, the clip perpetually falling out of her hair. Effortless because she's genuinely not trying.",
+        "weight": "20%"
       },
       {
-        "name": "Art & Culture",
-        "description": "Exhibitions, books she's reading, films she loved, a concert she walked past and stopped for. The cultural texture of a life in Paris.",
-        "weight": "8%"
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Vintage-tiled Paris bathroom: wet blonde hair, white towel, steam on the mirror. She looks at her reflection and thinks about something else entirely.",
+        "weight": "15%"
+      },
+      {
+        "name": "在家 / Home Lounging",
+        "description": "Her Paris apartment sofa, afternoon light, linen shirt with buttons undone, reading or not reading. The private version of effortless that makes everything else make sense.",
+        "weight": "20%"
+      },
+      {
+        "name": "飯店 / Hotel & Travel",
+        "description": "Lyon, Nice, Rome — clean hotel rooms, large windows, city or coastal light. She doesn't try to look a certain way; she just does.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Early morning Paris walks, occasional vélib rides, stretching by the window. She doesn't call it exercise. It's just how she lives in a city.",
+        "weight": "10%"
       }
     ],
     "formats": [

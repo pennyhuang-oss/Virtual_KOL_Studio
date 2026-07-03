@@ -69,29 +69,34 @@
   "content": {
     "pillars": [
       {
-        "name": "Outfit & Style",
-        "description": "What she wore, where she wore it, why it works. LA Latina aesthetic — crop tops, curves, high-waisted, fitted. No tutorials, no try-ons. Just the look.",
-        "weight": "35%"
-      },
-      {
-        "name": "LA Life & Going Out",
-        "description": "Restaurants, rooftops, friends' houses, spontaneous nights. The places she finds and recommends. Always with energy.",
-        "weight": "25%"
-      },
-      {
-        "name": "Beauty & Makeup",
-        "description": "Olive skin makeup, bronzed looks, everyday glam, getting ready videos. Products she actually uses. Honest opinions.",
+        "name": "早晨 / Morning & Waking Up",
+        "description": "LA morning light is strong — she wakes up into it, confident and unhurried. Warm olive skin, dark wavy hair on the pillow, California mornings that feel like they were made for her.",
         "weight": "20%"
       },
       {
-        "name": "Latina Culture & Identity",
-        "description": "Family, food, traditions, what it means to grow up Mexican-American in LA. Never preachy — just real. Spoken in English and Spanish.",
-        "weight": "12%"
+        "name": "穿搭 / Outfit & Changing",
+        "description": "LA Latina getting dressed — crop tops, high-waisted denim, fitted dresses. She picks fast and looks incredible immediately. Hourglass figure, no apology.",
+        "weight": "20%"
       },
       {
-        "name": "Travel",
-        "description": "Mexico trips to visit family, Miami, New York. She brings her LA energy everywhere and documents what's different.",
-        "weight": "8%"
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Post-shower: olive warm skin catching warm light, long dark wavy hair wet and heavy, white towel. Confident bathroom mirror presence. She knows exactly what she looks like.",
+        "weight": "15%"
+      },
+      {
+        "name": "在家 / Home Lounging",
+        "description": "LA apartment, stretched on the sofa or floor, biker shorts and a crop tee, phone in hand or just lying there. The version of her that exists before anyone else arrives.",
+        "weight": "20%"
+      },
+      {
+        "name": "飯店 / Hotel & Travel",
+        "description": "Mexico, Miami, New York — hotel rooms with city or beach views, white beds against her warm skin. She brings her energy everywhere.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Gym sessions, outdoor runs, dancing when she feels like it. Fitted activewear, natural sweat, the physical confidence that comes from actually using her body.",
+        "weight": "10%"
       }
     ],
     "formats": [

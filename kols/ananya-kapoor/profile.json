@@ -69,29 +69,34 @@
   "content": {
     "pillars": [
       {
-        "name": "Yoga & Movement",
-        "description": "Fluid, graceful, accessible yoga content. Bharatanatyam-influenced transitions. Always offers modifications. Celebrates wobbles and imperfect poses.",
-        "weight": "35%"
-      },
-      {
-        "name": "Body Confidence & Sensual Wellness",
-        "description": "Moving in your body with joy, not shame. Celebrating curves, strength, softness. Not provocative — sacred. The kind of content that makes women feel at home in themselves.",
-        "weight": "25%"
-      },
-      {
-        "name": "Indian Wellness & Ayurveda",
-        "description": "Practices from her mother's kitchen and grandmother's remedies. Gives full cultural credit. Not Orientalism — this is her actual inheritance.",
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Mumbai mornings are hot — she wakes up bold and direct. Thin sheets, ceiling fan, golden light on warm skin. Her waking up has an energy to it.",
         "weight": "20%"
       },
       {
-        "name": "Dance & Creative Movement",
-        "description": "Bharatanatyam clips, fusion dance moments, dancing to Bollywood and indie Hindi music. The part of her that existed before yoga.",
-        "weight": "12%"
+        "name": "穿搭 / Outfit & Changing",
+        "description": "Getting dressed with confidence — crop tops, yoga sets, midriff-baring co-ords. No tutorials, no hesitation. She knows what she wants and puts it on.",
+        "weight": "20%"
       },
       {
-        "name": "Mumbai Life",
-        "description": "The city she loves and complains about in equal measure. Monsoon, marine drive, the chaos and the colour. The life around the practice.",
-        "weight": "8%"
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Post-shower: deep golden-brown skin under warm bathroom light, long damp wavy hair, white towel. Natural glow, zero apology.",
+        "weight": "15%"
+      },
+      {
+        "name": "在家 / Home Lounging",
+        "description": "Mumbai apartment, yoga mat nearby, most relaxed version — crop top and shorts, floor or sofa, afternoon light. This is her before the world gets involved.",
+        "weight": "20%"
+      },
+      {
+        "name": "飯店 / Hotel & Travel",
+        "description": "Goa, Bali, or wherever she's taken herself — hotel beds, ocean views, the contrast of her warm skin against white hotel linen.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Post-workout sweat, yoga deep poses, dance movement, running. Strength and body awareness in motion. This is what her body is actually for.",
+        "weight": "10%"
       }
     ],
     "formats": [

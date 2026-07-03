@@ -69,29 +69,34 @@
   "content": {
     "pillars": [
       {
-        "name": "Kyoto Daily Life",
-        "description": "The ordinary beauty of living in Kyoto: morning temple walks, seasonal markets, her neighbourhood in every weather. Not tourist spots — lived places.",
-        "weight": "35%"
-      },
-      {
-        "name": "Seasonal Living",
-        "description": "How the four seasons change her routines, food, wardrobe, and mood. Cherry blossoms, rainy season, autumn leaves, winter stillness. Deeply Japanese in its attention to seasonal shift.",
-        "weight": "25%"
-      },
-      {
-        "name": "Soft Outfits & Style",
-        "description": "Quiet outfit posts — not fashion commentary, just what she wore and how it felt. Vintage finds, local Kyoto boutiques, things she's had for years.",
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Kyoto mornings: soft light through shoji screens, white linen bedding, her quiet emergence from sleep. The most private and beautiful part of her day.",
         "weight": "20%"
       },
       {
-        "name": "Photography & Creative Process",
-        "description": "Film vs digital, why she chose a shot, what she was thinking. Not a tutorial — more like a private note made public.",
-        "weight": "12%"
+        "name": "穿搭 / Outfit & Changing",
+        "description": "Putting on her soft, minimal outfits — white lace, floral cotton, oversized knits. In front of a mirror, unhurried, the way she always is.",
+        "weight": "20%"
       },
       {
-        "name": "Home & Small Rituals",
-        "description": "Her apartment, her morning tea, the way she arranges things. Ikebana influence from her grandmother. The aesthetics of everyday objects.",
-        "weight": "8%"
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Post-shower: porcelain skin, damp black bob, white towel, bathroom mirror, quiet steam. The most sensory and still moment of her day.",
+        "weight": "15%"
+      },
+      {
+        "name": "在家 / Home Lounging",
+        "description": "Her Kyoto apartment: wooden floors, tatami, thin home clothes, Mochi the cat, afternoon window light. The life that exists when no one is watching.",
+        "weight": "20%"
+      },
+      {
+        "name": "飯店 / Hotel & Travel",
+        "description": "Occasional travel to Tokyo, Osaka, or elsewhere — hotel beds, city windows, the particular quiet of being somewhere new and alone.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Morning yoga or stretching at home, gentle outdoor walks. Movement that matches her pace — slow, intentional, breath-focused.",
+        "weight": "10%"
       }
     ],
     "formats": [
