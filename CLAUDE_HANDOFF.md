@@ -90,7 +90,7 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ---
 
-## 已完成工作（截至 2026-06-30）
+## 已完成工作（截至 2026-07-03）
 
 ### Soul V2 訓練與測試圖生成
 
@@ -231,8 +231,24 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 ## 其他待辦
 
 ### 影片生成（目前進行中）
-- [ ] **Iris Chen** — `cafe_test_v1` 完成（3 支），下一步：製作其他場景日常影片（非自我介紹）
+- [x] **Iris Chen** — `cafe_test_v1` 完成（3 支）；`dance_v1-v3` 完成（3 支，2026-07-03）
+- [ ] **Iris Chen** — 下一步：製作其他場景日常影片（非自我介紹），或繼續舞蹈影片
 - [ ] **其他 5 個 KOL** — 影片生成尚未開始，待 Iris 工作流程穩定後依序執行
+
+### Iris Chen 舞蹈影片記錄（2026-07-03）
+
+| 版本 | 模型 | 時長 | 服裝 | 音樂 | Job ID | 結果 |
+|------|------|------|------|------|--------|------|
+| dance_v1 | seedance_2_0 | 10s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | ✅ 批准 |
+| dance_v2 | seedance_2_0 | 15s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | ✅ 保留 |
+| dance_v3 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | ✅ 批准 |
+
+其他本 session 生成影片：
+
+| 版本 | 模型 | 時長 | 場景 | Job ID | 結果 |
+|------|------|------|------|--------|------|
+| 浴室鏡前 | kling3_0 | 10s | 浴室鏡前，start_image: `89010b47` | `a6231909` | ✅ 保留 |
+| 浴室+音樂嘗試 | kling3_0 | 10s | 浴室場景 | `5bcbb94b` | 待確認 |
 
 ### 圖片生成
 - [x] **Ananya Kapoor** — 場景一（孟買咖啡廳，深寶石藍 wrap dress）✅ 通過；場景三（Marine Drive，鏽紅 crop top + 白色闊腿褲）✅ 通過（2026-06-30）
@@ -249,20 +265,33 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ---
 
-## 影片生成技術規範（2026-06-30 確立）
+## 影片生成技術規範（2026-07-03 更新）
 
-### 工作流程
+### 內容類型
 
-```
-Step 1: Soul V2 生成 start frame 靜態圖（臉部鎖定）
-Step 2: cinematic_studio_video_v2 動態化（多鏡頭）
-Step 3: 後製疊加 BGM + 環境音（CapCut）
-Step 4: （未來）疊加中文 VO（ElevenLabs 或 Azure TTS）
-```
+目前確立兩類影片生成方向：
 
-### 推薦模型：`cinematic_studio_video_v2`
+1. **日常親密生活風格影片**（多鏡頭，cinematic_studio_video_v2）
+2. **TikTok 舞蹈影片**（seedance_2_0，音樂同步）→ 詳見 `DANCE_VIDEO_SOP.md`
 
-這是目前測試結果最好的影片模型（Iris `cafe_test_v1` v3 通過）。
+---
+
+### 模型對比表（完整版）
+
+| 模型 | 臉部鎖定 | 多鏡頭 | 音樂同步 | 最大時長 | 最適用場景 |
+|------|---------|--------|---------|---------|-----------|
+| `kling3_0` | ✅ start_image | ❌（非自動） | ✅ sound:on | 15s | 親密場景、臉部鎖定單鏡頭 |
+| `seedance_2_0` | ✅ start_image | ❌ | ✅ audio_references | 15s | **舞蹈影片（首選）** |
+| `cinematic_studio_video_v2` | ❌（會漂移） | ✅ multi_shots | ✅ sound:on | 12s | 多鏡頭電影感日常內容 |
+| `soul_2` | ✅ soul_id | N/A | N/A | N/A | 僅用於靜態 start frame 生成 |
+
+**⚠️ 重要**：`soul_id` 只能用於 `soul_2` 靜態圖片生成，**不能用於任何影片生成**。影片生成的臉部鎖定靠 `start_image` 參數。
+
+---
+
+### 日常親密影片：`cinematic_studio_video_v2`
+
+這是日常多鏡頭影片的首選（Iris `cafe_test_v1` v3 通過）。
 
 ```
 model: cinematic_studio_video_v2
@@ -275,7 +304,7 @@ aspect_ratio: 9:16
 duration: 12                 ← 最短 10s，建議 12s
 ```
 
-### Prompt 模板
+### Prompt 模板（日常影片）
 
 ```
 Shot 1: [場景進入動作，全身或中景]
@@ -296,6 +325,27 @@ natural lighting, stable camera, feels like a real person filmed this.
 | 手機感 | 用 `shot on iPhone, warm soft grain, no over-sharpening` |
 | 內容 | 必須有 3–4 個連續動作，有敘事起伏，不能只有一個動作 |
 | multi-shot | `multi_shot_mode: auto`，把各鏡頭描述寫進主 prompt |
+
+---
+
+### 舞蹈影片：`seedance_2_0` 完整工作流程
+
+> 完整 SOP 見 `DANCE_VIDEO_SOP.md`
+
+**五步驟摘要**：
+
+```
+Step 1: media_upload → curl PUT → media_confirm → audio_media_id
+Step 2: soul_2 生成 start frame（THREE QUARTER SHOT, mid-thigh up, no shoes）
+Step 3: media_import_url（rawUrl → image_media_id）
+Step 4: seedance_2_0 生成（start_image + audio_references + generate_audio=False）
+Step 5: CapCut 後製（拖入 mp3，對齊開頭，導出）
+```
+
+**關鍵注意**：
+- `audio_references` 控制動作節拍同步，但**不嵌入音樂**，必須後製加入
+- `generate_audio=False` 必須關閉，否則 AI 音效會蓋掉節拍同步效果
+- THREE QUARTER SHOT（mid-thigh up, no shoes）避免腿部截斷問題
 
 ---
 

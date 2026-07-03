@@ -8,7 +8,7 @@
 
 | KOL | Soul ID | Soul 訓練 | 測試圖 | 自介素材 | 狀態 |
 |-----|---------|----------|--------|---------|------|
-| Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ✅ | ✅ 14 張 | ✅ 影片 v3 通過 | ✅ 完成 |
+| Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ✅ | ✅ 14 張 | ✅ 影片 v3 通過；舞蹈影片 v1-v3 通過 | ✅ 完成 |
 | Luna Tanaka | `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a` | ✅ | ✅ 6 張 | ❌ 待生成 | 🔄 進行中 |
 | Ananya Kapoor | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | ✅ | ✅ 6 張（場景 1+3 已重生成） | ❌ 待生成 | 🔄 進行中 |
 | Yuna Kim | `235794a5-2eff-45fb-91b4-3232910afefa` | ✅ | ✅ 6 張 | ❌ 待生成 | 🔄 進行中 |
@@ -25,7 +25,7 @@
 
 ### 現在的待辦（依優先順序）
 
-> 最後更新：2026-06-30
+> 最後更新：2026-07-03
 
 1. **Luna Tanaka — 自我介紹素材圖生成**
    - Soul 訓練 ✅，測試圖 ✅，尚未生成自介素材（參考 Camille 的 `self_intro_v1` 流程）
@@ -295,3 +295,24 @@ kols/<kol-id>/
 - **不要**另外傳入 medias 作為臉部參考——Soul ID 本身就是身份
 - 支援 aspect_ratio：`9:16`（直式）、`1:1`、`16:9`（橫式）
 - 每次最多生成 4 張（count: 1–4）
+- **⚠️ soul_id 只能用於靜態圖片生成**，影片生成中的臉部鎖定靠 `start_image` 參數（見下方舞蹈影片 SOP）
+
+---
+
+## 舞蹈影片生成流程（TikTok 熱梗舞）
+
+> 完整 SOP 見 `DANCE_VIDEO_SOP.md`
+
+**使用模型**：`seedance_2_0`（音樂同步，臉部鎖定）
+
+**快速流程**：
+
+```
+1. media_upload + media_confirm → audio_media_id
+2. soul_2 生成 start frame（THREE QUARTER SHOT）→ rawUrl
+3. media_import_url → image_media_id
+4. seedance_2_0（start_image + audio_references + generate_audio=False）→ 舞蹈影片
+5. CapCut 後製：拖入 mp3，對齊開頭，導出
+```
+
+**適用所有 KOL**，每個 KOL 只需替換 soul_id 和服裝描述。

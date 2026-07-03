@@ -353,7 +353,55 @@ quiet solo traveler night energy, city outside the window dark and distant
 
 ---
 
-### 六、Fitness / Active（運動系列）10%
+### 六、TikTok Dance（舞蹈影片系列）15%
+
+> 完整生成流程見 `DANCE_VIDEO_SOP.md`。本節僅記錄場景庫和服裝參考。
+
+**核心氛圍**：跟著 TikTok 熱門歌曲跳舞，性感有活力，節拍感強。三段式：進場→主舞→收尾。
+
+#### 服裝選擇原則
+
+| 類型 | 服裝範例 | 效果 |
+|------|---------|------|
+| 緊身運動風 | black crop top + high-waist biker shorts | 腰線和臀線清晰，動作自然 |
+| 性感休閒 | light blue V-neck mini dress | 飄逸感，裙擺隨動作飛起 |
+| 派對風 | silver metallic mini skirt + crop top | 反光，在燈光下效果好 |
+| 街頭風 | oversized hoodie（crop）+ tight shorts | 年輕感，臀部線條突出 |
+
+**構圖規則**：所有舞蹈影片使用 **THREE QUARTER SHOT（mid-thigh up, no shoes shown）**，避免腿部截斷。
+
+#### 背景選擇
+
+| 背景 | 氛圍 | 適合 |
+|------|------|------|
+| Plain white/gray studio | 簡潔，突出舞者 | 首選（不分散注意力） |
+| Urban rooftop, city at dusk | 城市感，台北/首爾 | 有場景感的版本 |
+| Club/neon lighting background | 夜店感，強燈光 | 派對主題 |
+| Bedroom/living room | 居家隨性感 | 模仿真實 TikTok 風格 |
+
+#### 音樂類型與舞蹈效果
+
+| 音樂類型 | 適合舞蹈 prompt 描述 |
+|---------|-------------------|
+| 越南鼓（Vietnamese drum） | `powerful rhythmic stomping, traditional meets street style, hip drops` |
+| K-pop（流行/電音） | `K-pop choreography, sharp arm movements, body roll, bouncing to beat` |
+| 拉丁（reggaeton/cumbia） | `hip-hop reggaeton moves, waist rolls, confident swagger` |
+| 西方流行（pop/R&B） | `body wave, chest bounce, fluid arm movements, sensual groove` |
+
+#### 各 KOL 舞蹈推薦
+
+| KOL | 推薦服裝 | 推薦音樂 | 背景 |
+|-----|---------|---------|------|
+| **Iris Chen** 台北熱辣 | 黑色 crop top + 騎車短褲，或 mini dress | 越南鼓、Sugar on my tongue | 白色背景或城市夜景 |
+| **Luna Tanaka** 京都安靜 | 白色短版和服領上衣 + 黑色緊身褲 | 輕柔 J-pop 或 city pop | 日式簡潔室內 |
+| **Ananya Kapoor** 孟買舞者 | 印度傳統 crop top + 露腰半裙 | Bollywood remixes | 金色燈光背景 |
+| **Yuna Kim** 首爾美妝 | 韓系短版外套 + 短褲 | K-pop | 首爾都市感背景 |
+| **Aaliya Rivera** LA 拉丁 | 性感拉丁裙或緊身褲 | Reggaeton/Latin pop | 城市夜景 |
+| **Camille Dupont** 巴黎慢活 | 法式休閒 + 緊身褲 | 法語流行 or 歐洲電音 | 簡潔白背景 |
+
+---
+
+### 七、Fitness / Active（運動系列）10%
 
 #### Scene F-1：瑜伽後躺在地墊上
 
@@ -411,7 +459,7 @@ sports jacket or hoodie loosely around waist
 
 | KOL | 最適配場景（按角色美學） |
 |-----|----------------------|
-| **Iris Chen** 台北熱辣 | O-1 鏡前穿搭、M-1 床上晨起直視鏡頭、H-3 飯店泳池 |
+| **Iris Chen** 台北熱辣 | O-1 鏡前穿搭、M-1 床上晨起直視鏡頭、H-3 飯店泳池、Dance 六 舞蹈影片 |
 | **Luna Tanaka** 京都安靜 | M-3 窗邊發呆、B-3 浴缸邊、L-3 臥室地板看書 |
 | **Ananya Kapoor** 孟買舞者 | F-1 瑜伽後躺墊、F-2 鏡前伸展、M-3 窗邊（晨間海邊版） |
 | **Yuna Kim** 首爾美妝 | B-2 護膚例行、M-2 鏡前梳整、O-1 鏡前穿搭 |
@@ -431,4 +479,4 @@ slightly off-center composition, natural imperfect framing like a friend took th
 
 ---
 
-*最後更新：2026-07-01*
+*最後更新：2026-07-03*

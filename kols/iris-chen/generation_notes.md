@@ -227,14 +227,82 @@ Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening, hotel amb
 
 ---
 
+## 舞蹈影片記錄（2026-07-03）
+
+### Soul ID
+`5fe3b6ba-1277-4822-9141-fb06eb3b93a0`
+
+### Start Frame 方法
+
+所有舞蹈影片使用以下步驟生成 start frame：
+1. `generate_image(model="soul_2", soul_id="5fe3b6ba-1277-4822-9141-fb06eb3b93a0", ...)`
+2. 從回傳的 `rawUrl` 呼叫 `media_import_url` 取得 `image_media_id`
+3. 傳入 `seedance_2_0` 的 `start_image` 參數
+
+**⚠️ 構圖規則（舞蹈專用）**：Start frame 必須是 **THREE QUARTER SHOT（mid-thigh up, no shoes shown）**，避免影片在膝蓋處截斷。
+
+### 服裝與 Prompt 記錄
+
+#### 版本 1–2：黑色 crop top + 騎車短褲
+
+**Start frame prompt**（供參考）：
+```
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes,
+delicate high nose bridge, soft full lips, small defined chin, glowing skin,
+petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down,
+standing in confident pose ready to dance,
+wearing black crop top and high-waist black biker shorts,
+THREE QUARTER SHOT, mid-thigh up, no shoes shown,
+plain white studio background,
+film grain, candid lifestyle photo, warm tones, shot on 35mm
+```
+
+**Dance video prompt**：
+```
+22-year-old Taiwanese girl, petite curvy hourglass figure with full chest and slim waist,
+black silky straight hair naturally down,
+wearing black crop top and high-waist black biker shorts,
+THREE QUARTER BODY SHOT, mid-thigh up, no shoes shown,
+chest bounce and jiggle physics,
+energetic hip-hop dance, body rolling, hip sway, powerful rhythmic movement,
+synced to Vietnamese drum beat, dynamic energy,
+plain white studio background,
+synced to the music beat and rhythm, dynamic dance movement, confident sensual energy,
+shot on iPhone, natural lighting, warm tones
+```
+
+#### 版本 3：淡藍色 V 領洋裝
+
+**音樂**：Sugar on my tongue  
+**Dance video prompt（服裝部分）**：`light blue V-neck mini dress`  
+**舞蹈風格**：fluid body wave, sensual groove, dress flowing with movement
+
+### 已生成影片清單
+
+| 版本 | 時長 | 服裝 | 音樂 | Job ID | 狀態 |
+|------|------|------|------|--------|------|
+| dance_v1 | 10s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | ✅ 批准 |
+| dance_v2 | 15s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | ✅ 保留 |
+| dance_v3 | 15s | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | ✅ 批准 |
+
+其他本 session 影片（非舞蹈）：
+
+| 版本 | 場景 | 模型 | Job ID | 狀態 |
+|------|------|------|--------|------|
+| 浴室鏡前 v1 | 浴室鏡前，start_image: `89010b47` | kling3_0 | `a6231909` | ✅ 保留 |
+| 浴室+音樂 | 浴室場景 | kling3_0 | `5bcbb94b` | 待確認 |
+
+---
+
 ## 影片生成記錄與規則（2026-06-30）
 
 ### 使用模型
 
 | 模型 | 特性 | 適用場景 |
 |------|------|---------|
-| `seedance_2_0` | 身份一致性最強（接受 start_image），單鏡頭 | 近景情緒鏡頭、細節特寫 |
-| `cinematic_studio_video_v2` | 原生 multi-shot，鏡頭切換自然 | 需要多鏡頭剪輯感的日常內容 ✅ 首選 |
+| `kling3_0` | 臉部鎖定（start_image），單鏡頭，支援 sound:on | 親密場景影片 |
+| `seedance_2_0` | 身份一致性最強（start_image + audio_references），單鏡頭 | **舞蹈影片（首選）**、近景情緒 |
+| `cinematic_studio_video_v2` | 原生 multi-shot，鏡頭切換自然（臉部可能漂移） | 需要多鏡頭剪輯感的日常內容 ✅ 首選 |
 
 ### 測試結果（咖啡廳場景，`cafe_test_v1`）
 
