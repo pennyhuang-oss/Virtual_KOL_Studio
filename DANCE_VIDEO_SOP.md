@@ -93,8 +93,11 @@ generate_video(
 |------|-----|------|
 | `start_image` | `{"id": image_media_id}` | 鎖定臉部身份，整支影片保持一致 |
 | `audio_references` | `[{"id": audio_media_id}]` | 讓舞蹈動作跟著音樂節拍同步 |
-| `generate_audio` | `False` | **必須關閉**，否則會用 AI 生成音效蓋掉你的音樂 |
+| `generate_audio` | `False` | **必須關閉**，否則會用 AI 生成音效蓋掉你的音樂，導致舞蹈對著錯誤音樂跑 |
 | `duration` | `15` | 最大可用時長 |
+
+**⚠️ generate_audio: true 不會改善卡點（2026-07-06 測試結論）**：
+曾測試讓 seedance 自行生成音樂（generate_audio: true），期望音樂和舞蹈同步生成能讓卡點更精準。結果：卡點效果與上傳音樂版本相同，沒有改善。**結論：永遠使用上傳的熱門音樂 + generate_audio: false。** AI 生成音樂唯一缺點是無法控制歌曲，也無法在後製換歌。
 
 **重要：audio_reference 只控制動作節拍，不會把音樂嵌入影片。** 影片輸出是無聲的（或有 AI 環境音），需要後製步驟加入音樂。
 
@@ -183,6 +186,10 @@ shot on iPhone, natural lighting, warm tones
 | 影片無音樂 | audio_reference 控制動作節拍，但不嵌入音樂 | 後製（CapCut）加入 mp3 |
 | start_image 未 import | 直接使用 rawUrl 會失敗 | 必須先 media_import_url 取得 image_media_id |
 | generate_audio 未關閉 | AI 生成的音效會蓋掉 audio_reference 效果 | 一定要設 generate_audio=False |
+| 黑邊出現 | 舞蹈動作幅度大，人物移出畫面邊緣 | Prompt 必須加 `character always centered in frame, staying within frame boundaries at all times` |
+| 鏡頭一直切換 | 背景含 mirror，或 prompt 未指定單鏡頭 | 加 `single continuous shot no camera cuts`；背景禁止 mirror |
+| start_image revealing 服裝 → status: failed | 模型對 start_image 做像素層級內容審核，belly dance / crop top midriff 被過濾 | start_image 只用保守服裝（tank top / bodycon dress 全覆蓋款） |
+| 詳細動作描述觸發 NSFW | 具體節拍描述如 `snaps hips hard`, `chest jiggling` 被 NSFW 攔截 | 使用簡單舞蹈風格描述（`energetic hip-hop dance, body rolling, hip sway`）|
 
 ---
 

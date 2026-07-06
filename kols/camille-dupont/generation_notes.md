@@ -188,3 +188,52 @@ Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, hotel amb
 ```
 
 **參數**：同場景 1。
+
+---
+
+## 舞蹈影片記錄（2026-07-06）
+
+### Start Frame
+
+| Job ID | 說明 | Media ID |
+|--------|------|----------|
+| `3e74d9cb` | 三分之三身站立，gold metallic deep-V bodycon dress，簡單室內背景 | `fc093b6e` |
+
+### 音樂
+
+| 音樂 | Audio Media ID |
+|------|---------------|
+| TikTok 熱門卡點音樂（同 Ananya） | `a7d47bd0` |
+
+### 已生成影片清單
+
+| 版本 | 時長 | 服裝 | 背景 | Job ID | generate_audio | 狀態 |
+|------|------|------|------|--------|---------------|------|
+| dance_v1 | 15s | gold metallic deep-V bodycon dress | simple modern apartment interior | `34337f72` | false ✓ | 待確認 |
+
+### 舞蹈影片 Prompt 模板
+
+```
+22-year-old French woman, long straight blonde hair natural honey golden color,
+light fair skin, warm hazel light brown eyes, 169cm slender figure with curves,
+wearing gold metallic deep-V bodycon dress, mid-thigh length,
+THREE QUARTER BODY SHOT, mid-thigh up, no shoes shown,
+chest bounce and jiggle physics,
+energetic pop dance, body rolling, hip sway, fluid arm movements, bouncing to the beat,
+simple modern apartment interior background, clean warm indoor lighting,
+synced to the music beat and rhythm, dynamic dance movement, confident sensual energy,
+shot on iPhone, natural lighting, warm tones,
+single continuous shot no camera cuts, character always centered in frame, staying within frame boundaries at all times
+```
+
+### 舞蹈影片生成 Checklist
+
+- `generate_audio: false` ← 必填，否則模型自己生成音樂蓋掉 audio_reference
+- `audio` role 帶入正確 media_id（`a7d47bd0`）
+- `start_image` 帶入正確 media_id（`fc093b6e`）
+- `THREE QUARTER BODY SHOT` 在 prompt 裡
+- `centered in frame, staying within frame boundaries at all times`（防黑邊）
+- `single continuous shot no camera cuts`（防鏡頭切換）
+- 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
+- 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard）
+- 每次必帶 `long straight blonde hair, natural honey golden color`（Soul V2 不繼承）

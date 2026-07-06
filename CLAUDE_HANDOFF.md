@@ -231,9 +231,13 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 ## 其他待辦
 
 ### 影片生成（目前進行中）
-- [x] **Iris Chen** — `cafe_test_v1` 完成（3 支）；`dance_v1-v3` 完成（3 支，2026-07-03）
-- [ ] **Iris Chen** — 下一步：製作其他場景日常影片（非自我介紹），或繼續舞蹈影片
-- [ ] **其他 5 個 KOL** — 影片生成尚未開始，待 Iris 工作流程穩定後依序執行
+- [x] **Iris Chen** — `cafe_test_v1` 完成（3 支）；`dance_v1-v3` 完成（3 支，2026-07-03）；`generate_audio: true` 測試完成（2026-07-06，結論：無改善）
+- [x] **Yuna Kim** — `dance_v1-v2` 完成（2 支，2026-07-06，已 push commit c55cff9）
+- [x] **Aaliya Rivera** — `dance_v1` 完成（job `2ccf4760`，2026-07-06，待用戶確認）
+- [x] **Luna Tanaka** — `dance_v1` 完成（job `322a8d14`，2026-07-06，待用戶確認）
+- [ ] **Ananya Kapoor** — 舞蹈影片持續失敗（root cause：revealing start_image 被像素過濾）；新 start frame job `0bf0eb63` 待確認
+- [ ] **Camille Dupont** — `dance_v1`（job `34337f72`）狀態待確認
+- [ ] **Iris Chen** — 下一步：製作其他場景日常影片（非舞蹈）
 
 ### Iris Chen 舞蹈影片記錄（2026-07-03）
 
@@ -242,6 +246,8 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 | dance_v1 | seedance_2_0 | 10s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | ✅ 批准 |
 | dance_v2 | seedance_2_0 | 15s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | ✅ 保留 |
 | dance_v3 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | ✅ 批准 |
+| dance_v4 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | AI 生成（generate_audio:true 測試） | `dc8c2f4d` | 臉部差，卡點無改善 |
+| dance_v5 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | AI 生成（第二次測試） | `1d60614a` | 卡點無改善，結論確認 |
 
 其他本 session 生成影片：
 
@@ -262,6 +268,42 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ### 其他
 - [x] **KOL_TRAINING_SOP.md 狀態表** — 已全面更新至最新進度（2026-06-30）✅
+
+---
+
+## 舞蹈影片技術規則（2026-07-06 新增）
+
+> 以下規則從 Yuna Kim / Aaliya / Luna / Ananya / Camille 舞蹈影片生成中學到，所有 KOL 適用。
+
+### 絕對必要參數（每次必確認）
+
+| 參數 | 正確值 | 錯誤後果 |
+|------|--------|---------|
+| `generate_audio` | `False` | AI 自動生成背景音效，蓋掉 audio_reference，舞蹈對著錯誤音樂跑 |
+| prompt 含 `single continuous shot no camera cuts` | 必須有 | 鏡頭一直切換 |
+| prompt 含 `centered in frame, staying within frame boundaries at all times` | 必須有 | 黑邊出現 |
+| start_image 服裝 | 非 revealing（無肚皮露出、無 bra top） | 生成 status: "failed"（非 nsfw） |
+
+### NSFW 觸發詞（避免）
+
+- `sexy expression` → 改用 `confident sensual energy`
+- `sensual isolation`
+- `snaps hips hard`
+- `chest bouncing/jiggling`（直接描述）→ 可用 `chest bounce and jiggle physics`
+
+### 背景規則
+
+- **禁止 mirror**：背景有鏡子 → 模型產生反射鏡頭，看起來像鏡頭切換
+
+### generate_audio: true 測試結論（2026-07-06）
+
+**測試**：用 Iris Chen（job `dc8c2f4d` 和 `1d60614a`）測試 AI 生成音樂是否能讓卡點更精準。  
+**結果**：卡點效果完全相同，沒有改善。  
+**結論**：永遠使用上傳熱門音樂 + `generate_audio: False`。
+
+### Ananya Kapoor 特殊問題
+
+start_image 含有 revealing 服裝（belly dance costume、crop top showing midriff）會導致 `status: "failed"`（非 `status: "nsfw"`）。這是像素層級的影片生成前處理過濾，需使用保守服裝的 start_image。
 
 ---
 

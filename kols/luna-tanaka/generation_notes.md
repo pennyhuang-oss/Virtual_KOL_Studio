@@ -172,3 +172,51 @@ Shot on iPhone, warm soft grain, warm cream tones, no over-sharpening, hotel amb
 ```
 
 **參數**：同場景 1。
+
+---
+
+## 舞蹈影片記錄（2026-07-06）
+
+### Start Frame
+
+| Job ID | 說明 | Media ID |
+|--------|------|----------|
+| `fe49678d` | 三分之三身站立，black PU leather halter dress，izakaya 背景 | `710cccfa` |
+
+### 音樂
+
+| 音樂 | Audio Media ID |
+|------|---------------|
+| TikTok 熱門卡點音樂（TikSave） | `caae7993` |
+
+### 已生成影片清單
+
+| 版本 | 時長 | 服裝 | 背景 | Job ID | generate_audio | 狀態 |
+|------|------|------|------|--------|---------------|------|
+| dance_v1 | 15s | black PU leather halter dress | Tokyo izakaya neon alley night | `322a8d14` | false ✓ | ✅ 完成（待用戶確認） |
+
+### 舞蹈影片 Prompt 模板（已驗證）
+
+```
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes,
+fair porcelain skin, petite curvy figure with full chest and slim waist,
+wearing black PU leather halter dress, mid-thigh length, form-fitting,
+THREE QUARTER BODY SHOT, mid-thigh up, no shoes shown,
+chest bounce and jiggle physics,
+energetic J-pop dance, body rolling, hip sway, playful arm movements, bouncing to the beat,
+Tokyo izakaya neon alley night background, warm neon lights, urban Japanese atmosphere,
+synced to the music beat and rhythm, dynamic dance movement, confident sensual energy,
+shot on iPhone, natural lighting, warm tones,
+single continuous shot no camera cuts, character always centered in frame, staying within frame boundaries at all times
+```
+
+### 舞蹈影片生成 Checklist
+
+- `generate_audio: false` ← 必填，否則模型自己生成音樂蓋掉 audio_reference
+- `audio` role 帶入正確 media_id（`caae7993`）
+- `start_image` 帶入正確 media_id（`710cccfa`）
+- `THREE QUARTER BODY SHOT` 在 prompt 裡
+- `centered in frame, staying within frame boundaries at all times`（防黑邊）
+- `single continuous shot no camera cuts`（防鏡頭切換）
+- 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
+- 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard）

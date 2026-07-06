@@ -279,11 +279,24 @@ shot on iPhone, natural lighting, warm tones
 
 ### 已生成影片清單
 
-| 版本 | 時長 | 服裝 | 音樂 | Job ID | 狀態 |
-|------|------|------|------|--------|------|
-| dance_v1 | 10s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | ✅ 批准 |
-| dance_v2 | 15s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | ✅ 保留 |
-| dance_v3 | 15s | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | ✅ 批准 |
+| 版本 | 時長 | 服裝 | 音樂 | Job ID | generate_audio | 狀態 |
+|------|------|------|------|--------|---------------|------|
+| dance_v1 | 10s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | false | ✅ 批准 |
+| dance_v2 | 15s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | false | ✅ 保留 |
+| dance_v3 | 15s | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | false | ✅ 批准 |
+| dance_v4 | 15s | 淡藍色 V 領洋裝（cl3） | AI 生成（Veo 2 / seedance generate_audio:true 測試） | `dc8c2f4d` | **true（測試用）** | 臉部鎖定差，卡點無改善 |
+| dance_v5 | 15s | 淡藍色 V 領洋裝（cl3） | AI 生成（第二次測試，用已驗證 start_image `7cc36b0b`） | `1d60614a` | **true（測試用）** | 卡點效果與 false 相同，無改善 |
+
+### ⚠️ generate_audio: true 測試結論（2026-07-06）
+
+**測試目的**：讓 seedance 自行生成音樂，期望 AI 音樂與舞蹈動作同步生成能讓卡點更精準。
+
+**測試結果**：
+- 卡點效果與上傳音樂 + generate_audio: false 版本相同，沒有任何改善
+- 第一次測試（job `dc8c2f4d`）：臉部鎖定品質明顯下降（臉型不一致）
+- 第二次測試（job `1d60614a`）：改用已驗證 start_image（`7cc36b0b`），臉部好一點，但卡點仍無改善
+
+**結論：永遠使用上傳的熱門音樂 + generate_audio: false**。AI 生成音樂額外缺點是無法控制歌曲，無法在後製換歌。
 
 其他本 session 影片（非舞蹈）：
 

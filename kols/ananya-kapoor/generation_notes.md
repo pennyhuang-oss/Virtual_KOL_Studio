@@ -228,3 +228,51 @@ Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, hotel am
 ```
 
 **參數**：同場景 1。
+
+---
+
+## 舞蹈影片記錄（2026-07-06）
+
+### 音樂
+
+| 音樂 | Audio Media ID |
+|------|---------------|
+| TikTok 熱門卡點音樂（同 Camille） | `a7d47bd0` |
+
+### ⚠️ 失敗分析：Start Image 含露膚服裝導致生成 Failed
+
+**根本原因**：Higgsfield seedance_2_0 在影片生成前會對 start_image 進行像素層級的內容審核。如果 start_image 含有露腹、露胸等 revealing 服裝，生成任務會直接返回 `status: "failed"`（非 `status: "nsfw"`）。
+
+**失敗嘗試記錄**：
+
+| Start Frame 服裝 | Start Frame Job/Media | 影片 Job | 狀態 | 原因 |
+|-----------------|----------------------|---------|------|------|
+| 肚皮舞服裝（belly dance bra top） | 直接用 CDN URL | `f62d5caa` | ❌ failed | 露腹/露胸服裝被過濾 |
+| 瑜伽 crop top（midriff 外露） | `18d6c40a` / `b2715eb2` | `3066d9c4` | ❌ failed | crop top 露腰被過濾 |
+| 保守 T-shirt start frame | 新生成 | `e549fc90` | ❌ failed | 仍失敗（原因未明） |
+
+**已嘗試繞過方式**：
+- 換成保守 T-shirt — 仍失敗
+- 不使用 start_image（無臉部鎖定） — 可生成，但臉部品質差，不推薦
+
+### 新 Start Frame（2026-07-06 新生成，待確認）
+
+| Job ID | 說明 | 狀態 |
+|--------|------|------|
+| `0bf0eb63` | gold metallic deep-V dress（相對保守的 revealing 測試） | 待確認 |
+
+### 待辦事項
+
+- 確認 job `0bf0eb63` 的 start frame 結果後，再嘗試 dance video 生成
+- 如果仍然失敗，考慮完全換服裝方向（使用全覆蓋服裝如 tank top + leggings）
+
+### 舞蹈影片生成 Checklist
+
+- `generate_audio: false` ← 必填
+- `audio` role 帶入正確 media_id（`a7d47bd0`）
+- `start_image` 必須使用非 revealing 服裝（無露腹、無露胸 bra top）
+- `THREE QUARTER BODY SHOT` 在 prompt 裡
+- `centered in frame, staying within frame boundaries at all times`（防黑邊）
+- `single continuous shot no camera cuts`（防鏡頭切換）
+- 背景無 mirror
+- 無 NSFW 觸發詞
