@@ -176,3 +176,43 @@ Shot on iPhone, warm soft grain, warm tones, no over-sharpening, hotel and city 
 ```
 
 **參數**：同場景 1。
+
+---
+
+## 舞蹈影片記錄（2026-07-06）
+
+### Start Frame
+
+| Job ID | 說明 | Media ID |
+|--------|------|----------|
+| `eff381cd` | 全身站立，粉色 bodycon dress，韓國公寓背景（已批准） | `5749da05-7dd9-46f8-bce1-ffde14635e93` |
+
+### 音樂
+
+| 音樂 | Audio Media ID |
+|------|---------------|
+| Pump It Up | `eff67fee-adf6-4846-b983-21e08acd2fa9` |
+
+### 已生成影片清單
+
+| 版本 | 時長 | 服裝 | 背景 | Job ID | generate_audio | 狀態 |
+|------|------|------|------|--------|---------------|------|
+| dance_v1 | 15s | 粉色 bodycon dress | plain white studio | `7194b553` | false（未帶入） | 保留 |
+| dance_v2 | 15s | 粉色 bodycon dress | aesthetic bedroom, LED lighting | `42e42771` | false ✓ | 保留 |
+
+### 舞蹈影片 Prompt 模板（已驗證）
+
+```
+23-year-old Korean girl, beautiful face with large bright double-eyelid eyes, delicate nose, soft full lips, glowing skin, full glam makeup, petite curvy figure with full chest and slim waist, dark brown wavy hair collarbone-length, wearing [OUTFIT], THREE QUARTER BODY SHOT, mid-thigh up, no shoes shown, energetic hip-hop dance, body rolling, hip sway, powerful rhythmic movement, synced to pop beat, dynamic energy, [BACKGROUND], synced to the music beat and rhythm, dynamic dance movement, confident sensual energy, shot on iPhone, natural lighting, warm tones, single continuous shot no camera cuts, character always centered in frame, staying within frame boundaries at all times
+```
+
+### 舞蹈影片生成 Checklist（每次送出前必須確認）
+
+- `generate_audio: false` ← 必填，否則模型自己生成音樂蓋掉 audio_reference
+- `audio` role 帶入正確 media_id
+- `start_image` 帶入正確 media_id
+- `THREE QUARTER BODY SHOT` 在 prompt 裡
+- `centered in frame, staying within frame boundaries at all times`（防黑邊）
+- `single continuous shot no camera cuts`（防鏡頭切換）
+- 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
+- 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard, chest bouncing/jiggling）
