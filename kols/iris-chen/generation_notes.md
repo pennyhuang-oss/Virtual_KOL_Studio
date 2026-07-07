@@ -307,6 +307,59 @@ shot on iPhone, natural lighting, warm tones
 
 ---
 
+## 日常自拍影片記錄（2026-07-07）
+
+> 方向：男性受眾，手機自拍感，展示身材曲線和乳溝，非廣告感。
+> 模型：`kling3_0`（單鏡頭，臉部鎖定）
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`
+
+### Start Frame（日常服裝）
+
+| Job ID | 說明 | 已選 | Media ID |
+|--------|------|------|----------|
+| `98d13de0` | 浴室，黑色細肩帶背心，俯角自拍，微微低頭 | ✅ 已選 | `b8078a7d` |
+| `8e23ac81` | 同場景，第二張備選 | — | — |
+
+**Start Frame Prompt（已驗證）**：
+```
+24-year-old Taiwanese woman, strikingly beautiful face, double eyelids, delicate features,
+long straight black hair, fit slim figure with natural curves,
+standing in bathroom, wearing black spaghetti strap tank top no bra,
+slightly tilting head down looking up at camera with soft smile,
+phone selfie angle from slightly above angled down toward face and chest,
+natural cleavage visible from above angle, soft warm bathroom light,
+candid self-portrait feel, shot on iPhone front camera,
+close crop from collarbone to top of head, warm tones, film grain
+```
+
+### 日常影片
+
+| 版本 | 場景 | 服裝 | Job ID | 模型 | 狀態 |
+|------|------|------|--------|------|------|
+| daily_v1 | 浴室手機俯角自拍，微微低頭展示乳溝 | 黑色細肩帶背心 | `b68ac46c` | kling3_0 | ✅ 批准 |
+
+**影片 Prompt（已驗證）**：
+```
+24-year-old Taiwanese woman, strikingly beautiful face, double eyelids, long straight black hair,
+fit slim figure with natural curves,
+standing in bathroom, wearing black spaghetti strap tank top no bra,
+holding phone selfie slightly above looking down at camera with soft smile,
+phone selfie angle from above showing face and natural cleavage, slightly tilting head,
+bathroom background with warm soft lighting,
+single continuous shot, casual selfie feel, warm tones
+```
+
+**參數**：
+```python
+model = "kling3_0"
+medias = [{"role": "start_image", "value": "b8078a7d"}]
+sound = "on"
+aspect_ratio = "9:16"
+duration = 10
+```
+
+---
+
 ## 影片生成記錄與規則（2026-06-30）
 
 ### 使用模型

@@ -216,3 +216,53 @@ Shot on iPhone, warm soft grain, warm tones, no over-sharpening, hotel and city 
 - `single continuous shot no camera cuts`（防鏡頭切換）
 - 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
 - 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard, chest bouncing/jiggling）
+
+---
+
+## 日常自拍影片記錄（2026-07-07）
+
+> 方向：男性受眾，手機自拍感，展示身材曲線和身材比例，非廣告感。
+> 模型：`kling3_0`（單鏡頭，臉部鎖定）
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`
+
+### Start Frame（日常服裝）
+
+| Job ID | 說明 | 已選 | Media ID |
+|--------|------|------|----------|
+| `fd8b7c1d` | 飯店房間，白色緊身 crop top + 低腰牛仔短褲，鏡子自拍站立 | ✅ 已選 | `9e7d8009` |
+| `1f4935eb` | 同場景，第二張備選 | — | — |
+
+**Start Frame Prompt（已驗證）**：
+```
+22-year-old Korean woman, beautiful face, sharp elegant features,
+long straight black hair, slim figure with curves,
+standing near hotel room door, wearing white fitted crop top and low-rise denim shorts,
+holding phone selfie from front, turning from side to face camera,
+showing waist and chest ratio, warm hotel room lighting,
+candid self-portrait feel, shot on iPhone front camera,
+half body shot from waist up, warm tones, film grain
+```
+
+### 日常影片
+
+| 版本 | 場景 | 服裝 | Job ID | 模型 | 狀態 |
+|------|------|------|--------|------|------|
+| daily_v1 | 飯店房間，從側面轉正面展示身材比例，看鏡頭 | 白色 crop top + 低腰牛仔短褲 | `2aca7a9e` | kling3_0 | ✅ 批准 |
+
+**影片 Prompt（已驗證）**：
+```
+22-year-old Korean woman, beautiful face, long straight black hair, slim figure with curves,
+standing in hotel room, wearing white fitted crop top and low-rise denim shorts,
+slowly turning from side profile to face camera directly,
+side profile shows slim waist and chest ratio, then turns to face camera with natural confident gaze,
+warm hotel room lighting, single continuous shot, phone selfie mirror casual feel, warm tones
+```
+
+**參數**：
+```python
+model = "kling3_0"
+medias = [{"role": "start_image", "value": "9e7d8009"}]
+sound = "on"
+aspect_ratio = "9:16"
+duration = 10
+```

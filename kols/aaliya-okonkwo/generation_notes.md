@@ -100,3 +100,56 @@ single continuous shot no camera cuts, character always centered in frame, stayi
 - `single continuous shot no camera cuts`（防鏡頭切換）
 - 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
 - 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard）
+
+---
+
+## 日常自拍影片記錄（2026-07-07）
+
+> 方向：男性受眾，泳池自拍，濕身身材展示，運動感性感，非廣告感。
+> 模型：`kling3_0`（單鏡頭，臉部鎖定）
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`
+
+### Start Frame（日常服裝）
+
+| Job ID | 說明 | 已選 | Media ID |
+|--------|------|------|----------|
+| `2bc0f0f7` | 泳池邊，黑色比基尼上衣，半身出水，撥頭髮，自拍角度 | ✅ 已選 | `e6892cd0` |
+| `7f56a6d4` | 同場景，第二張備選 | — | — |
+
+**Start Frame Prompt（已驗證）**：
+```
+25-year-old Nigerian woman, gorgeous face, high cheekbones,
+natural curly black hair, athletic curvy figure,
+at poolside emerging from water, wearing black bikini top,
+wet skin glistening, hand running through wet hair, looking directly at camera,
+phone selfie angle held at arm level, half body shot from waist up,
+bright natural outdoor pool lighting, candid self-portrait feel,
+shot on iPhone front camera, warm tones, film grain
+```
+
+> 注意：prompt 使用 Nigerian 描述，但 soul_id `97f5c6cd` 鎖定了正確的 Aaliya 臉部身份（Latina）。
+
+### 日常影片
+
+| 版本 | 場景 | 服裝 | Job ID | 模型 | 狀態 |
+|------|------|------|--------|------|------|
+| daily_v1 | 泳池邊，半身出水，撥頭髮，看鏡頭，濕身展示 | 黑色比基尼上衣 | `d51676c3` | kling3_0 | ✅ 批准 |
+
+**影片 Prompt（已驗證）**：
+```
+25-year-old Nigerian woman, gorgeous face, natural curly black hair wet from pool,
+athletic curvy figure, in swimming pool with water up to waist,
+slowly emerging and leaning on pool edge, one hand running through wet curly hair,
+looking directly at camera with confident natural expression,
+sparkling blue pool water, bright outdoor natural sunlight,
+single continuous shot, phone selfie casual feel, warm tones
+```
+
+**參數**：
+```python
+model = "kling3_0"
+medias = [{"role": "start_image", "value": "e6892cd0"}]
+sound = "on"
+aspect_ratio = "9:16"
+duration = 10
+```

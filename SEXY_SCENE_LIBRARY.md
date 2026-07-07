@@ -353,7 +353,70 @@ quiet solo traveler night energy, city outside the window dark and distant
 
 ---
 
-### 六、TikTok Dance（舞蹈影片系列）15%
+### 六、Daily Selfie Video（手機自拍日常影片）— 主力內容
+
+> **定位**：男性受眾的核心日常內容。手機自拍感，真實不刻意，展示身材但不像廣告。
+> **模型**：`kling3_0`（單鏡頭，透過 `start_image` 鎖定臉部身份）
+> **Benchmark 帳號**：@yua_mikami、@asuka.kirara、@eimi0318
+> **完整 SOP 見**：`DAILY_VIDEO_SOP.md`
+
+#### 核心方向
+
+- **不是廣告**：不要 multi-shot 剪輯，不要旁白，不要 CTA，就是她在自拍
+- **手機自拍角度**：slightly overhead angle（從上方俯拍臉和胸），或 arm-level selfie（正面平視）
+- **鏡頭真實感**：適時加入輕微 camera rotation / movement，讓影片看起來像真人拿著手機拍
+- **BGM 後製**：聲音在 CapCut 後製加入，生成時 `sound = "on"` 但 prompt 不提音樂
+
+#### 已驗證場景（2026-07-07 全部批准）
+
+| KOL | 場景 | 服裝 | 重點 | Start Frame Media ID | Video Job ID |
+|-----|------|------|------|----------------------|-------------|
+| Iris Chen | 浴室鏡前，手持手機自拍，微微低頭露乳溝 | 黑色細肩帶背心 | 乳溝，浴室燈光 | `b8078a7d` | `b68ac46c` |
+| Yuna Kim | 飯店房間門邊慢慢轉身，側面到正面展示胸腰比 | 白色 crop top + 低腰牛仔短褲 | 胸腰比，身材線條 | `9e7d8009` | `2aca7a9e` |
+| Luna Tanaka | 床上仰拍，俯角，臉到胸口，微笑看鏡頭 | 白色薄棉睡衣，領口微開 | 童顏巨乳反差 | `81d7442e` | `c2cfc025` |
+| Aaliya Rivera | 泳池邊，半身出水，撥頭髮，看鏡頭 | 黑色比基尼上衣 | 濕身，運動感性感 | `e6892cd0` | `d51676c3` |
+| Camille Dupont | 臥室窗邊逆光，轉頭看鏡頭，側面輪廓 | 白色絲質（實際生成：crop top + bikini bottom） | 逆光側面輪廓 | `5c868b09` | `c70f6307` |
+| Ananya Kapoor | 浴室出來，濕髮，毛巾裹身，露鎖骨露肩 | 白色浴巾，微開露肩 | 濕髮，鎖骨，肩膀 | `d94c27c9` | `59dcbb98` |
+
+#### Start Frame 生成原則
+
+- **角度**：描述「phone selfie angle from above」或「arm-level selfie」，而非「她拿著手機」
+- **服裝**：日常服裝（睡衣、泳衣、浴巾等），不能用舞蹈 start frame 代替
+- **服裝避雷**：crop top 露腹、belly dance bra 等 revealing 服裝 → `status: "failed"`（pixel-level filter）
+- **Soul ID 流程**：`soul_2` 生成圖 → `media_import_url` 匯入 → `image_media_id` → 帶入 `kling3_0` 的 `start_image`
+
+#### 影片 Prompt 核心元素
+
+```
+[年齡+民族+身材特徵],
+[場景描述 — 浴室/床/泳池/飯店],
+[服裝] + [關鍵身體焦點 — cleavage/collarbone/waist ratio],
+[動作 — 轉身/撥頭髮/看鏡頭],
+[鏡頭角度 — phone selfie / overhead / arm-level],
+[光線描述],
+single continuous shot, phone selfie casual feel, warm tones
+```
+
+#### 鏡頭真實感規則
+
+- 日常自拍影片應加入輕微 camera rotation / subtle hand movement
+- 讓影片看起來像真人手拿手機拍，而非三腳架固定的靜態畫面
+- 在 prompt 加入：`slight natural camera movement as if hand-held, subtle rotation`
+
+#### 各 KOL 日常自拍推薦方向
+
+| KOL | 場景方向 | 服裝方向 | 身體焦點 |
+|-----|---------|---------|---------|
+| **Iris Chen** 台北熱辣 | 浴室、健身後、臥室 | 黑色細肩帶、運動背心 | 乳溝、腰線 |
+| **Luna Tanaka** 京都安靜 | 床上、榻榻米、浴室後 | 白色薄棉睡衣、浴巾 | 童顏巨乳反差、鎖骨 |
+| **Ananya Kapoor** 孟買舞者 | 浴室後、瑜伽後、泳池 | 浴巾、瑜伽服 | 鎖骨、肩線、纖腰 |
+| **Yuna Kim** 首爾美妝 | 飯店、臥室、護膚時 | crop top、睡衣 | 胸腰比、高挑身材 |
+| **Aaliya Rivera** LA 拉丁 | 泳池、海邊、健身後 | 比基尼上衣、運動服 | 曲線、濕身效果 |
+| **Camille Dupont** 巴黎慢活 | 臥室窗邊、飯店、浴後 | 絲質睡衣、浴袍 | 側面輪廓、逆光 |
+
+---
+
+### 七、TikTok Dance（舞蹈影片系列）
 
 > 完整生成流程見 `DANCE_VIDEO_SOP.md`。本節僅記錄場景庫和服裝參考。
 
@@ -479,4 +542,4 @@ slightly off-center composition, natural imperfect framing like a friend took th
 
 ---
 
-*最後更新：2026-07-03*
+*最後更新：2026-07-07*

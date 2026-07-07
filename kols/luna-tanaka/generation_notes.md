@@ -220,3 +220,55 @@ single continuous shot no camera cuts, character always centered in frame, stayi
 - `single continuous shot no camera cuts`（防鏡頭切換）
 - 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
 - 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard）
+
+---
+
+## 日常自拍影片記錄（2026-07-07）
+
+> 方向：男性受眾，手機自拍感，童顏巨乳反差，床上自拍，展示胸口，非廣告感。
+> 模型：`kling3_0`（單鏡頭，臉部鎖定）
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`
+
+### Start Frame（日常服裝）
+
+| Job ID | 說明 | 已選 | Media ID |
+|--------|------|------|----------|
+| `970cf52f` | 床上仰拍，白色薄棉睡衣領口微開，俯角自拍，露胸口 | ✅ 已選 | `81d7442e` |
+| `7da38bb4` | 同場景，第二張備選 | — | — |
+
+**Start Frame Prompt（已驗證）**：
+```
+20-year-old Japanese woman, cute youthful face, large expressive eyes,
+long straight dark hair, petite figure with full bust,
+lying on bed looking up at camera, wearing white thin cotton pajama top with slightly open neckline,
+phone selfie angle from above looking down at her face and chest,
+soft smile looking at camera, bedroom with soft warm lighting,
+candid self-portrait feel, shot on iPhone front camera,
+face and chest visible in frame, warm tones, film grain
+```
+
+### 日常影片
+
+| 版本 | 場景 | 服裝 | Job ID | 模型 | 狀態 |
+|------|------|------|--------|------|------|
+| daily_v1 | 床上仰拍，手機俯角，童顏巨乳反差，看鏡頭微笑 | 白色薄棉睡衣，領口微開 | `c2cfc025` | kling3_0 | ✅ 批准 |
+
+**影片 Prompt（已驗證）**：
+```
+20-year-old Japanese woman, cute youthful face, large expressive eyes, black hair,
+petite figure with full bust,
+lying on bed looking up at camera held above her,
+wearing white thin cotton pajama top with slightly open neckline showing natural cleavage,
+soft smile looking up at camera,
+overhead phone selfie angle from above showing face and chest,
+bedroom with soft warm lighting, single continuous shot, casual selfie feel, warm tones
+```
+
+**參數**：
+```python
+model = "kling3_0"
+medias = [{"role": "start_image", "value": "81d7442e"}]
+sound = "on"
+aspect_ratio = "9:16"
+duration = 10
+```

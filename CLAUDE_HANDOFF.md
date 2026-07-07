@@ -228,45 +228,43 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 
 ---
 
-## 其他待辦
+## 影片生成狀態總覽（截至 2026-07-07）
 
-### 影片生成（目前進行中）
-- [x] **Iris Chen** — `cafe_test_v1` 完成（3 支）；`dance_v1-v3` 完成（3 支，2026-07-03）；`generate_audio: true` 測試完成（2026-07-06，結論：無改善）
-- [x] **Yuna Kim** — `dance_v1-v2` 完成（2 支，2026-07-06，已 push commit c55cff9）
-- [x] **Aaliya Rivera** — `dance_v1` 完成（job `2ccf4760`，2026-07-06，待用戶確認）
-- [x] **Luna Tanaka** — `dance_v1` 完成（job `322a8d14`，2026-07-06，待用戶確認）
-- [ ] **Ananya Kapoor** — 舞蹈影片持續失敗（root cause：revealing start_image 被像素過濾）；新 start frame job `0bf0eb63` 待確認
-- [ ] **Camille Dupont** — `dance_v1`（job `34337f72`）狀態待確認
-- [ ] **Iris Chen** — 下一步：製作其他場景日常影片（非舞蹈）
+### 舞蹈影片（seedance_2_0）
 
-### Iris Chen 舞蹈影片記錄（2026-07-03）
+| KOL | 版本 | 服裝 | 音樂 | Job ID | 狀態 |
+|-----|------|------|------|--------|------|
+| Iris Chen | dance_v1 | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | ✅ 批准 |
+| Iris Chen | dance_v2 | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | ✅ 保留 |
+| Iris Chen | dance_v3 | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | ✅ 批准 |
+| Iris Chen | dance_v4 | 淡藍色 V 領洋裝 | AI 生成（generate_audio:true 測試） | `dc8c2f4d` | ❌ 臉部差，結論：AI 音樂無改善 |
+| Iris Chen | dance_v5 | 淡藍色 V 領洋裝 | AI 生成（第二次測試） | `1d60614a` | ❌ 卡點無改善，結論確認 |
+| Yuna Kim | dance_v1 | 粉色 bodycon dress | Pump It Up | `7194b553` | ✅ 保留 |
+| Yuna Kim | dance_v2 | 粉色 bodycon dress | Pump It Up | `42e42771` | ✅ 保留 |
+| Aaliya Rivera | dance_v1 | rust orange ruched bodycon | 蟹二搖 | `2ccf4760` | ✅ 完成（待確認） |
+| Luna Tanaka | dance_v1 | black PU leather halter dress | TikTok 卡點 | `322a8d14` | ✅ 完成（待確認） |
+| Camille Dupont | dance_v1 | gold metallic deep-V bodycon | TikTok 卡點 | `34337f72` | ✅ 完成（待確認） |
+| Ananya Kapoor | 所有嘗試 | 多次失敗 | — | 見 generation_notes | ❌ start_image revealing 被過濾 |
 
-| 版本 | 模型 | 時長 | 服裝 | 音樂 | Job ID | 結果 |
-|------|------|------|------|------|--------|------|
-| dance_v1 | seedance_2_0 | 10s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b0aee3d` | ✅ 批准 |
-| dance_v2 | seedance_2_0 | 15s | 黑色 crop top + 騎車短褲 | 越南鼓 | `1b767b3b` | ✅ 保留 |
-| dance_v3 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | Sugar on my tongue | `3d3ac1b2` | ✅ 批准 |
-| dance_v4 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | AI 生成（generate_audio:true 測試） | `dc8c2f4d` | 臉部差，卡點無改善 |
-| dance_v5 | seedance_2_0 | 15s | 淡藍色 V 領洋裝 | AI 生成（第二次測試） | `1d60614a` | 卡點無改善，結論確認 |
+### 日常自拍影片（kling3_0）— 2026-07-07 新增
 
-其他本 session 生成影片：
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`。
 
-| 版本 | 模型 | 時長 | 場景 | Job ID | 結果 |
-|------|------|------|------|--------|------|
-| 浴室鏡前 | kling3_0 | 10s | 浴室鏡前，start_image: `89010b47` | `a6231909` | ✅ 保留 |
-| 浴室+音樂嘗試 | kling3_0 | 10s | 浴室場景 | `5bcbb94b` | 待確認 |
+| KOL | 場景 | 服裝 | Start Frame Media ID | 影片 Job ID | 狀態 |
+|-----|------|------|---------------------|------------|------|
+| Iris Chen | 浴室，俯角自拍，微微低頭 | 黑色細肩帶背心 | `b8078a7d` | `b68ac46c` | ✅ 批准 |
+| Yuna Kim | 飯店，側面轉正面展示身材 | 白色 crop top + 低腰牛仔短褲 | `9e7d8009` | `2aca7a9e` | ✅ 批准 |
+| Luna Tanaka | 床上仰拍，俯角自拍 | 白色薄棉睡衣 | `81d7442e` | `c2cfc025` | ✅ 批准 |
+| Aaliya Rivera | 泳池邊，半身出水，撥頭髮 | 黑色比基尼上衣 | `e6892cd0` | `d51676c3` | ✅ 批准 |
+| Camille Dupont | 臥室窗邊逆光，轉頭看鏡頭 | 白色絲質睡衣 | `5c868b09` | `c70f6307` | ✅ 批准 |
+| Ananya Kapoor | 浴室，濕髮，毛巾裹身 | 白色浴巾，露鎖骨 | `d94c27c9` | `59dcbb98` | ✅ 批准 |
 
 ### 圖片生成
-- [x] **Ananya Kapoor** — 場景一（孟買咖啡廳，深寶石藍 wrap dress）✅ 通過；場景三（Marine Drive，鏽紅 crop top + 白色闊腿褲）✅ 通過（2026-06-30）
+- [x] **Ananya Kapoor** — 孟買咖啡廳（深寶石藍 wrap dress）✅；Marine Drive（鏽紅 crop top）✅（2026-06-30）
 - [ ] **Luna Tanaka / Yuna Kim / Aaliya Rivera** — 自我介紹圖片尚未生成
 
 ### 文件補齊
-- [ ] **Iris Chen** — `character.md` 的 benchmark 帳號區塊需更新（現有的 4 個帳號都是靜音美學型，不符合 Iris 新的說話+多元內容方向）
-- [x] **Luna Tanaka** — `edit_timeline_self_intro.md` 已存在 ✅
-- [x] **Yuna Kim** — `edit_timeline_self_intro.md` 已存在 ✅
-- [x] **Aaliya Rivera `generation_notes.md`** — 已補上測試圖記錄（2026-06-30）✅
-
-### 其他
+- [ ] **Iris Chen** — `character.md` benchmark 帳號需更新（現有 4 個帳號是靜音美學型，不符合新方向）
 - [x] **KOL_TRAINING_SOP.md 狀態表** — 已全面更新至最新進度（2026-06-30）✅
 
 ---
@@ -307,14 +305,15 @@ start_image 含有 revealing 服裝（belly dance costume、crop top showing mid
 
 ---
 
-## 影片生成技術規範（2026-07-03 更新）
+## 影片生成技術規範（2026-07-07 更新）
 
 ### 內容類型
 
-目前確立兩類影片生成方向：
+目前確立三類影片生成方向：
 
-1. **日常親密生活風格影片**（多鏡頭，cinematic_studio_video_v2）
+1. **日常自拍影片**（kling3_0，手機自拍感，單鏡頭）→ 詳見 `DAILY_VIDEO_SOP.md` ⭐ **最重要**
 2. **TikTok 舞蹈影片**（seedance_2_0，音樂同步）→ 詳見 `DANCE_VIDEO_SOP.md`
+3. **多鏡頭電影感影片**（cinematic_studio_video_v2）→ **已確認不適合日常內容，不推薦**
 
 ---
 
@@ -322,51 +321,42 @@ start_image 含有 revealing 服裝（belly dance costume、crop top showing mid
 
 | 模型 | 臉部鎖定 | 多鏡頭 | 音樂同步 | 最大時長 | 最適用場景 |
 |------|---------|--------|---------|---------|-----------|
-| `kling3_0` | ✅ start_image | ❌（非自動） | ✅ sound:on | 15s | 親密場景、臉部鎖定單鏡頭 |
+| `kling3_0` | ✅ start_image | ❌（非自動） | ✅ sound:on | 15s | **日常自拍影片（首選）**、親密場景、單鏡頭 |
 | `seedance_2_0` | ✅ start_image | ❌ | ✅ audio_references | 15s | **舞蹈影片（首選）** |
-| `cinematic_studio_video_v2` | ❌（會漂移） | ✅ multi_shots | ✅ sound:on | 12s | 多鏡頭電影感日常內容 |
+| `cinematic_studio_video_v2` | ❌（會漂移） | ✅ multi_shots | ✅ sound:on | 12s | 多鏡頭電影感 — **不適合日常內容，會生成廣告感** |
 | `soul_2` | ✅ soul_id | N/A | N/A | N/A | 僅用於靜態 start frame 生成 |
 
 **⚠️ 重要**：`soul_id` 只能用於 `soul_2` 靜態圖片生成，**不能用於任何影片生成**。影片生成的臉部鎖定靠 `start_image` 參數。
 
+**⚠️ cinematic_studio_video_v2 教訓**：用此模型生成日常影片時，因為是多鏡頭敘事式，產出的感覺像廣告，完全不符合 KOL 日常自拍的要求。正確選擇是 `kling3_0` 單鏡頭。
+
 ---
 
-### 日常親密影片：`cinematic_studio_video_v2`
+### ❌ cinematic_studio_video_v2 不適合日常內容（重要教訓）
 
-這是日常多鏡頭影片的首選（Iris `cafe_test_v1` v3 通過）。
+**問題**：cinematic_studio_video_v2 的 multi_shots 特性讓它天生就是「電影感敘事」，生成的影片有多個鏡頭切換、有劇情arc，看起來像品牌廣告。
+
+**解決**：日常自拍內容一律用 `kling3_0` 單鏡頭。cinematic_studio_video_v2 僅保留給有特別需要多鏡頭電影感的少數場景。
+
+---
+
+### 日常自拍影片：`kling3_0`（2026-07-07 確立）
 
 ```
-model: cinematic_studio_video_v2
-multi_shots: true
-multi_shot_mode: auto        ← 必須 auto，不能 custom（custom+空prompt會卡死）
-genre: intimate
-mode: pro
+model: kling3_0
+medias: [{"role": "start_image", "value": "<image_media_id>"}]
 sound: on
 aspect_ratio: 9:16
-duration: 12                 ← 最短 10s，建議 12s
+duration: 10
 ```
 
-### Prompt 模板（日常影片）
+**Prompt 原則**：
+- 描述單一場景和自然動作，不要描述多個鏡頭
+- 包含 `phone selfie` 或 `overhead selfie angle` 角度描述
+- 包含 `single continuous shot, casual selfie feel`
+- 讓她有自然的動態（轉頭、撥髮、低頭再抬頭）製造真實手持感
 
-```
-Shot 1: [場景進入動作，全身或中景]
-Shot 2: [主要行為，中景]
-Shot 3: [特寫細節，手/道具/表情]
-Shot 4: [收尾情緒鏡頭，側臉或望遠]
-Shot on iPhone, warm soft grain, warm faded tones, no over-sharpening,
-natural lighting, stable camera, feels like a real person filmed this.
-```
-
-### 影片生成注意事項
-
-| 項目 | 規則 |
-|------|------|
-| 解析度 | **720p**（480p 太低，手機感靠 prompt 不靠降解析度） |
-| 時長 | **12 秒**，最短不低於 10 秒 |
-| 鏡頭穩定 | **禁止** `handheld`, `camera shake`, `motion blur`, `NOT tripod perfect` |
-| 手機感 | 用 `shot on iPhone, warm soft grain, no over-sharpening` |
-| 內容 | 必須有 3–4 個連續動作，有敘事起伏，不能只有一個動作 |
-| multi-shot | `multi_shot_mode: auto`，把各鏡頭描述寫進主 prompt |
+詳細 SOP 見 `DAILY_VIDEO_SOP.md`。
 
 ---
 

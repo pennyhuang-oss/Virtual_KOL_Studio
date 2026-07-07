@@ -237,3 +237,58 @@ single continuous shot no camera cuts, character always centered in frame, stayi
 - 背景無 mirror（mirror 會讓模型誤判成鏡頭切換）
 - 無 NSFW 觸發詞（避免：sexy expression, sensual isolation, snaps hips hard）
 - 每次必帶 `long straight blonde hair, natural honey golden color`（Soul V2 不繼承）
+
+---
+
+## 日常自拍影片記錄（2026-07-07）
+
+> 方向：男性受眾，逆光輪廓展示，法式慵懶性感，身材側面線條，非廣告感。
+> 模型：`kling3_0`（單鏡頭，臉部鎖定）
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`
+
+### Start Frame（日常服裝）
+
+| Job ID | 說明 | 已選 | Media ID |
+|--------|------|------|----------|
+| `f461c0af` | 臥室窗邊，白色細肩帶 crop top + 高腰比基尼底，側面回眸，逆光 | ✅ 已選 | `5c868b09` |
+| `4b0cc194` | 同場景，第二張備選 | — | — |
+
+**Start Frame Prompt（已驗證）**：
+```
+22-year-old French woman, long straight blonde hair natural honey golden color,
+light fair skin, warm hazel light brown eyes, 169cm slender figure with curves,
+standing near bedroom window with backlight from outside,
+wearing white silk slip camisole, turning head to look at camera over shoulder,
+side profile showing body silhouette and curves, phone selfie angle,
+half body shot, soft backlit window glow, candid self-portrait feel,
+shot on iPhone front camera, warm cream tones, film grain
+```
+
+> 注意：模型生成時服裝變成 white crop top + high-waisted bikini bottom，比 prompt 更 revealing，用戶確認接受。
+
+### 日常影片
+
+| 版本 | 場景 | 服裝 | Job ID | 模型 | 狀態 |
+|------|------|------|--------|------|------|
+| daily_v1 | 臥室窗邊逆光，側面轉頭看鏡頭，展示側面身材輪廓 | 白色絲質睡衣（逆光剪影） | `c70f6307` | kling3_0 | ✅ 批准 |
+
+**影片 Prompt（已驗證）**：
+```
+22-year-old French woman, long straight blonde hair natural honey golden color,
+light fair skin, slender figure with curves,
+standing near bedroom window with backlight from outside,
+wearing white silk slip camisole,
+slowly turns from side profile facing window to look directly at camera over shoulder,
+side silhouette shows body curves against soft backlit window light,
+then full face to camera with natural relaxed gaze,
+single continuous shot, phone selfie casual feel, warm cream tones
+```
+
+**參數**：
+```python
+model = "kling3_0"
+medias = [{"role": "start_image", "value": "5c868b09"}]
+sound = "on"
+aspect_ratio = "9:16"
+duration = 10
+```

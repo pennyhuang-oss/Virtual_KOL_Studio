@@ -263,8 +263,7 @@ Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, hotel am
 
 ### 待辦事項
 
-- 確認 job `0bf0eb63` 的 start frame 結果後，再嘗試 dance video 生成
-- 如果仍然失敗，考慮完全換服裝方向（使用全覆蓋服裝如 tank top + leggings）
+- Ananya 舞蹈影片：start_image revealing 服裝問題未完全解決，下次嘗試使用保守 tank top + leggings 的 start frame
 
 ### 舞蹈影片生成 Checklist
 
@@ -276,3 +275,55 @@ Shot on iPhone, warm soft grain, warm golden tones, no over-sharpening, hotel am
 - `single continuous shot no camera cuts`（防鏡頭切換）
 - 背景無 mirror
 - 無 NSFW 觸發詞
+
+---
+
+## 日常自拍影片記錄（2026-07-07）
+
+> 方向：男性受眾，浴室剛洗完澡，濕髮，毛巾裹身展示鎖骨和肩膀，非廣告感。
+> 模型：`kling3_0`（單鏡頭，臉部鎖定）
+> 完整 SOP 見 `DAILY_VIDEO_SOP.md`
+
+### Start Frame（日常服裝）
+
+| Job ID | 說明 | 已選 | Media ID |
+|--------|------|------|----------|
+| `7797c1d9` | 浴室，白色浴巾裹身，濕髮，露鎖骨和肩膀，自然看鏡頭 | ✅ 已選 | `d94c27c9` |
+| `1527bfbf` | 同場景，第二張備選 | — | — |
+
+**Start Frame Prompt（已驗證）**：
+```
+23-year-old Indian woman, beautiful face, dark expressive eyes,
+long dark hair wet and damp from shower, light brown warm skin, slim figure with curves,
+standing in bathroom after shower, wrapped in white bath towel around body,
+towel slightly loose at top showing collarbone and shoulders,
+looking at camera with natural expression, phone selfie angle,
+soft warm bathroom lighting, candid self-portrait feel,
+shot on iPhone front camera, half body from waist up, warm tones, film grain
+```
+
+### 日常影片
+
+| 版本 | 場景 | 服裝 | Job ID | 模型 | 狀態 |
+|------|------|------|--------|------|------|
+| daily_v1 | 浴室鏡前，剛洗完澡，濕髮，毛巾裹身，看鏡頭 | 白色浴巾，露鎖骨 | `59dcbb98` | kling3_0 | ✅ 批准 |
+
+**影片 Prompt（已驗證）**：
+```
+23-year-old Indian woman, beautiful face, dark expressive eyes,
+long dark wavy hair wet from shower, warm light brown skin,
+standing in bathroom after shower, wrapped in white bath towel,
+towel slightly loose showing collarbone and bare shoulders,
+one hand holding towel near chest, looking directly at camera with natural confident expression,
+soft warm bathroom lighting,
+single continuous shot, phone selfie casual feel, warm tones
+```
+
+**參數**：
+```python
+model = "kling3_0"
+medias = [{"role": "start_image", "value": "d94c27c9"}]
+sound = "on"
+aspect_ratio = "9:16"
+duration = 10
+```
