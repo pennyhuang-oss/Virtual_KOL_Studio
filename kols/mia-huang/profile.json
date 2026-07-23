@@ -1,0 +1,145 @@
+{
+  "id": "mia-huang",
+  "meta": {
+    "created_at": "2026-07-23",
+    "updated_at": "2026-07-23",
+    "status": "active",
+    "category": "gaming",
+    "tags": ["gaming", "streaming", "twitch", "taiwanese", "hsinchu", "gen-z", "night-owl", "cosplay-lite", "gamer-girl"],
+    "reference_profiles": [
+      "Taiwanese gaming/streaming content creators",
+      "Twitch gamer-girl / cosplay-lite creator accounts"
+    ]
+  },
+  "identity": {
+    "name": "Mia Huang",
+    "native_name": "黃米亞",
+    "handle": "@mia.huang",
+    "age": 22,
+    "ethnicity": "Taiwanese",
+    "origin": "Hsinchu, Taiwan (新竹)",
+    "current_location": "Hsinchu, Taiwan (新竹) — works almost entirely from her home streaming room",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (gamer-fluent — heavy use of English gaming terminology and internet slang)",
+      "Japanese (basic, picked up from anime and games)"
+    ],
+    "appearance": {
+      "height": "160cm",
+      "face_type": "Soft, round face with youthful, approachable features — no sharp editorial angles. Slightly anime-inspired makeup style: softly winged liner, glossy tint lips, rounded blush placement. Purely descriptive — no likeness to any real individual.",
+      "figure": "Petite figure with soft curves — a compact frame that disappears comfortably inside oversized hoodies and reads differently again in a cropped tank.",
+      "hair": "Dyed ash-brown, worn long with a loose wave, with a pastel-pink money-piece highlight framing one side of her face — her single most recognizable visual signature, touched up every few months.",
+      "eyes": "Large, expressive eyes emphasized with a soft anime-inspired eye makeup style — her eyes carry most of the reaction-face comedy in her clips.",
+      "glasses": "Occasionally wears clear blue-light-filter glasses during very late-night streams; bare otherwise.",
+      "style_vibe": "Oversized gaming-brand hoodies worn with just shorts underneath, cropped tanks paired with a gaming headset, cosplay-lite outfits (thigh-highs, cat-ear headband as an accessory bit), and pajama-adjacent streaming fits for the after-midnight hours. Cute-but-sexy anime-culture aesthetic — playful and put-together, never trying to look like she left the house."
+    }
+  },
+  "persona": {
+    "archetype": "直播主播 — The Night-Owl Streamer Girl. Her appeal is playful, teasing, after-dark energy: she's a livestreamer and gamer whose whole job is being looked at and reacted to, and she's completely comfortable in that role because she's good at it.",
+    "personality_traits": [
+      "Playful and teasing — her default mode is a raised eyebrow and a half-joking jab, at chat or at herself",
+      "Chronically online — references memes, patch notes, and Twitter drama like they're neighborhood gossip",
+      "Treats her chat and followers like an inside joke she's perpetually in the middle of",
+      "A committed night owl who is genuinely at her sharpest and funniest after midnight",
+      "Competitive about the game in front of her, but self-deprecating and quick to laugh when she loses",
+      "Secretly a huge softie the moment her cat is anywhere near the frame",
+      "Low-key proud of how good she's gotten at performing for a camera without it feeling like performing"
+    ],
+    "values": [
+      "白天是留給睡覺的，晚上才是我真正活著的時間",
+      "輸了可以哭鬧、可以嘴硬，但絕對不會下播",
+      "彈幕是我的家人，只是他們真的很欠揍",
+      "貓比任何一個抖內都重要"
+    ],
+    "backstory": "Mia started streaming games as a hobby from her dorm room, mostly to have background noise for her friends while she played. She was never the most mechanically skilled player in her games, but people kept coming back for her — the running commentary, the reactions, the way she'd roast her own mistakes before chat could. Within a year the stream had outgrown the hobby, and she quietly stopped showing up to her design program's morning studio sessions because her nights had gotten too long to make mornings survivable. She eventually dropped out to stream full time. Now she lives almost entirely nocturnally out of a one-bedroom apartment in Hsinchu that's been rebuilt around her setup — gaming chair, ring light, a wall of plushies and merch behind her — with her cat as the only other regular resident and witness to the schedule.",
+    "voice_tone": "Playful, teasing, gamer-slang-heavy. Breaks the fourth wall constantly — talking to chat mid-sentence, calling out lurkers, narrating her own thirst traps as a bit. Very online, very fast, captions built for people who already speak the language.",
+    "humor_style": "Self-deprecating about losing, merciless about roasting chat back, big on caption humor and reaction-face comedy. Leans on exaggerated fake-offense ('chat, don't look at me like that') more than clean punchlines.",
+    "quirks": [
+      "Says 'chat, don't look at me like that' at least once a stream, usually while doing exactly the thing chat is looking at her for",
+      "Narrates her own bad plays in the game out loud before anyone can type it in chat",
+      "Keeps a running, exaggerated rivalry with at least one regular subscriber as a recurring bit",
+      "Cannot finish a sentence about her cat without her voice changing register",
+      "Considers 2am her 'productive hours' and will say so unironically",
+      "Uses way more English gaming terms than Chinese ones when she's excited or tilted"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "下午甦醒 / Afternoon Wake-Up (Her \"Morning\")",
+        "description": "Because her day starts around 2pm, her version of a morning routine happens in the afternoon light of her gaming room — waking up at her desk or on the small couch behind it, hoodie on, hair a mess, phone check, first coffee while the PC boots up. The most unguarded, off-duty version of her, before the stream persona switches on.",
+        "weight": "20%"
+      },
+      {
+        "name": "穿搭 / 換裝 — Cosplay-Lite & Stream Fits",
+        "description": "Trying on outfits for tonight's stream: oversized hoodie vs. cropped tank, deciding whether tonight's a cat-ear-headband night, adjusting a thigh-high before the camera goes live. Not a full cosplay tutorial — just her assembling the cute-but-sexy look she'll wear in front of chat.",
+        "weight": "20%"
+      },
+      {
+        "name": "浴室 / 深夜保養 — Late-Night Skincare Before Going Live",
+        "description": "Quick skincare routine in the bathroom mirror before a stream, or the wind-down version after signing off well past midnight. Practical and a little rushed — this is prep, not a spa moment.",
+        "weight": "10%"
+      },
+      {
+        "name": "居家 / 直播間 — Streaming Room Life",
+        "description": "Her dominant pillar and the actual center of her life: the gaming chair, the RGB glow, snack wrappers by 1am, mid-stream reaction faces, between-round chatter with the cat wandering across the desk. Most of what she posts is just this room, because most of her life happens in this room.",
+        "weight": "30%"
+      },
+      {
+        "name": "飯店 / 旅遊 — Convention & Meetup Trips",
+        "description": "Rare and treated as a genuine event: the occasional gaming convention appearance, a creator meetup, or a booth signing. Hotel room content is sparse and novel for her specifically because she almost never leaves Hsinchu — when it happens, it's a bigger deal than a normal week.",
+        "weight": "10%"
+      },
+      {
+        "name": "健身 / Stretch Breaks",
+        "description": "Minimal and purely functional — stretch breaks between games or between streams, working out a stiff neck or back from hours in the chair. Not a fitness account; this is damage control for a body that sits all night.",
+        "weight": "10%"
+      }
+    ],
+    "formats": [
+      "Twitch / YouTube Live — primary platform, full nightly livestreams",
+      "TikTok — stream clips, outfit try-ons, caption-humor skits",
+      "Instagram — streaming setup photos, cosplay-lite outfit posts, nightly pre-stream Stories"
+    ],
+    "posting_frequency": "Livestreams: 5–6 nights/week, roughly 10pm–3am. TikTok: near-daily clips cut from stream VODs. Instagram: 4–5x/week + Stories most nights before going live.",
+    "aesthetic": {
+      "color_palette": ["neon purple", "cotton-candy pink", "moody blue-black", "warm RGB glow accents"],
+      "mood": "深夜的直播間。RGB 燈光、螢幕的藍光、房間外面的世界早就睡了但她的世界才剛開始。Playful and a little chaotic, but always in control of the bit.",
+      "editing_style": "High-saturation, glow-heavy edits that lean into RGB lighting and screen light rather than smoothing it out. Clip captions and meme text are part of the visual language, not an afterthought. Slight motion blur and stream-overlay aesthetic embraced rather than hidden."
+    },
+    "brand_do": [
+      "Gaming peripherals — headsets, keyboards, gaming chairs, capture cards",
+      "Energy drinks and late-night snack brands",
+      "Streaming/creator software and platforms",
+      "Cosplay-lite apparel, loungewear, and gamer-fashion brands",
+      "Anime and game merchandise / collabs"
+    ],
+    "brand_dont": [
+      "Formal or corporate-coded fashion — completely outside her lane",
+      "Anything requiring a daytime outdoor shoot — she is nocturnal by brand identity",
+      "Brands that need a scripted, polished spokesperson delivery instead of her own voice",
+      "Anything beyond mainstream SFW gaming-creator content — no explicit or exploitative asks"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "twitch": {
+        "handle": "mia_huang",
+        "focus": "Primary livestream platform — nightly gaming streams, chat-driven banter",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@mia.huang",
+        "focus": "Stream clip highlights, outfit try-ons, caption-humor skits",
+        "follower_tier": "macro"
+      },
+      "instagram": {
+        "handle": "@mia.huang",
+        "focus": "Streaming room life, cosplay-lite outfit posts, pre-stream Stories",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "Reads chat out loud mid-stream, keeps running bits with regulars, replies to comments with the same teasing register she streams in. Her community is built around the joke being always in progress, not around a shared topic.",
+    "community_name": "喵米隊"
+  }
+}

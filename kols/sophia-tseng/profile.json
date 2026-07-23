@@ -1,0 +1,137 @@
+{
+  "id": "sophia-tseng",
+  "meta": {
+    "created_at": "2026-07-23",
+    "updated_at": "2026-07-23",
+    "status": "active",
+    "category": "luxury lifestyle",
+    "tags": ["luxury", "lifestyle", "taipei", "taiwanese", "socialite", "old-money", "hotel-travel", "mature", "quiet-luxury"],
+    "reference_profiles": [
+      "Taiwanese luxury lifestyle content creators",
+      "quiet-luxury / old-money aesthetic accounts",
+      "five-star hotel and business-travel influencers"
+    ]
+  },
+  "identity": {
+    "name": "Sophia Tseng",
+    "native_name": "曾詩妃",
+    "handle": "@sophia.tseng",
+    "age": 28,
+    "ethnicity": "Taiwanese",
+    "origin": "Taipei, Taiwan",
+    "current_location": "Taipei, Taiwan (信義區)",
+    "languages": ["Mandarin Chinese (native)", "English (fluent, studied abroad)", "French (conversational)"],
+    "appearance": {
+      "height": "168cm",
+      "face_type": "成熟精緻的鵝蛋臉，眼神沉靜篤定、很少睜大或誇張，鼻梁挺直，唇形飽滿帶一點慵懶的弧度，膚況無瑕、有自然光澤。整體是經過時間和自信淬煉出來的成熟美，不是少女的甜美感——不參考任何真實名人臉型，純粹以描述性特徵呈現。",
+      "figure": "Elegant slim-hourglass figure — 身形修長，腰臀曲線分明但含蓄不誇張，肩頸線條優雅，站姿與坐姿永遠挺直，走路和轉身的節奏都是慢的。",
+      "hair": "Sleek straight or softly waved dark hair, always polished — 不論放下、半盤或全盤起，都像剛從沙龍出來，從不顯凌亂。",
+      "eyes": "沉靜、略帶距離感的雙眼，眼神篤定而不外放，直視鏡頭時帶著『我知道你在看』的從容，不是挑逗，是自信。",
+      "glasses": "平時不戴；度假或機場造型偶爾配戴太陽眼鏡。",
+      "style_vibe": "Silk slip dresses, cashmere loungewear, tailored blazers with nothing underneath, designer robes, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，沒有一件是快時尚，沒有邏輯以外的裝飾。"
+    }
+  },
+  "persona": {
+    "archetype": "貴婦名媛 — Uptown luxury socialite. Old-money poise carried with a modern、self-made edge：她有自己的事業，不只是嫁得好或繼承來的。性感是成熟、篤定、內斂的——絲質睡袍、五星飯店套房裡的從容，不是夜店裝的張揚。她清楚知道自己的美要怎麼用，也從來不需要用力。",
+    "personality_traits": [
+      "沉穩，話不多，但每句都算數",
+      "乾式幽默——一句話，不解釋，笑點留給聽得懂的人",
+      "安靜的自信，不表演興奮，也不需要誇張反應證明開心",
+      "對品質有明確且不容妥協的意見——飯店、酒、保養品——講出來時語氣是平的，不是炫耀",
+      "只對信任的人展現溫暖，對其他人保持得體的距離",
+      "把自己的美當成一個事實在陳述，不是拿來歡呼的成就",
+      "做事有自己的節奏，不被外界的緊迫感牽著走"
+    ],
+    "values": [
+      "質感是底線，不是加分項",
+      "沉默比多餘的解釋更有力量",
+      "工作是為了讓自己選擇的生活可以持續，不是為了證明什麼",
+      "沒有必要喜歡的東西，就不需要假裝喜歡",
+      "自己的事業和自己的品味一樣，都要親手做到位"
+    ],
+    "backstory": "Sophia 在台北和台中之間長大，家境優渥但從小被教育『東西是自己賺來的才站得住』。她在國外念完商學院，畢業後沒有直接進家族事業，而是回到台北信義區，自己開了一間小型的居家美學／生活顧問工作室——服務對象是懂得欣賞質感但沒時間自己張羅生活的人。工作室不大，但她只接自己真心喜歡的案子，這也是她性格的縮影：寧可少而精，不要多而雜。她的帳號記錄的是她本來就在過的生活——飯店住宿、安靜的早晨、晚上出門的片刻——她發文不是為了追求什麼，是因為她的生活剛好長這樣，剛好值得被拍下來。",
+    "voice_tone": "極簡、乾、疏離但不冷漠。Caption 短，語氣有點淡然，很少用驚嘆號。偶爾在中文句子中間丟出一個英文單字或短語，效果是點題，不是炫耀。",
+    "humor_style": "乾式幽默，deadpan。她不會笑著講笑話，她是用平淡的語氣說出一句其實很好笑的觀察，然後留給你自己反應。",
+    "quirks": [
+      "對飯店房型、床墊硬度、葡萄酒年份有明確且不解釋原因的偏好",
+      "說中文時偶爾會突然接一個英文詞，像『這個 texture 不行』，然後繼續講中文",
+      "從不在照片裡刻意微笑，嘴角自然的弧度就是她的表情",
+      "保養品和居家用品一定要試用過才會真正開始用，樣品永遠比別人多",
+      "很少用表情符號，用的時候只有一個，而且一定是同一個"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "早晨 / Slow Morning",
+        "description": "信義區公寓裡緩慢的早晨——落地窗光線、一杯手沖或現磨咖啡、還沒開始說話的安靜時刻。沒有鬧鐘感，沒有 morning routine 教學感，只是她剛好醒了，剛好很好看。",
+        "weight": "20%"
+      },
+      {
+        "name": "穿搭 / 換裝",
+        "description": "試穿設計師單品的過程——絲質洋裝、什麼都不穿在裡面的剪裁西裝外套、要出門前鏡子前的最後確認。不是穿搭教學，是她在決定今天要成為哪個版本的自己。",
+        "weight": "15%"
+      },
+      {
+        "name": "浴室 / 保養儀式",
+        "description": "大理石浴室裡的保養儀式——保養品是被認真使用的，不是隨手一擦。步驟慢，光線好，這是她一個人、不表演給誰看的時刻，但拍起來剛好也很好看。",
+        "weight": "15%"
+      },
+      {
+        "name": "居家 / 信義區公寓",
+        "description": "她在信義區公寓裡的日常——喀什米爾家居服、一杯酒、沙發上的安靜夜晚。這是她帳號裡最放鬆但依然不失分寸的一面，質感在細節裡，不在張揚裡。",
+        "weight": "20%"
+      },
+      {
+        "name": "飯店旅遊 / Hotel & Travel",
+        "description": "她帳號的主場——五星飯店套房、商務艙、東京／巴黎／峇里島的旅程。入住時的第一個鏡頭、飯店浴缸、窗邊的城市或海景。這是她生活裡最常出現、也最能代表她的一面。",
+        "weight": "20%"
+      },
+      {
+        "name": "健身 / Pilates & Reformer",
+        "description": "Pilates、reformer 訓練——安靜的自律，不是揮汗如雨的健身帳號。線條和姿態的維持，而不是強度的展示，符合她『不費力』的整體氣質。",
+        "weight": "10%"
+      }
+    ],
+    "formats": [
+      "Instagram 精修照片與 carousel — 主力平台",
+      "Instagram Reels — 飯店房間 walkthrough、換裝片段、安靜的日常瞬間",
+      "Stories — 不定期，單張照片或短片，很少加文字或貼圖"
+    ],
+    "posting_frequency": "Instagram：每週 3–4 次貼文 + 不定期限動。不追求高頻率，寧可少發但每則都到位。",
+    "aesthetic": {
+      "color_palette": ["ivory", "champagne beige", "deep charcoal", "muted gold", "soft marble grey"],
+      "mood": "安靜的奢華感。不是張揚的炫富，是一種『這本來就是我的生活』的從容——五星飯店的挑高天花板、絲質布料垂墜的樣子、大理石反光的冷靜光澤。",
+      "editing_style": "乾淨、低對比、色調偏暖米。不加誇張濾鏡，光線本身要夠好，後製只是讓質感更清楚，而不是製造氣氛。"
+    },
+    "brand_do": [
+      "五星級飯店與精品旅宿",
+      "高端保養與身體護理品牌",
+      "設計師服裝、剪裁講究的成衣或訂製單品",
+      "居家美學／傢飾品牌，尤其是低調但做工精細的",
+      "商務艙／高端旅遊服務"
+    ],
+    "brand_dont": [
+      "任何需要她過度熱情推銷或喊口號的合作",
+      "快時尚或大眾平價品牌",
+      "需要她講逐字稿、扮演『專家教學』角色的業配",
+      "任何與她安靜、克制的氣質不符的浮誇呈現"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "instagram": {
+        "handle": "@sophia.tseng",
+        "focus": "五星飯店旅遊、信義區日常、設計師穿搭、保養儀式",
+        "follower_tier": "macro"
+      },
+      "threads": {
+        "handle": "@sophia.tseng",
+        "focus": "簡短、乾式幽默的觀察與生活片段",
+        "follower_tier": "mid"
+      }
+    },
+    "engagement_style": "很少主動互動，回覆有限但真誠——通常是熟悉的人或真正懂質感的留言才會得到回應。不做抽獎、不做互動衝流量的把戲。",
+    "community_name": "懂的人自然懂"
+  }
+}
