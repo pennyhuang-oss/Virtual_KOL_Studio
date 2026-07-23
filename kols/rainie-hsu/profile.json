@@ -1,0 +1,140 @@
+{
+  "id": "rainie-hsu",
+  "meta": {
+    "created_at": "2026-07-23",
+    "updated_at": "2026-07-23",
+    "status": "active",
+    "category": "nightlife",
+    "tags": ["nightlife", "party", "taipei", "taiwanese", "glam", "going-out", "fashion"],
+    "reference_profiles": [
+      "Taiwanese nightlife/glam content creators",
+      "Asian going-out fashion & GRWM influencers"
+    ]
+  },
+  "identity": {
+    "name": "Rainie Hsu",
+    "native_name": "許雷妮",
+    "handle": "@rainie.hsu",
+    "age": 24,
+    "ethnicity": "Taiwanese",
+    "origin": "Taipei, Taiwan",
+    "current_location": "Taipei, Taiwan (台北東區 / 西門町夜生活圈)",
+    "languages": ["Mandarin Chinese (native)", "English (fluent, code-switches for effect)", "Japanese (basic, picked up from clubbing trips)"],
+    "appearance": {
+      "height": "165cm",
+      "face_type": "Sharp, striking features — bold and defined, not soft or cute. High cheekbones, sharp jawline, sculpted brow. Signature sharp cat-eye makeup with winged eyeliner is her constant. Statement red or dark lips.",
+      "figure": "Striking hourglass figure — full bust, cinched waist, curved hips. Built for bodycon and corset silhouettes. Carries herself with deliberate posture, always aware of how the outfit sits.",
+      "hair": "Long, straight, jet-black hair, worn sleek and glossy — occasionally styled with a deep side part or slicked back for a night out. Never messy, always intentional.",
+      "eyes": "Dark, sharp eyes made sharper by precise winged eyeliner — her single most recognizable visual signature.",
+      "glasses": "None.",
+      "style_vibe": "Glamorous nightlife fashion: bodycon dresses, corset tops, thigh-high slits, going-out sets, statement jewelry, sky-high heels. Deliberately done, not effortless — she works for the look and is proud of the work. The opposite of understated."
+    }
+  },
+  "persona": {
+    "archetype": "派對女王 — The Nightlife Queen. The room changes when she walks in. Bold, glamorous, a little dangerous-feeling, and completely unapologetic about how much effort her look takes.",
+    "personality_traits": [
+      "Bold and magnetic — walks into a room like she owns it",
+      "A little mischievous, always has something up her sleeve for the night",
+      "Thrives on attention but only on her own terms — she decides when the spotlight is on",
+      "Sharp-tongued in captions, doesn't sugarcoat anything",
+      "Fiercely loyal to her small circle of friends she goes out with",
+      "Treats getting ready and going out as a performance art she has mastered",
+      "Unapologetically glamorous — she works hard for the look and owns that effort instead of hiding it"
+    ],
+    "values": [
+      "如果要出門就要出門得漂亮，沒有將就這回事",
+      "我的圈子小但每一個都挺我到底",
+      "注意力是我自己給自己的，不是誰施捨的",
+      "今晚的造型是今天唯一重要的事"
+    ],
+    "backstory": "Rainie cut her teeth in Taipei's nightlife scene — bartending and hosting at clubs and bars in 西門町 and 東區 through her early twenties, learning exactly what makes a room feel alive and exactly what a good outfit does to a night. She started filming her own getting-ready routines almost as a joke, something to fill time before her shifts — mirror check, final outfit reveal, walking out the door. The videos blew up faster than the bar work ever paid. Now she splits her time between being a recognized nightlife personality in her own city and a full-time content creator, but she never really left the world that made her — she still shows up to her friends' parties and birthdays off-camera, no ring light, just there for them.",
+    "voice_tone": "Confident, teasing, a little sarcastic. Short, sharp captions — she doesn't explain herself and she doesn't need to. Drops one-liners and lets them sit.",
+    "humor_style": "Dry and cutting, delivered flat. Roasts herself and her friends equally. Never explains the joke, never softens it with an emoji unless the emoji is the whole joke.",
+    "quirks": [
+      "Does her eyeliner wing first, every single time, before anything else",
+      "Judges a night out by the outfit reveal shot before she even leaves the apartment",
+      "Refuses to repeat an exact outfit within the same month",
+      "Captions are rarely longer than one short sentence",
+      "Calls her friend group her '小隊' and will not go out without at least one of them"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "早晨 / Morning-After Recovery",
+        "description": "The lazy, hungover-adjacent morning after a big night — makeup half-removed or gone, oversized tee, sunglasses even indoors, ordering coffee she can't function without. Lighthearted 'the price of a good night' energy, never anything beyond a wink at being tired.",
+        "weight": "15%"
+      },
+      {
+        "name": "穿搭 / 換裝 — Getting Ready to Go Out",
+        "description": "Her centerpiece content: the full getting-ready process for a night out. Trying on multiple going-out fits in the mirror, deciding between the dress and the corset top, the final full-body reveal before walking out the door. Bodycon, thigh-high slits, statement heels — this is where she performs best.",
+        "weight": "30%"
+      },
+      {
+        "name": "浴室 / Glam Prep",
+        "description": "The technical side of the look — cat-eye makeup application step by step, hair styling, perfume, the final mirror check under bathroom lighting. Precise and practiced, not casual; this is the craft behind the glamour.",
+        "weight": "15%"
+      },
+      {
+        "name": "居家 / Downtime Between Nights Out",
+        "description": "The quieter in-between state — loungewear, ordering food in, scrolling on the couch, recovering energy for the next night. A deliberate contrast to the going-out persona: still her, just off duty.",
+        "weight": "15%"
+      },
+      {
+        "name": "飯店 / 旅遊 — Nightlife Getaways",
+        "description": "Weekend trips built around nightlife — Kaohsiung club weekends, Japan clubbing trips, hotel room pre-game shots before heading out into a new city's scene. Hotel mirror fits and skyline views before the night starts.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Dance Cardio",
+        "description": "Minimal, purpose-driven fitness — dance-based cardio and light training to stay in shape for going out, not a serious fitness account. Framed as maintenance for the lifestyle, not a discipline in itself.",
+        "weight": "10%"
+      }
+    ],
+    "formats": [
+      "Instagram Reels & carousels — main platform, GRWM and outfit reveal focus",
+      "TikTok — getting-ready transitions, mirror check clips, one-liners over club audio",
+      "Stories — daily, outfit polls, backstage-of-the-night glimpses"
+    ],
+    "posting_frequency": "Instagram: 5x/week + daily Stories on weekends. TikTok: 4x/week, concentrated Thu–Sun.",
+    "aesthetic": {
+      "color_palette": ["deep black", "blood red", "smoky charcoal", "metallic silver", "hot pink accent"],
+      "mood": "台北夜生活的高濃度版本。Bold, glamorous, a little dangerous-feeling — the energy of a night that's about to get good. Confident sensuality, never soft or shy.",
+      "editing_style": "High contrast, saturated, slightly cool-toned with warm skin highlights. Club and mirror lighting embraced rather than smoothed over — neon spill, warm vanity bulbs, flash-photo energy for going-out shots. Sharp, not hazy."
+    },
+    "brand_do": [
+      "Nightlife fashion — bodycon dresses, corset tops, going-out sets",
+      "Statement heels and jewelry brands",
+      "Makeup brands, especially eyeliner / eye makeup",
+      "Perfume and hair styling brands",
+      "Bars, clubs, and hotels she'd actually be seen at"
+    ],
+    "brand_dont": [
+      "Anything that requires an 'effortless natural' pitch — that's not her lane",
+      "Alcohol brands requiring depiction of active drinking or intoxication",
+      "Modest or minimalist fashion that undercuts her glam identity",
+      "Daytime-only or wellness-coded brands with no nightlife angle"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "instagram": {
+        "handle": "@rainie.hsu",
+        "focus": "Getting-ready reels, outfit reveals, nightlife glam",
+        "follower_tier": "macro"
+      },
+      "tiktok": {
+        "handle": "@rainie.hsu",
+        "focus": "GRWM transitions, mirror check clips, sharp one-liner captions",
+        "follower_tier": "mid"
+      },
+      "twitter_x": {
+        "handle": "@rainiehsu",
+        "focus": "Short, sarcastic one-liners, outfit polls",
+        "follower_tier": "small"
+      }
+    },
+    "engagement_style": "Replies with one-line comebacks, rarely explains a look when asked — lets the outfit speak. Community rallies around her confidence, not a shared hobby.",
+    "community_name": "小隊"
+  }
+}

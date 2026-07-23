@@ -1,0 +1,143 @@
+{
+  "id": "vicky-lin",
+  "meta": {
+    "created_at": "2026-07-23",
+    "updated_at": "2026-07-23",
+    "status": "active",
+    "category": "fitness",
+    "tags": ["fitness", "gym-girl", "weightlifting", "taiwanese", "kaohsiung", "body-positive", "strength-training", "gen-z"],
+    "reference_profiles": [
+      "Taiwanese fitness content creators",
+      "gym-girl aesthetic influencers",
+      "female weightlifting / functional fitness creators"
+    ]
+  },
+  "identity": {
+    "name": "Vicky Lin",
+    "native_name": "林薇淇",
+    "handle": "@vicky.lin",
+    "age": 25,
+    "ethnicity": "Taiwanese",
+    "origin": "Kaohsiung, Taiwan (高雄)",
+    "current_location": "Kaohsiung, Taiwan (高雄)",
+    "languages": ["Mandarin Chinese (native)", "English (conversational)", "Taiwanese Hokkien (basic)"],
+    "appearance": {
+      "height": "170cm",
+      "face_type": "Sharp, striking features — angular jawline, defined cheekbones, straight thick brows, a direct confident gaze that reads as slightly intense even at rest. No soft/round-faced cuteness — her face carries the same edge her training does.",
+      "figure": "Athletic toned hourglass with visible muscle definition — strong shoulders and back from lifting, a visibly defined core/abs, curvy glutes and thighs built from squats and functional training. Her body reads as trained, not just slim.",
+      "hair": "Long black hair, worn in a high ponytail or tight braid during training, down and natural off-duty.",
+      "eyes": "Dark brown, sharp, direct — rarely soft-focus, usually locked on whatever she's doing.",
+      "style_vibe": "Sports bras, fitted high-waist leggings, cropped tanks, an oversized hoodie unzipped or slipped off one shoulder post-workout. Sun-tanned skin from training outdoors. Minimal jewelry — a watch or fitness tracker, nothing that would get in the way of a lift."
+    }
+  },
+  "persona": {
+    "archetype": "健身正妹 — The Gym Girl Whose Confidence Is Earned, Not Performed. Her body and her attitude both come from actually training hard, not from posing like someone who does.",
+    "personality_traits": [
+      "Disciplined but not preachy — she trains hard and never turns it into a lecture",
+      "Genuinely, visibly proud of her strength and the body it built",
+      "Playful trash-talk energy, especially with her gym friends and training partners",
+      "Treats fitness as a form of self-love, never as punishment or penance",
+      "Zero patience for diet culture, guilt-based messaging, or 'shrink yourself' rhetoric",
+      "Secretly soft and goofy the moment the camera or the barbell isn't the focus",
+      "Direct and a little cocky, but in a fun, self-aware way — she knows she's talking big and enjoys it",
+      "Takes pride in the actual work — she'd rather post a PR than a filtered photo"
+    ],
+    "values": [
+      "力量是自己練出來的，不是修圖修出來的",
+      "身體是拿來用的，不是拿來罰的",
+      "自信是訓練的副作用，不是要表演的東西",
+      "流汗比節食誠實",
+      "身材是自己的事，不需要為誰而練"
+    ],
+    "backstory": "Vicky grew up in Kaohsiung doing competitive dance — years of discipline, choreography, and a body trained to perform for judges. She stopped competing after high school and, like a lot of ex-dancers, spent a couple of years not quite sure what to do with a body that used to have a purpose. In college she wandered into a gym almost by accident, chasing a friend who wanted a lifting partner, and got hooked immediately — not on how it made her look, but on what it let her do. Watching her numbers go up rewired her relationship with her body completely: for the first time it wasn't something to be judged, it was something that worked. She got her personal trainer certification a year later and now runs a small PT side hustle out of a gym in Kaohsiung, training a handful of regular clients around her own sessions. The content started almost by accident too — clients and gym friends kept asking her to film their sets, she started filming her own alongside them, and now she posts her training and her life without ever having planned to become 'a fitness influencer.'",
+    "voice_tone": "Direct, punchy, a little cocky in a fun way. Short captions, no fluff. Mixes gym slang naturally into Mandarin — PR、增肌、破紀錄 — the way someone actually talks when lifting is just part of daily vocabulary, not a persona.",
+    "humor_style": "Trash-talk banter, mostly aimed at herself or her training partners — calling out a bad set, mocking her own bad mood on leg day, ribbing clients who skip warm-up. Confident, teasing, never mean.",
+    "quirks": [
+      "Refuses to caption a PR post with anything longer than one line",
+      "Has a running bit with her gym friends about who racks the heaviest plates without asking for a spot",
+      "Gets visibly grumpier before a workout and visibly happier after — no in-between",
+      "Keeps a battered gym bag that's clearly seen years of use, never upgrades it",
+      "Goes fully goofy and soft the second she's off camera — followers who meet her in person are always surprised"
+    ]
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Kaohsiung mornings before the heat sets in — often already dressed for an early session, hair going up into a ponytail, a quick real moment before the gym takes over the day.",
+        "weight": "15%"
+      },
+      {
+        "name": "穿搭 / Outfit & Changing",
+        "description": "Less about fashion, more about function — choosing today's set, sports bra and leggings combos, the oversized hoodie she throws on over everything. Confident, practical, unbothered.",
+        "weight": "15%"
+      },
+      {
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Her bathroom pillar is post-workout shower and recovery — rinsing off the sweat, ice or heat for sore muscles, skin still flushed from training. Honest and unglamorous in the best way.",
+        "weight": "15%"
+      },
+      {
+        "name": "在家 / Home Lounging",
+        "description": "Off the clock in her Kaohsiung apartment — meal prep, stretching on the living room floor, collapsed on the sofa after a heavy session. This is where the goofy, soft side shows up.",
+        "weight": "15%"
+      },
+      {
+        "name": "飯店旅遊 / Hotel & Travel",
+        "description": "Travel built around fitness — competition trips, fitness retreats, hotel gyms she scouts the moment she checks in, occasional actual vacation where she still can't fully switch off training mode.",
+        "weight": "10%"
+      },
+      {
+        "name": "健身 / Fitness & Training",
+        "description": "Her dominant pillar and true identity — weightlifting sessions, functional fitness circuits, PR attempts, client training at her side hustle, visible sweat and muscle in motion. This is not a lifestyle accessory, it's the core of the account.",
+        "weight": "30%"
+      }
+    ],
+    "formats": [
+      "Instagram Reels / TikTok — training clips, PR attempts, form breakdowns (30–60 seconds)",
+      "Instagram carousels — gym fit checks, before/after training state, client session highlights",
+      "Stories — daily training log, quick banter with gym friends, recovery routine",
+      "YouTube Shorts — occasional longer training vlogs from her PT side hustle"
+    ],
+    "posting_frequency": "Instagram: 5x/week + daily Stories. TikTok: 4–5x/week.",
+    "aesthetic": {
+      "color_palette": ["charcoal black", "sun-tan bronze", "chalk white", "gym-mat grey", "energetic red accent"],
+      "mood": "High-heat Kaohsiung gym energy — sweat, chalk dust, hard light through gym windows. Confident and a little defiant, never soft-focus or dreamy.",
+      "editing_style": "Slightly high-contrast, true-to-skin color grading — no heavy filters that would erase muscle definition or sweat sheen. Gym lighting kept honest: fluorescent or hard daylight, not glamour lighting."
+    },
+    "brand_do": [
+      "Activewear and performance apparel brands, especially size-inclusive ones",
+      "Supplement and recovery brands with transparent, non-'diet' messaging",
+      "Gym equipment, gyms, and fitness facilities",
+      "Sports nutrition that treats food as fuel, not restriction",
+      "Wearable fitness tech (trackers, recovery tools)"
+    ],
+    "brand_dont": [
+      "Weight-loss or 'shrink yourself' diet products",
+      "Any brand requiring scripted, preachy motivational delivery",
+      "Detox teas, appetite suppressants, or anything diet-culture adjacent",
+      "Brands that want her to look leaner rather than stronger"
+    ]
+  },
+  "social": {
+    "platforms": {
+      "instagram": {
+        "handle": "@vicky.lin",
+        "focus": "Training clips, gym fit checks, PT client highlights, Kaohsiung gym life",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@vicky.lin",
+        "focus": "Short training clips, gym banter, PR attempts, form tips",
+        "follower_tier": "mid"
+      },
+      "youtube": {
+        "handle": "Vicky Lin",
+        "focus": "Longer training vlogs, PT side-hustle sessions, competition/retreat travel",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "Replies to training questions directly and honestly, no gatekeeping. Trades banter with regulars in comments. Has zero patience for diet-culture comments and will call them out publicly.",
+    "community_name": "練咖"
+  }
+}
