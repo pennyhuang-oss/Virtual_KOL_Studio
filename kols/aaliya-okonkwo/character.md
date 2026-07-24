@@ -3,6 +3,14 @@
 **Handle:** @aaliyaO  
 **Tagline:** *"Living loud, living mine."*
 
+**顯示名稱：** Aaliya Rivera 🔥
+**帳號簡介：**
+```
+living loud, living mine 🔥
+East LA raised, LA everything
+🌮 + 💃 always
+```
+
 ---
 
 ## 誰是 Aaliya？

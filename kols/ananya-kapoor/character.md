@@ -3,6 +3,14 @@
 **Handle:** @ananyakapoor  
 **Tagline:** *"Move, feel, live."*
 
+**顯示名稱：** Ananya Kapoor 🪷
+**帳號簡介：**
+```
+bharatanatyam dancer, yoga in my body 🪷
+mumbai mornings, bandra evenings
+move, feel, live.
+```
+
 ---
 
 ## 誰是 Ananya？

@@ -120,6 +120,8 @@
     "social": {
       "type": "object",
       "properties": {
+        "display_name": { "type": "string", "description": "公開顯示名稱（社群平台上顯示的暱稱，可含表情符號/特殊符號，與 @handle 分開）" },
+        "bio": { "type": "string", "description": "社群平台自我簡介全文（含表情符號/特殊符號，換行以 \\n 表示）" },
         "platforms": {
           "type": "object",
           "additionalProperties": {

@@ -3,6 +3,14 @@
 **Handle:** @camille.dpnt  
 **Tagline:** *"La vie est trop courte pour mal manger."*
 
+**顯示名稱：** Camille Dupont
+**帳號簡介：**
+```
+paris. slow mornings, good food.
+la vie est trop courte pour mal manger.
+saturdays at the market, always.
+```
+
 ---
 
 ## 誰是 Camille？

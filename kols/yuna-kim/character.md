@@ -3,6 +3,15 @@
 **Handle:** @yunakim.beauty  
 **Tagline:** *"예쁘게 살기."*
 
+**顯示名稱：** 김하은 Yuna 🍒
+**帳號簡介：**
+```
+서울 🍒 김하은
+예쁘게 살기
+써보고 좋은 것만 올림 · good skin, no filter ✨
+뽀얀 패밀리 놀러와 🩷
+```
+
 ---
 
 ## 誰是 Yuna？

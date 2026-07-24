@@ -3,6 +3,17 @@
 **Handle:** @iris.chen
 **Tagline:** *"剛睡醒。"*
 
+**顯示名稱：** Iris Chen
+**帳號簡介：**
+```
+台北，22
+大安區固定那三間咖啡廳，不解釋
+手機裡都是床和咖啡
+醒了拍，沒醒也拍
+kinda lazy but it works
+台北的你們
+```
+
 ---
 
 ## 誰是 Iris？
