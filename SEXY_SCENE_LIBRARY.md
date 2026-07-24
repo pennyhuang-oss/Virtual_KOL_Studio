@@ -14,6 +14,56 @@
 
 ---
 
+## 降低「AI 感」的技術要點（2026-07-24 新增）
+
+> 真正決定生成結果精準度與真實感的是這些技術參數寫得夠不夠具體——不是靠對標哪個真人帳號。以下五項是常見反饋「還是看得出 AI 感」的主因，每個場景 prompt 都應該檢查是否涵蓋。
+
+### 1. 皮膚質感
+多數生成模型預設會往「打磨過、無瑕疵」的方向走。**每個 prompt 都要主動加入**：
+```
+visible skin pores, subtle natural skin texture, slight oil sheen on T-zone,
+unretouched skin detail, natural skin imperfections
+```
+**避免使用**會把畫面推向塑膠感的字：`smooth`、`flawless`、`glossy skin`、`airbrushed`、`porcelain skin`。
+
+### 2. 拍攝裝置感
+只寫 `shot on iPhone` 不夠，需要具體到裝置的實際破綻：
+```
+shot on iPhone 15 Pro front camera, slight autofocus softness on background elements,
+natural highlight clipping near window light, subtle motion blur on hair/hands,
+faint JPEG compression at high-contrast edges
+```
+拍攝裝置與鏡頭必須逐場景明確指定（前鏡頭自拍 vs. 後鏡頭 vs. 單眼淺景深），不要讓模型自己猜。
+
+### 3. 光源
+真實光線是混亂、不均勻的，不是棚拍三點打光：
+```
+mixed color temperature — cool daylight from window blending with warm indoor lamp,
+uneven light falloff across the frame, soft but visible shadow edges,
+slight lens flare or glare on skin/glass surfaces
+```
+
+### 4. 背景場景具體度
+避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
+
+### 5. 聲音與環境音（影片專用）
+乾淨的 BGM-only 音軌會讀起來像「後製過」。需要在環境音層加入：
+```
+room tone / air conditioning hum, fabric rustle, soft footsteps, faint distant background noise
+```
+疊在 BGM 底下（`generate_audio` 設定與音樂上傳流程見 `DAILY_VIDEO_SOP.md` / `DANCE_VIDEO_SOP.md`）。
+
+### 生成前檢查清單
+每個 prompt 送出生成前，逐項確認：
+- [ ] 裝置/鏡頭是否具體指定
+- [ ] 皮膚質感關鍵字是否存在
+- [ ] 光線配方是否為「混合、不均勻」而非「乾淨棚拍」
+- [ ] 背景是否有具體生活雜物細節
+- [ ] 服裝是否完整明確寫出（不留給模型自己猜）
+- [ ] （影片）環境音層是否有指定，`generate_audio` 設定是否正確
+
+---
+
 ## 場景庫
 
 ---
