@@ -109,8 +109,9 @@ Virtual_KOL_Studio/
 2. 按照 `kols/schema.json` 建立 `profile.json`
 3. 撰寫 `character.md`（角色 Bible）與 `content_style.md`（內容指南）
 4. 在 `kols/index.json` 新增對應紀錄
-5. 收集至少 5 張臉部參考圖存入 `images/face_reference/`
-6. 執行 Higgsfield Soul V2 訓練，記錄 soul_id 至 `profile.json` 和 `generation_notes.md`
+5. 生成至少 5 張臉部參考圖存入 `images/face_reference/`
+6. **停下來，等使用者實際看過這批參考圖並明確確認滿意後，才可以進入下一步**——參考圖是主觀判斷，訓練是要花時間和額度的動作，兩者中間一定要有人工確認這個關卡，不可以在同一輪自動接著做完
+7. 使用者確認後，才執行 Higgsfield Soul V2 訓練，記錄 soul_id 至 `profile.json` 和 `generation_notes.md`
 
 ---
 
