@@ -12,8 +12,8 @@
 | 名字 | Vicky Lin（林薇淇） | — |
 | 年齡 | 25 歲 | — |
 | 國籍 / 出身地 | 台灣，高雄 | — |
-| 臉型 | 銳利分明的五官——線條明顯的下顎、突出的顴骨、濃直眉、直視帶強勢感的眼神，不是圓臉可愛系，臉部本身要有「訓練感」的稜角 | 純外型描述，非參考真人 |
-| 身材 | 運動型 hourglass——肩背有重訓線條、腹肌明顯、臀腿因深蹲和功能性訓練而有形，身材要讀出「有練過」而不是單純纖瘦 | — |
+| 臉型 | 精緻迷人的甜美臉蛋——杏眼明亮、顴骨柔和、鼻梁挺秀、笑容親和有感染力，是漂亮正妹等級的長相，**絕對不要**銳利強勢、面無表情或稜角過重的「訓練感」臉 | 純外型描述，非參考真人 |
+| 身材 | 緊實有曲線的性感沙漏型——腰腹平坦、腹肌只是淡淡若隱若現，胸型飽滿、腰細、臀腿因訓練而更翹更緊實。目標是「漂亮性感的健身網紅」，**絕對不是**塊狀肌肉、血管紋理的健美選手體態 | — |
 | 膚色 | 因戶外訓練而略帶古銅色，非白皙 | — |
 | 髮型 | 長黑髮，訓練時綁高馬尾或編髮，休息時自然放下 | — |
 | 穿衣風格 | 運動內衣、緊身高腰褲、crop tank、練後帽 T（拉鏈半開或滑落一邊肩膀） | — |
@@ -23,7 +23,7 @@
 | 已生成圖片數量 | 0 | **PENDING** |
 | 已生成影片數量 | 0 | **PENDING** |
 
-**⚠️ 生成一致性注意**：肌肉線條、腹肌、古銅膚色是她的核心視覺特徵，任何批次的 prompt 都不能把這些修掉或磨平；場景、穿搭、光線可以依批次變化，但體態特徵需維持一致。
+**⚠️ 生成一致性注意**：她的核心視覺特徵是「漂亮性感」，健身只是風味設定。任何批次的 prompt 都必須維持甜美有魅力的臉部表情、精緻不誇張的體態線條、健康小麥膚色；場景、穿搭、光線可以依批次變化，但**絕對不能**往銳利強勢的臉部表情或塊狀/血管紋理的健美選手體態靠攏——第一輪試跑（見下方）就出現過這個問題，已修正描述，之後每批生成前都要對照這條檢查。
 
 ---
 
@@ -34,8 +34,10 @@
 > **⚠️ 降低「AI 感」規則**：本節與下方所有批次 prompt 都必須涵蓋 `SEXY_SCENE_LIBRARY.md`〈降低「AI 感」的技術要點〉五項——(1) 具體皮膚質感關鍵字、(2) 逐場景明確的拍攝裝置/鏡頭與其破綻、(3) 混合不均勻光源配方、(4) 具體生活雜物細節、(5) 完整明確服裝。送出生成前用該文件的「生成前檢查清單」逐項檢查。
 
 ```
-25-year-old Taiwanese woman, sharp striking features, angular jawline, defined cheekbones, straight thick eyebrows, direct confident gaze, athletic toned hourglass figure with visible muscle definition, strong shoulders and back, defined core and abs, curvy trained glutes and thighs, sun-tanned skin with visible skin pores, subtle natural skin texture, unretouched skin detail, natural skin imperfections, long black hair, [HAIRSTYLE], [SCENE — with specific lived-in clutter details relevant to the location], wearing [FULLY EXPLICIT OUTFIT], [POSE/ANGLE], [MIXED, UNEVEN LIGHTING RECIPE — not clean studio light], [DEVICE/CAMERA SPEC — specific model, front or back camera, and its actual artifacts: autofocus softness, highlight clipping, motion blur, compression artifacts, as fits the scene], slightly high-contrast true-to-skin color grading, visible sweat sheen where relevant, film grain, candid lifestyle photo, Instagram style
+25-year-old Taiwanese woman, strikingly beautiful and warm face, bright almond-shaped eyes, soft high cheekbones, straight elegant nose, full lips with a natural friendly smile, gorgeous fitness-model good looks (NOT a stern or intense expression), toned athletic hourglass figure with soft feminine curves, flat stomach with only a subtle soft hint of ab definition (NOT blocky or vascular bodybuilder muscle), full chest, cinched waist, rounded lifted glutes and thighs, sun-kissed glowing skin with visible skin pores, subtle natural skin texture, unretouched skin detail, natural skin imperfections, long black hair, [HAIRSTYLE], [SCENE — with specific lived-in clutter details relevant to the location], wearing [FULLY EXPLICIT OUTFIT], [POSE/ANGLE — natural and flattering, NOT a bodybuilding competition stance], [MIXED, UNEVEN LIGHTING RECIPE — not clean studio light], [DEVICE/CAMERA SPEC — specific model, front or back camera, and its actual artifacts: autofocus softness, highlight clipping, motion blur, compression artifacts, as fits the scene], slightly high-contrast true-to-skin color grading, visible sweat sheen where relevant, film grain, candid lifestyle photo, Instagram style
 ```
+
+**⚠️ 2026-07-24 修正記錄**：第一輪試跑（6 張參考圖）因為舊版 prompt 寫了「sharp striking features, angular jawline」+「visible muscle definition, defined core and abs」，實際生成結果變成健美選手/男性化體態，使用者明確否決，已停止並移除該批圖片，Soul 訓練未啟動。上面的 prompt 已經是修正後版本，下一輪試跑前務必再次確認符合「漂亮性感健身網紅」而非「健美選手」的方向。
 
 **待決定事項（需在實際測試後補上結論）**：
 - 使用哪個模型（Seedream / Recraft / 其他）對亞洲運動型女性身材與汗水質感還原度最好，需要實測比較
