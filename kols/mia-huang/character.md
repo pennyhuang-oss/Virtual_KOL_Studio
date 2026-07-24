@@ -4,7 +4,7 @@
 **Tagline:** *"chat, don't look at me like that"*
 
 **顯示名稱：** Mia 黃米亞 🎮🌙
-**帳號名稱（信箱/註冊用）：** Mia0303
+**帳號名稱（信箱/註冊用）：** mia_gg
 **帳號簡介：**
 ```
 chat, don't look at me like that 👀

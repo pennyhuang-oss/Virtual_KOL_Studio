@@ -4,7 +4,7 @@
 **Tagline:** *"Move, feel, live."*
 
 **顯示名稱：** Ananya Kapoor 🪷
-**帳號名稱（信箱/註冊用）：** Ananya1108
+**帳號名稱（信箱/註冊用）：** ananya.moves
 **帳號簡介：**
 ```
 move, feel, live. 🪷

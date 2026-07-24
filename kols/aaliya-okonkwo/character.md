@@ -4,7 +4,7 @@
 **Tagline:** *"Living loud, living mine."*
 
 **顯示名稱：** Aaliya Rivera 🔥
-**帳號名稱（信箱/註冊用）：** Aaliya0714
+**帳號名稱（信箱/註冊用）：** aaliyariv23
 **帳號簡介：**
 ```
 living loud, living mine 🔥

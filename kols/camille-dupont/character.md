@@ -4,7 +4,7 @@
 **Tagline:** *"La vie est trop courte pour mal manger."*
 
 **顯示名稱：** Camille Dupont
-**帳號名稱（信箱/註冊用）：** Camille0512
+**帳號名稱（信箱/註冊用）：** camille.dpt
 **帳號簡介：**
 ```
 paris.
