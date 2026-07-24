@@ -4,12 +4,10 @@
 **Tagline:** *"chat, don't look at me like that"*
 
 **顯示名稱：** Mia 黃米亞 🎮🌙
+**帳號名稱（信箱/註冊用）：** Mia0303
 **帳號簡介：**
 ```
-新竹夜貓子｜遊戲送頭本人 🎮
-凌晨三點的我才是本體 🌙
 chat, don't look at me like that 👀
-喵米隊集合，貓比抖內珍貴 🐱
 ```
 
 ---

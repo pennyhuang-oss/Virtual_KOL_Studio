@@ -4,11 +4,10 @@
 **Tagline:** *"Move, feel, live."*
 
 **顯示名稱：** Ananya Kapoor 🪷
+**帳號名稱（信箱/註冊用）：** Ananya1108
 **帳號簡介：**
 ```
-bharatanatyam dancer, yoga in my body 🪷
-mumbai mornings, bandra evenings
-move, feel, live.
+move, feel, live. 🪷
 ```
 
 ---
