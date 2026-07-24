@@ -1,6 +1,6 @@
 # Aaliya Rivera — Character Bible
 
-**Handle:** @aaliyaO  
+**Handle:** @aaliyarivera  
 **Tagline:** *"Living loud, living mine."*
 
 **顯示名稱：** Aaliya Rivera 🔥

@@ -9,7 +9,7 @@
 
 **Virtual KOL Studio** — 一個虛擬 KOL（Key Opinion Leader）創作者工作室。
 
-這個 repo 包含 6 個完整設計的虛構 KOL 人格。每個人格都有：
+這個 repo 包含 12 個完整設計的虛構 KOL 人格（原始 6 位 + 2026-07-24 新增的台灣 6 位）。每個人格都有：
 - 詳細的角色設定（個性、外型、生活背景、社交圈）
 - 內容策略（帳號定位、發文方向）
 - Benchmark 帳號（Instagram / TikTok / X）
@@ -20,7 +20,9 @@
 
 ---
 
-## 6 個 KOL 人格
+## 12 個 KOL 人格
+
+### 原始 6 位
 
 | KOL | 所在城市 | 定位 | Soul ID |
 |-----|---------|------|---------|
@@ -31,7 +33,40 @@
 | **Aaliya Rivera** | 洛杉磯 | 拉丁裔 LA 生活/穿搭/性感 | Soul ID: `97f5c6cd-1c0c-4432-83d0-dd42210ecada` |
 | **Camille Dupont** | 巴黎 | 法式慢生活/美食/巴黎場景 | Soul ID: `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` |
 
+### 新增 6 位（2026-07-24，台灣籍）
+
+| KOL | 所在城市 | 定位 | Soul ID |
+|-----|---------|------|---------|
+| **Vicky Lin** 林薇淇 | 高雄 | 健身 / 重訓 / 健身正妹 | 未訓練——臉部參考圖第一輪試跑因偏向健美選手體態被否決並移除，外型描述已修正，尚未重新生成 |
+| **Coco Wu** 吳可可 | 台中 | 校園甜心 / 宿舍生活 | 未訓練 |
+| **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | 未訓練 |
+| **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | 未訓練 |
+| **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | 未訓練 |
+| **Zoe Lai** 賴柔伊 | 花蓮/墾丁 | 陽光海島 / 衝浪女孩 | 未訓練 |
+
+> ⚠️ **新流程規則（2026-07-24 新增）**：臉部參考圖生成後，必須停下來等使用者實際看過並明確確認滿意，才可以送進 Soul 訓練——不可以在同一輪自動接著做完。詳見 README.md「新增 KOL 流程」步驟 6。
+
 每個人格的完整資料在 `kols/<name>/character.md`。
+
+---
+
+## 2026-07-24 Session 摘要（給下一個 Claude session 讀）
+
+這次 session 做了大量結構性變更，如果你在讀這份文件時發現跟其他文件（`README.md`、`KOL_TRAINING_SOP.md`）對不上，以最新的那次 git commit 為準。這次 session 的工作內容：
+
+1. **新增 6 位台灣籍 KOL**（Vicky Lin、Coco Wu、Rainie Hsu、Sophia Tseng、Mia Huang、Zoe Lai）——各自建立 `profile.json` / `character.md` / `content_style.md` / `generation_notes.md`，尚未生成任何素材、尚未訓練 Soul。
+2. **全部 12 位補齊標準化身材數據**：`profile.json` 新增 `identity.appearance.measurements`（身高/體重/三圍/罩杯/腿長/比例備註），`kols/schema.json` 同步更新。
+3. **全部 12 位補齊帳號註冊相關欄位**：`social.display_name`（公開顯示名稱）、`social.bio`（簡短、保留神秘感，不是落落長自介）、`social.account_username`（信箱/平台註冊用，刻意做出不同的命名慣例，避免看起來像同一批次建立的水軍帳號）、`identity.date_of_birth`（跟 age 對齊，用於平台年齡驗證）、`social.creator_category`（平台創作者類別）。
+4. **建了兩個可重複使用的 Workflow**（`.claude/workflows/`）：
+   - `kol_content_qa_pipeline.js` — 生成前 prompt 審核 → 生成（圖片/影片）→ 生成後品質審核（重試機制）→ 核准/待人工後製的素材上傳 Google Drive → 更新 generation_notes.md。目前只跑過零成本空跑驗證，還沒有實際跑過真的生成。
+   - `weekly_content_planner.js` — 單一 KOL 的每週企劃，會比對 `kols/{id}/content_history.json`（如果存在）避免場景重複，經審核 agent 檢查支柱比例/文案雷同/checklist 後才定案。
+5. **`SEXY_SCENE_LIBRARY.md` 新增「降低 AI 感的技術要點」章節** + 生成前檢查清單（皮膚質感/裝置規格/混合光源/背景雜物/服裝完整/運動類角色防健美選手化），12 位共用。
+6. **重大教訓（務必記住）**：Vicky Lin 的第一輪臉部參考圖試跑，因為 `character.md`/`profile.json`/`generation_notes.md` 裡寫了「銳利分明的五官⋯不是圓臉可愛系」+「肌肉線條、腹肌明顯」，實際生成結果變成健美選手/男性化體態，使用者明確否決。已經：(a) 停止該次背景任務、刪除 6 張被否決的圖片（Soul 訓練從未啟動，只浪費了圖片生成額度）；(b) 重寫 Vicky Lin 的外型描述為「漂亮性感健身網紅，絕對不是健美選手」；(c) 同步加強 Zoe Lai（另一個運動系角色）的描述；(d) 在 `SEXY_SCENE_LIBRARY.md` 加入永久性防呆檢查項目，未來任何運動類角色都要檢查這一條。
+7. **修正「內容太單一無聊」的問題**：新 6 位原本完全照 studio 的 6 支柱模板打造，每個支柱都硬套進單一人設（例如 Vicky 的「居家」支柱只有練後癱沙發），沒有社交圈、沒有跟人設無關的生活。已比照原始 6 位的格式，幫新 6 位都加上「## 社交圈」（有名有姓的朋友/家人/寵物）和 2-3 個不佔權重的額外生活主題，並把既有 6 支柱裡的場景範例做多樣化。**六大支柱的權重數字完全沒有變動**，這只是幫「人」補血肉，不是改生成排程結構。
+8. **Metricool API 串接研究結論**：Metricool 官方有發布 MCP Server（`github.com/metricool/servers`），但這個工作環境是雲端 session，不是本機安裝 Claude Desktop 那種可以直接掛 stdio MCP 的情境，所以無法直接用連接器。替代方案：Metricool 本身是標準 REST API（`X-Mc-Auth` header + `userId`/`blogId`），可以直接用 Bash + curl 呼叫，不需要等連接器裝好——但需要使用者先在各平台建好 KOL 的社群帳號、拿到 Metricool 的 API Token 才能實際測試。
+9. **新增強制規則**：臉部參考圖生成完畢後，**必須停下來等使用者確認滿意才能送進 Soul 訓練**，不可以自動接續執行（見 README.md「新增 KOL 流程」步驟 6）。
+
+新 6 位目前狀態：全部**未訓練**，沒有 images/videos 資料夾，`generation_notes.md` 裡的批次都明確標示 PENDING（沒有捏造任何 soul_id 或生成紀錄）。下一步是重新生成 Vicky Lin 的參考圖（用修正後的描述）並走過人工確認關卡。
 
 ---
 
@@ -72,7 +107,7 @@ Wide shot 雖然有場景感，但人物比例小、身材細節少 — **需要
 /
 ├── README.md
 ├── KOL_TRAINING_SOP.md          # 所有 KOL 的訓練狀態總覽表
-├── BENCHMARK_ACCOUNTS.md        # 6 個 KOL 的 benchmark 帳號整體彙整
+├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法）
 ├── CLAUDE_HANDOFF.md            # 本文件
 └── kols/
     ├── iris-chen/

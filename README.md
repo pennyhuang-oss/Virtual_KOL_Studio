@@ -59,19 +59,24 @@
 Virtual_KOL_Studio/
 ├── README.md
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
-├── BENCHMARK_ACCOUNTS.md        # 6 個 KOL 的 benchmark 帳號整體彙整
+├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
+├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（12 位共用）
+├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
+├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
+├── music/                       # 舞蹈/影片配樂素材
+├── .claude/workflows/           # 可重複執行的 Workflow 腳本
+│   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
+│   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核
 └── kols/
     ├── index.json               # 所有 KOL 的主索引
     ├── schema.json              # 標準欄位定義（JSON Schema）
     └── {kol-id}/
-        ├── profile.json         # 結構化角色資料（含 soul_id）
+        ├── profile.json         # 結構化角色資料（含 soul_id、身材數據、帳號資訊）
         ├── character.md         # 完整角色 Bible
         ├── content_style.md     # 內容方向與風格指南
-        ├── generation_notes.md  # AI 生成記錄（prompt、soul_id、測試圖連結）
-        └── images/
-            ├── face_reference/  # 臉部確認圖（4 張）
-            └── soul_test_v1/    # Soul V2 訓練後測試圖（6 張以上）
+        ├── generation_notes.md  # AI 生成記錄（prompt、soul_id、測試圖連結；未執行前明確標示 PENDING）
+        └── images/ videos/      # 生成素材（尚未執行生成的 KOL 無此資料夾）
 ```
 
 ---
