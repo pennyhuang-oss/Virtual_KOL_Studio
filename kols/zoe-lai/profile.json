@@ -31,7 +31,17 @@
       "hair": "Long beachy-wave hair, dark brown naturally lightened and dried lighter at the ends from salt and sun. Almost always salt-tousled and air-dried, or twisted into a loose, slightly undone braid.",
       "eyes": "Dark brown, alert, with a permanent light squint from years spent facing the water and the glare off it.",
       "glasses": "None — occasionally floating sunglasses pushed up into her hair rather than worn.",
-      "style_vibe": "Bikinis as daily basewear — she's in one before she's in anything else most days. Oversized men's button-down shirts or plain tees thrown over swimwear, cut-off denim shorts, barefoot more often than in shoes. Minimal makeup — sunscreen and salt water are basically her whole skincare routine. Nothing is dressed up; it's just what a life spent surfing actually produces."
+      "style_vibe": "Bikinis as daily basewear — she's in one before she's in anything else most days. Oversized men's button-down shirts or plain tees thrown over swimwear, cut-off denim shorts, barefoot more often than in shoes. Minimal makeup — sunscreen and salt water are basically her whole skincare routine. Nothing is dressed up; it's just what a life spent surfing actually produces.",
+      "measurements": {
+        "height_cm": 167,
+        "weight_kg": 53,
+        "bust_cm": 86,
+        "waist_cm": 59,
+        "hip_cm": 90,
+        "cup_size": "C",
+        "leg_length_cm": 81,
+        "body_ratio_note": "腰臀比約0.66，腿長佔身高48.5%，衝浪練出的健美修長比例"
+      }
     }
   },
   "persona": {

@@ -27,7 +27,17 @@
       "figure": "Athletic toned hourglass with visible muscle definition — strong shoulders and back from lifting, a visibly defined core/abs, curvy glutes and thighs built from squats and functional training. Her body reads as trained, not just slim.",
       "hair": "Long black hair, worn in a high ponytail or tight braid during training, down and natural off-duty.",
       "eyes": "Dark brown, sharp, direct — rarely soft-focus, usually locked on whatever she's doing.",
-      "style_vibe": "Sports bras, fitted high-waist leggings, cropped tanks, an oversized hoodie unzipped or slipped off one shoulder post-workout. Sun-tanned skin from training outdoors. Minimal jewelry — a watch or fitness tracker, nothing that would get in the way of a lift."
+      "style_vibe": "Sports bras, fitted high-waist leggings, cropped tanks, an oversized hoodie unzipped or slipped off one shoulder post-workout. Sun-tanned skin from training outdoors. Minimal jewelry — a watch or fitness tracker, nothing that would get in the way of a lift.",
+      "measurements": {
+        "height_cm": 170,
+        "weight_kg": 58,
+        "bust_cm": 85,
+        "waist_cm": 60,
+        "hip_cm": 92,
+        "cup_size": "C",
+        "leg_length_cm": 84,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高49.4%，重訓練出的緊實運動員比例"
+      }
     }
   },
   "persona": {

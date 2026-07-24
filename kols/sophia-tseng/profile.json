@@ -28,7 +28,17 @@
       "hair": "Sleek straight or softly waved dark hair, always polished — 不論放下、半盤或全盤起，都像剛從沙龍出來，從不顯凌亂。",
       "eyes": "沉靜、略帶距離感的雙眼，眼神篤定而不外放，直視鏡頭時帶著『我知道你在看』的從容，不是挑逗，是自信。",
       "glasses": "平時不戴；度假或機場造型偶爾配戴太陽眼鏡。",
-      "style_vibe": "Silk slip dresses, cashmere loungewear, tailored blazers with nothing underneath, designer robes, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，沒有一件是快時尚，沒有邏輯以外的裝飾。"
+      "style_vibe": "Silk slip dresses, cashmere loungewear, tailored blazers with nothing underneath, designer robes, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，沒有一件是快時尚，沒有邏輯以外的裝飾。",
+      "measurements": {
+        "height_cm": 168,
+        "weight_kg": 50,
+        "bust_cm": 86,
+        "waist_cm": 58,
+        "hip_cm": 89,
+        "cup_size": "C",
+        "leg_length_cm": 82,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高48.8%，成熟優雅的修長比例"
+      }
     }
   },
   "persona": {

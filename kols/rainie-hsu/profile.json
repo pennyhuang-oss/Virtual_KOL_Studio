@@ -27,7 +27,17 @@
       "hair": "Long, straight, jet-black hair, worn sleek and glossy — occasionally styled with a deep side part or slicked back for a night out. Never messy, always intentional.",
       "eyes": "Dark, sharp eyes made sharper by precise winged eyeliner — her single most recognizable visual signature.",
       "glasses": "None.",
-      "style_vibe": "Glamorous nightlife fashion: bodycon dresses, corset tops, thigh-high slits, going-out sets, statement jewelry, sky-high heels. Deliberately done, not effortless — she works for the look and is proud of the work. The opposite of understated."
+      "style_vibe": "Glamorous nightlife fashion: bodycon dresses, corset tops, thigh-high slits, going-out sets, statement jewelry, sky-high heels. Deliberately done, not effortless — she works for the look and is proud of the work. The opposite of understated.",
+      "measurements": {
+        "height_cm": 165,
+        "weight_kg": 50,
+        "bust_cm": 88,
+        "waist_cm": 59,
+        "hip_cm": 92,
+        "cup_size": "D",
+        "leg_length_cm": 80,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高48.5%，張揚有型的沙漏比例"
+      }
     }
   },
   "persona": {

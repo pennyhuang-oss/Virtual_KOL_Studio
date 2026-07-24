@@ -56,7 +56,21 @@
             "height": { "type": "string" },
             "hair": { "type": "string" },
             "eyes": { "type": "string" },
-            "style_vibe": { "type": "string" }
+            "style_vibe": { "type": "string" },
+            "measurements": {
+              "type": "object",
+              "description": "Standardized body measurement spec used to keep AI-generated images consistent across batches for this KOL.",
+              "properties": {
+                "height_cm": { "type": "integer" },
+                "weight_kg": { "type": "integer" },
+                "bust_cm": { "type": "integer" },
+                "waist_cm": { "type": "integer" },
+                "hip_cm": { "type": "integer" },
+                "cup_size": { "type": "string" },
+                "leg_length_cm": { "type": "integer", "description": "腿長（髖骨至地面）" },
+                "body_ratio_note": { "type": "string", "description": "腰臀比、腿長身高比等敘述性補充" }
+              }
+            }
           }
         }
       }

@@ -25,7 +25,17 @@
       "height": "169cm",
       "hair": "Long, straight, natural honey golden blonde — always effortless, never styled. Sometimes a clip loosely pinned that's perpetually about to fall out.",
       "eyes": "Light brown, warm, slightly sleepy-looking in a charming way. Minimal eye makeup — mascara at most.",
-      "style_vibe": "The Paris formula, lived: straight-leg jeans or a midi skirt, a slightly-too-big men's shirt half tucked, leather loafers or white sneakers, maybe a silk scarf. A light red lip on weekends. Looks like she got dressed in 8 minutes and will never tell you how."
+      "style_vibe": "The Paris formula, lived: straight-leg jeans or a midi skirt, a slightly-too-big men's shirt half tucked, leather loafers or white sneakers, maybe a silk scarf. A light red lip on weekends. Looks like she got dressed in 8 minutes and will never tell you how.",
+      "measurements": {
+        "height_cm": 169,
+        "weight_kg": 52,
+        "bust_cm": 85,
+        "waist_cm": 60,
+        "hip_cm": 88,
+        "cup_size": "C",
+        "leg_length_cm": 82,
+        "body_ratio_note": "腰臀比約0.68，腿長佔身高48.5%，纖細優雅的巴黎比例"
+      }
     }
   },
   "persona": {
