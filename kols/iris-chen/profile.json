@@ -18,6 +18,7 @@
     "native_name": "陳芯語",
     "handle": "@iris.chen",
     "age": 22,
+    "date_of_birth": "2004-03-14",
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan",
@@ -129,6 +130,7 @@
   },
   "social": {
     "display_name": "Iris Chen",
+    "creator_category": "Digital creator",
     "bio": "剛睡醒。",
     "account_username": "Iris520520",
     "platforms": {

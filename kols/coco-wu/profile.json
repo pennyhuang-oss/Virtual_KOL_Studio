@@ -16,6 +16,7 @@
     "native_name": "吳可可",
     "handle": "@coco.wu",
     "age": 20,
+    "date_of_birth": "2006-03-08",
     "ethnicity": "Taiwanese",
     "origin": "Taichung, Taiwan",
     "current_location": "Taichung, Taiwan",
@@ -148,6 +149,7 @@
     "engagement_style": "回覆留言像在回朋友的訊息，語氣親暱、常用表情符號，會主動在限動辦小小的問答或投票跟大家聊天。",
     "community_name": "可可小隊",
     "display_name": "可可Coco 🧋✨💕",
+    "creator_category": "Digital creator",
     "bio": "早八前五分鐘，還在棉被裡🛏️",
     "account_username": "cocowu_tea"
   }

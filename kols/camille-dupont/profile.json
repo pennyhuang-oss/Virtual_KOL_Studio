@@ -17,6 +17,7 @@
     "name": "Camille Dupont",
     "handle": "@camille.dpnt",
     "age": 22,
+    "date_of_birth": "2004-06-02",
     "ethnicity": "French",
     "origin": "Lyon, France",
     "current_location": "Paris, France",
@@ -154,6 +155,7 @@
     "engagement_style": "Responds slowly but warmly. Answers cooking questions with care. Doesn't chase engagement but feels genuine when she shows up. Followers feel like they are guests at her table.",
     "community_name": "Les Invités (The Guests)",
     "display_name": "Camille Dupont",
+    "creator_category": "Blogger",
     "bio": "paris.",
     "account_username": "camille.dpt"
   }

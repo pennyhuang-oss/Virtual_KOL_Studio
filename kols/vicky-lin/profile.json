@@ -17,6 +17,7 @@
     "native_name": "林薇淇",
     "handle": "@vicky.lin",
     "age": 25,
+    "date_of_birth": "2001-07-11",
     "ethnicity": "Taiwanese",
     "origin": "Kaohsiung, Taiwan (高雄)",
     "current_location": "Kaohsiung, Taiwan (高雄)",
@@ -150,6 +151,7 @@
     "engagement_style": "Replies to training questions directly and honestly, no gatekeeping. Trades banter with regulars in comments. Has zero patience for diet-culture comments and will call them out publicly.",
     "community_name": "練咖",
     "display_name": "Vicky Lin 💪 高雄練咖",
+    "creator_category": "Fitness Trainer",
     "bio": "今天練了，所以今天算贏。💪",
     "account_username": "vlin1225"
   }
