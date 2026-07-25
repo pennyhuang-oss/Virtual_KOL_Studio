@@ -159,3 +159,34 @@
 - **畫質收尾**：每個批次結尾統一加上 `crisp high-quality photography, vibrant true-to-life color, sharp focus on subject`，並在光線描述中明講 `NOT dim/muddy/degraded`，確保即使是 RGB 多彩光源，畫面本身依然乾淨清晰，不是「刻意拍差」
 
 **未變更項目**：`profile.json` 完全未修改；臉型、三圍原始設定值、髮型/挑染、穿搭品項、直播主播人格與內容支柱設定全部保持不變——這輪只調整技術執行層面的 prompt 措辭，不改變角色設定本身。
+
+---
+
+## 2026-07-25 發現用候選圖批次（已生成 4 張，等待使用者挑選喜歡的臉／風格 — ⚠️ PENDING，尚未錨定 Element、尚未送入 Soul 訓練）
+
+**狀態：⚠️ PENDING — 這只是「發現批次」（discovery batch），目的是讓使用者從少量候選圖中挑一張最喜歡的臉/風格，之後才會把核准的那一張透過 Reference Element 錨定身分，再擴充成完整訓練圖集。比照 Vicky Lin 的兩階段流程經驗（見 `kols/vicky-lin/generation_notes.md` 第二～四輪）——獨立生成的圖彼此身分不保證一致，所以本輪 4 張**還沒有**用 Element 錨定，每張都是各自獨立生成，臉部細節預期會有落差，這是正常現象，不是錯誤。本輪**未**建立 Reference Element、**未**呼叫 `show_characters(action='train')`，`profile.json` 的 soul_id 維持原狀（空白）。
+
+**模型選擇**：呼叫 `models_explore(action='recommend', query='generating consistent character reference images for a new persona without an existing soul_id...')`，結果列出 `soul_cast`、`seedance_2_0`、`soul_2`（match_reason 含 `character-intent: preferred-model+120`）、及兩個語音相關模型。因 Mia 尚未有 `soul_id`，採用 `soul_2`——同時符合 `generate_image` 工具說明中「`soul_2`/`nano_banana_pro` for one-off character refs」的預設建議，也與 Vicky Lin 第二、三輪的模型選擇一致。`aspect_ratio: 9:16`，`quality: 2k` 請求送出（但實際回傳的生成參數顯示 `quality: "1080p"`，可能是 `soul_2` 內部對 2k 檔位的實際輸出標示，非請求本身有誤）。
+
+**費用**：`get_cost: true` 預檢（prompt 為簡短測試字串）回傳每張約 1 credit（0.12 credits_exact）。實際生成 4 張完整 prompt 後，餘額由生成前 **18.23 credits** 降至生成後 **15.83 credits**，共花費 **2.4 credits**（平均每張 0.6 credits）——比預檢數字高，可能是完整 prompt 長度/解析度與預檢測試字串不同所致，之後若要精算預算建議用完整 prompt 文字重新 `get_cost` 一次。
+
+**內容設計**：4 張都直接沿用本文件「計畫批次 1」（電競椅設定照）已核准的核心外觀描述（臉型、妝容、髮色/粉色挑染、三圍數字、場景、穿搭、RGB 光線配方、裝置破綻、雜物細節）逐字不變，**只變化姿勢/角度/景別**，符合本次任務「核心外觀描述在 4 張之間保持一致，只變化角度/取景」的要求：
+
+| 檔名 | 角度／景別 | 說明 | Job ID | 狀態 |
+|------|-----------|------|--------|------|
+| `candidate_01.png` | 正面．臉部特寫 | 正面直視鏡頭，肩頸以上特寫 | `9ea22aed-5908-483e-a833-b3a274a9115b` | ✅ completed |
+| `candidate_02.png` | 正面．半身 | 正面直視鏡頭，腰部以上取景 | `d3f7ee59-1ca6-4767-8374-84c5915c417b` | ✅ completed |
+| `candidate_03.png` | 四分之三側．半身 | 側身回望鏡頭，腰部以上取景 | `950e91af-6fef-49a1-9f72-48fa57d9e24e` | ✅ completed |
+| `candidate_04.png` | 正面．全身 | 正面直視鏡頭，坐姿全身入鏡含電競椅與書桌背景 | `5d3057d6-fc1f-4586-9324-7a4dab2808c7` | ✅ completed |
+
+**產出位置**：`kols/mia-huang/images/face_reference/candidate_01.png` ～ `candidate_04.png`（新建目錄）。
+
+**生成後目視檢查**：已用 Read 工具實際開圖檢視 `candidate_01`（正面特寫）與 `candidate_04`（正面全身）——兩張都呈現圓潤柔和娃娃臉、灰棕髮色帶粉色挑染、RGB 燈光電競椅場景、黑色帽T戰袍，風格與人設吻合；但如預期，兩張彼此的五官細節不是同一張臉（因為尚未用 Element 錨定身分，這正是本批次要解決的問題——先選出使用者最喜歡的那一張臉，再進入錨定階段）。
+
+**⚠️ 下一步（不可跳過）**：
+1. 等待使用者實際看過 `candidate_01` ～ `candidate_04` 這 4 張圖，明確指出最喜歡哪一張的臉／風格
+2. 使用者核准某一張後，比照 Vicky Lin 第四輪流程：`media_upload` 上傳核准圖 → `media_confirm` → `show_reference_elements(action='create', category='character', ...)` 建立 Mia 專屬 Reference Element
+3. 用該 Element 錨定身分，擴充生成完整訓練圖集（比照本文件「計畫批次 1–7」的場景規劃，逐批次在 prompt 中內嵌 `<<<element_id>>>`）
+4. 訓練圖集確認一致後，才前往 `show_characters(action='train')` 建立 Mia 專屬 Soul 模型
+
+本輪結束時，`profile.json` 完全未修改，soul_id 仍為空白，Soul 訓練**尚未**啟動，整體狀態維持 **PENDING**。

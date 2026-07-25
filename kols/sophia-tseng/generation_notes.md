@@ -23,6 +23,30 @@
 
 ---
 
+## Face/Style 探索批次（Discovery Batch）— 2026-07-25
+
+> **status: PENDING — 等待使用者從中挑選喜歡的臉／風格。** 這一批只是「找臉」用的探索批次，**尚未建立 Reference Element、尚未 anchor、尚未進入 Soul 訓練**。待使用者從下列 4 張中選出最喜歡的一張後，才會用該張建立 Reference Element 錨定身分，接著才依「計畫批次 Prompt 規劃」的 6 個批次擴充成完整訓練圖集（沿用 Vicky Lin 案例確立的兩階段流程：獨立生成不共享身分，須先找到核可臉孔，再錨定＋擴充）。
+
+- **平台／模型**：Higgsfield，`soul_2`（Higgsfield Soul 2.0，text-only 一次性角色參考，**未帶 `soul_id`**——尚無 Soul 可用）；quality 2k
+- **Prompt 來源**：直接沿用本檔案上方已校準（2026-07-25）的核心 Prompt 結構（含 168cm／88-58-89cm／D 罩杯等三圍數字、臉部防呆用詞、室內奢華光線配方一），五官／身材／氣質描述在 4 張之間完全一致，僅變化角度與構圖
+- **成本**：generate_image 帳前預檢（get_cost）估算約 0.12 credits／張；實際生成後帳戶餘額由 18.23 → 16.07 credits，本批次 4 張實際共花費 **2.16 credits**
+- **產出**：4 張候選圖，已存於 `kols/sophia-tseng/images/face_reference/`
+
+| 檔名 | 角度／構圖 | Job ID | 狀態 |
+|------|-----------|--------|------|
+| candidate_01.png | 正面特寫大頭照（headshot） | `0d40d2f1-8ce3-4a1f-863d-a5a6ae7f3491` | 已完成，等待挑選 |
+| candidate_02.png | 正面半身（waist-up） | `11b6948e-aebc-40c7-aace-5fd37300d907` | 已完成，等待挑選 |
+| candidate_03.png | 3/4 側身半身，頭轉回鏡頭 | `4936f551-9e0f-4fde-b95b-41e7bb9638b3` | 已完成，等待挑選 |
+| candidate_04.png | 正面全身（head-to-toe） | `6b2b5927-5ec7-4fc6-ac6e-fdcacc828785` | 已完成，等待挑選 |
+
+**下一步（尚未執行，等待使用者指示）**：
+1. 使用者從 4 張候選圖中挑出最喜歡的臉／風格
+2. 用該張建立 Reference Element 錨定身分
+3. 以此 Reference Element 為基礎，依「計畫批次 Prompt 規劃」6 個批次擴充成完整訓練圖集
+4. 挑選訓練圖後才進入 Soul 訓練（`status: PENDING`，尚未開始）
+
+---
+
 ## 訓練圖生成流程規劃（尚未執行）
 
 > 以下沿用工作室既有的生成流程慣例（參考 `iris-chen/generation_notes.md`），實際平台與模型待正式開始生成時確認與記錄。

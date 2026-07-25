@@ -23,7 +23,7 @@
 
 | KOL | Soul ID | Soul 訓練 | 測試圖 | 狀態 |
 |-----|---------|----------|--------|------|
-| Vicky Lin | 無 | ❌ | ❌（第一輪 6 張因偏向健美選手體態被否決並刪除，外型描述已修正） | 🔴 待重新生成參考圖 |
+| Vicky Lin | 無（訓練嘗試失敗，未取得 soul_id） | ❌ | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | 🔴 使用者已核准，但 `show_characters(action='train')` 連續 10 次呼叫失敗（工具層級錯誤，未扣款），待下次 session 用已上傳確認的 media_id 重試，詳見 `kols/vicky-lin/generation_notes.md` |
 | Coco Wu | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
 | Rainie Hsu | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
 | Sophia Tseng | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
