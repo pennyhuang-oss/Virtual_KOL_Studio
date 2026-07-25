@@ -36,12 +36,22 @@ faint JPEG compression at high-contrast edges
 拍攝裝置與鏡頭必須逐場景明確指定（前鏡頭自拍 vs. 後鏡頭 vs. 單眼淺景深），不要讓模型自己猜。
 
 ### 3. 光源
-真實光線是混亂、不均勻的，不是棚拍三點打光：
+> **⚠️ 2026-07-25 修正**：這條原本寫「真實光線是混亂、不均勻的」，結果實際套用在 Vicky Lin 身上時被使用者反饋「濾鏡、光線、畫質都非常差」。問題是把「真實感」跟「拍得普通/畫質差」劃上等號了——這是錯的，兩者是獨立的兩件事。真人使用者提供的實際健身網紅參考截圖顯示：真實感來自皮膚質感和生活細節，**不是**靠調暗、調糊、做舊光線。現代手機攝影的「討喜」光線（黃金時段斜陽、戶外強光、樹蔭斑駁光）配合淺景深背景虛化，一樣可以清晰漂亮又有真實感。
+
+**室內親密場景**（晨起/浴室/居家等）維持原本的「混合、不均勻」邏輯：
 ```
 mixed color temperature — cool daylight from window blending with warm indoor lamp,
 uneven light falloff across the frame, soft but visible shadow edges,
 slight lens flare or glare on skin/glass surfaces
 ```
+
+**戶外/生活風格場景**（健身、旅遊、日常外出等）改用「討喜自然光」邏輯，不要刻意做舊：
+```
+golden hour sunlight or bright clear daylight, natural directional light with soft flattering falloff,
+shallow depth of field with blurred bokeh background, crisp sharp focus on subject,
+high dynamic range, natural color grading — NOT degraded, dim, or muddy
+```
+兩種邏輯都要保留皮膚質感關鍵字（見第 1 點）和裝置破綻（見第 2 點），差別只在「整體畫面美不美、亮不亮」，不是在「像不像真的」。
 
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
@@ -57,7 +67,8 @@ room tone / air conditioning hum, fabric rustle, soft footsteps, faint distant b
 每個 prompt 送出生成前，逐項確認：
 - [ ] 裝置/鏡頭是否具體指定
 - [ ] 皮膚質感關鍵字是否存在
-- [ ] 光線配方是否為「混合、不均勻」而非「乾淨棚拍」
+- [ ] 光線配方是否符合場景類型：室內親密場景用「混合不均勻」，戶外/生活風格場景用「討喜自然光+淺景深」——**兩者都不等於「畫質差/調暗調糊」**
+- [ ] 身材數據（三圍/罩杯，見 `profile.json` 的 measurements）是否直接寫進 prompt，不要只用模糊形容詞
 - [ ] 背景是否有具體生活雜物細節
 - [ ] 服裝是否完整明確寫出（不留給模型自己猜）
 - [ ] （影片）環境音層是否有指定，`generate_audio` 設定是否正確
