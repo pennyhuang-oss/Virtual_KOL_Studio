@@ -1,7 +1,7 @@
 # Vicky Lin — AI 生成規劃
 
 > **狀態：PENDING（使用者已核准第四輪 12 張參考圖，Soul 訓練已嘗試但尚未成功啟動）**
-> 2026-07-25：使用者審核第四輪 Element 錨定的 12 張參考圖後回覆「可以」，明確核准進入 Soul 訓練。已完成圖片重新上傳與確認（12 個 media_id 均已 `media_confirm` 成功），但 `show_characters(action='train')` 連續 10 次呼叫都回傳工具層級錯誤，尚未取得 `soul_id`，也沒有扣款。詳見下方「2026-07-25 使用者核准，Soul 訓練嘗試」章節。**目前仍沒有任何 soul_id**，`profile.json`／README.md／`KOL_TRAINING_SOP.md` 均維持原狀未修改，避免記錄不存在的訓練結果。
+> 2026-07-25：使用者審核第四輪 Element 錨定的 12 張參考圖後回覆「可以」，明確核准進入 Soul 訓練。已完成圖片重新上傳與確認（12 個 media_id 均已 `media_confirm` 成功），但 `show_characters(action='train')` 連續 10 次呼叫都回傳工具層級錯誤，尚未取得 `soul_id`，Higgsfield 後端也**沒有建立任何角色記錄**。⚠️ 但期間仍被扣款約 2.16–2.4 credits（`transactions` 記錄為多筆 `Higgsfield Soul V2` -0.12 credits，發生在重試時段內），屬於「呼叫失敗但仍計費」的異常情形。詳見下方「2026-07-25 使用者核准，Soul 訓練嘗試」章節。**目前仍沒有任何 soul_id**，`profile.json`／README.md 均維持原狀未修改，避免記錄不存在的訓練結果；`KOL_TRAINING_SOP.md` 進度表已更新為反映真實現況（訓練失敗、待重試，不含虛構 soul_id）。
 
 ---
 
@@ -18,7 +18,7 @@
 | 髮型 | 長黑髮，訓練時綁高馬尾或編髮，休息時自然放下 | — |
 | 穿衣風格 | 運動內衣、緊身高腰褲、crop tank、練後帽 T（拉鏈半開或滑落一邊肩膀） | — |
 | 眼鏡 | 無 | — |
-| Soul 模型 | 尚未建立——使用者已核准，但 `show_characters(action='train')` 連續 10 次呼叫失敗（工具層級錯誤，未扣款），尚無 soul_id | **PENDING（訓練已嘗試但未成功）** |
+| Soul 模型 | 尚未建立——使用者已核准，但 `show_characters(action='train')` 連續 10 次呼叫失敗（工具層級錯誤），尚無 soul_id；期間仍被扣款約 2.16–2.4 credits（見下方訓練嘗試記錄） | **PENDING（訓練已嘗試但未成功，已產生費用損耗）** |
 | 訓練圖 | 第四輪 Element 錨定參考圖已生成並經使用者核准（`v4_anchored_` 開頭 12 張，見下方 2026-07-25 第四輪記錄），以使用者核准的 `v3_06_3q_fullbody.png` 為身分錨點，透過 Reference Element（element_id `9f076fab-77ef-4c68-a146-f8060253c49a`）確保 12 張圖為同一身分；已重新上傳並確認為 12 個新 media_id（見下方訓練嘗試記錄），可直接用於下次重試；第二輪、第三輪圖片因各自獨立生成、身分不一致，僅保留供對照，**不建議**用於 Soul 訓練 | **已核准，待訓練成功** |
 | 已生成圖片數量 | 28（第二輪 8 張 + 第三輪 8 張〔身分不一致，僅供對照〕+ 第四輪 12 張〔Element 錨定，身分一致，已核准〕），Soul 訓練已嘗試但尚未成功啟動 | **PENDING** |
 | 已生成影片數量 | 0 | **PENDING** |
@@ -283,6 +283,6 @@
 1. ~~選定圖片生成模型並小規模測試~~ 已完成：第二輪、第三輪使用 `soul_2`（一次性角色參考圖，但無身分錨定）；第四輪改用 `seedream_v4_5` + Reference Element 錨定同一身分
 2. ~~等待使用者比較第二輪與第三輪參考圖~~ 已被更根本的問題取代：發現獨立文字生成無法保證身分一致，因此第四輪改採 Element 錨定方式重新生成訓練圖
 3. ~~等待使用者審核第四輪（`v4_anchored_01`–`v4_anchored_12`）Element 錨定參考圖，確認身分一致且風格滿意~~ 已完成：使用者回覆「可以」，明確核准進入 Soul 訓練
-4. ⚠️ **`show_characters(action='train')` 已嘗試但尚未成功**——見上方「2026-07-25 使用者核准，Soul 訓練嘗試」記錄：連續 10 次呼叫（含原始 job_id、重新上傳的 media_id、`medias` 參數格式、https URL、不同張數）全部回傳工具層級錯誤，未取得 `soul_id`，也沒有扣款。**下次 session 應優先用該記錄表格中已上傳確認的 12 個 media_id 直接重試**，不需要重新上傳圖片
+4. ⚠️ **`show_characters(action='train')` 已嘗試但尚未成功**——見上方「2026-07-25 使用者核准，Soul 訓練嘗試」記錄：連續 10 次呼叫（含原始 job_id、重新上傳的 media_id、`medias` 參數格式、https URL、不同張數）全部回傳工具層級錯誤，未取得 `soul_id`，Higgsfield 後端也沒有建立角色記錄，但期間仍被扣款約 2.16–2.4 credits（呼叫失敗但仍計費的異常情形）。**下次 session 應優先用該記錄表格中已上傳確認的 12 個 media_id 直接重試**，不需要重新上傳圖片，但需留意重試本身可能再次產生費用
 5. Soul 訓練成功並取得真實 soul_id 後，才回頭補上 soul_id、訓練圖路徑與實際批次記錄至 `profile.json`、`character.md`、README.md、`KOL_TRAINING_SOP.md`——**絕不可在此之前寫入任何 soul_id 或標記 ready/training**
 6. 影片生成流程（模型選擇、prompt 模板、剪輯節奏對應）待圖片流程確認後另行規劃，目前尚未展開

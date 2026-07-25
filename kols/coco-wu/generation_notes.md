@@ -119,6 +119,38 @@
 
 ---
 
+## 2026-07-25 Discovery 批次 — 臉部/風格候選圖（已生成，等待使用者挑選，尚未錨定、尚未訓練）
+
+**狀態：⚠️ PENDING —— 這不是訓練圖批次，只是「選臉/選風格」用的探索性候選圖。尚未建立 Reference Element、尚未呼叫 `show_characters(action='train')`、`profile.json` 沒有 soul_id。**
+
+**觸發背景**：比照 Vicky Lin 案例學到的教訓——獨立文字生成（無身分錨點）每次都會讓模型重新「想像」一張符合描述但不是同一個人的臉，直接拿來訓練會導致多人臉部特徵平均/混合。因此這次採用兩階段流程：**先**用少量獨立生成的候選圖給使用者選出最喜歡的一張臉/風格，**再**用該張圖建立 Reference Element 錨定身分，之後才擴展成完整訓練圖批次。本輪僅執行第一階段。
+
+**模型選擇**：呼叫 `models_explore(action='recommend')` 查詢「無 soul_id 的一次性角色參考圖」用途，回傳結果最高分為 `soul_cast`（但僅支援 16:9 橫幅，不適合直式人像/半身/全身構圈），故延續 Vicky Lin 第二、三輪已驗證的做法，改用 `soul_2`（因 Coco 尚未有 soul_id，符合 `generate_image` 工具說明中「soul_2 for one-off character refs」的預設建議），`aspect_ratio: 9:16`，`quality: 2k`。
+
+**Prompt 設計**：全部 4 張使用 `generation_notes.md` 上方「核心 prompt 結構」2026-07-25 校準後的核心外型描述（三圍 89-56-86cm／E罩杯直接寫入、大圓眼睛「NOT narrow, sharp, or almond-shaped」、圓臉娃娃臉＋梨渦），身分描述逐字保持一致；僅變化角度/景別與對應的姿勢細節（不是完整訓練批次的場景多樣性，純粹是選臉用）：
+
+| 檔名 | 角度 / 景別 | Job ID |
+|------|------|--------|
+| candidate_01.png | 正面臉部特寫（front headshot） | `837fd5c0-c89c-460c-b673-709f8a7039b7` |
+| candidate_02.png | 正面半身（front half-body） | `afed4d18-5eee-49b5-9905-158df4b25dbc` |
+| candidate_03.png | 四分之三側半身（3/4 half-body） | `59e9b179-a9d3-4810-9e21-a178ad3b681c` |
+| candidate_04.png | 正面全身（front full-body） | `6b18d669-af54-4e64-9c8e-1417326da964` |
+
+統一場景為宿舍素色奶油色牆面（背景可見追星小卡佈告欄與書桌一角，符合她的追星支線與宿舍場景設定）、統一穿搭為奶油色開襟外套配嬰兒粉削肩小可愛（candidate_04 全身圖另加百褶迷你裙與過膝襪以展示全身穿搭），統一光線邏輯（室內自然窗光混合暖色檯燈光）。已依 `SEXY_SCENE_LIBRARY.md`〈降低「AI 感」的技術要點〉檢查皮膚質感關鍵字、iPhone 15 Pro 前/後鏡頭具體破綻、混合不均勻光源、宿舍雜物細節（追星小卡、充電線）、完整服裝描述。
+
+**費用**：`get_cost` 預估每張約 1 credit（0.12 credits_exact）；生成過程中第一次呼叫遇到 `rate_limit_reached`（ultra 方案 8 個並發上限），等待既有任務完成後重試成功，4 張全數送出並完成，未產生失敗重複扣款。實際餘額由生成前 18.23 credits 降至生成後 **15.83 credits**，本輪共花費 **2.40 credits**（4 張）。
+
+**產出檔案**：`kols/coco-wu/images/face_reference/candidate_01.png` – `candidate_04.png`，已用 Read 工具目視檢查 candidate_01（臉部特寫）與 candidate_04（全身），確認呈現圓臉娃娃臉、梨渦、大圓眼、黑棕色長波浪捲髮、奶油色開襟外套＋嬰兒粉小可愛的宿舍校園風格，符合人物設定方向。**注意**：這 4 張是各自獨立生成（無 Reference Element 錨定），彼此的臉可能不是同一個人，只是同一種類型/風格——這是預期中的行為，因為本階段的目的就是讓使用者從中「選一張最喜歡的臉」，而不是產出身分一致的訓練圖。
+
+**⚠️ 下一步（不可跳過，且不可自動接續）**：
+1. 等待使用者從 4 張候選圖中挑出最喜歡的一張臉/風格
+2. 使用者選定後，才將該張圖上傳並透過 `show_reference_elements(action='create')` 建立 Reference Element 作為身分錨點（比照 Vicky Lin 第四輪做法）
+3. 用該 Element 錨定，重新生成完整的訓練圖批次（六個計畫批次，見上方「計畫批次 Prompt 規劃」章節），確保所有訓練圖為同一身分
+4. 使用者確認錨定後的訓練圖批次滿意後，才呼叫 `show_characters(action='train')` 執行 Soul 訓練
+5. 本輪**沒有**建立 Reference Element、**沒有**呼叫 `show_characters(action='train')`，`profile.json` 未變更，訓練狀態維持 **PENDING**
+
+---
+
 ## 下一步（待執行）
 
 實際生成執行時需依序記錄：使用的平台/模型、實際生成的 job ID、選定的訓練圖、Soul 訓練狀態與完成日期。本文件目前不包含這些內容，待生成流程實際跑過後再補充於本檔案或另立記錄章節。
