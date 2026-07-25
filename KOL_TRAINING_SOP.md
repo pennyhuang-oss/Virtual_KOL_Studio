@@ -23,7 +23,7 @@
 
 | KOL | Soul ID | Soul 訓練 | 測試圖 | 狀態 |
 |-----|---------|----------|--------|------|
-| Vicky Lin | 無（訓練嘗試失敗，未取得 soul_id） | ❌ | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | 🔴 使用者已核准，但 `show_characters(action='train')` 連續 10 次呼叫失敗（工具層級錯誤），期間仍被扣款約 2.16–2.4 credits、無任何訓練結果，待下次 session 用已上傳確認的 media_id 重試，詳見 `kols/vicky-lin/generation_notes.md` |
+| Vicky Lin | 無（訓練嘗試失敗，未取得 soul_id） | ❌ | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | 🔴 使用者已核准並同意重試，但 `show_characters(action='train')` 累計兩次 session、共 12 次呼叫全部失敗（工具層級錯誤），期間累計仍被扣款約 2.64–2.88 credits、無任何訓練結果，判斷可能是後端 `train` 端點持續異常，建議暫緩盲目重試、先確認服務狀態，詳見 `kols/vicky-lin/generation_notes.md` |
 | Coco Wu | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
 | Rainie Hsu | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
 | Sophia Tseng | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |

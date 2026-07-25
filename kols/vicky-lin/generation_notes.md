@@ -1,7 +1,7 @@
 # Vicky Lin — AI 生成規劃
 
-> **狀態：PENDING（使用者已核准第四輪 12 張參考圖，Soul 訓練已嘗試但尚未成功啟動）**
-> 2026-07-25：使用者審核第四輪 Element 錨定的 12 張參考圖後回覆「可以」，明確核准進入 Soul 訓練。已完成圖片重新上傳與確認（12 個 media_id 均已 `media_confirm` 成功），但 `show_characters(action='train')` 連續 10 次呼叫都回傳工具層級錯誤，尚未取得 `soul_id`，Higgsfield 後端也**沒有建立任何角色記錄**。⚠️ 但期間仍被扣款約 2.16–2.4 credits（`transactions` 記錄為多筆 `Higgsfield Soul V2` -0.12 credits，發生在重試時段內），屬於「呼叫失敗但仍計費」的異常情形。詳見下方「2026-07-25 使用者核准，Soul 訓練嘗試」章節。**目前仍沒有任何 soul_id**，`profile.json`／README.md 均維持原狀未修改，避免記錄不存在的訓練結果；`KOL_TRAINING_SOP.md` 進度表已更新為反映真實現況（訓練失敗、待重試，不含虛構 soul_id）。
+> **狀態：PENDING（使用者已核准第四輪 12 張參考圖，Soul 訓練已兩度嘗試但仍未成功啟動）**
+> 2026-07-25：使用者審核第四輪 Element 錨定的 12 張參考圖後回覆「可以」，明確核准進入 Soul 訓練。已完成圖片重新上傳與確認（12 個 media_id 均已 `media_confirm` 成功），但 `show_characters(action='train')` 第一次 session 連續 10 次呼叫都回傳工具層級錯誤；使用者回覆「應該是要重新試試看吧」後，第二次 session 又嘗試 2 次（`images` 用 media_id、`medias` 用 `{role,value}` 格式各一次），**仍然全部失敗**，尚未取得 `soul_id`，Higgsfield 後端也**沒有建立任何角色記錄**（已用 `action='list'` 逐一核對確認）。⚠️ 兩次 session 期間累計仍被扣款約 **2.64–2.88 credits**（`transactions` 記錄為多筆 `Higgsfield Soul V2` -0.12 credits，發生在重試時段內），屬於「呼叫失敗但仍計費」的異常情形，且此模式在第二次 session 又再次重現。詳見下方「2026-07-25 使用者核准，Soul 訓練嘗試」與「2026-07-25 Soul 訓練第二次重試」兩章節。**目前仍沒有任何 soul_id**，`profile.json`／README.md 均維持原狀未修改，避免記錄不存在的訓練結果；`KOL_TRAINING_SOP.md` 進度表已更新為反映真實現況（訓練仍失敗、累計成本增加，不含虛構 soul_id）。
 
 ---
 
@@ -18,7 +18,7 @@
 | 髮型 | 長黑髮，訓練時綁高馬尾或編髮，休息時自然放下 | — |
 | 穿衣風格 | 運動內衣、緊身高腰褲、crop tank、練後帽 T（拉鏈半開或滑落一邊肩膀） | — |
 | 眼鏡 | 無 | — |
-| Soul 模型 | 尚未建立——使用者已核准，但 `show_characters(action='train')` 連續 10 次呼叫失敗（工具層級錯誤），尚無 soul_id；期間仍被扣款約 2.16–2.4 credits（見下方訓練嘗試記錄） | **PENDING（訓練已嘗試但未成功，已產生費用損耗）** |
+| Soul 模型 | 尚未建立——使用者已核准，但 `show_characters(action='train')` 累計兩次 session、共 12 次呼叫全部失敗（工具層級錯誤），尚無 soul_id；累計仍被扣款約 2.64–2.88 credits（見下方訓練嘗試記錄） | **PENDING（訓練已兩度嘗試但未成功，費用損耗持續累積）** |
 | 訓練圖 | 第四輪 Element 錨定參考圖已生成並經使用者核准（`v4_anchored_` 開頭 12 張，見下方 2026-07-25 第四輪記錄），以使用者核准的 `v3_06_3q_fullbody.png` 為身分錨點，透過 Reference Element（element_id `9f076fab-77ef-4c68-a146-f8060253c49a`）確保 12 張圖為同一身分；已重新上傳並確認為 12 個新 media_id（見下方訓練嘗試記錄），可直接用於下次重試；第二輪、第三輪圖片因各自獨立生成、身分不一致，僅保留供對照，**不建議**用於 Soul 訓練 | **已核准，待訓練成功** |
 | 已生成圖片數量 | 28（第二輪 8 張 + 第三輪 8 張〔身分不一致，僅供對照〕+ 第四輪 12 張〔Element 錨定，身分一致，已核准〕），Soul 訓練已嘗試但尚未成功啟動 | **PENDING** |
 | 已生成影片數量 | 0 | **PENDING** |
@@ -278,11 +278,46 @@
 
 ---
 
+## 2026-07-25 Soul 訓練第二次重試（同日、第二次 session，⚠️ 仍未成功啟動）
+
+**觸發**：使用者被詢問是否要重試 Soul 訓練時回覆「應該是要重新試試看吧」，明確同意重試。本次重試**刻意限制嘗試次數**（最多 2–3 次），避免重演上一次 session「連續 10 次盲目重試、每次都可能計費」的問題。
+
+**執行前檢查**：呼叫 `balance` 確認重試前餘額為 **15.35 credits**（低於前次記錄的 16.07 credits——研判前次 session 記錄的 16.07 是重試當下尚未完全結算的中繼值，`transactions` 本身有延遲入帳的已知現象，實際扣款在那之後可能又持續入帳了一段時間，把餘額進一步壓低到 15.35；沒有找到其他花費紀錄可以解釋這筆差額，記錄於此供後續核對）。
+
+**嘗試 1（最標準參數形狀）**：使用上表已上傳確認的 12 個 `media_id`，呼叫
+```
+show_characters(action='train', name='Vicky Lin', images=[12 個 media_id])
+```
+結果：**再次失敗**，回傳同樣的工具層級通用錯誤 `Something went wrong. Please try again.`（Request ID `53698440-dea4-48dc-8b62-59216b2e30ed`）。
+
+**立即查核計費情形**：呼叫前 `balance` 為 15.35 credits，呼叫失敗後立刻再查一次 `balance` 仍顯示 15.35 credits（表面上看似未扣款）。但用 `transactions` 直接核對交易明細，發現在呼叫發生的同一時間窗（`2026-07-25T19:43:07Z`–`19:43:22Z`）多了 **4 筆全新的 `Higgsfield Soul V2` -0.12 credits 扣款紀錄**（與上一輪 session 18:41–18:42 的舊記錄時間戳明顯不同、確定是本次新產生的）——代表**這一次呼叫確實又被計費約 0.48 credits，只是 `balance` 端點沒有即時反映**，跟上一輪 session 記錄的「呼叫失敗但仍計費」+「balance 有延遲」現象完全一致，這個異常模式在本次重試中又重現了一次。
+
+**嘗試 2（替代參數形狀）**：依指示只再試一種替代形狀後即停止，改用 `medias` 參數（`{role: 'image', value: media_id}` 陣列）呼叫
+```
+show_characters(action='train', name='Vicky Lin', medias=[{role:'image', value: media_id}, ... 12 組])
+```
+結果：**同樣失敗**，回傳同樣的通用錯誤 `Something went wrong. Please try again.`（Request ID `9b9dcdf1-c44d-41f1-9b4e-bca312e043ae`）。事後核對 `transactions`（取最新 20 筆）未出現新增的扣款時間戳，判斷這一次呼叫本身**沒有**被計費。
+
+**依指示停止重試**：本次 session 只嘗試 2 次（1 個標準形狀 + 1 個替代形狀）即停止，不再繼續排列組合，避免重演上一輪「10 次盲試、每次都可能計費」的狀況。
+
+**驗證確實無角色記錄產生**：呼叫 `show_characters(action='list')` 取得目前帳號下全部角色，共 6 筆（Camille Dupont、Aaliya Rivera、Yuna Kim、Ananya Kapoor、Luna Tanaka、Iris Chen，全數 `status: ready`），**沒有任何名為「Vicky Lin」的角色記錄**，確認本次兩次嘗試都沒有在伺服器端建立任何角色物件，即使其中一次被計費。
+
+**本次 session 費用損耗**：約 **0.48 credits**（嘗試 1 計費 4×0.12；嘗試 2 未計費）。
+
+**累計費用損耗（兩次 session 合計）**：約 **2.64–2.88 credits**（第一次 session 2.16–2.4 credits ＋ 本次 session 0.48 credits），仍然**沒有取得任何 soul_id、沒有任何可用的訓練結果**。
+
+**結論（誠實記錄，不可竄改）**：
+- Soul 訓練狀態維持 **PENDING（訓練未啟動）**，`profile.json`／README.md 保持原狀未修改。
+- `show_characters(action='train')` 端點對 Vicky Lin 這批資料持續回傳工具層級通用錯誤，累計兩次 session、12 次呼叫全部失敗，判斷更可能是 Higgsfield 後端 `train` 端點本身的持續性異常（而非單次暫時性問題、也不是參數格式問題——已測試過 job_id、media_id（`images`）、`medias` 包裝格式、https URL、不同張數等多種形狀，全部失敗），建議下次重試前先確認 Higgsfield 服務狀態，或考慮改用人工／客服管道回報此問題，而非持續消耗 credits 盲目重試。
+- 12 張 `v4_anchored_` 圖片與其 media_id（見上方「使用者核准，Soul 訓練嘗試」章節表格）仍然有效可直接重試，不需要重新上傳。
+
+---
+
 ## 下一步（待執行，非已完成）
 
 1. ~~選定圖片生成模型並小規模測試~~ 已完成：第二輪、第三輪使用 `soul_2`（一次性角色參考圖，但無身分錨定）；第四輪改用 `seedream_v4_5` + Reference Element 錨定同一身分
 2. ~~等待使用者比較第二輪與第三輪參考圖~~ 已被更根本的問題取代：發現獨立文字生成無法保證身分一致，因此第四輪改採 Element 錨定方式重新生成訓練圖
 3. ~~等待使用者審核第四輪（`v4_anchored_01`–`v4_anchored_12`）Element 錨定參考圖，確認身分一致且風格滿意~~ 已完成：使用者回覆「可以」，明確核准進入 Soul 訓練
-4. ⚠️ **`show_characters(action='train')` 已嘗試但尚未成功**——見上方「2026-07-25 使用者核准，Soul 訓練嘗試」記錄：連續 10 次呼叫（含原始 job_id、重新上傳的 media_id、`medias` 參數格式、https URL、不同張數）全部回傳工具層級錯誤，未取得 `soul_id`，Higgsfield 後端也沒有建立角色記錄，但期間仍被扣款約 2.16–2.4 credits（呼叫失敗但仍計費的異常情形）。**下次 session 應優先用該記錄表格中已上傳確認的 12 個 media_id 直接重試**，不需要重新上傳圖片，但需留意重試本身可能再次產生費用
+4. ⚠️ **`show_characters(action='train')` 已兩度嘗試但仍未成功**——見上方「2026-07-25 使用者核准，Soul 訓練嘗試」與「2026-07-25 Soul 訓練第二次重試」兩章節記錄：累計兩次 session、共 12 次呼叫（含原始 job_id、重新上傳的 media_id、`medias` 參數格式、https URL、不同張數）全部回傳工具層級錯誤，未取得 `soul_id`，Higgsfield 後端也沒有建立角色記錄，但期間累計仍被扣款約 2.64–2.88 credits（呼叫失敗但仍計費的異常情形，兩次 session 都重現）。**判斷更可能是 Higgsfield 後端 `train` 端點本身持續異常，而非參數格式問題**——建議暫緩繼續盲目重試，先確認服務狀態或改走人工/客服回報管道，避免持續產生無結果的費用損耗
 5. Soul 訓練成功並取得真實 soul_id 後，才回頭補上 soul_id、訓練圖路徑與實際批次記錄至 `profile.json`、`character.md`、README.md、`KOL_TRAINING_SOP.md`——**絕不可在此之前寫入任何 soul_id 或標記 ready/training**
 6. 影片生成流程（模型選擇、prompt 模板、剪輯節奏對應）待圖片流程確認後另行規劃，目前尚未展開
