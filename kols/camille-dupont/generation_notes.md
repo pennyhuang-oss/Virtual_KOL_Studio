@@ -88,8 +88,10 @@ Fuji 400H film grain, warm cream tones, shot on 35mm
 ### 核心 Prompt 基礎結構（不變）
 
 ```
-22-year-old French woman, long straight blonde hair natural honey golden color, light fair skin, warm hazel light brown eyes, 169cm slender figure with curves, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], Fuji 400H film grain, warm cream tones, shot on 35mm
+22-year-old French woman, long straight blonde hair natural honey golden color, light fair skin, warm hazel light brown eyes, 169cm slender figure with 85cm bust (C cup), 60cm waist, 88cm hips, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], Fuji 400H film grain, warm cream tones, shot on 35mm
 ```
+
+> **2026-07-25 補充**：三圍數字（85-60-88，C 罩杯，來自 `profile.json` 的 `identity.appearance.measurements`）已直接寫進上方核心結構，取代原本單純的「slender figure with curves」形容詞，避免生成結果的身材比例跟設定檔不符。舊有已核准圖片（`soul_test_v1`、`self_intro_v1`）不受影響，此為往後新批次適用的模板更新。
 
 ---
 
@@ -292,3 +294,14 @@ sound = "on"
 aspect_ratio = "9:16"
 duration = 10
 ```
+
+---
+
+## 2026-07-25 新增：身材數字 + 風格參考
+
+未來新批次生成前，請參照 `SEXY_SCENE_LIBRARY.md` 最新的〈光源〉修正說明，該文件已把光源配方依場景類型拆成兩套：
+
+- **室內親密場景**（廚房切菜、公寓臥室早晨、浴室鏡前、居家沙發等）：沿用舊有「混合、不均勻」室內光源邏輯，維持不變。
+- **戶外/生活風格場景**（屋頂露台、塞納河畔、窗邊逆光等 outdoor/lifestyle 場景）：改用新版「討喜自然光」配方——黃金時段斜陽或戶外強光 + 淺景深背景虛化 + crisp high dynamic range，不要刻意做舊或調暗（真實感不等於畫質差）。
+
+Camille 的內容本來就同時涵蓋這兩類場景（廚房/咖啡廳室內 vs. 屋頂/塞納河/窗邊戶外），之後規劃新場景時依場景類型對應套用正確的光源配方即可。此為前瞻性補充，不影響本文件已記錄的 soul_id、訓練圖數量或已核准圖片。
