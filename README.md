@@ -114,9 +114,12 @@ Virtual_KOL_Studio/
 2. 按照 `kols/schema.json` 建立 `profile.json`
 3. 撰寫 `character.md`（角色 Bible）與 `content_style.md`（內容指南）
 4. 在 `kols/index.json` 新增對應紀錄
-5. 生成至少 5 張臉部參考圖存入 `images/face_reference/`
-6. **停下來，等使用者實際看過這批參考圖並明確確認滿意後，才可以進入下一步**——參考圖是主觀判斷，訓練是要花時間和額度的動作，兩者中間一定要有人工確認這個關卡，不可以在同一輪自動接著做完
-7. 使用者確認後，才執行 Higgsfield Soul V2 訓練，記錄 soul_id 至 `profile.json` 和 `generation_notes.md`
+5. **⚠️（2026-07-25 新增，強制規則）生成任何參考圖之前，必須先讀過至少一個已驗證成功的既有角色的 `generation_notes.md` 當範本**（預設參考 `kols/iris-chen/generation_notes.md`——這是目前唯一有完整記錄「一次生成基本就對、身分穩定」成功經驗的案例）。**不可以只憑生成工具本身的預設建議（例如工具說明文字建議的模型）直接決定要用哪個模型或做法**——工具的通用建議不知道這個專案過去實際驗證過什麼，一定要先比對過去成功案例，才能決定沿用或是有充分理由才偏離。
+   - **預設模型**：訓練圖／Discovery 批次的生成，預設使用 `seedream_v4_5`（同 prompt 重複生成的身分一致性明顯優於 `soul_2` 未錨定時的表現，見 `kols/iris-chen/generation_notes.md` 的模型選擇記錄與 2026-07-25 的事後檢討）。**只有**當該角色已經有成功訓練出來的 `soul_id` 時，才用 `soul_2` + 該 `soul_id` 做後續生成——那是完全不同的、已錨定身分的情境，不是本條規則要避免的「無錨點一次性生成」。
+   - 此規則的起因：2026-07-25 曾發生連續多個新角色（Coco Wu、Rainie Hsu、Sophia Tseng、Mia Huang、Zoe Lai）的 Discovery 批次因為選用 `soul_2` 無錨點生成，導致同一批次 4 張圖臉孔不一致，且完全沒有先比對過已驗證成功的 Iris Chen 模型選擇記錄——詳見這幾位角色 `generation_notes.md` 的相關修正記錄。
+6. 生成至少 5 張臉部參考圖存入 `images/face_reference/`
+7. **停下來，等使用者實際看過這批參考圖並明確確認滿意後，才可以進入下一步**——參考圖是主觀判斷，訓練是要花時間和額度的動作，兩者中間一定要有人工確認這個關卡，不可以在同一輪自動接著做完
+8. 使用者確認後，才執行 Higgsfield Soul V2 訓練，記錄 soul_id 至 `profile.json` 和 `generation_notes.md`
 
 ---
 

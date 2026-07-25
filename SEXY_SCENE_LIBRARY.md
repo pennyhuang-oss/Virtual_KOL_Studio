@@ -74,6 +74,7 @@ fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/
 
 ### 生成前檢查清單
 每個 prompt 送出生成前，逐項確認：
+- [ ] **（2026-07-25 新增，第一優先）是否已經先讀過既有已驗證成功的角色範本，而不是直接採用生成工具本身的預設建議？** 預設參考 `kols/iris-chen/generation_notes.md`（模型 `seedream_v4_5`，已證實同 prompt 重複生成身分一致性高）。訓練圖／Discovery 批次的預設模型是 `seedream_v4_5`，不是 `soul_2`——`soul_2` 只在角色已經有 `soul_id` 時才用於後續生成。2026-07-25 事故：多個角色的 Discovery 批次因為跳過這一步、直接沿用工具建議的 `soul_2` 無錨點生成，導致同批次 4 張圖臉孔不一致。
 - [ ] 裝置/鏡頭是否具體指定
 - [ ] 皮膚質感關鍵字是否存在
 - [ ] 光線配方是否符合場景類型：室內親密場景用「混合不均勻」，戶外/生活風格場景用「討喜自然光+淺景深」——**兩者都不等於「畫質差/調暗調糊」**
