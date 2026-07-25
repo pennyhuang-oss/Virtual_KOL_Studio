@@ -126,8 +126,10 @@ generate_image(
 ### 核心 Prompt 基礎結構（不變）
 
 ```
-22-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes (not dramatic), elegant facial features, slender graceful figure, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+22-year-old Indian woman, warm golden-brown skin, long dark black hair with subtle waves, large expressive dark eyes, natural lashes (not dramatic), elegant facial features, curvy dancer/yogi figure — 86cm bust (D cup), 60cm waist, 91cm hips, toned strong legs, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
 ```
+
+**身材數字**（來自 `profile.json` → `identity.appearance.measurements`）：bust 86cm / waist 60cm / hip 91cm / cup D / height 165cm。以後寫 prompt 時直接帶入這些具體數字，不要只用「slender」「graceful」這類模糊形容詞（現有已通過的舊圖不受影響，僅供未來生成批次參考）。
 
 **穿搭禁止**：`flowy floral kurta + wide-leg trousers` 類型不再使用。改以 yoga set、crop top、midriff-baring co-ords、緊身褲 / 棉質短裙為主。
 
@@ -327,3 +329,11 @@ sound = "on"
 aspect_ratio = "9:16"
 duration = 10
 ```
+
+---
+
+## 2026-07-25 新增：身材數字 + 風格參考
+
+- 核心 prompt 模板（見上方「核心 Prompt 基礎結構」）已補上實際身材數字（bust 86cm / waist 60cm / hip 91cm / cup D），取代模糊的 slender/graceful 形容詞。此為未來生成批次的補充，不影響現有已核准圖像、soul_id 或訓練紀錄。
+- 光源配方請參照 `SEXY_SCENE_LIBRARY.md`「3. 光源」的最新修正：室內親密場景（晨起/浴室/居家）維持原本「混合不均勻光」邏輯；戶外/生活風格場景改用新的「討喜自然光（黃金時段/戶外強光）+ 淺景深虛化 + 清晰高畫質」配方。
+- Ananya 的內容以孟買瑜伽、舞蹈、戶外生活風格為主，多數場景屬於戶外/明亮自然光類型，因此新配方適用於她大部分的內容（Marine Drive 海岸、公園黃金時段、健身/舞蹈等場景）；僅浴室、臥室晨起等室內親密場景沿用舊的混合光配方。

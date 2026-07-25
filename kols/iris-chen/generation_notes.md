@@ -124,8 +124,10 @@ localStorage.setItem('hf:image-form-upd', JSON.stringify(data));
 ### 核心 Prompt 基礎結構（不變）
 
 ```
-22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure, 87cm bust, D cup, 58cm waist, 90cm hips, black silky straight hair naturally down, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
 ```
+
+**2026-07-25 新增：身材數字 + 風格參考** — 核心 prompt 已補上明確身材數字（87cm bust, D cup, 58cm waist, 90cm hips，取自 `profile.json` 的 `identity.appearance.measurements`），取代單純用「curvy/hourglass」等形容詞，避免生成結果與人設數字對不上（此問題在 Vicky Lin 的用戶回饋中被發現）。未來新批次 prompt 請沿用上面帶數字的版本。另外，光源指示請參考 `SEXY_SCENE_LIBRARY.md` 「光源」章節的 2026-07-25 修正：Iris 的內容以台北戶外/街頭/咖啡廳生活場景為主，屬於新版「自然光 + 淺景深 + 清晰高畫質」配方（而非舊版刻意不完美/混合光源的室內親密場景配方），寫新 prompt 時請對應套用。此為前瞻性補充，不影響已批准的訓練圖與影片紀錄。
 
 ---
 
