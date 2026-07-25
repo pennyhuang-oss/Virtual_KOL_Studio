@@ -121,6 +121,8 @@
 
 ## 2026-07-25 Discovery 批次 — 臉部/風格候選圖（已生成，等待使用者挑選，尚未錨定、尚未訓練）
 
+**⚠️ 本節已被下方「2026-07-25 三次修正：改用 Seedream 4.5 重新生成 Discovery 批次」取代（superseded）**——本節記錄的 `soul_2` 批次已被使用者判定「4 張臉不一致」而退回，`candidate_01.png`–`candidate_04.png` 這 4 個檔名已重新命名為 `round1_candidate_01.png`–`round1_candidate_04.png`（詳見下方新章節）。以下內容純粹保留作為歷史記錄，**不代表目前檔案系統的實際檔名對應**。
+
 **狀態：⚠️ PENDING —— 這不是訓練圖批次，只是「選臉/選風格」用的探索性候選圖。尚未建立 Reference Element、尚未呼叫 `show_characters(action='train')`、`profile.json` 沒有 soul_id。**
 
 **觸發背景**：比照 Vicky Lin 案例學到的教訓——獨立文字生成（無身分錨點）每次都會讓模型重新「想像」一張符合描述但不是同一個人的臉，直接拿來訓練會導致多人臉部特徵平均/混合。因此這次採用兩階段流程：**先**用少量獨立生成的候選圖給使用者選出最喜歡的一張臉/風格，**再**用該張圖建立 Reference Element 錨定身分，之後才擴展成完整訓練圖批次。本輪僅執行第一階段。
@@ -145,6 +147,70 @@
 **⚠️ 下一步（不可跳過，且不可自動接續）**：
 1. 等待使用者從 4 張候選圖中挑出最喜歡的一張臉/風格
 2. 使用者選定後，才將該張圖上傳並透過 `show_reference_elements(action='create')` 建立 Reference Element 作為身分錨點（比照 Vicky Lin 第四輪做法）
+3. 用該 Element 錨定，重新生成完整的訓練圖批次（六個計畫批次，見上方「計畫批次 Prompt 規劃」章節），確保所有訓練圖為同一身分
+4. 使用者確認錨定後的訓練圖批次滿意後，才呼叫 `show_characters(action='train')` 執行 Soul 訓練
+5. 本輪**沒有**建立 Reference Element、**沒有**呼叫 `show_characters(action='train')`，`profile.json` 未變更，訓練狀態維持 **PENDING**
+
+---
+
+## 2026-07-25 三次修正：改用 Seedream 4.5 重新生成 Discovery 批次
+
+**狀態：⚠️ PENDING —— 仍是「選臉/選風格」的探索性候選圖，尚未建立 Reference Element、尚未呼叫 `show_characters(action='train')`、`profile.json` 沒有 soul_id、沒有訓練圖批次。**
+
+### 為什麼要重做
+
+上一輪（見上方「2026-07-25 Discovery 批次」章節）用 `soul_2`（無 soul_id 錨點）生成了 4 張候選圖，使用者檢視後判定**4 張臉根本不是同一個人**，予以退回。舊的 4 張圖已改名為 `round1_candidate_01.png`–`round1_candidate_04.png` 保留存查。
+
+根本原因：選 `soul_2` 之前沒有先檢查本專案自己已經驗證成功的範本。`kols/iris-chen/generation_notes.md` 明確記錄了 Iris Chen 這 6 位初代 KOL 的參考圖是用 `seedream_v4_5`（Seedream 4.5）生成的，且該檔案特別註記：**同一段文字 prompt 重複生成時，Seedream 4.5 生成的臉孔一致性高到「同 prompt 生 4 張會太像，所以每批次只生 2 張」**。這與 `soul_2` 在沒有 soul_id 錨點時「每次獨立呼叫都重新想像一張不同臉」正好相反——後者正是 Coco Wu 第一輪、以及同期 Rainie Hsu、Sophia Tseng、Mia Huang、Zoe Lai 等新角色 Discovery 批次翻車的共同原因。此教訓已寫入 `README.md`〈新增 KOL 流程〉第 5 點與 `SEXY_SCENE_LIBRARY.md` 檢查清單，訂為固定規則：**Discovery／訓練圖批次一律先用 `seedream_v4_5`，只有角色已有成功訓練出的 `soul_id` 時才改用 `soul_2` + 該 soul_id**。
+
+### 模型確認
+
+呼叫 `models_explore(action='get', model_id='seedream_v4_5')` 確認：
+- `quality`：`basic`（預設，最高 4K）或 `high`（最高約 6K）
+- `aspect_ratios`：包含 `9:16`（直式人像適用）
+- 無 `soul_id` 相關參數，純文字 prompt 生成
+
+### 本輪生成參數
+
+- 模型：`seedream_v4_5`
+- `aspect_ratio`: `9:16`
+- `quality`: `basic`（比照 Iris Chen 訓練圖先例，Discovery 探索階段不需要 4K/high）
+- `count`: 1（4 次獨立呼叫，非同一次呼叫的 batch，因每張角度/構圖不同）
+- Prompt：沿用本文件上方「核心 prompt 結構」已校準（含 89-56-86cm／E罩杯身材數字、fair porcelain-toned skin 修正、NOT narrow/sharp/almond-shaped 眼型註記）的身分描述逐字保持一致，僅替換角度/景別/姿勢細節，維持與舊 `soul_2` 批次相同的角度變化模式：正面臉部特寫／正面半身／四分之三側半身／正面全身
+- 場景延續舊批次設定：宿舍素色奶油牆面、追星小卡佈告欄、書桌一角、暖色檯燈與窗光混合；穿搭統一為奶油色開襟外套＋嬰兒粉削肩小可愛（candidate_04 全身圖加上奶油色百褶迷你裙與白色過膝襪）
+
+### Job ID 與費用
+
+`get_cost:true` 預飛檢查：每張約 1 credit（basic quality, 9:16, 1440×2560）。生成前餘額 15.35 credits。
+
+| 檔名 | 角度 / 景別 | Job ID | Seed |
+|------|------|--------|------|
+| candidate_01.png | 正面臉部特寫（front headshot） | `64cf63f0-c842-4886-88d5-907e63006e27` | 144539 |
+| candidate_02.png | 正面半身（front half-body） | `ae2bce14-df07-40cc-b661-02bcbc7d1940` | 468673 |
+| candidate_03.png | 四分之三側半身（3/4 half-body） | `486dbfe9-7f89-486b-bc9f-6813957ae4de` | 279915 |
+| candidate_04.png | 正面全身（front full-body） | `76d297f3-0987-400e-8c02-95005e8987c2` | 722641 |
+
+4 張皆一次生成成功，無 rate limit 或失敗重試，共花費約 4 credits。
+
+**產出檔案**：`kols/coco-wu/images/face_reference/candidate_01.png` – `candidate_04.png`（**覆蓋了同名的舊 `soul_2` 檔案**——舊檔已在生成前改名為 `round1_candidate_01.png`–`round1_candidate_04.png`，不會被覆蓋遺失）。
+
+### ⚠️ 誠實的臉部一致性評估（已實際目視比對 4 張圖，非假設）
+
+用 Read 工具實際打開並比對全部 4 張圖後的結論：**這次明顯是同一個人，四張圖具備高度一致的臉部識別特徵**，具體比對如下：
+
+- **臉型**：4 張都是圓潤的娃娃臉，臉頰飽滿度一致
+- **眼睛**：4 張都是大而圓的雙眼皮眼睛、深棕色眼珠、眼型走向一致（都不是細長/上揚），符合「NOT narrow, sharp, or almond-shaped」的要求
+- **鼻子/嘴唇**：鼻梁高度與嘴唇形狀（微豐滿、珊瑚橘色唇膏）在 4 張圖中辨識度一致
+- **髮型**：黑棕色長波浪捲髮＋蓬鬆劉海的分線位置、捲度、髮色在 4 張圖中幾乎相同
+- **梨渦/笑容**：candidate_01、candidate_03、candidate_04 微笑/大笑時梨渦位置一致；candidate_03 因為是大笑張嘴的動態表情，五官被拉開比例略有變化，但整體臉部結構（尤其是眼睛與髮際線）仍可辨認是同一人，不是換了一張臉
+- **場景/服裝延續性**：4 張圖共用同一個宿舍場景（同一個追星小卡佈告欄、同一盞暖黃檯燈、同一張書桌）、同一件奶油色開襟外套與嬰兒粉小可愛，這本身雖非身分判斷依據，但強化了「這是同一次拍攝、同一個人」的視覺敘事一致性
+
+**結論**：`seedream_v4_5` 在本輪 4 張獨立生成中確實展現了遠優於 `soul_2`（無錨點）的臉部一致性，印證了 `kols/iris-chen/generation_notes.md` 記載的模型特性。這 4 張已經是「同一人不同角度」的合格候選圖，可以進入下一步的使用者選臉流程；不像上一輪 `soul_2` 那樣是「同類型但不同人」的 4 張圖。
+
+### ⚠️ 下一步（不可跳過，且不可自動接續）
+
+1. 等待使用者從 4 張候選圖中挑出最喜歡的一張臉/風格
+2. 使用者選定後，才將該張圖上傳並透過 `show_reference_elements(action='create')` 建立 Reference Element 作為身分錨點
 3. 用該 Element 錨定，重新生成完整的訓練圖批次（六個計畫批次，見上方「計畫批次 Prompt 規劃」章節），確保所有訓練圖為同一身分
 4. 使用者確認錨定後的訓練圖批次滿意後，才呼叫 `show_characters(action='train')` 執行 Soul 訓練
 5. 本輪**沒有**建立 Reference Element、**沒有**呼叫 `show_characters(action='train')`，`profile.json` 未變更，訓練狀態維持 **PENDING**

@@ -12,8 +12,8 @@
 | 名字 | Zoe Lai（賴柔伊） |
 | 年齡 | 26 歲 |
 | 國籍 | 台灣（花蓮出身，衝浪季移動到墾丁） |
-| 臉型 | 曬過的橢圓臉、笑容自然大方，直眉，鼻樑和上頰有淡淡雀斑，眼神因常年面對海面反光而有輕微瞇眼、警覺又放鬆。無修飾感，健康、有點風霜的耐看 |
-| 身材 | 游泳選手/衝浪者體態——肩背因划水結實，腰腹精瘦有線條，腿部有力，臀部天生曲線，均勻深色年曬肌膚。強壯、實用型身材，不是健身房雕塑出來的樣子 |
+| 臉型 | 白皙、溫潤有光澤的橢圓臉、笑容自然大方，直眉，鼻樑和上頰有淡淡雀斑，眼神因常年面對海面反光而有輕微瞇眼、警覺又放鬆。無修飾感，健康、白皙的耐看（不是曬黑/古銅色調） |
+| 身材 | 游泳選手/衝浪者體態——肩背因划水結實，腰腹精瘦有線條，腿部有力，臀部天生曲線，白皙細緻的肌膚（即使常年戶外活動、認真防曬也維持白皙，不是深色年曬肌膚）。強壯、實用型身材，不是健身房雕塑出來的樣子 |
 | 髮型 | 海浪波浪捲長髮，深棕色髮尾被鹽和陽光曬淺，幾乎總是鹽風吹亂或鬆散編成的辮子 |
 | 眼鏡 | 無 — 偶爾把太陽眼鏡推到頭髮上，不戴著 |
 | 穿衣風格 | 比基尼是日常打底；外面隨手套寬大男裝襯衫或素T，牛仔短褲，大多數時候光腳 |
@@ -25,14 +25,15 @@
 > 純物理描述，不參照任何真實名人或藝人臉型。
 
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern, athlete's, or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint
 from years facing open water, athletic swimmer/surfer build with soft feminine curves, toned shoulders
 and upper back from paddling (never blocky, vascular, or heavily muscled), 88cm bust (D cup, full and
 naturally curvy), 59cm waist (lean with only a subtle soft hint of core tone), 90cm hips (naturally
-curvy, shapely thighs), strong but shapely legs, deep even golden tan,
-visible skin pores, subtle natural skin texture, true-to-life unretouched skin texture with visible tan lines,
+curvy, shapely thighs), strong but shapely legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed,
+visible skin pores, subtle natural skin texture, true-to-life unretouched skin texture,
 long beachy wave dark brown hair lightened at the ends from sun and salt, salt-tousled or in a loose undone braid,
 [SCENE], wearing [OUTFIT — bikini as daily basewear, natural beach-appropriate color coordination, not
 overly styled or fashion-shoot posed], [MINIMAL ACCESSORY — a simple watch, sunglasses pushed up into
@@ -41,17 +42,17 @@ mid-laugh, teaching, caught mid-motion, NOT a static posed beach-model stance],
 [NATURAL FLATTERING LIGHT — golden hour dawn patrol, bright midday sun, or sunset backlight; shallow
 depth of field with soft blurred bokeh background],
 high dynamic range, crisp sharp focus on subject, high natural contrast, slightly overexposed highlights,
-natural color grading — NOT degraded, grainy, or dim, true-to-life unretouched skin texture with visible tan lines,
+natural color grading — NOT degraded, grainy, or dim, true-to-life unretouched skin texture,
 candid outdoor lifestyle photo, shot on iPhone or action camera with crisp high-quality output, Instagram style
 ```
 
 **風格關鍵詞備註**：
-- 一定要保留 `true-to-life unretouched skin texture`、`visible skin pores`、`visible tan lines`——這是 Zoe 美學的核心，跟其他角色的「精緻磨皮感」相反
+- 一定要保留 `true-to-life unretouched skin texture`、`visible skin pores`——這是 Zoe 美學的核心（毛孔、自然瑕疵等「質感真實」），跟其他角色的「精緻磨皮感」相反；**但「visible tan lines」與任何實際曬黑的膚色描述已於 2026-07-25 移除**——質感真實（毛孔、非磨皮）跟膚色深淺是兩件事，Zoe 的膚色設定改為白皙，只有質感維持不磨皮
 - **三圍數字（88cm bust／D cup、59cm waist、90cm hips，見 `profile.json` 的 `measurements`）已直接寫進核心 prompt 本體**，不再只靠「naturally curvy」這種模糊形容詞帶過
 - **光線預設為新版「討喜自然光」配方**：黃金時段晨光（dawn patrol）、正午亮光、日落逆光，均搭配淺景深背景虛化 + crisp high dynamic range；只有極少數室內公寓/小貨車場景（見下方批次規劃 2）可以保留舊版「混合不均勻」配方，其餘場景一律不得使用「uneven/degraded/dim/muddy」這類把畫質往下拉的字——真實感來自皮膚質感、生活雜物與鏡頭裝置破綻，不是靠調暗調糊
 - 禁止出現裸露或性暗示相關詞彙；服裝上限是比基尼/泳裝，符合海灘網紅帳號的主流尺度；配件維持極簡（手錶、推上頭頂的墨鏡、細腳鍊，符合她低維護的人設，不要堆疊配件變成刻意造型）
 - 姿勢預設為動態抓拍（走路、划水、教學互動中的笑場），避免靜態擺拍的「網紅拍照姿勢」感
-- **每個 prompt 均須落實 `SEXY_SCENE_LIBRARY.md`「降低「AI 感」的技術要點」五項checklist**（2026-07-24 新增，2026-07-25 光源項修正）：具體皮膚質感關鍵字（毛孔、非磨皮、自然瑕疵、曬痕）、逐場景明確的裝置/鏡頭破綻（前鏡頭自拍 vs. 後鏡頭 vs. 運動相機、對焦軟化、高光爆掉、鏡頭上的水珠、動態模糊、壓縮痕跡）、對應場景類型的正確光源配方（戶外用討喜自然光+淺景深，室內例外場景才用混合不均勻）、具體生活雜物背景（沙子、蠟塊、隨手丟的毛巾、板具、防曬乳）、完整明確的服裝描述、三圍數字是否直接寫入而非模糊帶過
+- **每個 prompt 均須落實 `SEXY_SCENE_LIBRARY.md`「降低「AI 感」的技術要點」五項checklist**（2026-07-24 新增，2026-07-25 光源項修正，2026-07-25 膚色基調項修正）：具體皮膚質感關鍵字（毛孔、非磨皮、自然瑕疵——不含曬痕，膚色基調需為白皙）、逐場景明確的裝置/鏡頭破綻（前鏡頭自拍 vs. 後鏡頭 vs. 運動相機、對焦軟化、高光爆掉、鏡頭上的水珠、動態模糊、壓縮痕跡）、對應場景類型的正確光源配方（戶外用討喜自然光+淺景深，室內例外場景才用混合不均勻）、具體生活雜物背景（沙子、蠟塊、隨手丟的毛巾、板具、防曬乳）、完整明確的服裝描述、三圍數字是否直接寫入而非模糊帶過
 
 **⚠️ 2026-07-25 燈光/身材數字校準**：使用者在 Vicky Lin 身上驗證過「真實感 ≠ 畫質差」之後，回頭檢查 Zoe 的草稿發現同樣的舊思路殘留：(1) 核心 prompt 只寫「naturally curvy hips」等模糊詞，沒有把 `profile.json` 裡已經確認的三圍數字（88-59-90cm，D 罩杯）寫進去；(2) 部分批次沿用「uneven light falloff」「film grain」「compression banding」把整體畫面往「做舊/偏暗」的方向拉，即使場景本身是黃金時段海邊或正午豔陽這種本來就該明亮清晰的光線；(3) 身材描述裡的「lean defined core」用詞有跟 Vicky 第一輪犯的「健美選手」錯誤同樣的風險，需要比照 `profile.json` 已修正版本明確排除「blocky / vascular / heavily muscled」。這次校準：三圍數字直接寫入核心 prompt 與全部 6 個批次；除了批次規劃 2（室內小房間鏡前）保留原本的室內混合光源配方外，其餘 5 個批次全部改用「黃金時段/正午豔陽/日落逆光 + 淺景深虛化 + crisp high dynamic range」的新配方，並在每個 prompt 明講 `NOT degraded, grainy, or dim`；臉部與身材描述統一比照 `profile.json` 已修正的「gorgeous beach-influencer, NOT athlete/masculine」語言，移除「lean defined core」之類有風險的字眼。`character.md`／`profile.json` 的外型描述本身不變動，只是把已經確認的設定確實寫進實際會送出生成的 prompt 字串裡。
 
@@ -67,14 +68,15 @@ candid outdoor lifestyle photo, shot on iPhone or action camera with crisp high-
 
 **草稿 Prompt**：
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint,
 athletic swimmer/surfer build with soft feminine curves, toned shoulders and upper back from paddling
 (never blocky or heavily muscled), 88cm bust (D cup, full and naturally curvy), 59cm waist (lean with
 only a subtle soft hint of core tone), 90cm hips (naturally curvy, shapely thighs), strong but shapely
-legs, deep even golden tan, long beachy wave dark brown hair in a loose undone braid,
-visible skin pores, subtle natural skin texture, faint tan line at swimsuit strap edge, slight oil sheen on T-zone,
+legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed, long beachy wave dark brown hair in a loose undone braid,
+visible skin pores, subtle natural skin texture, slight oil sheen on T-zone,
 unretouched skin detail, natural skin imperfections,
 walking toward the beach before sunrise carrying a surfboard under one arm, wearing a black one-piece swimsuit,
 dynamic candid walking pose mid-stride viewed from the side, caught in natural motion not posed for camera,
@@ -102,14 +104,15 @@ high natural contrast, candid outdoor lifestyle photo, Instagram style
 > **⚠️ 唯一保留室內混合光源配方的批次**：這是小房間室內鏡前場景，符合 `SEXY_SCENE_LIBRARY.md` 2026-07-25 修正後允許的「室內公寓例外」，維持原本的「混合、不均勻」光源邏輯，但同樣不能整體偏暗/偏糊——依然要清晰明亮，只是光源組成是室內窗光+燈光混色，而不是戶外討喜自然光配方。
 
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint,
 athletic swimmer/surfer build with soft feminine curves, toned shoulders and upper back from paddling
 (never blocky or heavily muscled), 88cm bust (D cup, full and naturally curvy), 59cm waist (lean with
 only a subtle soft hint of core tone), 90cm hips (naturally curvy, shapely thighs), strong but shapely
-legs, deep even golden tan, long beachy wave dark brown hair salt-tousled and loose,
-visible skin pores, subtle natural skin texture, faint tan lines at shoulder and hip from bikini straps,
+legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed, long beachy wave dark brown hair salt-tousled and loose,
+visible skin pores, subtle natural skin texture,
 slight oil sheen on T-zone from morning humidity, unretouched skin detail, natural skin imperfections,
 standing in front of a small bedroom mirror, wearing a black triangle bikini with an oversized faded
 men's button-down shirt worn fully open over it, natural beach-appropriate color coordination not
@@ -135,14 +138,15 @@ full body mirror shot, candid unposed moment, high natural contrast, Instagram s
 
 **草稿 Prompt**：
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint,
 athletic swimmer/surfer build with soft feminine curves, toned shoulders and upper back from paddling
 (never blocky or heavily muscled), 88cm bust (D cup, full and naturally curvy), 59cm waist (lean with
 only a subtle soft hint of core tone), 90cm hips (naturally curvy, shapely thighs), strong but shapely
-legs, deep even golden tan, wet long beachy wave dark brown hair slicked back from rinsing,
-visible skin pores on wet skin, subtle natural skin texture, faint tan lines where the bikini sits,
+legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed, wet long beachy wave dark brown hair slicked back from rinsing,
+visible skin pores on wet skin, subtle natural skin texture,
 unretouched skin detail, natural skin imperfections,
 standing under an outdoor beach rinse shower, wearing a black bikini, head tilted back with eyes closed,
 candid unposed moment caught mid-motion not performing for camera,
@@ -169,14 +173,15 @@ Instagram style
 
 **草稿 Prompt**：
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint,
 athletic swimmer/surfer build with soft feminine curves, toned shoulders and upper back from paddling
 (never blocky or heavily muscled), 88cm bust (D cup, full and naturally curvy), 59cm waist (lean with
 only a subtle soft hint of core tone), 90cm hips (naturally curvy, shapely thighs), strong but shapely
-legs, deep even golden tan, long beachy wave dark brown hair down and windblown,
-visible skin pores, subtle natural skin texture, faint tan lines visible at bikini edges, slight oil
+legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed, long beachy wave dark brown hair down and windblown,
+visible skin pores, subtle natural skin texture, slight oil
 sheen from the day's heat, unretouched skin detail, natural skin imperfections,
 standing on a beachside guesthouse balcony in Kenting, a surfboard with visible wax residue resting
 against the peeling-paint railing beside her, wearing a bikini with denim cutoff shorts, natural
@@ -202,14 +207,15 @@ high natural contrast, candid travel lifestyle photo, Instagram style
 
 **草稿 Prompt**：
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint,
 athletic swimmer/surfer build with soft feminine curves, toned shoulders and upper back from paddling
 (never blocky or heavily muscled), 88cm bust (D cup, full and naturally curvy), 59cm waist (lean with
 only a subtle soft hint of core tone), 90cm hips (naturally curvy, shapely thighs), strong but shapely
-legs, deep even golden tan, long beachy wave dark brown hair loose and slightly damp from the day's heat,
-visible skin pores, subtle natural skin texture, faint tan lines at the collar and sleeve edge, slight
+legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed, long beachy wave dark brown hair loose and slightly damp from the day's heat,
+visible skin pores, subtle natural skin texture, slight
 oil sheen on T-zone from the afternoon humidity, unretouched skin detail, natural skin imperfections,
 lying in a hammock on a small apartment balcony, one leg draped over the side, wearing an oversized
 faded grey cotton t-shirt with a black bikini visible at the collar, no bra line showing, bare legs,
@@ -235,15 +241,16 @@ high natural contrast, candid unposed lifestyle photo, Instagram style
 
 **草稿 Prompt**：
 ```
-26-year-old Taiwanese woman, strikingly beautiful sun-warmed oval face with a gorgeous wide smile,
+26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
+fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
 gorgeous beach-influencer good looks (NOT a stern or masculine look), straight dark brows,
 light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint,
 athletic swimmer/surfer build with soft feminine curves, toned shoulders and upper back from paddling
 (never blocky or heavily muscled), 88cm bust (D cup, full and naturally curvy), 59cm waist (lean with
 only a subtle soft hint of core tone), 90cm hips (naturally curvy, shapely thighs), strong but shapely
-legs, deep even golden tan, long beachy wave dark brown hair pulled back loosely,
-visible skin pores, subtle natural skin texture showing muscle definition without excess gloss, faint
-tan lines at bikini edges, slight sweat sheen on shoulders and lower back, unretouched skin detail,
+legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed, long beachy wave dark brown hair pulled back loosely,
+visible skin pores, subtle natural skin texture showing muscle definition without excess gloss,
+slight sweat sheen on shoulders and lower back, unretouched skin detail,
 natural skin imperfections,
 doing a focused standing beach yoga stretch on the sand, full body, wearing a black sport bikini,
 eyes closed or gaze downward, absorbed in the stretch not performing for camera, dynamic candid
