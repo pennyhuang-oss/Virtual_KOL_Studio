@@ -1,7 +1,7 @@
 # Rainie Hsu — AI 生成規劃
 
 > **狀態：PENDING（Soul 訓練與正式訓練集尚未執行）**
-> 本文件是生成前的規劃文件，不是生產記錄。2026-07-25 已生成 4 張臉部/風格選角候選圖（`candidate_01`–`candidate_04`，見下方「2026-07-25 臉部/風格選角候選批次」），供使用者挑選，但**尚未**建立 Reference Element、**尚未**進行任何正式訓練圖生成、Soul 訓練或影片生成。
+> 本文件是生成前的規劃文件，不是生產記錄。2026-07-25 第一輪用 `soul_2` 生成 4 張候選圖（`round1_candidate_01`–`round1_candidate_04`，見下方「臉部/風格選角候選批次」），已被使用者否決（臉不一致＋妝容過濃）。同日改用 `seedream_v4_5` 並修正 prompt 本體妝容描述後重新生成第二輪候選圖（`candidate_01`–`candidate_03`，第 4 張因帳戶額度不足尚未生成，見下方「三次修正」章節），供使用者挑選，但**尚未**建立 Reference Element、**尚未**進行任何正式訓練圖生成、Soul 訓練或影片生成。
 > soul_id、Reference Element ID、正式訓練圖 job ID／張數、Soul 訓練完成日期等欄位待實際執行後才會填入 —— 本文件中不包含任何一項，也不應在完成前臆造。
 
 ---
@@ -169,12 +169,50 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 ---
 
+## 2026-07-25 三次修正：改用 Seedream 4.5 並修正妝感 prompt 本體
+
+**背景與根本問題**：第一輪候選批次（上方章節，`round1_candidate_01–04.png`）被使用者否決，原因有二：(1) 四張臉不夠像同一個人，(2) 妝容讀起來太濃烈/戲劇化。已排查出兩個根本原因：
+
+1. **模型選擇錯誤**：第一輪用了 `soul_2`（無 soul_id）。`soul_2` 在沒有訓練好的 soul_id 錨定身分的情況下，每一次獨立呼叫都會重新想像一張臉，這正是本工作室在 `kols/iris-chen/generation_notes.md` 已驗證記錄的模型特性——Iris Chen 的原始 6 位 KOL 參考圖全部改用 `seedream_v4_5`（Seedream 4.5），文件明確記載「同 prompt 下生成臉型高度一致，一致到 4 張會太像，所以每批次只生成 2 張」。這是本工作室目前唯一有實證的「無 soul_id 情況下維持臉型一致」做法，`README.md`「新增 KOL 流程」步驟 5 與 `SEXY_SCENE_LIBRARY.md` checklist 已新增此規則。第一輪選 `soul_2` 是誤信了 `generate_image` 工具說明裡「soul_2 for one-off character refs」的通用建議，沒有先查本репо自己的實證紀錄。這次已改正，全數使用 `seedream_v4_5`。
+2. **Prompt 本體從未真正修正**：`profile.json` 與 `character.md` 的妝容描述早先已軟化為「a naturally defined, thin eyeliner (NOT thick, heavy, or exaggerated winged liner), a soft rosy or berry lip tint (not a bold statement red/dark lip)」，但本文件（`generation_notes.md`）的 `core_prompt_base` 與批次規劃 1–6 的**實際英文 prompt 字串**當時完全沒有跟著改——`precise winged cat-eye eyeliner`、`bold red or dark statement lip color` / `bold red statement lip` / `bold dark statement lip` 這些舊字眼原封不動地重複出現在送進生成模型的 prompt 本體裡。這才是第一輪妝容讀起來依然濃烈的真正原因：character-sheet 的文字改了，但實際送進模型的 prompt 沒有改。本次已將 `core_prompt_base`（見上方「核心 Prompt 結構」）以及批次規劃 1–6 的全部草稿 prompt 逐一改為：`large striking dark eyes ... softly defined by a naturally thin eyeliner (NOT a heavy, thick, or exaggerated winged/cat-eye liner) ... a soft rosy or berry lip tint (NOT a bold statement red/dark lip)`，並在 `core_prompt_base` 本體（不只是 `profile.json`）明確加入膚色描述：`fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored)`。批次規劃 1 的場景標題與描述也一併從「貓眼眼線特寫」改為「自然眼線特寫」，避免場景概念本身還在暗示戲劇性貓眼。批次規劃 1 提及的化妝台唇膏道具也從「an uncapped red lipstick」改為「an uncapped berry-toned lipstick」以維持一致。
+
+**模型確認**：呼叫 `models_explore(action='get', model_id='seedream_v4_5')` 確認可用——`provider_name: Bytedance`，4K 輸出，支援 `aspect_ratios` 含 `9:16`，`quality` 參數 `basic`/`high`（預設 `basic`）。
+
+**新批次 Prompt 設計**：沿用修正後的 `core_prompt_base` 外觀描述（含新版妝容與膚色文字），四張圖的臉部特徵、三圍數字、髮型、服裝（黑色緞面細肩帶貼身洋裝＋層次金項鍊＋金圈耳環）、燈光（素色鴿灰攝影棚背景，自然窗光混合暖色環境反射光）、直視鏡頭的自覺眼神在四張圖之間**完全相同**，僅變化鏡頭角度／景別，比照第一輪的設計方式：
+
+| 檔名 | 角度／景別 | Job ID | 狀態 |
+|------|-----------|--------|------|
+| candidate_01.png | 正面臉部特寫（headshot） | `8b6939d5-12cc-4a25-91c1-6dcbf107fd12` | ✅ 完成 |
+| candidate_02.png | 正面半身（half-body） | `30c12337-72c8-4f93-a521-6e53ccb4ce0d` | ✅ 完成 |
+| candidate_03.png | 四分之三側半身（3/4 half-body） | `ea1ac03f-a123-457d-a521-e4e534b0f875` | ✅ 完成 |
+| candidate_04.png（全身，正面全身） | 未生成 | — | ❌ **未執行** |
+
+**⚠️ 費用與帳戶餘額限制（誠實記錄，不可省略）**：`get_cost:true` 預檢每張 1 credit（`credits_exact: 1`）。前三張依序生成成功（皆為 `completed`，無卡住或重試）。第四張（全身版）呼叫時收到工作室帳戶回傳的明確錯誤：**「Out of credits in the selected workspace」**。事後查詢 `balance`：帳戶餘額僅剩 **0.35 credits**（`plan_type: ultra`），不足以支付第四張圖所需的 1 credit。因此**本批次只完成 3 張（candidate_01–03），第 4 張（全身版）尚未生成**，等待帳戶儲值/額度恢復後再補生成，不臆造第 4 張的結果。
+
+**產出檔案**（`kols/rainie-hsu/images/face_reference/`，共 3 張，已用 Read 工具逐張目視檢查）：`candidate_01.png`、`candidate_02.png`、`candidate_03.png`。
+
+**誠實視覺評估**：
+
+- **臉型一致性 — ✅ 明顯改善**：三張圖之間是同一張臉——相同的臉型輪廓、眉眼距離、鼻樑、唇形、髮際線，膚色皆為白皙透亮的瓷肌（沒有曬黑/古銅感）。這證實了 Seedream 4.5 在無 soul_id 情況下、同 prompt 重複呼叫確實能維持高度臉型一致性，與 Iris Chen 案例的既有記錄相符，明顯優於第一輪 `soul_2` 產出的四張不同臉。
+- **妝容 — ⚠️ 部分改善，未達完全「柔和」**：眼線比第一輪明顯收斂，不再是誇張上揚甩尾的濃厚貓眼，讀起來偏向乾淨俐落的細線；但三張圖的外眼角仍帶有一絲極輕微的上揚細尾，不是完全平貼、零上揚的自然眼線，介於「純自然」與舊版「精緻貓眼」之間，比舊版柔和很多但仍有一點點戲劇感的痕跡。唇色是飽和度偏高的莓紅/酒紅色調——技術上符合 prompt 裡「soft rosy or berry lip tint」的「berry」選項，膚色與眼線確實比第一輪柔和許多，但唇色本身仍相當濃郁飽和，一般觀眾仍可能讀成偏濃烈而非「淡雅柔和」的唇妝，還沒有完全達到「絕對不會被誤讀為 statement lip」的程度。**結論：方向正確且有實質改善（不再是明顯的厚重貓眼＋正紅唇），但如果使用者對「柔和」的要求是更接近全素顏或极淡唇彩，可能還需要再收斂一輪唇色飽和度。**
+
+**⚠️ 下一步（不可跳過，維持既有規則）**：
+1. **待使用者決定**：是否要（a）先用現有 3 張（candidate_01–03）供挑選，等帳戶額度恢復後再補第 4 張全身版；或（b）等額度恢復後一次生成完整 4 張再一起挑選。
+2. 依照 README.md「新增 KOL 流程」與 `KOL_TRAINING_SOP.md` 的強制規則，**必須停下來，等使用者實際看過候選圖並明確指出最喜歡的一張（或說明妝容/臉型是否仍需調整）後，才可以進入下一階段**——下一階段流程仍為：(1) 使用者核准單一一張圖後上傳並建立 Reference Element，(2) 以該 Element 錨定身分重新生成完整訓練集，(3) 訓練圖確認後才呼叫 `show_characters(action='train')` 建立 soul_id。
+3. 本輪（第二輪修正批次）**沒有**建立 Reference Element，**沒有**呼叫 `show_characters(action='train')`，`profile.json` 的 `ai_generation`／soul_id 維持原狀未變更，訓練狀態明確標記為 **PENDING**。
+
+**⚠️ 本輪任務到此停止，等待使用者對 candidate_01–03（以及是否需要補第 4 張）給出明確回饋，不自行往下一階段推進。**
+
+---
+
 ## 尚未執行事項清單
 
 - [ ] 批次規劃 1–6 尚未送出生成（此為之後完整訓練集規劃，待 Reference Element 錨定後才依此重新調整生成）
-- [x] 臉部/風格選角候選批次（4 張，`candidate_01`–`candidate_04`）已生成，等待使用者挑選
+- [x] 臉部/風格選角候選批次 — 第一輪（4 張，`round1_candidate_01`–`round1_candidate_04`）已生成，已被使用者否決
+- [x] 臉部/風格選角候選批次 — 第二輪修正（`seedream_v4_5` + 修正妝感 prompt，`candidate_01`–`candidate_03` 已生成；`candidate_04` 因帳戶額度不足尚未生成）
 - [ ] 使用者尚未挑選出核准的候選圖
+- [ ] 第 4 張（全身版）候選圖因帳戶餘額僅 0.35 credits（需要 1 credit）尚未生成，待額度恢復
 - [ ] 尚無 Reference Element
 - [ ] 尚無 Soul 訓練、尚無 soul_id
 - [ ] 尚無任何用於最終訓練集或影片生成的圖片/影片檔案
-- [ ] 尚無模型選擇的實測結論（例如 Seedream vs. 其他模型對此臉型設定的適配度）
+- [x] 模型選擇的實測結論：`seedream_v4_5` 在無 soul_id 情況下同 prompt 重複生成臉型高度一致，優於 `soul_2`（無 soul_id 時每次獨立想像新臉），與 Iris Chen 案例記錄相符

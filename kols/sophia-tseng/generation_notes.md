@@ -23,27 +23,63 @@
 
 ---
 
-## Face/Style 探索批次（Discovery Batch）— 2026-07-25
+## Face/Style 探索批次（Discovery Batch）— 2026-07-25（第一輪，已否決）
 
-> **status: PENDING — 等待使用者從中挑選喜歡的臉／風格。** 這一批只是「找臉」用的探索批次，**尚未建立 Reference Element、尚未 anchor、尚未進入 Soul 訓練**。待使用者從下列 4 張中選出最喜歡的一張後，才會用該張建立 Reference Element 錨定身分，接著才依「計畫批次 Prompt 規劃」的 6 個批次擴充成完整訓練圖集（沿用 Vicky Lin 案例確立的兩階段流程：獨立生成不共享身分，須先找到核可臉孔，再錨定＋擴充）。
+> **status: REJECTED — 已被使用者否決，改用 Seedream 4.5 重新生成（見下方「2026-07-25 三次修正」章節）。** 這一批是「找臉」用的第一輪探索批次，用 `soul_2`（無 `soul_id`）text-only 生成，**未建立 Reference Element、未 anchor、未進入 Soul 訓練**。使用者反饋：4 張彼此臉型不一致（`soul_2` 沒有 `soul_id` 時每次獨立生成都是不同臉），且整體「太醜，不是標準美女的長相」——兩個問題都指向同一個根因：`soul_2` 沒有可重複使用的身分錨點，加上當時的臉部描述用詞（「calm, distant, languid」語感）偏冷、偏疏離。檔案已改名為 `round1_candidate_01.png`–`round1_candidate_04.png` 保留備查，**不再作為候選**。
 
 - **平台／模型**：Higgsfield，`soul_2`（Higgsfield Soul 2.0，text-only 一次性角色參考，**未帶 `soul_id`**——尚無 Soul 可用）；quality 2k
-- **Prompt 來源**：直接沿用本檔案上方已校準（2026-07-25）的核心 Prompt 結構（含 168cm／88-58-89cm／D 罩杯等三圍數字、臉部防呆用詞、室內奢華光線配方一），五官／身材／氣質描述在 4 張之間完全一致，僅變化角度與構圖
+- **Prompt 來源**：當時沿用的核心 Prompt 結構（含 168cm／88-58-89cm／D 罩杯等三圍數字、室內奢華光線配方一），但臉部描述仍是修正前的「calm composed eyes... subtle relaxed curve」語感，**未包含**溫暖真笑、主流美女錨定、或膚色白皙的用詞
 - **成本**：generate_image 帳前預檢（get_cost）估算約 0.12 credits／張；實際生成後帳戶餘額由 18.23 → 16.07 credits，本批次 4 張實際共花費 **2.16 credits**
-- **產出**：4 張候選圖，已存於 `kols/sophia-tseng/images/face_reference/`
+- **產出**：4 張候選圖，已否決，改名保存於 `kols/sophia-tseng/images/face_reference/`
 
-| 檔名 | 角度／構圖 | Job ID | 狀態 |
+| 檔名（已改名） | 角度／構圖 | Job ID | 狀態 |
 |------|-----------|--------|------|
-| candidate_01.png | 正面特寫大頭照（headshot） | `0d40d2f1-8ce3-4a1f-863d-a5a6ae7f3491` | 已完成，等待挑選 |
-| candidate_02.png | 正面半身（waist-up） | `11b6948e-aebc-40c7-aace-5fd37300d907` | 已完成，等待挑選 |
-| candidate_03.png | 3/4 側身半身，頭轉回鏡頭 | `4936f551-9e0f-4fde-b95b-41e7bb9638b3` | 已完成，等待挑選 |
-| candidate_04.png | 正面全身（head-to-toe） | `6b2b5927-5ec7-4fc6-ac6e-fdcacc828785` | 已完成，等待挑選 |
+| round1_candidate_01.png | 正面特寫大頭照（headshot） | `0d40d2f1-8ce3-4a1f-863d-a5a6ae7f3491` | ❌ 已否決（臉部不一致＋不夠主流美女） |
+| round1_candidate_02.png | 正面半身（waist-up） | `11b6948e-aebc-40c7-aace-5fd37300d907` | ❌ 已否決 |
+| round1_candidate_03.png | 3/4 側身半身，頭轉回鏡頭 | `4936f551-9e0f-4fde-b95b-41e7bb9638b3` | ❌ 已否決 |
+| round1_candidate_04.png | 正面全身（head-to-toe） | `6b2b5927-5ec7-4fc6-ac6e-fdcacc828785` | ❌ 已否決 |
 
-**下一步（尚未執行，等待使用者指示）**：
-1. 使用者從 4 張候選圖中挑出最喜歡的臉／風格
-2. 用該張建立 Reference Element 錨定身分
-3. 以此 Reference Element 為基礎，依「計畫批次 Prompt 規劃」6 個批次擴充成完整訓練圖集
+**下一步（已執行，見下方章節）**：
+1. ~~使用者從 4 張候選圖中挑出最喜歡的臉／風格~~ → 使用者否決全部 4 張
+2. 改用 `seedream_v4_5`（工作室唯一驗證過能穩定輸出一致臉孔的模型，見 `iris-chen/generation_notes.md`）＋修正後的臉部描述，重新跑第二輪探索批次
+3. 待使用者從第二輪 4 張中挑出喜歡的臉／風格後，才建立 Reference Element 錨定身分，依「計畫批次 Prompt 規劃」6 個批次擴充成完整訓練圖集
 4. 挑選訓練圖後才進入 Soul 訓練（`status: PENDING`，尚未開始）
+
+---
+
+## 2026-07-25 三次修正：改用 Seedream 4.5 並修正臉部描述 prompt 本體
+
+> **status: PENDING — 等待使用者從第二輪 4 張中挑選喜歡的臉／風格。** 本次修正處理兩個根本問題：(1) 模型選錯——`soul_2` 沒有 `soul_id` 時每次獨立生成都是不同臉，這正是本工作室唯一驗證有效的做法（見 `iris-chen/generation_notes.md`）明確警告過的問題，改用 `seedream_v4_5`（同一份 text prompt 能穩定輸出高度一致的臉孔）；(2) 臉部描述 prompt 本體從未真正跟上 `profile.json` 已修正的 `face_type` 用詞——上面「核心 Prompt 結構」區塊原本仍寫著 `calm composed eyes with a quiet self-assured gaze` 與 `full lips with a subtle relaxed curve`，沒有明講「真笑」、沒有「主流美女」錨定用詞、也完全沒提到膚色白皙，這次已直接改寫該區塊本體（見上方「核心 Prompt 結構」，**不是**只改 `profile.json`／`character.md`）。
+
+### 改動內容
+
+1. **模型**：`soul_2`（無 soul_id，text-only）→ **`seedream_v4_5`**
+2. **核心 Prompt 本體修正**（`generation_notes.md` 上方「核心 Prompt 結構」區塊，已直接改寫，非規劃草稿）：
+   - 舊：`calm composed eyes with a quiet self-assured gaze (rounded and warm, NOT narrow or almond-shaped)` → 新：`oval face with warm, wide, expressive eyes (rounded and warm, NOT narrow, sharp, almond-shaped, or cold/blank)`
+   - 舊：`full lips with a subtle relaxed curve` → 新：`full soft lips with a warm, gentle, genuine smile (NOT a flat, distant, or languid expression)`
+   - 新增膚色白皙用詞：`fair, luminous porcelain-toned glowing skin ... (NOT tanned, bronzed, olive, or deep golden/wheat-colored)`（原本完全沒有提到膚色）
+   - 開頭新增主流美女錨定：`breathtakingly elegant, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely handsome, striking, or interesting)`
+   - POSE/ANGLE 佔位說明也加上「with a warm genuine smile or soft approachable expression, NOT a stiff, cold, or distant pose」，避免未來批次的姿態描述又讀回冷淡感
+3. **本次探索批次的實際 prompt**：沿用改寫後的核心描述，場景統一為「極簡米白色調室內、大面窗自然光＋暖燈」，服裝統一為米白絲質襯衫（單一變數只變角度／構圖，與第一輪做法一致，方便比對臉孔一致性），角度沿用第一輪的四種構圖模式（正面特寫大頭照／正面半身／3/4 側身回頭／正面全身）
+
+### 第二輪產出
+
+- **平台／模型**：Higgsfield，`seedream_v4_5`；aspect_ratio `9:16`；quality `basic`
+- **成本**：get_cost 帳前預檢單張估算 1 credit；實際生成後 4 張共扣款 **8 credits**（帳戶餘額 11.35 → 3.35，每張實際約 2 credits，高於預檢估算，已如實記錄而非沿用預檢數字）
+
+| 檔名 | 角度／構圖 | Job ID |
+|------|-----------|--------|
+| candidate_01.png | 正面特寫大頭照（headshot） | `e9cd4f57-ae93-4a68-aabe-7331c8e14afe` |
+| candidate_02.png | 正面半身（waist-up） | `c919727f-6749-4e96-a17d-5deb1a84b748` |
+| candidate_03.png | 3/4 側身半身，頭轉回鏡頭 | `f1a59b23-a0cd-40e9-a496-7d529df06867` |
+| candidate_04.png | 正面全身（head-to-toe） | `655c6b1e-40f1-44e4-a98a-50118fa460c7` |
+
+### 誠實視覺評估
+
+- **主流美女／溫暖感**：明顯改善。4 張臉都是圓潤、有神、雙眼含笑的東亞美女臉型，笑容是真笑（露齒或嘴角上揚看得出來），不是冷淡/疏離的表情，符合 `profile.json` 修正後 `face_type` 的方向。不再有第一輪那種偏冷、偏距離感的問題。
+- **臉部一致性**：4 張明顯是同一張臉——同樣的臉型輪廓、眼型、鼻型、笑容弧度、髮型（黑色直髮、中分），這正是 `seedream_v4_5` 相對 `soul_2`（無 soul_id）的優勢，符合 `iris-chen/generation_notes.md` 記錄的經驗。第一輪 `soul_2` 4 張彼此不像同一人的問題，這一輪沒有再出現。
+- **待觀察的小問題**：candidate_03、candidate_04 的手臂／大腿膚色明顯比臉部更偏小麥／古銅，跟臉部「白皙有光澤」的用詞不完全一致（臉部膚色符合 fair/porcelain 的描述，但四肢偏暖偏深）。這是輕微的臉部與身體膚色不統一，如果使用者選中這批中的某一張要繼續往下建立 Reference Element，建議在後續批次的 prompt 額外強調身體膚色也要 `fair, porcelain-toned` 以求全身一致，目前尚未修正。
+- **結論**：這一輪已解決使用者原本反饋的兩個問題（臉不一致、不夠主流美女），可以作為挑選候選使用；四肢膚色的小瑕疵不影響選臉，但正式擴充訓練圖集時應留意。
 
 ---
 

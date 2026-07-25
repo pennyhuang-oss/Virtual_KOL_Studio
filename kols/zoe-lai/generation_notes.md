@@ -1,6 +1,6 @@
 # Zoe Lai — AI 生成規劃筆記
 
-> **狀態：PENDING — 已生成第一輪「發現批次」候選圖，等待使用者選出喜歡的臉/風格，尚未錨定身分、尚未進入 Soul 訓練**
+> **狀態：PENDING — 第一輪「發現批次」候選圖（膚色曬黑、已判定為錯誤設計）已改名為 `round1_candidate_01–04.png` 存查；膚色規則已全面修正為白皙基調，並改用 `seedream_v4_5` 規劃 Round 2，但 Round 2 實際生成因帳戶 credits 不足（僅 0.35，需至少 4）而失敗，尚無任何 Round 2 圖片、尚未錨定身分、尚未進入 Soul 訓練**
 > 本文件是訓練圖與批次拍攝的**規劃文件**。目前沒有 soul_id、沒有 Reference Element、沒有已生成影片。2026-07-25 已生成 4 張獨立的「發現批次」候選參考圖（見下方「2026-07-25 發現批次」章節）供使用者挑選喜歡的臉孔/風格方向——**這 4 張圖彼此之間不共享同一身分**（獨立生成，跟 Vicky Lin 的經驗一致：獨立生成不會自動保持同一張臉），僅供風格/臉孔挑選用途。使用者選定一張後，下一步才會建立 Reference Element 錨定該身分，再展開完整訓練圖批次。除此之外的批次規劃（下方 6 個批次）皆仍為草稿，所有 soul_id、完整訓練圖數量、生成日期、Job ID 待實際執行後才會補上，本檔案不預先捏造。
 
 ---
@@ -298,6 +298,60 @@ high natural contrast, candid outdoor lifestyle photo, Instagram style
 4 張圖彼此為**獨立生成、不共享同一身分**——這是設計上的預期行為（發現批次的目的就是每張各自嘗試，讓使用者比較臉孔/風格差異），不是錯誤。
 
 **⚠️ 下一步（不可跳過）**：**必須停下來，等使用者實際看過這 4 張候選圖並明確指出最喜歡哪一張臉/風格之後**，才可以：(1) 把使用者選定的那一張圖上傳建立 Reference Element；(2) 用該 element_id 錨定生成完整訓練圖批次。本輪**未**呼叫 `show_characters(action='train')`，也未建立任何 Reference Element，`profile.json` 沒有新增 soul_id 或任何 `ai_generation` 欄位，維持原狀未變更。
+
+**⚠️ 這一批（candidate_01–04）檔案已於 2026-07-25 第二次修正時改名為 `round1_candidate_01.png`–`round1_candidate_04.png`（見下方章節），原因是這批圖的膚色（曬過的健康小麥膚色）已被判定為錯誤設計，保留檔案但不再是目前使用中的候選圖。**
+
+---
+
+## 2026-07-25 四次修正：膚色由深色曬黑徹底改為白皙基調，改用 Seedream 4.5 重新生成
+
+### 背景與推翻的設計決策
+
+使用者直接指示：Zoe 原本的「Deep, even, year-round sun tan」「小麥膚色」人設是**錯誤的設計選擇，必須整個推翻**，改為主流台灣審美偏好的「白幼瘦」（白皙、精緻五官、纖細身形）路線——**即使 Zoe 是海島/衝浪系人設，膚色基調也不能是「健康古銅曬黑」，而應該是「認真防曬、維持白皙」**。這不是單一角色的個案調整，而是與此同時新增的**全公司永久規則**：
+
+- `README.md`「新增 KOL 流程」步驟 5：新增膚色基調審核提醒
+- `SEXY_SCENE_LIBRARY.md` 降低「AI 感」checklist 第 6 項「膚色基調」：明確要求主流台灣審美的白皙路線，而非「healthy tan」
+
+問題最早浮現於 Zoe 的「發現批次」（見上方章節）：4 張圖用的是 `soul_2`（無 soul_id，每次獨立重新想像臉孔），使用者反饋除了 4 張臉孔本身不一致之外，還直接指出「膚色都太黑了」——這暴露了 Zoe 人設草稿裡「曬黑」被誤當成她的美學核心的問題。經釐清：**皮膚「質感」的真實感（毛孔、非磨皮、自然瑕疵）跟皮膚「顏色」的深淺是兩件完全獨立的事**——前者應該保留（這才是原本 `generation_notes.md` 論證「不修飾膚況」的真正用意），後者則是設計錯誤，必須改為白皙。
+
+### 已完成的文件修正
+
+1. **`profile.json`**
+   - `identity.appearance.figure`：`"Deep, even, year-round sun tan."` → 改為白皙但仍認真防曬維持的描述（"Fair, porcelain-toned skin that stays fair despite her beach lifestyle...NOT deeply tanned or bronzed..."），其餘身材描述不變
+   - `identity.appearance.face_type`：`"sun-warmed oval face"` → `"warm, radiant oval face"`，並新增白皙皮膚描述（"fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored)"），燦爛笑容/雀斑/直眉/不陽剛的語言維持不變
+   - 註：`content.aesthetic`（`color_palette` 內的 `"deep tan skin tones"`、`mood` 文字裡的「皮膚是曬過的顏色」）、`persona.archetype` 裡的 "her body and tan"、`social.community_name`（"曬黑的我們"）**本輪未修改**——這些屬於品牌敘事/社群命名層級的措辭，不在本次交辦的明確修改範圍內，但同樣包含「曬黑」語言，與新規則有衝突，建議使用者確認是否也要一併調整
+2. **`character.md`**：五處修正——開場「誰是 Zoe」段落移除「曬到黑」、外型表格「曬得均勻的健康小麥膚色」改為白皙描述、內容哲學「不修飾的膚況」移除「曬痕」改為「毛孔」、視覺美學「色調」段落「膚色和曬痕」改為「白皙膚色與自然膚質」、結尾「她的帳號是什麼」段落「傍晚曬得更黑一點」改為「認真防曬讓肌膚維持白皙」
+3. **`generation_notes.md`**（本檔案，也是實際送進生成模型的 prompt 字串本體）：
+   - 人物設定表格「臉型」「身材」兩列移除小麥膚色/深色年曬描述，改為白皙
+   - 核心 Prompt 結構本體：`sun-warmed oval face` → `warm, radiant oval face` + 新增白皙描述句；`deep even golden tan` → 白皙描述句（全文出現 7 次，含核心 prompt + 全部 6 個批次規劃，已用 replace_all 一次性修正）；`true-to-life unretouched skin texture with visible tan lines` → 移除 `visible tan lines`，只保留質感真實的 `unretouched skin texture`（出現 2 次）
+   - 6 個批次規劃 prompt 逐一移除各自的 `faint tan line(s) at...` 片語（批次 1–6 各一處）
+   - 風格關鍵詞備註：移除「一定要保留...`visible tan lines`」的錯誤論證，改為明講「質感真實 ≠ 膚色深淺」，膚色改白皙、質感仍不磨皮
+   - checklist 條目備註同步更新，加註「2026-07-25 膚色基調項修正」
+
+### 模型切換：soul_2 → Seedream 4.5
+
+依照 `kols/iris-chen/generation_notes.md` 記錄的唯一已驗證成功模板：Iris Chen（以及原始 6 位 KOL）的參考圖都是用 `seedream_v4_5`（Seedream 4.5）生成，該模型在同一文字 prompt 下重複生成時臉孔一致性極高（高到「4 張會太像，所以只生 2 張」的程度）。這與 `soul_2`（無 soul_id 時每次獨立重新想像臉孔，這正是 Zoe 發現批次 4 張臉孔彼此不一致的原因）形成直接對比。本輪呼叫 `models_explore(action='get', model_id='seedream_v4_5')` 確認模型可用：4K 輸出（`quality: basic` 上限 4K，`high` 上限約 6K），支援 `9:16` 等多種長寬比。本輪 Round 2 改用 `seedream_v4_5` 取代 `soul_2`。
+
+### Round 1 檔案改名（保留不刪除）
+
+`git mv` 將原本的 `candidate_01.png`–`candidate_04.png`（`soul_2` 生成、膚色過黑、彼此臉孔不一致的批次）改名為 `round1_candidate_01.png`–`round1_candidate_04.png`，保留在 `kols/zoe-lai/images/face_reference/` 中作為錯誤示範存查，**未刪除**。
+
+### ⚠️ Round 2 生成結果：因帳戶額度不足，本輪未能實際產出新圖
+
+**誠實記錄，不得省略**：本輪依規劃準備了 4 個全新 prompt（沿用 Round 1 已驗證的角度/構圖變化模式——晨光大頭照 / 黃金時段半身 / 正午 3/4 半身 / 日落全身，膚色描述已全部替換為白皙版本，並把 `Instagram style` 換成 `candid phone-photo aesthetic` 以避免重現 Round 1 candidate_04 意外觸發真實 Instagram 限時動態介面截圖的問題），並先以 `get_cost:true` 預檢：`seedream_v4_5`、`aspect_ratio: 9:16`、`quality: basic`，每張預估 **1 credit**（4 張共需 4 credits）。
+
+實際送出全部 4 張生成請求後，**四次呼叫全數失敗**，錯誤訊息均為 `"Error starting generation: Out of credits in the selected workspace."`。查詢 `balance` 確認帳戶僅剩 **0.35 credits**，`list_workspaces` 確認使用者只有一個私人 workspace，同樣只有 0.35 credits，無其他 workspace 可切換使用。0.35 credits 不足支付最低 1 credit/張的需求，因此**本輪無新增 Job ID、無新增檔案、無法產出任何 Round 2 候選圖**。
+
+**目視評估**（誠實回覆）：**無法評估**——因為沒有生成出任何新圖，無從判斷「膚色是否確實變白皙」或「4 張臉孔是否彼此一致」。這兩項評估必須等帳戶儲值、實際跑出 4 張圖後才能進行。
+
+**已就緒、待儲值後執行**：本節使用的 4 個完整 prompt 字串已在本次 session 中構造完成（含白皮膚修正版核心外型描述 + 各自的場景/角度/服裝變化），使用者儲值 credits 後，只需重新呼叫 `generate_image`（`model: seedream_v4_5`, `aspect_ratio: 9:16`, `quality: basic`）4 次即可，不需要重新設計 prompt。
+
+### 下一步
+
+1. 使用者為 workspace 儲值 credits（目前僅 0.35，需至少 4 credits 才能補跑本批次 4 張圖）
+2. 儲值後重新執行 Round 2 的 4 張 `seedream_v4_5` 生成
+3. 生成後**必須**用 Read 工具實際目視檢查全部 4 張，誠實記錄：膚色是否確實轉為白皙、4 張臉孔是否彼此一致（風格關鍵詞完全相同時 Seedream 4.5 預期會比 Round 1 的 `soul_2` 更一致，但仍需實際看圖驗證，不可預先假設）
+4. 檢查完成後，**仍然必須停下來等使用者從中選出喜歡的臉/風格**，才能進到 Reference Element 建立與 Soul 訓練——本輪同樣**未**呼叫 `show_characters(action='train')`，未建立任何 Reference Element，`profile.json` 沒有新增 soul_id 或 `ai_generation` 欄位
 
 ---
 

@@ -190,3 +190,47 @@
 4. 訓練圖集確認一致後，才前往 `show_characters(action='train')` 建立 Mia 專屬 Soul 模型
 
 本輪結束時，`profile.json` 完全未修改，soul_id 仍為空白，Soul 訓練**尚未**啟動，整體狀態維持 **PENDING**。
+
+---
+
+## 2026-07-25 三次修正：改用 Seedream 4.5 並補上膚色 prompt 本體
+
+**觸發原因**：使用者對第一輪發現用候選圖的回饋是「Mia 還可以，但是 4 張圖片也長得不太一樣」——臉/風格本身可接受，但身分一致性不夠。回顧第一輪的兩個實際問題：
+
+1. **模型問題**：第一輪用的是 `soul_2`。`soul_2` 在沒有訓練好的 `soul_id` 時，每次獨立呼叫都是重新想像一張全新的臉，這正是本次任務要修正的根本原因——比照 `kols/iris-chen/generation_notes.md` 記載的驗證結論，`seedream_v4_5`（Seedream 4.5）在同一段文字 prompt 下重複生成時，臉部一致性高到「4 張會長得太像，所以一批只生成 2 張」的程度，這才是本工作室唯一驗證過能在沒有 soul_id 的情況下維持人臉一致性的模型。
+2. **膚色問題**：`profile.json` 的 `identity.appearance.face_type` 與 `character.md` 都已經補上「Fair, luminous porcelain-toned skin（NOT tanned, bronzed, olive, or deep golden/wheat-colored）／膚色白皙透亮」這句話，但**本文件「核心 Prompt 結構」章節的基礎 prompt 模板本體，實際上從未真的加上這句話**——模板裡原本只有 `visible skin pores, subtle natural skin texture, unretouched skin detail, natural skin imperfections` 這些描述皮膚質感（毛孔/紋理）的字，完全沒有描述膚色本身的字。第一輪的 4 張候選圖就是用這個「漏了膚色」的模板 + `soul_2` 生成的，這才是膚色偏古銅/曬黑色調的真正原因。
+
+**這輪的具體改動**：
+
+1. **base prompt 模板本體**（`kols/mia-huang/generation_notes.md`「核心 Prompt 結構」章節）：在 `rounded soft blush,` 之後、`visible skin pores` 之前，插入 `fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),`——用字與 `profile.json` 的 `face_type` 完全一致，不新增也不刪減任何其他臉部/人格描述。
+2. **模型**：由 `soul_2` 改為 `seedream_v4_5`，`aspect_ratio: 9:16`，`quality: basic`。
+3. **檔案改名**：第一輪 4 張圖（原 `candidate_01.png`～`candidate_04.png`）用 `git mv` 改名為 `round1_candidate_01.png`～`round1_candidate_04.png`，保留作歷史紀錄。
+4. **重新生成**：沿用本文件「計畫批次 1」（電競椅設定照）已核准的場景/服裝/光線/雜物/裝置破綻描述，套用上面補好膚色的核心外觀描述，**逐字不變，只變化姿勢/角度/景別**——與第一輪相同的四種取景邏輯：正面特寫／正面半身／四分之三側半身／正面全身（坐姿全身含電競椅與書桌背景）。
+
+**費用**：`get_cost: true` 對完整 prompt 文字預檢，回傳每張 1 credit。比對 `transactions` 交易紀錄的時間戳與各 job 的 `createdAt`，這 4 張圖各自對應一筆 `Seedream 4.5 -1 credit` 的扣款，共 **4 credits**，與預檢數字完全吻合（與第一輪 `soul_2` 預檢/實際不一致的狀況不同）。帳號餘額本身在同一時段內另有下降（`11.35 → 0.35`），但這是共用帳號下其他並行任務造成的（同時間 `git status` 也顯示 `rainie-hsu`／`sophia-tseng`／`zoe-lai`／`coco-wu` 等其他 KOL 檔案被修改，屬於別的並行工作，非本次任務所生成），非本次 4 張圖的實際花費。
+
+**新一輪 Job ID 與檔名對照**：
+
+| 檔名 | 角度／景別 | Job ID | Seed | 狀態 |
+|------|-----------|--------|------|------|
+| `candidate_01.png` | 正面．臉部特寫（肩頸以上） | `7be6df74-5c4a-4048-9bb4-2d22e6b4f498` | 597421 | ✅ completed |
+| `candidate_02.png` | 正面．半身（腰部以上） | `8b370f9a-fcc0-4986-a473-8eb7068d655e` | 523549 | ✅ completed |
+| `candidate_03.png` | 四分之三側．半身，回望鏡頭 | `758ab28b-b330-4e02-a28f-2834511d8f47` | 839129 | ✅ completed |
+| `candidate_04.png` | 正面．全身，坐姿含電競椅／書桌背景 | `6a5821a8-8e5b-43b7-890a-e0c2e5e65134` | 859828 | ✅ completed |
+
+**產出位置**：`kols/mia-huang/images/face_reference/candidate_01.png` ～ `candidate_04.png`（覆蓋為修正後版本；第一輪原圖見上方改名後的 `round1_candidate_*.png`）。
+
+**生成後目視檢查與誠實評估**：已用 Read 工具實際開圖檢視全部 4 張。
+
+- **膚色**：4 張皮膚都清楚偏白皙、透亮的粉色調，沒有出現古銅／小麥／曬黑色調，`fair, luminous porcelain-toned skin` 這句話生效——膚色問題確認修正成功。
+- **臉部一致性**：4 張的圓潤娃娃臉、深棕色眼睛、灰棕髮色配臉側粉色挑染的位置、臉頰兩側淡淡雀斑、上揚眼線、水潤唇彩妝感，在 4 張之間明顯比第一輪（`soul_2`）更接近同一個人——第一輪使用者形容「4 張長得不太一樣」的落差，在這一輪有實質改善。誠實地說，4 張並非像素級的同一張臉：`candidate_04`（正面全身）瀏海分法比其他 3 張更貼齊額頭、臉型在特寫鏡頭下顯得略圓一些；`candidate_03`（四分之三側臉）因為角度關係五官比例看起來也有些微差異。但核心可辨識特徵（挑染位置、眼型與眼妝風格、唇色唇形、雀斑分布、髮色）在 4 張間相當一致，比第一輪的「4 張根本是不同人」的落差有明顯進步，符合 Iris Chen 用 Seedream 4.5「同 prompt 重複生成臉部高度一致」的既有結論。
+- **場景/服裝一致性**：4 張的黑色連帽外套、電競椅、RGB 紫粉燈條、螢幕藍光、貓玩具擺設、耳機掛頸等場景細節都維持一致，符合「只變化角度取景」的設計目標。
+
+**未變更項目**：`profile.json`、`character.md` 均未再修改（膚色描述在先前修正已到位，本輪未動）；臉型、三圍、人格設定、批次 1–7 的計畫 prompt 文字內容不變，僅補了「核心 Prompt 結構」模板本體的膚色字句。
+
+**⚠️ 下一步（不可跳過，本輪未執行）**：
+1. 等待使用者實際看過這輪修正後的 `candidate_01`～`candidate_04`，確認臉部一致性與膚色是否已達可接受標準
+2. 使用者核准某一張臉後，才比照 Vicky Lin 第四輪流程建立 Reference Element 錨定身分
+3. 本輪**未**建立 Reference Element、**未**呼叫 `show_characters(action='train')`，`profile.json` 的 `soul_id` 仍為空白，整體狀態維持 **PENDING**
+
+**本次任務執行到此為止，等待使用者查看結果並回覆，暫不進行任何進一步生成或錨定操作。**
