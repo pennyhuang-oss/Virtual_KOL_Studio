@@ -336,22 +336,31 @@ high natural contrast, candid outdoor lifestyle photo, Instagram style
 
 `git mv` 將原本的 `candidate_01.png`–`candidate_04.png`（`soul_2` 生成、膚色過黑、彼此臉孔不一致的批次）改名為 `round1_candidate_01.png`–`round1_candidate_04.png`，保留在 `kols/zoe-lai/images/face_reference/` 中作為錯誤示範存查，**未刪除**。
 
-### ⚠️ Round 2 生成結果：因帳戶額度不足，本輪未能實際產出新圖
+### ⚠️ Round 2 生成結果（2026-07-30 帳戶儲值後補跑）：圖已生成，但膚色修正**未達預期**——誠實記錄失敗
 
-**誠實記錄，不得省略**：本輪依規劃準備了 4 個全新 prompt（沿用 Round 1 已驗證的角度/構圖變化模式——晨光大頭照 / 黃金時段半身 / 正午 3/4 半身 / 日落全身，膚色描述已全部替換為白皙版本，並把 `Instagram style` 換成 `candid phone-photo aesthetic` 以避免重現 Round 1 candidate_04 意外觸發真實 Instagram 限時動態介面截圖的問題），並先以 `get_cost:true` 預檢：`seedream_v4_5`、`aspect_ratio: 9:16`、`quality: basic`，每張預估 **1 credit**（4 張共需 4 credits）。
+**背景**：Round 2 的 4 個 prompt 因額度不足延遲到 2026-07-30 執行（使用者告知帳戶已重新儲值，`balance` 確認 2976.5 credits）。沿用原規劃的 4 組場景/角度（晨光大頭照 / 黃金時段半身 / 正午 3/4 半身 / 日落全身），核心外型描述已包含白皙膚色修正句與 `candid phone-photo aesthetic`（避免重現 Instagram UI 介面問題）。
 
-實際送出全部 4 張生成請求後，**四次呼叫全數失敗**，錯誤訊息均為 `"Error starting generation: Out of credits in the selected workspace."`。查詢 `balance` 確認帳戶僅剩 **0.35 credits**，`list_workspaces` 確認使用者只有一個私人 workspace，同樣只有 0.35 credits，無其他 workspace 可切換使用。0.35 credits 不足支付最低 1 credit/張的需求，因此**本輪無新增 Job ID、無新增檔案、無法產出任何 Round 2 候選圖**。
+| 檔名 | 場景 | Job ID | 狀態 |
+|------|------|--------|------|
+| candidate_01.png | 晨光大頭照，日出前海邊 | `f1d6a44e-9d32-49c5-82f6-15959b6c6f97` | ✅ 生成完成 |
+| candidate_02.png | 黃金時段半身，白襯衫外搭比基尼 | `9fbae21b-ea13-464f-bcc5-eb54e9cc9ace` | ✅ 生成完成 |
+| candidate_03.png | 正午 3/4 半身，回頭看鏡頭 | `fde51e6b-4e2a-4142-9b81-fdad7b065f25` | ✅ 生成完成 |
+| candidate_04.png | 日落全身，比基尼＋牛仔短褲 | `e60b3bb7-c3af-4305-8eae-4c4a1cd2a1eb` | ✅ 生成完成 |
 
-**目視評估**（誠實回覆）：**無法評估**——因為沒有生成出任何新圖，無從判斷「膚色是否確實變白皙」或「4 張臉孔是否彼此一致」。這兩項評估必須等帳戶儲值、實際跑出 4 張圖後才能進行。
+四張皆一次生成成功，`get_cost` 預估與實際扣款相符（每張 1 credit）。
 
-**已就緒、待儲值後執行**：本節使用的 4 個完整 prompt 字串已在本次 session 中構造完成（含白皮膚修正版核心外型描述 + 各自的場景/角度/服裝變化），使用者儲值 credits 後，只需重新呼叫 `generate_image`（`model: seedream_v4_5`, `aspect_ratio: 9:16`, `quality: basic`）4 次即可，不需要重新設計 prompt。
+**誠實目視評估（用 Read 工具逐張實際檢查，非預設假設）**：
+
+- **臉型一致性 — ✅ 良好**：四張圖是同一張臉——相同臉型輪廓、笑容、雀斑分布、髮辮綁法，與 Rainie Hsu、Coco Wu 等其他角色的 Seedream 4.5 結果一致，證實模型在無 soul_id 情況下同 prompt 重複生成確實能維持臉型一致。
+- **膚色 — ❌ 修正失敗，仍是古銅曬黑色調，不是白皙**：儘管核心 prompt 已明確寫入兩次「fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored)」與「porcelain-toned skin that stays fair despite her beach lifestyle...NOT deeply tanned or bronzed」，**四張圖實際呈現的膚色仍然是明顯的健康古銅/小麥曬黑色調**，跟 Round 1（`soul_2`）被使用者否決的膚色深淺程度相去不遠，跟 Rainie Hsu／Coco Wu 等角色在室內棚拍場景下明顯轉為白皙的效果形成強烈對比。推測原因（非確定，僅為觀察）：「海邊」「衝浪」「dawn patrol」「years facing open water」這類場景/人設敘述本身在生成模型的訓練分布裡與古銅膚色高度綁定，文字層級的膚色否定指令（"NOT tanned"）在強戶外情境下的實際壓制力不如室內棚拍場景——這與 Rainie／Coco 的室內棚拍/宿舍場景形成的對照，暗示「場景强度」可能會蓋過單純的膚色形容詞修正。
+- **次要問題 — ⚠️ 腹肌線條偏明顯**：candidate_01、candidate_04 可見清晰的六塊腹肌輪廓，跟 `profile.json` 已修正版「lean waist with only a subtle soft hint of core tone (never blocky or heavily muscled)」的設定有落差，跟 Vicky Lin 第一輪「健美選手」問題屬同一類風險，尚未完全排除。
+
+**結論：本輪未能解決使用者最初反饋的「膚色都太黑了」問題。** 不可視為修正完成，也不建議直接進入 Reference Element 錨定階段——需要使用者看過這 4 張後決定下一步（例如：是否接受這個「海島曬痕」介於健康與古銅之間的程度、或需要更激進的 prompt 干預如移除海邊/衝浪場景詞彙做純棚拍臉部測試、或改用其他模型/negative prompt 機制）。
 
 ### 下一步
 
-1. 使用者為 workspace 儲值 credits（目前僅 0.35，需至少 4 credits 才能補跑本批次 4 張圖）
-2. 儲值後重新執行 Round 2 的 4 張 `seedream_v4_5` 生成
-3. 生成後**必須**用 Read 工具實際目視檢查全部 4 張，誠實記錄：膚色是否確實轉為白皙、4 張臉孔是否彼此一致（風格關鍵詞完全相同時 Seedream 4.5 預期會比 Round 1 的 `soul_2` 更一致，但仍需實際看圖驗證，不可預先假設）
-4. 檢查完成後，**仍然必須停下來等使用者從中選出喜歡的臉/風格**，才能進到 Reference Element 建立與 Soul 訓練——本輪同樣**未**呼叫 `show_characters(action='train')`，未建立任何 Reference Element，`profile.json` 沒有新增 soul_id 或 `ai_generation` 欄位
+1. **待使用者看過本輪 4 張圖後決定**：(a) 接受目前膚色程度、(b) 要求再次嘗試更強力的膚色修正（例如拿掉場景敘述做室內棚拍純測試，或明確要求「立可白／室內辦公室膚色」等更極端錨點）、或 (c) 重新考慮 Zoe 的人設方向是否要保留海邊/衝浪強敘事。
+2. 在使用者明確回覆之前，**不建立 Reference Element、不呼叫 `show_characters(action='train')`**，`profile.json` 沒有新增 soul_id 或 `ai_generation` 欄位。
 
 ---
 
