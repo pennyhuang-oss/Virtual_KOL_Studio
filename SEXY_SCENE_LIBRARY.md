@@ -35,6 +35,28 @@ faint JPEG compression at high-contrast edges
 ```
 拍攝裝置與鏡頭必須逐場景明確指定（前鏡頭自拍 vs. 後鏡頭 vs. 單眼淺景深），不要讓模型自己猜。
 
+**⚠️ 2026-07-30 新增：前鏡頭自拍不能無腦套用「crisp sharp focus / high dynamic range」**——真實手機前鏡頭的畫質天生就比後鏡頭低（感光元件小、畫素低），如果自拍照片跟後鏡頭拍的一樣銳利乾淨，反而會讀起來很假。**自拍視角**的 prompt 應該用：
+```
+front camera quality, slightly softer focus than a rear camera shot, mild natural grain,
+slightly lower dynamic range, gentle noise in low light, NOT ultra-crisp or overly HD
+```
+**他拍/後鏡頭視角**才維持原本的 `crisp sharp focus, high dynamic range` 語氣。這條跟第 7 點「自拍與他拍比例」是同一個真實感邏輯的延伸：自拍不只是「視角」要對，「畫質等級」也要對。
+
+### 2b. 相機/濾鏡風格變化（2026-07-30 新增）
+不要整批素材都是同一種「iPhone 直出」質感，可視角色風格混入以下任一種作為部分照片的濾鏡效果，增加真實生活帳號該有的風格差異：
+- **CCD 數位相機質感**（早期輕便數位相機的懷舊味）：
+  ```
+  shot on CCD digital camera, soft slightly muted colors, gentle film-like grain,
+  subtle vignette, warm nostalgic tone, lower dynamic range than modern phone HDR,
+  Y2K digicam aesthetic
+  ```
+- **美顏/美圖類 App 濾鏡質感**（華語圈社群常見的美顏相機風格）：
+  ```
+  soft beautifying camera app filter, subtle skin-smoothing glow, brightened even skin tone,
+  soft dreamy focus, warm glowy filter, popular Asian beauty-camera-app aesthetic
+  ```
+這兩種風格**不是**要取代預設的「毛孔/自然瑕疵」真實感要求（第 1 點），而是作為訓練集裡「這個人真實生活會用的濾鏡」的其中幾張變化，不要整組都套用同一種濾鏡。
+
 ### 3. 光源
 > **⚠️ 2026-07-25 修正**：這條原本寫「真實光線是混亂、不均勻的」，結果實際套用在 Vicky Lin 身上時被使用者反饋「濾鏡、光線、畫質都非常差」。問題是把「真實感」跟「拍得普通/畫質差」劃上等號了——這是錯的，兩者是獨立的兩件事。真人使用者提供的實際健身網紅參考截圖顯示：真實感來自皮膚質感和生活細節，**不是**靠調暗、調糊、做舊光線。現代手機攝影的「討喜」光線（黃金時段斜陽、戶外強光、樹蔭斑駁光）配合淺景深背景虛化，一樣可以清晰漂亮又有真實感。
 
