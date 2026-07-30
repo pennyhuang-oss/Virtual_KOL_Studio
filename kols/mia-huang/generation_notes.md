@@ -1,6 +1,6 @@
 # Mia Huang — AI 生成規劃
 
-> **狀態：🔄 SOUL 訓練已送出，訓練中（尚未 ready）— 使用者已明確核准「這四位都可以送去訓練」，13 張訓練圖已全數重新上傳（`media_upload`→`curl PUT`→`media_confirm`，取得 13 個全新 media_id）並送入 `show_characters(action='train')`，**第一次呼叫即成功**（未使用備用參數形狀），取得 `soul_id: e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`，帳戶扣款 25 credits。已用 `action='status'` 與 `action='list'` 驗證此 soul_id 在伺服器端真實存在（`raw_status: queued`，與同時段 Zoe Lai、Rainie Hsu 等角色的真實訓練任務並列）。**截至本次 session 結束時，訓練仍在 queued/training 狀態，尚未變成 ready**——Soul 訓練通常需要約 10 分鐘背景處理，下一個 session 應先用 `show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4')` 確認是否已完成，完成後才能用 `soul_2` 模型正式生成內容。`profile.json` 已寫入 `ai_assets.training_images_v1.soul_training`（status: training）。詳見文末「2026-07-30 Soul 訓練送出（第一次呼叫成功）」章節。2026-07-25：完成第一輪「發現批次」（discovery batch）——用她已校準的核心 prompt 生成 4 張候選圖（`candidate_01.png`～`candidate_04.png`，正面特寫／正面半身／四分之三側半身／正面全身），供使用者從中挑選最喜歡的臉/風格；因尚未用 Reference Element 錨定，4 張彼此身分不保證一致，這是預期中的現象。詳見文末「2026-07-25 發現用候選圖批次」章節。**以下批次 1–7 仍是計畫中的拍攝方向，尚未執行**；使用者核准候選圖後，下一步是比照 Vicky Lin 的流程建立 Reference Element 錨定身分，再擴充生成完整訓練圖集。**⚠️ 同日三次修正**：第一輪用的是 `soul_2`，且膚色 prompt 當時未真正寫入本體文字，導致膚色偏古銅／4 張身分落差過大，已重新用 `seedream_v4_5` + 補上膚色 prompt 重新生成第二輪候選圖。原始第一輪圖片改名保留為 `round1_candidate_01.png`～`round1_candidate_04.png`，現在的 `candidate_01.png`～`candidate_04.png` 為修正後版本。詳見文末「2026-07-25 三次修正：改用 Seedream 4.5 並補上膚色 prompt 本體」章節。
+> **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4` 已可用於 `model: soul_2` 正式生成內容**
 
 ---
 

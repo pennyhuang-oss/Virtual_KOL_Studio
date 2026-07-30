@@ -11,13 +11,13 @@
       "collected_at": "2026-07-30",
       "note": "13 張訓練圖，Reference Element 錨定同一身分（element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41，錨定圖 candidate_02.png），跨 7 個場景/內容支柱、7 自拍＋6 候拍。詳見 generation_notes.md「2026-07-30 訓練圖集生成（Element 錨定）」章節。",
       "soul_training": {
-        "status": "training",
+        "status": "ready",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4",
         "training_image_count": 13,
         "started_at": "2026-07-30",
-        "completed_at": null,
+        "completed_at": "2026-07-30",
         "note": "show_characters(action='train') 第一次呼叫即成功送出（未使用備用參數形狀），已用 media_upload→curl PUT→media_confirm 取得的 13 個 media_id 送訓練，帳戶被扣 25 credits（Soul ID 交易項）。已用 action='status' 與 action='list' 兩種方式驗證此 soul_id 為伺服器端真實存在的訓練任務（raw_status: queued，與同時段其他角色的真實訓練任務並列）。**截至本次 session 結束時尚未變成 ready**，下一個 session 需要先用 show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4') 確認是否已訓練完成，完成後才能用 soul_2 模型實際生成內容。"
       }
     }
@@ -27,7 +27,17 @@
     "updated_at": "2026-07-30",
     "status": "active",
     "category": "gaming",
-    "tags": ["gaming", "streaming", "twitch", "taiwanese", "hsinchu", "gen-z", "night-owl", "cosplay-lite", "gamer-girl"],
+    "tags": [
+      "gaming",
+      "streaming",
+      "twitch",
+      "taiwanese",
+      "hsinchu",
+      "gen-z",
+      "night-owl",
+      "cosplay-lite",
+      "gamer-girl"
+    ],
     "reference_profiles": [
       "Taiwanese gaming/streaming content creators",
       "Twitch gamer-girl / cosplay-lite creator accounts"
@@ -136,7 +146,12 @@
     ],
     "posting_frequency": "Livestreams: 5–6 nights/week, roughly 10pm–3am. TikTok: near-daily clips cut from stream VODs. Instagram: 4–5x/week + Stories most nights before going live.",
     "aesthetic": {
-      "color_palette": ["neon purple", "cotton-candy pink", "moody blue-black", "warm RGB glow accents"],
+      "color_palette": [
+        "neon purple",
+        "cotton-candy pink",
+        "moody blue-black",
+        "warm RGB glow accents"
+      ],
       "mood": "深夜的直播間。RGB 燈光、螢幕的藍光、房間外面的世界早就睡了但她的世界才剛開始。Playful and a little chaotic, but always in control of the bit.",
       "editing_style": "High-saturation, glow-heavy edits that lean into RGB lighting and screen light rather than smoothing it out. Clip captions and meme text are part of the visual language, not an afterthought. Slight motion blur and stream-overlay aesthetic embraced rather than hidden."
     },

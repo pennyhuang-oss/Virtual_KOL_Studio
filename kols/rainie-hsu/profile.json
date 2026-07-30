@@ -11,13 +11,13 @@
       "collected_at": "2026-07-30",
       "note": "13張訓練圖，全數以 Reference Element `ae0d8287-af47-4f9d-b357-19a477abd00d`（rainie-hsu-anchor，錨點來源 candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。詳見 generation_notes.md「2026-07-30 六次修正」章節。",
       "soul_training": {
-        "status": "training",
+        "status": "ready",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "994e33d2-7df1-47da-8478-7a6fd849fa33",
         "training_image_count": 13,
         "started_at": "2026-07-30",
-        "completed_at": null,
+        "completed_at": "2026-07-30",
         "note": "show_characters(action='train') 於 2026-07-30 首次呼叫即成功受理（非 Vicky Lin 案例的多次失敗），server 端已可查得此 soul_id 記錄（action='status' 確認 raw_status: queued）。訓練仍在進行中，尚未回傳 ready，待後續 session 確認完成狀態後再更新此欄位與 status。"
       }
     }
@@ -27,7 +27,15 @@
     "updated_at": "2026-07-30",
     "status": "active",
     "category": "nightlife",
-    "tags": ["nightlife", "party", "taipei", "taiwanese", "glam", "going-out", "fashion"],
+    "tags": [
+      "nightlife",
+      "party",
+      "taipei",
+      "taiwanese",
+      "glam",
+      "going-out",
+      "fashion"
+    ],
     "reference_profiles": [
       "Taiwanese nightlife/glam content creators",
       "Asian going-out fashion & GRWM influencers"
@@ -42,7 +50,11 @@
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan (台北東區 / 西門町夜生活圈)",
-    "languages": ["Mandarin Chinese (native)", "English (fluent, code-switches for effect)", "Japanese (basic, picked up from clubbing trips)"],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent, code-switches for effect)",
+      "Japanese (basic, picked up from clubbing trips)"
+    ],
     "appearance": {
       "height": "165cm",
       "face_type": "Stunning, bold glamour-model beauty — high cheekbones, a sculpted jawline, striking eyes, the kind of face that stops a room. Fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Soft-glam makeup, dialed down further — barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, and a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), dewy luminous skin. Polished and put-together, but reads as effortlessly gorgeous and mainstream-appealing — never heavy, costume-like, or theatrical.",
@@ -131,7 +143,13 @@
     ],
     "posting_frequency": "Instagram: 5x/week + daily Stories on weekends. TikTok: 4x/week, concentrated Thu–Sun.",
     "aesthetic": {
-      "color_palette": ["deep black", "blood red", "smoky charcoal", "metallic silver", "hot pink accent"],
+      "color_palette": [
+        "deep black",
+        "blood red",
+        "smoky charcoal",
+        "metallic silver",
+        "hot pink accent"
+      ],
       "mood": "台北夜生活的高濃度版本。Bold, glamorous, a little dangerous-feeling — the energy of a night that's about to get good. Confident sensuality, never soft or shy.",
       "editing_style": "High contrast, saturated, slightly cool-toned with warm skin highlights. Club and mirror lighting embraced rather than smoothed over — neon spill, warm vanity bulbs, flash-photo energy for going-out shots. Sharp, not hazy."
     },

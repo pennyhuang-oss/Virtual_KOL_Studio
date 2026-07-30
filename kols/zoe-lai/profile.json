@@ -11,13 +11,13 @@
       "collected_at": "2026-07-30",
       "note": "13張訓練圖，全數以 Reference Element `9b1c0c4b-7301-4144-9427-56e754178144`（zoe-lai-anchor-c01，錨點來源 candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。詳見 generation_notes.md「2026-07-30 使用者核准現有膚色、選定錨點圖、建立 Reference Element、生成完整訓練圖批次」章節。",
       "soul_training": {
-        "status": "training",
+        "status": "ready",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "27f750e6-0d32-43ce-8249-cce94ef835cd",
         "training_image_count": 13,
         "started_at": "2026-07-30",
-        "completed_at": null,
+        "completed_at": "2026-07-30",
         "note": "show_characters(action='train') 於 2026-07-30 首次呼叫即成功受理（非 Vicky Lin 案例的多次失敗），server 端已可查得此 soul_id 記錄（action='status' 確認 raw_status: queued）。訓練仍在進行中，尚未回傳 ready，待後續 session 確認完成狀態後再更新此欄位與 status。"
       }
     }
@@ -27,7 +27,18 @@
     "updated_at": "2026-07-30",
     "status": "active",
     "category": "lifestyle",
-    "tags": ["lifestyle", "surf", "beach", "taiwanese", "hualien", "kenting", "swimwear", "island-girl", "outdoors", "ocean"],
+    "tags": [
+      "lifestyle",
+      "surf",
+      "beach",
+      "taiwanese",
+      "hualien",
+      "kenting",
+      "swimwear",
+      "island-girl",
+      "outdoors",
+      "ocean"
+    ],
     "reference_profiles": [
       "Taiwanese surf/beach lifestyle content creators",
       "East-coast Taiwan surf tourism community accounts"
@@ -135,7 +146,13 @@
     ],
     "posting_frequency": "Instagram: 4–5x/week + daily Stories. TikTok: 3–4x/week, tied to swell and surf trips.",
     "aesthetic": {
-      "color_palette": ["ocean turquoise", "sun-bleached sand", "golden-hour skin glow", "salt-white", "faded denim blue"],
+      "color_palette": [
+        "ocean turquoise",
+        "sun-bleached sand",
+        "golden-hour skin glow",
+        "salt-white",
+        "faded denim blue"
+      ],
       "mood": "東岸的清晨海。陽光很直接，皮膚白皙依舊，只是總帶著一點日曬後的紅潤，頭髮永遠有一點鹽味。Bright, sun-bleached, unfiltered — the visual feeling of a life spent outdoors and wet more often than dry.",
       "editing_style": "High natural contrast, slightly overexposed highlights, true-to-life skin tones with no smoothing. Looks shot straight off a phone or GoPro on the beach — minimal color grading beyond warming up the whites."
     },
