@@ -234,3 +234,85 @@
 3. 本輪**未**建立 Reference Element、**未**呼叫 `show_characters(action='train')`，`profile.json` 的 `soul_id` 仍為空白，整體狀態維持 **PENDING**
 
 **本次任務執行到此為止，等待使用者查看結果並回覆，暫不進行任何進一步生成或錨定操作。**
+
+---
+
+## 2026-07-30 訓練圖集生成（Element 錨定）
+
+**狀態：⚠️ 使用者已回覆 4 張候選圖皆可接受，並授權挑選任一張作為身分錨定圖、建立完整訓練圖集。本輪已完成 Element 建立與 13 張訓練圖生成，等待使用者審核這組訓練圖後才能進行 Soul 訓練。`show_characters(action='train')` 本輪**未**呼叫，`profile.json` 完全未修改。**
+
+### 1. 錨定圖挑選
+
+使用 Read 工具實際開圖檢視全部 4 張候選圖（`candidate_01.png`～`candidate_04.png`）後，選定 **`candidate_02.png`**（正面·半身）作為身分錨定圖，理由：
+- 正面直視鏡頭、五官左右對稱、無 3/4 側臉角度造成的比例失真（`candidate_03` 為側臉角度）
+- 無明顯動態模糊（`candidate_01` 手部靠近臉部有動態模糊、且景別較緊，部分臉部被陰影遮擋）
+- 無俯角造成的臉部透視畸變（`candidate_04` 為由上往下的坐姿全身角度，下巴/嘴部比例因俯角而放大）
+- 光線均勻、雙眼與挑染細節清晰可辨，是 4 張中最乾淨、最具代表性的臉部特寫
+
+### 2. Reference Element 建立
+
+- 上傳流程：`media_upload`（filename `mia_huang_anchor_candidate_02.png`）→ 取得 presigned S3 URL 與 `media_id: c059ba58-79d0-4cc6-a585-69f019625585` → `curl -X PUT` 上傳 `candidate_02.png` 原始檔案位元組（HTTP 200）→ `media_confirm(media_id, type='image')` 確認上傳完成（status: uploaded）
+- `show_reference_elements(action='create', category='character', name='mia-huang-anchor', medias=[{id, url}])` 建立成功
+- **Element ID：`92ffbd80-32c7-495f-91ed-f109b419bb41`**（name: `mia-huang-anchor`）
+
+### 3. 模型選擇與費用
+
+- 沿用 Vicky Lin 第四輪已驗證的做法：Element 內嵌僅支援 `nano_banana_2`、`nano_banana_flash`、`gpt_image_2`、`seedream_v4_5`、`seedream_v5_lite`、`cinematic_studio_2_5`（`soul_2` 不支援）；採用 **`seedream_v4_5`**，`aspect_ratio: 9:16`，`quality: basic`
+- `get_cost: true` 預檢（完整 prompt 文字）回傳每張 **1 credit**
+- 生成過程中多次遇到 `429 rate_limit_reached`（同時併發送出多張請求時），改為逐張序列送出（每張間隔數秒~數十秒、必要時用 `job_display` 查詢前一張狀態順便讓速率限制冷卻）後全部 13 張成功送出且完成
+- 帳號餘額：生成前 **2766.7 credits**，生成後 **2722.7 credits**（共下降 44 credits）；比對 `transactions` 交易紀錄，同一時段（09:51–09:56 UTC）內的 `Seedream 4.5 -1 credit` 扣款筆數明顯超過本次任務的 13 張，代表這段時間帳號內有其他並行工作同時在跑（比照 Mia 稍早候選圖批次與 Vicky Lin 案例中都出現過的「共用帳號並行任務」現象）。**本次任務本身依 `get_cost` 預檢與 13 次成功生成，可歸屬成本為 13 credits（每張 1 credit × 13 張）**，餘額總降幅不能全部算在本次任務頭上
+
+### 4. 產出檔案（`kols/mia-huang/images/training_v1/`，比照 Iris Chen `training_v1/` 目錄與編號慣例）
+
+全部 13 張使用 `<<<92ffbd80-32c7-495f-91ed-f109b419bb41>>>` 錨定同一身分，僅變化場景、姿勢、服裝、光線、視角（自拍／候拍）：
+
+| 檔名 | 內容支柱 | 視角 | 風格變體 | Job ID |
+|------|---------|------|---------|--------|
+| 01_gaming_chair_candid.png | 居家/直播間 (30%) | 候拍（固定 webcam） | 標準 HD | `def757c2-df0a-40a2-b8b2-80cbd223efb8` |
+| 02_gaming_chair_selfie.png | 居家/直播間 | 自拍（前鏡頭） | 前鏡頭較軟焦 | `08a23903-3a29-44a0-943a-bbc258e66b64` |
+| 03_cosplay_mirror_selfie.png | 穿搭/換裝 (20%) | 自拍（鏡前） | 前鏡頭較軟焦 | `478840a8-369d-467f-8b89-3eb5876399f4` |
+| 04_outfit_decision_selfie.png | 穿搭/換裝 | 自拍（衣櫃前） | 前鏡頭較軟焦 | `445c1c62-9337-43f8-8c75-bdca56b2fcf8` |
+| 05_cosplay_candid_doorway.png | 穿搭/換裝 | 候拍（他拍視角） | 標準 HD | `ab73ef8e-6608-4c3d-bb10-327586fd83cb` |
+| 06_stream_reaction_webcam.png | 居家/直播間 | 候拍（固定 webcam） | 標準 HD | `017f4501-ef84-4933-a72a-c1fbfe46f02d` |
+| 07_stream_break_selfie.png | 居家/直播間 | 自拍（前鏡頭） | 前鏡頭較軟焦 | `1feead0b-9bfb-452b-9d11-49234cdbcea6` |
+| 08_afternoon_wakeup_selfie_ccd.png | 下午甦醒 (20%) | 自拍 | **CCD 數位相機質感** | `392bdc67-2dd4-49f1-89e6-b3df331528ec` |
+| 09_afternoon_wakeup_candid_couch.png | 下午甦醒 | 候拍（他拍視角） | 標準 HD | `fc37d6a6-4ad2-4f22-8b26-2e04dcab90be` |
+| 10_skincare_bathroom_selfie.png | 浴室/深夜保養 (10%) | 自拍（鏡前） | 前鏡頭較軟焦 | `bbf83143-c8b7-4507-932e-8244ad385d1d` |
+| 11_hotel_expo_selfie_meitu.png | 飯店/展會旅遊 (10%) | 自拍 | **美圖濾鏡質感** | `19225714-5aaf-4cbf-b011-d5d4386f890e` |
+| 12_daytime_outing_candid_cafe.png | 面基日（生活主題加碼） | 候拍（朋友幫拍） | 標準 HD、自然日光 | `f48c6a16-d550-4613-b41a-d0e166581c84` |
+| 13_stretch_break_candid.png | 健身/伸展 (10%) | 候拍（手機立在桌上） | 標準 HD | `69c8d0b0-51a9-4a17-ad60-7a77ceee8051` |
+
+**視角比例**：自拍 7 張（02, 03, 04, 07, 08, 10, 11）／候拍 6 張（01, 05, 06, 09, 12, 13），符合 `SEXY_SCENE_LIBRARY.md` 第 7 點「自拍與他拍比例」要求，不偏廢單一視角。
+
+**內容支柱比例（13 張近似對應權重）**：居家/直播間 4 張（31%，目標 30%）、穿搭/換裝 3 張（23%，目標 20%）、下午甦醒 2 張（15%，目標 20%，略低）、浴室/深夜保養 1 張（8%，目標 10%）、飯店/展會旅遊 1 張（8%，目標 10%）、健身/伸展 1 張（8%，目標 10%）、面基日（生活主題加碼，不占既定支柱比例）1 張。整體大致依權重分佈，未來若擴充下一輪訓練圖可優先補足下午甦醒支柱的張數。
+
+**風格變體**：依 `SEXY_SCENE_LIBRARY.md` 2b「相機/濾鏡風格變化」新規則，本輪納入 2 張變體（各 1 張，符合「至少 1–2 張」要求）：
+- `08_afternoon_wakeup_selfie_ccd.png`：CCD 數位相機懷舊質感，搭配「剛睡醒、手持復古隨身數位相機自拍」的场景，符合 Mia 電競/直播主人設中偶爾走 Y2K 復古周邊/收藏風格的調性
+- `11_hotel_expo_selfie_meitu.png`：美圖/美顏類 App 濾鏡質感，搭配「展會後在飯店床上發 IG 限動」的場景——這類濾鏡在華語圈電競/實況圈社群自拍中很常見，符合她「電競少女」人設，屬於刻意選用的加分風格變化而非預設套用
+
+**自拍畫質規則**：依 `SEXY_SCENE_LIBRARY.md` 第 2 點 2026-07-30 新增規則，7 張自拍（02, 03, 04, 07, 08, 10, 11）全部使用 `front camera quality, slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, gentle noise in low light, NOT ultra-crisp or overly HD` 或對應的 CCD/美圖濾鏡語言，**取代**候拍鏡頭慣用的 `crisp high-quality photography ... sharp focus on subject` 結尾；候拍/webcam 視角（01, 05, 06, 09, 12, 13）維持原本的 crisp/HD 結尾語氣。
+
+### 5. 生成後目視檢查與誠實評估
+
+已用 Read 工具實際開圖檢視 8 張跨支柱/跨視角樣本（`01`、`03`、`05`、`08`、`09`、`10`、`11`、`12`），比對錨定圖 `candidate_02.png`：
+
+- **(a) 身分是否與錨定圖一致**：核心可辨識特徵——圓潤娃娃臉、大眼、灰棕髮色配臉側粉色挑染、上揚眼線妝感、水潤唇色——在全部 8 張樣本中都清楚可辨，與錨定圖是同一個人，比核准前「4 張各自獨立生成、彼此是不同人」的候選圖批次有本質上的進步，Reference Element 機制確實有效。**但誠實地說，並非像素級的同一張臉**：`03_cosplay_mirror_selfie`、`05_cosplay_candid_doorway` 這兩張的髮型呈現略短的鮑伯捲髮，比 `01`、`09`、`12` 呈現的及肩長捲髮略短；臉頰雀斑在不同光線/角度下的可見度也有落差（`01`、`08` 雀斑明顯，`03`、`11`、`12` 較不明顯）。這屬於同一身分在不同角度/濾鏡/光線下的正常變異範圍，但不是「逐張零落差」，比照 Vicky Lin 第四輪的誠實評估標準如實記錄。
+- **(b) 自拍是否比候拍更柔焦**：明顯成立。自拍樣本（`03`、`08`、`10`、`11`）呈現前鏡頭/CCD/美圖濾鏡各自對應的柔和感（`03` 前鏡頭自然稍軟、`08` CCD 復古顆粒與偏低動態範圍、`11` 美圖濾鏡明顯的柔焦+均勻膚色提亮），候拍樣本（`01`、`05`、`09`、`12`）則維持乾淨銳利的高畫質語氣，兩者對比清楚可辨，未出現「自拍跟候拍一樣銳利」的假感問題。
+- **(c) 場景/穿搭是否有實際多樣性**：13 張橫跨電競椅直播間、cosplay-lite 換裝（鏡前試穿、門口全身）、下午甦醒（CCD 自拍、沙發抱貓候拍）、浴室卸妝保養、飯店展會 IG 限動自拍、面基日白天咖啡廳外拍、直播間伸展候拍——確實對應 `content_style.md` 列出的六大內容支柱＋面基日生活主題，服裝也對應變化（黑色連帽外套/短褲、cosplay-lite 貓耳+大腿襪、灰色帽T、深色細肩帶背心、深藍色戰袍帽T、白T恤牛仔短褲），不是單一穿搭重複套用。
+- **(d) 膚色是否維持白皙**：8 張樣本膚色都清楚維持白皙透亮的粉色調，沒有出現古銅/小麥/曬黑色調，`fair, luminous porcelain-toned skin` 規則持續生效，符合 `SEXY_SCENE_LIBRARY.md` 第 6 點對台灣籍角色的膚色基調要求。
+
+**總結**：這組訓練圖集在身分一致性、自拍/候拍畫質分層、場景多樣性、膚色基調四項檢查上都達到可用標準，**唯一需要誠實指出的落差是髮型長度/雀斑可見度在少數幾張之間有輕微變異**，如果使用者對這點要求嚴格到「逐張完全一致」，建議先個別重新生成 `03`、`05` 這兩張再送訓練；若可接受同一身分在不同角度/場景下的自然變異範圍（比照 Vicky Lin 已核准訓練集的先例），現有 13 張可視為堪用的訓練素材。
+
+### 6. 未變更項目
+
+`profile.json`、`character.md`、`content_style.md` 均未修改；`README.md`、`KOL_TRAINING_SOP.md` 進度表本輪未觸碰。既有的 `kols/mia-huang/images/face_reference/candidate_01.png`～`candidate_04.png`、`round1_candidate_01.png`～`round1_candidate_04.png` 原封不動保留。
+
+---
+
+## ⚠️ 下一步（不可跳過，本輪未執行）
+
+1. 等待使用者實際審核 `kols/mia-huang/images/training_v1/` 這 13 張訓練圖，確認身分一致性、風格變體、內容支柱覆蓋率是否達到可接受標準（特別留意上方第 5 節誠實指出的髮型/雀斑輕微落差）
+2. 使用者明確核准後，才可呼叫 `show_characters(action='train')` 建立 Mia Huang 專屬 Soul 模型
+3. 本輪**未**呼叫 `show_characters(action='train')`，`profile.json` 的 `soul_id`／`ai_generation` 欄位仍為空白，`README.md` 的「新增 KOL 流程」步驟 7 檢查點與 `KOL_TRAINING_SOP.md` 要求的使用者核准關卡尚未通過
+
+**等待使用者確認這組訓練圖後才能進行 Soul 訓練。**
