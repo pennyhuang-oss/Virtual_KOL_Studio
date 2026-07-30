@@ -1,7 +1,7 @@
 # Rainie Hsu — AI 生成規劃
 
 > **狀態：PENDING（Soul 訓練與正式訓練集尚未執行）**
-> 本文件是生成前的規劃文件，不是生產記錄。2026-07-25 第一輪用 `soul_2` 生成 4 張候選圖（`round1_candidate_01`–`round1_candidate_04`，見下方「臉部/風格選角候選批次」），已被使用者否決（臉不一致＋妝容過濃）。同日改用 `seedream_v4_5` 並修正 prompt 本體妝容描述後重新生成第二輪候選圖（`candidate_01`–`candidate_03`，第 4 張因帳戶額度不足尚未生成，見下方「三次修正」章節），供使用者挑選，但**尚未**建立 Reference Element、**尚未**進行任何正式訓練圖生成、Soul 訓練或影片生成。
+> 本文件是生成前的規劃文件，不是生產記錄。2026-07-25 第一輪用 `soul_2` 生成 4 張候選圖（`round1_candidate_01`–`round1_candidate_04`），已被使用者否決（臉不一致＋妝容過濃）。同日改用 `seedream_v4_5` 並修正 prompt 本體妝容描述後重新生成第二輪候選圖（`round2_candidate_01`–`round2_candidate_04`，見下方「三次修正」章節），使用者看過後回饋妝容仍然太濃艷、且全部 4 張都是棚拍感的第三者攝影角度，缺乏自拍素材（見下方「2026-07-30 四次修正」章節）。已再次淡化妝容 prompt 並補上自拍/candid 視角混合，重新生成第三輪候選圖（`candidate_01`–`candidate_04`），供使用者挑選，但**尚未**建立 Reference Element、**尚未**進行任何正式訓練圖生成、Soul 訓練或影片生成。
 > soul_id、Reference Element ID、正式訓練圖 job ID／張數、Soul 訓練完成日期等欄位待實際執行後才會填入 —— 本文件中不包含任何一項，也不應在完成前臆造。
 
 ---
@@ -13,7 +13,7 @@
 | 名字 | Rainie Hsu（許雷妮） | — |
 | 年齡 | 24 歲 | — |
 | 國籍 | 台灣 | — |
-| 臉型 | 五官立體深邃，高顴骨、下顎線分明、眉型有雕塑感，整體讀起來是美豔動人、讓全場回頭的驚艷等級，**不是**銳利冷硬或稜角過重的「訓練感」臉。膚色是白皙透亮的瓷肌（**不是**曬黑、古銅、橄欖或深金小麥色）。妝容是 soft-glam：自然俐落的細眼線（**不是**厚重誇張的貓眼上揚甩尾），唇色是柔粉或莓果色調（**不是**正紅或深色的濃烈唇妝）——2026-07-25 已修正（見下方校準記錄），舊版「精緻貓眼眼線妝，唇色永遠正紅或深色調」的描述已淘汰 | — |
+| 臉型 | 五官立體深邃，高顴骨、下顎線分明、眉型有雕塑感，整體讀起來是美豔動人、讓全場回頭的驚艷等級，**不是**銳利冷硬或稜角過重的「訓練感」臉。膚色是白皙透亮的瓷肌（**不是**曬黑、古銅、橄欖或深金小麥色）。妝容目標是幾乎看不出來的自然妝：眼線緊貼睫毛根部、完全不上揚不甩尾，唇色是近乎透明的自然唇釉（**不是**飽和濃烈的唇色）——2026-07-30 已再次淡化 prompt 描述（見下方「2026-07-30 四次修正」章節），**但實測結果尚未完全達標**：第三輪候選圖的眼線仍帶有一絲外眼角上揚，唇色雖不再是深酒紅但仍是飽和的珊瑚/亮橘紅色唇釉，尚未達到真正「幾乎全素」的效果，詳見誠實視覺評估 | — |
 | 身材 | 94-59-92cm，F 罩杯，明顯沙漏型——胸型飽滿突出、腰線收緊、臀型有曲線，165cm，很適合貼身洋裝和馬甲上衣 | — |
 | 穿衣風格 | Glam nightlife：貼身洋裝、馬甲上衣、大腿高衩裙、going-out set、高跟鞋、誇張配飾 | — |
 | 眼鏡 | 無 | — |
@@ -31,7 +31,7 @@
 > 以下為規劃中的基礎 prompt 字串，供實際生成時套用。所有描述皆為純外觀特徵，不引用任何真實名人或藝人作為臉型參考。
 
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, the kind of face that stops a room when she walks in, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow, sleepy, or harsh/masculine) softly defined by a naturally thin eyeliner (NOT a heavy, thick, or exaggerated winged/cat-eye liner), sculpted brow, a soft rosy or berry lip tint (NOT a bold statement red/dark lip), glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, deliberate confident posture always aware of how the outfit sits, [SCENE], wearing [FULLY STYLED, COLOR-COORDINATED OUTFIT — a specific going-out piece, nothing generic or accidental], [STATEMENT ACCESSORY — specific jewelry / bag / heels named], [POSE — direct "I know you're watching" gaze at camera for glam beats, or a dynamic natural candid moment for off-duty beats], [LIGHTING — see lighting notes below], high contrast saturated tones with cool undertone and warm skin highlight, crisp sharp focus, high dynamic range, high-production-value editorial nightlife photography, dramatic and moody where the scene calls for it but NEVER degraded, muddy, dim, or grainy, shot on 35mm, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, the kind of face that stops a room when she walks in, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow, sleepy, or harsh/masculine) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, sculpted brow, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, deliberate confident posture always aware of how the outfit sits, [SCENE], wearing [FULLY STYLED, COLOR-COORDINATED OUTFIT — a specific going-out piece, nothing generic or accidental], [STATEMENT ACCESSORY — specific jewelry / bag / heels named], [POSE — direct "I know you're watching" gaze at camera for glam beats, or a dynamic natural candid moment for off-duty beats], [LIGHTING — see lighting notes below], high contrast saturated tones with cool undertone and warm skin highlight, crisp sharp focus, high dynamic range, high-production-value editorial nightlife photography, dramatic and moody where the scene calls for it but NEVER degraded, muddy, dim, or grainy, shot on 35mm, Instagram style
 ```
 
 **風格關鍵詞備註**：
@@ -64,7 +64,7 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 **草稿 Prompt**：
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by a naturally thin eyeliner (NOT a heavy dramatic wing) mid-application, eyeliner pencil held close to eye, sculpted brow, a soft rosy or berry lip tint (NOT a bold statement red/dark lip), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, natural skin imperfections, glossy jet-black long straight hair loosely tucked behind one ear, close-up at vanity mirror, focused expression on her own reflection not at camera, wearing a thin black ribbed camisole with visible bra strap and a matching black silk robe slipping off one shoulder — deliberately coordinated loungewear, not random pieces, vanity counter cluttered with an uncapped berry-toned lipstick, scattered cotton pads, a half-empty perfume bottle, a tangled phone charger cable, a tissue box, mixed color temperature — warm tungsten vanity bulbs blending with cooler bathroom ceiling light, soft but visible shadow edges across her face, slight glare on the mirror glass, shot on iPhone 15 Pro front camera propped at the counter edge, natural highlight clipping on the vanity bulb reflections, crisp sharp focus on her face and the eyeliner brush, high dynamic range, high-production-value glam-prep editorial photo — dramatic and moody but NOT degraded, dim, or grainy, high contrast tones, candid nightlife photo, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, mid-application, eyeliner pencil held close to eye, sculpted brow, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, natural skin imperfections, glossy jet-black long straight hair loosely tucked behind one ear, close-up at vanity mirror, focused expression on her own reflection not at camera, wearing a thin black ribbed camisole with visible bra strap and a matching black silk robe slipping off one shoulder — deliberately coordinated loungewear, not random pieces, vanity counter cluttered with an uncapped sheer nude lip balm, scattered cotton pads, a half-empty perfume bottle, a tangled phone charger cable, a tissue box, mixed color temperature — warm tungsten vanity bulbs blending with cooler bathroom ceiling light, soft but visible shadow edges across her face, slight glare on the mirror glass, shot on iPhone 15 Pro front camera propped at the counter edge, natural highlight clipping on the vanity bulb reflections, crisp sharp focus on her face and the eyeliner brush, high dynamic range, high-production-value glam-prep editorial photo — dramatic and moody but NOT degraded, dim, or grainy, high contrast tones, candid nightlife photo, Instagram style
 ```
 
 ---
@@ -75,7 +75,7 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 **草稿 Prompt**：
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by a naturally thin eyeliner (NOT a heavy dramatic wing), a soft rosy or berry lip tint (NOT a bold statement red/dark lip), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing in front of full-length mirror turning to check the back of the dress, wearing fitted black satin bodycon dress with visible seam lines and thigh-high slit, layered gold statement necklace, strappy black ankle-tie heels, confident direct "I know you're watching" gaze at camera through mirror reflection, phone visible in the mirror at chest height, bedroom floor cluttered with two or three rejected coordinated outfits tossed on the bed, kicked-off heels near the closet, half-open closet door with empty hangers, mixed color temperature — warm apartment ceiling light blending with the cool blue glow of the phone screen, soft visible shadow under her jawline, shot on iPhone 15 Pro back camera held at chest height for a mirror selfie, natural highlight clipping from the ceiling light reflected in the mirror glass, crisp sharp focus on the dress fabric and her face, high dynamic range, high-production-value glam editorial photo — dramatic but NOT degraded, dim, or grainy, full body shot, high contrast saturated tones, candid nightlife photo, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing in front of full-length mirror turning to check the back of the dress, wearing fitted black satin bodycon dress with visible seam lines and thigh-high slit, layered gold statement necklace, strappy black ankle-tie heels, confident direct "I know you're watching" gaze at camera through mirror reflection, phone visible in the mirror at chest height, bedroom floor cluttered with two or three rejected coordinated outfits tossed on the bed, kicked-off heels near the closet, half-open closet door with empty hangers, mixed color temperature — warm apartment ceiling light blending with the cool blue glow of the phone screen, soft visible shadow under her jawline, shot on iPhone 15 Pro back camera held at chest height for a mirror selfie, natural highlight clipping from the ceiling light reflected in the mirror glass, crisp sharp focus on the dress fabric and her face, high dynamic range, high-production-value glam editorial photo — dramatic but NOT degraded, dim, or grainy, full body shot, high contrast saturated tones, candid nightlife photo, Instagram style
 ```
 
 ---
@@ -86,7 +86,7 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 **草稿 Prompt**：
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by a naturally thin eyeliner (NOT a heavy dramatic wing) under the neon light, a soft rosy or berry lip tint (NOT a bold statement red/dark lip), visible skin pores, subtle natural skin texture, slight oil sheen visible under the neon light, unretouched skin detail, glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing at a club entrance in Taipei's nightlife district about to step inside, wearing a black corset top with visible boning and high-slit satin mini skirt — a deliberately coordinated going-out set, ankle-strap statement heels, layered gold statement necklace, confident poised stance, full body shot, background shows a blurred queue of people near the door, a parked scooter at the curb, a sticker-covered lamppost, wet pavement reflecting the venue's neon sign, mixed color temperature — magenta and cyan neon spill blending with warmer sodium street lamps, slight lens flare off the neon tubing, glare on the wet pavement, shot on iPhone 15 Pro back camera taken by a friend a few steps away, natural highlight clipping around the neon signage, crisp sharp focus on her face and outfit, high dynamic range, high-production-value nightlife editorial photo — dramatic, saturated, and glossy but NOT degraded, dim, or grainy, high contrast cool-toned with warm skin highlight, candid nightlife photo, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all under the neon light, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight oil sheen visible under the neon light, unretouched skin detail, glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing at a club entrance in Taipei's nightlife district about to step inside, wearing a black corset top with visible boning and high-slit satin mini skirt — a deliberately coordinated going-out set, ankle-strap statement heels, layered gold statement necklace, confident poised stance, full body shot, background shows a blurred queue of people near the door, a parked scooter at the curb, a sticker-covered lamppost, wet pavement reflecting the venue's neon sign, mixed color temperature — magenta and cyan neon spill blending with warmer sodium street lamps, slight lens flare off the neon tubing, glare on the wet pavement, shot on iPhone 15 Pro back camera taken by a friend a few steps away, natural highlight clipping around the neon signage, crisp sharp focus on her face and outfit, high dynamic range, high-production-value nightlife editorial photo — dramatic, saturated, and glossy but NOT degraded, dim, or grainy, high contrast cool-toned with warm skin highlight, candid nightlife photo, Instagram style
 ```
 
 ---
@@ -97,12 +97,12 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 **草稿 Prompt（版本 A — 玄關全身版）**：
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by a naturally thin eyeliner (NOT a heavy dramatic wing), sculpted brow, a soft rosy or berry lip tint (NOT a bold statement red/dark lip), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair worn sleek with deep side part, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing by apartment doorway ready to leave, wearing a sleek satin bodycon dress with statement drop earrings and a matching going-out bag on her shoulder, sky-high ankle-strap heels, direct confident "I know you're watching" gaze at camera, full body reveal shot, entryway cluttered with a shoe rack holding several other pairs of heels, an umbrella leaning in the corner, keys and a phone left on the entry table, a jacket on the coat hook, mixed color temperature — warm entryway bulb blending with cooler hallway light bleeding in from outside, soft glare on the small entry mirror, shot on iPhone 15 Pro back camera on self-timer propped against the shoe rack, natural highlight clipping near the doorway lamp, crisp sharp focus on her face and dress, high dynamic range, high-production-value editorial photo — dramatic but NOT degraded, dim, or grainy, high contrast saturated tones, candid nightlife photo, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, sculpted brow, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair worn sleek with deep side part, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing by apartment doorway ready to leave, wearing a sleek satin bodycon dress with statement drop earrings and a matching going-out bag on her shoulder, sky-high ankle-strap heels, direct confident "I know you're watching" gaze at camera, full body reveal shot, entryway cluttered with a shoe rack holding several other pairs of heels, an umbrella leaning in the corner, keys and a phone left on the entry table, a jacket on the coat hook, mixed color temperature — warm entryway bulb blending with cooler hallway light bleeding in from outside, soft glare on the small entry mirror, shot on iPhone 15 Pro back camera on self-timer propped against the shoe rack, natural highlight clipping near the doorway lamp, crisp sharp focus on her face and dress, high dynamic range, high-production-value editorial photo — dramatic but NOT degraded, dim, or grainy, high contrast saturated tones, candid nightlife photo, Instagram style
 ```
 
 **草稿 Prompt（版本 B — 臉部特寫版）**：
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by a naturally thin eyeliner (NOT a heavy dramatic wing), sculpted brow, a soft rosy or berry lip tint (NOT a bold statement red/dark lip), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, natural skin imperfections, glossy jet-black long straight hair worn sleek with deep side part, close-up face-to-collarbone shot at the apartment doorway, direct confident "I know you're watching" gaze at camera, statement drop earring visible in soft background bokeh, entry table faintly visible behind her with keys and a phone on it, mixed color temperature — warm entryway bulb blending with a sliver of cooler hallway light through the door gap, soft shadow across her face, glare on the golden pendant light overhead, shot on iPhone 15 Pro front camera held at a slight downward angle, natural highlight clipping on the pendant light, crisp sharp focus on her eyes and lips, high dynamic range, high-production-value glam close-up — dramatic but NOT degraded, dim, or grainy, high contrast saturated tones, candid nightlife photo, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, sculpted brow, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, natural skin imperfections, glossy jet-black long straight hair worn sleek with deep side part, close-up face-to-collarbone shot at the apartment doorway, direct confident "I know you're watching" gaze at camera, statement drop earring visible in soft background bokeh, entry table faintly visible behind her with keys and a phone on it, mixed color temperature — warm entryway bulb blending with a sliver of cooler hallway light through the door gap, soft shadow across her face, glare on the golden pendant light overhead, shot on iPhone 15 Pro front camera held at a slight downward angle, natural highlight clipping on the pendant light, crisp sharp focus on her eyes and lips, high dynamic range, high-production-value glam close-up — dramatic but NOT degraded, dim, or grainy, high contrast saturated tones, candid nightlife photo, Instagram style
 ```
 
 ---
@@ -113,7 +113,7 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 **草稿 Prompt**：
 ```
-24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by a naturally thin eyeliner (NOT a heavy dramatic wing), a soft rosy or berry lip tint (NOT a bold statement red/dark lip), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing in a hotel room in front of a full-length mirror, turning slightly to check the fit of the dress before heading out to a new city's nightlife, wearing a fitted metallic slip dress with thin straps and side ruching, statement drop earrings, still barefoot and holding a pair of strappy heels in one hand, city skyline visible through the floor-to-ceiling window behind her, half-open suitcase on the bed with a few coordinated outfits spilling out, a room-service tray with an empty water glass on the desk, a phone charger cable snaking across the carpet, a hotel key card on the nightstand, mixed color temperature — warm tungsten spotlight from the hotel ceiling blending with the cool blue glow of the city skyline through the window, soft glare on the window glass reflecting the room, shot on iPhone 15 Pro back camera held at chest height for a hotel mirror selfie, phone edge visible in the mirror reflection, natural highlight clipping from the hotel ceiling spotlight, crisp sharp focus on the dress and the skyline, high dynamic range, high-production-value travel-glam editorial photo — dramatic but NOT degraded, dim, or grainy, full body shot, high contrast saturated tones, candid travel-nightlife photo, Instagram style
+24-year-old Taiwanese woman, stunning bold glamour-model beauty, high cheekbones, sculpted defined jawline, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large striking dark eyes (NOT narrow or harsh) softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair, striking hourglass figure — 94cm full lifted bust (F cup), 59cm cinched waist, 92cm curved hips, standing in a hotel room in front of a full-length mirror, turning slightly to check the fit of the dress before heading out to a new city's nightlife, wearing a fitted metallic slip dress with thin straps and side ruching, statement drop earrings, still barefoot and holding a pair of strappy heels in one hand, city skyline visible through the floor-to-ceiling window behind her, half-open suitcase on the bed with a few coordinated outfits spilling out, a room-service tray with an empty water glass on the desk, a phone charger cable snaking across the carpet, a hotel key card on the nightstand, mixed color temperature — warm tungsten spotlight from the hotel ceiling blending with the cool blue glow of the city skyline through the window, soft glare on the window glass reflecting the room, shot on iPhone 15 Pro back camera held at chest height for a hotel mirror selfie, phone edge visible in the mirror reflection, natural highlight clipping from the hotel ceiling spotlight, crisp sharp focus on the dress and the skyline, high dynamic range, high-production-value travel-glam editorial photo — dramatic but NOT degraded, dim, or grainy, full body shot, high contrast saturated tones, candid travel-nightlife photo, Instagram style
 ```
 
 ---
@@ -203,16 +203,90 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 
 **⚠️ 本輪任務到此停止，等待使用者對 candidate_01–03（以及是否需要補第 4 張）給出明確回饋，不自行往下一階段推進。**
 
+> **後續更新（2026-07-30）**：使用者已看過本輪（第二輪）全部 4 張候選圖，回饋妝容依然太濃艷、且 4 張全是棚拍感的第三者攝影角度、完全沒有自拍素材。本輪檔案已用 `git mv` 改名為 `round2_candidate_01–04.png` 保留存查，不刪除。詳細修正內容與第三輪結果見下方「2026-07-30 四次修正」章節。
+
+---
+
+## 2026-07-30 四次修正：妝感再淡化＋補上自拍視角混合
+
+**使用者原話回饋**：
+1. 「Rainie Hsu 的妝我還是覺得有點太濃艷了」——即使第二輪已經軟化過，妝容讀起來還是太濃。實際檢視第二輪 4 張圖：外眼角仍有明顯的上揚細尾（不是完全平貼的自然眼線），唇色是飽和度偏高的莓紅/酒紅色，「soft rosy or berry lip tint」這個措辭顯然不夠限制。
+2. 「她的圖片生成風格都很像是那種棚拍，就是很不自然、蠻刻意的...我還是會希望這些女生除了第三者幫她們拍的照片之外，還是要有多一點像之前 Iris Chen 生成的那種自拍素材」——第二輪 4 張全部採用「editorial nightlife photography」棚拍框架（素色背景、戲劇性佈光、擺拍的「我知道你在看」眼神），沒有任何自拍角度的素材。
+
+此回饋已同步寫入 `SEXY_SCENE_LIBRARY.md` 新增第 7 節「自拍與他拍比例（2026-07-30 新增）」，訂為全工作室的永久規則：每個角色的完整素材組合都必須混合自拍視角與他拍/生活抓拍視角，不能全數採用「editorial photography／high-production-value」語氣。
+
+### 三個檔案的妝容措辭修正
+
+**`profile.json`**：
+- `identity.appearance.face_type`：眼線描述從「a naturally defined, thin eyeliner (NOT thick, heavy, or exaggerated winged liner)」改為「barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all」；唇色從「a soft rosy or berry lip tint (not a bold statement red/dark lip)」改為「a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color)」。
+- `identity.appearance.eyes`：同步改為「softly defined by a barely-there, soft brown-toned eyeliner drawn close to the lash line with no visible wing or flick at all — a polished, put-together signature, never a heavy dramatic wing or cat-eye flick.」
+- 順帶修正兩處與新版妝容矛盾的殘留措辭（非任務明確要求範圍，但屬同一根本問題，一併處理）：`persona.quirks` 裡的「Does her eyeliner wing first」拿掉「wing」字眼（改為「Does her eyeliner first」），避免暗示她的招牌動作是畫甩尾；`content.pillars`「浴室 / Glam Prep」描述裡的「cat-eye makeup application」改為「precise, soft eyeliner application」。
+
+**`character.md`**：
+- 第 19 行敘述性文字「削骨眼線、紅到發亮的唇色」改為「精心打理的自然妝感、恰到好處的透亮唇彩」。
+- 第 41 行（人物設定表格「外型」欄，即使用者指出「從未被修正過」的原始未軟化描述）：「招牌是精緻的貓眼眼線妝，唇色永遠是正紅或深色調」整段改寫為「招牌是幾乎看不出來的自然眼線——緊貼睫毛根部的淺棕色細線，完全沒有上揚甩尾；唇色是透亮自然的唇釉感，帶著淡淡血色，不是飽和濃烈的唇色」。
+- 「浴室 / 妝髮準備」段落的「一步步畫貓眼眼線」改為「一步步畫上緊貼睫毛根部的自然眼線」。
+- 兩處描述「比平常更低調的版本」的對比場景（買菜/回家看媽媽、家人時光服裝公式表）原本寫「貓眼線省了」「無貓眼」，因為新的預設妝容本身已經沒有貓眼可省，已同步改寫為「連這條淺淺的眼線都省了」「連平常那條淺眼線都省了」，維持「回家版比平常更低調」的層次感，同時不再自相矛盾。
+- 她「造型永遠是刻意的、把出門當正事」的人設個性文字未改動——本次修正只針對妝容視覺濃度，不觸碰她的個性設定。
+
+**`generation_notes.md`**（本文件）：
+- `core_prompt_base` 與批次規劃 1–5（含批次 4 的版本 A、B）的英文 prompt 字串裡，`softly defined by a naturally thin eyeliner (NOT a heavy, thick/dramatic winged/cat-eye liner)` 全數改為 `softly defined by barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all`；`a soft rosy or berry lip tint (NOT a bold statement red/dark lip)` 全數改為 `a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color)`。批次規劃 6（舞蹈有氧）本身已是「minimal or no makeup」，未受影響。批次規劃 1 化妝台道具「an uncapped berry-toned lipstick」改為「an uncapped sheer nude lip balm」以維持一致。上方 2026-07-25 章節的歷史記錄文字（引用當時實際送出的 prompt 片段）維持原樣未改動，僅為歷史記錄，不追溯修改。
+
+### 檔案改名（保留存查，未刪除）
+
+`git mv` 將第二輪候選圖從 `candidate_01–04.png` 改名為 `round2_candidate_01–04.png`（第一輪已是 `round1_candidate_01–04.png`）：
+
+| 舊檔名 | 新檔名 |
+|--------|--------|
+| candidate_01.png | round2_candidate_01.png |
+| candidate_02.png | round2_candidate_02.png |
+| candidate_03.png | round2_candidate_03.png |
+| candidate_04.png | round2_candidate_04.png |
+
+### 第三輪候選批次（自拍／candid 混合）
+
+**模型**：`seedream_v4_5`（沿用既有實證結論，同 prompt 重複呼叫可維持臉型高度一致）。**參數**：`aspect_ratio: 9:16`，`quality: basic`。`get_cost:true` 預檢確認每張 1 credit（`credits_exact: 1`）。
+
+四張圖沿用同一組外觀描述（臉部特徵、94-59-92cm／F 罩杯身材數字、髮型、黑色緞面細肩帶貼身洋裝＋層次金項鍊＋金圈耳環，與前兩輪保持一致以利比對），依照 `SEXY_SCENE_LIBRARY.md` 第 7 節規則，四張角度／視角**刻意混合**——2 張是真正的自拍視角，2 張改用自然的生活抓拍語氣取代原本的「editorial nightlife photography」棚拍語氣：
+
+| 檔名 | 視角 | 說明 | Job ID | 狀態 |
+|------|------|------|--------|------|
+| candidate_01.png | **自拍**——close-up front-facing selfie shot, slightly overhead angle looking down at camera | 臥室內近景自拍，暖黃燈搭配一點窗外冷光 | `1a4b6ccf-eb8e-47ec-8e64-a64661a08d7c` | ✅ 完成 |
+| candidate_02.png | **自拍**——mirror selfie, phone visible in reflection, one arm extended | 全身鏡前鏡子自拍，手機確實入鏡，床上散落試穿淘汰的衣服 | `0cc86e2d-c7d8-4f25-97e0-a0293c8f430a` | ✅ 完成 |
+| candidate_03.png | **他拍/生活抓拍**——3/4 半身，「像朋友隨手拍到」的自然瞬間，不是編輯攝影語氣 | 玄關處，鞋櫃、鑰匙手機等生活雜物，暖黃玄關燈 | `8ce9b6a5-f370-492e-947f-85f166daacb2` | ✅ 完成 |
+| candidate_04.png | **他拍/生活抓拍**——全身，出門前走出門的自然瞬間，不是定裝擺拍 | 玄關門口，畫面背景甚至帶到一位路過的人影，強化「別人拍的」真實感 | `59b49f23-6e2b-4d83-9afa-91b2a16d1cf2` | ✅ 完成 |
+
+兩張自拍嚴格遵守 Iris Chen 案例「自拍視角重要規則」——prompt 描述的是照片本身呈現的視角（`close-up front-facing selfie shot`、`mirror selfie, phone visible in reflection`），沒有寫「taking a selfie holding phone up」這種描述拍攝動作的措辭。批次 3、4 則移除了「high-production-value editorial nightlife photography」「dramatic and moody」這類棚拍/雜誌語氣，改用「candid lifestyle photo」「candid natural pose caught mid-step」等語氣，讓這兩張讀起來更像手機隨手拍而非擺拍定裝照。
+
+**費用**：`get_cost` 預估 4 張共 4 credits。生成前帳戶餘額 2931.5 credits，生成後降至 2877.7 credits，共減少 53.8 credits——同前兩輪的觀察，帳戶為共用環境，同一時段可能有其他 KOL 批次的並行生成活動，此差額不確定是否全數來自本批次，僅如實記錄觀察到的餘額變化，不臆測原因。四個 job 皆一次成功完成（`completed`），沒有卡住或重試的情形。
+
+### 誠實視覺評估（親自用 Read 工具逐張檢視，不是假設 prompt 修改就一定有效）
+
+- **(a) 眼線是否已經真正變柔和、零甩尾 — ❌ 未達標**：四張圖的外眼角**仍然帶有清楚可見的上揚甩尾**，尤其是 candidate_01、02、03，眼尾的黑色細線明確向上勾出一小段延伸，是典型的「貓眼」輪廓，跟 prompt 裡明確寫的「NO visible wing or flick at all」直接矛盾。candidate_04 因為是全身遠景、臉部較小，甩尾不那麼顯眼，但放大看同樣可辨識出上揚痕跡。換句話說，這次把措辭改得更激進（從「a naturally defined, thin eyeliner」改成「barely-there...with NO visible wing or flick at all」）並沒有讓生成模型真正畫出零甩尾的眼線——`seedream_v4_5` 對「stunning bold glamour-model beauty」這類臉型描述似乎有很強的「配一個貓眼」慣性，光靠負面詞（NOT/NO）不足以完全壓過這個慣性。
+- **(b) 唇色是否已經真正變成透亮自然、非飽和 — ❌ 未達標**：四張圖的唇色從第二輪的深莓紅/酒紅色，變成了偏珊瑚橘/亮橘紅色調的**光澤唇釉**，色調確實比酒紅淺一些、也更年輕化，但飽和度和存在感完全不是「a sheer, natural tinted lip balm with barely-there color」該有的效果——四張的嘴唇顏色都清楚、飽滿、有光澤，一般觀眾會讀成「上了口紅／唇釉」而不是「幾乎沒上色的自然唇」。這跟眼線一樣，是措辭修正沒有完全壓過模型對「glamour」臉的預設美妝慣性。
+- **(c) 是否至少 2/4 讀起來是真正的自拍風格，而非棚拍 — ✅ 達標**：candidate_01（近景俯角自拍構圖，視覺上完全符合手機前鏡頭自拍的觀感）與 candidate_02（鏡子自拍，手機確實出現在鏡面反射中，手臂伸展姿勢自然）兩張都清楚讀成自拍照，不是第三人稱編輯攝影。candidate_03、04 雖然不是自拍，但確實不再是前兩輪那種素色背景＋戲劇打光的棚拍既視感——玄關生活雜物、路人入鏡（candidate_04 背景甚至真的帶到一位經過的人）、較平實的燈光配方，讀起來更像「朋友隨手拍到」的生活感抓拍，跟前兩輪 4 張全數棚拍的問題方向相反。整體 4 張的視角組合確實達成了使用者要求的「自拍＋他拍混合」。
+
+**結論（誠實陳述，不誇大成果）**：本輪自拍/candid 視角混合的目標**已達成**，是一次明確的進步，直接回應了使用者第二點回饋；但妝容淡化的目標**尚未達成**——這是連續第二輪嘗試軟化眼線與唇色，措辭已經改得非常明確直接（"NO visible wing or flick at all"、"sheer...barely-there color"），生成結果仍然帶有可辨識的貓眼甩尾與飽和唇釉。如果使用者的期待是「完全看不出來上妝」的等級，目前的 prompt 措辭策略對這個模型可能已經到頂，下一輪如果還要繼續往這個方向修正，可能需要考慮：(1) 拿掉或弱化「stunning bold glamour-model beauty」這類容易觸發模型「配套上完整精緻妝容」聯想的整體形容詞、改用更中性的美貌描述；(2) 明確加入「bare-faced makeup look, no eye makeup at all, undefined natural lip color close to her own skin tone」這類更直接的裸妝指令，而不是只用「barely-there」這種還留有妝感詮釋空間的字眼；(3) 或者跟使用者確認「柔和」的具體參照標準（例如提供一張她心目中「剛好」的唇色/眼線參考圖），避免在純文字描述空間裡繼續無限微調。
+
+**⚠️ 下一步（不可跳過，維持既有規則）**：
+1. 4 張候選圖已全部生成完成，**待使用者從中挑選最喜歡的一張**（或說明妝容/自拍視角是否仍需調整）。
+2. 依照 README.md「新增 KOL 流程」與 `KOL_TRAINING_SOP.md` 的強制規則，**必須停下來，等使用者實際看過候選圖並明確指出最喜歡的一張後，才可以進入下一階段**——下一階段流程仍為：(1) 使用者核准單一一張圖後上傳並建立 Reference Element，(2) 以該 Element 錨定身分重新生成完整訓練集，(3) 訓練圖確認後才呼叫 `show_characters(action='train')` 建立 soul_id。
+3. 本輪（第三輪修正批次）**沒有**建立 Reference Element，**沒有**呼叫 `show_characters(action='train')`，`profile.json` 的 `ai_generation`／soul_id 維持原狀未變更，訓練狀態明確標記為 **PENDING**。
+4. 若使用者仍然覺得妝容太濃，下一輪修正建議參考上方「誠實視覺評估」結論列出的三個方向，而不是單純再換幾個同義詞。
+
+**⚠️ 本輪任務到此停止，等待使用者對 candidate_01–04 給出明確回饋（包含妝容是否可接受、自拍視角是否喜歡、選中哪一張），不自行往下一階段推進。**
+
 ---
 
 ## 尚未執行事項清單
 
-- [ ] 批次規劃 1–6 尚未送出生成（此為之後完整訓練集規劃，待 Reference Element 錨定後才依此重新調整生成）
-- [x] 臉部/風格選角候選批次 — 第一輪（4 張，`round1_candidate_01`–`round1_candidate_04`）已生成，已被使用者否決
-- [x] 臉部/風格選角候選批次 — 第二輪修正（`seedream_v4_5` + 修正妝感 prompt，`candidate_01`–`candidate_03` 已生成；`candidate_04` 因帳戶額度不足尚未生成）
-- [ ] 使用者尚未挑選出核准的候選圖
-- [ ] 第 4 張（全身版）候選圖因帳戶餘額僅 0.35 credits（需要 1 credit）尚未生成，待額度恢復
+- [ ] 批次規劃 1–6 尚未送出生成（此為之後完整訓練集規劃，待 Reference Element 錨定後才依此重新調整生成；若之後要送出，須先比照本輪規則補上自拍/candid 視角混合，不能全數沿用棚拍語氣）
+- [x] 臉部/風格選角候選批次 — 第一輪（4 張，`round1_candidate_01`–`round1_candidate_04`）已生成，已被使用者否決（臉不一致＋妝容過濃）
+- [x] 臉部/風格選角候選批次 — 第二輪修正（4 張，`round2_candidate_01`–`round2_candidate_04`，`seedream_v4_5` + 修正妝感 prompt）已生成，已被使用者否決（妝容仍太濃艷＋全數棚拍角度、無自拍素材）
+- [x] 臉部/風格選角候選批次 — 第三輪修正（4 張，`candidate_01`–`candidate_04`，妝容 prompt 再次淡化＋補上自拍/candid 視角混合）已生成——**自拍/candid 視角混合目標已達成，但妝容淡化目標誠實視覺評估後尚未達標**（眼線仍有可辨識甩尾，唇色仍偏飽和珊瑚橘），詳見上方「2026-07-30 四次修正」章節
+- [ ] 使用者尚未挑選出核准的候選圖，也尚未針對第三輪的妝容結果給出回饋
 - [ ] 尚無 Reference Element
 - [ ] 尚無 Soul 訓練、尚無 soul_id
 - [ ] 尚無任何用於最終訓練集或影片生成的圖片/影片檔案
 - [x] 模型選擇的實測結論：`seedream_v4_5` 在無 soul_id 情況下同 prompt 重複生成臉型高度一致，優於 `soul_2`（無 soul_id 時每次獨立想像新臉），與 Iris Chen 案例記錄相符
+- [x] 2026-07-30 新增實測結論：對 `seedream_v4_5` 而言，「stunning bold glamour-model beauty」這類整體形容詞會帶出很強的「配套精緻貓眼＋飽和唇色」慣性，僅靠 NOT/NO 開頭的否定措辭修正眼線/唇色描述，兩輪嘗試後仍未能完全壓過這個慣性——下一輪如需繼續淡化，建議参考「2026-07-30 四次修正」章節列出的三個替代方向，而非重複同類措辭微調
