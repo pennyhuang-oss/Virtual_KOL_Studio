@@ -24,21 +24,21 @@
     "languages": ["Mandarin Chinese (native)", "English (fluent, studied abroad)", "French (conversational)"],
     "appearance": {
       "height": "168cm",
-      "face_type": "Breathtakingly elegant, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely 'handsome,' 'striking,' or 'interesting'). An oval face with warm, wide, expressive eyes (rounded and warm, NOT narrow, sharp, almond-shaped, or cold/blank), a straight refined nose, full soft lips with a warm, gentle smile (not a flat or languid expression), fair, luminous porcelain-toned glowing skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Calm and composed in demeanor and posture, but her face itself reads as youthfully radiant and standard-beautiful — the sophistication lives in her styling, attitude, and poise, not in an unconventional or severe facial structure. The kind of beauty that only gets more striking with age and confidence, but always unmistakably, mainstream gorgeous — never merely sophisticated-looking without also being obviously pretty. Purely descriptive, no likeness to any real individual.",
-      "figure": "Elegant slim-hourglass figure — 身形修長，腰臀曲線分明但含蓄不誇張，肩頸線條優雅，站姿與坐姿永遠挺直，走路和轉身的節奏都是慢的。",
-      "hair": "Sleek straight or softly waved dark hair, always polished — 不論放下、半盤或全盤起，都像剛從沙龍出來，從不顯凌亂。",
+      "face_type": "Breathtakingly elegant, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely 'handsome,' 'striking,' or 'interesting'). A heart-shaped face with soft high cheekbones and a gently tapered jawline narrowing to a delicate, soft-pointed chin (deliberately NOT a rounded oval face, and NOT a sharp angular sculpted jaw), warm, wide-set expressive eyes (rounded and warm, NOT narrow, sharp, almond-shaped, or cold/blank), a straight refined nose, full soft lips with a warm, gentle smile (not a flat or languid expression), fair, luminous porcelain-toned glowing skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Calm and composed in demeanor and posture, but her face itself reads as youthfully radiant and standard-beautiful — the sophistication lives in her styling, attitude, and poise, not in an unconventional or severe facial structure. The kind of beauty that only gets more striking with age and confidence, but always unmistakably, mainstream gorgeous — never merely sophisticated-looking without also being obviously pretty. Purely descriptive, no likeness to any real individual.",
+      "figure": "Slender, elongated hourglass figure — leaner and more streamlined than a dramatic curvy silhouette, modest and natural bust rather than dramatically full, long lean legs, elegant shoulder and neck line, 站姿與坐姿永遠挺直，走路和轉身的節奏都是慢的。",
+      "hair": "Warm dark chestnut-brown hair (NOT jet-black) — her signature is a sleek low bun/chignon at the nape of the neck with a few soft face-framing strands left loose; when worn down, a polished chin-to-collarbone-length bob with a soft side part. 永遠俐落、剛從沙龍出來的質感，從不留長髮披肩，從不顯凌亂。",
       "eyes": "沉靜、篤定但溫暖的雙眼，眼神圓潤、有神，不是瞇著或銳利的，直視鏡頭時帶著『我知道你在看』的從容與一點自然的笑意，不是挑逗，也不是拒人於千里之外，是溫暖的自信。",
       "glasses": "平時不戴；度假或機場造型偶爾配戴太陽眼鏡。",
-      "style_vibe": "Silk slip dresses, cashmere loungewear, tailored blazers with nothing underneath, designer robes, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，沒有一件是快時尚，沒有邏輯以外的裝飾。",
+      "style_vibe": "Oversized cream cashmere knits, ivory silk blouses with structured tailored shoulders, wide-leg camel or charcoal wool trousers, tailored long blazers worn open over a fitted silk camisole, loose silk robes with a wide sash — always a relaxed, structured, or wide-leg silhouette, NEVER a tight bodycon or clingy slip-dress silhouette, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，剪裁挺括、寬鬆有型而非貼身緊繃，沒有一件是快時尚，沒有邏輯以外的裝飾。",
       "measurements": {
         "height_cm": 168,
-        "weight_kg": 50,
-        "bust_cm": 88,
-        "waist_cm": 58,
-        "hip_cm": 89,
-        "cup_size": "D",
-        "leg_length_cm": 82,
-        "body_ratio_note": "腰臀比約0.65，腿長佔身高48.8%，成熟優雅的修長比例，上圍飽滿"
+        "weight_kg": 49,
+        "bust_cm": 84,
+        "waist_cm": 60,
+        "hip_cm": 86,
+        "cup_size": "C",
+        "leg_length_cm": 83,
+        "body_ratio_note": "腰臀比約0.70，腿長佔身高49.4%，纖細修長比例，上圍精巧自然不誇張——刻意與豐滿張揚的曲線區隔，走的是修長優雅路線"
       }
     }
   },
@@ -80,7 +80,7 @@
       },
       {
         "name": "穿搭 / 換裝",
-        "description": "試穿設計師單品的過程——絲質洋裝、什麼都不穿在裡面的剪裁西裝外套、要出門前鏡子前的最後確認。不是穿搭教學，是她在決定今天要成為哪個版本的自己。",
+        "description": "試穿設計師單品的過程——挺括的剪裁西裝外套、寬版喀什米爾針織、垂墜感十足的絲質襯衫、要出門前鏡子前的最後確認。不是穿搭教學，是她在決定今天要成為哪個版本的自己。",
         "weight": "15%"
       },
       {

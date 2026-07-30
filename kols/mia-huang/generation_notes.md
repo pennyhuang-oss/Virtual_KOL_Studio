@@ -1,6 +1,6 @@
 # Mia Huang — AI 生成規劃
 
-> **狀態：PENDING — 已生成 4 張發現用候選圖，等待使用者挑選喜歡的臉／風格，尚未錨定 Element、尚未建立 Soul 模型**。2026-07-25：完成第一輪「發現批次」（discovery batch）——用她已校準的核心 prompt 生成 4 張候選圖（`candidate_01.png`～`candidate_04.png`，正面特寫／正面半身／四分之三側半身／正面全身），供使用者從中挑選最喜歡的臉/風格；因尚未用 Reference Element 錨定，4 張彼此身分不保證一致，這是預期中的現象。詳見文末「2026-07-25 發現用候選圖批次」章節。**以下批次 1–7 仍是計畫中的拍攝方向，尚未執行**；使用者核准候選圖後，下一步是比照 Vicky Lin 的流程建立 Reference Element 錨定身分，再擴充生成完整訓練圖集。**⚠️ 同日三次修正**：第一輪用的是 `soul_2`，且膚色 prompt 當時未真正寫入本體文字，導致膚色偏古銅／4 張身分落差過大，已重新用 `seedream_v4_5` + 補上膚色 prompt 重新生成第二輪候選圖。原始第一輪圖片改名保留為 `round1_candidate_01.png`～`round1_candidate_04.png`，現在的 `candidate_01.png`～`candidate_04.png` 為修正後版本。詳見文末「2026-07-25 三次修正：改用 Seedream 4.5 並補上膚色 prompt 本體」章節。
+> **狀態：⚠️ PENDING USER REVIEW — 使用者已核准 4 張候選圖皆可接受，已選定 `candidate_02.png` 為身分錨定圖並建立 Reference Element（`element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41`），已生成 13 張完整訓練圖集（`kols/mia-huang/images/training_v1/`）。等待使用者審核這組訓練圖後才能進行 Soul 訓練，`profile.json` 尚未寫入 `soul_id` 或 `ai_generation` 欄位，`show_characters(action='train')` 尚未呼叫。詳見文末「2026-07-30 訓練圖集生成（Element 錨定）」章節。**2026-07-25：完成第一輪「發現批次」（discovery batch）——用她已校準的核心 prompt 生成 4 張候選圖（`candidate_01.png`～`candidate_04.png`，正面特寫／正面半身／四分之三側半身／正面全身），供使用者從中挑選最喜歡的臉/風格；因尚未用 Reference Element 錨定，4 張彼此身分不保證一致，這是預期中的現象。詳見文末「2026-07-25 發現用候選圖批次」章節。**以下批次 1–7 仍是計畫中的拍攝方向，尚未執行**；使用者核准候選圖後，下一步是比照 Vicky Lin 的流程建立 Reference Element 錨定身分，再擴充生成完整訓練圖集。**⚠️ 同日三次修正**：第一輪用的是 `soul_2`，且膚色 prompt 當時未真正寫入本體文字，導致膚色偏古銅／4 張身分落差過大，已重新用 `seedream_v4_5` + 補上膚色 prompt 重新生成第二輪候選圖。原始第一輪圖片改名保留為 `round1_candidate_01.png`～`round1_candidate_04.png`，現在的 `candidate_01.png`～`candidate_04.png` 為修正後版本。詳見文末「2026-07-25 三次修正：改用 Seedream 4.5 並補上膚色 prompt 本體」章節。
 
 ---
 
@@ -18,7 +18,7 @@
 | 眼鏡 | 深夜直播偶爾配戴透明藍光眼鏡，其餘時候不戴 |
 | 身材 | 身高 160cm，嬌小、曲線柔和，能撐起寬鬆帽T也能撐起削肩背心 |
 | 穿衣風格 | 電競品牌寬鬆帽T + 短褲、削肩背心配耳機、cosplay-lite（大腿襪、貓耳頭飾）、深夜居家睡衣風格戰袍 |
-| AI 生成狀態 | **尚未建立 Soul 模型。已生成 4 張發現用候選圖（`kols/mia-huang/images/face_reference/candidate_01.png`～`candidate_04.png`），等待使用者挑選喜歡的臉／風格後才進入 Element 錨定與正式訓練圖生成。`profile.json` 的 soul_id 仍留白，尚未填入真實值。** |
+| AI 生成狀態 | **尚未建立 Soul 模型。使用者已核准 4 張候選圖（`candidate_01.png`～`candidate_04.png`）皆可接受，已選定 `candidate_02.png` 建立 Reference Element（`element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41`）並生成 13 張完整訓練圖集（`kols/mia-huang/images/training_v1/`），等待使用者審核後才能送入 Soul 訓練。`profile.json` 的 soul_id 仍留白，尚未填入真實值。** |
 
 ---
 

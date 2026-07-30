@@ -11,10 +11,10 @@
 | 名字 | Sophia Tseng（曾詩妃） | — |
 | 年齡 | 28 歲 | — |
 | 國籍 | 台灣 | — |
-| 臉型參考 | 成熟精緻鵝蛋臉：眼神沉靜篤定、鼻梁挺直、唇形飽滿帶慵懶弧度、膚況無瑕有光澤。**純粹描述性特徵，不參考任何真實名人臉型或身材。** | — |
-| 身材 | Slim-hourglass：168cm，88-58-89cm（D 罩杯），腰臀比約 0.65，腿長 82cm——身形修長，腰臀曲線分明但含蓄不誇張，肩頸線條優雅，站姿坐姿永遠挺直 | — |
-| 髮型 | 深色髮絲，俐落直髮或柔和大波浪，永遠像剛從沙龍出來，不顯凌亂 | — |
-| 穿衣風格 | Quiet luxury：絲質睡袍、剪裁俐落的西裝外套、設計師洋裝、喀什米爾家居服，色調偏 ivory／香檳米／深炭灰 | — |
+| 臉型參考 | **（2026-07-30 更新，見下方章節）** 心形臉，高而柔和的顴骨，下顎線條收得溫柔纖細、收至柔軟的尖下巴（刻意不是鵝蛋臉，也不是銳利方下顎），眼神溫暖圓潤有神，鼻梁挺直，唇形飽滿帶真笑，膚色白皙透亮有光澤。**純粹描述性特徵，不參考任何真實名人臉型或身材。刻意與 Rainie Hsu 的鵝蛋/銳利臉型做出結構性區隔。** | — |
+| 身材 | **（2026-07-30 更新）** 纖細修長沙漏身形：168cm，84-60-86cm（C 罩杯），腰臀比約 0.70，腿長 83cm——比誇張豐滿的曲線更收斂、更修長，上圍精巧自然不誇張，肩頸線條優雅，站姿坐姿永遠挺直。刻意與 Rainie Hsu（94-59-92cm，F 罩杯，張揚沙漏比例）做出區隔 | — |
+| 髮型 | **（2026-07-30 更新）** 暖栗棕色髮絲（不是純黑）——招牌造型是後頸低盤髮髻（chignon），兩側留幾縷髮絲自然垂落；放下時是及下巴到鎖骨長度的俐落 bob，側分，永遠不留長髮披肩。刻意與 Rainie Hsu 的長黑直髮做出區隔 | — |
+| 穿衣風格 | **（2026-07-30 更新）** Quiet luxury：寬版喀什米爾針織、垂墜感絲質襯衫、挺括剪裁西裝外套、寬口褲、寬鬆繫帶絲質家居袍，輪廓寬鬆挺括而非貼身緊繃，色調偏 ivory／香檳米／深炭灰／駝色。刻意避免任何讀起來像 bodycon／緊身洋裝的剪裁 | — |
 | 眼鏡 | 平時不戴；度假或機場造型偶爾配戴太陽眼鏡 | — |
 | 氣質關鍵字 | 沉靜、篤定、從容、不費力、有距離的優雅、克制的性感 | — |
 | **Soul 訓練** | 尚未開始 | **PENDING** |
@@ -49,7 +49,7 @@
 
 ## 2026-07-25 三次修正：改用 Seedream 4.5 並修正臉部描述 prompt 本體
 
-> **status: PENDING — 等待使用者從第二輪 4 張中挑選喜歡的臉／風格。** 本次修正處理兩個根本問題：(1) 模型選錯——`soul_2` 沒有 `soul_id` 時每次獨立生成都是不同臉，這正是本工作室唯一驗證有效的做法（見 `iris-chen/generation_notes.md`）明確警告過的問題，改用 `seedream_v4_5`（同一份 text prompt 能穩定輸出高度一致的臉孔）；(2) 臉部描述 prompt 本體從未真正跟上 `profile.json` 已修正的 `face_type` 用詞——上面「核心 Prompt 結構」區塊原本仍寫著 `calm composed eyes with a quiet self-assured gaze` 與 `full lips with a subtle relaxed curve`，沒有明講「真笑」、沒有「主流美女」錨定用詞、也完全沒提到膚色白皙，這次已直接改寫該區塊本體（見上方「核心 Prompt 結構」，**不是**只改 `profile.json`／`character.md`）。
+> **status: REJECTED（2026-07-30）— 使用者看過這一輪 4 張候選圖後，反饋臉型、髮型、妝容、身材都跟 Rainie Hsu 太過同質化，且服裝不好看，要求全部重新生成並換一個視覺設定。檔案已改名為 `round2_candidate_01.png`–`round2_candidate_04.png` 保留備查（因為 `round1_candidate_*` 檔名已被第一輪否決批次占用），不再作為候選。詳見下方「2026-07-30 全面重新設計」章節，該章節取代本節「核心 Prompt 結構」的臉部/身材/髮型描述。** 本次修正處理兩個根本問題：(1) 模型選錯——`soul_2` 沒有 `soul_id` 時每次獨立生成都是不同臉，這正是本工作室唯一驗證有效的做法（見 `iris-chen/generation_notes.md`）明確警告過的問題，改用 `seedream_v4_5`（同一份 text prompt 能穩定輸出高度一致的臉孔）；(2) 臉部描述 prompt 本體從未真正跟上 `profile.json` 已修正的 `face_type` 用詞——上面「核心 Prompt 結構」區塊原本仍寫著 `calm composed eyes with a quiet self-assured gaze` 與 `full lips with a subtle relaxed curve`，沒有明講「真笑」、沒有「主流美女」錨定用詞、也完全沒提到膚色白皙，這次已直接改寫該區塊本體（見上方「核心 Prompt 結構」，**不是**只改 `profile.json`／`character.md`）。
 
 ### 改動內容
 
@@ -67,12 +67,12 @@
 - **平台／模型**：Higgsfield，`seedream_v4_5`；aspect_ratio `9:16`；quality `basic`
 - **成本**：get_cost 帳前預檢單張估算 1 credit；實際生成後 4 張共扣款 **8 credits**（帳戶餘額 11.35 → 3.35，每張實際約 2 credits，高於預檢估算，已如實記錄而非沿用預檢數字）
 
-| 檔名 | 角度／構圖 | Job ID |
-|------|-----------|--------|
-| candidate_01.png | 正面特寫大頭照（headshot） | `e9cd4f57-ae93-4a68-aabe-7331c8e14afe` |
-| candidate_02.png | 正面半身（waist-up） | `c919727f-6749-4e96-a17d-5deb1a84b748` |
-| candidate_03.png | 3/4 側身半身，頭轉回鏡頭 | `f1a59b23-a0cd-40e9-a496-7d529df06867` |
-| candidate_04.png | 正面全身（head-to-toe） | `655c6b1e-40f1-44e4-a98a-50118fa460c7` |
+| 檔名（已改名） | 角度／構圖 | Job ID | 狀態 |
+|------|-----------|--------|------|
+| round2_candidate_01.png | 正面特寫大頭照（headshot） | `e9cd4f57-ae93-4a68-aabe-7331c8e14afe` | ❌ 已否決（與 Rainie Hsu 同質化＋服裝不好看） |
+| round2_candidate_02.png | 正面半身（waist-up） | `c919727f-6749-4e96-a17d-5deb1a84b748` | ❌ 已否決 |
+| round2_candidate_03.png | 3/4 側身半身，頭轉回鏡頭 | `f1a59b23-a0cd-40e9-a496-7d529df06867` | ❌ 已否決 |
+| round2_candidate_04.png | 正面全身（head-to-toe） | `655c6b1e-40f1-44e4-a98a-50118fa460c7` | ❌ 已否決 |
 
 ### 誠實視覺評估
 
@@ -111,13 +111,27 @@
 
 ## 核心 Prompt 結構
 
-> 以下為可重複使用的基礎描述，維持五官、身材比例、氣質的一致性；場景、服裝、拍攝裝置、光源、背景雜物依批次變化，依 `SEXY_SCENE_LIBRARY.md`「降低「AI 感」的技術要點」五點檢查清單撰寫。全部為純物理／氣質描述詞，**不引用任何真實名人姓名或臉型**。
+> **⚠️ 2026-07-30：本節 prompt 本體已整段替換，不是修補。** 舊版核心 prompt（`oval face`＋`88cm bust D cup`＋`sleek straight or softly waved dark hair`）正是造成 Sophia 與 Rainie Hsu 視覺同質化的根本原因之一——臉型描述詞（鵝蛋臉＋溫暖大眼＋直挺鼻梁＋飽滿唇）和 Rainie 的臉型 prompt 在關鍵形容詞上高度重疊，身材數字（88-58-89cm）與髮型描述（深色直髮/大波浪，放下）也和 Rainie（94-59-92cm，長黑直髮放下）在生成模型眼中太接近，導致實際輸出的臉/髮型/身材趨同。以下是全新的核心描述，三個維度（臉型、髮型、身材比例）都做了結構性改寫，服裝語言也改寫為寬鬆挺括剪裁，取代舊版可能被讀成貼身的絲質洋裝語言。詳細差異化理由見下方「2026-07-30 全面重新設計」章節。
+
+> 以下為可重複使用的基礎描述，維持五官、身材比例、氣質的一致性；場景、服裝、拍攝裝置、光源、背景雜物依批次變化，依 `SEXY_SCENE_LIBRARY.md`「降低「AI 感」的技術要點」五點檢查清單撰寫（含 2026-07-30 新增的第 2b／7／8 點：相機濾鏡風格變化、自拍與他拍比例、discovery 圖穿搭要日常）。全部為純物理／氣質描述詞，**不引用任何真實名人姓名或臉型**。
 
 ```
-28-year-old Taiwanese woman, breathtakingly elegant, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely handsome, striking, or interesting), oval face with warm, wide, expressive eyes (rounded and warm, NOT narrow, sharp, almond-shaped, or cold/blank), straight refined nose bridge, full soft lips with a warm, gentle, genuine smile (NOT a flat, distant, or languid expression), fair, luminous porcelain-toned glowing skin with visible pores and subtle natural texture (NOT tanned, bronzed, olive, or deep golden/wheat-colored), slight oil sheen on T-zone, unretouched skin detail, natural skin imperfections, 168cm tall slim-hourglass figure, 88cm bust (D cup, full and lifted), 58cm narrow defined waist, 89cm rounded hips, waist-to-hip ratio approximately 0.65, long elegant legs, elongated graceful silhouette, elegant shoulder and neck line, calm and composed in poise and posture but warm and approachable in facial expression, always poised upright posture with natural unforced elegant movement (never a stiff standing pose), sleek straight or softly waved dark hair with a polished salon finish, minimal fine jewelry — a single delicate gold ring, a thin bracelet, or a quality watch where scene-appropriate, never stacked or costume-looking, [SCENE], wearing [OUTFIT — tastefully color-coordinated within her ivory / champagne-beige / deep charcoal / muted gold palette], [POSE/ANGLE — natural elegant gesture such as adjusting a cuff, looking out a window, mid-conversation, with a warm genuine smile or soft approachable expression, NOT a stiff, cold, or distant pose], [DEVICE/CAMERA SPEC], [LIGHTING RECIPE — indoor quiet-luxury recipe or outdoor/work-site recipe, see below], [BACKGROUND CLUTTER DETAIL], crisp sharp focus, high dynamic range, editorial-magazine-level production quality, clean low-contrast warm ivory color grade, quiet luxury editorial photo — NOT degraded, grainy, dim, or moody-dark, natural true-to-life color and skin tones, Instagram style
+28-year-old Taiwanese woman, breathtakingly elegant, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely handsome, striking, or interesting), heart-shaped face with soft high cheekbones and a gently tapered jawline narrowing to a soft, delicate pointed chin (NOT a rounded oval face, NOT a sharp angular jaw), warm, wide-set expressive eyes (rounded and warm, NOT narrow, sharp, almond-shaped, or cold/blank), straight refined nose bridge, full soft lips with a warm, gentle, genuine smile (NOT a flat, distant, or languid expression), fair, luminous porcelain-toned glowing skin with visible pores and subtle natural texture (NOT tanned, bronzed, olive, or deep golden/wheat-colored), slight oil sheen on T-zone, unretouched skin detail, natural skin imperfections, 168cm tall slender elongated hourglass figure, 84cm bust (C cup, modest and natural, NOT dramatically full), 60cm narrow waist, 86cm hips, waist-to-hip ratio approximately 0.70 — a leaner, more streamlined silhouette than a dramatic curvy hourglass (deliberately distinct from a full-bust F-cup glamour figure), long lean legs, elongated graceful silhouette, elegant shoulder and neck line, calm and composed in poise and posture but warm and approachable in facial expression, always poised upright posture with natural unforced elegant movement (never a stiff standing pose), warm dark chestnut-brown hair (NOT jet-black), styled in her signature sleek low bun/chignon at the nape of the neck with a few soft face-framing strands loose, OR — when worn down — a polished chin-to-collarbone-length bob with a soft side part (always neat and salon-finished, NEVER long loose flowing hair past the shoulders), minimal fine jewelry — a single delicate gold ring, a thin bracelet, or a quality watch where scene-appropriate, never stacked or costume-looking, [SCENE], wearing [OUTFIT — a quiet-luxury tailored piece such as an oversized cashmere knit, a silk blouse with structured shoulders, wide-leg camel or charcoal wool trousers, a tailored long blazer worn open, or a loosely-belted silk robe — always a relaxed, structured, or wide-leg silhouette, NEVER a tight bodycon or clingy slip-dress silhouette, color-coordinated within her ivory / camel / deep charcoal / cream palette], [POSE/ANGLE — natural elegant gesture such as adjusting a cuff, looking out a window, mid-conversation, with a warm genuine smile or soft approachable expression, NOT a stiff, cold, or distant pose], [DEVICE/CAMERA SPEC — see selfie vs. candid rules below, mix both across a set], [LIGHTING RECIPE — indoor quiet-luxury recipe or outdoor/work-site recipe, see below], [BACKGROUND CLUTTER DETAIL], [OPTIONAL CAMERA-STYLE VARIANT — CCD digicam or beauty-app filter for a subset of images, see below], crisp sharp focus, high dynamic range, editorial-magazine-level production quality, clean low-contrast warm ivory color grade, quiet luxury editorial photo — NOT degraded, grainy, dim, or moody-dark, natural true-to-life color and skin tones, Instagram style
 ```
 
-**⚠️ 2026-07-25 燈光／身材數字校準**：參照 `vicky-lin/generation_notes.md` 的二次修正經驗與 `SEXY_SCENE_LIBRARY.md` 2026-07-25 針對〈光源〉的修正，對本檔案做了以下校準（詳細改動另見下方「用詞備註」與各批次 prompt）：
+**⚠️ 2026-07-30 新增：自拍／他拍鏡頭規格（套用 `SEXY_SCENE_LIBRARY.md` 第 2、2b、7 點）**——`[DEVICE/CAMERA SPEC]` 佔位不可統一都用同一套語言，整組素材必須混合以下兩種，且自拍鏡頭要明顯比他拍/candid 鏡頭「畫質等級更低、更柔」：
+
+- **自拍視角（前鏡頭）**：`shot on iPhone 15 Pro front camera, front camera quality, slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, gentle noise in low light, NOT ultra-crisp or overly HD`
+- **他拍/候補抓拍視角（後鏡頭或路人視角）**：`shot on iPhone 15 Pro back camera, slight autofocus softness on background elements, natural highlight clipping near window light, subtle motion blur on hair/hands, faint JPEG compression at high-contrast edges, crisp sharp focus, high dynamic range`
+- **鏡子自拍**需明講 `phone visible in the mirror reflection`，不要只寫「自拍」
+
+**⚠️ 2026-07-30 新增：相機/濾鏡風格變化（套用 `SEXY_SCENE_LIBRARY.md` 第 2b 點）**——整批素材不要全部都是同一種「iPhone 直出」質感，每組至少安排 1 張套用以下風格之一：
+- **CCD 數位相機質感**：`shot on CCD digital camera, soft slightly muted colors, gentle film-like grain, subtle vignette, warm nostalgic tone, lower dynamic range than modern phone HDR, Y2K digicam aesthetic`
+- **美顏/美圖 App 濾鏡質感**：`soft beautifying camera app filter, subtle skin-smoothing glow, brightened even skin tone, soft dreamy focus, warm glowy filter, popular Asian beauty-camera-app aesthetic`
+
+**⚠️ 2026-07-30 新增：Discovery／參考錨定圖穿搭要「日常」（套用 `SEXY_SCENE_LIBRARY.md` 第 8 點）**——Discovery 批次與未來建立 Reference Element 用的參考圖，服裝一律走「居家放鬆」「老友聚會／低調日常」這類日常款（寬版針織、繫帶家居袍、寬口褲），不要用「正式外出」「飯店旅遊」等場景的招牌造型，招牌造型留給之後有明確場景對應的正式批次使用。
+
+**⚠️ 2026-07-25 燈光／身材數字校準**（**光源結論仍然有效；文中引用的三圍數字 88-58-89cm／D 罩杯已於 2026-07-30 更新為 84-60-86cm／C 罩杯，見上方「人物設定」表與下方「2026-07-30 全面重新設計」章節，此處歷史記錄保留原文不改，不代表現行數字**）：參照 `vicky-lin/generation_notes.md` 的二次修正經驗與 `SEXY_SCENE_LIBRARY.md` 2026-07-25 針對〈光源〉的修正，對本檔案做了以下校準（詳細改動另見下方「用詞備註」與各批次 prompt）：
 
 1. **身材數字直接寫入**：核心 prompt 與全部 6 個批次的身材描述，從原本「tall slim-hourglass figure with an elongated silhouette, subtle waist-hip curve」這類模糊形容詞，改成直接寫入 `profile.json` 的實際三圍數字——168cm、88cm 胸（D 罩杯）、58cm 腰、89cm 臀、腰臀比約 0.65。避免身材跟人物設定對不上的問題（Vicky Lin 就是因為這個問題被使用者明確反饋過）。
 2. **臉部／眼睛用詞檢查**：逐一檢查後，本檔案原本的批次 prompt 並未使用 `almond-shaped`、`narrow`、`sharp intense` 這類會被模型解讀成瞇眼/銳利的字眼（`character.md` 在更早一輪已修正過），但為了保險起見，仍在核心 prompt 明確加上 `(rounded and warm, NOT narrow or almond-shaped)` 作為額外防呆，避免未來任何批次不小心加回類似字眼。
@@ -156,6 +170,8 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 
 ## 計畫批次 Prompt 規劃（規劃中，尚未生成）
 
+> **⚠️ 2026-07-30 過時警告**：下方 6 個批次草稿撰寫於視覺重新設計之前，臉部／身材／髮型描述仍是舊版（`mature refined oval face`、`88cm bust D cup`、`sleek straight dark hair`），服裝也仍包含「絲質洋裝」「絲質睡袍」等可能貼身的舊版語言。這些草稿**均未執行過**（狀態一律規劃中），但正式生成訓練圖集之前，必須先依上方「核心 Prompt 結構」（2026-07-30 版）與「2026-07-30 全面重新設計」章節的新臉型／身材／髮型／服裝描述整段替換，不能直接沿用下方舊草稿。
+>
 > 以下 6 個批次涵蓋人物設定中六大內容支柱（早晨／穿搭／浴室／居家／飯店旅遊／健身）。每個批次的 prompt 為草稿，均依 `SEXY_SCENE_LIBRARY.md` 的降低「AI 感」五點檢查清單撰寫（皮膚質感關鍵字／具體裝置與鏡頭破綻／符合場景類型的光源配方／具體生活雜物背景／完整明確服裝），正式生成前可能需要微調用詞。**狀態一律為「規劃中」，尚無任何實際輸出。**
 
 ### 批次 1 — 設計師公寓早晨（規劃中）
