@@ -1,7 +1,7 @@
 # Rainie Hsu — AI 生成規劃
 
-> **狀態：訓練圖已生成，等待使用者確認（Soul 訓練尚未執行）**
-> 本文件原本是生成前的規劃文件。歷經四輪選角修正（`round1`–`round3` 已被使用者否決或要求調整，第四輪 `candidate_01`–`candidate_04` 為使用者已接受的最終選角批次，見下方各輪記錄），使用者已明確表示：目前妝容濃度（可見的眼線甩尾＋飽和珊瑚唇）**維持現狀即可，不需再淡化**，並同意從第四輪 4 張候選圖中任選一張作為身分錨定圖，建立完整訓練集。**2026-07-30 已完成**：從第四輪候選圖挑選 `candidate_01.png` 為身分錨點、建立 Reference Element、生成 13 張完整訓練集（`images/training_v1/`）。**尚未**執行 Soul 訓練，`profile.json` 沒有 soul_id，也沒有 `ai_generation` 欄位——依照強制規則，本輪到此停止，等待使用者確認這組訓練圖後才能進行下一步。
+> **狀態：Soul 訓練已送出並成功受理，目前 `training`/`queued` 中（尚未回傳 ready）**
+> 本文件原本是生成前的規劃文件。歷經四輪選角修正（`round1`–`round3` 已被使用者否決或要求調整，第四輪 `candidate_01`–`candidate_04` 為使用者已接受的最終選角批次，見下方各輪記錄），使用者已明確表示：目前妝容濃度（可見的眼線甩尾＋飽和珊瑚唇）**維持現狀即可，不需再淡化**，並同意從第四輪 4 張候選圖中任選一張作為身分錨定圖，建立完整訓練集。**2026-07-30 已完成**：從第四輪候選圖挑選 `candidate_01.png` 為身分錨點、建立 Reference Element、生成 13 張完整訓練集（`images/training_v1/`）。使用者明確核准送出訓練（「我覺得這四位都可以送去訓練...就先這樣送出訓練」）。**2026-07-30 已執行**：呼叫 `show_characters(action='train')`，**第一次呼叫即成功受理**（與 Vicky Lin 案例的連續 12 次工具層級失敗完全不同），取得 `soul_id: 994e33d2-7df1-47da-8478-7a6fd849fa33`，並以 `action='status'` 驗證此記錄確實存在於 server 端。截至本文件更新時，`raw_status` 仍為 `queued`（訓練中，尚未完成），詳見下方「2026-07-30 七次記錄：Soul 訓練送出」章節。
 
 ---
 
@@ -368,6 +368,64 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 **總結**：身分一致性與場景/穿搭跨支柱變化這兩項核心目標**已確實達成**，是本輪最重要的進展；具名風格變化（CCD/美圖）也確實有效。自拍/他拍的視角混合本身有做到，但「自拍應該天生畫質較軟」這個新規則在純文字負面描述、不搭配具名濾鏡的情況下**效果不穩定**，這點如實記錄、不誇大，供使用者與下一輪參考。
 
 **⚠️ 下一步（不可跳過，依 README.md「新增 KOL 流程」第 7 點與 `KOL_TRAINING_SOP.md` 強制規則）**：本輪 13 張訓練圖已生成完成，**必須停下來，等使用者實際審核這 13 張，確認身分一致、支柱/穿搭分配、妝容濃度維持現狀、以及自拍/他拍視角效果是否可以接受，才能進入 Soul 訓練**。本輪**沒有**呼叫 `show_characters(action='train')`，`profile.json` **沒有**新增 `soul_id` 或 `ai_generation` 欄位，訓練狀態明確標記為 **PENDING**。第一至第四輪的候選圖（`round1_candidate_01–04`、`round2_candidate_01–04`、`round3_candidate_01–04`、`candidate_01–04`）全部保留在 `images/face_reference/`，未刪除，供對照。
+
+> **後續更新（2026-07-30）**：使用者已明確核准，同意將這組訓練圖送去 Soul 訓練（「我覺得這四位都可以送去訓練...就先這樣送出訓練」）。實際執行結果見下方「2026-07-30 七次記錄：Soul 訓練送出」章節。
+
+---
+
+## 2026-07-30 七次記錄：Soul 訓練送出
+
+**觸發**：使用者明確核准將 `images/training_v1/` 13 張訓練圖送去 Soul 訓練。
+
+**背景風險提示**：本次執行前已知悉 Vicky Lin 案例的前車之鑑——`show_characters(action='train')` 曾在該案例中連續兩個 session、共 12 次呼叫全部以工具層級錯誤失敗，即使重新上傳圖片取得新 media_id 仍然失敗，過程中仍被扣款。本輪執行前已設定「最多嘗試 2 次」的停損規則，避免重蹈覆轍。
+
+### 1. 上傳流程
+
+13 張訓練圖全部重新上傳（不沿用任何舊 media_id 或 job_id）：`media_upload`（取得 13 組 presigned URL + media_id）→ `curl -X PUT` 逐一上傳原始位元組（13 個請求皆回傳 HTTP 200）→ `media_confirm(media_ids=[...13個], type='image')`（13 個皆確認為 `status: uploaded`）。
+
+檔名／media_id 對照：
+
+| 檔名 | media_id |
+|------|----------|
+| 01_mirror_tryon_candid.png | `cd899471-613a-4bb2-87d5-c18d4cdb4697` |
+| 02_mirror_selfie_outfit_check.png | `09f33d3f-d808-4852-ac4b-477a88986835` |
+| 03_doorway_reveal_candid.png | `4bd12b1c-b445-49c0-8891-909a01348460` |
+| 04_leaving_apartment_ccd.png | `a6bf34da-2684-4a1d-98b9-ff63f83ad41e` |
+| 05_vanity_liner_candid.png | `d9c44316-84a6-4501-a969-81c4b70a3e88` |
+| 06_perfume_selfie_meitu.png | `b6f0e1c6-9927-4742-8ff8-0d2270ccfb98` |
+| 07_sofa_hungover_candid.png | `b66d62de-c7ec-4d1c-87ed-a8a75fe0a06e` |
+| 08_bed_selfie_morning.png | `e2c75544-866c-4fa4-90f6-7f6009d48b76` |
+| 09_kitchen_baking_candid.png | `b77b4526-4824-420f-8051-1c383c73195d` |
+| 10_couch_selfie_loungewear.png | `1092fe08-20ee-4ca6-bb39-e0a44001e051` |
+| 11_hotel_mirror_candid.png | `6ac96077-3ed4-4e38-ae17-aa2a643e75b7` |
+| 12_hotel_window_selfie.png | `3fb83c1c-2be0-41ef-88ad-f886367996a4` |
+| 13_dance_studio_candid.png | `2fe30726-6d1c-4d98-83af-4f20eb176f82` |
+
+### 2. 訓練呼叫（第 1 次嘗試，✅ 成功受理）
+
+`show_characters(action='train', name='Rainie Hsu', images=[<上述 13 個 media_id>])`——**第一次嘗試即成功**，回傳：
+
+```json
+{"id":"994e33d2-7df1-47da-8478-7a6fd849fa33","name":"Rainie Hsu","type":"soul_2","status":"training","raw_status":"queued","soul_id":"994e33d2-7df1-47da-8478-7a6fd849fa33", ...}
+```
+
+`training_id`／`soul_id`：**`994e33d2-7df1-47da-8478-7a6fd849fa33`**。與 Vicky Lin 案例（連續 12 次工具層級錯誤）完全不同，本次沒有進入第 2 次嘗試的必要，停損規則未觸發。
+
+**Server 端驗證**：呼叫 `show_characters(action='status', soul_id='994e33d2-7df1-47da-8478-7a6fd849fa33')` 兩次（間隔數分鐘），皆回傳此 soul_id 記錄確實存在，`raw_status: queued`（訓練佇列中，尚未完成）。確認這不是空頭回應或幽靈 ID，而是伺服器端真實記錄的訓練任務。
+
+### 3. 費用記錄（誠實記錄）
+
+- 呼叫訓練前帳戶餘額：2593.7 credits
+- 呼叫訓練後帳戶餘額：2543.7 credits，**減少 50 credits**
+- `transactions` 查詢顯示同一時間點有兩筆 `Soul ID` 扣款紀錄，各 -25 credits（`2026-07-30T10:21:50` 與 `2026-07-30T10:21:58`，相隔僅 8 秒）
+- 誠實說明：本次呼叫本身只送出了「Rainie Hsu」一個訓練請求，但 `status`/`train` 回應的角色列表裡同時出現了另一個名為「Mia Huang」、狀態同為 `training` 的訓練任務——研判帳戶為共用環境，同一時段可能有其他 session 也在對 Mia Huang 執行訓練，兩筆 -25 credits 扣款很可能分屬 Rainie Hsu 與 Mia Huang 兩個各自獨立的訓練請求，而非本次呼叫被重複扣款兩次。此推測合理但無法 100% 排除，僅如實記錄觀察到的交易明細，不臆測承擔全部責任或完全撇清。單次 Soul 訓練的成本以此觀察估計約為 25 credits。
+
+### 4. 目前狀態與待辦
+
+- ✅ `soul_id` 已取得且經 server 端驗證存在：`994e33d2-7df1-47da-8478-7a6fd849fa33`
+- ⏳ `raw_status` 仍為 `queued`／`training`，**尚未回傳 `ready`**——Soul 訓練依工具說明通常需要約 10 分鐘、非阻塞式，本 session 沒有持續等待到完成即結束記錄
+- **下一步（待後續 session 或使用者確認）**：呼叫 `show_characters(action='status', soul_id='994e33d2-7df1-47da-8478-7a6fd849fa33')` 或 `action='list', status='ready'` 確認訓練是否已完成；完成後將 `profile.json` 的 `ai_assets.training_images_v1.soul_training.status` 由 `training` 改為 `ready`、補上 `completed_at`，並同步更新 `README.md`／`KOL_TRAINING_SOP.md` 的狀態欄位（目前已先標記為「訓練中」，尚未標記為「完成」）
+- 已更新的欄位：`profile.json`（新增 `ai_assets.training_images_v1`，`soul_training.status: "training"`）、本文件（本章節）、`README.md`（Soul ID 欄位標註「訓練中」）、`KOL_TRAINING_SOP.md`（Rainie Hsu 列標註訓練中，狀態改為 🔄 進行中）
 
 ---
 

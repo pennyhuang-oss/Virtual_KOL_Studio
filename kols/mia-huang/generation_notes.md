@@ -1,6 +1,6 @@
 # Mia Huang — AI 生成規劃
 
-> **狀態：⚠️ PENDING USER REVIEW — 使用者已核准 4 張候選圖皆可接受，已選定 `candidate_02.png` 為身分錨定圖並建立 Reference Element（`element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41`），已生成 13 張完整訓練圖集（`kols/mia-huang/images/training_v1/`）。等待使用者審核這組訓練圖後才能進行 Soul 訓練，`profile.json` 尚未寫入 `soul_id` 或 `ai_generation` 欄位，`show_characters(action='train')` 尚未呼叫。詳見文末「2026-07-30 訓練圖集生成（Element 錨定）」章節。**2026-07-25：完成第一輪「發現批次」（discovery batch）——用她已校準的核心 prompt 生成 4 張候選圖（`candidate_01.png`～`candidate_04.png`，正面特寫／正面半身／四分之三側半身／正面全身），供使用者從中挑選最喜歡的臉/風格；因尚未用 Reference Element 錨定，4 張彼此身分不保證一致，這是預期中的現象。詳見文末「2026-07-25 發現用候選圖批次」章節。**以下批次 1–7 仍是計畫中的拍攝方向，尚未執行**；使用者核准候選圖後，下一步是比照 Vicky Lin 的流程建立 Reference Element 錨定身分，再擴充生成完整訓練圖集。**⚠️ 同日三次修正**：第一輪用的是 `soul_2`，且膚色 prompt 當時未真正寫入本體文字，導致膚色偏古銅／4 張身分落差過大，已重新用 `seedream_v4_5` + 補上膚色 prompt 重新生成第二輪候選圖。原始第一輪圖片改名保留為 `round1_candidate_01.png`～`round1_candidate_04.png`，現在的 `candidate_01.png`～`candidate_04.png` 為修正後版本。詳見文末「2026-07-25 三次修正：改用 Seedream 4.5 並補上膚色 prompt 本體」章節。
+> **狀態：🔄 SOUL 訓練已送出，訓練中（尚未 ready）— 使用者已明確核准「這四位都可以送去訓練」，13 張訓練圖已全數重新上傳（`media_upload`→`curl PUT`→`media_confirm`，取得 13 個全新 media_id）並送入 `show_characters(action='train')`，**第一次呼叫即成功**（未使用備用參數形狀），取得 `soul_id: e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`，帳戶扣款 25 credits。已用 `action='status'` 與 `action='list'` 驗證此 soul_id 在伺服器端真實存在（`raw_status: queued`，與同時段 Zoe Lai、Rainie Hsu 等角色的真實訓練任務並列）。**截至本次 session 結束時，訓練仍在 queued/training 狀態，尚未變成 ready**——Soul 訓練通常需要約 10 分鐘背景處理，下一個 session 應先用 `show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4')` 確認是否已完成，完成後才能用 `soul_2` 模型正式生成內容。`profile.json` 已寫入 `ai_assets.training_images_v1.soul_training`（status: training）。詳見文末「2026-07-30 Soul 訓練送出（第一次呼叫成功）」章節。2026-07-25：完成第一輪「發現批次」（discovery batch）——用她已校準的核心 prompt 生成 4 張候選圖（`candidate_01.png`～`candidate_04.png`，正面特寫／正面半身／四分之三側半身／正面全身），供使用者從中挑選最喜歡的臉/風格；因尚未用 Reference Element 錨定，4 張彼此身分不保證一致，這是預期中的現象。詳見文末「2026-07-25 發現用候選圖批次」章節。**以下批次 1–7 仍是計畫中的拍攝方向，尚未執行**；使用者核准候選圖後，下一步是比照 Vicky Lin 的流程建立 Reference Element 錨定身分，再擴充生成完整訓練圖集。**⚠️ 同日三次修正**：第一輪用的是 `soul_2`，且膚色 prompt 當時未真正寫入本體文字，導致膚色偏古銅／4 張身分落差過大，已重新用 `seedream_v4_5` + 補上膚色 prompt 重新生成第二輪候選圖。原始第一輪圖片改名保留為 `round1_candidate_01.png`～`round1_candidate_04.png`，現在的 `candidate_01.png`～`candidate_04.png` 為修正後版本。詳見文末「2026-07-25 三次修正：改用 Seedream 4.5 並補上膚色 prompt 本體」章節。
 
 ---
 
@@ -18,7 +18,7 @@
 | 眼鏡 | 深夜直播偶爾配戴透明藍光眼鏡，其餘時候不戴 |
 | 身材 | 身高 160cm，嬌小、曲線柔和，能撐起寬鬆帽T也能撐起削肩背心 |
 | 穿衣風格 | 電競品牌寬鬆帽T + 短褲、削肩背心配耳機、cosplay-lite（大腿襪、貓耳頭飾）、深夜居家睡衣風格戰袍 |
-| AI 生成狀態 | **尚未建立 Soul 模型。使用者已核准 4 張候選圖（`candidate_01.png`～`candidate_04.png`）皆可接受，已選定 `candidate_02.png` 建立 Reference Element（`element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41`）並生成 13 張完整訓練圖集（`kols/mia-huang/images/training_v1/`），等待使用者審核後才能送入 Soul 訓練。`profile.json` 的 soul_id 仍留白，尚未填入真實值。** |
+| AI 生成狀態 | **Soul 訓練已送出，訓練中（尚未 ready）。使用者已核准 4 張候選圖並明確授權送訓；已選定 `candidate_02.png` 建立 Reference Element（`element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41`）並生成 13 張完整訓練圖集（`kols/mia-huang/images/training_v1/`），13 張已重新上傳並送入 `show_characters(action='train')`，取得 `soul_id: e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`（已驗證伺服器端真實存在，目前狀態 queued/training，尚未 ready）。`profile.json` 已寫入此 soul_id，狀態標記為 `training`，待下個 session 確認完成後更新為 `ready`。** |
 
 ---
 
@@ -309,10 +309,70 @@
 
 ---
 
-## ⚠️ 下一步（不可跳過，本輪未執行）
+## 2026-07-30 Soul 訓練送出（第一次呼叫成功）
 
-1. 等待使用者實際審核 `kols/mia-huang/images/training_v1/` 這 13 張訓練圖，確認身分一致性、風格變體、內容支柱覆蓋率是否達到可接受標準（特別留意上方第 5 節誠實指出的髮型/雀斑輕微落差）
-2. 使用者明確核准後，才可呼叫 `show_characters(action='train')` 建立 Mia Huang 專屬 Soul 模型
-3. 本輪**未**呼叫 `show_characters(action='train')`，`profile.json` 的 `soul_id`／`ai_generation` 欄位仍為空白，`README.md` 的「新增 KOL 流程」步驟 7 檢查點與 `KOL_TRAINING_SOP.md` 要求的使用者核准關卡尚未通過
+**觸發原因**：使用者明確回覆「我覺得這四位都可以送去訓練...就先這樣送出訓練」，核准將 `kols/mia-huang/images/training_v1/` 這 13 張訓練圖送入 Soul 訓練。
 
-**等待使用者確認這組訓練圖後才能進行 Soul 訓練。**
+**背景風險提醒**：比照 Vicky Lin 的前例（`kols/vicky-lin/generation_notes.md`）——用原始生成 job_id 直接呼叫 `show_characters(action='train')` 曾連續失敗，即使重新上傳取得全新 media_id 後仍跨兩個 session、累計 12 次呼叫全部失敗（工具層級錯誤），且每次都仍被扣款。本次執行前已知有這個風險，因此依照任務指示：全部 13 張圖重新上傳取得全新 media_id、訓練呼叫上限 2 次、每次呼叫後立即查 `transactions` 確認是否被扣款。
+
+### 1. 重新上傳 13 張訓練圖
+
+對 `training_v1/` 目錄下全部 13 個 PNG 檔案，逐一執行 `media_upload`（取得 presigned S3 URL + media_id）→ `curl -X PUT` 上傳原始檔案位元組 → `media_confirm(type='image')` 確認上傳完成。13 次 curl PUT 全部回傳 HTTP 200，13 個 media_id 的 `media_confirm` 全部回傳 `status: "uploaded"`。
+
+| 檔名 | 新 media_id |
+|------|-------------|
+| 01_gaming_chair_candid.png | `dbd13092-c79d-4474-ad28-427c476f5cff` |
+| 02_gaming_chair_selfie.png | `53ae44a9-9f51-4534-81b7-d16a85a70160` |
+| 03_cosplay_mirror_selfie.png | `16d27a64-a5f0-4873-8447-c5b3d9cf465d` |
+| 04_outfit_decision_selfie.png | `ba0d589b-f736-4567-8953-ffae053fa246` |
+| 05_cosplay_candid_doorway.png | `b069ca85-ce0c-4c6f-b985-d8d8f709406d` |
+| 06_stream_reaction_webcam.png | `063701f0-7a7a-490c-83aa-ad517cbf8f10` |
+| 07_stream_break_selfie.png | `d97362ac-b784-4cb9-b4f8-4797b3f4db1e` |
+| 08_afternoon_wakeup_selfie_ccd.png | `b5f59bfc-f022-46b0-811d-2d033886f3ca` |
+| 09_afternoon_wakeup_candid_couch.png | `df423e1b-2ab2-4f96-86fc-fca37ce6a407` |
+| 10_skincare_bathroom_selfie.png | `e5c6a74d-84b4-44e1-b4e7-d36eb18f8c28` |
+| 11_hotel_expo_selfie_meitu.png | `d3bc7c0a-b70d-4945-9cb4-701da8b71c33` |
+| 12_daytime_outing_candid_cafe.png | `07f8e886-d0ea-4fa6-9c33-71d3aadcbf60` |
+| 13_stretch_break_candid.png | `c694b728-dd42-4184-8225-e768718f025d` |
+
+### 2. `show_characters(action='train')` 呼叫
+
+呼叫 `show_characters(action='train', name='Mia Huang', images=[上表 13 個 media_id])`——**第一次呼叫（1/2 次上限）即成功**，不需要用到第二次備用參數形狀嘗試，回傳：
+
+```json
+{"id":"e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4","name":"Mia Huang","type":"soul_2","status":"training","raw_status":"queued", ...}
+{"training_id":"e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4","trained":true,"note":"Training started. The widget will refresh until the character is ready."}
+```
+
+**Soul ID：`e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`**
+
+### 3. 費用確認
+
+呼叫後立即查 `transactions`，最新一筆為：
+```
+{"display_name":"Soul ID","credits":-25,"action":"spend","created_at":"2026-07-30T10:21:50.993178Z"}
+```
+確認本次訓練呼叫扣款 **25 credits**，與呼叫本身直接對應，沒有出現「扣款但失敗」的情形（Vicky Lin 案例中的核心風險）。
+
+### 4. 伺服器端存在性驗證
+
+分別用 `show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4')` 與 `show_characters(action='list', status='training')` 查詢：
+- `action='status'`：回傳單一筆 `id`/`soul_id` 均為 `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`、`name: "Mia Huang"`、`status: "training"`、`raw_status: "queued"`
+- `action='list', status='training'`：回傳列表中包含 Mia Huang（同一個 soul_id）以及 Zoe Lai、Rainie Hsu 等其他角色的真實訓練任務並列——確認這不是孤立的假資料，而是伺服器端真實排隊中的訓練任務
+
+**⚠️ 誠實記錄：截至本次 session 結束為止，多次間隔輪詢（約 10:22–10:25 UTC）`raw_status` 始終維持 `queued`，尚未變成 `ready`**。`show_characters` 工具說明本身也指出訓練「約需 10 分鐘，non-blocking」，本次 session 的輪詢間隔未必涵蓋完整 10 分鐘等待窗口。**下一個 session 應優先執行**：`show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4')`，若 `raw_status` 已變成 `completed`/`status` 變成 `ready`，才可將 `profile.json`、`README.md`、`KOL_TRAINING_SOP.md` 的訓練狀態從「training」更新為「ready / 完成」，並開始用 `generate_image(model='soul_2', soul_id=...)` 實際生成內容。
+
+### 5. 未變更項目
+
+`character.md`、`content_style.md` 本輪未修改。`kols/mia-huang/images/training_v1/` 13 張圖檔案本身未變動（僅重新上傳取得新 media_id 用於本次訓練呼叫，圖檔內容不變）。本輪未執行任何 `git add`/`commit`/`push`。
+
+---
+
+## ⚠️ 下一步（不可跳過，待下個 session 執行）
+
+1. **優先事項**：呼叫 `show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4')` 確認訓練是否已完成（`status` 變成 `ready`）
+2. 若已 `ready`：更新 `profile.json` 的 `ai_assets.training_images_v1.soul_training.status` 為 `ready` 並填入 `completed_at`；`README.md`「KOL 陣容」表格 Mia Huang 列的 Soul ID 改為實際 ID（移除訓練中註記）；`KOL_TRAINING_SOP.md` 進度表同步更新為 ✅
+3. 若仍在 `training`/`queued`：不需要重新呼叫 `show_characters(action='train')`（已成功送出、正在背景處理中，重複呼叫只會像 Vicky Lin 案例一樣徒增風險與費用），單純再等待、再查詢狀態即可
+4. Soul 訓練確認 `ready` 後，才開始用 `generate_image(model='soul_2', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4')` 生成後續大量生活照與影片素材
+
+**本次任務執行到此為止：Soul 訓練呼叫已成功送出且驗證為伺服器端真實任務，但尚未確認完成（ready）。**

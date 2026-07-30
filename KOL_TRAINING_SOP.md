@@ -25,10 +25,10 @@
 |-----|---------|----------|--------|------|
 | Vicky Lin | 無（訓練嘗試失敗，未取得 soul_id） | ❌ | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | 🔴 使用者已核准並同意重試，但 `show_characters(action='train')` 累計兩次 session、共 12 次呼叫全部失敗（工具層級錯誤），期間累計仍被扣款約 2.64–2.88 credits、無任何訓練結果，判斷可能是後端 `train` 端點持續異常，建議暫緩盲目重試、先確認服務狀態，詳見 `kols/vicky-lin/generation_notes.md` |
 | Coco Wu | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
-| Rainie Hsu | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
+| Rainie Hsu | `994e33d2-7df1-47da-8478-7a6fd849fa33`（訓練已送出，`status: training/queued`，尚未回傳 ready） | 🔄 進行中 | ✅ 13 張（Reference Element `ae0d8287-af47-4f9d-b357-19a477abd00d` 錨定，`training_v1/`） | 🔄 2026-07-30 首次呼叫 `show_characters(action='train')` 即成功受理（與 Vicky Lin 案例不同，沒有工具層級錯誤），server 端已可查得 soul_id 記錄；待確認訓練完成狀態，詳見 `kols/rainie-hsu/generation_notes.md` |
 | Sophia Tseng | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
 | Mia Huang | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
-| Zoe Lai | 無 | ❌ | ❌ 尚未開始 | ⏳ 未開始 |
+| Zoe Lai | `27f750e6-0d32-43ce-8249-cce94ef835cd`（訓練已送出，`status: training/queued`，尚未回傳 ready） | 🔄 進行中 | ✅ 13 張（Reference Element `9b1c0c4b-7301-4144-9427-56e754178144` 錨定，`training_v1/`） | 🔄 2026-07-30 首次呼叫 `show_characters(action='train')` 即成功受理（與 Vicky Lin 案例不同，沒有工具層級錯誤），server 端已可查得 soul_id 記錄；待確認訓練完成狀態，詳見 `kols/zoe-lai/generation_notes.md` |
 
 > ⚠️ 這 6 位的 `character.md`/`profile.json`/`content_style.md`/`generation_notes.md` 都已完整建立（含身材數據、社交圈、生活主題），但完全還沒有進到「生成參考圖」這一步，目前只有 Vicky Lin 試跑過一次（已否決）。
 

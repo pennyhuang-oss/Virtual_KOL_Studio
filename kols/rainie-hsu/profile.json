@@ -1,8 +1,30 @@
 {
   "id": "rainie-hsu",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 13,
+      "images_path": "kols/rainie-hsu/images/training_v1/",
+      "collected_at": "2026-07-30",
+      "note": "13張訓練圖，全數以 Reference Element `ae0d8287-af47-4f9d-b357-19a477abd00d`（rainie-hsu-anchor，錨點來源 candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。詳見 generation_notes.md「2026-07-30 六次修正」章節。",
+      "soul_training": {
+        "status": "training",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "994e33d2-7df1-47da-8478-7a6fd849fa33",
+        "training_image_count": 13,
+        "started_at": "2026-07-30",
+        "completed_at": null,
+        "note": "show_characters(action='train') 於 2026-07-30 首次呼叫即成功受理（非 Vicky Lin 案例的多次失敗），server 端已可查得此 soul_id 記錄（action='status' 確認 raw_status: queued）。訓練仍在進行中，尚未回傳 ready，待後續 session 確認完成狀態後再更新此欄位與 status。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-23",
+    "updated_at": "2026-07-30",
     "status": "active",
     "category": "nightlife",
     "tags": ["nightlife", "party", "taipei", "taiwanese", "glam", "going-out", "fashion"],
