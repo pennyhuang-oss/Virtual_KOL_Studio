@@ -1,7 +1,7 @@
 # Sophia Tseng — AI 生成規劃（Generation Notes）
 
-> **狀態：🔄 Soul 訓練已送出（`status: training/queued`），soul_id `192562bb-ca64-4615-9515-13d34807857c`，尚未回傳 ready**
-> 2026-07-30 完成第三輪五官結構重新設計（見下方「二次修正」章節），使用者核准 `candidate_01.png`–`candidate_04.png` 並指示直接送訓練（「你就直接拿去訓練吧」）。2026-07-31 已用 `candidate_01.png` 建立 Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d`，生成 13 張完整訓練集（`images/training_v1/`），並呼叫 `show_characters(action='train')` 成功受理。詳見下方「2026-07-31」章節。
+> **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `192562bb-ca64-4615-9515-13d34807857c` 已可用於 `model: soul_2` 正式生成內容**
+> 2026-07-30 完成第三輪五官結構重新設計（見下方「二次修正」章節），使用者核准 `candidate_01.png`–`candidate_04.png` 並指示直接送訓練（「你就直接拿去訓練吧」）。2026-07-31 已用 `candidate_01.png` 建立 Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d`，生成 13 張完整訓練集（`images/training_v1/`），並呼叫 `show_characters(action='train')` 成功受理，同日以 `action='status'` 確認 `raw_status: completed`，訓練正式完成。詳見下方「2026-07-31」章節。
 
 ---
 
@@ -387,7 +387,9 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 
 依使用者指示直接送訓練，呼叫 `show_characters(action='train', name='Sophia Tseng', images=[...13張訓練圖的 job id])`，**第一次呼叫即成功受理**，取得 `soul_id: 192562bb-ca64-4615-9515-13d34807857c`，`raw_status: queued`（訓練中，尚未完成）。同批呼叫的 `items` 列表回應中，順帶確認 **Coco Wu 的訓練已從 `training/queued` 轉為 `status: ready`**（`raw_status: completed`）——已同步更新 `kols/coco-wu/` 相關檔案。
 
-`profile.json` 已補上 `ai_assets.training_images_v1` 完整欄位（含 Reference Element、13 張訓練圖路徑、soul_training 狀態）。
+**同日追蹤確認完成**：透過 `show_characters(action='status', soul_id='192562bb-ca64-4615-9515-13d34807857c')` 確認 `status: ready`、`raw_status: completed`。Soul 訓練正式完成，可用 `model: soul_2` + 此 soul_id 生成正式發布內容。
+
+`profile.json` 已補上 `ai_assets.training_images_v1` 完整欄位（含 Reference Element、13 張訓練圖路徑、soul_training 狀態，`status: ready`）。
 
 ---
 
@@ -396,8 +398,8 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 1. ~~五官結構重新設計（第三輪）~~ 已完成，使用者核准並指示直接送訓練
 2. ~~建立 Reference Element~~ 已完成（`element_id: 980f8414-7709-47ff-9c88-fdc30b54d03d`，錨點來源 `candidate_01.png`）
 3. ~~生成完整訓練圖批次（13 張，涵蓋六大支柱）~~ 已完成，詳見上方「2026-07-31」章節
-4. ~~送出 Soul 訓練~~ 已完成（`soul_id: 192562bb-ca64-4615-9515-13d34807857c`，狀態 `training/queued`）
-5. **待後續 session 確認訓練完成狀態**（`show_characters(action='status', soul_id=...)` 或 `action='list'`），確認後更新 `profile.json`／本檔案／`README.md`／`KOL_TRAINING_SOP.md` 為 `status: ready`
-6. Soul 訓練完成後，才可用 `model: soul_2` + 此 soul_id 生成正式發布內容
+4. ~~送出 Soul 訓練~~ 已完成（`soul_id: 192562bb-ca64-4615-9515-13d34807857c`）
+5. ~~確認訓練完成狀態~~ 已完成（2026-07-31，`action='status'` 確認 `status: ready`、`raw_status: completed`）
+6. 現在可用 `model: soul_2` + 此 soul_id 生成正式發布內容
 7. 影片生成流程（模型選擇、prompt 模板、剪輯節奏對應）待圖片流程確認後另行規劃，目前尚未展開
 8. 若未來新增「詹師傅工班現場」「客戶現場勘查」「巷口麵館」「永和爸媽家」等 `content_style.md` / `character.md` 已提及但尚無批次草稿的生活主題場景，其光線配方應套用本檔案「光線配方二：戶外／工作現場」，而非批次 1–5 的室內奢華配方
