@@ -1,5 +1,27 @@
 {
   "id": "coco-wu",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 12,
+      "images_path": "kols/coco-wu/images/training_v1/",
+      "collected_at": "2026-07-30",
+      "note": "12張訓練圖，全數以 Reference Element `4b6c659c-786b-43de-87af-87cea3cc99dd`（coco-wu-anchor-c01，錨點來源 candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。詳見 generation_notes.md「2026-07-30」章節。",
+      "soul_training": {
+        "status": "ready",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "cf7045dc-4e69-4c56-9621-aa8c40bf39b4",
+        "training_image_count": 12,
+        "started_at": "2026-07-30",
+        "completed_at": "2026-07-31",
+        "note": "show_characters(action='train') 於 2026-07-30 首次呼叫即成功受理，2026-07-31 透過 action='train'/'list' 回傳結果確認 status: ready、raw_status: completed。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
     "updated_at": "2026-07-23",

@@ -43,9 +43,9 @@
 | [aaliya-okonkwo](kols/aaliya-okonkwo/) | **Aaliya Rivera** | 洛杉磯 | 拉丁裔 LA 生活 / 穿搭 | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | active |
 | [camille-dupont](kols/camille-dupont/) | **Camille Dupont** | 巴黎 | 法式慢生活 / 美食 / 葡萄酒 | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | active |
 | [vicky-lin](kols/vicky-lin/) | **Vicky Lin** 林薇淇 | 高雄 | 健身 / 重訓 / 健身正妹 | 未訓練 | active |
-| [coco-wu](kols/coco-wu/) | **Coco Wu** 吳可可 | 台中 | 校園甜心 / 宿舍生活 | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4`（訓練中） | active |
+| [coco-wu](kols/coco-wu/) | **Coco Wu** 吳可可 | 台中 | 校園甜心 / 宿舍生活 | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4` | active |
 | [rainie-hsu](kols/rainie-hsu/) | **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | `994e33d2-7df1-47da-8478-7a6fd849fa33` | active |
-| [sophia-tseng](kols/sophia-tseng/) | **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | 未訓練 | active |
+| [sophia-tseng](kols/sophia-tseng/) | **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | `192562bb-ca64-4615-9515-13d34807857c`（訓練中） | active |
 | [mia-huang](kols/mia-huang/) | **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4` | active |
 | [zoe-lai](kols/zoe-lai/) | **Zoe Lai** 賴柔伊 | 花蓮/墾丁 | 陽光海島 / 衝浪女孩 | `27f750e6-0d32-43ce-8249-cce94ef835cd` | active |
 

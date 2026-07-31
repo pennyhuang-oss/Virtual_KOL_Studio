@@ -1,5 +1,27 @@
 {
   "id": "sophia-tseng",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 13,
+      "images_path": "kols/sophia-tseng/images/training_v1/",
+      "collected_at": "2026-07-31",
+      "note": "13張訓練圖，全數以 Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d`（sophia-tseng-face，錨點來源 2026-07-30 二次修正後的 face_reference/candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。此身分為 2026-07-30 五官結構重新設計後的版本，與 Rainie Hsu 明確區隔（無顴骨定義、內雙/杏眼、柔和下顎線）。詳見 generation_notes.md「2026-07-31」章節。",
+      "soul_training": {
+        "status": "training",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "192562bb-ca64-4615-9515-13d34807857c",
+        "training_image_count": 13,
+        "started_at": "2026-07-31",
+        "completed_at": null,
+        "note": "使用者明確核准第三輪重新設計後的候選圖批次並指示直接送訓練（「你就直接拿去訓練吧」）。show_characters(action='train') 首次呼叫即成功受理，raw_status: queued。待後續 session 確認完成狀態後更新此欄位。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
     "updated_at": "2026-07-23",

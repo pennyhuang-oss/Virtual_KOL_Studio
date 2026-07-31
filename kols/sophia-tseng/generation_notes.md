@@ -1,6 +1,7 @@
 # Sophia Tseng — AI 生成規劃（Generation Notes）
 
-> **status: PENDING — 這是規劃文件，不是生產紀錄。** 目前尚未執行任何實際 AI 生成（無訓練圖、無 Soul 訓練、無正式產出影像或影片）。以下 prompt 與批次規劃為「準備開始生成時」的參考草稿，實際執行後請依真實結果更新本檔，並補上真實的 job id / soul id / 生成日期。
+> **狀態：🔄 Soul 訓練已送出（`status: training/queued`），soul_id `192562bb-ca64-4615-9515-13d34807857c`，尚未回傳 ready**
+> 2026-07-30 完成第三輪五官結構重新設計（見下方「二次修正」章節），使用者核准 `candidate_01.png`–`candidate_04.png` 並指示直接送訓練（「你就直接拿去訓練吧」）。2026-07-31 已用 `candidate_01.png` 建立 Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d`，生成 13 張完整訓練集（`images/training_v1/`），並呼叫 `show_characters(action='train')` 成功受理。詳見下方「2026-07-31」章節。
 
 ---
 
@@ -337,15 +338,66 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 
 ---
 
+## 2026-07-31：建立 Reference Element、生成完整訓練圖批次、送出 Soul 訓練
+
+**觸發背景**：使用者看過第三輪五官重新設計後的候選圖（`candidate_01.png`–`candidate_04.png`，見上方「二次修正」章節），明確表示：「好吧，我覺得這邊這個 Sophia 新的，你就直接拿去，我覺得四張都可以，你就直接拿去訓練吧。」——與 Coco/Rainie/Zoe/Mia 相同的「核准即送訓練」授權模式。
+
+### 1. 錨點選定與 Reference Element 建立
+
+雖然使用者表示 4 張皆可接受，但延續先前已明確向使用者反映的疑慮——`candidate_03.png` 的「左眼尾下方天然小痣」實際生成結果是額頭正中央一個類似硃砂痣/bindi 的紅色印記，屬非預期瑕疵——選用 `candidate_01.png`（自拍/cashmere 毛衣款）作為身分錨點，而非隨機或使用 candidate_03。
+
+- `media_upload` → `curl PUT` → `media_confirm`（media_id: `ddb2fa8e-f755-41fa-ba4c-6ab73b677b4a`）
+- `show_reference_elements(action='create', category='character', name='sophia-tseng-face', medias=[...])` 建立成功
+- **Element ID：`980f8414-7709-47ff-9c88-fdc30b54d03d`**（name: `sophia-tseng-face`）
+
+### 2. 完整訓練圖批次生成（13 張，`seedream_v4_5`，`aspect_ratio: 9:16`）
+
+依 `content_style.md` 六大支柱權重分配：早晨 3 張（20%）、穿搭 2 張（15%）、浴室保養 2 張（15%）、居家 3 張（20%）、飯店旅遊 2 張（15%，因總量捨入略低於 20%）、健身 1 張（10%，因總量捨入略低）。每張 prompt 皆內嵌 `<<<980f8414-7709-47ff-9c88-fdc30b54d03d>>>` 錨定身分，並依 `SEXY_SCENE_LIBRARY.md` 混合自拍/他拍視角、CCD 數位相機與美圖濾鏡風格變化、僅本人入鏡（無其他人物）、身材數據（168cm/84-60-86cm/C cup）與膚色白皙基調皆明確寫入文字。
+
+**產出檔案**（`kols/sophia-tseng/images/training_v1/`）：
+| 檔名 | 支柱 | 視角/風格 |
+|------|------|-----------|
+| 01_morning_window_candid.png | 早晨 | 他拍，窗邊晨光 |
+| 02_morning_selfie_bed.png | 早晨 | 自拍，床上剛醒 |
+| 03_morning_kitchen_ccd.png | 早晨 | 他拍，CCD 濾鏡，手沖咖啡 |
+| 04_outfit_mirror_selfie_tryon.png | 穿搭 | 鏡前自拍，試穿針織衫 |
+| 05_outfit_candid_blazer.png | 穿搭 | 他拍，西裝外套定裝 |
+| 06_bathroom_candid_skincare.png | 浴室保養 | 他拍，大理石台面保養 |
+| 07_bathroom_mirror_selfie_meitu.png | 浴室保養 | 鏡前自拍，美圖濾鏡 |
+| 08_home_candid_sofa_wine.png | 居家 | 他拍，沙發夜景紅酒 |
+| 09_home_candid_reading_corner.png | 居家 | 他拍，閱讀角落＋貓 |
+| 10_home_selfie_couch_loungewear.png | 居家 | 自拍，沙發居家服 |
+| 11_hotel_candid_bed_window.png | 飯店旅遊 | 他拍，飯店床邊晨光 |
+| 12_hotel_mirror_selfie_ccd.png | 飯店旅遊 | 鏡前自拍，CCD 濾鏡 |
+| 13_fitness_candid_reformer.png | 健身 | 他拍，Pilates reformer |
+
+**生成過程的已知異常**：13 張中有 4 張（09、10、11、13）第一次呼叫遭遇 `429 rate_limit_reached`，立即重試後全數第二次即成功，無需第三次重試。
+
+### 3. 誠實視覺評估（已用 Read 工具實際目視檢查全部 13 張，非假設）
+
+- **身分一致性**：13 張的臉部特徵（圓潤臉型、無明顯顴骨、內雙/杏眼、柔和下顎線、左眼尾下方小痣）皆與 Reference Element 錨點一致，且與 Rainie Hsu 的尖下巴/高顴骨/大雙眼皮五官結構明確可辨識為不同人——第三輪五官重新設計的差異化目標達成。
+- **手部/肢體檢查**（依 `SEXY_SCENE_LIBRARY.md` 第 10 點新規則逐張檢查）：13 張手部姿勢與手指數量皆正常，無多出的手指或肢體，無不自然關節扭曲；鏡頭角度與透視在所有張數中皆合理，無物理不可能的拍攝角度。
+- **人物入鏡規則**（第 9 點新規則）：13 張皆只有 Sophia 本人入鏡，09 號圖的貓咪為場景道具動物，非人物角色，符合規則。
+- **選/他拍與濾鏡變化**：5 張自拍（02、04、07、10、12）、8 張他拍/候拍，CCD 濾鏡 2 張（03、12）、美圖濾鏡 1 張（07），符合「不要整組同一種質感」的規則。
+- **輕微觀察**（非缺陷，僅供未來留意）：13 號（Pilates reformer）prompt 原意是「不看鏡頭」，但實際生成結果她的視線落在鏡頭方向並帶微笑——與文字指令有落差，但不影響身分/瑕疵判斷，可接受。
+
+**結論**：13 張訓練圖身分一致、無明顯 AI 瑕疵，符合送訓練標準。
+
+### 4. Soul 訓練送出
+
+依使用者指示直接送訓練，呼叫 `show_characters(action='train', name='Sophia Tseng', images=[...13張訓練圖的 job id])`，**第一次呼叫即成功受理**，取得 `soul_id: 192562bb-ca64-4615-9515-13d34807857c`，`raw_status: queued`（訓練中，尚未完成）。同批呼叫的 `items` 列表回應中，順帶確認 **Coco Wu 的訓練已從 `training/queued` 轉為 `status: ready`**（`raw_status: completed`）——已同步更新 `kols/coco-wu/` 相關檔案。
+
+`profile.json` 已補上 `ai_assets.training_images_v1` 完整欄位（含 Reference Element、13 張訓練圖路徑、soul_training 狀態）。
+
+---
+
 ## 下一步
 
-> **⚠️ 目前狀態（2026-07-30）：STOP — 等待使用者從新一輪 4 張候選圖（`candidate_01.png`–`candidate_04.png`）中挑選喜歡的臉／髮型／身材／服裝方向。本輪仍是純探索性 Discovery 批次，尚未建立 Reference Element、尚未 anchor 身分、尚未呼叫 `show_characters(action='train')`、尚未進入 Soul 訓練。在使用者明確回覆選中哪一張（或要求再修改）之前，不要自行往下推進到訓練圖擴充或 Soul 訓練階段。**
-
-1. 使用者從 4 張新候選圖中挑出最喜歡的臉／髮型／身材／服裝方向（或反饋仍需調整）
-2. 選定後，先用 `media_upload` → `media_confirm` → `show_reference_elements(action='create')` 把選中的那張圖轉成 Reference Element（`element_id`），再進行下一步——不要用純文字 prompt 各自獨立生成訓練圖集，避免身分不一致
-3. 依上方「核心 Prompt 結構」（2026-07-30 版）的新臉型／身材／髮型／服裝描述，重寫批次 1–6 的草稿 prompt（目前批次 1–6 仍是重新設計前的舊版語言，見「計畫批次 Prompt 規劃」章節開頭的過時警告），並內嵌 `<<<element_id>>>` 取代文字描述五官/身形
-4. 正式生成前，先用批次 1（設計師公寓早晨）做小規模測試，確認模型輸出的臉型、身材數字比例與氣質是否符合「人物設定」表格，並確認室內奢華光線配方是否讀出「乾淨精緻」而非「偏暗/顆粒感重」
-5. 測試通過後依序完成批次 2–6，批次 6 額外確認戶外/工作現場光線配方（淺景深＋明亮日光）是否與其餘 5 批次的室內奢華配方在同一套身分下仍保持一致的臉部與身材識別度
-6. 挑選訓練圖，進入 Soul 訓練（`status: PENDING`）
-7. Soul 訓練完成後，回填真實 Soul ID、訓練圖路徑（如 `kols/sophia-tseng/images/training_v1/`）與實際生成日期，並將本檔案的規劃內容更新為正式紀錄
+1. ~~五官結構重新設計（第三輪）~~ 已完成，使用者核准並指示直接送訓練
+2. ~~建立 Reference Element~~ 已完成（`element_id: 980f8414-7709-47ff-9c88-fdc30b54d03d`，錨點來源 `candidate_01.png`）
+3. ~~生成完整訓練圖批次（13 張，涵蓋六大支柱）~~ 已完成，詳見上方「2026-07-31」章節
+4. ~~送出 Soul 訓練~~ 已完成（`soul_id: 192562bb-ca64-4615-9515-13d34807857c`，狀態 `training/queued`）
+5. **待後續 session 確認訓練完成狀態**（`show_characters(action='status', soul_id=...)` 或 `action='list'`），確認後更新 `profile.json`／本檔案／`README.md`／`KOL_TRAINING_SOP.md` 為 `status: ready`
+6. Soul 訓練完成後，才可用 `model: soul_2` + 此 soul_id 生成正式發布內容
+7. 影片生成流程（模型選擇、prompt 模板、剪輯節奏對應）待圖片流程確認後另行規劃，目前尚未展開
 8. 若未來新增「詹師傅工班現場」「客戶現場勘查」「巷口麵館」「永和爸媽家」等 `content_style.md` / `character.md` 已提及但尚無批次草稿的生活主題場景，其光線配方應套用本檔案「光線配方二：戶外／工作現場」，而非批次 1–5 的室內奢華配方

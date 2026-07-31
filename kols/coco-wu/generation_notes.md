@@ -1,7 +1,7 @@
 # Coco Wu — AI 生成規劃
 
-> **狀態：PENDING — 尚未執行任何 AI 生成**
-> 本檔案只是規劃文件，記錄未來 AI 生成的角色設定、核心 prompt 結構與計畫批次。目前尚未進行任何訓練圖生成、Soul 訓練或影片生成，**沒有 soul_id、沒有已生成圖片、沒有生成日期**。所有 job ID / 圖片數量 / 訓練完成狀態等欄位待實際執行後才會補上，本文件不預先捏造。
+> **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `cf7045dc-4e69-4c56-9621-aa8c40bf39b4` 已可用於 `model: soul_2` 正式生成內容**
+> 本文件原本是生成前的規劃文件。2026-07-30 使用者核准候選圖批次並明確授權送出訓練（「我覺得這四位都可以送去訓練...就先這樣送出訓練」），已用 Reference Element `4b6c659c-786b-43de-87af-87cea3cc99dd`（錨點來源 candidate_01.png）建立完整 12 張訓練集（`images/training_v1/`），並呼叫 `show_characters(action='train')` 成功受理，取得 `soul_id: cf7045dc-4e69-4c56-9621-aa8c40bf39b4`。2026-07-31 確認 `raw_status: completed`，訓練正式完成。
 
 ---
 
@@ -294,13 +294,11 @@
 
 **總結**：Element 錨定機制在這一輪 12 張跨場景/跨支柱訓練圖上證實有效，身分一致性遠優於先前 `soul_2` 無錨點的獨立生成結果，可視為合格的訓練圖候選批次；但自拍/他拍畫質差異與 CCD 濾鏡強度這兩項新規則的實際生成效果只能算「部分達成」，並非每張都精準體現文字指令，建議使用者審核時特別留意 06（濾鏡導致的輕微身分漂移）與 12（自拍畫質差異不明顯）這兩張的可用性。
 
-### 8. ⚠️ 下一步（不可跳過，且不可自動接續——依 README.md「新增 KOL 流程」第 7 點與 `KOL_TRAINING_SOP.md` 的強制規則）
+### 8. ✅ 使用者核准並送出 Soul 訓練（2026-07-30）
 
-**必須停在這裡，等待使用者實際看過這 12 張 Element 錨定訓練圖，並明確確認滿意（包含是否要處理 06 的濾鏡身分漂移、是否接受 12 的自拍畫質差異不明顯、是否需要補拍/重新生成任何一張）後，才可以進入下一步。**
+使用者明確表示 12 張訓練圖皆可接受，並授權直接送出訓練（「我覺得這四位都可以送去訓練...就先這樣送出訓練。最主要是要先輔助他們的臉。」），不需先處理 06/12 的細節瑕疵。呼叫 `show_characters(action='train', name='Coco Wu', images=[...12張訓練圖的 media_id])`，**第一次呼叫即成功受理**，取得 `soul_id: cf7045dc-4e69-4c56-9621-aa8c40bf39b4`，`raw_status: queued`。`profile.json` 已補上 `ai_assets.training_images_v1.soul_training` 欄位。
 
-本輪**沒有**、也**不會**呼叫 `show_characters(action='train')`。`profile.json` 沒有新增 `soul_id`，沒有新增 `ai_generation` 欄位，維持原狀未變更。訓練狀態明確標記為 **PENDING**。
-
-**等待使用者確認這組訓練圖後才能進行 Soul 訓練。**
+**2026-07-31 確認完成**：透過 `show_characters(action='train')`（呼叫 Sophia Tseng 訓練時的 `items` 列表副作用）確認 Coco Wu 的 `status: ready`、`raw_status: completed`。`profile.json`、`README.md`、`KOL_TRAINING_SOP.md` 已同步更新為訓練完成狀態，可用 `model: soul_2` + 此 soul_id 生成後續正式內容。
 
 ---
 
@@ -309,6 +307,6 @@
 1. ~~生成 4 張獨立候選圖供使用者選臉~~ 已完成（2026-07-25，`seedream_v4_5`，確認同一人）
 2. ~~等待使用者從候選圖選定身分錨點~~ 已完成：使用者確認 4 張皆可接受，授權任選一張——已選定 `candidate_01.png`
 3. ~~建立 Reference Element 並生成完整訓練圖批次~~ 已完成（2026-07-30，`element_id: 4b6c659c-786b-43de-87af-87cea3cc99dd`，12 張跨六大支柱訓練圖，見上方章節）
-4. ⚠️ **等待使用者審核 12 張訓練圖並明確確認滿意**——這是不可跳過的人工確認關卡，本文件不會自動接續進入 Soul 訓練
-5. 使用者確認後，才執行 `show_characters(action='train')`，記錄 soul_id 至 `profile.json` 和本文件
+4. ~~等待使用者審核 12 張訓練圖並明確確認滿意~~ 已完成（2026-07-30，使用者核准並授權直接送訓練）
+5. ~~執行 `show_characters(action='train')`，記錄 soul_id~~ 已完成（`soul_id: cf7045dc-4e69-4c56-9621-aa8c40bf39b4`，2026-07-31 確認 `status: ready`）
 6. 影片生成流程（模型選擇、prompt 模板、剪輯節奏對應）待圖片流程確認後另行規劃，目前尚未展開
