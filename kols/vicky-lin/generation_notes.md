@@ -1,6 +1,6 @@
 # Vicky Lin — AI 生成規劃
 
-> **狀態：🔄 Soul 訓練已送出（`status: training/queued`），soul_id `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`，尚未回傳 ready**
+> **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e` 已可用於 `model: soul_2` 正式生成內容**
 > 2026-07-25：使用者審核第四輪 Element 錨定的 12 張參考圖後回覆「可以」，明確核准進入 Soul 訓練。已完成圖片重新上傳與確認（12 個 media_id 均已 `media_confirm` 成功），但 `show_characters(action='train')` 第一次 session 連續 10 次呼叫都回傳工具層級錯誤；使用者回覆「應該是要重新試試看吧」後，第二次 session 又嘗試 2 次（`images` 用 media_id、`medias` 用 `{role,value}` 格式各一次），**仍然全部失敗**，Higgsfield 後端也**沒有建立任何角色記錄**（已用 `action='list'` 逐一核對確認）。⚠️ 兩次 session 期間累計仍被扣款約 **2.64–2.88 credits**（`transactions` 記錄為多筆 `Higgsfield Soul V2` -0.12 credits，發生在重試時段內），屬於「呼叫失敗但仍計費」的異常情形，且此模式在第二次 session 又再次重現。詳見下方「2026-07-25 使用者核准，Soul 訓練嘗試」與「2026-07-25 Soul 訓練第二次重試」兩章節。**2026-07-31 使用者要求再次測試**：沿用先前已確認的 12 個 media_id 重新呼叫 `show_characters(action='train')`，**這次第一次呼叫即成功受理**，取得 `soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`，`raw_status: queued`。判斷先前的後端 `train` 端點異常已恢復正常。詳見下方「2026-07-31 第三次重試：訓練成功送出」章節。
 
 ---
@@ -323,7 +323,9 @@ show_characters(action='train', name='Vicky Lin', medias=[{role:'image', value: 
 
 **判斷**：先前記錄中懷疑的「Higgsfield 後端 `train` 端點持續性異常」看來已經恢復正常，並非參數或圖片本身的問題——這與最初的懷疑方向一致（因為先前已測試過多種參數形狀皆失敗，指向服務端問題而非請求格式問題）。
 
-`profile.json` 已補上 `ai_assets.training_images_v1.soul_training` 欄位（`status: training`）。`README.md`／`KOL_TRAINING_SOP.md` 已同步更新。
+**同日追蹤確認完成**：透過 `show_characters(action='status', soul_id='bdb1d879-da36-4c1a-bc63-9f5b49a3e94e')` 確認 `status: ready`、`raw_status: completed`。Soul 訓練正式完成，可用 `model: soul_2` + 此 soul_id 生成正式發布內容。
+
+`profile.json` 已補上 `ai_assets.training_images_v1.soul_training` 欄位（`status: ready`）。`README.md`／`KOL_TRAINING_SOP.md` 已同步更新。
 
 ---
 
@@ -332,7 +334,7 @@ show_characters(action='train', name='Vicky Lin', medias=[{role:'image', value: 
 1. ~~選定圖片生成模型並小規模測試~~ 已完成：第二輪、第三輪使用 `soul_2`（一次性角色參考圖，但無身分錨定）；第四輪改用 `seedream_v4_5` + Reference Element 錨定同一身分
 2. ~~等待使用者比較第二輪與第三輪參考圖~~ 已被更根本的問題取代：發現獨立文字生成無法保證身分一致，因此第四輪改採 Element 錨定方式重新生成訓練圖
 3. ~~等待使用者審核第四輪（`v4_anchored_01`–`v4_anchored_12`）Element 錨定參考圖，確認身分一致且風格滿意~~ 已完成：使用者回覆「可以」，明確核准進入 Soul 訓練
-4. ~~`show_characters(action='train')`~~ 已於 2026-07-31 第三次重試成功送出（`soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`，`status: training/queued`）——前兩次 session 累計 12 次失敗的記錄保留於上方章節供未來參考
-5. **待後續 session 確認訓練完成狀態**（`show_characters(action='status', soul_id=...)` 或 `action='list'`），確認後更新 `profile.json`／本檔案／`README.md`／`KOL_TRAINING_SOP.md` 為 `status: ready`
-6. Soul 訓練完成後，才可用 `model: soul_2` + 此 soul_id 生成正式發布內容
+4. ~~`show_characters(action='train')`~~ 已於 2026-07-31 第三次重試成功送出（`soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`）——前兩次 session 累計 12 次失敗的記錄保留於上方章節供未來參考
+5. ~~確認訓練完成狀態~~ 已完成（2026-07-31 同日，`action='status'` 確認 `status: ready`、`raw_status: completed`）
+6. 現在可用 `model: soul_2` + 此 soul_id 生成正式發布內容
 7. 影片生成流程（模型選擇、prompt 模板、剪輯節奏對應）待圖片流程確認後另行規劃，目前尚未展開
