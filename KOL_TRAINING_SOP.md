@@ -23,14 +23,14 @@
 
 | KOL | Soul ID | Soul 訓練 | 測試圖 | 狀態 |
 |-----|---------|----------|--------|------|
-| Vicky Lin | 無（訓練嘗試失敗，未取得 soul_id） | ❌ | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | 🔴 使用者已核准並同意重試，但 `show_characters(action='train')` 累計兩次 session、共 12 次呼叫全部失敗（工具層級錯誤），期間累計仍被扣款約 2.64–2.88 credits、無任何訓練結果，判斷可能是後端 `train` 端點持續異常，建議暫緩盲目重試、先確認服務狀態，詳見 `kols/vicky-lin/generation_notes.md` |
+| Vicky Lin | `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`（`status: training/queued`，2026-07-31 第三次重試成功受理，尚未回傳 ready） | 🔄 進行中 | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | 🔄 前兩次 session 累計 12 次呼叫失敗後，2026-07-31 使用者要求重試，改用先前已確認的 media_id，第一次呼叫即成功受理，判斷後端 `train` 端點異常已恢復；待確認訓練完成狀態，詳見 `kols/vicky-lin/generation_notes.md` |
 | Coco Wu | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 12 張（Reference Element `4b6c659c-786b-43de-87af-87cea3cc99dd` 錨定，`training_v1/`） | ✅ 2026-07-31 確認訓練完成，`show_characters(action='train')` 回傳的 `items` 列表確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/coco-wu/generation_notes.md` |
 | Rainie Hsu | `994e33d2-7df1-47da-8478-7a6fd849fa33`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `ae0d8287-af47-4f9d-b357-19a477abd00d` 錨定，`training_v1/`） | ✅ 2026-07-30 訓練完成，`show_characters(action='status')` 確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/rainie-hsu/generation_notes.md` |
 | Sophia Tseng | `192562bb-ca64-4615-9515-13d34807857c`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d` 錨定，第三輪五官重新設計後的身分，`training_v1/`） | ✅ 2026-07-31 確認訓練完成，`show_characters(action='status')` 確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/sophia-tseng/generation_notes.md` |
 | Mia Huang | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `92ffbd80-32c7-495f-91ed-f109b419bb41` 錨定，`training_v1/`） | ✅ 2026-07-30 訓練完成，可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/mia-huang/generation_notes.md` |
 | Zoe Lai | `27f750e6-0d32-43ce-8249-cce94ef835cd`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `9b1c0c4b-7301-4144-9427-56e754178144` 錨定，`training_v1/`） | ✅ 2026-07-30 訓練完成，`show_characters(action='status')` 確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/zoe-lai/generation_notes.md` |
 
-> ✅ 截至 2026-07-31，這 6 位中已有 5 位（Coco Wu、Rainie Hsu、Sophia Tseng、Mia Huang、Zoe Lai）完成 Reference Element 錨定訓練圖批次並成功完成 Soul 訓練（`status: ready`），可用 `model: soul_2` + 各自 soul_id 生成正式內容。僅 Vicky Lin 仍卡在 `show_characters(action='train')` 工具層級持續失敗，尚未取得 soul_id。
+> ✅ 截至 2026-07-31，這 6 位中已有 5 位（Coco Wu、Rainie Hsu、Sophia Tseng、Mia Huang、Zoe Lai）完成 Reference Element 錨定訓練圖批次並成功完成 Soul 訓練（`status: ready`），可用 `model: soul_2` + 各自 soul_id 生成正式內容。Vicky Lin 先前累計兩次 session、12 次呼叫皆為工具層級失敗，2026-07-31 重試後第一次呼叫即成功受理（`soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`），目前 `status: training/queued`，待確認完成。
 
 ---
 

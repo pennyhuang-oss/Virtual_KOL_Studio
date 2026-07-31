@@ -1,5 +1,27 @@
 {
   "id": "vicky-lin",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 12,
+      "images_path": "kols/vicky-lin/images/face_reference/ (v4_anchored_01–12)",
+      "collected_at": "2026-07-25",
+      "note": "12張訓練圖，全數以 Reference Element `9f076fab-77ef-4c68-a146-f8060253c49a`（vicky-lin-anchor-v3-06，錨點來源 v3_06_3q_fullbody.png）錨定同一身分生成，使用者已核准。詳見 generation_notes.md。",
+      "soul_training": {
+        "status": "training",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "bdb1d879-da36-4c1a-bc63-9f5b49a3e94e",
+        "training_image_count": 12,
+        "started_at": "2026-07-31",
+        "completed_at": null,
+        "note": "先前兩次 session、共 12 次呼叫 show_characters(action='train') 皆為工具層級失敗（未取得 soul_id）。2026-07-31 使用者要求重試，改用先前已上傳確認的 12 個 media_id，本次第一次呼叫即成功受理，取得 soul_id，raw_status: queued。判斷先前的後端異常已恢復正常。待後續 session 確認完成狀態後更新此欄位。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
     "updated_at": "2026-07-23",
