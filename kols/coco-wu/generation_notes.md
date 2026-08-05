@@ -342,16 +342,17 @@
 - `scene_control`: `image`（保留 Coco 自己的宿舍場景）
 - `resolution`: `1080p`
 - 輸出：`1072×1936`、30fps、~16.5s，Job ID `94b8256e-8c2c-4b5a-aa5b-b7065a31754f`
-- **輸出含一條 AI 生成的環境音軌**（非驅動片原始配樂，mean −15.8dB / max −3.5dB），依 `DANCE_CLONE_SOP.md` Step 6 用驅動片原始音樂整條取代
+- **輸出本身已含音軌**（aac、44.1kHz、128kbps）——**⚠️ 2026-08-05 更正**：最初誤判這條音軌是「AI 生成的環境音」，直接捨棄並手動用驅動片原始音樂取代。使用者回報自己在 Kling 後台 History 看到輸出本來就帶了驅動片的音樂，經事後用波形能量包絡交叉相關驗證（22050Hz 單軌、0.1s 窗口）：與驅動片原始音樂在約 66ms 偏移下相關係數 0.62，非隨機雜訊，確認**這條音軌是 Kling 3.0 Motion Control 依驅動片參考音樂重新合成/對時過的版本**（時長 16.398s 精確貼合生成畫面，位元率 128kbps 高於驅動片原始的 70kbps，非原始檔案位元對位的複製）——也就是說 `motion_control` 在驅動片本身含音軌時，會自動輸出已經合成好、且跟生成動作對時過的音樂，不是無聲輸出。
 
-### 4. 混音
+### 4. 混音（⚠️ 本次執行的手動混音步驟事後證實不需要，已用 Kling 原生輸出取代）
 
-- 從驅動片抽出原始音軌（`driver_audio.m4a`），因未裁切驅動片，起點無需對齊偏移，直接與生成畫面混音
-- `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 取代原有環境音軌，輸出成品
+- 最初依 `DANCE_CLONE_SOP.md`（更正前版本）的假設，抽出驅動片原始音軌（`driver_audio.m4a`）並用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 蓋掉 Kling 輸出自帶的音軌
+- 事後比對發現這一步是多餘甚至更差的選擇：手動混音用的是**未經對時處理**的原始驅動片音軌（70kbps，時長 16.576s，直接靠 `-shortest` 在尾端截斷去對齊生成畫面的 16.467s），而 Kling 原生輸出的音軌是**已經跟生成動作對時合成過**的版本（128kbps，16.398s，精確貼合）——手動版本理論上音樂節奏對位精準度不如 Kling 原生版本
+- **最終成品已改用 Kling 原生輸出**（`kling_output_silent.mp4` 原始檔直接複製，未經任何後製混音），撤銷本次的手動混音結果
 
 ### 5. 產出檔案
 
-`kols/coco-wu/videos/dance_clone_v1/coco_dance_clone_v1_ig_reel.mp4`（1072×1936、30fps、~16.5s，含驅動片原始配樂）
+`kols/coco-wu/videos/dance_clone_v1/coco_dance_clone_v1_ig_reel.mp4`（1072×1936、30fps、~16.5s，音軌為 Kling 3.0 Motion Control 原生輸出，非手動混音版本）
 
 ### 6. QA 檢核（`DANCE_CLONE_SOP.md` Step 8）
 
