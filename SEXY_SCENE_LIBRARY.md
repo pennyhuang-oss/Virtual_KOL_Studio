@@ -57,23 +57,124 @@ slightly lower dynamic range, gentle noise in low light, NOT ultra-crisp or over
   ```
 這兩種風格**不是**要取代預設的「毛孔/自然瑕疵」真實感要求（第 1 點），而是作為訓練集裡「這個人真實生活會用的濾鏡」的其中幾張變化，不要整組都套用同一種濾鏡。
 
-### 3. 光源
-> **⚠️ 2026-07-25 修正**：這條原本寫「真實光線是混亂、不均勻的」，結果實際套用在 Vicky Lin 身上時被使用者反饋「濾鏡、光線、畫質都非常差」。問題是把「真實感」跟「拍得普通/畫質差」劃上等號了——這是錯的，兩者是獨立的兩件事。真人使用者提供的實際健身網紅參考截圖顯示：真實感來自皮膚質感和生活細節，**不是**靠調暗、調糊、做舊光線。現代手機攝影的「討喜」光線（黃金時段斜陽、戶外強光、樹蔭斑駁光）配合淺景深背景虛化，一樣可以清晰漂亮又有真實感。
+### 3. 光源（2026-08-05 全面改寫：從「形容詞」改為「物理規格」）
 
-**室內親密場景**（晨起/浴室/居家等）維持原本的「混合、不均勻」邏輯：
+> **⚠️ 2026-08-05 第三次修正——這是本節最重要的一次改動，取代先前的兩套配方。**
+>
+> **背景**：使用者指出競品帳號 @sherry_digitalp510（同為全 AI 生成的虛擬 KOL，57 萬粉）的照片「不管是夜晚、室內還是室外，或是自拍、他拍、第三者視角，打光都會因應不同場景、服裝和時間，有很好的氛圍模擬效果」，要求拆解她是怎麼做到的。實際下載她 31 張跨光線條件的素材逐張拆解後，結論如下。
+>
+> **她做對的事，不是把光線寫得更漂亮，而是把光線寫成「物理規格」而不是「品質形容詞」。**
+>
+> 我們現行 prompt 的光線描述全部是**品質形容詞**——`golden hour`、`crisp`、`well-exposed`、`soft flattering falloff`、`high dynamic range`。這些字告訴模型「要好看」，但沒有告訴模型「光從哪來、被什麼反射回來、哪裡該暗」。結果就是每張圖都是同一種均勻、討喜、沒有空間感的光——**這正是「AI 感」的主要來源**，而且是我們自己用第 2 次修正的「NOT degraded, NOT dim」規則親手鎖死的。
+>
+> Sherry 的每一張圖，你都可以指著畫面說出「光是從那個東西來的、又被這個表面反射到她臉上」。這才是真實感的來源。
+
+#### 3-A. 五段式光線公式（每個 prompt 的光線段落都要寫滿這五段）
+
+| 段 | 要寫什麼 | 反例（我們現在在寫的） |
+|---|---|---|
+| **① KEY 主光** | 具名、畫面內可指認的光源 + 方向 + 高度 | `golden hour lighting`（沒說太陽在哪） |
+| **② BOUNCE 反射填光** | **具名的物理反射面** + 它把什麼顏色的光丟回主體 | 完全沒寫（這是最大的缺口） |
+| **③ 色溫分裂** | 畫面裡同時存在的兩個色溫，各自落在哪 | `warm tones`（單一色溫＝假） |
+| **④ 曝光取捨** | 相機對「什麼」測光，因此「什麼」被允許過曝或壓黑 | `well-exposed, high dynamic range`（＝什麼都不犧牲＝假） |
+| **⑤ 遮擋/框架** | 鏡頭與主體之間形塑光線的實體（門框、百葉簾、樹蔭邊界、遮陽棚、鏡子） | 完全沒寫 |
+
+**②「反射填光」是這次拆解最關鍵的發現。** Sherry 的圖裡，補進陰影的那道光永遠來自一個看得見的表面：白沙、遊艇的白色玻璃纖維船身、綠松色泳池水、夕陽照亮的海面、紫色 LED 燈帶、濕掉的柏油路。這個表面決定了填光的**顏色和方向**，也就決定了畫面讀起來是不是一個真的空間。少了它，臉就是「被打亮」，不是「被環境照亮」。
+
+**④「曝光取捨」是第二關鍵。** 她的照片經常**不是**「曝光正確」的：逆光夕陽那張，她整個人比天空暗；車內那張，車外停車場整片過曝到死白；遊艇那張，背景海面過曝而她在陰影裡。真實相機一次只能對一個亮度測光，另一邊就得犧牲。**我們現行規則裡的 `NOT degraded, NOT dim, high dynamic range` 等於強迫模型兩邊都不犧牲——這在物理上不存在，所以看起來假。**
+
+> **這條不是要推翻 2026-07-25 的修正。** 那次修正說的「真實感 ≠ 畫質差」仍然完全成立：不要寫 `grainy`、`muddy`、`degraded`、`low quality`。畫質要好、要清晰、要有細節。**但「畫質好」不等於「每一處都曝光均勻」**——這是兩件事，先前把它們混為一談了。允許畫面有壓黑的暗部和過曝的窗外，同時保持主體清晰銳利，這才是現代手機攝影的真實樣子。
+
+#### 3-B. 十組可直接套用的光線配方
+
+以下每一組都可以整段貼進 prompt 的 `[LIGHTING]` 位置，依場景挑選：
+
+**R-1 夕陽逆光（海邊 / 戶外開闊處）**
 ```
-mixed color temperature — cool daylight from window blending with warm indoor lamp,
-uneven light falloff across the frame, soft but visible shadow edges,
-slight lens flare or glare on skin/glass surfaces
+backlit by the low setting sun directly behind her on the horizon, warm orange rim light
+tracing her hair edge and shoulder line, her face filled only by soft bounce off the
+bright water surface below, sky exposed correctly so she sits noticeably darker than
+the background, deep warm orange near the horizon fading to cool violet overhead
 ```
 
-**戶外/生活風格場景**（健身、旅遊、日常外出等）改用「討喜自然光」邏輯，不要刻意做舊：
+**R-2 藍調時刻（日落後 10–20 分鐘）**
 ```
-golden hour sunlight or bright clear daylight, natural directional light with soft flattering falloff,
-shallow depth of field with blurred bokeh background, crisp sharp focus on subject,
-high dynamic range, natural color grading — NOT degraded, dim, or muddy
+post-sunset blue hour, cool blue ambient sky light as the overall base, a residual warm
+peach glow low on one side of the sky throwing warm light onto that side of her face
+while the shadow side picks up cool blue skylight, streetlights just switching on,
+foreground road falling into darkness with her as the brightest element in frame
 ```
-兩種邏輯都要保留皮膚質感關鍵字（見第 1 點）和裝置破綻（見第 2 點），差別只在「整體畫面美不美、亮不亮」，不是在「像不像真的」。
+
+**R-3 正午強光 + 白沙／淺水反射（高反差海灘）**
+```
+hard high overhead midday sun casting a short sharp shadow at her feet, strong white
+bounce coming back up off the pale sand and shallow water filling the underside of her
+chin, jaw and arms from below, highlights on the water surface allowed to clip to pure
+white, saturated deep blue sky
+```
+
+**R-4 遮蔽物下（遊艇艙頂 / 騎樓 / 樹蔭）— 主體在陰影，背景過曝**
+```
+she sits in the shade under the hard-top canopy while the sea and sky behind are in
+full sun and blow out slightly, the large white fiberglass surfaces around her acting
+as a giant bounce card wrapping soft shadowless fill onto her skin, exposure metered
+for her face so the background reads one to two stops hot
+```
+
+**R-5 暗框亮主體（車內 / 門洞 / 室內看向窗外）**
+```
+shot from outside into the dark cabin interior, the only light on her spilling in
+through the open door and windows, the interior surfaces around her crushing to near
+black, the parking lot visible through the far windows blown out to white, extreme
+dynamic range between the dark frame and the bright opening
+```
+
+**R-6 陰天平光 / 俯拍**
+```
+flat overcast open-shade daylight with no directional sun and no visible shadow edge,
+overall low contrast, her skin only marginally brighter than the mid-grey ground,
+even soft light from the whole sky acting as one huge diffuser
+```
+
+**R-7 室內窗光 + 百葉簾**
+```
+soft window light entering from one side through venetian blinds, faint hard-edged
+stripes of light falling across the wall and partly across her, warm interior tungsten
+lamp deeper in the room adding a second warmer source behind her, gentle falloff into
+the unlit side of the room
+```
+
+**R-8 夜間室內實用光源（餐廳 / lounge / 飯店走廊）**
+```
+lit only by the practical fixtures visible in frame — a warm pendant lamp and a
+receding row of ceiling downlights — warm tungsten key from front-right, the depth of
+the room falling away into deep shadow, high contrast with her face readable but the
+background largely dark, no artificial fill
+```
+
+**R-9 RGB / LED 情境光 + 中性面光（直播 / ASMR / 電競房）**
+```
+magenta and violet LED cove lighting washing the walls and ceiling behind her as the
+scene's colour, a separate neutral-warm frontal key from the camera side lighting her
+face cleanly, two clearly different colour temperatures coexisting in one frame —
+coloured background, neutral face
+```
+
+**R-10 夜間街頭混合光（霓虹 + 鈉燈 + 濕地面）**
+```
+cool blue city ambient as the base, warm sodium streetlight raking across her from one
+side, coloured neon spill from a shopfront hitting the other side, wet asphalt
+reflecting the signage back up as a secondary coloured bounce from below, headlights
+streaking past out of focus
+```
+
+#### 3-C. 三條硬性規則
+
+1. **每個 `[LIGHTING]` 段落必須寫出「反射面」。** 只要寫不出「光被什麼表面反射回她臉上」，這段光線描述就不合格，退回重寫。
+2. **每個 `[LIGHTING]` 段落必須寫出「哪裡被犧牲」。** 明確指定過曝的區域（`allowed to clip`、`blown out`）或壓黑的區域（`crushing to near black`、`falling into deep shadow`）。兩邊都保住＝假。
+3. **禁止在光線段落使用的字**：`high dynamic range`（它的意思正好是「不犧牲任何一邊」）、`evenly lit`、`well-exposed`、`perfect lighting`、`studio lighting`（除非該張真的就是棚拍設定）。
+   - **仍然要保留**畫質相關的字：`crisp sharp focus on subject`、`fine detail`、`natural colour grading`。這些管的是解析度和銳利度，不是曝光均勻度。
+   - **仍然禁止**：`grainy`、`muddy`、`degraded`、`low quality`、`dim and blurry`。
 
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
@@ -107,10 +208,37 @@ fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/
 
 Discovery 批次與任何用於 Reference Element 錨定身分的參考圖，服裝預設應該是**該角色的日常/居家/普通外出款**（見該角色 `character.md` 的「居家」「家人時光」「耍廢日」等非招牌 pillar 段落找對應穿搭），而不是她的招牌極端造型（夜店洋裝、比賽級健身戰袍、大量誇張配飾等）。招牌造型留給之後**明確對應到那個場景的正式批次**（例如「今晚出門」「夜店」這種有明確情境的貼文素材），不要預設套用在純粹用來確認臉部/身材一致性的參考圖上。
 
-### 9. 預設只有本人入鏡，不要無故加入其他人（2026-07-30 新增）
-> **背景**：使用者反饋，除非明確要求某一張素材需要有朋友或其他人一起入鏡，畫面裡不應該無故出現其他人物——訓練與素材圖預設都應該只有角色本人。
+### 9. 人物入鏡規則：區分「同框互動者」與「背景路人」（2026-08-05 修訂，原 2026-07-30 版本已被實測推翻一半）
 
-除非 prompt 明確要求「有朋友/家人/其他人一起入鏡」的特定場景，否則畫面裡**只能有主角一人**。撰寫 prompt 時要避免容易讓模型自行腦補多人的描述（例如「室友在旁邊」「朋友幫忙拍」這種文字雖然常用來解釋「這是他拍視角」，但要小心措辭——描述的應該是**拍攝視角本身**（例如 candid third-person framing、非本人自拍角度），而不是明講「有另一個人在畫面裡」。如果某一批次真的需要別人入鏡（例如群體聚會場景），要在該張 prompt 明確指定那個人的存在與大致描述，而不是讓模型自己決定要不要加人，也避免讓配角意外長得和主角太像（見 Coco Wu 案例：兩張有室友入鏡的圖，室友因為沒有指定區隔特徵，長得跟 Coco 本人很像）。
+> **原規則（2026-07-30）**：「預設只有本人入鏡，不要無故加入其他人。」
+>
+> **2026-08-05 實測結果：這條規則對「同框互動者」仍然成立，但對「背景路人」是錯的，而且是我們畫面看起來假的主因之一。**
+>
+> 競品 @sherry_digitalp510 的素材中，只要場景是公共空間（街道、夜市、海灘、商場、路口），畫面裡幾乎**一定**有背景路人。原因很簡單：**一個真實的公共場所不可能空無一人。** 空景的台北巷弄、空景的夜市、空無一人的海灘，本身就是最強的「這是合成的」訊號。
+>
+> 2026-08-05 用 7 位台灣籍角色各 2 張（共 14 張）實測加入背景路人，結果：14/14 全部成功產生自然的背景人物，**且沒有任何一個配角撞臉主角**（Coco Wu 案例的問題沒有復發）。成本為零——同樣的生成次數。
+
+**修訂後的規則分兩類：**
+
+**(a) 同框互動者（朋友、家人、室友等有戲份的人）—— 維持原規則，預設不要有。**
+除非該張 prompt 明確需要，否則不要出現。真的需要時必須明確指定該人物的外型特徵，與主角做出區隔，不能讓模型自行決定（見 Coco Wu 案例：室友因未指定區隔特徵，長得跟 Coco 本人很像）。
+
+**(b) 背景路人（公共空間裡的無關陌生人）—— 規則反轉：公共場景應該要有。**
+只要場景是街道、夜市、商場、海灘、車站、路口等公共空間，就**應該**寫入背景路人，並且必須用下列這組已驗證有效的措辭，同時滿足四個條件（背向／不看鏡頭／失焦／外型區隔）：
+
+```
+BACKGROUND PEOPLE: a few anonymous strangers in the mid-ground going about their own
+business, backs turned or heads angled away, never looking at the camera, softly out of
+focus with slight motion blur, clearly different from her in build, age and clothing
+```
+
+四個條件缺一不可：
+- `backs turned or heads angled away` + `never looking at the camera` → 避免配角搶焦點、也避免生成正臉時撞臉
+- `softly out of focus with slight motion blur` → 把他們留在背景層，同時製造真實的景深與動態
+- `clearly different from her in build, age and clothing` → 這一句是防撞臉的關鍵，不可省略
+- `anonymous` / `going about their own business` → 避免模型把他們處理成「跟她一起的人」
+
+**私密場景（臥室、浴室、自家客廳、飯店房內）維持只有本人**——那些場所本來就不該有陌生人。
 
 ### 10. 生成後必須實際檢查 AI 生成瑕疵，不能只看「大致像不像」（2026-07-30 新增）
 > **背景**：使用者反饋，有幾張已經生成的訓練圖仔細看會發現手部瑕疵（例如多長出一隻手／手指數量不對）或鏡頭/拍攝角度不自然，但先前的「誠實視覺評估」只檢查了身分一致性、膚色、自拍/他拍風格等大方向，沒有逐張檢查這類常見的 AI 生成缺陷。
@@ -123,12 +251,36 @@ Discovery 批次與任何用於 Reference Element 錨定身分的參考圖，服
 
 有瑕疵的圖片要在文件中明確標記出來（哪一張、什麼問題），不要因為整體「看起來還可以」就略過細節檢查；如果瑕疵明顯，該張應該重新生成或替換，不要直接送入訓練集。
 
+### 11. 地點要寫「在地質感」，不要點名地標（2026-08-05 新增，實測結論）
+
+> **背景**：2026-08-05 的 14 張實測中，prompt 明確點名了「台北永康街」「高雄愛河」「台中逢甲夜市」「台北 101」「新竹巨城」「墾丁南灣」「恆春老街」等真實地標。
+
+實測結果**兩極**：
+
+- ✅ **「無地標的在地質感」全部成功**：巷弄的鏽蝕鐵窗花、糾纏的電線、手寫中文招牌、緊貼牆邊停的機車、冷氣滴水痕、夜市的層疊 LED 價目燈箱、老街的鐵捲門與盆栽、手寫菜單黑板——這些描述模型都能精準生成，台灣感非常強。
+- ❌ **點名地標全部失敗**：「高雄愛河」生出墨爾本天際線，「台北 101」生出通用摩天樓群。模型認得「台灣街景的紋理」，**不認得特定地標的外觀**。
+
+**所以：把地點寫成「環境元素的清單」，不要寫成「地名」。** 寫 `a narrow lane of weathered mid-century Taipei apartments with rusted iron window grilles, tangled overhead power lines and hand-painted Traditional Chinese shop banners`，不要寫 `Yongkang Street, Taipei`。效果一樣好，而且不會生出錯的地標穿幫。
+
+**唯一例外**：畫面裡真的需要出現可辨識地標時（例如刻意要拍 101），必須生成後逐張確認地標外觀正確，錯了就重生或改場景——不要放行一個長得不像 101 的「101」。
+
+### 12. 用「同穿搭一日敘事」串聯多張素材（2026-08-05 新增，實測有效）
+
+> **背景**：拆解競品 Sherry 的貼文結構發現，她 90% 的貼文是 4–5 張的 Carousel，而同一則 Carousel 內的多張圖是**同一套穿搭、同一天、不同時刻／不同角度**，而不是各自獨立的漂亮單圖。
+
+2026-08-05 實測 7 組配對，7/7 成功：服裝與配件在兩張之間完整延續，而且**配件的狀態會自然演變**（風衣從腰間移到肩上、墨鏡從桌上移到手上、飲料換成另一杯、鞋子脫下放在旁邊）——讀起來確實像同一天拍的。
+
+寫法：第二張以後的 prompt 在 `[OUTFIT]` 段落開頭直接寫 `the exact same outfit as earlier that day —`，再完整重複一次服裝清單，然後**刻意描述一個「時間過去了」的小變化**（頭髮被風吹亂、多了一杯飲料、外套穿法改變、腳上多了沙）。
+
+這是把單張素材變成「一則貼文」的關鍵，成本為零。
+
 ### 生成前檢查清單
 每個 prompt 送出生成前，逐項確認：
 - [ ] **（2026-07-25 新增，第一優先）是否已經先讀過既有已驗證成功的角色範本，而不是直接採用生成工具本身的預設建議？** 預設參考 `kols/iris-chen/generation_notes.md`（模型 `seedream_v4_5`，已證實同 prompt 重複生成身分一致性高）。訓練圖／Discovery 批次的預設模型是 `seedream_v4_5`，不是 `soul_2`——`soul_2` 只在角色已經有 `soul_id` 時才用於後續生成。2026-07-25 事故：多個角色的 Discovery 批次因為跳過這一步、直接沿用工具建議的 `soul_2` 無錨點生成，導致同批次 4 張圖臉孔不一致。
 - [ ] 裝置/鏡頭是否具體指定
 - [ ] 皮膚質感關鍵字是否存在
-- [ ] 光線配方是否符合場景類型：室內親密場景用「混合不均勻」，戶外/生活風格場景用「討喜自然光+淺景深」——**兩者都不等於「畫質差/調暗調糊」**
+- [ ] **（2026-08-05 改寫，最高優先）光線是否寫成「物理規格」而不是「品質形容詞」**——見上方第 3 點。逐項確認五段都寫了：① 具名主光+方向 ② **具名的反射面**（寫不出來就退回重寫）③ 兩個色溫 ④ **哪裡被犧牲**（過曝或壓黑，兩邊都保住＝假）⑤ 遮擋/框架。可直接套用 3-B 的十組配方
+- [ ] **光線段落是否誤用了 `high dynamic range` / `well-exposed` / `evenly lit`**——這三個字現已禁用（它們的意思正好是「不犧牲任何一邊」）；`crisp sharp focus` / `fine detail` / `natural colour grading` 則仍要保留
 - [ ] 身材數據（三圍/罩杯，見 `profile.json` 的 measurements）是否直接寫進 prompt，不要只用模糊形容詞
 - [ ] 背景是否有具體生活雜物細節
 - [ ] 服裝是否完整明確寫出（不留給模型自己猜）
@@ -136,7 +288,9 @@ Discovery 批次與任何用於 Reference Element 錨定身分的參考圖，服
 - [ ] **（運動/健身類角色專用）是否偏向健美選手/男性化方向**：任何帶有「運動員」「健身」「肌肉線條」設定的角色，prompt 都必須明確寫「漂亮性感」「柔和曲線」「淡淡若隱若現」這類字眼，並且**明確排除**「塊狀肌肉」「血管紋理」「銳利強勢的臉」「健美比賽站姿」。2026-07-24：Vicky Lin 第一輪試跑因未做這個排除，實際生成結果變成健美選手體態，使用者明確否決、已重新生成描述——這是每個運動類角色都要檢查的固定項目，不是個案。
 - [ ] **（臺灣籍角色專用）膚色是否為白皙基調**：即使是戶外/海邊/健身類人設，也不可整體呈現古銅/小麥/曬黑色調——見上方第 6 點
 - [ ] **（2026-07-30 新增）整組素材是否混合自拍與他拍視角**，不是全部都用同一種「棚拍/編輯攝影」語氣——見上方第 7 點
-- [ ] **（2026-07-30 新增）畫面是否只有主角本人**，除非該張明確需要其他人入鏡——見上方第 9 點
+- [ ] **（2026-08-05 修訂）人物入鏡是否分清兩類**：同框互動者維持預設沒有；但**公共場景（街道／夜市／商場／海灘／車站）應該要寫入背景路人**，並套用第 9 點那組四條件措辭（背向／不看鏡頭／失焦／外型區隔）。私密場景（臥室／浴室／自家／飯店房內）維持只有本人
+- [ ] **（2026-08-05 新增）地點是否寫成「環境元素清單」而非「地名」**——見上方第 11 點，點名地標會生出錯的地標
+- [ ] **（2026-08-05 新增，多張成組時）第二張以後是否用「同穿搭一日敘事」串聯**——`the exact same outfit as earlier that day —` + 完整重複服裝清單 + 一個「時間過去了」的小變化，見上方第 12 點
 - [ ] **（2026-07-30 新增）生成後是否逐張實際檢查手部/肢體/鏡頭透視等 AI 瑕疵**，不是只看大方向像不像——見上方第 10 點
 - [ ] **（建立實際 Soul 訓練集專用，非探索性預覽）是否用 Reference Element 錨定身分，而不是每張獨立文字生成**：2026-07-25 Vicky Lin 案例發現，用同一組文字 prompt 各自獨立呼叫 8 次生成（無身分錨點），每次生成模型都會重新「想像」一個符合描述但**不是同一個人**的臉/身形——8 張圖風格看起來一致，但實際上是 8 個不同的人，不是同一人的 8 個角度。若把這種身分不一致的圖直接送進 Soul 訓練，訓練結果會是多人特徵的平均/混合，而非使用者想要的單一穩定身分。**正確流程**：(1) 先生成或從既有圖中選出**一張**使用者核准的參考圖；(2) 用 `media_upload` → PUT 位元組 → `media_confirm` → `show_reference_elements(action='create')` 把這張圖轉成可重複使用的 Reference Element，取得 `element_id`；(3) 之後每張訓練圖的 prompt 都內嵌 `<<<element_id>>>` 取代文字描述五官/身形，只變化角度、景別、姿勢、場景、穿搭——這樣後端會把同一張參考圖直接注入生成，確保臉部/身形真正共享同一身分。此流程適用於**任何角色**建立正式 Soul 訓練集之前，不只是 Vicky Lin 的個案；純探索性的一次性風格預覽（不打算送訓練）則不受此限制。
 
