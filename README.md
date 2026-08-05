@@ -73,6 +73,8 @@ Virtual_KOL_Studio/
 ├── .claude/workflows/           # 可重複執行的 Workflow 腳本
 │   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
 │   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核
+├── tools/
+│   └── assign_dance_batch.py         # 舞蹈候選清單核准後，平均分配給各 KOL（見 DANCE_CLONE_SOP.md）
 └── kols/
     ├── index.json               # 所有 KOL 的主索引
     ├── schema.json              # 標準欄位定義（JSON Schema）
