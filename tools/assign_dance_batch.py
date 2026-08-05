@@ -15,6 +15,9 @@
   （每支影片對應唯一一位 KOL，KOL 之間互不重疊）
 - --seed 用於重現同一次分配結果（同 seed + 同輸入 = 同輸出），不是用來混淆，只是讓「洗牌」
   可重現而不是每次執行都不一樣
+- --exclude-kol 可傳入逗號分隔的 KOL id，暫時排除在這輪分配之外（例如使用者說「這批先不要分配給
+  非亞洲的 KOL」，就用 --exclude-kol aaliya-okonkwo,camille-dupont）——只影響這一輪分配，不會
+  改動 kols/index.json 或 KOL 的 active 狀態
 """
 import argparse
 import csv
@@ -67,9 +70,22 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv_path", help="已核准（核准=TRUE）的候選清單 CSV")
     parser.add_argument("--seed", required=True, help="重現用的 seed，建議用當次執行日期字串，例如 2026-08-05")
+    parser.add_argument(
+        "--exclude-kol",
+        default="",
+        help="逗號分隔的 KOL id，這一輪分配時暫時排除（例如 aaliya-okonkwo,camille-dupont）",
+    )
     args = parser.parse_args()
 
     kol_ids = load_kol_ids()
+    excluded = {k.strip() for k in args.exclude_kol.split(",") if k.strip()}
+    unknown = excluded - set(kol_ids)
+    if unknown:
+        print(f"⚠️ --exclude-kol 裡有不存在於 kols/index.json 的 id，已忽略：{', '.join(sorted(unknown))}", file=sys.stderr)
+    kol_ids = [k for k in kol_ids if k not in excluded]
+    if excluded:
+        print(f"本輪排除的 KOL：{', '.join(sorted(excluded & set(load_kol_ids())))}", file=sys.stderr)
+
     rows = load_approved(args.csv_path)
 
     if not rows:
