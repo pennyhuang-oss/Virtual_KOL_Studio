@@ -74,7 +74,9 @@ Virtual_KOL_Studio/
 │   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
 │   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核
 ├── tools/
-│   └── assign_dance_batch.py         # 舞蹈候選清單核准後，平均分配給各 KOL（見 DANCE_CLONE_SOP.md）
+│   ├── assign_dance_batch.py         # 舞蹈候選清單核准後，平均分配給各 KOL（見 DANCE_CLONE_SOP.md）
+│   ├── parse_dance_issue.py          # 把 GitHub Issue #3 的候選清單解析成 assign_dance_batch.py 吃得懂的 CSV
+│   └── apply_dance_assignment_to_issue.py  # 把分配結果套回 Issue #3 內文（待篩選→已分配）
 └── kols/
     ├── index.json               # 所有 KOL 的主索引
     ├── schema.json              # 標準欄位定義（JSON Schema）
