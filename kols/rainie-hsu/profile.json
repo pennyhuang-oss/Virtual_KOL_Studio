@@ -31,14 +31,14 @@
       "collected_at": "2026-08-05",
       "note": "2026-08-05 換錨點重製：改用第四輪候選圖 candidate_02.png（身材明顯沙漏型，符合 94-59-92cm/F罩杯設定）建立新 Reference Element `a469f98d-11ae-42f3-8580-220d94cd473a`（rainie-hsu-anchor-v2）。換錨點前先用 2 張驗證圖確認身材與臉部一致性後，才生成完整 13 張訓練集。13 張同時套用 SEXY_SCENE_LIBRARY.md 2026-08-05 新版五段式物理光線公式（具名主光/反射面/色溫分裂/曝光犧牲/遮擋框架），取代舊版 crisp/HDR 品質形容詞寫法。詳見 generation_notes.md「2026-08-05 換錨點與訓練集重製」章節。",
       "soul_training": {
-        "status": "training",
+        "status": "ready",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
         "training_image_count": 13,
         "started_at": "2026-08-05",
-        "completed_at": null,
-        "note": "show_characters(action='train', name='Rainie Hsu v2') 第一次呼叫即成功受理，取得 soul_id，raw_status: queued。待後續 session 確認 status=ready 後，將此欄位 status 改為 ready、補上 completed_at，並把本角色所有後續生成改用此 soul_id，同時把 README.md / KOL_TRAINING_SOP.md 的 Soul ID 欄位更新為此值。"
+        "completed_at": "2026-08-05",
+        "note": "show_characters(action='train', name='Rainie Hsu v2') 第一次呼叫即成功受理，取得 soul_id，raw_status: queued。待後續 session 確認 status=ready 後，將此欄位 status 改為 ready、補上 completed_at，並把本角色所有後續生成改用此 soul_id，同時把 README.md / KOL_TRAINING_SOP.md 的 Soul ID 欄位更新為此值。 **2026-08-05 確認完成**：show_characters(action='status') 回傳 raw_status: completed, status: ready。可直接用 model: soul_2 + 此 soul_id 生成後續內容。"
       }
     }
   },

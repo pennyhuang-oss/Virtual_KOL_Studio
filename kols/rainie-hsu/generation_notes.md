@@ -541,8 +541,10 @@ Vicky Lin 三輪修正後確認的根本原則——「降低 AI 感」不等於
 {"training_id":"a4a000fe-fd96-4c36-97ff-0df9358a9b47","name":"Rainie Hsu v2","type":"soul_2","status":"training","raw_status":"queued","soul_id":"a4a000fe-fd96-4c36-97ff-0df9358a9b47"}
 ```
 
-**新 soul_id：`a4a000fe-fd96-4c36-97ff-0df9358a9b47`**。截至本文件更新時仍為 `queued`，尚未回傳 `ready`。
+**新 soul_id：`a4a000fe-fd96-4c36-97ff-0df9358a9b47`**。
+
+**✅ 2026-08-05 確認完成**：`show_characters(action='status', soul_id='a4a000fe-fd96-4c36-97ff-0df9358a9b47')` 回傳 `status: ready`、`raw_status: completed`。可直接用 `model: soul_2` + 此 soul_id 生成後續正式內容。
 
 **舊 soul_id（`994e33d2-7df1-47da-8478-7a6fd849fa33`）處理方式**：工具無刪除功能，決定保留不刪除，標記為 `deprecated`，不再用於後續生成，僅作歷史記錄與備援。`profile.json` 已同步更新（`training_images_v1` 標記 deprecated，新增 `training_images_v2`）。
 
-**下一步（待後續 session）**：確認 `status=ready` 後，把本文件、`profile.json`、`README.md`、`KOL_TRAINING_SOP.md` 的 Soul ID 欄位全部更新為新值，並在後續所有 Rainie Hsu 生成中改用新 `soul_id`。
+**已完成**：本文件、`profile.json`、`README.md`、`KOL_TRAINING_SOP.md` 的 Soul ID 欄位已全部更新為新值，後續所有 Rainie Hsu 生成應改用新 `soul_id`。
