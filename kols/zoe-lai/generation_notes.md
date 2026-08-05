@@ -25,6 +25,8 @@
 > 純物理描述，不參照任何真實名人或藝人臉型。
 
 > **⚠️ 2026-08-05 三次修正（目前生效版本）**：原版本已被下方兩輪修正取代——(1) 臉齡偏高問題修正 (2) 人設從「衝浪女孩」轉為「東岸女孩，衝浪是背景」，眼睛改回自然深棕、身材鬆綁「游泳選手」框架。**這裡額外做第三次修正**：原本加入的 `a small faint scar through the outer edge of her left eyebrow` 是用來跟其他角色做臉部區隔，使用者看過實際生成結果後反饋「奇怪」，**已完全移除，不再使用**。臉部區隔改為只靠既有的「長橢圓臉＋較方下顎線＋直挺鼻樑＋雀斑」組合，不再額外加疤痕或任何人工標記。以下是三次修正後的最終版本：
+>
+> **⚠️ 2026-08-05 四次修正**：驗證用的咖啡廳／居家晚餐兩張示範圖，寫 prompt 時圖方便把 `hair lightened at the ends from sun and salt`（髮尾挑染，人設既有設定）漏寫了，使用者發現後反饋「這個設定很好，為什麼要改掉」——**這不是刻意改動，是簡化 prompt 時的疏漏，下方範本本身沒有拿掉這句，之後每次實際送出生成都要確認這句有帶到，不能因為場景描述簡化就順手省略**。同時使用者反饋雀斑數量太多、不好看——`light dusting of freckles` 這個講法在實測中經常被生成得比「淡淡」更密，這次已改寫為更明確限制數量的版本。
 
 ```
 26-year-old Taiwanese woman, youthful and strikingly beautiful, long oval face with a slightly stronger,
@@ -33,9 +35,12 @@ NOT soft cheekbone-less roundness), straight strong nose bridge (NOT a small del
 natural warm dark brown eyes (NOT an unusual light or tinted eye colour, just normal healthy dark brown),
 smooth unlined skin with no crow's feet, no fine lines, gorgeous wide natural smile with youthful soft
 cheeks, youthful dewy glow, fair luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep
-golden/wheat-colored), straight dark brows, light dusting of freckles across nose and upper cheeks,
-visible skin pores, subtle natural skin texture, true-to-life unretouched skin texture, long beachy wave
-dark brown hair lightened at the ends from sun and salt, naturally curvy figure with soft feminine curves,
+golden/wheat-colored), straight dark brows, only a few sparse, faint freckles scattered lightly across
+the bridge of her nose (NOT dense, NOT heavy, NOT covering the cheeks — a small subtle number, barely
+noticeable at a glance), visible skin pores, subtle natural skin texture, true-to-life unretouched skin
+texture, long beachy wave dark brown hair with subtly sun-lightened, highlighted ends (a natural
+ombre/money-piece effect from sun and salt — this highlighted-ends detail must always be included,
+never plain single-tone dark hair), naturally curvy figure with soft feminine curves,
 88cm bust (D cup, full and lifted), 59cm waist (soft flat stomach with NO visible six-pack or muscle
 definition), 90cm hips (naturally curvy, shapely thighs),
 [SCENE — daily-life pillar by default (errands/home/family/friends), beach/surf scene only for the
@@ -559,3 +564,6 @@ high natural contrast, candid outdoor lifestyle photo, Instagram style
 | 居家晚餐 | 跟媽媽在乾淨明亮的現代化廚房吃家常菜，暖色吊燈 | `08404258-08ef-48ad-9f46-588d84ebe7e6` |
 
 **誠實視覺評估**：兩張皆親自用 Read 工具檢視。疤痕已完全移除，眉頭乾淨；眼睛確認自然深棕色；場景質感明顯提升——咖啡廳有好看的招牌、盆栽、自行車，居家晚餐廚房乾淨現代，都不再是第一版的鄉土紀實感。已送使用者確認，尚待回覆是否可以進入下一階段（生成露出身材的候選圖確認曲線 → 選錨點 → 建立完整訓練集）。
+
+
+**驗證**：用四次修正版 prompt 重生咖啡廳場景（`4f0ef542-27d0-47e5-ae57-1e3d89d4a426`），親自用 Read 工具檢視：逆光下髮尾清楚可見暖棕/琥珀色挑染效果，雀斑數量大幅減少至僅鼻樑上幾顆淡點，兩項修正皆確認生效。已送使用者確認中。
