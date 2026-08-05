@@ -64,6 +64,7 @@ Virtual_KOL_Studio/
 ├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（12 位共用）
 ├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
 ├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
+├── DANCE_METHOD_COMPARISON.md   # 與 firekou/Buildup_KOL 動作驅動法的對比與整合建議
 ├── music/                       # 舞蹈/影片配樂素材
 ├── .claude/workflows/           # 可重複執行的 Workflow 腳本
 │   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
