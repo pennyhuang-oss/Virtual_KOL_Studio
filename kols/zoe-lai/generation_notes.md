@@ -24,27 +24,32 @@
 
 > 純物理描述，不參照任何真實名人或藝人臉型。
 
+> **⚠️ 2026-08-05 三次修正（目前生效版本）**：原版本已被下方兩輪修正取代——(1) 臉齡偏高問題修正 (2) 人設從「衝浪女孩」轉為「東岸女孩，衝浪是背景」，眼睛改回自然深棕、身材鬆綁「游泳選手」框架。**這裡額外做第三次修正**：原本加入的 `a small faint scar through the outer edge of her left eyebrow` 是用來跟其他角色做臉部區隔，使用者看過實際生成結果後反饋「奇怪」，**已完全移除，不再使用**。臉部區隔改為只靠既有的「長橢圓臉＋較方下顎線＋直挺鼻樑＋雀斑」組合，不再額外加疤痕或任何人工標記。以下是三次修正後的最終版本：
+
 ```
-26-year-old Taiwanese woman, strikingly beautiful, warm, radiant oval face with a gorgeous wide smile,
-fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored),
-gorgeous beach-influencer good looks (NOT a stern, athlete's, or masculine look), straight dark brows,
-light dusting of freckles across nose and upper cheeks, dark brown eyes with a natural relaxed squint
-from years facing open water, athletic swimmer/surfer build with soft feminine curves, toned shoulders
-and upper back from paddling (never blocky, vascular, or heavily muscled), 88cm bust (D cup, full and
-naturally curvy), 59cm waist (lean with only a subtle soft hint of core tone), 90cm hips (naturally
-curvy, shapely thighs), strong but shapely legs, fair, porcelain-toned skin that stays fair despite her beach lifestyle, only the faintest natural warmth from time outdoors, NOT deeply tanned or bronzed,
-visible skin pores, subtle natural skin texture, true-to-life unretouched skin texture,
-long beachy wave dark brown hair lightened at the ends from sun and salt, salt-tousled or in a loose undone braid,
-[SCENE], wearing [OUTFIT — bikini as daily basewear, natural beach-appropriate color coordination, not
-overly styled or fashion-shoot posed], [MINIMAL ACCESSORY — a simple watch, sunglasses pushed up into
-her hair, or a thin anklet; never more than one], [DYNAMIC CANDID POSE/ANGLE — walking, paddling,
-mid-laugh, teaching, caught mid-motion, NOT a static posed beach-model stance],
-[NATURAL FLATTERING LIGHT — golden hour dawn patrol, bright midday sun, or sunset backlight; shallow
+26-year-old Taiwanese woman, youthful and strikingly beautiful, long oval face with a slightly stronger,
+squarer jawline than a typical soft round face (NOT a round baby face, NOT a delicate heart-shaped chin,
+NOT soft cheekbone-less roundness), straight strong nose bridge (NOT a small delicate button nose),
+natural warm dark brown eyes (NOT an unusual light or tinted eye colour, just normal healthy dark brown),
+smooth unlined skin with no crow's feet, no fine lines, gorgeous wide natural smile with youthful soft
+cheeks, youthful dewy glow, fair luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep
+golden/wheat-colored), straight dark brows, light dusting of freckles across nose and upper cheeks,
+visible skin pores, subtle natural skin texture, true-to-life unretouched skin texture, long beachy wave
+dark brown hair lightened at the ends from sun and salt, naturally curvy figure with soft feminine curves,
+88cm bust (D cup, full and lifted), 59cm waist (soft flat stomach with NO visible six-pack or muscle
+definition), 90cm hips (naturally curvy, shapely thighs),
+[SCENE — daily-life pillar by default (errands/home/family/friends), beach/surf scene only for the
+海邊日常 pillar and never with a surfboard as the automatic default prop], wearing [OUTFIT — put-together
+everyday clothing with styling appeal, NOT deliberately dowdy or rustic; bikini only when the scene is
+actually swimming/surfing], [DYNAMIC CANDID POSE/ANGLE, NOT a static posed beach-model stance],
+[NATURAL FLATTERING LIGHT — bright daylight, golden hour, or soft window light for indoor scenes; shallow
 depth of field with soft blurred bokeh background],
-high dynamic range, crisp sharp focus on subject, high natural contrast, slightly overexposed highlights,
-natural color grading — NOT degraded, grainy, or dim, true-to-life unretouched skin texture,
-candid outdoor lifestyle photo, shot on iPhone or action camera with crisp high-quality output, Instagram style
+crisp sharp focus on subject, natural color grading — NOT degraded, grainy, or dim, true-to-life
+unretouched skin texture, candid lifestyle photo, shot on iPhone with crisp high-quality output,
+Instagram style
 ```
+
+**跟舊版的差異**：(1) 拿掉疤痕 (2) 眼睛從「常年面對海面的瞇眼」改成單純自然深棕色 (3) 身材從「游泳選手/衝浪者體態，肩背因划水結實」改成單純「柔和曲線，無六塊肌」，不再用衝浪當身材線條的敘事理由 (4) 場景預設改為日常支柱優先，海邊/衝浪只在對應支柱使用，且不再預設一定要有衝浪板入鏡 (5) 服裝要求明確排除「刻意樸素/鄉土」的方向，維持 studio 一貫的好看日常穿搭。
 
 **風格關鍵詞備註**：
 - 一定要保留 `true-to-life unretouched skin texture`、`visible skin pores`——這是 Zoe 美學的核心（毛孔、自然瑕疵等「質感真實」），跟其他角色的「精緻磨皮感」相反；**但「visible tan lines」與任何實際曬黑的膚色描述已於 2026-07-25 移除**——質感真實（毛孔、非磨皮）跟膚色深淺是兩件事，Zoe 的膚色設定改為白皙，只有質感維持不磨皮
@@ -544,3 +549,13 @@ high natural contrast, candid outdoor lifestyle photo, Instagram style
 **誠實視覺評估**：3 張皆親自用 Read 工具檢視。眼睛已確認是自然深棕色，不再有奇怪的琥珀/契合鏡片感；場景成功脫離衝浪/泳裝框架；背景路人、招牌、雜物等生活細節到位；臉部特徵（長橢圓臉、較方的下顎線、眉尾疤痕）維持與第二階段候選人一致。**尚未驗證項目**：3 張都是坐姿/半身為主，沒有像 Rainie 案例那樣特意安排全身/曲線清晰可見的鏡頭，因此身材是否真的達到「柔和曲線、無六塊肌」的修正目標，**尚待下一批次生成明確露出身材的候選圖後才能確認**——這是使用者核准本方向後，建立正式訓練集前必須補做的檢查，不可跳過（比照 Rainie Hsu 案例的教訓）。
 
 **下一步（待使用者核准本方向後才執行）**：生成 2–4 張明確露出身材曲線的候選圖確認身材修正是否成功 → 選定錨點 → 建立 Reference Element → 生成完整 13 張訓練集（六大新支柱各按權重分配張數）→ 送 Soul 訓練，取得新 soul_id 取代舊的 `27f750e6-0d32-43ce-8249-cce94ef835cd`（舊 soul_id 同樣保留不刪除，標記 deprecated）。
+
+
+### 驗證：2 張修正後示範圖（拿掉疤痕＋日常場景去土化）
+
+| 場景 | 內容 | Job ID |
+|---|---|---|
+| 咖啡廳街拍 | 有質感的咖啡廳門口，手拿外帶咖啡，米色針織＋牛仔褲＋白鞋，腳邊停一台好看的自行車，黃昏光線 | `2ece5b5f-2598-4aa1-9485-2cde36213318` |
+| 居家晚餐 | 跟媽媽在乾淨明亮的現代化廚房吃家常菜，暖色吊燈 | `08404258-08ef-48ad-9f46-588d84ebe7e6` |
+
+**誠實視覺評估**：兩張皆親自用 Read 工具檢視。疤痕已完全移除，眉頭乾淨；眼睛確認自然深棕色；場景質感明顯提升——咖啡廳有好看的招牌、盆栽、自行車，居家晚餐廚房乾淨現代，都不再是第一版的鄉土紀實感。已送使用者確認，尚待回覆是否可以進入下一階段（生成露出身材的候選圖確認曲線 → 選錨點 → 建立完整訓練集）。
