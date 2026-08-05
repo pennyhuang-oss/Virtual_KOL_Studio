@@ -258,14 +258,18 @@ continuous subtle facial movement, slight head tilt, asymmetric smile
 ## 八、落地順序
 
 1. [ ] **改 `DANCE_VIDEO_SOP.md`**：把移植 1–3 寫進 Step 2 / Step 4 的 prompt 模板
-       （取景真的收到 mid-thigh up、L3 窗光、飄動服裝元素、段落結構）
+       （取景真的收到 mid-thigh up、方向光、飄動服裝元素、段落結構——場景/打光依歌曲與人設彈性選，
+       不套固定模板，見 `DANCE_CLONE_SOP.md` 的場景選擇邏輯）
 2. [ ] **拿 Iris Chen 重跑一支對照片**（她是唯一有完整成功記錄的角色，變因最少），
        與現有 `dance_v2` 並排比對，確認移植確實有效再推廣
 3. [ ] 通過後補上放大／補幀，把規格拉到 1080×1920 / 30fps
-4. [ ] **把 R1 / R2 兩項偵測接進 `kol_content_qa_pipeline.js`** 的 Quality Critique
-5. [ ] 建立每支片的發片前一頁檢核（`06` Part E + `07` §C.3）
-6. [ ] 熱曲流程：**發片前重抓當週榜**，不要用企劃期定的歌（`06` §A.1 第一條紀律）
-7. [ ] （選用）若要做旗艦片再走 Motion Control，**但 driver 必須自有或已授權**
+4. [x] **把 R1 / R2 兩項偵測接進 `kol_content_qa_pipeline.js`** 的 Quality Critique（已完成，
+       舞蹈類素材會自動加問這兩項機械檢查）
+5. [ ] 建立每支片的發片前一頁檢核（娛樂／音樂／真實／動作流暢四軸 + 一票否決）
+6. [ ] 熱曲流程：**發片前重抓當週榜**，不要用企劃期定的歌
+7. [x] **旗艦片走動作驅動法**：已建立 [`DANCE_CLONE_SOP.md`](DANCE_CLONE_SOP.md)（Method B）
+       與 `performance-director` / `emotion-director` 兩個 subagent，**driver 必須自有或已授權**才能對外發佈
+       （見該文件 Step 7 授權檢查）
 
 > **一句話**：我們有產線與身分資產，對方有品質標準與擬真方法論。
 > 不要換方法——**把對方的標準套進我們的產線**，

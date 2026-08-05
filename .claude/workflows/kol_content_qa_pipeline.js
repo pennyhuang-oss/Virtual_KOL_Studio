@@ -110,10 +110,16 @@ ${isVideo ? '影片生成請參考 DAILY_VIDEO_SOP.md / DANCE_VIDEO_SOP.md 裡�
     }
     let tries = 0
     while (tries <= maxRetries) {
+      const isDanceClip = current.format === 'video' && /舞|dance/i.test(current.scene || current.id || '')
       const critique = await agent(
         `請用 Read 工具開啟這個素材檔案來看內容：${current.generation.imagePath}
 這是虛擬角色「${koId}」的生成素材，場景設定：${current.scene || current.id}。
-請檢查有沒有明顯的「AI 感」破綻：皮膚過度平滑/塑膠感、手指或肢體變形、臉部與背景光源不一致、構圖過於對稱工整、背景太乾淨沒有生活感。
+請檢查有沒有明顯的「AI 感」破綻：皮膚過度平滑/塑膠感、手指或肢體變形、臉部與背景光源不一致、構圖過於對稱工整、背景太乾淨沒有生活感。${isDanceClip ? `
+
+這是舞蹈影片，額外跑以下兩項機械檢查（見 DANCE_METHOD_COMPARISON.md 移植項 4）：
+1. **次級動態（R1）**：找一個身體動作明顯停止的瞬間，暫停在那一幀，往後跳約 5 幀比對——頭髮/服裝/耳環是否還在動？如果跟身體同時靜止，判定不通過（面具/剛體感）。
+2. **微表情（R2）**：抽 3 個相隔約 1 秒的幀比對表情——如果 3 幀表情幾乎一樣，判定不通過（面具臉）。
+把這兩項的具體觀察（哪一幀、看到什麼）寫進問題清單，不要只給結論。` : ''}
 回傳是否通過（approved）、發現的問題清單、以及如果不通過，給出具體要怎麼修正 prompt 的建議（用於下一輪重新生成）。`,
         { phase: 'Quality Critique', label: `critique:${koId}:${current.id || current.scene}:try${tries}`, schema: CRITIQUE_SCHEMA }
       )

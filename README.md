@@ -63,9 +63,13 @@ Virtual_KOL_Studio/
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
 ├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（12 位共用）
 ├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
-├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
+├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程（Method A：AI 自主編舞）
+├── DANCE_CLONE_SOP.md           # 熱門舞蹈複製流程（Method B：動作驅動，複製真人舞步+音樂卡點）
 ├── DANCE_METHOD_COMPARISON.md   # 與 firekou/Buildup_KOL 動作驅動法的對比與整合建議
 ├── music/                       # 舞蹈/影片配樂素材
+├── .claude/agents/               # 表演設計 subagent（身體/臉部兩層，DANCE_VIDEO_SOP.md 與 DANCE_CLONE_SOP.md 共用）
+│   ├── performance-director.md      # 身體表演層：次級動態、鏡頭關係、段落結構
+│   └── emotion-director.md          # 臉部表演層：微表情時間軸、眼神腳本、不對稱指令
 ├── .claude/workflows/           # 可重複執行的 Workflow 腳本
 │   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
 │   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核

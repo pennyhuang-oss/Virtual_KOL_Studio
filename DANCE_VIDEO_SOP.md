@@ -1,7 +1,12 @@
-# Dance Video SOP — TikTok 舞蹈影片生成流程
+# Dance Video SOP — TikTok 舞蹈影片生成流程（Method A：AI 自主編舞法）
 
 > 標準工作流程：為任何 KOL 生成 TikTok 舞蹈影片（音樂同步，臉部鎖定）。
 > 本流程於 2026-07-03 透過 Iris Chen 舞蹈影片測試確立。
+>
+> **本文件是 Method A**（AI 自主編舞、音樂驅動）——快速、可自由換當週熱曲，適合日常大量出片。
+> 想複製一支已經爆紅的真人舞蹈（借用它的動作與卡點），改用
+> [`DANCE_CLONE_SOP.md`](DANCE_CLONE_SOP.md)（Method B：動作驅動法）。
+> 兩者的差異、優劣與整合建議見 [`DANCE_METHOD_COMPARISON.md`](DANCE_METHOD_COMPARISON.md)。
 
 ---
 
