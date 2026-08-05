@@ -47,7 +47,6 @@
 | [rainie-hsu](kols/rainie-hsu/) | **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | `a4a000fe-fd96-4c36-97ff-0df9358a9b47`（v2，訓練中；舊 `994e33d2-...` 因身材不符規格已棄用，見 generation_notes.md） | training |
 | [sophia-tseng](kols/sophia-tseng/) | **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | `192562bb-ca64-4615-9515-13d34807857c` | active |
 | [mia-huang](kols/mia-huang/) | **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4` | active |
-| [zoe-lai](kols/zoe-lai/) | **Zoe Lai** 賴柔伊 | 花蓮/墾丁 | 陽光海島 / 衝浪女孩 | `27f750e6-0d32-43ce-8249-cce94ef835cd` | active |
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
 
@@ -61,7 +60,7 @@ Virtual_KOL_Studio/
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
 ├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
-├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（12 位共用）
+├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（11 位共用）
 ├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
 ├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
 ├── music/                       # 舞蹈/影片配樂素材

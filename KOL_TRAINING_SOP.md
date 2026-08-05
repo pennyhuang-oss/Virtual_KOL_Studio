@@ -19,7 +19,7 @@
 
 訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Rivera → Camille Dupont
 
-### 新增 6 位（2026-07-24，台灣籍）
+### 新增 5 位（2026-07-24，台灣籍）
 
 | KOL | Soul ID | Soul 訓練 | 測試圖 | 狀態 |
 |-----|---------|----------|--------|------|
@@ -28,9 +28,9 @@
 | Rainie Hsu | `a4a000fe-fd96-4c36-97ff-0df9358a9b47`（v2，`status: training`，送出中） | 🔄 進行中 | ✅ 13 張（Reference Element `a469f98d-11ae-42f3-8580-220d94cd473a` 錨定，`training_v2/`） | 🔄 2026-08-05 換錨點重訓：舊 `soul_id`（`994e33d2-...`，`training_v1/`）因身材（94-59-92cm/F罩杯）未吃到、錨點選角時只核對臉部未核對身材而**已棄用**；新錨點改用同一輪 `candidate_02.png`（沙漏身型與設定吻合）。同時首次套用 `SEXY_SCENE_LIBRARY.md` 新版五段式物理光線公式。待後續 session 確認 `raw_status: completed` 後更新為 ✅，詳見 `kols/rainie-hsu/generation_notes.md`「2026-08-05 換錨點與訓練集重製」章節 |
 | Sophia Tseng | `192562bb-ca64-4615-9515-13d34807857c`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d` 錨定，第三輪五官重新設計後的身分，`training_v1/`） | ✅ 2026-07-31 確認訓練完成，`show_characters(action='status')` 確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/sophia-tseng/generation_notes.md` |
 | Mia Huang | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `92ffbd80-32c7-495f-91ed-f109b419bb41` 錨定，`training_v1/`） | ✅ 2026-07-30 訓練完成，可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/mia-huang/generation_notes.md` |
-| Zoe Lai | `27f750e6-0d32-43ce-8249-cce94ef835cd`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `9b1c0c4b-7301-4144-9427-56e754178144` 錨定，`training_v1/`） | ✅ 2026-07-30 訓練完成，`show_characters(action='status')` 確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/zoe-lai/generation_notes.md` |
-
-> ✅ 截至 2026-07-31，這 6 位全數完成 Reference Element 錨定訓練圖批次並成功完成 Soul 訓練（`status: ready`），可用 `model: soul_2` + 各自 soul_id 生成正式內容。Vicky Lin 先前累計兩次 session、12 次呼叫皆為工具層級失敗，2026-07-31 重試後第一次呼叫即成功受理（`soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`），同日確認訓練完成。
+> ✅ 截至 2026-07-31，這 5 位全數完成 Reference Element 錨定訓練圖批次並成功完成 Soul 訓練（`status: ready`），可用 `model: soul_2` + 各自 soul_id 生成正式內容。Vicky Lin 先前累計兩次 session、12 次呼叫皆為工具層級失敗，2026-07-31 重試後第一次呼叫即成功受理（`soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`），同日確認訓練完成。
+>
+> **⚠️ 2026-08-05：Zoe Lai 人設已移除。** 原第 6 位台灣籍角色，因人設調整過程中反覆出現臉部辨識問題（跟其他角色撞臉、眼型修正後仍不理想）與其他設計反覆，使用者決定不建立此人格，`kols/zoe-lai/` 目錄與所有相關資料已從 repo 刪除，目前台灣籍角色為 5 位。
 
 ---
 
@@ -82,7 +82,7 @@
   - 表情方向：自然微笑、若有所思、被逗笑的瞬間感、放鬆閉眼享受
   - 構圖配合姿勢：廣角遠景時人物要有動態感；3/4 身時側身或斜角；近景時搭配表情或手部動作細節
 - **⚠️ 同一場景兩張圖構圖必須不同（所有人格適用）**：同場景、同衣服、同環境，但兩張圖的景別和角度必須明顯不同（例如 3/4 身 vs 臉部近景；廣角遠景 vs 特寫；正面 vs 側面）
-- **⚠️ 降低「AI 感」檢查清單（2026-07-24 新增，所有人格適用）**：送出生成前對照 `SEXY_SCENE_LIBRARY.md`〈降低「AI 感」的技術要點〉逐項檢查（皮膚質感、裝置/鏡頭規格、混合不均勻光源、背景雜物細節、服裝完整度）；運動類角色（Vicky Lin、Zoe Lai）額外檢查是否偏向健美選手/男性化方向。有 `.claude/workflows/kol_content_qa_pipeline.js` 可以自動跑這套審核流程，不用每次手動對照。
+- **⚠️ 降低「AI 感」檢查清單（2026-07-24 新增，所有人格適用）**：送出生成前對照 `SEXY_SCENE_LIBRARY.md`〈降低「AI 感」的技術要點〉逐項檢查（皮膚質感、裝置/鏡頭規格、混合不均勻光源、背景雜物細節、服裝完整度）；運動類角色（Vicky Lin）額外檢查是否偏向健美選手/男性化方向。有 `.claude/workflows/kol_content_qa_pipeline.js` 可以自動跑這套審核流程，不用每次手動對照。
 
 ---
 
