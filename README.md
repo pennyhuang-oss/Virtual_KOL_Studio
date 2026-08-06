@@ -44,10 +44,9 @@
 | [camille-dupont](kols/camille-dupont/) | **Camille Dupont** | 巴黎 | 法式慢生活 / 美食 / 葡萄酒 | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | active |
 | [vicky-lin](kols/vicky-lin/) | **Vicky Lin** 林薇淇 | 高雄 | 健身 / 重訓 / 健身正妹 | `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e` | active |
 | [coco-wu](kols/coco-wu/) | **Coco Wu** 吳可可 | 台中 | 校園甜心 / 宿舍生活 | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4` | active |
-| [rainie-hsu](kols/rainie-hsu/) | **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | `994e33d2-7df1-47da-8478-7a6fd849fa33` | active |
+| [rainie-hsu](kols/rainie-hsu/) | **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | `a4a000fe-fd96-4c36-97ff-0df9358a9b47`（v2，訓練完成；舊 `994e33d2-...` 因身材不符規格已棄用，見 generation_notes.md） | active |
 | [sophia-tseng](kols/sophia-tseng/) | **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | `192562bb-ca64-4615-9515-13d34807857c` | active |
 | [mia-huang](kols/mia-huang/) | **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4` | active |
-| [zoe-lai](kols/zoe-lai/) | **Zoe Lai** 賴柔伊 | 花蓮/墾丁 | 陽光海島 / 衝浪女孩 | `27f750e6-0d32-43ce-8249-cce94ef835cd` | active |
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
 
@@ -61,7 +60,10 @@ Virtual_KOL_Studio/
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
 ├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
-├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（12 位共用）
+├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（11 位共用）
+├── WARDROBE_SYSTEM.md           # 造型差異化引擎：穿搭/髮型/地點層級/微物件四轉盤（11 位共用）
+├── REELS_AND_STRUCTURE_SYSTEM.md # 短影音剪接密度/情境設計 + Carousel「1 setup × N 表情」結構
+├── COMPETITOR_sherry_digitalp510.md  # 競品視覺與打光拆解（@sherry_digitalp510）
 ├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
 ├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程（Method A：AI 自主編舞）
 ├── DANCE_CLONE_SOP.md           # 熱門舞蹈複製流程（Method B：動作驅動，複製真人舞步+音樂卡點）
