@@ -251,7 +251,7 @@
 - 上衣：black crop top / tube top / sports bra crop
 - 下身：high-waist biker shorts / mini skirt / tight shorts
 - 洋裝：V 領 mini dress（飄逸感）
-- **禁止**：寬鬆衣服、全長褲（遮掉腿部線條）
+- **少用**：寬鬆衣服、全長褲——跳舞影片多數會選能看清線條的服裝，但不是唯一選項
 
 **生成規則**：
 - 使用 `seedance_2_0` + `start_image` + `audio_references`
