@@ -62,6 +62,7 @@ Virtual_KOL_Studio/
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
 ├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（11 位共用）
 ├── WARDROBE_SYSTEM.md           # 造型差異化引擎：穿搭/髮型/地點層級/微物件四轉盤（11 位共用）
+├── REELS_AND_STRUCTURE_SYSTEM.md # 短影音剪接密度/情境設計 + Carousel「1 setup × N 表情」結構
 ├── COMPETITOR_sherry_digitalp510.md  # 競品視覺與打光拆解（@sherry_digitalp510）
 ├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
 ├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
