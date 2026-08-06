@@ -1,11 +1,61 @@
 {
   "id": "rainie-hsu",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "deprecated",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 13,
+      "images_path": "kols/rainie-hsu/images/training_v1/",
+      "collected_at": "2026-07-30",
+      "note": "13張訓練圖，全數以 Reference Element `ae0d8287-af47-4f9d-b357-19a477abd00d`（rainie-hsu-anchor，錨點來源 candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。詳見 generation_notes.md「2026-07-30 六次修正」章節。 **2026-08-05 已棄用**：使用者發現此批次的身分錨點 candidate_01.png 身材與 94-59-92cm/F罩杯設定不符（實際偏纖細平板），判斷為選角階段只檢查臉部/妝容、未核對身材規格所致。已改用同一輪的 candidate_02.png（明顯沙漏身型）重新錨定，見 training_images_v2。本批次圖片與 soul_id 保留作為歷史記錄與備援，不再用於後續生成。",
+      "soul_training": {
+        "status": "deprecated",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "994e33d2-7df1-47da-8478-7a6fd849fa33",
+        "training_image_count": 13,
+        "started_at": "2026-07-30",
+        "completed_at": "2026-07-30",
+        "note": "show_characters(action='train') 於 2026-07-30 首次呼叫即成功受理（非 Vicky Lin 案例的多次失敗），server 端已可查得此 soul_id 記錄（action='status' 確認 raw_status: queued）。訓練仍在進行中，尚未回傳 ready，待後續 session 確認完成狀態後再更新此欄位與 status。 **2026-08-05 已棄用**，理由同上，soul_id 保留不刪除（工具無刪除功能，且可作為備援）。"
+      }
+    },
+    "training_images_v2": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 13,
+      "images_path": "kols/rainie-hsu/images/training_v2/",
+      "collected_at": "2026-08-05",
+      "note": "2026-08-05 換錨點重製：改用第四輪候選圖 candidate_02.png（身材明顯沙漏型，符合 94-59-92cm/F罩杯設定）建立新 Reference Element `a469f98d-11ae-42f3-8580-220d94cd473a`（rainie-hsu-anchor-v2）。換錨點前先用 2 張驗證圖確認身材與臉部一致性後，才生成完整 13 張訓練集。13 張同時套用 SEXY_SCENE_LIBRARY.md 2026-08-05 新版五段式物理光線公式（具名主光/反射面/色溫分裂/曝光犧牲/遮擋框架），取代舊版 crisp/HDR 品質形容詞寫法。詳見 generation_notes.md「2026-08-05 換錨點與訓練集重製」章節。",
+      "soul_training": {
+        "status": "ready",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+        "training_image_count": 13,
+        "started_at": "2026-08-05",
+        "completed_at": "2026-08-05",
+        "note": "show_characters(action='train', name='Rainie Hsu v2') 第一次呼叫即成功受理，取得 soul_id，raw_status: queued。待後續 session 確認 status=ready 後，將此欄位 status 改為 ready、補上 completed_at，並把本角色所有後續生成改用此 soul_id，同時把 README.md / KOL_TRAINING_SOP.md 的 Soul ID 欄位更新為此值。 **2026-08-05 確認完成**：show_characters(action='status') 回傳 raw_status: completed, status: ready。可直接用 model: soul_2 + 此 soul_id 生成後續內容。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-23",
+    "updated_at": "2026-08-05",
     "status": "active",
     "category": "nightlife",
-    "tags": ["nightlife", "party", "taipei", "taiwanese", "glam", "going-out", "fashion"],
+    "tags": [
+      "nightlife",
+      "party",
+      "taipei",
+      "taiwanese",
+      "glam",
+      "going-out",
+      "fashion"
+    ],
     "reference_profiles": [
       "Taiwanese nightlife/glam content creators",
       "Asian going-out fashion & GRWM influencers"
@@ -16,18 +66,33 @@
     "native_name": "許雷妮",
     "handle": "@rainie.hsu",
     "age": 24,
+    "date_of_birth": "2002-05-25",
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan (台北東區 / 西門町夜生活圈)",
-    "languages": ["Mandarin Chinese (native)", "English (fluent, code-switches for effect)", "Japanese (basic, picked up from clubbing trips)"],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent, code-switches for effect)",
+      "Japanese (basic, picked up from clubbing trips)"
+    ],
     "appearance": {
       "height": "165cm",
-      "face_type": "Sharp, striking features — bold and defined, not soft or cute. High cheekbones, sharp jawline, sculpted brow. Signature sharp cat-eye makeup with winged eyeliner is her constant. Statement red or dark lips.",
+      "face_type": "Stunning, bold glamour-model beauty — high cheekbones, a sculpted jawline, striking eyes, the kind of face that stops a room. Fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Soft-glam makeup, dialed down further — barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, and a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), dewy luminous skin. Polished and put-together, but reads as effortlessly gorgeous and mainstream-appealing — never heavy, costume-like, or theatrical.",
       "figure": "Striking hourglass figure — full bust, cinched waist, curved hips. Built for bodycon and corset silhouettes. Carries herself with deliberate posture, always aware of how the outfit sits.",
       "hair": "Long, straight, jet-black hair, worn sleek and glossy — occasionally styled with a deep side part or slicked back for a night out. Never messy, always intentional.",
-      "eyes": "Dark, sharp eyes made sharper by precise winged eyeliner — her single most recognizable visual signature.",
+      "eyes": "Dark, striking eyes softly defined by a barely-there, soft brown-toned eyeliner drawn close to the lash line with no visible wing or flick at all — a polished, put-together signature, never a heavy dramatic wing or cat-eye flick.",
       "glasses": "None.",
-      "style_vibe": "Glamorous nightlife fashion: bodycon dresses, corset tops, thigh-high slits, going-out sets, statement jewelry, sky-high heels. Deliberately done, not effortless — she works for the look and is proud of the work. The opposite of understated."
+      "style_vibe": "Glamorous nightlife fashion: bodycon dresses, corset tops, thigh-high slits, going-out sets, statement jewelry, sky-high heels. Deliberately done, not effortless — she works for the look and is proud of the work. The opposite of understated.",
+      "measurements": {
+        "height_cm": 165,
+        "weight_kg": 50,
+        "bust_cm": 94,
+        "waist_cm": 59,
+        "hip_cm": 92,
+        "cup_size": "F",
+        "leg_length_cm": 80,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高48.5%，張揚有型的沙漏比例，上圍格外豐滿突出"
+      }
     }
   },
   "persona": {
@@ -51,7 +116,7 @@
     "voice_tone": "Confident, teasing, a little sarcastic. Short, sharp captions — she doesn't explain herself and she doesn't need to. Drops one-liners and lets them sit.",
     "humor_style": "Dry and cutting, delivered flat. Roasts herself and her friends equally. Never explains the joke, never softens it with an emoji unless the emoji is the whole joke.",
     "quirks": [
-      "Does her eyeliner wing first, every single time, before anything else",
+      "Does her eyeliner first, every single time, before anything else",
       "Judges a night out by the outfit reveal shot before she even leaves the apartment",
       "Refuses to repeat an exact outfit within the same month",
       "Captions are rarely longer than one short sentence",
@@ -72,7 +137,7 @@
       },
       {
         "name": "浴室 / Glam Prep",
-        "description": "The technical side of the look — cat-eye makeup application step by step, hair styling, perfume, the final mirror check under bathroom lighting. Precise and practiced, not casual; this is the craft behind the glamour.",
+        "description": "The technical side of the look — precise, soft eyeliner application step by step, hair styling, perfume, the final mirror check under bathroom lighting. Precise and practiced, not casual; this is the craft behind the glamour.",
         "weight": "15%"
       },
       {
@@ -98,7 +163,13 @@
     ],
     "posting_frequency": "Instagram: 5x/week + daily Stories on weekends. TikTok: 4x/week, concentrated Thu–Sun.",
     "aesthetic": {
-      "color_palette": ["deep black", "blood red", "smoky charcoal", "metallic silver", "hot pink accent"],
+      "color_palette": [
+        "deep black",
+        "blood red",
+        "smoky charcoal",
+        "metallic silver",
+        "hot pink accent"
+      ],
       "mood": "台北夜生活的高濃度版本。Bold, glamorous, a little dangerous-feeling — the energy of a night that's about to get good. Confident sensuality, never soft or shy.",
       "editing_style": "High contrast, saturated, slightly cool-toned with warm skin highlights. Club and mirror lighting embraced rather than smoothed over — neon spill, warm vanity bulbs, flash-photo energy for going-out shots. Sharp, not hazy."
     },
@@ -135,6 +206,10 @@
       }
     },
     "engagement_style": "Replies with one-line comebacks, rarely explains a look when asked — lets the outfit speak. Community rallies around her confidence, not a shared hobby.",
-    "community_name": "小隊"
+    "community_name": "小隊",
+    "display_name": "Rainie Hsu 🍸",
+    "creator_category": "Digital creator",
+    "bio": "今晚，看我的。🍸",
+    "account_username": "hsurainie8"
   }
 }

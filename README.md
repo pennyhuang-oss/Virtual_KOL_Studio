@@ -42,12 +42,11 @@
 | [yuna-kim](kols/yuna-kim/) | **Yuna Kim** 김하은 | 首爾 | K-beauty / 彩妝 / 生活 | `235794a5-2eff-45fb-91b4-3232910afefa` | active |
 | [aaliya-okonkwo](kols/aaliya-okonkwo/) | **Aaliya Rivera** | 洛杉磯 | 拉丁裔 LA 生活 / 穿搭 | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | active |
 | [camille-dupont](kols/camille-dupont/) | **Camille Dupont** | 巴黎 | 法式慢生活 / 美食 / 葡萄酒 | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | active |
-| [vicky-lin](kols/vicky-lin/) | **Vicky Lin** 林薇淇 | 高雄 | 健身 / 重訓 / 健身正妹 | 未訓練 | active |
-| [coco-wu](kols/coco-wu/) | **Coco Wu** 吳可可 | 台中 | 校園甜心 / 宿舍生活 | 未訓練 | active |
-| [rainie-hsu](kols/rainie-hsu/) | **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | 未訓練 | active |
-| [sophia-tseng](kols/sophia-tseng/) | **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | 未訓練 | active |
-| [mia-huang](kols/mia-huang/) | **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | 未訓練 | active |
-| [zoe-lai](kols/zoe-lai/) | **Zoe Lai** 賴柔伊 | 花蓮/墾丁 | 陽光海島 / 衝浪女孩 | 未訓練 | active |
+| [vicky-lin](kols/vicky-lin/) | **Vicky Lin** 林薇淇 | 高雄 | 健身 / 重訓 / 健身正妹 | `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e` | active |
+| [coco-wu](kols/coco-wu/) | **Coco Wu** 吳可可 | 台中 | 校園甜心 / 宿舍生活 | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4` | active |
+| [rainie-hsu](kols/rainie-hsu/) | **Rainie Hsu** 許雷妮 | 台北 | 派對女王 / 夜生活 | `a4a000fe-fd96-4c36-97ff-0df9358a9b47`（v2，訓練完成；舊 `994e33d2-...` 因身材不符規格已棄用，見 generation_notes.md） | active |
+| [sophia-tseng](kols/sophia-tseng/) | **Sophia Tseng** 曾詩妃 | 台北信義 | 貴婦名媛 / 精品生活 | `192562bb-ca64-4615-9515-13d34807857c` | active |
+| [mia-huang](kols/mia-huang/) | **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4` | active |
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
 
@@ -59,19 +58,27 @@
 Virtual_KOL_Studio/
 ├── README.md
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
-├── BENCHMARK_ACCOUNTS.md        # 6 個 KOL 的 benchmark 帳號整體彙整
+├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
+├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（11 位共用）
+├── WARDROBE_SYSTEM.md           # 造型差異化引擎：穿搭/髮型/地點層級/微物件四轉盤（11 位共用）
+├── REELS_AND_STRUCTURE_SYSTEM.md # 短影音剪接密度/情境設計 + Carousel「1 setup × N 表情」結構
+├── COMPETITOR_sherry_digitalp510.md  # 競品視覺與打光拆解（@sherry_digitalp510）
+├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
+├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
+├── music/                       # 舞蹈/影片配樂素材
+├── .claude/workflows/           # 可重複執行的 Workflow 腳本
+│   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
+│   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核
 └── kols/
     ├── index.json               # 所有 KOL 的主索引
     ├── schema.json              # 標準欄位定義（JSON Schema）
     └── {kol-id}/
-        ├── profile.json         # 結構化角色資料（含 soul_id）
+        ├── profile.json         # 結構化角色資料（含 soul_id、身材數據、帳號資訊）
         ├── character.md         # 完整角色 Bible
         ├── content_style.md     # 內容方向與風格指南
-        ├── generation_notes.md  # AI 生成記錄（prompt、soul_id、測試圖連結）
-        └── images/
-            ├── face_reference/  # 臉部確認圖（4 張）
-            └── soul_test_v1/    # Soul V2 訓練後測試圖（6 張以上）
+        ├── generation_notes.md  # AI 生成記錄（prompt、soul_id、測試圖連結；未執行前明確標示 PENDING）
+        └── images/ videos/      # 生成素材（尚未執行生成的 KOL 無此資料夾）
 ```
 
 ---
@@ -109,8 +116,12 @@ Virtual_KOL_Studio/
 2. 按照 `kols/schema.json` 建立 `profile.json`
 3. 撰寫 `character.md`（角色 Bible）與 `content_style.md`（內容指南）
 4. 在 `kols/index.json` 新增對應紀錄
-5. 收集至少 5 張臉部參考圖存入 `images/face_reference/`
-6. 執行 Higgsfield Soul V2 訓練，記錄 soul_id 至 `profile.json` 和 `generation_notes.md`
+5. **⚠️（2026-07-25 新增，強制規則）生成任何參考圖之前，必須先讀過至少一個已驗證成功的既有角色的 `generation_notes.md` 當範本**（預設參考 `kols/iris-chen/generation_notes.md`——這是目前唯一有完整記錄「一次生成基本就對、身分穩定」成功經驗的案例）。**不可以只憑生成工具本身的預設建議（例如工具說明文字建議的模型）直接決定要用哪個模型或做法**——工具的通用建議不知道這個專案過去實際驗證過什麼，一定要先比對過去成功案例，才能決定沿用或是有充分理由才偏離。
+   - **預設模型**：訓練圖／Discovery 批次的生成，預設使用 `seedream_v4_5`（同 prompt 重複生成的身分一致性明顯優於 `soul_2` 未錨定時的表現，見 `kols/iris-chen/generation_notes.md` 的模型選擇記錄與 2026-07-25 的事後檢討）。**只有**當該角色已經有成功訓練出來的 `soul_id` 時，才用 `soul_2` + 該 `soul_id` 做後續生成——那是完全不同的、已錨定身分的情境，不是本條規則要避免的「無錨點一次性生成」。
+   - 此規則的起因：2026-07-25 曾發生連續多個新角色（Coco Wu、Rainie Hsu、Sophia Tseng、Mia Huang、Zoe Lai）的 Discovery 批次因為選用 `soul_2` 無錨點生成，導致同一批次 4 張圖臉孔不一致，且完全沒有先比對過已驗證成功的 Iris Chen 模型選擇記錄——詳見這幾位角色 `generation_notes.md` 的相關修正記錄。
+6. 生成至少 5 張臉部參考圖存入 `images/face_reference/`
+7. **停下來，等使用者實際看過這批參考圖並明確確認滿意後，才可以進入下一步**——參考圖是主觀判斷，訓練是要花時間和額度的動作，兩者中間一定要有人工確認這個關卡，不可以在同一輪自動接著做完
+8. 使用者確認後，才執行 Higgsfield Soul V2 訓練，記錄 soul_id 至 `profile.json` 和 `generation_notes.md`
 
 ---
 

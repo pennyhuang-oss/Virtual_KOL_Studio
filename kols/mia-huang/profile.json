@@ -1,11 +1,43 @@
 {
   "id": "mia-huang",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 13,
+      "images_path": "kols/mia-huang/images/training_v1/",
+      "collected_at": "2026-07-30",
+      "note": "13 張訓練圖，Reference Element 錨定同一身分（element_id: 92ffbd80-32c7-495f-91ed-f109b419bb41，錨定圖 candidate_02.png），跨 7 個場景/內容支柱、7 自拍＋6 候拍。詳見 generation_notes.md「2026-07-30 訓練圖集生成（Element 錨定）」章節。",
+      "soul_training": {
+        "status": "ready",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4",
+        "training_image_count": 13,
+        "started_at": "2026-07-30",
+        "completed_at": "2026-07-30",
+        "note": "show_characters(action='train') 第一次呼叫即成功送出（未使用備用參數形狀），已用 media_upload→curl PUT→media_confirm 取得的 13 個 media_id 送訓練，帳戶被扣 25 credits（Soul ID 交易項）。已用 action='status' 與 action='list' 兩種方式驗證此 soul_id 為伺服器端真實存在的訓練任務（raw_status: queued，與同時段其他角色的真實訓練任務並列）。**截至本次 session 結束時尚未變成 ready**，下一個 session 需要先用 show_characters(action='status', soul_id='e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4') 確認是否已訓練完成，完成後才能用 soul_2 模型實際生成內容。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-23",
+    "updated_at": "2026-07-30",
     "status": "active",
     "category": "gaming",
-    "tags": ["gaming", "streaming", "twitch", "taiwanese", "hsinchu", "gen-z", "night-owl", "cosplay-lite", "gamer-girl"],
+    "tags": [
+      "gaming",
+      "streaming",
+      "twitch",
+      "taiwanese",
+      "hsinchu",
+      "gen-z",
+      "night-owl",
+      "cosplay-lite",
+      "gamer-girl"
+    ],
     "reference_profiles": [
       "Taiwanese gaming/streaming content creators",
       "Twitch gamer-girl / cosplay-lite creator accounts"
@@ -16,6 +48,7 @@
     "native_name": "黃米亞",
     "handle": "@mia.huang",
     "age": 22,
+    "date_of_birth": "2004-07-19",
     "ethnicity": "Taiwanese",
     "origin": "Hsinchu, Taiwan (新竹)",
     "current_location": "Hsinchu, Taiwan (新竹) — works almost entirely from her home streaming room",
@@ -26,12 +59,22 @@
     ],
     "appearance": {
       "height": "160cm",
-      "face_type": "Soft, round face with youthful, approachable features — no sharp editorial angles. Slightly anime-inspired makeup style: softly winged liner, glossy tint lips, rounded blush placement. Purely descriptive — no likeness to any real individual.",
+      "face_type": "Adorably gorgeous, soft round face — the kind fans call 'game-character pretty.' Big expressive eyes with a slightly anime-inspired makeup style: softly winged liner, glossy tint lips, rounded blush placement. Fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Cute AND stunning, never plain. Purely descriptive — no likeness to any real individual.",
       "figure": "Petite figure with soft curves — a compact frame that disappears comfortably inside oversized hoodies and reads differently again in a cropped tank.",
       "hair": "Dyed ash-brown, worn long with a loose wave, with a pastel-pink money-piece highlight framing one side of her face — her single most recognizable visual signature, touched up every few months.",
       "eyes": "Large, expressive eyes emphasized with a soft anime-inspired eye makeup style — her eyes carry most of the reaction-face comedy in her clips.",
       "glasses": "Occasionally wears clear blue-light-filter glasses during very late-night streams; bare otherwise.",
-      "style_vibe": "Oversized gaming-brand hoodies worn with just shorts underneath, cropped tanks paired with a gaming headset, cosplay-lite outfits (thigh-highs, cat-ear headband as an accessory bit), and pajama-adjacent streaming fits for the after-midnight hours. Cute-but-sexy anime-culture aesthetic — playful and put-together, never trying to look like she left the house."
+      "style_vibe": "Oversized gaming-brand hoodies worn with just shorts underneath, cropped tanks paired with a gaming headset, cosplay-lite outfits (thigh-highs, cat-ear headband as an accessory bit), and pajama-adjacent streaming fits for the after-midnight hours. Cute-but-sexy anime-culture aesthetic — playful and put-together, never trying to look like she left the house.",
+      "measurements": {
+        "height_cm": 160,
+        "weight_kg": 46,
+        "bust_cm": 91,
+        "waist_cm": 57,
+        "hip_cm": 88,
+        "cup_size": "F",
+        "leg_length_cm": 76,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高47.5%，嬌小身形與誇張豐滿上圍的強烈反差"
+      }
     }
   },
   "persona": {
@@ -103,7 +146,12 @@
     ],
     "posting_frequency": "Livestreams: 5–6 nights/week, roughly 10pm–3am. TikTok: near-daily clips cut from stream VODs. Instagram: 4–5x/week + Stories most nights before going live.",
     "aesthetic": {
-      "color_palette": ["neon purple", "cotton-candy pink", "moody blue-black", "warm RGB glow accents"],
+      "color_palette": [
+        "neon purple",
+        "cotton-candy pink",
+        "moody blue-black",
+        "warm RGB glow accents"
+      ],
       "mood": "深夜的直播間。RGB 燈光、螢幕的藍光、房間外面的世界早就睡了但她的世界才剛開始。Playful and a little chaotic, but always in control of the bit.",
       "editing_style": "High-saturation, glow-heavy edits that lean into RGB lighting and screen light rather than smoothing it out. Clip captions and meme text are part of the visual language, not an afterthought. Slight motion blur and stream-overlay aesthetic embraced rather than hidden."
     },
@@ -140,6 +188,10 @@
       }
     },
     "engagement_style": "Reads chat out loud mid-stream, keeps running bits with regulars, replies to comments with the same teasing register she streams in. Her community is built around the joke being always in progress, not around a shared topic.",
-    "community_name": "喵米隊"
+    "community_name": "喵米隊",
+    "display_name": "Mia 黃米亞 🎮🌙",
+    "creator_category": "Gamer / Video Creator",
+    "bio": "chat, don't look at me like that 👀",
+    "account_username": "mia_gg"
   }
 }

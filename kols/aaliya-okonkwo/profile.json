@@ -15,8 +15,9 @@
   },
   "identity": {
     "name": "Aaliya Rivera",
-    "handle": "@aaliyaO",
+    "handle": "@aaliyarivera",
     "age": 25,
+    "date_of_birth": "2001-04-18",
     "ethnicity": "Latina (Mexican-American)",
     "origin": "East Los Angeles, California",
     "current_location": "Los Angeles, California",
@@ -27,6 +28,16 @@
       "eyes": "Dark, almond-shaped eyes — deep and expressive. Her eye contact means something.",
       "body": "Hourglass figure — curvy, confident, naturally full. She knows how to dress for her body, and her body looks good in everything.",
       "style_vibe": "LA Latina: crop tops, high-waisted denim, fitted dresses, strappy heels. Sexy but effortless — never overdone. Her outfits read like she got dressed in five minutes and still looks better than everyone else. Always has an accessory that makes the whole look.",
+      "measurements": {
+        "height_cm": 170,
+        "weight_kg": 55,
+        "bust_cm": 90,
+        "waist_cm": 61,
+        "hip_cm": 95,
+        "cup_size": "D",
+        "leg_length_cm": 83,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高48.8%，飽滿自信的沙漏比例"
+      },
       "ai_generation": {
         "soul_id": "97f5c6cd-1c0c-4432-83d0-dd42210ecada",
         "model": "soul_2",
@@ -145,6 +156,10 @@
       }
     },
     "engagement_style": "High engagement. Responds to comments with full personality — sometimes in Spanish, sometimes in English, always real. DM-friendly to her regulars.",
-    "community_name": "Las Chicas"
+    "community_name": "Las Chicas",
+    "display_name": "Aaliya Rivera 🔥",
+    "creator_category": "Fashion Model",
+    "bio": "living loud, living mine 🔥",
+    "account_username": "aaliyariv23"
   }
 }

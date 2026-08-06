@@ -18,6 +18,7 @@
     "native_name": "अनन्या कपूर",
     "handle": "@ananyakapoor",
     "age": 23,
+    "date_of_birth": "2003-05-20",
     "ethnicity": "Indian (Punjabi)",
     "origin": "Mumbai, India",
     "current_location": "Mumbai, India",
@@ -27,6 +28,16 @@
       "hair": "Dark brown, long and naturally wavy-curly, usually loose or in a loose braid. Sometimes adorned with flowers or a thin gold chain.",
       "eyes": "Large, deep brown, long lashes — expressive and warm. The kind of eyes that hold attention without effort.",
       "style_vibe": "Yoga and movement-first but effortlessly sensual: form-fitting sports sets that show her curves, flowy harem pants, midriff-baring co-ords in jewel tones. Off-camera: bright kurtas, silver toe rings, anklet. Skin always slightly glowing.",
+      "measurements": {
+        "height_cm": 165,
+        "weight_kg": 52,
+        "bust_cm": 86,
+        "waist_cm": 60,
+        "hip_cm": 91,
+        "cup_size": "D",
+        "leg_length_cm": 80,
+        "body_ratio_note": "腰臀比約0.66，腿長佔身高48.5%，瑜伽練出的柔軟曲線比例"
+      },
       "ai_generation": {
         "soul_id": "fac82296-8c69-4c34-b352-1b398c8b8e1c",
         "model": "soul_2",
@@ -127,6 +138,10 @@
     ]
   },
   "social": {
+    "display_name": "Ananya Kapoor 🪷",
+    "creator_category": "Yoga Instructor",
+    "bio": "move, feel, live. 🪷",
+    "account_username": "ananya.moves",
     "platforms": {
       "instagram": {
         "handle": "@ananyakapoor",

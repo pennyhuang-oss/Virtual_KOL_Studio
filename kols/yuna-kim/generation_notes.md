@@ -76,8 +76,10 @@ generate_image(
 ### 核心 Prompt 基礎結構（不變）
 
 ```
-21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair with wispy ends, 168cm, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, shot on 35mm, Instagram style
+21-year-old Korean woman, fair porcelain skin, large double-lidded eyes, dark brown-to-black hair with wispy ends, 168cm, bust 84cm/waist 58cm/hip 89cm, C cup, slender tall figure with defined waist-hip ratio, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, shot on 35mm, Instagram style
 ```
+
+> 身材數字取自 `profile.json` → `identity.appearance.measurements`（height_cm 168 / bust_cm 84 / waist_cm 58 / hip_cm 89 / cup_size C）。直接寫進 prompt 的具體數字，取代單純「tall and slender」這類模糊形容詞。
 
 ---
 
@@ -266,3 +268,13 @@ sound = "on"
 aspect_ratio = "9:16"
 duration = 10
 ```
+
+---
+
+## 2026-07-25 新增：身材數字 + 風格參考
+
+- 核心 prompt 基礎結構已補上具體身材數字（bust 84cm / waist 58cm / hip 89cm / C cup，來自 `profile.json`），取代模糊形容詞，未來生成請沿用上方更新後的模板。
+- 光線邏輯請參考 `SEXY_SCENE_LIBRARY.md` 「2026-07-25 修正」一節（光源）：Yuna 的內容混合首爾室內美妝保養場景與戶外咖啡廳/街拍場景，兩者光線配方不同——
+  - **室內場景**（浴室鏡前、居家慵懶、臥室早晨等）維持原本的「混合、不均勻暖光」配方不變。
+  - **戶外/生活風格場景**（江南咖啡廳、弘大街頭等）改用新的「討喜自然光（黃金時段/明亮日光）+ 淺景深 + 清晰高畫質」配方，不要刻意調暗調糊。
+- 此為未來批次的生成指引，不影響已批准的 soul_test_v1 圖片與現有 soul_id 訓練紀錄。

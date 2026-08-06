@@ -18,6 +18,7 @@
     "native_name": "陳芯語",
     "handle": "@iris.chen",
     "age": 22,
+    "date_of_birth": "2004-03-14",
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan",
@@ -29,7 +30,17 @@
       "hair": "Black silky straight hair, naturally down — occasionally half-up. No notable styling effort.",
       "eyes": "Large, bright double-eyelid dark brown eyes — expressive and photogenic.",
       "glasses": "None.",
-      "style_vibe": "Hot girl casual: tube tops, spaghetti strap crop tops, mini skirts, black shorts, crop hoodies. Sexy but effortless — looks like she threw it on in 5 minutes and it works perfectly. No glasses, no heavy accessories."
+      "style_vibe": "Hot girl casual: tube tops, spaghetti strap crop tops, mini skirts, black shorts, crop hoodies. Sexy but effortless — looks like she threw it on in 5 minutes and it works perfectly. No glasses, no heavy accessories.",
+      "measurements": {
+        "height_cm": 162,
+        "weight_kg": 47,
+        "bust_cm": 87,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup_size": "D",
+        "leg_length_cm": 76,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高46.9%，經典沙漏比例，前凸後翹"
+      }
     }
   },
   "persona": {
@@ -118,6 +129,10 @@
     ]
   },
   "social": {
+    "display_name": "Iris Chen",
+    "creator_category": "Digital creator",
+    "bio": "剛睡醒。",
+    "account_username": "Iris520520",
     "platforms": {
       "instagram": {
         "handle": "@iris.chen",

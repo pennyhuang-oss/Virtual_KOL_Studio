@@ -72,8 +72,10 @@ generate_image(
 ### 核心 Prompt 基礎結構（不變）
 
 ```
-20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+20-year-old Japanese girl, black center-parted chin-length bob, large round dark brown eyes, fair porcelain skin, petite curvy figure, 88cm bust (E cup) - 56cm waist - 87cm hip, full chest and slim waist, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
 ```
+
+> 身材數字直接取自 `profile.json` → `identity.appearance.measurements`（bust_cm 88 / waist_cm 56 / hip_cm 87 / cup_size E），比之前只寫「full chest and slim waist」這種模糊形容詞更精準對齊角色設定。舊場景（場景 1–4、舞蹈影片、日常自拍影片）已生成並通過確認，維持原樣不動；此數字更新僅套用於之後的新生成批次。
 
 ---
 
@@ -272,3 +274,11 @@ sound = "on"
 aspect_ratio = "9:16"
 duration = 10
 ```
+
+---
+
+## 2026-07-25 新增：身材數字 + 風格參考
+
+- 核心 Prompt 已補上具體身材數字（見上方「核心 Prompt 基礎結構」），取自 `profile.json` measurements，之後新場景請沿用數字版本，不要退回模糊形容詞。
+- 光線配方請參考 `SEXY_SCENE_LIBRARY.md` 中「3. 光源」的最新修正：室內親密場景（晨起/浴室/居家/飯店）維持原本的混合、不均勻光邏輯；Luna 的內容以京都戶外街頭、咖啡廳、庭園等生活風格攝影為主，這類場景應改用新的「討喜自然光（黃金時段/戶外強光）+ 淺景深 + 清晰高畫質」配方，不要再套用刻意做舊/調暗調糊的舊邏輯。
+- 以上僅為之後新生成批次的補充指引，不影響已核准的訓練圖與既有場景記錄。

@@ -1,5 +1,27 @@
 {
   "id": "coco-wu",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 12,
+      "images_path": "kols/coco-wu/images/training_v1/",
+      "collected_at": "2026-07-30",
+      "note": "12張訓練圖，全數以 Reference Element `4b6c659c-786b-43de-87af-87cea3cc99dd`（coco-wu-anchor-c01，錨點來源 candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。詳見 generation_notes.md「2026-07-30」章節。",
+      "soul_training": {
+        "status": "ready",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "cf7045dc-4e69-4c56-9621-aa8c40bf39b4",
+        "training_image_count": 12,
+        "started_at": "2026-07-30",
+        "completed_at": "2026-07-31",
+        "note": "show_characters(action='train') 於 2026-07-30 首次呼叫即成功受理，2026-07-31 透過 action='train'/'list' 回傳結果確認 status: ready、raw_status: completed。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
     "updated_at": "2026-07-23",
@@ -16,18 +38,29 @@
     "native_name": "吳可可",
     "handle": "@coco.wu",
     "age": 20,
+    "date_of_birth": "2006-03-08",
     "ethnicity": "Taiwanese",
     "origin": "Taichung, Taiwan",
     "current_location": "Taichung, Taiwan",
     "languages": ["Mandarin Chinese (native)", "English (learning — uses cute broken phrases sometimes)"],
     "appearance": {
       "height": "158cm",
-      "face_type": "圓臉娃娃臉，笑起來兩邊有明顯梨渦（酒窩），下巴小巧圓潤，五官甜美可愛。純粹描述性外型設定，不對應任何真實公眾人物。",
+      "face_type": "Stunningly pretty, doll-like round face — every feature reads as beautiful and photogenic, the kind of face people call '校花' (school-beauty tier). Deep dimples when she smiles, a small delicate chin, big sweet eyes, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Purely descriptive, no likeness to any real individual.",
       "figure": "158cm 嬌小身形，軟嫩帶曲線的圓潤體態，胸部與臀部自然豐滿但不刻意展示。整體感覺是舒服自在地待在自己身體裡，不是刻意擺出來的性感，也完全不會刻意遮掩——她單純沒有在意這件事。",
       "hair": "黑棕色長波浪捲髮，帶著蓬鬆的落散劉海（wispy bangs）。日常常常隨手夾起或綁半丸子頭去上課。",
       "eyes": "大而圓的眼睛，眼神亮，笑起來會瞇成一條線，眼神裡總帶著一點沒睡飽的可愛感。",
       "glasses": "念書或趕作業時偶爾戴圓框眼鏡，平常出門不戴。",
-      "style_vibe": "寬鬆開襟針織外套（cardigan）敞開穿在削肩小可愛外面、百褶迷你裙、過膝襪、貼近校園感的日常休閒裝、可愛但偏小一號的居家服。整體是舒適隨性的大學女生穿搭，不是刻意打扮的性感風，但也從不刻意遮掩身形。"
+      "style_vibe": "寬鬆開襟針織外套（cardigan）敞開穿在削肩小可愛外面、百褶迷你裙、過膝襪、貼近校園感的日常休閒裝、可愛但偏小一號的居家服。整體是舒適隨性的大學女生穿搭，不是刻意打扮的性感風，但也從不刻意遮掩身形。",
+      "measurements": {
+        "height_cm": 158,
+        "weight_kg": 44,
+        "bust_cm": 89,
+        "waist_cm": 56,
+        "hip_cm": 86,
+        "cup_size": "E",
+        "leg_length_cm": 74,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高46.8%，嬌小身形搭配意外豐滿的上圍，反差感強烈"
+      }
     }
   },
   "persona": {
@@ -136,6 +169,10 @@
       }
     },
     "engagement_style": "回覆留言像在回朋友的訊息，語氣親暱、常用表情符號，會主動在限動辦小小的問答或投票跟大家聊天。",
-    "community_name": "可可小隊"
+    "community_name": "可可小隊",
+    "display_name": "可可Coco 🧋✨💕",
+    "creator_category": "Digital creator",
+    "bio": "早八前五分鐘，還在棉被裡🛏️",
+    "account_username": "cocowu_tea"
   }
 }

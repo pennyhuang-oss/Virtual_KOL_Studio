@@ -18,6 +18,7 @@
     "native_name": "김하은",
     "handle": "@yunakim.beauty",
     "age": 21,
+    "date_of_birth": "2005-01-30",
     "ethnicity": "Korean",
     "origin": "Seoul, South Korea",
     "current_location": "Seoul, South Korea",
@@ -27,6 +28,16 @@
       "hair": "Dark brown to black, natural wavy with airy volume, collarbone-length with wispy ends. Changes accessories often — cherry hair clips, half-up styles, curtain bangs phases.",
       "eyes": "Double eyelid, large, bright — her best feature and she knows it. Eye makeup is always the focal point.",
       "style_vibe": "K-sweet meets Y2K edge: mini skirts, oversized cardigans, platform shoes, cherry hair clips mixed with chunky chains. Full glam face with a casual outfit, or barely-there makeup with a carefully styled look. Always one unexpected element.",
+      "measurements": {
+        "height_cm": 168,
+        "weight_kg": 50,
+        "bust_cm": 84,
+        "waist_cm": 58,
+        "hip_cm": 89,
+        "cup_size": "C",
+        "leg_length_cm": 82,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高48.8%，纖細高挑的K-beauty比例"
+      },
       "ai_generation": {
         "soul_id": "235794a5-2eff-45fb-91b4-3232910afefa",
         "model": "soul_2",
@@ -140,6 +151,10 @@
       }
     },
     "engagement_style": "Responds with warmth but not effort. Short replies, sometimes just an emoji. Doesn't chase engagement — her followers feel like they're looking at her life, not being talked to.",
-    "community_name": "뽀얀 패밀리 (Porcelain Family)"
+    "community_name": "뽀얀 패밀리 (Porcelain Family)",
+    "display_name": "김하은 Yuna 🍒",
+    "creator_category": "Beauty, Cosmetic & Personal Care",
+    "bio": "예쁘게 살기 🍒",
+    "account_username": "haeun.yuna"
   }
 }

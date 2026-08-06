@@ -1,5 +1,27 @@
 {
   "id": "sophia-tseng",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 13,
+      "images_path": "kols/sophia-tseng/images/training_v1/",
+      "collected_at": "2026-07-31",
+      "note": "13張訓練圖，全數以 Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d`（sophia-tseng-face，錨點來源 2026-07-30 二次修正後的 face_reference/candidate_01.png）錨定同一身分生成，涵蓋六大內容支柱、自拍/他拍視角混合、CCD/美圖濾鏡風格變化。此身分為 2026-07-30 五官結構重新設計後的版本，與 Rainie Hsu 明確區隔（無顴骨定義、內雙/杏眼、柔和下顎線）。詳見 generation_notes.md「2026-07-31」章節。",
+      "soul_training": {
+        "status": "ready",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "192562bb-ca64-4615-9515-13d34807857c",
+        "training_image_count": 13,
+        "started_at": "2026-07-31",
+        "completed_at": "2026-07-31",
+        "note": "使用者明確核准第三輪重新設計後的候選圖批次並指示直接送訓練（「你就直接拿去訓練吧」）。show_characters(action='train') 首次呼叫即成功受理，2026-07-31 以 action='status' 確認 status: ready、raw_status: completed。可用 model: soul_2 + 此 soul_id 生成正式內容。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
     "updated_at": "2026-07-23",
@@ -17,18 +39,29 @@
     "native_name": "曾詩妃",
     "handle": "@sophia.tseng",
     "age": 28,
+    "date_of_birth": "1998-02-14",
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan (信義區)",
     "languages": ["Mandarin Chinese (native)", "English (fluent, studied abroad)", "French (conversational)"],
     "appearance": {
       "height": "168cm",
-      "face_type": "成熟精緻的鵝蛋臉，眼神沉靜篤定、很少睜大或誇張，鼻梁挺直，唇形飽滿帶一點慵懶的弧度，膚況無瑕、有自然光澤。整體是經過時間和自信淬煉出來的成熟美，不是少女的甜美感——不參考任何真實名人臉型，純粹以描述性特徵呈現。",
-      "figure": "Elegant slim-hourglass figure — 身形修長，腰臀曲線分明但含蓄不誇張，肩頸線條優雅，站姿與坐姿永遠挺直，走路和轉身的節奏都是慢的。",
-      "hair": "Sleek straight or softly waved dark hair, always polished — 不論放下、半盤或全盤起，都像剛從沙龍出來，從不顯凌亂。",
-      "eyes": "沉靜、略帶距離感的雙眼，眼神篤定而不外放，直視鏡頭時帶著『我知道你在看』的從容，不是挑逗，是自信。",
+      "face_type": "Breathtakingly warm, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely 'handsome,' 'striking,' or 'interesting'). A softly rounded face with full, plush cheeks and NO visible cheekbone definition (deliberately the OPPOSITE of an angular, high-cheekbone bone structure), a soft, gently-tapering jawline with no visible jaw angle or sculpted edge (deliberately NOT a sharp, defined, or sculpted jawline). Gentle almond-shaped eyes with a subtle, shallow single-fold/monolid-leaning eyelid (deliberately NOT a large, dramatic, double-eyelid 'big eyes' shape) — quieter and smaller than a striking glamour-model eye, calm and warm rather than bold or dramatic. A softly rounded nose with a gentle, unsculpted tip (not a sharp or high-bridge nose). Naturally fuller, softly rounded lips with a relaxed, warm curve and a genuine gentle smile (not a flat, distant, or languid expression). A small natural beauty mark just below the outer corner of her left eye — a subtle, memorable, distinguishing detail unique to her. Fair, luminous porcelain-toned glowing skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Calm and composed in demeanor and posture, but her face itself reads as softly radiant, warm, and approachable — the sophistication lives in her styling, attitude, and poise, while her facial structure itself is gently mature and inviting rather than sharp or editorial. This is its OWN distinct beauty archetype — soft, warm, gently mature, approachable — not a plainer or less-attractive version of a sharp high-cheekbone look; softness and roundness here read as their own kind of universally appealing, high-end elegance, never cold, aloof, severe, or ordinary. Deliberately, structurally distinct (not merely different adjectives on the same bone structure) from an oval-faced, high-cheekbone, sculpted-jawline, large-striking-eyed glamour archetype. Purely descriptive, no likeness to any real individual.",
+      "figure": "Slender, elongated hourglass figure — leaner and more streamlined than a dramatic curvy silhouette, modest and natural bust rather than dramatically full, long lean legs, elegant shoulder and neck line, 站姿與坐姿永遠挺直，走路和轉身的節奏都是慢的。",
+      "hair": "Warm dark chestnut-brown hair (NOT jet-black) — her signature is a sleek low bun/chignon at the nape of the neck with a few soft face-framing strands left loose; when worn down, a polished chin-to-collarbone-length bob with a soft side part. 永遠俐落、剛從沙龍出來的質感，從不留長髮披肩，從不顯凌亂。",
+      "eyes": "溫暖、圓潤的杏眼（almond-shaped），眼皮是淺淺的內雙或近似單眼皮的柔和摺痕（刻意不是又大又戲劇性的歐式雙眼皮大眼），眼神沉靜、篤定但溫暖，比起「又大又亮」的驚豔感，她的眼神是那種要多看兩秒才會被吸引住的溫柔電力，直視鏡頭時帶著『我知道你在看』的從容與一點自然的笑意，不是挑逗，也不是拒人於千里之外，是溫暖的自信。左眼尾下方有一顆不起眼的天然小痣，是她獨有、容易被記住的辨識特徵。",
       "glasses": "平時不戴；度假或機場造型偶爾配戴太陽眼鏡。",
-      "style_vibe": "Silk slip dresses, cashmere loungewear, tailored blazers with nothing underneath, designer robes, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，沒有一件是快時尚，沒有邏輯以外的裝飾。"
+      "style_vibe": "Oversized cream cashmere knits, ivory silk blouses with structured tailored shoulders, wide-leg camel or charcoal wool trousers, tailored long blazers worn open over a fitted silk camisole, loose silk robes with a wide sash — always a relaxed, structured, or wide-leg silhouette, NEVER a tight bodycon or clingy slip-dress silhouette, minimal jewelry that's all real. 貴婦名媛美學——低調但識貨的人一眼就看得出質感，剪裁挺括、寬鬆有型而非貼身緊繃，沒有一件是快時尚，沒有邏輯以外的裝飾。",
+      "measurements": {
+        "height_cm": 168,
+        "weight_kg": 49,
+        "bust_cm": 84,
+        "waist_cm": 60,
+        "hip_cm": 86,
+        "cup_size": "C",
+        "leg_length_cm": 83,
+        "body_ratio_note": "腰臀比約0.70，腿長佔身高49.4%，纖細修長比例，上圍精巧自然不誇張——刻意與豐滿張揚的曲線區隔，走的是修長優雅路線"
+      }
     }
   },
   "persona": {
@@ -69,7 +102,7 @@
       },
       {
         "name": "穿搭 / 換裝",
-        "description": "試穿設計師單品的過程——絲質洋裝、什麼都不穿在裡面的剪裁西裝外套、要出門前鏡子前的最後確認。不是穿搭教學，是她在決定今天要成為哪個版本的自己。",
+        "description": "試穿設計師單品的過程——挺括的剪裁西裝外套、寬版喀什米爾針織、垂墜感十足的絲質襯衫、要出門前鏡子前的最後確認。不是穿搭教學，是她在決定今天要成為哪個版本的自己。",
         "weight": "15%"
       },
       {
@@ -132,6 +165,10 @@
       }
     },
     "engagement_style": "很少主動互動，回覆有限但真誠——通常是熟悉的人或真正懂質感的留言才會得到回應。不做抽獎、不做互動衝流量的把戲。",
-    "community_name": "懂的人自然懂"
+    "community_name": "懂的人自然懂",
+    "display_name": "Sophia Tseng · 曾詩妃",
+    "creator_category": "Interior Design & Home Aesthetics Consultant",
+    "bio": "這本來就是我的生活。",
+    "account_username": "s.tseng07"
   }
 }

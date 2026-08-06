@@ -6,6 +6,8 @@
 
 ## 目前進度總覽
 
+### 原始 6 位
+
 | KOL | Soul ID | Soul 訓練 | 測試圖 | 自介素材 | 狀態 |
 |-----|---------|----------|--------|---------|------|
 | Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ✅ | ✅ 14 張 | ✅ 影片 v3 通過；舞蹈影片 v1-v3 通過 | ✅ 完成 |
@@ -17,6 +19,19 @@
 
 訓練順序：Ananya Kapoor → Yuna Kim → Aaliya Rivera → Camille Dupont
 
+### 新增 5 位（2026-07-24，台灣籍）
+
+| KOL | Soul ID | Soul 訓練 | 測試圖 | 狀態 |
+|-----|---------|----------|--------|------|
+| Vicky Lin | `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 12 張（第四輪 `v4_anchored_01`–`12`，Element 錨定身分一致，使用者已核准；第一～三輪僅供對照） | ✅ 前兩次 session 累計 12 次呼叫失敗後，2026-07-31 使用者要求重試，改用先前已確認的 media_id，第一次呼叫即成功受理並於同日確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/vicky-lin/generation_notes.md` |
+| Coco Wu | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 12 張（Reference Element `4b6c659c-786b-43de-87af-87cea3cc99dd` 錨定，`training_v1/`） | ✅ 2026-07-31 確認訓練完成，`show_characters(action='train')` 回傳的 `items` 列表確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/coco-wu/generation_notes.md` |
+| Rainie Hsu | `a4a000fe-fd96-4c36-97ff-0df9358a9b47`（v2，`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `a469f98d-11ae-42f3-8580-220d94cd473a` 錨定，`training_v2/`） | ✅ 2026-08-05 換錨點重訓：舊 `soul_id`（`994e33d2-...`，`training_v1/`）因身材（94-59-92cm/F罩杯）未吃到、錨點選角時只核對臉部未核對身材而已棄用；新錨點改用同一輪 `candidate_02.png`（沙漏身型與設定吻合）。同時首次套用 `SEXY_SCENE_LIBRARY.md` 新版五段式物理光線公式。`show_characters(action='status')` 已確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/rainie-hsu/generation_notes.md`「2026-08-05 換錨點與訓練集重製」章節 |
+| Sophia Tseng | `192562bb-ca64-4615-9515-13d34807857c`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d` 錨定，第三輪五官重新設計後的身分，`training_v1/`） | ✅ 2026-07-31 確認訓練完成，`show_characters(action='status')` 確認 `raw_status: completed`；可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/sophia-tseng/generation_notes.md` |
+| Mia Huang | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`（`status: ready`，訓練完成） | ✅ 完成 | ✅ 13 張（Reference Element `92ffbd80-32c7-495f-91ed-f109b419bb41` 錨定，`training_v1/`） | ✅ 2026-07-30 訓練完成，可用 `model: soul_2` + 此 soul_id 生成後續內容，詳見 `kols/mia-huang/generation_notes.md` |
+> ✅ 截至 2026-07-31，這 5 位全數完成 Reference Element 錨定訓練圖批次並成功完成 Soul 訓練（`status: ready`），可用 `model: soul_2` + 各自 soul_id 生成正式內容。Vicky Lin 先前累計兩次 session、12 次呼叫皆為工具層級失敗，2026-07-31 重試後第一次呼叫即成功受理（`soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`），同日確認訓練完成。
+>
+> **⚠️ 2026-08-05：Zoe Lai 人設已移除。** 原第 6 位台灣籍角色，因人設調整過程中反覆出現臉部辨識問題（跟其他角色撞臉、眼型修正後仍不理想）與其他設計反覆，使用者決定不建立此人格，`kols/zoe-lai/` 目錄與所有相關資料已從 repo 刪除，目前台灣籍角色為 5 位。
+
 ---
 
 ## ⚡ 新 Session 啟動時，立刻做這件事
@@ -25,21 +40,31 @@
 
 ### 現在的待辦（依優先順序）
 
-> 最後更新：2026-07-03
+> 最後更新：2026-07-24
 
-1. **Luna Tanaka — 自我介紹素材圖生成**
+0. **⚠️ 強制規則（2026-07-24 新增，優先於以下所有事項）**：任何 KOL 生成臉部參考圖後，**必須停下來等使用者實際看過並明確確認滿意，才可以送進 Soul 訓練**——不可以在同一輪自動接著做完。這是因為 Vicky Lin 第一輪試跑沒有這個關卡，結果生成方向錯了才發現，浪費了生成額度。詳見 README.md「新增 KOL 流程」步驟 6，以及 `.claude/workflows/kol_content_qa_pipeline.js` 的審核流程。
+
+1. **Vicky Lin — 重新生成臉部參考圖**
+   - 外型描述已修正（見 `character.md`/`profile.json`/`generation_notes.md` 的 2026-07-24 修正記錄）：核心是「漂亮性感健身網紅」，明確禁止健美選手/男性化方向
+   - 生成後停下來，等使用者確認滿意才能繼續（見上方第 0 點）
+
+2. **Coco Wu / Rainie Hsu / Sophia Tseng / Mia Huang / Zoe Lai — 臉部參考圖生成**
+   - 都還沒開始，人設文件都已完整，可以直接照 `generation_notes.md` 裡的規劃批次執行
+   - 同樣適用第 0 點的強制確認關卡
+
+3. **Luna Tanaka — 自我介紹素材圖生成**
    - Soul 訓練 ✅，測試圖 ✅，尚未生成自介素材（參考 Camille 的 `self_intro_v1` 流程）
    - 生成前先確認場景與穿搭，每個場景兩張，構圖必須不同
 
-2. **Yuna Kim — 自我介紹素材圖生成**
+4. **Yuna Kim — 自我介紹素材圖生成**
    - Soul 訓練 ✅，測試圖 ✅（selfie、江南咖啡廳、弘大街頭各 2 張）
    - 同上流程
 
-3. **Aaliya Rivera — 自我介紹素材圖生成**
+5. **Aaliya Rivera — 自我介紹素材圖生成**
    - Soul 訓練 ✅，測試圖 ✅（poolside、restaurant、selfie 共 8 張）
    - 同上流程
 
-4. **Camille Dupont — 自我介紹影片素材生成**
+6. **Camille Dupont — 自我介紹影片素材生成**
    - 自介圖 4 張已通過，剪輯時間軸已完成，影片素材（10 個 shot）尚未生成
 
 ### 注意事項（每次生成前必讀）
@@ -57,6 +82,7 @@
   - 表情方向：自然微笑、若有所思、被逗笑的瞬間感、放鬆閉眼享受
   - 構圖配合姿勢：廣角遠景時人物要有動態感；3/4 身時側身或斜角；近景時搭配表情或手部動作細節
 - **⚠️ 同一場景兩張圖構圖必須不同（所有人格適用）**：同場景、同衣服、同環境，但兩張圖的景別和角度必須明顯不同（例如 3/4 身 vs 臉部近景；廣角遠景 vs 特寫；正面 vs 側面）
+- **⚠️ 降低「AI 感」檢查清單（2026-07-24 新增，所有人格適用）**：送出生成前對照 `SEXY_SCENE_LIBRARY.md`〈降低「AI 感」的技術要點〉逐項檢查（皮膚質感、裝置/鏡頭規格、混合不均勻光源、背景雜物細節、服裝完整度）；運動類角色（Vicky Lin）額外檢查是否偏向健美選手/男性化方向。有 `.claude/workflows/kol_content_qa_pipeline.js` 可以自動跑這套審核流程，不用每次手動對照。
 
 ---
 

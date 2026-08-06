@@ -1,5 +1,27 @@
 {
   "id": "vicky-lin",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "collected",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 12,
+      "images_path": "kols/vicky-lin/images/face_reference/ (v4_anchored_01–12)",
+      "collected_at": "2026-07-25",
+      "note": "12張訓練圖，全數以 Reference Element `9f076fab-77ef-4c68-a146-f8060253c49a`（vicky-lin-anchor-v3-06，錨點來源 v3_06_3q_fullbody.png）錨定同一身分生成，使用者已核准。詳見 generation_notes.md。",
+      "soul_training": {
+        "status": "ready",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": "bdb1d879-da36-4c1a-bc63-9f5b49a3e94e",
+        "training_image_count": 12,
+        "started_at": "2026-07-31",
+        "completed_at": "2026-07-31",
+        "note": "先前兩次 session、共 12 次呼叫 show_characters(action='train') 皆為工具層級失敗（未取得 soul_id）。2026-07-31 使用者要求重試，改用先前已上傳確認的 12 個 media_id，本次第一次呼叫即成功受理，同日以 action='status' 確認 status: ready、raw_status: completed。可用 model: soul_2 + 此 soul_id 生成正式內容。"
+      }
+    }
+  },
   "meta": {
     "created_at": "2026-07-23",
     "updated_at": "2026-07-23",
@@ -17,17 +39,28 @@
     "native_name": "林薇淇",
     "handle": "@vicky.lin",
     "age": 25,
+    "date_of_birth": "2001-07-11",
     "ethnicity": "Taiwanese",
     "origin": "Kaohsiung, Taiwan (高雄)",
     "current_location": "Kaohsiung, Taiwan (高雄)",
     "languages": ["Mandarin Chinese (native)", "English (conversational)", "Taiwanese Hokkien (basic)"],
     "appearance": {
       "height": "170cm",
-      "face_type": "Sharp, striking features — angular jawline, defined cheekbones, straight thick brows, a direct confident gaze that reads as slightly intense even at rest. No soft/round-faced cuteness — her face carries the same edge her training does.",
-      "figure": "Athletic toned hourglass with visible muscle definition — strong shoulders and back from lifting, a visibly defined core/abs, curvy glutes and thighs built from squats and functional training. Her body reads as trained, not just slim.",
+      "face_type": "Strikingly beautiful, warm, magnetic face — bright almond-shaped eyes, high soft cheekbones, a straight elegant nose, full lips with a natural, inviting smile. Gorgeous and approachable, not hard or stern — training gives her a glow and confidence, never a cold or aggressive expression. Idol/fitness-model tier good looks, never a stone-faced or intense default expression.",
+      "figure": "Toned, athletic hourglass with soft feminine curves — flat stomach with only a subtle, soft hint of ab definition (never blocky, striated, or vascular bodybuilder muscle), full chest, a cinched waist, and rounded, lifted glutes and thighs shaped by training. Reads as a gorgeous, sexy fitness-model influencer — think top Instagram fitness creator — NEVER a competitive bodybuilder or physique-athlete build. Skin glowing and sun-kissed.",
       "hair": "Long black hair, worn in a high ponytail or tight braid during training, down and natural off-duty.",
-      "eyes": "Dark brown, sharp, direct — rarely soft-focus, usually locked on whatever she's doing.",
-      "style_vibe": "Sports bras, fitted high-waist leggings, cropped tanks, an oversized hoodie unzipped or slipped off one shoulder post-workout. Sun-tanned skin from training outdoors. Minimal jewelry — a watch or fitness tracker, nothing that would get in the way of a lift."
+      "eyes": "Dark brown, bright and warm — direct and confident, but expressive and friendly rather than cold or intense.",
+      "style_vibe": "Sports bras, fitted high-waist leggings, cropped tanks, an oversized hoodie unzipped or slipped off one shoulder post-workout. Sun-tanned skin from training outdoors. Minimal jewelry — a watch or fitness tracker, nothing that would get in the way of a lift.",
+      "measurements": {
+        "height_cm": 170,
+        "weight_kg": 58,
+        "bust_cm": 88,
+        "waist_cm": 60,
+        "hip_cm": 92,
+        "cup_size": "D",
+        "leg_length_cm": 84,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高49.4%，重訓練出的緊實運動員比例，上圍偏豐滿"
+      }
     }
   },
   "persona": {
@@ -138,6 +171,10 @@
       }
     },
     "engagement_style": "Replies to training questions directly and honestly, no gatekeeping. Trades banter with regulars in comments. Has zero patience for diet-culture comments and will call them out publicly.",
-    "community_name": "練咖"
+    "community_name": "練咖",
+    "display_name": "Vicky Lin 💪 高雄練咖",
+    "creator_category": "Fitness Trainer",
+    "bio": "今天練了，所以今天算贏。💪",
+    "account_username": "vlin1225"
   }
 }

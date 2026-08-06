@@ -79,7 +79,7 @@ generate_image(
 
 ```
 25-year-old Latina woman, olive warm skin, long dark brown wavy hair, dark almond-shaped expressive eyes,
-curvy hourglass figure with full chest and slim waist,
+curvy hourglass figure with full chest and slim waist, bust 90cm waist 61cm hip 95cm D cup (see profile.json measurements),
 wearing rust orange ruched bodycon dress, mid-thigh length,
 THREE QUARTER BODY SHOT, mid-thigh up, no shoes shown,
 chest bounce and jiggle physics,
@@ -153,3 +153,10 @@ sound = "on"
 aspect_ratio = "9:16"
 duration = 10
 ```
+
+---
+
+## 2026-07-25 新增：身材數字 + 風格參考
+
+- 身材數字（bust 90cm / waist 61cm / hip 95cm / D cup）已補進舞蹈影片核心 prompt 模板的身材描述行，取代單靠「curvy hourglass figure」等形容詞；臉部描述（almond-shaped eyes 等）維持原樣不動，既有已核准圖片/soul_id/訓練紀錄不受影響。
+- 未來生成請參考 `SEXY_SCENE_LIBRARY.md` 光源段落的最新分流：Aaliya 的內容以 LA 戶外/泳池/海邊生活風格為主，多數場景應套用新的「討喜自然光（黃金時段/戶外強光）+ 淺景深+清晰高畫質」配方，而非舊版室內親密場景的「混合不均勻光線」配方（後者仍保留給晨起/浴室/居家等室內場景使用）。

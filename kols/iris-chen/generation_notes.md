@@ -124,8 +124,10 @@ localStorage.setItem('hf:image-form-upd', JSON.stringify(data));
 ### 核心 Prompt 基礎結構（不變）
 
 ```
-22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure with full chest and slim waist, black silky straight hair naturally down, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
+22-year-old Taiwanese girl, strikingly beautiful sweet face, large bright double-eyelid eyes, delicate high nose bridge, soft full lips, small defined chin, glowing skin, photogenic idol-level beauty, petite curvy hourglass figure, 87cm bust, D cup, 58cm waist, 90cm hips, black silky straight hair naturally down, [SCENE], wearing [OUTFIT], [POSE/ANGLE], [LIGHTING], film grain, candid lifestyle photo, warm tones, shot on 35mm, Instagram style
 ```
+
+**2026-07-25 新增：身材數字 + 風格參考** — 核心 prompt 已補上明確身材數字（87cm bust, D cup, 58cm waist, 90cm hips，取自 `profile.json` 的 `identity.appearance.measurements`），取代單純用「curvy/hourglass」等形容詞，避免生成結果與人設數字對不上（此問題在 Vicky Lin 的用戶回饋中被發現）。未來新批次 prompt 請沿用上面帶數字的版本。另外，光源指示請參考 `SEXY_SCENE_LIBRARY.md` 「光源」章節的 2026-07-25 修正：Iris 的內容以台北戶外/街頭/咖啡廳生活場景為主，屬於新版「自然光 + 淺景深 + 清晰高畫質」配方（而非舊版刻意不完美/混合光源的室內親密場景配方），寫新 prompt 時請對應套用。此為前瞻性補充，不影響已批准的訓練圖與影片紀錄。
 
 ---
 
@@ -431,3 +433,34 @@ aspect_ratio = "9:16"
 duration = 12
 resolution = "720p"  # cinematic v2 不直接支援此參數，走預設
 ```
+
+---
+
+## 2026-08-05 競品對標實測批次（Sherry 打法驗證，7 位台灣籍角色各 2 張）
+
+> **批次目的**：驗證從競品 @sherry_digitalp510 拆解出的三項新做法能否用純生成複製——(1) 公共場景加入背景路人、(2) 同穿搭一日敘事串聯兩張、(3) 地點寫成環境元素清單。完整拆解見 `COMPETITOR_sherry_digitalp510.md`，規則已寫入 `SEXY_SCENE_LIBRARY.md` 第 9／11／12 點。
+>
+> **平台／模型**：Higgsfield `soul_2` + 本角色 `soul_id`，quality 2k，aspect_ratio 3:4
+> **成本**：全批 14 張約 8 credits
+> **使用者決定**：本批次**不重新生成**，spec 落差記錄在案，留待後續處理
+
+### 本角色結果
+
+| 項目 | 內容 |
+|---|---|
+| Soul ID | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` |
+| 場景 | 台北老公寓巷弄（芒果冰店外／巷內回眸） |
+| 穿搭（A/B 共用） | 白色羅紋細肩帶背心 + 淺藍丹寧短裙 + 白色低筒球鞋 + 米色小肩包 |
+| Job ID（A） | `b7f5d29c-9e39-4b97-8bbb-9ff6b619d6bc` |
+| Job ID（B） | `7e57ab06-5aed-454f-ae61-3410fef19d1e` |
+| 評定 | ✅ 通過 |
+
+巷弄質感非常強（鏽蝕鐵窗花、糾纏電線、手寫招牌、緊貼牆邊的機車、冷氣滴水痕）。背景路人 2–3 人全部背向、失焦、無撞臉。A/B 兩張服裝配件完整延續，B 張改為午後低斜陽、長影，讀起來確實是同一天稍晚。**唯一落差**：prompt 寫「芒果剉冰」，生成出來是叉在竹籤上的炸物——道具指定未被吃到，但不影響整體可用性。
+
+### 本批次共同結論（全 7 位角色適用）
+
+- ✅ **背景路人：14/14 全部成功，且無任何配角撞臉主角。** 四條件措辭（背向／不看鏡頭／失焦／外型與主角區隔）有效，成本為零。原「預設只有本人入鏡」規則對公共場景已反轉。
+- ✅ **同穿搭一日敘事：7/7 成功。** 服裝配件完整延續且狀態自然演變。
+- ⚠️ **地點：環境元素清單成功，點名地標全部失敗。** 「愛河」生出墨爾本天際線、「台北 101」生出通用摩天樓群。
+- ⚠️ **中文招牌全部亂碼**（與競品同等程度），本批次接受此取捨。
+- 🔴 **打光尚未套用新公式。** 本批次仍使用舊的「品質形容詞」寫法（`crisp`／`high dynamic range`／`well-exposed`）。2026-08-05 拆解競品後已改寫 `SEXY_SCENE_LIBRARY.md` 第 3 點為五段式物理光線公式，**下一批次應以驗證該公式為首要目標**。
