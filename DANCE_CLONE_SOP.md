@@ -199,6 +199,11 @@ ffmpeg -i driver_raw.mp4 -vn -acodec copy driver_audio.m4a
 
 依上方「背景與場景」邏輯挑好場景後，用已訓練的 `soul_id` 生成一張三分身正面全身圖：
 
+> **⚠️ 2026-08-06 更正**：本步驟原本預設 `count=2`（生成兩張候選再挑一張），但起始畫面只有一張會
+> 真正被拿去跑 Motion Control，另一張等於白花——**改為預設 `count=1`**，把 prompt 一次寫到位（場景、
+> 服裝、光線都在上方「背景與場景」邏輯裡先決定好），不要用「生兩張再選」取代想清楚 prompt。
+> 只有在使用者明確要求比較多個構圖/角度時，才臨時提高 count。
+
 ```python
 generate_image(
     model="soul_2",
@@ -210,7 +215,7 @@ generate_image(
            "[本次選定場景描述], [本次選定打光描述], "
            "film grain, candid lifestyle photo, warm tones, shot on 35mm",
     aspect_ratio="9:16",
-    count=2
+    count=1
 )
 ```
 

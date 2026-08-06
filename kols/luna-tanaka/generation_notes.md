@@ -282,3 +282,50 @@ duration = 10
 - 核心 Prompt 已補上具體身材數字（見上方「核心 Prompt 基礎結構」），取自 `profile.json` measurements，之後新場景請沿用數字版本，不要退回模糊形容詞。
 - 光線配方請參考 `SEXY_SCENE_LIBRARY.md` 中「3. 光源」的最新修正：室內親密場景（晨起/浴室/居家/飯店）維持原本的混合、不均勻光邏輯；Luna 的內容以京都戶外街頭、咖啡廳、庭園等生活風格攝影為主，這類場景應改用新的「討喜自然光（黃金時段/戶外強光）+ 淺景深 + 清晰高畫質」配方，不要再套用刻意做舊/調暗調糊的舊邏輯。
 - 以上僅為之後新生成批次的補充指引，不影響已核准的訓練圖與既有場景記錄。
+
+---
+
+## 2026-08-06 R1 舞蹈影片起始畫面（動作驅動複製法 Method B，Step 4）
+
+**觸發背景**：舞蹈批次分配（見 `DANCE_CLONE_SOP.md` 大量選片 SOP）R1 指定給 Luna Tanaka。驅動片：
+`https://www.instagram.com/reel/DPWE2eqEVJ-/`（削肩上衣+高腰內搭，居家性感風，~129 BPM，單鏡頭手持無切鏡）。
+場景/穿搭依人設哲學更正後的規劃（主軸風格允許她「性感的那一面」偶爾出現）重新設計：京都公寓榻榻米房間，
+晨光透過舊木窗框，奶油針織開襟外套滑落一側肩膀+同色系削肩內搭+奶油高腰棉短褲。
+
+**模型**：`soul_2` + `soul_id: 1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`，`aspect_ratio: 9:16`，`quality: 2k`（預設）
+
+**Prompt**：
+```
+20-year-old Japanese woman, black center-parted chin-length bob slightly tousled, large round dark
+brown eyes, fair porcelain skin, petite curvy figure with full chest and slim waist (88-56-87cm, E
+cup), standing in a relaxed confident pose facing camera in her small Kyoto apartment tatami room,
+low wooden table and an old wooden window frame behind her, her cat Mochi's cushion softly visible
+in the corner, wearing an oversized cream knit cardigan slipping off one shoulder over a matching
+thin cream camisole, cream high-waisted cotton shorts, THREE QUARTER SHOT, mid-thigh up, no shoes
+shown, soft diffused morning light streaming through the old wooden window frame across the tatami
+mat, film grain, candid lifestyle photo, warm cream tones, shot on 35mm, Instagram style
+```
+
+**⚠️ 本輪生成了 2 張候選（`count=2`）而不是 1 張**——事後被使用者指出這樣浪費：起始畫面只有一張會真的
+拿去跑 Motion Control，生兩張再選等於白花一半的生成成本。**已修正 `DANCE_CLONE_SOP.md` Step 4 的預設
+`count` 為 1**，之後所有 KOL 的起始畫面生成一次只出一張，把場景/服裝/光線在 prompt 裡一次寫到位，不要
+用「多生幾張再選」取代想清楚 prompt。
+
+**兩張候選的誠實評估**（已用 Read 工具目視檢查）：
+- 身分辨識度：兩張都清楚是她的黑色中分到下巴娃娃臉短髮，跟錨定身分一致
+- 場景/穿搭：兩張都符合規劃——榻榻米房間、木窗框、奶油針織開襟外套+削肩內搭+高腰短褲，開襟外套提供
+  跳舞用的次級動態載體
+- **構圖偏差**：兩張都拍到小腿甚至接近腳，比 SOP 要求的「三分身、mid-thigh up」寬，跟驅動片的三分身
+  裁切不完全對齊——留到 Step 5 Motion Control 時再視覺確認是否需要處理，暫不視為阻斷問題
+- **B 張有明顯瑕疵**：邊框、打孔記號、右側直排日文字——讀起來像寫真雜誌內頁掃描，不是她一貫的 iPhone
+  candid 隨拍質感，跟人設風格無關，是純粹的生成瑕疵
+
+**使用者決定**：兩張都可接受，不需重生成。**選定 `start_frame.png`（原 candidate A）作為 Step 5 Motion
+Control 的正式起始畫面**，因為沒有 B 張的雜誌掃描感；`start_frame_alt_magazine_artifact.png`（原
+candidate B）保留存查，不會被拿去跑 Motion Control。
+
+**產出檔案**：`kols/luna-tanaka/images/dance_clone_r1/start_frame.png`（正式採用）、
+`start_frame_alt_magazine_artifact.png`（保留存查，不採用）
+
+**下一步（待執行）**：Step 1–3（下載驅動片、裁剪、Performance Sheet + Emotion Timeline）尚未執行；
+Step 5 Motion Control 待這些完成後才能跑。
