@@ -61,6 +61,8 @@ Virtual_KOL_Studio/
 ├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
 ├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（11 位共用）
+├── WARDROBE_SYSTEM.md           # 造型差異化引擎：穿搭/髮型/地點層級/微物件四轉盤（11 位共用）
+├── COMPETITOR_sherry_digitalp510.md  # 競品視覺與打光拆解（@sherry_digitalp510）
 ├── DAILY_VIDEO_SOP.md           # 日常自拍影片生成流程
 ├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程
 ├── music/                       # 舞蹈/影片配樂素材
