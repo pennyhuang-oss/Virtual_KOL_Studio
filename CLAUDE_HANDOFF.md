@@ -597,19 +597,55 @@ Higgsfield 的所有 preset 聲音都是英語聲音（Tallulah、Skye、Chloe �
    - ⚠️ **這條原則不影響內容尺度（SFW、不露骨、不涉及未成年化）**——這條界線本身沒有被鬆動，鬆動的是「風格/穿搭/
      場景」層面的硬性描述。使用者已確認理解這個區分（「性感」跟「露骨」是兩件不同的事）。
 
+### R1–R18 驅動片原始檔的存放位置（2026-08-07 已解決存取問題）
+
+R1–R8 的驅動片是用 `yt-dlp` 直接從 Instagram 貼文連結下載的，連結永久記錄在 GitHub Issue #3，**任何 session 隨時都能重新對著同一個連結重跑 `yt-dlp` 取得**，不需要保存檔案本身。
+
+R9–R18 這 10 支不一樣——這是使用者最初提供的 18 支模板影片裡，`yt-dlp` 一直抓不下來的那 10 支，唯一取得方式是使用者直接上傳檔案，而檔案上傳綁在對話的暫存空間，新 session 讀不到。**已解決**：使用者把全部 18 支都上傳到 Google Drive 資料夾，資料夾已設定「知道連結的人可檢視」，可以直接用 `curl` 下載到本機硬碟（**不要**用 `mcp__Google_Drive__download_file_content` 這類工具讀取內容——那會把整個檔案的 base64 編碼塞進對話，1–6MB 的影片編碼後是幾百萬字元，遠超單次回合能輸出的 token 量，2026-08-07 已用 6 個平行 subagent 實測撞牆確認過，不要重複犯這個錯）：
+
+```bash
+curl -sSL "https://drive.google.com/uc?export=download&id=<FILE_ID>" -o <本機檔名>.mp4
+```
+
+Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yBIypeSbLba9
+
+| R# | IG shortcode | 分配 KOL | Drive file ID |
+|---|---|---|---|
+| R1 | `DPWE2eqEVJ-` | mia-huang | `1R6yYI3J9FffzukVxtonqw7Zo6joB1o8p` |
+| R2 | `C3kMsJ1PtPH` | luna-tanaka | `1tIP2rI4p_ajla5tAq_2TxjbnLKlRU_50` |
+| R3 | `C2zOi2uPdxn` | vicky-lin | `115zH8obRurYjxaeOzQwglqOmktvwqHee` |
+| R4 | `DRB_TBDESZl` | coco-wu | `1q4WJdSUjKvtHJvvRhbizhLwwOTjWfEX5` |
+| R5 | `DNb8doNyCfH` | rainie-hsu | `1hot6rju0rro91HMUijKUTehRdvUlPf21` |
+| R6 | `DKBwq88xaOG` | iris-chen | `1KL_fotR2VzD9qCELDg0f9dVBarNCcxb9` |
+| R7 | `DEq7fsPPBr8` | yuna-kim | `1D-ae7TiW8x7N9UMu7nlwIOOB6Q_Vp7Vw` |
+| R8 | `DVnFmlVEcre` | sophia-tseng | `10iB7x4YA1ztQY_es4B4bPI43p3TJdzQY` |
+| R9 | `DB2yTeEv7LG` | sophia-tseng | `1CxjE-0H2nXyAH8E5QVX8REVBiS9H0Pqz` |
+| R10 | `DDgvg5iPUft` | rainie-hsu | `13HnSlsOzC9I2Qpa9fBXlvOGyzDCVXqY_` |
+| R11 | `DHI2Xhvr1b` | sophia-tseng | `1ChRPXiz-G3sJrN_xYGp4KgPqAMKOIxUo` |
+| R12 | `DH2qaw1RSr2` | coco-wu | `1qbIjpBA6vE653slFj3Snd33Ry3xtS2FQ` |
+| R13 | `DIAxR2RuUO` | coco-wu | `15ZjhnTtPq59iBa7uA_19TIwhr-uNyNa9` |
+| R14 | `DNhxC7xJQqx` | rainie-hsu | `1f-tSBCjKoNIMP-pJkoisialzboMcmT0x` |
+| R15 | `DPDTvczkep4` | iris-chen | `1NvmxZE7UXSeJ3lxyo-WQEiz5SY6QxPmT` |
+| R16 | `DRTeClEX4P` | luna-tanaka | `1i454xCNjFOZ2Fc90YKshaPYbJQdrbuVe` |
+| R17 | `DRgdF3vkSr1` | luna-tanaka | `1wXhEe49V0su0fY_-zHyPh9E07taVLfxD` |
+| R18 | `DRjp2qfkTk5` | iris-chen | `1CPDvqRzcy2VGA7F9xwRdcVArZL5jYfjv` |
+
+（2026-08-07 已用 R9 的檔案實測 `curl` 下載，下載回來的檔案大小跟原檔位元組數完全一致，方法確認可行。）
+
+⚠️ **這些都是原始驅動片，只當內部動作參考用，不進 git**（見 `DANCE_CLONE_SOP.md` Step 7）——上面這個 Drive 資料夾是唯一持久保存的地方，用完不要刪除，之後每一支的 Step 1 都是從這裡 `curl` 下載，不是重新問使用者要檔案。
+
 ### 待辦（下一個 session 或下一輪對話接續）
 
 - **R9（Sophia Tseng）Step 4 起始畫面已核准，Step 5 尚未執行**：
   - `kols/sophia-tseng/images/dance_clone_r9/start_frame.png`（已核准），job_id `1b43fa58-1900-4b52-87aa-9e99eb14993f`
-  - 驅動片：R9 對應的 IG shortcode `DB2yTeEv7LG`（奶油色皺褶蝴蝶結比基尼、居家手勢舞、越南歌曲 remix）
-  - **⚠️ 驅動片原始檔目前只存在這次對話的上傳暫存目錄**（`/root/.claude/uploads/87069481-ef78-5910-ae7c-a3bb1bc54baa/`），
-    新開的 session **很可能無法存取這個路徑**——繼續 Step 5 之前，可能需要使用者在新 session 裡重新上傳這支影片
+  - 驅動片：R9 對應的 IG shortcode `DB2yTeEv7LG`（奶油色皺褶蝴蝶結比基尼、居家手勢舞、越南歌曲 remix），
+    取得方式見上表（Drive file ID `1CxjE-0H2nXyAH8E5QVX8REVBiS9H0Pqz`）
   - 尚未執行：Step 2（裁切+確認 H.264 編碼，目前只做過抽幀分析，沒有正式輸出 `driver_cropped.mp4`）、
     Step 3（沒有正式跑 `performance-director`/`emotion-director`，起始畫面的服裝/場景是這次直接判斷決定的，
     跳過了正式的 Performance Sheet/Emotion Timeline 產出——建議在跑 Step 5 前補做，或至少在 Step 8 QA 時多留意
     次級動態/表情變化）、Step 5–8 全部未執行
 - **R10–R18 這 9 支只完成分配，Step 1 都還沒開始**：
-  - 同樣的風險：這 9 支的原始影片目前也只存在這次對話的上傳暫存目錄，新 session 極可能讀不到，需要使用者重新提供
+  - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
   - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
     不需要重新核對一次
   - 流程照 `DANCE_CLONE_SOP.md` Method B 走：Step 2 裁切/H.264 → Step 3 兩個 director agent →
