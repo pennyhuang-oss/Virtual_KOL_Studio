@@ -184,6 +184,22 @@ ffmpeg -i driver_raw.mp4 -vn -acodec copy driver_audio.m4a
 
 如果驅動片有多人齊舞，優先挑**前排 lead**入鏡的段落裁切，避免其他舞者的動作干擾。
 
+> **⚠️ 2026-08-07 新增規則（Mia Huang R1 案例學到的教訓）**：**不論這支驅動片需不需要裁切畫面，都要
+> 用 `ffprobe -show_entries stream=codec_name` 確認編碼是否為 H.264；不是的話一律用
+> `ffmpeg -c:v libx264 -pix_fmt yuv420p` 重新編碼。** 原因：Luna Tanaka 那支驅動片因為需要裁切，
+> ffmpeg 的 crop 濾鏡意外把它強制轉成了 H.264；Mia Huang 那支不需要裁切（人物已經置中），直接
+> `cp` 複製保留了 Instagram 原始的 **VP9** 編碼，結果 `motion_control` 呼叫兩次都在 `in_progress`
+> 後直接變成 `failed`（沒有任何錯誤訊息），排查後才發現是編碼問題，轉成 H.264 後第三次呼叫就成功。
+> **不要假設 yt-dlp 從 Instagram 下載下來的檔案編碼一致**——不同貼文、不同時間下載，dash 串流給的
+> 編碼格式會不一樣。這一步不能因為「這支不需要裁切」就跳過。
+
+```bash
+# 沒有裁切需求時，仍要確認/正規化編碼：
+ffprobe -v error -show_entries stream=codec_name -of default=noprint_wrappers=0 driver_raw.mp4
+# 如果不是 h264，重新編碼：
+ffmpeg -i driver_raw.mp4 -c:v libx264 -pix_fmt yuv420p -an driver_cropped.mp4
+```
+
 ### Step 3：Performance Sheet + Emotion Timeline（自動化，用兩個 director agent）
 
 **呼叫 `performance-director` agent**，讀入 `driver_cropped.mp4` 描述（幾點幾秒做什麼動作、
