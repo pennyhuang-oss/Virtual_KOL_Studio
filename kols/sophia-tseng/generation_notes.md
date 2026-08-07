@@ -434,3 +434,70 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 - ⚠️ **地點：環境元素清單成功，點名地標全部失敗。** 「愛河」生出墨爾本天際線、「台北 101」生出通用摩天樓群。
 - ⚠️ **中文招牌全部亂碼**（與競品同等程度），本批次接受此取捨。
 - 🔴 **打光尚未套用新公式。** 本批次仍使用舊的「品質形容詞」寫法（`crisp`／`high dynamic range`／`well-exposed`）。2026-08-05 拆解競品後已改寫 `SEXY_SCENE_LIBRARY.md` 第 3 點為五段式物理光線公式，**下一批次應以驗證該公式為首要目標**。
+
+---
+
+## 2026-08-07 R8 舞蹈克隆完整跑完 Step 1–8（動作驅動複製法 Method B）
+
+**背景**：舞蹈批次分配（見 `DANCE_CLONE_SOP.md` 大量選片 SOP、GitHub Issue #3）R8 分配給 Sophia Tseng。驅動片：`https://www.instagram.com/reel/DVnFmlVEcre/`（白色長袖 crop top + 黑色運動褲手勢舞，越南街頭夜景）。
+
+### Step 1–2：下載與裁剪
+
+- `yt-dlp` 下載，1080×1920、VP9 編碼、~14.1s，含原始配樂（aac）
+- 內容目視核對：白色高領/字母印花長袖 crop top + 黑色寬鬆抽繩運動褲，越南街頭夜景（機車併排停放、店面招牌、掛燈裝飾樹、越南國旗），單鏡頭手持跟拍，一連串嘟嘴/吐舌/比YA等手勢舞動作，符合分配描述
+- 依 `DANCE_CLONE_SOP.md` Step 2 已知風險（VP9 原始編碼直接餵給 Motion Control 會反覆失敗且無錯誤訊息），先確認並轉存為 H.264
+- 原始畫面右側帶完整 CapCut 編輯 App 圖示工具列（電量/播放/文字/貼圖/特效/濾鏡/展開箭頭），用 `ffmpeg crop` 裁掉右側 100px 圖示欄（1080→980），並微調裁掉頂部/底部合計 50px（1920→1870），確認未裁到任何手勢動作，輸出 `driver_cropped.mp4`（980×1870、h264、30fps、~14.1s）
+- 音軌另存 `driver_audio.m4a`（aac、44.1kHz、雙聲道、~14.1s）
+
+### Step 3：Performance Sheet + Emotion Timeline
+
+呼叫 `performance-director` 與 `emotion-director` agent。重點結論：
+
+- **情緒設計**：驅動片本身表情強度（嘟嘴、吐舌、大笑張嘴）比 Sophia 預設的「沉靜、篤定、克制的性感」基調誇張許多，與 Luna Tanaka R1、Rainie Hsu R5 遇到的落差是同一類型
+- **次級動態載體**：crop top 為貼身剪裁，主要動態載體是及肩 bob 短髮甩動
+- **`scene_control` 選用 `image`**：不借用驅動片真實越南街頭場景（機車車牌、招牌可能無法清理），改用 Sophia 自己生成的場景
+
+### Step 4：起始畫面（Start Frame）
+
+- 模型：`soul_2` + `soul_id: 192562bb-ca64-4615-9515-13d34807857c`
+- **第一次生成被打回**：`start_frame_v1_rejected_wrong_pants.png` 生成出深 U 領露胸口版本上衣 + 直筒西裝褲，跟分配描述「白色長袖 crop top + 黑色運動褲」不符，打回重生成
+- **第二次生成核准**：`start_frame.png` 改為高領字母印花 crop top + 黑色寬鬆抽繩運動褲，場景為越南夜間街景（掛燈裝飾樹、店面暖光、越南國旗），符合分配描述，核准進入 Step 5
+
+### Step 5：Motion Control
+
+- 驅動片 `driver_cropped.mp4` 上傳確認，`media_id: 1546f4fa-12f0-4870-880d-a9b0b2176e09`
+- `image_id`: `825d358e-53bf-4ccb-b37d-2b1e951fb328`（起始畫面 job，直接沿用不需重新上傳）
+- `scene_control`: `image`（Sophia 自己生成的越南街景），`resolution`: `1080p`
+- 輸出：`1072×1936`、30fps、~14.1s，Job ID `a9be7ac6-dbb6-400a-b0e0-5315e3185142`
+- **輸出本身無聲**（`ffprobe` 確認只有一條 h264 視訊流），需要 Step 6 手動混音
+
+### Step 6：手動混音
+
+用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 把 Step 2 抽出的 `driver_audio.m4a`（驅動片原始配樂，裁剪起點對齊 0s，trim 至 14.07s 貼合生成畫面）蓋上 Kling 輸出的無聲畫面，輸出 `sophia_dance_clone_r8_ig_reel.mp4`（1072×1936、30fps、~14.07s，含視訊+音訊雙軌，已用 `ffprobe` 確認）。
+
+### Step 7：授權與發佈限制檢查
+
+- **驅動動作**：來自第三方 Instagram 創作者，本次生成僅供內部方法驗證；若要對外發佈，需評估重現程度是否需要致敬標註或改編到不可辨識
+- **配樂**：混音使用的是驅動片原始配樂，**未取得商用授權**，正式發佈前必須替換為已授權/可商用曲庫版本，並重新對拍
+- **背景**：`scene_control` 選用 `image`，未借用驅動片真實越南街頭背景，不涉及第三方場景可辨識性問題；但生成場景中出現越南國旗（通用國家象徵，非特定品牌/地標），對外發佈前建議留意是否需要調整
+- **素材存放**：驅動片原始檔（`driver_raw.mp4`、`driver_cropped.mp4`、`driver_audio.m4a` 原始複本）僅存在本機工作資料夾，未存入本 repo
+
+### Step 8：QA 檢核（已用 Read 工具目視抽幀比對，非假設）
+
+抽樣 0.5s / 2.0s / 4.0s / 6.0s / 6.5s / 8.0s / 8.3s / 10.0s / 10.4s / 12.0s / 12.5s / 13.0s / 13.9s 共 13 個時間點：
+
+- [x] **身分一致**：全程可清楚辨認黑棕短 bob、五官輪廓，跟起始畫面的錨定身分一致，多個抽樣幀交叉比對未觀察到臉型結構漂移
+- [x] **微表情有變化**：抽樣幀之間表情、嘴型、眼神角度皆不同（嘟嘴 → 開口說話 → 大笑吐舌 → 比YA燦笑 → 收尾微笑），不是同一張臉套多個手勢的面具臉
+- [x] **手部整體無明顯崩壞**（13 幀抽樣檢視未發現手指數量/形狀異常，含 10.4s 比YA手勢與運動模糊幀）
+- [x] **背景穩定**：越南街景（掛燈裝飾樹、店面暖光、越南國旗、機車）全程一致，無鬼影閃爍
+- [x] **規格**：1072×1936（超過 1080×1920 門檻）、30fps、音樂已對齊長度
+- [ ] **表情強度與人設基調落差（已知限制，非本輪 QA 阻斷項）**：驅動片原始的嘟嘴/吐舌/大笑表情比 Sophia「沉靜克制」人設基調誇張許多。**使用者已審閱並明確決定維持原始表情強度**——理由是舞蹈類內容本身表情即是表演的一部分，誇張表情比刻意收斂更生動，不列入本輪合格/不合格判定
+- [ ] **無確認的定格/freeze 點**：本次沒有針對逐幀定格做另外驗證，留待下次需要更嚴謹驗證時補做
+
+**結論**：Step 4 起始畫面第一次生成因服裝款式不符被打回，第二次生成核准後 Step 5–8 一次到位。QA 檢核的身分一致性/手部/次級動態/背景穩定項目全數通過。表情強度與人設基調的落差經使用者審閱後**明確決定保留**，記錄為使用者核准的設計選擇，不是待修正的缺陷。
+
+### 產出檔案
+
+- `kols/sophia-tseng/images/dance_clone_r8/start_frame.png`（已核准起始畫面，第二次生成版本）
+- `kols/sophia-tseng/images/dance_clone_r8/start_frame_v1_rejected_wrong_pants.png`（第一次生成，服裝不符分配描述，僅供對照）
+- `kols/sophia-tseng/videos/dance_clone_r8/sophia_dance_clone_r8_ig_reel.mp4`（1072×1936、30fps、~14.07s，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
