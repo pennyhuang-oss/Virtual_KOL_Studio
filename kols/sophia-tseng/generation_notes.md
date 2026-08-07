@@ -501,3 +501,25 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 - `kols/sophia-tseng/images/dance_clone_r8/start_frame.png`（已核准起始畫面，第二次生成版本）
 - `kols/sophia-tseng/images/dance_clone_r8/start_frame_v1_rejected_wrong_pants.png`（第一次生成，服裝不符分配描述，僅供對照）
 - `kols/sophia-tseng/videos/dance_clone_r8/sophia_dance_clone_r8_ig_reel.mp4`（1072×1936、30fps、~14.07s，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-07 R9 舞蹈克隆 — Step 4 起始畫面（Step 5 尚未執行，等待使用者核准）
+
+**背景**：舞蹈批次分配（見 `DANCE_CLONE_SOP.md`、GitHub Issue #3 2026-08-07 補充4）R9 分配給 Sophia Tseng。驅動片：`https://www.instagram.com/reel/DB2yTeEv7LG/`（奶油色皺褶蝴蝶結緞面比基尼、居家手勢/身體展示型動作、越南歌曲「2 Phút Hơn」remix，室內奶油色牆面+木地板+深灰沙發）。
+
+### Step 4：起始畫面
+
+- 模型：`soul_2` + `soul_id: 192562bb-ca64-4615-9515-13d34807857c`
+- **服裝刻意調整,不是照抄驅動片**：驅動片原始服裝是貼身緞面蝴蝶結比基尼，但 Sophia 人設明確列出「不出現：貼身緊繃的 bodycon，她的性感是寬鬆剪裁與垂墜感」，直接照抄會踩到這條硬性邊界；且比基尼本身沒有任何會動的元素。改為**絲質細肩帶連身居家套裝 + 同色系寬鬆罩衫外袍**（罩衫敞開垂墜作為次級動態載體），保留原片奶油色調與居家調性
+- 場景選她「居家 / 信義區公寓」pillar 的落地窗城市夜景，符合她慣用的 ivory/champagne 低對比色調
+- **第一次生成**：`start_frame.png`，五官/身材與 soul_id 錨定一致，服裝符合上述調整方向，場景/光線/表情皆貼合人設。**尚未核准**，已請使用者核對左眼尾小痣辨識度、服裝調整方向是否接受
+- Job ID：`1b43fa58-1900-4b52-87aa-9e99eb14993f`
+
+### Step 5（尚未執行）
+
+依 `DANCE_CLONE_SOP.md` 2026-08-07 新增的人工核准關卡規則，**Step 4 起始畫面必須先經使用者核准才能進 Step 5 Motion Control**，目前停在此關卡等待使用者回覆。
+
+### 產出檔案
+
+- `kols/sophia-tseng/images/dance_clone_r9/start_frame.png`（第一次生成，尚待核准）
