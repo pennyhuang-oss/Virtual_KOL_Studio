@@ -567,3 +567,53 @@ Higgsfield 的所有 preset 聲音都是英語聲音（Tallulah、Skye、Chloe �
   commit 需要補推。下次直接在 `main` 或此 feature branch 上繼續即可，不需要額外合併動作。
 - 兩支已完成的影片音軌都是驅動片原始配樂，**未取得商用授權**，8 支全部做完後、真正要對外發佈前，需統一處理配樂授權
   （見 `DANCE_CLONE_SOP.md` Step 7）。
+
+---
+
+## 2026-08-07 進度更新（延續上面「進度記錄與待辦」，同日 session 後段，已 push 到 `main`）
+
+### 這段完成的事
+
+1. **R1–R8 + IG1 全部完成生成**（Step 1–8），詳見各 KOL `generation_notes.md`，GitHub Issue #3 已同步標記完成。
+2. **使用者把最初提供的 18 支模板影片全部上傳**（先前只有 8 支能用 `yt-dlp` 抓到）。依檔名內嵌的 Instagram shortcode
+   逐一比對，確認 R1–R8 對應這 18 支裡的哪 8 支，其餘 10 支編為 **R9–R18**，寫入 GitHub Issue #3「已分配」區塊。
+3. **R9–R18 內容逐支抽幀目視核對**，發現多支跟隨機分配到的 KOL 人設調性有明顯落差（尺度、風格能量都不合），改為
+   **依內容本身的調性重新指定 KOL，刻意不要求平均分配**（使用者明確同意這個做法）。目前分配：
+   - `sophia-tseng`：R9、R11
+   - `rainie-hsu`：R10、R14
+   - `coco-wu`：R12、R13
+   - `iris-chen`：R15、R18
+   - `luna-tanaka`：R16、R17（兩支都是同一位真人網紅「深田えいみ」，剛好是 Luna 自己 IG Benchmark 表列的帳號）
+   - `mia-huang`、`vicky-lin`、`yuna-kim`：這批完全沒分配到——不是遺漏，是這 10 支內容跟這三位人設不合，
+     已在 Issue #3 寫明原因
+   - 詳細改分配理由見 GitHub Issue #3 2026-08-07 補充 3／補充 4
+4. **`DANCE_CLONE_SOP.md` 新增人工核准關卡規則**：Step 4 起始畫面生成後必須停下來給使用者看，核准後才能進 Step 5
+   Motion Control——這件事之前 R1/R4/R5/R8 實際執行時都有做，但沒寫成文字規則，這次補上（見文件開頭「怎麼觸發」
+   補充段落 + Step 4 段落）。
+5. **人設哲學鬆綁「補完」**：2026-08-06 那次修正（上面第 1 條記錄的那次）漏改了 Mia Huang 的一部分，且完全沒套用到
+   Coco Wu、Sophia Tseng、Rainie Hsu、Vicky Lin——這次全部補齊，11 位人設的 `character.md` 現在統一是「視覺行為
+   光譜（她的主軸風格，不是絕對禁止）」的寫法。**同時把這條原則、以及「文件衝突以最新修改檔案為準」這條，寫成
+   `CLAUDE_HANDOFF.md` 開頭的永久治理原則章節**，不再只是埋在某次 session 記錄裡。
+   - ⚠️ **這條原則不影響內容尺度（SFW、不露骨、不涉及未成年化）**——這條界線本身沒有被鬆動，鬆動的是「風格/穿搭/
+     場景」層面的硬性描述。使用者已確認理解這個區分（「性感」跟「露骨」是兩件不同的事）。
+
+### 待辦（下一個 session 或下一輪對話接續）
+
+- **R9（Sophia Tseng）Step 4 起始畫面已核准，Step 5 尚未執行**：
+  - `kols/sophia-tseng/images/dance_clone_r9/start_frame.png`（已核准），job_id `1b43fa58-1900-4b52-87aa-9e99eb14993f`
+  - 驅動片：R9 對應的 IG shortcode `DB2yTeEv7LG`（奶油色皺褶蝴蝶結比基尼、居家手勢舞、越南歌曲 remix）
+  - **⚠️ 驅動片原始檔目前只存在這次對話的上傳暫存目錄**（`/root/.claude/uploads/87069481-ef78-5910-ae7c-a3bb1bc54baa/`），
+    新開的 session **很可能無法存取這個路徑**——繼續 Step 5 之前，可能需要使用者在新 session 裡重新上傳這支影片
+  - 尚未執行：Step 2（裁切+確認 H.264 編碼，目前只做過抽幀分析，沒有正式輸出 `driver_cropped.mp4`）、
+    Step 3（沒有正式跑 `performance-director`/`emotion-director`，起始畫面的服裝/場景是這次直接判斷決定的，
+    跳過了正式的 Performance Sheet/Emotion Timeline 產出——建議在跑 Step 5 前補做，或至少在 Step 8 QA 時多留意
+    次級動態/表情變化）、Step 5–8 全部未執行
+- **R10–R18 這 9 支只完成分配，Step 1 都還沒開始**：
+  - 同樣的風險：這 9 支的原始影片目前也只存在這次對話的上傳暫存目錄，新 session 極可能讀不到，需要使用者重新提供
+  - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
+    不需要重新核對一次
+  - 流程照 `DANCE_CLONE_SOP.md` Method B 走：Step 2 裁切/H.264 → Step 3 兩個 director agent →
+    Step 4 起始畫面（**生成後停下來等核准，這是新規則**）→ Step 5 Motion Control → Step 6（視需要）混音 →
+    Step 7 授權檢查 → Step 8 QA → 寫 `generation_notes.md` → commit push → 更新 Issue #3
+- **已完成的 8+1 支影片（R1–R8、IG1）音軌都是驅動片原始配樂，未取得商用授權**，全部（含 R9–R18）做完後、
+  真正要對外發佈前，需統一處理配樂授權（見 `DANCE_CLONE_SOP.md` Step 7）。
