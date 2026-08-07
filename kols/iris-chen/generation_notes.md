@@ -464,3 +464,39 @@ resolution = "720p"  # cinematic v2 不直接支援此參數，走預設
 - ⚠️ **地點：環境元素清單成功，點名地標全部失敗。** 「愛河」生出墨爾本天際線、「台北 101」生出通用摩天樓群。
 - ⚠️ **中文招牌全部亂碼**（與競品同等程度），本批次接受此取捨。
 - 🔴 **打光尚未套用新公式。** 本批次仍使用舊的「品質形容詞」寫法（`crisp`／`high dynamic range`／`well-exposed`）。2026-08-05 拆解競品後已改寫 `SEXY_SCENE_LIBRARY.md` 第 3 點為五段式物理光線公式，**下一批次應以驗證該公式為首要目標**。
+
+---
+
+## 2026-08-07 R6 舞蹈克隆完整跑完 Step 1–8（動作驅動複製法 Method B）
+
+**背景**：舞蹈批次分配（見 `DANCE_CLONE_SOP.md`、GitHub Issue #3）R6 分配給 Iris Chen。驅動片：`https://www.instagram.com/reel/DKBwq88xaOG/`（黑色蕾絲吊帶睡裙手勢舞，室內純色背景）。Step 1–4（下載裁剪、Performance/Emotion 分析、起始畫面單張生成）已於同日較早完成，`start_frame.png` 已核准。
+
+### Step 5：Motion Control（兩種 `scene_control` 對照）
+
+- `image_id`: `af777fa3-9f14-400c-b336-fb19f2d88dfc`，`motion_video_id`: `7778c399-d8d0-41cb-9e83-0fcd24f5f246`
+- **`scene_control: "image"`**（原版）：job `01435d5c-5b9e-4b53-8b30-feeb4f815bbb`，750×1400 輸入、輸出 1072×1936、30fps、~9.87s，✅ 一次成功，花費 27 credit
+- **`scene_control: "video"`**（背景動態實驗，見下方「背景動態問題」）：連續兩次嘗試皆失敗——第一次 job `03fa4b5c` 狀態 `failed`（無錯誤訊息），重跑一次 job `f1558de2` 狀態 `nsfw`（明確內容審核標記）。**兩次均全額退款，零淨成本**。同一張起始畫面用 `image` 模式完全正常，只有 `video` 模式被標記，判斷是「合成到真實街景/室內真實背景」讓畫面更接近真實拍攝，疑似跟本批的性感貼身穿搭組合更容易觸發審核。Yuna Kim R7 做了同樣的對照測試，結果同樣失敗（見其 `generation_notes.md`），確認這是 `scene_control: "video"` 在目前這批穿搭尺度下的結構性問題，非單一角色個案，**已放棄這條路線**。
+
+### 背景動態問題與後製解決方案
+
+使用者發現 `scene_control: "image"` 模式的背景完全靜止，逐幀比對跟真人拍攝有落差（像把人 P 在一張照片前面）。嘗試用 `scene_control: "video"` 借用驅動片真實背景動態，但如上所述被內容審核擋下。改用**零額外 credit 的本機後製方案**：對 `image` 模式的最終輸出做全幀緩慢漂移平移（`ffmpeg` `crop` 濾鏡搭配 `18*sin(2*PI*t/11)` / `10*cos(2*PI*t/16)` 兩個不同週期的正弦位移，模擬手持呼吸感），角色動作/表情不做任何更動。**使用者比對原版與後製版後認為差異不大，但同意直接採用後製版當正式版**，不再追加疊圖等更複雜的處理（例如燈飾閃爍）——本輪場景是室內純色背景，本身就沒有風吹草動可模擬，後製主要意義是打破絕對靜止感。
+
+### Step 6：手動混音
+
+`scene_control: "image"` 原始輸出無聲（純 h264 視訊流），用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 把 Step 2 抽出的 `driver_audio.m4a` 蓋上後製漂移處理後的無聲畫面，輸出 `iris_dance_clone_r6_ig_reel.mp4`（1072×1936、30fps、~9.87s，含視訊+音訊雙軌）。
+
+### Step 7：授權與發佈限制檢查
+
+- **驅動動作**：來自第三方 Instagram 創作者，僅供內部方法驗證；對外發佈前需評估重現程度
+- **配樂**：驅動片原始配樂，**未取得商用授權**，正式發佈前必須替換
+- **背景**：最終採用 `scene_control: "image"`（+後製漂移），未借用驅動片真實場景，不涉及第三方場景識別性問題
+- **素材存放**：驅動片原始檔僅存本機工作資料夾，未存入本 repo
+
+### Step 8：QA 檢核
+
+已用 Read 工具目視抽幀比對後製版（`f_01`/`f_03` 對應約 0s／3s）：身分一致、手部無明顯崩壞、後製漂移未裁到角色肢體或造成明顯抖動/鬼影。背景動態評定為「打破靜止感的攝影機微動」，非真實環境動態，記錄在案，使用者已審閱並核准接受。
+
+### 產出檔案
+
+- `kols/iris-chen/images/dance_clone_r6/start_frame.png`（已核准起始畫面）
+- `kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4`（1072×1936、30fps、~9.87s，`scene_control: image` + 本機後製漂移運鏡，含驅動片原始配樂音軌，未經授權，僅供內部驗證）

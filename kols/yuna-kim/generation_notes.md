@@ -278,3 +278,39 @@ duration = 10
   - **室內場景**（浴室鏡前、居家慵懶、臥室早晨等）維持原本的「混合、不均勻暖光」配方不變。
   - **戶外/生活風格場景**（江南咖啡廳、弘大街頭等）改用新的「討喜自然光（黃金時段/明亮日光）+ 淺景深 + 清晰高畫質」配方，不要刻意調暗調糊。
 - 此為未來批次的生成指引，不影響已批准的 soul_test_v1 圖片與現有 soul_id 訓練紀錄。
+
+---
+
+## 2026-08-07 R7 舞蹈克隆完整跑完 Step 1–8（動作驅動複製法 Method B）
+
+**背景**：舞蹈批次分配（見 `DANCE_CLONE_SOP.md`、GitHub Issue #3）R7 分配給 Yuna Kim。驅動片：`https://www.instagram.com/reel/DEq7fsPPBr8/`（白色 crop top + 牛仔短褲手勢舞，室內走廊場景）。Step 1–4（下載裁剪、Performance/Emotion 分析、起始畫面單張生成）已於同日較早完成，`start_frame.png` 已核准。
+
+### Step 5：Motion Control（兩種 `scene_control` 對照）
+
+- `image_id`: `4c687699-5dd8-401c-a255-3a874f372e43`，`motion_video_id`: `fa827729-b003-4a43-b689-6e14c6fe24ce`
+- **`scene_control: "image"`**（原版）：job `4945b0ad-3830-4bc0-9c37-a54b4bb0e57a`，680×1280 輸入、輸出 1072×1936、30fps、~13.7s，✅ 一次成功，花費 37 credit
+- **`scene_control: "video"`**（背景動態實驗）：job `97e108b0` 狀態 `failed`（無錯誤訊息），對照重跑 job `725afb05` 同樣 `failed`。**兩次均全額退款，零淨成本**。跟 Iris Chen R6 的測試結果一致（該輪甚至出現明確 `nsfw` 標記），確認 `scene_control: "video"` 在目前這批性感貼身穿搭風格下有結構性的內容審核相容性問題，**已放棄這條路線**，詳細分析見 `kols/iris-chen/generation_notes.md` 同日章節。
+
+### 背景動態問題與後製解決方案
+
+跟 R6 採用同一套零額外 credit 的本機後製方案：對 `scene_control: "image"` 的最終輸出做全幀緩慢漂移平移（`ffmpeg` `crop` 濾鏡，`18*sin(2*PI*t/11)` / `10*cos(2*PI*t/16)` 正弦位移模擬手持呼吸感），角色動作/表情不做任何更動。使用者比對 R6 的原版/後製版後認為差異不大但同意採用，本輪直接沿用同一處理套用到 R7，不再重複產出對照版。
+
+### Step 6：手動混音
+
+`scene_control: "image"` 原始輸出無聲，用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 把 Step 2 抽出的 `driver_audio.m4a` 蓋上後製漂移處理後的無聲畫面，輸出 `yuna_dance_clone_r7_ig_reel.mp4`（1072×1936、30fps、~13.7s，含視訊+音訊雙軌）。
+
+### Step 7：授權與發佈限制檢查
+
+- **驅動動作**：來自第三方 Instagram 創作者，僅供內部方法驗證；對外發佈前需評估重現程度
+- **配樂**：驅動片原始配樂，**未取得商用授權**，正式發佈前必須替換
+- **背景**：最終採用 `scene_control: "image"`（+後製漂移），未借用驅動片真實場景，不涉及第三方場景識別性問題
+- **素材存放**：驅動片原始檔僅存本機工作資料夾，未存入本 repo
+
+### Step 8：QA 檢核
+
+已用 Read 工具目視抽幀比對後製版（約 0.7s／6.7s／12.7s）：身分一致、白色 crop top + 牛仔短褲穿搭清楚可辨、手部無明顯崩壞、後製漂移未裁到角色肢體或造成明顯抖動。背景動態評定同 R6，為打破靜止感的攝影機微動，非真實環境動態，記錄在案，使用者已審閱並核准接受。
+
+### 產出檔案
+
+- `kols/yuna-kim/images/dance_clone_r7/start_frame.png`（已核准起始畫面）
+- `kols/yuna-kim/videos/dance_clone_r7/yuna_dance_clone_r7_ig_reel.mp4`（1072×1936、30fps、~13.7s，`scene_control: image` + 本機後製漂移運鏡，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
