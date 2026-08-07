@@ -515,3 +515,39 @@ Higgsfield 的所有 preset 聲音都是英語聲音（Tallulah、Skye、Chloe �
 - 不需要問確認就可以繼續下一個 Step，除非有需要用戶決策的事項
 - 圖片/影片生成完後再請用戶審閱，不要提前做過多假設
 - **每個段落結束 = 一致性檢查 + 更新 CLAUDE_HANDOFF.md + push，這是固定流程**
+
+---
+
+## 2026-08-07 進度記錄與待辦（使用者要求暫停點）
+
+### 這次 session 完成的事
+
+1. **人設哲學鬆綁**（已 push 到 `main`）：使用者指出 6 位人格（Iris/Ananya/Camille/Luna/Yuna/Aaliya）+ Mia Huang 的
+   `character.md` 把服裝/場景/光線/表情寫成絕對禁止（「絕對不會有」「永遠不出現」「絕對不用」），不符合「像真人」的設計目標。
+   已全部改寫成「主軸風格／招牌傾向，多數時候如此，但不是不可能」的框架，唯一維持真正硬性的界線是內容尺度（SFW、
+   成年角色設定、不冒用真實公眾人物）。同步更正了本文件 3b/3c 段的範本指令（原文就是造成這個問題的源頭），避免未來
+   新增角色再重複同樣的錯誤。詳見各角色 `character.md`／`content_style.md` 的對應章節。
+2. **舞蹈批次 R1/R2 連結↔描述對調修正**：逐一重新下載並目視核對 GitHub Issue #3 的 R1–R8 全部驅動片後，發現最早
+   分析時 R1、R2 的連結和文字描述被寫反了。已修正為：`DPWE2eqEVJ-`（水手服天台手勢舞）→ Mia Huang；
+   `C3kMsJ1PtPH`（削肩居家性感風）→ Luna Tanaka。R3（Zoe Lai 已停用）改分配給 Vicky Lin。R4–R8 核對皆正確。
+3. **Luna Tanaka R1、Mia Huang R1 兩支舞蹈影片已完整跑完 Method B 全流程**（Step 1–8，見各自
+   `generation_notes.md` 對應章節），已 push 到 `main`。過程中發現並修正一個新 bug：**Motion Control 的驅動片
+   輸入若保留 Instagram 原始 VP9 編碼會反覆失敗且無錯誤訊息**，已寫進 `DANCE_CLONE_SOP.md` Step 2 為必查項目。
+4. `DANCE_CLONE_SOP.md` Step 4 的起始畫面生成預設從 `count=2` 改為 `count=1`（避免生兩張選一張浪費成本）。
+
+### 待辦（下一個 session 或下一輪對話接續）
+
+- **R3–R8 六支舞蹈影片尚未開始生成**（GitHub Issue #3「已分配」區塊可查目前對應）：
+  - R3 → Vicky Lin（婚紗禮服快手勢舞，試衣間場景）
+  - R4 → Coco Wu（黑色蕾絲高領+牛仔短褲，夜間街拍）
+  - R5 → Rainie Hsu（桃紅貼身crop top+牛仔短褲，戶外白天）
+  - R6 → Iris Chen（黑色蕾絲吊帶睡裙，室內）
+  - R7 → Yuna Kim（白色crop top+牛仔短褲，室內走廊）
+  - R8 → Sophia Tseng（白色長袖crop top+黑色運動褲，越南街頭）
+  - 流程照 `DANCE_CLONE_SOP.md` Method B 全走一次：下載驅動片 → **先確認 H.264 編碼** → performance-director
+    + emotion-director 出時間軸分析 → 生成起始畫面（`count=1`）→ Motion Control → 若無聲則手動混音 → QA 抽幀 →
+    寫 `generation_notes.md` → commit push → 更新 Issue #3
+- **當前分支狀態**：`main` 與 `claude/kol-dance-video-workflow-t57kou` 目前同步（都在 `555b4e5`），沒有落後的
+  commit 需要補推。下次直接在 `main` 或此 feature branch 上繼續即可，不需要額外合併動作。
+- 兩支已完成的影片音軌都是驅動片原始配樂，**未取得商用授權**，8 支全部做完後、真正要對外發佈前，需統一處理配樂授權
+  （見 `DANCE_CLONE_SOP.md` Step 7）。
