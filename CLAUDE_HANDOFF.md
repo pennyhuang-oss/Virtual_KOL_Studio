@@ -667,12 +667,36 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
     的通則，已記錄進 `DANCE_CLONE_SOP.md`
   - 成品：`kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4`
   - GitHub Issue #3 已同步標記完成
-- **R12–R18 這 7 支只完成分配，Step 1 都還沒開始**：
+- **R12（Coco Wu）Step 1–8 已全部完成（2026-08-08）**：
+  - 依使用者指示採批次流程：Step 1–2（下載/裁剪）與 Step 4（起始畫面）先跟 R13–R18 一起批次做完，
+    Step 3（Performance Sheet/Emotion Timeline）在進 Step 5 前補做
+  - Step 3 判定驅動片是「誇張可愛手勢展示」而非傳統編舞，跟 Coco 人設高度契合，不需阻斷級強度裁決；
+    最高風險點是 13s 頭部快速甩動造成的動態模糊，設計了降速 15-20%+眨眼掩護的因應方案
+  - Step 5 Motion Control、Step 8 QA（14 幀密集抽樣，涵蓋全部事前標記的高風險窗口）一次到位，未出現
+    重生成；13s 動態模糊窗口的降速+眨眼掩護設計證實有效
+  - 成品：`kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4`
+  - GitHub Issue #3 已同步標記完成
+- **R13–R18 這 6 支：Step 1–2、Step 4（起始畫面）已批次完成，Step 3/5–8 尚未開始**：
+  - 起始畫面使用者核准狀況：**R12 已核准**（見上，已完成全流程）；**R15、R18 已核准**（R15 有已知的
+    LOGO 文字亂碼小瑕疵，使用者明確表示「沒關係，就用這個去跑」，接受此瑕疵，不需重生成）；**R13 使用者
+    尚未明確表態**（批次核准訊息只點名 R15/R16/R17，未提及 R13，下一步應先確認 R13 是否核准，勿逕自視為
+    已核准）；**R16、R17 因 Luna Tanaka 的 soul_id 拼貼 bug 走完整條修復流程後已重新生成新版起始畫面，
+    已送使用者核准但尚未收到明確回覆**，見下一條
+  - **R16/R17（Luna Tanaka）soul_id 拼貼 bug 已修復**：舊 `soul_id`（`1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`）
+    對特定 prompt（尤其低胸/精品風格描述）有近乎 100% 重現的「三連拼貼」模型慣性（訓練資料疑似混入雜誌
+    型錄式多格照片），14 次不同措辭/長寬比/count 嘗試皆未能繞開。使用者**明確否決**兩個技術上可行的替代
+    方案：(1) 緊裁成大特寫迴避拼貼構圖——「跳舞誰要看臉部特寫啊？」；(2) 改用 `nano_banana_pro`+參考圖
+    （不需訓練 Soul）——因為會失去 `soul_id` 的身分/身材鎖定保證，且該模型生成的背景「一看就覺得像 AI」，
+    違反工作室對照 `COMPETITOR_sherry_digitalp510.md` 建立的真實感標準。**正確修復**：用她既有 7 張已核准
+    舊照片（不透過壞掉的舊 soul_id 生成新素材）重新訓練 Soul，新 `soul_id: a3dc13ec-16e7-4990-89c6-9e0461db46ef`
+    已寫入 `profile.json`，訓練耗時約 35-40 分鐘（明顯長於一般 KOL ~10 分鐘的常態），用相同曾失敗的 prompt
+    重新生成確認已解決。R16/R17 已用新 soul_id 生成新版起始畫面（Job ID `9e7ed1f4-c031-4545-b57d-3621f3659d7a`
+    / `ae5998e0-787e-4558-aa06-cf3eee1178a0`），詳見 `kols/luna-tanaka/generation_notes.md` 完整事件記錄
   - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
   - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
     不需要重新核對一次
-  - 流程照 `DANCE_CLONE_SOP.md` Method B 走：Step 2 裁切/H.264 → Step 3 兩個 director agent →
-    Step 4 起始畫面（**生成後停下來等核准，這是新規則**）→ Step 5 Motion Control → Step 6（視需要）混音 →
-    Step 7 授權檢查 → Step 8 QA → 寫 `generation_notes.md` → commit push → 更新 Issue #3
-- **已完成的 8+1 支影片（R1–R8、IG1）音軌都是驅動片原始配樂，未取得商用授權**，全部（含 R9–R18）做完後、
-  真正要對外發佈前，需統一處理配樂授權（見 `DANCE_CLONE_SOP.md` Step 7）。
+  - 流程照 `DANCE_CLONE_SOP.md` Method B 走：Step 3 兩個 director agent（批次流程下延後到 Step 5 前才補做）→
+    Step 5 Motion Control → Step 6（視需要）混音 → Step 7 授權檢查 → Step 8 QA → 寫 `generation_notes.md` →
+    commit push → 更新 Issue #3
+- **已完成的 9+1 支影片（R1–R9、R10、R11、R12、IG1）音軌都是驅動片原始配樂，未取得商用授權**，全部
+  （含 R13–R18）做完後、真正要對外發佈前，需統一處理配樂授權（見 `DANCE_CLONE_SOP.md` Step 7）。
