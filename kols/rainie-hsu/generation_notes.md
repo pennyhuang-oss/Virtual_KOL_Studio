@@ -822,4 +822,45 @@ Rainie Hsu（第2支，原 vicky-lin，因跟健身房人設無關改分配，�
   VIP 包廂場景（巴洛克金色壁紙、絨布扶手椅、地毯）
 - **⚠️ R10 教訓提醒**：此服裝有側邊鏤空設計，進 Step 5 Motion Control 若因此觸發 `nsfw` 判定，處理方式
   比照 R10——收窄或改為裝飾性綁帶疊在實心布料上
-- 依 `DANCE_CLONE_SOP.md` 人工核准關卡規則，生成後停在這裡等使用者核准，尚未進 Step 5
+- 依 `DANCE_CLONE_SOP.md` 人工核准關卡規則，生成後停在這裡等使用者核准——**已核准**
+
+### Step 3：Performance Sheet + Emotion Timeline（`performance-director` + `emotion-director` agent）
+
+- **⚠️ 身分風險預先標記（事後證實未發生）**：驅動片本人是齊肩短直髮，起始畫面是過腰長直髮，
+  performance-director 判定跟 R12 同一類髮型輪廓不匹配風險，風險集中在 5.5-6.5s 手指向上甩髮瞬間，
+  建議先做驗證測試或調整起始畫面。**使用者裁決：直接跑跑看，不預先修正**——結果見 Step 8，長髮身分
+  保住了，風險未實際發生
+- **驅動片定性**：7.2s 自信吐槽/手指指向手勢，非傳統編舞，力道走「presenter energy」，非全身律動
+- **次級動態載體**：長直髮（主力，過腰垂墜，正是起始畫面設計的長度）+ 金耳環（次要）
+- **不對稱錨點**：沿用 R5 已建立的「左嘴角先動、冷笑」
+- **框架建議**：emotion-director 建議收緊構圖到胸上景，因為這支驅動片幾乎全程是臉部/口語表演；本次
+  維持起始畫面既有的三分身構圖，記錄此建議供未來同款驅動片參考
+
+### Step 5：Motion Control（2026-08-08 完成）
+
+- `image_id`（R14 已核准起始畫面）+ `scene_control: image`、`resolution: 1080p`
+- Job ID `f46ef1a9-92f3-4a9e-b488-32eda821645d`，`status: completed`（一次通過）
+- 輸出：H.264、~7.2s，無聲軌
+
+### Step 6：手動混音
+
+混上 `driver_audio.m4a`，輸出 `rainie_dance_clone_r14_ig_reel.mp4`（H.264/AAC、~7.2s）。
+
+### Step 7：授權與發佈限制檢查
+
+同前例：驅動動作僅供內部驗證；配樂未取得商用授權；`scene_control: image` 未借用驅動片背景。
+
+### Step 8：QA 檢核
+
+抽取 1.0s、6.0s（Step 3 標記的最高風險窗口，5.5-6.5s 甩髮瞬間）幀直接跟已核准起始畫面並排比對：
+
+- [x] **身分一致，風險未成真**：兩幀的臉型、過腰長直髮皆與起始畫面吻合，未出現驅動片本人的短髮特徵——
+  事前標記的高風險窗口（甩髮瞬間）沒有觸發身分覆蓋
+- [x] **規格**：H.264/AAC、~7.2s
+
+**結論**：Step 1–8 完成，儘管 Step 3 標記了跟 R12 同類的身分風險，實際生成結果沒有發生，QA 通過。
+
+### 產出檔案
+
+- `kols/rainie-hsu/videos/dance_clone_r14/rainie_dance_clone_r14_ig_reel.mp4`（H.264/AAC、~7.2s，
+  含驅動片原始配樂音軌，未經授權，僅供內部驗證）

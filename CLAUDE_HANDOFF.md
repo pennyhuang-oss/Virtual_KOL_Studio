@@ -684,12 +684,23 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
     （Motion Control 身分覆蓋風險章節）
   - 最終成品：`kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4`（v2，已覆蓋 v1）
   - GitHub Issue #3 已同步標記完成
-- **R13–R18 這 6 支：Step 1–2、Step 4（起始畫面）已批次完成，Step 3/5–8 尚未開始**：
-  - 起始畫面使用者核准狀況：**R12 已核准**（見上，已完成全流程）；**R15、R18 已核准**（R15 有已知的
-    LOGO 文字亂碼小瑕疵，使用者明確表示「沒關係，就用這個去跑」，接受此瑕疵，不需重生成）；**R13 使用者
-    尚未明確表態**（批次核准訊息只點名 R15/R16/R17，未提及 R13，下一步應先確認 R13 是否核准，勿逕自視為
-    已核准）；**R16、R17 因 Luna Tanaka 的 soul_id 拼貼 bug 走完整條修復流程後已重新生成新版起始畫面，
-    已送使用者核准但尚未收到明確回覆**，見下一條
+- **R13–R18 這 6 支：Step 1–8 已全部完成（2026-08-08）**：
+  - 起始畫面全部核准（R13/R14/R16/R17 逐一補問後核准；R15/R18 先前已核准，R15 有已知 LOGO 文字亂碼
+    小瑕疵，使用者接受不需重生成）
+  - **Step 3 分析發現系統性髮型輪廓風險**：批次生成起始畫面時沒有逐支核對驅動片本人的髮型，結果
+    R14/R15/R16/R17/R18 五支全部被 performance-director agent 標記出跟 R12 同一類「起始畫面髮型
+    跟驅動片本人髮型輪廓不匹配」的身分覆蓋風險（R14：短髮 vs 長髮；R15：捲髮 vs 直髮；R16：短髮
+    包不出驅動片局部的包頭造型；R17：栗棕捲髮 vs 近黑直髮；R18：大波浪 vs 較直髮型）。使用者在看過
+    完整風險報告後明確裁決**「不用，就這樣直接去跑看看」**——不預先修正起始畫面，直接跑 Motion Control
+  - **結果：5 支風險全部沒有實際發生**，Step 8 QA 逐支跟已核准起始畫面圖檔並排比對，身分全數保住。
+    這說明 R12 的髮型輪廓不匹配不是每次都會導致身分覆蓋，只是升高風險，不是必然失敗——但仍建議
+    Step 4 設計起始畫面時盡量貼近驅動片髮型以降低風險，不應以本次結果當作可以忽略此風險的通則
+  - **R16/R17（Luna Tanaka）soul_id 拼貼 bug 修復後首次完整驗證**：新 `soul_id`（重訓練版）在
+    Motion Control 全流程中身分穩定，確認修復有效
+  - 成品：`kols/coco-wu/videos/dance_clone_r13/`、`kols/rainie-hsu/videos/dance_clone_r14/`、
+    `kols/iris-chen/videos/dance_clone_r15/`、`kols/luna-tanaka/videos/dance_clone_r16/`、
+    `kols/luna-tanaka/videos/dance_clone_r17/`、`kols/iris-chen/videos/dance_clone_r18/`
+  - GitHub Issue #3 已同步標記完成
   - **R16/R17（Luna Tanaka）soul_id 拼貼 bug 已修復**：舊 `soul_id`（`1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`）
     對特定 prompt（尤其低胸/精品風格描述）有近乎 100% 重現的「三連拼貼」模型慣性（訓練資料疑似混入雜誌
     型錄式多格照片），14 次不同措辭/長寬比/count 嘗試皆未能繞開。使用者**明確否決**兩個技術上可行的替代
@@ -700,11 +711,7 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
     已寫入 `profile.json`，訓練耗時約 35-40 分鐘（明顯長於一般 KOL ~10 分鐘的常態），用相同曾失敗的 prompt
     重新生成確認已解決。R16/R17 已用新 soul_id 生成新版起始畫面（Job ID `9e7ed1f4-c031-4545-b57d-3621f3659d7a`
     / `ae5998e0-787e-4558-aa06-cf3eee1178a0`），詳見 `kols/luna-tanaka/generation_notes.md` 完整事件記錄
-  - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
-  - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
-    不需要重新核對一次
-  - 流程照 `DANCE_CLONE_SOP.md` Method B 走：Step 3 兩個 director agent（批次流程下延後到 Step 5 前才補做）→
-    Step 5 Motion Control → Step 6（視需要）混音 → Step 7 授權檢查 → Step 8 QA → 寫 `generation_notes.md` →
-    commit push → 更新 Issue #3
-- **已完成的 9+1 支影片（R1–R9、R10、R11、R12、IG1）音軌都是驅動片原始配樂，未取得商用授權**，全部
-  （含 R13–R18）做完後、真正要對外發佈前，需統一處理配樂授權（見 `DANCE_CLONE_SOP.md` Step 7）。
+  - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3
+- **R1–R18 + IG1 全部 19 支已完成 Step 1–8**——R1–R18 driver-clone 批次到此全數做完
+- **所有已完成影片的音軌都是驅動片原始配樂，未取得商用授權**，真正要對外發佈前，需統一處理配樂授權
+  （見 `DANCE_CLONE_SOP.md` Step 7）

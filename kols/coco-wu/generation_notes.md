@@ -668,3 +668,45 @@ prompt/輸出不符）。
 - `kols/coco-wu/images/dance_clone_r12/start_frame.png`（v2 已核准起始畫面，已覆蓋 v1 舊版）
 - `kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4`（1072×1936、H.264/AAC、
   ~18.67s，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+## 2026-08-08 R13 舞蹈克隆完整跑完 Step 1–8
+
+### Step 3：Performance Sheet + Emotion Timeline（`performance-director` + `emotion-director` agent）
+
+- **驅動片定性**：6.1s 單一連續 hook，非傳統編舞——雙手拉雙馬尾→放開雙臂大張大笑→身體微傾靠牆收尾，
+  力道走「輕盈/彈性」register，非打點式
+- **次級動態載體**：雙馬尾本身（主力）+ 綁帶比基尼下身兩側綁繩尾端（次要）。起始畫面雙馬尾繫綁位置
+  略高於驅動片實際擺動弧線，agent 建議留意但判定不影響甩動物理的可信度
+- **不對稱錨點**：沿用 R4/R12 已建立的「右嘴角先動、左梨渦慢半拍」
+- **手部風險窗口**：0-1s 雙手抓握髮尾（手指數量高風險）、2-4s 手臂伸展近畫面邊緣（motion blur+入鏡/
+  出鏡風險），Step 8 需加密檢查
+
+### Step 5：Motion Control（2026-08-08 完成）
+
+- `image_id`（R13 已核准起始畫面）+ `scene_control: image`、`resolution: 1080p`
+- Job ID `d22579b7-368c-4eb1-a110-b2ed293ce31e`，`status: completed`（一次通過）
+- 輸出：1072×1936、H.264、~6.1s，無聲軌
+
+### Step 6：手動混音
+
+混上 `driver_audio.m4a`，輸出 `coco_dance_clone_r13_ig_reel.mp4`（H.264/AAC、~6.1s）。
+
+### Step 7：授權與發佈限制檢查
+
+同 R12 模式：驅動動作僅供內部驗證；配樂未取得商用授權，正式發佈前需替換；`scene_control: image`
+未借用驅動片背景。
+
+### Step 8：QA 檢核
+
+抽取 3.0s 幀（雙臂大張手勢高峰，Step 3 標記的最高風險窗口之一）直接跟已核准起始畫面並排比對：
+
+- [x] **身分一致**：臉型、雙馬尾髮型皆與起始畫面吻合，未出現驅動片本人特徵
+- [x] **手部整體無崩壞**：抓髮、伸展手勢的手指數量正常
+- [x] **規格**：1072×1936、H.264/AAC、~6.1s
+
+**結論**：Step 1–8 一次到位，身分保真度通過，QA 全數通過。
+
+### 產出檔案
+
+- `kols/coco-wu/videos/dance_clone_r13/coco_dance_clone_r13_ig_reel.mp4`（1072×1936、H.264/AAC、
+  ~6.1s，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
