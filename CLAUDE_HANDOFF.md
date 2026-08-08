@@ -667,14 +667,22 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
     的通則，已記錄進 `DANCE_CLONE_SOP.md`
   - 成品：`kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4`
   - GitHub Issue #3 已同步標記完成
-- **R12（Coco Wu）Step 1–8 已全部完成（2026-08-08）**：
+- **R12（Coco Wu）Step 1–8 已全部完成，含一次身分跑掉的重大修正（2026-08-08）**：
   - 依使用者指示採批次流程：Step 1–2（下載/裁剪）與 Step 4（起始畫面）先跟 R13–R18 一起批次做完，
     Step 3（Performance Sheet/Emotion Timeline）在進 Step 5 前補做
   - Step 3 判定驅動片是「誇張可愛手勢展示」而非傳統編舞，跟 Coco 人設高度契合，不需阻斷級強度裁決；
     最高風險點是 13s 頭部快速甩動造成的動態模糊，設計了降速 15-20%+眨眼掩護的因應方案
-  - Step 5 Motion Control、Step 8 QA（14 幀密集抽樣，涵蓋全部事前標記的高風險窗口）一次到位，未出現
-    重生成；13s 動態模糊窗口的降速+眨眼掩護設計證實有效
-  - 成品：`kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4`
+  - **v1 成品經使用者目視發現「臉完全變不一樣」**：根因是 Motion Control 的臉部/髮型鎖定完全依賴
+    `image_id` 參考錨點（無 `soul_id` 等級的強制鎖定），v1 起始畫面的髮型輪廓（單馬尾+散髮）跟驅動片
+    本人實際的雙馬尾差異太大，模型合成雙馬尾甩動動態時借用了驅動片本人的臉/髮型頂替。QA 當時誤判身分
+    一致，是因為只憑 Step 3 筆記文字核對、沒有用 Read 工具跟起始畫面圖檔本身並排比對——**已列入教訓，
+    往後 Step 8 一律要圖檔對圖檔核對**。曾評估改用 Seedance 2.0 Mini 取代 Motion Control（理論上身分
+    鎖定更獨立），`get_cost` preflight 顯示完整規格下比 Motion Control 便宜（37.5 vs 49 credit），但
+    5 秒短版測試判定 `nsfw` 失敗（12.5 credit 已退款），使用者裁決暫緩、改回正規修復路徑：重新生成
+    髮型輪廓正確貼合驅動片的 v2 起始畫面，用同一支驅動片重跑 Motion Control 後身分穩定，QA 14 幀
+    全數通過。完整事件記錄見 `kols/coco-wu/generation_notes.md`，通則已寫入 `DANCE_CLONE_SOP.md`
+    （Motion Control 身分覆蓋風險章節）
+  - 最終成品：`kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4`（v2，已覆蓋 v1）
   - GitHub Issue #3 已同步標記完成
 - **R13–R18 這 6 支：Step 1–2、Step 4（起始畫面）已批次完成，Step 3/5–8 尚未開始**：
   - 起始畫面使用者核准狀況：**R12 已核准**（見上，已完成全流程）；**R15、R18 已核准**（R15 有已知的

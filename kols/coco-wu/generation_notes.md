@@ -601,11 +601,70 @@ H.264/AAC、~18.67s，含視訊+音訊雙軌，已用 `ffprobe` 確認）。
 - [x] **背景穩定**：宿舍走廊素色牆場景全程一致，無鬼影閃爍
 - [x] **規格**：1072×1936、H.264/AAC、~18.67s，音樂已對齊長度
 
-**結論**：Step 1–8 一次到位，未發生像 R8/R10 那樣需要重生成的環節。事前標記的最高風險點（13s 動態
-模糊窗口）QA 通過，證明 Step 3 的降速+眨眼掩護設計奏效。
+**結論（已撤銷，見下方 2026-08-08 修正記錄）**：~~Step 1–8 一次到位，未發生像 R8/R10 那樣需要重生成的
+環節。~~ 上面「身分一致」這條判定是錯的——QA 當時是憑 Step 3 筆記裡「雙馬尾」的既有假設去核對，沒有
+真的把輸出幀跟 v1 起始畫面圖檔並排比對，因此沒發現實際身分已經跑掉。詳見下方修正記錄。
+
+### 2026-08-08 修正記錄：身分跑掉（v1）→ 根因分析 → 重新生成（v2）
+
+**問題發現**：使用者直接看過成品後回報「Coco 的臉完全變不一樣了」。重新把 v1 成品幀跟已核准的 v1
+起始畫面（`kols/coco-wu/images/dance_clone_r12/start_frame.png` 舊版）並排比對，確認**臉型、五官、
+髮型全部跑掉**——v1 起始畫面實際上是單側高馬尾+另一側自然捲髮垂落（鵝蛋臉、成熟五官），但成品全程
+是對稱雙馬尾、圓臉大眼的完全不同長相。
+
+**根因**：把驅動片原始幀（`frame_start.png`／`frame_mid.png`）跟 v1 起始畫面、v1 成品三者並排比對後
+確認：**驅動片本人正好就是雙馬尾+圓臉大眼**，Motion Control 在合成雙馬尾大幅甩動的畫面時，因為
+`image_id` 參考錨點的髮型輪廓（單馬尾+散髮）跟驅動片實際需要的動態對不上，退回去借用了驅動片本人的
+臉部/髮型，而非鎖住起始畫面的身分。這也回應了 `CLAUDE_HANDOFF.md` 既有的記錄——Motion Control 的臉部
+鎖定完全依賴 `image_id` 這個參考錨點本身，沒有像 `soul_id` 那樣的強制鎖定機制，錨點跟驅動片動態需求
+差異太大時可能被覆蓋。
+
+**額外發現（Step 4 v1 的 prompt/輸出落差）**：回查 v1 起始畫面的原始 prompt，其實已經寫了
+`dark brown hair in twin tails with wispy bangs`（雙馬尾），但 Soul V2 實際渲染出來的是單馬尾+散髮，
+跟 prompt 不符。這個落差在 Step 4 核准與 Step 8 QA 兩關都沒被抓到，是本次事故的間接成因之一。
+
+**繞路嘗試（使用者否決）**：一度考慮改用 Seedance 2.0 Mini（支援 `image_references`+`video_references`
+雙輸入，理論上身分鎖定應該比 Motion Control 穩）取代 Motion Control，並用 `get_cost` 查證了完整規格
+下的實際 credit（Seedance 2.0 標準版 135、Wan 3.0 82.5、MiniMax H3 60、Seedance 2.0 Mini 37.5，對照
+Motion Control 49）。5 秒短版測試（12.5 credit，`get_cost` preflight 確認）拿同一張 v1 起始畫面+驅動片
+片段送出後判定 `nsfw` 失敗（12.5 credit 全額退款，零成本），推測 Seedance 2.0 Mini 對比基尼類服裝的
+審核門檻比 Motion Control 嚴格，在目前以性感風格為主的內容產線上可能是結構性障礙。使用者裁決暫緩深入
+測試，改回正規修復路徑。
+
+**正確修復**：重新生成 v2 起始畫面，沿用完全相同的 `soul_id`/服裝/場景/pose，只把髮型 prompt 從原本
+沒有正確渲染的「twin tails」改寫得更明確（`two symmetrical pigtails, one tied on each side...clear
+center parting`），這次正確渲染出雙馬尾，五官身分與 v1 起始畫面一致。v2 起始畫面經使用者核准
+（Job ID `d4cab86d-82de-462a-b2e3-65cbd6fc5556`）後，用同一支驅動片重新跑 Motion Control。
+
+### Step 5 v2：Motion Control（2026-08-08 重新生成）
+
+- `image_id: d4cab86d-82de-462a-b2e3-65cbd6fc5556`（v2 雙馬尾起始畫面）+ `motion_video_id`
+  （驅動片重新上傳，`media_id: bde01475-9707-460c-93d9-456ff2556fc8`）+ `scene_control: image`、
+  `resolution: 1080p`
+- Job ID `a5a645b9-e604-4be4-8b43-ef3990bd7765`，`status: completed`（一次通過）
+- 輸出：`motion_output_v2.mp4`，1072×1936、H.264、~18.67s，同樣無聲軌
+
+### Step 6 v2：手動混音
+
+同 Step 6 流程，混上 `driver_audio.m4a`，輸出覆蓋 `coco_dance_clone_r12_ig_reel.mp4`
+（1072×1936、H.264/AAC、~18.67s）。
+
+### Step 8 v2：QA 檢核（已用 Read 工具跟 v2 起始畫面圖檔直接並排比對，非憑筆記假設）
+
+依同一組 14 個時間點（1.0/3.8/4.9/5.0/9.0/10.4/11.8/12.8/13.0/13.3/13.5/17.0/17.8/18.5s）重新抽幀：
+
+- [x] **身分一致（本次真正用 v2 起始畫面圖檔核對，非憑印象）**：14 幀全部雙馬尾、臉型、五官皆與 v2
+  起始畫面一致，未再出現驅動片本人臉部/髮型的痕跡
+- [x] **表情變化、13s 動態模糊窗口、3.8-4.9s／9.0-12.4s 過渡段、17.0-18.7s 收尾**：結論同 v1 QA 記錄
+  （皆通過，設計有效），此處不重複
+- [x] **手部、背景、規格**：同 v1 QA 記錄，皆通過
+
+**結論**：v2 修復確認成功。**教訓記錄**：Step 8 QA 一律要用 Read 工具把輸出幀跟起始畫面「圖檔」本身
+並排比對，不能依賴 Step 3/4 筆記裡對外觀的文字描述——文字描述可能跟實際生成的圖片有落差（如本例的
+prompt/輸出不符）。
 
 ### 產出檔案
 
-- `kols/coco-wu/images/dance_clone_r12/start_frame.png`（已核准起始畫面）
+- `kols/coco-wu/images/dance_clone_r12/start_frame.png`（v2 已核准起始畫面，已覆蓋 v1 舊版）
 - `kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4`（1072×1936、H.264/AAC、
   ~18.67s，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
