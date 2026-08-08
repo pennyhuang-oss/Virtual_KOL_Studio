@@ -37,7 +37,7 @@
 | ID | 名字 | 城市 | 定位 | Soul ID | 狀態 |
 |----|------|------|------|---------|------|
 | [iris-chen](kols/iris-chen/) | **Iris Chen** 陳芯語 | 台北 | 台北 IT Girl / 生活風格 | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | active |
-| [luna-tanaka](kols/luna-tanaka/) | **Luna Tanaka** 田中ひな | 京都 | 日系美學 / 生活攝影 | `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a` | active |
+| [luna-tanaka](kols/luna-tanaka/) | **Luna Tanaka** 田中ひな | 京都 | 日系美學 / 生活攝影 | `a3dc13ec-16e7-4990-89c6-9e0461db46ef` | active |
 | [ananya-kapoor](kols/ananya-kapoor/) | **Ananya Kapoor** | 孟買 | 瑜伽 / 舞蹈 / 生活 | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | active |
 | [yuna-kim](kols/yuna-kim/) | **Yuna Kim** 김하은 | 首爾 | K-beauty / 彩妝 / 生活 | `235794a5-2eff-45fb-91b4-3232910afefa` | active |
 | [aaliya-okonkwo](kols/aaliya-okonkwo/) | **Aaliya Rivera** | 洛杉磯 | 拉丁裔 LA 生活 / 穿搭 | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | active |

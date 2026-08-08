@@ -2,9 +2,14 @@
 
 ## Soul Training
 
-- **Soul ID**: `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`
+- **Soul ID (current, active)**: `a3dc13ec-16e7-4990-89c6-9e0461db46ef` — retrained 2026-08-08, see
+  the "soul_id 拼貼 bug" incident section below for why. **Use this ID for all new generations.**
+- **Soul ID (deprecated, do NOT use)**: `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a` — original training
+  from 2026-06-29, below. Kept only for historical reference; produces a reliable "triptych" collage
+  bug on Step 4 start-frame generation. The Higgsfield platform has no soul/character deletion API,
+  so this ID cannot be removed server-side — it is dead and must not be reused.
 - **Model**: `soul_2`
-- **Status**: Training initiated 2026-06-29
+- **Original training status**: Training initiated 2026-06-29
 - **Training images** (8 total):
   - 4 face reference images from `images/face_reference/` (ref_01 through ref_04)
   - 4 body-correct images from Higgsfield (童顏巨乳 body type, wrong clothes but correct face+figure):
