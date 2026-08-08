@@ -656,7 +656,18 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
     要求仍滿足
   - 成品：`kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4`，QA 全數通過
   - GitHub Issue #3 已同步標記完成
-- **R11–R18 這 8 支只完成分配，Step 1 都還沒開始**：
+- **R11（Sophia Tseng）Step 1–8 已全部完成（2026-08-08）**：
+  - 驅動片本身表情近乎靜止（將近 5 秒維持同一表情），Performance/Emotion Sheet 事前評估這是本批次面具臉
+    風險最高的一支，需要 emotion-director 主動設計獨立於手勢動作之外的微表情演變
+  - 實際生成結果的表情漸進變化優於事前擔心的程度，QA 全數通過，Step 1–8 一次到位，未發生像 R10 那樣
+    需要重生成的環節
+  - 場景改定位在 Pilates 工作室更衣室（呼應 Sophia 既有健身/Pilates 支柱），加了一件敞開罩衫當次級動態
+    載體（比基尼+運動長褲本身沒有垂墜元素）
+  - 過程中使用者發現 R10 成品裡化妝鏡反射會隨動作變化，確認是模型對鏡子的強訓練關聯性、非一般背景動態
+    的通則，已記錄進 `DANCE_CLONE_SOP.md`
+  - 成品：`kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4`
+  - GitHub Issue #3 已同步標記完成
+- **R12–R18 這 7 支只完成分配，Step 1 都還沒開始**：
   - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
   - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
     不需要重新核對一次
