@@ -636,14 +636,16 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
 
 ### 待辦（下一個 session 或下一輪對話接續）
 
-- **R9（Sophia Tseng）Step 4 起始畫面已核准，Step 5 尚未執行**：
+- **R9（Sophia Tseng）Step 1–4 已完成，卡在 Step 5 前的一個表演強度裁決點（2026-08-08 更新）**：
   - `kols/sophia-tseng/images/dance_clone_r9/start_frame.png`（已核准），job_id `1b43fa58-1900-4b52-87aa-9e99eb14993f`
-  - 驅動片：R9 對應的 IG shortcode `DB2yTeEv7LG`（奶油色皺褶蝴蝶結比基尼、居家手勢舞、越南歌曲 remix），
-    取得方式見上表（Drive file ID `1CxjE-0H2nXyAH8E5QVX8REVBiS9H0Pqz`）
-  - 尚未執行：Step 2（裁切+確認 H.264 編碼，目前只做過抽幀分析，沒有正式輸出 `driver_cropped.mp4`）、
-    Step 3（沒有正式跑 `performance-director`/`emotion-director`，起始畫面的服裝/場景是這次直接判斷決定的，
-    跳過了正式的 Performance Sheet/Emotion Timeline 產出——建議在跑 Step 5 前補做，或至少在 Step 8 QA 時多留意
-    次級動態/表情變化）、Step 5–8 全部未執行
+  - Step 2 已補做：原始驅動片畫面含 CapCut 編輯 App UI 圖示（跟 Sophia R8、Mia Huang R1 同類狀況），已裁掉並排除、
+    確認 VP9→H.264 重編碼，`driver_cropped.mp4`（786×1396，本機工作資料夾，未進 git）
+  - Step 3 已補做：`performance-director`/`emotion-director` 出了完整 Performance Sheet/Emotion Timeline，
+    詳見 `kols/sophia-tseng/generation_notes.md` R9 章節。新建了 Sophia 的不對稱識別錨點（右嘴角先動）、
+    識別痣呈現指令（頭傾方向偏右）、5–7s 防面具設計
+  - **卡住的點**：驅動片 4.0s 是「雙手舉高撥髮+張嘴大笑+身體晃動」，跟 Sophia「沉靜克制」人設基調落差最大，
+    兩位 agent 都判定這是需要使用者裁決的阻斷級風險，不宜逕行決定——方案A比照R8保留原強度／方案B收斂為
+    輕笑瞇眼版本，詳見 `generation_notes.md`「待裁決事項」。**使用者裁決後才能執行 Step 5–8**
 - **R10–R18 這 9 支只完成分配，Step 1 都還沒開始**：
   - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
   - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
