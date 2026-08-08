@@ -504,7 +504,7 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 
 ---
 
-## 2026-08-07～08-08 R9 舞蹈克隆 — Step 1–4 完成，Step 5 待使用者裁決一個表演強度決策點
+## 2026-08-07～08-08 R9 舞蹈克隆完整跑完 Step 1–8（動作驅動複製法 Method B）
 
 **背景**：舞蹈批次分配（見 `DANCE_CLONE_SOP.md`、GitHub Issue #3 2026-08-07 補充4）R9 分配給 Sophia Tseng。驅動片：`https://www.instagram.com/reel/DB2yTeEv7LG/`（奶油色皺褶蝴蝶結緞面比基尼、居家手勢/身體展示型動作、越南歌曲「2 Phút Hơn」remix，室內奶油色牆面+木地板+深灰沙發）。
 
@@ -540,6 +540,8 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 
 肢體骨架（雙手舉高撥髮）兩案都不變，差別只在臉部表情強度。
 
+**使用者裁決（2026-08-08）：採方案 A，保留原始強度**——張嘴大笑、身體晃動照原始骨架與情緒強度轉印，不收斂。跟 R8 同一類決策模式，記錄為使用者核准的設計選擇。生成後仍要照 Step 3 標記的條件式阻斷項檢查 4.0s 手指/寬袖是否崩壞。
+
 ### Step 4：起始畫面
 
 - 模型：`soul_2` + `soul_id: 192562bb-ca64-4615-9515-13d34807857c`
@@ -548,11 +550,42 @@ high dynamic range, natural color grading — NOT degraded, dim, or muddy
 - **第一次生成**：`start_frame.png`，五官/身材與 soul_id 錨定一致，服裝符合上述調整方向，場景/光線/表情皆貼合人設。**已核准**（使用者確認左眼尾小痣辨識度清楚、服裝調整方向可接受，2026-08-08 再次向使用者確認核准狀態時複核一致）
 - Job ID：`1b43fa58-1900-4b52-87aa-9e99eb14993f`
 
-### Step 5（待使用者裁決 4.0s 表演強度後執行，見上方「待裁決事項」）
+### Step 5：Motion Control（2026-08-08 完成）
 
-Step 4 起始畫面已核准，`driver_cropped.mp4`（H.264）與 Performance Sheet／Emotion Timeline 皆已備妥，唯一卡住的是 4.0s 表演強度的方案 A/B 選擇——這會影響生成 prompt 的措辭，需先有結論再送 Motion Control，避免生成出不符期待的版本浪費 credit。
+- 驅動片 `driver_cropped.mp4` 上傳確認，`media_id: f91e0b92-21e1-4779-bb14-80491b7c9565`
+- `image_id`: `1b43fa58-1900-4b52-87aa-9e99eb14993f`（Step 4 起始畫面 job，直接沿用不需重新上傳）
+- `scene_control`: `image`（Sophia 自己生成的信義區公寓落地窗場景），`resolution`: `1080p`
+- 輸出：`1072×1936`、30fps、~8.1s，Job ID `dc913bfb-ba8e-45c7-b7e7-795f63c41a0b`
+- **輸出本身無聲**（`ffprobe` 確認只有一條 h264 視訊流，同 R8），需要 Step 6 手動混音
+
+### Step 6：手動混音
+
+用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 把 Step 2 抽出的 `driver_audio.m4a`（驅動片原始配樂「2 Phút Hơn」remix，未裁切偏移，起點對齊 0s）蓋上 Kling 輸出的無聲畫面，輸出 `sophia_dance_clone_r9_ig_reel.mp4`（1072×1936、30fps、~8.1s，含視訊+音訊雙軌，已用 `ffprobe` 確認）。
+
+### Step 7：授權與發佈限制檢查
+
+- **驅動動作**：來自第三方 Instagram 創作者（shortcode `DB2yTeEv7LG`），本次生成僅供內部方法驗證；若要對外發佈，需評估重現程度是否需要致敬標註或改編到不可辨識
+- **配樂**：混音使用的是驅動片原始配樂（越南歌曲「2 Phút Hơn」remix），**未取得商用授權**，正式發佈前必須替換為已授權/可商用曲庫版本，並重新對拍
+- **背景**：`scene_control` 選用 `image`，未借用驅動片真實居家背景，不涉及第三方場景可辨識性問題
+- **素材存放**：驅動片原始檔（`driver_raw.mp4`、`driver_cropped.mp4`、`driver_audio.m4a`）僅存在本機工作資料夾，未存入本 repo
+
+### Step 8：QA 檢核（已用 Read 工具目視抽幀比對，非假設）
+
+抽樣 0.5s / 2.0s / 3.0s / 4.0s / 4.05s / 4.15s / 4.3s / 5.0s / 6.0s / 7.0s / 7.2s / 8.0s 共 12 個時間點：
+
+- [x] **身分一致**：全程可清楚辨認短棕 bob、五官輪廓，跟起始畫面的錨定身分一致，多個抽樣幀交叉比對未觀察到臉型結構漂移
+- [x] **微表情有變化，通過面具臉檢查**：5.0s（抿嘴+手扶鎖骨）、6.0s（自信抿笑+側身）、7.0s（笑容加深+露齒）三個原本風險最高的連續姿勢，實際抽幀確認頭部角度、嘴型開合度、眼神焦點皆有可辨識差異，不是同一張臉套三個手勢
+- [x] **次級動態載體有效**：敞開罩衫外袍的寬版垂墜袖在 4.0s 高動態時刻有明顯的甩動/飄動殘影，頭髮也隨動作自然擺動，5–7s 相對靜止段落外袍下緣仍有隨呼吸的微幅飄動，未觀察到「同步靜止」
+- [x] **手部整體無明顯崩壞**（4.0s/4.05s/4.15s 雙手同時舉高撥髮的高風險動作，2.0s 雙手交疊繫帶動作，抽樣檢視皆未發現手指數量/形狀異常）
+- [x] **肩帶穩定性**：4.0s 身體晃動下細肩帶未見滑落或版型跑位，剪裁維持穩定
+- [x] **背景穩定**：信義區公寓落地窗城市夜景全程一致，無鬼影閃爍，未出現驅動片場景殘留
+- [x] **規格**：1072×1936、30fps、音樂已對齊長度（~8.1s）
+- [x] **表演強度**：4.0s 張嘴大笑+身體晃動維持驅動片原始強度，符合使用者方案 A 裁決
+
+**結論**：Step 1–8 一次到位，未發生像 R8 那樣需要重生成的環節。QA 檢核全數通過，包含 Performance Sheet／Emotion Timeline 事前標記的高風險項目（4.0s 手部/寬袖崩壞、5–7s 次級動態不足、面具臉風險）皆未在實際生成結果中出現。表演強度依使用者裁決採方案 A（保留原始強度），與 R8 同一類決策模式。
 
 ### 產出檔案
 
 - `kols/sophia-tseng/images/dance_clone_r9/start_frame.png`（已核准起始畫面）
+- `kols/sophia-tseng/videos/dance_clone_r9/sophia_dance_clone_r9_ig_reel.mp4`（1072×1936、30fps、~8.1s，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
 - 本機工作資料夾（未進 git）：`driver_raw.mp4`（VP9 原始檔）、`driver_cropped.mp4`（786×1396、H.264、~8.12s，已去除編輯 App UI）、`driver_audio.m4a`（原始配樂音軌）

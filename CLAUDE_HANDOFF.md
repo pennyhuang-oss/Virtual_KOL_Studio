@@ -636,16 +636,16 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
 
 ### 待辦（下一個 session 或下一輪對話接續）
 
-- **R9（Sophia Tseng）Step 1–4 已完成，卡在 Step 5 前的一個表演強度裁決點（2026-08-08 更新）**：
-  - `kols/sophia-tseng/images/dance_clone_r9/start_frame.png`（已核准），job_id `1b43fa58-1900-4b52-87aa-9e99eb14993f`
-  - Step 2 已補做：原始驅動片畫面含 CapCut 編輯 App UI 圖示（跟 Sophia R8、Mia Huang R1 同類狀況），已裁掉並排除、
-    確認 VP9→H.264 重編碼，`driver_cropped.mp4`（786×1396，本機工作資料夾，未進 git）
-  - Step 3 已補做：`performance-director`/`emotion-director` 出了完整 Performance Sheet/Emotion Timeline，
-    詳見 `kols/sophia-tseng/generation_notes.md` R9 章節。新建了 Sophia 的不對稱識別錨點（右嘴角先動）、
+- **R9（Sophia Tseng）Step 1–8 已全部完成（2026-08-08）**：
+  - 原始驅動片畫面含 CapCut 編輯 App UI 圖示（跟 R8、Mia Huang R1 同類狀況），已裁掉並排除、確認 VP9→H.264 重編碼
+  - `performance-director`/`emotion-director` 出了完整 Performance Sheet/Emotion Timeline（詳見
+    `kols/sophia-tseng/generation_notes.md` R9 章節），新建了 Sophia 的不對稱識別錨點（右嘴角先動）、
     識別痣呈現指令（頭傾方向偏右）、5–7s 防面具設計
-  - **卡住的點**：驅動片 4.0s 是「雙手舉高撥髮+張嘴大笑+身體晃動」，跟 Sophia「沉靜克制」人設基調落差最大，
-    兩位 agent 都判定這是需要使用者裁決的阻斷級風險，不宜逕行決定——方案A比照R8保留原強度／方案B收斂為
-    輕笑瞇眼版本，詳見 `generation_notes.md`「待裁決事項」。**使用者裁決後才能執行 Step 5–8**
+  - 兩位 agent 都把驅動片 4.0s「雙手舉高撥髮+張嘴大笑+身體晃動」標成需使用者裁決的阻斷級風險（跟 Sophia
+    「沉靜克制」人設基調落差最大）——**使用者裁決採方案A，比照 R8 保留原始強度**
+  - Step 5 Motion Control、Step 6 混音、Step 8 QA 一次到位，未出現重生成，QA 全數通過（身分一致、次級動態、
+    面具臉、手部、肩帶穩定性皆合格）。成品：`kols/sophia-tseng/videos/dance_clone_r9/sophia_dance_clone_r9_ig_reel.mp4`
+  - GitHub Issue #3 已同步標記完成
 - **R10–R18 這 9 支只完成分配，Step 1 都還沒開始**：
   - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
   - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
