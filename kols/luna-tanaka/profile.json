@@ -40,11 +40,12 @@
         "body_ratio_note": "腰臀比約0.64，腿長佔身高46.5%，童顏巨乳的反差比例"
       },
       "ai_generation": {
-        "soul_id": "1bfab2ce-cfa5-4026-93fa-e5c91b469c7a",
+        "soul_id": "a3dc13ec-16e7-4990-89c6-9e0461db46ef",
         "model": "soul_2",
         "platform": "Higgsfield",
         "status": "ready",
-        "trained_at": "2026-06-29"
+        "trained_at": "2026-08-08",
+        "note": "v2 重新訓練，取代舊 soul_id `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`——舊版對某些 prompt（尤其低胸洋裝/精品風格描述）有穩定重現的「三連拼貼」模型慣性（訓練資料疑似混入雜誌型錄式多格照片），14 次不同措辭/長寬比/count 嘗試皆未能繞開，改用她既有 7 張已核准舊照片（不透過壞掉的舊 soul_id 生成新素材）重新訓練後解決，測試確認身分一致性維持良好。舊 soul_id 保留不刪除（工具無刪除功能，且可作為備援對照）。"
       }
     }
   },
