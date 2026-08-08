@@ -708,9 +708,27 @@ mia-huang，因尺度超出 Mia 上限改分配）。驅動片：IG shortcode `D
   推論生成）
 - **`scene_control` 選用 `image`**：保留 Rainie 自己生成的飯店房間場景
 
-### Step 4（待生成）
+### Step 4：起始畫面（已核准，實際生成結果跟計畫略有出入）
 
-依上方 performance-director 標記的阻斷級提醒，起始畫面生成後要先目視確認領口/肩線垂墜在框內清楚可見，
-核准後才能進 Step 5。另外參考 R5 案例的已知限制：這個 soul_id 對「眼線甩尾+唇色飽和」有模型慣性，過去
-需要負面詞加強仍未必能完全壓下，如果本次生成也出現同樣現象，比照 R5 先例處理（告知使用者是已知限制，
-不是新問題）。
+- 模型：`soul_2` + `soul_id: a4a000fe-fd96-4c36-97ff-0df9358a9b47`，Job ID `5d9d0e55-9ed0-4f33-9da8-1c2ca4df6351`
+- 實際生成結果不是計畫中的「泳裝+另一件敞開絲質罩袍」兩層，而是讀起來像**一件整合式的深V挖空連身裝**
+  （交叉繫帶領口、腰間交叉鏤空到接近肚臍），兩側肩膀/手臂有黑色垂墜布料，次級動態載體（R1）仍然到位，
+  只是不是分開的兩件式——已告知使用者這個落差，**使用者核准可以使用**，不需要重生成
+- 頭髮：soul_id 錨定的是她本人既有的長直髮，蓋過了 prompt 裡誤寫的「bob-length」描述——這是 soul_id
+  正確覆寫了我方 prompt 的錯誤措辭，不是缺陷（Rainie 本人是長直髮，R5 案例已有此說明）
+
+### Step 5：Motion Control（首兩次皆為 `nsfw`，需調整服裝後重跑）
+
+- 驅動片 `driver_cropped.mp4` 上傳確認，`media_id: 7d2f676d-e9ff-439f-8c27-2b874dda686e`
+- `image_id`: `5d9d0e55-9ed0-4f33-9da8-1c2ca4df6351`，`scene_control: image`，`resolution: 1080p`
+- **第一次呼叫**（Job `8e1a59c9-495a-4b30-9750-b9d5ef91af04`）：`status: nsfw`
+- **第二次呼叫**（原樣重試，排除隨機性）（Job `359f8f40-9f64-4114-9dca-da92ab1dcb72`）：同樣 `status: nsfw`，
+  確認不是模型隨機性，是內容審核穩定判定為不通過（兩次皆無扣款，比照 R6/R7 `scene_control:video` 失敗
+  案例的零成本模式）
+- **根因判斷**：對照 `DANCE_VIDEO_SOP.md`「常見問題排除」表格既有記錄——「start_image revealing 服裝 →
+  status: failed，模型對 start_image 做像素層級內容審核，belly dance/crop top midriff 被過濾，修正做法：
+  start_image 只用保守服裝（tank top/bodycon dress 全覆蓋款）」。本次起始畫面的腰間交叉鏤空一路開到接近
+  肚臍，加上驅動片本身有身體動態（非靜態擺拍），判斷是同一類「胸腹部裸露範圍+動態」觸發審核的結構性問題，
+  只是這次系統回傳的是 `nsfw` 標記而非 `failed`，根因判斷相同
+- **下一步**：需要重新生成一版起始畫面，把腰間鏤空範圍收窄（不開到肚臍），維持深V胸口設計但關閉腰腹部
+  的鏤空缺口，符合 SOP 既有的「start_image 只用保守服裝」修正原則，待使用者確認調整方向後重跑 Step 4
