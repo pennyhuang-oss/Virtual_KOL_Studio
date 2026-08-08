@@ -646,7 +646,17 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
   - Step 5 Motion Control、Step 6 混音、Step 8 QA 一次到位，未出現重生成，QA 全數通過（身分一致、次級動態、
     面具臉、手部、肩帶穩定性皆合格）。成品：`kols/sophia-tseng/videos/dance_clone_r9/sophia_dance_clone_r9_ig_reel.mp4`
   - GitHub Issue #3 已同步標記完成
-- **R10–R18 這 9 支只完成分配，Step 1 都還沒開始**：
+- **R10（Rainie Hsu）Step 1–8 已全部完成（2026-08-08）**：
+  - 起始畫面第一版腰腹部鏤空範圍過大，Motion Control 連續兩次判定 `nsfw`（零成本），對照
+    `DANCE_VIDEO_SOP.md` 既有的「start_image 只用保守服裝」修正原則，改用保留視覺辨識度但腰腹部完整
+    包覆的 v2 版本後一次通過
+  - Performance Sheet／Emotion Timeline 判斷這支驅動片的外放大笑跟 Rainie「張揚自信」人設契合，
+    沒有像 R9 Sophia 那樣的阻斷級強度裁決
+  - 次級動態載體從計畫的敞開絲質罩袍，變成實際生成裡由長髮承擔（罩袍效果未明顯呈現），QA 判定技術
+    要求仍滿足
+  - 成品：`kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4`，QA 全數通過
+  - GitHub Issue #3 已同步標記完成
+- **R11–R18 這 8 支只完成分配，Step 1 都還沒開始**：
   - 原始影片取得方式見上表（Drive file ID + `curl` 下載指令），不需要再問使用者要檔案
   - 分配結果、每支的內容摘要與改分配理由，都已經寫在 GitHub Issue #3，新 session 可以直接讀 Issue #3 銜接，
     不需要重新核對一次
