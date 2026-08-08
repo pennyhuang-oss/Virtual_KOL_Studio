@@ -800,3 +800,26 @@ mia-huang，因尺度超出 Mia 上限改分配）。驅動片：IG shortcode `D
 - `kols/rainie-hsu/images/dance_clone_r10/start_frame_v2.png`（v2，已核准，實際用於 Motion Control 的版本）
 - `kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4`（1072×1936、30fps、~9.33s，
   含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-08 R14 舞蹈克隆 — Step 1–4 完成，Step 5 待生成
+
+**背景**：R14（IG shortcode `DNhxC7xJQqx`，Drive file ID `1f-tSBCjKoNIMP-pJkoisialzboMcmT0x`）分配給
+Rainie Hsu（第2支，原 vicky-lin，因跟健身房人設無關改分配，見 Issue #3 2026-08-07 補充4）。這次是批次
+處理 R12–R18，**跳過了逐支的 Performance Sheet/Emotion Timeline（Step 3）**，會在進 Step 5 前補做。
+
+### Step 1–2：下載與裁剪
+
+- 884×1572、VP9、~7.2s，含編輯 App UI（右側工具列+頂部「Ba-ra-bam」音樂列），已裁除（裁至 700×1426），
+  轉 H.264，音軌另存
+- 內容核對：黑色深V連身泳裝+側邊綁帶鏤空、華麗宮廷風房間（金色巴洛克花紋壁牆），符合分配描述
+
+### Step 4：起始畫面（已生成，待使用者核准）
+
+- 模型：`soul_2` + `soul_id: a4a000fe-fd96-4c36-97ff-0df9358a9b47`，Job ID `909004de-5ef8-44c5-815b-3f5df1e99180`
+- 黑色深V一件式泳裝，側邊僅腰際處有小範圍綁帶鏤空（比 R10 v1 小很多，鏤空侷限在腰側，不是整片開到肚臍），
+  VIP 包廂場景（巴洛克金色壁紙、絨布扶手椅、地毯）
+- **⚠️ R10 教訓提醒**：此服裝有側邊鏤空設計，進 Step 5 Motion Control 若因此觸發 `nsfw` 判定，處理方式
+  比照 R10——收窄或改為裝飾性綁帶疊在實心布料上
+- 依 `DANCE_CLONE_SOP.md` 人工核准關卡規則，生成後停在這裡等使用者核准，尚未進 Step 5

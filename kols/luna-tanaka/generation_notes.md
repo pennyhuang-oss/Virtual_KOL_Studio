@@ -423,3 +423,41 @@ Step 5 Motion Control 待這些完成後才能跑。
 
 `kols/luna-tanaka/videos/dance_clone_r1/luna_dance_clone_r1_ig_reel.mp4`（1072×1936、30fps、~15.0s，
 含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-08 R16、R17 舞蹈克隆 — Step 1–2 完成，Step 4 卡在三連拼貼問題
+
+**背景**：R16（IG shortcode `DRTeClEX4P`，Drive file ID `1i454xCNjFOZ2Fc90YKshaPYbJQdrbuVe`）與 R17
+（`DRgdF3vkSr1`，`1wXhEe49V0su0fY_-zHyPh9E07taVLfxD`）皆分配給 Luna Tanaka——這兩支驅動片的真人主角是
+她自己 IG Benchmark 表列的帳號「深田えいみ」`@eimi0318`（見 Issue #3 2026-08-07 補充4），驅動片本身
+是後台試衣間場景，背景含其他真實路人/工作人員入鏡。`scene_control` 固定用 `image`（保留 Luna 自己生成
+的場景與臉），不會用到驅動片背景或她的臉，跟 R1–R15 的處理原則一致。
+
+### Step 1–2：下載與裁剪
+
+- R16：720×1280、VP9、~14.9s；R17：884×1576、VP9、~11.0s，皆為 TikTok 介面截圖（頂部搜尋列+右側愛心/
+  留言/收藏圖示+底部使用者名稱與優惠券文案），比 R9-R14 的 CapCut 介面更複雜。已用 `ffmpeg crop` 裁除
+  上下左右的 UI（R16 裁至 610×1050，R17 裁至 770×1330），確認裁切後無 UI 殘留、未裁到手勢動作範圍，
+  轉 H.264，音軌另存
+- 內容核對：R16 深藍色V領綁帶洋裝（七分袖，及膝），R17 灰色連帽合身短裙（含粗框眼鏡），皆符合分配描述
+
+### Step 4：起始畫面 — 卡住，`soul_id` 對這類 prompt 有已知的「三連拼貼」模型慣性
+
+- 模型：`soul_2` + `soul_id: 1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`
+- **連續 4 輪生成嘗試，R16、R17 每次都生成成「三連拼貼」版面**（同一張圖裡塞了 3 個相似分鏡的縮圖，
+  不是單張照片），無法直接當 Motion Control 的起始畫面：
+  1. 第一輪（"boutique fitting room"場景）：兩張皆拼貼
+  2. 第二輪（加「single photograph, NOT a triptych」負面詞）：兩張仍拼貼
+  3. 第三輪（改場景為"hotel room"，拿掉"boutique/mirror"用詞）：R16 仍拼貼；R17 判定 `nsfw`（Job
+     `195e1ee5-28a2-4053-b104-865307e75de0`，零成本）
+  4. 第四輪（改用手機自拍風格措辭+"living room"場景，加"NOT a magazine editorial"負面詞）：兩張仍拼貼
+- **根因判斷**：對照本文件 R1 章節記錄的「`start_frame_alt_magazine_artifact.png` 因雜誌感瑕疵被打回」
+  舊案例，判斷這是 Luna 這個 `soul_id` 訓練資料裡混入雜誌型錄式多格照片、已經寫進角色嵌入的模型慣性，
+  不是單次 prompt 用詞問題——4 輪不同角度的措辭調整都沒能繞開，說明無法單靠生成時的 prompt 解決
+- **根本解法（重新訓練 Soul）成本較高，本次未執行**：需要重新生成一批確定乾淨的訓練圖（約 12–13 張，
+  每張約 1 credit）+ 重新訓練呼叫（依 Rainie Hsu 案例觀察約 25 credits），估計總成本約 37–38 credits，
+  且會影響她之後所有生成、需要重新驗證身分一致性。使用者知悉後決定**本次待用裁切拼貼圖的權宜做法完成
+  R16/R17**，重新訓練留待之後若同類問題頻繁發生時再考慮
+- **下一步**：從三連拼貼圖裡裁出品質最好的一格當作單張起始畫面，需確認裁切後的長寬比例是否適合直接
+  餵給 Motion Control，或需要額外處理

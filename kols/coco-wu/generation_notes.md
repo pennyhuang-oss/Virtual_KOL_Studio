@@ -510,3 +510,29 @@
   誤用驅動片本人的紅棕色，不符合 Coco 的黑棕色設定，僅供對照）
 - `kols/coco-wu/videos/dance_clone_r4/coco_dance_clone_r4_ig_reel.mp4`（1072×1936、30fps、14.9s，
   含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-08 R12、R13 舞蹈克隆 — Step 1–4 完成，Step 5 待生成
+
+**背景**：R12（IG shortcode `DH2qaw1RSr2`，Drive file ID `1qbIjpBA6vE653slFj3Snd33Ry3xtS2FQ`）與 R13
+（`DIAxR2RuUO`，`15ZjhnTtPq59iBa7uA_19TIwhr-uNyNa9`）皆分配給 Coco Wu，內容核對後判斷跟她「可愛雙馬尾」
+調性吻合，維持原分配不動（見 GitHub Issue #3 2026-08-07 補充4）。這次是使用者要求批次處理 R12–R18 七支，
+先集中生成全部起始畫面供一次核准，**跳過了逐支的 Performance Sheet/Emotion Timeline（Step 3）**，會在各支
+進 Step 5 Motion Control 前補做。
+
+### Step 1–2：下載與裁剪
+
+- R12：862×1532、VP9、~18.7s；R13：740×1316、VP9、~6.1s，皆含編輯 App UI 圖示（右側工具列+頂部音樂列），
+  已用 `ffmpeg crop` 裁除（R12 裁至 750×1392，R13 裁至 640×1198），確認未裁到雙馬尾角色的手勢動作範圍，
+  轉 H.264，音軌另存
+- 內容核對：R12 深綠三角比基尼+金屬鏈條腰飾，雙手向鏡頭伸展手勢；R13 紅藍花色綁帶比基尼，雙手拉起雙馬尾
+  的俏皮動作，皆符合分配描述
+
+### Step 4：起始畫面（已生成，待使用者核准）
+
+- 模型：`soul_2` + `soul_id: cf7045dc-4e69-4c56-9621-aa8c40bf39b4`
+- R12 Job ID `6845fd88-4b6c-49bf-9831-9fe93c2dcb67`：深綠三角比基尼+金鍊腰飾，雙手伸向鏡頭，宿舍走廊素色牆
+- R13 Job ID `b3343487-9c29-4a7c-9d7c-36547ff72fa9`：紅藍花色綁帶比基尼，雙手拉起雙馬尾，同場景
+- 服裝符合 Coco「飯店旅遊/週末出遊」既有服裝公式（比基尼在她的日常穿搭範圍內），不需換裝
+- 依 `DANCE_CLONE_SOP.md` 人工核准關卡規則，生成後停在這裡等使用者核准，尚未進 Step 5

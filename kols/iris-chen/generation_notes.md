@@ -500,3 +500,30 @@ resolution = "720p"  # cinematic v2 不直接支援此參數，走預設
 
 - `kols/iris-chen/images/dance_clone_r6/start_frame.png`（已核准起始畫面）
 - `kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4`（1072×1936、30fps、~9.87s，`scene_control: image` + 本機後製漂移運鏡，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-08 R15、R18 舞蹈克隆 — Step 1–4 完成，Step 5 待生成
+
+**背景**：R15（IG shortcode `DPDTvczkep4`，Drive file ID `1NvmxZE7UXSeJ3lxyo-WQEiz5SY6QxPmT`，第2支，原
+mia-huang 因尺度超出上限改分配）與 R18（`DRjp2qfkTk5`，`1CPDvqRzcy2VGA7F9xwRdcVArZL5jYfjv`）皆分配給
+Iris Chen（見 Issue #3 2026-08-07 補充4）。批次處理 R12–R18，**跳過逐支 Performance Sheet/Emotion
+Timeline（Step 3）**，會在進 Step 5 前補做。
+
+### Step 1–2：下載與裁剪
+
+- R15：870×1546、VP9、~14.8s，含編輯 App UI，已裁除（裁至 710×1406），轉 H.264
+- R18：1080×1920、VP9、~14.7s，**畫面本身乾淨無 UI 疊加**，直接轉 H.264，未額外裁切
+- 內容核對：R15 PLAYBOY 品牌挖空連身泳裝+粗框眼鏡+熱帶海灘（原始驅動片腰腹部有大片挖空，見下方 Step 4
+  服裝調整說明）；R18 黑白條紋長袖上衣+灰色短褲，居家浴室鏡前跳舞，皆符合分配描述
+
+### Step 4：起始畫面（已生成，待使用者核准）
+
+- 模型：`soul_2` + `soul_id: 5fe3b6ba-1277-4822-9141-fb06eb3b93a0`
+- **R15（Job ID `c4dcbf1a-1db9-4d5f-822d-4fe60f2253e4`）**：**服裝主動調整，記取 R10 教訓**——驅動片原始
+  挖空範圍很大（品牌字樣下方一大片橢圓鏤空露出腹部），直接照抄有很高的 `nsfw` 風險，改為完整包覆軀幹的
+  連身運動背心款式，保留粗框眼鏡+熱帶海灘場景。**已知瑕疵**：背心上的品牌文字生成為亂碼（"HLIE NORRA"／
+  "VNSTRUSI"），是 AI 生成文字的常見缺陷，不影響辨識度但不美觀，待使用者確認是否需要重生成
+- **R18（Job ID `3c28c398-af7e-40d8-8b6b-86589ca1f57c`）**：黑白條紋長袖上衣+灰色短褲，雙臂舉起behind head
+  的動態手勢，居家浴室場景，單張乾淨圖，無問題
+- 依 `DANCE_CLONE_SOP.md` 人工核准關卡規則，生成後停在這裡等使用者核准，尚未進 Step 5
