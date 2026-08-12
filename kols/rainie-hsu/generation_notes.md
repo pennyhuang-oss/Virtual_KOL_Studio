@@ -875,13 +875,25 @@ Rainie Hsu（第2支，原 vicky-lin，因跟健身房人設無關改分配，�
 只換場景。
 
 - 模型：`soul_2` + `soul_id: a4a000fe-fd96-4c36-97ff-0df9358a9b47`
-- **生成時出現拼貼bug**：跟 Luna Tanaka R16/R17 案例同款——輸出是同一張圖複製成上下兩格的拼貼，不是
-  單一乾淨畫面。用 `ffmpeg crop` 裁掉上方多餘的一格，取下方完整的三分身構圖，存為
-  `start_frame_v2_hotel_bg.png`。**這代表 Rainie 的 soul_id 可能也有跟 Luna 同款的拼貼傾向**，已告知
-  使用者；如果之後生成頻繁出現同樣問題，可能需要跟 Luna 一樣重新訓練 soul。
-- Job ID：`b21b5164-3078-46c2-a0d3-e2fddef2f0d5`
-- **尚未核准，Step 5 尚未執行**——已請使用者核對這張新背景的構圖，核准後才會進 Motion Control。
 
-### 產出檔案
+**第一次嘗試（飯店落地窗夜景，`start_frame_v2_hotel_bg.png`，job `b21b5164-3078-46c2-a0d3-e2fddef2f0d5`）**：
+輸出是拼貼（上下兩格）。**當時錯誤地用 `ffmpeg crop` 裁掉多餘一格、取單格當起始畫面**——這個做法後來
+被使用者問「這樣生成出來的影片會不會少一截」點出問題，回查 `kols/luna-tanaka/generation_notes.md`
+R16/R17 章節才發現**這正是使用者當時明確否決過的權宜做法**（裁出的單格構圖會偏向臉部特寫，身體/服裝
+下半部不在框內，「跳舞誰要看臉部特寫」），**已作廢，不得採用**。
 
-- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2_hotel_bg.png`（第二版起始畫面，換背景，尚待核准）
+**第二次嘗試（同一場景重跑，加 "single photograph, not a collage, not a triptych" 負面詞）**：
+仍是拼貼（三連）。
+
+**第三次嘗試（改場景為夜店 VIP 包廂+霓虹招牌，排除「落地窗格狀構圖」這個可能的觸發因子）**：
+仍是拼貼（兩格，排版跟前兩次不同）。
+
+**結論：3 次生成、3 種不同場景描述，全部拼貼**——不是單次隨機瑕疵，也不是特定場景描述觸發，判斷跟
+Luna Tanaka R16/R17 案例是同一類「soul_id 全面性拼貼慣性」。**尚未進行重新訓練，待使用者決定**（重新
+訓練預估成本約 25 credits，且會影響她之後所有生成、需要重新驗證身分一致性，做法見 Luna 案例章節）。
+
+### 產出檔案（皆為拼貼失敗品，僅供對照，不可用於 Step 5）
+
+- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2_hotel_bg.png`（已作廢：拼貼裁圖，構圖不完整）
+- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2_retry.png`（拼貼，三連）
+- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v3_nightclub.png`（拼貼，兩格）
