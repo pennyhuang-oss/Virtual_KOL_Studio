@@ -619,13 +619,36 @@ QA 全數通過。
 - **教訓（待日後驗證是否為通則）**：拼貼bug可能不只跟特定 soul_id 或特定字眼有關，「動態前傾+近距離
   直視鏡頭」這類姿勢描述本身也可能是觸發因子之一，之後遇到類似bug可以優先嘗試換成更靜態的姿勢描述。
 
-### 產出檔案（目前進度）
+**起始畫面已核准。**
 
-- `kols/iris-chen/images/daily_reel_music_r1/start_frame.png`（第三次生成，乾淨單張，尚待核准）
-- 音軌：`/tmp/iris_daily/reference_audio.m4a`（僅本機暫存，~8.6s，不進 repo，用途同驅動片音軌——內部
-  參考用，正式發佈前需替換為已授權版本）
+### Step 2：動態短片生成（非 Motion Control，用 `generate_video` + 參考圖）
 
-### 待辦
+- 模型：`seedance_2_5`，`mode: omni_reference`（`start_image` 角色僅在這個 mode 下接受，`t2v`
+  預設 mode 不接受參考圖，第一次呼叫因此被 422 擋下，補上 `mode` 參數後成功）
+- 參考圖：`start_frame.png` 上傳後的 `media_id: 53e7565d-75ce-4e24-bb76-5e8f8b3fab3a`
+- Prompt 設計原則：只描述**輕微、自然的動作**（頭部慢慢側傾、髮絲飄動、眨眼、把草莓送到嘴邊咬一口、
+  毯子隨姿勢微微移動、鏡頭幾乎靜止只帶一點手持感、窗光自然閃動），刻意不描述任何舞蹈/大幅度動作——
+  這是這次方法跟 Motion Control 逐幀動作克隆的本質差異：沒有驅動片可以逐幀模仿，也不需要
+- `duration: 8`（對齊音樂長度 ~8.6s），`aspect_ratio: "9:16"`
+- Job ID `e28d218c-255b-48fb-b0e3-ed41750a7d91`，輸出 720×1280、h264、~8.06s，**含模型自帶的 AAC 音軌**
+  （非我方指定的音樂，推測是模型預設生成的環境音/靜音填充，直接被 Step 3 混音覆蓋掉，不影響最終成品）
+- 抽 5 個時間點（0.5s/2.0s/4.0s/6.0s/7.5s）目視核對：身分穩定、動作自然（草莓吃入嘴的動作有連貫進展，
+  不是瞬間跳接）、無拼貼問題
 
-- 起始畫面核准後：生成輕微動態短片（非逐幀動作克隆）、混音、QA、存入
-  `kols/iris-chen/videos/daily_reel_music_r1/`
+### Step 3：混音
+
+用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 把使用者提供影片抽出的原始音軌
+（`reference_audio.m4a`，~8.6s）蓋上 Step 2 輸出的畫面軌，取兩者較短的長度（畫面 8.06s），輸出
+`iris_daily_reel_r1.mp4`（720×1280、h264/aac 44.1kHz、~8.04s）。
+
+### 授權提醒
+
+這支音樂來自使用者提供的第三方影片，**內部驗證用，未取得商用授權**——正式對外發佈前需替換成已授權的
+版本或取得原曲授權，比照 `DANCE_CLONE_SOP.md` Step 7 對驅動片配樂的同一套規則。這支影片本身沒有動作
+克隆或場景借用的問題（因為完全是原創生成，不是 Motion Control），唯一的授權缺口只在音樂本身。
+
+### 產出檔案
+
+- `kols/iris-chen/images/daily_reel_music_r1/start_frame.png`（已核准起始畫面）
+- `kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4`（720×1280、h264/aac、~8.04s，
+  含使用者提供的第三方音樂音軌，未經授權，僅供內部驗證）
