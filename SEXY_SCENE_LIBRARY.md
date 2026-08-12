@@ -176,6 +176,22 @@ streaking past out of focus
    - **仍然要保留**畫質相關的字：`crisp sharp focus on subject`、`fine detail`、`natural colour grading`。這些管的是解析度和銳利度，不是曝光均勻度。
    - **仍然禁止**：`grainy`、`muddy`、`degraded`、`low quality`、`dim and blurry`。
 
+#### 3-D. 「夜晚」不能只寫 `late at night`，黑暗本身要被當成生成目標來描述（2026-08-12 新增，實測結論）
+
+Iris Chen `daily_sexy_night_v3_implied` 批次實測：prompt 寫了 `late at night`、也寫了具名的暖色檯燈，生成結果仍是**白天感的平光**——因為模型只把 `late at night` 當成氛圍形容詞，沒有理由把任何區域壓黑。
+
+**有效的寫法是把黑暗寫成一個要生成的具體物件**，同一張重生時改寫為以下要素後立刻正確：
+
+```
+night interior, the main ceiling light switched off and the room in darkness,
+the only two light sources in the room are [具名光源 A] and [具名光源 B],
+... the entire left half of the room and the ceiling fall three stops darker and
+crush to near black with no detail, deep pools of darkness between the two light
+sources, no daylight anywhere in frame
+```
+
+四個關鍵句：**① 主燈是關的 ② 全室只有哪幾個光源（數量要講死）③ 哪一大塊暗幾級、壓死到沒有細節 ④ `no daylight anywhere in frame`**。這是 3-A 第④段「曝光取捨」在夜景的專用加強版——夜景要犧牲的不是一個小角落，是畫面的一大半。
+
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
 
@@ -280,6 +296,25 @@ anatomically correct hands with exactly five fingers each
 > - **平放在對比色的實體表面上**（白色洗手檯、床單、桌面），維持 `resting flat and open ... all five fingers clearly separated`
 >
 > 一句話：**手要嘛大、要嘛有支撐面；小又懸空的手一定糊。**
+
+### 10-d. 遮擋式「零裸露」素材的寫法（2026-08-12 新增，5/5 實測成功）
+
+需要做「看起來什麼都沒穿、但實際上完全沒有裸露」的素材時（暗示感最強的一類），**不要在 prompt 裡出現任何裸露字眼**——那既會踩生成平台的審核，也無法控制遮蔽範圍。改用下列兩段式寫法，Iris Chen `daily_sexy_night_v3_implied` 批次 5/5 一次成功、零審核失敗：
+
+**① 獨立一個 `COVERAGE:` 欄位**，把遮蔽邏輯講完整——穿了什麼「隱形的」、被什麼遮住、哪些部位可見、哪些絕對不可見：
+
+```
+COVERAGE: she wears a [與遮蔽物同色] strapless bandeau that is completely hidden behind
+[遮蔽物] and never visible in frame, so the shot reads as if she has nothing on underneath
+while everything below her collarbone stays entirely covered by [遮蔽物] — only her bare
+shoulders, collarbone and arms are visible, no exposed chest, fully SFW
+```
+
+**② 遮蔽物本身寫進 `WARDROBE VISIBLE IN FRAME:`**，當成一件畫面上真正存在的衣服來寫（材質、顏色、怎麼被拿著）。
+
+**已驗證有效的五種遮蔽物**（同一批不要重複用同一招）：厚棉被抱在胸前／**俯臥＋棉被蓋到腰下**（正面完全不入鏡，最安全）／大抱枕抱在身前／泡泡浴的泡沫覆蓋到鎖骨／床單裹身。
+
+**一個實測踩到的細節**：隱形內衣要指定成**與遮蔽物同色**，不要寫「與膚色同色」。當遮蔽物是白色時，膚色內衣的邊緣一旦露出來就會被看成「白布下面還有一層」，反而破壞「什麼都沒穿」的錯覺；同色就算露邊也讀成遮蔽物本身的一部分。
 
 ### 11. 地點要寫「在地質感」，不要點名地標（2026-08-05 新增，實測結論）
 
