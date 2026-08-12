@@ -192,6 +192,25 @@ sources, no daylight anywhere in frame
 
 四個關鍵句：**① 主燈是關的 ② 全室只有哪幾個光源（數量要講死）③ 哪一大塊暗幾級、壓死到沒有細節 ④ `no daylight anywhere in frame`**。這是 3-A 第④段「曝光取捨」在夜景的專用加強版——夜景要犧牲的不是一個小角落，是畫面的一大半。
 
+**⚠️ 補充（2026-08-12 同日，第二次實測）：夜景指令必須放在 prompt 的最前面，不能放結尾。** Iris Chen `daily_sexy_night_v4_bolder` 批次為了加大服裝尺度，`SUBJECT`／`OUTFIT` 段落寫得比平常長很多，結果 5 張裡有 3 張夜感失守（整體偏亮、無壓黑區，其中一張甚至直接生出窗外日光，明確違反同一個 prompt 裡寫的 `no daylight anywhere in frame`）。**前段描述越長，尾端的光線段權重就越低。** 把整段夜景描述搬到人物描述之前開頭第一句，重生即完全正確：
+
+```
+A photo taken late at night in a dark bedroom with the ceiling light switched off.
+The room is genuinely dark: the only light in the entire frame is [具名光源].
+Everything more than a metre from that lamp falls three stops darker and crushes to
+near black with no detail ... there is no daylight anywhere in frame.
+SUBJECT: ...（人物描述接在後面）
+```
+
+**通則：任何一個「模型容易忽略」的硬性條件，都應該放在 prompt 開頭，而不是塞在結尾的樣式字串旁邊。**
+
+**另一個相關的坑：不要讓「壓黑」寫成模型可以照字面畫的幾何區域。** 同批寫 `the left half of the room crushes to near black` 時，模型真的生出「畫面左側三分之一是一整條純黑色塊」＋一個亂生的 ⚠ 圖示，變成構圖 bug。改寫成「房間的角落、天花板與她身後的縱深沒入陰影」這種**依附在實體空間上的描述**，並加上下面這串防呆，即可避免：
+
+```
+a single full-frame photo, subject centred and filling the frame edge to edge,
+no black bars, no borders, no letterboxing, no screen UI or icons anywhere
+```
+
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
 

@@ -968,3 +968,88 @@ v1 批次寫下的 10-c 建議「另一隻手讓它懸空（`hanging free in ope
 - `alternates/03_alt_floor_cushion_daylight_mood.png`（光線落差版，留檔）
 
 **狀態：5 張皆通過內部 QA，待使用者核准。** 尚未上傳 Google Drive。
+
+---
+
+## 2026-08-12 加大尺度批次 `daily_sexy_night_v4_bolder`（5 張，露膚面積顯著提高）
+
+**使用者需求**：「有沒有辦法做得更性感煽情一點，露更多乳溝、大腿之類的，身體肌膚要露出來多一點，
+若隱若現的，甚至整個身體只有乳頭、下體等重要部位被擋住，目前看起來還是過於保守，有些甚至比穿著內衣
+擋的還多」——明確指出 v3 遮擋批次太保守（尤其 v3-05 床單裹身比 v2 內衣批次遮更多）。
+
+**執行範圍**：這批把露膚面積拉高到「布料面積很小的衣著」等級——深 V 到胸骨、高衩露整條腿、微型蕾絲
+內衣、浴巾只裹到胸口上緣、背面全裸。**未執行**使用者提到的「全裸只用物件擋住重點部位」那一階：
+該階等同於生成裸體影像，助理端已說明不做，改以上述「小面積衣著」達到接近的視覺強度，使用者可再評估。
+
+### 平台與參數
+
+- 模型：`soul_2` + `soul_id: 5fe3b6ba-1277-4822-9141-fb06eb3b93a0`，`quality: "2k"`、`aspect_ratio: "3:4"`
+- 共 9 次生成（5 張初版 + 4 張重生），**全部通過平台審核，零 `nsfw`、零 `failed`**
+
+### 五張的配置
+
+| # | 露膚設計 | 場景 | 視角 | Job ID（採用版） |
+|---|---|---|---|---|
+| 01 | 黑絲質吊帶睡裙，V 領深至胸骨、單肩帶滑落、高衩露整條大腿 | 臥室床上 | 自拍（微俯角） | `8ffa3cbf-be33-4d9e-b462-1a24d91717cd` |
+| 02 | 微型黑蕾絲三角內衣＋高衩蕾絲內褲＋蕾絲邊大腿襪＋金色腰鍊，肩、胸、肋、腰腹、髖全裸露 | 臥室全身鏡 | 鏡子自拍 | `c38b0ac2-a088-4850-b8e2-8f19f16c68e6` |
+| 03 | 浴巾裹成平口，上緣壓在胸口最上方，另一條浴巾裹髖，腰腹與整條腿全露、帶水珠 | 浴室鏡前 | 鏡子自拍 | `9db9cf93-7762-460f-af3d-96c312a892e8` |
+| 04 | **背面全裸**（側坐背對鏡頭，正面由白床單擋住），黑蕾絲內褲，背脊、腰窩、腿線全入鏡 | 臥室床上 | 他拍（平視） | `7eda9df3-86c4-4329-a1d1-57bd2bbccf18` |
+| 05 | 黑色平口小可愛＋高腰內褲＋敞開的針織外套滑落雙肩，腰腹與雙腿全露 | 臥室落地窗前地板 | 他拍（平視） | `ccaa8f36-44d3-4bfc-b270-60b7b1a21abf` |
+
+自拍 3／他拍 2。全部平視或微俯角，無仰拍。
+
+### 生成後逐張檢查
+
+**手部：9 張全數通過**（每一隻入鏡的手都做 3 倍放大裁切檢視，五指分明、無融合）。v2 記錄的 10-c 修法
+（手放對比色表面／舉到臉旁）這批全程沿用，沒有再出現任何手部瑕疵——該規則可視為穩定。
+
+**但這批出現一個新的系統性問題：🔴 身體描述一變長，夜晚光線就失守。**
+
+初版 5 張裡有 3 張（01、02、04）的夜感不合格：畫面整體偏亮、沒有壓黑區，**02 右側甚至直接生出窗外
+日光**，明確違反 prompt 裡寫的 `no daylight anywhere in frame`。03、05 則正常。
+
+**原因判斷**：這批為了加大尺度，`SUBJECT`／`OUTFIT` 段落比前幾批長很多，把原本放在 prompt 尾端的
+`[LIGHTING]` 稀釋掉了——模型優先執行前段的身體/服裝描述，尾端的光線指令權重下降。
+
+**修法（已驗證有效）：把夜晚光線指令整段搬到 prompt 最前面**，在描述人物之前就先把「這是一張什麼光線
+條件下拍的照片」講完：
+
+```
+A photo taken late at night in a dark bedroom with the ceiling light switched off.
+The room is genuinely dark: the only light in the entire frame is [具名光源].
+Everything more than a metre from that lamp falls three stops darker and crushes to
+near black with no detail ... there is no daylight anywhere in frame.
+SUBJECT: ...（人物描述接在後面）
+```
+
+01、04 各重生一次即完全正確（深黑背景、單一暖燈可見、壓黑區大面積）。**這條補充第 3-D 點：夜景指令
+不只要寫得具體，還要放在 prompt 的最前面，不能放結尾。**
+
+| # | 結果 | 細節 |
+|---|---|---|
+| 01（初版） | ⚠️ 夜感不合格，已重生 → `alternates/01_alt_bright_room.png` |
+| 01（重生） | ✅ 通過 | 深黑房間、單一暖燈入鏡、天花板全黑；胸線與大腿如需求呈現 |
+| 02（初版） | ⚠️ **生出窗外日光**，已重生 → `alternates/02_alt_daylight_window.png` |
+| 02（重生1） | 🔴 **構圖bug**：畫面左側三分之一是整條純黑色塊，並出現一個亂生的 ⚠ 圖示（疑似把「左半壓黑」literal 執行成黑色矩形）。留檔 `alternates/02_alt_black_bar_framing_bug.png` |
+| 02（重生2） | ✅ 通過 | 加寫 `subject centred and filling the frame edge to edge, no black bars, no borders, no letterboxing, no screen UI or icons` 後正常；鏡框燈泡排＋床頭藍色 LED 燈帶兩個色溫都到位。**唯一落差**：手機沒有入鏡，鏡子自拍的敘事弱化成一般站姿 |
+| 03 | ✅ 通過 | 一次成功，夜感與露膚度皆達標；髖上的手五指分明 |
+| 04（初版） | ⚠️ 夜感不合格，已重生 → `alternates/04_alt_bright_room.png` |
+| 04（重生） | ✅ 通過 | 本批夜感最好的一張（大面積純黑、單一暖桌燈）；背面裸露、正面由白床單擋住，畫面中無任何裸露部位 |
+| 05 | ✅ 通過 | 一次成功，蠟燭＋窗外城市光雙色溫、房內壓黑都正確 |
+
+### 尺度備註（供發佈前判斷）
+
+- **04 是本批最外顯的一張**（背面全裸、僅穿內褲）。畫面中沒有任何裸露部位，屬各平台普遍可接受的背影
+  範圍，但仍是這五張裡尺度最高的，發佈前建議依平台政策與帳號調性再確認一次。
+- 02 的蕾絲為半透材質，放大檢視確認為圖案密度足夠的蕾絲，無透出細節。
+
+### 產出檔案
+
+- `kols/iris-chen/images/daily_sexy_night_v4_bolder/01_bed_deepv_silkslip_selfie.png`
+- `kols/iris-chen/images/daily_sexy_night_v4_bolder/02_mirror_micro_lace_stockings_selfie.png`
+- `kols/iris-chen/images/daily_sexy_night_v4_bolder/03_bathroom_towel_wet_selfie.png`
+- `kols/iris-chen/images/daily_sexy_night_v4_bolder/04_sidelying_bareback_candid.png`
+- `kols/iris-chen/images/daily_sexy_night_v4_bolder/05_window_open_cardigan_candid.png`
+- `alternates/` 內 4 張留檔（01/04 亮版、02 日光版、02 黑邊 bug 版）
+
+**狀態：5 張皆通過內部 QA，待使用者核准。** 尚未上傳 Google Drive。
