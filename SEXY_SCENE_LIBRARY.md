@@ -273,7 +273,13 @@ both hands well clear of her legs and body, no hand overlapping her knees,
 anatomically correct hands with exactly five fingers each
 ```
 
-重點有三個：(1) 手要放在**與膚色對比的表面**上（沙發布、床單、桌面），不要放在自己的皮膚上；(2) 明寫 `five fingers clearly separated`；(3) 另一隻手讓它**懸空**（`hanging free in open air`）——懸空的手背景單純，是最不容易出錯的處理。Iris 該張用這組措辭重生一次即成功，兩隻手放大檢視皆為正確五指。
+重點有兩個：(1) 手要放在**與膚色對比的表面**上（沙發布、床單、白色檯面），不要放在自己的皮膚上；(2) 明寫 `five fingers clearly separated`。Iris 該張用這組措辭重生一次即成功，兩隻手放大檢視皆為正確五指。
+
+> **⚠️ 2026-08-12 同日修正：「讓手懸空」是錯的，已推翻。** 本條原本建議把另一隻手寫成 `hanging free in open air`（理由是背景單純應該最安全）。`daily_sexy_night_v2_lingerie` 批次用這個寫法實測 **2/2 全部失敗**——站姿全身鏡自拍中，垂在身側的手位於畫面下緣、尺寸小，兩張的手指都糊成一片分不出根數。**真正的變因不是背景單純，是這隻手在畫面裡佔多大、離臉多遠。** 修正後的做法二選一，都已實測成功：
+> - **給這隻手一件事做，而且要靠近臉**（撥頭髮、把碎髮塞耳後、手扶鏡框）——手在畫面裡變大，模型畫得出結構
+> - **平放在對比色的實體表面上**（白色洗手檯、床單、桌面），維持 `resting flat and open ... all five fingers clearly separated`
+>
+> 一句話：**手要嘛大、要嘛有支撐面；小又懸空的手一定糊。**
 
 ### 11. 地點要寫「在地質感」，不要點名地標（2026-08-05 新增，實測結論）
 
