@@ -749,3 +749,23 @@ Issue #3 的 R 編號批次分開，避免編號衝突）。
 - `kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png`
 - `kols/iris-chen/images/dance_clone_u2_night_street/start_frame.png`
 - `kols/iris-chen/images/dance_clone_u3_home/start_frame.png`
+
+### Step 4 v2：服裝改性感（使用者反饋後重生成，2026-08-12）
+
+**使用者反饋**：「衣服要更性感一點的，尤其在室內場景的更是」。三張全部重生成，室內兩支（u1 飯店、
+u3 客廳）改動幅度最大，街頭（u2）同步提升；同時把景別描述寫得更硬（`cropped at mid-thigh, knees
+and everything below mid-thigh outside the frame`），修正 v1 三張都渲染到膝蓋的問題。
+
+| 代號 | Job ID (v2) | 改後服裝（五層） |
+|------|-------------|-----------------|
+| u1 | `8b2a8091-bcf4-4207-8fb3-d67b1e3a9d84` | 香檳色緞面細肩帶深 V 蕾絲滾邊迷你睡裙（大腿上方長度）+ 半透明薄紗罩衫滑落單肩 + 細金項鍊 + 小金圈耳環 |
+| u2 | `d00b4605-8f8c-4ba1-81e4-577108713181` | 黑色細肩帶羅紋短版背心 + 敞開的 oversized 白襯衫滑落單肩 + 黑色低腰寬版工裝褲 + 斜背黑帆布包 + 銀圈耳環/黑串珠手鍊 |
+| u3 | `9684b526-2f91-40fe-9247-198bf455f771` | 白色羅紋細肩帶短版背心（下擺在肋骨下）+ 淺灰色低腰棉質超短褲 + 灰色寬鬆針織開襟外套滑落單肩 + 細金項鍊 |
+
+三張皆一次生成成功、無拼貼、身分一致。**景別**：u3 確實收到大腿中段；u1、u2 仍落在膝蓋附近，比 v1
+略緊但沒有完全達標。**次級動態載體**（SOP Step 4 硬性要求）三張都有：u1 薄紗罩衫、u2 敞開襯衫、
+u3 針織外套，加上長髮。
+
+**服裝改性感後，Step 5 的像素審核風險同步升高**（三張腰腹外露程度都比 v1 高，u1 是貼身緞面睡裙）——
+`DANCE_VIDEO_SOP.md` 已知問題表記載這類 start_image 曾觸發 `status: failed`。失敗全額退款、零淨成本，
+但會多花一輪時間。v1 三張保留為 `start_frame_v1.png` 供比對，未刪除。
