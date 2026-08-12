@@ -243,6 +243,15 @@ generate_image(
 )
 ```
 
+> **⚠️ 2026-08-12 新增（先查該 KOL 有沒有專屬 prompt 格式，不要無腦套用上面的通用範本）**：上面這段
+> 是**通用範本**，但部分 KOL（例如 Rainie Hsu，見 `kols/rainie-hsu/generation_notes.md` 開頭「核心
+> Prompt 結構」章節）已經訂過自己專屬的 prompt 措辭規則，會明確禁止某些字眼。Rainie 案例的實測教訓：
+> 通用範本裡的 `film grain`／`shot on 35mm`／`candid lifestyle photo` 這組詞，對她的 soul_id 連續
+> 3 次觸發「拼貼／三連版面」的生成bug（一度誤判是 soul_id 本身壞掉，差點要花 credit 重新訓練）——
+> 換成她專屬格式裡規定的 `crisp sharp focus`、`high dynamic range`、`high-production-value`、
+> `Instagram style` 後，一次就生成乾淨單張圖。**做 Step 4 之前，先看該 KOL 的 `generation_notes.md`
+> 開頭是否有「核心 Prompt 結構」或類似章節，有就套用那個格式，上面的通用範本只在沒有專屬格式時使用。**
+
 > **⚠️ 人工核准關卡（見文件開頭「怎麼觸發」補充）**：生成後**停在這裡，把圖給使用者看**，等使用者
 > 核准或指示重生成，**核准之後才進 Step 5**。不要自動接著跑 Motion Control。
 

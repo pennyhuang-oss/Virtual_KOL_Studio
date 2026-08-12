@@ -888,12 +888,24 @@ R16/R17 章節才發現**這正是使用者當時明確否決過的權宜做法*
 **第三次嘗試（改場景為夜店 VIP 包廂+霓虹招牌，排除「落地窗格狀構圖」這個可能的觸發因子）**：
 仍是拼貼（兩格，排版跟前兩次不同）。
 
-**結論：3 次生成、3 種不同場景描述，全部拼貼**——不是單次隨機瑕疵，也不是特定場景描述觸發，判斷跟
-Luna Tanaka R16/R17 案例是同一類「soul_id 全面性拼貼慣性」。**尚未進行重新訓練，待使用者決定**（重新
-訓練預估成本約 25 credits，且會影響她之後所有生成、需要重新驗證身分一致性，做法見 Luna 案例章節）。
+**⚠️ 上面「systemic soul_id 拼貼故障」的結論是錯的，已更正**：使用者質疑「是不是你 prompt 有問題」後，
+回頭比對本文件開頭「核心 Prompt 結構」章節（2026-07-25 訂定），發現前 3 次失敗的 prompt 都用了
+`DANCE_CLONE_SOP.md` 的通用範本字眼（`film grain`、`shot on 35mm`、`candid lifestyle photo`），而
+Rainie 專屬的既定格式**明確禁止**這類詞（讀起來像「刻意做舊/畫質故障」，跟她「高質感夜生活雜誌拍攝」
+人設衝突），規定要用 `crisp sharp focus`、`high dynamic range`、`high-production-value editorial
+nightlife photography`、`Instagram style`。`film`＋`35mm`＋`candid` 這組詞很可能讓模型聯想到膠捲
+沖印小樣/拍貼機這類本來就是多格排列的攝影格式，這才是拼貼的真正觸發點。
 
-### 產出檔案（皆為拼貼失敗品，僅供對照，不可用於 Step 5）
+**第四次嘗試（改用 Rainie 專屬正確 prompt 格式，場景維持夜店 VIP 包廂+霓虹招牌）**：
+一次生成即為乾淨單張圖，1152×2048（正確 9:16），無拼貼。Job ID `494ce6df-0a59-4f3d-b3cf-b402d36cf20b`。
+**不需要重新訓練 soul**，soul_id `a4a000fe-fd96-4c36-97ff-0df9358a9b47` 沒有問題，問題出在這次操作沒有
+套用角色既定 prompt 格式。**已請使用者核對這張新背景的構圖，核准後才會進 Motion Control。**
 
-- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2_hotel_bg.png`（已作廢：拼貼裁圖，構圖不完整）
-- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2_retry.png`（拼貼，三連）
-- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v3_nightclub.png`（拼貼，兩格）
+### 產出檔案
+
+- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v4_correct_prompt.png`（第四版起始畫面，換背景，
+  套用正確 prompt 格式，乾淨單張，尚待核准）
+- 以下為排查過程留下的失敗品，僅供對照，**不可用於 Step 5**：
+  - `start_frame_v2_hotel_bg.png`（拼貼裁圖，構圖不完整，已作廢）
+  - `start_frame_v2_retry.png`（拼貼，三連）
+  - `start_frame_v3_nightclub.png`（拼貼，兩格）
