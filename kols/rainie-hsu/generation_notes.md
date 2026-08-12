@@ -864,3 +864,24 @@ Rainie Hsu（第2支，原 vicky-lin，因跟健身房人設無關改分配，�
 
 - `kols/rainie-hsu/videos/dance_clone_r14/rainie_dance_clone_r14_ig_reel.mp4`（H.264/AAC、~7.2s，
   含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-12 R5 起始畫面換背景重生成（Step 4 重跑，Step 5 尚未執行）
+
+**背景**：使用者要求 R5 換一個背景重新生成起始畫面。原版（`start_frame.png`）場景是驅動片同調性的
+戶外多雲工業區道路，改成更貼合 Rainie「派對女王/夜生活」人設的**飯店房間夜景**：落地窗城市夜景+霓虹燈，
+暖黃燈光混冷調城市光。服裝（桃紅crop top+牛仔短褲）、髮型（黑長直髮）、耳環（次級動態載體）維持不變，
+只換場景。
+
+- 模型：`soul_2` + `soul_id: a4a000fe-fd96-4c36-97ff-0df9358a9b47`
+- **生成時出現拼貼bug**：跟 Luna Tanaka R16/R17 案例同款——輸出是同一張圖複製成上下兩格的拼貼，不是
+  單一乾淨畫面。用 `ffmpeg crop` 裁掉上方多餘的一格，取下方完整的三分身構圖，存為
+  `start_frame_v2_hotel_bg.png`。**這代表 Rainie 的 soul_id 可能也有跟 Luna 同款的拼貼傾向**，已告知
+  使用者；如果之後生成頻繁出現同樣問題，可能需要跟 Luna 一樣重新訓練 soul。
+- Job ID：`b21b5164-3078-46c2-a0d3-e2fddef2f0d5`
+- **尚未核准，Step 5 尚未執行**——已請使用者核對這張新背景的構圖，核准後才會進 Motion Control。
+
+### 產出檔案
+
+- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2_hotel_bg.png`（第二版起始畫面，換背景，尚待核准）
