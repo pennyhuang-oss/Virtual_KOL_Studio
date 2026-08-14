@@ -864,3 +864,99 @@ Rainie Hsu（第2支，原 vicky-lin，因跟健身房人設無關改分配，�
 
 - `kols/rainie-hsu/videos/dance_clone_r14/rainie_dance_clone_r14_ig_reel.mp4`（H.264/AAC、~7.2s，
   含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+---
+
+## 2026-08-12 R5 起始畫面換背景重生成（Step 4 重跑，Step 5 尚未執行）
+
+**背景**：使用者要求 R5 換一個背景重新生成起始畫面。原版（`start_frame.png`）場景是驅動片同調性的
+戶外多雲工業區道路，改成更貼合 Rainie「派對女王/夜生活」人設的**飯店房間夜景**：落地窗城市夜景+霓虹燈，
+暖黃燈光混冷調城市光。服裝（桃紅crop top+牛仔短褲）、髮型（黑長直髮）、耳環（次級動態載體）維持不變，
+只換場景。
+
+- 模型：`soul_2` + `soul_id: a4a000fe-fd96-4c36-97ff-0df9358a9b47`
+
+**第一次嘗試（飯店落地窗夜景，`start_frame_v2_hotel_bg.png`，job `b21b5164-3078-46c2-a0d3-e2fddef2f0d5`）**：
+輸出是拼貼（上下兩格）。**當時錯誤地用 `ffmpeg crop` 裁掉多餘一格、取單格當起始畫面**——這個做法後來
+被使用者問「這樣生成出來的影片會不會少一截」點出問題，回查 `kols/luna-tanaka/generation_notes.md`
+R16/R17 章節才發現**這正是使用者當時明確否決過的權宜做法**（裁出的單格構圖會偏向臉部特寫，身體/服裝
+下半部不在框內，「跳舞誰要看臉部特寫」），**已作廢，不得採用**。
+
+**第二次嘗試（同一場景重跑，加 "single photograph, not a collage, not a triptych" 負面詞）**：
+仍是拼貼（三連）。
+
+**第三次嘗試（改場景為夜店 VIP 包廂+霓虹招牌，排除「落地窗格狀構圖」這個可能的觸發因子）**：
+仍是拼貼（兩格，排版跟前兩次不同）。
+
+**⚠️ 上面「systemic soul_id 拼貼故障」的結論是錯的，已更正**：使用者質疑「是不是你 prompt 有問題」後，
+回頭比對本文件開頭「核心 Prompt 結構」章節（2026-07-25 訂定），發現前 3 次失敗的 prompt 都用了
+`DANCE_CLONE_SOP.md` 的通用範本字眼（`film grain`、`shot on 35mm`、`candid lifestyle photo`），而
+Rainie 專屬的既定格式**明確禁止**這類詞（讀起來像「刻意做舊/畫質故障」，跟她「高質感夜生活雜誌拍攝」
+人設衝突），規定要用 `crisp sharp focus`、`high dynamic range`、`high-production-value editorial
+nightlife photography`、`Instagram style`。`film`＋`35mm`＋`candid` 這組詞很可能讓模型聯想到膠捲
+沖印小樣/拍貼機這類本來就是多格排列的攝影格式，這才是拼貼的真正觸發點。
+
+**第四次嘗試（改用 Rainie 專屬正確 prompt 格式，場景維持夜店 VIP 包廂+霓虹招牌）**：
+一次生成即為乾淨單張圖，1152×2048（正確 9:16），無拼貼。Job ID `494ce6df-0a59-4f3d-b3cf-b402d36cf20b`。
+**不需要重新訓練 soul**，soul_id `a4a000fe-fd96-4c36-97ff-0df9358a9b47` 沒有問題，問題出在這次操作沒有
+套用角色既定 prompt 格式。**使用者核准，存為 `start_frame_v2.png`，進入 Step 5。**
+
+排查過程留下的失敗品（`start_frame_v2_hotel_bg.png`、`start_frame_v2_retry.png`、`start_frame_v3_nightclub.png`）
+已刪除，過程與 job ID 記錄如上，不需要保留檔案本身。
+
+### Step 5：Motion Control
+
+- 驅動片：從 Google Drive（file ID `1hot6rju0rro91HMUijKUTehRdvUlPf21`）用 `curl` 重新取得原始檔（這次
+  拉下來是 VP9 編碼，跟 2026-08-07 原始記錄「已是 h264」不一致——印證 `DANCE_CLONE_SOP.md` Step 2 的
+  已知風險：同一支 IG 貼文不同時間點抓取，dash 串流編碼可能不同，不能假設一致），重新用
+  `ffmpeg -c:v libx264 -pix_fmt yuv420p` 轉檔
+- 裁切：`crop=780:1450:0:100`，裁掉右側圖示欄與頂部歌曲標題列，跨頭尾兩個取樣幀確認手勢動作完整在框內
+- 上傳驅動片取得 `media_id: 8d950ad9-6277-490c-8f48-3f98eb38baa4`
+- `image_id: 494ce6df-0a59-4f3d-b3cf-b402d36cf20b`（起始畫面 v2 job，直接沿用），`scene_control: image`，
+  `resolution: 1080p`
+- Job ID `523f04d9-937e-4579-840e-2ed77935c20f`，`status: completed`，一次到位，未觸發 nsfw 判定
+- 輸出：`1072×1936`、h264、14.0s
+- **輸出本身無聲**（`ffprobe` 確認只有一條 h264 視訊流），需要 Step 6 手動混音
+
+### Step 6：手動混音
+
+用 `ffmpeg -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -shortest` 把 Step 2 抽出的 `driver_audio.m4a`
+（驅動片原始配樂，起點對齊 0s）蓋上 Kling 輸出的無聲畫面，輸出新版 `rainie_dance_clone_r5_ig_reel.mp4`
+（1072×1936、14.0s，含視訊+音訊雙軌，已用 `ffprobe` 確認）。
+
+### Step 7：授權與發佈限制檢查
+
+- **驅動動作**：來自第三方 Instagram 創作者，本次生成僅供內部方法驗證；若要對外發佈，需評估重現程度
+  是否需要致敬標註或改編到不可辨識
+- **配樂**：混音使用的是驅動片原始配樂，**未取得商用授權**，正式發佈前必須替換為已授權/可商用曲庫版本
+- **背景**：`scene_control` 選用 `image`（夜店 VIP 包廂場景為生成，非真實場地），不涉及第三方場景
+  可辨識性問題；霓虹招牌文字為生成產物，字樣不完整/略糊（"...gicle MICAR" 讀不出完整品牌名），屬已知
+  AI 文字瑕疵，非侵權風險
+- **素材存放**：驅動片原始檔僅存在本機工作資料夾，未存入本 repo
+
+### Step 8：QA 檢核（已用 Read 工具目視抽幀比對，非假設）
+
+抽樣 0.5s / 1.0s / 2.0s / 2.5s / 4.0s / 4.5s / 6.0s / 6.6s / 8.0s / 8.5s / 9.0s / 9.6s / 10.0s / 10.4s /
+13.0s / 13.5s / 13.9s 共 17 個時間點：
+
+- [x] **身分一致**：全程可清楚辨認黑長直髮、五官輪廓，跟起始畫面 v2 的錨定身分一致，多個抽樣幀交叉
+  比對未觀察到臉型結構漂移
+- [x] **微表情有變化**：抽樣幀之間表情、嘴角弧度、視線角度皆有可辨識差異，不是同一張臉套多個手勢的
+  面具臉
+- [x] **次級動態確實轉印**：長直髮在多個抽樣幀（4.5s、13.9s 等）呈現明顯的飄動/滯後，確認次級動態
+  有效轉印
+- [x] **手部整體無明顯崩壞**：4.5s 抱胸交叠手勢、8.0s/13.9s 握拳手勢皆手指數量與形狀正常
+- [x] **背景穩定**：夜店包廂場景（霓虹招牌、暖黃燈、皮革沙發）全程一致，無鬼影閃爍
+- [x] **規格**：1072×1936（超過 1080×1920 門檻略窄，符合過去批次慣例）、音樂已對齊長度
+- [x] **卡拍**：驅動片原始配樂與生成畫面長度一致，混音對齊裁剪起點
+
+**結論**：換背景重製全流程完成，QA 全數通過。舊版（工業區道路背景）保留為
+`rainie_dance_clone_r5_v1_industrial_road_ig_reel.mp4` 供對照，新版取代為預設檔名。
+
+### 產出檔案
+
+- `kols/rainie-hsu/images/dance_clone_r5/start_frame_v2.png`（已核准起始畫面，換背景版本）
+- `kols/rainie-hsu/videos/dance_clone_r5/rainie_dance_clone_r5_ig_reel.mp4`（新版，飯店/夜店夜生活背景，
+  含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+- `kols/rainie-hsu/videos/dance_clone_r5/rainie_dance_clone_r5_v1_industrial_road_ig_reel.mp4`（舊版，
+  工業區道路背景，保留供對照）
