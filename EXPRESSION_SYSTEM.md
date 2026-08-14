@@ -209,7 +209,7 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - `MOUTH: open in a yawn, nose wrinkled`
 - 加上：`one hand rubbing her eye, hair flattened on one side from the pillow`
 
-### 象限 4：沒意識到鏡頭 × 高能量
+### 象限 4：沒意識到鏡頭 × 高能量（先列，勾引組在後）
 
 **E-10 講話講到一半**
 - 動機：她正在跟鏡頭外的人講話，被抓拍
@@ -218,6 +218,76 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - `MOUTH: caught mid-word, lips forming a vowel shape, teeth partly visible`
 - 加上：`one hand raised mid-gesture, mid-sentence, unposed`
 - 「抓拍感」最強的一個——照片看起來像剛好按到快門
+
+### 勾引組（E-11～E-13，2026-08-12 補）
+
+> **背景**：使用者看過 Iris v5 規劃後指出「動作可能都要帶有一些勾引、賣弄性感的那種感覺」。
+> 檢視 E-1～E-10 才發現**只有 E-1 是明確勾引的**，其餘九個都是「生活感的臉」——
+> 表情庫本身缺了一整個類別。以下三個補上這個缺口。
+>
+> **共同前提**：`.claude/agents/emotion-director.md` 的品味線——**挑逗可以，低俗不行**；
+> 這三個表情的關鍵字是「她知道你在看，而且她樂在其中」，不是取悅或討好。
+> **象限上全部屬於「意識到鏡頭」**，與 E-7／E-8／E-9／E-10 的「沒意識到」形成對照。
+
+**E-11 咬下唇（回眸）**
+- 動機：她知道你在看，而且故意讓你看
+- `BROW: the right one raised a fraction, the left held level`
+- `EYES: locked on the lens from under lowered lids, unhurried`
+- `MOUTH: lower lip caught between her teeth on the left side, the right corner curling up`
+- 加上：`looking back over one shoulder`（回眸版效果最強）
+
+**E-12 微張嘴、緩緩呼氣（慵懶版）**
+- 動機：剛伸展完／剛醒／熱——身體的自然反應，不是擺出來的
+- `BROW: both relaxed, inner ends slightly lifted`
+- `EYES: nearly closed, lashes low, only just still looking at the lens`
+- `MOUTH: parted, jaw loose, mid-exhale, lower lip fuller than the upper`
+- 加上：`chin lifted, throat and collarbone exposed`（這個表情要配合仰頭才成立）
+
+**E-13 手指抵著下唇、眼睛往上看鏡頭**
+- 動機：在想一件事，想到一半發現你在看
+- `BROW: both lifted slightly, an unspoken question`
+- `EYES: looking up into the lens from beneath, head angled down`
+- `MOUTH: closed, her index finger resting against the centre of her lower lip`
+- ⚠️ **注意**：頭低、眼睛往上看是**表情**，不是相機角度——相機仍維持平視或微俯角，
+  絕不可改成由下往上仰拍（`SEXY_SCENE_LIBRARY.md` 第 16 點）
+
+---
+
+## 四之二、⚠️ 模型能力邊界：細微的嘴部表情生不出來（2026-08-14 實測，9 次生成）
+
+> **這是導入本系統後最重要的一次實測發現，直接決定哪些表情可以用。**
+
+Iris `daily_expression_v5` 首批 6 張 ＋ 重生 3 張，結果如下：
+
+| 表情 | 類型 | 結果 |
+|---|---|---|
+| **E-4 開口大笑** | 大動作 | ✅ 成功 |
+| **E-13 手指抵下唇** | 有實體錨點 | ✅ 成功（本批最好的一張） |
+| **E-1 半瞇微笑** | 模型預設臉 | ✅ 成功 |
+| **E-11 咬下唇** | 純肌肉細節 | ❌ **兩次都失敗**：第一次變成閉嘴微笑，第二次變成開口大笑 |
+| **E-5 抿嘴憋笑** | 純肌肉細節 | ❌ 第一次變成閉嘴微笑；第二次加了「手抬到嘴邊」才勉強有一點，仍不到位 |
+| **E-12 微張嘴呼氣** | 純肌肉細節 | ❌ 第一次變成閉嘴微笑；第二次仰頭做到了，但嘴變成大笑 |
+
+**失敗模式高度一致：只要表情是純肌肉的細微變化，模型一律忽略，並倒退回它的預設臉——「閉嘴微笑」或「開口大笑」。** 而那個閉嘴微笑，正是這整套系統要解決的「一號表情」本人。
+
+**第二次重生已證明這不是 prompt 寫法問題**：即使把表情段落搬到 prompt 最前面、寫成「這張照片唯一必須呈現的就是 X」、加上「如果只是閉嘴微笑就算失敗」的否定句、並拉近景別到半身，三個細微表情仍然全部失敗。**這是模型能力邊界，不是描述精度問題，不要再燒 credit 重試。**
+
+### 修正後的表情選用規則
+
+**每個表情都必須落在下面兩類之一，否則不要排進批次：**
+
+| 類 | 定義 | 可用表情 |
+|---|---|---|
+| **① 大動作表情** | 臉部有大幅度的形變，遠看就看得出來 | E-4 大笑、E-6 驚訝（眉眼大開＋嘴成 O）、E-9 打呵欠、E-2 挑眉（眉毛位移夠大）、E-3 嘟嘴（唇部外推夠大） |
+| **② 有實體錨點的表情** | 畫面上有一個**看得見的物件或手部動作**參與這個表情 | E-13 手指抵下唇、手背半摀嘴、手撥開頭髮、咬著吸管／髮尾、手背抵額頭、手托腮擠壓臉頰 |
+
+**禁止單獨使用的（純肌肉細節，實測生不出來）**：咬下唇、抿嘴憋笑、微張嘴呼氣、似笑非笑、嘴角極小幅度上揚。
+
+**這條對第五節的角色人格有直接影響**——Sophia 的「只有眼睛在笑，嘴幾乎不動」與 Luna 的「嘴角極小幅度上揚」都屬於純肌肉細節，**目前的模型做不到**。這兩位角色的表情要改用②類的實體錨點來達成同樣的克制感（例如手指抵著杯緣、手背撐著下顎），而不是靠嘴部的微小變化。
+
+### 補充：景別要求
+
+`.claude/agents/emotion-director.md` 早有一句「微表情在全身遠景裡是看不見的，若鏡頭太遠讀不到臉，要求更近的景別」——**這條之前只用在影片上，靜態圖從沒套用。** 本批失敗的三張初版全部是中景到全身。**排表情批次時，臉必須在畫面裡夠大**：胸上到腰上的景別為佳，全身遠景不要指望表情讀得到。
 
 ---
 
