@@ -243,6 +243,29 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - `MOUTH: parted, jaw loose, mid-exhale, lower lip fuller than the upper`
 - 加上：`chin lifted, throat and collarbone exposed`（這個表情要配合仰頭才成立）
 
+### 自拍常見表情組（E-14～E-19，2026-08-14 補，已實測）
+
+> **背景**：使用者要求「安排一些眨眼、吐舌頭、裝可愛那種的，或是性感迷離的眼神不要笑嘴唇微張之類的，
+> 還有嘟嘟嘴，其實就是一些美女常常自拍會有的表情」。以下六個已用 Iris 同一個 setup 各生一張實測。
+
+**E-14 眨眼** ✅ 已驗證可生成
+- `BROW: relaxed` / `EYES: her left eye fully shut, lid all the way down with the lashes meeting and the cheek beneath pushed up, while her right eye stays wide open on the lens` / `MOUTH: closed, small pleased smile pulled noticeably higher on the winking side`
+
+**E-15 吐舌頭** ✅ 已驗證可生成
+- `EYES: crinkled into curved crescents, almost shut` / `MOUTH: the tip of her tongue out over her lower lip, pink and unmistakably visible, mouth open around it in a playful grin, nose wrinkled`
+
+**E-16 嘟嘴** ❌ 實測失敗（變成閉嘴微笑）——只改嘴形，見第四之三節。若要嘟嘴，改用「含著吸管」讓物件撐出嘴形
+
+**E-17 雙手食指戳臉頰（裝可愛）** ✅ 已驗證可生成
+- `both hands raised beside her face with the index fingers pressed into her cheeks, denting them visibly, framing her face between her palms` / `EYES: crinkled into crescents in a happy squint` / `MOUTH: closed, small squeezed smile` / `head tilted`
+
+**E-18 性感迷離：不笑、嘴唇微張** ❌ 實測失敗（變成露牙笑）——跨兩輪三次全敗，判定為模型硬限制，見第四之三節
+
+**E-19 咬髮尾** 🟡 動作可生成、表情底色仍是笑
+- `a single thick strand of her long black hair pulled across her mouth and clamped between her teeth, clearly visible running between her lips, her hand holding the same strand near her chin`
+
+---
+
 **E-13 手指抵著下唇、眼睛往上看鏡頭**
 - 動機：在想一件事，想到一半發現你在看
 - `BROW: both lifted slightly, an unspoken question`
@@ -272,16 +295,51 @@ Iris `daily_expression_v5` 首批 6 張 ＋ 重生 3 張，結果如下：
 
 **第二次重生已證明這不是 prompt 寫法問題**：即使把表情段落搬到 prompt 最前面、寫成「這張照片唯一必須呈現的就是 X」、加上「如果只是閉嘴微笑就算失敗」的否定句、並拉近景別到半身，三個細微表情仍然全部失敗。**這是模型能力邊界，不是描述精度問題，不要再燒 credit 重試。**
 
-### 修正後的表情選用規則
+### 修正後的表情選用規則（2026-08-14 第二輪 6 次生成後再修正，見下方 4-c）
 
 **每個表情都必須落在下面兩類之一，否則不要排進批次：**
 
 | 類 | 定義 | 可用表情 |
 |---|---|---|
-| **① 大動作表情** | 臉部有大幅度的形變，遠看就看得出來 | E-4 大笑、E-6 驚訝（眉眼大開＋嘴成 O）、E-9 打呵欠、E-2 挑眉（眉毛位移夠大）、E-3 嘟嘴（唇部外推夠大） |
-| **② 有實體錨點的表情** | 畫面上有一個**看得見的物件或手部動作**參與這個表情 | E-13 手指抵下唇、手背半摀嘴、手撥開頭髮、咬著吸管／髮尾、手背抵額頭、手托腮擠壓臉頰 |
+| **① 大動作表情** | 臉部有大幅度的形變，遠看就看得出來 | E-4 大笑、E-6 驚訝（眉眼大開＋嘴成 O）、E-9 打呵欠、E-2 挑眉（眉毛位移夠大）、**E-14 眨眼** |
+| **② 有實體錨點的表情** | 畫面上有一個**看得見的物件或手部動作**參與這個表情 | E-13 手指抵下唇、**E-15 吐舌頭**、**E-17 雙手戳臉頰**、**E-19 咬髮尾**、手背半摀嘴、手撥開頭髮、咬吸管 |
 
-**禁止單獨使用的（純肌肉細節，實測生不出來）**：咬下唇、抿嘴憋笑、微張嘴呼氣、似笑非笑、嘴角極小幅度上揚。
+**禁止單獨使用的（純肌肉細節，實測生不出來）**：咬下唇、抿嘴憋笑、微張嘴呼氣、似笑非笑、嘴角極小幅度上揚、**嘟嘴**。
+
+---
+
+## 四之三、⚠️ 真正的分界線是「嘴巴以外」——這個 soul 的嘴幾乎鎖死在微笑（2026-08-14 第二輪實測）
+
+第一輪（v5）得到的結論是「大動作 vs 純肌肉細節」。第二輪（`selfie_expression_v6`，6 次生成，同一個
+setup 只變表情）把這條線切得更準：
+
+| 表情 | 它改變的是什麼 | 結果 |
+|---|---|---|
+| **E-14 眨眼** | **眼睛**（閉一隻） | ✅ 成功 |
+| **E-15 吐舌頭** | 加入一個**新物件**（舌頭） | ✅ 成功 |
+| **E-17 雙手戳臉頰** | **手**進入畫面把臉壓變形 | ✅ 成功 |
+| **E-19 咬髮尾** | **物件**（髮絲）進入嘴部 | 🟡 動作成功（髮絲確實咬在齒間），但嘴形底色仍是笑 |
+| **E-16 嘟嘴** | 只改**嘴形** | ❌ 失敗，變成閉嘴微笑 |
+| **E-18 迷離不笑、嘴唇微張** | 只改**嘴形** | ❌ 失敗，變成露牙笑 |
+
+**結論：分界不在「幅度大小」，而在「這個表情有沒有動到嘴巴以外的東西」。**
+
+> **這個 soul 的嘴巴幾乎鎖死在「微笑／笑」兩種狀態。凡是只靠嘴形變化的表情一律失敗；
+> 能成功的全部都是靠眼睛、手、或外部物件達成的。**
+
+**「不笑」是最硬的限制**：跨兩輪共試了三次（E-12 兩次、E-18 一次），每次都用了最強的寫法
+（表情放最前面、寫「唯一必須呈現的就是 X」、加「如果在笑就算失敗」的否定句、景別拉到胸上），
+**三次全部生出笑臉**。判定為 `soul_2` + 此 `soul_id` 的硬限制。
+
+### 想要「不笑的性感迷離」的替代路徑（尚未驗證）
+
+text-to-image 這條路已經走不通，若使用者仍需要這個表情，可依序試：
+
+1. **換模型**——不用 `soul_2`，改用其他 image 模型搭配 Reference Element 錨定身分，看嘴部是否解鎖
+2. **從影片抽幀**——影片在動作過程中一定會經過「不笑」的幀，抽出來當靜態圖使用
+3. **用物件強制改變嘴形**——含著吸管、棒棒糖、叼著眼鏡腳，讓嘴巴被物件撐開而不是靠肌肉
+
+同理，**嘟嘴**若一定要有，走第 3 條（含吸管）比直接寫「嘟嘴」可行。
 
 **這條對第五節的角色人格有直接影響**——Sophia 的「只有眼睛在笑，嘴幾乎不動」與 Luna 的「嘴角極小幅度上揚」都屬於純肌肉細節，**目前的模型做不到**。這兩位角色的表情要改用②類的實體錨點來達成同樣的克制感（例如手指抵著杯緣、手背撐著下顎），而不是靠嘴部的微小變化。
 
