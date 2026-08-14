@@ -1,10 +1,16 @@
 # Virtual KOL Studio — Expression System（表情系統）
 
-> 2026-08-12 建立。起因：外部觀看者對 Iris Chen 四個批次（共 20 張）的反饋——
-> 「她的表情都是一樣的，都是一號表情。雖然動作和衣服可能都有變化，但是她的髮型和表情都差不多。」
+> 2026-08-12 建立，同日擴大為全角色適用。
+>
+> **起因**：外部觀看者對 Iris Chen 四個批次（共 20 張）的反饋——「她的表情都是一樣的，都是一號表情。
+> 雖然動作和衣服可能都有變化，但是她的髮型和表情都差不多。」
+>
+> **使用者判斷（2026-08-12）**：「這個問題好像不只有 Iris 這個人設是這樣，其他的 KOL 應該也有同樣的
+> 問題。所以如果要改這個設定的話，就全部的 KOL 一起改。只是因為我現在先用 Iris 當作 sample 進行比較多
+> 的產出，所以我比較容易發現這個問題。」
 >
 > 這份文件之於「臉」，等同 `WARDROBE_SYSTEM.md` 之於「衣服」：把表情與髮型從**人設的附屬品**
-> 拉出來，變成**獨立輪替的變數**。
+> 拉出來，變成**獨立輪替的變數**。**適用全部 11 位角色，不是 Iris 個案。**
 
 ---
 
@@ -25,7 +31,7 @@ half-lidded relaxed expression / calm unbothered expression
 | `chin down`（下巴微低） | ~15 |
 | `direct eye contact`（直視鏡頭） | ~16 |
 | `half-lidded`（半瞇眼） | ~10 |
-| `faint smirk` / `faint smile`（淡淡微笑） | ~9 |
+| `faint smirk` / `faint smile` | ~9 |
 | 嘴巴閉著或僅微張 | 19 |
 | **露出牙齒** | **0** |
 | **閉眼／瞇成弧線** | **0** |
@@ -36,8 +42,21 @@ half-lidded relaxed expression / calm unbothered expression
 **最關鍵的單一發現**：20 張裡有 16 張是「意識到鏡頭 ＋ 直視鏡頭」。
 **「她有沒有意識到鏡頭」這個變數，從頭到尾沒有被轉過。** 服裝轉了 20 次，臉只轉了 1 次。
 
-這與 `WARDROBE_SYSTEM.md` 第 13 點的根因結構完全相同——當時是「支柱決定了服裝」，
+這與 `WARDROBE_SYSTEM.md` 第 13 點的根因結構完全相同——當時是「內容支柱決定了服裝」，
 這次是「一句表情模板決定了全部的臉」。
+
+### 1-b. 全角色層級的第二個問題：角色之間也會撞臉
+
+同一組表情模板套在 11 位角色身上，後果不只是「每個角色自己單調」，而是
+**11 位角色的臉會收斂成同一個人**——因為決定「這是誰」的除了五官，更大一部分是
+**她怎麼笑、眼睛habitually 看哪裡、預設情緒強度**。五官由 `soul_id` 鎖定，但表情人格從來沒被定義過。
+
+所以本系統分兩層：
+
+- **共用層**（第二～四、六節）：三個軸、四項必寫、10 個表情庫、分配規則——**全角色一致**
+- **人格層**（第五節）：每位角色的**招牌表情、第二常用、禁用表情、笑的方式、眼神預設**——**每位角色都不同**
+
+> **笑的方式是最強的區隔器。** 如果 11 位角色笑起來一模一樣，她們就是同一個人穿不同衣服。
 
 ---
 
@@ -45,17 +64,17 @@ half-lidded relaxed expression / calm unbothered expression
 
 不要用「開心／性感／慵懶」這種形容詞規劃表情，那會回到同一張臉。用三個軸定位：
 
-| 軸 | 兩端 | 我們現況 |
+| 軸 | 兩端 | 我們現況（Iris 20 張） |
 |---|---|---|
 | **A. 鏡頭意識** | 意識到並直視 ←→ 完全沒意識到鏡頭 | 16/20 壓在「意識到」那一端 |
 | **B. 情緒能量** | 低（慵懶、放空） ←→ 高（大笑、驚訝） | 20/20 壓在「低」 |
 | **C. 嘴巴狀態** | 閉合 ←→ 微張 ←→ 開口露牙 | 19/20 壓在「閉合／微張」 |
 
-**規劃一批素材時，先在這三個軸上分配座標，再去挑下面的表情編號。**
+**規劃一批素材時，先在這三個軸上分配座標，再去挑第四節的表情編號。**
 
 ---
 
-## 三、每個表情都必須寫滿的三件事
+## 三、每個表情都必須寫滿的四件事
 
 這是本系統的核心規則。只寫「她在微笑」不合格，一律退回重寫。
 
@@ -68,13 +87,13 @@ half-lidded relaxed expression / calm unbothered expression
 模型不會自己動眉毛。三層都要各自指定：
 
 ```
-BROW: [哪一邊、往上還是往下、幅度]
-EYES: [睜大/半瞇/瞇成弧線/閉起] + [看哪裡——必須有具體落點]
+BROW:  [哪一邊、往上還是往下、幅度]
+EYES:  [睜大/半瞇/瞇成弧線/閉起] + [看哪裡——必須有具體落點]
 MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 ```
 
 ### 3. 不對稱（明確指定哪一邊）
-`emotion-director` agent 的核心指令：**「臉永遠不會靜止，也永遠不對稱」**——
+`.claude/agents/emotion-director.md` 的核心指令：**「臉永遠不會靜止，也永遠不對稱」**——
 對稱的臉是 AI 感最強的訊號之一。每個表情都要指定一個不對稱點：
 `the left corner of her mouth lifts higher than the right`、`only her right brow raises`。
 
@@ -84,19 +103,18 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 
 ---
 
-## 四、Iris Chen 的 10 個表情
+## 四、10 個表情庫（全角色共用編號）
 
-> ★ = 招牌表情，**配額 ≤30%**（比照 `WARDROBE_SYSTEM.md` 的招牌服裝配額邏輯）。
-> 選表情時先看象限，不要每次都挑順手的。
+> 編號全角色通用，但**強度與風味依第五節的角色人格調整**。
+> 例：E-4 大笑，Coco 是少女式尖叫大笑，Ananya 是溫暖大姊式大笑，Sophia 則根本不做 E-4。
 
 ### 象限 1：意識到鏡頭 × 低能量
 
-**E-1 ★半瞇微笑（現行的「一號表情」，保留但限額）**
+**E-1 半瞇微笑**
 - 動機：她知道自己好看，不解釋
 - `BROW: relaxed, the right one a fraction higher than the left`
 - `EYES: half-lidded, looking straight into the lens`
 - `MOUTH: closed, the left corner lifted higher than the right in a faint knowing smirk`
-- 適合：招牌單圖、貼文首圖
 
 **E-2 挑眉歪頭（「幹嘛」）**
 - 動機：對正在拍她的人有意見／覺得對方很煩
@@ -104,14 +122,12 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - `EYES: wide open, looking directly into the lens with a slightly sceptical tilt`
 - `MOUTH: closed and pushed slightly to one side, the right corner pulled down`
 - 加上：`head tilted to one side`
-- 適合：他拍、朋友視角
 
 **E-3 嘟嘴抗議**
 - 動機：撒嬌、討東西、抱怨
 - `BROW: both drawn slightly together in the middle`
 - `EYES: looking up into the lens from under her lashes`
 - `MOUTH: lower lip pushed forward in a small pout, closed`
-- 適合：自拍近景
 
 ### 象限 2：意識到鏡頭 × 高能量
 
@@ -119,16 +135,15 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - 動機：鏡頭外的朋友剛講了一句很好笑的話
 - `BROW: both lifted, the left slightly higher`
 - `EYES: crinkled into curved crescents with visible smile lines at the outer corners, almost closed`
-- `MOUTH: wide open laughing with her upper teeth visible, the left side of her mouth pulled higher`
+- `MOUTH: wide open laughing with her upper teeth visible, the left side pulled higher`
 - 加上：`head tipped back a little, chin lifted, shoulders raised in mid-laugh`
-- ⚠️ 這是本系統**最重要的一個表情**——20 張裡一張都沒有
+- ⚠️ Iris 20 張裡**一張都沒有**——全角色最該補的一個
 
 **E-5 抿嘴憋笑**
 - 動機：在忍住不要笑出來（別人在鏡頭外做蠢事）
 - `BROW: both raised, forehead slightly creased`
 - `EYES: narrowed with genuine laughter in them, looking into the lens`
 - `MOUTH: pressed firmly shut and pushed to the left, cheeks puffed slightly, nose wrinkled`
-- 適合：他拍、有互動感的情境
 
 **E-6 驚訝／被抓到**
 - 動機：沒想到現在正在被拍
@@ -151,15 +166,14 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - `BROW: slightly drawn together in concentration`
 - `EYES: cast down, focused on [她手上的東西], completely unaware of the camera`
 - `MOUTH: lips slightly pursed / lower lip caught between her teeth in concentration`
-- ⚠️ **這一類 20 張裡也是零**，卻最貼她 character.md 的「她不表演給鏡頭看」
+- ⚠️ Iris 20 張裡也是**零**，卻最貼她 `character.md` 的「她不表演給鏡頭看」
 
 **E-9 打呵欠／剛睡醒**
-- 動機：真的想睡（她的帳號簡介就是「剛睡醒。」）
+- 動機：真的想睡
 - `BROW: inner ends lifted, sleepy`
 - `EYES: squeezed shut / barely open and watering slightly`
 - `MOUTH: open in a yawn, nose wrinkled`
 - 加上：`one hand rubbing her eye, hair flattened on one side from the pillow`
-- 適合：晨起系列，也是她 tagline 的具象化
 
 ### 象限 4：沒意識到鏡頭 × 高能量
 
@@ -169,13 +183,40 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - `EYES: looking at someone off-frame to the left, not the lens`
 - `MOUTH: caught mid-word, lips forming a vowel shape, teeth partly visible`
 - 加上：`one hand raised mid-gesture, mid-sentence, unposed`
-- 這是「抓拍感」最強的一個——照片看起來像剛好按到快門
+- 「抓拍感」最強的一個——照片看起來像剛好按到快門
 
 ---
 
-## 五、髮型：問題不是「幾種髮型」，是「幾種狀態」
+## 五、各角色的表情人格（每位都不同）
 
-前四批其實有換髮型（放下／濕髮／鯊魚夾／低馬尾／高馬尾／半盤＋緞帶／丸子頭／辮子），
+> **這一節是防止 11 位角色撞臉的關鍵。** 招牌表情配額一律 **≤30%**。
+> 「禁用」欄不是絕對禁止，而是**該表情不屬於這個角色，用了會讓她不像她**。
+
+| 角色 | 招牌（≤30%） | 第二常用 | 禁用 | **笑的方式（最強區隔器）** | 眼神預設 |
+|---|---|---|---|---|---|
+| **Iris Chen** 22 台北 IT girl | E-1 半瞇微笑 | E-8 專注做事 | 對鏡頭比 pose 的甜笑、誇張驚訝 | 閉嘴的鼻息笑，真的笑出來會低頭用手背擋一下 | 直視鏡頭，但沒有在討好 |
+| **Coco Wu** 20 台中校園甜心 | **E-4 大笑** | E-6 驚訝 | E-1 半瞇冷笑（太有距離感）、deadpan | 少女式尖叫大笑，笑到瞇成一條線、肩膀抖、會遮嘴 | 亮、直接、什麼都寫在臉上 |
+| **Rainie Hsu** 24 派對女王 | E-2 挑眉 | E-5 抿嘴壞笑 | E-3 嘟嘴撒嬌（不符她的權力關係） | **只有半邊嘴角，不出聲**，笑完把視線移開 | 由上往下斜看鏡頭，帶挑釁 |
+| **Sophia Tseng** 28 貴婦名媛 | E-7 放空（疏離版） | E-5 抿嘴（極小幅度） | E-4 大笑露牙、E-6 誇張驚訝、E-3 嘟嘴 | **只有眼睛在笑，嘴幾乎不動**，最多嘴角 2mm | 不太看鏡頭，看鏡頭時也沒有要交流 |
+| **Mia Huang** 22 直播主 | E-2 挑眉（表演式） | E-10 講話中（她一直在跟 chat 講話） | 長時間安靜放空 | 誇張、往後仰、笑完馬上做鬼臉接下一句 | 對著鏡頭像對著觀眾，不斷 break 第四面牆 |
+| **Vicky Lin** 25 健身 | E-2 挑眉（得意版） | E-8 專注（訓練中） | E-3 嘟嘴撒嬌 | 開口笑＋挑眉，帶挑釁的「你看吧」 | 直視，帶競爭感 |
+| **Luna Tanaka** 20 京都 | E-7 放空（在看一個很小的東西） | E-8 專注 | E-4 大笑、E-6 誇張驚訝 | **眼睛先笑，嘴角極小幅度上揚**，沒有聲音 | 常常不在鏡頭上，看光、看窗、看手上的東西 |
+| **Ananya Kapoor** 23 孟買 | **E-4 大笑（溫暖大姊版）** | E-8 專注（瑜伽） | E-2 冷挑眉 | 頭往後仰、整張臉都在笑、會拍大腿 | 溫暖直視，像在看一個她喜歡的人 |
+| **Camille Dupont** 22 里昂 | E-7 放空（夢遊感） | E-1 半瞇（更鬆、更不對焦） | E-6 誇張驚訝、E-4 爆笑 | **幾乎不笑**，只有一邊嘴角，而且笑完立刻收 | 沒有對焦點的柔軟視線 |
+| **Aaliya Okonkwo** 25 東洛杉磯 | E-10 講話講到一半 | E-4 大笑 | 長時間放空 | **先 deadpan、再突然爆笑**——反差就是她的笑點 | 邊講邊看鏡頭外的人，偶爾轉回鏡頭 |
+| **Yuna Kim** 21 首爾 | E-1 半瞇（冷版） | E-8 專注（護膚） | E-6 誇張驚訝 | 低調、短促，笑一下就收回去 | 平視鏡頭，淡，不需要你看 |
+
+**三組容易撞的招牌，區隔寫法**（規劃時務必照這個寫，不然三個人會長一樣）：
+
+- **E-2 挑眉三人組**：Rainie＝**嘲諷**的冷挑眉（嘴角往下）／ Mia＝**表演給觀眾看**的誇張挑眉（配合手勢）／ Vicky＝**得意挑釁**的挑眉（配合開口笑）
+- **E-7 放空三人組**：Sophia＝**有錢人的無聊**（眼神空但姿態端正）／ Luna＝**在專心看一個很小的東西**（眼睛有落點）／ Camille＝**剛醒還沒回神**（臉部完全鬆掉）
+- **E-4 大笑二人組**：Coco＝**少女尖叫**（高頻、遮嘴、肩膀抖）／ Ananya＝**溫暖大姊**（低頻、往後仰、整張臉）
+
+---
+
+## 六、髮型：問題不是「幾種髮型」，是「幾種狀態」
+
+Iris 前四批其實有換髮型（放下／濕髮／鯊魚夾／低馬尾／高馬尾／半盤＋緞帶／丸子頭／辮子），
 **但讀起來還是一樣**，因為全部都是「同樣長度、同樣中分、同樣黑直、同樣乾淨」的變體。
 
 真正會改變臉部讀感的是下面兩個變數，**前四批一次都沒動過**：
@@ -193,22 +234,23 @@ MOUTH: [閉合/微張/開口/露牙/咬唇/嘴角哪一邊高]
 - **H-4 吹整過的滑順放下**：有光澤、明確指定分線
 - **H-5 綁起來的**：高馬尾／低雙辮／半盤＋緞帶
 
-**規則**：每批 5 張至少涵蓋 3 種 H 狀態，且**至少 1 張要動到瀏海或分線**。
+**規則**：每批 5–6 張至少涵蓋 3 種 H 狀態，且**至少 1 張要動到瀏海或分線**。
 
 ---
 
-## 六、一批 5 張的分配規則（硬性）
+## 七、一批 5–6 張的分配規則（硬性，全角色適用）
 
-- [ ] 招牌 E-1 **最多 1 張**
+- [ ] 該角色的招牌表情**最多 1 張**
 - [ ] **至少 1 張沒有在看鏡頭**（E-7／E-8／E-10）
-- [ ] **至少 1 張嘴巴是打開的、看得到牙齒**（E-4／E-6／E-9／E-10）
+- [ ] **至少 1 張嘴巴是打開的、看得到牙齒**（E-4／E-6／E-9／E-10；Sophia、Camille、Luna 這類禁用大笑的角色改用 E-10 講話中）
 - [ ] 連續兩張不可落在同一象限
 - [ ] 每張都寫滿眉／眼／嘴三層 ＋ 一個不對稱點 ＋ 一個動機 ＋ 眼睛的落點
 - [ ] 髮型至少 3 種狀態，至少 1 張動到瀏海或分線
+- [ ] 表情選擇有對照第五節該角色的「禁用」欄
 
 ### 禁用字串
 
-以下這一整串是前四批的模板，**不可再整組沿用**：
+以下這一整串是 Iris 前四批的模板，**全角色都不可再整組沿用**：
 
 ```
 chin slightly down, direct eye contact with the camera, faint smirk,
@@ -219,7 +261,7 @@ half-lidded relaxed expression
 
 ---
 
-## 七、與既有規則的關係
+## 八、與既有規則的關係
 
 - **`SEXY_SCENE_LIBRARY.md` 第 14 點（Carousel ＝ 1 個 setup × 5–6 種表情）**：
   這份文件正是第 14 點缺的那一半。第 14 點說 carousel 要「只變表情」，但沒有定義
@@ -227,20 +269,20 @@ half-lidded relaxed expression
 - **`.claude/agents/emotion-director.md`**：該 agent 原本只用於影片的逐秒表情時間軸。
   本文件把它的兩條核心原則（R2 微表情流動、R3 不對稱）下放到**靜態圖**。
 - **`WARDROBE_SYSTEM.md`**：同一套「獨立變數 ＋ 招牌配額」的結構，套用在臉上。
+  規劃素材時，服裝轉盤（WARDROBE）與表情轉盤（本文件）**各自獨立轉**。
 
 ---
 
-## 八、驗證方式（建議的第一次測試）
+## 九、導入狀態
 
-**用「1 個 setup × 6 種表情」測**——固定服裝、場景、光線、髮型，**只變表情**，
-這樣表情是唯一變因，一次就能看出這套系統有沒有效。
+| 角色 | 表情人格已定義 | 已用新系統生成 |
+|---|---|---|
+| Iris Chen | ✅ | ⬜ 待生成（`daily_expression_v5` 規劃見其 `generation_notes.md`）|
+| 其餘 10 位 | ✅ | ⬜ 尚未 |
 
-而且這個測試本身就是一則可直接發佈的 carousel（`SEXY_SCENE_LIBRARY.md` 第 14 點指定的
-最高優先格式，但工作室至今沒有實際做過一則）。
-
-建議測試組合：E-1（招牌）／E-4（大笑）／E-8（專注做事）／E-2（挑眉）／E-9（打呵欠）／E-10（講話中）
-——橫跨四個象限，且包含三個「零出現率」的類型。
+**既有素材不需重做。** 使用者 2026-08-12 明確表示：舊素材雖被指出表情重複，「那些素材沒有不好，
+還是可以使用」——本系統只適用於**新生成的批次**，不追溯。
 
 ---
 
-*2026-08-12 建立。根因分析基礎：Iris Chen `daily_sexy_night_v1`～`v4_bolder` 共 20 張逐張回溯。*
+*2026-08-12 建立，同日擴大為全角色適用。根因分析基礎：Iris Chen `daily_sexy_night_v1`～`v4_bolder` 共 20 張逐張回溯。*

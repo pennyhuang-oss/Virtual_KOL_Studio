@@ -47,19 +47,20 @@ const GENERATION_RESULT_SCHEMA = {
   required: ['success', 'imagePath', 'notes'],
 }
 
-// 問題分成兩類，處置方式不同（2026-08-12 使用者指示）：
-//   defect      = AI 生成瑕疵（手指/肢體變形、拼貼、身分跑掉、構圖 bug、物件穿模）→ 直接自動重生
-//   environment = 環境類落差（光線氛圍、時間感、背景陳設、場景質感）→ 不自動重生，先問使用者
-// 一張圖同時有兩類問題時，以 defect 優先（先修好瑕疵，環境的部分連同新圖一起問）。
+// 問題分成兩類，處置方式不同（2026-08-12 使用者指示，同日擴大範圍）：
+//   defect    = AI 生成瑕疵（手指/肢體變形、拼貼、身分跑掉、構圖 bug、物件穿模）→ 直接自動重生
+//               ＋ 表情與 EXPRESSION_SYSTEM.md 指定的編號不符，也算 defect（見下方說明）
+//   specDrift = 設定落差（環境光線氛圍／服裝單品／道具跟指定的不完全一樣）→ 不自動重生，先問使用者
+// 一張圖同時有兩類問題時，以 defect 優先（先修好瑕疵，落差的部分連同新圖一起問）。
 const CRITIQUE_SCHEMA = {
   type: 'object',
   properties: {
     approved: { type: 'boolean' },
     defectIssues: { type: 'array', items: { type: 'string' } },
-    environmentIssues: { type: 'array', items: { type: 'string' } },
+    specDriftIssues: { type: 'array', items: { type: 'string' } },
     fixInstruction: { type: 'string' },
   },
-  required: ['approved', 'defectIssues', 'environmentIssues', 'fixInstruction'],
+  required: ['approved', 'defectIssues', 'specDriftIssues', 'fixInstruction'],
 }
 
 const CHECKLIST_TEXT = `1. 皮膚質感關鍵字（毛孔、自然紋理、不打磨、不 airbrushed）
@@ -128,24 +129,27 @@ ${isVideo ? '影片生成請參考 DAILY_VIDEO_SOP.md / DANCE_VIDEO_SOP.md 裡�
 
 **檢查手部時必須放大裁切看**（見 SEXY_SCENE_LIBRARY.md 第 10-b 點）：用 PIL 對每一隻入鏡的手做 2–3 倍放大另存，再用 Read 逐張檢視、數清楚手指根數。全圖尺寸下看不出融合的手，只看縮圖等於沒檢查。
 
-發現的問題**必須分成兩類回報**，不要混在一起：
-- \`defectIssues\`：**AI 生成瑕疵**——手指根數錯誤或融合、肢體扭曲、多餘肢體、拼貼/多格畫面、身分與角色不符、構圖 bug（黑邊、亂生的 UI 圖示）、物件穿模、明顯的生成錯亂。
-- \`environmentIssues\`：**環境類落差**——光線氛圍不對（該是夜晚卻讀起來像白天）、時間感不對、背景陳設不夠有生活感、場景質感與設定不符、後製色調偏差。這類**不是**生成錯誤，是「跟原本設想的不一樣」。
+**表情檢查（見 EXPRESSION_SYSTEM.md）**：這張圖的 prompt 指定了某個表情編號（E-1～E-10）。請確認生成結果**實際做出**了那個表情——眉毛、眼睛、嘴巴三層都要對得上，尤其確認「嘴巴該打開的有沒有打開」「該不看鏡頭的有沒有真的看別的地方」「有沒有做出指定的不對稱」。
 
-判準：**畫面本身壞掉了 → defect；畫面是好的，只是氣氛/場景跟預期不同 → environment。**
+發現的問題**必須分成兩類回報**，不要混在一起：
+- \`defectIssues\`：**AI 生成瑕疵**——手指根數錯誤或融合、肢體扭曲、多餘肢體、拼貼/多格畫面、身分與角色不符、構圖 bug（黑邊、亂生的 UI 圖示）、物件穿模、明顯的生成錯亂。**表情與指定編號不符也算在這一類**（例如指定 E-4 大笑卻生成閉嘴微笑、指定不看鏡頭卻直視鏡頭）——表情生錯等於這張圖沒有達成它存在的理由，要直接重生。
+- \`specDriftIssues\`：**設定落差**——(a) 環境：光線氛圍不對（該是夜晚卻讀起來像白天）、時間感、背景生活感、場景質感、色調偏差；(b) 服裝：生成的單品跟指定的不完全一樣（指定絲質睡裙生成合身洋裝、顏色或材質略有出入）；(c) 道具：指定的小物沒出現或換成別的。這類**不是**生成錯誤，是「跟原本設想的不一樣」。
+
+判準：**畫面本身壞掉了、或表情沒做到 → defect；畫面是好的、表情也對，只是氛圍/服裝/道具跟預期不同 → specDrift。**
 \`fixInstruction\` 只針對 \`defectIssues\` 寫修正方向（因為只有這類會自動重生）。`,
         { phase: 'Quality Critique', label: `critique:${koId}:${current.id || current.scene}:try${tries}`, schema: CRITIQUE_SCHEMA }
       )
       if (critique.approved) {
         return { ...current, critique, finalStatus: 'approved' }
       }
-      // 環境類落差不自動重生——使用者 2026-08-12 明確指示：「以後如果只有環境因素，不一定要
-      // 直接重新生成，先問過我覺得行不行」。只有 AI 瑕疵才值得自動燒 credit 重跑；環境的部分
-      // 由使用者看過圖之後決定要不要重生（他可能覺得生出來的氛圍比原本設想的更好）。
+      // 設定落差不自動重生——使用者 2026-08-12 明確指示：「如果之後生成到一半，發現只有環境
+      // 因素或衣服稍微跟我們要的設定不同，但表情等其他部分都很正常，你不一定要直接重新生成。
+      // 可以先讓我看一下」。只有 AI 瑕疵（含表情生錯）才值得自動燒 credit 重跑；環境/服裝/道具
+      // 的落差由使用者看過圖之後決定（他可能覺得生出來的比原本設想的更好）。
       const hasDefects = (critique.defectIssues || []).length > 0
       if (!hasDefects) {
-        log(`${koId} / ${current.scene || current.id}：只有環境類落差，不自動重生，交給使用者判斷 → ${(critique.environmentIssues || []).join('；')}`)
-        return { ...current, critique, finalStatus: 'awaiting_user_call_on_environment' }
+        log(`${koId} / ${current.scene || current.id}：只有設定落差（環境/服裝/道具），不自動重生，交給使用者判斷 → ${(critique.specDriftIssues || []).join('；')}`)
+        return { ...current, critique, finalStatus: 'awaiting_user_call_on_spec_drift' }
       }
       tries++
       if (tries > maxRetries) {
@@ -168,16 +172,16 @@ ${isVideo ? '影片生成請參考 DAILY_VIDEO_SOP.md / DANCE_VIDEO_SOP.md 裡�
 const approved = results.filter(Boolean).filter(r => r.finalStatus === 'approved')
 const needsManualEdit = results.filter(Boolean).filter(r => r.finalStatus === 'needs_manual_edit')
 const needsReview = results.filter(Boolean).filter(r => r.finalStatus === 'needs_human_review')
-const awaitingEnvCall = results.filter(Boolean).filter(r => r.finalStatus === 'awaiting_user_call_on_environment')
+const awaitingUserCall = results.filter(Boolean).filter(r => r.finalStatus === 'awaiting_user_call_on_spec_drift')
 const failed = results.filter(Boolean).filter(r => r.finalStatus === 'generation_failed')
 
-log(`完成：${approved.length} 個通過，${needsManualEdit.length} 個需人工後製，${awaitingEnvCall.length} 個環境類落差待使用者決定，${needsReview.length} 個需要人工複查，${failed.length} 個生成失敗`)
+log(`完成：${approved.length} 個通過，${needsManualEdit.length} 個需人工後製，${awaitingUserCall.length} 個設定落差待使用者決定，${needsReview.length} 個需要人工複查，${failed.length} 個生成失敗`)
 
-// 環境類落差的素材沒有生成瑕疵，畫面是可用的——但要不要為了氛圍重生是使用者的決定，
+// 這些素材沒有生成瑕疵、表情也正確，畫面是可用的——要不要為了氛圍/服裝落差重生是使用者的決定，
 // 所以這裡既不自動重生、也不自動歸檔，留在本機等使用者看過再說。
-if (awaitingEnvCall.length > 0) {
-  log(`以下素材只有環境類落差，等使用者決定要不要重生（未歸檔）：\n${awaitingEnvCall
-    .map(r => `  - ${r.scene || r.id}：${(r.critique.environmentIssues || []).join('；')}（檔案：${r.generation.imagePath}）`)
+if (awaitingUserCall.length > 0) {
+  log(`以下素材只有設定落差（環境/服裝/道具），等使用者決定要不要重生（未歸檔）：\n${awaitingUserCall
+    .map(r => `  - ${r.scene || r.id}：${(r.critique.specDriftIssues || []).join('；')}（檔案：${r.generation.imagePath}）`)
     .join('\n')}`)
 }
 
@@ -216,13 +220,13 @@ return {
   approvedCount: approved.length,
   needsManualEditCount: needsManualEdit.length,
   needsReviewCount: needsReview.length,
-  awaitingEnvironmentCallCount: awaitingEnvCall.length,
-  // 呼叫端要把這份清單原封不動拿去問使用者：每張圖給他看，說明環境落差在哪，
+  awaitingUserCallCount: awaitingUserCall.length,
+  // 呼叫端要把這份清單原封不動拿去問使用者：每張圖給他看，說明落差在哪（環境/服裝/道具），
   // 由他決定重生或直接採用。不要自行決定重生。
-  awaitingEnvironmentCall: awaitingEnvCall.map(r => ({
+  awaitingUserCall: awaitingUserCall.map(r => ({
     scene: r.scene || r.id,
     path: r.generation.imagePath,
-    environmentIssues: r.critique.environmentIssues || [],
+    specDriftIssues: r.critique.specDriftIssues || [],
   })),
   failedCount: failed.length,
   results,
