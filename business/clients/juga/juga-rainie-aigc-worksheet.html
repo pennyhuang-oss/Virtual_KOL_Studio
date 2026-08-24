@@ -1,0 +1,531 @@
+<title>JUGA × Rainie 生成工單</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+
+<style>
+:root{
+  --bg:#F5F3F7; --surface:#FFFFFF; --sunk:#EEEAF3;
+  --ink:#221B29; --ink-soft:#4A4053; --muted:#6E6479;
+  --rule:#E0D9E8; --rule-soft:#EBE5F0;
+  --kol:#C42566; --kol-wash:#FBEBF2;
+  --screen:#5B41B8; --screen-wash:#EEEAFB;
+  --dance:#A96412; --dance-wash:#FAF0E2;
+  --flag:#B23A2E; --flag-wash:#FBEDEB;
+  --ok:#2F7A55; --ok-wash:#E9F4EE;
+  --code-bg:#F1EDF6; --code-ink:#3C3346;
+  --shadow:0 1px 2px rgba(34,27,41,.05), 0 8px 24px -16px rgba(34,27,41,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14101A; --surface:#1D1724; --sunk:#191320;
+    --ink:#F0EBF3; --ink-soft:#CFC6D8; --muted:#9C92A8;
+    --rule:#312839; --rule-soft:#261F2E;
+    --kol:#FF7BA6; --kol-wash:#2B1622;
+    --screen:#AE93FA; --screen-wash:#1F1930;
+    --dance:#E9A94F; --dance-wash:#2A2015;
+    --flag:#F08877; --flag-wash:#2C1A17;
+    --ok:#68C99A; --ok-wash:#152418;
+    --code-bg:#221B2C; --code-ink:#CFC6D8;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -18px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14101A; --surface:#1D1724; --sunk:#191320;
+  --ink:#F0EBF3; --ink-soft:#CFC6D8; --muted:#9C92A8;
+  --rule:#312839; --rule-soft:#261F2E;
+  --kol:#FF7BA6; --kol-wash:#2B1622;
+  --screen:#AE93FA; --screen-wash:#1F1930;
+  --dance:#E9A94F; --dance-wash:#2A2015;
+  --flag:#F08877; --flag-wash:#2C1A17;
+  --ok:#68C99A; --ok-wash:#152418;
+  --code-bg:#221B2C; --code-ink:#CFC6D8;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -18px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px 96px}
+code,pre,.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace}
+
+.masthead{padding:56px 0 30px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+h1{font-family:"Noto Serif TC",Georgia,serif;font-weight:700;
+  font-size:clamp(30px,5.2vw,44px);line-height:1.24;letter-spacing:-.01em;
+  margin:0 0 14px;text-wrap:balance}
+.dek{font-size:17px;color:var(--ink-soft);margin:0;max-width:58ch}
+.tally{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+  gap:2px 24px;margin:28px 0 0;padding:0;list-style:none}
+.tally div{padding:10px 0;border-top:1px solid var(--rule-soft)}
+.tally dt{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted)}
+.tally dd{margin:2px 0 0;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.tally dd small{font-size:13px;font-weight:400;color:var(--muted);margin-left:4px}
+
+section{padding-top:52px}
+h2{font-family:"Noto Serif TC",Georgia,serif;font-weight:700;font-size:24px;
+  line-height:1.4;margin:0 0 6px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+h2 .n{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+  color:var(--muted);letter-spacing:.06em}
+.sub{margin:0 0 24px;color:var(--muted);font-size:15px;max-width:64ch}
+h3{font-weight:700;font-size:16px;margin:30px 0 12px}
+p{margin:0 0 14px;max-width:66ch}
+
+.rules{list-style:none;margin:0;padding:0;display:grid;gap:0;
+  border:1px solid var(--rule);border-radius:3px;background:var(--surface);overflow:hidden}
+.rules li{display:grid;grid-template-columns:118px 1fr;gap:0 18px;
+  border-bottom:1px solid var(--rule-soft);align-items:start}
+.rules li:last-child{border-bottom:0}
+.rules .k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);font-weight:600;padding:14px 0 14px 18px}
+.rules .v{padding:14px 18px 14px 0;font-size:14.5px;color:var(--ink-soft)}
+.rules .v b{color:var(--ink)}
+
+.scroller{overflow-x:auto;margin:0 0 10px;border:1px solid var(--rule);
+  border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px}
+th,td{text-align:left;padding:10px 13px;vertical-align:top;border-bottom:1px solid var(--rule-soft)}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--sunk);
+  border-bottom:1px solid var(--rule);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.id{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;white-space:nowrap}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
+  white-space:nowrap;color:var(--ink-soft)}
+td.soft{color:var(--ink-soft)}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  font-weight:600;letter-spacing:.05em;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.p-img{background:var(--screen-wash);color:var(--screen)}
+.p-vid{background:var(--kol-wash);color:var(--kol)}
+.p-moc{background:var(--dance-wash);color:var(--dance)}
+.p-vo{background:var(--ok-wash);color:var(--ok)}
+.p-post{background:var(--sunk);color:var(--muted)}
+.p-gate{background:var(--flag-wash);color:var(--flag)}
+.p-none{background:var(--ok-wash);color:var(--ok)}
+
+.asset{background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  box-shadow:var(--shadow);margin-bottom:18px;overflow:hidden}
+.asset > header{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;
+  padding:15px 20px;border-bottom:1px solid var(--rule-soft);background:var(--sunk)}
+.asset h4{margin:0;font-size:16.5px;font-weight:700;font-family:"Noto Serif TC",Georgia,serif}
+.aid{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;
+  color:var(--muted);letter-spacing:.04em}
+.asset .meta{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.asset > .inner{padding:18px 20px}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0 0 14px;font-size:14px}
+dl.spec dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);padding-top:5px;white-space:nowrap}
+dl.spec dd{margin:0;color:var(--ink-soft)}
+dl.spec dd b{color:var(--ink)}
+pre{margin:0;padding:14px 16px;background:var(--code-bg);color:var(--code-ink);
+  border-radius:3px;font-size:12.5px;line-height:1.7;overflow-x:auto;
+  white-space:pre-wrap;word-break:break-word}
+.prelabel{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);margin:16px 0 6px;display:block}
+.prelabel:first-child{margin-top:0}
+.check{margin:14px 0 0;padding:12px 16px;background:var(--sunk);border-radius:3px;font-size:13.5px;color:var(--ink-soft)}
+.check b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-weight:600}
+.warn{margin:14px 0 0;padding:12px 16px;background:var(--flag-wash);border-radius:3px;
+  font-size:13.5px;color:var(--ink-soft);border-left:2px solid var(--flag)}
+.warn b{color:var(--flag)}
+
+.volist{display:grid;gap:0;margin:0;padding:0;list-style:none;
+  border:1px solid var(--rule);border-radius:3px;background:var(--surface);overflow:hidden}
+.volist > li{display:grid;grid-template-columns:96px 1fr;gap:0 18px;
+  border-bottom:1px solid var(--rule-soft)}
+.volist > li:last-child{border-bottom:0}
+.vseg{padding:16px 0 16px 18px;background:var(--sunk);border-right:1px solid var(--rule-soft)}
+.vseg .vid{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;display:block}
+.vseg .vtc{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);
+  display:block;margin-top:2px;font-variant-numeric:tabular-nums}
+.vlines{padding:14px 18px 14px 0;display:grid;gap:5px}
+.vlines p{margin:0;max-width:none;font-size:15px;line-height:1.65}
+.vlines p::before{content:"「";color:var(--muted)}
+.vlines p::after{content:"」";color:var(--muted)}
+.vlines p em{font-style:normal;background:var(--dance-wash);color:var(--dance);
+  padding:0 3px;border-radius:2px;font-weight:700}
+.vnote{font-size:13px;color:var(--muted)}
+.vnote::before,.vnote::after{content:""!important}
+
+ol.steps{margin:0;padding-left:20px}
+ol.steps li{margin-bottom:9px}
+ol.steps li:last-child{margin-bottom:0}
+ul.plain{margin:0;padding-left:20px}
+ul.plain li{margin-bottom:7px}
+
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.05em;
+  color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:620px){
+  .volist > li{grid-template-columns:1fr}
+  .vseg{border-right:0;border-bottom:1px solid var(--rule-soft);padding:10px 18px;
+    display:flex;gap:12px;align-items:baseline}
+  .vseg .vtc{margin-top:0}
+  .vlines{padding:14px 18px}
+  .rules li{grid-template-columns:1fr;gap:0}
+  .rules .k{padding:12px 18px 0}
+  .rules .v{padding:2px 18px 12px}
+  dl.spec{grid-template-columns:1fr;gap:2px}
+  dl.spec dt{padding-top:8px}
+}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">生成工單 · JUGA × Rainie Hsu</p>
+  <h1>JUGA 指引影片<br>AIGC 生成工單</h1>
+  <p class="dek">2 分 36 秒教學片的完整生成規格。每一項寫好用什麼模型、餵什麼 prompt、依賴誰、生成完還要做什麼後製。照順序做完就能交給剪輯組裝。</p>
+  <dl class="tally">
+    <div><dt>起始畫面</dt><dd>5<small>張</small></dd></div>
+    <div><dt>影片</dt><dd>5<small>支</small></dd></div>
+    <div><dt>Motion Control</dt><dd>1<small>支</small></dd></div>
+    <div><dt>去背</dt><dd>2<small>次</small></dd></div>
+    <div><dt>配音</dt><dd>12<small>段 / 57 句</small></dd></div>
+    <div><dt>核准關卡</dt><dd>2<small>道</small></dd></div>
+  </dl>
+</header>
+
+<section>
+  <h2><span class="n">01</span>全片鐵則</h2>
+  <p class="sub">開工前先讀完這一頁，五張圖、五支影片都適用。</p>
+  <ul class="rules">
+    <li><span class="k">模型</span><span class="v"><b><code>soul_2</code></b>（起始畫面）／<b><code>kling3_0</code></b>（影片與 Motion Control）。<b><code>cinematic_studio_video_v2</code> 禁用</b> —— 多鏡頭電影感，生出來像廣告。</span></li>
+    <li><span class="k">Soul ID</span><span class="v"><b><code>a4a000fe-fd96-4c36-97ff-0df9358a9b47</code></b><br>（Rainie Hsu v2。<code>generation_notes.md</code> 開頭那組 <code>994e33d2-…</code> 是已棄用的舊 ID，不要用。）</span></li>
+    <li><span class="k">共用參數</span><span class="v"><code>aspect_ratio="9:16"</code>　<code>count=1</code>（圖）　<code>duration=10</code>（影片）　<code>sound="on"</code>　<code>multi_shots</code> 不設定</span></li>
+    <li><span class="k">造型一致</span><span class="v">四段出鏡（開場／換氣／舞蹈／片尾）<b>必須是同一套造型</b>：黑緞面貼身洋裝 ＋ 煙灰色薄紗長罩衫（敞開）＋ 金色大圈耳環 ＋ 金鏈小包 ＋ 黑色細跟踝帶高跟鞋 ＋ 長直髮放下。罩衫、長髮、耳環是動態載體，不能省。</span></li>
+    <li><span class="k">不對嘴</span><span class="v"><b>全片她都不能有開口說話的畫面。</b>口白是後製疊上的旁白，模型不做對嘴，嘴型一定對不上。每支影片 prompt 都要寫 <code>lips closed throughout, not speaking, no mouth movement</code>，QA 逐支確認。</span></li>
+    <li><span class="k">禁用詞</span><span class="v"><code>film grain</code>、<code>shot on 35mm</code>、<code>candid lifestyle photo</code> —— 這三個對 Rainie 的 soul_id 會觸發「三連拼貼」bug（一張圖塞好幾格縮圖，不能用）。<br>另禁：<code>sensor noise</code>、<code>autofocus hunting</code>、<code>JPEG compression artifacts</code>、<code>soft dreamy filter</code>、<code>evenly lit</code>、<code>well-exposed</code>、<code>high dynamic range</code> 以外的曝光均勻類措辭、<code>studio lighting</code>、<code>grainy</code>、<code>muddy</code>、<code>degraded</code>。</span></li>
+    <li><span class="k">前置</span><span class="v">每張起始畫面生成後要先 <code>media_import_url(url=&lt;rawUrl&gt;)</code> 換成 <code>image_media_id</code>，才能餵給影片生成。</span></li>
+    <li><span class="k">配音</span><span class="v"><b>不由 AIGC 生成</b>，由 studio 另外提供音檔（第 06 節是完整稿子，供對稿與抓節奏用）。</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">02</span>素材總表</h2>
+  <p class="sub">依序執行。最後一欄是生成完之後還要做的加工 —— 沒有一支影片是生出來就能直接用的。</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>ID</th><th>類型</th><th>內容</th><th>成片位置</th><th>秒數</th><th>依賴</th><th>生成後要做的後製</th></tr></thead>
+      <tbody>
+        <tr><td class="id">IMG-01</td><td><span class="pill p-img">soul_2</span></td><td class="soft">開場起始畫面 · 包廂沙發手持手機</td><td class="num">00:00</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">IMG-02</td><td><span class="pill p-img">soul_2</span></td><td class="soft">換氣點起始畫面 · 吧檯倚靠</td><td class="num">00:36</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">IMG-03</td><td><span class="pill p-img">soul_2</span></td><td class="soft">舞蹈起始畫面 · 三分身全身站姿</td><td class="num">01:46</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-gate">核准</span> 給 Penny 過目後才跑 MOC-01</td></tr>
+        <tr><td class="id">IMG-04</td><td><span class="pill p-img">soul_2</span></td><td class="soft">片尾起始畫面 · 拿包走向門口</td><td class="num">02:26</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">IMG-05</td><td><span class="pill p-img">soul_2</span></td><td class="soft">去背素材起始畫面 · 純灰底半身</td><td class="num">全片</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">VID-01</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">開場 · 拿起手機轉向鏡頭、挑眉</td><td class="num">00:00</td><td class="num">8s</td><td class="num">IMG-01</td><td class="soft"><b>① 裁 10s→8s　② 手機螢幕合成 JUGA 登入畫面　③ 尾格定住接 UI</b></td></tr>
+        <tr><td class="id">VID-02</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">換氣點 · 推開手機、聳肩、看鏡頭</td><td class="num">00:36</td><td class="num">6s</td><td class="num">IMG-02</td><td class="soft"><b>① 裁 10s→6s</b></td></tr>
+        <tr><td class="id">VID-04</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">片尾 · 起身拿包、回頭、走出畫面</td><td class="num">02:26</td><td class="num">10s</td><td class="num">IMG-04</td><td class="soft"><b>① 全長用　② 走出畫面後的空鏡疊 Logo 片尾卡</b></td></tr>
+        <tr><td class="id">VID-05A</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">陪跑手勢 A · 指下方 / 比二 / 攤手</td><td class="num">全片</td><td class="num">10s</td><td class="num">IMG-05</td><td class="soft"><b>① 去背（CUT-01）　② 切成 3 個獨立 clip</b></td></tr>
+        <tr><td class="id">VID-05B</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">陪跑手勢 B · 點頭 / 讚 / 打叉</td><td class="num">全片</td><td class="num">10s</td><td class="num">IMG-05</td><td class="soft"><b>① 去背（CUT-02）　② 切成 3 個獨立 clip</b></td></tr>
+        <tr><td class="id">MOC-01</td><td><span class="pill p-moc">motion_control</span></td><td class="soft">舞蹈段 · 8 秒卡點</td><td class="num">01:46</td><td class="num">8s</td><td class="num">IMG-03 ＋ 驅動片</td><td class="soft"><b>① <code>ffprobe</code> 查音軌　② 裁 8s　③ 音樂換成全片 BGM　④ 尾拍加推播「叮」音效</b></td></tr>
+        <tr><td class="id">SRC-01</td><td><span class="pill p-gate">客戶素材</span></td><td class="soft">客戶原片 65.7s（截圖後製接成）</td><td class="num">全片</td><td class="num">—</td><td class="num">已提供</td><td class="soft"><b>後製工程最大的一塊，見第 05 節</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">03</span>起始畫面規格</h2>
+  <p class="sub">完整 prompt ＝ 身分段 ＋ 造型段 ＋ 各張的變動段 ＋ 光線段 ＋ 收尾段，依序串起來。前四段共用，只有變動段每張不同。</p>
+
+  <div class="asset">
+    <header><span class="aid">共用</span><h4>身分段 · 造型段 · 光線段 · 收尾段</h4></header>
+    <div class="inner">
+      <span class="prelabel">① 身分段</span>
+<pre>24-year-old Taiwanese woman, stunning bold glamour-model beauty, the kind of face that
+stops a room when she walks in, high cheekbones, sculpted defined jawline, fair, luminous
+porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored), large
+striking dark eyes (NOT narrow, sleepy, or harsh/masculine) softly defined by barely-there,
+soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all,
+sculpted brow, a sheer, natural tinted lip balm with barely-there color (NOT a saturated,
+bold, or fully-opaque lip color), visible skin pores, subtle natural skin texture, slight
+oil sheen on T-zone, unretouched skin detail, glossy jet-black long straight hair worn down
+loose over her shoulders, striking hourglass figure — 94cm full lifted bust (F cup), 59cm
+cinched waist, 92cm curved hips, deliberate confident posture always aware of how the
+outfit sits,</pre>
+
+      <span class="prelabel">② 造型段</span>
+<pre>wearing a fitted black satin bodycon dress with visible seam lines and a thigh-high slit,
+layered over a long sheer smoke-grey chiffon duster coat left open and hanging loose,
+large gold hoop earrings, a thin gold chain shoulder bag, strappy black ankle-tie heels —
+a deliberately coordinated going-out set, nothing generic or accidental,</pre>
+
+      <span class="prelabel">④ 光線段 —— IMG-05 除外，那張用它自己的</span>
+<pre>magenta and violet LED cove lighting washing the wall and ceiling behind her as the scene's
+colour, a separate neutral-warm frontal key from the low pendant lamp above the table
+lighting her face cleanly, two clearly different colour temperatures coexisting in one
+frame — coloured background, neutral face, the polished black tabletop bouncing a soft
+magenta fill back up under her jaw and collarbone, exposure metered for her face so the
+depth of the room behind the banquette crushes to near black, shot past the edge of the
+booth partition whose dark frame crops the left of the image,</pre>
+
+      <span class="prelabel">⑤ 收尾段</span>
+<pre>crisp sharp focus, high dynamic range, high-production-value editorial nightlife
+photography, dramatic and moody but NEVER degraded, muddy, dim, or grainy, high contrast
+saturated tones with cool undertone and warm skin highlight, Instagram style</pre>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">IMG-01</span><h4>開場 · 包廂沙發手持手機</h4>
+      <div class="meta"><span class="pill p-img">半身</span></div></header>
+    <div class="inner">
+      <span class="prelabel">③ 變動段</span>
+<pre>sitting in a deep velvet booth at a Taipei nightlife bar, phone held loosely in one hand at
+chest height, about to turn the screen toward the camera, direct confident "I know you're
+watching" gaze at camera with one brow slightly raised, lips closed, not speaking, half
+body shot from chest up, the table in front of her holding two half-finished cocktail
+glasses and a wet ring on the wood, a crumpled napkin, her gold chain bag slumped on the
+seat beside her, shot on iPhone 15 Pro back camera from across the table at seated eye
+level,</pre>
+      <div class="check"><b>驗收</b>白皙瓷肌不能曬黑；眼線不能有甩尾；唇色接近透明不能飽和。手機螢幕保持關閉或反光即可，內容後製再合成。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">IMG-02</span><h4>換氣點 · 吧檯倚靠</h4>
+      <div class="meta"><span class="pill p-img">半身</span></div></header>
+    <div class="inner">
+      <span class="prelabel">③ 變動段</span>
+<pre>standing with one elbow leaning on the bar counter, phone set face-down on the counter
+beside her hand, half-turned toward the camera with a flat unimpressed look, lips closed,
+not speaking, half body shot from waist up, the bar counter carrying a bartender's jigger,
+a lime wedge on a small cutting board, two condensation rings on the wood, a row of
+backlit bottles receding behind the counter, shot on iPhone 15 Pro back camera from
+standing eye level a couple of steps away,</pre>
+      <div class="check"><b>驗收</b>造型要跟 IMG-01 完全一致。這兩張在成片裡相隔 28 秒出現，觀眾會直接比對。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">IMG-03</span><h4>舞蹈段 · 三分身全身站姿</h4>
+      <div class="meta"><span class="pill p-gate">核准關卡</span></div></header>
+    <div class="inner">
+      <span class="prelabel">③ 變動段</span>
+<pre>standing in a confident pose facing camera in the open floor space beside the booth, the
+sheer chiffon duster hanging fully open and loose from her shoulders, long hair down and
+free over both shoulders, weight on one hip, THREE QUARTER SHOT, mid-thigh up, no shoes
+shown, direct confident "I know you're watching" gaze at camera, lips closed, behind her
+the booth seating and a low table with used glasses, a coat thrown over the back of the
+banquette, shot on iPhone 15 Pro back camera from standing eye level,</pre>
+      <div class="warn"><b>生成完停下來，把圖給 Penny 看過、核准之後才跑 MOC-01。</b>Motion Control 有實際 credit 成本（約 49 credits），服裝／場景／五官不對要在跑之前攔下來重生成，不要等生完整支才發現。</div>
+      <div class="check"><b>驅動片要挑長直髮放下的</b>Motion Control 的臉部鎖定只靠這張參考圖，沒有 <code>soul_id</code> 那種強制鎖定。起始畫面的髮型輪廓跟驅動片差太多時，模型可能借用驅動片本人的臉頂替（實際發生過）。<b>不要挑雙馬尾或包頭的驅動片。</b></div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">IMG-04</span><h4>片尾 · 拿包走向門口</h4>
+      <div class="meta"><span class="pill p-img">全身</span></div></header>
+    <div class="inner">
+      <span class="prelabel">③ 變動段</span>
+<pre>mid-stride walking toward the bar's exit with the gold chain bag already on her shoulder,
+the sheer chiffon duster trailing behind her from the movement, turning back over one
+shoulder for a direct look at camera, lips closed, full body shot including the heels, the
+exit doorway ahead of her spilling cooler street light into the room, empty glasses left on
+the table behind her, a stool pushed out of place, shot on iPhone 15 Pro back camera from
+behind and slightly to one side at standing eye level,</pre>
+      <div class="check"><b>驗收</b>門口的冷色街光要跟包廂的洋紅光形成明顯色溫分裂 —— 這是「走出去」的視覺訊號。罩衫要看得出被走路帶起來。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">IMG-05</span><h4>去背素材 · 純灰底半身</h4>
+      <div class="meta"><span class="pill p-post">光線段換掉</span></div></header>
+    <div class="inner">
+      <span class="prelabel">③＋④ 變動段（<b>取代</b>共用光線段，不要貼包廂那段）</span>
+<pre>standing against a plain flat medium-grey seamless studio backdrop with nothing else in
+frame, half body shot from waist up, one hand raised and pointing toward the lower right of
+frame, lips closed, not speaking, neutral-warm frontal key light on her face and body with
+a distinct cool rim light along her hair and shoulder edge separating her cleanly from the
+grey backdrop, no coloured spill onto the backdrop, no cast shadow on the backdrop,</pre>
+      <div class="warn"><b>這張刻意不套用一般規則。</b>背景沒有生活雜物、光線沒有壓黑的暗部，都是為了去背 —— 雜物會變成殘留邊緣，壓黑的暗部會讓髮絲摳不出來。<b>髮絲邊緣的 rim light 是這張成敗的關鍵，一定要保留。</b></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">04</span>影片與 Motion Control 規格</h2>
+  <p class="sub">五支影片全部 <code>duration=10</code>，需要 8 秒或 6 秒的一律生 10 秒再裁，比跟模型爭長度穩定。</p>
+
+  <div class="asset">
+    <header><span class="aid">共用</span><h4>呼叫格式</h4></header>
+    <div class="inner">
+<pre>generate_video(
+    model="kling3_0",
+    prompt="&lt;身分段 + 造型段 + 動作段 + 光線段 + 收尾段&gt;",
+    aspect_ratio="9:16",
+    duration=10,
+    medias=[{"role": "start_image", "value": "&lt;對應 IMG 的 image_media_id&gt;"}],
+    sound="on"
+)</pre>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">VID-01</span><h4>開場 · 8 秒</h4>
+      <div class="meta"><span class="pill p-vid">← IMG-01</span></div></header>
+    <div class="inner">
+      <span class="prelabel">動作段</span>
+<pre>sitting in the velvet booth, she lifts the phone from her lap and turns the screen toward
+the camera in one unhurried movement, then raises one brow and holds a direct look at
+camera, the sheer chiffon duster shifting on her shoulder as her arm moves, lips closed
+throughout, not speaking, no mouth movement, slight natural camera movement as if the
+phone filming her is hand-held, single continuous shot,</pre>
+      <div class="check"><b>後製</b>裁 8 秒，取「抬手 → 轉螢幕 → 挑眉 → 定住」。手機螢幕要合成 JUGA 登入畫面。最後一格停在直視鏡頭，方便接下一段 UI。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">VID-02</span><h4>換氣點 · 6 秒</h4>
+      <div class="meta"><span class="pill p-vid">← IMG-02</span></div></header>
+    <div class="inner">
+      <span class="prelabel">動作段</span>
+<pre>leaning on the bar counter, she pushes the phone a few inches away across the wood with two
+fingers, gives a small one-shouldered shrug and turns her head to look straight at the
+camera, hair swinging slightly with the turn, lips closed throughout, not speaking, no
+mouth movement, single continuous shot,</pre>
+      <div class="check"><b>後製</b>裁 6 秒，取「推手機 → 聳肩 → 轉頭定住」。這段功能是換氣，動作要慢要鬆，不要有戲劇性。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">VID-04</span><h4>片尾 · 10 秒</h4>
+      <div class="meta"><span class="pill p-vid">← IMG-04</span></div></header>
+    <div class="inner">
+      <span class="prelabel">動作段</span>
+<pre>she walks away from the booth toward the exit, the gold chain bag settling on her shoulder,
+the sheer chiffon duster lifting and trailing behind her with each step, she turns back
+over one shoulder for a last direct look at camera, then turns forward and walks out of
+frame, lips closed throughout, not speaking, no mouth movement, single continuous shot,</pre>
+      <div class="check"><b>後製</b>全長用。必須拍到她真的走出畫面、留下空鏡，Logo 片尾卡才有地方疊。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">VID-05A / 05B</span><h4>陪跑手勢素材 · 各 10 秒</h4>
+      <div class="meta"><span class="pill p-vid">← IMG-05</span><span class="pill p-post">→ 去背</span></div></header>
+    <div class="inner">
+      <span class="prelabel">VID-05A 動作段</span>
+<pre>standing against the plain grey backdrop, she points down toward the lower right of frame
+and holds it, then lowers her arm and raises two fingers, then opens both palms outward in
+a small "there you go" gesture, each gesture held for about three seconds with a clear
+pause between them, lips closed throughout, not speaking, no mouth movement, feet planted,
+minimal body sway, single continuous shot, camera locked off, no camera movement,</pre>
+      <span class="prelabel">VID-05B 動作段</span>
+<pre>standing against the plain grey backdrop, she gives a single slow nod toward the camera,
+then raises a thumbs-up and holds it, then crosses both forearms into an X and holds it,
+each gesture held for about three seconds with a clear pause between them, lips closed
+throughout, not speaking, no mouth movement, feet planted, minimal body sway, single
+continuous shot, camera locked off, no camera movement,</pre>
+      <div class="check"><b>這兩支要鏡頭鎖死</b>其他段落都要手持感，這兩支相反。鏡頭一動，去背後的人在角落就會莫名其妙地飄。</div>
+      <div class="check"><b>後製</b>各自去背，再依手勢切成 3 個獨立 clip，共 6 個。<b>她不是全程都在角落</b> —— 只在每個操作章節開頭淡入約 3 秒做手勢、然後淡出，其餘時間畫面全給 UI。</div>
+    </div>
+  </div>
+
+  <div class="asset">
+    <header><span class="aid">MOC-01</span><h4>舞蹈段 · 8 秒</h4>
+      <div class="meta"><span class="pill p-moc">← IMG-03 核准後</span></div></header>
+    <div class="inner">
+<pre>motion_control(
+    model="kling3_0",
+    reference_image={"id": "&lt;IMG-03 的 image_media_id&gt;"},
+    driver_video={"id": "&lt;裁切後驅動片的 media_id&gt;"},
+    scene_control="image",
+    resolution="1080p",
+    aspect_ratio="9:16"
+)</pre>
+      <dl class="spec" style="margin-top:14px">
+        <dt>scene_control</dt><dd><code>"image"</code> —— 保留 IMG-03 的包廂場景，只借驅動片的動作與表情。<code>"video"</code> 會把驅動片的背景整個帶過來，可能殘留浮水印或招牌。</dd>
+        <dt>驅動片</dt><dd>卡點乾淨、<b>8 秒內有記憶點</b>、<b>長直髮放下</b>。走 <code>DANCE_CLONE_SOP</code> Step 0–2 選片、下載、裁剪 —— 裁剪那步決定成品抖不抖，不能省。</dd>
+        <dt>成本</dt><dd>約 <b>49 credits</b>。</dd>
+      </dl>
+      <div class="check"><b>後製</b>① 先用 <code>ffprobe</code> 查有沒有音軌（驅動片有音軌時通常會自動輸出對時過的音樂）② 裁成 8 秒 ③ 音樂換成全片統一的 BGM ④ 最後一拍疊上手機推播的「叮」音效，接回 UI 畫面。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">05</span>客戶原片的後製處理</h2>
+  <p class="sub">客戶原片 65.7 秒是用截圖後製接起來的，不會重錄。這是整支片工程量最大的一塊。</p>
+  <ol class="steps">
+    <li><b>全長蓋一條統一的假狀態列。</b>固定時間、滿格訊號、固定電量。原片的狀態列一路在跳 —— 開頭是紅色錄影中膠囊，之後 2:55 → 3:34 → 3:46 → 3:37 → 3:38，電量從 94% 掉到低電量。蓋一條就一次解決。</li>
+    <li><b>依 18 個操作步驟切段、重新配速。</b>打字那 9 秒加速到 3 秒；「加入主畫面」與「註冊」放慢並加局部放大。</li>
+    <li><b>畫面縮到 82% 置上</b>，下方留出角落人物的空間。</li>
+    <li><b>「我的邀請」卡片的區域欄位要處理。</b>原片發布表單填的是<b>信義區</b>，回首頁的卡片卻顯示<b>松山區</b>。客戶若補圖就換掉；不補的話用局部放大裁切避開該欄位，字卡與旁白全程不提區域名、只講人數變化。</li>
+    <li><b>「完成設定」頁的標題要裁掉。</b>那頁寫「再三步就能開始」但只演了一步。客戶若補圖就補完；不補的話局部放大裁掉標題。</li>
+    <li><b>底部五個分頁只有三個有畫面。</b>「廣場」「我的」原片沒拍到。客戶若補圖就走完五個 tab；不補的話只在 tab 上打字標名稱、不進入頁面，旁白改用備援句（見 VO-07 註記）。</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="n">06</span>配音稿</h2>
+  <p class="sub">12 段共 57 句，照順序就是全片旁白。<em style="font-style:normal;background:var(--dance-wash);color:var(--dance);padding:0 3px;border-radius:2px;font-weight:700">標色</em>要加重語氣、字卡同步跳出。語速偏快、尾音收乾淨；教學句放慢，態度句維持原速。</p>
+  <ol class="volist">
+    <li><div class="vseg"><span class="vid">VO-01</span><span class="vtc">00:00</span></div>
+      <div class="vlines"><p>今晚沒局？</p><p>不是你沒人約，是你還沒裝這個。</p><p>JUGA。跟我操作一次，兩分鐘。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-02</span><span class="vtc">00:08</span></div>
+      <div class="vlines"><p>先打開 Safari，網址列輸入 juga.com.tw。</p><p>JUGA 不用去 App Store 找，它是網頁 App，用瀏覽器開就行。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-03</span><span class="vtc">00:16</span></div>
+      <div class="vlines"><p>第一件事先做這個，之後你就不用每次去找網址。</p><p>點下面的「⋯」，選「分享」。</p><p>往下滑，點<em>檢視較多</em>。</p><p>找到<em>加入主畫面</em>。</p><p>名稱留 JUGA 就好。<em>「打開為網頁 App」這個開關保持開著</em> —— 這樣開起來沒有網址列，跟真的 App 一模一樣。</p><p>右上角，加入。</p><p>桌面就有了。以後都從這裡進。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-04</span><span class="vtc">00:36</span></div>
+      <div class="vlines"><p>裝好了。</p><p>接下來註冊，一分鐘的事。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-05</span><span class="vtc">00:42</span></div>
+      <div class="vlines"><p>開 App，上面切到「客戶註冊」。</p><p>手機號碼，09 開頭或 +886 都可以。</p><p>按「發送驗證碼」，把簡訊收到的碼填進來。</p><p>暱稱，密碼至少六碼。</p><p>最後這格 —— <em>條款要拉到最下面，才勾得下去</em>。很多人是卡在這裡，不是密碼打錯。</p><p>勾完，註冊並開始。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-06</span><span class="vtc">00:58</span></div>
+      <div class="vlines"><p>註冊完會跳回登入畫面，用剛剛的帳號密碼進去。</p><p>然後是完成設定。</p><p>換頭貼，填暱稱。</p><p><em>所在區域填準一點</em> —— 這決定你會被誰看到、配到誰，填錯就約不到人。</p><p>自我介紹選填，但寫一句總比空白好看。</p><p>推播記得開，不然有人約你，你不會知道。</p><p>繼續。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-07</span><span class="vtc">01:14</span></div>
+      <div class="vlines"><p>進來就是首頁。</p><p>最上面搜尋用戶，右邊是通知。</p><p>中間「我的邀請」—— 你自己發的局會長在這裡。</p><p>下面「今晚在線」，誰現在醒著、在哪一區，一目了然。</p><p>底下五個分頁：首頁、廣場、中間這顆發布、通知、我的。</p><p class="vnote">※ 客戶若沒補「廣場」「我的」截圖，最後一句改成：「底下五個分頁，廣場跟我的之後自己點進去看。」</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-08</span><span class="vtc">01:28</span></div>
+      <div class="vlines"><p>重點來了，中間這顆「＋」。</p><p>先選區域。</p><p>再選類型 —— After Party、喝一杯、補位、臨時約會，看你今晚想幹嘛。</p><p>要幾個人，最多二十個。</p><p>備註寫清楚你想找什麼樣的人、什麼場合。這欄寫得好，舉手的人品質差很多。</p><p>然後注意這一行：<em>這則邀請只活兩個小時</em>。時間到自己收掉，不會一直掛在那裡讓人看。</p><p>發送邀請。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-09</span><span class="vtc">01:46</span></div>
+      <div class="vlines"><p class="vnote">舞蹈段。前 7 秒純音樂無旁白，定格後補一句氣音：</p><p>⋯⋯來了。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-10</span><span class="vtc">01:54</span></div>
+      <div class="vlines"><p>發出去之後，回首頁看你的邀請卡。</p><p>「0 人想加入」會開始跳。</p><p>三個人舉手了。</p><p>點卡片進去看詳情。</p><p><em>先點大頭貼，可以看她的相簿</em>，再決定。</p><p>喜歡按接受，不喜歡按婉拒。</p><p>你挑人，不是人挑你。</p><p>不想繼續了，最下面「關閉邀請」隨時收掉。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-11</span><span class="vtc">02:10</span></div>
+      <div class="vlines"><p>接受之後，去「通知」。</p><p>配對成功的人，會在這裡開一個聊天。</p><p>注意上面這一行 —— <em>這個聊天視窗只開一天</em>，過了就關，所以別拖。</p><p>地點、時間、包廂，一句話講完。</p><p>對方回「好的」——</p><p>上面就變成「約會中」。</p><p>今晚，成了。</p></div></li>
+    <li><div class="vseg"><span class="vid">VO-12</span><span class="vtc">02:26</span></div>
+      <div class="vlines"><p>兩分鐘裝好，兩小時內找到人。</p><p>今晚有局，因為有你。</p></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="n">07</span>組裝順序</h2>
+  <ol class="steps">
+    <li>客戶原片依第 05 節處理完，鋪成底層時間軸。</li>
+    <li>疊上六個去背 clip —— 每個操作章節開頭淡入 3 秒、淡出。</li>
+    <li>插入四段 Rainie 全畫面：VID-01（00:00）、VID-02（00:36）、MOC-01（01:46）、VID-04（02:26）。</li>
+    <li><b>先鋪旁白再微調畫面長度，不要反過來</b> —— 旁白講不完就補畫面，不要為了畫面砍句子。</li>
+    <li>字卡與標註：沿用原片的黃字＋紅圈樣式，跟客戶既有素材一致。</li>
+    <li>BGM：夜店感、壓在旁白之下；舞蹈段那 8 秒放大到主音量，做出情緒起伏。</li>
+    <li>片尾卡：Logo ＋ <code>juga.com.tw</code> ＋「加到主畫面就能用」＋「本平台限 18 歲以上使用」。</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="n">08</span>交片前檢核</h2>
+  <ul class="plain">
+    <li><b>身分一致性 —— 把成品幀跟起始畫面的圖檔並排比對</b>，不能只憑印象。Motion Control 那段特別要看。</li>
+    <li><b>四段出鏡是不是同一套造型</b>：洋裝、薄紗罩衫、金圈耳環、髮型，四段並排看。</li>
+    <li><b>嘴型</b>：逐支確認沒有開口說話的畫面。</li>
+    <li><b>五張起始畫面都是單張照片</b>，不是多格縮圖拼在一起。</li>
+    <li><b>手部與手勢</b>：去背素材有六個手勢，手指數量與關節逐格看。</li>
+    <li><b>去背邊緣</b>：髮絲有沒有殘留灰底、薄紗罩衫邊緣有沒有被摳掉。薄紗是這套造型最難去背的部分，邊緣一直不乾淨就退回改用不透明短外套重生成 IMG-05。</li>
+    <li><b>AI 感</b>：皮膚有毛孔與 T 字油光、光線有可指認的反射面、背景有生活雜物、服裝成套刻意。</li>
+    <li><b>狀態列</b>：全片時間、電量、訊號都一致，沒有殘留的錄影中膠囊。</li>
+  </ul>
+</section>
+
+<footer>
+  <span>Virtual KOL Studio · JUGA 專案</span>
+  <span>生成工單 · 對應 2 分 36 秒腳本</span>
+</footer>
+
+</div>
