@@ -1,0 +1,637 @@
+<title>JUGA × Rainie 影片腳本</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+
+<style>
+:root{
+  --bg:#F5F3F7;
+  --surface:#FFFFFF;
+  --surface-sunk:#EEEAF3;
+  --ink:#221B29;
+  --ink-soft:#4A4053;
+  --muted:#6E6479;
+  --rule:#E0D9E8;
+  --rule-soft:#EBE5F0;
+  --kol:#C42566;
+  --kol-wash:#FBEBF2;
+  --screen:#5B41B8;
+  --screen-wash:#EEEAFB;
+  --dance:#A96412;
+  --dance-wash:#FAF0E2;
+  --flag:#B23A2E;
+  --flag-wash:#FBEDEB;
+  --shadow:0 1px 2px rgba(34,27,41,.05), 0 8px 24px -16px rgba(34,27,41,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14101A;
+    --surface:#1D1724;
+    --surface-sunk:#191320;
+    --ink:#F0EBF3;
+    --ink-soft:#CFC6D8;
+    --muted:#9C92A8;
+    --rule:#312839;
+    --rule-soft:#261F2E;
+    --kol:#FF7BA6;
+    --kol-wash:#2B1622;
+    --screen:#AE93FA;
+    --screen-wash:#1F1930;
+    --dance:#E9A94F;
+    --dance-wash:#2A2015;
+    --flag:#F08877;
+    --flag-wash:#2C1A17;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -18px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14101A;
+  --surface:#1D1724;
+  --surface-sunk:#191320;
+  --ink:#F0EBF3;
+  --ink-soft:#CFC6D8;
+  --muted:#9C92A8;
+  --rule:#312839;
+  --rule-soft:#261F2E;
+  --kol:#FF7BA6;
+  --kol-wash:#2B1622;
+  --screen:#AE93FA;
+  --screen-wash:#1F1930;
+  --dance:#E9A94F;
+  --dance-wash:#2A2015;
+  --flag:#F08877;
+  --flag-wash:#2C1A17;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -18px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px 96px}
+
+/* ---------- masthead ---------- */
+.masthead{padding:56px 0 32px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 18px;
+}
+h1{
+  font-family:"Noto Serif TC",Georgia,serif;
+  font-weight:700;font-size:clamp(30px,5.4vw,46px);
+  line-height:1.24;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance;
+}
+.dek{font-size:17px;color:var(--ink-soft);margin:0;max-width:56ch}
+.facts{
+  list-style:none;margin:30px 0 0;padding:0;
+  display:grid;gap:2px 28px;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+}
+.facts div{padding:10px 0;border-top:1px solid var(--rule-soft)}
+.facts dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);
+}
+.facts dd{margin:2px 0 0;font-size:15px;font-weight:500}
+
+/* ---------- sections ---------- */
+section{padding-top:52px}
+h2{
+  font-family:"Noto Serif TC",Georgia,serif;
+  font-weight:700;font-size:24px;line-height:1.4;margin:0 0 6px;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+}
+h2 .n{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.06em;
+}
+.sub{margin:0 0 26px;color:var(--muted);font-size:15px;max-width:62ch}
+h3{
+  font-family:"Noto Sans TC",sans-serif;font-weight:700;font-size:16px;
+  margin:34px 0 12px;letter-spacing:.01em;
+}
+p{margin:0 0 14px;max-width:64ch}
+a{color:var(--kol)}
+
+/* ---------- change block ---------- */
+.changes{display:grid;gap:14px;margin-top:8px}
+.change{
+  background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  padding:16px 18px 16px 20px;box-shadow:var(--shadow);
+  border-left:3px solid var(--kol);
+}
+.change h4{
+  margin:0 0 6px;font-size:15px;font-weight:700;
+  display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;
+}
+.change h4 span{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;
+}
+.change p{margin:0;font-size:14.5px;color:var(--ink-soft);max-width:none}
+
+/* ---------- legend ---------- */
+.legend{
+  display:flex;gap:8px 22px;flex-wrap:wrap;margin:0 0 28px;padding:14px 18px;
+  background:var(--surface-sunk);border-radius:3px;
+}
+.legend b{
+  display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:var(--ink-soft);
+}
+.swatch{width:14px;height:14px;border-radius:2px;flex:none}
+.sw-kol{background:var(--kol)}
+.sw-screen{background:var(--screen)}
+.sw-dance{background:var(--dance)}
+
+/* ---------- timeline ---------- */
+.cue{
+  display:grid;grid-template-columns:104px 1fr;gap:0 22px;
+  position:relative;
+}
+.cue + .cue{margin-top:0}
+.slug{
+  position:relative;padding:22px 0 22px 18px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-variant-numeric:tabular-nums;
+}
+.slug::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--lane,var(--screen));
+}
+.cue:first-of-type .slug::before{top:22px;border-radius:2px 2px 0 0}
+.cue:last-of-type .slug::before{bottom:22px;border-radius:0 0 2px 2px}
+.tc{font-size:14px;font-weight:600;letter-spacing:-.02em;display:block}
+.dur{font-size:12px;color:var(--muted);display:block;margin-top:2px}
+.lane-tag{
+  display:inline-block;margin-top:10px;font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;font-weight:600;color:var(--lane,var(--screen));
+}
+.body{padding:22px 0;border-bottom:1px solid var(--rule-soft);min-width:0}
+.cue:last-of-type .body{border-bottom:0}
+.head{
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;
+}
+.head h4{
+  margin:0;font-family:"Noto Serif TC",Georgia,serif;
+  font-size:18.5px;font-weight:700;letter-spacing:.01em;
+}
+.src{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;color:var(--muted);letter-spacing:.04em;
+  border:1px solid var(--rule);border-radius:2px;padding:1px 7px;
+}
+.shot{font-size:14.5px;color:var(--ink-soft);margin:0 0 14px;max-width:none}
+.shot b{color:var(--ink);font-weight:500}
+
+.vo{margin:0 0 14px;padding:0 0 0 16px;border-left:2px solid var(--lane,var(--screen));display:grid;gap:7px}
+.vo p{
+  margin:0;max-width:none;font-size:16px;line-height:1.7;
+  color:var(--ink);font-weight:500;
+}
+.vo p::before{content:"「";color:var(--muted);font-weight:400}
+.vo p::after{content:"」";color:var(--muted);font-weight:400}
+.vo p em{font-style:normal;background:var(--dance-wash);color:var(--dance);
+  padding:0 3px;border-radius:2px;font-weight:700}
+.vo.silent p::before,.vo.silent p::after{content:""}
+.vo.silent p{color:var(--muted);font-weight:400;font-size:14.5px}
+
+.cards{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.card-chip{
+  font-size:12.5px;line-height:1.5;padding:4px 11px;border-radius:2px;
+  background:var(--screen-wash);color:var(--screen);font-weight:500;
+  border:1px solid transparent;
+}
+.card-chip.kol{background:var(--kol-wash);color:var(--kol)}
+.card-chip.flagged{background:var(--flag-wash);color:var(--flag);font-weight:700}
+.chip-label{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  align-self:center;margin-right:2px;
+}
+
+/* ---------- callout ---------- */
+.callout{
+  background:var(--surface);border:1px solid var(--rule);
+  border-top:3px solid var(--dance);border-radius:3px;
+  padding:22px 24px;margin:8px 0 0;box-shadow:var(--shadow);
+}
+.callout h3{margin-top:0}
+.callout ol{margin:0;padding-left:20px}
+.callout li{margin-bottom:9px}
+.callout li:last-child{margin-bottom:0}
+
+/* ---------- tables ---------- */
+.scroller{overflow-x:auto;margin:0 0 8px;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;padding:10px 14px;vertical-align:top;border-bottom:1px solid var(--rule-soft)}
+thead th{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;background:var(--surface-sunk);
+  border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:0}
+td.step{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;
+  color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+td.what{color:var(--ink-soft)}
+td strong{font-weight:700}
+
+/* ---------- asks ---------- */
+.asks{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.asks li{
+  display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:start;
+  padding:16px 0;border-bottom:1px solid var(--rule-soft);
+}
+.asks li:last-child{border-bottom:0}
+.asks .num{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:600;
+  color:var(--kol);padding-top:2px;
+}
+.asks b{display:block;font-size:15.5px;margin-bottom:3px}
+.asks span{font-size:14.5px;color:var(--ink-soft)}
+
+footer{
+  margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.05em;color:var(--muted);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+@media (max-width:620px){
+  .cue{grid-template-columns:1fr;gap:0}
+  .slug{padding:20px 0 0 16px}
+  .slug::before{top:20px!important;bottom:auto!important;height:calc(100% - 20px);border-radius:2px}
+  .cue:last-of-type .slug::before{height:22px}
+  .body{padding:10px 0 22px 16px}
+  .lane-tag{margin-top:4px;margin-left:10px}
+  .tc,.dur{display:inline-block}
+  .dur{margin-left:10px;margin-top:0}
+}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">拍攝腳本 v2 · 待客戶確認</p>
+  <h1>JUGA App 操作指引影片<br>× Rainie Hsu</h1>
+  <p class="dek">把客戶現有的 66 秒無旁白操作影片，重新編成一支由 Rainie 全程導覽的教學片。原片 18 個操作步驟一步不少，只是每一步都有人替你講清楚。</p>
+  <dl class="facts">
+    <div><dt>成片長度</dt><dd>約 2 分 36 秒</dd></div>
+    <div><dt>規格</dt><dd>9:16 直式 1080×1920</dd></div>
+    <div><dt>KOL</dt><dd>Rainie Hsu 許雷妮</dd></div>
+    <div><dt>Rainie 全畫面</dt><dd>32 秒（21%）</dd></div>
+    <div><dt>舞蹈段</dt><dd>8 秒 · 01:46 起</dd></div>
+    <div><dt>素材來源</dt><dd>客戶既有成片，不重錄</dd></div>
+  </dl>
+</header>
+
+<section>
+  <h2><span class="n">01</span>這一版跟上一版差在哪</h2>
+  <p class="sub">你給的兩個新前提，直接改掉了 v1 的三個判斷。</p>
+  <div class="changes">
+    <div class="change">
+      <h4>影片從 95 秒放到 2 分 36 秒 <span>因為長度沒有上限</span></h4>
+      <p>v1 是在「盡量不要比原片長太多」的假設下寫的，所以安裝、註冊那幾段都用加速帶過。既然客戶沒有限制長度，教學片就該把每一步講完 —— 尤其是「加入主畫面」和「註冊」這兩段，是新用戶真正會卡住的地方，現在各給到 20 秒和 16 秒。舞蹈段也從 5 秒放到 8 秒，一段完整的卡點才跳得完。</p>
+    </div>
+    <div class="change">
+      <h4>不重錄，改用後製統一畫面 <span>因為原片是截圖後製接的</span></h4>
+      <p>原片的手機狀態列一路跳（<b>紅色錄影中膠囊 → 2:55 → 3:34 → 3:46 → 3:37 → 3:38</b>），電量也從 94% 掉到低電量。作法改成：<b>全片蓋一條統一的假狀態列</b>（固定時間、固定滿格訊號與電量），一次解決所有跳動，也順便蓋掉錄影中膠囊。這是教學片的標準作法，不需要客戶動任何東西。</p>
+    </div>
+    <div class="change">
+      <h4>拿掉「demo 頭貼」的警告 <span>因為那是 AI 生成的</span></h4>
+      <p>v1 把收件匣與聊天室裡的頭貼當成真人照片、提醒肖像權風險。既然是 AI 生成、目的是製造真實感，這一條刪掉，不用改。</p>
+    </div>
+    <div class="change">
+      <h4>還是有幾張截圖建議補 <span>但不是重錄，是重出圖</span></h4>
+      <p>原片有兩處對不上：<b>「我的邀請」卡片顯示松山區，但發布表單填的是信義區</b>；<b>「完成設定」標題寫「再三步就能開始」，畫面只演了一步</b>。另外底部五個分頁裡的「廣場」和「我的」從頭到尾沒出現過。既然客戶是用截圖拼的，這幾張<b>重出圖的成本遠低於重錄</b>，清單在最後一節。真的不補，我也給了後備作法。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">02</span>分鏡腳本</h2>
+  <p class="sub">共 12 段。左側色條標示這一段誰在畫面上。口白直接就是配音稿，可以照念；<em style="font-style:normal;background:var(--dance-wash);color:var(--dance);padding:0 3px;border-radius:2px;font-weight:700">標色</em>的字是語氣要加重、字卡要同步跳出來的地方。</p>
+
+  <div class="legend">
+    <b><i class="swatch sw-screen"></i>螢幕操作 ＋ Rainie 角落去背陪跑</b>
+    <b><i class="swatch sw-kol"></i>Rainie 全畫面</b>
+    <b><i class="swatch sw-dance"></i>舞蹈段</b>
+  </div>
+
+  <div class="cue" style="--lane:var(--kol)">
+    <div class="slug"><span class="tc">00:00</span><span class="dur">8 秒</span><span class="lane-tag">Rainie 全畫面</span></div>
+    <div class="body">
+      <div class="head"><h4>開場</h4><span class="src">新增</span></div>
+      <p class="shot">包廂沙發，霓虹洋紅打光。Rainie 手上拿著手機，直視鏡頭把話講完，最後把手機螢幕轉向鏡頭。</p>
+      <div class="vo">
+        <p>今晚沒局？</p>
+        <p>不是你沒人約，是你還沒裝這個。</p>
+        <p>JUGA。跟我操作一次，兩分鐘。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip kol">JUGA｜兩分鐘上手</span><span class="card-chip kol">本平台限 18 歲以上使用</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">00:08</span><span class="dur">8 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>① 用 Safari 打開網站</h4><span class="src">原片 S1–S3</span></div>
+      <p class="shot">Safari 私密瀏覽新分頁 → 網址列輸入 <b>juga.com.tw</b>（打字加速 2 倍 ＋ 鍵盤音效）→ JUGA 登入頁載入完成。</p>
+      <div class="vo">
+        <p>先打開 Safari，網址列輸入 juga.com.tw。</p>
+        <p>JUGA 不用去 App Store 找，它是網頁 App，用瀏覽器開就行。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">① 用 Safari 開 juga.com.tw</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">00:16</span><span class="dur">20 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>② 加到主畫面，當 App 用</h4><span class="src">原片 S4–S7</span></div>
+      <p class="shot">底部「⋯」→ 選單彈出 → 點<b>分享</b> → iOS 分享面板 → 點<b>檢視較多</b>展開 → 點<b>加入主畫面</b> → 設定頁（名稱 JUGA、網址、<b>打開為網頁 App 開關維持開啟</b>）→ 右上<b>加入</b> → 桌面出現 JUGA 圖示。每個要點的位置搭配局部放大 ＋ 圈註。</p>
+      <div class="vo">
+        <p>第一件事先做這個，之後你就不用每次去找網址。</p>
+        <p>點下面的「⋯」，選「分享」。</p>
+        <p>往下滑，點<em>檢視較多</em>。</p>
+        <p>找到<em>加入主畫面</em>。</p>
+        <p>名稱留 JUGA 就好。<em>「打開為網頁 App」這個開關保持開著</em> —— 這樣開起來沒有網址列，跟真的 App 一模一樣。</p>
+        <p>右上角，加入。</p>
+        <p>桌面就有了。以後都從這裡進。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">② 加入主畫面＝當 App 用</span><span class="card-chip">檢視較多</span><span class="card-chip">加入主畫面</span><span class="card-chip">「打開為網頁 App」要開著</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--kol)">
+    <div class="slug"><span class="tc">00:36</span><span class="dur">6 秒</span><span class="lane-tag">Rainie 全畫面</span></div>
+    <div class="body">
+      <div class="head"><h4>換氣點：裝好了</h4><span class="src">新增</span></div>
+      <p class="shot">Rainie 靠在吧檯，手機放下，聳一下肩。作用是把「安裝」跟「註冊」切開，給觀眾一個喘息，也避免連續 36 秒都在看螢幕。</p>
+      <div class="vo">
+        <p>裝好了。</p>
+        <p>接下來註冊，一分鐘的事。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">00:42</span><span class="dur">16 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>③ 註冊</h4><span class="src">原片 S8</span></div>
+      <p class="shot">從桌面圖示開 App → 切到<b>客戶註冊</b>分頁 → 手機號碼 → <b>發送驗證碼</b> → 填簡訊驗證碼 → 暱稱 → 密碼 → <b>條款區塊往下捲到底</b> → 勾選 18 歲同意 → <b>註冊並開始</b>。條款那格要停留久一點並加紅框。</p>
+      <div class="vo">
+        <p>開 App，上面切到「客戶註冊」。</p>
+        <p>手機號碼，09 開頭或 +886 都可以。</p>
+        <p>按「發送驗證碼」，把簡訊收到的碼填進來。</p>
+        <p>暱稱，密碼至少六碼。</p>
+        <p>最後這格 —— <em>條款要拉到最下面，才勾得下去</em>。很多人是卡在這裡，不是密碼打錯。</p>
+        <p>勾完，註冊並開始。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">③ 手機號碼＋簡訊驗證碼</span><span class="card-chip flagged">條款要拉到底才能勾</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">00:58</span><span class="dur">16 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>④ 登入，完成設定</h4><span class="src">原片 S9–S10</span></div>
+      <p class="shot">自動跳回登入畫面（沿用原片字卡「註冊完成，切換到登入畫面」）→ 輸入帳密 → 登入 → <b>完成設定</b>頁：大頭貼、暱稱、所在區域、簡短自我介紹、推播通知說明卡 → <b>繼續</b>。</p>
+      <div class="vo">
+        <p>註冊完會跳回登入畫面，用剛剛的帳號密碼進去。</p>
+        <p>然後是完成設定。</p>
+        <p>換頭貼，填暱稱。</p>
+        <p><em>所在區域填準一點</em> —— 這決定你會被誰看到、配到誰，填錯就約不到人。</p>
+        <p>自我介紹選填，但寫一句總比空白好看。</p>
+        <p>推播記得開，不然有人約你，你不會知道。</p>
+        <p>繼續。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">④ 區域填準一點</span><span class="card-chip">推播要開</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">01:14</span><span class="dur">14 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>⑤ 首頁有什麼</h4><span class="src">原片 S11 ＋ 補圖</span></div>
+      <p class="shot">首頁緩慢下滑一次帶過全部區塊 → 底部五個分頁依序點過（首頁 → 廣場 → 通知 → 我的 → 回首頁），每個停約 1 秒，tab 名稱逐一浮字。<b>廣場、我的兩張需要客戶補截圖</b>；沒有的話改成只在底部 tab 上打字說明、不進頁面。</p>
+      <div class="vo">
+        <p>進來就是首頁。</p>
+        <p>最上面搜尋用戶，右邊是通知。</p>
+        <p>中間「我的邀請」—— 你自己發的局會長在這裡。</p>
+        <p>下面「今晚在線」，誰現在醒著、在哪一區，一目了然。</p>
+        <p>底下五個分頁：首頁、廣場、中間這顆發布、通知、我的。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">⑤ 首頁：今晚誰在線</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">01:28</span><span class="dur">18 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>⑥ 發出你的邀請</h4><span class="src">原片 S12–S13</span></div>
+      <p class="shot">點中央 <b>＋</b> → 發布邀請表單由上而下操作：區域（台北市／信義區）→ 類型點選<b>喝一杯</b>（四個類型標籤逐一輕微高亮一次）→ 人數 ＋ 到 3 → 備註打字 → 鏡頭停在<b>「邀請有效時間：2 小時」</b>並放大 → <b>發送邀請</b>。</p>
+      <div class="vo">
+        <p>重點來了，中間這顆「＋」。</p>
+        <p>先選區域。</p>
+        <p>再選類型 —— After Party、喝一杯、補位、臨時約會，看你今晚想幹嘛。</p>
+        <p>要幾個人，最多二十個。</p>
+        <p>備註寫清楚你想找什麼樣的人、什麼場合。這欄寫得好，舉手的人品質差很多。</p>
+        <p>然後注意這一行：<em>這則邀請只活兩個小時</em>。時間到自己收掉，不會一直掛在那裡讓人看。</p>
+        <p>發送邀請。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">⑥ 發邀請</span><span class="card-chip flagged">限時 2 小時</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--dance)">
+    <div class="slug"><span class="tc">01:46</span><span class="dur">8 秒</span><span class="lane-tag">舞蹈段</span></div>
+    <div class="body">
+      <div class="head"><h4>★ 舞蹈段</h4><span class="src">新增</span></div>
+      <p class="shot">邀請送出的那一秒切到 Rainie 全畫面：手機螢幕的紫紅光還打在她臉上 → 她把手機收起來 → 一段 8 秒卡點小舞，背景霓虹隨拍子閃 → 收在直視鏡頭的定格。最後一拍疊上手機推播的「叮」，音效直接切回 UI 畫面。</p>
+      <div class="vo silent">
+        <p>純音樂，無旁白。定格後接一句氣音：</p>
+      </div>
+      <div class="vo">
+        <p>⋯⋯來了。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">無 —— 這 8 秒讓畫面自己講</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">01:54</span><span class="dur">16 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>⑦ 誰想加入，你來挑</h4><span class="src">原片 S14–S16</span></div>
+      <p class="shot">回首頁 → 「我的邀請」卡片出現 → <b>0 人想加入 → 3 人想加入</b>（沿用原片的紅圈標註，通知鈴亮紅點 3）→ 點卡片 → <b>邀請詳情</b> → 點大頭貼展開相簿 → 停在<b>接受／婉拒</b>兩顆鈕 → 帶到底部<b>關閉邀請</b>。</p>
+      <div class="vo">
+        <p>發出去之後，回首頁看你的邀請卡。</p>
+        <p>「0 人想加入」會開始跳。</p>
+        <p>三個人舉手了。</p>
+        <p>點卡片進去看詳情。</p>
+        <p><em>先點大頭貼，可以看她的相簿</em>，再決定。</p>
+        <p>喜歡按接受，不喜歡按婉拒。</p>
+        <p>你挑人，不是人挑你。</p>
+        <p>不想繼續了，最下面「關閉邀請」隨時收掉。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">⑦ 接受／婉拒</span><span class="card-chip">點頭貼可看相簿</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--screen)">
+    <div class="slug"><span class="tc">02:10</span><span class="dur">16 秒</span><span class="lane-tag">螢幕操作</span></div>
+    <div class="body">
+      <div class="head"><h4>⑧ 聊天把細節喬定</h4><span class="src">原片 S17–S18</span></div>
+      <p class="shot">切到<b>通知</b>分頁（收件匣）→ 三張配對卡（喝一杯・關於誰・聊天視窗開啟中・還有 1 天）→ 點<b>聊天</b> → 聊天室：放大<b>「聊天視窗將在 1 天 23:58 後關閉」</b>倒數 → 傳出「信義區 a11 10 點 包廂 999」→ 對方回「好的 安排」→ 頂部亮起 <b>♥ 約會中・忙碌</b>。</p>
+      <div class="vo">
+        <p>接受之後，去「通知」。</p>
+        <p>配對成功的人，會在這裡開一個聊天。</p>
+        <p>注意上面這一行 —— <em>這個聊天視窗只開一天</em>，過了就關，所以別拖。</p>
+        <p>地點、時間、包廂，一句話講完。</p>
+        <p>對方回「好的」——</p>
+        <p>上面就變成「約會中」。</p>
+        <p>今晚，成了。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip">⑧ 聊天視窗限 1 天</span><span class="card-chip">♥ 約會中</span></div>
+    </div>
+  </div>
+
+  <div class="cue" style="--lane:var(--kol)">
+    <div class="slug"><span class="tc">02:26</span><span class="dur">10 秒</span><span class="lane-tag">Rainie 全畫面</span></div>
+    <div class="body">
+      <div class="head"><h4>片尾</h4><span class="src">新增</span></div>
+      <p class="shot">Rainie 拿起包站起來 → 走向門口 → 回頭給鏡頭一個眼神 → 走出畫面 → 畫面留下 JUGA Logo、網址與 18+ 標示。</p>
+      <div class="vo">
+        <p>兩分鐘裝好，兩小時內找到人。</p>
+        <p>今晚有局，因為有你。</p>
+      </div>
+      <div class="cards"><span class="chip-label">字卡</span><span class="card-chip kol">juga.com.tw</span><span class="card-chip kol">加到主畫面就能用</span><span class="card-chip kol">本平台限 18 歲以上使用</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">03</span>舞蹈段為什麼放在 01:46</h2>
+  <p class="sub">客戶說「加一小段就好，但不知道放哪」。我的答案是：只放一段，8 秒，放在「發送邀請」成功之後。</p>
+  <div class="callout">
+    <ol>
+      <li><b>這是全片唯一有理由跳舞的地方。</b>前面在填表單，後面在挑人聊天，只有「邀請發出去、今晚有局了」這一刻是情緒高點。放這裡，跳舞是慶祝，不是硬塞的表演。</li>
+      <li><b>它正好落在影片中點。</b>教學片的觀眾撐過安裝跟註冊之後最容易離開，這裡給一個視覺獎勵，把人拉進下半段的配對流程。</li>
+      <li><b>它天然把影片切成兩半。</b>舞蹈之前是「怎麼開始用」，舞蹈之後是「發完之後會發生什麼」。等於免費得到一個章節分隔，觀眾更好記。</li>
+      <li><b>8 秒佔全片 5%，不會稀釋教學主軸。</b>剛好夠跳完一段有記憶點的卡點，也不會讓人覺得這支變成宣傳片。</li>
+    </ol>
+    <h3>不建議的三種放法</h3>
+    <ol>
+      <li><b>放開頭當 hook</b> —— 一開場就跳舞，觀眾還不知道這是什麼影片，反而傷完成率。開頭用「今晚沒局？」勾人更準。</li>
+      <li><b>放片尾</b> —— 結尾要留給 CTA。跳完舞再叫人去用，注意力已經散了。</li>
+      <li><b>中間穿插三、四段</b> —— 會把教學切碎，正好踩到我們自己驗證過的「剪越碎、成效越差」。</li>
+    </ol>
+    <h3>如果客戶想要更多舞</h3>
+    <p style="margin-bottom:0">建議<b>另做一支 15 秒純宣傳短版</b>（Rainie 跳舞為主 ＋ 三個關鍵畫面閃過 ＋ Logo），跟這支教學長片分開投放。舞蹈素材一次生成、兩支共用，成本幾乎不變，但多一組可以交付的東西。</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">04</span>Rainie 怎麼放才不搶戲</h2>
+  <p class="sub">重點還是 App 怎麼操作。她是導覽者，不是主角。</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>作法</th><th>細節</th></tr></thead>
+      <tbody>
+        <tr><td><strong>全畫面只出現四次</strong></td><td class="what">開場 8 秒、換氣點 6 秒、舞蹈 8 秒、片尾 10 秒，共 32 秒，佔全片 21%。其餘 124 秒她都在角落。</td></tr>
+        <tr><td><strong>角落去背陪跑</strong></td><td class="what">螢幕錄影縮到 82% 置上，Rainie 去背半身站右下角、約畫面高度 30%，手勢指向當下要點的按鈕。觀眾的眼睛跟著她的手走，UI 一點都沒被遮到。</td></tr>
+        <tr><td><strong>口白照她的人設寫</strong></td><td class="what">短、利、不解釋。規則是<strong>教學句講清楚，態度句才耍帥</strong> —— 「條款要拉到最下面才勾得下去」是教學，「你挑人，不是人挑你」是態度，兩種不能混在同一句裡。</td></tr>
+        <tr><td><strong>她本人就是使用情境</strong></td><td class="what">Rainie 的人設是台北夜生活、小隊、今晚出門，跟 JUGA 的「今晚有局」是同一件事。她不是外聘來念稿的模特兒，她就是這個 App 的目標用戶 —— 這是選她最大的價值，開場跟片尾都在演這件事。</td></tr>
+        <tr><td><strong>視覺跟品牌對齊</strong></td><td class="what">霓虹洋紅＋青的打光，直接呼應 JUGA 的紫紅漸層 UI。Rainie 跟 App 畫面在同一個色系裡，不會像兩支影片硬拼起來。</td></tr>
+        <tr><td><strong>服裝尺度</strong></td><td class="what">夜店感貼身洋裝（黑或酒紅），對得上 App 調性。<strong>不用泳裝等級</strong> —— 這是客戶對外的官方教學片。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">05</span>原片 18 個步驟</h2>
+  <p class="sub">逐格看完整理出來的原片流程，新版一步都沒少。時間碼是原片時間。</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>步驟</th><th>原片</th><th>畫面上實際發生的事</th></tr></thead>
+      <tbody>
+        <tr><td class="step">S1</td><td class="step">0:00</td><td class="what">Safari 私密瀏覽新分頁（畫面有「私密瀏覽」「iCloud 私密轉送」說明卡）</td></tr>
+        <tr><td class="step">S2</td><td class="step">0:02</td><td class="what">網址列逐字輸入 <strong>www.juga.com.tw</strong> → 前往。佔全片 14%，全是打字</td></tr>
+        <tr><td class="step">S3</td><td class="step">0:11</td><td class="what">JUGA 登入頁：Logo／「今晚有局，因為有你」／登入｜客戶註冊／帳號・密碼／忘記密碼／訪客瀏覽／服務條款・隱私權政策／限 18 歲以上</td></tr>
+        <tr><td class="step">S4</td><td class="step">0:13</td><td class="what">Safari 底部「⋯」→ 選單（分享／加入書籤／將書籤加入檔案夾／新增私密標籤頁）→ 點<strong>分享</strong></td></tr>
+        <tr><td class="step">S5</td><td class="step">0:19</td><td class="what">iOS 分享面板：拷貝／加入書籤／加入閱讀列表／<strong>檢視較多</strong> → 展開後出現<strong>加入主畫面</strong></td></tr>
+        <tr><td class="step">S6</td><td class="step">0:21</td><td class="what">加入主畫面設定頁：名稱 JUGA、網址、<strong>打開為網頁 App 開關維持開啟</strong> → 右上加入</td></tr>
+        <tr><td class="step">S7</td><td class="step">0:24</td><td class="what">iOS 主畫面出現 JUGA 圖示</td></tr>
+        <tr><td class="step">S8</td><td class="step">0:26</td><td class="what">客戶註冊：手機號碼（09 或 +886）／簡訊驗證碼＋發送驗證碼／暱稱／密碼至少 6 碼／勾選滿 18 歲並同意條款 v1.0（<strong>需拉到最下方</strong>）→ 註冊並開始</td></tr>
+        <tr><td class="step">S9</td><td class="step">0:27</td><td class="what">回登入畫面（原片字卡「註冊完成，切換到登入畫面」）→ 輸入帳密登入</td></tr>
+        <tr><td class="step">S10</td><td class="step">0:29</td><td class="what">完成設定（標題註明「再三步就能開始」）：大頭貼／暱稱／所在區域／簡短自我介紹（選填）／推播通知說明 → 繼續</td></tr>
+        <tr><td class="step">S11</td><td class="step">0:31</td><td class="what">首頁：頭貼・搜尋用戶・通知鈴／開啟通知橫幅／我的邀請（空狀態「今晚想做什麼？」）／今晚在線名單／底部五分頁 <strong>首頁｜廣場｜＋｜通知｜我的</strong></td></tr>
+        <tr><td class="step">S12</td><td class="step">0:35</td><td class="what">點中央 ＋ 開啟發布邀請</td></tr>
+        <tr><td class="step">S13</td><td class="step">0:36</td><td class="what">發布邀請表單：區域（台北市／信義區）／類型（<strong>After Party・喝一杯・補位・臨時約會・其他</strong>）／可加入人數（最多 20）／備註 0/200／<strong>邀請有效時間 2 小時</strong> → 發送邀請</td></tr>
+        <tr><td class="step">S14</td><td class="step">0:39</td><td class="what">回首頁，我的邀請出現卡片：類型・區域・人數・發布時間・♡♡ 已加入約會 0/2・0 人想加入</td></tr>
+        <tr><td class="step">S15</td><td class="step">0:42</td><td class="what">卡片更新為 <strong>3 人想加入</strong>（紅圈標註＋字卡「目前有 3 位想要加入約會」），通知鈴紅點 3</td></tr>
+        <tr><td class="step">S16</td><td class="step">0:46</td><td class="what">邀請詳情：類型／區域／0/3 人／大約 2 小時後關閉／發布者／<strong>想加入 (3)</strong> 名單各有接受｜婉拒／右上編輯・分享／底部關閉邀請。字卡「先點選大頭貼，可觀看相簿／喜歡按接受，不喜歡按婉拒」</td></tr>
+        <tr><td class="step">S17</td><td class="step">0:52</td><td class="what">通知（收件匣）：配對卡「喝一杯・{發布者}／關於 {對方}／區域／<strong>聊天視窗開啟中・還有 1 天</strong>」＋ 聊天鈕</td></tr>
+        <tr><td class="step">S18</td><td class="step">0:57</td><td class="what">聊天室：對方名稱・關於誰・在線狀態／<strong>聊天視窗將在 1 天 23:58:26 後關閉</strong>／傳訊「信義區 a11 10 點 包廂 999」→ 回「好的 安排」→ 頂部亮起 <strong>♥ 約會中・忙碌</strong>。影片到此直接結束，無片尾</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>這支 App 的核心邏輯，一句話</h3>
+  <p>把網頁加到主畫面當 App 用 → 註冊 → 發一則「今晚想做什麼」的<b>限時 2 小時</b>邀請 → 看誰舉手 → 你挑人 → 開一個<b>只存在 1 天</b>的聊天視窗把地點時間喬定 → 狀態變「約會中」。賣點是<b>限時</b>加上<b>今晚在線</b>的即時感，不是長期交友 —— 新版的口白全程都在強化這兩點。</p>
+</section>
+
+<section>
+  <h2><span class="n">06</span>製作路線</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>工序</th><th>作法</th></tr></thead>
+      <tbody>
+        <tr><td><strong>畫面連續性</strong></td><td class="what">全片蓋一條統一的假狀態列（固定時間、滿格訊號、固定電量），一次解決時鐘跳動、電量掉落、紅色錄影中膠囊三個問題。客戶端不需要動任何東西。</td></tr>
+        <tr><td><strong>Rainie 出鏡素材</strong></td><td class="what">走 <code>DAILY_VIDEO_SOP.md</code>，Soul ID <code>a4a000fe-fd96-4c36-97ff-0df9358a9b47</code>（v2）。開場、換氣點、片尾三段必須是同一套服裝造型，否則觀眾會發現跳接。</td></tr>
+        <tr><td><strong>舞蹈段</strong></td><td class="what">走 <code>DANCE_CLONE_SOP.md</code> Method B（動作驅動），挑一支卡點乾淨、8 秒內有記憶點的驅動片。起始畫面的服裝與場景要跟開場完全一致。<strong>注意 SOP 的人工核准關卡</strong>：起始畫面生成完要先給你看過、核准，才跑 Motion Control（有 credit 成本）。</td></tr>
+        <tr><td><strong>去背陪跑素材</strong></td><td class="what">另外生成純色背景的半身指示動作（指、比、看鏡頭），再用 <code>remove_background</code> 去背。需要 6–8 個不同手勢，對應各章節的指向位置。</td></tr>
+        <tr><td><strong>配音</strong></td><td class="what">Rainie 語音（<code>create_voice</code> / <code>generate_audio</code>）。語速偏快、尾音收乾淨，符合她「丟一句話就走」的調性。教學句可以稍微放慢，態度句維持原速。</td></tr>
+        <tr><td><strong>字卡與標註</strong></td><td class="what">局部放大、紅框、箭頭屬人工後製，照 <code>DAILY_VIDEO_SOP.md</code> 慣例走人工剪輯。字卡樣式沿用原片的黃字＋紅圈，跟客戶既有素材一致。</td></tr>
+        <tr><td><strong>交付</strong></td><td class="what">2 分 36 秒教學長版（主）＋（選配）15 秒 Rainie 舞蹈宣傳短版。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">07</span>需要客戶補的東西</h2>
+  <p class="sub">都是重出截圖，不是重錄。加起來大概 6 張。真的不給，每一項我都寫了後備作法。</p>
+  <ol class="asks">
+    <li><span class="num">01</span><div><b>「廣場」分頁截圖 ×1、「我的」分頁截圖 ×1</b><span>底部有五個分頁，原片只用到三個。補這兩張，01:14 的首頁導覽才能把五個 tab 走完。<br><b>後備：</b>只在底部 tab 上打字標名稱、不進入頁面，口白改成「廣場跟我的先不展開，之後自己點進去看」。</span></div></li>
+    <li><span class="num">02</span><div><b>「完成設定」剩下兩步的截圖 ×2</b><span>那頁標題寫「再三步就能開始」，原片只演了第一步就跳首頁，字卡跟畫面對不上。<br><b>後備：</b>口白避開「三步」這個數字，只說「照著填完，繼續」，並把該頁標題用局部放大裁掉。</span></div></li>
+    <li><span class="num">03</span><div><b>統一 demo 資料的「我的邀請」卡片截圖 ×2</b><span>原片發布表單填的是<b>信義區</b>，但回到首頁的卡片顯示<b>松山區</b>，人數也從 2 人變 3 人。需要「0 人想加入」與「3 人想加入」兩張，區域和人數要跟表單填的一致。<br><b>後備：</b>把卡片的區域欄位用局部放大裁切避開，口白與字卡全程不提區域名稱、只講人數變化。</span></div></li>
+  </ol>
+  <h3>另外兩件要你拍板的事</h3>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>問題</th><th>我的建議</th></tr></thead>
+      <tbody>
+        <tr><td><strong>2 分 36 秒可以嗎？</strong></td><td class="what">既然沒有長度限制，我按「每一步講到觀眾不會卡住」去配時間。如果之後想要一個更短的版本投廣告，不要壓縮這支，另外剪一支 45 秒精華版比較划算。</td></tr>
+        <tr><td><strong>要不要加做 15 秒舞蹈宣傳短版？</strong></td><td class="what">建議做。舞蹈素材一次生成兩支共用，增加的成本幾乎只有剪輯，但多一組可投放的素材。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <span>Virtual KOL Studio · JUGA 專案</span>
+  <span>腳本 v2 · 2026-08-24</span>
+</footer>
+
+</div>
