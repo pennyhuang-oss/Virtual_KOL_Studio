@@ -8,13 +8,6 @@
 
 本專案以模仿日本 AV 女優公開社群帳號的風格為核心方向，打造具有強烈**寄生親密感（parasocial intimacy）**的虛擬創作者。
 
-> ⚠️ **例外（2026-08-25）：Luna Tanaka 與 Yuna Kim 不再走此路線。**
-> 這兩位受客戶指定為餐飲品牌代言人（鮨佐樂 omakase、如嬌花膠雞·鍋物），
-> 已改為**在地生活 × 餐飲代言人**路線——不再產出 AV 女優風格素材。
-> 兩位至今未開設任何社群帳號、過去產的素材一張未發布，因此無歷史包袱。
-> 詳見兩位的 `content_style.md` 與 [`clients/sushisolar-rujiao/`](clients/sushisolar-rujiao/)。
-> **其餘 9 位 KOL 的方向不變。**
-
 ### 核心哲學
 
 - 不是生活美食博主，不是時尚 influencer
@@ -57,17 +50,14 @@
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
 >
-> 注意：**Luna Tanaka 與 Yuna Kim 於 2026-08-25 有兩項變更**，起因是鮨佐樂 × 如嬌鍋物的
-> 雙品牌代言案（詳見 [`clients/sushisolar-rujiao/`](clients/sushisolar-rujiao/)）：
+> 注意：**Luna Tanaka 與 Yuna Kim 於 2026-08-25 在地化為「移居台北」設定**——
+> 國籍、出身地、外型、視覺識別度與內容路線**全部不變**，改的只有現居地與語言
+> （兩人都會講中文，且各自帶母語口音）。
+> 見各自 `character.md` 的「在台灣生活」章節（含中文語音規格與台北場景對照表）。
 >
-> 1. **在地化為「移居台北」設定**——國籍、出身地、外型與視覺識別度全部不變，
->    改的是現居地與語言（兩人都會講中文，且各自帶母語口音）。
->    見各自 `character.md` 的「在台灣生活」章節（含中文語音規格與台北場景對照表）。
-> 2. **內容路線改為在地生活 × 餐飲代言人**，不再產出 AV 女優風格素材。
->    兩位的 `content_style.md` 已全面改寫；`character.md` 的性感／身材展示段落與
->    Benchmark 帳號表已移除（⚠️ 新的 benchmark 帳號待指定）。
->
-> **代言配對**：Luna → 鮨佐樂 omakase｜Yuna → 如嬌花膠雞·鍋物
+> 同時兩位各接了一個餐飲業配合作——**Luna → 鮨佐樂 omakase、Yuna → 如嬌花膠雞·鍋物**
+> （[`clients/sushisolar-rujiao/`](clients/sushisolar-rujiao/)）。
+> 這是業配，不是路線變更：她們照樣有自己的生活、照樣發原本會發的內容。
 
 ---
 

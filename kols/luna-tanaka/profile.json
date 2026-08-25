@@ -111,42 +111,41 @@
   "content": {
     "pillars": [
       {
-        "name": "台北的光 / The Light in Taipei",
-        "description": "Her 「今日の美しいもの」 eye, relocated. Light on a wooden floor, rain in an alley, the shape of a shadow, an old shopfront. Changed cities, not eyes. This is the soul of the account.",
-        "weight": "25%"
-      },
-      {
-        "name": "吃 / Food",
-        "description": "A Japanese girl eating in Taiwan. Some of it reminds her of home, some is entirely new. She doesn't rate or compare — she says 'good', pauses, then says 'really, really good'. The endorsement content lives inside this pillar (capped at 20% of her own account).",
-        "weight": "25%"
-      },
-      {
-        "name": "Mochi 與家 / Mochi & Home",
-        "description": "The old Taipei apartment — wooden floors, low furniture, Mochi on the windowsill (she came from Kyoto too, took two months to settle), afternoon light.",
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Kyoto mornings: soft light through shoji screens, white linen bedding, her quiet emergence from sleep. The most private and beautiful part of her day.",
         "weight": "20%"
       },
       {
-        "name": "找到的東西 / Things She Found",
-        "description": "Old ceramics, secondhand books, the jars on the shelves at a Dihua Street dried-goods shop. The texture she came looking for and found here in a different shape.",
+        "name": "穿搭 / Outfit & Changing",
+        "description": "Putting on her soft, minimal outfits — white lace, floral cotton, oversized knits. In front of a mirror, unhurried, the way she always is.",
+        "weight": "20%"
+      },
+      {
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Post-shower: porcelain skin, damp black bob, white towel, bathroom mirror, quiet steam. The most sensory and still moment of her day.",
         "weight": "15%"
       },
       {
-        "name": "京都連結 / Kyoto Ties",
-        "description": "Going back (1-2x/year), video calls with her grandmother, things posted back and forth, missing home a little.",
-        "weight": "10%"
+        "name": "在家 / Home Lounging",
+        "description": "Her Kyoto apartment: wooden floors, tatami, thin home clothes, Mochi the cat, afternoon window light. The life that exists when no one is watching.",
+        "weight": "20%"
       },
       {
-        "name": "穿搭 / Outfit",
-        "description": "Never introduced, just present in the photo. Soft Japanese: white lace, floral cotton, oversized knits.",
-        "weight": "5%"
+        "name": "飯店 / Hotel & Travel",
+        "description": "Occasional travel to Tokyo, Osaka, or elsewhere — hotel beds, city windows, the particular quiet of being somewhere new and alone.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Morning yoga or stretching at home, gentle outdoor walks. Movement that matches her pace — slow, intentional, breath-focused.",
+        "weight": "10%"
       }
     ],
     "formats": [
-      "Photo carousels — Instagram (5-8 images, carefully sequenced)",
-      "Detail close-ups — food, ceramics, hands, light",
-      "Short ambient videos — Reels / TikTok (environment sound, almost no talking)",
-      "The 「いただきます」 clips — the rare ones where she speaks",
-      "Stories — one photo, a few words"
+      "Photo carousels — Instagram (5–8 images, carefully sequenced)",
+      "Short ambient videos — Reels / TikTok (no talking, just visuals and sound)",
+      "Stories — casual, unedited, often just a photo with a few words",
+      "Film photo dumps — monthly, shot on her analog camera"
     ],
     "posting_frequency": "Instagram: 3–4x/week. Stories: daily. TikTok: 2–3x/week.",
     "aesthetic": {
@@ -157,25 +156,22 @@
         "warm beige",
         "dusty lavender"
       ],
-      "mood": "Like a memory of a perfect quiet day, relocated to Taipei. Film grain, soft focus, natural light. Food is the one thing allowed to stay sharp and saturated — sushi has to look good.",
-      "editing_style": "Cream/off-white grade, light haze, low saturation, flat light — unchanged. Exception: food keeps its clarity and saturation (oil sheen, the cut face of the fish) so it doesn't get washed out. Video: 0-3 cuts, long takes — her native style is already on the right side of the data."
+      "mood": "Like a memory of a perfect quiet day. Film grain, soft focus, natural window light. Everything slightly imperfect in a way that feels intentional.",
+      "editing_style": "Minimal editing. Film emulation — Kodak Portra or Fujifilm look. Slightly lifted shadows, soft highlights. Never over-sharpened. Videos use ambient sound: rain, birds, paper, tea being poured."
     },
     "brand_do": [
-      "Restaurants she would genuinely eat at, Japanese cuisine especially (current: 鮨佐樂 omakase)",
       "Japanese lifestyle, stationery, and home brands",
       "Vintage and secondhand fashion",
       "Film photography and camera brands",
       "Skincare with natural ingredients and simple packaging",
-      "Small local businesses, in Taipei or Kyoto"
+      "Small local Kyoto businesses"
     ],
     "brand_dont": [
       "Loud or maximalist brand aesthetics",
       "Fast fashion",
       "Brands requiring heavy scripted promotion",
-      "Anything that feels rushed or mass-produced",
-      "Anything requiring body-display content — off-route as of 2026-08-25"
-    ],
-    "route_note": "2026-08-25 route change: switched from the Japanese-AV-actress-style line to a Taipei-life x restaurant-endorser line (client: 鮨佐樂 omakase). No assets were ever published under the old line, so there is no legacy to unwind. No further AV-style assets for this persona. See content_style.md and clients/sushisolar-rujiao/."
+      "Anything that feels rushed or mass-produced"
+    ]
   },
   "social": {
     "platforms": {

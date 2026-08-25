@@ -105,42 +105,42 @@
   "content": {
     "pillars": [
       {
-        "name": "吃 / Food",
-        "description": "Eating around Taipei as a Korean girl — restaurants, the market, cooking at home, convenience-store finds, 'in Korea this is...' comparisons. The endorsement content lives inside this pillar (capped at 25% of her own account).",
-        "weight": "25%"
-      },
-      {
-        "name": "台北生活 / Taipei Life",
-        "description": "A Korean girl's ordinary days in Taipei — back-alleys, the MRT, her Da'an apartment window with the burglar bars and the signs outside. The everyday texture that proves she actually lives here.",
-        "weight": "25%"
-      },
-      {
-        "name": "皮膚 / Skin & Skincare",
-        "description": "Her core credibility. Skincare steps, the state of her skin, what her mom (a nurse at a Seoul dermatology clinic) taught her. Face is the subject, cold-white light, no heavy retouching.",
+        "name": "早晨 / Morning & Waking Up",
+        "description": "Seoul apartment mornings — she's still in bed, white bedding, cherry hair clips tangled in hair. Tall and sleepy, not performing anything. The most watchable she is.",
         "weight": "20%"
       },
       {
-        "name": "穿搭 / Outfit",
-        "description": "Clean Korean everyday dressing. Mirror shots before going out. Not a styling tutorial — just what she's wearing today.",
+        "name": "穿搭 / Outfit & Changing",
+        "description": "K-sweet meets Y2K: mini skirts, oversized cardigans, platform shoes. Getting dressed in front of the mirror. She decides fast and looks good immediately.",
+        "weight": "20%"
+      },
+      {
+        "name": "浴室 / Bathroom & After Shower",
+        "description": "Post-shower K-beauty skincare routine in the bathroom mirror — her porcelain skin, damp dark hair, applying toner with her hands. This is where she actually takes care of herself.",
         "weight": "15%"
       },
       {
-        "name": "韓國連結 / Korea Ties",
-        "description": "Trips back to Seoul, comparisons with Taiwan, video calls with her mom, Jiyeon, and the Mandarin words she keeps getting wrong.",
-        "weight": "10%"
+        "name": "在家 / Home Lounging",
+        "description": "Curled up on the sofa with her long legs tucked under her, oversized cardigan, scrolling phone or looking out the window. Seoul apartment, quiet afternoon.",
+        "weight": "20%"
       },
       {
-        "name": "動一動 / Self-care",
-        "description": "Walks, stretching, sheet-mask nights. Taking care of herself without making it a story.",
-        "weight": "5%"
+        "name": "飯店 / Hotel & Travel",
+        "description": "Tokyo, Shanghai, or wherever she goes — modern hotel rooms, city views, her tall slender figure on crisp white hotel beds.",
+        "weight": "15%"
+      },
+      {
+        "name": "健身 / Fitness & Active",
+        "description": "Light gym sessions or outdoor walks — fitted activewear, clean and minimal. Not intense, just consistent. The way she takes care of her body without making it a story.",
+        "weight": "10%"
       }
     ],
     "formats": [
       "Face close-ups — Instagram static / Stories",
-      "Food + her reaction — Instagram static / carousel",
-      "Short daily life and first-bite videos — TikTok / Reels (15-30s)",
-      "Mandarin voice-over clips — her Korean accent is the hook",
-      "Stories — where she is, what she's eating, one-line reactions"
+      "Outfit shots — Instagram static",
+      "Short daily life videos — TikTok / Reels (15–30 seconds)",
+      "Skincare product carousels — Instagram",
+      "Stories — where she is, what she's wearing, one-line reactions"
     ],
     "posting_frequency": "Instagram: 5x/week. TikTok: 4–5x/week. Stories: daily.",
     "aesthetic": {
@@ -151,24 +151,21 @@
         "pale skin tones",
         "minimal cherry accent"
       ],
-      "mood": "Clean, bright, unstaged. Cold-white is still her signature — but food scenes stay warm (golden broth, steam, restaurant lamps); grade the scene warm and keep her skin clear, the two are handled separately.",
-      "editing_style": "Cold-white grade on her, warm on food. Low saturation. High clarity on skin, no heavy retouching. Video: 0-3 cuts, single shot >=4s (per DAILY_VIDEO_SOP.md 2026-08-05 data). Never fast-cut food montage."
+      "mood": "Clean, bright, Seoul morning. Feels intentional but not staged. Products are there but the face is always the subject.",
+      "editing_style": "Cold-white grade. Low saturation. High clarity on skin. No warm filters — that's Iris's world, not Yuna's. Short TikToks are single-take or 2-cut maximum."
     },
     "brand_do": [
-      "Restaurants and food brands she would actually eat at (current: 如嬌 花膠雞·鍋物)",
       "K-beauty skincare and makeup brands (indie to established)",
       "Korean fashion brands with clean aesthetic",
-      "Taipei cafés and lifestyle brands",
+      "Seoul cafés and lifestyle brands",
       "Brands that don't require scripted copy"
     ],
     "brand_dont": [
       "Brands requiring only positive language",
-      "Products she hasn't actually used or eaten",
+      "Products she hasn't actually used",
       "Anything requiring heavy transformation or tutorial format",
-      "Tech products or anything that requires explaining",
-      "Anything requiring body-display content — off-route as of 2026-08-25"
-    ],
-    "route_note": "2026-08-25 route change: switched from the AV-actress-style parasocial-intimacy line to a Taipei-life x restaurant-endorser line (client: 如嬌 花膠雞·鍋物). No assets were ever published under the old line, so there is no legacy to unwind. No further AV-style assets for this persona. See content_style.md and clients/sushisolar-rujiao/."
+      "Tech products or anything that requires explaining"
+    ]
   },
   "social": {
     "platforms": {
