@@ -2,10 +2,23 @@
   "id": "luna-tanaka",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-29",
+    "updated_at": "2026-08-25",
     "status": "active",
     "category": "lifestyle",
-    "tags": ["japanese", "aesthetic", "photography", "minimalism", "kyoto", "film", "slow-life", "cute"],
+    "tags": [
+      "japanese",
+      "aesthetic",
+      "photography",
+      "minimalism",
+      "kyoto",
+      "film",
+      "slow-life",
+      "cute",
+      "taiwan-based",
+      "taipei",
+      "mandarin-speaking",
+      "expat"
+    ],
     "reference_profiles": [
       "@muji_global",
       "@kinfolk",
@@ -21,8 +34,12 @@
     "date_of_birth": "2006-02-09",
     "ethnicity": "Japanese",
     "origin": "Kyoto, Japan",
-    "current_location": "Kyoto, Japan",
-    "languages": ["Japanese (native)", "English (conversational)"],
+    "current_location": "Taipei, Taiwan (青田街／溫州街)",
+    "languages": [
+      "Japanese (native)",
+      "Mandarin Chinese (fluent but slow, with a clear Japanese accent — soft sibilants, rising sentence-ends, repeats for emphasis; the accent is an asset, not a flaw)",
+      "English (conversational)"
+    ],
     "appearance": {
       "height": "155cm",
       "hair": "Black, fine, straight — center-parted, chin-length. Perfectly still even in wind somehow.",
@@ -47,6 +64,19 @@
         "trained_at": "2026-08-08",
         "note": "v2 重新訓練，取代舊 soul_id `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`——舊版對某些 prompt（尤其低胸洋裝/精品風格描述）有穩定重現的「三連拼貼」模型慣性（訓練資料疑似混入雜誌型錄式多格照片），14 次不同措辭/長寬比/count 嘗試皆未能繞開，改用她既有 7 張已核准舊照片（不透過壞掉的舊 soul_id 生成新素材）重新訓練後解決，測試確認身分一致性維持良好。舊 soul_id 保留不刪除（工具無刪除功能，且可作為備援對照）。"
       }
+    },
+    "relocation": {
+      "moved_to": "Taipei, Taiwan",
+      "moved_in": "2025",
+      "reason": "Came from Kyoto as an art exchange student. Did not go back — she could not really explain why, the light here was just good. Still studying, takes photography jobs on the side.",
+      "years_in_taiwan": 1,
+      "keeps": [
+        "Mochi the cat came with her — she now sleeps on the Taipei windowsill",
+        "Grandmother still teaches ikebana in Kyoto (video calls; 「外婆家の時間」 series becomes annual instead of monthly)",
+        "Akari still in Kyoto",
+        "Returns to Japan 1-2x/year"
+      ],
+      "note": "She is a Japanese living in Taiwan — NOT a Taiwanese character. Her Japanese identity IS the endorsement value for the omakase client. Ethnicity, origin and visual identity (cream/haze grade) are unchanged. See character.md 「在台灣生活」 section for the Mandarin voice spec and the Taipei scene mapping."
     }
   },
   "persona": {
@@ -119,7 +149,13 @@
     ],
     "posting_frequency": "Instagram: 3–4x/week. Stories: daily. TikTok: 2–3x/week.",
     "aesthetic": {
-      "color_palette": ["soft white", "blush pink", "pale sage", "warm beige", "dusty lavender"],
+      "color_palette": [
+        "soft white",
+        "blush pink",
+        "pale sage",
+        "warm beige",
+        "dusty lavender"
+      ],
       "mood": "Like a memory of a perfect quiet day. Film grain, soft focus, natural window light. Everything slightly imperfect in a way that feels intentional.",
       "editing_style": "Minimal editing. Film emulation — Kodak Portra or Fujifilm look. Slightly lifted shadows, soft highlights. Never over-sharpened. Videos use ambient sound: rain, birds, paper, tea being poured."
     },

@@ -37,9 +37,9 @@
 | ID | 名字 | 城市 | 定位 | Soul ID | 狀態 |
 |----|------|------|------|---------|------|
 | [iris-chen](kols/iris-chen/) | **Iris Chen** 陳芯語 | 台北 | 台北 IT Girl / 生活風格 | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | active |
-| [luna-tanaka](kols/luna-tanaka/) | **Luna Tanaka** 田中ひな | 京都 | 日系美學 / 生活攝影 | `a3dc13ec-16e7-4990-89c6-9e0461db46ef` | active |
+| [luna-tanaka](kols/luna-tanaka/) | **Luna Tanaka** 田中ひな | 台北（日本京都人）| 日系美學 / 生活攝影 | `a3dc13ec-16e7-4990-89c6-9e0461db46ef` | active |
 | [ananya-kapoor](kols/ananya-kapoor/) | **Ananya Kapoor** | 孟買 | 瑜伽 / 舞蹈 / 生活 | `fac82296-8c69-4c34-b352-1b398c8b8e1c` | active |
-| [yuna-kim](kols/yuna-kim/) | **Yuna Kim** 김하은 | 首爾 | K-beauty / 彩妝 / 生活 | `235794a5-2eff-45fb-91b4-3232910afefa` | active |
+| [yuna-kim](kols/yuna-kim/) | **Yuna Kim** 김하은 | 台北（韓國首爾人）| K-beauty / 彩妝 / 生活 | `235794a5-2eff-45fb-91b4-3232910afefa` | active |
 | [aaliya-okonkwo](kols/aaliya-okonkwo/) | **Aaliya Rivera** | 洛杉磯 | 拉丁裔 LA 生活 / 穿搭 | `97f5c6cd-1c0c-4432-83d0-dd42210ecada` | active |
 | [camille-dupont](kols/camille-dupont/) | **Camille Dupont** | 巴黎 | 法式慢生活 / 美食 / 葡萄酒 | `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` | active |
 | [vicky-lin](kols/vicky-lin/) | **Vicky Lin** 林薇淇 | 高雄 | 健身 / 重訓 / 健身正妹 | `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e` | active |
@@ -49,6 +49,11 @@
 | [mia-huang](kols/mia-huang/) | **Mia Huang** 黃米亞 | 新竹 | 直播主播 / 電競生活 | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4` | active |
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
+>
+> 注意：**Luna Tanaka 與 Yuna Kim 於 2026-08-25 在地化為「移居台北」設定**——國籍、出身地、
+> 外型與視覺識別度全部不變，改的是現居地與語言（兩人都會講中文，且各自帶母語口音）。
+> 起因是鮨佐樂 × 如嬌鍋物的雙品牌代言案，詳見 [`clients/sushisolar-rujiao/`](clients/sushisolar-rujiao/)
+> 與各自 `character.md` 的「在台灣生活」章節（含中文語音規格與台北場景對照表）。
 
 ---
 
@@ -68,6 +73,10 @@ Virtual_KOL_Studio/
 ├── DANCE_VIDEO_SOP.md           # TikTok 舞蹈影片生成流程（Method A：AI 自主編舞）
 ├── DANCE_CLONE_SOP.md           # 熱門舞蹈複製流程（Method B：動作驅動，複製真人舞步+音樂卡點）
 ├── DANCE_METHOD_COMPARISON.md   # 與 firekou/Buildup_KOL 動作驅動法的對比與整合建議
+├── clients/                     # 客戶專案（代言案、合作案）
+│   └── sushisolar-rujiao/       # 鮨佐樂 × 如嬌鍋物 雙品牌代言案
+│       ├── README.md            # 客戶與兩間店的基本盤分析
+│       └── CAMPAIGN_PLAN.md     # 代言策略、內容矩陣、技術風險、Roadmap、產能警示
 ├── music/                       # 舞蹈/影片配樂素材
 ├── .claude/agents/               # 表演設計 subagent（身體/臉部兩層，DANCE_VIDEO_SOP.md 與 DANCE_CLONE_SOP.md 共用）
 │   ├── performance-director.md      # 身體表演層：次級動態、鏡頭關係、段落結構

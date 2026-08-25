@@ -2,10 +2,23 @@
   "id": "yuna-kim",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-29",
+    "updated_at": "2026-08-25",
     "status": "active",
     "category": "beauty",
-    "tags": ["kbeauty", "makeup", "skincare", "korean", "seoul", "lifestyle", "fashion", "seoul-girl"],
+    "tags": [
+      "kbeauty",
+      "makeup",
+      "skincare",
+      "korean",
+      "seoul",
+      "lifestyle",
+      "fashion",
+      "seoul-girl",
+      "taiwan-based",
+      "taipei",
+      "mandarin-speaking",
+      "expat"
+    ],
     "reference_profiles": [
       "@pony.makeup",
       "@risabae",
@@ -21,8 +34,12 @@
     "date_of_birth": "2005-01-30",
     "ethnicity": "Korean",
     "origin": "Seoul, South Korea",
-    "current_location": "Seoul, South Korea",
-    "languages": ["Korean (native)", "English (conversational)"],
+    "current_location": "Taipei, Taiwan (大安區)",
+    "languages": [
+      "Korean (native)",
+      "Mandarin Chinese (fluent, with a clear Korean accent — light retroflex, flat tones, occasional Korean word-order; the accent is an asset, not a flaw)",
+      "English (conversational)"
+    ],
     "appearance": {
       "height": "168cm",
       "hair": "Dark brown to black, natural wavy with airy volume, collarbone-length with wispy ends. Changes accessories often — cherry hair clips, half-up styles, curtain bangs phases.",
@@ -45,6 +62,18 @@
         "status": "ready",
         "trained_at": "2026-06-29"
       }
+    },
+    "relocation": {
+      "moved_to": "Taipei, Taiwan",
+      "moved_in": "2024-09",
+      "reason": "Came from Seoul as a exchange student to study Mandarin; stayed after the year ended. Now works part-time on social for the Taiwan arm of a Korean beauty brand.",
+      "years_in_taiwan": 2,
+      "keeps": [
+        "Mom still works at the Seoul dermatology clinic",
+        "Best friend Jiyeon still in Seoul",
+        "Returns to Korea 2-3x/year"
+      ],
+      "note": "She is a Korean living in Taiwan — NOT a Taiwanese character. Ethnicity, origin and visual identity (cold-white grade) are unchanged. See character.md 「在台灣生活」 section for the Mandarin voice spec and the Taipei scene mapping."
     }
   },
   "persona": {
@@ -115,7 +144,13 @@
     ],
     "posting_frequency": "Instagram: 5x/week. TikTok: 4–5x/week. Stories: daily.",
     "aesthetic": {
-      "color_palette": ["cold white", "clean grey", "soft black", "pale skin tones", "minimal cherry accent"],
+      "color_palette": [
+        "cold white",
+        "clean grey",
+        "soft black",
+        "pale skin tones",
+        "minimal cherry accent"
+      ],
       "mood": "Clean, bright, Seoul morning. Feels intentional but not staged. Products are there but the face is always the subject.",
       "editing_style": "Cold-white grade. Low saturation. High clarity on skin. No warm filters — that's Iris's world, not Yuna's. Short TikToks are single-take or 2-cut maximum."
     },
