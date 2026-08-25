@@ -330,3 +330,43 @@ duration = 10
 
 - `kols/yuna-kim/images/dance_clone_r7/start_frame.png`（已核准起始畫面）
 - `kols/yuna-kim/videos/dance_clone_r7/yuna_dance_clone_r7_ig_reel.mp4`（1072×1936、30fps、~13.7s，重跑版 job `6ce5d1a9`，`scene_control: image` + 本機後製漂移運鏡，含驅動片原始配樂音軌，未經授權，僅供內部驗證）
+
+
+---
+
+## 2026-08-25 素材可用性檢查（發布前逐件目視）
+
+**背景**：同 Luna，見 `clients/sushisolar-rujiao/POSTING_PLAN.md`。
+
+### 重複度：`soul_test_v1` 六張實際只等於三則內容
+
+- `selfie_01` 與 `selfie_02` **幾乎是同一張**——同一件米色針織、同一個撥髮動作、
+  同一個房間，只有毛衣上的字樣不同。兩張都發會像重複貼文，**只取 `selfie_01`**。
+- `cafe_01`/`cafe_02` 同一天同一套（灰針織＋白背心＋深色短裙），只是拍攝角度不同 → 併成一則 carousel。
+- `street_01`/`street_02` 同一條首爾街道、同一件格紋短裙，只換上衣 → 併成一則 carousel。
+
+> **教訓**：訓練批次刻意固定服裝與場景以求身分一致性，這對建模是對的，
+> 但直接拿來當社群內容就會顯得沒有變化。往後生成批次要主動規劃
+> 「這批要幾個場景、幾套衣服、幾種景別」，不要一個 prompt 連生四張。
+
+### `dance_v1` 白棚版不建議發布
+
+`dance_v1_seedance_15s_pink_bodycon_white_studio.mp4`：
+純白棚拍背景——`character.md` 的「視覺行為光譜」明列棚拍感不是她的招牌；
+且畫面右上可見背景紙的邊緣。
+同一套粉色洋裝的居家版（`dance_v2_seedance_15s_pink_bodycon_bedroom_led.mp4`）
+畫面完整許多，**兩支擇一，用居家版**。
+
+> 附註：`videos/dance_v1/` 下有四個檔案但只有**兩支不重複的影片**——
+> `yuna_dance_v1.mp4` 與 `dance_v1_seedance_15s_pink_bodycon_white_studio.mp4` 為同一檔（md5 相同），
+> `yuna_dance_v2.mp4` 與 `dance_v2_seedance_15s_pink_bodycon_bedroom_led.mp4` 亦同。
+
+### `dance_clone_r7` 構圖偏左（已知問題）
+
+與本檔前述「構圖偏左問題：嘗試後製置中，確認不可行」的記錄一致，目視確認仍在。
+可發布，但建議往後排。
+
+### ✅ 舞蹈影片配樂授權問題撤銷
+
+同 Luna：這些是社群平台做 Challenge 的熱門音訊，平台會自動辨識並帶版權資訊，
+**不需換配樂或重新對拍**（Penny 2026-08-25 確認）。
