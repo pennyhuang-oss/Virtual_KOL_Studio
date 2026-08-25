@@ -3,7 +3,9 @@
 > 建立日期：2026-08-25
 > 狀態：**規劃中——等 Penny 確認 CAMPAIGN_PLAN 的方向後才進腳本**
 > 指派人設：**Luna Tanaka → 鮨佐樂**｜**Yuna Kim → 如嬌**
-> 相關文件：[`CAMPAIGN_PLAN.md`](./CAMPAIGN_PLAN.md)（策略、內容矩陣、風險、Roadmap）
+> 相關文件：
+> ・[`CAMPAIGN_PLAN.md`](./CAMPAIGN_PLAN.md)（策略、內容矩陣、素材取用、技術風險、Roadmap）
+> ・[`POSTING_PLAN.md`](./POSTING_PLAN.md)（帳號開通規格、既有素材盤點、編號制發布序列）
 
 ---
 
