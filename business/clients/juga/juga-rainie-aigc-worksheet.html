@@ -200,7 +200,9 @@ footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
     <li><span class="k">模型</span><span class="v"><b><code>soul_2</code></b>（起始畫面）／<b><code>kling3_0</code></b>（影片與 Motion Control）。<b><code>cinematic_studio_video_v2</code> 禁用</b> —— 多鏡頭電影感，生出來像廣告。</span></li>
     <li><span class="k">Soul ID</span><span class="v"><b><code>a4a000fe-fd96-4c36-97ff-0df9358a9b47</code></b><br>（Rainie Hsu v2。<code>generation_notes.md</code> 開頭那組 <code>994e33d2-…</code> 是已棄用的舊 ID，不要用。）</span></li>
     <li><span class="k">共用參數</span><span class="v"><code>aspect_ratio="9:16"</code>　<code>count=1</code>（圖）　<code>duration=10</code>（影片）　<code>sound="on"</code>　<code>multi_shots</code> 不設定</span></li>
-    <li><span class="k">造型一致</span><span class="v">四段出鏡（開場／換氣／舞蹈／片尾）<b>必須是同一套造型</b>：黑緞面貼身洋裝 ＋ 煙灰色薄紗長罩衫（敞開）＋ 金色大圈耳環 ＋ 金鏈小包 ＋ 黑色細跟踝帶高跟鞋 ＋ 長直髮放下。罩衫、長髮、耳環是動態載體，不能省。</span></li>
+    <li><span class="k">造型一致</span><span class="v">四段出鏡（開場／換氣／舞蹈／片尾）<b>必須是同一套造型</b>，沿用 <code>images/dance_clone_r10/start_frame_v2.png</code>：黑色深V halter 洋裝（交叉綁帶＋金屬圓孔）＋ 敞開的黑色長袖絲質罩袍 ＋ <b>黑色粗框眼鏡</b> ＋ 金色圓形耳釘 ＋ 長直黑髮放下。罩袍長袖與長髮是動態載體，不能省。</span></li>
+    <li><span class="k">眼鏡</span><span class="v"><b>每個 prompt 都要明寫眼鏡，soul_id 不會自己給。</b>Rainie 的 <code>profile.json</code> 寫的是 <code>glasses: "None."</code> —— 這副眼鏡是 R10 那支從驅動片帶過來的例外，主管指定<b>只有 JUGA 這支片</b>沿用。<b>不要去改 profile.json</b>，那是角色設定，不是這支片的造型。</span></li>
+    <li><span class="k">審核紅線</span><span class="v"><b>腰腹必須完整包覆，綁帶底下是實心不透空布料。</b>R10 第一版起始畫面的腰間鏤空開到接近肚臍，Motion Control <b>連兩次被判 <code>nsfw</code></b>（兩次零成本）；改成「裝飾性綁帶疊在實心布料上、腰腹全包」之後一次過審。所有 prompt 沿用 v2 這個措辭，不要為了視覺效果把鏤空放回去。</span></li>
     <li><span class="k">不對嘴</span><span class="v"><b>全片她都不能有開口說話的畫面。</b>口白是後製疊上的旁白，模型不做對嘴，嘴型一定對不上。每支影片 prompt 都要寫 <code>lips closed throughout, not speaking, no mouth movement</code>，QA 逐支確認。</span></li>
     <li><span class="k">禁用詞</span><span class="v"><code>film grain</code>、<code>shot on 35mm</code>、<code>candid lifestyle photo</code> —— 這三個對 Rainie 的 soul_id 會觸發「三連拼貼」bug（一張圖塞好幾格縮圖，不能用）。<br>另禁：<code>sensor noise</code>、<code>autofocus hunting</code>、<code>JPEG compression artifacts</code>、<code>soft dreamy filter</code>、<code>evenly lit</code>、<code>well-exposed</code>、<code>high dynamic range</code> 以外的曝光均勻類措辭、<code>studio lighting</code>、<code>grainy</code>、<code>muddy</code>、<code>degraded</code>。</span></li>
     <li><span class="k">前置</span><span class="v">每張起始畫面生成後要先 <code>media_import_url(url=&lt;rawUrl&gt;)</code> 換成 <code>image_media_id</code>，才能餵給影片生成。</span></li>
@@ -215,14 +217,14 @@ footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
     <table>
       <thead><tr><th>ID</th><th>類型</th><th>內容</th><th>成片位置</th><th>秒數</th><th>依賴</th><th>生成後要做的後製</th></tr></thead>
       <tbody>
-        <tr><td class="id">IMG-01</td><td><span class="pill p-img">soul_2</span></td><td class="soft">開場起始畫面 · 包廂沙發手持手機</td><td class="num">00:00</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
-        <tr><td class="id">IMG-02</td><td><span class="pill p-img">soul_2</span></td><td class="soft">換氣點起始畫面 · 吧檯倚靠</td><td class="num">00:36</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">IMG-01</td><td><span class="pill p-img">soul_2</span></td><td class="soft">開場起始畫面 · 飯店鏡前手持手機</td><td class="num">00:00</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">IMG-02</td><td><span class="pill p-img">soul_2</span></td><td class="soft">換氣點起始畫面 · 坐在床沿</td><td class="num">00:36</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
         <tr><td class="id">IMG-03</td><td><span class="pill p-img">soul_2</span></td><td class="soft">舞蹈起始畫面 · 三分身全身站姿</td><td class="num">01:46</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-gate">核准</span> 給 Penny 過目後才跑 MOC-01</td></tr>
-        <tr><td class="id">IMG-04</td><td><span class="pill p-img">soul_2</span></td><td class="soft">片尾起始畫面 · 拿包走向門口</td><td class="num">02:26</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
+        <tr><td class="id">IMG-04</td><td><span class="pill p-img">soul_2</span></td><td class="soft">片尾起始畫面 · 走向房門</td><td class="num">02:26</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
         <tr><td class="id">IMG-05</td><td><span class="pill p-img">soul_2</span></td><td class="soft">去背素材起始畫面 · 純灰底半身</td><td class="num">全片</td><td class="num">—</td><td class="num">—</td><td class="soft"><span class="pill p-none">無</span> 直接當 start image</td></tr>
-        <tr><td class="id">VID-01</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">開場 · 拿起手機轉向鏡頭、挑眉</td><td class="num">00:00</td><td class="num">8s</td><td class="num">IMG-01</td><td class="soft"><b>① 裁 10s→8s　② 手機螢幕合成 JUGA 登入畫面　③ 尾格定住接 UI</b></td></tr>
-        <tr><td class="id">VID-02</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">換氣點 · 推開手機、聳肩、看鏡頭</td><td class="num">00:36</td><td class="num">6s</td><td class="num">IMG-02</td><td class="soft"><b>① 裁 10s→6s</b></td></tr>
-        <tr><td class="id">VID-04</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">片尾 · 起身拿包、回頭、走出畫面</td><td class="num">02:26</td><td class="num">10s</td><td class="num">IMG-04</td><td class="soft"><b>① 全長用　② 走出畫面後的空鏡疊 Logo 片尾卡</b></td></tr>
+        <tr><td class="id">VID-01</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">開場 · 手離開鏡框、轉手機、挑眉</td><td class="num">00:00</td><td class="num">8s</td><td class="num">IMG-01</td><td class="soft"><b>① 裁 10s→8s　② 手機螢幕合成 JUGA 登入畫面　③ 尾格定住接 UI</b></td></tr>
+        <tr><td class="id">VID-02</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">換氣點 · 推開手機、聳肩、越過鏡框看鏡頭</td><td class="num">00:36</td><td class="num">6s</td><td class="num">IMG-02</td><td class="soft"><b>① 裁 10s→6s</b></td></tr>
+        <tr><td class="id">VID-04</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">片尾 · 走向房門、回頭、走出畫面</td><td class="num">02:26</td><td class="num">10s</td><td class="num">IMG-04</td><td class="soft"><b>① 全長用　② 走出畫面後的空鏡疊 Logo 片尾卡</b></td></tr>
         <tr><td class="id">VID-05A</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">陪跑手勢 A · 指下方 / 比二 / 攤手</td><td class="num">全片</td><td class="num">10s</td><td class="num">IMG-05</td><td class="soft"><b>① 去背（CUT-01）　② 切成 3 個獨立 clip</b></td></tr>
         <tr><td class="id">VID-05B</td><td><span class="pill p-vid">kling3_0</span></td><td class="soft">陪跑手勢 B · 點頭 / 讚 / 打叉</td><td class="num">全片</td><td class="num">10s</td><td class="num">IMG-05</td><td class="soft"><b>① 去背（CUT-02）　② 切成 3 個獨立 clip</b></td></tr>
         <tr><td class="id">MOC-01</td><td><span class="pill p-moc">motion_control</span></td><td class="soft">舞蹈段 · 8 秒卡點</td><td class="num">01:46</td><td class="num">8s</td><td class="num">IMG-03 ＋ 驅動片</td><td class="soft"><b>① <code>ffprobe</code> 查音軌　② 裁 8s　③ 音樂換成全片 BGM　④ 尾拍加推播「叮」音效</b></td></tr>
@@ -253,19 +255,23 @@ cinched waist, 92cm curved hips, deliberate confident posture always aware of ho
 outfit sits,</pre>
 
       <span class="prelabel">② 造型段</span>
-<pre>wearing a fitted black satin bodycon dress with visible seam lines and a thigh-high slit,
-layered over a long sheer smoke-grey chiffon duster coat left open and hanging loose,
-large gold hoop earrings, a thin gold chain shoulder bag, strappy black ankle-tie heels —
-a deliberately coordinated going-out set, nothing generic or accidental,</pre>
+<pre>wearing a black deep-V halter dress with a decorative criss-cross lace-up panel set with
+gold metal eyelets — the lacing sits on top of solid opaque fabric, NOT open to skin, and
+the waist and stomach are fully covered by the dress — layered under a long-sleeved black
+silk robe worn open and slipping off both shoulders, thick black rounded acetate-framed
+glasses, small round gold stud earrings — a deliberately coordinated set, nothing generic
+or accidental,</pre>
 
       <span class="prelabel">④ 光線段 —— IMG-05 除外，那張用它自己的</span>
-<pre>magenta and violet LED cove lighting washing the wall and ceiling behind her as the scene's
-colour, a separate neutral-warm frontal key from the low pendant lamp above the table
-lighting her face cleanly, two clearly different colour temperatures coexisting in one
-frame — coloured background, neutral face, the polished black tabletop bouncing a soft
-magenta fill back up under her jaw and collarbone, exposure metered for her face so the
-depth of the room behind the banquette crushes to near black, shot past the edge of the
-booth partition whose dark frame crops the left of the image,</pre>
+<pre>lit by a warm tungsten wall sconce on the left as the key, its light bouncing off the gold
+damask wallpaper and wrapping a warm fill around her jaw and shoulder, a second cooler
+magenta-violet source coming from the phone screen in her hand and a neon sign bleeding
+through the window on the right, two clearly different colour temperatures coexisting in
+one frame — warm room, cool magenta accent, exposure metered for her face so the depth of
+the hotel room behind her crushes to near black, shot into the full-length mirror whose
+dark wooden frame crops the top and right edge of the image,</pre>
+      <div class="check"><b>洋紅紫是刻意加的</b>R10 原本的飯店房間是全暖色，這裡把 JUGA 的品牌洋紅紫從<b>手機螢幕光</b>與<b>窗外霓虹</b>注入當第二色溫。既滿足五段式公式的「色溫分裂」，也讓 Rainie 的畫面跟 App UI 在同一個色系裡，不會像兩支影片硬拼。</div>
+      <div class="check"><b>鏡子是刻意留的</b>取景保持「對著全身鏡自拍」。<code>scene_control: "image"</code> 下背景整體是鎖死的，<b>但鏡面反射區會跟著本人動作變化</b>——留著鏡子等於免費換到一點局部背景動態，8 秒舞蹈段才不會像貼在靜態背板前面跳。</div>
 
       <span class="prelabel">⑤ 收尾段</span>
 <pre>crisp sharp focus, high dynamic range, high-production-value editorial nightlife
@@ -275,33 +281,31 @@ saturated tones with cool undertone and warm skin highlight, Instagram style</pr
   </div>
 
   <div class="asset">
-    <header><span class="aid">IMG-01</span><h4>開場 · 包廂沙發手持手機</h4>
+    <header><span class="aid">IMG-01</span><h4>開場 · 飯店鏡前手持手機</h4>
       <div class="meta"><span class="pill p-img">半身</span></div></header>
     <div class="inner">
       <span class="prelabel">③ 變動段</span>
-<pre>sitting in a deep velvet booth at a Taipei nightlife bar, phone held loosely in one hand at
-chest height, about to turn the screen toward the camera, direct confident "I know you're
-watching" gaze at camera with one brow slightly raised, lips closed, not speaking, half
-body shot from chest up, the table in front of her holding two half-finished cocktail
-glasses and a wet ring on the wood, a crumpled napkin, her gold chain bag slumped on the
-seat beside her, shot on iPhone 15 Pro back camera from across the table at seated eye
-level,</pre>
-      <div class="check"><b>驗收</b>白皙瓷肌不能曬黑；眼線不能有甩尾；唇色接近透明不能飽和。手機螢幕保持關閉或反光即可，內容後製再合成。</div>
+<pre>standing in front of the full-length mirror in a hotel room with gold damask wallpaper,
+phone held up in one hand at shoulder height taking a mirror selfie, the other hand just
+touching the frame of her glasses, direct confident "I know you're watching" gaze at camera
+through the mirror with one brow slightly raised, lips closed, not speaking, half body shot
+from chest up, behind her an unmade bed with a jacket thrown across it, a room-service tray
+with an empty glass on the side table, a phone charger cable trailing across the carpet,</pre>
+      <div class="check"><b>驗收</b>白皙瓷肌不能曬黑；眼線不能有甩尾；唇色接近透明不能飽和；<b>眼鏡框要對稱、鏡腿要在、鏡片反光不能蓋住眼睛</b>。手機螢幕保持反光即可，JUGA 畫面後製再合成。</div>
     </div>
   </div>
 
   <div class="asset">
-    <header><span class="aid">IMG-02</span><h4>換氣點 · 吧檯倚靠</h4>
+    <header><span class="aid">IMG-02</span><h4>換氣點 · 坐在床沿</h4>
       <div class="meta"><span class="pill p-img">半身</span></div></header>
     <div class="inner">
       <span class="prelabel">③ 變動段</span>
-<pre>standing with one elbow leaning on the bar counter, phone set face-down on the counter
-beside her hand, half-turned toward the camera with a flat unimpressed look, lips closed,
-not speaking, half body shot from waist up, the bar counter carrying a bartender's jigger,
-a lime wedge on a small cutting board, two condensation rings on the wood, a row of
-backlit bottles receding behind the counter, shot on iPhone 15 Pro back camera from
-standing eye level a couple of steps away,</pre>
-      <div class="check"><b>驗收</b>造型要跟 IMG-01 完全一致。這兩張在成片裡相隔 28 秒出現，觀眾會直接比對。</div>
+<pre>sitting sideways on the edge of the hotel bed with the gold damask wall behind her, phone
+set face-down on the duvet beside her hand, half-turned toward the camera with a flat
+unimpressed look over the top of her glasses, lips closed, not speaking, half body shot
+from waist up, an open suitcase on the luggage rack with clothes spilling out, a pair of
+heels kicked off on the carpet, a half-drunk bottle of water on the nightstand,</pre>
+      <div class="check"><b>驗收</b>造型要跟 IMG-01 完全一致（洋裝、罩袍、眼鏡、耳釘、髮型）。這兩張在成片裡相隔 28 秒出現，觀眾會直接比對。</div>
     </div>
   </div>
 
@@ -310,29 +314,29 @@ standing eye level a couple of steps away,</pre>
       <div class="meta"><span class="pill p-gate">核准關卡</span></div></header>
     <div class="inner">
       <span class="prelabel">③ 變動段</span>
-<pre>standing in a confident pose facing camera in the open floor space beside the booth, the
-sheer chiffon duster hanging fully open and loose from her shoulders, long hair down and
-free over both shoulders, weight on one hip, THREE QUARTER SHOT, mid-thigh up, no shoes
-shown, direct confident "I know you're watching" gaze at camera, lips closed, behind her
-the booth seating and a low table with used glasses, a coat thrown over the back of the
-banquette, shot on iPhone 15 Pro back camera from standing eye level,</pre>
+<pre>standing in a confident pose facing the full-length mirror in the hotel room, the black silk
+robe hanging fully open and loose from both shoulders with the long sleeves free to swing,
+long hair down and free over both shoulders, weight on one hip, THREE QUARTER SHOT,
+mid-thigh up, no shoes shown, direct confident "I know you're watching" gaze at camera
+through the mirror, lips closed, behind her the gold damask wall, the sconce, and the
+corner of the bed,</pre>
       <div class="warn"><b>生成完停下來，把圖給 Penny 看過、核准之後才跑 MOC-01。</b>Motion Control 有實際 credit 成本（約 49 credits），服裝／場景／五官不對要在跑之前攔下來重生成，不要等生完整支才發現。</div>
       <div class="check"><b>驅動片要挑長直髮放下的</b>Motion Control 的臉部鎖定只靠這張參考圖，沒有 <code>soul_id</code> 那種強制鎖定。起始畫面的髮型輪廓跟驅動片差太多時，模型可能借用驅動片本人的臉頂替（實際發生過）。<b>不要挑雙馬尾或包頭的驅動片。</b></div>
     </div>
   </div>
 
   <div class="asset">
-    <header><span class="aid">IMG-04</span><h4>片尾 · 拿包走向門口</h4>
+    <header><span class="aid">IMG-04</span><h4>片尾 · 走向房門</h4>
       <div class="meta"><span class="pill p-img">全身</span></div></header>
     <div class="inner">
       <span class="prelabel">③ 變動段</span>
-<pre>mid-stride walking toward the bar's exit with the gold chain bag already on her shoulder,
-the sheer chiffon duster trailing behind her from the movement, turning back over one
-shoulder for a direct look at camera, lips closed, full body shot including the heels, the
-exit doorway ahead of her spilling cooler street light into the room, empty glasses left on
-the table behind her, a stool pushed out of place, shot on iPhone 15 Pro back camera from
-behind and slightly to one side at standing eye level,</pre>
-      <div class="check"><b>驗收</b>門口的冷色街光要跟包廂的洋紅光形成明顯色溫分裂 —— 這是「走出去」的視覺訊號。罩衫要看得出被走路帶起來。</div>
+<pre>mid-stride walking toward the hotel room door with a small clutch already in her hand, the
+long sleeves of the black silk robe lifting and trailing behind her with each step, turning
+back over one shoulder for a direct look at camera over the top of her glasses, lips closed,
+full body shot including the heels, the open doorway ahead of her spilling cooler corridor
+light into the warm room, the unmade bed and the sconce behind her, shot from behind and
+slightly to one side at standing eye level,</pre>
+      <div class="check"><b>驗收</b>門口的冷色走廊光要跟房內的暖色壁燈形成明顯色溫分裂 —— 這是「走出去」的視覺訊號。罩袍長袖要看得出被走路帶起來。必須拍到她真的走出畫面、留下空鏡，Logo 片尾卡才有地方疊。</div>
     </div>
   </div>
 
@@ -345,8 +349,9 @@ behind and slightly to one side at standing eye level,</pre>
 frame, half body shot from waist up, one hand raised and pointing toward the lower right of
 frame, lips closed, not speaking, neutral-warm frontal key light on her face and body with
 a distinct cool rim light along her hair and shoulder edge separating her cleanly from the
-grey backdrop, no coloured spill onto the backdrop, no cast shadow on the backdrop,</pre>
-      <div class="warn"><b>這張刻意不套用一般規則。</b>背景沒有生活雜物、光線沒有壓黑的暗部，都是為了去背 —— 雜物會變成殘留邊緣，壓黑的暗部會讓髮絲摳不出來。<b>髮絲邊緣的 rim light 是這張成敗的關鍵，一定要保留。</b></div>
+grey backdrop, no reflection or glare on the lenses of her glasses, no coloured spill onto
+the backdrop, no cast shadow on the backdrop,</pre>
+      <div class="warn"><b>這張刻意不套用一般規則。</b>背景沒有生活雜物、光線沒有壓黑的暗部，都是為了去背 —— 雜物會變成殘留邊緣，壓黑的暗部會讓髮絲摳不出來。<b>髮絲邊緣的 rim light 是這張成敗的關鍵，一定要保留。</b>另外加寫「鏡片不要反光」：這張會縮到角落約畫面高度 30%，鏡片一有反光，那個尺寸下眼睛會整個消失。</div>
     </div>
   </div>
 </section>
@@ -374,11 +379,11 @@ grey backdrop, no coloured spill onto the backdrop, no cast shadow on the backdr
       <div class="meta"><span class="pill p-vid">← IMG-01</span></div></header>
     <div class="inner">
       <span class="prelabel">動作段</span>
-<pre>sitting in the velvet booth, she lifts the phone from her lap and turns the screen toward
-the camera in one unhurried movement, then raises one brow and holds a direct look at
-camera, the sheer chiffon duster shifting on her shoulder as her arm moves, lips closed
-throughout, not speaking, no mouth movement, slight natural camera movement as if the
-phone filming her is hand-held, single continuous shot,</pre>
+<pre>standing at the hotel mirror, she lowers her hand from the frame of her glasses and turns
+the phone screen toward the camera in one unhurried movement, then raises one brow and
+holds a direct look at camera through the mirror, the black silk robe shifting on her
+shoulder as her arm moves, lips closed throughout, not speaking, no mouth movement, slight
+natural camera movement as if the phone is hand-held, single continuous shot,</pre>
       <div class="check"><b>後製</b>裁 8 秒，取「抬手 → 轉螢幕 → 挑眉 → 定住」。手機螢幕要合成 JUGA 登入畫面。最後一格停在直視鏡頭，方便接下一段 UI。</div>
     </div>
   </div>
@@ -388,10 +393,10 @@ phone filming her is hand-held, single continuous shot,</pre>
       <div class="meta"><span class="pill p-vid">← IMG-02</span></div></header>
     <div class="inner">
       <span class="prelabel">動作段</span>
-<pre>leaning on the bar counter, she pushes the phone a few inches away across the wood with two
-fingers, gives a small one-shouldered shrug and turns her head to look straight at the
-camera, hair swinging slightly with the turn, lips closed throughout, not speaking, no
-mouth movement, single continuous shot,</pre>
+<pre>sitting on the edge of the hotel bed, she pushes the phone a few inches away across the
+duvet with two fingers, gives a small one-shouldered shrug and turns her head to look
+straight at the camera over the top of her glasses, hair swinging slightly with the turn,
+lips closed throughout, not speaking, no mouth movement, single continuous shot,</pre>
       <div class="check"><b>後製</b>裁 6 秒，取「推手機 → 聳肩 → 轉頭定住」。這段功能是換氣，動作要慢要鬆，不要有戲劇性。</div>
     </div>
   </div>
@@ -401,10 +406,11 @@ mouth movement, single continuous shot,</pre>
       <div class="meta"><span class="pill p-vid">← IMG-04</span></div></header>
     <div class="inner">
       <span class="prelabel">動作段</span>
-<pre>she walks away from the booth toward the exit, the gold chain bag settling on her shoulder,
-the sheer chiffon duster lifting and trailing behind her with each step, she turns back
-over one shoulder for a last direct look at camera, then turns forward and walks out of
-frame, lips closed throughout, not speaking, no mouth movement, single continuous shot,</pre>
+<pre>she walks away from the mirror toward the hotel room door with the clutch in her hand, the
+long sleeves of the black silk robe lifting and trailing behind her with each step, she
+turns back over one shoulder for a last direct look at camera over the top of her glasses,
+then turns forward and walks out of frame, lips closed throughout, not speaking, no mouth
+movement, single continuous shot,</pre>
       <div class="check"><b>後製</b>全長用。必須拍到她真的走出畫面、留下空鏡，Logo 片尾卡才有地方疊。</div>
     </div>
   </div>
@@ -443,7 +449,7 @@ continuous shot, camera locked off, no camera movement,</pre>
     aspect_ratio="9:16"
 )</pre>
       <dl class="spec" style="margin-top:14px">
-        <dt>scene_control</dt><dd><code>"image"</code> —— 保留 IMG-03 的包廂場景，只借驅動片的動作與表情。<code>"video"</code> 會把驅動片的背景整個帶過來，可能殘留浮水印或招牌。</dd>
+        <dt>scene_control</dt><dd><code>"image"</code> —— 保留 IMG-03 的飯店房間場景，只借驅動片的動作與表情。<code>"video"</code> 會把驅動片的背景整個帶過來，可能殘留浮水印或招牌。</dd>
         <dt>驅動片</dt><dd>卡點乾淨、<b>8 秒內有記憶點</b>、<b>長直髮放下</b>。走 <code>DANCE_CLONE_SOP</code> Step 0–2 選片、下載、裁剪 —— 裁剪那步決定成品抖不抖，不能省。</dd>
         <dt>成本</dt><dd>約 <b>49 credits</b>。</dd>
       </dl>
@@ -513,11 +519,13 @@ continuous shot, camera locked off, no camera movement,</pre>
   <h2><span class="n">08</span>交片前檢核</h2>
   <ul class="plain">
     <li><b>身分一致性 —— 把成品幀跟起始畫面的圖檔並排比對</b>，不能只憑印象。Motion Control 那段特別要看。</li>
-    <li><b>四段出鏡是不是同一套造型</b>：洋裝、薄紗罩衫、金圈耳環、髮型，四段並排看。</li>
+    <li><b>四段出鏡是不是同一套造型</b>：洋裝、黑絲質罩袍、<b>眼鏡</b>、金色耳釘、髮型，四段並排看。</li>
     <li><b>嘴型</b>：逐支確認沒有開口說話的畫面。</li>
+    <li><b>眼鏡</b>：鏡框左右對稱、兩隻鏡腿都在且沒穿過頭髮、鏡片反光沒有蓋掉眼睛、<b>影片全程鏡框不能飄移或忽大忽小</b>。這是這次造型新增的最大風險項，逐支逐幀看。</li>
+    <li><b>腰腹包覆</b>：綁帶底下確認是實心布料、沒有露到皮膚。這關沒過，Motion Control 會直接判 <code>nsfw</code>。</li>
     <li><b>五張起始畫面都是單張照片</b>，不是多格縮圖拼在一起。</li>
     <li><b>手部與手勢</b>：去背素材有六個手勢，手指數量與關節逐格看。</li>
-    <li><b>去背邊緣</b>：髮絲有沒有殘留灰底、薄紗罩衫邊緣有沒有被摳掉。薄紗是這套造型最難去背的部分，邊緣一直不乾淨就退回改用不透明短外套重生成 IMG-05。</li>
+    <li><b>去背邊緣</b>：髮絲有沒有殘留灰底、罩袍長袖邊緣有沒有被摳掉、<b>鏡框與鏡腿有沒有被摳斷</b>。細鏡腿貼著頭髮，是這套造型最容易去壞的地方。</li>
     <li><b>AI 感</b>：皮膚有毛孔與 T 字油光、光線有可指認的反射面、背景有生活雜物、服裝成套刻意。</li>
     <li><b>狀態列</b>：全片時間、電量、訊號都一致，沒有殘留的錄影中膠囊。</li>
   </ul>
