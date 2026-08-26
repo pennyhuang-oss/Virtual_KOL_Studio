@@ -6,6 +6,7 @@
 > 相關文件：
 > ・[`CAMPAIGN_PLAN.md`](./CAMPAIGN_PLAN.md)（策略、內容矩陣、素材取用、技術風險、Roadmap）
 > ・[`POSTING_PLAN.md`](./POSTING_PLAN.md)（帳號開通規格、既有素材盤點、編號制發布序列）
+> ・[`GENERATION_PLAN_B1.md`](./GENERATION_PLAN_B1.md)（批次 1 生成規格，待核准）
 
 ---
 
