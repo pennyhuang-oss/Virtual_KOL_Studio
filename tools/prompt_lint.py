@@ -15,7 +15,9 @@ import io, re, sys
 # 這一條是 2026-08-27 外部覆核抓出來的：舊版把 low ponytail 當成有長度，
 # 跟第 24 點自己寫的規則矛盾。
 HAIR_LEN = r'(collarbone-length|chin-length|shoulder-length|waist-length|cropped short)'
-BOB_GEOM = r'cut evenly at the jawline'
+# 鮑伯的底層剪裁幾何。目前有兩種 wording 並存，因為 2026-08-27 起
+# `even blunt ends` 正在 LG-05 上做付費驗證；驗過之後收斂成一種。
+BOB_GEOM = r'(cut evenly at the jawline|even blunt ends along the jawline)'
 NEGATION = r'\b(no|not|without|avoid|never)\b'
 TIMELINE = r'(then |breaking into|just starting to|and then|before turning)'
 FLUTTER  = r'(fluttering|lifting in the breeze|trailing in the|blowing in the wind)'
@@ -51,6 +53,8 @@ SELFTEST = [
       'Visible skin pores, natural skin texture.', False, False, ['非近景卻寫 pores']),
     ('Luna 缺剪裁幾何', 'A woman smiles. Half body. A chin-length black bob, tucked behind her ear. '
       'Natural skin texture.', False, True, ['鮑伯缺剪裁幾何']),
+    ('鮑伯新 wording', 'A woman smiles. Half body. A blunt chin-length black bob with even blunt ends '
+      'along the jawline. Natural skin texture.', False, True, []),
     ('抽象飄動', 'A woman walks, her shirt fluttering. Half body. Collarbone-length brown hair. '
       'Natural skin texture.', False, False, ['抽象飄動描述']),
 ]

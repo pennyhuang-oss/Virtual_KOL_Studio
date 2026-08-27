@@ -387,7 +387,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **雙手托腮＋歪頭笑。**手肘撐在桌上、雙手托著兩頰把臉擠得更圓；頭往一側傾 20 度；眼睛彎起來。 |
 | **肢體與重心** | 坐姿前傾；雙手放在桌上、指尖靠近盤子；肩膀微聳；**頭略歪**。；**垂在臉側的髮尾隨著低頭抬眼的動作晃了一下**。 |
 | **情境** | 雙手托腮撐在桌上，對鏡頭笑；蛋糕與拿鐵放桌上，不佔手 |
-| **生成 prompt** | `A young woman rests both elbows on the table and cups both cheeks in her palms, squishing her cheeks round, head tilted to one side, smiling toward the camera with her eyes. Close-up of face and shoulders, camera at her eye level, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, balanced evenly on both sides, centre-parted, ends curving slightly inward. Cream square-neck puff-sleeve top, small pearl earrings. Bright dessert shop window seat, white tiled wall, pale wood table, a strawberry cake and a latte on the table in front of her. Soft side daylight on her face, background exposed the same brightness as her skin. Visible skin pores, natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman rests both elbows on the table and cups both cheeks in her palms, squishing her cheeks round, head tilted to one side, smiling toward the camera with her eyes. Close-up of face and shoulders, camera at her eye level, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, centre-parted, ends curving slightly inward. Cream square-neck puff-sleeve top, small pearl earrings. Bright dessert shop window seat, white tiled wall, pale wood table, a strawberry cake and a latte on the table in front of her. Soft side daylight on her face, background exposed the same brightness as her skin. Visible skin pores, natural skin texture, subtle film grain.` |
 | **Caption 草稿** | —（頭貼用） |
 
 ### LG-02｜房間晨光・第一則「她在台北」
@@ -438,7 +438,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **接到花瓣的驚訝。**攤開的掌心裡停著一片花瓣，眼睛睜大、嘴呈小 O 形、眉毛抬高。<br>（掛載動作＝掌心的花瓣；**原本寫「然後笑出來」是兩個時間點，靜態圖只 freeze 驚訝那一刻**） |
 | **肢體與重心** | **一手伸起接花瓣、手指張開**；另一手提著開衫；重心在後腳；**裙襬與肩上開衫的下襬被風帶起**。 |
 | **情境** | 伸手接住一片落下的花瓣 |
-| **生成 prompt** | `A young woman holds one open palm in front of her with a blossom petal resting in it, eyes widened and mouth softly open in surprise, eyebrows raised. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, balanced evenly on both sides, a cream ribbon headband. White square-neck fitted lace top, pale pink checked mini skirt, a cream cardigan over her shoulders, pearl earrings. Park path under blossoming branches hanging into the top of the frame, petals on her shoulder. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds one open palm in front of her with a blossom petal resting in it, eyes widened and mouth softly open in surprise, eyebrows raised. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, a cream ribbon headband. White square-neck fitted lace top, pale pink checked mini skirt, a cream cardigan over her shoulders, pearl earrings. Park path under blossoming branches hanging into the top of the frame, petals on her shoulder. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 花開了🌸<br>今天走了好久才找到這裡 |
 | 附註 | **背景路人 1–2 人**：遠處、背向、失焦 |
 
@@ -456,9 +456,9 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **對鏡頭比 V ＋歪頭。**手比 V 舉在臉頰旁；頭往同側傾；眼睛彎成月牙——雨天也很開心的那種笑。 |
 | **肢體與重心** | **站著等，重心是活的。**重心壓在右腳，**左腳膝蓋微彎、腳尖點地**；骨盆因此微傾（不是雙腳平均站的死板站姿）；左手垂著握傘柄、傘尖朝下滴水；右手勾著托特包帶、手指自然彎曲；肩膀一高一低；**肩上的開襟外套與髮尾被風帶著往同一側動**。 |
 | **情境** | 雨快停了，她站在亭子邊緣看外面，正在判斷要不要走 |
-| **生成 prompt** | `A young woman stands at the edge of a bus shelter holding a folded clear umbrella still dripping, tilting her head and making a V sign beside her cheek, eyes crinkled. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, balanced evenly on both sides. Pale blue checked skirt, a pale blue cardigan over her shoulders, an off-white fitted shirt with the top buttons open. Bus shelter with a colourful route map lightbox, raindrops on the glass, wet asphalt reflecting the glow of shop signs across the street. Her face clearly lit, the glowing signs keeping their colour. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands at the edge of a bus shelter holding a folded clear umbrella still dripping, tilting her head and making a V sign beside her cheek, eyes crinkled. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. Pale blue checked skirt, a pale blue cardigan over her shoulders, an off-white fitted shirt with the top buttons open. Bus shelter with a colourful route map lightbox, raindrops on the glass, wet asphalt reflecting the glow of shop signs across the street. Her face clearly lit, the glowing signs keeping their colour. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 台北下雨了☔️<br>雨の台北、こういう日が好き |
-| 附註 | **背景路人 1–2 人**：背向、失焦　·　🔬 **pilot v2 驗證項**：(1) 濕柏油路反射 (2) 低機位對嬌小身形的比例修正 (3) 眼神看畫面外的「被拍到」感 |
+| 附註 | 🔬 **preflight**：這件是**鮑伯剪裁幾何的受測件**——頭髮自然垂放、沒有塞耳後／濕髮／半盤，是唯一能乾淨測出底層剪裁的一件。用 `with even blunt ends along the jawline`；**其餘 10 件暫時維持 `cut evenly at the jawline`，等這張驗過再決定要不要全面沿用** |
 
 ### LG-06｜可愛系街區・扭蛋機前
 `影片 10–15s ＋ start frame`　·　對應 **L-07**　·　地點層級 **B**
@@ -471,10 +471,10 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **場景環境** | 可愛系街區的扭蛋店門口。一整排彩色扭蛋機、櫥窗、彩色招牌、乾淨的人行道。 |
 | **機位與構圖** | **半身。**<br>**機位**：與她的胸口同高，鏡頭保持水平。<br>**構圖**：手上的扭蛋在畫面中段，整排扭蛋機在她身後。 |
 | **光線** | ① 街上的柔和天光**均勻打在臉上**｜② 扭蛋機的彩色面板反一點顏色在她身上｜③ 天光冷白 vs 店招暖黃｜④ **背景曝光與她的膚色相當** |
-| **表情** | **低頭看著扭蛋笑到瞇眼。**雙手捧著打開的扭蛋在胸前，低頭看它，笑到眼睛瞇起來。<br>（掛載動作＝扭蛋；**「低頭看它」是把笑明確掛到物件上，不是泛用的對鏡頭笑**） |
+| **表情** | **頭朝著扭蛋笑到瞇眼。**雙手捧著打開的扭蛋在胸前，頭朝它低下去，笑到眼睛瞇起來。<br>（掛載動作＝扭蛋；**寫「頭的朝向」不寫「眼睛在看」——閉著眼就不可能同時在看，那是語意矛盾**） |
 | **肢體與重心** | 半彎腰在扭蛋機前；雙手捧著扭蛋、手指轉動蛋殼；**轉頭看鏡頭時髮尾甩動**。 |
 | **情境** | 轉扭蛋，蛋掉下來，打開一看不是想要的，露出失望的表情，然後又笑了 |
-| **生成 prompt** | `A young woman holds an opened gachapon capsule in both hands at chest level, looking down at it and laughing with her eyes squeezed shut. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, balanced evenly on both sides, two small clips holding her fringe back. Pale pink cropped knit top showing a sliver of waist, white high-waisted shorts, a denim jacket tied at her waist. A row of colourful gachapon machines behind her, bright shop signage, clean pavement. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds an opened gachapon capsule in both hands at chest level, her head angled down toward it as she laughs with her eyes squeezed shut. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, two small clips holding her fringe back. Pale pink cropped knit top showing a sliver of waist, white high-waisted shorts, a denim jacket tied at her waist. A row of colourful gachapon machines behind her, bright shop signage, clean pavement. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 這個扭蛋轉了五次才轉到😭<br>但很可愛所以沒關係 |
 | 附註 | **背景路人 1–2 人**：背向、失焦 |
 
@@ -490,9 +490,9 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **機位與構圖** | **全身。**<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍，全身不要靠近拍。<br>**構圖**：腳貼近畫面下方 1/3，旋轉木馬在她身後。 |
 | **光線** | ① 遊樂園的柔和天光**均勻打在臉上**｜② 淺色地面把光反回下巴｜③ 天光為主，旋轉木馬燈泡的暖黃在背景｜④ **背景曝光與她的膚色相當** |
 | **表情** | **爆米花桶抵在下巴、越過桶緣看鏡頭。**雙臂把爆米花桶抱到下巴下方，身體背對、頭與肩轉回；眼睛越過桶緣看鏡頭，帶著玩心的笑意。<br>（掛載動作＝爆米花桶抵下巴；**原本的「吐舌＋單眼眨眼」是純臉部，與已知失敗的類型相同，已換掉**） |
-| **肢體與重心** | 雙手捧著爆米花桶在胸前；重心在一腳、**另一腳腳尖點地**；身體微轉；**裙襬與髮尾被風帶**。 |
+| **肢體與重心** | 雙臂把爆米花桶抱到下巴下方；**骨盆朝離開鏡頭的方向、上半身轉回四分之三**（不寫完全背對——完全背對的話桶子會跑到身體遠側，鏡頭看不到桶緣）；重心在一腳、另一腳腳尖點地。 |
 | **情境** | 捧著爆米花桶，回頭看鏡頭 |
-| **生成 prompt** | `A young woman hugs a popcorn bucket up under her chin, her hips and torso facing away from the camera while her head and shoulders turn back over one shoulder, her eyes peeking over the rim toward the camera with a playful smile. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, a cat-ear headband. White square-neck puff-sleeve top, pale blue pinafore skirt, white mary janes with lace socks. Amusement park beside the carousel, coloured balloons, a decorated parade street behind. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman hugs a popcorn bucket up under her chin, her hips angled away from the camera and her upper body turned three-quarters back, her eyes peeking over the rim toward the camera with a playful smile. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, a cat-ear headband. White square-neck puff-sleeve top, pale blue pinafore skirt, white mary janes with lace socks. Amusement park beside the carousel, coloured balloons, a decorated parade street behind. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 今天玩得好開心✨<br>爆米花吃了兩桶 |
 | 附註 | **背景路人 2–3 人**：背向、失焦、外型與她區隔 |
 
@@ -527,7 +527,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **上目遣い。**頭略低、眼睛往上看鏡頭；雙手捧著杯子在下巴前；嘴角微揚——日系經典。 |
 | **肢體與重心** | 雙手捧著玻璃杯在胸前；手肘靠桌；上半身前傾；肩膀微聳。；**薄針織的袖口與髮尾隨著前傾垂下晃動**。 |
 | **情境** | 雙手捧著豆漿杯，正要喝 |
-| **生成 prompt** | `A young woman holds a glass of soy milk with both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the food in frame, camera at her eye level or slightly above, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, balanced evenly on both sides, centre-parted and worn loose. Cream fitted thin-knit short sleeve, a light mini skirt. Taiwanese breakfast shop, stainless steel counter, a metal tray, handwritten wall menu, plastic chairs. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a glass of soy milk with both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the food in frame, camera at her eye level or slightly above, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, centre-parted and worn loose. Cream fitted thin-knit short sleeve, a light mini skirt. Taiwanese breakfast shop, stainless steel counter, a metal tray, handwritten wall menu, plastic chairs. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 早餐吃這個🥛<br>好喝…真的很好喝 |
 
 ### LG-10A｜浴衣・祭典參道（全身）
