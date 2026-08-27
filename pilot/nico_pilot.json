@@ -1,0 +1,888 @@
+{
+  "persona_id": "nico-tsai",
+  "schema_version": "2.0.0",
+  "status": "planned_not_generated",
+  "pilot_rationale": "選 Nico 當第一個 Vertical Slice：短鮑伯＋冷灰奶茶漂色＋C 罩杯纖細，是全批最容易失敗的組合，且 Round 1 已失敗過一次，有前後對照價值。",
+  "identity_spec": {
+    "age": 26,
+    "ethnicity": "Taiwanese",
+    "skin": "light neutral-to-cool skin tone, natural tonal variation across face and body, subtle normal redness at cheeks, elbows and knuckles, not overexposed",
+    "skin_negative": "NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored",
+    "face_base": "fine elongated phoenix eyes, cool composed expression, delicate features",
+    "identity_markers": [
+      "左眉尾比右眉尾略高約 2mm，笑起來更明顯",
+      "右側鼻翼旁一顆很淡的小痣",
+      "唇峰偏平，上唇中線幾乎沒有明顯的 M 形"
+    ],
+    "_markers_note": "身分 marker 的目的不是製造缺陷，是讓模型學到『某一個具體的人』而不是 generic beautiful East Asian woman。每次生成都要寫。",
+    "body_numeric": {
+      "height_cm": 167,
+      "weight_kg": 49,
+      "bust_cm": 86,
+      "waist_cm": 59,
+      "hip_cm": 88,
+      "cup": "C",
+      "leg_cm": 82
+    },
+    "body_visual": "narrow shoulders roughly equal to hip width, long torso, small natural bust with a shallow curve, visible collarbone and sternum, slim upper arms with no muscle definition, long straight legs, flat lower abdomen; overall silhouette is narrow and elongated",
+    "body_negative": "NOT voluptuous, NOT heavy-chested, NOT curvy, NOT athletic-muscular",
+    "_body_note": "三圍數字保留在 metadata 供人核對，但 prompt 以 body_visual 的視覺比例為主——模型不會把 86-59-88 精確解讀成幾何。最終 identity 錨定仍以 reference image 為準，數字寫了不等於身材就對了。"
+  },
+  "outfits": {
+    "nico_outfit_01": {
+      "label": "★極簡職人",
+      "neckline": "high mock neck",
+      "top": "炭灰色合身羅紋針織長袖，高領貼頸",
+      "bottom": "黑色高腰直筒西裝褲",
+      "shoes": "黑色皮革樂福鞋",
+      "outer_or_bag": "米色帆布托特",
+      "jewelry": "銀色細戒指＋銀色小圈耳環",
+      "body_readable": true
+    },
+    "nico_outfit_02": {
+      "label": "極休閒",
+      "neckline": "straight neckline spaghetti strap",
+      "top": "米白色棉質細肩帶背心，一字平口",
+      "bottom": "灰色棉質及膝短褲",
+      "shoes": "赤腳",
+      "outer_or_bag": "薄針織開襟外套（脫下搭在椅背）",
+      "jewelry": "銀色細項鍊",
+      "body_readable": true
+    },
+    "nico_outfit_03": {
+      "label": "日常有型",
+      "neckline": "crew neck",
+      "top": "奶油色短版針織上衣，圓領",
+      "bottom": "高腰淺色直筒牛仔褲",
+      "shoes": "白色球鞋",
+      "outer_or_bag": "深棕小方包",
+      "jewelry": "銀色圈形耳環",
+      "body_readable": true
+    },
+    "nico_outfit_04": {
+      "label": "學院感",
+      "neckline": "collared button-down, top two buttons open",
+      "top": "白色寬版襯衫",
+      "bottom": "黑色百褶短裙",
+      "shoes": "黑色瑪莉珍鞋",
+      "outer_or_bag": "灰色及膝襪",
+      "jewelry": "銀色髮夾",
+      "body_readable": false,
+      "_note": "寬版襯衫遮軀幹，不可用於 Phase A"
+    },
+    "nico_outfit_05": {
+      "label": "街頭",
+      "neckline": "crew neck, cropped hem",
+      "top": "黑色短版帽T",
+      "bottom": "灰色工裝寬褲",
+      "shoes": "厚底球鞋",
+      "outer_or_bag": "黑色斜背小包",
+      "jewelry": "銀色耳骨夾",
+      "body_readable": false
+    },
+    "nico_outfit_06": {
+      "label": "上班正式",
+      "neckline": "square neckline camisole under blazer",
+      "top": "燕麥色西裝外套＋白色絲質方領背心",
+      "bottom": "同色系直筒寬褲",
+      "shoes": "尖頭平底鞋",
+      "outer_or_bag": "結構皮革包",
+      "jewelry": "銀色細手鐲",
+      "body_readable": false
+    },
+    "nico_outfit_07": {
+      "label": "派對夜間",
+      "neckline": "straight neckline, open back",
+      "top": "黑色細肩帶絲質長洋裝（露背）",
+      "bottom": "（連身）",
+      "shoes": "銀色細跟涼鞋",
+      "outer_or_bag": "金屬扣手拿包",
+      "jewelry": "銀色手環",
+      "body_readable": true
+    },
+    "nico_outfit_08": {
+      "label": "居家貼身",
+      "neckline": "modest scoop neck",
+      "top": "灰色貼身棉質長袖上衣",
+      "bottom": "黑色棉質貼身長褲",
+      "shoes": "室內拖鞋",
+      "outer_or_bag": "無",
+      "jewelry": "無",
+      "body_readable": true
+    },
+    "nico_outfit_09": {
+      "label": "雨天機能",
+      "neckline": "high round neck",
+      "top": "深灰防潑水連帽外套＋內搭黑色高領",
+      "bottom": "黑色直筒長褲",
+      "shoes": "黑色短雨靴",
+      "outer_or_bag": "防水肩背包",
+      "jewelry": "無",
+      "body_readable": false
+    }
+  },
+  "hair": {
+    "nico_hair_01": "短鮑伯自然放下，一側塞耳後，髮尾內彎",
+    "nico_hair_02": "短鮑伯全部塞到雙耳後，露出雙耳與後頸",
+    "nico_hair_03": "鯊魚夾把後半部夾起，前側留兩撮碎髮（工作時）",
+    "nico_hair_04": "中分吹整、髮尾微內扣，比平時整齊",
+    "nico_hair_05": "髮尾用電棒外翹，右側夾一支銀色細髮夾",
+    "nico_hair_06": "剛洗完澡的濕髮，自然往後貼，髮尾滴水"
+  },
+  "phase_a": {
+    "concept": "4 個候選 identity，不是同一人的 4 個視角",
+    "_why": "本 repo 自己的紀錄已證實：rainie-hsu 的 candidate_01–04 是各自獨立生成的 4 個人，身材差異大到後來必須換錨點重做 13 張。因此不可假設 4 次無錨定呼叫是同一個人。4 張改為同規格的 4 個候選人，使用者挑出『臉＋身材一起成立』的那一個。",
+    "model": "seedream_v4_5",
+    "count": 4,
+    "identical_across_all_four": {
+      "framing": "knee_up",
+      "head_yaw": "left_30",
+      "body_pose": "standing",
+      "view": "third_person",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_01",
+      "location": "workplace_own_studio",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L2_single_window_daylight",
+        "key": "午後日光從她左前方 45 度、略高於視線高度的落地窗進來",
+        "bounce": "她右側的白牆與白色美甲桌面把光柔和地補回臉的暗面",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "相機對她臉測光，窗外整片過曝成白，工作室深處落入柔和陰影",
+        "occlusion": null
+      },
+      "filter": "none"
+    },
+    "varies_only": "identity（每次獨立生成，得到 4 個不同的人）",
+    "phase_a_outfit_rules": [
+      "必須 body_readable=true：軀幹、腰線、肩寬、臀線都要看得出來",
+      "必須明寫 neckline（此處為 high mock neck）",
+      "不可用 oversized、寬版襯衫、寬鬆針織、睡袍、浴衣、外套罩住身體",
+      "必須是日常款，不是招牌極端造型",
+      "不寫 candid moment——Phase A 是 calibration，需要可比較、可重複的 neutral natural pose",
+      "depth_of_field 一律 adequate，不可 shallow（否則身體輪廓變糊）"
+    ],
+    "shot_prompt_order": "SHOT/FRAMING 放第一行 → IDENTITY → BODY → HAIR → OUTFIT(含 neckline) → PLACE → LIGHT → CAMERA → REALISM"
+  },
+  "phase_b": {
+    "steps": [
+      "使用者從 4 個候選挑 1 個（同時看臉與身材）",
+      "media_upload → curl PUT → media_confirm → show_reference_elements(action='create')",
+      "用新 element 生成 2 張驗證圖：①正面 face_closeup ②right_30 full_body",
+      "Read 逐張確認：臉是否同一人、身材是否符合 body_visual、膚色是否維持",
+      "驗證不過就換候選人重來（成本 2 張，不是 13 張）"
+    ]
+  },
+  "phase_c_quota": {
+    "_changed_from_v1": "移除 A 級硬配額與 B 級 7–8 的規定（見 review packet §4）。identity training 的第一優先是身分覆蓋，不是社群內容的地點嚮往感配比。",
+    "shots": 13,
+    "location_tier": {
+      "C_min": 2,
+      "A_required": false
+    },
+    "identity_coverage": {
+      "head_yaw": {
+        "front": ">=3",
+        "left_30": ">=2",
+        "right_30": ">=2",
+        "left_60": ">=1",
+        "right_60": ">=1",
+        "profile_any": ">=1"
+      },
+      "framing": {
+        "face_closeup": ">=2",
+        "waist_up": ">=3",
+        "full_body": ">=2"
+      },
+      "body_pose_distinct": ">=4",
+      "expression_distinct": ">=5",
+      "face_visibility_unobstructed": ">=10"
+    },
+    "outfit_distinct_min": 6,
+    "hair_all_variants_used": true,
+    "signature_family_max_ratio": 0.25,
+    "career_related_max_ratio": 0.4,
+    "view": {
+      "third_person": ">=9",
+      "selfie_total": "<=4"
+    },
+    "filter": {
+      "none": ">=11",
+      "ccd": "<=2",
+      "meitu": 0
+    },
+    "_filter_note": "pilot 第一輪 meitu=0、強美顏=0。CCD 只用在 waist_up / knee_up（臉部解析度足夠），不用在 full_body。Soul 穩定後再於 stress test 加入 meitu/CCD，通過才升格為訓練規則。",
+    "row_order": "shuffled_per_persona",
+    "_row_order_note": "v1 的 validator 用固定演算法指派濾鏡與視角，導致 20 位的第 1 列全部是 meitu＋自拍、第 13 列全部是他拍＋iPhone＋A 級。v2 禁止任何欄位與列號綁定。"
+  },
+  "phase_c_shots": [
+    {
+      "shot_id": "nico_c01",
+      "purpose": "identity_core",
+      "pillar": "私下 / 收工後",
+      "scene": "鐵門拉下後，坐在工作椅上轉過來看窗外，手還搭在椅背",
+      "location": "workplace_own_studio",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_03",
+      "props": [
+        "椅背上的抹布",
+        "桌角一杯喝到一半的黑咖啡"
+      ],
+      "framing": "face_closeup",
+      "view": "third_person",
+      "head_yaw": "front",
+      "head_pitch": "neutral",
+      "expression": "neutral_composed",
+      "eye_gaze": "away",
+      "body_pose": "seated",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L2_single_window_daylight",
+        "key": "午後日光從她左前方落地窗、略高於視線",
+        "bounce": "白色美甲桌面與白牆把光補回臉的暗面",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，窗外過曝成白，室內深處落入陰影",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": "nail_studio",
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c02",
+      "purpose": "identity_core",
+      "pillar": "工作室 / 進貨",
+      "scene": "蹲在地上拆剛到的材料紙箱，抬頭看向門口",
+      "location": "workplace_own_studio",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_03",
+      "props": [
+        "美工刀",
+        "地上拆開一半的紙箱"
+      ],
+      "framing": "chest_up",
+      "view": "third_person",
+      "head_yaw": "left_30",
+      "head_pitch": "up_10",
+      "expression": "mildly_surprised",
+      "eye_gaze": "away",
+      "body_pose": "crouching",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L2_single_window_daylight",
+        "key": "落地窗日光從她右後方進來",
+        "bounce": "地上散落的白色包裝紙把光反射回她下顎",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，窗邊過曝，紙箱陰影壓黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "slightly_tilted",
+        "motion": "minor_hand_blur",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "heavy",
+        "highlight_clipping": "none"
+      },
+      "filter": "none",
+      "signature_family": "nail_studio",
+      "career_related": true
+    },
+    {
+      "shot_id": "nico_c03",
+      "purpose": "identity_core",
+      "pillar": "私下 / 廚房",
+      "scene": "站在流理台前等水滾，一手撐著檯面",
+      "location": "own_kitchen",
+      "outfit_id": "nico_outfit_08",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "不鏽鋼水壺",
+        "檯面上的馬克杯"
+      ],
+      "framing": "waist_up",
+      "view": "third_person",
+      "head_yaw": "right_30",
+      "head_pitch": "down_15",
+      "expression": "tired_soft",
+      "eye_gaze": "down",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L1_single_ugly_overhead",
+        "key": "廚房天花板一盞冷白 LED 直打在她頭頂",
+        "bounce": "淺色流理台面把一點光反射回下巴，但補得不多",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，眼窩與鎖骨下方留下明顯陰影，這張刻意不好看",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "moderate",
+        "highlight_clipping": "none"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c04",
+      "purpose": "identity_core",
+      "pillar": "私下 / 剛醒",
+      "scene": "床邊坐著，剛醒還沒站起來，低頭看手機",
+      "location": "own_bedroom",
+      "outfit_id": "nico_outfit_08",
+      "hair_id": "nico_hair_06",
+      "props": [
+        "手機",
+        "床邊地上的室內拖鞋"
+      ],
+      "framing": "waist_up",
+      "view": "selfie_front",
+      "head_yaw": "front",
+      "head_pitch": "down_15",
+      "expression": "just_woken_blank",
+      "eye_gaze": "camera",
+      "body_pose": "seated",
+      "face_visibility": "partial_hair",
+      "camera": {
+        "type": "phone_front",
+        "distortion": "mild",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L2_single_window_daylight",
+        "key": "窗簾沒拉緊，一道晨光斜落在床上",
+        "bounce": "白色床單是大面反射，把光補回她臉的下半",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，窗簾縫那道光過曝成白帶，房間其餘壓黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "slightly_warm_auto",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c05",
+      "purpose": "body_pose_coverage",
+      "pillar": "外出 / 出門前",
+      "scene": "玄關穿鞋，一手扶著牆",
+      "location": "own_entryway",
+      "outfit_id": "nico_outfit_03",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "深棕小方包",
+        "門邊的鑰匙圈"
+      ],
+      "framing": "knee_up",
+      "view": "third_person",
+      "head_yaw": "left_60",
+      "head_pitch": "down_15",
+      "expression": "focused",
+      "eye_gaze": "down",
+      "body_pose": "leaning",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L3_mixed_warm_cool_practical",
+        "key": "玄關一盞暖黃嵌燈從正上方",
+        "bounce": "白色玄關牆把暖光反射回她側臉",
+        "bounce_type": "diffuse",
+        "secondary_source": "門外樓梯間的冷白日光燈從門縫進來，落在她肩線",
+        "exposure_choice": "對臉測光，門縫那條冷光過曝，鞋櫃下方壓黑",
+        "occlusion": "門框切掉畫面左緣"
+      },
+      "imperfection_profile": {
+        "composition": "slightly_tilted",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "clean",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c06",
+      "purpose": "body_pose_coverage",
+      "pillar": "外出 / 台北的日常",
+      "scene": "大安區巷子裡走路，剛越過一台停在牆邊的機車",
+      "location": "city_street",
+      "outfit_id": "nico_outfit_03",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "深棕小方包",
+        "手上的手搖杯"
+      ],
+      "framing": "full_body",
+      "view": "third_person",
+      "head_yaw": "right_60",
+      "head_pitch": "neutral",
+      "expression": "neutral_walking",
+      "eye_gaze": "away",
+      "body_pose": "walking_frozen",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L6_soft_overcast",
+        "key": "陰天的天空散射光，沒有明確方向",
+        "bounce": "淺色磁磚牆面把光平均補回她全身",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "整體低反差，天空過曝成白，這張沒有第二色溫",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "subject_motion",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "heavy",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c07",
+      "purpose": "identity_core",
+      "pillar": "工作室 / 手部",
+      "scene": "低頭替客人上膠，側臉朝向鏡頭",
+      "location": "workplace_own_studio",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_03",
+      "props": [
+        "色膠瓶",
+        "客人的手"
+      ],
+      "framing": "chest_up",
+      "view": "third_person",
+      "head_yaw": "profile_left",
+      "head_pitch": "down_15",
+      "expression": "focused",
+      "eye_gaze": "down",
+      "body_pose": "seated",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L3_mixed_warm_cool_practical",
+        "key": "可調角度的工作燈近距離直打在手部與桌面",
+        "bounce": "白色桌面把光反射回她的下顎與頸",
+        "bounce_type": "diffuse",
+        "secondary_source": "室內天花板的冷白日光燈落在她後腦與肩",
+        "exposure_choice": "對手部測光，所以她的臉略暗，背景布簾壓黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "clean",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": "nail_studio",
+      "career_related": true
+    },
+    {
+      "shot_id": "nico_c08",
+      "purpose": "body_pose_coverage",
+      "pillar": "私下 / 浴室",
+      "scene": "浴室鏡前修眉，另一手撐著洗手台",
+      "location": "own_bathroom",
+      "outfit_id": "nico_outfit_08",
+      "hair_id": "nico_hair_02",
+      "props": [
+        "修眉刀",
+        "台面上倒著的洗面乳"
+      ],
+      "framing": "waist_up",
+      "view": "selfie_mirror",
+      "head_yaw": "left_30",
+      "head_pitch": "up_10",
+      "expression": "concentrating_slight_frown",
+      "eye_gaze": "mirror",
+      "body_pose": "leaning",
+      "face_visibility": "partial_hand",
+      "camera": {
+        "type": "mirror_phone",
+        "distortion": "mild",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L8_bathroom_fluorescent",
+        "key": "浴室鏡上方一整條冷白燈管直打",
+        "bounce": "白色磁磚牆把光四面反射，幾乎沒有陰影",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，燈管本身過曝成白條，這張的光很平、不好看",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "slightly_tilted",
+        "motion": "none",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c09",
+      "purpose": "body_pose_coverage",
+      "pillar": "私下 / 房間",
+      "scene": "蹲在床邊伸手到床底下找充電線，回頭",
+      "location": "own_bedroom",
+      "outfit_id": "nico_outfit_08",
+      "hair_id": "nico_hair_02",
+      "props": [
+        "拉出來一半的充電線",
+        "床邊的插座"
+      ],
+      "framing": "knee_up",
+      "view": "third_person",
+      "head_yaw": "left_30",
+      "head_pitch": "up_10",
+      "expression": "mildly_annoyed",
+      "eye_gaze": "camera",
+      "body_pose": "crouching",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L1_single_ugly_overhead",
+        "key": "房間天花板一盞冷白吸頂燈",
+        "bounce": "木地板反射回一點暖色，但很弱",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，床底下全黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "minor_hand_blur",
+        "white_balance": "neutral",
+        "background_clutter": "heavy",
+        "highlight_clipping": "none"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c10",
+      "purpose": "environment_stress",
+      "pillar": "外出 / 台北的日常",
+      "scene": "自助洗衣店裡把烘好的衣物從滾筒抱出來，站在機台前",
+      "location": "laundromat",
+      "outfit_id": "nico_outfit_09",
+      "hair_id": "nico_hair_04",
+      "props": [
+        "洗衣袋",
+        "手上的零錢"
+      ],
+      "framing": "full_body",
+      "view": "third_person",
+      "head_yaw": "right_30",
+      "head_pitch": "neutral",
+      "expression": "neutral_composed",
+      "eye_gaze": "away",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L1_single_ugly_overhead",
+        "key": "洗衣店天花板一整排冷白日光燈管",
+        "bounce": "不鏽鋼機身把光以高光的形式打回來，不是柔和填光",
+        "bounce_type": "specular",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，燈管與不鏽鋼高光整片過曝，牆角壓黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "heavy",
+        "highlight_clipping": "heavy"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c11",
+      "purpose": "environment_stress",
+      "pillar": "外出 / 台北的日常",
+      "scene": "藥妝店貨架前拿護手霜比較成分",
+      "location": "pharmacy",
+      "outfit_id": "nico_outfit_05",
+      "hair_id": "nico_hair_05",
+      "props": [
+        "兩罐護手霜",
+        "購物籃"
+      ],
+      "framing": "knee_up",
+      "view": "third_person",
+      "head_yaw": "front",
+      "head_pitch": "down_15",
+      "expression": "reading_focused",
+      "eye_gaze": "down",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L1_single_ugly_overhead",
+        "key": "藥妝店冷白日光燈頂光",
+        "bounce": "貨架上的白色包裝把光反射回她胸口與下巴",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，燈管過曝，貨架深處壓黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "color_cast_from_environment",
+        "background_clutter": "heavy",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "ccd",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c12",
+      "purpose": "environment_stress",
+      "pillar": "外出 / 台北的日常",
+      "scene": "捷運月台等車，看著對面的到站顯示",
+      "location": "train_platform",
+      "outfit_id": "nico_outfit_06",
+      "hair_id": "nico_hair_04",
+      "props": [
+        "結構皮革包",
+        "手上的悠遊卡"
+      ],
+      "framing": "waist_up",
+      "view": "third_person",
+      "head_yaw": "right_30",
+      "head_pitch": "up_10",
+      "expression": "blank_waiting",
+      "eye_gaze": "away",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L1_single_ugly_overhead",
+        "key": "月台天花板冷白日光燈",
+        "bounce": "磨石子地面把光微弱地反射回來",
+        "bounce_type": "diffuse",
+        "secondary_source": "列車進站時車頭燈從右側掃過，短暫在她臉上留下一道更亮的光",
+        "exposure_choice": "對臉測光，車頭燈那側過曝，月台深處壓黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "subject_motion",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "heavy",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "ccd",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_c13",
+      "purpose": "identity_core",
+      "pillar": "私下 / 深夜",
+      "scene": "深夜坐在床上，燈都關了只剩手機的光",
+      "location": "own_bedroom",
+      "outfit_id": "nico_outfit_07",
+      "hair_id": "nico_hair_05",
+      "props": [
+        "手機",
+        "床邊脫下的銀色細跟涼鞋"
+      ],
+      "framing": "face_closeup",
+      "view": "selfie_front",
+      "head_yaw": "front",
+      "head_pitch": "up_10",
+      "expression": "quiet_self_aware",
+      "eye_gaze": "camera",
+      "body_pose": "seated",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_front",
+        "distortion": "mild",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L4_night_signage",
+        "key": "手機螢幕本身是唯一主光，從她臉的正下方往上打",
+        "bounce": "白色床單把一點光反射回下顎",
+        "bounce_type": "diffuse",
+        "secondary_source": "窗外街燈的橘光落在她的左肩與髮尾",
+        "exposure_choice": "對臉測光，手機螢幕邊緣過曝，房間全黑",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "slightly_cool_auto",
+        "background_clutter": "clean",
+        "highlight_clipping": "allowed"
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    }
+  ],
+  "phase_d_stress_test": {
+    "_purpose": "Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還守得住。這是本 repo 從來沒做過的一步——過去只評估訓練圖本身的一致性，沒有測訓練後的漂移。",
+    "count": 10,
+    "model": "soul_2 + nico soul_id",
+    "shots": [
+      {
+        "id": "st01",
+        "test": "基準",
+        "spec": "正面 face_closeup，室內窗光，nico_outfit_01，nico_hair_01"
+      },
+      {
+        "id": "st02",
+        "test": "左 3/4",
+        "spec": "left_30 chest_up，同上"
+      },
+      {
+        "id": "st03",
+        "test": "右 3/4",
+        "spec": "right_30 chest_up，同上"
+      },
+      {
+        "id": "st04",
+        "test": "全身比例",
+        "spec": "full_body 站姿，adequate DOF——驗身材沒有被放大成豐滿"
+      },
+      {
+        "id": "st05",
+        "test": "坐姿",
+        "spec": "seated waist_up，驗坐下時軀幹比例是否穩定"
+      },
+      {
+        "id": "st06",
+        "test": "戶外散射光",
+        "spec": "陰天街上 knee_up——訓練集沒有強戶外光"
+      },
+      {
+        "id": "st07",
+        "test": "夜間混光",
+        "spec": "夜間街邊招牌光 waist_up——測色偏下的膚色穩定度"
+      },
+      {
+        "id": "st08",
+        "test": "C 級醜光線",
+        "spec": "超商冷白日光燈頂光 waist_up——最容易讓臉崩的條件"
+      },
+      {
+        "id": "st09",
+        "test": "換髮型",
+        "spec": "完全不同髮型（長髮接髮或高馬尾），驗 identity 是否綁在短鮑伯上"
+      },
+      {
+        "id": "st10",
+        "test": "換穿搭",
+        "spec": "nico_outfit_07 派對長洋裝，驗 identity 是否綁在極簡職人造型上"
+      }
+    ],
+    "known_risk": "訓練集 13 張有 4 張在她自己的工作室、4 張在她房間。若 st01–st10 出現『把工作室或房間烙進人物』（換場景時背景仍冒出美甲桌或她的床），代表訓練集的場景集中度過高，需回頭調整。"
+  },
+  "soul_qa_rubric": {
+    "_scale": "每項 0–2 分。0=明顯失敗，1=輕微漂移，2=穩定。",
+    "items": [
+      "face_identity 臉部同一性",
+      "body_identity 身材比例同一性",
+      "apparent_age 年齡感",
+      "skin_tone 膚色（不因場景色溫崩掉）",
+      "hair_independence 換髮型後仍是同一人",
+      "outfit_independence 換穿搭後仍是同一人",
+      "environment_independence 換場景後仍是同一人",
+      "no_scene_burn_in 沒有把訓練場景烙進人物",
+      "no_outfit_burn_in 沒有把訓練服裝烙進人物"
+    ],
+    "pass_threshold": {
+      "total_min": 14,
+      "per_item_min": 1,
+      "hard_fail": "face_identity 或 body_identity 任一為 0，整批不通過，直接回頭改訓練集"
+    },
+    "_note": "門檻先訂在這裡，但這是第一次做，數字本身也是待驗證的假設。第一位跑完後應回頭檢討門檻是否合理。"
+  }
+}

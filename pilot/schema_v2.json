@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Shoot Plan Schema v2 — named-object 版",
+  "version": "2.0.0",
+  "changelog": "v1 用 positional array，欄位靠位置辨識、容易 off-by-one，且 scene 自然語言會偷偷覆寫 outfit/hair。v2 改為 named object，並拆出身分覆蓋欄位與五段式光線欄位。",
+  "single_source_of_truth": {
+    "outfit": "只能由 outfit_id 決定。scene 內禁止出現任何服裝單品名詞。",
+    "hair": "只能由 hair_id 決定。scene 內禁止出現髮型狀態詞（濕髮/馬尾/盤髮/辮/放下）。若需要濕髮，必須是一個正式的 hair variant。",
+    "filter": "只能由 filter 欄位決定。scene 內禁止描述畫質或濾鏡。",
+    "body": "只能由角色 identity spec 決定。scene 內禁止重寫身材。"
+  },
+  "definitions": {
+    "shot": {
+      "type": "object",
+      "required": ["shot_id","purpose","pillar","scene","location","outfit_id","hair_id",
+                   "framing","view","head_yaw","head_pitch","expression","eye_gaze",
+                   "body_pose","face_visibility","camera","light","filter",
+                   "signature_family","career_related"],
+      "properties": {
+        "shot_id": {"type":"string"},
+        "purpose": {"enum":["identity_core","body_pose_coverage","environment_stress","content_flavor"]},
+        "pillar": {"type":"string"},
+        "scene": {"type":"string","description":"只描述『她在做什麼、在哪裡』。不得含服裝、髮型、濾鏡、身材。單一時空，禁止影片語言（一鏡到底/連換三套）。"},
+        "location": {"type":"string","description":"必須是 location_registry 的 key"},
+        "location_tier_override": {"type":["string","null"],"description":"覆寫 registry 判定時必填 reason"},
+        "location_tier_override_reason": {"type":["string","null"]},
+        "outfit_id": {"type":"string"},
+        "hair_id": {"type":"string"},
+        "props": {"type":"array","items":{"type":"string"},"minItems":2},
+        "framing": {"enum":["face_closeup","chest_up","waist_up","knee_up","full_body"]},
+        "view": {"enum":["third_person","selfie_front","selfie_mirror"]},
+        "head_yaw": {"enum":["front","left_30","right_30","left_60","right_60","profile_left","profile_right"]},
+        "head_pitch": {"enum":["down_15","neutral","up_10"]},
+        "expression": {"type":"string"},
+        "eye_gaze": {"enum":["camera","away","down","mirror"]},
+        "body_pose": {"enum":["standing","seated","leaning","crouching","walking_frozen","lying"]},
+        "face_visibility": {"enum":["unobstructed","partial_hair","partial_hand","partial_object"]},
+        "camera": {
+          "type":"object",
+          "required":["type","distortion","depth_of_field"],
+          "properties":{
+            "type":{"enum":["phone_rear","phone_front","mirror_phone"]},
+            "distortion":{"enum":["none","mild","moderate"]},
+            "depth_of_field":{"enum":["adequate","shallow"],"description":"身分訓練優先 adequate；full_body 一律 adequate"}
+          }},
+        "light": {
+          "type":"object",
+          "required":["family","key","bounce","bounce_type","secondary_source","exposure_choice","occlusion"],
+          "properties":{
+            "family":{"enum":["L1_single_ugly_overhead","L2_single_window_daylight","L3_mixed_warm_cool_practical",
+                              "L4_night_signage","L5_hard_outdoor_daylight","L6_soft_overcast",
+                              "L7_vehicle_interior","L8_bathroom_fluorescent"]},
+            "key":{"type":"string"},
+            "bounce":{"type":"string"},
+            "bounce_type":{"enum":["diffuse","specular","none"],
+              "description":"白牆/床單/淺色地板=diffuse；鏡面/玻璃/金屬/烤漆=specular。specular 不能當成把陰影整體補亮的主要填光。"},
+            "secondary_source":{"type":["string","null"],"description":"可為 null。不強制每張都有第二色溫。"},
+            "exposure_choice":{"type":"string"},
+            "occlusion":{"type":["string","null"]}
+          }},
+        "imperfection_profile": {
+          "type":"object",
+          "properties":{
+            "composition":{"enum":["centered","slightly_tilted","off_center"]},
+            "motion":{"enum":["none","minor_hand_blur","subject_motion"]},
+            "white_balance":{"enum":["neutral","slightly_cool_auto","slightly_warm_auto","color_cast_from_environment"]},
+            "background_clutter":{"enum":["clean","moderate","heavy"]},
+            "highlight_clipping":{"enum":["none","allowed","heavy"]}
+          }},
+        "filter": {"enum":["none","ccd","meitu"]},
+        "signature_family": {"type":["string","null"],"description":"該角色的招牌世界，例如 nail_studio / ryokan_onsen / golf。換衣服但仍在同一個世界，仍算。"},
+        "career_related": {"type":"boolean"}
+      }
+    }
+  }
+}
