@@ -97,6 +97,7 @@
 ```
 Virtual_KOL_Studio/
 ├── README.md
+├── MODELING_SHOOT_PLAN.md       # Batch 3 建模照完整規劃（選角/錨定/訓練集，含配額驗證器）
 ├── PERSONA_CANON.md             # 人設憲章：全體 KOL 適用的四條原則（反差公式/場景配額/造型可變/不寫禁令）
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
 ├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
@@ -117,6 +118,8 @@ Virtual_KOL_Studio/
 │   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
 │   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核
 ├── tools/
+│   ├── validate_shoot_plan.py        # 建模照配額驗證（地點層級/造型/髮型/視角/濾鏡）
+│   ├── shoot_plan.json               # 20 位 × 13 張的結構化規劃資料
 │   ├── assign_dance_batch.py         # 舞蹈候選清單核准後，平均分配給各 KOL（見 DANCE_CLONE_SOP.md）
 │   ├── parse_dance_issue.py          # 把 GitHub Issue #3 的候選清單解析成 assign_dance_batch.py 吃得懂的 CSV
 │   └── apply_dance_assignment_to_issue.py  # 把分配結果套回 Issue #3 內文（待篩選→已分配）

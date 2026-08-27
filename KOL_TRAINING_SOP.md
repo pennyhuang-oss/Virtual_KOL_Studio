@@ -222,6 +222,37 @@ Prompt 結構：
 
 ---
 
+### 問題 3b：選角/訓練圖的四個重複犯過的 prompt 錯誤（2026-08-27 新增）
+
+> 這四項全部在 `rainie-hsu` 或本 repo 其他文件記錄過，但沒寫成可執行的修法，
+> 導致 2026-08-27 的 `nico-tsai` Round 1 又踩了一次。修法寫在這裡。
+
+**(1) 五段式物理光公式不能用在攝影棚設定。**
+該公式（`SEXY_SCENE_LIBRARY.md` 第 3 點）是為**真實生活場景**設計的——具名光源是窗、水面、霓虹燈這種
+「場景本來就有的東西」。若場景寫成攝影棚，`white foam board`、`tungsten practical lamp`、`doorframe`
+會被模型當成**畫面內的道具畫出來**（Round 1 連相機都入鏡）。
+→ **選角圖一律用她自己的日常空間，不用攝影棚**（也符合使用者對 Rainie 第二輪「很像棚拍」的否決）。
+
+**(2) 景別指令要放在 prompt 最前面，並用排他性措辭。**
+放在結尾的 `[CAMERA] tight headshot` 會被忽略（`rainie-hsu` Round 1 全身出成半身，`nico-tsai`
+Round 1 headshot 出成全身）。
+→ 正確寫法：`EXTREME CLOSE-UP PORTRAIT. Her face fills the entire frame. Nothing below the
+collarbone is visible.` 放在 prompt **第一行**。
+
+**(3) `bleached` 會把任何髮色推到白金。**
+「冷灰奶茶」寫成 `cool greige milk-tea bleached hair` 出圖是銀白色。
+→ 改為 `a light milk-tea brown with a cool greige cast — clearly still a brown, NOT silver,
+NOT white, NOT platinum`。
+
+**(4) 服裝沒寫領型，模型會自補低胸，導致身材判讀失真。**
+→ 服裝必須寫滿五層（上身含**領型**／下身／鞋／包或外套／首飾髮飾），
+見 `WARDROBE_SYSTEM.md` 與各 `content_style.md` 的「服裝 prompt 必須寫滿五層」。
+
+**完整的選角與訓練集規格見 [`MODELING_SHOOT_PLAN.md`](MODELING_SHOOT_PLAN.md)，
+配額可用 `python3 tools/validate_shoot_plan.py tools/shoot_plan.json` 自動驗證。**
+
+---
+
 ### 問題 4：CDN 圖片（Higgsfield CloudFront）無法從雲端 session 下載
 
 > **⚠️ 2026-08-27 更新：本條已過期，不要再照抄。**
