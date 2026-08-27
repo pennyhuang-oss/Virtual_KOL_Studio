@@ -2,16 +2,26 @@
   "id": "aaliya-rivera",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-29",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "lifestyle",
-    "tags": ["latina", "mexican-american", "los-angeles", "fashion", "beauty", "la-lifestyle", "gen-z", "bilingual"],
+    "tags": [
+      "latina",
+      "mexican-american",
+      "los-angeles",
+      "fashion",
+      "beauty",
+      "la-lifestyle",
+      "gen-z",
+      "bilingual"
+    ],
     "reference_profiles": [
       "@leanneford",
       "@devitabeauty",
       "@jazminenicole",
       "@alexandragarza"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Aaliya Rivera",
@@ -21,7 +31,10 @@
     "ethnicity": "Latina (Mexican-American)",
     "origin": "East Los Angeles, California",
     "current_location": "Los Angeles, California",
-    "languages": ["English (native)", "Spanish (fluent)"],
+    "languages": [
+      "English (native)",
+      "Spanish (fluent)"
+    ],
     "appearance": {
       "height": "170cm",
       "hair": "Long, dark brown wavy hair — worn loose most of the time. Sometimes in a high ponytail or braided. Her hair has natural volume and movement.",
@@ -44,7 +57,8 @@
         "platform": "Higgsfield",
         "status": "ready",
         "trained_at": "2026-06-29"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -75,39 +89,45 @@
       "Her dog Churro appears in roughly one-third of content",
       "Switches to Spanish when she's excited or emotional",
       "Will absolutely try the most photogenic thing on the menu even if it's not the best"
-    ]
+    ],
+    "day_identity": "東洛杉磯家族餐廳的外場兼社群經營——媽媽開的店，她排班、招呼客人，也管餐廳的 IG。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning & Waking Up",
-        "description": "LA morning light is strong — she wakes up into it, confident and unhurried. Warm olive skin, dark wavy hair on the pillow, California mornings that feel like they were made for her.",
-        "weight": "20%"
+        "name": "私下 / 她自己的房間",
+        "description": "收工回到 LA 的公寓之後——貼身家居服、床邊、傍晚的暖光。她本來就對自己的身體毫不設防，私下的畫面是這件事最直接的版本，而且完全是她自己要的。",
+        "weight": "25%"
       },
       {
-        "name": "穿搭 / Outfit & Changing",
-        "description": "LA Latina getting dressed — crop tops, high-waisted denim, fitted dresses. She picks fast and looks incredible immediately. Hourglass figure, no apology.",
-        "weight": "20%"
+        "name": "穿搭 / 換裝",
+        "description": "Crop top、高腰丹寧、合身洋裝。她挑得很快而且立刻好看。偶爾也會有完全不同路線的一套。",
+        "weight": "18%"
       },
       {
-        "name": "浴室 / Bathroom & After Shower",
-        "description": "Post-shower: olive warm skin catching warm light, long dark wavy hair wet and heavy, white towel. Confident bathroom mirror presence. She knows exactly what she looks like.",
+        "name": "餐廳 / 上班的一天",
+        "description": "家族餐廳的外場、廚房門口、打烊後的空桌。這是她檯面上的正常身分，也是她那種吵鬧溫暖個性的來源。",
         "weight": "15%"
       },
       {
-        "name": "在家 / Home Lounging",
-        "description": "LA apartment, stretched on the sofa or floor, biker shorts and a crop tee, phone in hand or just lying there. The version of her that exists before anyone else arrives.",
-        "weight": "20%"
-      },
-      {
-        "name": "飯店 / Hotel & Travel",
-        "description": "Mexico, Miami, New York — hotel rooms with city or beach views, white beds against her warm skin. She brings her energy everywhere.",
+        "name": "早晨 / 剛睡醒",
+        "description": "LA 的晨光很強——她醒進那道光裡，從容不趕時間。",
         "weight": "15%"
       },
       {
-        "name": "健身 / Fitness & Active",
-        "description": "Gym sessions, outdoor runs, dancing when she feels like it. Fitted activewear, natural sweat, the physical confidence that comes from actually using her body.",
+        "name": "浴室 / 洗完澡",
+        "description": "洗完澡：暖光下的皮膚、濕重的深色長捲髮、白浴巾、鏡子。",
+        "weight": "12%"
+      },
+      {
+        "name": "外出 / 旅行",
+        "description": "墨西哥、邁阿密、紐約——飯店房間、城市或海景。",
         "weight": "10%"
+      },
+      {
+        "name": "身體 / 活動",
+        "description": "健身房、戶外跑步、想跳就跳。真的在用身體的那種自信。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -119,7 +139,13 @@
     ],
     "posting_frequency": "Instagram: 4–5x/week. Stories: daily. TikTok: 3–4x/week.",
     "aesthetic": {
-      "color_palette": ["warm terracotta", "golden hour orange", "deep burgundy", "cream", "rich brown"],
+      "color_palette": [
+        "warm terracotta",
+        "golden hour orange",
+        "deep burgundy",
+        "cream",
+        "rich brown"
+      ],
       "mood": "LA golden hour on a warm evening — warm light, full colour, everyone looks good. Feels like a good night. Saturated but real.",
       "editing_style": "Warm tones, slightly boosted contrast. Golden hour light is non-negotiable. Fast cuts on Reels with current sounds. Never over-edited — the point is that she actually looks like that."
     },
@@ -131,11 +157,12 @@
       "Travel brands that understand her demographic"
     ],
     "brand_dont": [
-      "Brands that want her to tone down her personality",
-      "Anything that feels generic or sanitized",
-      "Fast fashion brands with no cultural awareness",
-      "Beauty brands that don't work for her skin tone"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ],
+    "brand_fit_note": "她預設偏向有文化感、不無菌的時尚與美妝品牌。這是偏好不是禁令。"
   },
   "social": {
     "platforms": {

@@ -6,6 +6,10 @@
 
 ## 內容方向
 
+> **開始任何人設或素材規劃前，先讀 [`PERSONA_CANON.md`](PERSONA_CANON.md)。**
+> 那份文件定義了反差公式、標誌性場景的配額原則、造型可變性與「不寫絕對禁令」四條規則，
+> 適用於全體 KOL，優先於以下敘述與各角色既有檔案。
+
 本專案以模仿日本 AV 女優公開社群帳號的風格為核心方向，打造具有強烈**寄生親密感（parasocial intimacy）**的虛擬創作者。
 
 ### 核心哲學
@@ -57,6 +61,7 @@
 ```
 Virtual_KOL_Studio/
 ├── README.md
+├── PERSONA_CANON.md             # 人設憲章：全體 KOL 適用的四條原則（反差公式/場景配額/造型可變/不寫禁令）
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
 ├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
@@ -102,7 +107,9 @@ Virtual_KOL_Studio/
 
 ### 重要規則
 
+0. **人設層一律以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準**——與各角色既有檔案衝突時，憲章優先
 1. **每次生成必須在 prompt 裡說明髮色和髮型**（Soul V2 不繼承訓練圖的髮型）
+   → 也代表**髮色可以隨時改，不需要重訓 Soul**，見憲章原則三
 2. **構圖多樣性**：一組圖必須主動規劃不同景別（wide / 3/4 / close-up）和角度
 3. **服裝必須明確寫出**：不寫服裝模型會往最少衣物方向生成
 4. **影片使用 `multi_shot_mode: auto`**（不可用 custom）

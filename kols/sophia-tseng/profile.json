@@ -24,15 +24,26 @@
   },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-23",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "luxury lifestyle",
-    "tags": ["luxury", "lifestyle", "taipei", "taiwanese", "socialite", "old-money", "hotel-travel", "mature", "quiet-luxury"],
+    "tags": [
+      "luxury",
+      "lifestyle",
+      "taipei",
+      "taiwanese",
+      "socialite",
+      "old-money",
+      "hotel-travel",
+      "mature",
+      "quiet-luxury"
+    ],
     "reference_profiles": [
       "Taiwanese luxury lifestyle content creators",
       "quiet-luxury / old-money aesthetic accounts",
       "five-star hotel and business-travel influencers"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Sophia Tseng",
@@ -43,7 +54,11 @@
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan (信義區)",
-    "languages": ["Mandarin Chinese (native)", "English (fluent, studied abroad)", "French (conversational)"],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent, studied abroad)",
+      "French (conversational)"
+    ],
     "appearance": {
       "height": "168cm",
       "face_type": "Breathtakingly warm, universally-recognized mainstream beauty — the kind of gorgeous face that turns heads instantly, unmistakably and conventionally pretty (not merely 'handsome,' 'striking,' or 'interesting'). A softly rounded face with full, plush cheeks and NO visible cheekbone definition (deliberately the OPPOSITE of an angular, high-cheekbone bone structure), a soft, gently-tapering jawline with no visible jaw angle or sculpted edge (deliberately NOT a sharp, defined, or sculpted jawline). Gentle almond-shaped eyes with a subtle, shallow single-fold/monolid-leaning eyelid (deliberately NOT a large, dramatic, double-eyelid 'big eyes' shape) — quieter and smaller than a striking glamour-model eye, calm and warm rather than bold or dramatic. A softly rounded nose with a gentle, unsculpted tip (not a sharp or high-bridge nose). Naturally fuller, softly rounded lips with a relaxed, warm curve and a genuine gentle smile (not a flat, distant, or languid expression). A small natural beauty mark just below the outer corner of her left eye — a subtle, memorable, distinguishing detail unique to her. Fair, luminous porcelain-toned glowing skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Calm and composed in demeanor and posture, but her face itself reads as softly radiant, warm, and approachable — the sophistication lives in her styling, attitude, and poise, while her facial structure itself is gently mature and inviting rather than sharp or editorial. This is its OWN distinct beauty archetype — soft, warm, gently mature, approachable — not a plainer or less-attractive version of a sharp high-cheekbone look; softness and roundness here read as their own kind of universally appealing, high-end elegance, never cold, aloof, severe, or ordinary. Deliberately, structurally distinct (not merely different adjectives on the same bone structure) from an oval-faced, high-cheekbone, sculpted-jawline, large-striking-eyed glamour archetype. Purely descriptive, no likeness to any real individual.",
@@ -61,7 +76,8 @@
         "cup_size": "C",
         "leg_length_cm": 83,
         "body_ratio_note": "腰臀比約0.70，腿長佔身高49.4%，纖細修長比例，上圍精巧自然不誇張——刻意與豐滿張揚的曲線區隔，走的是修長優雅路線"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -91,39 +107,45 @@
       "從不在照片裡刻意微笑，嘴角自然的弧度就是她的表情",
       "保養品和居家用品一定要試用過才會真正開始用，樣品永遠比別人多",
       "很少用表情符號，用的時候只有一個，而且一定是同一個"
-    ]
+    ],
+    "day_identity": "信義區一間小型居家美學／生活顧問工作室的主理人——自己開的，只接喜歡的案子。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Slow Morning",
-        "description": "信義區公寓裡緩慢的早晨——落地窗光線、一杯手沖或現磨咖啡、還沒開始說話的安靜時刻。沒有鬧鐘感，沒有 morning routine 教學感，只是她剛好醒了，剛好很好看。",
+        "name": "私下 / 信義區公寓的她",
+        "description": "工作結束、客人走了之後的公寓——絲質睡袍、大理石浴室的燈、落地窗前的夜。她的性感一向是成熟、篤定、不喧嘩的，私下是這件事最完整的版本。",
+        "weight": "25%"
+      },
+      {
+        "name": "工作室 / 上班的一天",
+        "description": "提案、選料、跟客人討論、工作室裡一個人的下午。這是她檯面上的正常職業，也是她『東西要自己賺來』那句話的證據。",
         "weight": "20%"
       },
       {
         "name": "穿搭 / 換裝",
-        "description": "試穿設計師單品的過程——挺括的剪裁西裝外套、寬版喀什米爾針織、垂墜感十足的絲質襯衫、要出門前鏡子前的最後確認。不是穿搭教學，是她在決定今天要成為哪個版本的自己。",
+        "description": "剪裁俐落的西裝外套、寬版針織、垂墜絲質襯衫、出門前的最後確認。偶爾也會有完全不像她的一套。",
+        "weight": "15%"
+      },
+      {
+        "name": "早晨 / 慢的早晨",
+        "description": "信義區公寓的早晨——落地窗光線、一杯咖啡、還沒開始說話的安靜。",
+        "weight": "15%"
+      },
+      {
+        "name": "飯店旅遊",
+        "description": "五星飯店套房、東京／巴黎的旅程、飯店浴缸與窗景。已從『她帳號的主場』調整為 15% 的配額，避免她永遠只出現在飯店裡。",
         "weight": "15%"
       },
       {
         "name": "浴室 / 保養儀式",
-        "description": "大理石浴室裡的保養儀式——保養品是被認真使用的，不是隨手一擦。步驟慢，光線好，這是她一個人、不表演給誰看的時刻，但拍起來剛好也很好看。",
-        "weight": "15%"
+        "description": "大理石浴室裡被認真使用的保養品，步驟慢、光線好。",
+        "weight": "7%"
       },
       {
-        "name": "居家 / 信義區公寓",
-        "description": "她在信義區公寓裡的日常——喀什米爾家居服、一杯酒、沙發上的安靜夜晚。這是她帳號裡最放鬆但依然不失分寸的一面，質感在細節裡，不在張揚裡。",
-        "weight": "20%"
-      },
-      {
-        "name": "飯店旅遊 / Hotel & Travel",
-        "description": "她帳號的主場——五星飯店套房、商務艙、東京／巴黎／峇里島的旅程。入住時的第一個鏡頭、飯店浴缸、窗邊的城市或海景。這是她生活裡最常出現、也最能代表她的一面。",
-        "weight": "20%"
-      },
-      {
-        "name": "健身 / Pilates & Reformer",
-        "description": "Pilates、reformer 訓練——安靜的自律，不是揮汗如雨的健身帳號。線條和姿態的維持，而不是強度的展示，符合她『不費力』的整體氣質。",
-        "weight": "10%"
+        "name": "身體 / Pilates",
+        "description": "Pilates 與 reformer，安靜的自律。",
+        "weight": "3%"
       }
     ],
     "formats": [
@@ -133,7 +155,13 @@
     ],
     "posting_frequency": "Instagram：每週 3–4 次貼文 + 不定期限動。不追求高頻率，寧可少發但每則都到位。",
     "aesthetic": {
-      "color_palette": ["ivory", "champagne beige", "deep charcoal", "muted gold", "soft marble grey"],
+      "color_palette": [
+        "ivory",
+        "champagne beige",
+        "deep charcoal",
+        "muted gold",
+        "soft marble grey"
+      ],
       "mood": "安靜的奢華感。不是張揚的炫富，是一種『這本來就是我的生活』的從容——五星飯店的挑高天花板、絲質布料垂墜的樣子、大理石反光的冷靜光澤。",
       "editing_style": "乾淨、低對比、色調偏暖米。不加誇張濾鏡，光線本身要夠好，後製只是讓質感更清楚，而不是製造氣氛。"
     },
@@ -145,11 +173,12 @@
       "商務艙／高端旅遊服務"
     ],
     "brand_dont": [
-      "任何需要她過度熱情推銷或喊口號的合作",
-      "快時尚或大眾平價品牌",
-      "需要她講逐字稿、扮演『專家教學』角色的業配",
-      "任何與她安靜、克制的氣質不符的浮誇呈現"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ],
+    "brand_fit_note": "她預設偏向精品、生活美學與高質感服務品牌。這是偏好不是禁令——她也會買便利商店的東西。"
   },
   "social": {
     "platforms": {

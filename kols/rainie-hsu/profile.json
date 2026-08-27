@@ -44,7 +44,7 @@
   },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-08-05",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "nightlife",
     "tags": [
@@ -59,7 +59,8 @@
     "reference_profiles": [
       "Taiwanese nightlife/glam content creators",
       "Asian going-out fashion & GRWM influencers"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Rainie Hsu",
@@ -79,7 +80,7 @@
       "height": "165cm",
       "face_type": "Stunning, bold glamour-model beauty — high cheekbones, a sculpted jawline, striking eyes, the kind of face that stops a room. Fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Soft-glam makeup, dialed down further — barely-there, soft brown-toned eyeliner drawn close to the lash line with NO visible wing or flick at all, and a sheer, natural tinted lip balm with barely-there color (NOT a saturated, bold, or fully-opaque lip color), dewy luminous skin. Polished and put-together, but reads as effortlessly gorgeous and mainstream-appealing — never heavy, costume-like, or theatrical.",
       "figure": "Striking hourglass figure — full bust, cinched waist, curved hips. Built for bodycon and corset silhouettes. Carries herself with deliberate posture, always aware of how the outfit sits.",
-      "hair": "Long, straight, jet-black hair, worn sleek and glossy — occasionally styled with a deep side part or slicked back for a night out. Never messy, always intentional.",
+      "hair": "Long, straight, jet-black hair, worn sleek and glossy — occasionally styled with a deep side part or slicked back for a night out. 多數時候是梳理過、有意識的造型；真的懶得弄的時候也會隨手夾起來。",
       "eyes": "Dark, striking eyes softly defined by a barely-there, soft brown-toned eyeliner drawn close to the lash line with no visible wing or flick at all — a polished, put-together signature, never a heavy dramatic wing or cat-eye flick.",
       "glasses": "None.",
       "style_vibe": "Glamorous nightlife fashion: bodycon dresses, corset tops, thigh-high slits, going-out sets, statement jewelry, sky-high heels. Deliberately done, not effortless — she works for the look and is proud of the work. The opposite of understated.",
@@ -92,7 +93,8 @@
         "cup_size": "F",
         "leg_length_cm": 80,
         "body_ratio_note": "腰臀比約0.64，腿長佔身高48.5%，張揚有型的沙漏比例，上圍格外豐滿突出"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -118,42 +120,48 @@
     "quirks": [
       "Does her eyeliner first, every single time, before anything else",
       "Judges a night out by the outfit reveal shot before she even leaves the apartment",
-      "Refuses to repeat an exact outfit within the same month",
+      "同一個月內盡量不重複同一套；真的很喜歡的那件會破例",
       "Captions are rarely longer than one short sentence",
       "Calls her friend group her '小隊' and will not go out without at least one of them"
-    ]
+    ],
+    "day_identity": "東區一間酒吧的兼職外場與公關——她從這裡出身，現在雖然靠內容維生，但一週仍排兩班，那是她的地氣來源。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning-After Recovery",
-        "description": "The lazy, hungover-adjacent morning after a big night — makeup half-removed or gone, oversized tee, sunglasses even indoors, ordering coffee she can't function without. Lighthearted 'the price of a good night' energy, never anything beyond a wink at being tired.",
+        "name": "私下 / 她自己的房間",
+        "description": "回到自己的公寓、卸掉整套妝之後——絲質睡袍、床邊、只剩一盞燈。檯面上她是張揚的、給整個房間看的，私下是收起來、只給自己看的版本。這是她目前最缺、也最需要補上的一塊。",
+        "weight": "25%"
+      },
+      {
+        "name": "穿搭 / 換裝 — 出門前",
+        "description": "她的招牌內容：出門前的完整換裝過程，鏡子前在洋裝和馬甲之間決定，出門前的全身鏡。已從 30% 調整為 22%。",
+        "weight": "22%"
+      },
+      {
+        "name": "白天的她",
+        "description": "沒有要出門的那些白天——素顏、便利商店、跟朋友吃午餐、酒吧上班前的準備。新增支柱，補上她原本完全缺席的日間生活。",
         "weight": "15%"
       },
       {
-        "name": "穿搭 / 換裝 — Getting Ready to Go Out",
-        "description": "Her centerpiece content: the full getting-ready process for a night out. Trying on multiple going-out fits in the mirror, deciding between the dress and the corset top, the final full-body reveal before walking out the door. Bodycon, thigh-high slits, statement heels — this is where she performs best.",
-        "weight": "30%"
+        "name": "酒吧 / 上班的日子",
+        "description": "東區酒吧的外場與吧檯、開店前的空店、客人來之前。這是她檯面上的正常職業。",
+        "weight": "13%"
       },
       {
-        "name": "浴室 / Glam Prep",
-        "description": "The technical side of the look — precise, soft eyeliner application step by step, hair styling, perfume, the final mirror check under bathroom lighting. Precise and practiced, not casual; this is the craft behind the glamour.",
-        "weight": "15%"
+        "name": "浴室 / 妝前妝後",
+        "description": "上妝的步驟、造型、香水、鏡子前的最後確認；以及回家後把這一切卸掉。",
+        "weight": "12%"
       },
       {
-        "name": "居家 / Downtime Between Nights Out",
-        "description": "The quieter in-between state — loungewear, ordering food in, scrolling on the couch, recovering energy for the next night. A deliberate contrast to the going-out persona: still her, just off duty.",
-        "weight": "15%"
+        "name": "早晨 / 前一晚之後",
+        "description": "大夜之後的早晨——妝沒卸乾淨、寬大的 T 恤、需要咖啡才能運作。",
+        "weight": "8%"
       },
       {
-        "name": "飯店 / 旅遊 — Nightlife Getaways",
-        "description": "Weekend trips built around nightlife — Kaohsiung club weekends, Japan clubbing trips, hotel room pre-game shots before heading out into a new city's scene. Hotel mirror fits and skyline views before the night starts.",
-        "weight": "15%"
-      },
-      {
-        "name": "健身 / Dance Cardio",
-        "description": "Minimal, purpose-driven fitness — dance-based cardio and light training to stay in shape for going out, not a serious fitness account. Framed as maintenance for the lifestyle, not a discipline in itself.",
-        "weight": "10%"
+        "name": "旅遊 / 夜生活遠征",
+        "description": "高雄、日本的週末，飯店房間裡出門前的預備。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -181,11 +189,13 @@
       "Bars, clubs, and hotels she'd actually be seen at"
     ],
     "brand_dont": [
-      "Anything that requires an 'effortless natural' pitch — that's not her lane",
-      "Alcohol brands requiring depiction of active drinking or intoxication",
-      "Modest or minimalist fashion that undercuts her glam identity",
-      "Daytime-only or wellness-coded brands with no nightlife angle"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類",
+      "需要呈現實際飲酒或醉態的酒精類合作"
+    ],
+    "brand_fit_note": "她預設偏向夜生活服飾、鞋履、彩妝與香氛。這是偏好不是禁令——她也可以有素顏、極簡、白天的一面，這正是本次要補的。"
   },
   "social": {
     "platforms": {

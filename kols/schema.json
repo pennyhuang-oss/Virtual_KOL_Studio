@@ -3,7 +3,14 @@
   "title": "KOL Profile Schema",
   "description": "Standard schema for all KOL character profiles in this database",
   "type": "object",
-  "required": ["id", "meta", "identity", "persona", "content", "social"],
+  "required": [
+    "id",
+    "meta",
+    "identity",
+    "persona",
+    "content",
+    "social"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -15,62 +22,170 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
-          "higgsfield_soul_id": { "type": "string" },
-          "soul_model": { "type": "string" },
-          "soul_status": { "type": "string", "enum": ["pending", "training", "ready", "failed"] },
-          "training_image_count": { "type": "integer" },
-          "training_images_path": { "type": "string" }
+          "higgsfield_soul_id": {
+            "type": "string"
+          },
+          "soul_model": {
+            "type": "string"
+          },
+          "soul_status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "training",
+              "ready",
+              "failed"
+            ]
+          },
+          "training_image_count": {
+            "type": "integer"
+          },
+          "training_images_path": {
+            "type": "string"
+          }
         }
       }
     },
     "meta": {
       "type": "object",
-      "required": ["created_at", "updated_at", "status", "category"],
+      "required": [
+        "created_at",
+        "updated_at",
+        "status",
+        "category"
+      ],
       "properties": {
-        "created_at": { "type": "string", "format": "date" },
-        "updated_at": { "type": "string", "format": "date" },
-        "status": { "type": "string", "enum": ["active", "draft", "archived"] },
-        "category": { "type": "string", "description": "Primary KOL category, e.g. lifestyle, tech, fitness" },
-        "tags": { "type": "array", "items": { "type": "string" } },
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "draft",
+            "archived"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "description": "Primary KOL category, e.g. lifestyle, tech, fitness"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "reference_profiles": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Real-world social handles that inspired this persona"
+        },
+        "canon_version": {
+          "type": "string",
+          "description": "該角色已對齊到哪一版 PERSONA_CANON.md"
         }
       }
     },
     "identity": {
       "type": "object",
-      "required": ["name", "handle", "age", "ethnicity", "origin", "current_location", "languages"],
+      "required": [
+        "name",
+        "handle",
+        "age",
+        "ethnicity",
+        "origin",
+        "current_location",
+        "languages"
+      ],
       "properties": {
-        "name": { "type": "string" },
-        "handle": { "type": "string", "description": "Primary social handle" },
-        "age": { "type": "integer" },
-        "date_of_birth": { "type": "string", "format": "date", "description": "用於平台註冊年齡驗證的實際生日（YYYY-MM-DD），需與 age 保持一致，逐年遞增" },
-        "ethnicity": { "type": "string" },
-        "origin": { "type": "string" },
-        "current_location": { "type": "string" },
-        "languages": { "type": "array", "items": { "type": "string" } },
+        "name": {
+          "type": "string"
+        },
+        "handle": {
+          "type": "string",
+          "description": "Primary social handle"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "date_of_birth": {
+          "type": "string",
+          "format": "date",
+          "description": "用於平台註冊年齡驗證的實際生日（YYYY-MM-DD），需與 age 保持一致，逐年遞增"
+        },
+        "ethnicity": {
+          "type": "string"
+        },
+        "origin": {
+          "type": "string"
+        },
+        "current_location": {
+          "type": "string"
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "appearance": {
           "type": "object",
           "properties": {
-            "height": { "type": "string" },
-            "hair": { "type": "string" },
-            "eyes": { "type": "string" },
-            "style_vibe": { "type": "string" },
+            "height": {
+              "type": "string"
+            },
+            "hair": {
+              "type": "string"
+            },
+            "eyes": {
+              "type": "string"
+            },
+            "style_vibe": {
+              "type": "string"
+            },
             "measurements": {
               "type": "object",
               "description": "Standardized body measurement spec used to keep AI-generated images consistent across batches for this KOL.",
               "properties": {
-                "height_cm": { "type": "integer" },
-                "weight_kg": { "type": "integer" },
-                "bust_cm": { "type": "integer" },
-                "waist_cm": { "type": "integer" },
-                "hip_cm": { "type": "integer" },
-                "cup_size": { "type": "string" },
-                "leg_length_cm": { "type": "integer", "description": "腿長（髖骨至地面）" },
-                "body_ratio_note": { "type": "string", "description": "腰臀比、腿長身高比等敘述性補充" }
+                "height_cm": {
+                  "type": "integer"
+                },
+                "weight_kg": {
+                  "type": "integer"
+                },
+                "bust_cm": {
+                  "type": "integer"
+                },
+                "waist_cm": {
+                  "type": "integer"
+                },
+                "hip_cm": {
+                  "type": "integer"
+                },
+                "cup_size": {
+                  "type": "string"
+                },
+                "leg_length_cm": {
+                  "type": "integer",
+                  "description": "腿長（髖骨至地面）"
+                },
+                "body_ratio_note": {
+                  "type": "string",
+                  "description": "腰臀比、腿長身高比等敘述性補充"
+                }
               }
+            },
+            "hair_note": {
+              "type": "string",
+              "description": "髮色髮型為現階段設定、可隨時改；Soul V2 不繼承訓練圖髮型，見 PERSONA_CANON.md 原則三。"
             }
           }
         }
@@ -78,66 +193,170 @@
     },
     "persona": {
       "type": "object",
-      "required": ["archetype", "personality_traits", "values", "backstory", "voice_tone"],
+      "required": [
+        "archetype",
+        "personality_traits",
+        "values",
+        "backstory",
+        "voice_tone"
+      ],
       "properties": {
-        "archetype": { "type": "string" },
-        "personality_traits": { "type": "array", "items": { "type": "string" } },
-        "values": { "type": "array", "items": { "type": "string" } },
-        "backstory": { "type": "string" },
-        "voice_tone": { "type": "string" },
-        "humor_style": { "type": "string" },
-        "quirks": { "type": "array", "items": { "type": "string" } }
+        "archetype": {
+          "type": "string"
+        },
+        "personality_traits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "backstory": {
+          "type": "string"
+        },
+        "voice_tone": {
+          "type": "string"
+        },
+        "humor_style": {
+          "type": "string"
+        },
+        "quirks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "day_identity": {
+          "type": "string",
+          "description": "檯面身分／正常職業。反差公式（PERSONA_CANON.md 原則一）的支點，沒有它反差不成立。"
+        }
       }
     },
     "content": {
       "type": "object",
-      "required": ["pillars", "formats", "posting_frequency", "aesthetic"],
+      "required": [
+        "pillars",
+        "formats",
+        "posting_frequency",
+        "aesthetic"
+      ],
       "properties": {
         "pillars": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "name": { "type": "string" },
-              "description": { "type": "string" },
-              "weight": { "type": "string" }
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "string"
+              }
             }
           }
         },
-        "formats": { "type": "array", "items": { "type": "string" } },
-        "posting_frequency": { "type": "string" },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "posting_frequency": {
+          "type": "string"
+        },
         "aesthetic": {
           "type": "object",
           "properties": {
-            "color_palette": { "type": "array", "items": { "type": "string" } },
-            "mood": { "type": "string" },
-            "editing_style": { "type": "string" }
+            "color_palette": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mood": {
+              "type": "string"
+            },
+            "editing_style": {
+              "type": "string"
+            }
           }
         },
-        "brand_do": { "type": "array", "items": { "type": "string" } },
-        "brand_dont": { "type": "array", "items": { "type": "string" } }
+        "brand_do": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "brand_dont": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "只放真正的紅線（未成年化、露骨、冒充專業背書、詐騙博弈）與價值觀層級的衝突。風格偏好請寫在 brand_fit_note。"
+        },
+        "brand_fit_note": {
+          "type": "string",
+          "description": "風格偏好敘述（不是禁令）。取代原本寫在 brand_dont 裡的風格限制條款，見 PERSONA_CANON.md 原則四。"
+        }
       }
     },
     "social": {
       "type": "object",
       "properties": {
-        "display_name": { "type": "string", "description": "公開顯示名稱（社群平台上顯示的暱稱，可含表情符號/特殊符號，與 @handle 分開）" },
-        "creator_category": { "type": "string", "description": "平台建立帳號時選擇的創作者類別（如 IG 的 Digital creator / Fitness Trainer 等下拉選項）" },
-        "bio": { "type": "string", "description": "社群平台自我簡介全文（保持簡短、留白，不需要完整自我介紹；含表情符號/特殊符號，換行以 \\n 表示）" },
-        "account_username": { "type": "string", "description": "註冊帳號用的使用者名稱（英文名+數字組合，用於申請信箱與註冊各社群平台，非公開顯示用）" },
+        "display_name": {
+          "type": "string",
+          "description": "公開顯示名稱（社群平台上顯示的暱稱，可含表情符號/特殊符號，與 @handle 分開）"
+        },
+        "creator_category": {
+          "type": "string",
+          "description": "平台建立帳號時選擇的創作者類別（如 IG 的 Digital creator / Fitness Trainer 等下拉選項）"
+        },
+        "bio": {
+          "type": "string",
+          "description": "社群平台自我簡介全文（保持簡短、留白，不需要完整自我介紹；含表情符號/特殊符號，換行以 \\n 表示）"
+        },
+        "account_username": {
+          "type": "string",
+          "description": "註冊帳號用的使用者名稱（英文名+數字組合，用於申請信箱與註冊各社群平台，非公開顯示用）"
+        },
         "platforms": {
           "type": "object",
           "additionalProperties": {
             "type": "object",
             "properties": {
-              "handle": { "type": "string" },
-              "focus": { "type": "string" },
-              "follower_tier": { "type": "string", "enum": ["nano", "micro", "mid", "macro", "mega"] }
+              "handle": {
+                "type": "string"
+              },
+              "focus": {
+                "type": "string"
+              },
+              "follower_tier": {
+                "type": "string",
+                "enum": [
+                  "nano",
+                  "micro",
+                  "mid",
+                  "macro",
+                  "mega"
+                ]
+              }
             }
           }
         },
-        "engagement_style": { "type": "string" },
-        "community_name": { "type": "string" }
+        "engagement_style": {
+          "type": "string"
+        },
+        "community_name": {
+          "type": "string"
+        }
       }
     },
     "productions": {
@@ -146,10 +365,23 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
-          "script": { "type": "string" },
-          "format": { "type": "string" },
-          "status": { "type": "string", "enum": ["planned", "in_progress", "complete"] },
-          "shots": { "type": "array" }
+          "script": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "in_progress",
+              "complete"
+            ]
+          },
+          "shots": {
+            "type": "array"
+          }
         }
       }
     }

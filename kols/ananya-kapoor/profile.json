@@ -2,16 +2,26 @@
   "id": "ananya-kapoor",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-29",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "wellness",
-    "tags": ["yoga", "wellness", "indian", "mumbai", "dance", "spirituality", "body-positive", "sensual-wellness"],
+    "tags": [
+      "yoga",
+      "wellness",
+      "indian",
+      "mumbai",
+      "dance",
+      "spirituality",
+      "body-positive",
+      "sensual-wellness"
+    ],
     "reference_profiles": [
       "@anshukayoga",
       "@yogasini",
       "@yoga_girl",
       "@tejashwini_manogna"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Ananya Kapoor",
@@ -22,7 +32,12 @@
     "ethnicity": "Indian (Punjabi)",
     "origin": "Mumbai, India",
     "current_location": "Mumbai, India",
-    "languages": ["Hindi (native)", "English (fluent)", "Marathi (conversational)", "Sanskrit (basic reading)"],
+    "languages": [
+      "Hindi (native)",
+      "English (fluent)",
+      "Marathi (conversational)",
+      "Sanskrit (basic reading)"
+    ],
     "appearance": {
       "height": "165cm",
       "hair": "Dark brown, long and naturally wavy-curly, usually loose or in a loose braid. Sometimes adorned with flowers or a thin gold chain.",
@@ -44,7 +59,8 @@
         "platform": "Higgsfield",
         "status": "ready",
         "trained_at": "2026-06-29"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -75,39 +91,45 @@
       "Mixes Bharatanatyam hand gestures into yoga transitions — it's become her signature",
       "Has strong opinions about chai — milk first is non-negotiable",
       "Posts sunset from her Mumbai apartment rooftop every Friday"
-    ]
+    ],
+    "day_identity": "孟買一間瑜伽教室的老師——有正式教師證照，帶晨間班與週末的進階班。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning & Waking Up",
-        "description": "Mumbai mornings are hot — she wakes up bold and direct. Thin sheets, ceiling fan, golden light on warm skin. Her waking up has an energy to it.",
-        "weight": "20%"
+        "name": "私下 / 她自己的房間",
+        "description": "帶完課回到孟買的公寓之後——薄的家居服、地板、吊扇下的午後。她對身體的態度本來就直接，私下的畫面是這種直接的延伸：不是展示，是她真的這樣待在自己的身體裡。",
+        "weight": "25%"
       },
       {
-        "name": "穿搭 / Outfit & Changing",
-        "description": "Getting dressed with confidence — crop tops, yoga sets, midriff-baring co-ords. No tutorials, no hesitation. She knows what she wants and puts it on.",
-        "weight": "20%"
+        "name": "穿搭 / 換裝",
+        "description": "Crop tops、瑜伽套裝、露腰 co-ord。她知道自己要什麼就穿上去。偶爾也會有完全不同的一套。",
+        "weight": "18%"
       },
       {
-        "name": "浴室 / Bathroom & After Shower",
-        "description": "Post-shower: deep golden-brown skin under warm bathroom light, long damp wavy hair, white towel. Natural glow, zero apology.",
+        "name": "教室 / 上課的一天",
+        "description": "帶課、示範體位、學生離開後的空教室、收墊子。這是她檯面上的正常職業。",
         "weight": "15%"
       },
       {
-        "name": "在家 / Home Lounging",
-        "description": "Mumbai apartment, yoga mat nearby, most relaxed version — crop top and shorts, floor or sofa, afternoon light. This is her before the world gets involved.",
-        "weight": "20%"
-      },
-      {
-        "name": "飯店 / Hotel & Travel",
-        "description": "Goa, Bali, or wherever she's taken herself — hotel beds, ocean views, the contrast of her warm skin against white hotel linen.",
+        "name": "早晨 / 剛睡醒",
+        "description": "孟買的早晨很熱——薄被單、吊扇、金色的光。她醒過來是有能量的。",
         "weight": "15%"
       },
       {
-        "name": "健身 / Fitness & Active",
-        "description": "Post-workout sweat, yoga deep poses, dance movement, running. Strength and body awareness in motion. This is what her body is actually for.",
+        "name": "浴室 / 洗完澡",
+        "description": "洗完澡：溫暖光線下的皮膚、半乾的長捲髮、白浴巾。",
+        "weight": "12%"
+      },
+      {
+        "name": "外出 / 旅行",
+        "description": "果亞、峇里島或任何她自己去的地方——飯店床、海景。",
         "weight": "10%"
+      },
+      {
+        "name": "身體 / 練習",
+        "description": "汗、深度體位、舞蹈動作。她的身體真正在做的事。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -119,7 +141,13 @@
     ],
     "posting_frequency": "Instagram/TikTok: 6x/week. YouTube: 2x/month. Stories: daily.",
     "aesthetic": {
-      "color_palette": ["deep jewel teal", "warm terracotta", "marigold gold", "soft ivory", "rich magenta"],
+      "color_palette": [
+        "deep jewel teal",
+        "warm terracotta",
+        "marigold gold",
+        "soft ivory",
+        "rich magenta"
+      ],
       "mood": "Warm, vibrant, luminous. Mumbai golden hour. Feels like the air just before a monsoon. Beautiful without being sterile.",
       "editing_style": "Warm colour grading — rich saturation, golden tones. Movement videos often set to Hindi indie or classical fusion music. Natural light preferred but not exclusive. Skin is always glowing, never whitened or over-filtered."
     },
@@ -131,11 +159,13 @@
       "Brands that celebrate rather than erase her cultural identity"
     ],
     "brand_dont": [
-      "Brands that want 'exotic India' aesthetics without substance",
-      "Weight loss or diet products",
-      "Western wellness brands appropriating yoga without acknowledgment",
-      "Brands requiring her to look thinner or less herself"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類",
+      "減重、瘦身、抑制食慾類產品（與她的核心價值直接衝突，這是價值觀紅線不是風格限制）"
+    ],
+    "brand_fit_note": "她預設偏向真誠的健康、瑜伽與生活品牌。這是偏好不是禁令。"
   },
   "social": {
     "display_name": "Ananya Kapoor 🪷",

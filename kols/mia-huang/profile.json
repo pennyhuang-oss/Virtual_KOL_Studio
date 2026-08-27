@@ -24,7 +24,7 @@
   },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-30",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "gaming",
     "tags": [
@@ -41,7 +41,8 @@
     "reference_profiles": [
       "Taiwanese gaming/streaming content creators",
       "Twitch gamer-girl / cosplay-lite creator accounts"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Mia Huang",
@@ -74,7 +75,8 @@
         "cup_size": "F",
         "leg_length_cm": 76,
         "body_ratio_note": "腰臀比約0.65，腿長佔身高47.5%，嬌小身形與誇張豐滿上圍的強烈反差"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -104,39 +106,45 @@
       "Cannot finish a sentence about her cat without her voice changing register",
       "Considers 2am her 'productive hours' and will say so unironically",
       "Uses way more English gaming terms than Chinese ones when she's excited or tilted"
-    ]
+    ],
+    "day_identity": "全職遊戲實況主——這是一份真正的職業，有開台表、有合作、有稅要繳。檯面上她是 SFW 的俏皮遊戲主播。"
   },
   "content": {
     "pillars": [
       {
-        "name": "下午甦醒 / Afternoon Wake-Up (Her \"Morning\")",
-        "description": "Because her day starts around 2pm, her version of a morning routine happens in the afternoon light of her gaming room — waking up at her desk or on the small couch behind it, hoodie on, hair a mess, phone check, first coffee while the PC boots up. The most unguarded, off-duty version of her, before the stream persona switches on.",
+        "name": "私下 / 關台之後",
+        "description": "下播、燈條關掉之後的房間——貼身家居服、床、手機的光。直播時她是表演給彈幕看的版本，關台後是只給自己的版本。這個落差是她真正的反差，而不是『她住在直播間裡』。",
+        "weight": "25%"
+      },
+      {
+        "name": "直播間 / 開台的日子",
+        "description": "電競椅、RGB 光、實況中的反應、回合之間的閒聊、貓走過桌面。已從 30% 調整為 20%——她的工作在這個房間，但她的人生不是。",
         "weight": "20%"
       },
       {
-        "name": "穿搭 / 換裝 — Cosplay-Lite & Stream Fits",
-        "description": "Trying on outfits for tonight's stream: oversized hoodie vs. cropped tank, deciding whether tonight's a cat-ear-headband night, adjusting a thigh-high before the camera goes live. Not a full cosplay tutorial — just her assembling the cute-but-sexy look she'll wear in front of chat.",
-        "weight": "20%"
+        "name": "穿搭 / 換裝",
+        "description": "挑今晚開台的造型：oversized 帽 T vs 短版背心、要不要戴貓耳、上機前調整過膝襪。也會有跟直播完全無關的私服。",
+        "weight": "18%"
       },
       {
-        "name": "浴室 / 深夜保養 — Late-Night Skincare Before Going Live",
-        "description": "Quick skincare routine in the bathroom mirror before a stream, or the wind-down version after signing off well past midnight. Practical and a little rushed — this is prep, not a spa moment.",
-        "weight": "10%"
+        "name": "白天的新竹",
+        "description": "她也有白天——出門吃飯、去便利商店、朋友約的下午茶、新竹的街。已刪除舊設定裡『任何需要白天戶外拍攝的都不接，她的品牌identity就是夜行性』這條，那正是把角色寫死的典型。",
+        "weight": "15%"
       },
       {
-        "name": "居家 / 直播間 — Streaming Room Life",
-        "description": "Her dominant pillar and the actual center of her life: the gaming chair, the RGB glow, snack wrappers by 1am, mid-stream reaction faces, between-round chatter with the cat wandering across the desk. Most of what she posts is just this room, because most of her life happens in this room.",
-        "weight": "30%"
+        "name": "下午甦醒 / 她的早晨",
+        "description": "因為她的一天從下午兩點開始，她的晨間 routine 發生在午後的光裡——剛醒、頭髮亂、第一杯咖啡。",
+        "weight": "12%"
       },
       {
-        "name": "飯店 / 旅遊 — Convention & Meetup Trips",
-        "description": "Rare and treated as a genuine event: the occasional gaming convention appearance, a creator meetup, or a booth signing. Hotel room content is sparse and novel for her specifically because she almost never leaves Hsinchu — when it happens, it's a bigger deal than a normal week.",
-        "weight": "10%"
+        "name": "浴室 / 深夜保養",
+        "description": "開台前的快速保養，或收工後過了午夜的卸妝版本。",
+        "weight": "7%"
       },
       {
-        "name": "健身 / Stretch Breaks",
-        "description": "Minimal and purely functional — stretch breaks between games or between streams, working out a stiff neck or back from hours in the chair. Not a fitness account; this is damage control for a body that sits all night.",
-        "weight": "10%"
+        "name": "外出 / 展會與見面會",
+        "description": "偶爾的電競展、創作者聚會。",
+        "weight": "3%"
       }
     ],
     "formats": [
@@ -163,11 +171,12 @@
       "Anime and game merchandise / collabs"
     ],
     "brand_dont": [
-      "Formal or corporate-coded fashion — completely outside her lane",
-      "Anything requiring a daytime outdoor shoot — she is nocturnal by brand identity",
-      "Brands that need a scripted, polished spokesperson delivery instead of her own voice",
-      "Anything beyond mainstream SFW gaming-creator content — no explicit or exploitative asks"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ],
+    "brand_fit_note": "她預設偏向遊戲、3C 與次文化品牌。這是偏好不是禁令——她也可以接完全不同調性的合作。"
   },
   "social": {
     "platforms": {
