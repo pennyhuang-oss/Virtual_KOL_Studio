@@ -1,5 +1,10 @@
 # Luna Tanaka — Generation Notes
 
+> ℹ️ **本檔案是歷史生成紀錄，內容不回頭改寫。**
+> 其中出現的舊支柱名稱（如「居家／在家／耍廢」）為 2026-08-27 憲章同步前的命名，
+> 現行支柱以 `profile.json` 為準，規則以 [`PERSONA_CANON.md`](../../PERSONA_CANON.md) 為準。
+
+
 ## Soul Training
 
 - **Soul ID (current, active)**: `a3dc13ec-16e7-4990-89c6-9e0461db46ef` — retrained 2026-08-08, see

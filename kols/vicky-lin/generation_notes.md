@@ -1,5 +1,10 @@
 # Vicky Lin — AI 生成規劃
 
+> ℹ️ **本檔案是歷史生成紀錄，內容不回頭改寫。**
+> 其中出現的舊支柱名稱（如「居家／在家／耍廢」）為 2026-08-27 憲章同步前的命名，
+> 現行支柱以 `profile.json` 為準，規則以 [`PERSONA_CANON.md`](../../PERSONA_CANON.md) 為準。
+
+
 > **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e` 已可用於 `model: soul_2` 正式生成內容**
 > 2026-07-25：使用者審核第四輪 Element 錨定的 12 張參考圖後回覆「可以」，明確核准進入 Soul 訓練。已完成圖片重新上傳與確認（12 個 media_id 均已 `media_confirm` 成功），但 `show_characters(action='train')` 第一次 session 連續 10 次呼叫都回傳工具層級錯誤；使用者回覆「應該是要重新試試看吧」後，第二次 session 又嘗試 2 次（`images` 用 media_id、`medias` 用 `{role,value}` 格式各一次），**仍然全部失敗**，Higgsfield 後端也**沒有建立任何角色記錄**（已用 `action='list'` 逐一核對確認）。⚠️ 兩次 session 期間累計仍被扣款約 **2.64–2.88 credits**（`transactions` 記錄為多筆 `Higgsfield Soul V2` -0.12 credits，發生在重試時段內），屬於「呼叫失敗但仍計費」的異常情形，且此模式在第二次 session 又再次重現。詳見下方「2026-07-25 使用者核准，Soul 訓練嘗試」與「2026-07-25 Soul 訓練第二次重試」兩章節。**2026-07-31 使用者要求再次測試**：沿用先前已確認的 12 個 media_id 重新呼叫 `show_characters(action='train')`，**這次第一次呼叫即成功受理**，取得 `soul_id: bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`，`raw_status: queued`。判斷先前的後端 `train` 端點異常已恢復正常。詳見下方「2026-07-31 第三次重試：訓練成功送出」章節。
 

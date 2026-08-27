@@ -91,7 +91,7 @@
       "Captions in Japanese always end with the season or time of day",
       "Never posts the same location twice in one month — she finds new angles"
     ],
-    "day_identity": "京都一間花藝教室的助理——祖母留下來的那間。備料、整理花材、招呼學生，一週上四天。"
+    "public_face": "京都的生活者。她不談自己的身分，只給你看光線、房間、季節。觀眾對她的了解僅限於她願意拍下來的部分。"
   },
   "content": {
     "pillars": [
@@ -106,9 +106,9 @@
         "weight": "18%"
       },
       {
-        "name": "花藝教室 / 上班的一天",
-        "description": "備花、剪枝、整理教室、學生來之前的空檔。這是她檯面上的正常職業，也是她構圖眼光的來源。",
-        "weight": "15%"
+        "name": "外出 / 京都的日常",
+        "weight": "15%",
+        "description": "不在公寓裡的京都——河邊、市場、老街、花店、下雨的巷子。她走出門的樣子跟在家裡是同一個節奏，只是換了光線。"
       },
       {
         "name": "早晨 / 剛睡醒",

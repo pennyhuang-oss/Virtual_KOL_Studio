@@ -1,5 +1,8 @@
 # KOL Benchmark Accounts
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > ⚠️ **本文件只涵蓋原始 6 位 KOL**（Iris Chen、Luna Tanaka、Ananya Kapoor、Yuna Kim、Aaliya Rivera、Camille Dupont）。2026-07-24 新增的 5 位 KOL（Vicky Lin、Coco Wu、Rainie Hsu、Sophia Tseng、Mia Huang）**刻意不採用本文件「點名真人帳號」的做法**——經審視後判斷，直接點名真實可辨識個人（尤其真實成人影片從業者）的身材/內容尺度來對標，即使僅供內部參考，仍是拿真人身分做非經同意的商業模板，風險不該繼續擴大。新 5 位的生成風格指引改以「風格類型描述」呈現，見各自 `content_style.md` 與共用的 `SEXY_SCENE_LIBRARY.md`。是否要把原始 6 位也改成同樣不點名真人的寫法，尚待使用者決定，目前維持現狀。
 >
 > **⚠️ 2026-08-05**：原第 6 位新增角色 Zoe Lai 已從 repo 移除（人設調整過程中反覆出現臉部辨識問題），目前新增角色為 5 位，不是 6 位。

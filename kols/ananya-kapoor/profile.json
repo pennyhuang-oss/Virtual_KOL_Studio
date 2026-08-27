@@ -92,7 +92,7 @@
       "Has strong opinions about chai — milk first is non-negotiable",
       "Posts sunset from her Mumbai apartment rooftop every Friday"
     ],
-    "day_identity": "孟買一間瑜伽教室的老師——有正式教師證照，帶晨間班與週末的進階班。"
+    "public_face": "孟買的生活者。她受過完整的舞蹈與瑜伽訓練（見 backstory），但她從沒在社群上以「老師」自居，帳號上就是一個很清楚自己身體的女生。要不要讓她公開帶課，是可選的設定。"
   },
   "content": {
     "pillars": [
@@ -107,9 +107,9 @@
         "weight": "18%"
       },
       {
-        "name": "教室 / 上課的一天",
-        "description": "帶課、示範體位、學生離開後的空教室、收墊子。這是她檯面上的正常職業。",
-        "weight": "15%"
+        "name": "外出 / 孟買的日常",
+        "weight": "15%",
+        "description": "不在公寓裡的孟買——街上、市場、海邊、朋友的家。城市的熱和吵是她的一部分。"
       },
       {
         "name": "早晨 / 剛睡醒",

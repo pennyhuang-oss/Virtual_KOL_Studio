@@ -1,5 +1,10 @@
 # Coco Wu — AI 生成規劃
 
+> ℹ️ **本檔案是歷史生成紀錄，內容不回頭改寫。**
+> 其中出現的舊支柱名稱（如「居家／在家／耍廢」）為 2026-08-27 憲章同步前的命名，
+> 現行支柱以 `profile.json` 為準，規則以 [`PERSONA_CANON.md`](../../PERSONA_CANON.md) 為準。
+
+
 > **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `cf7045dc-4e69-4c56-9621-aa8c40bf39b4` 已可用於 `model: soul_2` 正式生成內容**
 > 本文件原本是生成前的規劃文件。2026-07-30 使用者核准候選圖批次並明確授權送出訓練（「我覺得這四位都可以送去訓練...就先這樣送出訓練」），已用 Reference Element `4b6c659c-786b-43de-87af-87cea3cc99dd`（錨點來源 candidate_01.png）建立完整 12 張訓練集（`images/training_v1/`），並呼叫 `show_characters(action='train')` 成功受理，取得 `soul_id: cf7045dc-4e69-4c56-9621-aa8c40bf39b4`。2026-07-31 確認 `raw_status: completed`，訓練正式完成。
 

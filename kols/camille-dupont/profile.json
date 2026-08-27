@@ -83,7 +83,7 @@
       "Never shares a recipe without a story about where it came from",
       "The clip in her hair is always slightly falling out — followers have bet on when it'll drop"
     ],
-    "day_identity": "索邦文學系的學生，同時在住處樓下的一間小酒窖打工——週間三個晚上顧店、幫客人挑酒。"
+    "public_face": "巴黎的生活者。她讀過索邦文學系（見 backstory），但帳號上不提學校也不提工作，只有食物、酒和一間公寓。"
   },
   "content": {
     "pillars": [
@@ -98,9 +98,9 @@
         "weight": "18%"
       },
       {
-        "name": "酒窖 / 上課與打工",
-        "description": "索邦的教室、樓下酒窖的吧檯、幫客人找一支酒。這是她檯面上的正常身分。",
-        "weight": "15%"
+        "name": "外出 / 巴黎的日常",
+        "weight": "15%",
+        "description": "不在公寓裡的巴黎——市場、麵包店、河邊、朋友的餐桌。她的生活本來就有一半在外面發生。"
       },
       {
         "name": "早晨 / 剛睡醒",

@@ -231,9 +231,9 @@
             "type": "string"
           }
         },
-        "day_identity": {
+        "public_face": {
           "type": "string",
-          "description": "檯面身分／正常職業。反差公式（PERSONA_CANON.md 原則一）的支點，沒有它反差不成立。"
+          "description": "檯面／公開面貌：她在社群上呈現的公開樣子。可以是職業或學生身分，也可以完全不提職業——不公開職業本身就是一種合法設定，很多真實 KOL 就是這樣。選填，不得為了湊反差而硬塞職業。見 PERSONA_CANON.md 原則一。"
         }
       }
     },

@@ -1,5 +1,8 @@
 # Dance Clone SOP — 熱門舞蹈複製流程（Method B：動作驅動法）
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > 標準工作流程：丟一支 TikTok / Instagram 上的熱門跳舞短影音，抓它的音樂與舞步，
 > 讓本 studio 的 KOL 重新演出這支舞。
 >

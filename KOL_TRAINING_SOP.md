@@ -1,5 +1,8 @@
 # Virtual KOL Studio — 人格訓練 SOP
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > 每次換裝置或開新 session 時，請讓 Claude 讀取這份文件，它會知道完整的執行方式與注意事項。
 
 ---
