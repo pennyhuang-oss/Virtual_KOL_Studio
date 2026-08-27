@@ -167,20 +167,41 @@
       "不寫 candid moment——Phase A 是 calibration，需要可比較、可重複的 neutral natural pose",
       "depth_of_field 一律 adequate，不可 shallow（否則身體輪廓變糊）"
     ],
-    "shot_prompt_order": "SHOT/FRAMING 放第一行 → IDENTITY → BODY → HAIR → OUTFIT(含 neckline) → PLACE → LIGHT → CAMERA → REALISM"
+    "shot_prompt_order": "SHOT/FRAMING 放第一行 → IDENTITY → BODY → HAIR → OUTFIT(含 neckline) → PLACE → LIGHT → CAMERA → REALISM",
+    "_scope_correction": "Phase A 用 knee_up 判的是**臉＋上半身／腰臀輪廓的初選**，不能完整判 leg-to-torso ratio。完整身材比例的 final gate 在 Phase B 的全身驗證圖。先前寫成『Phase A 已完整確認臉＋身材』並不準確。"
   },
   "phase_b": {
     "steps": [
-      "使用者從 4 個候選挑 1 個（同時看臉與身材）",
+      "使用者從 4 個候選挑 1 個（同時看臉與上半身輪廓）",
       "media_upload → curl PUT → media_confirm → show_reference_elements(action='create')",
-      "用新 element 生成 2 張驗證圖：①正面 face_closeup ②right_30 full_body",
-      "Read 逐張確認：臉是否同一人、身材是否符合 body_visual、膚色是否維持",
-      "驗證不過就換候選人重來（成本 2 張，不是 13 張）"
-    ]
+      "生成 B1 與 B2 兩張驗證圖（規格見下）",
+      "Read 逐張確認；B2 若已漂移就不值得進 Phase C"
+    ],
+    "B1": {
+      "purpose": "錨點能不能重現",
+      "framing": "face_closeup",
+      "head_yaw": "front",
+      "location": "同 Phase A 場景",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_01",
+      "light": "同 Phase A 的乾淨窗光"
+    },
+    "B2": {
+      "purpose": "錨點能不能輕度 generalize（不是 stress test，是中度變量）",
+      "framing": "full_body",
+      "head_yaw": "right_30",
+      "body_pose": "standing",
+      "location": "park（不同但普通的 B 級場景）",
+      "outfit_id": "nico_outfit_03（不同但普通的日常穿搭）",
+      "hair_id": "nico_hair_02",
+      "light": "L6 薄雲天散射光（正常自然光）",
+      "_why": "B1/B2 若同場景同服裝同光線，只驗到『能不能重現』，驗不到『能不能輕度外推』。"
+    },
+    "final_body_gate": "B2 的全身圖是身材比例的最終把關點，不是 Phase A。"
   },
   "phase_c_quota": {
     "_changed_from_v1": "移除 A 級硬配額與 B 級 7–8 的規定（見 review packet §4）。identity training 的第一優先是身分覆蓋，不是社群內容的地點嚮往感配比。",
-    "shots": 13,
+    "shots": 19,
     "location_tier": {
       "C_min": 2,
       "A_required": false
@@ -196,8 +217,9 @@
       },
       "framing": {
         "face_closeup": ">=2",
+        "chest_up": ">=4",
         "waist_up": ">=3",
-        "full_body": ">=2"
+        "full_body": ">=4"
       },
       "body_pose_distinct": ">=4",
       "expression_distinct": ">=5",
@@ -218,9 +240,358 @@
     },
     "_filter_note": "pilot 第一輪 meitu=0、強美顏=0。CCD 只用在 waist_up / knee_up（臉部解析度足夠），不用在 full_body。Soul 穩定後再於 stress test 加入 meitu/CCD，通過才升格為訓練規則。",
     "row_order": "shuffled_per_persona",
-    "_row_order_note": "v1 的 validator 用固定演算法指派濾鏡與視角，導致 20 位的第 1 列全部是 meitu＋自拍、第 13 列全部是他拍＋iPhone＋A 級。v2 禁止任何欄位與列號綁定。"
+    "_row_order_note": "v1 的 validator 用固定演算法指派濾鏡與視角，導致 20 位的第 1 列全部是 meitu＋自拍、第 13 列全部是他拍＋iPhone＋A 級。v2 禁止任何欄位與列號綁定。",
+    "structure": "7 clean identity anchors + 12 lifestyle coverage = 19（endpoint 上限 20）",
+    "clean_anchor_min": {
+      "face_closeup_clean": 2,
+      "full_body_body_readable": 3,
+      "right_side_clean": 1
+    },
+    "harsh_light_max": {
+      "L1_single_ugly_overhead": 3,
+      "_note": "官方 training guidance 偏向 clear/well-lit。困難光線移到 Phase D。"
+    },
+    "all_training_shots_identity_safe": true
   },
   "phase_c_shots": [
+    {
+      "shot_id": "nico_a01",
+      "purpose": "identity_core",
+      "pillar": "anchor",
+      "scene": "咖啡廳靠窗的位子坐著，正對鏡頭，沒有在做任何事",
+      "location": "local_cafe",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "桌上的咖啡杯",
+        "攤開的雜誌"
+      ],
+      "framing": "face_closeup",
+      "view": "third_person",
+      "head_yaw": "front",
+      "head_pitch": "neutral",
+      "expression": "neutral_relaxed",
+      "eye_gaze": "camera",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L2_single_window_daylight",
+        "key": "咖啡廳的大面窗日光從她左前方 45 度、略高於視線高度進來",
+        "bounce": "白牆與淺色地面把光柔和平均地補回她臉的暗面，臉部沒有明顯陰影",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對她的臉測光，窗外過曝成白，室內深處落入柔和陰影",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "clean",
+        "highlight_clipping": "none",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_a02",
+      "purpose": "identity_core",
+      "pillar": "anchor",
+      "scene": "同一個位子，身體轉向左邊，臉轉回鏡頭",
+      "location": "local_cafe",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "桌上的咖啡杯",
+        "手邊的手機"
+      ],
+      "framing": "chest_up",
+      "view": "third_person",
+      "head_yaw": "left_30",
+      "head_pitch": "neutral",
+      "expression": "soft_smile",
+      "eye_gaze": "camera",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L2_single_window_daylight",
+        "key": "咖啡廳的大面窗日光從她左前方 45 度、略高於視線高度進來",
+        "bounce": "白牆與淺色地面把光柔和平均地補回她臉的暗面，臉部沒有明顯陰影",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對她的臉測光，窗外過曝成白，室內深處落入柔和陰影",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "clean",
+        "highlight_clipping": "none",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_a03",
+      "purpose": "identity_core",
+      "pillar": "anchor",
+      "scene": "白天的人行道上站著，身體轉向右邊，臉轉回鏡頭",
+      "location": "city_street",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_02",
+      "props": [
+        "深棕小方包",
+        "手上的外帶杯"
+      ],
+      "framing": "chest_up",
+      "view": "third_person",
+      "head_yaw": "right_30",
+      "head_pitch": "neutral",
+      "expression": "neutral_relaxed",
+      "eye_gaze": "camera",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L6_soft_overcast",
+        "key": "薄雲天的散射光，沒有硬陰影",
+        "bounce": "淺色人行道地面把光均勻補回她右側臉的暗面",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，天空略過曝，臉部細節完整",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "clean",
+        "highlight_clipping": "none",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false,
+      "_note": "專為 Nico 的右側 identity marker（右鼻翼小痣）而設：右側、高解析、無遮擋、乾淨光線"
+    },
+    {
+      "shot_id": "nico_a04",
+      "purpose": "identity_core",
+      "pillar": "anchor",
+      "scene": "同一段人行道，身體較大幅度轉向左側",
+      "location": "city_street",
+      "outfit_id": "nico_outfit_03",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "深棕小方包",
+        "手上的外帶杯"
+      ],
+      "framing": "chest_up",
+      "view": "third_person",
+      "head_yaw": "left_60",
+      "head_pitch": "neutral",
+      "expression": "listening_attentive",
+      "eye_gaze": "away",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L6_soft_overcast",
+        "key": "薄雲天的散射光，沒有硬陰影",
+        "bounce": "淺色人行道地面把光均勻補回她左側臉的暗面",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，天空略過曝，臉部細節完整",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "slightly_warm_auto",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_a05",
+      "purpose": "identity_core",
+      "pillar": "anchor",
+      "scene": "公園長椅上坐著，身體較大幅度轉向右側",
+      "location": "park",
+      "outfit_id": "nico_outfit_03",
+      "hair_id": "nico_hair_02",
+      "props": [
+        "米色帆布托特",
+        "手邊的保溫瓶"
+      ],
+      "framing": "chest_up",
+      "view": "third_person",
+      "head_yaw": "right_60",
+      "head_pitch": "neutral",
+      "expression": "mid_conversation",
+      "eye_gaze": "away",
+      "body_pose": "seated",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L6_soft_overcast",
+        "key": "薄雲天的散射光，沒有硬陰影",
+        "bounce": "淺色人行道地面把光均勻補回她右側臉的暗面",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "對臉測光，天空略過曝，臉部細節完整",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "slightly_warm_auto",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
+    {
+      "shot_id": "nico_a06",
+      "purpose": "body_pose_coverage",
+      "pillar": "anchor",
+      "scene": "公園步道上站著，正對鏡頭，雙手自然垂下",
+      "location": "park",
+      "outfit_id": "nico_outfit_03",
+      "hair_id": "nico_hair_01",
+      "props": [
+        "深棕小方包",
+        "手上的保溫瓶"
+      ],
+      "framing": "full_body",
+      "view": "third_person",
+      "head_yaw": "front",
+      "head_pitch": "neutral",
+      "expression": "neutral_relaxed",
+      "eye_gaze": "camera",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L6_soft_overcast",
+        "key": "薄雲天的散射光，沒有硬陰影",
+        "bounce": "淺色步道地面把光均勻地補回她全身，腿與軀幹輪廓清楚",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "全身在同一個曝光值上，天空略過曝，身體比例完整可讀",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "centered",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false,
+      "_note": "第二張 body-readable 全身。ChatGPT 指出原本只有 c06 一張乾淨身材證據。"
+    },
+    {
+      "shot_id": "nico_a07",
+      "purpose": "body_pose_coverage",
+      "pillar": "anchor",
+      "scene": "同一條步道，身體轉向右側四分之三，臉轉回鏡頭",
+      "location": "park",
+      "outfit_id": "nico_outfit_01",
+      "hair_id": "nico_hair_04",
+      "props": [
+        "米色帆布托特",
+        "手上的保溫瓶"
+      ],
+      "framing": "full_body",
+      "view": "third_person",
+      "head_yaw": "right_30",
+      "head_pitch": "neutral",
+      "expression": "soft_smile",
+      "eye_gaze": "camera",
+      "body_pose": "standing",
+      "face_visibility": "unobstructed",
+      "camera": {
+        "type": "phone_rear",
+        "distortion": "none",
+        "depth_of_field": "adequate"
+      },
+      "light": {
+        "family": "L6_soft_overcast",
+        "key": "薄雲天的散射光",
+        "bounce": "淺色步道地面均勻補光，側面輪廓與腿身比例清楚",
+        "bounce_type": "diffuse",
+        "secondary_source": null,
+        "exposure_choice": "全身同一曝光值，天空略過曝",
+        "occlusion": null
+      },
+      "imperfection_profile": {
+        "identity_safe": true,
+        "composition": "off_center",
+        "motion": "none",
+        "white_balance": "neutral",
+        "background_clutter": "moderate",
+        "highlight_clipping": "allowed",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
+      },
+      "filter": "none",
+      "signature_family": null,
+      "career_related": false
+    },
     {
       "shot_id": "nico_c01",
       "purpose": "identity_core",
@@ -260,11 +631,14 @@
         "motion": "none",
         "white_balance": "neutral",
         "background_clutter": "moderate",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": "nail_studio",
-      "career_related": false
+      "career_related": true
     },
     {
       "shot_id": "nico_c02",
@@ -305,7 +679,10 @@
         "motion": "minor_hand_blur",
         "white_balance": "slightly_cool_auto",
         "background_clutter": "heavy",
-        "highlight_clipping": "none"
+        "highlight_clipping": "none",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": "nail_studio",
@@ -337,20 +714,23 @@
         "depth_of_field": "adequate"
       },
       "light": {
-        "family": "L1_single_ugly_overhead",
-        "key": "廚房天花板一盞冷白 LED 直打在她頭頂",
-        "bounce": "淺色流理台面把一點光反射回下巴，但補得不多",
+        "family": "L2_single_window_daylight",
+        "key": "廚房小窗的日光從她右側進來",
+        "bounce": "白色流理台面把光補回她的下顎",
         "bounce_type": "diffuse",
         "secondary_source": null,
-        "exposure_choice": "對臉測光，眼窩與鎖骨下方留下明顯陰影，這張刻意不好看",
+        "exposure_choice": "對臉測光，窗外過曝，櫥櫃下方陰影",
         "occlusion": null
       },
       "imperfection_profile": {
+        "identity_safe": true,
         "composition": "centered",
         "motion": "none",
-        "white_balance": "slightly_cool_auto",
+        "white_balance": "neutral",
         "background_clutter": "moderate",
-        "highlight_clipping": "none"
+        "highlight_clipping": "allowed",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -395,7 +775,10 @@
         "motion": "none",
         "white_balance": "slightly_warm_auto",
         "background_clutter": "moderate",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -440,7 +823,10 @@
         "motion": "none",
         "white_balance": "neutral",
         "background_clutter": "clean",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -485,7 +871,10 @@
         "motion": "subject_motion",
         "white_balance": "slightly_cool_auto",
         "background_clutter": "heavy",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -530,7 +919,10 @@
         "motion": "none",
         "white_balance": "neutral",
         "background_clutter": "clean",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": "nail_studio",
@@ -575,7 +967,10 @@
         "motion": "none",
         "white_balance": "slightly_cool_auto",
         "background_clutter": "moderate",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -607,20 +1002,23 @@
         "depth_of_field": "adequate"
       },
       "light": {
-        "family": "L1_single_ugly_overhead",
-        "key": "房間天花板一盞冷白吸頂燈",
-        "bounce": "木地板反射回一點暖色，但很弱",
+        "family": "L3_mixed_warm_cool_practical",
+        "key": "床頭閱讀燈從她右上方",
+        "bounce": "白色床單把暖光補回她臉的暗面",
         "bounce_type": "diffuse",
-        "secondary_source": null,
+        "secondary_source": "窗外路燈的冷白光落在她背後的牆",
         "exposure_choice": "對臉測光，床底下全黑",
         "occlusion": null
       },
       "imperfection_profile": {
+        "identity_safe": true,
         "composition": "off_center",
         "motion": "minor_hand_blur",
         "white_balance": "neutral",
         "background_clutter": "heavy",
-        "highlight_clipping": "none"
+        "highlight_clipping": "none",
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -665,7 +1063,10 @@
         "motion": "none",
         "white_balance": "slightly_cool_auto",
         "background_clutter": "heavy",
-        "highlight_clipping": "heavy"
+        "highlight_clipping": "heavy",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "none",
       "signature_family": null,
@@ -710,7 +1111,10 @@
         "motion": "none",
         "white_balance": "color_cast_from_environment",
         "background_clutter": "heavy",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "ccd",
       "signature_family": null,
@@ -755,107 +1159,80 @@
         "motion": "subject_motion",
         "white_balance": "slightly_cool_auto",
         "background_clutter": "heavy",
-        "highlight_clipping": "allowed"
+        "highlight_clipping": "allowed",
+        "identity_safe": true,
+        "face_motion_blur": false,
+        "face_detail_preserved": true
       },
       "filter": "ccd",
-      "signature_family": null,
-      "career_related": false
-    },
-    {
-      "shot_id": "nico_c13",
-      "purpose": "identity_core",
-      "pillar": "私下 / 深夜",
-      "scene": "深夜坐在床上，燈都關了只剩手機的光",
-      "location": "own_bedroom",
-      "outfit_id": "nico_outfit_07",
-      "hair_id": "nico_hair_05",
-      "props": [
-        "手機",
-        "床邊脫下的銀色細跟涼鞋"
-      ],
-      "framing": "face_closeup",
-      "view": "selfie_front",
-      "head_yaw": "front",
-      "head_pitch": "up_10",
-      "expression": "quiet_self_aware",
-      "eye_gaze": "camera",
-      "body_pose": "seated",
-      "face_visibility": "unobstructed",
-      "camera": {
-        "type": "phone_front",
-        "distortion": "mild",
-        "depth_of_field": "adequate"
-      },
-      "light": {
-        "family": "L4_night_signage",
-        "key": "手機螢幕本身是唯一主光，從她臉的正下方往上打",
-        "bounce": "白色床單把一點光反射回下顎",
-        "bounce_type": "diffuse",
-        "secondary_source": "窗外街燈的橘光落在她的左肩與髮尾",
-        "exposure_choice": "對臉測光，手機螢幕邊緣過曝，房間全黑",
-        "occlusion": null
-      },
-      "imperfection_profile": {
-        "composition": "off_center",
-        "motion": "none",
-        "white_balance": "slightly_cool_auto",
-        "background_clutter": "clean",
-        "highlight_clipping": "allowed"
-      },
-      "filter": "none",
       "signature_family": null,
       "career_related": false
     }
   ],
   "phase_d_stress_test": {
     "_purpose": "Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還守得住。這是本 repo 從來沒做過的一步——過去只評估訓練圖本身的一致性，沒有測訓練後的漂移。",
-    "count": 10,
+    "count": 13,
     "model": "soul_2 + nico soul_id",
     "shots": [
       {
+        "id": "st00",
+        "test": "乾淨基準線",
+        "spec": "普通 B 級室內、乾淨自然光、chest_up、neutral 表情、nico_outfit_01、nico_hair_01、無濾鏡。**其餘所有 stress shot 的比較基準**，不是再測一次漂亮照片。"
+      },
+      {
         "id": "st01",
-        "test": "基準",
-        "spec": "正面 face_closeup，室內窗光，nico_outfit_01，nico_hair_01"
+        "test": "正面基準",
+        "spec": "正面 face_closeup，室內窗光"
       },
       {
         "id": "st02",
         "test": "左 3/4",
-        "spec": "left_30 chest_up，同上"
+        "spec": "left_30 chest_up"
       },
       {
         "id": "st03",
         "test": "右 3/4",
-        "spec": "right_30 chest_up，同上"
+        "spec": "right_30 chest_up——對照右鼻翼痣這個 marker 是否被學到"
       },
       {
         "id": "st04",
         "test": "全身比例",
-        "spec": "full_body 站姿，adequate DOF——驗身材沒有被放大成豐滿"
+        "spec": "full_body 站姿 adequate DOF——驗身材沒被放大成豐滿"
       },
       {
         "id": "st05",
         "test": "坐姿",
-        "spec": "seated waist_up，驗坐下時軀幹比例是否穩定"
+        "spec": "seated waist_up"
       },
       {
         "id": "st06",
         "test": "戶外散射光",
-        "spec": "陰天街上 knee_up——訓練集沒有強戶外光"
+        "spec": "陰天街上 knee_up"
       },
       {
         "id": "st07",
         "test": "夜間混光",
-        "spec": "夜間街邊招牌光 waist_up——測色偏下的膚色穩定度"
+        "spec": "夜間街邊招牌光 waist_up"
       },
       {
         "id": "st08",
         "test": "C 級醜光線",
-        "spec": "超商冷白日光燈頂光 waist_up——最容易讓臉崩的條件"
+        "spec": "超商冷白日光燈頂光 waist_up"
       },
       {
-        "id": "st09",
-        "test": "換髮型",
-        "spec": "完全不同髮型（長髮接髮或高馬尾），驗 identity 是否綁在短鮑伯上"
+        "id": "st08b",
+        "test": "極端手機下打光",
+        "spec": "深夜房間，手機螢幕由下往上為唯一主光，face_closeup 自拍。**原訓練集 c13，已移出訓練改列 stress**——訓練資料不該包含這種把骨相打變形的光。"
+      },
+      {
+        "id": "st09a",
+        "test": "髮型變化（中度）",
+        "spec": "短髮全部往後／濕髮感／短 bob 外翹／half-up。先測中度。"
+      },
+      {
+        "id": "st09b",
+        "test": "髮型變化（極端）",
+        "spec": "長髮接髮或高馬尾。**只有 st09a 通過才測**——一次跳到極端，失敗時分不清是 hairstyle independence 不夠還是變量太大。"
       },
       {
         "id": "st10",
@@ -863,26 +1240,58 @@
         "spec": "nico_outfit_07 派對長洋裝，驗 identity 是否綁在極簡職人造型上"
       }
     ],
-    "known_risk": "訓練集 13 張有 4 張在她自己的工作室、4 張在她房間。若 st01–st10 出現『把工作室或房間烙進人物』（換場景時背景仍冒出美甲桌或她的床），代表訓練集的場景集中度過高，需回頭調整。"
+    "known_risk": "家 5 張 + 工作室 3 張 = 8/19（42%）。**7 張 clean identity anchor 全部不在家或工作室**，所以最強的身分訊號沒有跟這兩個空間綁在一起。若 st06–st08 仍出現固定背景烙印，代表 lifestyle 那 12 張的世界集中度仍需再降。",
+    "dominant_training_outfit": {
+      "outfit_id": "nico_outfit_08",
+      "count": 4,
+      "ratio": "4/19 = 21%",
+      "_note": "若 Phase D 出現 outfit burn-in，這套是第一個要懷疑的來源。目前不設硬上限，等 pilot 結果回頭看。"
+    }
   },
   "soul_qa_rubric": {
     "_scale": "每項 0–2 分。0=明顯失敗，1=輕微漂移，2=穩定。",
     "items": [
-      "face_identity 臉部同一性",
-      "body_identity 身材比例同一性",
-      "apparent_age 年齡感",
-      "skin_tone 膚色（不因場景色溫崩掉）",
-      "hair_independence 換髮型後仍是同一人",
-      "outfit_independence 換穿搭後仍是同一人",
-      "environment_independence 換場景後仍是同一人",
-      "no_scene_burn_in 沒有把訓練場景烙進人物",
-      "no_outfit_burn_in 沒有把訓練服裝烙進人物"
+      "face_identity",
+      "body_identity",
+      "apparent_age",
+      "skin_tone",
+      "hair_independence",
+      "outfit_independence",
+      "environment_independence",
+      "no_scene_burn_in",
+      "no_outfit_burn_in"
     ],
-    "pass_threshold": {
-      "total_min": 14,
-      "per_item_min": 1,
-      "hard_fail": "face_identity 或 body_identity 任一為 0，整批不通過，直接回頭改訓練集"
-    },
-    "_note": "門檻先訂在這裡，但這是第一次做，數字本身也是待驗證的假設。第一位跑完後應回頭檢討門檻是否合理。"
-  }
+    "hard_gates": [
+      "face_identity 在任一 identity_core 測項（st00–st05）為 0 → 整批 fail",
+      "body_identity 在 st04（全身）或 st05（坐姿）為 0 → 整批 fail",
+      "出現明顯固定背景烙印（換場景仍冒出工作室或她的房間）→ 直接 fail",
+      "換裝後仍固定帶出 training garment → 直接 fail"
+    ],
+    "aggregate_threshold": "**待定，不憑空訂。**",
+    "threshold_method": {
+      "name": "Retroactive Benchmark",
+      "_why": "上一版寫 14/18 是我憑空訂的。而且 9 項每項至少 1 分時，4 項給 1 分 + 5 項給 2 分 = 14 剛好 PASS——四個維度都有可見漂移仍會通過，門檻太鬆。",
+      "steps": [
+        "從 repo 已 ready 的 6 個 Soul 中，挑 1–2 個目前生產環境公認最好用的",
+        "若有歷史上已知不好的 soul（例如 rainie-hsu 已 deprecated 的 994e33d2 舊 soul），一併測",
+        "對它們跑同一套 Phase D 12 張與同一套 rubric",
+        "得到 GOOD soul 的實際分數與 KNOWN-BAD soul 的實際分數",
+        "用這個區間訂 Nico 的 gate——門檻變成『至少達到我們現在已經願意上線的角色品質』"
+      ],
+      "cost": "每個既有 soul 12 張，1–2 個 soul 共 12–24 張。比訓練完才發現門檻訂錯便宜太多。"
+    }
+  },
+  "training_endpoint_preflight": {
+    "verified_at": "2026-08-27",
+    "method": "直接讀取本專案實際呼叫的 MCP 工具 schema（mcp__higgs__show_characters）",
+    "provider": "Higgsfield",
+    "tool": "show_characters(action='train')",
+    "model_type": "soul_2",
+    "min_training_images": 5,
+    "max_training_images": 20,
+    "verbatim": "train (needs `name` + 5-20 ref images, ~10 min, non-blocking) / Required with medias to total 5-20 images for action=train",
+    "note": "公開 Help Center 的 Soul ID flow 寫 minimum 20，那是 Web UI 規格，與本專案使用的 API endpoint 不同。repo 歷史一致：rainie-hsu v2 以本工具送 13 張成功訓練。",
+    "decision": "13 張在合法範圍內，但既然上限是 20，選擇用掉這個 headroom 補足身分證據缺口——不是被規格逼的，是為了修 ChatGPT §9–§11 指出的真實缺口。"
+  },
+  "signature_family_key": "nail_studio"
 }

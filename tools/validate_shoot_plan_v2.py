@@ -115,6 +115,77 @@ def validate(pilot, registry):
         if s['filter']=='ccd' and s['framing']=='full_body':
             err.append(f"{s['shot_id']} CCD 不可用在 full_body（臉部解析度不足）")
 
+    # --- 訓練張數必須落在實際 endpoint 範圍 ---
+    pf=pilot.get('training_endpoint_preflight')
+    if not pf:
+        err.append("缺 training_endpoint_preflight——不可用歷史成功紀錄推定目前 endpoint 的張數限制")
+    else:
+        lo,hi=pf['min_training_images'],pf['max_training_images']
+        if not lo<=n<=hi: err.append(f"訓練張數 {n} 不在 endpoint 允許範圍 {lo}-{hi}（{pf['verified_at']} 實查）")
+
+    # --- 訓練圖必須 identity_safe：臉不能糊 ---
+    for s2 in shots:
+        ip=s2.get('imperfection_profile',{})
+        if ip.get('identity_safe') is not True: err.append(f"{s2['shot_id']} imperfection_profile.identity_safe 必須為 true")
+        if ip.get('face_motion_blur') is True: err.append(f"{s2['shot_id']} 訓練圖不可有 face_motion_blur")
+        if ip.get('face_detail_preserved') is not True: err.append(f"{s2['shot_id']} 訓練圖必須 face_detail_preserved")
+
+    # --- 乾淨身分錨點下限 ---
+    ca=q.get('clean_anchor_min',{})
+    def clean(s2): return (s2['filter']=='none' and s2['face_visibility']=='unobstructed'
+                           and s2['light']['family'] in ('L2_single_window_daylight','L6_soft_overcast')
+                           and s2['camera']['type']=='phone_rear')
+    cf=sum(1 for s2 in shots if s2['framing']=='face_closeup' and clean(s2))
+    if cf < ca.get('face_closeup_clean',0): err.append(f"乾淨 face_closeup 只有 {cf}，需 >= {ca['face_closeup_clean']}")
+    ob=pilot['outfits']
+    fb=sum(1 for s2 in shots if s2['framing']=='full_body' and ob[s2['outfit_id']]['body_readable'] and clean(s2))
+    if fb < ca.get('full_body_body_readable',0): err.append(f"乾淨且 body_readable 的全身只有 {fb}，需 >= {ca['full_body_body_readable']}")
+    rs=sum(1 for s2 in shots if s2['head_yaw'].startswith('right') and clean(s2)
+           and s2['framing'] in ('face_closeup','chest_up'))
+    if rs < ca.get('right_side_clean',0): err.append(f"乾淨的右側高資訊角度只有 {rs}，需 >= {ca['right_side_clean']}")
+
+    # --- 困難光線上限 ---
+    hl=q.get('harsh_light_max',{})
+    for fam,mx in hl.items():
+        if fam.startswith('_'): continue
+        v=sum(1 for s2 in shots if s2['light']['family']==fam)
+        if v>mx: err.append(f"{fam} 有 {v} 張 > 上限 {mx}（官方 training guidance 偏向 clear/well-lit）")
+
+    # --- anchor 不可落在角色的招牌世界或住處 ---
+    HOME={'own_bedroom','own_kitchen','own_entryway','own_bathroom','own_living_room','own_balcony'}
+    for s2 in shots:
+        if s2.get('pillar')=='anchor' and (s2['location'] in HOME or registry.get('defaults',{}).get(s2['location'])):
+            err.append(f"{s2['shot_id']} 是 identity anchor，不可放在住處或職業空間（會把最強身分訊號綁在該場景）")
+
+    # --- signature_family / career_related 由 registry 推導 ---
+    key=pilot.get('signature_family_key')
+    for s2 in shots:
+        dflt=registry.get('defaults',{}).get(s2['location'])
+        exp_sf = (dflt['signature_family'].replace('{persona_workplace}',key) if dflt else None)
+        exp_cr = bool(dflt['career_related_default']) if dflt else False
+        if s2.get('signature_family')!=exp_sf and not s2.get('label_override_reason'):
+            err.append(f"{s2['shot_id']} signature_family={s2.get('signature_family')}，registry 推導應為 {exp_sf}（要改需填 label_override_reason）")
+        if bool(s2.get('career_related'))!=exp_cr and not s2.get('label_override_reason'):
+            err.append(f"{s2['shot_id']} career_related={s2.get('career_related')}，registry 推導應為 {exp_cr}（要改需填 label_override_reason）")
+
+    # --- Phase A / B / D gate ---
+    pa=pilot.get('phase_a',{}); ic2=pa.get('identical_across_all_four',{})
+    if pa.get('count')!=4: err.append("Phase A 必須是 4 個候選 identity")
+    if ic2.get('framing')!='knee_up': err.append("Phase A framing 必須 knee_up（臉＋腰臀輪廓同時可判）")
+    if ic2.get('camera',{}).get('depth_of_field')!='adequate': err.append("Phase A DOF 必須 adequate")
+    ao=ic2.get('outfit_id')
+    if ao and not pilot['outfits'][ao].get('body_readable'): err.append(f"Phase A 選角服 {ao} 必須 body_readable=true")
+    if ao and not pilot['outfits'][ao].get('neckline'): err.append(f"Phase A 選角服 {ao} 必須明寫 neckline")
+    pb=pilot.get('phase_b',{})
+    if not (pb.get('B1') and pb.get('B2')): err.append("Phase B 必須有 B1 與 B2 兩張")
+    elif pb['B2'].get('framing')!='full_body': err.append("Phase B 的 B2 必須是 full_body（身材比例最終把關）")
+    pd=pilot.get('phase_d_stress_test',{})
+    if len(pd.get('shots',[]))!=pd.get('count'): err.append("Phase D count 與實際 shots 數不符")
+    ids={x['id'] for x in pd.get('shots',[])}
+    if 'st00' not in ids: err.append("Phase D 缺 st00 乾淨基準線（其他 stress shot 沒有比較基準）")
+    rub=pilot.get('soul_qa_rubric',{})
+    if not rub.get('hard_gates'): err.append("QA rubric 缺 hard_gates（總分會掩蓋關鍵失敗）")
+
     # --- 反作弊：不完美攝影變數不可全部相同 ---
     for f in ['composition','white_balance','background_clutter']:
         vals=set(s.get('imperfection_profile',{}).get(f) for s in shots)
