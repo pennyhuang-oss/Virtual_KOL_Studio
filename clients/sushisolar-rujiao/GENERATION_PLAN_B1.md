@@ -1,7 +1,7 @@
 # 批次 1 生成規格（逐件細節・待核准）
 
 > 2026-08-25。**這份是給 Penny 逐件核准用的——確認後才送 Higgsfield 生成。**
-> 可預覽版本：<https://claude.ai/code/artifact/GENSPEC>
+> 可預覽版本（v2）：<https://claude.ai/code/artifact/07834065-b6e5-4f59-bab2-49d8e601f3ef>
 >
 > 每件都寫齊 **妝容／髮型／穿著／場景環境／拍攝角度／光線／情境／Caption**，
 > 目的是讓你在生成之前就能想像出畫面，不用靠生成結果去猜。
