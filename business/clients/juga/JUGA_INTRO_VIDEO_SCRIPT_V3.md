@@ -117,3 +117,35 @@ Rainie 用第一人稱講自己上禮拜五的一件事，產品是「順便提�
 - **Soul ID、造型參考圖、現成舞蹈素材**→ `HANDOFF_TO_AIGC_PRODUCER.md` 第 2 節
 - **生成 prompt 組裝方式、共用參數**→ `juga-rainie-aigc-worksheet.html` 第 01、03、04 節
 - **交片檢核清單**→ `juga-rainie-aigc-worksheet.html` 第 08 節
+
+## 7. 配音：音色已核准，固定 voice_id 卡在帳號額度，改用即時 audio_references
+
+**背景**：`HANDOFF_TO_AIGC_PRODUCER.md` 第 5 節把配音路線交給接手的製作師決定，列了幾條查證過但
+未實測的路。2026-08-27 實際測試如下：
+
+1. **soul_id 起始畫面當 `image_references` 線索**（`seed_audio` + Rainie 的 `start_frame_v2.png`）：
+   生成多組，測試「台灣腔＋御姐系」方向。`pitch_rate`／`speech_rate` 只能調音高/語速，
+   調不出口音本身；使用者回饋降 pitch 會讓音調變怪，改回原始音高、只調語速
+2. **Vincent 提供的 ElevenLabs 參考音檔**（`Tiffy — Taiwanese Bilingual Narrator`）：改用
+   `audio_references` 直接克隆這份音檔的音色，套用我們自己寫的文字（避開參考音檔本身的錯字咬字）
+3. **Vincent 提供的第二份參考音檔**：同樣走 `audio_references` 克隆，套用完整 V3 定案文案
+   （43.7 秒單次生成，非逐句拼接），**Vincent 核准此音色**
+
+**下一步卡住的地方**：依計畫要送 `create_voice_from_confirmed_audio` 把這個音色固定成
+`voice_id`，回傳 `Error creating voice: Voice limit reached — delete a voice to add a new one.`——
+帳號的自建（element）語音數量已達上限。現有 3 個：`Faye Tan`、`Tan XiaoXiao`、`Yulenda Clean`（見
+`HANDOFF_TO_AIGC_PRODUCER.md` 第 5 節，Penny 聽過覺得都不像 Rainie 的人設，但不確定是否有其他
+KOL/專案仍在使用，刪除語音不可逆，未經確認不能自行刪除)。
+
+**Vincent 裁決（2026-08-27）**：**不解決額度問題，暫不建立固定 `voice_id`**。正式生成時直接把
+參考音檔當 `audio_references` 現場餵給 `seed_audio`，不透過固定聲音資產。
+
+**這個做法的已知風險**：沒有固定 `voice_id`，每次呼叫 `seed_audio` 都是重新從參考音檔「抽一次」
+音色，不是鎖定同一個訓練好的聲音模型——多次獨立呼叫之間音色/語氣有可能有些微飄移。**因應方式**：
+正式生成時盡量比照 2026-08-27 的測試做法，一次餵完整段文字生成，不要切成多支獨立呼叫；如果之後要
+做長版（例如回頭套用舊版 57 句/12 段旁白），切分點越多、音色跑掉的風險越高，屆時需要重新考慮解決
+`voice_id` 額度問題（刪除現有 3 個之一，或請客戶/Penny 加開額度）。
+
+**參考音檔存放**：使用者上傳的兩份參考音檔（ElevenLabs Tiffy 樣本、第二份核准樣本）目前只存在
+Higgsfield 平台的 media 資產裡（`media_id` 見對話紀錄），未存入本 repo——如需在其他 session 重現
+這個聲音，需要 Vincent 重新提供音檔。
