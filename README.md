@@ -69,6 +69,7 @@ Virtual_KOL_Studio/
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
 ├── BENCHMARK_ACCOUNTS.md        # 原始 6 位 KOL 的 benchmark 帳號整體彙整（新 6 位不採用此法，見各自 content_style.md）
 ├── CLAUDE_HANDOFF.md            # Claude session 交接文件
+├── PHOTO_DIRECTION_STANDARD.md  # 攝影指導標準：相機參數/構圖/姿勢/道具/AI-tell + 送生成前十項稽核
 ├── SEXY_SCENE_LIBRARY.md        # 共用場景庫 + 降低「AI 感」技術要點（11 位共用）
 ├── WARDROBE_SYSTEM.md           # 造型差異化引擎：穿搭/髮型/地點層級/微物件四轉盤（11 位共用）
 ├── REELS_AND_STRUCTURE_SYSTEM.md # 短影音剪接密度/情境設計 + Carousel「1 setup × N 表情」結構
