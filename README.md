@@ -61,6 +61,35 @@
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
 
+### Batch 3（2026-08-27 建檔，20 位，待選角與訓練）
+
+> 全部依 [`PERSONA_CANON.md`](PERSONA_CANON.md) 五條原則建立。`generation_notes.md` 皆為 PENDING，尚未執行任何生成。
+> 規劃全文見 [`NEW_20_PERSONAS_PLAN.md`](NEW_20_PERSONAS_PLAN.md)。
+
+| ID | 名字 | 城市 | 檯面設定 | Soul ID | 狀態 |
+|----|------|------|----------|---------|------|
+| [angel-chiu](kols/angel-chiu/) | **Angel Chiu** 邱安晴 | 台北 | 護理師 | 待訓練 | draft |
+| [nico-tsai](kols/nico-tsai/) | **Nico Tsai** 蔡妮可 | 台北大安 | 美甲師 / 個人工作室 | 待訓練 | draft |
+| [tammy-chou](kols/tammy-chou/) | **Tammy Chou** 周語彤 | 台北五分埔 | 網拍老闆娘 / 服飾電商 | 待訓練 | draft |
+| [emma-kao](kols/emma-kao/) | **Emma Kao** 高映真 | 台南 | 新聞主播 | 待訓練 | draft |
+| [zoey-yeh](kols/zoey-yeh/) | **Zoey Yeh** 葉芷妍 | 宜蘭 | 花藝師 | 待訓練 | draft |
+| [miu-shiraishi](kols/miu-shiraishi/) | **Miu Shiraishi** 白石美羽 | 東京中目黑 | 咖啡店員 | 待訓練 | draft |
+| [rin-ayase](kols/rin-ayase/) | **Rin Ayase** 綾瀨凜 | 東京銀座 | 高級會員制酒店小姐 | 待訓練 | draft |
+| [nanami-fujiwara](kols/nanami-fujiwara/) | **Nanami Fujiwara** 藤原七海 | 箱根 | 溫泉旅館女將見習 | 待訓練 | draft |
+| [kanon-komori](kols/kanon-komori/) | **Kanon Komori** 小森花音 | 東京秋葉原 | 女僕咖啡廳店員 | 待訓練 | draft |
+| [jia-seo](kols/jia-seo/) | **Jia Seo** 서지아 | 首爾江南 | K-pop 舞蹈老師 | 待訓練 | draft |
+| [yerin-han](kols/yerin-han/) | **Yerin Han** 한예린 | 首爾 | 高爾夫教練 / 練習場 | 待訓練 | draft |
+| [somi-oh](kols/somi-oh/) | **Somi Oh** 오소미 | 釜山 | 美食帳號經營者 / 吃播 | 待訓練 | draft |
+| [zhiyi-shen](kols/zhiyi-shen/) | **Zhiyi Shen** 沈知意 | 上海陸家嘴 | 金融業 OL | 待訓練 | draft |
+| [wanyin-jiang](kols/wanyin-jiang/) | **Wanyin Jiang** 江晚吟 | 蘇州 | 旗袍店店主 / 古典舞背景 | 待訓練 | draft |
+| [ruoruo-tang](kols/ruoruo-tang/) | **Ruoruo Tang** 唐苡若 | 成都 | 皮拉提斯教練 | 待訓練 | draft |
+| [cheryl-soh](kols/cheryl-soh/) | **Cheryl Soh** 蘇思穎 | 新加坡（華裔） | 空服員 | 待訓練 | draft |
+| [wendy-yeo](kols/wendy-yeo/) | **Wendy Yeo** 楊薇伊 | 新加坡丹戎巴葛 | 調酒師 | 待訓練 | draft |
+| [peggy-lee](kols/peggy-lee/) | **Peggy Lee** 李珮甄 | 吉隆坡（華裔） | 汽車改裝店行銷企劃 | 待訓練 | draft |
+| [sydney-leong](kols/sydney-leong/) | **Sydney Leong** 梁欣妮 | 檳城喬治市（華裔） | 甜點師 / 烘焙工作室 | 待訓練 | draft |
+| [angeline-kwee](kols/angeline-kwee/) | **Angeline Kwee** 郭慧恩 | 雅加達（華裔） | 精品選物店主理人 | 待訓練 | draft |
+
+
 ---
 
 ## 目錄結構

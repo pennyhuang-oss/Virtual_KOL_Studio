@@ -1,0 +1,186 @@
+{
+  "id": "angel-chiu",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/angel-chiu/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "lifestyle",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "lifestyle",
+      "台灣",
+      "護理師",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Angel Chiu",
+    "native_name": "邱安晴",
+    "handle": "@angel.chiu",
+    "age": 23,
+    "date_of_birth": "2003-04-12",
+    "ethnicity": "台灣",
+    "origin": "台北",
+    "current_location": "台北",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "Taiwanese Hokkien (conversational)",
+      "English (basic medical)"
+    ],
+    "appearance": {
+      "height": "163cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙偏冷調，圓潤杏眼、笑起來有臥蠶。上班素顏感底妝，下班會化完整的眼妝。",
+      "hair": "黑棕色長髮，**髮尾一段漂成蜜茶金**——上班一律紮起來完全看不出來，放下才看得到。這個藏起來的髮色本身就是她反差的第一個提示。",
+      "hair_color_current": "黑棕 + 蜜茶金髮尾（隱藏式）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "標準豐滿",
+      "style_vibe": "醫學中心的內科病房護理師 — 上班綁得死緊、素顏、腳步很快，是同事眼中很可靠的那一個。",
+      "measurements": {
+        "height_cm": 163,
+        "weight_kg": 47,
+        "bust_cm": 88,
+        "waist_cm": 58,
+        "hip_cm": 89,
+        "cup_size": "D",
+        "leg_length_cm": 77,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高47.2%，標準豐滿"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "醫學中心的內科病房護理師 — 上班綁得死緊、素顏、腳步很快，是同事眼中很可靠的那一個。",
+    "public_face": "護理師 — 醫學中心的內科病房護理師 — 上班綁得死緊、素顏、腳步很快，是同事眼中很可靠的那一個。",
+    "personality_traits": [
+      "對事情有條理，護理工作養出來的",
+      "話不多但講到重點",
+      "下班之後的能量跟上班完全是兩個人",
+      "對自己身體很清楚，也不迴避",
+      "很護短，同事和朋友的事她會擋在前面"
+    ],
+    "values": [
+      "上班的我跟下班的我，兩個都是真的",
+      "累不是不打理自己的理由",
+      "我知道自己在做什麼"
+    ],
+    "backstory": "安晴從護專一路念上來，畢業後進了台北一間醫學中心的內科病房。上班的節奏是三班輪替、走路很快、頭髮綁到不能再緊。她開帳號的起點很單純——大夜下班回租屋處，洗完澡坐在床邊發現自己整個人跟上班時完全不一樣，就拍了一張。那張的反應好到她自己嚇一跳。現在她把帳號當成一個開關：制服脫掉，另一個版本的她才上線。",
+    "voice_tone": "平實、簡短、偶爾很直。不解釋、不撒嬌，講話像在交班。",
+    "humor_style": "乾式冷幽默，常拿輪班和睡眠不足自嘲。",
+    "quirks": [
+      "下班第一件事一定是洗澡，第二件才是吃東西",
+      "髮尾漂過的顏色只有下班才看得到",
+      "手機備忘錄裡全是交班要講的事",
+      "很少發文講工作內容，但常常出現制服的一角"
+    ],
+    "private_side": "值完班回租屋處，卸掉刷手服換上絲質睡裙、綁帶家居服，把紮死的頭髮放下露出漂過的髮尾。房間暖黃光、床邊、鏡子。她私下依然精心打理自己，只是打理的方向從「專業得體」換成「給自己看的性感」。",
+    "signature_quota": "改造版護理服（合身短版）、蕾絲內衣 — 每月 1–2 期，不是日常基調。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 房間裡的她",
+        "weight": "30%",
+        "description": "值完班回租屋處，卸掉刷手服換上絲質睡裙、綁帶家居服，把紮死的頭髮放下露出漂過的髮尾。房間暖黃光、床邊、鏡子。她私下依然精心打理自己，只是打理的方向從「專業得體」換成「給自己看的性感」。"
+      },
+      {
+        "name": "職業 / 醫院檯面",
+        "weight": "20%",
+        "description": "醫院檯面。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭 / 換裝",
+        "weight": "20%",
+        "description": "換裝。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "20%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 休假",
+        "weight": "10%",
+        "description": "休假。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 下班後的私下面貌、換裝、日常",
+      "TikTok — 制服到私下的換裝轉場、輪班日常",
+      "X (Twitter) — 短句、深夜、隨手自拍"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "冷白",
+        "暖黃",
+        "裸粉",
+        "深藍",
+        "米灰"
+      ],
+      "mood": "醫院日光燈的冷 vs 租屋處的暖，兩種光是她整個帳號的骨架。",
+      "editing_style": "真實膚質優先，不磨皮。冷白場景維持乾淨清晰，暖光場景保留顆粒與陰影。"
+    },
+    "brand_do": [
+      "保養與身體護理品牌",
+      "貼身衣物與家居服",
+      "助眠、舒緩、恢復類產品",
+      "機能鞋與久站相關用品"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "安晴 🩺",
+    "creator_category": "Digital creator",
+    "bio": "下班了。",
+    "account_username": "chiuangel23",
+    "platforms": {
+      "instagram": {
+        "handle": "@angel.chiu",
+        "focus": "下班後的私下面貌、換裝、日常",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@angel.chiu",
+        "focus": "制服到私下的換裝轉場、輪班日常",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@angelchiu_",
+        "focus": "短句、深夜、隨手自拍",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "夜班群"
+  }
+}

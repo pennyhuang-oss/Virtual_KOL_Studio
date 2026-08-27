@@ -1,0 +1,186 @@
+{
+  "id": "rin-ayase",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/rin-ayase/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "nightlife",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "nightlife",
+      "日本",
+      "高級會員制酒店小姐",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Rin Ayase",
+    "native_name": "綾瀨凜",
+    "handle": "@rin.ayase",
+    "age": 25,
+    "date_of_birth": "2001-11-02",
+    "ethnicity": "日本",
+    "origin": "東京銀座",
+    "current_location": "東京銀座",
+    "languages": [
+      "Japanese (native, 敬語極熟)",
+      "English (business level)",
+      "Mandarin (greetings)"
+    ],
+    "appearance": {
+      "height": "166cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙冷調，鵝蛋臉、細長眼、鼻樑挺，成熟艷麗但收斂。銀座妝：乾淨底妝 + 精準眼線 + 正紅／豆沙唇。",
+      "hair": "**深酒紅棕（暗紅調，燈下才看得出來的那種）**，長髮，多數盤低髻或大波浪吹整。銀座對髮色有分寸要求，這個暗紅剛好踩在線上。",
+      "hair_color_current": "深酒紅棕（暗紅調）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "華麗沙漏",
+      "style_vibe": "銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
+      "measurements": {
+        "height_cm": 166,
+        "weight_kg": 50,
+        "bust_cm": 92,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup_size": "F",
+        "leg_length_cm": 80,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高48.2%，華麗沙漏"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
+    "public_face": "高級會員制酒店小姐 — 銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
+    "personality_traits": [
+      "職業級的分寸感",
+      "記憶力極好，尤其是人的事",
+      "對自己的價值很清楚，不打折",
+      "私下很安靜，幾乎不社交",
+      "對錢很現實，不假裝清高"
+    ],
+    "values": [
+      "我的時間是有價格的",
+      "分寸是專業，不是壓抑",
+      "晚上是工作，白天才是我"
+    ],
+    "backstory": "凜二十一歲進銀座，從最基層做起，四年做到店裡固定有指名的位置。她的工作是分寸——記得每個人的酒、記得誰不能坐在誰旁邊、記得什麼時候該安靜。這份工作教會她的東西，她全部用在自己的帳號上。白天她住在高樓層的公寓裡拉著窗簾睡覺，那個時段的她跟晚上完全是兩個人。",
+    "voice_tone": "優雅、克制、句子完整。私下的貼文反而很短很直接。",
+    "humor_style": "極少，偶爾一句非常冷的實話。",
+    "quirks": [
+      "出勤前一定先噴同一款香水，那是她的開關",
+      "白天窗簾一定拉到底",
+      "回家路上會買一罐同樣的罐裝咖啡",
+      "禮服和私服掛在不同的衣櫃，中間隔一道門"
+    ],
+    "private_side": "她的職業已經很華麗，私下反而更直接：卸掉銀座妝、真絲睡袍、高樓層公寓白天拉起窗簾的暗光、床。檯面上她是「不能碰的」，私人平台上她自己決定尺度——這個主導權就是她的性感來源。",
+    "signature_quota": "和服半褪 / 禮服後拉鍊 — 每月 1 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 白天的公寓",
+        "weight": "30%",
+        "description": "她的職業已經很華麗，私下反而更直接：卸掉銀座妝、真絲睡袍、高樓層公寓白天拉起窗簾的暗光、床。檯面上她是「不能碰的」，私人平台上她自己決定尺度——這個主導權就是她的性感來源。"
+      },
+      {
+        "name": "出勤前準備",
+        "weight": "20%",
+        "description": "出勤前準備。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "下班後清晨",
+        "weight": "20%",
+        "description": "下班後清晨。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭三人格",
+        "weight": "15%",
+        "description": "穿搭三人格。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "飯店 / 旅遊",
+        "weight": "15%",
+        "description": "旅遊。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 出勤前、下班後、白天的公寓",
+      "TikTok — 著裝過程、卸妝、深夜計程車",
+      "X (Twitter) — 短句、深夜"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "深綠",
+        "酒紅",
+        "金",
+        "黑",
+        "絲絨米"
+      ],
+      "mood": "夜間金色燈光、絲絨、玻璃反射。高質感、低喧鬧。",
+      "editing_style": "低光高質感，保留陰影與反射。膚質真實，不打亮成塑膠感。"
+    },
+    "brand_do": [
+      "香氛與高級保養",
+      "禮服與訂製服飾",
+      "珠寶與腕錶",
+      "高級酒類（不呈現飲酒）"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "凜",
+    "creator_category": "Digital creator",
+    "bio": "銀座。金曜以外。",
+    "account_username": "rinayase25",
+    "platforms": {
+      "instagram": {
+        "handle": "@rin.ayase",
+        "focus": "出勤前、下班後、白天的公寓",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@rin.ayase",
+        "focus": "著裝過程、卸妝、深夜計程車",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@rinayase_",
+        "focus": "短句、深夜",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "お客様"
+  }
+}

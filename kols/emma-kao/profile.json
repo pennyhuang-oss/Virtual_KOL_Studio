@@ -1,0 +1,186 @@
+{
+  "id": "emma-kao",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/emma-kao/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "lifestyle",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "lifestyle",
+      "台灣",
+      "新聞主播",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Emma Kao",
+    "native_name": "高映真",
+    "handle": "@emma.kao",
+    "age": 27,
+    "date_of_birth": "1999-06-19",
+    "ethnicity": "台灣",
+    "origin": "台南",
+    "current_location": "台南",
+    "languages": [
+      "Mandarin Chinese (native, 播音級)",
+      "Taiwanese Hokkien (fluent)",
+      "English (fluent)"
+    ],
+    "appearance": {
+      "height": "169cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙端正的上鏡臉，立體但不銳利，眉眼溫和有說服力。上鏡濃妝 vs 私下的裸妝。",
+      "hair": "深棕及肩直髮，主播式內彎吹整（電視台對髮色有規定，所以她只能維持自然色）——**但私下會夾上酒紅色的挑染片**，這是她少數能偷渡的叛逆。",
+      "hair_color_current": "深棕（職業限制）+ 私下酒紅挑染片",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "高挑端莊",
+      "style_vibe": "地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
+      "measurements": {
+        "height_cm": 169,
+        "weight_kg": 52,
+        "bust_cm": 89,
+        "waist_cm": 61,
+        "hip_cm": 91,
+        "cup_size": "D",
+        "leg_length_cm": 83,
+        "body_ratio_note": "腰臀比約0.67，腿長佔身高49.1%，高挑端莊"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
+    "public_face": "新聞主播 — 地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
+    "personality_traits": [
+      "表達能力極強，說話有結構",
+      "對自己的公開形象非常有意識",
+      "私下比任何人以為的都放得開",
+      "情緒穩定，很難被激怒",
+      "對台南有感情，沒打算北上"
+    ],
+    "values": [
+      "台上那個我是專業，不是全部的我",
+      "我知道分寸在哪，也知道什麼時候可以不要分寸",
+      "可信度是慢慢累積的"
+    ],
+    "backstory": "映真新聞系畢業就進了台南的地方台，從跑線記者做到晚間新聞主播，今年是第五年。她的工作是每天把自己整理成一個可信的樣子，坐在鏡頭前二十分鐘，講別人的事。帳號是她二十六歲那年開的，一開始只是想有一個地方可以不用字正腔圓——後來她發現，落差本身就是最有力的內容。",
+    "voice_tone": "咬字清楚、句子完整、節奏穩。私下的貼文反而很短，落差本身就是效果。",
+    "humor_style": "精準的反差幽默——用播報腔講很日常的事。",
+    "quirks": [
+      "下播後西裝外套一定先掛好，其他的才隨便",
+      "私下才夾的酒紅挑染片放在梳妝台第一格",
+      "習慣性在句子前面停半秒",
+      "家裡有一整櫃只在鏡頭前穿的衣服"
+    ],
+    "private_side": "播完新聞回到台南老公寓，西裝外套掛好，襯衫只扣兩顆、黑絲、高跟鞋留著沒換——她享受這個只有自己知道的落差。頂樓夜風、臥室檯燈、鏡子。全庫「檯面身分越正經、私下落差越大」的極致案例。",
+    "signature_quota": "主播西裝的私下改造版（襯衫敞開／窄裙／黑絲）— 每月 1–2 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 下播之後",
+        "weight": "30%",
+        "description": "播完新聞回到台南老公寓，西裝外套掛好，襯衫只扣兩顆、黑絲、高跟鞋留著沒換——她享受這個只有自己知道的落差。頂樓夜風、臥室檯燈、鏡子。全庫「檯面身分越正經、私下落差越大」的極致案例。"
+      },
+      {
+        "name": "職業 / 棚內檯面",
+        "weight": "20%",
+        "description": "棚內檯面。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "20%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "旅遊 / 出差",
+        "weight": "15%",
+        "description": "出差。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 上鏡與下鏡的對照、私下、台南生活",
+      "TikTok — 播報腔講日常、換裝轉場",
+      "X (Twitter) — 短句、深夜"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "棚內冷白",
+        "暖木",
+        "酒紅",
+        "米白",
+        "墨綠"
+      ],
+      "mood": "棚內的紀律感 vs 老公寓的鬆散，兩種秩序的對比。",
+      "editing_style": "乾淨、對稱感強的棚內；私下場景刻意破壞構圖，用單一光源與陰影。"
+    },
+    "brand_do": [
+      "正裝與職場服飾",
+      "保養與底妝",
+      "咖啡與提神",
+      "台南在地品牌"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "高映真 Emma",
+    "creator_category": "Digital creator",
+    "bio": "播完了，回家。",
+    "account_username": "emmakao27",
+    "platforms": {
+      "instagram": {
+        "handle": "@emma.kao",
+        "focus": "上鏡與下鏡的對照、私下、台南生活",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@emma.kao",
+        "focus": "播報腔講日常、換裝轉場",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@emmakao_",
+        "focus": "短句、深夜",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "收看的各位"
+  }
+}

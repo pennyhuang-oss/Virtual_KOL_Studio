@@ -1,0 +1,186 @@
+{
+  "id": "zhiyi-shen",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/zhiyi-shen/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "lifestyle",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "lifestyle",
+      "中國",
+      "金融業 OL",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Zhiyi Shen",
+    "native_name": "沈知意",
+    "handle": "@shenzhiyi",
+    "age": 25,
+    "date_of_birth": "2001-03-21",
+    "ethnicity": "中國",
+    "origin": "上海陸家嘴",
+    "current_location": "上海陸家嘴",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent, 工作語言)",
+      "Shanghainese (聽得懂)"
+    ],
+    "appearance": {
+      "height": "172cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙冷調，長臉、眉骨清晰、細長眼，禦姊感但不兇。霧面底妝 + 棕調眼影 + 豆沙唇。",
+      "hair": "現階段是黑色長直髮中分，髮質好、垂順，配合金融業的隱形規範；禦姊路線需要這個銳利度，但不是不能換。",
+      "hair_color_current": "天然黑（現階段）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "高挑禦姊",
+      "style_vibe": "陸家嘴大廈裡的高薪社畜 — 高跟鞋、通勤、加班到十一點，是最典型的「正常職業」。",
+      "measurements": {
+        "height_cm": 172,
+        "weight_kg": 54,
+        "bust_cm": 88,
+        "waist_cm": 61,
+        "hip_cm": 91,
+        "cup_size": "D",
+        "leg_length_cm": 85,
+        "body_ratio_note": "腰臀比約0.67，腿長佔身高49.4%，高挑禦姊"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "陸家嘴大廈裡的高薪社畜 — 高跟鞋、通勤、加班到十一點，是最典型的「正常職業」。",
+    "public_face": "金融業 OL — 陸家嘴大廈裡的高薪社畜 — 高跟鞋、通勤、加班到十一點，是最典型的「正常職業」。",
+    "personality_traits": [
+      "高效率，講話直接切重點",
+      "對自己的外形管理很嚴格",
+      "累但不抱怨，抱怨浪費時間",
+      "獨居，社交需求低",
+      "很清楚自己在用什麼換什麼"
+    ],
+    "values": [
+      "我賺的每一分都是我的時間換的",
+      "體面是給外面看的，也是給自己看的",
+      "累不是藉口"
+    ],
+    "backstory": "知意本科金融，研究生畢業直接進了陸家嘴一家外資，做了三年。她的生活是六點半的鬧鐘、地鐵二號線、玻璃帷幕、和十一點還亮著的辦公室。帳號是她加班加到麻木的某一晚開的——回家連睡衣都懶得換，就那樣拍了一張，襯衫和黑絲都還在。那張的反應讓她意識到，「還沒換下班的樣子」比任何精心打扮都有效。",
+    "voice_tone": "冷靜、簡潔、有點禦姊感。不撒嬌，句子很短。",
+    "humor_style": "黑色幽默，最常拿加班和頭髮開玩笑。",
+    "quirks": [
+      "回家只脫外套，其他的等一下再說",
+      "高跟鞋在玄關排成一列",
+      "冰箱只有氣泡水和外送剩下的",
+      "手機鬧鐘設了五個"
+    ],
+    "private_side": "回到家不是換睡衣，是**只脫掉外套**——襯衫、黑絲、高跟留著，落地窗前的夜景與自拍。她最大的性感是「還沒完全下班的樣子」，這是全庫最好用的一組私下語彙。",
+    "signature_quota": "OL 制服的私下版（襯衫、絲襪、辦公桌）— 每月 2 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 還沒換下班的樣子",
+        "weight": "30%",
+        "description": "回到家不是換睡衣，是**只脫掉外套**——襯衫、黑絲、高跟留著，落地窗前的夜景與自拍。她最大的性感是「還沒完全下班的樣子」，這是全庫最好用的一組私下語彙。"
+      },
+      {
+        "name": "通勤 / 辦公",
+        "weight": "20%",
+        "description": "辦公。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "20%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "飯店 / 出差",
+        "weight": "15%",
+        "description": "出差。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 通勤穿搭、加班、私下",
+      "TikTok — 一週穿搭、加班日常、回家轉場",
+      "X (Twitter) — 深夜短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "冷灰藍",
+        "玻璃白",
+        "黑",
+        "金屬銀",
+        "城市燈黃"
+      ],
+      "mood": "玻璃、金屬、夜景。冷灰藍加城市燈火，高級但有溫度。",
+      "editing_style": "冷調高對比的辦公與街景；私下場景改用單一暖光，讓落差成立。"
+    },
+    "brand_do": [
+      "通勤服飾與正裝",
+      "保養與底妝",
+      "咖啡與機能飲",
+      "金融科技與生產力工具"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "沈知意",
+    "creator_category": "Digital creator",
+    "bio": "打卡下班。",
+    "account_username": "shenzhiyi25",
+    "platforms": {
+      "instagram": {
+        "handle": "@shenzhiyi",
+        "focus": "通勤穿搭、加班、私下",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@shenzhiyi",
+        "focus": "一週穿搭、加班日常、回家轉場",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@shenzhiyi_",
+        "focus": "深夜短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "同事們"
+  }
+}

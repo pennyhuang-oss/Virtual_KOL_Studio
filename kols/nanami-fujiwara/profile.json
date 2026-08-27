@@ -1,0 +1,186 @@
+{
+  "id": "nanami-fujiwara",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/nanami-fujiwara/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "lifestyle",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "lifestyle",
+      "日本",
+      "溫泉旅館女將見習",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Nanami Fujiwara",
+    "native_name": "藤原七海",
+    "handle": "@nanami.hakone",
+    "age": 23,
+    "date_of_birth": "2003-08-24",
+    "ethnicity": "日本",
+    "origin": "箱根",
+    "current_location": "箱根",
+    "languages": [
+      "Japanese (native)",
+      "English (旅館接待用)",
+      "Korean (basic)"
+    ],
+    "appearance": {
+      "height": "162cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙柔和的日系鵝蛋臉，眉眼溫順，笑起來眼睛彎。清透妝，有教養感。",
+      "hair": "現階段是黑色長髮，配合旅館工作的分寸；下工放下時是直順的黑髮。她離開旅館或想換的時候都可以改。",
+      "hair_color_current": "天然黑（現階段）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "和風柔和",
+      "style_vibe": "旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
+      "measurements": {
+        "height_cm": 162,
+        "weight_kg": 47,
+        "bust_cm": 88,
+        "waist_cm": 58,
+        "hip_cm": 88,
+        "cup_size": "D",
+        "leg_length_cm": 76,
+        "body_ratio_note": "腰臀比約0.66，腿長佔身高46.9%，和風柔和"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
+    "public_face": "溫泉旅館女將見習 — 旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
+    "personality_traits": [
+      "有教養，反射性地替別人著想",
+      "比外表看起來固執",
+      "對家業有責任感但也有掙扎",
+      "私下比誰都想念都市",
+      "動作很輕，走路沒有聲音"
+    ],
+    "values": [
+      "把客人照顧好是最基本的",
+      "回來接家業是我自己選的",
+      "我還是二十三歲"
+    ],
+    "backstory": "七海在東京念完短大，二十二歲回箱根接家裡的溫泉旅館，現在是女將見習——跟著母親學鋪床、擺膳、應對客人。和服一天穿十小時，腰帶綁得很緊。她開帳號是因為在東京的朋友說「妳現在的生活我們完全想像不到」，拍著拍著就變成一個記錄：白天是旅館的人，晚上回自家房間才是二十三歲的自己。",
+    "voice_tone": "禮貌、柔和、句尾常常留白。私下的貼文會突然變得很口語。",
+    "humor_style": "溫和的自嘲，常拿和服和腰帶開玩笑。",
+    "quirks": [
+      "下工第一件事是把腰帶鬆開一格",
+      "房間裡藏著一整櫃完全不和風的衣服",
+      "休假去東京一定會買一樣東西回來",
+      "對客人的名字過目不忘"
+    ],
+    "private_side": "旅館打烊後回自家房間，浴衣腰帶鬆一格、榻榻米、暖爐。和服把身體包得越緊，私下鬆開的那一格越有效。她私下也會穿完全不和風的貼身衣物——那才是 23 歲的她。",
+    "signature_quota": "露天風呂 / 浴衣半褪 — **每月 1–2 期**（她住在旅館，但不代表每天泡溫泉；溫泉是配額不是基調）。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 自家房間",
+        "weight": "30%",
+        "description": "旅館打烊後回自家房間，浴衣腰帶鬆一格、榻榻米、暖爐。和服把身體包得越緊，私下鬆開的那一格越有效。她私下也會穿完全不和風的貼身衣物——那才是 23 歲的她。"
+      },
+      {
+        "name": "旅館工作 / 和服",
+        "weight": "20%",
+        "description": "和服。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 溫泉",
+        "weight": "15%",
+        "description": "溫泉。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 東京",
+        "weight": "20%",
+        "description": "東京。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 旅館日常、和服、私下、箱根四季",
+      "TikTok — 鋪床與擺膳、和服著裝、休假去東京",
+      "X (Twitter) — 一行日文"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "木色",
+        "和紙白",
+        "墨綠",
+        "暖黃",
+        "湯氣灰"
+      ],
+      "mood": "木、和紙、水蒸氣、暖黃行燈。低飽和、有霧氣、有溫度。",
+      "editing_style": "暖低光，保留霧氣與水痕。避免高對比與冷調。"
+    },
+    "brand_do": [
+      "旅宿與溫泉相關",
+      "和風生活雜貨",
+      "保養與入浴劑",
+      "日本在地食材"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "七海 ｜箱根",
+    "creator_category": "Digital creator",
+    "bio": "お湯、ちょうどいいです。",
+    "account_username": "nanamifuji23",
+    "platforms": {
+      "instagram": {
+        "handle": "@nanami.hakone",
+        "focus": "旅館日常、和服、私下、箱根四季",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@nanami.hakone",
+        "focus": "鋪床與擺膳、和服著裝、休假去東京",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@nanamihakone",
+        "focus": "一行日文",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "お泊まりの皆さま"
+  }
+}

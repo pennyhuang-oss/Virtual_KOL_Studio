@@ -1,0 +1,186 @@
+{
+  "id": "miu-shiraishi",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/miu-shiraishi/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "lifestyle",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "lifestyle",
+      "日本",
+      "咖啡店員",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Miu Shiraishi",
+    "native_name": "白石美羽",
+    "handle": "@miu.shiraishi",
+    "age": 22,
+    "date_of_birth": "2004-05-16",
+    "ethnicity": "日本",
+    "origin": "東京中目黑",
+    "current_location": "東京中目黑",
+    "languages": [
+      "Japanese (native)",
+      "English (conversational)",
+      "Mandarin (basic)"
+    ],
+    "appearance": {
+      "height": "156cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白到透光的日系膚色，圓臉大眼、下垂眼尾，童顏。橘調腮紅打在眼下、水潤唇。",
+      "hair": "**淺亞麻米金（漂過兩次的高明度色）**，齊肩內彎 + 空氣瀏海。東京中目黑的咖啡店員染這個顏色是日常，也讓她跟同為日系的 Luna（黑短髮）視覺上完全分得開。",
+      "hair_color_current": "淺亞麻米金（漂色）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "童顏反差",
+      "style_vibe": "咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+      "measurements": {
+        "height_cm": 156,
+        "weight_kg": 44,
+        "bust_cm": 87,
+        "waist_cm": 55,
+        "hip_cm": 86,
+        "cup_size": "E",
+        "leg_length_cm": 72,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高46.2%，童顏反差"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+    "public_face": "咖啡店員 — 咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+    "personality_traits": [
+      "安靜，但不是害羞",
+      "手很穩，做事有節奏",
+      "對咖啡是真的懂，不是裝的",
+      "童顏但講話很成熟",
+      "一個人住習慣了，不太約人"
+    ],
+    "values": [
+      "好豆子不用講太多",
+      "我的時間我自己安排",
+      "安靜不代表沒有意見"
+    ],
+    "backstory": "美羽從專門學校畢業後進了中目黑一間自家烘焙的咖啡店，做了兩年，現在是店裡拉花最穩的人。她一天講不到十句話，但客人會為了看她做咖啡而排隊。帳號一開始只發拉花，後來她開始發下班後的公寓——圍裙脫掉之後的落差比任何一杯咖啡都有效，她自己也發現了。",
+    "voice_tone": "極短、日文為主、常常只有名詞。像便條紙。",
+    "humor_style": "面無表情地說很好笑的事，自己不笑。",
+    "quirks": [
+      "開店前一定先擦一次吧台，即使昨天擦過",
+      "圍裙帶子綁在前面，不是後面",
+      "下班的路上會繞去便利商店買同一款布丁",
+      "公寓很小，所有東西都在地板上"
+    ],
+    "private_side": "圍裙脫掉後的一人公寓：寬鬆針織滑到肩下、棉質內衣、地板矮桌前的慵懶。童顏配上這個身材的落差，是她私下最有效的畫面，而且她知道。",
+    "signature_quota": "咖啡店制服的私下版（圍裙留著、裡面換掉）— 每月 1 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 一人公寓",
+        "weight": "30%",
+        "description": "圍裙脫掉後的一人公寓：寬鬆針織滑到肩下、棉質內衣、地板矮桌前的慵懶。童顏配上這個身材的落差，是她私下最有效的畫面，而且她知道。"
+      },
+      {
+        "name": "咖啡店工作",
+        "weight": "20%",
+        "description": "咖啡店工作。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "20%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "15%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 中目黑",
+        "weight": "15%",
+        "description": "中目黑。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 拉花、店內、下班後的公寓",
+      "TikTok — 拉花特寫、蒸奶聲、收工轉場",
+      "X (Twitter) — 一行日文"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "奶白",
+        "木色",
+        "深咖啡",
+        "米灰",
+        "窗光黃"
+      ],
+      "mood": "木質暖調、蒸氣、磨豆機的聲音。安靜但有質地。",
+      "editing_style": "暖木調、窗光為主，保留蒸氣與粉塵。不過度銳化。"
+    },
+    "brand_do": [
+      "咖啡器具與豆商",
+      "生活雜貨與器皿",
+      "簡約服飾",
+      "香氛與居家"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "美羽 ☕︎",
+    "creator_category": "Digital creator",
+    "bio": "今日も、いい豆です。",
+    "account_username": "miushiraishi22",
+    "platforms": {
+      "instagram": {
+        "handle": "@miu.shiraishi",
+        "focus": "拉花、店內、下班後的公寓",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@miu.shiraishi",
+        "focus": "拉花特寫、蒸奶聲、收工轉場",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@miushiraishi",
+        "focus": "一行日文",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "常連さん"
+  }
+}

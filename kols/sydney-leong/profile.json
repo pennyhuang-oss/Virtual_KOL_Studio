@@ -1,0 +1,187 @@
+{
+  "id": "sydney-leong",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/sydney-leong/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "food",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "food",
+      "馬來西亞",
+      "甜點師 / 烘焙工作室",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Sydney Leong",
+    "native_name": "梁欣妮",
+    "handle": "@sydney.bakes",
+    "age": 22,
+    "date_of_birth": "2004-04-18",
+    "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+    "origin": "檳城喬治市（華裔）",
+    "current_location": "檳城喬治市（華裔）",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent)",
+      "Hokkien (檳城腔)",
+      "Malay (conversational)"
+    ],
+    "appearance": {
+      "height": "159cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙偏暖，圓臉大眼、笑容甜，鄰家甜妹。氣墊 + 腮紅 + 唇蜜的淡妝。",
+      "hair": "**淺蜜金棕（漂過的甜系色）**，中長微捲，工作時低雙辮或包起（食安）。",
+      "hair_color_current": "淺蜜金棕（漂色）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "甜系反差",
+      "style_vibe": "一個人的小工作室 — 接單、烤、包裝，圍裙上總是沾著麵粉。",
+      "measurements": {
+        "height_cm": 159,
+        "weight_kg": 45,
+        "bust_cm": 88,
+        "waist_cm": 56,
+        "hip_cm": 87,
+        "cup_size": "E",
+        "leg_length_cm": 74,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高46.5%，甜系反差"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "一個人的小工作室 — 接單、烤、包裝，圍裙上總是沾著麵粉。",
+    "public_face": "甜點師 / 烘焙工作室 — 一個人的小工作室 — 接單、烤、包裝，圍裙上總是沾著麵粉。",
+    "personality_traits": [
+      "手很巧，細活做得住",
+      "甜但不軟，開店兩年沒虧過",
+      "對食材的來源很堅持",
+      "怕熱，工作室裝了三台風扇",
+      "很會照顧人，客人變朋友"
+    ],
+    "values": [
+      "東西要自己做才知道好不好",
+      "甜點是我跟人講話的方式",
+      "不趕工，趕出來的不好吃"
+    ],
+    "backstory": "欣妮在檳城喬治市一棟老屋裡開烘焙工作室，只接預約單，一週做四天。她從烘焙學校畢業就自己開，因為不想進大廚房被排班。工作室的光很好、風扇很吵、下午很熱——她拍的東西幾乎都是在那個環境裡完成的，包括收工之後、圍裙還沒脫的那些。",
+    "voice_tone": "親切、有檳城腔、句子軟。中英夾雜，偶爾福建話。",
+    "humor_style": "憨憨的自嘲，常拿烤壞的東西開玩笑。",
+    "quirks": [
+      "圍裙上永遠有麵粉，她不擦",
+      "每天四點開烤箱，風雨無阻",
+      "失敗的成品自己吃掉",
+      "工作室的貓叫「奶油」"
+    ],
+    "private_side": "收工後的老屋樓上：圍裙底下只有貼身背心、麵粉沾在鎖骨與手臂上、南洋午後的斜光。甜點師的手最會做細活——這句話在她的私人平台上有第二層意思。",
+    "signature_quota": "圍裙 + 貼身背心 / 奶油 — 每月 1–2 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 老屋樓上",
+        "weight": "30%",
+        "description": "收工後的老屋樓上：圍裙底下只有貼身背心、麵粉沾在鎖骨與手臂上、南洋午後的斜光。甜點師的手最會做細活——這句話在她的私人平台上有第二層意思。"
+      },
+      {
+        "name": "烘焙工作",
+        "weight": "25%",
+        "description": "烘焙工作。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "15%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 檳城",
+        "weight": "15%",
+        "description": "檳城。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 烘焙、老屋、私下",
+      "TikTok — 擠花特寫、烤箱縮時、收工",
+      "X (Twitter) — 接單資訊"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "奶油黃",
+        "粉",
+        "藤編米",
+        "老磁磚綠",
+        "木色"
+      ],
+      "mood": "南洋自然光加風扇陰影。暖、潮、有生活感。",
+      "editing_style": "暖調自然光，保留熱氣與風扇的動態陰影。膚質真實，不磨皮。"
+    },
+    "brand_do": [
+      "烘焙器材與食材",
+      "咖啡與茶",
+      "南洋生活雜貨",
+      "檳城在地觀光"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "Sydney 🧁",
+    "creator_category": "Digital creator",
+    "bio": "今天也有奶油味。",
+    "account_username": "sydneyleong22",
+    "platforms": {
+      "instagram": {
+        "handle": "@sydney.bakes",
+        "focus": "烘焙、老屋、私下",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@sydney.bakes",
+        "focus": "擠花特寫、烤箱縮時、收工",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@sydneybakes",
+        "focus": "接單資訊",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "訂單的大家"
+  }
+}
