@@ -224,9 +224,17 @@ Prompt 結構：
 
 ### 問題 4：CDN 圖片（Higgsfield CloudFront）無法從雲端 session 下載
 
-**症狀**：在雲端 Claude Code session 裡用 `curl` 下載 `d8j0ntlcm91z4.cloudfront.net` 的圖片，收到 403 Forbidden。  
+> **⚠️ 2026-08-27 更新：本條已過期，不要再照抄。**
+> 本日在雲端 session 實測 `curl` 直接下載 `d8j0ntlcm91z4.cloudfront.net` 的生成結果，
+> **四張全部 HTTP 200 成功**，下載後用 Read 工具可以正常目視檢查。
+> 目前的正常流程就是：`generate_image_batch` → `jobs_wait` 取 `result_url`
+> → `curl` 下載到 `kols/{id}/images/...` → Read 逐張檢查 → commit。
+> 以下舊記錄保留存查，但**不應再作為「雲端 session 看不到圖」的依據**——
+> 那會讓 Claude 誤以為自己無法自行審圖，把該做的品質把關丟回給使用者。
+
+**（歷史記錄）症狀**：在雲端 Claude Code session 裡用 `curl` 下載 `d8j0ntlcm91z4.cloudfront.net` 的圖片，收到 403 Forbidden。  
 **原因**：Higgsfield CDN 會擋伺服器端的未授權請求。  
-**解法**：改用 `raw.githubusercontent.com` 來存取已經 push 到 GitHub 的圖片。這個 URL 在雲端 session 裡可以正常存取：
+**當時解法**：改用 `raw.githubusercontent.com` 來存取已經 push 到 GitHub 的圖片：
 ```
 https://raw.githubusercontent.com/pennyhuang-oss/Virtual_KOL_Studio/<commit-sha>/kols/<kol-id>/images/...
 ```
