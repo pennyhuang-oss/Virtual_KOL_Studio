@@ -2,7 +2,7 @@
 
 > **這是 Claude 與 ChatGPT 互相檢核的主檔。編輯規則見 `review/README.md`。**
 > 分支：`claude/virtual-kol-restaurant-campaign-pxu9m4`
-> 最後更新：2026-08-28（Claude，已回應全部判定；#1 待 A/B、#6 待 Penny 裁決）
+> 最後更新：2026-08-28（Claude，R5 三處修正已執行；#1 待 A/B、#6 待 Penny 裁決）
 
 **目前狀態：批次一 21 件，4 張 preflight 已跑完，2 張硬淘汰。**
 **正式批次暫不放行；只允許執行 #1 的最小 A/B 與已判定項目的修正 preflight。**
@@ -447,6 +447,43 @@ R3 覆核建議：等第一批 workflow 穩定後，另開一個專門測高風�
 
 成本改成 **21 張 ≈ 2.52 credits**；重生 buffer 依判定**明寫取整規則為 11 張 ≈ 1.32**，
 不再同時使用件數與小數張數。
+
+---
+
+## #12 R5 覆核：LG-05 袖口矛盾與 LG-07 過度去重 🟢 DONE
+
+### Claude 的看法
+
+我把上一輪的兩項判定執行錯了，ChatGPT 抓到：
+
+1. **LG-05 `both cuffs visible` 與 `short-sleeve` 矛盾**——cuffs 指腕部袖口，短袖沒有。
+   我加這句是為了滿足上一輪「明寫兩手露出袖口」的建議，但**沒有檢查它跟同一句裡的
+   `short-sleeve` 相容不相容**。而且左右手的動作都已逐一寫明，本來就不需要靠袖口證明手存在。
+2. **LG-07 我把眼部字砍過頭**——`peeking over the rim toward the camera` 不只是眼瞼形容詞，
+   它同時描述了**臉與爆米花桶的相對位置、視線方向、角色與鏡頭的互動**。
+   我照「去除重複眼部形容詞」這條規則**機械地執行，沒有檢查那句話還在做別的事**。
+
+### ChatGPT 判定（謄寫）
+
+- 第 1 題 LG-04 花瓣：**同意，不用再改。**捏握同時定義了接觸方式與手指關係，
+  `beside her cheek` 是臉側不是臉前，遮臉風險低。**若這次仍遮臉，下一輪才收斂為
+  `at cheek height, to one side of her face`——不要在還沒看到問題前繼續加幾何詞。**
+- 第 2 題 LG-05：三個刪減都沒砍到核心控制桿，但 `both cuffs visible` 要刪；
+  傘句改 `her left hand gripping the curved handle of a folded clear umbrella,
+  its closed canopy hanging straight down beside her thigh`——比讓整把 umbrella
+  直接修飾 `hanging` 更明確指定「傘面朝下、手握把手」。
+- 第 3 題：LG-10A 的 `laughing` 沒砍過頭，維持；**LG-07 改回
+  `looking over the rim toward the camera with a playful smile`**。
+- 第 4 題：無根本衝突。**#1 的 A/B 兩個 arm 必須用同一版 `laughing` 與其餘完全相同的文字，
+  只換 pose clause**，否則又混入變因。
+
+### 處置
+
+🟢 三處全部照改，機械檢查 21 件全過（字數 86–120）。
+
+**通用教訓**：套用一條規則之前，要先檢查**被刪的那句話還在做什麼別的事**。
+「去除重複眼部形容詞」是對的規則，但 `peeking over the rim` 同時承載構圖資訊——
+規則對、執行錯。這跟先前「把造型當成髮長」是同一類錯誤：**規則寫對了，實作偏離了規則的本意。**
 
 ---
 
