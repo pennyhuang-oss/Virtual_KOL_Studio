@@ -272,7 +272,7 @@
       "head_pitch": "neutral",
       "expression": "neutral_relaxed",
       "eye_gaze": "camera",
-      "body_pose": "standing",
+      "body_pose": "seated",
       "face_visibility": "unobstructed",
       "camera": {
         "type": "phone_rear",
@@ -320,7 +320,7 @@
       "head_pitch": "neutral",
       "expression": "soft_smile",
       "eye_gaze": "camera",
-      "body_pose": "standing",
+      "body_pose": "seated",
       "face_visibility": "unobstructed",
       "camera": {
         "type": "phone_rear",

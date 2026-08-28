@@ -25,8 +25,56 @@ def ratio_ok(v, spec):
     m=re.match(r'^(>=|<=)(\d+)$', str(spec))
     return None if not m else (v>=int(m.group(2)) if m.group(1)=='>=' else v<=int(m.group(2)))
 
-def validate(pilot, registry):
+# ---- C-15：schema_v2.json 必須被實際執行，不能只是文件 ----
+POSE_WORDS={'seated':['坐','坐著','坐下'],'standing':['站','站著'],'crouching':['蹲'],
+            'lying':['躺','趴'],'leaning':['靠','撐著'],'walking_frozen':['走','越過']}
+
+def schema_check(pilot, schema):
+    """對 phase_c_shots 逐列比對 schema 的 required / enum / minItems。
+    先前只驗業務規則，非法 enum（framing='SUPER_ZOOM'）與空 props 會整個放過——
+    對抗測試證實 validator 仍 PASS，只抓到下游的計數變化。"""
+    e=[]
+    sh=schema['definitions']['shot']; props=sh['properties']; req=sh['required']
+    def walk(obj, spec, path, shot_id):
+        for k in spec.get('required',[]):
+            if k not in obj: e.append(f"{shot_id} 缺必填欄位 {path}{k}")
+        for k,v in obj.items():
+            ps=spec.get('properties',{}).get(k)
+            if not ps: continue
+            enum=ps.get('enum')
+            if enum and v not in enum:
+                e.append(f"{shot_id} {path}{k}='{v}' 不是合法值，允許：{enum}")
+            if ps.get('type')=='array' and isinstance(v,list):
+                mi=ps.get('minItems')
+                if mi and len(v)<mi: e.append(f"{shot_id} {path}{k} 只有 {len(v)} 項，至少需 {mi}")
+            if ps.get('type')=='object' and isinstance(v,dict):
+                walk(v, ps, f"{path}{k}.", shot_id)
+    for sh_ in pilot['phase_c_shots']:
+        sid=sh_.get('shot_id','(no id)')
+        for k in req:
+            if k not in sh_: e.append(f"{sid} 缺必填欄位 {k}")
+        walk(sh_, sh, "", sid)
+    return e
+
+def pose_conflicts(shots):
+    """C-16：scene 描述的姿態與 body_pose 欄位不符。
+    a01/a02 的 scene 寫「坐著」，欄位卻是 standing——搬場景時只改了文字沒改欄位，
+    與 v1 rebalancer 同一類錯誤。"""
+    e=[]
+    for s in shots:
+        sc=s['scene']; bp=s['body_pose']
+        for pose,words in POSE_WORDS.items():
+            if pose==bp: continue
+            if any(w in sc for w in words) and not any(w in sc for w in POSE_WORDS.get(bp,[])):
+                e.append(f"{s['shot_id']} scene 讀起來是『{words[0]}』，但 body_pose='{bp}'")
+                break
+    return e
+
+def validate(pilot, registry, schema=None):
     err=[]; warn=[]
+    if schema:
+        err += schema_check(pilot, schema)
+    err += pose_conflicts(pilot['phase_c_shots'])
     shots=pilot['phase_c_shots']; q=pilot['phase_c_quota']
     n=len(shots)
     if n!=q['shots']: err.append(f"張數 {n} != {q['shots']}")
@@ -197,7 +245,8 @@ def validate(pilot, registry):
 if __name__=='__main__':
     pilot=json.load(open(sys.argv[1] if len(sys.argv)>1 else 'pilot/nico_pilot.json',encoding='utf-8'))
     reg=json.load(open('pilot/location_registry.json',encoding='utf-8'))
-    err,warn=validate(pilot,reg)
+    sch=json.load(open('pilot/schema_v2.json',encoding='utf-8'))
+    err,warn=validate(pilot,reg,sch)
     print(f"驗證 {pilot['persona_id']}（schema v{pilot['schema_version']}）")
     for w in warn: print("  ⚠ ",w)
     if err:

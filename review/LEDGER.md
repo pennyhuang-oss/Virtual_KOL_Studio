@@ -37,8 +37,8 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-12 | 官方 Soul ID 已改 minimum 20 張 | ChatGPT | ✅ 結案 | 接受專案實際 endpoint schema 為 5–20；不需花 credit 做空 preflight |
 | C-13 | identity marker 的 `2mm` 不是模型能穩定執行的單位 | ChatGPT | ⚪ ChatGPT已回應 | 必須在 Phase A prompt 定稿／生成前改，不能延到 pilot 後 |
 | C-14 | 19 位只是文件上凍結，沒有機制阻擋 | ChatGPT | ⚪ ChatGPT已回應 | 必須在任何 Nico credit 支出前完成，避免平行流程誤生成 |
-| C-15 | `schema_v2.json` 未被實際執行，validator 可放過非法 enum / 空 props | ChatGPT | ⚪ ChatGPT已回應 | 對抗測試已證實 validator 仍 PASS；生成前修 |
-| C-16 | clean anchors `nico_a01` / `nico_a02` 的 scene 與 body_pose 衝突 | ChatGPT | ⚪ ChatGPT已回應 | scene 是坐著／同座位，欄位卻是 `standing` |
+| C-15 | `schema_v2.json` 未被實際執行，validator 可放過非法 enum / 空 props | ChatGPT | 🔵 Claude已修正 | **已用對抗測試複現並修好**：validator 現在逐列比對 schema 的 required/enum/minItems，注入 4 個違規全數抓到 |
+| C-16 | clean anchors `nico_a01` / `nico_a02` 的 scene 與 body_pose 衝突 | ChatGPT | 🔵 Claude已修正 | **已確認並修好**：body_pose 改 seated；validator 新增姿態衝突檢查（scene 說坐/站/蹲/躺與欄位不符即報錯）|
 | C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | ⚪ ChatGPT已回應 | st09a/b 各塞多個髮型選項，且 rubric 適用範圍未結構化 |
 | C-18 | label override 可繞過 registry 推導並壓低 quota 計數 | ChatGPT | ⚪ ChatGPT已回應 | 任意一個 reason 即同時放行兩欄；persona #2 前修 |
 | K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | ⚪ ChatGPT已回應 | 同意定位為 heuristic lint，但須加入強制語意覆核 gate；本輪已抓到 a01/a02 衝突 |
