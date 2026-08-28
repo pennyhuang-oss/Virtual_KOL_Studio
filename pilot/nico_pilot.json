@@ -8,27 +8,28 @@
     "ethnicity": "Taiwanese",
     "skin": "light neutral-to-cool skin tone, natural tonal variation across face and body, subtle normal redness at cheeks, elbows and knuckles, not overexposed",
     "skin_negative": "NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored",
-    "face_base": "fine elongated phoenix eyes, cool composed expression, delicate features",
+    "face_base": "a youthful baby-faced adult woman: the lower half of her face is short with a small narrow chin, her forehead is broad, and her cheeks keep a soft rounded fullness. Large round eyes with a wide double eyelid crease, set level rather than upswept. Her cheekbones sit low and read as soft padding, not as a lifted ridge. A short nose with a slightly upturned rounded tip and a soft undefined bridge. A short philtrum above a small mouth with softly rounded lips.",
     "identity_markers": [
-      "left eyebrow tail sits subtly higher than the right, most visible when she smiles",
+      "a short lower face — the distance from her nose to her chin is noticeably shorter than average",
       "a very small pale mole beside her right nostril",
-      "flat cupid's bow — the upper lip has almost no M-shaped peak",
+      "a flat cupid's bow — the upper lip has almost no M-shaped peak",
       "slightly wider-than-average inter-eye distance",
-      "narrow rounded nose tip with a soft, undefined bridge break"
+      "a short nose with a rounded, slightly upturned tip"
     ],
-    "_markers_note": "前三項在自拍／鏡像生成時可能左右翻轉，因此後兩項刻意選用**不依賴左右方向的骨相特徵**（眼距、鼻頭形狀），確保翻轉後身分仍可辨識。不寫 `2mm` 這種模型無法穩定執行的幾何單位。",
+    "_markers_note": "前三項在自拍／鏡像生成時可能左右翻轉，因此其餘刻意選用**不依賴左右方向的骨相特徵**（下半臉長度、眼距、鼻頭形狀），確保翻轉後身分仍可辨識。不寫 `2mm` 這種模型無法穩定執行的幾何單位。 U-03：臉部骨架由使用者裁決改為少女短臉型。這組骨架是為了與 rainie-hsu 明確區隔而定：Rainie 是高顴骨、銳利下顎線、大而上揚的雙眼皮眼、鼻樑挺、厚唇且唇珠明顯的華麗模特兒臉——那也正是 seedream 的預設美女臉，不寫死骨架就會自動收斂過去。本 repo 先前的 sophia-tseng-face 也發生過同一件事，解法同樣是改骨架而不是改妝髮。",
     "body_numeric": {
       "height_cm": 167,
       "weight_kg": 49,
-      "bust_cm": 86,
+      "bust_cm": 90,
       "waist_cm": 59,
       "hip_cm": 88,
-      "cup": "C",
+      "cup": "D",
       "leg_cm": 82
     },
-    "body_visual": "narrow shoulders roughly equal to hip width, long torso, small natural bust with a shallow curve, visible collarbone and sternum, slim upper arms with no muscle definition, long straight legs, flat lower abdomen; overall silhouette is narrow and elongated",
-    "body_negative": "NOT voluptuous, NOT heavy-chested, NOT curvy, NOT athletic-muscular",
-    "_body_note": "三圍數字保留在 metadata 供人核對，但 prompt 以 body_visual 的視覺比例為主——模型不會把 86-59-88 精確解讀成幾何。最終 identity 錨定仍以 reference image 為準，數字寫了不等於身材就對了。"
+    "body_visual": "narrow shoulders roughly equal to hip width, long torso, a full rounded bust that reads clearly against a slim frame, visible collarbone, slim upper arms with no muscle definition, long straight legs, flat lower abdomen; the contrast between the slim waist and the fuller bust is part of the silhouette",
+    "body_negative": "NOT athletic-muscular, NOT heavy or thickset overall — the frame itself stays slim",
+    "_body_note": "三圍數字保留在 metadata 供人核對，但 prompt 以 body_visual 的視覺比例為主。 U-03：使用者裁決胸型放寬——原本寫 small natural bust / shallow curve 並標 NOT heavy-chested，與使用者實際偏好不符，且那組否定詞正是把身形往平板推的原因。改為纖細骨架上的飽滿胸型。",
+    "face_negative": "NOT high sculpted cheekbones, NOT a sharp angular jawline, NOT a long oval face, NOT large upswept cat-like eyes, NOT a high straight nose bridge, NOT full lips with a pronounced M-shaped cupid's bow, NOT a glamour-model face."
   },
   "outfits": {
     "nico_outfit_01": {
