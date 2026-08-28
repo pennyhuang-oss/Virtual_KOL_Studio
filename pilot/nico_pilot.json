@@ -1267,7 +1267,7 @@
       "出現明顯固定背景烙印（換場景仍冒出工作室或她的房間）→ 直接 fail",
       "換裝後仍固定帶出 training garment → 直接 fail"
     ],
-    "aggregate_threshold": "**待定，不憑空訂。**",
+    "aggregate_threshold": "**待 Retroactive Benchmark 跑完後訂**（GOOD=Iris Chen，KNOWN_BAD=Rainie v1）",
     "threshold_method": {
       "name": "Retroactive Benchmark",
       "_why": "上一版寫 14/18 是我憑空訂的。而且 9 項每項至少 1 分時，4 項給 1 分 + 5 項給 2 分 = 14 剛好 PASS——四個維度都有可見漂移仍會通過，門檻太鬆。",
@@ -1278,7 +1278,30 @@
         "得到 GOOD soul 的實際分數與 KNOWN-BAD soul 的實際分數",
         "用這個區間訂 Nico 的 gate——門檻變成『至少達到我們現在已經願意上線的角色品質』"
       ],
-      "cost": "每個既有 soul 12 張，1–2 個 soul 共 12–24 張。比訓練完才發現門檻訂錯便宜太多。"
+      "cost": "2 個 soul × 13 張 = 26 張。比訓練完才發現門檻訂錯便宜太多。",
+      "baselines": {
+        "GOOD": {
+          "persona": "Iris Chen",
+          "kol_id": "iris-chen",
+          "soul_id": "5fe3b6ba-1277-4822-9141-fb06eb3b93a0",
+          "status": "ready",
+          "_why": "使用者指定。她是本 repo 第一個完成的人格，KOL_TRAINING_SOP.md 明寫「Iris Chen 是所有 KOL 的標準範本」，且訓練後在生產環境跨場景跨造型使用最久（競品對標批次、舞蹈克隆、溫泉短片、內衣鏡前自拍短片）。"
+        },
+        "KNOWN_BAD": {
+          "persona": "Rainie Hsu（v1 已棄用）",
+          "kol_id": "rainie-hsu",
+          "soul_id": "994e33d2-7df1-47da-8478-7a6fd849fa33",
+          "status": "deprecated",
+          "_why": "使用者指定。這個 soul 的錨點圖只核對了臉部與妝容、沒有核對身材，實際身型偏纖細平板、與 94-59-92 / F 罩杯設定不符，整批 13 張訓練圖與此 soul_id 因此作廢重做（v2 為 a4a000fe）。它是本 repo 唯一有明確失敗原因記錄的 soul，適合當下限對照。",
+          "_expected_signal": "body_identity 這一項應該明顯低分。若 rubric 跑出來 body_identity 仍拿高分，代表 rubric 本身測不出這個已知缺陷，rubric 要先修。"
+        }
+      },
+      "procedure": [
+        "對 GOOD 與 KNOWN_BAD 各跑同一套 Phase D 13 張 stress test（model: soul_2 + 各自 soul_id）",
+        "用同一套 9 項 rubric 人工評分（每項 0–2）",
+        "得到兩組實際分數，Nico 的 gate 訂在 GOOD 分數附近，且必須明顯高於 KNOWN_BAD",
+        "**先驗證 rubric 本身**：KNOWN_BAD 的 body_identity 若沒有明顯低分，代表 rubric 測不出已知缺陷，先修 rubric 再談門檻"
+      ]
     }
   },
   "training_endpoint_preflight": {

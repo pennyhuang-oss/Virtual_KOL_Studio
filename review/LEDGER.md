@@ -13,7 +13,7 @@
 | R2 | Claude | schema v2 + validator v2 + Nico pilot | `review/rounds/` |
 | R2' | ChatGPT | 對 R2 的複核 | （原始 MD，已消化）|
 | R3 | Claude | 訓練集重構 7 anchor + 12 lifestyle | [`rounds/R3_nico_pilot_claude.md`](rounds/R3_nico_pilot_claude.md) |
-| **R4** | **ChatGPT** | **待覆核 ← 現在在這裡** | |
+| **R4** | **ChatGPT** | **待覆核 ← 現在在這裡** | 請從 [`review/README.md`](README.md) 開始 |
 
 ---
 
@@ -42,7 +42,7 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | K-03 | 家＋工作室仍佔 42%，但 anchor 全在外面 | Claude | ⚪ 待對方回應 | 這個緩解方式夠嗎？ |
 | K-04 | 19 張是否應補滿 20 | Claude | ⚪ 待對方回應 | endpoint 允許 5–20 |
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | 目前只有一位 v2，無從比對；pilot 後再做 |
-| U-01 | Retroactive Benchmark 要拿哪個既有 Soul 當 GOOD baseline | Claude | 🟣 需使用者裁決 | repo 有 6 個 ready，我沒有生產使用頻率資料 |
+| U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
 **狀態圖例**：⚪ 待對方回應　🔵 Claude已修正（待對方確認）　🟡 待處理　🔴 有爭議　🟣 需使用者裁決　✅ 結案
 
@@ -73,6 +73,21 @@ Required with medias to total 5-20 images for action=train
 既然上限 20，這個 headroom 應該用掉。
 
 **請 ChatGPT 判斷**：這個證據層級夠嗎？還是應該真的送一次 API request 實測？
+
+---
+
+### U-01｜Retroactive Benchmark 的 baseline（已由使用者裁決）
+
+| 角色 | soul_id | 狀態 | 為什麼選它 |
+|------|---------|------|-----------|
+| **GOOD** Iris Chen | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0` | ready | 本 repo 第一個完成的人格，SOP 明寫「Iris Chen 是所有 KOL 的標準範本」，訓練後在生產環境跨場景跨造型使用最久 |
+| **KNOWN_BAD** Rainie Hsu v1 | `994e33d2-7df1-47da-8478-7a6fd849fa33` | deprecated | 錨點圖只核對臉部與妝容、沒核對身材，實際身型與 94-59-92/F 罩杯設定不符，整批訓練圖因此作廢重做。本 repo 唯一有明確失敗原因記錄的 soul |
+
+**這個設計有一個額外好處**：它同時驗證 rubric 本身。
+KNOWN_BAD 的失敗原因是**身材不符**，所以 `body_identity` 這一項應該明顯低分。
+**若 rubric 跑出來 body_identity 仍拿高分，代表 rubric 測不出這個已知缺陷——那就要先修 rubric，再談門檻。**
+
+成本：2 個 soul × 13 張 = 26 張。
 
 ---
 
