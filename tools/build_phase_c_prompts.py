@@ -137,7 +137,8 @@ CAMERA_TYPE = {
  'phone_front':"Shot on the front camera of a phone, held at arm's length.",
  'mirror_phone':"Shot on the rear camera of a phone aimed at a mirror.",
 }
-DISTORTION = {'none':"Straight lens geometry: vertical lines in the scene stay straight and parallel to the frame edges.",
+DISTORTION = {'none':"Straight rectilinear lens geometry: architectural lines render as straight segments with "
+              "natural perspective.",
               'mild':"The slight wide-angle stretch a phone lens gives at close range."}
 DOF = {'adequate':"Deep depth of field: every visible part of her and the background stay in focus "
                   "together, and her outline reads sharp against what is behind her.",

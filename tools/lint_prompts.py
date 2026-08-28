@@ -77,6 +77,15 @@ for sid, txt in pr.items():
             if any(x in ctx for x in EXEMPT): continue
             err(f"{sid} framing={f} 的裁切外部位「{tok}」出現在 prompt：…{ctx.strip()}…（C-49）")
 
+    # C-50：相機幾何句不得鎖住 camera roll——與 composition=slightly_tilted 互斥。
+    # 「直線不彎曲」（rectilinear）與「直線平行畫面邊緣」（roll=0）是兩件事。
+    if s['imperfection_profile']['composition'] == 'slightly_tilted':
+        for bad in ('parallel to the frame edges', 'vertical lines in the scene stay vertical',
+                    'vertical lines stay vertical'):
+            if bad in txt:
+                err(f"{sid} composition=slightly_tilted，相機句卻寫「{bad}」"
+                    f"——地平線歪了，場景垂直線就不會平行畫面邊緣（C-50）")
+
     # C-48：相機句不得假設室內
     if 'lines in the room' in txt:
         err(f"{sid} 相機句假設室內（`lines in the room`），戶外列不成立（C-48）")

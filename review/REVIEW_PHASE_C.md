@@ -8,7 +8,7 @@
 **回覆方式**：把意見寫在本檔案最下方 §7 回覆區（`REPLIES BELOW` 那行以下），然後 commit。
 那一段不會被自動產生覆蓋。
 
-- 目前 commit：`224f89d`
+- 目前 commit：`051e432`
 - 議題編號請從 **C-34** 起跳，每條標 **P0**（必須先修才能生成）／**P1**／**P2**
 
 ---
@@ -165,7 +165,7 @@ candidate_03 左側髮際有一段銀灰挑染。c03 → B1 → B2 三張全部�
 - `[[BODY-2]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders.
 - `[[BODY-3]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape.
 - `[[BODY-4]]`（6 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms.
-- `[[CAMERA-1]]`（18 段共用）：Shot on the rear camera of a phone. Straight lens geometry: vertical lines in the scene stay straight and parallel to the frame edges. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
+- `[[CAMERA-1]]`（18 段共用）：Shot on the rear camera of a phone. Straight rectilinear lens geometry: architectural lines render as straight segments with natural perspective. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
 - `[[CLOSED-SET-1]]`（18 段共用）：Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms. The camera viewpoint sits nearby at about eye level, with the imaging device and whoever holds it beyond the frame edge. Illumination comes exclusively from the natural or architectural light sources named above.
 - `[[FACE-BARE-1]]`（20 段共用）：Her face is bare: her lips are the same soft pinkish-beige as the skin around them, matte, with a soft undefined edge; her eyebrows are soft and natural; her lashes are her own and unmade. Light neutral-to-cool skin with natural tonal variation and visible pores.
 - `[[FACING-1]]`（5 段共用）：Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.
@@ -1134,40 +1134,37 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 
 ## §6 本輪請你判斷
 
-### 6-1 上一輪（R12）你開的 2 條，處置如下
+### 6-1 上一輪（R13）你開的 C-50，已修
 
-| ID | 你的判定 | 我做了什麼 |
-|----|---------|-----------|
-| C-48 | 相機模板在戶外仍寫 `room` | **屬實**，實測 9 段戶外／半戶外列中招。改為你建議的 `vertical lines in the scene stay straight and parallel to the frame edges` |
-| C-49 | 仍有三類裁切外身體／手部 cue | **三類全部屬實**。①朝向模板寫 `one hip is nearer the lens` 用在 chest_up 的 a02–a05 與 waist_up 的 c12，共 5 列，已改用肩線與鎖骨當地標；②`a01` 是 face_closeup 卻寫 `with her hands still`，已刪；③`a08` 是 chest_up，我在 visibility 表把「垂在身側」的兩手都標成可見——**這是我填錯**，已改為兩手皆不可見，動作句也改成只描述肩線與上半身 |
+**屬實。** 實測 `composition=slightly_tilted` 的三列中，`nico_c02` 與 `nico_c05`
+同時含「場景垂直線平行畫面邊緣」與「地平線略歪」——相機有 roll 時這兩件事不可能同時成立。
+（`nico_c08` 是鏡面自拍、鏡頭 distortion=mild，沒有那句，所以沒中招。）
 
-### 6-2 你要求的 lint 已補上，並用反向測試驗過
+也謝謝你修正自己 R12 的措辭。已改為你這輪給的：
 
-你說「lint 也應新增『可見區域外的 anatomical token』檢查，而不只檢查服裝層與 hands 欄位」。
-已實作：**整段掃描**（不只身材模板），逐 framing 定義裁切外的解剖名詞，
-並豁免服裝規格裡的同形字（`high-waisted`、`wide-leg`、`knee-high` 等）
-以及景別句本身——那句就是在陳述哪些部位落在邊界外，是你 R11 裁決過的有效寫法。
+> Straight rectilinear lens geometry: architectural lines render as straight segments with natural perspective.
 
-另外補一條：**兩手都在裁切外時，prompt 任何地方都不得出現「hand」**（上臂不算，chest_up 看得到）。
+**lint 已加你要求的交叉檢查**：`composition=slightly_tilted` 時不得出現
+`parallel to the frame edges` 或 `vertical lines stay vertical`。
+反向測試：把衝突打回 `nico_c02`，lint 擋下。
 
-**反向測試 4/4**：把你這輪抓到的四種缺陷逐一打回 prompt，lint 全部擋下。
+### 6-2 這一輪請你判斷
 
-### 6-3 這一輪請你判斷
+**1. C-50 可否結案？連帶 C-44。**
 
-**1. C-48／C-49 可否結案？連帶 C-37／C-44。**
+**2. 你指定要重看的 `CAMERA-1` 與 `nico_c02`／`nico_c05` 展開結果，都在 §5。**
 
-**2. 受影響的列**：你指定要重看 `a01`／`a02`／`a03`／`a04`／`a05`／`c12`／`a08`
-   以及 `CAMERA-1` 的展開結果——這幾列與那個模板都在 §5。
-
-**3. 放行判定**：可以開始生成這 20 張，還是仍有 P0？
+**3. 放行判定。** 你上一輪說「修正相機幾何句並確認 c02／c05 後，
+   若沒有其他改動，即可結案 C-44 並放行 20 張生成」——本輪除了這一處，
+   資料與模板都沒有其他改動。
 
 **現在 lint 擋的規則**（`tools/lint_prompts.py`，20/20 通過）：
 否定詞為 0；姿態動詞與 body_pose 一致；身材必須是該 framing 的版本；
-**整段不得出現該 framing 裁切外的解剖名詞**；face_closeup 不得提到軀幹；
+整段不得出現該 framing 裁切外的解剖名詞；face_closeup 不得提到軀幹；
 兩手都在畫面外時不得出現「hand」；不得描述該景別看不見的服裝層；
 戒指依手部可見性；裁切外的手不得描述；宣告不可見的道具不得出現；
-相機句不得假設室內；戶外不得說光來自 room；不得出現第二個 person token；
-每段都要有正面封閉集合收尾。
+**相機幾何句不得與 composition=slightly_tilted 互斥**；相機句不得假設室內；
+戶外不得說光來自 room；不得出現第二個 person token；每段都要有正面封閉集合收尾。
 
 ---
 
@@ -1177,48 +1174,3 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
 
-
-## ChatGPT R13 覆核回覆
-
-### C-50｜P0｜`CAMERA-1` 的「平行畫面邊緣」與手持傾斜互斥
-
-C-48 原本的戶外 `room` 假設已移除，但替代句：
-
-> vertical lines in the scene stay straight and parallel to the frame edges
-
-會與 `nico_c02／nico_c05` 的：
-
-> The horizon runs very slightly off level
-
-直接衝突。相機有 roll、地平線傾斜時，場景垂直線就不會平行畫面的垂直邊緣；「直線不彎曲」與「直線平行邊框」是兩件不同的事。
-
-這裡也修正我 R12 提供的措辭：我當時建議的 `parallel to the frame edges` 不夠精確。請改為只描述 rectilinear lens、不鎖相機 roll，例如：
-
-> Straight rectilinear lens geometry: architectural lines render as straight segments with natural perspective.
-
-並讓 lint 加一條交叉檢查：`composition=slightly_tilted` 時不得出現 `parallel to the frame edges`／`vertical lines stay vertical`。修正後只需重看 `CAMERA-1` 與 `nico_c02／c05` 的展開。
-
-### 指定七列覆核
-
-- `nico_a01`：已移除 hand cue；face_closeup 的朝向、身材與服裝只描述可見部位，無異議。
-- `nico_a02`：chest_up 使用肩線版 `FACING-1`，左手省略、右手與咖啡杯保留，戒指恢復，無異議。
-- `nico_a03`：同上；站姿與 composition 不衝突，無異議。
-- `nico_a04`：肩線版朝向、右手杯、裁切後服裝層一致，無異議。
-- `nico_a05`：肩線版朝向、右手保溫瓶、胸上裁切一致，無異議。
-- `nico_c12`：waist_up 不再提 hip，左手省略、右手悠遊卡與肩背包可見，無異議。
-- `nico_a08`：已改成肩線與臉的右側 profile，兩隻裁切外的手均未展開，無異議。
-
-### 結案判定
-
-| ID | 判定 |
-|---|---|
-| C-48 | **同意結案**：戶外 `room` 問題已消失；新產生的 geometry／roll 衝突另列 C-50 |
-| C-49 | **同意結案**：三類裁切外 cue 均已修正，反向測試也覆蓋原缺陷 |
-| C-37 | **同意結案**：服裝、手部、戒指與解剖部位的可見性過濾現已收斂 |
-| C-44 | **暫不同意結案**：身材、朝向與 framing 已修正，但相機共用模板尚有 C-50 |
-
-除 C-50 外，指定七列與本輪展開結果未發現新的內容空缺。chest_up 不描述腰仍是正確做法。
-
-### 放行判定
-
-**目前仍不放行生成，只剩 C-50 一項 P0。** 修正相機幾何句並確認 `nico_c02／c05` 後，若沒有其他改動，即可結案 C-44 並放行 20 張生成。

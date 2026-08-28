@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-28　|　**R12 的 2 條實測屬實並已修正，lint 補上整段 anatomical token 掃描（反向測試 4/4）。20 段待 R13 覆核，生成仍未放行。**
+> 最後更新：2026-08-28　|　**只剩 C-50 一項，已修並加交叉檢查。ChatGPT 已表明：修完相機幾何句並確認 c02／c05，即可結案 C-44 並放行 20 張生成。**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -23,7 +23,8 @@
 | R10 | ChatGPT | 10 條（8 條 P0），逐條實測全部屬實 | [`rounds/R10_chatgpt.md`](rounds/R10_chatgpt.md) |
 | R11 | ChatGPT | 7 結案 / 3 不同意 / 新開 C-44–C-47；三列語意重審均無異議 → 20/20 | [`rounds/R11_chatgpt.md`](rounds/R11_chatgpt.md) |
 | R12 | ChatGPT | 5 結案 / 2 不同意 / 新開 C-48–C-49；裁決五版身材切分點正確 | [`rounds/R12_chatgpt.md`](rounds/R12_chatgpt.md) |
-| **R13** | **ChatGPT** | **待覆核：C-48／C-49 的修正** | [`REVIEW_PHASE_C.md`](REVIEW_PHASE_C.md) |
+| R13 | ChatGPT | 3 結案 / 指定七列均無異議 / 新開 C-50（唯一 P0）| [`rounds/R13_chatgpt.md`](rounds/R13_chatgpt.md) |
+| **R14** | **ChatGPT** | **待覆核：C-50 的修正。它已表明修完即可結案 C-44 並放行生成** | [`REVIEW_PHASE_C.md`](REVIEW_PHASE_C.md) |
 
 ---
 
@@ -75,19 +76,20 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-34 | 20 段 prompt 完全沒有身材描述 | ChatGPT | ✅ 結案 | 實測確認 0/20 提到 bust 或 silhouette。Reference Element 固定臉不等於固定全身，B2 第一次失敗就是反證。已用 B2 第二次成功的字串，依 framing 分三版；R11 不同意結案：身材補回了但分版不完整（knee_up 仍寫 long straight legs、chest_up 仍寫 narrow waist）。已改為五版逐級累加；R12 同意結案（五版身材內容與切分點正確；並確認 chest_up 不寫腰不是空缺——腰不在畫面裡，強寫反而會與裁切線競爭誘發 zoom-out） |
 | C-35 | 仍大量使用已證實無效的否定式 | ChatGPT | ✅ 結案 | 多數屬實，已全部清掉，`lint_prompts.py` 掃出否定詞為 0。**爭議**：景別句尾的「某部位在畫面外」我主張保留——probe_v2／probe_v3／B2v2 三段成功的 prompt 都含這一句，與只說「看不到什麼」的失效寫法不同；R11 同意結案，並撤回對「某部位在畫面外」的判定——它接受我的實測反證（probe_v2／probe_v3／B2v2 三次成功的 prompt 都含這句），同意有明確裁切線前件的 locative statement 不算失效否定 |
 | C-36 | `She sits` 會把站/走/蹲姿改成坐姿 | ChatGPT | ✅ 結案 | 屬實，且是我自己的 composition 模板害的。實測 10 段 body_pose 非 seated 卻寫 `She sits`。改為 `She is positioned centrally／off-centre`，並加機器檢查禁止姿態動詞與 body_pose 衝突；R11 同意結案 |
-| C-37 | 沒依 framing 過濾裁切外資訊 | ChatGPT | 🔵 Claude已修正（R12 再修） | 屬實。服裝英文改為分層，由 framing 決定輸出哪幾層；裁切外的手不再描述；包新增逐列 `bag_state`；R11 不同意結案：仍有不可見的身材與衣服細節、戒指過濾錯誤。已拆 top_hem、戒指改由手部可見性決定；R12 不同意結案：仍有裁切外 cue，見 C-49 |
+| C-37 | 沒依 framing 過濾裁切外資訊 | ChatGPT | ✅ 結案 | 屬實。服裝英文改為分層，由 framing 決定輸出哪幾層；裁切外的手不再描述；包新增逐列 `bag_state`；R11 不同意結案：仍有不可見的身材與衣服細節、戒指過濾錯誤。已拆 top_hem、戒指改由手部可見性決定；R12 不同意結案：仍有裁切外 cue，見 C-49；R13 同意結案（服裝、手部、戒指與解剖部位的可見性過濾已收斂） |
 | C-38 | a07／c09 有誘發背影的高風險語句 | ChatGPT | ✅ 結案 | 屬實。a07 刪 `three-quarters`、c09 刪 `over her shoulder`，改為可見正面地標；R11 同意結案 |
 | C-39 | c09 的 basket 翻譯破壞 zone 欄位 | ChatGPT | ✅ 結案 | 屬實。zone=knee 但英文寫在腳邊、而腳在畫面外。改為靠在彎曲的膝旁從下緣進入構圖；c02 紙箱同樣具體化；R11 同意結案 |
 | C-40 | c10 動作時點不一致 | ChatGPT | ✅ 結案 | 屬實，改為它建議的句子；R11 同意結案 |
 | C-41 | outfit_01 應換成明顯不同的衣服 | ChatGPT | ✅ 結案 | 它的理由比我的處置好：高辨識度露肩開口出現在 4/8 clean anchor 會與 identity 綁定，違反去服裝綁定的訓練目的；B2 已證明換衣服可行。改為米白細針織圓領；R11 同意結案（新 outfit 與錨點在顏色、織法、領型上已明顯區隔） |
 | C-42 | 排除清單不足以防止已發生的污染 | ChatGPT | ✅ 結案 | 屬實。改為三種 view 各自的正面封閉集合；R11 不同意結案：戶外列說光來自 room、且前文的 `Someone standing near her` 把第二個人帶回來。見 C-45／C-46；R12 同意結案 |
 | C-43 | 標題與模板編號漂移 | ChatGPT | ✅ 結案 | 三個 pillar 標籤實測確認與 location／scene 不符（c03 寫廚房實為早餐店等），已修；樣板代號改為語意固定名稱——原本依長度排序的流水號每次重新產生都會變；R11 同意結案 |
+| C-50 | 相機幾何句與手持傾斜互斥 | ChatGPT | 🔵 Claude已修正 | 屬實：`composition=slightly_tilted` 的 c02／c05 同時含「垂直線平行畫面邊緣」與「地平線略歪」——相機有 roll 時兩者不可能並存。ChatGPT 同時修正自己 R12 給的措辭，改為 `Straight rectilinear lens geometry: architectural lines render as straight segments with natural perspective`。lint 加交叉檢查，反向測試擋下 |
 | C-44 | 身材／朝向／相機模板仍未真正依 framing 分層 | ChatGPT | 🔵 Claude已修正（R12 再修） | 五處全部實測屬實：knee_up 4 段寫 long straight legs、chest_up 6 段寫 narrow waist、face_closeup 2 段的相機句與朝向句都提到軀幹、上衣下擺殘留。身材改五版逐級累加；上衣拆出 `top_hem`；相機句改 `every visible part of her`；a01/c01 朝向句只講肩與鎖骨；R12 不同意結案：BODY 與服裝分層已對，但 CAMERA／FACING 尚有問題，見 C-48／C-49 |
 | C-45 | 封閉集合在戶外產生光源矛盾 | ChatGPT | ✅ 結案 | 屬實，實測 9 段戶外／半戶外仍寫 `the only light in the room`。改為跨場景成立的 `Illumination comes exclusively from the natural or architectural light sources named above`；鏡面版限縮為「鏡中場景內只有她與那支手機」；R12 同意結案 |
 | C-46 | `Someone standing near her` 把第二個人帶回 prompt | ChatGPT | ✅ 結案 | 屬實，18 段都有，且這個模型真的畫過別人的手拿手機。改為不含 person token 的視點敘述；R12 同意結案 |
 | C-47 | ring 的可見性不能只由 framing 決定 | ChatGPT | ✅ 結案 | 屬實，實測 a02／a03／c07 有手在胸前入鏡卻把戒指砍掉。改由 `hands_visible` 決定；R12 同意結案 |
-| C-48 | 相機共用模板在戶外仍寫 `room` | ChatGPT | 🔵 Claude已修正 | 屬實，實測 9 段戶外／半戶外中招。C-45 修掉封閉集合的 room，同一個場景假設卻殘留在相機模板。改為 `vertical lines in the scene stay straight and parallel to the frame edges` |
-| C-49 | 仍有三類裁切外身體／手部 cue | ChatGPT | 🔵 Claude已修正 | 三類全屬實。①朝向模板 `one hip is nearer the lens` 用在 chest_up 的 a02–a05 與 waist_up 的 c12（5 列），改用肩線與鎖骨；②a01 是 face_closeup 卻寫 `with her hands still`，已刪；③**a08 是我 visibility 表填錯**——chest_up 卻把「垂在身側」的兩手標成可見。並依其要求新增整段掃描的 anatomical token lint，反向測試 4/4 |
+| C-48 | 相機共用模板在戶外仍寫 `room` | ChatGPT | ✅ 結案 | 屬實，實測 9 段戶外／半戶外中招。C-45 修掉封閉集合的 room，同一個場景假設卻殘留在相機模板。改為 `vertical lines in the scene stay straight and parallel to the frame edges`；R13 同意結案 |
+| C-49 | 仍有三類裁切外身體／手部 cue | ChatGPT | ✅ 結案 | 三類全屬實。①朝向模板 `one hip is nearer the lens` 用在 chest_up 的 a02–a05 與 waist_up 的 c12（5 列），改用肩線與鎖骨；②a01 是 face_closeup 卻寫 `with her hands still`，已刪；③**a08 是我 visibility 表填錯**——chest_up 卻把「垂在身側」的兩手標成可見。並依其要求新增整段掃描的 anatomical token lint，反向測試 4/4；R13 同意結案（反向測試也覆蓋原缺陷） |
 | U-03 | Nico 的五官與 rainie-hsu 撞臉 | 使用者 | ✅ 結案 | 使用者裁決：臉部骨架改少女短臉型、胸型由 C 放寬為 D、銀灰挑染保留。**這一類判斷不交給 ChatGPT**——validator exit 0、語意 20/20、ChatGPT 連九輪放行，使用者一眼看出撞臉。已寫成 `PERSONA_CANON.md` 原則六與 `review/README.md` 的職責分界 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
