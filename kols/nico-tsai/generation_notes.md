@@ -144,3 +144,53 @@
 3. 唇色仍偏紅（次要）。
 
 **下一步**：這兩項要使用者裁決後才續跑，不自行試錯。
+
+---
+
+## Batch 3 · Phase A Round 3 ＋ Phase B — 2026-08-28
+
+**臉部骨架改版（U-03）**：使用者看到 Round 2 出圖就指出「五官跟 Rainie 太像」。
+比對確認屬實——高顴骨、銳利下顎、大而上揚的雙眼皮眼、厚唇有唇珠，是同一組骨架，
+也就是 seedream 的預設美女臉。使用者裁決改為**少女短臉型**（見 PERSONA_CANON 原則六）。
+胸型由 C 放寬為 D（原本的 small bust / NOT heavy-chested 與使用者偏好不符）。
+
+**選角結果**：4 張候選骨架全部脫離 Rainie。使用者選 **candidate_03**。
+Reference Element `68ff990e-1862-4003-bfe3-fe288275cdd4`（nico-tsai-anchor）。
+
+### Phase B：B1 通過，B2 第一次失敗、第二次通過
+
+| | 結果 |
+|---|---|
+| **B1**（重現） | ✅ 臉完全重現，骨架、痣、下半臉比例一致 |
+| **B2 第一次** | ❌ 又拍成背面。全身圖是**身材比例的最終把關點**，背影判不了，作廢 |
+| **B2 第二次** | ✅ 正面全身、換場景（公園）＋換穿搭（outfit_03）＋換髮型（hair_02）＋換光線（L6）後身分守住 |
+
+### 兩個必須記錄的發現
+
+#### 1. 「turned about 30 degrees」會被讀成「轉過去背對鏡頭」——連續三次
+
+Round 2 首批、Round 3 的 c01、B2 第一次，全部同一個寫法、同一個結果。
+`her back is not toward the camera` 這種否定完全無效（與 Round 2 的結論一致）。
+
+**有效寫法**：不要描述「轉多少度」，要描述**鏡頭看得到什麼**：
+
+> `Her navel, the front of her chest and the front of both shoulders all point toward the camera.
+>  Both of her collarbones are visible. The camera sees the front of her jeans — the fly, the button
+>  and the front pockets — not the back pockets.`
+
+一次就對。**朝向一律用「相機看得到哪些身體正面特徵」來寫，不要用角度。**
+
+#### 2. Reference Element 會把「服裝以外」的影像細節一起帶走——我先前判斷錯誤
+
+我原本告訴使用者：c03 的露肩開口與髮際灰銀段是服裝／髮型層，錨點只鎖臉與身形，不會傳下去。
+**實測結果一半錯**：
+
+- **服裝**：B1 指定同一件炭灰高領毛衣 → 露肩開口原封不動跟著出現，即使 prompt 明寫
+  "unbroken and continuous over both shoulders, a complete shoulder seam on each side"。
+  B2 指定完全不同的衣服（奶油短版針織）→ 開口消失。
+  → **錨點的服裝在「指定同一件衣服」時會被整件複製，指定不同衣服時才會被覆蓋。**
+- **髮色**：c03 → B1 → B2 三張全部保留左側那段灰銀挑染，三次 prompt 都明寫
+  "a single flat salon dye job … no lighter section anywhere along the strand"。
+  → **這一段已經是身分的一部分，prompt 蓋不掉。**
+
+**待使用者裁決**：灰銀挑染要當成 Nico 的造型接受，還是重建乾淨錨點。
