@@ -1,0 +1,448 @@
+{
+  "_purpose": "K-05 跨角色臉部指紋登記表。把每個角色的臉拆成 10 條可比對的骨相軸，讓「這兩個人會不會撞臉」變成程式可以判定的事，而不是等出圖後靠肉眼發現。",
+  "_why_this_exists": "本 repo 已經因為撞臉付出過三次代價：(1) zoe-lai 因反覆撞臉被整個刪除；(2) sophia-tseng 的臉收斂到模型預設美女臉；(3) nico-tsai 選角跑到第三輪，因為前兩輪的臉與 rainie-hsu 是同一組骨架。共同成因都一樣——face_type 只寫了一行形容詞（『鵝蛋臉、雙眼皮、鼻樑挺』），這種描述對 seedream 等於沒寫，模型會直接套用它的預設臉。",
+  "_rule": "同一 ethnicity_group 內，任兩人必須至少 4 條軸不同，且其中至少 2 條落在 dominant_axes。低於門檻一律 HARD FAIL，不准送生成。",
+  "dominant_axes": [
+    "face_outline",
+    "eye_axis",
+    "eyelid",
+    "jaw_angle"
+  ],
+  "axes": {
+    "face_outline": [
+      "round",
+      "oval",
+      "long_oval",
+      "heart",
+      "small_heart",
+      "square_long"
+    ],
+    "lower_face": [
+      "short",
+      "medium",
+      "long"
+    ],
+    "chin": [
+      "narrow_pointed",
+      "small_round",
+      "soft_square",
+      "defined_square"
+    ],
+    "jaw_angle": [
+      "soft_undefined",
+      "gently_rounded",
+      "clean_defined",
+      "angular_square"
+    ],
+    "cheekbone": [
+      "low_soft",
+      "medium",
+      "high_prominent"
+    ],
+    "eye_size": [
+      "medium",
+      "large",
+      "very_large"
+    ],
+    "eye_axis": [
+      "level",
+      "upturned",
+      "downturned"
+    ],
+    "eyelid": [
+      "single",
+      "inner_double",
+      "narrow_double",
+      "wide_double"
+    ],
+    "nose": [
+      "short_upturned_round",
+      "small_flat",
+      "fine_straight_pointed",
+      "high_straight_narrow",
+      "straight_blunt"
+    ],
+    "lips": [
+      "small_round",
+      "thin_flat",
+      "petal_full_small",
+      "full_cupid",
+      "wide_thin"
+    ]
+  },
+  "personas": {
+    "rainie-hsu": {
+      "_source": "已訓練角色，face_type 實測結果。這就是 seedream 的預設美女臉——所有新角色的第一比對對象。",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "oval",
+      "lower_face": "medium",
+      "chin": "narrow_pointed",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "high_prominent",
+      "eye_size": "large",
+      "eye_axis": "upturned",
+      "eyelid": "wide_double",
+      "nose": "high_straight_narrow",
+      "lips": "full_cupid"
+    },
+    "nico-tsai": {
+      "_source": "pilot/nico_pilot.json identity_spec.face_base（使用者裁決的少女短臉型）",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "round",
+      "lower_face": "short",
+      "chin": "narrow_pointed",
+      "jaw_angle": "soft_undefined",
+      "cheekbone": "low_soft",
+      "eye_size": "large",
+      "eye_axis": "level",
+      "eyelid": "wide_double",
+      "nose": "short_upturned_round",
+      "lips": "small_round"
+    },
+    "iris-chen": {
+      "_source": "profile.json face_type：圓臉、大雙眼皮眼、精緻鼻梁、飽滿嘴唇、小下巴",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "round",
+      "lower_face": "medium",
+      "chin": "narrow_pointed",
+      "jaw_angle": "gently_rounded",
+      "cheekbone": "medium",
+      "eye_size": "large",
+      "eye_axis": "level",
+      "eyelid": "wide_double",
+      "nose": "fine_straight_pointed",
+      "lips": "full_cupid"
+    },
+    "coco-wu": {
+      "_source": "profile.json face_type：doll-like round face、大而圓的眼睛",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "round",
+      "lower_face": "short",
+      "chin": "small_round",
+      "jaw_angle": "gently_rounded",
+      "cheekbone": "low_soft",
+      "eye_size": "very_large",
+      "eye_axis": "level",
+      "eyelid": "wide_double",
+      "nose": "short_upturned_round",
+      "lips": "full_cupid"
+    },
+    "mia-huang": {
+      "_source": "profile.json face_type：soft round face、big expressive eyes",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "round",
+      "lower_face": "medium",
+      "chin": "small_round",
+      "jaw_angle": "soft_undefined",
+      "cheekbone": "low_soft",
+      "eye_size": "very_large",
+      "eye_axis": "upturned",
+      "eyelid": "wide_double",
+      "nose": "short_upturned_round",
+      "lips": "petal_full_small"
+    },
+    "sophia-tseng": {
+      "_source": "profile.json eyes：杏眼、內雙或近單眼皮的柔和摺痕（刻意不是歐式大雙眼皮）",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "oval",
+      "lower_face": "medium",
+      "chin": "small_round",
+      "jaw_angle": "gently_rounded",
+      "cheekbone": "medium",
+      "eye_size": "medium",
+      "eye_axis": "level",
+      "eyelid": "inner_double",
+      "nose": "fine_straight_pointed",
+      "lips": "full_cupid"
+    },
+    "vicky-lin": {
+      "_source": "profile.json face_type：bright almond eyes、high soft cheekbones、straight elegant nose、full lips",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "face_outline": "oval",
+      "lower_face": "medium",
+      "chin": "soft_square",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "high_prominent",
+      "eye_size": "large",
+      "eye_axis": "level",
+      "eyelid": "narrow_double",
+      "nose": "high_straight_narrow",
+      "lips": "full_cupid"
+    },
+    "yuna-kim": {
+      "_source": "已訓練角色，韓籍。指紋為回溯登記（未經重新出圖驗證），僅供新角色避讓用。",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "_confidence": "retro_low",
+      "face_outline": "oval",
+      "lower_face": "short",
+      "chin": "narrow_pointed",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "medium",
+      "eye_size": "large",
+      "eye_axis": "upturned",
+      "eyelid": "narrow_double",
+      "nose": "fine_straight_pointed",
+      "lips": "petal_full_small"
+    },
+    "luna-tanaka": {
+      "_source": "已訓練角色，日籍。指紋為回溯登記（未經重新出圖驗證），僅供新角色避讓用。",
+      "ethnicity_group": "east_asian",
+      "status": "trained",
+      "_confidence": "retro_low",
+      "face_outline": "oval",
+      "lower_face": "medium",
+      "chin": "small_round",
+      "jaw_angle": "soft_undefined",
+      "cheekbone": "low_soft",
+      "eye_size": "large",
+      "eye_axis": "level",
+      "eyelid": "narrow_double",
+      "nose": "small_flat",
+      "lips": "petal_full_small"
+    },
+    "ananya-kapoor": {
+      "_source": "已訓練，印度籍",
+      "ethnicity_group": "south_asian",
+      "status": "trained",
+      "_confidence": "retro_low",
+      "face_outline": "oval",
+      "lower_face": "medium",
+      "chin": "narrow_pointed",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "high_prominent",
+      "eye_size": "very_large",
+      "eye_axis": "level",
+      "eyelid": "wide_double",
+      "nose": "high_straight_narrow",
+      "lips": "full_cupid"
+    },
+    "aaliya-okonkwo": {
+      "_source": "已訓練，非裔美籍",
+      "ethnicity_group": "black",
+      "status": "trained",
+      "_confidence": "retro_low",
+      "face_outline": "oval",
+      "lower_face": "medium",
+      "chin": "soft_square",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "high_prominent",
+      "eye_size": "large",
+      "eye_axis": "level",
+      "eyelid": "narrow_double",
+      "nose": "straight_blunt",
+      "lips": "full_cupid"
+    },
+    "camille-dupont": {
+      "_source": "已訓練，法籍",
+      "ethnicity_group": "european",
+      "status": "trained",
+      "_confidence": "retro_low",
+      "face_outline": "long_oval",
+      "lower_face": "long",
+      "chin": "narrow_pointed",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "high_prominent",
+      "eye_size": "medium",
+      "eye_axis": "downturned",
+      "eyelid": "wide_double",
+      "nose": "high_straight_narrow",
+      "lips": "thin_flat"
+    },
+    "yerin-han": {
+      "_source": "Batch3 驗證組。原 face_type 只寫『韓系立體五官、眉眼明亮』——對 seedream 等於沒寫。本組骨相為避開 rainie-hsu／vicky-lin／yuna-kim 而設計。",
+      "_design_note": "高爾夫教練、170cm、健康大方。走『直線感的運動臉』：方額、方而柔的下顎、平視的明亮眼、寬而薄的唇。刻意不給上揚貓眼與厚唇——那是 rainie 的方向。",
+      "ethnicity_group": "east_asian",
+      "status": "casting",
+      "face_outline": "square_long",
+      "lower_face": "medium",
+      "chin": "soft_square",
+      "jaw_angle": "clean_defined",
+      "cheekbone": "medium",
+      "eye_size": "medium",
+      "eye_axis": "level",
+      "eyelid": "inner_double",
+      "nose": "straight_blunt",
+      "lips": "wide_thin"
+    },
+    "angeline-kwee": {
+      "_source": "Batch3 驗證組。原 face_type 是『鵝蛋臉、雙眼皮、鼻樑細挺』——與 cheryl-soh 幾乎逐字相同，且正是模型預設臉的描述。",
+      "_design_note": "23 歲、171cm、選物店主理人、有錢但不張揚。走『骨感冷淡的長臉』：長下半臉、窄眼距、眼尾微垂、薄唇。冷感來自骨相而不是妝。",
+      "ethnicity_group": "east_asian",
+      "status": "casting",
+      "face_outline": "long_oval",
+      "lower_face": "long",
+      "chin": "narrow_pointed",
+      "jaw_angle": "gently_rounded",
+      "cheekbone": "high_prominent",
+      "eye_size": "medium",
+      "eye_axis": "downturned",
+      "eyelid": "narrow_double",
+      "nose": "fine_straight_pointed",
+      "lips": "thin_flat"
+    },
+    "kanon-komori": {
+      "_source": "Batch3 驗證組。原 face_type『非常小的臉、大眼雙眼皮、圓鼻頭』與 nico-tsai／coco-wu／mia-huang 同屬圓臉娃娃臉群，是全庫最擁擠的一群。",
+      "_design_note": "20 歲、153cm、女僕咖啡廳。保留使用者設定的『小臉大眼』，但把分離點放在下巴與眼尾：尖而窄的心形下巴（不是圓下巴）、明顯下垂的眼尾（たれ目）、小而厚的花瓣唇、幾乎沒有鼻樑。與 nico 的差別在 outline／eye_axis／eyelid 三條 dominant 軸。",
+      "ethnicity_group": "east_asian",
+      "status": "casting",
+      "face_outline": "small_heart",
+      "lower_face": "short",
+      "chin": "narrow_pointed",
+      "jaw_angle": "soft_undefined",
+      "cheekbone": "low_soft",
+      "eye_size": "very_large",
+      "eye_axis": "downturned",
+      "eyelid": "narrow_double",
+      "nose": "small_flat",
+      "lips": "petal_full_small"
+    },
+    "wendy-yeo": {
+      "_source": "Batch3 驗證組。原 face_type『成熟輪廓、眉眼深、下顎線俐落、有一點英氣』——方向對，但『英氣』沒有落到骨相上就會被收斂成 rainie 的華麗臉。",
+      "_design_note": "28 歲、調酒師、掌控空間的人。全庫唯一的中性英氣臉：方長臉、真正的方下顎角（不是尖削）、單眼皮細長上挑眼、薄而唇線清晰的嘴。這是刻意的稀有值——目前 12 位已訓練角色沒有一個是單眼皮。",
+      "ethnicity_group": "east_asian",
+      "status": "casting",
+      "face_outline": "square_long",
+      "lower_face": "long",
+      "chin": "defined_square",
+      "jaw_angle": "angular_square",
+      "cheekbone": "high_prominent",
+      "eye_size": "medium",
+      "eye_axis": "upturned",
+      "eyelid": "single",
+      "nose": "high_straight_narrow",
+      "lips": "thin_flat"
+    }
+  },
+  "_grandfathered": {
+    "_why": "這些角色都**已經訓練完成並在生產環境使用**，臉無法回溯修改，因此登記為既成事實而非阻擋項。新角色一律全額執法。",
+    "_meaning": "這張表同時是本 repo 臉部同質化的量化證據：12 位已訓練角色裡有這些組合的骨相距離低於門檻。",
+    "pairs": [
+      {
+        "pair": [
+          "rainie-hsu",
+          "vicky-lin"
+        ],
+        "diff_axes": 3,
+        "dominant_axes": 2,
+        "differs_on": [
+          "chin",
+          "eye_axis",
+          "eyelid"
+        ]
+      },
+      {
+        "pair": [
+          "rainie-hsu",
+          "yuna-kim"
+        ],
+        "diff_axes": 5,
+        "dominant_axes": 1,
+        "differs_on": [
+          "lower_face",
+          "cheekbone",
+          "eyelid",
+          "nose",
+          "lips"
+        ]
+      },
+      {
+        "pair": [
+          "iris-chen",
+          "nico-tsai"
+        ],
+        "diff_axes": 5,
+        "dominant_axes": 1,
+        "differs_on": [
+          "lower_face",
+          "jaw_angle",
+          "cheekbone",
+          "nose",
+          "lips"
+        ]
+      },
+      {
+        "pair": [
+          "coco-wu",
+          "nico-tsai"
+        ],
+        "diff_axes": 4,
+        "dominant_axes": 1,
+        "differs_on": [
+          "chin",
+          "jaw_angle",
+          "eye_size",
+          "lips"
+        ]
+      },
+      {
+        "pair": [
+          "mia-huang",
+          "nico-tsai"
+        ],
+        "diff_axes": 5,
+        "dominant_axes": 1,
+        "differs_on": [
+          "lower_face",
+          "chin",
+          "eye_size",
+          "eye_axis",
+          "lips"
+        ]
+      },
+      {
+        "pair": [
+          "coco-wu",
+          "iris-chen"
+        ],
+        "diff_axes": 5,
+        "dominant_axes": 0,
+        "differs_on": [
+          "lower_face",
+          "chin",
+          "cheekbone",
+          "eye_size",
+          "nose"
+        ]
+      },
+      {
+        "pair": [
+          "vicky-lin",
+          "yuna-kim"
+        ],
+        "diff_axes": 6,
+        "dominant_axes": 1,
+        "differs_on": [
+          "lower_face",
+          "chin",
+          "cheekbone",
+          "eye_axis",
+          "nose",
+          "lips"
+        ]
+      },
+      {
+        "pair": [
+          "luna-tanaka",
+          "vicky-lin"
+        ],
+        "diff_axes": 5,
+        "dominant_axes": 1,
+        "differs_on": [
+          "chin",
+          "jaw_angle",
+          "cheekbone",
+          "nose",
+          "lips"
+        ]
+      }
+    ]
+  }
+}
