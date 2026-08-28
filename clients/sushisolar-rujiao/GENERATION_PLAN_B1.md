@@ -192,13 +192,13 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **妝容** | 透明感水光底妝，看得到毛孔；平直淡眉；奶茶色低對比暈染眼影；**眼頭小 V 字打亮**；極細內眼線、眼尾不上揚；**nose blush 淡淡橫過鼻樑**；**blurred lips**——奶茶米棕霧化暈開。 |
 | **髮型** | **mocha brown** 長軟波浪及鎖骨，**see-through 空氣瀏海**，右側撥到耳後露出耳環。 |
 | **穿著** | 上身：奶油白色**合身**細針織短袖（貼身，鎖骨與肩線清楚）｜下身：畫面外｜鞋：—｜外層：—｜首飾：金色小圓耳環＋細鎖骨鍊 |
-| **場景環境** | 明亮咖啡廳靠窗座位。白牆、淺木桌面、桌上一杯拿鐵與她的手機（透明殼）、窗外是台北街景（招牌、機車、行道樹）。 |
+| **場景環境** | 明亮咖啡廳靠窗座位。**白牆＋窗光虛化**。<br>（**2026-08-28 刪掉桌面的拿鐵與手機**——臉＋肩膀近景根本看不到桌面，寫了會逼模型拉遠景別；也不再帶窗外街景，避免文字） |
 | **機位與構圖** | **臉部＋肩膀近景。**<br>**機位**：在她的眼睛高度，鏡頭保持水平。<br>**距離**：坐在她對面的距離，不要湊太近。<br>**構圖**：臉佔畫面約 45%，留白留在她視線的方向。 |
 | **光線** | ① 落地窗自然光從她左前方進來，**打在臉上**｜② 白色桌面把光反回下巴與頸部｜③ 窗光冷白 vs 店內暖黃軌道燈落在她身後牆面｜④ **背景曝光與她的膚色相當** |
 | **表情** | **撥髮回眸。**一手正把頭髮撥到耳後，同時轉頭看鏡頭；嘴角單邊上揚的淺笑；頭往撥髮的那一側微傾。<br>**硬驗收＝一手把頭髮撥到耳後＋轉頭看鏡頭。臉部細節（眼型／嘴型／眉毛／臉頰）一律列 soft observation，不作淘汰依據。** |
 | **肢體與重心** | 坐姿，上半身微向前傾靠著桌緣；**右手正把頭髮撥到耳後——動作中，不是撥完**；左手托著杯子；肩膀一高一低。；**撥開的那撮頭髮還垂在指縫間晃動**。 |
 | **情境** | 剛坐下，把頭髮撥到耳後，看向鏡頭 |
-| **生成 prompt** | `A young woman tucks a strand of hair behind her ear and turns to look at the camera, one corner of her mouth lifted, head tilted toward that hand. Close-up of face and shoulders, camera at her eye level, lens horizontal. Collarbone-length soft wavy mocha brown hair with see-through wispy bangs. Cream fitted fine-knit tee, thin gold necklace, small gold hoops. Bright cafe window seat, white wall, pale wood table, a latte and her phone. Soft cool daylight from her front-left landing on her face, background exposed the same brightness as her skin. Visible skin pores, natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman tucks a strand of hair behind her ear and turns to look at the camera, one corner of her mouth lifted, head tilted toward that hand. Close-up of face and shoulders, camera at her eye level, lens horizontal. Collarbone-length soft wavy mocha brown hair with see-through wispy bangs. Cream fitted fine-knit tee, thin gold necklace, small gold hoops. Bright cafe window seat, a plain white wall and soft window light blurred behind her. Soft cool daylight from her front-left landing on her face, background exposed the same brightness as her skin. Visible skin pores, natural skin texture, subtle film grain.` |
 | **Caption 草稿** | —（頭貼用） |
 
 ### YG-02｜台北公寓窗邊晨光
@@ -215,7 +215,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **端著杯子瞇眼笑。**雙手捧著馬克杯舉到嘴邊喝一口，眼睛還沒完全張開、瞇成細細的；嘴角鬆鬆揚起。<br>（掛載動作＝馬克杯）<br>**硬驗收＝雙手捧馬克杯舉到嘴邊。臉部細節（眼型／嘴型／眉毛／臉頰）一律列 soft observation，不作淘汰依據。** |
 | **肢體與重心** | 赤腳走路有重量感；端杯子的手指自然彎曲；喝一口時肩膀微微下沉（吐氣）；**針織外套從單肩滑下一點**。；**左手把滑下肩的針織外套往上拉了一下**。；**右手端著馬克杯、左手把滑下肩的針織外套往上拉了一下——兩手都有事做**。 |
 | **情境** | 她端著馬克杯走到窗邊，站定，看窗外，喝一口，轉頭看鏡頭 |
-| **生成 prompt** | `A young woman stands at the window holding a mug with both hands and lifts it to her mouth, eyes still narrowed from sleep, a loose easy smile. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. Collarbone-length mocha brown hair, sleep-mussed, see-through bangs flattened with one tuft sticking up. White fitted camisole, high-waisted grey cotton shorts, beige cardigan slipping off one shoulder, bare feet. Small bright apartment, white walls, pale wood floor, unmade white bed. Soft morning light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands at the window holding a mug with both hands and lifts it to her mouth, eyes still narrowed from sleep, a loose easy smile. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. Collarbone-length mocha brown hair, sleep-mussed, see-through bangs flattened with one tuft sticking up. White fitted camisole, high-waisted grey cotton shorts, beige cardigan slipping off one shoulder. Small bright apartment, white walls, pale wood floor, unmade white bed. Soft morning light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 台北的早上☀️<br>光剛好照到腳 |
 
 ### YG-03｜超商・「今天學到一個字」
@@ -226,15 +226,15 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **妝容** | 淡妝。透明感薄底妝、淡眉、眼影幾乎沒有、nose blush 很淡、粉色潤色護唇。戴黑框眼鏡。 |
 | **髮型** | 低馬尾，see-through 瀏海留著，鬢角兩撮碎髮垂下。 |
 | **穿著** | 上身：**短版**灰色短袖上衣（露一截腰）｜下身：黑色**高腰**短褲｜鞋：白色低筒球鞋｜外層：—｜首飾：黑色細框眼鏡＋手腕上的黑色髮圈 |
-| **場景環境** | 超商內。天花板日光燈管、關東煮機台冒著熱氣、飲料冷藏櫃。**貨架與所有招牌一律失焦**——這件不要有需要讀字的東西。 |
+| **場景環境** | 超商角落。**平滑淺灰牆板＋不鏽鋼檯面側邊鋪滿背景**、天花板日光燈。<br>（**2026-08-28 刪掉貨架與商品包裝**——YG-05 的教訓是「把文字物件叫進畫面再要求失焦」不可靠，要直接不叫進來） |
 | **機位與構圖** | **半身自拍。**<br>**機位**：手機伸直手臂舉在略高於眼睛的位置（自拍的真實高度）。<br>**構圖**：人在畫面偏右，左側帶到關東煮機台。 |
 | **光線** | ① 天花板日光燈管**均勻打亮整張臉**｜② 冷藏櫃玻璃反一層冷光在她側臉｜③ 全場冷白，關東煮機台一小塊暖黃｜④ **背景曝光與她的膚色相當** |
 | **表情** | **舉著關東煮紙杯對鏡頭笑。**一手拿自拍手機，另一手把紙杯舉到臉頰旁；下巴微收、對鏡頭笑。<br>（掛載動作＝紙杯；**「摀嘴」與「指標示牌」都拿掉了**——自拍只剩一隻空手，兩個都要就是三隻手） |
 | **肢體與重心** | 一手舉手機自拍、**手臂有輕微晃動**；另一手指著標示牌；重心在單腳、身體微側。；**低馬尾在她轉頭時甩了一下**。 |
 | **情境** | 買了關東煮，站在機台旁自拍；「今天學到一個字」由 Caption 承擔，不靠畫面 |
-| **生成 prompt** | `In a phone selfie, a young woman holds a paper cup of hot broth up beside her cheek with her free hand, smiling at the camera with her chin tucked. Half-body phone selfie, camera just above her eye level, the shelves behind her thrown completely out of focus. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. Cropped grey tee, high-waisted black shorts, black-rimmed glasses. A convenience store interior, fluorescent ceiling tubes, a steaming hot-food counter, blurred shelves of packaged snacks. Flat even fluorescent light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `In a phone selfie, a young woman holds a paper cup of hot broth up beside her cheek with her free hand, smiling at the camera with her chin tucked. Half-body phone selfie, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. Cropped grey tee, high-waisted black shorts, black-rimmed glasses. A convenience-store corner with smooth light-grey wall panels and the plain stainless-steel side of a counter filling the soft background. Flat even fluorescent ceiling light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 今天學到一個新的字！<br>可是我念錯 店員笑了🥲 |
-| 附註 | **背景路人 1–2 人**：背向、不看鏡頭、失焦、外型與她明顯區隔 |
+| 附註 | 🔬 **錯國停損**：這是 Yuna 的避字版超商。**若 2 張仍出現清楚韓文，依既定規則撤掉超商 spec**，不靠抽卡。<br>硬驗收＝①成立為手機自拍且手機不入鏡 ②只有一隻可見手、握住紙杯 ③紙杯在臉側 ④畫面無清楚可辨的錯國文字 |
 
 ### YG-04｜梳妝台護膚・素顏
 `圖`　·　對應 **Y-06**　·　地點層級 **B**
@@ -244,13 +244,13 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **妝容** | **完全素顏。**皮膚要看得到毛孔與 T 字部位的自然油光，眉毛保留原生形狀，唇是自然色。 |
 | **髮型** | 全部往後用鯊魚夾夾起，額前留幾根碎髮垂下。 |
 | **穿著** | 上身：白色**細肩帶貼身**背心（鎖骨、肩線、胸型自然可見——這是護膚照的重點）｜下身：畫面外｜鞋：—｜外層：—｜首飾：手腕上的黑色髮圈 |
-| **場景環境** | 浴室洗手台／梳妝台。白色大理石台面、方形鏡、白色磁磚牆。護膚品瓶**不刻意排整齊**、化妝刷插在小杯裡、用過的化妝棉、白毛巾掛在旁邊的桿子上。 |
-| **機位與構圖** | **臉部＋上半身近景，拍鏡中反射。**<br>**機位**：在她的眼睛高度，鏡頭保持水平。<br>**構圖**：鏡框帶進畫面，台面上的瓶罐入鏡下緣。 |
+| **場景環境** | 白色大理石梳妝台面、白色磁磚牆。護膚品瓶與化妝刷**虛化在她身後**，不刻意排整齊。**不放鏡子。** |
+| **機位與構圖** | **臉部＋上半身近景，直接拍。**<br>**機位**：在她的眼睛高度，鏡頭保持水平。<br>**構圖**：台面上的瓶罐虛化在她身後。<br>（**2026-08-28 取消鏡面反射**——`soul_2` 沒有 negative prompt，**無法穩定排除拍攝設備入鏡**；鏡面不是這件的核心，不值得為它承擔 Hard Reject 風險） |
 | **光線** | ① 浴室頂燈＋鏡側光**均勻打在臉上，幾乎沒有陰影**｜② 白色大理石台面把光反回下巴｜③ 全場冷白｜④ **背景曝光與她的膚色相當** |
 | **表情** | **閉眼享受。**眼睛完全閉起、眉頭鬆開；嘴角放鬆地微揚；下巴微抬（把精華液按進臉頰的那一下）。 |
 | **肢體與重心** | **雙手掌心貼著臉頰往上按**；手肘抬起；上半身微前傾靠近鏡子；肩膀放鬆下沉。 |
 | **情境** | 用手掌把精華液按進臉頰，眼睛微閉 |
-| **生成 prompt** | `A young woman presses serum into her cheek with her fingertips, eyes closed, chin lifted, mouth relaxed into a small smile. Close-up of her face and shoulders reflected in the mirror, camera at her eye level, lens horizontal. Collarbone-length mocha brown hair clipped back with a claw clip, a few strands loose at her forehead. White fitted camisole. White marble bathroom counter, square mirror, white tiled wall, skincare bottles and brushes left unarranged. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Visible skin pores, natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman presses serum into her cheek with her fingertips, eyes closed, chin lifted, mouth relaxed into a small smile. Close-up of her face and shoulders, camera at her eye level, lens horizontal. Collarbone-length mocha brown hair clipped back with a claw clip, a few strands loose at her forehead. White fitted camisole. A white marble vanity counter, white tiled wall, skincare bottles and brushes softly blurred behind her. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Visible skin pores, natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 洗完澡最舒服☺️<br>씻고 나서 |
 
 ### YG-05｜捷運月台・隨手自拍
