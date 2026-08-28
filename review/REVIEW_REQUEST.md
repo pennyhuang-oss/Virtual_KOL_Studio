@@ -94,31 +94,31 @@ A young woman stands at a bus shelter, her left hand wrapped around the curved h
 
 ### 第 1 題（LG-04 花瓣握法會不會讓手擋住臉）
 
-- 判定：
-- 理由：
-- 建議改法（不同意才需要）：
+- 判定：**同意目前改法，可進 preflight。**比放在攤開掌心穩定；手擋臉的風險低，但不能視為已驗證成功。
+- 理由：`pinches ... between her thumb and index finger` 同時定義了接觸方式與手指關係，解掉原本「小物件只是放在手上、沒有抓握」的弱點。`beside her cheek` 是臉側位置，不是 `in front of her face`，通常不會要求手掌蓋住五官。半身景別也給花瓣與手較多像素。剩餘的主要風險反而是花瓣本身太小、與櫻花背景混在一起，而不是遮臉。
+- 建議改法（不同意才需要）：**不用再改。**若這次仍出現遮臉，下一輪才把 `beside her cheek` 收斂為 `at cheek height, to one side of her face`；不要在尚未看到問題前繼續加幾何詞。
 
 ### 第 2 題（LG-05 為壓字數刪掉的細節有沒有砍錯）
 
-- 判定：
-- 理由：
-- 建議改法：
+- 判定：**三個刪減都沒有砍到核心控制桿；但新增的 `both cuffs visible` 建議刪除。**
+- 理由：`still dripping` 與 `raindrops on the glass` 是雨天氛圍細節，現有的折傘、濕柏油與倒影已足以交代雨後情境；它們不影響「手是否真的握住傘」這個 preflight 驗收點。`left thigh` 的 `left` 也不是必要資訊，因為前面已指定 `her left hand`，保留 `beside her thigh` 即可。真正的新歧義是：衣服已寫 `short-sleeve`，又寫 `both cuffs visible`，模型可能把 cuffs 解成腕部袖口，反而與短袖衝突；而且左右手的動作都已逐一寫明，不需要再靠袖口證明手存在。
+- 建議改法：刪掉 `both cuffs visible`，不必恢復上述三個被刪細節。傘句可稍微改清楚為：`her left hand gripping the curved handle of a folded clear umbrella, its closed canopy hanging straight down beside her thigh`。這比讓整把 umbrella 直接修飾 `hanging` 更明確地指定「傘面朝下、手握把手」。
 
 ### 第 3 題（`laughing with her eyes crinkled` → `laughing` 是不是砍過頭）
 
-- 判定：
-- 理由：
-- 建議改法：
+- 判定：**LG-10A 沒有砍過頭，維持 `laughing`；但 LG-07 的去重砍過頭。**
+- 理由：LG-10A 的 `eyes crinkled` 只是低可靠的眼瞼形狀，刪掉後仍保留 `laughing`、蘋果糖與回頭動作，表情和掛載動作都還在。LG-07 原句中的 `peeking over the rim toward the camera` 不只是眼部形容詞，它同時描述了臉與爆米花桶的相對位置、視線方向，以及角色與鏡頭的互動；整段砍成 `smiling` 會失去有用的構圖控制。
+- 建議改法：LG-10A 保持 `laughing`。LG-07 改成 `looking over the rim toward the camera with a playful smile`；這樣刪掉難控制的眼睛形狀，仍保留桶緣與視線關係。
 
 ### 第 4 題（四件改動有無互相矛盾或與已驗證結論衝突）
 
-- 判定：
-- 理由：
-- 建議改法：
+- 判定：**沒有根本衝突；完成第 2、3 題的兩個微調後即可進下一輪 preflight／A/B。**
+- 理由：LG-04、LG-05 都只有一個 frozen moment，主要表情均綁定實體動作；髮長與鮑伯剪裁仍明寫；機位沿用相對描述；沒有否定句；眼睛已降為 soft observation；兩種鮑伯 wording 並存也符合「不為統一而製造新變因」的決定。唯一需要修的是 LG-05 的短袖／cuffs 語意歧義，以及 LG-07 不應把物件相對位置與視線方向一起當成眼部冗詞刪掉。另需注意：#1 的 LG-10A A/B 必須讓兩個 arm 都使用同一版 `laughing` 與其餘完全相同文字，只更換 pose clause，否則測試會再次混入變因。
+- 建議改法：刪除 LG-05 的 `both cuffs visible`；LG-07 恢復為 `looking over the rim toward the camera with a playful smile`；LG-10A A/B 固定其餘全文，只換 pose clause。除此之外同意本輪修改。
 
 ### 其他（選填，有就寫，沒有留空）
 
-- 
+- （無）
 
 ---
 
