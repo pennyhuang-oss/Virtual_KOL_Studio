@@ -6,6 +6,12 @@
 
 ## 內容方向
 
+> ## ⚠️ 交叉覆核制度（2026-08-27 起）
+>
+> **任何規劃在 [`review/LEDGER.md`](review/LEDGER.md) 全部議題結案之前，不得進入生成階段。**
+> 本專案採 Claude ⇄ ChatGPT 互相檢核：Claude 規劃 → ChatGPT 覆核 → Claude 修正 → 直到雙方同意。
+> 操作方式見 [`review/README.md`](review/README.md)。
+
 > **開始任何人設或素材規劃前，先讀 [`PERSONA_CANON.md`](PERSONA_CANON.md)。**
 > 那份文件定義了反差公式、標誌性場景的配額原則、造型可變性與「不寫絕對禁令」四條規則，
 > 適用於全體 KOL，優先於以下敘述與各角色既有檔案。
@@ -97,6 +103,14 @@
 ```
 Virtual_KOL_Studio/
 ├── README.md
+├── review/                      # Claude ⇄ ChatGPT 交叉覆核工作區
+│   ├── README.md                #   雙方的操作規則與狀態流轉
+│   ├── LEDGER.md                #   議題帳本（覆核狀態的唯一真理來源）
+│   └── rounds/                  #   歷次覆核的完整論述（唯讀存查）
+├── pilot/                       # Nico Vertical Slice（規格的真理來源）
+│   ├── nico_pilot.json          #   Phase A–D 完整規格
+│   ├── schema_v2.json           #   資料結構定義
+│   └── location_registry.json   #   地點層級 + signature/career 預設值
 ├── MODELING_SHOOT_PLAN.md       # Batch 3 建模照完整規劃（選角/錨定/訓練集，含配額驗證器）
 ├── PERSONA_CANON.md             # 人設憲章：全體 KOL 適用的四條原則（反差公式/場景配額/造型可變/不寫禁令）
 ├── KOL_TRAINING_SOP.md          # 訓練流程 SOP + 當前進度總覽
@@ -118,7 +132,9 @@ Virtual_KOL_Studio/
 │   ├── kol_content_qa_pipeline.js    # 生成前審核→生成→生成後審核→存檔的 QA 流程
 │   └── weekly_content_planner.js     # 單一 KOL 的每週企劃 + 防重複審核
 ├── tools/
-│   ├── validate_shoot_plan.py        # 建模照配額驗證（地點層級/造型/髮型/視角/濾鏡）
+│   ├── validate_shoot_plan_v2.py     # 語意+反作弊驗證器（Phase A–D gate、身分覆蓋、registry 推導）
+│   ├── gen_pilot_review.py           # 由 JSON 自動計算覆核包統計（防止文件層漂移）
+│   ├── validate_shoot_plan.py        # v1 配額驗證（僅供 19 位 v1 資料，已凍結）
 │   ├── shoot_plan.json               # 20 位 × 13 張的結構化規劃資料
 │   ├── assign_dance_batch.py         # 舞蹈候選清單核准後，平均分配給各 KOL（見 DANCE_CLONE_SOP.md）
 │   ├── parse_dance_issue.py          # 把 GitHub Issue #3 的候選清單解析成 assign_dance_batch.py 吃得懂的 CSV
