@@ -1,10 +1,10 @@
-# 【覆核請求】多手與服裝漂移 — 跑正式批次前必須先解決
+# 【覆核請求】YG-05 與 LG-08 的系統性失敗，改法我沒把握
 
 > ## ⛔ 讀取範圍限制（請先讀這段）
 >
 > **只讀這一個檔案，不要讀 repo 裡的任何其他檔案，也不要瀏覽目錄。**
-> 你判斷所需的一切都內嵌在下面。上一次爬整個專案背景，一次就耗掉使用者方案內
-> 5 小時的用量——你只做檢核、不規劃也不執行，用量不該比執行方還高。
+> 你判斷所需的一切都內嵌在下面。你只做檢核、不規劃也不執行，
+> 用量不該比執行方還高——上次爬整個專案一次就耗掉使用者 5 小時的額度。
 >
 > ## ✍️ 回覆方式
 >
@@ -16,106 +16,121 @@
 
 ## 0｜最小背景
 
-- 模型 Higgsfield Soul 2.0（`soul_2`）＋ 已訓練 `soul_id`。**沒有 negative prompt、沒有 seed。**
-- 一段 prompt 生一張、`2k`、`9:16`、0.12 credits／張。
-- 兩個角色：**Yuna**（韓籍長髮）、**Luna**（日籍及下巴鮑伯）。設定都住台北。
-- 現況：21 件規格已定稿、機械檢查全過。**剩下 17 張正式素材還沒跑。**
-- 已驗證結論（不必重議）：不寫族裔身材數字｜相機用相對描述｜否定句無效｜
-  `background exposed the same brightness as her skin` 可解逆光｜表情要綁實體動作｜
-  必寫髮長且造型不算長度｜鮑伯寫剪裁不寫視覺對稱｜`soul_id` 會鎖場景構圖模板｜
-  靜態圖不能塞兩個時間點｜眼睛控制低可靠。
+- Higgsfield Soul 2.0（`soul_2`）＋ 已訓練 `soul_id`。**無 negative prompt、無 seed。**
+- 一段 prompt 一次生成、`2k`、`9:16`、0.12 credits／張。
+- **Yuna**（韓籍長髮）、**Luna**（日籍及下巴鮑伯），設定都住台北。
+- 已驗證（不必重議）：不寫族裔身材數字｜相對機位描述｜否定句無效｜
+  `background exposed the same brightness as her skin` 解逆光｜表情要綁實體動作｜
+  必寫髮長、造型不算長度｜鮑伯寫剪裁不寫視覺對稱｜`soul_id` 鎖場景構圖模板｜
+  一張圖不能塞兩個時間點｜**眼睛與嘴部細節低可靠**。
+- **新驗證（你上一輪的建議，都有效）**：
+  服裝用「品名＋2–3 個可見結構特徵」→ 浴衣 3/3、迷你裙 4/4 正確；
+  空手寫 `her free arm relaxed at her side` → 5/5 沒有再出現第三隻手。
 
-**使用者的問題**：既然新跑的四張還是出現多一隻手、服裝跑掉，
-**正式素材跑起來會不會還是一堆問題？要怎麼改 prompt 才不會再發生？**
+**規則**：一個 spec 生 2 張。一張成功＝選片；**兩張同方向失敗＝系統性，停下改 prompt**。
+下面兩件都是兩張同方向失敗。
 
 ---
 
-## 1｜目前累積的 14 張實測數據
+## 1｜YG-05 捷運月台自拍：兩張都是韓文招牌，兩張都不是自拍
 
-### 1-1 Hard defect（手／道具）
+### 現行 prompt（兩張都失敗）
 
-| 圖 | prompt 裡的手部指派 | 結果 |
+```
+A young woman looks into her phone camera while pushing her fringe aside with her free hand, lips softly pursed, a bored flat gaze. Half-body phone selfie, camera just above her eye level. Collarbone-length sleek straight mocha brown hair, side-parted. Fitted black short-sleeve knit, a khaki high-waisted pleated A-line mini skirt forming one continuous hem around her thighs, a beige mini box bag. Metro platform, yellow safety line, platform screen doors, a route map lightbox thrown out of focus, ceiling tubes. Flat even station light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.
+```
+
+### 兩張的實際結果
+
+- **背景是清楚可辨的韓文招牌**（車站名稱牌、店招）。依專案規則這是 **Hard Reject**
+  ——角色設定住台北，`GENERATION_PLAN` 自己寫著「觀眾看不懂韓文就沒有意義」
+- **兩張都不是自拍**，是第三人稱拍攝（她手上沒有手機，是別人在拍她）
+- 服裝正確（迷你裙 `continuous hem` 有效）、比例正確、無多手、無逆光
+
+### 已知的重要對照
+
+| 場景 | 有無招牌 | 國別結果 |
 |---|---|---|
-| **LG-05** preflight | 只寫「拿著一把折傘」，**沒說哪隻手、怎麼拿**；另有 `a pale blue cardigan over her shoulders` | ❌ **傘浮在空中沒人拿**。外套被生成成穿進袖子，左手被吃掉 |
-| **LG-04** preflight | `holds one open palm with a blossom petal resting in it` | ❌ **手心是空的**，花瓣不見 |
-| **LG-10A B1**（靜態寫法） | 只寫「舉蘋果糖在臉頰旁」，**另一隻手沒有指派任何任務** | ❌ **三隻手**：兩手叉腰（prompt 完全沒要求）＋第三隻舉蘋果糖 |
-| **LG-10A A1／A2**（動作寫法） | 同樣只指派一隻手（舉蘋果糖），另一隻沒指派 | ✅ **兩張都正常，沒有多手** |
-| YG-03 preflight | `holds her selfie phone in one hand and covers her mouth with the other`（兩手都指派） | ✅ 正常 |
-| YG-06 早期測試 | `holding a paper cup with both hands in front of her chin`（兩手都指派） | ✅ 正常 |
+| **LG-03 房間窗台**（室內、無招牌） | 無 | ✅ 生出**台式鐵窗花＋對街舊公寓**，讀起來就是台灣 |
+| YG-05 捷運月台（戶外、有招牌） | 有 | ❌ 韓文 |
+| 更早的巷弄街拍 ×3 | 有 | ❌ 韓文，且每次同一條街 |
 
-**成功握住的道具**：舉到臉旁／下巴前（蘋果糖 ✅、紙杯 ✅）
-**失敗的道具**：垂在身側（傘 ❌）、放在攤開的手心（花瓣 ❌）
+**規律看起來是：國別是從「畫面裡的文字」洩出來的；沒有文字的場景反而生得對。**
 
-### 1-2 服裝漂移（14 張裡約 7 張有明顯偏離）
+### 我打算改成（🔴 沒把握，所以送覆核）
 
-| 圖 | 規格寫的 | 生出來 |
-|---|---|---|
-| **LG-10A A2** | 淺藍浴衣＋半幅帶＋木屐 | **上下兩件式的長褲套裝**＋黑平底鞋 |
-| **LG-05** preflight | `an off-white fitted shirt with the top buttons open` | **細肩帶背心**，胸線露出比規格多 |
-| **LG-04** preflight | `White square-neck fitted lace top` | 蕾絲上衣但**偏內衣感** |
-| **YG-03** preflight | `high-waisted black shorts` | **黑色長褲** |
-| 早期街拍 ×3 | `denim mini skirt` | **牛仔短褲**（三張全部） |
-| 早期街拍 ×2 | `sheer open shirt`（外層薄襯衫） | **整件消失** |
-| Luna 甜點店 | `pleated pink mini skirt lifting slightly in the breeze` | 裙子正確，**但「被風掀起」沒做出來** |
+```
+In a phone selfie, a young woman pushes her fringe aside with her free hand, lips softly pursed, a bored flat gaze. Half body, the phone camera held at arm's length just above her eye level. Collarbone-length sleek straight mocha brown hair, side-parted. Fitted black short-sleeve knit, a khaki high-waisted pleated A-line mini skirt forming one continuous hem around her thighs. Directly behind her the smooth grey platform screen doors fill the frame edge to edge, a yellow tactile safety line along the floor. Flat even station light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.
+```
 
-**沒有漂移的**：室內三張（短版 T＋開襟針織＋細金鍊全中）、LG-04 的下半身、LG-10A 三張的浴衣
+**三個改動與理由**：
+1. **`In a phone selfie,` 移到最前面**——YG-03 用這個開頭時，手機成功地沒有入鏡。
+   現行版把 `Half-body phone selfie` 放在第二句，兩張都變成第三人稱
+2. **背景改成「月台門鋪滿整個畫面」**——把所有會出現文字的東西移出畫面，
+   而不是叫它失焦（`thrown out of focus` 兩張都無效）
+3. **刪掉 `route map lightbox` 與 `ceiling tubes`**——那是文字與招牌的來源
 
-### 1-3 量化
+### 🔴 我沒把握的地方
 
-- **Hard defect（手／道具）：3／14 ≈ 21%**
-- **明顯服裝漂移：約 7／14 ≈ 50%**
-- 這個比率下，17 張正式素材預期會有 **3–4 張硬淘汰、8 張左右服裝要重跑**
+- 「月台門鋪滿畫面」會不會讓畫面變得很無聊、或反而讓模型自己補招牌填空？
+- 這是**用構圖迴避問題**，不是解決問題。**還有沒有更根本的做法？**
+- 如果連這樣都還是出現韓文，是不是這個場景就該整個換掉？
 
 ---
 
-## 2｜我的三個假設（請重點打）
+## 2｜LG-08 浴室鏡前：兩張都沒做出咬毛巾，兩張頭髮都是乾的
 
-### 假設 A：**沒有被指派任務的手，模型會自己找事做**
+### 現行 prompt（兩張都失敗）
 
-LG-05 的左手被外套吃掉 → 傘沒人拿；B1 兩手都沒指派 → 模型自己補了叉腰，蘋果糖只好長第三隻手。
+```
+A young woman holds a towel to her hair with one hand and bites one corner of it between her teeth while looking at herself in the mirror, her other hand resting on the counter, cheeks puffed out. Half body reflected in the mirror, camera at her eye level, lens horizontal. A wet blunt chin-length black bob cut evenly at the jawline, clinging to her cheeks. A white bath towel wrapped around her. Clean bright bathroom, white square tiles, a wooden-framed mirror with a little steam at one corner, skincare bottles on the counter. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.
+```
 
-**推論**：每段 prompt 應該**把兩隻手都寫明在做什麼**，不留空手。
+### 兩張的實際結果
 
-**但這個假設有反證**：A1／A2 同樣只指派了一隻手（舉蘋果糖），另一隻完全沒寫，
-**兩張都正常**。所以「未指派的手」不是充分條件，可能只是提高風險。
+- **「咬著毛巾一角」與「鼓臉頰」都沒做出來**——她只是拿毛巾擦臉／擦頭髮，表情平靜
+- **頭髮兩張都是乾的**（規格是濕髮貼臉頰）
+- 手部正確（兩隻手、各司其職）、鏡面構圖漂亮、光線正確、無多手
 
-### 假設 B：**少見／複合的服裝會退化成常見剪影**
+### 這件事讓表情規則要再修一次
 
-浴衣（複合：衣身＋腰帶＋木屐）→ 兩件式長褲；迷你裙 → 短褲（3/3）；
-合身襯衫 → 細肩帶背心；短褲 → 長褲。
-**方向都是「往更常見、更好畫的版本退化」。**
+先前的結論是「表情要綁實體動作」。但這裡**毛巾確實在手上、在臉旁**，
+**嘴部的細節動作（咬、鼓臉頰）照樣不執行。**
 
-反例：室內三張的短版 T ＋ 開襟針織全中——那些本來就是很常見的單品。
+我的修正版結論：**錨點保證的是「手與物件的位置」，不是「臉上發生什麼」。**
+驗收只能看動作與頭部朝向；嘴型、眼型、鼓臉頰都只能列 soft observation。
 
-### 假設 C：**排在服裝清單尾端的品項最容易掉**
+**一個例外**：LG-03 的 `eyes crinkled shut in a smile` **這次成功了**（眼睛確實閉起來笑）。
+所以**閉眼**似乎比瞇眼／彎眼／咬／鼓臉頰容易。
 
-薄襯衫（寫在外層、位置靠後）整件消失兩次。
-但這條先前你判定「合理但非單獨實驗證明」，我至今仍沒有做過對照。
+### 我打算改成（🔴 沒把握）
+
+```
+A young woman leans toward the bathroom mirror and presses a folded towel against one cheek with both hands, her eyes crinkled shut in a smile, her shoulders lifted. Half body reflected in the mirror, camera at her eye level, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, soaked dark and stuck flat to her forehead and cheeks, water beading at the ends. A white bath towel wrapped around her. Clean bright bathroom, white square tiles, a wooden-framed mirror with a little steam at one corner, skincare bottles on the counter. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.
+```
+
+**三個改動與理由**：
+1. **表情從「咬＋鼓臉頰」換成「閉眼笑」**——那是目前唯一驗證成功過的臉部狀態
+2. **動作換成「雙手把毛巾按在臉頰上」**——用**身體動作**承擔情緒，不靠嘴型
+3. **濕髮寫得更具體**：`soaked dark and stuck flat to her forehead and cheeks, water beading at the ends`
+   ——原本只寫 `wet ... clinging to her cheeks`，兩張都生成乾髮
+
+### 🔴 我沒把握的地方
+
+- 「閉眼笑」只成功過**一次**（LG-03），拿它當這件的核心驗收點，是不是把 n=1 當成規律？
+- 濕髮加上 `soaked dark`（顏色變深）會不會跟已驗證的鮑伯剪裁描述打架？
+- 「雙手把毛巾按在臉頰」——兩隻手都在臉附近，**會不會又觸發多手**？
 
 ---
 
-## 3｜請你判斷（四題）
+## 3｜請你判斷（五題）
 
-1. **假設 A 對嗎？「每段都把兩隻手指派任務」應該變成硬性規則嗎？**
-   如果要，那些手本來就不該入鏡的景別（臉部特寫、鏡中反射）怎麼處理？
-   而且指派兩隻手會增加字數與姿勢複雜度，會不會反而製造新問題？
-
-2. **假設 B 對嗎？有沒有已知有效的寫法可以鎖住少見服裝？**
-   我想到的方向是「用結構描述取代品名」——例如不要只寫 `yukata`，
-   而是寫 `a single-layer wrap robe crossed left over right, tied at the waist with a wide flat sash`。
-   **這個方向對嗎？還是反而會讓模型更混亂？**
-
-3. **這兩類錯誤到底能不能靠 prompt 壓下來？**
-   目前的規則是「一個 spec 生一張，不滿意就改 prompt 再生」。
-   **但如果硬瑕疵率本來就有 20%、服裝漂移率 50%，這個規則是不是本身就錯了？**
-   一張 0.12 credits，改成「一個 spec 生 2 張選 1」的成本只多 2 credits。
-   **你認為應該改成生 2 張，還是繼續一張？**（這一題我沒有立場，請直接判）
-
-4. **送生成前的檢查清單要新增哪幾項？**
-   目前有的是：手數 ≤2、自拍手機不入鏡、spec 與 prompt 一致、單一 frozen 表情、
-   動態衣物寫成畫面位置、髮長幾何、主要服裝 ≤3–4 件且重要的排前面、
-   pores 只在近景、機位與視線一致、產出張數與景別數一致。
-   **依上面的數據，還缺什麼？**
+1. **YG-05 的改法可行嗎？**特別是「用構圖把文字趕出畫面」這個策略。
+2. **如果 YG-05 改了還是出現韓文，下一步該怎麼辦？**換場景？還是這個角色的戶外場景整批放棄？
+3. **LG-08 的改法可行嗎？**三個改動裡有沒有哪個會製造新問題（尤其雙手靠近臉的多手風險）？
+4. **「閉眼笑」只有 n=1，可以拿來當驗收點嗎？**還是應該選一個更保守的表情？
+5. **我修正後的表情結論**——「錨點保證手與物件的位置，不保證臉上發生什麼」——**成立嗎？**
+   如果成立，那 21 件裡還有哪些件是靠臉部細節驗收的，需要一起改？
 
 ---
 
@@ -124,41 +139,39 @@ LG-05 的左手被外套吃掉 → 傘沒人拿；B1 兩手都沒指派 → 模�
 > 只填這一區。每題寫「判定＋理由」，**理由比結論重要**。
 > 認為我做得對也請明寫「同意」——空白我會當成還沒看。
 
-### 第 1 題（假設 A：兩隻手都要指派任務）
+### 第 1 題（YG-05 改法／用構圖趕走文字）
 
-- 判定：**假設 A 只能算風險因子，不能升格成「兩隻手都必須有任務」的硬性規則。應升格成硬性規則的是：每張都要有「手部可見性計畫」。**
-- 理由：LG-10A B1 支持「未約束的靜態姿勢可能讓模型自行補手勢」，但 A1／A2 已構成直接反例：只指派一隻手仍能正常生成。因此「空手」不是多手的充分條件；B1 還混有靜態站姿、模型自行補雙手叉腰等變因。若硬逼每隻手都拿東西或做手勢，會增加關節、接觸物與語意關係，反而提高穿模、多指與第三隻手風險。
-- 建議改法：每段 prompt 先把兩隻手各分類為三種之一：①可見且有任務；②可見但只需一個簡單休息位置；③依景別自然不入鏡。只有兩手都應清楚入鏡時，才逐一指定。第二隻手不必「找事做」，可寫 `her free arm relaxed at her side`、`her free hand resting lightly on the table` 這種單純位置。臉部特寫改用正向構圖 `tight close-up cropped at the shoulders`，不需要另外描述手；鏡中反射則依實際畫面決定哪些手會入鏡。另新增硬檢查：任何被衣袖、披肩或裁切遮住的手，不得同時被指派握主要道具。
+- 判定：
+- 理由：
+- 建議改法：
 
-### 第 2 題（假設 B：少見服裝退化；用結構描述取代品名對不對）
+### 第 2 題（若仍出現韓文的下一步）
 
-- 判定：**假設 B 合理，但現有資料不足以證明是單一根因；「結構描述取代品名」不建議，應改成「標準品名＋2–3 個可見、具辨識力的結構特徵」。**
-- 理由：服裝確實多次往常見剪影退化，但案例同時混入全身景別、場景模板、清單長度、動態描述與 soul_id 慣性。只留下結構句、拿掉 `yukata`，可能讓 `wrap robe` 被解成浴袍或一般長袍；結構詞越多也不等於控制越強，反而可能稀釋主體。品名負責叫出模型既有的整體概念，少量結構詞負責鎖住最不能錯的視覺差異。
-- 建議改法：浴衣可寫為 `a pale-blue floral Japanese yukata, an ankle-length wrap robe with the left front panel crossed over the right, secured by a wide flat navy obi sash, wooden geta sandals`。保留 `yukata`，只補交領、寬 obi、長度與鞋，不寫看不見或非驗收核心的 `single-layer`。迷你裙可用 `a pleated A-line mini skirt forming one continuous hem around her thighs`；薄外襯衫可用 `a long sheer overshirt worn open over the tee, both front panels visible down to mid-thigh`。這些仍只是較好的 production wording，不是已驗證公式；正式批次前至少用一件高風險服裝做同場景、同角色的最小對照。
+- 判定：
+- 理由：
+- 建議改法：
 
-### 第 3 題（一個 spec 生 1 張還是 2 張）
+### 第 3 題（LG-08 改法／多手風險）
 
-- 判定：**正式批次改成每個 spec 預設生 2 張、選 1 張。**
-- 理由：即使目前 21%／50% 不能當精確機率，14 張已足以證明輸出存在不可忽略的隨機瑕疵；而每張 0.12 credits，17 件多生一張只增加約 2.04 credits，成本遠低於正式素材逐張返工與中斷流程。兩張能降低隨機多手、道具遺失與局部服裝變形造成的淘汰風險。但兩張不是 prompt 修正的替代品：牛仔裙連續 3/3 變短褲這類同方向失敗顯示系統性偏差，不能靠無限抽卡處理。
-- 建議改法：每件用同一份已核准 prompt 做兩次獨立生成並先選優；若兩張都出現同一種服裝漂移，立即停止該 spec，改 prompt 後再跑，不要繼續用原句加抽。記錄時分開標示「隨機 defect（兩張結果不同）」與「系統性 drift（兩張同方向失敗）」。高風險服裝若要比較兩種 wording，另立 A/B，不要把不同 prompt 的兩張混稱為「選 1」。
+- 判定：
+- 理由：
+- 建議改法：
 
-### 第 4 題（檢查清單要新增什麼）
+### 第 4 題（閉眼笑 n=1 能不能當驗收點）
 
-- 判定：**現有清單缺的是「手部可見性／遮擋關係」、「服裝辨識結構」與「兩張輸出的失敗分流」三組檢查。**
-- 理由：現在只檢查手數上限，沒有檢查每隻手在畫面裡是否應出現、是否被服裝遮住、是否同時負責主要道具；服裝只管件數與排序，沒有檢查品名與結構是否足以區分常見替代品。這兩類正是實測失敗集中處。另一方面，prompt lint 只能抓規格風險，不能保證生成端不出隨機手部瑕疵，所以還需要明確的雙張選片與停止條件。
-- 建議改法：新增以下項目：
-  1. **手部可見性計畫**：左／右手各屬「可見有任務、可見休息、依裁切不入鏡」哪一類；不要強迫每隻手都有複合動作。
-  2. **手—道具接觸幾何**：主要道具是否寫明哪隻手、接觸部位、握法及相對位置；手部任務總數是否仍 ≤2。
-  3. **遮擋衝突**：披肩、長袖、袖口、身體裁切是否會遮住一隻被指派握道具的手。
-  4. **靜態姿勢的空手位置**：若兩手都會入鏡，未拿道具的手是否有一個簡單休息位置，避免模型自行補叉腰等強姿勢。
-  5. **高風險服裝標記**：浴衣、連身／交領服、迷你裙、透明外層等是否使用「標準品名＋2–3 個可見結構特徵」，且結構彼此不衝突。
-  6. **替代剪影檢查**：生成前先寫明這件最容易退化成什麼，並加入一個正向可見特徵區隔；例如裙子用 continuous hem、外襯衫用 both front panels visible。
-  7. **景別可驗收性**：構圖是否真的看得到要驗收的 obi、裙襬、鞋或雙手；看不到就不能拿該張驗證服裝完整度。
-  8. **雙張分流規則**：一張成功即選片；兩張同方向失敗＝先改 prompt；只有一張失敗＝記為隨機 defect，不立即改全批規則。
+- 判定：
+- 理由：
+- 建議改法：
+
+### 第 5 題（表情結論是否成立／還有哪些件要一起改）
+
+- 判定：
+- 理由：
+- 建議改法：
 
 ### 其他（選填）
 
-- **先修正統計表再拿比率預測正式批次。**本檔一處寫 LG-10A A2 變成長褲套裝，後面又寫「LG-10A 三張的浴衣沒有漂移」，兩者不能同時成立；請確認後者是否應為其餘兩張。另「裙子正確但沒有被風吹起」是動勢／姿勢未執行，不是服裝漂移；同一張同時出現裙變短褲與外襯衫消失時，也只能在「有漂移的圖片數」分子計一次。未先按 unique image 重算前，約 50% 與「17 張會有 8 張重跑」只能當風險提示，不能當期望值。
+- 
 
 ---
 
