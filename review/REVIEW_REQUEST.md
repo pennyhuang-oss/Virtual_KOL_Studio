@@ -117,44 +117,44 @@ A young woman holds a candy apple up beside her cheek with one hand and steadies
 ## 回覆區（請只填這一段）
 
 ### 光線句（全批適用）
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：低反差寫法可以保留；它至少已有 YG-04 的方向性證據，而且本批 YG-03 的白牆補光與「背景略暗於膚色」是同一套可理解的光學關係。未實測的風險在「某區 allowed to clip」：這是生成命令，不只是攝影容許值，可能把整片窗／門口／招牌／燈籠推成大面積死白，並連帶壓暗或逆光臉部。現有 2 張低反差結果不能外推成 6 個高反差場景已驗證。
+- **建議改法**：不要改回舊的同亮度句，也不要一次放行 6 件。把取捨句統一成「臉部保留自然膚色與高光細節；具名光源是畫面最亮處，只有局部最高光可到白色」，再先選一個窗／門口類與一個點光源類各做最小 preflight。例：`Her face is clearly exposed with natural skin texture; the doorway is the brightest area, with only its small brightest region reaching white.` 通過後才能擴到同類場景，不能把窗類結果直接當成燈籠／招牌類證據。
 
 ### YG-03
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：凍結瞬間與一隻可見手的解剖分配成立，低反差光線也與場景一致；但 prompt 只寫 `one visible hand` 修飾毛巾動作，沒有明確封住自拍手、手機或第二隻手入鏡，硬驗收①②仍可能失敗。
+- **建議改法**：在第一句後加：`The frame contains exactly one visible hand; her phone and camera-holding hand stay outside the frame.` 其餘可保留；光線依上方低反差寫法原樣送 preflight。
 
 ### YG-07
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：兩手任務與單一瞬間清楚，沒有第三個動作；但半身坐姿同時寫 `bare feet` 會誘使模型拉遠或把腿腳塞進構圖，而赤腳並非本件硬驗收。另 `scrolling` 是時間動作，靜態畫面以拇指停在螢幕上更可驗收。
+- **建議改法**：刪除 `bare feet`；首句改為 `holds her phone in one hand with her thumb resting on the screen, while her other hand is inside the open snack bag`，並補 `Exactly two hands are visible.` 光線改用上方「局部最高光」版本後送 preflight。
 
 ### YG-08
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → PASS
+- **理由**：單手持蛋餅咬、另一手比讚是同一瞬間且兩手角色互斥；半身、人食同框、打結衣襬也都直接寫入，沒有構圖與硬驗收衝突。門口作為最高亮區在光學上合理。
+- **建議改法**：內容可送；只把全批未驗證的 `doorway behind her allowed to clip` 換成上方「門口最亮、僅局部最高光到白、臉保留細節」句，並把這張列入門口／窗類 preflight。
 
 ### YG-10
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：手部任務數量正確，但 `swatched hand` 沒明說手背朝鏡頭，可能生成掌心或手指試色；`mirrored columns` 又可能複製手、臉或人物，直接威脅「臉旁只有一隻手」的驗收。
+- **建議改法**：首句改成 `holds the back of one swatched hand facing the camera beside her face`。把背景改成 `mirror-faced columns reflecting only soft, out-of-focus ceiling lights`，並補 `Her reflection is outside the composition.` 若流程不接受否定式，直接把 `mirrored columns` 換成 `glossy pale columns`，不要用鏡面來賭肢體去重。
 
 ### LG-02
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → BLOCK
+- **理由**：規格內部不可同時驗收：畫幅定義為膝上 3/4 身，硬驗收卻要求赤腳；赤腳必須看見腳，膝上構圖必然把腳裁掉。加上手指碰地板的動作，模型為了交代手、光斑與腳，很可能自行拉成全身，不能靠 prompt 小修同時滿足兩者。
+- **建議改法**：先決定唯一真相來源。若比例優先，從硬驗收④與 prompt 刪除赤腳，只驗收到膝上；若赤腳是敘事必要條件，將規格與硬驗收改成全身／至少完整到腳，並相應調整 `Three-quarter body`。在兩者統一前不要送生成。
 
 ### LG-05
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → BLOCK
+- **理由**：膝上 3/4 身與「完整確認傘尖朝下貼腿側」也互相衝突。手在髖部附近時，一把收起的長傘通常延伸至膝下；現有構圖可能裁掉傘尖，硬驗收①便無法從成品證明，模型也可能為保留整把傘自行改成更遠景。此外英文首句在 `umbrella its closed canopy` 之間缺少連接結構。
+- **建議改法**：若傘尖可見是硬條件，將構圖改為至少到小腿中段，並寫 `one hand gripping the curved handle of a folded clear umbrella, with its entire closed canopy and downward-pointing tip visible beside her leg`；若必須維持膝上構圖，就把硬驗收改成「傘身垂直貼大腿、下端可 off-frame」，不可仍要求驗到傘尖。兩者統一後再送。
 
 ### LG-10B
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：兩手任務與半身瞬間成立；但半身 prompt 寫 `ankle-length` 會對模型發出展示全長服裝的訊號，增加拉遠風險。左右襟也應鎖定為穿著者視角，否則 `left` 可能被解讀成畫面左側。
+- **建議改法**：刪除半身不可驗收的 `ankle-length`，改成 `a pale-blue floral yukata with the wearer’s left front panel layered over the wearer’s right, secured by a wide flat navy obi`。燈籠光線依上方改成只有局部最高光到白，並把本件列為點光源類 preflight。
 
 ### 其他（只寫會導致生成失敗的項目）
--
+- YG-10 若保留鏡面，反射人物／肢體必須列入硬驗收，否則「實體手剛好兩隻」通過時仍可能留下鏡中多手。
