@@ -93,3 +93,54 @@
 （yerin-han、angeline-kwee、kanon-komori、wendy-yeo）。
 本輪**沒有**建立 Reference Element、**沒有**呼叫 `show_characters(action='train')`，
 `profile.json` 的 soul_id 維持 PENDING。
+
+---
+
+## Batch 3 · Phase A Round 2 — 2026-08-28（規劃通過 gate 後的第一次生成）
+
+**前置狀態**：`tools/validate_shoot_plan_v2.py` exit 0、語意逐列覆核 20/20（ChatGPT R5–R9）、
+對抗測試 26/26。也就是說：**計畫層的 QA 全綠，出圖仍然全錯**——
+規劃 gate 管的是「這個計畫成不成立」，管不到「prompt 送進模型會被怎麼解讀」。這是兩層不同的東西。
+
+**成本**：6 張（4 張首批 + 2 張單張探針），約 6.5 credits。
+
+### 首批 4 張：全數不合格，五個缺陷同時出現
+
+| 缺陷 | 說明 |
+|------|------|
+| **景別完全失效** | 指定 knee_up，4/4 出全身含鞋。**這是第三次**（rainie-hsu R1、nico R1、本輪）。R1 記的修法「景別搬到第一行＋排他性措辭」**無效** |
+| **髮色 ombré** | 深棕髮根 → 金／白髮尾。R1 拿掉 `bleached` 解決了「整頭銀白」，但模型改成有髮根的漸層 |
+| **服裝漂移成短版** | 4/4 露腰。prompt 從未寫 cropped |
+| **身體轉開** | 寫 "turned about 30 degrees toward her own left"，模型解讀成**背對鏡頭**，正面軀幹讀不到——Phase A 的目的直接失效 |
+| **拍攝裝置入鏡** | candidate_02 畫進一隻手拿著手機。與 R1「棚燈入鏡」同一類 |
+
+### 根因：**這個模型不執行否定句**
+
+`nothing below the knee is visible`／`NOT a crop top`／`no ombré`／`NOT a full-length shot`
+全部無效。有效的是**正面描述目標狀態**：
+
+| 失效寫法（否定） | 有效寫法（正面描述） | 結果 |
+|-----------------|-------------------|------|
+| `nothing below the knee is visible` | `the bottom edge of the picture cuts straight across her thighs, roughly a hand's width above the knee` | ✅ 景別修正 |
+| `NOT a crop top, no exposed midriff` | `the hem is long and tucked into her trouser waistband` | ✅ 服裝修正 |
+| `no ombré, no dark roots, no lightened tips` | `a single flat salon dye job done right down to the scalp: the hair at her parting and roots is exactly the same medium brown as the hair at the ends` | ✅ 髮色修正 |
+| `her back is not toward the camera` | `her chest and hips are turned only slightly so the front of her body stays fully visible to the lens` | ✅ 朝向修正 |
+
+**這條規則要寫進 SOP**：seedream 的 prompt 一律用「畫面裡有什麼、邊界切在哪裡」描述，
+不要用「不要有什麼」。否定詞只在**顏色排除**時有一點作用（`not tanned` 有效），
+在**構圖與服裝結構**上完全無效。
+
+### 兩張探針的結果
+
+- **probe_v2**（修景別／服裝／朝向）：景別 ✅、露腰 ✅、朝向 ✅、手機入鏡 ✅；**髮色仍 ombré** ❌、唇色仍濃 ❌
+- **probe_v3**（再修髮色／妝）：髮色 ✅ 變成從髮根到髮尾一致的冷調棕，無漸層無金色
+
+### 仍未解決（需使用者裁決）
+
+1. **髮色明度**：設定寫「冷灰奶茶（**漂過的高明度**髮色）」。probe_v3 為了消除漸層，
+   顏色被拉到**中等棕**，比設定暗。真正的目標在 v2（有髮根的金）與 v3（均勻中棕）之間。
+2. **胸型偏大**：probe_v3 的胸型讀起來仍超過「small natural bust with a shallow curve / C 罩杯」。
+   **這正是 rainie-hsu v1 整批作廢的原因**——錨點只核對臉沒核對身材。Phase A 不放行前必須先解決。
+3. 唇色仍偏紅（次要）。
+
+**下一步**：這兩項要使用者裁決後才續跑，不自行試錯。
