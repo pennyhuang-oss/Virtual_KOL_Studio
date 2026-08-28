@@ -135,7 +135,7 @@
         "口部幾何": "小中等唇",
         "頰部": "低位柔頰"
       },
-      "face_en": "Create a new 23-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_10; NOSE from ref_01; MOUTH from ref_02. Build a broad softly squared facial canvas, a short midface, moderate low cheek padding, and a soft square jaw ending in a short blunt chin. Use medium-spaced open level eyes, a straight medium nose, and a compact mouth with restrained lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 23-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a broad softly squared facial canvas, a short midface, moderate low cheek padding, and a soft square jaw ending in a short blunt chin. Use medium-spaced open level eyes, a straight medium nose, and a compact mouth with restrained lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "broad forehead",
@@ -172,7 +172,15 @@
         "hair": "黑棕色長髮，髮尾一段漂成蜜茶金——上班一律紮起來完全看不出來，放下才看得到。這個藏起來的髮色本身就是她反差的第一個提示。",
         "hair_color_current": "黑棕 + 蜜茶金髮尾（隱藏式）",
         "superseded_face_type": "白皙偏冷調，圓潤杏眼、笑起來有臥蠶。上班素顏感底妝，下班會化完整的眼妝。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 23-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_10; NOSE from ref_01; MOUTH from ref_02. Build a broad softly squared facial canvas, a short midface, moderate low cheek padding, and a soft square jaw ending in a short blunt chin. Use medium-spaced open level eyes, a straight medium nose, and a compact mouth with restrained lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_15",
+        "EYES_AND_BROWS": "ref_10",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_02"
+      },
+      "needs_rebuild": null
     },
     "tammy-chou": {
       "archetype": "上寬下窄、五官橫向展開的柔心形成人臉",
@@ -189,7 +197,7 @@
         "口部幾何": "寬中等唇",
         "頰部": "中段飽滿"
       },
-      "face_en": "Create a new 24-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_03; NOSE from ref_05; MOUTH from ref_09. Build a soft heart-shaped canvas with rounded cheek transitions and a broad upper face. Use visibly wide-set open round eyes, a short softly broad nose, a wide mouth with medium lip volume, and a jaw that tapers gently into a small rounded chin. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 24-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a soft heart-shaped canvas with rounded cheek transitions and a broad upper face. Use visibly wide-set open round eyes, a short softly broad nose, a wide mouth with medium lip volume, and a jaw that tapers gently into a small rounded chin. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "broad upper face",
@@ -226,7 +234,15 @@
         "hair": "奶茶金棕 + 臉側 money piece 淺挑染，大波浪長捲髮蓬鬆有空氣感。做服飾電商的人本來就得走在前面，髮色是她的招牌之一。",
         "hair_color_current": "奶茶金棕 + money piece 挑染",
         "superseded_face_type": "白皙偏暖，圓杏眼、臥蠶明顯。網拍模特兒妝：閃粉眼影 + 果凍唇。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 24-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_03; NOSE from ref_05; MOUTH from ref_09. Build a soft heart-shaped canvas with rounded cheek transitions and a broad upper face. Use visibly wide-set open round eyes, a short softly broad nose, a wide mouth with medium lip volume, and a jaw that tapers gently into a small rounded chin. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_08",
+        "EYES_AND_BROWS": "ref_03",
+        "NOSE": "ref_05",
+        "MOUTH": "ref_09"
+      },
+      "needs_rebuild": null
     },
     "emma-kao": {
       "archetype": "長方橢圓、骨量中等、五官集中且穩重的主播臉",
@@ -243,7 +259,7 @@
         "口部幾何": "小中等唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 27-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_15. Build a long broad-boned rectangular canvas with planar cheeks and a softly squared blunt lower outline. Place narrow level eyes slightly close together within a long midface, use a medium straight nose with a blunt tip, and keep the mouth small and restrained. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 27-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a long broad-boned rectangular canvas with planar cheeks and a softly squared blunt lower outline. Place narrow level eyes slightly close together within a long midface, use a medium straight nose with a blunt tip, and keep the mouth small and restrained. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "long rectangular canvas",
@@ -280,7 +296,15 @@
         "hair": "深棕及肩直髮，主播式內彎吹整（電視台對髮色有規定，所以她只能維持自然色）——但私下會夾上酒紅色的挑染片，這是她少數能偷渡的叛逆。",
         "hair_color_current": "深棕（職業限制）+ 私下酒紅挑染片",
         "superseded_face_type": "白皙端正的上鏡臉，立體但不銳利，眉眼溫和有說服力。上鏡濃妝 vs 私下的裸妝。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 27-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_15. Build a long broad-boned rectangular canvas with planar cheeks and a softly squared blunt lower outline. Place narrow level eyes slightly close together within a long midface, use a medium straight nose with a blunt tip, and keep the mouth small and restrained. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_02",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_15"
+      },
+      "needs_rebuild": null
     },
     "zoey-yeh": {
       "archetype": "低眉軟圓、短中庭與U形下臉的清透成人臉",
@@ -297,7 +321,7 @@
         "口部幾何": "小飽滿唇",
         "頰部": "低位柔頰"
       },
-      "face_en": "Create a new 21-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_13; NOSE from ref_05; MOUTH from ref_10. Build a short softly rounded U-shaped face with low full cheeks and a short blunt chin. Use wide-set gently downturned eyes under low soft brows, a short low-bridge nose with a rounded tip, and a small softly full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 21-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a short softly rounded U-shaped face with low full cheeks and a short blunt chin. Use wide-set gently downturned eyes under low soft brows, a short low-bridge nose with a rounded tip, and a small softly full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "short U-shaped face",
@@ -334,7 +358,15 @@
         "hair": "黑色長直髮中分，髮質細軟——現階段維持天然黑，因為清純路線需要這個純度作為對照組——是現在的選擇，不是永久鎖定。",
         "hair_color_current": "天然黑（現階段）",
         "superseded_face_type": "非常白、透明感，圓眼、眼尾下垂，柔弱清純。幾乎素顏，只有唇蜜。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 21-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_13; NOSE from ref_05; MOUTH from ref_10. Build a short softly rounded U-shaped face with low full cheeks and a short blunt chin. Use wide-set gently downturned eyes under low soft brows, a short low-bridge nose with a rounded tip, and a small softly full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_04",
+        "EYES_AND_BROWS": "ref_13",
+        "NOSE": "ref_05",
+        "MOUTH": "ref_10"
+      },
+      "needs_rebuild": null
     },
     "miu-shiraishi": {
       "archetype": "中段最寬、下臉短鈍的蘋果型成人臉",
@@ -351,7 +383,7 @@
         "口部幾何": "寬中等唇",
         "頰部": "中段飽滿"
       },
-      "face_en": "Create a new 22-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_04; NOSE from ref_12; MOUTH from ref_08. Build an apple-like face with central fullness, the widest point at the mid-cheeks, a rounded-square jaw, and a short blunt chin. Gather large level round eyes toward the center, use a short nose with a softly broad tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 22-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build an apple-like face with central fullness, the widest point at the mid-cheeks, a rounded-square jaw, and a short blunt chin. Gather large level round eyes toward the center, use a short nose with a softly broad tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "apple-shaped midface",
@@ -388,7 +420,15 @@
         "hair": "淺亞麻米金（漂過兩次的高明度色），齊肩內彎 + 空氣瀏海。東京中目黑的咖啡店員染這個顏色是日常，也讓她跟同為日系的 Luna（黑短髮）視覺上完全分得開。",
         "hair_color_current": "淺亞麻米金（漂色）",
         "superseded_face_type": "白到透光的日系膚色，圓臉大眼、下垂眼尾，童顏。橘調腮紅打在眼下、水潤唇。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 22-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_04; NOSE from ref_12; MOUTH from ref_08. Build an apple-like face with central fullness, the widest point at the mid-cheeks, a rounded-square jaw, and a short blunt chin. Gather large level round eyes toward the center, use a short nose with a softly broad tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_05",
+        "EYES_AND_BROWS": "ref_04",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_08"
+      },
+      "needs_rebuild": null
     },
     "rin-ayase": {
       "archetype": "窄長鑽石型、顴區清楚、眼裂細長的成熟臉",
@@ -405,7 +445,7 @@
         "口部幾何": "寬中等唇",
         "頰部": "高位平顴"
       },
-      "face_en": "Create a new 25-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_07; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_10. Build a long diamond canvas with high planar cheek regions, a long midface, and a slim jaw ending in a long blunt chin. Use narrow level eyes, a long straight fine nose, and a composed mouth wider than the nose with medium lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 25-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a long diamond canvas with high planar cheek regions, a long midface, and a slim jaw ending in a long blunt chin. Use narrow level eyes, a long straight fine nose, and a composed mouth wider than the nose with medium lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "long diamond outline",
@@ -442,6 +482,19 @@
         "hair": "深酒紅棕（暗紅調，燈下才看得出來的那種），長髮，多數盤低髻或大波浪吹整。銀座對髮色有分寸要求，這個暗紅剛好踩在線上。",
         "hair_color_current": "深酒紅棕（暗紅調）",
         "superseded_face_type": "白皙冷調，鵝蛋臉、細長眼、鼻樑挺，成熟艷麗但收斂。銀座妝：乾淨底妝 + 精準眼線 + 正紅／豆沙唇。"
+      },
+      "face_en_v1_filename_form": "Create a new 25-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_07; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_10. Build a long diamond canvas with high planar cheek regions, a long midface, and a slim jaw ending in a long blunt chin. Use narrow level eyes, a long straight fine nose, and a composed mouth wider than the nose with medium lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_07",
+        "EYES_AND_BROWS": "ref_02",
+        "NOSE": "ref_14",
+        "MOUTH": "ref_10"
+      },
+      "needs_rebuild": {
+        "NOSE": [
+          "ref_01",
+          "ref_14"
+        ]
       }
     },
     "nanami-fujiwara": {
@@ -459,7 +512,7 @@
         "口部幾何": "小中等唇",
         "頰部": "低位柔頰"
       },
-      "face_en": "Create a new 23-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_01; NOSE from ref_08; MOUTH from ref_02. Build a broad balanced oval canvas with low gentle cheek volume, a smoothly rounded jaw, and a small rounded chin. Use medium level eyes, a compact softly shaped nose, and a small restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 23-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a broad balanced oval canvas with low gentle cheek volume, a smoothly rounded jaw, and a small rounded chin. Use medium level eyes, a compact softly shaped nose, and a small restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "broad oval outline",
@@ -496,6 +549,19 @@
         "hair": "現階段是黑色長髮，配合旅館工作的分寸；下工放下時是直順的黑髮。她離開旅館或想換的時候都可以改。",
         "hair_color_current": "天然黑（現階段）",
         "superseded_face_type": "白皙柔和的日系鵝蛋臉，眉眼溫順，笑起來眼睛彎。清透妝，有教養感。"
+      },
+      "face_en_v1_filename_form": "Create a new 23-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_01; NOSE from ref_08; MOUTH from ref_02. Build a broad balanced oval canvas with low gentle cheek volume, a smoothly rounded jaw, and a small rounded chin. Use medium level eyes, a compact softly shaped nose, and a small restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_03",
+        "EYES_AND_BROWS": "ref_01",
+        "NOSE": "ref_08",
+        "MOUTH": "ref_02"
+      },
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_15",
+          "ref_03"
+        ]
       }
     },
     "kanon-komori": {
@@ -513,7 +579,7 @@
         "口部幾何": "小飽滿唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 20-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_05; NOSE from ref_12; MOUTH from ref_03. Build a compact inverted-triangle canvas with a moderately broad upper face, very short midface and lower third, and a small pointed chin. Place very open downturned eyes high and wide across the face, use a short nose with a softly rounded tip, and a small full mouth. Maintain adult facial proportions and natural skin texture. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 20-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a compact inverted-triangle canvas with a moderately broad upper face, very short midface and lower third, and a small pointed chin. Place very open downturned eyes high and wide across the face, use a short nose with a softly rounded tip, and a small full mouth. Maintain adult facial proportions and natural skin texture. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "compact inverted triangle",
@@ -550,7 +616,15 @@
         "hair": "粉紫漸層（髮根深、髮尾粉紫），長度到腰，雙馬尾或放下。全批最鮮明的髮色，也是她 Cosplay 體質的延伸。",
         "hair_color_current": "粉紫漸層（特殊色）",
         "superseded_face_type": "白皙、非常小的臉，大眼雙眼皮、圓鼻頭，日系偶像臉。上班的偶像妝卸掉後落差很大。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 20-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_05; NOSE from ref_12; MOUTH from ref_03. Build a compact inverted-triangle canvas with a moderately broad upper face, very short midface and lower third, and a small pointed chin. Place very open downturned eyes high and wide across the face, use a short nose with a softly rounded tip, and a small full mouth. Maintain adult facial proportions and natural skin texture. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_04",
+        "EYES_AND_BROWS": "ref_05",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_03"
+      },
+      "needs_rebuild": null
     },
     "jia-seo": {
       "archetype": "窄長六角型、低眉骨與橫向眼裂的運動感成人臉",
@@ -567,7 +641,7 @@
         "口部幾何": "寬薄唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 22-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_14; NOSE from ref_11; MOUTH from ref_13. Build a narrow hexagonal canvas with clean straight side planes and a short blunt chin. Use horizontally elongated eyes under low brows with restrained lid height, a medium straight nose with a blunt tip, and a wide relatively thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 22-year-old Korean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a narrow hexagonal canvas with clean straight side planes and a short blunt chin. Use horizontally elongated eyes under low brows with restrained lid height, a medium straight nose with a blunt tip, and a wide relatively thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "narrow hexagonal outline",
@@ -604,7 +678,15 @@
         "hair": "冷灰藍黑 + 內層薄荷綠 inner color（甩頭髮或綁起來才會露出來的那層）。練舞室文化本來就流行 inner color，動起來的時候顏色會閃出來，對舞蹈影片特別有效。",
         "hair_color_current": "冷灰藍黑 + 薄荷綠 inner color（特殊色）",
         "superseded_face_type": "白皙冷調、韓系小臉直角肩，眼型細長上揚。無妝感韓妝：水光肌 + 淡棕眼線 + 漸層唇。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 22-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_14; NOSE from ref_11; MOUTH from ref_13. Build a narrow hexagonal canvas with clean straight side planes and a short blunt chin. Use horizontally elongated eyes under low brows with restrained lid height, a medium straight nose with a blunt tip, and a wide relatively thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_02",
+        "EYES_AND_BROWS": "ref_14",
+        "NOSE": "ref_11",
+        "MOUTH": "ref_13"
+      },
+      "needs_rebuild": null
     },
     "yerin-han": {
       "archetype": "寬額寬顎、短中庭的直線方臉",
@@ -621,7 +703,7 @@
         "口部幾何": "小中等唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 26-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_09; NOSE from ref_01; MOUTH from ref_15. Build a broad rectangular face with forehead and jaw nearly equal in width, a short midface, straight lower-face sides, and a broad square chin. Use visibly wide-set open level eyes, a medium straight nose, and a restrained medium-width mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 26-year-old Korean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a broad rectangular face with forehead and jaw nearly equal in width, a short midface, straight lower-face sides, and a broad square chin. Use visibly wide-set open level eyes, a medium straight nose, and a restrained medium-width mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "equal-width forehead and jaw",
@@ -658,6 +740,23 @@
         "hair": "亞麻棕 + 面部框金色挑染，長髮，多數低馬尾穿過球帽後扣。",
         "hair_color_current": "亞麻棕 + 金色挑染",
         "superseded_face_type": "白皙、韓系立體五官，眉眼明亮、笑容大方，健康感。防曬淡妝 + 亮色唇。"
+      },
+      "face_en_v1_filename_form": "Create a new 26-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_09; NOSE from ref_01; MOUTH from ref_15. Build a broad rectangular face with forehead and jaw nearly equal in width, a short midface, straight lower-face sides, and a broad square chin. Use visibly wide-set open level eyes, a medium straight nose, and a restrained medium-width mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_12",
+        "EYES_AND_BROWS": "ref_09",
+        "NOSE": "ref_03",
+        "MOUTH": "ref_15"
+      },
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_11",
+          "ref_12"
+        ],
+        "NOSE": [
+          "ref_01",
+          "ref_03"
+        ]
       }
     },
     "somi-oh": {
@@ -675,7 +774,7 @@
         "口部幾何": "寬飽滿下唇",
         "頰部": "低位柔頰"
       },
-      "face_en": "Create a new 24-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_08; NOSE from ref_12; MOUTH from ref_11. Build a full U-shaped lower face with substantial low cheek volume, a wide rounded jaw, and a short blunt chin. Gather softly open eyes slightly close together, use a short broad soft nose, and a wide mouth with a fuller lower lip. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 24-year-old Korean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a full U-shaped lower face with substantial low cheek volume, a wide rounded jaw, and a short blunt chin. Gather softly open eyes slightly close together, use a short broad soft nose, and a wide mouth with a fuller lower lip. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "full U-shaped lower face",
@@ -712,7 +811,15 @@
         "hair": "蜜橘棕（明亮暖色），狼尾層次剪（韓國正流行），吃東西時撩到耳後是她的招牌鏡頭。",
         "hair_color_current": "蜜橘棕 · 狼尾層次",
         "superseded_face_type": "白皙、圓潤有肉感的可愛臉，笑起來有酒窩，眼睛彎成月牙。妝很淡，唇釉會被吃掉是她的梗。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 24-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_08; NOSE from ref_12; MOUTH from ref_11. Build a full U-shaped lower face with substantial low cheek volume, a wide rounded jaw, and a short blunt chin. Gather softly open eyes slightly close together, use a short broad soft nose, and a wide mouth with a fuller lower lip. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_05",
+        "EYES_AND_BROWS": "ref_08",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_11"
+      },
+      "needs_rebuild": null
     },
     "zhiyi-shen": {
       "archetype": "高額長中庭、窄矩形輪廓的冷靜骨感成人臉",
@@ -729,7 +836,7 @@
         "口部幾何": "小薄平唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 25-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_13; NOSE from ref_07; MOUTH from ref_01. Build an extremely long narrow rectangular canvas with a high forehead, long midface, planar cheeks, and a narrow jaw ending bluntly. Use close-set low-brow narrow eyes, a long defined nose, and a small flat mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 25-year-old Chinese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build an extremely long narrow rectangular canvas with a high forehead, long midface, planar cheeks, and a narrow jaw ending bluntly. Use close-set low-brow narrow eyes, a long defined nose, and a small flat mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "very long narrow rectangle",
@@ -766,6 +873,19 @@
         "hair": "現階段是黑色長直髮中分，髮質好、垂順，配合金融業的隱形規範；禦姊路線需要這個銳利度，但不是不能換。",
         "hair_color_current": "天然黑（現階段）",
         "superseded_face_type": "白皙冷調，長臉、眉骨清晰、細長眼，禦姊感但不兇。霧面底妝 + 棕調眼影 + 豆沙唇。"
+      },
+      "face_en_v1_filename_form": "Create a new 25-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_13; NOSE from ref_07; MOUTH from ref_01. Build an extremely long narrow rectangular canvas with a high forehead, long midface, planar cheeks, and a narrow jaw ending bluntly. Use close-set low-brow narrow eyes, a long defined nose, and a small flat mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_09",
+        "EYES_AND_BROWS": "ref_13",
+        "NOSE": "ref_07",
+        "MOUTH": "ref_01"
+      },
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_02",
+          "ref_09"
+        ]
       }
     },
     "wanyin-jiang": {
@@ -783,7 +903,7 @@
         "口部幾何": "小薄平唇",
         "頰部": "中段飽滿"
       },
-      "face_en": "Create a new 23-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_01; EYES_AND_BROWS from ref_10; NOSE from ref_02; MOUTH from ref_15. Build a long oval canvas with a slightly narrow upper face, the widest point at the middle cheeks, and a gradual taper toward a long blunt chin. Use modest gently downturned eyes, a fine long nose, and a small restrained mouth with thin flat lips. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 23-year-old Chinese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a long oval canvas with a slightly narrow upper face, the widest point at the middle cheeks, and a gradual taper toward a long blunt chin. Use modest gently downturned eyes, a fine long nose, and a small restrained mouth with thin flat lips. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "long middle-wide oval",
@@ -820,7 +940,15 @@
         "hair": "現階段是黑色及腰長直髮，配合古典造型；盤髻與放下的落差是她的造型引擎。想換色的話換一次就是一整季的新鮮感。",
         "hair_color_current": "天然黑（現階段）",
         "superseded_face_type": "非常白皙，江南長相：鵝蛋臉、柳葉眉、丹鳳眼、薄唇。古典妝：白底、桃花眼影、正紅唇。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 23-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_01; EYES_AND_BROWS from ref_10; NOSE from ref_02; MOUTH from ref_15. Build a long oval canvas with a slightly narrow upper face, the widest point at the middle cheeks, and a gradual taper toward a long blunt chin. Use modest gently downturned eyes, a fine long nose, and a small restrained mouth with thin flat lips. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_01",
+        "EYES_AND_BROWS": "ref_10",
+        "NOSE": "ref_02",
+        "MOUTH": "ref_15"
+      },
+      "needs_rebuild": null
     },
     "ruoruo-tang": {
       "archetype": "寬中臉、鈍下巴、骨肉均衡的運動成人臉",
@@ -837,7 +965,7 @@
         "口部幾何": "寬中等唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 27-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_15; NOSE from ref_10; MOUTH from ref_08. Build a broad oval bone canvas with straight cheek planes, a firm broad jaw, and a short blunt chin. Keep the thirds balanced, spread restrained level eyes wide, use a medium straight nose with a soft blunt tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 27-year-old Chinese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a broad oval bone canvas with straight cheek planes, a firm broad jaw, and a short blunt chin. Keep the thirds balanced, spread restrained level eyes wide, use a medium straight nose with a soft blunt tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "broad middle face",
@@ -874,6 +1002,23 @@
         "hair": "淺栗棕（暖調染色），中長髮，上課低丸子頭，下課放下微捲。",
         "hair_color_current": "淺栗棕（暖調染色）",
         "superseded_face_type": "白皙偏暖，柔和圓臉但下顎線清晰，眼神專注。運動素顏感。"
+      },
+      "face_en_v1_filename_form": "Create a new 27-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_15; NOSE from ref_10; MOUTH from ref_08. Build a broad oval bone canvas with straight cheek planes, a firm broad jaw, and a short blunt chin. Keep the thirds balanced, spread restrained level eyes wide, use a medium straight nose with a soft blunt tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_10",
+        "EYES_AND_BROWS": "ref_15",
+        "NOSE": "ref_14",
+        "MOUTH": "ref_08"
+      },
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_11",
+          "ref_10"
+        ],
+        "NOSE": [
+          "ref_10",
+          "ref_14"
+        ]
       }
     },
     "cheryl-soh": {
@@ -891,7 +1036,7 @@
         "口部幾何": "小中等唇",
         "頰部": "低位柔頰"
       },
-      "face_en": "Create a new 25-year-old Chinese-Singaporean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_09; NOSE from ref_01; MOUTH from ref_10. Build a long oval canvas with low gentle cheek volume, a narrow jaw, and a visibly long lower third ending in a long blunt chin. Use wide-set open level eyes, a fine straight nose, and a compact medium-volume mouth. Arrange the features with vertical spacing rather than crowding. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 25-year-old Chinese-Singaporean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a long oval canvas with low gentle cheek volume, a narrow jaw, and a visibly long lower third ending in a long blunt chin. Use wide-set open level eyes, a fine straight nose, and a compact medium-volume mouth. Arrange the features with vertical spacing rather than crowding. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "long oval canvas",
@@ -928,6 +1073,19 @@
         "hair": "現階段是黑色長髮，配合航空公司的儀容規定；上班一律法式包頭，下班全放下是大波浪。",
         "hair_color_current": "天然黑（現階段）",
         "superseded_face_type": "白皙（明確排除小麥色），東亞五官：鵝蛋臉、雙眼皮、鼻樑挺。空服妝：盤髮 + 正紅唇 + 精緻底妝。"
+      },
+      "face_en_v1_filename_form": "Create a new 25-year-old Chinese-Singaporean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_09; NOSE from ref_01; MOUTH from ref_10. Build a long oval canvas with low gentle cheek volume, a narrow jaw, and a visibly long lower third ending in a long blunt chin. Use wide-set open level eyes, a fine straight nose, and a compact medium-volume mouth. Arrange the features with vertical spacing rather than crowding. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_15",
+        "EYES_AND_BROWS": "ref_09",
+        "NOSE": "ref_06",
+        "MOUTH": "ref_10"
+      },
+      "needs_rebuild": {
+        "NOSE": [
+          "ref_01",
+          "ref_06"
+        ]
       }
     },
     "wendy-yeo": {
@@ -945,7 +1103,7 @@
         "口部幾何": "小中等唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 28-year-old Chinese-Singaporean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_13; NOSE from ref_02; MOUTH from ref_06. Build a long broad-boned rectangular canvas with straight cheek planes, visible jaw angles, a long lower third, and a square chin. Use low brows over narrow level eyes, a long straight fine nose, and a compact restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 28-year-old Chinese-Singaporean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a long broad-boned rectangular canvas with straight cheek planes, visible jaw angles, a long lower third, and a square chin. Use low brows over narrow level eyes, a long straight fine nose, and a compact restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "long rectangular bone frame",
@@ -982,7 +1140,15 @@
         "hair": "冷銀灰（漂到底的高階髮色），俐落的耳下短髮。28 歲、有手藝、有主導權的女生留這個顏色最說得通，也是全庫唯一的銀灰短髮。",
         "hair_color_current": "冷銀灰（漂色）· 短髮",
         "superseded_face_type": "白皙冷調，成熟輪廓：眉眼深、下顎線俐落，有一點英氣。霧面底妝 + 棕黑眼線 + 裸色唇。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 28-year-old Chinese-Singaporean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_13; NOSE from ref_02; MOUTH from ref_06. Build a long broad-boned rectangular canvas with straight cheek planes, visible jaw angles, a long lower third, and a square chin. Use low brows over narrow level eyes, a long straight fine nose, and a compact restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_13",
+        "NOSE": "ref_02",
+        "MOUTH": "ref_06"
+      },
+      "needs_rebuild": null
     },
     "peggy-lee": {
       "archetype": "窄額寬顎、五官偏大的梯形張力成人臉",
@@ -999,7 +1165,7 @@
         "口部幾何": "寬飽滿下唇",
         "頰部": "平直中臉"
       },
-      "face_en": "Create a new 24-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_06; NOSE from ref_12; MOUTH from ref_07. Build a trapezoid canvas with a forehead narrower than the broad jaw, clear lower-face corners, and a short square chin. Use wide-set large level eyes, a short softly shaped nose, and a wide full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 24-year-old Chinese-Malaysian adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a trapezoid canvas with a forehead narrower than the broad jaw, clear lower-face corners, and a short square chin. Use wide-set large level eyes, a short softly shaped nose, and a wide full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "narrow forehead with broad jaw",
@@ -1036,6 +1202,23 @@
         "hair": "正酒紅 + 銀灰挑染，長捲髮蓬鬆張揚。車圈的女生本來就敢玩顏色，這是她在人群中被認出來的原因。",
         "hair_color_current": "正酒紅 + 銀灰挑染（特殊色）",
         "superseded_face_type": "白皙（明確排除小麥／古銅），濃眉大眼、五官張揚立體。眼線上揚 + 高光 + 亮唇。"
+      },
+      "face_en_v1_filename_form": "Create a new 24-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_06; NOSE from ref_12; MOUTH from ref_07. Build a trapezoid canvas with a forehead narrower than the broad jaw, clear lower-face corners, and a short square chin. Use wide-set large level eyes, a short softly shaped nose, and a wide full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_14",
+        "EYES_AND_BROWS": "ref_06",
+        "NOSE": "ref_11",
+        "MOUTH": "ref_07"
+      },
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_11",
+          "ref_14"
+        ],
+        "NOSE": [
+          "ref_12",
+          "ref_11"
+        ]
       }
     },
     "sydney-leong": {
@@ -1053,7 +1236,7 @@
         "口部幾何": "寬中等唇",
         "頰部": "中段飽滿"
       },
-      "face_en": "Create a new 22-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_12; NOSE from ref_05; MOUTH from ref_10. Build a softly squared short canvas with full mid-cheeks, a substantial rounded-square jaw, and a short blunt chin. Use wide-set open eyes with a gentle downward line, a short softly broad nose, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 22-year-old Chinese-Malaysian adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build a softly squared short canvas with full mid-cheeks, a substantial rounded-square jaw, and a short blunt chin. Use wide-set open eyes with a gentle downward line, a short softly broad nose, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "short rounded-square outline",
@@ -1090,6 +1273,19 @@
         "hair": "淺蜜金棕（漂過的甜系色），中長微捲，工作時低雙辮或包起（食安）。",
         "hair_color_current": "淺蜜金棕（漂色）",
         "superseded_face_type": "白皙偏暖，圓臉大眼、笑容甜，鄰家甜妹。氣墊 + 腮紅 + 唇蜜的淡妝。"
+      },
+      "face_en_v1_filename_form": "Create a new 22-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_12; NOSE from ref_05; MOUTH from ref_10. Build a softly squared short canvas with full mid-cheeks, a substantial rounded-square jaw, and a short blunt chin. Use wide-set open eyes with a gentle downward line, a short softly broad nose, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_06",
+        "EYES_AND_BROWS": "ref_12",
+        "NOSE": "ref_05",
+        "MOUTH": "ref_10"
+      },
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_08",
+          "ref_06"
+        ]
       }
     },
     "angeline-kwee": {
@@ -1107,7 +1303,7 @@
         "口部幾何": "小薄平唇",
         "頰部": "高位平顴"
       },
-      "face_en": "Create a new 23-year-old Chinese-Indonesian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_10; NOSE from ref_07; MOUTH from ref_13. Build an exceptionally long narrow oval canvas with high planar cheek transitions, an extended lower third, a narrow jaw, and a long blunt chin. Place modest softly downturned eyes slightly close together, use a long defined nose, and a small straight thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "face_en": "Create a new 23-year-old Chinese-Indonesian adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity. Build an exceptionally long narrow oval canvas with high planar cheek transitions, an extended lower third, a narrow jaw, and a long blunt chin. Place modest softly downturned eyes slightly close together, use a long defined nose, and a small straight thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "negative_en": "NONE",
       "markers": [
         "exceptionally long narrow oval",
@@ -1144,7 +1340,71 @@
         "hair": "奶茶灰棕（低飽和的高級染色），長波浪，是她整個人「有錢但不張揚」的視覺註腳。",
         "hair_color_current": "奶茶灰棕（低飽和染色）",
         "superseded_face_type": "白皙透亮（明確排除 tanned / bronzed / olive / deep golden），東亞五官：鵝蛋臉、雙眼皮、鼻樑細挺，長相偏台／中路線而非東南亞感。"
-      }
+      },
+      "face_en_v1_filename_form": "Create a new 23-year-old Chinese-Indonesian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_10; NOSE from ref_07; MOUTH from ref_13. Build an exceptionally long narrow oval canvas with high planar cheek transitions, an extended lower third, a narrow jaw, and a long blunt chin. Place modest softly downturned eyes slightly close together, use a long defined nose, and a small straight thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "refs_v2": {
+        "FACE_SHAPE_AND_JAW": "ref_02",
+        "EYES_AND_BROWS": "ref_10",
+        "NOSE": "ref_07",
+        "MOUTH": "ref_13"
+      },
+      "needs_rebuild": null
     }
-  }
+  },
+  "_r2": {
+    "_source": "ChatGPT 於 review/REVIEW_BATCH3_FACES_R2.md §7 的裁決（commit 55d6b3e）。四項全部同意。",
+    "F-01": {
+      "狀態": "已套用",
+      "措辭": "ChatGPT 指定 Image 1..4，不採用我提的 first/second/third/fourth。",
+      "附圖順序": [
+        "FACE_SHAPE_AND_JAW",
+        "EYES_AND_BROWS",
+        "NOSE",
+        "MOUTH"
+      ],
+      "manifest": "送出前必須寫入 persona-id、四個槽位、實際路徑、陣列索引；順序不符 HARD FAIL。",
+      "備案": "若第一批逐張核對顯示分工穩定成立的部件低於 3/4，停止全臉多圖法，改用部件裁切輸入（Image 1 標準化輪廓／顎線裁切、Image 2 只留眼眉、Image 3 只留鼻、Image 4 只留口）；再失敗才改兩階段生成／局部編修，不得直接展開 19 位。"
+    },
+    "F-02": {
+      "狀態": "來源已存為 refs_v2，尚未合併",
+      "規則": "臉型來源上限 2 位、鼻子來源上限 3 位、每位四槽必須四張不同圖。",
+      "待補": "8 位的來源改變，其 ARCHETYPE／AXES／FACE_EN／MARKERS／WHY_DISTINCT 需依新來源重建（R3）。",
+      "補圖": "ChatGPT 不同意把補圖列為生成前條件。若第一批仍聚類，再補 6–8 張中性正面、眼平、均勻光、低妝、無廣角變形的照片，優先補寬方顎／U 梨形／長臉鈍下巴／窄眼單眼皮各 2 張。"
+    },
+    "F-03": {
+      "狀態": "gate 已實作，尚有配對未過",
+      "gate": [
+        "任兩人 11 軸至少相異 6 條",
+        "六條主導軸（輪廓原型／臉長寬比／三庭配置／骨肉量／顎頦／眼眶結構）至少相異 2 條",
+        "若兩人共用同一張 FACE_SHAPE_AND_JAW：總相異至少 7 條、主導軸至少 3 條"
+      ],
+      "原規則": "原本的粗分群 gate 是設計錯誤（key 定得太細，19 人落 19 群，永遠沒有比較對象），作廢。"
+    },
+    "F-04": {
+      "狀態": "已套用",
+      "第一批": [
+        "kanon-komori",
+        "wendy-yeo",
+        "angeline-kwee",
+        "miu-shiraishi",
+        "tammy-chou",
+        "sydney-leong",
+        "yerin-han",
+        "peggy-lee"
+      ],
+      "_why": "8 位涵蓋短／長臉、方／窄顎等極端，並包含原本只差 4 條的三組完整配對（Miu–Sydney、Tammy–Sydney、Yerin–Peggy）。每位 4 個候選共 32 張。",
+      "_gate": "8 位全部通過部件執行檢查、MARKERS、全配對 gate 與去髮妝盲測，才展開其餘 11 位。若容易組通過、任一困難組失敗，結論是方法尚未成立，不得只核可容易組後繼續生成。"
+    },
+    "_age_truth": "fixed 是年齡與族裔的唯一真理來源。FACE_EN 暫時保留完整句，validator 必須逐字核對兩者一致；未來 fixed 改動應由編譯器重建 prompt 或 HARD FAIL。"
+  },
+  "batch1": [
+    "kanon-komori",
+    "wendy-yeo",
+    "angeline-kwee",
+    "miu-shiraishi",
+    "tammy-chou",
+    "sydney-leong",
+    "yerin-han",
+    "peggy-lee"
+  ]
 }
