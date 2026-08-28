@@ -2,7 +2,7 @@
 
 > **這是 Claude 與 ChatGPT 互相檢核的主檔。編輯規則見 `review/restaurant-b1/README.md`。**
 > 分支：`claude/virtual-kol-restaurant-campaign-pxu9m4`
-> 最後更新：2026-08-29（R7 覆核回覆已謄入 #16；三處自我矛盾已修）
+> 最後更新：2026-08-29（R8a 已處置：2 BLOCK 裁決完成、4 REVISE 已改、光線句改為局部最高光版）
 
 **目前狀態：批次一 21 件，4 張 preflight 已跑完，2 張硬淘汰。**
 **正式批次暫不放行；只允許執行 #1 的最小 A/B 與已判定項目的修正 preflight。**
@@ -733,6 +733,56 @@ R3 覆核建議：等第一批 workflow 穩定後，另開一個專門測高風�
 - [ ] 8 件已核准：規格改寫成成品實際呈現，未實現項標核准豁免（**prompt 不動**）
 - [ ] 抽象飄動從 13 件的規格列移到創意備註欄
 - [ ] 硬驗收全部重新產生
+
+## #17 R8a：高風險 7 件逐件覆核 🟡 ANSWERED（已全部處置）
+
+**結果：1 PASS（YG-08）／4 REVISE（YG-03、07、10、10B）／2 BLOCK（LG-02、LG-05）**，光線句判 REVISE。
+
+### 光線句：不要一次放行 6 件
+
+> 「未實測的風險在『某區 allowed to clip』：**這是生成命令，不只是攝影容許值**，
+> 可能把整片窗／門口／招牌／燈籠推成大面積死白，並連帶壓暗或逆光臉部。」
+
+統一改成（ChatGPT 提供）：
+`Her face is clearly exposed with natural skin texture; the [光源] is the brightest area, only its smallest highlights reaching white.`
+
+**放行條件**：先各做一次最小 preflight——**一個窗／門口類、一個點光源類**。
+通過才能擴到同類場景；**窗類結果不可當成燈籠／招牌類的證據**。
+
+### 兩個 BLOCK 都是我自己造成的
+
+**兩件都是「景別 vs 硬驗收」互相打架**——我依有效規格重新產生硬驗收時，
+**沒有拿去對景別**。這正是 YG-01 那次「景別看不到的東西不要寫」的同型錯誤，
+我記錄過那條教訓，然後在重建驗收標準時又犯了一次。
+
+| 件 | 衝突 | 裁決 |
+|---|---|---|
+| **LG-02** | 膝上 3/4 身 vs 硬驗收要求「赤腳」——膝上必然裁掉腳 | **比例優先**，赤腳退出驗收與 prompt。核心是蹲下、光斑、揉眼 |
+| **LG-05** | 膝上 3/4 vs 硬驗收要求「傘尖朝下貼腿側」——收起的長傘會延伸到膝下 | **放寬景別到小腿中段**。本件曾實際生出**浮空雨傘**，傘尖朝下是防浮空的錨點，寧可放寬景別也要保住可驗證點 |
+
+### 四件 REVISE 的處置
+
+- **YG-03**：prompt 沒封住自拍手入鏡 → 加 `The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame.`
+- **YG-07**：① `bare feet` 會誘使模型拉遠或硬把腳塞進半身構圖，而赤腳不是硬驗收 → 移出
+  ② `scrolling` 是時間動作 → 改成 `thumb resting on the screen`（靜態可驗收）③ 補 `Exactly two hands are visible.`
+- **YG-10**：① `swatched hand` 沒說手背朝鏡頭，可能生成掌心 → `holds the back of one swatched hand facing the camera`
+  ② **鏡面立柱會複製手與人物**，直接威脅「臉旁只有一隻手」→ 改成 `glossy pale columns`。
+  沿用 YG-04 取消鏡面的同一條判準：**不是硬驗收、卻帶來無法用 prompt 控制的 Hard Reject 風險，就拿掉那個效果**
+- **LG-10B**：① 半身寫 `ankle-length` 等於叫模型展示全長服裝、增加拉遠風險 → 刪
+  ② `left` 可能被解讀成畫面左側 → `the wearer's left front panel layered over the wearer's right`
+
+### 額外一條
+
+> YG-10 若保留鏡面，**反射出的人物與肢體必須列入硬驗收**，否則「實體手剛好兩隻」通過時，鏡中仍可能多手。
+
+已改成非鏡面柱，這條不再適用，但**判準本身留著**：任何會複製人物的表面都要嘛入驗收、要嘛拿掉。
+
+### 待執行
+
+- [ ] 門口類 preflight（YG-08，唯一 PASS）×2
+- [ ] 點光源類 preflight（LG-10B）×2
+- [ ] 兩者通過後才擴到同類場景
+- [ ] R8b：其餘 6 件（YG-06、09，LG-01、06、07、09）送覆核
 
 ---
 

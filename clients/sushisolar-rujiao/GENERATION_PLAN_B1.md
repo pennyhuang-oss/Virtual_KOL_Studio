@@ -248,7 +248,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 自拍構圖成立且**手機不入鏡** ② **只有一隻可見手**，抓著毛巾 ③ 畫面無任何印刷文字 ④ 半身比例與光線正確 |
 | **創意備註（不送模型／不驗收）** | 無（本件原本就沒有飄動描述） |
 | **整併紀錄（2026-08-29）** | 刪掉「取毛巾的手臂抬起」（與『抱在胸前』是兩個時間點，且是重複的手部指派） |
-| **生成 prompt** | `In a phone selfie, a young woman presses a folded plain white towel against her chest with one visible hand, smiling at the camera. Close half-body framing, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail, see-through bangs, loose strands at her temples. A plain grey fitted cropped cotton tee, high-waisted black shorts, black-rimmed glasses. A narrow covered apartment balcony, a white painted wall, an iron window grille, a steel drying pole holding plain towels and pale bedsheets. Flat overcast daylight on her face, her face evenly exposed, the white wall bouncing cool fill onto her jaw and staying slightly darker than her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `In a phone selfie, a young woman presses a plain white towel against her chest with one visible hand, smiling at the camera. The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame. Close half-body framing, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail, see-through bangs. A grey fitted cropped cotton tee, high-waisted black shorts, black-rimmed glasses. A narrow covered balcony, a white painted wall, an iron window grille, a steel drying pole holding plain towels. Flat overcast daylight on her face, her face evenly exposed, the white wall bouncing cool fill onto her jaw, staying slightly darker than her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 曬乾的味道✨<br>今天終於記得收 |
 | 附註 | ⚠️ **這是新寫的 spec，尚未送覆核、尚未生成。**<br>設計重點：**沒有任何印刷品來源**——毛巾與襯衫寫明 `plain unprinted`，場景不放商品、招牌、包裝。<br>🔴 **未驗證的假設**：`iron window grille`（鐵窗花）在 LG-03 上讀起來像台灣，但那是 **Luna 的 `soul_id`**——**跨角色不能當證據**，Yuna 身上會不會一樣未知。 |
 
@@ -325,7 +325,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 |---|---|
 | **妝容** | 素顏到淡妝之間。只有眉毛與粉色潤色護唇。 |
 | **髮型** | 鯊魚夾隨手夾一半，下半放下（與 YG-04 的全夾起區隔）。 |
-| **穿著** | 上身：米色**細肩帶**家居背心｜下身：同色系**短版**棉質短褲｜鞋：赤腳｜外層：—｜首飾：無 |
+| **穿著** | 上身：米色**細肩帶**家居背心｜下身：同色系**短版**棉質短褲｜鞋：**畫面外**（原寫赤腳，2026-08-29 依 R8a 移出——半身坐姿寫赤腳會誘使模型拉遠或硬把腳塞進構圖，而赤腳不是本件硬驗收）｜外層：—｜首飾：無 |
 | **道具** | 手機 **core-visible**（她在滑，入鏡）｜零食袋 **core-visible**｜地上攤開的雜誌 場景物件｜角落電風扇 場景物件 |
 | **場景環境** | 小套房的客廳地板。矮沙發、地上攤開的雜誌、旁邊拆開的零食袋、電風扇在角落轉。 |
 | **機位與構圖** | **半身坐姿。**<br>**機位**：與她坐在地上時的臉同高，鏡頭保持水平。<br>**構圖**：地上的雜誌與零食袋入鏡下緣。 |
@@ -338,7 +338,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 坐在地上 ② 一手滑手機、一手伸進零食袋（**可見手剛好兩隻**）③ 一邊臉頰鼓著 ④ 半身坐姿比例 |
 | **創意備註（不送模型／不驗收）** | 角落電風扇把垂下的髮絲吹得輕輕飄動——**靜態圖無法表現，不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | 刪掉「一手撐地」（與滑手機＋零食袋合計為三隻手）。原本表情列與肢體列各自指派了不同的兩隻手 |
-| **生成 prompt** | `A young woman sits on the living room floor scrolling her phone in one hand while her other hand reaches into a snack bag, one cheek full mid-chew, eyebrows raised at the camera. Half body, camera level with her face as she sits. Collarbone-length mocha brown hair, the top half clipped up and the lower half loose. A beige camisole, matching short cotton shorts, bare feet. A small apartment living room, a low sofa, magazines on the floor, a fan in the corner. Cool window light on her face, a warm lamp glowing behind her, the pale floor bouncing fill onto her chin, the window itself allowed to clip to white. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman sits on the floor holding her phone in one hand, thumb resting on the screen, while her other hand is inside an open snack bag, one cheek full mid-chew, eyebrows raised at the camera. Exactly two hands are visible. Half body, camera level with her face as she sits. Collarbone-length mocha brown hair, the top half clipped up. A beige camisole and short cotton shorts. A living room floor, a low sofa, magazines. Cool window light on her face, a warm lamp glowing behind her, the pale floor bouncing fill onto her chin. Her face is clearly exposed with natural skin texture; the window is the brightest area, only its smallest highlights reaching white. Subtle film grain.` |
 | **Caption 草稿** | 今天不想出門<br>아무것도 안 함 |
 
 ### YG-08｜台式早餐店・第一則吃
@@ -361,7 +361,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① **單手**拿蛋餅咬 ② 另一手比大拇指 ③ 人與食物同框 ④ 襯衫下擺在腰際打結、露一截腰 |
 | **創意備註（不送模型／不驗收）** | 捲起的襯衫袖口與垂下的髮絲隨著前傾晃動——**不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | **解掉硬衝突**：肢體列寫「雙手捧著蛋餅」、表情列寫「空著的手比大拇指」——雙手捧著就不存在空手。依 R7 二選一，取「一手蛋餅、一手比讚」 |
-| **生成 prompt** | `A young woman bites into an egg crepe held in one hand and throws a thumbs up with her other hand, nose slightly scrunched, eyes crinkled. Half body with the food in frame, camera level with her chest. Collarbone-length soft wavy mocha brown hair, side-parted, a small pearl clip on one side. A light blue short-sleeve shirt knotted at the waist, white high-waisted shorts. A breakfast shop, a stainless steel counter, red plastic stools, a metal tray, iced tea in a tall glass. Cool daylight from the doorway on her face, warm fluorescent light inside, the steel counter bouncing fill onto her chin, the doorway behind her allowed to clip. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman bites into an egg crepe held in one hand and throws a thumbs up with her other hand, nose scrunched, eyes crinkled. Half body with the food in frame, camera level with her chest. Collarbone-length soft wavy mocha brown hair, side-parted, a small pearl clip on one side. A light blue short-sleeve shirt knotted at the waist, white high-waisted shorts. A breakfast shop, a stainless steel counter, red plastic stools, iced tea in a tall glass. Cool daylight from the doorway, warm fluorescent light inside, the steel counter bouncing fill onto her chin. Her face is clearly exposed with natural skin texture; the doorway is the brightest area, only its smallest highlights reaching white. Subtle film grain.` |
 | **Caption 草稿** | 蛋餅真的很好吃🥹<br>這個冰紅茶也太甜 |
 
 ### YG-09｜飯店窗邊・皮膚特寫
@@ -384,7 +384,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 臉部大特寫比例，臉佔滿畫面 ② 視線在畫面外、**不看鏡頭** ③ **畫面內沒有任何手** ④ 光線正面均勻、無逆光 |
 | **創意備註（不送模型／不驗收）** | 浴袍的腰帶末端垂著微微擺動——**不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | 肢體列原本指派了三隻手（扶領口／垂著／搭窗框），但這是**臉部大特寫，一隻都看不到**。全部改為 N/A。<br>⚠️ **濕髮風險**：本件髮型列要求「濕髮往後撥、髮尾滴水」，但 LG-08 的濕髮**連續 4/4 失敗已被移除**。本件維持濕髮設定，但**不列入硬驗收**，只記 soft observation |
-| **生成 prompt** | `A young woman leans against the window frame gazing far out through the glass, lashes lowered, lips relaxed. Tight close-up of her face, camera at her eye level, lens horizontal. Wet collarbone-length mocha brown hair pushed straight back, water still beading at the ends. A white bathrobe with the collar loosened. A hotel room, white bedding, a floor-to-ceiling window, city towers and a river outside. Soft window light full on her face, her face evenly exposed, the white bedding bouncing fill up under her jaw, the city outside allowed to clip to bright haze. Visible skin pores, natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman leans against the window frame gazing far out through the glass, lashes lowered, lips relaxed. Tight close-up of her face, camera at her eye level, lens horizontal. Wet collarbone-length mocha brown hair pushed straight back, water still beading at the ends. A white bathrobe with the collar loosened. A hotel room, white bedding, a floor-to-ceiling window, city towers outside. Soft window light full on her face, the white bedding bouncing fill up under her jaw. Her face is clearly exposed with natural skin texture; the city outside is the brightest area, only its smallest highlights reaching white. Visible skin pores, subtle film grain.` |
 | **Caption 草稿** | 皮膚今天狀態超好☺️<br>이거 진짜 좋아 |
 
 ### YG-10｜百貨美妝櫃・精緻的一面
@@ -396,7 +396,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **髮型** | **sleek 光澤直順側分**，髮尾微微內彎，mocha brown 的髮色在燈下很明顯。 |
 | **穿著** | 上身：奶油色**短版貼身**針織上衣｜下身：**同色系米白高腰西裝直筒褲**（tonal layering，高腰拉腿長）｜鞋：尖頭平底鞋｜外層：卡其色風衣掛在手臂上｜首飾：金色圈形耳環＋細手錶＋小方包 |
 | **道具** | 試色的手背 **core-visible**（掛載動作）｜卡其風衣掛在前臂 **core-visible**（前臂承重，**不佔手部任務**）｜金色圈耳環 **core-visible**｜口紅 **removed**｜小方包 **removed**｜細手錶 optional |
-| **場景環境** | 百貨公司一樓的美妝樓層。玻璃櫃、排列整齊的口紅與粉盒、鏡面立柱、天花板的嵌燈、櫃檯的白色檯面。 |
+| **場景環境** | 百貨公司一樓的美妝樓層。玻璃櫃、排列整齊的口紅與粉盒、**光澤淺色立柱**、天花板的嵌燈、櫃檯的白色檯面。<br>（**2026-08-29 鏡面柱改成非鏡面**——鏡面會複製手與人物，直接威脅「臉旁只有一隻手」的驗收，而鏡面**不是本件硬驗收的一部分**。沿用 YG-04 取消鏡面的同一條判準：不是硬驗收、卻帶來無法用 prompt 控制的 Hard Reject 風險，就拿掉那個效果，不要想辦法馴服它） |
 | **機位與構圖** | **半身。**<br>**機位**：與她的胸口同高，鏡頭保持水平。<br>**構圖**：試色的手背舉在畫面中段，身後帶到玻璃櫃與鏡面柱。 |
 | **光線** | ① 天花板嵌燈＋櫃檯打光**均勻打亮臉**｜② 白色檯面與鏡面柱把光反回下巴｜③ 冷白為主，玻璃櫃內一點暖黃重點光｜④ **背景曝光與她的膚色相當** |
 | **光學設定** | 反射面：具名（白檯面與鏡面柱回彈）｜曝光：低反差（百貨均勻嵌燈）｜色溫：分裂（嵌燈冷白 vs 玻璃櫃內暖重點光） |
@@ -407,7 +407,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 試色的手背舉在臉旁 ② **臉部區域只有一隻手** ③ 風衣掛在另一側前臂 ④ 半身比例 |
 | **創意備註（不送模型／不驗收）** | 無 |
 | **整併紀錄（2026-08-29）** | 刪掉「另一手拿著口紅」——口紅與試色手背在畫面同一區，是手指與小物件融合的高風險組合；且 prompt 原本就沒寫。風衣依 R7「肩／臂承重不算手部任務」保留 |
-| **生成 prompt** | `A young woman holds her swatched hand up beside her face, her other arm relaxed at her side with a trench coat draped over that forearm, one eyebrow raised and the same corner of her mouth lifted. Half body, camera level with her chest. Sleek glossy collarbone-length mocha brown hair, side-parted, ends curving slightly inward. A cream cropped fitted knit top, matching off-white high-waisted straight trousers, gold hoop earrings. A department store beauty floor, glass counters, rows of lipsticks, mirrored columns. Cool recessed ceiling light on her face, warm accent light inside the glass cases, the white counter bouncing fill onto her chin, the floor behind her slightly darker. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds the back of one swatched hand facing the camera beside her face, her other arm relaxed at her side with a trench coat draped over that forearm, one eyebrow raised, the same corner of her mouth lifted. Half body, camera level with her chest. Sleek glossy collarbone-length mocha brown hair, side-parted, ends curving slightly inward. A cream cropped fitted knit top, matching off-white high-waisted straight trousers, gold hoop earrings. A department store beauty floor, glass counters, rows of lipsticks, glossy pale columns. Cool recessed ceiling light on her face, warm accent light inside the glass cases, the white counter bouncing fill onto her chin, the floor behind her slightly darker. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 這個顏色好漂亮✨<br>但我已經有三支很像的了 |
 
 
@@ -441,7 +441,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 雙手托兩頰、臉被擠圓 ② 頭往一側傾 ③ 臉佔畫面約 45%，蛋糕與拿鐵在下緣入鏡 ④ 鮑伯及下巴、剪裁齊平 |
 | **創意備註（不送模型／不驗收）** | 垂在臉側的髮尾隨動作晃動——**不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | 刪掉「雙手放在桌上、指尖靠近盤子」（與托腮互斥，同一雙手不能同時在桌上與臉頰上）<br>⚠️ **景別風險**：YG-01 曾因「近景放不下桌上物件」出過事。本件構圖明寫臉佔 45%（不是大特寫），蛋糕在下緣，尚有空間；若生成時被迫拉遠，改為移除桌上物件 |
-| **生成 prompt** | `A young woman rests both elbows on the table and cups both cheeks in her palms, her cheeks squished round, head tilted to one side, smiling with her eyes. Close-up of her face and shoulders, camera at her eye level. A blunt chin-length black bob cut evenly at the jawline, centre-parted, ends curving slightly inward. A cream square-neck puff-sleeve top, small pearl earrings. A bright dessert shop window seat, a white tiled wall, a strawberry cake and a latte at the lower edge of the frame. Soft window light from her side, the pale wood table bouncing fill onto her chin, the window behind her allowed to clip to white. Visible skin pores, natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman rests both elbows on the table, cupping both cheeks in her palms, her cheeks squished round, head tilted to one side, smiling with her eyes. Close-up of her face and shoulders, camera at her eye level. A blunt chin-length black bob cut evenly at the jawline, centre-parted. A cream square-neck puff-sleeve top, small pearl earrings. A dessert shop window seat, a white tiled wall, a strawberry cake and a latte at the lower edge. Soft window light from her side, the pale wood table bouncing fill onto her chin. Her face is clearly exposed with natural skin texture; the window is the brightest area, only its smallest highlights reaching white. Visible skin pores, subtle film grain.` |
 | **Caption 草稿** | —（頭貼用） |
 
 ### LG-02｜房間晨光・第一則「她在台北」
@@ -461,10 +461,10 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **手部任務** | 可見手 A：指尖停在地板光斑上<br>可見手 B：揉一隻眼睛<br>無第三個手部任務 |
 | **表情** | 打呵欠打到一半；被揉的那隻眼閉著、另一眼半睜；整張臉是鬆的。**眼型與嘴型列 soft observation。** |
 | **肢體與重心** | 蹲下，膝蓋併攏；赤腳踩在木地板上；重心壓在腳掌。 |
-| **硬驗收** | ① 蹲姿 ② 一手指尖在地板光斑上 ③ 另一手揉眼 ④ 3/4 身比例、赤腳 |
+| **硬驗收** | ① 蹲姿 ② 一手指尖在地板光斑上 ③ 另一手揉眼 ④ 3/4 身（膝上）比例<br>（**2026-08-29 依 R8a BLOCK 拿掉「赤腳」**——膝上構圖必然把腳裁掉，赤腳與比例無法同時驗收。裁決：**比例優先**，赤腳不是本件核心；核心是蹲下、光斑、揉眼三件） |
 | **創意備註（不送模型／不驗收）** | 睡衣下襬與髮尾在蹲下的動作裡垂落晃動——**不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | **本件原本最亂**：肢體列用「；」串接了三次不同時間的增補，累積出「指尖點光斑／撐地／再一次撐地／矮桌上的白瓷杯」四段互相打架的敘述，與硬驗收（點光斑＋揉眼）完全對不上。依硬驗收保留兩件，其餘刪除 |
-| **生成 prompt** | `A young woman crouches with her knees together, the fingertips of one hand resting on a sunlit patch of the floor while her other hand rubs one eye, her mouth caught mid-yawn. Three-quarter body, camera level with her face as she crouches, shot from well back. A blunt chin-length black bob cut evenly at the jawline, sleep-mussed with one side flattened. A white lace-trimmed camisole pyjama top, matching short pyjama shorts, bare feet. A bright clean room, white walls, a pale wood floor, a half-unpacked cardboard box in the corner. Soft morning light on her face, the white walls bouncing fill back onto her, the window allowed to clip to white. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman crouches with her knees together, the fingertips of one hand on a sunlit patch of floor while her other hand rubs one eye, mouth caught mid-yawn. Three-quarter body to just above the knees, camera level with her face, shot from well back. A blunt chin-length black bob cut evenly at the jawline, sleep-mussed, one side flattened. A white lace-trimmed camisole pyjama top and short pyjama shorts. A bright clean room, white walls, a pale wood floor, a half-unpacked box. Soft morning light on her face, the white walls bouncing fill back. Her face is clearly exposed with natural skin texture; the window is the brightest area, only its smallest highlights reaching white. Subtle film grain.` |
 | **Caption 草稿** | 台北の朝。<br>光は同じだった。 |
 
 ### LG-03｜Mochi 在台北的窗台
@@ -514,17 +514,17 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **穿著** | 上身：米白色收腰短袖襯衫，前兩顆解開露鎖骨｜**外層：淺藍色薄針織開襟外套，只掛在肩上沒穿進袖子，下襬被風掀起一角**（← **會飄的元素**）｜下身：淺藍色格紋短裙｜鞋：白色瑪莉珍＋蕾絲短襪｜首飾：珍珠小耳環、米色帆布托特包、**透明雨傘收起來拿在手上、傘尖還在滴水** |
 | **道具** | 收起的透明雨傘 **core-visible**（掛載動作，傘尖朝下）｜珍珠小耳環 optional｜米色帆布托特包 **removed**｜淺藍薄針織開襟外套 **removed** |
 | **場景環境** | **雨天也要好看，不能灰撲撲。**候車亭：**彩色路線圖燈箱**、玻璃側板上的雨珠、金屬亭架；亭外：**對街店家亮著的暖色招牌與透出來的燈光**、紅色郵筒、路邊盆栽、濕亮的柏油路映著這些顏色。**明亮通透的雨天，不是陰鬱的雨天。** |
-| **機位與構圖** | **3/4 身（膝上）。**<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍。<br>**構圖**：她站在亭子邊緣，亭外的暖色招牌與濕柏油在她身後虛化。 |
+| **機位與構圖** | **景別到小腿中段**（2026-08-29 由膝上放寬，理由見硬驗收）。<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍。<br>**構圖**：她站在亭子邊緣，整把收起的傘垂在腿側，亭外的暖色招牌與濕柏油在她身後虛化。 |
 | **光線** | ① 雨後亮起來的天光從亭外**打在臉上**｜② **濕柏油與積水**把對街招牌的顏色反上來｜③ 亭外冷白 vs 對街暖色招牌｜④ **背景曝光與她的膚色相當** |
 | **光學設定** | 反射面：具名（濕柏油把對街招牌的暖色反上來）｜曝光：取捨（招牌高光失細節）｜色溫：分裂（雨後冷天光 vs 對街暖招牌） |
 | **凍結瞬間** | 站在候車亭邊緣，一手握著收起的透明傘、傘尖朝下貼在腿側，另一手在臉頰旁比 V，頭往同側傾著笑。 |
 | **手部任務** | 可見手 A：握著收起的透明傘柄，傘身朝下垂在腿側<br>可見手 B：在臉頰旁比 V<br>無第三個手部任務 |
 | **表情** | 頭往比 V 的那一側傾；眼睛彎成月牙——雨天也很開心的那種笑。**眼型與嘴型列 soft observation。** |
 | **肢體與重心** | 站著等，重心壓在右腳；左腳膝蓋微彎、腳尖點地，骨盆因此微傾（不是雙腳平均站的死板站姿）；肩膀一高一低。 |
-| **硬驗收** | ① 一手握收起的透明傘、**傘尖朝下貼腿側**（不可浮空）② 另一手在臉頰旁比 V ③ 襯衫扣到胸口、不露 ④ 3/4 身比例 |
+| **硬驗收** | ① 一手握收起的透明傘、**整把傘含傘尖可見、朝下貼在腿側**（不可浮空）② 另一手在臉頰旁比 V ③ 襯衫扣到胸口、不露 ④ 景別到**小腿中段**<br>（**2026-08-29 依 R8a BLOCK 放寬景別**——膝上構圖會把傘尖裁掉，硬驗收①就無法從成品證明。本件曾實際生出**浮空雨傘**，傘尖朝下是防浮空的錨點，**寧可放寬景別也要保住這個可驗證點**） |
 | **創意備註（不送模型／不驗收）** | 髮尾被亭外的風吹得往同一側揚起、有一撮貼在臉頰上；肩上的開襟外套下襬被風掀起一角——**兩者都不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | **解掉右手的雙重指派**：肢體列同時寫「右手勾著托特包帶」與表情列的「右手比 V」。依 R7，托特包若不是核心就移除，不要改成掛肩（斜背帶會切過襯衫、破壞服裝辨識）。<br>開襟外套一併移除：只掛肩不穿進袖子的鬆散外層是浮空與變形的高風險件，且 prompt 原本就沒寫 |
-| **生成 prompt** | `A young woman stands at a bus shelter, one hand gripping the curved handle of a folded clear umbrella its closed canopy hanging straight down beside her thigh, her other hand making a V sign beside her cheek, head tilted, eyes crinkled. Three-quarter body, camera at her navel level, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. An opaque off-white cotton short-sleeve button-front blouse fastened through the chest, a pale blue checked skirt with one continuous hem around her thighs. A colourful route map lightbox, wet asphalt throwing warm shop-sign colour back onto her, the brightest signs allowed to clip. Her face clearly lit. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands at a bus shelter, one hand gripping the handle of a folded clear umbrella, its entire closed canopy and downward-pointing tip visible beside her leg, her other hand making a V beside her cheek, head tilted. Framed down to mid-calf, camera at her navel level, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. An off-white cotton button-front blouse fastened through the chest, a pale blue checked skirt with one continuous hem. A route map lightbox, wet asphalt throwing warm sign colour back up. Her face is clearly exposed with natural skin texture; the signs are the brightest area, only their smallest highlights reaching white. Subtle film grain.` |
 | **Caption 草稿** | 台北下雨了☔️<br>雨の台北、こういう日が好き |
 | 附註 | 🔬 **preflight**：這件是**鮑伯剪裁幾何的受測件**——頭髮自然垂放、沒有塞耳後／濕髮／半盤，是唯一能乾淨測出底層剪裁的一件。用 `with even blunt ends along the jawline`；**其餘 10 件暫時維持 `cut evenly at the jawline`，等這張驗過再決定要不要全面沿用** |
 
@@ -614,7 +614,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 雙手捧杯在**下巴前**（不是胸前）② 頭略低、眼睛往上看鏡頭 ③ 人與豆漿杯同框 ④ 半身比例 |
 | **創意備註（不送模型／不驗收）** | 薄針織的袖口與髮尾隨著前傾垂下晃動——**不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | **統一杯子位置**：表情列寫「下巴前」、肢體列寫「胸前」，差一個頭的高度。上目遣い是本件核心驗收點，胸前會讓視線關係不成立，**取下巴前** |
-| **生成 prompt** | `A young woman holds a glass of soy milk in both hands in front of her chin, her head slightly lowered, her eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the glass in frame, camera at her eye level. A blunt chin-length black bob cut evenly at the jawline, centre-parted. A cream fitted thin-knit top, a light pleated A-line mini skirt with one continuous hem around her thighs. A breakfast shop, a stainless steel counter, the wall menu out of focus. Cool daylight from the doorway, warm fluorescent light inside, the steel counter bouncing fill onto her chin, the doorway allowed to clip. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a glass of soy milk in both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera. Half body with the glass in frame, camera at her eye level. A blunt chin-length black bob cut evenly at the jawline, centre-parted. A cream fitted thin-knit top, a light pleated A-line mini skirt with one continuous hem. A breakfast shop, a steel counter, the wall menu out of focus. Cool daylight from the doorway, warm fluorescent light inside, the counter bouncing fill onto her chin. Her face clearly exposed with natural skin texture; the doorway is the brightest area, only its smallest highlights reaching white. Subtle film grain.` |
 | **Caption 草稿** | 早餐吃這個🥛<br>好喝…真的很好喝 |
 
 ### LG-10A｜浴衣・祭典參道（全身）
@@ -660,7 +660,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **硬驗收** | ① 一手舉蘋果糖在臉頰旁 ② 另一手扶髮簪 ③ 浴衣**左襟在上**、半幅帶綁緊收腰 ④ 半身比例 |
 | **創意備註（不送模型／不驗收）** | 無 |
 | **整併紀錄（2026-08-29）** | 巾着包移除（半身景別、且會在手腕再多一個物件）。<br>⚠️ **兩手都在頭部附近**（臉頰旁＋髮簪）是手指融合的風險組合，但兩者都是核心創意，保留並列入硬驗收逐項檢查 |
-| **生成 prompt** | `A young woman holds a candy apple up beside her cheek with one hand and steadies the hairpin in her half-up bob with her other hand, laughing with her eyes crinkled. Half body, camera level with her chest. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin, two strands at her temples. A pale-blue floral yukata, an ankle-length wrap robe with the left front panel crossed over the right, a wide flat navy obi sash. Paper lanterns overhead, a blurred food stall, the last blue of the sky. Warm lantern light on her face, the approach underfoot bouncing warm fill up, the lanterns themselves allowed to clip. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a candy apple up beside her cheek with one hand and steadies the hairpin in her half-up bob with her other hand, laughing with her eyes crinkled. Half body, camera level with her chest. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin, two strands at her temples. A pale-blue floral yukata with the wearer's left front panel layered over the wearer's right, a wide flat navy obi. Paper lanterns overhead. Warm lantern light on her face, the approach underfoot bouncing warm fill up. Her face is clearly exposed with natural skin texture; the lanterns are the brightest area, only their smallest highlights reaching white. Subtle film grain.` |
 | **Caption 草稿** | 這個顏色好可愛🍎 |
 | 附註 | 與 LG-10A 同一天同一套，**拆兩則發沒問題**（景別與構圖差異夠大）。同屬「回日本的時候」類型。 |
 
