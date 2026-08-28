@@ -496,22 +496,22 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **Caption 草稿** | 今天玩得好開心✨<br>爆米花吃了兩桶 |
 | 附註 | **背景路人 2–3 人**：背向、失焦、外型與她區隔 |
 
-### LG-08｜浴室鏡前・濕髮
+### LG-08｜浴室鏡前・洗完臉
 `圖`　·　對應 **L-09**　·　地點層級 **B**
 
 | | |
 |---|---|
-| **妝容** | **素顏，剛洗完澡**。皮膚微微泛紅有水感，保留一點唇色。 |
-| **髮型** | 濕髮鮑伯，貼著臉頰。 |
+| **妝容** | **素顏，剛洗完臉**。皮膚微微泛紅有水感，保留一點唇色。 |
+| **髮型** | 及下巴鮑伯，一側撥到耳後。<br>（**2026-08-28：濕髮 4/4 全部生成失敗，已拿掉這個要求**——依分流規則，同方向連續失敗就停，不再抽卡） |
 | **穿著** | 上身：白色浴巾裹身（胸線與腰身自然呈現）｜下身：—｜鞋：赤腳｜外層：—｜首飾：無 |
 | **場景環境** | **乾淨明亮的浴室**。白色方形磁磚牆（看得到磁磚縫的質感）、木框鏡、鏡角有一點霧氣、掛著的白毛巾、洗手台上的護膚品。 |
 | **機位與構圖** | **半身，拍鏡中反射。**<br>**機位**：在她的眼睛高度，鏡頭保持水平。<br>**構圖**：木框鏡邊入鏡，洗手台上的瓶罐在下緣。 |
 | **光線** | ① 浴室頂燈＋鏡側光**均勻打在臉上，幾乎沒有陰影**｜② 白色磁磚牆整體補光｜③ 全場冷白｜④ **背景曝光與她的膚色相當** |
 | **表情** | **把小毛巾按在臉頰上、閉眼笑。**單手拿一條**小方巾**按在一邊臉頰；另一手平放檯面；肩膀微抬、身體前傾。<br>**硬驗收＝濕髮可見＋單手按毛巾＋另一手扶檯面＋前傾抬肩。閉眼與笑容只記 soft observation——即使眼睛張開，只要巨觀動作與濕髮達成仍可進選片。**<br>（**原本的「咬毛巾＋鼓臉頰」兩張全失敗，已刪**；雙手同時靠近臉會增加手指重疊與融合風險，所以維持已驗證的一手一事分工） |
 | **肢體與重心** | 一手拿毛巾擦頭髮、**手肘抬起**；另一手扶著洗手台；上半身微前傾；肩膀一高一低。 |
-| **情境** | 用毛巾擦頭髮，停下來看鏡子裡的自己 |
-| **生成 prompt** | `A young woman leans toward the bathroom mirror, pressing a small folded white hand towel against one cheek with one hand, her other hand resting flat on the counter, shoulders lifted, eyes gently closed in a smile. Half body reflected in the mirror, camera at her eye level. A wet blunt chin-length black bob cut evenly at the jawline, separated into damp strands clinging to her cheeks, droplets beading at the ends. A large white bath towel wrapped around her torso. Clean bright bathroom, white square tiles, a wooden-framed mirror with steam at one corner. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
-| **Caption 草稿** | お風呂上がり🛁<br>最喜歡的時間 |
+| **情境** | 洗完臉，把小方巾按在臉頰上，閉著眼笑 |
+| **生成 prompt** | `A young woman leans toward the bathroom mirror, pressing a small folded white hand towel against one cheek with one hand, her other hand resting flat on the counter, shoulders lifted, eyes gently closed in a smile. Half body reflected in the mirror, camera at her eye level. A blunt chin-length black bob cut evenly at the jawline, one side tucked back behind her ear. A large white bath towel wrapped around her torso. Clean bright bathroom, white square tiles, a wooden-framed mirror with steam at one corner. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **Caption 草稿** | 洗完臉的這一秒最舒服🫧 |
 
 ### LG-09｜台式早餐店・豆漿
 `圖`　·　對應 **L-13**　·　地點層級 **C**
