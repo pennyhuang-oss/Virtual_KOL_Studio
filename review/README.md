@@ -5,7 +5,35 @@
 
 ---
 
-## 給 ChatGPT 的操作說明
+## ⚠️ 2026-08-27 協定修正：ChatGPT 不再讀 GitHub
+
+**發生什麼事**：讓 ChatGPT 透過 GitHub 連接器讀 repo，**一次讀取就把使用者 5 小時的方案用量燒光**。
+它只做檢核、不做規劃與執行，用量卻比 Claude 還快——因為連接器會爬整個專案背景
+（本 repo 光 `.md` 就約 500KB），而它真正需要判斷的只有「這次改了什麼」。
+
+**另外**：上一輪請 ChatGPT 把意見寫回 GitHub，實際上**沒有發生**——
+遠端沒有它的 commit 也沒有新分支。所以寫回路徑也不成立。
+
+### 現在的做法
+
+```
+Claude 改動 → python3 tools/gen_review_request.py → 產生自帶內容的訊息
+           → 使用者複製貼上給 ChatGPT（ChatGPT 不 fetch 任何東西）
+           → ChatGPT 在對話裡回覆 → 使用者貼回給 Claude
+           → Claude 實測驗證 → 修正 → 更新 LEDGER → 更新 CHECKPOINT
+```
+
+- `review/CHECKPOINT` 記錄 ChatGPT 最後覆核到的 commit，delta 從那裡算起
+- 產生的請求存在 `review/requests/REQ_<sha>.md`，同時印到 stdout 方便複製
+- 請求內含：程式算好的規格數字、本輪 diff、未結案議題表、固定的回覆格式
+- **統計數字一律由程式計算後內嵌**，ChatGPT 不需要自己 parse JSON
+
+以下「給 ChatGPT 的操作說明」保留作為**它主動想查證某個檔案時**的參考，
+但常態流程不需要它讀 repo。
+
+---
+
+## 給 ChatGPT 的操作說明（僅供主動查證時使用）
 
 ### 你要讀什麼
 
@@ -23,17 +51,10 @@
 
 ### 你要寫回什麼
 
-**只改兩個地方：**
+**直接在對話裡回覆，不要寫回 GitHub。** 使用者會把你的回覆貼給 Claude，
+由 Claude 統一更新 `LEDGER.md`。這樣既省你的用量，也保留「誰主張什麼」的紀錄。
 
-1. **`review/LEDGER.md`** — 這是主要溝通管道
-   - 新發現的問題：在表格最下方新增一列，ID 用 `C-nn`（ChatGPT 提出）
-   - 回應既有議題：把該列的 `狀態` 改成 `ChatGPT已回應`，並在下方「議題詳述」區塊補你的論述
-   - 同意結案：把 `狀態` 改成 `雙方同意`
-2. **`review/rounds/R{n}_..._chatgpt.md`** — 需要長篇論述時，開一個新檔放完整內容，
-   並在 LEDGER 對應議題裡連結過去
-
-**請不要直接改 `pilot/` 底下的 JSON。** 那是 Claude 這側的實作，
-你指出問題、Claude 修改，這樣才能保留「誰主張什麼」的紀錄。
+回覆格式在每封覆核請求的第 4 節。
 
 ### 你可以自己驗證
 

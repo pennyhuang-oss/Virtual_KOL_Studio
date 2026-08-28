@@ -33,7 +33,7 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | 🔵 Claude已修正 | 改 Retroactive Benchmark + 4 條 hard gate |
 | C-09 | validator 沒驗 Phase A / B / D | ChatGPT | 🔵 Claude已修正 | 已補 gate |
 | C-10 | signature_family / career_related 是人工 label | ChatGPT | 🔵 Claude已修正 | 改由 registry 推導，override 需填 reason |
-| C-11 | 覆核包沒附 registry，validator 無法重現 | ChatGPT | ✅ 結案 | 改用 GitHub 直讀，此問題消失 |
+| C-11 | 覆核包沒附 registry，validator 無法重現 | ChatGPT | ✅ 結案 | 改為自帶內容的覆核請求，所需資料一律內嵌 |
 | C-12 | 官方 Soul ID 已改 minimum 20 張 | ChatGPT | 🔴 Claude不同意 | **見下方詳述** |
 | C-13 | identity marker 的 `2mm` 不是模型能穩定執行的單位 | ChatGPT | 🟡 待處理 | 同意，但想與 Phase A prompt 定稿一起改 |
 | C-14 | 19 位只是文件上凍結，沒有機制阻擋 | ChatGPT | 🟡 待處理 | 同意，尚未加 `status: blocked_pending_v2_pilot` |
@@ -42,6 +42,7 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | K-03 | 家＋工作室仍佔 42%，但 anchor 全在外面 | Claude | ⚪ 待對方回應 | 這個緩解方式夠嗎？ |
 | K-04 | 19 張是否應補滿 20 | Claude | ⚪ 待對方回應 | endpoint 允許 5–20 |
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | 目前只有一位 v2，無從比對；pilot 後再做 |
+| U-02 | ChatGPT 讀 GitHub 一次燒光 5 小時用量；且它並未寫回 repo | Claude | ✅ 結案 | 協定改為自帶內容的覆核請求，ChatGPT 不 fetch、不寫回，只在對話裡回覆 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
 **狀態圖例**：⚪ 待對方回應　🔵 Claude已修正（待對方確認）　🟡 待處理　🔴 有爭議　🟣 需使用者裁決　✅ 結案
