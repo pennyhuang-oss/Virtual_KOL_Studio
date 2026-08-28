@@ -189,6 +189,28 @@ if os.path.exists(PLAN):
     if n_items and n_optics != n_items:
         err(f"{PLAN}：{n_items} 件 spec 只有 {n_optics} 件有光學設定宣告")
 
+# 背景路人：lint 用的措辭必須與 SEXY_SCENE_LIBRARY §9 那份一致，
+# 否則兩邊各自漂移，實測過的字串就失去意義
+if os.path.exists(PLAN):
+    lintsrc = read('tools/prompt_lint.py')
+    m = re.search(r"BG_BLOCK = \('(.+?)'\)", lintsrc, re.S)
+    if not m:
+        err('prompt_lint.py 找不到 BG_BLOCK')
+    else:
+        blk = re.sub(r"'\s*\n\s*'", '', m.group(1))
+        lib = read('SEXY_SCENE_LIBRARY.md')
+        for frag in ('anonymous strangers', 'backs turned or heads angled away',
+                     'never looking at the camera', 'slight motion blur',
+                     'build, age and clothing'):
+            if frag not in blk:
+                err(f'prompt_lint 的 BG_BLOCK 少了四條件之一：{frag}')
+            if frag not in lib:
+                err(f'SEXY_SCENE_LIBRARY §9 少了四條件之一：{frag}')
+    n_items  = len(re.findall(r'\n### (?:YG|LG)-\d+[AB]?｜', read(PLAN)))
+    n_people = read(PLAN).count('| **人物入鏡** |')
+    if n_people and n_people < 13:
+        err(f'{PLAN}：13 件已整併的 spec 只有 {n_people} 件有人物入鏡宣告')
+
 # 兩條覆核線的檔名分家必須有索引，否則下一個人會覆蓋掉別人的 LEDGER
 if not os.path.exists('review/INDEX.md'):
     err("review/INDEX.md 不存在——兩條覆核工作線共用 review/，沒有索引會互相覆蓋")

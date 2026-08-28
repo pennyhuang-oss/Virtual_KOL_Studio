@@ -19,6 +19,7 @@ HAIR_LEN = r'(collarbone-length|chin-length|shoulder-length|waist-length|cropped
 # 決定**不統一**——改寫沒有 production 收益，只會製造新的未驗證變因。
 # 註：只能說兩者與成功共現，不能說各自已證明為因果控制桿。
 BOB_GEOM = r'(cut evenly at the jawline|even blunt ends along the jawline)'
+WARN_ONLY = ('⚠',)          # 以 ⚠ 開頭者只提醒、不列為不合格
 NEGATION = r'\b(no|not|without|avoid|never)\b'
 TIMELINE = r'(then |breaking into|just starting to|and then|before turning)'
 FLUTTER  = r'(fluttering|lifting in the breeze|trailing in the|blowing in the wind)'
@@ -31,11 +32,35 @@ VALID_REFLECT = ('反射面：具名', '反射面：不適用')
 VALID_EXPO    = ('曝光：取捨', '曝光：低反差')
 VALID_TEMP    = ('色溫：分裂', '色溫：不適用')
 
-def lint(sid, prompt, is_close, is_luna):
+
+# ── 背景路人（2026-08-29 加入）────────────────────────────────────
+# 起因：13 段 prompt 寫完後才發現 7 件公共場景**一個路人都沒有**，
+# 而 SEXY_SCENE_LIBRARY §9 早就寫了「公共場景必須有」，且是 soul_2 上 14/14 實測過的。
+# 那幾輪的注意力都在手部與光線（R7／R8 的議題），沒有人提醒，我也沒回去對 §9。
+# 這條檢查就是為了讓它以後漏不掉。
+#
+# 兩個刻意的例外，都記在這裡而不是藏在程式裡：
+#  1. 這段已驗證措辭含 `never`，會撞到本檔的否定句檢查。
+#     D-03 說的是否定句「無效」，不是「有害」；整段是 14/14 驗證過的，
+#     改寫它等於引入新變因換取零已知收益。**選擇保留原文，並在檢查前把它切掉。**
+#  2. 它有 40 字。120 字上限是沒有實證來源的啟發式（已核准成品落在 94–118），
+#     所以**上限只管我自己寫的內容**，這段固定附加區塊另計。
+BG_BLOCK = ('A few anonymous strangers in the mid-ground going about their own business, '
+            'backs turned or heads angled away, never looking at the camera, softly out of '
+            'focus with slight motion blur, clearly different from her in build, age and clothing.')
+BG_LEN   = len(BG_BLOCK.split())
+BG_MARK  = 'anonymous strangers'
+PEOPLE_DECL = r'\| \*\*人物入鏡\*\* \|(.+?)\|'
+
+def lint(sid, prompt, is_close, is_luna, decl=None):
     out = []
+    has_bg = BG_MARK in prompt
     w = len(prompt.split())
-    if w > 120: out.append('過長 %d words' % w)
-    if re.search(NEGATION, prompt, re.I): out.append('含否定句')
+    cap = 120 + (BG_LEN if has_bg else 0)
+    if w > cap: out.append('過長 %d words（上限 %d）' % (w, cap))
+    # 否定句只檢查我自己寫的部分，不檢查已驗證的固定區塊
+    own = prompt.replace(BG_BLOCK, ' ')
+    if re.search(NEGATION, own, re.I): out.append('含否定句')
     if not re.search(HAIR_LEN, prompt, re.I): out.append('缺明確髮長（造型不算長度）')
     if is_luna and not re.search(BOB_GEOM, prompt, re.I): out.append('鮑伯缺剪裁幾何')
     pores = 'visible skin pores' in prompt.lower()
@@ -45,6 +70,17 @@ def lint(sid, prompt, is_close, is_luna):
     if re.search(FLUTTER, prompt, re.I): out.append('抽象飄動描述')
     if 'selfie' in prompt.lower() and re.search(r'phone (up )?beside her (face|cheek)', prompt, re.I):
         out.append('自拍卻要求手機入鏡')
+
+    # 宣告與 prompt 必須一致。沒有宣告的件只提醒，不擋——
+    # 8 件已核准的走的是另一套處理（規格對齊成品、prompt 不動）。
+    if decl is None:
+        out.append('⚠尚未整併（無人物入鏡宣告）')   # 警告類，見 WARN_ONLY
+    elif '公共場景——必寫' in decl:
+        if not has_bg: out.append('公共場景卻沒有背景路人')
+    elif '私密場景' in decl or '景別排除' in decl:
+        if has_bg: out.append('宣告不寫背景路人，prompt 卻有')
+    else:
+        out.append('人物入鏡宣告無法辨識')
 
     return w, out
 
@@ -65,14 +101,23 @@ SELFTEST = [
       'Natural skin texture.', False, True, ['鮑伯缺剪裁幾何']),
     ('鮑伯新 wording', 'A woman smiles. Half body. A blunt chin-length black bob with even blunt ends '
       'along the jawline. Natural skin texture.', False, True, []),
+    ('公共場景漏路人', 'A woman smiles. Half body. Collarbone-length brown hair. A tee. A night market. '
+      'Soft light. Natural skin texture.', False, False, ['公共場景卻沒有背景路人'], '公共場景——必寫背景路人（夜市）'),
+    ('私密場景誤加路人', 'A woman smiles. Half body. Collarbone-length brown hair. A tee. Her bedroom. '
+      'A few anonymous strangers in the mid-ground going about their own business, backs turned or heads '
+      'angled away, never looking at the camera, softly out of focus with slight motion blur, clearly '
+      'different from her in build, age and clothing. Soft light. Natural skin texture.',
+      False, False, ['宣告不寫背景路人，prompt 卻有'], '私密場景（臥室）——只有本人'),
     ('抽象飄動', 'A woman walks, her shirt fluttering. Half body. Collarbone-length brown hair. '
       'Natural skin texture.', False, False, ['抽象飄動描述']),
 ]
 
 def selftest():
     ok = True
-    for name, p, c, l, expect in SELFTEST:
-        _, got = lint('T', p, c, l)
+    for row in SELFTEST:
+        name, p, c, l, expect = row[:5]
+        decl = row[5] if len(row) > 5 else '私密場景（測試）——只有本人'
+        _, got = lint('T', p, c, l, decl)
         if sorted(got) != sorted(expect):
             print('  ✗ %-16s 預期 %s，實得 %s' % (name, expect, got)); ok = False
         else:
@@ -90,7 +135,9 @@ def main(path):
         fm = re.search(r'\| \*\*機位與構圖\*\* \| \*\*([^*]+)\*\*', b)
         if not pm: print('%-7s ✗ 沒有生成 prompt' % sid); bad += 1; continue
         is_close = '近景' in fm.group(1) or '特寫' in fm.group(1)
-        w, issues = lint(sid, pm.group(1), is_close, sid.startswith('LG'))
+        dm = re.search(PEOPLE_DECL, b)
+        w, issues = lint(sid, pm.group(1), is_close, sid.startswith('LG'),
+                         dm.group(1) if dm else None)
         om = re.search(OPTICS, b)
         if not om:
             issues.append('缺光學設定宣告')
@@ -99,8 +146,14 @@ def main(path):
             if not any(v in decl for v in VALID_REFLECT): issues.append('反射面未宣告')
             if not any(v in decl for v in VALID_EXPO):    issues.append('曝光未宣告')
             if not any(v in decl for v in VALID_TEMP):    issues.append('色溫未宣告')
-        if issues: print('%-7s ✗ %3dw  %s' % (sid, w, '｜'.join(issues))); bad += 1
-        else:      print('%-7s ✓ %3dw' % (sid, w))
+        hard = [x for x in issues if not x.startswith(WARN_ONLY)]
+        warn = [x for x in issues if x.startswith(WARN_ONLY)]
+        if hard:
+            print('%-7s ✗ %3dw  %s' % (sid, w, '｜'.join(issues))); bad += 1
+        elif warn:
+            print('%-7s ⚠ %3dw  %s' % (sid, w, '｜'.join(warn)))
+        else:
+            print('%-7s ✓ %3dw' % (sid, w))
     print('\n%d 件，%d 件有問題。' % (len(blocks), bad))
     print('⚠️ 機械檢查全過**不等於**可以送生成——語意與物理一致性仍須人工／LLM 覆核。')
     return 1 if bad else 0
