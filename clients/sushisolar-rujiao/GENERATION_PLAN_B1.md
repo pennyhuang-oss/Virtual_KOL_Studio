@@ -440,7 +440,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **光線** | ① 窗光從她側面**打在臉上**｜② 白牆補光｜③ 窗光冷白 vs 室內暖黃｜④ **背景曝光與她的膚色相當** |
 | **光學設定** | 反射面：具名（白牆回彈補陰影側）｜曝光：取捨（窗外對街失細節）｜色溫：不適用 |
 | **表情** | **臉靠近貓瞇眼笑。**臉貼近貓的頭、眼睛瞇成月牙；嘴角上揚；完全不看鏡頭，注意力全在貓身上。<br>**硬驗收＝一手搔貓頭＋另一手扶窗台。臉部細節（眼型／嘴型／眉毛／臉頰）一律列 soft observation，不作淘汰依據。** |
-| **肢體與重心** | 側坐或半跪；一手伸過去摸貓頭、**手指彎曲**；另一手撐在窗台；上半身向貓傾。；**過長的針織袖口垂在手腕外、隨著伸手的動作晃動**。 |
+| **肢體與重心** | 側坐或半跪；一手伸過去摸貓頭、**手指彎曲**；另一手撐在窗台；上半身向貓傾。。<br>（**2026-08-28 刪除「過長的針織袖口垂在手腕外」**——與穿著列「不是袖子過長的 oversized」直接矛盾，且屬抽象飄動，本就不進 prompt） |
 | **情境** | 貓趴在窗台，她的手伸過去摸牠的頭，貓瞇著眼 |
 | **生成 prompt** | `A young woman leans in close to an orange cat on the windowsill and scratches its head with one hand, her other hand resting on the sill, her eyes crinkled shut in a smile, her attention entirely on the cat. Half body with the cat in frame, camera level with her face as she sits, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, one side tucked behind her ear. Off-white fitted fine-knit top, light shorts. Bedroom windowsill, small potted plants, an iron window grille and the apartment across the street outside. Soft window light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | Mochi 也搬家了！<br>花了兩個月才習慣🐈 |
@@ -508,7 +508,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | | |
 |---|---|
 | **妝容** | 標準可愛妝，唇色稍亮一階。 |
-| **髮型** | 鮑伯，戴一個造型髮箍（貓耳或蝴蝶結）。 |
+| **髮型** | 鮑伯，戴一個**貓耳造型髮箍**。（**2026-08-28 定案**——原本寫「貓耳或蝴蝶結」，規格不該留二選一；prompt 早已自行定為 cat-ear，以 prompt 為準） |
 | **穿著** | 上身：白色**方領**泡泡袖上衣（收腰）｜下身：淺藍色**吊帶短裙**｜鞋：白色瑪莉珍鞋＋蕾絲短襪｜外層：—｜首飾：造型髮箍＋小後背包 |
 | **場景環境** | 遊樂園。旋轉木馬、彩色氣球、爆米花桶、遠處的遊行街道與裝飾。 |
 | **機位與構圖** | **全身。**<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍，全身不要靠近拍。<br>**構圖**：腳貼近畫面下方 1/3，旋轉木馬在她身後。 |
@@ -533,7 +533,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **機位與構圖** | **半身，拍鏡中反射。**<br>**機位**：在她的眼睛高度，鏡頭保持水平。<br>**構圖**：木框鏡邊入鏡，洗手台上的瓶罐在下緣。 |
 | **光線** | ① 浴室頂燈＋鏡側光**均勻打在臉上，幾乎沒有陰影**｜② 白色磁磚牆整體補光｜③ 全場冷白｜④ **背景曝光與她的膚色相當** |
 | **光學設定** | 反射面：具名（白色磁磚牆整體回彈）｜曝光：低反差（浴室平光）｜色溫：不適用（單一頂燈） |
-| **表情** | **把小毛巾按在臉頰上、閉眼笑。**單手拿一條**小方巾**按在一邊臉頰；另一手平放檯面；肩膀微抬、身體前傾。<br>**硬驗收＝濕髮可見＋單手按毛巾＋另一手扶檯面＋前傾抬肩。閉眼與笑容只記 soft observation——即使眼睛張開，只要巨觀動作與濕髮達成仍可進選片。**<br>（**原本的「咬毛巾＋鼓臉頰」兩張全失敗，已刪**；雙手同時靠近臉會增加手指重疊與融合風險，所以維持已驗證的一手一事分工） |
+| **表情** | **把小毛巾按在臉頰上、閉眼笑。**單手拿一條**小方巾**按在一邊臉頰；另一手平放檯面；肩膀微抬、身體前傾。<br>**硬驗收＝單手按毛巾＋另一手扶檯面＋前傾抬肩。閉眼與笑容只記 soft observation。**<br>（**2026-08-28 移除「濕髮可見」**——髮型列已於同日刪掉濕髮要求，硬驗收卻還留著，是同一件內的自我矛盾。本件成品即是無濕髮版且已核准，依覆核 Q1「核准後以成品控制交付紀錄」處理）<br>（**原本的「咬毛巾＋鼓臉頰」兩張全失敗，已刪**；雙手同時靠近臉會增加手指重疊與融合風險，所以維持已驗證的一手一事分工） |
 | **肢體與重心** | 一手拿毛巾擦頭髮、**手肘抬起**；另一手扶著洗手台；上半身微前傾；肩膀一高一低。 |
 | **情境** | 洗完臉，把小方巾按在臉頰上，閉著眼笑 |
 | **生成 prompt** | `A young woman leans toward the bathroom mirror, pressing a small folded white hand towel against one cheek with one hand, her other hand resting flat on the counter, shoulders lifted, eyes gently closed in a smile. Half body reflected in the mirror, camera at her eye level. A blunt chin-length black bob cut evenly at the jawline, one side tucked back behind her ear. A large white bath towel wrapped around her torso. Clean bright bathroom, white square tiles, a wooden-framed mirror with steam at one corner. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
