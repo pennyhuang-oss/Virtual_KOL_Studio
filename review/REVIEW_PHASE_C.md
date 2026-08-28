@@ -8,7 +8,7 @@
 **回覆方式**：把意見寫在本檔案最下方 §7 回覆區（`REPLIES BELOW` 那行以下），然後 commit。
 那一段不會被自動產生覆蓋。
 
-- 目前 commit：`9846689`
+- 目前 commit：`224f89d`
 - 議題編號請從 **C-34** 起跳，每條標 **P0**（必須先修才能生成）／**P1**／**P2**
 
 ---
@@ -165,11 +165,12 @@ candidate_03 左側髮際有一段銀灰挑染。c03 → B1 → B2 三張全部�
 - `[[BODY-2]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders.
 - `[[BODY-3]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape.
 - `[[BODY-4]]`（6 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms.
-- `[[CAMERA-1]]`（18 段共用）：Shot on the rear camera of a phone. Straight lens geometry: vertical lines in the room stay vertical. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
+- `[[CAMERA-1]]`（18 段共用）：Shot on the rear camera of a phone. Straight lens geometry: vertical lines in the scene stay straight and parallel to the frame edges. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
 - `[[CLOSED-SET-1]]`（18 段共用）：Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms. The camera viewpoint sits nearby at about eye level, with the imaging device and whoever holds it beyond the frame edge. Illumination comes exclusively from the natural or architectural light sources named above.
 - `[[FACE-BARE-1]]`（20 段共用）：Her face is bare: her lips are the same soft pinkish-beige as the skin around them, matte, with a soft undefined edge; her eyebrows are soft and natural; her lashes are her own and unmade. Light neutral-to-cool skin with natural tonal variation and visible pores.
-- `[[FACING-1]]`（9 段共用）：Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.
-- `[[FACING-2]]`（3 段共用）：The camera sees the front of her body: her navel and the front of both shoulders point toward the lens, and both of her collarbones are visible.
+- `[[FACING-1]]`（5 段共用）：Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.
+- `[[FACING-2]]`（4 段共用）：Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.
+- `[[FACING-3]]`（3 段共用）：The camera sees the front of her body: her navel and the front of both shoulders point toward the lens, and both of her collarbones are visible.
 - `[[FRAME-1]]`（4 段共用）：The whole of her is inside the picture, from the top of her head down to her shoes, with a margin of empty ground below her feet and a little space above her head. Her legs and shoes are clearly visible.
 - `[[FRAME-2]]`（6 段共用）：The bottom edge of the picture cuts across her chest, a little below her armpits. Her head, shoulders and upper chest fill the frame. Her waist, hips, legs and feet are outside the picture.
 - `[[FRAME-3]]`（4 段共用）：The bottom edge of the picture cuts across her waist at about the level of her navel. Her head, shoulders, chest and waist fill the frame. Her hips, legs and feet are outside the picture.
@@ -204,7 +205,7 @@ candidate_03 左側髮際有一段銀灰挑染。c03 → B1 → B2 三張全部�
 A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 The bottom edge of the picture sits just below her collarbones. Her face fills most of the frame, from the top of her hair down to the base of her neck. Her shoulders are only barely in the picture; everything below them is outside it.
 
-She is sitting at the window seat of a cafe, simply facing the camera with her hands still and her attention on the lens.
+She is sitting at the window seat of a cafe, quiet and unoccupied, her attention on the lens.
 
 The camera is square on to her: both shoulders are level with the lens and both collarbones enter the bottom of the frame.
 Her head is straight on to the camera.
@@ -440,7 +441,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 She is standing on a park path facing the camera, both arms hanging naturally at her sides.
 
-[[FACING-2]]
+[[FACING-3]]
 Her head is straight on to the camera.
 Her chin is level.
 She looks directly into the lens.
@@ -582,7 +583,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 She is crouched on the floor opening a carton of supplies that has just arrived, head lifted toward the doorway.
 
-[[FACING-1]]
+[[FACING-2]]
 [[HEAD-1]]
 Her chin is raised a little, so her face tilts slightly upward.
 Her eyes rest on something in the distance, off past the camera.
@@ -725,7 +726,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 She is leaning against the wall in her entryway, head down, putting her keys away in her pocket.
 
-[[FACING-1]]
+[[FACING-2]]
 Her head is turned well toward her own left, so the camera mostly sees the right side of her face; the far eye is still visible but the far cheek is mostly hidden.
 Her chin is dipped, so her face tilts downward and her eyelids read lower.
 Her eyes are lowered toward what is in front of her.
@@ -773,7 +774,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 She is walking down a back lane in Da'an, caught a step past a scooter parked against the wall.
 
-[[FACING-1]]
+[[FACING-2]]
 Her head is turned well toward her own right, so the camera mostly sees the left side of her face; the far eye is still visible but the far cheek is mostly hidden.
 Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
@@ -869,7 +870,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 At the bathroom mirror she is tidying an eyebrow, her other hand holding the phone up at the mirror.
 
-[[FACING-2]]
+[[FACING-3]]
 [[HEAD-1]]
 Her chin is raised a little, so her face tilts slightly upward.
 She looks at her own reflection in the mirror.
@@ -965,7 +966,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 She has just taken the dried laundry out of the drum and now stands in front of the open machine, the bundle held against her chest.
 
-[[FACING-1]]
+[[FACING-2]]
 [[HEAD-2]]
 Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
@@ -1012,7 +1013,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 At a drugstore shelf she is comparing the ingredients on two hand creams.
 
-[[FACING-2]]
+[[FACING-3]]
 Her head is straight on to the camera.
 Her chin is dipped, so her face tilts downward and her eyelids read lower.
 Her eyes are lowered toward what is in front of her.
@@ -1104,7 +1105,7 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 [[FRAME-2]]
 
-She is standing beside the park path with her whole body and her face turned to her own right, looking at something far off.
+She is standing beside the park path, her shoulders turned to her own right and her face looking that way too, at something far off.
 
 The camera is beside her, level with her shoulder, seeing the side of her body: the near shoulder is toward the lens and the far one directly behind it.
 Her head is turned all the way to her own right, so the camera sees her profile: the outline of her forehead, nose, lips and chin reads clearly against the background, and only the near eye is visible.
@@ -1114,8 +1115,6 @@ Calm and a little distant, thinking about something else.
 Her whole face is unobstructed.
 The photograph is taken from a short distance away, at about eye level.
 
-Her left hand is hanging naturally at her side.
-Her right hand is hanging naturally at her side.
 Also in the picture: a wooden bench beside the path behind her; a single leaf falling behind her shoulder.
 
 [[FACE-BARE-1]]
@@ -1135,45 +1134,40 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 
 ## §6 本輪請你判斷
 
-### 6-1 上一輪（R11）你開的 4 條，處置如下
+### 6-1 上一輪（R12）你開的 2 條，處置如下
 
 | ID | 你的判定 | 我做了什麼 |
 |----|---------|-----------|
-| C-44 | 身材／朝向／相機模板仍未真正依 framing 分層 | **五處全部實測屬實**（knee_up 4 段仍寫 long straight legs、chest_up 6 段仍寫 narrow waist、face_closeup 2 段的相機句與朝向句都提到軀幹、上衣下擺殘留）。身材改為**五種**版本逐級累加；上衣拆出 `top_hem`，下擺只在腰部可見時輸出；相機句改為 `every visible part of her`；a01／c01 的朝向句改成只講肩與鎖骨 |
-| C-45 | 封閉集合在戶外產生光源矛盾 | **屬實**，實測 9 段戶外／半戶外仍寫 `light in the room`。已改為你建議的 `Illumination comes exclusively from the natural or architectural light sources named above`；鏡面版也依你的意見限縮為「鏡中場景內只有她與那支手機」，不再暗示鏡中沒有背景 |
-| C-46 | `Someone standing near her` 把第二個人帶回 prompt | **屬實**，18 段都有。這確實會抵消封閉集合的目的——而且這個模型真的畫過別人的手拿手機。已改為不含 person token 的視點敘述 |
-| C-47 | ring 的可見性不能只由 framing 決定 | **屬實**，實測 a02／a03／c07 有手在胸前入鏡卻把戒指砍掉。改為由 `hands_visible` 決定，與景別脫鉤 |
+| C-48 | 相機模板在戶外仍寫 `room` | **屬實**，實測 9 段戶外／半戶外列中招。改為你建議的 `vertical lines in the scene stay straight and parallel to the frame edges` |
+| C-49 | 仍有三類裁切外身體／手部 cue | **三類全部屬實**。①朝向模板寫 `one hip is nearer the lens` 用在 chest_up 的 a02–a05 與 waist_up 的 c12，共 5 列，已改用肩線與鎖骨當地標；②`a01` 是 face_closeup 卻寫 `with her hands still`，已刪；③`a08` 是 chest_up，我在 visibility 表把「垂在身側」的兩手都標成可見——**這是我填錯**，已改為兩手皆不可見，動作句也改成只描述肩線與上半身 |
 
-**另外兩處是我自己複查時抓到的**，你沒提但一併修了：
+### 6-2 你要求的 lint 已補上，並用反向測試驗過
 
-- 相機視點句在 `WHO-SHOOTS` 與封閉集合裡各寫一次，重複。third-person 的視點句改短。
-- `c09`／`c11`／`c10` 的曝光句寫 `the tubes blow out`（燈管），但 `c11` 手上正拿著 `two tubes of hand cream`——同一段裡 `tubes` 兩個意思。已改為 `the fluorescent tubes overhead`。
+你說「lint 也應新增『可見區域外的 anatomical token』檢查，而不只檢查服裝層與 hands 欄位」。
+已實作：**整段掃描**（不只身材模板），逐 framing 定義裁切外的解剖名詞，
+並豁免服裝規格裡的同形字（`high-waisted`、`wide-leg`、`knee-high` 等）
+以及景別句本身——那句就是在陳述哪些部位落在邊界外，是你 R11 裁決過的有效寫法。
 
-### 6-2 三列重審已記錄
+另外補一條：**兩手都在裁切外時，prompt 任何地方都不得出現「hand」**（上臂不算，chest_up 看得到）。
 
-你判 `nico_c03`／`nico_c04`／`nico_c09` **列本身無異議**，已簽進 `pilot/semantic_review.json`，
-語意覆核回到 **20/20**，validator 重新 exit 0。
-你當時註明「prompt 仍受共用模板影響」——那些模板（C-44／C-45／C-46）本輪都改了，
-所以這三列的 prompt 需要連同其他受影響的列一起看。
+**反向測試 4/4**：把你這輪抓到的四種缺陷逐一打回 prompt，lint 全部擋下。
 
 ### 6-3 這一輪請你判斷
 
-**1. C-44／C-45／C-46／C-47 可否結案？** 連帶 C-34／C-37／C-42 也一併判定。
-   特別是五版身材（`[[BODY-*]]`）的切分點：我把 waist 放在 waist_up 才出現、
-   hips 放在 knee_up、legs 放在 full_body。這個切分對嗎？
+**1. C-48／C-49 可否結案？連帶 C-37／C-44。**
 
-**2. 本輪改動展開到的所有列**：這一輪動的是**共用模板**，20 段全部重新展開過。
-   請看有沒有因為刪去某些描述而產生新的空缺——例如 chest_up 現在完全不提腰，
-   模型會不會自行補一個不對的腰身？
+**2. 受影響的列**：你指定要重看 `a01`／`a02`／`a03`／`a04`／`a05`／`c12`／`a08`
+   以及 `CAMERA-1` 的展開結果——這幾列與那個模板都在 §5。
 
 **3. 放行判定**：可以開始生成這 20 張，還是仍有 P0？
 
-**現在有機器擋的規則**（`tools/lint_prompts.py`，20/20 通過）：
-否定詞為 0；姿態動詞與 body_pose 一致；每段都有身材描述**且必須是該 framing 的版本**；
-不得描述比該 framing 更下面才看得到的身體部位；face_closeup 不得提到軀幹；
-不得描述該景別看不見的服裝層；戒指依手部可見性而非景別；
-裁切外的手不得描述；宣告不可見的道具不得出現；
-戶外場景不得說光來自 room；不得出現第二個 person token；每段都要有正面封閉集合收尾。
+**現在 lint 擋的規則**（`tools/lint_prompts.py`，20/20 通過）：
+否定詞為 0；姿態動詞與 body_pose 一致；身材必須是該 framing 的版本；
+**整段不得出現該 framing 裁切外的解剖名詞**；face_closeup 不得提到軀幹；
+兩手都在畫面外時不得出現「hand」；不得描述該景別看不見的服裝層；
+戒指依手部可見性；裁切外的手不得描述；宣告不可見的道具不得出現；
+相機句不得假設室內；戶外不得說光來自 room；不得出現第二個 person token；
+每段都要有正面封閉集合收尾。
 
 ---
 
@@ -1183,57 +1177,3 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
 
-
-## ChatGPT R12 覆核回覆
-
-### C-48｜P0｜相機共用模板在戶外仍寫 `room`
-
-`[[CAMERA-1]]` 的：
-
-> Straight lens geometry: vertical lines in the room stay vertical.
-
-仍展開到公園、街道等戶外列。C-45 已把封閉集合的 `room` 修掉，但同一個場景假設殘留在相機模板，會重新引入室內 cue。請改為跨場景成立的：
-
-> Straight lens geometry: vertical lines in the scene stay straight and parallel to the frame edges.
-
-或更短的 `Straight lens geometry throughout the frame.`。修正前 C-44 尚不能結案。
-
-### C-49｜P0｜仍有三類裁切外身體／手部 cue
-
-五版 `BODY-*` 本身已正確切分，但其他段落仍把畫面外部位帶回 prompt：
-
-1. `[[FACING-1]]` 寫 `one hip is nearer the lens`。它用在 chest_up 的 `nico_a02／a03／a04／a05`，也用在 waist_up 的 `nico_c12`；這些 framing 都明訂 hips 在畫面外。請把朝向模板也依 framing 分版：chest/waist-up 用肩線、鎖骨與胸前地標，knee/full-body 才能用 hip。
-2. `nico_a01` 是 face_closeup，動作句仍寫 `with her hands still`。即使沒描述手的位置，仍會提示模型把手納入畫面。改成 `sitting quietly, facing the camera, with her attention on the lens`。
-3. `nico_a08` 是 chest_up，卻仍寫 `with her whole body ... turned`，後面又逐句描述左右手垂在身側。改成只描述可見的肩線／上半身 profile，並刪掉兩句手部描述。
-
-這表示 C-37 的 framing 過濾尚未完全收斂；現行 lint 也應新增「可見區域外的 anatomical token」檢查，而不只檢查服裝層與 hands 欄位的正式輸出。
-
-### 五版身材切分裁決
-
-**切分點正確：**
-
-- face_closeup：只寫頸部、肩部、畫面下緣可見的鎖骨
-- chest_up：肩、胸、鎖骨、上臂
-- waist_up：再加入腰
-- knee_up：再加入下腹與 hips
-- full_body：再加入 legs、身高與完整比例
-
-chest_up 不寫 waist **不是空缺**。腰不在該畫面裡，模型沒有可見的腰身需要補；身份的腰身一致性由 waist_up／knee_up／full_body 列提供。相反地，在 chest_up 強寫腰，才會與裁切線競爭並誘發 zoom-out。
-
-### 結案判定
-
-| ID | 判定 |
-|---|---|
-| C-34 | **同意結案**：五版身材內容與切分點正確 |
-| C-37 | **不同意結案**：仍有 C-49 所列裁切外 cue |
-| C-42 | **同意結案**：三種 view 的封閉集合現在可成立 |
-| C-44 | **不同意結案**：BODY 與服裝分層已修正，但 CAMERA／FACING 尚有 C-48、C-49 |
-| C-45 | **同意結案** |
-| C-46 | **同意結案** |
-| C-47 | **同意結案**：戒指已改由可見手部決定，a02／a03／c07 均已補回 |
-
-除 C-48／C-49 外，重新展開的 prompt 沒看到因刪除腰、hips、legs、鞋或裁切外手部而形成新的可見資訊空缺。
-
-### 放行判定
-
-**目前仍不放行生成。** 先修 C-48、C-49，再重新展開並只重審受影響的 `nico_a01／a02／a03／a04／a05／c12／a08` 與共用 `CAMERA-1` 展開結果；不需要重掃未受相關模板改動的其他欄位。

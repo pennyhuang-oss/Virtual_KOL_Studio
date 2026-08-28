@@ -1,6 +1,6 @@
 {
  "nico_a01": {
-  "action": "She is sitting at the window seat of a cafe, simply facing the camera with her hands still and her attention on the lens.",
+  "action": "She is sitting at the window seat of a cafe, quiet and unoccupied, her attention on the lens.",
   "body": "The camera is square on to her: both shoulders are level with the lens and both collarbones enter the bottom of the frame.",
   "hands": {
    "left": "resting on the table, outside the crop",
@@ -22,11 +22,12 @@
    "right": false
   },
   "bag_state": "outside_frame",
-  "_c44_note": "C-44：原本用的 body 敘述提到胸，但 face_closeup 的下緣只到鎖骨。"
+  "_c44_note": "C-44：原本用的 body 敘述提到胸，但 face_closeup 的下緣只到鎖骨。",
+  "_c49_note": "C-49：face_closeup 的動作句提到手會誘使模型把手納入畫面。"
  },
  "nico_a02": {
   "action": "Still at the same seat, her torso angled toward her own left while her face comes back to the camera, a coffee cup held up near her chest.",
-  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
+  "body": "Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
   "hands": {
    "left": "resting on the table",
    "right": "held up at chest height"
@@ -47,11 +48,12 @@
    "right": true
   },
   "bag_state": "outside_frame",
-  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。"
+  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。",
+  "_c49_note": "C-49：hips 在此 framing 的裁切外，朝向地標改用肩線與鎖骨。"
  },
  "nico_a03": {
   "action": "She is standing on a pavement in daylight, her torso angled toward her own right while her face comes back to the camera, a takeaway cup held up near her chest.",
-  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
+  "body": "Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
   "hands": {
    "left": "hanging naturally at her side",
    "right": "held up at chest height"
@@ -72,11 +74,12 @@
    "right": true
   },
   "bag_state": "outside_frame",
-  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。"
+  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。",
+  "_c49_note": "C-49：hips 在此 framing 的裁切外，朝向地標改用肩線與鎖骨。"
  },
  "nico_a04": {
   "action": "The same stretch of pavement, her torso turned further toward her own left, a takeaway cup held up near her chest.",
-  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
+  "body": "Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
   "hands": {
    "left": "hanging naturally at her side",
    "right": "held up at chest height"
@@ -97,11 +100,12 @@
    "right": true
   },
   "bag_state": "outside_frame",
-  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。"
+  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。",
+  "_c49_note": "C-49：hips 在此 framing 的裁切外，朝向地標改用肩線與鎖骨。"
  },
  "nico_a05": {
   "action": "She is sitting on a park bench, her torso turned further toward her own right, a vacuum flask held up near her chest.",
-  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
+  "body": "Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
   "hands": {
    "left": "on the seat of the bench",
    "right": "held up at chest height"
@@ -122,7 +126,8 @@
    "right": true
   },
   "bag_state": "outside_frame",
-  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。"
+  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。",
+  "_c49_note": "C-49：hips 在此 framing 的裁切外，朝向地標改用肩線與鎖骨。"
  },
  "nico_a06": {
   "action": "She is standing on a park path facing the camera, both arms hanging naturally at her sides.",
@@ -173,7 +178,7 @@
   "bag_state": "worn_shoulder"
  },
  "nico_a08": {
-  "action": "She is standing beside the park path with her whole body and her face turned to her own right, looking at something far off.",
+  "action": "She is standing beside the park path, her shoulders turned to her own right and her face looking that way too, at something far off.",
   "body": "The camera is beside her, level with her shoulder, seeing the side of her body: the near shoulder is toward the lens and the far one directly behind it.",
   "hands": {
    "left": "hanging naturally at her side",
@@ -191,10 +196,11 @@
    "occlusion": null
   },
   "hands_visible": {
-   "left": true,
-   "right": true
+   "left": false,
+   "right": false
   },
-  "bag_state": "worn_shoulder"
+  "bag_state": "worn_shoulder",
+  "_c49_note": "C-49：原本寫 `with her whole body ... turned` 又逐句描述兩手垂在身側，但這是 chest_up——垂在身側的手在裁切外。visibility 表原本兩手都標成可見，是我填錯了。"
  },
  "nico_c01": {
   "action": "After closing up, with the roller shutter down, she has swivelled round on her work chair to look out of the side window.",
@@ -468,7 +474,7 @@
  },
  "nico_c12": {
   "action": "She is waiting for a train on the MRT platform, watching the arrivals display across the tracks.",
-  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
+  "body": "Her body is angled so one shoulder is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.",
   "hands": {
    "left": "hanging naturally at her side",
    "right": "holding her transit card"
@@ -489,6 +495,7 @@
    "right": true
   },
   "bag_state": "worn_shoulder",
-  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。"
+  "_c38_note": "C-35/C-38：刪掉尾句的否定，正面地標已足夠（B2 第二次成功的 prompt 也沒有這句）。",
+  "_c49_note": "C-49：hips 在此 framing 的裁切外，朝向地標改用肩線與鎖骨。"
  }
 }

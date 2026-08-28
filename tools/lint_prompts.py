@@ -54,6 +54,33 @@ for sid, txt in pr.items():
         if order.index(other) > order.index(f) and tail in txt:
             err(f"{sid} framing={f} 卻描述了 {other} 才看得到的身體部位：「{tail}」（C-44）")
 
+    # C-49：整段掃描——任何段落都不得提到該 framing 裁切外的身體部位，
+    # 不只是身材模板。（R12 抓到朝向句寫 hip、動作句寫 hands、相機句寫 room。）
+    ANAT = {
+     'face_closeup': ['chest','bust','waist','hip','abdomen','leg','knee','feet','foot','thigh'],
+     'chest_up':     ['waist','hip','abdomen','leg','knee','feet','foot','thigh'],
+     'waist_up':     ['hip','leg','knee','feet','foot','thigh'],
+     'knee_up':      ['feet','foot'],
+     'full_body':    [],
+    }
+    # 服裝／道具名稱裡的同形字不算（例如 high-waisted jeans 是衣服規格，不是要求畫出腰）
+    EXEMPT = ('high-waisted', 'waistband', 'knee-high', 'knee-length', 'legs of', 'wide-leg',
+              'straight-leg', 'cargo', 'bent knee', 'footwear')
+    # 景別句本身就是在陳述哪些部位落在邊界外——R11 已裁決這是有效寫法，不算違規
+    body_lines = [l for l in txt.split('\n')
+                  if not (l.startswith('The bottom edge of the picture')
+                          or l.startswith('The whole of her is inside'))]
+    scan = '\n'.join(body_lines)
+    for tok in ANAT[f]:
+        for m in re.finditer(r'\b' + tok + r's?\b', scan, re.I):
+            a = max(0, m.start() - 30); ctx = scan[a:m.end() + 30]
+            if any(x in ctx for x in EXEMPT): continue
+            err(f"{sid} framing={f} 的裁切外部位「{tok}」出現在 prompt：…{ctx.strip()}…（C-49）")
+
+    # C-48：相機句不得假設室內
+    if 'lines in the room' in txt:
+        err(f"{sid} 相機句假設室內（`lines in the room`），戶外列不成立（C-48）")
+
     # C-44：face_closeup 的相機句與朝向句不得指名畫面外的軀幹
     if f == 'face_closeup':
         for bad in ('her body and the background', 'the front of her chest', 'her chest and both shoulders'):
@@ -80,6 +107,15 @@ for sid, txt in pr.items():
             or (k == 'rings' and any(en[sid].get('hands_visible', {}).values()))
         if not shown and v in txt:
             err(f"{sid} framing={f} 看不到 {k}，prompt 卻寫了「{v[:40]}…」（C-37）")
+
+    # C-49：兩隻手都在裁切外時，prompt 任何地方都不得提到手或手臂
+    # （封閉集合的樣板句「every visible hand connects to one of her own arms」除外）
+    if not any(en[sid].get('hands_visible', {}).values()):
+        for l in txt.split('\n'):
+            if 'Everything in this picture is accounted for' in l: continue
+            # 上臂在 chest_up 是看得到的，不算——這裡只擋「手」
+            if re.search(r'\bhands?\b', l, re.I):
+                err(f"{sid} 兩手都在裁切外，prompt 卻提到手／手臂：…{l.strip()[:70]}…（C-49）")
 
     # C-37：裁切外的手不得描述
     for side in ('left','right'):
