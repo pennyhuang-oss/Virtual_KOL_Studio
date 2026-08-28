@@ -426,3 +426,217 @@ WHY_DISTINCT: <中文一句話：這張臉與最接近的那一位、以及與 r
 ## §10 回覆區
 
 REPLIES BELOW
+
+# (A) 診斷
+
+H1 部分成立：15% 使臉部訊號被稀釋，但把比例拉高仍不能克服模型的亞洲美人先驗。H2、H3、H4、H5 均成立：整體原型與粗比例比微特徵清單有效；結構否定不可靠；共用妝容、光線與居家語境會把結果拉回同一吸引子；純文字不足，必須用跨圖部件參考。另有三個原因：互相矛盾的細項會被平均；美顏、濃妝與自拍透視壓縮骨相差；四景別不是四次獨立選角，不能取代標準化正面驗收。
+
+# (B) 方法
+
+選角改成「先鑄臉、後入戲」。A0 每人只生成無情境的頭肩照：臉部與參考配置約佔 prompt 80%，其餘 20% 只寫成年身分、既定髮色、素色圓領上衣、正面眼平視角、中性表情、均勻柔光與淺灰背景；不寫職業、服裝造型、場景、道具、身材、濾鏡或相機器材。段落順序固定為：成年年齡／族裔 → ARCHETYPE → 粗骨相 AXES → 參考圖的部件分工 → MARKERS → 標準化攝影條件。
+
+每次在 Higgsfield 使用 Seedream 生成時，**必須實際附上該角色 FACE_EN 點名的 3 張參考圖**；只貼文字或只附其中一張都不得送出。參考圖是臉部幾何來源，不是完整人物複製來源；FACE_EN 已把 face canvas、eyes、nose、mouth／jaw 分派給不同圖片。若介面當次不能同時附三張，應停止生成並改用支援多圖輸入的流程，不可退回純文字，以免再次浪費 credit。
+
+參考圖索引（本次 commit 一併存入）：
+
+- ref_01 = `review/batch3_face_refs/ref_01.jfif`
+- ref_02 = `review/batch3_face_refs/ref_02.jpg`
+- ref_03 = `review/batch3_face_refs/ref_03.jpg`
+- ref_04 = `review/batch3_face_refs/ref_04.jfif`
+- ref_05 = `review/batch3_face_refs/ref_05.jfif`
+- ref_06 = `review/batch3_face_refs/ref_06.jfif`
+- ref_07 = `review/batch3_face_refs/ref_07.jpg`
+- ref_08 = `review/batch3_face_refs/ref_08.jpg`
+- ref_09 = `review/batch3_face_refs/ref_09.jpg`
+- ref_10 = `review/batch3_face_refs/ref_10.jpg`
+- ref_11 = `review/batch3_face_refs/ref_11.jpg`
+- ref_12 = `review/batch3_face_refs/ref_12.jpg`
+- ref_13 = `review/batch3_face_refs/ref_13.jfif`
+- ref_14 = `review/batch3_face_refs/ref_14.jpg`
+- ref_15 = `review/batch3_face_refs/ref_15.jpg`
+
+A0 每人先出 4 個 seed，只選骨相，不因妝髮選人。選中後做 A1：同一錨點生成正面、左右各約 30 度的三張中性頭肩照，通過 (E) 才建立 Reference Element。A2 再以錨點測一張職業場景與一張全身圖；若臉漂移，回 A0 重選，不以更多文字補丁硬救。純臉錨點的副作用是棚拍感與表情僵硬，因此它只負責鎖定身份；正式訓練集仍須用 A2 的不同場景、表情和景別驗證可遷移性。
+
+# (C) 維度表
+
+維度名稱 | 允許值1 / 允許值2 / ... | 為什麼這個維度對這個模型有效
+輪廓原型 | 短寬圓角方 / 短寬U形 / 柔心形 / 倒三角 / 寬卵形 / 長卵形 / 長方 / 窄矩形 / 窄長鑽石 / 窄長六角 / 梯形 | 是縮圖第一眼仍可見的整體剪影，比逐項形容更不易被平均
+臉長寬比 | 短寬 / 中等 / 長窄 / 極長窄 | 直接改變全臉低頻幾何，跨妝容與跨表情仍保留
+三庭配置 | 短中庭+短下庭 / 短中庭+中下庭 / 均衡 / 長中庭+中下庭 / 中庭+長下庭 | 控制眼鼻口的垂直關係，能拆開同為鵝蛋臉的角色
+骨肉量 | 柔軟飽滿 / 骨肉均衡 / 清瘦平面 / 寬骨量 | 影響顴、顎與面部轉折，不依賴髮妝辨識
+五官場 | 集中 / 均衡 / 橫向分散 / 高位分散 / 垂直舒展 | 比單獨寫眼距或鼻長更能形成整體 gestalt
+顎頦 | 圓U顎+短鈍頦 / 柔方顎+短鈍頦 / 寬方顎+方頦 / 窄顎+小圓頦 / 窄顎+長鈍頦 / 窄顎+尖頦 / 寬顎+短鈍頦 | 下臉外框在各種景別都穩定，是避開 rainie 尖窄下顎的主軸
+眼眶結構 | 圓開平視 / 圓開下垂 / 細長平視 / 細長下垂 / 窄長上揚 / 低眉窄眼 / 單眼皮窄平視 | 把眉骨、眼裂與眼尾視為一組，比零散的眼型詞更能執行
+眼距 | 窄 / 中等 / 寬 | 是可量測的雙眼相對位置，與眼型組合後可拉開相似臉
+鼻部量體 | 短寬軟鼻 / 中等直鼻+鈍鼻頭 / 長直細鼻 / 低鼻樑+圓鼻頭 | 鼻長與鼻頭量體比「高挺」等審美詞更具幾何約束
+口部幾何 | 小薄平唇 / 小中等唇 / 小飽滿唇 / 寬薄唇 / 寬中等唇 / 寬飽滿下唇 | 以口寬和上下唇質量取代容易回到預設的「漂亮厚唇」
+頰部 | 低位柔頰 / 中段飽滿 / 高位平顴 / 平直中臉 | 可區分肉感、骨感及成熟感，又不必依靠濃妝陰影
+
+32 位仍排得開，但不能要求每人所有軸都唯一。做法是先以輪廓原型、長寬比、三庭、骨肉量形成 8–10 個粗分群，再要求同群角色在眼眶、眼距、鼻、口、顎頦至少 3 軸不同；不需砍角色，但必須接受「分群內強辨識」而不是 32 種全新臉型名稱。
+
+# (D) 19 張臉
+
+### angel-chiu
+ARCHETYPE: 寬額短中庭、柔方下臉的安定成人臉
+AXES: 輪廓原型=短寬圓角方; 臉長寬比=短寬; 三庭配置=短中庭+中下庭; 骨肉量=骨肉均衡; 五官場=均衡; 顎頦=柔方顎+短鈍頦; 眼眶結構=圓開平視; 眼距=中等; 鼻部量體=中等直鼻+鈍鼻頭; 口部幾何=小中等唇; 頰部=低位柔頰
+FACE_EN: Create a new 23-year-old Taiwanese adult woman identity. Build the broad softly squared facial canvas and blunt lower face from ref_15, the open level almond eye aperture from ref_10, and the straight medium nose with restrained mouth proportions from ref_01. Keep a broad forehead, a short midface, moderate cheek padding, and a soft square jaw ending in a short blunt chin. Her eyes are medium-spaced and open rather than sharply lifted, and her lips are compact and medium in volume. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: broad forehead; short midface; soft square jaw; level open eyes; compact medium lips
+WHY_DISTINCT: 她比最接近的 nanami 更短更方、眼睛更開，且以低位柔頰與鈍下巴避開 rainie 的高顴尖顎上揚眼。
+
+### tammy-chou
+ARCHETYPE: 上寬下窄、五官橫向展開的柔心形成人臉
+AXES: 輪廓原型=柔心形; 臉長寬比=中等; 三庭配置=短中庭+中下庭; 骨肉量=柔軟飽滿; 五官場=橫向分散; 顎頦=窄顎+小圓頦; 眼眶結構=圓開平視; 眼距=寬; 鼻部量體=短寬軟鼻; 口部幾何=寬中等唇; 頰部=中段飽滿
+FACE_EN: Create a new 24-year-old Taiwanese adult woman identity. Take the soft heart-shaped facial canvas and rounded cheek transitions from ref_08, the very open round level eyes from ref_03, and the broad smiling mouth geometry from ref_09. Set the eyes visibly wide apart across a broad upper face, keep the midface short, use a short softly broad nose, and taper the jaw gently into a small rounded chin. The mouth is wide but only medium in lip volume. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: broad upper face; wide-set round eyes; short midface; small rounded chin; wide medium mouth
+WHY_DISTINCT: 她比最接近的 sydney 更偏心形且五官更橫向分散，也沒有 rainie 的高顴、尖銳下顎與上揚眼組合。
+
+### emma-kao
+ARCHETYPE: 長方橢圓、骨量中等、五官集中且穩重的主播臉
+AXES: 輪廓原型=長方; 臉長寬比=長窄; 三庭配置=長中庭+中下庭; 骨肉量=寬骨量; 五官場=集中; 顎頦=柔方顎+短鈍頦; 眼眶結構=細長平視; 眼距=窄; 鼻部量體=長直細鼻; 口部幾何=小薄平唇; 頰部=平直中臉
+FACE_EN: Create a new 27-year-old Taiwanese adult woman identity. Use the long broad-boned rectangular facial canvas from ref_11, the narrow level almond eye structure and long straight nose direction from ref_02, and the compact restrained mouth and blunt chin finish from ref_15. Place the features slightly close together within a long midface, keep the cheeks planar, and preserve a softly squared lower outline rather than a tapered point. The lips are small and relatively flat. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: long rectangular canvas; close-set narrow eyes; long straight nose; planar cheeks; small flat lips
+WHY_DISTINCT: 她比最接近的 zhiyi 骨架更寬、下巴更短，且小平唇與平視窄眼遠離 rainie 的大上揚眼和厚唇。
+
+### zoey-yeh
+ARCHETYPE: 低眉軟圓、短中庭與U形下臉的清透成人臉
+AXES: 輪廓原型=短寬U形; 臉長寬比=短寬; 三庭配置=短中庭+短下庭; 骨肉量=柔軟飽滿; 五官場=均衡; 顎頦=圓U顎+短鈍頦; 眼眶結構=圓開下垂; 眼距=寬; 鼻部量體=低鼻樑+圓鼻頭; 口部幾何=小飽滿唇; 頰部=低位柔頰
+FACE_EN: Create a new 21-year-old Taiwanese adult woman identity. Form the short softly rounded U-shaped face from ref_04, use the gently downturned almond eye direction from ref_13 at the larger open scale seen in ref_10, and take a compact soft mouth from ref_10. Give her wide-set eyes under low soft brows, a short low-bridge nose with a rounded tip, low full cheeks, and a short blunt chin. Her small mouth has soft fullness without a pronounced cupid peak. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: short U-shaped face; wide-set downturned eyes; low soft brows; rounded nose tip; short blunt chin
+WHY_DISTINCT: 她比最接近的 miu 眼尾更下垂、眼距更寬且輪廓是U形，與 rainie 的高顴銳顎和上揚眼相反。
+
+### miu-shiraishi
+ARCHETYPE: 中段最寬、下臉短鈍的蘋果型成人臉
+AXES: 輪廓原型=短寬圓角方; 臉長寬比=短寬; 三庭配置=短中庭+短下庭; 骨肉量=柔軟飽滿; 五官場=集中; 顎頦=柔方顎+短鈍頦; 眼眶結構=圓開平視; 眼距=中等; 鼻部量體=短寬軟鼻; 口部幾何=寬中等唇; 頰部=中段飽滿
+FACE_EN: Create a new 22-year-old Japanese adult woman identity. Build the apple-like central fullness and short lower face from ref_05, use the large level round eyes from ref_04, and take the short nose and wide relaxed smile geometry from ref_12. Keep the widest point at the mid-cheeks, gather the features toward the center, use a softly broad nose tip, and finish with a rounded-square jaw and short blunt chin. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: apple-shaped midface; centrally grouped features; level round eyes; broad soft nose tip; rounded-square jaw
+WHY_DISTINCT: 她比最接近的 zoey 中臉更飽滿、五官更集中且眼裂平視，並以圓角方顎避開 rainie 的窄尖下臉。
+
+### rin-ayase
+ARCHETYPE: 窄長鑽石型、顴區清楚、眼裂細長的成熟臉
+AXES: 輪廓原型=窄長鑽石; 臉長寬比=長窄; 三庭配置=長中庭+中下庭; 骨肉量=清瘦平面; 五官場=均衡; 顎頦=窄顎+長鈍頦; 眼眶結構=細長平視; 眼距=中等; 鼻部量體=長直細鼻; 口部幾何=寬中等唇; 頰部=高位平顴
+FACE_EN: Create a new 25-year-old Japanese adult woman identity. Use the long diamond facial canvas and high planar cheek region from ref_07, the slim level eye aperture and long straight nose from ref_02, and the wide composed mouth proportions from ref_10. Keep the eye opening narrow, the midface long, and the jaw slim but end it in a long blunt chin rather than a tiny point. Her mouth is wider than the nose and medium in volume. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: long diamond outline; narrow level eyes; high planar cheeks; long straight nose; long blunt chin
+WHY_DISTINCT: 她比最接近的 angeline 顴部更寬、嘴更寬而下巴較鈍；窄平視眼也切斷 rainie 的大上揚眼預設。
+
+### nanami-fujiwara
+ARCHETYPE: 寬卵形、低骨感、下巴短鈍的端莊成人臉
+AXES: 輪廓原型=寬卵形; 臉長寬比=中等; 三庭配置=均衡; 骨肉量=骨肉均衡; 五官場=均衡; 顎頦=窄顎+小圓頦; 眼眶結構=細長平視; 眼距=中等; 鼻部量體=中等直鼻+鈍鼻頭; 口部幾何=小中等唇; 頰部=低位柔頰
+FACE_EN: Create a new 23-year-old Japanese adult woman identity. Start with the broad oval, calm facial canvas from ref_15, use the medium level almond eyes and fine straight nose from ref_01, and take the small relaxed mouth and soft cheek transition from ref_08. Keep all thirds balanced, the cheek volume low and gentle, the jaw smoothly rounded, and the chin small and rounded. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: broad oval outline; balanced facial thirds; medium level eyes; low soft cheeks; small rounded chin
+WHY_DISTINCT: 她比最接近的 angel 臉更長更卵形、眼裂較細且下顎不方，也沒有 rainie 的高顴與尖銳下巴。
+
+### kanon-komori
+ARCHETYPE: 小幅倒三角、極短下庭、五官高位分散的偶像成人臉
+AXES: 輪廓原型=倒三角; 臉長寬比=短寬; 三庭配置=短中庭+短下庭; 骨肉量=骨肉均衡; 五官場=高位分散; 顎頦=窄顎+尖頦; 眼眶結構=圓開下垂; 眼距=寬; 鼻部量體=低鼻樑+圓鼻頭; 口部幾何=小飽滿唇; 頰部=平直中臉
+FACE_EN: Create a new 20-year-old Japanese adult woman identity. Use the compact inverted-triangle facial canvas from ref_04, the very large downturned eye aperture from ref_05, and the narrow nose with small full mouth geometry from ref_03. Place the wide-set eyes high in the face, keep both midface and lower third very short, use a low bridge and round nose tip, and taper a moderately broad upper face into a small pointed chin. Maintain adult facial proportions and natural skin texture. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: compact inverted triangle; high wide-set eyes; strongly downturned eye line; very short lower third; small pointed chin
+WHY_DISTINCT: 她比最接近的 zoey 五官更高、更分散且輪廓倒三角；下垂眼線則與 rainie 的大上揚雙眼皮形成明確反向。
+
+### jia-seo
+ARCHETYPE: 窄長六角型、低眉骨與橫向眼裂的運動感成人臉
+AXES: 輪廓原型=窄長六角; 臉長寬比=長窄; 三庭配置=均衡; 骨肉量=清瘦平面; 五官場=均衡; 顎頦=柔方顎+短鈍頦; 眼眶結構=低眉窄眼; 眼距=中等; 鼻部量體=長直細鼻; 口部幾何=寬薄唇; 頰部=平直中臉
+FACE_EN: Create a new 22-year-old Korean adult woman identity. Build the narrow hexagonal facial canvas and long clean planes from ref_02, use the low-brow elongated eye direction from ref_14 at a restrained opening, and take the wider flatter mouth geometry from ref_13. Keep balanced facial thirds, a long straight fine nose, straight side planes through the cheek and jaw, and a short blunt chin. The eyes are horizontally elongated under low brows, and the mouth is wide and relatively thin. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: narrow hexagonal outline; low brow line; restrained horizontal eyes; straight cheek planes; wide thin mouth
+WHY_DISTINCT: 她比最接近的 zhiyi 臉較短、顎線呈六角且口更寬；小幅窄眼和平唇不會落入 rainie 的大眼厚唇模板。
+
+### yerin-han
+ARCHETYPE: 寬額寬顎、短中庭的直線方臉
+AXES: 輪廓原型=短寬圓角方; 臉長寬比=短寬; 三庭配置=短中庭+中下庭; 骨肉量=寬骨量; 五官場=橫向分散; 顎頦=寬方顎+方頦; 眼眶結構=圓開平視; 眼距=寬; 鼻部量體=中等直鼻+鈍鼻頭; 口部幾何=寬薄唇; 頰部=平直中臉
+FACE_EN: Create a new 26-year-old Korean adult woman identity. Use the broad rectangular bone structure and wide jaw from ref_11, the bright open level eyes and broad smile width from ref_09, and the medium straight nose proportions from ref_01. Make the forehead and jaw nearly equal in width, keep the midface short, spread the eyes visibly wide, and give the lower face straight sides ending in a broad square chin. Her mouth is wide with relatively thin lips. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: equal-width forehead and jaw; short midface; wide-set level eyes; broad square chin; wide thin lips
+WHY_DISTINCT: 她比最接近的 wendy 更短更寬、眼睛更開且眼距更大，寬方顎與薄唇也直接偏離 rainie 的窄尖顎厚唇。
+
+### somi-oh
+ARCHETYPE: 下半臉飽滿、寬U形顎與集中五官的肉感成人臉
+AXES: 輪廓原型=短寬U形; 臉長寬比=短寬; 三庭配置=短中庭+中下庭; 骨肉量=柔軟飽滿; 五官場=集中; 顎頦=寬顎+短鈍頦; 眼眶結構=圓開平視; 眼距=窄; 鼻部量體=短寬軟鼻; 口部幾何=寬飽滿下唇; 頰部=低位柔頰
+FACE_EN: Create a new 24-year-old Korean adult woman identity. Use the full U-shaped lower face and cheek padding from ref_05, the softly open eyes from ref_08, and the broad lower-face bone base with wide mouth scale from ref_11. Gather the eyes slightly close together, keep the midface short, use a short broad soft nose, and carry substantial low cheek volume into a wide rounded jaw and short blunt chin. Her mouth is wide with a fuller lower lip. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: full U-shaped lower face; close-set open eyes; low full cheeks; short broad nose; wide fuller lower lip
+WHY_DISTINCT: 她比最接近的 sydney 下半臉更寬更重、眼距更窄且嘴更寬，與 rainie 的高位骨感顴區和尖顎完全不同。
+
+### zhiyi-shen
+ARCHETYPE: 高額長中庭、窄矩形輪廓的冷靜骨感成人臉
+AXES: 輪廓原型=窄矩形; 臉長寬比=極長窄; 三庭配置=長中庭+中下庭; 骨肉量=清瘦平面; 五官場=集中; 顎頦=柔方顎+短鈍頦; 眼眶結構=低眉窄眼; 眼距=窄; 鼻部量體=長直細鼻; 口部幾何=小薄平唇; 頰部=平直中臉
+FACE_EN: Create a new 25-year-old Chinese adult woman identity. Use the extremely long narrow rectangular canvas and close feature placement from ref_02, the low-brow narrow eye structure from ref_13, and the compact flat mouth with softly squared chin finish from ref_15. Give her a high forehead, a long midface, planar cheeks, a long straight narrow nose, and a jaw that remains narrow but ends bluntly. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: very long narrow rectangle; high forehead; close-set low-brow eyes; long narrow nose; blunt narrow jaw
+WHY_DISTINCT: 她比最接近的 emma 更窄更長、眉眼更低更集中；平直中臉與薄平唇排除 rainie 的高顴厚唇吸引子。
+
+### wanyin-jiang
+ARCHETYPE: 上窄中寬、長卵形與細小五官的古典成人臉
+AXES: 輪廓原型=長卵形; 臉長寬比=長窄; 三庭配置=均衡; 骨肉量=清瘦平面; 五官場=均衡; 顎頦=窄顎+長鈍頦; 眼眶結構=細長下垂; 眼距=中等; 鼻部量體=長直細鼻; 口部幾何=小薄平唇; 頰部=中段飽滿
+FACE_EN: Create a new 23-year-old Chinese adult woman identity. Take the long oval facial canvas and refined central proportions from ref_01, the gently downturned narrow eyes from ref_10, and the fine long nose with restrained mouth scale from ref_02. Keep the upper face slightly narrow, let the oval reach its widest point at the middle cheeks, and taper slowly toward a long blunt chin. The eyes and mouth remain modest in scale, with thin flat lips. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: long middle-wide oval; modest-scale features; narrow downturned eyes; fine long nose; long blunt chin
+WHY_DISTINCT: 她比最接近的 rin 顴骨轉折更柔、眼口更小且唇更薄，遠離 rainie 的大上揚眼和飽滿唇。
+
+### ruoruo-tang
+ARCHETYPE: 寬中臉、鈍下巴、骨肉均衡的運動成人臉
+AXES: 輪廓原型=寬卵形; 臉長寬比=中等; 三庭配置=均衡; 骨肉量=寬骨量; 五官場=橫向分散; 顎頦=寬顎+短鈍頦; 眼眶結構=細長平視; 眼距=寬; 鼻部量體=中等直鼻+鈍鼻頭; 口部幾何=寬中等唇; 頰部=平直中臉
+FACE_EN: Create a new 27-year-old Chinese adult woman identity. Build the broad oval bone canvas and firm jaw width from ref_11, use the restrained level eyes and broad upper-face balance from ref_15, and take the wide relaxed mouth geometry from ref_10. Keep the thirds balanced, spread the eyes wide, use a medium straight nose with a blunt tip, and carry straight cheek planes into a broad jaw ending in a short blunt chin. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: broad middle face; wide-set level eyes; straight cheek planes; broad jaw; short blunt chin
+WHY_DISTINCT: 她比最接近的 angel 臉更長、骨量更大且眼裂較細，寬顎鈍頦也與 rainie 的窄尖下顎不同。
+
+### cheryl-soh
+ARCHETYPE: 長卵形、下庭略長、五官垂直舒展的專業成人臉
+AXES: 輪廓原型=長卵形; 臉長寬比=長窄; 三庭配置=中庭+長下庭; 骨肉量=骨肉均衡; 五官場=垂直舒展; 顎頦=窄顎+長鈍頦; 眼眶結構=圓開平視; 眼距=寬; 鼻部量體=長直細鼻; 口部幾何=小中等唇; 頰部=低位柔頰
+FACE_EN: Create a new 25-year-old Chinese-Singaporean adult woman identity. Use the calm long oval canvas and blunt lower-face finish from ref_15, the open level eye scale and smile spacing from ref_09, and the fine straight nose with compact mouth proportions from ref_01. Give her a visibly long lower third, wide-set open eyes, low gentle cheek volume, and a narrow jaw that ends in a long blunt chin. The features should feel vertically spaced rather than crowded. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: long oval canvas; vertically spaced features; wide-set open eyes; low cheek volume; long blunt chin
+WHY_DISTINCT: 她比最接近的 nanami 下庭更長、眼距更寬且五官更垂直舒展，也沒有 rainie 的高顴與短尖頦。
+
+### wendy-yeo
+ARCHETYPE: 長方骨架、顎角外顯、低眉單眼皮窄眼的英氣成人臉
+AXES: 輪廓原型=長方; 臉長寬比=長窄; 三庭配置=中庭+長下庭; 骨肉量=寬骨量; 五官場=均衡; 顎頦=寬方顎+方頦; 眼眶結構=單眼皮窄平視; 眼距=中等; 鼻部量體=中等直鼻+鈍鼻頭; 口部幾何=寬薄唇; 頰部=平直中臉
+FACE_EN: Create a new 28-year-old Chinese-Singaporean adult woman identity. Use the long broad-boned rectangular canvas and visible jaw angles from ref_11, the narrow level eye aperture from ref_13 expressed as a single-eyelid structure, and the straight nose with restrained wide mouth geometry from ref_02. Lengthen the lower third, keep the cheek planes straight, and end the wide angular jaw in a square chin. Her brows sit low over narrow level eyes, and her lips are wide and thin. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: long rectangular bone frame; single-eyelid narrow eyes; low brow line; visible jaw angles; wide thin lips
+WHY_DISTINCT: 她比最接近的 yerin 臉更長、眼睛更窄且是單眼皮；英氣方顎與薄唇也避開 rainie 的大雙眼皮和厚唇。
+
+### peggy-lee
+ARCHETYPE: 窄額寬顎、五官偏大的梯形張力成人臉
+AXES: 輪廓原型=梯形; 臉長寬比=中等; 三庭配置=短中庭+中下庭; 骨肉量=寬骨量; 五官場=橫向分散; 顎頦=寬方顎+方頦; 眼眶結構=窄長上揚; 眼距=寬; 鼻部量體=中等直鼻+鈍鼻頭; 口部幾何=寬飽滿下唇; 頰部=平直中臉
+FACE_EN: Create a new 24-year-old Chinese-Malaysian adult woman identity. Build a new trapezoid facial canvas using the broad lower-face bone mass from ref_11, the elongated lifted eye direction from ref_14, and the full lower-lip shape from ref_03. Keep the forehead narrower than the jaw, spread the eyes wide with restrained lid height, use a medium straight nose with a blunt tip, and finish the broad lower face with clear jaw corners and a square chin. Her mouth is wide with most volume in the lower lip. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: narrow forehead with broad jaw; wide-set elongated eyes; restrained lid height; square chin; wide full lower lip
+WHY_DISTINCT: 她比最接近的 wendy 臉較短、額窄顎寬且眼距更大；雖有上揚眼，梯形寬下臉使她不會落入 rainie 的倒三角尖顎。
+
+### sydney-leong
+ARCHETYPE: 短寬圓角方形、雙頰中段飽滿的甜感成人臉
+AXES: 輪廓原型=短寬圓角方; 臉長寬比=短寬; 三庭配置=短中庭+中下庭; 骨肉量=柔軟飽滿; 五官場=橫向分散; 顎頦=柔方顎+短鈍頦; 眼眶結構=圓開下垂; 眼距=寬; 鼻部量體=短寬軟鼻; 口部幾何=寬中等唇; 頰部=中段飽滿
+FACE_EN: Create a new 22-year-old Chinese-Malaysian adult woman identity. Use the softly squared short facial canvas from ref_08, the open widely spaced eye scale from ref_12, and the gentle downturned eye direction with relaxed wide mouth geometry from ref_10. Keep the mid-cheeks full, the midface short, the nose short and softly broad, and the rounded-square jaw substantial enough to end in a short blunt chin. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: short rounded-square outline; wide-set downturned eyes; full middle cheeks; short broad nose; short blunt chin
+WHY_DISTINCT: 她比最接近的 tammy 下顎更方、額部較不寬且雙頰更集中，並以鈍顎下垂眼避開 rainie 的尖顎上揚眼。
+
+### angeline-kwee
+ARCHETYPE: 極長窄卵形、長下庭與小型五官的高級感成人臉
+AXES: 輪廓原型=長卵形; 臉長寬比=極長窄; 三庭配置=中庭+長下庭; 骨肉量=清瘦平面; 五官場=垂直舒展; 顎頦=窄顎+長鈍頦; 眼眶結構=細長下垂; 眼距=窄; 鼻部量體=長直細鼻; 口部幾何=小薄平唇; 頰部=高位平顴
+FACE_EN: Create a new 23-year-old Chinese-Indonesian adult woman identity. Use the exceptionally long narrow oval canvas from ref_02, the softly downturned modest eye aperture from ref_10, and the high planar cheek transition with long lower-face direction from ref_07. Place the eyes slightly close together, keep every feature modest in scale, extend the lower third, use a long fine straight nose, and finish with a narrow jaw and long blunt chin. Her mouth is small, straight, and thin. The result is a new identity synthesized from these three sources; references govern facial geometry while the text governs styling and expression.
+NEGATIVE_EN: NONE
+MARKERS: exceptionally long narrow oval; close-set downturned eyes; modest-scale features; small thin mouth; long blunt chin
+WHY_DISTINCT: 她比最接近的 rin 下庭更長、眼距更窄且嘴更小更薄，與 rainie 的大眼厚唇及短尖下巴明顯分離。
+
+# (E) 驗收方式
+
+1. 每位先依指定三張參考圖生成 4 個 A0 候選；所有候選裁成 512×512、瞳孔水平、雙眼距等比例、灰階、遮掉頭髮與服裝的臉部圖。未實際附齊三張參考圖的輸出直接作廢。
+2. 候選要逐項核對 AXES 與 MARKERS：每張至少 4 個 MARKERS 清楚成立，且同一角色 4 張中至少 3 張成立；否則不准建立錨點。
+3. 把 19 位與既有 13 位混排成盲測表，隱藏 id、髮色、妝容與服裝。兩次獨立隨機排序中，審核者都要能把同一角色的正面與左右 30 度三張歸在同組；任何一張被歸到另一角色即 FAIL。
+4. 同一粗分群內做成對差異檢查：任兩人必須在眼眶結構、眼距、鼻部量體、口部幾何、顎頦五項中至少 3 項有肉眼可量測差異；只靠髮妝、膚色或表情區分即 FAIL。
+5. 可用 ArcFace 作輔助而非唯一裁決：先用 Nico 與既有角色的多角度圖校準「同人最低相似度」與「異人最高相似度」，新角色須同人高於前者、跨人低於後者；落在重疊區一律回人工盲測與骨相表，不自行放寬門檻。
+6. A1 通過後才跑 A2。場景照與全身照仍須保留至少 4 個 MARKERS；任何角色回到大上揚雙眼皮、窄尖顎、高顴與厚唇的 rainie 組合，即使相似度工具通過也退回 A0。
+
+# (F) 分批建議
+
+先跑 6 位：`kanon-komori`、`yerin-han`、`wendy-yeo`、`angeline-kwee`、`somi-oh`、`jia-seo`。前四位是已有失敗證據的回歸測試；後兩位補上寬U形柔肉臉與窄長六角平面臉。這批同時覆蓋短／長、柔／骨、圓／方／倒三角／六角、圓開／低眉／單眼皮／下垂等極端。6 位全部通過 (E) 才展開其餘 13 位；任何兩位仍靠髮妝才能分辨，就先修方法與參考配置，不繼續燒完整批次。
