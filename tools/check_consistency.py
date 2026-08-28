@@ -211,6 +211,13 @@ if os.path.exists(PLAN):
     if n_people and n_people < 13:
         err(f'{PLAN}：13 件已整併的 spec 只有 {n_people} 件有人物入鏡宣告')
 
+# 不可刪除措辭：登記件數不得減少（防止有人整列刪掉來讓 lint 過關）
+if os.path.exists(PLAN):
+    n_imm = read(PLAN).count('| **不可刪除措辭** |')
+    if n_imm < 12:
+        err(f'{PLAN}：不可刪除措辭登記只剩 {n_imm} 件，應至少 12 件'
+            '（刪掉登記列等於讓 lint 失去稽核能力）')
+
 # 兩條覆核線的檔名分家必須有索引，否則下一個人會覆蓋掉別人的 LEDGER
 if not os.path.exists('review/INDEX.md'):
     err("review/INDEX.md 不存在——兩條覆核工作線共用 review/，沒有索引會互相覆蓋")

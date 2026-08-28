@@ -52,7 +52,24 @@ BG_LEN   = len(BG_BLOCK.split())
 BG_MARK  = 'anonymous strangers'
 PEOPLE_DECL = r'\| \*\*人物入鏡\*\* \|(.+?)\|'
 
-def lint(sid, prompt, is_close, is_luna, decl=None):
+
+# ── 不可刪除措辭（2026-08-29 Penny 核可後建立）─────────────────────
+# 起因：覆核指定的安全措辭，在**兩輪內連續三次**從 prompt 裡消失。
+#   R8b  為壓字數剪掉 LG-07 的 `toward the camera`        → 硬驗收②失去約束
+#   R10  為壓字數剪掉 confined to／clearly visible in the central area／
+#        of the camera／hands                              → 遮擋安全區被拆掉
+#   R10  多樣性改寫時，LG-07 的 `her complete feet...` 與
+#        YG-07 的 `Exactly two hands are visible.` 隨首段重寫一起消失
+#
+# 前兩次是**主動剪掉**，第三次是**重寫時被動遺失**——後者更危險，
+# 因為沒有人會注意到一句話「不見了」。
+#
+# 機制：規格表登記該件的不可刪除措辭與出處，這支檢查器驗它們**逐字**還在。
+# 這不是風格規則，是「覆核講過的話有沒有被執行」的稽核，所以是硬性的。
+IMMUTABLE = r'\| \*\*不可刪除措辭\*\* \|(.+?)\|\n'
+FRAG      = r'`([^`]+)`'
+
+def lint(sid, prompt, is_close, is_luna, decl=None, immutable=()):
     out = []
     has_bg = BG_MARK in prompt
     w = len(prompt.split())
@@ -93,6 +110,10 @@ def lint(sid, prompt, is_close, is_luna, decl=None):
 
     # 宣告與 prompt 必須一致。沒有宣告的件只提醒，不擋——
     # 8 件已核准的走的是另一套處理（規格對齊成品、prompt 不動）。
+    for frag in immutable:
+        if frag not in prompt:
+            out.append('刪掉了覆核指定的措辭：%s' % frag[:46])
+
     if decl is None:
         out.append('⚠尚未整併（無人物入鏡宣告）')   # 警告類，見 WARN_ONLY
     elif '公共場景——必寫' in decl:
@@ -133,6 +154,13 @@ SELFTEST = [
       'backs turned or heads angled away, never looking at the camera, softly out of focus with slight '
       'motion blur, clearly different from her in build, age and clothing. Soft light. Natural skin texture.',
       False, False, ['含否定句'], '公共場景——必寫背景路人（夜市）'),
+    ('覆核措辭被刪掉', 'A woman smiles. Half body. Collarbone-length brown hair. A tee. Her bedroom. '
+      'Soft light. Natural skin texture.', False, False,
+      ['刪掉了覆核指定的措辭：Exactly two hands are visible.'],
+      '私密場景（測試）——只有本人', ('Exactly two hands are visible.',)),
+    ('覆核措辭還在', 'A woman smiles. Exactly two hands are visible. Half body. Collarbone-length brown hair. '
+      'A tee. Her bedroom. Soft light. Natural skin texture.', False, False, [],
+      '私密場景（測試）——只有本人', ('Exactly two hands are visible.',)),
     ('抽象飄動', 'A woman walks, her shirt fluttering. Half body. Collarbone-length brown hair. '
       'Natural skin texture.', False, False, ['抽象飄動描述']),
 ]
@@ -142,7 +170,8 @@ def selftest():
     for row in SELFTEST:
         name, p, c, l, expect = row[:5]
         decl = row[5] if len(row) > 5 else '私密場景（測試）——只有本人'
-        _, got = lint('T', p, c, l, decl)
+        imm  = row[6] if len(row) > 6 else ()
+        _, got = lint('T', p, c, l, decl, imm)
         if sorted(got) != sorted(expect):
             print('  ✗ %-16s 預期 %s，實得 %s' % (name, expect, got)); ok = False
         else:
@@ -161,8 +190,10 @@ def main(path):
         if not pm: print('%-7s ✗ 沒有生成 prompt' % sid); bad += 1; continue
         is_close = '近景' in fm.group(1) or '特寫' in fm.group(1)
         dm = re.search(PEOPLE_DECL, b)
+        im = re.search(IMMUTABLE, b)
+        frags = tuple(re.findall(FRAG, im.group(1))) if im else ()
         w, issues = lint(sid, pm.group(1), is_close, sid.startswith('LG'),
-                         dm.group(1) if dm else None)
+                         dm.group(1) if dm else None, frags)
         om = re.search(OPTICS, b)
         if not om:
             issues.append('缺光學設定宣告')
