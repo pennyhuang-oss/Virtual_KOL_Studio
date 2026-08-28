@@ -526,3 +526,85 @@ WHY_DISTINCT: <中文一句話>
 ## §9 回覆區
 
 REPLIES BELOW
+
+
+## ChatGPT R4 覆核回覆
+
+### H-01｜補圖裁決
+
+**補圖改為完整第一批生成前的必要條件。保留 cap-2，不接受用 low 骨相來源，也不改 ARCHETYPE 去遷就現有圖庫。**
+
+§2 已推翻 F-02 的關鍵前提：15 張不是 15 個等價的骨相來源。真正可用的 high 只有 6 張，cap-2 的最大容量只有 12 位，小於 19 位；更嚴重的是 `nanami／peggy／sydney` 已與來源骨相直接矛盾。若此時生成，測到的會是美顏濾鏡與廣角變形，不是四圖分工方法本身。
+
+**最低採購量：8 張新的 high-quality 骨相來源。** 不沿用原先抽象的「四方向各 2 張」，改成直接對應目前缺口：
+
+| 新代號 | 必須補的骨架方向 | 主要承接角色 |
+|---|---|---|
+| `new_ref_A` | 長方／直側輪廓、寬骨量、長中庭、鈍方下巴，細長平視眼 | emma-kao |
+| `new_ref_B` | 長臉、寬直顎、長下庭、鈍方頦，單眼皮或低眉窄眼 | 長方骨架備援，也補窄眼／單眼皮方向 |
+| `new_ref_C` | 下半臉較重的寬 U／梨形，寬顎、短鈍頦、低位柔頰 | somi-oh |
+| `new_ref_D` | 窄額寬顎的梯形，明確方顎與方頦、平直中臉 | peggy-lee |
+| `new_ref_E` | 短寬圓角方、集中五官、柔方顎、短鈍頦 | miu-shiraishi |
+| `new_ref_F` | 另一位短寬圓角方，但眼距較寬、眼尾下垂、中段頰飽滿 | sydney-leong |
+| `new_ref_G` | 寬卵形、低骨感、圓轉下顎、小圓或短鈍頦 | nanami-fujiwara |
+| `new_ref_H` | 上臉較寬、下顎明顯收窄的倒三角，窄顎、小尖頦 | kanon-komori |
+
+**每張拍攝條件：**
+
+- 不同成年女性，近正面，yaw 約 0–10°、pitch neutral、相機與眼睛同高；
+- 50–85mm 等效焦段或相同透視，頭到下巴完整，頭髮不得遮住顎線與雙頰；
+- 中性閉嘴表情、均勻柔光、低妝、正常膚理、高解析；
+- 原始直出或僅基礎曝光校正；不得使用美顏、臉型重塑、廣角自拍、誇張表情或強輪廓修容；
+- 入庫前用同一 usability rubric 判定，只有 **high** 才可進 FACE_SHAPE_AND_JAW 池。
+
+`mid` 可暫作非骨相槽位或備援；`low` 全部標記 `excluded_from_FACE_SHAPE_AND_JAW`。其中 `ref_05／ref_06／ref_14` 不再擔任臉型來源，`ref_03` 亦移出臉型池。
+
+### H-02｜三組共用來源衝突
+
+不降 7／3，也不為了過 gate 人工改軸；用新 high reference 拆開：
+
+- `emma-kao ↔ wendy-yeo`：**emma-kao 改用 `new_ref_A`；wendy-yeo 保留 `ref_11`。**
+- `zoey-yeh ↔ kanon-komori`：**kanon-komori 改用 `new_ref_H`；zoey-yeh 保留與其短寬 U 形相符的 `ref_04`。**
+- `miu-shiraishi ↔ somi-oh`：兩位都離開低可信的 `ref_05`；**miu-shiraishi 改用 `new_ref_E`，somi-oh 改用 `new_ref_C`。**
+
+換源後三組都回到一般 6／2 門檻，再依新來源重建軸值並重算距離。
+
+### H-03｜9 組配對的軸值調整
+
+**本輪不先改軸，等補圖後重算。**
+
+這不是缺答，而是避免把 identity 軸值改成 gate 的答案。新來源會直接改動 emma、kanon、miu、somi、nanami、peggy、sydney 的輪廓／顎頦／骨肉量等主導軸；在重建前先調整 9 組，之後必須再改一次，且會把「來源判讀」與「為過門檻而造數值」混在一起。
+
+補圖入庫後依序：
+
+1. 先重建所有換源 persona 的 11 軸與五個文字欄位；
+2. 對 171 組重新計算；
+3. 只處理仍不過 gate 的配對；
+4. 每次修改必須有新來源 landmark 支持，並檢查對其餘 18 位的全域影響。
+
+因此本輪不輸出任何 `### <persona-id>` 軸值修改區塊。
+
+### H-04｜8 位重建
+
+**等補圖。**
+
+原先 8 位加上 H-02 新增換源的 `emma-kao／kanon-komori／miu-shiraishi／somi-oh`，下一輪需重建的 unique persona 變成 12 位：
+
+`cheryl-soh、nanami-fujiwara、peggy-lee、rin-ayase、ruoruo-tang、sydney-leong、yerin-han、zhiyi-shen、emma-kao、kanon-komori、miu-shiraishi、somi-oh`。
+
+其中只改 NOSE 的角色仍可使用 §2 的鼻部 landmark 重建；涉及新 FACE_SHAPE_AND_JAW 的角色必須等新圖驗收為 high 後再寫。現在提前產出 FACE_EN 會再次造成文字與附圖不同步。
+
+### H-05｜第一批技術探針
+
+**先跑 `wendy-yeo`，4 張。**
+
+理由：
+
+- 她的 FACE_SHAPE_AND_JAW 是 high 的 `ref_11`，本輪不換；
+- 她本人不是 needs_rebuild；H-02 是把 emma 移走，不動 wendy；
+- 她目前與 emma 的總距離已是 6、主導軸 3；拆開來源後即符合一般 6／2；
+- 可在補圖採購期間先驗證「Image 1–4 各自只控制指定部件」的技術假說。
+
+判定沿用 F-01：4 張中至少 3 張能穩定呈現各槽指定部件，才算探針通過。若低於 3／4，停止後續生成並改用部件裁切輸入；不得展開其餘 7 位。
+
+**最終判定：現在可以只生成 wendy-yeo 的 4 張技術探針；不可生成完整第一批 8 位。完整第一批必須等 8 張新骨相來源驗收、12 位重建、171 組 gate 重跑完成。**
