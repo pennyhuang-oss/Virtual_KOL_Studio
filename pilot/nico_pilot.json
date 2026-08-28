@@ -35,12 +35,14 @@
     "nico_outfit_01": {
       "label": "★極簡職人",
       "neckline": "high mock neck",
-      "top": "炭灰色合身羅紋針織長袖，高領貼頸",
+      "top": "炭灰色合身羅紋針織長袖，高領貼頸，兩肩各有一道窄露肩開口",
       "bottom": "黑色高腰直筒西裝褲",
       "shoes": "黑色皮革樂福鞋",
       "outer_or_bag": "米色帆布托特",
       "jewelry": "銀色細戒指＋銀色小圈耳環",
-      "body_readable": true
+      "body_readable": true,
+      "en": "A fitted charcoal-grey ribbed knit long-sleeve top with a high mock neck that sits close against her throat, and a narrow open slit cut across the top of each shoulder that shows a sliver of skin. Black high-waisted straight-leg tailored trousers. Black leather loafers. A beige canvas tote. One thin silver ring and small silver hoop earrings.",
+      "_anchor_note": "這件就是錨點圖身上那件。B1 實測：指定同一件衣服時，Reference Element 會把該件衣服的細節整件複製，prompt 明寫『兩肩完整肩線、沒有開口』也蓋不掉。因此衣櫃定義改為誠實描述錨點實際的樣子（含兩道窄露肩開口），而不是讓 prompt 與出圖永遠對不上。20 張中有 5 張用這件（a01/a02/a03/a07/c07）。"
     },
     "nico_outfit_02": {
       "label": "極休閒",
@@ -51,7 +53,8 @@
       "outer_or_bag": "薄針織開襟外套",
       "jewelry": "銀色細項鍊",
       "body_readable": true,
-      "_note": "R5/K-04：原本寫『赤腳』與『（脫下搭在椅背）』——那是場景當下的狀態，不是這套衣服的定義。衣櫃只描述衣服本身，穿脫與赤腳等當下狀態一律由該 shot 的 scene / props 承擔。這與憲章第 2 條（不把標誌性場景寫死進設定）是同一個原理。"
+      "_note": "R5/K-04：原本寫『赤腳』與『（脫下搭在椅背）』——那是場景當下的狀態，不是這套衣服的定義。衣櫃只描述衣服本身，穿脫與赤腳等當下狀態一律由該 shot 的 scene / props 承擔。這與憲章第 2 條（不把標誌性場景寫死進設定）是同一個原理。",
+      "en": "A cream cotton camisole with thin straps and a straight horizontal neckline. Grey cotton knee-length shorts. Off-white canvas sneakers. A fine-knit open cardigan. A thin silver necklace."
     },
     "nico_outfit_03": {
       "label": "日常有型",
@@ -61,7 +64,8 @@
       "shoes": "白色球鞋",
       "outer_or_bag": "深棕小方包",
       "jewelry": "銀色圈形耳環",
-      "body_readable": true
+      "body_readable": true,
+      "en": "A cream cropped knit top with a plain round crew neckline, the hem ending at her natural waist. High-waisted light-wash straight-leg jeans. White canvas sneakers. A small dark-brown box bag. Silver hoop earrings."
     },
     "nico_outfit_04": {
       "label": "學院感",
@@ -72,7 +76,8 @@
       "outer_or_bag": "深藍色肩背書包",
       "jewelry": "銀色細鍊手鍊",
       "body_readable": false,
-      "_note": "C-26：原本『包/外套』欄填的是灰色及膝襪——襪子是下身配件，不是包或外套，五層規格等於少了一層。及膝襪併入下身，補真正的肩背包。 C-28：首飾原本是「銀色髮夾」，但髮飾屬於 hair 欄的管轄（hair_05 也定義了右側一支銀色細髮夾），同一物件兩個真理來源會生出兩支髮夾。改為手鍊。"
+      "_note": "C-26：原本『包/外套』欄填的是灰色及膝襪——襪子是下身配件，不是包或外套，五層規格等於少了一層。及膝襪併入下身，補真正的肩背包。 C-28：首飾原本是「銀色髮夾」，但髮飾屬於 hair 欄的管轄（hair_05 也定義了右側一支銀色細髮夾），同一物件兩個真理來源會生出兩支髮夾。改為手鍊。",
+      "en": "A loose white button-down shirt with a collar and the top two buttons undone. A black pleated mini skirt with grey knee-high socks. Black Mary Jane shoes. A navy shoulder satchel. A thin silver chain bracelet."
     },
     "nico_outfit_05": {
       "label": "街頭",
@@ -82,7 +87,8 @@
       "shoes": "厚底球鞋",
       "outer_or_bag": "黑色斜背小包",
       "jewelry": "銀色耳骨夾",
-      "body_readable": false
+      "body_readable": false,
+      "en": "A black cropped hoodie with a plain crew neckline. Grey wide-leg cargo trousers. Chunky-soled sneakers. A small black crossbody pouch. A silver ear cuff."
     },
     "nico_outfit_06": {
       "label": "上班正式",
@@ -92,7 +98,8 @@
       "shoes": "尖頭平底鞋",
       "outer_or_bag": "結構皮革包",
       "jewelry": "銀色細手鐲",
-      "body_readable": false
+      "body_readable": false,
+      "en": "An oatmeal tailored blazer over a white silk camisole with a square neckline. Matching oatmeal straight wide-leg trousers. Pointed flat shoes. A structured leather handbag. A thin silver bangle."
     },
     "nico_outfit_07": {
       "label": "派對夜間",
@@ -102,7 +109,8 @@
       "shoes": "銀色細跟涼鞋",
       "outer_or_bag": "金屬扣手拿包",
       "jewelry": "銀色手環",
-      "body_readable": true
+      "body_readable": true,
+      "en": "A black silk slip maxi dress with thin straps, a straight neckline and an open back. Silver strappy heeled sandals. A metal-clasp clutch. A silver bracelet."
     },
     "nico_outfit_08": {
       "label": "居家貼身",
@@ -112,7 +120,8 @@
       "shoes": "室內拖鞋",
       "outer_or_bag": "無",
       "jewelry": "無",
-      "body_readable": true
+      "body_readable": true,
+      "en": "A close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in. Black close-fitting cotton trousers. Indoor slippers."
     },
     "nico_outfit_09": {
       "label": "雨天機能",
@@ -122,7 +131,8 @@
       "shoes": "黑色短雨靴",
       "outer_or_bag": "防水肩背包",
       "jewelry": "無",
-      "body_readable": false
+      "body_readable": false,
+      "en": "A dark-grey water-repellent hooded jacket over a black high-neck top. Black straight-leg trousers. Short black rain boots. A waterproof shoulder bag."
     }
   },
   "hair": {
@@ -2399,5 +2409,15 @@
   "signature_family_key": "nail_studio",
   "_c23_note": "C-23：覆核檔沒有揭露 props，導致九欄語意 gate 無法完成。補上 props 表之後，當場看見 8 列 props 重述了 outfit 已提供的包/外套或借用別套的招牌包、c10 有第三隻手、c07 把『客人的手』放進訓練集。新增 hands 欄位（left/right 兩個槽位），把手部佔用從推論改成明寫，validator 直接稽核——這一類錯（c08、c10）就再也不靠人眼抓。",
   "_c27_note": "C-27：hands 兩個自由文字槽仍可被同義詞繞過，且不知道 prop 會不會落在 framing 內。改為結構化：每個 prop 有 id / relation（held_left|held_right|held_both|surface|worn|background）/ zone（物件靠近的身體地標，依該 shot 實際姿態判定）/ expected_visible；hands 每槽有 state（free|holding|supporting|camera）與 object_ref（只能引用 prop id，不得另寫同義詞）。左右一律指角色的解剖學左右、鏡像前。",
-  "laterality": "subject_anatomical（角色本人的解剖學左右，鏡像翻轉前）"
+  "laterality": "subject_anatomical（角色本人的解剖學左右，鏡像翻轉前）",
+  "hair_en": {
+    "nico_hair_01": "It is worn down, with one side tucked behind her ear and the ends curving inward.",
+    "nico_hair_02": "All of it is tucked back behind both ears, so both ears and the nape of her neck are exposed.",
+    "nico_hair_03": "The back half is clipped up in a claw clip, with two loose strands left down at the front.",
+    "nico_hair_04": "It is parted down the middle and blow-dried smooth, the ends tucked slightly under — tidier than she usually wears it.",
+    "nico_hair_05": "The ends are flicked outward with a curling iron, and a thin silver hair clip holds the hair back on her right side.",
+    "nico_hair_06": "It is wet from the shower, lying flat against her head, the ends still dripping."
+  },
+  "hair_color_en": "Her hair is a chin-length bob in a cool-toned medium chestnut brown — a muted mushroom brown with a soft grey undertone. One narrow band of silver-grey runs through the hair at her left temple, the way a deliberate salon highlight sits in otherwise evenly dyed hair. Apart from that one band the colour is a single flat dye reaching the scalp: her roots are the same brown as her ends.",
+  "_hair_color_note": "那道銀灰挑染是 Phase A candidate_03 帶來的，c03→B1→B2 三張都蓋不掉，已由使用者裁決保留為 Nico 的造型（2026-08-28）。因此寫進 prompt 當成刻意的挑染，而不是每次都徒勞地要求消除它。"
 }
