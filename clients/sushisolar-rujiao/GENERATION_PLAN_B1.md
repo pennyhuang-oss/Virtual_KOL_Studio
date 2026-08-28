@@ -545,10 +545,10 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **場景環境** | 夏日祭典的神社參道。**乾淨明亮的木造鳥居**（不是斑駁老舊）、兩側掛著的紙燈籠、祭典攤位（金魚撈、蘋果糖、章魚燒）、遠處的人群。 |
 | **機位與構圖** | **全身。**<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍。<br>**構圖**：腳貼近畫面下方 1/3，鳥居在她身後。 |
 | **光線** | ① 攤位與紙燈籠的暖色光**打在臉上**｜② 參道地面把暖光反回下巴｜③ 全場暖色，天空還留一點藍｜④ **臉清楚受光、背後的燈籠攤位保留細節**（這件不用「背景與膚色等亮」，會失去夜祭的層次） |
-| **表情** | **拿著蘋果糖回頭笑。**身體與骨盆朝參道前方、頭與肩轉回鏡頭；一手把蘋果糖舉在臉頰旁；笑到眼睛彎。<br>（掛載動作＝蘋果糖＋回頭；**骨盆朝向已寫死，避免整個人被轉正**） |
+| **表情** | **走著被叫住、回頭笑。**寫成**動作中的瞬間**（走開→回頭），不是靜態的身體擺放；一手舉蘋果糖在臉頰旁，另一手自然垂放。<br>（掛載動作＝蘋果糖；**2026-08-28 改用 A/B 的 A 版**——理由是 A 在 4 張裡沒有 hard defect，屬較低風險，**不是已證實動作寫法較優**） |
 | **肢體與重心** | 重心在後腳；骨盆朝參道深處；上半身與頭轉回鏡頭；一手舉蘋果糖。 |
 | **情境** | 走在參道上回頭 |
-| **生成 prompt** | `A young woman stands on the festival approach with her hips and torso facing down the path, her head and shoulders turned back toward the camera, holding a candy apple beside her cheek with one hand, her free arm relaxed at her side, laughing. Full body, camera at her navel level, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. A pale-blue floral Japanese yukata, an ankle-length wrap robe with the left panel crossed over the right, a wide flat navy obi sash, wooden geta. A wooden torii, paper lanterns overhead, food stalls. Her face clearly lit, the lantern-lit stalls keeping visible detail. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `Walking away down the festival approach, a young woman glances back over her shoulder mid-stride, holding a candy apple beside her cheek with one hand, her free arm relaxed at her side, laughing. Full body, camera at her navel level, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. A pale-blue floral Japanese yukata, an ankle-length wrap robe with the left panel crossed over the right, a wide flat navy obi sash, wooden geta. A wooden torii, paper lanterns overhead, food stalls. Her face clearly lit, the lantern-lit stalls keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 夏祭り🎐<br>蘋果糖比想像中大顆 |
 | 附註 | 這是 Luna 視覺變化最大的一組。<br>**⚠️ 這件的場景在日本，是刻意的**——歸為「回日本的時候」類型（對應 Yuna 的 YG-06 汗蒸幕）。**其餘 Luna 的件全部是台北。**<br>戶外件，第一張出來要跟 LG-04／06／07 互相比對有沒有出現同一個場景模板 |
 
