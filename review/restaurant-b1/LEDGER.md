@@ -2,7 +2,7 @@
 
 > **這是 Claude 與 ChatGPT 互相檢核的主檔。編輯規則見 `review/restaurant-b1/README.md`。**
 > 分支：`claude/virtual-kol-restaurant-campaign-pxu9m4`
-> 最後更新：2026-08-29（R8a 已處置：2 BLOCK 裁決完成、4 REVISE 已改、光線句改為局部最高光版）
+> 最後更新：2026-08-29（R8b 已全部處置；下一步是 YG-08 與 LG-10B 各 2 張 preflight）
 
 **目前狀態：批次一 21 件，4 張 preflight 已跑完，2 張硬淘汰。**
 **正式批次暫不放行；只允許執行 #1 的最小 A/B 與已判定項目的修正 preflight。**
@@ -783,6 +783,71 @@ R3 覆核建議：等第一批 workflow 穩定後，另開一個專門測高風�
 - [ ] 點光源類 preflight（LG-10B）×2
 - [ ] 兩者通過後才擴到同類場景
 - [ ] R8b：其餘 6 件（YG-06、09，LG-01、06、07、09）送覆核
+
+## #18 R8b：其餘 6 件逐件覆核 🟢 DONE（全部處置完畢）
+
+**結果：2 PASS（YG-06、LG-06）／4 REVISE（YG-09、LG-01、LG-07、LG-09）。**
+我主動提的三個疑慮**全部判 REVISE**——三個我都想「先留著、只降級成 soft observation」，三個都被否決。
+
+### 一、YG-09 濕髮：降級成 soft observation 不夠
+
+> 「不列入硬驗收只能避免『濕髮沒出現』造成誤殺，**不能消除該字串對髮型、髮長與畫面穩定性的干擾**。
+> LG-08 的 4/4 雖不能證明換角色後也必敗，但**已是同一生成流程下足以採取避險措施的負面證據**。」
+
+這條修正了我的推理方式：我原本用「跨角色不能推論」當理由保留濕髮，
+但**「不能證明必敗」不等於「可以放進正式批次」**。負面證據的作用是避險，不是舉證。
+
+**處置**：濕髮三段（`Wet`／`pushed straight back`／`water still beading`）退出正式 prompt，
+改成乾髮描述。**濕髮不是放棄，是改成單獨的單變因 preflight**：同一段 prompt 只比乾髮／濕髮各 2 張。
+
+另補：`leans against the window frame` 可能誘發扶窗的手，而硬驗收要求**零隻手**，
+原本只靠裁切暗示。加上正面寫法鎖定裁切範圍：
+`The crop contains only her face, hair, neck, and bathrobe collar, with both arms and hands below the frame.`
+
+### 二、LG-01：`at the lower edge` 只換了位置詞
+
+> 「`at the lower edge` 只指定位置，沒有解決**容量衝突**。臉佔約 45%、雙肘落桌、雙手完整托腮後，
+> 下緣剩餘空間不足以穩定辨識蛋糕與拿鐵兩件物品。**已有 YG-01 同型失敗時，不應只換位置詞重試。**」
+
+**處置**：比照 YG-01，蛋糕與拿鐵從 prompt 與硬驗收移除，改為近景優先。
+甜點店仍由桌面、磁磚牆與窗邊座位成立。
+
+### 三、LG-07：問題不在全身，在實現方式
+
+> 「全身本身不是問題；風險來自大幅軀幹扭轉加雙臂交疊，容易以**腰部變形、肩臂錯位或多手**來完成。
+> 現句的 `turned three-quarters back` 也可能被理解成**上身仍背對鏡頭**。」
+
+**處置**：① 扭轉降成 `gentle three-quarter back pose, hips angled away and shoulders turned toward the camera`
+② 桶由「雙臂抱住」改成**兩手從左右托住**（`hugs with both arms` 會讓手臂交疊）
+③ `feet near the lower third` 明確化為 `complete feet within the bottom third`
+④ 驗收順序：**先看肢體，再看骨盆／肩線方向**
+
+### 四、LG-09：裙子在半身景別是構圖競爭訊號
+
+> 「半身 prompt 加入 `mini skirt with one continuous hem`，會要求模型展示通常落在裁切外的裙襬，
+> 容易把半身拉成膝上景。裙裝也不在本件硬驗收內。」
+
+**這條有一般性**：`one continuous hem` 是驗證過 4/4 的**防短褲錨點**，
+但**只在裙子真的入鏡的件才寫**——寫在看不到裙子的景別，錨點會變成拉遠景別的力量。
+與 LG-10B 的 `ankle-length` 是同一型。
+
+### 兩件 PASS
+
+- **YG-06**：可原樣送 preflight。驗收時「雙手」須為左右手各自接觸杯身，不接受第三隻手或只剩單手。
+- **LG-06**：可送。另依它的條件建議，把 `bright shop signage` 改成 `storefront signage well out of focus`
+  ——本專案既有慣例就是招牌一律失焦（YG-08、LG-09 皆同），改動與 PASS 內容無關。
+
+### 13 件現況
+
+| 狀態 | 件 |
+|---|---|
+| **PASS，可送 preflight** | YG-06、YG-08、LG-06 |
+| **REVISE 已改完，待再覆核或直接 preflight** | YG-03、07、09、10，LG-01、02、05、07、09、10B |
+
+**下一步（依 R8a 光線放行條件）**：
+1. 門口／窗類 preflight：**YG-08 ×2**
+2. 點光源類 preflight：**LG-10B ×2**
+3. 兩者通過後才擴到同類場景；**窗類結果不可當成燈籠／招牌類的證據**
 
 ---
 
