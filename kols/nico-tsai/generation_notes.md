@@ -1,7 +1,7 @@
 # Nico Tsai 蔡妮可 — Generation Notes
 
 > **這份檔案是按時間累加的歷程紀錄，越前面越舊。**
-> **不要拿前面的章節當現行規格**——早期章節裡的三圍（86-59-88／C）、髮色（冷灰奶茶漂色）、
+> **不要拿前面的章節當現行規格**——早期章節裡的三圍（86-59-88／C）、髮色（冷灰奶茶漂色，無銀灰挑染）、
 > 以及 Round 1 記下的「景別用排他性措辭」修法，**都已被後續實測推翻或由使用者改版**。
 >
 > | 要找什麼 | 現行真理來源 |
@@ -17,19 +17,19 @@
 
 ---
 
-## 狀態：**PENDING — 尚未執行任何生成**
+## 狀態：**訓練中 — Phase A/B/C 完成，Soul 訓練已送出**
 
 建立日期：2026-08-27（Batch 3）
 
 | 階段 | 狀態 |
 |------|------|
-| 選角（candidate 生成與挑選） | 🔶 第一輪已生成，**已否決**（見下方記錄） |
-| Reference Element 錨定 | ⬜ 未執行 |
-| 訓練集（13 張） | ⬜ 未執行 |
-| Soul 訓練 | ⬜ 未執行 |
+| 選角（candidate 生成與挑選） | ✅ Round 3 通過，選定 candidate_03 |
+| Reference Element 錨定 | ✅ `68ff990e-1862-4003-bfe3-fe288275cdd4` |
+| 訓練集（20 張） | ✅ 2026-08-28 完成並驗收 |
+| Soul 訓練 | 🔵 2026-08-28 送出訓練，`soul_id` `46d1e11e-92a7-4fd7-8776-dcd4e2067627` |
 | 首批內容生成 | ⬜ 未執行 |
 
-**Soul ID**：尚未取得
+**Soul ID**：`46d1e11e-92a7-4fd7-8776-dcd4e2067627`
 
 ---
 
@@ -38,9 +38,9 @@
 1. **PERSONA_CANON.md 五條原則** — 反差公式、標誌性場景配額、造型可變性、不寫絕對禁令、單一真理來源。
 2. **身分一致性硬規格**（每一次 prompt 都要寫）：
    - 膚色：Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.
-   - 身材：167cm / 86-59-88 / C 罩杯
+   - 身材：167cm / **90-59-88 / D 罩杯**（U-03 使用者裁決；纖細骨架＋飽滿胸型，不要寫 small bust／NOT heavy-chested 這類把身形推平的否定詞）
    - 選角階段**必須同時核對臉部與身材**——Rainie Hsu 就是只看臉沒核身材，整批訓練圖作廢重做。
-3. **髮色髮型每次都要寫**（Soul V2 不繼承）：現階段為 冷灰奶茶（漂色）· 短鮑伯。
+3. **髮色髮型每次都要寫**（Soul V2 不繼承）：現行為 **齊下巴短鮑伯 · 冷調中栗棕（mushroom brown，帶灰底），左側鬢角一道銀灰挑染**——單一平染到頭皮、髮根與髮尾同色。單一真理來源為 `pilot/nico_pilot.json` 的 `hair_en` / `hair_color_en`。
 4. **SEXY_SCENE_LIBRARY.md**〈降低「AI 感」的技術要點〉五項全部套用。
 5. **標誌性配額**：露背 / 絲質吊帶 + 指甲特寫的並置 — 每月 1 期。
 
@@ -251,3 +251,41 @@ ChatGPT 的 C-42／C-46 也是往這個方向推的，那是對的。
 
 **使用者指示**：這 20 張不改；**下一個角色的日常素材要參考小雪莉的分析**，
 尤其是她日常發布的素材照片。建模階段仍以「臉能被模型穩定辨識」為最優先。
+
+---
+
+## Soul 訓練送出 — 2026-08-28
+
+**soul_id**：`46d1e11e-92a7-4fd7-8776-dcd4e2067627`（name: `nico-tsai`, type: `soul_2`）
+**訓練圖**：`images/training_v1/` 全部 20 張，以 image job id 直接送入（不需重新上傳）。
+**狀態**：送出時 `queued` → `training`，約 10 分鐘。
+
+| 檔案 | image job id |
+|------|--------------|
+| 01_a01 | `e7b71e33-d384-4690-9efb-12dd224751e7` |
+| 02_a02 | `04cf64bc-fa3c-459c-8fdd-8891b2ea08d2` |
+| 03_a03 | `3f351447-21d7-46ae-9056-215cdd1d9935` |
+| 04_a04 | `c7b29f08-2dc2-48ee-8921-dbc58cfcee77` |
+| 05_a05 | `bee22e06-b9ec-4f69-8c9b-6ccb7a1da684` |
+| 06_a06 | `0d186f7f-ff1a-4ddc-8a83-f7957434ede2` |
+| 07_a07 | `0e0d7d06-3427-4c7a-a130-f06d191b70cc` |
+| 08_c01 | `c026304f-531e-46a1-a0e6-21f6637c4b10` |
+| 09_c02 | `a90a8119-ee38-4610-8eac-24111abfd03e` |
+| 10_c03 | `23528447-4c6d-4c56-bc6b-9ce557e1a3eb` |
+| 11_c04 | `05abdd6a-ef6f-4aea-af19-3ac4ded7bbaf` |
+| 12_c05 | `e3136069-6362-499c-991a-eccb0e27d51d` |
+| 13_c06 | `f3d53c2e-1851-490a-b0f3-9b2b623ee4ea` |
+| 14_c07 | `c4863316-a474-4807-b24b-896b66081b0e` |
+| 15_c08 | `668c0eee-9a02-46a6-bcb7-51b60c43e08f` |
+| 16_c09 | `a4265212-28b2-484a-9d09-6879f12ecaca` |
+| 17_c10 | `b55bc844-4013-4b27-a0e4-ddb9dfa6e029` |
+| 18_c11 | `328c9d14-ac5c-4b0e-940d-958823a2fff4` |
+| 19_c12 | `6de1a33c-aa96-4a65-8566-f4db487d6ede` |
+| 20_a08 | `c38af964-7aee-4e38-9bbd-853b015d58a5` |
+
+**要記的操作細節**：生成完成的圖，其 job id 直接寫在 PNG 的 `hf-job-id` tEXt chunk 裡，
+`show_characters(action='train')` 的 `images` 直接吃 image job id，
+**不必**走 `media_upload → PUT → media_confirm`。下一個角色照這條路走。
+
+**c08 一併送訓**：使用者裁決 20 張不重拍。洗手檯下的多餘肢體是背景物件，
+Soul V2 學的是臉與身形；若訓練後在 Phase D 出現不明肢體，回頭把 c08 抽掉重訓（剩 19 張仍在 5–20 範圍內）。
