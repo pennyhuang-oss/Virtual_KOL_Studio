@@ -217,3 +217,81 @@ WHY_DISTINCT: <中文一句話>
 ## §6 回覆區
 
 REPLIES BELOW
+
+
+## ChatGPT R3 覆核回覆
+
+### G-01｜P0｜目前不能裁決三組來源衝突，也不應先放寬 gate
+
+**裁決：暫時保留 F-03 的 7／3，不要用改軸或降門檻替 F-02 的來源分配補洞。**
+
+原因是本檔只有三組的距離總數，沒有：
+
+- 19 位完整的 `refs_v2` 四槽分配；
+- 15 張臉型來源的骨相描述或圖像；
+- 三組逐軸相同／相異明細；
+- 可替換來源與更換後會撞到的其他 persona。
+
+因此無法判斷該換 emma 還是 wendy、zoey 還是 kanon、miu 還是 somi，更無法指定「換去哪一張」。把 7／3 降成 5／3 雖會讓三組數字通過，但沒有證據證明共用同一臉型來源時，總差異 5 足以防止合臉；這會把測量工具改成迎合當前資料。
+
+**三組目前均維持 BLOCK：**
+
+- `emma-kao ↔ wendy-yeo`：維持 7／3，待有候選來源矩陣後更換其中一位的 FACE_SHAPE_AND_JAW。
+- `zoey-yeh ↔ kanon-komori`：同上。
+- `miu-shiraishi ↔ somi-oh`：同上。
+
+請把「每一位可換到哪些 ref、換後的來源用量、與所有 18 位的新距離」加入下一版同一檔案；再選總擾動最小的三次 reassignment，而不是手改 identity 軸值。
+
+### G-02｜P0｜配對總分不足以產生具體軸值調整
+
+§3 只給 `4／6`、`5／6` 等加總，沒有列出每組 11 軸中哪些相同、哪些不同，也沒有提供 angel、miu、sydney、yerin、tammy、wanyin、angeline、zoey、kanon、emma、wendy、somi 等人的完整軸值。
+
+從加總無法反推出該改哪一軸。例如「再改一軸」可能：
+
+- 對目前這一組增加距離，卻讓另一組降到門檻以下；
+- 改到非主導軸，總距離增加但主導門檻仍不過；
+- 選到不在原維度表允許值內的值；
+- 為了通過 gate，寫出不受參考來源支持的骨相。
+
+因此本輪無法誠實填出 9 組的具體軸值。下一版至少要附：
+
+1. 19 位完整 11 軸；
+2. 原維度表的每軸允許值；
+3. 9 組逐軸 diff，並標出哪些是主導軸；
+4. 每個候選修改對其餘 18 位距離的影響。
+
+有這四項後，才能做全域而不是逐對過擬合的最小修改。
+
+### G-03｜P0｜8 位重建缺少新參考來源的可判讀內容
+
+§4 只提供 `ref_03／ref_06／ref_09／ref_10／ref_11／ref_12／ref_14` 等 ID，沒有附圖，也沒有這些來源在 FACE_SHAPE_AND_JAW／NOSE 槽位的文字 landmark。ref ID 本身不含骨相語意，所以無法依新來源重建 ARCHETYPE、AXES、FACE_EN、MARKERS、WHY_DISTINCT。
+
+現在若輸出 8 段完整欄位，只能把舊文字換句話說或猜測新照片；那正是 F-02 明令禁止的「文字描述舊來源、附圖使用新來源」靜默不一致。因此我不會捏造 §5 的 persona 區塊。
+
+請在下一版同一檔案中，為每個被換入的來源至少附上：
+
+- FACE_SHAPE_AND_JAW：輪廓、長寬比、三庭、骨肉量、顎頦、頰部；
+- NOSE：鼻樑長寬、鼻根／鼻尖形態與整體量體；
+- 最好直接嵌入對應裁切圖；若仍要求只讀單檔，圖片或其可判讀描述必須包含在該檔內。
+
+拿到這些資訊後，我才能依 §5 格式回傳 8 位完整欄位並簽 hash。
+
+**本輪未輸出任何 `### <persona-id>` 區塊，這是刻意的 HARD BLOCK，不是漏答。**
+
+### G-04｜P2
+
+保留前句並合併有用的後半句，改成一句：
+
+> Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness.
+
+刪除重複的 `Synthesize these four components into one new coherent identity`。
+
+### G-05｜P2
+
+不必為了覆蓋率強迫 `ref_13` 擔任臉型來源；若它不適合作骨架，維持只用於眼眉與口部是合理的，但請在 registry 明記 `excluded_from_FACE_SHAPE_AND_JAW` 與理由，避免日後被誤認為分配疏漏。
+
+### 第一批生成判定
+
+**目前不可開始第一批 8 位生成。** G-01～G-03 的資料閉包尚未完成。
+
+補齊並通過後，也不要直接跑 32 張。先選第一批中 `needs_rebuild=false` 且最近鄰距離最大的 1 位生成 4 張，驗證四張參考圖各自只控制指定部件；至少 3／4 部件穩定成立後，再展開第一批其餘 7 位。若低於 3／4，按 F-01 既定備案改用部件裁切輸入。
