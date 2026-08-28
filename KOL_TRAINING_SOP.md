@@ -159,6 +159,27 @@ prompt 寫 `unbroken and continuous over both shoulders` 無效）。
 
 ---
 
+## 各步驟的實際 credit 單價（2026-08-28 從 transactions 帳實測）
+
+**這張表的用途是防止「我覺得很貴」式的誤判。** 過去在規劃時是用「幾張圖」在估成本，
+但不同階段用的模型單價差 8 倍，用張數估會得到完全錯誤的結論。
+
+| 項目 | 模型 / 動作 | 單價 |
+|------|------------|------|
+| 選角、錨定、訓練集 | `seedream_v4_5` | **1 credit / 張** |
+| Soul 訓練 | `show_characters(action='train')` | **25 credits / 次**（一次性） |
+| 訓練後的所有生成 | `soul_2` + soul_id | **0.12 credits / 張** |
+
+**推論**：
+- Nico 的 Phase A+B+C 共 35 張 seedream ＝ 35 credits，訓練 25 credits，合計 **60 credits**。
+  這是「建一個角色」的實際造價。
+- **Soul 訓練完成之後，出圖幾乎不要錢**（0.12/張，100 張才 12 credits）。
+  所以「訓練後的壓力測試 / QA / 日常素材」不該用張數當阻力——阻力只剩人工覆核的時間。
+- 貴的一律在訓練「之前」：每一張 seedream 都是 1 credit，
+  所以**選角與訓練集的 prompt 必須先過 lint 與覆核再送生成**，這條規則的成本理由在這裡。
+
+---
+
 ## ⚡ 新 Session 啟動時，立刻做這件事
 
 > 讀完這份文件後，直接照以下清單執行，不用等使用者再說明。
