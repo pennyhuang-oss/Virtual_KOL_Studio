@@ -13,13 +13,19 @@ BASE=json.load(open('pilot/nico_pilot.json',encoding='utf-8'))
 REG=json.load(open('pilot/location_registry.json',encoding='utf-8'))
 SCH=json.load(open('pilot/schema_v2.json',encoding='utf-8'))
 SR='pilot/semantic_review.json'
+import shutil, os
+_BAK=SR+'.bak'
+shutil.copy(SR,_BAK)   # 真實核可紀錄，測完還原（別把使用者的 sign-off 洗掉）
 
 def sd(p, complete=True):
-    """把語意覆核標成完成，好讓其他規則的訊號不被 C-19 蓋掉。"""
+    """把語意覆核標成完成（逐列 hash），好讓其他規則的訊號不被 C-19 蓋掉。"""
     import hashlib, json as j
-    h=hashlib.sha256(j.dumps(p['phase_c_shots'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:16]
-    ids=[x['shot_id'] for x in p['phase_c_shots']] if complete else []
-    j.dump({'data_hash':h,'reviewed_shot_ids':ids}, open(SR,'w',encoding='utf-8'), ensure_ascii=False)
+    def h(s2):
+        b={k:v for k,v in s2.items() if not k.startswith('_')}
+        return hashlib.sha256(j.dumps(b,ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:12]
+    rv={s2['shot_id']:{"hash":h(s2),"by":"test","at":"test"} for s2 in p['phase_c_shots']} if complete else {}
+    j.dump({"reviewed":rv,"reviewed_shot_ids":sorted(rv)},
+           open(SR,'w',encoding='utf-8'), ensure_ascii=False)
 
 def run(p):
     return validate(copy.deepcopy(p), REG, SCH)[0]
@@ -145,6 +151,11 @@ def m_twohands_one(p):
     s2['hands']['left']={"state":"holding","object_ref":"onigiri","note":"也拿著飯糰"}
 case("C-27 同一個 prop 被兩隻手引用但不是 held_both", m_twohands_one, "被兩隻手同時引用")
 
+# ---- C-33（R8 新增）：逐列 hash ----
+def m_stale_row(p):
+    shot(p,'nico_c07')['expression']='soft_smile'   # 覆核後才改資料
+case("C-33 某一列改過資料，舊核可必須失效", m_stale_row, "舊核可已失效，需重審")
+
 ok=0
 for name,mut,expect,cr in CASES:
     p=copy.deepcopy(BASE); sd(p, cr); mut(p)
@@ -162,6 +173,6 @@ clean_ok = not errs
 print(("  ✓ 通過" if clean_ok else "  ✗ 誤報")+"  反向：乾淨資料＋覆核完成應無錯誤")
 if not clean_ok: print("      ",errs)
 
-sd(BASE, False)   # 還原：真實狀態仍是 0/20
+shutil.move(_BAK, SR)   # 還原真實核可紀錄
 print(f"\n對抗測試 {ok}/{len(CASES)} 擋下，反向測試 {'通過' if clean_ok else '失敗'}")
 sys.exit(0 if ok==len(CASES) and clean_ok else 1)

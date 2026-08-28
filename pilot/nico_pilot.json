@@ -1014,7 +1014,7 @@
       "view": "selfie_front",
       "head_yaw": "front",
       "head_pitch": "down_15",
-      "expression": "just_woken_blank",
+      "expression": "post_shower_calm",
       "eye_gaze": "camera",
       "body_pose": "seated",
       "face_visibility": "partial_hair",
@@ -1058,7 +1058,8 @@
           "note": "撐在床沿"
         }
       },
-      "_r7_note": "C-28：hair_06 定義是『剛洗完澡的濕髮、髮尾滴水』，scene 卻寫『剛醒還沒站起來』。hair_06 只有這一列在用，動它會破壞髮型全覆蓋，因此改 scene 對齊髮型（晨間淋浴，晨光條件不變）。"
+      "_r7_note": "C-28：hair_06 定義是『剛洗完澡的濕髮、髮尾滴水』，scene 卻寫『剛醒還沒站起來』。hair_06 只有這一列在用，動它會破壞髮型全覆蓋，因此改 scene 對齊髮型（晨間淋浴，晨光條件不變）。",
+      "_r8_note": "C-33：R7 把 scene 從『剛醒』改成『剛洗完澡』對齊 hair_06 時，expression 還留著 just_woken_blank——修一個跨欄位矛盾的同時製造了另一個，又是同一類錯。表情改為與剛洗完澡相容的 post_shower_calm。"
     },
     {
       "shot_id": "nico_c05",

@@ -8,7 +8,7 @@
 **回覆方式**：把你的意見**直接寫在本檔案最下方 §9 回覆區**（在 `REPLIES BELOW` 那行以下）。
 那一段不會被自動產生覆蓋。Claude 會讀你寫的內容並修正。
 
-- 目前 commit：`795823b`
+- 目前 commit：`28c5cbf`
 - 檔案角色：本檔 §0–§8 由 `tools/gen_review_file.py` 從 `pilot/nico_pilot.json` 自動產生，所有數字都是程式算的，不是人工抄的
 
 ---
@@ -136,7 +136,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 
 ---
 
-## §4 前七輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）
+## §4 前八輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）
 
 | 輪次 | 發現的主要問題 |
 |------|---------------|
@@ -147,6 +147,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | R5 | 兩個 P0：(a) 語意覆核 0/20，validator 卻印「✓ 全數通過」且 exit=0——這個 gate 形同虛設；(b) Phase C 三個物理矛盾（鐵門遮住的正是那面落地窗／修眉＋撐洗手台＋持機＝三隻手／衣櫃把「赤腳」寫進定義卻用在公園）。另外 Phase D 宣稱單一變量但實際同時改 3 個欄位，且 st08b 宣稱測下打光——那個變量根本沒有編碼進任何欄位 |
 | R6 | 我自己挖的坑：§8 要求逐列覆核 9 個欄位（含 props），但本檔從來沒有揭露過任何一列的 props——審閱者不可能完成。補上 props 表之後，當場看到 8 列 props 重述 outfit 已有的包、`c10` 第三隻手、`c07` 把客人的手放進訓練集。另外 `c12` 刪掉車頭燈時沒同步改曝光敘述（改一欄忘另一欄，第三次）；`st06` 拿訓練集出現 4 次的 park 去測固定背景烙印 |
 | R7 | 20 列語意覆核只有 11 列無異議，9 列 P0。最大的一類：**微物件寫在 framing 裁切外**——`a01` 是臉部特寫卻把道具放在桌上，`c02` 蹲著拆箱卻用 chest_up，`c12` 的「月台地上黃線」還是我 R6 自己加的。另外 `c04` 的 scene 寫「剛醒」但 hair_06 定義是「剛洗完澡滴水濕髮」；`c05` 的髮夾同時由 outfit 與 hair 定義——**C-01 那個雙重真理來源的病，換一對欄位重演** |
+| R8 | 20 列覆核 19 列無異議，只剩 `c04` 一條 P0：R7 把 scene 從「剛醒」改成「剛洗完澡」對齊髮型時，`expression` 還留著 `just_woken_blank`——**修一個跨欄位矛盾的同時製造了另一個**，同一類錯第五次。連帶暴露一個流程缺陷：語意覆核用整份資料一個 hash，改一列就作廢全部 20 列的核可，覆核與修正會互相打架、永遠收斂不了；已改為逐列 hash |
 
 **共同模式**：Claude 反覆犯的是同一類錯——**改了一個欄位，沒有同步改另一個**，
 以及**把規則形式化之後，對規則本身過度擬合**（為了湊 quota 把普通場景標成 A 級）。
@@ -237,7 +238,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | 08 | `c01` | identity_core | 收工後鐵門拉下，坐在工作椅上轉過來看側窗外 | `workplace_own_studio` | B | `08` | `01` | face_closeup | front | neutral | neutral_composed | seated | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
 | 09 | `c02` | identity_core | 蹲在地上拆剛到的材料紙箱，抬頭看向門口 | `workplace_own_studio` | B | `06` | `04` | knee_up | left_30 | up_10 | mildly_surprised | crouching | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
 | 10 | `c03` | identity_core | 早餐店的板凳上等餐，手肘擱在桌沿 | `breakfast_shop` | C | `03` | `04` | waist_up | right_30 | down_15 | tired_soft | seated | down | third_person | unobstructed | L2_single_window_daylight | specular | none | — | — |
-| 11 | `c04` | identity_core | 剛洗完澡坐在床邊，舉起手機直視鏡頭 | `own_bedroom` | B | `08` | `06` | waist_up | front | down_15 | just_woken_blank | seated | camera | selfie_front | partial_hair | L2_single_window_daylight | diffuse | none | — | — |
+| 11 | `c04` | identity_core | 剛洗完澡坐在床邊，舉起手機直視鏡頭 | `own_bedroom` | B | `08` | `06` | waist_up | front | down_15 | post_shower_calm | seated | camera | selfie_front | partial_hair | L2_single_window_daylight | diffuse | none | — | — |
 | 12 | `c05` | body_pose_coverage | 玄關靠著牆，低頭把鑰匙收進口袋 | `own_entryway` | B | `04` | `05` | knee_up | left_60 | down_15 | focused | leaning | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | — | — |
 | 13 | `c06` | body_pose_coverage | 大安區巷子裡走路，剛越過一台停在牆邊的機車 | `city_street` | B | `03` | `05` | full_body | right_60 | neutral | neutral_walking | walking_frozen | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 | 14 | `c07` | identity_core | 低頭在展示棒上試新的色膠，側臉朝向鏡頭 | `workplace_own_studio` | B | `01` | `03` | chest_up | profile_left | down_15 | focused | seated | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | nail_studio | 是 |
@@ -428,7 +429,7 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 
 ```
 驗證 nico-tsai（schema v2.4.0）
-  ✗  語意覆核未完成：0/20 列，尚未覆核 ['nico_a01', 'nico_a02', 'nico_a03', 'nico_a04', 'nico_a05']…（C-19：這是生成前的 gate，未達 20/20 一律 HARD FAIL。機器 lint 抓不到物理與語意矛盾——R5 就是在機器全過的狀態下被抓到 4 個。見 pilot/semantic_review.md）
+  ✗  語意覆核未完成：19/20 列，尚未覆核 ['nico_c04']（C-19：這是生成前的 gate，未達全數一律 HARD FAIL。機器 lint 抓不到物理與語意矛盾——R5 抓到 4 個、R7 抓到 9 列、R8 又抓到 1 個，全都發生在機器全過的狀態下。見 pilot/semantic_review.md）
 ```
 
 ---
@@ -438,10 +439,11 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 | ID | 議題 | 提出者 | 狀態 | 備註 |
 |----|------|--------|------|------|
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | ChatGPT 同意延後，但列為 persona #2 的前置 gate |
-| C-27 | hands 只有兩個自由文字槽，仍可被同義詞繞過 | ChatGPT | 🔵 Claude已修正 | 四個漏洞全部屬實。props 改結構化：`id`／`relation`（held_left｜held_right｜held_both｜surface｜worn｜background）／`zone`／`expected_visible`；hands 每槽有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（只能引用 prop id）。新增 spec 層 `laterality=subject_anatomical`（鏡像翻轉前）。8 條 validator 規則 |
-| C-28 | c04 髮型與時間狀態衝突；c05 髮夾雙重真理來源 | ChatGPT | 🔵 Claude已修正 | 兩條屬實。hair_06（剛洗完澡滴水濕髮）只有 c04 在用，動髮型會破壞髮型全覆蓋，因此改 scene 對齊為「剛洗完澡坐在床邊」。outfit_04 首飾「銀色髮夾」與 hair_05 的髮夾是同一物件兩個來源——這正是 C-01 那個病換一對欄位重演，首飾改為手鍊 |
-| C-29 | 8 列的 props／hands 落在 framing 裁切外 | ChatGPT | 🔵 Claude已修正 | 全部屬實，其中 c12 的「月台地上黃線」還是我上一輪自己加的。微物件在裁切外等於對出圖毫無作用。8 列 props 全部換成該景別看得到的物件；c02 改 knee_up（蹲著拆箱本來就讀不到 chest_up）、c05 改為腰線以上的玄關動作。新增 framing→zone 對照表由 validator 反查 |
-| C-30 | c07 練習指模仍是人形手指，且「拿色膠瓶」做不出上膠動作 | ChatGPT | 🔵 Claude已修正 | 兩點屬實。改為左手固定不具人體外形的甲片展示棒、右手拿上膠筆、色卡板移到背景 |
+| C-27 | hands 只有兩個自由文字槽，仍可被同義詞繞過 | ChatGPT | 🟡 待處理（persona #2 gate） | 四個漏洞全部屬實。props 改結構化：`id`／`relation`（held_left｜held_right｜held_both｜surface｜worn｜background）／`zone`／`expected_visible`；hands 每槽有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（只能引用 prop id）。新增 spec 層 `laterality=subject_anatomical`（鏡像翻轉前）。8 條 validator 規則；R8 不同意結案：object_ref／laterality 已封住同義詞與鏡像左右，但 zone 仍是作者自填、background 形同通行證。拆為 C-31／C-32，Nico 不阻擋（人工 20/20 gate 仍能擋），persona #2 前必須完成 |
+| C-28 | c04 髮型與時間狀態衝突；c05 髮夾雙重真理來源 | ChatGPT | 🔵 Claude已修正（R8 再修） | 兩條屬實。hair_06（剛洗完澡滴水濕髮）只有 c04 在用，動髮型會破壞髮型全覆蓋，因此改 scene 對齊為「剛洗完澡坐在床邊」。outfit_04 首飾「銀色髮夾」與 hair_05 的髮夾是同一物件兩個來源——這正是 C-01 那個病換一對欄位重演，首飾改為手鍊；c05 雙髮夾已結；c04 的 expression 殘留另列 C-33，已修 |
+| C-31 | 作者自填 zone 是新的繞過路徑，background 形同通行證 | ChatGPT | 🟡 待處理（persona #2 gate） | 成立。validator 目前只驗「宣告是否自洽」，驗不了「宣告是否為真」——把裁切外物件改標成 chest 或 background 就會通過。ChatGPT 建議加 `basis`／`frame_region`／held prop 的 zone 由 hand_zone 推導／expected_visible=false 不計入微物件下限。Nico 不阻擋（人工 20/20 gate 仍擋得住），persona #2 前完成 |
+| C-32 | hands 未涵蓋 wardrobe carry state 與「一個 ID 代表多物件」 | ChatGPT | 🟡 待處理（persona #2 gate） | 成立。outfit 自帶的托特／書包／皮革包會占手、肘或肩，但 hands 只引用 props；c11 的 `hand_creams` 一個 id 代表兩罐，在機器上與 c10「雙手抱同一團衣物」長得一樣。需 `carry_relation`、`quantity`／拆 id、`carried_arm` |
+| C-33 | c04 改成洗澡後，expression 仍殘留 just_woken_blank | ChatGPT | 🔵 Claude已修正 | 屬實。**我在修 C-28 的跨欄位矛盾時製造了另一個跨欄位矛盾**——同一類錯第五次。已改 post_shower_calm。連帶把語意覆核改為**逐列 hash**：整份一個 hash 的話，改一列就作廢全部 20 列的核可，覆核與修正會互相打架、永遠收斂不了 |
 
 狀態圖例：🔵 Claude已修正（待你確認）　🟡 待處理　⚪ 待回應　🔴 有爭議
 
@@ -451,22 +453,28 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 
 ### 8-1 上一輪的結果
 
-你 R7 提的 C-27–C-30 逐條實測全部屬實，已全部修完。最重要的一條是 C-27：
-我原本以為 `hands` 兩個文字槽就夠了，你指出四個漏洞（同義詞繞過、一槽塞多動作、
-沒有可見性關係、鏡像左右不明）——**全部成立**。props 與 hands 已改成結構化，
-而且這個改動順帶讓 C-29 變成機器可稽核的：`zone` × `framing` 對照表一跑，
-裁切外的微物件會直接 FAIL，不必再靠人眼一列一列看。
+你 R8 的 C-33 屬實，已修（`expression` → `post_shower_calm`）。
+C-31／C-32 我同意，但按你的判定不阻擋 Nico，已列為 **persona #2 的前置 gate**（見 §7）。
 
-### 8-2 這一輪請你判斷
+**你 R8 判無異議的 19 列已經記進 `pilot/semantic_review.json`**，
+每一列連同它自己的 hash 一起簽在你名下。這些列自 R8 之後沒有再動過。
 
-1. **結構化設計本身**（§5-5b）：`relation` / `zone` / `object_ref` / `laterality` 四者
-   夠不夠關掉你列的四個漏洞？特別是 `zone` — 我刻意讓它由作者依**該 shot 的實際姿態**指定
-   而不是套站姿公式（蹲著拆箱時地上的紙箱在膝線，不在腳下）。這個自由度會不會反過來變成新的繞過路徑？
-2. **重跑 20/20 九欄語意覆核**：上一輪你判 11 列無異議、9 列 P0，9 列全部改過了。
-   請重新逐列判斷 `scene`／`outfit`／`hair`／`framing`／`view`／`eye_gaze`／`body_pose`／
-   `props`／`hands`／`light` 在物理上是否同時成立。**列出有問題的 shot_id 與理由；其餘列出「無異議」的 id。**
-3. **新發現**：以 §3 的規則為判準，這一版還有什麼問題？
-4. **放行判定**：可以開始生成，還是仍有 P0 必須先修？
+順帶修掉一個流程缺陷：原本語意覆核是**整份資料一個 hash**，改一列就作廢全部 20 列，
+覆核與修正會互相打架、永遠收斂不了。已改成**逐列 hash**——改一列只失效那一列。
+所以現在 validator 顯示 **19/20**，唯一缺的就是 `nico_c04`。
+
+### 8-2 這一輪只需要你做一件事
+
+**重審 `nico_c04` 這一列**（§5-5 與 §5-5b 都找得到）。改動只有一個欄位：
+`expression` 從 `just_woken_blank` 改成 `post_shower_calm`，其餘欄位與你 R8 看到的完全相同。
+
+請確認這一列的 `scene`／`outfit`／`hair`／`framing`／`view`／`eye_gaze`／`body_pose`／
+`expression`／`props`／`hands`／`light` 現在是否同時成立。
+
+如果沒問題就回「`nico_c04` 無異議」，**Nico 就開始生成**（Phase A 4 張選角 → B 錨定 → C 訓練 → Soul → D 壓力測試）。
+如果還有問題，請說明並給修正方向。
+
+（若你另外看到 §7 裡任何一條需要翻案，也一併說；但不必再重掃 19 列。）
 
 **判斷原則**：§5 的數字都是程式算的。如果你認為某個數字不對，直接指出——
 Claude 會實測驗證。R5 與 R6 你提的每一條我都實跑驗證過，數值主張全部屬實；
@@ -480,79 +488,3 @@ Claude 會實測驗證。R5 與 R6 你提的每一條我都實跑驗證過，數
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
 
-## ChatGPT R8 覆核回覆（2026-08-29）
-
-### 一、§7 所有 🔵 項目
-
-| ID | 判定 | 理由 |
-|---|---|---|
-| C-27 | **不同意結案** | `relation`／`object_ref`／`laterality` 已封住同義詞、第三手與鏡像左右的大部分漏洞；但 `zone` 仍是作者自填，且 `background` 幾乎成為永遠可見的通行證。機器目前只能驗宣告是否自洽，不能驗 zone 宣告是否為真；見 C-31、C-32。 |
-| C-28 | **不同意結案** | c05 的雙髮夾已修；c04 的 scene 與 wet hair 也對齊，但原本的 `expression=just_woken_blank` 沒同步改，與「剛洗完澡」再次衝突。見 C-33。 |
-| C-29 | **同意結案（本輪 8 列內容層）** | 原先裁切外的 props／hands 已換到可見區，c02 改 knee_up、c05 改腰線以上動作，實際內容修正到位。zone 機制的通用繞過風險另列 C-31。 |
-| C-30 | **同意結案** | c07 已改成非人體形狀的甲片展示棒，右手改拿上膠筆，scene／hands／props 現在能完成同一動作。 |
-
-### 二、結構化設計裁決
-
-四個原漏洞的處置：
-
-1. **同義詞繞過**：`object_ref` 引用 prop ID，已關閉。
-2. **單一手槽塞多個動作**：`state` enum＋單一 `object_ref` 已大幅關閉；但複數物件聚合仍有 C-32。
-3. **可見性關係**：`relation + zone + expected_visible` 提供了機器稽核所需欄位，但作者可自行宣告 zone，尚未完全關閉。
-4. **鏡像左右不明**：`laterality=subject_anatomical` 已關閉。
-
-#### C-31｜P1｜作者自填 zone 是新的繞過路徑
-
-讓 zone 依實際姿態調整是必要的；蹲姿的地面紙箱確實可能落在 knee zone，不能硬套站姿公式。但若 validator 只做「framing 是否允許作者填的 zone」，作者可把任何裁切外物件改標成 `chest` 或 `background` 後通過。
-
-尤其 `background` 目前沒有畫面區域資訊，face_closeup 也能無條件接受 background；這無法證明該背景物真的在構圖內。
-
-建議：
-
-- zone 必須加入 `basis = body_relative | frame_relative | environment`；
-- held prop 的 zone 必須由 hand 的 `hand_zone` 推導，不能兩邊各自填；
-- surface prop 需有 `support_surface` 與 `frame_region = foreground_lower | midground | background_left | background_right | background_center`；
-- `background` 不再是單一萬用 zone，必須指定 frame_region；
-- zone／frame_region／姿態任何一項改動，都必須讓 semantic-review hash 失效；
-- `expected_visible=false` 的物件不得計入「每張至少兩個微物件」。
-
-因此，自由度可以保留，但只能作為**待人審核的姿態描述**，不能單憑作者宣告就自動 PASS。這是 P1，因為現有人工 20/20 gate 仍能擋住 Nico；persona #2 前應完成。
-
-#### C-32｜P1｜hands 尚未涵蓋 wardrobe carry state 與「一個 ID 代表多物件」
-
-仍有兩個結構缺口：
-
-- outfit 自帶的托特、書包、皮革包等可能占用手、手肘或肩，但目前 hands 只引用 props，不會稽核 wardrobe item 的攜帶方式。建議 outfit carry item 也有 ID 與 `carry_relation = shoulder | crossbody | hand_left | hand_right | placed`，並納入手部占用。
-- c11 的 `hand_creams` 是一個 prop ID 代表兩罐實體物件，兩手共同引用；這和 c10「同一團衣物由雙手抱」在機器上長得一樣。應增加 `quantity`／`unit_refs`，或拆成 `cream_left`、`cream_right`。購物籃掛手肘也不宜標 `worn`，建議新增 `carried_arm`。
-
-這些目前沒有造成 c11 的物理矛盾，但會讓通用 validator 混淆「雙手持同一物」與「每手各持一物」。
-
-### 三、20/20 九欄語意覆核
-
-#### 有問題的 shot
-
-- **`nico_c04` — P0**：scene 已改為「剛洗完澡坐在床邊」，hair_06 的滴水濕髮因此成立；但 `expression` 仍是 `just_woken_blank`。這是從「剛醒」版本遺留的狀態，與現行場景不一致。請改為 post_shower_neutral／tired_relaxed 等與剛洗澡相容的表情，並同步更新 prompt 與 semantic hash。
-
-#### 無異議
-
-`nico_a01`、`nico_a02`、`nico_a03`、`nico_a04`、`nico_a05`、`nico_a06`、`nico_a07`、`nico_a08`、`nico_c01`、`nico_c02`、`nico_c03`、`nico_c05`、`nico_c06`、`nico_c07`、`nico_c08`、`nico_c09`、`nico_c10`、`nico_c11`、`nico_c12`。
-
-以上 19 列的 scene／outfit／hair／framing／view／eye_gaze／body_pose／props／hands／light，在本檔披露的內容下可同時成立。背景 props 的「是否真的被構圖納入」仍需由 semantic checklist 人工確認，不能只靠 `zone=background` 自動核可。
-
-### 四、新議題
-
-#### C-33｜P0｜c04 改成洗澡後，expression 仍殘留剛醒狀態
-
-這是直接進 prompt 的跨欄位矛盾，也是「改一欄未同步另一欄」的同類問題。生成前修正，讓舊 semantic hash 失效後重跑。
-
-### 五、放行判定
-
-**目前仍不放行生成，僅剩 C-33 一項 P0。**
-
-c04 表情修正後，如果：
-
-1. 新資料使舊 semantic-review hash 失效；
-2. 重新核對 c04；
-3. 20/20 全數核可；
-4. validator 以新 hash PASS；
-
-即可開始 Nico 生成。C-31、C-32 是結構化系統的 P1，可與 Nico 生成並行，但必須在 persona #2 前完成，否則 zone 誤標、wardrobe 占手與複數物件仍可能被機器漏掉。

@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-28　|　**R7 全部 5 條判定結案 ＋ 4 條新議題已修，待 R8 覆核（20/20 語意覆核尚未通過）**
+> 最後更新：2026-08-29　|　**語意覆核 19/20（ChatGPT R8 簽核），只剩 nico_c04 一列待 R9 重審；通過即可開始生成**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -17,7 +17,8 @@
 | R5 | ChatGPT | 8 結案 / 5 不同意 / 4 條新議題（C-19–C-22）| [`rounds/R5_chatgpt.md`](rounds/R5_chatgpt.md) |
 | R6 | ChatGPT | 8 結案 / 1 不同意 / 4 條新議題（C-23–C-26）| [`rounds/R6_chatgpt.md`](rounds/R6_chatgpt.md) |
 | R7 | ChatGPT | 5 條全結案 / 20 列覆核結果 11 無異議、9 條 P0 / 新議題 C-27–C-30 | [`rounds/R7_chatgpt.md`](rounds/R7_chatgpt.md) |
-| **R8** | **ChatGPT** | **待覆核（重跑 20/20 語意覆核）** | [`REVIEW.md`](REVIEW.md) |
+| R8 | ChatGPT | 20 列覆核：19 無異議、c04 一列 P0；新議題 C-31–C-33 | [`rounds/R8_chatgpt.md`](rounds/R8_chatgpt.md) |
+| **R9** | **ChatGPT** | **只需重審 nico_c04 一列** | [`REVIEW.md`](REVIEW.md) |
 
 ---
 
@@ -59,10 +60,13 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-24 | c12 刪掉車頭燈後 exposure_choice 仍寫「車頭燈那側過曝」 | ChatGPT | ✅ 結案 | 屬實。改一欄沒同步另一欄，第三次犯同一類錯，且就發生在要送進訓練集的 prompt 上。已改為廣告燈箱側肩線略過曝；R7 同意結案 |
 | C-25 | st06 拿訓練集出現 4 次的 park 測 no_scene_burn_in | ChatGPT | ✅ 結案 | 屬實，檢出力等於零。改為 bus_stop（訓練集未出現、C 級、戶外，L6 理由不變）。新增 validator 規則：測 no_scene_burn_in 的 shot 必須用訓練集沒出現過的 location；R7 同意結案 |
 | C-26 | outfit_04 的「包/外套」欄填的是及膝襪 | ChatGPT | ✅ 結案 | 屬實，五層等於少一層。及膝襪併入下身，補深藍色肩背書包。連帶發現 c05 的 props 借用了 outfit_03 的小方包；R7 同意結案（c05 髮夾雙重來源另列 C-28） |
-| C-27 | hands 只有兩個自由文字槽，仍可被同義詞繞過 | ChatGPT | 🔵 Claude已修正 | 四個漏洞全部屬實。props 改結構化：`id`／`relation`（held_left｜held_right｜held_both｜surface｜worn｜background）／`zone`／`expected_visible`；hands 每槽有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（只能引用 prop id）。新增 spec 層 `laterality=subject_anatomical`（鏡像翻轉前）。8 條 validator 規則 |
-| C-28 | c04 髮型與時間狀態衝突；c05 髮夾雙重真理來源 | ChatGPT | 🔵 Claude已修正 | 兩條屬實。hair_06（剛洗完澡滴水濕髮）只有 c04 在用，動髮型會破壞髮型全覆蓋，因此改 scene 對齊為「剛洗完澡坐在床邊」。outfit_04 首飾「銀色髮夾」與 hair_05 的髮夾是同一物件兩個來源——這正是 C-01 那個病換一對欄位重演，首飾改為手鍊 |
-| C-29 | 8 列的 props／hands 落在 framing 裁切外 | ChatGPT | 🔵 Claude已修正 | 全部屬實，其中 c12 的「月台地上黃線」還是我上一輪自己加的。微物件在裁切外等於對出圖毫無作用。8 列 props 全部換成該景別看得到的物件；c02 改 knee_up（蹲著拆箱本來就讀不到 chest_up）、c05 改為腰線以上的玄關動作。新增 framing→zone 對照表由 validator 反查 |
-| C-30 | c07 練習指模仍是人形手指，且「拿色膠瓶」做不出上膠動作 | ChatGPT | 🔵 Claude已修正 | 兩點屬實。改為左手固定不具人體外形的甲片展示棒、右手拿上膠筆、色卡板移到背景 |
+| C-27 | hands 只有兩個自由文字槽，仍可被同義詞繞過 | ChatGPT | 🟡 待處理（persona #2 gate） | 四個漏洞全部屬實。props 改結構化：`id`／`relation`（held_left｜held_right｜held_both｜surface｜worn｜background）／`zone`／`expected_visible`；hands 每槽有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（只能引用 prop id）。新增 spec 層 `laterality=subject_anatomical`（鏡像翻轉前）。8 條 validator 規則；R8 不同意結案：object_ref／laterality 已封住同義詞與鏡像左右，但 zone 仍是作者自填、background 形同通行證。拆為 C-31／C-32，Nico 不阻擋（人工 20/20 gate 仍能擋），persona #2 前必須完成 |
+| C-28 | c04 髮型與時間狀態衝突；c05 髮夾雙重真理來源 | ChatGPT | 🔵 Claude已修正（R8 再修） | 兩條屬實。hair_06（剛洗完澡滴水濕髮）只有 c04 在用，動髮型會破壞髮型全覆蓋，因此改 scene 對齊為「剛洗完澡坐在床邊」。outfit_04 首飾「銀色髮夾」與 hair_05 的髮夾是同一物件兩個來源——這正是 C-01 那個病換一對欄位重演，首飾改為手鍊；c05 雙髮夾已結；c04 的 expression 殘留另列 C-33，已修 |
+| C-29 | 8 列的 props／hands 落在 framing 裁切外 | ChatGPT | ✅ 結案 | 全部屬實，其中 c12 的「月台地上黃線」還是我上一輪自己加的。微物件在裁切外等於對出圖毫無作用。8 列 props 全部換成該景別看得到的物件；c02 改 knee_up（蹲著拆箱本來就讀不到 chest_up）、c05 改為腰線以上的玄關動作。新增 framing→zone 對照表由 validator 反查；R8 同意結案（內容層）；zone 的通用繞過風險另列 C-31 |
+| C-30 | c07 練習指模仍是人形手指，且「拿色膠瓶」做不出上膠動作 | ChatGPT | ✅ 結案 | 兩點屬實。改為左手固定不具人體外形的甲片展示棒、右手拿上膠筆、色卡板移到背景；R8 同意結案 |
+| C-31 | 作者自填 zone 是新的繞過路徑，background 形同通行證 | ChatGPT | 🟡 待處理（persona #2 gate）| 成立。validator 目前只驗「宣告是否自洽」，驗不了「宣告是否為真」——把裁切外物件改標成 chest 或 background 就會通過。ChatGPT 建議加 `basis`／`frame_region`／held prop 的 zone 由 hand_zone 推導／expected_visible=false 不計入微物件下限。Nico 不阻擋（人工 20/20 gate 仍擋得住），persona #2 前完成 |
+| C-32 | hands 未涵蓋 wardrobe carry state 與「一個 ID 代表多物件」 | ChatGPT | 🟡 待處理（persona #2 gate）| 成立。outfit 自帶的托特／書包／皮革包會占手、肘或肩，但 hands 只引用 props；c11 的 `hand_creams` 一個 id 代表兩罐，在機器上與 c10「雙手抱同一團衣物」長得一樣。需 `carry_relation`、`quantity`／拆 id、`carried_arm` |
+| C-33 | c04 改成洗澡後，expression 仍殘留 just_woken_blank | ChatGPT | 🔵 Claude已修正 | 屬實。**我在修 C-28 的跨欄位矛盾時製造了另一個跨欄位矛盾**——同一類錯第五次。已改 post_shower_calm。連帶把語意覆核改為**逐列 hash**：整份一個 hash 的話，改一列就作廢全部 20 列的核可，覆核與修正會互相打架、永遠收斂不了 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
 **狀態圖例**：⚪ 待對方回應／ChatGPT已回應　🔵 Claude已修正（待對方確認）　🟡 待處理　🔴 有爭議　🟣 需使用者裁決　✅ 結案

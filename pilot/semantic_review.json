@@ -1,1 +1,165 @@
-{"data_hash": "1d5cd90387dac78a", "reviewed_shot_ids": []}
+{
+ "data_hash": "eeefb24eef7968c6",
+ "total_shots": 20,
+ "shot_hashes": {
+  "nico_a01": "9009c79ff7dc",
+  "nico_a02": "925986eead60",
+  "nico_a03": "a5af170879c8",
+  "nico_a04": "7528502ca941",
+  "nico_a05": "cc5d5e8e02a9",
+  "nico_a06": "72cfb7cda02e",
+  "nico_a07": "5ce37fee9aa8",
+  "nico_c01": "f76ead301b5e",
+  "nico_c02": "f302be244680",
+  "nico_c03": "3135370de382",
+  "nico_c04": "4a6326aeec6a",
+  "nico_c05": "4ceb1fc8c7ca",
+  "nico_c06": "98ec559397c5",
+  "nico_c07": "6111a006e0a0",
+  "nico_c08": "8e72e5be7825",
+  "nico_c09": "2d197e3c191a",
+  "nico_c10": "00e8ad7f9e48",
+  "nico_c11": "75b4ca95359c",
+  "nico_c12": "d38996201490",
+  "nico_a08": "4091f47cd339"
+ },
+ "reviewed": {
+  "nico_a01": {
+   "hash": "9009c79ff7dc",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a02": {
+   "hash": "925986eead60",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a03": {
+   "hash": "a5af170879c8",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a04": {
+   "hash": "7528502ca941",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a05": {
+   "hash": "cc5d5e8e02a9",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a06": {
+   "hash": "72cfb7cda02e",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a07": {
+   "hash": "5ce37fee9aa8",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c01": {
+   "hash": "f76ead301b5e",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c02": {
+   "hash": "f302be244680",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c03": {
+   "hash": "3135370de382",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c05": {
+   "hash": "4ceb1fc8c7ca",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c06": {
+   "hash": "98ec559397c5",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c07": {
+   "hash": "6111a006e0a0",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c08": {
+   "hash": "8e72e5be7825",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c09": {
+   "hash": "2d197e3c191a",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c10": {
+   "hash": "00e8ad7f9e48",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c11": {
+   "hash": "75b4ca95359c",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_c12": {
+   "hash": "d38996201490",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  },
+  "nico_a08": {
+   "hash": "4091f47cd339",
+   "by": "ChatGPT R8",
+   "at": "2026-08-29",
+   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+  }
+ },
+ "reviewed_shot_ids": [
+  "nico_a01",
+  "nico_a02",
+  "nico_a03",
+  "nico_a04",
+  "nico_a05",
+  "nico_a06",
+  "nico_a07",
+  "nico_a08",
+  "nico_c01",
+  "nico_c02",
+  "nico_c03",
+  "nico_c05",
+  "nico_c06",
+  "nico_c07",
+  "nico_c08",
+  "nico_c09",
+  "nico_c10",
+  "nico_c11",
+  "nico_c12"
+ ],
+ "_note": "逐列 hash：某一列改過，只有那一列的核可失效，其餘保留（C-33）。",
+ "_signoff_note": "R8 ChatGPT 對 20 列做完九欄語意覆核：19 列判無異議、nico_c04 一列 P0（expression 殘留 just_woken_blank）。c04 已修，其逐列 hash 因此改變，核可未沿用——需 R9 單獨重審這一列。其餘 19 列自 R8 覆核後未曾變動，hash 相符。"
+}

@@ -455,26 +455,32 @@ def validate(pilot, registry, schema=None):
     for k in ('ground_truth','persona_adaptation','scoring_aggregation','replicates'):
         if not tm.get(k): err.append(f"QA threshold_method 缺 {k}（C-08 要求的四項封口）")
 
-    # --- K-01：語意覆核 gate（機器 lint 只是第一關）---
+    # --- K-01 / C-19 / C-33：語意覆核 gate（逐列 hash）---
     import hashlib, os as _os
-    h=hashlib.sha256(json.dumps(shots,ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:16]
+    def _sh(s2):
+        body={k:v for k,v in s2.items() if not k.startswith('_')}
+        return hashlib.sha256(json.dumps(body,ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:12]
     sr_p='pilot/semantic_review.json'
     if not _os.path.exists(sr_p):
         err.append("缺 pilot/semantic_review.json——機器 lint 通過不等於語意正確，"
                    "需先跑 tools/gen_semantic_checklist.py 並完成逐列覆核（K-01）")
     else:
         sr=json.load(open(sr_p,encoding='utf-8'))
-        if sr.get('data_hash')!=h:
-            err.append(f"語意覆核紀錄已過期（紀錄 hash {sr.get('data_hash')} ≠ 現行 {h}）——資料改過就要重審")
-        else:
-            done=set(sr.get('reviewed_shot_ids',[])); allids={x['shot_id'] for x in shots}
-            missing=allids-done
-            if missing:
-                err.append(f"語意覆核未完成：{len(done)}/{len(allids)} 列，"
-                           f"尚未覆核 {sorted(missing)[:5]}{'…' if len(missing)>5 else ''}"
-                           "（C-19：這是生成前的 gate，未達 20/20 一律 HARD FAIL。"
-                           "機器 lint 抓不到物理與語意矛盾——R5 就是在機器全過的狀態下被抓到 4 個。"
-                           "見 pilot/semantic_review.md）")
+        rv=sr.get('reviewed',{})
+        stale=[]; missing=[]
+        for s2 in shots:
+            r=rv.get(s2['shot_id'])
+            if not r: missing.append(s2['shot_id'])
+            elif r.get('hash')!=_sh(s2): stale.append(s2['shot_id'])
+        if stale:
+            err.append(f"這些列改過資料，舊核可已失效，需重審：{sorted(stale)}（C-33 逐列 hash）")
+        if missing:
+            err.append(f"語意覆核未完成：{len(shots)-len(missing)}/{len(shots)} 列，"
+                       f"尚未覆核 {sorted(missing)[:5]}{'…' if len(missing)>5 else ''}"
+                       "（C-19：這是生成前的 gate，未達全數一律 HARD FAIL。"
+                       "機器 lint 抓不到物理與語意矛盾——R5 抓到 4 個、R7 抓到 9 列、"
+                       "R8 又抓到 1 個，全都發生在機器全過的狀態下。"
+                       "見 pilot/semantic_review.md）")
 
     # --- C-21：Phase D 的每個變動都必須被認領 ---
     base={k:v for k,v in pd.get('fixed_baseline',{}).items() if not k.startswith('_')}
