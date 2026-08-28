@@ -715,3 +715,19 @@ Drive 資料夾：https://drive.google.com/drive/folders/12TBocSCqtEhSPgepOjo3yB
 - **R1–R18 + IG1 全部 19 支已完成 Step 1–8**——R1–R18 driver-clone 批次到此全數做完
 - **所有已完成影片的音軌都是驅動片原始配樂，未取得商用授權**，真正要對外發佈前，需統一處理配樂授權
   （見 `DANCE_CLONE_SOP.md` Step 7）
+
+---
+
+## ⚠️ 2026-08-27 起：所有規劃都要經過 ChatGPT 覆核才能執行
+
+Penny 的規則：**不是 Claude 規劃好就直接執行，一定要經過 ChatGPT 覆核通過才繼續。**
+
+工作方式已改成在 GitHub 上直接來回，不再下載 md 檔轉交：
+
+- **主檔**：`review/LEDGER.md`——一張活的議題表，狀態流 🔵 OPEN → 🟡 ANSWERED → 🟢 DONE
+- **協定**：`review/README.md`——雙方各自的編輯規則
+- **歷史**：`review/history/`——R1–R4 的往返，唯讀
+
+**Claude 每次動工前先 `git pull`**（ChatGPT 可能已經改過）；
+拿捏不準或覺得可能有盲點的地方，**當下就往 LEDGER 加一項 🔵**，不要留在腦袋裡；
+**不要自己把 🔵 改成 🟢**——沒有經過判定就執行違反規則。
