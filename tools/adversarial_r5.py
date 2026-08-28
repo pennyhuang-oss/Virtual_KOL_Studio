@@ -78,6 +78,42 @@ case("回歸 C-15 未定義欄位（打字錯誤）", m_typo, "未定義欄位")
 def m_pose(p): shot(p,'nico_c05')['scene']='蹲在地上找東西'
 case("回歸 C-16 scene 與 body_pose 矛盾", m_pose, "body_pose")
 
+# ---- C-21 不變量 3 / C-25（R6 新增）----
+def m_dropfield(p):
+    del dshot(p,'st04')['fixed']['body_pose']       # 靠漏列欄位規避稽核
+case("C-21 不變量3：靠漏列 fixed 欄位規避稽核", m_dropfield, "欄位集與 fixed_baseline 不一致")
+
+def m_burn_seen(p):
+    x=dshot(p,'st06'); x['fixed']['location']='park'   # 訓練集出現 4 次
+    x['primary_test_variable']={'field':'location','value':'park'}
+case("C-25 拿訓練集教過的場景測 no_scene_burn_in", m_burn_seen, "拿教過的場景測烙印")
+
+def m_no_burn(p):
+    for x in p['phase_d_stress_test']['shots']:
+        x['applicable_rubric_items']=[i for i in x['applicable_rubric_items'] if i!='no_scene_burn_in']
+case("C-25 完全沒有 shot 測 no_scene_burn_in", m_no_burn, "沒有任何 stress shot 測 no_scene_burn_in")
+
+# ---- C-23（R6 新增）：props 重複與手部佔用 ----
+def m_dupbag(p):
+    shot(p,'nico_c12')['props']=['結構皮革包','手上的悠遊卡']   # outfit_06 自帶結構皮革包
+case("C-23 props 重述 outfit 已提供的包", m_dupbag, "重述了 outfit 已提供的")
+
+def m_crossbag(p):
+    shot(p,'nico_a06')['props']=['米色帆布托特','手上的保溫瓶']  # 別套的招牌包
+case("C-23 props 借用別套 outfit 的招牌包", m_crossbag, "另一套 outfit 的招牌包")
+
+def m_thirdhand(p):
+    s=shot(p,'nico_c10'); s['props']=['洗衣袋','手上的零錢']     # 雙臂已抱衣物
+case("C-23 第三隻手（props 拿東西但 hands 沒空位）", m_thirdhand, "第三隻手")
+
+def m_selfie_nophone(p):
+    shot(p,'nico_c08')['hands']={'left':'扶著洗手台','right':'拿著修眉刀'}
+case("C-23 自拍卻沒有一隻手拿手機", m_selfie_nophone, "自拍的拍攝裝置必須占掉一隻手")
+
+def m_nohands(p):
+    del shot(p,'nico_c05')['hands']
+case("C-23 缺 hands 欄位", m_nohands, "手部佔用必須明寫")
+
 ok=0
 for name,mut,expect,cr in CASES:
     p=copy.deepcopy(BASE); sd(p, cr); mut(p)

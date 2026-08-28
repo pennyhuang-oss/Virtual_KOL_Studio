@@ -1,6 +1,6 @@
 {
   "persona_id": "nico-tsai",
-  "schema_version": "2.2.0",
+  "schema_version": "2.3.0",
   "status": "planned_not_generated",
   "pilot_rationale": "選 Nico 當第一個 Vertical Slice：短鮑伯＋冷灰奶茶漂色＋C 罩杯纖細，是全批最容易失敗的組合，且 Round 1 已失敗過一次，有前後對照價值。",
   "identity_spec": {
@@ -66,12 +66,12 @@
       "label": "學院感",
       "neckline": "collared button-down, top two buttons open",
       "top": "白色寬版襯衫",
-      "bottom": "黑色百褶短裙",
+      "bottom": "黑色百褶短裙＋灰色及膝襪",
       "shoes": "黑色瑪莉珍鞋",
-      "outer_or_bag": "灰色及膝襪",
+      "outer_or_bag": "深藍色肩背書包",
       "jewelry": "銀色髮夾",
       "body_readable": false,
-      "_note": "寬版襯衫遮軀幹，不可用於 Phase A"
+      "_note": "C-26：原本『包/外套』欄填的是灰色及膝襪——襪子是下身配件，不是包或外套，五層規格等於少了一層。及膝襪併入下身，補真正的肩背包。"
     },
     "nico_outfit_05": {
       "label": "街頭",
@@ -308,7 +308,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "放在桌面上，沒有拿東西",
+        "right": "放在桌面上，沒有拿東西"
+      }
     },
     {
       "shot_id": "nico_a02",
@@ -356,7 +360,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "放在桌面上，沒有拿東西",
+        "right": "放在桌面上，沒有拿東西"
+      }
     },
     {
       "shot_id": "nico_a03",
@@ -367,8 +375,8 @@
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_02",
       "props": [
-        "深棕小方包",
-        "手上的外帶杯"
+        "手上的外帶杯",
+        "路邊停放的機車後照鏡"
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -405,7 +413,11 @@
       "filter": "none",
       "signature_family": null,
       "career_related": false,
-      "_note": "專為 Nico 的右側 identity marker（右鼻翼小痣）而設：右側、高解析、無遮擋、乾淨光線"
+      "_note": "專為 Nico 的右側 identity marker（右鼻翼小痣）而設：右側、高解析、無遮擋、乾淨光線",
+      "hands": {
+        "left": "自然垂在身側",
+        "right": "拿著外帶杯"
+      }
     },
     {
       "shot_id": "nico_a04",
@@ -416,8 +428,8 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_01",
       "props": [
-        "深棕小方包",
-        "手上的外帶杯"
+        "手上的外帶杯",
+        "騎樓柱子上的租屋紅單"
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -453,7 +465,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "自然垂在身側",
+        "right": "拿著外帶杯"
+      }
     },
     {
       "shot_id": "nico_a05",
@@ -464,8 +480,8 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_02",
       "props": [
-        "米色帆布托特",
-        "手邊的保溫瓶"
+        "手邊的保溫瓶",
+        "長椅扶手上的落葉"
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -501,7 +517,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "撐在長椅椅面上",
+        "right": "放在膝上，旁邊是保溫瓶"
+      }
     },
     {
       "shot_id": "nico_a06",
@@ -512,8 +532,8 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_01",
       "props": [
-        "深棕小方包",
-        "手上的保溫瓶"
+        "手上的保溫瓶",
+        "步道旁的黃色分隔柱"
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -550,7 +570,11 @@
       "filter": "none",
       "signature_family": null,
       "career_related": false,
-      "_note": "第二張 body-readable 全身。ChatGPT 指出原本只有 c06 一張乾淨身材證據。"
+      "_note": "第二張 body-readable 全身。ChatGPT 指出原本只有 c06 一張乾淨身材證據。",
+      "hands": {
+        "left": "自然垂在身側",
+        "right": "拿著保溫瓶"
+      }
     },
     {
       "shot_id": "nico_a07",
@@ -561,8 +585,8 @@
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_04",
       "props": [
-        "米色帆布托特",
-        "手上的保溫瓶"
+        "手上的保溫瓶",
+        "步道邊的鐵製垃圾桶"
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -598,7 +622,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "自然垂在身側",
+        "right": "拿著保溫瓶"
+      }
     },
     {
       "shot_id": "nico_c01",
@@ -647,7 +675,11 @@
       },
       "filter": "none",
       "signature_family": "nail_studio",
-      "career_related": true
+      "career_related": true,
+      "hands": {
+        "left": "搭在椅背上",
+        "right": "放在大腿上"
+      }
     },
     {
       "shot_id": "nico_c02",
@@ -695,7 +727,11 @@
       },
       "filter": "none",
       "signature_family": "nail_studio",
-      "career_related": true
+      "career_related": true,
+      "hands": {
+        "left": "扶著紙箱邊緣",
+        "right": "拿著美工刀"
+      }
     },
     {
       "shot_id": "nico_c03",
@@ -743,13 +779,17 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "手肘擱在桌沿，手掌鬆開",
+        "right": "放在膝上"
+      }
     },
     {
       "shot_id": "nico_c04",
       "purpose": "identity_core",
       "pillar": "私下 / 剛醒",
-      "scene": "床邊坐著，剛醒還沒站起來，低頭看手機",
+      "scene": "剛醒坐在床邊還沒站起來，舉起手機直視鏡頭",
       "location": "own_bedroom",
       "outfit_id": "nico_outfit_08",
       "hair_id": "nico_hair_06",
@@ -792,7 +832,11 @@
       "filter": "none",
       "signature_family": null,
       "career_related": false,
-      "_r5_note": "C-20.2：ChatGPT 主張『看螢幕』與『看鏡頭』是兩個視線目標——這對前鏡頭自拍不成立，前鏡頭與螢幕同一個平面，低頭看螢幕就是看鏡頭，view=selfie_front + eye_gaze=camera + head_pitch=down_15 三者一致。但原本 props 列了『手機』：手機是拍攝裝置，不該同時當入鏡道具（否則畫面裡會出現第二支手機）。已移除。"
+      "_r5_note": "C-20（R6 裁決）：ChatGPT 堅持『看螢幕』與『看鏡頭』對生圖是兩個不同指令（`looking at phone screen` vs `looking directly into the camera`），前鏡頭在螢幕上緣，幾公分的差距對真人可忽略、對模型不可。這一點成立——我原本是用物理去辯，但送進模型的是文字。這是 identity_core 錨點，視線精度優先，因此保留 eye_gaze=camera，改寫 scene 消除歧義。",
+      "hands": {
+        "left": "舉著手機（拍攝裝置）",
+        "right": "撐在床沿"
+      }
     },
     {
       "shot_id": "nico_c05",
@@ -803,8 +847,8 @@
       "outfit_id": "nico_outfit_04",
       "hair_id": "nico_hair_05",
       "props": [
-        "深棕小方包",
-        "門邊的鑰匙圈"
+        "門邊的鑰匙圈",
+        "地上待收的紙箱"
       ],
       "framing": "knee_up",
       "view": "third_person",
@@ -840,7 +884,12 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "_r6_note": "C-23 連帶：c05 用 outfit_04，props 卻列了 outfit_03 的『深棕小方包』——畫面會出現兩個包。這正是 C-23 說的：props 沒被揭露，沒人有機會抓到。",
+      "hands": {
+        "left": "扶著牆",
+        "right": "伸向腳邊的鞋"
+      }
     },
     {
       "shot_id": "nico_c06",
@@ -851,8 +900,8 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_05",
       "props": [
-        "深棕小方包",
-        "手上的手搖杯"
+        "手上的手搖杯",
+        "巷口的電表箱"
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -888,7 +937,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "自然擺動",
+        "right": "拿著手搖杯"
+      }
     },
     {
       "shot_id": "nico_c07",
@@ -900,7 +953,7 @@
       "hair_id": "nico_hair_03",
       "props": [
         "色膠瓶",
-        "客人的手"
+        "桌上固定的練習指模"
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -936,7 +989,12 @@
       },
       "filter": "none",
       "signature_family": "nail_studio",
-      "career_related": true
+      "career_related": true,
+      "_r6_note": "C-23 連帶：原本 props 有『客人的手』——訓練集裡不該出現第二個人的身體部位，模型有機會把它學進 identity。改為美甲師真實會用的練習指模，場景仍成立且畫面中只有她一個人。",
+      "hands": {
+        "left": "扶著練習指模",
+        "right": "拿著色膠瓶"
+      }
     },
     {
       "shot_id": "nico_c08",
@@ -985,7 +1043,11 @@
       "filter": "none",
       "signature_family": null,
       "career_related": false,
-      "_r5_note": "C-20.3：原寫『修眉』＋『另一手撐著洗手台』＋鏡面自拍需持機 = 三隻手。移除撐洗手台，body_pose 隨之由 leaning 改為 standing。"
+      "_r5_note": "C-20.3：原寫『修眉』＋『另一手撐著洗手台』＋鏡面自拍需持機 = 三隻手。移除撐洗手台，body_pose 隨之由 leaning 改為 standing。",
+      "hands": {
+        "left": "舉著手機對鏡子（拍攝裝置）",
+        "right": "拿著修眉刀靠近眉尾"
+      }
     },
     {
       "shot_id": "nico_c09",
@@ -1033,7 +1095,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "扶著雜誌架下層",
+        "right": "拿著飯糰"
+      }
     },
     {
       "shot_id": "nico_c10",
@@ -1045,7 +1111,7 @@
       "hair_id": "nico_hair_04",
       "props": [
         "洗衣袋",
-        "手上的零錢"
+        "機台上的零錢盤"
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -1081,7 +1147,12 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "_r6_note": "C-23 連帶：原本 props 有『手上的零錢』，但 scene 已用雙臂抱衣物——第三隻手。零錢改為機台上的零錢盤（畫面內、不占手）。",
+      "hands": {
+        "left": "與另一手一起抱著烘好的衣物",
+        "right": "與另一手一起抱著烘好的衣物"
+      }
     },
     {
       "shot_id": "nico_c11",
@@ -1093,7 +1164,7 @@
       "hair_id": "nico_hair_05",
       "props": [
         "兩罐護手霜",
-        "購物籃"
+        "掛在手肘的購物籃"
       ],
       "framing": "knee_up",
       "view": "third_person",
@@ -1129,7 +1200,12 @@
       },
       "filter": "ccd",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "_r6_note": "C-23 連帶：兩罐護手霜比較成分已占雙手，購物籃改為明寫掛在手肘。",
+      "hands": {
+        "left": "拿著一罐護手霜，手肘掛著購物籃",
+        "right": "拿著另一罐護手霜"
+      }
     },
     {
       "shot_id": "nico_c12",
@@ -1140,8 +1216,8 @@
       "outfit_id": "nico_outfit_06",
       "hair_id": "nico_hair_04",
       "props": [
-        "結構皮革包",
-        "手上的悠遊卡"
+        "手上的悠遊卡",
+        "月台地上的候車排隊黃線"
       ],
       "framing": "waist_up",
       "view": "third_person",
@@ -1162,9 +1238,10 @@
         "bounce": "磨石子地面把光微弱地反射回來",
         "bounce_type": "diffuse",
         "secondary_source": "月台廣告燈箱的暖白光從她身後平平地打在肩線上",
-        "exposure_choice": "對臉測光，車頭燈那側過曝，月台深處壓黑",
+        "exposure_choice": "對臉測光，廣告燈箱那側的肩線略過曝，月台深處壓黑",
         "occlusion": null,
-        "_r5_note": "C-22：原本的『列車進站時車頭燈從右側掃過』是動態戲劇光，加上 CCD 濾鏡會把月台拍成電影感街拍，抵銷 C 級『完全不美』的用意。改為靜態的廣告燈箱光，仍是冷白＋暖白混光，L3 家族不變。"
+        "_r5_note": "C-22：原本的『列車進站時車頭燈從右側掃過』是動態戲劇光，加上 CCD 濾鏡會把月台拍成電影感街拍，抵銷 C 級『完全不美』的用意。改為靜態的廣告燈箱光，仍是冷白＋暖白混光，L3 家族不變。",
+        "_r6_note": "C-24：R5 改掉 secondary_source 的車頭燈時，exposure_choice 還寫著『車頭燈那側過曝』——改一欄沒同步另一欄，又是同一類錯，而且就發生在準備送進訓練集的 prompt 上。"
       },
       "imperfection_profile": {
         "composition": "off_center",
@@ -1178,7 +1255,11 @@
       },
       "filter": "none",
       "signature_family": null,
-      "career_related": false
+      "career_related": false,
+      "hands": {
+        "left": "自然垂在身側",
+        "right": "拿著悠遊卡"
+      }
     },
     {
       "shot_id": "nico_a08",
@@ -1189,8 +1270,8 @@
       "outfit_id": "nico_outfit_02",
       "hair_id": "nico_hair_02",
       "props": [
-        "肩上的薄針織開襟外套",
-        "手上的保溫瓶"
+        "手上的保溫瓶",
+        "步道旁的木製長椅"
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -1227,7 +1308,11 @@
       "filter": "none",
       "signature_family": null,
       "career_related": false,
-      "_note": "K-04：補 profile_right（原本完全沒有）＋使用尚未進訓練集的 body-readable outfit_02＋中性外部 B 場景。同時消除 19/20 的 endpoint 歧義。"
+      "_note": "K-04：補 profile_right（原本完全沒有）＋使用尚未進訓練集的 body-readable outfit_02＋中性外部 B 場景。同時消除 19/20 的 endpoint 歧義。",
+      "hands": {
+        "left": "自然垂在身側",
+        "right": "拿著保溫瓶"
+      }
     }
   ],
   "phase_d_stress_test": {
@@ -1494,7 +1579,7 @@
       {
         "id": "st06",
         "test_variable": "location = park",
-        "expected_invariant": "換到戶外自然光後臉與膚色不漂",
+        "expected_invariant": "換到訓練集沒出現過的戶外場景後，臉與膚色不漂、且不冒出訓練場景的背景",
         "applicable_rubric_items": [
           "skin_tone",
           "environment_independence",
@@ -1505,7 +1590,7 @@
           "head_yaw": "front",
           "outfit_id": "nico_outfit_01",
           "hair_id": "nico_hair_01",
-          "location": "park",
+          "location": "bus_stop",
           "light_family": "L6_soft_overcast",
           "filter": "none",
           "camera": {
@@ -1520,7 +1605,7 @@
         "depends_on": null,
         "primary_test_variable": {
           "field": "location",
-          "value": "park"
+          "value": "bus_stop"
         },
         "required_measurement_changes": {
           "light_family": "戶外不可能維持室內窗光——換場景必然換光源，這是物理強制的",
@@ -1534,7 +1619,8 @@
           "head_yaw",
           "light_direction",
           "outfit_id"
-        ]
+        ],
+        "_r6_note": "C-25：原本 location=park，但 Phase C 已有 park×4 且全是 clean anchor——拿訓練集教過最多次的場景去測『固定背景烙印』，檢出力等於零。改為 bus_stop：訓練集未出現、C 級、戶外，L6 散射光的理由不變。"
       },
       {
         "id": "st07",
@@ -1822,7 +1908,8 @@
     },
     "seed_policy": "st00–st05 與 st10 各跑 3 次 replicate（平台若支援固定 seed 則固定，否則以重複樣本取代）。單張輸出無法區分 soul 品質與抽樣波動——這是 C-08 第 4 點的要求。",
     "_known_risk_note": "C-07：原本這裡內嵌了『家 5 張 + 工作室 3 張 = 8/19（42%）、7 張 clean anchor』這組人工抄寫的數字，資料改過之後就成了舊值。所有 home/work 集中度與 anchor 數一律由 tools/gen_review_file.py 現算、由 validator 反算比對，本檔不再內嵌。",
-    "_c21_note": "C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，實際上 st05/st06/st07/st08/st08b/st10 都同時改了 framing、location 或 light。這些改動多數是「不改就量不到」的必要條件，問題不在改動本身而在沒有申報。改為三欄拆分：primary_test_variable（被測維度）／required_measurement_changes（為了讀得到被測維度而必須連動的欄位＋理由）／held_constant_fields（真正固定的欄位）。validator 會反算稽核。"
+    "_c21_note": "C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，實際上 st05/st06/st07/st08/st08b/st10 都同時改了 framing、location 或 light。這些改動多數是「不改就量不到」的必要條件，問題不在改動本身而在沒有申報。改為三欄拆分：primary_test_variable（被測維度）／required_measurement_changes（為了讀得到被測維度而必須連動的欄位＋理由）／held_constant_fields（真正固定的欄位）。validator 會反算稽核。",
+    "_c25_note": "C-25：適用 no_scene_burn_in 的 stress shot 必須用訓練集沒出現過的 location，否則測不到烙印。已加入 validator 反查。"
   },
   "soul_qa_rubric": {
     "_scale": "每項 0–2 分。0=明顯失敗，1=輕微漂移，2=穩定。",
@@ -1896,5 +1983,6 @@
     "note": "公開 Help Center 的 Soul ID flow 寫 minimum 20，那是 Web UI 規格，與本專案使用的 API endpoint 不同。repo 歷史一致：rainie-hsu v2 以本工具送 13 張成功訓練。",
     "decision": "13 張在合法範圍內，但既然上限是 20，選擇用掉這個 headroom 補足身分證據缺口——不是被規格逼的，是為了修 ChatGPT §9–§11 指出的真實缺口。"
   },
-  "signature_family_key": "nail_studio"
+  "signature_family_key": "nail_studio",
+  "_c23_note": "C-23：覆核檔沒有揭露 props，導致九欄語意 gate 無法完成。補上 props 表之後，當場看見 8 列 props 重述了 outfit 已提供的包/外套或借用別套的招牌包、c10 有第三隻手、c07 把『客人的手』放進訓練集。新增 hands 欄位（left/right 兩個槽位），把手部佔用從推論改成明寫，validator 直接稽核——這一類錯（c08、c10）就再也不靠人眼抓。"
 }

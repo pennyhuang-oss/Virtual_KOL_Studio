@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-28　|　**R5 全部 13 條判定已處理（8 條結案、5 條再修）＋ 4 條新議題已修，待 R6 覆核**
+> 最後更新：2026-08-28　|　**R6 全部判定已處理（8 條結案、1 條再修）＋ 4 條新議題已修，待 R7 覆核**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -15,7 +15,8 @@
 | R3 | Claude | 訓練集重構 7 anchor + 12 lifestyle | [`rounds/R3_nico_pilot_claude.md`](rounds/R3_nico_pilot_claude.md) |
 | R4 | ChatGPT | 已覆核，11 條已處理 | 記於本帳本 |
 | R5 | ChatGPT | 8 結案 / 5 不同意 / 4 條新議題（C-19–C-22）| [`rounds/R5_chatgpt.md`](rounds/R5_chatgpt.md) |
-| **R6** | **ChatGPT** | **待覆核** | [`REVIEW.md`](REVIEW.md) |
+| R6 | ChatGPT | 8 結案 / 1 不同意 / 4 條新議題（C-23–C-26）| [`rounds/R6_chatgpt.md`](rounds/R6_chatgpt.md) |
+| **R7** | **ChatGPT** | **待覆核（含真正的 20/20 九欄語意覆核）** | [`REVIEW.md`](REVIEW.md) |
 
 ---
 
@@ -31,8 +32,8 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-04 | Phase A 假設 4 次呼叫是同一人 | ChatGPT | ✅ 結案 | 改為 4 個候選 identity |
 | C-05 | 訓練集 harsh light 比例過高（L1 5/13）| ChatGPT | ✅ 結案 | 實算確認 3/19（15.8%）；極端下打光已移到 Phase D |
 | C-06 | 只有 1 張乾淨全身 / 1 張乾淨臉部特寫 / 0 張乾淨右側 | ChatGPT | ✅ 結案 | 依 validator 的 clean 定義實算確認為 3 / 2 / 2 |
-| C-07 | 覆核包統計與 JSON 漂移 | ChatGPT | 🔵 Claude已修正（R5 再修） | 移除人工宣告的 `dominant_training_outfit`；validator 反算 `structure`／`shots` 宣告值，並禁止內嵌衍生統計；R5 抓到 `phase_d.known_risk` 與 rubric `cost` 仍是手寫舊值（8/19、42%、7 anchors、2×13=26）。已從 JSON 移除，改由 gen_review_file 與 §5-6 同源現算；render 預算亦改現算 |
-| C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | 🔵 Claude已修正（R5 再修） | 四項封口全補：ground_truth 對 persona 目標評分（非 soul 自洽）、persona-adapted 等價測項、最低分制聚合、st00–st05/st10 各 3 replicate；成本字串已移除改現算；單一變量問題已隨 C-21 一併修正 |
+| C-07 | 覆核包統計與 JSON 漂移 | ChatGPT | ✅ 結案 | 移除人工宣告的 `dominant_training_outfit`；validator 反算 `structure`／`shots` 宣告值，並禁止內嵌衍生統計；R5 抓到 `phase_d.known_risk` 與 rubric `cost` 仍是手寫舊值（8/19、42%、7 anchors、2×13=26）。已從 JSON 移除，改由 gen_review_file 與 §5-6 同源現算；render 預算亦改現算；R6 同意結案 |
+| C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | ✅ 結案 | 四項封口全補：ground_truth 對 persona 目標評分（非 soul 自洽）、persona-adapted 等價測項、最低分制聚合、st00–st05/st10 各 3 replicate；成本字串已移除改現算；單一變量問題已隨 C-21 一併修正；R6 同意結案（場景測試充分性另列 C-25） |
 | C-09 | validator 沒驗 Phase A / B / D | ChatGPT | ✅ 結案 | A 四候選必須固定 10 個欄位且 varies_only=identity；B2 必須真的換場景/穿搭/髮型/光線；D 驗 fixed、rubric item 存在性、depends_on 指向、rubric 全覆蓋；R5 ChatGPT 同意結案（語意層另由 K-01/C-19 處理） |
 | C-10 | signature_family / career_related 是人工 label | ChatGPT | ✅ 結案 | Nico 現有 19 列推導值均一致；override 的縮放缺口另列 C-18 |
 | C-11 | 覆核包沒附 registry，validator 無法重現 | ChatGPT | ✅ 結案 | 改用 GitHub 直讀，此問題消失 |
@@ -41,18 +42,22 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-14 | 19 位只是文件上凍結，沒有機制阻擋 | ChatGPT | ✅ 結案 | v1 資料標 `blocked_pending_v2_pilot`，v1 validator HARD FAIL exit 2；另建 `pilot/v1_known_issues_report.json`；R5 ChatGPT 同意結案 |
 | C-15 | `schema_v2.json` 未被實際執行，validator 可放過非法 enum / 空 props | ChatGPT | ✅ 結案 | schema v2.1 補頂層 + `$ref` 綁 shots + shot_id 唯一性 + additionalProperties；validator 從頂層驗。對抗測試 7/7 抓到；R5 ChatGPT 同意結案 |
 | C-16 | clean anchors `nico_a01` / `nico_a02` 的 scene 與 body_pose 衝突 | ChatGPT | ✅ 結案 | a01/a02 body_pose 改 seated；新增姿態衝突檢查，且在後續改動中又抓到 c03；R5 ChatGPT 同意結案（新語意矛盾另列 C-20） |
-| C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | 🔵 Claude已修正（R5 再修） | Phase D 改結構化單一變量：每 shot 有 test_variable / expected_invariant / applicable_rubric_items / fixed / replicates / depends_on；Phase D 改三欄拆分：primary_test_variable／required_measurement_changes／held_constant_fields，validator 反算稽核 |
+| C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | ✅ 結案 | Phase D 改結構化單一變量：每 shot 有 test_variable / expected_invariant / applicable_rubric_items / fixed / replicates / depends_on；Phase D 改三欄拆分：primary_test_variable／required_measurement_changes／held_constant_fields，validator 反算稽核；R6 同意結案 |
 | C-18 | label override 可繞過 registry 推導並壓低 quota 計數 | ChatGPT | ✅ 結案 | signature 與 career 各自獨立 override reason；quota 一律以 effective value 計算；R5 ChatGPT 同意結案 |
-| K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | 🔵 Claude已修正（R5 再修） | 新增 `tools/gen_semantic_checklist.py` 逐列覆核清單 + hash 新鮮度 gate，資料一改舊核可自動失效；C-19：語意覆核未達 20/20 由 warning 改為 HARD FAIL（exit 1） |
+| K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | ✅ 結案 | 新增 `tools/gen_semantic_checklist.py` 逐列覆核清單 + hash 新鮮度 gate，資料一改舊核可自動失效；C-19：語意覆核未達 20/20 由 warning 改為 HARD FAIL（exit 1）；R6 同意結案（機制層） |
 | K-02 | `nico_outfit_01` 佔 7/19（37%），比 R2 被指出的 30.8% 更高 | Claude | ✅ 結案 | 拆掉工作室三張的四重綁定（c01→outfit_08/hair_01、c02→outfit_06/hair_04）；最高佔比降到 5/20=25%，共 8 種；R5 ChatGPT 同意結案 |
 | K-03 | 家＋工作室仍佔 42%，但 anchor 全在外面 | Claude | ✅ 結案 | c03→早餐店、c09→超商；全體 30%、lifestyle 子集 50%；validator 加雙層比例上限與三重固定組合檢查；R5 ChatGPT 同意結案（舊風險文字已依 C-07 改為現算） |
-| K-04 | 19 張是否應補滿 20 | Claude | 🔵 Claude已修正（R5 再修） | 新增第 20 張 `nico_a08`：profile_right + outfit_02（未用過）+ 公園中性外部 B；outfit_02 的「赤腳」與「脫下搭在椅背」是場景狀態不是衣服定義，已移出衣櫃 |
+| K-04 | 19 張是否應補滿 20 | Claude | ✅ 結案 | 新增第 20 張 `nico_a08`：profile_right + outfit_02（未用過）+ 公園中性外部 B；outfit_02 的「赤腳」與「脫下搭在椅背」是場景狀態不是衣服定義，已移出衣櫃；R6 同意結案 |
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | ChatGPT 同意延後，但列為 persona #2 的前置 gate |
 | U-02 | ChatGPT 讀 GitHub 一次燒光 5 小時用量 | Claude | ✅ 結案 | 協定改為自帶內容的覆核請求（`tools/gen_review_request.py`），ChatGPT 不 fetch，只讀訊息本身 |
-| C-19 | 語意覆核 0/20 卻仍 exit 0 放行 | ChatGPT | 🔵 Claude已修正 | 實測確認：舊版印「⚠ 語意覆核未完成」後仍印「✓ 全數通過」且 exit=0。已改為 HARD FAIL exit 1；對抗測試確認會擋 |
-| C-20 | Phase C 四個物理／結構矛盾 | ChatGPT | 🔵 Claude已修正（3 條）／🔴 有爭議（1 條）| c01 鐵門遮住的正是落地窗→改側面高窗；c08 修眉＋撐洗手台＋持機＝三隻手→移除撐洗手台且 pose 改 standing；a08/outfit_02 見 K-04。**c04 不同意**：前鏡頭與螢幕同一平面，低頭看螢幕就是看鏡頭，selfie_front + eye_gaze=camera + down_15 三者一致；真正的問題是 props 把手機列為入鏡道具，已移除 |
-| C-21 | Phase D 並非真正單一變量，render 數算錯 | ChatGPT | 🔵 Claude已修正 | 逐條實測全部屬實，且比指出的更嚴重：st08b 宣稱測下打光但 camera 與基準完全相同、light_family 寫成 L4，被測的東西沒有編碼進任何欄位。新增 light_direction 欄位與 L9_screen_only_uplight。改三欄拆分後 validator 反算稽核，又自行抓到 st05 同病與 fixed_baseline 漏了 4 個欄位。render 預算改現算 |
-| C-22 | C 級場景被 cinematic treatment 抵銷 | ChatGPT | 🔵 Claude已修正（1 條）／🔴 有爭議（1 條）| c12 的「列車頭燈掃過」是動態戲劇光＋CCD，已改靜態廣告燈箱光且 filter 改 none。新增 validator 規則：C 級不得同時有濾鏡與動態光源，且帶濾鏡的 C 級不得超過 1/3。**c03 不同意改**：filter=none，門口晨光＋不鏽鋼反射＋天花板冷白燈管正是真實早餐店的混光，沒有風格化處理 |
+| C-19 | 語意覆核 0/20 卻仍 exit 0 放行 | ChatGPT | ✅ 結案 | 實測確認：舊版印「⚠ 語意覆核未完成」後仍印「✓ 全數通過」且 exit=0。已改為 HARD FAIL exit 1；對抗測試確認會擋；R6 同意結案 |
+| C-20 | Phase C 四個物理／結構矛盾 | ChatGPT | 🔵 Claude已修正 | c01 鐵門遮住的正是落地窗→改側面高窗；c08 修眉＋撐洗手台＋持機＝三隻手→移除撐洗手台且 pose 改 standing；a08/outfit_02 見 K-04。**c04 不同意**：前鏡頭與螢幕同一平面，低頭看螢幕就是看鏡頭，selfie_front + eye_gaze=camera + down_15 三者一致；真正的問題是 props 把手機列為入鏡道具，已移除；R6 裁決：c04 接受 ChatGPT——送進模型的是文字，`looking at phone screen` 與 `looking into the camera` 是兩個指令。保留 eye_gaze=camera，scene 改為「舉起手機直視鏡頭」 |
+| C-21 | Phase D 並非真正單一變量，render 數算錯 | ChatGPT | ✅ 結案 | 逐條實測全部屬實，且比指出的更嚴重：st08b 宣稱測下打光但 camera 與基準完全相同、light_family 寫成 L4，被測的東西沒有編碼進任何欄位。新增 light_direction 欄位與 L9_screen_only_uplight。改三欄拆分後 validator 反算稽核，又自行抓到 st05 同病與 fixed_baseline 漏了 4 個欄位。render 預算改現算；R6 同意結案，並確認三個不變量；不變量 3（欄位全集反算）已於本輪補上機器檢查 |
+| C-22 | C 級場景被 cinematic treatment 抵銷 | ChatGPT | ✅ 結案 | c12 的「列車頭燈掃過」是動態戲劇光＋CCD，已改靜態廣告燈箱光且 filter 改 none。新增 validator 規則：C 級不得同時有濾鏡與動態光源，且帶濾鏡的 C 級不得超過 1/3。**c03 不同意改**：filter=none，門口晨光＋不鏽鋼反射＋天花板冷白燈管正是真實早餐店的混光，沒有風格化處理；R6 同意結案（c03 維持不改） |
+| C-23 | 覆核檔沒揭露 props，九欄語意 gate 無法完成 | ChatGPT | 🔵 Claude已修正 | 屬實，是我自己挖的坑：§8 要求逐列判斷 props，生成器卻從未輸出。補上 §5-5b props 表後**當場又看到三類新錯**：8 列 props 重述 outfit 已提供的包或借用別套招牌包（a03–a08、c06、c12）、c10 抱衣物還多一隻手拿零錢、c07 把「客人的手」放進訓練集。新增 `hands`（left/right 兩槽位）欄位＋4 條 validator 規則 |
+| C-24 | c12 刪掉車頭燈後 exposure_choice 仍寫「車頭燈那側過曝」 | ChatGPT | 🔵 Claude已修正 | 屬實。改一欄沒同步另一欄，第三次犯同一類錯，且就發生在要送進訓練集的 prompt 上。已改為廣告燈箱側肩線略過曝 |
+| C-25 | st06 拿訓練集出現 4 次的 park 測 no_scene_burn_in | ChatGPT | 🔵 Claude已修正 | 屬實，檢出力等於零。改為 bus_stop（訓練集未出現、C 級、戶外，L6 理由不變）。新增 validator 規則：測 no_scene_burn_in 的 shot 必須用訓練集沒出現過的 location |
+| C-26 | outfit_04 的「包/外套」欄填的是及膝襪 | ChatGPT | 🔵 Claude已修正 | 屬實，五層等於少一層。及膝襪併入下身，補深藍色肩背書包。連帶發現 c05 的 props 借用了 outfit_03 的小方包 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
 **狀態圖例**：⚪ 待對方回應／ChatGPT已回應　🔵 Claude已修正（待對方確認）　🟡 待處理　🔴 有爭議　🟣 需使用者裁決　✅ 結案

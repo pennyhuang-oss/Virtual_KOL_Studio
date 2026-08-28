@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Shoot Plan Schema v2 — named-object 版",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "changelog": "v1 用 positional array，欄位靠位置辨識、容易 off-by-one，且 scene 自然語言會偷偷覆寫 outfit/hair。v2 改為 named object，並拆出身分覆蓋欄位與五段式光線欄位。 ｜ v2.1（C-15）：補上頂層 schema，用 $ref 把 phase_c_shots.items 綁到 #/definitions/shot，並加上 shot_id 唯一性與 additionalProperties 策略。先前只有 definitions.shot、頂層沒有連過去，所以即使另跑一般 JSON Schema validator 也不會驗整份 pilot。",
   "single_source_of_truth": {
     "outfit": "只能由 outfit_id 決定。scene 內禁止出現任何服裝單品名詞。",
@@ -13,26 +13,27 @@
     "shot": {
       "type": "object",
       "required": [
-        "shot_id",
-        "purpose",
-        "pillar",
-        "scene",
-        "location",
-        "outfit_id",
-        "hair_id",
-        "framing",
-        "view",
-        "head_yaw",
-        "head_pitch",
+        "body_pose",
+        "camera",
+        "career_related",
         "expression",
         "eye_gaze",
-        "body_pose",
         "face_visibility",
-        "camera",
-        "light",
         "filter",
+        "framing",
+        "hair_id",
+        "hands",
+        "head_pitch",
+        "head_yaw",
+        "light",
+        "location",
+        "outfit_id",
+        "pillar",
+        "purpose",
+        "scene",
+        "shot_id",
         "signature_family",
-        "career_related"
+        "view"
       ],
       "properties": {
         "shot_id": {
@@ -322,6 +323,22 @@
             "null"
           ],
           "description": "C-18：career_related 偏離 registry 推導時的理由。"
+        },
+        "hands": {
+          "type": "object",
+          "required": [
+            "left",
+            "right"
+          ],
+          "properties": {
+            "left": {
+              "type": "string"
+            },
+            "right": {
+              "type": "string"
+            }
+          },
+          "description": "兩個槽位。人只有兩隻手——把手部佔用從 scene/props 推論改成明寫，才稽核得動（C-23）。"
         }
       }
     },

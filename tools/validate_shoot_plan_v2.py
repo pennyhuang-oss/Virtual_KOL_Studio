@@ -162,6 +162,37 @@ def validate(pilot, registry, schema=None):
         if s['framing']=='full_body' and s['camera']['depth_of_field']=='shallow':
             err.append(f"{s['shot_id']} full_body 不可用 shallow DOF（身體輪廓會糊）")
 
+    # --- C-23：props 不得重述 outfit 已提供的物件，手部佔用必須明寫且不超過兩隻 ---
+    ALLBAGS={o.get('outer_or_bag') for o in outfits.values()} - {'無','（連身）',None,''}
+    HANDW=re.compile(r'((?<!扶)手上|手裡|拿著|舉著|提著|捧著|握著)')  # 『扶手上』不是拿在手上
+    for s in shots:
+        o=outfits[s['outfit_id']]
+        own={x for x in (o.get('outer_or_bag'),o.get('jewelry')) if x and x!='無'}
+        for pr in s['props']:
+            for b in own:
+                if b in pr or pr in b:
+                    err.append(f"{s['shot_id']} props『{pr}』重述了 outfit 已提供的『{b}』"
+                               f"——同一個物件會被生成兩次（C-23）")
+            for b in ALLBAGS-own:
+                if b in pr or pr in b:
+                    err.append(f"{s['shot_id']} props『{pr}』是另一套 outfit 的招牌包/外套『{b}』"
+                               f"——畫面會同時出現兩個包（C-23）")
+        h=s.get('hands')
+        if not isinstance(h,dict) or not h.get('left') or not h.get('right'):
+            err.append(f"{s['shot_id']} 缺 hands.left / hands.right——手部佔用必須明寫（C-23）"); continue
+        slots=f"{h['left']}｜{h['right']}"
+        if s['view'] in ('selfie_front','selfie_mirror') and '手機' not in slots:
+            err.append(f"{s['shot_id']} 是 {s['view']}，但兩隻手都沒有拿手機"
+                       f"——自拍的拍攝裝置必須占掉一隻手（C-23）")
+        if s['view'] not in ('selfie_front','selfie_mirror') and '拍攝裝置' in slots:
+            err.append(f"{s['shot_id']} 不是自拍，手上卻標了拍攝裝置")
+        for pr in s['props']:
+            if HANDW.search(pr):
+                core=HANDW.sub('',pr).strip('的 ')
+                if core and core not in slots:
+                    err.append(f"{s['shot_id']} props『{pr}』寫成拿在手上，"
+                               f"但 hands 兩個槽位都沒有它——不是被漏掉，就是第三隻手（C-23）")
+
     # --- 地點層級由 registry 決定 ---
     tiers=[]
     for s in shots:
@@ -412,6 +443,10 @@ def validate(pilot, registry, schema=None):
             err.append(f"Phase D {x['id']} 缺 primary_test_variable（C-21）"); continue
         if not isinstance(rmc,dict):
             err.append(f"Phase D {x['id']} 的 required_measurement_changes 必須是 欄位→理由 的物件"); continue
+        if set(fx)!=set(base):
+            err.append(f"Phase D {x['id']} 的 fixed 欄位集與 fixed_baseline 不一致"
+                       f"（多 {sorted(set(fx)-set(base))}／少 {sorted(set(base)-set(fx))}）"
+                       f"——漏列欄位就能規避稽核，故欄位全集必須相同（C-21 不變量 3）")
         diff={k for k in set(base)|set(fx) if base.get(k)!=fx.get(k)}
         claimed=set(rmc)|({prim['field']} if prim else set())
         unclaimed=diff-claimed
@@ -432,6 +467,16 @@ def validate(pilot, registry, schema=None):
             err.append(f"Phase D {x['id']} 的 held_constant_fields 含有正在變動的欄位 {sorted(hc&claimed)}")
         if set(fx)-hc-claimed:
             err.append(f"Phase D {x['id']} 的 held_constant_fields 沒有涵蓋 {sorted(set(fx)-hc-claimed)}")
+    trained_locs={s2['location'] for s2 in shots}
+    burn=[x for x in dshots if 'no_scene_burn_in' in x.get('applicable_rubric_items',[])]
+    if not burn:
+        err.append("沒有任何 stress shot 測 no_scene_burn_in（C-25）")
+    for x in burn:
+        loc=x.get('fixed',{}).get('location')
+        if loc in trained_locs:
+            err.append(f"Phase D {x['id']} 測 no_scene_burn_in，但 location『{loc}』"
+                       f"在訓練集出現過 {sum(1 for s2 in shots if s2['location']==loc)} 次"
+                       f"——拿教過的場景測烙印，檢出力等於零（C-25）")
     prims=[x['primary_test_variable']['field'] for x in dshots if x.get('primary_test_variable')]
     if len(dshots)-len(prims)!=1:
         err.append("Phase D 必須且只能有一個 primary_test_variable=null 的基準線 shot（C-21）")
