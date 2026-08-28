@@ -1,5 +1,10 @@
 # Nico Pilot — 覆核檔案（自給自足，只讀這一份就夠）
 
+> **⚠️ 這一輪（R1–R9，規劃層覆核）已經結束並全數通過。**
+> validator exit 0、語意逐列覆核 20/20、對抗測試 26/26。
+> **現在進行中的是 R10：20 段實際 prompt 的覆核，檔案在 [`REVIEW_PHASE_C.md`](REVIEW_PHASE_C.md)。**
+> 本檔保留作為規劃層的完整紀錄。
+
 ## §0 給審閱者
 
 **你只需要讀這一個檔案。** 不要用 GitHub 連接器去抓 repo 裡的其他檔案——
@@ -8,7 +13,7 @@
 **回覆方式**：把你的意見**直接寫在本檔案最下方 §9 回覆區**（在 `REPLIES BELOW` 那行以下）。
 那一段不會被自動產生覆蓋。Claude 會讀你寫的內容並修正。
 
-- 目前 commit：`28c5cbf`
+- 目前 commit：`d73246c`
 - 檔案角色：本檔 §0–§8 由 `tools/gen_review_file.py` 從 `pilot/nico_pilot.json` 自動產生，所有數字都是程式算的，不是人工抄的
 
 ---
@@ -166,23 +171,23 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 - 年齡／族裔：26 / Taiwanese
 - 膚色：light neutral-to-cool skin tone, natural tonal variation across face and body, subtle normal redness at cheeks, elbows and knuckles, not overexposed
 - 排除：NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored
-- 臉部基底：fine elongated phoenix eyes, cool composed expression, delicate features
+- 臉部基底：a youthful baby-faced adult woman: the lower half of her face is short with a small narrow chin, her forehead is broad, and her cheeks keep a soft rounded fullness. Large round eyes with a wide double eyelid crease, set level rather than upswept. Her cheekbones sit low and read as soft padding, not as a lifted ridge. A short nose with a slightly upturned rounded tip and a soft undefined bridge. A short philtrum above a small mouth with softly rounded lips.
 - **身分 marker**（讓模型學到「某一個具體的人」而不是 generic beautiful East Asian woman）：
-  - left eyebrow tail sits subtly higher than the right, most visible when she smiles
+  - a short lower face — the distance from her nose to her chin is noticeably shorter than average
   - a very small pale mole beside her right nostril
-  - flat cupid's bow — the upper lip has almost no M-shaped peak
+  - a flat cupid's bow — the upper lip has almost no M-shaped peak
   - slightly wider-than-average inter-eye distance
-  - narrow rounded nose tip with a soft, undefined bridge break
-- 註：前三項在自拍／鏡像生成時可能左右翻轉，因此後兩項刻意選用**不依賴左右方向的骨相特徵**（眼距、鼻頭形狀），確保翻轉後身分仍可辨識。不寫 `2mm` 這種模型無法穩定執行的幾何單位。
-- 身材數字（metadata）：{'height_cm': 167, 'weight_kg': 49, 'bust_cm': 86, 'waist_cm': 59, 'hip_cm': 88, 'cup': 'C', 'leg_cm': 82}
-- **身材視覺比例（prompt 實際使用）**：narrow shoulders roughly equal to hip width, long torso, small natural bust with a shallow curve, visible collarbone and sternum, slim upper arms with no muscle definition, long straight legs, flat lower abdomen; overall silhouette is narrow and elongated
-- 排除：NOT voluptuous, NOT heavy-chested, NOT curvy, NOT athletic-muscular
+  - a short nose with a rounded, slightly upturned tip
+- 註：前三項在自拍／鏡像生成時可能左右翻轉，因此其餘刻意選用**不依賴左右方向的骨相特徵**（下半臉長度、眼距、鼻頭形狀），確保翻轉後身分仍可辨識。不寫 `2mm` 這種模型無法穩定執行的幾何單位。 U-03：臉部骨架由使用者裁決改為少女短臉型。這組骨架是為了與 rainie-hsu 明確區隔而定：Rainie 是高顴骨、銳利下顎線、大而上揚的雙眼皮眼、鼻樑挺、厚唇且唇珠明顯的華麗模特兒臉——那也正是 seedream 的預設美女臉，不寫死骨架就會自動收斂過去。本 repo 先前的 sophia-tseng-face 也發生過同一件事，解法同樣是改骨架而不是改妝髮。
+- 身材數字（metadata）：{'height_cm': 167, 'weight_kg': 49, 'bust_cm': 90, 'waist_cm': 59, 'hip_cm': 88, 'cup': 'D', 'leg_cm': 82}
+- **身材視覺比例（prompt 實際使用）**：narrow shoulders roughly equal to hip width, long torso, a full rounded bust that reads clearly against a slim frame, visible collarbone, slim upper arms with no muscle definition, long straight legs, flat lower abdomen; the contrast between the slim waist and the fuller bust is part of the silhouette
+- 排除：NOT athletic-muscular, NOT heavy or thickset overall — the frame itself stays slim
 
 ### 5-2 造型庫
 
 | ID | 區間 | 領型 | 上身 | 下身 | 鞋 | 包/外套 | 首飾 | 身材可讀 |
 |----|------|------|------|------|----|---------|------|---------|
-| `01` | ★極簡職人 | high mock neck | 炭灰色合身羅紋針織長袖，高領貼頸 | 黑色高腰直筒西裝褲 | 黑色皮革樂福鞋 | 米色帆布托特 | 銀色細戒指＋銀色小圈耳環 | ✅ |
+| `01` | ★極簡職人 | high mock neck | 炭灰色合身羅紋針織長袖，高領貼頸，兩肩各有一道窄露肩開口 | 黑色高腰直筒西裝褲 | 黑色皮革樂福鞋 | 米色帆布托特 | 銀色細戒指＋銀色小圈耳環 | ✅ |
 | `02` | 極休閒 | straight neckline spaghetti strap | 米白色棉質細肩帶背心，一字平口 | 灰色棉質及膝短褲 | 米白色帆布休閒鞋 | 薄針織開襟外套 | 銀色細項鍊 | ✅ |
 | `03` | 日常有型 | crew neck | 奶油色短版針織上衣，圓領 | 高腰淺色直筒牛仔褲 | 白色球鞋 | 深棕小方包 | 銀色圈形耳環 | ✅ |
 | `04` | 學院感 | collared button-down, top two buttons open | 白色寬版襯衫 | 黑色百褶短裙＋灰色及膝襪 | 黑色瑪莉珍鞋 | 深藍色肩背書包 | 銀色細鍊手鍊 | ❌ |
@@ -429,7 +434,7 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 
 ```
 驗證 nico-tsai（schema v2.4.0）
-  ✗  語意覆核未完成：19/20 列，尚未覆核 ['nico_c04']（C-19：這是生成前的 gate，未達全數一律 HARD FAIL。機器 lint 抓不到物理與語意矛盾——R5 抓到 4 個、R7 抓到 9 列、R8 又抓到 1 個，全都發生在機器全過的狀態下。見 pilot/semantic_review.md）
+  ✓ 全數通過
 ```
 
 ---
@@ -487,5 +492,7 @@ Claude 會實測驗證。R5 與 R6 你提的每一條我都實跑驗證過，數
 把意見寫在下面這行以下。Claude 會讀這一段。
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
+
+
 
 `nico_c04` 無異議

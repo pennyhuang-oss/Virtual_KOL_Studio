@@ -1,15 +1,43 @@
 {
   "id": "nico-tsai",
   "ai_assets": {
+    "phase_a_casting": {
+      "status": "complete",
+      "completed_at": "2026-08-28",
+      "rounds": 3,
+      "model": "seedream_v4_5",
+      "candidates_per_round": 4,
+      "selected": "round 3 candidate_03（使用者裁決）",
+      "images_path": "kols/nico-tsai/images/phase_a_r3/",
+      "note": "Round 1（2026-08-27）與 Round 2 皆作廢：Round 1 自創攝影棚設定、器材入鏡；Round 2 出圖的五官與 rainie-hsu 撞臉，使用者要求改臉部骨架。Round 3 改用少女短臉骨架後 4 張全部脫離預設美女臉。"
+    },
+    "reference_element": {
+      "status": "ready",
+      "id": "68ff990e-1862-4003-bfe3-fe288275cdd4",
+      "name": "nico-tsai-anchor",
+      "created_at": "2026-08-28",
+      "source": "phase_a_r3/r3_c03.png",
+      "carried_traits": "錨點會把兩樣東西帶進所有下游生成，實測三次確認：(1) 左側鬢角一段銀灰挑染——已由使用者裁決保留為造型；(2) 那件炭灰高領毛衣的兩道窄露肩開口——指定同一件衣服時會被整件複製，已寫進 outfit_01 的衣櫃定義。"
+    },
+    "phase_b_verification": {
+      "status": "complete",
+      "completed_at": "2026-08-28",
+      "B1": "✅ 臉完全重現",
+      "B2": "✅ 第一次拍成背影作廢（第三次踩到「turned 30 degrees」被讀成背對鏡頭），改用「相機看得到哪些正面特徵」的寫法後一次通過。全身圖是身材比例的最終把關點。",
+      "images_path": "kols/nico-tsai/images/phase_a_r3/"
+    },
     "training_images_v1": {
-      "status": "pending",
+      "status": "prompts_ready_pending_review",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
       "image_count": 0,
+      "target_count": 20,
       "images_path": "kols/nico-tsai/images/training_v1/",
       "collected_at": null,
-      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "spec_source": "pilot/nico_pilot.json",
+      "prompts": "pilot/phase_c_prompts.json（由 tools/build_phase_c_prompts.py 從 spec 產生）",
+      "note": "20 張（endpoint 實際接受 5–20，非官網寫的 minimum 20）。規劃已通過 ChatGPT R1–R9 覆核：validator exit 0、語意逐列覆核 20/20、對抗測試 26/26。20 段 prompt 待覆核（review/REVIEW_PHASE_C.md），放行後才生成。",
       "soul_training": {
         "status": "pending",
         "platform": "Higgsfield.ai",
@@ -18,7 +46,7 @@
         "training_image_count": 0,
         "started_at": null,
         "completed_at": null,
-        "note": "PENDING"
+        "note": "PENDING——訓練集生成並確認後才執行。之後還有 Phase D 壓力測試（本 repo 首次）。"
       }
     }
   },
@@ -55,8 +83,8 @@
       "height": "167cm",
       "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
       "face_type": "**少女短臉型**：下半臉短、下巴小而窄、額頭寬、雙頰保有柔軟的圓潤感；大而圓的眼睛、雙眼皮寬、眼型平不上揚；顴骨低，讀起來是柔軟的肉感而不是被打亮的高稜線；鼻子短、鼻頭圓而微翹、鼻樑柔和不明顯；人中短，小嘴、唇形圓潤。她 26 歲，是娃娃臉的成年女性——臉嫩但身形、氣質與場景都是成年人。",
-      "hair": "**冷灰奶茶色（漂過的高明度髮色）**，及下巴的短鮑伯，髮尾internal層次。美業從業者染這個顏色完全合理，也讓她在全庫裡辨識度最高。",
-      "hair_color_current": "冷灰奶茶（漂色）· 短鮑伯",
+      "hair": "**冷調中棕（帶灰調的奶茶棕）**，及下巴的短鮑伯，髮尾internal層次，**左側鬢角有一段銀灰挑染**。美業從業者染這個完全合理，也讓她在全庫裡辨識度最高。",
+      "hair_color_current": "冷調中棕（灰調奶茶棕）· 短鮑伯 · 左側鬢角銀灰挑染",
       "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
       "figure": "纖細骨架＋飽滿胸型（腰胸對比是身形的一部分）",
       "style_vibe": "手很好看的職人 — 話不多、專注、對細節有潔癖，靠一雙手吃飯。",
@@ -71,7 +99,8 @@
         "body_ratio_note": "腰臀比約0.67，腿長佔身高49.1%；骨架纖細但胸型飽滿，腰胸對比明顯"
       },
       "face_distinct_from": "這組骨架是為了與 rainie-hsu 明確區隔而定：Rainie 是高顴骨、銳利下顎線、大而上揚的雙眼皮眼、鼻樑挺、厚唇且唇珠明顯的華麗模特兒臉——那也正是 seedream 的預設美女臉，不寫死骨架就會自動收斂過去。本 repo 先前的 sophia-tseng-face 也發生過同一件事，解法同樣是改骨架而不是改妝髮。",
-      "_u03_note": "2026-08-28 使用者裁決（U-03）：Phase A 出圖的臉與 rainie-hsu 五官過於接近，臉部骨架改為少女短臉型；胸型由 C 放寬為 D，原本的 small bust / NOT heavy-chested 設定與使用者偏好不符。臉與五官這一類判斷由使用者拍板，不交給外部覆核者。"
+      "_u03_note": "2026-08-28 使用者裁決（U-03）：Phase A 出圖的臉與 rainie-hsu 五官過於接近，臉部骨架改為少女短臉型；胸型由 C 放寬為 D，原本的 small bust / NOT heavy-chested 設定與使用者偏好不符。臉與五官這一類判斷由使用者拍板，不交給外部覆核者。",
+      "_hair_u03_note": "2026-08-28：原設定「冷灰奶茶（漂過的高明度髮色）」實測會出成有深色髮根的漸層 ombré，而 `no ombré / no dark roots` 這類否定完全無效。改用正面描述（單一平染到頭皮）壓成均勻色之後，明度自然降到中棕。銀灰挑染來自選角錨點，c03→B1→B2 三張都蓋不掉，使用者裁決保留為造型。"
     }
   },
   "persona": {

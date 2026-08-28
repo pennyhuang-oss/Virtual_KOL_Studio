@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-29　|　**語意覆核 19/20（ChatGPT R8 簽核），只剩 nico_c04 一列待 R9 重審；通過即可開始生成**
+> 最後更新：2026-08-28　|　**規劃層全數結案（語意 20/20、validator exit 0、對抗 26/26）。選角與錨定驗證已完成。現在覆核的是 20 段實際 prompt（R10）。**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -18,7 +18,9 @@
 | R6 | ChatGPT | 8 結案 / 1 不同意 / 4 條新議題（C-23–C-26）| [`rounds/R6_chatgpt.md`](rounds/R6_chatgpt.md) |
 | R7 | ChatGPT | 5 條全結案 / 20 列覆核結果 11 無異議、9 條 P0 / 新議題 C-27–C-30 | [`rounds/R7_chatgpt.md`](rounds/R7_chatgpt.md) |
 | R8 | ChatGPT | 20 列覆核：19 無異議、c04 一列 P0；新議題 C-31–C-33 | [`rounds/R8_chatgpt.md`](rounds/R8_chatgpt.md) |
-| **R9** | **ChatGPT** | **只需重審 nico_c04 一列** | [`REVIEW.md`](REVIEW.md) |
+| R9 | ChatGPT | `nico_c04` 無異議 → 語意覆核 20/20，validator 首次 exit 0 | [`REVIEW.md`](REVIEW.md) |
+| — | Claude | Phase A 選角（3 輪）→ 錨點 → Phase B（B1/B2）完成 | `kols/nico-tsai/generation_notes.md` |
+| **R10** | **ChatGPT** | **待覆核：20 段 Phase C prompt（生成前最後一關）** | [`REVIEW_PHASE_C.md`](REVIEW_PHASE_C.md) |
 
 ---
 
@@ -67,6 +69,7 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-31 | 作者自填 zone 是新的繞過路徑，background 形同通行證 | ChatGPT | 🟡 待處理（persona #2 gate）| 成立。validator 目前只驗「宣告是否自洽」，驗不了「宣告是否為真」——把裁切外物件改標成 chest 或 background 就會通過。ChatGPT 建議加 `basis`／`frame_region`／held prop 的 zone 由 hand_zone 推導／expected_visible=false 不計入微物件下限。Nico 不阻擋（人工 20/20 gate 仍擋得住），persona #2 前完成 |
 | C-32 | hands 未涵蓋 wardrobe carry state 與「一個 ID 代表多物件」 | ChatGPT | 🟡 待處理（persona #2 gate）| 成立。outfit 自帶的托特／書包／皮革包會占手、肘或肩，但 hands 只引用 props；c11 的 `hand_creams` 一個 id 代表兩罐，在機器上與 c10「雙手抱同一團衣物」長得一樣。需 `carry_relation`、`quantity`／拆 id、`carried_arm` |
 | C-33 | c04 改成洗澡後，expression 仍殘留 just_woken_blank | ChatGPT | 🔵 Claude已修正 | 屬實。**我在修 C-28 的跨欄位矛盾時製造了另一個跨欄位矛盾**——同一類錯第五次。已改 post_shower_calm。連帶把語意覆核改為**逐列 hash**：整份一個 hash 的話，改一列就作廢全部 20 列的核可，覆核與修正會互相打架、永遠收斂不了 |
+| U-03 | Nico 的五官與 rainie-hsu 撞臉 | 使用者 | ✅ 結案 | 使用者裁決：臉部骨架改少女短臉型、胸型由 C 放寬為 D、銀灰挑染保留。**這一類判斷不交給 ChatGPT**——validator exit 0、語意 20/20、ChatGPT 連九輪放行，使用者一眼看出撞臉。已寫成 `PERSONA_CANON.md` 原則六與 `review/README.md` 的職責分界 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
 **狀態圖例**：⚪ 待對方回應／ChatGPT已回應　🔵 Claude已修正（待對方確認）　🟡 待處理　🔴 有爭議　🟣 需使用者裁決　✅ 結案

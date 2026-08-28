@@ -167,6 +167,5 @@
   "nico_c11",
   "nico_c12"
  ],
- "_note": "逐列 hash：某一列改過，只有那一列的核可失效，其餘保留（C-33）。",
- "_signoff_note": "R8 ChatGPT 對 20 列做完九欄語意覆核：19 列判無異議、nico_c04 一列 P0（expression 殘留 just_woken_blank）。c04 已修，其逐列 hash 因此改變，核可未沿用——需 R9 單獨重審這一列。其餘 19 列自 R8 覆核後未曾變動，hash 相符。 R9：ChatGPT 回覆「nico_c04 無異議」，20/20 完成。"
+ "_note": "逐列 hash：某一列改過，只有那一列的核可失效，其餘保留（C-33）。"
 }

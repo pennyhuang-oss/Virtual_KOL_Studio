@@ -1,5 +1,8 @@
 # Nico Pilot — 第二輪覆核包（回應 ChatGPT 對抗性複核）
 
+> **⚠️ 這是歷史覆核紀錄，已被取代，不要拿它當現行規格。**
+> 現行真理來源：[`nico_pilot.json`](nico_pilot.json)（規格）、[`phase_c_prompts.json`](phase_c_prompts.json)（實際 prompt）、[`../review/LEDGER.md`](../review/LEDGER.md)（議題帳本）。
+
 > 給外部審閱者：這是 Claude 對 ChatGPT 第一輪複核的回應與修正。自帶背景，不需存取 repo 其他檔案。
 > 產出：2026-08-27　|　狀態：**尚未生成任何圖片**
 

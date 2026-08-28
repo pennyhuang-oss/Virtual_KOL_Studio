@@ -35,6 +35,84 @@
 >
 > **⚠️ 2026-08-05：Zoe Lai 人設已移除。** 原第 6 位台灣籍角色，因人設調整過程中反覆出現臉部辨識問題（跟其他角色撞臉、眼型修正後仍不理想）與其他設計反覆，使用者決定不建立此人格，`kols/zoe-lai/` 目錄與所有相關資料已從 repo 刪除，目前台灣籍角色為 5 位。
 
+
+
+### Batch 3 pilot（2026-08-28 進行中）
+
+| 階段 | 狀態 |
+|------|------|
+| 規劃覆核（ChatGPT R1–R9）| ✅ 全數結案；validator exit 0、語意逐列覆核 20/20、對抗測試 26/26 |
+| A 選角（4 個候選 identity）| ✅ 使用者選定 candidate_03 |
+| Reference Element 錨點 | ✅ `68ff990e-1862-4003-bfe3-fe288275cdd4`（`nico-tsai-anchor`）|
+| B1 驗重現 | ✅ |
+| B2 驗輕度外推（全身＝身材最終把關）| ✅ 第一次拍成背影作廢，修正後通過 |
+| C 訓練集 20 張 | ⏸ prompt 已產生，待 ChatGPT 覆核（`review/REVIEW_PHASE_C.md`）|
+| Soul 訓練 → D 壓力測試 | 未開始 |
+
+> **其餘 19 位仍凍結**（`blocked_pending_v2_pilot`），等 Nico 這條 vertical slice 走完才解凍。
+> Nico 的規格真理來源是 `pilot/nico_pilot.json`，不是 `MODELING_SHOOT_PLAN.md`。
+
+---
+
+## 這個模型的實測行為（seedream_v4_5，2026-08-28 建立）
+
+> **這一節是燒掉 13 張 credit 換來的，不是推測。每一條都有前後對照。**
+> 出處：`kols/nico-tsai/generation_notes.md` Round 2 / Round 3 / Phase B。
+> 下一位角色開始生成前**必讀**，不要重新試錯。
+
+### 1. 這個模型不執行否定句
+
+構圖與服裝結構的否定句**完全無效**。有效的是正面描述目標狀態：
+
+| 失效寫法（否定）| 有效寫法（正面描述）|
+|----------------|-------------------|
+| `nothing below the knee is visible` | `the bottom edge of the picture cuts straight across her thighs, roughly a hand's width above the knee` |
+| `NOT a crop top, no exposed midriff` | `the hem is long and tucked into her trouser waistband` |
+| `no ombré, no dark roots, no lightened tips` | `a single flat salon dye job done right down to the scalp: the roots are exactly the same brown as the ends` |
+| `her back is not toward the camera` | 見第 2 條 |
+
+**顏色排除仍然有效**（`not tanned`、`not olive` 有效）。**構圖與服裝結構的否定一律無效。**
+
+### 2. 身體朝向不能寫角度
+
+`turned about 30 degrees toward her own left` **連續三次**被畫成背影
+（Nico Round 2 首批、Round 3 的 candidate_01、Phase B 的 B2 第一次）。
+
+→ 一律描述**相機看得到哪些身體正面特徵**：
+
+> Her navel and the front of both shoulders point toward the camera. Both of her collarbones are
+> visible. The camera sees the front of her jeans — the fly, the button and the front pockets —
+> not the back pockets.
+
+一次就對。**全身圖是身材比例的最終把關點，拍成背影等於這一關白做。**
+
+### 3. 景別：說「畫面下緣切在哪裡」
+
+各景別的有效寫法見 `tools/build_phase_c_prompts.py` 的 `FRAMING` 表。例如 knee_up：
+
+> The bottom edge of the picture cuts across her legs just below the knees. Her head, torso, hips
+> and thighs are all inside the frame. Her lower legs and feet are outside the picture.
+
+### 4. Reference Element 會把「同一件衣服」整件複製
+
+指定與錨點圖**同一件**衣服時，錨點那件衣服的細節會原封不動出現，
+prompt 明寫相反的描述也蓋不掉（Nico B1：錨點毛衣的兩道露肩開口，
+prompt 寫 `unbroken and continuous over both shoulders` 無效）。
+指定**不同**衣服時 prompt 才有效（B2 換成另一件，開口消失）。
+
+→ **選角圖穿的那一套，之後在訓練集裡再用時，衣櫃定義必須誠實描述錨點實際的樣子**，
+或乾脆換一件明顯不同的衣服。
+
+### 5. 錨點的髮色細節蓋不掉
+
+錨點圖上的挑染／不均勻髮色會被一路帶下去，三次明確的「單一平染」指令都無效。
+→ **選角階段就要把髮色看清楚**；發現後只有兩條路：接受它成為角色造型，或換錨點。
+
+### 6. 臉部骨架不寫死就會收斂到預設美女臉
+
+見 `PERSONA_CANON.md` 原則六。本 repo 的預設臉約等於 `rainie-hsu`，
+已經害 `sophia-tseng` 與 `nico-tsai` 各重做一次。
+
 ---
 
 ## ⚡ 新 Session 啟動時，立刻做這件事
@@ -233,23 +311,26 @@ Prompt 結構：
 會被模型當成**畫面內的道具畫出來**（Round 1 連相機都入鏡）。
 → **選角圖一律用她自己的日常空間，不用攝影棚**（也符合使用者對 Rainie 第二輪「很像棚拍」的否決）。
 
-**(2) 景別指令要放在 prompt 最前面，並用排他性措辭。**
+**(2) 景別指令要放最前面——但「排他性措辭」這個修法本身是錯的（2026-08-28 實測推翻）。**
 放在結尾的 `[CAMERA] tight headshot` 會被忽略（`rainie-hsu` Round 1 全身出成半身，`nico-tsai`
 Round 1 headshot 出成全身）。
-→ 正確寫法：`EXTREME CLOSE-UP PORTRAIT. Her face fills the entire frame. Nothing below the
-collarbone is visible.` 放在 prompt **第一行**。
+2026-08-27 這裡曾寫「改用排他性措辭 `Nothing below the collarbone is visible.` 放第一行」——
+**2026-08-28 實測：這個修法無效**，指定 knee_up 的 4 張全部出成含鞋全身。
+→ **正確寫法是描述「畫面下緣切在哪裡」**，見上方〈這個模型的實測行為〉第 1 條。
 
-**(3) `bleached` 會把任何髮色推到白金。**
-「冷灰奶茶」寫成 `cool greige milk-tea bleached hair` 出圖是銀白色。
-→ 改為 `a light milk-tea brown with a cool greige cast — clearly still a brown, NOT silver,
-NOT white, NOT platinum`。
+**(3) `bleached` 會把任何髮色推到白金——但拿掉它只解決一半。**
+「冷灰奶茶」寫成 `cool greige milk-tea bleached hair` 出圖是銀白色。拿掉 `bleached` 之後
+不再整頭銀白，**但改成了有深色髮根的漸層 ombré**，而且 `no ombré, no dark roots` 這種否定完全無效。
+→ 有效的是正面描述染髮這件事本身：
+`a single flat salon dye job done right down to the scalp: the hair at her parting and roots is
+exactly the same medium brown as the hair at the ends`。見〈這個模型的實測行為〉第 1 條。
 
 **(4) 服裝沒寫領型，模型會自補低胸，導致身材判讀失真。**
 → 服裝必須寫滿五層（上身含**領型**／下身／鞋／包或外套／首飾髮飾），
 見 `WARDROBE_SYSTEM.md` 與各 `content_style.md` 的「服裝 prompt 必須寫滿五層」。
 
 **完整的選角與訓練集規格見 [`MODELING_SHOOT_PLAN.md`](MODELING_SHOOT_PLAN.md)，
-配額可用 `python3 tools/validate_shoot_plan.py tools/shoot_plan.json` 自動驗證。**
+配額可用 `python3 tools/validate_shoot_plan_v2.py` 自動驗證（v1 的 `validate_shoot_plan.py` 已凍結，會 HARD FAIL exit 2）。**
 
 ---
 

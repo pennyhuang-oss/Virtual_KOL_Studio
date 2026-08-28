@@ -1,5 +1,21 @@
 # Batch 3 建模照拍攝計畫 — 外部覆核包
 
+> ## ⚠️ 這份文件已被取代，不要拿它當現行規格
+>
+> 這是 **2026-08-27 的第一輪（R1）覆核包**，保留作為歷史紀錄。
+> 之後經過 ChatGPT R1–R9 九輪覆核，規格已大幅改變。**現行真理來源**：
+>
+> | 要找什麼 | 看哪裡 |
+> |---------|-------|
+> | Nico 的完整規格 | [`pilot/nico_pilot.json`](pilot/nico_pilot.json) |
+> | 會送進模型的 prompt | [`pilot/phase_c_prompts.json`](pilot/phase_c_prompts.json) |
+> | 覆核歷史與議題帳本 | [`review/LEDGER.md`](review/LEDGER.md)、`review/rounds/` |
+> | 模型的實測行為 | [`KOL_TRAINING_SOP.md`](KOL_TRAINING_SOP.md)〈這個模型的實測行為〉|
+> | 人設憲章（含原則六：臉部骨架）| [`PERSONA_CANON.md`](PERSONA_CANON.md) |
+>
+> 本檔裡關於 Nico 的長相（丹鳳眼／清冷）、身材（86-59-88／C）、
+> 訓練集 13 張、以及「景別用排他性措辭」的修法，**都已被實測推翻或改版**。
+
 > **這份文件是給外部審閱者（例如 ChatGPT）做交叉覆核用的，因此刻意自帶所有規則背景，**
 > **不需要存取原始 repo 的其他檔案就能完整判斷。**
 

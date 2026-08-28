@@ -178,9 +178,10 @@
       "ethnicity": "台灣",
       "location": "台北大安",
       "style": "美甲師 / 個人工作室",
-      "status": "draft",
+      "status": "in_progress",
       "created_at": "2026-08-27",
-      "path": "kols/nico-tsai/"
+      "path": "kols/nico-tsai/",
+      "note": "Batch 3 pilot。選角與錨定驗證已完成，錨點 68ff990e；20 張訓練集的 prompt 待覆核後生成。規格真理來源：pilot/nico_pilot.json"
     },
     {
       "id": "tammy-chou",

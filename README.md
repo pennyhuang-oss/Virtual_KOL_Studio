@@ -67,7 +67,13 @@
 
 > 注意：Aaliya Rivera 的資料夾名稱為 `aaliya-okonkwo`（歷史原因，人格已改為 LA 拉丁裔設定）。
 
-### Batch 3（2026-08-27 建檔，20 位，待選角與訓練）
+### Batch 3（2026-08-27 建檔，20 位）
+
+> **Nico Tsai 是 pilot，正在走完整流程**（選角 → 錨定 → 訓練集 → Soul → 壓力測試）。
+> 她的規格真理來源是 [`pilot/nico_pilot.json`](pilot/nico_pilot.json)，不是 `MODELING_SHOOT_PLAN.md`。
+> **其餘 19 位凍結中**（`blocked_pending_v2_pilot`，v1 validator 會 HARD FAIL exit 2），
+> 等 Nico 走完才解凍。
+
 
 > 全部依 [`PERSONA_CANON.md`](PERSONA_CANON.md) 五條原則建立。`generation_notes.md` 皆為 PENDING，尚未執行任何生成。
 > 規劃全文見 [`NEW_20_PERSONAS_PLAN.md`](NEW_20_PERSONAS_PLAN.md)。
@@ -75,7 +81,7 @@
 | ID | 名字 | 城市 | 檯面設定 | Soul ID | 狀態 |
 |----|------|------|----------|---------|------|
 | [angel-chiu](kols/angel-chiu/) | **Angel Chiu** 邱安晴 | 台北 | 護理師 | 待訓練 | draft |
-| [nico-tsai](kols/nico-tsai/) | **Nico Tsai** 蔡妮可 | 台北大安 | 美甲師 / 個人工作室 | 待訓練 | draft |
+| [nico-tsai](kols/nico-tsai/) | **Nico Tsai** 蔡妮可 | 台北大安 | 美甲師 / 個人工作室 | **選角＋錨定完成，20 張訓練集待覆核放行** | in_progress |
 | [tammy-chou](kols/tammy-chou/) | **Tammy Chou** 周語彤 | 台北五分埔 | 網拍老闆娘 / 服飾電商 | 待訓練 | draft |
 | [emma-kao](kols/emma-kao/) | **Emma Kao** 高映真 | 台南 | 新聞主播 | 待訓練 | draft |
 | [zoey-yeh](kols/zoey-yeh/) | **Zoey Yeh** 葉芷妍 | 宜蘭 | 花藝師 | 待訓練 | draft |

@@ -1,5 +1,16 @@
 # Nico Tsai 蔡妮可 — Generation Notes
 
+> **這份檔案是按時間累加的歷程紀錄，越前面越舊。**
+> **不要拿前面的章節當現行規格**——早期章節裡的三圍（86-59-88／C）、髮色（冷灰奶茶漂色）、
+> 以及 Round 1 記下的「景別用排他性措辭」修法，**都已被後續實測推翻或由使用者改版**。
+>
+> | 要找什麼 | 現行真理來源 |
+> |---------|------------|
+> | 完整規格（臉、身材、髮色、衣櫃、20 張訓練集）| [`../../pilot/nico_pilot.json`](../../pilot/nico_pilot.json) |
+> | 人設敘述 | [`profile.json`](profile.json)、[`character.md`](character.md) |
+> | 會送進模型的 prompt | [`../../pilot/phase_c_prompts.json`](../../pilot/phase_c_prompts.json) |
+> | 模型的實測行為 | [`../../KOL_TRAINING_SOP.md`](../../KOL_TRAINING_SOP.md)〈這個模型的實測行為〉|
+
 > ⚠️ **本檔案受 [`PERSONA_CANON.md`](../../PERSONA_CANON.md)（人設憲章）約束。**
 > 憲章定義了反差公式、標誌性場景配額、造型可變性、不寫絕對禁令、單一真理來源五條原則，並優先於本檔案中任何相衝突的敘述。
 > 內容支柱的名稱與比重以 `profile.json` 為單一真理來源。
@@ -75,7 +86,7 @@
 2. **鏡頭景別指令完全無效。**
    candidate_01 指令是 `tight front-facing headshot, head and shoulders only`，出圖卻是接近全身。
    `rainie-hsu` 第一輪也記錄過同樣問題（candidate_04 全身變半身）——這是**重複發生**的已知缺陷。
-   **修法**：景別搬到 prompt **最前面**（不是最後），並改用排他性措辭：
+   **修法（⚠️ 2026-08-28 實測推翻，見本檔 Round 2 章節）**：景別搬到 prompt **最前面**（不是最後），並改用排他性措辭：
    `extreme close-up portrait, her face fills the entire frame, nothing below the collarbone is visible`。
 
 3. **髮色偏離設定。** 設定是「冷灰奶茶」，出圖是銀白色。

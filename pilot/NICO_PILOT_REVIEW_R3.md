@@ -1,5 +1,8 @@
 # Nico Pilot — 第三輪覆核包（回應 ChatGPT R2）
 
+> **⚠️ 這是歷史覆核紀錄，已被取代，不要拿它當現行規格。**
+> 現行真理來源：[`nico_pilot.json`](nico_pilot.json)（規格）、[`phase_c_prompts.json`](phase_c_prompts.json)（實際 prompt）、[`../review/LEDGER.md`](../review/LEDGER.md)（議題帳本）。
+
 > 給外部審閱者：自帶背景與**全部依賴檔案**，不需存取 repo。
 > 產出：2026-08-27　|　commit `eac5aa2`　|　狀態：**尚未生成任何圖片**
 >
