@@ -1,64 +1,71 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-手部任務衝突檢查。
+手部任務檢查（2026-08-29 依 R7 覆核重寫）。
 
-為什麼只做這兩條、不做更多：
-2026-08-28 才因為「把競品的風格觀察當成普遍物理定律」寫出一組 21/21 全紅的檢查，
-覆核指出紅燈本身會誘導過度修正。所以這支只檢查**在任何場景下都成立的算術事實**：
-人有兩隻手。不檢查「應該怎麼寫比較好」。
+舊版讀「表情」「肢體與重心」兩列，用字串啟發式猜手部任務。
+它 12 件衝突只抓到 1 件，還誤報 2 件（註解在複述被否決的寫法）。
+根因是**規格與註解混在同一個儲存格**，機械檢查分不出來。
 
-檢 2 條：
-  1. 硬衝突：同一件裡同時出現「雙手做 X」與「空著的手／另一手做 Y」——
-     雙手都被佔用時不存在空手，這與場景無關。
-  2. 任務數警告：跨列抽出的手部任務數 > 2 就列出來給人看。
-     這條**只警告不擋**——同一隻手先後做兩件事在敘述上是合法的，
-     機械檢查分不出「同時」與「先後」，那是語意問題。
+R7 的解法不是把檢查器寫得更聰明，是**把手部任務獨立成一列**，
+其他列不准再宣告手部任務。檢查器因此只做三件與場景無關的算術：
+
+  1. 同一個凍結瞬間最多兩隻解剖學的手
+     —— 拿手機自拍的那隻手雖然 off-frame，仍佔一隻
+  2. 表情列與肢體列不得再出現手部任務（跨欄重複占用是最常漏的一種）
+  3. 每隻手最多一個主要抓握／手勢任務
+
+不檢查「應該怎麼寫比較好」——那是語意覆核的事。
 """
-import re, sys, json
+import re, sys
 
-# 「雙手捧 X」＝兩隻手做同一件事，此時不存在空手。
-# 「兩手都有事做」＝各做各的，後面接「另一手」是合法的指涉，不是衝突。
-BOTH        = r'雙手|兩手|both hands'
-BOTH_SPLIT  = r'(?:雙手|兩手)(?:都|各|分別)'
-FREE  = r'空著的手|空手|另一手|另一隻手|free hand|free arm|other hand'
-# 手部任務：動詞 + 受詞，抽得寬鬆，寧可多抓給人看
-TASK  = r'(?:一手|另一手|左手|右手|雙手|空著的手|手指|指尖|手背|手肘)[^；。，、]{2,20}'
+HAND_ROW = '手部任務'
+CLEAN_ROWS = ['表情', '肢體與重心']
 
-ROWS = ['表情', '肢體與重心']
-
-# 註解與規格寫在同一個儲存格裡，是這份文件的結構問題。
-# 註解常在複述**被否決的**寫法（「原本寫雙手捧杯…已改」），
-# 直接掃全文會把被否決的寫法當成現行規格 —— 首版就因此誤報 LG-08、LG-10B。
-ANNOT_MARK = r'原本|已刪|已改|已拿掉|修正|風險|那樣|不是已證實|沿用'
-
-def strip_annotations(text):
-    """去掉全形括號內容與整段註解，只留現行規格敘述。"""
-    prev = None
-    while prev != text:                      # 括號可能巢狀
-        prev = text
-        text = re.sub(r'（[^（）]*）', '', text)
-    keep = [seg for seg in re.split(r'<br>', text)
-            if not re.search(ANNOT_MARK, seg)]
-    return ' '.join(keep)
+# 手部任務的字眼。手肘不是手；手機／手寫是物件與名詞，不是手。
+HAND_WORD = r'(?<!手)(?:一手|另一手|雙手|兩手|左手|右手|手指|指尖|手背|手掌|空著的手)'
+NOT_HAND  = ('手肘', '手機', '手寫', '手部')
 
 def rows_of(body):
     return dict(re.findall(r'\| \*\*(.+?)\*\* \| (.+?) \|\n', body))
 
+def count_hands(txt):
+    """數這一列宣告了幾隻解剖學的手。N/A 不算。"""
+    n = 0
+    for seg in re.split(r'<br>', txt):
+        if not re.search(r'(拍攝手|鏡外手|可見手)', seg):
+            continue
+        if re.search(r'\*\*N/A\*\*|：\s*N/A', seg):
+            continue
+        # 「可見手 A＋B：共同…」＝兩隻手做同一件事
+        n += 2 if re.search(r'A ?＋ ?B|A\+B', seg) else 1
+    return n
+
+def count_tasks(txt):
+    """數主要任務數（一段宣告＝一個任務，共同捧仍是一個任務）。"""
+    return sum(1 for seg in re.split(r'<br>', txt)
+               if re.search(r'(拍攝手|鏡外手|可見手)', seg)
+               and not re.search(r'\*\*N/A\*\*|：\s*N/A', seg))
+
 def check(name, r):
-    text = strip_annotations(' '.join(r.get(f, '') for f in ROWS))
     hard, warn = [], []
-    shared = re.search(BOTH, text) and not re.search(BOTH_SPLIT, text)
-    if shared and re.search(FREE, text):
-        hard.append('雙手佔用卻又出現「空著的手／另一手」')
-    tasks = re.findall(TASK, text)
-    # 去掉重複敘述（同一件事被增補寫了兩次）
-    uniq = []
-    for t in tasks:
-        if not any(t[:6] == u[:6] for u in uniq):
-            uniq.append(t)
-    if len(uniq) > 2:
-        warn.append(f'手部任務 {len(uniq)} 件：' + '／'.join(uniq))
+    if HAND_ROW not in r:
+        warn.append('尚未整併成有效規格（沒有手部任務列）')
+        return hard, warn
+    h = r[HAND_ROW]
+    hands, tasks = count_hands(h), count_tasks(h)
+    if hands > 2:
+        hard.append(f'宣告了 {hands} 隻手——人只有兩隻')
+    if tasks > hands:
+        hard.append(f'{tasks} 個任務分給 {hands} 隻手')
+    for rn in CLEAN_ROWS:
+        txt = r.get(rn, '')
+        for m in re.finditer(HAND_WORD, txt):
+            around = txt[max(0, m.start()-2):m.end()+2]
+            if any(w in around for w in NOT_HAND):
+                continue
+            hard.append(f'「{rn}」列又宣告了手部任務：{m.group(0)}')
+            break
     return hard, warn
 
 def main(path):
@@ -69,42 +76,43 @@ def main(path):
         name, r = blocks[i], rows_of(blocks[i+1])
         hard, warn = check(name, r)
         if hard:
-            nh += 1
-            print(f'{name:<7} ✗ ' + '；'.join(hard))
-        if warn:
-            nw += 1
-            print(f'{name:<7} ⚠ ' + '；'.join(warn))
-        if not hard and not warn:
-            print(f'{name:<7} ✓')
-    print(f'\n硬衝突 {nh} 件，任務數警告 {nw} 件。')
-    print('⚠️ 警告不等於錯——同一隻手先後做兩件事是合法敘述，需人工判讀。')
+            nh += 1; print(f'{name:<7} ✗ ' + '；'.join(hard))
+        elif warn:
+            nw += 1; print(f'{name:<7} ⚠ ' + '；'.join(warn))
+        else:
+            h = count_hands(r[HAND_ROW])
+            print(f'{name:<7} ✓ {h} 隻手 / {count_tasks(r[HAND_ROW])} 個任務')
+    print(f'\n硬衝突 {nh} 件，未整併 {nw} 件。')
     return 1 if nh else 0
 
 SELFTEST = [
-    ('雙手＋空手（硬衝突）', {'肢體與重心': '雙手捧著蛋餅；手肘靠在桌上',
-                       '表情': '空著的手對鏡頭比大拇指'}, True),
-    ('一手一事（正常）',   {'肢體與重心': '一手搔貓頭；另一手撐在窗台', '表情': '瞇眼笑'}, False),
-    ('雙手同事（正常）',   {'肢體與重心': '雙手捧著紙杯；一邊肩膀比另一邊低', '表情': '越過杯緣看鏡頭'}, False),
-    # 以下兩例是本檢查器首版的誤報，固定下來防止回歸
-    ('註解提到被否決的雙手寫法', {'肢體與重心': '一手拿毛巾擦頭髮；另一手扶著洗手台',
-                       '表情': '單手拿小方巾按臉頰<br>（雙手同時靠近臉會增加手指重疊風險，所以維持一手一事分工）'}, False),
-    ('兩手都有事做＋另一手',    {'肢體與重心': '站定，重心在一腳；兩手都有事做（舉糖、扶簪）',
-                       '表情': '一手把蘋果糖舉在臉頰旁、另一手扶著髮簪'}, False),
+ ('自拍＋兩個可見任務＝三隻手', {
+   HAND_ROW: '拍攝手／鏡外手：持手機自拍，**off-frame**<br>可見手 A：撥瀏海<br>可見手 B：勾著包帶'}, True),
+ ('自拍＋一個可見任務', {
+   HAND_ROW: '拍攝手／鏡外手：持手機自拍，**off-frame**<br>可見手 A：按住毛巾<br>可見手 B：**N/A**——兩隻手已用完'}, False),
+ ('雙手共同一個任務', {
+   HAND_ROW: '可見手 A＋B：**共同**捧住紙杯在下巴前（兩手一個任務）<br>無第三個手部任務'}, False),
+ ('大特寫、完全沒有手', {
+   HAND_ROW: '可見手 A：**N/A**（裁切外）<br>可見手 B：**N/A**（裁切外）'}, False),
+ ('肢體列偷偷又指派了手', {
+   HAND_ROW: '可見手 A：拿蛋餅<br>可見手 B：比大拇指',
+   '肢體與重心': '雙手捧著蛋餅；手肘靠在桌上'}, True),
+ ('手肘與手機不算手', {
+   HAND_ROW: '可見手 A：滑手機<br>可見手 B：伸進零食袋',
+   '肢體與重心': '手肘靠在桌上；上半身前傾', '表情': '看著手機笑'}, False),
 ]
 
 def selftest():
-    ok = True
-    for label, r, want_hard in SELFTEST:
-        hard, warn = check(label, r)
-        got = bool(hard)
-        mark = '✓' if got == want_hard else '✗'
-        if got != want_hard: ok = False
-        print(f'  {mark} {label:<16} hard={hard} warn={warn}')
+    ok=True
+    for label, r, want in SELFTEST:
+        hard,_=check(label,r); got=bool(hard)
+        if got!=want: ok=False
+        print(f'  {"✓" if got==want else "✗"} {label:<22} hard={hard}')
     print('自檢：' + ('通過——會過也會擋' if ok else '**失敗**'))
     return 0 if ok else 1
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1 and sys.argv[1] == '--selftest':
+    if len(sys.argv)>1 and sys.argv[1]=='--selftest':
         sys.exit(selftest())
-    sys.exit(main(sys.argv[1] if len(sys.argv) > 1
+    sys.exit(main(sys.argv[1] if len(sys.argv)>1
                   else 'clients/sushisolar-rujiao/GENERATION_PLAN_B1.md'))
