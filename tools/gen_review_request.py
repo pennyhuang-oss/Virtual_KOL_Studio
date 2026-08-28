@@ -71,7 +71,12 @@ def open_issues():
     return out
 
 def build(base, head):
-    files=[f for f in sh(f"git diff --name-only {base}..{head}").split('\n') if f.strip()]
+    # review/ 底下是協定與帳本——帳本內容已經在第 3 節以表格呈現，
+    # 而且 LEDGER 大半是 ChatGPT 自己寫的，倒回去給它看只是浪費它的用量。
+    # 只送它真正要判斷的：規格（pilot/）與驗證器（tools/）。
+    all_files=[f for f in sh(f"git diff --name-only {base}..{head}").split('\n') if f.strip()]
+    files=[f for f in all_files if not f.startswith('review/')]
+    omitted=[f for f in all_files if f.startswith('review/')]
     diff_lines=[]; total=0; skipped=[]
     for f in files:
         d=sh(f"git diff --unified=2 {base}..{head} -- '{f}'").split('\n')
@@ -112,6 +117,10 @@ def build(base, head):
         w("")
         w("**以下檔案的 diff 過長已略過**（若你需要完整內容請告訴我，我下次貼給你）：")
         for f,n in skipped: w(f"- `{f}`（{n} 行）")
+    if omitted:
+        w("")
+        w(f"（另有 {len(omitted)} 個 `review/` 底下的檔案有變動——那是協定與議題帳本，"
+          "內容已整理在第 3 節的議題表，不重複貼。）")
     w("")
     w("---")
     w("")
