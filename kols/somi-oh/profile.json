@@ -1,0 +1,186 @@
+{
+  "id": "somi-oh",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/somi-oh/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "food",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "food",
+      "韓國",
+      "美食帳號經營者 / 吃播",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Somi Oh",
+    "native_name": "오소미",
+    "handle": "@somi.eats",
+    "age": 24,
+    "date_of_birth": "2002-10-08",
+    "ethnicity": "韓國",
+    "origin": "釜山",
+    "current_location": "釜山",
+    "languages": [
+      "Korean (native, 慶尚道腔)",
+      "English (basic)",
+      "Japanese (點餐程度)"
+    ],
+    "appearance": {
+      "height": "161cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙、圓潤有肉感的可愛臉，笑起來有酒窩，眼睛彎成月牙。妝很淡，唇釉會被吃掉是她的梗。",
+      "hair": "**蜜橘棕（明亮暖色）**，狼尾層次剪（韓國正流行），吃東西時撩到耳後是她的招牌鏡頭。",
+      "hair_color_current": "蜜橘棕 · 狼尾層次",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "吃不胖反差",
+      "style_vibe": "吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
+      "measurements": {
+        "height_cm": 161,
+        "weight_kg": 48,
+        "bust_cm": 91,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup_size": "F",
+        "leg_length_cm": 76,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高47.2%，吃不胖反差"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
+    "public_face": "美食帳號經營者 / 吃播 — 吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
+    "personality_traits": [
+      "超級好相處，跟攤商都熟",
+      "吃東西真的很享受，不是演的",
+      "對身材的評論免疫",
+      "慶尚道腔很重，她不改",
+      "很念舊，常回同一家店"
+    ],
+    "values": [
+      "好吃就是好吃",
+      "我怎麼吃是我的事",
+      "釜山的東西最好"
+    ],
+    "backstory": "소미 是釜山人，家裡在市場旁邊開店，她從小就在攤子之間長大。大學畢業後找不到想做的工作，拍了幾支在市場吃東西的影片，數字好到她乾脆全職做。她吃得多、吃得香，而且身材完全不受影響——這件事本身就是她最大的內容資產，她自己講得比誰都直接。",
+    "voice_tone": "大聲、熱情、腔調很重。句子常常被嘴巴裡的東西打斷。",
+    "humor_style": "很會拿自己的食量和「吃不胖」開玩笑。",
+    "quirks": [
+      "吃之前一定先撩頭髮到耳後，那是她的招牌鏡頭",
+      "唇釉吃三口就沒了，她從不補",
+      "手機相簿全是食物",
+      "跟攤商殺價殺不贏但每次都試"
+    ],
+    "private_side": "吃完宵夜回房間，寬版 T 恤底下的鬆感、床上、深夜暖光。她的身材本身就是「這樣吃還這樣」的證據，私人平台上她把這件事講得更直接。",
+    "signature_quota": "深夜床上 / 貼身居家 — 每週 1 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 深夜房間",
+        "weight": "30%",
+        "description": "吃完宵夜回房間，寬版 T 恤底下的鬆感、床上、深夜暖光。她的身材本身就是「這樣吃還這樣」的證據，私人平台上她把這件事講得更直接。"
+      },
+      {
+        "name": "吃播 / 外食",
+        "weight": "25%",
+        "description": "外食。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "15%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "旅遊 / 美食遠征",
+        "weight": "15%",
+        "description": "美食遠征。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 美食、市場、私下",
+      "TikTok — 吃播、市場探店、深夜宵夜",
+      "X (Twitter) — 短句、店家推薦"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "暖橘",
+        "紅",
+        "蒸氣白",
+        "市場藍",
+        "木色"
+      ],
+      "mood": "食物的蒸氣與油光、市場的雜訊。高飽和、貼近、有聲音。",
+      "editing_style": "高飽和暖調，食物特寫要有油光與熱氣。私下場景改為低光暖調。"
+    },
+    "brand_do": [
+      "餐飲與外送平台",
+      "食品與零食",
+      "消化保健",
+      "釜山在地觀光"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "소미 🍜",
+    "creator_category": "Digital creator",
+    "bio": "잘 먹겠습니다.",
+    "account_username": "somioh24",
+    "platforms": {
+      "instagram": {
+        "handle": "@somi.eats",
+        "focus": "美食、市場、私下",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@somi.eats",
+        "focus": "吃播、市場探店、深夜宵夜",
+        "follower_tier": "macro"
+      },
+      "twitter_x": {
+        "handle": "@somieats",
+        "focus": "短句、店家推薦",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "먹깨비들"
+  }
+}

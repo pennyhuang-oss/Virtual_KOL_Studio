@@ -1,0 +1,217 @@
+{
+  "id": "nico-tsai",
+  "ai_assets": {
+    "phase_a_casting": {
+      "status": "complete",
+      "completed_at": "2026-08-28",
+      "rounds": 3,
+      "model": "seedream_v4_5",
+      "candidates_per_round": 4,
+      "selected": "round 3 candidate_03（使用者裁決）",
+      "images_path": "kols/nico-tsai/images/phase_a_r3/",
+      "note": "Round 1（2026-08-27）與 Round 2 皆作廢：Round 1 自創攝影棚設定、器材入鏡；Round 2 出圖的五官與 rainie-hsu 撞臉，使用者要求改臉部骨架。Round 3 改用少女短臉骨架後 4 張全部脫離預設美女臉。"
+    },
+    "reference_element": {
+      "status": "ready",
+      "id": "68ff990e-1862-4003-bfe3-fe288275cdd4",
+      "name": "nico-tsai-anchor",
+      "created_at": "2026-08-28",
+      "source": "phase_a_r3/r3_c03.png",
+      "carried_traits": "錨點會把兩樣東西帶進所有下游生成，實測三次確認：(1) 左側鬢角一段銀灰挑染——已由使用者裁決保留為造型；(2) 那件炭灰高領毛衣的兩道窄露肩開口——指定同一件衣服時會被整件複製，已寫進 outfit_01 的衣櫃定義。"
+    },
+    "phase_b_verification": {
+      "status": "complete",
+      "completed_at": "2026-08-28",
+      "B1": "✅ 臉完全重現",
+      "B2": "✅ 第一次拍成背影作廢（第三次踩到「turned 30 degrees」被讀成背對鏡頭），改用「相機看得到哪些正面特徵」的寫法後一次通過。全身圖是身材比例的最終把關點。",
+      "images_path": "kols/nico-tsai/images/phase_a_r3/"
+    },
+    "training_images_v1": {
+      "status": "prompts_ready_pending_review",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "target_count": 20,
+      "images_path": "kols/nico-tsai/images/training_v1/",
+      "collected_at": null,
+      "spec_source": "pilot/nico_pilot.json",
+      "prompts": "pilot/phase_c_prompts.json（由 tools/build_phase_c_prompts.py 從 spec 產生）",
+      "note": "20 張（endpoint 實際接受 5–20，非官網寫的 minimum 20）。規劃已通過 ChatGPT R1–R9 覆核：validator exit 0、語意逐列覆核 20/20、對抗測試 26/26。20 段 prompt 待覆核（review/REVIEW_PHASE_C.md），放行後才生成。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING——訓練集生成並確認後才執行。之後還有 Phase D 壓力測試（本 repo 首次）。"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "beauty",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "beauty",
+      "台灣",
+      "美甲師 / 個人工作室",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Nico Tsai",
+    "native_name": "蔡妮可",
+    "handle": "@nico.nailroom",
+    "age": 26,
+    "date_of_birth": "2000-09-03",
+    "ethnicity": "台灣",
+    "origin": "台北大安",
+    "current_location": "台北大安",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (conversational)",
+      "Japanese (basic, 美甲雜誌看得懂)"
+    ],
+    "appearance": {
+      "height": "167cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "**少女短臉型**：下半臉短、下巴小而窄、額頭寬、雙頰保有柔軟的圓潤感；大而圓的眼睛、雙眼皮寬、眼型平不上揚；顴骨低，讀起來是柔軟的肉感而不是被打亮的高稜線；鼻子短、鼻頭圓而微翹、鼻樑柔和不明顯；人中短，小嘴、唇形圓潤。她 26 歲，是娃娃臉的成年女性——臉嫩但身形、氣質與場景都是成年人。",
+      "hair": "**冷調中棕（帶灰調的奶茶棕）**，及下巴的短鮑伯，髮尾internal層次，**左側鬢角有一段銀灰挑染**。美業從業者染這個完全合理，也讓她在全庫裡辨識度最高。",
+      "hair_color_current": "冷調中棕（灰調奶茶棕）· 短鮑伯 · 左側鬢角銀灰挑染",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "纖細骨架＋飽滿胸型（腰胸對比是身形的一部分）",
+      "style_vibe": "手很好看的職人 — 話不多、專注、對細節有潔癖，靠一雙手吃飯。",
+      "measurements": {
+        "height_cm": 167,
+        "weight_kg": 49,
+        "bust_cm": 90,
+        "waist_cm": 59,
+        "hip_cm": 88,
+        "cup_size": "D",
+        "leg_length_cm": 82,
+        "body_ratio_note": "腰臀比約0.67，腿長佔身高49.1%；骨架纖細但胸型飽滿，腰胸對比明顯"
+      },
+      "face_distinct_from": "這組骨架是為了與 rainie-hsu 明確區隔而定：Rainie 是高顴骨、銳利下顎線、大而上揚的雙眼皮眼、鼻樑挺、厚唇且唇珠明顯的華麗模特兒臉——那也正是 seedream 的預設美女臉，不寫死骨架就會自動收斂過去。本 repo 先前的 sophia-tseng-face 也發生過同一件事，解法同樣是改骨架而不是改妝髮。",
+      "_u03_note": "2026-08-28 使用者裁決（U-03）：Phase A 出圖的臉與 rainie-hsu 五官過於接近，臉部骨架改為少女短臉型；胸型由 C 放寬為 D，原本的 small bust / NOT heavy-chested 設定與使用者偏好不符。臉與五官這一類判斷由使用者拍板，不交給外部覆核者。",
+      "_hair_u03_note": "2026-08-28：原設定「冷灰奶茶（漂過的高明度髮色）」實測會出成有深色髮根的漸層 ombré，而 `no ombré / no dark roots` 這類否定完全無效。改用正面描述（單一平染到頭皮）壓成均勻色之後，明度自然降到中棕。銀灰挑染來自選角錨點，c03→B1→B2 三張都蓋不掉，使用者裁決保留為造型。"
+    }
+  },
+  "persona": {
+    "archetype": "手很好看的職人 — 話不多、專注、對細節有潔癖，靠一雙手吃飯。",
+    "public_face": "美甲師 / 個人工作室 — 手很好看的職人 — 話不多、專注、對細節有潔癖，靠一雙手吃飯。",
+    "personality_traits": [
+      "對細節有潔癖，做不好會拆掉重來",
+      "話少，跟客人也不硬聊",
+      "冷但不冷淡，熟了之後很會照顧人",
+      "非常清楚自己的長處在哪",
+      "工作與生活重疊，但她分得很開"
+    ],
+    "values": [
+      "一次只做一雙手",
+      "線條這種事，差一點就是差很多",
+      "我的空間我說了算"
+    ],
+    "backstory": "妮可原本在一間連鎖美甲店做了三年，受不了流水線式的接客量，二十四歲那年把積蓄拿出來，在大安區租了一間一樓公寓，前半當工作室、後半自己住。她只接預約制、一天最多三組客人，因為她堅持一雙手要做四個小時。帳號一開始只是拍作品，後來她發現大家記得的是她的手、她的側臉、還有工作燈打下來的那個氛圍。",
+    "voice_tone": "簡短、精準、有距離感。像在描述一個作品，即使在講自己。",
+    "humor_style": "極乾，常常是一句話配一個表情符號，讓你自己判斷她有沒有在開玩笑。",
+    "quirks": [
+      "工作時一定把頭髮夾起來露出後頸",
+      "收工後會把當天做壞的樣品留著",
+      "短髮每五週修一次，從不拖",
+      "拍照時手永遠是構圖的一部分"
+    ],
+    "private_side": "工作室拉下鐵門後就是她的私領域。換上絲質吊帶、露背針織、過膝襪，只開一盞工作燈拍身體的線條——她對「線條」的潔癖同樣用在自己身上。私下的她比工作時放得開，但依然是精準、有構圖的那種放。",
+    "signature_quota": "露背 / 絲質吊帶 + 指甲特寫的並置 — 每月 1 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 收工後",
+        "weight": "30%",
+        "description": "工作室拉下鐵門後就是她的私領域。換上絲質吊帶、露背針織、過膝襪，只開一盞工作燈拍身體的線條——她對「線條」的潔癖同樣用在自己身上。私下的她比工作時放得開，但依然是精準、有構圖的那種放。"
+      },
+      {
+        "name": "工作室 / 手部",
+        "weight": "20%",
+        "description": "手部。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "20%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "保養 / 浴室",
+        "weight": "15%",
+        "description": "浴室。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 手部作品、工作室日常、私下",
+      "TikTok — 做甲過程縮時、收工後的轉場",
+      "X (Twitter) — 接單資訊、短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "奶油白",
+        "灰粉",
+        "燕麥",
+        "冷灰",
+        "裸色"
+      ],
+      "mood": "安靜、精準、低飽和。一盞工作燈加一面落地窗就是她的全部光源。",
+      "editing_style": "低飽和、柔和側光，保留手部與皮膚的真實質感。避免過亮與高飽和。"
+    },
+    "brand_do": [
+      "美甲與手部保養品牌",
+      "極簡風格服飾",
+      "香氛與居家生活",
+      "攝影／燈光器材"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "Nico ⟡ nail",
+    "creator_category": "Digital creator",
+    "bio": "一次只做一雙手。",
+    "account_username": "nicotsai26",
+    "platforms": {
+      "instagram": {
+        "handle": "@nico.nailroom",
+        "focus": "手部作品、工作室日常、私下",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@nico.nailroom",
+        "focus": "做甲過程縮時、收工後的轉場",
+        "follower_tier": "nano"
+      },
+      "twitter_x": {
+        "handle": "@niconailroom",
+        "focus": "接單資訊、短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "客人們"
+  }
+}

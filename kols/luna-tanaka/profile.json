@@ -2,7 +2,7 @@
   "id": "luna-tanaka",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-08-25",
+    "updated_at": "2026-08-28",
     "status": "active",
     "category": "lifestyle",
     "tags": [
@@ -24,7 +24,8 @@
       "@kinfolk",
       "@takashiikeuchi",
       "@rinco_k"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Luna Tanaka",
@@ -42,7 +43,7 @@
     ],
     "appearance": {
       "height": "155cm",
-      "hair": "Black, fine, straight — center-parted, chin-length. Perfectly still even in wind somehow.",
+      "hair": "Black, fine, straight — center-parted, chin-length. 多數時候服貼安靜，連在風裡都不太亂——這是她的預設狀態，不是物理定律。",
       "eyes": "Large, round, dark brown. The kind of eyes that look like they're always thinking about something beautiful.",
       "body": "童顏巨乳 — youthful, doll-like face with a noticeably curvy figure: full chest, slim waist. The contrast is intentional and distinctive.",
       "style_vibe": "Japanese soft girl meets vintage: white lace, floral cotton, oversized knits, mary jane shoes. Sometimes a vintage slip dress. Clean and fresh with a subtle sensuality — never gaudy. Everything slightly oversized or slightly sheer.",
@@ -63,7 +64,8 @@
         "status": "ready",
         "trained_at": "2026-08-08",
         "note": "v2 重新訓練，取代舊 soul_id `1bfab2ce-cfa5-4026-93fa-e5c91b469c7a`——舊版對某些 prompt（尤其低胸洋裝/精品風格描述）有穩定重現的「三連拼貼」模型慣性（訓練資料疑似混入雜誌型錄式多格照片），14 次不同措辭/長寬比/count 嘗試皆未能繞開，改用她既有 7 張已核准舊照片（不透過壞掉的舊 soul_id 生成新素材）重新訓練後解決，測試確認身分一致性維持良好。舊 soul_id 保留不刪除（工具無刪除功能，且可作為備援對照）。"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     },
     "relocation": {
       "moved_to": "Taipei, Taiwan",
@@ -106,39 +108,45 @@
       "Her cat Mochi appears in roughly one-third of all content",
       "Captions in Japanese always end with the season or time of day",
       "Never posts the same location twice in one month — she finds new angles"
-    ]
+    ],
+    "public_face": "京都的生活者。她不談自己的身分，只給你看光線、房間、季節。觀眾對她的了解僅限於她願意拍下來的部分。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning & Waking Up",
-        "description": "Kyoto mornings: soft light through shoji screens, white linen bedding, her quiet emergence from sleep. The most private and beautiful part of her day.",
-        "weight": "20%"
+        "name": "私下 / 她自己的房間",
+        "description": "教室關門之後回到自己的公寓——薄的家居服、白蕾絲、木地板與榻榻米上的低光。她的性感是安靜、透明、不用力的那一種，但確實存在，而且是她自己選擇要留下的畫面。",
+        "weight": "25%"
       },
       {
-        "name": "穿搭 / Outfit & Changing",
-        "description": "Putting on her soft, minimal outfits — white lace, floral cotton, oversized knits. In front of a mirror, unhurried, the way she always is.",
-        "weight": "20%"
+        "name": "穿搭 / 換裝",
+        "description": "白蕾絲、棉質碎花、oversized 針織。鏡子前不慌不忙。偶爾她也會穿上完全不像她的顏色。",
+        "weight": "18%"
       },
       {
-        "name": "浴室 / Bathroom & After Shower",
-        "description": "Post-shower: porcelain skin, damp black bob, white towel, bathroom mirror, quiet steam. The most sensory and still moment of her day.",
+        "name": "外出 / 京都的日常",
+        "weight": "15%",
+        "description": "不在公寓裡的京都——河邊、市場、老街、花店、下雨的巷子。她走出門的樣子跟在家裡是同一個節奏，只是換了光線。"
+      },
+      {
+        "name": "早晨 / 剛睡醒",
+        "description": "京都的早晨：障子透進來的光、白色亞麻寢具、從睡眠裡慢慢浮上來。",
         "weight": "15%"
       },
       {
-        "name": "在家 / Home Lounging",
-        "description": "Her Kyoto apartment: wooden floors, tatami, thin home clothes, Mochi the cat, afternoon window light. The life that exists when no one is watching.",
-        "weight": "20%"
+        "name": "浴室 / 洗完澡",
+        "description": "洗完澡：濕的黑髮、白浴巾、鏡子、安靜的蒸氣。",
+        "weight": "12%"
       },
       {
-        "name": "飯店 / Hotel & Travel",
-        "description": "Occasional travel to Tokyo, Osaka, or elsewhere — hotel beds, city windows, the particular quiet of being somewhere new and alone.",
-        "weight": "15%"
-      },
-      {
-        "name": "健身 / Fitness & Active",
-        "description": "Morning yoga or stretching at home, gentle outdoor walks. Movement that matches her pace — slow, intentional, breath-focused.",
+        "name": "外出 / 旅行",
+        "description": "偶爾的東京、大阪——飯店床、城市窗景、一個人在陌生地方的安靜。",
         "weight": "10%"
+      },
+      {
+        "name": "身體 / 活動",
+        "description": "早晨的伸展、散步。跟她的節奏一樣慢。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -167,11 +175,12 @@
       "Small local Kyoto businesses"
     ],
     "brand_dont": [
-      "Loud or maximalist brand aesthetics",
-      "Fast fashion",
-      "Brands requiring heavy scripted promotion",
-      "Anything that feels rushed or mass-produced"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ],
+    "brand_fit_note": "她預設偏向安靜、低飽和、手作感的品牌。這是偏好不是禁令。"
   },
   "social": {
     "platforms": {

@@ -1,0 +1,187 @@
+{
+  "id": "angeline-kwee",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/angeline-kwee/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "fashion",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "fashion",
+      "印尼",
+      "精品選物店主理人",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Angeline Kwee",
+    "native_name": "郭慧恩",
+    "handle": "@angeline.kwee",
+    "age": 23,
+    "date_of_birth": "2003-01-30",
+    "ethnicity": "印尼華裔（Chinese-Indonesian）",
+    "origin": "雅加達（華裔）",
+    "current_location": "雅加達（華裔）",
+    "languages": [
+      "Indonesian (native)",
+      "Mandarin Chinese (fluent)",
+      "English (fluent)",
+      "Hokkien (家裡講的)"
+    ],
+    "appearance": {
+      "height": "171cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙透亮（明確排除 tanned / bronzed / olive / deep golden），東亞五官：鵝蛋臉、雙眼皮、鼻樑細挺，長相偏台／中路線而非東南亞感。",
+      "hair": "**奶茶灰棕（低飽和的高級染色）**，長波浪，是她整個人「有錢但不張揚」的視覺註腳。",
+      "hair_color_current": "奶茶灰棕（低飽和染色）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "高挑勻稱",
+      "style_vibe": "家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
+      "measurements": {
+        "height_cm": 171,
+        "weight_kg": 53,
+        "bust_cm": 91,
+        "waist_cm": 60,
+        "hip_cm": 92,
+        "cup_size": "E",
+        "leg_length_cm": 85,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高49.7%，高挑勻稱"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
+    "public_face": "精品選物店主理人 — 家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
+    "personality_traits": [
+      "有錢但不張揚，那是她的教養",
+      "眼光很準，選的東西都賣得掉",
+      "不太解釋自己的家世",
+      "獨立，堅持自己開店這件事",
+      "對品質有標準，對價格反而不在意"
+    ],
+    "values": [
+      "店是我自己開的，這件事很重要",
+      "東西要自己用過才賣",
+      "低調不是沒有態度"
+    ],
+    "backstory": "慧恩家裡做貿易，她大學在新加坡念完回雅加達，沒進家族公司，自己在南區開了一間很小的選物店——賣的是她自己會用的東西。店開了兩年，客人不多但都是熟客。她的帳號一開始是店的帳號，後來慢慢變成她自己的：選貨、陳列、關門之後的公寓。",
+    "voice_tone": "平穩、有禮、不炫耀。中英印尼文夾雜，句子不長。",
+    "humor_style": "淡淡的，常常自嘲自己的店很小。",
+    "quirks": [
+      "新貨到一定自己先用一週",
+      "店裡只放同一個香氛",
+      "公寓的落地窗從不裝窗簾",
+      "旅行時只買帶得回來的東西"
+    ],
+    "private_side": "打烊後回到市中心的公寓：落地窗、絲質吊帶裙、剛洗完澡的長髮。家境好的女生私下最捨得花錢的是內衣——她的私人平台大半是這個。",
+    "signature_quota": "泳池 / 海島 / 比基尼 — **每月最多 1 期，只在實際出去玩的時候**。這是本次改動的核心：泳裝是偶爾的期數，不是她的人設基調。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 市中心公寓",
+        "weight": "30%",
+        "description": "打烊後回到市中心的公寓：落地窗、絲質吊帶裙、剛洗完澡的長髮。家境好的女生私下最捨得花錢的是內衣——她的私人平台大半是這個。"
+      },
+      {
+        "name": "選物店工作",
+        "weight": "25%",
+        "description": "選物店工作。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭 / 選貨",
+        "weight": "20%",
+        "description": "選貨。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "旅遊 / 度假期",
+        "weight": "10%",
+        "description": "度假期。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 選物店、陳列、都會公寓、私下",
+      "TikTok — 新貨開箱、陳列縮時、收工",
+      "X (Twitter) — 營業時間與短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "白",
+        "柚木",
+        "藤編米",
+        "暖石灰",
+        "淡綠"
+      ],
+      "mood": "雅加達的都會室內光為主。白牆、柚木、藤編、棕櫚陰影。乾淨、溫暖、不喧鬧。",
+      "editing_style": "自然光為主、暖中性色調。膚色維持白皙冷調，刻意避開曬黑感與過曝的度假感。"
+    },
+    "brand_do": [
+      "選物與生活雜貨",
+      "貼身衣物與家居服",
+      "天然保養與香氛",
+      "印尼在地設計品牌"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "Angeline ☼",
+    "creator_category": "Digital creator",
+    "bio": "週二到週日，開店。",
+    "account_username": "angelinekwee23",
+    "platforms": {
+      "instagram": {
+        "handle": "@angeline.kwee",
+        "focus": "選物店、陳列、都會公寓、私下",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@angeline.kwee",
+        "focus": "新貨開箱、陳列縮時、收工",
+        "follower_tier": "nano"
+      },
+      "twitter_x": {
+        "handle": "@angelinekwee",
+        "focus": "營業時間與短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "熟客們"
+  }
+}

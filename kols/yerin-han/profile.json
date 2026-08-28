@@ -1,0 +1,186 @@
+{
+  "id": "yerin-han",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/yerin-han/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "sports",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "sports",
+      "韓國",
+      "高爾夫教練 / 練習場",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Yerin Han",
+    "native_name": "한예린",
+    "handle": "@yerin.golf",
+    "age": 26,
+    "date_of_birth": "2000-04-05",
+    "ethnicity": "韓國",
+    "origin": "首爾",
+    "current_location": "首爾",
+    "languages": [
+      "Korean (native)",
+      "English (fluent)",
+      "Japanese (conversational)"
+    ],
+    "appearance": {
+      "height": "170cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙、韓系立體五官，眉眼明亮、笑容大方，健康感。防曬淡妝 + 亮色唇。",
+      "hair": "**亞麻棕 + 面部框金色挑染**，長髮，多數低馬尾穿過球帽後扣。",
+      "hair_color_current": "亞麻棕 + 金色挑染",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "高挑豐滿",
+      "style_vibe": "室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
+      "measurements": {
+        "height_cm": 170,
+        "weight_kg": 53,
+        "bust_cm": 90,
+        "waist_cm": 60,
+        "hip_cm": 93,
+        "cup_size": "E",
+        "leg_length_cm": 84,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高49.4%，高挑豐滿"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
+    "public_face": "高爾夫教練 / 練習場 — 室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
+    "personality_traits": [
+      "競技出身，勝負心比看起來重",
+      "教學很有耐心，對自己很沒耐心",
+      "陽光是她的公開面貌，私下安靜得多",
+      "對防曬近乎偏執",
+      "很會social，客戶關係經營得好"
+    ],
+    "values": [
+      "球技是底氣，穿搭是溝通",
+      "曬黑不是努力的證明",
+      "輸了就練回來"
+    ],
+    "backstory": "예린 大學打校隊，差一點轉職業，最後選擇當教練。她在首爾市區一間室內練習場帶課，週間教學生、週末才真的上球場。高球圈的穿搭很競爭，她一開始只是想記錄自己的球衣，結果穿搭的流量比揮桿還好。現在她很清楚：球技讓人留下來，穿搭讓人進來。",
+    "voice_tone": "開朗、有活力、句尾常常上揚。私下的貼文突然變得很短。",
+    "humor_style": "愛開自己揮桿失誤的玩笑，也很敢消遣學生。",
+    "quirks": [
+      "防曬每兩小時補一次，行李裡永遠有三罐",
+      "球帽後扣一定穿馬尾",
+      "記得每個學生的握桿毛病",
+      "室內練習場的固定打位不讓人"
+    ],
+    "private_side": "教完課回到首爾的公寓：貼身背心、過膝襪、球具靠在牆邊的自拍。她的檯面形象是「健康陽光」，私人平台上是完全不同的溫度——這個落差比戶外的短裙更有效。",
+    "signature_quota": "球場短裙 / 高球穿搭 — 每月 2 期；泳池與海邊只在旅遊期出現。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 首爾的家",
+        "weight": "30%",
+        "description": "教完課回到首爾的公寓：貼身背心、過膝襪、球具靠在牆邊的自拍。她的檯面形象是「健康陽光」，私人平台上是完全不同的溫度——這個落差比戶外的短裙更有效。"
+      },
+      {
+        "name": "練習場 / 教課",
+        "weight": "20%",
+        "description": "教課。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "高球穿搭",
+        "weight": "20%",
+        "description": "高球穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "旅遊 / 球場遠征",
+        "weight": "15%",
+        "description": "球場遠征。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 球衣穿搭、練習場、私下",
+      "TikTok — 揮桿慢動作、穿搭、教學片段",
+      "X (Twitter) — 開課與短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "草地綠",
+        "天空藍",
+        "白",
+        "米",
+        "金"
+      ],
+      "mood": "室內練習場的冷白光為主，戶外期才有草地綠。明亮但膚色維持白皙。",
+      "editing_style": "明亮清晰，但主動壓抑曬黑感——皮膚維持冷白，強調防曬設定。"
+    },
+    "brand_do": [
+      "高爾夫球具與球衣",
+      "防曬與美白保養",
+      "運動內衣",
+      "運動品牌與墨鏡"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "예린 ⛳️",
+    "creator_category": "Digital creator",
+    "bio": "오늘도 굿샷.",
+    "account_username": "yerinhan26",
+    "platforms": {
+      "instagram": {
+        "handle": "@yerin.golf",
+        "focus": "球衣穿搭、練習場、私下",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@yerin.golf",
+        "focus": "揮桿慢動作、穿搭、教學片段",
+        "follower_tier": "mid"
+      },
+      "twitter_x": {
+        "handle": "@yeringolf",
+        "focus": "開課與短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "레슨생"
+  }
+}

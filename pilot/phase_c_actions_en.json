@@ -1,0 +1,383 @@
+{
+ "nico_a01": {
+  "action": "She is sitting at the window seat of a cafe, not doing anything in particular, just facing the camera.",
+  "body": "The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.",
+  "hands": {
+   "left": "resting on the table, outside the crop",
+   "right": "resting on the table, outside the crop"
+  },
+  "props": {
+   "window_mist": "condensation misting the window glass",
+   "bar_dripper": "a pour-over dripper stand on the bar counter behind her"
+  },
+  "light": {
+   "key": "daylight comes through the cafe's large window from her front-left, about 45 degrees off and a little above eye level",
+   "bounce": "the white wall and pale floor bounce it back evenly into the shadow side of her face, so there is no strong shadow on her",
+   "exposure_choice": "the exposure is set for her face, so the view through the window blows out to white and the far end of the room falls into soft shadow",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a02": {
+  "action": "Still at the same seat, her torso angled toward her own left while her face comes back to the camera, a coffee cup held up near her chest.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "resting on the table",
+   "right": "held up at chest height"
+  },
+  "props": {
+   "cup_a02": "a white porcelain coffee cup",
+   "menu_board": "a wooden menu board on the wall behind her"
+  },
+  "light": {
+   "key": "daylight comes through the cafe's large window from her front-left, about 45 degrees off and a little above eye level",
+   "bounce": "the white wall and pale floor bounce it back evenly into the shadow side of her face, so there is no strong shadow on her",
+   "exposure_choice": "the exposure is set for her face, so the view through the window blows out to white and the far end of the room falls into soft shadow",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a03": {
+  "action": "She is standing on a pavement in daylight, her torso angled toward her own right while her face comes back to the camera, a takeaway cup held up near her chest.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "hanging naturally at her side",
+   "right": "held up at chest height"
+  },
+  "props": {
+   "togo_a03": "a takeaway coffee cup",
+   "scooter_mirror": "the wing mirror of a scooter parked at the kerb behind her"
+  },
+  "light": {
+   "key": "a thin overcast sky, the daylight diffuse and coming from everywhere at once, with no hard shadow anywhere",
+   "bounce": "the pale pavement bounces it back evenly into the shadow on the right side of her face",
+   "exposure_choice": "the exposure is set for her face, so the sky goes slightly blank and her face keeps full detail",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a04": {
+  "action": "The same stretch of pavement, her torso turned further toward her own left, a takeaway cup held up near her chest.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "hanging naturally at her side",
+   "right": "held up at chest height"
+  },
+  "props": {
+   "togo_a04": "a takeaway coffee cup",
+   "rent_flyer": "a red rental flyer pasted on an arcade pillar"
+  },
+  "light": {
+   "key": "a thin overcast sky, the daylight diffuse and coming from everywhere at once, with no hard shadow anywhere",
+   "bounce": "the pale pavement bounces it back evenly into the shadow on the left side of her face",
+   "exposure_choice": "the exposure is set for her face, so the sky goes slightly blank and her face keeps full detail",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a05": {
+  "action": "She is sitting on a park bench, her torso turned further toward her own right, a vacuum flask held up near her chest.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "on the seat of the bench",
+   "right": "held up at chest height"
+  },
+  "props": {
+   "bottle_a05": "a vacuum flask",
+   "park_lamp": "a park lamp post behind her"
+  },
+  "light": {
+   "key": "a thin overcast sky, the daylight diffuse and coming from everywhere at once, with no hard shadow anywhere",
+   "bounce": "the pale pavement bounces it back evenly into the shadow on the right side of her face",
+   "exposure_choice": "the exposure is set for her face, so the sky goes slightly blank and her face keeps full detail",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a06": {
+  "action": "She is standing on a park path facing the camera, both arms hanging naturally at her sides.",
+  "body": "The camera sees the front of her body: her navel and the front of both shoulders point toward the lens, and both of her collarbones are visible.",
+  "hands": {
+   "left": "hanging naturally at her side",
+   "right": "hanging naturally at her side"
+  },
+  "props": {
+   "bottle_a06": "a vacuum flask standing on the path by her feet",
+   "yellow_post": "a yellow bollard beside the path"
+  },
+  "light": {
+   "key": "a thin overcast sky, the daylight diffuse and coming from everywhere at once, with no hard shadow anywhere",
+   "bounce": "the pale paving bounces it back evenly over the whole of her, so her legs and torso read clearly",
+   "exposure_choice": "the whole of her sits on one exposure, the sky goes slightly blank, and her proportions are fully readable",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a07": {
+  "action": "The same path, her torso turned three-quarters toward her own right while her face comes back to the camera.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "hanging naturally at her side",
+   "right": "carried down at her side"
+  },
+  "props": {
+   "bottle_a07": "a vacuum flask",
+   "trash_bin": "a metal litter bin at the edge of the path"
+  },
+  "light": {
+   "key": "a thin overcast sky, the daylight diffuse",
+   "bounce": "the pale paving fills evenly, so her side outline and leg-to-torso proportion read clearly",
+   "exposure_choice": "the whole of her sits on one exposure and the sky goes slightly blank",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_a08": {
+  "action": "She is standing beside the park path with her whole body and her face turned to her own right, looking at something far off.",
+  "body": "The camera is beside her, level with her shoulder, seeing the side of her body: the near shoulder is toward the lens and the far one directly behind it.",
+  "hands": {
+   "left": "hanging naturally at her side",
+   "right": "hanging naturally at her side"
+  },
+  "props": {
+   "wood_bench": "a wooden bench beside the path behind her",
+   "falling_leaf": "a single leaf falling behind her shoulder"
+  },
+  "light": {
+   "key": "a thin overcast sky, the daylight diffuse and coming from everywhere at once, with no hard shadow anywhere",
+   "bounce": "the pale paving fills it back evenly along the outline of her profile",
+   "exposure_choice": "the exposure is set for her profile, the sky goes slightly blank, and the line from her jaw to her neck reads completely",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c01": {
+  "action": "After closing up, with the roller shutter down, she has swivelled round on her work chair to look out of the side window.",
+  "body": "The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.",
+  "hands": {
+   "left": "draped over the chair back, outside the crop",
+   "right": "resting on her thigh, outside the crop"
+  },
+  "props": {
+   "window_plant": "a small potted plant on the window ledge",
+   "hours_sign": "an opening-hours sign hanging on the wall"
+  },
+  "light": {
+   "key": "afternoon daylight comes in from her front-left through the high side window the shutter does not cover, a little above eye level",
+   "bounce": "the white manicure desk and white wall bounce it back into the shadow side of her face",
+   "exposure_choice": "the exposure is set for her face, so the window blows out to white and the far end of the room falls into shadow",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c02": {
+  "action": "She is crouched on the floor opening a carton of supplies that has just arrived, head lifted toward the doorway.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "steadying the edge of the carton",
+   "right": "holding the box cutter"
+  },
+  "props": {
+   "box_cutter": "the box cutter",
+   "open_box": "a half-opened carton on the floor"
+  },
+  "light": {
+   "key": "daylight from the floor-to-ceiling window comes in from behind her right shoulder",
+   "bounce": "white packing paper scattered on the floor bounces it back up under her jaw",
+   "exposure_choice": "the exposure is set for her face, so the area by the window blows out and the shadow inside the carton goes black",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c03": {
+  "action": "She is waiting for her order on a stool in a breakfast shop, one elbow resting on the edge of the table.",
+  "body": "The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.",
+  "hands": {
+   "left": "open, the elbow resting on the table edge",
+   "right": "resting on her knee"
+  },
+  "props": {
+   "soy_milk": "soy milk in a plastic cup",
+   "number_tag": "a numbered order tag on the table"
+  },
+  "light": {
+   "key": "morning light comes through the shop's open doorway from her front-left",
+   "bounce": "the stainless-steel table throws a hard glint of it back up under her jaw",
+   "exposure_choice": "the exposure is set for her face, so the whole doorway blows out and the back of the shop goes black",
+   "secondary_source": "the shop's cool white ceiling fluorescents fall on the top of her head and her shoulders",
+   "occlusion": "the door frame cuts into the right edge of the picture"
+  }
+ },
+ "nico_c04": {
+  "action": "Freshly out of the shower, she is sitting on the edge of her bed with the phone raised, looking straight into it.",
+  "body": "The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.",
+  "hands": {
+   "left": "raised, holding the phone",
+   "right": "braced on the edge of the bed"
+  },
+  "props": {
+   "quilt": "an unfolded thin quilt beside her",
+   "water_glass": "a glass of water on the bedside table"
+  },
+  "light": {
+   "key": "the curtain is not quite drawn, and one slant of morning light falls across the bed",
+   "bounce": "the white sheet is a large reflector, bouncing it back into the lower half of her face",
+   "exposure_choice": "the exposure is set for her face, so the slit of light at the curtain blows out to a white band and the rest of the room goes dark",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c05": {
+  "action": "She is leaning against the wall in her entryway, head down, putting her keys away in her pocket.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "flat against the wall",
+   "right": "holding her keys"
+  },
+  "props": {
+   "keys": "her keys",
+   "succulent": "a small succulent on the shoe cabinet"
+  },
+  "light": {
+   "key": "a single warm-yellow recessed light in the entryway ceiling, directly overhead",
+   "bounce": "the white entryway wall bounces that warm light back onto the side of her face",
+   "exposure_choice": "the exposure is set for her face, so the cool strip at the door gap blows out and the space under the shoe cabinet goes black",
+   "secondary_source": "cool white stairwell fluorescent light comes through the gap at the door and lands along her shoulder line",
+   "occlusion": "the door frame cuts into the left edge of the picture"
+  }
+ },
+ "nico_c06": {
+  "action": "She is walking down a back lane in Da'an, caught a step past a scooter parked against the wall.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "swinging naturally as she walks",
+   "right": "carried down at her side"
+  },
+  "props": {
+   "drink_c06": "a bubble-tea cup",
+   "meter_box": "an electricity meter box at the mouth of the lane"
+  },
+  "light": {
+   "key": "flat overcast skylight with no clear direction",
+   "bounce": "the pale tiled wall fills it back evenly over the whole of her",
+   "exposure_choice": "the whole frame is low contrast, the sky blows out to white, and there is no second colour temperature in this one",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c07": {
+  "action": "Head down at her desk, she is testing a new gel colour on a display stick, the side of her face toward the camera.",
+  "body": "The camera is beside her, level with her shoulder, seeing the side of her body: the near shoulder is toward the lens and the far one directly behind it.",
+  "hands": {
+   "left": "steadying the display stick",
+   "right": "holding the gel applicator"
+  },
+  "props": {
+   "tip_stick": "a nail-tip display stick",
+   "color_board": "a gel colour swatch board on the wall behind her",
+   "gel_brush": "the gel applicator brush"
+  },
+  "light": {
+   "key": "an adjustable task lamp points down at close range onto her hands and the desk",
+   "bounce": "the white desktop bounces it back up onto her jaw and neck",
+   "exposure_choice": "the exposure is set for her hands, so her face sits slightly dark and the curtain behind her goes black",
+   "secondary_source": "the cool white ceiling fluorescent falls on the back of her head and her shoulders",
+   "occlusion": null
+  }
+ },
+ "nico_c08": {
+  "action": "At the bathroom mirror she is tidying an eyebrow, her other hand holding the phone up at the mirror.",
+  "body": "The camera sees the front of her body: her navel and the front of both shoulders point toward the lens, and both of her collarbones are visible.",
+  "hands": {
+   "left": "raised, holding the phone up at the mirror",
+   "right": "holding the brow razor up near the tail of her eyebrow"
+  },
+  "props": {
+   "brow_razor": "the brow razor",
+   "cleanser": "a tube of face wash lying on its side on the counter"
+  },
+  "light": {
+   "key": "a full strip of cool white tube light above the bathroom mirror points straight at her",
+   "bounce": "the white tiled walls bounce it back from every side, leaving almost no shadow",
+   "exposure_choice": "the exposure is set for her face, the tube itself blows out to a white bar, and the light in this one is flat and unflattering",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c09": {
+  "action": "She has crouched down at the magazine rack in a convenience store to see the bottom shelf, and has looked back over her shoulder.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "on the lower shelf of the magazine rack",
+   "right": "holding the rice ball"
+  },
+  "props": {
+   "basket_c09": "a shopping basket set down by her feet",
+   "onigiri": "a rice ball"
+  },
+  "light": {
+   "key": "cool white fluorescent ceiling light in the convenience store, straight down from overhead",
+   "bounce": "magazine covers and the white shelving bounce it back up under her chin",
+   "exposure_choice": "the exposure is set for her face, the tubes blow out, and the bottom shelf goes black",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c10": {
+  "action": "In a laundromat she is lifting an armful of dried laundry out of the drum, standing at the machine.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "carrying it against her chest",
+   "right": "carrying it against her chest"
+  },
+  "props": {
+   "laundry": "an armful of dried laundry",
+   "coin_tray": "a coin tray on top of the machine"
+  },
+  "light": {
+   "key": "a whole row of cool white fluorescent tubes in the laundromat ceiling",
+   "bounce": "the stainless-steel machine fronts throw it back as hard specular glints rather than soft fill",
+   "exposure_choice": "the exposure is set for her face, so the tubes and the steel glints blow right out and the corner of the room goes black",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c11": {
+  "action": "At a drugstore shelf she is comparing the ingredients on two hand creams.",
+  "body": "The camera sees the front of her body: her navel and the front of both shoulders point toward the lens, and both of her collarbones are visible.",
+  "hands": {
+   "left": "holding one tube each",
+   "right": "holding one tube each"
+  },
+  "props": {
+   "hand_creams": "two tubes of hand cream",
+   "basket_c11": "shopping basket hooked over her elbow"
+  },
+  "light": {
+   "key": "cool white fluorescent ceiling light in the drugstore, straight down from overhead",
+   "bounce": "the white packaging on the shelves bounces it back onto her chest and chin",
+   "exposure_choice": "the exposure is set for her face, the tubes blow out, and the depth of the shelving goes black",
+   "secondary_source": null,
+   "occlusion": null
+  }
+ },
+ "nico_c12": {
+  "action": "She is waiting for a train on the MRT platform, watching the arrivals display across the tracks.",
+  "body": "Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one. Her back is not toward the camera.",
+  "hands": {
+   "left": "hanging naturally at her side",
+   "right": "holding her transit card"
+  },
+  "props": {
+   "easycard": "her transit card",
+   "arrival_board": "the arrivals display board on the platform"
+  },
+  "light": {
+   "key": "cool white fluorescent light in the platform ceiling",
+   "bounce": "the terrazzo floor bounces a weak amount of it back up",
+   "exposure_choice": "the exposure is set for her face, so her shoulder line on the lightbox side goes slightly blown and the far end of the platform goes black",
+   "secondary_source": "the warm white glow of a platform advertising lightbox falls flatly on her shoulder line from behind",
+   "occlusion": null
+  }
+ }
+}

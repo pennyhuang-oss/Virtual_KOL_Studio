@@ -1,5 +1,8 @@
 # 舞蹈影片製作方法對比：本 Studio vs. Buildup_KOL
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > **目的**：對比本 repo 的 [`DANCE_VIDEO_SOP.md`](DANCE_VIDEO_SOP.md)（音樂驅動法）與
 > `firekou/Buildup_KOL` 的 [`docs/04`–`07`](https://github.com/firekou/Buildup_KOL)（動作驅動法），
 > 決定「要大量生產跳舞短影音時，該用哪一套」。

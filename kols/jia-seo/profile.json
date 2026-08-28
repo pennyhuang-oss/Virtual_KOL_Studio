@@ -1,0 +1,186 @@
+{
+  "id": "jia-seo",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/jia-seo/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "dance",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "dance",
+      "韓國",
+      "K-pop 舞蹈老師",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Jia Seo",
+    "native_name": "서지아",
+    "handle": "@jia.seo",
+    "age": 22,
+    "date_of_birth": "2004-07-30",
+    "ethnicity": "韓國",
+    "origin": "首爾江南",
+    "current_location": "首爾江南",
+    "languages": [
+      "Korean (native)",
+      "English (conversational)",
+      "Japanese (basic)"
+    ],
+    "appearance": {
+      "height": "168cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙冷調、韓系小臉直角肩，眼型細長上揚。無妝感韓妝：水光肌 + 淡棕眼線 + 漸層唇。",
+      "hair": "**冷灰藍黑 + 內層薄荷綠 inner color**（甩頭髮或綁起來才會露出來的那層）。練舞室文化本來就流行 inner color，動起來的時候顏色會閃出來，對舞蹈影片特別有效。",
+      "hair_color_current": "冷灰藍黑 + 薄荷綠 inner color（特殊色）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "舞者長腿",
+      "style_vibe": "練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
+      "measurements": {
+        "height_cm": 168,
+        "weight_kg": 50,
+        "bust_cm": 85,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup_size": "C",
+        "leg_length_cm": 83,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高49.4%，舞者長腿"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
+    "public_face": "K-pop 舞蹈老師 — 練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
+    "personality_traits": [
+      "紀律極強，練習生留下來的",
+      "對身體的控制力是她最自豪的事",
+      "不太談沒出道那段，但也不迴避",
+      "教學時很兇，私下很好笑",
+      "對音樂的反應快到不需要思考"
+    ],
+    "values": [
+      "沒出道不代表我跳得不好",
+      "身體是我自己練出來的",
+      "鏡子不會騙人"
+    ],
+    "backstory": "지아 十四歲進練習生體系，待了四年沒能出道，十九歲那年自己走出來。她沒有離開跳舞，改在江南一間練舞室教課，現在是那裡最多學生的老師之一。帳號一開始只放 cover dance，後來她開始放練完之後的自己——汗、鏡子、關燈之後的練舞室。那批的數字比舞蹈影片還好。",
+    "voice_tone": "直接、有節拍感、句子短。韓文為主，偶爾夾英文。",
+    "humor_style": "毒舌但溫暖，最常吐槽的是自己的學生和自己的膝蓋。",
+    "quirks": [
+      "練舞前一定綁高馬尾，這個順序不會變",
+      "薄荷綠那層頭髮只有甩起來才看得到",
+      "手機裡有三百支沒發出去的練習影片",
+      "冰敷袋是隨身物品"
+    ],
+    "private_side": "練舞室關燈後的鏡子前：運動內衣 + 低腰褲、汗、腹肌與背肌的線條。以及家裡的貼身舞衣試穿。她的性感建立在「身體是練出來的」，跟其他人的路線完全不同。",
+    "signature_quota": "露腰舞衣 / 汗 — 每週固定出現，但練舞室場景本身已從 40% 降到 25%。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 收工後的鏡子前",
+        "weight": "30%",
+        "description": "練舞室關燈後的鏡子前：運動內衣 + 低腰褲、汗、腹肌與背肌的線條。以及家裡的貼身舞衣試穿。她的性感建立在「身體是練出來的」，跟其他人的路線完全不同。"
+      },
+      {
+        "name": "練舞室 / 跳舞",
+        "weight": "25%",
+        "description": "跳舞。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "15%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 江南",
+        "weight": "15%",
+        "description": "江南。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 舞蹈、練舞室、私下",
+      "TikTok — cover dance、一鏡到底、熱門編舞",
+      "X (Twitter) — 開課資訊、短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "冷白",
+        "灰",
+        "木地板色",
+        "薄荷綠",
+        "黑"
+      ],
+      "mood": "練舞室的白日光燈、大面鏡、木地板 vs 家裡的暖光。",
+      "editing_style": "高清晰度的舞蹈素材（動態需要），私下場景改用單一暖光與淺景深。"
+    },
+    "brand_do": [
+      "運動服與舞蹈服",
+      "運動鞋",
+      "恢復與肌肉照護",
+      "耳機與音響"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "지아 JIA",
+    "creator_category": "Digital creator",
+    "bio": "연습실에서 삽니다.",
+    "account_username": "jiaseo22",
+    "platforms": {
+      "instagram": {
+        "handle": "@jia.seo",
+        "focus": "舞蹈、練舞室、私下",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@jia.seo",
+        "focus": "cover dance、一鏡到底、熱門編舞",
+        "follower_tier": "macro"
+      },
+      "twitter_x": {
+        "handle": "@jiaseo_",
+        "focus": "開課資訊、短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "연습생들"
+  }
+}

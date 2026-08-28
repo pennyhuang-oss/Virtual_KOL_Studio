@@ -24,14 +24,24 @@
   },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-23",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "lifestyle",
-    "tags": ["lifestyle", "campus", "taichung", "taiwanese", "gen-z", "dorm-life", "university", "cute"],
+    "tags": [
+      "lifestyle",
+      "campus",
+      "taichung",
+      "taiwanese",
+      "gen-z",
+      "dorm-life",
+      "university",
+      "cute"
+    ],
     "reference_profiles": [
       "Taiwanese campus/dorm-life content creators",
       "university lifestyle vloggers (generic category, no specific individual)"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Coco Wu",
@@ -42,7 +52,10 @@
     "ethnicity": "Taiwanese",
     "origin": "Taichung, Taiwan",
     "current_location": "Taichung, Taiwan",
-    "languages": ["Mandarin Chinese (native)", "English (learning — uses cute broken phrases sometimes)"],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (learning — uses cute broken phrases sometimes)"
+    ],
     "appearance": {
       "height": "158cm",
       "face_type": "Stunningly pretty, doll-like round face — every feature reads as beautiful and photogenic, the kind of face people call '校花' (school-beauty tier). Deep dimples when she smiles, a small delicate chin, big sweet eyes, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Purely descriptive, no likeness to any real individual.",
@@ -60,7 +73,8 @@
         "cup_size": "E",
         "leg_length_cm": 74,
         "body_ratio_note": "腰臀比約0.65，腿長佔身高46.8%，嬌小身形搭配意外豐滿的上圍，反差感強烈"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -90,38 +104,44 @@
       "常常穿著居家服就出現在鏡頭前，完全忘記自己沒換衣服",
       "英文偶爾會蹦出可愛的破碎短句，自己講完會先笑場",
       "拍 vlog 拍到一半會突然開始講室友的八卦"
-    ]
+    ],
+    "public_face": "台中一所大學的大二學生——原本設定裡就有，也是她公開的身分。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / 宿舍賴床",
-        "description": "上課前的宿舍晨光時刻——鬧鐘響了但還在被窩裡滾、室友在旁邊催促、頭髮亂糟糟地滑手機看今天第一節課是什麼。最生活化也最沒有防備的她。",
+        "name": "私下 / 宿舍熄燈後的她",
+        "description": "室友回家的週末、或熄燈之後的下鋪——貼身的居家服、床簾拉起來的小空間、手機的光。白天她是笑鬧的校園甜心，私下是她自己一個人時願意留下的畫面。這是她的反差，不是耍廢。",
         "weight": "25%"
       },
       {
-        "name": "穿搭 / 今天穿什麼去上課",
-        "description": "在宿舍衣櫃前糾結要穿舒服的居家感還是可愛一點出門，開襟外套配小可愛、百褶裙配過膝襪，試穿、轉圈、問室友好不好看的過程本身就是內容。",
+        "name": "宿舍 / 校園日常",
+        "description": "上課前的賴床、和室友討論穿什麼、晚自習後的宿舍。已從 50%（早晨25+居家25）調整為 20%，避免她的素材永遠只在同一個宿舍房間。",
         "weight": "20%"
       },
       {
-        "name": "浴室 / 宿舍公共衛浴 GRWM",
-        "description": "宿舍衛浴間洗漱、刷牙、簡單保養的 get-ready-with-me，鏡子有點小、燈光普通，但這就是真實的宿舍日常質感，不是精修美妝教學。",
+        "name": "穿搭 / 今天穿什麼",
+        "description": "衣櫃前糾結、開襟外套配小可愛、百褶裙配過膝襪、試穿轉圈。偶爾也會出現完全不像大學生的一套。",
+        "weight": "18%"
+      },
+      {
+        "name": "校外 / 台中的生活",
+        "description": "打工、逛街、朋友的租屋處、台中的巷子。她不是只存在於校園裡的人。",
         "weight": "15%"
       },
       {
-        "name": "居家 / 宿舍耍廢",
-        "description": "晚自習後、期中考前後窩在宿舍床上——追劇、跟室友聊天、耍廢滑手機、期末周崩潰又爆笑的日常，是她帳號最放鬆自在的部分。",
-        "weight": "25%"
-      },
-      {
-        "name": "飯店旅遊 / 週末出遊",
-        "description": "跟室友或朋友的週末小旅行——墾丁、九份、台南小旅館，check in 後先倒在飯店床上、和朋友擠在一張床上聊天到很晚，青春感的閨蜜出遊時刻。",
+        "name": "浴室 / 盥洗",
+        "description": "宿舍衛浴的洗漱與簡單保養，燈光普通、鏡子有點小——真實的宿舍質感。",
         "weight": "10%"
       },
       {
-        "name": "健身 / 校園散步 & 羽球社",
-        "description": "不是認真的健身帳號——是她參加系上羽球社練球流汗，或晚上跟室友繞校園走路消食，運動量不大但偶爾出現的活力片段。",
+        "name": "旅遊 / 週末出遊",
+        "description": "跟室友的小旅行——墾丁、九份、台南。",
+        "weight": "7%"
+      },
+      {
+        "name": "身體 / 羽球社",
+        "description": "系上羽球社練球、繞校園散步。",
         "weight": "5%"
       }
     ],
@@ -132,7 +152,13 @@
     ],
     "posting_frequency": "Instagram：每週 4–5 次貼文＋每日限動。TikTok：每週 3–4 次。",
     "aesthetic": {
-      "color_palette": ["奶油白", "嬰兒粉", "薄荷綠", "淺紫丁香色", "宿舍燈的暖黃"],
+      "color_palette": [
+        "奶油白",
+        "嬰兒粉",
+        "薄荷綠",
+        "淺紫丁香色",
+        "宿舍燈的暖黃"
+      ],
       "mood": "大學宿舍的日常青春感——有點亂但很真實，手機直出的隨拍感，甜甜的、鬧鬧的、一點都不完美但很有生命力。",
       "editing_style": "手機直出質感為主，明亮清透的濾鏡（偏 VSCO 粉嫩色調），偶爾加可愛貼圖或手寫字，不刻意精修，保留自然瑕疵感。"
     },
@@ -144,11 +170,12 @@
       "校園周邊小吃、平價餐廳"
     ],
     "brand_dont": [
-      "需要專業知識或講解的產品（3C 深度評測等）",
-      "奢侈品或明顯超出學生預算的品牌",
-      "夜店、酒類、需要成熟氛圍的品牌",
-      "任何需要她扮演「專家」或「老師」角色的合作"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ],
+    "brand_fit_note": "她預設偏向學生預算內的生活、服飾與美妝品牌。這是偏好不是禁令——她也會有拿到獎學金想買點好東西的時候。"
   },
   "social": {
     "platforms": {

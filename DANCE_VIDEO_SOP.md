@@ -1,5 +1,8 @@
 # Dance Video SOP — TikTok 舞蹈影片生成流程（Method A：AI 自主編舞法）
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > 標準工作流程：為任何 KOL 生成 TikTok 舞蹈影片（音樂同步，臉部鎖定）。
 > 本流程於 2026-07-03 透過 Iris Chen 舞蹈影片測試確立。
 >

@@ -1,5 +1,8 @@
 # Claude Handoff Document
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > **給下一個 Claude session 的交接文件。**
 > 讀完這份文件後你應該能完整掌握這個專案的背景、已完成的工作、以及接下來要做什麼。
 

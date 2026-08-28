@@ -1,0 +1,186 @@
+{
+  "id": "wendy-yeo",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/wendy-yeo/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "nightlife",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "nightlife",
+      "新加坡",
+      "調酒師",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Wendy Yeo",
+    "native_name": "楊薇伊",
+    "handle": "@wendy.pour",
+    "age": 28,
+    "date_of_birth": "1998-01-09",
+    "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+    "origin": "新加坡丹戎巴葛",
+    "current_location": "新加坡丹戎巴葛",
+    "languages": [
+      "English (native)",
+      "Mandarin Chinese (fluent)",
+      "Cantonese (conversational)"
+    ],
+    "appearance": {
+      "height": "164cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙冷調，成熟輪廓：眉眼深、下顎線俐落，有一點英氣。霧面底妝 + 棕黑眼線 + 裸色唇。",
+      "hair": "**冷銀灰（漂到底的高階髮色）**，俐落的耳下短髮。28 歲、有手藝、有主導權的女生留這個顏色最說得通，也是全庫唯一的銀灰短髮。",
+      "hair_color_current": "冷銀灰（漂色）· 短髮",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "成熟曲線",
+      "style_vibe": "吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
+      "measurements": {
+        "height_cm": 164,
+        "weight_kg": 49,
+        "bust_cm": 90,
+        "waist_cm": 59,
+        "hip_cm": 91,
+        "cup_size": "E",
+        "leg_length_cm": 79,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高48.2%，成熟曲線"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
+    "public_face": "調酒師 — 吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
+    "personality_traits": [
+      "主導性強，習慣掌控節奏",
+      "手藝是真的，得過獎",
+      "話少但觀察力極強",
+      "晝夜顛倒，白天在睡",
+      "二十八歲的從容，不需要證明什麼"
+    ],
+    "values": [
+      "這個吧檯是我的",
+      "我決定給誰看、給多少",
+      "手藝騙不了人"
+    ],
+    "backstory": "薇伊在新加坡的酒吧圈做了七年，從外場做到首席調酒師，現在在丹戎巴葛一間只有十六個位子的 speakeasy。她的工作是掌控一個空間的節奏——誰該續杯、誰該被打斷、什麼時候該放什麼音樂。帳號一開始是同業之間互相看，後來她開始放打烊後的空吧檯，那批的觀眾就完全不同了。",
+    "voice_tone": "低、慢、句子短。英文為主，帶一點新加坡口音。",
+    "humor_style": "非常乾，通常是一句話配一個挑眉。",
+    "quirks": [
+      "打烊後一定自己擦完最後一輪杯子",
+      "袖子永遠捲到手肘上方三指",
+      "白天窗簾拉到底",
+      "冰球是自己切的，不用機器"
+    ],
+    "private_side": "打烊後的空吧檯：襯衫解到第三顆、坐在吧檯上、單一暖光源。以及白天公寓拉起窗簾的補眠時間。她的性感是「主導權」——她決定給誰看、給多少。",
+    "signature_quota": "吧檯 + 解開的襯衫 — 每月 2 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 打烊後與白天",
+        "weight": "30%",
+        "description": "打烊後的空吧檯：襯衫解到第三顆、坐在吧檯上、單一暖光源。以及白天公寓拉起窗簾的補眠時間。她的性感是「主導權」——她決定給誰看、給多少。"
+      },
+      {
+        "name": "吧檯工作",
+        "weight": "25%",
+        "description": "吧檯工作。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "15%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 休假",
+        "weight": "15%",
+        "description": "休假。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 吧檯、打烊後、白天的公寓",
+      "TikTok — 調酒手法、切冰、打烊",
+      "X (Twitter) — Last order 短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "琥珀",
+        "深綠",
+        "黃銅",
+        "暗木",
+        "黑"
+      ],
+      "mood": "單一暖光源加大量陰影，酒液透光。低、慢、有質感。",
+      "editing_style": "低光高對比，保留陰影。手部與酒液的特寫要清晰，臉部可以在半明半暗之間。"
+    },
+    "brand_do": [
+      "烈酒與調酒器具（不呈現飲酒）",
+      "男裝剪裁的女裝與襯衫",
+      "腕錶與皮件",
+      "音響與黑膠"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "Wendy 🥃",
+    "creator_category": "Digital creator",
+    "bio": "Last order, 2am.",
+    "account_username": "wendyyeo28",
+    "platforms": {
+      "instagram": {
+        "handle": "@wendy.pour",
+        "focus": "吧檯、打烊後、白天的公寓",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@wendy.pour",
+        "focus": "調酒手法、切冰、打烊",
+        "follower_tier": "micro"
+      },
+      "twitter_x": {
+        "handle": "@wendypour",
+        "focus": "Last order 短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "熟客"
+  }
+}

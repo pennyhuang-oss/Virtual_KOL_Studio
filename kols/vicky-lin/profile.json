@@ -24,15 +24,25 @@
   },
   "meta": {
     "created_at": "2026-07-23",
-    "updated_at": "2026-07-23",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "fitness",
-    "tags": ["fitness", "gym-girl", "weightlifting", "taiwanese", "kaohsiung", "body-positive", "strength-training", "gen-z"],
+    "tags": [
+      "fitness",
+      "gym-girl",
+      "weightlifting",
+      "taiwanese",
+      "kaohsiung",
+      "body-positive",
+      "strength-training",
+      "gen-z"
+    ],
     "reference_profiles": [
       "Taiwanese fitness content creators",
       "gym-girl aesthetic influencers",
       "female weightlifting / functional fitness creators"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Vicky Lin",
@@ -43,7 +53,11 @@
     "ethnicity": "Taiwanese",
     "origin": "Kaohsiung, Taiwan (高雄)",
     "current_location": "Kaohsiung, Taiwan (高雄)",
-    "languages": ["Mandarin Chinese (native)", "English (conversational)", "Taiwanese Hokkien (basic)"],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (conversational)",
+      "Taiwanese Hokkien (basic)"
+    ],
     "appearance": {
       "height": "170cm",
       "face_type": "Strikingly beautiful, warm, magnetic face — bright almond-shaped eyes, high soft cheekbones, a straight elegant nose, full lips with a natural, inviting smile. Gorgeous and approachable, not hard or stern — training gives her a glow and confidence, never a cold or aggressive expression. Idol/fitness-model tier good looks, never a stone-faced or intense default expression.",
@@ -60,7 +74,8 @@
         "cup_size": "D",
         "leg_length_cm": 84,
         "body_ratio_note": "腰臀比約0.65，腿長佔身高49.4%，重訓練出的緊實運動員比例，上圍偏豐滿"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -91,39 +106,45 @@
       "Gets visibly grumpier before a workout and visibly happier after — no in-between",
       "Keeps a battered gym bag that's clearly seen years of use, never upgrades it",
       "Goes fully goofy and soft the second she's off camera — followers who meet her in person are always surprised"
-    ]
+    ],
+    "public_face": "高雄一間健身房的教練——這是她原本設定裡就有的正職，也是她公開講的身分。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning & Waking Up",
-        "description": "Kaohsiung mornings before the heat sets in — often already dressed for an early session, hair going up into a ponytail, a quick real moment before the gym takes over the day.",
+        "name": "私下 / 她自己的房間",
+        "description": "回到高雄的公寓、洗完澡之後——貼身家居服、地板上的伸展、床邊。訓練時她是最不在意外表的那種人，私下卻很清楚自己練出來的身體長什麼樣，也願意把它留下來。這個落差就是她的反差。",
+        "weight": "25%"
+      },
+      {
+        "name": "健身 / 訓練",
+        "description": "重訓、功能性循環、PR 挑戰、帶學員。汗與肌肉在動。她的核心身分——但已從 30% 調整為 22%，避免她的素材永遠只出現在健身房。",
+        "weight": "22%"
+      },
+      {
+        "name": "穿搭 / 換裝",
+        "description": "挑今天的運動套組、運動內衣與緊身褲的搭配、外面隨手套的 oversized 帽 T。偶爾也會有完全不像她的一套。",
         "weight": "15%"
       },
       {
-        "name": "穿搭 / Outfit & Changing",
-        "description": "Less about fashion, more about function — choosing today's set, sports bra and leggings combos, the oversized hoodie she throws on over everything. Confident, practical, unbothered.",
-        "weight": "15%"
+        "name": "早晨 / 剛睡醒",
+        "description": "高雄的清晨、熱起來之前——有時已經換好衣服準備早訓，頭髮正要綁起來。",
+        "weight": "13%"
       },
       {
-        "name": "浴室 / Bathroom & After Shower",
-        "description": "Her bathroom pillar is post-workout shower and recovery — rinsing off the sweat, ice or heat for sore muscles, skin still flushed from training. Honest and unglamorous in the best way.",
-        "weight": "15%"
+        "name": "浴室 / 訓練後",
+        "description": "訓練後沖掉汗、冰敷或熱敷痠痛的肌肉、皮膚還泛紅。誠實而不精緻。",
+        "weight": "12%"
       },
       {
-        "name": "在家 / Home Lounging",
-        "description": "Off the clock in her Kaohsiung apartment — meal prep, stretching on the living room floor, collapsed on the sofa after a heavy session. This is where the goofy, soft side shows up.",
-        "weight": "15%"
+        "name": "外出 / 高雄的日常",
+        "description": "不在健身房的高雄——菜市場、河堤、朋友的店。她也有完全不運動的一天。",
+        "weight": "8%"
       },
       {
-        "name": "飯店旅遊 / Hotel & Travel",
-        "description": "Travel built around fitness — competition trips, fitness retreats, hotel gyms she scouts the moment she checks in, occasional actual vacation where she still can't fully switch off training mode.",
-        "weight": "10%"
-      },
-      {
-        "name": "健身 / Fitness & Training",
-        "description": "Her dominant pillar and true identity — weightlifting sessions, functional fitness circuits, PR attempts, client training at her side hustle, visible sweat and muscle in motion. This is not a lifestyle accessory, it's the core of the account.",
-        "weight": "30%"
+        "name": "旅行",
+        "description": "比賽、健身營，偶爾真正的假期。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -134,7 +155,13 @@
     ],
     "posting_frequency": "Instagram: 5x/week + daily Stories. TikTok: 4–5x/week.",
     "aesthetic": {
-      "color_palette": ["charcoal black", "sun-tan bronze", "chalk white", "gym-mat grey", "energetic red accent"],
+      "color_palette": [
+        "charcoal black",
+        "sun-tan bronze",
+        "chalk white",
+        "gym-mat grey",
+        "energetic red accent"
+      ],
       "mood": "High-heat Kaohsiung gym energy — sweat, chalk dust, hard light through gym windows. Confident and a little defiant, never soft-focus or dreamy.",
       "editing_style": "Slightly high-contrast, true-to-skin color grading — no heavy filters that would erase muscle definition or sweat sheen. Gym lighting kept honest: fluorescent or hard daylight, not glamour lighting."
     },
@@ -146,11 +173,13 @@
       "Wearable fitness tech (trackers, recovery tools)"
     ],
     "brand_dont": [
-      "Weight-loss or 'shrink yourself' diet products",
-      "Any brand requiring scripted, preachy motivational delivery",
-      "Detox teas, appetite suppressants, or anything diet-culture adjacent",
-      "Brands that want her to look leaner rather than stronger"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類",
+      "減重、瘦身、排毒茶、抑制食慾類產品（與她的核心價值直接衝突，價值觀紅線）"
+    ],
+    "brand_fit_note": "她預設偏向運動、營養與機能品牌。這是偏好不是禁令——她也會有想穿裙子的時候。"
   },
   "social": {
     "platforms": {

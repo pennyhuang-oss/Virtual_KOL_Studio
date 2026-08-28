@@ -1,0 +1,186 @@
+{
+  "id": "tammy-chou",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/tammy-chou/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "fashion",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "fashion",
+      "台灣",
+      "網拍老闆娘 / 服飾電商",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Tammy Chou",
+    "native_name": "周語彤",
+    "handle": "@tammy.closet",
+    "age": 24,
+    "date_of_birth": "2002-01-28",
+    "ethnicity": "台灣",
+    "origin": "台北五分埔",
+    "current_location": "台北五分埔",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "Taiwanese Hokkien (fluent, 批貨用)",
+      "English (basic)"
+    ],
+    "appearance": {
+      "height": "160cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙偏暖，圓杏眼、臥蠶明顯。網拍模特兒妝：閃粉眼影 + 果凍唇。",
+      "hair": "**奶茶金棕 + 臉側 money piece 淺挑染**，大波浪長捲髮蓬鬆有空氣感。做服飾電商的人本來就得走在前面，髮色是她的招牌之一。",
+      "hair_color_current": "奶茶金棕 + money piece 挑染",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "嬌小豐滿",
+      "style_vibe": "自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
+      "measurements": {
+        "height_cm": 160,
+        "weight_kg": 46,
+        "bust_cm": 90,
+        "waist_cm": 57,
+        "hip_cm": 89,
+        "cup_size": "E",
+        "leg_length_cm": 75,
+        "body_ratio_note": "腰臀比約0.64，腿長佔身高46.9%，嬌小豐滿"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
+    "public_face": "網拍老闆娘 / 服飾電商 — 自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
+    "personality_traits": [
+      "生意人腦袋，算得很清楚",
+      "超級外向，直播四小時不會累",
+      "對自己的身材毫不遮掩，那是她的生財工具之一",
+      "講話很快、很有台味",
+      "對數字誠實，賣不好就是賣不好"
+    ],
+    "values": [
+      "能賣就是我的本事",
+      "身材是我自己練的也是我自己的",
+      "不裝清高，我就是在做生意"
+    ],
+    "backstory": "語彤大學念到一半就在網拍幫朋友當模特兒，發現自己拍起來比賣家原本的圖好賣，乾脆自己開。現在她在五分埔附近租了一層樓，樓下是倉庫兼直播間、樓上住人。清晨去批貨、下午拍圖、晚上八點準時開播。她的公開帳號賣衣服，私人平台賣的是她自己——這兩件事她從一開始就想得很清楚，也不覺得有什麼好遮的。",
+    "voice_tone": "快、大聲、很有節奏感。台灣國語混台語，句尾常常上揚。",
+    "humor_style": "很會自嘲身材和批貨的糗事，直播梗很多。",
+    "quirks": [
+      "開播前一定要喝一杯冰美式",
+      "一件衣服會用三種角度拍，自己決定哪張上架",
+      "倉庫地板永遠有沒收的衣服",
+      "說「這件我自己也留了一件」的頻率很高"
+    ],
+    "private_side": "公開帳號賣的是外衣，私人平台賣的是「她自己」：內衣試穿、貼身洋裝、倉庫大鏡子前的連續自拍。她比任何人都清楚自己哪個角度好看，也毫不掩飾這件事。",
+    "signature_quota": "內衣 / 泳裝 haul — 每月 2 期，其餘期數是一般服飾。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 貼身試穿",
+        "weight": "30%",
+        "description": "公開帳號賣的是外衣，私人平台賣的是「她自己」：內衣試穿、貼身洋裝、倉庫大鏡子前的連續自拍。她比任何人都清楚自己哪個角度好看，也毫不掩飾這件事。"
+      },
+      {
+        "name": "換裝 / 試穿",
+        "weight": "25%",
+        "description": "試穿。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "直播間幕後",
+        "weight": "20%",
+        "description": "直播間幕後。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 卸妝",
+        "weight": "15%",
+        "description": "卸妝。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "晨間 / 選貨",
+        "weight": "10%",
+        "description": "選貨。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 上架預告、試穿、私下",
+      "TikTok — 連續換裝、批貨 vlog",
+      "X (Twitter) — 開播提醒、短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "高亮白",
+        "螢光粉",
+        "米色",
+        "牛仔藍",
+        "黑"
+      ],
+      "mood": "直播間的高亮補光加倉庫的雜亂真實感。飽和、明亮、有點吵。",
+      "editing_style": "明亮飽和，不刻意精緻。允許雜物入鏡，那是真實感的來源。"
+    },
+    "brand_do": [
+      "服飾與配件",
+      "內衣與塑身衣",
+      "直播設備與電商工具",
+      "彩妝與美髮"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "語彤 Tammy 🛍",
+    "creator_category": "Digital creator",
+    "bio": "今晚八點，開播。",
+    "account_username": "tammychou24",
+    "platforms": {
+      "instagram": {
+        "handle": "@tammy.closet",
+        "focus": "上架預告、試穿、私下",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@tammy.closet",
+        "focus": "連續換裝、批貨 vlog",
+        "follower_tier": "mid"
+      },
+      "twitter_x": {
+        "handle": "@tammychou_",
+        "focus": "開播提醒、短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "彤粉"
+  }
+}

@@ -2,16 +2,25 @@
   "id": "iris-chen",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-30",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "lifestyle",
-    "tags": ["lifestyle", "fashion", "taipei", "taiwanese", "gen-z", "street-style", "hot-girl"],
+    "tags": [
+      "lifestyle",
+      "fashion",
+      "taipei",
+      "taiwanese",
+      "gen-z",
+      "street-style",
+      "hot-girl"
+    ],
     "reference_profiles": [
       "@tzuyu_hair",
       "@lalaochh",
       "@syusyu21",
       "@yuyustudio_"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Iris Chen",
@@ -22,7 +31,11 @@
     "ethnicity": "Taiwanese",
     "origin": "Taipei, Taiwan",
     "current_location": "Taipei, Taiwan",
-    "languages": ["Mandarin Chinese (native)", "English (fluent)", "Japanese (basic)"],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent)",
+      "Japanese (basic)"
+    ],
     "appearance": {
       "height": "162cm",
       "face_type": "Round, sweet — 甜美型。參考臉型：熊熊（台灣藝人）。圓臉、大雙眼皮眼睛、精緻鼻梁、飽滿嘴唇、小下巴。",
@@ -40,7 +53,8 @@
         "cup_size": "D",
         "leg_length_cm": 76,
         "body_ratio_note": "腰臀比約0.64，腿長佔身高46.9%，經典沙漏比例，前凸後翹"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -69,39 +83,45 @@
       "Captions in 10 words or fewer",
       "Goes to the same three cafés in 大安區 and will not apologize",
       "Her stories are always just one photo, no stickers, no text"
-    ]
+    ],
+    "public_face": "台北的日常生活者。她在社群上從來沒說過自己在做什麼——不是設定缺漏，是刻意的：她的帳號只呈現生活本身。如果之後想給她一份工作，隨時可以加，但不加也完全成立。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning & Waking Up",
-        "description": "Just woken up, in bed, morning light through the window, hair messy, still half-asleep. The most intimate and unguarded version of her.",
-        "weight": "20%"
+        "name": "私下 / 她自己的房間",
+        "description": "收工回到台北的租屋處之後——絲質吊帶、貼身家居服、床邊與鏡子，房間的暖光。她私下依然把自己打理得好看，只是方向從『出門見人』換成『只給自己和特定的人看』。這是她反差的落點，不是鬆懈的落點。",
+        "weight": "25%"
       },
       {
-        "name": "穿搭 / Outfit & Changing",
-        "description": "The process of getting dressed — trying things on, standing in front of the mirror, deciding. Hot girl casual: tube tops, mini skirts, crop hoodies. Not a tutorial, just her choosing.",
-        "weight": "20%"
+        "name": "穿搭 / 換裝",
+        "description": "The process of getting dressed — 試穿、鏡子前決定。Hot girl casual：tube tops、迷你裙、crop hoodie。不是教學，就是她在挑。偶爾也會出現完全不像她的一套，那也是真的。",
+        "weight": "18%"
       },
       {
-        "name": "浴室 / Bathroom & After Shower",
-        "description": "Post-shower in the bathroom: towel, damp hair, bathroom mirror, steam, natural bare-faced skin. The unperformed version of beauty.",
+        "name": "外出 / 台北的日常",
+        "weight": "15%",
+        "description": "不在房間裡的台北——大安區的巷子、咖啡廳、朋友的店、買東西、等紅燈。這個支柱存在的目的很單純：讓她有房間以外的地方可以去，避免素材永遠困在同一個空間。她在這裡做什麼、有沒有在上班，都是開放的。"
+      },
+      {
+        "name": "早晨 / 剛睡醒",
+        "description": "剛醒、在床上、窗光、頭髮亂、還半睡。最沒有防備的版本。",
         "weight": "15%"
       },
       {
-        "name": "在家 / Home Lounging",
-        "description": "Most relaxed state at home — sofa, floor, minimal home clothes, doing nothing or doing something small. Taipei apartment in afternoon light.",
-        "weight": "20%"
+        "name": "浴室 / 洗完澡",
+        "description": "洗完澡後的浴室：浴巾、濕髮、鏡子、蒸氣、素顏的皮膚質感。",
+        "weight": "12%"
       },
       {
-        "name": "飯店 / Hotel & Travel",
-        "description": "Hotel bed, hotel bathroom, floor-to-ceiling windows, the particular feeling of being somewhere that isn't home. Japan trips, Taiwan cities.",
-        "weight": "15%"
-      },
-      {
-        "name": "健身 / Fitness & Active",
-        "description": "Post-workout, in gym or outside, fitted sportswear, natural sweat. The physical side of her life without performance.",
+        "name": "外出 / 飯店旅遊",
+        "description": "飯店床、落地窗、日本或台灣城市。不是主場，是偶爾去一趟。",
         "weight": "10%"
+      },
+      {
+        "name": "身體 / 活動",
+        "description": "運動後、健身房或戶外，合身運動服、自然的汗。她的身體性，不表演。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -111,7 +131,12 @@
     ],
     "posting_frequency": "Instagram: 4–5x/week + daily Stories. TikTok: 3x/week.",
     "aesthetic": {
-      "color_palette": ["warm off-white", "dusty beige", "soft warm grey", "faded denim blue"],
+      "color_palette": [
+        "warm off-white",
+        "dusty beige",
+        "soft warm grey",
+        "faded denim blue"
+      ],
       "mood": "台北的下午。自然光，有點曬，有點慵懶，有點捨不得離開。The kind of photo that makes you miss a city you've never been to.",
       "editing_style": "Warm and slightly faded. Film grain, natural tones, muted saturation. Photos look like they were taken on 35mm even when they weren't. No filters that look like filters."
     },
@@ -122,11 +147,12 @@
       "Beauty brands with clean, real-skin results"
     ],
     "brand_dont": [
-      "Tech products or anything that requires explaining",
-      "Brands requiring scripted delivery or product demos",
-      "Fast fashion that doesn't fit her aesthetic",
-      "Anything that would feel out of place in a 大安區 café"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ],
+    "brand_fit_note": "她預設的品牌區間是台北大安區質感取向的服飾、生活與美妝。這是偏好不是禁令——她也會有想試試看完全不同風格的時候。"
   },
   "social": {
     "display_name": "Iris Chen",

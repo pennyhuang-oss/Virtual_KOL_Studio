@@ -592,7 +592,13 @@ steamy intimate bathroom atmosphere, small candles or greenery visible in backgr
 
 ---
 
-### 四、Home Lounging（居家閒躺系列）20%
+### 四、私下 / 她自己的空間（25%）
+
+> **2026-08-27 憲章同步**：本系列原名「Home Lounging 居家閒躺」，框架是「最放鬆、什麼都不做」。
+> 依 [`PERSONA_CANON.md`](PERSONA_CANON.md) 原則一，這個框架已作廢——
+> 私下的她**依然精心打理自己**，只是打理的方向從「給任何人看」換成「只給自己和特定的人看」。
+> 以下 L 系列場景仍可用，但使用時要把服裝與情緒往「她自己選擇要留下這個畫面」的方向寫，
+> 而不是「懶散、無聊、不在意」。每則 prompt 的服裝都必須具體寫出材質與款式。
 
 #### Scene L-1：沙發上的懶散，滑手機
 
@@ -600,13 +606,13 @@ steamy intimate bathroom atmosphere, small candles or greenery visible in backgr
 **服裝**：oversized 棉T + 短褲，或細肩帶 + 短褲，光腳
 **燈光**：午後客廳自然光（窗簾沒完全拉），或傍晚落地燈的暖光
 **鏡頭角度**：從沙發正前方或斜前方平視，全身可見，偏側臥姿
-**情緒**：完全放鬆、無聊但自在、這是她家她最隨意的樣子
+**情緒**：放鬆但有意識——她知道自己現在的樣子好看，這個畫面是她自己要留下的
 
 ```
 lying on sofa with legs up over the armrest, scrolling phone held above face,
 wearing oversized cotton tee and shorts, barefoot, hair loose and casual,
 afternoon living room light through curtains, full body side-lying shot from in front of couch,
-comfortable domestic laziness, zero performance for camera, phone screen slightly glowing
+relaxed but self-aware at home, unhurried, phone screen slightly glowing
 ```
 
 ---

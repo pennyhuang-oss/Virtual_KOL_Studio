@@ -1,0 +1,186 @@
+{
+  "id": "wanyin-jiang",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/wanyin-jiang/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "culture",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "culture",
+      "中國",
+      "旗袍店店主 / 古典舞背景",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Wanyin Jiang",
+    "native_name": "江晚吟",
+    "handle": "@jiangwanyin",
+    "age": 23,
+    "date_of_birth": "2003-05-13",
+    "ethnicity": "中國",
+    "origin": "蘇州",
+    "current_location": "蘇州",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "Suzhou dialect (native)",
+      "English (basic)"
+    ],
+    "appearance": {
+      "height": "165cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "非常白皙，江南長相：鵝蛋臉、柳葉眉、丹鳳眼、薄唇。古典妝：白底、桃花眼影、正紅唇。",
+      "hair": "現階段是黑色及腰長直髮，配合古典造型；盤髻與放下的落差是她的造型引擎。想換色的話換一次就是一整季的新鮮感。",
+      "hair_color_current": "天然黑（現階段）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "古典勻稱",
+      "style_vibe": "蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
+      "measurements": {
+        "height_cm": 165,
+        "weight_kg": 47,
+        "bust_cm": 86,
+        "waist_cm": 57,
+        "hip_cm": 88,
+        "cup_size": "D",
+        "leg_length_cm": 79,
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高47.9%，古典勻稱"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
+    "public_face": "旗袍店店主 / 古典舞背景 — 蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
+    "personality_traits": [
+      "身段是童子功，站著就跟別人不一樣",
+      "對料子和工藝有講究",
+      "話不多，但講起旗袍會停不下來",
+      "私下比公開形象大膽得多",
+      "對蘇州有很深的感情"
+    ],
+    "values": [
+      "旗袍不是古裝，是還在穿的衣服",
+      "身段騙不了人",
+      "老東西要有人繼續做"
+    ],
+    "backstory": "晚吟從小學古典舞，藝校畢業。二十一歲那年家裡的老宅要空著，她乾脆在裡面開了一間旗袍訂製店——量身、選料、做衣服，也接舞蹈教學。她自己就是最好的模特兒，因為她知道旗袍要怎麼站、怎麼走、怎麼在轉身的時候讓開衩剛好露出來。這件事她做得非常自覺。",
+    "voice_tone": "文雅、簡短、偶爾用一句古話。私下的貼文反而很直白。",
+    "humor_style": "含蓄，常常用一句很雅的話講很不雅的事。",
+    "quirks": [
+      "盤髮永遠自己來，不假手他人",
+      "量身的軟尺掛在脖子上一整天",
+      "下雨天一定去園林走一趟",
+      "貼文常常只有四個字"
+    ],
+    "private_side": "旗袍本身就是最好的載體：開衩、盤扣一顆一顆解開、肩線。她的私人平台是「旗袍下面」的想像，加上老宅裡的暗光與木床。全庫最有東方情色語彙的一位，但完全不靠裸露。",
+    "signature_quota": "旗袍 / 漢服半褪 — 每月 2 期；古典舞身段影片每月 1 期。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 老宅暗光",
+        "weight": "30%",
+        "description": "旗袍本身就是最好的載體：開衩、盤扣一顆一顆解開、肩線。她的私人平台是「旗袍下面」的想像，加上老宅裡的暗光與木床。全庫最有東方情色語彙的一位，但完全不靠裸露。"
+      },
+      {
+        "name": "旗袍店工作 / 量身",
+        "weight": "20%",
+        "description": "量身。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "換裝 / 盤扣",
+        "weight": "20%",
+        "description": "盤扣。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間梳妝",
+        "weight": "15%",
+        "description": "晨間梳妝。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "外出 / 園林",
+        "weight": "15%",
+        "description": "園林。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 旗袍、園林、身段、私下",
+      "TikTok — 盤扣特寫、水袖、換裝轉場",
+      "X (Twitter) — 四字短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "黛青",
+        "月白",
+        "胭脂紅",
+        "墨",
+        "竹青"
+      ],
+      "mood": "低飽和、高質感，光線像宣紙。園林的水、雨、木格窗。",
+      "editing_style": "低飽和、柔光、留白構圖。膚質保持真實，不做仿古濾鏡的塑膠感。"
+    },
+    "brand_do": [
+      "旗袍與新中式服飾",
+      "茶與香道",
+      "傳統工藝與布料",
+      "蘇州在地文旅"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "晚吟",
+    "creator_category": "Digital creator",
+    "bio": "一襲舊衣，半日閒。",
+    "account_username": "jiangwanyin23",
+    "platforms": {
+      "instagram": {
+        "handle": "@jiangwanyin",
+        "focus": "旗袍、園林、身段、私下",
+        "follower_tier": "micro"
+      },
+      "tiktok": {
+        "handle": "@jiangwanyin",
+        "focus": "盤扣特寫、水袖、換裝轉場",
+        "follower_tier": "mid"
+      },
+      "twitter_x": {
+        "handle": "@jiangwanyin_",
+        "focus": "四字短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "老客人"
+  }
+}

@@ -2,16 +2,26 @@
   "id": "camille-dupont",
   "meta": {
     "created_at": "2026-06-23",
-    "updated_at": "2026-06-30",
+    "updated_at": "2026-08-27",
     "status": "active",
     "category": "lifestyle",
-    "tags": ["french", "paris", "food", "wine", "lifestyle", "effortless", "joie-de-vivre", "fashion"],
+    "tags": [
+      "french",
+      "paris",
+      "food",
+      "wine",
+      "lifestyle",
+      "effortless",
+      "joie-de-vivre",
+      "fashion"
+    ],
     "reference_profiles": [
       "@mimithorisson",
       "@food.frompariswithlove",
       "@lescuisinesdeclementine",
       "@inezjanevdijk"
-    ]
+    ],
+    "canon_version": "PERSONA_CANON.md v1 (2026-08-27)"
   },
   "identity": {
     "name": "Camille Dupont",
@@ -21,7 +31,11 @@
     "ethnicity": "French",
     "origin": "Lyon, France",
     "current_location": "Paris, France",
-    "languages": ["French (native)", "English (fluent)", "Italian (conversational)"],
+    "languages": [
+      "French (native)",
+      "English (fluent)",
+      "Italian (conversational)"
+    ],
     "appearance": {
       "height": "169cm",
       "hair": "Long, straight, natural honey golden blonde — always effortless, never styled. Sometimes a clip loosely pinned that's perpetually about to fall out.",
@@ -36,7 +50,8 @@
         "cup_size": "C",
         "leg_length_cm": 82,
         "body_ratio_note": "腰臀比約0.68，腿長佔身高48.5%，纖細優雅的巴黎比例"
-      }
+      },
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。"
     }
   },
   "persona": {
@@ -67,39 +82,45 @@
       "Films everything with one hand while the other is holding a glass of wine",
       "Never shares a recipe without a story about where it came from",
       "The clip in her hair is always slightly falling out — followers have bet on when it'll drop"
-    ]
+    ],
+    "public_face": "巴黎的生活者。她讀過索邦文學系（見 backstory），但帳號上不提學校也不提工作，只有食物、酒和一間公寓。"
   },
   "content": {
     "pillars": [
       {
-        "name": "早晨 / Morning & Waking Up",
-        "description": "Paris apartment mornings — white linen, Haussmann window light, blonde hair on the pillow. She wakes up slowly, beautifully, without knowing anyone is watching.",
-        "weight": "20%"
+        "name": "私下 / 她自己的房間",
+        "description": "打工結束回到巴黎的小公寓——絲質吊帶、亞麻襯衫只扣一顆、午後或深夜的光。她的性感一直是不自覺的那種，私下只是把音量放大了一點點，而且她自己知道。",
+        "weight": "25%"
       },
       {
-        "name": "穿搭 / Outfit & Changing",
-        "description": "The French way of getting dressed — linen shirts, silk slips, the clip perpetually falling out of her hair. Effortless because she's genuinely not trying.",
-        "weight": "20%"
+        "name": "穿搭 / 換裝",
+        "description": "亞麻襯衫、絲質吊帶裙、永遠要掉不掉的髮夾。因為她真的沒有在努力。偶爾也會刻意打扮一次。",
+        "weight": "18%"
       },
       {
-        "name": "浴室 / Bathroom & After Shower",
-        "description": "Vintage-tiled Paris bathroom: wet blonde hair, white towel, steam on the mirror. She looks at her reflection and thinks about something else entirely.",
+        "name": "外出 / 巴黎的日常",
+        "weight": "15%",
+        "description": "不在公寓裡的巴黎——市場、麵包店、河邊、朋友的餐桌。她的生活本來就有一半在外面發生。"
+      },
+      {
+        "name": "早晨 / 剛睡醒",
+        "description": "巴黎公寓的早晨——白亞麻、Haussmann 窗光、金髮散在枕頭上。",
         "weight": "15%"
       },
       {
-        "name": "在家 / Home Lounging",
-        "description": "Her Paris apartment sofa, afternoon light, linen shirt with buttons undone, reading or not reading. The private version of effortless that makes everything else make sense.",
-        "weight": "20%"
+        "name": "浴室 / 洗完澡",
+        "description": "老磁磚的巴黎浴室：濕的金髮、白浴巾、鏡子上的霧。",
+        "weight": "12%"
       },
       {
-        "name": "飯店 / Hotel & Travel",
-        "description": "Lyon, Nice, Rome — clean hotel rooms, large windows, city or coastal light. She doesn't try to look a certain way; she just does.",
-        "weight": "15%"
-      },
-      {
-        "name": "健身 / Fitness & Active",
-        "description": "Early morning Paris walks, occasional vélib rides, stretching by the window. She doesn't call it exercise. It's just how she lives in a city.",
+        "name": "外出 / 旅行",
+        "description": "里昂、尼斯、羅馬——乾淨的飯店房間、大窗、城市或海邊的光。",
         "weight": "10%"
+      },
+      {
+        "name": "身體 / 活動",
+        "description": "清晨的散步、偶爾騎 Vélib、窗邊伸展。她不叫它運動。",
+        "weight": "5%"
       }
     ],
     "formats": [
@@ -110,7 +131,13 @@
     ],
     "posting_frequency": "Instagram: 4x/week + daily Stories. TikTok: 3–4x/week. YouTube: 2x/month.",
     "aesthetic": {
-      "color_palette": ["warm cream", "dusty terracotta", "deep burgundy", "olive green", "soft gold"],
+      "color_palette": [
+        "warm cream",
+        "dusty terracotta",
+        "deep burgundy",
+        "olive green",
+        "soft gold"
+      ],
       "mood": "The golden hour of a Parisian kitchen in autumn. Warm, slightly imperfect, deeply inviting. The kind of image that makes you want to sit down at that table.",
       "editing_style": "Warm film-like colour grading. Natural light only — window light in the kitchen, late afternoon Paris light outdoors. Nothing over-produced. The food is never styled beyond how it actually looks. Props are things she owns: vintage glasses, old linen, chipped ceramics."
     },
@@ -122,11 +149,13 @@
       "Books, culture, and arts organisations"
     ],
     "brand_dont": [
-      "Fast food or food brands without real provenance",
-      "Diet or weight-loss products (she finds these baffling)",
-      "Brands requiring perfect product placement styling",
-      "Anything that feels like it was made in a hurry"
-    ]
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類",
+      "減重、瘦身類產品（她的價值觀直接衝突）"
+    ],
+    "brand_fit_note": "她預設偏向有來歷的食物、酒與生活品牌。這是偏好不是禁令。"
   },
   "ai_generation": {
     "soul_id": "f19dafcc-5bc8-4d8f-af1d-ee48084ac398",

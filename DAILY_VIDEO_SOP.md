@@ -1,5 +1,8 @@
 # Daily Selfie Video SOP — 日常自拍影片生成流程
 
+> ⚠️ **人設層以 [`PERSONA_CANON.md`](PERSONA_CANON.md) 為準。**本檔案中任何與憲章四條原則相衝突的敘述，一律以憲章優先。
+
+
 > 標準工作流程：為任何 KOL 生成 TikTok / Instagram 日常自拍風格影片。
 > 本流程於 2026-07-07 透過 6 個 KOL 批次生成後確立。
 

@@ -1,5 +1,10 @@
 # Sophia Tseng — AI 生成規劃（Generation Notes）
 
+> ℹ️ **本檔案是歷史生成紀錄，內容不回頭改寫。**
+> 其中出現的舊支柱名稱（如「居家／在家／耍廢」）為 2026-08-27 憲章同步前的命名，
+> 現行支柱以 `profile.json` 為準，規則以 [`PERSONA_CANON.md`](../../PERSONA_CANON.md) 為準。
+
+
 > **狀態：✅ Soul 訓練已完成（`status: ready`），soul_id `192562bb-ca64-4615-9515-13d34807857c` 已可用於 `model: soul_2` 正式生成內容**
 > 2026-07-30 完成第三輪五官結構重新設計（見下方「二次修正」章節），使用者核准 `candidate_01.png`–`candidate_04.png` 並指示直接送訓練（「你就直接拿去訓練吧」）。2026-07-31 已用 `candidate_01.png` 建立 Reference Element `980f8414-7709-47ff-9c88-fdc30b54d03d`，生成 13 張完整訓練集（`images/training_v1/`），並呼叫 `show_characters(action='train')` 成功受理，同日以 `action='status'` 確認 `raw_status: completed`，訓練正式完成。詳見下方「2026-07-31」章節。
 

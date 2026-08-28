@@ -1,0 +1,75 @@
+{
+  "_note": "地點層級不再由每列自由判斷。A/B/C 由本表決定；特殊情況可用 location_tier_override，但必須附 reason。",
+  "_definition": {
+    "A": "一般人做不到、帶明顯嚮往感（遊艇、五星飯店套房、精品開箱、豪華 villa、私人招待所）",
+    "B": "一般人偶爾會去（咖啡廳、餐酒館、酒吧、錄音室、健身房、自宅、工作場所）",
+    "C": "一般人天天在做、且畫面完全不美（賣場、超商、加油站、洗衣店、藥妝店、車站月台、早餐店、菜市場、候診間、停車場）"
+  },
+  "tiers": {
+    "own_bedroom": "B",
+    "own_living_room": "B",
+    "own_bathroom": "B",
+    "own_kitchen": "B",
+    "own_entryway": "B",
+    "own_balcony": "B",
+    "workplace_own_studio": "B",
+    "workplace_office": "B",
+    "workplace_shop": "B",
+    "local_cafe": "B",
+    "restaurant": "B",
+    "bar": "B",
+    "gym": "B",
+    "dance_studio": "B",
+    "rental_photo_studio": "B",
+    "city_street": "B",
+    "park": "B",
+    "convenience_store": "C",
+    "supermarket": "C",
+    "hypermarket": "C",
+    "laundromat": "C",
+    "train_platform": "C",
+    "bus_stop": "C",
+    "gas_station": "C",
+    "pharmacy": "C",
+    "breakfast_shop": "C",
+    "wet_market": "C",
+    "clinic_waiting_room": "C",
+    "parking_garage": "C",
+    "post_office": "C",
+    "pickup_locker": "C",
+    "car_interior_parked": "C",
+    "stairwell": "C",
+    "five_star_suite": "A",
+    "luxury_hotel_lobby": "A",
+    "private_yacht": "A",
+    "luxury_villa": "A",
+    "resort_pool": "A",
+    "first_class_lounge": "A",
+    "designer_boutique": "A",
+    "private_club": "A"
+  },
+  "_v2_note": "signature_family 與 career_related 不再由每列自由填 label——改由本表給預設值，shot 可 override 但必須寫 reason。這樣『忘了標』或『改 label 逃過 25% 上限』都會被擋。",
+  "defaults": {
+    "workplace_own_studio": {
+      "signature_family": "{persona_workplace}",
+      "career_related_default": true
+    },
+    "workplace_office": {
+      "signature_family": "{persona_workplace}",
+      "career_related_default": true
+    },
+    "workplace_shop": {
+      "signature_family": "{persona_workplace}",
+      "career_related_default": true
+    },
+    "dance_studio": {
+      "signature_family": "{persona_workplace}",
+      "career_related_default": true
+    },
+    "gym": {
+      "signature_family": "{persona_workplace}",
+      "career_related_default": true
+    }
+  },
+  "_defaults_note": "{persona_workplace} 由各 persona 的 signature_family_key 代入（Nico = nail_studio）。其餘 location 預設 signature_family=null、career_related=false。"
+}

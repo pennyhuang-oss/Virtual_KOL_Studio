@@ -1,0 +1,187 @@
+{
+  "id": "peggy-lee",
+  "ai_assets": {
+    "training_images_v1": {
+      "status": "pending",
+      "platform": "Higgsfield.ai",
+      "model": "Seedream 4.5",
+      "model_slug": "seedream_v4_5",
+      "image_count": 0,
+      "images_path": "kols/peggy-lee/images/training_v1/",
+      "collected_at": null,
+      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "soul_training": {
+        "status": "pending",
+        "platform": "Higgsfield.ai",
+        "model": "soul_2",
+        "soul_id": null,
+        "training_image_count": 0,
+        "started_at": null,
+        "completed_at": null,
+        "note": "PENDING"
+      }
+    }
+  },
+  "meta": {
+    "created_at": "2026-08-27",
+    "updated_at": "2026-08-27",
+    "status": "draft",
+    "category": "automotive",
+    "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",
+    "batch": "Batch 3",
+    "tags": [
+      "automotive",
+      "馬來西亞",
+      "汽車改裝店行銷企劃",
+      "batch3"
+    ],
+    "reference_profiles": []
+  },
+  "identity": {
+    "name": "Peggy Lee",
+    "native_name": "李珮甄",
+    "handle": "@peggy.revs",
+    "age": 24,
+    "date_of_birth": "2002-06-02",
+    "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+    "origin": "吉隆坡（華裔）",
+    "current_location": "吉隆坡（華裔）",
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent)",
+      "Malay (conversational)",
+      "Cantonese (家裡講的)"
+    ],
+    "appearance": {
+      "height": "166cm",
+      "skin": "Fair, luminous, porcelain-toned skin — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-colored. East Asian features (Taiwanese / Chinese / Korean / Japanese leaning), NOT Southeast Asian-leaning features.",
+      "face_type": "白皙（明確排除小麥／古銅），濃眉大眼、五官張揚立體。眼線上揚 + 高光 + 亮唇。",
+      "hair": "**正酒紅 + 銀灰挑染**，長捲髮蓬鬆張揚。車圈的女生本來就敢玩顏色，這是她在人群中被認出來的原因。",
+      "hair_color_current": "正酒紅 + 銀灰挑染（特殊色）",
+      "hair_note": "髮色與髮型為**現階段**設定，不是永久鎖定。Higgsfield Soul V2 不繼承訓練圖的髮型與髮色（見 README「重要規則」第 1 條），每次生成都要在 prompt 裡重寫，因此她隨時可以染髮、剪短、接長——這是讓角色有時間感、像活人的重要手段。見 PERSONA_CANON.md 原則三。",
+      "figure": "張揚沙漏",
+      "style_vibe": "在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
+      "measurements": {
+        "height_cm": 166,
+        "weight_kg": 49,
+        "bust_cm": 93,
+        "waist_cm": 58,
+        "hip_cm": 92,
+        "cup_size": "F",
+        "leg_length_cm": 80,
+        "body_ratio_note": "腰臀比約0.63，腿長佔身高48.2%，張揚沙漏"
+      }
+    }
+  },
+  "persona": {
+    "archetype": "在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
+    "public_face": "汽車改裝店行銷企劃 — 在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
+    "personality_traits": [
+      "爽朗，跟男生圈子混得開",
+      "真的懂車，講得出規格",
+      "對「花瓶」這個詞很敏感",
+      "工作能力強，不只是門面",
+      "夜衝成癮"
+    ],
+    "values": [
+      "我懂車，這件事不用證明給誰看",
+      "引擎聲比音樂好聽",
+      "車展是工作，不是我的全部"
+    ],
+    "backstory": "珮甄在吉隆坡一間改裝店做行銷企劃，家裡本來就是做汽車零件的。她自己開一台手排，從高中就跟著哥哥們跑車聚。車展旺季的時候她要顧攤位、拍素材、跑媒體，其他時候就是普通的上班族。她很堅持一件事：她懂車，不是被放在車旁邊的擺設。",
+    "voice_tone": "爽快、直接、中英夾雜。講到車會突然變得很專業。",
+    "humor_style": "很會虧自己和車圈的兄弟們。",
+    "quirks": [
+      "副駕永遠放著一條擦車布",
+      "夜衝一定會在同一間加油站停",
+      "指甲留短，因為要碰車",
+      "手機殼是自己那台車的顏色"
+    ],
+    "private_side": "房間裡的貼身短版與長靴、車庫夜燈下的引擎蓋、自己那台車的駕駛座。她私下的尺度比車展上的 showgirl 造型更放，因為那是她自己的地盤。",
+    "signature_quota": "賽車服 / 車展 showgirl 造型 — **每月 2 期**（車展是活動，不是她的日常穿著）。"
+  },
+  "content": {
+    "pillars": [
+      {
+        "name": "私下 / 房間與車庫",
+        "weight": "30%",
+        "description": "房間裡的貼身短版與長靴、車庫夜燈下的引擎蓋、自己那台車的駕駛座。她私下的尺度比車展上的 showgirl 造型更放，因為那是她自己的地盤。"
+      },
+      {
+        "name": "改裝店工作 / 車",
+        "weight": "20%",
+        "description": "車。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "穿搭",
+        "weight": "20%",
+        "description": "穿搭。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "浴室 / 晨間",
+        "weight": "15%",
+        "description": "晨間。詳見 content_style.md 同名段落。"
+      },
+      {
+        "name": "夜衝 / 公路",
+        "weight": "15%",
+        "description": "公路。詳見 content_style.md 同名段落。"
+      }
+    ],
+    "formats": [
+      "Instagram — 車、車聚、穿搭、私下",
+      "TikTok — 改裝過程、夜衝、車展",
+      "X (Twitter) — 車聚資訊、短句"
+    ],
+    "posting_frequency": "Instagram 4–5x/週；TikTok 4x/週；X 隨手，每日 0–2 則",
+    "aesthetic": {
+      "color_palette": [
+        "車燈紅",
+        "冷白",
+        "金屬灰",
+        "黑",
+        "琥珀黃"
+      ],
+      "mood": "車庫冷白日光燈、車燈紅黃、濕地面反光。高對比、金屬感、夜間為主。",
+      "editing_style": "高對比、金屬質感、夜間為主。保留反光與濕地面。膚色維持白皙，不因夜燈偏黃。"
+    },
+    "brand_do": [
+      "汽車改裝與零件",
+      "機能服飾與長靴",
+      "運動相機與行車紀錄器",
+      "能量飲與夜間相關"
+    ],
+    "brand_fit_note": "以上是她**預設、多數時候**偏好的品牌區間，是偏好不是禁令——她也會有想試完全不同風格的時候。見 PERSONA_CANON.md 原則四。",
+    "brand_dont": [
+      "任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）",
+      "露骨、違反平台規範的內容",
+      "需要她冒充醫療、投資、法律等專業身分背書的合作",
+      "博弈、詐騙、高風險金融等違法或誤導性品類"
+    ]
+  },
+  "social": {
+    "display_name": "Peggy 🏁",
+    "creator_category": "Digital creator",
+    "bio": "引擎聲比音樂好聽。",
+    "account_username": "peggylee24",
+    "platforms": {
+      "instagram": {
+        "handle": "@peggy.revs",
+        "focus": "車、車聚、穿搭、私下",
+        "follower_tier": "mid"
+      },
+      "tiktok": {
+        "handle": "@peggy.revs",
+        "focus": "改裝過程、夜衝、車展",
+        "follower_tier": "mid"
+      },
+      "twitter_x": {
+        "handle": "@peggyrevs",
+        "focus": "車聚資訊、短句",
+        "follower_tier": "nano"
+      }
+    },
+    "engagement_style": "回覆簡短、不解釋自己。公開帳號維持檯面面貌，私密內容留在私人平台。",
+    "community_name": "車友"
+  }
+}
