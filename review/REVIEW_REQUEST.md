@@ -1,188 +1,160 @@
-# 覆核請求 R7：規格列與 prompt 全面不一致，怎麼收
+# 覆核請求 R8a：重寫後的 prompt（第一批，高風險 7 件）
 
-> ## ⚠️ 讀取範圍限制（重要）
-> **請只讀這一個檔案。不要瀏覽目錄、不要開其他檔案、不要讀 repo 背景。**
-> 原因：上一次連接器把整個專案讀進來，一次耗掉使用者方案內 5 小時用量。
-> 判斷所需的文字**已全部貼在下面**。看完後把答案填進最後的「回覆區」，
-> **不要修改「Claude 的看法」與問題本文**（那是對照用的原始紀錄）。
+> ⚠️ **請只讀這一個檔案**，不要瀏覽目錄或讀 repo 背景（連接器爬整個 repo 會一次耗掉使用者 5 小時用量）。
+> 判斷所需內容已全部貼在下面。回覆填在最後的「回覆區」，不要改問題本文。
 
----
+R7 的五題判定已全部照做：13 件已整併成「有效規格」，手部任務獨立成列
+（可見性型、允許 off-frame／N/A），抽象飄動移出，硬驗收重新產生，再由規格派生 prompt。
+依 R7 Q5 **逐件回 PASS／REVISE／BLOCK**；依「閱讀分批」建議先送高風險 7 件，其餘 6 件另送。
 
-## 一、背景速查（已驗證結論，不用回頭查證）
+> 本檔 12KB，超過協定裡 8KB 的目標。背景已砍到最精簡，剩下的是 R7 指定必附的
+> 逐件內容（有效規格／手部任務／prompt／硬驗收）。13 件拆得更碎只會讓標頭重複更多次、
+> 總讀取量更大，所以選 7＋6 兩批。
 
-| 代號 | 已驗證結論 |
-|---|---|
-| D-03 | `soul_2` **沒有 negative prompt 欄位**，否定句無效 |
-| D-06 | 表情必須綁**實體動作**；純臉部指令（眨眼、吐舌）低可靠 |
-| D-09 | `soul_id` 會鎖整套構圖模板 |
-| D-11 | 靜態圖**不能塞兩個時間點**（`先 A 再 B` 是影片寫法） |
-| — | **錨點提高手部成功率，但不保證**（曾出現浮空雨傘、空掌心） |
-| — | 抽象飄動描述（髮尾晃動、裙襬被風帶起）在靜態圖無效，已從所有 prompt 清除 |
+## 我最不確定的一件事（請優先看）
 
-**生成規矩**：一次只跑兩張；每段 prompt 送出前都要覆核。
+**光線句是新寫法。** YG-04 的 A/B 測出舊寫法
+`background exposed the same brightness as her skin` 會讓背景與臉只差 0.03–0.11 級、
+臉部反差 0.0 級；新寫法拉到 0.37–0.43 級。但你說過不要因一組 2 張就批次改寫，
+**高反差場景也還沒驗證**。
 
----
+我沒有套單一全域字串，改成**每件依它自己的光學設定宣告寫**：
+宣告「低反差」→ 臉均勻曝光＋背景 staying slightly darker（本批 1 件）；
+宣告「取捨」→ 臉受光＋**具名的那一邊** allowed to clip（本批 6 件）。
 
-## 二、這次發現什麼
-
-批次一共 21 件，每件的規格是一張中文表（妝容／髮型／穿著／表情／肢體與重心／…），
-最後一列 `生成 prompt` 是實際送出的英文字串。
-
-**逐列對照後，21 件裡 15 件的中文規格列與英文 prompt 不一致。**
-
-觸發點：YG-04 的四張圖**全部生成單手**，但規格「肢體與重心」列寫的是「**雙手**掌心貼臉頰」，
-prompt 寫的是 `with her fingertips`（單手）。**模型跟的是 prompt，不是規格表。**
-
-### 最大一類：手部任務衝突（12 件）
-
-規格指派給兩隻手的任務**超過兩件**。舉三個代表：
-
-| 件 | 規格列 | prompt |
-|---|---|---|
-| **YG-08** | 肢體：「**雙手**捧著蛋餅」／表情：「**空著的手**對鏡頭比大拇指」 | `bites into an egg crepe and throws a thumbs up with her free hand` |
-| **YG-05** | 表情：「另一手撥瀏海」／肢體：「一手舉手機、一手**勾著包帶**」 | `pushes her fringe aside with her free hand`（無包帶） |
-| **LG-04** | 肢體：「一手伸起**接**花瓣、**手指張開**」＋「另一手提著開衫」 | `pinches a single petal between her thumb and index finger`＋`free arm relaxed at her side` |
-
-**「多一隻手」的生成瑕疵一直被當成模型隨機錯誤。**
-但這裡有更簡單的解釋：**規格本身就要求了三隻手。**
-
-### 其他三類
-
-- **同件內兩列互相矛盾（3 件）**：
-  LG-03 穿著列寫「**不是**袖子過長的 oversized」，肢體列寫「**過長的**針織袖口垂在手腕外」｜
-  LG-08 髮型列寫「濕髮 4/4 全失敗，**已拿掉**」，但表情列的硬驗收仍寫「**濕髮可見**」｜
-  LG-06 表情列寫「頭朝扭蛋、**閉眼**笑」，肢體列寫「**轉頭看鏡頭**時髮尾甩動」
-- **抽象飄動殘留（13 件）**：prompt 已刻意清掉，規格列全數留著且**未標注**
-- **道具列了但 prompt 沒有（9 件）**：多為包（托特包、小後背包、巾着包）
-
-### 根因
-
-**規格表與 prompt 是兩份各自演化的文件。** 每次覆核修正只改其中一份：
-YG-02 改了表情列沒改肢體列；YG-01 從 prompt 拿掉杯與桌沒回寫規格；
-LG-08 從髮型列拿掉濕髮沒改硬驗收。**兩份並存又沒有同步規則，就會一直複發。**
+**「取捨」寫法完全沒實測過。** 顧慮是：明寫某區過曝，可能把 D-04 好不容易解掉的
+臉部逆光叫回來。我把「臉受光」與「某處犧牲」寫成兩個並列子句，讓臉永遠不是被犧牲那邊——
+但這只是推論，沒有證據。**風險太高請直接要求改回。**
 
 ---
 
-## 三、Claude 的看法（可能有錯，請直接反駁）
+## YG-03｜陽台・收乾淨的衣服
 
-**進度**：21 件中 8 件已生成並核准（YG-01/02/04/05、LG-03/04/08/10A），13 件未跑。
+**半身自拍。**　|　反射面：具名（白牆回冷色填光）｜曝光：低反差（有遮蔽陽台、霧面窗板）｜色溫：不適用（單一天光）
 
-我傾向**依狀態分兩種處理**：
-- **已核准的 8 件** → prompt 是既成事實（圖已產出），**回寫規格列去對齊 prompt**
-- **未跑的 13 件** → 規格列是設計意圖，**重寫 prompt 去對齊規格**
+- **凍結瞬間**：把已經收下來、折好的白毛巾抱在胸前，對鏡頭笑的那一瞬間。
+- **手部任務**：拍攝手／鏡外手：持手機自拍，**off-frame**（仍佔一隻解剖學的手） ／ 可見手 A：把折好的白毛巾按在胸前 ／ 可見手 B：**N/A**——兩隻手已用完
+- **硬驗收**：① 自拍構圖成立且**手機不入鏡** ② **只有一隻可見手**，抓著毛巾 ③ 畫面無任何印刷文字 ④ 半身比例與光線正確
 
-但我不確定這樣對。兩套規則會讓文件更難維護，而且「已核准」是圖被接受，
-不代表當初的 prompt 就是對的（YG-04 的雙手意圖可能才是原本想要的畫面）。
+```text
+In a phone selfie, a young woman presses a folded plain white towel against her chest with one visible hand, smiling at the camera. Close half-body framing, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail, see-through bangs, loose strands at her temples. A plain grey fitted cropped cotton tee, high-waisted black shorts, black-rimmed glasses. A narrow covered apartment balcony, a white painted wall, an iron window grille, a steel drying pole holding plain towels and pale bedsheets. Flat overcast daylight on her face, her face evenly exposed, the white wall bouncing cool fill onto her jaw and staying slightly darker than her skin. Natural skin texture, subtle film grain.
+```
 
-**我也考慮過把中文規格列砍掉只留 prompt**，但那不行——
-中文表是使用者實際在讀的東西，砍掉等於她失去審閱能力。
+## YG-07｜客廳地板・什麼都沒發生
+
+**半身坐姿。**　|　反射面：具名（淺色地板回彈補下巴）｜曝光：取捨（窗邊失細節）｜色溫：分裂（窗光冷白 vs 角落暖立燈）
+
+- **凍結瞬間**：坐在地上，一手滑手機、另一手伸進零食袋，嘴裡還在嚼、一邊臉頰鼓著，眉毛抬起看鏡頭。
+- **手部任務**：可見手 A：拿著手機在滑（**手機入鏡**，這件不是自拍） ／ 可見手 B：伸進零食袋 ／ 無第三個手部任務
+- **硬驗收**：① 坐在地上 ② 一手滑手機、一手伸進零食袋（**可見手剛好兩隻**）③ 一邊臉頰鼓著 ④ 半身坐姿比例
+
+```text
+A young woman sits on the living room floor scrolling her phone in one hand while her other hand reaches into a snack bag, one cheek full mid-chew, eyebrows raised at the camera. Half body, camera level with her face as she sits. Collarbone-length mocha brown hair, the top half clipped up and the lower half loose. A beige camisole, matching short cotton shorts, bare feet. A small apartment living room, a low sofa, magazines on the floor, a fan in the corner. Cool window light on her face, a warm lamp glowing behind her, the pale floor bouncing fill onto her chin, the window itself allowed to clip to white. Natural skin texture, subtle film grain.
+```
+
+## YG-08｜台式早餐店・第一則吃
+
+**半身，人＋食物同框。**　|　反射面：具名（不鏽鋼餐檯回彈補下巴）｜曝光：取捨（門口天光失細節）｜色溫：分裂（門口冷白 vs 店內日光燈）
+
+- **凍結瞬間**：單手拿著蛋餅咬下一口，另一手對鏡頭比大拇指，鼻子微微皺起在笑。
+- **手部任務**：可見手 A：拿著蛋餅送到嘴邊、正在咬 ／ 可見手 B：對鏡頭比大拇指 ／ 無第三個手部任務
+- **硬驗收**：① **單手**拿蛋餅咬 ② 另一手比大拇指 ③ 人與食物同框 ④ 襯衫下擺在腰際打結、露一截腰
+
+```text
+A young woman bites into an egg crepe held in one hand and throws a thumbs up with her other hand, nose slightly scrunched, eyes crinkled. Half body with the food in frame, camera level with her chest. Collarbone-length soft wavy mocha brown hair, side-parted, a small pearl clip on one side. A light blue short-sleeve shirt knotted at the waist, white high-waisted shorts. A breakfast shop, a stainless steel counter, red plastic stools, a metal tray, iced tea in a tall glass. Cool daylight from the doorway on her face, warm fluorescent light inside, the steel counter bouncing fill onto her chin, the doorway behind her allowed to clip. Natural skin texture, subtle film grain.
+```
+
+## YG-10｜百貨美妝櫃・精緻的一面
+
+**半身。**　|　反射面：具名（白檯面與鏡面柱回彈）｜曝光：低反差（百貨均勻嵌燈）｜色溫：分裂（嵌燈冷白 vs 玻璃櫃內暖重點光）
+
+- **凍結瞬間**：把試完色的手背舉在臉旁，抬眼看鏡頭，一邊眉毛挑起、同側嘴角上揚。
+- **手部任務**：可見手 A：手背朝上舉在臉旁展示試色 ／ 可見手 B：自然垂放，**風衣掛在該側前臂**（承重在前臂，不是手部任務） ／ 無第三個手部任務
+- **硬驗收**：① 試色的手背舉在臉旁 ② **臉部區域只有一隻手** ③ 風衣掛在另一側前臂 ④ 半身比例
+
+```text
+A young woman holds her swatched hand up beside her face, her other arm relaxed at her side with a trench coat draped over that forearm, one eyebrow raised and the same corner of her mouth lifted. Half body, camera level with her chest. Sleek glossy collarbone-length mocha brown hair, side-parted, ends curving slightly inward. A cream cropped fitted knit top, matching off-white high-waisted straight trousers, gold hoop earrings. A department store beauty floor, glass counters, rows of lipsticks, mirrored columns. Cool recessed ceiling light on her face, warm accent light inside the glass cases, the white counter bouncing fill onto her chin, the floor behind her slightly darker. Natural skin texture, subtle film grain.
+```
+
+## LG-02｜房間晨光・第一則「她在台北」
+
+**3/4 身（膝上）。**　|　反射面：具名（白牆與淺木地板整體回彈）｜曝光：取捨（窗外壓白）｜色溫：不適用
+
+- **凍結瞬間**：蹲下來，一手的指尖停在地板的光斑上，另一手揉著一隻眼睛，嘴巴打呵欠打到一半。
+- **手部任務**：可見手 A：指尖停在地板光斑上 ／ 可見手 B：揉一隻眼睛 ／ 無第三個手部任務
+- **硬驗收**：① 蹲姿 ② 一手指尖在地板光斑上 ③ 另一手揉眼 ④ 3/4 身比例、赤腳
+
+```text
+A young woman crouches with her knees together, the fingertips of one hand resting on a sunlit patch of the floor while her other hand rubs one eye, her mouth caught mid-yawn. Three-quarter body, camera level with her face as she crouches, shot from well back. A blunt chin-length black bob cut evenly at the jawline, sleep-mussed with one side flattened. A white lace-trimmed camisole pyjama top, matching short pyjama shorts, bare feet. A bright clean room, white walls, a pale wood floor, a half-unpacked cardboard box in the corner. Soft morning light on her face, the white walls bouncing fill back onto her, the window allowed to clip to white. Natural skin texture, subtle film grain.
+```
+
+## LG-05｜公車站・雨停前
+
+**3/4 身（膝上）。**　|　反射面：具名（濕柏油把對街招牌的暖色反上來）｜曝光：取捨（招牌高光失細節）｜色溫：分裂（雨後冷天光 vs 對街暖招牌）
+
+- **凍結瞬間**：站在候車亭邊緣，一手握著收起的透明傘、傘尖朝下貼在腿側，另一手在臉頰旁比 V，頭往同側傾著笑。
+- **手部任務**：可見手 A：握著收起的透明傘柄，傘身朝下垂在腿側 ／ 可見手 B：在臉頰旁比 V ／ 無第三個手部任務
+- **硬驗收**：① 一手握收起的透明傘、**傘尖朝下貼腿側**（不可浮空）② 另一手在臉頰旁比 V ③ 襯衫扣到胸口、不露 ④ 3/4 身比例
+
+```text
+A young woman stands at a bus shelter, one hand gripping the curved handle of a folded clear umbrella its closed canopy hanging straight down beside her thigh, her other hand making a V sign beside her cheek, head tilted, eyes crinkled. Three-quarter body, camera at her navel level, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. An opaque off-white cotton short-sleeve button-front blouse fastened through the chest, a pale blue checked skirt with one continuous hem around her thighs. A colourful route map lightbox, wet asphalt throwing warm shop-sign colour back onto her, the brightest signs allowed to clip. Her face clearly lit. Natural skin texture, subtle film grain.
+```
+
+## LG-10B｜浴衣・蘋果糖（半身）
+
+**半身。**　|　反射面：具名（參道地面回彈暖光）｜曝光：取捨（燈籠高光失細節）｜色溫：分裂（燈籠暖橘 vs 天空殘藍）
+
+- **凍結瞬間**：站定，一手把蘋果糖舉在臉頰旁、另一手扶著髮簪，笑到眼睛彎起來。
+- **手部任務**：可見手 A：把蘋果糖舉在臉頰旁 ／ 可見手 B：扶著半盤髮上的和風髮簪 ／ 無第三個手部任務
+- **硬驗收**：① 一手舉蘋果糖在臉頰旁 ② 另一手扶髮簪 ③ 浴衣**左襟在上**、半幅帶綁緊收腰 ④ 半身比例
+
+```text
+A young woman holds a candy apple up beside her cheek with one hand and steadies the hairpin in her half-up bob with her other hand, laughing with her eyes crinkled. Half body, camera level with her chest. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin, two strands at her temples. A pale-blue floral yukata, an ankle-length wrap robe with the left front panel crossed over the right, a wide flat navy obi sash. Paper lanterns overhead, a blurred food stall, the last blue of the sky. Warm lantern light on her face, the approach underfoot bouncing warm fill up, the lanterns themselves allowed to clip. Natural skin texture, subtle film grain.
+```
 
 ---
 
-## 四、請判斷的五題
+## 回覆區（請只填這一段）
 
-### Q1｜衝突時哪一列說了算？
-「已核准的回寫規格、未跑的重寫 prompt」這個雙軌做法可行嗎？
-還是應該一律以中文規格為準、把 8 件已核准的 prompt 也一併修正（但**不重跑圖**）？
-
-### Q2｜要不要在規格表裡加「手部任務」欄？
-明寫「左手＝X／右手＝Y」，超過兩項就是規格錯誤。
-**我的疑慮**：這又是一條死板規則，而且近景（YG-04、YG-09）根本看不到第二隻手，
-硬填會逼出「另一手自然垂放」這種對畫面無意義、卻佔 prompt 字數的句子。
-
-### Q3｜LG-04 的「接」還是「捏」？
-規格＝**攤開掌心接**花瓣（驚訝的原始創意）／prompt＝**拇指食指捏**花瓣。
-`捏` 是先前為了解「浮空物件」問題改的。
-改回 `攤掌接`，浮空花瓣的風險會不會回來？還是有兩者兼顧的寫法？
-
-### Q4｜半身景別裡的包，補進 prompt 還是標「不入鏡」？
-YG-05、LG-05、LG-06、LG-07、LG-09、LG-10A/B 都是半身或全身，
-規格列了包但 prompt 沒寫。
-補進去會**增加物件數與手部負擔**（LG-05 已因「右手同時勾包又比 V」出過矛盾）；
-不補則畫面少一個真實感元素。
-
-### Q5｜13 件未跑的修好後，要逐件覆核還是可以一次過？
-若 Q1–Q4 給出明確原則，我照原則修完 13 件，
-是否可以**一次送一批 prompt 覆核**（生成仍兩張兩張跑），
-還是每件都要獨立覆核？
-
----
-
-## 五、回覆區（請只填這一段）
-
-### Q1 衝突時哪一列說了算
-- **判定**：**不能固定讓中文規格或 prompt 單方面說了算；應以同一套「狀態規則」處理。未生成時，凍結後的中文規格是設計真相，prompt 必須由它派生；成品核准後，核准圖才是交付真相，原 prompt 是生成紀錄，兩者都不能被事後改寫成未曾發生的版本。**
+### 光線句（全批適用）
+- **判定**：
 - **理由**：
-  1. 未生成件若讓 prompt 反過來支配規格，會把過去為了避錯而漏掉的設計意圖誤認成正確需求；因此必須先解完規格內部矛盾，再寫 prompt。
-  2. 已核准件若修改 prompt 卻不重跑，文件會聲稱一段從未實際產出該圖的 prompt 是生成來源，破壞追溯性。
-  3. 已核准也不代表所有原始意圖都實現；要判斷缺失是否影響該件的核心功能。非核心差異可由使用者接受成品後形成豁免，核心差異則應撤回核准並重跑，不能只改文字掩蓋。
-  4. 這不是兩套任意規則，而是一條素材生命週期：**規劃前以規格控制生成；核准後以成品控制交付紀錄。**
 - **建議改法**：
-  - **13 件未跑**：先把各中文列整併成一份無矛盾的「有效規格」，明確刪除或標記不適用項目；鎖定後才改英文 prompt。prompt 與硬驗收只能引用有效規格。
-  - **8 件已核准**：保留實際使用過的 prompt 不動；把規格修成「核准成品實際呈現」，並把未實現但已接受的內容標成「核准豁免／非硬需求」。例如 YG-04 若單手圖已被接受，就不能把未重跑的 prompt 改成雙手，也不能繼續把「雙手」列為硬驗收。
-  - 若某項是角色辨識、商業訊息或該件創意成立的必要條件，缺失時應改狀態為待重跑；只有這種情況才以修正後規格重寫 prompt 並重新生成。
-  - 每件只保留一份當前「有效規格」，不要讓妝容、表情、肢體、道具列各自重複宣告同一隻手的任務。
 
-### Q2 要不要加「手部任務」欄
-- **判定**：**要加，但不要硬填左手／右手，也不要要求兩隻手都必須有動作。應做成「可見性＋角色型任務」欄，允許 off-frame、occluded、idle、N/A。**
+### YG-03
+- **判定**：PASS ／ REVISE ／ BLOCK →
 - **理由**：
-  1. 自拍與鏡像構圖常交換左右，固定左／右會增加無必要的方向錯誤；真正需要檢查的是同一瞬間共有幾隻手、哪些手可見、每隻手是否只承擔一個可完成的主要任務。
-  2. 近景看不到第二隻手時，填 `off-frame` 即可，不應為了填表把「另一手自然垂放」塞進 prompt。
-  3. 拿手機自拍雖然手機和手可不入鏡，仍佔用一隻解剖學上的手；因此「自拍前提＋兩個可見手部任務」仍是三手規格。
-  4. 包帶若掛在肩上，是肩部承重，不必算成手部任務；只有手抓、勾、提時才佔一隻手。
 - **建議改法**：
-  - 欄位建議寫成：
-    - `拍攝手／鏡外手：持手機，off-frame`
-    - `可見手 A：捏花瓣`
-    - `可見手 B：N/A（裁切外）`
-  - 非自拍則用 `可見手 A／可見手 B`，只有劇情真的依賴左右方向時才加左／右。
-  - 檢查規則不是「欄位必須填滿」，而是：
-    1. 同一凍結瞬間最多兩隻解剖學手；
-    2. 每隻手最多一個主要抓握／手勢任務；
-    3. 任務數不得超過該景別合理可見的手數；
-    4. `off-frame`／`occluded` 不寫進 prompt，除非它是構圖必要資訊；
-    5. 先後動作、抽象飄動與純情緒不算手部任務，也不能拿來規避衝突。
-  - YG-08 應在「雙手捧蛋餅」和「一手蛋餅、一手比讚」中二選一；不能保留「雙手捧」再稱第三隻手為 free hand。
 
-### Q3 LG-04 接還是捏
-- **判定**：**不要改回動態的「接」，也不必放棄攤掌創意。改成花瓣已與掌心接觸的單一終態：一片花瓣停在張開的掌心。**
+### YG-07
+- **判定**：PASS ／ REVISE ／ BLOCK →
 - **理由**：
-  1. `catching`／「接住」會要求模型表現下落與接觸之間的時間過程，且容易把花瓣畫成浮在掌心上方，重現已知的浮空問題。
-  2. `pinches` 的接觸錨點最強，但確實把原本「意外接到花瓣」改成主動拿起花瓣。
-  3. 「花瓣已貼在掌心中央」同時保留開掌姿勢、實體接觸與事件剛發生的語意，靜態圖只需呈現一個終態。
-  4. 手指完全張開會增加手部形變；自然微彎的開掌比刻意五指大張更安全。
 - **建議改法**：
-  - 建議句：`She holds one open palm near her face, fingers naturally curved, with a single petal resting flat against the center of her palm.`
-  - 另一手若確實要提開衫，寫成獨立且唯一的第二手任務；不要再加揮手、撥髮或其他手勢。
-  - 驚訝感不要靠第二個時間點，可綁在身體反應：`she leans slightly toward the petal`。若臉部表情仍不穩，列 soft observation，不再增加手部動作。
 
-### Q4 包補進 prompt 還是標不入鏡
-- **判定**：**逐件按創意必要性與景別決定；包不是預設必補的「真實感元素」。不重要就從有效規格移除或標為非必要／裁切外，不要把「包不入鏡」寫進 prompt。重要時改為肩膀或背部承重，避免新增手部任務。**
+### YG-08
+- **判定**：PASS ／ REVISE ／ BLOCK →
 - **理由**：
-  1. D-03 已知否定句無效，將 `bag out of frame` 寫進 prompt 仍可能反向喚起包；「不入鏡」應是規格與驗收狀態，不是生成指令。
-  2. 半身景別是否看得到包取決於裁切位置；只為生活感補包，收益低於新增帶子、包體、手部抓握與遮擋服裝的風險。
-  3. 包若由肩膀、背部或斜背帶承重，可存在而不占手；但斜背帶會切過上衣與胸前，可能破壞穿著辨識，仍要逐件判斷。
-  4. 已核准且未出現包的成品，不應為補表格而重跑。
 - **建議改法**：
-  - 每件將包標為三類之一：`core-visible`、`optional`、`removed/not applicable`。
-  - `core-visible`：才放進 prompt，優先用 `worn on one shoulder`、`worn on her back`，不要寫 `holding`、`hooking the strap`；同時確認景別確實容納包。
-  - `optional`：不進 prompt、不進硬驗收；模型偶然生成且不出錯可接受。
-  - `removed/not applicable`：從當前有效規格和硬驗收移除；不要保留成一條看似仍應生成的道具要求。
-  - 全身景別也不是必然要包；只有包負責角色、場合或構圖功能時才保留。半身近景原則上優先移除非核心包。
 
-### Q5 13 件的覆核批次
-- **判定**：**可以一次提交一批，但不能一次給整批一個總體「通過」。必須逐件獨立覆核、逐件留判定；不需要拆成 13 次對話。**
+### YG-10
+- **判定**：PASS ／ REVISE ／ BLOCK →
 - **理由**：
-  1. Q1–Q4 是共通原則，但每件的景別、自拍前提、道具與兩手任務組合不同，仍可能出現局部矛盾。
-  2. 批次提交能檢查跨件一致性並節省往返；逐件結果則避免一件修改讓其他 12 件的核准失效。
-  3. 真正應鎖定的是每一段實際送模型的 prompt 版本，而不是整份文件一次性蓋章。
 - **建議改法**：
-  - 13 件可放在同一份自足覆核檔，逐件提供：有效中文規格、手部任務欄、完整英文 prompt、硬驗收、刻意省略項目及理由。
-  - 每件各自回覆 `PASS／REVISE／BLOCK`。只有 `PASS` 的 prompt 才能進入兩張生成。
-  - 修正後只重審被改動的那一件；未改動且已通過者保留效力。最好為每件保存 prompt 版本或內容雜湊，避免後續悄悄改字後仍沿用舊核准。
-  - 若一次 13 件導致表格過長，可依風險拆成兩批：先審含自拍、雙道具、兩手任務的高風險件，再審單手或無手部任務件；這是閱讀分批，不改變逐件核准原則。
 
-### 其他（只寫你認為會導致生成失敗的項目）
-- 抽象飄動描述不能只是留在規格裡「但不翻進 prompt」。只要它仍和硬規格混在同一列，後續維護者就可能再次補回。應從有效生成規格移除，或明確移到「創意備註／不送模型／不驗收」欄。
-- 硬驗收必須從該版有效規格與 prompt 重新產生。凡是 prompt 已移除的濕髮、包、雙手或飄動效果，都不能繼續留在硬驗收裡。
-- 最容易漏掉的不是單一手勢，而是跨欄重複占用同一隻手。送審前應先把表情列、肢體列、道具列中的所有實體動作彙總成同一個「凍結瞬間」，再做兩手容量檢查。
+### LG-02
+- **判定**：PASS ／ REVISE ／ BLOCK →
+- **理由**：
+- **建議改法**：
+
+### LG-05
+- **判定**：PASS ／ REVISE ／ BLOCK →
+- **理由**：
+- **建議改法**：
+
+### LG-10B
+- **判定**：PASS ／ REVISE ／ BLOCK →
+- **理由**：
+- **建議改法**：
+
+### 其他（只寫會導致生成失敗的項目）
+-
