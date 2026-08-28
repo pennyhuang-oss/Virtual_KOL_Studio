@@ -124,6 +124,75 @@ for p in ('kols/nico-tsai/profile.json', 'kols/nico-tsai/character.md',
 if '挑染' not in pilot.get('hair_color_en', '') and 'silver-grey' not in pilot.get('hair_color_en', ''):
     err("pilot 的 hair_color_en 沒有描述那段銀灰挑染")
 
+# ══════════════════════════════════════════════════════════════════
+# 餐廳批次一（Yuna＋Luna）—— 2026-08-28 加入
+# 這條線與 Nico 線共用同一個 repo，但事實散在不同檔案裡，
+# 之前就發生過 profile.json 已改台北、character.md 身分表還寫首爾。
+# ══════════════════════════════════════════════════════════════════
+
+PLAN = 'clients/sushisolar-rujiao/GENERATION_PLAN_B1.md'
+
+for slug, city, sid in (
+        ('yuna-kim',    '台北', '235794a5-2eff-45fb-91b4-3232910afefa'),
+        ('luna-tanaka', '台北', 'a3dc13ec-16e7-4990-89c6-9e0461db46ef')):
+    pj = json.load(open(f'kols/{slug}/profile.json', encoding='utf-8'))
+    idn = pj['identity']
+
+    # 現居地：profile.json 與 character.md 的身分表必須都是台北
+    if 'Taipei' not in idn['current_location']:
+        err(f"{slug} profile.json 的 current_location 不是台北：{idn['current_location']}")
+    cm = read(f'kols/{slug}/character.md')
+    row = [l for l in cm.split('\n') if l.startswith('| 現居地 |')]
+    if not row:
+        err(f"{slug} character.md 找不到「現居地」那一列")
+    elif city not in row[0]:
+        err(f"{slug} character.md 的現居地仍是舊值：{row[0].strip()}")
+
+    # 搬遷設定必須成套存在，否則「她是外國人住在台灣」這個前提會失傳
+    if 'relocation' not in idn:
+        err(f"{slug} profile.json 缺 relocation 區塊")
+    if '在台灣生活' not in cm:
+        err(f"{slug} character.md 缺「在台灣生活」段")
+
+    # soul_id：profile.json 必須與實際送生成的那一支相符
+    got = pj['identity']['appearance'].get('ai_generation', {}).get('soul_id')
+    if got != sid:
+        err(f"{slug} profile.json 的 soul_id={got}，與實際生成用的 {sid} 不符")
+    if os.path.exists(PLAN) and sid not in read(PLAN) and sid not in read('CALIBRATION_TEST.md'):
+        warn(f"{slug} 的 soul_id 沒有出現在生成計畫或校準紀錄裡")
+
+# 已降級的曝光寫法不得再被當成建議寫法
+BANNED = 'background exposed the same brightness as her skin'
+for p in ('SEXY_SCENE_LIBRARY.md', 'review/restaurant-b1/LEDGER.md'):
+    t = read(p)
+    if BANNED in t and ('禁用' not in t and '降級' not in t):
+        err(f"{p} 還在把「{BANNED}」當現行建議寫法（已於 2026-08-28 降級）")
+
+# 21 段既有 prompt 仍帶著那句，是**已知待處理**，不是新問題——
+# 只報數字，不當錯誤。全部改寫要等 #15 的高反差場景驗證過。
+if os.path.exists(PLAN):
+    n = read(PLAN).count(BANNED)
+    if n:
+        warn(f"{PLAN} 仍有 {n} 段 prompt 使用已降級的曝光寫法"
+             f"（等 LEDGER #15 高反差驗證後改寫；已核准成品不重跑）")
+
+# 三態光學宣告：每件 spec 都要有，否則 prompt_lint 會漏檢
+if os.path.exists(PLAN):
+    plan = read(PLAN)
+    n_items = len(re.findall(r'\n### (?:YG|LG)-\d+[AB]?｜', plan))
+    n_optics = plan.count('| **光學設定** |')
+    if n_items and n_optics != n_items:
+        err(f"{PLAN}：{n_items} 件 spec 只有 {n_optics} 件有光學設定宣告")
+
+# 兩條覆核線的檔名分家必須有索引，否則下一個人會覆蓋掉別人的 LEDGER
+if not os.path.exists('review/INDEX.md'):
+    err("review/INDEX.md 不存在——兩條覆核工作線共用 review/，沒有索引會互相覆蓋")
+else:
+    idx = read('review/INDEX.md')
+    for p in ('review/LEDGER.md', 'review/restaurant-b1/LEDGER.md'):
+        if p not in idx:
+            err(f"review/INDEX.md 沒有列出 {p}")
+
 print("跨檔案一致性檢查")
 for w in WARN: print("  ⚠ ", w)
 if ERR:

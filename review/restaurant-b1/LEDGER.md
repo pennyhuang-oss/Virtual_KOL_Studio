@@ -672,7 +672,7 @@ R3 覆核建議：等第一批 workflow 穩定後，另開一個專門測高風�
 | D-01 | prompt 裡要不要寫族裔與身材數字 | **不要寫**，`soul_id` 鎖得住 | 6/6 實測身分與身材正確 |
 | D-02 | 相機高度用絕對公分還是相對描述 | **相對描述**（`camera at her navel level, lens horizontal, shot from well back`） | 6/6 比例正確；寫絕對公分數反而失敗 |
 | D-03 | 否定句有沒有用 | **完全無效**，`soul_2` 沒有 negative 欄位 | `no open sky` 被完全無視 |
-| D-04 | 逆光怎麼解 | `background exposed the same brightness as her skin`（**validated baseline wording，非萬用公式**） | 室內 3 張全部解掉逆光 |
+| D-04 | 逆光怎麼解 | ~~`background exposed the same brightness as her skin`~~ **2026-08-28 降級**：它確實解掉逆光（室內 3/3），但**代價是臉部反差 0.0 級——臉變成一塊平板**（YG-04 A/B 量測）。新 prompt 改用場景化測光句，見 #15。已核准的成品不重跑 | 室內 3 張解掉逆光；A/B 4 張量出副作用 |
 | D-05 | 氣氛場景可不可以偏離 D-04 | **可以，局部 override** | LG-10A 燈籠場景成功，臉受光且背景保留細節 |
 | D-06 | 表情要怎麼寫 | **必須綁實體動作**。~~對眼睛無效~~ **2026-08-28 更正：眼睛控制屬「低可靠」，不是做不到**——`indoor_cafe.png` 有 1 次單眼閉合成功。不可當硬性驗收點 | 比 V ✅／捧杯 ✅／回眸一笑 ❌／單眼瞇起 ❌／咖啡廳 wink ✅ |
 | D-07 | 沒寫髮長會怎樣 | **會生出長短不一的頭髮**；造型（馬尾／髮夾／盤髮）**不算長度** | Luna 一邊到肩、另一邊長到腰 |

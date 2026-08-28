@@ -43,12 +43,16 @@
 
 ### 原始 6 位
 
+> **2026-08-25 在地化**：Yuna 與 Luna 已改為**住在台北**（餐廳客戶在台灣，需要中文代言）。
+> **她們不是台灣人**——族裔、出身、視覺識別全部不變，是「外國人住在台灣」。
+> 各自的 `character.md`「在台灣生活」段是這件事的完整規格。
+
 | KOL | 所在城市 | 定位 | Soul ID |
 |-----|---------|------|---------|
 | **Iris Chen** | 台北 | 台灣時尚/生活風格 | 見 `kols/iris-chen/profile.json` |
-| **Luna Tanaka** | 京都 | 日本靜物/藝術/美學 | 見 `kols/luna-tanaka/profile.json` |
+| **Luna Tanaka** | **台北**（日籍，2025 從京都來） | 日本靜物/藝術/美學 | 見 `kols/luna-tanaka/profile.json` |
 | **Ananya Kapoor** | 孟買 | 印度舞蹈/瑜珈/生活風格 | 見 `kols/ananya-kapoor/profile.json` |
-| **Yuna Kim** | 首爾 | 韓國護膚/美妝/日常 | 見 `kols/yuna-kim/profile.json` |
+| **Yuna Kim** | **台北**（韓籍，2024 從首爾來） | 韓國護膚/美妝/日常 | 見 `kols/yuna-kim/profile.json` |
 | **Aaliya Rivera** | 洛杉磯 | 拉丁裔 LA 生活/穿搭/性感 | Soul ID: `97f5c6cd-1c0c-4432-83d0-dd42210ecada` |
 | **Camille Dupont** | 巴黎 | 法式慢生活/美食/巴黎場景 | Soul ID: `f19dafcc-5bc8-4d8f-af1d-ee48084ac398` |
 

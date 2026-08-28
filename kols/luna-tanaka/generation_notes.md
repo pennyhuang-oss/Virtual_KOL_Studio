@@ -1,5 +1,23 @@
 # Luna Tanaka — Generation Notes
 
+> ## ⚠️ 這是歷史紀錄，不要照抄裡面的 prompt 寫法（2026-08-28 加註）
+>
+> 本檔記錄的是 **2026-08-25 在地化之前**的生成，場景在京都——
+> 她現在**住在台北**（見 `character.md`「在台灣生活」段）。場景敘述不代表現況。
+>
+> 更重要的是**寫法已被實測推翻**，下面這些做法現在都是錯的：
+>
+> | 本檔的舊寫法 | 現行結論 | 依據 |
+> |---|---|---|
+> | prompt 裡寫族裔與身高三圍（`21-year-old Korean woman, 168cm`） | **不要寫**，`soul_id` 鎖得住，寫了反而干擾 | D-01，6/6 實測 |
+> | `golden hour`、`warm tones`、`soft shadows` 這類品質形容詞 | 改寫**光的物理路徑**（主光／反射面／曝光取捨） | `SEXY_SCENE_LIBRARY.md` §3 |
+> | 一段 prompt 塞多個時間點或多個動作 | 靜態圖**只能有一個瞬間** | D-11 |
+> | 用否定句排除元素（`no ...`） | `soul_2` **沒有 negative prompt 欄位**，完全無效 | D-03 |
+>
+> 現行寫法看 `clients/sushisolar-rujiao/GENERATION_PLAN_B1.md` 與 `CALIBRATION_TEST.md`。
+
+
+
 > ℹ️ **本檔案是歷史生成紀錄，內容不回頭改寫。**
 > 其中出現的舊支柱名稱（如「居家／在家／耍廢」）為 2026-08-27 憲章同步前的命名，
 > 現行支柱以 `profile.json` 為準，規則以 [`PERSONA_CANON.md`](../../PERSONA_CANON.md) 為準。

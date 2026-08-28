@@ -172,13 +172,49 @@ reflecting the signage back up as a secondary coloured bounce from below, headli
 streaking past out of focus
 ```
 
-#### 3-C. 三條硬性規則
+#### 3-C. 光線規則（2026-08-28 由「三條硬性規則」改為條件式）
 
-1. **每個 `[LIGHTING]` 段落必須寫出「反射面」。** 只要寫不出「光被什麼表面反射回她臉上」，這段光線描述就不合格，退回重寫。
-2. **每個 `[LIGHTING]` 段落必須寫出「哪裡被犧牲」。** 明確指定過曝的區域（`allowed to clip`、`blown out`）或壓黑的區域（`crushing to near black`、`falling into deep shadow`）。兩邊都保住＝假。
+> ### ⚠️ 這一段原本寫成「三條硬性規則」，那是錯的
+>
+> 第 1、2 條原文是「必須寫出反射面」「必須寫出哪裡被犧牲」。
+> 2026-08-28 依此寫成 lint 硬性檢查，**21 件 spec 全部不合格**。覆核裁決：
+>
+> > 「把競品的風格觀察誤當成普遍物理規則，**這個紅燈本身會誘導過度修正。**」
+>
+> 白牆室內單一柔光源的場景**本來就沒有第二色溫**，也沒有需要犧牲的一邊；
+> 硬塞只會製造假陰影。這三件事是**條件式**的，適用範圍不同：
+> 「具名反射面」幾乎到處適用（21 件裡 20 件寫得出來），色溫分裂只有一半場景成立。
+>
+> **現行做法**：規格表寫一列「光學設定」三態宣告，由 `tools/prompt_lint.py` 檢查宣告存在且合法，
+> **不檢查 prompt 裡有沒有那三句話**：
+>
+> | 欄位 | 可選值 |
+> |---|---|
+> | 反射面 | 具名 / 不適用 |
+> | 曝光 | 取捨 / 低反差 |
+> | 色溫 | 分裂 / 不適用 |
+
+1. **寫得出反射面就要寫。** 「光被什麼表面反射回她臉上」——白沙、白色船身、濕柏油、大理石檯面。
+   **寫不出來的場景**（單一柔光源、無明顯反射體）宣告「不適用」，不要硬編一個。
+2. **有高低差的場景要指定哪一邊被犧牲**（`allowed to clip`、`falling into deep shadow`）。
+   **低反差場景**（陰天、室內柔光）宣告「低反差」——強寫犧牲會製造不存在的陰影。
 3. **禁止在光線段落使用的字**：`high dynamic range`（它的意思正好是「不犧牲任何一邊」）、`evenly lit`、`well-exposed`、`perfect lighting`、`studio lighting`（除非該張真的就是棚拍設定）。
    - **仍然要保留**畫質相關的字：`crisp sharp focus on subject`、`fine detail`、`natural colour grading`。這些管的是解析度和銳利度，不是曝光均勻度。
    - **仍然禁止**：`grainy`、`muddy`、`degraded`、`low quality`、`dim and blurry`。
+   - **⚠️ 2026-08-28 新增禁用（同義改寫也算）**：`background exposed the same brightness as her skin`。
+     這句是為了解室內逆光而生的（餐廳批次一 D-04，室內 3/3 有效），
+     字面上避開了 `evenly lit`／`well-exposed`，**但意思一模一樣**——強迫兩邊都不犧牲。
+     實測數字（YG-04 A/B，各 2 張，`tools/light_meter.py`）：
+
+     | | 背景比臉暗 | 臉部受光／陰影反差 |
+     |---|---|---|
+     | 用這句 | 0.03–0.11 級（＝等亮） | **0.0 級——臉是一塊平板** |
+     | 改成場景化測光句 | 0.37–0.43 級 | 0.30–0.42 級 |
+
+     **替代寫法**：`her face is evenly exposed, while the rear wall remains readable and slightly darker.
+     Small marble highlights clip softly before her skin does.`（把「臉不能欠曝」與「背景要更暗」拆成兩件事）
+     ⚠️ n=2、單一室內場景，**高反差場景（有窗／有天空）尚未驗證**，不要當成全域結論。
+     完整紀錄見 `CALIBRATION_TEST.md` §24 與 `review/restaurant-b1/LEDGER.md` #15。
 
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
@@ -359,8 +395,8 @@ focus with slight motion blur, clearly different from her in build, age and clot
 - [ ] **（2026-07-25 新增，第一優先）是否已經先讀過既有已驗證成功的角色範本，而不是直接採用生成工具本身的預設建議？** 預設參考 `kols/iris-chen/generation_notes.md`（模型 `seedream_v4_5`，已證實同 prompt 重複生成身分一致性高）。訓練圖／Discovery 批次的預設模型是 `seedream_v4_5`，不是 `soul_2`——`soul_2` 只在角色已經有 `soul_id` 時才用於後續生成。2026-07-25 事故：多個角色的 Discovery 批次因為跳過這一步、直接沿用工具建議的 `soul_2` 無錨點生成，導致同批次 4 張圖臉孔不一致。
 - [ ] 裝置/鏡頭是否具體指定
 - [ ] 皮膚質感關鍵字是否存在
-- [ ] **（2026-08-05 改寫，最高優先）光線是否寫成「物理規格」而不是「品質形容詞」**——見上方第 3 點。逐項確認五段都寫了：① 具名主光+方向 ② **具名的反射面**（寫不出來就退回重寫）③ 兩個色溫 ④ **哪裡被犧牲**（過曝或壓黑，兩邊都保住＝假）⑤ 遮擋/框架。可直接套用 3-B 的十組配方
-- [ ] **光線段落是否誤用了 `high dynamic range` / `well-exposed` / `evenly lit`**——這三個字現已禁用（它們的意思正好是「不犧牲任何一邊」）；`crisp sharp focus` / `fine detail` / `natural colour grading` 則仍要保留
+- [ ] **（2026-08-05 改寫，最高優先）光線是否寫成「物理規格」而不是「品質形容詞」**——見上方第 3 點。逐項確認：① 具名主光+方向 ② 反射面（**寫不出來的場景宣告「不適用」，不要硬編**）③ 色溫（**單一光源宣告「不適用」**）④ 曝光取捨（**低反差場景宣告「低反差」**）⑤ 遮擋/框架。②③④ 是條件式的，見上方 3-C 的警語。可直接套用 3-B 的十組配方
+- [ ] **光線段落是否誤用了 `high dynamic range` / `well-exposed` / `evenly lit` / `background exposed the same brightness as her skin`**——這些寫法現已禁用（它們的意思正好是「不犧牲任何一邊」）；`crisp sharp focus` / `fine detail` / `natural colour grading` 則仍要保留
 - [ ] 身材數據（三圍/罩杯，見 `profile.json` 的 measurements）是否直接寫進 prompt，不要只用模糊形容詞
 - [ ] 背景是否有具體生活雜物細節
 - [ ] 服裝是否完整明確寫出（不留給模型自己猜）
