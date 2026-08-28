@@ -212,10 +212,10 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **場景環境** | 台北老公寓翻新的小套房。白牆、淺木地板、白色床組（床沒整理）、地上一雙拖鞋、床邊小桌上放著沒收的馬克杯。窗外可見鏽蝕鐵窗花、對街舊公寓磁磚外牆、冷氣室外機、糾纏電線。 |
 | **機位與構圖** | **3/4 身（膝上）。**<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍，不要靠近。<br>**構圖**：人物落在三分線偏左，右側留出窗光的空間。 |
 | **光線** | ① 晨光從窗戶斜射進來，**打在臉上**，在木地板留下長條光影｜② 淺木地板把暖光反回下巴與小腿｜③ 窗外冷白 vs 地板反射暖黃｜④ **背景曝光與她的膚色相當** |
-| **表情** | **端著杯子瞇眼笑。**雙手捧著馬克杯舉到嘴邊喝一口，眼睛還沒完全張開、瞇成細細的；嘴角鬆鬆揚起。<br>（掛載動作＝馬克杯）<br>**硬驗收＝雙手捧馬克杯舉到嘴邊。臉部細節（眼型／嘴型／眉毛／臉頰）一律列 soft observation，不作淘汰依據。** |
+| **表情** | **端著杯子瞇眼笑。**單手把馬克杯舉到嘴邊喝一口；另一手扠在腰上；眼睛還沒完全張開、嘴角鬆鬆揚起。<br>**硬驗收＝單手舉杯到嘴邊＋另一手有明確位置。臉部細節列 soft observation。**<br>（**2026-08-28 修正**：原本寫「雙手捧杯」＋「舉到嘴邊」，**兩者物理上矛盾**——喝水是單手動作，捧在下巴前才是雙手動作（YG-06 那樣）。兩張都單手，是規格自己不成立。<br>**已收 _b；prompt 文字已對齊實際採用的畫面。若日後重跑，需先送覆核。**） |
 | **肢體與重心** | 赤腳走路有重量感；端杯子的手指自然彎曲；喝一口時肩膀微微下沉（吐氣）；**針織外套從單肩滑下一點**。；**左手把滑下肩的針織外套往上拉了一下**。；**右手端著馬克杯、左手把滑下肩的針織外套往上拉了一下——兩手都有事做**。 |
 | **情境** | 她端著馬克杯走到窗邊，站定，看窗外，喝一口，轉頭看鏡頭 |
-| **生成 prompt** | `A young woman stands at the window holding a mug with both hands and lifts it to her mouth, eyes still narrowed from sleep, a loose easy smile. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. Collarbone-length mocha brown hair, sleep-mussed, see-through bangs flattened with one tuft sticking up. White fitted camisole, high-waisted grey cotton shorts, beige cardigan slipping off one shoulder. Small bright apartment, white walls, pale wood floor, unmade white bed. Soft morning light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands at the window lifting a mug to her mouth with one hand, her other hand resting on her hip, eyes still narrowed from sleep, a loose easy smile. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. Collarbone-length mocha brown hair, sleep-mussed, see-through bangs flattened with one tuft sticking up. White fitted camisole, high-waisted grey cotton shorts, beige cardigan slipping off one shoulder. Small bright apartment, white walls, pale wood floor, unmade white bed. Soft morning light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 台北的早上☀️<br>光剛好照到腳 |
 
 ### YG-03｜超商・「今天學到一個字」
