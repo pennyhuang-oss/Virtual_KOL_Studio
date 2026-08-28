@@ -226,13 +226,13 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **妝容** | 淡妝。透明感薄底妝、淡眉、眼影幾乎沒有、nose blush 很淡、粉色潤色護唇。戴黑框眼鏡。 |
 | **髮型** | 低馬尾，see-through 瀏海留著，鬢角兩撮碎髮垂下。 |
 | **穿著** | 上身：**短版**灰色短袖上衣（露一截腰）｜下身：黑色**高腰**短褲｜鞋：白色低筒球鞋｜外層：—｜首飾：黑色細框眼鏡＋手腕上的黑色髮圈 |
-| **場景環境** | 台灣超商內。天花板日光燈管、飲料冷藏櫃玻璃門、關東煮機台冒著熱氣、貨架上的零食包裝、收銀台後方的菸櫃。 |
+| **場景環境** | 超商內。天花板日光燈管、關東煮機台冒著熱氣、飲料冷藏櫃。**貨架與所有招牌一律失焦**——這件不要有需要讀字的東西。 |
 | **機位與構圖** | **半身自拍。**<br>**機位**：手機伸直手臂舉在略高於眼睛的位置（自拍的真實高度）。<br>**構圖**：人在畫面偏右，左側帶到關東煮機台。 |
 | **光線** | ① 天花板日光燈管**均勻打亮整張臉**｜② 冷藏櫃玻璃反一層冷光在她側臉｜③ 全場冷白，關東煮機台一小塊暖黃｜④ **背景曝光與她的膚色相當** |
-| **表情** | **摀嘴笑到瞇眼。**一手拿著自拍手機，另一手摀在嘴前，笑到眼睛瞇成一條線。<br>（掛載動作＝手機＋摀嘴；**原本還要「指著標示牌」，那會變成三隻手，已刪**） |
+| **表情** | **舉著關東煮紙杯對鏡頭笑。**一手拿自拍手機，另一手把紙杯舉到臉頰旁；下巴微收、對鏡頭笑。<br>（掛載動作＝紙杯；**「摀嘴」與「指標示牌」都拿掉了**——自拍只剩一隻空手，兩個都要就是三隻手） |
 | **肢體與重心** | 一手舉手機自拍、**手臂有輕微晃動**；另一手指著標示牌；重心在單腳、身體微側。；**低馬尾在她轉頭時甩了一下**。 |
-| **情境** | 站在關東煮機台旁自拍，標示牌在她旁邊入鏡；念錯字的事由 Caption 帶 |
-| **生成 prompt** | `In a phone selfie, a young woman covers her mouth with her free hand, laughing with her eyes squeezed shut, the oden label board visible beside her. Half body, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. Cropped grey tee, high-waisted black shorts, black-rimmed glasses. Taiwanese convenience store, fluorescent ceiling tubes, drinks fridge, steaming oden counter, snack shelves. Flat even fluorescent light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **情境** | 買了關東煮，站在機台旁自拍；「今天學到一個字」由 Caption 承擔，不靠畫面 |
+| **生成 prompt** | `In a phone selfie, a young woman holds a paper cup of hot broth up beside her cheek with her free hand, smiling at the camera with her chin tucked. Half-body phone selfie, camera just above her eye level, the shelves behind her thrown completely out of focus. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. Cropped grey tee, high-waisted black shorts, black-rimmed glasses. A convenience store interior, fluorescent ceiling tubes, a steaming hot-food counter, blurred shelves of packaged snacks. Flat even fluorescent light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 今天學到一個新的字！<br>可是我念錯 店員笑了🥲 |
 | 附註 | **背景路人 1–2 人**：背向、不看鏡頭、失焦、外型與她明顯區隔 |
 
@@ -267,7 +267,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **看著手機鏡頭嘟嘴。**看進手機鏡頭，另一手把瀏海撥開；韓系無聊嘟嘴，眼神平淡。<br>（掛載動作＝撥瀏海；**手機是拍攝者，不會出現在畫面裡**） |
 | **肢體與重心** | 重心在一腳、**另一腳腳尖外開**；一手舉手機、一手勾著包帶；肩線傾斜。；**月台的通風把她的髮尾往一側吹動**。 |
 | **情境** | 等車，順手拍一張，表情有點無聊 |
-| **生成 prompt** | `A young woman looks into her phone camera while pushing her fringe aside with her free hand, lips softly pursed, a bored flat gaze. Half-body phone selfie, camera just above her eye level. Collarbone-length sleek straight mocha brown hair, side-parted. Fitted black short-sleeve knit, khaki high-waisted mini skirt, beige mini box bag. Metro platform, yellow safety line, platform screen doors, route map lightbox, ceiling tubes. Flat even station light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman looks into her phone camera while pushing her fringe aside with her free hand, lips softly pursed, a bored flat gaze. Half-body phone selfie, camera just above her eye level. Collarbone-length sleek straight mocha brown hair, side-parted. Fitted black short-sleeve knit, khaki high-waisted mini skirt, beige mini box bag. Metro platform, yellow safety line, platform screen doors, a route map lightbox thrown out of focus, ceiling tubes. Flat even station light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 捷運等好久喔😮‍💨<br>但我很乖有排隊 |
 | 附註 | **背景路人 2–3 人**：背向、失焦 |
 
@@ -292,7 +292,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **情境** | 蒸完出來坐在休息區喝甜米露，抬眼看鏡頭 |
 | **生成 prompt** | `A young woman sits cross-legged on a heated wooden floor holding a paper cup of sweet rice punch with both hands in front of her chin, her eyes peeking over the rim toward the camera, crinkled into crescents. Full body, camera at her seated eye level, lens horizontal, shot from well back. Collarbone-length mocha brown hair gathered into a low bun with two damp strands at her temples. Grey jjimjilbang tee and shorts, a towel folded into sheep horns on her head, bare feet. Korean sauna rest hall, wooden floor, low tables. Warm ceiling light on her face, the warm room behind her keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 蒸完整個人都軟掉了🫠<br>甜米露是最好喝的部分 |
-| 附註 | 這是這批唯一的暖光場景，刻意跳出她的冷白區間，讓版面不會整排同一個色溫 |
+| 附註 | 這是這批唯一的暖光場景，刻意跳出她的冷白區間。<br>**⚠️ 這件的場景在韓國，是刻意的**——歸為「回韓國的時候」類型內容（對應 Luna 的「回日本的時候」）。**其餘 Yuna 的件全部是台北，畫面裡不應出現可辨識的韓文招牌。** |
 
 ### YG-07｜客廳地板・什麼都沒發生
 `影片 10s ＋ start frame`　·　對應 **Y-09**　·　地點層級 **B**
@@ -318,14 +318,14 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 |---|---|
 | **妝容** | 日常妝。薄透底妝、淡眉、淡奶茶眼影、nose blush、粉色唇釉。 |
 | **髮型** | 側分長軟波浪，左側夾一個珍珠小髮夾。 |
-| **穿著** | 上身：淺藍色襯衫，**前兩顆解開、下擺在腰際打結**（露一截腰）｜下身：白色**高腰**短褲｜鞋：白色球鞋｜外層：—｜首飾：小珍珠耳環＋珍珠髮夾 |
-| **場景環境** | 台式早餐店。不鏽鋼餐檯、紅色塑膠椅、貼在牆上的手寫菜單、鐵盤上的蛋餅、玻璃杯裝的冰紅茶。 |
+| **穿著** | 上身：淺藍色短袖襯衫，**下擺在腰際打結**（露一截腰）｜下身：白色**高腰**短褲｜鞋：白色球鞋｜首飾：小珍珠耳環＋珍珠髮夾<br>（**已刪掉「前兩顆解開」**——`top buttons open` 是把領口拉低的高風險字，LG-05 已因此出過事） |
+| **場景環境** | 早餐店。不鏽鋼餐檯、紅色塑膠椅、鐵盤上的蛋餅、玻璃杯裝的冰紅茶。**牆面與手寫菜單失焦**。 |
 | **機位與構圖** | **半身，人＋食物同框。**<br>**機位**：與她的胸口同高，鏡頭保持水平。<br>**構圖**：鐵盤與冰紅茶在前景下緣，牆上手寫菜單在她身後。 |
 | **光線** | ① 店門口的自然光從側前方**打在臉上**｜② 不鏽鋼餐檯把光反回下巴｜③ 門口冷白 vs 店內日光燈｜④ **背景曝光與她的膚色相當** |
 | **表情** | **吃到好吃的。**咬一口後眼睛彎成月牙、鼻子微微皺起；空著的手對鏡頭比大拇指。 |
 | **肢體與重心** | 雙手捧著蛋餅；手肘靠在桌上；上半身前傾；肩膀微聳。；**捲起的襯衫袖口與垂下的髮絲隨著前傾晃了一下**。 |
 | **情境** | 咬了一口蛋餅，抬眼看鏡頭 |
-| **生成 prompt** | `A young woman bites into an egg crepe and throws a thumbs up with her free hand, eyes crinkling into crescents, nose slightly scrunched. Half body with the food in frame, camera level with her chest, lens horizontal. Collarbone-length soft wavy mocha brown hair, side-parted, a small pearl clip on one side. Light blue shirt with the top two buttons open and the hem knotted at her waist, white high-waisted shorts. Taiwanese breakfast shop, stainless steel counter, red plastic chairs, handwritten wall menu, iced tea in a glass. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman bites into an egg crepe and throws a thumbs up with her free hand, nose slightly scrunched, smiling. Half body with the food in frame, camera level with her chest, lens horizontal, the wall behind her thrown out of focus. Collarbone-length soft wavy mocha brown hair, side-parted, a small pearl clip on one side. A light blue short-sleeve shirt knotted at the waist, white high-waisted shorts. A breakfast shop, a stainless steel counter, red plastic stools, a metal tray, iced tea in a tall glass. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 蛋餅真的很好吃🥹<br>這個冰紅茶也太甜 |
 
 ### YG-09｜飯店窗邊・皮膚特寫
@@ -521,13 +521,13 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **妝容** | 淡妝。輕底妝、粉色眼影、曬傷妝腮紅、粉色唇。 |
 | **髮型** | 中分鮑伯自然放下（與其他件的別耳後、髮夾、髮箍明確區隔）。 |
 | **穿著** | 上身：奶油色**合身**薄針織短袖（腰線清楚）｜下身：淺色**短裙**｜鞋：米色平底鞋｜外層：—｜首飾：帆布托特包 |
-| **場景環境** | 台式早餐店。不鏽鋼餐檯、鐵盤、玻璃杯裝的豆漿、貼在牆上的手寫菜單、塑膠椅。 |
+| **場景環境** | 早餐店。不鏽鋼餐檯、鐵盤、玻璃杯裝的豆漿、紅色塑膠椅。**牆上手寫菜單失焦**（見場景國別驗收規則）。 |
 | **機位與構圖** | **半身，人＋食物同框。**<br>**機位**：**在她的眼睛高度或略高**，鏡頭保持水平。<br>**構圖**：豆漿杯捧在下巴前，牆上手寫菜單在她身後。<br>（上目遣い是這件的核心驗收點，機位放在眼睛高度模型比較直接做得到） |
 | **光線** | ① 店門口自然光從側前方**打在臉上**｜② 不鏽鋼餐檯反光補下巴｜③ 門口冷白 vs 店內日光燈｜④ **背景曝光與她的膚色相當** |
 | **表情** | **上目遣い。**頭略低、眼睛往上看鏡頭；雙手捧著杯子在下巴前；嘴角微揚——日系經典。 |
 | **肢體與重心** | 雙手捧著玻璃杯在胸前；手肘靠桌；上半身前傾；肩膀微聳。；**薄針織的袖口與髮尾隨著前傾垂下晃動**。 |
 | **情境** | 雙手捧著豆漿杯，正要喝 |
-| **生成 prompt** | `A young woman holds a glass of soy milk with both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the food in frame, camera at her eye level or slightly above, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, centre-parted and worn loose. Cream fitted thin-knit short sleeve, a light mini skirt. Taiwanese breakfast shop, stainless steel counter, a metal tray, handwritten wall menu, plastic chairs. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a glass of soy milk with both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the food in frame, camera at her eye level or slightly above, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, centre-parted and worn loose. Cream fitted thin-knit short sleeve, a light mini skirt. A breakfast shop, a stainless steel counter, a metal tray, red plastic stools, the wall menu behind her thrown out of focus. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 早餐吃這個🥛<br>好喝…真的很好喝 |
 
 ### LG-10A｜浴衣・祭典參道（全身）
@@ -550,7 +550,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **情境** | 走在參道上回頭 |
 | **生成 prompt** | `A young woman stands on the festival approach with her hips and torso facing down the path, her head and shoulders turned back toward the camera, holding a candy apple beside her cheek, laughing. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. Pale blue yukata with a white morning-glory print, a navy half-width obi tied tight at the waist, wooden geta. A clean bright wooden torii, paper lanterns strung overhead, food stalls. Her face clearly lit, the lantern-lit stalls behind her keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 夏祭り🎐<br>蘋果糖比想像中大顆 |
-| 附註 | 這是 Luna 視覺變化最大的一組；**戶外件，第一張出來要跟 LG-04／06／07 互相比對有沒有出現同一個場景模板** |
+| 附註 | 這是 Luna 視覺變化最大的一組。<br>**⚠️ 這件的場景在日本，是刻意的**——歸為「回日本的時候」類型（對應 Yuna 的 YG-06 汗蒸幕）。**其餘 Luna 的件全部是台北。**<br>戶外件，第一張出來要跟 LG-04／06／07 互相比對有沒有出現同一個場景模板 |
 
 ### LG-10B｜浴衣・蘋果糖（半身）
 `圖`　·　對應 **L-21**　·　地點層級 **A**
@@ -568,7 +568,24 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **情境** | 停下來給鏡頭看手上的蘋果糖 |
 | **生成 prompt** | `A young woman holds a candy apple up beside her cheek with one hand and steadies the Japanese hairpin in her half-up bob with the other, laughing with her eyes crinkled. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin, two strands left at her temples. Pale blue yukata with a white morning-glory print, a navy half-width obi tied tight at the waist. Paper lanterns strung overhead behind her, a blurred food stall. Her face clearly lit, the lantern-lit background keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 這個顏色好可愛🍎 |
-| 附註 | 與 LG-10A 同一天同一套，**拆兩則發沒問題**（景別與構圖差異夠大，不是「版面讀起來像同一則」） |
+| 附註 | 與 LG-10A 同一天同一套，**拆兩則發沒問題**（景別與構圖差異夠大）。同屬「回日本的時候」類型。 |
+
+## ⚠️ 場景國別的驗收規則（2026-08-28 定案）
+
+**兩人的設定都是住台北**（`character.md`、`CAMPAIGN_PLAN.md` 皆然），
+而且 `GENERATION_PLAN_B1.md` 自己就寫著「觀眾看不懂韓文／日文就沒有意義」。
+先前一度打算「接受場景生成在首爾」，**已撤回**——那跟企劃前提衝突。
+
+| 項目 | 規則 |
+|---|---|
+| **prompt 裡的國別詞** | **不寫**。`Taiwanese` 這種抽象詞實測無效（YG-03 照樣生出韓國），寫了只是佔字數 |
+| **改用什麼** | **具體的食物與店內物件**（蛋餅、冰紅茶、關東煮機台、不鏽鋼餐檯、紅色塑膠椅） |
+| **背景文字** | **一律失焦**。招牌、菜單、路線圖都不要成為需要讀字的元素 |
+| **驗收** | 畫面裡出現**清楚可辨的韓文／日文招牌或商品牆** → **Hard Reject** |
+| **例外** | YG-06 汗蒸幕是刻意的韓國場景，歸「回韓國的時候」類型 |
+| **文字硬撞無效時** | 改走 production route（局部換背景／改成地點不可辨但敘事合理的室內近景），**不要重寫人設** |
+
+---
 
 ## 執行順序
 
