@@ -1,0 +1,40 @@
+{
+ "_purpose": "C-14：記錄 v1 已知缺陷，但**不現在修**——pilot 若改變方法，現在修等於再做一次。",
+ "frozen_at": "2026-08-27",
+ "affected_personas": 19,
+ "known_issues": [
+  {
+   "id": "v1-01",
+   "issue": "scene 文字寫的服裝與 outfit 編號不符",
+   "count": 12,
+   "scope": "260 列中的 12 列",
+   "root_cause": "第一輪的 auto-rebalancer 只改 outfit 數字，沒有同步改 scene 文字"
+  },
+  {
+   "id": "v1-02",
+   "issue": "scene 寫的髮型狀態與 hair 編號不符",
+   "count": 14,
+   "scope": "260 列中的 14 列",
+   "root_cause": "同上"
+  },
+  {
+   "id": "v1-03",
+   "issue": "row fingerprint：欄位與列號綁定",
+   "count": null,
+   "detail": "Row1 = 100% meitu + 100% 自拍；Row13 = 100% iPhone + 100% 他拍 + 90% A 級；Row3 有 19/20 是同一 outfit 編號",
+   "root_cause": "rebalancer 用位置指派濾鏡與視角"
+  },
+  {
+   "id": "v1-04",
+   "issue": "地點層級被 quota 硬湊",
+   "count": null,
+   "detail": "A 級補位 fallback 直接把「早上煮咖啡」「清晨四點開烤箱」升為嚮往感場景"
+  },
+  {
+   "id": "v1-05",
+   "issue": "Cheryl Soh 未用滿 5 種髮型（缺 #5）",
+   "count": 1
+  }
+ ],
+ "do_not_fix_now": "若 pilot 後 13→20、lighting ratio、identity coverage schema 或 QA gate 有變，現在遷移只會再做一次。"
+}

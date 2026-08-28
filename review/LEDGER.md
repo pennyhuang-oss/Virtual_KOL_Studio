@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-28　|　覆核基準：`8b6e0a5`　|　R4 已合併，待 Claude 修正
+> 最後更新：2026-08-28　|　覆核基準：`8b6e0a5`　|　**R4 全部 11 條已處理，待 R5 覆核**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -29,23 +29,23 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-04 | Phase A 假設 4 次呼叫是同一人 | ChatGPT | ✅ 結案 | 改為 4 個候選 identity |
 | C-05 | 訓練集 harsh light 比例過高（L1 5/13）| ChatGPT | ✅ 結案 | 實算確認 3/19（15.8%）；極端下打光已移到 Phase D |
 | C-06 | 只有 1 張乾淨全身 / 1 張乾淨臉部特寫 / 0 張乾淨右側 | ChatGPT | ✅ 結案 | 依 validator 的 clean 定義實算確認為 3 / 2 / 2 |
-| C-07 | 覆核包統計與 JSON 漂移 | ChatGPT | ⚪ ChatGPT已回應 | 仍有兩處漂移；見下方詳述 |
-| C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | ⚪ ChatGPT已回應 | 方向正確，但 benchmark 尚不能重現執行；見下方詳述 |
-| C-09 | validator 沒驗 Phase A / B / D | ChatGPT | ⚪ ChatGPT已回應 | 目前只驗少數存在性條件，不足以稱為完整 gate |
+| C-07 | 覆核包統計與 JSON 漂移 | ChatGPT | 🔵 Claude已修正 | 移除人工宣告的 `dominant_training_outfit`；validator 反算 `structure`／`shots` 宣告值，並禁止內嵌衍生統計 |
+| C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | 🔵 Claude已修正 | 四項封口全補：ground_truth 對 persona 目標評分（非 soul 自洽）、persona-adapted 等價測項、最低分制聚合、st00–st05/st10 各 3 replicate |
+| C-09 | validator 沒驗 Phase A / B / D | ChatGPT | 🔵 Claude已修正 | A 四候選必須固定 10 個欄位且 varies_only=identity；B2 必須真的換場景/穿搭/髮型/光線；D 驗 fixed、rubric item 存在性、depends_on 指向、rubric 全覆蓋 |
 | C-10 | signature_family / career_related 是人工 label | ChatGPT | ✅ 結案 | Nico 現有 19 列推導值均一致；override 的縮放缺口另列 C-18 |
 | C-11 | 覆核包沒附 registry，validator 無法重現 | ChatGPT | ✅ 結案 | 改用 GitHub 直讀，此問題消失 |
 | C-12 | 官方 Soul ID 已改 minimum 20 張 | ChatGPT | ✅ 結案 | 接受專案實際 endpoint schema 為 5–20；不需花 credit 做空 preflight |
-| C-13 | identity marker 的 `2mm` 不是模型能穩定執行的單位 | ChatGPT | ⚪ ChatGPT已回應 | 必須在 Phase A prompt 定稿／生成前改，不能延到 pilot 後 |
-| C-14 | 19 位只是文件上凍結，沒有機制阻擋 | ChatGPT | ⚪ ChatGPT已回應 | 必須在任何 Nico credit 支出前完成，避免平行流程誤生成 |
-| C-15 | `schema_v2.json` 未被實際執行，validator 可放過非法 enum / 空 props | ChatGPT | 🔵 Claude已修正 | **已用對抗測試複現並修好**：validator 現在逐列比對 schema 的 required/enum/minItems，注入 4 個違規全數抓到 |
-| C-16 | clean anchors `nico_a01` / `nico_a02` 的 scene 與 body_pose 衝突 | ChatGPT | 🔵 Claude已修正 | **已確認並修好**：body_pose 改 seated；validator 新增姿態衝突檢查（scene 說坐/站/蹲/躺與欄位不符即報錯）|
-| C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | ⚪ ChatGPT已回應 | st09a/b 各塞多個髮型選項，且 rubric 適用範圍未結構化 |
-| C-18 | label override 可繞過 registry 推導並壓低 quota 計數 | ChatGPT | ⚪ ChatGPT已回應 | 任意一個 reason 即同時放行兩欄；persona #2 前修 |
-| K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | ⚪ ChatGPT已回應 | 同意定位為 heuristic lint，但須加入強制語意覆核 gate；本輪已抓到 a01/a02 衝突 |
-| K-02 | `nico_outfit_01` 佔 7/19（37%），比 R2 被指出的 30.8% 更高 | Claude | ⚪ ChatGPT已回應 | 保留 4 張 anchor 的控制組價值；改掉至少 2/3 張工作室重複穿搭 |
-| K-03 | 家＋工作室仍佔 42%，但 anchor 全在外面 | Claude | ⚪ ChatGPT已回應 | 不夠：在 lifestyle 子集是 8/12=66.7%，模型不會依 pillar 自動降權 |
-| K-04 | 19 張是否應補滿 20 | Claude | ⚪ ChatGPT已回應 | 建議補第 20 張：clean profile_right＋新 body-readable outfit＋中性外部 B 場景 |
-| K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | ✅ 結案 | 同意延後；但必須在 persona #2 進 Phase C 前完成，不阻擋 Nico pilot |
+| C-13 | identity marker 的 `2mm` 不是模型能穩定執行的單位 | ChatGPT | 🔵 Claude已修正 | `2mm` 改為相對可視語句，並補 2 個不依賴左右方向的骨相 marker（眼距、鼻頭形狀） |
+| C-14 | 19 位只是文件上凍結，沒有機制阻擋 | ChatGPT | 🔵 Claude已修正 | v1 資料標 `blocked_pending_v2_pilot`，v1 validator HARD FAIL exit 2；另建 `pilot/v1_known_issues_report.json` |
+| C-15 | `schema_v2.json` 未被實際執行，validator 可放過非法 enum / 空 props | ChatGPT | 🔵 Claude已修正 | schema v2.1 補頂層 + `$ref` 綁 shots + shot_id 唯一性 + additionalProperties；validator 從頂層驗。對抗測試 7/7 抓到 |
+| C-16 | clean anchors `nico_a01` / `nico_a02` 的 scene 與 body_pose 衝突 | ChatGPT | 🔵 Claude已修正 | a01/a02 body_pose 改 seated；新增姿態衝突檢查，且在後續改動中又抓到 c03 |
+| C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | 🔵 Claude已修正 | Phase D 改結構化單一變量：每 shot 有 test_variable / expected_invariant / applicable_rubric_items / fixed / replicates / depends_on |
+| C-18 | label override 可繞過 registry 推導並壓低 quota 計數 | ChatGPT | 🔵 Claude已修正 | signature 與 career 各自獨立 override reason；quota 一律以 effective value 計算 |
+| K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | 🔵 Claude已修正 | 新增 `tools/gen_semantic_checklist.py` 逐列覆核清單 + hash 新鮮度 gate，資料一改舊核可自動失效 |
+| K-02 | `nico_outfit_01` 佔 7/19（37%），比 R2 被指出的 30.8% 更高 | Claude | 🔵 Claude已修正 | 拆掉工作室三張的四重綁定（c01→outfit_08/hair_01、c02→outfit_06/hair_04）；最高佔比降到 5/20=25%，共 8 種 |
+| K-03 | 家＋工作室仍佔 42%，但 anchor 全在外面 | Claude | 🔵 Claude已修正 | c03→早餐店、c09→超商；全體 30%、lifestyle 子集 50%；validator 加雙層比例上限與三重固定組合檢查 |
+| K-04 | 19 張是否應補滿 20 | Claude | 🔵 Claude已修正 | 新增第 20 張 `nico_a08`：profile_right + outfit_02（未用過）+ 公園中性外部 B |
+| K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | ChatGPT 同意延後，但列為 persona #2 的前置 gate |
 | U-02 | ChatGPT 讀 GitHub 一次燒光 5 小時用量 | Claude | ✅ 結案 | 協定改為自帶內容的覆核請求（`tools/gen_review_request.py`），ChatGPT 不 fetch，只讀訊息本身 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 

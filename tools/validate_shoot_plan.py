@@ -36,6 +36,14 @@ def validate(S):
 if __name__=='__main__':
     path = sys.argv[1] if len(sys.argv)>1 else 'shoot.json'
     S=json.load(open(path,encoding='utf-8'))
+    # C-14：機制性凍結。19 位 v1 資料在 Nico pilot 通過前不得用於生成。
+    if S.get('_status')=='blocked_pending_v2_pilot':
+        print("HARD FAIL — 這份 v1 資料已凍結，不得用於生成。")
+        print("  原因：", S.get('_blocked_reason'))
+        print("  解凍條件：", S.get('_unblock_condition'))
+        print("  已知缺陷清單：pilot/v1_known_issues_report.json")
+        sys.exit(2)
+    S=S.get('personas', S)
     bad=validate(S)
     print(f"檢查 {len(S)} 位 × 13 張：")
     if not bad:

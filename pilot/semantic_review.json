@@ -1,0 +1,8 @@
+{
+ "data_hash": "edcacbc59355a286",
+ "total_shots": 20,
+ "reviewed_shot_ids": [],
+ "reviewed_by": null,
+ "reviewed_at": null,
+ "_note": "data_hash 與現行資料不符時，reviewed_shot_ids 自動清空——改了資料就要重審。"
+}

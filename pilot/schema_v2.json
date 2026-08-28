@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Shoot Plan Schema v2 — named-object 版",
-  "version": "2.0.0",
-  "changelog": "v1 用 positional array，欄位靠位置辨識、容易 off-by-one，且 scene 自然語言會偷偷覆寫 outfit/hair。v2 改為 named object，並拆出身分覆蓋欄位與五段式光線欄位。",
+  "version": "2.1.0",
+  "changelog": "v1 用 positional array，欄位靠位置辨識、容易 off-by-one，且 scene 自然語言會偷偷覆寫 outfit/hair。v2 改為 named object，並拆出身分覆蓋欄位與五段式光線欄位。 ｜ v2.1（C-15）：補上頂層 schema，用 $ref 把 phase_c_shots.items 綁到 #/definitions/shot，並加上 shot_id 唯一性與 additionalProperties 策略。先前只有 definitions.shot、頂層沒有連過去，所以即使另跑一般 JSON Schema validator 也不會驗整份 pilot。",
   "single_source_of_truth": {
     "outfit": "只能由 outfit_id 決定。scene 內禁止出現任何服裝單品名詞。",
     "hair": "只能由 hair_id 決定。scene 內禁止出現髮型狀態詞（濕髮/馬尾/盤髮/辮/放下）。若需要濕髮，必須是一個正式的 hair variant。",
@@ -12,65 +12,492 @@
   "definitions": {
     "shot": {
       "type": "object",
-      "required": ["shot_id","purpose","pillar","scene","location","outfit_id","hair_id",
-                   "framing","view","head_yaw","head_pitch","expression","eye_gaze",
-                   "body_pose","face_visibility","camera","light","filter",
-                   "signature_family","career_related"],
+      "required": [
+        "shot_id",
+        "purpose",
+        "pillar",
+        "scene",
+        "location",
+        "outfit_id",
+        "hair_id",
+        "framing",
+        "view",
+        "head_yaw",
+        "head_pitch",
+        "expression",
+        "eye_gaze",
+        "body_pose",
+        "face_visibility",
+        "camera",
+        "light",
+        "filter",
+        "signature_family",
+        "career_related"
+      ],
       "properties": {
-        "shot_id": {"type":"string"},
-        "purpose": {"enum":["identity_core","body_pose_coverage","environment_stress","content_flavor"]},
-        "pillar": {"type":"string"},
-        "scene": {"type":"string","description":"只描述『她在做什麼、在哪裡』。不得含服裝、髮型、濾鏡、身材。單一時空，禁止影片語言（一鏡到底/連換三套）。"},
-        "location": {"type":"string","description":"必須是 location_registry 的 key"},
-        "location_tier_override": {"type":["string","null"],"description":"覆寫 registry 判定時必填 reason"},
-        "location_tier_override_reason": {"type":["string","null"]},
-        "outfit_id": {"type":"string"},
-        "hair_id": {"type":"string"},
-        "props": {"type":"array","items":{"type":"string"},"minItems":2},
-        "framing": {"enum":["face_closeup","chest_up","waist_up","knee_up","full_body"]},
-        "view": {"enum":["third_person","selfie_front","selfie_mirror"]},
-        "head_yaw": {"enum":["front","left_30","right_30","left_60","right_60","profile_left","profile_right"]},
-        "head_pitch": {"enum":["down_15","neutral","up_10"]},
-        "expression": {"type":"string"},
-        "eye_gaze": {"enum":["camera","away","down","mirror"]},
-        "body_pose": {"enum":["standing","seated","leaning","crouching","walking_frozen","lying"]},
-        "face_visibility": {"enum":["unobstructed","partial_hair","partial_hand","partial_object"]},
+        "shot_id": {
+          "type": "string"
+        },
+        "purpose": {
+          "enum": [
+            "identity_core",
+            "body_pose_coverage",
+            "environment_stress",
+            "content_flavor"
+          ]
+        },
+        "pillar": {
+          "type": "string"
+        },
+        "scene": {
+          "type": "string",
+          "description": "只描述『她在做什麼、在哪裡』。不得含服裝、髮型、濾鏡、身材。單一時空，禁止影片語言（一鏡到底/連換三套）。"
+        },
+        "location": {
+          "type": "string",
+          "description": "必須是 location_registry 的 key"
+        },
+        "location_tier_override": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "覆寫 registry 判定時必填 reason"
+        },
+        "location_tier_override_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outfit_id": {
+          "type": "string"
+        },
+        "hair_id": {
+          "type": "string"
+        },
+        "props": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2
+        },
+        "framing": {
+          "enum": [
+            "face_closeup",
+            "chest_up",
+            "waist_up",
+            "knee_up",
+            "full_body"
+          ]
+        },
+        "view": {
+          "enum": [
+            "third_person",
+            "selfie_front",
+            "selfie_mirror"
+          ]
+        },
+        "head_yaw": {
+          "enum": [
+            "front",
+            "left_30",
+            "right_30",
+            "left_60",
+            "right_60",
+            "profile_left",
+            "profile_right"
+          ]
+        },
+        "head_pitch": {
+          "enum": [
+            "down_15",
+            "neutral",
+            "up_10"
+          ]
+        },
+        "expression": {
+          "type": "string"
+        },
+        "eye_gaze": {
+          "enum": [
+            "camera",
+            "away",
+            "down",
+            "mirror"
+          ]
+        },
+        "body_pose": {
+          "enum": [
+            "standing",
+            "seated",
+            "leaning",
+            "crouching",
+            "walking_frozen",
+            "lying"
+          ]
+        },
+        "face_visibility": {
+          "enum": [
+            "unobstructed",
+            "partial_hair",
+            "partial_hand",
+            "partial_object"
+          ]
+        },
         "camera": {
-          "type":"object",
-          "required":["type","distortion","depth_of_field"],
-          "properties":{
-            "type":{"enum":["phone_rear","phone_front","mirror_phone"]},
-            "distortion":{"enum":["none","mild","moderate"]},
-            "depth_of_field":{"enum":["adequate","shallow"],"description":"身分訓練優先 adequate；full_body 一律 adequate"}
-          }},
+          "type": "object",
+          "required": [
+            "type",
+            "distortion",
+            "depth_of_field"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "phone_rear",
+                "phone_front",
+                "mirror_phone"
+              ]
+            },
+            "distortion": {
+              "enum": [
+                "none",
+                "mild",
+                "moderate"
+              ]
+            },
+            "depth_of_field": {
+              "enum": [
+                "adequate",
+                "shallow"
+              ],
+              "description": "身分訓練優先 adequate；full_body 一律 adequate"
+            }
+          }
+        },
         "light": {
-          "type":"object",
-          "required":["family","key","bounce","bounce_type","secondary_source","exposure_choice","occlusion"],
-          "properties":{
-            "family":{"enum":["L1_single_ugly_overhead","L2_single_window_daylight","L3_mixed_warm_cool_practical",
-                              "L4_night_signage","L5_hard_outdoor_daylight","L6_soft_overcast",
-                              "L7_vehicle_interior","L8_bathroom_fluorescent"]},
-            "key":{"type":"string"},
-            "bounce":{"type":"string"},
-            "bounce_type":{"enum":["diffuse","specular","none"],
-              "description":"白牆/床單/淺色地板=diffuse；鏡面/玻璃/金屬/烤漆=specular。specular 不能當成把陰影整體補亮的主要填光。"},
-            "secondary_source":{"type":["string","null"],"description":"可為 null。不強制每張都有第二色溫。"},
-            "exposure_choice":{"type":"string"},
-            "occlusion":{"type":["string","null"]}
-          }},
+          "type": "object",
+          "required": [
+            "family",
+            "key",
+            "bounce",
+            "bounce_type",
+            "secondary_source",
+            "exposure_choice",
+            "occlusion"
+          ],
+          "properties": {
+            "family": {
+              "enum": [
+                "L1_single_ugly_overhead",
+                "L2_single_window_daylight",
+                "L3_mixed_warm_cool_practical",
+                "L4_night_signage",
+                "L5_hard_outdoor_daylight",
+                "L6_soft_overcast",
+                "L7_vehicle_interior",
+                "L8_bathroom_fluorescent"
+              ]
+            },
+            "key": {
+              "type": "string"
+            },
+            "bounce": {
+              "type": "string"
+            },
+            "bounce_type": {
+              "enum": [
+                "diffuse",
+                "specular",
+                "none"
+              ],
+              "description": "白牆/床單/淺色地板=diffuse；鏡面/玻璃/金屬/烤漆=specular。specular 不能當成把陰影整體補亮的主要填光。"
+            },
+            "secondary_source": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "可為 null。不強制每張都有第二色溫。"
+            },
+            "exposure_choice": {
+              "type": "string"
+            },
+            "occlusion": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
         "imperfection_profile": {
-          "type":"object",
-          "properties":{
-            "composition":{"enum":["centered","slightly_tilted","off_center"]},
-            "motion":{"enum":["none","minor_hand_blur","subject_motion"]},
-            "white_balance":{"enum":["neutral","slightly_cool_auto","slightly_warm_auto","color_cast_from_environment"]},
-            "background_clutter":{"enum":["clean","moderate","heavy"]},
-            "highlight_clipping":{"enum":["none","allowed","heavy"]}
-          }},
-        "filter": {"enum":["none","ccd","meitu"]},
-        "signature_family": {"type":["string","null"],"description":"該角色的招牌世界，例如 nail_studio / ryokan_onsen / golf。換衣服但仍在同一個世界，仍算。"},
-        "career_related": {"type":"boolean"}
+          "type": "object",
+          "properties": {
+            "composition": {
+              "enum": [
+                "centered",
+                "slightly_tilted",
+                "off_center"
+              ]
+            },
+            "motion": {
+              "enum": [
+                "none",
+                "minor_hand_blur",
+                "subject_motion"
+              ]
+            },
+            "white_balance": {
+              "enum": [
+                "neutral",
+                "slightly_cool_auto",
+                "slightly_warm_auto",
+                "color_cast_from_environment"
+              ]
+            },
+            "background_clutter": {
+              "enum": [
+                "clean",
+                "moderate",
+                "heavy"
+              ]
+            },
+            "highlight_clipping": {
+              "enum": [
+                "none",
+                "allowed",
+                "heavy"
+              ]
+            },
+            "identity_safe": {
+              "type": "boolean",
+              "description": "訓練圖必須為 true：可以歪、背景可以亂、燈管可以爆，但臉不能糊"
+            },
+            "face_motion_blur": {
+              "type": "boolean",
+              "description": "訓練圖必須為 false"
+            },
+            "face_detail_preserved": {
+              "type": "boolean",
+              "description": "訓練圖必須為 true"
+            }
+          },
+          "required": [
+            "identity_safe",
+            "face_motion_blur",
+            "face_detail_preserved"
+          ]
+        },
+        "filter": {
+          "enum": [
+            "none",
+            "ccd",
+            "meitu"
+          ]
+        },
+        "signature_family": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "該角色的招牌世界，例如 nail_studio / ryokan_onsen / golf。換衣服但仍在同一個世界，仍算。"
+        },
+        "career_related": {
+          "type": "boolean"
+        },
+        "label_override_signature_reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "C-18：signature_family 偏離 registry 推導時的理由。兩個 label 各自獨立，不共用一個 reason。"
+        },
+        "label_override_career_reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "C-18：career_related 偏離 registry 推導時的理由。"
+        }
+      }
+    },
+    "stress_test": {
+      "type": "object",
+      "required": [
+        "count",
+        "shots",
+        "fixed_baseline",
+        "seed_policy"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "test_variable",
+              "expected_invariant",
+              "applicable_rubric_items",
+              "fixed",
+              "replicates"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "test_variable": {
+                "type": "string"
+              },
+              "expected_invariant": {
+                "type": "string"
+              },
+              "applicable_rubric_items": {
+                "type": "array",
+                "minItems": 1
+              },
+              "replicates": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "depends_on": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fixed": {
+                "type": "object",
+                "description": "該 shot 除了 test_variable 之外全部固定的欄位，讓 benchmark 可重現"
+              }
+            }
+          }
+        },
+        "_purpose": {
+          "type": "string"
+        },
+        "_c17_note": {
+          "type": "string"
+        },
+        "_derived_stats_note": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "known_risk": {
+          "type": "string"
+        },
+        "fixed_baseline": {
+          "type": "object"
+        },
+        "seed_policy": {
+          "type": "string"
+        }
       }
     }
-  }
+  },
+  "type": "object",
+  "required": [
+    "persona_id",
+    "schema_version",
+    "identity_spec",
+    "outfits",
+    "hair",
+    "phase_a",
+    "phase_b",
+    "phase_c_quota",
+    "phase_c_shots",
+    "phase_d_stress_test",
+    "soul_qa_rubric",
+    "training_endpoint_preflight"
+  ],
+  "properties": {
+    "persona_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "signature_family_key": {
+      "type": "string"
+    },
+    "phase_c_shots": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 20,
+      "items": {
+        "$ref": "#/definitions/shot"
+      },
+      "description": "訓練集。張數上下限對齊 training_endpoint_preflight 的 5–20 契約。"
+    },
+    "phase_d_stress_test": {
+      "$ref": "#/definitions/stress_test"
+    },
+    "training_endpoint_preflight": {
+      "type": "object",
+      "required": [
+        "verified_at",
+        "min_training_images",
+        "max_training_images",
+        "verbatim"
+      ]
+    },
+    "identity_spec": {
+      "type": "object",
+      "required": [
+        "skin",
+        "body_visual",
+        "identity_markers"
+      ]
+    },
+    "outfits": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "hair": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "phase_a": {
+      "type": "object",
+      "required": [
+        "count",
+        "identical_across_all_four",
+        "varies_only"
+      ]
+    },
+    "phase_b": {
+      "type": "object",
+      "required": [
+        "B1",
+        "B2"
+      ]
+    },
+    "phase_c_quota": {
+      "type": "object",
+      "required": [
+        "shots"
+      ]
+    },
+    "soul_qa_rubric": {
+      "type": "object",
+      "required": [
+        "items",
+        "hard_gates",
+        "threshold_method"
+      ]
+    }
+  },
+  "x-uniqueKeys": {
+    "phase_c_shots": "shot_id",
+    "phase_d_stress_test.shots": "id"
+  },
+  "x-additionalProperties": "shot 允許額外的 `_note` / `_why` 等底線開頭欄位作為註記，其餘未定義欄位一律視為錯誤（打字錯誤會被當成新欄位靜默忽略）。"
 }

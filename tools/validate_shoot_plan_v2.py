@@ -29,6 +29,67 @@ def ratio_ok(v, spec):
 POSE_WORDS={'seated':['坐','坐著','坐下'],'standing':['站','站著'],'crouching':['蹲'],
             'lying':['躺','趴'],'leaning':['靠','撐著'],'walking_frozen':['走','越過']}
 
+def _resolve(spec, schema):
+    """最小 $ref 解析（只支援 #/definitions/x）。"""
+    while '$ref' in spec:
+        ref=spec['$ref']
+        assert ref.startswith('#/'), ref
+        node=schema
+        for part in ref[2:].split('/'): node=node[part]
+        spec=node
+    return spec
+
+def _walk(obj, spec, path, sid, schema, e):
+    spec=_resolve(spec, schema)
+    for k in spec.get('required',[]):
+        if k not in obj: e.append(f"{sid} 缺必填欄位 {path}{k}")
+    known=set(spec.get('properties',{}))
+    if not known:
+        return   # schema 未宣告 properties 的 object 視為自由格式，不做未定義欄位檢查
+    for k,v in obj.items():
+        if k not in known:
+            if not k.startswith('_'): e.append(f"{sid} 有未定義欄位 {path}{k}（打字錯誤會被靜默忽略，故視為錯誤）")
+            continue
+        ps=_resolve(spec['properties'][k], schema)
+        enum=ps.get('enum')
+        if enum and v not in enum:
+            e.append(f"{sid} {path}{k}='{v}' 不是合法值，允許：{enum}")
+        t=ps.get('type')
+        if t=='array' and isinstance(v,list):
+            mi=ps.get('minItems')
+            if mi and len(v)<mi: e.append(f"{sid} {path}{k} 只有 {len(v)} 項，至少需 {mi}")
+            if 'items' in ps:
+                for i,it in enumerate(v):
+                    if isinstance(it,dict): _walk(it, ps['items'], f"{path}{k}[{i}].", sid, schema, e)
+        elif t=='object' and isinstance(v,dict):
+            _walk(v, ps, f"{path}{k}.", sid, schema, e)
+        elif t=='integer' and isinstance(v,int) and ps.get('minimum') is not None and v<ps['minimum']:
+            e.append(f"{sid} {path}{k}={v} 小於下限 {ps['minimum']}")
+
+def schema_check_full(pilot, schema):
+    """C-15：從頂層開始驗，phase_c_shots 透過 $ref 綁到 definitions.shot。
+    先前只有 definitions.shot、頂層沒連過去，非法 enum 與空 props 會整個放過。"""
+    e=[]
+    for k in schema.get('required',[]):
+        if k not in pilot: e.append(f"pilot 缺頂層必填欄位 {k}")
+    arr=schema['properties']['phase_c_shots']
+    n=len(pilot.get('phase_c_shots',[]))
+    if arr.get('minItems') and n<arr['minItems']: e.append(f"phase_c_shots {n} 張 < 下限 {arr['minItems']}")
+    if arr.get('maxItems') and n>arr['maxItems']: e.append(f"phase_c_shots {n} 張 > 上限 {arr['maxItems']}")
+    for sh_ in pilot.get('phase_c_shots',[]):
+        _walk(sh_, arr['items'], "", sh_.get('shot_id','(no id)'), schema, e)
+    st=pilot.get('phase_d_stress_test')
+    if st: _walk(st, schema['properties']['phase_d_stress_test'], "phase_d.", "phase_d", schema, e)
+    # 唯一性
+    for path,key in schema.get('x-uniqueKeys',{}).items():
+        node=pilot
+        for part in path.split('.'): node=(node or {}).get(part) if isinstance(node,dict) else None
+        if isinstance(node,list):
+            ids=[x.get(key) for x in node if isinstance(x,dict)]
+            dup=[i for i in set(ids) if ids.count(i)>1]
+            if dup: e.append(f"{path} 的 {key} 重複：{dup}")
+    return e
+
 def schema_check(pilot, schema):
     """對 phase_c_shots 逐列比對 schema 的 required / enum / minItems。
     先前只驗業務規則，非法 enum（framing='SUPER_ZOOM'）與空 props 會整個放過——
@@ -73,7 +134,7 @@ def pose_conflicts(shots):
 def validate(pilot, registry, schema=None):
     err=[]; warn=[]
     if schema:
-        err += schema_check(pilot, schema)
+        err += schema_check_full(pilot, schema)
     err += pose_conflicts(pilot['phase_c_shots'])
     shots=pilot['phase_c_shots']; q=pilot['phase_c_quota']
     n=len(shots)
@@ -205,16 +266,68 @@ def validate(pilot, registry, schema=None):
         if s2.get('pillar')=='anchor' and (s2['location'] in HOME or registry.get('defaults',{}).get(s2['location'])):
             err.append(f"{s2['shot_id']} 是 identity anchor，不可放在住處或職業空間（會把最強身分訊號綁在該場景）")
 
-    # --- signature_family / career_related 由 registry 推導 ---
+    # --- C-18：signature_family / career_related 各自獨立 override，且 quota 用 effective value ---
     key=pilot.get('signature_family_key')
+    eff_sf=[]; eff_cr=[]
     for s2 in shots:
         dflt=registry.get('defaults',{}).get(s2['location'])
         exp_sf = (dflt['signature_family'].replace('{persona_workplace}',key) if dflt else None)
         exp_cr = bool(dflt['career_related_default']) if dflt else False
-        if s2.get('signature_family')!=exp_sf and not s2.get('label_override_reason'):
-            err.append(f"{s2['shot_id']} signature_family={s2.get('signature_family')}，registry 推導應為 {exp_sf}（要改需填 label_override_reason）")
-        if bool(s2.get('career_related'))!=exp_cr and not s2.get('label_override_reason'):
-            err.append(f"{s2['shot_id']} career_related={s2.get('career_related')}，registry 推導應為 {exp_cr}（要改需填 label_override_reason）")
+        if s2.get('signature_family')!=exp_sf:
+            if not s2.get('label_override_signature_reason'):
+                err.append(f"{s2['shot_id']} signature_family={s2.get('signature_family')}，registry 推導應為 {exp_sf}"
+                           f"（要偏離需填 label_override_signature_reason，不能靠另一欄的理由順帶放行）")
+            eff_sf.append(s2.get('signature_family'))
+        else:
+            eff_sf.append(exp_sf)
+        if bool(s2.get('career_related'))!=exp_cr:
+            if not s2.get('label_override_career_reason'):
+                err.append(f"{s2['shot_id']} career_related={s2.get('career_related')}，registry 推導應為 {exp_cr}"
+                           f"（要偏離需填 label_override_career_reason）")
+            eff_cr.append(bool(s2.get('career_related')))
+        else:
+            eff_cr.append(exp_cr)
+    # quota 一律以 effective value 計算，不用使用者填的值——否則錯誤 override 可壓低比例
+    sf_e=sum(1 for x in eff_sf if x); cr_e=sum(1 for x in eff_cr if x)
+    if sf_e/n > q['signature_family_max_ratio']:
+        err.append(f"signature_family(effective) {sf_e}/{n}={sf_e/n:.0%} > {q['signature_family_max_ratio']:.0%}")
+    if cr_e/n > q['career_related_max_ratio']:
+        err.append(f"career_related(effective) {cr_e}/{n}={cr_e/n:.0%} > {q['career_related_max_ratio']:.0%}")
+
+    # --- K-03：世界集中度（全體 + lifestyle 子集 + 三重固定組合）---
+    hw_all=[s2 for s2 in shots if s2['location'] in HOME or registry.get('defaults',{}).get(s2['location'])]
+    life=[s2 for s2 in shots if s2.get('pillar')!='anchor']
+    hw_life=[s2 for s2 in life if s2['location'] in HOME or registry.get('defaults',{}).get(s2['location'])]
+    wq=q.get('world_concentration_max',{})
+    if wq:
+        if len(hw_all)/n > wq['overall']:
+            err.append(f"home+work 全體 {len(hw_all)}/{n}={len(hw_all)/n:.0%} > {wq['overall']:.0%}")
+        if life and len(hw_life)/len(life) > wq['lifestyle_subset']:
+            err.append(f"home+work 在 lifestyle 子集 {len(hw_life)}/{len(life)}={len(hw_life)/len(life):.0%}"
+                       f" > {wq['lifestyle_subset']:.0%}（訓練 endpoint 不知道 pillar=anchor，不會自動降權）")
+    combo=collections.defaultdict(list)
+    for s2 in shots: combo[(s2['location'],s2['outfit_id'],s2['hair_id'])].append(s2)
+    for k2,v2 in combo.items():
+        if len(v2)<2: continue
+        if all(x.get('pillar')=='anchor' for x in v2): continue   # anchor 之間刻意同規格，是控制組
+        err.append(f"location+outfit+hair 固定組合重複：{k2} → {[x['shot_id'] for x in v2]}"
+                   f"（anchor 之間可以重複，anchor 與 lifestyle 或 lifestyle 之間不行）")
+
+    # --- C-07：任何內嵌的衍生統計都要與實況一致（人工宣告是漂移的來源）---
+    import re as _re
+    struct=q.get('structure','')
+    m=_re.search(r'(\d+)\s*clean identity anchors?\s*\+\s*(\d+)\s*lifestyle', struct)
+    if m:
+        a_dec,l_dec=int(m.group(1)),int(m.group(2))
+        a_act=sum(1 for x in shots if x.get('pillar')=='anchor')
+        if a_dec!=a_act or l_dec!=n-a_act:
+            err.append(f"phase_c_quota.structure 宣告 {a_dec}+{l_dec}，實況是 {a_act}+{n-a_act}（C-07 漂移）")
+    if q.get('shots')!=n:
+        err.append(f"phase_c_quota.shots={q.get('shots')} 與實際 {n} 張不符")
+    blob=json.dumps(pilot,ensure_ascii=False)
+    for bad_key in ('dominant_training_outfit',):
+        if f'"{bad_key}"' in blob:
+            err.append(f"不得內嵌人工宣告的衍生統計 `{bad_key}`——一律由 tools/gen_pilot_review.py 計算（C-07）")
 
     # --- Phase A / B / D gate ---
     pa=pilot.get('phase_a',{}); ic2=pa.get('identical_across_all_four',{})
@@ -224,15 +337,67 @@ def validate(pilot, registry, schema=None):
     ao=ic2.get('outfit_id')
     if ao and not pilot['outfits'][ao].get('body_readable'): err.append(f"Phase A 選角服 {ao} 必須 body_readable=true")
     if ao and not pilot['outfits'][ao].get('neckline'): err.append(f"Phase A 選角服 {ao} 必須明寫 neckline")
+    # C-09：A 四候選必須除 identity 外完全同規格
+    need_same={'framing','head_yaw','body_pose','view','outfit_id','hair_id','location','camera','light','filter'}
+    miss=need_same-set(ic2)
+    if miss: err.append(f"Phase A 的 identical_across_all_four 缺少必須固定的欄位：{sorted(miss)}")
+    if 'identity' not in str(pa.get('varies_only','')):
+        err.append("Phase A 的 varies_only 必須明寫唯一變數是 identity")
+
+    # C-09：B2 必須真的更換場景／穿搭／髮型／光線，否則只驗到「能不能重現」
     pb=pilot.get('phase_b',{})
-    if not (pb.get('B1') and pb.get('B2')): err.append("Phase B 必須有 B1 與 B2 兩張")
-    elif pb['B2'].get('framing')!='full_body': err.append("Phase B 的 B2 必須是 full_body（身材比例最終把關）")
+    if not (pb.get('B1') and pb.get('B2')):
+        err.append("Phase B 必須有 B1 與 B2 兩張")
+    else:
+        if pb['B2'].get('framing')!='full_body':
+            err.append("Phase B 的 B2 必須是 full_body（身材比例最終把關）")
+        same=[k for k in ('location','outfit_id','hair_id','light') if str(pb['B1'].get(k))==str(pb['B2'].get(k))]
+        if same:
+            err.append(f"Phase B 的 B2 與 B1 在 {same} 相同——B2 的目的是驗『輕度 generalize』，"
+                       f"若同場景同服裝同光線只驗到『能不能重現』")
+
+    # C-09：Phase D 結構完整性
     pd=pilot.get('phase_d_stress_test',{})
-    if len(pd.get('shots',[]))!=pd.get('count'): err.append("Phase D count 與實際 shots 數不符")
-    ids={x['id'] for x in pd.get('shots',[])}
+    dshots=pd.get('shots',[])
+    if len(dshots)!=pd.get('count'): err.append("Phase D count 與實際 shots 數不符")
+    ids={x['id'] for x in dshots}
     if 'st00' not in ids: err.append("Phase D 缺 st00 乾淨基準線（其他 stress shot 沒有比較基準）")
     rub=pilot.get('soul_qa_rubric',{})
+    rub_items=set(rub.get('items',[]))
+    for x in dshots:
+        if not x.get('fixed'): err.append(f"Phase D {x['id']} 缺 fixed（沒有固定欄位就不可重現）")
+        bad=[i for i in x.get('applicable_rubric_items',[]) if i not in rub_items]
+        if bad: err.append(f"Phase D {x['id']} 的 applicable_rubric_items 有不存在的項目：{bad}")
+        dep=x.get('depends_on')
+        if dep and not any(i in dep for i in ids):
+            err.append(f"Phase D {x['id']} 的 depends_on 沒有指到任何存在的 shot id")
+    covered=set()
+    for x in dshots: covered |= set(x.get('applicable_rubric_items',[]))
+    uncov=rub_items-covered
+    if uncov: err.append(f"rubric 有項目沒有任何 stress shot 測到：{sorted(uncov)}")
     if not rub.get('hard_gates'): err.append("QA rubric 缺 hard_gates（總分會掩蓋關鍵失敗）")
+    tm=rub.get('threshold_method',{})
+    for k in ('ground_truth','persona_adaptation','scoring_aggregation','replicates'):
+        if not tm.get(k): err.append(f"QA threshold_method 缺 {k}（C-08 要求的四項封口）")
+
+    # --- K-01：語意覆核 gate（機器 lint 只是第一關）---
+    import hashlib, os as _os
+    h=hashlib.sha256(json.dumps(shots,ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:16]
+    sr_p='pilot/semantic_review.json'
+    if not _os.path.exists(sr_p):
+        err.append("缺 pilot/semantic_review.json——機器 lint 通過不等於語意正確，"
+                   "需先跑 tools/gen_semantic_checklist.py 並完成逐列覆核（K-01）")
+    else:
+        sr=json.load(open(sr_p,encoding='utf-8'))
+        if sr.get('data_hash')!=h:
+            err.append(f"語意覆核紀錄已過期（紀錄 hash {sr.get('data_hash')} ≠ 現行 {h}）——資料改過就要重審")
+        else:
+            done=set(sr.get('reviewed_shot_ids',[])); allids={x['shot_id'] for x in shots}
+            missing=allids-done
+            if missing:
+                warn.append(f"語意覆核未完成：{len(done)}/{len(allids)} 列，"
+                            f"尚未覆核 {sorted(missing)[:5]}{'…' if len(missing)>5 else ''}"
+                            "（生成前必須完成，見 pilot/semantic_review.md）")
 
     # --- 反作弊：不完美攝影變數不可全部相同 ---
     for f in ['composition','white_balance','background_clutter']:
