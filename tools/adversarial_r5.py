@@ -94,25 +94,56 @@ def m_no_burn(p):
 case("C-25 完全沒有 shot 測 no_scene_burn_in", m_no_burn, "沒有任何 stress shot 測 no_scene_burn_in")
 
 # ---- C-23（R6 新增）：props 重複與手部佔用 ----
+
+
+
+
+
+# ---- C-27 / C-29（R7 新增）：結構化 props 與 hands ----
 def m_dupbag(p):
-    shot(p,'nico_c12')['props']=['結構皮革包','手上的悠遊卡']   # outfit_06 自帶結構皮革包
+    s2=shot(p,'nico_c12'); s2['props'][1]={"id":"bag","name":"結構皮革包","relation":"surface",
+        "zone":"waist","expected_visible":True}
 case("C-23 props 重述 outfit 已提供的包", m_dupbag, "重述了 outfit 已提供的")
 
 def m_crossbag(p):
-    shot(p,'nico_a06')['props']=['米色帆布托特','手上的保溫瓶']  # 別套的招牌包
+    s2=shot(p,'nico_a06'); s2['props'][1]={"id":"tote","name":"米色帆布托特","relation":"surface",
+        "zone":"floor","expected_visible":True}
 case("C-23 props 借用別套 outfit 的招牌包", m_crossbag, "另一套 outfit 的招牌包")
 
+def m_offframe(p):
+    shot(p,'nico_a01')['props'][0].update(relation="surface",zone="waist")   # face_closeup 看不到腰線
+case("C-29 宣告可見的 prop 落在 framing 裁切外", m_offframe, "宣告可見卻在裁切外")
+
+def m_synonym(p):
+    shot(p,'nico_a02')['hands']['right']['object_ref']='咖啡杯'   # 用同義詞而非 prop id
+case("C-27 object_ref 用同義詞繞過 prop id", m_synonym, "不是本列的 prop id")
+
 def m_thirdhand(p):
-    s=shot(p,'nico_c10'); s['props']=['洗衣袋','手上的零錢']     # 雙臂已抱衣物
-case("C-23 第三隻手（props 拿東西但 hands 沒空位）", m_thirdhand, "第三隻手")
+    s2=shot(p,'nico_c10')
+    s2['props'].append({"id":"coins","name":"手上的零錢","relation":"held_right",
+                        "zone":"waist","expected_visible":True})   # 雙手已抱衣物
+case("C-27 第三隻手（held prop 沒有手引用）", m_thirdhand, "沒有任何一隻手引用它")
 
-def m_selfie_nophone(p):
-    shot(p,'nico_c08')['hands']={'left':'扶著洗手台','right':'拿著修眉刀'}
-case("C-23 自拍卻沒有一隻手拿手機", m_selfie_nophone, "自拍的拍攝裝置必須占掉一隻手")
+def m_selfie_nocam(p):
+    shot(p,'nico_c08')['hands']['left']={"state":"supporting","object_ref":None,"note":"扶著洗手台"}
+case("C-27 自拍卻沒有一隻手是 camera", m_selfie_nocam, "自拍必須且只能占掉一隻手")
 
-def m_nohands(p):
-    del shot(p,'nico_c05')['hands']
-case("C-23 缺 hands 欄位", m_nohands, "手部佔用必須明寫")
+def m_cam_notselfie(p):
+    shot(p,'nico_a01')['hands']['left']={"state":"camera","object_ref":None,"note":"舉著手機"}
+case("C-27 非自拍卻標了 camera hand", m_cam_notselfie, "不是自拍，手上卻標了 camera")
+
+def m_phone_prop(p):
+    shot(p,'nico_c04')['props'][0]['name']='床上另一支手機'
+case("C-27 拍攝裝置同時被列為入鏡 prop", m_phone_prop, "不得同時列為入鏡 prop")
+
+def m_relmismatch(p):
+    shot(p,'nico_c12')['props'][0]['relation']='held_left'   # 右手在拿
+case("C-27 hand 與 prop 的 relation 左右不符", m_relmismatch, "應為")
+
+def m_twohands_one(p):
+    s2=shot(p,'nico_c09')
+    s2['hands']['left']={"state":"holding","object_ref":"onigiri","note":"也拿著飯糰"}
+case("C-27 同一個 prop 被兩隻手引用但不是 held_both", m_twohands_one, "被兩隻手同時引用")
 
 ok=0
 for name,mut,expect,cr in CASES:

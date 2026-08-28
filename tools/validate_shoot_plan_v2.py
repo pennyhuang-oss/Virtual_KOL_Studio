@@ -162,36 +162,80 @@ def validate(pilot, registry, schema=None):
         if s['framing']=='full_body' and s['camera']['depth_of_field']=='shallow':
             err.append(f"{s['shot_id']} full_body 不可用 shallow DOF（身體輪廓會糊）")
 
-    # --- C-23：props 不得重述 outfit 已提供的物件，手部佔用必須明寫且不超過兩隻 ---
+    # --- C-23/C-27/C-29：結構化 props 與 hands ---
+    # framing 能看到哪些 zone。background 一律可見；zone 由作者依該 shot 的實際姿態指定，
+    # 不是套「站姿公式」——蹲著時地上的紙箱就在膝線，不在腳下。
+    FRAME_ZONES={'face_closeup':{'head'},
+                 'chest_up':{'head','chest'},
+                 'waist_up':{'head','chest','waist'},
+                 'knee_up':{'head','chest','waist','hip','knee'},
+                 'full_body':{'head','chest','waist','hip','knee','floor'}}
+    REL={'held_left','held_right','held_both','surface','worn','background'}
+    ST={'free','holding','supporting','camera'}
     ALLBAGS={o.get('outer_or_bag') for o in outfits.values()} - {'無','（連身）',None,''}
-    HANDW=re.compile(r'((?<!扶)手上|手裡|拿著|舉著|提著|捧著|握著)')  # 『扶手上』不是拿在手上
     for s in shots:
-        o=outfits[s['outfit_id']]
+        sid=s['shot_id']; o=outfits[s['outfit_id']]
+        if s['framing'] not in FRAME_ZONES: continue   # 非法 framing 由 schema 檢查負責
+        props=s.get('props') or []
+        if not all(isinstance(x,dict) for x in props):
+            err.append(f"{sid} props 必須是結構化物件（id/name/relation/zone/expected_visible，C-27）"); continue
+        pid={x['id']:x for x in props}
+        if len(pid)!=len(props): err.append(f"{sid} props 有重複 id")
         own={x for x in (o.get('outer_or_bag'),o.get('jewelry')) if x and x!='無'}
-        for pr in s['props']:
+        for x in props:
+            if x['relation'] not in REL: err.append(f"{sid} props[{x['id']}].relation='{x['relation']}' 非法")
+            if x['zone']!='background' and x['zone'] not in FRAME_ZONES['full_body']:
+                err.append(f"{sid} props[{x['id']}].zone='{x['zone']}' 非法")
             for b in own:
-                if b in pr or pr in b:
-                    err.append(f"{s['shot_id']} props『{pr}』重述了 outfit 已提供的『{b}』"
-                               f"——同一個物件會被生成兩次（C-23）")
+                if b in x['name'] or x['name'] in b:
+                    err.append(f"{sid} props『{x['name']}』重述了 outfit 已提供的『{b}』（C-23）")
             for b in ALLBAGS-own:
-                if b in pr or pr in b:
-                    err.append(f"{s['shot_id']} props『{pr}』是另一套 outfit 的招牌包/外套『{b}』"
-                               f"——畫面會同時出現兩個包（C-23）")
+                if b in x['name'] or x['name'] in b:
+                    err.append(f"{sid} props『{x['name']}』是另一套 outfit 的招牌包/外套『{b}』（C-23）")
+            # C-29：宣告可見就必須真的落在 framing 內
+            if x.get('expected_visible') and x['zone']!='background' \
+               and x['zone'] not in FRAME_ZONES[s['framing']]:
+                err.append(f"{sid} props『{x['name']}』zone={x['zone']}，"
+                           f"但 framing={s['framing']} 只看得到 {sorted(FRAME_ZONES[s['framing']])}"
+                           f"——宣告可見卻在裁切外，這個微物件對出圖毫無作用（C-29）")
         h=s.get('hands')
-        if not isinstance(h,dict) or not h.get('left') or not h.get('right'):
-            err.append(f"{s['shot_id']} 缺 hands.left / hands.right——手部佔用必須明寫（C-23）"); continue
-        slots=f"{h['left']}｜{h['right']}"
-        if s['view'] in ('selfie_front','selfie_mirror') and '手機' not in slots:
-            err.append(f"{s['shot_id']} 是 {s['view']}，但兩隻手都沒有拿手機"
-                       f"——自拍的拍攝裝置必須占掉一隻手（C-23）")
-        if s['view'] not in ('selfie_front','selfie_mirror') and '拍攝裝置' in slots:
-            err.append(f"{s['shot_id']} 不是自拍，手上卻標了拍攝裝置")
-        for pr in s['props']:
-            if HANDW.search(pr):
-                core=HANDW.sub('',pr).strip('的 ')
-                if core and core not in slots:
-                    err.append(f"{s['shot_id']} props『{pr}』寫成拿在手上，"
-                               f"但 hands 兩個槽位都沒有它——不是被漏掉，就是第三隻手（C-23）")
+        if not isinstance(h,dict) or set(h)!={'left','right'}:
+            err.append(f"{sid} hands 必須是 left/right 兩個槽位（C-27）"); continue
+        refs=[]
+        for side in ('left','right'):
+            sl=h[side]
+            if not isinstance(sl,dict) or sl.get('state') not in ST:
+                err.append(f"{sid} hands.{side}.state 必須是 {sorted(ST)}（C-27）"); continue
+            ref=sl.get('object_ref')
+            if sl['state']=='holding':
+                if ref not in pid:
+                    err.append(f"{sid} hands.{side} state=holding，object_ref『{ref}』不是本列的 prop id"
+                               f"——不得用同義詞另寫（C-27）"); continue
+                want={'held_'+side,'held_both'}
+                if pid[ref]['relation'] not in want:
+                    err.append(f"{sid} hands.{side} 拿著『{pid[ref]['name']}』，"
+                               f"但該 prop 的 relation={pid[ref]['relation']}，應為 {sorted(want)}（C-27）")
+                refs.append(ref)
+            else:
+                if ref is not None:
+                    err.append(f"{sid} hands.{side}.state={sl['state']} 不應有 object_ref（C-27）")
+                if sl['state']=='camera' and s['view'] not in ('selfie_front','selfie_mirror'):
+                    err.append(f"{sid} 不是自拍，手上卻標了 camera")
+        # 一手一物：同一 prop 被兩手引用，只有 held_both 允許
+        for r in set(refs):
+            if refs.count(r)>1 and pid[r]['relation']!='held_both':
+                err.append(f"{sid} prop『{pid[r]['name']}』被兩隻手同時引用，但 relation 不是 held_both（C-27）")
+        cam=sum(1 for side in ('left','right') if h[side].get('state')=='camera')
+        if s['view'] in ('selfie_front','selfie_mirror') and cam!=1:
+            err.append(f"{sid} 是 {s['view']}，camera hand 有 {cam} 隻——自拍必須且只能占掉一隻手（C-27）")
+        # 反向：宣告拿在手上的 prop，必須真的被某一手引用
+        for x in props:
+            if x['relation'].startswith('held_') and x['id'] not in refs:
+                err.append(f"{sid} props『{x['name']}』relation={x['relation']}，"
+                           f"但沒有任何一隻手引用它——不是漏掉，就是第三隻手（C-27）")
+        # 拍攝裝置不得同時是入鏡 prop
+        if cam and any('手機' in x['name'] for x in props):
+            err.append(f"{sid} 手機是拍攝裝置，不得同時列為入鏡 prop（畫面會出現第二支手機）")
 
     # --- 地點層級由 registry 決定 ---
     tiers=[]

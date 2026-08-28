@@ -8,7 +8,7 @@
 **回覆方式**：把你的意見**直接寫在本檔案最下方 §9 回覆區**（在 `REPLIES BELOW` 那行以下）。
 那一段不會被自動產生覆蓋。Claude 會讀你寫的內容並修正。
 
-- 目前 commit：`524d863`
+- 目前 commit：`795823b`
 - 檔案角色：本檔 §0–§8 由 `tools/gen_review_file.py` 從 `pilot/nico_pilot.json` 自動產生，所有數字都是程式算的，不是人工抄的
 
 ---
@@ -136,7 +136,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 
 ---
 
-## §4 前六輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）
+## §4 前七輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）
 
 | 輪次 | 發現的主要問題 |
 |------|---------------|
@@ -146,6 +146,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | R4 | `schema_v2.json` 根本沒被執行（對抗測試：注入非法 enum 仍 PASS）；anchor 的 scene 寫「坐著」但欄位是 `standing`；label override 可用一個理由同時放行兩欄 |
 | R5 | 兩個 P0：(a) 語意覆核 0/20，validator 卻印「✓ 全數通過」且 exit=0——這個 gate 形同虛設；(b) Phase C 三個物理矛盾（鐵門遮住的正是那面落地窗／修眉＋撐洗手台＋持機＝三隻手／衣櫃把「赤腳」寫進定義卻用在公園）。另外 Phase D 宣稱單一變量但實際同時改 3 個欄位，且 st08b 宣稱測下打光——那個變量根本沒有編碼進任何欄位 |
 | R6 | 我自己挖的坑：§8 要求逐列覆核 9 個欄位（含 props），但本檔從來沒有揭露過任何一列的 props——審閱者不可能完成。補上 props 表之後，當場看到 8 列 props 重述 outfit 已有的包、`c10` 第三隻手、`c07` 把客人的手放進訓練集。另外 `c12` 刪掉車頭燈時沒同步改曝光敘述（改一欄忘另一欄，第三次）；`st06` 拿訓練集出現 4 次的 park 去測固定背景烙印 |
+| R7 | 20 列語意覆核只有 11 列無異議，9 列 P0。最大的一類：**微物件寫在 framing 裁切外**——`a01` 是臉部特寫卻把道具放在桌上，`c02` 蹲著拆箱卻用 chest_up，`c12` 的「月台地上黃線」還是我 R6 自己加的。另外 `c04` 的 scene 寫「剛醒」但 hair_06 定義是「剛洗完澡滴水濕髮」；`c05` 的髮夾同時由 outfit 與 hair 定義——**C-01 那個雙重真理來源的病，換一對欄位重演** |
 
 **共同模式**：Claude 反覆犯的是同一類錯——**改了一個欄位，沒有同步改另一個**，
 以及**把規則形式化之後，對規則本身過度擬合**（為了湊 quota 把普通場景標成 A 級）。
@@ -183,7 +184,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | `01` | ★極簡職人 | high mock neck | 炭灰色合身羅紋針織長袖，高領貼頸 | 黑色高腰直筒西裝褲 | 黑色皮革樂福鞋 | 米色帆布托特 | 銀色細戒指＋銀色小圈耳環 | ✅ |
 | `02` | 極休閒 | straight neckline spaghetti strap | 米白色棉質細肩帶背心，一字平口 | 灰色棉質及膝短褲 | 米白色帆布休閒鞋 | 薄針織開襟外套 | 銀色細項鍊 | ✅ |
 | `03` | 日常有型 | crew neck | 奶油色短版針織上衣，圓領 | 高腰淺色直筒牛仔褲 | 白色球鞋 | 深棕小方包 | 銀色圈形耳環 | ✅ |
-| `04` | 學院感 | collared button-down, top two buttons open | 白色寬版襯衫 | 黑色百褶短裙＋灰色及膝襪 | 黑色瑪莉珍鞋 | 深藍色肩背書包 | 銀色髮夾 | ❌ |
+| `04` | 學院感 | collared button-down, top two buttons open | 白色寬版襯衫 | 黑色百褶短裙＋灰色及膝襪 | 黑色瑪莉珍鞋 | 深藍色肩背書包 | 銀色細鍊手鍊 | ❌ |
 | `05` | 街頭 | crew neck, cropped hem | 黑色短版帽T | 灰色工裝寬褲 | 厚底球鞋 | 黑色斜背小包 | 銀色耳骨夾 | ❌ |
 | `06` | 上班正式 | square neckline camisole under blazer | 燕麥色西裝外套＋白色絲質方領背心 | 同色系直筒寬褲 | 尖頭平底鞋 | 結構皮革包 | 銀色細手鐲 | ❌ |
 | `07` | 派對夜間 | straight neckline, open back | 黑色細肩帶絲質長洋裝（露背） | （連身） | 銀色細跟涼鞋 | 金屬扣手拿包 | 銀色手環 | ✅ |
@@ -227,19 +228,19 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | # | id | 目的 | 場景 | 地點 | 層級 | outfit | hair | framing | yaw | pitch | 表情 | 姿態 | 視線 | 視角 | 臉部 | 光線家族 | bounce | 濾鏡 | 招牌 | 職業 |
 |---|----|------|------|------|------|--------|------|---------|-----|-------|------|------|------|------|------|---------|--------|------|------|------|
 | 01 | `a01` | identity_core | 咖啡廳靠窗的位子坐著，正對鏡頭，沒有在做任何事 | `local_cafe` | B | `01` | `01` | face_closeup | front | neutral | neutral_relaxed | seated | camera | third_person | unobstructed | L2_single_window_daylight | diffuse | none | — | — |
-| 02 | `a02` | identity_core | 同一個位子，身體轉向左邊，臉轉回鏡頭 | `local_cafe` | B | `01` | `01` | chest_up | left_30 | neutral | soft_smile | seated | camera | third_person | unobstructed | L2_single_window_daylight | diffuse | none | — | — |
-| 03 | `a03` | identity_core | 白天的人行道上站著，身體轉向右邊，臉轉回鏡頭 | `city_street` | B | `01` | `02` | chest_up | right_30 | neutral | neutral_relaxed | standing | camera | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
-| 04 | `a04` | identity_core | 同一段人行道，身體較大幅度轉向左側 | `city_street` | B | `03` | `01` | chest_up | left_60 | neutral | listening_attentive | standing | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
-| 05 | `a05` | identity_core | 公園長椅上坐著，身體較大幅度轉向右側 | `park` | B | `03` | `02` | chest_up | right_60 | neutral | mid_conversation | seated | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
+| 02 | `a02` | identity_core | 同一個位子，身體轉向左邊，臉轉回鏡頭，手上端著咖啡杯 | `local_cafe` | B | `01` | `01` | chest_up | left_30 | neutral | soft_smile | seated | camera | third_person | unobstructed | L2_single_window_daylight | diffuse | none | — | — |
+| 03 | `a03` | identity_core | 白天的人行道上站著，身體轉向右邊，臉轉回鏡頭，手上端著外帶杯 | `city_street` | B | `01` | `02` | chest_up | right_30 | neutral | neutral_relaxed | standing | camera | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
+| 04 | `a04` | identity_core | 同一段人行道，身體較大幅度轉向左側，手上端著外帶杯 | `city_street` | B | `03` | `01` | chest_up | left_60 | neutral | listening_attentive | standing | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
+| 05 | `a05` | identity_core | 公園長椅上坐著，身體較大幅度轉向右側，手上拿著保溫瓶 | `park` | B | `03` | `02` | chest_up | right_60 | neutral | mid_conversation | seated | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 | 06 | `a06` | body_pose_coverage | 公園步道上站著，正對鏡頭，雙手自然垂下 | `park` | B | `03` | `01` | full_body | front | neutral | neutral_relaxed | standing | camera | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 | 07 | `a07` | body_pose_coverage | 同一條步道，身體轉向右側四分之三，臉轉回鏡頭 | `park` | B | `01` | `04` | full_body | right_30 | neutral | soft_smile | standing | camera | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
-| 08 | `c01` | identity_core | 收工後鐵門拉下，坐在工作椅上轉過來看側窗外，手還搭在椅背 | `workplace_own_studio` | B | `08` | `01` | face_closeup | front | neutral | neutral_composed | seated | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
-| 09 | `c02` | identity_core | 蹲在地上拆剛到的材料紙箱，抬頭看向門口 | `workplace_own_studio` | B | `06` | `04` | chest_up | left_30 | up_10 | mildly_surprised | crouching | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
+| 08 | `c01` | identity_core | 收工後鐵門拉下，坐在工作椅上轉過來看側窗外 | `workplace_own_studio` | B | `08` | `01` | face_closeup | front | neutral | neutral_composed | seated | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
+| 09 | `c02` | identity_core | 蹲在地上拆剛到的材料紙箱，抬頭看向門口 | `workplace_own_studio` | B | `06` | `04` | knee_up | left_30 | up_10 | mildly_surprised | crouching | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
 | 10 | `c03` | identity_core | 早餐店的板凳上等餐，手肘擱在桌沿 | `breakfast_shop` | C | `03` | `04` | waist_up | right_30 | down_15 | tired_soft | seated | down | third_person | unobstructed | L2_single_window_daylight | specular | none | — | — |
-| 11 | `c04` | identity_core | 剛醒坐在床邊還沒站起來，舉起手機直視鏡頭 | `own_bedroom` | B | `08` | `06` | waist_up | front | down_15 | just_woken_blank | seated | camera | selfie_front | partial_hair | L2_single_window_daylight | diffuse | none | — | — |
-| 12 | `c05` | body_pose_coverage | 玄關穿鞋，一手扶著牆 | `own_entryway` | B | `04` | `05` | knee_up | left_60 | down_15 | focused | leaning | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | — | — |
+| 11 | `c04` | identity_core | 剛洗完澡坐在床邊，舉起手機直視鏡頭 | `own_bedroom` | B | `08` | `06` | waist_up | front | down_15 | just_woken_blank | seated | camera | selfie_front | partial_hair | L2_single_window_daylight | diffuse | none | — | — |
+| 12 | `c05` | body_pose_coverage | 玄關靠著牆，低頭把鑰匙收進口袋 | `own_entryway` | B | `04` | `05` | knee_up | left_60 | down_15 | focused | leaning | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | — | — |
 | 13 | `c06` | body_pose_coverage | 大安區巷子裡走路，剛越過一台停在牆邊的機車 | `city_street` | B | `03` | `05` | full_body | right_60 | neutral | neutral_walking | walking_frozen | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
-| 14 | `c07` | identity_core | 低頭替客人上膠，側臉朝向鏡頭 | `workplace_own_studio` | B | `01` | `03` | chest_up | profile_left | down_15 | focused | seated | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | nail_studio | 是 |
+| 14 | `c07` | identity_core | 低頭在展示棒上試新的色膠，側臉朝向鏡頭 | `workplace_own_studio` | B | `01` | `03` | chest_up | profile_left | down_15 | focused | seated | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | nail_studio | 是 |
 | 15 | `c08` | body_pose_coverage | 浴室鏡前修眉，另一手舉著手機對著鏡子拍 | `own_bathroom` | B | `08` | `02` | waist_up | left_30 | up_10 | concentrating_slight_frown | standing | mirror | selfie_mirror | partial_hand | L8_bathroom_fluorescent | diffuse | none | — | — |
 | 16 | `c09` | body_pose_coverage | 便利商店的雜誌架前蹲下來看最下層，回頭 | `convenience_store` | C | `05` | `02` | knee_up | left_30 | up_10 | mildly_annoyed | crouching | camera | third_person | unobstructed | L1_single_ugly_overhead | diffuse | none | — | — |
 | 17 | `c10` | environment_stress | 自助洗衣店裡把烘好的衣物從滾筒抱出來，站在機台前 | `laundromat` | C | `09` | `04` | full_body | right_30 | neutral | neutral_composed | standing | away | third_person | unobstructed | L1_single_ugly_overhead | specular | none | — | — |
@@ -293,7 +294,12 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 
 #### 5-5b 每列的 props（微物件）
 
-> C-23：上一輪 §8 要求逐列判斷 props，本檔卻沒有揭露任何一列的 props——這是本檔的生成漏洞。
+> C-27/C-29：props 與 hands 已改為結構化。每個 prop 有 `id`／`relation`／`zone`／`expected_visible`；
+> 每隻手有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（**只能引用 prop id，不得另寫同義詞**）。
+> `zone` 是該物件靠近哪個身體地標，**依該 shot 的實際姿態判定，不是套站姿公式**——
+> 蹲著拆箱時地上的紙箱就在膝線，不在腳下。validator 用 framing→zone 對照表反查可見性。
+> 左右一律指**角色的解剖學左右、鏡像翻轉前**（`selfie_mirror` 出圖會左右翻，欄位不翻）。
+> C-23（上一輪）：本檔原本沒有揭露任何一列的 props——這是本檔的生成漏洞。
 > 補上之後當場看到 8 列的 props 重述了 outfit 已提供的包/外套或借用別套的招牌包、
 > `c10` 抱著衣物還多一隻手拿零錢、`c07` 把「客人的手」放進訓練集。全部已修。
 > 並新增 **`hands` 欄位（left / right 兩個槽位）**：人只有兩隻手，
@@ -301,33 +307,33 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 > 判斷 props 時請一併檢查：道具是否與 framing 同時可見、拍攝裝置有沒有又被當入鏡道具、
 > 雙手有沒有被 scene＋props＋持機重複占用、outfit 自帶的包／飾品有沒有在 props 重複生成。
 
-| id | view（誰在拍）| 左手 | 右手 | props | outfit 自帶的包/外套・首飾 |
-|----|--------------|------|------|-------|--------------------------|
-| `nico_a01` | third_person | 放在桌面上，沒有拿東西 | 放在桌面上，沒有拿東西 | 桌上的咖啡杯、攤開的雜誌 | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
-| `nico_a02` | third_person | 放在桌面上，沒有拿東西 | 放在桌面上，沒有拿東西 | 桌上的咖啡杯、手邊的手機 | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
-| `nico_a03` | third_person | 自然垂在身側 | 拿著外帶杯 | 手上的外帶杯、路邊停放的機車後照鏡 | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
-| `nico_a04` | third_person | 自然垂在身側 | 拿著外帶杯 | 手上的外帶杯、騎樓柱子上的租屋紅單 | 深棕小方包・銀色圈形耳環 |
-| `nico_a05` | third_person | 撐在長椅椅面上 | 放在膝上，旁邊是保溫瓶 | 手邊的保溫瓶、長椅扶手上的落葉 | 深棕小方包・銀色圈形耳環 |
-| `nico_a06` | third_person | 自然垂在身側 | 拿著保溫瓶 | 手上的保溫瓶、步道旁的黃色分隔柱 | 深棕小方包・銀色圈形耳環 |
-| `nico_a07` | third_person | 自然垂在身側 | 拿著保溫瓶 | 手上的保溫瓶、步道邊的鐵製垃圾桶 | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
-| `nico_c01` | third_person | 搭在椅背上 | 放在大腿上 | 椅背上的抹布、桌角一杯喝到一半的黑咖啡 | 無・無 |
-| `nico_c02` | third_person | 扶著紙箱邊緣 | 拿著美工刀 | 美工刀、地上拆開一半的紙箱 | 結構皮革包・銀色細手鐲 |
-| `nico_c03` | third_person | 手肘擱在桌沿，手掌鬆開 | 放在膝上 | 塑膠杯裝的豆漿、桌上的號碼牌 | 深棕小方包・銀色圈形耳環 |
-| `nico_c04` | selfie_front | 舉著手機（拍攝裝置） | 撐在床沿 | 床邊地上的室內拖鞋、沒疊好的薄被 | 無・無 |
-| `nico_c05` | third_person | 扶著牆 | 伸向腳邊的鞋 | 門邊的鑰匙圈、地上待收的紙箱 | 深藍色肩背書包・銀色髮夾 |
-| `nico_c06` | third_person | 自然擺動 | 拿著手搖杯 | 手上的手搖杯、巷口的電表箱 | 深棕小方包・銀色圈形耳環 |
-| `nico_c07` | third_person | 扶著練習指模 | 拿著色膠瓶 | 色膠瓶、桌上固定的練習指模 | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
-| `nico_c08` | selfie_mirror | 舉著手機對鏡子（拍攝裝置） | 拿著修眉刀靠近眉尾 | 修眉刀、台面上倒著的洗面乳 | 無・無 |
-| `nico_c09` | third_person | 扶著雜誌架下層 | 拿著飯糰 | 購物籃、手上的飯糰 | 黑色斜背小包・銀色耳骨夾 |
-| `nico_c10` | third_person | 與另一手一起抱著烘好的衣物 | 與另一手一起抱著烘好的衣物 | 洗衣袋、機台上的零錢盤 | 防水肩背包・無 |
-| `nico_c11` | third_person | 拿著一罐護手霜，手肘掛著購物籃 | 拿著另一罐護手霜 | 兩罐護手霜、掛在手肘的購物籃 | 黑色斜背小包・銀色耳骨夾 |
-| `nico_c12` | third_person | 自然垂在身側 | 拿著悠遊卡 | 手上的悠遊卡、月台地上的候車排隊黃線 | 結構皮革包・銀色細手鐲 |
-| `nico_a08` | third_person | 自然垂在身側 | 拿著保溫瓶 | 手上的保溫瓶、步道旁的木製長椅 | 薄針織開襟外套・銀色細項鍊 |
+| id | framing（看得到的 zone）| view | 左手 | 右手 | props（relation・zone）| outfit 自帶的包/外套・首飾 |
+|----|----------------------|------|------|------|----------------------|--------------------------|
+| `nico_a01` | face_closeup（head）| third_person | `free`（放在桌面上，在裁切外） | `free`（放在桌面上，在裁切外） | `window_mist` 窗玻璃上凝結的水氣（background・background）；`bar_dripper` 身後吧台上的手沖濾杯架（background・background） | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
+| `nico_a02` | chest_up（head,chest）| third_person | `free`（放在桌面上） | `holding`→`cup_a02`（端在胸前） | `cup_a02` 白瓷咖啡杯（held_right・chest）；`menu_board` 身後牆上的木質菜單板（background・background） | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
+| `nico_a03` | chest_up（head,chest）| third_person | `free`（自然垂在身側） | `holding`→`togo_a03`（端在胸前） | `togo_a03` 外帶咖啡杯（held_right・chest）；`scooter_mirror` 身後路邊停放的機車後照鏡（background・background） | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
+| `nico_a04` | chest_up（head,chest）| third_person | `free`（自然垂在身側） | `holding`→`togo_a04`（端在胸前） | `togo_a04` 外帶咖啡杯（held_right・chest）；`rent_flyer` 騎樓柱子上的租屋紅單（background・background） | 深棕小方包・銀色圈形耳環 |
+| `nico_a05` | chest_up（head,chest）| third_person | `supporting`（撐在長椅椅面上） | `holding`→`bottle_a05`（拿在胸前） | `bottle_a05` 保溫瓶（held_right・chest）；`park_lamp` 身後的公園路燈桿（background・background） | 深棕小方包・銀色圈形耳環 |
+| `nico_a06` | full_body（全部含 floor）| third_person | `free`（自然垂在身側） | `free`（自然垂在身側） | `bottle_a06` 腳邊步道上放著的保溫瓶（surface・floor）；`yellow_post` 步道旁的黃色分隔柱（background・background） | 深棕小方包・銀色圈形耳環 |
+| `nico_a07` | full_body（全部含 floor）| third_person | `free`（自然垂在身側） | `holding`→`bottle_a07`（垂在身側提著） | `bottle_a07` 保溫瓶（held_right・hip）；`trash_bin` 步道邊的鐵製垃圾桶（background・background） | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
+| `nico_c01` | face_closeup（head）| third_person | `free`（搭在椅背上，在裁切外） | `free`（放在大腿上，在裁切外） | `window_plant` 窗台上的一盆小綠植（background・background）；`hours_sign` 牆上掛的營業時間牌（background・background） | 無・無 |
+| `nico_c02` | knee_up（head,chest,waist,hip,knee）| third_person | `supporting`（扶著紙箱邊緣） | `holding`→`box_cutter`（拿著美工刀） | `box_cutter` 美工刀（held_right・knee）；`open_box` 地上拆開一半的紙箱（surface・knee） | 結構皮革包・銀色細手鐲 |
+| `nico_c03` | waist_up（head,chest,waist）| third_person | `free`（手肘擱在桌沿，手掌鬆開） | `free`（放在膝上） | `soy_milk` 塑膠杯裝的豆漿（surface・waist）；`number_tag` 桌上的號碼牌（surface・waist） | 深棕小方包・銀色圈形耳環 |
+| `nico_c04` | waist_up（head,chest,waist）| selfie_front | `camera`（舉著手機（拍攝裝置）） | `free`（撐在床沿） | `quilt` 身旁沒疊好的薄被（surface・waist）；`water_glass` 床頭櫃上的玻璃水杯（surface・waist） | 無・無 |
+| `nico_c05` | knee_up（head,chest,waist,hip,knee）| third_person | `supporting`（撐在牆上） | `holding`→`keys`（拿著鑰匙） | `keys` 鑰匙（held_right・waist）；`succulent` 鞋櫃上的一盆多肉（surface・waist） | 深藍色肩背書包・銀色細鍊手鍊 |
+| `nico_c06` | full_body（全部含 floor）| third_person | `free`（自然擺動） | `holding`→`drink_c06`（提在身側） | `drink_c06` 手搖杯（held_right・hip）；`meter_box` 巷口的電表箱（background・background） | 深棕小方包・銀色圈形耳環 |
+| `nico_c07` | chest_up（head,chest）| third_person | `holding`→`tip_stick`（固定著甲片展示棒） | `holding`→`gel_brush`（拿著上膠筆） | `tip_stick` 甲片展示棒（held_left・chest）；`color_board` 身後牆上的美甲色卡板（background・background）；`gel_brush` 上膠筆（held_right・chest） | 米色帆布托特・銀色細戒指＋銀色小圈耳環 |
+| `nico_c08` | waist_up（head,chest,waist）| selfie_mirror | `camera`（舉著手機對鏡子（拍攝裝置）） | `holding`→`brow_razor`（拿著修眉刀靠近眉尾） | `brow_razor` 修眉刀（held_right・head）；`cleanser` 台面上倒著的洗面乳（surface・waist） | 無・無 |
+| `nico_c09` | knee_up（head,chest,waist,hip,knee）| third_person | `supporting`（扶著雜誌架下層） | `holding`→`onigiri`（拿著飯糰） | `basket_c09` 放在腳邊的購物籃（surface・knee）；`onigiri` 飯糰（held_right・chest） | 黑色斜背小包・銀色耳骨夾 |
+| `nico_c10` | full_body（全部含 floor）| third_person | `holding`→`laundry`（與另一手一起抱著） | `holding`→`laundry`（與另一手一起抱著） | `laundry` 抱在懷裡烘好的衣物（held_both・chest）；`coin_tray` 機台上的零錢盤（surface・waist） | 防水肩背包・無 |
+| `nico_c11` | knee_up（head,chest,waist,hip,knee）| third_person | `holding`→`hand_creams`（拿著一罐） | `holding`→`hand_creams`（拿著另一罐） | `hand_creams` 兩罐護手霜（held_both・chest）；`basket_c11` 掛在手肘的購物籃（worn・waist） | 黑色斜背小包・銀色耳骨夾 |
+| `nico_c12` | waist_up（head,chest,waist）| third_person | `free`（自然垂在身側） | `holding`→`easycard`（拿著悠遊卡） | `easycard` 悠遊卡（held_right・waist）；`arrival_board` 月台上的到站顯示器（background・background） | 結構皮革包・銀色細手鐲 |
+| `nico_a08` | chest_up（head,chest）| third_person | `free`（自然垂在身側） | `free`（自然垂在身側） | `wood_bench` 身後步道旁的木製長椅（background・background）；`falling_leaf` 肩線後方一片正在飄落的葉子（background・background） | 薄針織開襟外套・銀色細項鍊 |
 
 ### 5-6 現行分布（程式計算）
 
 - **光線家族**：`L6_soft_overcast`×7（35%）、`L2_single_window_daylight`×6（30%）、`L3_mixed_warm_cool_practical`×3（15%）、`L1_single_ugly_overhead`×3（15%）、`L8_bathroom_fluorescent`×1（5%）
-- **景別**：`chest_up`×7、`full_body`×4、`waist_up`×4、`knee_up`×3、`face_closeup`×2
+- **景別**：`chest_up`×6、`full_body`×4、`knee_up`×4、`waist_up`×4、`face_closeup`×2
 - **頭部角度**：`front`×5、`right_30`×5、`left_30`×4、`left_60`×2、`right_60`×2、`profile_left`×1、`profile_right`×1
 - **身體姿態**：`standing`×9、`seated`×7、`crouching`×2、`leaning`×1、`walking_frozen`×1
 - **視角**：`third_person`×18、`selfie_front`×1、`selfie_mirror`×1
@@ -421,7 +427,7 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 **目前輸出**：
 
 ```
-驗證 nico-tsai（schema v2.3.0）
+驗證 nico-tsai（schema v2.4.0）
   ✗  語意覆核未完成：0/20 列，尚未覆核 ['nico_a01', 'nico_a02', 'nico_a03', 'nico_a04', 'nico_a05']…（C-19：這是生成前的 gate，未達 20/20 一律 HARD FAIL。機器 lint 抓不到物理與語意矛盾——R5 就是在機器全過的狀態下被抓到 4 個。見 pilot/semantic_review.md）
 ```
 
@@ -432,11 +438,10 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 | ID | 議題 | 提出者 | 狀態 | 備註 |
 |----|------|--------|------|------|
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | ChatGPT 同意延後，但列為 persona #2 的前置 gate |
-| C-20 | Phase C 四個物理／結構矛盾 | ChatGPT | 🔵 Claude已修正 | c01 鐵門遮住的正是落地窗→改側面高窗；c08 修眉＋撐洗手台＋持機＝三隻手→移除撐洗手台且 pose 改 standing；a08/outfit_02 見 K-04。**c04 不同意**：前鏡頭與螢幕同一平面，低頭看螢幕就是看鏡頭，selfie_front + eye_gaze=camera + down_15 三者一致；真正的問題是 props 把手機列為入鏡道具，已移除；R6 裁決：c04 接受 ChatGPT——送進模型的是文字，`looking at phone screen` 與 `looking into the camera` 是兩個指令。保留 eye_gaze=camera，scene 改為「舉起手機直視鏡頭」 |
-| C-23 | 覆核檔沒揭露 props，九欄語意 gate 無法完成 | ChatGPT | 🔵 Claude已修正 | 屬實，是我自己挖的坑：§8 要求逐列判斷 props，生成器卻從未輸出。補上 §5-5b props 表後**當場又看到三類新錯**：8 列 props 重述 outfit 已提供的包或借用別套招牌包（a03–a08、c06、c12）、c10 抱衣物還多一隻手拿零錢、c07 把「客人的手」放進訓練集。新增 `hands`（left/right 兩槽位）欄位＋4 條 validator 規則 |
-| C-24 | c12 刪掉車頭燈後 exposure_choice 仍寫「車頭燈那側過曝」 | ChatGPT | 🔵 Claude已修正 | 屬實。改一欄沒同步另一欄，第三次犯同一類錯，且就發生在要送進訓練集的 prompt 上。已改為廣告燈箱側肩線略過曝 |
-| C-25 | st06 拿訓練集出現 4 次的 park 測 no_scene_burn_in | ChatGPT | 🔵 Claude已修正 | 屬實，檢出力等於零。改為 bus_stop（訓練集未出現、C 級、戶外，L6 理由不變）。新增 validator 規則：測 no_scene_burn_in 的 shot 必須用訓練集沒出現過的 location |
-| C-26 | outfit_04 的「包/外套」欄填的是及膝襪 | ChatGPT | 🔵 Claude已修正 | 屬實，五層等於少一層。及膝襪併入下身，補深藍色肩背書包。連帶發現 c05 的 props 借用了 outfit_03 的小方包 |
+| C-27 | hands 只有兩個自由文字槽，仍可被同義詞繞過 | ChatGPT | 🔵 Claude已修正 | 四個漏洞全部屬實。props 改結構化：`id`／`relation`（held_left｜held_right｜held_both｜surface｜worn｜background）／`zone`／`expected_visible`；hands 每槽有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（只能引用 prop id）。新增 spec 層 `laterality=subject_anatomical`（鏡像翻轉前）。8 條 validator 規則 |
+| C-28 | c04 髮型與時間狀態衝突；c05 髮夾雙重真理來源 | ChatGPT | 🔵 Claude已修正 | 兩條屬實。hair_06（剛洗完澡滴水濕髮）只有 c04 在用，動髮型會破壞髮型全覆蓋，因此改 scene 對齊為「剛洗完澡坐在床邊」。outfit_04 首飾「銀色髮夾」與 hair_05 的髮夾是同一物件兩個來源——這正是 C-01 那個病換一對欄位重演，首飾改為手鍊 |
+| C-29 | 8 列的 props／hands 落在 framing 裁切外 | ChatGPT | 🔵 Claude已修正 | 全部屬實，其中 c12 的「月台地上黃線」還是我上一輪自己加的。微物件在裁切外等於對出圖毫無作用。8 列 props 全部換成該景別看得到的物件；c02 改 knee_up（蹲著拆箱本來就讀不到 chest_up）、c05 改為腰線以上的玄關動作。新增 framing→zone 對照表由 validator 反查 |
+| C-30 | c07 練習指模仍是人形手指，且「拿色膠瓶」做不出上膠動作 | ChatGPT | 🔵 Claude已修正 | 兩點屬實。改為左手固定不具人體外形的甲片展示棒、右手拿上膠筆、色卡板移到背景 |
 
 狀態圖例：🔵 Claude已修正（待你確認）　🟡 待處理　⚪ 待回應　🔴 有爭議
 
@@ -444,24 +449,22 @@ C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，�
 
 ## §8 本輪請你判斷
 
-### 8-1 上一輪的兩個爭議點，已結案
+### 8-1 上一輪的結果
 
-- **c04**：接受你的裁決。前鏡頭在螢幕上緣，`looking at phone screen` 與
-  `looking directly into the camera` 對模型是兩個不同指令——我原本用物理去辯，
-  但送進模型的是文字。這是 identity_core 錨點，視線精度優先，
-  因此保留 `eye_gaze=camera`，scene 改寫為「舉起手機直視鏡頭」。
-- **c03**：你同意不改，已結案。
+你 R7 提的 C-27–C-30 逐條實測全部屬實，已全部修完。最重要的一條是 C-27：
+我原本以為 `hands` 兩個文字槽就夠了，你指出四個漏洞（同義詞繞過、一槽塞多動作、
+沒有可見性關係、鏡像左右不明）——**全部成立**。props 與 hands 已改成結構化，
+而且這個改動順帶讓 C-29 變成機器可稽核的：`zone` × `framing` 對照表一跑，
+裁切外的微物件會直接 FAIL，不必再靠人眼一列一列看。
 
 ### 8-2 這一輪請你判斷
 
-1. **§7 所有 🔵 的項目**可否結案？其中 C-23 我照你的要求補了 props 表，
-   補上之後立刻看到三類你也還沒看過的錯：8 列 props 重述 outfit 已提供的包或借用別套的招牌包、
-   `c10` 抱著衣物還多一隻手拿零錢、`c07` 把「客人的手」放進訓練集（訓練圖裡不該有第二個人的身體部位）。
-   全部已修，並新增 `hands` 欄位讓它變成機器可稽核的。**請確認這個欄位設計有沒有漏洞。**
-2. **真正的九欄 20/20 語意覆核**（現在 props 與 hands 都在 §5-5b）：
-   請逐列判斷 `scene`／`outfit`／`hair`／`framing`／`view`／`eye_gaze`／`body_pose`／`props`／`hands`／`light`
-   在物理上是否同時成立。**列出有問題的 shot_id 與理由；其餘列出「無異議」的 id。**
-   這一關是 HARD FAIL gate，20/20 之前不會放行生成。
+1. **結構化設計本身**（§5-5b）：`relation` / `zone` / `object_ref` / `laterality` 四者
+   夠不夠關掉你列的四個漏洞？特別是 `zone` — 我刻意讓它由作者依**該 shot 的實際姿態**指定
+   而不是套站姿公式（蹲著拆箱時地上的紙箱在膝線，不在腳下）。這個自由度會不會反過來變成新的繞過路徑？
+2. **重跑 20/20 九欄語意覆核**：上一輪你判 11 列無異議、9 列 P0，9 列全部改過了。
+   請重新逐列判斷 `scene`／`outfit`／`hair`／`framing`／`view`／`eye_gaze`／`body_pose`／
+   `props`／`hands`／`light` 在物理上是否同時成立。**列出有問題的 shot_id 與理由；其餘列出「無異議」的 id。**
 3. **新發現**：以 §3 的規則為判準，這一版還有什麼問題？
 4. **放行判定**：可以開始生成，還是仍有 P0 必須先修？
 
@@ -477,90 +480,3 @@ Claude 會實測驗證。R5 與 R6 你提的每一條我都實跑驗證過，數
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
 
-## ChatGPT R7 覆核回覆（2026-08-28）
-
-### 一、§7 所有 🔵 項目
-
-| ID | 判定 | 理由 |
-|---|---|---|
-| C-20 | **同意結案** | c01、c08、a08 均已修；c04 已依裁決改成「舉起手機直視鏡頭」，scene／eye_gaze／view 現在一致。c04 的新髮型衝突另列 C-28。 |
-| C-23 | **同意結案（揭露層）** | 本檔已補齊 20 列 props 與 hands，審閱者現在能做真正逐列覆核。hands 的機器化程度仍有漏洞，另列 C-27。 |
-| C-24 | **同意結案** | c12 exposure_choice 已同步改成「廣告燈箱那側肩線略過曝」，不再引用已刪除的車頭燈。 |
-| C-25 | **同意結案** | st06 已改用訓練集未出現的 bus_stop，且 validator 要求 no_scene_burn_in 測項不得重用訓練地點，檢出力恢復。 |
-| C-26 | **同意結案** | 及膝襪已併回下身，包／外套欄補成深藍肩背書包；原本五層缺一層的問題已修。c05 的髮夾雙重來源另列 C-28。 |
-
-### 二、hands 欄位設計判斷
-
-左右兩槽位比純 scene 推論進步，能抓「兩手已占滿又要求第三個手持物」；但目前仍不是完全機器可稽核，因為每個槽位仍是自由文字。
-
-#### C-27｜P1｜hands 只有兩個自由文字槽，仍可被語意繞過
-
-目前設計至少有四個漏洞：
-
-1. **物件沒有 ID 關聯**：`右手拿著外帶杯` 與 props 的 `手上的外帶杯` 只是文字相似，改成「飲料」／「杯子」就可能繞過比對。
-2. **一個槽可偷偷塞多個互斥動作**：例如「拿 A、扶 B、按 C」仍是一個字串，兩槽存在不代表只有兩項手部占用。
-3. **沒有可見性／位置關係**：系統不知道 prop 是 held、on_surface、background、worn，無法可靠判斷它是否會落在 framing 內。
-4. **自拍／鏡像左右不明**：`selfie_mirror` 中畫面左右會翻轉；left/right 必須定義成「角色的解剖學左右、鏡像前」，否則 checklist 與出圖會各說各話。
-
-建議改成結構化欄位，例如：
-
-- hand：`state = free | holding | supporting | camera`
-- `object_ref`：引用 prop ID，不能另寫同義詞
-- prop：`relation = held_left | held_right | surface | background | worn`
-- `expected_visible = true/false`
-- `laterality = subject_anatomical`
-
-validator 應檢查：held prop 必須恰好被一手引用、camera hand 不得再持物、同一 prop 不得被兩手重複引用、自拍裝置不得同時列為入鏡 prop。這項可在人工語意 gate 修完後並行，但 persona #2 前應完成。
-
-### 三、真正的 20/20 語意覆核
-
-#### 有問題的 shot
-
-- **`nico_a01` — P0**：`face_closeup` 下，雙手都放桌面、props 是桌上咖啡杯與攤開雜誌；桌面、雙手與兩個 props 通常都在臉部特寫裁切範圍外。物理場景能成立，但「framing 與微物件必須同時可見」不成立。
-- **`nico_a02` — P0**：`chest_up`，雙手與咖啡杯／手機都放桌面。除非鏡頭明確向下包含桌緣，否則四者位於胸線以下；目前規格沒有這個相機角度，容易使景別漂成 waist_up。
-- **`nico_a05` — P0**：`chest_up`，右手與保溫瓶在膝上／膝旁，另一 prop 是長椅扶手落葉；主要 hands 與兩個微物件都在胸線以下。
-- **`nico_c01` — P0**：`face_closeup`，左手在椅背、右手在大腿，props 是椅背抹布與桌角咖啡；手和 props 幾乎全部在裁切外，且 scene 的「手搭椅背」不可能在 face_closeup 被讀到。
-- **`nico_c02` — P0**：`chest_up`，她蹲在地上，雙手在紙箱邊緣／美工刀，兩個 props 都在地面工作區；若維持 chest_up 就看不到拆箱行為，若拍到紙箱與雙手就會自然變成 waist_up 或 knee_up。
-- **`nico_c04` — P0**：scene 是「剛醒還沒站起來」，但 `hair_06` 定義為「剛洗完澡的濕髮，髮尾滴水」。剛醒未起身與剛洗完澡不能同時成立。另有一個 props 可見性問題：`waist_up` 看得到床上薄被，但看不到床邊地上的室內拖鞋。
-- **`nico_c05` — P0**：
-  - `knee_up` 卻要求右手伸到腳邊的鞋，主要動作與右手會落在膝下裁切外；
-  - outfit_04 的首飾是「銀色髮夾」，hair_05 本身也定義「右側夾一支銀色細髮夾」，同一髮飾有 outfit／hair 雙重真理來源，可能生成兩支髮夾。
-- **`nico_c07` — P0**：
-  - scene 寫「上膠」，右手卻是「拿著色膠瓶」；實際上膠需要拿瓶蓋刷頭／上膠筆，瓶身應在桌面，現在的 hand action 無法完成 scene；
-  - 「練習指模」雖不是真人手，外觀仍是人類手指／指模。既然移除客人手的理由是避免 Soul 訓練混入第二個人的身體部位，換成仿真手指仍保留相同的視覺風險。建議改成不具人體外形的甲片展示棒／色卡架。
-- **`nico_c12` — P0**：`waist_up` 下，右手悠遊卡可見，但第二個 prop「月台地上的候車排隊黃線」位於腳下，必然在裁切外。改成到站顯示器、月台柱號或腰線以上可見的標示即可。
-
-#### 無異議
-
-`nico_a03`、`nico_a04`、`nico_a06`、`nico_a07`、`nico_a08`、`nico_c03`、`nico_c06`、`nico_c08`、`nico_c09`、`nico_c10`、`nico_c11`。
-
-### 四、新議題彙總
-
-#### C-28｜P0｜c04 髮型與時間狀態衝突；c05 髮夾有雙重真理來源
-
-- c04：剛醒未起身 vs 剛洗完澡的滴水濕髮。
-- c05：outfit_04 與 hair_05 都指定銀色髮夾。
-
-兩者都會直接進入訓練 prompt，需在生成前修正並刷新 semantic hash。
-
-#### C-29｜P0｜多列 props／hands 位於 framing 外
-
-涉及：`nico_a01`、`nico_a02`、`nico_a05`、`nico_c01`、`nico_c02`、`nico_c04`、`nico_c05`、`nico_c12`。
-
-修正原則不是一律放寬 framing；clean identity anchor 應優先保住臉／身體證據。可把微物件換成對應景別內可見的手持物或背景物，並用結構化 `expected_visible` 讓 validator 檢查。c05 的穿鞋動作本身必須改 framing 或改成 knee_up 可看見的玄關動作。
-
-#### C-30｜P0｜c07 的手部模型仍不安全，且 hands 無法完成 scene
-
-把客人的手換成仿真練習指模，仍可能讓模型讀成額外人類手指；同時「拿色膠瓶」不能完成上膠動作。建議改為：
-
-- 左手固定不具人體外形的甲片展示棒／色卡架；
-- 右手拿瓶蓋刷頭或上膠筆；
-- 色膠瓶列為桌面 prop。
-
-### 五、放行判定
-
-**目前不放行生成。**
-
-雖然 props 已完整揭露、HARD FAIL gate 也有效，但本輪 20 張中只有 11 張可判「無異議」，9 張仍有 P0 語意問題。先修 C-28、C-29、C-30，更新後讓舊 semantic hash 失效，再重新做 20/20 覆核。
-
-C-27 是機器稽核設計的 P1；人工 20/20 真正通過後不必單獨阻擋 Nico，但必須在 persona #2 前結構化，否則同義詞、鏡像左右與 framing 可見性仍會反覆漏錯。

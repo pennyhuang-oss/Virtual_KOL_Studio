@@ -1,6 +1,6 @@
 {
   "persona_id": "nico-tsai",
-  "schema_version": "2.3.0",
+  "schema_version": "2.4.0",
   "status": "planned_not_generated",
   "pilot_rationale": "選 Nico 當第一個 Vertical Slice：短鮑伯＋冷灰奶茶漂色＋C 罩杯纖細，是全批最容易失敗的組合，且 Round 1 已失敗過一次，有前後對照價值。",
   "identity_spec": {
@@ -69,9 +69,9 @@
       "bottom": "黑色百褶短裙＋灰色及膝襪",
       "shoes": "黑色瑪莉珍鞋",
       "outer_or_bag": "深藍色肩背書包",
-      "jewelry": "銀色髮夾",
+      "jewelry": "銀色細鍊手鍊",
       "body_readable": false,
-      "_note": "C-26：原本『包/外套』欄填的是灰色及膝襪——襪子是下身配件，不是包或外套，五層規格等於少了一層。及膝襪併入下身，補真正的肩背包。"
+      "_note": "C-26：原本『包/外套』欄填的是灰色及膝襪——襪子是下身配件，不是包或外套，五層規格等於少了一層。及膝襪併入下身，補真正的肩背包。 C-28：首飾原本是「銀色髮夾」，但髮飾屬於 hair 欄的管轄（hair_05 也定義了右側一支銀色細髮夾），同一物件兩個真理來源會生出兩支髮夾。改為手鍊。"
     },
     "nico_outfit_05": {
       "label": "街頭",
@@ -271,8 +271,20 @@
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_01",
       "props": [
-        "桌上的咖啡杯",
-        "攤開的雜誌"
+        {
+          "id": "window_mist",
+          "name": "窗玻璃上凝結的水氣",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        },
+        {
+          "id": "bar_dripper",
+          "name": "身後吧台上的手沖濾杯架",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "face_closeup",
       "view": "third_person",
@@ -310,21 +322,41 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "放在桌面上，沒有拿東西",
-        "right": "放在桌面上，沒有拿東西"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "放在桌面上，在裁切外"
+        },
+        "right": {
+          "state": "free",
+          "object_ref": null,
+          "note": "放在桌面上，在裁切外"
+        }
       }
     },
     {
       "shot_id": "nico_a02",
       "purpose": "identity_core",
       "pillar": "anchor",
-      "scene": "同一個位子，身體轉向左邊，臉轉回鏡頭",
+      "scene": "同一個位子，身體轉向左邊，臉轉回鏡頭，手上端著咖啡杯",
       "location": "local_cafe",
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_01",
       "props": [
-        "桌上的咖啡杯",
-        "手邊的手機"
+        {
+          "id": "cup_a02",
+          "name": "白瓷咖啡杯",
+          "relation": "held_right",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "menu_board",
+          "name": "身後牆上的木質菜單板",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -362,21 +394,41 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "放在桌面上，沒有拿東西",
-        "right": "放在桌面上，沒有拿東西"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "放在桌面上"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "cup_a02",
+          "note": "端在胸前"
+        }
       }
     },
     {
       "shot_id": "nico_a03",
       "purpose": "identity_core",
       "pillar": "anchor",
-      "scene": "白天的人行道上站著，身體轉向右邊，臉轉回鏡頭",
+      "scene": "白天的人行道上站著，身體轉向右邊，臉轉回鏡頭，手上端著外帶杯",
       "location": "city_street",
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_02",
       "props": [
-        "手上的外帶杯",
-        "路邊停放的機車後照鏡"
+        {
+          "id": "togo_a03",
+          "name": "外帶咖啡杯",
+          "relation": "held_right",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "scooter_mirror",
+          "name": "身後路邊停放的機車後照鏡",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -415,21 +467,41 @@
       "career_related": false,
       "_note": "專為 Nico 的右側 identity marker（右鼻翼小痣）而設：右側、高解析、無遮擋、乾淨光線",
       "hands": {
-        "left": "自然垂在身側",
-        "right": "拿著外帶杯"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "togo_a03",
+          "note": "端在胸前"
+        }
       }
     },
     {
       "shot_id": "nico_a04",
       "purpose": "identity_core",
       "pillar": "anchor",
-      "scene": "同一段人行道，身體較大幅度轉向左側",
+      "scene": "同一段人行道，身體較大幅度轉向左側，手上端著外帶杯",
       "location": "city_street",
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_01",
       "props": [
-        "手上的外帶杯",
-        "騎樓柱子上的租屋紅單"
+        {
+          "id": "togo_a04",
+          "name": "外帶咖啡杯",
+          "relation": "held_right",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "rent_flyer",
+          "name": "騎樓柱子上的租屋紅單",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -467,21 +539,41 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "自然垂在身側",
-        "right": "拿著外帶杯"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "togo_a04",
+          "note": "端在胸前"
+        }
       }
     },
     {
       "shot_id": "nico_a05",
       "purpose": "identity_core",
       "pillar": "anchor",
-      "scene": "公園長椅上坐著，身體較大幅度轉向右側",
+      "scene": "公園長椅上坐著，身體較大幅度轉向右側，手上拿著保溫瓶",
       "location": "park",
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_02",
       "props": [
-        "手邊的保溫瓶",
-        "長椅扶手上的落葉"
+        {
+          "id": "bottle_a05",
+          "name": "保溫瓶",
+          "relation": "held_right",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "park_lamp",
+          "name": "身後的公園路燈桿",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -519,8 +611,16 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "撐在長椅椅面上",
-        "right": "放在膝上，旁邊是保溫瓶"
+        "left": {
+          "state": "supporting",
+          "object_ref": null,
+          "note": "撐在長椅椅面上"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "bottle_a05",
+          "note": "拿在胸前"
+        }
       }
     },
     {
@@ -532,8 +632,20 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_01",
       "props": [
-        "手上的保溫瓶",
-        "步道旁的黃色分隔柱"
+        {
+          "id": "bottle_a06",
+          "name": "腳邊步道上放著的保溫瓶",
+          "relation": "surface",
+          "zone": "floor",
+          "expected_visible": true
+        },
+        {
+          "id": "yellow_post",
+          "name": "步道旁的黃色分隔柱",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -572,8 +684,16 @@
       "career_related": false,
       "_note": "第二張 body-readable 全身。ChatGPT 指出原本只有 c06 一張乾淨身材證據。",
       "hands": {
-        "left": "自然垂在身側",
-        "right": "拿著保溫瓶"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        },
+        "right": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        }
       }
     },
     {
@@ -585,8 +705,20 @@
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_04",
       "props": [
-        "手上的保溫瓶",
-        "步道邊的鐵製垃圾桶"
+        {
+          "id": "bottle_a07",
+          "name": "保溫瓶",
+          "relation": "held_right",
+          "zone": "hip",
+          "expected_visible": true
+        },
+        {
+          "id": "trash_bin",
+          "name": "步道邊的鐵製垃圾桶",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -624,21 +756,41 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "自然垂在身側",
-        "right": "拿著保溫瓶"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "bottle_a07",
+          "note": "垂在身側提著"
+        }
       }
     },
     {
       "shot_id": "nico_c01",
       "purpose": "identity_core",
       "pillar": "私下 / 收工後",
-      "scene": "收工後鐵門拉下，坐在工作椅上轉過來看側窗外，手還搭在椅背",
+      "scene": "收工後鐵門拉下，坐在工作椅上轉過來看側窗外",
       "location": "workplace_own_studio",
       "outfit_id": "nico_outfit_08",
       "hair_id": "nico_hair_01",
       "props": [
-        "椅背上的抹布",
-        "桌角一杯喝到一半的黑咖啡"
+        {
+          "id": "window_plant",
+          "name": "窗台上的一盆小綠植",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        },
+        {
+          "id": "hours_sign",
+          "name": "牆上掛的營業時間牌",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "face_closeup",
       "view": "third_person",
@@ -677,8 +829,16 @@
       "signature_family": "nail_studio",
       "career_related": true,
       "hands": {
-        "left": "搭在椅背上",
-        "right": "放在大腿上"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "搭在椅背上，在裁切外"
+        },
+        "right": {
+          "state": "free",
+          "object_ref": null,
+          "note": "放在大腿上，在裁切外"
+        }
       }
     },
     {
@@ -690,10 +850,22 @@
       "outfit_id": "nico_outfit_06",
       "hair_id": "nico_hair_04",
       "props": [
-        "美工刀",
-        "地上拆開一半的紙箱"
+        {
+          "id": "box_cutter",
+          "name": "美工刀",
+          "relation": "held_right",
+          "zone": "knee",
+          "expected_visible": true
+        },
+        {
+          "id": "open_box",
+          "name": "地上拆開一半的紙箱",
+          "relation": "surface",
+          "zone": "knee",
+          "expected_visible": true
+        }
       ],
-      "framing": "chest_up",
+      "framing": "knee_up",
       "view": "third_person",
       "head_yaw": "left_30",
       "head_pitch": "up_10",
@@ -729,9 +901,18 @@
       "signature_family": "nail_studio",
       "career_related": true,
       "hands": {
-        "left": "扶著紙箱邊緣",
-        "right": "拿著美工刀"
-      }
+        "left": {
+          "state": "supporting",
+          "object_ref": null,
+          "note": "扶著紙箱邊緣"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "box_cutter",
+          "note": "拿著美工刀"
+        }
+      },
+      "_r7_note": "C-29：蹲著拆箱的動作與紙箱都在膝線附近，chest_up 讀不到。framing 改 knee_up。"
     },
     {
       "shot_id": "nico_c03",
@@ -742,8 +923,20 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_04",
       "props": [
-        "塑膠杯裝的豆漿",
-        "桌上的號碼牌"
+        {
+          "id": "soy_milk",
+          "name": "塑膠杯裝的豆漿",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        },
+        {
+          "id": "number_tag",
+          "name": "桌上的號碼牌",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        }
       ],
       "framing": "waist_up",
       "view": "third_person",
@@ -781,21 +974,41 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "手肘擱在桌沿，手掌鬆開",
-        "right": "放在膝上"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "手肘擱在桌沿，手掌鬆開"
+        },
+        "right": {
+          "state": "free",
+          "object_ref": null,
+          "note": "放在膝上"
+        }
       }
     },
     {
       "shot_id": "nico_c04",
       "purpose": "identity_core",
       "pillar": "私下 / 剛醒",
-      "scene": "剛醒坐在床邊還沒站起來，舉起手機直視鏡頭",
+      "scene": "剛洗完澡坐在床邊，舉起手機直視鏡頭",
       "location": "own_bedroom",
       "outfit_id": "nico_outfit_08",
       "hair_id": "nico_hair_06",
       "props": [
-        "床邊地上的室內拖鞋",
-        "沒疊好的薄被"
+        {
+          "id": "quilt",
+          "name": "身旁沒疊好的薄被",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        },
+        {
+          "id": "water_glass",
+          "name": "床頭櫃上的玻璃水杯",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        }
       ],
       "framing": "waist_up",
       "view": "selfie_front",
@@ -834,21 +1047,42 @@
       "career_related": false,
       "_r5_note": "C-20（R6 裁決）：ChatGPT 堅持『看螢幕』與『看鏡頭』對生圖是兩個不同指令（`looking at phone screen` vs `looking directly into the camera`），前鏡頭在螢幕上緣，幾公分的差距對真人可忽略、對模型不可。這一點成立——我原本是用物理去辯，但送進模型的是文字。這是 identity_core 錨點，視線精度優先，因此保留 eye_gaze=camera，改寫 scene 消除歧義。",
       "hands": {
-        "left": "舉著手機（拍攝裝置）",
-        "right": "撐在床沿"
-      }
+        "left": {
+          "state": "camera",
+          "object_ref": null,
+          "note": "舉著手機（拍攝裝置）"
+        },
+        "right": {
+          "state": "free",
+          "object_ref": null,
+          "note": "撐在床沿"
+        }
+      },
+      "_r7_note": "C-28：hair_06 定義是『剛洗完澡的濕髮、髮尾滴水』，scene 卻寫『剛醒還沒站起來』。hair_06 只有這一列在用，動它會破壞髮型全覆蓋，因此改 scene 對齊髮型（晨間淋浴，晨光條件不變）。"
     },
     {
       "shot_id": "nico_c05",
       "purpose": "body_pose_coverage",
       "pillar": "外出 / 出門前",
-      "scene": "玄關穿鞋，一手扶著牆",
+      "scene": "玄關靠著牆，低頭把鑰匙收進口袋",
       "location": "own_entryway",
       "outfit_id": "nico_outfit_04",
       "hair_id": "nico_hair_05",
       "props": [
-        "門邊的鑰匙圈",
-        "地上待收的紙箱"
+        {
+          "id": "keys",
+          "name": "鑰匙",
+          "relation": "held_right",
+          "zone": "waist",
+          "expected_visible": true
+        },
+        {
+          "id": "succulent",
+          "name": "鞋櫃上的一盆多肉",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        }
       ],
       "framing": "knee_up",
       "view": "third_person",
@@ -887,9 +1121,18 @@
       "career_related": false,
       "_r6_note": "C-23 連帶：c05 用 outfit_04，props 卻列了 outfit_03 的『深棕小方包』——畫面會出現兩個包。這正是 C-23 說的：props 沒被揭露，沒人有機會抓到。",
       "hands": {
-        "left": "扶著牆",
-        "right": "伸向腳邊的鞋"
-      }
+        "left": {
+          "state": "supporting",
+          "object_ref": null,
+          "note": "撐在牆上"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "keys",
+          "note": "拿著鑰匙"
+        }
+      },
+      "_r7_note": "C-29：原本右手要伸到腳邊的鞋，主要動作落在 knee_up 裁切外。改為玄關收鑰匙，動作與兩個微物件都在腰線以上。 姿態維持 leaning（靠牆），否則全 20 列會失去 leaning 這個姿態。"
     },
     {
       "shot_id": "nico_c06",
@@ -900,8 +1143,20 @@
       "outfit_id": "nico_outfit_03",
       "hair_id": "nico_hair_05",
       "props": [
-        "手上的手搖杯",
-        "巷口的電表箱"
+        {
+          "id": "drink_c06",
+          "name": "手搖杯",
+          "relation": "held_right",
+          "zone": "hip",
+          "expected_visible": true
+        },
+        {
+          "id": "meter_box",
+          "name": "巷口的電表箱",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -939,21 +1194,48 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "自然擺動",
-        "right": "拿著手搖杯"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然擺動"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "drink_c06",
+          "note": "提在身側"
+        }
       }
     },
     {
       "shot_id": "nico_c07",
       "purpose": "identity_core",
       "pillar": "工作室 / 手部",
-      "scene": "低頭替客人上膠，側臉朝向鏡頭",
+      "scene": "低頭在展示棒上試新的色膠，側臉朝向鏡頭",
       "location": "workplace_own_studio",
       "outfit_id": "nico_outfit_01",
       "hair_id": "nico_hair_03",
       "props": [
-        "色膠瓶",
-        "桌上固定的練習指模"
+        {
+          "id": "tip_stick",
+          "name": "甲片展示棒",
+          "relation": "held_left",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "color_board",
+          "name": "身後牆上的美甲色卡板",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        },
+        {
+          "id": "gel_brush",
+          "name": "上膠筆",
+          "relation": "held_right",
+          "zone": "chest",
+          "expected_visible": true
+        }
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -992,9 +1274,18 @@
       "career_related": true,
       "_r6_note": "C-23 連帶：原本 props 有『客人的手』——訓練集裡不該出現第二個人的身體部位，模型有機會把它學進 identity。改為美甲師真實會用的練習指模，場景仍成立且畫面中只有她一個人。",
       "hands": {
-        "left": "扶著練習指模",
-        "right": "拿著色膠瓶"
-      }
+        "left": {
+          "state": "holding",
+          "object_ref": "tip_stick",
+          "note": "固定著甲片展示棒"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "gel_brush",
+          "note": "拿著上膠筆"
+        }
+      },
+      "_r7_note": "C-30：練習指模外觀仍是人類手指，與『不讓訓練集混入第二個人的身體部位』同一個風險；且『拿著色膠瓶』做不出上膠動作（上膠要拿刷頭/上膠筆，瓶身在桌面）。改為左手固定不具人體外形的甲片展示棒、右手拿上膠筆。"
     },
     {
       "shot_id": "nico_c08",
@@ -1005,8 +1296,20 @@
       "outfit_id": "nico_outfit_08",
       "hair_id": "nico_hair_02",
       "props": [
-        "修眉刀",
-        "台面上倒著的洗面乳"
+        {
+          "id": "brow_razor",
+          "name": "修眉刀",
+          "relation": "held_right",
+          "zone": "head",
+          "expected_visible": true
+        },
+        {
+          "id": "cleanser",
+          "name": "台面上倒著的洗面乳",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        }
       ],
       "framing": "waist_up",
       "view": "selfie_mirror",
@@ -1045,8 +1348,16 @@
       "career_related": false,
       "_r5_note": "C-20.3：原寫『修眉』＋『另一手撐著洗手台』＋鏡面自拍需持機 = 三隻手。移除撐洗手台，body_pose 隨之由 leaning 改為 standing。",
       "hands": {
-        "left": "舉著手機對鏡子（拍攝裝置）",
-        "right": "拿著修眉刀靠近眉尾"
+        "left": {
+          "state": "camera",
+          "object_ref": null,
+          "note": "舉著手機對鏡子（拍攝裝置）"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "brow_razor",
+          "note": "拿著修眉刀靠近眉尾"
+        }
       }
     },
     {
@@ -1058,8 +1369,20 @@
       "outfit_id": "nico_outfit_05",
       "hair_id": "nico_hair_02",
       "props": [
-        "購物籃",
-        "手上的飯糰"
+        {
+          "id": "basket_c09",
+          "name": "放在腳邊的購物籃",
+          "relation": "surface",
+          "zone": "knee",
+          "expected_visible": true
+        },
+        {
+          "id": "onigiri",
+          "name": "飯糰",
+          "relation": "held_right",
+          "zone": "chest",
+          "expected_visible": true
+        }
       ],
       "framing": "knee_up",
       "view": "third_person",
@@ -1097,8 +1420,16 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "扶著雜誌架下層",
-        "right": "拿著飯糰"
+        "left": {
+          "state": "supporting",
+          "object_ref": null,
+          "note": "扶著雜誌架下層"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "onigiri",
+          "note": "拿著飯糰"
+        }
       }
     },
     {
@@ -1110,8 +1441,20 @@
       "outfit_id": "nico_outfit_09",
       "hair_id": "nico_hair_04",
       "props": [
-        "洗衣袋",
-        "機台上的零錢盤"
+        {
+          "id": "laundry",
+          "name": "抱在懷裡烘好的衣物",
+          "relation": "held_both",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "coin_tray",
+          "name": "機台上的零錢盤",
+          "relation": "surface",
+          "zone": "waist",
+          "expected_visible": true
+        }
       ],
       "framing": "full_body",
       "view": "third_person",
@@ -1150,8 +1493,16 @@
       "career_related": false,
       "_r6_note": "C-23 連帶：原本 props 有『手上的零錢』，但 scene 已用雙臂抱衣物——第三隻手。零錢改為機台上的零錢盤（畫面內、不占手）。",
       "hands": {
-        "left": "與另一手一起抱著烘好的衣物",
-        "right": "與另一手一起抱著烘好的衣物"
+        "left": {
+          "state": "holding",
+          "object_ref": "laundry",
+          "note": "與另一手一起抱著"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "laundry",
+          "note": "與另一手一起抱著"
+        }
       }
     },
     {
@@ -1163,8 +1514,20 @@
       "outfit_id": "nico_outfit_05",
       "hair_id": "nico_hair_05",
       "props": [
-        "兩罐護手霜",
-        "掛在手肘的購物籃"
+        {
+          "id": "hand_creams",
+          "name": "兩罐護手霜",
+          "relation": "held_both",
+          "zone": "chest",
+          "expected_visible": true
+        },
+        {
+          "id": "basket_c11",
+          "name": "掛在手肘的購物籃",
+          "relation": "worn",
+          "zone": "waist",
+          "expected_visible": true
+        }
       ],
       "framing": "knee_up",
       "view": "third_person",
@@ -1203,8 +1566,16 @@
       "career_related": false,
       "_r6_note": "C-23 連帶：兩罐護手霜比較成分已占雙手，購物籃改為明寫掛在手肘。",
       "hands": {
-        "left": "拿著一罐護手霜，手肘掛著購物籃",
-        "right": "拿著另一罐護手霜"
+        "left": {
+          "state": "holding",
+          "object_ref": "hand_creams",
+          "note": "拿著一罐"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "hand_creams",
+          "note": "拿著另一罐"
+        }
       }
     },
     {
@@ -1216,8 +1587,20 @@
       "outfit_id": "nico_outfit_06",
       "hair_id": "nico_hair_04",
       "props": [
-        "手上的悠遊卡",
-        "月台地上的候車排隊黃線"
+        {
+          "id": "easycard",
+          "name": "悠遊卡",
+          "relation": "held_right",
+          "zone": "waist",
+          "expected_visible": true
+        },
+        {
+          "id": "arrival_board",
+          "name": "月台上的到站顯示器",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "waist_up",
       "view": "third_person",
@@ -1257,8 +1640,16 @@
       "signature_family": null,
       "career_related": false,
       "hands": {
-        "left": "自然垂在身側",
-        "right": "拿著悠遊卡"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        },
+        "right": {
+          "state": "holding",
+          "object_ref": "easycard",
+          "note": "拿著悠遊卡"
+        }
       }
     },
     {
@@ -1270,8 +1661,20 @@
       "outfit_id": "nico_outfit_02",
       "hair_id": "nico_hair_02",
       "props": [
-        "手上的保溫瓶",
-        "步道旁的木製長椅"
+        {
+          "id": "wood_bench",
+          "name": "身後步道旁的木製長椅",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        },
+        {
+          "id": "falling_leaf",
+          "name": "肩線後方一片正在飄落的葉子",
+          "relation": "background",
+          "zone": "background",
+          "expected_visible": true
+        }
       ],
       "framing": "chest_up",
       "view": "third_person",
@@ -1310,8 +1713,16 @@
       "career_related": false,
       "_note": "K-04：補 profile_right（原本完全沒有）＋使用尚未進訓練集的 body-readable outfit_02＋中性外部 B 場景。同時消除 19/20 的 endpoint 歧義。",
       "hands": {
-        "left": "自然垂在身側",
-        "right": "拿著保溫瓶"
+        "left": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        },
+        "right": {
+          "state": "free",
+          "object_ref": null,
+          "note": "自然垂在身側"
+        }
       }
     }
   ],
@@ -1984,5 +2395,7 @@
     "decision": "13 張在合法範圍內，但既然上限是 20，選擇用掉這個 headroom 補足身分證據缺口——不是被規格逼的，是為了修 ChatGPT §9–§11 指出的真實缺口。"
   },
   "signature_family_key": "nail_studio",
-  "_c23_note": "C-23：覆核檔沒有揭露 props，導致九欄語意 gate 無法完成。補上 props 表之後，當場看見 8 列 props 重述了 outfit 已提供的包/外套或借用別套的招牌包、c10 有第三隻手、c07 把『客人的手』放進訓練集。新增 hands 欄位（left/right 兩個槽位），把手部佔用從推論改成明寫，validator 直接稽核——這一類錯（c08、c10）就再也不靠人眼抓。"
+  "_c23_note": "C-23：覆核檔沒有揭露 props，導致九欄語意 gate 無法完成。補上 props 表之後，當場看見 8 列 props 重述了 outfit 已提供的包/外套或借用別套的招牌包、c10 有第三隻手、c07 把『客人的手』放進訓練集。新增 hands 欄位（left/right 兩個槽位），把手部佔用從推論改成明寫，validator 直接稽核——這一類錯（c08、c10）就再也不靠人眼抓。",
+  "_c27_note": "C-27：hands 兩個自由文字槽仍可被同義詞繞過，且不知道 prop 會不會落在 framing 內。改為結構化：每個 prop 有 id / relation（held_left|held_right|held_both|surface|worn|background）/ zone（物件靠近的身體地標，依該 shot 實際姿態判定）/ expected_visible；hands 每槽有 state（free|holding|supporting|camera）與 object_ref（只能引用 prop id，不得另寫同義詞）。左右一律指角色的解剖學左右、鏡像前。",
+  "laterality": "subject_anatomical（角色本人的解剖學左右，鏡像翻轉前）"
 }

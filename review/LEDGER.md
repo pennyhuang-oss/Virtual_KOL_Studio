@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-28　|　**R6 全部判定已處理（8 條結案、1 條再修）＋ 4 條新議題已修，待 R7 覆核**
+> 最後更新：2026-08-28　|　**R7 全部 5 條判定結案 ＋ 4 條新議題已修，待 R8 覆核（20/20 語意覆核尚未通過）**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -16,7 +16,8 @@
 | R4 | ChatGPT | 已覆核，11 條已處理 | 記於本帳本 |
 | R5 | ChatGPT | 8 結案 / 5 不同意 / 4 條新議題（C-19–C-22）| [`rounds/R5_chatgpt.md`](rounds/R5_chatgpt.md) |
 | R6 | ChatGPT | 8 結案 / 1 不同意 / 4 條新議題（C-23–C-26）| [`rounds/R6_chatgpt.md`](rounds/R6_chatgpt.md) |
-| **R7** | **ChatGPT** | **待覆核（含真正的 20/20 九欄語意覆核）** | [`REVIEW.md`](REVIEW.md) |
+| R7 | ChatGPT | 5 條全結案 / 20 列覆核結果 11 無異議、9 條 P0 / 新議題 C-27–C-30 | [`rounds/R7_chatgpt.md`](rounds/R7_chatgpt.md) |
+| **R8** | **ChatGPT** | **待覆核（重跑 20/20 語意覆核）** | [`REVIEW.md`](REVIEW.md) |
 
 ---
 
@@ -51,13 +52,17 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | ChatGPT 同意延後，但列為 persona #2 的前置 gate |
 | U-02 | ChatGPT 讀 GitHub 一次燒光 5 小時用量 | Claude | ✅ 結案 | 協定改為自帶內容的覆核請求（`tools/gen_review_request.py`），ChatGPT 不 fetch，只讀訊息本身 |
 | C-19 | 語意覆核 0/20 卻仍 exit 0 放行 | ChatGPT | ✅ 結案 | 實測確認：舊版印「⚠ 語意覆核未完成」後仍印「✓ 全數通過」且 exit=0。已改為 HARD FAIL exit 1；對抗測試確認會擋；R6 同意結案 |
-| C-20 | Phase C 四個物理／結構矛盾 | ChatGPT | 🔵 Claude已修正 | c01 鐵門遮住的正是落地窗→改側面高窗；c08 修眉＋撐洗手台＋持機＝三隻手→移除撐洗手台且 pose 改 standing；a08/outfit_02 見 K-04。**c04 不同意**：前鏡頭與螢幕同一平面，低頭看螢幕就是看鏡頭，selfie_front + eye_gaze=camera + down_15 三者一致；真正的問題是 props 把手機列為入鏡道具，已移除；R6 裁決：c04 接受 ChatGPT——送進模型的是文字，`looking at phone screen` 與 `looking into the camera` 是兩個指令。保留 eye_gaze=camera，scene 改為「舉起手機直視鏡頭」 |
+| C-20 | Phase C 四個物理／結構矛盾 | ChatGPT | ✅ 結案 | c01 鐵門遮住的正是落地窗→改側面高窗；c08 修眉＋撐洗手台＋持機＝三隻手→移除撐洗手台且 pose 改 standing；a08/outfit_02 見 K-04。**c04 不同意**：前鏡頭與螢幕同一平面，低頭看螢幕就是看鏡頭，selfie_front + eye_gaze=camera + down_15 三者一致；真正的問題是 props 把手機列為入鏡道具，已移除；R6 裁決：c04 接受 ChatGPT——送進模型的是文字，`looking at phone screen` 與 `looking into the camera` 是兩個指令。保留 eye_gaze=camera，scene 改為「舉起手機直視鏡頭」；R7 同意結案（c04 新髮型衝突另列 C-28） |
 | C-21 | Phase D 並非真正單一變量，render 數算錯 | ChatGPT | ✅ 結案 | 逐條實測全部屬實，且比指出的更嚴重：st08b 宣稱測下打光但 camera 與基準完全相同、light_family 寫成 L4，被測的東西沒有編碼進任何欄位。新增 light_direction 欄位與 L9_screen_only_uplight。改三欄拆分後 validator 反算稽核，又自行抓到 st05 同病與 fixed_baseline 漏了 4 個欄位。render 預算改現算；R6 同意結案，並確認三個不變量；不變量 3（欄位全集反算）已於本輪補上機器檢查 |
 | C-22 | C 級場景被 cinematic treatment 抵銷 | ChatGPT | ✅ 結案 | c12 的「列車頭燈掃過」是動態戲劇光＋CCD，已改靜態廣告燈箱光且 filter 改 none。新增 validator 規則：C 級不得同時有濾鏡與動態光源，且帶濾鏡的 C 級不得超過 1/3。**c03 不同意改**：filter=none，門口晨光＋不鏽鋼反射＋天花板冷白燈管正是真實早餐店的混光，沒有風格化處理；R6 同意結案（c03 維持不改） |
-| C-23 | 覆核檔沒揭露 props，九欄語意 gate 無法完成 | ChatGPT | 🔵 Claude已修正 | 屬實，是我自己挖的坑：§8 要求逐列判斷 props，生成器卻從未輸出。補上 §5-5b props 表後**當場又看到三類新錯**：8 列 props 重述 outfit 已提供的包或借用別套招牌包（a03–a08、c06、c12）、c10 抱衣物還多一隻手拿零錢、c07 把「客人的手」放進訓練集。新增 `hands`（left/right 兩槽位）欄位＋4 條 validator 規則 |
-| C-24 | c12 刪掉車頭燈後 exposure_choice 仍寫「車頭燈那側過曝」 | ChatGPT | 🔵 Claude已修正 | 屬實。改一欄沒同步另一欄，第三次犯同一類錯，且就發生在要送進訓練集的 prompt 上。已改為廣告燈箱側肩線略過曝 |
-| C-25 | st06 拿訓練集出現 4 次的 park 測 no_scene_burn_in | ChatGPT | 🔵 Claude已修正 | 屬實，檢出力等於零。改為 bus_stop（訓練集未出現、C 級、戶外，L6 理由不變）。新增 validator 規則：測 no_scene_burn_in 的 shot 必須用訓練集沒出現過的 location |
-| C-26 | outfit_04 的「包/外套」欄填的是及膝襪 | ChatGPT | 🔵 Claude已修正 | 屬實，五層等於少一層。及膝襪併入下身，補深藍色肩背書包。連帶發現 c05 的 props 借用了 outfit_03 的小方包 |
+| C-23 | 覆核檔沒揭露 props，九欄語意 gate 無法完成 | ChatGPT | ✅ 結案 | 屬實，是我自己挖的坑：§8 要求逐列判斷 props，生成器卻從未輸出。補上 §5-5b props 表後**當場又看到三類新錯**：8 列 props 重述 outfit 已提供的包或借用別套招牌包（a03–a08、c06、c12）、c10 抱衣物還多一隻手拿零錢、c07 把「客人的手」放進訓練集。新增 `hands`（left/right 兩槽位）欄位＋4 條 validator 規則；R7 同意結案（揭露層）；機器化程度另列 C-27 |
+| C-24 | c12 刪掉車頭燈後 exposure_choice 仍寫「車頭燈那側過曝」 | ChatGPT | ✅ 結案 | 屬實。改一欄沒同步另一欄，第三次犯同一類錯，且就發生在要送進訓練集的 prompt 上。已改為廣告燈箱側肩線略過曝；R7 同意結案 |
+| C-25 | st06 拿訓練集出現 4 次的 park 測 no_scene_burn_in | ChatGPT | ✅ 結案 | 屬實，檢出力等於零。改為 bus_stop（訓練集未出現、C 級、戶外，L6 理由不變）。新增 validator 規則：測 no_scene_burn_in 的 shot 必須用訓練集沒出現過的 location；R7 同意結案 |
+| C-26 | outfit_04 的「包/外套」欄填的是及膝襪 | ChatGPT | ✅ 結案 | 屬實，五層等於少一層。及膝襪併入下身，補深藍色肩背書包。連帶發現 c05 的 props 借用了 outfit_03 的小方包；R7 同意結案（c05 髮夾雙重來源另列 C-28） |
+| C-27 | hands 只有兩個自由文字槽，仍可被同義詞繞過 | ChatGPT | 🔵 Claude已修正 | 四個漏洞全部屬實。props 改結構化：`id`／`relation`（held_left｜held_right｜held_both｜surface｜worn｜background）／`zone`／`expected_visible`；hands 每槽有 `state`（free｜holding｜supporting｜camera）與 `object_ref`（只能引用 prop id）。新增 spec 層 `laterality=subject_anatomical`（鏡像翻轉前）。8 條 validator 規則 |
+| C-28 | c04 髮型與時間狀態衝突；c05 髮夾雙重真理來源 | ChatGPT | 🔵 Claude已修正 | 兩條屬實。hair_06（剛洗完澡滴水濕髮）只有 c04 在用，動髮型會破壞髮型全覆蓋，因此改 scene 對齊為「剛洗完澡坐在床邊」。outfit_04 首飾「銀色髮夾」與 hair_05 的髮夾是同一物件兩個來源——這正是 C-01 那個病換一對欄位重演，首飾改為手鍊 |
+| C-29 | 8 列的 props／hands 落在 framing 裁切外 | ChatGPT | 🔵 Claude已修正 | 全部屬實，其中 c12 的「月台地上黃線」還是我上一輪自己加的。微物件在裁切外等於對出圖毫無作用。8 列 props 全部換成該景別看得到的物件；c02 改 knee_up（蹲著拆箱本來就讀不到 chest_up）、c05 改為腰線以上的玄關動作。新增 framing→zone 對照表由 validator 反查 |
+| C-30 | c07 練習指模仍是人形手指，且「拿色膠瓶」做不出上膠動作 | ChatGPT | 🔵 Claude已修正 | 兩點屬實。改為左手固定不具人體外形的甲片展示棒、右手拿上膠筆、色卡板移到背景 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 
 **狀態圖例**：⚪ 待對方回應／ChatGPT已回應　🔵 Claude已修正（待對方確認）　🟡 待處理　🔴 有爭議　🟣 需使用者裁決　✅ 結案

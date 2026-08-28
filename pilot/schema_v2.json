@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Shoot Plan Schema v2 — named-object 版",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "changelog": "v1 用 positional array，欄位靠位置辨識、容易 off-by-one，且 scene 自然語言會偷偷覆寫 outfit/hair。v2 改為 named object，並拆出身分覆蓋欄位與五段式光線欄位。 ｜ v2.1（C-15）：補上頂層 schema，用 $ref 把 phase_c_shots.items 綁到 #/definitions/shot，並加上 shot_id 唯一性與 additionalProperties 策略。先前只有 definitions.shot、頂層沒有連過去，所以即使另跑一般 JSON Schema validator 也不會驗整份 pilot。",
   "single_source_of_truth": {
     "outfit": "只能由 outfit_id 決定。scene 內禁止出現任何服裝單品名詞。",
@@ -79,10 +79,49 @@
         },
         "props": {
           "type": "array",
+          "minItems": 2,
           "items": {
-            "type": "string"
-          },
-          "minItems": 2
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "relation",
+              "zone",
+              "expected_visible"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "relation": {
+                "enum": [
+                  "held_left",
+                  "held_right",
+                  "held_both",
+                  "surface",
+                  "worn",
+                  "background"
+                ]
+              },
+              "zone": {
+                "enum": [
+                  "head",
+                  "chest",
+                  "waist",
+                  "hip",
+                  "knee",
+                  "floor",
+                  "background"
+                ]
+              },
+              "expected_visible": {
+                "type": "boolean"
+              }
+            }
+          }
         },
         "framing": {
           "enum": [
@@ -332,13 +371,61 @@
           ],
           "properties": {
             "left": {
-              "type": "string"
+              "type": "object",
+              "required": [
+                "state",
+                "object_ref",
+                "note"
+              ],
+              "properties": {
+                "state": {
+                  "enum": [
+                    "free",
+                    "holding",
+                    "supporting",
+                    "camera"
+                  ]
+                },
+                "object_ref": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
             },
             "right": {
-              "type": "string"
+              "type": "object",
+              "required": [
+                "state",
+                "object_ref",
+                "note"
+              ],
+              "properties": {
+                "state": {
+                  "enum": [
+                    "free",
+                    "holding",
+                    "supporting",
+                    "camera"
+                  ]
+                },
+                "object_ref": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
             }
           },
-          "description": "兩個槽位。人只有兩隻手——把手部佔用從 scene/props 推論改成明寫，才稽核得動（C-23）。"
+          "description": "左右一律指角色的解剖學左右、鏡像翻轉前（C-27）。"
         }
       }
     },
@@ -547,6 +634,15 @@
         "hard_gates",
         "threshold_method"
       ]
+    },
+    "laterality": {
+      "type": "string"
+    },
+    "_c27_note": {
+      "type": "string"
+    },
+    "_c23_note": {
+      "type": "string"
     }
   },
   "x-uniqueKeys": {
