@@ -1,0 +1,1150 @@
+{
+  "_source": "ChatGPT 於 review/REVIEW_BATCH3_FACES.md §10 的規劃（commit 5c02a78），使用者裁決全面採用。",
+  "_scope": "臉＝ChatGPT 規劃；身材／髮色／年齡／族裔／身分＝使用者原設定，不動。",
+  "_superseded": "kols/*/profile.json 的 identity.appearance.face_type 全部作廢，不得再拿來限制新臉、不得複製進 prompt、不得在候選驗收時要求相符。",
+  "axes": {
+    "輪廓原型": {
+      "values": [
+        "短寬圓角方",
+        "短寬U形",
+        "柔心形",
+        "倒三角",
+        "寬卵形",
+        "長卵形",
+        "長方",
+        "窄矩形",
+        "窄長鑽石",
+        "窄長六角",
+        "梯形"
+      ],
+      "why": "是縮圖第一眼仍可見的整體剪影，比逐項形容更不易被平均"
+    },
+    "臉長寬比": {
+      "values": [
+        "短寬",
+        "中等",
+        "長窄",
+        "極長窄"
+      ],
+      "why": "直接改變全臉低頻幾何，跨妝容與跨表情仍保留"
+    },
+    "三庭配置": {
+      "values": [
+        "短中庭+短下庭",
+        "短中庭+中下庭",
+        "均衡",
+        "長中庭+中下庭",
+        "中庭+長下庭"
+      ],
+      "why": "控制眼鼻口的垂直關係，能拆開同為鵝蛋臉的角色"
+    },
+    "骨肉量": {
+      "values": [
+        "柔軟飽滿",
+        "骨肉均衡",
+        "清瘦平面",
+        "寬骨量"
+      ],
+      "why": "影響顴、顎與面部轉折，不依賴髮妝辨識"
+    },
+    "五官場": {
+      "values": [
+        "集中",
+        "均衡",
+        "橫向分散",
+        "高位分散",
+        "垂直舒展"
+      ],
+      "why": "比單獨寫眼距或鼻長更能形成整體 gestalt"
+    },
+    "顎頦": {
+      "values": [
+        "圓U顎+短鈍頦",
+        "柔方顎+短鈍頦",
+        "寬方顎+方頦",
+        "窄顎+小圓頦",
+        "窄顎+長鈍頦",
+        "窄顎+尖頦",
+        "寬顎+短鈍頦"
+      ],
+      "why": "下臉外框在各種景別都穩定，是避開 rainie 尖窄下顎的主軸"
+    },
+    "眼眶結構": {
+      "values": [
+        "圓開平視",
+        "圓開下垂",
+        "細長平視",
+        "細長下垂",
+        "窄長上揚",
+        "低眉窄眼",
+        "單眼皮窄平視"
+      ],
+      "why": "把眉骨、眼裂與眼尾視為一組，比零散的眼型詞更能執行"
+    },
+    "眼距": {
+      "values": [
+        "窄",
+        "中等",
+        "寬"
+      ],
+      "why": "是可量測的雙眼相對位置，與眼型組合後可拉開相似臉"
+    },
+    "鼻部量體": {
+      "values": [
+        "短寬軟鼻",
+        "中等直鼻+鈍鼻頭",
+        "長直細鼻",
+        "低鼻樑+圓鼻頭"
+      ],
+      "why": "鼻長與鼻頭量體比「高挺」等審美詞更具幾何約束"
+    },
+    "口部幾何": {
+      "values": [
+        "小薄平唇",
+        "小中等唇",
+        "小飽滿唇",
+        "寬薄唇",
+        "寬中等唇",
+        "寬飽滿下唇"
+      ],
+      "why": "以口寬和上下唇質量取代容易回到預設的「漂亮厚唇」"
+    },
+    "頰部": {
+      "values": [
+        "低位柔頰",
+        "中段飽滿",
+        "高位平顴",
+        "平直中臉"
+      ],
+      "why": "可區分肉感、骨感及成熟感，又不必依靠濃妝陰影"
+    }
+  },
+  "personas": {
+    "angel-chiu": {
+      "archetype": "寬額短中庭、柔方下臉的安定成人臉",
+      "axes": {
+        "輪廓原型": "短寬圓角方",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+中下庭",
+        "骨肉量": "骨肉均衡",
+        "五官場": "均衡",
+        "顎頦": "柔方顎+短鈍頦",
+        "眼眶結構": "圓開平視",
+        "眼距": "中等",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "小中等唇",
+        "頰部": "低位柔頰"
+      },
+      "face_en": "Create a new 23-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_10; NOSE from ref_01; MOUTH from ref_02. Build a broad softly squared facial canvas, a short midface, moderate low cheek padding, and a soft square jaw ending in a short blunt chin. Use medium-spaced open level eyes, a straight medium nose, and a compact mouth with restrained lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "broad forehead",
+        "short midface",
+        "soft square jaw",
+        "level open eyes",
+        "compact medium lips"
+      ],
+      "why_distinct": "她比最接近的 nanami 更短更方、眼睛更開，且以低位柔頰與鈍下巴避開 rainie 的高顴尖顎上揚眼。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_15",
+        "EYES_AND_BROWS": "ref_10",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_02"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_15.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_10.jpg",
+        "NOSE": "review/batch3_face_refs/ref_01.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_02.jpg"
+      },
+      "fixed": {
+        "display": "angel-chiu",
+        "age": 23,
+        "ethnicity": "台灣",
+        "public_face": "護理師 — 醫學中心的內科病房護理師 — 上班綁得死緊、素顏、腳步很快，是同事眼中很可靠的那一個。",
+        "height_cm": 163,
+        "weight_kg": 47,
+        "bust_cm": 88,
+        "waist_cm": 58,
+        "hip_cm": 89,
+        "cup": "D",
+        "leg_cm": 77,
+        "hair": "黑棕色長髮，髮尾一段漂成蜜茶金——上班一律紮起來完全看不出來，放下才看得到。這個藏起來的髮色本身就是她反差的第一個提示。",
+        "hair_color_current": "黑棕 + 蜜茶金髮尾（隱藏式）",
+        "superseded_face_type": "白皙偏冷調，圓潤杏眼、笑起來有臥蠶。上班素顏感底妝，下班會化完整的眼妝。"
+      }
+    },
+    "tammy-chou": {
+      "archetype": "上寬下窄、五官橫向展開的柔心形成人臉",
+      "axes": {
+        "輪廓原型": "柔心形",
+        "臉長寬比": "中等",
+        "三庭配置": "短中庭+中下庭",
+        "骨肉量": "柔軟飽滿",
+        "五官場": "橫向分散",
+        "顎頦": "窄顎+小圓頦",
+        "眼眶結構": "圓開平視",
+        "眼距": "寬",
+        "鼻部量體": "短寬軟鼻",
+        "口部幾何": "寬中等唇",
+        "頰部": "中段飽滿"
+      },
+      "face_en": "Create a new 24-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_03; NOSE from ref_05; MOUTH from ref_09. Build a soft heart-shaped canvas with rounded cheek transitions and a broad upper face. Use visibly wide-set open round eyes, a short softly broad nose, a wide mouth with medium lip volume, and a jaw that tapers gently into a small rounded chin. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "broad upper face",
+        "wide-set round eyes",
+        "short midface",
+        "small rounded chin",
+        "wide medium mouth"
+      ],
+      "why_distinct": "她比最接近的 sydney 更偏心形且五官更橫向分散，也沒有 rainie 的高顴、尖銳下顎與上揚眼組合。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_08",
+        "EYES_AND_BROWS": "ref_03",
+        "NOSE": "ref_05",
+        "MOUTH": "ref_09"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_08.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_03.jpg",
+        "NOSE": "review/batch3_face_refs/ref_05.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_09.jpg"
+      },
+      "fixed": {
+        "display": "tammy-chou",
+        "age": 24,
+        "ethnicity": "台灣",
+        "public_face": "網拍老闆娘 / 服飾電商 — 自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
+        "height_cm": 160,
+        "weight_kg": 46,
+        "bust_cm": 90,
+        "waist_cm": 57,
+        "hip_cm": 89,
+        "cup": "E",
+        "leg_cm": 75,
+        "hair": "奶茶金棕 + 臉側 money piece 淺挑染，大波浪長捲髮蓬鬆有空氣感。做服飾電商的人本來就得走在前面，髮色是她的招牌之一。",
+        "hair_color_current": "奶茶金棕 + money piece 挑染",
+        "superseded_face_type": "白皙偏暖，圓杏眼、臥蠶明顯。網拍模特兒妝：閃粉眼影 + 果凍唇。"
+      }
+    },
+    "emma-kao": {
+      "archetype": "長方橢圓、骨量中等、五官集中且穩重的主播臉",
+      "axes": {
+        "輪廓原型": "長方",
+        "臉長寬比": "長窄",
+        "三庭配置": "長中庭+中下庭",
+        "骨肉量": "寬骨量",
+        "五官場": "集中",
+        "顎頦": "柔方顎+短鈍頦",
+        "眼眶結構": "細長平視",
+        "眼距": "窄",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "小中等唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 27-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_15. Build a long broad-boned rectangular canvas with planar cheeks and a softly squared blunt lower outline. Place narrow level eyes slightly close together within a long midface, use a medium straight nose with a blunt tip, and keep the mouth small and restrained. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "long rectangular canvas",
+        "close-set narrow eyes",
+        "medium straight nose",
+        "planar cheeks",
+        "small restrained lips"
+      ],
+      "why_distinct": "她比最接近的 zhiyi 骨架更寬、下巴更短，且小口與平視窄眼遠離 rainie 的大上揚眼和厚唇。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_02",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_15"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_11.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_02.jpg",
+        "NOSE": "review/batch3_face_refs/ref_01.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_15.jpg"
+      },
+      "fixed": {
+        "display": "emma-kao",
+        "age": 27,
+        "ethnicity": "台灣",
+        "public_face": "新聞主播 — 地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
+        "height_cm": 169,
+        "weight_kg": 52,
+        "bust_cm": 89,
+        "waist_cm": 61,
+        "hip_cm": 91,
+        "cup": "D",
+        "leg_cm": 83,
+        "hair": "深棕及肩直髮，主播式內彎吹整（電視台對髮色有規定，所以她只能維持自然色）——但私下會夾上酒紅色的挑染片，這是她少數能偷渡的叛逆。",
+        "hair_color_current": "深棕（職業限制）+ 私下酒紅挑染片",
+        "superseded_face_type": "白皙端正的上鏡臉，立體但不銳利，眉眼溫和有說服力。上鏡濃妝 vs 私下的裸妝。"
+      }
+    },
+    "zoey-yeh": {
+      "archetype": "低眉軟圓、短中庭與U形下臉的清透成人臉",
+      "axes": {
+        "輪廓原型": "短寬U形",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+短下庭",
+        "骨肉量": "柔軟飽滿",
+        "五官場": "均衡",
+        "顎頦": "圓U顎+短鈍頦",
+        "眼眶結構": "圓開下垂",
+        "眼距": "寬",
+        "鼻部量體": "低鼻樑+圓鼻頭",
+        "口部幾何": "小飽滿唇",
+        "頰部": "低位柔頰"
+      },
+      "face_en": "Create a new 21-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_13; NOSE from ref_05; MOUTH from ref_10. Build a short softly rounded U-shaped face with low full cheeks and a short blunt chin. Use wide-set gently downturned eyes under low soft brows, a short low-bridge nose with a rounded tip, and a small softly full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "short U-shaped face",
+        "wide-set downturned eyes",
+        "low soft brows",
+        "rounded nose tip",
+        "short blunt chin"
+      ],
+      "why_distinct": "她比最接近的 miu 眼尾更下垂、眼距更寬且輪廓是U形，與 rainie 的高顴銳顎和上揚眼相反。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_04",
+        "EYES_AND_BROWS": "ref_13",
+        "NOSE": "ref_05",
+        "MOUTH": "ref_10"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_04.jfif",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_13.jfif",
+        "NOSE": "review/batch3_face_refs/ref_05.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_10.jpg"
+      },
+      "fixed": {
+        "display": "zoey-yeh",
+        "age": 21,
+        "ethnicity": "台灣",
+        "public_face": "花藝師 — 老屋改的花店主理人 — 花、雨、木地板、貓，節奏比別人慢一半。",
+        "height_cm": 158,
+        "weight_kg": 44,
+        "bust_cm": 85,
+        "waist_cm": 56,
+        "hip_cm": 85,
+        "cup": "C",
+        "leg_cm": 74,
+        "hair": "黑色長直髮中分，髮質細軟——現階段維持天然黑，因為清純路線需要這個純度作為對照組——是現在的選擇，不是永久鎖定。",
+        "hair_color_current": "天然黑（現階段）",
+        "superseded_face_type": "非常白、透明感，圓眼、眼尾下垂，柔弱清純。幾乎素顏，只有唇蜜。"
+      }
+    },
+    "miu-shiraishi": {
+      "archetype": "中段最寬、下臉短鈍的蘋果型成人臉",
+      "axes": {
+        "輪廓原型": "短寬圓角方",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+短下庭",
+        "骨肉量": "柔軟飽滿",
+        "五官場": "集中",
+        "顎頦": "柔方顎+短鈍頦",
+        "眼眶結構": "圓開平視",
+        "眼距": "中等",
+        "鼻部量體": "短寬軟鼻",
+        "口部幾何": "寬中等唇",
+        "頰部": "中段飽滿"
+      },
+      "face_en": "Create a new 22-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_04; NOSE from ref_12; MOUTH from ref_08. Build an apple-like face with central fullness, the widest point at the mid-cheeks, a rounded-square jaw, and a short blunt chin. Gather large level round eyes toward the center, use a short nose with a softly broad tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "apple-shaped midface",
+        "centrally grouped features",
+        "level round eyes",
+        "broad soft nose tip",
+        "rounded-square jaw"
+      ],
+      "why_distinct": "她比最接近的 zoey 中臉更飽滿、五官更集中且眼裂平視，並以圓角方顎避開 rainie 的窄尖下臉。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_05",
+        "EYES_AND_BROWS": "ref_04",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_08"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_05.jfif",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_04.jfif",
+        "NOSE": "review/batch3_face_refs/ref_12.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_08.jpg"
+      },
+      "fixed": {
+        "display": "miu-shiraishi",
+        "age": 22,
+        "ethnicity": "日本",
+        "public_face": "咖啡店員 — 咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+        "height_cm": 156,
+        "weight_kg": 44,
+        "bust_cm": 87,
+        "waist_cm": 55,
+        "hip_cm": 86,
+        "cup": "E",
+        "leg_cm": 72,
+        "hair": "淺亞麻米金（漂過兩次的高明度色），齊肩內彎 + 空氣瀏海。東京中目黑的咖啡店員染這個顏色是日常，也讓她跟同為日系的 Luna（黑短髮）視覺上完全分得開。",
+        "hair_color_current": "淺亞麻米金（漂色）",
+        "superseded_face_type": "白到透光的日系膚色，圓臉大眼、下垂眼尾，童顏。橘調腮紅打在眼下、水潤唇。"
+      }
+    },
+    "rin-ayase": {
+      "archetype": "窄長鑽石型、顴區清楚、眼裂細長的成熟臉",
+      "axes": {
+        "輪廓原型": "窄長鑽石",
+        "臉長寬比": "長窄",
+        "三庭配置": "長中庭+中下庭",
+        "骨肉量": "清瘦平面",
+        "五官場": "均衡",
+        "顎頦": "窄顎+長鈍頦",
+        "眼眶結構": "細長平視",
+        "眼距": "中等",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "寬中等唇",
+        "頰部": "高位平顴"
+      },
+      "face_en": "Create a new 25-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_07; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_10. Build a long diamond canvas with high planar cheek regions, a long midface, and a slim jaw ending in a long blunt chin. Use narrow level eyes, a long straight fine nose, and a composed mouth wider than the nose with medium lip volume. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "long diamond outline",
+        "narrow level eyes",
+        "high planar cheeks",
+        "medium straight nose",
+        "long blunt chin"
+      ],
+      "why_distinct": "她比最接近的 angeline 顴部更寬、嘴更寬而下巴較鈍；窄平視眼也切斷 rainie 的大上揚眼預設。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_07",
+        "EYES_AND_BROWS": "ref_02",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_10"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_07.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_02.jpg",
+        "NOSE": "review/batch3_face_refs/ref_01.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_10.jpg"
+      },
+      "fixed": {
+        "display": "rin-ayase",
+        "age": 25,
+        "ethnicity": "日本",
+        "public_face": "高級會員制酒店小姐 — 銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
+        "height_cm": 166,
+        "weight_kg": 50,
+        "bust_cm": 92,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup": "F",
+        "leg_cm": 80,
+        "hair": "深酒紅棕（暗紅調，燈下才看得出來的那種），長髮，多數盤低髻或大波浪吹整。銀座對髮色有分寸要求，這個暗紅剛好踩在線上。",
+        "hair_color_current": "深酒紅棕（暗紅調）",
+        "superseded_face_type": "白皙冷調，鵝蛋臉、細長眼、鼻樑挺，成熟艷麗但收斂。銀座妝：乾淨底妝 + 精準眼線 + 正紅／豆沙唇。"
+      }
+    },
+    "nanami-fujiwara": {
+      "archetype": "寬卵形、低骨感、下巴短鈍的端莊成人臉",
+      "axes": {
+        "輪廓原型": "寬卵形",
+        "臉長寬比": "中等",
+        "三庭配置": "均衡",
+        "骨肉量": "骨肉均衡",
+        "五官場": "均衡",
+        "顎頦": "窄顎+小圓頦",
+        "眼眶結構": "細長平視",
+        "眼距": "中等",
+        "鼻部量體": "短寬軟鼻",
+        "口部幾何": "小中等唇",
+        "頰部": "低位柔頰"
+      },
+      "face_en": "Create a new 23-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_01; NOSE from ref_08; MOUTH from ref_02. Build a broad balanced oval canvas with low gentle cheek volume, a smoothly rounded jaw, and a small rounded chin. Use medium level eyes, a compact softly shaped nose, and a small restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "broad oval outline",
+        "balanced facial thirds",
+        "medium level eyes",
+        "low soft cheeks",
+        "small rounded chin"
+      ],
+      "why_distinct": "她比最接近的 angel 臉更長更卵形、眼裂較細且下顎不方，也沒有 rainie 的高顴與尖銳下巴。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_15",
+        "EYES_AND_BROWS": "ref_01",
+        "NOSE": "ref_08",
+        "MOUTH": "ref_02"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_15.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_01.jfif",
+        "NOSE": "review/batch3_face_refs/ref_08.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_02.jpg"
+      },
+      "fixed": {
+        "display": "nanami-fujiwara",
+        "age": 23,
+        "ethnicity": "日本",
+        "public_face": "溫泉旅館女將見習 — 旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
+        "height_cm": 162,
+        "weight_kg": 47,
+        "bust_cm": 88,
+        "waist_cm": 58,
+        "hip_cm": 88,
+        "cup": "D",
+        "leg_cm": 76,
+        "hair": "現階段是黑色長髮，配合旅館工作的分寸；下工放下時是直順的黑髮。她離開旅館或想換的時候都可以改。",
+        "hair_color_current": "天然黑（現階段）",
+        "superseded_face_type": "白皙柔和的日系鵝蛋臉，眉眼溫順，笑起來眼睛彎。清透妝，有教養感。"
+      }
+    },
+    "kanon-komori": {
+      "archetype": "小幅倒三角、極短下庭、五官高位分散的偶像成人臉",
+      "axes": {
+        "輪廓原型": "倒三角",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+短下庭",
+        "骨肉量": "骨肉均衡",
+        "五官場": "高位分散",
+        "顎頦": "窄顎+尖頦",
+        "眼眶結構": "圓開下垂",
+        "眼距": "寬",
+        "鼻部量體": "低鼻樑+圓鼻頭",
+        "口部幾何": "小飽滿唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 20-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_05; NOSE from ref_12; MOUTH from ref_03. Build a compact inverted-triangle canvas with a moderately broad upper face, very short midface and lower third, and a small pointed chin. Place very open downturned eyes high and wide across the face, use a short nose with a softly rounded tip, and a small full mouth. Maintain adult facial proportions and natural skin texture. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "compact inverted triangle",
+        "high wide-set eyes",
+        "strongly downturned eye line",
+        "very short lower third",
+        "small pointed chin"
+      ],
+      "why_distinct": "她比最接近的 zoey 五官更高、更分散且輪廓倒三角；下垂眼線則與 rainie 的大上揚雙眼皮形成明確反向。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_04",
+        "EYES_AND_BROWS": "ref_05",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_03"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_04.jfif",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_05.jfif",
+        "NOSE": "review/batch3_face_refs/ref_12.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_03.jpg"
+      },
+      "fixed": {
+        "display": "kanon-komori",
+        "age": 20,
+        "ethnicity": "日本",
+        "public_face": "女僕咖啡廳店員 — 白天在秋葉原的女僕咖啡廳上班 — 職業性的可愛，而且她很清楚那是職業。",
+        "height_cm": 153,
+        "weight_kg": 42,
+        "bust_cm": 86,
+        "waist_cm": 54,
+        "hip_cm": 84,
+        "cup": "E",
+        "leg_cm": 70,
+        "hair": "粉紫漸層（髮根深、髮尾粉紫），長度到腰，雙馬尾或放下。全批最鮮明的髮色，也是她 Cosplay 體質的延伸。",
+        "hair_color_current": "粉紫漸層（特殊色）",
+        "superseded_face_type": "白皙、非常小的臉，大眼雙眼皮、圓鼻頭，日系偶像臉。上班的偶像妝卸掉後落差很大。"
+      }
+    },
+    "jia-seo": {
+      "archetype": "窄長六角型、低眉骨與橫向眼裂的運動感成人臉",
+      "axes": {
+        "輪廓原型": "窄長六角",
+        "臉長寬比": "長窄",
+        "三庭配置": "均衡",
+        "骨肉量": "清瘦平面",
+        "五官場": "均衡",
+        "顎頦": "柔方顎+短鈍頦",
+        "眼眶結構": "低眉窄眼",
+        "眼距": "中等",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "寬薄唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 22-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_14; NOSE from ref_11; MOUTH from ref_13. Build a narrow hexagonal canvas with clean straight side planes and a short blunt chin. Use horizontally elongated eyes under low brows with restrained lid height, a medium straight nose with a blunt tip, and a wide relatively thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "narrow hexagonal outline",
+        "low brow line",
+        "restrained horizontal eyes",
+        "straight cheek planes",
+        "wide thin mouth"
+      ],
+      "why_distinct": "她比最接近的 zhiyi 臉較短、顎線呈六角且口更寬；小幅窄眼和平唇不會落入 rainie 的大眼厚唇模板。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_02",
+        "EYES_AND_BROWS": "ref_14",
+        "NOSE": "ref_11",
+        "MOUTH": "ref_13"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_02.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_14.jpg",
+        "NOSE": "review/batch3_face_refs/ref_11.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_13.jfif"
+      },
+      "fixed": {
+        "display": "jia-seo",
+        "age": 22,
+        "ethnicity": "韓國",
+        "public_face": "K-pop 舞蹈老師 — 練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
+        "height_cm": 168,
+        "weight_kg": 50,
+        "bust_cm": 85,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup": "C",
+        "leg_cm": 83,
+        "hair": "冷灰藍黑 + 內層薄荷綠 inner color（甩頭髮或綁起來才會露出來的那層）。練舞室文化本來就流行 inner color，動起來的時候顏色會閃出來，對舞蹈影片特別有效。",
+        "hair_color_current": "冷灰藍黑 + 薄荷綠 inner color（特殊色）",
+        "superseded_face_type": "白皙冷調、韓系小臉直角肩，眼型細長上揚。無妝感韓妝：水光肌 + 淡棕眼線 + 漸層唇。"
+      }
+    },
+    "yerin-han": {
+      "archetype": "寬額寬顎、短中庭的直線方臉",
+      "axes": {
+        "輪廓原型": "短寬圓角方",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+中下庭",
+        "骨肉量": "寬骨量",
+        "五官場": "橫向分散",
+        "顎頦": "寬方顎+方頦",
+        "眼眶結構": "圓開平視",
+        "眼距": "寬",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "小中等唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 26-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_09; NOSE from ref_01; MOUTH from ref_15. Build a broad rectangular face with forehead and jaw nearly equal in width, a short midface, straight lower-face sides, and a broad square chin. Use visibly wide-set open level eyes, a medium straight nose, and a restrained medium-width mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "equal-width forehead and jaw",
+        "short midface",
+        "wide-set level eyes",
+        "broad square chin",
+        "compact restrained lips"
+      ],
+      "why_distinct": "她比最接近的 wendy 更短更寬、眼睛更開且眼距更大，寬方顎與小口也直接偏離 rainie 的窄尖顎厚唇。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_09",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_15"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_11.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_09.jpg",
+        "NOSE": "review/batch3_face_refs/ref_01.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_15.jpg"
+      },
+      "fixed": {
+        "display": "yerin-han",
+        "age": 26,
+        "ethnicity": "韓國",
+        "public_face": "高爾夫教練 / 練習場 — 室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
+        "height_cm": 170,
+        "weight_kg": 53,
+        "bust_cm": 90,
+        "waist_cm": 60,
+        "hip_cm": 93,
+        "cup": "E",
+        "leg_cm": 84,
+        "hair": "亞麻棕 + 面部框金色挑染，長髮，多數低馬尾穿過球帽後扣。",
+        "hair_color_current": "亞麻棕 + 金色挑染",
+        "superseded_face_type": "白皙、韓系立體五官，眉眼明亮、笑容大方，健康感。防曬淡妝 + 亮色唇。"
+      }
+    },
+    "somi-oh": {
+      "archetype": "下半臉飽滿、寬U形顎與集中五官的肉感成人臉",
+      "axes": {
+        "輪廓原型": "短寬U形",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+中下庭",
+        "骨肉量": "柔軟飽滿",
+        "五官場": "集中",
+        "顎頦": "寬顎+短鈍頦",
+        "眼眶結構": "圓開平視",
+        "眼距": "窄",
+        "鼻部量體": "短寬軟鼻",
+        "口部幾何": "寬飽滿下唇",
+        "頰部": "低位柔頰"
+      },
+      "face_en": "Create a new 24-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_08; NOSE from ref_12; MOUTH from ref_11. Build a full U-shaped lower face with substantial low cheek volume, a wide rounded jaw, and a short blunt chin. Gather softly open eyes slightly close together, use a short broad soft nose, and a wide mouth with a fuller lower lip. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "full U-shaped lower face",
+        "close-set open eyes",
+        "low full cheeks",
+        "short broad nose",
+        "wide fuller lower lip"
+      ],
+      "why_distinct": "她比最接近的 sydney 下半臉更寬更重、眼距更窄且嘴更寬，與 rainie 的高位骨感顴區和尖顎完全不同。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_05",
+        "EYES_AND_BROWS": "ref_08",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_11"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_05.jfif",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_08.jpg",
+        "NOSE": "review/batch3_face_refs/ref_12.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_11.jpg"
+      },
+      "fixed": {
+        "display": "somi-oh",
+        "age": 24,
+        "ethnicity": "韓國",
+        "public_face": "美食帳號經營者 / 吃播 — 吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
+        "height_cm": 161,
+        "weight_kg": 48,
+        "bust_cm": 91,
+        "waist_cm": 58,
+        "hip_cm": 90,
+        "cup": "F",
+        "leg_cm": 76,
+        "hair": "蜜橘棕（明亮暖色），狼尾層次剪（韓國正流行），吃東西時撩到耳後是她的招牌鏡頭。",
+        "hair_color_current": "蜜橘棕 · 狼尾層次",
+        "superseded_face_type": "白皙、圓潤有肉感的可愛臉，笑起來有酒窩，眼睛彎成月牙。妝很淡，唇釉會被吃掉是她的梗。"
+      }
+    },
+    "zhiyi-shen": {
+      "archetype": "高額長中庭、窄矩形輪廓的冷靜骨感成人臉",
+      "axes": {
+        "輪廓原型": "窄矩形",
+        "臉長寬比": "極長窄",
+        "三庭配置": "長中庭+中下庭",
+        "骨肉量": "清瘦平面",
+        "五官場": "集中",
+        "顎頦": "柔方顎+短鈍頦",
+        "眼眶結構": "低眉窄眼",
+        "眼距": "窄",
+        "鼻部量體": "長直細鼻",
+        "口部幾何": "小薄平唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 25-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_13; NOSE from ref_07; MOUTH from ref_01. Build an extremely long narrow rectangular canvas with a high forehead, long midface, planar cheeks, and a narrow jaw ending bluntly. Use close-set low-brow narrow eyes, a long defined nose, and a small flat mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "very long narrow rectangle",
+        "high forehead",
+        "close-set low-brow eyes",
+        "long narrow nose",
+        "blunt narrow jaw"
+      ],
+      "why_distinct": "她比最接近的 emma 更窄更長、眉眼更低更集中；平直中臉與薄平唇排除 rainie 的高顴厚唇吸引子。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_02",
+        "EYES_AND_BROWS": "ref_13",
+        "NOSE": "ref_07",
+        "MOUTH": "ref_01"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_02.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_13.jfif",
+        "NOSE": "review/batch3_face_refs/ref_07.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_01.jfif"
+      },
+      "fixed": {
+        "display": "zhiyi-shen",
+        "age": 25,
+        "ethnicity": "中國",
+        "public_face": "金融業 OL — 陸家嘴大廈裡的高薪社畜 — 高跟鞋、通勤、加班到十一點，是最典型的「正常職業」。",
+        "height_cm": 172,
+        "weight_kg": 54,
+        "bust_cm": 88,
+        "waist_cm": 61,
+        "hip_cm": 91,
+        "cup": "D",
+        "leg_cm": 85,
+        "hair": "現階段是黑色長直髮中分，髮質好、垂順，配合金融業的隱形規範；禦姊路線需要這個銳利度，但不是不能換。",
+        "hair_color_current": "天然黑（現階段）",
+        "superseded_face_type": "白皙冷調，長臉、眉骨清晰、細長眼，禦姊感但不兇。霧面底妝 + 棕調眼影 + 豆沙唇。"
+      }
+    },
+    "wanyin-jiang": {
+      "archetype": "上窄中寬、長卵形與細小五官的古典成人臉",
+      "axes": {
+        "輪廓原型": "長卵形",
+        "臉長寬比": "長窄",
+        "三庭配置": "均衡",
+        "骨肉量": "清瘦平面",
+        "五官場": "均衡",
+        "顎頦": "窄顎+長鈍頦",
+        "眼眶結構": "細長下垂",
+        "眼距": "中等",
+        "鼻部量體": "長直細鼻",
+        "口部幾何": "小薄平唇",
+        "頰部": "中段飽滿"
+      },
+      "face_en": "Create a new 23-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_01; EYES_AND_BROWS from ref_10; NOSE from ref_02; MOUTH from ref_15. Build a long oval canvas with a slightly narrow upper face, the widest point at the middle cheeks, and a gradual taper toward a long blunt chin. Use modest gently downturned eyes, a fine long nose, and a small restrained mouth with thin flat lips. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "long middle-wide oval",
+        "modest-scale features",
+        "narrow downturned eyes",
+        "fine long nose",
+        "long blunt chin"
+      ],
+      "why_distinct": "她比最接近的 rin 顴骨轉折更柔、眼口更小且唇更薄，遠離 rainie 的大上揚眼和飽滿唇。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_01",
+        "EYES_AND_BROWS": "ref_10",
+        "NOSE": "ref_02",
+        "MOUTH": "ref_15"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_01.jfif",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_10.jpg",
+        "NOSE": "review/batch3_face_refs/ref_02.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_15.jpg"
+      },
+      "fixed": {
+        "display": "wanyin-jiang",
+        "age": 23,
+        "ethnicity": "中國",
+        "public_face": "旗袍店店主 / 古典舞背景 — 蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
+        "height_cm": 165,
+        "weight_kg": 47,
+        "bust_cm": 86,
+        "waist_cm": 57,
+        "hip_cm": 88,
+        "cup": "D",
+        "leg_cm": 79,
+        "hair": "現階段是黑色及腰長直髮，配合古典造型；盤髻與放下的落差是她的造型引擎。想換色的話換一次就是一整季的新鮮感。",
+        "hair_color_current": "天然黑（現階段）",
+        "superseded_face_type": "非常白皙，江南長相：鵝蛋臉、柳葉眉、丹鳳眼、薄唇。古典妝：白底、桃花眼影、正紅唇。"
+      }
+    },
+    "ruoruo-tang": {
+      "archetype": "寬中臉、鈍下巴、骨肉均衡的運動成人臉",
+      "axes": {
+        "輪廓原型": "寬卵形",
+        "臉長寬比": "中等",
+        "三庭配置": "均衡",
+        "骨肉量": "寬骨量",
+        "五官場": "橫向分散",
+        "顎頦": "寬顎+短鈍頦",
+        "眼眶結構": "細長平視",
+        "眼距": "寬",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "寬中等唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 27-year-old Chinese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_15; NOSE from ref_10; MOUTH from ref_08. Build a broad oval bone canvas with straight cheek planes, a firm broad jaw, and a short blunt chin. Keep the thirds balanced, spread restrained level eyes wide, use a medium straight nose with a soft blunt tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "broad middle face",
+        "wide-set level eyes",
+        "straight cheek planes",
+        "broad jaw",
+        "short blunt chin"
+      ],
+      "why_distinct": "她比最接近的 angel 臉更長、骨量更大且眼裂較細，寬顎鈍頦也與 rainie 的窄尖下顎不同。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_15",
+        "NOSE": "ref_10",
+        "MOUTH": "ref_08"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_11.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_15.jpg",
+        "NOSE": "review/batch3_face_refs/ref_10.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_08.jpg"
+      },
+      "fixed": {
+        "display": "ruoruo-tang",
+        "age": 27,
+        "ethnicity": "中國",
+        "public_face": "皮拉提斯教練 — 器械皮拉提斯教練 — 身體控制力極強，姿態比重量重要。",
+        "height_cm": 167,
+        "weight_kg": 49,
+        "bust_cm": 87,
+        "waist_cm": 59,
+        "hip_cm": 90,
+        "cup": "C",
+        "leg_cm": 82,
+        "hair": "淺栗棕（暖調染色），中長髮，上課低丸子頭，下課放下微捲。",
+        "hair_color_current": "淺栗棕（暖調染色）",
+        "superseded_face_type": "白皙偏暖，柔和圓臉但下顎線清晰，眼神專注。運動素顏感。"
+      }
+    },
+    "cheryl-soh": {
+      "archetype": "長卵形、下庭略長、五官垂直舒展的專業成人臉",
+      "axes": {
+        "輪廓原型": "長卵形",
+        "臉長寬比": "長窄",
+        "三庭配置": "中庭+長下庭",
+        "骨肉量": "骨肉均衡",
+        "五官場": "垂直舒展",
+        "顎頦": "窄顎+長鈍頦",
+        "眼眶結構": "圓開平視",
+        "眼距": "寬",
+        "鼻部量體": "長直細鼻",
+        "口部幾何": "小中等唇",
+        "頰部": "低位柔頰"
+      },
+      "face_en": "Create a new 25-year-old Chinese-Singaporean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_09; NOSE from ref_01; MOUTH from ref_10. Build a long oval canvas with low gentle cheek volume, a narrow jaw, and a visibly long lower third ending in a long blunt chin. Use wide-set open level eyes, a fine straight nose, and a compact medium-volume mouth. Arrange the features with vertical spacing rather than crowding. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "long oval canvas",
+        "vertically spaced features",
+        "wide-set open eyes",
+        "low cheek volume",
+        "long blunt chin"
+      ],
+      "why_distinct": "她比最接近的 nanami 下庭更長、眼距更寬且五官更垂直舒展，也沒有 rainie 的高顴與短尖頦。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_15",
+        "EYES_AND_BROWS": "ref_09",
+        "NOSE": "ref_01",
+        "MOUTH": "ref_10"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_15.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_09.jpg",
+        "NOSE": "review/batch3_face_refs/ref_01.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_10.jpg"
+      },
+      "fixed": {
+        "display": "cheryl-soh",
+        "age": 25,
+        "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+        "public_face": "空服員 — 制服與時差 — 一個月有半個月不在家，但她在新加坡有一間自己的公寓，那才是她的基地。",
+        "height_cm": 169,
+        "weight_kg": 51,
+        "bust_cm": 89,
+        "waist_cm": 60,
+        "hip_cm": 90,
+        "cup": "D",
+        "leg_cm": 83,
+        "hair": "現階段是黑色長髮，配合航空公司的儀容規定；上班一律法式包頭，下班全放下是大波浪。",
+        "hair_color_current": "天然黑（現階段）",
+        "superseded_face_type": "白皙（明確排除小麥色），東亞五官：鵝蛋臉、雙眼皮、鼻樑挺。空服妝：盤髮 + 正紅唇 + 精緻底妝。"
+      }
+    },
+    "wendy-yeo": {
+      "archetype": "長方骨架、顎角外顯、低眉單眼皮窄眼的英氣成人臉",
+      "axes": {
+        "輪廓原型": "長方",
+        "臉長寬比": "長窄",
+        "三庭配置": "中庭+長下庭",
+        "骨肉量": "寬骨量",
+        "五官場": "均衡",
+        "顎頦": "寬方顎+方頦",
+        "眼眶結構": "單眼皮窄平視",
+        "眼距": "中等",
+        "鼻部量體": "長直細鼻",
+        "口部幾何": "小中等唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 28-year-old Chinese-Singaporean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_13; NOSE from ref_02; MOUTH from ref_06. Build a long broad-boned rectangular canvas with straight cheek planes, visible jaw angles, a long lower third, and a square chin. Use low brows over narrow level eyes, a long straight fine nose, and a compact restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "long rectangular bone frame",
+        "single-eyelid narrow eyes",
+        "low brow line",
+        "visible jaw angles",
+        "compact restrained lips"
+      ],
+      "why_distinct": "她比最接近的 yerin 臉更長、眼睛更窄且是單眼皮；英氣方顎與小口也避開 rainie 的大雙眼皮和厚唇。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_13",
+        "NOSE": "ref_02",
+        "MOUTH": "ref_06"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_11.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_13.jfif",
+        "NOSE": "review/batch3_face_refs/ref_02.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_06.jfif"
+      },
+      "fixed": {
+        "display": "wendy-yeo",
+        "age": 28,
+        "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+        "public_face": "調酒師 — 吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
+        "height_cm": 164,
+        "weight_kg": 49,
+        "bust_cm": 90,
+        "waist_cm": 59,
+        "hip_cm": 91,
+        "cup": "E",
+        "leg_cm": 79,
+        "hair": "冷銀灰（漂到底的高階髮色），俐落的耳下短髮。28 歲、有手藝、有主導權的女生留這個顏色最說得通，也是全庫唯一的銀灰短髮。",
+        "hair_color_current": "冷銀灰（漂色）· 短髮",
+        "superseded_face_type": "白皙冷調，成熟輪廓：眉眼深、下顎線俐落，有一點英氣。霧面底妝 + 棕黑眼線 + 裸色唇。"
+      }
+    },
+    "peggy-lee": {
+      "archetype": "窄額寬顎、五官偏大的梯形張力成人臉",
+      "axes": {
+        "輪廓原型": "梯形",
+        "臉長寬比": "中等",
+        "三庭配置": "短中庭+中下庭",
+        "骨肉量": "寬骨量",
+        "五官場": "橫向分散",
+        "顎頦": "寬方顎+方頦",
+        "眼眶結構": "窄長上揚",
+        "眼距": "寬",
+        "鼻部量體": "中等直鼻+鈍鼻頭",
+        "口部幾何": "寬飽滿下唇",
+        "頰部": "平直中臉"
+      },
+      "face_en": "Create a new 24-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_06; NOSE from ref_12; MOUTH from ref_07. Build a trapezoid canvas with a forehead narrower than the broad jaw, clear lower-face corners, and a short square chin. Use wide-set large level eyes, a short softly shaped nose, and a wide full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "narrow forehead with broad jaw",
+        "wide-set elongated eyes",
+        "restrained lid height",
+        "square chin",
+        "wide full lower lip"
+      ],
+      "why_distinct": "她比最接近的 wendy 臉較短、額窄顎寬且眼距更大；雖有上揚眼，梯形寬下臉使她不會落入 rainie 的倒三角尖顎。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_11",
+        "EYES_AND_BROWS": "ref_06",
+        "NOSE": "ref_12",
+        "MOUTH": "ref_07"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_11.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_06.jfif",
+        "NOSE": "review/batch3_face_refs/ref_12.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_07.jpg"
+      },
+      "fixed": {
+        "display": "peggy-lee",
+        "age": 24,
+        "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+        "public_face": "汽車改裝店行銷企劃 — 在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
+        "height_cm": 166,
+        "weight_kg": 49,
+        "bust_cm": 93,
+        "waist_cm": 58,
+        "hip_cm": 92,
+        "cup": "F",
+        "leg_cm": 80,
+        "hair": "正酒紅 + 銀灰挑染，長捲髮蓬鬆張揚。車圈的女生本來就敢玩顏色，這是她在人群中被認出來的原因。",
+        "hair_color_current": "正酒紅 + 銀灰挑染（特殊色）",
+        "superseded_face_type": "白皙（明確排除小麥／古銅），濃眉大眼、五官張揚立體。眼線上揚 + 高光 + 亮唇。"
+      }
+    },
+    "sydney-leong": {
+      "archetype": "短寬圓角方形、雙頰中段飽滿的甜感成人臉",
+      "axes": {
+        "輪廓原型": "短寬圓角方",
+        "臉長寬比": "短寬",
+        "三庭配置": "短中庭+中下庭",
+        "骨肉量": "柔軟飽滿",
+        "五官場": "橫向分散",
+        "顎頦": "柔方顎+短鈍頦",
+        "眼眶結構": "圓開下垂",
+        "眼距": "寬",
+        "鼻部量體": "短寬軟鼻",
+        "口部幾何": "寬中等唇",
+        "頰部": "中段飽滿"
+      },
+      "face_en": "Create a new 22-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_12; NOSE from ref_05; MOUTH from ref_10. Build a softly squared short canvas with full mid-cheeks, a substantial rounded-square jaw, and a short blunt chin. Use wide-set open eyes with a gentle downward line, a short softly broad nose, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "short rounded-square outline",
+        "wide-set downturned eyes",
+        "full middle cheeks",
+        "short broad nose",
+        "short blunt chin"
+      ],
+      "why_distinct": "她比最接近的 tammy 下顎更方、額部較不寬且雙頰更集中，並以鈍顎下垂眼避開 rainie 的尖顎上揚眼。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_08",
+        "EYES_AND_BROWS": "ref_12",
+        "NOSE": "ref_05",
+        "MOUTH": "ref_10"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_08.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_12.jpg",
+        "NOSE": "review/batch3_face_refs/ref_05.jfif",
+        "MOUTH": "review/batch3_face_refs/ref_10.jpg"
+      },
+      "fixed": {
+        "display": "sydney-leong",
+        "age": 22,
+        "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+        "public_face": "甜點師 / 烘焙工作室 — 一個人的小工作室 — 接單、烤、包裝，圍裙上總是沾著麵粉。",
+        "height_cm": 159,
+        "weight_kg": 45,
+        "bust_cm": 88,
+        "waist_cm": 56,
+        "hip_cm": 87,
+        "cup": "E",
+        "leg_cm": 74,
+        "hair": "淺蜜金棕（漂過的甜系色），中長微捲，工作時低雙辮或包起（食安）。",
+        "hair_color_current": "淺蜜金棕（漂色）",
+        "superseded_face_type": "白皙偏暖，圓臉大眼、笑容甜，鄰家甜妹。氣墊 + 腮紅 + 唇蜜的淡妝。"
+      }
+    },
+    "angeline-kwee": {
+      "archetype": "極長窄卵形、長下庭與小型五官的高級感成人臉",
+      "axes": {
+        "輪廓原型": "長卵形",
+        "臉長寬比": "極長窄",
+        "三庭配置": "中庭+長下庭",
+        "骨肉量": "清瘦平面",
+        "五官場": "垂直舒展",
+        "顎頦": "窄顎+長鈍頦",
+        "眼眶結構": "細長下垂",
+        "眼距": "窄",
+        "鼻部量體": "長直細鼻",
+        "口部幾何": "小薄平唇",
+        "頰部": "高位平顴"
+      },
+      "face_en": "Create a new 23-year-old Chinese-Indonesian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_02; EYES_AND_BROWS from ref_10; NOSE from ref_07; MOUTH from ref_13. Build an exceptionally long narrow oval canvas with high planar cheek transitions, an extended lower third, a narrow jaw, and a long blunt chin. Place modest softly downturned eyes slightly close together, use a long defined nose, and a small straight thin mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
+      "negative_en": "NONE",
+      "markers": [
+        "exceptionally long narrow oval",
+        "close-set downturned eyes",
+        "modest-scale features",
+        "small thin mouth",
+        "long blunt chin"
+      ],
+      "why_distinct": "她比最接近的 rin 下庭更長、眼距更窄且嘴更小更薄，與 rainie 的大眼厚唇及短尖下巴明顯分離。",
+      "refs": {
+        "FACE_SHAPE_AND_JAW": "ref_02",
+        "EYES_AND_BROWS": "ref_10",
+        "NOSE": "ref_07",
+        "MOUTH": "ref_13"
+      },
+      "ref_files": {
+        "FACE_SHAPE_AND_JAW": "review/batch3_face_refs/ref_02.jpg",
+        "EYES_AND_BROWS": "review/batch3_face_refs/ref_10.jpg",
+        "NOSE": "review/batch3_face_refs/ref_07.jpg",
+        "MOUTH": "review/batch3_face_refs/ref_13.jfif"
+      },
+      "fixed": {
+        "display": "angeline-kwee",
+        "age": 23,
+        "ethnicity": "印尼華裔（Chinese-Indonesian）",
+        "public_face": "精品選物店主理人 — 家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
+        "height_cm": 171,
+        "weight_kg": 53,
+        "bust_cm": 91,
+        "waist_cm": 60,
+        "hip_cm": 92,
+        "cup": "E",
+        "leg_cm": 85,
+        "hair": "奶茶灰棕（低飽和的高級染色），長波浪，是她整個人「有錢但不張揚」的視覺註腳。",
+        "hair_color_current": "奶茶灰棕（低飽和染色）",
+        "superseded_face_type": "白皙透亮（明確排除 tanned / bronzed / olive / deep golden），東亞五官：鵝蛋臉、雙眼皮、鼻樑細挺，長相偏台／中路線而非東南亞感。"
+      }
+    }
+  }
+}
