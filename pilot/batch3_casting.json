@@ -16,7 +16,9 @@
     ],
     "_barefoot_note": "赤腳不能寫進 `She is wearing ...` 的清單（會變成『穿著她赤腳』），也不能沿用預設的全身景別句（那句寫 `down to her shoes`／`legs and shoes are clearly visible`，與赤腳直接衝突，等於同時要求畫鞋與不畫鞋）。改為 barefoot 旗標 + 專用的全身景別句。",
     "framing_full_body_barefoot": "The whole of her is inside the picture, from the top of her head down to her bare feet on the floor, with a margin of empty floor below her feet and a little space above her head. Her legs and bare feet are clearly visible.",
-    "_negation_scope": "否定式只准出現在 face_negative 與 skin_en 兩行。face_base、identity_markers、髮色、身材一律正面描述——這是 Round 2 用四張作廢圖換來的：構圖與結構的否定完全無效，會與同一段裡的正面描述互相競爭。"
+    "_negation_scope": "否定式只准出現在 face_negative 與 skin_en 兩行。face_base、identity_markers、髮色、身材一律正面描述——這是 Round 2 用四張作廢圖換來的：構圖與結構的否定完全無效，會與同一段裡的正面描述互相競爭。",
+    "_body_note": "2026-08-28 選角實測改版。第一版 16/16 全部把 E 罩杯畫成纖細平胸，wendy 與 angeline 甚至瘦到見骨——與 rainie-hsu v1 整批作廢的死法完全相同。成因：胸部寫在從句、slim／slender／narrow／thin 堆在主句，模型抓主句。改法：(1) 胸部放句首當第一視覺事實並給比較基準（把衣服撐出去多遠）；(2) 主動寫四肢有健康的肉，對抗伸展台體型；(3) 身高改用可比對的環境地標（kanon「頭頂約到桌面與層架的高度」），不要只給數字。",
+    "_closed_set_note": "2026-08-28 實測：**提到攝影器材就會把器材畫進畫面——即使那句話是在說它在畫面外。** yerin/a04 出現三腳架單眼，angeline/a02 與 a03 出現另一隻手拿著手機（等於畫面裡有第二個人）。16 張裡 3 張，是系統性的，與 Round 1 的 `white foam board just out of frame` 同一類。收尾句一律不再提 imaging device／phone／camera 的位置。"
   },
   "personas": {
     "yerin-han": {
@@ -34,9 +36,9 @@
       ],
       "body_en": {
         "face_closeup": "Her neck is long and her shoulders are square and straight, with the collarbone visible where it enters the frame.",
-        "waist_up": "Her build: square straight shoulders on a tall frame, a full chest, visible collarbones, and arms with the light, even definition of someone who swings a club every day rather than lifts weights. Her waist is narrow.",
-        "knee_up": "Her build: square straight shoulders on a tall frame, a full chest, visible collarbones, and arms with the light, even definition of someone who swings a club every day. Her waist is narrow and her hips are a little wider than her shoulders, with the firm rounded thighs of a golfer.",
-        "full_body": "Her build: square straight shoulders on a tall frame, a full chest, visible collarbones, and arms with the light, even definition of someone who swings a club every day. Her waist is narrow and her hips are a little wider than her shoulders, with the firm rounded thighs of a golfer. Her legs are long and straight. She is 170cm, tall and full-figured on an athletic frame."
+        "waist_up": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her top and is the first thing the silhouette says about her. Below it her waist draws in. Her shoulders are square and straight, her collarbones show, and her upper arms are softly rounded with the healthy flesh of an athlete rather than cut definition.",
+        "knee_up": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her top and is the first thing the silhouette says about her. Below it her waist draws in and her hips flare out wider than her shoulders. Her upper arms and thighs are softly rounded and solid, carrying the healthy flesh of an athlete rather than cut definition.",
+        "full_body": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her top and is the first thing the silhouette says about her. Below it her waist draws in and her hips flare out wider than her shoulders. Her upper arms and thighs are softly rounded and solid, carrying the healthy flesh of an athlete. Her legs are long and strong. She is 170cm and 53kg — tall, and built with real weight on her frame."
       },
       "hair_color_en": "Her hair is a soft ash-brown, with a few finer strands around her face lightened to a warm gold, the way a face-framing highlight sits in otherwise evenly dyed hair. Apart from those face-framing strands the colour is a single flat dye reaching the scalp: her roots are the same ash-brown as her ends.",
       "hair_en": "It is long, worn down in loose waves with a middle parting.",
@@ -76,10 +78,10 @@
         "cheekbones that read as bone under the skin"
       ],
       "body_en": {
-        "face_closeup": "Her neck is long and slender and her shoulders are narrow and sloping, with the collarbone visible where it enters the frame.",
-        "waist_up": "Her build: narrow sloping shoulders on a tall frame, a long neck, sharply visible collarbones, a full chest that reads clearly against how slender the rest of her is, and slim arms that stay soft and even in outline. Her waist is narrow.",
-        "knee_up": "Her build: narrow sloping shoulders on a tall frame, a long neck, sharply visible collarbones, a full chest that reads clearly against how slender the rest of her is, and slim arms that stay soft and even in outline. Her waist is narrow, her lower abdomen is flat, and her hips are about as wide as her shoulders.",
-        "full_body": "Her build: narrow sloping shoulders on a tall frame, a long neck, sharply visible collarbones, a full chest that reads clearly against how slender the rest of her is, and slim arms that stay soft and even in outline. Her waist is narrow, her lower abdomen is flat, and her hips are about as wide as her shoulders. Her legs are very long and straight. She is 171cm, tall and slender."
+        "face_closeup": "Her neck is long and her shoulders are narrow and sloping, with the collarbone visible where it enters the frame.",
+        "waist_up": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her camisole and pushes the silk out well in front of her ribcage. Below it her waist draws in sharply. Her shoulders are narrow and sloping and her collarbones show, but her upper arms are softly rounded with healthy flesh over them.",
+        "knee_up": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her camisole and pushes the silk out well in front of her ribcage. Below it her waist draws in sharply and her hips curve back out. Her upper arms and thighs are softly rounded with healthy flesh over them.",
+        "full_body": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her camisole and pushes the silk out well in front of her ribcage. Below it her waist draws in sharply and her hips curve back out. Her upper arms and thighs are softly rounded with healthy flesh over them. Her legs are long. She is 171cm and 53kg — tall, with a full hourglass shape rather than a runway-model outline."
       },
       "hair_color_en": "Her hair is a low-saturation greyish milk-tea brown — an expensive-looking muted colour that leans cool and grey. It is a single flat dye reaching the scalp: her roots are the same colour as her ends.",
       "hair_en": "It is long, and gathered up loosely in a claw clip at the back of her head, with a few strands left loose at her temples and the nape of her neck.",
@@ -113,10 +115,10 @@
         "a narrow rounded forehead above wide-set temples"
       ],
       "body_en": {
-        "face_closeup": "Her neck is short and slender and her shoulders are narrow and sloping, with the collarbone visible where it enters the frame.",
-        "waist_up": "Her build: very small and narrow-shouldered, with a full chest that reads unmistakably large against how tiny the rest of her is. Visible collarbones and thin arms. Her waist is narrow — very small even for how tiny she is.",
-        "knee_up": "Her build: very small and narrow-shouldered, with a full chest that reads unmistakably large against how tiny the rest of her is. Visible collarbones and thin arms. Her waist is very small and her hips are narrow.",
-        "full_body": "Her build: very small and narrow-shouldered, with a full chest that reads unmistakably large against how tiny the rest of her is. Visible collarbones and thin arms. Her waist is very small and her hips are narrow. Her legs are short in proportion to her body. She is 153cm — genuinely tiny, and the contrast between how small she is and how full her chest is is part of her shape."
+        "face_closeup": "Her neck is short and her shoulders are narrow and sloping, with the collarbone visible where it enters the frame.",
+        "waist_up": "Her figure reads full-chested first: on a body this small, her bust is strikingly heavy and round, stretching the front of her T-shirt out well beyond the line of her ribs. Below it her waist is tiny. Her shoulders are narrow and her upper arms are soft and rounded, with a small, finely scaled frame under all of it.",
+        "knee_up": "Her figure reads full-chested first: on a body this small, her bust is strikingly heavy and round, stretching the front of her T-shirt out well beyond the line of her ribs. Below it her waist is tiny and her hips stay narrow. Her upper arms and thighs are soft and rounded, and her thighs are short and full.",
+        "full_body": "Her figure reads full-chested first: on a body this small, her bust is strikingly heavy and round, stretching the front of her T-shirt out well beyond the line of her ribs. Below it her waist is tiny and her hips stay narrow. Her upper arms and thighs are soft, rounded and short. She is only 153cm: standing beside the sewing desk, the desktop comes up to her hip and the lower shelf sits at her shoulder. Everything about her frame is scaled down — short arms, short legs, small hands — which is exactly what makes the fullness of her chest read as strongly as it does."
       },
       "hair_color_en": "Her hair is a pink-lilac gradient: dark at the roots for the first hand's width, then blending down through a dusty lilac into a clear cotton-candy pink at the ends.",
       "hair_en": "It is very long, worn down with a loose wave through the lower half.",
@@ -140,7 +142,8 @@
         "waist_up": "Its length reaches her waist.",
         "knee_up": "Its length reaches her waist.",
         "full_body": "Its length reaches her waist."
-      }
+      },
+      "_age_note": "20 歲成年女性。身材描述一律用「尺度縮小、四肢短」表達嬌小，不使用任何與孩童連結的措辭。"
     },
     "wendy-yeo": {
       "display": "Wendy Yeo 楊薇伊",
@@ -157,9 +160,9 @@
       ],
       "body_en": {
         "face_closeup": "Her neck is slender and her shoulders are straight, with the collarbone visible where it enters the frame.",
-        "waist_up": "Her build: straight shoulders, a full chest, sharply visible collarbones, and slim arms with a little quiet definition through the forearms. Her waist is narrow.",
-        "knee_up": "Her build: straight shoulders, a full chest, sharply visible collarbones, and slim arms with a little quiet definition through the forearms. Her waist is narrow and her hips curve out clearly wider than her waist.",
-        "full_body": "Her build: straight shoulders, a full chest, sharply visible collarbones, and slim arms with a little quiet definition through the forearms. Her waist is narrow and her hips curve out clearly wider than her waist. Her legs are straight and in even proportion to her body. She is 164cm, with a full grown-woman's figure."
+        "waist_up": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her camisole. Below it her waist draws in. Her shoulders are straight and her collarbones show, but her upper arms are softly rounded and womanly, with healthy flesh over them — she is lean but solid, and her face is androgynous while her body is unmistakably a woman's.",
+        "knee_up": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her camisole. Below it her waist draws in and her hips curve out clearly wider than her waist. Her upper arms and thighs are softly rounded and womanly, with healthy flesh over them — she is lean but solid, and her face is androgynous while her body is unmistakably a woman's.",
+        "full_body": "Her figure reads full-chested first: a heavy, rounded bust that fills the front of her camisole. Below it her waist draws in and her hips curve out clearly wider than her waist. Her upper arms and thighs are softly rounded and womanly, with healthy flesh over them — she is lean but solid, and her face is androgynous while her body is unmistakably a woman's. She is 164cm and 49kg, with a grown woman's full figure."
       },
       "hair_color_en": "Her hair is a cool silver-grey, bleached all the way through: a single flat tone reaching the scalp, so her roots are the same silver-grey as her ends all the way along the strand.",
       "hair_en": "It is cut short, ending just below her ears, and worn down loose and slightly tousled with a side parting.",
@@ -178,6 +181,23 @@
         "occlusion": "the rest of the living room falls away into shadow"
       },
       "barefoot": true
+    }
+  },
+  "_generation_log": {
+    "2026-08-28_batch1": {
+      "personas": [
+        "yerin-han",
+        "angeline-kwee"
+      ],
+      "shots": 8,
+      "_delta": "這 8 張是在 a04 朝向句修正之前送出的。當時寫 `the camera sees the front of her trousers`，但 yerin 穿的是 joggers、kanon 穿的是短褲——把下半身講死成 trousers 是措辭不精確。已改為 `the front of her lower half — the waistband at her hips`。yerin／angeline 的 a04 出圖對應舊句，kanon／wendy 對應新句。"
+    },
+    "2026-08-28_batch2": {
+      "personas": [
+        "kanon-komori",
+        "wendy-yeo"
+      ],
+      "shots": 8
     }
   }
 }

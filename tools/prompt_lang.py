@@ -85,8 +85,8 @@ EYE_GAZE = {
 }
 VIEW = {
  'third_person': "The photograph is taken from a short distance away, at about eye level.",
- 'selfie_front': "The picture is what her phone's own front camera sees: she holds it herself at "
-                 "arm's length, and the device sits just past the edge of the frame.",
+ # 實測：講「器材就在畫面邊緣外」會把器材畫進畫面。只說這張圖是什麼，不說器材在哪裡。
+ 'selfie_front': "The picture is what her phone's own front camera sees, taken at arm's length.",
  'selfie_mirror':"She is photographing her own reflection in the mirror. The phone she is holding is "
                  "visible in the reflection.",
 }

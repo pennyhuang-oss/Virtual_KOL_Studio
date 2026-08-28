@@ -19,6 +19,13 @@ ANCHOR = "68ff990e-1862-4003-bfe3-fe288275cdd4"
 
 from prompt_lang import *   # 共用措辭字典（見該檔頂端的五條實測規則）
 
+# Nico 的 20 段是**已生成、已驗收、已送進 Soul 訓練**的紀錄，必須永遠重現當初送出去的字。
+# prompt_lang 的 selfie_front 在 2026-08-28 因為「提到器材就會把器材畫進畫面」而改寫，
+# 那條修正只適用於之後的角色；這裡釘住舊字串，否則 phase_c_prompts.json 會與 20 張出圖脫節。
+VIEW = dict(VIEW)
+VIEW['selfie_front'] = ("The picture is what her phone's own front camera sees: she holds it herself at "
+                        "arm's length, and the device sits just past the edge of the frame.")
+
 LOCATION = {
  'workplace_own_studio': "her own small nail studio in Taipei — a white manicure desk, a task lamp "
    "clamped to its edge, shelves of gel colour bottles on the wall",

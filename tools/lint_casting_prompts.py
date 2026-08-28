@@ -28,13 +28,7 @@ BEYOND = {
  'knee_up':      ['feet', 'shoes'],
  'full_body':    [],
 }
-# 該景別的身體描述必須以這句結尾（確認用對了 body_en 的那一版）
-BODY_TAIL = {
- 'face_closeup': 'enters the frame',
- 'waist_up':     'waist is narrow',
- 'knee_up':      'hips',
- 'full_body':    'She is 1',
-}
+# 身體描述用哨兵字串比對太脆——改寫措辭就會誤報。改為逐字比對 spec 裡該景別的那一版。
 VISIBLE = {'face_closeup': ['top', 'jewelry'], 'waist_up': ['top', 'top_hem', 'bottom', 'jewelry'],
            'knee_up': ['top', 'top_hem', 'bottom', 'jewelry'],
            'full_body': ['top', 'top_hem', 'bottom', 'shoes', 'jewelry']}
@@ -64,9 +58,11 @@ for key, txt in pr.items():
             if re.search(r'\b' + tok + r'\b', ln, re.I):
                 err(f"{key}（{f}）提到裁切外的「{tok}」：{ln[:90]}")
 
-    # 3. body_en 用對版本
-    if BODY_TAIL[f] not in txt:
-        err(f"{key} 的身體描述不是 {f} 那一版（找不到 {BODY_TAIL[f]!r}）")
+    # 3. body_en 必須逐字等於 spec 裡該景別的那一版（用錯版本＝要求模型畫裁切外的部位）
+    want = p['body_en'][f]
+    if want not in txt:
+        got = [ln for ln in lines if ln.startswith('Her figure') or ln.startswith('Her build') or ln.startswith('Her neck')]
+        err(f"{key} 的身體描述不是 spec 的 {f} 版本；實際為：{(got[0][:80] + '…') if got else '（找不到身體描述行）'}")
 
     # 4. 服裝層：該景別看得見的要在、看不見的不准在
     lay = p['outfit_en']

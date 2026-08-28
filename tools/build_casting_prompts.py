@@ -38,8 +38,8 @@ ORIENTATION = {
            "camera still sees the front of her chest, her navel and both collarbones, with one shoulder "
            "slightly nearer the lens than the other.",
     "a04": "Her navel, the front of her chest and the front of both shoulders all point toward the "
-           "camera. Both of her collarbones are visible, and the camera sees the front of her trousers "
-           "— the waistband and the front of both legs.",
+           "camera. Both of her collarbones are visible, and the camera sees the front of her lower "
+           "half — the waistband at her hips and the front of both legs.",
 }
 
 ACTION = {
@@ -100,16 +100,18 @@ def build(pid, p, shared, shot):
     P.append(" ".join([CAMERA_TYPE[shot["cam"]], DISTORTION[shot["dist"]], DOF["adequate"]]))
     P.append(" ".join([FILTER["none"], COMPOSITION["centered"], BGC["moderate"], HL["allowed"]]))
     CLOSED = {
+        # 實測：提到器材就會把器材畫進畫面——即使是在說它在畫面外（yerin/a04 出現三腳架單眼、
+        # angeline/a02+a03 出現第二隻手拿手機）。收尾句一律不再提器材位置。
         "third_person":
-            "Everything in this picture is accounted for: the only person in it is her, and every "
-            "visible hand connects to one of her own arms. The camera viewpoint sits nearby at about "
-            "eye level, with the imaging device and whoever holds it beyond the frame edge. "
-            "Illumination comes exclusively from the natural or architectural light sources named above.",
+            "Everything in this picture is accounted for: she is the only person present, and every "
+            "visible hand connects to one of her own arms. The room holds only the furnishings named "
+            "above. Illumination comes exclusively from the natural or architectural light sources "
+            "named above.",
         "selfie_front":
-            "Everything in this picture is accounted for: the image is what her phone's front camera "
-            "sees, so the device itself sits just beyond the frame edge. The only person in it is her, "
-            "and every visible hand connects to one of her own arms. Illumination comes exclusively "
-            "from the natural or architectural light sources named above.",
+            "Everything in this picture is accounted for: she is the only person present, and every "
+            "visible hand connects to one of her own arms. The room holds only the furnishings named "
+            "above. Illumination comes exclusively from the natural or architectural light sources "
+            "named above.",
     }
     P.append("Real skin texture with visible pores and fine flyaway hairs. " + CLOSED[shot["view"]])
     return "\n".join(P)
