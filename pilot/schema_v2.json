@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Shoot Plan Schema v2 — named-object 版",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "changelog": "v1 用 positional array，欄位靠位置辨識、容易 off-by-one，且 scene 自然語言會偷偷覆寫 outfit/hair。v2 改為 named object，並拆出身分覆蓋欄位與五段式光線欄位。 ｜ v2.1（C-15）：補上頂層 schema，用 $ref 把 phase_c_shots.items 綁到 #/definitions/shot，並加上 shot_id 唯一性與 additionalProperties 策略。先前只有 definitions.shot、頂層沒有連過去，所以即使另跑一般 JSON Schema validator 也不會驗整份 pilot。",
   "single_source_of_truth": {
     "outfit": "只能由 outfit_id 決定。scene 內禁止出現任何服裝單品名詞。",
@@ -198,7 +198,8 @@
                 "L5_hard_outdoor_daylight",
                 "L6_soft_overcast",
                 "L7_vehicle_interior",
-                "L8_bathroom_fluorescent"
+                "L8_bathroom_fluorescent",
+                "L9_screen_only_uplight"
               ]
             },
             "key": {
@@ -341,12 +342,15 @@
           "items": {
             "type": "object",
             "required": [
-              "id",
-              "test_variable",
-              "expected_invariant",
               "applicable_rubric_items",
+              "expected_invariant",
               "fixed",
-              "replicates"
+              "held_constant_fields",
+              "id",
+              "primary_test_variable",
+              "replicates",
+              "required_measurement_changes",
+              "test_variable"
             ],
             "properties": {
               "id": {
@@ -375,6 +379,33 @@
               "fixed": {
                 "type": "object",
                 "description": "該 shot 除了 test_variable 之外全部固定的欄位，讓 benchmark 可重現"
+              },
+              "primary_test_variable": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "field": {
+                    "type": "string"
+                  },
+                  "value": {}
+                },
+                "required": [
+                  "field",
+                  "value"
+                ]
+              },
+              "required_measurement_changes": {
+                "type": "object",
+                "description": "為了讓被測維度可見而必須連動改變的欄位 → 理由。C-21。"
+              },
+              "held_constant_fields": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
               }
             }
           }
@@ -398,6 +429,12 @@
           "type": "object"
         },
         "seed_policy": {
+          "type": "string"
+        },
+        "_c21_note": {
+          "type": "string"
+        },
+        "_known_risk_note": {
           "type": "string"
         }
       }

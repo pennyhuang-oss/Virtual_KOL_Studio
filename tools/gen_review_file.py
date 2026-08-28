@@ -208,7 +208,7 @@ def build():
     w("")
     w("---")
     w("")
-    w("## §4 前四輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）")
+    w("## §4 前五輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）")
     w("")
     w("| 輪次 | 發現的主要問題 |")
     w("|------|---------------|")
@@ -216,11 +216,15 @@ def build():
     w("| R2 | Claude 寫了一支「為了讓 validator PASS 而改資料」的程式，它只改 outfit/hair 數字沒動 scene 文字 → 12 列服裝衝突、14 列髮型衝突；濾鏡與視角用列位置指派 → 20 位的第 1 列全是 meitu＋自拍 |")
     w("| R3 | 覆核包統計與 JSON 漂移（寫 5 種 lighting 實際 6 種、寫 L1×3 實際 ×5、寫 4+4 場景實際 3+3）。原因是人工抄寫 |")
     w("| R4 | `schema_v2.json` 根本沒被執行（對抗測試：注入非法 enum 仍 PASS）；anchor 的 scene 寫「坐著」但欄位是 `standing`；label override 可用一個理由同時放行兩欄 |")
+    w("| R5 | 兩個 P0：(a) 語意覆核 0/20，validator 卻印「✓ 全數通過」且 exit=0——這個 gate 形同虛設；(b) Phase C 三個物理矛盾（鐵門遮住的正是那面落地窗／修眉＋撐洗手台＋持機＝三隻手／衣櫃把「赤腳」寫進定義卻用在公園）。另外 Phase D 宣稱單一變量但實際同時改 3 個欄位，且 st08b 宣稱測下打光——那個變量根本沒有編碼進任何欄位 |")
     w("")
     w("**共同模式**：Claude 反覆犯的是同一類錯——**改了一個欄位，沒有同步改另一個**，")
     w("以及**把規則形式化之後，對規則本身過度擬合**（為了湊 quota 把普通場景標成 A 級）。")
     w("")
-    w("目前這一版是 R4 的 11 條全部處理完之後的結果。")
+    w("**R5 的教訓**：機器 lint 全過，不代表計畫成立。R5 的 4 個矛盾都是在 validator 印")
+    w("「✓ 全數通過」的狀態下被人讀出來的。所以本輪起，語意逐列覆核未達 20/20 一律 HARD FAIL。")
+    w("")
+    w("目前這一版是 R5 的 13 條判定 + 4 條新議題全部處理完之後的結果。")
     w("")
     w("---")
     w("")
@@ -319,18 +323,39 @@ def build():
     w("")
     w(f"{pd['_purpose']}")
     w("")
-    w(f"**固定基準**：{pd['fixed_baseline']}")
+    fb=pd['fixed_baseline']
+    w("**固定基準**："+"、".join(f"`{k}`={v}" for k,v in fb.items() if not k.startswith('_')))
+    if fb.get('_note'): w("")
+    if fb.get('_note'): w(f"> {fb['_note']}")
     w("")
     w(f"**seed 政策**：{pd['seed_policy']}")
     w("")
-    w("| id | 測什麼（唯一變數）| 期望不變的是 | 適用 rubric | 固定 framing/yaw | replicates | 依賴 |")
-    w("|----|------------------|-------------|------------|-----------------|-----------|------|")
-    for x in pd['shots']:
-        f=x['fixed']
-        w(f"| `{x['id']}` | {x['test_variable']} | {x['expected_invariant']} | {'、'.join(x['applicable_rubric_items'])} | "
-          f"{f['framing']}/{f['head_yaw']} | {x['replicates']} | {x.get('depends_on') or '—'} |")
+    w(pd.get('_c21_note',''))
     w("")
-    w(f"**已知風險**：{pd['known_risk']}")
+    w("| id | 被測維度（primary）| 為了量得到而必須連動改的 | 期望不變的是 | 適用 rubric | replicates | 依賴 |")
+    w("|----|-------------------|------------------------|-------------|------------|-----------|------|")
+    for x in pd['shots']:
+        prim=x.get('primary_test_variable')
+        pv=f"`{prim['field']}` = {prim['value']}" if prim else "—（基準線）"
+        rmc=x.get('required_measurement_changes',{})
+        rv="；".join(f"`{k}`（{v}）" for k,v in rmc.items()) or "無"
+        w(f"| `{x['id']}` | {pv} | {rv} | {x['expected_invariant']} | {'、'.join(x['applicable_rubric_items'])} | "
+          f"{x['replicates']} | {x.get('depends_on') or '—'} |")
+    w("")
+    # C-21：render 數與成本一律現算，不得手寫
+    cond=[x for x in pd['shots'] if x.get('depends_on')]
+    tot=sum(x['replicates'] for x in pd['shots'])
+    cond_r=sum(x['replicates'] for x in cond)
+    w(f"**render 預算（現算，非手寫）**：{len(pd['shots'])} 是 test case 數，不是 render 數。"
+      f"依 replicates 加總，每個 soul {tot-cond_r}–{tot} 張"
+      f"（{len(cond)} 個條件式 shot：{'、'.join(x['id'] for x in cond) or '無'}）。"
+      f"Retroactive Benchmark 跑 GOOD + KNOWN_BAD 兩個 soul = {2*(tot-cond_r)}–{2*tot} 張。")
+    w("")
+    # C-07：集中度沿用同一份現算 stats，不得手寫
+    w(f"**已知風險（現算）**：家＋工作場所共 {s['hw_all']}/{s['n']}（{s['hw_all']/s['n']:.0%}）；"
+      f"{s['anchors']} 張 clean identity anchor 中有 {s['anchor_in_hw']} 張落在這兩個空間。"
+      f"若 stress test 仍出現固定背景烙印，代表 lifestyle 那 {s['life']} 張的世界集中度還要再降。"
+      f"（C-07：此段原本是 JSON 內嵌的手寫字串，資料一改就變舊值，已改為與 §5-6 同源現算。）")
     w("")
     w("### 5-8 Soul QA Rubric")
     r=d['soul_qa_rubric']; tm=r['threshold_method']
@@ -343,7 +368,7 @@ def build():
     w(f"**總分門檻**：{r['aggregate_threshold']}")
     w("")
     w(f"**訂定方法：{tm['name']}**")
-    for k in ('_why','ground_truth','persona_adaptation','scoring_aggregation','replicates','cost'):
+    for k in ('_why','ground_truth','persona_adaptation','scoring_aggregation','replicates','_cost_note'):
         if tm.get(k): w(f"- **{k}**：{tm[k]}")
     w("")
     w("**baseline**（由使用者裁決）：")
@@ -403,16 +428,33 @@ def build():
     w("")
     w("## §8 本輪請你判斷")
     w("")
-    w("1. **上表所有 🔵 的項目**：修正是否到位、可否結案？")
-    w("2. **新發現**：以 §3 的規則為判準，這一版還有什麼問題？特別是：")
-    w("   - 20 張的身分覆蓋是否真的足夠訓練一個穩定的 Soul")
-    w("   - 有沒有哪個場景／服裝／光線組合在現實中不成立")
-    w("   - C 級場景（早餐店、超商、洗衣店、藥妝店、月台）夠不夠「不美」，還是仍被美化")
-    w("   - Phase D 的 13 個 shot 是否真的可重現、變量是否單一")
-    w("3. **放行判定**：可以開始生成，還是仍有 P0 必須先修？")
+    w("### 8-1 先看兩個爭議點（我沒有照你說的改，請裁決）")
+    w("")
+    w("1. **C-20 的 c04**：你說「看螢幕」與「看鏡頭」是兩個視線目標。我認為對**前鏡頭自拍**不成立——")
+    w("   前鏡頭與螢幕在同一個平面，低頭看螢幕就是看鏡頭。`view=selfie_front` + `eye_gaze=camera`")
+    w("   + `head_pitch=down_15` 三者一致。我只改了真正的問題：`props` 原本把手機列為入鏡道具，")
+    w("   但手機是拍攝裝置，同時當道具會讓畫面出現第二支手機。**你同不同意？**")
+    w("2. **C-22 的 c03**：早餐店那張 `filter=none`，沒有任何風格化處理。門口晨光過曝＋不鏽鋼桌面反射")
+    w("   ＋天花板冷白燈管，這正是真實早餐店的混光樣子。我認為被美化的是 c12（動態車頭燈＋CCD），")
+    w("   已改掉。**c03 你堅持要改嗎？如果要，請具體說改哪一段光。**")
+    w("")
+    w("### 8-2 這一輪請你判斷")
+    w("")
+    w("1. **§7 所有 🔵 的項目**：修正是否到位、可否結案？特別是 C-21——")
+    w("   我用你要求的三欄拆分，然後讓 validator 反算稽核，結果又抓到你沒指出的兩個：")
+    w("   `st05` 宣稱測 `body_pose=seated` 但 `fixed` 裡根本沒有這個欄位（和 st08b 同病），")
+    w("   以及 `fixed_baseline` 漏了 `framing`／`head_yaw`／`body_pose`／`camera` 四個欄位，")
+    w("   等於「其餘全部固定」這句話沒有比較對象。請確認現在的稽核邏輯有沒有漏洞。")
+    w("2. **語意逐列覆核（現在是 HARD FAIL 的 gate）**：§5-6 的 20 列，請逐列判斷")
+    w("   `scene`／`outfit`／`hair`／`framing`／`view`／`eye_gaze`／`body_pose`／`props`／`light`")
+    w("   九者在物理上是否同時成立。R5 你抓到 3 個真的矛盾，這一關就是為此設的。")
+    w("   **請直接列出你認為有問題的 shot_id 與理由；沒問題的列出「無異議」的 id 即可。**")
+    w("3. **新發現**：以 §3 的規則為判準，這一版還有什麼問題？")
+    w("4. **放行判定**：可以開始生成，還是仍有 P0 必須先修？")
     w("")
     w("**判斷原則**：§5 的數字都是程式算的。如果你認為某個數字不對，直接指出——")
-    w("Claude 會實測驗證。前四輪你的數值主張全部正確，但也發生過你引用的官方規格")
+    w("Claude 會實測驗證。R5 你的數值主張（27 renders、8/19 舊值、exit code）逐條實測全部屬實；")
+    w("但也發生過你引用的官方規格")
     w("與本專案實際 API endpoint 不同（見 §2 訓練張數）。")
     w("")
     w("---")

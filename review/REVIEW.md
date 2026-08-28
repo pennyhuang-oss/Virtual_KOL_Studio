@@ -8,7 +8,7 @@
 **回覆方式**：把你的意見**直接寫在本檔案最下方 §9 回覆區**（在 `REPLIES BELOW` 那行以下）。
 那一段不會被自動產生覆蓋。Claude 會讀你寫的內容並修正。
 
-- 目前 commit：`5a30842`
+- 目前 commit：`9381d3b`
 - 檔案角色：本檔 §0–§8 由 `tools/gen_review_file.py` 從 `pilot/nico_pilot.json` 自動產生，所有數字都是程式算的，不是人工抄的
 
 ---
@@ -136,7 +136,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 
 ---
 
-## §4 前四輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）
+## §4 前五輪覆核發生過什麼（你的前任意見與 Claude 犯過的錯）
 
 | 輪次 | 發現的主要問題 |
 |------|---------------|
@@ -144,11 +144,15 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | R2 | Claude 寫了一支「為了讓 validator PASS 而改資料」的程式，它只改 outfit/hair 數字沒動 scene 文字 → 12 列服裝衝突、14 列髮型衝突；濾鏡與視角用列位置指派 → 20 位的第 1 列全是 meitu＋自拍 |
 | R3 | 覆核包統計與 JSON 漂移（寫 5 種 lighting 實際 6 種、寫 L1×3 實際 ×5、寫 4+4 場景實際 3+3）。原因是人工抄寫 |
 | R4 | `schema_v2.json` 根本沒被執行（對抗測試：注入非法 enum 仍 PASS）；anchor 的 scene 寫「坐著」但欄位是 `standing`；label override 可用一個理由同時放行兩欄 |
+| R5 | 兩個 P0：(a) 語意覆核 0/20，validator 卻印「✓ 全數通過」且 exit=0——這個 gate 形同虛設；(b) Phase C 三個物理矛盾（鐵門遮住的正是那面落地窗／修眉＋撐洗手台＋持機＝三隻手／衣櫃把「赤腳」寫進定義卻用在公園）。另外 Phase D 宣稱單一變量但實際同時改 3 個欄位，且 st08b 宣稱測下打光——那個變量根本沒有編碼進任何欄位 |
 
 **共同模式**：Claude 反覆犯的是同一類錯——**改了一個欄位，沒有同步改另一個**，
 以及**把規則形式化之後，對規則本身過度擬合**（為了湊 quota 把普通場景標成 A 級）。
 
-目前這一版是 R4 的 11 條全部處理完之後的結果。
+**R5 的教訓**：機器 lint 全過，不代表計畫成立。R5 的 4 個矛盾都是在 validator 印
+「✓ 全數通過」的狀態下被人讀出來的。所以本輪起，語意逐列覆核未達 20/20 一律 HARD FAIL。
+
+目前這一版是 R5 的 13 條判定 + 4 條新議題全部處理完之後的結果。
 
 ---
 
@@ -176,7 +180,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | ID | 區間 | 領型 | 上身 | 下身 | 鞋 | 包/外套 | 首飾 | 身材可讀 |
 |----|------|------|------|------|----|---------|------|---------|
 | `01` | ★極簡職人 | high mock neck | 炭灰色合身羅紋針織長袖，高領貼頸 | 黑色高腰直筒西裝褲 | 黑色皮革樂福鞋 | 米色帆布托特 | 銀色細戒指＋銀色小圈耳環 | ✅ |
-| `02` | 極休閒 | straight neckline spaghetti strap | 米白色棉質細肩帶背心，一字平口 | 灰色棉質及膝短褲 | 赤腳 | 薄針織開襟外套（脫下搭在椅背） | 銀色細項鍊 | ✅ |
+| `02` | 極休閒 | straight neckline spaghetti strap | 米白色棉質細肩帶背心，一字平口 | 灰色棉質及膝短褲 | 米白色帆布休閒鞋 | 薄針織開襟外套 | 銀色細項鍊 | ✅ |
 | `03` | 日常有型 | crew neck | 奶油色短版針織上衣，圓領 | 高腰淺色直筒牛仔褲 | 白色球鞋 | 深棕小方包 | 銀色圈形耳環 | ✅ |
 | `04` | 學院感 | collared button-down, top two buttons open | 白色寬版襯衫 | 黑色百褶短裙 | 黑色瑪莉珍鞋 | 灰色及膝襪 | 銀色髮夾 | ❌ |
 | `05` | 街頭 | crew neck, cropped hem | 黑色短版帽T | 灰色工裝寬褲 | 厚底球鞋 | 黑色斜背小包 | 銀色耳骨夾 | ❌ |
@@ -228,18 +232,18 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 | 05 | `a05` | identity_core | 公園長椅上坐著，身體較大幅度轉向右側 | `park` | B | `03` | `02` | chest_up | right_60 | neutral | mid_conversation | seated | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 | 06 | `a06` | body_pose_coverage | 公園步道上站著，正對鏡頭，雙手自然垂下 | `park` | B | `03` | `01` | full_body | front | neutral | neutral_relaxed | standing | camera | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 | 07 | `a07` | body_pose_coverage | 同一條步道，身體轉向右側四分之三，臉轉回鏡頭 | `park` | B | `01` | `04` | full_body | right_30 | neutral | soft_smile | standing | camera | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
-| 08 | `c01` | identity_core | 鐵門拉下後，坐在工作椅上轉過來看窗外，手還搭在椅背 | `workplace_own_studio` | B | `08` | `01` | face_closeup | front | neutral | neutral_composed | seated | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
+| 08 | `c01` | identity_core | 收工後鐵門拉下，坐在工作椅上轉過來看側窗外，手還搭在椅背 | `workplace_own_studio` | B | `08` | `01` | face_closeup | front | neutral | neutral_composed | seated | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
 | 09 | `c02` | identity_core | 蹲在地上拆剛到的材料紙箱，抬頭看向門口 | `workplace_own_studio` | B | `06` | `04` | chest_up | left_30 | up_10 | mildly_surprised | crouching | away | third_person | unobstructed | L2_single_window_daylight | diffuse | none | nail_studio | 是 |
 | 10 | `c03` | identity_core | 早餐店的板凳上等餐，手肘擱在桌沿 | `breakfast_shop` | C | `03` | `04` | waist_up | right_30 | down_15 | tired_soft | seated | down | third_person | unobstructed | L2_single_window_daylight | specular | none | — | — |
 | 11 | `c04` | identity_core | 床邊坐著，剛醒還沒站起來，低頭看手機 | `own_bedroom` | B | `08` | `06` | waist_up | front | down_15 | just_woken_blank | seated | camera | selfie_front | partial_hair | L2_single_window_daylight | diffuse | none | — | — |
 | 12 | `c05` | body_pose_coverage | 玄關穿鞋，一手扶著牆 | `own_entryway` | B | `04` | `05` | knee_up | left_60 | down_15 | focused | leaning | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | — | — |
 | 13 | `c06` | body_pose_coverage | 大安區巷子裡走路，剛越過一台停在牆邊的機車 | `city_street` | B | `03` | `05` | full_body | right_60 | neutral | neutral_walking | walking_frozen | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 | 14 | `c07` | identity_core | 低頭替客人上膠，側臉朝向鏡頭 | `workplace_own_studio` | B | `01` | `03` | chest_up | profile_left | down_15 | focused | seated | down | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | nail_studio | 是 |
-| 15 | `c08` | body_pose_coverage | 浴室鏡前修眉，另一手撐著洗手台 | `own_bathroom` | B | `08` | `02` | waist_up | left_30 | up_10 | concentrating_slight_frown | leaning | mirror | selfie_mirror | partial_hand | L8_bathroom_fluorescent | diffuse | none | — | — |
+| 15 | `c08` | body_pose_coverage | 浴室鏡前修眉，另一手舉著手機對著鏡子拍 | `own_bathroom` | B | `08` | `02` | waist_up | left_30 | up_10 | concentrating_slight_frown | standing | mirror | selfie_mirror | partial_hand | L8_bathroom_fluorescent | diffuse | none | — | — |
 | 16 | `c09` | body_pose_coverage | 便利商店的雜誌架前蹲下來看最下層，回頭 | `convenience_store` | C | `05` | `02` | knee_up | left_30 | up_10 | mildly_annoyed | crouching | camera | third_person | unobstructed | L1_single_ugly_overhead | diffuse | none | — | — |
 | 17 | `c10` | environment_stress | 自助洗衣店裡把烘好的衣物從滾筒抱出來，站在機台前 | `laundromat` | C | `09` | `04` | full_body | right_30 | neutral | neutral_composed | standing | away | third_person | unobstructed | L1_single_ugly_overhead | specular | none | — | — |
 | 18 | `c11` | environment_stress | 藥妝店貨架前拿護手霜比較成分 | `pharmacy` | C | `05` | `05` | knee_up | front | down_15 | reading_focused | standing | down | third_person | unobstructed | L1_single_ugly_overhead | diffuse | ccd | — | — |
-| 19 | `c12` | environment_stress | 捷運月台等車，看著對面的到站顯示 | `train_platform` | C | `06` | `04` | waist_up | right_30 | up_10 | blank_waiting | standing | away | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | ccd | — | — |
+| 19 | `c12` | environment_stress | 捷運月台等車，看著對面的到站顯示 | `train_platform` | C | `06` | `04` | waist_up | right_30 | up_10 | blank_waiting | standing | away | third_person | unobstructed | L3_mixed_warm_cool_practical | diffuse | none | — | — |
 | 20 | `a08` | identity_core | 公園步道旁站著，整個身體與臉都轉向右側，看著遠處 | `park` | B | `02` | `02` | chest_up | profile_right | neutral | calm_distant | standing | away | third_person | unobstructed | L6_soft_overcast | diffuse | none | — | — |
 
 **每張的光線五段**
@@ -258,7 +262,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
   - 不完美變數：構圖 centered／動態 none／白平衡 neutral／背景 moderate／高光 allowed／identity_safe True
 - **07 `a07`** ① 薄雲天的散射光｜② （diffuse）淺色步道地面均勻補光，側面輪廓與腿身比例清楚｜③ **無**（刻意留白）｜④ 全身同一曝光值，天空略過曝｜⑤ 無
   - 不完美變數：構圖 off_center／動態 none／白平衡 neutral／背景 moderate／高光 allowed／identity_safe True
-- **08 `c01`** ① 午後日光從她左前方落地窗、略高於視線｜② （diffuse）白色美甲桌面與白牆把光補回臉的暗面｜③ **無**（刻意留白）｜④ 對臉測光，窗外過曝成白，室內深處落入陰影｜⑤ 無
+- **08 `c01`** ① 午後日光從她左前方那扇沒被鐵門遮到的側面高窗進來，略高於視線｜② （diffuse）白色美甲桌面與白牆把光補回臉的暗面｜③ **無**（刻意留白）｜④ 對臉測光，窗外過曝成白，室內深處落入陰影｜⑤ 無
   - 不完美變數：構圖 off_center／動態 none／白平衡 neutral／背景 moderate／高光 allowed／identity_safe True
 - **09 `c02`** ① 落地窗日光從她右後方進來｜② （diffuse）地上散落的白色包裝紙把光反射回她下顎｜③ **無**（刻意留白）｜④ 對臉測光，窗邊過曝，紙箱陰影壓黑｜⑤ 無
   - 不完美變數：構圖 slightly_tilted／動態 minor_hand_blur／白平衡 slightly_cool_auto／背景 heavy／高光 none／identity_safe True
@@ -280,7 +284,7 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
   - 不完美變數：構圖 centered／動態 none／白平衡 slightly_cool_auto／背景 heavy／高光 heavy／identity_safe True
 - **18 `c11`** ① 藥妝店冷白日光燈頂光｜② （diffuse）貨架上的白色包裝把光反射回她胸口與下巴｜③ **無**（刻意留白）｜④ 對臉測光，燈管過曝，貨架深處壓黑｜⑤ 無
   - 不完美變數：構圖 off_center／動態 none／白平衡 color_cast_from_environment／背景 heavy／高光 allowed／identity_safe True
-- **19 `c12`** ① 月台天花板冷白日光燈｜② （diffuse）磨石子地面把光微弱地反射回來｜③ 列車進站時車頭燈從右側掃過，短暫在她臉上留下一道更亮的光｜④ 對臉測光，車頭燈那側過曝，月台深處壓黑｜⑤ 無
+- **19 `c12`** ① 月台天花板冷白日光燈｜② （diffuse）磨石子地面把光微弱地反射回來｜③ 月台廣告燈箱的暖白光從她身後平平地打在肩線上｜④ 對臉測光，車頭燈那側過曝，月台深處壓黑｜⑤ 無
   - 不完美變數：構圖 off_center／動態 subject_motion／白平衡 slightly_cool_auto／背景 heavy／高光 allowed／identity_safe True
 - **20 `a08`** ① 薄雲天的散射光，沒有硬陰影｜② （diffuse）淺色步道地面把光均勻補回她的側臉輪廓｜③ **無**（刻意留白）｜④ 對側臉測光，天空略過曝，下顎到頸的輪廓線完整可讀｜⑤ 無
   - 不完美變數：構圖 off_center／動態 none／白平衡 neutral／背景 moderate／高光 allowed／identity_safe True
@@ -290,9 +294,9 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 - **光線家族**：`L6_soft_overcast`×7（35%）、`L2_single_window_daylight`×6（30%）、`L3_mixed_warm_cool_practical`×3（15%）、`L1_single_ugly_overhead`×3（15%）、`L8_bathroom_fluorescent`×1（5%）
 - **景別**：`chest_up`×7、`full_body`×4、`waist_up`×4、`knee_up`×3、`face_closeup`×2
 - **頭部角度**：`front`×5、`right_30`×5、`left_30`×4、`left_60`×2、`right_60`×2、`profile_left`×1、`profile_right`×1
-- **身體姿態**：`standing`×8、`seated`×7、`crouching`×2、`leaning`×2、`walking_frozen`×1
+- **身體姿態**：`standing`×9、`seated`×7、`crouching`×2、`leaning`×1、`walking_frozen`×1
 - **視角**：`third_person`×18、`selfie_front`×1、`selfie_mirror`×1
-- **濾鏡**：`none`×18、`ccd`×2
+- **濾鏡**：`none`×19、`ccd`×1
 - **地點層級**：`B`×15、`C`×5
 - **地點**：`park`×4、`city_street`×3、`workplace_own_studio`×3、`local_cafe`×2、`breakfast_shop`×1、`own_bedroom`×1、`own_entryway`×1、`own_bathroom`×1、`convenience_store`×1、`laundromat`×1、`pharmacy`×1、`train_platform`×1
 - **穿搭**：`nico_outfit_01`×5（25%）、`nico_outfit_03`×5（25%）、`nico_outfit_08`×3（15%）、`nico_outfit_06`×2（10%）、`nico_outfit_05`×2（10%）、`nico_outfit_04`×1（5%）、`nico_outfit_09`×1（5%）、`nico_outfit_02`×1（5%）
@@ -306,27 +310,33 @@ vs `specular`（鏡面／玻璃／金屬／烤漆，只產生高光，不能當�
 
 Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還守得住。這是本 repo 從來沒做過的一步——過去只評估訓練圖本身的一致性，沒有測訓練後的漂移。
 
-**固定基準**：{'outfit_id': 'nico_outfit_01', 'hair_id': 'nico_hair_01', 'location': 'own_living_room', 'light_family': 'L2_single_window_daylight', 'filter': 'none', '_note': '除了各 shot 標示的 test_variable 之外，全部沿用這組基準。'}
+**固定基準**：`outfit_id`=nico_outfit_01、`hair_id`=nico_hair_01、`location`=own_living_room、`light_family`=L2_single_window_daylight、`filter`=none、`light_direction`=ambient、`framing`=chest_up、`head_yaw`=front、`body_pose`=standing、`camera`={'type': 'phone_rear', 'distortion': 'none', 'depth_of_field': 'adequate'}
+
+> 除了各 shot 的 primary_test_variable 與 required_measurement_changes 之外，全部沿用這組基準。validator 會反算：fixed 裡任何與本基準不同的欄位，都必須被這兩者其中之一明確認領。 R5：原本 fixed_baseline 只寫了 5 個欄位，framing / head_yaw / body_pose / camera 都不在基準裡，等於『其餘全部固定』這句話沒有比較對象——新的 C-21 稽核一跑就抓到。
 
 **seed 政策**：st00–st05 與 st10 各跑 3 次 replicate（平台若支援固定 seed 則固定，否則以重複樣本取代）。單張輸出無法區分 soul 品質與抽樣波動——這是 C-08 第 4 點的要求。
 
-| id | 測什麼（唯一變數）| 期望不變的是 | 適用 rubric | 固定 framing/yaw | replicates | 依賴 |
-|----|------------------|-------------|------------|-----------------|-----------|------|
-| `st00` | （無，基準線） | 這張定義該 soul 的『正常長相』，其餘所有 shot 與它比對 | face_identity、body_identity、apparent_age、skin_tone | chest_up/front | 3 | — |
-| `st01` | head_yaw = front + face_closeup | 五官比例與 identity marker 應與 st00 一致 | face_identity、apparent_age | face_closeup/front | 3 | — |
-| `st02` | head_yaw = left_30 | 左側輪廓下的臉仍是同一人 | face_identity | chest_up/left_30 | 3 | — |
-| `st03` | head_yaw = right_30 | 右側可見的 identity marker（右鼻翼小痣）應出現 | face_identity | chest_up/right_30 | 3 | — |
-| `st04` | framing = full_body | 身材比例符合 body_visual，未被放大成豐滿 | body_identity | full_body/front | 3 | — |
-| `st05` | body_pose = seated | 坐姿下軀幹與腿身比例仍穩定 | body_identity | waist_up/front | 3 | — |
-| `st06` | location = 戶外散射光 | 換到戶外自然光後臉與膚色不漂 | skin_tone、environment_independence、no_scene_burn_in | knee_up/front | 1 | — |
-| `st07` | light_family = 夜間招牌混光 | 強色偏下膚色與臉仍穩定 | skin_tone、environment_independence | waist_up/front | 1 | — |
-| `st08` | light_family = C 級冷白頂光 | 最容易讓臉崩的條件下仍是同一人 | face_identity、skin_tone、environment_independence | waist_up/front | 1 | — |
-| `st08b` | camera = 手機由下往上的極端打光 | 骨相不被打光扭曲成另一個人 | face_identity、apparent_age | face_closeup/front | 1 | — |
-| `st09a` | hair_id = nico_hair_06（濕髮，中度變化） | 換髮型後仍是同一人 | hair_independence、face_identity | chest_up/front | 1 | — |
-| `st09b` | hair_id = 長髮接髮（極端變化） | 極端髮長變化下 identity 是否仍守住 | hair_independence | chest_up/front | 1 | 只有 st09a 通過才執行。一次跳到極端，失敗時分不清是 hair independence 不足還是變量太大。 |
-| `st10` | outfit_id = nico_outfit_07（派對長洋裝） | 換裝後臉與身材不漂，且不帶出訓練服裝 | outfit_independence、no_outfit_burn_in、body_identity | full_body/front | 3 | — |
+C-21：原本每個 shot 宣稱『除了 test_variable 之外全部固定』，實際上 st05/st06/st07/st08/st08b/st10 都同時改了 framing、location 或 light。這些改動多數是「不改就量不到」的必要條件，問題不在改動本身而在沒有申報。改為三欄拆分：primary_test_variable（被測維度）／required_measurement_changes（為了讀得到被測維度而必須連動的欄位＋理由）／held_constant_fields（真正固定的欄位）。validator 會反算稽核。
 
-**已知風險**：家 5 張 + 工作室 3 張 = 8/19（42%）。**7 張 clean identity anchor 全部不在家或工作室**，所以最強的身分訊號沒有跟這兩個空間綁在一起。若 st06–st08 仍出現固定背景烙印，代表 lifestyle 那 12 張的世界集中度仍需再降。
+| id | 被測維度（primary）| 為了量得到而必須連動改的 | 期望不變的是 | 適用 rubric | replicates | 依賴 |
+|----|-------------------|------------------------|-------------|------------|-----------|------|
+| `st00` | —（基準線） | 無 | 這張定義該 soul 的『正常長相』，其餘所有 shot 與它比對 | face_identity、body_identity、apparent_age、skin_tone | 3 | — |
+| `st01` | `framing` = face_closeup | 無 | 五官比例與 identity marker 應與 st00 一致 | face_identity、apparent_age | 3 | — |
+| `st02` | `head_yaw` = left_30 | 無 | 左側輪廓下的臉仍是同一人 | face_identity | 3 | — |
+| `st03` | `head_yaw` = right_30 | 無 | 右側可見的 identity marker（右鼻翼小痣）應出現 | face_identity | 3 | — |
+| `st04` | `framing` = full_body | 無 | 身材比例符合 body_visual，未被放大成豐滿 | body_identity | 3 | — |
+| `st05` | `body_pose` = seated | `framing`（坐姿的軀幹比例與腿身比在 chest_up 讀不到，必須放到 waist_up 才量得到） | 坐姿下軀幹與腿身比例仍穩定 | body_identity | 3 | — |
+| `st06` | `location` = park | `light_family`（戶外不可能維持室內窗光——換場景必然換光源，這是物理強制的）；`framing`（要讀到「人與新環境的關係」而非只有臉，需 knee_up） | 換到戶外自然光後臉與膚色不漂 | skin_tone、environment_independence、no_scene_burn_in | 1 | — |
+| `st07` | `light_family` = L4_night_signage | `location`（夜間招牌混光只存在於街上，室內客廳無法產生此光）；`framing`（強色偏是否吃到膚色，要在臉以外的軀幹皮膚上才判得準） | 強色偏下膚色與臉仍穩定 | skin_tone、environment_independence | 1 | — |
+| `st08` | `light_family` = L1_single_ugly_overhead | `location`（冷白頂光的真實來源是超商，客廳無此燈具）；`framing`（同 st07，色偏與臉崩要同時讀） | 最容易讓臉崩的條件下仍是同一人 | face_identity、skin_tone、environment_independence | 1 | — |
+| `st08b` | `light_direction` = from_below_phone_screen | `light_family`（由下往上的光不可能來自窗光，必須換成「暗房＋手機螢幕是唯一光源」）；`framing`（下打光對骨相的扭曲只在 face_closeup 讀得到） | 暗房中手機螢幕由下往上打光，骨相不被扭曲成另一個人 | face_identity、apparent_age | 1 | — |
+| `st09a` | `hair_id` = nico_hair_06 | 無 | 換成濕髮後仍是同一人（中度髮型變化） | hair_independence、face_identity | 1 | — |
+| `st09b` | `hair_id` = EXTREME_long_extensions | 無 | 極端髮長變化下 identity 是否仍守住 | hair_independence | 1 | 只有 st09a 通過才執行。一次跳到極端，失敗時分不清是 hair independence 不足還是變量太大。 |
+| `st10` | `outfit_id` = nico_outfit_07 | `framing`（換裝後的身材漂移與 outfit burn-in 要全身才讀得到） | 換裝後臉與身材不漂，且不帶出訓練服裝 | outfit_independence、no_outfit_burn_in、body_identity | 3 | — |
+
+**render 預算（現算，非手寫）**：13 是 test case 數，不是 render 數。依 replicates 加總，每個 soul 26–27 張（1 個條件式 shot：st09b）。Retroactive Benchmark 跑 GOOD + KNOWN_BAD 兩個 soul = 52–54 張。
+
+**已知風險（現算）**：家＋工作場所共 6/20（30%）；8 張 clean identity anchor 中有 0 張落在這兩個空間。若 stress test 仍出現固定背景烙印，代表 lifestyle 那 12 張的世界集中度還要再降。（C-07：此段原本是 JSON 內嵌的手寫字串，資料一改就變舊值，已改為與 §5-6 同源現算。）
 
 ### 5-8 Soul QA Rubric
 
@@ -343,10 +353,10 @@ Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還�
 **訂定方法：Retroactive Benchmark**
 - **_why**：上一版寫 14/18 是我憑空訂的。而且 9 項每項至少 1 分時，4 項給 1 分 + 5 項給 2 分 = 14 剛好 PASS——四個維度都有可見漂移仍會通過，門檻太鬆。
 - **ground_truth**：`body_identity` 評的是「與該 persona 的**核准身材目標／核准 reference**是否相符」，**不是**「同一個 soul 自己是否前後自洽」。這一條專門針對 KNOWN_BAD：Rainie v1 若拿自己的錯誤 anchor 當真理，它的 body consistency 會很高——但它的失敗正是身材不符 94-59-92/F 罩杯設定，所以必須對目標評分。
-- **persona_adaptation**：Phase D 的 13 個 shot 目前寫的是 Nico 的 outfit / marker / 身材敘述，**不可原字套到 Iris 或 Rainie**。跑 benchmark 時**固定的是測試難度與變量類型**（yaw / framing / pose / 光線 / 髮型 / 換裝），各 persona 換成自己的 approved outfit、自己的 identity marker、自己的 body target。
+- **persona_adaptation**：Phase D 的每個 shot 目前寫的是 Nico 的 outfit / marker / 身材敘述，**不可原字套到 Iris 或 Rainie**。跑 benchmark 時**固定的是測試難度與變量類型**（yaw / framing / pose / 光線 / 髮型 / 換裝），各 persona 換成自己的 approved outfit、自己的 identity marker、自己的 body target。
 - **scoring_aggregation**：每個 rubric item 逐 shot 評分（只評該 shot 的 applicable_rubric_items），同一 item 取所有適用 shot 的**最低分**作為該 item 的最終分（最低分制，避免平均掩蓋單點失敗），9 個 item 加總得 0–18。hard gate 則是 per-shot 判定，任一 shot 觸發即整批 fail，不進加總。
 - **replicates**：st00–st05、st10 各 3 次。同一 shot 的 replicate 之間若判定不一致，該 item 取最低分。
-- **cost**：2 個 soul × 13 張 = 26 張。比訓練完才發現門檻訂錯便宜太多。
+- **_cost_note**：C-21：13 是 test case 數，不是 render 數。實際 render 數由 replicates 決定，並受 st09b 條件式影響，因此一律由 tools/gen_review_file.py 現算，本檔不內嵌。
 
 **baseline**（由使用者裁決）：
 - **GOOD** Iris Chen（`5fe3b6ba`，ready）：使用者指定。她是本 repo 第一個完成的人格，KOL_TRAINING_SOP.md 明寫「Iris Chen 是所有 KOL 的標準範本」，且訓練後在生產環境跨場景跨造型使用最久（競品對標批次、舞蹈克隆、溫泉短片、內衣鏡前自拍短片）。
@@ -376,9 +386,8 @@ Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還�
 **目前輸出**：
 
 ```
-驗證 nico-tsai（schema v2.1.0）
-  ⚠  語意覆核未完成：0/20 列，尚未覆核 ['nico_a01', 'nico_a02', 'nico_a03', 'nico_a04', 'nico_a05']…（生成前必須完成，見 pilot/semantic_review.md）
-  ✓ 全數通過
+驗證 nico-tsai（schema v2.2.0）
+  ✗  語意覆核未完成：0/20 列，尚未覆核 ['nico_a01', 'nico_a02', 'nico_a03', 'nico_a04', 'nico_a05']…（C-19：這是生成前的 gate，未達 20/20 一律 HARD FAIL。機器 lint 抓不到物理與語意矛盾——R5 就是在機器全過的狀態下被抓到 4 個。見 pilot/semantic_review.md）
 ```
 
 ---
@@ -387,20 +396,16 @@ Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還�
 
 | ID | 議題 | 提出者 | 狀態 | 備註 |
 |----|------|--------|------|------|
-| C-07 | 覆核包統計與 JSON 漂移 | ChatGPT | 🔵 Claude已修正 | 移除人工宣告的 `dominant_training_outfit`；validator 反算 `structure`／`shots` 宣告值，並禁止內嵌衍生統計 |
-| C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | 🔵 Claude已修正 | 四項封口全補：ground_truth 對 persona 目標評分（非 soul 自洽）、persona-adapted 等價測項、最低分制聚合、st00–st05/st10 各 3 replicate |
-| C-09 | validator 沒驗 Phase A / B / D | ChatGPT | 🔵 Claude已修正 | A 四候選必須固定 10 個欄位且 varies_only=identity；B2 必須真的換場景/穿搭/髮型/光線；D 驗 fixed、rubric item 存在性、depends_on 指向、rubric 全覆蓋 |
-| C-13 | identity marker 的 `2mm` 不是模型能穩定執行的單位 | ChatGPT | 🔵 Claude已修正 | `2mm` 改為相對可視語句，並補 2 個不依賴左右方向的骨相 marker（眼距、鼻頭形狀） |
-| C-14 | 19 位只是文件上凍結，沒有機制阻擋 | ChatGPT | 🔵 Claude已修正 | v1 資料標 `blocked_pending_v2_pilot`，v1 validator HARD FAIL exit 2；另建 `pilot/v1_known_issues_report.json` |
-| C-15 | `schema_v2.json` 未被實際執行，validator 可放過非法 enum / 空 props | ChatGPT | 🔵 Claude已修正 | schema v2.1 補頂層 + `$ref` 綁 shots + shot_id 唯一性 + additionalProperties；validator 從頂層驗。對抗測試 7/7 抓到 |
-| C-16 | clean anchors `nico_a01` / `nico_a02` 的 scene 與 body_pose 衝突 | ChatGPT | 🔵 Claude已修正 | a01/a02 body_pose 改 seated；新增姿態衝突檢查，且在後續改動中又抓到 c03 |
-| C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | 🔵 Claude已修正 | Phase D 改結構化單一變量：每 shot 有 test_variable / expected_invariant / applicable_rubric_items / fixed / replicates / depends_on |
-| C-18 | label override 可繞過 registry 推導並壓低 quota 計數 | ChatGPT | 🔵 Claude已修正 | signature 與 career 各自獨立 override reason；quota 一律以 effective value 計算 |
-| K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | 🔵 Claude已修正 | 新增 `tools/gen_semantic_checklist.py` 逐列覆核清單 + hash 新鮮度 gate，資料一改舊核可自動失效 |
-| K-02 | `nico_outfit_01` 佔 7/19（37%），比 R2 被指出的 30.8% 更高 | Claude | 🔵 Claude已修正 | 拆掉工作室三張的四重綁定（c01→outfit_08/hair_01、c02→outfit_06/hair_04）；最高佔比降到 5/20=25%，共 8 種 |
-| K-03 | 家＋工作室仍佔 42%，但 anchor 全在外面 | Claude | 🔵 Claude已修正 | c03→早餐店、c09→超商；全體 30%、lifestyle 子集 50%；validator 加雙層比例上限與三重固定組合檢查 |
-| K-04 | 19 張是否應補滿 20 | Claude | 🔵 Claude已修正 | 新增第 20 張 `nico_a08`：profile_right + outfit_02（未用過）+ 公園中性外部 B |
+| C-07 | 覆核包統計與 JSON 漂移 | ChatGPT | 🔵 Claude已修正（R5 再修） | 移除人工宣告的 `dominant_training_outfit`；validator 反算 `structure`／`shots` 宣告值，並禁止內嵌衍生統計；R5 抓到 `phase_d.known_risk` 與 rubric `cost` 仍是手寫舊值（8/19、42%、7 anchors、2×13=26）。已從 JSON 移除，改由 gen_review_file 與 §5-6 同源現算；render 預算亦改現算 |
+| C-08 | QA 門檻 14/18 憑空訂且偏鬆 | ChatGPT | 🔵 Claude已修正（R5 再修） | 四項封口全補：ground_truth 對 persona 目標評分（非 soul 自洽）、persona-adapted 等價測項、最低分制聚合、st00–st05/st10 各 3 replicate；成本字串已移除改現算；單一變量問題已隨 C-21 一併修正 |
+| C-17 | Phase D stress spec 仍是不可重現的自然語言選單 | ChatGPT | 🔵 Claude已修正（R5 再修） | Phase D 改結構化單一變量：每 shot 有 test_variable / expected_invariant / applicable_rubric_items / fixed / replicates / depends_on；Phase D 改三欄拆分：primary_test_variable／required_measurement_changes／held_constant_fields，validator 反算稽核 |
+| K-01 | validator 的 scene 衝突是 keyword guard 不是語意理解 | Claude | 🔵 Claude已修正（R5 再修） | 新增 `tools/gen_semantic_checklist.py` 逐列覆核清單 + hash 新鮮度 gate，資料一改舊核可自動失效；C-19：語意覆核未達 20/20 由 warning 改為 HARD FAIL（exit 1） |
+| K-04 | 19 張是否應補滿 20 | Claude | 🔵 Claude已修正（R5 再修） | 新增第 20 張 `nico_a08`：profile_right + outfit_02（未用過）+ 公園中性外部 B；outfit_02 的「赤腳」與「脫下搭在椅背」是場景狀態不是衣服定義，已移出衣櫃 |
 | K-05 | 跨 persona row fingerprint 檢查未實作 | Claude | 🟡 待處理 | ChatGPT 同意延後，但列為 persona #2 的前置 gate |
+| C-19 | 語意覆核 0/20 卻仍 exit 0 放行 | ChatGPT | 🔵 Claude已修正 | 實測確認：舊版印「⚠ 語意覆核未完成」後仍印「✓ 全數通過」且 exit=0。已改為 HARD FAIL exit 1；對抗測試確認會擋 |
+| C-20 | Phase C 四個物理／結構矛盾 | ChatGPT | 🔵 Claude已修正（3 條）／🔴 有爭議（1 條） | c01 鐵門遮住的正是落地窗→改側面高窗；c08 修眉＋撐洗手台＋持機＝三隻手→移除撐洗手台且 pose 改 standing；a08/outfit_02 見 K-04。**c04 不同意**：前鏡頭與螢幕同一平面，低頭看螢幕就是看鏡頭，selfie_front + eye_gaze=camera + down_15 三者一致；真正的問題是 props 把手機列為入鏡道具，已移除 |
+| C-21 | Phase D 並非真正單一變量，render 數算錯 | ChatGPT | 🔵 Claude已修正 | 逐條實測全部屬實，且比指出的更嚴重：st08b 宣稱測下打光但 camera 與基準完全相同、light_family 寫成 L4，被測的東西沒有編碼進任何欄位。新增 light_direction 欄位與 L9_screen_only_uplight。改三欄拆分後 validator 反算稽核，又自行抓到 st05 同病與 fixed_baseline 漏了 4 個欄位。render 預算改現算 |
+| C-22 | C 級場景被 cinematic treatment 抵銷 | ChatGPT | 🔵 Claude已修正（1 條）／🔴 有爭議（1 條） | c12 的「列車頭燈掃過」是動態戲劇光＋CCD，已改靜態廣告燈箱光且 filter 改 none。新增 validator 規則：C 級不得同時有濾鏡與動態光源，且帶濾鏡的 C 級不得超過 1/3。**c03 不同意改**：filter=none，門口晨光＋不鏽鋼反射＋天花板冷白燈管正是真實早餐店的混光，沒有風格化處理 |
 
 狀態圖例：🔵 Claude已修正（待你確認）　🟡 待處理　⚪ 待回應　🔴 有爭議
 
@@ -408,16 +413,33 @@ Soul 訓練完成後，測 identity 在訓練集沒教過的條件下是否還�
 
 ## §8 本輪請你判斷
 
-1. **上表所有 🔵 的項目**：修正是否到位、可否結案？
-2. **新發現**：以 §3 的規則為判準，這一版還有什麼問題？特別是：
-   - 20 張的身分覆蓋是否真的足夠訓練一個穩定的 Soul
-   - 有沒有哪個場景／服裝／光線組合在現實中不成立
-   - C 級場景（早餐店、超商、洗衣店、藥妝店、月台）夠不夠「不美」，還是仍被美化
-   - Phase D 的 13 個 shot 是否真的可重現、變量是否單一
-3. **放行判定**：可以開始生成，還是仍有 P0 必須先修？
+### 8-1 先看兩個爭議點（我沒有照你說的改，請裁決）
+
+1. **C-20 的 c04**：你說「看螢幕」與「看鏡頭」是兩個視線目標。我認為對**前鏡頭自拍**不成立——
+   前鏡頭與螢幕在同一個平面，低頭看螢幕就是看鏡頭。`view=selfie_front` + `eye_gaze=camera`
+   + `head_pitch=down_15` 三者一致。我只改了真正的問題：`props` 原本把手機列為入鏡道具，
+   但手機是拍攝裝置，同時當道具會讓畫面出現第二支手機。**你同不同意？**
+2. **C-22 的 c03**：早餐店那張 `filter=none`，沒有任何風格化處理。門口晨光過曝＋不鏽鋼桌面反射
+   ＋天花板冷白燈管，這正是真實早餐店的混光樣子。我認為被美化的是 c12（動態車頭燈＋CCD），
+   已改掉。**c03 你堅持要改嗎？如果要，請具體說改哪一段光。**
+
+### 8-2 這一輪請你判斷
+
+1. **§7 所有 🔵 的項目**：修正是否到位、可否結案？特別是 C-21——
+   我用你要求的三欄拆分，然後讓 validator 反算稽核，結果又抓到你沒指出的兩個：
+   `st05` 宣稱測 `body_pose=seated` 但 `fixed` 裡根本沒有這個欄位（和 st08b 同病），
+   以及 `fixed_baseline` 漏了 `framing`／`head_yaw`／`body_pose`／`camera` 四個欄位，
+   等於「其餘全部固定」這句話沒有比較對象。請確認現在的稽核邏輯有沒有漏洞。
+2. **語意逐列覆核（現在是 HARD FAIL 的 gate）**：§5-6 的 20 列，請逐列判斷
+   `scene`／`outfit`／`hair`／`framing`／`view`／`eye_gaze`／`body_pose`／`props`／`light`
+   九者在物理上是否同時成立。R5 你抓到 3 個真的矛盾，這一關就是為此設的。
+   **請直接列出你認為有問題的 shot_id 與理由；沒問題的列出「無異議」的 id 即可。**
+3. **新發現**：以 §3 的規則為判準，這一版還有什麼問題？
+4. **放行判定**：可以開始生成，還是仍有 P0 必須先修？
 
 **判斷原則**：§5 的數字都是程式算的。如果你認為某個數字不對，直接指出——
-Claude 會實測驗證。前四輪你的數值主張全部正確，但也發生過你引用的官方規格
+Claude 會實測驗證。R5 你的數值主張（27 renders、8/19 舊值、exit code）逐條實測全部屬實；
+但也發生過你引用的官方規格
 與本專案實際 API endpoint 不同（見 §2 訓練張數）。
 
 ---
@@ -427,90 +449,6 @@ Claude 會實測驗證。前四輪你的數值主張全部正確，但也發生�
 把意見寫在下面這行以下。Claude 會讀這一段。
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
-## ChatGPT R5 覆核回覆（2026-08-28）
 
-### 一、§7 所有 🔵 項目的結案判定
 
-| ID | 判定 | 理由 |
-|---|---|---|
-| C-07 | **不同意結案** | §5-7「已知風險」仍寫舊值 `8/19、42%、7 anchors`，但 §5-6 現值是 `6/20、30%、8 anchors`；Retroactive Benchmark 又寫成本 `2×13=26`，但 replicate 政策使每個 soul 最多實際生成 27 張、兩個 baseline 最多 54 張。衍生統計漂移仍存在。 |
-| C-08 | **不同意結案** | ground truth、persona adaptation、最低分聚合與 replicate 原則已補到位；但實際 Phase D 仍未完全做到單一變量，且成本／實際 render 數不一致。須連同 C-21 修正後再結案。 |
-| C-09 | **同意結案** | 依本檔所附規則與對抗測試，A/B/D 的結構 gate 已覆蓋先前缺口；語意層另由 K-01／C-19 處理。 |
-| C-13 | **同意結案** | 已移除 `2mm`，改為相對可視描述，並補兩個不依賴左右方向的 marker。 |
-| C-14 | **同意結案** | 已有機制性 blocked status、validator hard fail 與 known-issues report，不再只是文件宣告。 |
-| C-15 | **同意結案** | 已補完整頂層 schema、`$ref`、required／enum／minItems／additionalProperties／ID 唯一性，且附 4/4 schema 對抗測試。 |
-| C-16 | **同意結案** | a01/a02 已改為 `seated`，原問題修正到位；其他新語意矛盾另列 C-20。 |
-| C-17 | **不同意結案** | 資料結構已進步，但表內多列仍同時改 framing、pose、location、light 或 camera，與「唯一變量」宣稱不符；見 C-21。 |
-| C-18 | **同意結案** | signature／career 已拆成各自 override，quota 改算 effective value，原繞過路徑已封。 |
-| K-01 | **不同意結案** | 目前語意覆核是 **0/20**，validator 卻仍輸出 `✓ 全數通過`。若這真是生成前 gate，未完成時必須 non-zero exit／HARD FAIL，不能只是 warning；且本輪仍抓到多個真實矛盾。 |
-| K-02 | **同意結案** | 主導穿搭已降到 25%，工作室三張的 location＋outfit＋hair 四重綁定已拆開。 |
-| K-03 | **同意結案** | 全體 30%、lifestyle 50%、anchor 0/8 落在 home/work，作為 pilot 可接受；後續以 Phase D 實測 scene burn-in。舊風險文字仍須依 C-07 同步。 |
-| K-04 | **不同意結案** | profile_right 與第 20 張已補，但 a08 使用的 outfit_02 含「赤腳」及「外套脫下搭在椅背」，放在公園步道場景不成立。先修 a08 的 outfit／場景後才能結案。 |
 
-### 二、新議題
-
-#### C-19｜P0｜語意覆核尚未完成，gate 卻仍放行
-
-目前輸出明寫：
-
-- 語意覆核 0/20；
-- 生成前必須完成；
-- 最後仍是 `✓ 全數通過`。
-
-這三件事互相矛盾。若執行端只看 exit code，就可能在 0/20 覆核時直接開始花 credit。
-
-**修正要求**：未達 20/20、hash 過期或任一列未核可時，validator 必須 HARD FAIL 並回傳非零 exit code。完成 20/20 後再重跑，輸出才可 PASS。
-
-#### C-20｜P0｜Phase C 仍有四個現實／結構矛盾
-
-1. **c01**：場景是「鐵門拉下後」，光線卻是落地窗午後日光。若鐵門是店面捲門，通常會遮住主要採光；除非明寫另有未被遮擋的側窗，否則物理條件不完整。
-2. **c04**：scene／pitch 寫「低頭看手機」，但 `eye_gaze=camera`。看螢幕與看鏡頭是兩個不同視線目標，identity_core 不應含衝突指令。
-3. **c08**：`selfie_mirror` 需要一手拿手機，但場景同時要求一手修眉、另一手撐洗手台，三個動作只有兩隻手，無法成立。
-4. **a08**：outfit_02 定義為赤腳，外套脫下搭在椅背；場景卻是在公園步道站立且沒有椅子。這張又是新增的 clean anchor，不能讓模型臨場自行忽略服裝層。
-
-**修正要求**：生成前逐一改到 scene、view、gaze、pose、outfit 五者物理一致，更新 semantic checklist hash 後重新核可。
-
-#### C-21｜P1｜Phase D 並非真正單一變量，render 數與成本也算錯
-
-目前最明顯的複合變量：
-
-- st05：相對 st00 同時改 `body_pose` 與 framing（chest_up→waist_up）。
-- st06：同時改 location、自然光條件與 framing（chest_up→knee_up）。
-- st07／st08：改 light 的同時也改 framing（chest_up→waist_up）。
-- st08b：實際上同時改 camera／view、下打光方向與 framing。
-- st10：改 outfit 的同時改 framing（chest_up→full_body）。
-
-有些 framing 變化是為了讓被測維度可見，這可以接受，但不能再宣稱「除了 test_variable 外全部固定」。請把欄位拆成：
-
-- `primary_test_variable`
-- `required_measurement_changes`（例如為讀身材而改 full_body）
-- `held_constant_fields`
-
-另外，13 是 **test case 數**，不是 render 數。依現行 replicate：
-
-- st00–st05：6×3＝18
-- st06–st09b：6×1＝6
-- st10：1×3＝3
-- 每 soul 最多 **27 renders**；兩個 baseline 最多 **54 renders**，不是 26。
-
-st09b 若條件式不執行，則應另列最低／最高成本。這項可與 Phase A/C 前置修正並行，但必須在 Soul 訓練完成前封口。
-
-#### C-22｜P1｜五個 C 級地點足夠，但其中兩個仍被拍得偏美
-
-地點數量與類型已足夠：早餐店、超商、洗衣店、藥妝店、月台確實有日常性；問題在視覺處理：
-
-- **c03** 的門口晨光＋冷白混光＋不鏽鋼反射，可能被模型理解成帶電影感的早餐店人像。
-- **c12** 的列車車頭燈掃過＋CCD，可能變成戲劇性月台街拍。
-- c09、c10 的醜頂光／重背景，以及 c11 的貨架冷白光，較符合「不美但真實」。
-
-不必把所有 C 級拍得難看，但至少避免五張裡有兩張被同一套「動態光＋復古濾鏡」美化。建議 c03 或 c12 至少一張改成平、雜、普通的現場光；C 級 quota 除了 location tier，也應人工檢查是否被 cinematic treatment 抵銷。
-
-### 三、§8 三題總結
-
-1. **🔵 結案狀態**：同意結案 8 項；不同意結案 5 項（C-07、C-08、C-17、K-01、K-04）。
-2. **規格品質**：
-   - 20 張的身分覆蓋在紙面上已足夠：8 clean anchors、雙側 30/60 度、左右 profile、2 張 clean face closeup、3 張 clean body-readable full-body，且造型與場景分布不再被單一組合綁死。
-   - 仍有 C-20 的四個物理／結構矛盾。
-   - C 級地點夠，但 c03、c12 有被美化的風險。
-   - Phase D 已結構化，但仍不是嚴格單一變量，且 render 成本計算錯誤。
-3. **放行判定：目前不放行生成。** 先完成 C-19、C-20 兩個 P0；兩項修完、semantic review 達 20/20 且 validator 以有效 hash PASS 後，可以開始生成。C-21、C-22 可並行處理，但必須在對應 Phase D／Phase C 圖片執行前完成。

@@ -1,6 +1,6 @@
 # 語意覆核清單 — Nico Pilot Phase C
 
-> 資料 hash：`edcacbc59355a286`　|　20 列
+> 資料 hash：`c7545b5455b512af`　|　20 列
 > **機器 lint 已通過不代表語意正確。** 逐列確認「scene 這句話」與右邊每個結構欄位是否真的相容。
 > 覆核完成後把 `pilot/semantic_review.json` 的 `reviewed_shot_ids` 填滿並記錄 `data_hash`。
 > 資料一改 hash 就變，舊的覆核紀錄自動失效。
@@ -147,7 +147,7 @@
 
 ### nico_c01
 
-**scene**：鐵門拉下後，坐在工作椅上轉過來看窗外，手還搭在椅背
+**scene**：收工後鐵門拉下，坐在工作椅上轉過來看側窗外，手還搭在椅背
 
 | 欄位 | 值 | 與 scene 相容？ |
 |------|----|----------------|
@@ -287,11 +287,11 @@
 
 ### nico_c08
 
-**scene**：浴室鏡前修眉，另一手撐著洗手台
+**scene**：浴室鏡前修眉，另一手舉著手機對著鏡子拍
 
 | 欄位 | 值 | 與 scene 相容？ |
 |------|----|----------------|
-| body_pose | `leaning` | ☐ |
+| body_pose | `standing` | ☐ |
 | framing | `waist_up` | ☐ |
 | head_yaw / pitch | `left_30` / `up_10` | ☐ |
 | eye_gaze | `mirror` | ☐ |

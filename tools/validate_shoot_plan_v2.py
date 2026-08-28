@@ -395,9 +395,61 @@ def validate(pilot, registry, schema=None):
             done=set(sr.get('reviewed_shot_ids',[])); allids={x['shot_id'] for x in shots}
             missing=allids-done
             if missing:
-                warn.append(f"語意覆核未完成：{len(done)}/{len(allids)} 列，"
-                            f"尚未覆核 {sorted(missing)[:5]}{'…' if len(missing)>5 else ''}"
-                            "（生成前必須完成，見 pilot/semantic_review.md）")
+                err.append(f"語意覆核未完成：{len(done)}/{len(allids)} 列，"
+                           f"尚未覆核 {sorted(missing)[:5]}{'…' if len(missing)>5 else ''}"
+                           "（C-19：這是生成前的 gate，未達 20/20 一律 HARD FAIL。"
+                           "機器 lint 抓不到物理與語意矛盾——R5 就是在機器全過的狀態下被抓到 4 個。"
+                           "見 pilot/semantic_review.md）")
+
+    # --- C-21：Phase D 的每個變動都必須被認領 ---
+    base={k:v for k,v in pd.get('fixed_baseline',{}).items() if not k.startswith('_')}
+    if not base: err.append("Phase D 缺 fixed_baseline，無法稽核單一變量宣稱（C-21）")
+    for x in dshots:
+        fx={k:v for k,v in x.get('fixed',{}).items() if not k.startswith('_')}
+        prim=x.get('primary_test_variable')
+        rmc=x.get('required_measurement_changes',{})
+        if 'primary_test_variable' not in x:
+            err.append(f"Phase D {x['id']} 缺 primary_test_variable（C-21）"); continue
+        if not isinstance(rmc,dict):
+            err.append(f"Phase D {x['id']} 的 required_measurement_changes 必須是 欄位→理由 的物件"); continue
+        diff={k for k in set(base)|set(fx) if base.get(k)!=fx.get(k)}
+        claimed=set(rmc)|({prim['field']} if prim else set())
+        unclaimed=diff-claimed
+        if unclaimed:
+            err.append(f"Phase D {x['id']} 有未申報的變動欄位 {sorted(unclaimed)}"
+                       f"——宣稱單一變量但實際同時改了它們（C-21）")
+        ghost=claimed-diff
+        if ghost:
+            err.append(f"Phase D {x['id']} 宣告要變動 {sorted(ghost)}，但 fixed 裡與基準相同"
+                       f"——被測的東西沒有真的編碼進資料（C-21，st08b 就是這個病）")
+        if prim and prim.get('field') in rmc:
+            err.append(f"Phase D {x['id']} 的 primary 與 required_measurement 重複宣告 {prim['field']}")
+        for k in rmc:
+            if not str(rmc[k]).strip():
+                err.append(f"Phase D {x['id']} 的 required_measurement_changes[{k}] 沒寫理由")
+        hc=set(x.get('held_constant_fields',[]))
+        if hc & claimed:
+            err.append(f"Phase D {x['id']} 的 held_constant_fields 含有正在變動的欄位 {sorted(hc&claimed)}")
+        if set(fx)-hc-claimed:
+            err.append(f"Phase D {x['id']} 的 held_constant_fields 沒有涵蓋 {sorted(set(fx)-hc-claimed)}")
+    prims=[x['primary_test_variable']['field'] for x in dshots if x.get('primary_test_variable')]
+    if len(dshots)-len(prims)!=1:
+        err.append("Phase D 必須且只能有一個 primary_test_variable=null 的基準線 shot（C-21）")
+
+    # --- C-22：C 級場景不得被 cinematic treatment 抵銷 ---
+    DRAMA=re.compile(r'掃過|掠過|打光|光束|穿透|灑落|逆光|流動|閃爍|拉出|渲染')
+    tier_map=dict(zip([s2['shot_id'] for s2 in shots], tiers))
+    ctier=[s2 for s2 in shots if tier_map.get(s2['shot_id'])=='C']
+    filt=[s2 for s2 in ctier if s2['filter']!='none']
+    for s2 in ctier:
+        sec=s2['light'].get('secondary_source') or ''
+        if s2['filter']!='none' and DRAMA.search(sec):
+            err.append(f"{s2['shot_id']} 是 C 級場景，卻同時有懷舊/風格濾鏡（{s2['filter']}）"
+                       f"與戲劇性動態光源（{sec[:20]}…）——C 級的用意是『完全不美』，"
+                       f"這兩者疊加會把它變成電影感街拍（C-22）")
+    if ctier and len(filt)/len(ctier) > 1/3:
+        err.append(f"C 級場景 {len(filt)}/{len(ctier)} 帶濾鏡 > 1/3"
+                   f"（{[s2['shot_id'] for s2 in filt]}）——C 級配額會被風格化抵銷（C-22）")
 
     # --- 反作弊：不完美攝影變數不可全部相同 ---
     for f in ['composition','white_balance','background_clutter']:
