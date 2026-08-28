@@ -124,6 +124,11 @@ for p in ('kols/nico-tsai/profile.json', 'kols/nico-tsai/character.md',
 if '挑染' not in pilot.get('hair_color_en', '') and 'silver-grey' not in pilot.get('hair_color_en', ''):
     err("pilot 的 hair_color_en 沒有描述那段銀灰挑染")
 
+# prompt 層的規則交給 lint_prompts.py
+r2 = subprocess.run([sys.executable, 'tools/lint_prompts.py'], capture_output=True, text=True)
+if r2.returncode != 0:
+    err("tools/lint_prompts.py 未通過：\n" + r2.stdout.strip())
+
 # ══════════════════════════════════════════════════════════════════
 # 餐廳批次一（Yuna＋Luna）—— 2026-08-28 加入
 # 這條線與 Nico 線共用同一個 repo，但事實散在不同檔案裡，
