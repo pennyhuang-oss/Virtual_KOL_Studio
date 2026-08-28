@@ -283,3 +283,84 @@ medias: [{ name: "medias", type: "image", roles: ["image_references"] }]
 ## §7 回覆區
 
 REPLIES BELOW
+
+### F-01｜P0｜同意：檔名指涉無效，必須改成輸入順序指涉
+
+同意 Claude 的技術判斷與修正方向。既然模型只收到同一個 image_references 陣列、看不到檔名，from ref_04 對模型沒有可解析的對象，原寫法不能直接生成。
+
+確切措辭建議改成：
+
+> Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity.
+
+我不同意保留較口語且較弱的 the first / second / third / fourth reference image；Image 1 / Image 2 / Image 3 / Image 4 更短、更像多圖模型的索引語法。API 陣列順序必須固定為 [FACE_SHAPE_AND_JAW, EYES_AND_BROWS, NOSE, MOUTH]，送出前把 persona-id、四個槽位、實際路徑及陣列索引寫入 manifest；順序不符即 HARD FAIL。
+
+「四張全臉各司其職」目前仍只是待驗證假說，不能假定一定成立。模型可能平均四張完整人臉，甚至偏向其中一張。第一批必須逐張核對四個指定部件；若角色分工低於 3/4 個部件穩定成立，就停止全臉多圖法。備案是從同一批原圖製作四張部件型輸入：Image 1 為標準化全臉輪廓／顎線裁切，Image 2 只保留眼眉區，Image 3 只保留鼻區，Image 4 只保留口部；仍使用原指定來源，但減少四張完整身份互相競爭。部件裁切法仍失敗時才改為兩階段生成／局部編修，不得直接展開 19 位。
+
+§1.3 的整併沒有扭曲規劃；但年齡與族裔應以 fixed 為唯一真理來源。現有 FACE_EN 可暫時保留完整句，validator 必須逐字核對它與 fixed 一致；未來若 fixed 改動，應由編譯器重建 prompt 或 HARD FAIL，不能讓兩份資料各自手改。
+
+### F-02｜P0｜同意：臉型／顎線同源五人過度集中；修法方向正確
+
+同意把 FACE_SHAPE_AND_JAW 限制為同一張最多供 2 位。這是高權重身份訊號，同源五人會同時提高撞臉與逼近同一真人來源的風險。新的完整分配如下：
+
+| persona | FACE_SHAPE_AND_JAW |
+|---|---|
+| angel-chiu | ref_15 |
+| tammy-chou | ref_08 |
+| emma-kao | ref_11 |
+| zoey-yeh | ref_04 |
+| miu-shiraishi | ref_05 |
+| rin-ayase | ref_07 |
+| nanami-fujiwara | ref_03 |
+| kanon-komori | ref_04 |
+| jia-seo | ref_02 |
+| yerin-han | ref_12 |
+| somi-oh | ref_05 |
+| zhiyi-shen | ref_09 |
+| wanyin-jiang | ref_01 |
+| ruoruo-tang | ref_10 |
+| cheryl-soh | ref_15 |
+| wendy-yeo | ref_11 |
+| peggy-lee | ref_14 |
+| sydney-leong | ref_06 |
+| angeline-kwee | ref_02 |
+
+這份配置的臉型來源上限為 2。改來源後不能只換陣列：ARCHETYPE、AXES、FACE_EN、MARKERS、WHY_DISTINCT 與 hash 都必須依新來源同步重建。
+
+NOSE ref_01 ×5 也同意拆，但鼻子的身份權重低於輪廓／顎線與眼眉，不必強制每張最多 2；建議鼻子來源上限為 3。具體改動：
+
+- rin-ayase：NOSE ref_01 → ref_14
+- yerin-han：NOSE ref_01 → ref_03
+- ruoruo-tang：NOSE ref_10 → ref_14（避免新臉型來源 ref_10 與鼻子來源重複）
+- cheryl-soh：NOSE ref_01 → ref_06
+- peggy-lee：NOSE ref_12 → ref_11
+
+改完後 ref_01 的鼻子只供 angel／emma，其他鼻子來源最高為 3，而且每位四個槽位仍須來自四張不同圖片。
+
+目前不同意把「再補參考圖」列為生成前條件。15 張足以做第一批實驗，重點是部件指涉能否被模型執行；現在增加更多完整人臉可能反而增加身份平均。若第一批仍聚類，再補 6–8 張中性、正面、眼平、均勻光、低妝與無自拍廣角變形的照片，優先補：寬方顎、下半臉較重的 U／梨形、長臉鈍下巴、窄眼／單眼皮，各 2 張。
+
+### F-03｜P0｜同意：原粗分群 gate 是空 gate；但不能只用單一 N
+
+同意 Claude 的診斷。19 人落入 19 群不是刻意設計，而是我把粗分群 key 定得太細，造成規則永遠沒有比較對象；這是規則設計錯誤。
+
+同意加入全配對 Hamming gate，N 定為 6：任兩人 11 軸相異少於 6 條即 HARD FAIL。但單一 N 不夠，還要增加兩條：
+
+1. 六條主導軸——輪廓原型、臉長寬比、三庭配置、骨肉量、顎頦、眼眶結構——任兩人至少相異 2 條。
+2. 若兩人共用同一張 FACE_SHAPE_AND_JAW，總相異至少 7 條，且主導軸至少相異 3 條。
+
+目前 4 條不夠；三組最近配對要在生成前處理，但應改真實參考來源並重建規格，不能只把 AXES 標籤改遠：
+
+- miu-shiraishi vs sydney-leong：依 F-02 把 Sydney 臉型來源改為 ref_06；Sydney 重建為較長、較清瘦的柔心形／長鈍頦方向，保留其寬眼距與下垂眼，使其同時拉開 Miu 與 Tammy。
+- tammy-chou vs sydney-leong：同一項 Sydney 重建必須至少改動臉長寬比、三庭、骨肉量、顎頦、頰部；加上原本眼眶差異，總距離達 6。
+- yerin-han vs peggy-lee：依 F-02 分別改用 ref_12 與 ref_14。Yerin 依 ref_12 重建為較寬、柔軟飽滿、短中庭、小圓頦；Peggy 依 ref_14 重建為倒三角、清瘦平面、高位平顴、窄顎尖頦。
+
+上述只是來源與目標方向，Claude 必須從更新後的實際欄位重跑 171 組配對；所有 5 條相異的組合也要被 N=6 gate 擋下並調整。這仍只是規格 gate，不能取代出圖後的去髮妝盲測。
+
+### F-04｜P1｜同意調整第一批；原選法是刻意但不足以作最終方法驗證
+
+原本選六位是刻意先測四位失敗案例與幾個極端原型，不是疏漏；但 Claude 的反駁成立：它只能證明「差很遠時能否生成不同」，無法證明最容易撞的邊界也扛得住。
+
+第一批改為 8 位：
+
+kanon-komori、wendy-yeo、angeline-kwee、miu-shiraishi、tammy-chou、sydney-leong、yerin-han、peggy-lee
+
+這批同時包含短臉／長臉／方顎／窄顎等極端，以及三組原本只有 4 條差異的完整配對：Miu–Sydney、Tammy–Sydney、Yerin–Peggy。每位先出 4 個候選，共 32 張；8 位全部通過部件執行檢查、MARKERS、全配對 gate 與去髮妝盲測後，才展開其餘 11 位。若容易組通過、任一困難組失敗，結論是方法尚未成立，不得只核可容易組後繼續生成。
