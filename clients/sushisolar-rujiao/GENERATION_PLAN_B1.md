@@ -218,23 +218,31 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **生成 prompt** | `A young woman stands at the window lifting a mug to her mouth with one hand, her other hand resting on her hip, eyes still narrowed from sleep, a loose easy smile. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. Collarbone-length mocha brown hair, sleep-mussed, see-through bangs flattened with one tuft sticking up. White fitted camisole, high-waisted grey cotton shorts, beige cardigan slipping off one shoulder. Small bright apartment, white walls, pale wood floor, unmade white bed. Soft morning light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 台北的早上☀️<br>光剛好照到腳 |
 
-### YG-03｜超商・「今天學到一個字」
-`影片 10–15s ＋ start frame`　·　對應 **Y-05**　·　地點層級 **C**
+### YG-03｜陽台・收乾淨的衣服
+`圖`　·　對應 **Y-05**　·　地點層級 **C**
+
+> **2026-08-28 換件。**原本是「超商」，**停損觸發後撤下**——
+> 兩張都出現清楚韓文，而且來源不是背景招牌（那些我已經拿掉了），
+> 是**她手上那個印字的紙杯**與層架上的商品盒。
+> **超商這個場所的定義就是「賣有包裝的商品」，不適合這個 `soul_id`。**
+>
+> 換成陽台收衣服：**毛巾與襯衫都是素面織品，整個場景沒有任何印刷品或包裝**，
+> 同時保住原本的兩個功能——**半身自拍**（全批只有兩件）與 **C 級日常地點**。
 
 | | |
 |---|---|
-| **妝容** | 淡妝。透明感薄底妝、淡眉、眼影幾乎沒有、nose blush 很淡、粉色潤色護唇。戴黑框眼鏡。 |
-| **髮型** | 低馬尾，see-through 瀏海留著，鬢角兩撮碎髮垂下。 |
-| **穿著** | 上身：**短版**灰色短袖上衣（露一截腰）｜下身：黑色**高腰**短褲｜鞋：白色低筒球鞋｜外層：—｜首飾：黑色細框眼鏡＋手腕上的黑色髮圈 |
-| **場景環境** | 超商角落。**平滑淺灰牆板＋不鏽鋼檯面側邊鋪滿背景**、天花板日光燈。<br>（**2026-08-28 刪掉貨架與商品包裝**——YG-05 的教訓是「把文字物件叫進畫面再要求失焦」不可靠，要直接不叫進來） |
-| **機位與構圖** | **半身自拍。**<br>**機位**：手機伸直手臂舉在略高於眼睛的位置（自拍的真實高度）。<br>**構圖**：人在畫面偏右，左側帶到關東煮機台。 |
-| **光線** | ① 天花板日光燈管**均勻打亮整張臉**｜② 冷藏櫃玻璃反一層冷光在她側臉｜③ 全場冷白，關東煮機台一小塊暖黃｜④ **背景曝光與她的膚色相當** |
-| **表情** | **舉著關東煮紙杯對鏡頭笑。**一手拿自拍手機，另一手把紙杯舉到臉頰旁；下巴微收、對鏡頭笑。<br>（掛載動作＝紙杯；**「摀嘴」與「指標示牌」都拿掉了**——自拍只剩一隻空手，兩個都要就是三隻手） |
-| **肢體與重心** | 一手舉手機自拍、**手臂有輕微晃動**；另一手指著標示牌；重心在單腳、身體微側。；**低馬尾在她轉頭時甩了一下**。 |
-| **情境** | 買了關東煮，站在機台旁自拍；「今天學到一個字」由 Caption 承擔，不靠畫面 |
-| **生成 prompt** | `In a phone selfie, a young woman holds a paper cup of hot broth up beside her cheek with her free hand, smiling at the camera with her chin tucked. Half-body phone selfie, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. Cropped grey tee, high-waisted black shorts, black-rimmed glasses. A convenience-store corner with smooth light-grey wall panels and the plain stainless-steel side of a counter filling the soft background. Flat even fluorescent ceiling light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
-| **Caption 草稿** | 今天學到一個新的字！<br>可是我念錯 店員笑了🥲 |
-| 附註 | 🔬 **錯國停損**：這是 Yuna 的避字版超商。**若 2 張仍出現清楚韓文，依既定規則撤掉超商 spec**，不靠抽卡。<br>硬驗收＝①成立為手機自拍且手機不入鏡 ②只有一隻可見手、握住紙杯 ③紙杯在臉側 ④畫面無清楚可辨的錯國文字 |
+| **妝容** | 淡妝。透明感薄底妝、淡眉、nose blush 很淡、粉色潤色護唇。戴黑框眼鏡。 |
+| **髮型** | 低馬尾，see-through 瀏海留著，鬢角兩撮碎髮垂下。（沿用原 YG-03，維持角色連續性） |
+| **穿著** | 上身：**短版**灰色短袖上衣（露一截腰）｜下身：黑色**高腰**短褲｜鞋：畫面外｜首飾：黑色細框眼鏡（沿用原 YG-03） |
+| **場景環境** | 老公寓的窄陽台。白色油漆牆、**鐵窗花**、不鏽鋼晾衣桿上掛著**素面**毛巾與襯衫、對街公寓外牆虛化。<br>**整個場景不放任何有印刷、包裝、標籤的東西。** |
+| **機位與構圖** | **半身自拍。**<br>**機位**：手機伸直手臂舉在略高於眼睛的位置。<br>**構圖**：晾衣桿與鐵窗花在她身後，對街虛化。 |
+| **光線** | ① 陰天均勻天光**正面打亮臉**｜② 白牆整體補光｜③ 全場冷白｜④ **背景曝光與她的膚色相當** |
+| **表情** | **抱著剛收下來的毛巾對鏡頭笑。**一手把曬乾的白毛巾從衣架上取下、抱在胸前；另一手拿手機（不入鏡）。<br>**硬驗收＝①自拍成立且手機不入鏡 ②只有一隻可見手、抓著毛巾 ③畫面無任何印刷文字 ④比例與光線正確。臉部細節列 soft observation。** |
+| **肢體與重心** | 站著，重心在一腳；取毛巾的手臂抬起；上半身微轉向手機。 |
+| **情境** | 傍晚前把曬乾的衣服收進來，順手自拍一張 |
+| **生成 prompt** | `In a phone selfie, a young woman lifts a folded white towel off the drying pole with her free hand and hugs it against her chest, smiling at the camera. Half-body phone selfie, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. Cropped grey tee, high-waisted black shorts, black-rimmed glasses. A narrow apartment balcony, a white painted wall, an iron window grille, plain unprinted towels and shirts on a steel drying pole. Flat even overcast daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **Caption 草稿** | 曬乾的味道✨<br>今天終於記得收 |
+| 附註 | ⚠️ **這是新寫的 spec，尚未送覆核、尚未生成。**<br>設計重點：**沒有任何印刷品來源**——毛巾與襯衫寫明 `plain unprinted`，場景不放商品、招牌、包裝。<br>🔴 **未驗證的假設**：`iron window grille`（鐵窗花）在 LG-03 上讀起來像台灣，但那是 **Luna 的 `soul_id`**——**跨角色不能當證據**，Yuna 身上會不會一樣未知。 |
 
 ### YG-04｜梳妝台護膚・素顏
 `圖`　·　對應 **Y-06**　·　地點層級 **B**
