@@ -58,9 +58,20 @@ def lint(sid, prompt, is_close, is_luna, decl=None):
     w = len(prompt.split())
     cap = 120 + (BG_LEN if has_bg else 0)
     if w > cap: out.append('過長 %d words（上限 %d）' % (w, cap))
-    # 否定句只檢查我自己寫的部分，不檢查已驗證的固定區塊
-    own = prompt.replace(BG_BLOCK, ' ')
-    if re.search(NEGATION, own, re.I): out.append('含否定句')
+    # 否定句：檢查**實際要送出的整段文字**，只對已驗證區塊所在的字元範圍放行。
+    # 2026-08-29 覆核修正：原本先把區塊 replace 掉再檢查，
+    # 那會讓「檢查的文字」與「實際送出的文字」不同——檢查器就不再代表真實輸入。
+    # 改成具名 allowlist：算出區塊在 prompt 裡的字元範圍，
+    # 落在範圍內的否定詞放行，範圍外的照常擋。
+    spans = []
+    st = prompt.find(BG_BLOCK)
+    while st != -1:
+        spans.append((st, st + len(BG_BLOCK)))
+        st = prompt.find(BG_BLOCK, st + 1)
+    for m in re.finditer(NEGATION, prompt, re.I):
+        if not any(a <= m.start() and m.end() <= b for a, b in spans):
+            out.append('含否定句')
+            break
     if not re.search(HAIR_LEN, prompt, re.I): out.append('缺明確髮長（造型不算長度）')
     if is_luna and not re.search(BOB_GEOM, prompt, re.I): out.append('鮑伯缺剪裁幾何')
     pores = 'visible skin pores' in prompt.lower()
@@ -108,6 +119,11 @@ SELFTEST = [
       'angled away, never looking at the camera, softly out of focus with slight motion blur, clearly '
       'different from her in build, age and clothing. Soft light. Natural skin texture.',
       False, False, ['宣告不寫背景路人，prompt 卻有'], '私密場景（臥室）——只有本人'),
+    ('合法區塊＋區塊外否定詞', 'A woman smiles, no open sky in frame. Half body. Collarbone-length brown hair. '
+      'A tee. A night market. A few anonymous strangers in the mid-ground going about their own business, '
+      'backs turned or heads angled away, never looking at the camera, softly out of focus with slight '
+      'motion blur, clearly different from her in build, age and clothing. Soft light. Natural skin texture.',
+      False, False, ['含否定句'], '公共場景——必寫背景路人（夜市）'),
     ('抽象飄動', 'A woman walks, her shirt fluttering. Half body. Collarbone-length brown hair. '
       'Natural skin texture.', False, False, ['抽象飄動描述']),
 ]
