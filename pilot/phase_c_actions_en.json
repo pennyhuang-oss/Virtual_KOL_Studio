@@ -1,7 +1,7 @@
 {
  "nico_a01": {
   "action": "She is sitting at the window seat of a cafe, simply facing the camera with her hands still and her attention on the lens.",
-  "body": "The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.",
+  "body": "The camera is square on to her: both shoulders are level with the lens and both collarbones enter the bottom of the frame.",
   "hands": {
    "left": "resting on the table, outside the crop",
    "right": "resting on the table, outside the crop"
@@ -21,7 +21,8 @@
    "left": false,
    "right": false
   },
-  "bag_state": "outside_frame"
+  "bag_state": "outside_frame",
+  "_c44_note": "C-44：原本用的 body 敘述提到胸，但 face_closeup 的下緣只到鎖骨。"
  },
  "nico_a02": {
   "action": "Still at the same seat, her torso angled toward her own left while her face comes back to the camera, a coffee cup held up near her chest.",
@@ -197,7 +198,7 @@
  },
  "nico_c01": {
   "action": "After closing up, with the roller shutter down, she has swivelled round on her work chair to look out of the side window.",
-  "body": "The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.",
+  "body": "The camera is square on to her: both shoulders are level with the lens and both collarbones enter the bottom of the frame.",
   "hands": {
    "left": "draped over the chair back, outside the crop",
    "right": "resting on her thigh, outside the crop"
@@ -217,7 +218,8 @@
    "left": false,
    "right": false
   },
-  "bag_state": "none"
+  "bag_state": "none",
+  "_c44_note": "C-44：原本用的 body 敘述提到胸，但 face_closeup 的下緣只到鎖骨。"
  },
  "nico_c02": {
   "action": "She is crouched on the floor opening a carton of supplies that has just arrived, head lifted toward the doorway.",
@@ -405,7 +407,7 @@
   "light": {
    "key": "cool white fluorescent ceiling light in the convenience store, straight down from overhead",
    "bounce": "magazine covers and the white shelving bounce it back up under her chin",
-   "exposure_choice": "the exposure is set for her face, the tubes blow out, and the bottom shelf goes black",
+   "exposure_choice": "the exposure is set for her face, the fluorescent tubes overhead blow out, and the bottom shelf goes black",
    "secondary_source": null,
    "occlusion": null
   },
@@ -429,7 +431,7 @@
   "light": {
    "key": "a whole row of cool white fluorescent tubes in the laundromat ceiling",
    "bounce": "the stainless-steel machine fronts throw it back as hard specular glints rather than soft fill",
-   "exposure_choice": "the exposure is set for her face, so the tubes and the steel glints blow right out and the corner of the room goes black",
+   "exposure_choice": "the exposure is set for her face, so the fluorescent tubes overhead and the steel glints blow right out and the corner of the room goes black",
    "secondary_source": null,
    "occlusion": null
   },
@@ -454,7 +456,7 @@
   "light": {
    "key": "cool white fluorescent ceiling light in the drugstore, straight down from overhead",
    "bounce": "the white packaging on the shelves bounces it back onto her chest and chin",
-   "exposure_choice": "the exposure is set for her face, the tubes blow out, and the depth of the shelving goes black",
+   "exposure_choice": "the exposure is set for her face, the fluorescent tubes overhead blow out, and the depth of the shelving goes black",
    "secondary_source": null,
    "occlusion": null
   },

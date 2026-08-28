@@ -39,12 +39,11 @@ FRAMING = {
 VISIBLE_LAYERS = {
  'face_closeup': ['top', 'jewelry'],
  'chest_up':     ['top', 'jewelry'],
- 'waist_up':     ['top', 'bottom', 'jewelry', 'rings'],
- 'knee_up':      ['top', 'bottom', 'jewelry', 'rings'],
- 'full_body':    ['top', 'bottom', 'shoes', 'jewelry', 'rings'],
+ 'waist_up':     ['top', 'top_hem', 'bottom', 'jewelry'],
+ 'knee_up':      ['top', 'top_hem', 'bottom', 'jewelry'],
+ 'full_body':    ['top', 'top_hem', 'bottom', 'shoes', 'jewelry'],
 }
-BODY_BY_FRAMING = {'face_closeup':'head','chest_up':'torso','waist_up':'torso',
-                   'knee_up':'full','full_body':'full'}
+# C-47：戒指／手鍊戴在手上，可見與否由「那隻手有沒有入鏡」決定，不是由景別決定。
 BAG_TEXT = {
  'worn_shoulder':"{bag} hangs from her shoulder",
  'worn_crossbody':"{bag} is worn across her body",
@@ -86,7 +85,7 @@ EYE_GAZE = {
  'mirror': "She looks at her own reflection in the mirror.",
 }
 VIEW = {
- 'third_person': "Someone standing near her is holding the phone and taking this photo of her.",
+ 'third_person': "The photograph is taken from a short distance away, at about eye level.",
  'selfie_front': "The picture is what her phone's own front camera sees: she holds it herself at "
                  "arm's length, and the device sits just past the edge of the frame.",
  'selfie_mirror':"She is photographing her own reflection in the mirror. The phone she is holding is "
@@ -140,8 +139,8 @@ CAMERA_TYPE = {
 }
 DISTORTION = {'none':"Straight lens geometry: vertical lines in the room stay vertical.",
               'mild':"The slight wide-angle stretch a phone lens gives at close range."}
-DOF = {'adequate':"Deep depth of field: her face, her body and the background all stay in focus "
-                  "together, and her body outline reads sharp against what is behind her.",
+DOF = {'adequate':"Deep depth of field: every visible part of her and the background stay in focus "
+                  "together, and her outline reads sharp against what is behind her.",
        'shallow':"Shallow depth of field: she is sharp and the background falls out of focus."}
 FILTER = {'none':"The picture is straight out of the phone's camera roll, exactly as the sensor recorded it.",
           'ccd':"It has the look of an old CCD compact camera: slightly soft, a little grain, "
@@ -222,10 +221,12 @@ def build(shot, pilot, en):
     P.append("Her face is bare: her lips are the same soft pinkish-beige as the skin around them, matte, "
              "with a soft undefined edge; her eyebrows are soft and natural; her lashes are her own and "
              "unmade. Light neutral-to-cool skin with natural tonal variation and visible pores.")
-    P.append(pilot['body_en'][BODY_BY_FRAMING[shot['framing']]])
+    P.append(pilot['body_en'][shot['framing']])
     P.append(pilot['hair_color_en'] + " " + pilot['hair_en'][shot['hair_id']])
     lay = o['en_layers']
     worn = [lay[k] for k in VISIBLE_LAYERS[shot['framing']] if lay.get(k)]
+    if lay.get('rings') and any(vis.values()):
+        worn.append(lay['rings'])
     bag_t = BAG_TEXT.get(en.get('bag_state', 'none'))
     if bag_t and lay.get('bag'):
         worn.append(bag_t.format(bag=lay['bag']))
@@ -250,19 +251,18 @@ def build(shot, pilot, en):
     CLOSED = {
      'third_person':
         "Everything in this picture is accounted for: the only person in it is her, and every visible "
-        "hand connects to one of her own arms. Whoever is taking the photo, and the phone they are "
-        "holding, are beyond the edge of the frame. The only light in the room comes from the fixtures "
-        "and windows named above.",
+        "hand connects to one of her own arms. The camera viewpoint sits nearby at about eye level, "
+        "with the imaging device and whoever holds it beyond the frame edge. Illumination comes "
+        "exclusively from the natural or architectural light sources named above.",
      'selfie_front':
         "Everything in this picture is accounted for: the image is what her phone's front camera sees, "
-        "so the phone itself sits just beyond the edge of the frame. The only person in it is her, and "
-        "every visible hand connects to one of her own arms. The only light comes from the sources "
-        "named above.",
+        "so the device itself sits just beyond the frame edge. The only person in it is her, and every "
+        "visible hand connects to one of her own arms. Illumination comes exclusively from the natural "
+        "or architectural light sources named above.",
      'selfie_mirror':
-        "Everything in this picture is accounted for: the mirror holds her and the single phone in her "
-        "raised hand, and that is the whole of what it holds. Every visible hand connects to one of her "
-        "own arms. The only "
-        "light comes from the fixtures named above.",
+        "Everything in this picture is accounted for: within the reflected bathroom scene the only "
+        "person is her and the only device is the single phone in her raised hand. Every visible hand "
+        "connects to one of her own arms. Illumination comes exclusively from the fixtures named above.",
     }
     P.append("Real skin texture with visible pores and fine flyaway hairs. " + CLOSED[shot['view']])
     return "\n".join(P)

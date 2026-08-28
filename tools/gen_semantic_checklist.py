@@ -81,6 +81,9 @@ if __name__=='__main__':
     rec={"data_hash":h,"total_shots":len(S),"shot_hashes":cur,"reviewed":kept,
          "reviewed_shot_ids":sorted(kept),
          "_note":"逐列 hash：某一列改過，只有那一列的核可失效，其餘保留（C-33）。"}
+    # 保留呼叫端自行加的欄位（例如 _signoff_note），重建時不要洗掉
+    for k, v in prev.items():
+        if k not in rec: rec[k] = v
     json.dump(rec,open('pilot/semantic_review.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
     print(f"已產生 pilot/semantic_review.md（{len(pilot['phase_c_shots'])} 列，hash {h}）")
     print(f"覆核進度：{len(rec['reviewed'])}/{rec['total_shots']}")

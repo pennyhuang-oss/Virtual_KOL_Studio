@@ -79,10 +79,10 @@
    "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
   },
   "nico_c03": {
-   "hash": "3135370de382",
-   "by": "ChatGPT R8",
-   "at": "2026-08-29",
-   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+   "hash": "f9fddf34c0be",
+   "by": "ChatGPT R11",
+   "at": "2026-08-28",
+   "verdict": "列本身無異議（R11 重審）"
   },
   "nico_c05": {
    "hash": "4ceb1fc8c7ca",
@@ -109,10 +109,10 @@
    "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
   },
   "nico_c09": {
-   "hash": "2d197e3c191a",
-   "by": "ChatGPT R8",
-   "at": "2026-08-29",
-   "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
+   "hash": "befd79a3e478",
+   "by": "ChatGPT R11",
+   "at": "2026-08-28",
+   "verdict": "列本身無異議（R11 重審）"
   },
   "nico_c10": {
    "hash": "00e8ad7f9e48",
@@ -139,10 +139,10 @@
    "verdict": "無異議（scene/outfit/hair/framing/view/eye_gaze/body_pose/props/hands/light 同時成立）"
   },
   "nico_c04": {
-   "hash": "4a6326aeec6a",
-   "by": "ChatGPT R9",
-   "at": "2026-08-29",
-   "verdict": "無異議（expression 改為 post_shower_calm 後，該列全欄位同時成立）"
+   "hash": "9ab882377486",
+   "by": "ChatGPT R11",
+   "at": "2026-08-28",
+   "verdict": "列本身無異議（R11 重審）"
   }
  },
  "reviewed_shot_ids": [
@@ -167,5 +167,6 @@
   "nico_c11",
   "nico_c12"
  ],
- "_note": "逐列 hash：某一列改過，只有那一列的核可失效，其餘保留（C-33）。"
+ "_note": "逐列 hash：某一列改過，只有那一列的核可失效，其餘保留（C-33）。",
+ "_signoff_note": "R8/R9 ChatGPT 完成 20 列九欄語意覆核。R11：修 C-43 的 pillar 標籤改動了 c03/c04/c09 三列，逐列 hash gate 讓其核可失效，ChatGPT 重審後三列均判「列本身無異議」，回到 20/20。"
 }

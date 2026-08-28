@@ -16,9 +16,13 @@ en    = json.load(open('pilot/phase_c_actions_en.json', encoding='utf-8'))
 S     = {s['shot_id']: s for s in pilot['phase_c_shots']}
 
 VISIBLE = {'face_closeup':['top','jewelry'], 'chest_up':['top','jewelry'],
-           'waist_up':['top','bottom','jewelry','rings'],
-           'knee_up':['top','bottom','jewelry','rings'],
-           'full_body':['top','bottom','shoes','jewelry','rings']}
+           'waist_up':['top','top_hem','bottom','jewelry'],
+           'knee_up':['top','top_hem','bottom','jewelry'],
+           'full_body':['top','top_hem','bottom','shoes','jewelry']}
+# C-47：戒指／手鍊由「有沒有手入鏡」決定，不由景別決定
+BODY_TAIL = {'face_closeup':'collarbone visible', 'chest_up':'upper arms',
+             'waist_up':'waist is narrow', 'knee_up':'hips are about as wide',
+             'full_body':'legs are long and straight'}
 POSE_VERB = re.compile(r'\bShe (sits|stands|crouches|kneels|lies|leans|walks)\b')
 NEG = re.compile(r'\b(not|no|none|nothing|never|neither)\b', re.I)
 
@@ -42,12 +46,38 @@ for sid, txt in pr.items():
     if 'Her build' not in txt and 'Her frame is slight' not in txt:
         err(f"{sid} 沒有任何身材描述——Reference Element 固定臉不等於固定全身（C-34）")
 
+    # C-44：身材描述必須是該 framing 的版本，不得跨用到看不見的部位
+    if pilot['body_en'][f] not in txt:
+        err(f"{sid} 用的不是 framing={f} 對應的身材版本（C-44）")
+    for other, tail in BODY_TAIL.items():
+        order = ['face_closeup','chest_up','waist_up','knee_up','full_body']
+        if order.index(other) > order.index(f) and tail in txt:
+            err(f"{sid} framing={f} 卻描述了 {other} 才看得到的身體部位：「{tail}」（C-44）")
+
+    # C-44：face_closeup 的相機句與朝向句不得指名畫面外的軀幹
+    if f == 'face_closeup':
+        for bad in ('her body and the background', 'the front of her chest', 'her chest and both shoulders'):
+            if bad in txt:
+                err(f"{sid} 是 face_closeup，卻寫了「{bad}」——胸／軀幹在裁切外（C-44）")
+
+    # C-45：戶外場景不得說光源來自 room / fixtures and windows
+    OUTDOOR = {'park','city_street','train_platform'}
+    if s['location'] in OUTDOOR and 'light in the room' in txt:
+        err(f"{sid} 是戶外場景，封閉集合卻說光來自 room（C-45）")
+
+    # C-46：封閉集合宣告只有她一人，前文不得再引入第二個 person token
+    for tok in ('Someone standing', 'another person', 'a second person'):
+        if tok in txt:
+            err(f"{sid} 引入了第二個 person token「{tok}」，與封閉集合互相抵消（C-46）")
+
     # C-37：不得描述該景別看不見的服裝層
     lay = pilot['outfits'][s['outfit_id']]['en_layers']
-    for k in ('top','bottom','shoes','jewelry','rings','bag'):
+    for k in ('top','top_hem','bottom','shoes','jewelry','rings','bag'):
         v = lay.get(k)
         if not v: continue
-        shown = (k in VISIBLE[f]) or (k == 'bag' and en[sid].get('bag_state','none').startswith('worn'))
+        shown = (k in VISIBLE[f]) \
+            or (k == 'bag' and en[sid].get('bag_state','none').startswith('worn')) \
+            or (k == 'rings' and any(en[sid].get('hands_visible', {}).values()))
         if not shown and v in txt:
             err(f"{sid} framing={f} 看不到 {k}，prompt 卻寫了「{v[:40]}…」（C-37）")
 

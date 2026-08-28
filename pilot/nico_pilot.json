@@ -48,7 +48,8 @@
         "shoes": "black leather loafers",
         "bag": "a beige canvas tote",
         "jewelry": "small silver hoop earrings",
-        "rings": "one thin silver ring"
+        "rings": "one thin silver ring",
+        "top_hem": null
       }
     },
     "nico_outfit_02": {
@@ -67,7 +68,8 @@
         "shoes": "off-white canvas sneakers",
         "bag": "a fine-knit open cardigan",
         "jewelry": "a thin silver necklace",
-        "rings": null
+        "rings": null,
+        "top_hem": null
       }
     },
     "nico_outfit_03": {
@@ -80,12 +82,13 @@
       "jewelry": "銀色圈形耳環",
       "body_readable": true,
       "en_layers": {
-        "top": "a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist",
+        "top": "a cream cropped knit top with a plain round crew neckline",
         "bottom": "high-waisted light-wash straight-leg jeans",
         "shoes": "white canvas sneakers",
         "bag": "a small dark-brown box bag",
         "jewelry": "silver hoop earrings",
-        "rings": null
+        "rings": null,
+        "top_hem": "its hem ends at her natural waist"
       }
     },
     "nico_outfit_04": {
@@ -104,7 +107,8 @@
         "shoes": "black Mary Jane shoes",
         "bag": "a navy shoulder satchel",
         "jewelry": null,
-        "rings": "a thin silver chain bracelet"
+        "rings": "a thin silver chain bracelet",
+        "top_hem": null
       }
     },
     "nico_outfit_05": {
@@ -122,7 +126,8 @@
         "shoes": "chunky-soled sneakers",
         "bag": "a small black crossbody pouch",
         "jewelry": "a silver ear cuff",
-        "rings": null
+        "rings": null,
+        "top_hem": null
       }
     },
     "nico_outfit_06": {
@@ -140,7 +145,8 @@
         "shoes": "pointed flat shoes",
         "bag": "a structured leather handbag",
         "jewelry": null,
-        "rings": "a thin silver bangle"
+        "rings": "a thin silver bangle",
+        "top_hem": null
       }
     },
     "nico_outfit_07": {
@@ -158,7 +164,8 @@
         "shoes": "silver strappy heeled sandals",
         "bag": "a metal-clasp clutch",
         "jewelry": null,
-        "rings": "a silver bracelet"
+        "rings": "a silver bracelet",
+        "top_hem": null
       }
     },
     "nico_outfit_08": {
@@ -171,12 +178,13 @@
       "jewelry": "無",
       "body_readable": true,
       "en_layers": {
-        "top": "a close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in",
+        "top": "a close-fitting grey cotton long-sleeve top with a modest scoop neckline",
         "bottom": "black close-fitting cotton trousers",
         "shoes": "indoor slippers",
         "bag": null,
         "jewelry": null,
-        "rings": null
+        "rings": null,
+        "top_hem": "its long hem is tucked into her waistband"
       }
     },
     "nico_outfit_09": {
@@ -194,7 +202,8 @@
         "shoes": "short black rain boots",
         "bag": "a waterproof shoulder bag",
         "jewelry": null,
-        "rings": null
+        "rings": null,
+        "top_hem": null
       }
     }
   },
@@ -2491,9 +2500,12 @@
   "_hair_color_note": "那道銀灰挑染是 Phase A candidate_03 帶來的，c03→B1→B2 三張都蓋不掉，已由使用者裁決保留為 Nico 的造型（2026-08-28）。因此寫進 prompt 當成刻意的挑染，而不是每次都徒勞地要求消除它。",
   "_c37_note": "C-37：服裝英文改為分層（top/bottom/shoes/bag/jewelry/rings），由 builder 依該列的 framing 只輸出看得見的層。原本無論景別都印滿五層，等於在 chest_up 的 prompt 裡要求模型畫出裁切外的鞋和褲——與景別指令互相競爭。",
   "body_en": {
-    "torso": "Her build: a slim narrow frame with narrow shoulders about as wide as her hips, a long torso, and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms, a narrow waist. The contrast between the small waist and the fuller chest is part of her shape.",
-    "full": "Her build: a slim narrow frame with narrow shoulders about as wide as her hips, a long torso, and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms, a flat lower abdomen, a narrow waist, long straight legs. The contrast between the small waist and the fuller chest is part of her shape. She is 167cm and slight.",
-    "head": "Her frame is slight: narrow shoulders and a slender neck, with the collarbone visible where it enters the frame.",
-    "_note": "C-34（採納 ChatGPT）：原本 20 段完全沒有身材描述，只有服裝與景別。Reference Element 固定臉不等於固定全身——B2 第一次失敗就是反證，而 B2 第二次成功的那段 prompt 是有完整身材段落的。依 framing 選用對應版本。"
-  }
+    "face_closeup": "Her frame is slight: a slender neck and narrow shoulders, with the collarbone visible where it enters the frame.",
+    "chest_up": "Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms.",
+    "waist_up": "Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape.",
+    "knee_up": "Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders.",
+    "full_body": "Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders. Her legs are long and straight. She is 167cm and slight.",
+    "_note": "C-34／C-44：原本只有三版，且 knee_up 沿用含 `long straight legs` 的全身版、chest_up 沿用含 `narrow waist` 的軀幹版——都在要求模型畫出裁切外的部位。改為每個 framing 一版，逐級累加，只描述該景別看得到的身體。"
+  },
+  "_c44_note": "C-44：上衣描述原本把下擺位置寫在同一句，chest_up 的 prompt 因此仍在指定「下擺落在自然腰線」——腰不在畫面裡。拆成 top 與 top_hem，後者只在腰部可見的景別輸出。"
 }

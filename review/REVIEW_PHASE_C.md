@@ -8,7 +8,7 @@
 **回覆方式**：把意見寫在本檔案最下方 §7 回覆區（`REPLIES BELOW` 那行以下），然後 commit。
 那一段不會被自動產生覆蓋。
 
-- 目前 commit：`a2f7807`
+- 目前 commit：`9846689`
 - 議題編號請從 **C-34** 起跳，每條標 **P0**（必須先修才能生成）／**P1**／**P2**
 
 ---
@@ -161,14 +161,15 @@ candidate_03 左側髮際有一段銀灰挑染。c03 → B1 → B2 三張全部�
 （代號改為語意固定的名稱——上一輪用長度排序的流水號，每次重新產生都會變，
 你 C-43 指出的 `[[S8]]`/`[[S5]]` 對不上就是這個原因。）
 
-- `[[BODY-1]]`（8 段共用）：Her build: a slim narrow frame with narrow shoulders about as wide as her hips, a long torso, and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms, a flat lower abdomen, a narrow waist, long straight legs. The contrast between the small waist and the fuller chest is part of her shape. She is 167cm and slight.
-- `[[BODY-2]]`（10 段共用）：Her build: a slim narrow frame with narrow shoulders about as wide as her hips, a long torso, and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms, a narrow waist. The contrast between the small waist and the fuller chest is part of her shape.
-- `[[CAMERA-1]]`（18 段共用）：Shot on the rear camera of a phone. Straight lens geometry: vertical lines in the room stay vertical. Deep depth of field: her face, her body and the background all stay in focus together, and her body outline reads sharp against what is behind her.
-- `[[CLOSED-SET-1]]`（18 段共用）：Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms. Whoever is taking the photo, and the phone they are holding, are beyond the edge of the frame. The only light in the room comes from the fixtures and windows named above.
+- `[[BODY-1]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders. Her legs are long and straight. She is 167cm and slight.
+- `[[BODY-2]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders.
+- `[[BODY-3]]`（4 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape.
+- `[[BODY-4]]`（6 段共用）：Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms.
+- `[[CAMERA-1]]`（18 段共用）：Shot on the rear camera of a phone. Straight lens geometry: vertical lines in the room stay vertical. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
+- `[[CLOSED-SET-1]]`（18 段共用）：Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms. The camera viewpoint sits nearby at about eye level, with the imaging device and whoever holds it beyond the frame edge. Illumination comes exclusively from the natural or architectural light sources named above.
 - `[[FACE-BARE-1]]`（20 段共用）：Her face is bare: her lips are the same soft pinkish-beige as the skin around them, matte, with a soft undefined edge; her eyebrows are soft and natural; her lashes are her own and unmade. Light neutral-to-cool skin with natural tonal variation and visible pores.
 - `[[FACING-1]]`（9 段共用）：Her body is angled so one hip is nearer the lens, but the camera still sees the front of her chest: both collarbones are visible and the far shoulder is only a little further from the camera than the near one.
 - `[[FACING-2]]`（3 段共用）：The camera sees the front of her body: her navel and the front of both shoulders point toward the lens, and both of her collarbones are visible.
-- `[[FACING-3]]`（4 段共用）：The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.
 - `[[FRAME-1]]`（4 段共用）：The whole of her is inside the picture, from the top of her head down to her shoes, with a margin of empty ground below her feet and a little space above her head. Her legs and shoes are clearly visible.
 - `[[FRAME-2]]`（6 段共用）：The bottom edge of the picture cuts across her chest, a little below her armpits. Her head, shoulders and upper chest fill the frame. Her waist, hips, legs and feet are outside the picture.
 - `[[FRAME-3]]`（4 段共用）：The bottom edge of the picture cuts across her waist at about the level of her navel. Her head, shoulders, chest and waist fill the frame. Her hips, legs and feet are outside the picture.
@@ -179,7 +180,6 @@ candidate_03 左側髮際有一段銀灰挑染。c03 → B1 → B2 三張全部�
 - `[[HAIR-COLOUR-4]]`（5 段共用）：Her hair is a chin-length bob in a cool-toned medium chestnut brown — a muted mushroom brown with a soft grey undertone. One narrow band of silver-grey runs through the hair at her left temple, the way a deliberate salon highlight sits in otherwise evenly dyed hair. Apart from that one band the colour is a single flat dye reaching the scalp: her roots are the same brown as her ends. It is worn down, with one side tucked behind her ear and the ends curving inward.
 - `[[HEAD-1]]`（4 段共用）：Her head is turned a little toward her own left, so the camera sees slightly more of the right side of her face; her far cheek and both eyes are still fully visible.
 - `[[HEAD-2]]`（5 段共用）：Her head is turned a little toward her own right, so the camera sees slightly more of the left side of her face; her far cheek and both eyes are still fully visible.
-- `[[WHO-SHOOTS-1]]`（18 段共用）：Someone standing near her is holding the phone and taking this photo of her.
 
 下面每一段：左邊是該列的結構欄位（真理來源），右邊是產生出來的 prompt。
 
@@ -206,18 +206,18 @@ The bottom edge of the picture sits just below her collarbones. Her face fills m
 
 She is sitting at the window seat of a cafe, simply facing the camera with her hands still and her attention on the lens.
 
-[[FACING-3]]
+The camera is square on to her: both shoulders are level with the lens and both collarbones enter the bottom of the frame.
 Her head is straight on to the camera.
 Her chin is level.
 She looks directly into the lens.
 Her expression is relaxed and neutral, mouth closed and soft.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Also in the picture: condensation misting the window glass; a pour-over dripper stand on the bar counter behind her.
 
 [[FACE-BARE-1]]
-Her frame is slight: narrow shoulders and a slender neck, with the collarbone visible where it enters the frame.
+Her frame is slight: a slender neck and narrow shoulders, with the collarbone visible where it enters the frame.
 [[HAIR-COLOUR-4]]
 She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings.
 
@@ -258,15 +258,15 @@ Her chin is level.
 She looks directly into the lens.
 A small closed-mouth smile, the corners barely lifted.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her right hand holds a white porcelain coffee cup (held up at chest height).
 Also in the picture: a wooden menu board on the wall behind her.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-4]]
 [[HAIR-COLOUR-4]]
-She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings.
+She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings; one thin silver ring.
 
 Setting: a small neighbourhood cafe, wooden tables and a bar counter behind her.
 Light: daylight comes through the cafe's large window from her front-left, about 45 degrees off and a little above eye level; the white wall and pale floor bounce it back evenly into the shadow side of her face, keeping every shadow on her broad and shallow. Exposure: the exposure is set for her face, so the view through the window blows out to white and the far end of the room falls into soft shadow.
@@ -305,15 +305,15 @@ Her chin is level.
 She looks directly into the lens.
 Her expression is relaxed and neutral, mouth closed and soft.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her right hand holds a takeaway coffee cup (held up at chest height).
 Also in the picture: the wing mirror of a scooter parked at the kerb behind her.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-4]]
 [[HAIR-COLOUR-3]]
-She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings.
+She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings; one thin silver ring.
 
 Setting: an ordinary back lane in the Da'an district of Taipei, scooters parked along the wall.
 Light: a thin overcast sky, the daylight arriving evenly from the whole sky at once, so every shadow edge on her is broad and soft; the pale pavement bounces it back evenly into the shadow on the right side of her face. Exposure: the exposure is set for her face, so the sky goes slightly blank and her face keeps full detail.
@@ -352,15 +352,15 @@ Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
 She is listening to someone, attentive, mouth closed.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her right hand holds a takeaway coffee cup (held up at chest height).
 Also in the picture: a red rental flyer pasted on an arcade pillar.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-4]]
 [[HAIR-COLOUR-4]]
-She is wearing a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist; silver hoop earrings.
+She is wearing a cream cropped knit top with a plain round crew neckline; silver hoop earrings.
 
 Setting: an ordinary back lane in the Da'an district of Taipei, scooters parked along the wall.
 Light: a thin overcast sky, the daylight arriving evenly from the whole sky at once, so every shadow edge on her is broad and soft; the pale pavement bounces it back evenly into the shadow on the left side of her face. Exposure: the exposure is set for her face, so the sky goes slightly blank and her face keeps full detail.
@@ -399,15 +399,15 @@ Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
 Her mouth is slightly open mid-sentence, caught talking.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her right hand holds a vacuum flask (held up at chest height).
 Also in the picture: a park lamp post behind her.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-4]]
 [[HAIR-COLOUR-3]]
-She is wearing a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist; silver hoop earrings.
+She is wearing a cream cropped knit top with a plain round crew neckline; silver hoop earrings.
 
 Setting: a paved path through an ordinary neighbourhood park in Taipei, low shrubs and a row of trees.
 Light: a thin overcast sky, the daylight arriving evenly from the whole sky at once, so every shadow edge on her is broad and soft; the pale pavement bounces it back evenly into the shadow on the right side of her face. Exposure: the exposure is set for her face, so the sky goes slightly blank and her face keeps full detail.
@@ -446,7 +446,7 @@ Her chin is level.
 She looks directly into the lens.
 Her expression is relaxed and neutral, mouth closed and soft.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is hanging naturally at her side.
 Her right hand is hanging naturally at her side.
@@ -455,7 +455,7 @@ Also in the picture: a vacuum flask standing on the path by her feet; a yellow b
 [[FACE-BARE-1]]
 [[BODY-1]]
 [[HAIR-COLOUR-4]]
-She is wearing a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist; high-waisted light-wash straight-leg jeans; white canvas sneakers; silver hoop earrings; a small dark-brown box bag hangs from her shoulder.
+She is wearing a cream cropped knit top with a plain round crew neckline; its hem ends at her natural waist; high-waisted light-wash straight-leg jeans; white canvas sneakers; silver hoop earrings; a small dark-brown box bag hangs from her shoulder.
 
 Setting: a paved path through an ordinary neighbourhood park in Taipei, low shrubs and a row of trees.
 Light: a thin overcast sky, the daylight arriving evenly from the whole sky at once, so every shadow edge on her is broad and soft; the pale paving bounces it back evenly over the whole of her, so her legs and torso read clearly. Exposure: the whole of her sits on one exposure, the sky goes slightly blank, and her proportions are fully readable.
@@ -494,7 +494,7 @@ Her chin is level.
 She looks directly into the lens.
 A small closed-mouth smile, the corners barely lifted.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is hanging naturally at her side.
 Her right hand holds a vacuum flask (carried down at her side).
@@ -536,20 +536,20 @@ The bottom edge of the picture sits just below her collarbones. Her face fills m
 
 After closing up, with the roller shutter down, she has swivelled round on her work chair to look out of the side window.
 
-[[FACING-3]]
+The camera is square on to her: both shoulders are level with the lens and both collarbones enter the bottom of the frame.
 Her head is straight on to the camera.
 Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
 Her expression is composed and neutral, mouth closed.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Also in the picture: a small potted plant on the window ledge; an opening-hours sign hanging on the wall.
 
 [[FACE-BARE-1]]
-Her frame is slight: narrow shoulders and a slender neck, with the collarbone visible where it enters the frame.
+Her frame is slight: a slender neck and narrow shoulders, with the collarbone visible where it enters the frame.
 [[HAIR-COLOUR-4]]
-She is wearing a close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in.
+She is wearing a close-fitting grey cotton long-sleeve top with a modest scoop neckline.
 
 Setting: her own small nail studio in Taipei — a white manicure desk, a task lamp clamped to its edge, shelves of gel colour bottles on the wall.
 Light: afternoon daylight comes in from her front-left through the high side window that the shutter leaves clear, a little above eye level; the white manicure desk and white wall bounce it back into the shadow side of her face. Exposure: the exposure is set for her face, so the window blows out to white and the far end of the room falls into shadow.
@@ -588,14 +588,14 @@ Her chin is raised a little, so her face tilts slightly upward.
 Her eyes rest on something in the distance, off past the camera.
 Her eyebrows are lifted a little, mildly caught off guard.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is braced steadying the edge of the carton.
 Her right hand holds the box cutter (holding the box cutter).
 Also in the picture: a half-opened carton whose top edge and folded-back flaps rise from the bottom of the picture to about her knee.
 
 [[FACE-BARE-1]]
-[[BODY-1]]
+[[BODY-2]]
 [[HAIR-COLOUR-1]]
 She is wearing an oatmeal tailored blazer over a white silk camisole with a square neckline; matching oatmeal straight wide-leg trousers; a thin silver bangle.
 
@@ -630,21 +630,21 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 She is waiting for her order on a stool in a breakfast shop, one elbow resting on the edge of the table.
 
-[[FACING-3]]
+The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.
 [[HEAD-2]]
 Her chin is dipped, so her face tilts downward and her eyelids read lower.
 Her eyes are lowered toward what is in front of her.
 She looks tired: eyelids a little heavy, face soft and unguarded.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is open, the elbow resting on the table edge.
 Also in the picture: soy milk in a plastic cup; a numbered order tag on the table.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-3]]
 [[HAIR-COLOUR-1]]
-She is wearing a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist; high-waisted light-wash straight-leg jeans; silver hoop earrings.
+She is wearing a cream cropped knit top with a plain round crew neckline; its hem ends at her natural waist; high-waisted light-wash straight-leg jeans; silver hoop earrings.
 
 Setting: a Taiwanese breakfast shop, stainless-steel tables and plastic stools, the shutter door open to the street.
 Light: morning light comes through the shop's open doorway from her front-left; the stainless-steel table throws a hard glint of it back up under her jaw. At the same time, the shop's cool white ceiling fluorescents fall on the top of her head and her shoulders. Exposure: the exposure is set for her face, so the whole doorway blows out and the back of the shop goes black. The door frame cuts into the right edge of the picture.
@@ -677,7 +677,7 @@ A vertical photograph of <<<68ff990e-1862-4003-bfe3-fe288275cdd4>>>.
 
 Freshly out of the shower, she is sitting on the edge of her bed with the phone raised, looking straight into it.
 
-[[FACING-3]]
+The camera sees the front of her upper body: her chest and both shoulders face the lens and both collarbones are visible.
 Her head is straight on to the camera.
 Her chin is dipped, so her face tilts downward and her eyelids read lower.
 She looks directly into the lens.
@@ -690,16 +690,16 @@ Her right hand is braced on the edge of the bed.
 Also in the picture: an unfolded thin quilt beside her; a glass of water on the bedside table.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-3]]
 Her hair is a chin-length bob in a cool-toned medium chestnut brown — a muted mushroom brown with a soft grey undertone. One narrow band of silver-grey runs through the hair at her left temple, the way a deliberate salon highlight sits in otherwise evenly dyed hair. Apart from that one band the colour is a single flat dye reaching the scalp: her roots are the same brown as her ends. It is wet from the shower, lying flat against her head, the ends still dripping.
-She is wearing a close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in; black close-fitting cotton trousers.
+She is wearing a close-fitting grey cotton long-sleeve top with a modest scoop neckline; its long hem is tucked into her waistband; black close-fitting cotton trousers.
 
 Setting: her own bedroom, the bed unmade behind her.
 Light: the curtain hangs a hand's width open, and one slant of morning light falls across the bed; the white sheet is a large reflector, bouncing it back into the lower half of her face. Exposure: the exposure is set for her face, so the slit of light at the curtain blows out to a white band and the rest of the room goes dark.
 
-Shot on the front camera of a phone, held at arm's length. The slight wide-angle stretch a phone lens gives at close range. Deep depth of field: her face, her body and the background all stay in focus together, and her body outline reads sharp against what is behind her.
+Shot on the front camera of a phone, held at arm's length. The slight wide-angle stretch a phone lens gives at close range. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
 The picture is straight out of the phone's camera roll, exactly as the sensor recorded it. Her figure is positioned off-centre in the frame. The phone's auto white balance has gone a touch warm. There is ordinary everyday clutter in the background. A few highlights are allowed to blow out to white.
-Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the image is what her phone's front camera sees, so the phone itself sits just beyond the edge of the frame. The only person in it is her, and every visible hand connects to one of her own arms. The only light comes from the sources named above.
+Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the image is what her phone's front camera sees, so the device itself sits just beyond the frame edge. The only person in it is her, and every visible hand connects to one of her own arms. Illumination comes exclusively from the natural or architectural light sources named above.
 ```
 
 ### 12. `nico_c05` — body_pose_coverage／外出 / 出門前
@@ -731,14 +731,14 @@ Her chin is dipped, so her face tilts downward and her eyelids read lower.
 Her eyes are lowered toward what is in front of her.
 She is concentrating on what her hands are doing; her mouth is closed and her brow is still.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is braced flat against the wall.
 Her right hand holds her keys (holding her keys).
 Also in the picture: a small succulent on the shoe cabinet.
 
 [[FACE-BARE-1]]
-[[BODY-1]]
+[[BODY-2]]
 [[HAIR-COLOUR-2]]
 She is wearing a loose white button-down shirt with a collar and the top two buttons open; a black pleated mini skirt with grey knee-high socks; a thin silver chain bracelet; a navy shoulder satchel hangs from her shoulder.
 
@@ -779,7 +779,7 @@ Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
 A neutral everyday face, caught mid-walk.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is swinging naturally as she walks.
 Her right hand holds a bubble-tea cup (carried down at her side).
@@ -788,7 +788,7 @@ Also in the picture: an electricity meter box at the mouth of the lane.
 [[FACE-BARE-1]]
 [[BODY-1]]
 [[HAIR-COLOUR-2]]
-She is wearing a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist; high-waisted light-wash straight-leg jeans; white canvas sneakers; silver hoop earrings; a small dark-brown box bag is worn across her body.
+She is wearing a cream cropped knit top with a plain round crew neckline; its hem ends at her natural waist; high-waisted light-wash straight-leg jeans; white canvas sneakers; silver hoop earrings; a small dark-brown box bag is worn across her body.
 
 Setting: an ordinary back lane in the Da'an district of Taipei, scooters parked along the wall.
 Light: flat overcast skylight arriving evenly from the whole sky; the pale tiled wall fills it back evenly over the whole of her. Exposure: the whole frame is low contrast, the sky blows out to white, and one single colour temperature covers everything.
@@ -827,16 +827,16 @@ Her chin is dipped, so her face tilts downward and her eyelids read lower.
 Her eyes are lowered toward what is in front of her.
 She is concentrating on what her hands are doing; her mouth is closed and her brow is still.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand holds a nail-tip display stick (steadying the display stick).
 Her right hand holds the gel applicator brush (holding the gel applicator).
 Also in the picture: a gel colour swatch board on the wall behind her.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-4]]
 Her hair is a chin-length bob in a cool-toned medium chestnut brown — a muted mushroom brown with a soft grey undertone. One narrow band of silver-grey runs through the hair at her left temple, the way a deliberate salon highlight sits in otherwise evenly dyed hair. Apart from that one band the colour is a single flat dye reaching the scalp: her roots are the same brown as her ends. The back half is clipped up in a claw clip, with two loose strands left down at the front.
-She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings.
+She is wearing a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones; small silver hoop earrings; one thin silver ring.
 
 Setting: her own small nail studio in Taipei — a white manicure desk, a task lamp clamped to its edge, shelves of gel colour bottles on the wall.
 Light: an adjustable task lamp points down at close range onto her hands and the desk; the white desktop bounces it back up onto her jaw and neck. At the same time, the cool white ceiling fluorescent falls on the back of her head and her shoulders. Exposure: the exposure is set for her hands, so her face sits slightly dark and the curtain behind her goes black.
@@ -882,16 +882,16 @@ Her right hand holds the brow razor (holding the brow razor up near the tail of 
 Also in the picture: a tube of face wash lying on its side on the counter.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-3]]
 [[HAIR-COLOUR-3]]
-She is wearing a close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in; black close-fitting cotton trousers.
+She is wearing a close-fitting grey cotton long-sleeve top with a modest scoop neckline; its long hem is tucked into her waistband; black close-fitting cotton trousers.
 
 Setting: her own small bathroom, white tiled walls and a basin.
 Light: a full strip of cool white tube light above the bathroom mirror points straight at her; the white tiled walls bounce it back from every side, so what shadow there is stays broad and very shallow. Exposure: the exposure is set for her face, the tube itself blows out to a white bar, and the light in this one is flat and unflattering.
 
-Shot on the rear camera of a phone aimed at a mirror. The slight wide-angle stretch a phone lens gives at close range. Deep depth of field: her face, her body and the background all stay in focus together, and her body outline reads sharp against what is behind her.
+Shot on the rear camera of a phone aimed at a mirror. The slight wide-angle stretch a phone lens gives at close range. Deep depth of field: every visible part of her and the background stay in focus together, and her outline reads sharp against what is behind her.
 The picture is straight out of the phone's camera roll, exactly as the sensor recorded it. The horizon runs very slightly off level, the way a hand-held snapshot does. The phone's auto white balance has gone a touch cool. There is ordinary everyday clutter in the background. A few highlights are allowed to blow out to white.
-Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: the mirror holds her and the single phone in her raised hand, and that is the whole of what it holds. Every visible hand connects to one of her own arms. The only light comes from the fixtures named above.
+Real skin texture with visible pores and fine flyaway hairs. Everything in this picture is accounted for: within the reflected bathroom scene the only person is her and the only device is the single phone in her raised hand. Every visible hand connects to one of her own arms. Illumination comes exclusively from the fixtures named above.
 ```
 
 ### 16. `nico_c09` — body_pose_coverage／外出 / 便利商店
@@ -923,19 +923,19 @@ Her chin is raised a little, so her face tilts slightly upward.
 She looks directly into the lens.
 A faint flicker of irritation, mouth set.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is braced on the lower shelf of the magazine rack.
 Her right hand holds a rice ball (holding the rice ball).
 Also in the picture: a shopping basket standing against her bent knee, entering the picture at its bottom edge.
 
 [[FACE-BARE-1]]
-[[BODY-1]]
+[[BODY-2]]
 [[HAIR-COLOUR-3]]
 She is wearing a black cropped hoodie with a plain crew neckline; grey wide-leg cargo trousers; a silver ear cuff; a small black crossbody pouch is worn across her body.
 
 Setting: the inside of a Taiwanese convenience store, magazine racks and shelves of goods.
-Light: cool white fluorescent ceiling light in the convenience store, straight down from overhead; magazine covers and the white shelving bounce it back up under her chin. Exposure: the exposure is set for her face, the tubes blow out, and the bottom shelf goes black.
+Light: cool white fluorescent ceiling light in the convenience store, straight down from overhead; magazine covers and the white shelving bounce it back up under her chin. Exposure: the exposure is set for her face, the fluorescent tubes overhead blow out, and the bottom shelf goes black.
 
 [[CAMERA-1]]
 The picture is straight out of the phone's camera roll, exactly as the sensor recorded it. Her figure is positioned off-centre in the frame. Her moving hand is very slightly blurred, though her face stays sharp. The background is busy with the ordinary mess of the place.
@@ -971,7 +971,7 @@ Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
 Her expression is composed and neutral, mouth closed.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Both of her hands together are holding an armful of dried laundry — carrying it against her chest.
 Also in the picture: a coin tray on top of the machine.
@@ -982,7 +982,7 @@ Also in the picture: a coin tray on top of the machine.
 She is wearing a dark-grey water-repellent hooded jacket over a black high-neck top; black straight-leg trousers; short black rain boots.
 
 Setting: a self-service laundromat, a row of front-loading machines along the wall.
-Light: a whole row of cool white fluorescent tubes in the laundromat ceiling; the stainless-steel machine fronts throw it back as hard specular glints rather than soft fill. Exposure: the exposure is set for her face, so the tubes and the steel glints blow right out and the corner of the room goes black.
+Light: a whole row of cool white fluorescent tubes in the laundromat ceiling; the stainless-steel machine fronts throw it back as hard specular glints rather than soft fill. Exposure: the exposure is set for her face, so the fluorescent tubes overhead and the steel glints blow right out and the corner of the room goes black.
 
 [[CAMERA-1]]
 The picture is straight out of the phone's camera roll, exactly as the sensor recorded it. She is positioned centrally in the frame. The phone's auto white balance has gone a touch cool. The background is busy with the ordinary mess of the place. The brightest parts of the frame are blown right out to white.
@@ -1018,18 +1018,18 @@ Her chin is dipped, so her face tilts downward and her eyelids read lower.
 Her eyes are lowered toward what is in front of her.
 She is reading something and concentrating on it.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Both of her hands together are holding two tubes of hand cream — holding one tube each.
 Also in the picture: the shopping basket hooked over her elbow.
 
 [[FACE-BARE-1]]
-[[BODY-1]]
+[[BODY-2]]
 [[HAIR-COLOUR-2]]
 She is wearing a black cropped hoodie with a plain crew neckline; grey wide-leg cargo trousers; a silver ear cuff; a small black crossbody pouch is worn across her body.
 
 Setting: the aisle of a Taiwanese drugstore, shelves of boxed products.
-Light: cool white fluorescent ceiling light in the drugstore, straight down from overhead; the white packaging on the shelves bounces it back onto her chest and chin. Exposure: the exposure is set for her face, the tubes blow out, and the depth of the shelving goes black.
+Light: cool white fluorescent ceiling light in the drugstore, straight down from overhead; the white packaging on the shelves bounces it back onto her chest and chin. Exposure: the exposure is set for her face, the fluorescent tubes overhead blow out, and the depth of the shelving goes black.
 
 [[CAMERA-1]]
 It has the look of an old CCD compact camera: slightly soft, a little grain, colours very slightly off from true. Her figure is positioned off-centre in the frame. The surroundings throw a visible colour cast across her. The background is busy with the ordinary mess of the place. A few highlights are allowed to blow out to white.
@@ -1065,13 +1065,13 @@ Her chin is raised a little, so her face tilts slightly upward.
 Her eyes rest on something in the distance, off past the camera.
 Her face is blank, the way a face goes when someone is simply waiting.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her right hand holds her transit card (holding her transit card).
 Also in the picture: the arrivals display board on the platform.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-3]]
 [[HAIR-COLOUR-1]]
 She is wearing an oatmeal tailored blazer over a white silk camisole with a square neckline; matching oatmeal straight wide-leg trousers; a thin silver bangle; a structured leather handbag hangs from her shoulder.
 
@@ -1112,14 +1112,14 @@ Her chin is level.
 Her eyes rest on something in the distance, off past the camera.
 Calm and a little distant, thinking about something else.
 Her whole face is unobstructed.
-[[WHO-SHOOTS-1]]
+The photograph is taken from a short distance away, at about eye level.
 
 Her left hand is hanging naturally at her side.
 Her right hand is hanging naturally at her side.
 Also in the picture: a wooden bench beside the path behind her; a single leaf falling behind her shoulder.
 
 [[FACE-BARE-1]]
-[[BODY-2]]
+[[BODY-4]]
 [[HAIR-COLOUR-3]]
 She is wearing a cream cotton camisole with thin straps and a straight horizontal neckline; a thin silver necklace; a fine-knit open cardigan hangs from her shoulder.
 
@@ -1135,56 +1135,45 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 
 ## §6 本輪請你判斷
 
-### 6-1 上一輪你開的 10 條，處置如下
+### 6-1 上一輪（R11）你開的 4 條，處置如下
 
 | ID | 你的判定 | 我做了什麼 |
 |----|---------|-----------|
-| C-34 | 20 段漏掉身材 | **屬實**。實測確認 0/20 提到 bust 或 silhouette。已用 B2 第二次成功的字串，依 framing 分三版（`[[BODY-1]]` 全身／`[[BODY-2]]` 軀幹／臉部特寫用短版）|
-| C-35 | 仍大量使用否定式 | **多數屬實，已全部清掉**。現在 20 段的否定詞數是 **0**（`tools/lint_prompts.py` 逐段掃）。**但有一處我不同意，見 6-2** |
-| C-36 | `She sits` 會改寫姿態 | **屬實，而且是我自己的模板害的**。實測 10 段 body_pose 非 seated 卻寫 `She sits`。改為 `She is positioned centrally／off-centre`，並加機器檢查禁止任何姿態動詞與 body_pose 衝突 |
-| C-37 | 沒依 framing 過濾裁切外資訊 | **屬實**。服裝英文改為分層（top/bottom/shoes/bag/jewelry/rings），由 framing 決定輸出哪幾層；裁切外的手不再描述；包新增 `bag_state`（worn_shoulder／worn_crossbody／set_down／outside_frame）逐列指定 |
-| C-38 | a07／c09 有誘發背影的語句 | **屬實**。a07 刪掉 `three-quarters`，c09 刪掉 `over her shoulder`，兩者都改成可見正面地標 |
-| C-39 | c09 的 basket 翻譯破壞 zone | **屬實**。改為「靠在她彎曲的膝旁、從畫面下緣進入構圖」；c02 的紙箱也依你的建議具體化 |
-| C-40 | c10 動作時點不一致 | **屬實**，已改為你建議的句子 |
-| C-41 | outfit_01 應換成明顯不同的衣服 | **採納**。你的理由比我的處置好：高辨識度開口出現在 4/8 clean anchor 會與 identity 綁定，正好違反去服裝綁定的訓練目的。已換成米白細針織圓領（顏色、織法、領型三者都不同）|
-| C-42 | 排除清單不足 | **屬實**。改為三種 view 各自的正面封閉集合（見 `[[CLOSED-SET-1]]`）|
-| C-43 | 標題與模板編號漂移 | **屬實**。三個 pillar 標籤實測確認與 location／scene 不符，已修；樣板代號改為語意固定名稱（原本依長度排序的流水號每次重新產生都會變，這就是 `[[S8]]`/`[[S5]]` 對不上的原因）|
+| C-44 | 身材／朝向／相機模板仍未真正依 framing 分層 | **五處全部實測屬實**（knee_up 4 段仍寫 long straight legs、chest_up 6 段仍寫 narrow waist、face_closeup 2 段的相機句與朝向句都提到軀幹、上衣下擺殘留）。身材改為**五種**版本逐級累加；上衣拆出 `top_hem`，下擺只在腰部可見時輸出；相機句改為 `every visible part of her`；a01／c01 的朝向句改成只講肩與鎖骨 |
+| C-45 | 封閉集合在戶外產生光源矛盾 | **屬實**，實測 9 段戶外／半戶外仍寫 `light in the room`。已改為你建議的 `Illumination comes exclusively from the natural or architectural light sources named above`；鏡面版也依你的意見限縮為「鏡中場景內只有她與那支手機」，不再暗示鏡中沒有背景 |
+| C-46 | `Someone standing near her` 把第二個人帶回 prompt | **屬實**，18 段都有。這確實會抵消封閉集合的目的——而且這個模型真的畫過別人的手拿手機。已改為不含 person token 的視點敘述 |
+| C-47 | ring 的可見性不能只由 framing 決定 | **屬實**，實測 a02／a03／c07 有手在胸前入鏡卻把戒指砍掉。改為由 `hands_visible` 決定，與景別脫鉤 |
 
-### 6-2 一處我不同意，請你裁決
+**另外兩處是我自己複查時抓到的**，你沒提但一併修了：
 
-你把景別句尾的 `Her waist, hips, legs and feet are outside the picture` 也算成
-「§2-1 已證實無效的構圖否定」。**我認為這一句與失效的那種否定不同，而且有實測支持**：
+- 相機視點句在 `WHO-SHOOTS` 與封閉集合裡各寫一次，重複。third-person 的視點句改短。
+- `c09`／`c11`／`c10` 的曝光句寫 `the tubes blow out`（燈管），但 `c11` 手上正拿著 `two tubes of hand cream`——同一段裡 `tubes` 兩個意思。已改為 `the fluorescent tubes overhead`。
 
-- **失效的**是 `nothing below the knee is visible`——它只說「看不到什麼」，沒有說邊界在哪。
-- **有效的**是 probe_v2 / probe_v3 / B2 第二次那三段，它們**都包含**
-  `Her knees, lower legs, feet and shoes are outside the picture entirely` 這一句，
-  而且景別三張全部正確。
+### 6-2 三列重審已記錄
 
-差別在於前面有沒有先給出「畫面下緣切在哪裡」這個**位置事實**。
-有位置事實在前，後面點名哪些部位落在界外是**在描述同一件事的另一半**，不是純排除。
+你判 `nico_c03`／`nico_c04`／`nico_c09` **列本身無異議**，已簽進 `pilot/semantic_review.json`，
+語意覆核回到 **20/20**，validator 重新 exit 0。
+你當時註明「prompt 仍受共用模板影響」——那些模板（C-44／C-45／C-46）本輪都改了，
+所以這三列的 prompt 需要連同其他受影響的列一起看。
 
-我已經刪掉真正純排除的那半句（臉部特寫原本還接 `none of her torso, arms or hands is in it`）。
-**剩下的這半句要不要也刪？** 我傾向保留，因為那是唯一有實測成功紀錄的寫法，
-而全刪等於把三次成功的配方改掉、又沒有新的實測支持。你怎麼看？
+### 6-3 這一輪請你判斷
 
-### 6-3 這一輪請你做的事
+**1. C-44／C-45／C-46／C-47 可否結案？** 連帶 C-34／C-37／C-42 也一併判定。
+   特別是五版身材（`[[BODY-*]]`）的切分點：我把 waist 放在 waist_up 才出現、
+   hips 放在 knee_up、legs 放在 full_body。這個切分對嗎？
 
-**1. 上表 10 條可否結案？** 特別是 C-37 的分層邏輯（§5 每列的「framing → 看得見哪些層」）
-   有沒有漏掉或砍過頭——例如 waist_up 我留了 `rings` 但砍了 `shoes`，這樣對嗎？
+**2. 本輪改動展開到的所有列**：這一輪動的是**共用模板**，20 段全部重新展開過。
+   請看有沒有因為刪去某些描述而產生新的空缺——例如 chest_up 現在完全不提腰，
+   模型會不會自行補一個不對的腰身？
 
-**2. 重審 3 列的語意覆核。** 修 C-43 的 pillar 標籤改動了資料，逐列 hash gate 因此讓
-   `nico_c03`／`nico_c04`／`nico_c09` 的舊核可失效（validator 現在會擋）。
-   請重新確認這三列的欄位與 prompt 是否同時成立。其餘 17 列的核可仍有效。
-
-**3. 新展開的 20 段有沒有新問題？** 這一輪動了身材段、服裝分層、手部過濾、
-   封閉集合、composition 模板——改動面很大，可能引入新的矛盾。
-
-**4. 放行判定**：可以開始生成這 20 張，還是仍有 P0？
+**3. 放行判定**：可以開始生成這 20 張，還是仍有 P0？
 
 **現在有機器擋的規則**（`tools/lint_prompts.py`，20/20 通過）：
-否定詞為 0、姿態動詞與 body_pose 一致、每段都有身材描述、
-不得描述該景別看不見的服裝層、裁切外的手不得描述、
-`expected_visible=false` 的道具不得出現、每段都有正面封閉集合收尾。
+否定詞為 0；姿態動詞與 body_pose 一致；每段都有身材描述**且必須是該 framing 的版本**；
+不得描述比該 framing 更下面才看得到的身體部位；face_closeup 不得提到軀幹；
+不得描述該景別看不見的服裝層；戒指依手部可見性而非景別；
+裁切外的手不得描述；宣告不可見的道具不得出現；
+戶外場景不得說光來自 room；不得出現第二個 person token；每段都要有正面封閉集合收尾。
 
 ---
 
@@ -1194,82 +1183,3 @@ The picture is straight out of the phone's camera roll, exactly as the sensor re
 
 <!-- ===== REPLIES BELOW — 本行以下不會被自動產生覆蓋 ===== -->
 
-
-## ChatGPT R11 覆核回覆
-
-### §6-2 裁決
-
-**同意保留景別句尾的 `... are outside the picture`。**
-
-我撤回 R10 對這一小段的判定。它前面已有明確的裁切線位置，後句是在陳述各部位相對於該邊界的空間位置；它不等同於單獨用 `nothing below...` 要模型自行推導裁切位置。更重要的是，probe_v2、probe_v3、B2 第二次已有三次同配方成功的實測。現階段保留已驗證配方，比為了形式上的「零排除句」改動它更合理。
-
-因此 C-35 在其餘否定式均已移除的前提下可結案；lint 也不應把 `outside the picture` 這種有明確邊界前件的 locative statement 當成失效否定。
-
-### C-44｜P0｜身材、朝向與相機模板仍未真正依 framing 分層
-
-C-34 的身材內容已補回，但目前三版實際仍跨用了不可見區域：
-
-- `[[BODY-1]]` 同時用於 full_body 與 knee_up；`nico_c02／c05／c09／c11` 在 lower legs／feet 位於畫面外時，仍要求 `long straight legs`。
-- `[[BODY-2]]` 同時用於 chest_up 與 waist_up；`nico_a02／a03／a04／a05／c07／a08` 在腰位於畫面外時，仍要求 `a narrow waist`。
-- `[[CAMERA-1]]` 對 face_closeup 也寫 `her face, her body and the background all stay in focus`，會重新要求模型容納不存在於畫面的 body。
-- `nico_a01／c01` 的 face_closeup 後接 `[[FACING-3]]`，其中 `The camera sees ... her chest`，但畫面下緣只到鎖骨附近。
-- outfit 分層也還有少數殘留：`nico_c01` 的 face_closeup 仍寫 `the hem long and tucked in`；`nico_a04／a05` 的 chest_up 仍寫上衣下擺位於 natural waist。
-
-請至少拆成 face_closeup／chest_up／waist_up／knee_up／full_body 五種可見性模板。相機句可統一改成 `all visible parts of her and the background stay in focus together`，避免逐景別另列 body。這項未修前，C-34 與 C-37 都不能結案。
-
-### C-45｜P0｜第三人稱封閉集合在戶外產生光源與場景矛盾
-
-`[[CLOSED-SET-1]]` 固定寫：
-
-> The only light in the room comes from the fixtures and windows named above.
-
-它也套在公園、街道等戶外列；戶外沒有 room、fixture 或 window，真正光源是 sky。這會直接與前面的 overcast skylight 衝突。
-
-建議改成跨場景成立的：
-
-> Illumination comes exclusively from the natural or architectural light sources named above.
-
-另外，mirror 版的 `the mirror holds her and the single phone ... that is the whole of what it holds` 容易被理解成鏡中沒有浴室背景。應把封閉範圍限縮為人物與裝置，例如「鏡中浴室場景內只有 Nico 與她手上的一支手機」。
-
-C-42 目前不能結案。
-
-### C-46｜P0｜`WHO-SHOOTS-1` 又把第二個人顯式帶回 prompt
-
-18 段都先寫 `Someone standing near her...`，最後才要求唯一人物是 Nico。這兩句在語意上可以靠「攝影者在畫外」解釋，但對曾經生成別人的手與手機的模型而言，前一句仍是強烈的人物 cue，正好抵消 C-42 的目的。
-
-改成不引入 person token 的相機位置敘述，例如：
-
-> The camera viewpoint is nearby at eye level, with the imaging device and its operator beyond the frame edge.
-
-如此仍能表達 third-person view，又不先要求模型想像 `Someone`。
-
-### C-47｜P1｜ring 的可見性不能只由 framing 決定
-
-C-37 的服裝分層整體方向正確，鞋子在 waist_up／knee_up 被砍掉也正確；但戒指應由「配戴在哪隻手＋該手是否入鏡」決定，而不是只看 framing。
-
-outfit_01 有一枚銀戒；目前 `nico_a02／a03／c07` 都有手在胸前入鏡，prompt 卻把 ring 砍掉，反而 full_body 的 `nico_a07` 有輸出。請補 ring laterality，或明定該列不配戴；不要以 chest_up 一律刪除。這不必單獨阻擋 Nico，但應與本輪 P0 一起修。
-
-### C-34～C-43 結案判定
-
-| ID | 判定 |
-|---|---|
-| C-34 | **不同意結案**：身材已補回，但 framing 分版仍不完整，見 C-44 |
-| C-35 | **同意結案**：並同意保留有明確裁切線前件的 `outside the picture` |
-| C-36 | **同意結案** |
-| C-37 | **不同意結案**：主要修正成立，但仍有不可見身材／衣服細節與 ring 過濾問題，見 C-44、C-47 |
-| C-38 | **同意結案** |
-| C-39 | **同意結案** |
-| C-40 | **同意結案** |
-| C-41 | **同意結案**：新 outfit 與錨點在顏色、織法、領型上已明顯區隔 |
-| C-42 | **不同意結案**：見 C-45、C-46 |
-| C-43 | **同意結案** |
-
-### 三列重審
-
-- **`nico_c03`**：結構欄位彼此成立；早餐店 pillar、scene、坐姿、視線、雙手、桌面道具、混合光與 waist_up 相容。**列本身無異議**。其 prompt 仍受 C-44／C-46 共用模板影響，模板修正後再簽 prompt hash。
-- **`nico_c04`**：結構欄位彼此成立；洗澡後濕髮、平靜表情、床邊坐姿、front selfie、雙手、道具與晨光相容。**列本身無異議**。其 prompt 仍受 C-44 的 camera 可見性措辭影響。
-- **`nico_c09`**：C-38／C-39 的兩處修正正確；蹲姿仍呈現胸前正面、轉頭看鏡頭、購物籃靠彎曲膝並從下緣入鏡，物理上成立。**列本身無異議**。其 prompt 仍受 C-44 的 knee_up 身材模板及 C-45／C-46 共用模板影響。
-
-### 放行判定
-
-**目前仍不放行生成。** 先修 C-44、C-45、C-46；C-47 可同輪處理。修正後不必重掃未受影響的內容，但需要重審所有被修改共用模板展開到的列，並重新簽 prompt hash。
