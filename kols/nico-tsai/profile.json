@@ -39,16 +39,21 @@
       "prompts": "pilot/phase_c_prompts.json（由 tools/build_phase_c_prompts.py 從 spec 產生）",
       "note": "20 張（endpoint 實際接受 5–20，非官網寫的 minimum 20）。規劃已通過 ChatGPT R1–R9 覆核：validator exit 0、語意逐列覆核 20/20、對抗測試 26/26。20 段 prompt 待覆核（review/REVIEW_PHASE_C.md），放行後才生成。",
       "soul_training": {
-        "status": "training",
+        "status": "ready",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
         "training_image_count": 20,
         "started_at": "2026-08-28",
-        "completed_at": null,
+        "completed_at": "2026-08-28",
         "note": "2026-08-28 使用者驗收通過後送訓（「這 20 張的確可以直接送進 Soul 訓練」）。c08 洗手檯下的多餘肢體未重拍——使用者裁決；Soul V2 學臉與身形，背景物件被學進去的風險低。完成後接 Phase D 壓力測試（本 repo 首次）。",
         "character_name": "nico-tsai",
-        "training_images": "kols/nico-tsai/images/training_v1/（01_a01 … 20_a08，20 張全部送入，含 c08）"
+        "training_images": "kols/nico-tsai/images/training_v1/（01_a01 … 20_a08，20 張全部送入，含 c08）",
+        "credits": {
+          "training": 25,
+          "training_set_35_seedream_images": 35,
+          "per_image_after_training_soul_2": 0.12
+        }
       }
     }
   },

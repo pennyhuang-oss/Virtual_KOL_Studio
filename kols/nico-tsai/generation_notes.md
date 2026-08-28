@@ -17,7 +17,7 @@
 
 ---
 
-## 狀態：**訓練中 — Phase A/B/C 完成，Soul 訓練已送出**
+## 狀態：**Soul 已就緒 — Phase A/B/C＋訓練完成，Phase D 待裁決**
 
 建立日期：2026-08-27（Batch 3）
 
@@ -26,7 +26,7 @@
 | 選角（candidate 生成與挑選） | ✅ Round 3 通過，選定 candidate_03 |
 | Reference Element 錨定 | ✅ `68ff990e-1862-4003-bfe3-fe288275cdd4` |
 | 訓練集（20 張） | ✅ 2026-08-28 完成並驗收 |
-| Soul 訓練 | 🔵 2026-08-28 送出訓練，`soul_id` `46d1e11e-92a7-4fd7-8776-dcd4e2067627` |
+| Soul 訓練 | ✅ 2026-08-28 完成（`ready`），`soul_id` `46d1e11e-92a7-4fd7-8776-dcd4e2067627` |
 | 首批內容生成 | ⬜ 未執行 |
 
 **Soul ID**：`46d1e11e-92a7-4fd7-8776-dcd4e2067627`
@@ -258,7 +258,8 @@ ChatGPT 的 C-42／C-46 也是往這個方向推的，那是對的。
 
 **soul_id**：`46d1e11e-92a7-4fd7-8776-dcd4e2067627`（name: `nico-tsai`, type: `soul_2`）
 **訓練圖**：`images/training_v1/` 全部 20 張，以 image job id 直接送入（不需重新上傳）。
-**狀態**：送出時 `queued` → `training`，約 10 分鐘。
+**狀態**：`queued` → `in_progress` → **`ready`（2026-08-28 完成，實際約 10 分鐘）**。
+**可用模型**：`soul_2`、`soul_cinematic`（其餘模型要用 Reference Element）。
 
 | 檔案 | image job id |
 |------|--------------|
@@ -289,3 +290,7 @@ ChatGPT 的 C-42／C-46 也是往這個方向推的，那是對的。
 
 **c08 一併送訓**：使用者裁決 20 張不重拍。洗手檯下的多餘肢體是背景物件，
 Soul V2 學的是臉與身形；若訓練後在 Phase D 出現不明肢體，回頭把 c08 抽掉重訓（剩 19 張仍在 5–20 範圍內）。
+
+**造價結帳**（單價見 `KOL_TRAINING_SOP.md`〈各步驟的實際 credit 單價〉）：
+Phase A+B+C 共 35 張 seedream ＝ 35 credits，訓練 25 credits，**建立這個角色合計 60 credits**。
+訓練後 `soul_2` 出圖 0.12 credits/張——**貴的都在訓練之前，之後幾乎不要錢**。
