@@ -57,7 +57,16 @@ def lint(sid, prompt, is_close, is_luna, decl=None):
     has_bg = BG_MARK in prompt
     w = len(prompt.split())
     cap = 120 + (BG_LEN if has_bg else 0)
-    if w > cap: out.append('過長 %d words（上限 %d）' % (w, cap))
+    # 2026-08-29 R11 判定 A：**放棄硬性字數上限。**
+    # 120／160 沒有成品失敗分界支持，是啟發式；但為了守它，我已經**連續兩輪**
+    # 把覆核指定的界定詞剪掉（R8b 剪掉 toward the camera、R10 剪掉 confined to／
+    # clearly visible in the central area／of the camera），造成可驗收關係退化。
+    # 覆核原文：「這證明目前硬上限的實際危害，而『多幾個必要單字必然稀釋任務』
+    # 仍沒有同等證據。」
+    # 改為只提醒、不阻擋，也**不得因此自動剪字**。
+    # 接觸點、相機視線、遮擋安全區、身份／服裝固定詞，一律不得為壓字數而刪。
+    if w > cap:
+        out.append('⚠字數 %d（超過參考值 %d，建議分批 preflight，不阻擋送測）' % (w, cap))
     # 否定句：檢查**實際要送出的整段文字**，只對已驗證區塊所在的字元範圍放行。
     # 2026-08-29 覆核修正：原本先把區塊 replace 掉再檢查，
     # 那會讓「檢查的文字」與「實際送出的文字」不同——檢查器就不再代表真實輸入。
