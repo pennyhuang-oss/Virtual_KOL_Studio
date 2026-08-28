@@ -22,6 +22,10 @@ BOB_GEOM = r'(cut evenly at the jawline|even blunt ends along the jawline)'
 NEGATION = r'\b(no|not|without|avoid|never)\b'
 TIMELINE = r'(then |breaking into|just starting to|and then|before turning)'
 FLUTTER  = r'(fluttering|lifting in the breeze|trailing in the|blowing in the wind)'
+# 2026-08-28：依 COMPETITOR_sherry_digitalp510.md 的三條機制新增。
+# 稽核發現 21 件裡具名反射面只有 3 件、色溫分裂 0 件——寫在中文欄位卻沒翻進 prompt。
+BOUNCE = r'(bounc|reflect|throw(s|ing)? .{0,20}light|off the (white|pale|wet|tiled|marble|steel))'
+SPLIT  = r'(warm .{0,40}(cool|blue)|cool .{0,40}(warm|gold)|while the .{0,30}(warm|cool|lantern|neon))'
 
 def lint(sid, prompt, is_close, is_luna):
     out = []
@@ -37,27 +41,32 @@ def lint(sid, prompt, is_close, is_luna):
     if re.search(FLUTTER, prompt, re.I): out.append('抽象飄動描述')
     if 'selfie' in prompt.lower() and re.search(r'phone (up )?beside her (face|cheek)', prompt, re.I):
         out.append('自拍卻要求手機入鏡')
+    if not re.search(BOUNCE, prompt, re.I): out.append('缺具名反射面')
+    if not re.search(SPLIT, prompt, re.I):  out.append('缺色溫分裂')
     return w, out
 
 SELFTEST = [
     # (說明, prompt, is_close, is_luna, 應該要中的項目)
     ('known-good 近景', 'A woman smiles. Close-up, camera at her eye level. Collarbone-length brown hair. '
       'A tee. A cafe. Soft light on her face. Visible skin pores, natural skin texture, subtle film grain.',
-      True, False, []),
+      True, False, ['缺具名反射面','缺色溫分裂']),
     ('造型冒充長度', 'A woman smiles. Half body. Brown hair in a low ponytail. A tee. A cafe. '
-      'Soft light. Natural skin texture.', False, False, ['缺明確髮長（造型不算長度）']),
+      'Soft light. Natural skin texture.', False, False, ['缺明確髮長（造型不算長度）','缺具名反射面','缺色溫分裂']),
     ('否定句', 'A woman smiles, no open sky in frame. Half body. Collarbone-length brown hair. '
-      'A tee. Natural skin texture.', False, False, ['含否定句']),
+      'A tee. Natural skin texture.', False, False, ['含否定句','缺具名反射面','缺色溫分裂']),
     ('兩個時間點', 'A woman pouts and then breaking into a laugh. Half body. Collarbone-length brown hair. '
-      'Natural skin texture.', False, False, ['兩個時間點']),
+      'Natural skin texture.', False, False, ['兩個時間點','缺具名反射面','缺色溫分裂']),
     ('全身卻寫 pores', 'A woman stands. Full body. Collarbone-length brown hair. '
-      'Visible skin pores, natural skin texture.', False, False, ['非近景卻寫 pores']),
+      'Visible skin pores, natural skin texture.', False, False, ['非近景卻寫 pores','缺具名反射面','缺色溫分裂']),
     ('Luna 缺剪裁幾何', 'A woman smiles. Half body. A chin-length black bob, tucked behind her ear. '
-      'Natural skin texture.', False, True, ['鮑伯缺剪裁幾何']),
+      'Natural skin texture.', False, True, ['鮑伯缺剪裁幾何','缺具名反射面','缺色溫分裂']),
     ('鮑伯新 wording', 'A woman smiles. Half body. A blunt chin-length black bob with even blunt ends '
-      'along the jawline. Natural skin texture.', False, True, []),
+      'along the jawline. Natural skin texture.', False, True, ['缺具名反射面','缺色溫分裂']),
+    ('缺反射面與色溫', 'A woman smiles. Half body. Collarbone-length brown hair. A tee. A cafe. '
+      'Soft light on her face. Natural skin texture.', False, False,
+      ['缺具名反射面','缺色溫分裂']),
     ('抽象飄動', 'A woman walks, her shirt fluttering. Half body. Collarbone-length brown hair. '
-      'Natural skin texture.', False, False, ['抽象飄動描述']),
+      'Natural skin texture.', False, False, ['抽象飄動描述','缺具名反射面','缺色溫分裂']),
 ]
 
 def selftest():
