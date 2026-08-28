@@ -11,7 +11,7 @@
 ## ⚠️ 2026-08-27 全面改版（v2）：以實測結果重寫
 
 這一版不是憑推論改的，是跑完 6 張控制變因測試之後改的。
-完整測試記錄見 `CALIBRATION_TEST.md`，以下是直接影響這 20 件的四條。
+完整測試記錄見 `CALIBRATION_TEST.md`，以下是直接影響這 21 件的四條。
 
 ### 1. 刪掉共用身分（族裔＋身材數字）
 
@@ -82,7 +82,7 @@
 只寫偏差沒有主體，想像不出來、生成出來就是面無表情。
 
 **新寫法：表情名稱在前，細節修飾在後。**
-20 件已重新指派，每人 10 種完全不重複——回眸一笑、吐舌＋眨眼、鼓臉頰、
+21 件已重新指派，每人 10 種完全不重複——回眸一笑、吐舌＋眨眼、鼓臉頰、
 上目遣い、憋笑破功、雙手托腮、嘟嘴、挑眉微笑…
 完整表情庫見 `SEXY_SCENE_LIBRARY.md` 第 20 點。
 
@@ -438,7 +438,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **接到花瓣的驚訝。**攤開的掌心裡停著一片花瓣，眼睛睜大、嘴呈小 O 形、眉毛抬高。<br>（掛載動作＝掌心的花瓣；**原本寫「然後笑出來」是兩個時間點，靜態圖只 freeze 驚訝那一刻**） |
 | **肢體與重心** | **一手伸起接花瓣、手指張開**；另一手提著開衫；重心在後腳；**裙襬與肩上開衫的下襬被風帶起**。 |
 | **情境** | 伸手接住一片落下的花瓣 |
-| **生成 prompt** | `A young woman holds one open palm in front of her with a blossom petal resting in it, eyes widened and mouth softly open in surprise, eyebrows raised. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, a cream ribbon headband. White square-neck fitted lace top, pale pink checked mini skirt, a cream cardigan over her shoulders, pearl earrings. Park path under blossoming branches hanging into the top of the frame, petals on her shoulder. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman pinches a single pink blossom petal between her thumb and index finger beside her cheek, mouth softly open in surprise, eyebrows raised. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, a cream ribbon headband. An opaque white cotton blouse with a structured square neckline, short puff sleeves and a fitted waist, pale pink checked mini skirt, pearl earrings. Park path under blossoming branches hanging into the top of the frame, petals on her shoulder. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 花開了🌸<br>今天走了好久才找到這裡 |
 | 附註 | **背景路人 1–2 人**：遠處、背向、失焦 |
 
@@ -456,7 +456,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **對鏡頭比 V ＋歪頭。**手比 V 舉在臉頰旁；頭往同側傾；眼睛彎成月牙——雨天也很開心的那種笑。 |
 | **肢體與重心** | **站著等，重心是活的。**重心壓在右腳，**左腳膝蓋微彎、腳尖點地**；骨盆因此微傾（不是雙腳平均站的死板站姿）；左手垂著握傘柄、傘尖朝下滴水；右手勾著托特包帶、手指自然彎曲；肩膀一高一低；**肩上的開襟外套與髮尾被風帶著往同一側動**。 |
 | **情境** | 雨快停了，她站在亭子邊緣看外面，正在判斷要不要走 |
-| **生成 prompt** | `A young woman stands at the edge of a bus shelter holding a folded clear umbrella still dripping, tilting her head and making a V sign beside her cheek, eyes crinkled. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. Pale blue checked skirt, a pale blue cardigan over her shoulders, an off-white fitted shirt with the top buttons open. Bus shelter with a colourful route map lightbox, raindrops on the glass, wet asphalt reflecting the glow of shop signs across the street. Her face clearly lit, the glowing signs keeping their colour. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands at a bus shelter, her left hand wrapped around the curved handle of a folded clear umbrella hanging straight down beside her thigh, her right hand making a V sign beside her cheek, head tilted. Three-quarter body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. An opaque off-white cotton short-sleeve button-front blouse, fastened through the chest, both cuffs visible, pale blue checked skirt. A bus shelter with a colourful route map lightbox, wet asphalt reflecting the glow of shop signs across the street. Her face clearly lit, the signs keeping their colour. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 台北下雨了☔️<br>雨の台北、こういう日が好き |
 | 附註 | 🔬 **preflight**：這件是**鮑伯剪裁幾何的受測件**——頭髮自然垂放、沒有塞耳後／濕髮／半盤，是唯一能乾淨測出底層剪裁的一件。用 `with even blunt ends along the jawline`；**其餘 10 件暫時維持 `cut evenly at the jawline`，等這張驗過再決定要不要全面沿用** |
 
@@ -492,7 +492,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **爆米花桶抵在下巴、越過桶緣看鏡頭。**雙臂把爆米花桶抱到下巴下方，身體背對、頭與肩轉回；眼睛越過桶緣看鏡頭，帶著玩心的笑意。<br>（掛載動作＝爆米花桶抵下巴；**原本的「吐舌＋單眼眨眼」是純臉部，與已知失敗的類型相同，已換掉**） |
 | **肢體與重心** | 雙臂把爆米花桶抱到下巴下方；**骨盆朝離開鏡頭的方向、上半身轉回四分之三**（不寫完全背對——完全背對的話桶子會跑到身體遠側，鏡頭看不到桶緣）；重心在一腳、另一腳腳尖點地。 |
 | **情境** | 捧著爆米花桶，回頭看鏡頭 |
-| **生成 prompt** | `A young woman hugs a popcorn bucket up under her chin, her hips angled away from the camera and her upper body turned three-quarters back, her eyes peeking over the rim toward the camera with a playful smile. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, a cat-ear headband. White square-neck puff-sleeve top, pale blue pinafore skirt, white mary janes with lace socks. Amusement park beside the carousel, coloured balloons, a decorated parade street behind. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman hugs a popcorn bucket up under her chin, her hips angled away from the camera and her upper body turned three-quarters back, her eyes peeking over the rim toward the camera, smiling. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, a cat-ear headband. White square-neck puff-sleeve top, pale blue pinafore skirt, white mary janes with lace socks. Amusement park beside the carousel, coloured balloons, a decorated parade street behind. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 今天玩得好開心✨<br>爆米花吃了兩桶 |
 | 附註 | **背景路人 2–3 人**：背向、失焦、外型與她區隔 |
 
@@ -548,7 +548,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **拿著蘋果糖回頭笑。**身體與骨盆朝參道前方、頭與肩轉回鏡頭；一手把蘋果糖舉在臉頰旁；笑到眼睛彎。<br>（掛載動作＝蘋果糖＋回頭；**骨盆朝向已寫死，避免整個人被轉正**） |
 | **肢體與重心** | 重心在後腳；骨盆朝參道深處；上半身與頭轉回鏡頭；一手舉蘋果糖。 |
 | **情境** | 走在參道上回頭 |
-| **生成 prompt** | `A young woman stands on the festival approach with her hips and torso facing down the path, her head and shoulders turned back toward the camera, holding a candy apple beside her cheek, laughing with her eyes crinkled. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. Pale blue yukata with a white morning-glory print, a navy half-width obi tied tight at the waist, wooden geta. A clean bright wooden torii, paper lanterns strung overhead, food stalls. Her face clearly lit, the lantern-lit stalls behind her keeping visible detail. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands on the festival approach with her hips and torso facing down the path, her head and shoulders turned back toward the camera, holding a candy apple beside her cheek, laughing. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. Pale blue yukata with a white morning-glory print, a navy half-width obi tied tight at the waist, wooden geta. A clean bright wooden torii, paper lanterns strung overhead, food stalls. Her face clearly lit, the lantern-lit stalls behind her keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 夏祭り🎐<br>蘋果糖比想像中大顆 |
 | 附註 | 這是 Luna 視覺變化最大的一組；**戶外件，第一張出來要跟 LG-04／06／07 互相比對有沒有出現同一個場景模板** |
 
@@ -606,11 +606,11 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 3. 圖確認 → 影片 start frame → 影片（`kling3_0`，單鏡頭，`sound=on`）
 4. 每批記一行 `cost-log.md`，**用 `transactions` 逐筆對帳，不要用餘額差**
 
-**成本估算**：圖 20 張 ≈ **2.4 credits**（一件一張）｜重生成抓 50% ≈ 1.2｜影片另計
+**成本估算**：圖 **21 張 ≈ 2.52 credits**（一件一張）｜重生 buffer **取 11 張 ≈ 1.32**（取整規則明寫，不用小數張數）｜影片另計
 
 ---
 
 ## 核准方式
 
-直接講編號：`YG-01`～`YG-10`、`LG-01`～`LG-10`。
+直接講編號：`YG-01`～`YG-10`、`LG-01`～`LG-09`、`LG-10A`、`LG-10B`（**共 21 件**）。
 單項要改也可以指名欄位——例如「LG-07 的穿著換掉」「YG-10 妝容再淡一點」。

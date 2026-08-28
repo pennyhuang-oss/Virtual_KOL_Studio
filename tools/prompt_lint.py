@@ -15,8 +15,9 @@ import io, re, sys
 # 這一條是 2026-08-27 外部覆核抓出來的：舊版把 low ponytail 當成有長度，
 # 跟第 24 點自己寫的規則矛盾。
 HAIR_LEN = r'(collarbone-length|chin-length|shoulder-length|waist-length|cropped short)'
-# 鮑伯的底層剪裁幾何。目前有兩種 wording 並存，因為 2026-08-27 起
-# `even blunt ends` 正在 LG-05 上做付費驗證；驗過之後收斂成一種。
+# 鮑伯的底層剪裁幾何。兩種 wording 都已與成功結果共現（2026-08-27 preflight 3/3 穩定），
+# 決定**不統一**——改寫沒有 production 收益，只會製造新的未驗證變因。
+# 註：只能說兩者與成功共現，不能說各自已證明為因果控制桿。
 BOB_GEOM = r'(cut evenly at the jawline|even blunt ends along the jawline)'
 NEGATION = r'\b(no|not|without|avoid|never)\b'
 TIMELINE = r'(then |breaking into|just starting to|and then|before turning)'
