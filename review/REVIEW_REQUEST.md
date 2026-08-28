@@ -98,49 +98,49 @@ A young woman holds a glass of soy milk in both hands in front of her chin, head
 ## 回覆區（請只填這一段）
 
 ### 疑慮：YG-09 濕髮的處理
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：不列入硬驗收只能避免「濕髮沒出現」造成誤殺，不能消除該字串對髮型、髮長與畫面穩定性的干擾。LG-08 的 4/4 雖不能證明換角色後也必敗，但已是同一生成流程下足以採取避險措施的負面證據；在沒有本角色反證前，不宜把濕髮留在正式 prompt 再當 soft observation。
+- **建議改法**：正式生成先刪除 `Wet`、`pushed straight back`、`water still beading at the ends`，改回角色可辨識的乾髮固定描述。若濕髮對敘事不可替代，另開單變因 preflight：同一 prompt 只比較乾髮／濕髮，各至少 2 張；在濕髮能保住長度、髮色與臉部一致性前，不併入正式批次。
 
 ### 疑慮：LG-07 複雜度
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：全身本身不是問題；風險來自「骨盆明顯背離＋上身轉回四分之三＋雙臂把大桶抵到下巴」同時要求大幅軀幹扭轉與雙臂交疊，容易以腰部變形、肩臂錯位或多手來完成。現句的 `upper body turned three-quarters back` 也可能被理解成上身仍背對鏡頭，而不是轉向鏡頭。
+- **建議改法**：把極端扭轉降成溫和三分之四背側站姿：`standing in a gentle three-quarter back pose, hips angled diagonally away, shoulders turned toward the camera`。桶改由兩手從左右托住、上緣停在下巴下，避免 `hugs ... with both arms` 形成手臂交疊。這件修後仍應先做 2 張 preflight，驗收順序先看肢體，再看骨盆／肩線方向。
 
 ### 疑慮：LG-01 近景放物件
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：`at the lower edge` 只指定位置，沒有解決容量衝突。臉佔約 45%、雙肘落桌、雙手完整托腮後，畫面下緣剩餘空間不足以穩定辨識蛋糕與拿鐵兩件物品；模型很可能裁切物件、縮小臉，或擴成胸上景。已有 YG-01 同型失敗時，不應只換位置詞重試。
+- **建議改法**：比照 YG-01，以近景與臉部表演為優先，從 prompt 與硬驗收③移除蛋糕、拿鐵；甜點店仍可由桌面、磁磚牆與窗邊座位成立。若兩件物品不可刪，必須把景別正式改成胸上／中近景並降低臉部占比，不能仍標「臉部＋肩膀近景」。
 
 ### YG-06
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → PASS
+- **理由**：盤腿全身、雙手共同捧杯、杯在下巴前與越過杯緣看鏡頭形成同一個可凍結瞬間；兩手沒有互相競爭的第二任務。坐姿全身也能同時容納赤腳與頭頂毛巾，不存在景別衝突。
+- **建議改法**：可原樣送 preflight。驗收時「雙手」應指左右手各自接觸杯身，不接受多出的第三隻手或只剩單手持杯。
 
 ### YG-09
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：大特寫、畫外視線與均勻正面窗光彼此成立；但濕髮應依上方負面證據先退出正式 prompt。此外，`leans against the window frame` 可能誘發扶窗或摸臉的手勢，而硬驗收要求零隻手，現 prompt 只有靠裁切暗示，沒有直接鎖定。
+- **建議改法**：移除濕髮三段，改用角色固定乾髮描述；在景別句補 `The crop contains only her face, hair, neck, and bathrobe collar, with both arms and hands below the frame.` 保留視線朝畫外與現行局部高光句。
 
 ### LG-01
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：雙手托雙頰的任務清楚，髮型與表情也可驗收；失敗點只在硬塞蛋糕與拿鐵造成近景容量矛盾。這會直接動搖臉占比與指定景別，不能以成品碰運氣。
+- **建議改法**：採「近景優先」方案：刪除 prompt 的 `a strawberry cake and a latte at the lower edge`，硬驗收③改為只驗「臉佔畫面約 45%、臉部＋肩膀近景」。若企劃選擇食物優先，則須同步把景別與臉占比改成胸上中近景版本後再送。
 
 ### LG-06
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → PASS
+- **理由**：雙手共同捧開啟的扭蛋、低頭看扭蛋、閉眼笑是互相支持的同一瞬間；沒有「看鏡頭」殘留，也沒有第三個手部任務。半身足以容納胸前扭蛋與腰間外套。
+- **建議改法**：可送 preflight。若成品管理規則不接受生成文字，再把 `bright shop signage` 換成 `bright pastel storefront lights`；此項不影響本次動作與構圖放行。
 
 ### LG-07
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：桶在下巴下、越過桶緣看鏡頭與全身構圖可以共存；需要修的是軀幹與雙臂的實現方式。現有大幅轉體加 `hugs ... with both arms` 容易產生肩腰變形、交疊手臂或額外手，尚不宜原樣送。
+- **建議改法**：首句改為：`A young woman stands in a gentle three-quarter back pose, hips angled diagonally away and shoulders turned toward the camera. She supports a popcorn bucket from both sides with exactly two visible hands, its upper rim just below her chin, looking over the rim toward the camera with a playful smile.` 景別句把 `her feet near the lower third` 明確化為 `her complete feet visible within the bottom third of the frame`。修後先做 2 張肢體 preflight。
 
 ### LG-09
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：雙手共同捧杯、杯位、低頭抬眼與半身人食同框均成立；但半身 prompt 加入 `mini skirt with one continuous hem`，會要求模型展示通常落在裁切外的裙襬，容易把半身拉成膝上景。裙裝也不在本件硬驗收內，屬不必要的構圖競爭訊號。
+- **建議改法**：刪除 `a light pleated A-line mini skirt with one continuous hem`，只保留半身可見的上衣描述。其餘動作與已修正的門口局部高光句可原樣送 preflight。
 
 ### 其他（只寫會導致生成失敗的項目）
--
+- 無。
