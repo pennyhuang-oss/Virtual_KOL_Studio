@@ -87,30 +87,43 @@ In a phone selfie, a young woman lifts a folded white towel off the drying pole 
 
 ### 第 1 題（這個 prompt 可以送嗎）
 
-- 判定：
-- 理由：
-- 改法（若要改）：
+- 判定：**先改再送，不建議原樣生成。**陽台概念本身可測，但目前第一句同時要求「從桿上取下」與「抱在胸前」，是兩個時間點；此外 `shirts` 與一般 `cropped grey tee` 仍有服裝印字先驗，不能把場景視為完全沒有文字來源。
+- 理由：單張圖最穩定的是一個可直接看見的靜止終態。原句會讓模型自行決定毛巾究竟仍在桿上、正在移動，或已到胸前，也可能為了完成兩個姿勢補手。便利商店實測也已證明：只清掉背景文字源不夠，手持物與上衣本身都要降低印字先驗。
+- 改法（若要改）：建議直接改成下面版本後跑 2 張；把動作鎖成「已折好、單手壓在胸前」，把 `unprinted` 改成可視的純色材質，拿掉較易出圖案的襯衫，並以霧面窗板封住戶外視野。
+
+```
+In a phone selfie, a young woman smiles at the camera while one visible hand presses a folded solid-white towel against her chest. Close half-body framing, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail with see-through bangs and loose strands at her temples. A solid-grey fitted cropped cotton tee, high-waisted black shorts, black-rimmed glasses. A narrow covered apartment service balcony, a white painted wall, frosted window panels, and a steel drying pole holding solid-white towels and pale cotton bedsheets. Flat even overcast daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.
+```
 
 ### 第 2 題（四個疑慮哪幾個成立）
 
-- 判定：
+- 判定：**第 1、3、4 項成立；第 2 項部分成立。**其中第 4 項是送生成前必改，第 1 與第 3 項應降風險，第 2 項不是因 Luna 成功就必須刪除，但不能把 Luna 的結果當成 Yuna 的證據。
 - 理由：
-- 改法：
+  1. `unprinted` 仍是以「不存在某物」描述結果，模型未必會穩定執行；它也再次喚起 print/text 概念。改用 `solid-white`、`solid-grey`、`pale cotton` 這類可見的顏色與材質較好。這只能降低機率，不能取代成圖驗收。
+  2. 鐵窗本身不是文字源，所以「跨 soul_id 未驗證」不等於必須移除；真正風險是格柵後可能被補出街景、招牌或高複雜度紋理。此輪為單一變因測試，建議換成 `frosted window panels`，保留住宅工作陽台語意並封住外部景物。
+  3. 半戶外風險成立，但陽台與巷弄／車站的公開街景模板不同。把它限定為 `covered apartment service balcony`，並以白牆、霧面窗板佔據背景後，仍值得做一次獨立測試；不可直接用先前 6 張推定它一定失敗。
+  4. 「取下」和「抱到胸前」是連續兩個狀態；`hugs` 也常暗示雙臂。改成單一終態 `one visible hand presses ... against her chest`，可同時降低多手與毛巾位置矛盾。
+- 改法：採用第 1 題的完整改寫，不要只替換 `unprinted` 一個詞；本輪需一起移除雙時點動作、襯衫印字先驗及可見戶外背景。
 
 ### 第 3 題（陽台是不是好選擇）
 
-- 判定：
-- 理由：
-- 替代建議（若要換）：
+- 判定：**是可控、值得測的替代場景，但必須用收斂後的「有遮蔽工作陽台」，不能用可看見街景的泛稱陽台。**
+- 理由：它保留半身自拍與 C 級日常功能，動作也不依賴商用包裝；其文字風險主要來自模型自行補出的衣物圖案、上衣字樣與窗外街景，而不是「陽台」三字本身。第 1 題改寫已把這三個來源各自降了一級，因此沒有足夠證據在生成前就撤掉。
+- 替代建議（若要換）：若陽台觸發停損，改成**室內洗衣折疊角落**：白牆、藤編洗衣籃、純白毛巾與淺色棉床單，不出現洗衣機面板、清潔劑瓶或包裝。仍用半身手機自拍，唯一可見手把折好的白毛巾壓在胸前。這仍是台北公寓中的 C 級生活場景，但沒有對外視野，也沒有品牌道具。
 
 ### 第 4 題（停損條件）
 
-- 判定：
-- 理由：
+- 判定：**先跑 2 張；任一張全數通過四項硬驗收即可選用。若 2 張在同一類硬錯誤上都失敗，立即停掉該設計，不用原 prompt 跑第 3 張。**
+- 理由：兩張同向失敗才足以支持系統性先驗；單張缺陷可能只是採樣波動。停損要依錯誤來源處理：
+  - 2/2 在毛巾、晾曬物或窗外出現可辨識文字／偽文字：判定陽台配置失敗，直接換室內洗衣折疊角落。
+  - 2/2 只有灰色上衣出字：判定服裝先驗失敗，場景可保留，但上衣改為 `solid-grey ribbed knit crop top` 後只准再跑一組 2 張。
+  - 2/2 出現多手、毛巾位置衝突或自拍不成立：判定「手持毛巾自拍」構圖失敗，撤掉手持任務，不再用同義動詞重寫。
+  - 若兩張是不同且互不相關的硬錯誤、又沒有可用圖，只准依實際錯誤做一次明確改寫再跑 2 張；第二組仍零通過就整件換成室內替代場景。
+  - 所有清楚文字、擬似品牌字母與偽文字都算硬失敗，不因「不是正確單字」而降級。
 
 ### 其他（選填）
 
-- 
+- 建議把「完全沒有印刷品來源」改成「已主動降低印刷來源」。純色衣物、毛巾與角色上衣仍可能被模型自行加字；這是風險控制，不是零風險保證。
 
 ---
 
