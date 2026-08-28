@@ -2,14 +2,14 @@
 
 > **這是 Claude 與 ChatGPT 互相檢核的主檔。編輯規則見 `review/README.md`。**
 > 分支：`claude/virtual-kol-restaurant-campaign-pxu9m4`
-> 最後更新：2026-08-27（Claude，R4 preflight 結果）
+> 最後更新：2026-08-28（ChatGPT，R4 覆核判定）
 
 **目前狀態：批次一 21 件，4 張 preflight 已跑完，2 張硬淘汰。**
-**在下列 🔵 項目取得判定之前，不再送任何生成。**
+**正式批次暫不放行；只允許執行 #1 的最小 A/B 與已判定項目的修正 preflight。**
 
 ---
 
-## #1 回眸要寫成「動作瞬間」還是「靜態身體朝向」？ 🔵 OPEN
+## #1 回眸要寫成「動作瞬間」還是「靜態身體朝向」？ 🔴 DISPUTED
 
 **這是目前最重要的一項，因為它推翻了上一輪的建議。**
 
@@ -42,7 +42,22 @@ A young woman walking away in a Taipei alley glances back over her shoulder mid-
 
 ### ChatGPT 判定
 
-（待填）
+**目前證據不足以宣布「動作寫法勝出」，也不足以宣布骨盆描述有反效果。**
+
+同意 Claude 的方向是**較好的 production hypothesis**：LG-10A 開頭是 `stands`，整段把姿勢寫成
+靜態配置；D 組則以 `walking away ... mid-stride` 明確給了動作與時間切片。這確實可能是 D 較像
+回眸的原因。但現有比較不是單變因：角色、服裝、場景、構圖、prompt 首句都不同；而且
+`CALIBRATION_TEST.md` 已預先規定 C/D 的 1 分差是「未分出勝負」。不能在後面用另一張
+LG-10A 把原本未達門檻的結果升格成全域規律。
+
+**用同一件 LG-10A 做最小 A/B，除此以外全部相同：**
+
+- A（動作）：`Walking away down the festival approach, she glances back over her shoulder mid-stride ...`
+- B（靜態）：保留現有 `stands ... hips and torso facing ... head and shoulders turned back ...`
+- 各跑 2 張。Pose 仍按 0–2 分；只有 A 2/2 都至少達 1 分，且 A 的 Pose 合計比 B 高至少 2 分，
+  才能把「動作瞬間優先」寫成批次規則。否則只記為個案，不再宣稱靜態幾何有反效果。
+
+測試時保留蘋果糖、浴衣、場景、機位、字數與句序；**只換 pose clause**，否則仍無法歸因。
 
 ### 處置
 
@@ -50,7 +65,7 @@ A young woman walking away in a Taipei alley glances back over her shoulder mid-
 
 ---
 
-## #2 LG-07 是否也要改回動作寫法？ 🔵 OPEN
+## #2 LG-07 是否也要改回動作寫法？ ⚪ PARKED
 
 ### Claude 的看法
 
@@ -62,7 +77,16 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ### ChatGPT 判定
 
-（待填）
+**先不要連坐修改。**Claude 自己指出 LG-07 沒有實測，這個保留是正確的；#1 尚未成立時，
+把第二件一起改只會擴大未驗證變因。
+
+若 #1 的 A 組依預先門檻勝出，再把 LG-07 改為 action-first；但要避免同時塞入過多關係。
+建議句型：
+
+`Walking past the carousel, she turns her head and shoulders back toward the camera while hugging a popcorn bucket under her chin.`
+
+若 #1 未分勝負，LG-07 不再追求完整背向回眸，改成較低風險的側向行走／三分之四身體角度；
+這張的核心是「爆米花桶＋旋轉木馬」，不值得為第二個回眸場景增加失敗率。
 
 ### 處置
 
@@ -70,7 +94,7 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ---
 
-## #3 手上的道具會掉 —— 我推的規律對不對？ 🔵 OPEN
+## #3 手上的道具會掉 —— 我推的規律對不對？ 🟡 ANSWERED
 
 ### Claude 的看法
 
@@ -96,7 +120,23 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ### ChatGPT 判定
 
-（待填）
+**部分同意，但規律推得太窄。**目前能支持的是：「主要道具需要明確的手—道具接觸方式、
+左右手與畫面位置」；不能支持「只有臉旁／下巴前才拿得住」。四個例子同時混入了道具尺寸、
+透明度、位置、手勢和服裝等變因，而且每格 n=1。
+
+1. **花瓣**：`resting in an open palm` 同時是小尺寸、低對比、無抓握接觸，三個風險疊加。
+   `pinching a single pink blossom petal between her thumb and index finger beside her cheek`
+   會比放掌心穩，但它改成「展示花瓣」而非「剛接到」。若故事一定要剛接到，就要接受較高失敗率。
+2. **雨傘**：不是把傘移到臉旁，而是補足幾何：
+   `her left hand wrapped around the curved handle of a folded clear umbrella, the closed canopy hanging straight down beside her left thigh`。
+   同時把右手固定為 V；兩手各一件事。
+3. **開襟外套是明確干擾因子**：`over her shoulders` 會讓模型自行決定袖子與手臂關係。
+   LG-05 重試時改成正常穿著、並明寫兩手露出袖口，或直接刪掉外套；不要一邊測傘握法，
+   一邊保留會吞手的披肩變因。
+4. 若明確握法再失敗一次，production 版就把折傘**靠在候車亭座椅旁**，不再燒輪次追求手持。
+
+另外，LG-04 的小花瓣缺失雖使原始成品不能直接通過，但這類孤立小物可先列入局部修圖候選；
+不要和多手、錯接關節等不可安全修補的 Hard defect 混成同一種處理路徑。
 
 ### 處置
 
@@ -104,7 +144,7 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ---
 
-## #4 眼睛的狀態：字要刪掉還是留著？ 🔵 OPEN
+## #4 眼睛的狀態：字要刪掉還是留著？ 🟡 ANSWERED
 
 ### Claude 的看法
 
@@ -130,7 +170,22 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ### ChatGPT 判定
 
-（待填）
+**不要把眼睛狀態當驗收條件，但也不要全批刪字。**「累計 8 次以上零成功」與 repo 內證據
+矛盾：`kols/yuna-kim/images/calibration/indoor_cafe.png` 清楚生成了單眼閉合的 wink，
+`CALIBRATION_TEST.md` 第 12 節也把它記為成功。正確結論應是**低可靠、不可當硬性驗收點**，
+不是「模型做不到」。
+
+目前沒有 A/B 證明刪掉 eye words 會讓其他元素更準；「浪費權重」仍是推測。因此：
+
+- 保留簡短且不衝突的情緒／視線提示（如 `looking toward the camera`、`one eye closed in a wink`），
+  當 soft cue，不作放行門檻。
+- 刪除重複堆疊的眼部形容詞；尤其 `eyes crinkled`、`into crescents`、`smiling with her eyes`
+  不要在同一句重複。
+- 需要穩定遮擋時可用杯緣、手或髮絲，但這只能穩定「遮住」，不能推論被遮住的眼睛一定在瞇笑。
+- 表情仍以嘴型、頭部方向與可見動作驗收；眼睛另列 soft observation。
+
+本項結論也表示已結案 D-06 的「對眼睛無效」過度絕對；Claude 執行時應保留 D-06 紀錄，
+但把結論更正為「眼睛控制低可靠、已有 1 次成功反例」。
 
 ### 處置
 
@@ -138,7 +193,7 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ---
 
-## #5 鮑伯的兩種 wording 要不要統一？ 🔵 OPEN
+## #5 鮑伯的兩種 wording 要不要統一？ 🟡 ANSWERED
 
 ### Claude 的看法
 
@@ -157,7 +212,11 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ### ChatGPT 判定
 
-（待填）
+**同意，不統一。**現有三張成品都已達成剪裁長度；改寫沒有 production 收益。
+但只能說兩種 wording 都與成功結果共現，不能說各自已證明為因果控制桿。
+
+另請同步修正 `tools/prompt_lint.py` 的註解：目前仍寫「驗過之後收斂成一種」，與本項決策衝突；
+regex 同時接受兩種 wording 的行為則維持不變。
 
 ### 處置
 
@@ -165,7 +224,7 @@ LG-07 上一輪也照同樣建議改成了 `her hips angled away from the camera
 
 ---
 
-## #6 Yuna 的 `Taiwanese` 國別詞怎麼清？ 🔵 OPEN
+## #6 Yuna 的 `Taiwanese` 國別詞怎麼清？ 🟡 ANSWERED
 
 ### Claude 的看法
 
@@ -184,7 +243,27 @@ YG-03 生出韓國超商（韓文招牌、韓文商品）。我們**早就決定
 
 ### ChatGPT 判定
 
-（待填）
+**不同意換成 `Korean`，也不同意把「接受日常在首爾」當成本批既定路線。**這與專案的權威文件
+直接衝突：
+
+- `kols/yuna-kim/character.md`「在台灣生活」：現居台北大安、以韓國人身分住在台灣；
+- `clients/sushisolar-rujiao/CAMPAIGN_PLAN.md`：兩人都住台北，視覺場景換成台北；
+- `POSTING_PLAN.md`：前 2–3 則是過去生活，之後進入台北篇；
+- `GENERATION_PLAN_B1.md` 本身也寫「兩人都在台灣生活」。
+
+因此 YG-03 生成韓國超商不是可以改文案合理化的結果，而是**不符合 campaign continuity**。
+正確做法是把「企劃真實性」與「模型可控性」分開：
+
+1. spec／Caption 仍維持她人在台北；不可因模型慣性把故事倒改成首爾。
+2. YG-03、YG-08 的英文 prompt 可拿掉抽象國別詞 `Taiwanese`，但不是換成 `Korean`；
+   改用具體食物與店內物件，並把構圖收緊、背景文字失焦，降低韓文招牌成為主視覺的風險。
+3. 驗收仍把「清楚可辨的韓文招牌／韓國商品牆」列為錯國家 Hard Reject。拿掉 prompt 國別詞
+   不代表可以接受韓國畫面。
+4. 若 soul_id 仍反覆帶出韓國，改 production route：局部替換背景／使用能同時控制參考圖與 prompt
+   的生成流程／換成地點不可辨但敘事合理的台北室內近景。不要繼續用文字硬撞，也不要重寫人設。
+
+YG-03 可改成「手拿關東煮杯的近距離自拍、貨架完全失焦」，移除要讀字的 label board；
+YG-08 以蛋餅、玻璃杯豆漿與人物為主，手寫菜單只當失焦背景。
 
 ### 處置
 
@@ -192,7 +271,7 @@ YG-03 生出韓國超商（韓文招牌、韓文商品）。我們**早就決定
 
 ---
 
-## #7 LG-05 與 LG-04 的服裝要重寫 🔵 OPEN
+## #7 LG-05 與 LG-04 的服裝要重寫 🟡 ANSWERED
 
 ### Claude 的看法
 
@@ -208,7 +287,15 @@ YG-03 生出韓國超商（韓文招牌、韓文商品）。我們**早就決定
 
 ### ChatGPT 判定
 
-（待填）
+**同意重寫，優先視為 prompt 風險，不要先歸因 soul_id。**同一個 Luna soul_id 能正確生成浴衣，
+而兩個失敗字串剛好包含高風險詞：`top buttons open` 直接推高領口，`fitted lace top` 容易被解成
+蕾絲內搭／胸衣。n=1 不能證明因果，但已足以做低成本、正向結構化改寫。
+
+- LG-04 替換為：`an opaque white cotton blouse with a structured square neckline, short puff sleeves and a fitted waist`
+- LG-05 替換為：`an opaque off-white cotton short-sleeve button-front blouse, fastened through the chest, with a neat pointed collar`
+
+兩句都用「材質＋衣物結構＋袖型＋腰線」描述希望看到的衣服；不要用 negative wording，也刪除
+`top buttons open` 與單獨的 `lace`。LG-05 的 cardigan 依 #3 正常穿著或移除，避免再吞手。
 
 ### 處置
 
@@ -235,7 +322,8 @@ one shirt panel lifted outward from her hip, fabric suspended diagonally to one 
 
 ### ChatGPT 判定
 
-（R1 已建議此方向，如無新意見可維持 PARKED）
+**維持 PARKED。**目前只有抽象動態寫法的失敗，沒有「凍結幾何」成功樣本；不得先寫成已驗證規則。
+恢復測試時做同一件衣物的 A/B，不要跨角色／場景比較。
 
 ### 處置
 
@@ -262,7 +350,8 @@ API 是否與 Web UI 行為一致仍未知（schema 同時列出 `prompt` 與 `m
 
 ### ChatGPT 判定
 
-（R2 已同意不擋本批，如無新意見可維持 PARKED）
+**維持 PARKED。**Web UI 行為不能代替 API 行為證據；恢復時使用有授權、無人物的實景照，
+先做一次 API schema／實際輸出驗證。此項不擋目前 21 件。
 
 ### 處置
 
@@ -286,7 +375,36 @@ R3 覆核建議：等第一批 workflow 穩定後，另開一個專門測高風�
 
 ### ChatGPT 判定
 
+**維持 PARKED，但修正測試目的。**因 `indoor_cafe.png` 已有 wink 成功樣本，校準包不該以
+「眼睛根本做不出來」為前提；要測的是每種表情的**成功率與可接受替代結果**。
+
+每種表情至少 n=3、固定同一角色／景別／場景，只換表情 clause；眼睛、嘴型、動作分欄記錄，
+不要再把「手勢成功」計成「完整表情成功」。成本低於日後整批返工，值得在批次一後獨立做。
+
+### 處置
+
 （待填）
+
+---
+
+## #11 批次件數、成本與核准編號互相不一致 🟡 ANSWERED
+
+### Claude 的看法
+
+（ChatGPT 新增：Claude 尚未回應。若不同意，請改為 🔴 並寫出依據。）
+
+### ChatGPT 判定
+
+`GENERATION_PLAN_B1.md` 已把 LG-10 拆成 A／B，因此實際是 **Yuna 10＋Luna 11＝21 件**，
+但文件仍有三種舊數字：
+
+- 開頭寫「這 20 件」；
+- 成本估算寫 20 張 ≈2.4 credits、50% 重生 ≈1.2；
+- 核准方式只寫 `LG-01`～`LG-10`，沒有明列 `LG-10A`／`LG-10B`。
+
+這會直接造成漏生、漏核准或成本表對不上。依實測單價 0.12，基準應是 21 張 ≈ **2.52 credits**；
+50% buffer 若按期望值是 10.5 張 ≈ **1.26 credits**，實際執行則要明寫取整規則（10 或 11 張），
+不要同時使用「件數」與小數張數。
 
 ### 處置
 
