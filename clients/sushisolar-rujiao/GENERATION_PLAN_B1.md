@@ -267,7 +267,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **看著手機鏡頭嘟嘴。**看進手機鏡頭，另一手把瀏海撥開；韓系無聊嘟嘴，眼神平淡。<br>（掛載動作＝撥瀏海；**手機是拍攝者，不會出現在畫面裡**） |
 | **肢體與重心** | 重心在一腳、**另一腳腳尖外開**；一手舉手機、一手勾著包帶；肩線傾斜。；**月台的通風把她的髮尾往一側吹動**。 |
 | **情境** | 等車，順手拍一張，表情有點無聊 |
-| **生成 prompt** | `A young woman looks into her phone camera while pushing her fringe aside with her free hand, lips softly pursed, a bored flat gaze. Half-body phone selfie, camera just above her eye level. Collarbone-length sleek straight mocha brown hair, side-parted. Fitted black short-sleeve knit, khaki high-waisted mini skirt, beige mini box bag. Metro platform, yellow safety line, platform screen doors, a route map lightbox thrown out of focus, ceiling tubes. Flat even station light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman looks into her phone camera while pushing her fringe aside with her free hand, lips softly pursed, a bored flat gaze. Half-body phone selfie, camera just above her eye level. Collarbone-length sleek straight mocha brown hair, side-parted. Fitted black short-sleeve knit, a khaki high-waisted pleated A-line mini skirt forming one continuous hem around her thighs, a beige mini box bag. Metro platform, yellow safety line, platform screen doors, a route map lightbox thrown out of focus, ceiling tubes. Flat even station light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 捷運等好久喔😮‍💨<br>但我很乖有排隊 |
 | 附註 | **背景路人 2–3 人**：背向、失焦 |
 
@@ -359,7 +359,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **舉起試色的手背挑眉。**試完色把手背舉到鏡頭前，同時抬眼、一邊眉毛挑起、同側嘴角上揚。<br>（掛載動作＝試色手背） |
 | **肢體與重心** | 一手手背朝上展示試色；另一手拿著口紅；上半身微側向櫃檯；**風衣掛在手臂上、下襬垂著**。 |
 | **情境** | 在手背上試色，抬頭看鏡頭 |
-| **生成 prompt** | `A young woman swatches lipstick on the back of her hand and holds the swatched hand beside her face, raising one eyebrow with one corner of her mouth lifted. Half body, camera level with her chest, lens horizontal. Sleek glossy mocha brown hair, side-parted, collarbone-length with the ends curving slightly inward. Cream cropped fitted knit top, matching off-white high-waisted straight trousers, a trench coat over her arm, gold hoop earrings. Department store beauty floor, glass counters, rows of lipsticks, mirrored columns. Even ceiling light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds her swatched hand beside her face, her free arm relaxed at her side, raising one eyebrow with one corner of her mouth lifted. Half body, camera level with her chest, lens horizontal. Sleek glossy mocha brown hair, side-parted, collarbone-length with the ends curving slightly inward. Cream cropped fitted knit top, matching off-white high-waisted straight trousers, a trench coat over her arm, gold hoop earrings. Department store beauty floor, glass counters, rows of lipsticks, mirrored columns. Even ceiling light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 這個顏色好漂亮✨<br>但我已經有三支很像的了 |
 
 
@@ -421,7 +421,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **臉靠近貓瞇眼笑。**臉貼近貓的頭、眼睛瞇成月牙；嘴角上揚；完全不看鏡頭，注意力全在貓身上。 |
 | **肢體與重心** | 側坐或半跪；一手伸過去摸貓頭、**手指彎曲**；另一手撐在窗台；上半身向貓傾。；**過長的針織袖口垂在手腕外、隨著伸手的動作晃動**。 |
 | **情境** | 貓趴在窗台，她的手伸過去摸牠的頭，貓瞇著眼 |
-| **生成 prompt** | `A young woman leans in close to an orange cat on the windowsill and scratches its head, her eyes crinkled shut in a smile, her attention entirely on the cat. Half body with the cat in frame, camera level with her face as she sits, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, one side tucked behind her ear. Off-white fitted fine-knit top, light shorts. Bedroom windowsill, small potted plants, an iron window grille and the apartment across the street outside. Soft window light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman leans in close to an orange cat on the windowsill and scratches its head with one hand, her other hand resting on the sill, her eyes crinkled shut in a smile, her attention entirely on the cat. Half body with the cat in frame, camera level with her face as she sits, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, one side tucked behind her ear. Off-white fitted fine-knit top, light shorts. Bedroom windowsill, small potted plants, an iron window grille and the apartment across the street outside. Soft window light on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | Mochi 也搬家了！<br>花了兩個月才習慣🐈 |
 
 ### LG-04｜花季公園・櫻花
@@ -438,7 +438,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **接到花瓣的驚訝。**攤開的掌心裡停著一片花瓣，眼睛睜大、嘴呈小 O 形、眉毛抬高。<br>（掛載動作＝掌心的花瓣；**原本寫「然後笑出來」是兩個時間點，靜態圖只 freeze 驚訝那一刻**） |
 | **肢體與重心** | **一手伸起接花瓣、手指張開**；另一手提著開衫；重心在後腳；**裙襬與肩上開衫的下襬被風帶起**。 |
 | **情境** | 伸手接住一片落下的花瓣 |
-| **生成 prompt** | `A young woman pinches a single pink blossom petal between her thumb and index finger beside her cheek, mouth softly open in surprise, eyebrows raised. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, a cream ribbon headband. An opaque white cotton blouse with a structured square neckline, short puff sleeves and a fitted waist, pale pink checked mini skirt, pearl earrings. Park path under blossoming branches hanging into the top of the frame, petals on her shoulder. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman pinches a single pink blossom petal between her thumb and index finger beside her cheek, her free arm relaxed at her side, mouth softly open in surprise, eyebrows raised. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, a cream ribbon headband. An opaque white cotton blouse with a structured square neckline, short puff sleeves and a fitted waist, a pale pink checked pleated A-line mini skirt forming one continuous hem around her thighs, pearl earrings. A park path under blossoming branches, petals on her shoulder. Soft daylight on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 花開了🌸<br>今天走了好久才找到這裡 |
 | 附註 | **背景路人 1–2 人**：遠處、背向、失焦 |
 
@@ -510,7 +510,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **咬著毛巾角鼓臉頰。**擦頭髮擦到一半停下來，用牙齒咬著毛巾一角，對著鏡子鼓起臉頰。<br>（掛載動作＝毛巾） |
 | **肢體與重心** | 一手拿毛巾擦頭髮、**手肘抬起**；另一手扶著洗手台；上半身微前傾；肩膀一高一低。 |
 | **情境** | 用毛巾擦頭髮，停下來看鏡子裡的自己 |
-| **生成 prompt** | `A young woman stops drying her hair and bites one corner of the towel between her teeth while looking at herself in the mirror, cheeks puffed out. Half body reflected in the mirror, camera at her eye level, lens horizontal. A wet blunt chin-length black bob cut evenly at the jawline, clinging to her cheeks. A white bath towel wrapped around her. Clean bright bathroom, white square tiles, a wooden-framed mirror with a little steam at one corner, skincare bottles on the counter. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a towel to her hair with one hand and bites one corner of it between her teeth while looking at herself in the mirror, her other hand resting on the counter, cheeks puffed out. Half body reflected in the mirror, camera at her eye level, lens horizontal. A wet blunt chin-length black bob cut evenly at the jawline, clinging to her cheeks. A white bath towel wrapped around her. Clean bright bathroom, white square tiles, a wooden-framed mirror with a little steam at one corner, skincare bottles on the counter. Broad diffuse frontal light with very low shadow contrast, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | お風呂上がり🛁<br>最喜歡的時間 |
 
 ### LG-09｜台式早餐店・豆漿
@@ -527,7 +527,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **上目遣い。**頭略低、眼睛往上看鏡頭；雙手捧著杯子在下巴前；嘴角微揚——日系經典。 |
 | **肢體與重心** | 雙手捧著玻璃杯在胸前；手肘靠桌；上半身前傾；肩膀微聳。；**薄針織的袖口與髮尾隨著前傾垂下晃動**。 |
 | **情境** | 雙手捧著豆漿杯，正要喝 |
-| **生成 prompt** | `A young woman holds a glass of soy milk with both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the food in frame, camera at her eye level or slightly above, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, centre-parted and worn loose. Cream fitted thin-knit short sleeve, a light mini skirt. A breakfast shop, a stainless steel counter, a metal tray, red plastic stools, the wall menu behind her thrown out of focus. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a glass of soy milk with both hands in front of her chin, head slightly lowered, eyes looking up over the rim toward the camera, smiling with her eyes. Half body with the food in frame, camera at her eye level or slightly above. A blunt chin-length black bob cut evenly at the jawline, centre-parted. Cream fitted thin-knit short sleeve, a light pleated A-line mini skirt with one continuous hem around her thighs. A breakfast shop, a stainless steel counter, red plastic stools, the wall menu behind her out of focus. Daylight from the doorway on her face, background exposed the same brightness as her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 早餐吃這個🥛<br>好喝…真的很好喝 |
 
 ### LG-10A｜浴衣・祭典參道（全身）
@@ -548,7 +548,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **拿著蘋果糖回頭笑。**身體與骨盆朝參道前方、頭與肩轉回鏡頭；一手把蘋果糖舉在臉頰旁；笑到眼睛彎。<br>（掛載動作＝蘋果糖＋回頭；**骨盆朝向已寫死，避免整個人被轉正**） |
 | **肢體與重心** | 重心在後腳；骨盆朝參道深處；上半身與頭轉回鏡頭；一手舉蘋果糖。 |
 | **情境** | 走在參道上回頭 |
-| **生成 prompt** | `A young woman stands on the festival approach with her hips and torso facing down the path, her head and shoulders turned back toward the camera, holding a candy apple beside her cheek, laughing. Full body, camera at her navel level, lens horizontal, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. Pale blue yukata with a white morning-glory print, a navy half-width obi tied tight at the waist, wooden geta. A clean bright wooden torii, paper lanterns strung overhead, food stalls. Her face clearly lit, the lantern-lit stalls behind her keeping visible detail. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman stands on the festival approach with her hips and torso facing down the path, her head and shoulders turned back toward the camera, holding a candy apple beside her cheek with one hand, her free arm relaxed at her side, laughing. Full body, camera at her navel level, shot from well back. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin. A pale-blue floral Japanese yukata, an ankle-length wrap robe with the left panel crossed over the right, a wide flat navy obi sash, wooden geta. A wooden torii, paper lanterns overhead, food stalls. Her face clearly lit, the lantern-lit stalls keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 夏祭り🎐<br>蘋果糖比想像中大顆 |
 | 附註 | 這是 Luna 視覺變化最大的一組。<br>**⚠️ 這件的場景在日本，是刻意的**——歸為「回日本的時候」類型（對應 Yuna 的 YG-06 汗蒸幕）。**其餘 Luna 的件全部是台北。**<br>戶外件，第一張出來要跟 LG-04／06／07 互相比對有沒有出現同一個場景模板 |
 
@@ -566,7 +566,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **表情** | **舉著蘋果糖笑。**一手把蘋果糖舉在臉頰旁、另一手扶著髮簪；笑到眼睛彎。<br>（掛載動作＝蘋果糖＋扶髮簪） |
 | **肢體與重心** | 站定，重心在一腳；兩手都有事做（舉糖、扶簪）。 |
 | **情境** | 停下來給鏡頭看手上的蘋果糖 |
-| **生成 prompt** | `A young woman holds a candy apple up beside her cheek with one hand and steadies the Japanese hairpin in her half-up bob with the other, laughing with her eyes crinkled. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin, two strands left at her temples. Pale blue yukata with a white morning-glory print, a navy half-width obi tied tight at the waist. Paper lanterns strung overhead behind her, a blurred food stall. Her face clearly lit, the lantern-lit background keeping visible detail. Natural skin texture, subtle film grain.` |
+| **生成 prompt** | `A young woman holds a candy apple up beside her cheek with one hand and steadies the Japanese hairpin in her half-up bob with the other, laughing with her eyes crinkled. Half body, camera level with her chest, lens horizontal. A blunt chin-length black bob cut evenly at the jawline, half-pinned up with a Japanese hairpin, two strands left at her temples. A pale-blue floral Japanese yukata, an ankle-length wrap robe with the left front panel crossed over the right, secured by a wide flat navy obi sash. Paper lanterns strung overhead behind her, a blurred food stall. Her face clearly lit, the lantern-lit background keeping visible detail. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 這個顏色好可愛🍎 |
 | 附註 | 與 LG-10A 同一天同一套，**拆兩則發沒問題**（景別與構圖差異夠大）。同屬「回日本的時候」類型。 |
 
@@ -618,12 +618,12 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 
 ### 往下怎麼跑
 
-1. 你核准 spec → **一件一張**，用該件的「生成 prompt」那一行直接送
-2. 不滿意就**改那一行再送**，不用 `count` 複製
+1. 你核准 spec → **一件生兩張**（兩次獨立生成，不是 `count=2`），用該件的「生成 prompt」那一行
+2. **一張成功就選片**；**兩張同方向失敗 = 系統性偏差，立刻停這件、改 prompt 再跑**，不要用原句繼續抽
 3. 圖確認 → 影片 start frame → 影片（`kling3_0`，單鏡頭，`sound=on`）
 4. 每批記一行 `cost-log.md`，**用 `transactions` 逐筆對帳，不要用餘額差**
 
-**成本估算**：圖 **21 張 ≈ 2.52 credits**（一件一張）｜重生 buffer **取 11 張 ≈ 1.32**（取整規則明寫，不用小數張數）｜影片另計
+**成本估算**：圖 **21 件 × 2 張 = 42 張 ≈ 5.04 credits**（2026-08-28 改成一件生兩張選一張，見 `SEXY_SCENE_LIBRARY.md` 第 21 點）｜系統性 drift 需改 prompt 重跑的 buffer **取 6 件 × 2 張 = 12 張 ≈ 1.44**｜影片另計
 
 ---
 
