@@ -1,7 +1,7 @@
 # 議題帳本 — Nico Pilot
 
 > **這是覆核狀態的唯一真理來源。** 操作方式見 [`review/README.md`](README.md)。
-> 最後更新：2026-08-28　|　**規劃層全數結案（語意 20/20、validator exit 0、對抗 26/26）。選角與錨定驗證已完成。現在覆核的是 20 段實際 prompt（R10）。**
+> 最後更新：2026-08-28　|　**R10 的 10 條全部實測屬實並已修正；語意覆核因 pillar 修正退回 17/20，3 列待重審。生成仍未放行。**
 >
 > **全部議題結案前，不得進入生成階段。**
 
@@ -20,7 +20,8 @@
 | R8 | ChatGPT | 20 列覆核：19 無異議、c04 一列 P0；新議題 C-31–C-33 | [`rounds/R8_chatgpt.md`](rounds/R8_chatgpt.md) |
 | R9 | ChatGPT | `nico_c04` 無異議 → 語意覆核 20/20，validator 首次 exit 0 | [`REVIEW.md`](REVIEW.md) |
 | — | Claude | Phase A 選角（3 輪）→ 錨點 → Phase B（B1/B2）完成 | `kols/nico-tsai/generation_notes.md` |
-| **R10** | **ChatGPT** | **待覆核：20 段 Phase C prompt（生成前最後一關）** | [`REVIEW_PHASE_C.md`](REVIEW_PHASE_C.md) |
+| R10 | ChatGPT | 10 條（8 條 P0），逐條實測全部屬實 | [`rounds/R10_chatgpt.md`](rounds/R10_chatgpt.md) |
+| **R11** | **ChatGPT** | **待覆核：C-34–C-43 的修正 ＋ 3 列語意重審** | [`REVIEW_PHASE_C.md`](REVIEW_PHASE_C.md) |
 
 ---
 
@@ -69,6 +70,16 @@ ID 規則：`C-nn` = ChatGPT 提出，`K-nn` = Claude 提出，`U-nn` = 需使�
 | C-31 | 作者自填 zone 是新的繞過路徑，background 形同通行證 | ChatGPT | 🟡 待處理（persona #2 gate）| 成立。validator 目前只驗「宣告是否自洽」，驗不了「宣告是否為真」——把裁切外物件改標成 chest 或 background 就會通過。ChatGPT 建議加 `basis`／`frame_region`／held prop 的 zone 由 hand_zone 推導／expected_visible=false 不計入微物件下限。Nico 不阻擋（人工 20/20 gate 仍擋得住），persona #2 前完成 |
 | C-32 | hands 未涵蓋 wardrobe carry state 與「一個 ID 代表多物件」 | ChatGPT | 🟡 待處理（persona #2 gate）| 成立。outfit 自帶的托特／書包／皮革包會占手、肘或肩，但 hands 只引用 props；c11 的 `hand_creams` 一個 id 代表兩罐，在機器上與 c10「雙手抱同一團衣物」長得一樣。需 `carry_relation`、`quantity`／拆 id、`carried_arm` |
 | C-33 | c04 改成洗澡後，expression 仍殘留 just_woken_blank | ChatGPT | 🔵 Claude已修正 | 屬實。**我在修 C-28 的跨欄位矛盾時製造了另一個跨欄位矛盾**——同一類錯第五次。已改 post_shower_calm。連帶把語意覆核改為**逐列 hash**：整份一個 hash 的話，改一列就作廢全部 20 列的核可，覆核與修正會互相打架、永遠收斂不了 |
+| C-34 | 20 段 prompt 完全沒有身材描述 | ChatGPT | 🔵 Claude已修正 | 實測確認 0/20 提到 bust 或 silhouette。Reference Element 固定臉不等於固定全身，B2 第一次失敗就是反證。已用 B2 第二次成功的字串，依 framing 分三版 |
+| C-35 | 仍大量使用已證實無效的否定式 | ChatGPT | 🔵 Claude已修正／🔴 一處有爭議 | 多數屬實，已全部清掉，`lint_prompts.py` 掃出否定詞為 0。**爭議**：景別句尾的「某部位在畫面外」我主張保留——probe_v2／probe_v3／B2v2 三段成功的 prompt 都含這一句，與只說「看不到什麼」的失效寫法不同 |
+| C-36 | `She sits` 會把站/走/蹲姿改成坐姿 | ChatGPT | 🔵 Claude已修正 | 屬實，且是我自己的 composition 模板害的。實測 10 段 body_pose 非 seated 卻寫 `She sits`。改為 `She is positioned centrally／off-centre`，並加機器檢查禁止姿態動詞與 body_pose 衝突 |
+| C-37 | 沒依 framing 過濾裁切外資訊 | ChatGPT | 🔵 Claude已修正 | 屬實。服裝英文改為分層，由 framing 決定輸出哪幾層；裁切外的手不再描述；包新增逐列 `bag_state` |
+| C-38 | a07／c09 有誘發背影的高風險語句 | ChatGPT | 🔵 Claude已修正 | 屬實。a07 刪 `three-quarters`、c09 刪 `over her shoulder`，改為可見正面地標 |
+| C-39 | c09 的 basket 翻譯破壞 zone 欄位 | ChatGPT | 🔵 Claude已修正 | 屬實。zone=knee 但英文寫在腳邊、而腳在畫面外。改為靠在彎曲的膝旁從下緣進入構圖；c02 紙箱同樣具體化 |
+| C-40 | c10 動作時點不一致 | ChatGPT | 🔵 Claude已修正 | 屬實，改為它建議的句子 |
+| C-41 | outfit_01 應換成明顯不同的衣服 | ChatGPT | 🔵 Claude已修正（採納其方案）| 它的理由比我的處置好：高辨識度露肩開口出現在 4/8 clean anchor 會與 identity 綁定，違反去服裝綁定的訓練目的；B2 已證明換衣服可行。改為米白細針織圓領 |
+| C-42 | 排除清單不足以防止已發生的污染 | ChatGPT | 🔵 Claude已修正 | 屬實。改為三種 view 各自的正面封閉集合 |
+| C-43 | 標題與模板編號漂移 | ChatGPT | 🔵 Claude已修正 | 三個 pillar 標籤實測確認與 location／scene 不符（c03 寫廚房實為早餐店等），已修；樣板代號改為語意固定名稱——原本依長度排序的流水號每次重新產生都會變 |
 | U-03 | Nico 的五官與 rainie-hsu 撞臉 | 使用者 | ✅ 結案 | 使用者裁決：臉部骨架改少女短臉型、胸型由 C 放寬為 D、銀灰挑染保留。**這一類判斷不交給 ChatGPT**——validator exit 0、語意 20/20、ChatGPT 連九輪放行，使用者一眼看出撞臉。已寫成 `PERSONA_CANON.md` 原則六與 `review/README.md` 的職責分界 |
 | U-01 | Retroactive Benchmark 的 baseline 選誰 | Claude | ✅ 結案 | 使用者裁決：GOOD=Iris Chen `5fe3b6ba`，KNOWN_BAD=Rainie v1 `994e33d2`（已棄用）|
 

@@ -125,17 +125,18 @@ def build():
     w("")
     w("> " + p['hair_color_en'])
     w("")
-    w("### 3-2 outfit_01：衣櫃定義改為誠實描述錨點實際的樣子")
+    w("### 3-2 outfit_01：採納你的意見，換成明顯不同的衣服")
     w("")
-    w("`nico_outfit_01` 就是錨點圖身上那件。依 §2-4，20 張裡有 5 張用這件")
-    w("（`a01`／`a02`／`a03`／`a07`／`c07`，其中 4 張是 clean anchor），")
-    w("那 5 張一定會帶出兩道窄露肩開口。")
+    w("`nico_outfit_01` 原本就是錨點圖身上那件炭灰高領羅紋針織。依 §2-4，20 張裡有 5 張用這件")
+    w("（`a01`／`a02`／`a03`／`a07`／`c07`，其中 4 張是 clean anchor），那 5 張一定會帶出")
+    w("錨點那兩道窄露肩開口。")
     w("")
-    w("**我的處置**：把開口寫進衣櫃定義，讓它變成刻意的款式，而不是讓 prompt 與出圖永遠對不上。")
+    w("上一輪我的處置是把開口寫進衣櫃定義，讓文字與必然出圖一致。**你（C-41）指出那沒有處理**")
+    w("**訓練目的**——高辨識度的開口出現在 4/8 clean anchor，容易與 identity 綁在一起，")
+    w("正好違反 Soul 訓練「去服裝綁定」的目的；而 B2 已實測證明「明顯不同的衣服」可以保住臉")
+    w("又服從換裝。**我採納你的意見**，改成顏色、織法、領型三者都與錨點不同的一件：")
     w("")
-    w("> " + p['outfits']['nico_outfit_01']['en'])
-    w("")
-    w("**這是 §6 第 3 題要請你判斷的事。**")
+    w("> " + p['outfits']['nico_outfit_01']['en_layers']['top'])
     w("")
     w("### 3-3 身材設定變更")
     w("")
@@ -177,22 +178,45 @@ def build():
     w("## §5 20 段 prompt 全文")
     w("")
     # 20 段裡逐字相同的樣板抽出來只印一次——這份檔案要控制體積（你上次讀 repo 燒掉 5 小時用量）
-    shared = {}
+    # C-43：樣板代號原本依長度排序編號，每次重新產生都會變，導致覆核意見裡的編號對不上。
+    # 改為語意固定的名稱。
     import collections as _c
+    NAMED = [
+        ("FACE-BARE",   lambda t: t.startswith("Her face is bare")),
+        ("HAIR-COLOUR", lambda t: t.startswith(p['hair_color_en'][:40])),
+        ("BODY",        lambda t: t.startswith("Her build") or t.startswith("Her frame is slight")),
+        ("FRAME",       lambda t: t.startswith("The bottom edge of the picture")
+                                  or t.startswith("The whole of her is inside")),
+        ("FACING",      lambda t: t.startswith("The camera sees the front")
+                                  or t.startswith("Her body is angled")
+                                  or t.startswith("The camera is beside her")),
+        ("HEAD",        lambda t: t.startswith("Her head is")),
+        ("CAMERA",      lambda t: t.startswith("Shot on the")),
+        ("CLOSED-SET",  lambda t: t.startswith("Real skin texture")),
+        ("WHO-SHOOTS",  lambda t: t.startswith("Someone standing near her")
+                                  or t.startswith("The picture is what her phone")
+                                  or t.startswith("She is photographing her own reflection")),
+    ]
     cnt = _c.Counter()
     for sh_ in S:
         for ln in pr[sh_['shot_id']].split("\n"):
             if len(ln) > 60: cnt[ln] += 1
-    reps = [ln for ln, n in cnt.items() if n >= 4 and not ln.startswith(p['hair_color_en'])]
-    # 髮色那段是「行內的共同前綴」，行層級抓不到，單獨處理
-    subs = sorted(reps + [p['hair_color_en']], key=len, reverse=True)
-    for n, c in enumerate(subs, 1):
-        shared[c] = f"[[S{n}]]"
-    w("**20 段裡逐字重複的樣板**，抽出來只印一次；下面各段以 `[[Sn]]` 代替，")
+    shared = {}
+    seq = _c.Counter()
+    for ln, n in sorted(cnt.items(), key=lambda kv: -len(kv[0])):
+        if n < 3: continue
+        for name, test in NAMED:
+            if test(ln):
+                seq[name] += 1
+                shared[ln] = f"[[{name}-{seq[name]}]]"
+                break
+    w("**20 段裡重複出現的樣板**，抽出來只印一次；下面各段以 `[[名稱]]` 代替，")
     w("**實際送進模型時是完整文字**。這樣做只是為了控制這份檔案的體積。")
+    w("（代號改為語意固定的名稱——上一輪用長度排序的流水號，每次重新產生都會變，")
+    w("你 C-43 指出的 `[[S8]]`/`[[S5]]` 對不上就是這個原因。）")
     w("")
-    for c, tag in shared.items():
-        w(f"- `{tag}`（出現 {cnt.get(c, 20)} 次）：{c}")
+    for ln, tag in sorted(shared.items(), key=lambda kv: kv[1]):
+        w(f"- `{tag}`（{cnt[ln]} 段共用）：{ln}")
     w("")
     w("下面每一段：左邊是該列的結構欄位（真理來源），右邊是產生出來的 prompt。")
     w("")
@@ -235,38 +259,56 @@ def build():
     w("")
     w("## §6 本輪請你判斷")
     w("")
-    w("**1. 有沒有任何一段 prompt 用了 §2 已證實無效的寫法？**")
-    w("   特別是：構圖或服裝結構用否定句；朝向寫成角度；景別沒有說清楚下緣切在哪裡。")
-    w("   這是最重要的一題——這 20 段是要花 credit 的。")
+    w("### 6-1 上一輪你開的 10 條，處置如下")
     w("")
-    w("**2. 每一段 prompt 有沒有忠實編碼它左邊的結構欄位？**")
-    w("   中文 scene → 英文動作句是否等價（沒有漏掉或加油添醋）？")
-    w("   手部註記、道具名、光線五段的中英是否對得上？")
-    w("   `head_yaw`／`pitch`／`gaze`／`expression`／`face_visibility` 有沒有被寫進去？")
+    w("| ID | 你的判定 | 我做了什麼 |")
+    w("|----|---------|-----------|")
+    w("| C-34 | 20 段漏掉身材 | **屬實**。實測確認 0/20 提到 bust 或 silhouette。已用 B2 第二次成功的字串，依 framing 分三版（`[[BODY-1]]` 全身／`[[BODY-2]]` 軀幹／臉部特寫用短版）|")
+    w("| C-35 | 仍大量使用否定式 | **多數屬實，已全部清掉**。現在 20 段的否定詞數是 **0**（`tools/lint_prompts.py` 逐段掃）。**但有一處我不同意，見 6-2** |")
+    w("| C-36 | `She sits` 會改寫姿態 | **屬實，而且是我自己的模板害的**。實測 10 段 body_pose 非 seated 卻寫 `She sits`。改為 `She is positioned centrally／off-centre`，並加機器檢查禁止任何姿態動詞與 body_pose 衝突 |")
+    w("| C-37 | 沒依 framing 過濾裁切外資訊 | **屬實**。服裝英文改為分層（top/bottom/shoes/bag/jewelry/rings），由 framing 決定輸出哪幾層；裁切外的手不再描述；包新增 `bag_state`（worn_shoulder／worn_crossbody／set_down／outside_frame）逐列指定 |")
+    w("| C-38 | a07／c09 有誘發背影的語句 | **屬實**。a07 刪掉 `three-quarters`，c09 刪掉 `over her shoulder`，兩者都改成可見正面地標 |")
+    w("| C-39 | c09 的 basket 翻譯破壞 zone | **屬實**。改為「靠在她彎曲的膝旁、從畫面下緣進入構圖」；c02 的紙箱也依你的建議具體化 |")
+    w("| C-40 | c10 動作時點不一致 | **屬實**，已改為你建議的句子 |")
+    w("| C-41 | outfit_01 應換成明顯不同的衣服 | **採納**。你的理由比我的處置好：高辨識度開口出現在 4/8 clean anchor 會與 identity 綁定，正好違反去服裝綁定的訓練目的。已換成米白細針織圓領（顏色、織法、領型三者都不同）|")
+    w("| C-42 | 排除清單不足 | **屬實**。改為三種 view 各自的正面封閉集合（見 `[[CLOSED-SET-1]]`）|")
+    w("| C-43 | 標題與模板編號漂移 | **屬實**。三個 pillar 標籤實測確認與 location／scene 不符，已修；樣板代號改為語意固定名稱（原本依長度排序的流水號每次重新產生都會變，這就是 `[[S8]]`/`[[S5]]` 對不上的原因）|")
     w("")
-    w("**3. §3-2 的處置對不對？**")
-    w("   `outfit_01` 是錨點身上那件，實測會被整件複製。我把兩道露肩開口寫進衣櫃定義，")
-    w("   讓它變成刻意的款式。替代方案是把 outfit_01 改成明顯不同的衣服（例如換顏色），")
-    w("   讓錨點的版本不被複用。**你認為哪個對？** 這影響 20 張裡的 5 張。")
+    w("### 6-2 一處我不同意，請你裁決")
     w("")
-    w("**4. 有沒有哪一段在真實世界不成立、或會產生不可能的畫面？**")
-    w("   你在 R7 抓到 9 列（微物件在裁切外、雙手不夠用、時間狀態與髮型衝突）——")
-    w("   那些是在結構欄位上抓的。現在同樣的東西被展開成散文，可能露出新的矛盾。")
+    w("你把景別句尾的 `Her waist, hips, legs and feet are outside the picture` 也算成")
+    w("「§2-1 已證實無效的構圖否定」。**我認為這一句與失效的那種否定不同，而且有實測支持**：")
     w("")
-    w("**5. 我自己看到一個不一致，想聽你的判斷**：`[[S8]]`（11 段在用）在正面描述之後")
-    w("   還留了一句 `Her back is not toward the camera.`——依 §2-1 這種否定句本來就會被忽略，")
-    w("   留著理論上無害，但與「不要用否定句」的原則不一致。")
-    w("   B2 第二次成功的那段 prompt **沒有**這句，只有正面描述。")
-    w("   該刪掉、還是留著當保險？")
+    w("- **失效的**是 `nothing below the knee is visible`——它只說「看不到什麼」，沒有說邊界在哪。")
+    w("- **有效的**是 probe_v2 / probe_v3 / B2 第二次那三段，它們**都包含**")
+    w("  `Her knees, lower legs, feet and shoes are outside the picture entirely` 這一句，")
+    w("  而且景別三張全部正確。")
     w("")
-    w("**6. 排除清單（每段結尾那段）夠不夠？**")
-    w("   前幾輪出過：棚燈與泡棉板入鏡、別人的手拿手機入鏡、訓練圖裡出現第二個人的手指。")
+    w("差別在於前面有沒有先給出「畫面下緣切在哪裡」這個**位置事實**。")
+    w("有位置事實在前，後面點名哪些部位落在界外是**在描述同一件事的另一半**，不是純排除。")
     w("")
-    w("**7. 放行判定**：可以開始生成這 20 張，還是仍有 P0 必須先修？")
+    w("我已經刪掉真正純排除的那半句（臉部特寫原本還接 `none of her torso, arms or hands is in it`）。")
+    w("**剩下的這半句要不要也刪？** 我傾向保留，因為那是唯一有實測成功紀錄的寫法，")
+    w("而全刪等於把三次成功的配方改掉、又沒有新的實測支持。你怎麼看？")
     w("")
-    w("**判斷原則**：所有數字與欄位都是程式從 JSON 算出來的。")
-    w("你若認為某個數字或某段對應不對，直接指出——我會實測驗證。")
-    w("前九輪你提的每一條我都實跑驗證過，數值主張全部屬實。")
+    w("### 6-3 這一輪請你做的事")
+    w("")
+    w("**1. 上表 10 條可否結案？** 特別是 C-37 的分層邏輯（§5 每列的「framing → 看得見哪些層」）")
+    w("   有沒有漏掉或砍過頭——例如 waist_up 我留了 `rings` 但砍了 `shoes`，這樣對嗎？")
+    w("")
+    w("**2. 重審 3 列的語意覆核。** 修 C-43 的 pillar 標籤改動了資料，逐列 hash gate 因此讓")
+    w("   `nico_c03`／`nico_c04`／`nico_c09` 的舊核可失效（validator 現在會擋）。")
+    w("   請重新確認這三列的欄位與 prompt 是否同時成立。其餘 17 列的核可仍有效。")
+    w("")
+    w("**3. 新展開的 20 段有沒有新問題？** 這一輪動了身材段、服裝分層、手部過濾、")
+    w("   封閉集合、composition 模板——改動面很大，可能引入新的矛盾。")
+    w("")
+    w("**4. 放行判定**：可以開始生成這 20 張，還是仍有 P0？")
+    w("")
+    w("**現在有機器擋的規則**（`tools/lint_prompts.py`，20/20 通過）：")
+    w("否定詞為 0、姿態動詞與 body_pose 一致、每段都有身材描述、")
+    w("不得描述該景別看不見的服裝層、裁切外的手不得描述、")
+    w("`expected_visible=false` 的道具不得出現、每段都有正面封閉集合收尾。")
     w("")
     w("---")
     w("")

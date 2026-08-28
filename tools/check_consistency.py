@@ -124,6 +124,11 @@ for p in ('kols/nico-tsai/profile.json', 'kols/nico-tsai/character.md',
 if '挑染' not in pilot.get('hair_color_en', '') and 'silver-grey' not in pilot.get('hair_color_en', ''):
     err("pilot 的 hair_color_en 沒有描述那段銀灰挑染")
 
+# prompt 層的規則交給 lint_prompts.py
+r2 = subprocess.run([sys.executable, 'tools/lint_prompts.py'], capture_output=True, text=True)
+if r2.returncode != 0:
+    err("tools/lint_prompts.py 未通過：\n" + r2.stdout.strip())
+
 print("跨檔案一致性檢查")
 for w in WARN: print("  ⚠ ", w)
 if ERR:

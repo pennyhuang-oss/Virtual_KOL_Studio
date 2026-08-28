@@ -20,7 +20,7 @@ ANCHOR = "68ff990e-1862-4003-bfe3-fe288275cdd4"
 FRAMING = {
  'face_closeup': "The bottom edge of the picture sits just below her collarbones. Her face fills most "
                  "of the frame, from the top of her hair down to the base of her neck. Her shoulders are "
-                 "only barely in the picture and none of her torso, arms or hands is in it.",
+                 "only barely in the picture; everything below them is outside it.",
  'chest_up':     "The bottom edge of the picture cuts across her chest, a little below her armpits. Her "
                  "head, shoulders and upper chest fill the frame. Her waist, hips, legs and feet are "
                  "outside the picture.",
@@ -33,6 +33,23 @@ FRAMING = {
  'full_body':    "The whole of her is inside the picture, from the top of her head down to her shoes, "
                  "with a margin of empty ground below her feet and a little space above her head. Her "
                  "legs and shoes are clearly visible.",
+}
+
+# ── C-37：各景別看得見哪些服裝層 ──
+VISIBLE_LAYERS = {
+ 'face_closeup': ['top', 'jewelry'],
+ 'chest_up':     ['top', 'jewelry'],
+ 'waist_up':     ['top', 'bottom', 'jewelry', 'rings'],
+ 'knee_up':      ['top', 'bottom', 'jewelry', 'rings'],
+ 'full_body':    ['top', 'bottom', 'shoes', 'jewelry', 'rings'],
+}
+BODY_BY_FRAMING = {'face_closeup':'head','chest_up':'torso','waist_up':'torso',
+                   'knee_up':'full','full_body':'full'}
+BAG_TEXT = {
+ 'worn_shoulder':"{bag} hangs from her shoulder",
+ 'worn_crossbody':"{bag} is worn across her body",
+ 'set_down':"{bag} is set down beside her",
+ 'outside_frame':None, 'none':None,
 }
 
 # ── 身體朝向：寫「鏡頭看得到哪些正面特徵」，不寫角度 ──
@@ -64,14 +81,14 @@ HEAD_PITCH = {
 }
 EYE_GAZE = {
  'camera': "She looks directly into the lens.",
- 'away':   "Her eyes are directed off past the camera at something in the distance, not at the lens.",
+ 'away':   "Her eyes rest on something in the distance, off past the camera.",
  'down':   "Her eyes are lowered toward what is in front of her.",
  'mirror': "She looks at her own reflection in the mirror.",
 }
 VIEW = {
  'third_person': "Someone standing near her is holding the phone and taking this photo of her.",
- 'selfie_front': "She is holding the phone herself, arm extended, shooting with the front camera. The "
-                 "phone is the camera and is not itself in the picture.",
+ 'selfie_front': "The picture is what her phone's own front camera sees: she holds it herself at "
+                 "arm's length, and the device sits just past the edge of the frame.",
  'selfie_mirror':"She is photographing her own reflection in the mirror. The phone she is holding is "
                  "visible in the reflection.",
 }
@@ -121,18 +138,19 @@ CAMERA_TYPE = {
  'phone_front':"Shot on the front camera of a phone, held at arm's length.",
  'mirror_phone':"Shot on the rear camera of a phone aimed at a mirror.",
 }
-DISTORTION = {'none':"No lens distortion.",
+DISTORTION = {'none':"Straight lens geometry: vertical lines in the room stay vertical.",
               'mild':"The slight wide-angle stretch a phone lens gives at close range."}
-DOF = {'adequate':"Adequate depth of field — her face, her body and the background are all in "
-                  "reasonable focus. This is not a shallow blurred-background portrait; her body "
-                  "outline stays sharp and readable.",
+DOF = {'adequate':"Deep depth of field: her face, her body and the background all stay in focus "
+                  "together, and her body outline reads sharp against what is behind her.",
        'shallow':"Shallow depth of field: she is sharp and the background falls out of focus."}
-FILTER = {'none':"Straight out of the phone, no filter and no beauty retouching.",
+FILTER = {'none':"The picture is straight out of the phone's camera roll, exactly as the sensor recorded it.",
           'ccd':"It has the look of an old CCD compact camera: slightly soft, a little grain, "
                 "colours very slightly off from true."}
-COMPOSITION = {'centered':"She sits centred in the frame.",
-               'off_center':"She sits off to one side of the frame rather than centred.",
-               'slightly_tilted':"The horizon is very slightly tilted, the way a hand-held snapshot is."}
+# C-36：原本寫 `She sits centred in the frame`——`sits` 對模型是明確動作，
+# 會把 10 段站姿／走姿／蹲姿改成坐姿。composition 模板一律不得出現姿態動詞。
+COMPOSITION = {'centered':"She is positioned centrally in the frame.",
+               'off_center':"Her figure is positioned off-centre in the frame.",
+               'slightly_tilted':"The horizon runs very slightly off level, the way a hand-held snapshot does."}
 MOTION = {'none':"", 'minor_hand_blur':"Her moving hand is very slightly blurred, though her face stays sharp.",
           'subject_motion':"There is a trace of motion blur where she is moving, though her face stays sharp."}
 WB = {'neutral':"", 'slightly_cool_auto':"The phone's auto white balance has gone a touch cool.",
@@ -165,7 +183,7 @@ def prop_line(p, en):
     if rel == 'worn':
         return f"the {name}"
     if rel == 'background':
-        return f"{name}, visible behind her"
+        return name
     return f"{name}"
 
 def build(shot, pilot, en):
@@ -187,23 +205,31 @@ def build(shot, pilot, en):
     P.append(VIEW[shot['view']])
     P.append("")
     hl, hr = shot['hands']['left'], shot['hands']['right']
+    vis = en.get('hands_visible', {'left': True, 'right': True})
     if (hl['state'] == hr['state'] == 'holding' and hl['object_ref'] == hr['object_ref']):
         # held_both：一個物件由雙手共同持有，不要輸出兩行重複的句子
         P.append(f"Both of her hands together are holding {en['props'][hl['object_ref']]} — "
                  f"{en['hands']['left']}.")
     else:
-        P.append(hand_line('left', hl, props, en))
-        P.append(hand_line('right', hr, props, en))
-    vis = [prop_line(p, en) for p in shot['props']]
-    vis = [v for v in vis if v]
-    if vis:
-        P.append("Also in the picture: " + "; ".join(vis) + ".")
+        # C-37：裁切外的手不寫進 prompt——描述看不見的東西會跟景別指令競爭
+        if vis.get('left'):  P.append(hand_line('left', hl, props, en))
+        if vis.get('right'): P.append(hand_line('right', hr, props, en))
+    seen = [prop_line(q, en) for q in shot['props'] if q.get('expected_visible')]
+    seen = [v for v in seen if v]
+    if seen:
+        P.append("Also in the picture: " + "; ".join(seen) + ".")
     P.append("")
     P.append("Her face is bare: her lips are the same soft pinkish-beige as the skin around them, matte, "
              "with a soft undefined edge; her eyebrows are soft and natural; her lashes are her own and "
              "unmade. Light neutral-to-cool skin with natural tonal variation and visible pores.")
+    P.append(pilot['body_en'][BODY_BY_FRAMING[shot['framing']]])
     P.append(pilot['hair_color_en'] + " " + pilot['hair_en'][shot['hair_id']])
-    P.append("She is wearing: " + o['en'])
+    lay = o['en_layers']
+    worn = [lay[k] for k in VISIBLE_LAYERS[shot['framing']] if lay.get(k)]
+    bag_t = BAG_TEXT.get(en.get('bag_state', 'none'))
+    if bag_t and lay.get('bag'):
+        worn.append(bag_t.format(bag=lay['bag']))
+    P.append("She is wearing " + "; ".join(worn) + ".")
     P.append("")
     P.append("Setting: " + LOCATION[shot['location']] + ".")
     el = en['light']
@@ -219,12 +245,26 @@ def build(shot, pilot, en):
     real = [FILTER[shot['filter']], COMPOSITION[ip['composition']], MOTION[ip['motion']],
             WB[ip['white_balance']], BGC[ip['background_clutter']], HL[ip['highlight_clipping']]]
     P.append(" ".join(x for x in real if x))
-    phone = ("The only phone in the picture is the one she is holding up at the mirror. "
-             if shot['view'] == 'selfie_mirror' else "No phone is in the picture. ")
-    P.append("Real skin texture with visible pores and fine flyaway hairs. She is the only person in the "
-             "picture — no other people and no one else's hands. " + phone +
-             "No photography equipment of any kind: no softbox, no reflector, no foam board, no light "
-             "stand, no tripod, no backdrop.")
+    # C-42：改為正面封閉集合。原本整段靠 no other people / No phone / No photography equipment，
+    # 但這個模型不可靠地執行否定，而這三類正是先前真的生成過的錯誤。
+    CLOSED = {
+     'third_person':
+        "Everything in this picture is accounted for: the only person in it is her, and every visible "
+        "hand connects to one of her own arms. Whoever is taking the photo, and the phone they are "
+        "holding, are beyond the edge of the frame. The only light in the room comes from the fixtures "
+        "and windows named above.",
+     'selfie_front':
+        "Everything in this picture is accounted for: the image is what her phone's front camera sees, "
+        "so the phone itself sits just beyond the edge of the frame. The only person in it is her, and "
+        "every visible hand connects to one of her own arms. The only light comes from the sources "
+        "named above.",
+     'selfie_mirror':
+        "Everything in this picture is accounted for: the mirror holds her and the single phone in her "
+        "raised hand, and that is the whole of what it holds. Every visible hand connects to one of her "
+        "own arms. The only "
+        "light comes from the fixtures named above.",
+    }
+    P.append("Real skin texture with visible pores and fine flyaway hairs. " + CLOSED[shot['view']])
     return "\n".join(P)
 
 if __name__ == '__main__':

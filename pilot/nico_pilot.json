@@ -34,15 +34,22 @@
   "outfits": {
     "nico_outfit_01": {
       "label": "★極簡職人",
-      "neckline": "high mock neck",
-      "top": "炭灰色合身羅紋針織長袖，高領貼頸，兩肩各有一道窄露肩開口",
+      "neckline": "plain round crew neck",
+      "top": "米白色細針織圓領長袖，領口平貼不立起",
       "bottom": "黑色高腰直筒西裝褲",
       "shoes": "黑色皮革樂福鞋",
       "outer_or_bag": "米色帆布托特",
       "jewelry": "銀色細戒指＋銀色小圈耳環",
       "body_readable": true,
-      "en": "A fitted charcoal-grey ribbed knit long-sleeve top with a high mock neck that sits close against her throat, and a narrow open slit cut across the top of each shoulder that shows a sliver of skin. Black high-waisted straight-leg tailored trousers. Black leather loafers. A beige canvas tote. One thin silver ring and small silver hoop earrings.",
-      "_anchor_note": "這件就是錨點圖身上那件。B1 實測：指定同一件衣服時，Reference Element 會把該件衣服的細節整件複製，prompt 明寫『兩肩完整肩線、沒有開口』也蓋不掉。因此衣櫃定義改為誠實描述錨點實際的樣子（含兩道窄露肩開口），而不是讓 prompt 與出圖永遠對不上。20 張中有 5 張用這件（a01/a02/a03/a07/c07）。"
+      "_r10_note": "C-41（採納 ChatGPT）：這件原本就是錨點圖身上那件炭灰高領羅紋針織，B1 實測會被 Reference Element 整件複製（含兩道窄露肩開口），prompt 蓋不掉。我原本的處置是把開口寫進定義讓文字與出圖一致——ChatGPT 指出那沒有處理訓練目的：這件會出現在 5/20，而且集中在 4/8 clean anchor，帶著兩道高辨識度開口容易與 identity 綁在一起，正好違反 Soul 訓練「去服裝綁定」的目的。B2 已實測證明『明顯不同的衣服』可以保住臉又服從換裝，因此改成米白細針織圓領——顏色、織法、領型三者都與錨點那件不同。",
+      "en_layers": {
+        "top": "a fitted off-white fine-gauge knit long-sleeve top with a plain round crew neckline that lies flat against her collarbones",
+        "bottom": "black high-waisted straight-leg tailored trousers",
+        "shoes": "black leather loafers",
+        "bag": "a beige canvas tote",
+        "jewelry": "small silver hoop earrings",
+        "rings": "one thin silver ring"
+      }
     },
     "nico_outfit_02": {
       "label": "極休閒",
@@ -54,7 +61,14 @@
       "jewelry": "銀色細項鍊",
       "body_readable": true,
       "_note": "R5/K-04：原本寫『赤腳』與『（脫下搭在椅背）』——那是場景當下的狀態，不是這套衣服的定義。衣櫃只描述衣服本身，穿脫與赤腳等當下狀態一律由該 shot 的 scene / props 承擔。這與憲章第 2 條（不把標誌性場景寫死進設定）是同一個原理。",
-      "en": "A cream cotton camisole with thin straps and a straight horizontal neckline. Grey cotton knee-length shorts. Off-white canvas sneakers. A fine-knit open cardigan. A thin silver necklace."
+      "en_layers": {
+        "top": "a cream cotton camisole with thin straps and a straight horizontal neckline",
+        "bottom": "grey cotton knee-length shorts",
+        "shoes": "off-white canvas sneakers",
+        "bag": "a fine-knit open cardigan",
+        "jewelry": "a thin silver necklace",
+        "rings": null
+      }
     },
     "nico_outfit_03": {
       "label": "日常有型",
@@ -65,7 +79,14 @@
       "outer_or_bag": "深棕小方包",
       "jewelry": "銀色圈形耳環",
       "body_readable": true,
-      "en": "A cream cropped knit top with a plain round crew neckline, the hem ending at her natural waist. High-waisted light-wash straight-leg jeans. White canvas sneakers. A small dark-brown box bag. Silver hoop earrings."
+      "en_layers": {
+        "top": "a cream cropped knit top with a plain round crew neckline, its hem ending at her natural waist",
+        "bottom": "high-waisted light-wash straight-leg jeans",
+        "shoes": "white canvas sneakers",
+        "bag": "a small dark-brown box bag",
+        "jewelry": "silver hoop earrings",
+        "rings": null
+      }
     },
     "nico_outfit_04": {
       "label": "學院感",
@@ -77,7 +98,14 @@
       "jewelry": "銀色細鍊手鍊",
       "body_readable": false,
       "_note": "C-26：原本『包/外套』欄填的是灰色及膝襪——襪子是下身配件，不是包或外套，五層規格等於少了一層。及膝襪併入下身，補真正的肩背包。 C-28：首飾原本是「銀色髮夾」，但髮飾屬於 hair 欄的管轄（hair_05 也定義了右側一支銀色細髮夾），同一物件兩個真理來源會生出兩支髮夾。改為手鍊。",
-      "en": "A loose white button-down shirt with a collar and the top two buttons undone. A black pleated mini skirt with grey knee-high socks. Black Mary Jane shoes. A navy shoulder satchel. A thin silver chain bracelet."
+      "en_layers": {
+        "top": "a loose white button-down shirt with a collar and the top two buttons open",
+        "bottom": "a black pleated mini skirt with grey knee-high socks",
+        "shoes": "black Mary Jane shoes",
+        "bag": "a navy shoulder satchel",
+        "jewelry": null,
+        "rings": "a thin silver chain bracelet"
+      }
     },
     "nico_outfit_05": {
       "label": "街頭",
@@ -88,7 +116,14 @@
       "outer_or_bag": "黑色斜背小包",
       "jewelry": "銀色耳骨夾",
       "body_readable": false,
-      "en": "A black cropped hoodie with a plain crew neckline. Grey wide-leg cargo trousers. Chunky-soled sneakers. A small black crossbody pouch. A silver ear cuff."
+      "en_layers": {
+        "top": "a black cropped hoodie with a plain crew neckline",
+        "bottom": "grey wide-leg cargo trousers",
+        "shoes": "chunky-soled sneakers",
+        "bag": "a small black crossbody pouch",
+        "jewelry": "a silver ear cuff",
+        "rings": null
+      }
     },
     "nico_outfit_06": {
       "label": "上班正式",
@@ -99,7 +134,14 @@
       "outer_or_bag": "結構皮革包",
       "jewelry": "銀色細手鐲",
       "body_readable": false,
-      "en": "An oatmeal tailored blazer over a white silk camisole with a square neckline. Matching oatmeal straight wide-leg trousers. Pointed flat shoes. A structured leather handbag. A thin silver bangle."
+      "en_layers": {
+        "top": "an oatmeal tailored blazer over a white silk camisole with a square neckline",
+        "bottom": "matching oatmeal straight wide-leg trousers",
+        "shoes": "pointed flat shoes",
+        "bag": "a structured leather handbag",
+        "jewelry": null,
+        "rings": "a thin silver bangle"
+      }
     },
     "nico_outfit_07": {
       "label": "派對夜間",
@@ -110,7 +152,14 @@
       "outer_or_bag": "金屬扣手拿包",
       "jewelry": "銀色手環",
       "body_readable": true,
-      "en": "A black silk slip maxi dress with thin straps, a straight neckline and an open back. Silver strappy heeled sandals. A metal-clasp clutch. A silver bracelet."
+      "en_layers": {
+        "top": "a black silk slip maxi dress with thin straps, a straight neckline and an open back",
+        "bottom": null,
+        "shoes": "silver strappy heeled sandals",
+        "bag": "a metal-clasp clutch",
+        "jewelry": null,
+        "rings": "a silver bracelet"
+      }
     },
     "nico_outfit_08": {
       "label": "居家貼身",
@@ -121,7 +170,14 @@
       "outer_or_bag": "無",
       "jewelry": "無",
       "body_readable": true,
-      "en": "A close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in. Black close-fitting cotton trousers. Indoor slippers."
+      "en_layers": {
+        "top": "a close-fitting grey cotton long-sleeve top with a modest scoop neckline, the hem long and tucked in",
+        "bottom": "black close-fitting cotton trousers",
+        "shoes": "indoor slippers",
+        "bag": null,
+        "jewelry": null,
+        "rings": null
+      }
     },
     "nico_outfit_09": {
       "label": "雨天機能",
@@ -132,7 +188,14 @@
       "outer_or_bag": "防水肩背包",
       "jewelry": "無",
       "body_readable": false,
-      "en": "A dark-grey water-repellent hooded jacket over a black high-neck top. Black straight-leg trousers. Short black rain boots. A waterproof shoulder bag."
+      "en_layers": {
+        "top": "a dark-grey water-repellent hooded jacket over a black high-neck top",
+        "bottom": "black straight-leg trousers",
+        "shoes": "short black rain boots",
+        "bag": "a waterproof shoulder bag",
+        "jewelry": null,
+        "rings": null
+      }
     }
   },
   "hair": {
@@ -928,7 +991,7 @@
     {
       "shot_id": "nico_c03",
       "purpose": "identity_core",
-      "pillar": "私下 / 廚房",
+      "pillar": "私下 / 早餐店",
       "scene": "早餐店的板凳上等餐，手肘擱在桌沿",
       "location": "breakfast_shop",
       "outfit_id": "nico_outfit_03",
@@ -995,12 +1058,14 @@
           "object_ref": null,
           "note": "放在膝上"
         }
-      }
+      },
+      "_pillar_was": "私下 / 廚房",
+      "_r10_note": "C-43：pillar 原本寫「私下 / 廚房」，與 location／scene 不符——這是搬動場景時沒同步的殘留標籤。"
     },
     {
       "shot_id": "nico_c04",
       "purpose": "identity_core",
-      "pillar": "私下 / 剛醒",
+      "pillar": "私下 / 剛洗完澡",
       "scene": "剛洗完澡坐在床邊，舉起手機直視鏡頭",
       "location": "own_bedroom",
       "outfit_id": "nico_outfit_08",
@@ -1070,7 +1135,9 @@
         }
       },
       "_r7_note": "C-28：hair_06 定義是『剛洗完澡的濕髮、髮尾滴水』，scene 卻寫『剛醒還沒站起來』。hair_06 只有這一列在用，動它會破壞髮型全覆蓋，因此改 scene 對齊髮型（晨間淋浴，晨光條件不變）。",
-      "_r8_note": "C-33：R7 把 scene 從『剛醒』改成『剛洗完澡』對齊 hair_06 時，expression 還留著 just_woken_blank——修一個跨欄位矛盾的同時製造了另一個，又是同一類錯。表情改為與剛洗完澡相容的 post_shower_calm。"
+      "_r8_note": "C-33：R7 把 scene 從『剛醒』改成『剛洗完澡』對齊 hair_06 時，expression 還留著 just_woken_blank——修一個跨欄位矛盾的同時製造了另一個，又是同一類錯。表情改為與剛洗完澡相容的 post_shower_calm。",
+      "_pillar_was": "私下 / 剛醒",
+      "_r10_note": "C-43：pillar 原本寫「私下 / 剛醒」，與 location／scene 不符——這是搬動場景時沒同步的殘留標籤。"
     },
     {
       "shot_id": "nico_c05",
@@ -1375,7 +1442,7 @@
     {
       "shot_id": "nico_c09",
       "purpose": "body_pose_coverage",
-      "pillar": "私下 / 房間",
+      "pillar": "外出 / 便利商店",
       "scene": "便利商店的雜誌架前蹲下來看最下層，回頭",
       "location": "convenience_store",
       "outfit_id": "nico_outfit_05",
@@ -1442,7 +1509,9 @@
           "object_ref": "onigiri",
           "note": "拿著飯糰"
         }
-      }
+      },
+      "_pillar_was": "私下 / 房間",
+      "_r10_note": "C-43：pillar 原本寫「私下 / 房間」，與 location／scene 不符——這是搬動場景時沒同步的殘留標籤。"
     },
     {
       "shot_id": "nico_c10",
@@ -2419,5 +2488,12 @@
     "nico_hair_06": "It is wet from the shower, lying flat against her head, the ends still dripping."
   },
   "hair_color_en": "Her hair is a chin-length bob in a cool-toned medium chestnut brown — a muted mushroom brown with a soft grey undertone. One narrow band of silver-grey runs through the hair at her left temple, the way a deliberate salon highlight sits in otherwise evenly dyed hair. Apart from that one band the colour is a single flat dye reaching the scalp: her roots are the same brown as her ends.",
-  "_hair_color_note": "那道銀灰挑染是 Phase A candidate_03 帶來的，c03→B1→B2 三張都蓋不掉，已由使用者裁決保留為 Nico 的造型（2026-08-28）。因此寫進 prompt 當成刻意的挑染，而不是每次都徒勞地要求消除它。"
+  "_hair_color_note": "那道銀灰挑染是 Phase A candidate_03 帶來的，c03→B1→B2 三張都蓋不掉，已由使用者裁決保留為 Nico 的造型（2026-08-28）。因此寫進 prompt 當成刻意的挑染，而不是每次都徒勞地要求消除它。",
+  "_c37_note": "C-37：服裝英文改為分層（top/bottom/shoes/bag/jewelry/rings），由 builder 依該列的 framing 只輸出看得見的層。原本無論景別都印滿五層，等於在 chest_up 的 prompt 裡要求模型畫出裁切外的鞋和褲——與景別指令互相競爭。",
+  "body_en": {
+    "torso": "Her build: a slim narrow frame with narrow shoulders about as wide as her hips, a long torso, and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms, a narrow waist. The contrast between the small waist and the fuller chest is part of her shape.",
+    "full": "Her build: a slim narrow frame with narrow shoulders about as wide as her hips, a long torso, and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim, smooth upper arms, a flat lower abdomen, a narrow waist, long straight legs. The contrast between the small waist and the fuller chest is part of her shape. She is 167cm and slight.",
+    "head": "Her frame is slight: narrow shoulders and a slender neck, with the collarbone visible where it enters the frame.",
+    "_note": "C-34（採納 ChatGPT）：原本 20 段完全沒有身材描述，只有服裝與景別。Reference Element 固定臉不等於固定全身——B2 第一次失敗就是反證，而 B2 第二次成功的那段 prompt 是有完整身材段落的。依 framing 選用對應版本。"
+  }
 }
