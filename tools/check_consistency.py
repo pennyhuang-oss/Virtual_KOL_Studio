@@ -218,6 +218,16 @@ if os.path.exists(PLAN):
         err(f'{PLAN}：不可刪除措辭登記只剩 {n_imm} 件，應至少 12 件'
             '（刪掉登記列等於讓 lint 失去稽核能力）')
 
+# 覆核指紋：已登記的件，指紋必須與現行 prompt 相符
+# （R7 Q5 建議、2026-08-29 才實作。沒做之前，LG-01 是靠我自己認定
+#  「片語被核可＝整段被核可」就送生成的。）
+if os.path.exists(PLAN):
+    sys.path.insert(0, 'tools')
+    import approval_check
+    drift = [r for r in approval_check.scan(PLAN) if r[1] == '改過字']
+    for name, _, _, note in drift:
+        err(f'{name} 覆核後又被改字（登記指紋對不上），不得送生成')
+
 # 兩條覆核線的檔名分家必須有索引，否則下一個人會覆蓋掉別人的 LEDGER
 if not os.path.exists('review/INDEX.md'):
     err("review/INDEX.md 不存在——兩條覆核工作線共用 review/，沒有索引會互相覆蓋")
