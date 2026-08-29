@@ -544,7 +544,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 |---|---|
 | **妝容** | 日系可愛妝。明亮輕薄底妝；粉色眼影暈在眼窩與下眼瞼；**下睫毛根根分明**；細內眼線；**曬傷妝腮紅橫過鼻樑與兩頰上方**；粉色漸層水潤唇。 |
 | **髮型** | 黑色中分及下巴鮑伯。**髮尾被亭外的風吹得往同一側揚起、有一撮貼在臉頰上**（動勢來源之一）。 |
-| **穿著** | 上身：米白色收腰短袖襯衫，前兩顆解開露鎖骨｜**外層：淺藍色薄針織開襟外套，只掛在肩上沒穿進袖子，下襬被風掀起一角**（← **會飄的元素**）｜下身：淺藍色格紋短裙｜鞋：白色瑪莉珍＋蕾絲短襪｜首飾：珍珠小耳環、米色帆布托特包、**透明雨傘收起來拿在手上、傘尖還在滴水** |
+| **穿著** | 上身：**高領口**米白色收腰短袖襯衫，**扣到鎖骨**（2026-08-29：兩張成品領口都過低、胸線外露，`fastened through the chest` 無效，改用正面指定領口高度）｜**外層：淺藍色薄針織開襟外套，只掛在肩上沒穿進袖子，下襬被風掀起一角**（← **會飄的元素**）｜下身：淺藍色格紋短裙｜鞋：白色瑪莉珍＋蕾絲短襪｜首飾：珍珠小耳環、米色帆布托特包、**透明雨傘收起來拿在手上、傘尖還在滴水** |
 | **道具** | 收起的透明雨傘 **core-visible**（掛載動作，傘尖朝下）｜珍珠小耳環 optional｜米色帆布托特包 **removed**｜淺藍薄針織開襟外套 **removed** |
 | **場景環境** | **雨天也要好看，不能灰撲撲。**候車亭：**彩色路線圖燈箱**、玻璃側板上的雨珠、金屬亭架；亭外：**對街店家亮著的暖色招牌與透出來的燈光**、紅色郵筒、路邊盆栽、濕亮的柏油路映著這些顏色。**明亮通透的雨天，不是陰鬱的雨天。** |
 | **機位與構圖** | **景別到小腿中段**（2026-08-29 由膝上放寬，理由見硬驗收）。<br>**機位**：在她的肚臍高度，鏡頭保持水平。<br>**距離**：站遠一點拍。<br>**構圖**：她站在亭子邊緣，整把收起的傘垂在腿側，亭外的暖色招牌與濕柏油在她身後虛化。 |
@@ -553,14 +553,14 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **人物入鏡** | 公共場景——必寫背景路人（公車站） |
 | **多樣性** | 姿勢：**A 動作中**（正要走出亭子、撐開傘）｜相機：**3 他拍抓拍**｜視線：不看鏡頭｜手在臉旁：否 |
 | **不可刪除措辭** | `palm turned up to feel for rain`（R10 取代沒有功能的拎裙襬） |
-| **凍結瞬間** | 雨還沒完全停，她正要走出候車亭，一手把透明傘撐開舉到頭頂上，另一手伸到亭外、掌心朝上試雨還下不下，視線落在掌心那幾滴雨上。 |
+| **凍結瞬間** | 雨還沒完全停，她正要走出候車亭，一手把透明傘撐開舉到頭頂上，另一手伸到亭外、掌心朝上試雨還下不下，**抬眼看著頭頂那面透明傘的內側**。<br>（**2026-08-29 改視線目標**——原本寫「看掌心那幾滴雨」，但雨滴根本沒被畫出來，2/2 退回直視鏡頭。傘面又大又一定在畫面內） |
 | **手部任務** | 可見手 A：舉在頭頂、握著撐開的透明傘的傘柄<br>可見手 B：伸到亭外、掌心朝上試雨<br>無第三個手部任務<br>（**2026-08-29 由「拎裙襬」改為「試雨」**——拎一般短裙走進雨裡沒有實際功能，是偶像式擺拍，還會造成裙長漂移。試雨與「雨還沒停」有清楚因果，且不新增物件） |
 | **表情** | 頭往比 V 的那一側傾；眼睛彎成月牙——雨天也很開心的那種笑。**眼型與嘴型列 soft observation。** |
 | **肢體與重心** | 站著等，重心壓在右腳；左腳膝蓋微彎、腳尖點地，骨盆因此微傾（不是雙腳平均站的死板站姿）；肩膀一高一低。 |
-| **硬驗收** | ① **傘是撐開的**，傘柄握在手中、傘面在她頭頂上方（接觸點明確，不可浮空）② 另一手伸到亭外、掌心朝上 ③ **視線落在掌心、不看鏡頭** ④ 景別到小腿中段 |
+| **硬驗收** | ① **傘是撐開的**，傘柄握在手中、傘面在她頭頂上方（接觸點明確，不可浮空）**✅ 2/2 已驗證** ② 另一手伸到亭外、掌心朝上 **✅ 2/2** ③ **視線抬起看向頭頂的傘面內側、不看鏡頭** ④ **小腿與濕地面在畫面下方 1/3 內可見** ⑤ **領口扣到鎖骨、不露胸線** |
 | **創意備註（不送模型／不驗收）** | 髮尾被亭外的風吹得往同一側揚起、有一撮貼在臉頰上；肩上的開襟外套下襬被風掀起一角——**兩者都不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | **2026-08-29 改姿勢**：原本「站著比 V ＋看鏡頭」——比 V 是最典型的擺拍手勢。改成正要走出去撐傘的動作中。<br>**防浮空錨點更強了**：撐開的傘有「手握傘柄」與「傘面在頭頂」兩個接觸關係，比收起的傘垂在腿側更難生錯<br><br>—— 以下為先前紀錄 ——<br>**解掉右手的雙重指派**：肢體列同時寫「右手勾著托特包帶」與表情列的「右手比 V」。依 R7，托特包若不是核心就移除，不要改成掛肩（斜背帶會切過襯衫、破壞服裝辨識）。<br>開襟外套一併移除：只掛肩不穿進袖子的鬆散外層是浮空與變形的高風險件，且 prompt 原本就沒寫 |
-| **生成 prompt** | `A young woman steps out from the bus shelter, one hand raised holding the handle of a clear umbrella opened above her head, her other hand reaching out with the palm turned up to feel for rain, eyes on the drops in her palm. Framed down to mid-calf, camera at her navel level, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. An off-white cotton button-front blouse fastened through the chest, a pale blue checked skirt. A route map lightbox, wet asphalt throwing warm sign colour back up. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Her face clearly exposed with natural skin texture; the signs are the brightest area, only their smallest highlights reaching white. Subtle film grain.` |
+| **生成 prompt** | `A young woman steps out from the bus shelter, one hand raised holding the handle of a clear umbrella opened above her head, her other hand reaching out with the palm turned up to feel for rain, her eyes lifted to the underside of the clear canopy above her. Her calves and the wet pavement are visible in the bottom third of the frame, camera at her navel level, shot from well back. A blunt chin-length black bob with even blunt ends along the jawline. A high-necked off-white cotton blouse buttoned up to the collarbone, a pale blue checked skirt. A route map lightbox, wet asphalt throwing warm sign colour back up. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Her face clearly exposed with natural skin texture; the signs are the brightest area, only their smallest highlights reaching white. Subtle film grain.` |
 | **覆核指紋** | sha1:a5e2a3288fd1（R12 逐件 PASS） |
 | **Caption 草稿** | 台北下雨了☔️<br>雨の台北、こういう日が好き |
 | 附註 | 🔬 **preflight**：這件是**鮑伯剪裁幾何的受測件**——頭髮自然垂放、沒有塞耳後／濕髮／半盤，是唯一能乾淨測出底層剪裁的一件。用 `with even blunt ends along the jawline`；**其餘 10 件暫時維持 `cut evenly at the jawline`，等這張驗過再決定要不要全面沿用** |
