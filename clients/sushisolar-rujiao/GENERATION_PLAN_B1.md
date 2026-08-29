@@ -245,16 +245,15 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **光學設定** | 反射面：具名（白牆回冷色填光）｜曝光：低反差（有遮蔽陽台、霧面窗板）｜色溫：不適用（單一天光） |
 | **人物入鏡** | 私密場景（自家陽台）——只有本人 |
 | **多樣性** | 姿勢：**A 動作中**（正在把毛巾從晾衣桿上取下）｜相機：**1 自拍**｜視線：看鏡頭｜手在臉旁：否 |
-| **不可刪除措辭** | `The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame.`（R8a 封住自拍手與手機入鏡） |
+| **不可刪除措辭** | `The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame.`（R8a 封住自拍手與手機入鏡）<br>`high crew neckline`（R13 領口尺度橫向規則，2026-08-29 補掃） |
 | **凍結瞬間** | 伸手把一條白毛巾從晾衣桿上拉下來的那一瞬間，手臂還舉著，轉頭對鏡頭笑。 |
 | **手部任務** | 拍攝手／鏡外手：持手機自拍，**off-frame**（仍佔一隻解剖學的手）<br>可見手 A：舉起、正把白毛巾從晾衣桿上拉下<br>可見手 B：**N/A**——兩隻手已用完 |
 | **表情** | 對鏡頭笑，眼睛自然。**全列 soft observation。** |
 | **肢體與重心** | 站著，重心在一腳；上半身微轉向手機那一側。 |
-| **硬驗收** | ① 自拍構圖成立且**手機不入鏡** ② **只有一隻可見手**，且**手臂是舉起的、正在取毛巾**（不是抱在胸前）③ 畫面無任何印刷文字 ④ 半身比例 |
+| **硬驗收** | ① 自拍構圖成立且**手機不入鏡** ② **只有一隻可見手**，且**手臂是舉起的、正在取毛巾**（不是抱在胸前）③ 畫面無任何印刷文字 ④ 半身比例 ⑤ **高圓領、不露胸線**（2026-08-29 補：R13 的領口橫向規則當時只套用在判 REVISE 的件，已放行的沒有回頭重掃） |
 | **創意備註（不送模型／不驗收）** | 無（本件原本就沒有飄動描述） |
 | **整併紀錄（2026-08-29）** | **2026-08-29 改姿勢**：原本是「毛巾已抱在胸前」＝靜止站定。改成取下的動作中。<br>（先前把「取下」刪掉是因為與「抱著」並存＝兩個時間點；現在只留取下這一個瞬間，不違反 D-11）<br><br>—— 以下為先前紀錄 ——<br>刪掉「取毛巾的手臂抬起」（與『抱在胸前』是兩個時間點，且是重複的手部指派） |
-| **生成 prompt** | `In a phone selfie, a young woman pulls a plain white towel down off the drying pole, arm still raised, smiling at the camera. The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame. Close half-body framing, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail, see-through bangs. A grey fitted cropped cotton tee, high-waisted black shorts, black-rimmed glasses. A narrow covered balcony, a white painted wall, an iron window grille, plain towels on the pole. Flat overcast daylight on her face, her face evenly exposed, the white wall bouncing cool fill onto her jaw, staying slightly darker than her skin. Natural skin texture, subtle film grain.` |
-| **覆核指紋** | sha1:5b73e187c94c（R12 逐件 PASS） |
+| **生成 prompt** | `In a phone selfie, a young woman pulls a plain white towel down off the drying pole, arm still raised, smiling at the camera. The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame. Close half-body framing, camera just above her eye level. Collarbone-length mocha brown hair in a low ponytail, see-through bangs. An opaque grey fitted cropped cotton tee with a high crew neckline, high-waisted black shorts, black-rimmed glasses. A narrow covered balcony, a white painted wall, an iron window grille, plain towels on the pole. Flat overcast daylight on her face, her face evenly exposed, the white wall bouncing cool fill onto her jaw, staying slightly darker than her skin. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 曬乾的味道✨<br>今天終於記得收 |
 | 附註 | ⚠️ **這是新寫的 spec，尚未送覆核、尚未生成。**<br>設計重點：**沒有任何印刷品來源**——毛巾與襯衫寫明 `plain unprinted`，場景不放商品、招牌、包裝。<br>🔴 **未驗證的假設**：`iron window grille`（鐵窗花）在 LG-03 上讀起來像台灣，但那是 **Luna 的 `soul_id`**——**跨角色不能當證據**，Yuna 身上會不會一樣未知。 |
 
@@ -423,15 +422,15 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **光學設定** | 反射面：具名（白檯面與鏡面柱回彈）｜曝光：低反差（百貨均勻嵌燈）｜色溫：分裂（嵌燈冷白 vs 玻璃櫃內暖重點光） |
 | **人物入鏡** | 公共場景——必寫背景路人（百貨美妝樓層） |
 | **多樣性** | 姿勢：**B 支撐姿勢**（前傾靠櫃檯）｜相機：**4 過肩**｜視線：不看鏡頭｜手在臉旁：否 |
+| **不可刪除措辭** | `high crew neckline`（R13 領口尺度橫向規則，2026-08-29 補掃） |
 | **凍結瞬間** | 從她身後越過肩膀拍：她低頭把口紅在手背上劃一道，注意力全在手背的顏色上。 |
 | **手部任務** | 可見手 A：手背朝上攤平，承接試色<br>可見手 B：拿著口紅，正在手背上劃<br>無第三個手部任務（**這件的兩隻手在腰腹高度、遠離臉部，不會與臉部區域競爭**） |
 | **表情** | 抬眼、一邊眉毛挑起、同側嘴角上揚。**眉型與嘴型列 soft observation。** |
 | **肢體與重心** | 上半身微側向櫃檯；重心在一腳。 |
-| **硬驗收** | ① **過肩視角**：她的肩膀或後腦在前景，櫃檯與手背在畫面中段 ② 一手攤平、一手拿口紅劃在其上 ③ **視線在手背上、不看鏡頭** ④ 半身比例 |
+| **硬驗收** | ① **過肩視角**：她的肩膀或後腦在前景，櫃檯與手背在畫面中段 ② 一手攤平、一手拿口紅劃在其上 ③ **視線在手背上、不看鏡頭** ④ 半身比例 ⑤ **高圓領、不露胸線**（2026-08-29 補：R13 的領口橫向規則當時只套用在判 REVISE 的件，已放行的沒有回頭重掃） |
 | **創意備註（不送模型／不驗收）** | 無 |
 | **整併紀錄（2026-08-29）** | **2026-08-29 改相機關係**：原本「手背舉在臉旁＋抬眼看鏡頭」——又是手在臉旁＋看鏡頭。改成過肩視角的專注瞬間。<br>**口紅回到手上**：先前因「與試色手背在同一區、手指融合風險」移除；現在兩手都在腰腹高度、不在臉旁，那個風險大幅降低，而口紅是這個動作成立的必要道具<br><br>—— 以下為先前紀錄 ——<br>刪掉「另一手拿著口紅」——口紅與試色手背在畫面同一區，是手指與小物件融合的高風險組合；且 prompt 原本就沒寫。風衣依 R7「肩／臂承重不算手部任務」保留 |
-| **生成 prompt** | `Seen from behind over her shoulder, a young woman leans toward the counter and draws a lipstick stripe across the back of her other hand, her eyes down on the swatch. Half body, camera behind her shoulder at chest level. Sleek glossy collarbone-length mocha brown hair, side-parted, ends curving slightly inward. A cream cropped fitted knit top, off-white high-waisted straight trousers, gold hoop earrings. A department store beauty floor, glass counters, rows of lipsticks, glossy pale columns. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Cool recessed ceiling light on her, warm accent light inside the glass cases, the white counter bouncing fill onto her jaw, the floor behind her slightly darker. Natural skin texture, subtle film grain.` |
-| **覆核指紋** | sha1:a4744ddbbf5f（R12 逐件 PASS） |
+| **生成 prompt** | `Seen from behind over her shoulder, a young woman leans toward the counter and draws a lipstick stripe across the back of her other hand, her eyes down on the swatch. Half body, camera behind her shoulder at chest level. Sleek glossy collarbone-length mocha brown hair, side-parted, ends curving slightly inward. An opaque cream cropped fitted knit top with a high crew neckline, off-white high-waisted straight trousers, gold hoop earrings. A department store beauty floor, glass counters, rows of lipsticks, glossy pale columns. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Cool recessed ceiling light on her, warm accent light inside the glass cases, the white counter bouncing fill onto her jaw, the floor behind her slightly darker. Natural skin texture, subtle film grain.` |
 | **Caption 草稿** | 這個顏色好漂亮✨<br>但我已經有三支很像的了 |
 
 
