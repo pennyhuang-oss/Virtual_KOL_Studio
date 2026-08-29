@@ -195,3 +195,98 @@ tammy-chou: ref_nn
 ## §6 回覆區
 
 REPLIES BELOW
+
+
+## ChatGPT R6 覆核回覆
+
+### K-01｜P0：39 項逐一分配（26 項可配、13 項 BLOCK）
+
+以下已同時檢查同一 persona 四來源互異、各槽 cap 與槽位幾何。不能滿足三者者明列 BLOCK，不用近似來源硬湊。
+
+### FACE_SHAPE_AND_JAW
+angel-chiu: ref_20
+tammy-chou: BLOCK
+zoey-yeh: ref_26
+rin-ayase: ref_24
+jia-seo: BLOCK
+yerin-han: ref_27
+zhiyi-shen: BLOCK
+wanyin-jiang: BLOCK
+ruoruo-tang: BLOCK
+cheryl-soh: ref_25
+wendy-yeo: ref_16
+angeline-kwee: BLOCK
+
+### EYES_AND_BROWS
+angel-chiu: BLOCK
+emma-kao: BLOCK
+miu-shiraishi: ref_18
+rin-ayase: ref_28
+nanami-fujiwara: ref_16
+yerin-han: ref_26
+somi-oh: BLOCK
+ruoruo-tang: BLOCK
+cheryl-soh: ref_26
+sydney-leong: ref_23
+
+### NOSE
+angel-chiu: ref_16
+emma-kao: ref_27
+miu-shiraishi: ref_26
+nanami-fujiwara: ref_21
+kanon-komori: BLOCK
+jia-seo: ref_19
+somi-oh: ref_21
+peggy-lee: ref_20
+
+### MOUTH
+tammy-chou: ref_21
+emma-kao: ref_18
+zoey-yeh: ref_22
+miu-shiraishi: ref_21
+rin-ayase: ref_21
+yerin-han: ref_16
+ruoruo-tang: BLOCK
+cheryl-soh: ref_23
+sydney-leong: BLOCK
+
+可配的 26 項加回 §4 已用量後，各槽最高用量如下，沒有超 cap：
+
+- FACE_SHAPE_AND_JAW：ref_16、ref_20 各 2；其餘不超過 1。
+- EYES_AND_BROWS：ref_26 為 3；ref_16 為 2；其餘不超過 1。
+- NOSE：ref_19 為 3；ref_16、ref_21 各 2；其餘不超過 1。
+- MOUTH：ref_18、ref_21 各 3；ref_16、ref_22 各 2；其餘不超過 1。
+
+### K-02｜P0：13 個 BLOCK 與缺口
+
+總容量足夠，但**相符幾何的分槽容量不夠**；以下不能以目前 J-08 後的既定指派完成。
+
+| persona／槽位 | BLOCK 原因與真正缺口 |
+|---|---|
+| tammy-chou／FACE | ref_23 有窄顎但為尖頦；ref_26 是柔心形至寬 U，但已供她的 EYES，且顎偏寬。缺「柔心形、窄顎、小圓頦、中段飽滿」的另一來源。 |
+| jia-seo／FACE | ref_28 是唯一瘦長六角方向，但已供她的寬薄 MOUTH；其餘不是六角或顎頦方向相反。缺第二個瘦長六角、清瘦平面、柔方短鈍頦來源，或第二個寬薄平唇來源以釋放 ref_28。 |
+| zhiyi-shen／FACE | ref_17 的極長窄矩形最接近，但下巴長且已供她的 NOSE；ref_29 不夠極長窄且顎太寬。缺「極長窄矩形、清瘦平面、柔方顎、短鈍頦」。 |
+| wanyin-jiang／FACE | ref_25 的長窄卵形相符，但已供她的 MOUTH；ref_24 是菱形且已供她的 EYES。缺另一個長窄卵形、窄顎長鈍頦、中段有肉來源，或另一個小薄平唇來源以釋放 ref_25。 |
+| ruoruo-tang／FACE | ref_22 是寬卵形但低骨感、圓顎、小短頦，與寬骨量／寬顎／平直中臉相反；ref_19、ref_27 又不是卵形。缺「寬卵形、寬骨量、寬顎短鈍頦、平直中臉」。 |
+| angeline-kwee／FACE | ref_25 的極長窄卵形已供她的 EYES；ref_24 是菱形且已供她的 NOSE。缺第二個極長窄卵形、清瘦、高位平顴、窄顎長鈍頦來源。 |
+| angel-chiu／EYES | ref_20 的圓開平視／中等眼距已供她的 FACE；ref_18 同幾何但已供她的 MOUTH。缺第三個圓開平視／中等眼距來源；或把她的 MOUTH 從 ref_18 改到另一個真正小中等唇來源後，EYES 可用 ref_18。 |
+| emma-kao／EYES | ref_25 有窄眼距但眼尾下垂；ref_29／ref_17 是窄平視眼但眼距中等。缺「細長平視、窄眼距」。 |
+| somi-oh／EYES | 現有圓開平視來源的眼距皆中等或寬。缺「圓開平視、窄眼距」。 |
+| ruoruo-tang／EYES | ref_19 只有中等偏寬；ref_27 是寬但上揚；ref_23 是寬但下垂。缺「細長平視、寬眼距」。 |
+| kanon-komori／NOSE | ref_18 的低至中鼻樑＋圓鼻頭相符但 NOSE cap 已滿；ref_21 相符但已供她的 EYES。可不生成新圖：先把 sydney-leong 的 NOSE 由 ref_18 移到 ref_26，便可把 kanon-komori 的 NOSE 配 ref_18；兩者均相容且 persona 內不重複。 |
+| ruoruo-tang／MOUTH | ref_21 是相符的寬中等唇，但 MOUTH cap 已滿；ref_26 下唇明顯飽滿、ref_28 為薄唇，不能當同一幾何。缺另一個寬口、中等唇量來源。 |
+| sydney-leong／MOUTH | ref_21 雖相符，除了 MOUTH cap 已滿，也已供她的 FACE；ref_26 偏飽滿下唇、ref_28 偏薄。缺另一個寬口、中等唇量來源。 |
+
+因此目前不能把「剩餘容量 84」等同於「39 個幾何都可配」：cap 是總量限制，identity 軸與 persona 內四來源互異才是實際可行性限制。至少 kanon-komori／NOSE 可用一次既有指派搬移解掉；其餘缺口應先決定是補來源，或在有**同幾何**替代來源時搬移既有指派，不能放寬規格。
+
+### K-03｜P0：下一步順序需多一個前置 gate
+
+現在還不能直接重建 12 位。正確順序是：
+
+1. 先處理 K-02 的 13 個 BLOCK（補來源或做明列的相容搬移）；
+2. 新來源照同一模板補 provenance、四槽 readout、builder crop 與 QA hash；
+3. 39/39 指派通過四來源互異、slot cap、crop QA 與幾何覆核；
+4. 才重建 12 位的 ARCHETYPE／AXES／FACE_EN／MARKERS／WHY_DISTINCT；
+5. 重跑 171 組 gate，只修仍失敗的配對，再排第一批。
+
+完成第 3 步後，後半段順序與題目所列一致。
