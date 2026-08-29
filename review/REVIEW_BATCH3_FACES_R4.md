@@ -608,3 +608,24 @@ REPLIES BELOW
 判定沿用 F-01：4 張中至少 3 張能穩定呈現各槽指定部件，才算探針通過。若低於 3／4，停止後續生成並改用部件裁切輸入；不得展開其餘 7 位。
 
 **最終判定：現在可以只生成 wendy-yeo 的 4 張技術探針；不可生成完整第一批 8 位。完整第一批必須等 8 張新骨相來源驗收、12 位重建、171 組 gate 重跑完成。**
+
+---
+
+## ChatGPT 補圖實作附記（2026-08-29）
+
+使用者授權我直接補齊 H-01 的 8 張來源。已加入 `ref_16`–`ref_23`，全部是本專案新生成的虛構成年女性標準正面照，沒有使用第三方真人照片作輸入；NIST／ICAO 拍攝依據、逐檔 SHA-256、尺寸、來源聲明、角色方向與 reject 規則在 `review/batch3_face_refs/SOURCES.json`。逐張可見骨相判讀已加入 `pilot/face_refs_readout.json`。
+
+H-01 的對應已存入 `refs_v2`，仍維持「來源先換、文字待重建」的 R2 做法：
+
+- `emma-kao` → `ref_16`
+- `somi-oh` → `ref_18`
+- `peggy-lee` → `ref_19`
+- `miu-shiraishi` → `ref_20`
+- `sydney-leong` → `ref_21`
+- `nanami-fujiwara` → `ref_22`
+- `kanon-komori` → `ref_23`
+- `ref_17` 保留為長臉、寬直顎、低眉窄眼的 high-quality 備援；`wendy-yeo` 依 H-02 維持 `ref_11`，不製造不必要的換源。
+
+新增 `tools/check_face_ref_sources.py`。目前結果：**8/8 圖片、hash、尺寸、provenance、readout 全部通過。**
+
+既有 `tools/check_face_gate.py` 沒有被放寬；換源後仍有 7 組失敗：`miu–sydney`、`yerin–peggy`、`tammy–sydney`、`angel–yerin`、`wanyin–angeline`、`zoey–kanon`、`ruoruo–peggy`。這正是 H-03 說的下一步：Claude 必須依新圖 landmark 重建換源 persona，再重算 171 組；在此之前仍不可放行完整第一批。

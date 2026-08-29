@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "purpose": "Batch 3 FACE_SHAPE_AND_JAW reference provenance and capture-quality manifest.",
+  "capture_spec": {
+    "basis": [
+      {
+        "authority": "NIST",
+        "title": "Understanding the face image format Standards",
+        "url": "https://www.nist.gov/document/ansi-nist2007griffin-face-std-m1pdf",
+        "adopted_rules": "Full-face frontal pose; roll, pitch and yaw within approximately +/-5 degrees; neutral closed-mouth expression; eyes normally open; plain background; diffuse evenly distributed light."
+      },
+      {
+        "authority": "ICAO",
+        "title": "Illustrative Guidelines for Portraits in a Machine Readable Travel Document",
+        "url": "https://www.icao.int/sites/default/files/sp-files/publications/journalsreports/2007/ICAO%20MRTD%20Report%20Vol.%202%20No.%201%2C%202007.pdf",
+        "adopted_rules": "Direct camera gaze; upright head and level eye line; both face edges visible; natural skin tone; sharp high-resolution image; uniform light without facial or background shadows."
+      }
+    ],
+    "project_rules": {
+      "subject": "One fictional adult woman; no real-person or public-figure input reference.",
+      "camera": "Eye-level full frontal capture, simulated 70 mm equivalent normal portrait perspective.",
+      "visibility": "Hairline, both ears, both jaw edges, full chin, neck and shoulder outline visible.",
+      "appearance": "Hair behind ears and away from face; minimal makeup; natural skin texture; plain gray crew-neck top.",
+      "reject_if": [
+        "yaw, pitch or roll is visibly outside the frontal tolerance",
+        "jaw, chin, cheek edge, eyes or hairline is obscured",
+        "beauty filtering, face reshaping, contour makeup or skin smoothing is visible",
+        "wide-angle perspective, smile, open mouth, directional shadow or dramatic light is present",
+        "the visible geometry does not materially match the declared bone-structure role"
+      ]
+    }
+  },
+  "provenance_policy": {
+    "source_type": "original_synthetic",
+    "generator": "OpenAI built-in image generation",
+    "generated_on": "2026-08-29",
+    "input_images": [],
+    "real_person_or_public_figure_reference": false,
+    "rights_note": "Generated specifically for this repository without a third-party portrait input. This records provenance; it is not a legal opinion or a grant beyond the applicable service and repository terms."
+  },
+  "references": {
+    "ref_16": {
+      "file": "review/batch3_face_refs/ref_16.jpg",
+      "sha256": "97c91209531106f81ac8687e11ea049f6963c4ed4acb101d326975f481c56301",
+      "role": "long rectangular / broad bone / straight sides / soft square jaw / short blunt square chin / narrow level eyes",
+      "recommended_persona": "emma-kao",
+      "dimensions_px": [1024, 1536],
+      "usability": "high"
+    },
+    "ref_17": {
+      "file": "review/batch3_face_refs/ref_17.jpg",
+      "sha256": "5e04fcafe10bc2ada812397760292ddbc0acdb0c3a4d6d806fe6b9e7f1372828",
+      "role": "extremely long narrow rectangle / long lower third / non-tapering jaw / long blunt square chin / low-brow narrow monolid eyes",
+      "recommended_persona": "unassigned reserve; alternate broad-jaw long-face source",
+      "dimensions_px": [1023, 1537],
+      "usability": "high"
+    },
+    "ref_18": {
+      "file": "review/batch3_face_refs/ref_18.jpg",
+      "sha256": "ac79b7e17c03fb4e9e5be4e55b4ac6d6f1a97bcdac78613a67c5d9d258ce1c39",
+      "role": "lower-heavy broad U or pear / full low cheeks / broad rounded jaw / short blunt chin",
+      "recommended_persona": "somi-oh",
+      "dimensions_px": [1122, 1402],
+      "usability": "high"
+    },
+    "ref_19": {
+      "file": "review/batch3_face_refs/ref_19.jpg",
+      "sha256": "74cdfac929a250cdf9d8594ba2993fc8f624a129bd28b10f2eb5e519c6fa2c2e",
+      "role": "trapezoid / narrow forehead / lower face widens / visible jaw corners / short square chin / flat midface",
+      "recommended_persona": "peggy-lee",
+      "dimensions_px": [1086, 1448],
+      "usability": "high"
+    },
+    "ref_20": {
+      "file": "review/batch3_face_refs/ref_20.jpg",
+      "sha256": "1b37a583b7b4913198424662fa26867c8db3b713d87a652f2386a1e01f583429",
+      "role": "short rounded-square / compact feature field / soft square jaw / short blunt chin",
+      "recommended_persona": "miu-shiraishi",
+      "dimensions_px": [1024, 1536],
+      "usability": "high"
+    },
+    "ref_21": {
+      "file": "review/batch3_face_refs/ref_21.jpg",
+      "sha256": "07c27529024c5551bda7773f75c692e025d6704b6990ea4366c845eea294324a",
+      "role": "second short broad rounded-square or wide U / full middle cheeks / wide-set gently downturned eyes / short blunt chin",
+      "recommended_persona": "sydney-leong",
+      "dimensions_px": [1086, 1448],
+      "usability": "high"
+    },
+    "ref_22": {
+      "file": "review/batch3_face_refs/ref_22.jpg",
+      "sha256": "2b0ab8e71a54659625090e06a8a5e7c65236ac1018c36314ad1e191f34765bd0",
+      "role": "broad oval / low bone definition / rounded jaw / small short rounded-to-blunt chin",
+      "recommended_persona": "nanami-fujiwara",
+      "dimensions_px": [1024, 1536],
+      "usability": "high"
+    },
+    "ref_23": {
+      "file": "review/batch3_face_refs/ref_23.jpg",
+      "sha256": "c4e5a739af785128618d6f6ec837b2c8c5395edb2c58795438a15edd775ea4e4",
+      "role": "inverted triangle / broad upper face / narrow tapering jaw / small pointed chin / wide-set downturned eyes",
+      "recommended_persona": "kanon-komori",
+      "dimensions_px": [1024, 1536],
+      "usability": "high"
+    }
+  }
+}

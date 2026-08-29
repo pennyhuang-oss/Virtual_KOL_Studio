@@ -299,12 +299,17 @@
       },
       "face_en_v1_filename_form": "Create a new 27-year-old Taiwanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_02; NOSE from ref_01; MOUTH from ref_15. Build a long broad-boned rectangular canvas with planar cheeks and a softly squared blunt lower outline. Place narrow level eyes slightly close together within a long midface, use a medium straight nose with a blunt tip, and keep the mouth small and restrained. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_11",
+        "FACE_SHAPE_AND_JAW": "ref_16",
         "EYES_AND_BROWS": "ref_02",
         "NOSE": "ref_01",
         "MOUTH": "ref_15"
       },
-      "needs_rebuild": null
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_11",
+          "ref_16"
+        ]
+      }
     },
     "zoey-yeh": {
       "archetype": "低眉軟圓、短中庭與U形下臉的清透成人臉",
@@ -423,12 +428,17 @@
       },
       "face_en_v1_filename_form": "Create a new 22-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_04; NOSE from ref_12; MOUTH from ref_08. Build an apple-like face with central fullness, the widest point at the mid-cheeks, a rounded-square jaw, and a short blunt chin. Gather large level round eyes toward the center, use a short nose with a softly broad tip, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_05",
+        "FACE_SHAPE_AND_JAW": "ref_20",
         "EYES_AND_BROWS": "ref_04",
         "NOSE": "ref_12",
         "MOUTH": "ref_08"
       },
-      "needs_rebuild": null
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_05",
+          "ref_20"
+        ]
+      }
     },
     "rin-ayase": {
       "archetype": "窄長鑽石型、顴區清楚、眼裂細長的成熟臉",
@@ -552,15 +562,15 @@
       },
       "face_en_v1_filename_form": "Create a new 23-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_15; EYES_AND_BROWS from ref_01; NOSE from ref_08; MOUTH from ref_02. Build a broad balanced oval canvas with low gentle cheek volume, a smoothly rounded jaw, and a small rounded chin. Use medium level eyes, a compact softly shaped nose, and a small restrained mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_03",
+        "FACE_SHAPE_AND_JAW": "ref_22",
         "EYES_AND_BROWS": "ref_01",
         "NOSE": "ref_08",
         "MOUTH": "ref_02"
       },
       "needs_rebuild": {
         "FACE_SHAPE_AND_JAW": [
-          "ref_15",
-          "ref_03"
+          "ref_03",
+          "ref_22"
         ]
       }
     },
@@ -619,12 +629,17 @@
       },
       "face_en_v1_filename_form": "Create a new 20-year-old Japanese adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_04; EYES_AND_BROWS from ref_05; NOSE from ref_12; MOUTH from ref_03. Build a compact inverted-triangle canvas with a moderately broad upper face, very short midface and lower third, and a small pointed chin. Place very open downturned eyes high and wide across the face, use a short nose with a softly rounded tip, and a small full mouth. Maintain adult facial proportions and natural skin texture. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_04",
+        "FACE_SHAPE_AND_JAW": "ref_23",
         "EYES_AND_BROWS": "ref_05",
         "NOSE": "ref_12",
         "MOUTH": "ref_03"
       },
-      "needs_rebuild": null
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_04",
+          "ref_23"
+        ]
+      }
     },
     "jia-seo": {
       "archetype": "窄長六角型、低眉骨與橫向眼裂的運動感成人臉",
@@ -814,12 +829,17 @@
       },
       "face_en_v1_filename_form": "Create a new 24-year-old Korean adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_05; EYES_AND_BROWS from ref_08; NOSE from ref_12; MOUTH from ref_11. Build a full U-shaped lower face with substantial low cheek volume, a wide rounded jaw, and a short blunt chin. Gather softly open eyes slightly close together, use a short broad soft nose, and a wide mouth with a fuller lower lip. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_05",
+        "FACE_SHAPE_AND_JAW": "ref_18",
         "EYES_AND_BROWS": "ref_08",
         "NOSE": "ref_12",
         "MOUTH": "ref_11"
       },
-      "needs_rebuild": null
+      "needs_rebuild": {
+        "FACE_SHAPE_AND_JAW": [
+          "ref_05",
+          "ref_18"
+        ]
+      }
     },
     "zhiyi-shen": {
       "archetype": "高額長中庭、窄矩形輪廓的冷靜骨感成人臉",
@@ -1205,15 +1225,15 @@
       },
       "face_en_v1_filename_form": "Create a new 24-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_11; EYES_AND_BROWS from ref_06; NOSE from ref_12; MOUTH from ref_07. Build a trapezoid canvas with a forehead narrower than the broad jaw, clear lower-face corners, and a short square chin. Use wide-set large level eyes, a short softly shaped nose, and a wide full mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_14",
+        "FACE_SHAPE_AND_JAW": "ref_19",
         "EYES_AND_BROWS": "ref_06",
         "NOSE": "ref_11",
         "MOUTH": "ref_07"
       },
       "needs_rebuild": {
         "FACE_SHAPE_AND_JAW": [
-          "ref_11",
-          "ref_14"
+          "ref_14",
+          "ref_19"
         ],
         "NOSE": [
           "ref_12",
@@ -1276,15 +1296,15 @@
       },
       "face_en_v1_filename_form": "Create a new 22-year-old Chinese-Malaysian adult woman identity from four component references. Reference assignment: FACE_SHAPE_AND_JAW from ref_08; EYES_AND_BROWS from ref_12; NOSE from ref_05; MOUTH from ref_10. Build a softly squared short canvas with full mid-cheeks, a substantial rounded-square jaw, and a short blunt chin. Use wide-set open eyes with a gentle downward line, a short softly broad nose, and a relaxed wide mouth. Synthesize these four components into one new coherent identity; each reference contributes its assigned geometry rather than a complete likeness.",
       "refs_v2": {
-        "FACE_SHAPE_AND_JAW": "ref_06",
+        "FACE_SHAPE_AND_JAW": "ref_21",
         "EYES_AND_BROWS": "ref_12",
         "NOSE": "ref_05",
         "MOUTH": "ref_10"
       },
       "needs_rebuild": {
         "FACE_SHAPE_AND_JAW": [
-          "ref_08",
-          "ref_06"
+          "ref_06",
+          "ref_21"
         ]
       }
     },
@@ -1415,9 +1435,25 @@
     "第一批": "不可直接跑 32 張。先選第一批中 needs_rebuild=false 且最近鄰距離最大的 1 位跑 4 張，驗證四張參考圖各自只控制指定部件；至少 3/4 部件穩定成立才展開其餘 7 位，低於 3/4 則改用 F-01 的部件裁切備案。"
   },
   "ref_notes": {
+    "ref_03": {
+      "excluded_from_FACE_SHAPE_AND_JAW": true,
+      "reason": "ChatGPT H-01 裁決：重度修圖，骨相不可信；新 high-quality 來源到位後移出臉型池。"
+    },
+    "ref_05": {
+      "excluded_from_FACE_SHAPE_AND_JAW": true,
+      "reason": "ChatGPT H-01 裁決：近距離自拍有廣角變形；新 high-quality 來源到位後移出臉型池。"
+    },
+    "ref_06": {
+      "excluded_from_FACE_SHAPE_AND_JAW": true,
+      "reason": "ChatGPT H-01 裁決：重度美顏已改變下巴與眼睛幾何；新 high-quality 來源到位後移出臉型池。"
+    },
     "ref_13": {
       "excluded_from_FACE_SHAPE_AND_JAW": true,
       "reason": "ChatGPT G-05 裁決：不為了覆蓋率強迫它擔任臉型來源；其輪廓不適合當骨架來源，維持只用於眼眉與口部。明記於此避免日後被誤認為分配疏漏。"
+    },
+    "ref_14": {
+      "excluded_from_FACE_SHAPE_AND_JAW": true,
+      "reason": "ChatGPT H-01 裁決：明顯美顏且小收下巴與目標梯形方顎矛盾；新 high-quality 來源到位後移出臉型池。"
     }
   }
 }
