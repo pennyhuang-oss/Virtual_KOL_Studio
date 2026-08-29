@@ -1168,7 +1168,8 @@
         "NOSE": "ref_02",
         "MOUTH": "ref_06"
       },
-      "needs_rebuild": null
+      "needs_rebuild": null,
+      "_a0_hair_en": "Her hair is a cool silver-grey, bleached evenly all the way through so her roots are the same silver-grey as her ends, cut short and ending just below her ears."
     },
     "peggy-lee": {
       "archetype": "窄額寬顎、五官偏大的梯形張力成人臉",
