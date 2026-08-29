@@ -1,0 +1,3437 @@
+{
+ "crop_spec_version": "v1",
+ "tool_version": "build_face_crops/1.0",
+ "_gate": "prompt manifest 只能引用 qa_status == \"pass\" 的 crop。",
+ "artifacts": {
+  "ref_01__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_01",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_01.jfif",
+   "source_sha256": "5b2a4b68c102050bc6112c53db419e87821bea570b2f4596ac1499e7d55cef82",
+   "source_size": [
+    498,
+    616
+   ],
+   "normalized_crop_box": [
+    0.31096,
+    0.279086,
+    0.719356,
+    0.424166
+   ],
+   "pixel_crop_box": [
+    154.9,
+    171.9,
+    358.2,
+    261.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_01__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "f93092d5067a7e25c509b522b338ff75410df9cde4bedbf981f0e83c5d3dbfce",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "原圖上該部位短邊只有 89px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0313,
+    "source_px_short_side": 89.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_01__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_01",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_01.jfif",
+   "source_sha256": "5b2a4b68c102050bc6112c53db419e87821bea570b2f4596ac1499e7d55cef82",
+   "source_size": [
+    498,
+    616
+   ],
+   "normalized_crop_box": [
+    0.204606,
+    0.054973,
+    0.825601,
+    0.682521
+   ],
+   "pixel_crop_box": [
+    101.9,
+    33.9,
+    411.1,
+    420.4
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_01__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "2c4eccb1cafd581c2cc1e69238546568f4a4af924815f12fd7c5d49398ec95ca",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0313,
+    "source_px_short_side": 309.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_01__MOUTH__v1": {
+   "source_ref_id": "ref_01",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_01.jfif",
+   "source_sha256": "5b2a4b68c102050bc6112c53db419e87821bea570b2f4596ac1499e7d55cef82",
+   "source_size": [
+    498,
+    616
+   ],
+   "normalized_crop_box": [
+    0.422936,
+    0.483694,
+    0.612694,
+    0.582466
+   ],
+   "pixel_crop_box": [
+    210.6,
+    298.0,
+    305.1,
+    358.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_01__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "676eb5fe58d31b92743cb0fdaa23082d63a0c16e9bb034842bb710410e441a1f",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "原圖上該部位短邊只有 61px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0313,
+    "source_px_short_side": 60.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_01__NOSE__v1": {
+   "source_ref_id": "ref_01",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_01.jfif",
+   "source_sha256": "5b2a4b68c102050bc6112c53db419e87821bea570b2f4596ac1499e7d55cef82",
+   "source_size": [
+    498,
+    616
+   ],
+   "normalized_crop_box": [
+    0.439805,
+    0.359163,
+    0.600532,
+    0.483694
+   ],
+   "pixel_crop_box": [
+    219.0,
+    221.2,
+    299.1,
+    298.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_01__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "5a1886ef9a8770a6e2cab50ddd8728806ea75d6b97a6978fdf342b78d643905b",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "原圖上該部位短邊只有 77px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0313,
+    "source_px_short_side": 76.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_02__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_02",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_02.jpg",
+   "source_sha256": "28bd8fdb3874e1af6786358018d0f0de75dedf71dd2682dcce8a6ffb5a40e401",
+   "source_size": [
+    580,
+    767
+   ],
+   "normalized_crop_box": [
+    0.144857,
+    0.204055,
+    0.667983,
+    0.38603
+   ],
+   "pixel_crop_box": [
+    84.0,
+    156.5,
+    387.4,
+    296.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_02__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "2512a8d7aafa77e6c8dd5550d3dc1b78394d732943d74c9ea915f3e099da387f",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.314 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.314,
+    "source_px_short_side": 139.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_02__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_02",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_02.jpg",
+   "source_sha256": "28bd8fdb3874e1af6786358018d0f0de75dedf71dd2682dcce8a6ffb5a40e401",
+   "source_size": [
+    580,
+    767
+   ],
+   "normalized_crop_box": [
+    0.038969,
+    -0.071854,
+    0.867475,
+    0.711284
+   ],
+   "pixel_crop_box": [
+    22.6,
+    -55.1,
+    503.1,
+    545.6
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_02__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "fd46db35d32b7d23f1eb83c2db72419477c3f95d9de81acc20e3b17936d3d397",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.314 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0918,
+    "yaw_proxy": 0.314,
+    "source_px_short_side": 480.5
+   },
+   "qa_by": "auto"
+  },
+  "ref_02__MOUTH__v1": {
+   "source_ref_id": "ref_02",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_02.jpg",
+   "source_sha256": "28bd8fdb3874e1af6786358018d0f0de75dedf71dd2682dcce8a6ffb5a40e401",
+   "source_size": [
+    580,
+    767
+   ],
+   "normalized_crop_box": [
+    0.283689,
+    0.464733,
+    0.535198,
+    0.587734
+   ],
+   "pixel_crop_box": [
+    164.5,
+    356.5,
+    310.4,
+    450.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_02__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "c07d38233acf15e5da59f475a2c8562065035c5f5c8ad2242567390525946ec7",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.314 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 94px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.314,
+    "source_px_short_side": 94.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_02__NOSE__v1": {
+   "source_ref_id": "ref_02",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_02.jpg",
+   "source_sha256": "28bd8fdb3874e1af6786358018d0f0de75dedf71dd2682dcce8a6ffb5a40e401",
+   "source_size": [
+    580,
+    767
+   ],
+   "normalized_crop_box": [
+    0.289104,
+    0.313088,
+    0.501404,
+    0.464733
+   ],
+   "pixel_crop_box": [
+    167.7,
+    240.1,
+    290.8,
+    356.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_02__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "bdebfbda18a796ab22935b80f83c5eeeb12141478a6cac6694c4503b169f92e2",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.314 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.314,
+    "source_px_short_side": 116.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_03__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_03",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_03.jpg",
+   "source_sha256": "6d07e7c5f55322dd55b00a62dc92469b41d5ffc34461da6747c8d00c24f30cf8",
+   "source_size": [
+    960,
+    1200
+   ],
+   "normalized_crop_box": [
+    0.233609,
+    0.195015,
+    0.766274,
+    0.36205
+   ],
+   "pixel_crop_box": [
+    224.3,
+    234.0,
+    735.6,
+    434.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_03__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "c9fe4b7285be38f6ceb9361a45d7d03ad63de16e9a12f7c8a52cb6c6328c2e69",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.021,
+    "source_px_short_side": 200.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_03__MOUTH__v1": {
+   "source_ref_id": "ref_03",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_03.jpg",
+   "source_sha256": "6d07e7c5f55322dd55b00a62dc92469b41d5ffc34461da6747c8d00c24f30cf8",
+   "source_size": [
+    960,
+    1200
+   ],
+   "normalized_crop_box": [
+    0.360513,
+    0.453781,
+    0.625855,
+    0.575889
+   ],
+   "pixel_crop_box": [
+    346.1,
+    544.5,
+    600.8,
+    691.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_03__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "8e9bcbf921ebbe1d7fc4830fe86d4d5a4da800ab474d0c8bb4b8ad5963e80f7f",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.021,
+    "source_px_short_side": 146.5
+   },
+   "qa_by": "auto"
+  },
+  "ref_03__NOSE__v1": {
+   "source_ref_id": "ref_03",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_03.jpg",
+   "source_sha256": "6d07e7c5f55322dd55b00a62dc92469b41d5ffc34461da6747c8d00c24f30cf8",
+   "source_size": [
+    960,
+    1200
+   ],
+   "normalized_crop_box": [
+    0.384217,
+    0.290731,
+    0.606908,
+    0.453781
+   ],
+   "pixel_crop_box": [
+    368.8,
+    348.9,
+    582.6,
+    544.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_03__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "2aab90781623752990ffba43849cd2c9595725cb9c43ae834314936bc8a7ca3d",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.021,
+    "source_px_short_side": 195.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_04__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_04",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_04.jfif",
+   "source_sha256": "44d1f596f85d1c1f8b41979614d407afa95f2ae093dcd507054fe575af780738",
+   "source_size": [
+    446,
+    448
+   ],
+   "normalized_crop_box": [
+    0.357188,
+    0.208609,
+    0.66567,
+    0.342023
+   ],
+   "pixel_crop_box": [
+    159.3,
+    93.5,
+    296.9,
+    153.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_04__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "679a98387b9c569a07743e544a1d8eff1ecbf0c1ba33e92ea13dfa6bda61adcc",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "原圖上該部位短邊只有 60px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0595,
+    "source_px_short_side": 59.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_04__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_04",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_04.jfif",
+   "source_sha256": "44d1f596f85d1c1f8b41979614d407afa95f2ae093dcd507054fe575af780738",
+   "source_size": [
+    446,
+    448
+   ],
+   "normalized_crop_box": [
+    0.278696,
+    -0.001693,
+    0.74185,
+    0.574666
+   ],
+   "pixel_crop_box": [
+    124.3,
+    -0.8,
+    330.9,
+    257.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_04__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "9c4c22000eec6de46952cc489aaad0b25fb754b4d21c8a2de964d237831e96c5",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0029,
+    "yaw_proxy": 0.0595,
+    "source_px_short_side": 206.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_05__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_05",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_05.jfif",
+   "source_sha256": "a307d6c66a286119452552e3d5acf243e774427a4c21cad78279cecdf63d9538",
+   "source_size": [
+    480,
+    639
+   ],
+   "normalized_crop_box": [
+    0.278921,
+    0.248895,
+    0.639444,
+    0.404273
+   ],
+   "pixel_crop_box": [
+    133.9,
+    159.0,
+    306.9,
+    258.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_05__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "ce25ed1cd86eb4d0ce4a6cc1c264657b643c9ecbb186d09b2a4732ccafb7d171",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.190 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.1902,
+    "source_px_short_side": 99.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_05__NOSE__v1": {
+   "source_ref_id": "ref_05",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_05.jfif",
+   "source_sha256": "a307d6c66a286119452552e3d5acf243e774427a4c21cad78279cecdf63d9538",
+   "source_size": [
+    480,
+    639
+   ],
+   "normalized_crop_box": [
+    0.395123,
+    0.334554,
+    0.555554,
+    0.449278
+   ],
+   "pixel_crop_box": [
+    189.7,
+    213.8,
+    266.7,
+    287.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_05__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "d1d24f80af5b8f64ad795a0996d75af4a8037f391c0067690b1c433527f158c9",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.190 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 73px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.1902,
+    "source_px_short_side": 73.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_06__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_06",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_06.jfif",
+   "source_sha256": "e97e7af2b7e49c22f44d03725b474789c49d287d885f9614de33175713629de8",
+   "source_size": [
+    712,
+    1280
+   ],
+   "normalized_crop_box": [
+    0.391661,
+    0.318532,
+    0.839678,
+    0.426566
+   ],
+   "pixel_crop_box": [
+    278.9,
+    407.7,
+    597.9,
+    546.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_06__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "f8ff85bd8573e2e1bdb722ca12279ae2ca0b307d8a9d1809c55e6fa1a3a4aea8",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.214 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.214,
+    "source_px_short_side": 138.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_06__MOUTH__v1": {
+   "source_ref_id": "ref_06",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_06.jfif",
+   "source_sha256": "e97e7af2b7e49c22f44d03725b474789c49d287d885f9614de33175713629de8",
+   "source_size": [
+    712,
+    1280
+   ],
+   "normalized_crop_box": [
+    0.480142,
+    0.481043,
+    0.737924,
+    0.544377
+   ],
+   "pixel_crop_box": [
+    341.9,
+    615.7,
+    525.4,
+    696.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_06__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "ae996c999d1ec2eca6e2e41692087581d354c67ef6dd95b4ffa1f63497521398",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.214 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 81px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.214,
+    "source_px_short_side": 81.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_06__NOSE__v1": {
+   "source_ref_id": "ref_06",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_06.jfif",
+   "source_sha256": "e97e7af2b7e49c22f44d03725b474789c49d287d885f9614de33175713629de8",
+   "source_size": [
+    712,
+    1280
+   ],
+   "normalized_crop_box": [
+    0.518404,
+    0.380014,
+    0.728518,
+    0.481043
+   ],
+   "pixel_crop_box": [
+    369.1,
+    486.4,
+    518.7,
+    615.7
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_06__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "412308a87d26341ccc1b8bfefc2e45b50c9d490aa7a0cf1697f41ed95e152915",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.214 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.214,
+    "source_px_short_side": 129.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_07__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_07",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_07.jpg",
+   "source_sha256": "bfdd77f524477ba2711c35b1345efc95e4c9bc555e4b0f62fe6eb7fcb26ec43d",
+   "source_size": [
+    1079,
+    1079
+   ],
+   "normalized_crop_box": [
+    0.342676,
+    0.153894,
+    0.609276,
+    0.487143
+   ],
+   "pixel_crop_box": [
+    369.7,
+    166.1,
+    657.4,
+    525.6
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_07__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "ad9de0daa8f778406103bc4c7c41c43bcd56b9d6afa680fa163c372c09a9ac9d",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.405 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.4047,
+    "source_px_short_side": 287.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_07__MOUTH__v1": {
+   "source_ref_id": "ref_07",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_07.jpg",
+   "source_sha256": "bfdd77f524477ba2711c35b1345efc95e4c9bc555e4b0f62fe6eb7fcb26ec43d",
+   "source_size": [
+    1079,
+    1079
+   ],
+   "normalized_crop_box": [
+    0.423946,
+    0.384513,
+    0.503933,
+    0.434903
+   ],
+   "pixel_crop_box": [
+    457.4,
+    414.9,
+    543.7,
+    469.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_07__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "2c072c9a06d433e27497d839b83e1e9a909a9477b386e7286d657d4f19790a09",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.405 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 54px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.4047,
+    "source_px_short_side": 54.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_07__NOSE__v1": {
+   "source_ref_id": "ref_07",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_07.jpg",
+   "source_sha256": "bfdd77f524477ba2711c35b1345efc95e4c9bc555e4b0f62fe6eb7fcb26ec43d",
+   "source_size": [
+    1079,
+    1079
+   ],
+   "normalized_crop_box": [
+    0.419696,
+    0.314808,
+    0.488787,
+    0.384513
+   ],
+   "pixel_crop_box": [
+    452.9,
+    339.7,
+    527.4,
+    414.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_07__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "225ed5a1ee9039235c1673f2dcccbc1c235ab437d543ba7b18ad3a5d32651019",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.405 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 75px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.4047,
+    "source_px_short_side": 74.5
+   },
+   "qa_by": "auto"
+  },
+  "ref_08__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_08",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_08.jpg",
+   "source_sha256": "f63dd83976b5d84296f4c34fcd8f1bdc4bfc38b17a4c8d5f91a1ad13af94d9f9",
+   "source_size": [
+    655,
+    750
+   ],
+   "normalized_crop_box": [
+    0.506298,
+    0.105604,
+    0.82998,
+    0.318698
+   ],
+   "pixel_crop_box": [
+    331.6,
+    79.2,
+    543.6,
+    239.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_08__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "4ebd278f9a850e7ffc9d2a78d10f472d2fe12c57a6065764aecf8fd6c0688eda",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.161 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.1609,
+    "source_px_short_side": 159.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_08__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_08",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_08.jpg",
+   "source_sha256": "f63dd83976b5d84296f4c34fcd8f1bdc4bfc38b17a4c8d5f91a1ad13af94d9f9",
+   "source_size": [
+    655,
+    750
+   ],
+   "normalized_crop_box": [
+    0.372475,
+    -0.043247,
+    0.869026,
+    0.498822
+   ],
+   "pixel_crop_box": [
+    244.0,
+    -32.4,
+    569.2,
+    374.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_08__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "74119e4540d24e2be9daea94ffb4cad3a4739fc9f2db86108044746a666f82a8",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.161 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0798,
+    "yaw_proxy": 0.1609,
+    "source_px_short_side": 325.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_08__MOUTH__v1": {
+   "source_ref_id": "ref_08",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_08.jpg",
+   "source_sha256": "f63dd83976b5d84296f4c34fcd8f1bdc4bfc38b17a4c8d5f91a1ad13af94d9f9",
+   "source_size": [
+    655,
+    750
+   ],
+   "normalized_crop_box": [
+    0.50652,
+    0.341012,
+    0.704587,
+    0.41042
+   ],
+   "pixel_crop_box": [
+    331.8,
+    255.8,
+    461.5,
+    307.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_08__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "26c9e902eb3013733ee90d475f0e048f229b7104dc012483e1af9be702e4c069",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.161 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 52px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.1609,
+    "source_px_short_side": 52.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_08__NOSE__v1": {
+   "source_ref_id": "ref_08",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_08.jpg",
+   "source_sha256": "f63dd83976b5d84296f4c34fcd8f1bdc4bfc38b17a4c8d5f91a1ad13af94d9f9",
+   "source_size": [
+    655,
+    750
+   ],
+   "normalized_crop_box": [
+    0.557964,
+    0.224239,
+    0.70578,
+    0.341012
+   ],
+   "pixel_crop_box": [
+    365.5,
+    168.2,
+    462.3,
+    255.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_08__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "8737b472ac96e9414a2319df1b9c7539f13dfa41cdc923d252940a1c6e95d1e4",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.161 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 88px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.1609,
+    "source_px_short_side": 87.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_09__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_09",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_09.jpg",
+   "source_sha256": "bc8b667686f16f4bd339fd16eee454ae85ac78fd2cc50af501dfdcd879623d31",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "normalized_crop_box": [
+    0.439437,
+    0.095959,
+    0.578801,
+    0.151019
+   ],
+   "pixel_crop_box": [
+    632.8,
+    184.2,
+    833.5,
+    290.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_09__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "436266c83eb01fee36866281eaf0eb13b0ad72c5493f74b8623008f431d2d957",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.405 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.4051,
+    "source_px_short_side": 105.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_09__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_09",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_09.jpg",
+   "source_sha256": "bc8b667686f16f4bd339fd16eee454ae85ac78fd2cc50af501dfdcd879623d31",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "normalized_crop_box": [
+    0.379972,
+    0.015655,
+    0.620391,
+    0.241048
+   ],
+   "pixel_crop_box": [
+    547.2,
+    30.1,
+    893.4,
+    462.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_09__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "9f7af28c5230e7b50b39b13572aaccde7ef7d3b6b948e260e9658c0d6498cfe3",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.405 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.4051,
+    "source_px_short_side": 346.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_09__MOUTH__v1": {
+   "source_ref_id": "ref_09",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_09.jpg",
+   "source_sha256": "bc8b667686f16f4bd339fd16eee454ae85ac78fd2cc50af501dfdcd879623d31",
+   "source_size": [
+    1440,
+    1920
+   ],
+   "normalized_crop_box": [
+    0.471734,
+    0.167758,
+    0.568737,
+    0.201985
+   ],
+   "pixel_crop_box": [
+    679.3,
+    322.1,
+    819.0,
+    387.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_09__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "16703605235b93e9cd6b4516c3ee236993d4f743a7e2723b1107b862a1d8a2e2",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.405 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 66px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.4051,
+    "source_px_short_side": 65.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_10__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_10",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_10.jpg",
+   "source_sha256": "091a507d15c97d63e5ceba8b025955355ef10192c416d45d3792f3390066fcbf",
+   "source_size": [
+    2048,
+    2048
+   ],
+   "normalized_crop_box": [
+    0.371897,
+    0.199261,
+    0.665759,
+    0.439047
+   ],
+   "pixel_crop_box": [
+    761.6,
+    408.1,
+    1363.5,
+    899.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_10__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "85b161f138418b759a580527998dcee261faa4338dd7fad6780c6f7c39df5766",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.302 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.3025,
+    "source_px_short_side": 491.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_10__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_10",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_10.jpg",
+   "source_sha256": "091a507d15c97d63e5ceba8b025955355ef10192c416d45d3792f3390066fcbf",
+   "source_size": [
+    2048,
+    2048
+   ],
+   "normalized_crop_box": [
+    0.21332,
+    0.038758,
+    0.71335,
+    0.663795
+   ],
+   "pixel_crop_box": [
+    436.9,
+    79.4,
+    1460.9,
+    1359.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_10__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "fe82b82cb4d3e43b5edb3984fa834bf587135d12171649de3a22641bf9691442",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.302 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.3025,
+    "source_px_short_side": 1024.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_10__MOUTH__v1": {
+   "source_ref_id": "ref_10",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_10.jpg",
+   "source_sha256": "091a507d15c97d63e5ceba8b025955355ef10192c416d45d3792f3390066fcbf",
+   "source_size": [
+    2048,
+    2048
+   ],
+   "normalized_crop_box": [
+    0.373816,
+    0.461247,
+    0.54439,
+    0.564817
+   ],
+   "pixel_crop_box": [
+    765.6,
+    944.6,
+    1114.9,
+    1156.7
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_10__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "82f39d1a4962bd1a873181b7a1a00e47dd15f6d1eaf2315ceecf1519a9ada8ad",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.302 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.3025,
+    "source_px_short_side": 212.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_11__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_11",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_11.jpg",
+   "source_sha256": "0c879729cfdb3dc80a8280c57b790dbee7ed48bbf1c8317d71484c463c51c27e",
+   "source_size": [
+    540,
+    960
+   ],
+   "normalized_crop_box": [
+    0.368493,
+    0.181488,
+    0.668482,
+    0.392418
+   ],
+   "pixel_crop_box": [
+    199.0,
+    174.2,
+    361.0,
+    376.7
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_11__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "d6f57c53b03534ca07a2aa3724074c310e997c3b4af269e24a3d8b2642ec9cf7",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.286 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.2858,
+    "source_px_short_side": 162.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_11__MOUTH__v1": {
+   "source_ref_id": "ref_11",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_11.jpg",
+   "source_sha256": "0c879729cfdb3dc80a8280c57b790dbee7ed48bbf1c8317d71484c463c51c27e",
+   "source_size": [
+    540,
+    960
+   ],
+   "normalized_crop_box": [
+    0.48232,
+    0.321148,
+    0.579655,
+    0.356459
+   ],
+   "pixel_crop_box": [
+    260.5,
+    308.3,
+    313.0,
+    342.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_11__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "147b5e3998d7f5bcfb42ac710e72a03caa0cd82f3b69bdd6b00ad2b9aaa54c0b",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.286 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 34px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.2858,
+    "source_px_short_side": 33.9
+   },
+   "qa_by": "auto"
+  },
+  "ref_11__NOSE__v1": {
+   "source_ref_id": "ref_11",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_11.jpg",
+   "source_sha256": "0c879729cfdb3dc80a8280c57b790dbee7ed48bbf1c8317d71484c463c51c27e",
+   "source_size": [
+    540,
+    960
+   ],
+   "normalized_crop_box": [
+    0.502427,
+    0.281087,
+    0.569782,
+    0.321148
+   ],
+   "pixel_crop_box": [
+    271.3,
+    269.8,
+    307.7,
+    308.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_11__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "9051da2aa1709eb2b9ce1503356395b69bd6f0b883de3c1e2d8e6c542989f3cc",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.286 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 36px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.2858,
+    "source_px_short_side": 36.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_12__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_12",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_12.jpg",
+   "source_sha256": "e6471b13fe91dd4004b88be017015bd44c1a0b73d3e1d164055cc0f722224c25",
+   "source_size": [
+    1536,
+    2048
+   ],
+   "normalized_crop_box": [
+    0.444912,
+    0.102865,
+    0.776843,
+    0.333017
+   ],
+   "pixel_crop_box": [
+    683.4,
+    210.7,
+    1193.2,
+    682.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_12__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "cf366aabf2d7e7324d4dd6faed41892a348b6ed22cb4b908d62832103033bdb9",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.676 超過 0.08（雙眼裁切對正面性要求更嚴）",
+    "框內夾帶鼻尖"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.6758,
+    "source_px_short_side": 471.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_12__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_12",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_12.jpg",
+   "source_sha256": "e6471b13fe91dd4004b88be017015bd44c1a0b73d3e1d164055cc0f722224c25",
+   "source_size": [
+    1536,
+    2048
+   ],
+   "normalized_crop_box": [
+    0.359428,
+    -5.1e-05,
+    0.868924,
+    0.477601
+   ],
+   "pixel_crop_box": [
+    552.1,
+    -0.1,
+    1334.7,
+    978.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_12__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "c92cb5a8552a50a450cddb946bd346e655c96a44e5a1757f174fdd22f262d711",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.676 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0001,
+    "yaw_proxy": 0.6758,
+    "source_px_short_side": 782.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_12__NOSE__v1": {
+   "source_ref_id": "ref_12",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_12.jpg",
+   "source_sha256": "e6471b13fe91dd4004b88be017015bd44c1a0b73d3e1d164055cc0f722224c25",
+   "source_size": [
+    1536,
+    2048
+   ],
+   "normalized_crop_box": [
+    0.447658,
+    0.225711,
+    0.606634,
+    0.328355
+   ],
+   "pixel_crop_box": [
+    687.6,
+    462.3,
+    931.8,
+    672.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_12__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "7276aad9d6609416441bcd9eea871d2498ef1f2d1074405c5cee7ef2e7f40541",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.676 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.6758,
+    "source_px_short_side": 210.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_13__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_13",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_13.jfif",
+   "source_sha256": "96b4b90b8c1cff6421bb8d37f515388f3635df057aa4e7f373b386cc2ae54eec",
+   "source_size": [
+    2000,
+    2666
+   ],
+   "normalized_crop_box": [
+    0.424771,
+    0.197346,
+    0.620717,
+    0.277153
+   ],
+   "pixel_crop_box": [
+    849.5,
+    526.1,
+    1241.4,
+    738.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_13__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "3e6c065122ca59f106955ecd5bd67c2f6c1ba06862f829e5256e79c2dfb03c57",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.548 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.5483,
+    "source_px_short_side": 212.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_13__MOUTH__v1": {
+   "source_ref_id": "ref_13",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_13.jfif",
+   "source_sha256": "96b4b90b8c1cff6421bb8d37f515388f3635df057aa4e7f373b386cc2ae54eec",
+   "source_size": [
+    2000,
+    2666
+   ],
+   "normalized_crop_box": [
+    0.45402,
+    0.304906,
+    0.567866,
+    0.357419
+   ],
+   "pixel_crop_box": [
+    908.0,
+    812.9,
+    1135.7,
+    952.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_13__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "8700d01aadd375841934588b4d3dd239fafff5075c57d623607b2b804d004a90",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.548 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.5483,
+    "source_px_short_side": 140.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_14__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_14",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_14.jpg",
+   "source_sha256": "10095e5ba15a90861a5537eb7ff9dfc251644423f88f66c7f156d50168681cd5",
+   "source_size": [
+    1205,
+    1606
+   ],
+   "normalized_crop_box": [
+    0.139569,
+    0.170756,
+    0.371105,
+    0.257204
+   ],
+   "pixel_crop_box": [
+    168.2,
+    274.2,
+    447.2,
+    413.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_14__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "8af922801712ff7f90972357fb4f8fb6e8567e6903db1a7f13bc2ddfb0e80184",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0415,
+    "source_px_short_side": 138.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_14__NOSE__v1": {
+   "source_ref_id": "ref_14",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_14.jpg",
+   "source_sha256": "10095e5ba15a90861a5537eb7ff9dfc251644423f88f66c7f156d50168681cd5",
+   "source_size": [
+    1205,
+    1606
+   ],
+   "normalized_crop_box": [
+    0.220273,
+    0.223857,
+    0.318093,
+    0.28646
+   ],
+   "pixel_crop_box": [
+    265.4,
+    359.5,
+    383.3,
+    460.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_14__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "af1da926715dee80482262c16cae23ad2aaa3a7ecd81cfcd907f28a8bcfe1992",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0415,
+    "source_px_short_side": 100.5
+   },
+   "qa_by": "auto"
+  },
+  "ref_15__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_15",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_15.jpg",
+   "source_sha256": "fdbd0755dab443ac87638734163efe7b9392677e2b9b9835bfa86e4db9497007",
+   "source_size": [
+    800,
+    1000
+   ],
+   "normalized_crop_box": [
+    0.397836,
+    0.252656,
+    0.667681,
+    0.350882
+   ],
+   "pixel_crop_box": [
+    318.3,
+    252.7,
+    534.1,
+    350.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_15__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "161c5e98df3e769fab3d76181ed0ea845075da7b8335ab29b75a0a2833ab691d",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.172 超過 0.08（雙眼裁切對正面性要求更嚴）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.172,
+    "source_px_short_side": 98.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_15__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_15",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_15.jpg",
+   "source_sha256": "fdbd0755dab443ac87638734163efe7b9392677e2b9b9835bfa86e4db9497007",
+   "source_size": [
+    800,
+    1000
+   ],
+   "normalized_crop_box": [
+    0.31332,
+    0.102973,
+    0.735283,
+    0.524936
+   ],
+   "pixel_crop_box": [
+    250.7,
+    103.0,
+    588.2,
+    524.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_15__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "1dd89f9de0f1e7a10f17471a594aef58a15cc0cf6e96bdfa4e08c7cf67961b00",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.172 超過 0.14（側身過多）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.172,
+    "source_px_short_side": 337.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_15__MOUTH__v1": {
+   "source_ref_id": "ref_15",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_15.jpg",
+   "source_sha256": "fdbd0755dab443ac87638734163efe7b9392677e2b9b9835bfa86e4db9497007",
+   "source_size": [
+    800,
+    1000
+   ],
+   "normalized_crop_box": [
+    0.477881,
+    0.387444,
+    0.608758,
+    0.456843
+   ],
+   "pixel_crop_box": [
+    382.3,
+    387.4,
+    487.0,
+    456.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_15__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "a12f37628eebb138470097709bae50d39ccc0bf2eae451b646d190d07a8a7f69",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "yaw proxy 0.172 超過 0.14（側身過多）",
+    "原圖上該部位短邊只有 69px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.172,
+    "source_px_short_side": 69.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_16__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_16",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_16.jpg",
+   "source_sha256": "97c91209531106f81ac8687e11ea049f6963c4ed4acb101d326975f481c56301",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.08843,
+    0.013448,
+    0.91904,
+    0.705623
+   ],
+   "pixel_crop_box": [
+    90.6,
+    20.7,
+    941.1,
+    1083.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_16__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "3b0e4851a0adc51499a673eb66f80f5bc30f937a14cec6d8783cd858a1582f6e",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0158,
+    "source_px_short_side": 850.5
+   },
+   "qa_by": "auto"
+  },
+  "ref_18__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_18",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_18.jpg",
+   "source_sha256": "ac79b7e17c03fb4e9e5be4e55b4ac6d6f1a97bcdac78613a67c5d9d258ce1c39",
+   "source_size": [
+    1122,
+    1402
+   ],
+   "normalized_crop_box": [
+    0.130646,
+    0.021123,
+    0.874048,
+    0.764791
+   ],
+   "pixel_crop_box": [
+    146.6,
+    29.6,
+    980.7,
+    1072.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_18__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "e73b49dc94216b68721fb096cc91052276931b24db776805714a7ac4963f631b",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0173,
+    "source_px_short_side": 834.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_19__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_19",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_19.jpg",
+   "source_sha256": "74cdfac929a250cdf9d8594ba2993fc8f624a129bd28b10f2eb5e519c6fa2c2e",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.060835,
+    -0.015656,
+    0.942631,
+    0.811028
+   ],
+   "pixel_crop_box": [
+    66.1,
+    -22.7,
+    1023.7,
+    1174.4
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_19__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "b18290354732b6828f06a1cce21b4b9b33d306af420ba3c2b621eee51b03650e",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0189,
+    "yaw_proxy": 0.0076,
+    "source_px_short_side": 957.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_20__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_20",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_20.jpg",
+   "source_sha256": "1b37a583b7b4913198424662fa26867c8db3b713d87a652f2386a1e01f583429",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.104152,
+    0.019107,
+    0.893974,
+    0.677292
+   ],
+   "pixel_crop_box": [
+    106.7,
+    29.3,
+    915.4,
+    1040.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_20__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "9dde0c2da5a2d6a57f73121938f2ec1d464d86b60d07e2585ffbf1753209ffec",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0012,
+    "source_px_short_side": 808.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_21__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_21",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_21.jpg",
+   "source_sha256": "07c27529024c5551bda7773f75c692e025d6704b6990ea4366c845eea294324a",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.088216,
+    -0.019406,
+    0.918482,
+    0.758968
+   ],
+   "pixel_crop_box": [
+    95.8,
+    -28.1,
+    997.5,
+    1099.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_21__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "a80ae08299833ccc6f9021fc791ebf0fd76e3358c9532ef734bd8e78ba3d747d",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0249,
+    "yaw_proxy": 0.0125,
+    "source_px_short_side": 901.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_22__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_22",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_22.jpg",
+   "source_sha256": "2b0ab8e71a54659625090e06a8a5e7c65236ac1018c36314ad1e191f34765bd0",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.038338,
+    -0.036923,
+    0.963327,
+    0.7339
+   ],
+   "pixel_crop_box": [
+    39.3,
+    -56.7,
+    986.4,
+    1127.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_22__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "cf288b0f652bb7196ac8b5acb11fa3a10604d36af8be39511da7d9b42be5921c",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0479,
+    "yaw_proxy": 0.0001,
+    "source_px_short_side": 947.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_23__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_23",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_23.jpg",
+   "source_sha256": "c4e5a739af785128618d6f6ec837b2c8c5395edb2c58795438a15edd775ea4e4",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.045869,
+    -0.014297,
+    0.972319,
+    0.757744
+   ],
+   "pixel_crop_box": [
+    47.0,
+    -22.0,
+    995.7,
+    1163.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_23__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "59d9a2a805f47c59072f0ebdcdd509895e84d6ba881088bcc70b343135f371b2",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0185,
+    "yaw_proxy": 0.0238,
+    "source_px_short_side": 948.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_16__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_16",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_16.jpg",
+   "source_sha256": "97c91209531106f81ac8687e11ea049f6963c4ed4acb101d326975f481c56301",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.252421,
+    0.265155,
+    0.76379,
+    0.405071
+   ],
+   "pixel_crop_box": [
+    258.5,
+    407.3,
+    782.1,
+    622.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_16__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "e806157b9604196ecb71c08de218d0c158d17c63c738ae61cbd9c5ba7ebefaa9",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0158,
+    "source_px_short_side": 214.9
+   },
+   "qa_by": "auto"
+  },
+  "ref_16__NOSE__v1": {
+   "source_ref_id": "ref_16",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_16.jpg",
+   "source_sha256": "97c91209531106f81ac8687e11ea049f6963c4ed4acb101d326975f481c56301",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.398382,
+    0.34049,
+    0.614198,
+    0.474813
+   ],
+   "pixel_crop_box": [
+    407.9,
+    523.0,
+    628.9,
+    729.3
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_16__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "77129f3d8160747ebce1951a600ca48167287f8d2ea52b2b5f08d982a37fa2fe",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0158,
+    "source_px_short_side": 206.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_16__MOUTH__v1": {
+   "source_ref_id": "ref_16",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_16.jpg",
+   "source_sha256": "97c91209531106f81ac8687e11ea049f6963c4ed4acb101d326975f481c56301",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.375887,
+    0.474813,
+    0.631474,
+    0.587518
+   ],
+   "pixel_crop_box": [
+    384.9,
+    729.3,
+    646.6,
+    902.4
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_16__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "edcbe141bfbf9958993c8f689f277dfc8d20c0414194b772c34e89b93f34a56d",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0158,
+    "source_px_short_side": 173.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_17__FACE_SHAPE_AND_JAW__v1": {
+   "source_ref_id": "ref_17",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_17.jpg",
+   "source_sha256": "5e04fcafe10bc2ada812397760292ddbc0acdb0c3a4d6d806fe6b9e7f1372828",
+   "source_size": [
+    1023,
+    1537
+   ],
+   "normalized_crop_box": [
+    0.054015,
+    -0.009286,
+    0.945644,
+    0.73253
+   ],
+   "pixel_crop_box": [
+    55.3,
+    -14.3,
+    967.4,
+    1125.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "expand",
+   "out_path": "review/batch3_face_crops/v1/ref_17__FACE_SHAPE_AND_JAW__v1.jpg",
+   "out_size": [
+    1024,
+    1280
+   ],
+   "out_sha256": "a10918266dcc0b017390c4ce97bbf2d90c47bf5b9f6b01de0a35cfb57686fd26",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0125,
+    "yaw_proxy": 0.0013,
+    "source_px_short_side": 912.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_17__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_17",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_17.jpg",
+   "source_sha256": "5e04fcafe10bc2ada812397760292ddbc0acdb0c3a4d6d806fe6b9e7f1372828",
+   "source_size": [
+    1023,
+    1537
+   ],
+   "normalized_crop_box": [
+    0.225428,
+    0.264775,
+    0.774236,
+    0.401965
+   ],
+   "pixel_crop_box": [
+    230.6,
+    407.0,
+    792.0,
+    617.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_17__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "c91c0b53871b1c19bbb6565ef325bae5c9f7e7ac9eeaca0671b84689be97912a",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0013,
+    "source_px_short_side": 210.9
+   },
+   "qa_by": "auto"
+  },
+  "ref_17__NOSE__v1": {
+   "source_ref_id": "ref_17",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_17.jpg",
+   "source_sha256": "5e04fcafe10bc2ada812397760292ddbc0acdb0c3a4d6d806fe6b9e7f1372828",
+   "source_size": [
+    1023,
+    1537
+   ],
+   "normalized_crop_box": [
+    0.382859,
+    0.340066,
+    0.615536,
+    0.479218
+   ],
+   "pixel_crop_box": [
+    391.7,
+    522.7,
+    629.7,
+    736.6
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_17__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "012d5c3a846d359c714bb34b192f25e735ea1558a296e1c524e7d4774bbda31a",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0013,
+    "source_px_short_side": 213.9
+   },
+   "qa_by": "auto"
+  },
+  "ref_17__MOUTH__v1": {
+   "source_ref_id": "ref_17",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_17.jpg",
+   "source_sha256": "5e04fcafe10bc2ada812397760292ddbc0acdb0c3a4d6d806fe6b9e7f1372828",
+   "source_size": [
+    1023,
+    1537
+   ],
+   "normalized_crop_box": [
+    0.362582,
+    0.479218,
+    0.631931,
+    0.604419
+   ],
+   "pixel_crop_box": [
+    370.9,
+    736.6,
+    646.5,
+    929.0
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_17__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "6beabc389119b20dd8265f958c03691a83cef03ad2ab6edb48719fae4a8fb741",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0013,
+    "source_px_short_side": 192.4
+   },
+   "qa_by": "auto"
+  },
+  "ref_18__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_18",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_18.jpg",
+   "source_sha256": "ac79b7e17c03fb4e9e5be4e55b4ac6d6f1a97bcdac78613a67c5d9d258ce1c39",
+   "source_size": [
+    1122,
+    1402
+   ],
+   "normalized_crop_box": [
+    0.277905,
+    0.290554,
+    0.722751,
+    0.448197
+   ],
+   "pixel_crop_box": [
+    311.8,
+    407.4,
+    810.9,
+    628.4
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_18__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "d05054dbf623c891e1db487a439d91093b246ea0cb6e1a3fdf24ebeeec4910ae",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0173,
+    "source_px_short_side": 221.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_18__NOSE__v1": {
+   "source_ref_id": "ref_18",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_18.jpg",
+   "source_sha256": "ac79b7e17c03fb4e9e5be4e55b4ac6d6f1a97bcdac78613a67c5d9d258ce1c39",
+   "source_size": [
+    1122,
+    1402
+   ],
+   "normalized_crop_box": [
+    0.399095,
+    0.373231,
+    0.597864,
+    0.515816
+   ],
+   "pixel_crop_box": [
+    447.8,
+    523.3,
+    670.8,
+    723.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_18__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "0c6ea18233d13bc948df9d90de9d01dde6ba851a165198a98ca44cdaa5cf6458",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0173,
+    "source_px_short_side": 199.9
+   },
+   "qa_by": "auto"
+  },
+  "ref_18__MOUTH__v1": {
+   "source_ref_id": "ref_18",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_18.jpg",
+   "source_sha256": "ac79b7e17c03fb4e9e5be4e55b4ac6d6f1a97bcdac78613a67c5d9d258ce1c39",
+   "source_size": [
+    1122,
+    1402
+   ],
+   "normalized_crop_box": [
+    0.38381,
+    0.515816,
+    0.612754,
+    0.636089
+   ],
+   "pixel_crop_box": [
+    430.6,
+    723.2,
+    687.5,
+    891.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_18__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "e01b973c98dc49709b2b7e3ffb8d66f282c2d6ebd77862550519379c200f6c02",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0173,
+    "source_px_short_side": 168.6
+   },
+   "qa_by": "auto"
+  },
+  "ref_19__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_19",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_19.jpg",
+   "source_sha256": "74cdfac929a250cdf9d8594ba2993fc8f624a129bd28b10f2eb5e519c6fa2c2e",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.229266,
+    0.286767,
+    0.780518,
+    0.450652
+   ],
+   "pixel_crop_box": [
+    249.0,
+    415.2,
+    847.6,
+    652.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_19__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "a03d8a8c566277f3cb3416adb132ffb31f5a9b910521d1266f6ae0e766405df0",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0076,
+    "source_px_short_side": 237.3
+   },
+   "qa_by": "auto"
+  },
+  "ref_19__NOSE__v1": {
+   "source_ref_id": "ref_19",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_19.jpg",
+   "source_sha256": "74cdfac929a250cdf9d8594ba2993fc8f624a129bd28b10f2eb5e519c6fa2c2e",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.389134,
+    0.377544,
+    0.617012,
+    0.539973
+   ],
+   "pixel_crop_box": [
+    422.6,
+    546.7,
+    670.1,
+    781.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_19__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "22814d15ed4f060927e2dbc4074e2df532ca66f1132cd643dd4a9244b1d776ad",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0076,
+    "source_px_short_side": 235.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_19__MOUTH__v1": {
+   "source_ref_id": "ref_19",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_19.jpg",
+   "source_sha256": "74cdfac929a250cdf9d8594ba2993fc8f624a129bd28b10f2eb5e519c6fa2c2e",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.364281,
+    0.539973,
+    0.639472,
+    0.672588
+   ],
+   "pixel_crop_box": [
+    395.6,
+    781.9,
+    694.5,
+    973.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_19__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "b92425d1f943468e8565a6515dd3786eba7a04b2445c83416dccc6ff1e354376",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0076,
+    "source_px_short_side": 192.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_20__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_20",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_20.jpg",
+   "source_sha256": "1b37a583b7b4913198424662fa26867c8db3b713d87a652f2386a1e01f583429",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.256,
+    0.261194,
+    0.745884,
+    0.398039
+   ],
+   "pixel_crop_box": [
+    262.1,
+    401.2,
+    763.8,
+    611.4
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_20__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "b50af400573540e09c322694033cc39830b1e3735768b23ebff70a959ff60d74",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0012,
+    "source_px_short_side": 210.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_20__NOSE__v1": {
+   "source_ref_id": "ref_20",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_20.jpg",
+   "source_sha256": "1b37a583b7b4913198424662fa26867c8db3b713d87a652f2386a1e01f583429",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.389347,
+    0.333449,
+    0.606819,
+    0.46041
+   ],
+   "pixel_crop_box": [
+    398.7,
+    512.2,
+    621.4,
+    707.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_20__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "08abc749f3ef770aab101bff0935ed0a58e1535ee31e03185d528473fe247ae5",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0012,
+    "source_px_short_side": 195.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_20__MOUTH__v1": {
+   "source_ref_id": "ref_20",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_20.jpg",
+   "source_sha256": "1b37a583b7b4913198424662fa26867c8db3b713d87a652f2386a1e01f583429",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.376187,
+    0.46041,
+    0.62124,
+    0.567169
+   ],
+   "pixel_crop_box": [
+    385.2,
+    707.2,
+    636.1,
+    871.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_20__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "612ae2d4e69683480802e206901d7ac1a5602eba71c00af10b567103e4da4c0e",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0012,
+    "source_px_short_side": 164.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_21__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_21",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_21.jpg",
+   "source_sha256": "07c27529024c5551bda7773f75c692e025d6704b6990ea4366c845eea294324a",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.236001,
+    0.266838,
+    0.767853,
+    0.422015
+   ],
+   "pixel_crop_box": [
+    256.3,
+    386.4,
+    833.9,
+    611.1
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_21__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "4d391fbc7eef5b969aacebc245871735d3c62989d91b3db01dd387543fae8499",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0125,
+    "source_px_short_side": 224.7
+   },
+   "qa_by": "auto"
+  },
+  "ref_21__NOSE__v1": {
+   "source_ref_id": "ref_21",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_21.jpg",
+   "source_sha256": "07c27529024c5551bda7773f75c692e025d6704b6990ea4366c845eea294324a",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.389202,
+    0.349341,
+    0.612605,
+    0.498399
+   ],
+   "pixel_crop_box": [
+    422.7,
+    505.8,
+    665.3,
+    721.7
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_21__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "b219b8cda3b18c7af453ad820a087dba927ffd2273804bc440bfda8770c89cbc",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0125,
+    "source_px_short_side": 215.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_21__MOUTH__v1": {
+   "source_ref_id": "ref_21",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_21.jpg",
+   "source_sha256": "07c27529024c5551bda7773f75c692e025d6704b6990ea4366c845eea294324a",
+   "source_size": [
+    1086,
+    1448
+   ],
+   "normalized_crop_box": [
+    0.369259,
+    0.498399,
+    0.632739,
+    0.626276
+   ],
+   "pixel_crop_box": [
+    401.0,
+    721.7,
+    687.2,
+    906.8
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_21__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "9b576be7dbb41c80990dc5d8ae95547c54d1f0a732d31cd879e9d1f0b8326d76",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0125,
+    "source_px_short_side": 185.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_22__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_22",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_22.jpg",
+   "source_sha256": "2b0ab8e71a54659625090e06a8a5e7c65236ac1018c36314ad1e191f34765bd0",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.214531,
+    0.245075,
+    0.788111,
+    0.402712
+   ],
+   "pixel_crop_box": [
+    219.7,
+    376.4,
+    807.0,
+    618.6
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_22__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "f3ffae94308aa1759816a36be7373ffede0ae046389dd8bdcc001e2092b311f6",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0001,
+    "source_px_short_side": 242.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_22__NOSE__v1": {
+   "source_ref_id": "ref_22",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_22.jpg",
+   "source_sha256": "2b0ab8e71a54659625090e06a8a5e7c65236ac1018c36314ad1e191f34765bd0",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.373725,
+    0.329097,
+    0.62733,
+    0.479586
+   ],
+   "pixel_crop_box": [
+    382.7,
+    505.5,
+    642.4,
+    736.6
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_22__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "8b1c8902850f669e3cbf8ec9227d95b425edf3b0212659e2d4b065f63ab637a5",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0001,
+    "source_px_short_side": 231.2
+   },
+   "qa_by": "auto"
+  },
+  "ref_22__MOUTH__v1": {
+   "source_ref_id": "ref_22",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_22.jpg",
+   "source_sha256": "2b0ab8e71a54659625090e06a8a5e7c65236ac1018c36314ad1e191f34765bd0",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.358743,
+    0.479586,
+    0.644562,
+    0.604447
+   ],
+   "pixel_crop_box": [
+    367.4,
+    736.6,
+    660.0,
+    928.4
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_22__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "e85ad5b2e5088f408b93f4a0c478a7a1566a88021934ff6f73baf4dd99ae585a",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0001,
+    "source_px_short_side": 191.8
+   },
+   "qa_by": "auto"
+  },
+  "ref_23__EYES_AND_BROWS__v1": {
+   "source_ref_id": "ref_23",
+   "slot": "EYES_AND_BROWS",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_23.jpg",
+   "source_sha256": "c4e5a739af785128618d6f6ec837b2c8c5395edb2c58795438a15edd775ea4e4",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.218266,
+    0.270159,
+    0.80085,
+    0.425712
+   ],
+   "pixel_crop_box": [
+    223.5,
+    415.0,
+    820.1,
+    653.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_23__EYES_AND_BROWS__v1.jpg",
+   "out_size": [
+    1536,
+    512
+   ],
+   "out_sha256": "a07a7a73076aa1dfe43433e26fd295664ff187e72eff8fa7ba98da7af9ab8e58",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0238,
+    "source_px_short_side": 238.9
+   },
+   "qa_by": "auto"
+  },
+  "ref_23__NOSE__v1": {
+   "source_ref_id": "ref_23",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_23.jpg",
+   "source_sha256": "c4e5a739af785128618d6f6ec837b2c8c5395edb2c58795438a15edd775ea4e4",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.38423,
+    0.354962,
+    0.621788,
+    0.50534
+   ],
+   "pixel_crop_box": [
+    393.5,
+    545.2,
+    636.7,
+    776.2
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_23__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "e7fe5351eb27fc4abd351a019cee437a624c9e43872df5839e110249bbf4f227",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0238,
+    "source_px_short_side": 231.0
+   },
+   "qa_by": "auto"
+  },
+  "ref_23__MOUTH__v1": {
+   "source_ref_id": "ref_23",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_23.jpg",
+   "source_sha256": "c4e5a739af785128618d6f6ec837b2c8c5395edb2c58795438a15edd775ea4e4",
+   "source_size": [
+    1024,
+    1536
+   ],
+   "normalized_crop_box": [
+    0.368478,
+    0.50534,
+    0.638153,
+    0.631432
+   ],
+   "pixel_crop_box": [
+    377.3,
+    776.2,
+    653.5,
+    969.9
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_23__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "d6593bf3022632743f719a620ea8aa20b33374b1aeab80f759b587589c662ca6",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "pass",
+   "qa_reasons": [],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0238,
+    "source_px_short_side": 193.7
+   },
+   "qa_by": "auto"
+  }
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "crop_spec_version": "v1",
+ "_authority": "ChatGPT R5 J-02 裁決（review/REVIEW_BATCH3_FACES_R5.md §7）。此檔為該裁決的可執行版本。",
+ "_why_crops": "R5 J-01 的四格消融證明：裁切是必要因素，措辭不是。A（全臉＋舊措辭）與 D（全臉＋強措辭）都不執行部件指派；B（裁切＋強措辭）與 C（裁切＋舊措辭）都執行。D 的措辭已寫到 `Ignore every unassigned facial feature`，模型連「忽略」都忽略——結構性否定無效，要移除的東西必須在輸入端移除。",
+ "_unique_key": "(source_ref_id, slot, crop_spec_version)。同一來源同一槽只裁一次，跨 persona 重用。實際工作量是被使用的 unique source-slot 組合，不是 19×4。",
+ "landmark_model": "mediapipe face_landmarker v1 float16（478 點）",
+ "padding_rgb": [
+  128,
+  128,
+  128
+ ],
+ "_padding_note": "越界處以固定中性灰填補，絕不拉伸。padding_ratio 超過門檻即 QA FAIL。",
+ "slots": {
+  "FACE_SHAPE_AND_JAW": {
+   "aspect_w_h": [
+    4,
+    5
+   ],
+   "out": [
+    1024,
+    1280
+   ],
+   "_range": "髮際上方少量留白至下巴下方；左右含完整耳外緣與顎角。保留中性背景，不去背。",
+   "_no_silhouette": "ChatGPT J-02.1：不做去背輪廓剪影——會失去臉長寬、三庭與顎角的相對位置，也可能被模型理解成 mask。",
+   "anchors": {
+    "top": 10,
+    "bottom": 152,
+    "left": 234,
+    "right": 454
+   },
+   "margin_top_x_faceh": 0.55,
+   "margin_bottom_x_faceh": 0.18,
+   "min_width_x_facew": 1.38,
+   "aspect_mode": "expand"
+  },
+  "EYES_AND_BROWS": {
+   "aspect_w_h": [
+    3,
+    1
+   ],
+   "out": [
+    1536,
+    512
+   ],
+   "_range": "眉上緣留白至下眼眶下方；左右超出眼尾／眉尾；含鼻根但不含鼻頭。",
+   "_both_eyes": "ChatGPT J-02.2：必須含雙眼與雙眉。眼距是獨立 identity 軸，單眼裁切無法提供眼距、眉距與左右眼裂的共同關係。來源有明顯 yaw 或左右遮擋者不得做雙眼裁切。",
+   "anchors": {
+    "brow_top": [
+     105,
+     334,
+     65,
+     295,
+     52,
+     282
+    ],
+    "lid_bottom": [
+     145,
+     374
+    ],
+    "outer": [
+     33,
+     263,
+     46,
+     276
+    ],
+    "nose_tip": 1
+   },
+   "margin_v_x_eyeh": 0.45,
+   "margin_h_x_eyespan": 0.16,
+   "aspect_mode": "pad"
+  },
+  "NOSE": {
+   "aspect_w_h": [
+    1,
+    1
+   ],
+   "out": [
+    768,
+    768
+   ],
+   "_range": "眉間／鼻根至鼻小柱下緣；左右超出鼻翼各至少半個鼻翼寬。",
+   "anchors": {
+    "top": 168,
+    "bottom": 2,
+    "alar": [
+     98,
+     327
+    ],
+    "eye_lower": [
+     145,
+     374
+    ],
+    "mouth_top": 0
+   },
+   "margin_h_x_alarw": 0.5,
+   "margin_v_x_noseh": 0.1,
+   "aspect_mode": "pad",
+   "margin_v_bottom_x_noseh": 0.0,
+   "_bottom_anchor_note": "下緣切在鼻小柱下緣本身，不往下留白——往下留白會吃進上唇。",
+   "_alar_note": "實測校正：原本用 129/358，量到的寬度是 0.276 臉寬、且位置在鼻根到鼻下的 85%——那不是鼻翼，框出來會把兩隻眼睛大部分含進去。98/327 量到 0.214 臉寬、位置在 99%（鼻孔高度），才是真正的鼻翼基部。以 98/327 加左右各半個鼻翼寬，框寬 0.428 臉寬，虹膜中心在 ±0.219 臉寬——剛好落在框外緣。"
+  },
+  "MOUTH": {
+   "aspect_w_h": [
+    2,
+    1
+   ],
+   "out": [
+    1024,
+    512
+   ],
+   "_range": "人中上緣至頦唇溝；左右超出嘴角各至少四分之一口寬。",
+   "anchors": {
+    "top": 2,
+    "bottom": 18,
+    "corners": [
+     61,
+     291
+    ],
+    "nose_tip": 1
+   },
+   "margin_h_x_mouthw": 0.28,
+   "margin_v_x_mouthh": 0.18,
+   "aspect_mode": "pad",
+   "margin_v_top_x_mouthh": 0.0,
+   "_top_anchor_note": "上緣切在人中上緣（subnasale）本身，不往上留白——往上留白會吃進鼻尖。"
+  }
+ },
+ "qa": {
+  "max_padding_ratio": 0.12,
+  "max_yaw_proxy": 0.14,
+  "_yaw_proxy": "鼻尖到左右臉緣的水平距離差 ÷ 臉寬。0 為完全正面。",
+  "max_yaw_proxy_eyes": 0.08,
+  "_yaw_eyes": "雙眼裁切對正面性的要求更嚴——yaw 會讓兩眼的透視不等，眼距失真。",
+  "min_short_side_px": 96,
+  "_min_short_side": "原圖上該部位的短邊像素數。太小的話放大到規定尺寸只會得到糊圖。",
+  "bleed": {
+   "EYES_AND_BROWS": "部件框內不得含鼻尖",
+   "NOSE": "部件框內不得含完整的眼睛（以外眼角判定）或上唇",
+   "MOUTH": "部件框內不得含鼻尖"
+  },
+  "_bleed_note": "bleed 只檢查**部件框**，不檢查為了長寬比補上的灰邊——灰邊裡本來就沒有東西。",
+  "_padding_ratio": "只計算「部件框越出原圖邊界」的比例。為了長寬比補的灰邊不計入。"
+ },
+ "_aspect_amendment_v1": "**與 J-02 字面的一處偏離，理由如下，請 ChatGPT 追認。** J-02 訂了各槽的長寬比，但沒說「達到長寬比」是靠擴張取景還是靠 padding。實作時發現兩者不等價，而且擴張會直接違反 J-02 自己的 bleed 規則：1:1 的鼻框從鼻根到鼻小柱、再擴張到正方，幾何上必然吃進眼下緣；2:1 的嘴框往上留白就會吃進鼻尖。所以三個部件槽改為：裁出真正的部件框，再置中貼到中性灰畫布上補到目標長寬比。這既符合你「不得拉伸；不足處以固定中性灰 padding」的規定，也讓部件真正被隔離——那正是裁切法之所以有效的原因（消融 D 組證明「叫模型忽略」無效，有效的是在輸入端移除）。FACE_SHAPE_AND_JAW 維持擴張取景，因為那一槽需要臉周圍的脈絡。",
+ "_nose_bleed_amendment_v1": "**第二處偏離，同樣請追認。** J-02.3 訂鼻框「眉間／鼻根至鼻小柱下緣，左右超出鼻翼各至少半個鼻翼寬」，但 bleed 規則又要求「不得含眼下緣」。這兩條在幾何上不可能同時成立：鼻根本來就在虹膜高度，而左右各半個鼻翼寬的框必然涵蓋內眼角。8 張新圖全部觸發，是系統性的。**range 那一條才是對的**——鼻樑的長度與高度正是『鼻部量體』這條軸要傳遞的訊號，把上緣壓到眼睛以下就等於把這一槽的識別力砍掉。所以 bleed 改為檢查『整隻眼睛是否入框』（以外眼角判定），內眼角與部分虹膜可接受。探針 B 的鼻部輸入實際上含了一整隻眼睛，鼻子仍被執行、眼睛仍由 Image 2 決定，滲漏是可容忍的。"
+}
