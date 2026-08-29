@@ -80,9 +80,27 @@ def stamp(path, names, note):
     open(path, 'w').write(''.join(out))
     return n
 
+def unstamp(path, names):
+    """移除指定件的指紋，讓它回到「未覆核」。
+    用在**覆核判 REVISE、規格已依指示改過**的件：留著對不上的舊指紋會讓它顯示
+    「改過字」，那個狀態的語意是「偷偷改字」，與「照覆核指示改」不同。"""
+    s = open(path).read()
+    b = re.split(r'(\n### (?:YG|LG)-\d+[AB]?｜)', s)
+    out, i, n = [b[0]], 1, 0
+    while i < len(b):
+        h, body = b[i], b[i+1]
+        k = re.match(r'\n### ((?:YG|LG)-\d+[AB]?)｜', h).group(1)
+        if k in names and re.search(FP, body):
+            body = re.sub(FP + r'\n', '', body); n += 1
+        out.append(h); out.append(body); i += 2
+    open(path, 'w').write(''.join(out))
+    return n
+
 if __name__ == '__main__':
     PLAN = 'clients/sushisolar-rujiao/GENERATION_PLAN_B1.md'
-    if len(sys.argv) > 2 and sys.argv[1] == '--stamp':
+    if len(sys.argv) > 2 and sys.argv[1] == '--unstamp':
+        print('已移除指紋', unstamp(PLAN, set(sys.argv[2].split(','))), '件')
+    elif len(sys.argv) > 2 and sys.argv[1] == '--stamp':
         names = set(sys.argv[2].split(','))
         note = sys.argv[3] if len(sys.argv) > 3 else '已核准成品'
         print('已登記', stamp(PLAN, names, note), '件')
