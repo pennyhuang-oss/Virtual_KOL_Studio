@@ -349,7 +349,7 @@ Emoji **1–2 個不堆疊**——Yuna 常用 🍒☺️🥹😮‍💨✨，Lun
 | **手部任務** | 可見手 A：拿著手機在滑（手機入鏡，這件不是自拍）<br>可見手 B：伸進零食袋<br>無第三個手部任務 |
 | **表情** | 嘴裡還有零食、一邊臉頰鼓著；眉毛抬起看鏡頭。**眼型與嘴型列 soft observation。** |
 | **肢體與重心** | 盤腿側坐在地板上，**背微駝**（真實的放鬆姿勢，不是挺直）。 |
-| **硬驗收** | ① 坐在地上 ② 一手滑手機、一手伸進零食袋（**可見手剛好兩隻**）③ **視線在手機上、不看鏡頭** ④ 一邊臉頰鼓著 |
+| **硬驗收** | ① 坐在地上 ✅ ② 一手滑手機、一手伸進零食袋（**可見手剛好兩隻**）✅ ③ **視線在手機上、不看鏡頭** ✅ ④ ~~一邊臉頰鼓著~~ → **改列 soft observation**（Penny 2026-08-29 裁決）<br>（**這一項當初分類就錯了**：臉頰鼓著是臉部表情細節，本專案慣例是「臉部細節一律列 soft observation」，D-06 也說臉部指令低可靠。2/2 未達成不是生成失敗，是驗收標準訂錯。）<br>**造型漂移（記錄，非驗收）**：髮型「上半束起」2/2 全部放下。prompt 寫 `the top half clipped up`，**沒有寫出髮夾這個實體物件**——對照 YG-04 的 `clipped back with a claw clip` 2/2 成功。<br>**本件 prompt 自此凍結**（成品用現行版本產出） |
 | **創意備註（不送模型／不驗收）** | 角落電風扇把垂下的髮絲吹得輕輕飄動——**靜態圖無法表現，不送模型、不驗收** |
 | **整併紀錄（2026-08-29）** | **2026-08-29 改視線**：原本抬眉看鏡頭。「什麼都沒發生」這個主題，**她沒在理鏡頭才成立**<br><br>—— 以下為先前紀錄 ——<br>刪掉「一手撐地」（與滑手機＋零食袋合計為三隻手）。原本表情列與肢體列各自指派了不同的兩隻手 |
 | **生成 prompt** | `A young woman sits on the floor absorbed in her phone held in one hand, her other hand reaching into a snack bag, one cheek full mid-chew, her eyes down on the screen. Exactly two hands are visible. Half body, camera level with her face as she sits. Collarbone-length mocha brown hair, the top half clipped up. A beige camisole and short cotton shorts. A living room floor, a low sofa, magazines. Cool window light on her face, a warm lamp glowing behind her, the pale floor bouncing fill onto her chin. Her face is clearly exposed with natural skin texture; the window is the brightest area, only its smallest highlights reaching white. Subtle film grain.` |
