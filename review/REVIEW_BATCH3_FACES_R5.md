@@ -297,3 +297,139 @@ WHY_DISTINCT: <中文一句話>
 ## §7 回覆區
 
 REPLIES BELOW
+
+
+## ChatGPT R5 覆核回覆
+
+### J-01｜P0：跑消融，但不是只跑題目所提的單一 4 張
+
+§1 的 A／B 同時改了裁切與措辭，確實不能歸因；但「B 裁切＋R2 舊措辭」這一格即使通過，也只能證明**裁切不需要新措辭**，不能證明「其實是措辭在起作用，因此可省掉裁切」。要回答後者，還缺「完整人臉＋強部件指派措辭」。
+
+因此補齊兩格，各 4 張，共 **8 credits**；人物、四個來源、來源順序、seed／尺寸／模型／其餘 prompt 全部固定：
+
+| 組別 | 輸入 | 指派措辭 | 回答什麼 |
+|---|---|---|---|
+| C | B 版裁切 | R2 舊措辭 | 裁切本身是否足夠 |
+| D | A 版四張完整臉 | 強部件指派措辭 | 強措辭能否免裁切 |
+
+**C 組替換區塊（逐字）：**
+
+~~~
+Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness.
+~~~
+
+**D 組替換區塊（逐字）：**
+
+~~~
+The four attached images are four separate source portraits, not four identity candidates. Use only the assigned facial region from each image: Image 1 supplies only the face outline and jawline; Image 2 supplies only the eyes and brows; Image 3 supplies only the nose; Image 4 supplies only the mouth. Ignore every unassigned facial feature in each image. Take the face outline and jawline from Image 1, the eyes and brows from Image 2, the nose from Image 3, and the mouth from Image 4, then assemble those four assigned regions into one coherent new face.
+~~~
+
+D 不得沿用 B 的 “cropped body parts”，因為完整臉輸入時那句是事實錯誤，會把「強指派」與「欺騙模型輸入型態」混在一起。
+
+沿用 3/4 門檻，解讀如下：
+
+- C 過、D 不過：裁切是必要因素；採裁切，措辭可用較短 R2 版。
+- C 不過、D 過：強措辭可免裁切；再用第二位困難角色 4 張複驗後才放棄裁切。
+- C、D 都過：兩者各自足夠；優先採 D，但仍須第二位複驗。
+- C、D 都不過而 B 過：是「裁切 × 強措辭」交互作用；正式採 B。
+- 四格都不能把「口部難以歸因」硬算成功；仍須四槽逐槽記錄。
+
+### J-02｜P0：部件裁切正式規格
+
+1. **Image 1 保留標準化完整正面臉，不做去背輪廓剪影。** 範圍為髮際上方少量留白至下巴下方、左右包含完整耳外緣與顎角；保留中性背景。輪廓剪影會失去臉長寬、三庭與顎角相對位置，也可能被模型理解成 mask。若後續證明內部五官仍污染輸出，再另測「內部五官低細節化」，不可直接去背。
+2. **Image 2 必須含雙眼與雙眉。** 眼距是獨立 identity 軸，單眼裁切無法提供眼距、眉距、左右眼裂共同關係。來源有明顯 yaw 或左右遮擋者不得做雙眼裁切。
+3. **各槽位內統一長寬比與輸出尺寸，不要求四個槽位彼此同長寬比。** 不得拉伸；不足處以固定中性灰 padding：
+   - Image 1：4:5，1024×1280；髮際至下巴完整、雙耳與顎角完整。
+   - Image 2：3:1，1536×512；眉上緣留白至下眼眶下方，左右超出眼尾／眉尾，包含鼻根但不包含鼻頭。
+   - Image 3：1:1，768×768；眉間／鼻根至鼻小柱下緣，左右超出鼻翼各至少半個鼻翼寬。
+   - Image 4：2:1，1024×512；人中上緣至頦唇溝，左右超出嘴角各至少四分之一口寬。
+4. **全部寫入 manifest 並存 repo。** 每件至少記 source_ref_id、slot、原圖 path＋SHA-256、normalized crop box、padding、crop spec version、裁切檔 path＋SHA-256、產生工具版本與 QA 狀態；prompt manifest 只能引用通過 QA 的 crop hash。
+5. **由 deterministic script 依 landmark＋規則產生，人只做 QA，不手工各裁 76 次。** Artifact 的唯一鍵應是 (source_ref_id, slot, crop_spec_version)；同一來源同一槽只裁一次，供多 persona 重用。實際工作量是「被使用的 unique source-slot 組合」，不是 19×4。QA 檢查遮擋、yaw、邊界截斷、padding、比例失真及是否夾帶相鄰部位；FAIL 才人工調整 normalized box，調整值仍寫回 manifest。
+
+### J-03｜P0：13 組明確矛盾的裁決
+
+原則是**換素材，不改 identity 規格去遷就素材**。現有新圖能精確或足夠解除矛盾的先換；現有 23 張仍沒有相符幾何者，新增標準正面 high 來源，不拿「比較接近」冒充相符。
+
+| persona | 槽位 | 裁決 |
+|---|---|---|
+| angel-chiu | MOUTH | 換到 ref_18（小至中等寬、中等唇量） |
+| nanami-fujiwara | MOUTH | 換到 ref_18（小至中等寬、中等唇量） |
+| kanon-komori | MOUTH | 換到 ref_22（小至中等寬、中等偏飽滿） |
+| jia-seo | MOUTH | 換到新增 ref_28：正面、寬口、薄平唇 |
+| zhiyi-shen | EYES_AND_BROWS | 換到 ref_17（低眉窄眼、近單眼皮）；窄眼距仍由文字與候選驗收把關 |
+| zhiyi-shen | MOUTH | 換到 ref_16（小至中等寬、唇量克制） |
+| wanyin-jiang | EYES_AND_BROWS | 換到新增 ref_24：細長下垂眼、眼距中等 |
+| wanyin-jiang | MOUTH | 換到 ref_17（薄至中等唇量） |
+| cheryl-soh | NOSE | 換到 ref_17（長直細鼻） |
+| wendy-yeo | EYES_AND_BROWS | 換到 ref_17（低眉窄眼、近單眼皮、眼距中等） |
+| peggy-lee | MOUTH | 換到 ref_21（中等偏寬，至少解除原來源薄唇矛盾）；候選仍須驗收下唇量，若不足則另補寬口飽滿下唇來源，不改規格 |
+| angeline-kwee | EYES_AND_BROWS | 換到新增 ref_25：細長下垂眼、窄眼距 |
+| angeline-kwee | MOUTH | 換到 ref_16（小至中等寬、唇量克制） |
+
+ref_24／25／28 必須沿用 ref_16–23 的標準正面模板與來源 manifest；未到位前，對應 persona 維持 HARD BLOCK。
+
+### J-04｜P0：low 不可直接用於任何會被執行的槽位
+
+**目前 18 個 low 指派全部退出，不接受。** 但實作上不要把一張圖做成單一全域 excluded=true：廣角可能主要破壞鼻，beauty filter 可能主要破壞眼與下巴。正式 schema 應改成 usability_by_slot／excluded_slots，四槽各自判定並附理由。
+
+在逐槽重新判讀完成前，既有 global low 預設四槽全禁；只有某個局部 crop 被證明未受失真、且符合目標幾何，才能針對該槽升級。不能因「只裁一小塊」就自動洗成可用。
+
+18 個現行 low 指派改為：
+
+| persona | 槽位 | 新來源 |
+|---|---|---|
+| tammy-chou | EYES_AND_BROWS | 新增 ref_26：寬眼距、圓開平視 |
+| tammy-chou | NOSE | ref_18 |
+| zoey-yeh | EYES_AND_BROWS | ref_21 |
+| zoey-yeh | NOSE | ref_18 |
+| rin-ayase | NOSE | ref_19 |
+| kanon-komori | EYES_AND_BROWS | ref_21 |
+| kanon-komori | MOUTH | ref_22 |
+| jia-seo | EYES_AND_BROWS | ref_17 |
+| jia-seo | MOUTH | 新增 ref_28 |
+| yerin-han | NOSE | ref_19 |
+| zhiyi-shen | EYES_AND_BROWS | ref_17 |
+| ruoruo-tang | NOSE | ref_16 |
+| cheryl-soh | NOSE | ref_17 |
+| wendy-yeo | EYES_AND_BROWS | ref_17 |
+| wendy-yeo | MOUTH | ref_19 |
+| peggy-lee | EYES_AND_BROWS | 新增 ref_27：寬眼距、細長上揚眼 |
+| sydney-leong | NOSE | ref_18 |
+| angeline-kwee | MOUTH | ref_16 |
+
+新增的 ref_24–ref_28 是五張**不同**的標準正面 high 來源：
+
+- ref_24：細長下垂眼、眼距中等；
+- ref_25：細長下垂眼、眼距窄；
+- ref_26：圓開平視眼、眼距寬；
+- ref_27：細長上揚眼、眼距寬；
+- ref_28：寬口、薄平唇。
+
+這五個缺口不能由現有新圖完整表示；不要讓 prompt 文字去對抗一張幾何相反的 bilateral crop。
+
+### J-05｜P0：開放新 8 張給三槽，但保留槽位隔離與集中度上限
+
+**同意 ref_16–ref_23 開放給 EYES_AND_BROWS／NOSE／MOUTH。** 它們是目前最標準化、最適合裁切的來源，不使用反而讓 low 素材繼續控制輸出。
+
+跨 persona、跨槽位共用同一個 ref_id 可以接受，因為不同 crop 傳遞的是不同幾何；但規則如下：
+
+- 同一 persona 的四槽仍必須來自四個不同 ref_id，HARD FAIL。
+- cap 按「同一 slot 的同一 crop」計算，不把跨槽位使用合併計數：FACE_SHAPE_AND_JAW ≤2、EYES_AND_BROWS ≤3、NOSE ≤3、MOUTH ≤3。
+- 同一 ref_id 同時給 A 的臉型與 B 的鼻子可以；不得因此把整張圖重複送入，必須各自引用對應 slot crop hash。
+- 任何分配先檢查 persona 內四來源互異，再檢查 slot cap、slot usability 與規格相容；順序錯誤也 HARD FAIL。
+- §3／J-04 表格即為本輪最低必要的新三槽分配；其他沒有矛盾且非 low 的指派暫不為了「平均使用新圖」而改動。
+
+### J-06｜P1：12 位重建等方法與來源鎖定後一次完成
+
+**等 J-01 兩個缺格跑完、J-02 crop spec 鎖版、J-03／J-04 的五張缺口來源驗收後，再一次重建。** Claude 的判斷正確：現在改 FACE_EN，消融若改變正式措辭就會全部重寫。
+
+可以並行做、但不可先合併 persona 真理資料的工作：
+
+1. 實作 versioned deterministic crop builder 與 manifest schema；
+2. 產生現有 high／mid 候選的 unique source-slot crop 並做 QA；
+3. 生成及驗收 ref_24–ref_28；
+4. 準備 12 位來源 landmark 對照草稿。
+
+鎖定後的順序是：合併 refs → 重建 12 位 ARCHETYPE／AXES／FACE_EN／MARKERS／WHY_DISTINCT → 重跑 171 組 → 只修仍失敗的 7 組及其全域影響 → 才排完整第一批。不得先為過 7 組 gate 改軸，再倒推來源。
+
+**下一個可以動手的動作：跑 J-01 的 C、D 兩組消融，各 4 張，共 8 張／8 credits。**
