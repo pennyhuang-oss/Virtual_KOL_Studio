@@ -433,3 +433,38 @@ ref_24／25／28 必須沿用 ref_16–23 的標準正面模板與來源 manifes
 鎖定後的順序是：合併 refs → 重建 12 位 ARCHETYPE／AXES／FACE_EN／MARKERS／WHY_DISTINCT → 重跑 171 組 → 只修仍失敗的 7 組及其全域影響 → 才排完整第一批。不得先為過 7 組 gate 改軸，再倒推來源。
 
 **下一個可以動手的動作：跑 J-01 的 C、D 兩組消融，各 4 張，共 8 張／8 credits。**
+
+## ChatGPT R5 追加
+
+### J-07｜P0：追認 crop_spec v1 的兩處幾何修正
+
+**(a) 追認。** EYES_AND_BROWS／NOSE／MOUTH 的長寬比是輸出畫布規格，不是要求把取景框擴張到該比例；先裁真正部件，再等比縮放並補固定中性灰邊，才符合「隔離部件、不拉伸」。FACE_SHAPE_AND_JAW 維持擴張取景，因為該槽需要髮際、雙耳、顎角與臉周脈絡。
+
+**(b) 追認。** NOSE 的 bleed gate 改為「不得含完整眼睛」合理；鼻根與鼻樑長度本來就是鼻部量體，允許內眼角或局部虹膜進框，但仍不得把任何一眼完整納入，也不得含上唇。這個界線兼顧識別力與槽位隔離。
+
+J-01 的實測落在 C 過、D 不過，裁決依原表執行：**裁切是必要因素；FACE_EN 沿用 R2 短版，不增加失效的結構性否定。**
+
+### J-08｜P0：新增六張來源，四槽 QA 24/24 通過
+
+把十三個需求項合併成六張彼此不同的原創合成標準正面照 ref_24–ref_29；每張皆無輸入影像、未使用真人或公眾人物參考，逐檔 SHA-256／尺寸／provenance 已寫入 `review/batch3_face_refs/SOURCES.json`，四槽肉眼判讀已寫入 `pilot/face_refs_readout.json`。
+
+以正式 `build_face_crops.py --all --only ref_nn` 重建：六張 × 四槽共 24 件，**qa_status 24/24 pass**。EYES_AND_BROWS 的 yaw_proxy 依序為 0.0047、0.0351、0.0116、0.0093、0.0056、0.0025，全部低於 0.08；所有部件短邊皆高於 96 px，bleed 與 padding gate 也全過。裁切檔與 manifest 一併入庫。
+
+三個部件槽的正式新增分配如下；未列者沿用 J-03／J-04，且下表逐人四來源互異、各 slot cap 均未超過 3：
+
+| 新來源 | EYES_AND_BROWS | NOSE | MOUTH |
+|---|---|---|---|
+| ref_24 | wanyin-jiang | cheryl-soh、angeline-kwee | — |
+| ref_25 | angeline-kwee | — | wanyin-jiang、zhiyi-shen |
+| ref_26 | tammy-chou | — | peggy-lee、somi-oh |
+| ref_27 | peggy-lee | — | — |
+| ref_28 | — | — | jia-seo |
+| ref_29 | wendy-yeo | — | — |
+
+為避免同一 persona 重複來源，相關連動固定為：zhiyi-shen 的 EYES_AND_BROWS 用 ref_16、NOSE 用 ref_17；wanyin-jiang 的 NOSE 用 ref_17；wendy-yeo 的 NOSE 用 ref_17、MOUTH 用 ref_19；angeline-kwee 的 MOUTH 用 ref_16。ref_24–ref_29 六張也全部可進 FACE_SHAPE_AND_JAW 候選池，各自仍受 cap 2 與骨架方向相容 gate 約束；它們提供 12 個臉型容量，不應只為湊容量而先綁到不相容 persona。
+
+### J-09｜P1：合成來源降低來源風險，但不能把偶然相似風險宣告為零
+
+同意舊 15 張退出正式 crop 候選池、保留作歷史稽核，不為容量放寬 QA。改用無真人輸入、具逐檔雜湊的原創合成來源，能消除「已知真人素材被當成部件來源」與來源不可追溯風險；但 provenance 與 hash 只證明產生路徑，**不能證明生成臉不會偶然近似某個真實人物**。因此不可把該風險寫成歸零；若專案有真人近似的發布 gate，仍須在成品候選階段保留獨立相似度／人工檢查。
+
+**下一個可以動手的動作：Claude 套用上表與 J-03／J-04 的其餘替換，重建 12 位並跑四來源互異、slot cap、crop hash 與 171 組 gate；不再需要先生成來源圖。**

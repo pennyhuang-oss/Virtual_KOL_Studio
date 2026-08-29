@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "purpose": "Batch 3 FACE_SHAPE_AND_JAW reference provenance and capture-quality manifest.",
+  "schema_version": 2,
+  "purpose": "Batch 3 four-slot facial reference provenance and capture-quality manifest.",
   "capture_spec": {
     "basis": [
       {
@@ -102,6 +102,84 @@
       "recommended_persona": "kanon-komori",
       "dimensions_px": [1024, 1536],
       "usability": "high"
+    },
+    "ref_24": {
+      "file": "review/batch3_face_refs/ref_24.jpg",
+      "sha256": "ae0f98e48075d76222329ab0fbac23c58d9abb8858d38f372d1669c168abf3ec",
+      "role": "long diamond / high planar cheeks / narrow jaw / slender softly downturned medium-spaced eyes / long fine straight nose",
+      "recommended_persona": "wanyin-jiang (eyes); cheryl-soh and angeline-kwee (nose); generic face-shape reserve",
+      "dimensions_px": [1024, 1536],
+      "usability": "high",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-30",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_25": {
+      "file": "review/batch3_face_refs/ref_25.jpg",
+      "sha256": "a4c205912d633927b747b2c6b4dcb35d267181009c23808938a8778003b44670",
+      "role": "very long narrow oval / narrow jaw / slender downturned close-set eyes / small thin flat mouth",
+      "recommended_persona": "angeline-kwee (eyes); wanyin-jiang plus two compatible small-thin-mouth roles; generic face-shape reserve",
+      "dimensions_px": [1024, 1536],
+      "usability": "high",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-30",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_26": {
+      "file": "review/batch3_face_refs/ref_26.jpg",
+      "sha256": "74b2ddc7e9a2a3a5185fd3de051b0f12b89b61ea3c174fdac2ac1b4b3d71c5fe",
+      "role": "short broad soft-heart to wide-U / full low cheeks / round-open level wide-set eyes / wide mouth with full lower lip",
+      "recommended_persona": "tammy-chou (eyes); peggy-lee plus one compatible full-lower-lip role; generic face-shape reserve",
+      "dimensions_px": [1122, 1402],
+      "usability": "high",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-30",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_27": {
+      "file": "review/batch3_face_refs/ref_27.jpg",
+      "sha256": "9e35067848865d0596afe43c315c2400d15d3c6115d954871b86ce588e943abe",
+      "role": "broad angular square / straight sides / square jaw corners / slender upturned wide-set eyes",
+      "recommended_persona": "peggy-lee (eyes); generic face-shape reserve",
+      "dimensions_px": [1024, 1536],
+      "usability": "high",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-30",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_28": {
+      "file": "review/batch3_face_refs/ref_28.jpg",
+      "sha256": "3101ac8cbd4a63876d6d6b5783ce4195b5b782e54f99228fa51a81be99886bfc",
+      "role": "lean hexagonal / high cheekbones / tapered blunt lower outline / wide thin flat mouth",
+      "recommended_persona": "jia-seo (mouth); generic face-shape reserve",
+      "dimensions_px": [1060, 1484],
+      "usability": "high",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-30",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_29": {
+      "file": "review/batch3_face_refs/ref_29.jpg",
+      "sha256": "9e1963a181575d9c522ba4e587cd5b9f535ac874e7fb8fbb19a86825a3959990",
+      "role": "medium-long rectangle / straight sides / broad straight jaw / true monolid narrow level medium-spaced eyes",
+      "recommended_persona": "wendy-yeo (eyes); generic face-shape reserve",
+      "dimensions_px": [1024, 1536],
+      "usability": "high",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-30",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
     }
   }
 }
