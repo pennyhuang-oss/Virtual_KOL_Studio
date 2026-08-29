@@ -159,54 +159,70 @@ A young woman holds a candy apple beside her cheek, her other hand resting light
 ## 回覆區（請只填這一段）
 
 ### 新結果一：視線目標「夠大、必然被畫出來」——本批哪幾件不合格
-- **判定**：
+- **判定**：REVISE；本批不合格的是 **YG-09、LG-02**。LG-05、YG-08、LG-09 合格；YG-06 是閉眼、LG-10B 是看鏡頭，不適用這條離鏡視線規則。
 - **逐件點名**：
+  - **LG-05：合格。** 撐開的傘面是大面積、在頭頂且已由硬驗收①保證入鏡的實體；看傘面內側比看掌心雨滴可靠。
+  - **YG-06：不適用。** 雙眼閉起，不需要外部視線目標。
+  - **YG-08：合格。** 紅色凳面是大、具名、與手部接觸且硬驗收要求同框的實體。
+  - **YG-09：不合格。** 「窄幅窗景中的遠方高樓」同時受大特寫與窄窗限制，模型可能只畫成模糊小形狀，甚至省略；即使出現，也未必大到能辨識眼睛正在對焦它。
+  - **LG-02：不合格。** 光斑可以很大，但它是照明效果，不是必然獨立成形的實體；模型可把地板整體照亮而不畫清楚邊界，視線與指尖便失去可驗收目標。
+  - **LG-09：合格。** 豆漿杯是主動作中心的大型近前景實體，且硬驗收要求人杯同框。
+  - **LG-10B：不適用。** 視線直接看鏡頭。
 - **建議改法**：
+  - **YG-09**：不要以「遠方塔樓」當小目標。改成鄰近建築的一大片立面填滿窗邊可見區，例如：`a nearby building facade filling the visible strip of window beside her face, her lowered eyes focused on that broad facade`。窗景需占足以辨識的一側區域；若仍堅持極窄窗條，就不能把精確對焦高樓列硬驗收。
+  - **LG-02**：把半拆紙箱移到光斑內，讓視線落在大而必畫出的箱口；指尖仍可接觸箱旁被照亮的地板。例：`a large open cardboard box sitting in the sunlit patch, her open eye lowered toward the box opening`。硬驗收④改驗箱口，⑤保留指尖與光斑接觸。
 
 ### 新結果二：景別改用「什麼必須看得見」的寫法，對嗎？哪幾件要一起改
-- **判定**：
-- **理由**：
+- **判定**：REVISE；方向正確，且比單寫 `Framed down to X` 更可驗收，但它是較強的正面錨點，不是成功保證。本批 **LG-05、YG-06、YG-08、LG-02** 都應用同一原則；LG-10B 已把臉、糖、雙手、腰帶列為中央可見，無須再改。
+- **理由**：模型對抽象景別名稱可以用近似構圖交差；列出具體可見部位與接觸點，才能把裁切結果綁到硬驗收。LG-05 新句已鎖小腿與濕地面，修法正確。YG-08 仍以 `down to mid-thigh` 為主，正是已證實會失效的同類句；YG-06 的 `Full body`、LG-02 的 `Full crouching body` 也仍偏抽象，尤其前者已有完整腳被裁的同型反例。
 - **建議改法**：
+  - **LG-05**：保留 `Her calves and the wet pavement are visible in the bottom third of the frame`。
+  - **YG-06**：改成 `Her complete head, crossed legs, and both bare feet are visible, with floor visible around her seated body`。
+  - **YG-08**：把景別句改成 `Her upper body and both thighs through mid-thigh are visible, with both hand-object contact points, the tray, food, and stool seat clearly visible in the central area`；保留單側柱最外緣限制。
+  - **LG-02**：改成 `Her complete crouching pose, both knees, both hands, the fingertip-floor contact, and the sunlit patch are visible`。若採上題紙箱方案，再把箱口列入可見內容。
+  - 不要只增加更多景別同義詞；具體可見清單應取代抽象重複。
 
 ### 新結果三：領口用 buttoned up to the collarbone 有效嗎？其他件要不要比照
-- **判定**：
-- **理由**：
+- **判定**：REVISE；`buttoned up to the collarbone` 比 `fastened through the chest` 明確，但仍不足以單獨保證。應同時正面指定「領型高度＋上胸由不透明布料完整覆蓋」。
+- **理由**：`fastened through the chest` 描述的是扣合範圍，不是領口幾何；模型仍可生成低 V 領，再把 V 領下方的鈕扣扣上，因此兩張都能在字面上部分符合卻露出胸線。`buttoned up to the collarbone` 提供了垂直高度錨點，方向較好，但 `high-necked`、`buttoned` 與 `collarbone` 仍可能被各自近似處理。直接指定高圓領／標準襯衫領，以及上胸完整被不透明布料覆蓋，約束更完整。
 - **建議改法**：
+  - **LG-05** 改成：`an opaque off-white button-front blouse with a high round neckline at the collarbone, all upper buttons fastened, the upper chest fully covered by fabric`。
+  - 不要全批機械貼同一句，應依服裝處理。**YG-08** 的打結襯衫需補標準領與上方鈕扣扣合；**YG-09** 的 `bathrobe with the collar loosened` 會直接誘發開領，應改為交疊閉合到鎖骨；**LG-02** 的 lace-trim camisole 本身是低領高風險款，若胸線不可露，必須改成較高領睡衣上衣；**LG-09** 的薄針織上衣補高圓領。**YG-06** 一般 sauna tee 風險較低，可只明確成 `crew-neck sauna tee`。**LG-10B** 已有左襟在上與腰帶固定，不必套西式扣領句。
 
 ### LG-05
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：傘面是大且已驗證必畫出的視線目標，撐傘與試雨兩手任務也已 2/2 成立；小腿與濕地面的新可見句比原景別句正確。尚未放行的關鍵是領口：新句改善了高度資訊，但未完整鎖住領型與上胸覆蓋。另外，這版只寫暖招牌反光，臉部受光的物理來源與雨天冷色環境光不夠明確，真人日常感會比先前的雙色溫版本弱。
+- **建議改法**：採用上方完整領口句；光線補成 `Cool overcast daylight falls on her face, while wet asphalt bounces a small amount of warm sign colour upward`，再接現有招牌局部高光犧牲句。其餘動作、視線與小腿可見句保留後可送 preflight。
 
 ### YG-06
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：閉眼朝上不受新視線規則影響；後仰、一手撐地、一手放膝與地上紙杯也形成自然且不重複的日常瞬間。問題是 `Full body` 加 `shot from well back` 已有同型裁腳反例，未正面列出交叉腿與雙腳必須看見。
+- **建議改法**：加入上方「完整頭部、盤腿與雙腳均可見，坐姿周圍保留地板」句；服裝可收斂為 `a grey crew-neck sauna tee and shorts`。修後可送。
 
 ### YG-08
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：凳面是足夠大且必然入鏡的視線目標；端盤、拉凳、低頭看座位、柱邊框架與早餐店路人共同構成很像真人被抓拍到的 C 級日常。未通過處是景別仍使用已證實不可靠的 `down to mid-thigh`，且 `light blue shirt knotted at the waist` 沒有控制上胸開口。
+- **建議改法**：改用上方具體可見清單，明列雙腿至大腿中段、兩個接觸點、盤與凳面；上衣改為 `a light-blue collared button-front shirt knotted at the waist, its upper buttons fastened and upper chest covered`。其餘可保留。
 
 ### YG-09
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：窗框、白床單反光、局部窗外高光與無手裁切方向合理，也具有人在飯店發呆的日常感；但窄幅窗景中的遠塔不符合新視線充分條件，大特寫又進一步壓縮它。另 `collar loosened` 與本輪已證實的領口失控方向相同，在臉部大特寫下更容易把胸線帶進下緣。
+- **建議改法**：將目標換成填滿窗側可見區的鄰近建築立面，或降低硬驗收精度、不再要求能判定對焦某一棟遠塔；浴袍改為 `an opaque white bathrobe with overlapping lapels closed securely at the collarbone`。兩項修完再送。
 
 ### LG-02
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：蹲下、揉眼、打呵欠與碰地板是自然且有微物件／接觸關係的晨間瞬間；但光斑不是必然有清楚邊界的實體，無法穩定承擔精確視線目標。完整蹲姿也仍可能被模型用裁腳近景近似完成。lace-trim camisole 同時是本批另一個領口尺度風險。
+- **建議改法**：依上方方案把大紙箱放入光斑，視線改落在箱口；明列完整蹲姿、雙膝、雙手、指尖接觸點、光斑與箱口可見。若不得露胸線，將上衣改為 `an opaque high-neck sleeveless cotton pyjama top with subtle lace trim`，不要保留天然低領的 camisole 名稱。
 
 ### LG-09
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → REVISE
+- **理由**：杯子是大、近且由雙手接觸的可靠視線目標；插吸管、熱封膜、前傾支撐與早餐店路人都具體而像真人日常，半身也足以容納所有硬驗收。唯一需要跟進的新系統性風險是 `thin-knit top` 未定義領型，模型可能自行補低領；若本輪尺度要求適用全批，不應留白。
+- **建議改法**：上衣改為 `an opaque cream fitted crew-neck knit top with a clear waistline`。其餘可原樣送。
 
 ### LG-10B
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS ／ REVISE ／ BLOCK → PASS
+- **理由**：看鏡頭不受離鏡視線新規則影響；半身構圖已正面列出臉、蘋果糖、雙手與腰帶位於中央，左右布簾只占外緣，沒有使用失效的 `Framed down to X`。浴衣左襟在上、腰帶固定也比一般開領上衣具有更明確的閉合結構。祭典路人、燈籠暖光與布簾天然暗角能成立真人日常視覺。
+- **建議改法**：可原樣送。驗收仍需確認布簾沒有遮住握糖接觸點或腰帶上的另一手。
 
 ### 其他（只寫會導致生成失敗的項目）
--
+- LG-05、YG-08、YG-09、LG-02、LG-09 的領口修正屬同一個尺度風險，但應依各自服裝結構改寫，不要把西式 `buttoned up` 字串硬套到浴袍、睡衣或針織上衣。
