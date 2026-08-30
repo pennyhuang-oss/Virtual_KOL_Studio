@@ -1309,6 +1309,49 @@ pilot v2 的 Yuna 之所以「動作和表情很不一致」，是因為我把
 
 #### 24-D. 造型要綁實體配件，不要只寫狀態（2026-08-29，n=2）
 
+#### 24-E. 相機三要素：方位、高度、鏡頭（2026-08-29）
+
+> **起因**：使用者指出 Luna 的素材「角度、姿勢、遠近基本上都沒差別」。
+> 清點 21 段 prompt 後發現——**只有 2 件指定了「相機在她的哪一側」，其餘 19 件沒寫。**
+> 沒寫方位，模型就給正面。
+>
+> **根因是我把 D-02 驗證過的 `camera at her navel level, lens horizontal, shot from well back`
+> 當成「完整的相機規格」在用。它有高度、傾角、距離，唯獨沒有方位。**
+
+##### 最重要的一條：寫相機的位置，不要寫身體的朝向
+
+LG-07 同一件、同一個 soul，只差這個寫法，是目前最乾淨的一組對照：
+
+| 版本 | 寫法 | 描述的對象 | 結果 |
+|---|---|---|---|
+| v1 | `hips angled away and shoulders turned toward the camera` | **她的身體** | ❌ 2/2 完全正面站立 |
+| v2 | `Following her from behind` | **相機的位置** | ✅ 2/2 成立 |
+
+**要她「轉身」是要模型解一個姿勢問題；要相機「走到她背後」是換一個視角問題。後者可靠得多。**
+
+##### 每段 prompt 應該寫齊三件事
+
+| 要素 | 內容 | 目前狀況 |
+|---|---|---|
+| **① 方位**（相機在她的哪一側） | 正面／四分之三前側／正側面／四分之三後側／正後方 | **19/21 沒寫** |
+| ② 高度與傾角 | 眼睛／胸口／肚臍／坐姿眼高／略高於眼睛／俯視 | 有寫，分布也夠散 |
+| **③ 鏡頭與景深** | 焦段感（近攝變形／標準／望遠壓縮）＋景深 | **0/21 有焦段語言** |
+
+**參考措辭**（方位）：
+`Shot from her three-quarter front-left` ／ `Shot from her side in profile` ／
+`Shot from her three-quarter back` ／ `Following her from behind` ／
+`Seen from behind over her shoulder` ／ `Shot from slightly above, looking down at her`
+
+**參考措辭**（鏡頭與景深）：
+`shot on a short telephoto, the background compressed and softly out of focus behind her` ／
+`shot wide and close, the room stretching away behind her, everything in focus` ／
+`shallow depth of field, only her face sharp`
+
+##### ⚠️ 這條的證據強度
+
+方位那條有**一組同件同 soul 的直接對照**（LG-07 v1/v2），證據較強。
+**鏡頭與景深那條完全沒有實測**——0/21 用過，屬純設計，要當未驗證項處理。
+
 **表情要綁實體動作（D-06）已經驗證過。造型看起來是同一型。**
 
 | 寫法 | 結果 |
