@@ -132,34 +132,35 @@ R15 分別建議改成 `with the balcony occupying the background`、`with the s
 
 ## Q1 共用背景路人字串
 
-- **判定（甲／乙／丙／丁）**：
-- **理由**：
-- **若選丁，A/B 怎麼做**：
+- **判定（甲／乙／丙／丁）**：**甲：維持 v1 不動。**
+- **理由**：`never looking at the camera` 依 D-05 最多只能判為無效冗語，目前沒有證據顯示它會反向生成或降低成功率；相反地，完整 v1 已有跨角色、跨場景 14/14 成功，且 `backs turned or heads angled away` 已用正面敘述承擔主要控制。為一個「可能無效、但未證明有害」的分句改動未生成 4 件，會主動放棄目前最強的整段實證，並讓 consistency、證據歸屬及後續失敗分析多出一個沒有必要的版本。已生成 4 件更不能回改，否則 prompt 不再是產出紀錄。故本輪維持唯一 v1；未來若 v1 實際出現路人看鏡頭，再針對該失敗另開單變因 A/B。
+- **若選丁，A/B 怎麼做**：不適用。
 
 ## Q2 YG-03 / LG-09 的單件背景虛化句
 
-- **`the balcony behind her falling out of focus`**：
-- **`with the shop behind her softly out of focus`**：
-- **`the wall menu out of focus`（含亂碼文字風險）**：
-- **理由**：
+- **`the balcony behind her falling out of focus`**：**維持原樣。**
+- **`with the shop behind her softly out of focus`**：**維持原樣。**
+- **`the wall menu out of focus`（含亂碼文字風險）**：**維持原樣，不改成 visible rows。**
+- **理由**：前兩句是既有、低強度的背景呈現控制，沒有指定焦段、主體焦平面或「只有臉清楚」，不應因 R14 的未實測禁令被追溯刪除。第三句更有獨立的瑕疵防護作用：菜單是模型最容易生成偽文字的物件，`visible rows of menu panels` 雖未直接要求字可讀，仍會提高菜單結構與字形的顯著度，和「降低亂碼文字成為可見瑕疵」的目標衝突。原句讓菜單仍作為早餐店背景線索存在，同時降低偽文字可辨識度，較像真實相機拍攝，也較安全。
 
 ## Q3 禁令範圍劃分
 
-- **判定**：
-- **理由**：
-- **要補進禁用清單的措辭**：
+- **判定**：**實務處置成立，但分類理由要改寫。** 背景 `out of focus` 在光學語意上仍然是景深語言，不能寫成「不屬景深語言」；它可沿用的真正理由是：這幾個低強度、局部背景措辭已有專案內使用證據，而指定鏡頭、壓縮感、主體焦平面及排他性清晰範圍的措辭仍是 0 次實測。規則應採「精確 allowlist＋其餘先禁」而非只靠「主體／背景」語意判斷。
+- **理由**：單純以主體／背景切分仍有灰區，例如 `background completely blurred`、`creamy bokeh`、`only the subject in focus` 都是在寫背景，卻會強烈改變光學效果；反之，現有 `the wall menu out of focus` 只是局部物件的弱控制。真正穩定的分界是「已驗證的低強度精確句型」與「會引入新光學機制或強度的未驗證句型」。
+- **要補進禁用清單的措辭**：除既列的 `short telephoto`、`compressed`、`shallow depth of field`、`her face sharp` 外，補入 `bokeh`／`creamy bokeh`、`razor-sharp`／`tack-sharp`、`only X in focus`、`focus plane`、`deep depth of field`／`everything sharp`、`completely/heavily blurred background`、焦距毫米數、光圈／f-stop。允許項不要概括成所有背景虛化，而應只登記現有已驗證的精確字串（含 `softly out of focus`、`falling out of focus`、`the wall menu out of focus`）；任何新同義詞或更強程度詞先視為未驗證。
 
 ## Q5 六件最終判定
 
 | 件 | PASS / REVISE | 理由 | 具體改法（改前→改後） |
 |---|---|---|---|
-| YG-03 | | | |
-| YG-06 | | | |
-| YG-08 | | | |
-| YG-09 | | | |
-| LG-09 | | | |
-| LG-10B | | | |
+| YG-03 | **PASS** | R15 的景別名稱已換成可見物清單；自拍方位、單手構圖、具名牆面反光與曝光關係成立。保留的陽台背景虛化屬現行 allowlist，不需再改。 | 無。 |
+| YG-06 | **PASS** | 已消除「後方機位再繞回」的互相抵消，改為固定左後方位與臉、毛巾角可見清單；共用路人 v1 有 14/14 實證，維持原樣。 | 無。 |
+| YG-08 | **PASS** | left/right 已取代 near/far，兩個手物接觸點有唯一指派；雙色溫、門口高光犧牲、柱框景與公共路人均成立。 | 無。 |
+| YG-09 | **PASS** | 已移除 `face sharp`，改以臉佔比、建築立面寬度與窗列定義畫內視線目標；沒有再控制未實測的焦平面。 | 無。 |
+| LG-09 | **PASS** | 景別已換成可見物清單；手、杯、吸管的單一瞬間清楚。商店與菜單的低強度背景虛化可沿用，且菜單模糊可降低偽文字顯著度。 | 無。 |
+| LG-10B | **PASS** | 已保留但精簡正面方位，景別改為可見物清單，反射表面改成具名石板參道；路人 v1 維持已驗證版本。 | 無。 |
 
 ## 補充
 
-- 
+- 最終結論：**6 件全部 PASS，可送生成；本輪不再改 prompt 字串。**
+- 建議把規則名稱從籠統的「景深語言禁令」改成「未驗證光學／焦點控制禁令」，並在其下維護精確 allowlist。這樣能保留 10 件既有背景虛化證據，也不會讓新的強景深同義詞從「只是背景」這個漏洞進入。
