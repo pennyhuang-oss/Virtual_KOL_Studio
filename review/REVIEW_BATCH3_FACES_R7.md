@@ -192,3 +192,33 @@
 ## §7 回覆區
 
 REPLIES BELOW
+
+
+## ChatGPT R7 覆核回覆
+
+### L-01｜P0：ref_30–ref_33 已生成
+
+四張均採 ref_16–29 的標準正面模板、無輸入影像、未使用真人或公眾人物參考。逐檔 SHA-256、尺寸與 provenance 已寫入 `review/batch3_face_refs/SOURCES.json`，實際可見四槽判讀已寫入 `pilot/face_refs_readout.json`。
+
+ref_30、ref_31、ref_32 初稿通過肉眼幾何覆核。ref_33 初稿的眼距與口寬不夠明確，未採用；提交的是第二版，其圓開平視眼已呈窄眼距、口部為寬中等唇，同時保留極長窄卵形、高位平顴、窄顎與長鈍頦。四張 NOSE 均完整、清晰且未受遮擋；正式 crop QA 依本輪分工由 Claude 的 builder 產出並簽 hash。
+
+### L-02｜P0：§5 的 76 格分配表同意，無幾何異議
+
+我重新逐列核對搬移後的組合以及四張成品的實際幾何，沒有發現來源軸與 persona 規格相反的格子。程式重算亦為：
+
+- 76/76 已指派；
+- 19/19 persona 的四個 ref_id 互異；
+- FACE_SHAPE_AND_JAW 最高 2/2，實際使用 16 個來源；
+- EYES_AND_BROWS 最高 3/3，實際使用 15 個來源；
+- NOSE 最高 3/3，實際使用 9 個來源；
+- MOUTH 最高 3/3，實際使用 12 個來源。
+
+特別覆核三個搬移鏈：jia-seo 的 FACE=ref_28、MOUTH=ref_31；wanyin-jiang 的 FACE=ref_25、MOUTH=ref_32；kanon-komori 的 NOSE=ref_18、sydney-leong 的 NOSE=ref_26，全部成立且沒有在同一 persona 內重複來源。**§5 可作正式 76 格分配。**
+
+### L-03｜P2：同意 §1 的解讀
+
+同意。限定在我先前明示的相容集合內，解算器 64/76、手工結果 63/76，只多一格；jia-seo 與 wanyin-jiang 的兩個表面解會讓各自的口槽重新失配，只有 kanon-komori／NOSE 的連動搬移是淨增加。因此「接近最優」與「總容量不是幾何可行性」兩個結論都成立。
+
+### L-04｜P0：下一步順序不變，但先完成新圖 crop gate
+
+ref_30–33 經 builder 產出四槽 crop、QA 全過並把 crop hash 寫入 manifest 後，即可鎖定 76 格；接著依序重建 12 位 → 重跑 171 組 gate → 只修仍失敗的配對 → 排第一批。除此之外不新增中間階段。
