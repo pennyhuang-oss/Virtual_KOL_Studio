@@ -1,0 +1,116 @@
+{
+ "angel-chiu": {
+  "FACE_SHAPE_AND_JAW": "ref_20",
+  "EYES_AND_BROWS": "ref_32",
+  "NOSE": "ref_16",
+  "MOUTH": "ref_18"
+ },
+ "angeline-kwee": {
+  "FACE_SHAPE_AND_JAW": "ref_33",
+  "EYES_AND_BROWS": "ref_25",
+  "NOSE": "ref_24",
+  "MOUTH": "ref_16"
+ },
+ "cheryl-soh": {
+  "FACE_SHAPE_AND_JAW": "ref_25",
+  "EYES_AND_BROWS": "ref_26",
+  "NOSE": "ref_24",
+  "MOUTH": "ref_23"
+ },
+ "emma-kao": {
+  "FACE_SHAPE_AND_JAW": "ref_16",
+  "EYES_AND_BROWS": "ref_30",
+  "NOSE": "ref_27",
+  "MOUTH": "ref_18"
+ },
+ "jia-seo": {
+  "FACE_SHAPE_AND_JAW": "ref_28",
+  "EYES_AND_BROWS": "ref_17",
+  "NOSE": "ref_19",
+  "MOUTH": "ref_31"
+ },
+ "kanon-komori": {
+  "FACE_SHAPE_AND_JAW": "ref_23",
+  "EYES_AND_BROWS": "ref_21",
+  "NOSE": "ref_18",
+  "MOUTH": "ref_22"
+ },
+ "miu-shiraishi": {
+  "FACE_SHAPE_AND_JAW": "ref_20",
+  "EYES_AND_BROWS": "ref_18",
+  "NOSE": "ref_26",
+  "MOUTH": "ref_21"
+ },
+ "nanami-fujiwara": {
+  "FACE_SHAPE_AND_JAW": "ref_22",
+  "EYES_AND_BROWS": "ref_16",
+  "NOSE": "ref_21",
+  "MOUTH": "ref_18"
+ },
+ "peggy-lee": {
+  "FACE_SHAPE_AND_JAW": "ref_19",
+  "EYES_AND_BROWS": "ref_27",
+  "NOSE": "ref_20",
+  "MOUTH": "ref_26"
+ },
+ "rin-ayase": {
+  "FACE_SHAPE_AND_JAW": "ref_24",
+  "EYES_AND_BROWS": "ref_28",
+  "NOSE": "ref_19",
+  "MOUTH": "ref_21"
+ },
+ "ruoruo-tang": {
+  "FACE_SHAPE_AND_JAW": "ref_30",
+  "EYES_AND_BROWS": "ref_31",
+  "NOSE": "ref_16",
+  "MOUTH": "ref_33"
+ },
+ "somi-oh": {
+  "FACE_SHAPE_AND_JAW": "ref_18",
+  "EYES_AND_BROWS": "ref_33",
+  "NOSE": "ref_21",
+  "MOUTH": "ref_26"
+ },
+ "sydney-leong": {
+  "FACE_SHAPE_AND_JAW": "ref_21",
+  "EYES_AND_BROWS": "ref_23",
+  "NOSE": "ref_26",
+  "MOUTH": "ref_30"
+ },
+ "tammy-chou": {
+  "FACE_SHAPE_AND_JAW": "ref_31",
+  "EYES_AND_BROWS": "ref_26",
+  "NOSE": "ref_18",
+  "MOUTH": "ref_21"
+ },
+ "wanyin-jiang": {
+  "FACE_SHAPE_AND_JAW": "ref_25",
+  "EYES_AND_BROWS": "ref_24",
+  "NOSE": "ref_17",
+  "MOUTH": "ref_32"
+ },
+ "wendy-yeo": {
+  "FACE_SHAPE_AND_JAW": "ref_16",
+  "EYES_AND_BROWS": "ref_29",
+  "NOSE": "ref_17",
+  "MOUTH": "ref_19"
+ },
+ "yerin-han": {
+  "FACE_SHAPE_AND_JAW": "ref_27",
+  "EYES_AND_BROWS": "ref_26",
+  "NOSE": "ref_19",
+  "MOUTH": "ref_16"
+ },
+ "zhiyi-shen": {
+  "FACE_SHAPE_AND_JAW": "ref_32",
+  "EYES_AND_BROWS": "ref_16",
+  "NOSE": "ref_17",
+  "MOUTH": "ref_25"
+ },
+ "zoey-yeh": {
+  "FACE_SHAPE_AND_JAW": "ref_26",
+  "EYES_AND_BROWS": "ref_21",
+  "NOSE": "ref_18",
+  "MOUTH": "ref_22"
+ }
+}
