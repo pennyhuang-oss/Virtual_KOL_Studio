@@ -1,0 +1,1578 @@
+{
+ "tolerance_sd": 0.5,
+ "sd": {
+  "face_hw": 0.04305318291664822,
+  "jaw_ratio": 0.02542783697660015,
+  "third_mid": 0.008369101779340684,
+  "third_low": 0.010074748816854714,
+  "eye_space": 0.048603729722779196,
+  "eye_open": 0.03056373382465367,
+  "alar_r": 0.006925787508474142,
+  "mouth_r": 0.013924808375821331,
+  "lip_r": 0.03271213952838007
+ },
+ "rows": [
+  {
+   "ref": "ref_40",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angel-chiu",
+   "axis": "face_hw",
+   "target": 1.108,
+   "measured": 1.0558,
+   "dev_sd": -1.21
+  },
+  {
+   "ref": "ref_40",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angel-chiu",
+   "axis": "jaw_ratio",
+   "target": 0.761,
+   "measured": 0.7767,
+   "dev_sd": 0.62
+  },
+  {
+   "ref": "ref_40",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angel-chiu",
+   "axis": "third_mid",
+   "target": 0.401,
+   "measured": 0.3979,
+   "dev_sd": -0.37
+  },
+  {
+   "ref": "ref_40",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angel-chiu",
+   "axis": "third_low",
+   "target": 0.4,
+   "measured": 0.4042,
+   "dev_sd": 0.42
+  },
+  {
+   "ref": "ref_40",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "angeline-kwee",
+   "axis": "eye_space",
+   "target": 1.119,
+   "measured": 1.5201,
+   "dev_sd": 8.25
+  },
+  {
+   "ref": "ref_40",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "angeline-kwee",
+   "axis": "eye_open",
+   "target": 0.359,
+   "measured": 0.3257,
+   "dev_sd": -1.09
+  },
+  {
+   "ref": "ref_40",
+   "slot": "NOSE",
+   "for_persona": "cheryl-soh",
+   "axis": "alar_r",
+   "target": 0.205,
+   "measured": 0.1978,
+   "dev_sd": -1.04
+  },
+  {
+   "ref": "ref_40",
+   "slot": "MOUTH",
+   "for_persona": "emma-kao",
+   "axis": "mouth_r",
+   "target": 0.334,
+   "measured": 0.3008,
+   "dev_sd": -2.38
+  },
+  {
+   "ref": "ref_40",
+   "slot": "MOUTH",
+   "for_persona": "emma-kao",
+   "axis": "lip_r",
+   "target": 0.401,
+   "measured": 0.384,
+   "dev_sd": -0.52
+  },
+  {
+   "ref": "ref_41",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angeline-kwee",
+   "axis": "face_hw",
+   "target": 1.359,
+   "measured": 1.2863,
+   "dev_sd": -1.69
+  },
+  {
+   "ref": "ref_41",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angeline-kwee",
+   "axis": "jaw_ratio",
+   "target": 0.744,
+   "measured": 0.7418,
+   "dev_sd": -0.09
+  },
+  {
+   "ref": "ref_41",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angeline-kwee",
+   "axis": "third_mid",
+   "target": 0.405,
+   "measured": 0.4437,
+   "dev_sd": 4.62
+  },
+  {
+   "ref": "ref_41",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "angeline-kwee",
+   "axis": "third_low",
+   "target": 0.393,
+   "measured": 0.3793,
+   "dev_sd": -1.36
+  },
+  {
+   "ref": "ref_41",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "cheryl-soh",
+   "axis": "eye_space",
+   "target": 1.335,
+   "measured": 1.2677,
+   "dev_sd": -1.38
+  },
+  {
+   "ref": "ref_41",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "cheryl-soh",
+   "axis": "eye_open",
+   "target": 0.453,
+   "measured": 0.4404,
+   "dev_sd": -0.41
+  },
+  {
+   "ref": "ref_41",
+   "slot": "NOSE",
+   "for_persona": "emma-kao",
+   "axis": "alar_r",
+   "target": 0.248,
+   "measured": 0.2252,
+   "dev_sd": -3.29
+  },
+  {
+   "ref": "ref_41",
+   "slot": "MOUTH",
+   "for_persona": "jia-seo",
+   "axis": "mouth_r",
+   "target": 0.426,
+   "measured": 0.3556,
+   "dev_sd": -5.05
+  },
+  {
+   "ref": "ref_41",
+   "slot": "MOUTH",
+   "for_persona": "jia-seo",
+   "axis": "lip_r",
+   "target": 0.252,
+   "measured": 0.3348,
+   "dev_sd": 2.53
+  },
+  {
+   "ref": "ref_42",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "cheryl-soh",
+   "axis": "face_hw",
+   "target": 1.334,
+   "measured": 1.2703,
+   "dev_sd": -1.48
+  },
+  {
+   "ref": "ref_42",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "cheryl-soh",
+   "axis": "jaw_ratio",
+   "target": 0.74,
+   "measured": 0.7651,
+   "dev_sd": 0.99
+  },
+  {
+   "ref": "ref_42",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "cheryl-soh",
+   "axis": "third_mid",
+   "target": 0.399,
+   "measured": 0.4214,
+   "dev_sd": 2.68
+  },
+  {
+   "ref": "ref_42",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "cheryl-soh",
+   "axis": "third_low",
+   "target": 0.398,
+   "measured": 0.392,
+   "dev_sd": -0.6
+  },
+  {
+   "ref": "ref_42",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "emma-kao",
+   "axis": "eye_space",
+   "target": 1.142,
+   "measured": 1.4383,
+   "dev_sd": 6.1
+  },
+  {
+   "ref": "ref_42",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "emma-kao",
+   "axis": "eye_open",
+   "target": 0.329,
+   "measured": 0.3629,
+   "dev_sd": 1.11
+  },
+  {
+   "ref": "ref_42",
+   "slot": "NOSE",
+   "for_persona": "jia-seo",
+   "axis": "alar_r",
+   "target": 0.248,
+   "measured": 0.2158,
+   "dev_sd": -4.65
+  },
+  {
+   "ref": "ref_42",
+   "slot": "MOUTH",
+   "for_persona": "kanon-komori",
+   "axis": "mouth_r",
+   "target": 0.359,
+   "measured": 0.3306,
+   "dev_sd": -2.04
+  },
+  {
+   "ref": "ref_42",
+   "slot": "MOUTH",
+   "for_persona": "kanon-komori",
+   "axis": "lip_r",
+   "target": 0.417,
+   "measured": 0.4148,
+   "dev_sd": -0.07
+  },
+  {
+   "ref": "ref_43",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "emma-kao",
+   "axis": "face_hw",
+   "target": 1.344,
+   "measured": 1.1985,
+   "dev_sd": -3.38
+  },
+  {
+   "ref": "ref_43",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "emma-kao",
+   "axis": "jaw_ratio",
+   "target": 0.786,
+   "measured": 0.7882,
+   "dev_sd": 0.09
+  },
+  {
+   "ref": "ref_43",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "emma-kao",
+   "axis": "third_mid",
+   "target": 0.486,
+   "measured": 0.4482,
+   "dev_sd": -4.52
+  },
+  {
+   "ref": "ref_43",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "emma-kao",
+   "axis": "third_low",
+   "target": 0.328,
+   "measured": 0.3545,
+   "dev_sd": 2.63
+  },
+  {
+   "ref": "ref_43",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "jia-seo",
+   "axis": "eye_space",
+   "target": 1.214,
+   "measured": 1.6246,
+   "dev_sd": 8.45
+  },
+  {
+   "ref": "ref_43",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "jia-seo",
+   "axis": "eye_open",
+   "target": 0.31,
+   "measured": 0.3145,
+   "dev_sd": 0.15
+  },
+  {
+   "ref": "ref_43",
+   "slot": "NOSE",
+   "for_persona": "kanon-komori",
+   "axis": "alar_r",
+   "target": 0.245,
+   "measured": 0.2274,
+   "dev_sd": -2.54
+  },
+  {
+   "ref": "ref_43",
+   "slot": "MOUTH",
+   "for_persona": "miu-shiraishi",
+   "axis": "mouth_r",
+   "target": 0.434,
+   "measured": 0.335,
+   "dev_sd": -7.11
+  },
+  {
+   "ref": "ref_43",
+   "slot": "MOUTH",
+   "for_persona": "miu-shiraishi",
+   "axis": "lip_r",
+   "target": 0.32,
+   "measured": 0.284,
+   "dev_sd": -1.1
+  },
+  {
+   "ref": "ref_44",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "jia-seo",
+   "axis": "face_hw",
+   "target": 1.316,
+   "measured": 1.2387,
+   "dev_sd": -1.8
+  },
+  {
+   "ref": "ref_44",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "jia-seo",
+   "axis": "jaw_ratio",
+   "target": 0.781,
+   "measured": 0.8255,
+   "dev_sd": 1.75
+  },
+  {
+   "ref": "ref_44",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "jia-seo",
+   "axis": "third_mid",
+   "target": 0.425,
+   "measured": 0.4098,
+   "dev_sd": -1.82
+  },
+  {
+   "ref": "ref_44",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "jia-seo",
+   "axis": "third_low",
+   "target": 0.372,
+   "measured": 0.3964,
+   "dev_sd": 2.42
+  },
+  {
+   "ref": "ref_44",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "kanon-komori",
+   "axis": "eye_space",
+   "target": 1.271,
+   "measured": 1.3878,
+   "dev_sd": 2.4
+  },
+  {
+   "ref": "ref_44",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "kanon-komori",
+   "axis": "eye_open",
+   "target": 0.409,
+   "measured": 0.4303,
+   "dev_sd": 0.7
+  },
+  {
+   "ref": "ref_44",
+   "slot": "NOSE",
+   "for_persona": "miu-shiraishi",
+   "axis": "alar_r",
+   "target": 0.271,
+   "measured": 0.227,
+   "dev_sd": -6.35
+  },
+  {
+   "ref": "ref_44",
+   "slot": "MOUTH",
+   "for_persona": "nanami-fujiwara",
+   "axis": "mouth_r",
+   "target": 0.336,
+   "measured": 0.3477,
+   "dev_sd": 0.84
+  },
+  {
+   "ref": "ref_44",
+   "slot": "MOUTH",
+   "for_persona": "nanami-fujiwara",
+   "axis": "lip_r",
+   "target": 0.329,
+   "measured": 0.2966,
+   "dev_sd": -0.99
+  },
+  {
+   "ref": "ref_45",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "kanon-komori",
+   "axis": "face_hw",
+   "target": 1.111,
+   "measured": 1.2246,
+   "dev_sd": 2.64
+  },
+  {
+   "ref": "ref_45",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "kanon-komori",
+   "axis": "jaw_ratio",
+   "target": 0.736,
+   "measured": 0.7789,
+   "dev_sd": 1.69
+  },
+  {
+   "ref": "ref_45",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "kanon-komori",
+   "axis": "third_mid",
+   "target": 0.456,
+   "measured": 0.402,
+   "dev_sd": -6.45
+  },
+  {
+   "ref": "ref_45",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "kanon-komori",
+   "axis": "third_low",
+   "target": 0.349,
+   "measured": 0.4233,
+   "dev_sd": 7.38
+  },
+  {
+   "ref": "ref_45",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "miu-shiraishi",
+   "axis": "eye_space",
+   "target": 1.199,
+   "measured": 1.439,
+   "dev_sd": 4.94
+  },
+  {
+   "ref": "ref_45",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "miu-shiraishi",
+   "axis": "eye_open",
+   "target": 0.409,
+   "measured": 0.3753,
+   "dev_sd": -1.1
+  },
+  {
+   "ref": "ref_45",
+   "slot": "NOSE",
+   "for_persona": "nanami-fujiwara",
+   "axis": "alar_r",
+   "target": 0.271,
+   "measured": 0.2686,
+   "dev_sd": -0.35
+  },
+  {
+   "ref": "ref_45",
+   "slot": "MOUTH",
+   "for_persona": "peggy-lee",
+   "axis": "mouth_r",
+   "target": 0.426,
+   "measured": 0.4192,
+   "dev_sd": -0.49
+  },
+  {
+   "ref": "ref_45",
+   "slot": "MOUTH",
+   "for_persona": "peggy-lee",
+   "axis": "lip_r",
+   "target": 0.495,
+   "measured": 0.5389,
+   "dev_sd": 1.34
+  },
+  {
+   "ref": "ref_46",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "miu-shiraishi",
+   "axis": "face_hw",
+   "target": 1.126,
+   "measured": 0.9756,
+   "dev_sd": -3.49
+  },
+  {
+   "ref": "ref_46",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "miu-shiraishi",
+   "axis": "jaw_ratio",
+   "target": 0.766,
+   "measured": 0.825,
+   "dev_sd": 2.32
+  },
+  {
+   "ref": "ref_46",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "miu-shiraishi",
+   "axis": "third_mid",
+   "target": 0.456,
+   "measured": 0.3989,
+   "dev_sd": -6.82
+  },
+  {
+   "ref": "ref_46",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "miu-shiraishi",
+   "axis": "third_low",
+   "target": 0.351,
+   "measured": 0.4211,
+   "dev_sd": 6.96
+  },
+  {
+   "ref": "ref_46",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "nanami-fujiwara",
+   "axis": "eye_space",
+   "target": 1.271,
+   "measured": 1.5163,
+   "dev_sd": 5.05
+  },
+  {
+   "ref": "ref_46",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "nanami-fujiwara",
+   "axis": "eye_open",
+   "target": 0.315,
+   "measured": 0.2243,
+   "dev_sd": -2.97
+  },
+  {
+   "ref": "ref_46",
+   "slot": "NOSE",
+   "for_persona": "peggy-lee",
+   "axis": "alar_r",
+   "target": 0.228,
+   "measured": 0.2137,
+   "dev_sd": -2.06
+  },
+  {
+   "ref": "ref_46",
+   "slot": "MOUTH",
+   "for_persona": "rin-ayase",
+   "axis": "mouth_r",
+   "target": 0.452,
+   "measured": 0.3722,
+   "dev_sd": -5.73
+  },
+  {
+   "ref": "ref_46",
+   "slot": "MOUTH",
+   "for_persona": "rin-ayase",
+   "axis": "lip_r",
+   "target": 0.377,
+   "measured": 0.374,
+   "dev_sd": -0.09
+  },
+  {
+   "ref": "ref_47",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "nanami-fujiwara",
+   "axis": "face_hw",
+   "target": 1.239,
+   "measured": 1.226,
+   "dev_sd": -0.3
+  },
+  {
+   "ref": "ref_47",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "nanami-fujiwara",
+   "axis": "jaw_ratio",
+   "target": 0.757,
+   "measured": 0.7841,
+   "dev_sd": 1.06
+  },
+  {
+   "ref": "ref_47",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "nanami-fujiwara",
+   "axis": "third_mid",
+   "target": 0.434,
+   "measured": 0.4178,
+   "dev_sd": -1.93
+  },
+  {
+   "ref": "ref_47",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "nanami-fujiwara",
+   "axis": "third_low",
+   "target": 0.378,
+   "measured": 0.4006,
+   "dev_sd": 2.25
+  },
+  {
+   "ref": "ref_47",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "peggy-lee",
+   "axis": "eye_space",
+   "target": 1.346,
+   "measured": 1.4188,
+   "dev_sd": 1.5
+  },
+  {
+   "ref": "ref_47",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "peggy-lee",
+   "axis": "eye_open",
+   "target": 0.359,
+   "measured": 0.3237,
+   "dev_sd": -1.16
+  },
+  {
+   "ref": "ref_47",
+   "slot": "NOSE",
+   "for_persona": "rin-ayase",
+   "axis": "alar_r",
+   "target": 0.238,
+   "measured": 0.2511,
+   "dev_sd": 1.89
+  },
+  {
+   "ref": "ref_47",
+   "slot": "MOUTH",
+   "for_persona": "ruoruo-tang",
+   "axis": "mouth_r",
+   "target": 0.456,
+   "measured": 0.4458,
+   "dev_sd": -0.74
+  },
+  {
+   "ref": "ref_47",
+   "slot": "MOUTH",
+   "for_persona": "ruoruo-tang",
+   "axis": "lip_r",
+   "target": 0.406,
+   "measured": 0.3556,
+   "dev_sd": -1.54
+  },
+  {
+   "ref": "ref_48",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "peggy-lee",
+   "axis": "face_hw",
+   "target": 1.276,
+   "measured": 1.2758,
+   "dev_sd": -0.0
+  },
+  {
+   "ref": "ref_48",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "peggy-lee",
+   "axis": "jaw_ratio",
+   "target": 0.786,
+   "measured": 0.8019,
+   "dev_sd": 0.63
+  },
+  {
+   "ref": "ref_48",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "peggy-lee",
+   "axis": "third_mid",
+   "target": 0.401,
+   "measured": 0.3918,
+   "dev_sd": -1.1
+  },
+  {
+   "ref": "ref_48",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "peggy-lee",
+   "axis": "third_low",
+   "target": 0.396,
+   "measured": 0.4258,
+   "dev_sd": 2.95
+  },
+  {
+   "ref": "ref_48",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "rin-ayase",
+   "axis": "eye_space",
+   "target": 1.24,
+   "measured": 1.4896,
+   "dev_sd": 5.14
+  },
+  {
+   "ref": "ref_48",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "rin-ayase",
+   "axis": "eye_open",
+   "target": 0.346,
+   "measured": 0.3458,
+   "dev_sd": -0.01
+  },
+  {
+   "ref": "ref_48",
+   "slot": "NOSE",
+   "for_persona": "ruoruo-tang",
+   "axis": "alar_r",
+   "target": 0.229,
+   "measured": 0.2627,
+   "dev_sd": 4.87
+  },
+  {
+   "ref": "ref_48",
+   "slot": "MOUTH",
+   "for_persona": "somi-oh",
+   "axis": "mouth_r",
+   "target": 0.455,
+   "measured": 0.4497,
+   "dev_sd": -0.38
+  },
+  {
+   "ref": "ref_48",
+   "slot": "MOUTH",
+   "for_persona": "somi-oh",
+   "axis": "lip_r",
+   "target": 0.497,
+   "measured": 0.5089,
+   "dev_sd": 0.36
+  },
+  {
+   "ref": "ref_49",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "rin-ayase",
+   "axis": "face_hw",
+   "target": 1.368,
+   "measured": 1.3328,
+   "dev_sd": -0.82
+  },
+  {
+   "ref": "ref_49",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "rin-ayase",
+   "axis": "jaw_ratio",
+   "target": 0.736,
+   "measured": 0.7839,
+   "dev_sd": 1.88
+  },
+  {
+   "ref": "ref_49",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "rin-ayase",
+   "axis": "third_mid",
+   "target": 0.478,
+   "measured": 0.4215,
+   "dev_sd": -6.75
+  },
+  {
+   "ref": "ref_49",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "rin-ayase",
+   "axis": "third_low",
+   "target": 0.32,
+   "measured": 0.3846,
+   "dev_sd": 6.41
+  },
+  {
+   "ref": "ref_49",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "ruoruo-tang",
+   "axis": "eye_space",
+   "target": 1.271,
+   "measured": 1.6601,
+   "dev_sd": 8.01
+  },
+  {
+   "ref": "ref_49",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "ruoruo-tang",
+   "axis": "eye_open",
+   "target": 0.317,
+   "measured": 0.2952,
+   "dev_sd": -0.71
+  },
+  {
+   "ref": "ref_49",
+   "slot": "NOSE",
+   "for_persona": "somi-oh",
+   "axis": "alar_r",
+   "target": 0.269,
+   "measured": 0.272,
+   "dev_sd": 0.44
+  },
+  {
+   "ref": "ref_49",
+   "slot": "MOUTH",
+   "for_persona": "sydney-leong",
+   "axis": "mouth_r",
+   "target": 0.41,
+   "measured": 0.438,
+   "dev_sd": 2.01
+  },
+  {
+   "ref": "ref_49",
+   "slot": "MOUTH",
+   "for_persona": "sydney-leong",
+   "axis": "lip_r",
+   "target": 0.326,
+   "measured": 0.2591,
+   "dev_sd": -2.05
+  },
+  {
+   "ref": "ref_50",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "ruoruo-tang",
+   "axis": "face_hw",
+   "target": 1.196,
+   "measured": 1.1227,
+   "dev_sd": -1.7
+  },
+  {
+   "ref": "ref_50",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "ruoruo-tang",
+   "axis": "jaw_ratio",
+   "target": 0.81,
+   "measured": 0.84,
+   "dev_sd": 1.18
+  },
+  {
+   "ref": "ref_50",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "ruoruo-tang",
+   "axis": "third_mid",
+   "target": 0.449,
+   "measured": 0.3947,
+   "dev_sd": -6.49
+  },
+  {
+   "ref": "ref_50",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "ruoruo-tang",
+   "axis": "third_low",
+   "target": 0.364,
+   "measured": 0.4172,
+   "dev_sd": 5.28
+  },
+  {
+   "ref": "ref_50",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "somi-oh",
+   "axis": "eye_space",
+   "target": 1.122,
+   "measured": 1.4349,
+   "dev_sd": 6.44
+  },
+  {
+   "ref": "ref_50",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "somi-oh",
+   "axis": "eye_open",
+   "target": 0.428,
+   "measured": 0.3853,
+   "dev_sd": -1.4
+  },
+  {
+   "ref": "ref_50",
+   "slot": "NOSE",
+   "for_persona": "sydney-leong",
+   "axis": "alar_r",
+   "target": 0.263,
+   "measured": 0.2239,
+   "dev_sd": -5.65
+  },
+  {
+   "ref": "ref_50",
+   "slot": "MOUTH",
+   "for_persona": "tammy-chou",
+   "axis": "mouth_r",
+   "target": 0.457,
+   "measured": 0.3685,
+   "dev_sd": -6.36
+  },
+  {
+   "ref": "ref_50",
+   "slot": "MOUTH",
+   "for_persona": "tammy-chou",
+   "axis": "lip_r",
+   "target": 0.397,
+   "measured": 0.3997,
+   "dev_sd": 0.08
+  },
+  {
+   "ref": "ref_51",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "somi-oh",
+   "axis": "face_hw",
+   "target": 1.114,
+   "measured": 1.0738,
+   "dev_sd": -0.93
+  },
+  {
+   "ref": "ref_51",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "somi-oh",
+   "axis": "jaw_ratio",
+   "target": 0.809,
+   "measured": 0.8189,
+   "dev_sd": 0.39
+  },
+  {
+   "ref": "ref_51",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "somi-oh",
+   "axis": "third_mid",
+   "target": 0.412,
+   "measured": 0.4133,
+   "dev_sd": 0.15
+  },
+  {
+   "ref": "ref_51",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "somi-oh",
+   "axis": "third_low",
+   "target": 0.397,
+   "measured": 0.3958,
+   "dev_sd": -0.12
+  },
+  {
+   "ref": "ref_51",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "sydney-leong",
+   "axis": "eye_space",
+   "target": 1.293,
+   "measured": 1.3949,
+   "dev_sd": 2.1
+  },
+  {
+   "ref": "ref_51",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "sydney-leong",
+   "axis": "eye_open",
+   "target": 0.41,
+   "measured": 0.4285,
+   "dev_sd": 0.61
+  },
+  {
+   "ref": "ref_51",
+   "slot": "NOSE",
+   "for_persona": "tammy-chou",
+   "axis": "alar_r",
+   "target": 0.255,
+   "measured": 0.2074,
+   "dev_sd": -6.87
+  },
+  {
+   "ref": "ref_51",
+   "slot": "MOUTH",
+   "for_persona": "wanyin-jiang",
+   "axis": "mouth_r",
+   "target": 0.316,
+   "measured": 0.2816,
+   "dev_sd": -2.47
+  },
+  {
+   "ref": "ref_51",
+   "slot": "MOUTH",
+   "for_persona": "wanyin-jiang",
+   "axis": "lip_r",
+   "target": 0.27,
+   "measured": 0.3401,
+   "dev_sd": 2.14
+  },
+  {
+   "ref": "ref_52",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "sydney-leong",
+   "axis": "face_hw",
+   "target": 1.108,
+   "measured": 1.1299,
+   "dev_sd": 0.51
+  },
+  {
+   "ref": "ref_52",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "sydney-leong",
+   "axis": "jaw_ratio",
+   "target": 0.786,
+   "measured": 0.8328,
+   "dev_sd": 1.84
+  },
+  {
+   "ref": "ref_52",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "sydney-leong",
+   "axis": "third_mid",
+   "target": 0.399,
+   "measured": 0.4038,
+   "dev_sd": 0.57
+  },
+  {
+   "ref": "ref_52",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "sydney-leong",
+   "axis": "third_low",
+   "target": 0.398,
+   "measured": 0.4098,
+   "dev_sd": 1.17
+  },
+  {
+   "ref": "ref_52",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "tammy-chou",
+   "axis": "eye_space",
+   "target": 1.346,
+   "measured": 1.3877,
+   "dev_sd": 0.86
+  },
+  {
+   "ref": "ref_52",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "tammy-chou",
+   "axis": "eye_open",
+   "target": 0.458,
+   "measured": 0.4062,
+   "dev_sd": -1.7
+  },
+  {
+   "ref": "ref_52",
+   "slot": "NOSE",
+   "for_persona": "wanyin-jiang",
+   "axis": "alar_r",
+   "target": 0.225,
+   "measured": 0.2026,
+   "dev_sd": -3.23
+  },
+  {
+   "ref": "ref_52",
+   "slot": "MOUTH",
+   "for_persona": "wendy-yeo",
+   "axis": "mouth_r",
+   "target": 0.362,
+   "measured": 0.3194,
+   "dev_sd": -3.06
+  },
+  {
+   "ref": "ref_52",
+   "slot": "MOUTH",
+   "for_persona": "wendy-yeo",
+   "axis": "lip_r",
+   "target": 0.397,
+   "measured": 0.3964,
+   "dev_sd": -0.02
+  },
+  {
+   "ref": "ref_53",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "tammy-chou",
+   "axis": "face_hw",
+   "target": 1.283,
+   "measured": 1.245,
+   "dev_sd": -0.88
+  },
+  {
+   "ref": "ref_53",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "tammy-chou",
+   "axis": "jaw_ratio",
+   "target": 0.737,
+   "measured": 0.7265,
+   "dev_sd": -0.41
+  },
+  {
+   "ref": "ref_53",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "tammy-chou",
+   "axis": "third_mid",
+   "target": 0.426,
+   "measured": 0.4336,
+   "dev_sd": 0.91
+  },
+  {
+   "ref": "ref_53",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "tammy-chou",
+   "axis": "third_low",
+   "target": 0.386,
+   "measured": 0.371,
+   "dev_sd": -1.49
+  },
+  {
+   "ref": "ref_53",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "wanyin-jiang",
+   "axis": "eye_space",
+   "target": 1.26,
+   "measured": 1.393,
+   "dev_sd": 2.74
+  },
+  {
+   "ref": "ref_53",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "wanyin-jiang",
+   "axis": "eye_open",
+   "target": 0.318,
+   "measured": 0.3736,
+   "dev_sd": 1.82
+  },
+  {
+   "ref": "ref_53",
+   "slot": "NOSE",
+   "for_persona": "wendy-yeo",
+   "axis": "alar_r",
+   "target": 0.217,
+   "measured": 0.2125,
+   "dev_sd": -0.66
+  },
+  {
+   "ref": "ref_53",
+   "slot": "MOUTH",
+   "for_persona": "yerin-han",
+   "axis": "mouth_r",
+   "target": 0.362,
+   "measured": 0.3044,
+   "dev_sd": -4.14
+  },
+  {
+   "ref": "ref_53",
+   "slot": "MOUTH",
+   "for_persona": "yerin-han",
+   "axis": "lip_r",
+   "target": 0.315,
+   "measured": 0.4532,
+   "dev_sd": 4.23
+  },
+  {
+   "ref": "ref_54",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wanyin-jiang",
+   "axis": "face_hw",
+   "target": 1.284,
+   "measured": 1.204,
+   "dev_sd": -1.86
+  },
+  {
+   "ref": "ref_54",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wanyin-jiang",
+   "axis": "jaw_ratio",
+   "target": 0.736,
+   "measured": 0.7281,
+   "dev_sd": -0.31
+  },
+  {
+   "ref": "ref_54",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wanyin-jiang",
+   "axis": "third_mid",
+   "target": 0.439,
+   "measured": 0.4247,
+   "dev_sd": -1.71
+  },
+  {
+   "ref": "ref_54",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wanyin-jiang",
+   "axis": "third_low",
+   "target": 0.375,
+   "measured": 0.3807,
+   "dev_sd": 0.56
+  },
+  {
+   "ref": "ref_54",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "wendy-yeo",
+   "axis": "eye_space",
+   "target": 1.26,
+   "measured": 1.4927,
+   "dev_sd": 4.79
+  },
+  {
+   "ref": "ref_54",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "wendy-yeo",
+   "axis": "eye_open",
+   "target": 0.31,
+   "measured": 0.3238,
+   "dev_sd": 0.45
+  },
+  {
+   "ref": "ref_54",
+   "slot": "NOSE",
+   "for_persona": "yerin-han",
+   "axis": "alar_r",
+   "target": 0.227,
+   "measured": 0.2138,
+   "dev_sd": -1.91
+  },
+  {
+   "ref": "ref_54",
+   "slot": "MOUTH",
+   "for_persona": "zhiyi-shen",
+   "axis": "mouth_r",
+   "target": 0.352,
+   "measured": 0.3022,
+   "dev_sd": -3.57
+  },
+  {
+   "ref": "ref_54",
+   "slot": "MOUTH",
+   "for_persona": "zhiyi-shen",
+   "axis": "lip_r",
+   "target": 0.224,
+   "measured": 0.3696,
+   "dev_sd": 4.45
+  },
+  {
+   "ref": "ref_55",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wendy-yeo",
+   "axis": "face_hw",
+   "target": 1.371,
+   "measured": 1.2796,
+   "dev_sd": -2.12
+  },
+  {
+   "ref": "ref_55",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wendy-yeo",
+   "axis": "jaw_ratio",
+   "target": 0.81,
+   "measured": 0.8325,
+   "dev_sd": 0.88
+  },
+  {
+   "ref": "ref_55",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wendy-yeo",
+   "axis": "third_mid",
+   "target": 0.408,
+   "measured": 0.4152,
+   "dev_sd": 0.86
+  },
+  {
+   "ref": "ref_55",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "wendy-yeo",
+   "axis": "third_low",
+   "target": 0.405,
+   "measured": 0.4006,
+   "dev_sd": -0.43
+  },
+  {
+   "ref": "ref_55",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "yerin-han",
+   "axis": "eye_space",
+   "target": 1.346,
+   "measured": 1.2397,
+   "dev_sd": -2.19
+  },
+  {
+   "ref": "ref_55",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "yerin-han",
+   "axis": "eye_open",
+   "target": 0.458,
+   "measured": 0.4172,
+   "dev_sd": -1.34
+  },
+  {
+   "ref": "ref_55",
+   "slot": "NOSE",
+   "for_persona": "zhiyi-shen",
+   "axis": "alar_r",
+   "target": 0.218,
+   "measured": 0.2262,
+   "dev_sd": 1.19
+  },
+  {
+   "ref": "ref_55",
+   "slot": "MOUTH",
+   "for_persona": "zoey-yeh",
+   "axis": "mouth_r",
+   "target": 0.315,
+   "measured": 0.349,
+   "dev_sd": 2.44
+  },
+  {
+   "ref": "ref_55",
+   "slot": "MOUTH",
+   "for_persona": "zoey-yeh",
+   "axis": "lip_r",
+   "target": 0.497,
+   "measured": 0.5877,
+   "dev_sd": 2.77
+  },
+  {
+   "ref": "ref_56",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "yerin-han",
+   "axis": "face_hw",
+   "target": 1.196,
+   "measured": 1.12,
+   "dev_sd": -1.76
+  },
+  {
+   "ref": "ref_56",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "yerin-han",
+   "axis": "jaw_ratio",
+   "target": 0.811,
+   "measured": 0.8379,
+   "dev_sd": 1.06
+  },
+  {
+   "ref": "ref_56",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "yerin-han",
+   "axis": "third_mid",
+   "target": 0.419,
+   "measured": 0.4078,
+   "dev_sd": -1.34
+  },
+  {
+   "ref": "ref_56",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "yerin-han",
+   "axis": "third_low",
+   "target": 0.378,
+   "measured": 0.4074,
+   "dev_sd": 2.92
+  },
+  {
+   "ref": "ref_56",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "zhiyi-shen",
+   "axis": "eye_space",
+   "target": 1.173,
+   "measured": 1.4723,
+   "dev_sd": 6.16
+  },
+  {
+   "ref": "ref_56",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "zhiyi-shen",
+   "axis": "eye_open",
+   "target": 0.359,
+   "measured": 0.3296,
+   "dev_sd": -0.96
+  },
+  {
+   "ref": "ref_56",
+   "slot": "NOSE",
+   "for_persona": "zoey-yeh",
+   "axis": "alar_r",
+   "target": 0.227,
+   "measured": 0.2041,
+   "dev_sd": -3.3
+  },
+  {
+   "ref": "ref_56",
+   "slot": "MOUTH",
+   "for_persona": "angel-chiu",
+   "axis": "mouth_r",
+   "target": 0.315,
+   "measured": 0.2934,
+   "dev_sd": -1.55
+  },
+  {
+   "ref": "ref_56",
+   "slot": "MOUTH",
+   "for_persona": "angel-chiu",
+   "axis": "lip_r",
+   "target": 0.405,
+   "measured": 0.3993,
+   "dev_sd": -0.17
+  },
+  {
+   "ref": "ref_57",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zhiyi-shen",
+   "axis": "face_hw",
+   "target": 1.371,
+   "measured": 1.363,
+   "dev_sd": -0.18
+  },
+  {
+   "ref": "ref_57",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zhiyi-shen",
+   "axis": "jaw_ratio",
+   "target": 0.763,
+   "measured": 0.7606,
+   "dev_sd": -0.09
+  },
+  {
+   "ref": "ref_57",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zhiyi-shen",
+   "axis": "third_mid",
+   "target": 0.469,
+   "measured": 0.4348,
+   "dev_sd": -4.09
+  },
+  {
+   "ref": "ref_57",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zhiyi-shen",
+   "axis": "third_low",
+   "target": 0.329,
+   "measured": 0.396,
+   "dev_sd": 6.65
+  },
+  {
+   "ref": "ref_57",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "zoey-yeh",
+   "axis": "eye_space",
+   "target": 1.346,
+   "measured": 1.3397,
+   "dev_sd": -0.13
+  },
+  {
+   "ref": "ref_57",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "zoey-yeh",
+   "axis": "eye_open",
+   "target": 0.456,
+   "measured": 0.4566,
+   "dev_sd": 0.02
+  },
+  {
+   "ref": "ref_57",
+   "slot": "NOSE",
+   "for_persona": "angel-chiu",
+   "axis": "alar_r",
+   "target": 0.249,
+   "measured": 0.2218,
+   "dev_sd": -3.92
+  },
+  {
+   "ref": "ref_57",
+   "slot": "MOUTH",
+   "for_persona": "angeline-kwee",
+   "axis": "mouth_r",
+   "target": 0.362,
+   "measured": 0.3029,
+   "dev_sd": -4.24
+  },
+  {
+   "ref": "ref_57",
+   "slot": "MOUTH",
+   "for_persona": "angeline-kwee",
+   "axis": "lip_r",
+   "target": 0.231,
+   "measured": 0.3789,
+   "dev_sd": 4.52
+  },
+  {
+   "ref": "ref_58",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zoey-yeh",
+   "axis": "face_hw",
+   "target": 1.195,
+   "measured": 1.0556,
+   "dev_sd": -3.24
+  },
+  {
+   "ref": "ref_58",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zoey-yeh",
+   "axis": "jaw_ratio",
+   "target": 0.81,
+   "measured": 0.8127,
+   "dev_sd": 0.1
+  },
+  {
+   "ref": "ref_58",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zoey-yeh",
+   "axis": "third_mid",
+   "target": 0.434,
+   "measured": 0.4111,
+   "dev_sd": -2.73
+  },
+  {
+   "ref": "ref_58",
+   "slot": "FACE_SHAPE_AND_JAW",
+   "for_persona": "zoey-yeh",
+   "axis": "third_low",
+   "target": 0.38,
+   "measured": 0.4064,
+   "dev_sd": 2.62
+  },
+  {
+   "ref": "ref_58",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "angel-chiu",
+   "axis": "eye_space",
+   "target": 1.196,
+   "measured": 1.4272,
+   "dev_sd": 4.76
+  },
+  {
+   "ref": "ref_58",
+   "slot": "EYES_AND_BROWS",
+   "for_persona": "angel-chiu",
+   "axis": "eye_open",
+   "target": 0.409,
+   "measured": 0.3977,
+   "dev_sd": -0.37
+  },
+  {
+   "ref": "ref_58",
+   "slot": "NOSE",
+   "for_persona": "angeline-kwee",
+   "axis": "alar_r",
+   "target": 0.205,
+   "measured": 0.1856,
+   "dev_sd": -2.8
+  },
+  {
+   "ref": "ref_58",
+   "slot": "MOUTH",
+   "for_persona": "cheryl-soh",
+   "axis": "mouth_r",
+   "target": 0.314,
+   "measured": 0.2713,
+   "dev_sd": -3.07
+  },
+  {
+   "ref": "ref_58",
+   "slot": "MOUTH",
+   "for_persona": "cheryl-soh",
+   "axis": "lip_r",
+   "target": 0.395,
+   "measured": 0.3884,
+   "dev_sd": -0.2
+  }
+ ],
+ "in_window": 33,
+ "total": 171,
+ "refs_needing_regen": [
+  "ref_40",
+  "ref_41",
+  "ref_42",
+  "ref_43",
+  "ref_44",
+  "ref_45",
+  "ref_46",
+  "ref_47",
+  "ref_48",
+  "ref_49",
+  "ref_50",
+  "ref_51",
+  "ref_52",
+  "ref_53",
+  "ref_54",
+  "ref_55",
+  "ref_56",
+  "ref_57",
+  "ref_58"
+ ]
+}
