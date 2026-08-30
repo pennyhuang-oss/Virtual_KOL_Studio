@@ -1,0 +1,711 @@
+{
+ "images": {
+  "ref_40": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "angel-chiu",
+    "targets": {
+     "face_hw": 1.108,
+     "jaw_ratio": 0.761,
+     "third_mid": 0.401,
+     "third_low": 0.4
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "angeline-kwee",
+    "targets": {
+     "eye_space": 1.119,
+     "eye_open": 0.359
+    }
+   },
+   "NOSE": {
+    "for_persona": "cheryl-soh",
+    "targets": {
+     "alar_r": 0.205
+    }
+   },
+   "MOUTH": {
+    "for_persona": "emma-kao",
+    "targets": {
+     "mouth_r": 0.334,
+     "lip_r": 0.401
+    }
+   }
+  },
+  "ref_41": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "angeline-kwee",
+    "targets": {
+     "face_hw": 1.359,
+     "jaw_ratio": 0.744,
+     "third_mid": 0.405,
+     "third_low": 0.393
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "cheryl-soh",
+    "targets": {
+     "eye_space": 1.335,
+     "eye_open": 0.453
+    }
+   },
+   "NOSE": {
+    "for_persona": "emma-kao",
+    "targets": {
+     "alar_r": 0.248
+    }
+   },
+   "MOUTH": {
+    "for_persona": "jia-seo",
+    "targets": {
+     "mouth_r": 0.426,
+     "lip_r": 0.252
+    }
+   }
+  },
+  "ref_42": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "cheryl-soh",
+    "targets": {
+     "face_hw": 1.334,
+     "jaw_ratio": 0.74,
+     "third_mid": 0.399,
+     "third_low": 0.398
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "emma-kao",
+    "targets": {
+     "eye_space": 1.142,
+     "eye_open": 0.329
+    }
+   },
+   "NOSE": {
+    "for_persona": "jia-seo",
+    "targets": {
+     "alar_r": 0.248
+    }
+   },
+   "MOUTH": {
+    "for_persona": "kanon-komori",
+    "targets": {
+     "mouth_r": 0.359,
+     "lip_r": 0.417
+    }
+   }
+  },
+  "ref_43": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "emma-kao",
+    "targets": {
+     "face_hw": 1.344,
+     "jaw_ratio": 0.786,
+     "third_mid": 0.486,
+     "third_low": 0.328
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "jia-seo",
+    "targets": {
+     "eye_space": 1.214,
+     "eye_open": 0.31
+    }
+   },
+   "NOSE": {
+    "for_persona": "kanon-komori",
+    "targets": {
+     "alar_r": 0.245
+    }
+   },
+   "MOUTH": {
+    "for_persona": "miu-shiraishi",
+    "targets": {
+     "mouth_r": 0.434,
+     "lip_r": 0.32
+    }
+   }
+  },
+  "ref_44": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "jia-seo",
+    "targets": {
+     "face_hw": 1.316,
+     "jaw_ratio": 0.781,
+     "third_mid": 0.425,
+     "third_low": 0.372
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "kanon-komori",
+    "targets": {
+     "eye_space": 1.271,
+     "eye_open": 0.409
+    }
+   },
+   "NOSE": {
+    "for_persona": "miu-shiraishi",
+    "targets": {
+     "alar_r": 0.271
+    }
+   },
+   "MOUTH": {
+    "for_persona": "nanami-fujiwara",
+    "targets": {
+     "mouth_r": 0.336,
+     "lip_r": 0.329
+    }
+   }
+  },
+  "ref_45": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "kanon-komori",
+    "targets": {
+     "face_hw": 1.111,
+     "jaw_ratio": 0.736,
+     "third_mid": 0.456,
+     "third_low": 0.349
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "miu-shiraishi",
+    "targets": {
+     "eye_space": 1.199,
+     "eye_open": 0.409
+    }
+   },
+   "NOSE": {
+    "for_persona": "nanami-fujiwara",
+    "targets": {
+     "alar_r": 0.271
+    }
+   },
+   "MOUTH": {
+    "for_persona": "peggy-lee",
+    "targets": {
+     "mouth_r": 0.426,
+     "lip_r": 0.495
+    }
+   }
+  },
+  "ref_46": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "miu-shiraishi",
+    "targets": {
+     "face_hw": 1.126,
+     "jaw_ratio": 0.766,
+     "third_mid": 0.456,
+     "third_low": 0.351
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "nanami-fujiwara",
+    "targets": {
+     "eye_space": 1.271,
+     "eye_open": 0.315
+    }
+   },
+   "NOSE": {
+    "for_persona": "peggy-lee",
+    "targets": {
+     "alar_r": 0.228
+    }
+   },
+   "MOUTH": {
+    "for_persona": "rin-ayase",
+    "targets": {
+     "mouth_r": 0.452,
+     "lip_r": 0.377
+    }
+   }
+  },
+  "ref_47": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "nanami-fujiwara",
+    "targets": {
+     "face_hw": 1.239,
+     "jaw_ratio": 0.757,
+     "third_mid": 0.434,
+     "third_low": 0.378
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "peggy-lee",
+    "targets": {
+     "eye_space": 1.346,
+     "eye_open": 0.359
+    }
+   },
+   "NOSE": {
+    "for_persona": "rin-ayase",
+    "targets": {
+     "alar_r": 0.238
+    }
+   },
+   "MOUTH": {
+    "for_persona": "ruoruo-tang",
+    "targets": {
+     "mouth_r": 0.456,
+     "lip_r": 0.406
+    }
+   }
+  },
+  "ref_48": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "peggy-lee",
+    "targets": {
+     "face_hw": 1.276,
+     "jaw_ratio": 0.786,
+     "third_mid": 0.401,
+     "third_low": 0.396
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "rin-ayase",
+    "targets": {
+     "eye_space": 1.24,
+     "eye_open": 0.346
+    }
+   },
+   "NOSE": {
+    "for_persona": "ruoruo-tang",
+    "targets": {
+     "alar_r": 0.229
+    }
+   },
+   "MOUTH": {
+    "for_persona": "somi-oh",
+    "targets": {
+     "mouth_r": 0.455,
+     "lip_r": 0.497
+    }
+   }
+  },
+  "ref_49": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "rin-ayase",
+    "targets": {
+     "face_hw": 1.368,
+     "jaw_ratio": 0.736,
+     "third_mid": 0.478,
+     "third_low": 0.32
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "ruoruo-tang",
+    "targets": {
+     "eye_space": 1.271,
+     "eye_open": 0.317
+    }
+   },
+   "NOSE": {
+    "for_persona": "somi-oh",
+    "targets": {
+     "alar_r": 0.269
+    }
+   },
+   "MOUTH": {
+    "for_persona": "sydney-leong",
+    "targets": {
+     "mouth_r": 0.41,
+     "lip_r": 0.326
+    }
+   }
+  },
+  "ref_50": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "ruoruo-tang",
+    "targets": {
+     "face_hw": 1.196,
+     "jaw_ratio": 0.81,
+     "third_mid": 0.449,
+     "third_low": 0.364
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "somi-oh",
+    "targets": {
+     "eye_space": 1.122,
+     "eye_open": 0.428
+    }
+   },
+   "NOSE": {
+    "for_persona": "sydney-leong",
+    "targets": {
+     "alar_r": 0.263
+    }
+   },
+   "MOUTH": {
+    "for_persona": "tammy-chou",
+    "targets": {
+     "mouth_r": 0.457,
+     "lip_r": 0.397
+    }
+   }
+  },
+  "ref_51": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "somi-oh",
+    "targets": {
+     "face_hw": 1.114,
+     "jaw_ratio": 0.809,
+     "third_mid": 0.412,
+     "third_low": 0.397
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "sydney-leong",
+    "targets": {
+     "eye_space": 1.293,
+     "eye_open": 0.41
+    }
+   },
+   "NOSE": {
+    "for_persona": "tammy-chou",
+    "targets": {
+     "alar_r": 0.255
+    }
+   },
+   "MOUTH": {
+    "for_persona": "wanyin-jiang",
+    "targets": {
+     "mouth_r": 0.316,
+     "lip_r": 0.27
+    }
+   }
+  },
+  "ref_52": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "sydney-leong",
+    "targets": {
+     "face_hw": 1.108,
+     "jaw_ratio": 0.786,
+     "third_mid": 0.399,
+     "third_low": 0.398
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "tammy-chou",
+    "targets": {
+     "eye_space": 1.346,
+     "eye_open": 0.458
+    }
+   },
+   "NOSE": {
+    "for_persona": "wanyin-jiang",
+    "targets": {
+     "alar_r": 0.225
+    }
+   },
+   "MOUTH": {
+    "for_persona": "wendy-yeo",
+    "targets": {
+     "mouth_r": 0.362,
+     "lip_r": 0.397
+    }
+   }
+  },
+  "ref_53": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "tammy-chou",
+    "targets": {
+     "face_hw": 1.283,
+     "jaw_ratio": 0.737,
+     "third_mid": 0.426,
+     "third_low": 0.386
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "wanyin-jiang",
+    "targets": {
+     "eye_space": 1.26,
+     "eye_open": 0.318
+    }
+   },
+   "NOSE": {
+    "for_persona": "wendy-yeo",
+    "targets": {
+     "alar_r": 0.217
+    }
+   },
+   "MOUTH": {
+    "for_persona": "yerin-han",
+    "targets": {
+     "mouth_r": 0.362,
+     "lip_r": 0.315
+    }
+   }
+  },
+  "ref_54": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "wanyin-jiang",
+    "targets": {
+     "face_hw": 1.284,
+     "jaw_ratio": 0.736,
+     "third_mid": 0.439,
+     "third_low": 0.375
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "wendy-yeo",
+    "targets": {
+     "eye_space": 1.26,
+     "eye_open": 0.31
+    }
+   },
+   "NOSE": {
+    "for_persona": "yerin-han",
+    "targets": {
+     "alar_r": 0.227
+    }
+   },
+   "MOUTH": {
+    "for_persona": "zhiyi-shen",
+    "targets": {
+     "mouth_r": 0.352,
+     "lip_r": 0.224
+    }
+   }
+  },
+  "ref_55": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "wendy-yeo",
+    "targets": {
+     "face_hw": 1.371,
+     "jaw_ratio": 0.81,
+     "third_mid": 0.408,
+     "third_low": 0.405
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "yerin-han",
+    "targets": {
+     "eye_space": 1.346,
+     "eye_open": 0.458
+    }
+   },
+   "NOSE": {
+    "for_persona": "zhiyi-shen",
+    "targets": {
+     "alar_r": 0.218
+    }
+   },
+   "MOUTH": {
+    "for_persona": "zoey-yeh",
+    "targets": {
+     "mouth_r": 0.315,
+     "lip_r": 0.497
+    }
+   }
+  },
+  "ref_56": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "yerin-han",
+    "targets": {
+     "face_hw": 1.196,
+     "jaw_ratio": 0.811,
+     "third_mid": 0.419,
+     "third_low": 0.378
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "zhiyi-shen",
+    "targets": {
+     "eye_space": 1.173,
+     "eye_open": 0.359
+    }
+   },
+   "NOSE": {
+    "for_persona": "zoey-yeh",
+    "targets": {
+     "alar_r": 0.227
+    }
+   },
+   "MOUTH": {
+    "for_persona": "angel-chiu",
+    "targets": {
+     "mouth_r": 0.315,
+     "lip_r": 0.405
+    }
+   }
+  },
+  "ref_57": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "zhiyi-shen",
+    "targets": {
+     "face_hw": 1.371,
+     "jaw_ratio": 0.763,
+     "third_mid": 0.469,
+     "third_low": 0.329
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "zoey-yeh",
+    "targets": {
+     "eye_space": 1.346,
+     "eye_open": 0.456
+    }
+   },
+   "NOSE": {
+    "for_persona": "angel-chiu",
+    "targets": {
+     "alar_r": 0.249
+    }
+   },
+   "MOUTH": {
+    "for_persona": "angeline-kwee",
+    "targets": {
+     "mouth_r": 0.362,
+     "lip_r": 0.231
+    }
+   }
+  },
+  "ref_58": {
+   "FACE_SHAPE_AND_JAW": {
+    "for_persona": "zoey-yeh",
+    "targets": {
+     "face_hw": 1.195,
+     "jaw_ratio": 0.81,
+     "third_mid": 0.434,
+     "third_low": 0.38
+    }
+   },
+   "EYES_AND_BROWS": {
+    "for_persona": "angel-chiu",
+    "targets": {
+     "eye_space": 1.196,
+     "eye_open": 0.409
+    }
+   },
+   "NOSE": {
+    "for_persona": "angeline-kwee",
+    "targets": {
+     "alar_r": 0.205
+    }
+   },
+   "MOUTH": {
+    "for_persona": "cheryl-soh",
+    "targets": {
+     "mouth_r": 0.314,
+     "lip_r": 0.395
+    }
+   }
+  }
+ },
+ "assignment": {
+  "angel-chiu": {
+   "FACE_SHAPE_AND_JAW": "ref_40",
+   "EYES_AND_BROWS": "ref_58",
+   "NOSE": "ref_57",
+   "MOUTH": "ref_56"
+  },
+  "angeline-kwee": {
+   "FACE_SHAPE_AND_JAW": "ref_41",
+   "EYES_AND_BROWS": "ref_40",
+   "NOSE": "ref_58",
+   "MOUTH": "ref_57"
+  },
+  "cheryl-soh": {
+   "FACE_SHAPE_AND_JAW": "ref_42",
+   "EYES_AND_BROWS": "ref_41",
+   "NOSE": "ref_40",
+   "MOUTH": "ref_58"
+  },
+  "emma-kao": {
+   "FACE_SHAPE_AND_JAW": "ref_43",
+   "EYES_AND_BROWS": "ref_42",
+   "NOSE": "ref_41",
+   "MOUTH": "ref_40"
+  },
+  "jia-seo": {
+   "FACE_SHAPE_AND_JAW": "ref_44",
+   "EYES_AND_BROWS": "ref_43",
+   "NOSE": "ref_42",
+   "MOUTH": "ref_41"
+  },
+  "kanon-komori": {
+   "FACE_SHAPE_AND_JAW": "ref_45",
+   "EYES_AND_BROWS": "ref_44",
+   "NOSE": "ref_43",
+   "MOUTH": "ref_42"
+  },
+  "miu-shiraishi": {
+   "FACE_SHAPE_AND_JAW": "ref_46",
+   "EYES_AND_BROWS": "ref_45",
+   "NOSE": "ref_44",
+   "MOUTH": "ref_43"
+  },
+  "nanami-fujiwara": {
+   "FACE_SHAPE_AND_JAW": "ref_47",
+   "EYES_AND_BROWS": "ref_46",
+   "NOSE": "ref_45",
+   "MOUTH": "ref_44"
+  },
+  "peggy-lee": {
+   "FACE_SHAPE_AND_JAW": "ref_48",
+   "EYES_AND_BROWS": "ref_47",
+   "NOSE": "ref_46",
+   "MOUTH": "ref_45"
+  },
+  "rin-ayase": {
+   "FACE_SHAPE_AND_JAW": "ref_49",
+   "EYES_AND_BROWS": "ref_48",
+   "NOSE": "ref_47",
+   "MOUTH": "ref_46"
+  },
+  "ruoruo-tang": {
+   "FACE_SHAPE_AND_JAW": "ref_50",
+   "EYES_AND_BROWS": "ref_49",
+   "NOSE": "ref_48",
+   "MOUTH": "ref_47"
+  },
+  "somi-oh": {
+   "FACE_SHAPE_AND_JAW": "ref_51",
+   "EYES_AND_BROWS": "ref_50",
+   "NOSE": "ref_49",
+   "MOUTH": "ref_48"
+  },
+  "sydney-leong": {
+   "FACE_SHAPE_AND_JAW": "ref_52",
+   "EYES_AND_BROWS": "ref_51",
+   "NOSE": "ref_50",
+   "MOUTH": "ref_49"
+  },
+  "tammy-chou": {
+   "FACE_SHAPE_AND_JAW": "ref_53",
+   "EYES_AND_BROWS": "ref_52",
+   "NOSE": "ref_51",
+   "MOUTH": "ref_50"
+  },
+  "wanyin-jiang": {
+   "FACE_SHAPE_AND_JAW": "ref_54",
+   "EYES_AND_BROWS": "ref_53",
+   "NOSE": "ref_52",
+   "MOUTH": "ref_51"
+  },
+  "wendy-yeo": {
+   "FACE_SHAPE_AND_JAW": "ref_55",
+   "EYES_AND_BROWS": "ref_54",
+   "NOSE": "ref_53",
+   "MOUTH": "ref_52"
+  },
+  "yerin-han": {
+   "FACE_SHAPE_AND_JAW": "ref_56",
+   "EYES_AND_BROWS": "ref_55",
+   "NOSE": "ref_54",
+   "MOUTH": "ref_53"
+  },
+  "zhiyi-shen": {
+   "FACE_SHAPE_AND_JAW": "ref_57",
+   "EYES_AND_BROWS": "ref_56",
+   "NOSE": "ref_55",
+   "MOUTH": "ref_54"
+  },
+  "zoey-yeh": {
+   "FACE_SHAPE_AND_JAW": "ref_58",
+   "EYES_AND_BROWS": "ref_57",
+   "NOSE": "ref_56",
+   "MOUTH": "ref_55"
+  }
+ },
+ "min_pair_if_hit": 2.2881204919019704,
+ "threshold": 1.02
+}
