@@ -1498,7 +1498,7 @@ commit 卻照樣過了。§24-E 因此有一段時間停留在「不要寫身體
 
 ---
 
-## #31 R14 之後改動的 6 件，送 R15 逐件覆核 🔵 OPEN
+## #31 R14 之後改動的 6 件，送 R15 逐件覆核 🟡 ANSWERED（6 件全 REVISE，已套用 7 處，3 處保留待 R16）
 
 **件**：YG-03、YG-06、YG-08、YG-09、LG-09、LG-10B（指紋閘門顯示「未覆核」，不得送生成）
 
@@ -1513,4 +1513,66 @@ commit 卻照樣過了。§24-E 因此有一段時間停留在「不要寫身體
 
 **現況**：lint 21/21、hand 0 硬衝突、diversity 配額全符合、consistency 全數一致。
 機械層面全過，卡的是語意層面這四題。
+
+
+### R15 判定與我的處置
+
+| 題 | 判定 | 我做了什麼 |
+|---|---|---|
+| Q1 YG-06 方位＋自我修正條件 | 改成固定方位＋可見物清單 | **已套用**。理由我認同：`far enough around her side that...` 是會反向改寫機位的自我修正指令，模型若優先保臉，最安全解就是退回側面，`rear-left quarter` 等於白寫 |
+| Q2 YG-08 near/far | 沒有穩定唯一解，改用角色自身左右手 | **已套用**。near/far 緊接在 tray 與 stool 之後，可能被綁到物件而非相機 |
+| Q3 LG-10B 刻意寫正面 | 保留，但刪同義重複 | **已套用**。`straight-on` 與 `directly in front of her` 同義，留一個 |
+| Q4 YG-09 `face sharp` | （乙）仍屬對焦語言，要移除 | **已套用**。改成佔幅＋可辨識形狀（成排窗戶） |
+| Q5 六件 | 全 REVISE，無結構性 BLOCK | R13 景別名稱、LG-10B 反射面具名 **已套用**；三處保留，見 #32 |
+
+**已套用 7 處**：YG-03／LG-09／LG-10B 的景別名稱、YG-06 方位、YG-08 左右手、
+YG-09 佔幅寫法、LG-10B 反射面具名（`the approach underfoot` → `the pale stone-paved approach`）。
+
+**保留 3 處**：全部與「背景虛化措辭」有關，見 #32。
+
+---
+
+## #32 R15 要求刪掉 14/14 已驗證字串裡的背景虛化語，我先擋下來 🔴 DISPUTED
+
+### 起因是我自己的規則寫過寬
+
+我在 §24-E 寫的禁令是「**焦段語言與景深語言**，在各自通過 A/B 之前一律不得進入正式 prompt」。
+R15 只讀到這一句，於是依它要求把 4 件公共場景共用的背景路人字串裡的
+`softly out of focus` 刪掉，也要求刪掉 YG-03 的 `falling out of focus` 與 LG-09 的 `the wall menu out of focus`。
+
+**但我在 R14 的請求裡自己已經分過類**：
+「0/21 有焦段語言（**10 件有 `out of focus`，但那只是在說背景糊掉**）」。
+**規則落檔時我沒把這個區分寫進去，禁令就比證據寬，覆核照著寬的執行是完全合理的。**
+已在 §24-E 補上「這條禁令的範圍」：被禁的是**指定主體焦平面／焦段**
+（`short telephoto`、`compressed`、`shallow depth of field`、`her face sharp`），
+不被禁的是**單純說背景糊掉**。
+
+### 爭議點本身
+
+共用的背景路人字串（**14/14 成功，8 件在用，check_consistency 逐字比對**）：
+
+```
+A few anonymous strangers in the mid-ground going about their own business, backs turned or
+heads angled away, never looking at the camera, softly out of focus with slight motion blur,
+clearly different from her in build, age and clothing.
+```
+
+R15 建議改成：`backs turned or heads angled toward their own activities, with slight motion blur`
+
+| 分句 | R15 的理由 | 我的看法 |
+|---|---|---|
+| `softly out of focus` | 未通過 A/B 的景深語言 | **不成立**——這是我的禁令寫過寬造成的，已修正範圍 |
+| `never looking at the camera` | D-05 否定句 | **理由成立，但結論不一定**。D-05 說否定句「無效」，不是「有害」。若無效，14/14 是靠其餘分句得來的，換成正面寫法不虧；但這是推論，沒有量測 |
+
+### 我沒有直接照做的原因
+
+1. **這是全專案量測最多的字串**（14/14），協定本身把「要動已驗證字串」列為必須覆核的觸發條件
+2. **8 件在用，其中 4 件是已生成核可的凍結 prompt**。改掉那 4 件會讓「這段 prompt 產出了這張圖」的紀錄失真；只改未生成的 4 件則會讓同一個字串在批次內出現兩版，consistency 會擋
+3. 我曾兩次因為「把觀察寫成硬性規則後照著執行」而全批翻車，這次不想第三次
+
+### 建議的解法（送 R16）
+
+字串**版本化**，不是全批改寫：v1 保留在已生成的 4 件（那是產出紀錄），
+v2 只用在未生成的件，並在 §9 同時登記兩版與各自的證據。
+是否要為此花 0.48 credits 做一次 A/B，由 Penny 決定。
 

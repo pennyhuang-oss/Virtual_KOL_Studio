@@ -1,4 +1,4 @@
-# 覆核請求 R15：R14 之後改動的 6 件，逐件判定
+# 覆核請求 R16：R15 我套用了 7 處、保留了 3 處，請裁決保留的部分
 
 > ⚠️ **請只讀這一個檔案**，不要瀏覽目錄、不要讀 repo 其他背景（會耗掉使用者方案內數小時的用量）。
 > 答案填在最後的「回覆區」。**不要改問題本文與「Claude 的看法」**——那是原始紀錄。
@@ -21,168 +21,145 @@
 
 ---
 
-## 背景速查（已驗證結論，不用回頭查）
+## 先講一件事：R15 的第二個理由，根因是我的規則寫過寬
 
-| 代號 | 結論 |
-|---|---|
-| D-01 | 不要寫族裔詞與身體數字，soul 已鎖臉 |
-| D-02 | 相機用相對描述（`at her chest level`），不要寫公制距離 |
-| D-05 | **否定句無效**（`no text`、`without X` 都會反向生成），要改寫成正面的可見物清單 |
-| D-06 | 表情要綁一個實體動作，不能只寫情緒詞 |
-| D-09 | 一張靜態圖只能承載**一個瞬間** |
-| R13 | 景別不要寫 `half body`／`full body` 這種名稱，要**列出必須看得見的東西** |
-| R13 | 視線目標必須**在畫面內、夠大、必然會被畫出來** |
-| R13 | 領口要寫**這一件衣服的幾何**（`high crew neckline`），不要寫扣子扣到第幾顆 |
-| R14 | 每件都要明寫**相機方位**（在她的哪一側）；順序是 ① 方位 → ② 高度距離 → ③ 只在硬驗收需要時補身體朝向 |
-| R14 | **焦段與景深語言 0/21 實測，一律先移除**，等兩個獨立 A/B（焦段用 LG-09、景深用 YG-09）通過才可用 |
+R15 依「景深語言在 A/B 通過前不得使用」，要求刪掉多處 `out of focus`。**這條是我寫的，我寫錯了範圍。**
 
-**模型可用參數只有**：`quality=2k`、`soul_id`、`aspect_ratio=9:16`、`prompt`、1 張參考圖。
-**沒有 negative_prompt、沒有 seed。**所以所有限制都必須寫在正面敘述裡。
+我在上一輪（R14）的請求裡自己分過類：
+> 「0/21 有焦段語言（**10 件有 `out of focus`，但那只是在說背景糊掉**）」
 
----
+**但規則落檔時我只寫了「景深語言」三個字，沒有把這個區分寫進去。** 已修正範圍如下：
 
-## 這 6 件在 R14 之後改了什麼（改前／改後）
-
-| 件 | 改前 | 改後 |
+| | 措辭 | 狀態 |
 |---|---|---|
-| **YG-03** | （沒有任何方位詞） | 加 `the phone camera held slightly to her front-right and just above eye level` |
-| **YG-06** | `three-quarter back` | `shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile` |
-| **YG-08** | `shot from her side in profile`；柱子在 `far outer edge`；兩手寫 hand A/B | `shot from her three-quarter front-left at chest level`；柱子改到 `far outer right edge`；兩手改成 `near hand`／`far hand` |
-| **YG-09** | `shallow depth of field, only her face sharp` | `Shot from slightly on the window side in a three-quarter close-up at her eye level, with her face sharp and the broad building facade still recognisable beside it` |
-| **LG-09** | `on a short telephoto with the shop behind her compressed`；`both forearms supported` | `shot from her three-quarter front-right at her eye level, with the shop behind her softly out of focus`；`one forearm resting lightly on its edge` |
-| **LG-10B** | （沒有方位詞）＋ 一句 telephoto | 刪 telephoto，加 `shot straight-on from directly in front of her at chest level`（**刻意保留的正面**） |
+| **被禁**（指定主體焦平面／焦段，0 次實測） | `short telephoto`、`compressed`、`shallow depth of field`、`her face sharp` | 等各自 A/B |
+| **不被禁**（單純說背景糊掉，21 件裡 10 件在用） | `the background softly out of focus`、`falling out of focus`、`the wall menu out of focus` | 沿用 |
 
-改完後：**未生成的 9 件全部有明寫方位（9/9）**，左右側分布 3:2。
+**所以凡是「因為它是景深語言」而提出的刪除，我都先保留了。** 若你認為這個範圍劃分本身有問題，請在 Q3 指出。
 
 ---
 
-## 六段完整 prompt（要判定的就是這六段全文）
+## R15 我做了什麼
 
-### YG-03（自拍／陽台收毛巾）
-```
-In a phone selfie, a young woman pulls a plain white towel down off the drying pole, arm still raised, smiling at the camera. The frame contains exactly one visible hand; her phone and her camera-holding hand stay outside the frame. Close half-body framing, the phone camera held slightly to her front-right and just above eye level, the balcony behind her falling out of focus. Collarbone-length mocha brown hair in a low ponytail, see-through bangs. An opaque grey fitted cropped cotton tee with a high crew neckline, high-waisted black shorts, black-rimmed glasses. A narrow covered balcony, a white painted wall, an iron window grille, plain towels on the pole. Flat overcast daylight on her face, her face evenly exposed, the white wall bouncing cool fill onto her jaw, staying slightly darker than her skin. Natural skin texture, subtle film grain.
-```
+**已完全照做（7 處）**：
 
-### YG-06（汗蒸幕休息大廳／盤腿坐地後仰大笑）
-```
-A young woman sits cross-legged on a heated floor, leaning back with one hand planted on the floor behind her and her other hand relaxed on one knee, shoulders dropped, face tilted upward in a loose open-mouthed laugh with her eyes squeezed shut, a paper cup resting on the floor beside her. Her complete head, crossed legs, and both bare feet are visible, with floor visible around her seated body, shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile, at her seated eye level, from well back. Collarbone-length mocha brown hair in a low bun, damp strands at her temples. A grey crew-neck sauna tee and shorts, a towel folded into sheep horns on her head, bare feet. A bright sauna rest hall. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Warm ceiling light on her face, the wooden floor bouncing warm fill up onto her chin, the hall behind her staying readable and slightly darker. Natural skin texture, subtle film grain.
-```
+| 件 | 套用的修法 |
+|---|---|
+| YG-06 | 方位＋自我修正條件 → `shot from her left-rear side at her seated eye level from well back, with her full upward-tilted face and both towel horns visible` |
+| YG-08 | `near hand`／`far hand` → `left hand`／`right hand` |
+| YG-09 | `with her face sharp and the broad building facade still recognisable beside it` → `with her face filling most of the frame and a broad strip of the building facade visible beside it, large enough to show its rows of windows` |
+| YG-03 | `Close half-body framing` → `Her complete head, raised arm, torso, and the waistband of her shorts are visible` |
+| LG-09 | `Half body with the cup in frame` → `Her complete head, torso through the waistline, both hands, and the cup are visible` |
+| LG-10B | `Half body, shot straight-on from directly in front of her at chest level` → `Her complete head, torso through the obi, both hands, and the candy apple are visible, shot straight-on at her chest level` |
+| LG-10B | `the approach underfoot bouncing warm fill up` → `the pale stone-paved approach bouncing warm fill up under her chin` |
 
-### YG-08（早餐店／端盤拉凳，騎樓柱框景）
-```
-A young woman carries a metal tray with an egg crepe in her near hand while her far hand grips the side edge of a red plastic stool and pulls it out, eyes down on the seat. Her upper body and both thighs through mid-thigh are visible, with both hand-object contact points, the tray, food, and stool seat clearly visible in the central area, shot from her three-quarter front-left at chest level, a narrow concrete pillar confined to the far outer right edge. Collarbone-length soft wavy mocha brown hair, side-parted. A light-blue collared button-front shirt knotted at the waist, its upper buttons fastened and upper chest covered, white high-waisted shorts. A breakfast shop, a steel counter. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Cool daylight from the doorway, warm fluorescent light inside, the counter bouncing fill onto her chin. Her face clearly exposed with natural skin texture; the doorway is the brightest area, only its smallest highlights reaching white. Subtle film grain.
-```
-
-### YG-09（飯店房內／臉部大特寫靠窗框）
-```
-A young woman leans against the window frame, a nearby building facade filling the visible strip of window beside her face, her lowered eyes focused on that broad facade, lips relaxed. Shot from slightly on the window side in a three-quarter close-up at her eye level, with her face sharp and the broad building facade still recognisable beside it. The crop contains only her face, hair, neck, and bathrobe collar, with both arms and hands below the frame. Collarbone-length mocha brown hair pushed back off her face. An opaque white bathrobe with overlapping lapels closed securely at the collarbone. A hotel room, white bedding, a floor-to-ceiling window, city towers outside. Soft window light full on her face, the white bedding bouncing fill up under her jaw. Her face is clearly exposed with natural skin texture; the city outside is the brightest area, only its smallest highlights reaching white. Visible skin pores, subtle film grain.
-```
-
-### LG-09（早餐店／插吸管，上目遣い）
-```
-A young woman leans forward over the counter with one forearm resting lightly on its edge, holding a clear disposable plastic cup of soy milk steady with one hand while her other hand pushes a straw down through its sealed film lid, her eyes down on the cup. Half body with the cup in frame, shot from her three-quarter front-right at her eye level, with the shop behind her softly out of focus. A blunt chin-length black bob cut evenly at the jawline, centre-parted. An opaque cream fitted crew-neck knit top with a clear waistline. A breakfast shop, a steel counter, the wall menu out of focus. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Cool daylight from the doorway, warm fluorescent light inside, the counter bouncing fill onto her chin. Her face clearly exposed with natural skin texture; the doorway is the brightest area, only its smallest highlights reaching white. Subtle film grain.
-```
-
-### LG-10B（祭典參道／蘋果糖，布簾框景）
-```
-A young woman holds a candy apple beside her cheek, her other hand resting lightly on the front of her obi, laughing, eyes toward the camera. Half body, shot straight-on from directly in front of her at chest level, plain hanging cloth curtains forming narrow blurred strips at the far left and right edges, with her face, candy apple, hands, and obi clearly visible in the centre. A blunt chin-length black bob cut evenly at the jawline, half-pinned with a hairpin. A pale-blue floral yukata, the wearer's left panel over the right, a flat navy obi. Paper lanterns overhead. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Warm lantern light on her face, the approach underfoot bouncing warm fill up. Her face is clearly exposed with natural skin texture; the lanterns are the brightest area, only their smallest highlights reaching white. Subtle film grain.
-```
+**保留未做（3 處，全部與背景虛化有關）**：YG-03 的 `falling out of focus`、
+LG-09 的 `with the shop behind her softly out of focus` 與 `the wall menu out of focus`、
+以及共用背景路人字串裡的 `softly out of focus`。
 
 ---
 
-## 問題
+## Q1 共用的背景路人字串要不要改？（最重要的一題）
 
-### Q1（YG-06）方位＋自我修正條件，會不會互相打架？
+這一段**逐字出現在 8 件裡**，是全專案量測最多的字串：**14/14 成功**（不同場景、不同角色、同一個模型）。
+`tools/check_consistency.py` 會對這 8 件逐字比對，任何一件不同就擋。
 
-我寫的是「從她的後左四分之三拍，**但要繞得夠遠、遠到她仰起的臉仍以四分之三側臉完整可見**」。
-這是一個方位詞加上一個條件子句，條件的作用是把方位往回拉。
+**現行（v1）**：
+```
+A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
+```
 
-**Claude 的看法**：R14 指出我原本的 `three-quarter back` 會讓臉被後腦與肩膀遮掉，
-所以我加了條件。但我沒把握——這句同時要求「在後方」與「臉要完整」，
-模型可能直接退回最安全的正側面甚至正面（那就等於方位這條又白寫了）。
-替代寫法是把條件改成純可見物清單：`her full face and the towel horns on her head both visible`。
+**R15 建議（v2）**：
+```
+A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled toward their own activities, with slight motion blur, clearly different from her in build, age and clothing.
+```
 
-**請判**：現在這個寫法可用嗎？還是要改成可見物清單？兩者擇一，並說理由。
+**Claude 的看法**：兩個理由要分開看。
 
-### Q2（YG-08）`near hand` / `far hand` 這種相對命名成立嗎？
+- `softly out of focus`：**理由不成立**，是我的禁令範圍寫錯造成的（見上）。
+- `never looking at the camera`：**理由成立，但結論我不確定**。D-05 說否定句「**無效**」，
+  不是「**有害**」。如果它無效，那 14/14 是靠其餘分句得來的，換成正面寫法不虧；
+  但這是推論，這個分句從來沒有被單獨量測過。而且 `heads angled away` 已經正面地指定了頭的方向，
+  `never looking at the camera` 可能本來就只是冗語。
 
-我把兩隻手從「A/B」改寫成 `in her near hand` 與 `her far hand`。
+**還有一個結構問題**：這 8 件裡 **4 件已經生成並核可、prompt 已凍結**（那段文字是「產出這張圖的紀錄」，
+改掉會讓紀錄失真），4 件未生成。全批改會動到紀錄，只改一半會讓同一字串在批次內出現兩版。
 
-**Claude 的看法**：既然同一句裡已經寫明 `shot from her three-quarter front-left`，
-near/far 對觀者應該有唯一解。但這是我第一次用相對命名，沒有任何實測前例。
-風險是模型把 near/far 理解成「離托盤近／遠」而不是「離相機近／遠」。
+**我的提案**：**字串版本化**——v1 留在已生成的 4 件（作為產出紀錄），v2 只用在未生成的 4 件，
+規則檔同時登記兩版與各自證據，consistency 改成允許這兩個註冊版本。
 
-**請判**：near/far 在這句的上下文裡是否有唯一解？若沒有，該用什麼寫法區分兩隻手？
+**請判**（擇一並說理由）：
+- （甲）維持 v1 不動，`never looking at the camera` 屬冗語但無害，不值得動已驗證字串
+- （乙）採用版本化提案：v1 凍結在已生成件，v2 用於未生成件
+- （丙）全 8 件一律改 v2，含已生成件（請說明為什麼改動產出紀錄是可接受的）
+- （丁）先做 A/B 再決定（請寫出要在哪一件、比什麼、看什麼判定成敗）
 
-### Q3（LG-10B）刻意寫正面，是必要還是浪費字數？
+## Q2 YG-03 與 LG-09 的單件背景虛化句
 
-我寫了 `shot straight-on from directly in front of her at chest level`。
-這是未生成的 9 件裡唯一刻意保留的正面機位。
+保留未改的三處：
+- YG-03：`the balcony behind her falling out of focus`
+- LG-09：`with the shop behind her softly out of focus`
+- LG-09：`the wall menu out of focus`
 
-**Claude 的看法**：R14 說「每件都要明寫方位，包括有意保留的正面」，所以我照寫了。
-但反面論點也成立：**不寫方位模型本來就給正面**，那這 10 個字就只是佔字數
-（這段已 176 字，是全批最長）。
+R15 分別建議改成 `with the balcony occupying the background`、`with the shop occupying the background`、
+`a wall menu with visible rows of menu panels`。
 
-**請判**：刻意明寫正面有沒有實質作用？還是應該刪掉、把字數讓給別的限制？
+**Claude 的看法**：前兩個我認為不必改（理由同上，範圍劃分已修正）。
+**第三個我反而擔心 R15 的版本有風險**：`a wall menu with visible rows of menu panels`
+是要模型把菜單畫清楚，而**這個專案的頭號瑕疵類型就是亂碼中文字**。
+原本寫 `out of focus` 正是為了把菜單上的字糊掉。
 
-### Q4（YG-09）這句還算不算「景深語言」？
+**請判**：這三句各自維持原樣還是改？特別是 `the wall menu out of focus` —— 把菜單改成清楚可見，
+與「畫面不要出現亂碼文字」是不是直接衝突？
 
-原本是 `shallow depth of field, only her face sharp`（已依 R14 移除）。
-現在是 `with her face sharp and the broad building facade still recognisable beside it`。
+## Q3 禁令的範圍劃分本身對不對？
 
-**Claude 的看法**：我認為新句已經不是景深語言，而是一份「哪個東西要清楚、哪個東西要看得出來」
-的可見物清單，所以不受「景深語言在 A/B 通過前不得使用」這條限制。
-但 `sharp` 這個字本身仍然是在描述對焦結果，我不確定這個區分站不站得住。
+上面那張「被禁／不被禁」的表，是我補寫進規則檔的。
 
-**請判**：這句該歸類為（甲）可見物清單，可以用；還是（乙）仍屬景深語言，要等 YG-09 的景深 A/B？
+**Claude 的看法**：分界是「這句話在控制**主體所在的焦平面**，還是只在說**背景糊掉**」。
+前者會改變模型對臉的處理（那正是我要 A/B 的東西），後者只是在描述景深的既有結果。
 
-### Q5 六件逐件判定
+**請判**：這個分界站得住嗎？有沒有落在灰色地帶、我該一併列入禁用的措辭？
 
-每件給 **PASS** 或 **REVISE**。REVISE 請寫出**具體要改的字串**（改前→改後），不要只寫方向。
-判定時請一併看：物理成不成立、硬驗收看不看得出來、有沒有 D-05 的否定句、
-有沒有 R13 的景別名稱／畫外視線目標、以及**對標小雪莉那九點**。
+## Q4 上述處置完成後，六件是否可送生成？
+
+若你在 Q1–Q3 的裁決會讓 prompt 再變動，請在 Q5 表裡寫出**最終要送生成的那一版全文差異**（改前→改後），
+不要只寫方向。若不再變動，請直接對六件標 **PASS**。
 
 ---
 
 # 回覆區（ChatGPT 填這裡）
 
-## Q1 YG-06 方位＋條件子句
+## Q1 共用背景路人字串
 
-- **判定**：改成「固定方位＋可見物清單」。
-- **理由**：現在的 `far enough around her side that...` 是會反向改寫機位的自我修正指令；模型若優先保臉，最安全的解就是退到側面或前側，使 `rear-left quarter` 失去作用。可見物清單只定義驗收結果，不再命令相機「繞回去」。但「完整臉以三分之四側臉可見」與真正的後方四分之三仍有物理張力，因此不要把 `three-quarter profile` 再塞回清單。
-- **建議改法（改前→改後）**：`shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile, at her seated eye level, from well back` → `shot from her left-rear side at her seated eye level from well back, with her full upward-tilted face and both towel horns visible`
+- **判定（甲／乙／丙／丁）**：
+- **理由**：
+- **若選丁，A/B 怎麼做**：
 
-## Q2 YG-08 near/far 相對命名
+## Q2 YG-03 / LG-09 的單件背景虛化句
 
-- **判定**：沒有足夠穩定的唯一解，改用角色自身的左／右手。
-- **理由**：讀者可由 `three-quarter front-left` 推出近相機側，但 `near hand` 緊接著 tray、`far hand` 緊接著 stool，模型仍可能把 near/far 綁到物件或畫面位置。角色的 left/right 是不依句法鄰近關係變動的標籤；本機位下左手也是近相機側，兩項資訊一致。
-- **建議改法（改前→改後）**：`carries a metal tray with an egg crepe in her near hand while her far hand grips the side edge of a red plastic stool` → `carries a metal tray with an egg crepe in her left hand while her right hand grips the side edge of a red plastic stool`
+- **`the balcony behind her falling out of focus`**：
+- **`with the shop behind her softly out of focus`**：
+- **`the wall menu out of focus`（含亂碼文字風險）**：
+- **理由**：
 
-## Q3 LG-10B 刻意寫正面
+## Q3 禁令範圍劃分
 
-- **判定**：保留明寫正面，但刪除同義重複。
-- **理由**：不寫只是在依賴模型預設，不能證明這是刻意保留的正面，也會讓 9/9 方位規則出現例外。它對方位分布、可重現性與後續失敗歸因都有實質作用；真正浪費的是 `straight-on` 與 `directly in front of her` 同時出現。
-- **建議改法（改前→改後）**：`shot straight-on from directly in front of her at chest level` → `shot straight-on at her chest level`
+- **判定**：
+- **理由**：
+- **要補進禁用清單的措辭**：
 
-## Q4 YG-09 sharp 算不算景深語言
-
-- **判定**：（乙）仍屬對焦／景深結果語言，A/B 通過前要移除。
-- **理由**：`face sharp` 明確指定焦平面結果，`facade still recognisable` 又指定另一深度平面的保留程度；把兩者寫成可見要求，並不會消除它們對景深的控制。可見物清單應寫「佔多少畫面、出現在哪裡、具備哪些可辨識形狀」，而不是 sharp／out of focus。
-- **建議改法（改前→改後）**：`with her face sharp and the broad building facade still recognisable beside it` → `with her face filling most of the frame and a broad strip of the building facade visible beside it, large enough to show its rows of windows`
-
-## Q5 逐件判定
+## Q5 六件最終判定
 
 | 件 | PASS / REVISE | 理由 | 具體改法（改前→改後） |
 |---|---|---|---|
-| YG-03 | **REVISE** | `Close half-body framing` 是 R13 已停用的景別名稱；`falling out of focus` 是 R14 尚未放行的景深語言。自拍構圖、單一可見手與光線路徑本身成立。 | `Close half-body framing, the phone camera held slightly to her front-right and just above eye level, the balcony behind her falling out of focus.` → `Her complete head, raised arm, torso, and the waistband of her shorts are visible, the phone camera held slightly to her front-right and just above eye level, with the balcony occupying the background.` |
-| YG-06 | **REVISE** | 後方方位與「繞到臉完整三分之四可見」互相拉扯；公共場景另含 `never looking` 否定句與 `softly out of focus` 未放行景深詞。 | `shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile, at her seated eye level, from well back` → `shot from her left-rear side at her seated eye level from well back, with her full upward-tilted face and both towel horns visible`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur` |
-| YG-08 | **REVISE** | 動作與兩個接觸點可成立，但 near/far 仍有指涉風險；公共場景也殘留否定句與未放行景深詞。雙色溫、門口高光犧牲與柱框景符合真人日常機制。 | `in her near hand while her far hand` → `in her left hand while her right hand`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur` |
-| YG-09 | **REVISE** | 畫內視線目標夠大，曝光犧牲也清楚；但 `face sharp` 仍是未通過 A/B 的對焦語言。 | `with her face sharp and the broad building facade still recognisable beside it` → `with her face filling most of the frame and a broad strip of the building facade visible beside it, large enough to show its rows of windows` |
-| LG-09 | **REVISE** | `Half body` 違反 R13；背景、牆面菜單與路人共有三處未放行的景深詞，且 `never` 是 D-05 否定句。插吸管的單一瞬間與手物關係成立。 | `Half body with the cup in frame, shot from her three-quarter front-right at her eye level, with the shop behind her softly out of focus.` → `Her complete head, torso through the waistline, both hands, and the cup are visible, shot from her three-quarter front-right at her eye level, with the shop occupying the background.`；`the wall menu out of focus` → `a wall menu with visible rows of menu panels`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur` |
-| LG-10B | **REVISE** | 正面方位應保留但可去重；`Half body` 違反 R13，公共場景仍有否定句與景深詞；`approach underfoot` 也不是足夠具名的反射表面。 | `Half body, shot straight-on from directly in front of her at chest level, plain hanging cloth curtains forming narrow blurred strips` → `Her complete head, torso through the obi, both hands, and the candy apple are visible, shot straight-on at her chest level, with plain hanging cloth curtains forming narrow strips`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur`；`the approach underfoot bouncing warm fill up` → `the pale stone-paved approach bouncing warm fill up under her chin` |
+| YG-03 | | | |
+| YG-06 | | | |
+| YG-08 | | | |
+| YG-09 | | | |
+| LG-09 | | | |
+| LG-10B | | | |
 
-## 補充（若有跨件的橫向問題請寫在這裡）
+## 補充
 
-- 本批六件皆為 **REVISE**，但沒有需要 **BLOCK** 的結構性衝突；完成上述精確替換後可再送。
-- 公共場景共用路人字串仍同時違反兩條已定案規則：`never looking at the camera` 是否定句，`softly out of focus` 是尚未通過 A/B 的景深語言。這不是單件問題，YG-06、YG-08、LG-09、LG-10B 應同步替換。
-- `subtle film grain` 與標頭「不要寫 grainy」不是同一件事：前者是輕微底片質感，沒有要求低畫質，可保留；若實測出現清晰度下降，再另立 A/B，不必在本輪先刪。
+- 
