@@ -270,6 +270,158 @@
       "eyes_and_brows": "圓開平視眼，眼距偏窄；眉平直、眉峰低",
       "nose": "中長直鼻，鼻樑窄直、鼻頭鈍小、鼻翼窄",
       "mouth": "寬口，上下唇量中等且均衡，嘴角平"
+    },
+    "ref_40": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.108、顎寬比=0.761、中庭佔比=0.401、下庭佔比=0.400；供 angel-chiu",
+      "eyes_and_brows": "數值目標：眼距比=1.119、眼開合比=0.359；供 angeline-kwee",
+      "nose": "數值目標：鼻翼比=0.205；供 cheryl-soh",
+      "mouth": "數值目標：口寬比=0.334、唇厚比=0.401；供 emma-kao"
+    },
+    "ref_41": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.359、顎寬比=0.744、中庭佔比=0.405、下庭佔比=0.393；供 angeline-kwee",
+      "eyes_and_brows": "數值目標：眼距比=1.335、眼開合比=0.453；供 cheryl-soh",
+      "nose": "數值目標：鼻翼比=0.248；供 emma-kao",
+      "mouth": "數值目標：口寬比=0.426、唇厚比=0.252；供 jia-seo"
+    },
+    "ref_42": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.334、顎寬比=0.740、中庭佔比=0.399、下庭佔比=0.398；供 cheryl-soh",
+      "eyes_and_brows": "數值目標：眼距比=1.142、眼開合比=0.329；供 emma-kao",
+      "nose": "數值目標：鼻翼比=0.248；供 jia-seo",
+      "mouth": "數值目標：口寬比=0.359、唇厚比=0.417；供 kanon-komori"
+    },
+    "ref_43": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.344、顎寬比=0.786、中庭佔比=0.486、下庭佔比=0.328；供 emma-kao",
+      "eyes_and_brows": "數值目標：眼距比=1.214、眼開合比=0.310；供 jia-seo",
+      "nose": "數值目標：鼻翼比=0.245；供 kanon-komori",
+      "mouth": "數值目標：口寬比=0.434、唇厚比=0.320；供 miu-shiraishi"
+    },
+    "ref_44": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.316、顎寬比=0.781、中庭佔比=0.425、下庭佔比=0.372；供 jia-seo",
+      "eyes_and_brows": "數值目標：眼距比=1.271、眼開合比=0.409；供 kanon-komori",
+      "nose": "數值目標：鼻翼比=0.271；供 miu-shiraishi",
+      "mouth": "數值目標：口寬比=0.336、唇厚比=0.329；供 nanami-fujiwara"
+    },
+    "ref_45": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.111、顎寬比=0.736、中庭佔比=0.456、下庭佔比=0.349；供 kanon-komori",
+      "eyes_and_brows": "數值目標：眼距比=1.199、眼開合比=0.409；供 miu-shiraishi",
+      "nose": "數值目標：鼻翼比=0.271；供 nanami-fujiwara",
+      "mouth": "數值目標：口寬比=0.426、唇厚比=0.495；供 peggy-lee"
+    },
+    "ref_46": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.126、顎寬比=0.766、中庭佔比=0.456、下庭佔比=0.351；供 miu-shiraishi",
+      "eyes_and_brows": "數值目標：眼距比=1.271、眼開合比=0.315；供 nanami-fujiwara",
+      "nose": "數值目標：鼻翼比=0.228；供 peggy-lee",
+      "mouth": "數值目標：口寬比=0.452、唇厚比=0.377；供 rin-ayase"
+    },
+    "ref_47": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.239、顎寬比=0.757、中庭佔比=0.434、下庭佔比=0.378；供 nanami-fujiwara",
+      "eyes_and_brows": "數值目標：眼距比=1.346、眼開合比=0.359；供 peggy-lee",
+      "nose": "數值目標：鼻翼比=0.238；供 rin-ayase",
+      "mouth": "數值目標：口寬比=0.456、唇厚比=0.406；供 ruoruo-tang"
+    },
+    "ref_48": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.276、顎寬比=0.786、中庭佔比=0.401、下庭佔比=0.396；供 peggy-lee",
+      "eyes_and_brows": "數值目標：眼距比=1.240、眼開合比=0.346；供 rin-ayase",
+      "nose": "數值目標：鼻翼比=0.229；供 ruoruo-tang",
+      "mouth": "數值目標：口寬比=0.455、唇厚比=0.497；供 somi-oh"
+    },
+    "ref_49": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.368、顎寬比=0.736、中庭佔比=0.478、下庭佔比=0.320；供 rin-ayase",
+      "eyes_and_brows": "數值目標：眼距比=1.271、眼開合比=0.317；供 ruoruo-tang",
+      "nose": "數值目標：鼻翼比=0.269；供 somi-oh",
+      "mouth": "數值目標：口寬比=0.410、唇厚比=0.326；供 sydney-leong"
+    },
+    "ref_50": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.196、顎寬比=0.810、中庭佔比=0.449、下庭佔比=0.364；供 ruoruo-tang",
+      "eyes_and_brows": "數值目標：眼距比=1.122、眼開合比=0.428；供 somi-oh",
+      "nose": "數值目標：鼻翼比=0.263；供 sydney-leong",
+      "mouth": "數值目標：口寬比=0.457、唇厚比=0.397；供 tammy-chou"
+    },
+    "ref_51": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.114、顎寬比=0.809、中庭佔比=0.412、下庭佔比=0.397；供 somi-oh",
+      "eyes_and_brows": "數值目標：眼距比=1.293、眼開合比=0.410；供 sydney-leong",
+      "nose": "數值目標：鼻翼比=0.255；供 tammy-chou",
+      "mouth": "數值目標：口寬比=0.316、唇厚比=0.270；供 wanyin-jiang"
+    },
+    "ref_52": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.108、顎寬比=0.786、中庭佔比=0.399、下庭佔比=0.398；供 sydney-leong",
+      "eyes_and_brows": "數值目標：眼距比=1.346、眼開合比=0.458；供 tammy-chou",
+      "nose": "數值目標：鼻翼比=0.225；供 wanyin-jiang",
+      "mouth": "數值目標：口寬比=0.362、唇厚比=0.397；供 wendy-yeo"
+    },
+    "ref_53": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.283、顎寬比=0.737、中庭佔比=0.426、下庭佔比=0.386；供 tammy-chou",
+      "eyes_and_brows": "數值目標：眼距比=1.260、眼開合比=0.318；供 wanyin-jiang",
+      "nose": "數值目標：鼻翼比=0.217；供 wendy-yeo",
+      "mouth": "數值目標：口寬比=0.362、唇厚比=0.315；供 yerin-han"
+    },
+    "ref_54": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.284、顎寬比=0.736、中庭佔比=0.439、下庭佔比=0.375；供 wanyin-jiang",
+      "eyes_and_brows": "數值目標：眼距比=1.260、眼開合比=0.310；供 wendy-yeo",
+      "nose": "數值目標：鼻翼比=0.227；供 yerin-han",
+      "mouth": "數值目標：口寬比=0.352、唇厚比=0.224；供 zhiyi-shen"
+    },
+    "ref_55": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.371、顎寬比=0.810、中庭佔比=0.408、下庭佔比=0.405；供 wendy-yeo",
+      "eyes_and_brows": "數值目標：眼距比=1.346、眼開合比=0.458；供 yerin-han",
+      "nose": "數值目標：鼻翼比=0.218；供 zhiyi-shen",
+      "mouth": "數值目標：口寬比=0.315、唇厚比=0.497；供 zoey-yeh"
+    },
+    "ref_56": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.196、顎寬比=0.811、中庭佔比=0.419、下庭佔比=0.378；供 yerin-han",
+      "eyes_and_brows": "數值目標：眼距比=1.173、眼開合比=0.359；供 zhiyi-shen",
+      "nose": "數值目標：鼻翼比=0.227；供 zoey-yeh",
+      "mouth": "數值目標：口寬比=0.315、唇厚比=0.405；供 angel-chiu"
+    },
+    "ref_57": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.371、顎寬比=0.763、中庭佔比=0.469、下庭佔比=0.329；供 zhiyi-shen",
+      "eyes_and_brows": "數值目標：眼距比=1.346、眼開合比=0.456；供 zoey-yeh",
+      "nose": "數值目標：鼻翼比=0.249；供 angel-chiu",
+      "mouth": "數值目標：口寬比=0.362、唇厚比=0.231；供 angeline-kwee"
+    },
+    "ref_58": {
+      "shot": "原創合成標準正面照；正面、頭髮後梳綁起、無妝、灰色圓領 T、均勻平光；依 R8 數值目標生成，待 MediaPipe 實測與 builder QA",
+      "usability": "pending_numeric_validation",
+      "face_shape_and_jaw": "數值目標：臉長寬比=1.195、顎寬比=0.810、中庭佔比=0.434、下庭佔比=0.380；供 zoey-yeh",
+      "eyes_and_brows": "數值目標：眼距比=1.196、眼開合比=0.409；供 angel-chiu",
+      "nose": "數值目標：鼻翼比=0.205；供 angeline-kwee",
+      "mouth": "數值目標：口寬比=0.314、唇厚比=0.395；供 cheryl-soh"
     }
   }
 }

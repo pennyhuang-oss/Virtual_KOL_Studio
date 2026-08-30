@@ -286,6 +286,310 @@
       "generated_on": "2026-08-30",
       "input_images": [],
       "real_person_or_public_figure_reference": false
+    },
+    "ref_40": {
+      "file": "review/batch3_face_refs/ref_40.jpg",
+      "sha256": "c4d591610c66c6d5bcd20ebdd33fe8698f2ed3fd026768b72739827245021822",
+      "role": "numeric-target source; 臉長寬比=1.108; 顎寬比=0.761; 中庭佔比=0.401; 下庭佔比=0.400; 眼距比=1.119; 眼開合比=0.359; 鼻翼比=0.205; 口寬比=0.334; 唇厚比=0.401",
+      "recommended_persona": "angel-chiu (face); angeline-kwee (eyes); cheryl-soh (nose); emma-kao (mouth)",
+      "dimensions_px": [
+        1122,
+        1402
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_41": {
+      "file": "review/batch3_face_refs/ref_41.jpg",
+      "sha256": "cc9b3c602cbcf5681fde1397ce2441845f687c7dbdcf2d5f8bea6254a1fc52d6",
+      "role": "numeric-target source; 臉長寬比=1.359; 顎寬比=0.744; 中庭佔比=0.405; 下庭佔比=0.393; 眼距比=1.335; 眼開合比=0.453; 鼻翼比=0.248; 口寬比=0.426; 唇厚比=0.252",
+      "recommended_persona": "angeline-kwee (face); cheryl-soh (eyes); emma-kao (nose); jia-seo (mouth)",
+      "dimensions_px": [
+        1014,
+        1551
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_42": {
+      "file": "review/batch3_face_refs/ref_42.jpg",
+      "sha256": "03d236902e7a15274a970965f199290578fc4dc2d68fa8aa57776981ccb3ddd2",
+      "role": "numeric-target source; 臉長寬比=1.334; 顎寬比=0.740; 中庭佔比=0.399; 下庭佔比=0.398; 眼距比=1.142; 眼開合比=0.329; 鼻翼比=0.248; 口寬比=0.359; 唇厚比=0.417",
+      "recommended_persona": "cheryl-soh (face); emma-kao (eyes); jia-seo (nose); kanon-komori (mouth)",
+      "dimensions_px": [
+        1122,
+        1402
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_43": {
+      "file": "review/batch3_face_refs/ref_43.jpg",
+      "sha256": "654f05a401332ac7ea279fbbf2da506c38e2e953ca2aff1e22b91cd4db44f369",
+      "role": "numeric-target source; 臉長寬比=1.344; 顎寬比=0.786; 中庭佔比=0.486; 下庭佔比=0.328; 眼距比=1.214; 眼開合比=0.310; 鼻翼比=0.245; 口寬比=0.434; 唇厚比=0.320",
+      "recommended_persona": "emma-kao (face); jia-seo (eyes); kanon-komori (nose); miu-shiraishi (mouth)",
+      "dimensions_px": [
+        1023,
+        1537
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_44": {
+      "file": "review/batch3_face_refs/ref_44.jpg",
+      "sha256": "993fe3aeb1bcd38258c25c3208ea91f948fe592176c09a54f4de3da2e62034df",
+      "role": "numeric-target source; 臉長寬比=1.316; 顎寬比=0.781; 中庭佔比=0.425; 下庭佔比=0.372; 眼距比=1.271; 眼開合比=0.409; 鼻翼比=0.271; 口寬比=0.336; 唇厚比=0.329",
+      "recommended_persona": "jia-seo (face); kanon-komori (eyes); miu-shiraishi (nose); nanami-fujiwara (mouth)",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_45": {
+      "file": "review/batch3_face_refs/ref_45.jpg",
+      "sha256": "a826a885ce656351836fc5e19d4e2aa4d45741ab79e372fa8e4423f564d6f433",
+      "role": "numeric-target source; 臉長寬比=1.111; 顎寬比=0.736; 中庭佔比=0.456; 下庭佔比=0.349; 眼距比=1.199; 眼開合比=0.409; 鼻翼比=0.271; 口寬比=0.426; 唇厚比=0.495",
+      "recommended_persona": "kanon-komori (face); miu-shiraishi (eyes); nanami-fujiwara (nose); peggy-lee (mouth)",
+      "dimensions_px": [
+        1182,
+        1331
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_46": {
+      "file": "review/batch3_face_refs/ref_46.jpg",
+      "sha256": "43652f3f9a7cd65bc1d75382838a0b20c98606997aa0559c8eec78251278299e",
+      "role": "numeric-target source; 臉長寬比=1.126; 顎寬比=0.766; 中庭佔比=0.456; 下庭佔比=0.351; 眼距比=1.271; 眼開合比=0.315; 鼻翼比=0.228; 口寬比=0.452; 唇厚比=0.377",
+      "recommended_persona": "miu-shiraishi (face); nanami-fujiwara (eyes); peggy-lee (nose); rin-ayase (mouth)",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_47": {
+      "file": "review/batch3_face_refs/ref_47.jpg",
+      "sha256": "1d59606532973824ad7a7cb4b3fab427c957cb3b3ba270edf1f2000ebb549246",
+      "role": "numeric-target source; 臉長寬比=1.239; 顎寬比=0.757; 中庭佔比=0.434; 下庭佔比=0.378; 眼距比=1.346; 眼開合比=0.359; 鼻翼比=0.238; 口寬比=0.456; 唇厚比=0.406",
+      "recommended_persona": "nanami-fujiwara (face); peggy-lee (eyes); rin-ayase (nose); ruoruo-tang (mouth)",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_48": {
+      "file": "review/batch3_face_refs/ref_48.jpg",
+      "sha256": "cc6669d3827e899b4e6f5187f2b3f178d3944e5cfa1f52265a1e9ef2deb97311",
+      "role": "numeric-target source; 臉長寬比=1.276; 顎寬比=0.786; 中庭佔比=0.401; 下庭佔比=0.396; 眼距比=1.240; 眼開合比=0.346; 鼻翼比=0.229; 口寬比=0.455; 唇厚比=0.497",
+      "recommended_persona": "peggy-lee (face); rin-ayase (eyes); ruoruo-tang (nose); somi-oh (mouth)",
+      "dimensions_px": [
+        1023,
+        1538
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_49": {
+      "file": "review/batch3_face_refs/ref_49.jpg",
+      "sha256": "a7bcd03ede6c7b1fb18971e0dfce1c2fc4236a36ba2e493b77a18ef1fa41bbfe",
+      "role": "numeric-target source; 臉長寬比=1.368; 顎寬比=0.736; 中庭佔比=0.478; 下庭佔比=0.320; 眼距比=1.271; 眼開合比=0.317; 鼻翼比=0.269; 口寬比=0.410; 唇厚比=0.326",
+      "recommended_persona": "rin-ayase (face); ruoruo-tang (eyes); somi-oh (nose); sydney-leong (mouth)",
+      "dimensions_px": [
+        1023,
+        1537
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_50": {
+      "file": "review/batch3_face_refs/ref_50.jpg",
+      "sha256": "d15b342d6768aeecb9e972b24149366fcbcd0ac61f880ca12c39fdc475b381e6",
+      "role": "numeric-target source; 臉長寬比=1.196; 顎寬比=0.810; 中庭佔比=0.449; 下庭佔比=0.364; 眼距比=1.122; 眼開合比=0.428; 鼻翼比=0.263; 口寬比=0.457; 唇厚比=0.397",
+      "recommended_persona": "ruoruo-tang (face); somi-oh (eyes); sydney-leong (nose); tammy-chou (mouth)",
+      "dimensions_px": [
+        1537,
+        1023
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_51": {
+      "file": "review/batch3_face_refs/ref_51.jpg",
+      "sha256": "65151f6d7a61e705b7eaf777c9f3aa24146466f7f686e59ef5141b9a3b8e173e",
+      "role": "numeric-target source; 臉長寬比=1.114; 顎寬比=0.809; 中庭佔比=0.412; 下庭佔比=0.397; 眼距比=1.293; 眼開合比=0.410; 鼻翼比=0.255; 口寬比=0.316; 唇厚比=0.270",
+      "recommended_persona": "somi-oh (face); sydney-leong (eyes); tammy-chou (nose); wanyin-jiang (mouth)",
+      "dimensions_px": [
+        1537,
+        1023
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_52": {
+      "file": "review/batch3_face_refs/ref_52.jpg",
+      "sha256": "85747d2d436d56bed569ea07fbbe12251b9c006cc214a00d05fb0c33da544b50",
+      "role": "numeric-target source; 臉長寬比=1.108; 顎寬比=0.786; 中庭佔比=0.399; 下庭佔比=0.398; 眼距比=1.346; 眼開合比=0.458; 鼻翼比=0.225; 口寬比=0.362; 唇厚比=0.397",
+      "recommended_persona": "sydney-leong (face); tammy-chou (eyes); wanyin-jiang (nose); wendy-yeo (mouth)",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_53": {
+      "file": "review/batch3_face_refs/ref_53.jpg",
+      "sha256": "96a67aba6a64fb7067c5d50a6e52036dc93d42611ddb2397d7d9ec0d9c70b625",
+      "role": "numeric-target source; 臉長寬比=1.283; 顎寬比=0.737; 中庭佔比=0.426; 下庭佔比=0.386; 眼距比=1.260; 眼開合比=0.318; 鼻翼比=0.217; 口寬比=0.362; 唇厚比=0.315",
+      "recommended_persona": "tammy-chou (face); wanyin-jiang (eyes); wendy-yeo (nose); yerin-han (mouth)",
+      "dimensions_px": [
+        1054,
+        1492
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_54": {
+      "file": "review/batch3_face_refs/ref_54.jpg",
+      "sha256": "a496b085ba000a8455202f825094a52f6b1534e98e3be8b2851b7adc1500e6aa",
+      "role": "numeric-target source; 臉長寬比=1.284; 顎寬比=0.736; 中庭佔比=0.439; 下庭佔比=0.375; 眼距比=1.260; 眼開合比=0.310; 鼻翼比=0.227; 口寬比=0.352; 唇厚比=0.224",
+      "recommended_persona": "wanyin-jiang (face); wendy-yeo (eyes); yerin-han (nose); zhiyi-shen (mouth)",
+      "dimensions_px": [
+        1023,
+        1537
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_55": {
+      "file": "review/batch3_face_refs/ref_55.jpg",
+      "sha256": "c841c287a81f094cfcfa920489d426244bb159e7743b2b239f2cf7ab89680c56",
+      "role": "numeric-target source; 臉長寬比=1.371; 顎寬比=0.810; 中庭佔比=0.408; 下庭佔比=0.405; 眼距比=1.346; 眼開合比=0.458; 鼻翼比=0.218; 口寬比=0.315; 唇厚比=0.497",
+      "recommended_persona": "wendy-yeo (face); yerin-han (eyes); zhiyi-shen (nose); zoey-yeh (mouth)",
+      "dimensions_px": [
+        954,
+        1648
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_56": {
+      "file": "review/batch3_face_refs/ref_56.jpg",
+      "sha256": "99ea819172d9881cdcf027fd407893b99e98d9af6e83f7f5ccb8b1ba7d7f95f1",
+      "role": "numeric-target source; 臉長寬比=1.196; 顎寬比=0.811; 中庭佔比=0.419; 下庭佔比=0.378; 眼距比=1.173; 眼開合比=0.359; 鼻翼比=0.227; 口寬比=0.315; 唇厚比=0.405",
+      "recommended_persona": "yerin-han (face); zhiyi-shen (eyes); zoey-yeh (nose); angel-chiu (mouth)",
+      "dimensions_px": [
+        1104,
+        1424
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_57": {
+      "file": "review/batch3_face_refs/ref_57.jpg",
+      "sha256": "fe55f05c4edf7504546c9e2185ba02d355e69e1d0ae516d83d3f5dbb7567d34d",
+      "role": "numeric-target source; 臉長寬比=1.371; 顎寬比=0.763; 中庭佔比=0.469; 下庭佔比=0.329; 眼距比=1.346; 眼開合比=0.456; 鼻翼比=0.249; 口寬比=0.362; 唇厚比=0.231",
+      "recommended_persona": "zhiyi-shen (face); zoey-yeh (eyes); angel-chiu (nose); angeline-kwee (mouth)",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
+    },
+    "ref_58": {
+      "file": "review/batch3_face_refs/ref_58.jpg",
+      "sha256": "0172d3a65804a6c982b234cc51648b58baa6298d301cb0156f21f3177330ae55",
+      "role": "numeric-target source; 臉長寬比=1.195; 顎寬比=0.810; 中庭佔比=0.434; 下庭佔比=0.380; 眼距比=1.196; 眼開合比=0.409; 鼻翼比=0.205; 口寬比=0.314; 唇厚比=0.395",
+      "recommended_persona": "zoey-yeh (face); angel-chiu (eyes); angeline-kwee (nose); cheryl-soh (mouth)",
+      "dimensions_px": [
+        1371,
+        1148
+      ],
+      "usability": "pending_numeric_validation",
+      "source_type": "original_synthetic",
+      "generator": "OpenAI built-in image generation",
+      "generated_on": "2026-08-31",
+      "input_images": [],
+      "real_person_or_public_figure_reference": false
     }
   }
 }
