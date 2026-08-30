@@ -148,39 +148,41 @@ near/far 對觀者應該有唯一解。但這是我第一次用相對命名，�
 
 ## Q1 YG-06 方位＋條件子句
 
-- **判定**：
-- **理由**：
-- **建議改法（改前→改後）**：
+- **判定**：改成「固定方位＋可見物清單」。
+- **理由**：現在的 `far enough around her side that...` 是會反向改寫機位的自我修正指令；模型若優先保臉，最安全的解就是退到側面或前側，使 `rear-left quarter` 失去作用。可見物清單只定義驗收結果，不再命令相機「繞回去」。但「完整臉以三分之四側臉可見」與真正的後方四分之三仍有物理張力，因此不要把 `three-quarter profile` 再塞回清單。
+- **建議改法（改前→改後）**：`shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile, at her seated eye level, from well back` → `shot from her left-rear side at her seated eye level from well back, with her full upward-tilted face and both towel horns visible`
 
 ## Q2 YG-08 near/far 相對命名
 
-- **判定**：
-- **理由**：
-- **建議改法（改前→改後）**：
+- **判定**：沒有足夠穩定的唯一解，改用角色自身的左／右手。
+- **理由**：讀者可由 `three-quarter front-left` 推出近相機側，但 `near hand` 緊接著 tray、`far hand` 緊接著 stool，模型仍可能把 near/far 綁到物件或畫面位置。角色的 left/right 是不依句法鄰近關係變動的標籤；本機位下左手也是近相機側，兩項資訊一致。
+- **建議改法（改前→改後）**：`carries a metal tray with an egg crepe in her near hand while her far hand grips the side edge of a red plastic stool` → `carries a metal tray with an egg crepe in her left hand while her right hand grips the side edge of a red plastic stool`
 
 ## Q3 LG-10B 刻意寫正面
 
-- **判定**：
-- **理由**：
-- **建議改法（改前→改後）**：
+- **判定**：保留明寫正面，但刪除同義重複。
+- **理由**：不寫只是在依賴模型預設，不能證明這是刻意保留的正面，也會讓 9/9 方位規則出現例外。它對方位分布、可重現性與後續失敗歸因都有實質作用；真正浪費的是 `straight-on` 與 `directly in front of her` 同時出現。
+- **建議改法（改前→改後）**：`shot straight-on from directly in front of her at chest level` → `shot straight-on at her chest level`
 
 ## Q4 YG-09 sharp 算不算景深語言
 
-- **判定**：
-- **理由**：
-- **建議改法（改前→改後）**：
+- **判定**：（乙）仍屬對焦／景深結果語言，A/B 通過前要移除。
+- **理由**：`face sharp` 明確指定焦平面結果，`facade still recognisable` 又指定另一深度平面的保留程度；把兩者寫成可見要求，並不會消除它們對景深的控制。可見物清單應寫「佔多少畫面、出現在哪裡、具備哪些可辨識形狀」，而不是 sharp／out of focus。
+- **建議改法（改前→改後）**：`with her face sharp and the broad building facade still recognisable beside it` → `with her face filling most of the frame and a broad strip of the building facade visible beside it, large enough to show its rows of windows`
 
 ## Q5 逐件判定
 
 | 件 | PASS / REVISE | 理由 | 具體改法（改前→改後） |
 |---|---|---|---|
-| YG-03 | | | |
-| YG-06 | | | |
-| YG-08 | | | |
-| YG-09 | | | |
-| LG-09 | | | |
-| LG-10B | | | |
+| YG-03 | **REVISE** | `Close half-body framing` 是 R13 已停用的景別名稱；`falling out of focus` 是 R14 尚未放行的景深語言。自拍構圖、單一可見手與光線路徑本身成立。 | `Close half-body framing, the phone camera held slightly to her front-right and just above eye level, the balcony behind her falling out of focus.` → `Her complete head, raised arm, torso, and the waistband of her shorts are visible, the phone camera held slightly to her front-right and just above eye level, with the balcony occupying the background.` |
+| YG-06 | **REVISE** | 後方方位與「繞到臉完整三分之四可見」互相拉扯；公共場景另含 `never looking` 否定句與 `softly out of focus` 未放行景深詞。 | `shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile, at her seated eye level, from well back` → `shot from her left-rear side at her seated eye level from well back, with her full upward-tilted face and both towel horns visible`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur` |
+| YG-08 | **REVISE** | 動作與兩個接觸點可成立，但 near/far 仍有指涉風險；公共場景也殘留否定句與未放行景深詞。雙色溫、門口高光犧牲與柱框景符合真人日常機制。 | `in her near hand while her far hand` → `in her left hand while her right hand`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur` |
+| YG-09 | **REVISE** | 畫內視線目標夠大，曝光犧牲也清楚；但 `face sharp` 仍是未通過 A/B 的對焦語言。 | `with her face sharp and the broad building facade still recognisable beside it` → `with her face filling most of the frame and a broad strip of the building facade visible beside it, large enough to show its rows of windows` |
+| LG-09 | **REVISE** | `Half body` 違反 R13；背景、牆面菜單與路人共有三處未放行的景深詞，且 `never` 是 D-05 否定句。插吸管的單一瞬間與手物關係成立。 | `Half body with the cup in frame, shot from her three-quarter front-right at her eye level, with the shop behind her softly out of focus.` → `Her complete head, torso through the waistline, both hands, and the cup are visible, shot from her three-quarter front-right at her eye level, with the shop occupying the background.`；`the wall menu out of focus` → `a wall menu with visible rows of menu panels`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur` |
+| LG-10B | **REVISE** | 正面方位應保留但可去重；`Half body` 違反 R13，公共場景仍有否定句與景深詞；`approach underfoot` 也不是足夠具名的反射表面。 | `Half body, shot straight-on from directly in front of her at chest level, plain hanging cloth curtains forming narrow blurred strips` → `Her complete head, torso through the obi, both hands, and the candy apple are visible, shot straight-on at her chest level, with plain hanging cloth curtains forming narrow strips`；`backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur` → `backs turned or heads angled toward their own activities, with slight motion blur`；`the approach underfoot bouncing warm fill up` → `the pale stone-paved approach bouncing warm fill up under her chin` |
 
 ## 補充（若有跨件的橫向問題請寫在這裡）
 
-- 
+- 本批六件皆為 **REVISE**，但沒有需要 **BLOCK** 的結構性衝突；完成上述精確替換後可再送。
+- 公共場景共用路人字串仍同時違反兩條已定案規則：`never looking at the camera` 是否定句，`softly out of focus` 是尚未通過 A/B 的景深語言。這不是單件問題，YG-06、YG-08、LG-09、LG-10B 應同步替換。
+- `subtle film grain` 與標頭「不要寫 grainy」不是同一件事：前者是輕微底片質感，沒有要求低畫質，可保留；若實測出現清晰度下降，再另立 A/B，不必在本輪先刪。
