@@ -175,64 +175,64 @@ Seen from behind over her shoulder, a young woman leans toward the counter and d
 ## 回覆區（請只填這一段）
 
 ### Q1 寫相機位置不要寫身體朝向，這條成立嗎
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：方向成立，但證據只足以支持「相機方位應優先明寫」，不足以推出「身體朝向永遠不要寫」。
+- **理由**：LG-07 的對照證明，在沒有相機方位時，單寫 hips／shoulders 的相對轉向不會自然改變觀看方位；改成 `Following her from behind` 後，模型收到的是明確的視點切換，因此成功率較高。不過這組對照同時改了句型、語意強度與任務難度，只有 2/2 對 2/2，不能分離出唯一因果。相機位置控制「從哪裡看」，身體／頭部朝向控制「她在做什麼、哪些部位可見」；遇到回頭、手物接觸或臉必須清楚時，兩者仍可能都需要。這 9 件改成以相機位置為主軸，方向沒有改錯。
+- **建議改法**：建立固定順序：先寫相機相對於她的方位（front-left／side／rear-right），再寫高度與距離，最後只在硬驗收需要時補身體或頭部朝向。不要用身體朝向代替相機方位，也不要把「不要寫身體朝向」升格成禁則。每件應明寫一個方位，包括有意保留的正面。
 
 ### Q2 焦段與景深語言對 soul_2 有效嗎，要不要先單獨 preflight
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：目前無法判定對 `soul_2` 是否有效；必須先 preflight，不能把 `short telephoto`、`compressed`、`shallow depth of field` 當成已驗證機制直接擴散。
+- **理由**：焦段、透視壓縮與景深是三個相關但不同的結果。現在把 `short telephoto` 和 `compressed` 同時加入 LG-09／LG-10B，只能知道整句是否出圖，無法知道哪個詞有效；YG-09 的 `only her face sharp` 又可能讓作為視線目標的窗外立面失去可辨識度。一般攝影語言合理，不等於此生成流程與 soul 一定遵從，也不能由既有的 `out of focus` 反推焦段有效。
+- **建議改法**：先用 LG-09 做固定 seed／同一完整 prompt 的最小 A/B：A 不含焦段句，B 只加 `shot on a short telephoto, with the shop background visually compressed`，每組至少 2 張，驗收人物比例、透視壓縮、豆漿杯與雙手是否維持。景深另用 YG-09 做第二個獨立 A/B，不要與焦段合併測；在通過前，LG-09／LG-10B 可先移除新焦段句，YG-09 可先沿用已使用過的背景柔化語言，而不是 `only her face sharp`。
 
 ### Q3 方位覆蓋率與分布
-- **判定**：
-- **理由**：
-- **建議改法**：
+- **判定**：不必追改已凍結的 12 件，也不應為了壓低正面而強迫每件變成側面；但未生成 9 件目前只有 6 件具明確方位，仍不夠完整。
+- **理由**：總體 7/21 受 12 件凍結素材限制，不能反映本輪控制品質。這 9 件中，LG-02、LG-05、LG-09、YG-06、YG-08、YG-10 有方位；LG-10B 只有焦段，YG-03 只有高度／背景失焦，YG-09 只有高度／景深，三件仍可能回到預設正面。合理分布應包含有目的的正面、左右三分之四、側面、後側與過肩，而不是把「非正面率」當唯一 KPI。LG-10B 的對稱框架加看鏡頭，本來就可以是有意識的正面；問題是現在沒有把它明寫成設計選擇。
+- **建議改法**：把本輪 KPI 改成「未生成件 9/9 明寫相機方位」，不是「全案非正面達某比例」。LG-10B 明寫 deliberate straight-on；YG-03 改成稍偏左或右的自拍方位；YG-09 從窗側做輕微三分之四角度。左右側也要實際平衡，避免所有三分之四都落在同一側。
 
 ### LG-02
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS
+- **理由**：三分之四前左＋略高俯拍與蹲姿、紙箱開口、地板接觸點相容，且 `shot from well back` 有助保留雙膝與雙手。這裡的方位是實際相機位置，不靠身體扭轉；室內晨光、紙箱與睡亂頭髮也符合不過度美化的日常感。
+- **建議改法**：可原樣送。驗收時額外確認略高角度沒有讓揉眼手遮住未揉眼的視線，或把紙箱開口藏在膝後。
 
 ### LG-05
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS
+- **理由**：側面相機與「跨出亭子、撐傘、另一手試雨」是自然一致的動作視角；navel level＋well back 也能容納傘面到小腿。既有兩項手傘關係已有 2/2 證據，新方位沒有和底部三分之一的地面驗收直接衝突，路人、雨地反光與冷暖色來源也保留真人抓拍感。
+- **建議改法**：可原樣送。生成時把「完整側面成立、兩隻手不重疊、傘面與小腿同時保留」列為新方位的額外驗收。
 
 ### LG-09
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：三分之四前右適合看清杯子、封膜與兩手接觸，景別本身沒有衝突；但 `short telephoto`＋`compressed` 尚未實測，不能在同一件直接視為已放行。另 `both forearms supported` 可能把正在向下插吸管的手臂壓成不自然姿勢，雖非必然失敗，應避免把「雙前臂固定」設成比手部任務更強的約束。
+- **建議改法**：先做 Q2 的焦段 A/B。若要在 preflight 前送正式生成，暫刪 `on a short telephoto with the shop behind her compressed`，保留 `shot from her three-quarter front-right at her eye level, with the shop behind her softly out of focus`；並把首句改成一手臂可輕靠櫃邊、另一手自由向下插吸管。
 
 ### LG-10B
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：布簾窄條、中央安全區、半身與看鏡頭彼此相容，且正面對稱構圖在這件有合理用途；但目前沒有相機方位，`short telephoto` 也未實測，所以它沒有真正補上本輪的方位缺口。焦段壓縮若改變背景與布簾層次，也可能削弱框架物的前景感。
+- **建議改法**：先移除或等待焦段 preflight，再明寫 `shot straight-on from directly in front of her at chest level`，把正面定義為有意選擇。布簾應保留為靠近鏡頭的模糊前景窄條，不要讓 `compressed` 同時承擔前景框架與背景攤位兩種深度關係。
 
 ### YG-03
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：這件雖是自拍，仍只有高度而沒有左右方位；已知模型會回到正面，因此 `In a phone selfie` 不足以提供視角變化。關閉手機與自拍手入鏡、只留一隻取毛巾的手，是必要安全機制，新增方位不能破壞。背景 `falling out of focus` 屬既有類型，不等於本輪未驗證的焦段句。
+- **建議改法**：在自拍句補一個輕微偏側方位，例如 `the phone camera held slightly to her front-right and just above eye level`；同時保留 exactly one visible hand 與手機／自拍手在框外的完整句。不要改成大角度三分之四，否則舉手、毛巾與臉容易互相遮擋。
 
 ### YG-06
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：三分之四後側能提供本批最需要的視角差異，但她只把臉仰起、沒有轉頭；從真正的 three-quarter back 拍，臉可能被後腦與肩膀遮掉，和臉部清楚曝光、完整頭部及 soul 辨識需求衝突。完整盤腿、雙腳、地板留白與 seated eye level／well back 則相容。
+- **建議改法**：仍以相機位置解，不要新增大幅扭頭：改成 `shot from her rear-left quarter, far enough around her side that her upward-tilted face remains fully visible in three-quarter profile, at her seated eye level, from well back`。若模型仍遮臉，再把方位收回側後方，不要要求身體與頭同時反扭。
 
 ### YG-08
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：純側面會讓近側手、遠側手、托盤、凳子與身體落在同一條深度線，增加兩個接觸點互相遮擋的機率；而這件硬驗收恰好要求兩個接觸點、食物與凳面都在中央區。框架柱只在單側外緣沒有直接衝突，但 `from her side` 未指定左或右，也還不是可重現的方位。
+- **建議改法**：改為明確的輕度三分之四前側，例如 `shot from her three-quarter front-left at chest level`，並指定哪一手端盤、哪一手拉凳，選擇讓兩手在畫面中分離的一側。柱子放在相反側最外緣，維持不與人、盤、凳重疊。
 
 ### YG-09
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：REVISE
+- **理由**：`shallow depth of field with only her face sharp` 尚未實測，且可能把必須作為視線目標的建築立面糊成無法辨識的色塊；同時這件仍沒有左右方位。大特寫、窗景窄條、浴袍領口與雙手裁出畫面本身相容，但「只有臉清楚」不應在未驗證前凌駕「視線目標要夠大且必然被畫出」。
+- **建議改法**：先拿掉 `only her face sharp`，改成 `shot from slightly on the window side in a three-quarter close-up at her eye level, with her face sharp and the broad building facade still recognisable beside it`。景深另做 Q2 的獨立 A/B；只有確認立面仍可辨識後，才把淺景深版本升格為正式 prompt。
 
 ### YG-10
-- **判定**：PASS ／ REVISE ／ BLOCK →
-- **理由**：
-- **建議改法**：
+- **判定**：PASS
+- **理由**：`Seen from behind over her shoulder` 與 `camera behind her shoulder at chest level` 已同時指定方位與高度，前景肩膀／後腦、中段櫃檯與手背的層次也符合過肩視角。手背試色是夠大且在畫面內的視線目標；玻璃櫃、冷暖雙色溫與公共場景路人符合對標帳號的視角混合與真人日常機制。
+- **建議改法**：可原樣送。驗收時確認前景肩膀只作框架，不遮住兩隻手、口紅與色塊接觸點。
 
 ### 其他（只寫會導致生成失敗的項目）
--
+- Q2 的 preflight 必須把焦段與景深拆成兩個測試；若同時改方位、焦段、壓縮與景深，結果無法回填成可重用規則。
