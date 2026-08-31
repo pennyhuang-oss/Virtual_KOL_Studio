@@ -14,8 +14,14 @@ import json, re, sys
 ERR = []
 def err(m): ERR.append(m)
 
-spec = json.load(open('pilot/batch3_casting.json', encoding='utf-8'))
-pr   = json.load(open('pilot/batch3_casting_prompts.json', encoding='utf-8'))
+V2 = '--v2' in sys.argv
+spec = json.load(open('pilot/batch3_casting_v2.json' if V2 else 'pilot/batch3_casting.json',
+                      encoding='utf-8'))
+pr = json.load(open('pilot/batch3_casting_prompts_v2.json' if V2
+                    else 'pilot/batch3_casting_prompts.json', encoding='utf-8'))
+if V2:
+    # v2 每筆是 {'prompt':…, 'crops':[…]}，臉改由裁切決定，沒有 face_negative 這一行
+    pr = {k: v['prompt'] for k, v in pr.items()}
 sys.path.insert(0, 'tools')
 from build_casting_prompts import SHOTS
 SH = {s['id']: s for s in SHOTS}
@@ -38,7 +44,9 @@ for key, txt in pr.items():
     p = spec['personas'][pid]
     f = SH[sid]['framing']
     lines = txt.split('\n')
-    neg_ok = {p['face_negative'], spec['shared']['skin_en']}
+    neg_ok = {spec['shared']['skin_en']}
+    if 'face_negative' in p:
+        neg_ok.add(p['face_negative'])
 
     # 1. 否定式只准出現在 face_negative 與 skin 兩行
     for ln in lines:

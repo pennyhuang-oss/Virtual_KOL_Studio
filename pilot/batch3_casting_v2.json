@@ -1,0 +1,770 @@
+{
+ "_schema": "batch3_casting/v2",
+ "_face_note": "臉由四張裁切＋face_en 的位置式指派決定，不再用文字描述臉；face_base／face_negative 已整組移除。",
+ "_outfit_note": "選角服裝一律合身：第一版寬鬆家居服把胸線蓋掉，16/16 把 E 罩杯畫成平胸。",
+ "_negation_note": "全檔不寫否定句。已實測模型不執行否定。",
+ "shared": {
+  "skin_en": "Fair, luminous, porcelain-toned skin with natural tonal variation and visible pores — NOT tanned, NOT bronzed, NOT olive, NOT deep golden or wheat-coloured.",
+  "_skin_note": "顏色類否定是這個模型少數真的會執行的否定（Round 2 實測 `not tanned` 有效），因此保留。構圖與服裝結構的否定一律不可用。",
+  "makeup_en": "Her face is bare: her lips are close to the natural colour of her own mouth, matte, with a soft undefined edge; her eyebrows are soft and natural; her lashes are her own and unmade.",
+  "framings": [
+   "face_closeup",
+   "waist_up",
+   "knee_up",
+   "full_body"
+  ],
+  "_barefoot_note": "赤腳不能寫進 `She is wearing ...` 的清單（會變成『穿著她赤腳』），也不能沿用預設的全身景別句（那句寫 `down to her shoes`／`legs and shoes are clearly visible`，與赤腳直接衝突，等於同時要求畫鞋與不畫鞋）。改為 barefoot 旗標 + 專用的全身景別句。",
+  "framing_full_body_barefoot": "The whole of her is inside the picture, from the top of her head down to her bare feet on the floor, with a margin of empty floor below her feet and a little space above her head. Her legs and bare feet are clearly visible.",
+  "_negation_scope": "否定式只准出現在 face_negative 與 skin_en 兩行。face_base、identity_markers、髮色、身材一律正面描述——這是 Round 2 用四張作廢圖換來的：構圖與結構的否定完全無效，會與同一段裡的正面描述互相競爭。",
+  "_body_note": "2026-08-28 選角實測改版。第一版 16/16 全部把 E 罩杯畫成纖細平胸，wendy 與 angeline 甚至瘦到見骨——與 rainie-hsu v1 整批作廢的死法完全相同。成因：胸部寫在從句、slim／slender／narrow／thin 堆在主句，模型抓主句。改法：(1) 胸部放句首當第一視覺事實並給比較基準（把衣服撐出去多遠）；(2) 主動寫四肢有健康的肉，對抗伸展台體型；(3) 身高改用可比對的環境地標（kanon「頭頂約到桌面與層架的高度」），不要只給數字。",
+  "_closed_set_note": "2026-08-28 實測：**提到攝影器材就會把器材畫進畫面——即使那句話是在說它在畫面外。** yerin/a04 出現三腳架單眼，angeline/a02 與 a03 出現另一隻手拿著手機（等於畫面裡有第二個人）。16 張裡 3 張，是系統性的，與 Round 1 的 `white foam board just out of frame` 同一類。收尾句一律不再提 imaging device／phone／camera 的位置。"
+ },
+ "personas": {
+  "angel-chiu": {
+   "display": "angel-chiu",
+   "age": 23,
+   "ethnicity_zh": "台灣",
+   "face_en": "Create a new 23-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a broad softly squared facial canvas, a short midface, moderate low cheek padding, and a soft square jaw ending in a short blunt chin. Use medium-spaced open level eyes, a straight medium nose, and a compact mouth with restrained lip volume.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_40",
+    "EYES_AND_BROWS": "ref_58",
+    "NOSE": "ref_57",
+    "MOUTH": "ref_56"
+   },
+   "identity_markers": [
+    "broad forehead",
+    "short midface",
+    "soft square jaw",
+    "level open eyes",
+    "compact medium lips"
+   ],
+   "measurements": {
+    "height_cm": 163,
+    "weight_kg": 47,
+    "bust_cm": 88,
+    "waist_cm": 58,
+    "hip_cm": 89,
+    "cup": "D",
+    "leg_cm": 77
+   },
+   "figure_zh": "她的身材是標準的豐滿勻稱，肩線平順",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a dark brown-black, with the last hand-span of the ends lightened to a honey-tea gold.",
+   "hair_en": "It is long and straight, worn down and loose over her shoulders.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches the middle of her back.",
+    "knee_up": "Its length reaches the middle of her back.",
+    "full_body": "Its length reaches the middle of her back."
+   },
+   "outfit_en": {
+    "top": "a fitted charcoal ribbed cotton tank top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her waistband",
+    "bottom": "straight-leg light denim jeans sitting at her natural waist",
+    "shoes": "white canvas sneakers",
+    "jewelry": "a thin gold chain at her throat"
+   },
+   "location_en": "her rented flat near the hospital — a drying rack of scrubs by the balcony door, a stack of nursing textbooks on the low table, and a half-finished mug of tea",
+   "light": {
+    "key": "late afternoon daylight comes through the balcony door on her left and is the main light on her face",
+    "bounce": "the white wall on her right throws that light back into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the balcony door blows out to flat white",
+    "occlusion": "the corridor behind her falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "cheryl-soh": {
+   "display": "cheryl-soh",
+   "age": 25,
+   "ethnicity_zh": "新加坡華裔（Chinese-Singaporean）",
+   "face_en": "Create a new 25-year-old Chinese-Singaporean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a long oval canvas with low gentle cheek volume, a narrow jaw, and a visibly long lower third ending in a long blunt chin. Use wide-set open level eyes, a fine straight nose, and a compact medium-volume mouth. Arrange the features with vertical spacing rather than crowding.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_42",
+    "EYES_AND_BROWS": "ref_41",
+    "NOSE": "ref_40",
+    "MOUTH": "ref_58"
+   },
+   "identity_markers": [
+    "long oval canvas",
+    "vertically spaced features",
+    "wide-set open eyes",
+    "low cheek volume",
+    "long blunt chin"
+   ],
+   "measurements": {
+    "height_cm": 169,
+    "weight_kg": 51,
+    "bust_cm": 89,
+    "waist_cm": 60,
+    "hip_cm": 90,
+    "cup": "D",
+    "leg_cm": 83
+   },
+   "figure_zh": "她的身材是空服員式的修長勻稱，肩線平、背挺",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body.",
+    "full_body": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body."
+   },
+   "hair_color_en": "Her hair is a deep natural black with a soft sheen.",
+   "hair_en": "It is long and worn down, falling in a loose wave through the lower half.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches past her shoulder blades.",
+    "knee_up": "Its length reaches past her shoulder blades.",
+    "full_body": "Its length reaches past her shoulder blades."
+   },
+   "outfit_en": {
+    "top": "a fitted white ribbed knit long-sleeve top that follows the line of her torso",
+    "top_hem": "the hem sits at her hip bone",
+    "bottom": "tailored navy wide-leg trousers sitting high at her waist",
+    "shoes": "flat black loafers",
+    "jewelry": "small gold stud earrings"
+   },
+   "location_en": "her own apartment in Singapore — a cabin bag standing open against the wall, a row of hotel keycards on the shelf, and blackout curtains pushed to one side",
+   "light": {
+    "key": "morning daylight comes through the tall window behind her right shoulder and wraps onto her face",
+    "bounce": "the pale grey wall opposite fills the shadow side",
+    "secondary_source": "a warm floor lamp is still switched on in the corner behind her",
+    "exposure_choice": "the camera meters for her face, so the window blows out to flat white",
+    "occlusion": "the hallway behind her falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "emma-kao": {
+   "display": "emma-kao",
+   "age": 27,
+   "ethnicity_zh": "台灣",
+   "face_en": "Create a new 27-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a long broad-boned rectangular canvas with planar cheeks and a softly squared blunt lower outline. Place narrow level eyes slightly close together within a long midface, use a medium straight nose with a blunt tip, and keep the mouth small and restrained.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_43",
+    "EYES_AND_BROWS": "ref_42",
+    "NOSE": "ref_41",
+    "MOUTH": "ref_40"
+   },
+   "identity_markers": [
+    "long rectangular canvas",
+    "close-set narrow eyes",
+    "medium straight nose",
+    "planar cheeks",
+    "small restrained lips"
+   ],
+   "measurements": {
+    "height_cm": 169,
+    "weight_kg": 52,
+    "bust_cm": 89,
+    "waist_cm": 61,
+    "hip_cm": 91,
+    "cup": "D",
+    "leg_cm": 83
+   },
+   "figure_zh": "她的身材是高挑端莊型，肩背挺直",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body.",
+    "full_body": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body."
+   },
+   "hair_color_en": "Her hair is a deep brown, natural and even from root to tip.",
+   "hair_en": "It is shoulder-length and straight, blown under at the ends so it curves in toward her jaw.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches her shoulders.",
+    "knee_up": "Its length reaches her shoulders.",
+    "full_body": "Its length reaches her shoulders."
+   },
+   "outfit_en": {
+    "top": "a fitted cream silk-knit shell top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her skirt",
+    "bottom": "a tailored black pencil skirt sitting at her natural waist",
+    "shoes": "nude low heels",
+    "jewelry": "a single strand of small pearls"
+   },
+   "location_en": "her flat after the evening broadcast — a garment bag hanging on the wardrobe door, a script marked in red on the table, and the television still on with the sound off",
+   "light": {
+    "key": "a warm floor lamp beside her is the main light on her face",
+    "bounce": "the cream wall behind her throws that light back into the shadow side",
+    "secondary_source": "the muted television puts a cool flickering blue into the room behind her",
+    "exposure_choice": "the camera meters for her face, so the lamp shade blows out to flat white",
+    "occlusion": "the far side of the room falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "jia-seo": {
+   "display": "jia-seo",
+   "age": 22,
+   "ethnicity_zh": "韓國",
+   "face_en": "Create a new 22-year-old Korean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a narrow hexagonal canvas with clean straight side planes and a short blunt chin. Use horizontally elongated eyes under low brows with restrained lid height, a medium straight nose with a blunt tip, and a wide relatively thin mouth.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_44",
+    "EYES_AND_BROWS": "ref_43",
+    "NOSE": "ref_42",
+    "MOUTH": "ref_41"
+   },
+   "identity_markers": [
+    "narrow hexagonal outline",
+    "low brow line",
+    "restrained horizontal eyes",
+    "straight cheek planes",
+    "wide thin mouth"
+   ],
+   "measurements": {
+    "height_cm": 168,
+    "weight_kg": 50,
+    "bust_cm": 85,
+    "waist_cm": 58,
+    "hip_cm": 90,
+    "cup": "C",
+    "leg_cm": 83
+   },
+   "figure_zh": "她的身材是舞者型，肩背有薄薄的肌肉線條，腿長",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is full and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is full and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body.",
+    "full_body": "Her figure reads full-chested first: her bust is full and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body."
+   },
+   "hair_color_en": "Her hair is a cool ash blue-black, with an under-layer dyed a clear mint green that shows when it moves.",
+   "hair_en": "It is long and straight, worn down.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches the middle of her back.",
+    "knee_up": "Its length reaches the middle of her back.",
+    "full_body": "Its length reaches the middle of her back."
+   },
+   "outfit_en": {
+    "top": "a fitted black cropped long-sleeve dance top that follows the line of her torso",
+    "top_hem": "the hem ends just above her waistband, leaving a hand-width of her midriff visible",
+    "bottom": "high-waisted black nylon track pants",
+    "shoes": "white high-top sneakers",
+    "jewelry": "a black elastic hair tie around her wrist"
+   },
+   "location_en": "the practice room after hours — one wall entirely mirrored, a speaker on the floor in the corner, and water bottles lined up along the skirting board",
+   "light": {
+    "key": "the ceiling fluorescents overhead are the main light on her face",
+    "bounce": "the mirrored wall throws that light back into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the ceiling panels blow out to flat white",
+    "occlusion": "the far end of the room falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "kanon-komori": {
+   "display": "kanon-komori",
+   "age": 20,
+   "ethnicity_zh": "日本",
+   "face_en": "Create a new 20-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a compact inverted-triangle canvas with a moderately broad upper face, very short midface and lower third, and a small pointed chin. Place very open downturned eyes high and wide across the face, use a short nose with a softly rounded tip, and a small full mouth. Maintain adult facial proportions and natural skin texture.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_45",
+    "EYES_AND_BROWS": "ref_44",
+    "NOSE": "ref_43",
+    "MOUTH": "ref_42"
+   },
+   "identity_markers": [
+    "compact inverted triangle",
+    "high wide-set eyes",
+    "strongly downturned eye line",
+    "very short lower third",
+    "small pointed chin"
+   ],
+   "measurements": {
+    "height_cm": 153,
+    "weight_kg": 42,
+    "bust_cm": 86,
+    "waist_cm": 54,
+    "hip_cm": 84,
+    "cup": "E",
+    "leg_cm": 70
+   },
+   "figure_zh": "她的身材在很小的骨架上顯得胸線特別重",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a pink-lilac gradient: dark at the roots for the first hand’s width, then blending down through a dusty lilac into a clear cotton-candy pink at the ends.",
+   "hair_en": "It is very long, worn down with a loose wave through the lower half.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches her waist.",
+    "knee_up": "Its length reaches her waist.",
+    "full_body": "Its length reaches her waist."
+   },
+   "outfit_en": {
+    "top": "a fitted pale pink ribbed cotton T-shirt that follows the line of her torso",
+    "top_hem": "the hem sits at her hip bone",
+    "bottom": "short grey cotton shorts with a soft elastic waistband",
+    "shoes": "flat pink house slippers",
+    "jewelry": "a small tortoiseshell claw clip holding a section of hair at the back of her head"
+   },
+   "location_en": "her small studio flat in Akihabara — a sewing machine on a desk against the wall, folded fabric stacked on the floor, and a whole wall of soft toys on shelves behind her",
+   "light": {
+    "key": "afternoon daylight comes through the window on her right and is the main light on her face",
+    "bounce": "the white wall and the pale fabric stacked on the floor throw that light back into the shadow side of her face",
+    "secondary_source": "a small pink night light still switched on behind her left shoulder puts a second, cooler pink colour into that side of the room",
+    "exposure_choice": "the camera meters for her face, so the window blows out to flat white",
+    "occlusion": "the depth of the shelves behind her falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "nanami-fujiwara": {
+   "display": "nanami-fujiwara",
+   "age": 23,
+   "ethnicity_zh": "日本",
+   "face_en": "Create a new 23-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a broad balanced oval canvas with low gentle cheek volume, a smoothly rounded jaw, and a small rounded chin. Use medium level eyes, a compact softly shaped nose, and a small restrained mouth.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_47",
+    "EYES_AND_BROWS": "ref_46",
+    "NOSE": "ref_45",
+    "MOUTH": "ref_44"
+   },
+   "identity_markers": [
+    "broad oval outline",
+    "balanced facial thirds",
+    "medium level eyes",
+    "low soft cheeks",
+    "small rounded chin"
+   ],
+   "measurements": {
+    "height_cm": 162,
+    "weight_kg": 47,
+    "bust_cm": 88,
+    "waist_cm": 58,
+    "hip_cm": 88,
+    "cup": "D",
+    "leg_cm": 76
+   },
+   "figure_zh": "她的身材柔和圓潤，肩線是斜的",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a deep natural black, straight and glossy.",
+   "hair_en": "It is long and worn down, falling straight without a wave.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches past her shoulder blades.",
+    "knee_up": "Its length reaches past her shoulder blades.",
+    "full_body": "Its length reaches past her shoulder blades."
+   },
+   "outfit_en": {
+    "top": "a fitted oatmeal ribbed cotton long-sleeve top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her waistband",
+    "bottom": "a long dark green cotton wrap skirt",
+    "shoes": "flat woven house sandals",
+    "jewelry": "a plain wooden hair pin held in one hand"
+   },
+   "location_en": "the private wing of the family ryokan — a paper shoji screen behind her, tatami underfoot, and a folded yukata stacked on the low chest",
+   "light": {
+    "key": "overcast daylight comes through the shoji screen behind her left shoulder and is the main light on her face",
+    "bounce": "the tatami and the pale paper screen throw that light back into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the shoji screen blows out to flat white",
+    "occlusion": "the corridor beyond the doorway falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "rin-ayase": {
+   "display": "rin-ayase",
+   "age": 25,
+   "ethnicity_zh": "日本",
+   "face_en": "Create a new 25-year-old Japanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a long diamond canvas with high planar cheek regions, a long midface, and a slim jaw ending in a long blunt chin. Use narrow level eyes, a long straight fine nose, and a composed mouth wider than the nose with medium lip volume.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_49",
+    "EYES_AND_BROWS": "ref_48",
+    "NOSE": "ref_47",
+    "MOUTH": "ref_46"
+   },
+   "identity_markers": [
+    "long diamond outline",
+    "narrow level eyes",
+    "high planar cheeks",
+    "medium straight nose",
+    "long blunt chin"
+   ],
+   "measurements": {
+    "height_cm": 166,
+    "weight_kg": 50,
+    "bust_cm": 92,
+    "waist_cm": 58,
+    "hip_cm": 90,
+    "cup": "F",
+    "leg_cm": 80
+   },
+   "figure_zh": "她的身材是明顯的沙漏型，胸與臀都滿，腰窄",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a dark wine-red brown that only shows its red under direct light.",
+   "hair_en": "It is long and blown into a soft large wave, worn down.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches past her shoulder blades.",
+    "knee_up": "Its length reaches past her shoulder blades.",
+    "full_body": "Its length reaches past her shoulder blades."
+   },
+   "outfit_en": {
+    "top": "a fitted black fine-knit long-sleeve top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her skirt",
+    "bottom": "a tailored camel midi skirt sitting at her natural waist",
+    "shoes": "black heeled ankle boots",
+    "jewelry": "a thin gold bracelet"
+   },
+   "location_en": "her apartment before a shift — a dress bag hanging on the wardrobe door, a lacquer tray of hair pins on the table, and the city lights behind the window",
+   "light": {
+    "key": "a warm table lamp beside her is the main light on her face",
+    "bounce": "the pale wall behind her throws that light back into the shadow side",
+    "secondary_source": "the city outside the window puts a cool blue into the room behind her",
+    "exposure_choice": "the camera meters for her face, so the lamp shade blows out to flat white",
+    "occlusion": "the far corner of the room falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "sydney-leong": {
+   "display": "sydney-leong",
+   "age": 22,
+   "ethnicity_zh": "馬來西亞華裔（Chinese-Malaysian）",
+   "face_en": "Create a new 22-year-old Chinese-Malaysian adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a softly squared short canvas with full mid-cheeks, a substantial rounded-square jaw, and a short blunt chin. Use wide-set open eyes with a gentle downward line, a short softly broad nose, and a relaxed wide mouth.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_52",
+    "EYES_AND_BROWS": "ref_51",
+    "NOSE": "ref_50",
+    "MOUTH": "ref_49"
+   },
+   "identity_markers": [
+    "short rounded-square outline",
+    "wide-set downturned eyes",
+    "full middle cheeks",
+    "short broad nose",
+    "short blunt chin"
+   ],
+   "measurements": {
+    "height_cm": 159,
+    "weight_kg": 45,
+    "bust_cm": 88,
+    "waist_cm": 56,
+    "hip_cm": 87,
+    "cup": "E",
+    "leg_cm": 74
+   },
+   "figure_zh": "她的身材在嬌小的骨架上胸線特別重",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a light honey-gold brown, evenly lightened from root to tip.",
+   "hair_en": "It is mid-length with a soft natural wave, worn down.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches just past her collarbones.",
+    "knee_up": "Its length reaches just past her collarbones.",
+    "full_body": "Its length reaches just past her collarbones."
+   },
+   "outfit_en": {
+    "top": "a fitted white ribbed cotton T-shirt that follows the line of her torso",
+    "top_hem": "the hem is tucked into her shorts",
+    "bottom": "blue denim shorts with a turned-up cuff",
+    "shoes": "white canvas slip-ons",
+    "jewelry": "a plain linen bib apron, dusted with flour across the front"
+   },
+   "location_en": "her one-person bakery studio in George Town — a stand mixer on the steel bench, cooling racks of madeleines behind her, and brown paper boxes stacked ready for pickup",
+   "light": {
+    "key": "morning daylight comes through the shopfront window on her left and is the main light on her face",
+    "bounce": "the steel bench throws that light back up into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the shopfront window blows out to flat white",
+    "occlusion": "the back of the kitchen falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "tammy-chou": {
+   "display": "tammy-chou",
+   "age": 24,
+   "ethnicity_zh": "台灣",
+   "face_en": "Create a new 24-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a soft heart-shaped canvas with rounded cheek transitions and a broad upper face. Use visibly wide-set open round eyes, a short softly broad nose, a wide mouth with medium lip volume, and a jaw that tapers gently into a small rounded chin.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_53",
+    "EYES_AND_BROWS": "ref_52",
+    "NOSE": "ref_51",
+    "MOUTH": "ref_50"
+   },
+   "identity_markers": [
+    "broad upper face",
+    "wide-set round eyes",
+    "short midface",
+    "small rounded chin",
+    "wide medium mouth"
+   ],
+   "measurements": {
+    "height_cm": 160,
+    "weight_kg": 46,
+    "bust_cm": 90,
+    "waist_cm": 57,
+    "hip_cm": 89,
+    "cup": "E",
+    "leg_cm": 75
+   },
+   "figure_zh": "她的身材在嬌小的骨架上胸線很滿，腰窄",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a milk-tea golden brown, with a lighter money-piece section framing each side of her face.",
+   "hair_en": "It is long and permed into a full airy wave, worn down.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches the middle of her back.",
+    "knee_up": "Its length reaches the middle of her back.",
+    "full_body": "Its length reaches the middle of her back."
+   },
+   "outfit_en": {
+    "top": "a fitted cream ribbed knit long-sleeve top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her waistband",
+    "bottom": "a high-waisted brown corduroy mini skirt",
+    "shoes": "cream ankle boots",
+    "jewelry": "layered thin gold necklaces"
+   },
+   "location_en": "her clothing studio — a double rail packed with stock behind her, a ring light on a stand switched off to one side, and a full-length mirror against the wall",
+   "light": {
+    "key": "daylight comes through the studio window on her right and is the main light on her face",
+    "bounce": "the white wall and the full-length mirror throw that light back into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the window blows out to flat white",
+    "occlusion": "the depth of the clothing rail behind her falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "wanyin-jiang": {
+   "display": "wanyin-jiang",
+   "age": 23,
+   "ethnicity_zh": "中國",
+   "face_en": "Create a new 23-year-old Chinese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a long oval canvas with a slightly narrow upper face, the widest point at the middle cheeks, and a gradual taper toward a long blunt chin. Use modest gently downturned eyes, a fine long nose, and a small restrained mouth with thin flat lips.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_54",
+    "EYES_AND_BROWS": "ref_53",
+    "NOSE": "ref_52",
+    "MOUTH": "ref_51"
+   },
+   "identity_markers": [
+    "long middle-wide oval",
+    "modest-scale features",
+    "narrow downturned eyes",
+    "fine long nose",
+    "long blunt chin"
+   ],
+   "measurements": {
+    "height_cm": 165,
+    "weight_kg": 47,
+    "bust_cm": 86,
+    "waist_cm": 57,
+    "hip_cm": 88,
+    "cup": "D",
+    "leg_cm": 79
+   },
+   "figure_zh": "她的身材勻稱，肩線窄而平，腰細",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a deep natural black, straight and heavy.",
+   "hair_en": "It is very long and worn down, falling straight without a wave.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches her waist.",
+    "knee_up": "Its length reaches her waist.",
+    "full_body": "Its length reaches her waist."
+   },
+   "outfit_en": {
+    "top": "a fitted dark teal silk mandarin-collar top that follows the line of her torso",
+    "top_hem": "the hem sits at her hip bone",
+    "bottom": "straight-leg black trousers",
+    "shoes": "flat black cloth shoes",
+    "jewelry": "a pair of small jade drop earrings"
+   },
+   "location_en": "her qipao workshop in a Suzhou courtyard house — bolts of silk stacked on the shelf behind her, a tailor’s dummy in the corner, and a lattice window onto the courtyard",
+   "light": {
+    "key": "daylight comes through the lattice window on her left and is the main light on her face",
+    "bounce": "the whitewashed wall behind her throws that light back into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the lattice window blows out to flat white",
+    "occlusion": "the depth of the shelves behind her falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "yerin-han": {
+   "display": "yerin-han",
+   "age": 26,
+   "ethnicity_zh": "韓國",
+   "face_en": "Create a new 26-year-old Korean adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a broad rectangular face with forehead and jaw nearly equal in width, a short midface, straight lower-face sides, and a broad square chin. Use visibly wide-set open level eyes, a medium straight nose, and a restrained medium-width mouth.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_56",
+    "EYES_AND_BROWS": "ref_55",
+    "NOSE": "ref_54",
+    "MOUTH": "ref_53"
+   },
+   "identity_markers": [
+    "equal-width forehead and jaw",
+    "short midface",
+    "wide-set level eyes",
+    "broad square chin",
+    "compact restrained lips"
+   ],
+   "measurements": {
+    "height_cm": 170,
+    "weight_kg": 53,
+    "bust_cm": 90,
+    "waist_cm": 60,
+    "hip_cm": 93,
+    "cup": "E",
+    "leg_cm": 84
+   },
+   "figure_zh": "她的身材是高挑修長型，肩線平",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body.",
+    "full_body": "Her figure reads full-chested first: her bust is strikingly heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body."
+   },
+   "hair_color_en": "Her hair is a soft ash brown, evenly toned.",
+   "hair_en": "It is long and straight, worn down with a middle parting.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches the middle of her back.",
+    "knee_up": "Its length reaches the middle of her back.",
+    "full_body": "Its length reaches the middle of her back."
+   },
+   "outfit_en": {
+    "top": "a fitted heather-grey ribbed cotton long-sleeve top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her waistband",
+    "bottom": "straight-leg indigo jeans sitting at her natural waist",
+    "shoes": "white leather sneakers",
+    "jewelry": "a thin silver ring on one hand"
+   },
+   "location_en": "her flat in Seoul — a bookshelf of paperbacks behind her, a record player on the low cabinet, and the window blinds half drawn",
+   "light": {
+    "key": "afternoon daylight comes through the half-drawn blinds on her right and is the main light on her face",
+    "bounce": "the pale wall on her left throws that light back into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the gaps in the blinds blow out to flat white",
+    "occlusion": "the far side of the room falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "zhiyi-shen": {
+   "display": "zhiyi-shen",
+   "age": 25,
+   "ethnicity_zh": "中國",
+   "face_en": "Create a new 25-year-old Chinese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build an extremely long narrow rectangular canvas with a high forehead, long midface, planar cheeks, and a narrow jaw ending bluntly. Use close-set low-brow narrow eyes, a long defined nose, and a small flat mouth.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_57",
+    "EYES_AND_BROWS": "ref_56",
+    "NOSE": "ref_55",
+    "MOUTH": "ref_54"
+   },
+   "identity_markers": [
+    "very long narrow rectangle",
+    "high forehead",
+    "close-set low-brow eyes",
+    "long narrow nose",
+    "blunt narrow jaw"
+   ],
+   "measurements": {
+    "height_cm": 172,
+    "weight_kg": 54,
+    "bust_cm": 88,
+    "waist_cm": 61,
+    "hip_cm": 91,
+    "cup": "D",
+    "leg_cm": 85
+   },
+   "figure_zh": "她的身材高挑，肩線平而清楚，腿長",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body.",
+    "full_body": "Her figure reads full-chested first: her bust is heavy and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. She is tall, and her legs are long in proportion to her body."
+   },
+   "hair_color_en": "Her hair is a deep natural black with a strong sheen.",
+   "hair_en": "It is long and straight with a middle parting, worn down.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches past her shoulder blades.",
+    "knee_up": "Its length reaches past her shoulder blades.",
+    "full_body": "Its length reaches past her shoulder blades."
+   },
+   "outfit_en": {
+    "top": "a fitted black fine-knit turtleneck that follows the line of her torso",
+    "top_hem": "the hem is tucked into her trousers",
+    "bottom": "tailored charcoal straight-leg trousers sitting high at her waist",
+    "shoes": "black heeled loafers",
+    "jewelry": "a plain steel watch"
+   },
+   "location_en": "her apartment in Pudong late in the evening — a laptop still open on the dining table, a lanyard dropped beside it, and the tower lights across the river through the window",
+   "light": {
+    "key": "the pendant light over the dining table is the main light on her face",
+    "bounce": "the pale table top throws that light back up into the shadow side of her face",
+    "secondary_source": "the tower lights across the river put a cool blue into the room behind her",
+    "exposure_choice": "the camera meters for her face, so the pendant bulb blows out to flat white",
+    "occlusion": "the far end of the room falls away into shadow"
+   },
+   "barefoot": false
+  },
+  "zoey-yeh": {
+   "display": "zoey-yeh",
+   "age": 21,
+   "ethnicity_zh": "台灣",
+   "face_en": "Create a new 21-year-old Taiwanese adult woman identity from four component references. Using the four attached reference images in input order: Image 1 defines the face shape and jawline; Image 2 defines the eyes and brows; Image 3 defines the nose; Image 4 defines the mouth. Combine these four assigned components into one coherent new identity; each image contributes only its assigned geometry rather than a complete likeness. Build a short softly rounded U-shaped face with low full cheeks and a short blunt chin. Use wide-set gently downturned eyes under low soft brows, a short low-bridge nose with a rounded tip, and a small softly full mouth.",
+   "refs_v2": {
+    "FACE_SHAPE_AND_JAW": "ref_58",
+    "EYES_AND_BROWS": "ref_57",
+    "NOSE": "ref_56",
+    "MOUTH": "ref_55"
+   },
+   "identity_markers": [
+    "short U-shaped face",
+    "wide-set downturned eyes",
+    "low soft brows",
+    "rounded nose tip",
+    "short blunt chin"
+   ],
+   "measurements": {
+    "height_cm": 158,
+    "weight_kg": 44,
+    "bust_cm": 85,
+    "waist_cm": 56,
+    "hip_cm": 85,
+    "cup": "C",
+    "leg_cm": 74
+   },
+   "figure_zh": "她的身材纖細，肩線窄",
+   "body_en": {
+    "face_closeup": "Her shoulders and the base of her neck enter the frame, with the collarbone visible where it does.",
+    "waist_up": "Her figure reads full-chested first: her bust is full and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her upper arms and her shoulders carry a healthy layer of soft flesh over the bone.",
+    "knee_up": "Her figure reads full-chested first: her bust is full and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion.",
+    "full_body": "Her figure reads full-chested first: her bust is full and rounded, and it carries the front of her top out clearly beyond the line of her ribs. Below it her waist draws in narrow. Her hips carry the same fullness. Her upper arms, her shoulders and her thighs all carry a healthy layer of soft flesh over the bone. Her whole frame is finely scaled and her limbs are short in proportion."
+   },
+   "hair_color_en": "Her hair is a natural black, fine and soft in texture.",
+   "hair_en": "It is long and straight with a middle parting, worn down.",
+   "hair_length_en": {
+    "waist_up": "Its length reaches the middle of her back.",
+    "knee_up": "Its length reaches the middle of her back.",
+    "full_body": "Its length reaches the middle of her back."
+   },
+   "outfit_en": {
+    "top": "a fitted oatmeal ribbed cotton long-sleeve top that follows the line of her torso",
+    "top_hem": "the hem is tucked into her waistband",
+    "bottom": "a long sage-green cotton skirt",
+    "shoes": "flat brown leather sandals",
+    "jewelry": "a canvas bib apron with a brass clip on the front"
+   },
+   "location_en": "her flower shop in a converted old house — buckets of eucalyptus and lisianthus on the wooden floor, a roll of brown wrapping paper on the bench, and rain on the window behind her",
+   "light": {
+    "key": "overcast daylight comes through the rain-covered shopfront window behind her left shoulder and wraps onto her face",
+    "bounce": "the pale wooden floor throws that light back up into the shadow side of her face",
+    "exposure_choice": "the camera meters for her face, so the window blows out to flat white",
+    "occlusion": "the back of the shop falls away into shadow"
+   },
+   "barefoot": false
+  }
+ }
+}
