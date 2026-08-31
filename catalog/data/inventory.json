@@ -1,0 +1,1271 @@
+{
+  "generated_by": "catalog/tools/scan_inventory.mjs",
+  "generated_at": "2026-08-31",
+  "repo_root": "/home/user",
+  "missing_repos": [],
+  "note": "每個數字都由本程式現算。手寫的數字若與這份不符，那是 bug，不是這份錯。",
+  "repos": [
+    {
+      "dir": "Virtual_KOL_Studio",
+      "tag": "VKS",
+      "role": "人設 canon（identity / 外觀 / 視覺規格的真理來源）",
+      "totals": {
+        "images": 357,
+        "videos": 42,
+        "image_bytes": 1412288046,
+        "video_bytes": 893308487,
+        "persona_count": 31
+      }
+    },
+    {
+      "dir": "showgame-kol",
+      "tag": "SGK",
+      "role": "實戰線（已發布素材、平台連結、Metricool 成效）",
+      "totals": {
+        "images": 259,
+        "videos": 94,
+        "image_bytes": 935802973,
+        "video_bytes": 1211821748,
+        "persona_count": 10
+      }
+    },
+    {
+      "dir": "Buildup_KOL",
+      "tag": "BUP",
+      "role": "評估工具線（話題適配度、評分）",
+      "totals": {
+        "images": 111,
+        "videos": 51,
+        "image_bytes": 204933572,
+        "video_bytes": 627720304,
+        "persona_count": 17
+      }
+    }
+  ],
+  "totals": {
+    "unique_personas": 42,
+    "duplicated_personas": 16,
+    "personas_with_field_conflicts": 4,
+    "published_live": 5,
+    "tier_showcase": 20,
+    "tier_thin": 4,
+    "tier_text_only": 18,
+    "images": 727,
+    "videos": 187,
+    "image_mb": 2434.8,
+    "video_mb": 2606.2,
+    "total_mb": 5041,
+    "avg_image_mb": 3.35,
+    "avg_video_mb": 13.94
+  },
+  "personas": [
+    {
+      "id": "faye-tan",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "Faye Tan",
+      "name_zh": "陳曉菲",
+      "nickname": "旅遊姊",
+      "handle": "@cxiaofei14",
+      "category": "travel_culture",
+      "age": 30,
+      "ethnicity": "Singaporean Chinese",
+      "location": "Based in Singapore (Toa Payoh), spending long stretches abroad for content — Tokyo, Paris, London, Macau, Milan, Dubai",
+      "status_by_repo": {
+        "SGK": "正在經營中",
+        "BUP": "draft"
+      },
+      "published_live": true,
+      "duplicated": true,
+      "field_conflicts": [
+        {
+          "field": "handle",
+          "values": {
+            "SGK": "@cxiaofei14",
+            "BUP": "@faye.worldnotes"
+          }
+        }
+      ],
+      "missing_profile_json": [],
+      "images": 81,
+      "videos": 38,
+      "image_bytes": 275231892,
+      "video_bytes": 608945241,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "loima-cheung",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "Zhang Qinfeng",
+      "name_zh": "张秦峰",
+      "nickname": "遊戲哥",
+      "handle": "@zhangqinfeng61",
+      "category": "digital_culture",
+      "age": 30,
+      "ethnicity": "Malaysian Chinese",
+      "location": "Kuala Lumpur, Malaysia (frequent trips to Tokyo, Seoul, and Singapore for tech and game events)",
+      "status_by_repo": {
+        "SGK": "正在經營中",
+        "BUP": "draft"
+      },
+      "published_live": true,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 63,
+      "videos": 62,
+      "image_bytes": 198325718,
+      "video_bytes": 601063492,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "rainie-hsu",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Rainie Hsu",
+      "name_zh": "許雷妮",
+      "nickname": null,
+      "handle": "@rainie.hsu",
+      "category": "nightlife",
+      "age": 24,
+      "ethnicity": "Taiwanese",
+      "location": "Taipei, Taiwan (台北東區 / 西門町夜生活圈)",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 52,
+      "videos": 4,
+      "image_bytes": 214989962,
+      "video_bytes": 134334051,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "rachel-ong",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "Rachel Ong",
+      "name_zh": "王瑞秋",
+      "nickname": null,
+      "handle": "@wangr_uiqiu",
+      "category": "outdoor_adventure",
+      "age": 34,
+      "ethnicity": "Singaporean Chinese",
+      "location": "Perpetually on expedition — Singapore is 'home' but she spends fewer than 3 months/year there",
+      "status_by_repo": {
+        "SGK": "正在經營中",
+        "BUP": "draft"
+      },
+      "published_live": true,
+      "duplicated": true,
+      "field_conflicts": [
+        {
+          "field": "handle",
+          "values": {
+            "SGK": "@wangr_uiqiu",
+            "BUP": "@rachel.summitnotes"
+          }
+        }
+      ],
+      "missing_profile_json": [],
+      "images": 49,
+      "videos": 0,
+      "image_bytes": 199870782,
+      "video_bytes": 0,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "leon-lim",
+      "in_repos": [
+        "SGK"
+      ],
+      "primary_source": "SGK",
+      "name": null,
+      "name_zh": null,
+      "nickname": null,
+      "handle": null,
+      "category": null,
+      "age": null,
+      "ethnicity": null,
+      "location": null,
+      "status_by_repo": {
+        "SGK": null
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "SGK"
+      ],
+      "images": 45,
+      "videos": 9,
+      "image_bytes": 112105337,
+      "video_bytes": 103539158,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "xiaoxiao-tan",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "Tan XiaoXiao",
+      "name_zh": "陳曉曉",
+      "nickname": "賭博哥",
+      "handle": "@xiaoxiaotan686",
+      "category": "knowledge_culture",
+      "age": 30,
+      "ethnicity": "Malaysian Chinese",
+      "location": "Kuala Lumpur, Malaysia (frequent long-haul: London, Tokyo, Zurich book-hunting trips)",
+      "status_by_repo": {
+        "SGK": "正在經營中",
+        "BUP": "draft"
+      },
+      "published_live": true,
+      "duplicated": true,
+      "field_conflicts": [
+        {
+          "field": "handle",
+          "values": {
+            "SGK": "@xiaoxiaotan686",
+            "BUP": "@xiaoxiao.rulesroom"
+          }
+        }
+      ],
+      "missing_profile_json": [],
+      "images": 40,
+      "videos": 24,
+      "image_bytes": 140958733,
+      "video_bytes": 437639543,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "yuna-kim",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Yuna Kim",
+      "name_zh": "김하은",
+      "nickname": null,
+      "handle": "@yunakim.beauty",
+      "category": "beauty",
+      "age": 21,
+      "ethnicity": "Korean",
+      "location": "Taipei, Taiwan (大安區)",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 39,
+      "videos": 6,
+      "image_bytes": 99547452,
+      "video_bytes": 48666323,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "sophia-tseng",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Sophia Tseng",
+      "name_zh": "曾詩妃",
+      "nickname": null,
+      "handle": "@sophia.tseng",
+      "category": "luxury lifestyle",
+      "age": 28,
+      "ethnicity": "Taiwanese",
+      "location": "Taipei, Taiwan (信義區)",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 37,
+      "videos": 3,
+      "image_bytes": 146944806,
+      "video_bytes": 78044718,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "luna-tanaka",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Luna Tanaka",
+      "name_zh": "田中ひな",
+      "nickname": null,
+      "handle": "@luna.tnk",
+      "category": "lifestyle",
+      "age": 20,
+      "ethnicity": "Japanese",
+      "location": "Taipei, Taiwan (青田街／溫州街)",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 34,
+      "videos": 5,
+      "image_bytes": 101028998,
+      "video_bytes": 118098133,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "vicky-lin",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Vicky Lin",
+      "name_zh": "林薇淇",
+      "nickname": null,
+      "handle": "@vicky.lin",
+      "category": "fitness",
+      "age": 25,
+      "ethnicity": "Taiwanese",
+      "location": "Kaohsiung, Taiwan (高雄)",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 34,
+      "videos": 1,
+      "image_bytes": 117943774,
+      "video_bytes": 38529779,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "nico-tsai",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Nico Tsai",
+      "name_zh": "蔡妮可",
+      "nickname": null,
+      "handle": "@nico.nailroom",
+      "category": "beauty",
+      "age": 26,
+      "ethnicity": "台灣",
+      "location": "台北大安",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 31,
+      "videos": 0,
+      "image_bytes": 180023878,
+      "video_bytes": 0,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "coco-wu",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Coco Wu",
+      "name_zh": "吳可可",
+      "nickname": null,
+      "handle": "@coco.wu",
+      "category": "lifestyle",
+      "age": 20,
+      "ethnicity": "Taiwanese",
+      "location": "Taichung, Taiwan",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 28,
+      "videos": 4,
+      "image_bytes": 121844737,
+      "video_bytes": 180668292,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "iris-chen",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Iris Chen",
+      "name_zh": "陳芯語",
+      "nickname": null,
+      "handle": "@iris.chen",
+      "category": "lifestyle",
+      "age": 22,
+      "ethnicity": "Taiwanese",
+      "location": "Taipei, Taiwan",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 26,
+      "videos": 14,
+      "image_bytes": 32687356,
+      "video_bytes": 216844602,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "mia-huang",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Mia Huang",
+      "name_zh": "黃米亞",
+      "nickname": null,
+      "handle": "@mia.huang",
+      "category": "gaming",
+      "age": 22,
+      "ethnicity": "Taiwanese",
+      "location": "Hsinchu, Taiwan (新竹) — works almost entirely from her home streaming room",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 26,
+      "videos": 1,
+      "image_bytes": 102913356,
+      "video_bytes": 23187140,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "kai-luo",
+      "in_repos": [
+        "SGK"
+      ],
+      "primary_source": "SGK",
+      "name": "Cathy Luo",
+      "name_zh": "羅凱西",
+      "nickname": "神話姊",
+      "handle": "@cathyluo1999",
+      "category": "mythology_immersion",
+      "age": 27,
+      "ethnicity": "Taiwanese",
+      "location": "台北，台灣",
+      "status_by_repo": {
+        "SGK": null
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 25,
+      "videos": 0,
+      "image_bytes": 107848388,
+      "video_bytes": 0,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "wendy-yeo",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Wendy Yeo",
+      "name_zh": "楊薇伊",
+      "nickname": null,
+      "handle": "@wendy.pour",
+      "category": "nightlife",
+      "age": 28,
+      "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+      "location": "新加坡丹戎巴葛",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 25,
+      "videos": 0,
+      "image_bytes": 96727426,
+      "video_bytes": 0,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "camille-dupont",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Camille Dupont",
+      "name_zh": null,
+      "nickname": null,
+      "handle": "@camille.dpnt",
+      "category": "lifestyle",
+      "age": 22,
+      "ethnicity": "French",
+      "location": "Paris, France",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 24,
+      "videos": 1,
+      "image_bytes": 61039175,
+      "video_bytes": 14443749,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "rafael-costa",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "Rafael Costa",
+      "name_zh": "拉斐爾·科斯塔",
+      "nickname": null,
+      "handle": "@rafael.costarafael",
+      "category": "sports_growth",
+      "age": 30,
+      "ethnicity": "Brazilian",
+      "location": "China (long-term base; currently under contract with a Chinese professional club)",
+      "status_by_repo": {
+        "SGK": "正在經營中",
+        "BUP": "draft"
+      },
+      "published_live": true,
+      "duplicated": true,
+      "field_conflicts": [
+        {
+          "field": "handle",
+          "values": {
+            "SGK": "@rafael.costarafael",
+            "BUP": "@rafa.longgame"
+          }
+        }
+      ],
+      "missing_profile_json": [],
+      "images": 22,
+      "videos": 7,
+      "image_bytes": 97770021,
+      "video_bytes": 38184516,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "aaliya-okonkwo",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Aaliya Rivera",
+      "name_zh": null,
+      "nickname": null,
+      "handle": "@aaliyarivera",
+      "category": "lifestyle",
+      "age": 25,
+      "ethnicity": "Latina (Mexican-American)",
+      "location": "Los Angeles, California",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 16,
+      "videos": 2,
+      "image_bytes": 33900663,
+      "video_bytes": 29395642,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "ananya-kapoor",
+      "in_repos": [
+        "VKS",
+        "BUP"
+      ],
+      "primary_source": "VKS",
+      "name": "Ananya Kapoor",
+      "name_zh": "अनन्या कपूर",
+      "nickname": null,
+      "handle": "@ananyakapoor",
+      "category": "wellness",
+      "age": 23,
+      "ethnicity": "Indian (Punjabi)",
+      "location": "Mumbai, India",
+      "status_by_repo": {
+        "VKS": "active",
+        "BUP": "active"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 14,
+      "videos": 1,
+      "image_bytes": 24395203,
+      "video_bytes": 11096058,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "angeline-kwee",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Angeline Kwee",
+      "name_zh": "郭慧恩",
+      "nickname": null,
+      "handle": "@angeline.kwee",
+      "category": "fashion",
+      "age": 23,
+      "ethnicity": "印尼華裔（Chinese-Indonesian）",
+      "location": "雅加達（華裔）",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 5,
+      "videos": 0,
+      "image_bytes": 26600599,
+      "video_bytes": 0,
+      "catalog_tier": "thin"
+    },
+    {
+      "id": "kanon-komori",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Kanon Komori",
+      "name_zh": "小森花音",
+      "nickname": null,
+      "handle": "@kanon.komori",
+      "category": "entertainment",
+      "age": 20,
+      "ethnicity": "日本",
+      "location": "東京秋葉原",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 5,
+      "videos": 0,
+      "image_bytes": 29066253,
+      "video_bytes": 0,
+      "catalog_tier": "thin"
+    },
+    {
+      "id": "yerin-han",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Yerin Han",
+      "name_zh": "한예린",
+      "nickname": null,
+      "handle": "@yerin.golf",
+      "category": "sports",
+      "age": 26,
+      "ethnicity": "韓國",
+      "location": "首爾",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 5,
+      "videos": 0,
+      "image_bytes": 27641602,
+      "video_bytes": 0,
+      "catalog_tier": "thin"
+    },
+    {
+      "id": "sofia-vargas",
+      "in_repos": [
+        "BUP"
+      ],
+      "primary_source": "BUP",
+      "name": null,
+      "name_zh": null,
+      "nickname": null,
+      "handle": null,
+      "category": null,
+      "age": null,
+      "ethnicity": null,
+      "location": null,
+      "status_by_repo": {
+        "BUP": null
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "BUP"
+      ],
+      "images": 1,
+      "videos": 5,
+      "image_bytes": 3618480,
+      "video_bytes": 50170102,
+      "catalog_tier": "thin"
+    },
+    {
+      "id": "angel-chiu",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Angel Chiu",
+      "name_zh": "邱安晴",
+      "nickname": null,
+      "handle": "@angel.chiu",
+      "category": "lifestyle",
+      "age": 23,
+      "ethnicity": "台灣",
+      "location": "台北",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "cheryl-soh",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Cheryl Soh",
+      "name_zh": "蘇思穎",
+      "nickname": null,
+      "handle": "@cheryl.inflight",
+      "category": "travel",
+      "age": 25,
+      "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+      "location": "新加坡（華裔）",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "emma-kao",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Emma Kao",
+      "name_zh": "高映真",
+      "nickname": null,
+      "handle": "@emma.kao",
+      "category": "lifestyle",
+      "age": 27,
+      "ethnicity": "台灣",
+      "location": "台南",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "jia-seo",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Jia Seo",
+      "name_zh": "서지아",
+      "nickname": null,
+      "handle": "@jia.seo",
+      "category": "dance",
+      "age": 22,
+      "ethnicity": "韓國",
+      "location": "首爾江南",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "miu-shiraishi",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Miu Shiraishi",
+      "name_zh": "白石美羽",
+      "nickname": null,
+      "handle": "@miu.shiraishi",
+      "category": "lifestyle",
+      "age": 22,
+      "ethnicity": "日本",
+      "location": "東京中目黑",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "nanami-fujiwara",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Nanami Fujiwara",
+      "name_zh": "藤原七海",
+      "nickname": null,
+      "handle": "@nanami.hakone",
+      "category": "lifestyle",
+      "age": 23,
+      "ethnicity": "日本",
+      "location": "箱根",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "nova-lin",
+      "in_repos": [
+        "SGK"
+      ],
+      "primary_source": "SGK",
+      "name": null,
+      "name_zh": null,
+      "nickname": null,
+      "handle": null,
+      "category": null,
+      "age": null,
+      "ethnicity": null,
+      "location": null,
+      "status_by_repo": {
+        "SGK": null
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "SGK"
+      ],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "peggy-lee",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Peggy Lee",
+      "name_zh": "李珮甄",
+      "nickname": null,
+      "handle": "@peggy.revs",
+      "category": "automotive",
+      "age": 24,
+      "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+      "location": "吉隆坡（華裔）",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "rhea-chou",
+      "in_repos": [
+        "SGK"
+      ],
+      "primary_source": "SGK",
+      "name": null,
+      "name_zh": null,
+      "nickname": null,
+      "handle": null,
+      "category": null,
+      "age": null,
+      "ethnicity": null,
+      "location": null,
+      "status_by_repo": {
+        "SGK": null
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "SGK"
+      ],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "rin-ayase",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Rin Ayase",
+      "name_zh": "綾瀨凜",
+      "nickname": null,
+      "handle": "@rin.ayase",
+      "category": "nightlife",
+      "age": 25,
+      "ethnicity": "日本",
+      "location": "東京銀座",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "ruoruo-tang",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Ruoruo Tang",
+      "name_zh": "唐苡若",
+      "nickname": null,
+      "handle": "@tangruoruo",
+      "category": "fitness",
+      "age": 27,
+      "ethnicity": "中國",
+      "location": "成都",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "somi-oh",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Somi Oh",
+      "name_zh": "오소미",
+      "nickname": null,
+      "handle": "@somi.eats",
+      "category": "food",
+      "age": 24,
+      "ethnicity": "韓國",
+      "location": "釜山",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "sydney-leong",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Sydney Leong",
+      "name_zh": "梁欣妮",
+      "nickname": null,
+      "handle": "@sydney.bakes",
+      "category": "food",
+      "age": 22,
+      "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+      "location": "檳城喬治市（華裔）",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "tammy-chou",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Tammy Chou",
+      "name_zh": "周語彤",
+      "nickname": null,
+      "handle": "@tammy.closet",
+      "category": "fashion",
+      "age": 24,
+      "ethnicity": "台灣",
+      "location": "台北五分埔",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "wanyin-jiang",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Wanyin Jiang",
+      "name_zh": "江晚吟",
+      "nickname": null,
+      "handle": "@jiangwanyin",
+      "category": "culture",
+      "age": 23,
+      "ethnicity": "中國",
+      "location": "蘇州",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "zane-chen",
+      "in_repos": [
+        "SGK"
+      ],
+      "primary_source": "SGK",
+      "name": null,
+      "name_zh": null,
+      "nickname": null,
+      "handle": null,
+      "category": null,
+      "age": null,
+      "ethnicity": null,
+      "location": null,
+      "status_by_repo": {
+        "SGK": null
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "SGK"
+      ],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "zhiyi-shen",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Zhiyi Shen",
+      "name_zh": "沈知意",
+      "nickname": null,
+      "handle": "@shenzhiyi",
+      "category": "lifestyle",
+      "age": 25,
+      "ethnicity": "中國",
+      "location": "上海陸家嘴",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    },
+    {
+      "id": "zoey-yeh",
+      "in_repos": [
+        "VKS"
+      ],
+      "primary_source": "VKS",
+      "name": "Zoey Yeh",
+      "name_zh": "葉芷妍",
+      "nickname": null,
+      "handle": "@zoey.florals",
+      "category": "lifestyle",
+      "age": 21,
+      "ethnicity": "台灣",
+      "location": "宜蘭",
+      "status_by_repo": {
+        "VKS": "draft"
+      },
+      "published_live": false,
+      "duplicated": false,
+      "field_conflicts": [],
+      "missing_profile_json": [],
+      "images": 0,
+      "videos": 0,
+      "image_bytes": 0,
+      "video_bytes": 0,
+      "catalog_tier": "text_only"
+    }
+  ]
+}
