@@ -8548,6 +8548,98 @@
     "source_px_short_side": 192.2
    },
    "qa_by": "auto"
+  },
+  "ref_04__NOSE__v1": {
+   "source_ref_id": "ref_04",
+   "slot": "NOSE",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_04.jfif",
+   "source_sha256": "44d1f596f85d1c1f8b41979614d407afa95f2ae093dcd507054fe575af780738",
+   "source_size": [
+    446,
+    448
+   ],
+   "normalized_crop_box": [
+    0.451723,
+    0.28664,
+    0.581922,
+    0.409617
+   ],
+   "pixel_crop_box": [
+    201.5,
+    128.4,
+    259.5,
+    183.5
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_04__NOSE__v1.jpg",
+   "out_size": [
+    768,
+    768
+   ],
+   "out_sha256": "a70cb55bab1366f2e582cd88f64cb3d99170321ef9fcd979321c1a0992e64f9d",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "原圖上該部位短邊只有 55px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0595,
+    "source_px_short_side": 55.1
+   },
+   "qa_by": "auto"
+  },
+  "ref_04__MOUTH__v1": {
+   "source_ref_id": "ref_04",
+   "slot": "MOUTH",
+   "crop_spec_version": "v1",
+   "source_path": "review/batch3_face_refs/ref_04.jfif",
+   "source_sha256": "44d1f596f85d1c1f8b41979614d407afa95f2ae093dcd507054fe575af780738",
+   "source_size": [
+    446,
+    448
+   ],
+   "normalized_crop_box": [
+    0.44043,
+    0.409617,
+    0.590822,
+    0.48818
+   ],
+   "pixel_crop_box": [
+    196.4,
+    183.5,
+    263.5,
+    218.7
+   ],
+   "padding_rgb": [
+    128,
+    128,
+    128
+   ],
+   "aspect_mode": "pad",
+   "out_path": "review/batch3_face_crops/v1/ref_04__MOUTH__v1.jpg",
+   "out_size": [
+    1024,
+    512
+   ],
+   "out_sha256": "0b0c5a110a74e0d51eeb25ba4dd14fb3ea50198621408fc8116119160115a2ac",
+   "tool_version": "build_face_crops/1.0",
+   "qa_status": "fail",
+   "qa_reasons": [
+    "原圖上該部位短邊只有 35px，低於 96px（放大只會得到糊圖）"
+   ],
+   "qa_metrics": {
+    "padding_ratio": 0.0,
+    "yaw_proxy": 0.0595,
+    "source_px_short_side": 35.2
+   },
+   "qa_by": "auto"
   }
  }
 }
