@@ -118,33 +118,37 @@ A young woman steps out from the bus shelter, one hand raised holding the handle
 
 ## Q1 透明傘面能不能當視線目標
 
-- **判定**：
-- **理由**：
-- **建議改法（改前→改後）**：
+- **判定**：透明傘面可以作為場景物件，但不宜單獨作為這次的硬驗收視線目標；改看「整片深色傘骨」。
+- **理由**：傘面夠大、在畫面內且必然生成，優於掌心雨滴；但 `underside of the clear canopy` 指向的是透明材質形成的空泛區域，缺少有邊界、有對比的落點，仍可能只被模型理解為「臉朝上」，而不是眼睛確實離開鏡頭。只寫中央傘尖／hub 又會回到「目標太小」的風險。傘骨是一組橫跨頭頂的大型、不透明、高對比結構，既保留自然的抬眼動作，也更符合「畫面內＋夠大＋必然會被畫出來」三條。
+- **建議改法（改前→改後）**：`her eyes lifted to the underside of the clear canopy above her` → `her eyes lifted toward the fan of dark umbrella ribs spreading across the clear canopy above her`
 
 ## Q2 正側面 vs 上胸覆蓋驗收
 
-- **判定**：
-- **理由**：
-- **建議改法（改前→改後）**：
+- **判定**：改成前側三分之四，不保留正側面。
+- **理由**：正側面雖能乾淨測到方位改變，但會讓高圓領、鎖骨位置與上胸覆蓋程度難以判讀。這不是把領口問題修好，而是讓曾經 2/2 失敗的驗收失去正面證據。前側三分之四仍明確偏離預設正面、足以驗證方位軸線，同時能讓領口輪廓與上胸布料在畫面中可見；兩個目標不再互相犧牲。
+- **建議改法（改前→改後）**：`Shot from her side in profile as she steps out, camera at her navel level, shot from well back.` → `Shot from her three-quarter front-left as she steps out, camera at her navel level, from well back.`
 
 ## Q3 210 字是否稀釋
 
-- **判定**：
-- **理由**：
-- **要砍的段落**：
+- **判定**：不因 210 字刪內容；字數本身不是已驗證的失敗門檻。
+- **理由**：五項硬驗收集中在開頭三句與服裝句，位置優先度高，沒有被埋在末段。其餘內容也不是純裝飾：路人支撐公共場景真實感，光線段提供雙色溫、反射路徑與曝光犧牲，髮型是本件唯一要測的剪裁幾何。尤其 `A route map lightbox` 不能刪，它同時使後文的 `warm sign colour` 與 `the signs are the brightest area` 有具名、可見的物理來源；刪除反而會製造光線邏輯空缺。若生成失敗，應依五項逐欄結果判斷，不應先把未證實的總字數當根因。
+- **要砍的段落**：無；保留 `A route map lightbox`。
 
 ## Q4 三修法同送、無法歸因
 
-- **判定**：
-- **理由**：
+- **判定**：同意三項同送，代價可接受；不建議先只修一項。
+- **理由**：這一輪的目的是讓 LG-05 成為可用素材，不是建立單一變因的通用因果律。③視線、④構圖範圍、⑤領口是三個不同輸出欄位，各自有獨立的改動與驗收結果；即使同一批生成，仍能逐張記錄三欄各自 PASS／FAIL，判斷哪一項修法是否有效。真正無法排除的是跨指令交互作用，但為此拆成三輪會讓已知失敗繼續消耗生成額度。若某一欄再次失敗，再只針對該欄做單變因追測即可。
 
 ## Q5 整段判定
 
-- **PASS / REVISE**：
-- **理由**：
+- **PASS / REVISE**：**REVISE**
+- **理由**：構圖、景別、手物關係、領口幾何、公共路人與物理光線路徑均可保留；送生成前只需修正兩個會直接影響硬驗收的衝突：把透明傘面改成大面積、高對比的傘骨視線目標，並把正側面改成可驗收領口的前側三分之四。完成後可直接送 2 張。
 - **最終要送生成的全文（若有改動，請給完整一段）**：
+
+```
+A young woman steps out from the bus shelter, one hand raised holding the handle of a clear umbrella opened above her head, her other hand reaching out with the palm turned up to feel for rain, her eyes lifted toward the fan of dark umbrella ribs spreading across the clear canopy above her. Her calves and the wet pavement are visible in the bottom third of the frame. Shot from her three-quarter front-left as she steps out, camera at her navel level, from well back. A blunt chin-length black bob with even blunt ends along the jawline. An opaque off-white button-front blouse with a high round neckline at the collarbone, all upper buttons fastened, the upper chest fully covered by fabric, a pale blue checked skirt. A route map lightbox. A few anonymous strangers in the mid-ground going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing. Cool overcast daylight falls on her face, while wet asphalt bounces a small amount of warm sign colour upward. Her face clearly exposed with natural skin texture; the signs are the brightest area, only their smallest highlights reaching white. Subtle film grain.
+```
 
 ## 補充
 
-- 
+- 本輪改成前側三分之四後，⑤不能只靠「胸線沒有露」判 PASS；應正向確認高圓領邊界位於鎖骨、左右領口連續、上胸由不透明布料覆蓋。否則仍可能把裁切或姿勢遮擋誤判為領口修復成功。
