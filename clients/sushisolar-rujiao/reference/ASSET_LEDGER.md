@@ -6,7 +6,7 @@
 
 ## 🔴 兩個必須先知道的結論
 
-### 1. 如嬌一支影片都沒有
+### 1. 如嬌一支影片都沒有——但這不是問題（見第五節）
 
 | 帳號 | 影片 | 照片 |
 |---|---|---|
@@ -27,87 +27,104 @@
 
 ---
 
-## 鮨佐樂 @sushisolar｜影片逐支稽核
+## 鮨佐樂 @sushisolar｜24 支影片逐支稽核（已全部目視）
 
-| 日期 | shortCode | 長度 | 版權判定 | 內容 | 貼文 |
-|---|---|---|---|---|---|
-| 2024-04-21 | `C6A5UAkPxkc` | 58s | 🟠 燒有 @mifood_myfood 浮水印 |  | https://www.instagram.com/p/C6A5UAkPxkc/ |
-| 2024-07-08 | `C9JhkVPvAsV` | 36s | 🟢 已目視確認自有 | 師傅的手把海膽／魚子醬壽司放上漆台 | https://www.instagram.com/p/C9JhkVPvAsV/ |
-| 2024-09-03 | `C_cMd96v0Ly` | 36s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/C_cMd96v0Ly/ |
-| 2024-09-05 | `C_hYXWxvOlY` | 57s | 🟢 已目視確認自有 | 師傅的手、生筋子、秋刀魚 | https://www.instagram.com/p/C_hYXWxvOlY/ |
-| 2024-10-19 | `DBStAwjuiZ9` | 36s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DBStAwjuiZ9/ |
-| 2024-11-06 | `DCBMsR_OkVJ` | 33s | 🟢 已目視確認自有 | 擺盤特寫為主 | https://www.instagram.com/p/DCBMsR_OkVJ/ |
-| 2024-12-03 | `DDHR88lz0JK` | 53s | 🟠 燒有 @mifood_myfood 浮水印 |  | https://www.instagram.com/p/DDHR88lz0JK/ |
-| 2025-03-04 | `DGxmN-2TGor` | 15s | 🟢 已目視確認自有 | 手持融化壽司特寫，僅帶 @sushisolar 自家浮水印 | https://www.instagram.com/p/DGxmN-2TGor/ |
-| 2025-04-05 | `DID53OvzRpJ` | 26s | 🟠 燒有 @ICRAVEFORFOOD 浮水印 |  | https://www.instagram.com/p/DID53OvzRpJ/ |
-| 2025-04-21 | `DIsdA4-zZHj` | 40s | 🟠 燒有 @maokaishungry／ICRAVEFORFOOD 浮水印 |  | https://www.instagram.com/p/DIsdA4-zZHj/ |
-| 2025-04-23 | `DIxrEQQzRzC` | 37s | ⚪ 待人工確認（無明顯 handle，但編輯風格像外部創作者） |  | https://www.instagram.com/p/DIxrEQQzRzC/ |
-| 2025-05-09 | `DJa27DdTnQN` | 55s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DJa27DdTnQN/ |
-| 2025-09-16 | `DOrmrL4kifh` | 64s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DOrmrL4kifh/ |
-| 2025-11-04 | `DQnzC1UEmr1` | 37s | 🟠 燒有 @annafu28 浮水印 |  | https://www.instagram.com/p/DQnzC1UEmr1/ |
-| 2025-12-26 | `DStoWm0krEZ` | 62s | 🟠 燒有 @MIFOOD_MYFOOD 浮水印 |  | https://www.instagram.com/p/DStoWm0krEZ/ |
-| 2026-03-30 | `DWfZ0TwkmCm` | 48s | 🟢 已目視確認自有 | ★★ 師傅本人對鏡頭講話介紹海膽箱（有字幕） | https://www.instagram.com/p/DWfZ0TwkmCm/ |
-| 2026-04-11 | `DW-3p-WEtiZ` | 199s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DW-3p-WEtiZ/ |
-| 2026-04-28 | `DXq_tqtkmQL` | 67s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DXq_tqtkmQL/ |
-| 2026-05-06 | `DYA9_u2S9Ug` | 41s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DYA9_u2S9Ug/ |
-| 2026-06-20 | `DZz_c2bS443` | 52s | 🟢 已目視確認自有 | ★ 師傅把壽司遞到客人張開的掌上；淺色原木吧台＋漆紅檯面全景 | https://www.instagram.com/p/DZz_c2bS443/ |
-| 2026-07-05 | `DaZdKbhyJV6` | 60s | 🟢 已目視確認自有 | ★ 十週年。師傅捏壽司、放海膽、變態壽司／融化壽司特寫、店內書法招牌 | https://www.instagram.com/p/DaZdKbhyJV6/ |
-| 2026-07-12 | `DarC2ICSWhj` | 38s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DarC2ICSWhj/ |
-| 2026-08-10 | `Db2Hka1y4nI` | 59s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/Db2Hka1y4nI/ |
-| 2026-08-18 | `DcLaW3ZSacU` | 37s | ⚪ 未目視稽核 |  | https://www.instagram.com/p/DcLaW3ZSacU/ |
-### 🟢 已確認可用的 6 支，內容正好對上 R18 要的鏡頭
+**判準：先看畫面浮水印，再看 caption 有沒有致謝他人。兩者都要過才算 🟢。**
 
-| R18 需要的 | 有沒有素材 |
-|---|---|
-| 鏡 2「主廚看客席、手停一下、調整下一貫」 | ✅ `DZz_c2bS443` **師傅把壽司遞到客人張開的掌上**——是真實的醫病互動，而且**只有手、沒有臉**，直接避開肖像問題 |
-| 鏡 3「招牌壽司完成特寫」 | ✅ `DaZdKbhyJV6` 十週年：變態壽司（鮪魚大腹／海膽／鱘魚子醬）、融化壽司、松葉蟹最中餅 |
-| 鏡 3「12 席板前與不同色茶杯」 | ✅ `DZz_c2bS443` 有吧台全景 |
-| 鏡 3「低調門面」 | ❌ 沒看到 |
+### 🟢 可直接用 —— 7 支
 
-### ★★ 一個 R18 和我都沒想到的素材
+| 日期 | shortCode | 長度 | 內容 |
+|---|---|---|---|
+| 2024-07-08 | `C9JhkVPvAsV` | 36s | 師傅的手把海膽／魚子醬壽司放上漆台 |
+| 2024-09-05 | `C_hYXWxvOlY` | 57s | 師傅的手、生筋子、秋刀魚 |
+| 2024-11-06 | `DCBMsR_OkVJ` | 33s | 擺盤特寫為主 |
+| 2025-03-04 | `DGxmN-2TGor` | 15s | 手持融化壽司特寫，僅帶 @sushisolar 自家浮水印 |
+| 2026-03-30 | `DWfZ0TwkmCm` | 47s | **★★ 師傅本人對鏡頭講話**介紹海膽箱，帶字幕「每天都要競標」 |
+| 2026-06-20 | `DZz_c2bS443` | 52s | **★ 師傅把壽司遞到客人張開的掌上**（只有手、沒有臉）；淺色原木吧台＋漆紅檯面全景 |
+| 2026-07-05 | `DaZdKbhyJV6` | 60s | **★ 十週年**。師傅捏壽司、放海膽、變態壽司／融化壽司特寫、店內書法招牌 |
 
-`DWfZ0TwkmCm`（2026-03-30，48s）**是師傅本人對著鏡頭講話**，介紹海膽箱，
-帶字幕「因為我看有一些／每天都要競標／可能比較少」。
+### 🔴 不可用（畫面燒有第三方 handle）—— 11 支
 
-**這改變了 R18 Q2「第三方反應」那題的前提**——R18 假設主廚露臉需要另外確認肖像使用，
-但**主廚本人已經在店家自己的帳號上對鏡頭說話了**。這是店家自製、自己發布的內容。
+`C6A5UAkPxkc`(@mifood_myfood)、`DDHR88lz0JK`(@mifood_myfood)、`DID53OvzRpJ`(@ICRAVEFORFOOD)、
+`DIsdA4-zZHj`(@maokaishungry)、`DOrmrL4kifh`(@peray_blog)、`DQnzC1UEmr1`(@annafu28)、
+`DStoWm0krEZ`(@MIFOOD_MYFOOD)、`DW-3p-WEtiZ`(@MIFOOD_MYFOOD)、`DYA9_u2S9Ug`(@annafu28)、
+`Db2Hka1y4nI`(@MIFOOD_MYFOOD)、`DcLaW3ZSacU`(@ANNAFU28)
+
+**這 11 支裡有幾支拍到主廚正臉工作與說話，畫面品質也最好——但版權不在客戶手上，只能當內部參考。**
+
+### 🟡 畫面乾淨，但 caption 致謝他人 —— 5 支（**要跟客戶確認才可用**）
+
+| shortCode | caption 致謝 | 說明 |
+|---|---|---|
+| `C_cMd96v0Ly` | @annafu28 | 帶鮨佐樂自家標題卡，無第三方浮水印 |
+| `DBStAwjuiZ9` | @lhyleon（明寫「拍攝」） | 同上 |
+| `DJa27DdTnQN` | @mifood_myfood | 有「Sushi Solar 鮨佐樂《2025春季菜單登場》」自家卡 |
+| `DarC2ICSWhj` | @maokaishungry | 同上 |
+| `DIxrEQQzRzC` | @tangying.ty（「謝謝TY畫一筆」） | **畫面上的手繪塗鴉字幕就是對方的創作**，風險較高 |
+
+> **這一類是新發現的第三種狀況**：畫面沒有浮水印，但 caption 明白致謝了拍攝者。
+> **不能自己猜**——問客戶一句「這幾支是誰拍的、我們能不能用」即可，
+> 這不違反「不要求客戶拍任何東西」，因為只是問既有素材的權利歸屬。
+
+### ⚪ 抓不到檔 —— 1 支
+
+`DXq_tqtkmQL`（2026-04-28，67s，「為什麼現在日料店滿街都是？」）——
+下載時 proxy 502。**caption 沒有致謝他人，看起來是店家自製的觀點影片，值得補抓。**
 
 ---
 
 ## 如嬌 @rujiao_hotpot｜27 張照片，全部 🟢 客戶自有
 
-沒有任何第三方浮水印，全部是店家自製的圖文卡片。
+**沒有任何第三方浮水印**，全部是店家自製圖文。已全部目視。
 
-| 主題 | 張數 | 用途 |
-|---|---|---|
-| 2022-12 開幕（黃金花膠雞湯鍋、雙龍戲珠海陸套餐、剝皮辣椒醬蟹、九孔鮑） | 6 | 招牌鍋物與湯色 |
-| 2023-06「小女子形象風格心思分享」**設計理念三連發** | 3 | **店內空間**——現代中國風主牆面、入門後最深刻的擺設 |
-| 2025-02 三種湯頭（黃金花膠雞／金銀蒜蛤蠣響螺／港式辣味牛油雞白） | 3 | **三店各有限定湯頭，可做地域分流** |
-| 2025-03 菜單 4.0＋青花椒蛤蠣大骨雞湯鍋 | 3 | 新常態湯頭 |
-| 2025-06、2025-08、2025-10、2026-05 單品（辣油抄手、醉雞卷、炸山藥、海膽XO乾拌麵、蔥燒牛筋飯、比目魚干貝丼、生醃醬蟹佐松露） | 12 | 熟食單品 |
+### 對照 `VIDEO_PLAN_V1.md` 如嬌四個鏡頭的素材盤點
 
-### ★ 品牌語調：R18 和我都漏掉了
+| R18 的鏡頭 | 有沒有素材 |
+|---|---|
+| **鏡 1「湯勺舀起金黃湯、讓湯回落」** | ✅✅ **有兩張**：①金色雕飾湯勺高舉、**金黃湯柱正在半空往下落**、鍋面冒煙 ②一隻手捧白瓷碗、湯正倒進碗裡。**動作的中間已經被拍下來了** |
+| 鏡 2「鍋面或備料特寫，看到玉米雞、花膠或雕飾湯勺」 | ✅ 招牌黃金花膠雞湯鍋多張（整隻玉米雞在金黃湯裡）、花膠、三種湯頭俯拍 |
+| 鏡 3（Yuna 的 verdict） | — AI 生成 |
+| 鏡 4「真實完整桌面或櫻花樹／雕花隔屏空鏡」 | ✅✅ **有三張店內空景**：盛開的櫻花樹＋吧台、雕花隔屏＋燈籠＋木桌、山水主牆面包廂；另有兩張豐盛整桌 |
 
-如嬌的 caption 一律以「**小女子**」自稱，對讀者稱「**各位老爺、夫人**」。
-例：「各位客倌好，小女子今日來簡單分享我們的設計理念。」
-
-**這是現成的、已經在用的品牌人格，而且非常鮮明。**
-`VIDEO_PLAN_V1.md` 給 Yuna 寫的旁白（「先別下料。第一碗，先喝原湯。」）
-完全沒有接上這個語調——**Yuna 的 verdict 與「小女子」的宮廷語感要怎麼共存，是還沒解的題。**
+**結論：如嬌沒有影片，但四個鏡頭需要的畫面，靜態照片全部都有。**
 
 ---
 
-## 🟠 不可發布（21 筆）
+## 第五節：如嬌沒有影片，用照片做 image-to-video 就好
 
-| 來源 | 筆數 | 說明 |
-|---|---|---|
-| 客戶轉發、畫面燒有第三方 handle | 6+ | @mifood_myfood、@ICRAVEFORFOOD、@maokaishungry、@annafu28 |
-| 非客戶帳號（合作貼文） | 11 | @ibbyaaaaa ×4、@jc_foodidi、@karenfooodie、@lesleslin、@mifood_myfood、@tastingtaste、@tangying.ty、@eatdasheet、@rosina1018 |
+> **這是 Penny 2026-08-31 提出的，而且她是對的。我先前建議「跟客戶要影片檔」是錯的。**
 
-**可作內部空間理解參考，不可剪進成片。**
-其中 @ibbyaaaaa 那幾支有 tag `@rken1224`（木村哥本人帳號），可作人物外觀參考。
+**我錯在哪**：`CAMPAIGN_PLAN.md` 第六節的鐵則是**「不要求客戶拍任何東西」**，
+理由寫得很清楚——「我們主打全 AIGC 生成，**不會規劃完腳本再回頭要客戶補拍畫面，
+否則客戶跟我們買這個 IP 就沒有意義了**」。**我提議要影片檔，等於在動搖這個案子的商品承諾。**
+
+**技術上完全可行**：`kling3_0` 吃 `start_image`，這正是我們給 KOL 用的方法。
+差別只在 start_image 從「AI 生成的人」換成「客戶自己拍的湯鍋照」。
+
+**而且這批素材特別適合**：那張金勺高舉、湯柱在半空、鍋面冒煙的照片，
+**動作的中間已經被拍下來了**。kling 不需要憑空生出一隻手和一支勺，
+只要讓**已經在畫面裡**的湯柱繼續落下、湯面起漣漪、蒸氣上升。
+這比「從零生成一個舀湯動作」容易一個量級。
+
+### 要誠實講的三個保留
+
+| # | 保留 |
+|---|---|
+| 1 | **0 次實測。**我們從沒用 kling 動過真實食物照，KOL 的 start frame 都是 AI 生成的圖。液體流動、金屬反光、蒸氣是跟人臉完全不同的難題，而**蒸氣本來就是 CAMPAIGN_PLAN 風險 #6** |
+| 2 | **這不等於「AI 生成一鍋假湯」。**動的是客戶自己拍的那一鍋，R18 反對的是用 AI 假湯冒充真實產品證據，這個做法沒有那個問題。**但 caption 不可以說成是實拍影片** |
+| 3 | **成本 10 credits／5 秒。**可以先花 10 credits 測那張倒湯照，成敗立判 |
+
+**同樣的方法也能補鮨佐樂缺的「低調門面」空鏡**——不過鮨佐樂本來就有 7 支可用影片，優先度低。
 
 ---
+
+## 🟠 非客戶帳號的合作貼文（11 筆）
+
+@ibbyaaaaa ×4、@jc_foodidi、@karenfooodie、@lesleslin、@mifood_myfood、@tastingtaste、
+@tangying.ty、@eatdasheet、@rosina1018
+
+可作內部空間理解參考，不可剪進成片。其中 @ibbyaaaaa 幾支有 tag `@rken1224`（木村哥本人帳號），
+可作人物外觀參考。
 
 ## 場景事實修正
 
