@@ -1,3 +1,8 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# 型錄的衍生素材：thumb 與 poster 隨時可由 build_assets.mjs 重產，不進 git。
+# web 與 hero 進 git（實測 230 張 p95 僅 52.2 MB，見覆核包 §2.5）。
+catalog/assets/**/*_t.jpg
+catalog/assets/**/*_poster.jpg

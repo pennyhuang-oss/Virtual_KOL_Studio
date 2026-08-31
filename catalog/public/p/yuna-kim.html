@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Yuna Kim — AI KOL 型錄</title>
+<meta name="description" content="首爾女生的日常美感——真的在保養，但不是在做評測。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d; --bg2:#131317; --line:#26262c; --line2:#34343c;
+  --ink:#f2f2f4; --ink2:#a8a8b3; --ink3:#6f6f7c;
+  --accent:#c9a227; --accent2:#e8c85a;
+  --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
+  --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* ── 頁首 ── */
+.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;
+  background:rgba(11,11,13,.88);backdrop-filter:blur(14px)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{font-family:var(--serif);font-size:19px;letter-spacing:.06em}
+.brand b{color:var(--accent2);font-weight:600}
+.top nav{margin-left:auto;display:flex;gap:22px;font-size:13px;color:var(--ink2)}
+.top nav a:hover{color:var(--ink)}
+
+/* ── 開場 ── */
+.hero{padding:96px 0 56px;border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,5.4vw,60px);line-height:1.18;margin:0 0 22px;
+  font-weight:500;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--accent2)}
+.hero .lede{max-width:660px;color:var(--ink2);font-size:16.5px;margin:0 0 30px}
+.stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;max-width:760px}
+.stat{flex:1 1 150px;padding:18px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--serif);font-size:30px;color:var(--accent2);line-height:1.1}
+.stat span{font-size:12px;color:var(--ink3);letter-spacing:.08em}
+
+/* ── AI 揭露（首屏，CC-04）── */
+.disclose{margin-top:34px;border-left:2px solid var(--accent);background:var(--bg2);
+  padding:16px 20px;max-width:760px;border-radius:0 3px 3px 0}
+.disclose b{color:var(--accent2);font-weight:600}
+.disclose p{margin:6px 0 0;color:var(--ink2);font-size:13.5px}
+
+/* ── 篩選 ── */
+.filters{padding:30px 0 8px;position:sticky;top:64px;background:var(--bg);z-index:40;
+  border-bottom:1px solid var(--line)}
+.frow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.frow>span{font-size:11px;color:var(--ink3);letter-spacing:.12em;min-width:52px}
+.chip{border:1px solid var(--line2);background:transparent;color:var(--ink2);
+  padding:5px 13px;border-radius:100px;font-size:12.5px;cursor:pointer;font-family:inherit;
+  transition:.16s}
+.chip:hover{border-color:var(--ink3);color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
+.count{font-size:12px;color:var(--ink3);padding:10px 0 14px}
+
+/* ── 型錄牆 ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:22px;padding:22px 0 80px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  transition:.2s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--line2);transform:translateY(-3px)}
+.card .ph{aspect-ratio:3/4;background:#1a1a20;overflow:hidden;position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.4s}
+.card:hover .ph img{transform:scale(1.03)}
+.card .body{padding:15px 16px 17px}
+.card .nm{font-family:var(--serif);font-size:18px;margin:0 0 2px;font-weight:500}
+.card .zh{font-size:12px;color:var(--ink3);margin:0 0 9px}
+.card .tl{font-size:13px;color:var(--ink2);margin:0 0 12px;line-height:1.6;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:10.5px;letter-spacing:.05em;color:var(--ink3);border:1px solid var(--line2);
+  padding:2px 8px;border-radius:2px}
+.tag.k{color:var(--accent2);border-color:#4a3d16}
+
+/* ── 人設頁 ── */
+.pback{font-size:12.5px;color:var(--ink3);padding:26px 0 0}
+.pback:hover{color:var(--ink)}
+.phead{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:44px;padding:30px 0 46px;
+  border-bottom:1px solid var(--line);align-items:start}
+.phead .pimg{aspect-ratio:3/4;background:#1a1a20;border-radius:3px;overflow:hidden}
+.phead .pimg img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.phead h1{font-family:var(--serif);font-size:clamp(30px,4vw,44px);margin:0 0 4px;font-weight:500}
+.phead .zh{color:var(--ink3);font-size:14px;margin:0 0 18px}
+.phead .tl{font-size:18px;color:var(--accent2);font-family:var(--serif);line-height:1.6;margin:0 0 26px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:24px}
+.fact{background:var(--bg2);padding:13px 15px}
+.fact span{display:block;font-size:10.5px;color:var(--ink3);letter-spacing:.1em;margin-bottom:3px}
+.fact b{font-weight:500;font-size:13.5px}
+
+section.sec{padding:44px 0;border-bottom:1px solid var(--line)}
+section.sec>h2{font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--ink3);
+  text-transform:uppercase;margin:0 0 22px;font-weight:400}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px}
+.lbl{font-size:11px;letter-spacing:.1em;color:var(--ink3);margin:0 0 8px}
+.prose{color:var(--ink2);font-size:14.5px;margin:0}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:7px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2);
+  display:flex;justify-content:space-between;gap:14px}
+ul.plain li:last-child{border-bottom:0}
+ul.plain li b{color:var(--ink);font-weight:500}
+ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-space:nowrap}
+
+/* 設定深度 */
+.depth{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.depth div{background:var(--bg2);padding:16px 17px}
+.depth b{display:block;font-family:var(--serif);font-size:26px;color:var(--accent2);line-height:1.1}
+.depth span{font-size:11.5px;color:var(--ink3)}
+.aspects{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+
+/* 圖庫 */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
+.gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
+.gal a:hover img{transform:scale(1.04)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.vid{position:relative;aspect-ratio:9/16;background:#1a1a20;border-radius:2px;overflow:hidden}
+.vid img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;opacity:.82}
+.vid .play{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;color:#fff;
+  text-shadow:0 2px 14px rgba(0,0,0,.7)}
+
+/* 燈箱 */
+.lb{position:fixed;inset:0;background:rgba(6,6,8,.96);z-index:100;display:none;
+  place-items:center;padding:36px}
+.lb[open],.lb.on{display:grid}
+.lb img{max-width:100%;max-height:88vh;object-fit:contain;border-radius:2px}
+.lb button{position:absolute;top:22px;right:26px;background:none;border:1px solid var(--line2);
+  color:var(--ink);width:38px;height:38px;border-radius:100px;cursor:pointer;font-size:17px}
+
+footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
+footer p{margin:0 0 7px;max-width:720px}
+@media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><a href="/"><b>KOL</b> 型錄</a></div>
+  <nav><a href="/">全部人設</a><a href="/#about">關於這份型錄</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="pback"><a href="/">← 回到全部人設</a></p>
+  <div class="phead">
+    <div class="pimg"><img src="/assets/yuna-kim/hero.jpg" alt="Yuna Kim" width="1080" height="1440"></div>
+    <div>
+      <h1>Yuna Kim</h1>
+      <p class="zh">김하은</p>
+      <p class="tl">首爾女生的日常美感——真的在保養，但不是在做評測。</p>
+      <div class="facts"><div class="fact"><span>年齡</span><b>21 歲</b></div><div class="fact"><span>市場</span><b>台灣</b></div><div class="fact"><span>族裔</span><b>Korean</b></div><div class="fact"><span>語言</span><b>Korean・Mandarin Chinese・English</b></div><div class="fact"><span>領域</span><b>美妝・保養</b></div></div>
+      <p class="prose">The Seoul Girl｜effortlessly beautiful, fashion-forward, genuinely into skincare but not a beauty reviewer</p>
+    </div>
+  </div>
+
+  <section class="sec"><h2>設定</h2><div class="two">
+    <div><p class="lbl">性格</p><div class="tags"><span class="tag">Genuinely invested in skincare — her mom works at a dermatology clinic, she grew up knowing what actually works</span><span class="tag">Confident about her looks without performing that confidence</span><span class="tag">Shares because she likes sharing, not because she's building a review channel</span><span class="tag">Honest — if something isn't good she just doesn't post about it, or says plainly it didn't work for her</span><span class="tag">Low-key social — her circle is small and tight, not a public personality in a loud way</span><span class="tag">Dresses well and knows it, but doesn't make it a whole thing</span></div></div>
+    <div><p class="lbl">語氣</p><p class="prose">Calm, real, Korean-natural. Short sentences. Says what she means without explaining it. Caption feels like a message to a friend, not a post for an audience.</p></div>
+    <div><p class="lbl">視覺調性</p><p class="prose">Clean, bright, Seoul morning. Feels intentional but not staged. Products are there but the face is always the subject.</p></div>
+  </div></section>
+
+  <section class="sec"><h2>內容主題與比重</h2>
+    <ul class="plain"><li><b>私下 / 她自己的房間</b><i>25%</i></li><li><b>穿搭 / 換裝</b><i>18%</i></li><li><b>外出 / 首爾的日常</b><i>15%</i></li><li><b>早晨 / 剛睡醒</b><i>15%</i></li><li><b>浴室 / 洗完澡</b><i>12%</i></li><li><b>外出 / 旅行</b><i>10%</i></li><li><b>身體 / 活動</b><i>5%</i></li></ul>
+  </section>
+
+  <section class="sec"><h2>設定的細節到什麼程度</h2>
+    <div class="depth">
+      <div><b>704</b><span>行設定文件</span></div>
+      <div><b>65</b><span>項規格欄位</span></div>
+      <div><b>7</b><span>條內容主題</span></div>
+      
+    </div>
+    <p class="lbl" style="margin-top:18px">設定文件</p>
+      <ul class="plain"><li><b>角色設定書</b><i>411 行</i></li><li><b>內容與語氣規範</b><i>293 行</i></li></ul>
+    <p class="lbl" style="margin-top:18px">涵蓋面向</p>
+      <div class="aspects"><span class="tag k">外觀規格</span><span class="tag k">性格與價值觀</span><span class="tag k">語氣與幽默感</span><span class="tag k">背景故事</span><span class="tag k">內容支柱與比重</span><span class="tag k">視覺美學規範</span><span class="tag k">合作邊界</span><span class="tag k">各平台內容分工</span></div>
+  </section>
+
+  <section class="sec"><h2>圖像素材（共 37 張，此處展示 9 張）</h2>
+    <div class="gal"><a href="/assets/yuna-kim/g01.jpg" data-lb="/assets/yuna-kim/g01.jpg" data-alt="Yuna Kim 素材 1">
+      <img src="/assets/yuna-kim/g01_t.jpg" alt="Yuna Kim 素材 1" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g02.jpg" data-lb="/assets/yuna-kim/g02.jpg" data-alt="Yuna Kim 素材 2">
+      <img src="/assets/yuna-kim/g02_t.jpg" alt="Yuna Kim 素材 2" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g03.jpg" data-lb="/assets/yuna-kim/g03.jpg" data-alt="Yuna Kim 素材 3">
+      <img src="/assets/yuna-kim/g03_t.jpg" alt="Yuna Kim 素材 3" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g04.jpg" data-lb="/assets/yuna-kim/g04.jpg" data-alt="Yuna Kim 素材 4">
+      <img src="/assets/yuna-kim/g04_t.jpg" alt="Yuna Kim 素材 4" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g05.jpg" data-lb="/assets/yuna-kim/g05.jpg" data-alt="Yuna Kim 素材 5">
+      <img src="/assets/yuna-kim/g05_t.jpg" alt="Yuna Kim 素材 5" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g06.jpg" data-lb="/assets/yuna-kim/g06.jpg" data-alt="Yuna Kim 素材 6">
+      <img src="/assets/yuna-kim/g06_t.jpg" alt="Yuna Kim 素材 6" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g07.jpg" data-lb="/assets/yuna-kim/g07.jpg" data-alt="Yuna Kim 素材 7">
+      <img src="/assets/yuna-kim/g07_t.jpg" alt="Yuna Kim 素材 7" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g08.jpg" data-lb="/assets/yuna-kim/g08.jpg" data-alt="Yuna Kim 素材 8">
+      <img src="/assets/yuna-kim/g08_t.jpg" alt="Yuna Kim 素材 8" loading="lazy" width="400" height="533"></a><a href="/assets/yuna-kim/g09.jpg" data-lb="/assets/yuna-kim/g09.jpg" data-alt="Yuna Kim 素材 9">
+      <img src="/assets/yuna-kim/g09_t.jpg" alt="Yuna Kim 素材 9" loading="lazy" width="400" height="533"></a></div>
+  </section>
+
+  <section class="sec"><h2>影片素材（共 6 支）</h2>
+    <div class="vids"><div class="vid">
+      <img src="/assets/yuna-kim/v1_poster.jpg" alt="Yuna Kim 影片 1 首幀" loading="lazy" width="720" height="1280">
+      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <img src="/assets/yuna-kim/v2_poster.jpg" alt="Yuna Kim 影片 2 首幀" loading="lazy" width="720" height="1280">
+      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <img src="/assets/yuna-kim/v3_poster.jpg" alt="Yuna Kim 影片 3 首幀" loading="lazy" width="720" height="1280">
+      <span class="play" aria-hidden="true">▶</span></div></div>
+    <p class="prose" style="margin-top:14px;font-size:13px">影片可於實際洽談時提供完整檔案。</p>
+  </section>
+
+  <section class="sec"><h2>合作方向</h2><div class="two">
+    <div><p class="lbl">適合</p><ul class="plain"><li>K-beauty skincare and makeup brands (indie to established)</li><li>Korean fashion brands with clean aesthetic</li><li>Seoul cafés and lifestyle brands</li><li>Brands that don't require scripted copy</li></ul></div>
+    <div><p class="lbl">不接</p><ul class="plain"><li>任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）</li><li>露骨、違反平台規範的內容</li><li>需要她冒充醫療、投資、法律等專業身分背書的合作</li><li>博弈、詐騙、高風險金融等違法或誤導性品類</li><li>她沒有實際用過的產品（她的可信度來自誠實，這是價值觀紅線）</li></ul></div>
+  </div></section>
+</div>
+<footer><div class="wrap">
+  <p>Yuna Kim 為 AI 生成的虛擬角色，非真實人物。</p>
+  <p><a href="/">← 回到全部人設</a></p>
+</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="放大檢視">
+  <button type="button" aria-label="關閉">✕</button><img alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), im=lb.querySelector('img'), last=null;
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-lb]'); if(a){e.preventDefault();last=a;
+      im.src=a.getAttribute('data-lb'); im.alt=a.getAttribute('data-alt')||'';
+      lb.classList.add('on'); lb.querySelector('button').focus(); return;}
+    if(e.target===lb||e.target.closest('#lb button')){close();}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))close();});
+  function close(){lb.classList.remove('on'); im.src=''; if(last)last.focus();}
+})();
+</script>
+</body></html>

@@ -1,0 +1,17 @@
+{
+  "name": "kol-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI KOL 型錄（靜態站，給客戶看）",
+  "main": "server.js",
+  "scripts": {
+    "build": "node tools/build_catalog.mjs && node tools/build_assets.mjs && node tools/build_site.mjs",
+    "site": "node tools/build_site.mjs",
+    "start": "node server.js",
+    "check": "node tools/render_packet_numbers.mjs --check && node tools/preflight.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
