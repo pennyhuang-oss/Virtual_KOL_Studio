@@ -198,6 +198,16 @@ else:
         if p not in idx:
             err(f"review/INDEX.md 沒有列出 {p}")
 
+# ── Batch 3 臉部素材硬規則：素材只能是 ref_01–ref_15 ──
+# 這條規則原本只在對話裡，對話壓縮後被弄丟，整條線因此建立在錯的素材上。
+# 掛進主檢查，讓它跟其他一致性斷言一起被跑到。
+import subprocess as _sp
+_r = _sp.run([sys.executable, 'tools/check_batch3_face_invariant.py'],
+             capture_output=True, text=True)
+if _r.returncode != 0:
+    err('Batch 3 臉部素材硬規則不通過——見 BATCH3_FACE_INVARIANT.md，'
+        '單獨執行 tools/check_batch3_face_invariant.py 看細節')
+
 print("跨檔案一致性檢查")
 for w in WARN: print("  ⚠ ", w)
 if ERR:

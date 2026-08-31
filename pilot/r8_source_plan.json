@@ -590,7 +590,9 @@
    }
   }
  },
- "assignment": {
+ "min_pair_if_hit": 2.2881204919019704,
+ "threshold": 1.02,
+ "_retired_assignment": {
   "angel-chiu": {
    "FACE_SHAPE_AND_JAW": "ref_40",
    "EYES_AND_BROWS": "ref_58",
@@ -706,6 +708,5 @@
    "MOUTH": "ref_55"
   }
  },
- "min_pair_if_hit": 2.2881204919019704,
- "threshold": 1.02
+ "_retired_note": "ref_40–58 的分配，依 BATCH3_FACE_INVARIANT.md 退役。"
 }
