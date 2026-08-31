@@ -159,6 +159,36 @@ const sum = (k) => rows.reduce((a, r) => a + r[k], 0);
 
 const tierCount = t => rows.filter(r => r.catalog_tier === t).length;
 
+// ── 收錄重數的分解（KC-02）─────────────────────────────────────────
+// 覆核者抓到 §2.1 手寫的 repo 人設數（30/11/24=65）與「42 位聯集、16 位重複」
+// 對不上：d2=16 時 2x = 65-42-16 = 7 → x=3.5，非整數，所以 65 本身不可能成立。
+// 實際是 31/10/17=58，58-42=16，恰好等於雙重收錄數，三重收錄為 0。
+// 把這個恆等式做成輸出＋測試，不要再靠手寫。
+const multiplicity = {};
+for (const r of rows) multiplicity[r.in_repos.length] = (multiplicity[r.in_repos.length] || 0) + 1;
+
+const pair_intersections = {};
+for (const r of rows) {
+  if (r.in_repos.length === 2) {
+    const k = [...r.in_repos].sort().join('∩');
+    pair_intersections[k] = (pair_intersections[k] || 0) + 1;
+  }
+}
+const exclusive = {};
+for (const r of rows) {
+  if (r.in_repos.length === 1) exclusive[r.in_repos[0]] = (exclusive[r.in_repos[0]] || 0) + 1;
+}
+
+const total_records = rows.reduce((a, r) => a + r.in_repos.length, 0);
+const repo_record_sum = Object.values(repo_totals).reduce((a, t) => a + t.persona_count, 0);
+const excess = total_records - rows.length;             // Σ(重數-1)
+const expected_excess = Object.entries(multiplicity)
+  .reduce((a, [n, c]) => a + (Number(n) - 1) * c, 0);
+
+// 🛑 恆等式：三個 repo 的人設數相加 == 紀錄總數，且 紀錄總數 - 聯集 == Σ(重數-1)。
+// 任何一邊不符就是 bug，直接讓程式失敗——不要印警告然後繼續（文件寫過會再犯，程式不會）。
+const identity_ok = repo_record_sum === total_records && excess === expected_excess;
+
 const inventory = {
   generated_by: 'catalog/tools/scan_inventory.mjs',
   generated_at: new Date().toISOString().slice(0, 10),
@@ -166,6 +196,20 @@ const inventory = {
   missing_repos,
   note: '每個數字都由本程式現算。手寫的數字若與這份不符，那是 bug，不是這份錯。',
   repos: REPOS.map(r => ({ ...r, totals: repo_totals[r.tag] || null })),
+  reconciliation: {
+    note: 'KC-02：repo 人設數相加必須等於紀錄總數，紀錄總數減聯集必須等於 Σ(重數-1)。手寫的數字對不上就是手寫錯了。',
+    repo_persona_counts: Object.fromEntries(Object.entries(repo_totals).map(([t, v]) => [t, v.persona_count])),
+    repo_record_sum,
+    total_records,
+    unique_personas: rows.length,
+    excess_records: excess,
+    expected_excess,
+    identity_holds: identity_ok,
+    personas_by_multiplicity: multiplicity,
+    exclusive_to_one_repo: exclusive,
+    pair_intersections,
+    triple_intersection: multiplicity[3] || 0,
+  },
   totals: {
     unique_personas: rows.length,
     duplicated_personas: rows.filter(r => r.duplicated).length,
@@ -185,9 +229,18 @@ const inventory = {
   personas: rows,
 };
 
+if (!identity_ok) {
+  console.error('🛑 恆等式不成立，盤點有 bug，不要用這份數字：');
+  console.error(`   repo 人設數相加 = ${repo_record_sum}，紀錄總數 = ${total_records}`);
+  console.error(`   紀錄 - 聯集 = ${excess}，Σ(重數-1) = ${expected_excess}`);
+  process.exit(2);
+}
+
 if (process.argv.includes('--print')) {
   const t = inventory.totals;
+  const rc = inventory.reconciliation;
   console.log(`人設 ${t.unique_personas} 位（重複收錄 ${t.duplicated_personas}、欄位互斥 ${t.personas_with_field_conflicts}、已上線 ${t.published_live}）`);
+  console.log(`對帳：${Object.entries(rc.repo_persona_counts).map(([k, v]) => k + ' ' + v).join(' + ')} = ${rc.repo_record_sum} 筆紀錄 − ${rc.unique_personas} 位聯集 = ${rc.excess_records}（雙重 ${rc.personas_by_multiplicity[2] || 0}、三重 ${rc.triple_intersection}）✅`);
   console.log(`分區：可撐一頁 ${t.tier_showcase} / 素材不足 ${t.tier_thin} / 只有文字 ${t.tier_text_only}`);
   console.log(`素材：圖 ${t.images} 張 ${t.image_mb} MB（平均 ${t.avg_image_mb} MB）｜影片 ${t.videos} 支 ${t.video_mb} MB（平均 ${t.avg_video_mb} MB）｜合計 ${t.total_mb} MB`);
   if (missing_repos.length) console.log(`⚠ 掃不到：${missing_repos.join(', ')}`);

@@ -42,6 +42,34 @@
       }
     }
   ],
+  "reconciliation": {
+    "note": "KC-02：repo 人設數相加必須等於紀錄總數，紀錄總數減聯集必須等於 Σ(重數-1)。手寫的數字對不上就是手寫錯了。",
+    "repo_persona_counts": {
+      "VKS": 31,
+      "SGK": 10,
+      "BUP": 17
+    },
+    "repo_record_sum": 58,
+    "total_records": 58,
+    "unique_personas": 42,
+    "excess_records": 16,
+    "expected_excess": 16,
+    "identity_holds": true,
+    "personas_by_multiplicity": {
+      "1": 26,
+      "2": 16
+    },
+    "exclusive_to_one_repo": {
+      "SGK": 5,
+      "VKS": 20,
+      "BUP": 1
+    },
+    "pair_intersections": {
+      "BUP∩SGK": 5,
+      "BUP∩VKS": 11
+    },
+    "triple_intersection": 0
+  },
   "totals": {
     "unique_personas": 42,
     "duplicated_personas": 16,

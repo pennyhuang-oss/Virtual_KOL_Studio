@@ -69,8 +69,29 @@ Claude 更新 catalog/KOLCAT_REVIEW_PACKET.md（改 §2 規劃、§3 自開議�
 | 檔案 | 做什麼 | 誰改 |
 |---|---|---|
 | `KOLCAT_REVIEW_PACKET.md` | **給 ChatGPT 的唯一入口**。規劃＋帳本＋本輪問題＋回覆格式 | Claude |
-| `tools/scan_inventory.mjs` | 掃三個 repo，把「有什麼素材可用」算成 JSON | Claude |
-| `data/inventory.json` | 上面那支的輸出。**覆核包裡的每個數字都出自這裡** | 程式產生，不要手改 |
+| `tools/scan_inventory.mjs` | 掃三個 repo，把「有什麼素材可用」算成 JSON。**去重恆等式不成立就 exit 2** | Claude |
+| `tools/sample_derive_measure.mjs` | 分層抽樣，用最終轉檔參數**實際轉檔**後量衍生檔大小（p50／p95／max） | Claude |
+| `tools/render_packet_numbers.mjs` | 把覆核包 §2.1 整段從 JSON 現算後寫回。`--check` 檢查有沒有被手改 | Claude |
+| `data/inventory.json` | 盤點輸出。**覆核包裡的每個數字都出自這裡** | 程式產生，不要手改 |
+| `data/derive_measurements.json` | 轉檔實測輸出 | 程式產生，不要手改 |
+
+### 🛑 §2.1 不准手寫（`KC-02` 的根因）
+
+R1 的覆核包 §2.1 標題寫著「這些數字全部由程式現算」，但那張表的 repo 人設數
+（VKS 30／SGK 11／BUP 24）**是我目測 `ls` 輸出手寫的**，實際是 31／10／17。
+覆核者從 `30+11+24=65` 對不上「42 位聯集、16 位重複」抓到這件事。
+
+**光改對數字沒有用**——這條（先驗再說）在本專案已經是第 12 次再犯，
+而唯一真的停止再犯的規則都是被寫成程式的。所以：
+
+```bash
+node catalog/tools/scan_inventory.mjs            # 重新盤點（恆等式不成立會 exit 2）
+node catalog/tools/render_packet_numbers.mjs     # 重新產生覆核包 §2.1
+node catalog/tools/render_packet_numbers.mjs --check   # 過期或被手改 → exit 1
+```
+
+**每次改覆核包之後、push 之前，跑一次 `--check`。**
+兩支檢查都做過對抗測試（故意弄壞 → 確認真的失敗 → 還原 → 確認通過）。
 
 **還沒做的**（等覆核通過才動手，見覆核包 §2.7）：
 `data/selection.json`（挑哪些圖）、`data/status_override.json`（誰真的可上線）、
