@@ -1364,25 +1364,39 @@ LG-07 同一件、同一個 soul 的對照如下：
 **鏡頭與景深**：**0/21 實測，屬純設計。**
 R14 原文：「若同時改方位、焦段、壓縮與景深，**結果無法回填成可重用規則**。」
 
-> **規則：焦段語言，以及「指定主體所在焦平面」的景深語言，在各自通過 A/B 之前不得進入正式 prompt。**
-> 兩項要**分成兩次測，不可合併**：
-> - 焦段 A/B → 指定在 **LG-09** 上做
-> - 景深 A/B → 指定在 **YG-09** 上做
->
+> **規則：未驗證的光學／焦點控制措辭，在通過 A/B 之前不得進入正式 prompt。**
+> 焦段 A/B → 指定在 **LG-09**；景深 A/B → 指定在 **YG-09**。**兩項分開兩次測，不可合併。**
 > 上面那組「參考措辭（鏡頭與景深）」是**待測草稿，不是可用措辭**。
 
-##### ⚠️ 這條禁令的範圍（2026-08-29 補，因為我第一版寫過寬了）
+##### 這條禁令用 allowlist，不用「主體／背景」語意判斷（2026-08-29 R16 定案）
 
-**被禁的**（指定焦平面／焦段，0 次實測）：
-`short telephoto`、`compressed`、`shallow depth of field`、`only her face sharp`、`her face sharp`
+**我先寫成「主體焦平面被禁、背景糊掉不被禁」，R16 指出這個分界不穩：**
 
-**不被禁的**（單純說背景糊掉，21 件裡 10 件在用，且在 14/14 成功的字串裡）：
-`the background softly out of focus`、`falling out of focus`、`the wall menu out of focus`
+> 「背景 `out of focus` 在光學語意上**仍然是景深語言**，不能寫成『不屬景深語言』；
+> 它可沿用的真正理由是：這幾個**低強度、局部背景措辭已有專案內使用證據**，
+> 而指定鏡頭、壓縮感、主體焦平面及排他性清晰範圍的措辭仍是 0 次實測。」
+>
+> 「單純以主體／背景切分仍有灰區，例如 `background completely blurred`、`creamy bokeh`、
+> `only the subject in focus` **都是在寫背景，卻會強烈改變光學效果**。真正穩定的分界是
+> 『**已驗證的低強度精確句型**』與『**會引入新光學機制或強度的未驗證句型**』。」
 
-**我第一版把兩者寫成同一件事（只寫「景深語言」），結果 R15 依這條要求刪掉
-14/14 已驗證字串裡的 `softly out of focus`。禁令寫得比證據寬，覆核就會照著寬的執行。**
-R14 的請求裡我自己已經分過類——「0/21 有焦段語言（10 件有 `out of focus`，但那只是在說背景糊掉）」——
-規則落檔時卻沒把這個區分寫進去。**規則的範圍要跟當初的清點口徑一致。**
+**✅ allowlist（只有這三個精確字串，不是「所有背景虛化」）**
+
+| 字串 | 證據 |
+|---|---|
+| `softly out of focus`（共用路人字串內） | 14/14 |
+| `falling out of focus`（YG-03 陽台） | 沿用中 |
+| `the wall menu out of focus`（LG-09 菜單） | 沿用中，**且有獨立的瑕疵防護作用**：菜單是模型最容易生偽文字的物件，糊掉可降低亂碼的可辨識度 |
+
+**❌ denylist（0 次實測，禁用至各自 A/B 通過）**
+
+`short telephoto`｜`compressed`｜`shallow depth of field`｜`deep depth of field`｜
+`everything sharp`｜`her face sharp`｜`razor-sharp`｜`tack-sharp`｜`only X in focus`｜
+`focus plane`｜`bokeh`／`creamy bokeh`｜`completely blurred background`／`heavily blurred`｜
+**焦距毫米數**｜**光圈／f-stop**
+
+> **任何新的同義詞或更強程度詞，一律先當未驗證處理**——不要因為「它也只是在講背景」就放行。
+> 這正是我上一版留下的漏洞。
 
 **表情要綁實體動作（D-06）已經驗證過。造型看起來是同一型。**
 

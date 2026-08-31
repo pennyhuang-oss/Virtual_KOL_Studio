@@ -20,6 +20,19 @@ HAIR_LEN = r'(collarbone-length|chin-length|shoulder-length|waist-length|cropped
 # 註：只能說兩者與成功共現，不能說各自已證明為因果控制桿。
 BOB_GEOM = r'(cut evenly at the jawline|even blunt ends along the jawline)'
 WARN_ONLY = ('⚠',)          # 以 ⚠ 開頭者只提醒、不列為不合格
+
+# 未驗證的光學／焦點控制措辭（SEXY_SCENE_LIBRARY §24-E，R16 定案）。
+# 允許的只有三個「已有使用證據的精確字串」，見 OPTICS_ALLOW；其餘一律先禁。
+# R16：不要用「主體／背景」語意判斷——`creamy bokeh`、`only the subject in focus`
+# 都是在寫背景，卻會強烈改變光學效果。
+OPTICS_ALLOW = ('softly out of focus', 'falling out of focus', 'the wall menu out of focus')
+OPTICS_DENY = (
+    r'short telephoto', r'\btelephoto\b', r'\bcompressed\b',
+    r'shallow depth of field', r'deep depth of field', r'everything sharp',
+    r'\b(?:razor|tack)-sharp\b', r'\bface sharp\b',
+    r'only [a-z ]{0,20}in focus', r'focus plane', r'\bbokeh\b',
+    r'(?:completely|heavily) blurred', r'\b\d{2,3}\s?mm\b', r'\bf/\d',
+)
 NEGATION = r'\b(no|not|without|avoid|never)\b'
 TIMELINE = r'(then |breaking into|just starting to|and then|before turning)'
 FLUTTER  = r'(fluttering|lifting in the breeze|trailing in the|blowing in the wind)'
@@ -108,6 +121,16 @@ def lint(sid, prompt, is_close, is_luna, decl=None, immutable=()):
     if 'selfie' in prompt.lower() and re.search(r'phone (up )?beside her (face|cheek)', prompt, re.I):
         out.append('自拍卻要求手機入鏡')
 
+    # 挖掉 allowlist 的精確字串後才掃，這樣被檢查的文字與實際送出的文字仍然對得起來
+    optics = prompt
+    for allowed in OPTICS_ALLOW:
+        optics = optics.replace(allowed, ' ' * len(allowed))
+    for pat in OPTICS_DENY:
+        m = re.search(pat, optics, re.I)
+        if m:
+            out.append('未驗證的光學／焦點控制措辭：%s' % m.group(0))
+            break
+
     # 宣告與 prompt 必須一致。沒有宣告的件只提醒，不擋——
     # 8 件已核准的走的是另一套處理（規格對齊成品、prompt 不動）。
     for frag in immutable:
@@ -127,6 +150,15 @@ def lint(sid, prompt, is_close, is_luna, decl=None, immutable=()):
 
 SELFTEST = [
     # (說明, prompt, is_close, is_luna, 應該要中的項目)
+    # R16：allowlist 的三個精確字串要放行，denylist 的同義／增強詞要擋
+    ('景深 allowlist 放行', 'A woman smiles, the wall menu out of focus. Half body. Collarbone-length brown hair. '
+      'A tee. A cafe. Soft light. Natural skin texture.', False, False, []),
+    ('景深 denylist 擋 bokeh', 'A woman smiles, creamy bokeh behind her. Half body. Collarbone-length brown hair. '
+      'A tee. A cafe. Soft light. Natural skin texture.',
+      False, False, ['未驗證的光學／焦點控制措辭：bokeh']),
+    ('景深 denylist 擋焦距', 'A woman smiles, shot on 85mm. Half body. Collarbone-length brown hair. '
+      'A tee. A cafe. Soft light. Natural skin texture.',
+      False, False, ['未驗證的光學／焦點控制措辭：85mm']),
     ('known-good 近景', 'A woman smiles. Close-up, camera at her eye level. Collarbone-length brown hair. '
       'A tee. A cafe. Soft light on her face. Visible skin pores, natural skin texture, subtle film grain.',
       True, False, []),
