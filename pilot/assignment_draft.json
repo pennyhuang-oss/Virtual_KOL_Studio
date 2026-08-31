@@ -1,0 +1,188 @@
+{
+ "_status": "DRAFT — 待 ChatGPT 與使用者批准，尚未套用",
+ "_requires_ratification": "同一 ref 跨四槽上限由 6 放寬為 7（R11 現行規則下供給 74 < 需求 76）",
+ "_rules": {
+  "cap_ref_total": 7,
+  "cap_ref_slot": 2,
+  "max_shared": 1
+ },
+ "_source": "ChatGPT R11 Q-01 逐格視覺裁定",
+ "assignment": {
+  "angel-chiu": {
+   "NOSE": "ref_03",
+   "MOUTH": "ref_07",
+   "EYES_AND_BROWS": "ref_05",
+   "FACE_SHAPE_AND_JAW": "ref_11"
+  },
+  "angeline-kwee": {
+   "NOSE": "ref_06",
+   "MOUTH": "ref_03",
+   "EYES_AND_BROWS": "ref_15",
+   "FACE_SHAPE_AND_JAW": "ref_04"
+  },
+  "cheryl-soh": {
+   "NOSE": "ref_14",
+   "MOUTH": "ref_03",
+   "EYES_AND_BROWS": "ref_06",
+   "FACE_SHAPE_AND_JAW": "ref_08"
+  },
+  "emma-kao": {
+   "NOSE": "ref_03",
+   "MOUTH": "ref_13",
+   "EYES_AND_BROWS": "ref_14",
+   "FACE_SHAPE_AND_JAW": "ref_10"
+  },
+  "jia-seo": {
+   "NOSE": "ref_06",
+   "MOUTH": "ref_10",
+   "EYES_AND_BROWS": "ref_03",
+   "FACE_SHAPE_AND_JAW": "ref_01"
+  },
+  "kanon-komori": {
+   "NOSE": "ref_14",
+   "MOUTH": "ref_01",
+   "EYES_AND_BROWS": "ref_05",
+   "FACE_SHAPE_AND_JAW": "ref_02"
+  },
+  "miu-shiraishi": {
+   "NOSE": "ref_01",
+   "MOUTH": "ref_02",
+   "EYES_AND_BROWS": "ref_15",
+   "FACE_SHAPE_AND_JAW": "ref_05"
+  },
+  "nanami-fujiwara": {
+   "NOSE": "ref_04",
+   "MOUTH": "ref_06",
+   "EYES_AND_BROWS": "ref_03",
+   "FACE_SHAPE_AND_JAW": "ref_15"
+  },
+  "peggy-lee": {
+   "NOSE": "ref_05",
+   "MOUTH": "ref_14",
+   "EYES_AND_BROWS": "ref_06",
+   "FACE_SHAPE_AND_JAW": "ref_03"
+  },
+  "rin-ayase": {
+   "NOSE": "ref_15",
+   "MOUTH": "ref_05",
+   "EYES_AND_BROWS": "ref_14",
+   "FACE_SHAPE_AND_JAW": "ref_06"
+  },
+  "ruoruo-tang": {
+   "NOSE": "ref_02",
+   "MOUTH": "ref_15",
+   "EYES_AND_BROWS": "ref_09",
+   "FACE_SHAPE_AND_JAW": "ref_14"
+  },
+  "somi-oh": {
+   "NOSE": "ref_08",
+   "MOUTH": "ref_07",
+   "EYES_AND_BROWS": "ref_04",
+   "FACE_SHAPE_AND_JAW": "ref_10"
+  },
+  "sydney-leong": {
+   "NOSE": "ref_10",
+   "MOUTH": "ref_08",
+   "EYES_AND_BROWS": "ref_07",
+   "FACE_SHAPE_AND_JAW": "ref_11"
+  },
+  "tammy-chou": {
+   "NOSE": "ref_01",
+   "MOUTH": "ref_13",
+   "EYES_AND_BROWS": "ref_08",
+   "FACE_SHAPE_AND_JAW": "ref_04"
+  },
+  "wanyin-jiang": {
+   "NOSE": "ref_04",
+   "MOUTH": "ref_10",
+   "EYES_AND_BROWS": "ref_01",
+   "FACE_SHAPE_AND_JAW": "ref_08"
+  },
+  "wendy-yeo": {
+   "NOSE": "ref_05",
+   "MOUTH": "ref_01",
+   "EYES_AND_BROWS": "ref_10",
+   "FACE_SHAPE_AND_JAW": "ref_15"
+  },
+  "yerin-han": {
+   "NOSE": "ref_15",
+   "MOUTH": "ref_02",
+   "EYES_AND_BROWS": "ref_09",
+   "FACE_SHAPE_AND_JAW": "ref_01"
+  },
+  "zhiyi-shen": {
+   "NOSE": "ref_02",
+   "MOUTH": "ref_06",
+   "EYES_AND_BROWS": "ref_04",
+   "FACE_SHAPE_AND_JAW": "ref_05"
+  },
+  "zoey-yeh": {
+   "NOSE": "ref_08",
+   "MOUTH": "ref_14",
+   "EYES_AND_BROWS": "ref_02",
+   "FACE_SHAPE_AND_JAW": "ref_09"
+  }
+ },
+ "needs_validation": {
+  "angel-chiu|MOUTH": "ref_07",
+  "emma-kao|MOUTH": "ref_13",
+  "jia-seo|MOUTH": "ref_10",
+  "kanon-komori|MOUTH": "ref_01",
+  "miu-shiraishi|NOSE": "ref_01",
+  "miu-shiraishi|MOUTH": "ref_02",
+  "nanami-fujiwara|NOSE": "ref_04",
+  "nanami-fujiwara|MOUTH": "ref_06",
+  "peggy-lee|NOSE": "ref_05",
+  "peggy-lee|MOUTH": "ref_14",
+  "rin-ayase|NOSE": "ref_15",
+  "rin-ayase|MOUTH": "ref_05",
+  "ruoruo-tang|EYES_AND_BROWS": "ref_09",
+  "ruoruo-tang|NOSE": "ref_02",
+  "ruoruo-tang|MOUTH": "ref_15",
+  "somi-oh|EYES_AND_BROWS": "ref_04",
+  "somi-oh|NOSE": "ref_08",
+  "somi-oh|MOUTH": "ref_07",
+  "sydney-leong|EYES_AND_BROWS": "ref_07",
+  "sydney-leong|NOSE": "ref_10",
+  "sydney-leong|MOUTH": "ref_08",
+  "tammy-chou|EYES_AND_BROWS": "ref_08",
+  "tammy-chou|NOSE": "ref_01",
+  "tammy-chou|MOUTH": "ref_13",
+  "wanyin-jiang|EYES_AND_BROWS": "ref_01",
+  "wanyin-jiang|NOSE": "ref_04",
+  "wanyin-jiang|MOUTH": "ref_10",
+  "wendy-yeo|EYES_AND_BROWS": "ref_10",
+  "wendy-yeo|NOSE": "ref_05",
+  "wendy-yeo|MOUTH": "ref_01",
+  "yerin-han|EYES_AND_BROWS": "ref_09",
+  "yerin-han|NOSE": "ref_15",
+  "yerin-han|MOUTH": "ref_02",
+  "zhiyi-shen|EYES_AND_BROWS": "ref_04",
+  "zhiyi-shen|NOSE": "ref_02",
+  "zhiyi-shen|MOUTH": "ref_06",
+  "zoey-yeh|FACE_SHAPE_AND_JAW": "ref_09",
+  "zoey-yeh|EYES_AND_BROWS": "ref_02",
+  "zoey-yeh|NOSE": "ref_08",
+  "zoey-yeh|MOUTH": "ref_14"
+ },
+ "ref_usage": {
+  "ref_01": 7,
+  "ref_03": 7,
+  "ref_04": 6,
+  "ref_05": 7,
+  "ref_06": 7,
+  "ref_14": 7,
+  "ref_15": 7,
+  "ref_02": 6,
+  "ref_08": 6,
+  "ref_10": 6,
+  "ref_07": 3,
+  "ref_13": 2,
+  "ref_09": 3,
+  "ref_11": 2,
+  "ref_12": 0
+ },
+ "unused_refs": [
+  "ref_12"
+ ]
+}
