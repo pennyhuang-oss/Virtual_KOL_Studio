@@ -230,10 +230,15 @@ def body(pid):
                    "bone.")
     flesh_full = ("Her upper arms, her shoulders and her thighs all carry a healthy layer of soft "
                   "flesh over the bone.")
-    tall = f['height_cm'] >= 168
-    frame = ("She is tall, and her legs are long in proportion to her body."
-             if tall else
-             "Her whole frame is finely scaled and her limbs are short in proportion.")
+    # 身高分三段。二分法會把 165–167cm 也寫成「骨架很小、四肢短」，那是錯的描述。
+    h = f['height_cm']
+    if h >= 168:
+        frame = "She is tall, and her legs are long in proportion to her body."
+    elif h >= 162:
+        frame = "She is of average height, and her legs are in even proportion to her body."
+    else:
+        frame = "Her whole frame is finely scaled and her limbs are short in proportion."
+
     return {
       'face_closeup': ("Her shoulders and the base of her neck enter the frame, with the collarbone "
                        "visible where it does."),
