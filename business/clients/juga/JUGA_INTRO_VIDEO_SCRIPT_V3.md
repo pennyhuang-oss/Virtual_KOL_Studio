@@ -280,4 +280,46 @@ Higgsfield 平台的 media 資產裡（`media_id` 見對話紀錄），未存入
 A2～A4 是**疊在 A 的成品上再編輯**（第二層疊代），第 7 節記過的白平衡漂移風險在這裡同樣適用，
 選定前要跟 A 並排比色溫。另外框拉遠會讓臉變小，對嘴鏡頭的嘴型細節會不夠，A2 在這點上最安全。
 
-**待 Vincent 選定 A2/A3/A4 其中一張，才生段四的 5 秒。**
+### 服裝跑掉的原因與修正（2026-08-31）
+
+A2～A4 一拿去看就發現**服裝跑掉了**（長出一條裙子）。回頭看 v1 原圖才確認是 **prompt 寫錯**：
+
+那件衣服**不是洋裝**，是一件**黑色高衩連身衣**——深 V、前襟素面黑細帶交叉綁縛、胯部高衩、
+肚臍露出、腿是光的，**沒有裙擺**。先前所有 prompt 都寫成 `black halter dress`，還多寫了
+不存在的 `gold metal eyelets`（實際是素面黑細帶）。
+
+**為什麼 A/B/C 沒事、A2～A4 才壞**：A/B/C 只拍到大腿以上，下半身不在畫面裡，模型不用去想；
+一旦把框往下拉，模型必須**自己生出下半身**，它照著 prompt 裡的「dress」去生，就長出裙子。
+
+**修正做法**（不需要另外做服裝 reference element）：
+1. 服裝照實描述——`black high-cut one-piece bodysuit`、`thin plain black criss-cross lacing straps`、
+   `high-cut leg openings`、`bare legs below with NO skirt and NO hem of any kind`
+2. **回到最原始的首幀單層編輯**，不疊在 A 的成品上（第 7 節記過的同一個教訓）
+3. 加一句 `The character reference is for her facial identity only — all clothing must match the
+   source photo exactly`，避免角色 element 自己帶造型進來
+
+**定案首幀 A5**：`43d6a4f4-857d-4dcb-b365-8a85ba372604`（靠牆回眸、框到膝上、服裝正確）。Vincent 核准。
+
+**遺留風險**：框拉到膝上等於把高衩線整條放進畫面，紅線 1（腰腹包覆）的 nsfw 風險比前幾版高。
+依第 7 節裁決「先試，被擋再處理」執行。
+
+## 12. 段四成片（2026-08-31）
+
+| 項目 | 值 |
+|---|---|
+| job_id | `6da6cdbd-019f-4c05-8f67-0048e7a9e333` |
+| 模型 / 參數 | `seedance_2_0`、std、720p、9:16、`generate_audio: true` |
+| 秒數 | **10 秒**（45 credits） |
+| 首幀 | A5 `43d6a4f4-857d-4dcb-b365-8a85ba372604` |
+| 音色參考 | `97789d58-c33d-4c66-a53e-22f59ec92b42`（段一那支 15 秒，與旁白同源） |
+| 角色鎖定 | element `855a725c-bd63-46ac-b8ca-a23c20c9d77b` |
+
+**秒數為什麼從 5 秒改成 10 秒**：分鏡表原本估 ~5 秒是低估。光是最後一句
+「今晚有局，因為有你——啾嘎」單獨生成就 4.4 秒，段四全文三句，5 秒一定會被切掉。
+
+**勾引手勢的 prompt 寫法**（照第 11 節三個注意事項落實）：手從**畫面下緣**抬起、勾兩下食指、
+停在**下巴旁邊偏下**，明寫 `never crosses in front of her mouth and never blocks her lips`；
+動作綁在 `On the FINAL sentence only`，前兩句只有呼吸與微幅頭部擺動。
+
+**驗收要盯**：手指數量與關節（近鏡頭的手最容易壞）、手有沒有擋到嘴、「啾嘎」發音、
+手的動作有沒有提早在前兩句就出來。
