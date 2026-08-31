@@ -1,0 +1,74 @@
+{
+ "_ratified": "ChatGPT R15 W-01/W-02/W-03",
+ "pool": {
+  "FACE_SHAPE_AND_JAW": [
+   "ref_01",
+   "ref_02",
+   "ref_04",
+   "ref_07",
+   "ref_08",
+   "ref_09",
+   "ref_10",
+   "ref_11",
+   "ref_15"
+  ],
+  "EYES_AND_BROWS": [
+   "ref_01",
+   "ref_02",
+   "ref_03",
+   "ref_05",
+   "ref_07",
+   "ref_08",
+   "ref_09",
+   "ref_10",
+   "ref_14",
+   "ref_15"
+  ],
+  "NOSE": [
+   "ref_01",
+   "ref_02",
+   "ref_03",
+   "ref_04",
+   "ref_06",
+   "ref_07",
+   "ref_08",
+   "ref_10",
+   "ref_14",
+   "ref_15"
+  ],
+  "MOUTH": [
+   "ref_01",
+   "ref_02",
+   "ref_03",
+   "ref_05",
+   "ref_06",
+   "ref_07",
+   "ref_08",
+   "ref_10",
+   "ref_13",
+   "ref_14",
+   "ref_15"
+  ]
+ },
+ "_exclusions": [
+  "ref_03|FACE_SHAPE_AND_JAW",
+  "ref_04|EYES_AND_BROWS",
+  "ref_05|FACE_SHAPE_AND_JAW",
+  "ref_05|NOSE",
+  "ref_06|EYES_AND_BROWS",
+  "ref_06|FACE_SHAPE_AND_JAW",
+  "ref_11|EYES_AND_BROWS",
+  "ref_14|FACE_SHAPE_AND_JAW"
+ ],
+ "_cap_ref_total": 7,
+ "_cap_slot": 2,
+ "_face_exception": "恰好一個臉型來源可供 3 位（W-01）",
+ "_capacity": {
+  "FACE_SHAPE_AND_JAW": 19,
+  "EYES_AND_BROWS": 20,
+  "NOSE": 20,
+  "MOUTH": 22
+ },
+ "_supply_total": 75,
+ "_demand": 76
+}
