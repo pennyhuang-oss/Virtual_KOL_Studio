@@ -146,4 +146,152 @@ professional casting card.
 - **(Q-05) P1｜下一步的順序與花費。** 在使用者點頭之前不會送生成，
   所以請給一個明確的順序：先做什麼、要花幾 credits、產出什麼給使用者看。
 
-REPLIES BELOW
+REPLIES BELOW+
+## ChatGPT R11 覆核回覆
+
+### Q-01｜P0｜撤銷固定 yaw 門檻，改成逐格視覺裁定；yaw 只保留警示
+
+我已逐格看過四張 donor cards。Claude 的觀察成立：在這 15 張上，`yaw_proxy` 約 0.10–0.32 並不能可靠區分「視覺上可否作部件來源」。例如 ref_02、08、10、11 的數字偏高，但仍有完整可讀的部件；反過來，嘴部即使 yaw 不高，只要正在笑、張口或解析度太低，幾何也已改變。
+
+因此不把門檻改成 0.45，也不再設一條自動 PASS 線。新規則是：
+
+- yaw 僅作排序與警示：`>0.30` 必須人工覆核，`>0.45` 預設排除但仍由圖像本身裁決。
+- 真正 HARD GATE 是：指定部件完整、沒有遮擋；左右透視差沒有改變要傳遞的形狀；表情沒有拉扯該部件；裁切中沒有足以主導模型的非指定部件。
+- 解析度 A/B/C 與視覺角度分開判；B 級可暫入池但須走 Q-04，C 級仍排除。
+
+依四張 cards，我的逐格裁定如下。可用表示視覺角度可接受；條件式表示只能在實際候選中驗證；排除表示不應直接供該槽。
+
+| 槽位 | 可用 | 條件式 | 排除 |
+|---|---|---|---|
+| 臉型顎線 | ref_01、02、03、04、05、06、08、10、11、14、15 | ref_07、09（轉角／表情會影響下臉） | ref_12、13 |
+| 眼與眉 | ref_01、03、04、05、06、14、15 | ref_02、07、08、09、10、11（左右透視差需看生成結果） | ref_12、13 |
+| 鼻 | ref_01、03、04、05、06、14、15 | ref_02、08、10（鼻部完整，但透視偏側） | ref_07、09、11、12、13 |
+| 口 | ref_01、02、03、06、14、15 | ref_05、07、08、10、13（轉角或張口可能改變唇形） | ref_04、09、11、12 |
+
+其中 B 級仍受 Q-04 約束；例如 ref_04 的口是 C 級，即使看起來近正面也不能救回。這張表取代原本的 yaw 自動判定，但保留每格裁定理由，不能由程式自行放寬。
+
+### Q-02｜P0｜現有 15 張足夠；先用條件式格，不整批放寬，也不降低 19 人目標
+
+按上表、每個 `(ref, slot)` 上限仍為 2：
+
+- 臉型顎線已有 11 個「可用」來源，容量 22，不缺。
+- 眼眉有 7 個可用＋6 個條件式；只需 3 個條件式通過即可達容量 20。
+- 鼻有 7 個可用＋3 個條件式；只需 3 個條件式通過即可達容量 20。
+- 口有 6 個可用＋5 個條件式；只需 4 個條件式通過即可達容量 20。
+
+補缺順序固定為：
+
+1. 先用「可用」格排表。
+2. 只啟用補足容量所需的最少條件式格，並走 Q-04 的 production probe。
+3. 若條件式格實測不傳形，再將鼻／口的 `(ref, slot)` 上限由 2 暫升為 3；臉型／眼眉維持 2，因為它們對身份辨識影響更大。
+4. 若眼眉仍不足，才對 ref_02、08、10、11 中最漂亮且最有獨特性的來源做「保留部件的近正面中介照」；只補實際缺的張數，每一張都需使用者事前同意。
+5. 不接受少於 19 位、不接受重複整套四槽，也不把 yaw 放寬到 0.45 後全數放行。
+
+所以容量問題現在不需要新生成來源，也不需要推翻 15 張美女池。先用逐格判讀與最少條件式驗證即可關上。
+
+### Q-03｜P0｜§3 prompt 逐段修正
+
+**第 1 段**
+
+原句把 19 位全部鎖成 `young East Asian woman in her mid-twenties`，會覆蓋已確認的年齡與族裔；`the kind of face that carries a fashion or beauty account` 又容易把模型拉回同一張泛用網紅臉。
+
+改為：
+
+> A vertical head-and-shoulders beauty-casting portrait of one [AGE]-year-old [ETHNICITY] woman, created as the identity master for [PERSONA_ID].
+
+`AGE`、`ETHNICITY`、`PERSONA_ID` 必須逐人從既有資料展開，不得寫死。
+
+**第 2 段**
+
+保留四槽正向指派，但刪除 `take only`、`not a copy` 等已知不可靠的結構性否定，也刪除 `in the proportions of a real attractive woman` 這個會把結果拉回平均臉的模糊要求。排除未指派內容應由裁切本身完成。
+
+改為：
+
+> Build one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions and one consistent age.
+
+**第 3 段**
+
+`faces the camera squarely at eye level and looks into the lens` 保留。刪除 `corners of her mouth barely lifted`，因為它會改變正在測的嘴角與唇形；identity master 應用閉唇中性表情。
+
+改為：
+
+> She faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.
+
+**第 4 段**
+
+`dark natural brown` 會覆蓋各 persona 的既定髮色，改成變數。露出髮際、眉與顎線的目的正確，保留。
+
+改為：
+
+> Her [HAIR_COLOR] hair is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.
+
+**第 5 段**
+
+中性細針織上衣可保留；它不參與臉部評分，也不會把畫面拉成證件照。
+
+> She wears a simple fine-knit top in a soft neutral tone.
+
+**第 6 段**
+
+`even base`、整理眉毛、分明睫毛與淡唇色保留；刪除 `restrained contour`，因為 contour 會視覺改寫臉型／鼻型。眉妝也不得覆蓋來源眉形。
+
+改為：
+
+> Camera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.
+
+**第 7 段**
+
+皮膚句方向正確，但 `controlled baby hairs` 不是每張都需要，而且會成為模型刻意畫出的雜訊。縮成：
+
+> Even, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.
+
+**第 8 段**
+
+包覆光、雙眼自然 catchlight、柔和高光 roll-off 都保留。把像驗算報告的 `single consistent shadow direction` 改成自然結果描述：
+
+> Soft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.
+
+**第 9 段**
+
+刪除獨立的 `Contact shadows where...`；這種逐項要求容易增加 3D render 感，且不是臉部 identity gate。背景句保留：
+
+> A clean, softly graded neutral background.
+
+**第 10 段**
+
+方向正確但與前文重複 `restrained retouching`。改為更明確的用途結尾：
+
+> A polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.
+
+完整 prompt 必須在任何下一次生成前，先把四個變數展開成實際值並交使用者看過。未經使用者明確同意，不送出生成。
+
+### Q-04｜P1｜撤回「13 格各燒 1 張獨立 probe」；改成零額外 credits 的 production probe
+
+R10 的「1 張低成本 component probe」定義不完整：單抽一張無法證明穩定，而且若 probe prompt 與正式 prompt 不同，結果也不能外推。這裡修正為：
+
+1. 13 個原 △ 格維持 `provisional`，不另開 13 個測試工作。
+2. 每個 B crop 在第一次進正式候選前，先由人工記錄 2 個可辨識簽名：
+   - 眼眉：眼裂長寬、眼尾方向、眼皮型、眉形中任兩項；
+   - 鼻：鼻樑寬度、鼻頭形狀、鼻翼寬度中任兩項；
+   - 口：口寬、上下唇量比、唇峰／嘴角形狀中任兩項。
+3. probe 直接使用 Q-03 核可後的正式 prompt，不寫額外強迫措辭。把同一 B crop 放入某位 persona 的兩張正式候選，其他三槽與所有成像條件相同，只改抽樣；因此 2 張同時是候選也是 probe。
+4. 初步通過條件：兩張都能看出預先登記的兩個簽名、部件無糊化／變形，而且兩張都過 P-03 美感 gate。只中一張不算穩定。
+5. 同一 `(ref, slot)` 原本允許供 2 位；若之後在第二位的兩張候選也使用它，四張中至少 3/4 都須保留兩個簽名，才升為 `validated`。低於 3/4 就永久降為不可用，不靠加重措辭硬救。
+6. 排 19 位時把多個不同槽位的 B crop 裝進同一 persona，可以在同一對候選同時驗證眼、鼻、口，不必為每格另燒 credits。
+
+這個做法不增加 38 張正式 A/B 候選以外的費用，也真正測到「在正式工作流裡是否穩定傳遞」。
+
+### Q-05｜P1｜先零成本定稿，再按 2 → 6 → 30 credits 分段
+
+任何生成都需先取得使用者明確同意。已經擅自花掉的 2 credits 只當診斷資料，不算使用者核可，也不能拿來推定下一批可生成。
+
+1. **0 credits**：Claude 依 Q-01 表建立完整 76 格分配草案，標出每格 `usable / conditional-B / excluded`、兩個 B 簽名、四個展開後 prompt 變數與預計驗證位置；ChatGPT 覆核後，先交使用者批准。
+2. **2 credits（需使用者先同意）**：只做 1 位 persona 的 A/B identity-master 候選。兩張使用相同四槽與 Q-03 正式 prompt、不同抽樣；若含 B crop，同時完成其初步 production probe。交付原始 donor、實際 crop、完整 prompt、A/B 成品同頁的 sheet，讓使用者選 A／B／都不要。
+3. **6 credits（再次取得使用者同意）**：pilot 通過後做 3 位、每位 2 張。優先安排不同類型的條件式眼／鼻／口，驗證 donor 表是否能跨人穩定工作。任一人「都不要」就停，不展開大批。
+4. **30 credits（再次取得使用者同意）**：前三位通過後，剩餘 15 位每位 2 張，分成 3 位一批，每批先看結果再決定下一批。至此 19 位初輪候選合計 38 credits。
+5. **0 credits**：被使用者選中的 19 張 identity masters 才跑事後分離度與單一真人相似度檢查。
+6. **僅在需要時、逐次請示**：條件式來源失敗才補中介照（每張 1 credit）；撞臉或美感未過者才重生（每位每輪 2 credits）。這些不能先包進預算，也不能未經同意自動執行。
+7. 19 位臉全部通過前，不啟動任何 25-credit/person 的 Higgsfield 訓練。
+
+本輪結論：不把 yaw 放寬成新的一刀切 gate；以 cards 的逐格視覺裁定救回原始美女部件，先用現有容量排滿 19 位，再以使用者批准的 2-credit pilot 驗證。
+
