@@ -1,0 +1,53 @@
+{
+ "_status": "PENDING — 需 ChatGPT 覆核 ＋ 使用者明確同意才可送出",
+ "persona": "cheryl-soh",
+ "model": "seedream_v4_5",
+ "aspect_ratio": "3:4",
+ "candidates": 2,
+ "credits": 2,
+ "_ab_design": "相同四槽與相同 prompt，只改抽樣（R11 P-06）",
+ "unknown_cells": 0,
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 25-year-old Singaporean Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 25-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long black hair is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "image_references_in_order": [
+  {
+   "input_order": 1,
+   "slot": "FACE_SHAPE_AND_JAW",
+   "source_ref": "ref_08",
+   "file": "review/donor_cards/ref_08__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "c42000ccb12da118be5e75b9776325e51a5b4612a92081211caac3a517a8b872",
+   "grade": "A",
+   "part_px": 325.2,
+   "yaw": 0.1609
+  },
+  {
+   "input_order": 2,
+   "slot": "EYES_AND_BROWS",
+   "source_ref": "ref_06",
+   "file": "review/donor_cards/ref_06__EYES_AND_BROWS.jpg",
+   "sha256": "fef84fa6d012d7dac6d3e02c2feaadd79636b37b36e1232ac5f143b29c2dfecb",
+   "grade": "A",
+   "part_px": 138.3,
+   "yaw": 0.214
+  },
+  {
+   "input_order": 3,
+   "slot": "NOSE",
+   "source_ref": "ref_14",
+   "file": "review/donor_cards/ref_14__NOSE.jpg",
+   "sha256": "a5a1e741b9a5e65fe9d739826ec9762b01a09c6b7329e8bb9dab7728ab0c172e",
+   "grade": "A",
+   "part_px": 100.5,
+   "yaw": 0.0415
+  },
+  {
+   "input_order": 4,
+   "slot": "MOUTH",
+   "source_ref": "ref_03",
+   "file": "review/donor_cards/ref_03__MOUTH.jpg",
+   "sha256": "65211d001284f56832063fa9ede62cb4ba5ce0a5395531537e92a9f71b0ad420",
+   "grade": "A",
+   "part_px": 146.5,
+   "yaw": 0.021
+  }
+ ]
+}
