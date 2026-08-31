@@ -1,0 +1,790 @@
+{
+ "_spec": "donor_slot_table/v1（依 R10 P-01 的分級門檻）",
+ "_yaw_max": {
+  "FACE_SHAPE_AND_JAW": 0.1,
+  "EYES_AND_BROWS": 0.1,
+  "NOSE": 0.2,
+  "MOUTH": 0.25
+ },
+ "_grade": {
+  "A": "≥96px 可直接用",
+  "B": "48–95px 需 probe",
+  "C": "<48px 不可直接用"
+ },
+ "_verdict": {
+  "ready": "可直接入池",
+  "probe": "需先做 1 張 probe",
+  "reject": "本槽不可用"
+ },
+ "refs": {
+  "ref_01": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 309.3,
+    "yaw": 0.0313,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_01__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 89.4,
+    "yaw": 0.0313,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_01__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 76.7,
+    "yaw": 0.0313,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_01__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 60.8,
+    "yaw": 0.0313,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_01__MOUTH.jpg"
+   }
+  },
+  "ref_02": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 480.5,
+    "yaw": 0.314,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0918,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.314 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_02__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 139.6,
+    "yaw": 0.314,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.314 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_02__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 116.3,
+    "yaw": 0.314,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.314 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_02__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "B",
+    "part_px": 94.3,
+    "yaw": 0.314,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.314 超過本槽上限 0.25"
+    ],
+    "card": "review/donor_cards/ref_02__MOUTH.jpg"
+   }
+  },
+  "ref_03": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 759.8,
+    "yaw": 0.021,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.1223,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_03__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 200.4,
+    "yaw": 0.021,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_03__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 195.7,
+    "yaw": 0.021,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_03__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 146.5,
+    "yaw": 0.021,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_03__MOUTH.jpg"
+   }
+  },
+  "ref_04": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 206.6,
+    "yaw": 0.0595,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0029,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_04__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 59.8,
+    "yaw": 0.0595,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_04__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 55.1,
+    "yaw": 0.0595,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_04__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "C",
+    "part_px": 35.2,
+    "yaw": 0.0595,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "部件只有 35px，C 級（<48px）不可直接用"
+    ],
+    "card": "review/donor_cards/ref_04__MOUTH.jpg"
+   }
+  },
+  "ref_05": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 273.2,
+    "yaw": 0.1902,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.190 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_05__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 99.3,
+    "yaw": 0.1902,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.190 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_05__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 73.3,
+    "yaw": 0.1902,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_05__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 55.7,
+    "yaw": 0.1902,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_05__MOUTH.jpg"
+   }
+  },
+  "ref_06": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 482.8,
+    "yaw": 0.214,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.214 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_06__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 138.3,
+    "yaw": 0.214,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.214 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_06__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 129.3,
+    "yaw": 0.214,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.214 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_06__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 81.1,
+    "yaw": 0.214,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_06__MOUTH.jpg"
+   }
+  },
+  "ref_07": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 287.7,
+    "yaw": 0.4047,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_07__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 100.5,
+    "yaw": 0.4047,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_07__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "B",
+    "part_px": 74.5,
+    "yaw": 0.4047,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_07__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "B",
+    "part_px": 54.4,
+    "yaw": 0.4047,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.25"
+    ],
+    "card": "review/donor_cards/ref_07__MOUTH.jpg"
+   }
+  },
+  "ref_08": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 325.2,
+    "yaw": 0.1609,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0798,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.161 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_08__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 159.8,
+    "yaw": 0.1609,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.161 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_08__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 87.6,
+    "yaw": 0.1609,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_08__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 52.1,
+    "yaw": 0.1609,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_08__MOUTH.jpg"
+   }
+  },
+  "ref_09": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 346.2,
+    "yaw": 0.4051,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_09__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 105.7,
+    "yaw": 0.4051,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_09__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "B",
+    "part_px": 81.8,
+    "yaw": 0.4051,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_09__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "B",
+    "part_px": 65.7,
+    "yaw": 0.4051,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.405 超過本槽上限 0.25"
+    ],
+    "card": "review/donor_cards/ref_09__MOUTH.jpg"
+   }
+  },
+  "ref_10": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 1024.1,
+    "yaw": 0.3025,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.302 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_10__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 491.1,
+    "yaw": 0.3025,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.302 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_10__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 259.5,
+    "yaw": 0.3025,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.302 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_10__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 212.1,
+    "yaw": 0.3025,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.302 超過本槽上限 0.25"
+    ],
+    "card": "review/donor_cards/ref_10__MOUTH.jpg"
+   }
+  },
+  "ref_11": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 162.0,
+    "yaw": 0.2858,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.286 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_11__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "C",
+    "part_px": 41.9,
+    "yaw": 0.2858,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.286 超過本槽上限 0.1",
+     "部件只有 42px，C 級（<48px）不可直接用"
+    ],
+    "card": "review/donor_cards/ref_11__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "C",
+    "part_px": 36.4,
+    "yaw": 0.2858,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.286 超過本槽上限 0.2",
+     "部件只有 36px，C 級（<48px）不可直接用"
+    ],
+    "card": "review/donor_cards/ref_11__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "C",
+    "part_px": 33.9,
+    "yaw": 0.2858,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.286 超過本槽上限 0.25",
+     "部件只有 34px，C 級（<48px）不可直接用"
+    ],
+    "card": "review/donor_cards/ref_11__MOUTH.jpg"
+   }
+  },
+  "ref_12": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 782.6,
+    "yaw": 0.6758,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0001,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.676 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_12__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 471.4,
+    "yaw": 0.6758,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.676 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_12__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 210.2,
+    "yaw": 0.6758,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.676 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_12__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 165.5,
+    "yaw": 0.6758,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.676 超過本槽上限 0.25"
+    ],
+    "card": "review/donor_cards/ref_12__MOUTH.jpg"
+   }
+  },
+  "ref_13": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 653.5,
+    "yaw": 0.5483,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.548 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_13__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 212.8,
+    "yaw": 0.5483,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.548 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_13__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 157.1,
+    "yaw": 0.5483,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.548 超過本槽上限 0.2"
+    ],
+    "card": "review/donor_cards/ref_13__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 140.0,
+    "yaw": 0.5483,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.548 超過本槽上限 0.25"
+    ],
+    "card": "review/donor_cards/ref_13__MOUTH.jpg"
+   }
+  },
+  "ref_14": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 398.5,
+    "yaw": 0.0415,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_14__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 138.8,
+    "yaw": 0.0415,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_14__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "ready",
+    "grade": "A",
+    "part_px": 100.5,
+    "yaw": 0.0415,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_14__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 78.6,
+    "yaw": 0.0415,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_14__MOUTH.jpg"
+   }
+  },
+  "ref_15": {
+   "FACE_SHAPE_AND_JAW": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 337.6,
+    "yaw": 0.172,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.172 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_15__FACE_SHAPE_AND_JAW.jpg"
+   },
+   "EYES_AND_BROWS": {
+    "verdict": "reject",
+    "grade": "A",
+    "part_px": 98.2,
+    "yaw": 0.172,
+    "yaw_max": 0.1,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [
+     "正面度 0.172 超過本槽上限 0.1"
+    ],
+    "card": "review/donor_cards/ref_15__EYES_AND_BROWS.jpg"
+   },
+   "NOSE": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 82.4,
+    "yaw": 0.172,
+    "yaw_max": 0.2,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_15__NOSE.jpg"
+   },
+   "MOUTH": {
+    "verdict": "probe",
+    "grade": "B",
+    "part_px": 69.4,
+    "yaw": 0.172,
+    "yaw_max": 0.25,
+    "padding_ratio": 0.0,
+    "cut_off": [],
+    "reasons": [],
+    "card": "review/donor_cards/ref_15__MOUTH.jpg"
+   }
+  }
+ }
+}
