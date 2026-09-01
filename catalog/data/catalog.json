@@ -1,6 +1,6 @@
 {
   "generated_by": "catalog/tools/build_catalog.mjs",
-  "generated_at": "2026-08-31",
+  "generated_at": "2026-09-01",
   "min_images": 14,
   "note": "型錄要顯示的內容。刻意不含：任何狀態、handle、三圍、prompt／Soul ID／模型／credits、營運統計期間。",
   "included": 18,

@@ -32,6 +32,27 @@ const MIN_IMAGES = Number(argOf('--min-images', 14));
 
 const inv = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'inventory.json'), 'utf8'));
 
+// 🛑 來源 repo 不在就直接失敗，不要寫出一份空的 catalog.json。
+// 這一條是踩過才加的：2026-09-01 Railway 自動跑了 `npm run build`，
+// 那個環境只有 Virtual_KOL_Studio、而且 rootDirectory 是 /catalog，
+// 所以三個 repo 一個都掃不到 → 本程式印出「收錄 0 位」並**覆寫了 catalog.json**。
+// 那次是 build_assets 因為沒有 ffmpeg 而崩掉才沒上線；
+// 否則會靜靜部署一個 0 位人設的空型錄。
+// 我在 scan_inventory.mjs 與 README 都寫過「不可以在 Railway 的 build 跑這支」，
+// 寫成文件沒有用——所以改成程式擋。
+{
+  const REPO_OF_CHECK = ['Virtual_KOL_Studio', 'showgame-kol', 'Buildup_KOL'];
+  const missing = REPO_OF_CHECK.filter(d => !fs.existsSync(path.join(REPO_ROOT, d, 'kols')));
+  if (missing.length) {
+    console.error('🛑 掃不到來源 repo，拒絕寫檔（不要產生空型錄）：');
+    for (const m of missing) console.error(`   缺 ${path.join(REPO_ROOT, m, 'kols')}`);
+    console.error('   這支只能在三個 repo 都在的環境跑（本機／開發容器）。');
+    console.error('   🛑 不要在 Railway 的 build 階段跑——那裡只有一個 repo。');
+    console.error('   站是預先建好並 commit 進 git 的，部署只需要 `npm start`。');
+    process.exit(2);
+  }
+}
+
 // 手寫的內容（程式產不出來的）：一句話定位，以及刻意排除的人設。
 const COPY = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'copy.json'), 'utf8'));
 

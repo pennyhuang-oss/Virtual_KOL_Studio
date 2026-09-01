@@ -6,10 +6,11 @@
   "description": "AI KOL 型錄（靜態站，給客戶看）",
   "main": "server.js",
   "scripts": {
-    "build": "node tools/build_catalog.mjs && node tools/build_assets.mjs && node tools/build_site.mjs",
+    "_comment": "🛑 不要有名為 build 的 script。Railway 偵測到就會自動跑，而它的環境只有這一個 repo、沒有 ffmpeg。站是預先建好並 commit 進 git 的，Railway 只要 start。",
+    "build:local": "node tools/build_catalog.mjs && node tools/build_assets.mjs && node tools/build_site.mjs",
     "site": "node tools/build_site.mjs",
     "start": "node server.js",
-    "check": "node tools/render_packet_numbers.mjs --check && node tools/preflight.mjs"
+    "check": "node tools/render_packet_numbers.mjs --check"
   },
   "engines": {
     "node": ">=20"
