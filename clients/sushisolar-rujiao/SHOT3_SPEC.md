@@ -260,3 +260,79 @@ R21 的說法得到支持：
 - **服裝層停損未觸發**（A 已證明寫法可行），**不需要走服裝參考圖路線**
 - **要改的是碗那一句**，以及可能無效的 `both hands below the frame`
 - **prompt 要改 → 必須送覆核**（R22）
+
+---
+
+# 九、第二版 start frame（R22 逐字裁決）
+
+## 它照做了「不要重寫整段」
+
+**只改 4 句，其餘逐句列出「原封不動」。** 我逐字驗證過：
+
+| 檢查 | 結果 |
+|---|---|
+| `an opaque ivory mock-neck knit top`（受保護的突破字串） | ✅ 原封不動 |
+| 開頭兩句、髮妝句、打光句、曝光句、質感句 | ✅ 原封不動 |
+| `both hands below the frame` | ✅ 已刪 |
+| `the broad rim of a white porcelain bowl spanning the bottom centre of the frame` | ✅ 已刪 |
+| `its collar forming one continuous band around the base of her neck` | ✅ 已刪 |
+
+v1 210 字 → v2 **221 字**。
+
+## 🔑 最有價值的一條：手不入鏡的正解
+
+**這解決了 D-05 一直沒回答的問題——否定句無效，那要排除東西時該怎麼寫？**
+
+| | |
+|---|---|
+| ❌ v1 | `both hands below the frame`——**只描述不可見結果**，被更強的「端碗」場景語意覆蓋。2/2 失敗 |
+| ❌ 我想到的替代 | 「雙手放腿上」——**仍然把注意力叫到兩隻手**，位置不可驗收，可能反向生成膝上手或拉遠景別 |
+| ✅ R22 | `the lower frame edge crosses both upper arms above the elbows`——**描述畫面內確實可見的裁切邊界** |
+
+> 「**手不需要被生成後再藏起來；構圖本身在手腕／手掌出現以前就結束。**」
+
+**已寫成通則 `SEXY_SCENE_LIBRARY.md` §24-F。⚠️ n=0，這批就是它的第一次驗證。**
+
+## 四處改動
+
+| 原句 | 新句 | 為什麼 |
+|---|---|---|
+| `the broad rim of a white porcelain bowl spanning the bottom centre of the frame and both hands below the frame` | `the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground` | 「被端起展示的大碗」→ **有桌面承重的小型空碗**；不可見的 hands 指令 → **可見的裁切幾何** |
+| `her eyes are fixed on the clearly visible bowl rim` | `her eyes are fixed on the near rim of the tasting bowl resting on the tabletop` | **再次綁定桌面**，防止視線句把碗重新升格成胸前展示物 |
+| `...knit top with relaxed shoulders, its collar forming one continuous band around the base of her neck.` | `...knit top with relaxed shoulders.` | 保留已成功的具名衣物，**刪除可能被拆成獨立 choker 的幾何補充** |
+| `...a carved wooden screen, amber lanterns, and two indistinct diners...` | `...a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners...` | **用連續深木牆面正向占據招牌生成位置**，降低隨機偽文字風險（不寫 no text） |
+
+## 碗那一句為什麼這樣改就不會被讀成「端著」
+
+> ① `rests flat on the pale stone tabletop` 給碗**唯一、明確的承重表面**；它不再需要人物的手來解釋位置
+> ② `small empty tasting bowl` 定義成**已喝完後留下的小碗**，不是盛滿配料、準備展示的大碗
+> ③ `near rim…in the extreme foreground` 只要求**一段夠大、有邊界與對比的碗緣**作視線錨點，不再要求整個碗橫跨中央搶成主體
+> ④ `the lower frame edge crosses both upper arms above the elbows` **用人體與裁切的正面幾何關係排除端碗姿勢**
+
+## v2 Prompt（R22 逐字指定，221 字）
+
+```
+Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible; the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground. Her chin is slightly lowered and her eyes are fixed on the near rim of the tasting bowl resting on the tabletop, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
+```
+
+## 生成與停損（R22 依成本限制指定）
+
+**再生 2 張，0.24 credits。**
+
+> 「這輪只改四個已定位的句子，**不需要用 6–12 張換取更漂亮的抽樣**；
+> 2 張已足以判斷『桌面小空碗＋上臂裁切』是否消除端碗連鎖。」
+
+| 結果 | 處置 |
+|---|---|
+| **至少 1 張同時通過**「碗平放、零可見手、低眼看碗、已喝完、mock-neck 正確」 | **立即停止生圖，採用通過者。不為選美追加成本** |
+| 2/2 又把碗舉到胸前／生雙手／直視鏡頭 | 判定新碗句仍有系統性端碗語意。**下一步不是再抽圖，而是完全移除碗與餐具**，改用桌面暖色光斑或另一個**非可握持**的實體視線目標，再做 2 張 |
+| 端碗連鎖已解，但服裝 1 過 1 不過 | **沿用通過的那張，不改服裝 prompt**——這是隨機服從差異 |
+| 只剩背景 1 張亂碼、1 張乾淨 | **取乾淨者，不為背景多花 credits** |
+
+## R22 補充的三點
+
+| # | 內容 |
+|---|---|
+| 1 | **`empty` 是時間狀態，不是要證明沒有食物。**若平放小碗裡留下少量湯痕、但其餘核心 gate 全過，**可接受；不要因為碗不是像素級全空而誤殺** |
+| 2 | **不要同時改 animation prompt。**本輪只重做 start frame，靜態圖通過後沿用 R21 已定的動畫設計，**否則會把靜態修正與動畫修正混成同一輪** |
+| 3 | **本批的成功定義是「有一張可直接進 Kling」，不是 2/2 都要過。**一張通過即停，另一張只作隨機性參考 |
