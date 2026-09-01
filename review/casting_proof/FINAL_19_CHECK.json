@@ -1,0 +1,61 @@
+{
+ "_what": "19 位 identity master 全部定案後的總檢查",
+ "count": 19,
+ "method_split": {
+  "臉型附整張人像（使用者判定可用、維持不動）": 9,
+  "臉型不附圖、改文字描述": 10
+ },
+ "separation": {
+  "_tool": "tools/measure_output_separation.py",
+  "_pairs": 171,
+  "_caveat": "數值以這 19 張自己的離散度正規化，跟先前批次的數字不能直接比。已知這個指標會過度標記——最近的一對 emma-kao vs yerin-han 是兩位使用者已核可、並排看明顯不同的人。",
+  "closest_8": [
+   [
+    0.468,
+    "emma-kao",
+    "yerin-han"
+   ],
+   [
+    0.545,
+    "nanami-fujiwara",
+    "ruoruo-tang"
+   ],
+   [
+    0.586,
+    "cheryl-soh",
+    "nanami-fujiwara"
+   ],
+   [
+    0.65,
+    "cheryl-soh",
+    "ruoruo-tang"
+   ],
+   [
+    0.711,
+    "sydney-leong",
+    "zhiyi-shen"
+   ],
+   [
+    0.748,
+    "rin-ayase",
+    "yerin-han"
+   ],
+   [
+    0.795,
+    "cheryl-soh",
+    "sydney-leong"
+   ],
+   [
+    0.807,
+    "angeline-kwee",
+    "peggy-lee"
+   ]
+  ],
+  "range": "0.468 – 2.350"
+ },
+ "_remaining_watch": [
+  "cheryl-soh vs nanami-fujiwara（0.586）與 nanami-fujiwara vs ruoruo-tang（0.545）：三位都是黑／棕長髮的長卵形，是這 19 位裡最擠的一區。使用者逐張看過並核可。",
+  "拿掉臉型參考圖之後，19 位的整體離散度比之前窄——臉型的差異現在只能靠眼／鼻／口三張裁切撐出來。"
+ ],
+ "_next": "Soul V2 訓練（每位 20 張訓練圖、25 credits）"
+}

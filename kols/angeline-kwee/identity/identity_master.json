@@ -1,0 +1,33 @@
+{
+ "persona": "angeline-kwee",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "F",
+ "method": "face_slot_text_only",
+ "job_id": "a236b46f-de38-4b37-a487-b41428304dc7",
+ "file": "kols/angeline-kwee/identity/identity_master.jpg",
+ "sha256": "14369c4c02e8be8036ce4bfac75f40b4760f993aaa8e1f5cf85471b293578c93",
+ "face_shape": {
+  "source": "文字描述，不附參考圖",
+  "text": "Her face is a gently rounded oval with soft full cheeks, a smoothly curved jawline with no angular corner, and a short softly rounded chin."
+ },
+ "sources": {
+  "眼與眉": {
+   "ref": "ref_07",
+   "crop": "review/donor_cards/ref_07__EYES_AND_BROWS.jpg",
+   "sha256": "3a8d364e694d76acf52d389212718cf744e3d8ad4dae06eb81babe6c0d2b67f0"
+  },
+  "鼻": {
+   "ref": "ref_15",
+   "crop": "review/donor_cards/ref_15__NOSE.jpg",
+   "sha256": "c1936ec19c817c3f96fefe99c3f056af83e7796e2dafe7777c539d25c9c53fb6"
+  },
+  "口": {
+   "ref": "ref_03",
+   "crop": "review/donor_cards/ref_03__MOUTH.jpg",
+   "sha256": "65211d001284f56832063fa9ede62cb4ba5ce0a5395531537e92a9f71b0ad420"
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Indonesian Chinese woman.\n\nBuild one original, invented identity. Three isolated component crops are attached in input order: Image 1 defines the eyes, eyelids and brows. Image 2 defines the nose bridge, tip and alar shape. Image 3 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate those three regions into the face described below with continuous anatomy, aligned facial midlines and natural transitions.\n\nHer face is a gently rounded oval with soft full cheeks, a smoothly curved jawline with no angular corner, and a short softly rounded chin.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer milk-tea grey-brown hair falls in long soft waves to mid-chest and is swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2
+}

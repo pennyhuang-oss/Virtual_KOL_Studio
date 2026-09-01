@@ -2,45 +2,32 @@
  "persona": "ruoruo-tang",
  "status": "approved_by_user",
  "approved_on": "2026-09-01",
- "chosen": "B",
- "job_id": "a9531747-24ca-489c-86cf-a77f940b3f3b",
+ "chosen": "E",
+ "method": "face_slot_text_only",
+ "job_id": "cce34bfa-c353-4cbc-b74a-cd3461f2279f",
  "file": "kols/ruoruo-tang/identity/identity_master.jpg",
- "sha256": "b18d669430447c9dcb976b325a80580e1ddffc0a02988f177e9f3ff21fdbd17d",
+ "sha256": "dbd7838790c75a087dd61f22be31bc21e3b4721b7c0e98b1462417e86668fa83",
+ "face_shape": {
+  "source": "文字描述，不附參考圖",
+  "text": "Her face is a soft rounded oval with gentle low cheek volume, a smoothly curved jaw with no angular corner, and a short rounded chin."
+ },
  "sources": {
-  "臉型顎線": {
-   "ref": "ref_04",
-   "crop": "review/donor_cards/ref_04__FACE_SHAPE_AND_JAW.jpg",
-   "sha256": "d4b97239bb5c83b2130cd4fa4d08f84f2b885ac63b32ca9fedd7f9b9a856b646",
-   "grade": "A",
-   "part_px": 206.6,
-   "yaw": 0.0595
-  },
   "眼與眉": {
    "ref": "ref_15",
    "crop": "review/donor_cards/ref_15__EYES_AND_BROWS.jpg",
-   "sha256": "48a6d1f9116e585b965ecd8bff929b3e224690cf4f26b2b409272b6116a1dd3d",
-   "grade": "A",
-   "part_px": 98.2,
-   "yaw": 0.172
+   "sha256": "48a6d1f9116e585b965ecd8bff929b3e224690cf4f26b2b409272b6116a1dd3d"
   },
   "鼻": {
    "ref": "ref_02",
    "crop": "review/donor_cards/ref_02__NOSE.jpg",
-   "sha256": "553772c3e42e7d407c55ea32b23eeb7af0fecc3f281cee7d368588dce9562ce1",
-   "grade": "A",
-   "part_px": 116.3,
-   "yaw": 0.314
+   "sha256": "553772c3e42e7d407c55ea32b23eeb7af0fecc3f281cee7d368588dce9562ce1"
   },
   "口": {
    "ref": "ref_10",
    "crop": "review/donor_cards/ref_10__MOUTH.jpg",
-   "sha256": "3aacebc467038e4d84aba8ab58ee05222b6e86edc8201ba7fb9d7111d5f1c722",
-   "grade": "A",
-   "part_px": 212.1,
-   "yaw": 0.3025
+   "sha256": "3aacebc467038e4d84aba8ab58ee05222b6e86edc8201ba7fb9d7111d5f1c722"
   }
  },
- "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 27-year-old Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 27-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer light chestnut-brown hair is shoulder-length with a soft wave through the ends, swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
- "credits": 2,
- "claude_technical_pass": "通過。兩張年齡都讀起來偏 22–24，比 27 年輕。"
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 27-year-old Chinese woman.\n\nBuild one original, invented identity. Three isolated component crops are attached in input order: Image 1 defines the eyes, eyelids and brows. Image 2 defines the nose bridge, tip and alar shape. Image 3 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate those three regions into the face described below with continuous anatomy, aligned facial midlines and natural transitions.\n\nHer face is a soft rounded oval with gentle low cheek volume, a smoothly curved jaw with no angular corner, and a short rounded chin.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer light chestnut-brown hair is shoulder-length with a soft wave through the ends, swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2
 }

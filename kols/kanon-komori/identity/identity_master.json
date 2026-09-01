@@ -2,16 +2,16 @@
  "persona": "kanon-komori",
  "status": "approved_by_user",
  "approved_on": "2026-09-01",
- "chosen": "D",
- "job_id": "3d2aefda-1ec4-4a6f-a9fc-d05717034bba",
+ "chosen": "F",
+ "method": "face_slot_text_only",
+ "job_id": "d0340486-d3b7-443e-94c0-0487ee965a5a",
  "file": "kols/kanon-komori/identity/identity_master.jpg",
- "sha256": "88d999e4cd9b3106a6e6662c2a10cda83155b2c4edb555f02b40f035bb234a48",
+ "sha256": "d26068d43edca3fd0427e80c9e65e17a7eb19d3e027c8415ac550540bf6aa9cc",
+ "face_shape": {
+  "source": "文字描述，不附參考圖",
+  "text": "Her face is small and softly rounded, with a broad smooth forehead, gently full cheeks, a rounded jawline and a short delicate chin."
+ },
  "sources": {
-  "臉型顎線": {
-   "ref": "ref_14",
-   "crop": "review/donor_cards/ref_14__FACE_SHAPE_AND_JAW.jpg",
-   "sha256": "86babaa262efc642d59650923734351b9bf3a92512b1b7560692812becba720d"
-  },
   "眼與眉": {
    "ref": "ref_09",
    "crop": "review/donor_cards/ref_09__EYES_AND_BROWS.jpg",
@@ -28,8 +28,6 @@
    "sha256": "3aacebc467038e4d84aba8ab58ee05222b6e86edc8201ba7fb9d7111d5f1c722"
   }
  },
- "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 20-year-old Japanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 20-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer waist-length hair is a pink-lilac gradient, dark at the roots melting into soft pink-violet through the lengths, worn loose and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
- "credits": 2,
- "why_redo": "臉型 ref_15 → ref_14：脫離原參考圖本人",
- "claude_technical_pass": "通過。"
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 20-year-old Japanese woman.\n\nBuild one original, invented identity. Three isolated component crops are attached in input order: Image 1 defines the eyes, eyelids and brows. Image 2 defines the nose bridge, tip and alar shape. Image 3 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate those three regions into the face described below with continuous anatomy, aligned facial midlines and natural transitions.\n\nHer face is small and softly rounded, with a broad smooth forehead, gently full cheeks, a rounded jawline and a short delicate chin.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer waist-length hair is a pink-lilac gradient, dark at the roots melting into soft pink-violet through the lengths, worn loose and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2
 }

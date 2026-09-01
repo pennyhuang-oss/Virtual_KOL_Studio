@@ -1,0 +1,33 @@
+{
+ "persona": "wendy-yeo",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "E",
+ "method": "face_slot_text_only",
+ "job_id": "e1914474-650f-4cb5-acfd-7833c37ed2bc",
+ "file": "kols/wendy-yeo/identity/identity_master.jpg",
+ "sha256": "a8a3d297e2e90f9ff87b281d2edd61ac0740009c0dfc08e243ea0eaf3020fa39",
+ "face_shape": {
+  "source": "文字描述，不附參考圖",
+  "text": "Her face is a balanced oval with clearly modelled cheekbones, smooth taut cheeks, a cleanly defined jawline and a small squared-off chin."
+ },
+ "sources": {
+  "眼與眉": {
+   "ref": "ref_07",
+   "crop": "review/donor_cards/ref_07__EYES_AND_BROWS.jpg",
+   "sha256": "3a8d364e694d76acf52d389212718cf744e3d8ad4dae06eb81babe6c0d2b67f0"
+  },
+  "鼻": {
+   "ref": "ref_01",
+   "crop": "review/donor_cards/ref_01__NOSE.jpg",
+   "sha256": "21c4afcf720f3da9706cdccda964dee065af4c09e7b1693554dbb770ad5d3e84"
+  },
+  "口": {
+   "ref": "ref_14",
+   "crop": "review/donor_cards/ref_14__MOUTH.jpg",
+   "sha256": "7e647177b141296fca5759d3c6d4cc96677fe1cd3fdd8c325aa01873360cf8ca"
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 28-year-old Singaporean Chinese woman.\n\nBuild one original, invented identity. Three isolated component crops are attached in input order: Image 1 defines the eyes, eyelids and brows. Image 2 defines the nose bridge, tip and alar shape. Image 3 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate those three regions into the face described below with continuous anatomy, aligned facial midlines and natural transitions.\n\nHer face is a balanced oval with clearly modelled cheekbones, smooth taut cheeks, a cleanly defined jawline and a small squared-off chin.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer hair is a cool silver-grey in a sharp jaw-length crop, tucked behind both ears and away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2
+}

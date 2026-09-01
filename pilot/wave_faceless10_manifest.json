@@ -1,5 +1,5 @@
 {
- "_status": "GENERATED — 等使用者逐位選 E／F",
+ "_status": "10/10 已定案",
  "wave": "faceless-10",
  "model": "seedream_v4_5",
  "aspect_ratio": "3:4",
@@ -453,5 +453,17 @@
    ]
   ],
   "_verdict": "沒有臉型參考圖之後，19 位彼此的差距比之前窄。不到撞臉，但空間變小了——這是拿掉臉型圖的代價，符合測試時的預期。"
+ },
+ "user_picks": {
+  "cheryl-soh": "E",
+  "kanon-komori": "F",
+  "peggy-lee": "E",
+  "rin-ayase": "F",
+  "ruoruo-tang": "E",
+  "tammy-chou": "E",
+  "wanyin-jiang": "F",
+  "zhiyi-shen": "E",
+  "wendy-yeo": "E",
+  "angeline-kwee": "F"
  }
 }

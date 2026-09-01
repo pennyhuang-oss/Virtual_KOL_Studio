@@ -1,0 +1,48 @@
+{
+ "persona": "tammy-chou",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "B",
+ "job_id": "0a5e7a1a-2c1e-415c-b539-040207159c1e",
+ "file": "kols/tammy-chou/identity/identity_master.jpg",
+ "sha256": "6298f6bb218541a8f33f24794fe64a4a955e4bb7667b2d0ef987cc612c4a7b0c",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_10",
+   "crop": "review/donor_cards/ref_10__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "32a087ea1b4e189da3f263ad7987382d07a833f37241ad4c541fb7c4a64c45cb",
+   "grade": "A",
+   "part_px": 1024.1,
+   "yaw": 0.3025
+  },
+  "眼與眉": {
+   "ref": "ref_15",
+   "crop": "review/donor_cards/ref_15__EYES_AND_BROWS.jpg",
+   "sha256": "48a6d1f9116e585b965ecd8bff929b3e224690cf4f26b2b409272b6116a1dd3d",
+   "grade": "A",
+   "part_px": 98.2,
+   "yaw": 0.172
+  },
+  "鼻": {
+   "ref": "ref_04",
+   "crop": "review/donor_cards/ref_04__NOSE.jpg",
+   "sha256": "3371d5afdc8c62378ff9704bc02a9334b53870beda74c1b18aadec8602696c46",
+   "grade": "B",
+   "part_px": 55.1,
+   "yaw": 0.0595
+  },
+  "口": {
+   "ref": "ref_02",
+   "crop": "review/donor_cards/ref_02__MOUTH.jpg",
+   "sha256": "a3df5712466d5f3c8a57293df6f6a518e0c3f5b857333b9ccb9415effae748d7",
+   "grade": "B",
+   "part_px": 94.3,
+   "yaw": 0.314
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 24-year-old Taiwanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 24-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long milk-tea golden-brown hair falls in soft loose waves with lighter money-piece strands at the sides, neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "risk_under_test": "鼻 ref_04 只有 55.1px，是全池解析度最低的一格；同時臉型 ref_10 yaw 0.302、眼 ref_15 yaw 0.172、口 ref_02 yaw 0.314 三格 yaw 覆寫。測下限。",
+ "claude_technical_pass": "通過。同上，捲度更明顯、挑染更清楚；臉略長、下巴更尖。",
+ "_superseded": "臉型槽附整張人像，輸出照搬了來源照本人。已由 wave_faceless10 取代。"
+}

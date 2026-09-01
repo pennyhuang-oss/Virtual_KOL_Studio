@@ -1,0 +1,47 @@
+{
+ "persona": "zhiyi-shen",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "B",
+ "job_id": "20c10c3c-6fa8-4b0e-93cb-45b7b5e1c3eb",
+ "file": "kols/zhiyi-shen/identity/identity_master.jpg",
+ "sha256": "80fb5a18bff179612cd582d4b7eeb17e505060d680b38a9230c680fe077b4d81",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_11",
+   "crop": "review/donor_cards/ref_11__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "172a6302409c3eb65d06e17a0b98206d504f803f7689a68db25e23bd8dd63004",
+   "grade": "A",
+   "part_px": 162.0,
+   "yaw": 0.2858
+  },
+  "眼與眉": {
+   "ref": "ref_10",
+   "crop": "review/donor_cards/ref_10__EYES_AND_BROWS.jpg",
+   "sha256": "f89027883dfb3590b4708880b5d7f37c058247fb0420b4559d608e465f856d5e",
+   "grade": "A",
+   "part_px": 491.1,
+   "yaw": 0.3025
+  },
+  "鼻": {
+   "ref": "ref_03",
+   "crop": "review/donor_cards/ref_03__NOSE.jpg",
+   "sha256": "8f79012fafc6c6b6986667ebb98f692d5f9aa63e80ac45c325295d389c80a5a4",
+   "grade": "A",
+   "part_px": 195.7,
+   "yaw": 0.021
+  },
+  "口": {
+   "ref": "ref_05",
+   "crop": "review/donor_cards/ref_05__MOUTH.jpg",
+   "sha256": "ee1e7aa33036213058bcdd68eb45f3938990f4f828969de321ba1a4e7e2151dd",
+   "grade": "B",
+   "part_px": 55.7,
+   "yaw": 0.1902
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 25-year-old Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 25-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer glossy black hair is long, straight and centre-parted, falling smoothly to mid-chest and tucked back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "claude_technical_pass": "通過。",
+ "_superseded": "臉型槽附整張人像，輸出照搬了來源照本人。已由 wave_faceless10 取代。"
+}

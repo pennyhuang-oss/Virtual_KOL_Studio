@@ -1,0 +1,36 @@
+{
+ "persona": "rin-ayase",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "D",
+ "job_id": "ed860ca1-35a7-4cf2-a600-f7f82f10fe4c",
+ "file": "kols/rin-ayase/identity/identity_master.jpg",
+ "sha256": "6c5ac193e5af3332f0aaed2e53d1eeb119497d8fe0b85e744dab4ff1c23c04ed",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_13",
+   "crop": "review/donor_cards/ref_13__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "87ae895fe4642e60c30f8c8b7b6719b7b09e59f8a1e4c82f378ff5dfaae81c8f"
+  },
+  "眼與眉": {
+   "ref": "ref_05",
+   "crop": "review/donor_cards/ref_05__EYES_AND_BROWS.jpg",
+   "sha256": "bad9ccc44b08409d1114e03ea91346587b34eda2708ee3f8c1f526166d0d9e94"
+  },
+  "鼻": {
+   "ref": "ref_10",
+   "crop": "review/donor_cards/ref_10__NOSE.jpg",
+   "sha256": "8c6dba4df906330be136fa7cee0731ae12ce06849991839064244ce8a425b5cf"
+  },
+  "口": {
+   "ref": "ref_08",
+   "crop": "review/donor_cards/ref_08__MOUTH.jpg",
+   "sha256": "ae3fbfd50355809cf21a969c4fc3fe80bcc9ec1d41d0a7209cac3d7d4dfdf307"
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 25-year-old Japanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 25-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer long hair is a deep wine-brown that reads almost black except where the light catches a red cast in it, blow-dried into soft waves falling to mid-chest and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "why_redo": "臉型 ref_02 → ref_13：脫離 cheryl-soh",
+ "claude_technical_pass": "通過。嘴微張。",
+ "_superseded": "臉型槽附整張人像，輸出照搬了來源照本人。已由 wave_faceless10 取代。"
+}

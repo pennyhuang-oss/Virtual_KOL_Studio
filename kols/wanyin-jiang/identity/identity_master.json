@@ -2,16 +2,16 @@
  "persona": "wanyin-jiang",
  "status": "approved_by_user",
  "approved_on": "2026-09-01",
- "chosen": "C",
- "job_id": "68df0f59-b8b7-4965-b89a-f7787a0f8ac7",
+ "chosen": "F",
+ "method": "face_slot_text_only",
+ "job_id": "fc32c934-6877-4302-a11d-7d217834604a",
  "file": "kols/wanyin-jiang/identity/identity_master.jpg",
- "sha256": "408c08d288097fc7e03b29ecc7d7721feb8b911eee52603d1add1876f8cdc8a0",
+ "sha256": "8feed72ee4aa734fb3e8b7bb26dc0475d170778650ee5c2ba2ecf0498eb23423",
+ "face_shape": {
+  "source": "文字描述，不附參考圖",
+  "text": "Her face is a long refined oval with quietly high cheekbones, flat smooth cheeks, a narrow jawline and a small chin with a clean edge."
+ },
  "sources": {
-  "臉型顎線": {
-   "ref": "ref_07",
-   "crop": "review/donor_cards/ref_07__FACE_SHAPE_AND_JAW.jpg",
-   "sha256": "ee062907b709a851b9494a5c2e10f7b1303e53975d28712edf520a5170b151cc"
-  },
   "眼與眉": {
    "ref": "ref_14",
    "crop": "review/donor_cards/ref_14__EYES_AND_BROWS.jpg",
@@ -28,9 +28,6 @@
    "sha256": "416f96927b05691a00adcc922ef8aed8d50c1df3697cf4439b1a1e02ffab31c6"
   }
  },
- "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 23-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer black hair is straight and waist-length, worn loose and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
- "credits": 2,
- "why_redo": "四格不變。退件原因是眼神不聚焦，靠 prompt 的視線收斂條款修",
- "claude_technical_pass": "眼神修好了——兩眼確實收斂對鏡、反光點一致。但畫面上下緣有灰帶，且與 peggy-lee 撞臉（見下）。",
- "_user_override": "Claude 判定她與 peggy-lee 共用 ref_07 臉型、並排看是同一張臉，建議不要用。使用者裁定：她原本的退件原因是眼神，這次眼神修好了，撞臉可以接受，直接採用 C。以使用者決策為準。"
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Chinese woman.\n\nBuild one original, invented identity. Three isolated component crops are attached in input order: Image 1 defines the eyes, eyelids and brows. Image 2 defines the nose bridge, tip and alar shape. Image 3 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate those three regions into the face described below with continuous anatomy, aligned facial midlines and natural transitions.\n\nHer face is a long refined oval with quietly high cheekbones, flat smooth cheeks, a narrow jawline and a small chin with a clean edge.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer black hair is straight and waist-length, worn loose and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2
 }
