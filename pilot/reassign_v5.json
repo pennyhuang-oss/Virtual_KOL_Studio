@@ -1,0 +1,96 @@
+{
+ "_why": "使用者退件的 7 位重排；規則改成臉型槽為身分主導槽",
+ "assignment": {
+  "emma-kao": {
+   "FACE_SHAPE_AND_JAW": "ref_12",
+   "EYES_AND_BROWS": "ref_02",
+   "NOSE": "ref_07",
+   "MOUTH": "ref_06"
+  },
+  "rin-ayase": {
+   "FACE_SHAPE_AND_JAW": "ref_13",
+   "EYES_AND_BROWS": "ref_05",
+   "NOSE": "ref_10",
+   "MOUTH": "ref_08"
+  },
+  "kanon-komori": {
+   "FACE_SHAPE_AND_JAW": "ref_14",
+   "EYES_AND_BROWS": "ref_09",
+   "NOSE": "ref_01",
+   "MOUTH": "ref_10"
+  },
+  "yerin-han": {
+   "FACE_SHAPE_AND_JAW": "ref_06",
+   "EYES_AND_BROWS": "ref_05",
+   "NOSE": "ref_08",
+   "MOUTH": "ref_13"
+  },
+  "wanyin-jiang": {
+   "FACE_SHAPE_AND_JAW": "ref_07",
+   "EYES_AND_BROWS": "ref_14",
+   "NOSE": "ref_03",
+   "MOUTH": "ref_06"
+  },
+  "wendy-yeo": {
+   "FACE_SHAPE_AND_JAW": "ref_03",
+   "EYES_AND_BROWS": "ref_07",
+   "NOSE": "ref_01",
+   "MOUTH": "ref_14"
+  },
+  "angeline-kwee": {
+   "FACE_SHAPE_AND_JAW": "ref_05",
+   "EYES_AND_BROWS": "ref_07",
+   "NOSE": "ref_15",
+   "MOUTH": "ref_03"
+  }
+ },
+ "face_slot_after": {
+  "ref_02": [
+   "cheryl-soh"
+  ],
+  "ref_09": [
+   "nanami-fujiwara",
+   "angel-chiu"
+  ],
+  "ref_10": [
+   "tammy-chou"
+  ],
+  "ref_04": [
+   "somi-oh",
+   "ruoruo-tang"
+  ],
+  "ref_08": [
+   "zoey-yeh",
+   "sydney-leong"
+  ],
+  "ref_01": [
+   "miu-shiraishi",
+   "jia-seo"
+  ],
+  "ref_11": [
+   "zhiyi-shen"
+  ],
+  "ref_07": [
+   "peggy-lee",
+   "wanyin-jiang"
+  ],
+  "ref_12": [
+   "emma-kao"
+  ],
+  "ref_13": [
+   "rin-ayase"
+  ],
+  "ref_14": [
+   "kanon-komori"
+  ],
+  "ref_06": [
+   "yerin-han"
+  ],
+  "ref_03": [
+   "wendy-yeo"
+  ],
+  "ref_05": [
+   "angeline-kwee"
+  ]
+ }
+}

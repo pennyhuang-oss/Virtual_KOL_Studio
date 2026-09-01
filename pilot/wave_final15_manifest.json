@@ -1,5 +1,5 @@
 {
- "_status": "GENERATED — 等使用者逐位選 A／B",
+ "_status": "8/15 已定案，7 位待重 remix",
  "wave": "final-15",
  "model": "seedream_v4_5",
  "aspect_ratio": "3:4",
@@ -1111,5 +1111,24 @@
    "B": "通過，乾淨。"
   }
  },
- "_summary": "30 張裡 29 張過硬退件表；sydney-leong A 為邊界（未指定的瀏海蓋住左眉）。其餘為可接受的畫面瑕疵，已逐張記錄。"
+ "_summary": "30 張裡 29 張過硬退件表；sydney-leong A 為邊界（未指定的瀏海蓋住左眉）。其餘為可接受的畫面瑕疵，已逐張記錄。",
+ "user_picks": {
+  "angel-chiu": "B",
+  "zoey-yeh": "A",
+  "miu-shiraishi": "B",
+  "jia-seo": "B",
+  "zhiyi-shen": "B",
+  "ruoruo-tang": "B",
+  "peggy-lee": "B",
+  "sydney-leong": "B"
+ },
+ "user_rejected": {
+  "emma-kao": "跟原參考圖本人（金智媛）太像，變化不夠",
+  "kanon-komori": "跟原參考圖本人（金智媛）太像",
+  "rin-ayase": "跟已定案的 cheryl-soh 太像",
+  "yerin-han": "跟已定案的 tammy-chou 太像",
+  "wendy-yeo": "跟已選定的 zhiyi-shen 太像",
+  "wanyin-jiang": "眼睛不聚焦、眼神詭異",
+  "angeline-kwee": "兩張都太老，嘴邊紋路深、眼神老態，與年齡不符"
+ }
 }

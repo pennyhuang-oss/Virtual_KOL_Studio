@@ -1,0 +1,46 @@
+{
+ "persona": "peggy-lee",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "B",
+ "job_id": "57930c6f-7db5-4afc-927e-192d76548f97",
+ "file": "kols/peggy-lee/identity/identity_master.jpg",
+ "sha256": "66e626165bee20e48caeecf819019a9f0e470a1878a053959c309dff5face686",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_07",
+   "crop": "review/donor_cards/ref_07__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "ee062907b709a851b9494a5c2e10f7b1303e53975d28712edf520a5170b151cc",
+   "grade": "A",
+   "part_px": 287.7,
+   "yaw": 0.4047
+  },
+  "眼與眉": {
+   "ref": "ref_02",
+   "crop": "review/donor_cards/ref_02__EYES_AND_BROWS.jpg",
+   "sha256": "70f7dae9b0bab3aee57cdc57a86c9ef934fc7353cdf8e783f36e898b6ef1376a",
+   "grade": "A",
+   "part_px": 139.6,
+   "yaw": 0.314
+  },
+  "鼻": {
+   "ref": "ref_14",
+   "crop": "review/donor_cards/ref_14__NOSE.jpg",
+   "sha256": "a5a1e741b9a5e65fe9d739826ec9762b01a09c6b7329e8bb9dab7728ab0c172e",
+   "grade": "A",
+   "part_px": 100.5,
+   "yaw": 0.0415
+  },
+  "口": {
+   "ref": "ref_03",
+   "crop": "review/donor_cards/ref_03__MOUTH.jpg",
+   "sha256": "65211d001284f56832063fa9ede62cb4ba5ce0a5395531537e92a9f71b0ad420",
+   "grade": "A",
+   "part_px": 146.5,
+   "yaw": 0.021
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 24-year-old Malaysian Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 24-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long hair is a true wine-red with silver-grey highlights, in voluminous loose curls falling past her shoulders to mid-chest and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "claude_technical_pass": "通過。"
+}

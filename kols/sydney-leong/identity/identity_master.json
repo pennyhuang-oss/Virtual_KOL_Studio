@@ -1,0 +1,46 @@
+{
+ "persona": "sydney-leong",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "B",
+ "job_id": "ec9cd638-c20f-42c7-bb7a-76d15ab979be",
+ "file": "kols/sydney-leong/identity/identity_master.jpg",
+ "sha256": "a56fe3d83f81280c7071fa1c4cfe03bd116d14412c6891044c63a05df61b77e4",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_08",
+   "crop": "review/donor_cards/ref_08__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "c42000ccb12da118be5e75b9776325e51a5b4612a92081211caac3a517a8b872",
+   "grade": "A",
+   "part_px": 325.2,
+   "yaw": 0.1609
+  },
+  "眼與眉": {
+   "ref": "ref_09",
+   "crop": "review/donor_cards/ref_09__EYES_AND_BROWS.jpg",
+   "sha256": "94baeea243a5731e698620186c06097429d125662ed84d1e1bbf872afd324182",
+   "grade": "A",
+   "part_px": 105.7,
+   "yaw": 0.4051
+  },
+  "鼻": {
+   "ref": "ref_02",
+   "crop": "review/donor_cards/ref_02__NOSE.jpg",
+   "sha256": "553772c3e42e7d407c55ea32b23eeb7af0fecc3f281cee7d368588dce9562ce1",
+   "grade": "A",
+   "part_px": 116.3,
+   "yaw": 0.314
+  },
+  "口": {
+   "ref": "ref_15",
+   "crop": "review/donor_cards/ref_15__MOUTH.jpg",
+   "sha256": "a7df5a14ec475d88eaad6538aac87cb7d6f5d4e375344171ab28d8b0f833c9f9",
+   "grade": "B",
+   "part_px": 69.4,
+   "yaw": 0.172
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 22-year-old Malaysian Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 22-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer light honey-gold-brown hair is shoulder-length with a soft wave through the lengths, swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "claude_technical_pass": "通過，無瀏海、雙眉完整。"
+}
