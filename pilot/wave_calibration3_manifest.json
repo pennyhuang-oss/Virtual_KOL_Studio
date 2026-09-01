@@ -1,0 +1,221 @@
+{
+ "_status": "GENERATED — 等使用者選 A／B",
+ "wave": "calibration-3",
+ "model": "seedream_v4_5",
+ "aspect_ratio": "3:4",
+ "candidates_per_persona": 2,
+ "credits": 6,
+ "personas": {
+  "nanami-fujiwara": {
+   "age": 23,
+   "ethnicity": "Japanese",
+   "risk_under_test": "臉型 ref_09 yaw 0.405、鼻 ref_06 yaw 0.214，兩格都是被 yaw gate 擋下、靠看圖放行的。測 yaw 覆寫用在臉型槽會不會歪臉。",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Japanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 23-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long, straight black hair is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_09",
+     "file": "review/donor_cards/ref_09__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "c0485e6d523098e86075592ce5d26038415bbbfc0f5aa1b4c35dd7fa0060d549",
+     "grade": "A",
+     "part_px": 346.2,
+     "yaw": 0.4051,
+     "readout": "中等鵝蛋略帶心形，上臉較寬向下收；顎線窄而圓轉，下巴小；頰部中位柔軟",
+     "media_id": "75e84277-6f40-48b9-add8-4ae3e0726428"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_01",
+     "file": "review/donor_cards/ref_01__EYES_AND_BROWS.jpg",
+     "sha256": "dfefcc4c39928c2ce2cb0980edaf5f223bc7ca68f08298ccfa58f4eabb2ea592",
+     "grade": "B",
+     "part_px": 89.4,
+     "yaw": 0.0313,
+     "readout": "中等大小杏眼，眼裂平視或極輕微上揚，窄至中等雙眼皮；眉濃、平直、眉峰低",
+     "media_id": "64fd46d1-a827-4562-917b-f0ddea0eaf2f"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_06",
+     "file": "review/donor_cards/ref_06__NOSE.jpg",
+     "sha256": "59563d700e26a1cf5b0b3d7969dc42e63d09ac39c5f3960c01e83bd52b20f100",
+     "grade": "A",
+     "part_px": 129.3,
+     "yaw": 0.214,
+     "readout": "極小，鼻樑低",
+     "media_id": "65e7eb87-4c2e-4957-8c28-c18e9204020c"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_15",
+     "file": "review/donor_cards/ref_15__MOUTH.jpg",
+     "sha256": "a7df5a14ec475d88eaad6538aac87cb7d6f5d4e375344171ab28d8b0f833c9f9",
+     "grade": "B",
+     "part_px": 69.4,
+     "yaw": 0.172,
+     "readout": "中等，唇量中等偏飽滿，唇峰清楚",
+     "media_id": "be688a71-3dd1-4704-8426-8dafed7a0449"
+    }
+   ]
+  },
+  "somi-oh": {
+   "age": 24,
+   "ethnicity": "Korean",
+   "risk_under_test": "四格最乾淨（臉型/眼皆 ready A，鼻口 probe B，全部在 yaw 門檻內）。當對照組：若這位也不美，問題就不在素材而在 prompt。",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 24-year-old Korean woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 24-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer honey-orange-brown hair, cut in soft feathered layers, is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_04",
+     "file": "review/donor_cards/ref_04__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "d4b97239bb5c83b2130cd4fa4d08f84f2b885ac63b32ca9fedd7f9b9a856b646",
+     "grade": "A",
+     "part_px": 206.6,
+     "yaw": 0.0595,
+     "readout": "短而圓，中臉最寬，柔軟飽滿；顎線是柔和的 U 形，下巴短而鈍；頰部低位、肉感明顯。**全批最清楚的短圓柔臉範例**",
+     "media_id": "45d33a0f-d74d-4508-a63f-f5845557b57f"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_03",
+     "file": "review/donor_cards/ref_03__EYES_AND_BROWS.jpg",
+     "sha256": "921df9d17a1b7f70ee19e726434ae302b126efe05fdd4ab74797b57688319690",
+     "grade": "A",
+     "part_px": 200.4,
+     "yaw": 0.021,
+     "readout": "大而偏圓，眼距寬，眼尾略下垂，窄雙眼皮，上睫毛濃；眉平直、深、位置低",
+     "media_id": "809b0007-9f00-4224-92e2-4123734f2a35"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_08",
+     "file": "review/donor_cards/ref_08__NOSE.jpg",
+     "sha256": "9a8d1d3acf4a5789d977e08de5e4d8e7f34207fd941d228d77f97e03f11ccb1e",
+     "grade": "B",
+     "part_px": 87.6,
+     "yaw": 0.1609,
+     "readout": "短，鼻樑低，鼻頭小而圓",
+     "media_id": "02a124cf-f4bb-449f-8896-77a935d20a79"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_01",
+     "file": "review/donor_cards/ref_01__MOUTH.jpg",
+     "sha256": "55d1521693371f815f9f710f55d1c830aa1965828d91e38c7b9b7f6499aacdff",
+     "grade": "B",
+     "part_px": 60.8,
+     "yaw": 0.0313,
+     "readout": "中等寬度，唇量中等偏飽滿，唇峰清楚，嘴角略下垂",
+     "media_id": "528c65b1-7832-437d-b766-d0389a5511d9"
+    }
+   ]
+  },
+  "tammy-chou": {
+   "age": 24,
+   "ethnicity": "Taiwanese",
+   "risk_under_test": "鼻 ref_04 只有 55.1px，是全池解析度最低的一格；同時臉型 ref_10 yaw 0.302、眼 ref_15 yaw 0.172、口 ref_02 yaw 0.314 三格 yaw 覆寫。測下限。",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 24-year-old Taiwanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 24-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long milk-tea golden-brown hair falls in soft loose waves with lighter money-piece strands at the sides, neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_10",
+     "file": "review/donor_cards/ref_10__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "32a087ea1b4e189da3f263ad7987382d07a833f37241ad4c541fb7c4a64c45cb",
+     "grade": "A",
+     "part_px": 1024.1,
+     "yaw": 0.3025,
+     "readout": "中等鵝蛋，柔軟飽滿；顎線圓轉，下巴小",
+     "media_id": "b7452a39-5ff5-4c81-98e7-22244b1fe704"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_15",
+     "file": "review/donor_cards/ref_15__EYES_AND_BROWS.jpg",
+     "sha256": "48a6d1f9116e585b965ecd8bff929b3e224690cf4f26b2b409272b6116a1dd3d",
+     "grade": "A",
+     "part_px": 98.2,
+     "yaw": 0.172,
+     "readout": "中等杏眼，眼裂平視，窄雙眼皮，眼距中等；眉柔和平直",
+     "media_id": "238a7ff9-6cb3-4c5d-8e63-9ff4d0d06aed"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_04",
+     "file": "review/donor_cards/ref_04__NOSE.jpg",
+     "sha256": "3371d5afdc8c62378ff9704bc02a9334b53870beda74c1b18aadec8602696c46",
+     "grade": "B",
+     "part_px": 55.1,
+     "yaw": 0.0595,
+     "readout": "短，鼻樑低，鼻頭小而圓",
+     "media_id": "921515c9-6cea-4c28-8674-1cd6fedac81c"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_02",
+     "file": "review/donor_cards/ref_02__MOUTH.jpg",
+     "sha256": "a3df5712466d5f3c8a57293df6f6a518e0c3f5b857333b9ccb9415effae748d7",
+     "grade": "B",
+     "part_px": 94.3,
+     "yaw": 0.314,
+     "readout": "中偏寬，唇量中等，唇線自然，嘴角平",
+     "media_id": "692f68e5-e696-4c40-a048-e494af4585a9"
+    }
+   ]
+  }
+ },
+ "_yaw_note": "donor_slot_table 的 reject 全部是 yaw gate 判的。已量測 yaw_proxy 在 0.1–0.45 之間與肉眼正面度不相關；cheryl-soh 通過的臉型格 yaw 0.314、口格 yaw 0.405，都是 yaw-reject 卻做出使用者核可的臉。本波沿用看圖放行。",
+ "jobs": {
+  "nanami-fujiwara": {
+   "A": "badeace1-c3a5-42f5-9cb1-4b75d89ff8e8",
+   "B": "88faf2f9-1a59-41fe-ad9e-9bee4afee468"
+  },
+  "somi-oh": {
+   "A": "916532ca-9b19-4b15-956e-fc712b8bb666",
+   "B": "ee00c775-27c2-4638-bb83-13dc9c878fc9"
+  },
+  "tammy-chou": {
+   "A": "208d4202-fb08-4a07-afa1-cb8a7dfc2acf",
+   "B": "0a5e7a1a-2c1e-415c-b539-040207159c1e"
+  }
+ },
+ "credits_spent": 6,
+ "claude_technical_pass": {
+  "nanami-fujiwara": {
+   "A": "通過。雙眼虹膜完整、兩眼都有反光點，鼻中線對齊人中，唇線連續、嘴角等高，四區交界無接縫，年齡讀起來 23–25。眉毛、髮際、兩側頰緣、下顎線全部露出。",
+   "B": "通過。同上；與 A 差在下顎更窄、頸部更長，臉略瘦。"
+  },
+  "somi-oh": {
+   "A": "通過。臉型短圓、下半臉飽滿，與 ref_04 判讀一致；鼻短、鼻頭圓，ref_08 條件格有執行。缺點：髮長只到下顎，比人設的長度短，髮色偏橘紅而非蜜橘棕。",
+   "B": "技術退件。厚瀏海蓋住雙眉，違反「兩眉可見」的硬性條件（會影響之後 Soul 訓練的眉型一致性）；髮色更橘、年齡讀起來偏 19。"
+  },
+  "tammy-chou": {
+   "A": "通過。鼻部乾淨、鼻翼有形，55px 的最弱格沒有出現糊掉或不對稱。髮色奶茶金棕、側邊有淺挑染，與人設一致。",
+   "B": "通過。同上，捲度更明顯、挑染更清楚；臉略長、下巴更尖。"
+  }
+ },
+ "_separation": "tools/measure_output_separation.py 對 4 位 7 張的相對量測：同人 A/B 落在 0.68–1.13（同人不同抽樣的雜訊帶），跨人多數 >1.0。最近的兩對是 somi A vs cheryl（0.996）與 somi A vs tammy A（0.995）。註：本次 z 正規化只用 7 張，尺度與先前校準不同，只能當相對讀數。"
+}
