@@ -1,5 +1,5 @@
 {
- "_status": "GENERATED — 等使用者選 A／B",
+ "_status": "2/3 已定案（nanami=B, tammy=B）；somi-oh 待瀏海版本重跑後再定",
  "wave": "calibration-3",
  "model": "seedream_v4_5",
  "aspect_ratio": "3:4",
@@ -217,5 +217,10 @@
    "B": "通過。同上，捲度更明顯、挑染更清楚；臉略長、下巴更尖。"
   }
  },
- "_separation": "tools/measure_output_separation.py 對 4 位 7 張的相對量測：同人 A/B 落在 0.68–1.13（同人不同抽樣的雜訊帶），跨人多數 >1.0。最近的兩對是 somi A vs cheryl（0.996）與 somi A vs tammy A（0.995）。註：本次 z 正規化只用 7 張，尺度與先前校準不同，只能當相對讀數。"
+ "_separation": "tools/measure_output_separation.py 對 4 位 7 張的相對量測：同人 A/B 落在 0.68–1.13（同人不同抽樣的雜訊帶），跨人多數 >1.0。最近的兩對是 somi A vs cheryl（0.996）與 somi A vs tammy A（0.995）。註：本次 z 正規化只用 7 張，尺度與先前校準不同，只能當相對讀數。",
+ "user_picks": {
+  "nanami-fujiwara": "B",
+  "tammy-chou": "B",
+  "somi-oh": "待定（使用者偏好 B 的瀏海造型，A 暫不鎖定）"
+ }
 }

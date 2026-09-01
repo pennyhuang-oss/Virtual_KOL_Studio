@@ -1,0 +1,47 @@
+{
+ "persona": "nanami-fujiwara",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "B",
+ "job_id": "88faf2f9-1a59-41fe-ad9e-9bee4afee468",
+ "file": "kols/nanami-fujiwara/identity/identity_master.jpg",
+ "sha256": "c86a2409877adf958d0fe056b6e53a32eefa5e14c856d66b5a3ca57df4ce8320",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_09",
+   "crop": "review/donor_cards/ref_09__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "c0485e6d523098e86075592ce5d26038415bbbfc0f5aa1b4c35dd7fa0060d549",
+   "grade": "A",
+   "part_px": 346.2,
+   "yaw": 0.4051
+  },
+  "眼與眉": {
+   "ref": "ref_01",
+   "crop": "review/donor_cards/ref_01__EYES_AND_BROWS.jpg",
+   "sha256": "dfefcc4c39928c2ce2cb0980edaf5f223bc7ca68f08298ccfa58f4eabb2ea592",
+   "grade": "B",
+   "part_px": 89.4,
+   "yaw": 0.0313
+  },
+  "鼻": {
+   "ref": "ref_06",
+   "crop": "review/donor_cards/ref_06__NOSE.jpg",
+   "sha256": "59563d700e26a1cf5b0b3d7969dc42e63d09ac39c5f3960c01e83bd52b20f100",
+   "grade": "A",
+   "part_px": 129.3,
+   "yaw": 0.214
+  },
+  "口": {
+   "ref": "ref_15",
+   "crop": "review/donor_cards/ref_15__MOUTH.jpg",
+   "sha256": "a7df5a14ec475d88eaad6538aac87cb7d6f5d4e375344171ab28d8b0f833c9f9",
+   "grade": "B",
+   "part_px": 69.4,
+   "yaw": 0.172
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Japanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 23-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long, straight black hair is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "risk_under_test": "臉型 ref_09 yaw 0.405、鼻 ref_06 yaw 0.214，兩格都是被 yaw gate 擋下、靠看圖放行的。測 yaw 覆寫用在臉型槽會不會歪臉。",
+ "claude_technical_pass": "通過。同上；與 A 差在下顎更窄、頸部更長，臉略瘦。"
+}
