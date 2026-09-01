@@ -153,13 +153,6 @@ ul.plain li:last-child{border-bottom:0}
 ul.plain li b{color:var(--ink);font-weight:500}
 ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-space:nowrap}
 
-/* 設定深度 */
-.depth{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.depth div{background:var(--bg2);padding:16px 17px}
-.depth b{display:block;font-family:var(--serif);font-size:26px;color:var(--accent2);line-height:1.1}
-.depth span{font-size:11.5px;color:var(--ink3)}
-.aspects{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 
 /* 圖庫 */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
@@ -226,7 +219,6 @@ ${body}
 const people = cat.personas.map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location) }));
 const totalImages = people.reduce((a, p) => a + p.media.image_count, 0);
 const totalVideos = people.reduce((a, p) => a + p.media.video_count, 0);
-const totalSpecLines = people.reduce((a, p) => a + p.depth.doc_lines_total, 0);
 
 const cats = [...new Set(people.map(p => catLabel(p.category)))].sort();
 const mks = [...new Set(people.map(p => p.mk))].sort();
@@ -248,15 +240,9 @@ const card = p => `
 
 const index = layout('AI KOL 型錄', `
 <div class="hero"><div class="wrap">
-  <h1>${people.length} 位<em>已建置完成</em>的<br>虛擬 KOL</h1>
-  <p class="lede">每一位都有完整的角色設定、內容規範與視覺規格，並且已經產出可用的圖像與影片素材。
-  這份型錄讓你在幾分鐘內看完他們是誰、內容長什麼樣、素材到什麼程度。</p>
-  <div class="stats">
-    <div class="stat"><b>${people.length}</b><span>人設</span></div>
-    <div class="stat"><b>${totalImages}</b><span>可用圖像</span></div>
-    <div class="stat"><b>${totalVideos}</b><span>影片素材</span></div>
-    <div class="stat"><b>${totalSpecLines.toLocaleString('en-US')}</b><span>行角色設定</span></div>
-  </div>
+  <h1>虛擬 <em>KOL</em> 型錄</h1>
+  <p class="lede">${people.length} 位可合作的虛擬 KOL。每一位都有完整的人物設定、內容主題與視覺調性，
+  並且已經產出可用的圖像與影片素材。</p>
   <div class="disclose">
     <b>這些是 AI 生成的虛擬人物。</b>
     <p>不是真人。所有肖像與影片皆由本團隊自行生成，角色設定、語氣與內容規範亦為原創。
@@ -277,11 +263,17 @@ const index = layout('AI KOL 型錄', `
     <button class="chip" aria-pressed="true" data-f="med" data-v="">全部</button>
     <button class="chip" aria-pressed="false" data-f="med" data-v="video">有影片素材</button>
   </div>
+  <div class="frow"><span>排序</span>
+    <button class="chip" aria-pressed="true" data-s="feat">推薦</button>
+    <button class="chip" aria-pressed="false" data-s="material">素材最多</button>
+    <button class="chip" aria-pressed="false" data-s="age">年齡由小到大</button>
+    <button class="chip" aria-pressed="false" data-s="name">名字</button>
+  </div>
   <p class="count" id="count">顯示 ${people.length} 位</p>
 </div></div>
 
 <div class="wrap"><div class="grid" id="grid">
-${people.map(p => `<div class="cell" data-cat="${esc(catLabel(p.category))}" data-mk="${esc(p.mk)}" data-video="${p.media.video_count ? 'video' : ''}">${card(p)}</div>`).join('')}
+${people.map((p, i) => `<div class="cell" data-cat="${esc(catLabel(p.category))}" data-mk="${esc(p.mk)}" data-video="${p.media.video_count ? 'video' : ''}" data-feat="${i}" data-material="${p.media.image_count * 10 + p.media.video_count}" data-age="${p.age || 99}" data-name="${esc(p.name)}">${card(p)}</div>`).join('')}
 </div></div>
 
 <div class="wrap" id="about"><section class="sec">
@@ -301,30 +293,50 @@ ${people.map(p => `<div class="cell" data-cat="${esc(catLabel(p.category))}" dat
 
 <script>
 (function(){
-  var st={cat:'',mk:'',med:''};
-  var cells=[].slice.call(document.querySelectorAll('#grid .cell'));
-  document.querySelectorAll('.chip').forEach(function(b){
+  var st={cat:'',mk:'',med:''}, sort='feat';
+  var grid=document.getElementById('grid');
+  var cells=[].slice.call(grid.querySelectorAll('.cell'));
+
+  function apply(){
+    var n=0;
+    cells.forEach(function(c){
+      var ok=(!st.cat||c.dataset.cat===st.cat)&&(!st.mk||c.dataset.mk===st.mk)&&(!st.med||c.dataset.video===st.med);
+      c.hidden=!ok; if(ok)n++;
+    });
+    document.getElementById('count').textContent='顯示 '+n+' 位';
+
+    var sorted=cells.slice().sort(function(a,b){
+      if(sort==='feat')     return (+a.dataset.feat)-(+b.dataset.feat);
+      if(sort==='material') return (+b.dataset.material)-(+a.dataset.material);
+      if(sort==='age')      return (+a.dataset.age)-(+b.dataset.age);
+      return a.dataset.name.localeCompare(b.dataset.name,'zh-Hant');
+    });
+    sorted.forEach(function(c){ grid.appendChild(c); });
+  }
+
+  document.querySelectorAll('.chip[data-f]').forEach(function(b){
     b.addEventListener('click',function(){
-      var f=b.dataset.f;
-      st[f]=b.dataset.v;
+      var f=b.dataset.f; st[f]=b.dataset.v;
       document.querySelectorAll('.chip[data-f="'+f+'"]').forEach(function(o){
-        o.setAttribute('aria-pressed', String(o===b));
-      });
-      var n=0;
-      cells.forEach(function(c){
-        var ok=(!st.cat||c.dataset.cat===st.cat)&&(!st.mk||c.dataset.mk===st.mk)&&(!st.med||c.dataset.video===st.med);
-        c.hidden=!ok; if(ok)n++;
-      });
-      document.getElementById('count').textContent='顯示 '+n+' 位';
+        o.setAttribute('aria-pressed', String(o===b)); });
+      apply();
     });
   });
+  document.querySelectorAll('.chip[data-s]').forEach(function(b){
+    b.addEventListener('click',function(){
+      sort=b.dataset.s;
+      document.querySelectorAll('.chip[data-s]').forEach(function(o){
+        o.setAttribute('aria-pressed', String(o===b)); });
+      apply();
+    });
+  });
+  apply();
 })();
 </script>
 `, { desc: `${people.length} 位已建置完成的 AI 虛擬 KOL，含完整角色設定與可用素材。` });
 
 // ── 人設頁 ──────────────────────────────────────────────────────────
 const personPage = p => {
-  const d = p.depth;
   const facts = [
     ['年齡', p.age ? p.age + ' 歲' : null],
     ['市場', p.mk],
@@ -333,7 +345,7 @@ const personPage = p => {
     ['領域', catLabel(p.category)],
   ].filter(x => x[1]);
 
-  return layout(`${p.name} — AI KOL 型錄`, `
+  return layout(`${p.name} — 虛擬 KOL 型錄`, `
 <div class="wrap">
   <p class="pback"><a href="/">← 回到全部人設</a></p>
   <div class="phead">
@@ -343,49 +355,40 @@ const personPage = p => {
       <p class="zh">${esc(p.name_zh || '')}</p>
       <p class="tl">${esc(p.tagline || '')}</p>
       <div class="facts">${facts.map(([k, v]) => `<div class="fact"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div>
-      ${p.archetype ? `<p class="prose">${esc(String(p.archetype).replace(/\s*—\s*/, '｜'))}</p>` : ''}
+      ${p.archetype ? `<p class="prose">${esc(p.archetype)}</p>` : ''}
     </div>
   </div>
 
-  ${(p.personality.length || p.voice_tone) ? `<section class="sec"><h2>設定</h2><div class="two">
-    ${p.personality.length ? `<div><p class="lbl">性格</p><div class="tags">${p.personality.slice(0, 10).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></div>` : ''}
-    ${p.voice_tone ? `<div><p class="lbl">語氣</p><p class="prose">${esc(p.voice_tone)}</p></div>` : ''}
-    ${p.aesthetic?.mood ? `<div><p class="lbl">視覺調性</p><p class="prose">${esc(p.aesthetic.mood)}</p></div>` : ''}
-  </div></section>` : ''}
-
-  ${p.pillars.length ? `<section class="sec"><h2>內容主題與比重</h2>
+  ${p.pillars.length ? `<section class="sec"><h2>內容主題</h2>
     <ul class="plain">${p.pillars.map(x => `<li><b>${esc(x.name)}</b>${x.weight ? `<i>${esc(x.weight)}</i>` : ''}</li>`).join('')}</ul>
   </section>` : ''}
 
-  <section class="sec"><h2>設定的細節到什麼程度</h2>
-    <div class="depth">
-      <div><b>${d.doc_lines_total.toLocaleString('en-US')}</b><span>行設定文件</span></div>
-      <div><b>${d.spec_fields}</b><span>項規格欄位</span></div>
-      ${d.pillar_count ? `<div><b>${d.pillar_count}</b><span>條內容主題</span></div>` : ''}
-      ${d.training_set_images ? `<div><b>${d.training_set_images}</b><span>張專屬視覺訓練集</span></div>` : ''}
+  ${(p.personality.length || p.voice_tone || p.aesthetic_mood) ? `<section class="sec"><h2>性格・語氣・視覺調性</h2>
+    ${p.personality.length ? `<p class="lbl">性格</p><ul class="plain">${p.personality.slice(0, 8).map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+    <div class="two" style="margin-top:26px">
+      ${p.voice_tone ? `<div><p class="lbl">語氣</p><p class="prose">${esc(p.voice_tone)}</p></div>` : ''}
+      ${p.aesthetic_mood ? `<div><p class="lbl">視覺調性</p><p class="prose">${esc(p.aesthetic_mood)}</p></div>` : ''}
     </div>
-    ${d.docs.length ? `<p class="lbl" style="margin-top:18px">設定文件</p>
-      <ul class="plain">${d.docs.map(x => `<li><b>${esc(x.label)}</b><i>${x.lines} 行</i></li>`).join('')}</ul>` : ''}
-    ${d.aspects.length ? `<p class="lbl" style="margin-top:18px">涵蓋面向</p>
-      <div class="aspects">${d.aspects.map(a => `<span class="tag k">${esc(a)}</span>`).join('')}</div>` : ''}
-  </section>
+  </section>` : ''}
 
-  ${p.a.gallery.length ? `<section class="sec"><h2>圖像素材（共 ${p.media.image_count} 張，此處展示 ${p.a.gallery.length} 張）</h2>
+  ${p.a.gallery.length ? `<section class="sec"><h2>圖像素材</h2>
     <div class="gal">${p.a.gallery.map((g, i) => `<a href="${g.web}" data-lb="${g.web}" data-alt="${esc(p.name)} 素材 ${i + 1}">
       <img src="${g.thumb}" alt="${esc(p.name)} 素材 ${i + 1}" loading="lazy" width="400" height="533"></a>`).join('')}</div>
   </section>` : ''}
 
-  ${p.a.posters.length ? `<section class="sec"><h2>影片素材（共 ${p.media.video_count} 支）</h2>
+  ${p.a.posters.length ? `<section class="sec"><h2>影片素材</h2>
     <div class="vids">${p.a.posters.map((s, i) => `<div class="vid">
       <img src="${s}" alt="${esc(p.name)} 影片 ${i + 1} 首幀" loading="lazy" width="720" height="1280">
       <span class="play" aria-hidden="true">▶</span></div>`).join('')}</div>
-    <p class="prose" style="margin-top:14px;font-size:13px">影片可於實際洽談時提供完整檔案。</p>
+    <p class="prose" style="margin-top:14px;font-size:13px">影片可於洽談時提供完整檔案。</p>
   </section>` : ''}
 
-  ${(p.boundaries.fit.length || p.boundaries.not.length) ? `<section class="sec"><h2>合作方向</h2><div class="two">
-    ${p.boundaries.fit.length ? `<div><p class="lbl">適合</p><ul class="plain">${p.boundaries.fit.slice(0, 8).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
-    ${p.boundaries.not.length ? `<div><p class="lbl">不接</p><ul class="plain">${p.boundaries.not.slice(0, 8).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
-  </div></section>` : ''}
+  ${p.fit.length ? `<section class="sec"><h2>適合的合作方向</h2>
+    <ul class="plain">${p.fit.slice(0, 8).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    <p class="prose" style="margin-top:16px;font-size:13.5px">
+      以上是依她現有人設最自然的方向。<b>虛擬 KOL 的設定可以依品牌需求調整</b>——
+      選定了外形之後，內容主題與語氣都能配合合作內容重新設定。</p>
+  </section>` : ''}
 </div>
 <footer><div class="wrap">
   <p>${esc(p.name)} 為 AI 生成的虛擬角色，非真實人物。</p>

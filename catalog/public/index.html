@@ -111,13 +111,6 @@ ul.plain li:last-child{border-bottom:0}
 ul.plain li b{color:var(--ink);font-weight:500}
 ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-space:nowrap}
 
-/* 設定深度 */
-.depth{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.depth div{background:var(--bg2);padding:16px 17px}
-.depth b{display:block;font-family:var(--serif);font-size:26px;color:var(--accent2);line-height:1.1}
-.depth span{font-size:11.5px;color:var(--ink3)}
-.aspects{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 
 /* 圖庫 */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
@@ -150,15 +143,9 @@ footer p{margin:0 0 7px;max-width:720px}
 </div></header>
 
 <div class="hero"><div class="wrap">
-  <h1>18 位<em>已建置完成</em>的<br>虛擬 KOL</h1>
-  <p class="lede">每一位都有完整的角色設定、內容規範與視覺規格，並且已經產出可用的圖像與影片素材。
-  這份型錄讓你在幾分鐘內看完他們是誰、內容長什麼樣、素材到什麼程度。</p>
-  <div class="stats">
-    <div class="stat"><b>18</b><span>人設</span></div>
-    <div class="stat"><b>588</b><span>可用圖像</span></div>
-    <div class="stat"><b>170</b><span>影片素材</span></div>
-    <div class="stat"><b>9,427</b><span>行角色設定</span></div>
-  </div>
+  <h1>虛擬 <em>KOL</em> 型錄</h1>
+  <p class="lede">18 位可合作的虛擬 KOL。每一位都有完整的人物設定、內容主題與視覺調性，
+  並且已經產出可用的圖像與影片素材。</p>
   <div class="disclose">
     <b>這些是 AI 生成的虛擬人物。</b>
     <p>不是真人。所有肖像與影片皆由本團隊自行生成，角色設定、語氣與內容規範亦為原創。
@@ -179,141 +166,17 @@ footer p{margin:0 0 7px;max-width:720px}
     <button class="chip" aria-pressed="true" data-f="med" data-v="">全部</button>
     <button class="chip" aria-pressed="false" data-f="med" data-v="video">有影片素材</button>
   </div>
+  <div class="frow"><span>排序</span>
+    <button class="chip" aria-pressed="true" data-s="feat">推薦</button>
+    <button class="chip" aria-pressed="false" data-s="material">素材最多</button>
+    <button class="chip" aria-pressed="false" data-s="age">年齡由小到大</button>
+    <button class="chip" aria-pressed="false" data-s="name">名字</button>
+  </div>
   <p class="count" id="count">顯示 18 位</p>
 </div></div>
 
 <div class="wrap"><div class="grid" id="grid">
-<div class="cell" data-cat="旅遊・城市文化" data-mk="新加坡" data-video="video">
-<a class="card" href="/p/faye-tan.html">
-  <div class="ph"><img src="/assets/faye-tan/hero.jpg" alt="Faye Tan" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Faye Tan</h3>
-    <p class="zh">陳曉菲 · 30 歲 · 新加坡</p>
-    <p class="tl">把一座城市當一本書讀完，再告訴你哪一頁值得停下來。</p>
-    <div class="tags">
-      <span class="tag k">旅遊・城市文化</span>
-      <span class="tag">75 張圖</span>
-      <span class="tag">38 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="數位娛樂・科技" data-mk="新加坡" data-video="video">
-<a class="card" href="/p/loima-cheung.html">
-  <div class="ph"><img src="/assets/loima-cheung/hero.jpg" alt="Zhang Qinfeng" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Zhang Qinfeng</h3>
-    <p class="zh">张秦峰 · 30 歲 · 新加坡</p>
-    <p class="tl">拆開一款遊戲、一部電影、一個 AI 產品，講清楚它為什麼讓人上癮。</p>
-    <div class="tags">
-      <span class="tag k">數位娛樂・科技</span>
-      <span class="tag">55 張圖</span>
-      <span class="tag">57 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="戶外・登山" data-mk="新加坡" data-video="">
-<a class="card" href="/p/rachel-ong.html">
-  <div class="ph"><img src="/assets/rachel-ong/hero.jpg" alt="Rachel Ong" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Rachel Ong</h3>
-    <p class="zh">王瑞秋 · 34 歲 · 新加坡</p>
-    <p class="tl">不講征服，講什麼時候該轉身——把山上的判斷帶回平地。</p>
-    <div class="tags">
-      <span class="tag k">戶外・登山</span>
-      <span class="tag">49 張圖</span>
-      
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="歷史沉浸" data-mk="跨區" data-video="video">
-<a class="card" href="/p/leon-lim.html">
-  <div class="ph"><img src="/assets/leon-lim/hero.jpg" alt="林曜 / Leon Lim" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">林曜 / Leon Lim</h3>
-    <p class="zh">跨區</p>
-    <p class="tl">帶你站在歷史發生的那一刻，離開之前告訴你為什麼。</p>
-    <div class="tags">
-      <span class="tag k">歷史沉浸</span>
-      <span class="tag">45 張圖</span>
-      <span class="tag">9 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="知識・規則研究" data-mk="馬來西亞" data-video="video">
-<a class="card" href="/p/xiaoxiao-tan.html">
-  <div class="ph"><img src="/assets/xiaoxiao-tan/hero.jpg" alt="Tan XiaoXiao" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Tan XiaoXiao</h3>
-    <p class="zh">陳曉曉 · 30 歲 · 馬來西亞</p>
-    <p class="tl">研究規則本身——棋、牌、機率，冷靜地把背後的系統講明白。</p>
-    <div class="tags">
-      <span class="tag k">知識・規則研究</span>
-      <span class="tag">38 張圖</span>
-      <span class="tag">24 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="美妝・保養" data-mk="台灣" data-video="video">
-<a class="card" href="/p/yuna-kim.html">
-  <div class="ph"><img src="/assets/yuna-kim/hero.jpg" alt="Yuna Kim" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Yuna Kim</h3>
-    <p class="zh">김하은 · 21 歲 · 台灣</p>
-    <p class="tl">首爾女生的日常美感——真的在保養，但不是在做評測。</p>
-    <div class="tags">
-      <span class="tag k">美妝・保養</span>
-      <span class="tag">37 張圖</span>
-      <span class="tag">6 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="夜生活" data-mk="台灣" data-video="video">
-<a class="card" href="/p/rainie-hsu.html">
-  <div class="ph"><img src="/assets/rainie-hsu/hero.jpg" alt="Rainie Hsu" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Rainie Hsu</h3>
-    <p class="zh">許雷妮 · 24 歲 · 台灣</p>
-    <p class="tl">她一進門整個場子的節奏就變了，而她從不假裝這身造型很輕鬆。</p>
-    <div class="tags">
-      <span class="tag k">夜生活</span>
-      <span class="tag">35 張圖</span>
-      <span class="tag">4 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video">
-<a class="card" href="/p/luna-tanaka.html">
-  <div class="ph"><img src="/assets/luna-tanaka/hero.jpg" alt="Luna Tanaka" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Luna Tanaka</h3>
-    <p class="zh">田中ひな · 20 歲 · 台灣</p>
-    <p class="tl">住在一個很美的白日夢裡，而且願意讓你進來看看。</p>
-    <div class="tags">
-      <span class="tag k">生活風格</span>
-      <span class="tag">34 張圖</span>
-      <span class="tag">5 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="健身" data-mk="台灣" data-video="video">
-<a class="card" href="/p/vicky-lin.html">
-  <div class="ph"><img src="/assets/vicky-lin/hero.jpg" alt="Vicky Lin" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Vicky Lin</h3>
-    <p class="zh">林薇淇 · 25 歲 · 台灣</p>
-    <p class="tl">身材和態度都是練出來的，所以那份自信不用表演。</p>
-    <div class="tags">
-      <span class="tag k">健身</span>
-      <span class="tag">34 張圖</span>
-      <span class="tag">1 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="美妝・保養" data-mk="台灣" data-video="">
-<a class="card" href="/p/nico-tsai.html">
-  <div class="ph"><img src="/assets/nico-tsai/hero.jpg" alt="Nico Tsai" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Nico Tsai</h3>
-    <p class="zh">蔡妮可 · 26 歲 · 台灣</p>
-    <p class="tl">靠一雙手吃飯的美甲職人，對線條的潔癖同樣用在自己身上。</p>
-    <div class="tags">
-      <span class="tag k">美妝・保養</span>
-      <span class="tag">27 張圖</span>
-      
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video">
+<div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video" data-feat="0" data-material="274" data-age="22" data-name="Iris Chen">
 <a class="card" href="/p/iris-chen.html">
   <div class="ph"><img src="/assets/iris-chen/hero.jpg" alt="Iris Chen" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
@@ -326,7 +189,7 @@ footer p{margin:0 0 7px;max-width:720px}
       <span class="tag">14 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="法國" data-video="video">
+</a></div><div class="cell" data-cat="生活風格" data-mk="法國" data-video="video" data-feat="1" data-material="241" data-age="22" data-name="Camille Dupont">
 <a class="card" href="/p/camille-dupont.html">
   <div class="ph"><img src="/assets/camille-dupont/hero.jpg" alt="Camille Dupont" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
@@ -339,33 +202,46 @@ footer p{margin:0 0 7px;max-width:720px}
       <span class="tag">1 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="神話沉浸" data-mk="台灣" data-video="">
-<a class="card" href="/p/kai-luo.html">
-  <div class="ph"><img src="/assets/kai-luo/hero.jpg" alt="Cathy Luo" loading="lazy" width="1080" height="1440"></div>
+</a></div><div class="cell" data-cat="美妝・保養" data-mk="台灣" data-video="video" data-feat="2" data-material="376" data-age="21" data-name="Yuna Kim">
+<a class="card" href="/p/yuna-kim.html">
+  <div class="ph"><img src="/assets/yuna-kim/hero.jpg" alt="Yuna Kim" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
-    <h3 class="nm">Cathy Luo</h3>
-    <p class="zh">羅凱西 · 27 歲 · 台灣</p>
-    <p class="tl">照著古書的字走進古人記下的那個世界，帶你看那裡長什麼樣。</p>
+    <h3 class="nm">Yuna Kim</h3>
+    <p class="zh">김하은 · 21 歲 · 台灣</p>
+    <p class="tl">首爾女生的日常美感——真的在保養，但不是在做評測。</p>
     <div class="tags">
-      <span class="tag k">神話沉浸</span>
-      <span class="tag">23 張圖</span>
-      
+      <span class="tag k">美妝・保養</span>
+      <span class="tag">37 張圖</span>
+      <span class="tag">6 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="精品生活" data-mk="台灣" data-video="video">
-<a class="card" href="/p/sophia-tseng.html">
-  <div class="ph"><img src="/assets/sophia-tseng/hero.jpg" alt="Sophia Tseng" loading="lazy" width="1080" height="1440"></div>
+</a></div><div class="cell" data-cat="夜生活" data-mk="台灣" data-video="video" data-feat="3" data-material="354" data-age="24" data-name="Rainie Hsu">
+<a class="card" href="/p/rainie-hsu.html">
+  <div class="ph"><img src="/assets/rainie-hsu/hero.jpg" alt="Rainie Hsu" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
-    <h3 class="nm">Sophia Tseng</h3>
-    <p class="zh">曾詩妃 · 28 歲 · 台灣</p>
-    <p class="tl">信義區的名媛，但那份從容是自己掙來的，不是嫁來或繼承來的。</p>
+    <h3 class="nm">Rainie Hsu</h3>
+    <p class="zh">許雷妮 · 24 歲 · 台灣</p>
+    <p class="tl">她一進門整個場子的節奏就變了，而她從不假裝這身造型很輕鬆。</p>
     <div class="tags">
-      <span class="tag k">精品生活</span>
-      <span class="tag">20 張圖</span>
-      <span class="tag">3 支影片</span>
+      <span class="tag k">夜生活</span>
+      <span class="tag">35 張圖</span>
+      <span class="tag">4 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video">
+</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video" data-feat="4" data-material="345" data-age="20" data-name="Luna Tanaka">
+<a class="card" href="/p/luna-tanaka.html">
+  <div class="ph"><img src="/assets/luna-tanaka/hero.jpg" alt="Luna Tanaka" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Luna Tanaka</h3>
+    <p class="zh">田中ひな · 20 歲 · 台灣</p>
+    <p class="tl">住在一個很美的白日夢裡，而且願意讓你進來看看。</p>
+    <div class="tags">
+      <span class="tag k">生活風格</span>
+      <span class="tag">34 張圖</span>
+      <span class="tag">5 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video" data-feat="5" data-material="194" data-age="20" data-name="Coco Wu">
 <a class="card" href="/p/coco-wu.html">
   <div class="ph"><img src="/assets/coco-wu/hero.jpg" alt="Coco Wu" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
@@ -378,7 +254,20 @@ footer p{margin:0 0 7px;max-width:720px}
       <span class="tag">4 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="遊戲・實況" data-mk="台灣" data-video="video">
+</a></div><div class="cell" data-cat="精品生活" data-mk="台灣" data-video="video" data-feat="6" data-material="203" data-age="28" data-name="Sophia Tseng">
+<a class="card" href="/p/sophia-tseng.html">
+  <div class="ph"><img src="/assets/sophia-tseng/hero.jpg" alt="Sophia Tseng" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Sophia Tseng</h3>
+    <p class="zh">曾詩妃 · 28 歲 · 台灣</p>
+    <p class="tl">信義區的名媛，但那份從容是自己掙來的，不是嫁來或繼承來的。</p>
+    <div class="tags">
+      <span class="tag k">精品生活</span>
+      <span class="tag">20 張圖</span>
+      <span class="tag">3 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="遊戲・實況" data-mk="台灣" data-video="video" data-feat="7" data-material="171" data-age="22" data-name="Mia Huang">
 <a class="card" href="/p/mia-huang.html">
   <div class="ph"><img src="/assets/mia-huang/hero.jpg" alt="Mia Huang" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
@@ -391,7 +280,33 @@ footer p{margin:0 0 7px;max-width:720px}
       <span class="tag">1 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="美國" data-video="video">
+</a></div><div class="cell" data-cat="健身" data-mk="台灣" data-video="video" data-feat="8" data-material="341" data-age="25" data-name="Vicky Lin">
+<a class="card" href="/p/vicky-lin.html">
+  <div class="ph"><img src="/assets/vicky-lin/hero.jpg" alt="Vicky Lin" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Vicky Lin</h3>
+    <p class="zh">林薇淇 · 25 歲 · 台灣</p>
+    <p class="tl">身材和態度都是練出來的，所以那份自信不用表演。</p>
+    <div class="tags">
+      <span class="tag k">健身</span>
+      <span class="tag">34 張圖</span>
+      <span class="tag">1 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="美妝・保養" data-mk="台灣" data-video="" data-feat="9" data-material="270" data-age="26" data-name="Nico Tsai">
+<a class="card" href="/p/nico-tsai.html">
+  <div class="ph"><img src="/assets/nico-tsai/hero.jpg" alt="Nico Tsai" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Nico Tsai</h3>
+    <p class="zh">蔡妮可 · 26 歲 · 台灣</p>
+    <p class="tl">靠一雙手吃飯的美甲職人，對線條的潔癖同樣用在自己身上。</p>
+    <div class="tags">
+      <span class="tag k">美妝・保養</span>
+      <span class="tag">27 張圖</span>
+      
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="生活風格" data-mk="美國" data-video="video" data-feat="10" data-material="162" data-age="25" data-name="Aaliya Rivera">
 <a class="card" href="/p/aaliya-okonkwo.html">
   <div class="ph"><img src="/assets/aaliya-okonkwo/hero.jpg" alt="Aaliya Rivera" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
@@ -404,7 +319,7 @@ footer p{margin:0 0 7px;max-width:720px}
       <span class="tag">2 支影片</span>
     </div>
   </div>
-</a></div><div class="cell" data-cat="身心健康" data-mk="印度" data-video="video">
+</a></div><div class="cell" data-cat="身心健康" data-mk="印度" data-video="video" data-feat="11" data-material="141" data-age="23" data-name="Ananya Kapoor">
 <a class="card" href="/p/ananya-kapoor.html">
   <div class="ph"><img src="/assets/ananya-kapoor/hero.jpg" alt="Ananya Kapoor" loading="lazy" width="1080" height="1440"></div>
   <div class="body">
@@ -415,6 +330,84 @@ footer p{margin:0 0 7px;max-width:720px}
       <span class="tag k">身心健康</span>
       <span class="tag">14 張圖</span>
       <span class="tag">1 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="旅遊・城市文化" data-mk="新加坡" data-video="video" data-feat="12" data-material="788" data-age="30" data-name="Faye Tan">
+<a class="card" href="/p/faye-tan.html">
+  <div class="ph"><img src="/assets/faye-tan/hero.jpg" alt="Faye Tan" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Faye Tan</h3>
+    <p class="zh">陳曉菲 · 30 歲 · 新加坡</p>
+    <p class="tl">把一座城市當一本書讀完，再告訴你哪一頁值得停下來。</p>
+    <div class="tags">
+      <span class="tag k">旅遊・城市文化</span>
+      <span class="tag">75 張圖</span>
+      <span class="tag">38 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="戶外・登山" data-mk="新加坡" data-video="" data-feat="13" data-material="490" data-age="34" data-name="Rachel Ong">
+<a class="card" href="/p/rachel-ong.html">
+  <div class="ph"><img src="/assets/rachel-ong/hero.jpg" alt="Rachel Ong" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Rachel Ong</h3>
+    <p class="zh">王瑞秋 · 34 歲 · 新加坡</p>
+    <p class="tl">不講征服，講什麼時候該轉身——把山上的判斷帶回平地。</p>
+    <div class="tags">
+      <span class="tag k">戶外・登山</span>
+      <span class="tag">49 張圖</span>
+      
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="神話沉浸" data-mk="台灣" data-video="" data-feat="14" data-material="230" data-age="27" data-name="Cathy Luo">
+<a class="card" href="/p/kai-luo.html">
+  <div class="ph"><img src="/assets/kai-luo/hero.jpg" alt="Cathy Luo" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Cathy Luo</h3>
+    <p class="zh">羅凱西 · 27 歲 · 台灣</p>
+    <p class="tl">照著古書的字走進古人記下的那個世界，帶你看那裡長什麼樣。</p>
+    <div class="tags">
+      <span class="tag k">神話沉浸</span>
+      <span class="tag">23 張圖</span>
+      
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="數位娛樂・科技" data-mk="新加坡" data-video="video" data-feat="15" data-material="607" data-age="30" data-name="Zhang Qinfeng">
+<a class="card" href="/p/loima-cheung.html">
+  <div class="ph"><img src="/assets/loima-cheung/hero.jpg" alt="Zhang Qinfeng" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Zhang Qinfeng</h3>
+    <p class="zh">张秦峰 · 30 歲 · 新加坡</p>
+    <p class="tl">拆開一款遊戲、一部電影、一個 AI 產品，講清楚它為什麼讓人上癮。</p>
+    <div class="tags">
+      <span class="tag k">數位娛樂・科技</span>
+      <span class="tag">55 張圖</span>
+      <span class="tag">57 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="知識・規則研究" data-mk="馬來西亞" data-video="video" data-feat="16" data-material="404" data-age="30" data-name="Tan XiaoXiao">
+<a class="card" href="/p/xiaoxiao-tan.html">
+  <div class="ph"><img src="/assets/xiaoxiao-tan/hero.jpg" alt="Tan XiaoXiao" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">Tan XiaoXiao</h3>
+    <p class="zh">陳曉曉 · 30 歲 · 馬來西亞</p>
+    <p class="tl">研究規則本身——棋、牌、機率，冷靜地把背後的系統講明白。</p>
+    <div class="tags">
+      <span class="tag k">知識・規則研究</span>
+      <span class="tag">38 張圖</span>
+      <span class="tag">24 支影片</span>
+    </div>
+  </div>
+</a></div><div class="cell" data-cat="歷史沉浸" data-mk="跨區" data-video="video" data-feat="17" data-material="459" data-age="99" data-name="林曜 / Leon Lim">
+<a class="card" href="/p/leon-lim.html">
+  <div class="ph"><img src="/assets/leon-lim/hero.jpg" alt="林曜 / Leon Lim" loading="lazy" width="1080" height="1440"></div>
+  <div class="body">
+    <h3 class="nm">林曜 / Leon Lim</h3>
+    <p class="zh">跨區</p>
+    <p class="tl">帶你站在歷史發生的那一刻，離開之前告訴你為什麼。</p>
+    <div class="tags">
+      <span class="tag k">歷史沉浸</span>
+      <span class="tag">45 張圖</span>
+      <span class="tag">9 支影片</span>
     </div>
   </div>
 </a></div>
@@ -437,23 +430,44 @@ footer p{margin:0 0 7px;max-width:720px}
 
 <script>
 (function(){
-  var st={cat:'',mk:'',med:''};
-  var cells=[].slice.call(document.querySelectorAll('#grid .cell'));
-  document.querySelectorAll('.chip').forEach(function(b){
+  var st={cat:'',mk:'',med:''}, sort='feat';
+  var grid=document.getElementById('grid');
+  var cells=[].slice.call(grid.querySelectorAll('.cell'));
+
+  function apply(){
+    var n=0;
+    cells.forEach(function(c){
+      var ok=(!st.cat||c.dataset.cat===st.cat)&&(!st.mk||c.dataset.mk===st.mk)&&(!st.med||c.dataset.video===st.med);
+      c.hidden=!ok; if(ok)n++;
+    });
+    document.getElementById('count').textContent='顯示 '+n+' 位';
+
+    var sorted=cells.slice().sort(function(a,b){
+      if(sort==='feat')     return (+a.dataset.feat)-(+b.dataset.feat);
+      if(sort==='material') return (+b.dataset.material)-(+a.dataset.material);
+      if(sort==='age')      return (+a.dataset.age)-(+b.dataset.age);
+      return a.dataset.name.localeCompare(b.dataset.name,'zh-Hant');
+    });
+    sorted.forEach(function(c){ grid.appendChild(c); });
+  }
+
+  document.querySelectorAll('.chip[data-f]').forEach(function(b){
     b.addEventListener('click',function(){
-      var f=b.dataset.f;
-      st[f]=b.dataset.v;
+      var f=b.dataset.f; st[f]=b.dataset.v;
       document.querySelectorAll('.chip[data-f="'+f+'"]').forEach(function(o){
-        o.setAttribute('aria-pressed', String(o===b));
-      });
-      var n=0;
-      cells.forEach(function(c){
-        var ok=(!st.cat||c.dataset.cat===st.cat)&&(!st.mk||c.dataset.mk===st.mk)&&(!st.med||c.dataset.video===st.med);
-        c.hidden=!ok; if(ok)n++;
-      });
-      document.getElementById('count').textContent='顯示 '+n+' 位';
+        o.setAttribute('aria-pressed', String(o===b)); });
+      apply();
     });
   });
+  document.querySelectorAll('.chip[data-s]').forEach(function(b){
+    b.addEventListener('click',function(){
+      sort=b.dataset.s;
+      document.querySelectorAll('.chip[data-s]').forEach(function(o){
+        o.setAttribute('aria-pressed', String(o===b)); });
+      apply();
+    });
+  });
+  apply();
 })();
 </script>
 

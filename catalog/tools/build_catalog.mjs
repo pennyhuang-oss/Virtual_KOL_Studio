@@ -186,15 +186,20 @@ function collectMedia(id, repos) {
     for (const m of walkMedia(base)) {
       const rel = m.abs.replace(REPO_ROOT + '/', '');
       const hit = EXCLUDE_PATTERNS.find(x => x.re.test(rel));
-      if (hit) { excluded.push({ file: rel, why: hit.why }); continue; }
+      const d = m.kind === 'image' ? imageSize(m.abs) : null;
       if (m.kind === 'image') {
-        const d = imageSize(m.abs);
-        if (!d) { excluded.push({ file: rel, why: '讀不到尺寸，無法確認是成品還是參考素材' }); continue; }
+        if (!d) { excluded.push({ file: rel, why: '讀不到尺寸，無法確認是成品還是參考素材', recoverable: false }); continue; }
         if (Math.max(d.w, d.h) < MIN_LONG_EDGE) {
-          excluded.push({ file: rel, why: `長邊 ${Math.max(d.w, d.h)}px < ${MIN_LONG_EDGE}px，低於生成輸出的下限，可能是參考素材` });
+          // 🛑 這一條是真人參考素材的防線，**不可以在挑選後台撿回來**。
+          excluded.push({ file: rel, why: `長邊 ${Math.max(d.w, d.h)}px，低於生成輸出的下限，判定為參考素材`, recoverable: false });
           continue;
         }
         m.w = d.w; m.h = d.h;
+      }
+      if (hit) {
+        // 這幾類只是「預設不挑」，人可以在挑選後台自己撿回來。
+        excluded.push({ file: rel, why: hit.why, recoverable: true, w: d?.w || null, h: d?.h || null });
+        continue;
       }
       kept.push({ ...m, repo: tag, rel, dir: path.dirname(rel), name: path.basename(rel) });
     }
@@ -215,65 +220,10 @@ function groupBySeries(items) {
   return [...groups.values()];
 }
 
-// ── 設定深度（客戶要知道的第 3 點）─────────────────────────────────
-// 給「涵蓋哪些面向、各多細」，不給內容本文。
-const ASPECTS = [
-  { key: '外觀規格', test: j => !!j?.identity?.appearance },
-  { key: '性格與價值觀', test: j => !!(j?.persona?.personality_traits || j?.persona?.values) },
-  { key: '語氣與幽默感', test: j => !!(j?.persona?.voice_tone || j?.persona?.humor_style) },
-  { key: '背景故事', test: j => !!j?.persona?.backstory },
-  { key: '內容支柱與比重', test: j => Array.isArray(j?.content?.pillars) && j.content.pillars.length > 0 },
-  { key: '視覺美學規範', test: j => !!j?.content?.aesthetic },
-  { key: '合作邊界', test: j => !!(j?.content?.brand_do || j?.content?.brand_dont) },
-  { key: '各平台內容分工', test: j => !!j?.social?.platforms },
-];
-
-const DOC_LABEL = {
-  'character.md': '角色設定書',
-  'content_style.md': '內容與語氣規範',
-  'visual_prompts.md': '視覺規格書',
-  'character-card.md': '角色卡',
-};
-
-function depthOf(id, repos, profile) {
-  const docs = [];
-  for (const tag of repos) {
-    const base = path.join(REPO_ROOT, REPO_OF[tag], 'kols', id);
-    let files = []; try { files = fs.readdirSync(base).filter(f => f.endsWith('.md')); } catch {}
-    for (const f of files) {
-      if (!DOC_LABEL[f]) continue;                       // 只列對外講得通的幾份
-      if (docs.some(d => d.file === f)) continue;
-      const lines = fs.readFileSync(path.join(base, f), 'utf8').split('\n').filter(l => l.trim()).length;
-      docs.push({ file: f, label: DOC_LABEL[f], lines });
-    }
-  }
-  const aspects = ASPECTS.filter(a => a.test(profile)).map(a => a.key);
-  const countFields = (o) => {
-    let n = 0;
-    for (const v of Object.values(o || {})) {
-      if (v && typeof v === 'object' && !Array.isArray(v)) n += countFields(v);
-      else if (v !== null && v !== undefined && v !== '') n++;
-    }
-    return n;
-  };
-  // ai_assets 與 measurements 不計入對外的欄位數（那些不對外）
-  const forCount = JSON.parse(JSON.stringify(profile || {}));
-  delete forCount.ai_assets;
-  if (forCount?.identity?.appearance) delete forCount.identity.appearance.measurements;
-
-  const trainingSet = Object.values(profile?.ai_assets || {})
-    .map(v => v?.soul_training?.training_image_count || v?.training_image_count || v?.image_count || 0)
-    .reduce((a, b) => Math.max(a, b), 0);
-
-  return {
-    docs,
-    doc_lines_total: docs.reduce((a, d) => a + d.lines, 0),
-    spec_fields: countFields(forCount),
-    aspects,
-    pillar_count: (profile?.content?.pillars || []).length,
-    training_set_images: trainingSet || null,
-  };
-}
+// 🛑 「設定深度」整段已移除。
+// 使用者 2026-09-01：「不需要講他有幾行的角色設定，客戶根本不在意，也不知道幾行設定
+// 代表什麼意思。」「不需要『設定細節到什麼程度』這個欄位，這是內部數據。」
+// → 客戶只需要：內容主題、性格、語氣、視覺調性。
 
 // 沒有 profile.json 的人設（例如 leon-lim），名字從 character.md 的標題抓。
 function nameFromCharacterMd(id, repos) {
@@ -286,6 +236,17 @@ function nameFromCharacterMd(id, repos) {
   }
   return null;
 }
+
+// 只在字串本來就是中文時才採用；純英文一律回 null（不對客戶顯示英文原文）。
+const hasCJK = v => /[\u4e00-\u9fff]/.test(String(v ?? ''));
+const pickZh = v => (v && hasCJK(v) ? v : null);
+// 中文後面接一段英文時，只留中文那一段（純英文則整段丟掉，由 pickZh 處理）。
+const stripEnTail = v => {
+  const t = String(v ?? '').trim();
+  if (!hasCJK(t)) return '';
+  return t.replace(/\s*[A-Za-z][A-Za-z0-9 &/'’,.\-]*$/, '').trim() || t;
+};
+const onlyZh = a => (Array.isArray(a) ? a.filter(hasCJK) : []);
 
 // ── 主流程 ──────────────────────────────────────────────────────────
 const rows = [];
@@ -323,33 +284,42 @@ for (const p of inv.personas) {
     name_zh: p.name_zh || null,
     category: copy.category || p.category,
     age: p.age,
-    ethnicity: p.ethnicity,
+    ethnicity: COPY.ethnicity_zh?.[p.ethnicity] || pickZh(p.ethnicity),
     location: p.location,
-    languages: (profile?.identity?.languages || []).map(s => String(s).replace(/\s*\(.*?\)\s*/g, '').trim()),
+    languages: [...new Set((profile?.identity?.languages || [])
+      .map(x => String(x).replace(/\s*[（(].*?[)）]\s*/g, '').trim())
+      .map(x => COPY.language_zh?.[x] || (hasCJK(x) ? x : null))
+      .filter(Boolean))],
 
     // 第 1 點：設定是什麼
-    tagline: copy.tagline || null,                       // 🛑 手寫，程式產不出來
-    archetype: profile?.persona?.archetype || null,
-    personality: profile?.persona?.personality_traits || [],
-    voice_tone: profile?.persona?.voice_tone || null,
-    pillars: (profile?.content?.pillars || []).map(x => ({ name: x.name, weight: x.weight || null })),
-    formats: profile?.content?.formats || [],
-    aesthetic: profile?.content?.aesthetic
-      ? { mood: profile.content.aesthetic.mood, palette: profile.content.aesthetic.color_palette } : null,
-    boundaries: {
-      fit: profile?.content?.brand_do || [],
-      not: profile?.content?.brand_dont || [],
-      note: profile?.content?.brand_fit_note || null,
-    },
+    // 🛑 一律以中文為準（使用者 2026-09-01：「最好全是中文，原本是英文的，也翻譯成中文。」）
+    //    copy.json 的 *_zh 是手寫的中文版；原始欄位只在它本來就是中文時才用。
+    tagline: copy.tagline || null,
+    // 跟 tagline 幾乎同一句的就不顯示，不要把同一件事講兩次。
+    archetype: (COPY.hide_archetype || []).includes(p.id)
+      ? null : (copy.archetype_zh || pickZh(profile?.persona?.archetype)),
+    personality: copy.personality_zh || onlyZh(profile?.persona?.personality_traits || []),
+    voice_tone: copy.voice_zh || pickZh(profile?.persona?.voice_tone),
+    // 內容主題有些是雙語寫的（「數字娛樂設計 Digital Entertainment Design」），
+    // 型錄只留中文那一半——使用者要求全中文。
+    pillars: (profile?.content?.pillars || []).map(x => ({
+      name: stripEnTail(x.name), weight: x.weight || null,
+    })).filter(x => x.name),
+    aesthetic_mood: copy.mood_zh || pickZh(profile?.content?.aesthetic?.mood),
 
-    // 第 3 點：細節到什麼程度
-    depth: depthOf(p.id, p.in_repos, profile),
+    // 🛑 只有「適合方向」，沒有「不接什麼」。
+    // 使用者 2026-09-01：「對虛擬 KOL 來說沒有不接的品牌，最大的彈性就是可以隨時
+    // 因應客戶需求改變人設……所以『不接』這個欄位完全不需要存在。」
+    fit: copy.fit_zh || onlyZh(profile?.content?.brand_do || []),
 
     // 第 2 點：有哪些素材（候選池，最後由人挑）
     media: {
       image_count: images.length,
       video_count: videos.length,
-      candidates: images.slice(0, 24).map(m => ({
+      // 🛑 帶「全部」候選，不是前 N 張。
+      // 使用者 2026-09-01：「有好幾個人設明明我生產過素材卻沒放上去。」
+      // 挑選後台必須看得到這位人設所有的東西，才輪得到人決定要不要用。
+      candidates: images.map(m => ({
         rel: m.rel, mb: +(m.size / 1048576).toFixed(2),
         w: m.w || null, h: m.h || null,
         score: m.score, reasons: m.reasons,
@@ -369,7 +339,19 @@ const out = {
   note: '型錄要顯示的內容。刻意不含：任何狀態、handle、三圍、prompt／Soul ID／模型／credits、營運統計期間。',
   included: rows.length,
   skipped,
-  personas: rows.sort((a, b) => b.media.image_count - a.media.image_count),
+  // 首頁「推薦」的順序由 copy.json 的 feature_order 決定（有規律、可編輯）。
+  // 沒列到的排在最後，按素材多寡。
+  feature_order_note: COPY.feature_order_note || null,
+  personas: rows.sort((a, b) => {
+    const fo = COPY.feature_order || [];
+    const ia = fo.indexOf(a.id), ib = fo.indexOf(b.id);
+    if (ia !== -1 || ib !== -1) {
+      if (ia === -1) return 1;
+      if (ib === -1) return -1;
+      return ia - ib;
+    }
+    return b.media.image_count - a.media.image_count;
+  }),
 };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(out, null, 2) + '\n');
