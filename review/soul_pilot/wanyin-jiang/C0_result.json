@@ -1,0 +1,51 @@
+{
+ "persona": "wanyin-jiang",
+ "step": "C-0a / C-0b",
+ "element": {
+  "id": "e3e96b3b-1343-4bfe-99ea-ece10a67ca6e",
+  "name": "wanyin-face-tmp",
+  "source": "kols/wanyin-jiang/identity/element_head_crop.jpg（由 master 衍生的頭肩裁切，米色針織已裁掉）",
+  "media_id": "2f6f4610-f3e5-41ff-9f51-ca2f58a769a9"
+ },
+ "U-1_answered": {
+  "question": "建立 Reference Element 收不收費？",
+  "answer": "不收費",
+  "evidence": "建立前後餘額都是 1348.96"
+ },
+ "attempts": [
+  {
+   "round": 1,
+   "ids": [
+    "cafacda9-ebfa-4d93-8c24-6ed10240cde8",
+    "f3d355b9-48fd-4c8f-95c0-d4ae9b0e09b0"
+   ],
+   "files": [
+    "review/soul_pilot/wanyin-jiang/body_A.jpg",
+    "review/soul_pilot/wanyin-jiang/body_B.jpg"
+   ],
+   "wording": "自寫：fuller bust in proportion to that waist",
+   "verdict": "退。臉、服裝、背景、單人、全身都對，但胸型畫成平胸，與 86-57-88 / D 不符。"
+  },
+  {
+   "round": 2,
+   "ids": [
+    "6285614d-4b89-48fb-9944-b38bdf2dce83",
+    "b0c1b7ae-729c-4380-b2a6-9f000f02741c"
+   ],
+   "files": [
+    "review/soul_pilot/wanyin-jiang/body_C.jpg",
+    "review/soul_pilot/wanyin-jiang/body_D.jpg"
+   ],
+   "wording": "改用 pilot/nico_pilot.json 已驗證的 body_en.full_body（含 U-03 裁決的『小腰與飽滿胸的反差是她的特徵』）",
+   "verdict": "仍退。與 round 1 幾乎無差異，胸型仍平。"
+  }
+ ],
+ "finding": {
+  "statement": "臉部 Reference Element 會連帶決定身材，且壓過 prompt 的身材文字。",
+  "why_it_matters": "ChatGPT 排除的 B 方案（身材靠文字）本來就不可行；現在證實即使 element 只放臉、身材全靠文字，也一樣不可行。這代表 combined element 的身材必須由『一張真的有正確身材的圖』提供，不能靠描述。",
+  "caveat": "目前只有 wanyin 一位、4 張樣本。是否所有 persona 都如此未驗證。",
+  "prior_art": "與本專案既有量測一致——臉部裁切會連帶帶出體型與年齡（見對話紀錄的 face-crop-carries-body 發現）。"
+ },
+ "credits_spent": 4,
+ "status": "BLOCKED — 待使用者決定下一步"
+}
