@@ -2,7 +2,8 @@
 __pycache__/
 *.pyc
 
-# 型錄的衍生素材：thumb 與 poster 隨時可由 build_assets.mjs 重產，不進 git。
-# web 與 hero 進 git（實測 230 張 p95 僅 52.2 MB，見覆核包 §2.5）。
-catalog/assets/**/*_t.jpg
-catalog/assets/**/*_poster.jpg
+# 🛑 型錄的衍生素材「全部」進 git，包含縮圖與影片首幀。
+# 原本把 *_t.jpg 與 *_poster.jpg 排除，理由是「一行指令就能重產」——
+# 那個理由在部署環境不成立：Railway 上既沒有 ffmpeg 也沒有素材母檔，
+# 結果 2026-09-01 上線後人設頁的圖庫縮圖全部 404 破圖。
+# 「可重產」要看在哪裡重產。多出來的量很小（縮圖約 3.7 MB、poster 約 1.4 MB）。
