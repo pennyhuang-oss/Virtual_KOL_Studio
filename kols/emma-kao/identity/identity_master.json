@@ -1,0 +1,35 @@
+{
+ "persona": "emma-kao",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "D",
+ "job_id": "268310e3-a113-41c7-80fc-ae713052528d",
+ "file": "kols/emma-kao/identity/identity_master.jpg",
+ "sha256": "500ef60b8960343484d29637ce55747db90de261b0df518454fa3ac36a8c57b3",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_12",
+   "crop": "review/donor_cards/ref_12__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "1f9e5306d09c857ac38f6dfd7256f16868f14df4438253fb3cdf02ddbe131fd3"
+  },
+  "眼與眉": {
+   "ref": "ref_02",
+   "crop": "review/donor_cards/ref_02__EYES_AND_BROWS.jpg",
+   "sha256": "70f7dae9b0bab3aee57cdc57a86c9ef934fc7353cdf8e783f36e898b6ef1376a"
+  },
+  "鼻": {
+   "ref": "ref_07",
+   "crop": "review/donor_cards/ref_07__NOSE.jpg",
+   "sha256": "36521bd3b0d9c55bf724d1c4224361592b6bf9337d32046fc2f55b0d61b2fcb1"
+  },
+  "口": {
+   "ref": "ref_06",
+   "crop": "review/donor_cards/ref_06__MOUTH.jpg",
+   "sha256": "416f96927b05691a00adcc922ef8aed8d50c1df3697cf4439b1a1e02ffab31c6"
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 27-year-old Taiwanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 27-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer dark brown hair is a straight shoulder-length cut with the ends turned softly under in a clean broadcast blow-dry, swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "why_redo": "臉型 ref_15 → ref_12：脫離原參考圖本人",
+ "claude_technical_pass": "通過。同上；額前有一綹碎髮。"
+}

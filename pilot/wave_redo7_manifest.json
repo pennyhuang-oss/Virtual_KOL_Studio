@@ -1,5 +1,5 @@
 {
- "_status": "GENERATED — 6 位可選，wanyin-jiang 仍需處理",
+ "_status": "5/7 已定案；wendy-yeo 需換臉型來源，angeline-kwee 需修表情",
  "wave": "redo-7",
  "model": "seedream_v4_5",
  "aspect_ratio": "3:4",
@@ -388,5 +388,16 @@
   "emma-kao / kanon-komori vs 原參考圖本人": "解除（兩位都已換掉 ref_15 臉型）",
   "wanyin-jiang vs peggy-lee": "**未解除**。兩人共用 ref_07 臉型，輪廓、顎線、下巴、眼型幾乎一致，只有髮色不同。這是我事前就標為風險的那一對。",
   "其他四對共用臉型（ref_01 miu/jia、ref_04 somi/ruoruo、ref_08 zoey/sydney、ref_09 nanami/angel）": "並排看過，可區分，維持"
+ },
+ "user_picks": {
+  "emma-kao": "D",
+  "rin-ayase": "D",
+  "kanon-komori": "D",
+  "yerin-han": "D",
+  "wanyin-jiang": "C"
+ },
+ "user_rejected": {
+  "wendy-yeo": "跟參考圖裡的真人藝人（高允貞）太像，等於照搬她的五官",
+  "angeline-kwee": "五官沒問題，但表情看起來一直在皺眉、很命苦"
  }
 }
