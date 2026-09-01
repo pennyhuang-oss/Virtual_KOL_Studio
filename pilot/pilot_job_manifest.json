@@ -1,5 +1,5 @@
 {
- "_status": "PENDING — 需使用者明確同意才可送出",
+ "_status": "GENERATED — 等使用者選 A／B／都不要",
  "persona": "cheryl-soh",
  "age": 25,
  "ethnicity": "新加坡華裔（Chinese-Singaporean）",
@@ -60,5 +60,14 @@
    "yaw": 0.4047,
    "readout": "中等寬，唇薄至中等，唇線清楚"
   }
- ]
+ ],
+ "jobs": {
+  "A": "c070a893-119d-43e8-baf0-2f66be3685f3",
+  "B": "c7105312-5164-4210-8ed6-2356d2a483c8"
+ },
+ "credits_spent": 2,
+ "claude_technical_pass": {
+  "A": "全項通過",
+  "B": "通過，但畫面上緣有灰色橫帶、數綹碎髮橫過臉頰"
+ }
 }
