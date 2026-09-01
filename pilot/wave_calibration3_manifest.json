@@ -1,5 +1,5 @@
 {
- "_status": "2/3 已定案（nanami=B, tammy=B）；somi-oh 待瀏海版本重跑後再定",
+ "_status": "nanami=B、tammy=B 已定案；somi 待你在 A／C／D 之間選",
  "wave": "calibration-3",
  "model": "seedream_v4_5",
  "aspect_ratio": "3:4",
@@ -222,5 +222,26 @@
   "nanami-fujiwara": "B",
   "tammy-chou": "B",
   "somi-oh": "待定（使用者偏好 B 的瀏海造型，A 暫不鎖定）"
+ },
+ "somi_fringe_rerun": {
+  "_why": "使用者偏好 B 的瀏海造型，但 B 的厚瀏海蓋住雙眉、驗不到 EYES_AND_BROWS 格。改用露眉的瀏海重跑，同樣四張來源、同樣 prompt，只改髮型段落。",
+  "same_sources": true,
+  "media_ids_reused": true,
+  "credits": 2,
+  "jobs": {
+   "C": "dd23a436-ac8a-4a4f-a539-330011d162c6",
+   "D": "60d1778d-a6f1-4b5f-895f-13825271561f"
+  },
+  "C": {
+   "asked": "wispy see-through fringe，眉毛從眉頭到眉尾整段看得穿",
+   "result": "照做。兩道眉全長清楚可讀，EYES_AND_BROWS（ref_03）驗得到。其餘硬退件項目全過。髮長到鎖骨下、狼尾層次成立。髮色仍偏銅橘，未到蜜橘棕。",
+   "verdict": "通過"
+  },
+  "D": {
+   "asked": "curtain fringe 中分、額頭打開",
+   "result": "沒有照做——模型仍給了整片透感瀏海，額頭沒打開。眉尾看得到，眉頭被髮絲部分遮住，屬邊界случай。年齡讀起來偏 21。",
+   "verdict": "邊界，不建議當 identity master"
+  },
+  "_finding": "seedream 對『curtain fringe / 中分打開額頭』的指令抗性高，會退回整片瀏海；『wispy see-through fringe + 眉毛從眉頭到眉尾看得穿』這種寫法才有效。之後所有要瀏海的人設沿用 C 的措辭。"
  }
 }
