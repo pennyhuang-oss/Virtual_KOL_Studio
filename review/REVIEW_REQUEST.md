@@ -186,45 +186,70 @@ prompt 沒有要求任何招牌，但 A 的背景牆上長出了亂碼韓文。
 
 ## Q1 碗那一句
 
-- **判定**：
+- **判定**：保留碗作為畫內視線目標，但把它從「橫跨畫面、可能被展示的完整物件」改成**平放在石桌上的小型空 tasting bowl，只讓近側碗緣進入極前景**。同一句改用上臂截斷位置定義構圖。
 - **理由（為什麼這樣寫不會被理解成「端著」）**：
+  1. **rests flat on the pale stone tabletop** 給碗唯一、明確的承重表面；它不再需要人物的手來解釋位置。
+  2. **small empty tasting bowl** 把它定義成已喝完後留下的小碗，不是盛滿配料、準備展示給觀眾的大碗。
+  3. **near rim…in the extreme foreground** 只要求一段夠大、有邊界與對比的碗緣作視線錨點，不再要求整個碗橫跨中央、搶成主體。
+  4. **the lower frame edge crosses both upper arms above the elbows** 用人體與裁切的正面幾何關係排除端碗姿勢；若肘部以下本來就在畫外，手不需要被另外描述。
+  5. 同步把下一句的視線目標改為「平放桌面的 tasting bowl 近側碗緣」，避免前句說平放、後句又把 bowl rim 重新讀成展示物。
 
 ## Q2 手不入鏡怎麼寫
 
-- **判定**：
+- **判定**：不寫「手在畫面外」或「手放在腿上」，也不改成可見安全手勢；改由**裁切在雙上臂肘部以上**，使手在解剖與構圖上沒有進入畫面的條件。
 - **理由**：
+  1. 「both hands below the frame」只描述不可見結果，2/2 已證明會被更強的「端碗」場景語意覆蓋。
+  2. 「雙手放腿上」仍然把模型注意力叫到兩隻手，而且位置不可驗收，可能反向生成膝上手或把景別拉遠。
+  3. 「the lower frame edge crosses both upper arms above the elbows」描述的是**畫面內確實可見的裁切邊界**。手不需要被生成後再藏起來；構圖本身在手腕／手掌出現以前就結束。
+  4. 本輪不要改成桌面可見雙手。那會新增兩個高風險解剖物件、拉遠景別，並再次給模型抓碗的機會。
 
 ## Q3 服裝幾何補充
 
-- **判定（留／拿掉／改寫）**：
-- **理由**：
+- **判定（留／拿掉／改寫）**：**拿掉幾何補充；具名衣物原封不動保留。**
+- **理由**：A 已直接證明「an opaque ivory mock-neck knit top」能召回完整、合規的衣物；B 則證明後接的「its collar forming one continuous band around the base of her neck」可能被模型拆成另一個獨立物件——頸環／choker。這不是需要再加一句把頸環黏回去，而是應停止提供可拆離的第二物件。新句只保留：**She wears an opaque ivory mock-neck knit top with relaxed shoulders.** 其中核心字串 **an opaque ivory mock-neck knit top** 一字不改。
 
 ## Q4 背景亂碼文字
 
-- **判定**：
-- **處理方式**：
+- **判定**：處理，但只做一處低成本的正面背景實體補充；不加入 no text／without signs。
+- **處理方式**：把背景句補成 **plain continuous dark-wood wall panels**，讓招牌原本可能佔據的牆面被一種具體、連續的材質填滿。保留 carved wooden screen、amber lanterns 與兩名背景食客，不順手重設整個場景。1/2 目前仍視為隨機瑕疵；若下一批 2 張又都出現文字，才升格為系統性問題。
 
 ## Q5 修改後的完整 prompt
 
-```
-
-```
+~~~text
+Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible; the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground. Her chin is slightly lowered and her eyes are fixed on the near rim of the tasting bowl resting on the tabletop, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
+~~~
 
 ### 改動對照
 
 | 原句 | 新句 | 為什麼 |
 |---|---|---|
-| | | |
+| Her complete head, both shoulders, neckline, and upper torso are visible, with the broad rim of a white porcelain bowl spanning the bottom centre of the frame and both hands below the frame. | Her complete head, both shoulders, neckline, and upper torso are visible; the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground. | 把「被端起展示的大碗」改成有桌面承重的小型空碗；以可見裁切幾何取代不可見的 hands 指令。 |
+| Her chin is slightly lowered and her eyes are fixed on the clearly visible bowl rim, lips softly closed in a quiet moment of judgment. | Her chin is slightly lowered and her eyes are fixed on the near rim of the tasting bowl resting on the tabletop, lips softly closed in a quiet moment of judgment. | 再次綁定桌面與近側碗緣，防止視線句把碗重新升格成胸前展示物。 |
+| She wears an opaque ivory mock-neck knit top with relaxed shoulders, its collar forming one continuous band around the base of her neck. | She wears an opaque ivory mock-neck knit top with relaxed shoulders. | 完整保留已成功的具名衣物，刪除可能被拆成獨立 choker 的幾何補充。 |
+| A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, amber lanterns, and two indistinct diners in the mid-ground facing their own table. | A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners in the mid-ground facing their own table. | 用連續深木牆面正向占據招牌生成位置，降低隨機偽文字風險。 |
 
 ### 原封不動的句子
 
-- 
+- **Yuna sits at a hotpot table immediately after tasting the first bowl of broth.**
+- **The viewer is seated directly across the table from her.**
+- **Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin.**
+- 服裝成功核心字串 **an opaque ivory mock-neck knit top** 原封不動；只刪掉它後方已出現反效果的幾何子句。
+- **An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw.**
+- **Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights.**
+- **Clear natural skin texture and fine hair detail.**
 
 ## Q6 生幾張
 
-- **判定**：
+- **判定**：**再生 2 張，共 0.24 credits。**
 - **理由**：
+  1. 這輪只改四個已定位的句子，不需要用 6–12 張換取更漂亮的抽樣；2 張已足以判斷「桌面小空碗＋上臂裁切」是否消除端碗連鎖。
+  2. 若至少 1 張同時通過「碗平放、零可見手、低眼看碗、已喝完狀態、mock-neck 正確」，立即停止生圖，採用通過者，不為選美追加成本。
+  3. 若 2/2 又把碗舉到胸前／生成雙手／直視鏡頭，判定新碗句仍有系統性端碗語意；下一步不是再抽圖，而是**完全移除碗與餐具**，改用桌面上大面積暖色光斑或另一個非可握持的實體視線目標，再做 2 張。
+  4. 若端碗連鎖已解，但服裝 1 過 1 不過，沿用通過的 mock-neck 圖，不改服裝 prompt；這正是隨機服從差異。
+  5. 若兩張只剩背景 1 張亂碼、另 1 張乾淨，取乾淨者，不再為背景多花 credits。
 
 ## 補充（我漏掉的問題）
 
-- 
+- **「empty」是本輪必要的時間狀態，不是要拿來證明沒有食物**：驗收重點仍是碗平放與不被端起。若模型在平放小碗裡留下少量湯痕，但其餘核心 gate 全過，可接受；不要因碗不是像素級全空而誤殺。
+- **不要同時改 animation prompt**：本輪只重做 start frame。等靜態圖通過後，沿用 R21 已定的「低眼停一拍 → 抬眼 → 一次小點頭」動畫設計；否則會把靜態修正與動畫修正混成同一輪。
+- **本批的成功定義是『有一張可直接進 Kling』，不是 2/2 都要過。** 在最少支出目標下，一張通過即停，另一張只作隨機性參考。
