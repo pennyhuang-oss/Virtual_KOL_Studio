@@ -1,53 +1,64 @@
 {
- "_status": "PENDING — 需 ChatGPT 覆核 ＋ 使用者明確同意才可送出",
+ "_status": "PENDING — 需使用者明確同意才可送出",
  "persona": "cheryl-soh",
+ "age": 25,
+ "ethnicity": "新加坡華裔（Chinese-Singaporean）",
  "model": "seedream_v4_5",
  "aspect_ratio": "3:4",
  "candidates": 2,
  "credits": 2,
- "_ab_design": "相同四槽與相同 prompt，只改抽樣（R11 P-06）",
- "unknown_cells": 0,
+ "_ab_design": "相同四槽與相同 prompt，只改抽樣",
+ "unknown_cells": 1,
+ "unknown_which": "ref_07｜口（角度條件式，會在結果中特別看唇形）",
  "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 25-year-old Singaporean Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 25-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long black hair is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
  "image_references_in_order": [
   {
    "input_order": 1,
    "slot": "FACE_SHAPE_AND_JAW",
-   "source_ref": "ref_08",
-   "file": "review/donor_cards/ref_08__FACE_SHAPE_AND_JAW.jpg",
-   "sha256": "c42000ccb12da118be5e75b9776325e51a5b4612a92081211caac3a517a8b872",
+   "slot_zh": "臉型顎線",
+   "source_ref": "ref_02",
+   "file": "review/donor_cards/ref_02__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "5c213b5e2682a5f7e6433c214b644565bf93b004e22448527cb56a018232d2d1",
    "grade": "A",
-   "part_px": 325.2,
-   "yaw": 0.1609
+   "part_px": 480.5,
+   "yaw": 0.314,
+   "readout": "長卵形，中庭長，額頭明顯高；清瘦平面，顴骨轉折看得到；顎線窄而俐落，下巴小、略尖但不銳"
   },
   {
    "input_order": 2,
    "slot": "EYES_AND_BROWS",
-   "source_ref": "ref_06",
-   "file": "review/donor_cards/ref_06__EYES_AND_BROWS.jpg",
-   "sha256": "fef84fa6d012d7dac6d3e02c2feaadd79636b37b36e1232ac5f143b29c2dfecb",
-   "grade": "A",
-   "part_px": 138.3,
-   "yaw": 0.214
+   "slot_zh": "眼與眉",
+   "source_ref": "ref_01",
+   "file": "review/donor_cards/ref_01__EYES_AND_BROWS.jpg",
+   "sha256": "dfefcc4c39928c2ce2cb0980edaf5f223bc7ca68f08298ccfa58f4eabb2ea592",
+   "grade": "B",
+   "part_px": 89.4,
+   "yaw": 0.0313,
+   "readout": "中等大小杏眼，眼裂平視或極輕微上揚，窄至中等雙眼皮；眉濃、平直、眉峰低"
   },
   {
    "input_order": 3,
    "slot": "NOSE",
-   "source_ref": "ref_14",
-   "file": "review/donor_cards/ref_14__NOSE.jpg",
-   "sha256": "a5a1e741b9a5e65fe9d739826ec9762b01a09c6b7329e8bb9dab7728ab0c172e",
-   "grade": "A",
-   "part_px": 100.5,
-   "yaw": 0.0415
+   "slot_zh": "鼻",
+   "source_ref": "ref_15",
+   "file": "review/donor_cards/ref_15__NOSE.jpg",
+   "sha256": "c1936ec19c817c3f96fefe99c3f056af83e7796e2dafe7777c539d25c9c53fb6",
+   "grade": "B",
+   "part_px": 82.4,
+   "yaw": 0.172,
+   "readout": "中等，鼻樑直而窄，鼻頭小而精緻"
   },
   {
    "input_order": 4,
    "slot": "MOUTH",
-   "source_ref": "ref_03",
-   "file": "review/donor_cards/ref_03__MOUTH.jpg",
-   "sha256": "65211d001284f56832063fa9ede62cb4ba5ce0a5395531537e92a9f71b0ad420",
-   "grade": "A",
-   "part_px": 146.5,
-   "yaw": 0.021
+   "slot_zh": "口",
+   "source_ref": "ref_07",
+   "file": "review/donor_cards/ref_07__MOUTH.jpg",
+   "sha256": "12180b049790e741be6b5d34e65379366aa0a6f49c4f7d6c599ac6d14bfea882",
+   "grade": "B",
+   "part_px": 54.4,
+   "yaw": 0.4047,
+   "readout": "中等寬，唇薄至中等，唇線清楚"
   }
  ]
 }
