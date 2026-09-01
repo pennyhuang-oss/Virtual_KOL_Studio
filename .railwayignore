@@ -1,0 +1,35 @@
+# Railway 打包 build context 時要排除的東西。
+#
+# 🛑 為什麼需要這個檔案（2026-09-01 實測踩到）：
+# Railway 會把**整個 repo** 打包成 snapshot，**即使 Root Directory 設成 /catalog 也一樣**。
+# 這個 repo 是 2.37 GB，結果 build 卡在一個迴圈裡：
+#     uploading snapshot（2,370,039,686 bytes，約 80 秒）
+#       → failed to fetch snapshot
+#       → 重新上傳 → 再失敗 …繞了 17 分鐘沒有進展
+# 那不是暫時性的，是 snapshot 太大過不去。
+#
+# 型錄站執行時只需要 catalog/ 底下的東西：
+#   catalog/public/  已經產生好的 HTML
+#   catalog/assets/  已經轉好的圖（22 MB）
+#   catalog/server.js + package.json
+# 素材的母檔（kols/ 2.2 GB）是**產生**衍生檔時才需要，那一步在本機跑，不在 Railway 跑。
+#
+# ⚠ 排除之後 snapshot 從 2.37 GB 降到約 22 MB。
+# ⚠ 這只影響 Railway 的 build context，不影響 git、也不影響本機的 build:local。
+
+# 最大的來源：人設素材母檔
+kols/
+
+# 覆核工作區（含 58 張真人參考照，本來就絕對不該進部署環境）
+review/
+
+# 其他跟型錄站無關的
+music/
+pilot/
+business/
+clients/
+tools/
+每周熱門話題/
+
+# repo 根目錄的規則文件與 SOP
+*.md
