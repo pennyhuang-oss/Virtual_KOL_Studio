@@ -1,32 +1,24 @@
-# 覆核請求 R22：鏡 3 第一批 2/2 失敗，四個失敗是同一個根因
+# 覆核請求 R23：鏡 3 的首幀已經定了，只需要一段 5 秒動畫
 
 > ⚠️ **請只讀這一個檔案**，不要瀏覽目錄、不要讀 repo 其他背景（會耗掉使用者方案內數小時的用量）。
 > 答案填在最後的「回覆區」。**不要改問題本文與「我的看法」**——那是原始紀錄。
 > 填完 commit 回 `claude/virtual-kol-restaurant-campaign-pxu9m4` 分支。
 
+**這一輪很短。首幀已經生出來、已經選定、拿在手上。唯一要你寫的是動畫那一段。**
+
 ---
 
-# 〇、成本限制（從本輪起每輪都附，先前從未告知，是我的疏漏）
+# 〇、成本限制（每輪都附）
 
 **這個專案要控制成本，以「最少支出完成」為目標，不是以結果最佳化為目標。**
 
-使用者的原話：
-> 「我在生成這些素材的時候**需要控制成本，會以盡量減少支出成本就把它完成為目的**。」
-
 | 單價 | |
 |---|---|
-| 圖（`soul_2`，2k） | **0.12 credits／張** |
+| 圖（`soul_2`，2k） | 0.12 credits／張 |
 | 影片（`kling3_0`，9:16，sound on） | **2 credits／秒**（5 秒 = 10） |
-| | **圖與影片差 83 倍** |
 
-**請把這一點當成設計流程時的硬條件：**
-- **能用 2 張判斷的，不要開 6 張**
-- 先做最小的一步，有結果再決定要不要加碼
-- 若你的建議會增加支出，請說明**多花的錢買到什麼**
-
-> **這也是本輪的直接教訓**：你在 R21 建議「先生 6 張 start frame」。
-> 使用者判斷「**它沒有從我這邊收到指示，不知道我會在意 credit 成本**」，改為先生 2 張。
-> **結果 2 張就足以判定系統性失敗**——第 3 到第 6 張不會提供任何新資訊，那 0.48 credits 會白花。
+**能用 2 張判斷的不要開 6 張；先做最小的一步，有結果再決定要不要加碼。**
+若你的建議會增加支出，請說明多花的錢買到什麼。
 
 ---
 
@@ -39,217 +31,153 @@
 
 ---
 
-# 二、🔴 最重要：不要重寫整段。有一部分已經成功了
+# 二、🔴 這一輪的關鍵決定：放棄「低眼看碗」
 
-**服裝那一句是這個專案的重大突破，請原封不動保留。**
+## 你在 R22 給的碗修法成功了
 
-先前 Luna 的領口**連續 4 次全失敗**：
-`fastened through the chest` 無效 → 改成三重領口幾何宣告
-（`a high round neckline at the collarbone` ＋ `all upper buttons fastened` ＋
-`the upper chest fully covered by fabric`）**仍然無效**。
+v2 的 2 張，**四個連鎖失敗解決了三個**：
 
-**你在 R21 給的 `an opaque ivory mock-neck knit top` 這個寫法，A 張第一次就完全正確**——
-象牙色、領圈在頸根形成連續一圈、上胸被同一件不透明布料覆蓋。
+| v1 的失敗 | v2 |
+|---|---|
+| 碗被舉在胸前 | **✅ 平放在桌面上** |
+| 雙手捧碗入鏡 | **✅ 手掌在畫面外** |
+| 時間矛盾（正在端碗） | **✅ 已喝完的狀態** |
+| 視線看鏡頭 | ❌ **2/2 仍然失敗** |
 
-**你的判斷得到實測支持**：
-> 「`mock-neck knit top` 是**模型可直接召回的完整物件**，而 `upper chest fully covered` **只是要求結果**。」
+**服裝也 2/2 都正確**（v1 是 1/2）——`an opaque ivory mock-neck knit top` 這個寫法再次得到支持。
 
-**所以本輪請只改壞掉的部分，不要整段重寫。**
-（我這個專案發生過好幾次「改 A 順手把已經 work 的 B 一起換掉」，之後就分不清是誰的功勞。）
+## 但「視線離開鏡頭」這條軸線，全專案已經失敗 8 次
 
----
-
-# 三、送出的 prompt（R21 逐字，未改動）
-
-```
-Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible, with the broad rim of a white porcelain bowl spanning the bottom centre of the frame and both hands below the frame. Her chin is slightly lowered and her eyes are fixed on the clearly visible bowl rim, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders, its collar forming one continuous band around the base of her neck. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
-```
-
-參數：`soul_2` ＋ Yuna soul_id ＋ `2k` ＋ `9:16`，2 張，**0.24 credits**。
-
----
-
-# 四、實測結果：2 張逐項對你在 R21 給的 20 條硬 gate
-
-| gate | A | B |
+| 件 | 目標 | 結果 |
 |---|---|---|
-| 臉是 Yuna | ✅ | ✅ |
-| 只有一個人物主體 | ✅ | ✅ |
-| 頭／肩／領口／上半身可見 | ✅ | ✅ |
-| **象牙色 mock-neck，領圈在頸根一整圈** | **✅ 完全正確** | **❌ 變成「獨立頸環＋下方大圓領」，胸口外露** |
-| 淘汰低領／V 領／細肩帶 | ✅ | **❌** |
-| 衣服場合成立 | ✅ | ✅ |
-| **視線落在畫內碗緣** | **❌ 直視鏡頭** | **❌ 直視鏡頭** |
-| **碗緣夠大、在下方中央** | **❌ 整碗湯被舉在胸前** | **❌ 同** |
-| 嘴唇自然閉合 | ✅ | ✅ |
-| **畫面內可見手＝0** | **❌ 雙手捧碗** | **❌ 雙手捧碗＋不鏽鋼湯匙** |
-| 五官無結構瑕疵 | ✅ | ✅ |
-| 頭髮符合設定 | ✅ | ✅ |
-| 妝感自然 | ✅ | ✅ |
-| 正面關係成立 | ✅ | ✅ |
-| 曝光符合規劃 | ✅ | ✅ |
-| 色彩可調 | ✅ | ✅ |
-| 場景像餐廳 | ✅ | ✅ |
-| **背景無偽文字** | **❌ 背景招牌有亂碼韓文字** | ✅ |
-| 9:16 安全區 | ✅ | ✅ |
-| **無時間矛盾** | **❌ 正在端碗** | **❌ 同** |
+| LG-01 | 鏡頭一側的車流（畫面外） | ❌ 2/2 直視鏡頭 |
+| LG-05 | 掌心裡的雨滴（畫面內但太小、沒被畫出來） | ❌ 2/2 直視鏡頭 |
+| 鏡 3 v1 | 被端著的碗緣 | ❌ 2/2 直視鏡頭 |
+| 鏡 3 v2 | 平放桌上的小碗緣 | ❌ 2/2 直視鏡頭 |
 
-## 兩張的畫面實際長什麼樣（你看不到圖）
+**使用者的判斷**：
+> 「我覺得你根本就生成不出來確定的起始幀。這個前面已經走了兩輪了，根本就沒有用。
+> **難道一定要生成出原本的樣子，才能做出這個影片嗎？**」
 
-**A**：她坐在桌後，**雙手捧著一個很大的白瓷碗舉在胸前**，碗裡是滿滿一碗湯，
-有肉片、蔥花、蔬菜。她**直視鏡頭**，表情平靜。上衣是**正確的象牙色 mock-neck 針織**。
-背景有燈籠、木格窗、右側兩個食客。**背景牆上的招牌有亂碼韓文字。**
+**她是對的，而且我犯的錯是規則用錯層級**：
+我們的規則是「兩張同方向失敗＝系統性，停下來」。
+**我在每一輪內部套用了，卻沒有跨輪套用**——第三輪還想再試同一件事。
 
-**B**：構圖幾乎相同——**雙手捧著大碗舉在胸前，碗裡有湯和一支不鏽鋼湯匙**，直視鏡頭。
-但上衣變成**一個獨立的頸環（像 choker）＋下方一個大圓領**，鎖骨與上胸外露。
+## 所以：不再追求低眼，改用已經拿到的首幀
+
+**「低眼看碗」不是這一鏡的目的，只是 R18 選來表達「先判斷再下結論」的手段。**
+
+R18 寫的目的原文：
+> 「她的人設價值在**試完才下一句結論**；反應鏡頭讓 verdict 有人承擔，又避開最危險的進食動作。」
+
+**選定的首幀已經是一張 verdict 臉**——沒有笑、沒有比讚、神情克制、直視觀眾。
+**下結論本來就是對著人說的。**
+
+「先判斷」那一拍**留在剪接裡**：鏡 2（湯鍋）接到她一張不動的臉，那個停頓本身就是判斷。
+你在 R21 定的「旁白配動作、不配嘴型，verdict 在點頭前後進入」完全不受影響。
 
 ---
 
-# 五、我的診斷：四個 2/2 失敗其實是同一個根因
+# 三、選定的首幀（你看不到圖，以下是逐項描述）
 
-**視線看鏡頭、雙手捧碗、碗被畫成一整碗湯、時間矛盾——不是四個獨立問題。**
+`soul_2` ＋ Yuna soul_id 生成，1152×2048，**已通過你在 R21 給的 20 條硬 gate 中除視線外的全部**。
 
-> prompt 寫的是
-> `the broad rim of a white porcelain bowl spanning the bottom centre of the frame`
-> （碗緣橫跨畫面下方中央）。
-> **我判斷模型把它讀成「她正在端一碗湯給你看」**，而不是「桌上有個碗、只露出碗緣」。
-
-一旦模型決定她在端碗，後面三項是**必然的連鎖**：
-端碗需要手 → 手就進畫面 → 端碗給人看的人自然看鏡頭 → 於是變成「正要上菜」而非「已喝完」。
-
-**所以我認為要改的是碗那一句，不是四個地方。**
-
-## 附帶推測：`both hands below the frame` 可能無效
-
-這是在指定「**某個東西不在畫面裡**」——**形式上接近否定句**，
-而本專案已驗證 **D-05：否定句無效**（`no text`、`without X` 都會反向生成）。
-2/2 都出現雙手，與這個推測一致。
+- **人物**：Yuna 坐在火鍋桌後，**面向觀眾（觀眾坐在她正對面）**，**眼睛看著觀眾**，
+  神情克制、沒有笑、嘴唇自然閉合。**一張「正在下結論」的臉，不是甜笑或驚訝**
+- **服裝**：**象牙色 mock-neck 針織長袖上衣**，領圈在頸根形成連續一圈，
+  上胸完全被同一件不透明布料覆蓋。合身但不緊繃
+- **頭髮**：深棕近黑、自然不規則波浪、有空氣感，落在雙肩兩側
+- **手**：**雙前臂搭在桌沿，手掌與手指在畫面下緣之外，畫面內看不到任何手指**
+- **碗**：畫面下方中央偏左，**一只小白瓷碗平放在淺色石桌面上**，
+  碗內剩少量金褐色湯汁。**碗沒有被端起，也沒有人碰它**
+- **前景最下緣**：一口深色火鍋的邊緣，鍋內有湯，落在暗部
+- **背景**：木格窗、雕花木屏、**兩盞暖琥珀色紙燈籠**、深木牆板，
+  右側中景有**一位背對／側對的食客**在自己那桌，沒有看鏡頭
+- **光**：左上方燈籠為主光打在臉上，淺色石桌面回一層較中性的補光到下巴，
+  前景鍋緣落入深暗，燈籠是最亮處
+- **色調**：整體暖，但**膚色仍偏中性、沒有被推成橘黃**，白瓷碗與象牙上衣都還有層次
 
 ---
 
-# 六、問題
+# 四、原本的動畫設計（你在 R21 寫的，現在對不上首幀了）
 
-## Q1 碗那一句要怎麼改？
+```
+From the locked frontal close-up, she holds her lowered gaze on the white bowl rim for one quiet beat, then raises her gaze with a slight lift of her chin to meet the viewer directly across the table. After her eye contact settles, she gives one very small, controlled nod and returns to a composed still posture, her lips softly closed. Her face, mock-neck collar, shoulders, hair, bowl rim, table, background diners, and lighting maintain their original shapes and positions. The warm lantern key light and softer neutral-gold tabletop fill remain steady while the lower foreground stays in deep shadow. Quiet restaurant room tone.
+```
 
-**我的看法**：問題出在「碗」這個物件本身太容易被理解成「被人端著的東西」。
-可能的方向：① 改成明確寫在桌面上（`resting on the stone tabletop`）
-② 乾脆不寫碗，改用別的畫內視線目標 ③ 其他
+**問題**：它的第一段是「先在碗緣停一拍低眼、再抬眼」。
+**但首幀已經是抬眼看著觀眾的狀態**——要 kling 從這裡先低下去再抬起來，
+等於要它**先反向再正向**，是更難的動作，而且中間那個低眼狀態我們正好知道模型做不出來。
 
-但②有風險：**視線目標必須畫面內＋夠大＋有邊界與對比**（這是本專案已驗證的規律），
-碗緣本來就是為了滿足這個條件才存在的。
+---
 
-**請判**：怎麼改？並說明為什麼那樣寫模型就不會理解成「端著」。
+# 五、問題
 
-## Q2 「手不在畫面裡」該怎麼寫？
+## Q1 新的動畫設計對嗎？
 
-**我的看法**：`both hands below the frame` 若真的無效，
-那正面寫法可能是「**指定她的手在做什麼、而且那件事發生在畫面外的位置**」，
-例如「雙手放在腿上」——但那還是在描述畫面外的東西。
-**我想不出怎麼用正面敘述指定一個不可見的狀態。**
+**我的看法**：運動預算從「一主一次」降成**只有一個主運動＝一次極小的點頭**，
+其餘（呼吸、頭髮、背景食客、燈籠、碗、衣服、光）全部寫成穩定狀態。
 
-**請判**：怎麼寫？還是說根本不該要求手不入鏡，改成「手可見但在做一件安全的事」？
-（本專案已驗證**雙手捧碗是最安全的手勢**——但這一鏡的 brief 是「已喝完」，捧碗會製造時間矛盾。）
+理由：首幀已經在對的狀態，動畫只需要**讓它活起來並完成 verdict**，不需要建立任何新狀態。
+**這比原設計簡單，也比原設計安全。**
 
-## Q3 服裝的幾何補充要不要拿掉？
+**請判**：這樣對嗎？還是 5 秒只有一個點頭會太空、看起來像靜態圖套動態濾鏡？
+（**若你認為需要第二個運動，請說明它是什麼、以及為什麼值得冒那個風險**——
+你在 R20 定的運動預算規則是「一主一次，其餘穩定」。）
 
-A 成功、B 失敗，差別在 B 把 `its collar forming one continuous band around the base of her neck`
-**畫成一個獨立的頸環**，下面配大圓領。
-
-**我的看法**：具名衣物（`mock-neck knit top`）有效，
-但後面那句幾何補充**可以被拆離衣服本體，反而製造出第二個物件**。
-或許該只留具名衣物、拿掉幾何補充。
-
-**請判**：留、拿掉，還是改寫？
-
-## Q4 A 的背景亂碼韓文字（1/2，隨機）
-
-prompt 沒有要求任何招牌，但 A 的背景牆上長出了亂碼韓文。
-
-**我的看法**：1/2 屬隨機，不是系統性。但既然要改 prompt，順便處理成本很低。
-**不過我不能寫否定句**（D-05），所以不知道怎麼講。
-
-**請判**：要不要處理？怎麼處理？
-
-## Q5 修改後的完整 prompt
+## Q2 動畫段的完整 prompt
 
 **請給可直接送出的完整一段。**
-**請明確標出你改了哪幾句、哪幾句原封不動**，我要逐字比對。
 
-## Q6 改完要生幾張？
+需要涵蓋：鎖定機位、一次極小的點頭、所有靜物與背景的穩定狀態、
+維持首幀的暖光與暗部取捨、安靜餐廳 room tone。
 
-**請依第〇節的成本限制回答。**我的預設是**再生 2 張**——
-若 2 張都在同一個地方失敗，就是系統性，再改；若一過一不過，就是隨機，取過的那張。
+**不要寫**：低眼、抬眼、微笑、說話嘴型、推鏡。
+
+## Q3 驗收標準
+
+你在 R21 給的 12 條是為「低眼→抬眼→點頭」寫的。現在只有點頭。
+
+**請判**：哪幾條要刪、哪幾條要加？特別是——
+**「一次極小的點頭」要怎麼定義才驗收得出來？**（幅度、次數、是否回穩）
+
+## Q4 什麼情況判定這一鏡不能用 AI 生成
+
+**我的看法**：首幀已經是好的，所以風險只剩動畫階段。
+依你在 R21 定的動畫層停損：兩支 kling 都重複改臉／改衣服／產生肢體，或始終沒有連續 4 秒可用窗。
+
+**請判**：這個門檻在「只有一個點頭」的情況下要不要調整？
+以及——**若動畫失敗，能不能直接用這張靜態圖做 2.5D 微推**（就像鏡 4）？
+那樣成本是 0，而這一鏡本來就沒有大幅運動。
 
 ---
 
 # 回覆區（ChatGPT 填這裡）
 
-## Q1 碗那一句
+## Q1 新的動畫設計
 
-- **判定**：保留碗作為畫內視線目標，但把它從「橫跨畫面、可能被展示的完整物件」改成**平放在石桌上的小型空 tasting bowl，只讓近側碗緣進入極前景**。同一句改用上臂截斷位置定義構圖。
-- **理由（為什麼這樣寫不會被理解成「端著」）**：
-  1. **rests flat on the pale stone tabletop** 給碗唯一、明確的承重表面；它不再需要人物的手來解釋位置。
-  2. **small empty tasting bowl** 把它定義成已喝完後留下的小碗，不是盛滿配料、準備展示給觀眾的大碗。
-  3. **near rim…in the extreme foreground** 只要求一段夠大、有邊界與對比的碗緣作視線錨點，不再要求整個碗橫跨中央、搶成主體。
-  4. **the lower frame edge crosses both upper arms above the elbows** 用人體與裁切的正面幾何關係排除端碗姿勢；若肘部以下本來就在畫外，手不需要被另外描述。
-  5. 同步把下一句的視線目標改為「平放桌面的 tasting bowl 近側碗緣」，避免前句說平放、後句又把 bowl rim 重新讀成展示物。
-
-## Q2 手不入鏡怎麼寫
-
-- **判定**：不寫「手在畫面外」或「手放在腿上」，也不改成可見安全手勢；改由**裁切在雙上臂肘部以上**，使手在解剖與構圖上沒有進入畫面的條件。
+- **判定**：
 - **理由**：
-  1. 「both hands below the frame」只描述不可見結果，2/2 已證明會被更強的「端碗」場景語意覆蓋。
-  2. 「雙手放腿上」仍然把模型注意力叫到兩隻手，而且位置不可驗收，可能反向生成膝上手或把景別拉遠。
-  3. 「the lower frame edge crosses both upper arms above the elbows」描述的是**畫面內確實可見的裁切邊界**。手不需要被生成後再藏起來；構圖本身在手腕／手掌出現以前就結束。
-  4. 本輪不要改成桌面可見雙手。那會新增兩個高風險解剖物件、拉遠景別，並再次給模型抓碗的機會。
+- **若需要第二個運動，它是什麼、為什麼值得**：
 
-## Q3 服裝幾何補充
+## Q2 動畫段完整 prompt
 
-- **判定（留／拿掉／改寫）**：**拿掉幾何補充；具名衣物原封不動保留。**
-- **理由**：A 已直接證明「an opaque ivory mock-neck knit top」能召回完整、合規的衣物；B 則證明後接的「its collar forming one continuous band around the base of her neck」可能被模型拆成另一個獨立物件——頸環／choker。這不是需要再加一句把頸環黏回去，而是應停止提供可拆離的第二物件。新句只保留：**She wears an opaque ivory mock-neck knit top with relaxed shoulders.** 其中核心字串 **an opaque ivory mock-neck knit top** 一字不改。
+```
 
-## Q4 背景亂碼文字
+```
+- **每一句在做什麼**：
 
-- **判定**：處理，但只做一處低成本的正面背景實體補充；不加入 no text／without signs。
-- **處理方式**：把背景句補成 **plain continuous dark-wood wall panels**，讓招牌原本可能佔據的牆面被一種具體、連續的材質填滿。保留 carved wooden screen、amber lanterns 與兩名背景食客，不順手重設整個場景。1/2 目前仍視為隨機瑕疵；若下一批 2 張又都出現文字，才升格為系統性問題。
+## Q3 驗收標準
 
-## Q5 修改後的完整 prompt
+- **要刪的**：
+- **要加的**：
+- **「一次極小的點頭」的可驗收定義**：
 
-~~~text
-Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible; the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground. Her chin is slightly lowered and her eyes are fixed on the near rim of the tasting bowl resting on the tabletop, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
-~~~
+## Q4 停損與備案
 
-### 改動對照
-
-| 原句 | 新句 | 為什麼 |
-|---|---|---|
-| Her complete head, both shoulders, neckline, and upper torso are visible, with the broad rim of a white porcelain bowl spanning the bottom centre of the frame and both hands below the frame. | Her complete head, both shoulders, neckline, and upper torso are visible; the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground. | 把「被端起展示的大碗」改成有桌面承重的小型空碗；以可見裁切幾何取代不可見的 hands 指令。 |
-| Her chin is slightly lowered and her eyes are fixed on the clearly visible bowl rim, lips softly closed in a quiet moment of judgment. | Her chin is slightly lowered and her eyes are fixed on the near rim of the tasting bowl resting on the tabletop, lips softly closed in a quiet moment of judgment. | 再次綁定桌面與近側碗緣，防止視線句把碗重新升格成胸前展示物。 |
-| She wears an opaque ivory mock-neck knit top with relaxed shoulders, its collar forming one continuous band around the base of her neck. | She wears an opaque ivory mock-neck knit top with relaxed shoulders. | 完整保留已成功的具名衣物，刪除可能被拆成獨立 choker 的幾何補充。 |
-| A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, amber lanterns, and two indistinct diners in the mid-ground facing their own table. | A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners in the mid-ground facing their own table. | 用連續深木牆面正向占據招牌生成位置，降低隨機偽文字風險。 |
-
-### 原封不動的句子
-
-- **Yuna sits at a hotpot table immediately after tasting the first bowl of broth.**
-- **The viewer is seated directly across the table from her.**
-- **Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin.**
-- 服裝成功核心字串 **an opaque ivory mock-neck knit top** 原封不動；只刪掉它後方已出現反效果的幾何子句。
-- **An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw.**
-- **Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights.**
-- **Clear natural skin texture and fine hair detail.**
-
-## Q6 生幾張
-
-- **判定**：**再生 2 張，共 0.24 credits。**
-- **理由**：
-  1. 這輪只改四個已定位的句子，不需要用 6–12 張換取更漂亮的抽樣；2 張已足以判斷「桌面小空碗＋上臂裁切」是否消除端碗連鎖。
-  2. 若至少 1 張同時通過「碗平放、零可見手、低眼看碗、已喝完狀態、mock-neck 正確」，立即停止生圖，採用通過者，不為選美追加成本。
-  3. 若 2/2 又把碗舉到胸前／生成雙手／直視鏡頭，判定新碗句仍有系統性端碗語意；下一步不是再抽圖，而是**完全移除碗與餐具**，改用桌面上大面積暖色光斑或另一個非可握持的實體視線目標，再做 2 張。
-  4. 若端碗連鎖已解，但服裝 1 過 1 不過，沿用通過的 mock-neck 圖，不改服裝 prompt；這正是隨機服從差異。
-  5. 若兩張只剩背景 1 張亂碼、另 1 張乾淨，取乾淨者，不再為背景多花 credits。
+- **動畫層停損門檻**：
+- **失敗後可否改 2.5D 微推**：
 
 ## 補充（我漏掉的問題）
 
-- **「empty」是本輪必要的時間狀態，不是要拿來證明沒有食物**：驗收重點仍是碗平放與不被端起。若模型在平放小碗裡留下少量湯痕，但其餘核心 gate 全過，可接受；不要因碗不是像素級全空而誤殺。
-- **不要同時改 animation prompt**：本輪只重做 start frame。等靜態圖通過後，沿用 R21 已定的「低眼停一拍 → 抬眼 → 一次小點頭」動畫設計；否則會把靜態修正與動畫修正混成同一輪。
-- **本批的成功定義是『有一張可直接進 Kling』，不是 2/2 都要過。** 在最少支出目標下，一張通過即停，另一張只作隨機性參考。
+- 

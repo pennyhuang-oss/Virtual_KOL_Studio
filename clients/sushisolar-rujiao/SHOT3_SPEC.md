@@ -85,7 +85,7 @@ Yuna sits at a hotpot table immediately after tasting the first bowl of broth. T
 - **次運動＝眼神到位後，一次極小、受控的點頭**，隨即回穩
 - 呼吸、頭髮、背景食客、燈籠、碗、衣服**全部列為穩定狀態**
 
-<!-- PROMPT_ID: shot3_anim | FP: sha1:4072b53941c9 | REVIEW: R21 逐字指定 -->
+<!-- PROMPT_ID: shot3_anim_v1_RETIRED | FP: - | REVIEW: R21（設計已變更：放棄低眼，改為只做點頭。不得再送） -->
 ```
 From the locked frontal close-up, she holds her lowered gaze on the white bowl rim for one quiet beat, then raises her gaze with a slight lift of her chin to meet the viewer directly across the table. After her eye contact settles, she gives one very small, controlled nod and returns to a composed still posture, her lips softly closed. Her face, mock-neck collar, shoulders, hair, bowl rim, table, background diners, and lighting maintain their original shapes and positions. The warm lantern key light and softer neutral-gold tabletop fill remain steady while the lower foreground stays in deep shadow. Quiet restaurant room tone.
 ```
@@ -408,3 +408,56 @@ R22 寫：
 **不生第 3、4 張。要送覆核（R23）。**
 
 **但要明確告訴覆核：碗那一句是成功的，不要拆掉——這正是上一輪「保護已成功部分」的同一件事。**
+
+---
+
+# 十一、🔴 設計變更：放棄「低眼看碗」，改用已生成的首幀（2026-09-01 Penny 判斷）
+
+## 起因
+
+> 「我覺得你根本就生成不出來確定的起始幀。這個前面已經走了兩輪了，根本就沒有用。
+> **難道一定要生成出原本的樣子，才能做出這個影片嗎？**」
+
+## 她是對的，而且我犯的錯是規則用錯層級
+
+**「視線離開鏡頭」這條軸線全專案已經失敗 8 次：**
+
+| 件 | 視線目標 | 結果 |
+|---|---|---|
+| LG-01 | 鏡頭一側的車流（**畫面外**） | ❌ 2/2 |
+| LG-05 | 掌心裡的雨滴（**畫面內但太小、沒被畫出來**） | ❌ 2/2 |
+| 鏡 3 v1 | 被端著的碗緣 | ❌ 2/2 |
+| 鏡 3 v2 | 平放桌上的小碗緣 | ❌ 2/2 |
+
+**我們的規則是「兩張同方向失敗＝系統性，停下來」。
+我在每一輪內部套用了，卻沒有跨輪套用**——第三輪還想再試同一件事。
+
+## 決定：低眼是手段，不是目的
+
+R18 給這一鏡的目的原文：
+> 「她的人設價值在**試完才下一句結論**；反應鏡頭讓 verdict 有人承擔，又避開最危險的進食動作。」
+
+**「低眼看碗」只是表達「先判斷再下結論」的一種手段。**
+而選定的首幀**已經是一張 verdict 臉**——沒有笑、沒有比讚、神情克制、直視觀眾。
+**下結論本來就是對著人說的。**
+
+**「先判斷」那一拍留在剪接裡**：鏡 2（湯鍋）接到她一張不動的臉，那個停頓本身就是判斷。
+
+## 選定：D（`reference/start_frames/yuna_shot3_selected.png`）
+
+D 比 C 乾淨：**長袖、mock-neck 更明確、背景單純、右側一位食客提供公共場景紋理**。
+C 是短袖、背景較雜。
+
+**D 通過 R21 那 20 條硬 gate 中除視線外的全部。**
+
+## 連帶的設計簡化
+
+| 原設計 | 改成 |
+|---|---|
+| 低眼停一拍 → 抬眼 → 點頭 | **神情穩住 → 一次極小的點頭** |
+| 運動預算：一主（視線轉移）一次（點頭） | **只有一個主運動＝點頭** |
+
+**新設計比原設計更安全**：原本要 kling 從「已抬眼」的首幀先低下去再抬起來，
+是**先反向再正向**的難動作，而中間那個低眼狀態我們正好知道模型做不出來。
+
+**動畫 prompt 因此要重寫 → 送 R23 覆核。**
