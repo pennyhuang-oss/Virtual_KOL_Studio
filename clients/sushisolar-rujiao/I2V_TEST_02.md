@@ -51,6 +51,7 @@ medias        [{ role: "start_image", value: <media_id> }]
 
 ## 五、Prompt（R20 逐字指定，114 字）
 
+<!-- PROMPT_ID: shot2_chickenpot_i2v | FP: sha1:9be95409ba09 | REVIEW: R20 逐字指定 -->
 ```
 A locked-off close-up of the whole corn-fed chicken resting in thick golden-white broth inside the dark earthenware pot. Gentle, low-amplitude heat ripples travel across the narrow visible bands of broth between the chicken and the inner pot rim, remaining contained below the thick rim. The broad warm-brown steam layer in the upper half remains translucent and low-contrast, drifting upward as one slow soft veil while the dark background stays visible through it. The chicken, pale fish maw pieces, pot rim, and background maintain their original shapes and positions. Warm light remains concentrated on the chicken from the upper left while the right side of the pot stays in deep shadow. Quiet restaurant room tone.
 ```

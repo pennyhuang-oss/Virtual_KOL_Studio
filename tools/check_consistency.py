@@ -228,6 +228,14 @@ if os.path.exists(PLAN):
     for name, _, _, note in drift:
         err(f'{name} 覆核後又被改字（登記指紋對不上），不得送生成')
 
+# 影片線的覆核指紋（2026-09-01 補建）。
+# 圖片線的閘門 2026-08-29 就有了，影片線一直沒有——前兩支影片都是靠
+# 使用者開口問「這是審過的嗎」、我再手動比對才確認的。
+import video_approval
+vdrift = [r for r in video_approval.scan(video_approval.SPECS) if r[1] == '改過字']
+for pid, _, _, review, path, _ in vdrift:
+    err(f'影片 prompt {pid} 覆核後又被改字（登記指紋對不上），不得送生成')
+
 # 兩條覆核線的檔名分家必須有索引，否則下一個人會覆蓋掉別人的 LEDGER
 if not os.path.exists('review/INDEX.md'):
     err("review/INDEX.md 不存在——兩條覆核工作線共用 review/，沒有索引會互相覆蓋")

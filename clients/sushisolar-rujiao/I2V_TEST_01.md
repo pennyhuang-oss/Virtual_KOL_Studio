@@ -46,6 +46,7 @@ multi_shots   不設定
 
 ## 四、Prompt（R19 逐字指定）
 
+<!-- PROMPT_ID: shot1_pour_i2v | FP: sha1:0e49c52ef39a | REVIEW: R19 逐字指定 -->
 ```
 A locked-off close-up of thick golden chicken broth pouring in one continuous, slow stream from the tilted metal ladle into the white porcelain bowl. The suspended droplets alongside the stream fall naturally into the bowl, and small ripples spread across the shallow broth where the stream lands. The visible fingertips maintain a firm, steady support at the bowl rim while the pour continues. The existing faint wisp of steam on the right curls subtly upward. Warm light stays concentrated on the broth, bowl, and pot against the deep dark background. Natural sound of thick broth pouring into porcelain with quiet restaurant room tone.
 ```
