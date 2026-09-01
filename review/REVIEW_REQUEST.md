@@ -1,8 +1,32 @@
-# 覆核請求 R21：如嬌鏡 3（唯一要生成人物的一鏡）
+# 覆核請求 R22：鏡 3 第一批 2/2 失敗，四個失敗是同一個根因
 
 > ⚠️ **請只讀這一個檔案**，不要瀏覽目錄、不要讀 repo 其他背景（會耗掉使用者方案內數小時的用量）。
 > 答案填在最後的「回覆區」。**不要改問題本文與「我的看法」**——那是原始紀錄。
 > 填完 commit 回 `claude/virtual-kol-restaurant-campaign-pxu9m4` 分支。
+
+---
+
+# 〇、成本限制（從本輪起每輪都附，先前從未告知，是我的疏漏）
+
+**這個專案要控制成本，以「最少支出完成」為目標，不是以結果最佳化為目標。**
+
+使用者的原話：
+> 「我在生成這些素材的時候**需要控制成本，會以盡量減少支出成本就把它完成為目的**。」
+
+| 單價 | |
+|---|---|
+| 圖（`soul_2`，2k） | **0.12 credits／張** |
+| 影片（`kling3_0`，9:16，sound on） | **2 credits／秒**（5 秒 = 10） |
+| | **圖與影片差 83 倍** |
+
+**請把這一點當成設計流程時的硬條件：**
+- **能用 2 張判斷的，不要開 6 張**
+- 先做最小的一步，有結果再決定要不要加碼
+- 若你的建議會增加支出，請說明**多花的錢買到什麼**
+
+> **這也是本輪的直接教訓**：你在 R21 建議「先生 6 張 start frame」。
+> 使用者判斷「**它沒有從我這邊收到指示，不知道我會在意 credit 成本**」，改為先生 2 張。
+> **結果 2 張就足以判定系統性失敗**——第 3 到第 6 張不會提供任何新資訊，那 0.48 credits 會白花。
 
 ---
 
@@ -15,268 +39,192 @@
 
 ---
 
-# 二、進度：四鏡完成兩鏡
+# 二、🔴 最重要：不要重寫整段。有一部分已經成功了
 
-| 鏡 | 秒 | 內容 | 狀態 |
-|---|---|---|---|
-| 1 | 0–3 | 湯勺倒下金褐濃湯進白瓷碗 | ✅ **完成**（i2v，10 credits，使用者核准） |
-| 2 | 3–7 | 整隻玉米雞在深褐陶鍋、蒸氣 | ✅ **完成**（i2v，10 credits，5 秒全程無硬 gate） |
-| **3** | **7–12** | **Yuna 的 verdict** | **本輪** |
-| 4 | 12–17.5 | 櫻花樹空景＋三店 CTA | 走 2.5D 後製（你上輪裁定），不用 Kling |
+**服裝那一句是這個專案的重大突破，請原封不動保留。**
 
-**鏡 3 是整支片唯一要生成人物的一鏡。**
-
-## 鏡 3 的 brief（你在 R18 寫的，原文）
-
-> Yuna **已喝完**第一口，碗在桌面下緣或畫面外；她先低眼判斷一拍，再抬眼、很小幅度點一次頭。
-> **不要生成入口、吞嚥、筷子或說話嘴型。**暖室內光照臉，店內金色表面回填，下方鍋區可被曝光犧牲。
-> 她的人設價值在「試完才下一句結論」；反應鏡頭讓 verdict 有人承擔，又避開最危險的進食動作。
-
----
-
-# 三、Yuna Kim 的設定
-
-| | |
-|---|---|
-| soul_id | `235794a5-2eff-45fb-91b4-3232910afefa`（Higgsfield Soul V2，**鎖臉不鎖衣服**） |
-| 年齡／身高 | 21 歲／168 cm |
-| 外型 | 高挑、皮膚白細緻、大雙眼皮、**深棕到黑棕的自然波浪捲髮**（帶空氣感，不是刻意捲的） |
-| 妝 | 韓系自然精緻——不重，但每個地方都對 |
-| 人設 quirk | **「用過一個月才推薦」「講一句話下結論」**——這一鏡就是在演這個 |
-| 背景 | 媽媽在皮膚科診所，她從小懂皮膚，說「有用」比營養標示有說服力 |
-
----
-
-# 四、🔴 我新發現的一個衝突（這是本輪最重要的資訊）
-
-**Yuna 自己帳號的既有服裝語言，跟這一鏡需要的完全相反。**
-
-她已核准的四件成品，服裝寫法是：
-
-| 件 | 服裝 |
-|---|---|
-| YG-01 | 奶油白**合身**細針織短袖（**貼身，鎖骨與肩線清楚**） |
-| YG-02 | 白色**細肩帶貼身**針織背心 |
-| YG-04 | 白色**細肩帶貼身**背心（**鎖骨、肩線、胸型自然可見**） |
-| YG-05 | 黑色**貼身**短袖針織 |
-
-**但這一鏡是客戶的品牌素材**，你在 R18 定的 wardrobe acceptance 是
-「**適合鍋物聚餐、上胸覆蓋、不搶金黃湯色**」。
-
-## 這可能解釋了領口 4/4 失敗
-
-先前 Luna 的 LG-05 連續四次寫不出高領口：
-`fastened through the chest` 無效 → 改成領口幾何三重宣告
+先前 Luna 的領口**連續 4 次全失敗**：
+`fastened through the chest` 無效 → 改成三重領口幾何宣告
 （`a high round neckline at the collarbone` ＋ `all upper buttons fastened` ＋
-`the upper chest fully covered by fabric`）**仍然無效**，模型自己給低領蕾絲。
+`the upper chest fully covered by fabric`）**仍然無效**。
 
-**我原本以為那純粹是模型不服從指令。現在我懷疑還有第二層原因：
-我們要求的服裝 register，跟這兩個人設在整批素材裡的主流服裝相反。**
+**你在 R21 給的 `an opaque ivory mock-neck knit top` 這個寫法，A 張第一次就完全正確**——
+象牙色、領圈在頸根形成連續一圈、上胸被同一件不透明布料覆蓋。
 
-**但這是推測，我沒有證據。** soul_id 官方說法是只鎖臉。請你判斷這個假設站不站得住，
-以及它會不會改變寫法。
+**你的判斷得到實測支持**：
+> 「`mock-neck knit top` 是**模型可直接召回的完整物件**，而 `upper chest fully covered` **只是要求結果**。」
 
----
-
-# 五、🔴 我量測出來的第二個問題：鏡 1 與鏡 2 的色調本來就不一致
-
-R18 風險 #3 說「AI 鏡頭與實拍若木色、光向、桌面高度不同，觀眾會立刻看出合成」，
-要「**進 Kling 前先以實拍定下色溫**」。
-
-**我現在有兩支成片可以量了，結果是它們彼此就不一致：**
-
-| | R 平均 | B 平均 | **R/B（暖度）** | 平均亮度 | 暗部（<40）佔比 |
-|---|---|---|---|---|---|
-| 鏡 1 倒湯 | 72.4 | 52.0 | **1.39** | 64.3 | **57%** |
-| 鏡 2 雞鍋 | 95.8 | 46.3 | **2.07** | 74.3 | **33%** |
-
-**鏡 2 明顯比鏡 1 暖得多、亮得多、暗部少得多。**
-兩張都是客戶自己拍的，但不同時期、不同攝影師。
-
-**所以「以實拍定色溫」這句話現在沒有唯一解**——對鏡 1 就不對鏡 2。
+**所以本輪請只改壞掉的部分，不要整段重寫。**
+（我這個專案發生過好幾次「改 A 順手把已經 work 的 B 一起換掉」，之後就分不清是誰的功勞。）
 
 ---
 
-# 六、已知會打到這一鏡的三個實測失敗
+# 三、送出的 prompt（R21 逐字，未改動）
 
-| # | 問題 | 對這一鏡的影響 |
+```
+Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible, with the broad rim of a white porcelain bowl spanning the bottom centre of the frame and both hands below the frame. Her chin is slightly lowered and her eyes are fixed on the clearly visible bowl rim, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders, its collar forming one continuous band around the base of her neck. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
+```
+
+參數：`soul_2` ＋ Yuna soul_id ＋ `2k` ＋ `9:16`，2 張，**0.24 credits**。
+
+---
+
+# 四、實測結果：2 張逐項對你在 R21 給的 20 條硬 gate
+
+| gate | A | B |
 |---|---|---|
-| 1 | **服裝／領口控制失效（4/4）** | **最嚴重。**見第四節 |
-| 2 | **景別拉不遠（3/3）**，沒有任何寫法能推遠 | **這一鏡可能反而是優點**——brief 要「碗在畫面下緣或畫外」＋臉要清楚，本來就是近景 |
-| 3 | **相機方位術語可能無效**：`three-quarter front-left` → 2/2 給正面；但 `Following her from behind` → 2/2 成功 | 這一鏡**正面其實是對的**（她在下 verdict、要面向觀眾）。是不是乾脆不寫方位？ |
+| 臉是 Yuna | ✅ | ✅ |
+| 只有一個人物主體 | ✅ | ✅ |
+| 頭／肩／領口／上半身可見 | ✅ | ✅ |
+| **象牙色 mock-neck，領圈在頸根一整圈** | **✅ 完全正確** | **❌ 變成「獨立頸環＋下方大圓領」，胸口外露** |
+| 淘汰低領／V 領／細肩帶 | ✅ | **❌** |
+| 衣服場合成立 | ✅ | ✅ |
+| **視線落在畫內碗緣** | **❌ 直視鏡頭** | **❌ 直視鏡頭** |
+| **碗緣夠大、在下方中央** | **❌ 整碗湯被舉在胸前** | **❌ 同** |
+| 嘴唇自然閉合 | ✅ | ✅ |
+| **畫面內可見手＝0** | **❌ 雙手捧碗** | **❌ 雙手捧碗＋不鏽鋼湯匙** |
+| 五官無結構瑕疵 | ✅ | ✅ |
+| 頭髮符合設定 | ✅ | ✅ |
+| 妝感自然 | ✅ | ✅ |
+| 正面關係成立 | ✅ | ✅ |
+| 曝光符合規劃 | ✅ | ✅ |
+| 色彩可調 | ✅ | ✅ |
+| 場景像餐廳 | ✅ | ✅ |
+| **背景無偽文字** | **❌ 背景招牌有亂碼韓文字** | ✅ |
+| 9:16 安全區 | ✅ | ✅ |
+| **無時間矛盾** | **❌ 正在端碗** | **❌ 同** |
 
-**其他已驗證規律**：否定句無效；表情要綁一個實體動作；
-視線目標必須畫面內＋夠大＋**有邊界與對比**；一張靜態圖只能承載一個瞬間。
+## 兩張的畫面實際長什麼樣（你看不到圖）
+
+**A**：她坐在桌後，**雙手捧著一個很大的白瓷碗舉在胸前**，碗裡是滿滿一碗湯，
+有肉片、蔥花、蔬菜。她**直視鏡頭**，表情平靜。上衣是**正確的象牙色 mock-neck 針織**。
+背景有燈籠、木格窗、右側兩個食客。**背景牆上的招牌有亂碼韓文字。**
+
+**B**：構圖幾乎相同——**雙手捧著大碗舉在胸前，碗裡有湯和一支不鏽鋼湯匙**，直視鏡頭。
+但上衣變成**一個獨立的頸環（像 choker）＋下方一個大圓領**，鎖骨與上胸外露。
 
 ---
 
-# 七、你在 R18 定的服裝流程（本輪要照做）
+# 五、我的診斷：四個 2/2 失敗其實是同一個根因
 
-> 1. 先定**可視化 wardrobe acceptance**：**驗收看實際像素，不看 prompt 有沒有三重宣告**
-> 2. **每個 AI 鏡頭先批量生 8–12 張 start frame，再人工挑。**12 張只要 1.44 credits，
->    一支 5 秒影片是 10 credits——**這是合理的商業 QA，不是浪費**
-> 3. 8–12 張仍沒有合格服裝 → **不要進影片生成**，先做局部服裝修圖
-> 4. 動畫只做小幅眼神、呼吸、點頭，**不做大幅轉身或拉扯衣領**；檢查首幀、中幀、末幀
+**視線看鏡頭、雙手捧碗、碗被畫成一整碗湯、時間矛盾——不是四個獨立問題。**
 
-**生成參數**：圖 `soul_2` + soul_id + `2k` + `9:16`（0.12 credits／張）；
-影片 `kling3_0` + `start_image` + 5 秒 + `sound:on`（10 credits）。
-**圖的可用參數只有 quality／soul_id／aspect_ratio／prompt／1 張參考圖，
-沒有 negative_prompt、沒有 seed。**
+> prompt 寫的是
+> `the broad rim of a white porcelain bowl spanning the bottom centre of the frame`
+> （碗緣橫跨畫面下方中央）。
+> **我判斷模型把它讀成「她正在端一碗湯給你看」**，而不是「桌上有個碗、只露出碗緣」。
+
+一旦模型決定她在端碗，後面三項是**必然的連鎖**：
+端碗需要手 → 手就進畫面 → 端碗給人看的人自然看鏡頭 → 於是變成「正要上菜」而非「已喝完」。
+
+**所以我認為要改的是碗那一句，不是四個地方。**
+
+## 附帶推測：`both hands below the frame` 可能無效
+
+這是在指定「**某個東西不在畫面裡**」——**形式上接近否定句**，
+而本專案已驗證 **D-05：否定句無效**（`no text`、`without X` 都會反向生成）。
+2/2 都出現雙手，與這個推測一致。
 
 ---
 
-# 八、問題
+# 六、問題
 
-## Q1 服裝：那個 register 衝突要怎麼處理？
+## Q1 碗那一句要怎麼改？
 
-**我的看法**：如果第四節的假設成立，那再怎麼寫 prompt 都是在跟人設的主流拉扯。
-可能的方向：① 照舊寫、純靠多生人工挑 ② 改用「具名的實體衣物」而不是描述領口幾何
-（呼應已驗證的 D-06「表情要綁實體動作」——**衣服會不會也要綁一個具名的實體？**
-例如「高領毛衣」而不是「上胸被覆蓋的上衣」）③ 其他
+**我的看法**：問題出在「碗」這個物件本身太容易被理解成「被人端著的東西」。
+可能的方向：① 改成明確寫在桌面上（`resting on the stone tabletop`）
+② 乾脆不寫碗，改用別的畫內視線目標 ③ 其他
 
-**請判**：怎麼寫？並說明理由。
+但②有風險：**視線目標必須畫面內＋夠大＋有邊界與對比**（這是本專案已驗證的規律），
+碗緣本來就是為了滿足這個條件才存在的。
 
-## Q2 色調：鏡 3 該對鏡 1 還是鏡 2？
+**請判**：怎麼改？並說明為什麼那樣寫模型就不會理解成「端著」。
 
-**我的看法**：兩鏡不一致是既成事實，後製調色本來就要統一。
-所以我懷疑正解是「**鏡 3 不對任何一個特定值，而是生成一個容易被調色拉到中間的版本**」——
-但我不知道那在 prompt 上要怎麼寫，也不確定這個想法對不對。
+## Q2 「手不在畫面裡」該怎麼寫？
 
-**請判**：鏡 3 的目標色調怎麼定？
+**我的看法**：`both hands below the frame` 若真的無效，
+那正面寫法可能是「**指定她的手在做什麼、而且那件事發生在畫面外的位置**」，
+例如「雙手放在腿上」——但那還是在描述畫面外的東西。
+**我想不出怎麼用正面敘述指定一個不可見的狀態。**
 
-## Q3 start frame 的完整 prompt
+**請判**：怎麼寫？還是說根本不該要求手不入鏡，改成「手可見但在做一件安全的事」？
+（本專案已驗證**雙手捧碗是最安全的手勢**——但這一鏡的 brief 是「已喝完」，捧碗會製造時間矛盾。）
 
-需要涵蓋：她已喝完（碗在畫面下緣或畫外）、先低眼、暖室內光、金色表面回填、
-下方鍋區曝光被犧牲、服裝、髮型（深棕波浪捲）、妝。
+## Q3 服裝的幾何補充要不要拿掉？
 
-**請寫出可直接送出的完整一段**，並說明每句在做什麼。
+A 成功、B 失敗，差別在 B 把 `its collar forming one continuous band around the base of her neck`
+**畫成一個獨立的頸環**，下面配大圓領。
 
-## Q4 我人工挑 start frame 的驗收清單
+**我的看法**：具名衣物（`mock-neck knit top`）有效，
+但後面那句幾何補充**可以被拆離衣服本體，反而製造出第二個物件**。
+或許該只留具名衣物、拿掉幾何補充。
 
-**這一條我特別需要。**R18 說「驗收看實際像素」，但**我挑的時候需要一張清單**，
-否則我會挑到「好看但不合規」的那張——這正是我這個專案裡反覆犯的錯。
+**請判**：留、拿掉，還是改寫？
 
-**請判**：挑選時要逐項確認什麼？請給可勾選的條列。
+## Q4 A 的背景亂碼韓文字（1/2，隨機）
 
-## Q5 動畫段（kling3_0）的 prompt
+prompt 沒有要求任何招牌，但 A 的背景牆上長出了亂碼韓文。
 
-brief 是「先低眼判斷一拍，再抬眼、很小幅度點一次頭」。
-依你上輪定的**運動預算**（一個主運動、一個次運動，其餘寫成穩定狀態）——
-這一鏡的主／次運動各是什麼？
+**我的看法**：1/2 屬隨機，不是系統性。但既然要改 prompt，順便處理成本很低。
+**不過我不能寫否定句**（D-05），所以不知道怎麼講。
 
-**請寫出可直接送出的完整一段。**
+**請判**：要不要處理？怎麼處理？
 
-## Q6 生幾張、什麼情況要停
+## Q5 修改後的完整 prompt
 
-**請判**：start frame 生幾張？（R18 說 8–12）
-以及——**什麼情況該判定「這一鏡不能用 AI 生成」而要改方案**？
+**請給可直接送出的完整一段。**
+**請明確標出你改了哪幾句、哪幾句原封不動**，我要逐字比對。
+
+## Q6 改完要生幾張？
+
+**請依第〇節的成本限制回答。**我的預設是**再生 2 張**——
+若 2 張都在同一個地方失敗，就是系統性，再改；若一過一不過，就是隨機，取過的那張。
 
 ---
 
 # 回覆區（ChatGPT 填這裡）
 
-## Q1 服裝 register 衝突
+## Q1 碗那一句
 
-- **判定**：改用「單一具名衣物＋一個辨識幾何」，不要再堆疊三句同義的覆蓋宣告；本輪寫成 **an opaque ivory mock-neck knit top, its collar forming one continuous band around the base of her neck**。但真正的 gate 仍是 12 張 start frame 的實際像素，不是 prompt 是否寫對。
-- **第四節的假設站不站得住**：**可列為待驗假設，不能列為已成立根因。**
+- **判定**：
+- **理由（為什麼這樣寫不會被理解成「端著」）**：
+
+## Q2 手不入鏡怎麼寫
+
+- **判定**：
 - **理由**：
-  1. soul_id 官方說法是鎖臉；在沒有消融前，不能因 Yuna 已核准的四張恰好都是貼身／細肩帶，就推論 embedding 一定把服裝 register 一起鎖入。那四張也可能只是 prompt、選圖偏好或既有企劃分布造成的選擇偏差。
-  2. 先前 4/4 失敗發生在 Luna，不足以證明 Yuna 的既有服裝會造成同一失敗。兩件事可形成合理懷疑，但不是同一角色上的對照實驗。
-  3. 「表情綁實體動作」的證據不能直接外推成「衣服也必須綁實體」。不過具名服裝類別仍比抽象結果句更可操作：mock-neck knit top 是模型可直接召回的完整物件，而「upper chest fully covered」只是要求結果。
-  4. 本輪不再使用 high round neckline＋all upper buttons fastened＋upper chest fully covered 的同義堆疊。若具名 mock-neck 在 12 張中仍系統性變成細肩帶／低領，才把「soul 或模型先驗偏向既有 register」升格為有資料支持的假設，並轉入參考圖／靜態修圖流程。
 
-## Q2 色調目標
+## Q3 服裝幾何補充
 
-- **判定**：鏡 3 不直接對鏡 1 或鏡 2，也不把 R/B 1.39 與 2.07 做數值平均；生成一個**暖而中性、膚色自然、亮暗有餘量的 bridge master**，再把四鏡統一後製。相鄰剪接上先以鏡 2 的暖方向為視覺關係，但不能把 Yuna 的皮膚推成橘黃。
+- **判定（留／拿掉／改寫）**：
 - **理由**：
-  1. R/B 均值同時受畫面內容影響：鏡 1 有大量黑背景與白碗，鏡 2 有整隻金黃雞與大面積暖蒸氣。它能證明兩鏡觀感不同，卻不是可直接拿來指定色溫的尺度。
-  2. 人臉是四鏡中對偏色最敏感的物件。鏡 3 應保留自然膚色與白／象牙色衣物的可分辨性，作為調色錨點；若生成時就追到鏡 2 的 2.07 暖度，後製很難救回皮膚。
-  3. Prompt 只指定物理光路：暖琥珀色燈籠光作主光，淺色桌面回一層較中性的柔和補光，下方鍋區落入深暗。這會得到可調的雙色溫與曝光犧牲，而不是一層橘色濾鏡。
-  4. 後製順序應是：各鏡先校正白平衡／曝光，再套同一個暖金 look，最後按相鄰剪接微調。不要先把鏡 3 烤死成任一現有鏡的數值。
 
-## Q3 start frame prompt
+## Q4 背景亂碼文字
 
-~~~text
-Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible, with the broad rim of a white porcelain bowl spanning the bottom centre of the frame and both hands below the frame. Her chin is slightly lowered and her eyes are fixed on the clearly visible bowl rim, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders, its collar forming one continuous band around the base of her neck. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
-~~~
+- **判定**：
+- **處理方式**：
 
-- **每一句在做什麼**：
-  1. **第一句**只建立已完成的前情「喝完第一碗」，不生成入口、吞嚥或咀嚼。
-  2. **第二句**用可想像的場景關係建立正面機位，不依賴已知可能無效的攝影術語，也不命令她先看鏡頭。
-  3. **第三句**列出必須可見的頭、雙肩、領口與上半身，讓人工能真的驗收衣服；白瓷碗邊是夠大、有邊界與對比的畫內視線目標。雙手在框下，避免新增手／筷子／湯勺風險。
-  4. **第四句**鎖定 start frame 的單一瞬間：低眼判斷、嘴唇閉合。動畫之後才負責抬眼與點頭。
-  5. **第五句**恢復 Yuna 的深棕自然波浪髮與韓系精緻淡妝，但不把髮型寫成規整人工捲度。
-  6. **第六句**用一件具名 mock-neck 上衣承擔服裝 register，再只補一個「連續領圈」幾何；不重複堆疊上胸覆蓋同義句。
-  7. **第七句**給真實餐廳的辨識物與少量背景食客，避免公共餐廳變空景；食客只作環境紋理，不承擔敘事。
-  8. **第八、九句**指定暖琥珀主光＋較中性桌面回填的兩個色溫，並讓下方鍋區犧牲在暗部、燈籠高光成為亮端；保留後製空間。
-  9. **最後一句**要求清晰皮膚與髮絲，不加入 grainy／muddy／degraded 類低畫質詞。
+## Q5 修改後的完整 prompt
 
-## Q4 人工挑選的驗收清單
+```
 
-### A. 先判硬 gate；任何一項不過即淘汰
+```
 
-- [ ] **臉是 Yuna**：與 soul_id 既有臉的眼型、鼻、嘴、臉型和年齡感一致，不只是「漂亮的陌生韓系女生」。
-- [ ] **人物只有一個主體**：沒有第二張臉、鏡面人臉、肩後多出人物肢體或與背景食客融合。
-- [ ] **完整頭部、雙肩、領口與上半身都可見**；不能用近裁、頭髮、碗或暗部遮掉領口驗收區。
-- [ ] **衣服確實是象牙色 mock-neck knit top**：領圈在頸根形成連續一圈，上胸由同一件不透明布料覆蓋。
-- [ ] **淘汰任何低領、V 領、細肩帶、蕾絲領、開襟露胸線、透明布、胸口挖空或假領片**；即使臉最好看也不能保留。
-- [ ] **衣服場合成立**：乾淨、適合鍋物聚餐，不像睡衣、內衣、泳裝、禮服或厚重戶外高領。
-- [ ] **視線明確落在畫內白瓷碗邊**，不是看鏡頭、看畫外、閉眼或兩眼方向不一致。
-- [ ] **碗邊夠大且位置明確**：位於下方中央，形狀是單一白瓷碗；不得複製、融化、長出字或變成盤子。
-- [ ] **嘴唇自然閉合**，沒有喝湯、吞嚥、咀嚼、吸管、食物入口或說話嘴型。
-- [ ] **畫面內可見手的數量為 0**；沒有指尖、筷子、湯勺或不明肢體從邊緣伸入。
-- [ ] **五官與牙齒無結構瑕疵**：沒有大小眼失控、瞳孔錯位、嘴角熔化、露出不自然牙齒或皮膚塑膠化。
-- [ ] **頭髮符合設定**：深棕至近黑棕、自然不規則波浪、有空氣感；不是金髮、筆直黑長髮、規整電棒捲或濕髮。
-- [ ] **妝感自然精緻**：沒有過重煙燻、誇張假睫毛、亮片或把膚色推成灰白／橘黃。
-- [ ] **正面關係成立**：觀眾在桌子正對面，雙肩沒有變成正側面或背面；同時低眼視線仍清楚。
-- [ ] **曝光符合規劃**：臉、眼睛與領口可判讀；下方鍋區可暗，但不能反過來讓臉陷入黑影。
-- [ ] **色彩可調**：膚色仍有中性資訊，象牙衣物與白瓷碗未整片黃爆或高光剪死；不能一開始就套重橘濾鏡。
-- [ ] **場景像餐廳而非棚拍**：至少有雕花木屏／燈籠等具體線索，背景有少量合理食客；不能是空無一人的豪華攝影棚。
-- [ ] **背景不搶主體**：食客沒有看鏡頭，沒有清楚陌生人臉、亂碼菜單、假 logo、可讀偽文字或額外主角。
-- [ ] **9:16 安全區成立**：頭頂、髮尾、雙肩與碗邊沒有貼死裁切線，後續小幅點頭仍有活動空間。
-- [ ] **沒有時間矛盾**：畫面看起來是「已喝完、正在判斷」，不是「還沒喝」「正準備喝」或「正在端碗」。
+### 改動對照
 
-### B. 通過硬 gate 後才比較優先級
+| 原句 | 新句 | 為什麼 |
+|---|---|---|
+| | | |
 
-- [ ] **第一優先：臉部一致性＋服裝合規**，兩者高於單純好看。
-- [ ] **第二優先：低眼視線與碗邊關係一眼看懂**，可直接支撐後續抬眼。
-- [ ] **第三優先：膚色、暖光與暗部有後製餘量**，能接鏡 2 而不必重度校色。
-- [ ] **第四優先：表情克制、有「正在下結論」的停頓**，不選甜笑、驚訝張嘴或業配式比讚。
-- [ ] 若兩張同分，選**頭髮、領口、背景邊緣最穩定**的一張，不選妝最重或光最夢幻的一張。
-- [ ] 對最後候選保留原圖、prompt、生成批次與淘汰理由；不能只存「最好看」的一張而失去抽樣證據。
+### 原封不動的句子
 
-## Q5 動畫段 prompt
+- 
 
-- **主運動**：**視線轉移**——先在碗邊停一拍，再把視線抬到正對面的觀眾；允許極小幅度抬下巴，使眼球運動自然。
-- **次運動**：**眼神到位後只做一次極小、受控的點頭**，隨即回到穩定姿勢。
-- 呼吸、頭髮、背景人物、燈籠、碗與衣服都不另列為運動；它們屬穩定狀態，避免超出一主一次的運動預算。
+## Q6 生幾張
 
-~~~text
-From the locked frontal close-up, she holds her lowered gaze on the white bowl rim for one quiet beat, then raises her gaze with a slight lift of her chin to meet the viewer directly across the table. After her eye contact settles, she gives one very small, controlled nod and returns to a composed still posture, her lips softly closed. Her face, mock-neck collar, shoulders, hair, bowl rim, table, background diners, and lighting maintain their original shapes and positions. The warm lantern key light and softer neutral-gold tabletop fill remain steady while the lower foreground stays in deep shadow. Quiet restaurant room tone.
-~~~
-
-- 第一段先完成「低眼停拍 → 抬眼」的主運動；不是一開始就直視，也不加入微笑或說話。
-- 第二段把點頭放在 eye contact 已成立之後，避免模型同時抬眼、點頭而做成大幅仰頭；明寫一次、很小、完成後穩定。
-- 第三、四段鎖住領口、頭髮、碗、背景與曝光，特別防衣服在點頭時變領型、背景食客被放大或燈籠閃爍。
-- 聲音只給安靜 room tone。Yuna 的「이거 진짜 좋아——這個真的好」一律後製畫外音，不讓 Kling 生成嘴型或語音。
-
-## Q6 張數與停損
-
-- **生幾張**：**12 張 start frame，分兩個檢查節點，不直接連續送 Kling。**
-  1. 先用完全相同的 prompt 生成 6 張，依 Q4 硬 gate 記錄通過率與失敗類型。
-  2. 若已有至少 2 張完整通過，不必改 prompt；再生同版 6 張，從 12 張中選一張最佳主片、一張備援。
-  3. 若前 6 張全部只敗在同一個服裝 register，不把後 6 張浪費在同一抽樣。保留這 6 張作證據，改走「已核准服裝參考圖」的靜態單變因測試或直接靜態修圖；後 6 張不混回原 prompt 的成功率。
-  4. 若前 6 張分散在隨機小瑕疵、但有接近合格者，可維持原 prompt 補到 12 張。總 start-frame 預算上限仍是 12 張／1.44 credits。
-- **什麼情況改方案**：
-  - **服裝層停損**：6 張全部生成細肩帶／低領／蕾絲，且臉與構圖大致正確，判定「prompt-only 服裝控制不通」，立即改用服裝參考圖 A/B 或對最佳靜態圖做局部服裝修圖；不再寫第五組領口同義句。
-  - **整體 start-frame 停損**：做到 12 張仍沒有任何一張同時通過「Yuna 臉、mock-neck、低眼看碗、可見領口、零可見手」五個核心 gate，判定這一鏡不能靠純 soul_2 抽卡完成，停止新增圖片。
-  - **動畫層停損**：只有完整通過 Q4 的 start frame 才能進 Kling。第一支若只是末段隨機小瑕疵且有連續可用片段，可裁切或做一次確認；若從第一秒就改臉、改領口、長手或大幅仰頭，固定同一 start frame、把動作縮成「只抬眼」再確認一次。
-  - 若兩次 Kling 都重複改臉／改衣服／產生肢體，或始終沒有連續 4 秒可用窗，判定**人物 i2v 路線不通**，不再花第三支影片的 10 credits。
-  - **最終替代方案**：使用通過或已修好的 Yuna 靜態圖做 2.5D 微推，配後製 verdict 畫外音；若連合格靜態圖都沒有，取消人物鏡，改用鏡 2 的產品尾段＋正式 Yuna verdict 字卡／聲音銜接鏡 4。不能用低領、錯臉或錯視線版本硬湊客戶成片。
+- **判定**：
+- **理由**：
 
 ## 補充（我漏掉的問題）
 
-- **鏡 3 不是用來再次證明產品**：鏡 1、2 已完成湯與整雞的證據。鏡 3 的碗只需作視線錨點，不能讓 AI 再畫金黃湯、花膠、筷子或蒸氣，否則把已經由實拍建立的可信度重新交給生成模型。
-- **背景食客在動畫中也可能被放大**：start frame 可有兩個低細節食客作公共場景紋理，但 Kling prompt 已把他們列入穩定狀態。若動畫讓食客轉頭看鏡頭、靠近 Yuna 或長出清晰人臉，即硬 FAIL。
-- **旁白時序要配動作，不配嘴型**：中文／韓文 verdict 應在她抬眼完成、點頭開始前後進入；畫面中的嘴全程閉合。若旁白先說完、她才抬眼，會失去「先判斷再下結論」的節奏。
-- **統一調色要在四鏡粗剪後做**：不要只看三張單獨截圖。把鏡 1→2→3→4 排在同一時間線，以膚色、白瓷碗、象牙衣物和櫻花粉作四個檢查點，再定共同暖金 look。
+- 
