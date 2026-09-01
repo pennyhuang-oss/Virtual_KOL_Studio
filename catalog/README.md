@@ -173,3 +173,48 @@ node catalog/tools/scan_inventory.mjs --print   # 只看摘要
 - 明講不准動 §2.1（程式產生）與既有小節
 - 指定本輪要答的問題編號與新議題的 ID 前綴
 - 明講不要給版面美感意見（§0.4）
+
+---
+
+## Railway 部署（2026-09-01 實際接上時記的）
+
+| 項目 | 值 |
+|---|---|
+| Railway 專案 | `truthful-vibrancy`（`d8312837-74c9-40b0-99fc-08cbf0b3faf5`） |
+| 服務 | `kol-catalog`（`f3fc6bd9-7b60-42cb-a4f9-254fab2ed24f`） |
+| 網址 | `kol-catalog-production.up.railway.app` |
+| Source | `pennyhuang-oss/Virtual_KOL_Studio`，分支 `claude/kol-dashboard-catalog-gqw9jz` |
+| Root Directory | `/catalog` |
+| Watch Paths | `catalog/**` |
+| 存取控制 | 🛑 **無**（使用者裁決完全公開）。只有 `X-Robots-Tag: noindex` 與 `robots.txt` |
+
+### 🛑 四個實際踩到的坑
+
+1. **免費方案只能兩個專案。** 想開第三個會回
+   `Free plan resource provision limit exceeded`。
+   → **改成在既有專案裡加服務**，不是開新專案。
+
+2. 🛑 **`create-deployment` 的 `branch` 參數不會生效。**
+   帶了 `branch: claude/…` 建出來的服務，第一次部署照樣抓 `main`——
+   而 `main` 上沒有 `catalog/`，所以 Root Directory 指向一個不存在的目錄，**部署直接 FAILED**。
+   → **要另外呼叫 `connect-service-source` 指定分支**，那一支才真的會改來源。
+   → 驗證方式：`list-deployments` 看 `meta.branch` 與 `meta.commitHash`，**不要看服務設定**。
+
+3. **`update-service` 的設定只在「下一次」部署生效。**
+   建服務時就會觸發第一次部署，所以那一次吃不到 Root Directory。**先建、再設、再重新部署。**
+
+4. **建置很慢，因為要 clone 整個 repo。**
+   這個 repo 的 `.git` 是 **2.8 GB**、工作目錄 2.3 GB。
+   ⚠ 這正是 `showgame-kol/railway/README.md` 早就記過的代價——
+   把 Railway 指向 KOL repo，換到的是「commit 就上線」，付出的是整包下載。
+
+### 診斷順序（沿用 showgame 那邊的教訓）
+
+1. 🛑 **先看 log，不要猜埠號。** `get-logs` 帶 `types: ["build","deploy"]`，
+   找程式自己印的那行 `listening on ____`。程式是 `process.env.PORT || 3000`，
+   Railway 會注入 `PORT=8080`。**不要自己加 `PORT` 變數。**
+2. **`curl` 連續拿到一樣的結果不算證據**——那跟「這招本身壞掉」長得一模一樣。
+   換來源：`list-deployments` 看狀態與 `meta.branch`。
+   ⚠ 2026-09-01 我在這裡誤判過一次：以為卡了 14 分鐘，實際上背景等待根本沒等到，
+   才過幾分鐘。**要看時間就去讀 `createdAt` 跟現在時間相減，不要憑感覺。**
+3. `curl` 一律帶 cache-busting 參數。
