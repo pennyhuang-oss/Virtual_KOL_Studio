@@ -1,0 +1,392 @@
+{
+ "_status": "GENERATED — 6 位可選，wanyin-jiang 仍需處理",
+ "wave": "redo-7",
+ "model": "seedream_v4_5",
+ "aspect_ratio": "3:4",
+ "candidates_per_persona": 2,
+ "credits": 14,
+ "_prompt_changes": [
+  "移除微笑：改成『放鬆閉唇、不笑』，避免拉出法令紋",
+  "新增視線收斂：兩眼一起對準鏡頭、瞳孔在虹膜中位置一致、兩眼反光點位置一致",
+  "新增年輕感的正面描述（不是否定句）：臉頰平滑飽滿、法令紋區無紋、眼周與嘴周皮膚緊實"
+ ],
+ "personas": {
+  "emma-kao": {
+   "age": 27,
+   "ethnicity_en": "Taiwanese",
+   "why_redo": "臉型 ref_15 → ref_12：脫離原參考圖本人",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 27-year-old Taiwanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 27-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer dark brown hair is a straight shoulder-length cut with the ends turned softly under in a clean broadcast blow-dry, swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_12",
+     "file": "review/donor_cards/ref_12__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "1f9e5306d09c857ac38f6dfd7256f16868f14df4438253fb3cdf02ddbe131fd3",
+     "media_id": "4c1ff1e7-645a-49ad-897b-868cd608cc1f"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_02",
+     "file": "review/donor_cards/ref_02__EYES_AND_BROWS.jpg",
+     "sha256": "70f7dae9b0bab3aee57cdc57a86c9ef934fc7353cdf8e783f36e898b6ef1376a",
+     "media_id": "fb12e72d-e165-4fd3-b541-47d2d1af8790"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_07",
+     "file": "review/donor_cards/ref_07__NOSE.jpg",
+     "sha256": "36521bd3b0d9c55bf724d1c4224361592b6bf9337d32046fc2f55b0d61b2fcb1",
+     "media_id": "7643c3b4-e26c-47b9-a821-decc9b3bf57c"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_06",
+     "file": "review/donor_cards/ref_06__MOUTH.jpg",
+     "sha256": "416f96927b05691a00adcc922ef8aed8d50c1df3697cf4439b1a1e02ffab31c6",
+     "media_id": "6286fb0b-3c04-4a7e-9994-bb63de5f1201"
+    }
+   ]
+  },
+  "rin-ayase": {
+   "age": 25,
+   "ethnicity_en": "Japanese",
+   "why_redo": "臉型 ref_02 → ref_13：脫離 cheryl-soh",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 25-year-old Japanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 25-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer long hair is a deep wine-brown that reads almost black except where the light catches a red cast in it, blow-dried into soft waves falling to mid-chest and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_13",
+     "file": "review/donor_cards/ref_13__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "87ae895fe4642e60c30f8c8b7b6719b7b09e59f8a1e4c82f378ff5dfaae81c8f",
+     "media_id": "594fc0c5-4503-4bc4-bf76-3858c88baf23"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_05",
+     "file": "review/donor_cards/ref_05__EYES_AND_BROWS.jpg",
+     "sha256": "bad9ccc44b08409d1114e03ea91346587b34eda2708ee3f8c1f526166d0d9e94",
+     "media_id": "5397d886-2846-49fc-84a5-586a93918f54"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_10",
+     "file": "review/donor_cards/ref_10__NOSE.jpg",
+     "sha256": "8c6dba4df906330be136fa7cee0731ae12ce06849991839064244ce8a425b5cf",
+     "media_id": "eb142f24-1026-49ba-b08d-e16604558082"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_08",
+     "file": "review/donor_cards/ref_08__MOUTH.jpg",
+     "sha256": "ae3fbfd50355809cf21a969c4fc3fe80bcc9ec1d41d0a7209cac3d7d4dfdf307",
+     "media_id": "92e36dcb-72bd-42fb-a614-2243c0ca4ce0"
+    }
+   ]
+  },
+  "kanon-komori": {
+   "age": 20,
+   "ethnicity_en": "Japanese",
+   "why_redo": "臉型 ref_15 → ref_14：脫離原參考圖本人",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 20-year-old Japanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 20-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer waist-length hair is a pink-lilac gradient, dark at the roots melting into soft pink-violet through the lengths, worn loose and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_14",
+     "file": "review/donor_cards/ref_14__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "86babaa262efc642d59650923734351b9bf3a92512b1b7560692812becba720d",
+     "media_id": "825c269c-7538-407d-8c51-d695d4d45fa7"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_09",
+     "file": "review/donor_cards/ref_09__EYES_AND_BROWS.jpg",
+     "sha256": "94baeea243a5731e698620186c06097429d125662ed84d1e1bbf872afd324182",
+     "media_id": "25514d28-8df2-495b-aac2-64b3a7b63182"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_01",
+     "file": "review/donor_cards/ref_01__NOSE.jpg",
+     "sha256": "21c4afcf720f3da9706cdccda964dee065af4c09e7b1693554dbb770ad5d3e84",
+     "media_id": "76ad7b65-0f5d-4fe0-a08b-bd13efd3f3ae"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_10",
+     "file": "review/donor_cards/ref_10__MOUTH.jpg",
+     "sha256": "3aacebc467038e4d84aba8ab58ee05222b6e86edc8201ba7fb9d7111d5f1c722",
+     "media_id": "991928a7-1e71-4a86-ac7c-d8286e75d2ad"
+    }
+   ]
+  },
+  "yerin-han": {
+   "age": 26,
+   "ethnicity_en": "Korean",
+   "why_redo": "臉型 ref_10 → ref_06：脫離 tammy-chou",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 26-year-old Korean woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 26-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer long ash-brown hair falls to mid-chest with lighter gold money-piece strands framing the sides, neatly swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_06",
+     "file": "review/donor_cards/ref_06__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "13ca71208e3883c52a537c19dd6159f00e8a433cbc6f8576d6373e2931cb7d5b",
+     "media_id": "916572e7-454d-4805-9808-311005eb4c6d"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_05",
+     "file": "review/donor_cards/ref_05__EYES_AND_BROWS.jpg",
+     "sha256": "bad9ccc44b08409d1114e03ea91346587b34eda2708ee3f8c1f526166d0d9e94",
+     "media_id": "5397d886-2846-49fc-84a5-586a93918f54"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_08",
+     "file": "review/donor_cards/ref_08__NOSE.jpg",
+     "sha256": "9a8d1d3acf4a5789d977e08de5e4d8e7f34207fd941d228d77f97e03f11ccb1e",
+     "media_id": "02a124cf-f4bb-449f-8896-77a935d20a79"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_13",
+     "file": "review/donor_cards/ref_13__MOUTH.jpg",
+     "sha256": "8ff2f6d819d2b871ef2ef413fffe99ac7acfea053fdb3a6cb14bebd9b9d9065b",
+     "media_id": "ef5424a5-3e31-4751-a9c1-250f70a59953"
+    }
+   ]
+  },
+  "wanyin-jiang": {
+   "age": 23,
+   "ethnicity_en": "Chinese",
+   "why_redo": "四格不變。退件原因是眼神不聚焦，靠 prompt 的視線收斂條款修",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 23-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer black hair is straight and waist-length, worn loose and swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_07",
+     "file": "review/donor_cards/ref_07__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "ee062907b709a851b9494a5c2e10f7b1303e53975d28712edf520a5170b151cc",
+     "media_id": "0b869d61-d3ff-480e-984f-4f47f3abc415"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_14",
+     "file": "review/donor_cards/ref_14__EYES_AND_BROWS.jpg",
+     "sha256": "804c47d8a0fe5466ac4560b45bad65688055d92ea8a7b1dd30e120179a8d4e30",
+     "media_id": "c5e112b5-f0f2-4325-ac27-d7966e3fbf50"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_03",
+     "file": "review/donor_cards/ref_03__NOSE.jpg",
+     "sha256": "8f79012fafc6c6b6986667ebb98f692d5f9aa63e80ac45c325295d389c80a5a4",
+     "media_id": "7deb2e54-2988-44b1-a4f0-d84072eb7eb1"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_06",
+     "file": "review/donor_cards/ref_06__MOUTH.jpg",
+     "sha256": "416f96927b05691a00adcc922ef8aed8d50c1df3697cf4439b1a1e02ffab31c6",
+     "media_id": "6286fb0b-3c04-4a7e-9994-bb63de5f1201"
+    }
+   ]
+  },
+  "wendy-yeo": {
+   "age": 28,
+   "ethnicity_en": "Singaporean Chinese",
+   "why_redo": "臉型 ref_11 → ref_03：脫離 zhiyi-shen",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 28-year-old Singaporean Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 28-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer hair is a cool silver-grey in a sharp jaw-length crop, tucked behind both ears and away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_03",
+     "file": "review/donor_cards/ref_03__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "4a1b05edc768d94a0e211d44d6d194d3778c6a5fbb9bd5bc36d3db1bc431fd07",
+     "media_id": "2c106713-f3d3-4f16-a937-98413dbd4d72"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_07",
+     "file": "review/donor_cards/ref_07__EYES_AND_BROWS.jpg",
+     "sha256": "3a8d364e694d76acf52d389212718cf744e3d8ad4dae06eb81babe6c0d2b67f0",
+     "media_id": "dada2fdf-6543-4977-abe7-c6bcc08a5abc"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_01",
+     "file": "review/donor_cards/ref_01__NOSE.jpg",
+     "sha256": "21c4afcf720f3da9706cdccda964dee065af4c09e7b1693554dbb770ad5d3e84",
+     "media_id": "76ad7b65-0f5d-4fe0-a08b-bd13efd3f3ae"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_14",
+     "file": "review/donor_cards/ref_14__MOUTH.jpg",
+     "sha256": "7e647177b141296fca5759d3c6d4cc96677fe1cd3fdd8c325aa01873360cf8ca",
+     "media_id": "1e3fec9c-f2e9-4678-a385-6c88931f8d61"
+    }
+   ]
+  },
+  "angeline-kwee": {
+   "age": 23,
+   "ethnicity_en": "Indonesian Chinese",
+   "why_redo": "臉型 ref_09 → ref_05：ref_05 是圓潤年輕的臉，直接對治老態",
+   "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 23-year-old Indonesian Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 23-year-old woman.\n\nShe faces forward at eye level. Her expression is calm and composed, with the lips relaxed and closed and no smile, so the cheeks stay smooth. Both eyes are aimed at the lens together: the pupils sit in the same position within each iris, and one small catchlight falls in the same place in both eyes.\n\nHer milk-tea grey-brown hair falls in long soft waves to mid-chest and is swept back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. Her cheeks are smooth and full, the nasolabial area is unlined, and the skin around the eyes and mouth is taut and youthful. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+   "image_references_in_order": [
+    {
+     "input_order": 1,
+     "slot": "FACE_SHAPE_AND_JAW",
+     "slot_zh": "臉型顎線",
+     "source_ref": "ref_05",
+     "file": "review/donor_cards/ref_05__FACE_SHAPE_AND_JAW.jpg",
+     "sha256": "bbf5b484573dc482024316ec12ce3734ce58492007235653bfc87a7878750239",
+     "media_id": "53e98a92-f5c6-4aaf-b9ee-e3886b937f99"
+    },
+    {
+     "input_order": 2,
+     "slot": "EYES_AND_BROWS",
+     "slot_zh": "眼與眉",
+     "source_ref": "ref_07",
+     "file": "review/donor_cards/ref_07__EYES_AND_BROWS.jpg",
+     "sha256": "3a8d364e694d76acf52d389212718cf744e3d8ad4dae06eb81babe6c0d2b67f0",
+     "media_id": "dada2fdf-6543-4977-abe7-c6bcc08a5abc"
+    },
+    {
+     "input_order": 3,
+     "slot": "NOSE",
+     "slot_zh": "鼻",
+     "source_ref": "ref_15",
+     "file": "review/donor_cards/ref_15__NOSE.jpg",
+     "sha256": "c1936ec19c817c3f96fefe99c3f056af83e7796e2dafe7777c539d25c9c53fb6",
+     "media_id": "45c629f2-0288-467c-a466-a2fb8b71ce4b"
+    },
+    {
+     "input_order": 4,
+     "slot": "MOUTH",
+     "slot_zh": "口",
+     "source_ref": "ref_03",
+     "file": "review/donor_cards/ref_03__MOUTH.jpg",
+     "sha256": "65211d001284f56832063fa9ede62cb4ba5ce0a5395531537e92a9f71b0ad420",
+     "media_id": "79f2700f-ef57-4e97-9bfe-a81666d6913a"
+    }
+   ]
+  }
+ },
+ "jobs": {
+  "emma-kao": {
+   "C": "e5e547c4-1edb-4ad3-86dd-de53dbcf4ef8",
+   "D": "268310e3-a113-41c7-80fc-ae713052528d"
+  },
+  "rin-ayase": {
+   "C": "71294d83-e381-4c84-a9aa-cdb2c7ea7577",
+   "D": "ed860ca1-35a7-4cf2-a600-f7f82f10fe4c"
+  },
+  "kanon-komori": {
+   "C": "35599b5d-b875-4fec-9760-5ed50ef1ea94",
+   "D": "3d2aefda-1ec4-4a6f-a9fc-d05717034bba"
+  },
+  "yerin-han": {
+   "C": "be9be8ee-4eb3-4fbe-bbbd-b738c8ac6279",
+   "D": "c5b7280e-bfa3-4dd7-a71f-3d2054aab8ea"
+  },
+  "wanyin-jiang": {
+   "C": "68df0f59-b8b7-4965-b89a-f7787a0f8ac7",
+   "D": "3cf670ac-a256-4e0c-b601-39b519769e4a"
+  },
+  "wendy-yeo": {
+   "C": "a8abc960-2b84-47b7-a64f-2c7c0eced1c2",
+   "D": "ed30e074-dfcb-4da5-bd28-ec2bd9209fb1"
+  },
+  "angeline-kwee": {
+   "C": "05353d60-5b30-4e8d-8aea-5a7df666116d",
+   "D": "03b5033b-3bbb-4cef-ac5f-696472d9ed62"
+  }
+ },
+ "credits_spent": 14,
+ "claude_technical_pass": {
+  "emma-kao": {
+   "C": "通過。已完全脫離原參考圖本人。年齡讀起來 26–28，比前一版更貼近 27。",
+   "D": "通過。同上；額前有一綹碎髮。"
+  },
+  "rin-ayase": {
+   "C": "通過。與 cheryl-soh 並排比對，輪廓與顎線明顯不同，撞臉解除。",
+   "D": "通過。嘴微張。"
+  },
+  "kanon-komori": {
+   "C": "通過。已脫離原參考圖本人；年齡讀起來 20–22，符合 20 的設定。",
+   "D": "通過。"
+  },
+  "yerin-han": {
+   "C": "通過。與 tammy-chou 並排比對，臉更短更圓，撞臉解除。",
+   "D": "通過。"
+  },
+  "wanyin-jiang": {
+   "C": "眼神修好了——兩眼確實收斂對鏡、反光點一致。但畫面上下緣有灰帶，且與 peggy-lee 撞臉（見下）。",
+   "D": "眼神同樣修好。嘴微張。同樣有撞臉問題。"
+  },
+  "wendy-yeo": {
+   "C": "通過，但頭微側、視線略偏，且年齡讀起來只有 20–22（設定 28）。",
+   "D": "通過，較正面乾淨；年齡同樣偏年輕。"
+  },
+  "angeline-kwee": {
+   "C": "法令紋與老態眼神已消除，這是退件的主因，已解決。但整張臉仍偏成熟，讀起來 25–27 而非 23；嘴微張。",
+   "D": "同上。兩張都比前一版年輕很多，但沒有完全到 23。"
+  }
+ },
+ "_collision_check": {
+  "rin-ayase vs cheryl-soh": "解除",
+  "yerin-han vs tammy-chou": "解除",
+  "wendy-yeo vs zhiyi-shen": "解除",
+  "emma-kao / kanon-komori vs 原參考圖本人": "解除（兩位都已換掉 ref_15 臉型）",
+  "wanyin-jiang vs peggy-lee": "**未解除**。兩人共用 ref_07 臉型，輪廓、顎線、下巴、眼型幾乎一致，只有髮色不同。這是我事前就標為風險的那一對。",
+  "其他四對共用臉型（ref_01 miu/jia、ref_04 somi/ruoruo、ref_08 zoey/sydney、ref_09 nanami/angel）": "並排看過，可區分，維持"
+ }
+}
