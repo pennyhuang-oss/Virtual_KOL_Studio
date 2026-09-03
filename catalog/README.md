@@ -121,10 +121,30 @@ node catalog/tools/render_packet_numbers.mjs --check   # 過期或被手改 → 
 **每次改覆核包之後、push 之前，跑一次 `--check`。**
 兩支檢查都做過對抗測試（故意弄壞 → 確認真的失敗 → 還原 → 確認通過）。
 
-**還沒做的**（等覆核通過才動手，見覆核包 §2.7）：
-`data/selection.json`（挑哪些圖）、`data/status_override.json`（誰真的可上線）、
-`tools/build_assets.mjs`（縮圖轉檔）、`tools/build_catalog.mjs`（產生頁面）、
-`public/`（站本體）、`server.js`＋`package.json`（Railway 進入點）。
+---
+
+## 站上有哪幾頁（2026-09-03 首頁改版後）
+
+| 網址 | 是什麼 | 由誰產生 |
+|---|---|---|
+| `/` | **首頁**：對外報價 PPT 的網頁版，13 段 | `build_site.mjs` ← `data/pitch.json` |
+| `/kols.html` | **型錄牆**：18 位人設，可篩選可排序 | `build_site.mjs` ← `data/catalog.json` |
+| `/pricing.html` | **報價**：方案三檔 ＋ 常見問題 | `build_site.mjs` ← `data/pitch.json` |
+| `/p/<id>.html` | 人設頁 ×18 | 同上 |
+| `/pick.html` | 素材挑選後台（**內部用，不在導覽列**） | `build_picker.mjs` |
+
+**導覽列只有「全部人設」與「報價」。**「案例」等真的有商業合作案例才加
+（使用者 2026-09-03 裁決）。
+
+🛑 **`build_site.mjs` 會先 `rmSync(public/)`**，所以跑完 `npm run site` 之後
+`pick.html` 會不見（它不進 git，本來就是本機工具）。要用就重跑 `build_picker.mjs`。
+
+🛑 **首頁與報價頁的文字一個字都不要在程式裡編**，全部在 `data/pitch.json`
+（那份 PPT 的數字與價格是業務承諾）。⚠ 案例那一段渲染的是 `why_public`
+不是 `why`——`why` 留 PPT 逐字原文存查，`why_public` 是使用者裁決過的模糊版。
+
+🛑 **首頁第 8 段要放哪幾位人設在 `data/copy.json` 的 `featured`**，
+程式不自己挑；少於 3 位或有人沒封面圖，`build_site.mjs` 直接 `exit 2`。
 
 ---
 
