@@ -51,15 +51,15 @@
   "prompt": "A candid full-length snapshot of <<<426b5347-51cc-496b-872c-991c0c26de48>>>, a 20-year-old Japanese woman in Tokyo, photographed from head to feet with her whole body inside the frame, standing on the outdoor walkway of a small Tokyo apartment building very late at night. She is facing the camera: her face, the front of her body and both shoulders are toward the lens and her feet point toward it. Her back is not to the camera and her head is not turned away.\n\nHer build: she is very small — narrow shoulders and a short frame — with a full rounded bust that reads clearly against how small the rest of her is. Visible collarbone, slim upper arms. Her waist is very narrow, and the contrast between that small waist and the fuller chest is the most noticeable thing about her shape. Her hips are about as wide as her shoulders and her legs are short and straight. She is only 153cm. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer waist-length pink-and-lilac gradient hair is damp and pushed back off her face into a low ponytail, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears an oversized washed-black zip hoodie over a plain white cotton camisole and cotton shorts, with rubber sandals.\n\nThe concrete walkway outside her flat: a metal railing, an air-conditioning unit, a bicycle chained up further along and a vending machine glowing at the far end.\n\nA single fluorescent tube on the walkway ceiling directly above her, an ordinary phone exposure, everything beyond the railing dropping into black.\n\nShe has just come outside and glanced at the camera, mouth closed, half awake.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, gentle sensor noise in the dark areas.",
   "job": "e8379c59-7e8d-4bbb-8373-042d95b82753",
   "file": "k5.jpg",
-  "verdict": "⚠️ 有缺陷",
-  "note": "全身正面成功，臉一致。**但兩眼虹膜顏色不同**——一眼偏綠褐、一眼深色。這在硬退件表屬於虹膜異常，建議重生這一張。",
+  "verdict": "OK（無缺陷 — 原判讀錯誤已撤回）",
+  "note": "全身正面成功，臉與 master 一致。**先前判定的『兩眼虹膜顏色不同』是誤判，已撤回**——見下方 _retracted_iris_claim。這張本來就可用。",
   "retry_v2": {
    "job": "1ceaf9d4-f83c-4eec-8ace-6a4032a7b923",
    "file": "k5_v2.jpg",
    "change": "prompt 逐字不動，只加一段明確指定虹膜顏色：「Both of her eyes are the same plain dark brown. The two irises match each other exactly in colour — NOT one green eye and one brown eye, NOT hazel, NOT amber, NOT blue, NOT grey…」",
-   "verdict": "FAIL — 虹膜仍然不一致（一眼黃綠、一眼深褐），與 v1 同一個模式",
-   "finding": "顏色指定＋顏色否定在這個案例上無效。本專案先前的結論是「顏色否定有效、結構否定無效」，這是該結論的一個例外，要記進規範。",
-   "revised_hypothesis": "不是措辭問題，是場景條件：正上方單一日光燈管的強點光源 + 全身景別下臉只有約 140px。推測強高光在其中一眼的虹膜上被算成了顏色。同一場景連續兩次出現同一缺陷支持這個推論。",
+   "verdict": "畫面可用（構圖比 v1 完整），但這次重生本身是不必要的 —— 起因是我的誤判",
+   "finding": "【已撤回】原記「顏色指定與顏色否定在此案例無效、是既有結論的例外」——前提不成立，因為根本沒有色差要修。既有結論『顏色否定有效、結構否定無效』**不受影響，維持原狀**。",
+   "revised_hypothesis": "【已撤回】原記「正上方日光燈管的強點光源造成虹膜色差」——沒有這個現象，此推論作廢。",
    "next_options": [
     "改光源（不要正上方點光；改成自動販賣機的側向光或黃昏，臉不再被頂光打）",
     "改景別讓臉更大（但第 5 張需要是全身）",
@@ -76,5 +76,20 @@
   "single_subject": "5 個場景本身即合理獨處（自己房間、開店前的店裡、深夜公寓外走廊）",
   "ip_safety": "Cosplay 服裝一律寫成她自己原創設計，不指涉任何既有作品角色",
   "outcome": "5 張臉全部與 master 一致。1 張有虹膜缺陷需重生；2 張服裝偏離指定；1 張轉身幅度超出指定。"
+ },
+ "_retracted_iris_claim": {
+  "date": "2026-09-03",
+  "what_i_claimed": "kanon #5 兩眼虹膜顏色不同（一眼黃綠、一眼深褐），屬硬退件",
+  "how_it_was_wrong": "我把約 13px 的虹膜用 LANCZOS 放大 4 倍後目視判讀，插值在小區域上造出了假色。",
+  "verification": {
+   "method": "以 mediapipe iris landmark 定位後，在原生解析度分暗部／中段／亮部量測 HSV，並另用 NEAREST（零插值）放大確認",
+   "k5_v2 眼0 中段": "RGB(83,58,58) H=0° S=0.30",
+   "k5_v2 眼1 中段": "RGB(65,48,50) H=352° S=0.26",
+   "k5   眼0 中段": "RGB(53,37,38) H=355° S=0.31",
+   "k5   眼1 中段": "RGB(50,41,40) H=8° S=0.20",
+   "conclusion": "四組全部落在深紅褐（H 348–360°、S 0.20–0.31），無綠、無琥珀，兩眼一致。"
+  },
+  "cost_of_the_error": "1 credit（一次不必要的重生），以及兩條被寫進 repo 的錯誤結論（已於本次撤回）",
+  "rule_added": "見 SEXY_SCENE_LIBRARY.md §QA-1"
  }
 }
