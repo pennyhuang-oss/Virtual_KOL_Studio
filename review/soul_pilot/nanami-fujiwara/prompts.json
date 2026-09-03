@@ -1,0 +1,76 @@
+{
+ "1": {
+  "pillar": "私下 / 自家房間",
+  "frame": "胸上",
+  "angle": "正面 0–10°",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<a01cef17-1401-4cfb-82de-f3703ee36e84>>>, a 23-year-old Japanese woman in Hakone, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: soft-shouldered and slight, with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long black hair is down and straight, still slightly marked where it was pinned up all day, pushed back so both eyebrows and her whole jawline are clearly visible.\n\nShe wears a soft indigo cotton yukata for sleeping in, the sash tied loosely one notch lower than it would be at work, the collar sitting a little open.\n\nShe sits on the tatami of her own room in the family wing after the inn has closed for the night. A low table with a cup of barley tea, a kerosene heater glowing orange in the corner, a folded futon against the wall.\n\nOne low paper-shaded lamp on the floor beside her, an ordinary phone exposure, the rest of the room dropping into shadow.\n\nShe has just sat down and looks at the lens, tired, lips closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "job": "dc905dfb-479c-47d0-93f8-ce25221902b7",
+  "file": "n1.jpg",
+  "note": "臉與 master 一致。服裝偏離：指定「棉浴衣、腰帶鬆一格、領口略開」，出來是深 V 交領、胸口露出較多。"
+ },
+ "2": {
+  "pillar": "旅館工作 / 和服",
+  "frame": "胸上",
+  "angle": "左 35–40°",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<a01cef17-1401-4cfb-82de-f3703ee36e84>>>, a 23-year-old Japanese woman in Hakone, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: soft-shouldered and slight, with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer black hair is pinned into a low neat chignon with a single lacquered hairpin, no strands loose, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears a working kimono in muted grey-green with a narrow deep-red obi tied tightly at the waist, the collar set precisely.\n\nShe stands in the wooden corridor of the family-run hot-spring inn before the guests come down. Behind her: a polished dark timber floor, shoji screens, a folded stack of clean towels on a low shelf and a pair of slippers set out.\n\nGrey morning light through the shoji at the end of the corridor, an ordinary phone exposure, the depth of the corridor much darker than she is.\n\nShe has paused between tasks and looks at the lens, a small controlled smile with her eyes curving.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, fine detail in the kimono weave, natural colour grading.",
+  "job": "1c57d1a4-c5ad-4280-ac67-12728aedc033",
+  "file": "n2.jpg",
+  "note": "臉與 master 一致，低髮髻、簪、旅館走廊都正確。服裝偏離：指定「有明確衣領、細紅腰帶的工作和服」，出來的領口與袖型不合和服規制。"
+ },
+ "3": {
+  "pillar": "晨間",
+  "frame": "腰上",
+  "angle": "右 30–35°",
+  "view": "自拍",
+  "new": false,
+  "prompt": "A waist-up front-facing selfie of <<<a01cef17-1401-4cfb-82de-f3703ee36e84>>>, a 23-year-old Japanese woman in Hakone, her body angled about thirty-five degrees to her right, her face turned back to the camera which is held slightly above her eye level.\n\nHer build: soft-shouldered and slight, with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer black hair is caught up in a loose half-knot with the rest falling down her back, strands at her temples, both eyebrows visible.\n\nShe wears a fitted oatmeal ribbed knit top and soft grey shorts.\n\nShe is in her room very early in the morning. Behind her: the futon not yet folded away, a window with the mountain fog outside, a hairbrush and a hair tie on the tatami.\n\nCold blue early daylight through the window, an ordinary phone exposure, the inside of the room still dim.\n\nShe looks into the lens half awake, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nFront camera quality — slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, NOT ultra-crisp or overly HD.",
+  "job": "8a89b882-22eb-4fd2-a21f-332d2551108e",
+  "file": "n3.jpg",
+  "note": "臉與 master 一致，自拍質感、山霧窗景正確。服裝偏離：指定「合身羅紋針織上衣＋短褲」，出來是露腰短版。"
+ },
+ "4": {
+  "pillar": "外出 / 東京",
+  "frame": "全身",
+  "angle": "—（不指定姿勢）",
+  "view": "他拍",
+  "new": true,
+  "prompt": "A candid full-length snapshot of <<<a01cef17-1401-4cfb-82de-f3703ee36e84>>>, a 23-year-old Japanese woman, photographed from head to feet with her whole body inside the frame, on a quiet Tokyo backstreet early on her day off. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: soft-shouldered and slight, with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her hips are about as wide as her shoulders and her legs are straight. She is 162cm and slight. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long black hair is down with a tortoiseshell claw clip holding one side back, both eyebrows and her jawline visible.\n\nShe wears an unbuttoned camel wool coat over a fitted black knit and straight indigo jeans, with white trainers and a canvas tote.\n\nThe backstreet: shuttered shopfronts, a vending machine, potted plants set out along the wall, cables overhead.\n\nFlat early-morning overcast light between the buildings, an ordinary phone exposure, the alley behind her noticeably darker.\n\nShe is mid-step and pulling the tote strap back up onto her shoulder with one hand, her weight on her back foot, head turned to look down the street rather than at the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, very slight motion blur at her trailing hand.",
+  "job": "ea17e4f3-56d4-425c-9122-33ae9d9af1c0",
+  "file": "n4.jpg",
+  "note": "**§3-E 新寫法首次驗證：成功。** 她在巷弄裡走動中、外套敞開、一手拉托特包背帶、視線看向街道而不是鏡頭——是真正的抓拍，與先前三位的僵硬全身照完全不同。可直接發布。"
+ },
+ "5": {
+  "pillar": "浴室 / 溫泉",
+  "frame": "全身",
+  "angle": "—（不指定姿勢）",
+  "view": "他拍",
+  "new": true,
+  "prompt": "A candid full-length snapshot of <<<a01cef17-1401-4cfb-82de-f3703ee36e84>>>, a 23-year-old Japanese woman in Hakone, photographed from head to feet with her whole body inside the frame, in the wooden passage that leads out to the inn's open-air bath. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: soft-shouldered and slight, with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her hips are about as wide as her shoulders and her legs are straight. She is 162cm and slight. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer black hair is twisted up and clipped high off her neck to keep it out of the water, her forehead, both eyebrows and her whole jawline exposed.\n\nShe wears a pale grey inn yukata with a woven sash, fully closed and properly wrapped, with a small folded towel over one forearm.\n\nThe passage: dark wooden boards, a stone basin, steam drifting in from the bath beyond, a row of wooden geta lined up by the step.\n\nA single warm lantern on the passage wall and cold blue evening light from the open end, an ordinary phone exposure, the far end of the passage bright and the near end dark.\n\nShe is standing on one leg sliding her foot into a wooden geta, one hand braced against the door frame to keep her balance, looking down at what she is doing.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, steam softening the far end of the frame.",
+  "job": "0e4db988-5331-4221-b3fe-259d72cd1ca3",
+  "file": "n5.jpg",
+  "note": "**§3-E 新寫法第二次驗證：成功。** 單腳站立套木屐、一手扶門框保持平衡，有明確重心與動作。服裝偏離：指定「完整包覆的浴衣」，出來下襬偏短、露腿較多。"
+ },
+ "_meta": {
+  "persona": "nanami-fujiwara",
+  "date": "2026-09-03",
+  "credits": 5,
+  "element": "a01cef17-1401-4cfb-82de-f3703ee36e84 (nanami-face-only-v1，純臉緊裁切，0 credits，hash 已核對)",
+  "purpose": "同時是 SEXY_SCENE_LIBRARY §3-E（全身照姿勢僵硬）的零額外成本驗證",
+  "outcome": "5/5 臉與 master 一致。#4 #5 用新寫法，兩張都是有動作的抓拍，僵硬問題解除。"
+ },
+ "_rule_3E_validation": {
+  "rule": "SEXY_SCENE_LIBRARY.md §3-E —— 朝向只寫鏡頭位置，不寫身體姿勢；全身照必配具體動作",
+  "method": "#4 #5 用新寫法，#1–#3 維持原寫法。與前三位（wanyin／kanon／cheryl）的全身照對照。",
+  "before": "wanyin #4 #5、kanon #4 #5 #6、cheryl #4 #5 共 7 張，全部站直、雙腳併攏、正對鏡頭，如證件照",
+  "after": "nanami #4 走動中、拉背帶、視線離開鏡頭；#5 單腳站立套木屐、扶門框",
+  "verdict": "成立。成本 0（這兩張本來就要生）。",
+  "next": "其餘 15 位一律採用新寫法。前三位那 7 張是否回頭重生，待使用者決定（7 credits）。"
+ },
+ "_coverage_drift_update": {
+  "note": "服裝覆蓋度偏離持續，本批 4 例（#1 #2 #3 #5）。累計 16 張裡 8 張，方向仍然單向——只往更露、更短，無反例。"
+ }
+}
