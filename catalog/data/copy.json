@@ -318,6 +318,13 @@
     "xiaoxiao-tan",
     "leon-lim"
   ],
+  "featured_note": "首頁第 8 段「精選預覽」要放哪幾位。🛑 這一格是使用者的選擇，程式不自己挑（覆核包 §12.2 的 R5 規定）。目前填的是 `feature_order` 的前四位當預設值，**等使用者指名之後直接改這個陣列**——改完跑 `npm run build:local` 就會換。",
+  "featured": [
+    "iris-chen",
+    "camille-dupont",
+    "yuna-kim",
+    "rainie-hsu"
+  ],
   "hide_archetype": [
     "iris-chen",
     "luna-tanaka",

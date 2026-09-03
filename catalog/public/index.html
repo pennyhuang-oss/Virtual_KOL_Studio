@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>AI KOL 型錄</title>
-<meta name="description" content="18 位已建置完成的 AI 虛擬 KOL，含完整角色設定與可用素材。">
+<title>虛擬 KOL 品牌顧問服務 — 兌心科技</title>
+<meta name="description" content="業配與廣告是租來的流量，合約結束就歸零。數位人 KOL，是永久歸屬品牌的資產。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -131,6 +131,129 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 .lb button{position:absolute;top:22px;right:26px;background:none;border:1px solid var(--line2);
   color:var(--ink);width:38px;height:38px;border-radius:100px;cursor:pointer;font-size:17px}
 
+/* ── 首頁（對外報價 PPT 的網頁版）────────────────────────────── */
+.top nav a.on{color:var(--accent2)}
+.hsec{padding:82px 0;border-bottom:1px solid var(--line)}
+.hsec:nth-child(even){background:var(--bg2)}
+.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--accent);margin:0 0 14px;font-weight:500}
+.hsec h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,40px);line-height:1.28;margin:0 0 18px;
+  font-weight:500;letter-spacing:.01em}
+.lead{color:var(--ink2);font-size:16px;max-width:720px;margin:0 0 34px}
+.kicker{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--line2);color:var(--ink);
+  font-family:var(--serif);font-size:16.5px;max-width:820px;line-height:1.75}
+.fine{color:var(--ink3);font-size:12px;margin:18px 0 0;max-width:760px;line-height:1.65}
+
+/* 開場 */
+.hhero{padding:104px 0 88px;border-bottom:1px solid var(--line);position:relative}
+.hhero h1{font-family:var(--serif);font-size:clamp(36px,6.2vw,68px);line-height:1.16;margin:0 0 26px;
+  font-weight:500;letter-spacing:.005em}
+.hhero h1 em{font-style:normal;color:var(--accent2)}
+.hhero .sub{max-width:640px;color:var(--ink2);font-size:17px;margin:0 0 36px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 26px;border:1px solid var(--line2);border-radius:2px;
+  font-size:14px;color:var(--ink2);transition:.18s}
+.btn:hover{border-color:var(--ink3);color:var(--ink)}
+.btn.p{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
+.btn.p:hover{background:var(--accent);border-color:var(--accent);color:#17130a}
+
+/* 三欄／多欄卡 */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.col{background:var(--bg);padding:26px 24px 28px}
+.hsec:nth-child(even) .col{background:var(--bg2)}
+.col .t{font-family:var(--serif);font-size:18px;margin:0 0 9px;font-weight:500;color:var(--ink)}
+.col .n{font-size:10.5px;letter-spacing:.16em;color:var(--accent);margin:0 0 10px}
+.col .tag{display:inline-block;font-size:10.5px;letter-spacing:.1em;color:var(--accent2);
+  border:1px solid #4a3d16;padding:2px 8px;border-radius:2px;margin:0 0 12px}
+.col p{margin:0;color:var(--ink2);font-size:14px;line-height:1.72}
+.col .you{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3)}
+.col .you b{color:var(--accent2);font-weight:500}
+
+/* 兩欄對照（案例／預算）*/
+/* ⚠ 標籤的 class 是 vlb 不是 lb：.lb 是燈箱，帶 display:none，撞上去整段會消失。*/
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.vs>div{background:var(--bg);padding:28px 26px 30px}
+.hsec:nth-child(even) .vs>div{background:var(--bg2)}
+.vs .b{border-top:2px solid var(--accent)}
+.vs .vlb{font-size:11.5px;letter-spacing:.14em;color:var(--ink3);margin:0 0 12px}
+.vs .amt{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.2;margin:0 0 6px;
+  color:var(--ink)}
+.vs .b .amt{color:var(--accent2)}
+.vs .amtn{font-size:12px;color:var(--ink3);margin:0 0 20px;line-height:1.6}
+.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:13.5px}
+.vs dt{color:var(--ink3);white-space:nowrap}
+.vs dd{margin:0;color:var(--ink2)}
+
+/* 條列型（永續／突破／適合／保證） */
+.rows{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.row3{display:grid;grid-template-columns:170px 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.row2{display:grid;grid-template-columns:190px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.row3:last-child,.row2:last-child{border-bottom:0}
+.row3>div,.row2>div{padding:20px 22px;border-right:1px solid var(--line)}
+.row3>div:last-child,.row2>div:last-child{border-right:0}
+.row3 .k,.row2 .k{font-family:var(--serif);font-size:15.5px;color:var(--ink)}
+.row3 .was{color:var(--ink3);font-size:13.5px}
+.row3 .now,.row2 .v{color:var(--ink2);font-size:14px}
+.row3 .now{color:var(--ink)}
+.rhead{display:grid;grid-template-columns:170px 1fr 1fr;background:var(--bg2);
+  border-bottom:1px solid var(--line2);font-size:11px;letter-spacing:.14em;color:var(--ink3)}
+.hsec:nth-child(even) .rhead{background:var(--bg)}
+.rhead>div{padding:11px 22px;border-right:1px solid var(--line)}
+.rhead>div:last-child{border-right:0}
+.rhead .hl{color:var(--accent2)}
+
+/* 精選預覽（第 8 段）*/
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:18px;margin-bottom:30px}
+.fcard{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  transition:.2s;display:block}
+.hsec:nth-child(even) .fcard{background:var(--bg)}
+.fcard:hover{border-color:var(--line2);transform:translateY(-3px)}
+.fcard .ph{aspect-ratio:3/4;background:#1a1a20;overflow:hidden}
+.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.4s}
+.fcard:hover .ph img{transform:scale(1.03)}
+.fcard .bd{padding:14px 15px 16px}
+.fcard .nm{font-family:var(--serif);font-size:17px;margin:0 0 3px;font-weight:500}
+.fcard .zh{font-size:11.5px;color:var(--ink3);margin:0 0 8px}
+.fcard .mt{font-size:11px;color:var(--accent2);letter-spacing:.04em;margin:0}
+
+/* AI 揭露（首頁第 2 段內，R5 要求不能掉到後段）*/
+.hsec .disclose{margin-top:34px;max-width:none}
+
+/* 報價頁 */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px}
+.plan{border:1px solid var(--line);border-radius:3px;padding:30px 26px 32px;background:var(--bg2);
+  display:flex;flex-direction:column}
+.plan.f{border-color:var(--accent);background:linear-gradient(180deg,rgba(201,162,39,.07),transparent 60%)}
+.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
+.plan h3{font-family:var(--serif);font-size:22px;margin:0 0 16px;font-weight:500}
+.plan .pr{font-family:var(--serif);font-size:32px;color:var(--accent2);line-height:1.1;margin:0 0 22px}
+.plan .pr i{font-style:normal;font-size:14px;color:var(--ink3);font-family:var(--sans)}
+.plan ul{list-style:none;padding:0;margin:0}
+.plan li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink2)}
+.plan li:last-child{border-bottom:0}
+.qa{border-top:1px solid var(--line)}
+.qa>div{border-bottom:1px solid var(--line);padding:22px 0}
+.qa .q{font-family:var(--serif);font-size:17px;margin:0 0 9px;color:var(--ink)}
+.qa .a{margin:0;color:var(--ink2);font-size:14.5px;max-width:840px}
+
+/* 收尾 */
+.close{padding:96px 0 104px;text-align:center}
+.close h2{font-family:var(--serif);font-size:clamp(24px,3.4vw,36px);line-height:1.4;margin:0 auto 32px;
+  max-width:900px;font-weight:500}
+.close .btns{justify-content:center}
+
+@media(max-width:820px){
+  .vs{grid-template-columns:1fr}
+  .row3,.rhead{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .row3>div,.row2>div,.rhead>div{border-right:0;border-bottom:1px solid var(--line)}
+  .row3>div:last-child,.row2>div:last-child,.rhead>div:last-child{border-bottom:0}
+  .rhead{display:none}
+  .hhero{padding:64px 0 56px}
+  .hsec{padding:56px 0}
+}
 footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
 footer p{margin:0 0 7px;max-width:720px}
 @media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
@@ -138,338 +261,269 @@ footer p{margin:0 0 7px;max-width:720px}
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <div class="brand"><a href="/"><b>KOL</b> 型錄</a></div>
-  <nav><a href="/">全部人設</a><a href="/#about">關於這份型錄</a></nav>
+  <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
+  <nav>
+    <a href="/kols.html">全部人設</a>
+    <a href="/pricing.html">報價</a>
+  </nav>
 </div></header>
 
-<div class="hero"><div class="wrap">
-  <h1>虛擬 <em>KOL</em> 型錄</h1>
-  <p class="lede">18 位可合作的虛擬 KOL。每一位都有完整的人物設定、內容主題與視覺調性，
-  並且已經產出可用的圖像與影片素材。</p>
+<div class="hhero"><div class="wrap">
+  <p class="eyebrow">方案與報價提案 · 2026</p>
+  <h1>您的行銷預算，<br>買到的是「租」，<br><em>還是「有」？</em></h1>
+  <p class="sub">業配與廣告是租來的流量，合約結束就歸零。數位人 KOL，是永久歸屬品牌的資產。</p>
+  <div class="btns"><a class="btn p" href="/kols.html">看全部數位人</a><a class="btn" href="/pricing.html">方案與報價</a></div>
+</div></div>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">WHAT｜什麼是數位人 KOL</p>
+  <h2>三位一體，持續引流</h2>
+  <p class="lead">不是一支影片，也不是一次代言。是一個從第一天就為您的品牌而生的帳號——由 AI 生成內容、在多平台持續經營、並且人設 IP 歸屬於您。</p>
+  <div class="cols"><div class="col">
+  
+  
+  <p class="t">全 AI 內容生成</p>
+  <p>影片與圖文全部由 AI 產出，不受場地、天氣、檔期限制。</p>
+  
+</div><div class="col">
+  
+  
+  <p class="t">多平台經營</p>
+  <p>同一組素材依各平台格式再製，六大平台同步更新。</p>
+  
+</div><div class="col">
+  
+  
+  <p class="t">人設 IP 經營</p>
+  <p>人設、外型、聲音、素材與帳號，依合約歸屬品牌。</p>
+  
+</div></div><p class="kicker">三件事綁在一起，引流效果才會持續累積。</p>
   <div class="disclose">
-    <b>這些是 AI 生成的虛擬人物。</b>
-    <p>不是真人。所有肖像與影片皆由本團隊自行生成，角色設定、語氣與內容規範亦為原創。
-    虛擬 KOL 沒有檔期衝突、不會有個人爭議，且能同時經營多個平台與多語市場。</p>
+    <b>這些 KOL 是 AI 生成的虛擬人物。</b>
+    <p>不是真人。所有肖像、聲音與影片皆由本團隊自行生成，人設、語氣與內容規範亦為原創；
+    發布時依各平台規範標示 AI 內容。虛擬 KOL 沒有檔期衝突、不會有個人爭議，
+    且能同時經營多個平台與多語市場。</p>
+  </div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">VALUE｜你買到的是什麼</p>
+  <h2>一個帳號，三層價值</h2>
+  <div class="cols"><div class="col">
+  
+  <span class="tag">永續資產</span>
+  <p class="t">買下來，就是品牌的資產</p>
+  <p>人設、外型、聲音、素材與帳號，依合約歸屬品牌；不隨合約結束歸零，持續留存、持續累積。</p>
+  
+</div><div class="col">
+  
+  <span class="tag">品牌引流</span>
+  <p class="t">為引流而生的帳號</p>
+  <p>這個 KOL 從誕生的第一天就為您的品牌服務——每一篇內容，都在把流量導回品牌的產品與服務。</p>
+  
+</div><div class="col">
+  
+  <span class="tag">完整主控權</span>
+  <p class="t">說什麼、發什麼，品牌決定</p>
+  <p>方向由品牌主導，不必配合真人檔期與意願；沒有人設翻車風險，也沒有解約糾紛。</p>
+  
+</div></div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">WHY｜為什麼需要數位人 KOL</p>
+  <h2>這門學費，很多品牌都付過</h2>
+  <p class="lead">同一筆錢，投在真人與投在數位人，結果差在哪——這是我們自己的親身經歷。</p>
+  <div class="vs">
+    <div class="a">
+  <p class="vlb">真人藝人合作</p>
+  <p class="amt">七位數預算</p>
+  <p class="amtn">單一真人合作案的總投入（含代言授權、內容合作與相關拍攝支出）</p>
+  <dl><dt>產出</dt><dd>二十餘支內容（節目數集 ＋ 短影音十餘支）</dd><dt>成效</dt><dd>累積觀看未達 1 萬次・訂閱增加不到 50</dd><dt>結局</dt><dd>授權到期，對方帳號素材可下架</dd></dl>
+</div>
+    <div class="b">
+  <p class="vlb">同一筆預算，投入數位人</p>
+  <p class="amt">兩年以上</p>
+  <p class="amtn">同一筆預算投入主推全平台方案，可連續經營兩年以上</p>
+  <dl><dt>產出</dt><dd>數百篇圖文 ＋ 數百支影音，6 平台發布</dd><dt>資產</dt><dd>人設、帳號、素材永久歸品牌</dd><dt>延伸</dt><dd>素材可再投廣告，持續累積</dd></dl>
+</div>
+  </div>
+  <p class="kicker">真人合作買的是檔期與關係，約滿即散；同一筆錢投入數位人，買的是留得下來的資產。</p>
+  <p class="fine">為尊重合作對象，本案例不具名，金額與成效以級距與約略值呈現；數據為自有頻道官方後台實測。</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">TRAFFIC｜同一筆錢，兩種用法</p>
+  <h2>每月 NT$65,000，結果差在哪？</h2>
+  <div class="rows"><div class="row2">
+  <div class="k">全部投廣告</div><div class="v">6.5 萬 ≈ 32.5 萬次曝光，素材費還要另計；停止投放，流量當天歸零。</div></div><div class="row2">
+  <div class="k">投入數位人 KOL</div><div class="v">同樣 6.5 萬：每月 22 篇內容 + 人設資產，累積在您的帳號；不投放也有自然流量。</div></div><div class="row2">
+  <div class="k">兩者不互斥</div><div class="v">資產是要被看到的——自然流打底、廣告放大；素材一份兩用，不用花兩次錢。</div></div></div>
+  <p class="kicker">成效衡量：公域曝光 → 私域名單與轉化，每週報告攤開對比。</p>
+  <p class="fine">以台灣 Meta 平均 CPM 約 NT$200 估算（2026 公開行情）</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">LEGACY｜企業品牌的永續規劃</p>
+  <h2>品牌永續，從擁有一個 IP 開始</h2>
+  <p class="lead">KOL IP 一旦買下，就永久屬於品牌——經營可以暫停，資產不會消失。</p>
+  <div class="rows"><div class="row2">
+  <div class="k">素材留得住</div><div class="v">即使只經營 30 天，期間產出的素材與帳號都留在品牌名下；素材可直接拿去投廣告，權利完全屬於品牌。</div></div><div class="row2">
+  <div class="k">隨時能重啟</div><div class="v">IP 永久存在。停了半年想回來經營，隨時續購方案——同一個人設接著生產，粉絲與素材接著累積。</div></div><div class="row2">
+  <div class="k">永續規劃的一環</div><div class="v">一次建立、長期使用：KOL IP 是留得下來的品牌資產，不是花掉就沒有的行銷費用。</div></div></div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">BREAKTHROUGH｜跟傳統製作比</p>
+  <h2>傳統的限制，就是我們的突破</h2>
+  <div class="rows">
+    <div class="rhead"><div></div><div>傳統製作的限制</div><div class="hl">數位人 KOL</div></div>
+    <div class="row3">
+      <div class="k">場景生成</div><div class="was">場地、天氣、預算——實拍一個都少不了</div>
+      <div class="now">超乎想像的影片場景：深海、太空、雪山，想拍哪就拍哪</div></div><div class="row3">
+      <div class="k">製作效率</div><div class="was">一支影片動輒數週：檔期、拍攝、後製環環相扣</div>
+      <div class="now">AI 內容產線，週週多平台更新不斷檔</div></div><div class="row3">
+      <div class="k">敏感產業</div><div class="was">合規敏感品類，真人不願接、接了有翻車風險</div>
+      <div class="now">數位人沒有包袱，已有敏感產業實際營運案例</div></div>
+  </div>
+  <p class="fine">市場上也有低價代營 IP 的服務——多半不求質也不求量，更不含社群平台的實際營運。</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">CATALOGUE｜看實際的人設與素材</p>
+  <h2>不必想像，直接看</h2>
+  <p class="lead">每一位都有完整的人物設定、內容主題與視覺調性，並且已經產出可用的圖像與影片素材。
+  點進任何一位，都能直接在網頁上看完他全部的素材。</p>
+  <div class="feat"><a class="fcard" href="/p/iris-chen.html">
+    <div class="ph"><img src="/assets/iris-chen/hero.jpg?v=a07bccc787" alt="Iris Chen" loading="lazy" width="1080" height="1440"></div>
+    <div class="bd">
+      <p class="nm">Iris Chen</p>
+      <p class="zh">陳芯語 · 台灣</p>
+      <p class="mt">生活風格</p>
+    </div></a><a class="fcard" href="/p/camille-dupont.html">
+    <div class="ph"><img src="/assets/camille-dupont/hero.jpg?v=dd34e6bffe" alt="Camille Dupont" loading="lazy" width="1080" height="1440"></div>
+    <div class="bd">
+      <p class="nm">Camille Dupont</p>
+      <p class="zh">法國</p>
+      <p class="mt">生活風格</p>
+    </div></a><a class="fcard" href="/p/yuna-kim.html">
+    <div class="ph"><img src="/assets/yuna-kim/hero.jpg?v=8be7292edb" alt="Yuna Kim" loading="lazy" width="1080" height="1440"></div>
+    <div class="bd">
+      <p class="nm">Yuna Kim</p>
+      <p class="zh">김하은 · 台灣</p>
+      <p class="mt">美妝・保養</p>
+    </div></a><a class="fcard" href="/p/rainie-hsu.html">
+    <div class="ph"><img src="/assets/rainie-hsu/hero.jpg?v=5a7f833334" alt="Rainie Hsu" loading="lazy" width="1080" height="1440"></div>
+    <div class="bd">
+      <p class="nm">Rainie Hsu</p>
+      <p class="zh">許雷妮 · 台灣</p>
+      <p class="mt">夜生活</p>
+    </div></a></div>
+  <div class="btns"><a class="btn p" href="/kols.html">看全部人設 →</a></div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">VIRAL ENGINE｜流量的保證</p>
+  <h2>爆款素材 × 流量保證</h2>
+  <p class="lead">好的資產，要被看見——我們的工作，就是讓它被看見。</p>
+  <div class="cols"><div class="col">
+  <p class="n">STEP 1</p>
+  
+  <p class="t">全網爆款，每天研究</p>
+  <p>即時 research 近期全網正在起飛的內容：什麼題材、什麼形式、什麼鉤子正在爆。</p>
+  
+</div><div class="col">
+  <p class="n">STEP 2</p>
+  
+  <p class="t">爆款公式，為您改裝</p>
+  <p>把爆款的結構拆解出來，量身套進您的 KOL——同樣的力道，換上您的人設與產品。</p>
+  
+</div><div class="col">
+  <p class="n">STEP 3</p>
+  
+  <p class="t">週週產出，週週迭代</p>
+  <p>爆款不是等運氣，是用方法持續做出來：每週產出、每週修正，直到打中為止。</p>
+  
+</div></div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">FIT｜誰最適合</p>
+  <h2>為 B2C 的品牌與生意人而設計</h2>
+  <p class="lead">開店、餐飲、保健品、旅遊旅宿、遊戲、金融服務——直接面對消費者的生意，才需要持續說故事。</p>
+  <div class="rows"><div class="row2">
+  <div class="k">要說故事的 2C 品牌</div><div class="v">消費者買的是故事與信任，但養不起內容團隊。數位人替品牌每週說故事，素材同時餵養廣告。</div></div><div class="row2">
+  <div class="k">不想露臉的個體戶</div><div class="v">房仲、車商、保險、專業服務者：想經營個人品牌帶客，卻不想露臉、沒時間拍片。</div></div><div class="row2">
+  <div class="k">真人代言不便的產業</div><div class="v">合規敏感、爭議品類：真人不願接、接了有翻車風險。我們有實際營運中的案例與合規框架。</div></div></div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">QUALITY｜品質不靠口頭承諾</p>
+  <h2>四大品質保證</h2>
+  <div class="cols"><div class="col">
+  
+  
+  <p class="t">保證一｜獨一無二的人設</p>
+  <p>專為您的品牌量身打造，不重複授權、不套模板——這個人設在市場上只屬於您。</p>
+  
+</div><div class="col">
+  
+  
+  <p class="t">保證二｜持續製造爆款素材</p>
+  <p>以實時爆款方法論持續產出——每一篇素材，都以成為爆款為目標製作。</p>
+  
+</div><div class="col">
+  
+  
+  <p class="t">保證三｜流量持續上升</p>
+  <p>經營期間帳號流量持續成長；每週數據報告攤開檢視，汰弱留強。</p>
+  
+</div><div class="col">
+  
+  
+  <p class="t">保證四｜客戶完整話語權</p>
+  <p>KOL 完全屬於您——想讓他說什麼，他就說什麼；經營方向由您主導，結果自然滿意。</p>
+  
+</div></div><p class="kicker">四大保證之外，還有一條寫進合約：每 30 天檢核點，不滿意退未執行月份。</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">ONBOARDING｜您的時間成本，很低</p>
+  <h2>三週上線，您只需要 3 次確認</h2>
+  <div class="cols"><div class="col">
+  <p class="n">WEEK 1</p>
+  
+  <p class="t">人設提案與簽核</p>
+  <p>我們交付人設設定與內容規劃，由您簽核定案。</p>
+  <p class="you">您要做的：<b>1 次確認會議 + 開通帳號</b></p>
+</div><div class="col">
+  <p class="n">WEEK 2</p>
+  
+  <p class="t">定裝與帳號串接</p>
+  <p>視覺定裝、專屬聲音完成；各平台帳號完成串接，準備發布。</p>
+  <p class="you">您要做的：<b>定裝與聲音確認</b></p>
+</div><div class="col">
+  <p class="n">WEEK 3</p>
+  
+  <p class="t">首波發布與數據</p>
+  <p>首批內容實際發布，交付首波成效數據報告。</p>
+  <p class="you">您要做的：<b>驗收首波成效；之後每 30 天檢核</b></p>
+</div></div><p class="kicker">進入正式營運後，您每月只需要約 2 小時：月初 1 次行事曆審核 + 素材確認。其餘，我們處理。</p>
+</div></section>
+
+<div class="close"><div class="wrap">
+  <h2>免費品牌健檢 → 找出缺口 → 3 週見到您的專屬數位人</h2>
+  <div class="btns">
+    <a class="btn p" href="/kols.html">看全部數位人的完整素材</a>
+    <a class="btn" href="/pricing.html">方案與報價</a>
   </div>
 </div></div>
-
-<div class="filters"><div class="wrap">
-  <div class="frow"><span>領域</span>
-    <button class="chip" aria-pressed="true" data-f="cat" data-v="">全部</button>
-    <button class="chip" aria-pressed="false" data-f="cat" data-v="健身">健身</button><button class="chip" aria-pressed="false" data-f="cat" data-v="夜生活">夜生活</button><button class="chip" aria-pressed="false" data-f="cat" data-v="戶外・登山">戶外・登山</button><button class="chip" aria-pressed="false" data-f="cat" data-v="數位娛樂・科技">數位娛樂・科技</button><button class="chip" aria-pressed="false" data-f="cat" data-v="旅遊・城市文化">旅遊・城市文化</button><button class="chip" aria-pressed="false" data-f="cat" data-v="歷史沉浸">歷史沉浸</button><button class="chip" aria-pressed="false" data-f="cat" data-v="生活風格">生活風格</button><button class="chip" aria-pressed="false" data-f="cat" data-v="知識・規則研究">知識・規則研究</button><button class="chip" aria-pressed="false" data-f="cat" data-v="神話沉浸">神話沉浸</button><button class="chip" aria-pressed="false" data-f="cat" data-v="精品生活">精品生活</button><button class="chip" aria-pressed="false" data-f="cat" data-v="美妝・保養">美妝・保養</button><button class="chip" aria-pressed="false" data-f="cat" data-v="身心健康">身心健康</button><button class="chip" aria-pressed="false" data-f="cat" data-v="遊戲・實況">遊戲・實況</button>
-  </div>
-  <div class="frow"><span>市場</span>
-    <button class="chip" aria-pressed="true" data-f="mk" data-v="">全部</button>
-    <button class="chip" aria-pressed="false" data-f="mk" data-v="印度">印度</button><button class="chip" aria-pressed="false" data-f="mk" data-v="台灣">台灣</button><button class="chip" aria-pressed="false" data-f="mk" data-v="新加坡">新加坡</button><button class="chip" aria-pressed="false" data-f="mk" data-v="法國">法國</button><button class="chip" aria-pressed="false" data-f="mk" data-v="美國">美國</button><button class="chip" aria-pressed="false" data-f="mk" data-v="跨區">跨區</button><button class="chip" aria-pressed="false" data-f="mk" data-v="馬來西亞">馬來西亞</button>
-  </div>
-  <div class="frow"><span>素材</span>
-    <button class="chip" aria-pressed="true" data-f="med" data-v="">全部</button>
-    <button class="chip" aria-pressed="false" data-f="med" data-v="video">有影片素材</button>
-  </div>
-  <div class="frow"><span>排序</span>
-    <button class="chip" aria-pressed="true" data-s="feat">推薦</button>
-    <button class="chip" aria-pressed="false" data-s="material">素材最多</button>
-    <button class="chip" aria-pressed="false" data-s="age">年齡由小到大</button>
-    <button class="chip" aria-pressed="false" data-s="name">名字</button>
-  </div>
-  <p class="count" id="count">顯示 18 位</p>
-</div></div>
-
-<div class="wrap"><div class="grid" id="grid">
-<div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video" data-feat="0" data-material="274" data-age="22" data-name="Iris Chen">
-<a class="card" href="/p/iris-chen.html">
-  <div class="ph"><img src="/assets/iris-chen/hero.jpg?v=a07bccc787" alt="Iris Chen" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Iris Chen</h3>
-    <p class="zh">陳芯語 · 22 歲 · 台灣</p>
-    <p class="tl">台北的 It Girl——在公開場合過自己的日子，不覺得自己有多吸引人。</p>
-    <div class="tags">
-      <span class="tag k">生活風格</span>
-      <span class="tag">26 張圖</span>
-      <span class="tag">14 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="法國" data-video="video" data-feat="1" data-material="241" data-age="22" data-name="Camille Dupont">
-<a class="card" href="/p/camille-dupont.html">
-  <div class="ph"><img src="/assets/camille-dupont/hero.jpg?v=dd34e6bffe" alt="Camille Dupont" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Camille Dupont</h3>
-    <p class="zh">22 歲 · 法國</p>
-    <p class="tl">只是好好地過巴黎的日子，而你就是移不開眼睛。</p>
-    <div class="tags">
-      <span class="tag k">生活風格</span>
-      <span class="tag">24 張圖</span>
-      <span class="tag">1 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="美妝・保養" data-mk="台灣" data-video="video" data-feat="2" data-material="376" data-age="21" data-name="Yuna Kim">
-<a class="card" href="/p/yuna-kim.html">
-  <div class="ph"><img src="/assets/yuna-kim/hero.jpg?v=8be7292edb" alt="Yuna Kim" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Yuna Kim</h3>
-    <p class="zh">김하은 · 21 歲 · 台灣</p>
-    <p class="tl">首爾女生的日常美感——真的在保養，但不是在做評測。</p>
-    <div class="tags">
-      <span class="tag k">美妝・保養</span>
-      <span class="tag">37 張圖</span>
-      <span class="tag">6 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="夜生活" data-mk="台灣" data-video="video" data-feat="3" data-material="354" data-age="24" data-name="Rainie Hsu">
-<a class="card" href="/p/rainie-hsu.html">
-  <div class="ph"><img src="/assets/rainie-hsu/hero.jpg?v=5a7f833334" alt="Rainie Hsu" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Rainie Hsu</h3>
-    <p class="zh">許雷妮 · 24 歲 · 台灣</p>
-    <p class="tl">她一進門整個場子的節奏就變了，而她從不假裝這身造型很輕鬆。</p>
-    <div class="tags">
-      <span class="tag k">夜生活</span>
-      <span class="tag">35 張圖</span>
-      <span class="tag">4 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video" data-feat="4" data-material="345" data-age="20" data-name="Luna Tanaka">
-<a class="card" href="/p/luna-tanaka.html">
-  <div class="ph"><img src="/assets/luna-tanaka/hero.jpg?v=06574f9284" alt="Luna Tanaka" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Luna Tanaka</h3>
-    <p class="zh">田中ひな · 20 歲 · 台灣</p>
-    <p class="tl">住在一個很美的白日夢裡，而且願意讓你進來看看。</p>
-    <div class="tags">
-      <span class="tag k">生活風格</span>
-      <span class="tag">34 張圖</span>
-      <span class="tag">5 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="台灣" data-video="video" data-feat="5" data-material="194" data-age="20" data-name="Coco Wu">
-<a class="card" href="/p/coco-wu.html">
-  <div class="ph"><img src="/assets/coco-wu/hero.jpg?v=3e7e50324d" alt="Coco Wu" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Coco Wu</h3>
-    <p class="zh">吳可可 · 20 歲 · 台灣</p>
-    <p class="tl">宿舍與校園就是她的全部場景——柔軟的自在感，不是刻意展示。</p>
-    <div class="tags">
-      <span class="tag k">生活風格</span>
-      <span class="tag">19 張圖</span>
-      <span class="tag">4 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="精品生活" data-mk="台灣" data-video="video" data-feat="6" data-material="203" data-age="28" data-name="Sophia Tseng">
-<a class="card" href="/p/sophia-tseng.html">
-  <div class="ph"><img src="/assets/sophia-tseng/hero.jpg?v=3c90d26790" alt="Sophia Tseng" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Sophia Tseng</h3>
-    <p class="zh">曾詩妃 · 28 歲 · 台灣</p>
-    <p class="tl">信義區的名媛，但那份從容是自己掙來的，不是嫁來或繼承來的。</p>
-    <div class="tags">
-      <span class="tag k">精品生活</span>
-      <span class="tag">20 張圖</span>
-      <span class="tag">3 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="遊戲・實況" data-mk="台灣" data-video="video" data-feat="7" data-material="171" data-age="22" data-name="Mia Huang">
-<a class="card" href="/p/mia-huang.html">
-  <div class="ph"><img src="/assets/mia-huang/hero.jpg?v=18eb2eee64" alt="Mia Huang" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Mia Huang</h3>
-    <p class="zh">黃米亞 · 22 歲 · 台灣</p>
-    <p class="tl">夜貓子實況主，開台是她的節奏，關台之後才是她自己。</p>
-    <div class="tags">
-      <span class="tag k">遊戲・實況</span>
-      <span class="tag">17 張圖</span>
-      <span class="tag">1 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="健身" data-mk="台灣" data-video="video" data-feat="8" data-material="341" data-age="25" data-name="Vicky Lin">
-<a class="card" href="/p/vicky-lin.html">
-  <div class="ph"><img src="/assets/vicky-lin/hero.jpg?v=0e5261fae7" alt="Vicky Lin" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Vicky Lin</h3>
-    <p class="zh">林薇淇 · 25 歲 · 台灣</p>
-    <p class="tl">身材和態度都是練出來的，所以那份自信不用表演。</p>
-    <div class="tags">
-      <span class="tag k">健身</span>
-      <span class="tag">34 張圖</span>
-      <span class="tag">1 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="美妝・保養" data-mk="台灣" data-video="" data-feat="9" data-material="270" data-age="26" data-name="Nico Tsai">
-<a class="card" href="/p/nico-tsai.html">
-  <div class="ph"><img src="/assets/nico-tsai/hero.jpg?v=207d940567" alt="Nico Tsai" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Nico Tsai</h3>
-    <p class="zh">蔡妮可 · 26 歲 · 台灣</p>
-    <p class="tl">靠一雙手吃飯的美甲職人，對線條的潔癖同樣用在自己身上。</p>
-    <div class="tags">
-      <span class="tag k">美妝・保養</span>
-      <span class="tag">27 張圖</span>
-      
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="生活風格" data-mk="美國" data-video="video" data-feat="10" data-material="162" data-age="25" data-name="Aaliya Rivera">
-<a class="card" href="/p/aaliya-okonkwo.html">
-  <div class="ph"><img src="/assets/aaliya-okonkwo/hero.jpg?v=84828f4fcf" alt="Aaliya Rivera" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Aaliya Rivera</h3>
-    <p class="zh">25 歲 · 美國</p>
-    <p class="tl">永遠在玩得最開心的那個人，而且看起來還很好看。</p>
-    <div class="tags">
-      <span class="tag k">生活風格</span>
-      <span class="tag">16 張圖</span>
-      <span class="tag">2 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="身心健康" data-mk="印度" data-video="video" data-feat="11" data-material="141" data-age="23" data-name="Ananya Kapoor">
-<a class="card" href="/p/ananya-kapoor.html">
-  <div class="ph"><img src="/assets/ananya-kapoor/hero.jpg?v=d80748bcd7" alt="Ananya Kapoor" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Ananya Kapoor</h3>
-    <p class="zh">अनन्या कपूर · 23 歲 · 印度</p>
-    <p class="tl">把身體當成值得慎重對待的東西，也讓看的人跟著慎重起來。</p>
-    <div class="tags">
-      <span class="tag k">身心健康</span>
-      <span class="tag">14 張圖</span>
-      <span class="tag">1 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="旅遊・城市文化" data-mk="新加坡" data-video="video" data-feat="12" data-material="788" data-age="30" data-name="Faye Tan">
-<a class="card" href="/p/faye-tan.html">
-  <div class="ph"><img src="/assets/faye-tan/hero.jpg?v=13edcf6e14" alt="Faye Tan" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Faye Tan</h3>
-    <p class="zh">陳曉菲 · 30 歲 · 新加坡</p>
-    <p class="tl">把一座城市當一本書讀完，再告訴你哪一頁值得停下來。</p>
-    <div class="tags">
-      <span class="tag k">旅遊・城市文化</span>
-      <span class="tag">75 張圖</span>
-      <span class="tag">38 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="戶外・登山" data-mk="新加坡" data-video="" data-feat="13" data-material="490" data-age="34" data-name="Rachel Ong">
-<a class="card" href="/p/rachel-ong.html">
-  <div class="ph"><img src="/assets/rachel-ong/hero.jpg?v=717bb2e8a5" alt="Rachel Ong" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Rachel Ong</h3>
-    <p class="zh">王瑞秋 · 34 歲 · 新加坡</p>
-    <p class="tl">不講征服，講什麼時候該轉身——把山上的判斷帶回平地。</p>
-    <div class="tags">
-      <span class="tag k">戶外・登山</span>
-      <span class="tag">49 張圖</span>
-      
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="神話沉浸" data-mk="台灣" data-video="" data-feat="14" data-material="230" data-age="27" data-name="Cathy Luo">
-<a class="card" href="/p/kai-luo.html">
-  <div class="ph"><img src="/assets/kai-luo/hero.jpg?v=f567392862" alt="Cathy Luo" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Cathy Luo</h3>
-    <p class="zh">羅凱西 · 27 歲 · 台灣</p>
-    <p class="tl">照著古書的字走進古人記下的那個世界，帶你看那裡長什麼樣。</p>
-    <div class="tags">
-      <span class="tag k">神話沉浸</span>
-      <span class="tag">23 張圖</span>
-      
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="數位娛樂・科技" data-mk="新加坡" data-video="video" data-feat="15" data-material="607" data-age="30" data-name="Zhang Qinfeng">
-<a class="card" href="/p/loima-cheung.html">
-  <div class="ph"><img src="/assets/loima-cheung/hero.jpg?v=0b40ee5ee1" alt="Zhang Qinfeng" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Zhang Qinfeng</h3>
-    <p class="zh">张秦峰 · 30 歲 · 新加坡</p>
-    <p class="tl">拆開一款遊戲、一部電影、一個 AI 產品，講清楚它為什麼讓人上癮。</p>
-    <div class="tags">
-      <span class="tag k">數位娛樂・科技</span>
-      <span class="tag">55 張圖</span>
-      <span class="tag">57 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="知識・規則研究" data-mk="馬來西亞" data-video="video" data-feat="16" data-material="404" data-age="30" data-name="Tan XiaoXiao">
-<a class="card" href="/p/xiaoxiao-tan.html">
-  <div class="ph"><img src="/assets/xiaoxiao-tan/hero.jpg?v=6baad9180c" alt="Tan XiaoXiao" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">Tan XiaoXiao</h3>
-    <p class="zh">陳曉曉 · 30 歲 · 馬來西亞</p>
-    <p class="tl">研究規則本身——棋、牌、機率，冷靜地把背後的系統講明白。</p>
-    <div class="tags">
-      <span class="tag k">知識・規則研究</span>
-      <span class="tag">38 張圖</span>
-      <span class="tag">24 支影片</span>
-    </div>
-  </div>
-</a></div><div class="cell" data-cat="歷史沉浸" data-mk="跨區" data-video="video" data-feat="17" data-material="459" data-age="99" data-name="林曜 / Leon Lim">
-<a class="card" href="/p/leon-lim.html">
-  <div class="ph"><img src="/assets/leon-lim/hero.jpg?v=b103f4d55c" alt="林曜 / Leon Lim" loading="lazy" width="1080" height="1440"></div>
-  <div class="body">
-    <h3 class="nm">林曜 / Leon Lim</h3>
-    <p class="zh">跨區</p>
-    <p class="tl">帶你站在歷史發生的那一刻，離開之前告訴你為什麼。</p>
-    <div class="tags">
-      <span class="tag k">歷史沉浸</span>
-      <span class="tag">45 張圖</span>
-      <span class="tag">9 支影片</span>
-    </div>
-  </div>
-</a></div>
-</div></div>
-
-<div class="wrap" id="about"><section class="sec">
-  <h2>關於這份型錄</h2>
-  <div class="two">
-    <div><p class="lede prose">這份型錄只收錄<b>素材已經到位</b>的人設。還在建置中的角色不列入，
-    所以你在這裡看到的每一位，都是現在就能討論合作的。</p></div>
-    <div><p class="prose">每一位人設的頁面包含：角色設定與語氣、內容主題與比重、合作邊界、
-    設定文件的深度，以及實際產出的圖像與影片素材。</p></div>
-  </div>
-</section></div>
 
 <footer><div class="wrap">
-  <p>本型錄所有人物均為 AI 生成的虛擬角色，非真實人物。</p>
-  <p>素材與設定為本團隊原創。頁面不進入搜尋引擎索引。</p>
+  <p>兌心科技　INSIGHT SOFTWARE　數位人 KOL 品牌顧問服務</p>
+  <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物；素材與設定為本團隊原創。</p>
+  <p>頁面不進入搜尋引擎索引。</p>
 </div></footer>
-
-<script>
-(function(){
-  var st={cat:'',mk:'',med:''}, sort='feat';
-  var grid=document.getElementById('grid');
-  var cells=[].slice.call(grid.querySelectorAll('.cell'));
-
-  function apply(){
-    var n=0;
-    cells.forEach(function(c){
-      var ok=(!st.cat||c.dataset.cat===st.cat)&&(!st.mk||c.dataset.mk===st.mk)&&(!st.med||c.dataset.video===st.med);
-      c.hidden=!ok; if(ok)n++;
-    });
-    document.getElementById('count').textContent='顯示 '+n+' 位';
-
-    var sorted=cells.slice().sort(function(a,b){
-      if(sort==='feat')     return (+a.dataset.feat)-(+b.dataset.feat);
-      if(sort==='material') return (+b.dataset.material)-(+a.dataset.material);
-      if(sort==='age')      return (+a.dataset.age)-(+b.dataset.age);
-      return a.dataset.name.localeCompare(b.dataset.name,'zh-Hant');
-    });
-    sorted.forEach(function(c){ grid.appendChild(c); });
-  }
-
-  document.querySelectorAll('.chip[data-f]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var f=b.dataset.f; st[f]=b.dataset.v;
-      document.querySelectorAll('.chip[data-f="'+f+'"]').forEach(function(o){
-        o.setAttribute('aria-pressed', String(o===b)); });
-      apply();
-    });
-  });
-  document.querySelectorAll('.chip[data-s]').forEach(function(b){
-    b.addEventListener('click',function(){
-      sort=b.dataset.s;
-      document.querySelectorAll('.chip[data-s]').forEach(function(o){
-        o.setAttribute('aria-pressed', String(o===b)); });
-      apply();
-    });
-  });
-  apply();
-})();
-</script>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="放大檢視">
   <button type="button" aria-label="關閉">✕</button><img alt="">

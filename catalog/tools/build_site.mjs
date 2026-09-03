@@ -13,6 +13,12 @@ import path from 'node:path';
 const DIR = path.join(import.meta.dirname, '..');
 const PUB = path.join(DIR, 'public');
 const cat = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'catalog.json'), 'utf8'));
+// 🛑 首頁與報價頁的文字全部來自 pitch.json（對外報價 PPT 逐字匯入），不要在這支程式裡編字。
+// 那份 PPT 的數字、價格、方案內容是業務承諾（覆核包 §12.6）。
+// ⚠ 案例段落渲染的是 `why_public` 不是 `why`：使用者 2026-09-03 裁決 PP-06
+//   「改寫得模糊一點再放」，`why` 留逐字原文存查。
+const pitch = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'pitch.json'), 'utf8'));
+const copy  = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'copy.json'), 'utf8'));
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -189,12 +195,135 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 .lb button{position:absolute;top:22px;right:26px;background:none;border:1px solid var(--line2);
   color:var(--ink);width:38px;height:38px;border-radius:100px;cursor:pointer;font-size:17px}
 
+/* ── 首頁（對外報價 PPT 的網頁版）────────────────────────────── */
+.top nav a.on{color:var(--accent2)}
+.hsec{padding:82px 0;border-bottom:1px solid var(--line)}
+.hsec:nth-child(even){background:var(--bg2)}
+.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--accent);margin:0 0 14px;font-weight:500}
+.hsec h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,40px);line-height:1.28;margin:0 0 18px;
+  font-weight:500;letter-spacing:.01em}
+.lead{color:var(--ink2);font-size:16px;max-width:720px;margin:0 0 34px}
+.kicker{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--line2);color:var(--ink);
+  font-family:var(--serif);font-size:16.5px;max-width:820px;line-height:1.75}
+.fine{color:var(--ink3);font-size:12px;margin:18px 0 0;max-width:760px;line-height:1.65}
+
+/* 開場 */
+.hhero{padding:104px 0 88px;border-bottom:1px solid var(--line);position:relative}
+.hhero h1{font-family:var(--serif);font-size:clamp(36px,6.2vw,68px);line-height:1.16;margin:0 0 26px;
+  font-weight:500;letter-spacing:.005em}
+.hhero h1 em{font-style:normal;color:var(--accent2)}
+.hhero .sub{max-width:640px;color:var(--ink2);font-size:17px;margin:0 0 36px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 26px;border:1px solid var(--line2);border-radius:2px;
+  font-size:14px;color:var(--ink2);transition:.18s}
+.btn:hover{border-color:var(--ink3);color:var(--ink)}
+.btn.p{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
+.btn.p:hover{background:var(--accent);border-color:var(--accent);color:#17130a}
+
+/* 三欄／多欄卡 */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.col{background:var(--bg);padding:26px 24px 28px}
+.hsec:nth-child(even) .col{background:var(--bg2)}
+.col .t{font-family:var(--serif);font-size:18px;margin:0 0 9px;font-weight:500;color:var(--ink)}
+.col .n{font-size:10.5px;letter-spacing:.16em;color:var(--accent);margin:0 0 10px}
+.col .tag{display:inline-block;font-size:10.5px;letter-spacing:.1em;color:var(--accent2);
+  border:1px solid #4a3d16;padding:2px 8px;border-radius:2px;margin:0 0 12px}
+.col p{margin:0;color:var(--ink2);font-size:14px;line-height:1.72}
+.col .you{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3)}
+.col .you b{color:var(--accent2);font-weight:500}
+
+/* 兩欄對照（案例／預算）*/
+/* ⚠ 標籤的 class 是 vlb 不是 lb：.lb 是燈箱，帶 display:none，撞上去整段會消失。*/
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.vs>div{background:var(--bg);padding:28px 26px 30px}
+.hsec:nth-child(even) .vs>div{background:var(--bg2)}
+.vs .b{border-top:2px solid var(--accent)}
+.vs .vlb{font-size:11.5px;letter-spacing:.14em;color:var(--ink3);margin:0 0 12px}
+.vs .amt{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.2;margin:0 0 6px;
+  color:var(--ink)}
+.vs .b .amt{color:var(--accent2)}
+.vs .amtn{font-size:12px;color:var(--ink3);margin:0 0 20px;line-height:1.6}
+.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:13.5px}
+.vs dt{color:var(--ink3);white-space:nowrap}
+.vs dd{margin:0;color:var(--ink2)}
+
+/* 條列型（永續／突破／適合／保證） */
+.rows{border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.row3{display:grid;grid-template-columns:170px 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.row2{display:grid;grid-template-columns:190px 1fr;gap:0;border-bottom:1px solid var(--line)}
+.row3:last-child,.row2:last-child{border-bottom:0}
+.row3>div,.row2>div{padding:20px 22px;border-right:1px solid var(--line)}
+.row3>div:last-child,.row2>div:last-child{border-right:0}
+.row3 .k,.row2 .k{font-family:var(--serif);font-size:15.5px;color:var(--ink)}
+.row3 .was{color:var(--ink3);font-size:13.5px}
+.row3 .now,.row2 .v{color:var(--ink2);font-size:14px}
+.row3 .now{color:var(--ink)}
+.rhead{display:grid;grid-template-columns:170px 1fr 1fr;background:var(--bg2);
+  border-bottom:1px solid var(--line2);font-size:11px;letter-spacing:.14em;color:var(--ink3)}
+.hsec:nth-child(even) .rhead{background:var(--bg)}
+.rhead>div{padding:11px 22px;border-right:1px solid var(--line)}
+.rhead>div:last-child{border-right:0}
+.rhead .hl{color:var(--accent2)}
+
+/* 精選預覽（第 8 段）*/
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:18px;margin-bottom:30px}
+.fcard{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  transition:.2s;display:block}
+.hsec:nth-child(even) .fcard{background:var(--bg)}
+.fcard:hover{border-color:var(--line2);transform:translateY(-3px)}
+.fcard .ph{aspect-ratio:3/4;background:#1a1a20;overflow:hidden}
+.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.4s}
+.fcard:hover .ph img{transform:scale(1.03)}
+.fcard .bd{padding:14px 15px 16px}
+.fcard .nm{font-family:var(--serif);font-size:17px;margin:0 0 3px;font-weight:500}
+.fcard .zh{font-size:11.5px;color:var(--ink3);margin:0 0 8px}
+.fcard .mt{font-size:11px;color:var(--accent2);letter-spacing:.04em;margin:0}
+
+/* AI 揭露（首頁第 2 段內，R5 要求不能掉到後段）*/
+.hsec .disclose{margin-top:34px;max-width:none}
+
+/* 報價頁 */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px}
+.plan{border:1px solid var(--line);border-radius:3px;padding:30px 26px 32px;background:var(--bg2);
+  display:flex;flex-direction:column}
+.plan.f{border-color:var(--accent);background:linear-gradient(180deg,rgba(201,162,39,.07),transparent 60%)}
+.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
+.plan h3{font-family:var(--serif);font-size:22px;margin:0 0 16px;font-weight:500}
+.plan .pr{font-family:var(--serif);font-size:32px;color:var(--accent2);line-height:1.1;margin:0 0 22px}
+.plan .pr i{font-style:normal;font-size:14px;color:var(--ink3);font-family:var(--sans)}
+.plan ul{list-style:none;padding:0;margin:0}
+.plan li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink2)}
+.plan li:last-child{border-bottom:0}
+.qa{border-top:1px solid var(--line)}
+.qa>div{border-bottom:1px solid var(--line);padding:22px 0}
+.qa .q{font-family:var(--serif);font-size:17px;margin:0 0 9px;color:var(--ink)}
+.qa .a{margin:0;color:var(--ink2);font-size:14.5px;max-width:840px}
+
+/* 收尾 */
+.close{padding:96px 0 104px;text-align:center}
+.close h2{font-family:var(--serif);font-size:clamp(24px,3.4vw,36px);line-height:1.4;margin:0 auto 32px;
+  max-width:900px;font-weight:500}
+.close .btns{justify-content:center}
+
+@media(max-width:820px){
+  .vs{grid-template-columns:1fr}
+  .row3,.rhead{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .row3>div,.row2>div,.rhead>div{border-right:0;border-bottom:1px solid var(--line)}
+  .row3>div:last-child,.row2>div:last-child,.rhead>div:last-child{border-bottom:0}
+  .rhead{display:none}
+  .hhero{padding:64px 0 56px}
+  .hsec{padding:56px 0}
+}
 footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
 footer p{margin:0 0 7px;max-width:720px}
 @media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
 `;
 
-const layout = (title, body, { desc = '' } = {}) => `<!doctype html>
+const layout = (title, body, { desc = '', nav = '' } = {}) => `<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
@@ -209,8 +338,11 @@ ${desc ? `<meta name="description" content="${esc(desc)}">` : ''}
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <div class="brand"><a href="/"><b>KOL</b> 型錄</a></div>
-  <nav><a href="/">全部人設</a><a href="/#about">關於這份型錄</a></nav>
+  <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
+  <nav>
+    <a href="/kols.html"${nav === 'kols' ? ' class="on"' : ''}>全部人設</a>
+    <a href="/pricing.html"${nav === 'pricing' ? ' class="on"' : ''}>報價</a>
+  </nav>
 </div></header>
 ${body}
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="放大檢視">
@@ -231,7 +363,7 @@ ${body}
 </script>
 </body></html>`;
 
-// ── 首頁 ────────────────────────────────────────────────────────────
+// ── 型錄牆（原本的首頁,使用者 2026-09-03 裁決搬到 /kols.html,內容不重做）──
 const people = cat.personas.map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location) }));
 const totalImages = people.reduce((a, p) => a + p.media.image_count, 0);
 const totalVideos = people.reduce((a, p) => a + p.media.video_count, 0);
@@ -254,7 +386,7 @@ const card = p => `
   </div>
 </a>`;
 
-const index = layout('AI KOL 型錄', `
+const kolsPage = layout('虛擬 KOL 型錄 — 兌心科技', `
 <div class="hero"><div class="wrap">
   <h1>虛擬 <em>KOL</em> 型錄</h1>
   <p class="lede">${people.length} 位可合作的虛擬 KOL。每一位都有完整的人物設定、內容主題與視覺調性，
@@ -349,7 +481,7 @@ ${people.map((p, i) => `<div class="cell" data-cat="${esc(catLabel(p.category))}
   apply();
 })();
 </script>
-`, { desc: `${people.length} 位已建置完成的 AI 虛擬 KOL，含完整角色設定與可用素材。` });
+`, { desc: '可合作的虛擬 KOL 型錄，含完整角色設定與可用素材。', nav: 'kols' });
 
 // ── 人設頁 ──────────────────────────────────────────────────────────
 const personPage = p => {
@@ -363,7 +495,7 @@ const personPage = p => {
 
   return layout(`${p.name} — 虛擬 KOL 型錄`, `
 <div class="wrap">
-  <p class="pback"><a href="/">← 回到全部人設</a></p>
+  <p class="pback"><a href="/kols.html">← 回到全部人設</a></p>
   <div class="phead">
     <div class="pimg">${p.a.hero ? `<img src="${p.a.hero}" alt="${esc(p.name)}" width="1080" height="1440">` : ''}</div>
     <div>
@@ -408,17 +540,230 @@ const personPage = p => {
 </div>
 <footer><div class="wrap">
   <p>${esc(p.name)} 為 AI 生成的虛擬角色，非真實人物。</p>
-  <p><a href="/">← 回到全部人設</a></p>
+  <p><a href="/kols.html">← 回到全部人設</a></p>
 </div></footer>
-`, { desc: p.tagline || '' });
+`, { desc: p.tagline || '', nav: 'kols' });
 };
+
+
+// ── 首頁：對外報價 PPT 的網頁版 ──────────────────────────────────
+// 使用者 2026-09-03：「我現在就是想把對外報價的 PPT 轉成網頁版的 dashboard。」
+// 段落與 PPT 頁次的對應表在覆核包 §12.2（13 段）。
+// 🛑 PPT 的 p15 方案報價與 p16 常見問題不在首頁,搬去 /pricing.html。
+// 🛑 文字全部來自 pitch.json,這裡只排版,不改一個字（業務承諾）。
+const P = pitch;
+
+// 第 8 段的精選預覽。🛑 放哪幾位由使用者在 copy.json 的 `featured` 指定,
+// 程式不自己挑（覆核包 §12.2 的 R5 規定）。指名的人設若不在型錄裡就跳過。
+const featured = (copy.featured || [])
+  .map(id => people.find(p => p.id === id))
+  .filter(Boolean);
+
+// 🛑 寫成程式擋住,不要只寫成規則（這個 repo 的教訓：文件會再犯,程式不會）。
+// R5 否決了「第 8 段只放一個文字連結」,理由是客戶點擊之前就要先看到真的有人設有素材。
+// 所以這一段少於 3 位就不是那個規劃,直接不要產出。
+if (featured.length < 3) {
+  console.error(`🛑 首頁精選預覽只湊到 ${featured.length} 位（規劃要求 3〜4 位）。`);
+  console.error(`   copy.json 的 \`featured\` = ${JSON.stringify(copy.featured || [])}`);
+  console.error('   → 那幾個 id 要在 catalog.json 的人設裡找得到。改好再跑。');
+  process.exit(2);
+}
+if (featured.some(p => !p.a.hero)) {
+  console.error('🛑 精選預覽有人設沒有封面圖 → ' +
+    featured.filter(p => !p.a.hero).map(p => p.id).join('、'));
+  process.exit(2);
+}
+
+const cols = (arr, n = '') => `<div class="cols">${arr.map(c => `<div class="col">
+  ${c.n ? `<p class="n">${esc(c.n)}</p>` : ''}
+  ${c.tag ? `<span class="tag">${esc(c.tag)}</span>` : ''}
+  <p class="t">${esc(c.t)}</p>
+  <p>${esc(c.p)}</p>
+  ${c.you ? `<p class="you">您要做的：<b>${esc(c.you)}</b></p>` : ''}
+</div>`).join('')}</div>${n ? `<p class="kicker">${esc(n)}</p>` : ''}`;
+
+const rows2 = arr => `<div class="rows">${arr.map(([k, v]) => `<div class="row2">
+  <div class="k">${esc(k)}</div><div class="v">${esc(v)}</div></div>`).join('')}</div>`;
+
+const vsSide = (d, cls) => `<div class="${cls}">
+  <p class="vlb">${esc(d.label)}</p>
+  <p class="amt">${esc(d.amount)}</p>
+  <p class="amtn">${esc(d.amount_note)}</p>
+  <dl>${d.rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+</div>`;
+
+const homePage = layout('虛擬 KOL 品牌顧問服務 — 兌心科技', `
+<div class="hhero"><div class="wrap">
+  <p class="eyebrow">${esc(P.hero.eyebrow)}</p>
+  <h1>${P.hero.title_lines.map((l, i) => i === P.hero.title_lines.length - 1
+      ? `<em>${esc(l)}</em>` : esc(l)).join('<br>')}</h1>
+  <p class="sub">${esc(P.hero.sub)}</p>
+  <div class="btns">${P.hero.cta.map(c =>
+    `<a class="btn${c.primary ? ' p' : ''}" href="${esc(c.href)}">${esc(c.label)}</a>`).join('')}</div>
+</div></div>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.what.eyebrow)}</p>
+  <h2>${esc(P.what.title)}</h2>
+  <p class="lead">${esc(P.what.lead)}</p>
+  ${cols(P.what.pillars.map(x => ({ t: x.k, p: x.v })), P.what.note)}
+  <div class="disclose">
+    <b>這些 KOL 是 AI 生成的虛擬人物。</b>
+    <p>不是真人。所有肖像、聲音與影片皆由本團隊自行生成，人設、語氣與內容規範亦為原創；
+    發布時依各平台規範標示 AI 內容。虛擬 KOL 沒有檔期衝突、不會有個人爭議，
+    且能同時經營多個平台與多語市場。</p>
+  </div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.value.eyebrow)}</p>
+  <h2>${esc(P.value.title)}</h2>
+  ${cols(P.value.cards.map(c => ({ tag: c.tag, t: c.h, p: c.p })))}
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.why_public.eyebrow)}</p>
+  <h2>${esc(P.why_public.title)}</h2>
+  <p class="lead">${esc(P.why_public.lead)}</p>
+  <div class="vs">
+    ${vsSide(P.why_public.compare.a, 'a')}
+    ${vsSide(P.why_public.compare.b, 'b')}
+  </div>
+  <p class="kicker">${esc(P.why_public.kicker)}</p>
+  <p class="fine">${esc(P.why_public.disclaimer)}</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.budget.eyebrow)}</p>
+  <h2>${esc(P.budget.title)}</h2>
+  ${rows2(P.budget.rows.map(r => [r.k, r.v]))}
+  <p class="kicker">${esc(P.budget.note)}</p>
+  <p class="fine">${esc(P.budget.footnote)}</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.legacy.eyebrow)}</p>
+  <h2>${esc(P.legacy.title)}</h2>
+  <p class="lead">${esc(P.legacy.lead)}</p>
+  ${rows2(P.legacy.rows)}
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.breakthrough.eyebrow)}</p>
+  <h2>${esc(P.breakthrough.title)}</h2>
+  <div class="rows">
+    <div class="rhead"><div></div><div>傳統製作的限制</div><div class="hl">數位人 KOL</div></div>
+    ${P.breakthrough.rows.map(([k, was, now]) => `<div class="row3">
+      <div class="k">${esc(k)}</div><div class="was">${esc(was)}</div>
+      <div class="now">${esc(now)}</div></div>`).join('')}
+  </div>
+  <p class="fine">${esc(P.breakthrough.note)}</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">CATALOGUE｜看實際的人設與素材</p>
+  <h2>不必想像，直接看</h2>
+  <p class="lead">每一位都有完整的人物設定、內容主題與視覺調性，並且已經產出可用的圖像與影片素材。
+  點進任何一位，都能直接在網頁上看完他全部的素材。</p>
+  <div class="feat">${featured.map(p => `<a class="fcard" href="/p/${esc(p.id)}.html">
+    <div class="ph">${p.a.hero ? `<img src="${p.a.hero}" alt="${esc(p.name)}" loading="lazy" width="1080" height="1440">` : ''}</div>
+    <div class="bd">
+      <p class="nm">${esc(p.name)}</p>
+      <p class="zh">${esc([p.name_zh, p.mk].filter(Boolean).join(' · '))}</p>
+      <p class="mt">${esc(catLabel(p.category))}</p>
+    </div></a>`).join('')}</div>
+  <div class="btns"><a class="btn p" href="/kols.html">看全部人設 →</a></div>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.engine.eyebrow)}</p>
+  <h2>${esc(P.engine.title)}</h2>
+  <p class="lead">${esc(P.engine.lead)}</p>
+  ${cols(P.engine.steps.map(x => ({ n: x.n, t: x.t, p: x.p })))}
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.fit.eyebrow)}</p>
+  <h2>${esc(P.fit.title)}</h2>
+  <p class="lead">${esc(P.fit.lead)}</p>
+  ${rows2(P.fit.rows)}
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.quality.eyebrow)}</p>
+  <h2>${esc(P.quality.title)}</h2>
+  ${cols(P.quality.cards.map(([h, p]) => ({ t: h, p })), P.quality.kicker)}
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.onboarding.eyebrow)}</p>
+  <h2>${esc(P.onboarding.title)}</h2>
+  ${cols(P.onboarding.steps.map(x => ({ n: x.n, t: x.t, p: x.p, you: x.you })), P.onboarding.kicker)}
+</div></section>
+
+<div class="close"><div class="wrap">
+  <h2>${esc(P.closing.title)}</h2>
+  <div class="btns">
+    <a class="btn p" href="${esc(P.closing.cta.href)}">${esc(P.closing.cta.label)}</a>
+    <a class="btn" href="/pricing.html">方案與報價</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap">
+  <p>${esc(P.brand.name)}　${esc(P.brand.en)}　${esc(P.brand.line)}</p>
+  <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物；素材與設定為本團隊原創。</p>
+  <p>頁面不進入搜尋引擎索引。</p>
+</div></footer>
+`, { desc: P.hero.sub, nav: '' });
+
+// ── 報價頁（PPT p15 方案報價 ＋ p16 常見問題）────────────────────
+// 🛑 價格與方案內容一個字都不改（覆核包 §12.6）。
+const pricingPage = layout('方案與報價 — 兌心科技', `
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.plans.eyebrow)}</p>
+  <h2>${esc(P.plans.title)}</h2>
+  <div class="plans">${P.plans.items.map(x => `<div class="plan${x.featured ? ' f' : ''}">
+    <p class="tier">${esc(x.tier)}</p>
+    <h3>${esc(x.name)}</h3>
+    <p class="pr">${esc(x.price)}<i>${esc(x.unit)}</i></p>
+    <ul>${x.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+  </div>`).join('')}</div>
+  <p class="kicker">${esc(P.quality.kicker)}</p>
+</div></section>
+
+<section class="hsec"><div class="wrap">
+  <p class="eyebrow">${esc(P.faq.eyebrow)}</p>
+  <h2>${esc(P.faq.title)}</h2>
+  <div class="qa">${P.faq.items.map(([q, a]) => `<div>
+    <p class="q">${esc(q)}</p><p class="a">${esc(a)}</p></div>`).join('')}</div>
+</div></section>
+
+<div class="close"><div class="wrap">
+  <h2>${esc(P.closing.title)}</h2>
+  <div class="btns">
+    <a class="btn p" href="${esc(P.closing.cta.href)}">${esc(P.closing.cta.label)}</a>
+    <a class="btn" href="/">回首頁</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap">
+  <p>${esc(P.brand.name)}　${esc(P.brand.en)}　${esc(P.brand.line)}</p>
+  <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物。</p>
+</div></footer>
+`, { desc: '虛擬 KOL 經營的方案與報價。', nav: 'pricing' });
 
 // ── 寫檔 ────────────────────────────────────────────────────────────
 fs.rmSync(PUB, { recursive: true, force: true });
 fs.mkdirSync(path.join(PUB, 'p'), { recursive: true });
-fs.writeFileSync(path.join(PUB, 'index.html'), index);
+fs.writeFileSync(path.join(PUB, 'index.html'), homePage);
+fs.writeFileSync(path.join(PUB, 'kols.html'), kolsPage);
+fs.writeFileSync(path.join(PUB, 'pricing.html'), pricingPage);
 for (const p of people) fs.writeFileSync(path.join(PUB, 'p', `${p.id}.html`), personPage(p));
 fs.writeFileSync(path.join(PUB, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
-console.log(`產生 ${people.length + 1} 頁 → ${PUB}`);
-console.log(`  index.html ${(fs.statSync(path.join(PUB, 'index.html')).size / 1024).toFixed(0)} KB`);
+console.log(`產生 ${people.length + 3} 頁 → ${PUB}`);
+for (const f of ['index.html', 'kols.html', 'pricing.html']) {
+  console.log(`  ${f.padEnd(13)} ${(fs.statSync(path.join(PUB, f)).size / 1024).toFixed(0)} KB`);
+}
+console.log(`  p/*.html      ${people.length} 頁`);
+console.log(`  首頁精選預覽   ${featured.map(p => p.name).join('、')}`);
