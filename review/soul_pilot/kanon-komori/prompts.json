@@ -1,0 +1,67 @@
+{
+ "1": {
+  "pillar": "私下 / Cosplay",
+  "frame": "胸上",
+  "angle": "正面 0–10°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<426b5347-51cc-496b-872c-991c0c26de48>>>, a 20-year-old Japanese woman in Tokyo, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: she is very small — narrow shoulders and a short frame — with a full rounded bust that reads clearly against how small the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer waist-length hair is a pink-and-lilac gradient, dark at the roots fading to pale pink at the ends, worn loose over both shoulders. Her see-through fringe sits above her eyebrows so both brows and her whole jawline are clearly visible.\n\nShe wears a costume she sewed herself: a black high-collared bodice with white lace trim at the collar and cuffs and a row of small silver clasps down the front, the stitching neat but visibly handmade. It is an original design of her own, not a character from any existing work.\n\nShe is in her own room. A dress form stands behind her with a half-finished skirt pinned to it, and a strip of lace is draped over the back of her chair.\n\nOrdinary afternoon light from the window at her left, an even phone exposure, the corner of the room behind her noticeably darker.\n\nShe looks straight at the lens with a flat, unperformed expression, lips closed — none of the professional cuteness she uses at work.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, fine detail in the lace, natural colour grading.",
+  "job": "723ac9b3-9719-4dc2-b688-fdeed5b7f146",
+  "file": "k1.jpg",
+  "verdict": "待判",
+  "note": "臉與 master 一致。但服裝偏離：我指定 high-collared bodice（高領），出來是深 V 大開領。髮色與漸層正確，眉眼清楚。"
+ },
+ "2": {
+  "pillar": "女僕咖啡廳工作",
+  "frame": "胸上",
+  "angle": "左 35–40°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<426b5347-51cc-496b-872c-991c0c26de48>>>, a 20-year-old Japanese woman in Tokyo, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: she is very small — narrow shoulders and a short frame — with a full rounded bust that reads clearly against how small the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer waist-length pink-and-lilac gradient hair, dark at the roots and pale pink at the ends, is tied into two low twin tails with black ribbons. Her fringe sits above her eyebrows and her whole jawline is uncovered.\n\nShe wears her work uniform: a black maid dress with short puffed sleeves, a white frilled collar and a white pinafore apron tied at the waist, with a small white headpiece.\n\nShe is standing behind the counter of the maid café before it opens. Behind her: a coffee machine, a stack of clean saucers, a laminated menu propped against the till and a chalkboard with the day's specials half wiped off. The chairs are still upside down on the tables.\n\nWarm ceiling lights just switched on inside the closed café, an ordinary phone exposure, the street outside the front window much brighter than the room.\n\nShe has just looked up from what she was doing, tired around the eyes, a small polite smile that has not reached them yet.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "job": "29168271-a9f2-4f56-b165-4600d615519a",
+  "file": "k2.jpg",
+  "verdict": "待判",
+  "note": "臉與 master 一致，雙馬尾與女僕裝正確，開店前無客人的設定成立。但轉身幅度超過指定的 40 度，比較接近背 3/4，只有頭轉回來。雙眼仍可見。"
+ },
+ "3": {
+  "pillar": "房間 / 居家",
+  "frame": "腰上",
+  "angle": "右 30–35°",
+  "view": "自拍",
+  "prompt": "A waist-up front-facing selfie of <<<426b5347-51cc-496b-872c-991c0c26de48>>>, a 20-year-old Japanese woman in Tokyo, her body angled about thirty-five degrees to her right, her face turned back to the camera which is held slightly above her eye level.\n\nHer build: she is very small — narrow shoulders and a short frame — with a full rounded bust that reads clearly against how small the rest of her is. Visible collarbone, slim upper arms. Her waist is very narrow, and the contrast between that small waist and the fuller chest is the most noticeable thing about her shape. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer pink-and-lilac gradient hair is bundled into a messy bun with a claw clip, loose strands falling at her temples and neck, her fringe pushed to one side so both eyebrows are visible.\n\nShe wears a fitted grey ribbed tank top and loose black shorts, with a tape measure hung round her neck.\n\nShe is at her sewing desk late at night. Behind her: a sewing machine with the thread still in it, offcuts of pink satin, a mug, a charging cable trailing off the desk and a wall of pinned fabric swatches.\n\nOnly the desk lamp and the glow of the laptop screen are on, an ordinary phone exposure, the rest of the room falling away into darkness.\n\nShe looks straight into the lens, mouth closed, plainly tired.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nFront camera quality — slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, gentle noise in the dark parts of the room, NOT ultra-crisp or overly HD.",
+  "job": "1ff93307-0f75-4909-b5bf-c48192950b38",
+  "file": "k3.jpg",
+  "verdict": "OK（待使用者確認）",
+  "note": "臉一致，自拍質感正確，縫紉桌場景到位，胸腰反差讀得出來。"
+ },
+ "4": {
+  "pillar": "換裝",
+  "frame": "全身",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A candid full-length snapshot of <<<426b5347-51cc-496b-872c-991c0c26de48>>>, a 20-year-old Japanese woman in Tokyo, photographed from head to feet with her whole body inside the frame, standing in her own room. She is facing the camera: her face, the front of her body and both shoulders are toward the lens and her feet point toward it. Her back is not to the camera and her head is not turned away.\n\nHer build: she is very small — narrow shoulders and a short frame — with a full rounded bust that reads clearly against how small the rest of her is. Visible collarbone, slim upper arms. Her waist is very narrow, and the contrast between that small waist and the fuller chest is the most noticeable thing about her shape. Her hips are about as wide as her shoulders and her legs are short and straight. She is only 153cm. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer waist-length pink-and-lilac gradient hair is pulled over one shoulder and held in a loose side plait, her fringe above her eyebrows, her whole jawline clear.\n\nShe is halfway into a costume she made: a pale blue satin dress with a fitted bodice and a short structured skirt, the back zip only half done up and one shoulder strap not yet in place, worn over white tights and bare feet.\n\nHer room, with a dress form beside her, a cutting mat on the floor and a roll of blue satin leaning against the wall.\n\nOrdinary late-afternoon light through the window, an even phone exposure, the far side of the room noticeably darker.\n\nShe has stopped mid-task and looked at the camera, mouth closed, not posing.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her from head to feet, fine detail in the satin, natural colour grading.",
+  "job": "6d281f00-2b5e-43cf-88d6-42c95ed5de42",
+  "file": "k4.jpg",
+  "verdict": "待判",
+  "note": "全身正面成功，臉一致。但服裝偏離：我指定「拉鍊只拉一半、一邊肩帶未上」的換裝中狀態，出來是穿好的完整洋裝。極嬌小的身型有表現出來。"
+ },
+ "5": {
+  "pillar": "浴室 / 深夜",
+  "frame": "全身",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A candid full-length snapshot of <<<426b5347-51cc-496b-872c-991c0c26de48>>>, a 20-year-old Japanese woman in Tokyo, photographed from head to feet with her whole body inside the frame, standing on the outdoor walkway of a small Tokyo apartment building very late at night. She is facing the camera: her face, the front of her body and both shoulders are toward the lens and her feet point toward it. Her back is not to the camera and her head is not turned away.\n\nHer build: she is very small — narrow shoulders and a short frame — with a full rounded bust that reads clearly against how small the rest of her is. Visible collarbone, slim upper arms. Her waist is very narrow, and the contrast between that small waist and the fuller chest is the most noticeable thing about her shape. Her hips are about as wide as her shoulders and her legs are short and straight. She is only 153cm. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer waist-length pink-and-lilac gradient hair is damp and pushed back off her face into a low ponytail, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears an oversized washed-black zip hoodie over a plain white cotton camisole and cotton shorts, with rubber sandals.\n\nThe concrete walkway outside her flat: a metal railing, an air-conditioning unit, a bicycle chained up further along and a vending machine glowing at the far end.\n\nA single fluorescent tube on the walkway ceiling directly above her, an ordinary phone exposure, everything beyond the railing dropping into black.\n\nShe has just come outside and glanced at the camera, mouth closed, half awake.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, gentle sensor noise in the dark areas.",
+  "job": "e8379c59-7e8d-4bbb-8373-042d95b82753",
+  "file": "k5.jpg",
+  "verdict": "⚠️ 有缺陷",
+  "note": "全身正面成功，臉一致。**但兩眼虹膜顏色不同**——一眼偏綠褐、一眼深色。這在硬退件表屬於虹膜異常，建議重生這一張。"
+ },
+ "_meta": {
+  "persona": "kanon-komori",
+  "date": "2026-09-03",
+  "credits": 5,
+  "element": "426b5347-51cc-496b-872c-991c0c26de48 (kanon-face-only-v1，純臉緊裁切，0 credits)",
+  "template": "2026-09-03 定案版（wanyin 建立）：約 330–380 字散文、一句話佈光、明寫鏡頭距離但不擬人化拍攝者、完整第二人物排除句、無固定風格尾巴",
+  "single_subject": "5 個場景本身即合理獨處（自己房間、開店前的店裡、深夜公寓外走廊）",
+  "ip_safety": "Cosplay 服裝一律寫成她自己原創設計，不指涉任何既有作品角色",
+  "outcome": "5 張臉全部與 master 一致。1 張有虹膜缺陷需重生；2 張服裝偏離指定；1 張轉身幅度超出指定。"
+ }
+}
