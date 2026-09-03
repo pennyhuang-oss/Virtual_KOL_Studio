@@ -7,6 +7,7 @@
  * 🛑 不輸出任何狀態、handle、三圍、prompt／模型／credits、營運統計期間。
  */
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 
 const DIR = path.join(import.meta.dirname, '..');
@@ -40,14 +41,29 @@ function market(loc = '') {
   return '跨區';
 }
 
+// 🛑 素材網址一定要帶內容雜湊。
+// 2026-09-03 踩到：伺服器對 /assets/ 送 `max-age=604800`（七天），
+// 而 `hero.jpg` 這種網址是固定的、內容卻會換。換完圖之後使用者的瀏覽器
+// 七天內都拿自己的舊快取，看到的還是舊封面——而且**客戶也會遇到同一件事**，
+// 那不是「叫他重新整理」能解決的。
+// → 網址後面接 `?v=<內容雜湊>`：內容一變網址就變，快取自然失效，
+//   而沒變的檔案仍然享有七天快取。
+const vtag = (abs) => {
+  try {
+    const h = crypto.createHash('md5').update(fs.readFileSync(abs)).digest('hex').slice(0, 10);
+    return '?v=' + h;
+  } catch { return ''; }
+};
+
 const assetsOf = id => {
   const d = path.join(DIR, 'assets', id);
   let files = []; try { files = fs.readdirSync(d); } catch {}
   const gal = files.filter(f => /^g\d+\.jpg$/.test(f)).sort();
+  const u = f => `/assets/${id}/${f}` + vtag(path.join(d, f));
   return {
-    hero: files.includes('hero.jpg') ? `/assets/${id}/hero.jpg` : (gal[0] ? `/assets/${id}/${gal[0]}` : null),
-    gallery: gal.map(f => ({ web: `/assets/${id}/${f}`, thumb: `/assets/${id}/${f.replace('.jpg', '_t.jpg')}` })),
-    posters: files.filter(f => /_poster\.jpg$/.test(f)).sort().map(f => `/assets/${id}/${f}`),
+    hero: files.includes('hero.jpg') ? u('hero.jpg') : (gal[0] ? u(gal[0]) : null),
+    gallery: gal.map(f => ({ web: u(f), thumb: u(f.replace('.jpg', '_t.jpg')) })),
+    posters: files.filter(f => /_poster\.jpg$/.test(f)).sort().map(u),
   };
 };
 

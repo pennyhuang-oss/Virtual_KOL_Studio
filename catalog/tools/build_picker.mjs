@@ -17,6 +17,7 @@
  * 用法：node catalog/tools/build_picker.mjs
  */
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
@@ -71,7 +72,9 @@ for (const p of cat.personas) {
     rows.push({
       key, rel: it.rel,
       name: it.rel.split('/').slice(3).join('/'),      // 去掉 repo/kols/<persona>/
-      thumb: `/assets/_pick/${p.id}/${key}.jpg`,
+      // 同樣帶內容雜湊，理由見 build_site.mjs 的 vtag 註解
+      thumb: `/assets/_pick/${p.id}/${key}.jpg?v=` +
+        crypto.createHash('md5').update(fs.readFileSync(out)).digest('hex').slice(0, 10),
       w: it.w, h: it.h, blocked: it.blocked,
       on: currentDefault.includes(it.rel),
       hero: it.rel === currentHero,
