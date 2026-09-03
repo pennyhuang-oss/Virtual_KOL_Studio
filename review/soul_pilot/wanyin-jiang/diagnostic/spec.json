@@ -59,5 +59,27 @@
   "note_on_my_earlier_call": "我在跑這個測試之前判斷根因最可能是 (d)+(e)+(g)、並說 (a) 未獲證實。測試結果相反：(a) 才是對的，也就是 C0_result.json 最初記錄的那個 finding 本來就正確。",
   "open_question": "element 裡的哪個成分造成壓制？目前的 element 裁切含頸部與肩線起始處，模型可能以此外推整個體型。尚未測試更緊的純臉裁切。"
  },
- "credits_spent": 3
+ "credits_spent": 4,
+ "T4": {
+  "purpose": "覆核 Q-11 路線 1：三個修正一次上，測 element 壓制能否解除",
+  "changes": [
+   "純臉緊裁切 element_face_tight.jpg（1249x1382，切在下巴下方 15% 臉高，不含頸根、肩線、衣領）",
+   "category 填 auto",
+   "description 明寫「只提供臉部身分，不得推導身高／骨架／胸腰臀」"
+  ],
+  "element": {
+   "id": "a0e68491-43ac-40c8-99d5-fec60596ac50",
+   "name": "wanyin-face-only-v2",
+   "media_id": "d665c533-cb31-4ce8-a1cb-af5bcabb2864",
+   "cost": "0 credits"
+  },
+  "prompt": "與 baseline 逐字相同，只換 element token",
+  "seed": 148828,
+  "job": "b2182535-8965-41bb-bda5-3d789acb3c6f",
+  "file": "T4_faceonly.jpg",
+  "finding_category": "填 auto，伺服器回傳 category = 'auto:character'。auto 仍被歸類為 character，所以 category 這個變因實際上關不掉，不能算已排除。",
+  "result_body": "部分改善。胸型有出來、有可見輪廓，明顯優於 baseline，但仍不及完全不掛 element 的 T3。",
+  "result_face": "疑似漂移——眼型較窄上揚、眉較平直、臉較長，與 master 有差距。但全身圖裡臉部像素少，我是放大小區域判讀，這一項需要使用者親眼判定。",
+  "status": "待使用者判定臉部是否可接受"
+ }
 }
