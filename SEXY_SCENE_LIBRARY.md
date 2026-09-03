@@ -275,6 +275,48 @@ streaking past out of focus
      ⚠️ n=2、單一室內場景，**高反差場景（有窗／有天空）尚未驗證**，不要當成全域結論。
      完整紀錄見 `CALIBRATION_TEST.md` §24 與 `review/restaurant-b1/LEDGER.md` #15。
 
+### 3-E. 全身照的朝向要寫鏡頭位置，不要寫身體姿勢（2026-09-03，連續三位都踩到）
+
+**事件**：`wanyin`、`kanon`、`cheryl` 三位的訓練集，**每一位的全身照都站得像證件照**，
+而同一位的胸上／腰上照都自然。使用者指出這兩張「完全不能拿來當日常素材發」。
+
+**原因是 prompt，不是模型。** 比對後確認：這句只出現在全身那幾張，其餘一句都沒有——
+
+> She is facing the camera: her face, the front of her body and both shoulders are toward the lens
+> and **her feet point toward it**. Her back is not to the camera and her head is not turned away.
+
+這句原本是為了修「模型把人轉成背面」而加的，它有效；**但它同時是一張證件照的指令**。
+再加上全身那幾張配的動作也都是靜態的（`stands still and looks at the lens`），等於鎖死兩次。
+
+**規則：朝向只寫鏡頭在哪裡，不寫身體要擺成什麼樣。**
+
+| 不要寫 | 改寫成 |
+|---|---|
+| `her face, the front of her body and both shoulders are toward the lens` | `The camera is in front of her, not behind her.` |
+| `her feet point toward it` | （刪除，不要寫腳的方向） |
+| `standing square to the camera` | （刪除） |
+| `She stands still and looks at the lens` | 一個**具體的、有重量的動作**（見下） |
+
+**全身照必須配一個有以下至少兩項的動作**：重心偏在一隻腳、手上拿著或正在操作某個東西、
+身體有一段正在進行的動作（蹲下、跨步、轉身中、把頭髮從領口撥出來）、視線不一定在鏡頭上。
+
+可用的寫法範例：
+
+```
+The camera is in front of her, not behind her.
+She is crouched down zipping the suitcase shut, one knee on the floor, and has just looked up.
+```
+```
+The camera is in front of her, not behind her.
+She is stepping into her shoes with one hand braced on the wardrobe door, weight on one leg,
+still looking down at what she is doing.
+```
+
+**保留**「背對鏡頭」的否定句（`Her back is not to the camera`）——那一句是有效的且不造成僵硬。
+被刪掉的是描述身體正面與雙腳方向的那部分。
+
+---
+
 ### QA-1. 小面積缺陷不得用插值放大來判讀（2026-09-03，踩過一次）
 
 **事件**：`kanon-komori` 訓練圖 #5 是全身夜景，臉約 140px、虹膜約 13px。
