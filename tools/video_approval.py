@@ -30,7 +30,8 @@ import re, sys, hashlib, glob
 
 SPECS = ['clients/sushisolar-rujiao/I2V_TEST_01.md',
          'clients/sushisolar-rujiao/I2V_TEST_02.md',
-         'clients/sushisolar-rujiao/SHOT3_SPEC.md']
+         'clients/sushisolar-rujiao/SHOT3_SPEC.md',
+         'clients/sushisolar-rujiao/SPEAK_SHOT_SPEC.md']
 
 MARK = re.compile(
     r'<!--\s*PROMPT_ID:\s*([A-Za-z0-9_]+)\s*\|\s*FP:\s*(sha1:[0-9a-f]{12}|-)\s*'

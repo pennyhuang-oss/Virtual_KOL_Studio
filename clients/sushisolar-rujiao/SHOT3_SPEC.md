@@ -313,7 +313,7 @@ v1 210 字 → v2 **221 字**。
 
 ## v2 Prompt（R22 逐字指定，221 字）
 
-<!-- PROMPT_ID: shot3_startframe_v2 | FP: sha1:b54275c37ef4 | REVIEW: R22 逐字指定 -->
+<!-- PROMPT_ID: shot3_startframe_v2 | FP: sha1:b54275c37ef4 | REVIEW: R22 逐字指定（首幀留用，改作說話鏡的 start_image） -->
 ```
 Yuna sits at a hotpot table immediately after tasting the first bowl of broth. The viewer is seated directly across the table from her. Her complete head, both shoulders, neckline, and upper torso are visible; the lower frame edge crosses both upper arms above the elbows, while the near rim of a small empty white porcelain tasting bowl rests flat on the pale stone tabletop in the extreme foreground. Her chin is slightly lowered and her eyes are fixed on the near rim of the tasting bowl resting on the tabletop, lips softly closed in a quiet moment of judgment. Deep brown to near-black naturally wavy hair falls with airy, irregular bends around her shoulders, paired with polished natural Korean-style makeup and clean luminous skin. She wears an opaque ivory mock-neck knit top with relaxed shoulders. A warm Chinese hotpot restaurant surrounds her, with a carved wooden screen, plain continuous dark-wood wall panels, amber lanterns, and two indistinct diners in the mid-ground facing their own table. An amber lantern above and to her left lights her face, while the pale stone tabletop returns a softer neutral-gold fill under her jaw. Her face and neckline are clearly exposed; the lower foreground pot edge falls into deep shadow, and the lanterns form the brightest highlights. Clear natural skin texture and fine hair detail.
 ```
@@ -487,7 +487,7 @@ R23 只問一件事——首幀已定、拿在手上，唯一要寫的是那 5 �
 
 ## v2 動畫 Prompt（R23 逐字指定，118 字）
 
-<!-- PROMPT_ID: shot3_anim_v2 | FP: sha1:7271744bbeea | REVIEW: R23 逐字指定 -->
+<!-- PROMPT_ID: shot3_anim_v2_RETIRED | FP: - | REVIEW: R23（整鏡已作廢：R24 改為 Yuna 自己說話。不得再送） -->
 ```
 A locked-off frontal close-up. She holds calm, direct eye contact with the viewer for one quiet beat, then gives one single, very small and controlled nod: her chin lowers slightly and returns once to its original neutral position. She settles into the same composed posture for the rest of the shot, her restrained expression unchanged and her lips softly closed. Her face identity, mock-neck collar, shoulders, forearms, hair, white porcelain bowl, dark pot rim, stone tabletop, background diner, carved wooden screen, dark wood panels, and amber lanterns maintain their original shapes and positions. The warm amber lantern key light and softer neutral-gold tabletop fill remain steady while the lower foreground stays in deep shadow. Quiet restaurant room tone.
 ```
@@ -653,3 +653,18 @@ R23 的表列得很清楚——點頭幅度／次數不對 → **不再花第二
 **我沒有自行決定重跑。** 交給 Penny 判斷。
 
 累計（如嬌）：鏡 1 影片 10 ＋ 鏡 2 影片 10 ＋ 鏡 3 首幀 4×0.12 ＋ 鏡 3 影片 10 = **30.48 credits**。
+
+---
+
+# 十四、整鏡作廢（2026-09-01）
+
+Penny 看完成品：
+> 「這一段影片完全看不出來要表達什麼意思，他就只是點了一下頭，這樣而已。」
+> 「他既沒有喝湯……跟食物毫無關聯。看這個畫面的人，沒有任何人會想到他是在表達這個湯很好喝。」
+
+**根因不在動畫層，在規劃層**——見 `review/restaurant-b1/LEDGER.md` #43。
+新規格見 `SPEAK_SHOT_SPEC.md`（R24）。
+
+- `shot3_anim_v2` → **`_RETIRED`**，不得再送
+- `shot3_startframe_v2` **留用**：同一張首幀改當說話鏡的 `start_image`（兩輪首幀的 0.48 credits 沒有白花）
+- 影片 10 credits 記為 sunk cost，**不塞回成片**
