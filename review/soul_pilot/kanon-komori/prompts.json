@@ -52,7 +52,20 @@
   "job": "e8379c59-7e8d-4bbb-8373-042d95b82753",
   "file": "k5.jpg",
   "verdict": "⚠️ 有缺陷",
-  "note": "全身正面成功，臉一致。**但兩眼虹膜顏色不同**——一眼偏綠褐、一眼深色。這在硬退件表屬於虹膜異常，建議重生這一張。"
+  "note": "全身正面成功，臉一致。**但兩眼虹膜顏色不同**——一眼偏綠褐、一眼深色。這在硬退件表屬於虹膜異常，建議重生這一張。",
+  "retry_v2": {
+   "job": "1ceaf9d4-f83c-4eec-8ace-6a4032a7b923",
+   "file": "k5_v2.jpg",
+   "change": "prompt 逐字不動，只加一段明確指定虹膜顏色：「Both of her eyes are the same plain dark brown. The two irises match each other exactly in colour — NOT one green eye and one brown eye, NOT hazel, NOT amber, NOT blue, NOT grey…」",
+   "verdict": "FAIL — 虹膜仍然不一致（一眼黃綠、一眼深褐），與 v1 同一個模式",
+   "finding": "顏色指定＋顏色否定在這個案例上無效。本專案先前的結論是「顏色否定有效、結構否定無效」，這是該結論的一個例外，要記進規範。",
+   "revised_hypothesis": "不是措辭問題，是場景條件：正上方單一日光燈管的強點光源 + 全身景別下臉只有約 140px。推測強高光在其中一眼的虹膜上被算成了顏色。同一場景連續兩次出現同一缺陷支持這個推論。",
+   "next_options": [
+    "改光源（不要正上方點光；改成自動販賣機的側向光或黃昏，臉不再被頂光打）",
+    "改景別讓臉更大（但第 5 張需要是全身）",
+    "換掉這個場景，改用已驗證安全的條件"
+   ]
+  }
  },
  "_meta": {
   "persona": "kanon-komori",
