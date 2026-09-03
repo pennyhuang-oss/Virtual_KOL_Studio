@@ -75,9 +75,9 @@ const assetsOf = id => {
 
 const CSS = `
 :root{
-  --bg:#0b0b0d; --bg2:#131317; --line:#26262c; --line2:#34343c;
-  --ink:#f2f2f4; --ink2:#a8a8b3; --ink3:#6f6f7c;
-  --accent:#c9a227; --accent2:#e8c85a;
+  --bg:#0b0b0d; --bg2:#1e1e26; --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.2);
+  --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
+  --accent:#d8b955; --accent2:#e7cd74;
   --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
   --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
 }
@@ -195,135 +195,254 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 .lb button{position:absolute;top:22px;right:26px;background:none;border:1px solid var(--line2);
   color:var(--ink);width:38px;height:38px;border-radius:100px;cursor:pointer;font-size:17px}
 
-/* ── 首頁（對外報價 PPT 的網頁版）────────────────────────────── */
+/* ── 首頁（對外報價 PPT 的網頁版）──────────────────────────────
+   R6 的設計裁決都落在這一段,四條原則：
+   ① 金色只給互動與選中狀態（主 CTA／active nav／hover／focus）,
+      數字與重點靠字級與 --ink 的暖白突出,不靠顏色。
+   ② 閱讀寬度收起來：引言與內文 42rem、段落標題 16ch,
+      只有比較表與圖片可以用滿 1240px。
+   ③ 13 段不再用同一種版型。框線格子只留兩段（第 4 段比較、第 11 段四大保證）,
+      其餘換成編號節點、遞進節點、橫向時間軸、無框比較列。
+   ④ 隔段底色從 #131317 改成 #1e1e26——舊值對主底只有 1.061 的對比度,
+      交替等於沒交替（實算過）。而且不再每段交替,只給需要強調的段。
+   ────────────────────────────────────────────────────────── */
 .top nav a.on{color:var(--accent2)}
-.hsec{padding:82px 0;border-bottom:1px solid var(--line)}
-.hsec:nth-child(even){background:var(--bg2)}
-.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--accent);margin:0 0 14px;font-weight:500}
-.hsec h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,40px);line-height:1.28;margin:0 0 18px;
-  font-weight:500;letter-spacing:.01em}
-.lead{color:var(--ink2);font-size:16px;max-width:720px;margin:0 0 34px}
-.kicker{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--line2);color:var(--ink);
-  font-family:var(--serif);font-size:16.5px;max-width:820px;line-height:1.75}
-.fine{color:var(--ink3);font-size:12px;margin:18px 0 0;max-width:760px;line-height:1.65}
 
-/* 開場 */
-.hhero{padding:104px 0 88px;border-bottom:1px solid var(--line);position:relative}
-.hhero h1{font-family:var(--serif);font-size:clamp(36px,6.2vw,68px);line-height:1.16;margin:0 0 26px;
-  font-weight:500;letter-spacing:.005em}
+/* 段落骨架 */
+.hsec{padding:96px 0;border-top:1px solid var(--line)}
+.hsec.tint{background:var(--bg2)}
+.hsec:first-of-type{border-top:0}
+.eyebrow{font-size:11px;margin:0 0 16px;color:var(--accent);font-weight:500;
+  display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+.eyebrow .en{letter-spacing:.22em}
+.eyebrow .zh{letter-spacing:.02em;color:var(--ink3)}
+.hsec h2{font-family:var(--serif);font-size:clamp(27px,3.7vw,42px);line-height:1.22;
+  margin:0 0 20px;font-weight:500;letter-spacing:.01em;max-width:17em;text-wrap:balance}
+/* ⚠ 標題的行長用 em 不要用 ch。實測這個字級下「1 個中文字 = 2ch」，
+   所以覆核者建議的 16ch 照字面套進中文只放得下 8 個字，9 字的標題就被斷成兩行。
+   em 在中文等於一個字寬，才是這裡要的量。內文用 rem 沒問題（那是整段的字數，不是字寬）。*/
+.lead{color:var(--ink2);font-size:16.5px;max-width:42rem;margin:0 0 40px;text-wrap:pretty}
+.kicker{margin:40px 0 0;padding-top:22px;border-top:1px solid var(--line2);color:var(--ink);
+  font-family:var(--serif);font-size:17px;max-width:46rem;line-height:1.72;text-wrap:pretty}
+.fine{color:var(--ink3);font-size:12.5px;margin:20px 0 0;max-width:42rem;line-height:1.7}
+.nw{white-space:nowrap}
+
+/* ① 開場：左 55% 文案 ＋ 右 45% 直式主視覺（4:5）*/
+.hhero{padding:0;position:relative;overflow:hidden;min-height:640px;display:flex;align-items:center}
+.hhero .wrap{width:100%;position:relative;z-index:2}
+.hhero .txt{padding:96px 0;max-width:min(55%,640px)}
+.hhero h1{font-family:var(--serif);font-size:clamp(36px,5.6vw,62px);line-height:1.14;
+  margin:0 0 28px;font-weight:500;letter-spacing:.005em;text-wrap:balance}
 .hhero h1 em{font-style:normal;color:var(--accent2)}
-.hhero .sub{max-width:640px;color:var(--ink2);font-size:17px;margin:0 0 36px}
+.hhero .sub{max-width:32rem;color:var(--ink2);font-size:17px;margin:0 0 38px;text-wrap:pretty}
+.hhero .art{position:absolute;top:0;right:0;bottom:0;width:min(46%,660px);z-index:1;
+  background:#15151a;overflow:hidden}
+.hhero .art img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+/* 左緣漸層,讓圖跟左欄連成一體,不是硬邊 */
+.hhero .art::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(11,11,13,.72) 18%,transparent 52%)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:13px 26px;border:1px solid var(--line2);border-radius:2px;
-  font-size:14px;color:var(--ink2);transition:.18s}
-.btn:hover{border-color:var(--ink3);color:var(--ink)}
-.btn.p{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
-.btn.p:hover{background:var(--accent);border-color:var(--accent);color:#17130a}
+.btn{display:inline-block;padding:14px 28px;border:1px solid var(--line2);border-radius:2px;
+  font-size:14.5px;color:var(--ink2);transition:.18s}
+.btn:hover,.btn:focus-visible{border-color:var(--accent);color:var(--accent2)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#17130a;font-weight:600}
+.btn.p:hover,.btn.p:focus-visible{background:var(--accent2);border-color:var(--accent2);color:#17130a}
 
-/* 三欄／多欄卡 */
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.col{background:var(--bg);padding:26px 24px 28px}
-.hsec:nth-child(even) .col{background:var(--bg2)}
-.col .t{font-family:var(--serif);font-size:18px;margin:0 0 9px;font-weight:500;color:var(--ink)}
-.col .n{font-size:10.5px;letter-spacing:.16em;color:var(--accent);margin:0 0 10px}
-.col .tag{display:inline-block;font-size:10.5px;letter-spacing:.1em;color:var(--accent2);
-  border:1px solid #4a3d16;padding:2px 8px;border-radius:2px;margin:0 0 12px}
-.col p{margin:0;color:var(--ink2);font-size:14px;line-height:1.72}
-.col .you{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);
-  font-size:12.5px;color:var(--ink3)}
-.col .you b{color:var(--accent2);font-weight:500}
+/* ② 編號節點（第 2 段）：三個水平節點共用一條細線 */
+.nodes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;
+  border-top:1px solid var(--line2)}
+.node{padding:26px 30px 0 0}
+.node .n{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.1em;
+  margin:0 0 12px;padding-top:2px}
+.node .t{font-family:var(--serif);font-size:19px;margin:0 0 9px;font-weight:500;color:var(--ink)}
+.node p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74;max-width:26rem}
 
-/* 兩欄對照（案例／預算）*/
+/* ③ 編號敘事列（第 3 段）：左側 72px 大編號 */
+.numrows{border-top:1px solid var(--line)}
+.numrow{display:grid;grid-template-columns:104px minmax(0,1fr);gap:28px;
+  padding:30px 0;border-bottom:1px solid var(--line);align-items:start}
+.numrow .n{font-family:var(--serif);font-size:64px;line-height:.9;color:var(--ink4)}
+.numrow .t{font-family:var(--serif);font-size:21px;margin:6px 0 10px;font-weight:500}
+.numrow p{margin:0;color:var(--ink2);font-size:15px;max-width:44rem;line-height:1.74}
+
+/* ④ 兩欄對照（第 4 段,框線保留 ── 全頁最需要直接對照的一段）*/
+.vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:3px;
+  overflow:hidden}
+.vs>div{padding:34px 32px 36px;display:grid;grid-template-rows:auto auto auto 1fr;row-gap:0}
+.vs>.b{border-left:1px solid var(--line);border-top:2px solid var(--accent)}
 /* ⚠ 標籤的 class 是 vlb 不是 lb：.lb 是燈箱，帶 display:none，撞上去整段會消失。*/
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
-  border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.vs>div{background:var(--bg);padding:28px 26px 30px}
-.hsec:nth-child(even) .vs>div{background:var(--bg2)}
-.vs .b{border-top:2px solid var(--accent)}
-.vs .vlb{font-size:11.5px;letter-spacing:.14em;color:var(--ink3);margin:0 0 12px}
-.vs .amt{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.2;margin:0 0 6px;
-  color:var(--ink)}
-.vs .b .amt{color:var(--accent2)}
-.vs .amtn{font-size:12px;color:var(--ink3);margin:0 0 20px;line-height:1.6}
-.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:13.5px}
+.vs .vlb{font-size:12px;letter-spacing:.14em;color:var(--ink3);margin:0 0 16px}
+.vs .amt{font-family:var(--serif);font-size:clamp(38px,4.6vw,66px);line-height:1.02;
+  margin:0 0 10px;color:var(--ink);letter-spacing:-.01em}
+.vs .amtn{font-size:12.5px;color:var(--ink3);margin:0 0 28px;line-height:1.65;max-width:30rem}
+.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 18px;font-size:14.5px;
+  align-content:start}
 .vs dt{color:var(--ink3);white-space:nowrap}
 .vs dd{margin:0;color:var(--ink2)}
 
-/* 條列型（永續／突破／適合／保證） */
-.rows{border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.row3{display:grid;grid-template-columns:170px 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
-.row2{display:grid;grid-template-columns:190px 1fr;gap:0;border-bottom:1px solid var(--line)}
-.row3:last-child,.row2:last-child{border-bottom:0}
-.row3>div,.row2>div{padding:20px 22px;border-right:1px solid var(--line)}
-.row3>div:last-child,.row2>div:last-child{border-right:0}
-.row3 .k,.row2 .k{font-family:var(--serif);font-size:15.5px;color:var(--ink)}
-.row3 .was{color:var(--ink3);font-size:13.5px}
-.row3 .now,.row2 .v{color:var(--ink2);font-size:14px}
-.row3 .now{color:var(--ink)}
-.rhead{display:grid;grid-template-columns:170px 1fr 1fr;background:var(--bg2);
-  border-bottom:1px solid var(--line2);font-size:11px;letter-spacing:.14em;color:var(--ink3)}
-.hsec:nth-child(even) .rhead{background:var(--bg)}
-.rhead>div{padding:11px 22px;border-right:1px solid var(--line)}
-.rhead>div:last-child{border-right:0}
-.rhead .hl{color:var(--accent2)}
+/* ⑤ 分叉圖（第 5 段）：中央大數字 → 左右兩種用法 → 跨欄結論 */
+.fork{max-width:960px}
+.fork .trunk{position:relative;height:44px}
+.fork .trunk::after{content:"";position:absolute;left:50%;top:0;width:1px;height:44px;
+  background:var(--line2)}
+/* 整段置中（只有這一段）:h2 本身就是那個放大的數字,不要再重複印一次 */
+.hsec.mid{text-align:center}
+.hsec.mid .eyebrow{justify-content:center}
+.hsec.mid h2{margin-left:auto;margin-right:auto}
+.hsec.mid .lead,.hsec.mid .kicker,.hsec.mid .fine{margin-left:auto;margin-right:auto}
+.hsec.mid .fork{margin:0 auto}
+.hsec.mid .fork .arm,.hsec.mid .fork .both{text-align:left}
+.hsec.mid .kicker{border-top:0;padding-top:0}
+.fork .arms{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border-top:1px solid var(--line2)}
+.fork .arm{background:var(--bg);padding:26px 28px 28px}
+.hsec.tint .fork .arm{background:var(--bg2)}
+.fork .arm .k{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:500}
+.fork .arm p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.fork .both{border-top:1px solid var(--line2);padding:24px 28px 0;margin-top:1px}
+.fork .both .k{font-family:var(--serif);font-size:17px;color:var(--accent2);margin:0 0 8px}
+.fork .both p{margin:0;color:var(--ink2);font-size:14.5px;max-width:44rem;line-height:1.74}
 
-/* 精選預覽（第 8 段）*/
-.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:18px;margin-bottom:30px}
-.fcard{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden;
-  transition:.2s;display:block}
-.hsec:nth-child(even) .fcard{background:var(--bg)}
-.fcard:hover{border-color:var(--line2);transform:translateY(-3px)}
-.fcard .ph{aspect-ratio:3/4;background:#1a1a20;overflow:hidden}
-.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.4s}
-.fcard:hover .ph img{transform:scale(1.03)}
-.fcard .bd{padding:14px 15px 16px}
-.fcard .nm{font-family:var(--serif);font-size:17px;margin:0 0 3px;font-weight:500}
-.fcard .zh{font-size:11.5px;color:var(--ink3);margin:0 0 8px}
-.fcard .mt{font-size:11px;color:var(--accent2);letter-spacing:.04em;margin:0}
+/* ⑥ 遞進節點（第 6 段）：大字由左向右,無框 */
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px}
+.st3{position:relative;padding-top:24px;border-top:1px solid var(--line2)}
+.st3 .t{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);margin:0 0 12px;font-weight:500;
+  line-height:1.3}
+.st3 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.st3::before{content:"→";position:absolute;top:-14px;left:-24px;color:var(--ink4);font-size:15px}
+.st3:first-child::before{content:none}
 
-/* AI 揭露（首頁第 2 段內，R5 要求不能掉到後段）*/
-.hsec .disclose{margin-top:34px;max-width:none}
+/* ⑦ 無框比較列（第 7 段）：左灰 → 細箭頭 → 右白 */
+.cmp{border-top:1px solid var(--line2)}
+.cmphead{display:grid;grid-template-columns:150px 1fr 24px 1fr;gap:20px;padding:12px 0;
+  font-size:11px;letter-spacing:.14em;color:var(--ink3);border-bottom:1px solid var(--line)}
+.cmphead .hl{color:var(--accent2)}
+.cmprow{display:grid;grid-template-columns:150px 1fr 24px 1fr;gap:20px;padding:24px 0;
+  border-bottom:1px solid var(--line);align-items:baseline}
+.cmprow:last-child{border-bottom:0}
+.cmprow .k{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.cmprow .was{color:var(--ink3);font-size:14.5px;line-height:1.7}
+.cmprow .ar{color:var(--ink4);text-align:center;font-size:14px}
+.cmprow .now{color:var(--ink);font-size:14.5px;line-height:1.7}
+
+/* ⑧ 精選預覽（第 8 段）：圖片本身就是版型,不加裝飾框 */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:38px}
+.fcard{display:block;transition:.2s}
+.fcard .ph{aspect-ratio:4/5;background:#15151a;overflow:hidden}
+.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.45s}
+.fcard:hover .ph img,.fcard:focus-visible .ph img{transform:scale(1.04)}
+.fcard .bd{padding:15px 0 0}
+.fcard .nm{font-family:var(--serif);font-size:18px;margin:0 0 4px;font-weight:500}
+.fcard .zh{font-size:12px;color:var(--ink3);margin:0 0 7px}
+.fcard .mt{font-size:11.5px;color:var(--ink4);letter-spacing:.06em;margin:0}
+.fcard:hover .mt,.fcard:focus-visible .mt{color:var(--accent2)}
+
+/* ⑨⑫ 橫向時間軸（第 9、12 段）：數字在線上 */
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px;
+  position:relative}
+.tl::before{content:"";position:absolute;top:9px;left:0;right:0;height:1px;background:var(--line2)}
+.tlstep{position:relative;padding-top:38px}
+.tlstep::before{content:"";position:absolute;top:5px;left:0;width:9px;height:9px;border-radius:50%;
+  background:var(--accent)}
+.tlstep .n{position:absolute;top:0;left:22px;font-size:11px;letter-spacing:.16em;color:var(--accent);
+  line-height:19px}
+.tlstep .t{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:500}
+.tlstep p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.tlstep .you{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--ink3)}
+.tlstep .you b{color:var(--ink);font-weight:500}
+
+/* ⑩ 大型受眾標題（第 10 段）*/
+.aud{border-top:1px solid var(--line)}
+.aud>div{padding:30px 0;border-bottom:1px solid var(--line)}
+.aud .k{font-family:var(--serif);font-size:clamp(21px,2.5vw,28px);margin:0 0 12px;font-weight:500;
+  line-height:1.3}
+.aud p{margin:0 0 0 clamp(0px,3vw,40px);color:var(--ink2);font-size:15px;max-width:44rem;
+  line-height:1.74}
+
+/* ⑪ 四大保證（第 11 段,框線保留 ── 四項要能各自掃讀）*/
+.cards4{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:18px}
+.c4{border:1px solid var(--line);border-radius:3px;padding:26px 26px 28px;transition:.18s}
+.c4:hover,.c4:focus-within{border-color:var(--accent)}
+.c4 .t{font-family:var(--serif);font-size:18px;margin:0 0 10px;font-weight:500}
+.c4 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+
+/* AI 揭露 */
+.hsec .disclose{margin-top:44px;max-width:46rem;border-left:2px solid var(--accent);
+  background:rgba(216,185,85,.05);padding:18px 22px;border-radius:0 3px 3px 0}
+.hsec .disclose b{color:var(--accent2);font-weight:600}
+.hsec .disclose p{margin:7px 0 0;color:var(--ink2);font-size:13.5px;line-height:1.7}
 
 /* 報價頁 */
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px}
-.plan{border:1px solid var(--line);border-radius:3px;padding:30px 26px 32px;background:var(--bg2);
-  display:flex;flex-direction:column}
-.plan.f{border-color:var(--accent);background:linear-gradient(180deg,rgba(201,162,39,.07),transparent 60%)}
-.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
-.plan h3{font-family:var(--serif);font-size:22px;margin:0 0 16px;font-weight:500}
-.plan .pr{font-family:var(--serif);font-size:32px;color:var(--accent2);line-height:1.1;margin:0 0 22px}
+.plan{border:1px solid var(--line);border-radius:3px;padding:32px 28px 34px;
+  display:flex;flex-direction:column;transition:.18s}
+.plan:hover{border-color:var(--line2)}
+.plan.f{border-color:var(--accent);background:rgba(216,185,85,.05)}
+.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 14px}
+.plan h3{font-family:var(--serif);font-size:23px;margin:0 0 18px;font-weight:500}
+.plan .pr{font-family:var(--serif);font-size:34px;color:var(--ink);line-height:1.1;margin:0 0 24px}
 .plan .pr i{font-style:normal;font-size:14px;color:var(--ink3);font-family:var(--sans)}
+.plan.f .pr{color:var(--accent2)}
 .plan ul{list-style:none;padding:0;margin:0}
-.plan li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink2)}
+.plan li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2);
+  line-height:1.66}
 .plan li:last-child{border-bottom:0}
 .qa{border-top:1px solid var(--line)}
-.qa>div{border-bottom:1px solid var(--line);padding:22px 0}
-.qa .q{font-family:var(--serif);font-size:17px;margin:0 0 9px;color:var(--ink)}
-.qa .a{margin:0;color:var(--ink2);font-size:14.5px;max-width:840px}
+.qa>div{border-bottom:1px solid var(--line);padding:26px 0}
+.qa .q{font-family:var(--serif);font-size:18px;margin:0 0 10px;color:var(--ink)}
+.qa .a{margin:0;color:var(--ink2);font-size:15px;max-width:46rem;line-height:1.74}
 
 /* 收尾 */
-.close{padding:96px 0 104px;text-align:center}
-.close h2{font-family:var(--serif);font-size:clamp(24px,3.4vw,36px);line-height:1.4;margin:0 auto 32px;
-  max-width:900px;font-weight:500}
+.close{padding:104px 0 112px;text-align:center;border-top:1px solid var(--line)}
+.close h2{font-family:var(--serif);font-size:clamp(25px,3.4vw,38px);line-height:1.4;
+  margin:0 auto 36px;max-width:22em;font-weight:500;text-wrap:balance}
 .close .btns{justify-content:center}
 
-@media(max-width:820px){
+@media(max-width:900px){
+  .feat{grid-template-columns:repeat(2,1fr)}
   .vs{grid-template-columns:1fr}
-  .row3,.rhead{grid-template-columns:1fr}
-  .row2{grid-template-columns:1fr}
-  .row3>div,.row2>div,.rhead>div{border-right:0;border-bottom:1px solid var(--line)}
-  .row3>div:last-child,.row2>div:last-child,.rhead>div:last-child{border-bottom:0}
-  .rhead{display:none}
-  .hhero{padding:64px 0 56px}
-  .hsec{padding:56px 0}
+  .vs>.b{border-left:0;border-top:2px solid var(--accent)}
+  .fork .arms{grid-template-columns:1fr}
+  .cmphead{display:none}
+  .cmprow{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .cmprow .ar{display:none}
+  .cmprow .was::before{content:"傳統：";color:var(--ink4)}
+  .cmprow .now::before{content:"數位人：";color:var(--accent2)}
+  .numrow{grid-template-columns:60px minmax(0,1fr);gap:18px}
+  .numrow .n{font-size:38px}
+  .st3::before{content:none}
+  /* 時間軸轉成沿左側的垂直線 */
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl::before{top:0;bottom:0;left:4px;right:auto;width:1px;height:auto}
+  .tlstep{padding:0 0 30px 26px}
+  .tlstep::before{top:6px}
+  .tlstep .n{position:static;display:block;margin:0 0 8px}
+  /* 首屏改成 小標＋標題 → 16:10 橫裁圖 → 引言＋按鈕 */
+  .hhero{min-height:0;display:block;padding:56px 0 0}
+  .hhero .wrap{display:flex;flex-direction:column}
+  .hhero .txt{display:contents}
+  .hhero .eyebrow{order:1}
+  .hhero h1{order:2;margin-bottom:26px}
+  .hhero .art{position:static;order:3;width:auto;aspect-ratio:16/10;margin:0 0 30px}
+  .hhero .art::after{background:linear-gradient(180deg,transparent 60%,rgba(11,11,13,.5) 100%)}
+  .hhero .art img{object-position:50% 22%}
+  .hhero .sub{order:4}
+  .hhero .btns{order:5;margin-bottom:60px}
+  .hsec{padding:60px 0}
+  .close{padding:70px 0 78px}
 }
 footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
 footer p{margin:0 0 7px;max-width:720px}
 @media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
 `;
 
-const layout = (title, body, { desc = '', nav = '' } = {}) => `<!doctype html>
+// 🛑 貼到 LINE／Slack／Messenger 的預覽卡靠 og: 標籤,沒有就是一片空白。
+// 這個網址的用途就是被轉傳（使用者 2026-08-31：「完全公開，可以讓人任意轉傳」），
+// 所以預覽卡不是加分項。⚠ og:image 一定要絕對網址,相對路徑抓不到。
+const SITE = 'https://kol-catalog-production.up.railway.app';
+
+const layout = (title, body, { desc = '', nav = '', ogImage = '' } = {}) => `<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
@@ -331,6 +450,15 @@ const layout = (title, body, { desc = '', nav = '' } = {}) => `<!doctype html>
 <meta name="robots" content="noindex,nofollow">
 <title>${esc(title)}</title>
 ${desc ? `<meta name="description" content="${esc(desc)}">` : ''}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="兌心科技　數位人 KOL 品牌顧問服務">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="${esc(title)}">
+${desc ? `<meta property="og:description" content="${esc(desc)}">` : ''}
+${ogImage ? `<meta property="og:image" content="${esc(SITE + ogImage)}">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1440">
+<meta name="twitter:card" content="summary_large_image">` : `<meta name="twitter:card" content="summary">`}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -481,7 +609,8 @@ ${people.map((p, i) => `<div class="cell" data-cat="${esc(catLabel(p.category))}
   apply();
 })();
 </script>
-`, { desc: '可合作的虛擬 KOL 型錄，含完整角色設定與可用素材。', nav: 'kols' });
+`, { desc: '可合作的虛擬 KOL 型錄，含完整角色設定與可用素材。', nav: 'kols',
+     ogImage: (people[0] && people[0].a.hero) || '' });
 
 // ── 人設頁 ──────────────────────────────────────────────────────────
 const personPage = p => {
@@ -542,26 +671,27 @@ const personPage = p => {
   <p>${esc(p.name)} 為 AI 生成的虛擬角色，非真實人物。</p>
   <p><a href="/kols.html">← 回到全部人設</a></p>
 </div></footer>
-`, { desc: p.tagline || '', nav: 'kols' });
+`, { desc: p.tagline || '', nav: 'kols', ogImage: p.a.hero || '' });
 };
 
 
 // ── 首頁：對外報價 PPT 的網頁版 ──────────────────────────────────
 // 使用者 2026-09-03：「我現在就是想把對外報價的 PPT 轉成網頁版的 dashboard。」
 // 段落與 PPT 頁次的對應表在覆核包 §12.2（13 段）。
-// 🛑 PPT 的 p15 方案報價與 p16 常見問題不在首頁,搬去 /pricing.html。
-// 🛑 文字全部來自 pitch.json,這裡只排版,不改一個字（業務承諾）。
+// 🛑 PPT 的 p15 方案報價與 p16 常見問題不在首頁，搬去 /pricing.html。
+// 🛑 文字全部來自 pitch.json，這裡只排版，不改一個字（業務承諾）。
+// ⚠ R6（2026-09-03）之後每一段的版型都不一樣了，改法逐段記在 §14／§12.8。
 const P = pitch;
 
-// 第 8 段的精選預覽。🛑 放哪幾位由使用者在 copy.json 的 `featured` 指定,
-// 程式不自己挑（覆核包 §12.2 的 R5 規定）。指名的人設若不在型錄裡就跳過。
+// 第 8 段的精選預覽、第 1 段的主視覺。
+// 🛑 都是使用者指定的，程式不自己挑（§0.4「哪一張圖」是她的；§12.2 的 R5 規定）。
 const featured = (copy.featured || [])
   .map(id => people.find(p => p.id === id))
   .filter(Boolean);
 
-// 🛑 寫成程式擋住,不要只寫成規則（這個 repo 的教訓：文件會再犯,程式不會）。
-// R5 否決了「第 8 段只放一個文字連結」,理由是客戶點擊之前就要先看到真的有人設有素材。
-// 所以這一段少於 3 位就不是那個規劃,直接不要產出。
+// 🛑 寫成程式擋住，不要只寫成規則（這個 repo 的教訓：文件會再犯，程式不會）。
+// R5 否決了「第 8 段只放一個文字連結」，理由是客戶點擊之前就要先看到真的有人設有素材。
+// 所以這一段少於 3 位就不是那個規劃，直接不要產出。
 if (featured.length < 3) {
   console.error(`🛑 首頁精選預覽只湊到 ${featured.length} 位（規劃要求 3〜4 位）。`);
   console.error(`   copy.json 的 \`featured\` = ${JSON.stringify(copy.featured || [])}`);
@@ -574,39 +704,59 @@ if (featured.some(p => !p.a.hero)) {
   process.exit(2);
 }
 
-const cols = (arr, n = '') => `<div class="cols">${arr.map(c => `<div class="col">
-  ${c.n ? `<p class="n">${esc(c.n)}</p>` : ''}
-  ${c.tag ? `<span class="tag">${esc(c.tag)}</span>` : ''}
-  <p class="t">${esc(c.t)}</p>
-  <p>${esc(c.p)}</p>
-  ${c.you ? `<p class="you">您要做的：<b>${esc(c.you)}</b></p>` : ''}
-</div>`).join('')}</div>${n ? `<p class="kicker">${esc(n)}</p>` : ''}`;
+const heroPerson = people.find(p => p.id === copy.hero_persona);
+if (!heroPerson || !heroPerson.a.hero) {
+  console.error(`🛑 首屏主視覺指定的人設找不到或沒有封面圖：${copy.hero_persona}`);
+  console.error('   → 改 copy.json 的 `hero_persona`（要是 catalog.json 裡有封面的人設 id）。');
+  process.exit(2);
+}
 
-const rows2 = arr => `<div class="rows">${arr.map(([k, v]) => `<div class="row2">
-  <div class="k">${esc(k)}</div><div class="v">${esc(v)}</div></div>`).join('')}</div>`;
+// 中英混排的小標：英文要字距、中文不要，不然「什 麼 是」會被拉散（R6 Q24 第 3 點）。
+const eyebrow = s => {
+  // ⚠ 不能靠「｜」來分中英——`hero.eyebrow` 是「方案與報價提案 · 2026」，沒有分隔符號，
+  //   整串套上英文字距會被拉成「方 案 與 報 價」。所以直接按字元切 ASCII 段與中文段。
+  const parts = String(s).match(/[^\u2e80-\u9fff\uff00-\uffef]+|[\u2e80-\u9fff\uff00-\uffef]+/g) || [];
+  return `<p class="eyebrow">` + parts.map(t =>
+    /[\u2e80-\u9fff\uff00-\uffef]/.test(t)
+      ? `<span class="zh">${esc(t.trim())}</span>`
+      : `<span class="en">${esc(t.trim())}</span>`
+  ).filter(x => !/>\s*<\/span>$/.test(x)).join('') + `</p>`;
+};
 
-const vsSide = (d, cls) => `<div class="${cls}">
-  <p class="vlb">${esc(d.label)}</p>
-  <p class="amt">${esc(d.amount)}</p>
-  <p class="amtn">${esc(d.amount_note)}</p>
-  <dl>${d.rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
-</div>`;
+// 不可拆的詞包成 nowrap，手機才不會留下單字孤行（R6 Q21 第 3 點；390px 實測過 7 處）。
+const NOWRAP = ['NT$2,000,000', 'NT$110,000', 'NT$65,000', 'NT$35,000', 'NT$3,000', 'NT$200',
+  '3 次確認', '2 小時', '32.5 萬', '6.5 萬', '30 天', '6 平台', '6 大平台', 'B2C',
+  '找出缺口', '免費品牌健檢', '3 週'];
+const nw = s => {
+  let o = esc(s);
+  for (const t of NOWRAP) o = o.split(esc(t)).join(`<span class="nw">${esc(t)}</span>`);
+  return o;
+};
+
+const pad2 = i => String(i + 1).padStart(2, '0');
 
 const homePage = layout('虛擬 KOL 品牌顧問服務 — 兌心科技', `
 <div class="hhero"><div class="wrap">
-  <p class="eyebrow">${esc(P.hero.eyebrow)}</p>
-  <h1>${P.hero.title_lines.map((l, i) => i === P.hero.title_lines.length - 1
-      ? `<em>${esc(l)}</em>` : esc(l)).join('<br>')}</h1>
-  <p class="sub">${esc(P.hero.sub)}</p>
-  <div class="btns">${P.hero.cta.map(c =>
-    `<a class="btn${c.primary ? ' p' : ''}" href="${esc(c.href)}">${esc(c.label)}</a>`).join('')}</div>
+  <div class="txt">
+    ${eyebrow(P.hero.eyebrow)}
+    <h1>${P.hero.title_lines.map((l, i) => i === P.hero.title_lines.length - 1
+        ? `<em>${esc(l)}</em>` : esc(l)).join('<br>')}</h1>
+    <p class="sub">${nw(P.hero.sub)}</p>
+    <div class="btns">${P.hero.cta.map(c =>
+      `<a class="btn${c.primary ? ' p' : ''}" href="${esc(c.href)}">${esc(c.label)}</a>`).join('')}</div>
+  </div>
+  <div class="art">
+    <img src="${heroPerson.a.hero}" alt="虛擬 KOL 形象範例" width="1080" height="1350">
+  </div>
 </div></div>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.what.eyebrow)}</p>
+  ${eyebrow(P.what.eyebrow)}
   <h2>${esc(P.what.title)}</h2>
-  <p class="lead">${esc(P.what.lead)}</p>
-  ${cols(P.what.pillars.map(x => ({ t: x.k, p: x.v })), P.what.note)}
+  <p class="lead">${nw(P.what.lead)}</p>
+  <div class="nodes">${P.what.pillars.map((x, i) => `<div class="node">
+    <p class="n">${pad2(i)}</p><p class="t">${esc(x.k)}</p><p>${nw(x.v)}</p></div>`).join('')}</div>
+  <p class="kicker">${nw(P.what.note)}</p>
   <div class="disclose">
     <b>這些 KOL 是 AI 生成的虛擬人物。</b>
     <p>不是真人。所有肖像、聲音與影片皆由本團隊自行生成，人設、語氣與內容規範亦為原創；
@@ -615,58 +765,73 @@ const homePage = layout('虛擬 KOL 品牌顧問服務 — 兌心科技', `
   </div>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.value.eyebrow)}</p>
+<section class="hsec tint"><div class="wrap">
+  ${eyebrow(P.value.eyebrow)}
   <h2>${esc(P.value.title)}</h2>
-  ${cols(P.value.cards.map(c => ({ tag: c.tag, t: c.h, p: c.p })))}
+  <div class="numrows">${P.value.cards.map((c, i) => `<div class="numrow">
+    <div class="n">${pad2(i)}</div>
+    <div><p class="t">${esc(c.h)}</p><p>${nw(c.p)}</p></div></div>`).join('')}</div>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.why_public.eyebrow)}</p>
+  ${eyebrow(P.why_public.eyebrow)}
   <h2>${esc(P.why_public.title)}</h2>
-  <p class="lead">${esc(P.why_public.lead)}</p>
+  <p class="lead">${nw(P.why_public.lead)}</p>
   <div class="vs">
-    ${vsSide(P.why_public.compare.a, 'a')}
-    ${vsSide(P.why_public.compare.b, 'b')}
+    ${[['a', P.why_public.compare.a], ['b', P.why_public.compare.b]].map(([cls, d]) => `<div class="${cls}">
+      <p class="vlb">${esc(d.label)}</p>
+      <p class="amt">${nw(d.amount)}</p>
+      <p class="amtn">${nw(d.amount_note)}</p>
+      <dl>${d.rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${nw(v)}</dd>`).join('')}</dl>
+    </div>`).join('')}
   </div>
-  <p class="kicker">${esc(P.why_public.kicker)}</p>
-  <p class="fine">${esc(P.why_public.disclaimer)}</p>
+  <p class="kicker">${nw(P.why_public.kicker)}</p>
+  <p class="fine">${nw(P.why_public.disclaimer)}</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.budget.eyebrow)}</p>
-  <h2>${esc(P.budget.title)}</h2>
-  ${rows2(P.budget.rows.map(r => [r.k, r.v]))}
-  <p class="kicker">${esc(P.budget.note)}</p>
-  <p class="fine">${esc(P.budget.footnote)}</p>
+<section class="hsec mid"><div class="wrap">
+  ${eyebrow(P.budget.eyebrow)}
+  <h2>${nw(P.budget.title)}</h2>
+  <div class="fork">
+    <div class="trunk" aria-hidden="true"></div>
+    <div class="arms">${P.budget.rows.slice(0, 2).map(r => `<div class="arm">
+      <p class="k">${esc(r.k)}</p><p>${nw(r.v)}</p></div>`).join('')}</div>
+    ${P.budget.rows[2] ? `<div class="both">
+      <p class="k">${esc(P.budget.rows[2].k)}</p><p>${nw(P.budget.rows[2].v)}</p></div>` : ''}
+  </div>
+  <p class="kicker">${nw(P.budget.note)}</p>
+  <p class="fine">${nw(P.budget.footnote)}</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.legacy.eyebrow)}</p>
+<section class="hsec tint"><div class="wrap">
+  ${eyebrow(P.legacy.eyebrow)}
   <h2>${esc(P.legacy.title)}</h2>
-  <p class="lead">${esc(P.legacy.lead)}</p>
-  ${rows2(P.legacy.rows)}
+  <p class="lead">${nw(P.legacy.lead)}</p>
+  <div class="steps3">${P.legacy.rows.map(([k, v]) => `<div class="st3">
+    <p class="t">${esc(k)}</p><p>${nw(v)}</p></div>`).join('')}</div>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.breakthrough.eyebrow)}</p>
+  ${eyebrow(P.breakthrough.eyebrow)}
   <h2>${esc(P.breakthrough.title)}</h2>
-  <div class="rows">
-    <div class="rhead"><div></div><div>傳統製作的限制</div><div class="hl">數位人 KOL</div></div>
-    ${P.breakthrough.rows.map(([k, was, now]) => `<div class="row3">
-      <div class="k">${esc(k)}</div><div class="was">${esc(was)}</div>
-      <div class="now">${esc(now)}</div></div>`).join('')}
+  <div class="cmp">
+    <div class="cmphead"><div></div><div>傳統製作的限制</div><div></div><div class="hl">數位人 KOL</div></div>
+    ${P.breakthrough.rows.map(([k, was, now]) => `<div class="cmprow">
+      <div class="k">${esc(k)}</div>
+      <div class="was">${nw(was)}</div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="now">${nw(now)}</div></div>`).join('')}
   </div>
-  <p class="fine">${esc(P.breakthrough.note)}</p>
+  <p class="fine">${nw(P.breakthrough.note)}</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">CATALOGUE｜看實際的人設與素材</p>
+<section class="hsec tint"><div class="wrap">
+  ${eyebrow('CATALOGUE｜看實際的人設與素材')}
   <h2>不必想像，直接看</h2>
   <p class="lead">每一位都有完整的人物設定、內容主題與視覺調性，並且已經產出可用的圖像與影片素材。
   點進任何一位，都能直接在網頁上看完他全部的素材。</p>
   <div class="feat">${featured.map(p => `<a class="fcard" href="/p/${esc(p.id)}.html">
-    <div class="ph">${p.a.hero ? `<img src="${p.a.hero}" alt="${esc(p.name)}" loading="lazy" width="1080" height="1440">` : ''}</div>
+    <div class="ph"><img src="${p.a.hero}" alt="${esc(p.name)}" loading="lazy" width="1080" height="1350"></div>
     <div class="bd">
       <p class="nm">${esc(p.name)}</p>
       <p class="zh">${esc([p.name_zh, p.mk].filter(Boolean).join(' · '))}</p>
@@ -676,33 +841,40 @@ const homePage = layout('虛擬 KOL 品牌顧問服務 — 兌心科技', `
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.engine.eyebrow)}</p>
+  ${eyebrow(P.engine.eyebrow)}
   <h2>${esc(P.engine.title)}</h2>
-  <p class="lead">${esc(P.engine.lead)}</p>
-  ${cols(P.engine.steps.map(x => ({ n: x.n, t: x.t, p: x.p })))}
+  <p class="lead">${nw(P.engine.lead)}</p>
+  <div class="tl">${P.engine.steps.map(x => `<div class="tlstep">
+    <p class="n">${esc(x.n)}</p><p class="t">${esc(x.t)}</p><p>${nw(x.p)}</p></div>`).join('')}</div>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.fit.eyebrow)}</p>
-  <h2>${esc(P.fit.title)}</h2>
-  <p class="lead">${esc(P.fit.lead)}</p>
-  ${rows2(P.fit.rows)}
+  ${eyebrow(P.fit.eyebrow)}
+  <h2>${nw(P.fit.title)}</h2>
+  <p class="lead">${nw(P.fit.lead)}</p>
+  <div class="aud">${P.fit.rows.map(([k, v]) => `<div>
+    <p class="k">${esc(k)}</p><p>${nw(v)}</p></div>`).join('')}</div>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.quality.eyebrow)}</p>
+<section class="hsec tint"><div class="wrap">
+  ${eyebrow(P.quality.eyebrow)}
   <h2>${esc(P.quality.title)}</h2>
-  ${cols(P.quality.cards.map(([h, p]) => ({ t: h, p })), P.quality.kicker)}
+  <div class="cards4">${P.quality.cards.map(([h, p]) => `<div class="c4">
+    <p class="t">${esc(h)}</p><p>${nw(p)}</p></div>`).join('')}</div>
+  <p class="kicker">${nw(P.quality.kicker)}</p>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.onboarding.eyebrow)}</p>
-  <h2>${esc(P.onboarding.title)}</h2>
-  ${cols(P.onboarding.steps.map(x => ({ n: x.n, t: x.t, p: x.p, you: x.you })), P.onboarding.kicker)}
+  ${eyebrow(P.onboarding.eyebrow)}
+  <h2>${nw(P.onboarding.title)}</h2>
+  <div class="tl">${P.onboarding.steps.map(x => `<div class="tlstep">
+    <p class="n">${esc(x.n)}</p><p class="t">${esc(x.t)}</p><p>${nw(x.p)}</p>
+    ${x.you ? `<p class="you">您要做的：<b>${nw(x.you)}</b></p>` : ''}</div>`).join('')}</div>
+  <p class="kicker">${nw(P.onboarding.kicker)}</p>
 </div></section>
 
 <div class="close"><div class="wrap">
-  <h2>${esc(P.closing.title)}</h2>
+  <h2>${nw(P.closing.title)}</h2>
   <div class="btns">
     <a class="btn p" href="${esc(P.closing.cta.href)}">${esc(P.closing.cta.label)}</a>
     <a class="btn" href="/pricing.html">方案與報價</a>
@@ -714,32 +886,32 @@ const homePage = layout('虛擬 KOL 品牌顧問服務 — 兌心科技', `
   <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物；素材與設定為本團隊原創。</p>
   <p>頁面不進入搜尋引擎索引。</p>
 </div></footer>
-`, { desc: P.hero.sub, nav: '' });
+`, { desc: P.hero.sub, nav: '', ogImage: heroPerson.a.hero });
 
 // ── 報價頁（PPT p15 方案報價 ＋ p16 常見問題）────────────────────
 // 🛑 價格與方案內容一個字都不改（覆核包 §12.6）。
 const pricingPage = layout('方案與報價 — 兌心科技', `
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.plans.eyebrow)}</p>
+  ${eyebrow(P.plans.eyebrow)}
   <h2>${esc(P.plans.title)}</h2>
   <div class="plans">${P.plans.items.map(x => `<div class="plan${x.featured ? ' f' : ''}">
     <p class="tier">${esc(x.tier)}</p>
     <h3>${esc(x.name)}</h3>
-    <p class="pr">${esc(x.price)}<i>${esc(x.unit)}</i></p>
-    <ul>${x.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+    <p class="pr">${nw(x.price)}<i>${esc(x.unit)}</i></p>
+    <ul>${x.bullets.map(b => `<li>${nw(b)}</li>`).join('')}</ul>
   </div>`).join('')}</div>
-  <p class="kicker">${esc(P.quality.kicker)}</p>
+  <p class="kicker">${nw(P.quality.kicker)}</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">${esc(P.faq.eyebrow)}</p>
+<section class="hsec tint"><div class="wrap">
+  ${eyebrow(P.faq.eyebrow)}
   <h2>${esc(P.faq.title)}</h2>
   <div class="qa">${P.faq.items.map(([q, a]) => `<div>
-    <p class="q">${esc(q)}</p><p class="a">${esc(a)}</p></div>`).join('')}</div>
+    <p class="q">${nw(q)}</p><p class="a">${nw(a)}</p></div>`).join('')}</div>
 </div></section>
 
 <div class="close"><div class="wrap">
-  <h2>${esc(P.closing.title)}</h2>
+  <h2>${nw(P.closing.title)}</h2>
   <div class="btns">
     <a class="btn p" href="${esc(P.closing.cta.href)}">${esc(P.closing.cta.label)}</a>
     <a class="btn" href="/">回首頁</a>
@@ -750,7 +922,7 @@ const pricingPage = layout('方案與報價 — 兌心科技', `
   <p>${esc(P.brand.name)}　${esc(P.brand.en)}　${esc(P.brand.line)}</p>
   <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物。</p>
 </div></footer>
-`, { desc: '虛擬 KOL 經營的方案與報價。', nav: 'pricing' });
+`, { desc: '虛擬 KOL 經營的方案與報價。', nav: 'pricing', ogImage: heroPerson.a.hero });
 
 // ── 寫檔 ────────────────────────────────────────────────────────────
 fs.rmSync(PUB, { recursive: true, force: true });

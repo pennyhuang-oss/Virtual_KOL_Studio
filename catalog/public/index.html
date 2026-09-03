@@ -6,14 +6,23 @@
 <meta name="robots" content="noindex,nofollow">
 <title>虛擬 KOL 品牌顧問服務 — 兌心科技</title>
 <meta name="description" content="業配與廣告是租來的流量，合約結束就歸零。數位人 KOL，是永久歸屬品牌的資產。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="兌心科技　數位人 KOL 品牌顧問服務">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="虛擬 KOL 品牌顧問服務 — 兌心科技">
+<meta property="og:description" content="業配與廣告是租來的流量，合約結束就歸零。數位人 KOL，是永久歸屬品牌的資產。">
+<meta property="og:image" content="https://kol-catalog-production.up.railway.app/assets/iris-chen/hero.jpg?v=a07bccc787">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1440">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0b0b0d; --bg2:#131317; --line:#26262c; --line2:#34343c;
-  --ink:#f2f2f4; --ink2:#a8a8b3; --ink3:#6f6f7c;
-  --accent:#c9a227; --accent2:#e8c85a;
+  --bg:#0b0b0d; --bg2:#1e1e26; --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.2);
+  --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
+  --accent:#d8b955; --accent2:#e7cd74;
   --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
   --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
 }
@@ -131,128 +140,242 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 .lb button{position:absolute;top:22px;right:26px;background:none;border:1px solid var(--line2);
   color:var(--ink);width:38px;height:38px;border-radius:100px;cursor:pointer;font-size:17px}
 
-/* ── 首頁（對外報價 PPT 的網頁版）────────────────────────────── */
+/* ── 首頁（對外報價 PPT 的網頁版）──────────────────────────────
+   R6 的設計裁決都落在這一段,四條原則：
+   ① 金色只給互動與選中狀態（主 CTA／active nav／hover／focus）,
+      數字與重點靠字級與 --ink 的暖白突出,不靠顏色。
+   ② 閱讀寬度收起來：引言與內文 42rem、段落標題 16ch,
+      只有比較表與圖片可以用滿 1240px。
+   ③ 13 段不再用同一種版型。框線格子只留兩段（第 4 段比較、第 11 段四大保證）,
+      其餘換成編號節點、遞進節點、橫向時間軸、無框比較列。
+   ④ 隔段底色從 #131317 改成 #1e1e26——舊值對主底只有 1.061 的對比度,
+      交替等於沒交替（實算過）。而且不再每段交替,只給需要強調的段。
+   ────────────────────────────────────────────────────────── */
 .top nav a.on{color:var(--accent2)}
-.hsec{padding:82px 0;border-bottom:1px solid var(--line)}
-.hsec:nth-child(even){background:var(--bg2)}
-.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--accent);margin:0 0 14px;font-weight:500}
-.hsec h2{font-family:var(--serif);font-size:clamp(26px,3.6vw,40px);line-height:1.28;margin:0 0 18px;
-  font-weight:500;letter-spacing:.01em}
-.lead{color:var(--ink2);font-size:16px;max-width:720px;margin:0 0 34px}
-.kicker{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--line2);color:var(--ink);
-  font-family:var(--serif);font-size:16.5px;max-width:820px;line-height:1.75}
-.fine{color:var(--ink3);font-size:12px;margin:18px 0 0;max-width:760px;line-height:1.65}
 
-/* 開場 */
-.hhero{padding:104px 0 88px;border-bottom:1px solid var(--line);position:relative}
-.hhero h1{font-family:var(--serif);font-size:clamp(36px,6.2vw,68px);line-height:1.16;margin:0 0 26px;
-  font-weight:500;letter-spacing:.005em}
+/* 段落骨架 */
+.hsec{padding:96px 0;border-top:1px solid var(--line)}
+.hsec.tint{background:var(--bg2)}
+.hsec:first-of-type{border-top:0}
+.eyebrow{font-size:11px;margin:0 0 16px;color:var(--accent);font-weight:500;
+  display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+.eyebrow .en{letter-spacing:.22em}
+.eyebrow .zh{letter-spacing:.02em;color:var(--ink3)}
+.hsec h2{font-family:var(--serif);font-size:clamp(27px,3.7vw,42px);line-height:1.22;
+  margin:0 0 20px;font-weight:500;letter-spacing:.01em;max-width:17em;text-wrap:balance}
+/* ⚠ 標題的行長用 em 不要用 ch。實測這個字級下「1 個中文字 = 2ch」，
+   所以覆核者建議的 16ch 照字面套進中文只放得下 8 個字，9 字的標題就被斷成兩行。
+   em 在中文等於一個字寬，才是這裡要的量。內文用 rem 沒問題（那是整段的字數，不是字寬）。*/
+.lead{color:var(--ink2);font-size:16.5px;max-width:42rem;margin:0 0 40px;text-wrap:pretty}
+.kicker{margin:40px 0 0;padding-top:22px;border-top:1px solid var(--line2);color:var(--ink);
+  font-family:var(--serif);font-size:17px;max-width:46rem;line-height:1.72;text-wrap:pretty}
+.fine{color:var(--ink3);font-size:12.5px;margin:20px 0 0;max-width:42rem;line-height:1.7}
+.nw{white-space:nowrap}
+
+/* ① 開場：左 55% 文案 ＋ 右 45% 直式主視覺（4:5）*/
+.hhero{padding:0;position:relative;overflow:hidden;min-height:640px;display:flex;align-items:center}
+.hhero .wrap{width:100%;position:relative;z-index:2}
+.hhero .txt{padding:96px 0;max-width:min(55%,640px)}
+.hhero h1{font-family:var(--serif);font-size:clamp(36px,5.6vw,62px);line-height:1.14;
+  margin:0 0 28px;font-weight:500;letter-spacing:.005em;text-wrap:balance}
 .hhero h1 em{font-style:normal;color:var(--accent2)}
-.hhero .sub{max-width:640px;color:var(--ink2);font-size:17px;margin:0 0 36px}
+.hhero .sub{max-width:32rem;color:var(--ink2);font-size:17px;margin:0 0 38px;text-wrap:pretty}
+.hhero .art{position:absolute;top:0;right:0;bottom:0;width:min(46%,660px);z-index:1;
+  background:#15151a;overflow:hidden}
+.hhero .art img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+/* 左緣漸層,讓圖跟左欄連成一體,不是硬邊 */
+.hhero .art::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(11,11,13,.72) 18%,transparent 52%)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:13px 26px;border:1px solid var(--line2);border-radius:2px;
-  font-size:14px;color:var(--ink2);transition:.18s}
-.btn:hover{border-color:var(--ink3);color:var(--ink)}
-.btn.p{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
-.btn.p:hover{background:var(--accent);border-color:var(--accent);color:#17130a}
+.btn{display:inline-block;padding:14px 28px;border:1px solid var(--line2);border-radius:2px;
+  font-size:14.5px;color:var(--ink2);transition:.18s}
+.btn:hover,.btn:focus-visible{border-color:var(--accent);color:var(--accent2)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#17130a;font-weight:600}
+.btn.p:hover,.btn.p:focus-visible{background:var(--accent2);border-color:var(--accent2);color:#17130a}
 
-/* 三欄／多欄卡 */
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.col{background:var(--bg);padding:26px 24px 28px}
-.hsec:nth-child(even) .col{background:var(--bg2)}
-.col .t{font-family:var(--serif);font-size:18px;margin:0 0 9px;font-weight:500;color:var(--ink)}
-.col .n{font-size:10.5px;letter-spacing:.16em;color:var(--accent);margin:0 0 10px}
-.col .tag{display:inline-block;font-size:10.5px;letter-spacing:.1em;color:var(--accent2);
-  border:1px solid #4a3d16;padding:2px 8px;border-radius:2px;margin:0 0 12px}
-.col p{margin:0;color:var(--ink2);font-size:14px;line-height:1.72}
-.col .you{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);
-  font-size:12.5px;color:var(--ink3)}
-.col .you b{color:var(--accent2);font-weight:500}
+/* ② 編號節點（第 2 段）：三個水平節點共用一條細線 */
+.nodes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;
+  border-top:1px solid var(--line2)}
+.node{padding:26px 30px 0 0}
+.node .n{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.1em;
+  margin:0 0 12px;padding-top:2px}
+.node .t{font-family:var(--serif);font-size:19px;margin:0 0 9px;font-weight:500;color:var(--ink)}
+.node p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74;max-width:26rem}
 
-/* 兩欄對照（案例／預算）*/
+/* ③ 編號敘事列（第 3 段）：左側 72px 大編號 */
+.numrows{border-top:1px solid var(--line)}
+.numrow{display:grid;grid-template-columns:104px minmax(0,1fr);gap:28px;
+  padding:30px 0;border-bottom:1px solid var(--line);align-items:start}
+.numrow .n{font-family:var(--serif);font-size:64px;line-height:.9;color:var(--ink4)}
+.numrow .t{font-family:var(--serif);font-size:21px;margin:6px 0 10px;font-weight:500}
+.numrow p{margin:0;color:var(--ink2);font-size:15px;max-width:44rem;line-height:1.74}
+
+/* ④ 兩欄對照（第 4 段,框線保留 ── 全頁最需要直接對照的一段）*/
+.vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:3px;
+  overflow:hidden}
+.vs>div{padding:34px 32px 36px;display:grid;grid-template-rows:auto auto auto 1fr;row-gap:0}
+.vs>.b{border-left:1px solid var(--line);border-top:2px solid var(--accent)}
 /* ⚠ 標籤的 class 是 vlb 不是 lb：.lb 是燈箱，帶 display:none，撞上去整段會消失。*/
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
-  border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.vs>div{background:var(--bg);padding:28px 26px 30px}
-.hsec:nth-child(even) .vs>div{background:var(--bg2)}
-.vs .b{border-top:2px solid var(--accent)}
-.vs .vlb{font-size:11.5px;letter-spacing:.14em;color:var(--ink3);margin:0 0 12px}
-.vs .amt{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.2;margin:0 0 6px;
-  color:var(--ink)}
-.vs .b .amt{color:var(--accent2)}
-.vs .amtn{font-size:12px;color:var(--ink3);margin:0 0 20px;line-height:1.6}
-.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:13.5px}
+.vs .vlb{font-size:12px;letter-spacing:.14em;color:var(--ink3);margin:0 0 16px}
+.vs .amt{font-family:var(--serif);font-size:clamp(38px,4.6vw,66px);line-height:1.02;
+  margin:0 0 10px;color:var(--ink);letter-spacing:-.01em}
+.vs .amtn{font-size:12.5px;color:var(--ink3);margin:0 0 28px;line-height:1.65;max-width:30rem}
+.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 18px;font-size:14.5px;
+  align-content:start}
 .vs dt{color:var(--ink3);white-space:nowrap}
 .vs dd{margin:0;color:var(--ink2)}
 
-/* 條列型（永續／突破／適合／保證） */
-.rows{border:1px solid var(--line);border-radius:3px;overflow:hidden}
-.row3{display:grid;grid-template-columns:170px 1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
-.row2{display:grid;grid-template-columns:190px 1fr;gap:0;border-bottom:1px solid var(--line)}
-.row3:last-child,.row2:last-child{border-bottom:0}
-.row3>div,.row2>div{padding:20px 22px;border-right:1px solid var(--line)}
-.row3>div:last-child,.row2>div:last-child{border-right:0}
-.row3 .k,.row2 .k{font-family:var(--serif);font-size:15.5px;color:var(--ink)}
-.row3 .was{color:var(--ink3);font-size:13.5px}
-.row3 .now,.row2 .v{color:var(--ink2);font-size:14px}
-.row3 .now{color:var(--ink)}
-.rhead{display:grid;grid-template-columns:170px 1fr 1fr;background:var(--bg2);
-  border-bottom:1px solid var(--line2);font-size:11px;letter-spacing:.14em;color:var(--ink3)}
-.hsec:nth-child(even) .rhead{background:var(--bg)}
-.rhead>div{padding:11px 22px;border-right:1px solid var(--line)}
-.rhead>div:last-child{border-right:0}
-.rhead .hl{color:var(--accent2)}
+/* ⑤ 分叉圖（第 5 段）：中央大數字 → 左右兩種用法 → 跨欄結論 */
+.fork{max-width:960px}
+.fork .trunk{position:relative;height:44px}
+.fork .trunk::after{content:"";position:absolute;left:50%;top:0;width:1px;height:44px;
+  background:var(--line2)}
+/* 整段置中（只有這一段）:h2 本身就是那個放大的數字,不要再重複印一次 */
+.hsec.mid{text-align:center}
+.hsec.mid .eyebrow{justify-content:center}
+.hsec.mid h2{margin-left:auto;margin-right:auto}
+.hsec.mid .lead,.hsec.mid .kicker,.hsec.mid .fine{margin-left:auto;margin-right:auto}
+.hsec.mid .fork{margin:0 auto}
+.hsec.mid .fork .arm,.hsec.mid .fork .both{text-align:left}
+.hsec.mid .kicker{border-top:0;padding-top:0}
+.fork .arms{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border-top:1px solid var(--line2)}
+.fork .arm{background:var(--bg);padding:26px 28px 28px}
+.hsec.tint .fork .arm{background:var(--bg2)}
+.fork .arm .k{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:500}
+.fork .arm p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.fork .both{border-top:1px solid var(--line2);padding:24px 28px 0;margin-top:1px}
+.fork .both .k{font-family:var(--serif);font-size:17px;color:var(--accent2);margin:0 0 8px}
+.fork .both p{margin:0;color:var(--ink2);font-size:14.5px;max-width:44rem;line-height:1.74}
 
-/* 精選預覽（第 8 段）*/
-.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:18px;margin-bottom:30px}
-.fcard{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden;
-  transition:.2s;display:block}
-.hsec:nth-child(even) .fcard{background:var(--bg)}
-.fcard:hover{border-color:var(--line2);transform:translateY(-3px)}
-.fcard .ph{aspect-ratio:3/4;background:#1a1a20;overflow:hidden}
-.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.4s}
-.fcard:hover .ph img{transform:scale(1.03)}
-.fcard .bd{padding:14px 15px 16px}
-.fcard .nm{font-family:var(--serif);font-size:17px;margin:0 0 3px;font-weight:500}
-.fcard .zh{font-size:11.5px;color:var(--ink3);margin:0 0 8px}
-.fcard .mt{font-size:11px;color:var(--accent2);letter-spacing:.04em;margin:0}
+/* ⑥ 遞進節點（第 6 段）：大字由左向右,無框 */
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px}
+.st3{position:relative;padding-top:24px;border-top:1px solid var(--line2)}
+.st3 .t{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);margin:0 0 12px;font-weight:500;
+  line-height:1.3}
+.st3 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.st3::before{content:"→";position:absolute;top:-14px;left:-24px;color:var(--ink4);font-size:15px}
+.st3:first-child::before{content:none}
 
-/* AI 揭露（首頁第 2 段內，R5 要求不能掉到後段）*/
-.hsec .disclose{margin-top:34px;max-width:none}
+/* ⑦ 無框比較列（第 7 段）：左灰 → 細箭頭 → 右白 */
+.cmp{border-top:1px solid var(--line2)}
+.cmphead{display:grid;grid-template-columns:150px 1fr 24px 1fr;gap:20px;padding:12px 0;
+  font-size:11px;letter-spacing:.14em;color:var(--ink3);border-bottom:1px solid var(--line)}
+.cmphead .hl{color:var(--accent2)}
+.cmprow{display:grid;grid-template-columns:150px 1fr 24px 1fr;gap:20px;padding:24px 0;
+  border-bottom:1px solid var(--line);align-items:baseline}
+.cmprow:last-child{border-bottom:0}
+.cmprow .k{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.cmprow .was{color:var(--ink3);font-size:14.5px;line-height:1.7}
+.cmprow .ar{color:var(--ink4);text-align:center;font-size:14px}
+.cmprow .now{color:var(--ink);font-size:14.5px;line-height:1.7}
+
+/* ⑧ 精選預覽（第 8 段）：圖片本身就是版型,不加裝飾框 */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:38px}
+.fcard{display:block;transition:.2s}
+.fcard .ph{aspect-ratio:4/5;background:#15151a;overflow:hidden}
+.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.45s}
+.fcard:hover .ph img,.fcard:focus-visible .ph img{transform:scale(1.04)}
+.fcard .bd{padding:15px 0 0}
+.fcard .nm{font-family:var(--serif);font-size:18px;margin:0 0 4px;font-weight:500}
+.fcard .zh{font-size:12px;color:var(--ink3);margin:0 0 7px}
+.fcard .mt{font-size:11.5px;color:var(--ink4);letter-spacing:.06em;margin:0}
+.fcard:hover .mt,.fcard:focus-visible .mt{color:var(--accent2)}
+
+/* ⑨⑫ 橫向時間軸（第 9、12 段）：數字在線上 */
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px;
+  position:relative}
+.tl::before{content:"";position:absolute;top:9px;left:0;right:0;height:1px;background:var(--line2)}
+.tlstep{position:relative;padding-top:38px}
+.tlstep::before{content:"";position:absolute;top:5px;left:0;width:9px;height:9px;border-radius:50%;
+  background:var(--accent)}
+.tlstep .n{position:absolute;top:0;left:22px;font-size:11px;letter-spacing:.16em;color:var(--accent);
+  line-height:19px}
+.tlstep .t{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:500}
+.tlstep p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.tlstep .you{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--ink3)}
+.tlstep .you b{color:var(--ink);font-weight:500}
+
+/* ⑩ 大型受眾標題（第 10 段）*/
+.aud{border-top:1px solid var(--line)}
+.aud>div{padding:30px 0;border-bottom:1px solid var(--line)}
+.aud .k{font-family:var(--serif);font-size:clamp(21px,2.5vw,28px);margin:0 0 12px;font-weight:500;
+  line-height:1.3}
+.aud p{margin:0 0 0 clamp(0px,3vw,40px);color:var(--ink2);font-size:15px;max-width:44rem;
+  line-height:1.74}
+
+/* ⑪ 四大保證（第 11 段,框線保留 ── 四項要能各自掃讀）*/
+.cards4{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:18px}
+.c4{border:1px solid var(--line);border-radius:3px;padding:26px 26px 28px;transition:.18s}
+.c4:hover,.c4:focus-within{border-color:var(--accent)}
+.c4 .t{font-family:var(--serif);font-size:18px;margin:0 0 10px;font-weight:500}
+.c4 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+
+/* AI 揭露 */
+.hsec .disclose{margin-top:44px;max-width:46rem;border-left:2px solid var(--accent);
+  background:rgba(216,185,85,.05);padding:18px 22px;border-radius:0 3px 3px 0}
+.hsec .disclose b{color:var(--accent2);font-weight:600}
+.hsec .disclose p{margin:7px 0 0;color:var(--ink2);font-size:13.5px;line-height:1.7}
 
 /* 報價頁 */
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px}
-.plan{border:1px solid var(--line);border-radius:3px;padding:30px 26px 32px;background:var(--bg2);
-  display:flex;flex-direction:column}
-.plan.f{border-color:var(--accent);background:linear-gradient(180deg,rgba(201,162,39,.07),transparent 60%)}
-.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
-.plan h3{font-family:var(--serif);font-size:22px;margin:0 0 16px;font-weight:500}
-.plan .pr{font-family:var(--serif);font-size:32px;color:var(--accent2);line-height:1.1;margin:0 0 22px}
+.plan{border:1px solid var(--line);border-radius:3px;padding:32px 28px 34px;
+  display:flex;flex-direction:column;transition:.18s}
+.plan:hover{border-color:var(--line2)}
+.plan.f{border-color:var(--accent);background:rgba(216,185,85,.05)}
+.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 14px}
+.plan h3{font-family:var(--serif);font-size:23px;margin:0 0 18px;font-weight:500}
+.plan .pr{font-family:var(--serif);font-size:34px;color:var(--ink);line-height:1.1;margin:0 0 24px}
 .plan .pr i{font-style:normal;font-size:14px;color:var(--ink3);font-family:var(--sans)}
+.plan.f .pr{color:var(--accent2)}
 .plan ul{list-style:none;padding:0;margin:0}
-.plan li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink2)}
+.plan li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2);
+  line-height:1.66}
 .plan li:last-child{border-bottom:0}
 .qa{border-top:1px solid var(--line)}
-.qa>div{border-bottom:1px solid var(--line);padding:22px 0}
-.qa .q{font-family:var(--serif);font-size:17px;margin:0 0 9px;color:var(--ink)}
-.qa .a{margin:0;color:var(--ink2);font-size:14.5px;max-width:840px}
+.qa>div{border-bottom:1px solid var(--line);padding:26px 0}
+.qa .q{font-family:var(--serif);font-size:18px;margin:0 0 10px;color:var(--ink)}
+.qa .a{margin:0;color:var(--ink2);font-size:15px;max-width:46rem;line-height:1.74}
 
 /* 收尾 */
-.close{padding:96px 0 104px;text-align:center}
-.close h2{font-family:var(--serif);font-size:clamp(24px,3.4vw,36px);line-height:1.4;margin:0 auto 32px;
-  max-width:900px;font-weight:500}
+.close{padding:104px 0 112px;text-align:center;border-top:1px solid var(--line)}
+.close h2{font-family:var(--serif);font-size:clamp(25px,3.4vw,38px);line-height:1.4;
+  margin:0 auto 36px;max-width:22em;font-weight:500;text-wrap:balance}
 .close .btns{justify-content:center}
 
-@media(max-width:820px){
+@media(max-width:900px){
+  .feat{grid-template-columns:repeat(2,1fr)}
   .vs{grid-template-columns:1fr}
-  .row3,.rhead{grid-template-columns:1fr}
-  .row2{grid-template-columns:1fr}
-  .row3>div,.row2>div,.rhead>div{border-right:0;border-bottom:1px solid var(--line)}
-  .row3>div:last-child,.row2>div:last-child,.rhead>div:last-child{border-bottom:0}
-  .rhead{display:none}
-  .hhero{padding:64px 0 56px}
-  .hsec{padding:56px 0}
+  .vs>.b{border-left:0;border-top:2px solid var(--accent)}
+  .fork .arms{grid-template-columns:1fr}
+  .cmphead{display:none}
+  .cmprow{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .cmprow .ar{display:none}
+  .cmprow .was::before{content:"傳統：";color:var(--ink4)}
+  .cmprow .now::before{content:"數位人：";color:var(--accent2)}
+  .numrow{grid-template-columns:60px minmax(0,1fr);gap:18px}
+  .numrow .n{font-size:38px}
+  .st3::before{content:none}
+  /* 時間軸轉成沿左側的垂直線 */
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl::before{top:0;bottom:0;left:4px;right:auto;width:1px;height:auto}
+  .tlstep{padding:0 0 30px 26px}
+  .tlstep::before{top:6px}
+  .tlstep .n{position:static;display:block;margin:0 0 8px}
+  /* 首屏改成 小標＋標題 → 16:10 橫裁圖 → 引言＋按鈕 */
+  .hhero{min-height:0;display:block;padding:56px 0 0}
+  .hhero .wrap{display:flex;flex-direction:column}
+  .hhero .txt{display:contents}
+  .hhero .eyebrow{order:1}
+  .hhero h1{order:2;margin-bottom:26px}
+  .hhero .art{position:static;order:3;width:auto;aspect-ratio:16/10;margin:0 0 30px}
+  .hhero .art::after{background:linear-gradient(180deg,transparent 60%,rgba(11,11,13,.5) 100%)}
+  .hhero .art img{object-position:50% 22%}
+  .hhero .sub{order:4}
+  .hhero .btns{order:5;margin-bottom:60px}
+  .hsec{padding:60px 0}
+  .close{padding:70px 0 78px}
 }
 footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
 footer p{margin:0 0 7px;max-width:720px}
@@ -269,35 +392,26 @@ footer p{margin:0 0 7px;max-width:720px}
 </div></header>
 
 <div class="hhero"><div class="wrap">
-  <p class="eyebrow">方案與報價提案 · 2026</p>
-  <h1>您的行銷預算，<br>買到的是「租」，<br><em>還是「有」？</em></h1>
-  <p class="sub">業配與廣告是租來的流量，合約結束就歸零。數位人 KOL，是永久歸屬品牌的資產。</p>
-  <div class="btns"><a class="btn p" href="/kols.html">看全部數位人</a><a class="btn" href="/pricing.html">方案與報價</a></div>
+  <div class="txt">
+    <p class="eyebrow"><span class="zh">方案與報價提案</span><span class="en">· 2026</span></p>
+    <h1>您的行銷預算，<br>買到的是「租」，<br><em>還是「有」？</em></h1>
+    <p class="sub">業配與廣告是租來的流量，合約結束就歸零。數位人 KOL，是永久歸屬品牌的資產。</p>
+    <div class="btns"><a class="btn p" href="/kols.html">看全部數位人</a><a class="btn" href="/pricing.html">方案與報價</a></div>
+  </div>
+  <div class="art">
+    <img src="/assets/iris-chen/hero.jpg?v=a07bccc787" alt="虛擬 KOL 形象範例" width="1080" height="1350">
+  </div>
 </div></div>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">WHAT｜什麼是數位人 KOL</p>
+  <p class="eyebrow"><span class="en">WHAT</span><span class="zh">｜什麼是數位人</span><span class="en">KOL</span></p>
   <h2>三位一體，持續引流</h2>
   <p class="lead">不是一支影片，也不是一次代言。是一個從第一天就為您的品牌而生的帳號——由 AI 生成內容、在多平台持續經營、並且人設 IP 歸屬於您。</p>
-  <div class="cols"><div class="col">
-  
-  
-  <p class="t">全 AI 內容生成</p>
-  <p>影片與圖文全部由 AI 產出，不受場地、天氣、檔期限制。</p>
-  
-</div><div class="col">
-  
-  
-  <p class="t">多平台經營</p>
-  <p>同一組素材依各平台格式再製，六大平台同步更新。</p>
-  
-</div><div class="col">
-  
-  
-  <p class="t">人設 IP 經營</p>
-  <p>人設、外型、聲音、素材與帳號，依合約歸屬品牌。</p>
-  
-</div></div><p class="kicker">三件事綁在一起，引流效果才會持續累積。</p>
+  <div class="nodes"><div class="node">
+    <p class="n">01</p><p class="t">全 AI 內容生成</p><p>影片與圖文全部由 AI 產出，不受場地、天氣、檔期限制。</p></div><div class="node">
+    <p class="n">02</p><p class="t">多平台經營</p><p>同一組素材依各平台格式再製，六大平台同步更新。</p></div><div class="node">
+    <p class="n">03</p><p class="t">人設 IP 經營</p><p>人設、外型、聲音、素材與帳號，依合約歸屬品牌。</p></div></div>
+  <p class="kicker">三件事綁在一起，引流效果才會持續累積。</p>
   <div class="disclose">
     <b>這些 KOL 是 AI 生成的虛擬人物。</b>
     <p>不是真人。所有肖像、聲音與影片皆由本團隊自行生成，人設、語氣與內容規範亦為原創；
@@ -306,114 +420,111 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">VALUE｜你買到的是什麼</p>
+<section class="hsec tint"><div class="wrap">
+  <p class="eyebrow"><span class="en">VALUE</span><span class="zh">｜你買到的是什麼</span></p>
   <h2>一個帳號，三層價值</h2>
-  <div class="cols"><div class="col">
-  
-  <span class="tag">永續資產</span>
-  <p class="t">買下來，就是品牌的資產</p>
-  <p>人設、外型、聲音、素材與帳號，依合約歸屬品牌；不隨合約結束歸零，持續留存、持續累積。</p>
-  
-</div><div class="col">
-  
-  <span class="tag">品牌引流</span>
-  <p class="t">為引流而生的帳號</p>
-  <p>這個 KOL 從誕生的第一天就為您的品牌服務——每一篇內容，都在把流量導回品牌的產品與服務。</p>
-  
-</div><div class="col">
-  
-  <span class="tag">完整主控權</span>
-  <p class="t">說什麼、發什麼，品牌決定</p>
-  <p>方向由品牌主導，不必配合真人檔期與意願；沒有人設翻車風險，也沒有解約糾紛。</p>
-  
-</div></div>
+  <div class="numrows"><div class="numrow">
+    <div class="n">01</div>
+    <div><p class="t">買下來，就是品牌的資產</p><p>人設、外型、聲音、素材與帳號，依合約歸屬品牌；不隨合約結束歸零，持續留存、持續累積。</p></div></div><div class="numrow">
+    <div class="n">02</div>
+    <div><p class="t">為引流而生的帳號</p><p>這個 KOL 從誕生的第一天就為您的品牌服務——每一篇內容，都在把流量導回品牌的產品與服務。</p></div></div><div class="numrow">
+    <div class="n">03</div>
+    <div><p class="t">說什麼、發什麼，品牌決定</p><p>方向由品牌主導，不必配合真人檔期與意願；沒有人設翻車風險，也沒有解約糾紛。</p></div></div></div>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">WHY｜為什麼需要數位人 KOL</p>
+  <p class="eyebrow"><span class="en">WHY</span><span class="zh">｜為什麼需要數位人</span><span class="en">KOL</span></p>
   <h2>這門學費，很多品牌都付過</h2>
   <p class="lead">同一筆錢，投在真人與投在數位人，結果差在哪——這是我們自己的親身經歷。</p>
   <div class="vs">
     <div class="a">
-  <p class="vlb">真人藝人合作</p>
-  <p class="amt">七位數預算</p>
-  <p class="amtn">單一真人合作案的總投入（含代言授權、內容合作與相關拍攝支出）</p>
-  <dl><dt>產出</dt><dd>二十餘支內容（節目數集 ＋ 短影音十餘支）</dd><dt>成效</dt><dd>累積觀看未達 1 萬次・訂閱增加不到 50</dd><dt>結局</dt><dd>授權到期，對方帳號素材可下架</dd></dl>
-</div>
-    <div class="b">
-  <p class="vlb">同一筆預算，投入數位人</p>
-  <p class="amt">兩年以上</p>
-  <p class="amtn">同一筆預算投入主推全平台方案，可連續經營兩年以上</p>
-  <dl><dt>產出</dt><dd>數百篇圖文 ＋ 數百支影音，6 平台發布</dd><dt>資產</dt><dd>人設、帳號、素材永久歸品牌</dd><dt>延伸</dt><dd>素材可再投廣告，持續累積</dd></dl>
-</div>
+      <p class="vlb">真人藝人合作</p>
+      <p class="amt">七位數預算</p>
+      <p class="amtn">單一真人合作案的總投入（含代言授權、內容合作與相關拍攝支出）</p>
+      <dl><dt>產出</dt><dd>二十餘支內容（節目數集 ＋ 短影音十餘支）</dd><dt>成效</dt><dd>累積觀看未達 1 萬次・訂閱增加不到 50</dd><dt>結局</dt><dd>授權到期，對方帳號素材可下架</dd></dl>
+    </div><div class="b">
+      <p class="vlb">同一筆預算，投入數位人</p>
+      <p class="amt">兩年以上</p>
+      <p class="amtn">同一筆預算投入主推全平台方案，可連續經營兩年以上</p>
+      <dl><dt>產出</dt><dd>數百篇圖文 ＋ 數百支影音，<span class="nw">6 平台</span>發布</dd><dt>資產</dt><dd>人設、帳號、素材永久歸品牌</dd><dt>延伸</dt><dd>素材可再投廣告，持續累積</dd></dl>
+    </div>
   </div>
   <p class="kicker">真人合作買的是檔期與關係，約滿即散；同一筆錢投入數位人，買的是留得下來的資產。</p>
   <p class="fine">為尊重合作對象，本案例不具名，金額與成效以級距與約略值呈現；數據為自有頻道官方後台實測。</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">TRAFFIC｜同一筆錢，兩種用法</p>
-  <h2>每月 NT$65,000，結果差在哪？</h2>
-  <div class="rows"><div class="row2">
-  <div class="k">全部投廣告</div><div class="v">6.5 萬 ≈ 32.5 萬次曝光，素材費還要另計；停止投放，流量當天歸零。</div></div><div class="row2">
-  <div class="k">投入數位人 KOL</div><div class="v">同樣 6.5 萬：每月 22 篇內容 + 人設資產，累積在您的帳號；不投放也有自然流量。</div></div><div class="row2">
-  <div class="k">兩者不互斥</div><div class="v">資產是要被看到的——自然流打底、廣告放大；素材一份兩用，不用花兩次錢。</div></div></div>
+<section class="hsec mid"><div class="wrap">
+  <p class="eyebrow"><span class="en">TRAFFIC</span><span class="zh">｜同一筆錢，兩種用法</span></p>
+  <h2>每月 <span class="nw">NT$65,000</span>，結果差在哪？</h2>
+  <div class="fork">
+    <div class="trunk" aria-hidden="true"></div>
+    <div class="arms"><div class="arm">
+      <p class="k">全部投廣告</p><p><span class="nw">6.5 萬</span> ≈ <span class="nw">32.5 萬</span>次曝光，素材費還要另計；停止投放，流量當天歸零。</p></div><div class="arm">
+      <p class="k">投入數位人 KOL</p><p>同樣 <span class="nw">6.5 萬</span>：每月 22 篇內容 + 人設資產，累積在您的帳號；不投放也有自然流量。</p></div></div>
+    <div class="both">
+      <p class="k">兩者不互斥</p><p>資產是要被看到的——自然流打底、廣告放大；素材一份兩用，不用花兩次錢。</p></div>
+  </div>
   <p class="kicker">成效衡量：公域曝光 → 私域名單與轉化，每週報告攤開對比。</p>
-  <p class="fine">以台灣 Meta 平均 CPM 約 NT$200 估算（2026 公開行情）</p>
+  <p class="fine">以台灣 Meta 平均 CPM 約 <span class="nw">NT$200</span> 估算（2026 公開行情）</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">LEGACY｜企業品牌的永續規劃</p>
+<section class="hsec tint"><div class="wrap">
+  <p class="eyebrow"><span class="en">LEGACY</span><span class="zh">｜企業品牌的永續規劃</span></p>
   <h2>品牌永續，從擁有一個 IP 開始</h2>
   <p class="lead">KOL IP 一旦買下，就永久屬於品牌——經營可以暫停，資產不會消失。</p>
-  <div class="rows"><div class="row2">
-  <div class="k">素材留得住</div><div class="v">即使只經營 30 天，期間產出的素材與帳號都留在品牌名下；素材可直接拿去投廣告，權利完全屬於品牌。</div></div><div class="row2">
-  <div class="k">隨時能重啟</div><div class="v">IP 永久存在。停了半年想回來經營，隨時續購方案——同一個人設接著生產，粉絲與素材接著累積。</div></div><div class="row2">
-  <div class="k">永續規劃的一環</div><div class="v">一次建立、長期使用：KOL IP 是留得下來的品牌資產，不是花掉就沒有的行銷費用。</div></div></div>
+  <div class="steps3"><div class="st3">
+    <p class="t">素材留得住</p><p>即使只經營 <span class="nw">30 天</span>，期間產出的素材與帳號都留在品牌名下；素材可直接拿去投廣告，權利完全屬於品牌。</p></div><div class="st3">
+    <p class="t">隨時能重啟</p><p>IP 永久存在。停了半年想回來經營，隨時續購方案——同一個人設接著生產，粉絲與素材接著累積。</p></div><div class="st3">
+    <p class="t">永續規劃的一環</p><p>一次建立、長期使用：KOL IP 是留得下來的品牌資產，不是花掉就沒有的行銷費用。</p></div></div>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">BREAKTHROUGH｜跟傳統製作比</p>
+  <p class="eyebrow"><span class="en">BREAKTHROUGH</span><span class="zh">｜跟傳統製作比</span></p>
   <h2>傳統的限制，就是我們的突破</h2>
-  <div class="rows">
-    <div class="rhead"><div></div><div>傳統製作的限制</div><div class="hl">數位人 KOL</div></div>
-    <div class="row3">
-      <div class="k">場景生成</div><div class="was">場地、天氣、預算——實拍一個都少不了</div>
-      <div class="now">超乎想像的影片場景：深海、太空、雪山，想拍哪就拍哪</div></div><div class="row3">
-      <div class="k">製作效率</div><div class="was">一支影片動輒數週：檔期、拍攝、後製環環相扣</div>
-      <div class="now">AI 內容產線，週週多平台更新不斷檔</div></div><div class="row3">
-      <div class="k">敏感產業</div><div class="was">合規敏感品類，真人不願接、接了有翻車風險</div>
+  <div class="cmp">
+    <div class="cmphead"><div></div><div>傳統製作的限制</div><div></div><div class="hl">數位人 KOL</div></div>
+    <div class="cmprow">
+      <div class="k">場景生成</div>
+      <div class="was">場地、天氣、預算——實拍一個都少不了</div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="now">超乎想像的影片場景：深海、太空、雪山，想拍哪就拍哪</div></div><div class="cmprow">
+      <div class="k">製作效率</div>
+      <div class="was">一支影片動輒數週：檔期、拍攝、後製環環相扣</div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="now">AI 內容產線，週週多平台更新不斷檔</div></div><div class="cmprow">
+      <div class="k">敏感產業</div>
+      <div class="was">合規敏感品類，真人不願接、接了有翻車風險</div>
+      <div class="ar" aria-hidden="true">→</div>
       <div class="now">數位人沒有包袱，已有敏感產業實際營運案例</div></div>
   </div>
   <p class="fine">市場上也有低價代營 IP 的服務——多半不求質也不求量，更不含社群平台的實際營運。</p>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">CATALOGUE｜看實際的人設與素材</p>
+<section class="hsec tint"><div class="wrap">
+  <p class="eyebrow"><span class="en">CATALOGUE</span><span class="zh">｜看實際的人設與素材</span></p>
   <h2>不必想像，直接看</h2>
   <p class="lead">每一位都有完整的人物設定、內容主題與視覺調性，並且已經產出可用的圖像與影片素材。
   點進任何一位，都能直接在網頁上看完他全部的素材。</p>
   <div class="feat"><a class="fcard" href="/p/iris-chen.html">
-    <div class="ph"><img src="/assets/iris-chen/hero.jpg?v=a07bccc787" alt="Iris Chen" loading="lazy" width="1080" height="1440"></div>
+    <div class="ph"><img src="/assets/iris-chen/hero.jpg?v=a07bccc787" alt="Iris Chen" loading="lazy" width="1080" height="1350"></div>
     <div class="bd">
       <p class="nm">Iris Chen</p>
       <p class="zh">陳芯語 · 台灣</p>
       <p class="mt">生活風格</p>
     </div></a><a class="fcard" href="/p/mia-huang.html">
-    <div class="ph"><img src="/assets/mia-huang/hero.jpg?v=18eb2eee64" alt="Mia Huang" loading="lazy" width="1080" height="1440"></div>
+    <div class="ph"><img src="/assets/mia-huang/hero.jpg?v=18eb2eee64" alt="Mia Huang" loading="lazy" width="1080" height="1350"></div>
     <div class="bd">
       <p class="nm">Mia Huang</p>
       <p class="zh">黃米亞 · 台灣</p>
       <p class="mt">遊戲・實況</p>
     </div></a><a class="fcard" href="/p/yuna-kim.html">
-    <div class="ph"><img src="/assets/yuna-kim/hero.jpg?v=8be7292edb" alt="Yuna Kim" loading="lazy" width="1080" height="1440"></div>
+    <div class="ph"><img src="/assets/yuna-kim/hero.jpg?v=8be7292edb" alt="Yuna Kim" loading="lazy" width="1080" height="1350"></div>
     <div class="bd">
       <p class="nm">Yuna Kim</p>
       <p class="zh">김하은 · 台灣</p>
       <p class="mt">美妝・保養</p>
     </div></a><a class="fcard" href="/p/rainie-hsu.html">
-    <div class="ph"><img src="/assets/rainie-hsu/hero.jpg?v=5a7f833334" alt="Rainie Hsu" loading="lazy" width="1080" height="1440"></div>
+    <div class="ph"><img src="/assets/rainie-hsu/hero.jpg?v=5a7f833334" alt="Rainie Hsu" loading="lazy" width="1080" height="1350"></div>
     <div class="bd">
       <p class="nm">Rainie Hsu</p>
       <p class="zh">許雷妮 · 台灣</p>
@@ -423,96 +534,51 @@ footer p{margin:0 0 7px;max-width:720px}
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">VIRAL ENGINE｜流量的保證</p>
+  <p class="eyebrow"><span class="en">VIRAL ENGINE</span><span class="zh">｜流量的保證</span></p>
   <h2>爆款素材 × 流量保證</h2>
   <p class="lead">好的資產，要被看見——我們的工作，就是讓它被看見。</p>
-  <div class="cols"><div class="col">
-  <p class="n">STEP 1</p>
-  
-  <p class="t">全網爆款，每天研究</p>
-  <p>即時 research 近期全網正在起飛的內容：什麼題材、什麼形式、什麼鉤子正在爆。</p>
-  
-</div><div class="col">
-  <p class="n">STEP 2</p>
-  
-  <p class="t">爆款公式，為您改裝</p>
-  <p>把爆款的結構拆解出來，量身套進您的 KOL——同樣的力道，換上您的人設與產品。</p>
-  
-</div><div class="col">
-  <p class="n">STEP 3</p>
-  
-  <p class="t">週週產出，週週迭代</p>
-  <p>爆款不是等運氣，是用方法持續做出來：每週產出、每週修正，直到打中為止。</p>
-  
-</div></div>
+  <div class="tl"><div class="tlstep">
+    <p class="n">STEP 1</p><p class="t">全網爆款，每天研究</p><p>即時 research 近期全網正在起飛的內容：什麼題材、什麼形式、什麼鉤子正在爆。</p></div><div class="tlstep">
+    <p class="n">STEP 2</p><p class="t">爆款公式，為您改裝</p><p>把爆款的結構拆解出來，量身套進您的 KOL——同樣的力道，換上您的人設與產品。</p></div><div class="tlstep">
+    <p class="n">STEP 3</p><p class="t">週週產出，週週迭代</p><p>爆款不是等運氣，是用方法持續做出來：每週產出、每週修正，直到打中為止。</p></div></div>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">FIT｜誰最適合</p>
-  <h2>為 B2C 的品牌與生意人而設計</h2>
+  <p class="eyebrow"><span class="en">FIT</span><span class="zh">｜誰最適合</span></p>
+  <h2>為 <span class="nw">B2C</span> 的品牌與生意人而設計</h2>
   <p class="lead">開店、餐飲、保健品、旅遊旅宿、遊戲、金融服務——直接面對消費者的生意，才需要持續說故事。</p>
-  <div class="rows"><div class="row2">
-  <div class="k">要說故事的 2C 品牌</div><div class="v">消費者買的是故事與信任，但養不起內容團隊。數位人替品牌每週說故事，素材同時餵養廣告。</div></div><div class="row2">
-  <div class="k">不想露臉的個體戶</div><div class="v">房仲、車商、保險、專業服務者：想經營個人品牌帶客，卻不想露臉、沒時間拍片。</div></div><div class="row2">
-  <div class="k">真人代言不便的產業</div><div class="v">合規敏感、爭議品類：真人不願接、接了有翻車風險。我們有實際營運中的案例與合規框架。</div></div></div>
+  <div class="aud"><div>
+    <p class="k">要說故事的 2C 品牌</p><p>消費者買的是故事與信任，但養不起內容團隊。數位人替品牌每週說故事，素材同時餵養廣告。</p></div><div>
+    <p class="k">不想露臉的個體戶</p><p>房仲、車商、保險、專業服務者：想經營個人品牌帶客，卻不想露臉、沒時間拍片。</p></div><div>
+    <p class="k">真人代言不便的產業</p><p>合規敏感、爭議品類：真人不願接、接了有翻車風險。我們有實際營運中的案例與合規框架。</p></div></div>
 </div></section>
 
-<section class="hsec"><div class="wrap">
-  <p class="eyebrow">QUALITY｜品質不靠口頭承諾</p>
+<section class="hsec tint"><div class="wrap">
+  <p class="eyebrow"><span class="en">QUALITY</span><span class="zh">｜品質不靠口頭承諾</span></p>
   <h2>四大品質保證</h2>
-  <div class="cols"><div class="col">
-  
-  
-  <p class="t">保證一｜獨一無二的人設</p>
-  <p>專為您的品牌量身打造，不重複授權、不套模板——這個人設在市場上只屬於您。</p>
-  
-</div><div class="col">
-  
-  
-  <p class="t">保證二｜持續製造爆款素材</p>
-  <p>以實時爆款方法論持續產出——每一篇素材，都以成為爆款為目標製作。</p>
-  
-</div><div class="col">
-  
-  
-  <p class="t">保證三｜流量持續上升</p>
-  <p>經營期間帳號流量持續成長；每週數據報告攤開檢視，汰弱留強。</p>
-  
-</div><div class="col">
-  
-  
-  <p class="t">保證四｜客戶完整話語權</p>
-  <p>KOL 完全屬於您——想讓他說什麼，他就說什麼；經營方向由您主導，結果自然滿意。</p>
-  
-</div></div><p class="kicker">四大保證之外，還有一條寫進合約：每 30 天檢核點，不滿意退未執行月份。</p>
+  <div class="cards4"><div class="c4">
+    <p class="t">保證一｜獨一無二的人設</p><p>專為您的品牌量身打造，不重複授權、不套模板——這個人設在市場上只屬於您。</p></div><div class="c4">
+    <p class="t">保證二｜持續製造爆款素材</p><p>以實時爆款方法論持續產出——每一篇素材，都以成為爆款為目標製作。</p></div><div class="c4">
+    <p class="t">保證三｜流量持續上升</p><p>經營期間帳號流量持續成長；每週數據報告攤開檢視，汰弱留強。</p></div><div class="c4">
+    <p class="t">保證四｜客戶完整話語權</p><p>KOL 完全屬於您——想讓他說什麼，他就說什麼；經營方向由您主導，結果自然滿意。</p></div></div>
+  <p class="kicker">四大保證之外，還有一條寫進合約：每 <span class="nw">30 天</span>檢核點，不滿意退未執行月份。</p>
 </div></section>
 
 <section class="hsec"><div class="wrap">
-  <p class="eyebrow">ONBOARDING｜您的時間成本，很低</p>
-  <h2>三週上線，您只需要 3 次確認</h2>
-  <div class="cols"><div class="col">
-  <p class="n">WEEK 1</p>
-  
-  <p class="t">人設提案與簽核</p>
-  <p>我們交付人設設定與內容規劃，由您簽核定案。</p>
-  <p class="you">您要做的：<b>1 次確認會議 + 開通帳號</b></p>
-</div><div class="col">
-  <p class="n">WEEK 2</p>
-  
-  <p class="t">定裝與帳號串接</p>
-  <p>視覺定裝、專屬聲音完成；各平台帳號完成串接，準備發布。</p>
-  <p class="you">您要做的：<b>定裝與聲音確認</b></p>
-</div><div class="col">
-  <p class="n">WEEK 3</p>
-  
-  <p class="t">首波發布與數據</p>
-  <p>首批內容實際發布，交付首波成效數據報告。</p>
-  <p class="you">您要做的：<b>驗收首波成效；之後每 30 天檢核</b></p>
-</div></div><p class="kicker">進入正式營運後，您每月只需要約 2 小時：月初 1 次行事曆審核 + 素材確認。其餘，我們處理。</p>
+  <p class="eyebrow"><span class="en">ONBOARDING</span><span class="zh">｜您的時間成本，很低</span></p>
+  <h2>三週上線，您只需要 <span class="nw">3 次確認</span></h2>
+  <div class="tl"><div class="tlstep">
+    <p class="n">WEEK 1</p><p class="t">人設提案與簽核</p><p>我們交付人設設定與內容規劃，由您簽核定案。</p>
+    <p class="you">您要做的：<b>1 次確認會議 + 開通帳號</b></p></div><div class="tlstep">
+    <p class="n">WEEK 2</p><p class="t">定裝與帳號串接</p><p>視覺定裝、專屬聲音完成；各平台帳號完成串接，準備發布。</p>
+    <p class="you">您要做的：<b>定裝與聲音確認</b></p></div><div class="tlstep">
+    <p class="n">WEEK 3</p><p class="t">首波發布與數據</p><p>首批內容實際發布，交付首波成效數據報告。</p>
+    <p class="you">您要做的：<b>驗收首波成效；之後每 <span class="nw">30 天</span>檢核</b></p></div></div>
+  <p class="kicker">進入正式營運後，您每月只需要約 <span class="nw">2 小時</span>：月初 1 次行事曆審核 + 素材確認。其餘，我們處理。</p>
 </div></section>
 
 <div class="close"><div class="wrap">
-  <h2>免費品牌健檢 → 找出缺口 → 3 週見到您的專屬數位人</h2>
+  <h2><span class="nw">免費品牌健檢</span> → <span class="nw">找出缺口</span> → <span class="nw">3 週</span>見到您的專屬數位人</h2>
   <div class="btns">
     <a class="btn p" href="/kols.html">看全部數位人的完整素材</a>
     <a class="btn" href="/pricing.html">方案與報價</a>
