@@ -1,0 +1,63 @@
+{
+ "baseline": {
+  "file": "review/soul_pilot/wanyin-jiang/body_C.jpg",
+  "job": "6285614d-4b89-48fb-9944-b38bdf2dce83",
+  "seed": 148828,
+  "element": "ON",
+  "framing": "full-length front",
+  "light": "flat frontal",
+  "wording": "6:1 偏瘦",
+  "verdict": "平胸，退"
+ },
+ "T1": {
+  "varies": "框景＋姿勢＋光線（3/4 側身、膝上、側方向光）",
+  "holds": "element ON、措辭與 baseline 逐字相同",
+  "prompt": "A three-quarter-length photograph of <<<e3e96b3b-1343-4bfe-99ea-ece10a67ca6e>>>, a 23-year-old Chinese woman, photographed from the top of her head to just below her knees.\n\nHer build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders. Her legs are long and straight. She is 165cm and slight.\n\nShe stands turned about 30 degrees away from the camera so her upper body is in three-quarter view, her near shoulder closer to the lens and the outline of her chest and waist reading clearly against the wall behind her. Her arms hang at her sides and away from her body. Her head is turned back toward the camera.\n\nShe wears a fitted charcoal-grey ribbed sleeveless top tucked into slim straight-leg trousers in the same charcoal grey, with plain flat shoes. The knit follows the curve of her chest and the taper of her waist. The clothing is close to the body, has no pattern, no logo and no loose drape.\n\nHer long black hair is straight and falls past her waist, worn loose and pushed behind both shoulders so it does not cover her torso.\n\nShe faces forward at eye level with a calm composed expression, lips relaxed and closed, both eyes aimed at the lens together.\n\nThe setting is a plain warm off-white wall with a pale wooden floor, lit by a single soft directional light from the front right and slightly above, so a clear gradient runs across her torso, with a soft shadow beneath the bust and along the shaded side of her waist. Nothing else is in the room.\n\nEverything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.\n\nEven, healthy-looking skin with fine natural texture. Sharp on her from head to knee, with the wall falling into gentle natural separation. A clean, believable full-length reference photograph."
+ },
+ "T2": {
+  "varies": "措辭配比（6:1 偏瘦 → 5:3 偏豐滿，移除全部 slight）",
+  "holds": "element ON、框景／姿勢／光線與 baseline 逐字相同",
+  "prompt": "A full-length standing photograph of <<<e3e96b3b-1343-4bfe-99ea-ece10a67ca6e>>>, a 23-year-old Chinese woman, photographed from head to feet with her whole body inside the frame.\n\nHer build: a full, rounded bust that projects clearly forward from her chest and is the most prominent part of her silhouette, carried on a small, fine-boned frame. Below it her ribcage is narrow and her waist pulls in sharply, so seen from the side her outline goes out at the chest, in at the waist, and out again at the hip. Her upper arms are slim and her legs are long and straight. She is 165cm.\n\nShe stands square to the camera in a relaxed neutral pose, arms hanging naturally at her sides and away from her body so the outline of her torso is not hidden. Her weight is even on both feet.\n\nShe wears a fitted charcoal-grey ribbed sleeveless top tucked into slim straight-leg trousers in the same charcoal grey, with plain flat shoes. The knit follows the curve of her chest and the taper of her waist. The clothing is close to the body, has no pattern, no logo and no loose drape.\n\nHer long black hair is straight and falls past her waist, worn loose and pushed behind both shoulders so it does not cover her torso.\n\nShe faces forward at eye level with a calm composed expression, lips relaxed and closed, both eyes aimed at the lens together.\n\nThe setting is a plain warm off-white wall with a pale wooden floor, evenly lit by soft daylight from the front left. Nothing else is in the room.\n\nEverything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.\n\nEven, healthy-looking skin with fine natural texture. Sharp on her from head to feet, with the wall falling into gentle natural separation. A clean, believable full-length reference photograph."
+ },
+ "T3": {
+  "varies": "移除 reference element",
+  "holds": "prompt 其餘部分與 baseline 逐字相同",
+  "prompt": "A full-length standing photograph of a 23-year-old Chinese woman, photographed from head to feet with her whole body inside the frame.\n\nHer build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders. Her legs are long and straight. She is 165cm and slight.\n\nShe stands square to the camera in a relaxed neutral pose, arms hanging naturally at her sides and away from her body so the outline of her torso is not hidden. Her weight is even on both feet.\n\nShe wears a fitted charcoal-grey ribbed sleeveless top tucked into slim straight-leg trousers in the same charcoal grey, with plain flat shoes. The knit follows the curve of her chest and the taper of her waist. The clothing is close to the body, has no pattern, no logo and no loose drape.\n\nHer long black hair is straight and falls past her waist, worn loose and pushed behind both shoulders so it does not cover her torso.\n\nShe faces forward at eye level with a calm composed expression, lips relaxed and closed, both eyes aimed at the lens together.\n\nThe setting is a plain warm off-white wall with a pale wooden floor, evenly lit by soft daylight from the front left. Nothing else is in the room.\n\nEverything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.\n\nEven, healthy-looking skin with fine natural texture. Sharp on her from head to feet, with the wall falling into gentle natural separation. A clean, believable full-length reference photograph."
+ },
+ "seed_all": 148828,
+ "model": "seedream_v4_5",
+ "aspect_ratio": "3:4",
+ "cost": "3 credits",
+ "results": {
+  "T1": {
+   "job": "b1e529b2-4e2b-48bf-89ee-bf4f5f44cc5b",
+   "file": "T1.jpg",
+   "observed": "模型未照 knee-up 執行，仍出全身；轉身角度也超過指定的 30 度，接近全側面。但這反而是最有利的觀察角度——側面看胸部幾乎沒有前突。",
+   "verdict": "框景／姿勢／光線不是槓桿。假說 (d)(e)(f) 被推翻。"
+  },
+  "T2": {
+   "job": "1ad36ec1-a59f-4285-a0ce-74b89d121cf0",
+   "file": "T2.jpg",
+   "observed": "與 baseline 幾乎相同，胸型僅極輕微變化。移除全部 slight、把配比反轉成偏豐滿，沒有作用。",
+   "verdict": "措辭配比不是槓桿。假說 (g) 被推翻。"
+  },
+  "T3": {
+   "job": "f73320e1-b4da-4534-b157-f6b1ff1a489d",
+   "file": "T3.jpg",
+   "observed": "prompt 與 baseline 逐字相同、seed 相同，只移除 reference element。胸型明顯飽滿，有清楚的胸型輪廓與陰影。臉是另一個人（預期內，本組只讀軀幹）。",
+   "verdict": "唯一有效的變因。假說 (a) 成立。"
+  }
+ },
+ "conclusion": {
+  "confirmed": "(a) 臉部 reference element 會壓過 prompt 的身材文字。",
+  "strength": "強。三張同 seed、每張只變一個變因，只有移除 element 的那一張改變了結果。",
+  "falsified": [
+   "(b) 規格數字互相矛盾 —— prompt 裡本來就沒有那些數字",
+   "(d) 框景像素預算 / (e) 平面打光 / (f) 類型先驗 —— T1 全部推翻",
+   "(g) 措辭配比 6:1 —— T2 推翻"
+  ],
+  "note_on_my_earlier_call": "我在跑這個測試之前判斷根因最可能是 (d)+(e)+(g)、並說 (a) 未獲證實。測試結果相反：(a) 才是對的，也就是 C0_result.json 最初記錄的那個 finding 本來就正確。",
+  "open_question": "element 裡的哪個成分造成壓制？目前的 element 裁切含頸部與肩線起始處，模型可能以此外推整個體型。尚未測試更緊的純臉裁切。"
+ },
+ "credits_spent": 3
+}
