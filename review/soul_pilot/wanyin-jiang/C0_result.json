@@ -37,15 +37,46 @@
     "review/soul_pilot/wanyin-jiang/body_D.jpg"
    ],
    "wording": "改用 pilot/nico_pilot.json 已驗證的 body_en.full_body（含 U-03 裁決的『小腰與飽滿胸的反差是她的特徵』）",
-   "verdict": "仍退。與 round 1 幾乎無差異，胸型仍平。"
+   "verdict": "仍退。與 round 1 幾乎無差異，胸型仍平。",
+   "prompt_actually_sent": "A full-length standing photograph of <<<element>>>, a 23-year-old Chinese woman ... Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim smooth upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders. Her legs are long and straight. She is 165cm and slight. [... 正面站姿、炭灰無袖羅紋背心、暖白牆＋淺木地板、前左方均勻柔光 ...]",
+   "prompt_audit_2026_09_03": {
+    "contains_weight_kg": false,
+    "contains_cup_size": false,
+    "contains_measurements": false,
+    "only_number_present": "165cm",
+    "slimness_cues": [
+     "narrow shoulders",
+     "slim smooth upper arms",
+     "lower abdomen is flat",
+     "hips about as wide as her shoulders",
+     "slight",
+     "slight"
+    ],
+    "fullness_cues": [
+     "a full rounded bust that reads clearly"
+    ],
+    "ratio": "6:1 偏瘦"
+   }
   }
  ],
  "finding": {
   "statement": "臉部 Reference Element 會連帶決定身材，且壓過 prompt 的身材文字。",
   "why_it_matters": "ChatGPT 排除的 B 方案（身材靠文字）本來就不可行；現在證實即使 element 只放臉、身材全靠文字，也一樣不可行。這代表 combined element 的身材必須由『一張真的有正確身材的圖』提供，不能靠描述。",
   "caveat": "目前只有 wanyin 一位、4 張樣本。是否所有 persona 都如此未驗證。",
-  "prior_art": "與本專案既有量測一致——臉部裁切會連帶帶出體型與年齡（見對話紀錄的 face-crop-carries-body 發現）。"
+  "prior_art": "與本專案既有量測一致——臉部裁切會連帶帶出體型與年齡（見對話紀錄的 face-crop-carries-body 發現）。",
+  "status_2026_09_03": "SUPERSEDED — 原本的 finding（element 壓過身材文字）未被證實，因為從未做過 element-off 對照組。",
+  "falsified_hypotheses": [
+   "(b) 47kg 與 D 罩杯在 prompt 內互相矛盾 —— 推翻：兩者都不在 prompt 裡，只有 165cm。",
+   "『過輕 + D 罩杯』本身生不出來 —— 推翻：nico-tsai 167/49/BMI 17.57/D 用同一段措辭已驗證通過。"
+  ],
+  "leading_hypotheses": [
+   "(d) 全身遠景框景：胸部區域僅約 120px，體積感沒有像素預算",
+   "(e) 正面 + 前方平光：消掉胸下陰影與側邊輪廓，兩個讀出體積的線索都沒了",
+   "(f) 類型先驗：暖白牆／木地板／均勻日光／full-length reference photograph = 電商 lookbook，該類型身材先驗偏平",
+   "(g) 措辭配比 6:1 偏瘦",
+   "(a) element 帶出體型並壓過文字 —— 仍未排除，缺 element-off 對照組"
+  ]
  },
  "credits_spent": 4,
- "status": "BLOCKED — 待使用者決定下一步"
+ "status": "BLOCKED — 待使用者裁決是否批准 3 張診斷測試"
 }

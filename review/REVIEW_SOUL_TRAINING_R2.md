@@ -235,3 +235,73 @@ Higgsfield 的公開說明表示 Soul ID 會從訓練圖學習人物比例與 bo
 這項整批修訂仍需使用者批准，因為身高、體重、三圍與罩杯之間沒有唯一物理解；它是為了讓角色設定和目標視覺方向一致，不是宣稱 BMI 可以推算罩杯。
 
 執行順序是：先把「只提高體重」方案與逐人新體重表送使用者裁決；批准後再改 canonical 設定，然後用 wanyin 做 Q-6 的 2 張 matched-pair 測試。這樣可避免在未獲批准的舊設定上繼續消耗 C-0 credits。
+
+---
+
+## 我在覆核回來之後做的查證（2026-09-03）
+
+覆核建議「先整批改體重、再測試」。**我把實際送出的 prompt 從 API 撈回來核對，這個順序不能照做——
+Q-6 的 (b) 與 Q-10 的前提已經被推翻。**
+
+### 事實 1：失敗的那兩張，prompt 裡根本沒有體重、沒有罩杯、沒有三圍
+
+job `6285614d` / `b0c1b7ae` 的 `params.prompt` 全文裡，身材相關只有這一段：
+
+> Her build: narrow shoulders, a long torso and a full rounded bust that reads clearly against
+> how slight the rest of her is. Visible collarbone, slim smooth upper arms. Her waist is narrow,
+> and the contrast between that small waist and the fuller chest is part of her shape. Her lower
+> abdomen is flat and her hips are about as wide as her shoulders. Her legs are long and straight.
+> **She is 165cm and slight.**
+
+**沒有 47kg、沒有 D、沒有 86-57-88。** 唯一的數字是身高。
+
+這是照 repo 既有裁決做的——`pilot/nico_pilot.json` 的 `_body_note` 早就定案：
+「三圍數字保留在 metadata 供人核對，但 prompt 以 body_visual 的視覺比例為主。」
+
+**所以：**
+- **Q-6 (b) 不成立。** 47kg 與 D 從來沒有一起進到模型面前，不可能互相競爭。
+- **Q-10 的整批改體重不成立。** 體重不是 prompt 的輸入，改 19 個人的體重欄位，
+  對生成結果的影響是 **零**。那會是一次沒有作用的人設改寫。
+
+### 事實 2：repo 裡本來就有一組近乎相同規格的對照，而且過關
+
+| | 身高 | 體重 | BMI | 三圍 | 罩杯 |
+|---|---:|---:|---:|---|---|
+| `nico-tsai`（已驗證通過） | 167 | 49 | **17.57** | 90-59-88 | **D** |
+| `wanyin-jiang`（現在失敗） | 165 | 47 | **17.26** | 86-57-88 | **D** |
+
+同一級距、同罩杯、同一段 `body_en` 措辭。**「過輕 + D 罩杯」這個組合在本專案已經成功過。**
+這進一步排除 (b)。
+
+### 事實 3：真正的差異在框景、光線與措辭配比，不在規格
+
+放大 `body_C.jpg` 的軀幹到原生解析度看：
+
+1. **全身遠景**——人物只佔畫面高度約 55%，胸部區域在 1728px 寬的圖裡只有約 120px。
+   胸型的體積感沒有足夠像素可以表現。
+2. **正面平打光**——正對鏡頭 + 前方均勻柔光 = **胸下完全沒有陰影**。
+   照片裡的胸部體積是靠明暗漸層與側邊輪廓讀出來的，這個光線配置剛好把兩者都消掉。
+3. **類型先驗**——「plain warm off-white wall／pale wooden floor／even daylight／
+   full-length reference photograph」這組描述，正好是韓系電商 lookbook 的拍法，
+   而那個類型的身材先驗就是纖瘦平板。
+4. **措辭配比 6:1**——同一段裡瘦的線索有六個
+   （narrow shoulders／slim smooth upper arms／lower abdomen is flat／
+   hips about as wide as her shoulders／**slight** ×2），
+   豐滿的線索只有一個。文字本身是壓倒性偏瘦的。
+
+`body_en` 之所以按 framing 分成 `chest_up` / `waist_up` / `full_body` 四版，
+本來就是因為框景會決定身材讀不讀得出來——而 `full_body` 是四者中最讀不出胸型的一版。
+
+### 事實 4：覆核指出我兩處算錯，都對，更正如下
+
+- 19 位裡 **D/E/F 是 16 位**（C 3、D 6、E 7、F 3），不是我寫的 10 位。
+- `somi-oh` 精確 BMI = 48 / 1.61² = **18.52**，**不低於** 18.5。
+  所以是 **18 位** BMI < 18.5，不是 19 位。
+
+### 我的結論
+
+**根因不是 (a) 也不是 (b)，最可能是 (d) 框景 + (e) 平光 + (g) 措辭配比。**
+(a) 仍未被排除，因為我從頭到尾沒做過「不掛 element」的對照組——這是我的實驗設計漏洞。
+
+**不建議照覆核的執行順序做。** 先改 19 個人的體重再測試，會是先付出人設改寫的代價，
+再去測一個跟那次改寫無關的變因。順序要顛倒過來。
