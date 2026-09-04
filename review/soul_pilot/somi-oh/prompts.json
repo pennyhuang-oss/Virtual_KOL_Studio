@@ -1,0 +1,72 @@
+{
+ "1": {
+  "pillar": "私下 / 深夜房間",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e>>>, a 24-year-old Korean woman in Busan, sitting cross-legged on her bed late at night after a supper run, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: slim on a small frame but noticeably soft-looking — a full high bust and full rounded hips, a small waist and a flat soft stomach. She is 161cm and 48kg. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer hair is a bright honey-orange brown in a layered wolf cut falling to her collarbone, with shorter face-framing pieces. Both eyebrows and her whole jawline are visible.\n\nShe wears an oversized washed-white cotton tee over black cotton shorts, the neckline sitting flat at her collarbone.\n\nHer room at night: a rumpled duvet, a half-open delivery bag and an empty fried chicken box on the floor beside the bed, a phone charging on the nightstand, a string of small warm bulbs along the shelf.\n\nOnly the warm bedside lamp is on, an ordinary phone exposure, the rest of the room dark.\n\nShe has a can in one hand and is tucking her hair behind one ear with the other, a small closed-mouth smile, eyes on the lens, dimples showing.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 811166,
+  "job": "6a5cb970-0b8e-4458-8885-26f1362d3a4b",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "宵夜後的房間、炸雞盒與外送紙袋、暖光小燈串、手機在充電。撩耳後髮＋酒窩，人設招牌動作有做到。偏差：坐在床邊地板而非床上；上衣被綁成短版（覆蓋度偏差同向）；髮型偏鮑伯而非狼尾層次。"
+ },
+ "2": {
+  "pillar": "吃播 / 外食",
+  "frame": "胸上",
+  "angle": "左轉 35°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e>>>, a 24-year-old Korean woman in Busan, sitting at the counter of a small pojangmacha food tent, her body turned about thirty-five degrees to her left and her head turned back toward the lens.\n\nHer build: slim on a small frame but noticeably soft-looking — a full high bust and full rounded hips, a small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer bright honey-orange brown wolf cut is tucked behind one ear on the near side and loose on the other, both eyebrows and her whole jawline visible.\n\nShe wears a fitted cream ribbed knit top with the sleeves pushed up, a padded jacket hanging over the stool behind her.\n\nThe food tent: fish-cake skewers standing in a steaming broth pan on the counter in front of her, a pot of soup, a hand-written menu taped to the orange tarp wall, plastic stools, the street outside the tent flap dark. The stall is closed up for the night and empty apart from her.\n\nThe bare bulb strung over the counter is the only light, an ordinary phone exposure, everything past the counter dark.\n\nShe is holding a fish-cake skewer halfway to her mouth, caught mid-word with a bright open expression, eyes on the lens.\n\nThe only person anywhere in this photograph is her — there is no vendor and no other customer, no one else in the frame, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 955557,
+  "job": "ae81d3f8-32f4-4f77-ae7c-78e62bb1e0f7",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "**本批最好的一張，直接可發。** 布帳馬車、關東煮鍋冒蒸氣、韓文手寫菜單、塑膠椅、外套掛在椅背。單人排除條款成功擋掉攤商與其他客人。左手垂放的那隻手已 native crop 複驗：肩→袖→肘→前臂→手完整相連，是她自己的手，非幽靈手。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e>>>, a 24-year-old Korean woman in Busan, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: slim on a small frame but noticeably soft-looking — a full high bust and full rounded hips, a small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer bright honey-orange brown hair is wet and pushed straight back off her face, the wolf-cut layers slicked down, both eyebrows and her whole jawline bare.\n\nShe wears a plain white towelling robe, the collar folded flat and closed at the front.\n\nShe has just come out of the shower and is standing in the bathroom doorway of her one-room flat. Behind her: a tiled wall, a shower head on a rail, a small shelf of bottles, a towel over the radiator. There is no mirror anywhere in this photograph.\n\nCold morning daylight through the small frosted window, an ordinary phone exposure, the room still dim.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 481671,
+  "job": "2c5528c0-b71b-4ad7-8d48-bbbac82755f8",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "素顏、濕髮往後梳、無鏡子、浴袍闔上。身分辨識最乾淨的一張。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e>>>, a 24-year-old Korean woman in Busan, in the kitchen of her flat on her way out. Her whole body from the top of her head down to her trainers is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: slim on a small frame but noticeably soft-looking — a full high bust and full rounded hips, a small waist and a flat soft stomach. She is 161cm and 48kg. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer bright honey-orange brown wolf cut is down with the face-framing pieces loose, both eyebrows and her jawline visible.\n\nShe wears a fitted cream knit top tucked into a long pleated brown skirt, an oversized denim jacket over it, and white trainers.\n\nThe kitchen: a narrow counter with a rice cooker and a kettle, a fridge covered in restaurant magnets, a bag of tangerines, a tote bag open on the counter.\n\nOrdinary daylight through the kitchen window, an even everyday exposure, the far end of the room darker.\n\nHer weight is on one leg and she is leaning in over the counter, both hands pushing a lidded paper coffee cup down into the open tote bag, head down watching her hands.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to trainers, natural colour grading.",
+  "seed": 86248,
+  "job": "fa7cadb8-b325-4b9c-9f82-2fbaf6b14807",
+  "file": "train_04.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 廚房、俯身把咖啡杯塞進帆布袋、低頭看自己的手、一腳抵住櫃門。冰箱上貼滿餐廳磁鐵與美食貼紙，人設訊息強。本張髮型是正確的狼尾層次。\n\n**§QA-1 再次生效：** 我先在縮圖上判定左側多出一條腿／第三隻腳，native crop 後確認是她左腳踩在櫥櫃門板上、小腿到腳踝到鞋完整相連，不是缺陷。縮圖判讀又一次會給出錯誤結論，這次在寫進 repo 之前就攔下來了。"
+ },
+ "5": {
+  "pillar": "旅遊 / 美食遠征",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e>>>, a 24-year-old Korean woman, walking down a covered seafood market street in Busan very early in the morning before it opens. Her whole body from the top of her head down to her trainers is inside the frame, with the wet market floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: slim on a small frame but noticeably soft-looking — a full high bust and full rounded hips, a small waist and a flat soft stomach. She is 161cm and 48kg. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer bright honey-orange brown wolf cut is down and moving a little with her step, both eyebrows and her jawline visible.\n\nShe wears a fitted black ribbed long-sleeve top under an open padded olive jacket, straight blue jeans and white trainers.\n\nThe market street: shuttered stalls, stacked red plastic crates, a hose coiled on the wet floor, hanging bulbs not yet switched off, a painted stall sign in Korean.\n\nEarly overcast daylight down the length of the covered street, an even everyday exposure, the stalls on either side darker.\n\nShe is mid-stride with her weight coming down on one leg, a paper cup of hot broth in one hand and her jacket cuff pulled over the other, her head turned to look sideways at the crates as she passes, not looking at the camera.\n\nThe market has not opened and the street is empty; the only person anywhere in this photograph is her — no stallholders, no other shoppers, no one in the background, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to trainers, natural colour grading.",
+  "seed": 788696,
+  "job": "278b4fac-e4a4-4ced-930c-39a401749163",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 清晨未開市的釜山海產市場、走路中重心落在單腳、一手拿熱湯紙杯、側頭看紅色塑膠籃不看鏡頭。無其他人、無手機、無裝置邊框。偏差：髮色比其他四張更橘更飽和。"
+ },
+ "_element": {
+  "id": "24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e",
+  "name": "somi-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/somi-oh/identity/element_face_tight.jpg（landmark 定位臉部裁切）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_hair_consistency_note": "五張的髮色都在蜜橘棕家族內，但飽和度有落差（#5 最橘），髮型在鮑伯與狼尾層次之間游移。Soul V2 本來就不繼承訓練圖的髮型髮色（README 重要規則第 1 條），因此不視為需要重跑的缺陷。",
+ "_single_subject_cost": "吃播支柱的攤位場景以「攤子已收、只剩她一人」處理，單人訓練規則沒有讓畫面失真——攤商不入鏡也成立。"
+}

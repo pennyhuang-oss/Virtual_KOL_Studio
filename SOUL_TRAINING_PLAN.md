@@ -17,7 +17,33 @@
 >
 > **19 位共用的寫法規則**，見 `kols/wanyin-jiang/generation_notes.md`
 > 「這一位過程中確立、適用於其餘 18 位的規則」五條，以及
-> `SEXY_SCENE_LIBRARY.md` §3-0 與 §3-D。
+> `SEXY_SCENE_LIBRARY.md` §3-0、§3-D、§3-E、§QA-1、§QA-2。
+
+---
+
+## 建模圖備齊進度（2026-09-04 更新）
+
+**10 / 19 完成**，狀態皆為「建模圖已準備好，待訓練」：
+
+| # | persona | 張數 | 備註 |
+|---|---|---|---|
+| 1 | `wanyin-jiang` | 5 | 含全部試錯 |
+| 2 | `kanon-komori` | 6 | v1/v2 同場景不同機位，兩張都收 |
+| 3 | `cheryl-soh` | 5 | |
+| 4 | `nanami-fujiwara` | 5 | |
+| 5 | `ruoruo-tang` | 5 | |
+| 6 | `angel-chiu` | 5 | #4 為 v2（手機邊框問題重生） |
+| 7 | `emma-kao` | 5 | |
+| 8 | `jia-seo` | 5 | 鏡子自拍作為她的招牌形式（本位特例） |
+| 9 | `peggy-lee` | 5 | #2 首次生成為雜訊圖，重跑成功（見 §QA-2） |
+| 10 | `somi-oh` | 5 | 一次通過、零重跑 |
+
+剩餘 9 位：`angeline-kwee`、`miu-shiraishi`、`rin-ayase`、`sydney-leong`、
+`tammy-chou`、`wendy-yeo`、`yerin-han`、`zhiyi-shen`、`zoey-yeh`。
+節奏：**一次跑兩位**（使用者 2026-09-04 裁決）。
+
+**目前累計出圖花費**：約 71 credits（含所有試錯與 1 張雜訊廢圖）。
+餘額 1,272.96。19 位全部備齊後送訓，25 credits × 19 = 475 credits。
 
 ---
 

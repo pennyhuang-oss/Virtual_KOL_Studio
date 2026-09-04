@@ -1,0 +1,89 @@
+{
+ "1": {
+  "pillar": "私下 / 房間與車庫",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "右轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4>>>, a 24-year-old Chinese-Malaysian woman in Kuala Lumpur, sitting sideways on an upturned crate in her own garage late at night, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: an emphatic hourglass — a full high bust, a very narrow waist that curves sharply in, and full rounded hips, slim everywhere else. She is 166cm and 49kg. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a deep wine-red worn long and loosely waved with a lot of volume, a few silver-grey highlighted strands running through it. Both eyebrows and her whole jawline are visible.\n\nShe wears a fitted black ribbed tank top and high-waisted dark jeans, with an oil-marked work shirt worn open over the top like a jacket, both sleeves rolled to the elbow.\n\nHer own garage at night: the bonnet of her car propped open beside her, a socket set spread on a rag, a coiled air hose, a wheel leaning against the wall, damp concrete floor.\n\nOne work lamp hooked under the open bonnet is the only light in the garage, an ordinary phone exposure, the rest of the garage dark.\n\nShe is wiping her hands on a cloth and has just looked up at the lens, a short unguarded laugh, thick brows and winged eyeliner.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 415514,
+  "job": "d794ae85-ffb3-4130-b48b-181103a1388e",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "車庫夜燈、開引擎蓋、工具攤在地上、擦手布。臉與 master 一致，酒紅＋銀灰挑染完全執行。覆蓋度偏差：工作襯衫被綁在腰上而不是當外套穿，短版背心露腰——與跨人設既有發現同向（一律往「更少覆蓋」偏）。畫面本身可直接發布。"
+ },
+ "2": {
+  "pillar": "改裝店工作 / 車",
+  "frame": "胸上",
+  "angle": "右轉 40°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4>>>, a 24-year-old Chinese-Malaysian woman in Kuala Lumpur, her body turned about forty degrees to her right and her head turned back toward the lens over her near shoulder.\n\nHer build: an emphatic hourglass — a full high bust, a very narrow waist that curves sharply in, and full rounded hips, slim everywhere else. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-red hair with silver-grey highlighted strands is pulled back into a high ponytail, no strands across her face, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears a fitted black workshop tee with a small embroidered shop logo on the chest and a lanyard with a shop pass, her short unpainted nails visible.\n\nShe is standing in the tuning shop where she works, in front of the parts shelving. Behind her: boxed exhausts on the racks, a stack of alloy wheels, a car up on the two-post lift, a printed job sheet clipped to the shelf.\n\nFlat daylight through the open roller shutter, an ordinary phone exposure, the depth of the workshop darker.\n\nShe is holding a set of wheel nuts in one open palm, caught mid-explanation with her eyebrows up, eyes on the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "job": "e8eddf2c-4e8e-4f29-8eab-ef8945034575",
+  "file": null,
+  "verdict": "廢棄（生成失敗）",
+  "note": "**新失敗模式：job 回報 completed，但輸出是純雜訊。** 已用 native resolution crop 複驗（非縮圖誤判，§QA-1 已遵守），重新下載 SHA-256 相同，確認是伺服器端的圖就是雜訊、擴散過程沒有收斂。浪費 1 credit。同批其餘 9 張全部正常，因此不是 prompt 問題。"
+ },
+ "2r": {
+  "pillar": "改裝店工作 / 車",
+  "frame": "胸上",
+  "angle": "右轉 40°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4>>>, a 24-year-old Chinese-Malaysian woman in Kuala Lumpur, her body turned about forty degrees to her right and her head turned back toward the lens over her near shoulder.\n\nHer build: an emphatic hourglass — a full high bust, a very narrow waist that curves sharply in, and full rounded hips, slim everywhere else. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-red hair with silver-grey highlighted strands is pulled back into a high ponytail, no strands across her face, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears a fitted black workshop tee with a small embroidered shop logo on the chest and a lanyard with a shop pass, her short unpainted nails visible.\n\nShe is standing in the tuning shop where she works, in front of the parts shelving. Behind her: boxed exhausts on the racks, a stack of alloy wheels, a car up on the two-post lift, a printed job sheet clipped to the shelf.\n\nFlat daylight through the open roller shutter, an ordinary phone exposure, the depth of the workshop darker.\n\nShe is holding a set of wheel nuts in one open palm, caught mid-explanation with her eyebrows up, eyes on the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 558050,
+  "job": "0cd1350e-4fe1-456f-b511-686269e59af4",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "#2 重跑，prompt 一字未改。零件貨架、排氣管、鋁圈、車在舉升機上、工作證吊繩、手心一把輪帽螺母——場景指定全中。高馬尾＋銀灰挑染清楚。偏差：視線往上不在鏡頭、相機位置偏低（未指定機位高度）。工作證上有一張約 30px 的大頭照，技術上違反「牆上／螢幕上不得有人像」條款，但屬極小區域、不值得再花 credit 重跑。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4>>>, a 24-year-old Chinese-Malaysian woman in Kuala Lumpur, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: an emphatic hourglass — a full high bust, a very narrow waist that curves sharply in, and full rounded hips, slim everywhere else. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-red hair is wet and pushed straight back off her face, the silver-grey strands darkened by the water, both eyebrows and her whole jawline bare.\n\nShe wears a plain white towelling robe, the collar folded flat and closed at the front.\n\nShe has just come out of the shower and is standing in the bathroom doorway of her flat. Behind her: the tiled wall, a shower screen still beaded with water, a towel rail, a shelf of bottles. There is no mirror anywhere in this photograph.\n\nEarly daylight through the small frosted bathroom window, an ordinary phone exposure, the hallway behind her darker.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 602059,
+  "job": "1db6c7ca-7402-45d3-be60-701516343a70",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "素顏、濕髮往後梳、無鏡子、浴袍領口有闔上。本批身分辨識最乾淨的一張。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4>>>, a 24-year-old Chinese-Malaysian woman in Kuala Lumpur, in her bedroom getting ready to go out. Her whole body from the top of her head down to her boots is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: an emphatic hourglass — a full high bust, a very narrow waist that curves sharply in, and full rounded hips, slim everywhere else, with long straight legs. She is 166cm and 49kg. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-red hair is down, long and loosely waved with a lot of volume, the silver-grey highlighted strands catching where it falls over her shoulder, both eyebrows and her jawline visible.\n\nShe wears a fitted black cropped long-sleeve top and high-waisted straight black jeans, with tall black leather boots.\n\nThe bedroom: an unmade bed with two more tops thrown across it, an open wardrobe, a shelf of scale model cars, a helmet on the chair.\n\nOrdinary daylight through the bedroom window, an even everyday exposure, the far side of the room much darker.\n\nHer weight is on one leg with the other foot up on the edge of the bed frame, both hands pulling the zip of that boot up her calf, head down watching what she is doing.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to boots, natural colour grading.",
+  "seed": 772022,
+  "job": "a202f286-b678-4ce5-baba-b281487575d1",
+  "file": "train_04.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 重心在單腳、另一腳踩床架、雙手拉長靴拉鍊、低頭看自己的手——指定動作完全執行，沒有公式站姿。房內有車模型架與安全帽，人設訊息足。頭部下傾使臉在畫面中偏小，身分貢獻中等。"
+ },
+ "5": {
+  "pillar": "夜衝 / 公路",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4>>>, a 24-year-old Chinese-Malaysian woman, on a petrol station forecourt outside Kuala Lumpur late at night, filling up her car before a night drive. Her whole body from the top of her head down to her boots is inside the frame, with the forecourt surface beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: an emphatic hourglass — a full high bust, a very narrow waist that curves sharply in, and full rounded hips, slim everywhere else, with long straight legs. She is 166cm and 49kg. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-red hair is down and loosely waved with silver-grey highlighted strands through it, blown a little to one side, both eyebrows and her jawline visible.\n\nShe wears a dark red racing-team jacket zipped halfway over a fitted black top, black jeans, and black boots.\n\nThe forecourt: her car alongside her with the fuel flap open, a pump with a lit price display, an air line reel, wet tarmac reflecting the lights, the road beyond black.\n\nThe forecourt canopy lights overhead are the only light, an ordinary phone exposure, everything past the forecourt dark.\n\nHer weight is on one leg, one hand resting on the fuel nozzle seated in the filler neck and the other holding her keys, her head turned to read the pump display, not looking at the camera.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one at the other pumps, no one inside the shop windows, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to boots, natural colour grading.",
+  "seed": 622638,
+  "job": "02424460-c93f-451c-911a-2a276a25cf60",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 加油站雨後地面反光、車在旁邊、手握油槍、另一手拿鑰匙、視線看油表不看鏡頭。無手機、無裝置邊框（§3-D② / 無裝置條款有效）。臉為側四分之三，身分貢獻中等。"
+ },
+ "_element": {
+  "id": "8a33b9d3-bcfd-43c5-b4c6-c9fba5b194b4",
+  "name": "peggy-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/peggy-lee/identity/element_face_tight.jpg（landmark 定位臉部裁切）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_new_finding_noise_output": {
+  "finding": "seedream_v4_5 可能回報 status=completed 卻交出完全未收斂的雜訊圖。",
+  "evidence": "job e8eddf2c…；native-resolution crop 確認；重新下載 SHA-256 相同（254cd229…），排除下載損毀；同批同模型另 9 張全部正常。",
+  "rule": "每一張圖在歸檔前都必須實際看過。不可因為 jobs_wait 回報 completed 就直接收檔。重跑時 prompt 不需要改。",
+  "cost": "1 credit"
+ },
+ "_cross_persona_finding_confirmed": "覆蓋度偏差再度出現且同向（#1 襯衫綁腰、短版露腰）。累計仍無反向案例。"
+}
