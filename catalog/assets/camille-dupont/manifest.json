@@ -1,0 +1,65 @@
+{
+ "hero": "hero_078qttp.jpg",
+ "gallery": [
+  {
+   "web": "g_0mbm5gv.jpg",
+   "thumb": "g_0mbm5gv_t.jpg"
+  },
+  {
+   "web": "g_05gbkck.jpg",
+   "thumb": "g_05gbkck_t.jpg"
+  },
+  {
+   "web": "g_1m54aed.jpg",
+   "thumb": "g_1m54aed_t.jpg"
+  },
+  {
+   "web": "g_0000gd3.jpg",
+   "thumb": "g_0000gd3_t.jpg"
+  },
+  {
+   "web": "g_1akhv4c.jpg",
+   "thumb": "g_1akhv4c_t.jpg"
+  },
+  {
+   "web": "g_078qttp.jpg",
+   "thumb": "g_078qttp_t.jpg"
+  },
+  {
+   "web": "g_0v756x0.jpg",
+   "thumb": "g_0v756x0_t.jpg"
+  },
+  {
+   "web": "g_0v6h9l3.jpg",
+   "thumb": "g_0v6h9l3_t.jpg"
+  },
+  {
+   "web": "g_000odp0.jpg",
+   "thumb": "g_000odp0_t.jpg"
+  },
+  {
+   "web": "g_1nzv49j.jpg",
+   "thumb": "g_1nzv49j_t.jpg"
+  },
+  {
+   "web": "g_0rleaol.jpg",
+   "thumb": "g_0rleaol_t.jpg"
+  },
+  {
+   "web": "g_04392y8.jpg",
+   "thumb": "g_04392y8_t.jpg"
+  }
+ ],
+ "videos": [
+  {
+   "poster": "v_1tcmxyj_poster.jpg",
+   "mp4": "v_1tcmxyj.mp4",
+   "webm": "v_1tcmxyj.webm"
+  },
+  {
+   "poster": "v_0pnutci_poster.jpg",
+   "mp4": "v_0pnutci.mp4",
+   "webm": "v_0pnutci.webm"
+  }
+ ]
+}

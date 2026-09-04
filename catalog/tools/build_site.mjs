@@ -61,15 +61,30 @@ const vtag = (abs) => {
   } catch { return ''; }
 };
 
+// 🛑 讀 manifest,不要掃資料夾。
+// 掃資料夾有兩個問題,兩個都實測過：
+//   ① 上一次建置留下的檔案會被當成「還在的素材」→ 頁面多出不存在的影片格。
+//   ② 排序只能靠檔名,而檔名現在是雜湊,跟使用者挑選的順序無關。
+// manifest 由 build_assets 產生,它同時記了「有哪些」與「什麼順序」。
 const assetsOf = id => {
   const d = path.join(DIR, 'assets', id);
-  let files = []; try { files = fs.readdirSync(d); } catch {}
-  const gal = files.filter(f => /^g\d+\.jpg$/.test(f)).sort();
   const u = f => `/assets/${id}/${f}` + vtag(path.join(d, f));
+  let man;
+  try { man = JSON.parse(fs.readFileSync(path.join(d, 'manifest.json'), 'utf8')); }
+  catch {
+    console.error(`🛑 ${id} 沒有 manifest.json —— 先跑 build_assets.mjs 再跑這一支。`);
+    process.exit(2);
+  }
+  const has = f => f && fs.existsSync(path.join(d, f));
   return {
-    hero: files.includes('hero.jpg') ? u('hero.jpg') : (gal[0] ? u(gal[0]) : null),
-    gallery: gal.map(f => ({ web: u(f), thumb: u(f.replace('.jpg', '_t.jpg')) })),
-    posters: files.filter(f => /_poster\.jpg$/.test(f)).sort().map(u),
+    hero: has(man.hero) ? u(man.hero) : (has(man.gallery[0]?.web) ? u(man.gallery[0].web) : null),
+    gallery: man.gallery.filter(g => has(g.web)).map(g => ({ web: u(g.web), thumb: u(g.thumb) })),
+    // 影片本體還沒轉,所以這一輪仍然只有 poster;轉好之後 mp4/webm 就會自己出現。
+    videos: man.videos.filter(v => has(v.poster)).map(v => ({
+      poster: u(v.poster),
+      mp4: has(v.mp4) ? u(v.mp4) : null,
+      webm: has(v.webm) ? u(v.webm) : null,
+    })),
   };
 };
 
@@ -653,9 +668,9 @@ const personPage = p => {
       <img src="${g.thumb}" alt="${esc(p.name)} 素材 ${i + 1}" loading="lazy" width="400" height="533"></a>`).join('')}</div>
   </section>` : ''}
 
-  ${p.a.posters.length ? `<section class="sec"><h2>影片素材</h2>
-    <div class="vids">${p.a.posters.map((s, i) => `<div class="vid">
-      <img src="${s}" alt="${esc(p.name)} 影片 ${i + 1} 首幀" loading="lazy" width="720" height="1280">
+  ${p.a.videos.length ? `<section class="sec"><h2>影片素材</h2>
+    <div class="vids">${p.a.videos.map((v, i) => `<div class="vid">
+      <img src="${v.poster}" alt="${esc(p.name)} 影片 ${i + 1} 首幀" loading="lazy" width="720" height="1280">
       <span class="play" aria-hidden="true">▶</span></div>`).join('')}</div>
     <p class="prose" style="margin-top:14px;font-size:13px">影片可於洽談時提供完整檔案。</p>
   </section>` : ''}

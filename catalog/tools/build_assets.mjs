@@ -41,6 +41,18 @@ const FF = execFileSync('python3', ['-c', 'import imageio_ffmpeg;print(imageio_f
 const ff = a => execFileSync(FF, ['-hide_banner', '-nostdin', '-loglevel', 'error', '-y', ...a], { stdio: ['ignore', 'pipe', 'pipe'] });
 const qOf = q => String(Math.round((100 - q) / 100 * 30) + 2);   // JPEG 品質 → ffmpeg -q:v
 
+// 🛑 衍生檔的檔名一律由「來源檔路徑」算出來,不要用「它在清單裡的第幾個」。
+// 2026-09-04 實測過的坑：舊做法是 g01/g02…、v1_poster/v2_poster…,配上「檔案已存在就跳過」,
+// 於是把 Luna 清單裡的前兩支對調再重建,v1_poster.jpg **完全沒變**——
+// 它指的還是舊那支影片。圖庫與封面是同一個寫法,同一個坑。
+// 換成雜湊之後:
+//   ・加新素材 → 只有新的那幾個要轉,其餘一個都不動
+//   ・調順序   → 什麼都不用重轉,而且不會錯
+//   ・拿掉素材 → 清理只刪沒被引用到的那幾個
+// （用跟 build_picker.mjs 同一個 djb2,兩邊算出來的 id 才會一致。）
+const id7 = t => { let h = 5381; for (const c of String(t)) h = ((h * 33) ^ c.charCodeAt(0)) >>> 0;
+  return h.toString(36).padStart(7, '0'); };
+
 const cat = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'catalog.json'), 'utf8'));
 // selection.json 若存在就以它為準（人挑過的），否則用候選池前 N 張
 let selection = {};
@@ -57,10 +69,18 @@ for (const p of cat.personas) {
   const heroRel = selection[p.id]?.hero || picked[0];
 
   const jobs = [];
-  if (heroRel) jobs.push({ rel: heroRel, out: 'hero', kind: 'web' });
-  picked.forEach((rel, i) => {
-    jobs.push({ rel, out: `g${String(i + 1).padStart(2, '0')}`, kind: 'web' });
-    jobs.push({ rel, out: `g${String(i + 1).padStart(2, '0')}_t`, kind: 'thumb' });
+  // manifest 記的是「順序」,檔名記的是「來源」,兩件事分開之後就不會互相汙染。
+  const man = { hero: null, gallery: [], videos: [] };
+
+  if (heroRel) {
+    jobs.push({ rel: heroRel, out: `hero_${id7(heroRel)}`, kind: 'web' });
+    man.hero = `hero_${id7(heroRel)}.jpg`;
+  }
+  picked.forEach(rel => {
+    const k = id7(rel);
+    jobs.push({ rel, out: `g_${k}`, kind: 'web' });
+    jobs.push({ rel, out: `g_${k}_t`, kind: 'thumb' });
+    man.gallery.push({ web: `g_${k}.jpg`, thumb: `g_${k}_t.jpg` });
   });
 
   for (const j of jobs) {
@@ -85,22 +105,32 @@ for (const p of cat.personas) {
 
   // 影片 poster（影片本體不進 git）
   const vids = (selection[p.id]?.videos || p.media.videos.slice(0, 3).map(v => v.rel));
-  vids.forEach((rel, i) => {
+  vids.forEach(rel => {
+    const k = id7(rel);
+    man.videos.push({ poster: `v_${k}_poster.jpg`, mp4: `v_${k}.mp4`, webm: `v_${k}.webm` });
     const src = path.join(REPO_ROOT, rel);
-    const out = path.join(dir, `v${i + 1}_poster.jpg`);
+    const out = path.join(dir, `v_${k}_poster.jpg`);
     if (!FORCE && fs.existsSync(out)) { skipped++; return; }
     if (!fs.existsSync(src)) { failed.push({ file: rel, why: '影片不存在' }); return; }
     try { ff(['-ss', '1', '-i', src, '-frames:v', '1', '-vf', `scale=${SPEC.poster.width}:-2`, '-q:v', qOf(SPEC.poster.q), out]); made++; }
     catch (e) { failed.push({ file: rel, why: 'poster 失敗：' + String(e.message).slice(0, 60) }); }
   });
 
-  // 🛑 清掉上一次建置留下的多餘 poster。
-  // 踩過：使用者把某位人設的影片從 3 支改成 1 支之後,舊的 v2/v3_poster.jpg 還留在
-  // assets/ 裡,而 build_site 是用「掃 *_poster.jpg」的方式收檔——
-  // 結果人設頁上多出兩個根本沒被挑的影片格。衍生檔不清,頁面就會說謊。
+  // manifest 就是這位人設的「該有哪些衍生檔、順序是什麼」的唯一依據。
+  // build_site 讀它,不要再去掃資料夾——掃資料夾就是上一個 bug 的來源。
+  fs.writeFileSync(path.join(dir, 'manifest.json'), JSON.stringify(man, null, 1));
+
+  // 🛑 清掉沒被 manifest 引用到的衍生檔。
+  // 踩過兩次：① 影片從 3 支改成 1 支,舊的 v2/v3_poster.jpg 留著,頁面就多出兩個不存在的影片格；
+  //          ② 檔名照位置命名時,調順序會讓舊檔「名字對、內容錯」而且永遠不會被重轉。
+  // 衍生檔不清,頁面就會說謊。
+  const keep = new Set([
+    'manifest.json', man.hero,
+    ...man.gallery.flatMap(g => [g.web, g.thumb]),
+    ...man.videos.flatMap(v => [v.poster, v.mp4, v.webm]),
+  ].filter(Boolean));
   for (const f of fs.readdirSync(dir)) {
-    const m = /^v(\d+)_poster\.jpg$/.exec(f);
-    if (m && +m[1] > vids.length) { fs.rmSync(path.join(dir, f), { force: true }); stale++; }
+    if (!keep.has(f)) { fs.rmSync(path.join(dir, f), { force: true }); stale++; }
   }
 }
 
@@ -112,7 +142,7 @@ let total = 0, count = 0;
 const totalMb = total / 1048576;
 
 console.log(`產出 ${made} 個衍生檔（跳過已存在 ${skipped} 個）`);
-if (stale) console.log(`清掉 ${stale} 個上次留下的多餘 poster（挑選變少之後的殘留）`);
+if (stale) console.log(`清掉 ${stale} 個沒被 manifest 引用到的舊衍生檔`);
 console.log(`assets/ 共 ${count} 檔、${totalMb.toFixed(1)} MB`);
 if (totalMb > LIMIT.assets_total_mb_warn)
   console.log(`⚠ 超過觀察線 ${LIMIT.assets_total_mb_warn} MB —— 依 CC-05 這一項只警告不擋，但要回報`);
