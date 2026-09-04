@@ -14,6 +14,13 @@
  * 選擇結果存在瀏覽器裡（localStorage），按「複製選擇結果」拿到 JSON，
  * 貼回給 Claude 存成 catalog/data/selection.json，型錄就照那份重出。
  *
+ * 2026-09-04 加上影片（使用者：「你先讓我在後台挑選影片」）。
+ * 影片母體 170 支、2,511 MB,原檔不進 git 也不上 Railway,所以這一頁給的是：
+ *   ・首幀圖（320 寬）
+ *   ・**3 秒動態預覽**——從整支的 15%／45%／75% 各取 1 秒接起來,
+ *     這樣看得到整支的變化,不是只看得到開頭那一秒。
+ * 實測過才定規格：平均 預覽 43.8 KB ＋ 首幀 16.8 KB → 170 支約 10 MB,進 git 沒問題。
+ *
  * 用法：node catalog/tools/build_picker.mjs
  */
 import fs from 'node:fs';
@@ -27,9 +34,31 @@ const PICK_DIR = path.join(DIR, 'assets', '_pick');
 const OUT = path.join(DIR, 'public', 'pick.html');
 
 const THUMB = { width: 320, q: 70 };
+// 影片預覽：3 段 × 1 秒,320 寬,15fps,無聲。取樣點刻意不是 0%——
+// 開頭那一秒常常是靜止的首幀,看不出這支在做什麼。
+const VPREV = { width: 320, fps: 15, crf: 32, at: [0.15, 0.45, 0.75], segSec: 1 };
+const PROBE_CACHE = path.join(DIR, 'data', 'video_probe.json');
+let probe = {};
+try { probe = JSON.parse(fs.readFileSync(PROBE_CACHE, 'utf8')); } catch {}
 
 const FF = execFileSync('python3', ['-c', 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())'], { encoding: 'utf8' }).trim();
 const ff = a => execFileSync(FF, ['-hide_banner', '-nostdin', '-loglevel', 'error', '-y', ...a], { stdio: ['ignore', 'pipe', 'pipe'] });
+// ⚠ 探測規格一律用真 ffmpeg 讀,不要自己解 MP4 atom
+//   （CLAUDE.md 記過一次：手寫 atom 解析器 offset 算錯,讀成 Baseline/Level 3.0,
+//     據此推出一整套錯的根因,真 ffmpeg 一驗是 High profile）。
+// ⚠ ffmpeg 對「只有 -i 沒有輸出」會以非 0 結束,而規格印在 stderr,
+//   所以一定要在 catch 外面讀 stderr（volumedetect 那次踩過反向的坑）。
+const ffInfo = src => {
+  let err = '';
+  try { execFileSync(FF, ['-hide_banner', '-nostdin', '-i', src], { stdio: ['ignore', 'pipe', 'pipe'] }); }
+  catch (e) { err = String(e.stderr || ''); }
+  const d = err.match(/Duration:\s*(\d+):(\d\d):(\d\d(?:\.\d+)?)/);
+  const v = err.match(/Video:.*?,\s*(\d{2,5})x(\d{2,5})/);
+  return {
+    sec: d ? (+d[1] * 3600 + +d[2] * 60 + parseFloat(d[3])) : null,
+    w: v ? +v[1] : null, h: v ? +v[2] : null,
+  };
+};
 
 const cat = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'catalog.json'), 'utf8'));
 let sel = {};
@@ -41,6 +70,7 @@ const id8 = s => { let h = 5381; for (const c of s) h = ((h * 33) ^ c.charCodeAt
 fs.mkdirSync(PICK_DIR, { recursive: true });
 
 let made = 0, cached = 0, failed = 0;
+let vmade = 0, vcached = 0, vfailed = 0;
 const groups = [];
 
 for (const p of cat.personas) {
@@ -80,9 +110,58 @@ for (const p of cat.personas) {
       hero: it.rel === currentHero,
     });
   }
-  groups.push({ id: p.id, name: p.name, name_zh: p.name_zh, rows });
-  process.stdout.write(`  ${p.name} ${rows.length} 張\n`);
+  // ── 影片 ──────────────────────────────────────────────────
+  // 站上現在的預設是「前 3 支的首幀圖」,所以預設就勾那 3 支,
+  // 讓這一頁反映的是現況,不是空白。
+  const currentVideos = sel[p.id]?.videos || p.media.videos.slice(0, 3).map(v => v.rel);
+  const vrows = [];
+  for (const v of p.media.videos) {
+    const key = id8(v.rel);
+    const src = path.join(REPO_ROOT, v.rel);
+    const post = path.join(dir, `${key}_vp.jpg`);
+    const prev = path.join(dir, `${key}_vc.mp4`);
+    if (!fs.existsSync(src)) { vfailed++; continue; }
+
+    if (!probe[v.rel]) probe[v.rel] = ffInfo(src);
+    const info = probe[v.rel];
+    if (!info.sec) { vfailed++; continue; }
+
+    if (!fs.existsSync(post) || !fs.existsSync(prev)) {
+      try {
+        ff(['-ss', String(info.sec * VPREV.at[0]), '-i', src, '-frames:v', '1',
+            '-vf', `scale=${VPREV.width}:-2`, '-q:v', '6', post]);
+        // 三段各自轉好再接起來。⚠ concat 清單裡的相對路徑是相對「清單檔所在目錄」,
+        //   不是相對 cwd——寫成 `vtest/x.mp4` 會被找成 `vtest/vtest/x.mp4`（踩過）。
+        const segs = VPREV.at.map((frac, i) => {
+          const seg = path.join(dir, `${key}_s${i}.mp4`);
+          ff(['-ss', String(Math.max(0, info.sec * frac)), '-i', src, '-t', String(VPREV.segSec), '-an',
+              '-vf', `scale=${VPREV.width}:-2,fps=${VPREV.fps}`, '-c:v', 'libx264',
+              '-crf', String(VPREV.crf), '-preset', 'veryfast', '-pix_fmt', 'yuv420p', seg]);
+          return seg;
+        });
+        const list = path.join(dir, `${key}_list.txt`);
+        fs.writeFileSync(list, segs.map(f => `file '${path.basename(f)}'`).join('\n') + '\n');
+        ff(['-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', prev]);
+        for (const f of [...segs, list]) fs.rmSync(f, { force: true });
+        vmade++;
+      } catch { vfailed++; continue; }
+    } else vcached++;
+
+    const tag = f => `?v=` + crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 10);
+    vrows.push({
+      key, rel: v.rel,
+      name: v.rel.split('/').slice(3).join('/'),
+      poster: `/assets/_pick/${p.id}/${key}_vp.jpg` + tag(post),
+      clip: `/assets/_pick/${p.id}/${key}_vc.mp4` + tag(prev),
+      sec: Math.round(info.sec), w: info.w, h: info.h, mb: v.mb,
+      on: currentVideos.includes(v.rel),
+    });
+  }
+
+  groups.push({ id: p.id, name: p.name, name_zh: p.name_zh, rows, vrows });
+  process.stdout.write(`  ${p.name} ${rows.length} 張圖、${vrows.length} 支影片\n`);
 }
+fs.writeFileSync(PROBE_CACHE, JSON.stringify(probe, null, 1));
 
 const CSS = `
 *{box-sizing:border-box}
@@ -123,6 +202,36 @@ h2 small{color:#888;font-weight:400;font-size:13px;margin-left:8px}
 .dlg textarea{width:100%;height:300px;background:#0b0b0e;color:#ddd;border:1px solid #33333c;
   border-radius:4px;padding:12px;font:12px/1.5 ui-monospace,Menlo,monospace;resize:vertical}
 .hint{color:#999;font-size:12.5px}
+
+/* 圖片／影片切換 */
+.tabs{display:flex;gap:0;border:1px solid #3a3a44;border-radius:4px;overflow:hidden}
+.tabs button{background:transparent;color:#bbb;border:0;border-radius:0;padding:8px 16px;font-weight:400}
+.tabs button[aria-pressed=true]{background:#e8c85a;color:#17130a;font-weight:600}
+body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
+
+/* 影片卡：首幀 ＋ 滑過／點一下播 3 秒動態預覽 */
+.gvid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.vt{position:relative;border:2px solid transparent;border-radius:4px;overflow:hidden;
+  background:#1a1a20;cursor:pointer;display:block}
+.vt .ph{position:relative;aspect-ratio:9/16;background:#121216}
+.vt .ph img,.vt .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:50% 18%;display:block}
+.vt .ph img{opacity:.55;transition:.15s}
+.vt .ph video{opacity:0;transition:.15s}
+.vt.on .ph img{opacity:1}
+.vt.play .ph video{opacity:1}
+.vt.on{border-color:#e8c85a}
+.vt .tick{position:absolute;top:6px;left:6px;width:21px;height:21px;border-radius:3px;
+  background:rgba(0,0,0,.6);border:1.5px solid #777;display:grid;place-items:center;
+  font-size:13px;color:transparent;z-index:2}
+.vt.on .tick{background:#e8c85a;border-color:#e8c85a;color:#17130a}
+.vt .len{position:absolute;top:6px;right:6px;z-index:2;font-size:10px;padding:2px 6px;border-radius:3px;
+  background:rgba(0,0,0,.72);color:#ddd;font-variant-numeric:tabular-nums}
+.vt .pv{position:absolute;bottom:34px;left:6px;z-index:2;font-size:9.5px;padding:2px 6px;
+  border-radius:3px;background:rgba(0,0,0,.72);color:#8ecf8e}
+.vt .n{position:absolute;left:0;right:0;bottom:0;z-index:2;
+  background:linear-gradient(transparent,rgba(0,0,0,.94));
+  padding:16px 7px 5px;font-size:10px;line-height:1.35;color:#ddd;word-break:break-all}
 `;
 
 const html = `<!doctype html>
@@ -133,6 +242,10 @@ const html = `<!doctype html>
 
 <div class="bar">
   <h1>素材挑選後台</h1>
+  <span class="tabs">
+    <button data-mode="img" aria-pressed="true">圖片</button>
+    <button data-mode="vid" aria-pressed="false">影片</button>
+  </span>
   <span class="hint" id="tot"></span>
   <span class="sp"></span>
   <button class="ghost" onclick="location.href='/'">看型錄</button>
@@ -141,15 +254,34 @@ const html = `<!doctype html>
 </div>
 
 <div class="wrap">
-  <p class="hint" style="padding:16px 0 0">
+  <p class="hint" style="padding:16px 0 0" id="help-img">
     點縮圖＝要／不要。<b>右上角「封面」</b>點一下把那張設成這位人設的封面（每人一張）。<br>
     紅字的是程式預設沒挑的，理由寫在上面——<b>你要的話直接勾回來就好</b>。<br>
     選好之後按右上角「複製選擇結果」，把內容貼回給 Claude，型錄就會照你挑的重出。
   </p>
+  <p class="hint" style="padding:16px 0 0" id="help-vid">
+    <b>滑過（手機是點一下）就會播 3 秒預覽</b>——那 3 秒是從整支的 15%／45%／75% 各取 1 秒接起來的，
+    所以看得到整支的變化，不是只看得到開頭。<b>點左上角的方框＝要／不要。</b><br>
+    右上角是這支的長度，底下是檔名與原始尺寸。目前預設勾的是站上現在用的那幾支。<br>
+    ⚠ 這裡放的是壓過的預覽，不是原片。<b>挑好之後我才會把你挑的那幾支轉成網頁播放用的檔案</b>——
+    170 支全部轉多半是白轉。
+  </p>
 ${groups.map(g => `
   <section data-p="${esc(g.id)}">
-    <h2>${esc(g.name)}<small>${esc(g.name_zh || '')} · 共 ${g.rows.length} 張</small></h2>
+    <h2>${esc(g.name)}<small>${esc(g.name_zh || '')} · ${g.rows.length} 張圖 · ${g.vrows.length} 支影片</small></h2>
     <p class="cnt" id="c-${esc(g.id)}"></p>
+    <div class="gvid">
+${g.vrows.length ? g.vrows.map(v => `      <div class="vt${v.on ? ' on' : ''}" data-p="${esc(g.id)}" data-rel="${esc(v.rel)}">
+        <div class="ph">
+          <img src="${v.poster}" alt="${esc(v.name)}" loading="lazy" width="320" height="569">
+          <video src="${v.clip}" muted loop playsinline preload="none"></video>
+        </div>
+        <span class="tick">✓</span>
+        <span class="len">${Math.floor(v.sec / 60)}:${String(v.sec % 60).padStart(2, '0')}</span>
+        <span class="pv">預覽 3 秒</span>
+        <span class="n">${esc(v.name)}${v.w ? ` · ${v.w}×${v.h} · ${v.mb} MB` : ''}</span>
+      </div>`).join('\n') : '      <p class="hint">這位人設沒有影片素材。</p>'}
+    </div>
     <div class="grid">
 ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' : ''}" data-p="${esc(g.id)}" data-rel="${esc(r.rel)}">
         <img src="${r.thumb}" alt="${esc(r.name)}" loading="lazy" width="320" height="427">
@@ -172,18 +304,43 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
 
 <script>
 (function(){
-  var KEY='kolcat-pick-v1';
+  var KEY='kolcat-pick-v2';
   var saved={}; try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  // v1 只存圖片。沿用它的圖片選擇,影片就照頁面上的預設值。
+  if(!Object.keys(saved).length){
+    try{ saved=JSON.parse(localStorage.getItem('kolcat-pick-v1')||'{}') }catch(e){}
+  }
 
-  // 還原上次的選擇（如果有）
+  // 還原上次的選擇（如果有）。⚠ 只有 v2 才動影片——
+  //   v1 沒有 videos 欄位,若拿 undefined 去比對會把預設的三支全部取消掉。
   if(Object.keys(saved).length){
     document.querySelectorAll('.it').forEach(function(el){
-      var p=el.dataset.p, rel=el.dataset.rel, s=saved[p];
-      if(!s) return;
-      el.classList.toggle('on', (s.gallery||[]).indexOf(rel)>=0);
-      el.classList.toggle('isHero', s.hero===rel);
+      var s=saved[el.dataset.p]; if(!s) return;
+      el.classList.toggle('on', (s.gallery||[]).indexOf(el.dataset.rel)>=0);
+      el.classList.toggle('isHero', s.hero===el.dataset.rel);
+    });
+    document.querySelectorAll('.vt').forEach(function(el){
+      var s=saved[el.dataset.p]; if(!s || !s.videos) return;
+      el.classList.toggle('on', s.videos.indexOf(el.dataset.rel)>=0);
     });
   }
+
+  // ── 圖片／影片切換 ──
+  var mode='img';
+  try{ mode=localStorage.getItem('kolcat-pick-mode')||'img' }catch(e){}
+  function setMode(m){
+    mode=m;
+    document.body.classList.toggle('m-vid', m==='vid');
+    document.querySelectorAll('.tabs button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.mode===m)); });
+    document.getElementById('help-img').hidden = (m!=='img');
+    document.getElementById('help-vid').hidden = (m!=='vid');
+    try{ localStorage.setItem('kolcat-pick-mode', m) }catch(e){}
+    counts();
+  }
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){ setMode(b.dataset.mode); });
+  });
 
   function collect(){
     var out={};
@@ -193,7 +350,9 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
         if(el.classList.contains('on')) gallery.push(el.dataset.rel);
         if(el.classList.contains('isHero')) hero=el.dataset.rel;
       });
-      out[p]={hero:hero, gallery:gallery};
+      var videos=[];
+      sec.querySelectorAll('.vt.on').forEach(function(el){ videos.push(el.dataset.rel); });
+      out[p]={hero:hero, gallery:gallery, videos:videos};
     });
     return out;
   }
@@ -201,12 +360,19 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
   function counts(){
     var t=0;
     document.querySelectorAll('section[data-p]').forEach(function(sec){
-      var n=sec.querySelectorAll('.it.on').length; t+=n;
-      var h=sec.querySelector('.it.isHero');
-      document.getElementById('c-'+sec.dataset.p).textContent =
-        '已選 '+n+' 張'+(h?'':'　⚠ 還沒選封面');
+      var el=document.getElementById('c-'+sec.dataset.p);
+      if(mode==='vid'){
+        var v=sec.querySelectorAll('.vt.on').length,
+            all=sec.querySelectorAll('.vt').length;
+        t+=v;
+        el.textContent = all ? ('已選 '+v+' / '+all+' 支影片') : '沒有影片素材';
+      } else {
+        var n=sec.querySelectorAll('.it.on').length; t+=n;
+        el.textContent='已選 '+n+' 張'+(sec.querySelector('.it.isHero')?'':'　⚠ 還沒選封面');
+      }
     });
-    document.getElementById('tot').textContent='合計已選 '+t+' 張';
+    document.getElementById('tot').textContent =
+      '合計已選 '+t+(mode==='vid'?' 支影片':' 張圖');
   }
 
   document.addEventListener('click', function(e){
@@ -221,13 +387,47 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
     save(); counts();
   });
 
+  // 影片：點一下＝要／不要
+  document.addEventListener('click', function(e){
+    var vt=e.target.closest('.vt'); if(!vt) return;
+    vt.classList.toggle('on'); save(); counts();
+  });
+
+  // 滑過就播那 3 秒。preload="none" 所以在滑到之前不會下載任何影片,
+  // 而且一次只播一支——170 支同時播會把瀏覽器拖垮。
+  var playing=null;
+  function stopPlaying(){
+    if(!playing) return;
+    var v=playing.querySelector('video');
+    try{ v.pause(); v.currentTime=0 }catch(e){}
+    playing.classList.remove('play'); playing=null;
+  }
+  function startPlaying(vt){
+    if(playing===vt) return;
+    stopPlaying();
+    var v=vt.querySelector('video'); if(!v) return;
+    playing=vt; vt.classList.add('play');
+    v.play().catch(function(){ /* 使用者還沒互動過就被擋,不是錯誤 */ });
+  }
+  document.addEventListener('pointerover', function(e){
+    var vt=e.target.closest('.vt'); if(vt) startPlaying(vt);
+  });
+  document.addEventListener('pointerout', function(e){
+    var vt=e.target.closest('.vt');
+    if(vt && vt===playing && !vt.contains(e.relatedTarget)) stopPlaying();
+  });
+  // 手機沒有滑過,點一下就播（勾選由上面那個 click 處理,兩件事同時發生沒關係）
+  document.addEventListener('touchstart', function(e){
+    var vt=e.target.closest('.vt'); if(vt) startPlaying(vt);
+  }, {passive:true});
+
   document.getElementById('reset').addEventListener('click', function(){
     if(!confirm('把所有人設的選擇清掉，回到程式的預設？')) return;
     localStorage.removeItem(KEY); location.reload();
   });
 
   document.getElementById('copy').addEventListener('click', function(){
-    var payload={note:'KOLCAT 素材挑選結果。貼回給 Claude，它會存成 catalog/data/selection.json 並重出型錄。',
+    var payload={note:'KOLCAT 素材挑選結果（圖片 ＋ 影片）。貼回給 Claude，它會存成 catalog/data/selection.json 並重出型錄。',
       picked_at:new Date().toISOString().slice(0,16).replace('T',' '), personas:collect()};
     document.getElementById('out').value=JSON.stringify(payload,null,1);
     document.getElementById('dlg').classList.add('on');
@@ -240,12 +440,16 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
     );
   });
 
-  counts();
+  setMode(mode);
 })();
 </script>
 </body></html>`;
 
 fs.writeFileSync(OUT, html);
 const sz = fs.readdirSync(PICK_DIR).reduce((a, d) => a + fs.readdirSync(path.join(PICK_DIR, d)).reduce((b, f) => b + fs.statSync(path.join(PICK_DIR, d, f)).size, 0), 0);
-console.log(`\n縮圖 產生 ${made} / 沿用 ${cached} / 失敗 ${failed}，共 ${(sz / 1048576).toFixed(1)} MB`);
+console.log(`\n圖片縮圖 產生 ${made} / 沿用 ${cached} / 失敗 ${failed}`);
+console.log(`影片預覽 產生 ${vmade} / 沿用 ${vcached} / 失敗 ${vfailed}`);
+console.log(`_pick 總大小 ${(sz / 1048576).toFixed(1)} MB`);
+console.log(`  可挑：${groups.reduce((a, g) => a + g.rows.length, 0)} 張圖、` +
+  `${groups.reduce((a, g) => a + g.vrows.length, 0)} 支影片`);
 console.log(`寫入 ${OUT}（${(fs.statSync(OUT).size / 1024).toFixed(0)} KB）`);
