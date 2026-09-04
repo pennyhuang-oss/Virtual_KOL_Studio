@@ -1,0 +1,81 @@
+{
+ "1": {
+  "pillar": "私下 / 打烊後與白天",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<19f44c28-fb6b-45e1-bd13-6b88a5223dd8>>>, a 28-year-old Chinese-Singaporean woman in Tanjong Pagar, Singapore, sitting up on her own bar counter after closing, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: a mature curve — 164cm and 49kg, square-set shoulders, a long neck, a full bust, a defined waist and rounded hips. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a cool silver grey cut short to just below the ear, tucked behind one ear on the near side. Both eyebrows and her whole jawline are visible.\n\nShe wears a crisp white shirt with the sleeves rolled to the elbow, undone to the third button, tucked into black trousers.\n\nThe bar after closing: the shutter down, stools upturned on the tables behind her, a jigger and a bar spoon still out on the counter, a bottle of amber spirit with the light coming through it, a folded bar towel, a till roll printed and torn off.\n\nOne warm pendant over the counter is the only light left on, an ordinary phone exposure, the rest of the room in deep shadow.\n\nShe has one hand flat on the counter behind her and a short glass in the other, a level unhurried expression, eyes on the lens, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no customer, no staff, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "7e122a38-29d7-4585-9b08-a0a4e72f8357",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "打烊後的吧檯：鐵捲門拉下、椅子倒扣在桌上、量酒器與吧叉匙還在檯面、透光的琥珀色酒瓶、吧檯布、撕下的收據紙捲、單盞暖色吊燈。坐在自己的吧檯上、一手撐在身後、一手拿短飲杯。**服裝零偏差**——白襯衫袖子捲到手肘、解到第三顆、紮進黑長褲，完全照規格。冷銀灰耳下短髮清楚。"
+ },
+ "2": {
+  "pillar": "吧檯工作",
+  "frame": "胸上",
+  "angle": "左轉 35°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<19f44c28-fb6b-45e1-bd13-6b88a5223dd8>>>, a 28-year-old Chinese-Singaporean woman working behind her own bar in Tanjong Pagar, Singapore, her body turned about thirty-five degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: a mature curve — square-set shoulders, a long neck, a full bust, a defined waist. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer cool silver grey hair is cut short to just below the ear, pushed back off her forehead, both eyebrows and her whole jawline fully exposed. Her makeup is a matte base, a brown-black eyeline and a nude lip.\n\nShe wears a black shirt buttoned to the collarbone with the sleeves rolled high, and a folded bar apron tied at the waist.\n\nBehind the bar: a back wall of bottles lit from below, a mixing glass with a long bar spoon in it, a jigger, a tray of cut citrus, a block of clear ice with a chipping pick beside it, a shaker draining upside down.\n\nWarm light from the bottle shelf behind her, an ordinary phone exposure, the room in front of the counter dark.\n\nShe is stirring the mixing glass with the bar spoon and has glanced over at the lens mid-stir, one eyebrow slightly raised, mouth closed.\n\nThe only person anywhere in this photograph is her — no customer, no other bartender, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "1a28c89a-5166-42f6-9d69-c0e408384c0a",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "酒櫃背光牆、攪拌杯與長吧叉匙、量酒器、切好的柑橘盤、透明冰塊與冰鑿、倒扣瀝乾的雪克杯。攪拌中側頭看鏡頭。一個人，沒有客人也沒有其他調酒師。偏差：黑襯衫指定「扣到鎖骨」但實際多開了幾顆（覆蓋度偏差同向，幅度小）。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<19f44c28-fb6b-45e1-bd13-6b88a5223dd8>>>, a 28-year-old Chinese-Singaporean woman in Singapore, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: a mature curve — square-set shoulders, a long neck, a full bust, a defined waist. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer cool silver grey short hair is wet and combed straight back off her face, both eyebrows and her whole jawline bare.\n\nShe wears a thick white towelling bathrobe with full-length sleeves that reach her wrists, wrapped closed over her chest and tied at the waist with its own belt, the shawl collar folded flat across both shoulders.\n\nShe has just come out of the shower and is standing in the short hallway of her flat, a closed white door filling the wall behind her, a folded towel over the rail beside her and a laundry basket on the floor.\n\nLate morning daylight from a window out of frame, an ordinary phone exposure, the far end of the hallway much darker.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the hallway. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "3495f6c2-928b-4f9b-b7b6-e1633817d954",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "**本批身分辨識最好的一張。** 素顏、銀灰短髮濕梳往後、身後是關上的白門、毛巾架、洗衣籃。**§3-F 在物件層面再次有效**：沒有鏡子、沒有手機、沒有螢幕。\n\n**但這一張推翻了上一輪的假設**：用的是與 `sydney-leong` #3 **完全相同**的浴袍規格句（長袖到手腕、包覆闔上、繫腰帶、和服領平貼雙肩）、段落裡同樣沒有任何自創否定句，結果浴袍還是滑到雙肩以下。詳見 `_hypothesis_weakened`。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<19f44c28-fb6b-45e1-bd13-6b88a5223dd8>>>, a 28-year-old Chinese-Singaporean woman, in her flat getting ready to go down to the bar. Her whole body from the top of her head down to her shoes is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: a mature curve — 164cm and 49kg, square-set shoulders, a long neck, a full bust, a defined waist and rounded hips, with long legs. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer cool silver grey hair is cut short to just below the ear and dried straight, both eyebrows and her jawline visible.\n\nShe wears a black silk shirt tucked into high-waisted charcoal wide-leg trousers, with a fine leather belt and black loafers.\n\nThe flat: a low sideboard with a row of spirit bottles and a stack of bar books, a rattan chair with a linen jacket over the back, a coat hook by the door with a canvas tote on it, a dark timber floor.\n\nOrdinary late-afternoon daylight through the window, an even everyday exposure, the far side of the room much darker.\n\nHer weight is on one leg and she is bent slightly forward with both hands threading the belt through the last loop at her hip, head down watching her fingers.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "dfd76a7f-51ba-4b1f-a96c-52371bb5523e",
+  "file": "train_04.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 雙手在腰間穿皮帶扣最後一個環、低頭看自己的手指、單腳承重。矮櫃上一排烈酒瓶與調酒書、藤編椅背上的亞麻外套、門邊掛勾上的帆布袋、深色木地板。頭到樂福鞋全入鏡、無裝置。"
+ },
+ "5": {
+  "pillar": "外出 / 休假",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<19f44c28-fb6b-45e1-bd13-6b88a5223dd8>>>, a 28-year-old Chinese-Singaporean woman, on a quiet row of restored shophouses in Singapore on her day off, early in the morning. Her whole body from the top of her head down to her sandals is inside the frame, with the five-foot way beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: a mature curve — 164cm and 49kg, square-set shoulders, a long neck, a full bust, a defined waist and rounded hips, with long legs. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer cool silver grey short hair is pushed back off her face, both eyebrows and her jawline visible.\n\nShe wears a loose oversized white linen shirt over a black vest top and cropped khaki trousers, with flat leather slides and a canvas tote on one shoulder.\n\nThe shophouse row: repainted pastel facades with louvred timber shutters, a row of columns along the covered walkway, an old letterbox, a potted fern on the step, an air-well grille, the tiled walkway still damp.\n\nEarly overcast daylight along the walkway, an even everyday exposure, the shop interiors on one side much darker.\n\nShe is mid-stride with her weight coming down on one leg, an iced coffee in one hand and the tote strap held with the other, her head turned to look sideways at the shutters as she passes, not looking at the camera.\n\nThe walkway is empty this early; the only person anywhere in this photograph is her — no other pedestrians, no shopkeepers, no one in the background, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person on any wall.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to sandals, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "4ee3af8a-96b4-452b-9502-d1c811ffd511",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**本批最好的一張、可直接發。** 新加坡整修過的店屋五腳基：柱列、木百葉、舊信箱、階上蕨類盆栽、赤陶地磚、吊燈。走路中單腳承重、一手冰咖啡、一手拉帆布袋帶、側頭看百葉窗。無其他人、無裝置。**服裝零偏差**——寬鬆白亞麻襯衫外搭、黑背心、七分卡其褲、皮拖鞋。"
+ },
+ "_element": {
+  "id": "19f44c28-fb6b-45e1-bd13-6b88a5223dd8",
+  "name": "wendy-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/wendy-yeo/identity/element_face_tight.jpg（landmark 定位臉部裁切，1727×1734；她臉在 master 裡佔比大，裁切框觸到左右邊界，但仍是純臉、無肩頸）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_hypothesis_weakened": {
+  "hypothesis": "上一輪（sydney-leong）記錄的假設：『同一段落裡的否定句會排擠掉服裝指令；拿掉否定句，服裝規格就會執行。』",
+  "this_round": "#3 用了**與 sydney #3 完全相同**的浴袍規格句、同樣沒有自創否定句，結果浴袍仍然滑到雙肩以下。",
+  "conclusion": "**假設被削弱，不成立為規則。** sydney 那三張零偏差比較可能是運氣，不是機制。",
+  "status": "維持既有結論：**覆蓋度無法用 prompt 可靠控制，只能事後挑片。** 上一輪那條假設在 `SEXY_SCENE_LIBRARY.md` 裡已標為未證明，現在補上這次的反例。"
+ }
+}
