@@ -384,6 +384,16 @@ the edge of any device.
 若那個物件是人設必需（像她的直播間），就接受裝置會出現，改為確認它
 **不是第二張臉、不框住畫面**——這兩點才是會傷到訓練集的。
 
+**第二次失效（同日，`zhiyi-shen` #4）把成因收得更緊：連複合名詞裡的裝置詞都算。**
+那一張的場景清單寫了 `a console with a laptop bag`（玄關櫃上有一個筆電包）。
+`laptop bag` 是「包」不是「筆電」，但裡面有 `laptop` 這個詞——結果櫃上真的出現一台筆電，
+旁邊還多生出一支手機。裝置排除句同樣沒擋住。
+
+**所以檢查清單要看的是「詞」，不是「物件」**：寫場景之前先掃過一遍自己的名詞，
+只要字面上出現 phone / laptop / screen / monitor / tablet / camera / ring light，
+不管它是不是被包在別的詞裡（`laptop bag`、`phone case`、`camera strap`），都會把那個裝置招進畫面。
+要提包就寫 `a work tote`、`a leather satchel`，不要寫 `a laptop bag`。
+
 #### 那個「否定句排擠服裝指令」的假設：已被推翻（2026-09-04）
 
 前一輪記錄了一個假設：`sydney-leong` #3 #4 #5 連續三張服裝零偏差，
