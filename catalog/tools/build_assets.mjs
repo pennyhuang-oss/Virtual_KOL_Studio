@@ -27,6 +27,9 @@ const SPEC = {
   web:    { longEdge: 1440, q: 82 },
   thumb:  { width: 400, q: 78 },
   poster: { width: 720, q: 80 },
+  // 影片:720p 長邊上限、CRF 26、AAC 96k、yuv420p、faststart（moov 搬到檔頭才能邊下載邊播）。
+  // 實測（三支分層抽樣）:2.7→0.89、22.1→1.56、65.6→4.96 MB,平均每秒 0.102 MB。
+  video:  { longEdge: 1280, crf: 26, preset: 'medium', audioKbps: 96 },
 };
 // 上限的依據（依覆核者 Q9 的判準：能量出來的就量，不要猜餘裕倍數）
 //   第一版：抽樣 48 張的 max 0.206 MB × 約 2 → 0.4 MB。
@@ -40,6 +43,15 @@ const LIMIT = { single_image_mb: 0.6, assets_total_mb_warn: 80 };
 const FF = execFileSync('python3', ['-c', 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())'], { encoding: 'utf8' }).trim();
 const ff = a => execFileSync(FF, ['-hide_banner', '-nostdin', '-loglevel', 'error', '-y', ...a], { stdio: ['ignore', 'pipe', 'pipe'] });
 const qOf = q => String(Math.round((100 - q) / 100 * 30) + 2);   // JPEG 品質 → ffmpeg -q:v
+
+// 🛑 為什麼只有少數幾支會多出一份 WebM——這是為了「驗得到」,不是為了相容性。
+// 上線的格式是 H.264/MP4,現代瀏覽器全部都播得動。但我用來驗的 Playwright Chromium
+// **完全沒有 H.264**（實測 canPlayType 回空字串,VP8/VP9 回 probably）,
+// 所以只出 MP4 的話「點下去會不會播」在這台機器上永遠驗不了,只能寫「應該可以」。
+// 每支都出 VP9 要多 178 MB ＋ 20 分鐘（實測 720p:1.77 MB vs H.264 1.56 MB、1.2 倍即時）,
+// 為了測而付這個代價不合理。所以只做 VP9_PROBE 支當探針,
+// <source> 順序是 MP4 在前、WebM 在後——真瀏覽器拿 MP4,我這台自動退到 WebM。
+const VP9_PROBE = 3;
 
 // 🛑 衍生檔的檔名一律由「來源檔路徑」算出來,不要用「它在清單裡的第幾個」。
 // 2026-09-04 實測過的坑：舊做法是 g01/g02…、v1_poster/v2_poster…,配上「檔案已存在就跳過」,
@@ -60,6 +72,7 @@ try { selection = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'selection.j
 
 fs.mkdirSync(ASSETS, { recursive: true });
 let made = 0, skipped = 0, stale = 0, failed = [];
+let probeLeft = VP9_PROBE;
 
 for (const p of cat.personas) {
   const dir = path.join(ASSETS, p.id);
@@ -109,11 +122,46 @@ for (const p of cat.personas) {
     const k = id7(rel);
     man.videos.push({ poster: `v_${k}_poster.jpg`, mp4: `v_${k}.mp4`, webm: `v_${k}.webm` });
     const src = path.join(REPO_ROOT, rel);
-    const out = path.join(dir, `v_${k}_poster.jpg`);
-    if (!FORCE && fs.existsSync(out)) { skipped++; return; }
     if (!fs.existsSync(src)) { failed.push({ file: rel, why: '影片不存在' }); return; }
-    try { ff(['-ss', '1', '-i', src, '-frames:v', '1', '-vf', `scale=${SPEC.poster.width}:-2`, '-q:v', qOf(SPEC.poster.q), out]); made++; }
-    catch (e) { failed.push({ file: rel, why: 'poster 失敗：' + String(e.message).slice(0, 60) }); }
+
+    // 首幀圖。⚠ 這裡不可以用 `return` 提前結束——下面還有影片本體要轉,
+    //   用 return 會把影片一起跳過（踩過一次:回報「產出 0 個」而 51 支一支都沒轉）。
+    const out = path.join(dir, `v_${k}_poster.jpg`);
+    if (!FORCE && fs.existsSync(out)) { skipped++; }
+    else {
+      try { ff(['-ss', '1', '-i', src, '-frames:v', '1', '-vf', `scale=${SPEC.poster.width}:-2`, '-q:v', qOf(SPEC.poster.q), out]); made++; }
+      catch (e) { failed.push({ file: rel, why: 'poster 失敗：' + String(e.message).slice(0, 60) }); }
+    }
+
+    // ── 影片本體:轉成網頁播得動的 MP4 ──
+    const mp4 = path.join(dir, `v_${k}.mp4`);
+    const sc = `scale='if(gt(iw,ih),min(${SPEC.video.longEdge},iw),-2)':'if(gt(iw,ih),-2,min(${SPEC.video.longEdge},ih))'`;
+    if (FORCE || !fs.existsSync(mp4)) {
+      try {
+        ff(['-i', src, '-vf', sc,
+            '-c:v', 'libx264', '-crf', String(SPEC.video.crf), '-preset', SPEC.video.preset,
+            '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-level', '4.0',
+            // ✅ 無聲的來源帶著 -c:a 也不會失敗——實測過:ffmpeg 直接忽略,輸出就是 0 個音軌,
+            //    所以不需要另外一條「不帶音訊」的備援路徑。
+            '-c:a', 'aac', '-b:a', `${SPEC.video.audioKbps}k`, '-ac', '2',
+            '-movflags', '+faststart', mp4]);
+        made++;
+      } catch (e) { failed.push({ file: rel, why: '影片轉檔失敗：' + String(e.message).slice(0, 80) }); }
+    } else skipped++;
+
+    // ── 探針:只有前 VP9_PROBE 支會多一份 WebM,理由見檔案上方註解 ──
+    if (probeLeft > 0 && fs.existsSync(mp4)) {
+      const webm = path.join(dir, `v_${k}.webm`);
+      if (FORCE || !fs.existsSync(webm)) {
+        try {
+          ff(['-i', mp4, '-c:v', 'libvpx-vp9', '-crf', '34', '-b:v', '0',
+              '-deadline', 'good', '-cpu-used', '4', '-row-mt', '1',
+              '-c:a', 'libopus', '-b:a', `${SPEC.video.audioKbps}k`, webm]);
+          made++;
+        } catch { /* 探針轉失敗不擋,MP4 還在 */ }
+      }
+      probeLeft--;
+    }
   });
 
   // manifest 就是這位人設的「該有哪些衍生檔、順序是什麼」的唯一依據。
