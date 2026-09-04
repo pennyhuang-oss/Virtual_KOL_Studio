@@ -1,0 +1,72 @@
+{
+ "1": {
+  "pillar": "私下 / 房間裡的她",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<0ec9988e-def7-4bf8-9337-35b5e4757bf1>>>, a 25-year-old Taiwanese woman in Taipei, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: narrow shoulders and a slight frame with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long dark-brown hair is completely down for the first time all day, and the lower third of its length is bleached to a soft honey-tea blonde. It is pushed back off her face so both eyebrows and her whole jawline are clearly visible.\n\nShe wears a deep grey silk slip nightdress with thin straps, the fabric creased where she has been lying on it.\n\nShe is sitting on the edge of the bed in her rented flat after a night shift. Behind her: a duvet pushed into a heap, a hair tie and a lanyard dropped on the nightstand, a glass of water, blackout curtains half drawn against the daylight.\n\nOne bedside lamp on against the daylight leaking round the curtain edge, an ordinary phone exposure, the rest of the room dim.\n\nShe looks at the lens with the flat, emptied-out expression of someone who has just come off a twelve-hour shift, lips closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "job": "e0ffe99c-f07f-453f-8c1f-1cd2270555c4",
+  "file": "a1.jpg",
+  "note": "臉與 master 一致。髮尾蜜茶金正確，深灰絲質睡裙、大夜下班的空洞表情都到位。"
+ },
+ "2": {
+  "pillar": "職業 / 醫院檯面",
+  "frame": "胸上",
+  "angle": "左 35–40°",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<0ec9988e-def7-4bf8-9337-35b5e4757bf1>>>, a 25-year-old Taiwanese woman in Taipei, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: narrow shoulders and a slight frame with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer dark-brown hair is scraped back into a tight low bun with not one strand loose, so none of the bleached length shows at all. Her forehead, both eyebrows and her whole jawline are fully exposed.\n\nShe wears plain teal-blue medical scrubs with a V-neck and a chest pocket, a blank white ID card clipped at the hip and a watch turned face-in on her wrist. There is no hospital name, no logo and no text anywhere on the uniform.\n\nShe stands at the empty nurses' station of an internal medicine ward in the small hours. Behind her: a monitor screen dimmed, a stack of clipboards, a hand-sanitiser dispenser on the counter, a corridor of closed doors receding.\n\nOverhead fluorescent tubes with half of them switched off for the night, an ordinary phone exposure, the corridor behind her much darker.\n\nShe has looked up mid-task, no makeup, tired around the eyes, a brief flat smile.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "job": "d8cdd7a2-3507-44f3-9286-766e4e778b66",
+  "file": "a2.jpg",
+  "note": "臉與 master 一致。低緊包頭（髮色完全藏起）、藍綠刷手服、空白識別證、深夜半熄的日光燈都正確，無任何醫院標識。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "腰上",
+  "angle": "右 30–35°",
+  "view": "自拍",
+  "new": false,
+  "prompt": "A waist-up front-facing selfie of <<<0ec9988e-def7-4bf8-9337-35b5e4757bf1>>>, a 25-year-old Taiwanese woman in Taipei, her body angled about thirty-five degrees to her right, her face turned back to the camera which is held slightly above her eye level.\n\nHer build: narrow shoulders and a slight frame with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer dark-brown hair with its honey-tea blonde ends is damp and twisted up into a clip, loose wet strands at her temples and neck, both eyebrows visible.\n\nShe wears a plain white cotton camisole and grey sweat shorts.\n\nShe is standing in the narrow hallway just outside her bathroom, a towel over one shoulder. Behind her: a laundry basket, a row of hooks with a tote and a jacket, a bottle of moisturiser left on the shoe cabinet. There is no mirror anywhere in this photograph.\n\nCool morning daylight from the window at the end of the hallway, an ordinary phone exposure, the hallway itself dim.\n\nShe looks into the lens with a bare, unmade-up morning face, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nFront camera quality — slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, NOT ultra-crisp or overly HD.",
+  "job": "86385aca-0078-4a32-9e66-5fe2087309fa",
+  "file": "a3.jpg",
+  "note": "臉與 master 一致。**新規則生效**：場景明寫 no mirror，這次沒有變成對鏡自拍。服裝略偏短版。"
+ },
+ "4": {
+  "pillar": "穿搭 / 換裝",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "new": true,
+  "prompt": "A candid full-length snapshot of <<<0ec9988e-def7-4bf8-9337-35b5e4757bf1>>>, a 25-year-old Taiwanese woman in Taipei, photographed from head to feet with her whole body inside the frame, in her own room on a day off. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: narrow shoulders and a slight frame with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her hips are about as wide as her shoulders and her legs are straight. She is 163cm and slight. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long dark-brown hair with honey-tea blonde ends is down in a loose wave, one side tucked behind her ear, both eyebrows and her jawline visible.\n\nShe wears a cream cable-knit cardigan over a fitted white tee, tucked into a washed-denim midi skirt, with white socks and no shoes yet.\n\nHer room: a clothes rail with three other options pushed to one end, a bag on the bed, a pair of ankle boots waiting by the door.\n\nOrdinary daylight through the window, an ordinary phone exposure, the far corner of the room noticeably darker.\n\nShe is standing with her weight on one hip, both hands busy rolling one cardigan sleeve back to the elbow, her head tilted down watching her own hands rather than the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading.",
+  "job": "81d96fb6-7560-4268-a97a-a34cd479fd45",
+  "file": "a4.jpg",
+  "note": "⚠️ **缺陷，建議重生。** 姿勢本身是對的（重心偏一側、雙手捲袖口、低頭看自己的手），但整張圖被**手機邊框包起來**，上方還有前鏡頭孔——變成「一張拍手機螢幕的照片」。而且腳被裁掉，不符合指定的全身。推測觸發點：室內場景 + `Shot on a rear phone camera` 被字面理解成手機要入鏡。"
+ },
+ "5": {
+  "pillar": "外出 / 休假",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "new": true,
+  "prompt": "A candid full-length snapshot of <<<0ec9988e-def7-4bf8-9337-35b5e4757bf1>>>, a 25-year-old Taiwanese woman, photographed from head to feet with her whole body inside the frame, on a quiet Taipei side street early on a day off. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: narrow shoulders and a slight frame with a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her hips are about as wide as her shoulders and her legs are straight. She is 163cm and slight. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer dark-brown hair with honey-tea blonde ends is pulled into a high ponytail that swings clear of her shoulders, both eyebrows and her jawline visible.\n\nShe wears an open olive utility jacket over a black tee and loose cargo trousers, with white trainers and a small crossbody bag.\n\nThe side street: a shuttered breakfast shop, scooters parked along the kerb, a betel-nut-green metal gate, potted plants and an air-conditioning unit dripping onto the pavement.\n\nSoft overcast morning light, an ordinary phone exposure, the covered arcade behind her much darker.\n\nShe is stepping down off the kerb with her weight on her front foot, one hand hooked through the strap of her bag and the other reaching to steady it, looking down at the step rather than at the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, very slight motion blur at her ponytail.",
+  "job": "a3d7ae60-9d3f-4ac5-ba9c-5b9b0a96fba7",
+  "file": "a5.jpg",
+  "note": "**§3-E：成功。** 騎樓下踏下路緣、重心在前腳、一手勾包帶一手扶著、低頭看階梯。自然可發布。"
+ },
+ "_meta": {
+  "persona": "angel-chiu",
+  "date": "2026-09-04",
+  "credits": 5,
+  "element": "0ec9988e-def7-4bf8-9337-35b5e4757bf1 (angel-face-only-v1，純臉緊裁切，0 credits，hash 已核對)",
+  "outcome": "5/5 臉與 master 一致。#3 驗證了「自拍場景不寫鏡子」的新規則有效。#4 有手機邊框缺陷需重生。"
+ },
+ "_new_finding_phone_bezel": {
+  "name": "畫面被手機邊框包住，變成「拍手機螢幕的照片」",
+  "evidence": "angel #4：室內臥室全身，出現完整手機外框與前鏡頭孔，且人物腳部被裁掉",
+  "frequency": "30 張裡第 1 次",
+  "suspected_trigger": "室內場景 + capture 尾巴的 `Shot on a rear phone camera` 被理解成手機本身要出現在畫面裡",
+  "relation": "與 ruoruo #3 的對鏡自拍是同一族——模型把「用什麼拍」誤解成「拍什麼」",
+  "mitigation_to_test": "全身室內場景的 capture 句改成不含裝置名詞的寫法，或把裝置描述移到句首與場景分開"
+ }
+}
