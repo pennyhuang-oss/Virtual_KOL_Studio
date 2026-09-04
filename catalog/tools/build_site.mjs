@@ -925,8 +925,15 @@ const pricingPage = layout('方案與報價 — 兌心科技', `
 `, { desc: '虛擬 KOL 經營的方案與報價。', nav: 'pricing', ogImage: heroPerson.a.hero });
 
 // ── 寫檔 ────────────────────────────────────────────────────────────
+// 🛑 pick.html 是另一支程式（build_picker.mjs）產的,不要被這裡的清空掃掉。
+// 踩過的形狀：跑完 npm run site 之後挑選後台就從部署裡消失,而它不進 git 的話就回不來了。
+// 現在它進 git 了,但清空還是會讓「這次部署」少一頁,所以先備份再放回去。
+let pickHtml = null;
+try { pickHtml = fs.readFileSync(path.join(PUB, 'pick.html')); } catch {}
+
 fs.rmSync(PUB, { recursive: true, force: true });
 fs.mkdirSync(path.join(PUB, 'p'), { recursive: true });
+if (pickHtml) fs.writeFileSync(path.join(PUB, 'pick.html'), pickHtml);
 fs.writeFileSync(path.join(PUB, 'index.html'), homePage);
 fs.writeFileSync(path.join(PUB, 'kols.html'), kolsPage);
 fs.writeFileSync(path.join(PUB, 'pricing.html'), pricingPage);
