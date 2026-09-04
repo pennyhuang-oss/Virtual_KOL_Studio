@@ -1,0 +1,65 @@
+{
+ "1": {
+  "pillar": "私下 / 收工後的鏡子前",
+  "frame": "腰上",
+  "angle": "—",
+  "view": "鏡子自拍（刻意）",
+  "new": false,
+  "prompt": "A waist-up mirror selfie of <<<5187aed5-5f18-4e3e-ae67-e5dbc09a31c6>>>, a 26-year-old Korean woman in Seoul, taken in the wall mirror of a dance studio after the lights are down. She is holding her phone up in one hand and it is visible in the mirror, which is normal for this kind of photograph.\n\nHer build: a dancer's build — square-set shoulders, a long neck, a naturally full but not large bust, visible collarbone and long lean arms with clear definition. Her waist is long and narrow with soft muscle definition down the sides, and her abdomen is flat and toned. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer hair is a cool grey-blue black tied up into a high ponytail, and where it lifts away from the nape a mint-green under-layer shows through. Both eyebrows and her whole jawline are visible.\n\nShe wears a black sports bra and low-rise wide track trousers, a towel round her neck, skin still damp from dancing.\n\nThe studio after class: the overhead lights off and only the corridor light on, a speaker on the floor, a water bottle, a hoodie thrown over the barre, marley floor scuffed with shoe marks.\n\nSpill from the corridor doorway is the only light on her, an ordinary phone exposure, the depth of the studio going black.\n\nShe looks at her own reflection rather than into the phone, breathing hard, mouth slightly open.\n\nThe only person anywhere in this photograph is her, and the only reflection in the mirror is her own — no one else in the room, no one else in the glass, no hand or arm belonging to anybody else. Every visible hand connects to one of her own arms.\n\nFront camera quality reflected in the mirror — slightly softer focus, mild natural grain, slightly lower dynamic range, gentle noise in the dark parts of the room.",
+  "job": "5b56d6d4-056b-4908-9027-ce38c4f2f67a",
+  "file": "j1.jpg",
+  "note": "**刻意的鏡子自拍，完全照設計出來。** 練舞室關燈後、運動內衣、毛巾、手機入鏡、薄荷綠內層可見。把先前的失敗模式轉成她的招牌內容形式。臉與 master 一致。"
+ },
+ "2": {
+  "pillar": "練舞室 / 跳舞",
+  "frame": "胸上",
+  "angle": "左 35–40°",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<5187aed5-5f18-4e3e-ae67-e5dbc09a31c6>>>, a 26-year-old Korean woman in Seoul, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: a dancer's build — square-set shoulders, a long neck, a naturally full but not large bust, visible collarbone and long lean arms with clear definition. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer cool grey-blue black hair is in a tight high bun with the mint-green under-layer showing at the nape, no strands across her face, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears a loose washed-black cropped tee over a black sports bra, with a lanyard of studio keys round her neck.\n\nShe is standing by the window wall of the practice room between classes, facing away from the mirrored wall so no mirror is in the picture. Behind her: the window, a stack of foam mats, a whiteboard with class times, a speaker on a stand.\n\nFlat daylight through the window wall, an ordinary phone exposure, the interior of the room dimmer than the glass.\n\nShe has turned back mid-sentence, a small quick smile, eyes on the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "job": "f78c5c67-18ca-4527-aff9-9d9f19c1ab21",
+  "file": "j2.jpg",
+  "note": "臉與 master 一致。窗牆側、避開鏡面牆，短版上衣、高髮髻、薄荷綠內層可見。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<5187aed5-5f18-4e3e-ae67-e5dbc09a31c6>>>, a 26-year-old Korean woman in Seoul, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: a dancer's build — square-set shoulders, a long neck, a naturally full but not large bust, visible collarbone and long lean arms with clear definition. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer cool grey-blue black hair is wet and pushed straight back off her face, the mint-green under-layer darkened by the water, both eyebrows and her whole jawline bare.\n\nShe wears a plain white towelling robe with the collar folded down.\n\nShe is sitting on the edge of the bed in her one-room flat, having just come out of the shower. Behind her: a rumpled duvet, a laundry pile, a small fan, a window with the blind half up. There is no mirror anywhere in this photograph.\n\nCold morning daylight through the half-raised blind, an ordinary phone exposure, the room still dim.\n\nShe looks straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "job": "e8508121-00be-43c5-a9ce-df0db80e0c1b",
+  "file": "j3.jpg",
+  "note": "臉與 master 一致。無鏡子。白色浴袍領口偏開（覆蓋度偏差）。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "new": true,
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<5187aed5-5f18-4e3e-ae67-e5dbc09a31c6>>>, a 26-year-old Korean woman in Seoul, in the hallway of her flat on her way out. Her whole body from the top of her head down to her shoes is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: a dancer's build — square-set shoulders, a long neck, a naturally full but not large bust, visible collarbone and long lean arms with clear definition. Her waist is long and narrow with soft muscle definition down the sides, and her abdomen is flat and toned. Her hips are about as wide as her shoulders and her legs are notably long and straight. She is 168cm. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer cool grey-blue black hair is down and straight with the mint-green under-layer flashing where it falls over her shoulder, both eyebrows and her jawline visible.\n\nShe wears an oversized varsity jacket over a fitted white crop tee and baggy black cargo trousers, with chunky white trainers.\n\nThe hallway: a shoe cabinet with trainers lined up, a full-length coat hook loaded with bags, a delivery box not yet opened by the door.\n\nOrdinary daylight from the open front door, an even everyday exposure, the hallway behind her much darker.\n\nShe has her weight on one leg and is bent slightly forward, both hands working the laces of one trainer on her raised foot, head down watching what she is doing.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "job": "e3dce9d0-5ef8-42a2-a384-44434d201f2a",
+  "file": "j4.jpg",
+  "note": "**§3-E：成功，本批最好的一張。** 玄關彎身綁鞋帶、單腳抬起、低頭看自己的手——指定的動作完全執行。"
+ },
+ "5": {
+  "pillar": "外出 / 江南",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "new": true,
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<5187aed5-5f18-4e3e-ae67-e5dbc09a31c6>>>, a 26-year-old Korean woman, on a quiet Gangnam back street early in the morning. Her whole body from the top of her head down to her shoes is inside the frame. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: a dancer's build — square-set shoulders, a long neck, a naturally full but not large bust, visible collarbone and long lean arms with clear definition. Her waist is long and narrow with soft muscle definition down the sides, and her abdomen is flat and toned. Her hips are about as wide as her shoulders and her legs are notably long and straight. She is 168cm. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, a dewy Korean-style base, unretouched skin detail.\n\nHer cool grey-blue black hair is in a high ponytail that swings out as she moves, the mint-green under-layer clearly visible, both eyebrows and her jawline visible.\n\nShe wears a black hooded zip-up over a grey long-sleeved top and straight black trousers, with white trainers and a small nylon shoulder bag.\n\nThe back street: shuttered cafes, a stack of delivery crates, a low kerb, potted plants, an alley sign in Korean too worn to read clearly.\n\nSoft overcast early daylight between the buildings, an ordinary everyday exposure, the alley behind her noticeably darker.\n\nShe is mid-turn on the pavement, weight on her front foot, one hand pulling an earphone out of her ear and the other holding an iced coffee, glancing toward the camera as she turns.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her, natural colour grading, very slight motion blur at her ponytail.",
+  "job": "1af7b2c4-ac17-4fde-87b2-06a7b45cc2ae",
+  "file": "j5.jpg",
+  "note": "**§3-E：成功。** 江南巷弄轉身中、一手拔耳機一手拿冰咖啡、馬尾甩動。臉太小 mediapipe 偵測不到，已目視確認。"
+ },
+ "_meta": {
+  "persona": "jia-seo",
+  "date": "2026-09-04",
+  "credits": 5,
+  "element": "5187aed5-5f18-4e3e-ae67-e5dbc09a31c6 (jia-face-only-v1，hash 已核對)",
+  "outcome": "5/5 臉與 master 一致；§3-E 兩張成功。",
+  "mirror_decision": "她最大的支柱就是『練舞室鏡子前』，因此 #1 不迴避鏡子，改寫成刻意的鏡子自拍（手機入鏡是這類內容的常態）；其餘四張才套用『不寫鏡子』規則。結果兩邊都如預期。"
+ }
+}
