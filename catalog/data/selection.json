@@ -1,7 +1,7 @@
 {
-  "note": "使用者 2026-09-03 在 /pick.html 挑選的結果。型錄的圖片以這一份為準，程式的評分只是預設值。",
-  "picked_at": "2026-09-03 06:10",
-  "personas": {
+ "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準,程式的評分只是預設值。⚠ Iris 另外加了 15 張使用者用 Google Drive 補給的圖與 2 支補給的影片（原本 GitHub 裡沒有,所以挑選頁上也不會出現）。",
+ "picked_at": "2026-09-04 08:01",
+ "personas": {
   "iris-chen": {
    "hero": "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/01_taipei_street_01.webp",
    "gallery": [
@@ -19,7 +19,35 @@
     "Virtual_KOL_Studio/kols/iris-chen/images/video_startframes_v1/frame01_cafe_seated.png",
     "Virtual_KOL_Studio/kols/iris-chen/images/dance_clone_r6/start_frame.png",
     "Virtual_KOL_Studio/kols/iris-chen/images/onsen_bucket_r1/start_frame.png",
-    "Virtual_KOL_Studio/kols/iris-chen/images/daily_reel_music_r1/start_frame.png"
+    "Virtual_KOL_Studio/kols/iris-chen/images/daily_reel_music_r1/start_frame.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_black_lace_babydoll_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_deepv_silkslip_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_duvet_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bedroom_black_lace_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_bathroom_wethair_mirror.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_mirror_burgundy_teddy_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_mirror_micro_lace_stockings_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_prone_bareback_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/03_bathroom_towel_wet_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/03_floor_cushion_hug_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_bubblebath_candle_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_lyingbed_navy_lace_bodysuit_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_sidelying_bareback_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_dressingtable_ivory_garter_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_window_open_cardigan_candid.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v1_seedance_8s_720p.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v2_seedance_12s_480p.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v3_cinematic_multishot_12s_720p.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/daily_v1/iris_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r15/iris_dance_clone_r15_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r18/iris_dance_clone_r18_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/lingerie_mirror_r1/iris_lingerie_reel_r1.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4"
    ]
   },
   "camille-dupont": {
@@ -37,6 +65,9 @@
     "Virtual_KOL_Studio/kols/camille-dupont/images/face_reference/ref_04.webp",
     "Virtual_KOL_Studio/kols/camille-dupont/images/self_intro_v1/shot04_window_gaze.png",
     "Virtual_KOL_Studio/kols/camille-dupont/images/self_intro_v1/shot02_taste_sauce.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4"
    ]
   },
   "yuna-kim": {
@@ -54,6 +85,9 @@
     "Virtual_KOL_Studio/kols/yuna-kim/images/batch1/YG05fix_b.png",
     "Virtual_KOL_Studio/kols/yuna-kim/images/calibration/arm_D.png",
     "Virtual_KOL_Studio/kols/yuna-kim/images/calibration/indoor_mirror.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/yuna-kim/videos/daily_v1/yuna_daily_v1.mp4"
    ]
   },
   "rainie-hsu": {
@@ -76,6 +110,11 @@
     "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_02.png",
     "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_03.png",
     "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_04.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r14/rainie_dance_clone_r14_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r5/rainie_dance_clone_r5_ig_reel.mp4"
    ]
   },
   "luna-tanaka": {
@@ -100,6 +139,11 @@
     "Virtual_KOL_Studio/kols/luna-tanaka/images/dance_clone_r1/start_frame.png",
     "Virtual_KOL_Studio/kols/luna-tanaka/images/preflight/LG-04.png",
     "Virtual_KOL_Studio/kols/luna-tanaka/images/calibration_dessert_street.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r1/luna_dance_clone_r1_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r16/luna_dance_clone_r16_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r17/luna_dance_clone_r17_ig_reel.mp4"
    ]
   },
   "coco-wu": {
@@ -115,6 +159,12 @@
     "Virtual_KOL_Studio/kols/coco-wu/images/dance_clone_r12/start_frame.png",
     "Virtual_KOL_Studio/kols/coco-wu/images/face_reference/candidate_01.png",
     "Virtual_KOL_Studio/kols/coco-wu/images/face_reference/candidate_02.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r13/coco_dance_clone_r13_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r4/coco_dance_clone_r4_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_v1/coco_dance_clone_v1_ig_reel.mp4"
    ]
   },
   "sophia-tseng": {
@@ -130,6 +180,11 @@
     "Virtual_KOL_Studio/kols/sophia-tseng/images/dance_clone_r11/start_frame.png",
     "Virtual_KOL_Studio/kols/sophia-tseng/images/dance_clone_r8/start_frame.png",
     "Virtual_KOL_Studio/kols/sophia-tseng/images/face_reference/candidate_01.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r8/sophia_dance_clone_r8_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r9/sophia_dance_clone_r9_ig_reel.mp4"
    ]
   },
   "mia-huang": {
@@ -150,6 +205,9 @@
     "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_01.png",
     "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_03.png",
     "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_04.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/mia-huang/videos/dance_clone_r1/mia_dance_clone_r1_ig_reel.mp4"
    ]
   },
   "vicky-lin": {
@@ -165,6 +223,9 @@
     "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_03_front_fullbody.png",
     "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_01_front_headshot.png",
     "Buildup_KOL/kols/vicky-lin/images/ref/anchor__v3_06_3q_fullbody.webp"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/vicky-lin/videos/dance_clone_r3/vicky_dance_clone_r3_ig_reel.mp4"
    ]
   },
   "nico-tsai": {
@@ -179,7 +240,8 @@
     "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/02_a02.png",
     "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/11_c04.png",
     "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/12_c05.png"
-   ]
+   ],
+   "videos": []
   },
   "aaliya-okonkwo": {
    "hero": "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/restaurant_02.png",
@@ -196,6 +258,9 @@
     "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_01.webp",
     "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_04.webp",
     "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_02.webp"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/daily_v1/aaliya_daily_v1.mp4"
    ]
   },
   "ananya-kapoor": {
@@ -207,6 +272,9 @@
     "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_03.webp",
     "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_02.webp",
     "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_01.webp"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/ananya-kapoor/videos/daily_v1/ananya_daily_v1.mp4"
    ]
   },
   "faye-tan": {
@@ -222,6 +290,13 @@
     "showgame-kol/kols/faye-tan/social media/0828/image-2.png",
     "showgame-kol/kols/faye-tan/social media/0729/ChatGPT Image 2026年7月28日 下午06_22_52.png",
     "showgame-kol/kols/faye-tan/圖文/2026-08-11/faye-seine-visor.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/faye-tan/social media/0729/video-9.mp4",
+    "showgame-kol/kols/faye-tan/social media/0731/Faye Tan0731_字幕.mp4",
+    "showgame-kol/kols/faye-tan/social media/0806/Faye Tan0806_字幕.mp4",
+    "showgame-kol/kols/faye-tan/social media/0810/faye-trash0810_字幕.mp4",
+    "Buildup_KOL/kols/faye-tan/social media/0804/Faye Tan 0804_字幕.mp4"
    ]
   },
   "rachel-ong": {
@@ -240,7 +315,8 @@
     "showgame-kol/kols/rachel-ong/images/生活照/rachel-01-cafe.png",
     "showgame-kol/kols/rachel-ong/social media/0825/顆C1-首幀.png",
     "showgame-kol/kols/rachel-ong/images/生活照/rachel-07-hiking-ridge-wide.png"
-   ]
+   ],
+   "videos": []
   },
   "kai-luo": {
    "hero": "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-5-海邊礁岩.png",
@@ -257,7 +333,8 @@
     "showgame-kol/kols/kai-luo/social media/0820/鏡頭4-首幀-v5.png",
     "showgame-kol/kols/kai-luo/social media/0820/鏡頭5-首幀.png",
     "showgame-kol/kols/kai-luo/social media/0820/鏡頭1-2-首幀.png"
-   ]
+   ],
+   "videos": []
   },
   "loima-cheung": {
    "hero": "showgame-kol/kols/loima-cheung/images/ref/face_b_8e4eaa74.png",
@@ -270,6 +347,14 @@
     "showgame-kol/kols/loima-cheung/social media/0817/qinfeng-niulai-establish.png",
     "Buildup_KOL/kols/loima-cheung/social media/0807/ChatGPT Image 2026年8月6日 下午04_58_31.png",
     "showgame-kol/kols/loima-cheung/social media/0804/qinfeng-sofa-establish.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/loima-cheung/social media/0729/video-12.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0803/Zhang Qinfeng0803_字幕.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0805/video-1.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0807/loima-cheung0807_字幕.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0812/video-1.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0817/loima-cheung0817_字幕.mp4"
    ]
   },
   "xiaoxiao-tan": {
@@ -284,6 +369,12 @@
     "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-04/xiaoxiao-chess-candid.png",
     "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-06/xiaoxiao-pachinko-display.png",
     "showgame-kol/kols/xiaoxiao-tan/social media/0825/鏡頭1-首幀.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/xiaoxiao-tan/social media/0729/b5e1777d9744f611a9d609901a2165a5-01ee193c-9f74-4aa4-aec1-8ce0b28f2cf1.mp4",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731_字幕.mp4",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0803/Tan XiaoXiao0803_字幕.mp4",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0812/video-1.mp4"
    ]
   },
   "leon-lim": {
@@ -309,7 +400,10 @@
     "showgame-kol/kols/leon-lim/social media/0818/顆4-尾幀-林曜站在凹陷旁.png",
     "showgame-kol/kols/leon-lim/social media/0814/leon-troy-2a-ruins-keyframe.png",
     "showgame-kol/kols/leon-lim/social media/0814/leon-troy-2b-ruins-wide-keyframe.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/leon-lim/social media/0814/leon-troy0814_字幕.mp4"
    ]
   }
-  }
+ }
 }

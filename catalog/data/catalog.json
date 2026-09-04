@@ -1,6 +1,6 @@
 {
   "generated_by": "catalog/tools/build_catalog.mjs",
-  "generated_at": "2026-09-01",
+  "generated_at": "2026-09-04",
   "min_images": 14,
   "note": "型錄要顯示的內容。刻意不含：任何狀態、handle、三圍、prompt／Soul ID／模型／credits、營運統計期間。",
   "included": 18,
@@ -165,8 +165,8 @@
         "質地乾淨、呈現真實膚況的美妝品牌"
       ],
       "media": {
-        "image_count": 26,
-        "video_count": 14,
+        "image_count": 41,
+        "video_count": 16,
         "candidates": [
           {
             "rel": "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/13_car_selfie_01.webp",
@@ -352,9 +352,141 @@
             ]
           },
           {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_bubblebath_candle_selfie.png",
+            "mb": 4.42,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bedroom_black_lace_selfie.png",
+            "mb": 4.33,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_lyingbed_navy_lace_bodysuit_selfie.png",
+            "mb": 4.23,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_duvet_selfie.png",
+            "mb": 4.14,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_mirror_burgundy_teddy_selfie.png",
+            "mb": 4.13,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_black_lace_babydoll_selfie.png",
+            "mb": 4.1,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_dressingtable_ivory_garter_selfie.png",
+            "mb": 4.1,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/03_bathroom_towel_wet_selfie.png",
+            "mb": 3.71,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_mirror_micro_lace_stockings_selfie.png",
+            "mb": 3.59,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_deepv_silkslip_selfie.png",
+            "mb": 3.35,
+            "w": 1536,
+            "h": 2048,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_bathroom_wethair_mirror.png",
+            "mb": 4.07,
+            "w": 1536,
+            "h": 2048,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_window_open_cardigan_candid.png",
+            "mb": 3.91,
+            "w": 1536,
+            "h": 2048,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/03_floor_cushion_hug_candid.png",
+            "mb": 3.8,
+            "w": 1536,
+            "h": 2048,
+            "score": 35,
+            "reasons": []
+          },
+          {
             "rel": "Virtual_KOL_Studio/kols/iris-chen/images/dance_clone_r15/start_frame.png",
             "mb": 3.66,
             "w": 1152,
+            "h": 2048,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_prone_bareback_candid.png",
+            "mb": 3.62,
+            "w": 1536,
             "h": 2048,
             "score": 35,
             "reasons": []
@@ -395,6 +527,14 @@
             "rel": "Virtual_KOL_Studio/kols/iris-chen/images/dance_clone_r6/start_frame.png",
             "mb": 3.22,
             "w": 1152,
+            "h": 2048,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_sidelying_bareback_candid.png",
+            "mb": 3.2,
+            "w": 1536,
             "h": 2048,
             "score": 35,
             "reasons": []
@@ -492,6 +632,14 @@
           {
             "rel": "Virtual_KOL_Studio/kols/iris-chen/videos/dance_v1/dance_v3_seedance_15s_blue_dress_sugar_on_tongue.mp4",
             "mb": 6.66
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
+            "mb": 10.58
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4",
+            "mb": 16.43
           },
           {
             "rel": "Virtual_KOL_Studio/kols/iris-chen/videos/lingerie_mirror_r1/iris_lingerie_reel_r1.mp4",
