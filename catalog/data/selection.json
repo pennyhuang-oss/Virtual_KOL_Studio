@@ -1,5 +1,5 @@
 {
- "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準,程式的評分只是預設值。⚠ Iris 另外加了 15 張使用者用 Google Drive 補給的圖與 2 支補給的影片（原本 GitHub 裡沒有,所以挑選頁上也不會出現）。",
+ "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準，程式的評分只是預設值。⚠ 另外收了使用者用 Google Drive 補的素材：Iris 15 張圖 ＋ 3 支熱舞影片，Camille／Luna／Yuna／Aaliya 各 1 支跳舞影片。那些原本不在任何 repo 裡，所以挑選頁上不會出現。",
  "picked_at": "2026-09-04 08:01",
  "personas": {
   "iris-chen": {
@@ -47,7 +47,8 @@
     "Virtual_KOL_Studio/kols/iris-chen/videos/lingerie_mirror_r1/iris_lingerie_reel_r1.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4"
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_01.mp4"
    ]
   },
   "camille-dupont": {
@@ -67,7 +68,8 @@
     "Virtual_KOL_Studio/kols/camille-dupont/images/self_intro_v1/shot02_taste_sauce.png"
    ],
    "videos": [
-    "Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4"
+    "Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/camille-dupont/videos/drive_v1/camille_dance.mp4"
    ]
   },
   "yuna-kim": {
@@ -87,7 +89,8 @@
     "Virtual_KOL_Studio/kols/yuna-kim/images/calibration/indoor_mirror.png"
    ],
    "videos": [
-    "Virtual_KOL_Studio/kols/yuna-kim/videos/daily_v1/yuna_daily_v1.mp4"
+    "Virtual_KOL_Studio/kols/yuna-kim/videos/daily_v1/yuna_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/yuna-kim/videos/drive_v1/yuna_dance.mp4"
    ]
   },
   "rainie-hsu": {
@@ -143,7 +146,8 @@
    "videos": [
     "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r1/luna_dance_clone_r1_ig_reel.mp4",
     "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r16/luna_dance_clone_r16_ig_reel.mp4",
-    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r17/luna_dance_clone_r17_ig_reel.mp4"
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r17/luna_dance_clone_r17_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/drive_v1/luna_dance.mp4"
    ]
   },
   "coco-wu": {
@@ -260,7 +264,8 @@
     "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_02.webp"
    ],
    "videos": [
-    "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/daily_v1/aaliya_daily_v1.mp4"
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/daily_v1/aaliya_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/drive_v1/aaliya_dance.mp4"
    ]
   },
   "ananya-kapoor": {

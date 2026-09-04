@@ -47,7 +47,7 @@ let selection = {};
 try { selection = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'selection.json'), 'utf8')).personas || {}; } catch {}
 
 fs.mkdirSync(ASSETS, { recursive: true });
-let made = 0, skipped = 0, failed = [];
+let made = 0, skipped = 0, stale = 0, failed = [];
 
 for (const p of cat.personas) {
   const dir = path.join(ASSETS, p.id);
@@ -93,6 +93,15 @@ for (const p of cat.personas) {
     try { ff(['-ss', '1', '-i', src, '-frames:v', '1', '-vf', `scale=${SPEC.poster.width}:-2`, '-q:v', qOf(SPEC.poster.q), out]); made++; }
     catch (e) { failed.push({ file: rel, why: 'poster 失敗：' + String(e.message).slice(0, 60) }); }
   });
+
+  // 🛑 清掉上一次建置留下的多餘 poster。
+  // 踩過：使用者把某位人設的影片從 3 支改成 1 支之後,舊的 v2/v3_poster.jpg 還留在
+  // assets/ 裡,而 build_site 是用「掃 *_poster.jpg」的方式收檔——
+  // 結果人設頁上多出兩個根本沒被挑的影片格。衍生檔不清,頁面就會說謊。
+  for (const f of fs.readdirSync(dir)) {
+    const m = /^v(\d+)_poster\.jpg$/.exec(f);
+    if (m && +m[1] > vids.length) { fs.rmSync(path.join(dir, f), { force: true }); stale++; }
+  }
 }
 
 // 總量
@@ -103,6 +112,7 @@ let total = 0, count = 0;
 const totalMb = total / 1048576;
 
 console.log(`產出 ${made} 個衍生檔（跳過已存在 ${skipped} 個）`);
+if (stale) console.log(`清掉 ${stale} 個上次留下的多餘 poster（挑選變少之後的殘留）`);
 console.log(`assets/ 共 ${count} 檔、${totalMb.toFixed(1)} MB`);
 if (totalMb > LIMIT.assets_total_mb_warn)
   console.log(`⚠ 超過觀察線 ${LIMIT.assets_total_mb_warn} MB —— 依 CC-05 這一項只警告不擋，但要回報`);

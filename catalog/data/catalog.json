@@ -166,7 +166,7 @@
       ],
       "media": {
         "image_count": 41,
-        "video_count": 16,
+        "video_count": 17,
         "candidates": [
           {
             "rel": "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/13_car_selfie_01.webp",
@@ -634,6 +634,10 @@
             "mb": 6.66
           },
           {
+            "rel": "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_01.mp4",
+            "mb": 16.46
+          },
+          {
             "rel": "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
             "mb": 10.58
           },
@@ -716,7 +720,7 @@
       ],
       "media": {
         "image_count": 24,
-        "video_count": 1,
+        "video_count": 2,
         "candidates": [
           {
             "rel": "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/seine_portrait_01.png",
@@ -982,6 +986,10 @@
           {
             "rel": "Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4",
             "mb": 13.77
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/camille-dupont/videos/drive_v1/camille_dance.mp4",
+            "mb": 17.38
           }
         ],
         "excluded": []
@@ -1049,7 +1057,7 @@
       ],
       "media": {
         "image_count": 37,
-        "video_count": 6,
+        "video_count": 7,
         "candidates": [
           {
             "rel": "Virtual_KOL_Studio/kols/yuna-kim/images/soul_test_v1/selfie_01.png",
@@ -1480,6 +1488,10 @@
           {
             "rel": "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_v1/yuna_dance_v2.mp4",
             "mb": 6.71
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yuna-kim/videos/drive_v1/yuna_dance.mp4",
+            "mb": 16.39
           }
         ],
         "excluded": [
@@ -2118,7 +2130,7 @@
       ],
       "media": {
         "image_count": 34,
-        "video_count": 5,
+        "video_count": 6,
         "candidates": [
           {
             "rel": "Virtual_KOL_Studio/kols/luna-tanaka/images/pilot_b1/LG05_a.png",
@@ -2508,6 +2520,10 @@
           {
             "rel": "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_v1/luna_dance_v1.mp4",
             "mb": 6.6
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/luna-tanaka/videos/drive_v1/luna_dance.mp4",
+            "mb": 14.3
           }
         ],
         "excluded": []
@@ -4464,7 +4480,7 @@
       ],
       "media": {
         "image_count": 16,
-        "video_count": 2,
+        "video_count": 3,
         "candidates": [
           {
             "rel": "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/selfie_02.png",
@@ -4665,6 +4681,10 @@
           {
             "rel": "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/dance_v1/aaliya_dance_v1.mp4",
             "mb": 7.49
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/drive_v1/aaliya_dance.mp4",
+            "mb": 16.41
           }
         ],
         "excluded": []
