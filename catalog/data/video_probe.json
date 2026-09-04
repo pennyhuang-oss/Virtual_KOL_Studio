@@ -848,5 +848,40 @@
   "sec": 48.23,
   "w": 720,
   "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_01.mp4": {
+  "sec": 15.07,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4": {
+  "sec": 10.07,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4": {
+  "sec": 15.07,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/camille-dupont/videos/drive_v1/camille_dance.mp4": {
+  "sec": 15.3,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/drive_v1/yuna_dance.mp4": {
+  "sec": 15.07,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/luna-tanaka/videos/drive_v1/luna_dance.mp4": {
+  "sec": 13.07,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/drive_v1/aaliya_dance.mp4": {
+  "sec": 15.07,
+  "w": 1080,
+  "h": 1920
  }
 }

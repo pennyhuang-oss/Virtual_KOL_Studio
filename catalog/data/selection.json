@@ -1,5 +1,5 @@
 {
- "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準，程式的評分只是預設值。⚠ 另外收了使用者用 Google Drive 補的素材：Iris 15 張圖 ＋ 3 支熱舞影片，Camille／Luna／Yuna／Aaliya 各 1 支跳舞影片。那些原本不在任何 repo 裡，所以挑選頁上不會出現。",
+ "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準。⚠ Iris 的影片經使用者當面更正兩次：移掉三支 cafe_test（那是挑選頁的預設勾選，不是她挑的），並把她自己補的三支跳舞影片排到最前面。⚠ 另外收了使用者用 Google Drive 補的素材：Iris 15 張圖 ＋ 3 支跳舞影片，Camille／Luna／Yuna／Aaliya 各 1 支跳舞影片。那些原本不在任何 repo 裡，所以挑選頁上不會出現。",
  "picked_at": "2026-09-04 08:01",
  "personas": {
   "iris-chen": {
@@ -37,18 +37,15 @@
     "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_window_open_cardigan_candid.png"
    ],
    "videos": [
-    "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v1_seedance_8s_720p.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v2_seedance_12s_480p.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v3_cinematic_multishot_12s_720p.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_01.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/daily_v1/iris_daily_v1.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r15/iris_dance_clone_r15_ig_reel.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r18/iris_dance_clone_r18_ig_reel.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4",
     "Virtual_KOL_Studio/kols/iris-chen/videos/lingerie_mirror_r1/iris_lingerie_reel_r1.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4",
-    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_01.mp4"
+    "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4"
    ]
   },
   "camille-dupont": {

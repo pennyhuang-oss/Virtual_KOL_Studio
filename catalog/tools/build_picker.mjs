@@ -116,9 +116,13 @@ for (const p of cat.personas) {
     });
   }
   // ── 影片 ──────────────────────────────────────────────────
-  // 站上現在的預設是「前 3 支的首幀圖」,所以預設就勾那 3 支,
-  // 讓這一頁反映的是現況,不是空白。
-  const currentVideos = sel[p.id]?.videos || p.media.videos.slice(0, 3).map(v => v.rel);
+  // 🛑 影片預設「一支都不勾」。
+  // 原本是預設勾前 3 支（理由是「讓這一頁反映站上現況」),結果 2026-09-04 出事:
+  // 使用者只勾了她想要的,沒去取消那些預設,於是三支她根本不想要的 cafe_test
+  // 就跟著上線了——她的原話是「前三支我沒有要那三支影片」。
+  // **預設勾選會被當成使用者的選擇**,而這一頁的用途正是「讓她自己挑」,
+  // 所以空白才是對的預設。已經挑過的就照 selection.json 還原。
+  const currentVideos = sel[p.id]?.videos || [];
   const vrows = [];
   for (const v of p.media.videos) {
     const key = id8(v.rel);
