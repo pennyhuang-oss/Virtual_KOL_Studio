@@ -98,6 +98,7 @@ const server = http.createServer((req, res) => {
   const ext = path.extname(file).toLowerCase();
   const isAsset = base === ASSETS;
   const isPick = pathname === '/pick.html' || pathname.startsWith('/assets/_pick/');
+  const size = fs.statSync(file).size;
   const head = {
     'Content-Type': TYPES[ext] || 'application/octet-stream',
     'X-Robots-Tag': 'noindex, nofollow',
@@ -108,7 +109,39 @@ const server = http.createServer((req, res) => {
       : (isAsset ? 'public, max-age=604800' : 'public, max-age=0, must-revalidate'),
   };
   if (setCookie) head['Set-Cookie'] = setCookie;
+
+  // 🛑 Range 請求要自己處理,不然拖影片進度條會把整支重抓一次。
+  // 2026-09-04 實測:影片上線後 `Range: bytes=0-1023` 回的是 200 ＋ 整支 1,248,536 bytes,
+  // 因為這裡是無條件 createReadStream 整個檔案。
+  // 宣告 Accept-Ranges 並回 206,瀏覽器才能只要它需要的那一段。
+  head['Accept-Ranges'] = 'bytes';
+
+  const range = req.headers.range;
+  const m = range && /^bytes=(\d*)-(\d*)$/.exec(String(range).trim());
+  if (m && (m[1] !== '' || m[2] !== '')) {
+    let start, end;
+    if (m[1] === '') {                     // bytes=-500 → 最後 500 bytes
+      const n = Math.min(size, parseInt(m[2], 10));
+      start = size - n; end = size - 1;
+    } else {
+      start = parseInt(m[1], 10);
+      end = m[2] === '' ? size - 1 : Math.min(parseInt(m[2], 10), size - 1);
+    }
+    // 起點超出檔案長度 → 416,並告知實際長度（規範要求）
+    if (!(start >= 0 && start <= end && start < size)) {
+      res.writeHead(416, { 'Content-Range': `bytes */${size}`, 'Accept-Ranges': 'bytes' });
+      return res.end();
+    }
+    head['Content-Range'] = `bytes ${start}-${end}/${size}`;
+    head['Content-Length'] = String(end - start + 1);
+    res.writeHead(206, head);
+    if (req.method === 'HEAD') return res.end();
+    return fs.createReadStream(file, { start, end }).pipe(res);
+  }
+
+  head['Content-Length'] = String(size);
   res.writeHead(200, head);
+  if (req.method === 'HEAD') return res.end();
   fs.createReadStream(file).pipe(res);
 });
 
