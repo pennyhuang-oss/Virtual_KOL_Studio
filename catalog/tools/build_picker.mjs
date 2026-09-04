@@ -36,7 +36,12 @@ const OUT = path.join(DIR, 'public', 'pick.html');
 const THUMB = { width: 320, q: 70 };
 // 影片預覽：3 段 × 1 秒,320 寬,15fps,無聲。取樣點刻意不是 0%——
 // 開頭那一秒常常是靜止的首幀,看不出這支在做什麼。
-const VPREV = { width: 320, fps: 15, crf: 32, at: [0.15, 0.45, 0.75], segSec: 1 };
+const VPREV = { width: 320, fps: 15, crf: 32, at: [0.15, 0.45, 0.75], segSec: 1, vp9crf: 44 };
+// ⚠ 每支預覽同時出 H.264/mp4 與 VP9/webm 兩種,原因是可測性不是相容性：
+//   Playwright 內建的 Chromium **完全沒有 H.264**（`canPlayType('video/mp4; codecs="avc1..."')`
+//   回空字串,VP8/VP9 回 probably）,所以只出 mp4 的話「滑過會不會播」在這台機器上永遠驗不了
+//   ——會變成「我沒測」卻寫成「應該可以」。實測 VP9 CRF 44 = 63 KB,跟 mp4 的 58 KB 差不多。
+//   瀏覽器自己挑：給 webm 的挑 webm,舊 Safari 挑 mp4。
 const PROBE_CACHE = path.join(DIR, 'data', 'video_probe.json');
 let probe = {};
 try { probe = JSON.parse(fs.readFileSync(PROBE_CACHE, 'utf8')); } catch {}
@@ -120,6 +125,7 @@ for (const p of cat.personas) {
     const src = path.join(REPO_ROOT, v.rel);
     const post = path.join(dir, `${key}_vp.jpg`);
     const prev = path.join(dir, `${key}_vc.mp4`);
+    const prevW = path.join(dir, `${key}_vc.webm`);
     if (!fs.existsSync(src)) { vfailed++; continue; }
 
     if (!probe[v.rel]) probe[v.rel] = ffInfo(src);
@@ -147,12 +153,21 @@ for (const p of cat.personas) {
       } catch { vfailed++; continue; }
     } else vcached++;
 
+    // webm 從已經轉好的 mp4 再轉一次就好,不用回去重切原片
+    if (!fs.existsSync(prevW)) {
+      try {
+        ff(['-i', prev, '-c:v', 'libvpx-vp9', '-crf', String(VPREV.vp9crf), '-b:v', '0',
+            '-deadline', 'good', '-cpu-used', '4', '-row-mt', '1', '-an', prevW]);
+      } catch { /* webm 轉失敗不擋,mp4 還在 */ }
+    }
+
     const tag = f => `?v=` + crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 10);
     vrows.push({
       key, rel: v.rel,
       name: v.rel.split('/').slice(3).join('/'),
       poster: `/assets/_pick/${p.id}/${key}_vp.jpg` + tag(post),
       clip: `/assets/_pick/${p.id}/${key}_vc.mp4` + tag(prev),
+      clipW: fs.existsSync(prevW) ? `/assets/_pick/${p.id}/${key}_vc.webm` + tag(prevW) : null,
       sec: Math.round(info.sec), w: info.w, h: info.h, mb: v.mb,
       on: currentVideos.includes(v.rel),
     });
@@ -274,7 +289,10 @@ ${groups.map(g => `
 ${g.vrows.length ? g.vrows.map(v => `      <div class="vt${v.on ? ' on' : ''}" data-p="${esc(g.id)}" data-rel="${esc(v.rel)}">
         <div class="ph">
           <img src="${v.poster}" alt="${esc(v.name)}" loading="lazy" width="320" height="569">
-          <video src="${v.clip}" muted loop playsinline preload="none"></video>
+          <video muted loop playsinline preload="none">
+            ${v.clipW ? `<source src="${v.clipW}" type="video/webm">` : ''}
+            <source src="${v.clip}" type="video/mp4">
+          </video>
         </div>
         <span class="tick">✓</span>
         <span class="len">${Math.floor(v.sec / 60)}:${String(v.sec % 60).padStart(2, '0')}</span>

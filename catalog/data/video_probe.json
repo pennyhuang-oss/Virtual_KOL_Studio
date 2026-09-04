@@ -1,0 +1,852 @@
+{
+ "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v1_seedance_8s_720p.mp4": {
+  "sec": 8.08,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v2_seedance_12s_480p.mp4": {
+  "sec": 12.1,
+  "w": 496,
+  "h": 864
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v3_cinematic_multishot_12s_720p.mp4": {
+  "sec": 12.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4": {
+  "sec": 8.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1_v2_multishot.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/daily_v1/iris_daily_v1.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r15/iris_dance_clone_r15_ig_reel.mp4": {
+  "sec": 14.77,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r18/iris_dance_clone_r18_ig_reel.mp4": {
+  "sec": 14.67,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4": {
+  "sec": 9.87,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/dance_v1/dance_v1_seedance_10s_black_crop_vietnam_drum.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/dance_v1/dance_v2_seedance_15s_white_laceup_vietnam_drum.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/dance_v1/dance_v3_seedance_15s_blue_dress_sugar_on_tongue.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/lingerie_mirror_r1/iris_lingerie_reel_r1.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/daily_v1/yuna_daily_v1.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_clone_r7/yuna_dance_clone_r7_ig_reel.mp4": {
+  "sec": 13.7,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_v1/dance_v1_seedance_15s_pink_bodycon_white_studio.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_v1/dance_v2_seedance_15s_pink_bodycon_bedroom_led.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_v1/yuna_dance_v1.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_v1/yuna_dance_v2.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4": {
+  "sec": 9.33,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r14/rainie_dance_clone_r14_ig_reel.mp4": {
+  "sec": 7.2,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r5/rainie_dance_clone_r5_ig_reel.mp4": {
+  "sec": 14,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r5/rainie_dance_clone_r5_v1_industrial_road_ig_reel.mp4": {
+  "sec": 13.98,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/luna-tanaka/videos/daily_v1/luna_daily_v1.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r1/luna_dance_clone_r1_ig_reel.mp4": {
+  "sec": 15.03,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r16/luna_dance_clone_r16_ig_reel.mp4": {
+  "sec": 14.9,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r17/luna_dance_clone_r17_ig_reel.mp4": {
+  "sec": 10.93,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_v1/luna_dance_v1.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4": {
+  "sec": 18.67,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r13/coco_dance_clone_r13_ig_reel.mp4": {
+  "sec": 6.1,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r4/coco_dance_clone_r4_ig_reel.mp4": {
+  "sec": 14.91,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_v1/coco_dance_clone_v1_ig_reel.mp4": {
+  "sec": 16.47,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4": {
+  "sec": 9.5,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r8/sophia_dance_clone_r8_ig_reel.mp4": {
+  "sec": 14.07,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r9/sophia_dance_clone_r9_ig_reel.mp4": {
+  "sec": 8.1,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/mia-huang/videos/dance_clone_r1/mia_dance_clone_r1_ig_reel.mp4": {
+  "sec": 9.73,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/vicky-lin/videos/dance_clone_r3/vicky_dance_clone_r3_ig_reel.mp4": {
+  "sec": 10.8,
+  "w": 1072,
+  "h": 1936
+ },
+ "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/daily_v1/aaliya_daily_v1.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/dance_v1/aaliya_dance_v1.mp4": {
+  "sec": 15.04,
+  "w": 720,
+  "h": 1280
+ },
+ "Virtual_KOL_Studio/kols/ananya-kapoor/videos/daily_v1/ananya_daily_v1.mp4": {
+  "sec": 10.04,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0729/video-9.mp4": {
+  "sec": 15.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0731/Faye Tan0731_字幕.mp4": {
+  "sec": 20.88,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0731/hf_20260731_082106_271d80f6-9f41-43f2-8250-f32548c958b8.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0731/hf_20260731_085917_4a0fb70e-6434-4363-a064-c62daffaa907.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0731/video-1.mp4": {
+  "sec": 20.88,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/Faye Tan 0804_字幕.mp4": {
+  "sec": 26.72,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/faye-newcity-segment1.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/faye-newcity-segment2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/faye-newcity-segment3-v2.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/faye-newcity-segment3-v3.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/faye-newcity-segment3.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0804/video-1.mp4": {
+  "sec": 26.72,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/Faye Tan0806_字幕.mp4": {
+  "sec": 39.24,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/faye-fan-combined.mp4": {
+  "sec": 39.24,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/faye-fan-segment1.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/faye-fan-segment2.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/faye-fan-segment3.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/faye-tan0806.mp4": {
+  "sec": 34.2,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0806/video-1.mp4": {
+  "sec": 34.2,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/social media/0810/faye-trash0810_字幕.mp4": {
+  "sec": 45.6,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/faye-tan/videos/reels_v1/clip_resort_atrium_pushin.mp4": {
+  "sec": 5.04,
+  "w": 1280,
+  "h": 720
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0729/video-9.mp4": {
+  "sec": 15.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0731/Faye Tan0731_字幕.mp4": {
+  "sec": 20.88,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0731/hf_20260731_082106_271d80f6-9f41-43f2-8250-f32548c958b8.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0731/hf_20260731_085917_4a0fb70e-6434-4363-a064-c62daffaa907.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0804/Faye Tan 0804_字幕.mp4": {
+  "sec": 26.72,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0804/faye-newcity-segment1.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0804/faye-newcity-segment2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0804/faye-newcity-segment3-v2.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0804/faye-newcity-segment3-v3.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0804/faye-newcity-segment3.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0806/Faye Tan0806_字幕.mp4": {
+  "sec": 39.24,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0806/faye-fan-combined.mp4": {
+  "sec": 39.24,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0806/faye-fan-segment1.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0806/faye-fan-segment2.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0806/faye-fan-segment3.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/faye-tan/social media/0806/faye-tan0806.mp4": {
+  "sec": 34.2,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/faye-tan/videos/reels_v1/clip_resort_atrium_pushin.mp4": {
+  "sec": 5.04,
+  "w": 1280,
+  "h": 720
+ },
+ "showgame-kol/kols/loima-cheung/social media/0729/video-12.mp4": {
+  "sec": 10.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0803/Zhang Qinfeng0803_字幕.mp4": {
+  "sec": 33.48,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0803/hf_20260803_074413_02a267e3-a7cd-48c7-9632-4437f4cd88ac.mp4": {
+  "sec": 8.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0803/hf_20260803_075403_2471123c-d396-4b9d-a6dc-b63656a906c0.mp4": {
+  "sec": 14.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0803/hf_20260803_075451_10104271-89b7-480d-8488-ba391fcc3064.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0803/video-1.mp4": {
+  "sec": 33.48,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/Zhang Qinfeng0805_字幕.mp4": {
+  "sec": 37.25,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/loima-cheung0805_字幕.mp4": {
+  "sec": 35.32,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/qinfeng-lastround-combined.mp4": {
+  "sec": 37.24,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/qinfeng-lastround-segment1-v2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/qinfeng-lastround-segment1.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/qinfeng-lastround-segment2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/qinfeng-lastround-segment3.mp4": {
+  "sec": 8.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/qinfeng-lastround-segment4.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0805/video-1.mp4": {
+  "sec": 37.25,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0807/loima-cheung0807_字幕.mp4": {
+  "sec": 44,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0807/qinfeng-gems-segment1-v2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0807/qinfeng-gems-segment2-v2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0807/qinfeng-gems-segment3-v2.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0807/qinfeng-gems-segment4-v2.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0807/qinfeng-gems-segment4.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0812/qinfeng-scroll-segment1.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0812/qinfeng-scroll-segment2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0812/qinfeng-scroll-segment3.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0812/qinfeng-scroll-segment4.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0812/video-1.mp4": {
+  "sec": 36.76,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0814/seg3-checkin-5s.mp4": {
+  "sec": 5.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0814/seg3-checkin-v3.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0814/seg3-thumb-press-v2.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0814/seg4-outro.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0817/loima-cheung0817_字幕.mp4": {
+  "sec": 68,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/loima-cheung/social media/0817/video-seg1.mp4": {
+  "sec": 14.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0817/video-seg2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0817/video-seg3.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/social media/0817/video-seg4.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/loima-cheung/videos/reels_v1/clip_future_lab_screenglow.mp4": {
+  "sec": 5.04,
+  "w": 828,
+  "h": 1108
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0729/video-12.mp4": {
+  "sec": 10.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0803/Zhang Qinfeng0803_字幕.mp4": {
+  "sec": 33.48,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0803/hf_20260803_074413_02a267e3-a7cd-48c7-9632-4437f4cd88ac.mp4": {
+  "sec": 8.06,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0803/hf_20260803_075403_2471123c-d396-4b9d-a6dc-b63656a906c0.mp4": {
+  "sec": 14.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0803/hf_20260803_075451_10104271-89b7-480d-8488-ba391fcc3064.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/Zhang Qinfeng0805_字幕.mp4": {
+  "sec": 37.25,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/loima-cheung0805_字幕.mp4": {
+  "sec": 35.32,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-combined.mp4": {
+  "sec": 37.24,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-segment1-v2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-segment1.mp4": {
+  "sec": 13.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-segment2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-segment3.mp4": {
+  "sec": 8.06,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-segment4.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0806/e6f0ad64-586c-4a3f-958c-9a65e4fa332c.mp4": {
+  "sec": 11.04,
+  "w": 828,
+  "h": 1108
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0807/loima-cheung0807_字幕.mp4": {
+  "sec": 44,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0807/qinfeng-gems-segment1-v2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0807/qinfeng-gems-segment2-v2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0807/qinfeng-gems-segment3-v2.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0807/qinfeng-gems-segment4-v2.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/social media/0807/qinfeng-gems-segment4.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/loima-cheung/videos/reels_v1/clip_future_lab_screenglow.mp4": {
+  "sec": 5.04,
+  "w": 828,
+  "h": 1108
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0729/b5e1777d9744f611a9d609901a2165a5-01ee193c-9f74-4aa4-aec1-8ce0b28f2cf1.mp4": {
+  "sec": 10.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731.mp4": {
+  "sec": 32.21,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731_字幕.mp4": {
+  "sec": 31.88,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0731/video-1.mp4": {
+  "sec": 31.88,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0803/Tan XiaoXiao0803_字幕.mp4": {
+  "sec": 50.16,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0803/video-1.mp4": {
+  "sec": 50.16,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment1.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment3.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment4.mp4": {
+  "sec": 14.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0812/Tan XiaoXiao0812.mp4": {
+  "sec": 47.23,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0812/seg1-approach-claw.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0812/seg2-glass-pan.mp4": {
+  "sec": 14.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0812/seg3-coin-insert.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0812/seg4-xiaoxiao-talk.mp4": {
+  "sec": 9.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/xiaoxiao-tan/social media/0812/video-1.mp4": {
+  "sec": 33.16,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0729/b5e1777d9744f611a9d609901a2165a5-01ee193c-9f74-4aa4-aec1-8ce0b28f2cf1.mp4": {
+  "sec": 10.04,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731.mp4": {
+  "sec": 32.21,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731_字幕.mp4": {
+  "sec": 31.88,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/Tan XiaoXiao0803_字幕.mp4": {
+  "sec": 50.16,
+  "w": 1080,
+  "h": 1920
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment1.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment2.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment3.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment4.mp4": {
+  "sec": 14.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-seg1-1a-full.mp4": {
+  "sec": 10.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-seg2-1b-full-v2.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-seg2-1b-full.mp4": {
+  "sec": 11.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-seg3-2a-full.mp4": {
+  "sec": 15.07,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-seg4-2b-full.mp4": {
+  "sec": 12.05,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-voice-test-6s-v2.mp4": {
+  "sec": 6.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy-voice-test-6s.mp4": {
+  "sec": 6.06,
+  "w": 720,
+  "h": 1280
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/leon-troy0814_字幕.mp4": {
+  "sec": 45.96,
+  "w": 1080,
+  "h": 1920
+ },
+ "showgame-kol/kols/leon-lim/social media/0814/video-1.mp4": {
+  "sec": 48.23,
+  "w": 720,
+  "h": 1280
+ }
+}
