@@ -130,7 +130,17 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 .vid{position:relative;aspect-ratio:9/16;background:#1a1a20;border-radius:2px;overflow:hidden}
 .vid img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;opacity:.82}
 .vid .play{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;color:#fff;
-  text-shadow:0 2px 14px rgba(0,0,0,.7)}
+  text-shadow:0 2px 14px rgba(0,0,0,.7);background:none;border:0;cursor:pointer;width:100%;
+  padding:0;font-family:inherit;transition:.18s}
+.vid .play:hover,.vid .play:focus-visible{background:rgba(216,185,85,.14);color:var(--accent2)}
+.vid.on img,.vid.on .play{display:none}
+.vid video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+/* 還沒轉好的（只有首幀圖沒有影片檔）不要給播放鈕,不然點了沒反應 */
+.vid.noplay .play{display:none}
+.vmore{margin:18px 0 0}
+.vmore button{background:transparent;border:1px solid var(--line2);color:var(--ink2);
+  padding:11px 22px;border-radius:2px;font:inherit;font-size:13.5px;cursor:pointer;transition:.18s}
+.vmore button:hover,.vmore button:focus-visible{border-color:var(--accent);color:var(--accent2)}
 
 /* 燈箱 */
 .lb{position:fixed;inset:0;background:rgba(6,6,8,.96);z-index:100;display:none;
@@ -451,31 +461,57 @@ footer p{margin:0 0 7px;max-width:720px}
   </section>
 
   <section class="sec"><h2>影片素材</h2>
-    <div class="vids"><div class="vid">
+    <div class="vids"><div class="vid"
+      data-mp4="/assets/iris-chen/v_0okhs3d.mp4?v=b5799969d6" data-webm="/assets/iris-chen/v_0okhs3d.webm?v=0046d670eb">
       <img src="/assets/iris-chen/v_0okhs3d_poster.jpg?v=de49a3711a" alt="Iris Chen 影片 1 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 1">▶</button>
+    </div><div class="vid"
+      data-mp4="/assets/iris-chen/v_09ksjqg.mp4?v=2df8dad085" data-webm="/assets/iris-chen/v_09ksjqg.webm?v=1ae9d64c08">
       <img src="/assets/iris-chen/v_09ksjqg_poster.jpg?v=45a640fe74" alt="Iris Chen 影片 2 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 2">▶</button>
+    </div><div class="vid"
+      data-mp4="/assets/iris-chen/v_0qxrq63.mp4?v=c934e92330" data-webm="/assets/iris-chen/v_0qxrq63.webm?v=d337a5f569">
       <img src="/assets/iris-chen/v_0qxrq63_poster.jpg?v=afbc78ee46" alt="Iris Chen 影片 3 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 3">▶</button>
+    </div><div class="vid"
+      data-mp4="/assets/iris-chen/v_0k0tukf.mp4?v=525f718948">
       <img src="/assets/iris-chen/v_0k0tukf_poster.jpg?v=2db8eb2366" alt="Iris Chen 影片 4 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 4">▶</button>
+    </div><div class="vid"
+      data-mp4="/assets/iris-chen/v_04tknvz.mp4?v=09ab94d326">
       <img src="/assets/iris-chen/v_04tknvz_poster.jpg?v=1fdc36f15e" alt="Iris Chen 影片 5 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 5">▶</button>
+    </div><div class="vid"
+      data-mp4="/assets/iris-chen/v_1lgmopb.mp4?v=c870ea9d69">
       <img src="/assets/iris-chen/v_1lgmopb_poster.jpg?v=d4e13702db" alt="Iris Chen 影片 6 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 6">▶</button>
+    </div><div class="vid" hidden
+      data-mp4="/assets/iris-chen/v_18nzbin.mp4?v=42161e1a06">
       <img src="/assets/iris-chen/v_18nzbin_poster.jpg?v=1024bc127e" alt="Iris Chen 影片 7 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 7">▶</button>
+    </div><div class="vid" hidden
+      data-mp4="/assets/iris-chen/v_0zn21mg.mp4?v=110c124dcb">
       <img src="/assets/iris-chen/v_0zn21mg_poster.jpg?v=1823b15514" alt="Iris Chen 影片 8 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 8">▶</button>
+    </div><div class="vid" hidden
+      data-mp4="/assets/iris-chen/v_1iaih7z.mp4?v=b237d662d1">
       <img src="/assets/iris-chen/v_1iaih7z_poster.jpg?v=d0c1ee1c25" alt="Iris Chen 影片 9 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 9">▶</button>
+    </div><div class="vid" hidden
+      data-mp4="/assets/iris-chen/v_1nd7nwp.mp4?v=6a61b4e3c3">
       <img src="/assets/iris-chen/v_1nd7nwp_poster.jpg?v=c61aa49a4e" alt="Iris Chen 影片 10 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 10">▶</button>
+    </div><div class="vid" hidden
+      data-mp4="/assets/iris-chen/v_1ncjs94.mp4?v=cfd024f229">
       <img src="/assets/iris-chen/v_1ncjs94_poster.jpg?v=1cfc67b59f" alt="Iris Chen 影片 11 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div><div class="vid">
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 11">▶</button>
+    </div><div class="vid" hidden
+      data-mp4="/assets/iris-chen/v_1nb7xsa.mp4?v=048e00a29b">
       <img src="/assets/iris-chen/v_1nb7xsa_poster.jpg?v=0f3c546537" alt="Iris Chen 影片 12 首幀" loading="lazy" width="720" height="1280">
-      <span class="play" aria-hidden="true">▶</span></div></div>
+      <button type="button" class="play" aria-label="播放 Iris Chen 影片 12">▶</button>
+    </div></div>
+    <p class="vmore"><button type="button" data-more>
+      顯示其餘 6 支 ▾</button></p>
     <p class="prose" style="margin-top:14px;font-size:13px">影片可於洽談時提供完整檔案。</p>
   </section>
 
@@ -505,6 +541,44 @@ footer p{margin:0 0 7px;max-width:720px}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))close();});
   function close(){lb.classList.remove('on'); im.src=''; if(last)last.focus();}
+})();
+
+// 影片：點了才建立 <video>，而且一次只播一支。
+// 不用 preload="none" 的 <video> 而是「點了才建立元素」——那樣連元素都不存在,
+// 瀏覽器連 metadata 都不會去要,首屏最乾淨。
+(function(){
+  var playing = null;
+  function stop(){
+    if(!playing) return;
+    var v = playing.querySelector('video');
+    if(v){ try{ v.pause(); }catch(e){} v.remove(); }
+    playing.classList.remove('on'); playing = null;
+  }
+  document.addEventListener('click', function(e){
+    var more = e.target.closest('[data-more]');
+    if(more){
+      var sec = more.closest('section');
+      sec.querySelectorAll('.vid[hidden]').forEach(function(el){ el.hidden = false; });
+      more.closest('.vmore').remove();
+      return;
+    }
+    var btn = e.target.closest('.vid .play');
+    if(!btn) return;
+    var box = btn.closest('.vid'), mp4 = box.dataset.mp4;
+    if(!mp4) return;
+    stop();
+    var v = document.createElement('video');
+    v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+    // 🛑 MP4 一定要放前面。真瀏覽器拿 MP4;沒有 H.264 的瀏覽器才會退到 WebM。
+    var s1 = document.createElement('source'); s1.src = mp4; s1.type = 'video/mp4'; v.appendChild(s1);
+    if(box.dataset.webm){
+      var s2 = document.createElement('source'); s2.src = box.dataset.webm; s2.type = 'video/webm';
+      v.appendChild(s2);
+    }
+    v.addEventListener('ended', stop);
+    box.appendChild(v); box.classList.add('on'); playing = box;
+    v.play().catch(function(){ /* 被自動播放政策擋住時,控制列還在,使用者自己按 */ });
+  });
 })();
 </script>
 </body></html>
