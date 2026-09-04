@@ -348,6 +348,38 @@ still looking down at what she is doing.
 但它是撞運氣，不是可靠機制——同一句型換成手機就失效了。往後浴室場景改成
 不提鏡子、直接把她放在「關上的門前」或「貼磚牆前」。
 
+#### 3-F 補正（2026-09-04 同日，用第二輪資料修正上面的說法）
+
+上面第一版把規則寫得太寬了。**全身照結尾那段裝置排除句，實測 18/18 一直有效**，
+而它明明也點了 phone / screen / device 的名：
+
+```
+This is a plain photograph of the scene, edge to edge. There is no phone, no screen
+and no device anywhere in the picture, and the image is not framed or bordered by
+the edge of any device.
+```
+
+差別在於**它由一句肯定的畫面定義開頭**（`This is a plain photograph of the scene, edge to edge.`），
+否定句是掛在那句後面的補充；而失敗的 miu #3r 是**把裸的否定句直接接在場景描述後面**，
+前面沒有任何肯定的畫面定義。
+
+**修正後的規則**：
+
+1. **不要把裸的否定句接在場景句後面**（`Behind her: … . There is no phone, tablet, television or lit screen.`）——會招來那個物件。
+2. **要排除某物件，先用肯定句把那個位置填滿**：`a plain painted door filling the wall behind her`、`a bare plastered wall behind her`。
+3. **既有的兩段固定句不要動**：全身照的裝置排除句（由肯定句起頭，18/18 有效）、
+   單人排除條款（否定「人」，實測長期有效）。它們是驗證過的例外，不受第 1 點約束。
+
+#### 一個尚未證明的附帶觀察（2026-09-04）
+
+`sydney-leong` 的 #3 #4 #5 是專案至今**第一次連續三張服裝完全照規格、零覆蓋度偏差**，
+而這三張的共同點是段落裡沒有任何自創的否定句。對照組 `angeline-kwee` #3r：
+同樣用肯定句寫足浴袍規格，但同一段塞了兩句否定，浴袍就被拉下單肩。
+
+**假設：同一段落裡的否定句會排擠掉服裝指令。**
+只有一輪對照，**樣本不足以推翻「覆蓋度無法用 prompt 控制」這個既有結論**。
+下一輪繼續全面套用 §3-F，再看是否重現；重現兩輪以上才改寫覆蓋度那一條。
+
 ---
 
 ### QA-1. 小面積缺陷不得用插值放大來判讀（2026-09-03，踩過一次）
