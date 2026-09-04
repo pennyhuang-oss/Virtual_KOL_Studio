@@ -317,6 +317,39 @@ still looking down at what she is doing.
 
 ---
 
+### 3-F. 不要點名「不可以出現的物件」——點了它就會出現（2026-09-04）
+
+**事件**：`miu-shiraishi` 訓練圖 #3 重跑時，我在 prompt 裡寫了
+`no phone, tablet, television or lit screen of any kind anywhere in the picture`，
+結果畫面右緣就多出一支手機（native crop 可見三顆鏡頭模組）。同一段落其他句子都正常執行。
+
+**這是既有兩條發現的同族現象**，機制相同：**名詞被寫進 prompt 就會被畫出來，否定詞不生效。**
+
+| 已知案例 | 寫了什麼 | 生出了什麼 |
+|---|---|---|
+| Iris Chen | 場景裡寫 `mirror` | 鏡子自拍、手機入鏡 |
+| angel-chiu #4 | 結尾留 `Shot on a rear phone camera` | 整張圖被手機邊框框住 |
+| miu-shiraishi #3r | `no phone, tablet, television or lit screen` | 畫面裡多一支手機 |
+
+**規則**：要讓某個物件不出現，**不要點它的名**。改用肯定句把那個位置填滿：
+
+| 不要寫 | 改寫成 |
+|---|---|
+| `no phone or screen in the hallway` | `a plain painted door filling the wall behind her` |
+| `no television on the wall` | `a bare plastered wall behind her` |
+| `no mirror in the bathroom` | （直接不提牆面，或寫 `a tiled wall behind her`） |
+
+**唯一的例外是單人排除條款**（`The only person anywhere in this photograph is her — no one else…` 那一整段）。
+它處理的是「人」，實測長期有效（本批 10 張裡擋掉了攤商、店員、客人、路人），**不要動它**。
+換句話說：否定「人」有效，否定「物件」反而招來物件。
+
+**這條同時解釋了為什麼「浴室不要有鏡子」一直難寫。** 舊寫法
+`There is no mirror anywhere in this photograph` 至今沒有生出鏡子，
+但它是撞運氣，不是可靠機制——同一句型換成手機就失效了。往後浴室場景改成
+不提鏡子、直接把她放在「關上的門前」或「貼磚牆前」。
+
+---
+
 ### QA-1. 小面積缺陷不得用插值放大來判讀（2026-09-03，踩過一次）
 
 **事件**：`kanon-komori` 訓練圖 #5 是全身夜景，臉約 140px、虹膜約 13px。
