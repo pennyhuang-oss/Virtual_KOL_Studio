@@ -2,23 +2,24 @@
   "id": "jia-seo",
   "ai_assets": {
     "training_images_v1": {
-      "status": "pending",
+      "status": "completed",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
-      "image_count": 0,
+      "image_count": 5,
       "images_path": "kols/jia-seo/images/training_v1/",
-      "collected_at": null,
+      "collected_at": "2026-09-04",
       "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
       "soul_training": {
-        "status": "pending",
+        "status": "ready_unvalidated",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
-        "soul_id": null,
-        "training_image_count": 0,
-        "started_at": null,
-        "completed_at": null,
-        "note": "PENDING"
+        "soul_id": "ecf19246-c697-419c-b978-fe9373586c19",
+        "training_image_count": 5,
+        "started_at": "2026-09-07T08:56Z",
+        "completed_at": "2026-09-07T09:15Z",
+        "note": "批次 2 送訓成功（5 張）。尚未跑 6 張驗證圖，故為 ready_unvalidated，未升 approved。",
+        "soul_name": "jia-seo-soul-v1-5img-20260904"
       }
     }
   },

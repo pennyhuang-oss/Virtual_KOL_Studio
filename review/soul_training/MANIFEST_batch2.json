@@ -22,7 +22,12 @@
    "mismatch": 0,
    "distinct_hashes": 16
   },
-  "note": "kanon-komori has 6 training images, not 5; her soul name records 6img so the count is not misremembered later. 6 is inside the 5-20 range Soul V2 accepts."
+  "note": "kanon-komori has 6 training images, not 5; her soul name records 6img so the count is not misremembered later. 6 is inside the 5-20 range Soul V2 accepts.",
+  "result": {
+   "ready": 3,
+   "failed": 0,
+   "note": "kanon-komori (6 images) took noticeably longer to finish than the two 5-image souls in the same batch."
+  }
  },
  "jia-seo": {
   "persona": "jia-seo",
@@ -66,14 +71,15 @@
   ],
   "soul_name": "jia-seo-soul-v1-5img-20260904",
   "soul_id": "ecf19246-c697-419c-b978-fe9373586c19",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T08:56:36.908762Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T08:56:36.908762Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:15Z"
  },
  "kanon-komori": {
   "persona": "kanon-komori",
@@ -124,14 +130,15 @@
   ],
   "soul_name": "kanon-komori-soul-v1-6img-20260904",
   "soul_id": "642ba554-6f87-4be9-9aa7-4b66529b4995",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T08:56:44.824051Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T08:56:44.824051Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:15Z"
  },
  "miu-shiraishi": {
   "persona": "miu-shiraishi",
@@ -175,13 +182,14 @@
   ],
   "soul_name": "miu-shiraishi-soul-v1-5img-20260904",
   "soul_id": "270c31fa-afd4-4609-b9d5-7302745f137c",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T08:56:53.883882Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T08:56:53.883882Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:15Z"
  }
 }
