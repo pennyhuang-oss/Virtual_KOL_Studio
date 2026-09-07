@@ -1884,3 +1884,36 @@ nanami-fujiwara（9）、miu-shiraishi（7）、jia-seo／cheryl-soh／zhiyi-she
 
 **angel-chiu 與 zoey-yeh 零碰撞**，不受 C-1／C-2 的收緊約束
 （她們仍然要寫髮型，因為 Soul V2 不繼承髮型，那是基本要求）。
+
+---
+
+## 身材補正：實測有效的寫法（2026-09-07）
+
+Soul V2 **不可靠地繼承身材與身高**。實測證據：cheryl-soh 不寫身材時胸幾乎平；
+kanon-komori（153cm）與 miu-shiraishi（156cm）的全身照都讀為一般比例，沒有嬌小感。
+
+**好消息：胸型可以用 prompt 補，實測有效。**
+完整實驗（prompt 逐字相同只加一句）見 `review/soul_pilot/_body_test_v1/BODY_TEST_v1.md`。
+
+### 建議寫法（描述性，插在髮型句之後）
+
+```
+She is slim but distinctly full-chested: a soft, heavy curve at the bust that clearly
+fills and shapes the top, sitting above a noticeably narrow waist.
+```
+
+全身照可在句尾加 `with long legs`（或依該位的腿長比例改寫）。
+
+### 為什麼不寫三圍數字
+
+實測比較過「描述性」與「直接寫 89-60-90 / D cup」兩組，**效果相當**。
+既然沒有優勢，就用描述性：數字不會泛化（換人要換一組）、
+而且讀起來像規格表，與本 repo 追求的真實照片感相反。
+
+### 兩條界線
+
+1. **這一句只用於正式內容圖。驗證圖永遠不寫身材。**
+   `review/soul_training/ACCEPTANCE_LOCKED.md` §二 禁止驗證圖重述三圍——
+   驗證圖若描述身材，測到的是 prompt 而不是 Soul 學到的東西。
+2. **身高／嬌小感尚未驗證。** 已知 Soul 不繼承它，但「寫身高能不能補出嬌小」
+   還沒測過，不要預設有效。
