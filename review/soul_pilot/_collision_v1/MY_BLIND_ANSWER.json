@@ -1,0 +1,7 @@
+{
+ "method": "hair-masked face ovals, grey background, shuffled; judged before opening ANSWER_KEY.json",
+ "reasoning": "one group reads rounder with fuller lips and a wider nose tip; the other reads longer and narrower with thinner longer eyes, a smaller mouth and a sharper brow bone. Because both personas used word-for-word identical prompts, each spec appears exactly twice, so every pair must split one-and-one.",
+ "spec_pairs": {"V1": ["A","D"], "V2": ["C","G"], "V3": ["B","E"], "V6": ["F","H"]},
+ "group_rounder_fuller": ["A","B","F","G"],
+ "group_longer_narrower": ["C","D","E","H"]
+}

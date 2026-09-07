@@ -1,0 +1,50 @@
+[
+ {
+  "who": "cheryl",
+  "spec": "V1",
+  "file": "blind_raw_cheryl_V1.jpg",
+  "label": "A"
+ },
+ {
+  "who": "cheryl",
+  "spec": "V3",
+  "file": "blind_raw_cheryl_V3.jpg",
+  "label": "B"
+ },
+ {
+  "who": "zhiyi",
+  "spec": "V2",
+  "file": "blind_raw_zhiyi_V2.jpg",
+  "label": "C"
+ },
+ {
+  "who": "zhiyi",
+  "spec": "V1",
+  "file": "blind_raw_zhiyi_V1.jpg",
+  "label": "D"
+ },
+ {
+  "who": "zhiyi",
+  "spec": "V3",
+  "file": "blind_raw_zhiyi_V3.jpg",
+  "label": "E"
+ },
+ {
+  "who": "zhiyi",
+  "spec": "V6",
+  "file": "blind_raw_zhiyi_V6.jpg",
+  "label": "F"
+ },
+ {
+  "who": "cheryl",
+  "spec": "V2",
+  "file": "blind_raw_cheryl_V2.jpg",
+  "label": "G"
+ },
+ {
+  "who": "cheryl",
+  "spec": "V6",
+  "file": "blind_raw_cheryl_V6.jpg",
+  "label": "H"
+ }
+]
