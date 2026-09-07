@@ -2,23 +2,24 @@
   "id": "cheryl-soh",
   "ai_assets": {
     "training_images_v1": {
-      "status": "pending",
+      "status": "completed",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
-      "image_count": 0,
+      "image_count": 5,
       "images_path": "kols/cheryl-soh/images/training_v1/",
-      "collected_at": null,
+      "collected_at": "2026-09-04",
       "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
       "soul_training": {
-        "status": "pending",
+        "status": "trained_face_validated",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
-        "soul_id": null,
-        "training_image_count": 0,
-        "started_at": null,
-        "completed_at": null,
-        "note": "PENDING"
+        "soul_id": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+        "training_image_count": 5,
+        "started_at": "2026-09-07T05:13:51Z",
+        "completed_at": "2026-09-07T05:30Z",
+        "note": "5 張訓練成功。6 張驗證：臉 6/6 通過（門檻 1、2、4）；身材項（門檻 3）胸圍低於 profile 的 89cm/D，但訓練集本身就已低於該數字，故為 profile 數字與訓練集之落差，非 Soul 失準，已送交使用者裁決。碰撞門檻待 zhiyi-shen 訓完。判定書見 review/soul_pilot/cheryl-soh/VERDICT_v1.md。尚未升為 approved。",
+        "soul_name": "cheryl-soh-soul-v1-5img-20260904"
       }
     }
   },
