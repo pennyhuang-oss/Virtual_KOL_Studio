@@ -97,8 +97,10 @@ textarea{width:100%;height:260px;background:var(--ground);color:var(--ink2);
 .dlgact{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 
 #lb{position:fixed;inset:0;z-index:50;background:rgba(4,5,8,.97);
-  display:grid;place-items:center;padding:56px 66px}
-#lb img,#lb video{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+  display:grid;place-items:center;padding:62px 66px 92px}
+/* max-height:100% is circular in an auto grid track; size to the viewport. */
+#lb img,#lb video{max-width:100%;max-height:calc(100vh - 168px);
+  max-height:calc(100dvh - 168px);object-fit:contain;border-radius:6px}
 #lb .x,#lb .p,#lb .n{position:absolute;background:var(--raise2);border:1px solid var(--rule);
   color:var(--ink);border-radius:50%}
 #lb .x{top:16px;right:18px;width:38px;height:38px}
@@ -110,7 +112,7 @@ textarea{width:100%;height:260px;background:var(--ground);color:var(--ink2);
 @media(max-width:640px){
   .wrap{padding:0 14px}
   .grid{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:7px}
-  #lb{padding:56px 10px}
+  #lb{padding:58px 8px 96px}
 }
 </style>
 </head>
@@ -129,7 +131,8 @@ textarea{width:100%;height:260px;background:var(--ground);color:var(--ink2);
 
 <div class="wrap intro">
   <p><b>怎麼用</b>　點縮圖＝選取／取消。右下角 <code>⤢</code> 可放大到 800px 檢視畫質。
-  每位請至少選 <b>1 張</b>；在放大檢視裡可按「設為封面」指定列表頁的封面（不指定就用第一張）。</p>
+  每位請至少選 <b>1 張</b>；在放大檢視裡可按「設為封面」指定列表頁的封面（不指定就用第一張）。
+  放大檢視可按 <code>Esc</code>、瀏覽器上一頁或點空白處關閉，左右方向鍵可翻頁。</p>
   <p><b>選完之後</b>　按右下角<b>「複製選擇結果」</b>，把複製到的內容貼回對話給我，我就套用並重新部署。
   選擇會自動存在這台瀏覽器裡，關掉頁面也不會不見。</p>
   <p><b>素材來源</b>　<code>庫</code>＝人設庫原始檔（含建模圖）；<code>型錄</code>＝型錄站已優化的素材。

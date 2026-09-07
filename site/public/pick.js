@@ -160,6 +160,8 @@ function stats() {
 
 /* ---------- lightbox ---------- */
 
+/* The lightbox is a history entry so browser Back closes it instead of
+   leaving the picker (and losing the user's place in a 468-cell grid). */
 function openLb(kid, id) {
   LB.kid = kid;
   LB.list = visible(kid);
@@ -167,6 +169,7 @@ function openLb(kid, id) {
   showLb();
   $('#lb').hidden = false;
   document.body.style.overflow = 'hidden';
+  history.pushState({ lb: 1 }, '', location.pathname);
 }
 
 function showLb() {
@@ -200,12 +203,17 @@ function stepLb(d) {
   showLb();
 }
 
-function closeLb() {
+function closeLb(fromPop) {
+  if (!fromPop && !$('#lb').hidden && (history.state || {}).lb) return history.back();
   $('#lb').hidden = true;
   const v = $('#lbslot video');
   if (v) v.pause();
   document.body.style.overflow = '';
 }
+
+window.addEventListener('popstate', () => {
+  if (!$('#lb').hidden) closeLb(true);
+});
 
 /* ---------- export ---------- */
 
@@ -290,7 +298,7 @@ $('#out-copy').onclick = () => {
 };
 $('#out-close').onclick = () => { $('#out-dlg').hidden = true; };
 
-$('#lb .x').onclick = closeLb;
+$('#lb .x').onclick = () => closeLb();
 $('#lb .p').onclick = () => stepLb(-1);
 $('#lb .n').onclick = () => stepLb(1);
 $('#lb').onclick = (e) => { if (e.target.id === 'lb') closeLb(); };

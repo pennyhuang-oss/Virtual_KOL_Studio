@@ -26,6 +26,25 @@ const NAV = [
 
 let PLAN, ROSTER, MEDIA, gallery = [], gi = 0;
 
+/* Overlays are history entries, not just JS state. People reach for browser
+   Back to leave a detail panel, and before this that navigated away from the
+   whole site. Back now closes the topmost overlay, ?c=<id> makes a contestant
+   linkable, and every close path routes through history so the stack cannot
+   drift out of sync with what is on screen. */
+const NAVSTATE = { depth: 0 };
+
+function pushOverlay(kind, params) {
+  const q = new URLSearchParams(params);
+  NAVSTATE.depth += 1;
+  history.pushState({ o: kind, depth: NAVSTATE.depth }, '',
+    `${location.pathname}?${q}`);
+}
+
+function popOverlay() {
+  if (NAVSTATE.depth > 0) history.back();
+  else { closeLightbox(true); closeDetail(true); }
+}
+
 async function boot() {
   try {
     const [p, r, m] = await Promise.all(
@@ -43,6 +62,7 @@ async function boot() {
   render();
   $('#loading').remove();
   $('#app').hidden = false;
+  openFromUrl();
 }
 
 function render() {
@@ -236,7 +256,12 @@ function renderTalents() {
 
 /* ---------- detail ---------- */
 
-function openDetail(c) {
+let CURRENT = null;
+
+function openDetail(c, silent) {
+  CURRENT = c;
+  if (!silent) pushOverlay('detail', { c: c.id });
+  $('#detail-who').textContent = `${c.name}　${c.native_name || ''}`.trim();
   const m = MEDIA[c.id] || {};
   const host = $('#detail-inner');
   host.textContent = '';
@@ -338,17 +363,28 @@ function openDetail(c) {
   $('#detail').scrollTop = 0;
 }
 
-function closeDetail() {
+function closeDetail(silent) {
+  if (!silent && !$('#detail').hidden) return popOverlay();
   $('#detail').hidden = true;
   document.body.style.overflow = '';
+  CURRENT = null;
 }
 
 /* ---------- lightbox ---------- */
 
-function openLightbox(shots, i) {
+function openLightbox(shots, i, silent) {
   gallery = shots; gi = i;
   showShot();
   $('#lightbox').hidden = false;
+  if (!silent) {
+    const c = CURRENT ? { c: CURRENT.id, i } : { i };
+    pushOverlay('lightbox', c);
+  }
+}
+
+function closeLightbox(silent) {
+  if (!silent && !$('#lightbox').hidden) return popOverlay();
+  $('#lightbox').hidden = true;
 }
 function showShot() {
   $('#lb-img').src = gallery[gi];
@@ -359,21 +395,49 @@ function step(d) {
   showShot();
 }
 
-$('#detail-close').onclick = closeDetail;
-$('#detail').onclick = (e) => { if (e.target.id === 'detail') closeDetail(); };
-$('.lb-close').onclick = () => { $('#lightbox').hidden = true; };
+$('#detail-close').onclick = () => closeDetail();
+$('#detail-back').onclick = () => closeDetail();
+$('.lb-close').onclick = () => closeLightbox();
 $('.lb-prev').onclick = () => step(-1);
 $('.lb-next').onclick = () => step(1);
-$('#lightbox').onclick = (e) => { if (e.target.id === 'lightbox') $('#lightbox').hidden = true; };
+$('#lightbox').onclick = (e) => { if (e.target.id === 'lightbox') closeLightbox(); };
 
 document.addEventListener('keydown', (e) => {
   if (!$('#lightbox').hidden) {
-    if (e.key === 'Escape') $('#lightbox').hidden = true;
+    if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
     return;
   }
   if (e.key === 'Escape' && !$('#detail').hidden) closeDetail();
 });
+
+/* Back / Forward: close down to whatever the entry we landed on describes. */
+window.addEventListener('popstate', (ev) => {
+  const st = ev.state || {};
+  NAVSTATE.depth = st.depth || 0;
+  const want = st.o || null;
+  if (want !== 'lightbox' && !$('#lightbox').hidden) closeLightbox(true);
+  if (want === null && !$('#detail').hidden) closeDetail(true);
+  if (want === 'detail' && $('#detail').hidden) {
+    const c = byId(new URLSearchParams(location.search).get('c'));
+    if (c) openDetail(c, true);
+  }
+});
+
+function byId(id) {
+  return (ROSTER && ROSTER.contestants.find((x) => x.id === id)) || null;
+}
+
+/* A ?c=<id> link opens straight onto that contestant, so a single
+   contestant can be sent to the client as its own URL. */
+function openFromUrl() {
+  const id = new URLSearchParams(location.search).get('c');
+  const c = byId(id);
+  if (!c) return;
+  history.replaceState({ o: 'detail', depth: 1 }, '', location.href);
+  NAVSTATE.depth = 1;
+  openDetail(c, true);
+}
 
 boot();

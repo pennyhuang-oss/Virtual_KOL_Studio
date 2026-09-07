@@ -110,8 +110,15 @@
   </footer>
 </main>
 
-<div id="detail" class="detail" hidden aria-modal="true" role="dialog">
-  <button class="detail-close" id="detail-close" aria-label="關閉">✕</button>
+<div id="detail" class="detail" hidden aria-modal="true" role="dialog" aria-label="參賽者詳細資料">
+  <div class="detail-bar">
+    <div class="detail-bar-in">
+      <button class="detail-back" id="detail-back"><b>←</b>返回名單</button>
+      <span class="detail-who" id="detail-who"></span>
+      <span class="detail-hint">按瀏覽器上一頁或 Esc 也可以返回</span>
+      <button class="detail-close" id="detail-close" aria-label="關閉">✕</button>
+    </div>
+  </div>
   <div class="detail-inner" id="detail-inner"></div>
 </div>
 
