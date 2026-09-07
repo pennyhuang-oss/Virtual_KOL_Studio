@@ -1,0 +1,187 @@
+{
+ "_meta": {
+  "batch": 2,
+  "personas": [
+   "jia-seo",
+   "kanon-komori",
+   "miu-shiraishi"
+  ],
+  "submitted": "2026-09-07T08:56Z",
+  "baseline_txn_before": "2026-09-07T08:33:38.967303Z",
+  "reconciliation": {
+   "soul_id_minus25_expected": 3,
+   "soul_id_minus25_observed": 3,
+   "soul_v2_012_repeats": 0,
+   "unexplained_charges": 0,
+   "character_records": 3
+  },
+  "uploads": {
+   "total": 16,
+   "put_http_200": 16,
+   "sha256_server_match": 16,
+   "mismatch": 0,
+   "distinct_hashes": 16
+  },
+  "note": "kanon-komori has 6 training images, not 5; her soul name records 6img so the count is not misremembered later. 6 is inside the 5-20 range Soul V2 accepts."
+ },
+ "jia-seo": {
+  "persona": "jia-seo",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/jia-seo/images/training_v1/train_01.jpg",
+    "sha256": "d3e9f4fccea50992af0fce13303aa936189895512eabed99eea36a35a095eef7",
+    "media_id": "b54bda02-5985-401a-86e8-1821b2e49121",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/jia-seo/images/training_v1/train_02.jpg",
+    "sha256": "55856c8b06359c1478748175d1a79242b032ad5db40cb3b0674459bdef93a700",
+    "media_id": "e1e1c629-1a6d-4d3d-9000-c33b26e356d8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/jia-seo/images/training_v1/train_03.jpg",
+    "sha256": "6a8a078876242b611358b81079910d5e12874140059c12ee8d75e32f2f4f8fce",
+    "media_id": "10a4cbf3-9293-4d46-a2f2-ee622dc4ca16",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/jia-seo/images/training_v1/train_04.jpg",
+    "sha256": "ef8b190d3d10374da01a2a052bd201d7b52f3285ea672d374e818632bab46f1c",
+    "media_id": "085306cf-f4e5-4cd9-a020-6f86f4ca6c38",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/jia-seo/images/training_v1/train_05.jpg",
+    "sha256": "bde89a63789d898c75d3af521952c48d74d413e70e9bfcefa2cac73b2741bd92",
+    "media_id": "b28eafe5-0ec0-43d7-a410-d13fd39bbe42",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "jia-seo-soul-v1-5img-20260904",
+  "soul_id": "ecf19246-c697-419c-b978-fe9373586c19",
+  "state": "training",
+  "submitted_at": "2026-09-07T08:56:36.908762Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T08:56:36.908762Z",
+   "count": 1
+  }
+ },
+ "kanon-komori": {
+  "persona": "kanon-komori",
+  "version": "v1-6img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/kanon-komori/images/training_v1/train_01.jpg",
+    "sha256": "3a9a123a7b7f87fdb17355237e85d038fd729ab8bef56e4958fa590473bc5917",
+    "media_id": "3ad24ee1-5f4f-4763-ac70-93717b443841",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/kanon-komori/images/training_v1/train_02.jpg",
+    "sha256": "8dc6fc2c69594f38884bec96ca823b99e9efefe6b68d501d4f035f09f4bc853e",
+    "media_id": "4ab188a8-2677-494a-a701-fc5c3a56f94d",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/kanon-komori/images/training_v1/train_03.jpg",
+    "sha256": "0995fbe5d704b62d806165b926eeef1076c363c79ed43ab2ef79358308520f0a",
+    "media_id": "ed4c5d19-e613-4f2b-857b-3ccf317c6c90",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/kanon-komori/images/training_v1/train_04.jpg",
+    "sha256": "e7270774187e931e938c1063beab06689cdba7348aa68883b03b04dc12d2f8f2",
+    "media_id": "e8d1051b-ae1a-441c-9b0b-6c6e941dede9",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/kanon-komori/images/training_v1/train_05.jpg",
+    "sha256": "1ce60f602b859960fa3cac1b179e0b0d5a05050ce7e135d2f6d36a97fa5064c7",
+    "media_id": "6c04de27-67f5-41f0-8176-c91b436f022c",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 6,
+    "path": "kols/kanon-komori/images/training_v1/train_06.jpg",
+    "sha256": "a20f402db53a8a0ad58aa434b52e4e55cc7c87a1fb98633bdf7551bdd15199b2",
+    "media_id": "6608c78a-ead3-49d9-ab3e-5e628ed6d7b5",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "kanon-komori-soul-v1-6img-20260904",
+  "soul_id": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "state": "training",
+  "submitted_at": "2026-09-07T08:56:44.824051Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T08:56:44.824051Z",
+   "count": 1
+  }
+ },
+ "miu-shiraishi": {
+  "persona": "miu-shiraishi",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/miu-shiraishi/images/training_v1/train_01.jpg",
+    "sha256": "9e2a092a56223e52dd459ef3e617a2f05ae18ad17b2d516f3e83a76978492cc9",
+    "media_id": "9443458b-0f16-44cb-bc13-7360d4146998",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/miu-shiraishi/images/training_v1/train_02.jpg",
+    "sha256": "455344c30397433edaf1256275030ce1c141f8b425538473a7eb0e51e3195c75",
+    "media_id": "7d880bf3-4172-46e7-996e-beb50313bd99",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/miu-shiraishi/images/training_v1/train_03.jpg",
+    "sha256": "b9472a40f3c4fd47eff748e4c0b29d044f0bc658d4ecdc08eecde430c17c8fcc",
+    "media_id": "4026325a-6216-4dad-ae47-2c57ad6c359f",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/miu-shiraishi/images/training_v1/train_04.jpg",
+    "sha256": "e72ad39878ad953e23b13b5238c1a8841607b3ad464b092feedcce89428051e6",
+    "media_id": "2a0b0b93-0ea6-405a-80d6-a6dd5515dd93",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/miu-shiraishi/images/training_v1/train_05.jpg",
+    "sha256": "fee737369312754a9beb92c8fef22d35ec763ca33e273fca2e80c2f791fe88e4",
+    "media_id": "8955fae5-f7aa-4196-a3aa-46d047f9a1b7",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "miu-shiraishi-soul-v1-5img-20260904",
+  "soul_id": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "state": "training",
+  "submitted_at": "2026-09-07T08:56:53.883882Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T08:56:53.883882Z",
+   "count": 1
+  }
+ }
+}
