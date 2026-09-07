@@ -8535,7 +8535,7 @@
         "簡體中文"
       ],
       "tagline": "帶你站在歷史發生的那一刻，離開之前告訴你為什麼。",
-      "archetype": "The Reader Who Walks In — 從現在走進過去的那個人，不是當時的人",
+      "archetype": "從現在走進過去的那個人，不是當時的人。",
       "personality": [
         "安靜，不表演——不用驚嘆語氣，不喊「太震撼了」「你絕對想不到」",
         "講災難時尤其不能亢奮（character.md：那是這個帳號最容易毀掉的地方）",
@@ -8543,7 +8543,7 @@
         "不下道德判斷，不做「誰是壞人」，不評價國家與民族",
         "會說不知道——史料有爭議時直接講「這一段有兩種說法」，不挑一個講成定論"
       ],
-      "voice_tone": "音色偏低、句子短。不加戲劇性的停頓與抖音，不做懸疑語調。沉浸段用近乎耳語的音量，知識段音量提起來一點但不亢奮。★ 語速一律用全專案通用固定寫法「語速明快、節奏緊湊、中間不停頓、一氣呵成」，音色與語速要分開寫，不要寫出跟它矛盾的詞（例如 calm, unhurried）。",
+      "voice_tone": "音色偏低、句子短。不加戲劇性的停頓，不做懸疑語調。沉浸段用近乎耳語的音量，知識段提起來一點但不亢奮。",
       "pillars": [
         {
           "name": "那一天",
@@ -9316,7 +9316,7 @@
       "name_zh": "楊薇伊",
       "category": "nightlife",
       "age": 28,
-      "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+      "ethnicity": "新加坡華人",
       "location": "新加坡丹戎巴葛",
       "languages": [
         "英文",
@@ -9620,7 +9620,7 @@
       "name_zh": "郭慧恩",
       "category": "fashion",
       "age": 23,
-      "ethnicity": "印尼華裔（Chinese-Indonesian）",
+      "ethnicity": "印尼華人",
       "location": "雅加達（華裔）",
       "languages": [
         "中文",
@@ -10109,7 +10109,7 @@
       "name_zh": "蘇思穎",
       "category": "travel",
       "age": 25,
-      "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+      "ethnicity": "新加坡華人",
       "location": "新加坡（華裔）",
       "languages": [
         "英文",
@@ -10251,7 +10251,7 @@
       "name_zh": "李珮甄",
       "category": "automotive",
       "age": 24,
-      "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+      "ethnicity": "馬來西亞華人",
       "location": "吉隆坡（華裔）",
       "languages": [
         "中文",
@@ -11782,7 +11782,7 @@
       "name_zh": "梁欣妮",
       "category": "food",
       "age": 22,
-      "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+      "ethnicity": "馬來西亞華人",
       "location": "檳城喬治市（華裔）",
       "languages": [
         "中文",

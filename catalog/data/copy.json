@@ -78,7 +78,9 @@
     },
     "leon-lim": {
       "tagline": "帶你站在歷史發生的那一刻，離開之前告訴你為什麼。",
-      "category": "history_immersion"
+      "category": "history_immersion",
+      "archetype_zh": "從現在走進過去的那個人，不是當時的人。",
+      "voice_zh": "音色偏低、句子短。不加戲劇性的停頓，不做懸疑語調。沉浸段用近乎耳語的音量，知識段提起來一點但不亢奮。"
     },
     "xiaoxiao-tan": {
       "tagline": "研究規則本身——棋、牌、機率，冷靜地把背後的系統講明白。",
@@ -397,7 +399,10 @@
     "Latina (Mexican-American)": "拉丁裔（墨西哥／美國）",
     "Indian (Punjabi)": "印度（旁遮普）",
     "Singaporean Chinese": "新加坡華人",
-    "Malaysian Chinese": "馬來西亞華人"
+    "Malaysian Chinese": "馬來西亞華人",
+    "新加坡華裔（Chinese-Singaporean）": "新加坡華人",
+    "印尼華裔（Chinese-Indonesian）": "印尼華人",
+    "馬來西亞華裔（Chinese-Malaysian）": "馬來西亞華人"
   },
   "language_zh": {
     "Mandarin Chinese": "中文",

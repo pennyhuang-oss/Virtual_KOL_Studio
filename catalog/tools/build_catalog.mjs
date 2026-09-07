@@ -259,7 +259,12 @@ function nameFromCharacterMd(id, repos) {
 
 // 只在字串本來就是中文時才採用；純英文一律回 null（不對客戶顯示英文原文）。
 const hasCJK = v => /[\u4e00-\u9fff]/.test(String(v ?? ''));
-const pickZh = v => (v && hasCJK(v) ? v : null);
+// 中文字串尾巴掛一個純英文括號時,把那個括號拿掉。
+// 2026-09-07 抓到的:新收錄那 19 位的族裔寫成「新加坡華裔（Chinese-Singaporean）」,
+// 有 CJK 所以 pickZh 放行,結果在人設頁那格窄欄裡折成三行英文。
+// 括號裡沒有任何中文字才拿掉 ——「印度（旁遮普）」這種要留著。
+const dropEnParen = v => String(v ?? '').replace(/\s*[（(][^（()）]*[)）]\s*$/g, m => (hasCJK(m) ? m : '')).trim();
+const pickZh = v => { const t = dropEnParen(v); return t && hasCJK(t) ? t : null; };
 // 中文後面接一段英文時，只留中文那一段（純英文則整段丟掉，由 pickZh 處理）。
 // 說明只收中文。英文的一律當成「沒有」——寧可不顯示,也不要在全中文的頁面上
 // 混一段英文（使用者 2026-09-01：全中文）。該補的由 copy.json 的覆寫補。
