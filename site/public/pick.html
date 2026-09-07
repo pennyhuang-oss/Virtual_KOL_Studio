@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>素材挑選 — 897 女團養成計畫</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#0B0D14; --raise:#141825; --raise2:#1B2030; --rule:#252B3B; --soft:#1C2130;
+  --ink:#EEF0F5; --ink2:#9BA2B5; --ink3:#6B7286;
+  --brass:#C6A15B; --brass-dim:#8A6F3C; --rose:#D9737F; --ok:#6FB58A;
+  --sans:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;
+  --serif:"Noto Serif TC",Georgia,serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font:300 15px/1.7 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:96px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 22px}
+
+header.top{position:sticky;top:0;z-index:20;background:rgba(11,13,20,.94);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.topin{display:flex;align-items:center;gap:18px;min-height:60px;flex-wrap:wrap}
+.brand{font:700 15px/1 var(--serif);letter-spacing:.05em;color:var(--bg);
+  background:var(--brass);padding:7px 9px;border-radius:5px;color:#14141b}
+h1{font:700 16px/1.4 var(--serif);margin:0;letter-spacing:.04em}
+h1 em{display:block;font:300 11.5px/1.5 var(--sans);font-style:normal;color:var(--ink3);
+  letter-spacing:.06em;margin-top:2px}
+.tools{display:flex;gap:7px;margin-left:auto;flex-wrap:wrap;align-items:center}
+button{font:500 13px var(--sans);cursor:pointer;border-radius:7px;
+  border:1px solid var(--rule);background:var(--raise2);color:var(--ink2);padding:8px 13px}
+button:hover{color:var(--ink);border-color:var(--ink3)}
+button.on{background:var(--brass);border-color:var(--brass);color:#14141b}
+button.pri{background:var(--brass);border-color:var(--brass);color:#14141b;font-weight:600}
+button.pri:hover{background:#d8bb82;color:#14141b}
+
+.intro{padding:26px 0 8px}
+.intro p{margin:0 0 10px;color:var(--ink2);font-size:14px;max-width:74em}
+.intro b{color:var(--ink);font-weight:500}
+.intro code{background:var(--raise2);padding:1px 6px;border-radius:3px;
+  color:var(--brass);font-size:12.5px}
+
+.person{border-top:1px solid var(--rule);padding:22px 0 6px}
+.phead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.phead h2{margin:0;font:700 19px/1.3 var(--serif)}
+.phead h2 span{font:300 13px var(--sans);color:var(--ink3);margin-left:8px}
+.tag{font-size:11px;letter-spacing:.1em;color:var(--brass);
+  border:1px solid var(--brass-dim);padding:2px 9px;border-radius:99px}
+.count{font-size:12.5px;color:var(--ink3);margin-left:auto;
+  font-variant-numeric:tabular-nums}
+.count b{color:var(--brass);font-weight:500}
+.count.zero b{color:var(--rose)}
+.pact{display:flex;gap:6px}
+.pact button{padding:5px 10px;font-size:12px}
+
+.grid{display:grid;gap:9px;grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+.cell{position:relative;border:2px solid var(--soft);border-radius:8px;overflow:hidden;
+  background:var(--raise2);aspect-ratio:3/4;cursor:pointer;padding:0}
+.cell img{width:100%;height:100%;object-fit:cover;display:block}
+.cell.sel{border-color:var(--brass)}
+.cell.sel::after{content:"✓";position:absolute;top:5px;left:5px;width:20px;height:20px;
+  background:var(--brass);color:#14141b;border-radius:50%;font-size:12px;font-weight:700;
+  display:grid;place-items:center}
+.cell.cover{border-color:var(--ok)}
+.cell.cover::after{content:"封";background:var(--ok);color:#0B0D14;font-size:11px}
+.cell .noimg{display:grid;place-items:center;height:100%;font-size:11px;
+  color:var(--ink3);padding:8px;text-align:center;line-height:1.5}
+.badge{position:absolute;bottom:5px;left:5px;background:rgba(11,13,20,.85);
+  font-size:10px;padding:2px 6px;border-radius:3px;color:var(--ink2)}
+.badge.vid{color:var(--brass)}
+.origin{position:absolute;top:5px;right:5px;background:rgba(11,13,20,.85);
+  font-size:10px;padding:2px 6px;border-radius:3px;color:var(--ink3)}
+.zoom{position:absolute;bottom:5px;right:5px;width:24px;height:24px;padding:0;
+  border-radius:5px;background:rgba(11,13,20,.85);font-size:12px;line-height:1}
+.cell.sens{opacity:.5}
+.cell.sens .badge{color:var(--rose)}
+
+.bar{position:fixed;bottom:0;left:0;right:0;z-index:25;background:rgba(20,24,37,.97);
+  backdrop-filter:blur(12px);border-top:1px solid var(--rule);padding:12px 0}
+.barin{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.stat{font-size:13px;color:var(--ink2)}
+.stat b{color:var(--brass);font-weight:600;font-variant-numeric:tabular-nums}
+.stat s{color:var(--rose);text-decoration:none}
+.barin .right{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+
+.dlg{position:fixed;inset:0;z-index:40;background:rgba(6,7,11,.96);
+  display:grid;place-items:center;padding:34px 20px}
+.dlgbox{background:var(--raise);border:1px solid var(--rule);border-radius:12px;
+  padding:24px;width:min(94vw,740px);max-height:86vh;overflow:auto}
+.dlgbox h3{margin:0 0 8px;font:700 18px var(--serif)}
+.dlgbox p{margin:0 0 14px;font-size:13.5px;color:var(--ink2)}
+textarea{width:100%;height:260px;background:var(--ground);color:var(--ink2);
+  border:1px solid var(--rule);border-radius:8px;padding:12px;font:12px/1.6 ui-monospace,Menlo,monospace;
+  resize:vertical}
+.dlgact{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+
+#lb{position:fixed;inset:0;z-index:50;background:rgba(4,5,8,.97);
+  display:grid;place-items:center;padding:56px 66px}
+#lb img,#lb video{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+#lb .x,#lb .p,#lb .n{position:absolute;background:var(--raise2);border:1px solid var(--rule);
+  color:var(--ink);border-radius:50%}
+#lb .x{top:16px;right:18px;width:38px;height:38px}
+#lb .p,#lb .n{top:50%;transform:translateY(-50%);width:42px;height:42px;font-size:22px}
+#lb .p{left:14px}#lb .n{right:14px}
+#lbmeta{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:12px;color:var(--ink3);text-align:center;max-width:80vw}
+#lbpick{position:absolute;bottom:52px;left:50%;transform:translateX(-50%)}
+@media(max-width:640px){
+  .wrap{padding:0 14px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:7px}
+  #lb{padding:56px 10px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap topin">
+  <span class="brand">897</span>
+  <h1>素材挑選<em>897 女團養成計畫　·　15 位參賽者</em></h1>
+  <div class="tools">
+    <button id="f-all" class="on">全部</button>
+    <button id="f-sel">只看已選</button>
+    <button id="f-vid">只看影片</button>
+    <span style="width:10px"></span>
+    <button id="reset">清空重來</button>
+  </div>
+</div></header>
+
+<div class="wrap intro">
+  <p><b>怎麼用</b>　點縮圖＝選取／取消。右下角 <code>⤢</code> 可放大到 800px 檢視畫質。
+  每位請至少選 <b>1 張</b>；在放大檢視裡可按「設為封面」指定列表頁的封面（不指定就用第一張）。</p>
+  <p><b>選完之後</b>　按右下角<b>「複製選擇結果」</b>，把複製到的內容貼回對話給我，我就套用並重新部署。
+  選擇會自動存在這台瀏覽器裡，關掉頁面也不會不見。</p>
+  <p><b>素材來源</b>　<code>庫</code>＝人設庫原始檔（含建模圖）；<code>型錄</code>＝型錄站已優化的素材。
+  標紅字的是人設庫「私下」那一層，預設不建議放進客戶簡報，但你可以選。</p>
+</div>
+
+<main id="app" class="wrap"><p style="color:var(--ink3)">載入素材池…</p></main>
+
+<div class="bar"><div class="wrap barin">
+  <span class="stat">已選 <b id="s-total">0</b> 件　·　影片 <b id="s-vid">0</b> 支　·　
+    <s id="s-empty"></s></span>
+  <div class="right">
+    <button id="preset">套用目前線上版的選擇</button>
+    <button class="pri" id="copy">複製選擇結果</button>
+  </div>
+</div></div>
+
+<div class="dlg" id="out-dlg" hidden><div class="dlgbox">
+  <h3>選擇結果</h3>
+  <p>已複製到剪貼簿。若沒複製成功，請手動全選下方內容複製，然後貼回對話給我。</p>
+  <textarea id="out" readonly></textarea>
+  <div class="dlgact">
+    <button class="pri" id="out-copy">再複製一次</button>
+    <button id="out-close">關閉</button>
+  </div>
+</div></div>
+
+<div id="lb" hidden>
+  <button class="x" aria-label="關閉">✕</button>
+  <button class="p" aria-label="上一張">‹</button>
+  <span id="lbslot"></span>
+  <button class="n" aria-label="下一張">›</button>
+  <button class="pri" id="lbpick">選取這張</button>
+  <div id="lbmeta"></div>
+</div>
+
+<script src="pick.js"></script>
+</body>
+</html>

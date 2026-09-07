@@ -108,6 +108,13 @@ h2::before {
 }
 .section-note strong { color: var(--ink); font-weight: 500; }
 
+.pickentry {
+  flex-shrink: 0; font-size: 12.5px; letter-spacing: .08em; text-decoration: none;
+  color: var(--gold); border: 1px solid var(--gold-dim);
+  padding: 7px 13px; border-radius: 7px; white-space: nowrap;
+}
+.pickentry:hover { background: var(--gold); color: #14141b; border-color: var(--gold); }
+
 .hero { padding: 96px 0 84px; }
 
 .facts {
