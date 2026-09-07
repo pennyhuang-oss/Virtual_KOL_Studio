@@ -11,7 +11,7 @@
       "collected_at": "2026-09-04",
       "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
       "soul_training": {
-        "status": "ready_unvalidated",
+        "status": "face_validated",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
@@ -19,7 +19,14 @@
         "started_at": null,
         "completed_at": null,
         "note": "Soul V2 訓練完成（5 張訓練集）。尚未跑 6 張驗證圖者狀態為 ready_unvalidated，未升 approved。cheryl-soh 與 zhiyi-shen 為試點，已跑 6 張驗證：臉 6/6 通過。碰撞門檻實測未通過，經使用者裁決接受，並衍生強制規則 C-1（髮型為身分區分要件）、C-2（碰撞對象不得同框），見 review/soul_training/RULING_collision_accepted.md。",
-        "soul_name": "wanyin-jiang-soul-v1-5img-20260904"
+        "soul_name": "wanyin-jiang-soul-v1-5img-20260904",
+        "verification": {
+          "date": "2026-09-07",
+          "specs": 6,
+          "result": "臉 6/6 通過（門檻 1、2、4）",
+          "report": "review/soul_pilot/SAMPLE_VERIFY_5.md",
+          "images": "review/soul_pilot/wanyin-jiang/verify_v1/"
+        }
       }
     }
   },
