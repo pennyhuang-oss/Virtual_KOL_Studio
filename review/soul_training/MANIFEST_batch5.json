@@ -1,0 +1,168 @@
+{
+ "tammy-chou": {
+  "persona": "tammy-chou",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/tammy-chou/images/training_v1/train_01.jpg",
+    "sha256": "9ed50db80ef5635cf52397090f65dcca2e3f9b5c06052de294225583abb8acce",
+    "media_id": "04faed43-22ee-497f-b9cf-fc7e9897e303",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/tammy-chou/images/training_v1/train_02.jpg",
+    "sha256": "06182b32986f842cd361dc3593721d5e75e25a59d4455b854da4720a0ed1fa09",
+    "media_id": "0765d179-2fa8-4759-b9ee-708b0112c2dd",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/tammy-chou/images/training_v1/train_03.jpg",
+    "sha256": "2652564f0b843b250043f22a0421ef60329d4964d319761fa4ee730d141e7092",
+    "media_id": "ec186896-ab78-411f-9d5c-d58c04cd4c98",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/tammy-chou/images/training_v1/train_04.jpg",
+    "sha256": "d655f1a02c64b40bfbc09821eb2464d0d2e8fb73bacd7046f7e434d269f2c043",
+    "media_id": "f9e1e1c0-1dea-4105-b082-4a6eff3f22b9",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/tammy-chou/images/training_v1/train_05.jpg",
+    "sha256": "eea24fa5094e875d7c3d96fb98e2ed48593990e8b70b402d70b268104de195b7",
+    "media_id": "c2083a11-f5ee-4cec-8d5a-ecace64cd183",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "tammy-chou-soul-v1-5img-20260904",
+  "soul_id": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:55:00.590151Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:55:00.590151Z",
+   "count": 1
+  }
+ },
+ "wanyin-jiang": {
+  "persona": "wanyin-jiang",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/wanyin-jiang/images/training_v1/train_01.jpg",
+    "sha256": "bc876c456ecc40075834805ba669b0adcd2ecea7ab425966d13ef138fab2efd2",
+    "media_id": "461b9933-272d-45e7-a93c-000049b1c559",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/wanyin-jiang/images/training_v1/train_02.jpg",
+    "sha256": "129c5c0503d76abc157471b07762fefa5f170b3dcf4aba688d8e222b19c42f9a",
+    "media_id": "0966baaf-84fc-4c47-bd38-78d1fa61f15c",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/wanyin-jiang/images/training_v1/train_03.jpg",
+    "sha256": "f6343664022627e1dc296784a2eaecaeda40ff3ab0bd3b7ee2a8c93a2afb84c5",
+    "media_id": "557eb515-eebd-4415-9636-d2eebe050d79",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/wanyin-jiang/images/training_v1/train_04.jpg",
+    "sha256": "2d5639ed8213887189bf49b5f077340afa37124fb42931cfd2779c027e553c7e",
+    "media_id": "8db7464f-6464-43fd-a9f4-8e3c5b61fb1b",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/wanyin-jiang/images/training_v1/train_05.jpg",
+    "sha256": "70d3a9ab40f1eeec15f1f0d2ed80e02e51375355007e368aef79211e60d39034",
+    "media_id": "c1590128-ed00-4f03-8481-957cd79c2f46",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "wanyin-jiang-soul-v1-5img-20260904",
+  "soul_id": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:55:09.000929Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:55:09.000929Z",
+   "count": 1
+  }
+ },
+ "wendy-yeo": {
+  "persona": "wendy-yeo",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/wendy-yeo/images/training_v1/train_01.jpg",
+    "sha256": "9b0fddac984dbe4aa885bb69c2ed490140272c805da754d35db59bb806522ed7",
+    "media_id": "5584e69b-6dd5-4065-8e45-7f71543426d8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/wendy-yeo/images/training_v1/train_02.jpg",
+    "sha256": "3ce2509252a461e9673213bc278e6bbabbe9930a8e8ce19aa03d5d92bc062fc1",
+    "media_id": "22cf1097-4cf3-465a-a7e6-dce00824b3e2",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/wendy-yeo/images/training_v1/train_03.jpg",
+    "sha256": "4a0868c0035e03d6d284c40780aa3cf17ed4c789965dfa2c7362a67265f14862",
+    "media_id": "8dceddd7-246a-429f-b102-16b9774564f8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/wendy-yeo/images/training_v1/train_04.jpg",
+    "sha256": "b9605da74e8d5c2dd7d735d1ee4c325a57b4c7d8f3de06d5420385b9b80751fa",
+    "media_id": "0351650f-3b24-4875-b1d8-d41090616486",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/wendy-yeo/images/training_v1/train_05.jpg",
+    "sha256": "1c0a1dc3fbe7615767ec6ab6b9ae2c61e6ee5e6b5168e062144ff7ed5c4ec1d9",
+    "media_id": "d3b48406-6519-4ef9-b672-84ad30df5f6d",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "wendy-yeo-soul-v1-5img-20260904",
+  "soul_id": null,
+  "state": "uploaded_verified_pending_train"
+ },
+ "_meta": {
+  "batch": 5,
+  "submitted": "2026-09-07T09:55Z",
+  "baseline_txn_before": "2026-09-07T09:38:44.183927Z",
+  "reconciliation": {
+   "soul_id_minus25_expected": 3,
+   "soul_id_minus25_observed": 3,
+   "soul_v2_012_repeats": 0,
+   "unexplained_charges_by_this_session": 0,
+   "character_records": 3,
+   "note": "the 3 charges cover sydney-leong (the protocol retry), tammy-chou and wanyin-jiang. wendy-yeo is uploaded and byte-verified but deliberately held so concurrency stays at 3."
+  },
+  "uploads": {
+   "total": 15,
+   "put_http_200": 15,
+   "sha256_server_match": 15,
+   "mismatch": 0,
+   "distinct_hashes": 15
+  }
+ }
+}

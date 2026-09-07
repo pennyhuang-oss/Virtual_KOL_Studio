@@ -1,0 +1,101 @@
+{
+ "yerin-han": {
+  "persona": "yerin-han",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/yerin-han/images/training_v1/train_01.jpg",
+    "sha256": "ca7344114df840ae08be50ac07eb00697c3c9e9a2c288740b16c33840e7906e2",
+    "media_id": "8b70276f-8540-4362-9442-21ae7cb061fd",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/yerin-han/images/training_v1/train_02.jpg",
+    "sha256": "bfab2c5cdd2bf02cadcc0346b9d1735bb3dd29d0cdcf830955d4b79646a56834",
+    "media_id": "d65ce63d-e03c-4126-866e-42c5654d95db",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/yerin-han/images/training_v1/train_03.jpg",
+    "sha256": "23f5694f85f69af78309f3c0a4a2d99e52e6e52a2467813630b6e2ce89b54aa3",
+    "media_id": "b29c73db-08ed-4ce0-8d31-ee0d12e50c89",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/yerin-han/images/training_v1/train_04.jpg",
+    "sha256": "00c2399764bc752610ee3833ca6d3010457d7f0c75a2728e8b4615828343bbf3",
+    "media_id": "6cac237c-f5e6-4b11-98c6-af713a02950d",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/yerin-han/images/training_v1/train_05.jpg",
+    "sha256": "3a31baeb3eddc74f1502268413e4923ad131913efd3ae4ab1e849273a404b8b5",
+    "media_id": "95bd6bb4-02cb-44e1-b67e-a138ce706101",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "yerin-han-soul-v1-5img-20260904",
+  "soul_id": null,
+  "state": "uploaded_verified_pending_train"
+ },
+ "zoey-yeh": {
+  "persona": "zoey-yeh",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/zoey-yeh/images/training_v1/train_01.jpg",
+    "sha256": "d4cf1a48885c9b32e79cf5a54ec05e0206d7cf709be0f8d2bfa240fe6f68dd48",
+    "media_id": "3430241b-d443-4496-9aee-b60b55d783e5",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/zoey-yeh/images/training_v1/train_02.jpg",
+    "sha256": "fb6c5a12caa3d3aa8b025abdb9b0fbcc44230497bd65a05a232c588816144a94",
+    "media_id": "43325121-3f77-48b0-a088-5f21bdcfc604",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/zoey-yeh/images/training_v1/train_03.jpg",
+    "sha256": "4da8281edc876cc2e9b961666a336710025084158ec3f3f9f9633042086aeffb",
+    "media_id": "e92b3602-a79b-4485-b67b-c3c84cc29341",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/zoey-yeh/images/training_v1/train_04.jpg",
+    "sha256": "fc60e15792568ab0e82348032a225eec30658b12c2a8a8c9419170f4d91fec5f",
+    "media_id": "1bdb7d43-768e-4727-8e49-08b2daba0189",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/zoey-yeh/images/training_v1/train_05.jpg",
+    "sha256": "e499f9c7b0c753ae5eace5b067fb80150295192fe1e1cd36f65453e96f67ea53",
+    "media_id": "120f8d36-97a9-4c13-9805-e795090f6ea3",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "zoey-yeh-soul-v1-5img-20260904",
+  "soul_id": null,
+  "state": "uploaded_verified_pending_train"
+ },
+ "_meta": {
+  "batch": 6,
+  "uploads": {
+   "total": 10,
+   "put_http_200": 10,
+   "sha256_server_match": 10,
+   "mismatch": 0,
+   "distinct_hashes": 10
+  },
+  "note": "media_ids were taken once, then re-taken because the first presigned URLs were impractical to transcribe. Taking presigned URLs costs nothing, so the unused first set was simply abandoned."
+ }
+}

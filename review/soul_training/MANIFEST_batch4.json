@@ -90,14 +90,15 @@
   ],
   "soul_name": "ruoruo-tang-soul-v1-5img-20260904",
   "soul_id": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T09:38:35.522735Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T09:38:35.522735Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:52Z"
  },
  "somi-oh": {
   "persona": "somi-oh",
@@ -141,14 +142,15 @@
   ],
   "soul_name": "somi-oh-soul-v1-5img-20260904",
   "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T09:38:44.183927Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T09:38:44.183927Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:52Z"
  },
  "sydney-leong": {
   "persona": "sydney-leong",
@@ -191,15 +193,23 @@
    }
   ],
   "soul_name": "sydney-leong-soul-v1-5img-20260904",
-  "soul_id": null,
-  "state": "call_failed_not_charged",
+  "soul_id": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "state": "training",
   "failure": {
    "error": "Something went wrong. Please try again.",
    "request_id": "9f7f0018-6e64-48d6-9839-8f2a0ff226d5",
    "at": "~2026-09-07T09:38:50Z",
    "soul_id_minus25_for_her": 0,
    "server_character_record": false,
-   "ruling": "NOT the Vicky Lin billed-but-failed mode - nothing was charged and no record was created. Per ACCEPTANCE_LOCKED.md step 6, a second (and final) call is permitted only after waiting 15 minutes and re-confirming no record and no charge. Images stay uploaded and verified, so the retry needs no re-upload."
+   "ruling": "NOT the Vicky Lin billed-but-failed mode - nothing was charged and no record was created. Per ACCEPTANCE_LOCKED.md step 6, a second (and final) call is permitted only after waiting 15 minutes and re-confirming no record and no charge. Images stay uploaded and verified, so the retry needs no re-upload.",
+   "resolution": "retried once after the full 15-minute protocol window, having re-confirmed both that no Soul ID -25 existed for her and that no server-side record existed. The retry was accepted and charged exactly once, so the protocol prevented a double charge. No re-upload was needed - her original 5 images were still byte-verified on the server."
+  },
+  "submitted_at": "2026-09-07T09:54:49.929025Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:54:49.929025Z",
+   "count": 1
   }
  }
 }
