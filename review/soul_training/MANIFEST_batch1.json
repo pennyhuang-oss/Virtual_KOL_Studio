@@ -1,0 +1,180 @@
+{
+ "_meta": {
+  "batch": 1,
+  "personas": [
+   "angel-chiu",
+   "angeline-kwee",
+   "emma-kao"
+  ],
+  "submitted": "2026-09-07T08:33Z",
+  "baseline_txn_before": "2026-09-07T08:01:25.914222Z",
+  "reconciliation": {
+   "soul_id_minus25_expected": 3,
+   "soul_id_minus25_observed": 3,
+   "soul_v2_012_repeats": 0,
+   "unexplained_charges": 0,
+   "character_records": 3,
+   "note": "concurrent submission of 3 does not break the discriminator: charge count and record count both equal 3, and the failed-but-billed signature (repeated Soul V2 -0.12) is a different string."
+  },
+  "uploads": {
+   "total": 15,
+   "put_http_200": 15,
+   "sha256_server_match": 15,
+   "mismatch": 0,
+   "distinct_hashes": 15
+  }
+ },
+ "angel-chiu": {
+  "persona": "angel-chiu",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/angel-chiu/images/training_v1/train_01.jpg",
+    "sha256": "7592401dedfcd3e2a6156fbf136799c663e86f216b8ba6d5d9107cea13c89d1d",
+    "media_id": "3d426c0f-8c41-401f-bcbb-63523168c27c",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/angel-chiu/images/training_v1/train_02.jpg",
+    "sha256": "fcb0f99340c8928fb77f3113bbe23fb5c6ca59884f6b5d0525a2ae121e1b1788",
+    "media_id": "940945af-9ee8-4cea-9e86-1cda0580c8c8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/angel-chiu/images/training_v1/train_03.jpg",
+    "sha256": "ea4e2650349cb08cd289f4857923606d4d79bd07d389bd2d0acbad2f275421a3",
+    "media_id": "89e22f19-25d9-4dc4-ac52-2580fce94cc8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/angel-chiu/images/training_v1/train_04.jpg",
+    "sha256": "93c53147eeda8f932cb712ca33b9c19c7dee6a85cd8a729a26b32066e0bb5e7c",
+    "media_id": "467c7d0a-72c4-4dfd-a9cd-326f471747c8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/angel-chiu/images/training_v1/train_05.jpg",
+    "sha256": "7f088a4908cb3fb5dbf675c1a711202b3079978e250ca8004a9ffeefbc045bdc",
+    "media_id": "9966345b-12bd-4d9c-b77f-335b54d5c910",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "angel-chiu-soul-v1-5img-20260904",
+  "soul_id": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "state": "training",
+  "submitted_at": "2026-09-07T08:33:22.667848Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T08:33:22.667848Z",
+   "count": 1
+  }
+ },
+ "angeline-kwee": {
+  "persona": "angeline-kwee",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/angeline-kwee/images/training_v1/train_01.jpg",
+    "sha256": "5593c579cb04c080a9e5cf8a2d6a88ac756d1df24fa842ab2fe347a985f99ff4",
+    "media_id": "63143972-7ad4-407c-8c61-61ea803ef70e",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/angeline-kwee/images/training_v1/train_02.jpg",
+    "sha256": "34c755382aa691ea14a6f34ea5e7cddf36e9ed53e2c2363ac04e35e732038456",
+    "media_id": "816aff95-0ea6-4635-a7f2-15003e42fc21",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/angeline-kwee/images/training_v1/train_03.jpg",
+    "sha256": "f03eaa8306b324e036f086a6472c3fdd8d6bf658e2621dbe90aeb8a4af35e1cd",
+    "media_id": "3ac9f7d3-5987-48ef-b654-a6919d70a5b5",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/angeline-kwee/images/training_v1/train_04.jpg",
+    "sha256": "7f8fc7edb804c414aa46006c2c8e5d25e37a1ec384e6729cc84d294b54160a34",
+    "media_id": "8ec95ebf-09b7-477e-91af-c48099b198f8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/angeline-kwee/images/training_v1/train_05.jpg",
+    "sha256": "a3af665c09d29ba9e85d398ac476cb358f68c3e65231da6f279996b1b5747007",
+    "media_id": "ada92097-0b5d-46e2-af4f-def00bb8f271",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "angeline-kwee-soul-v1-5img-20260904",
+  "soul_id": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "state": "training",
+  "submitted_at": "2026-09-07T08:33:29.878988Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T08:33:29.878988Z",
+   "count": 1
+  }
+ },
+ "emma-kao": {
+  "persona": "emma-kao",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/emma-kao/images/training_v1/train_01.jpg",
+    "sha256": "95c8c5c6b55a99f69ae94186b55d37f0e00d85fb32194d6279492858ab5f2fa1",
+    "media_id": "3217f787-a820-4855-9222-e0d58afb8eff",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/emma-kao/images/training_v1/train_02.jpg",
+    "sha256": "804708565a98791fa8edcb847ab1159a32dbb2cc3e4b175ee1ef267e3f4a88ac",
+    "media_id": "b9f9bdb1-6f1e-448d-852d-6ff2d2f1d711",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/emma-kao/images/training_v1/train_03.jpg",
+    "sha256": "ba1a4e50009f7b51e8629f4e14174d15dd18d88f1c670285c00fb3b5725db134",
+    "media_id": "74576618-90b5-44a6-a12c-e6ee6f2fe7a4",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/emma-kao/images/training_v1/train_04.jpg",
+    "sha256": "71557128fc8a1837a068a6bc16f02ab4b879f93e93496b136b54f98187ad5c68",
+    "media_id": "82f1a38c-c117-4ffd-a687-7681d7c5cda3",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/emma-kao/images/training_v1/train_05.jpg",
+    "sha256": "1690b22bcfdebd116ac433949fbf4b7d1e81f0c440430f8d76467697a7d2f8ce",
+    "media_id": "70490c95-5025-43cd-9bae-1faaa37c2489",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "emma-kao-soul-v1-5img-20260904",
+  "soul_id": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "state": "training",
+  "submitted_at": "2026-09-07T08:33:38.967303Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T08:33:38.967303Z",
+   "count": 1
+  }
+ }
+}
