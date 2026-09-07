@@ -13,15 +13,18 @@
 # 那一步是本機跑 site/build_media.py，不在 Railway 跑。
 #
 # ⚠ 只影響 Railway 的 build context，不影響 git，也不影響本機執行。
+#
+# ⚠⚠ 這個檔案是 repo 全域共用的，而這個 repo 現在有兩個 Railway 服務在部署：
+#     897-audition  → rootDirectory /site
+#     kol-catalog    → rootDirectory /catalog
+# 所以 **不可以** 排除 site/ 或 catalog/ 任何一個，否則會讓另一個服務建置時
+# 少掉自己的目錄。要新增排除項時請先確認兩個服務都不需要。
 
 # 最大的來源：人設素材母檔
 kols/
 
 # 覆核工作區（含真人參考照，本來就絕對不該進部署環境）
 review/
-
-# 另一個服務的部署目錄，跟本站無關
-catalog/
 
 # 其他跟本站無關的
 music/
