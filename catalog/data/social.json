@@ -1,6 +1,6 @@
 {
  "note": "人設頁的社群連結。逐字取自 showgame-kol/docs/社群帳號總表.md（2026-08-20 查核，來源是 Metricool 實際連線資料）。🛑 只有這 6 位有帳號；其餘 12 位不放、也不顯示任何「目前沒有社群」的字樣（使用者 2026-09-04：「沒有的就不用特意講出來說他的狀態是現在沒有社群在經營，直接不顯示那個欄位」）。⚠ 不要拿 Buildup_KOL 的 profile.json 當來源——那裡還留著設定階段沒申請到的假 handle。",
- "verified": "2026-09-04 逐一測過：Instagram／Threads／X／TikTok／YouTube 共 30 個連結全部回 200。Facebook 那 6 個驗不了——同一個網址不同輪會回 200 或 400，真瀏覽器在這個環境也連不到 facebook.com，已交由使用者自己點過確認。",
+ "verified": "2026-09-04 逐一測過：Instagram／Threads／X／TikTok／YouTube 共 30 個連結全部回 200。Facebook 那 6 個在這個環境驗不了（同一個網址不同輪回 200 或 400，真瀏覽器也連不到 facebook.com），✅ 已由使用者 2026-09-04 自己逐一點開確認「六個都是對的帳號」。",
  "platform_order": [
   "instagram",
   "threads",
