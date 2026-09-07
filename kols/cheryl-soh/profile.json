@@ -18,7 +18,7 @@
         "training_image_count": 5,
         "started_at": "2026-09-07T05:13:51Z",
         "completed_at": "2026-09-07T05:30Z",
-        "note": "5 張訓練成功。6 張驗證：臉 6/6 通過（門檻 1、2、4）；身材項（門檻 3）胸圍低於 profile 的 89cm/D，但訓練集本身就已低於該數字，故為 profile 數字與訓練集之落差，非 Soul 失準，已送交使用者裁決。碰撞門檻待 zhiyi-shen 訓完。判定書見 review/soul_pilot/cheryl-soh/VERDICT_v1.md。尚未升為 approved。",
+        "note": "Soul V2 訓練完成（5 張訓練集）。尚未跑 6 張驗證圖者狀態為 ready_unvalidated，未升 approved。cheryl-soh 與 zhiyi-shen 為試點，已跑 6 張驗證：臉 6/6 通過。碰撞門檻實測未通過，經使用者裁決接受，並衍生強制規則 C-1（髮型為身分區分要件）、C-2（碰撞對象不得同框），見 review/soul_training/RULING_collision_accepted.md。",
         "soul_name": "cheryl-soh-soul-v1-5img-20260904"
       }
     }

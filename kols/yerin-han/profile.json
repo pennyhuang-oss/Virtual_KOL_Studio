@@ -2,7 +2,7 @@
   "id": "yerin-han",
   "ai_assets": {
     "training_images_v1": {
-      "status": "ready_for_training",
+      "status": "completed",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
@@ -11,14 +11,15 @@
       "collected_at": "2026-09-04",
       "note": "建模圖已準備好，待訓練。5 張皆為可直接發布的生活照／自拍，以純臉緊裁切 Reference Element 錨定臉部身分，身材與服裝完全由 prompt 文字定義。逐張的 prompt、job id 與判定見 review/soul_pilot/yerin-han/prompts.json，彙整見 generation_notes.md。19 位已全部備齊，可以送 Soul 訓練。",
       "soul_training": {
-        "status": "pending",
+        "status": "ready_unvalidated",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
-        "soul_id": null,
+        "soul_id": "8c447a79-769f-4520-a538-cfb48fef6163",
         "training_image_count": 5,
         "started_at": null,
         "completed_at": null,
-        "note": "待執行——19 位已全部備齊，每位 25 credits。"
+        "note": "Soul V2 訓練完成（5 張訓練集）。尚未跑 6 張驗證圖者狀態為 ready_unvalidated，未升 approved。cheryl-soh 與 zhiyi-shen 為試點，已跑 6 張驗證：臉 6/6 通過。碰撞門檻實測未通過，經使用者裁決接受，並衍生強制規則 C-1（髮型為身分區分要件）、C-2（碰撞對象不得同框），見 review/soul_training/RULING_collision_accepted.md。",
+        "soul_name": "yerin-han-soul-v1-5img-20260904"
       },
       "reference_element_id": "305dcfe2-99cc-4767-8740-a89db3304436"
     }

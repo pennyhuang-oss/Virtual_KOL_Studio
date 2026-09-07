@@ -18,7 +18,7 @@
         "training_image_count": 5,
         "started_at": "2026-09-07T08:33Z",
         "completed_at": "2026-09-07T08:50Z",
-        "note": "批次 1 送訓成功（5 張）。尚未跑 6 張驗證圖，故為 ready_unvalidated，未升 approved。5 張可行性與碰撞問題已由 cheryl-soh / zhiyi-shen 試點回答，見 review/soul_pilot/。",
+        "note": "Soul V2 訓練完成（5 張訓練集）。尚未跑 6 張驗證圖者狀態為 ready_unvalidated，未升 approved。cheryl-soh 與 zhiyi-shen 為試點，已跑 6 張驗證：臉 6/6 通過。碰撞門檻實測未通過，經使用者裁決接受，並衍生強制規則 C-1（髮型為身分區分要件）、C-2（碰撞對象不得同框），見 review/soul_training/RULING_collision_accepted.md。",
         "soul_name": "emma-kao-soul-v1-5img-20260904"
       }
     }
