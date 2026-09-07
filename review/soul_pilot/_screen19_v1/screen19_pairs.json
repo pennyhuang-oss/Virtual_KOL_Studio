@@ -1,0 +1,857 @@
+[
+ {
+  "d": 0.01219,
+  "a": "jia-seo",
+  "b": "miu-shiraishi"
+ },
+ {
+  "d": 0.0133,
+  "a": "cheryl-soh",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.0139,
+  "a": "cheryl-soh",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.0147,
+  "a": "nanami-fujiwara",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.01514,
+  "a": "sydney-leong",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.01571,
+  "a": "cheryl-soh",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.01582,
+  "a": "cheryl-soh",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.01713,
+  "a": "ruoruo-tang",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.01722,
+  "a": "sydney-leong",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.01734,
+  "a": "kanon-komori",
+  "b": "miu-shiraishi"
+ },
+ {
+  "d": 0.01741,
+  "a": "kanon-komori",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.0177,
+  "a": "miu-shiraishi",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.01788,
+  "a": "angeline-kwee",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.01811,
+  "a": "cheryl-soh",
+  "b": "jia-seo"
+ },
+ {
+  "d": 0.01814,
+  "a": "jia-seo",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.01827,
+  "a": "ruoruo-tang",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.01831,
+  "a": "nanami-fujiwara",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.0184,
+  "a": "ruoruo-tang",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.01848,
+  "a": "cheryl-soh",
+  "b": "miu-shiraishi"
+ },
+ {
+  "d": 0.01848,
+  "a": "rin-ayase",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.01851,
+  "a": "emma-kao",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.01863,
+  "a": "emma-kao",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.01879,
+  "a": "emma-kao",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.01886,
+  "a": "ruoruo-tang",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.01894,
+  "a": "miu-shiraishi",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.0194,
+  "a": "nanami-fujiwara",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.01948,
+  "a": "miu-shiraishi",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.01954,
+  "a": "jia-seo",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.01956,
+  "a": "jia-seo",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.01986,
+  "a": "jia-seo",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.02008,
+  "a": "peggy-lee",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.02059,
+  "a": "miu-shiraishi",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.02085,
+  "a": "rin-ayase",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.02103,
+  "a": "rin-ayase",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.02151,
+  "a": "nanami-fujiwara",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02157,
+  "a": "ruoruo-tang",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02166,
+  "a": "kanon-komori",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.02178,
+  "a": "peggy-lee",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02179,
+  "a": "emma-kao",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.02182,
+  "a": "kanon-komori",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.02194,
+  "a": "emma-kao",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.02211,
+  "a": "jia-seo",
+  "b": "kanon-komori"
+ },
+ {
+  "d": 0.02216,
+  "a": "kanon-komori",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02234,
+  "a": "rin-ayase",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02239,
+  "a": "jia-seo",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.02241,
+  "a": "ruoruo-tang",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.02266,
+  "a": "nanami-fujiwara",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.02276,
+  "a": "sydney-leong",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02284,
+  "a": "cheryl-soh",
+  "b": "emma-kao"
+ },
+ {
+  "d": 0.02292,
+  "a": "cheryl-soh",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.02299,
+  "a": "kanon-komori",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02302,
+  "a": "kanon-komori",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.02326,
+  "a": "kanon-komori",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.02336,
+  "a": "cheryl-soh",
+  "b": "kanon-komori"
+ },
+ {
+  "d": 0.02349,
+  "a": "wendy-yeo",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02361,
+  "a": "angel-chiu",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02363,
+  "a": "emma-kao",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02368,
+  "a": "cheryl-soh",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.02372,
+  "a": "cheryl-soh",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02388,
+  "a": "miu-shiraishi",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02392,
+  "a": "tammy-chou",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02395,
+  "a": "cheryl-soh",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.02399,
+  "a": "yerin-han",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.0241,
+  "a": "tammy-chou",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02413,
+  "a": "peggy-lee",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.02419,
+  "a": "cheryl-soh",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.0242,
+  "a": "wanyin-jiang",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02431,
+  "a": "wanyin-jiang",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02443,
+  "a": "angeline-kwee",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02446,
+  "a": "rin-ayase",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.0247,
+  "a": "yerin-han",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.0249,
+  "a": "somi-oh",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.02503,
+  "a": "nanami-fujiwara",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02513,
+  "a": "emma-kao",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02522,
+  "a": "angeline-kwee",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02531,
+  "a": "sydney-leong",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.0255,
+  "a": "miu-shiraishi",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02551,
+  "a": "sydney-leong",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02572,
+  "a": "miu-shiraishi",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.0258,
+  "a": "angeline-kwee",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02594,
+  "a": "cheryl-soh",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02598,
+  "a": "nanami-fujiwara",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.0265,
+  "a": "jia-seo",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.02668,
+  "a": "kanon-komori",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02673,
+  "a": "wanyin-jiang",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02678,
+  "a": "miu-shiraishi",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02684,
+  "a": "emma-kao",
+  "b": "jia-seo"
+ },
+ {
+  "d": 0.02693,
+  "a": "peggy-lee",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02712,
+  "a": "wanyin-jiang",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.02715,
+  "a": "rin-ayase",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02725,
+  "a": "emma-kao",
+  "b": "kanon-komori"
+ },
+ {
+  "d": 0.02736,
+  "a": "wendy-yeo",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.0276,
+  "a": "angeline-kwee",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.02765,
+  "a": "emma-kao",
+  "b": "miu-shiraishi"
+ },
+ {
+  "d": 0.02776,
+  "a": "somi-oh",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02783,
+  "a": "nanami-fujiwara",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02788,
+  "a": "jia-seo",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.02791,
+  "a": "somi-oh",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.02792,
+  "a": "somi-oh",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02794,
+  "a": "kanon-komori",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.028,
+  "a": "kanon-komori",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02802,
+  "a": "nanami-fujiwara",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.02806,
+  "a": "rin-ayase",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02825,
+  "a": "angeline-kwee",
+  "b": "cheryl-soh"
+ },
+ {
+  "d": 0.02848,
+  "a": "miu-shiraishi",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.02859,
+  "a": "angeline-kwee",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.02887,
+  "a": "cheryl-soh",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.02935,
+  "a": "ruoruo-tang",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.02941,
+  "a": "emma-kao",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.02943,
+  "a": "peggy-lee",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.0296,
+  "a": "rin-ayase",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.02972,
+  "a": "angeline-kwee",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.02986,
+  "a": "emma-kao",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.02994,
+  "a": "jia-seo",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.03001,
+  "a": "jia-seo",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.03057,
+  "a": "sydney-leong",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.03111,
+  "a": "peggy-lee",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.03142,
+  "a": "emma-kao",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.03151,
+  "a": "emma-kao",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.03214,
+  "a": "rin-ayase",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.03231,
+  "a": "nanami-fujiwara",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.03288,
+  "a": "nanami-fujiwara",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.0331,
+  "a": "jia-seo",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.0331,
+  "a": "emma-kao",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.03321,
+  "a": "miu-shiraishi",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.03374,
+  "a": "cheryl-soh",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.03382,
+  "a": "tammy-chou",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.03383,
+  "a": "miu-shiraishi",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.03387,
+  "a": "angeline-kwee",
+  "b": "emma-kao"
+ },
+ {
+  "d": 0.0339,
+  "a": "miu-shiraishi",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.03394,
+  "a": "jia-seo",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.034,
+  "a": "angeline-kwee",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.03427,
+  "a": "ruoruo-tang",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.03521,
+  "a": "kanon-komori",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.03522,
+  "a": "angeline-kwee",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.03536,
+  "a": "zhiyi-shen",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.03544,
+  "a": "jia-seo",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.03574,
+  "a": "angeline-kwee",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.03603,
+  "a": "angeline-kwee",
+  "b": "kanon-komori"
+ },
+ {
+  "d": 0.03629,
+  "a": "somi-oh",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.03646,
+  "a": "kanon-komori",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.03695,
+  "a": "tammy-chou",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.03715,
+  "a": "peggy-lee",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.03741,
+  "a": "angeline-kwee",
+  "b": "miu-shiraishi"
+ },
+ {
+  "d": 0.03747,
+  "a": "peggy-lee",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.03841,
+  "a": "peggy-lee",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.03908,
+  "a": "angel-chiu",
+  "b": "kanon-komori"
+ },
+ {
+  "d": 0.03935,
+  "a": "angeline-kwee",
+  "b": "jia-seo"
+ },
+ {
+  "d": 0.03954,
+  "a": "wendy-yeo",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.03962,
+  "a": "angel-chiu",
+  "b": "yerin-han"
+ },
+ {
+  "d": 0.04018,
+  "a": "somi-oh",
+  "b": "tammy-chou"
+ },
+ {
+  "d": 0.04038,
+  "a": "angel-chiu",
+  "b": "nanami-fujiwara"
+ },
+ {
+  "d": 0.04087,
+  "a": "angel-chiu",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.04089,
+  "a": "angeline-kwee",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.04105,
+  "a": "angeline-kwee",
+  "b": "somi-oh"
+ },
+ {
+  "d": 0.04262,
+  "a": "somi-oh",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.04268,
+  "a": "angel-chiu",
+  "b": "emma-kao"
+ },
+ {
+  "d": 0.04339,
+  "a": "angel-chiu",
+  "b": "sydney-leong"
+ },
+ {
+  "d": 0.0435,
+  "a": "angel-chiu",
+  "b": "miu-shiraishi"
+ },
+ {
+  "d": 0.04419,
+  "a": "angel-chiu",
+  "b": "wanyin-jiang"
+ },
+ {
+  "d": 0.04426,
+  "a": "angel-chiu",
+  "b": "rin-ayase"
+ },
+ {
+  "d": 0.04464,
+  "a": "angel-chiu",
+  "b": "jia-seo"
+ },
+ {
+  "d": 0.04704,
+  "a": "peggy-lee",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.05073,
+  "a": "tammy-chou",
+  "b": "zoey-yeh"
+ },
+ {
+  "d": 0.05109,
+  "a": "angel-chiu",
+  "b": "cheryl-soh"
+ },
+ {
+  "d": 0.05228,
+  "a": "angel-chiu",
+  "b": "ruoruo-tang"
+ },
+ {
+  "d": 0.05245,
+  "a": "angel-chiu",
+  "b": "zhiyi-shen"
+ },
+ {
+  "d": 0.05923,
+  "a": "angel-chiu",
+  "b": "wendy-yeo"
+ },
+ {
+  "d": 0.06008,
+  "a": "angel-chiu",
+  "b": "angeline-kwee"
+ },
+ {
+  "d": 0.0648,
+  "a": "angel-chiu",
+  "b": "peggy-lee"
+ },
+ {
+  "d": 0.06861,
+  "a": "angel-chiu",
+  "b": "tammy-chou"
+ }
+]
