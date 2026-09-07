@@ -363,8 +363,8 @@ footer p { margin: 0 0 8px; font-size: 13px; color: var(--ink-3); }
   font: 500 14px var(--sans); color: var(--ink-3);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.detail-hint { margin-left: auto; font-size: 12px; color: #4E5464; white-space: nowrap; }
 .detail-close {
+  margin-left: auto;   /* was pushed over by the hint that used to sit here */
   flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
   background: var(--bg-3); border: 1px solid var(--line);
   color: var(--ink-2); font-size: 14px; cursor: pointer;
@@ -481,7 +481,6 @@ footer p { margin: 0 0 8px; font-size: 13px; color: var(--ink-3); }
   .cards { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
   .detail-inner { padding: 24px 18px 70px; }
   .detail-bar-in { padding: 0 14px; min-height: 52px; }
-  .detail-hint { display: none; }
   .detail-who { font-size: 13px; }
   .lightbox { padding: 60px 10px 70px; }
   .lb-prev { left: 6px; } .lb-next { right: 6px; }
