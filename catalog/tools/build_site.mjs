@@ -19,6 +19,11 @@ const cat = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'catalog.json'), '
 //   「改寫得模糊一點再放」，`why` 留逐字原文存查。
 const pitch = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'pitch.json'), 'utf8'));
 const copy  = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'copy.json'), 'utf8'));
+// 社群連結。只有實際有帳號的那幾位會有資料;沒有的人設連整個區塊都不輸出
+//（使用者 2026-09-04：「沒有的就不用特意講出來說他的狀態是現在沒有社群在經營，
+//   直接不顯示那個欄位」）。來源與查核狀況記在 social.json 自己的 note 欄位。
+let social = { personas: {}, platform_order: [], platform_label: {} };
+try { social = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'social.json'), 'utf8')); } catch {}
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -94,6 +99,24 @@ const assetsOf = id => {
       webm: has(v.webm) ? u(v.webm) : null,
     })),
   };
+};
+
+// 平台圖示自己內嵌 SVG。不載外部圖示庫——這是純靜態站,而且多一個外部來源
+// 就多一個會壞的東西。用 currentColor 才能跟著 hover 變色。
+const ICON = {
+  instagram: '<rect x="2.5" y="2.5" width="15" height="15" rx="4.5"/><circle cx="10" cy="10" r="3.6"/><circle cx="14.6" cy="5.4" r="1.05" fill="currentColor" stroke="none"/>',
+  threads: '<path d="M10 17.4c-4.3 0-6.6-2.9-6.6-7.4S5.8 2.6 10.1 2.6c3 0 4.9 1.3 5.7 3.2M10.3 13.9c-1.5.1-2.7-.5-2.8-1.7-.1-1.4 1.4-2.1 3-2.1 2.4 0 3.6 1.2 3.6 3.1 0 2.2-1.9 2.8-1.9 2.8M10.4 10.1c2.8 0 4.4 1 4.9 3"/>',
+  tiktok: '<path d="M12.2 2.6v9.2a3.1 3.1 0 1 1-3.1-3.1c.3 0 .6 0 .8.1"/><path d="M12.2 2.6c.3 2 1.8 3.5 3.9 3.7"/>',
+  youtube: '<rect x="2" y="4.6" width="16" height="10.8" rx="3"/><path d="M8.6 7.9l4.4 2.1-4.4 2.1z" fill="currentColor" stroke="none"/>',
+  facebook: '<path d="M11.7 17.5V10.6h2.3l.4-2.7h-2.7V6.2c0-.8.2-1.3 1.3-1.3h1.4V2.6h-2.2c-2.6 0-3.6 1.4-3.6 3.5v1.8H6.2v2.7h2.4v6.9z" fill="currentColor" stroke="none"/>',
+  x: '<path d="M3 3l6.1 8.1L3.3 17M17 3l-6 6.7M8.4 10.7L17 17" />',
+};
+const socialOf = id => {
+  const links = social.personas[id];
+  if (!links) return [];
+  return (social.platform_order || Object.keys(links))
+    .filter(k => links[k])
+    .map(k => ({ key: k, label: (social.platform_label || {})[k] || k, url: links[k] }));
 };
 
 const CSS = `
@@ -198,6 +221,19 @@ ul.plain li:last-child{border-bottom:0}
 ul.plain li b{color:var(--ink);font-weight:500}
 ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-space:nowrap}
 
+
+/* 社群連結:六個平台一列,規律等寬,hover 才上金色 */
+.soc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.soc a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px 8px 11px;
+  border:1px solid var(--line);border-radius:2px;font-size:12.5px;color:var(--ink2);
+  transition:.16s;letter-spacing:.02em}
+.soc a:hover,.soc a:focus-visible{border-color:var(--accent);color:var(--accent2)}
+.soc svg{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;
+  stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.soc .lbl{font-size:10.5px;letter-spacing:.14em;color:var(--ink3);align-self:center;
+  margin-right:4px;white-space:nowrap}
+@media(max-width:520px){.soc a{padding:8px 11px}.soc a span:not(.lbl){display:none}
+  .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
@@ -563,7 +599,7 @@ ${body}
 </body></html>`;
 
 // ── 型錄牆（原本的首頁,使用者 2026-09-03 裁決搬到 /kols.html,內容不重做）──
-const people = cat.personas.map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location) }));
+const people = cat.personas.map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location), soc: socialOf(p.id) }));
 const totalImages = people.reduce((a, p) => a + p.media.image_count, 0);
 const totalVideos = people.reduce((a, p) => a + p.media.video_count, 0);
 
@@ -703,6 +739,12 @@ const personPage = p => {
       <p class="zh">${esc(p.name_zh || '')}</p>
       <p class="tl">${esc(p.tagline || '')}</p>
       <div class="facts">${facts.map(([k, v]) => `<div class="fact"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div>
+      ${p.soc.length ? `<div class="soc">
+        <span class="lbl">社群</span>
+        ${p.soc.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer nofollow"
+          aria-label="${esc(p.name)} 的 ${esc(x.label)}">
+          <svg viewBox="0 0 20 20" aria-hidden="true">${ICON[x.key] || ''}</svg><span>${esc(x.label)}</span></a>`).join('')}
+      </div>` : ''}
       ${p.archetype ? `<p class="prose">${esc(p.archetype)}</p>` : ''}
     </div>
   </div>

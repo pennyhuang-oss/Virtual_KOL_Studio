@@ -121,6 +121,19 @@ ul.plain li b{color:var(--ink);font-weight:500}
 ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-space:nowrap}
 
 
+/* 社群連結:六個平台一列,規律等寬,hover 才上金色 */
+.soc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.soc a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px 8px 11px;
+  border:1px solid var(--line);border-radius:2px;font-size:12.5px;color:var(--ink2);
+  transition:.16s;letter-spacing:.02em}
+.soc a:hover,.soc a:focus-visible{border-color:var(--accent);color:var(--accent2)}
+.soc svg{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;
+  stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.soc .lbl{font-size:10.5px;letter-spacing:.14em;color:var(--ink3);align-self:center;
+  margin-right:4px;white-space:nowrap}
+@media(max-width:520px){.soc a{padding:8px 11px}.soc a span:not(.lbl){display:none}
+  .soc svg{width:17px;height:17px}}
+
 /* 圖庫 */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
@@ -410,6 +423,7 @@ footer p{margin:0 0 7px;max-width:720px}
       <p class="zh">田中ひな</p>
       <p class="tl">住在一個很美的白日夢裡，而且願意讓你進來看看。</p>
       <div class="facts"><div class="fact"><span>年齡</span><b>20 歲</b></div><div class="fact"><span>市場</span><b>台灣</b></div><div class="fact"><span>族裔</span><b>日本</b></div><div class="fact"><span>語言</span><b>日文・中文・英文</b></div><div class="fact"><span>領域</span><b>生活風格</b></div></div>
+      
       
     </div>
   </div>

@@ -1,0 +1,70 @@
+{
+ "note": "人設頁的社群連結。逐字取自 showgame-kol/docs/社群帳號總表.md（2026-08-20 查核，來源是 Metricool 實際連線資料）。🛑 只有這 6 位有帳號；其餘 12 位不放、也不顯示任何「目前沒有社群」的字樣（使用者 2026-09-04：「沒有的就不用特意講出來說他的狀態是現在沒有社群在經營，直接不顯示那個欄位」）。⚠ 不要拿 Buildup_KOL 的 profile.json 當來源——那裡還留著設定階段沒申請到的假 handle。",
+ "verified": "2026-09-04 逐一測過：Instagram／Threads／X／TikTok／YouTube 共 30 個連結全部回 200。Facebook 那 6 個驗不了——同一個網址不同輪會回 200 或 400，真瀏覽器在這個環境也連不到 facebook.com，已交由使用者自己點過確認。",
+ "platform_order": [
+  "instagram",
+  "threads",
+  "tiktok",
+  "youtube",
+  "facebook",
+  "x"
+ ],
+ "platform_label": {
+  "instagram": "Instagram",
+  "threads": "Threads",
+  "tiktok": "TikTok",
+  "youtube": "YouTube",
+  "facebook": "Facebook",
+  "x": "X"
+ },
+ "personas": {
+  "faye-tan": {
+   "instagram": "https://www.instagram.com/cxiaofei14/",
+   "threads": "https://www.threads.com/@cxiaofei14",
+   "tiktok": "https://www.tiktok.com/@cxiaovpesw7",
+   "youtube": "https://www.youtube.com/channel/UCDo_8odcJB6SlgKFhOXH4DA",
+   "facebook": "https://www.facebook.com/1243754338819909",
+   "x": "https://x.com/Xiaofei_25"
+  },
+  "xiaoxiao-tan": {
+   "instagram": "https://www.instagram.com/xiaoxiaotan686/",
+   "threads": "https://www.threads.com/@xiaoxiaotan686",
+   "tiktok": "https://www.tiktok.com/@user8728267376293",
+   "youtube": "https://www.youtube.com/channel/UC2NGn0poEd70Ld9nxp1aGLw",
+   "facebook": "https://www.facebook.com/1241911515664774",
+   "x": "https://x.com/Xiaoxiao_Tan25"
+  },
+  "loima-cheung": {
+   "instagram": "https://www.instagram.com/zhangqinfeng61/",
+   "threads": "https://www.threads.com/@zhangqinfeng61",
+   "tiktok": "https://www.tiktok.com/@user6032042112618",
+   "youtube": "https://www.youtube.com/channel/UCJG5IoAcd7NbS4Z6lP1iENA",
+   "facebook": "https://www.facebook.com/1206566519210531",
+   "x": "https://x.com/ZhangQF96"
+  },
+  "leon-lim": {
+   "instagram": "https://www.instagram.com/linyao184/",
+   "threads": "https://www.threads.com/@linyao184",
+   "tiktok": "https://www.tiktok.com/@leon.lim563",
+   "youtube": "https://www.youtube.com/channel/UCVYpu1X_-4OPXi4FSutzOAA",
+   "facebook": "https://www.facebook.com/1190778944126654",
+   "x": "https://x.com/LeonLim24ju"
+  },
+  "rachel-ong": {
+   "instagram": "https://www.instagram.com/wangr_uiqiu/",
+   "threads": "https://www.threads.com/@wangr_uiqiu",
+   "tiktok": "https://www.tiktok.com/@otherpaden",
+   "youtube": "https://www.youtube.com/channel/UCZNdPvj9AjU-XuEtPHCKMCg",
+   "facebook": "https://www.facebook.com/1247193568477204",
+   "x": "https://x.com/RachelOngajxz"
+  },
+  "kai-luo": {
+   "instagram": "https://www.instagram.com/cathyluo1999/",
+   "threads": "https://www.threads.com/@cathyluo1999",
+   "tiktok": "https://www.tiktok.com/@lou.cathy5",
+   "youtube": "https://www.youtube.com/channel/UCfXJ7hR7rONU82ZiKnFNRcQ",
+   "facebook": "https://www.facebook.com/1338414232677801",
+   "x": "https://x.com/Cathyluo99"
+  }
+ }
+}
