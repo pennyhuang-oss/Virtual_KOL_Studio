@@ -2,7 +2,7 @@
   "id": "angeline-kwee",
   "ai_assets": {
     "training_images_v1": {
-      "status": "ready_for_training",
+      "status": "completed",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
@@ -11,14 +11,15 @@
       "collected_at": "2026-09-04",
       "note": "建模圖已準備好，待訓練。5 張皆為可直接發布的生活照／自拍，以純臉緊裁切 Reference Element 錨定臉部身分，身材與服裝完全由 prompt 文字定義。逐張的 prompt、job id 與判定見 review/soul_pilot/angeline-kwee/prompts.json，彙整見 generation_notes.md。等 19 位全部備齊後一次送 Soul 訓練。",
       "soul_training": {
-        "status": "pending",
+        "status": "ready_unvalidated",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
-        "soul_id": null,
+        "soul_id": "a1802330-65a7-43d7-89d3-84aacca67bfa",
         "training_image_count": 5,
-        "started_at": null,
-        "completed_at": null,
-        "note": "待執行——等 19 位備齊後一次送訓，每位 25 credits。"
+        "started_at": "2026-09-07T08:33Z",
+        "completed_at": "2026-09-07T08:50Z",
+        "note": "批次 1 送訓成功（5 張）。尚未跑 6 張驗證圖，故為 ready_unvalidated，未升 approved。5 張可行性與碰撞問題已由 cheryl-soh / zhiyi-shen 試點回答，見 review/soul_pilot/。",
+        "soul_name": "angeline-kwee-soul-v1-5img-20260904"
       },
       "reference_element_id": "46e27e11-d98a-41cc-9015-caaa0b5f36c4"
     }

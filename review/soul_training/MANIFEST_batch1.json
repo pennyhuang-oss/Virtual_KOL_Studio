@@ -22,6 +22,11 @@
    "sha256_server_match": 15,
    "mismatch": 0,
    "distinct_hashes": 15
+  },
+  "result": {
+   "ready": 3,
+   "failed": 0,
+   "post_reconciliation": "no charges of any kind after 08:33:38.967303Z; total for batch = 75 credits"
   }
  },
  "angel-chiu": {
@@ -66,14 +71,15 @@
   ],
   "soul_name": "angel-chiu-soul-v1-5img-20260904",
   "soul_id": "6e638286-be57-45fa-961e-51bde6cba87f",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T08:33:22.667848Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T08:33:22.667848Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T08:50Z"
  },
  "angeline-kwee": {
   "persona": "angeline-kwee",
@@ -117,14 +123,15 @@
   ],
   "soul_name": "angeline-kwee-soul-v1-5img-20260904",
   "soul_id": "a1802330-65a7-43d7-89d3-84aacca67bfa",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T08:33:29.878988Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T08:33:29.878988Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T08:50Z"
  },
  "emma-kao": {
   "persona": "emma-kao",
@@ -168,13 +175,14 @@
   ],
   "soul_name": "emma-kao-soul-v1-5img-20260904",
   "soul_id": "4374a074-fb89-45be-b80f-30cd78fea451",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T08:33:38.967303Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T08:33:38.967303Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T08:50Z"
  }
 }
