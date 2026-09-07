@@ -1,0 +1,130 @@
+{
+ "cheryl-soh": {
+  "persona": "cheryl-soh",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/cheryl-soh/images/training_v1/train_01.jpg",
+    "sha256": "e04e0db450e998d0dfadff80fff584c5c2b2bc55e88702c770bb6a198fe2da62",
+    "bytes": 569150,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 2,
+    "path": "kols/cheryl-soh/images/training_v1/train_02.jpg",
+    "sha256": "2a42f75082dca2ed0002b556a4a68571c19fab4b78e4d7442425e3516c90702e",
+    "bytes": 566051,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 3,
+    "path": "kols/cheryl-soh/images/training_v1/train_03.jpg",
+    "sha256": "64f98ccd703234dfb7714c4c29279161c8ee469acb79da3d83e174f927ee6fcf",
+    "bytes": 636225,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 4,
+    "path": "kols/cheryl-soh/images/training_v1/train_04.jpg",
+    "sha256": "ed8911c03361e0786616af270bc1474ac2f60464c88945a57f644f92a4e7b6b0",
+    "bytes": 533186,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 5,
+    "path": "kols/cheryl-soh/images/training_v1/train_05.jpg",
+    "sha256": "c4b13cb3adf31c6dc8580a29c130b2fefd23447fb87cdcdecb5169f51208ce2c",
+    "bytes": 539210,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   }
+  ],
+  "soul_name": "cheryl-soh-soul-v1-5img-20260904",
+  "soul_id": null,
+  "state": "not_submitted"
+ },
+ "zhiyi-shen": {
+  "persona": "zhiyi-shen",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/zhiyi-shen/images/training_v1/train_01.jpg",
+    "sha256": "61b001699efd82a77aa30c51e8eabdcce5f2362fd524e667c0badeecdb4a1aec",
+    "bytes": 683555,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 2,
+    "path": "kols/zhiyi-shen/images/training_v1/train_02.jpg",
+    "sha256": "406a7f65b560dad4edd185199e1c1b655dc473f4c92d02f5894c3870404ccb56",
+    "bytes": 663393,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 3,
+    "path": "kols/zhiyi-shen/images/training_v1/train_03.jpg",
+    "sha256": "d90c010c1a9cffa77f0a4f4dcd3b4d50aef79f90ea17035025c303f0377b1dde",
+    "bytes": 663191,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 4,
+    "path": "kols/zhiyi-shen/images/training_v1/train_04.jpg",
+    "sha256": "fd7cd30a5b699deb07cec0a2e78887421b1584cbc020942a812902cbe6a7e29f",
+    "bytes": 663941,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   },
+   {
+    "order": 5,
+    "path": "kols/zhiyi-shen/images/training_v1/train_05.jpg",
+    "sha256": "af799f317758aa9074a34bf79504a283f8a495aef6e4e2d9be003ada7a257a7e",
+    "bytes": 624025,
+    "size": [
+     1728,
+     2304
+    ],
+    "media_id": null
+   }
+  ],
+  "soul_name": "zhiyi-shen-soul-v1-5img-20260904",
+  "soul_id": null,
+  "state": "not_submitted"
+ }
+}
