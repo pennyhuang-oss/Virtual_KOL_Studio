@@ -29,9 +29,11 @@ const OUT = path.join(DIR, 'data', 'catalog.json');
 const argv = process.argv.slice(2);
 const argOf = (k, d) => { const i = argv.indexOf(k); return i >= 0 ? argv[i + 1] : d; };
 // 收錄門檻:一位人設至少要有這麼多張可用圖。
-// 2026-09-07 從 14 降到 7:使用者要把 19 位「已設定好、還沒建模」的人設也放進型錄,
-// 他們每人只有 7〜9 張。降到 7 之後 37 位進來、5 位仍在門檻外(素材 0〜1 張)。
-const MIN_IMAGES = Number(argOf('--min-images', 7));
+// 2026-09-07 從 14 降到 5:使用者要把 19 位「已設定好、還沒建模」的人設也放進型錄。
+// 一開始定 7,是把 identity/ 的臉部基準檔一起算進去了；那些現在被 EXCLUDE_HARD 擋掉,
+// 這 19 位真正能發的圖是每人 5〜6 張,所以門檻跟著降到 5。
+// 降到 5 之後 37 位進來、5 位仍在門檻外(素材 0〜1 張)。
+const MIN_IMAGES = Number(argOf('--min-images', 5));
 
 const inv = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'inventory.json'), 'utf8'));
 
@@ -76,6 +78,19 @@ const EXCLUDE_PATTERNS = [
   { re: /casting/i, why: '選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品' },
   { re: /candidate_\d/i, why: '選角候選圖，不是成品' },
   { re: /sheet\.|_qa_|compare_|ablation/i, why: '比對表，不是成品' },
+];
+
+// 🛑 這幾類連挑選後台都不給看,不是「預設不挑」。
+// 2026-09-07 抓到的:`kols/*/identity/` 底下是建模用的臉部基準檔
+//（`identity_master.jpg`、`element_face_tight.jpg`、`element_head_crop.jpg`,
+//  還有一個叫 `_superseded_copied_face.jpg`）。它們的尺寸跟成品一樣（1728×2304）,
+// 所以長邊防線攔不到、檔名規則也沒有一條對得上,於是**被當成一般候選圖**。
+// 結果那 19 位新人設的圖庫裡有 47 張是這種臉部基準檔（每人 2〜4 張,佔她圖庫的三分之一）,
+// 而且已經上線給客戶看了。使用者的原話是「你現在好像隨便亂放」——就是這個。
+// 為什麼是「連後台都不給看」而不是「預設不挑」：這是建模的輸入檔,不是可以發的素材,
+// 而其中一張的檔名本身就寫著 copied_face,不該出現在任何可勾選的清單裡。
+const EXCLUDE_HARD = [
+  { re: /\/identity\//, why: '建模用的臉部基準檔，不是可發布的素材' },
 ];
 
 // 🛑 機械防線：真人參考素材一律排除。
@@ -188,6 +203,8 @@ function collectMedia(id, repos) {
     const base = path.join(REPO_ROOT, REPO_OF[tag], 'kols', id);
     for (const m of walkMedia(base)) {
       const rel = m.abs.replace(REPO_ROOT + '/', '');
+      const hard = EXCLUDE_HARD.find(x => x.re.test(rel));
+      if (hard) { excluded.push({ file: rel, why: hard.why, recoverable: false }); continue; }
       const hit = EXCLUDE_PATTERNS.find(x => x.re.test(rel));
       const d = m.kind === 'image' ? imageSize(m.abs) : null;
       if (m.kind === 'image') {

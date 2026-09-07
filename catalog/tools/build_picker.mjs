@@ -82,9 +82,15 @@ for (const p of cat.personas) {
   const dir = path.join(PICK_DIR, p.id);
   fs.mkdirSync(dir, { recursive: true });
 
-  // 目前型錄實際在用的（build_assets 的預設：候選前 9）
-  const currentDefault = (sel[p.id]?.gallery) || p.media.candidates.slice(0, 9).map(c => c.rel);
-  const currentHero = sel[p.id]?.hero || currentDefault[0];
+  // 🛑 只有「人挑過的」才預先勾選。沒挑過的一張都不勾、也不預設封面。
+  // 這是 2026-09-04 Iris 那次的教訓的一般化:預設勾選會被當成使用者的選擇
+  //（她的原話「前三支我沒有要那三支影片」）。2026-09-07 又撞到同一件事:
+  // 新收錄那 19 位是程式按分數自動抓前 9 張、封面取第一張,使用者看到成品的反應是
+  //「你現在好像隨便亂放，而且封面也不是好看的封面」——那正是程式的預設值被當成挑選結果。
+  // → 所以這一頁對這 19 位是空白起跑,她勾什麼就是什麼。
+  const picked = !!sel[p.id];
+  const currentDefault = picked ? (sel[p.id].gallery || []) : [];
+  const currentHero = picked ? (sel[p.id].hero || null) : null;
 
   const items = [
     ...p.media.candidates.map(c => ({ ...c, blocked: null })),
@@ -177,7 +183,7 @@ for (const p of cat.personas) {
     });
   }
 
-  groups.push({ id: p.id, name: p.name, name_zh: p.name_zh, rows, vrows });
+  groups.push({ id: p.id, name: p.name, name_zh: p.name_zh, rows, vrows, picked });
   process.stdout.write(`  ${p.name} ${rows.length} 張圖、${vrows.length} 支影片\n`);
 }
 fs.writeFileSync(PROBE_CACHE, JSON.stringify(probe, null, 1));
@@ -190,6 +196,17 @@ a{color:#e8c85a}
   border-bottom:1px solid #2a2a32;padding:14px 22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .bar h1{font-size:16px;margin:0;font-weight:600}
 .bar .sp{margin-left:auto}
+.jump{border:1px solid #2a2a32;border-radius:6px;padding:12px 14px;margin:16px 0 0;background:#14141a}
+.jump p{margin:0}
+.jump .hint2{margin-top:8px;color:#8d8d99;font-size:13px}
+.jump a{display:inline-block;margin:3px 5px 0 0;padding:2px 8px;border:1px solid #2a2a32;
+  border-radius:3px;text-decoration:none;font-size:13px}
+.jump a:hover{border-color:#e8c85a}
+section.fresh h2{color:#e8c85a}
+h2 b.new{margin-left:10px;font-size:11px;padding:2px 8px;border-radius:3px;
+  background:#e8c85a;color:#17130a;vertical-align:middle}
+h2 .all{margin-left:12px;white-space:nowrap}
+button.sm{padding:3px 10px;font-size:12px;font-weight:500;margin-left:6px}
 button{background:#e8c85a;color:#17130a;border:0;padding:9px 18px;border-radius:4px;
   font:inherit;font-weight:600;cursor:pointer}
 button.ghost{background:transparent;color:#bbb;border:1px solid #3a3a44;font-weight:400}
@@ -273,6 +290,12 @@ const html = `<!doctype html>
 </div>
 
 <div class="wrap">
+  <div class="jump">
+    <p><b>尚未挑過的 ${groups.filter(g => !g.picked).length} 位</b>（新放上去的,現在站上顯示的是程式自動抓的,不是你挑的）：
+      ${groups.filter(g => !g.picked).map(g => `<a href="#s-${esc(g.id)}">${esc(g.name_zh || g.name)}</a>`).join('')}</p>
+    <p class="hint2">已經挑過的 ${groups.filter(g => g.picked).length} 位：
+      ${groups.filter(g => g.picked).map(g => `<a href="#s-${esc(g.id)}">${esc(g.name_zh || g.name)}</a>`).join('')}</p>
+  </div>
   <p class="hint" style="padding:16px 0 0" id="help-img">
     點縮圖＝要／不要。<b>右上角「封面」</b>點一下把那張設成這位人設的封面（每人一張）。<br>
     紅字的是程式預設沒挑的，理由寫在上面——<b>你要的話直接勾回來就好</b>。<br>
@@ -286,8 +309,10 @@ const html = `<!doctype html>
     170 支全部轉多半是白轉。
   </p>
 ${groups.map(g => `
-  <section data-p="${esc(g.id)}">
-    <h2>${esc(g.name)}<small>${esc(g.name_zh || '')} · ${g.rows.length} 張圖 · ${g.vrows.length} 支影片</small></h2>
+  <section data-p="${esc(g.id)}" id="s-${esc(g.id)}"${g.picked ? '' : ' class="fresh"'}>
+    <h2>${esc(g.name)}<small>${esc(g.name_zh || '')} · ${g.rows.length} 張圖 · ${g.vrows.length} 支影片</small>
+      ${g.picked ? '' : '<b class="new">尚未挑過</b>'}
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-${esc(g.id)}"></p>
     <div class="gvid">
 ${g.vrows.length ? g.vrows.map(v => `      <div class="vt${v.on ? ' on' : ''}" data-p="${esc(g.id)}" data-rel="${esc(v.rel)}">
@@ -415,6 +440,21 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
     vt.classList.toggle('on'); save(); counts();
   });
 
+  // 全選／全不選（只作用在目前這個分頁：圖片或影片）
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('[data-all]'); if(!b) return;
+    var on=b.dataset.all==='1', sec=b.closest('section');
+    sec.querySelectorAll(mode==='vid'?'.vt':'.it').forEach(function(el){
+      el.classList.toggle('on', on);
+      if(!on) el.classList.remove('isHero');
+    });
+    // 全選之後若還沒有封面,先把第一張當封面,免得漏掉
+    if(on && mode!=='vid' && !sec.querySelector('.it.isHero')){
+      var f=sec.querySelector('.it'); if(f) f.classList.add('isHero');
+    }
+    save(); counts();
+  });
+
   // 滑過就播那 3 秒。preload="none" 所以在滑到之前不會下載任何影片,
   // 而且一次只播一支——170 支同時播會把瀏覽器拖垮。
   var playing=null;
@@ -449,6 +489,21 @@ ${g.rows.map(r => `      <div class="it${r.on ? ' on' : ''}${r.hero ? ' isHero' 
   });
 
   document.getElementById('copy').addEventListener('click', function(){
+    // 🛑 沒勾圖的人設會從型錄上消失,沒選封面的會沒有卡片圖。送出前先講,不要事後才發現。
+    var zero=[], nohero=[];
+    document.querySelectorAll('section[data-p]').forEach(function(sec){
+      var nm=sec.querySelector('h2').firstChild.textContent.trim();
+      if(!sec.querySelectorAll('.it.on').length) zero.push(nm);
+      else if(!sec.querySelector('.it.isHero')) nohero.push(nm);
+    });
+    if(zero.length || nohero.length){
+      var L=['送出前先確認：'];
+      if(zero.length){ L.push(''); L.push('・一張圖都沒勾（這幾位會從型錄上消失）：'); L.push('  '+zero.join('、')); }
+      if(nohero.length){ L.push(''); L.push('・還沒選封面（卡片會沒有圖）：'); L.push('  '+nohero.join('、')); }
+      L.push(''); L.push('還是要複製嗎？');
+      var m=L.join(String.fromCharCode(10));
+      if(!confirm(m)) return;
+    }
     var payload={note:'KOLCAT 素材挑選結果（圖片 ＋ 影片）。貼回給 Claude，它會存成 catalog/data/selection.json 並重出型錄。',
       picked_at:new Date().toISOString().slice(0,16).replace('T',' '), personas:collect()};
     document.getElementById('out').value=JSON.stringify(payload,null,1);

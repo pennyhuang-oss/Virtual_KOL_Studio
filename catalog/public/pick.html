@@ -10,6 +10,17 @@ a{color:#e8c85a}
   border-bottom:1px solid #2a2a32;padding:14px 22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .bar h1{font-size:16px;margin:0;font-weight:600}
 .bar .sp{margin-left:auto}
+.jump{border:1px solid #2a2a32;border-radius:6px;padding:12px 14px;margin:16px 0 0;background:#14141a}
+.jump p{margin:0}
+.jump .hint2{margin-top:8px;color:#8d8d99;font-size:13px}
+.jump a{display:inline-block;margin:3px 5px 0 0;padding:2px 8px;border:1px solid #2a2a32;
+  border-radius:3px;text-decoration:none;font-size:13px}
+.jump a:hover{border-color:#e8c85a}
+section.fresh h2{color:#e8c85a}
+h2 b.new{margin-left:10px;font-size:11px;padding:2px 8px;border-radius:3px;
+  background:#e8c85a;color:#17130a;vertical-align:middle}
+h2 .all{margin-left:12px;white-space:nowrap}
+button.sm{padding:3px 10px;font-size:12px;font-weight:500;margin-left:6px}
 button{background:#e8c85a;color:#17130a;border:0;padding:9px 18px;border-radius:4px;
   font:inherit;font-weight:600;cursor:pointer}
 button.ghost{background:transparent;color:#bbb;border:1px solid #3a3a44;font-weight:400}
@@ -87,6 +98,12 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
 </div>
 
 <div class="wrap">
+  <div class="jump">
+    <p><b>尚未挑過的 19 位</b>（新放上去的,現在站上顯示的是程式自動抓的,不是你挑的）：
+      <a href="#s-kanon-komori">小森花音</a><a href="#s-wendy-yeo">楊薇伊</a><a href="#s-angeline-kwee">郭慧恩</a><a href="#s-yerin-han">한예린</a><a href="#s-wanyin-jiang">江晚吟</a><a href="#s-cheryl-soh">蘇思穎</a><a href="#s-peggy-lee">李珮甄</a><a href="#s-rin-ayase">綾瀨凜</a><a href="#s-ruoruo-tang">唐苡若</a><a href="#s-tammy-chou">周語彤</a><a href="#s-zhiyi-shen">沈知意</a><a href="#s-angel-chiu">邱安晴</a><a href="#s-emma-kao">高映真</a><a href="#s-jia-seo">서지아</a><a href="#s-miu-shiraishi">白石美羽</a><a href="#s-nanami-fujiwara">藤原七海</a><a href="#s-somi-oh">오소미</a><a href="#s-sydney-leong">梁欣妮</a><a href="#s-zoey-yeh">葉芷妍</a></p>
+    <p class="hint2">已經挑過的 18 位：
+      <a href="#s-iris-chen">陳芯語</a><a href="#s-camille-dupont">Camille Dupont</a><a href="#s-yuna-kim">김하은</a><a href="#s-rainie-hsu">許雷妮</a><a href="#s-luna-tanaka">田中ひな</a><a href="#s-coco-wu">吳可可</a><a href="#s-sophia-tseng">曾詩妃</a><a href="#s-mia-huang">黃米亞</a><a href="#s-vicky-lin">林薇淇</a><a href="#s-nico-tsai">蔡妮可</a><a href="#s-aaliya-okonkwo">Aaliya Rivera</a><a href="#s-ananya-kapoor">अनन्या कपूर</a><a href="#s-faye-tan">陳曉菲</a><a href="#s-rachel-ong">王瑞秋</a><a href="#s-kai-luo">羅凱西</a><a href="#s-loima-cheung">张秦峰</a><a href="#s-xiaoxiao-tan">陳曉曉</a><a href="#s-leon-lim">林曜</a></p>
+  </div>
   <p class="hint" style="padding:16px 0 0" id="help-img">
     點縮圖＝要／不要。<b>右上角「封面」</b>點一下把那張設成這位人設的封面（每人一張）。<br>
     紅字的是程式預設沒挑的，理由寫在上面——<b>你要的話直接勾回來就好</b>。<br>
@@ -100,8 +117,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
     170 支全部轉多半是白轉。
   </p>
 
-  <section data-p="iris-chen">
-    <h2>Iris Chen<small>陳芯語 · 41 張圖 · 17 支影片</small></h2>
+  <section data-p="iris-chen" id="s-iris-chen">
+    <h2>Iris Chen<small>陳芯語 · 41 張圖 · 17 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-iris-chen"></p>
     <div class="gvid">
       <div class="vt" data-p="iris-chen" data-rel="Virtual_KOL_Studio/kols/iris-chen/videos/cafe_test_v1/v1_seedance_8s_720p.mp4">
@@ -575,8 +594,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="camille-dupont">
-    <h2>Camille Dupont<small> · 24 張圖 · 2 支影片</small></h2>
+  <section data-p="camille-dupont" id="s-camille-dupont">
+    <h2>Camille Dupont<small> · 24 張圖 · 2 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-camille-dupont"></p>
     <div class="gvid">
       <div class="vt on" data-p="camille-dupont" data-rel="Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4">
@@ -753,8 +774,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="yuna-kim">
-    <h2>Yuna Kim<small>김하은 · 39 張圖 · 7 支影片</small></h2>
+  <section data-p="yuna-kim" id="s-yuna-kim">
+    <h2>Yuna Kim<small>김하은 · 39 張圖 · 7 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-yuna-kim"></p>
     <div class="gvid">
       <div class="vt on" data-p="yuna-kim" data-rel="Virtual_KOL_Studio/kols/yuna-kim/videos/daily_v1/yuna_daily_v1.mp4">
@@ -1086,8 +1109,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="rainie-hsu">
-    <h2>Rainie Hsu<small>許雷妮 · 52 張圖 · 4 支影片</small></h2>
+  <section data-p="rainie-hsu" id="s-rainie-hsu">
+    <h2>Rainie Hsu<small>許雷妮 · 52 張圖 · 4 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-rainie-hsu"></p>
     <div class="gvid">
       <div class="vt on" data-p="rainie-hsu" data-rel="Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4">
@@ -1458,8 +1483,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="luna-tanaka">
-    <h2>Luna Tanaka<small>田中ひな · 34 張圖 · 6 支影片</small></h2>
+  <section data-p="luna-tanaka" id="s-luna-tanaka">
+    <h2>Luna Tanaka<small>田中ひな · 34 張圖 · 6 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-luna-tanaka"></p>
     <div class="gvid">
       <div class="vt" data-p="luna-tanaka" data-rel="Virtual_KOL_Studio/kols/luna-tanaka/videos/daily_v1/luna_daily_v1.mp4">
@@ -1748,8 +1775,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="coco-wu">
-    <h2>Coco Wu<small>吳可可 · 28 張圖 · 4 支影片</small></h2>
+  <section data-p="coco-wu" id="s-coco-wu">
+    <h2>Coco Wu<small>吳可可 · 28 張圖 · 4 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-coco-wu"></p>
     <div class="gvid">
       <div class="vt on" data-p="coco-wu" data-rel="Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4">
@@ -1976,8 +2005,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="sophia-tseng">
-    <h2>Sophia Tseng<small>曾詩妃 · 37 張圖 · 3 支影片</small></h2>
+  <section data-p="sophia-tseng" id="s-sophia-tseng">
+    <h2>Sophia Tseng<small>曾詩妃 · 37 張圖 · 3 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-sophia-tseng"></p>
     <div class="gvid">
       <div class="vt on" data-p="sophia-tseng" data-rel="Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4">
@@ -2245,8 +2276,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="mia-huang">
-    <h2>Mia Huang<small>黃米亞 · 26 張圖 · 1 支影片</small></h2>
+  <section data-p="mia-huang" id="s-mia-huang">
+    <h2>Mia Huang<small>黃米亞 · 26 張圖 · 1 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-mia-huang"></p>
     <div class="gvid">
       <div class="vt on" data-p="mia-huang" data-rel="Virtual_KOL_Studio/kols/mia-huang/videos/dance_clone_r1/mia_dance_clone_r1_ig_reel.mp4">
@@ -2422,8 +2455,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="vicky-lin">
-    <h2>Vicky Lin<small>林薇淇 · 34 張圖 · 1 支影片</small></h2>
+  <section data-p="vicky-lin" id="s-vicky-lin">
+    <h2>Vicky Lin<small>林薇淇 · 34 張圖 · 1 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-vicky-lin"></p>
     <div class="gvid">
       <div class="vt on" data-p="vicky-lin" data-rel="Virtual_KOL_Studio/kols/vicky-lin/videos/dance_clone_r3/vicky_dance_clone_r3_ig_reel.mp4">
@@ -2647,8 +2682,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="nico-tsai">
-    <h2>Nico Tsai<small>蔡妮可 · 31 張圖 · 0 支影片</small></h2>
+  <section data-p="nico-tsai" id="s-nico-tsai">
+    <h2>Nico Tsai<small>蔡妮可 · 31 張圖 · 0 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-nico-tsai"></p>
     <div class="gvid">
       <p class="hint">這位人設沒有影片素材。</p>
@@ -2842,8 +2879,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="aaliya-okonkwo">
-    <h2>Aaliya Rivera<small> · 16 張圖 · 3 支影片</small></h2>
+  <section data-p="aaliya-okonkwo" id="s-aaliya-okonkwo">
+    <h2>Aaliya Rivera<small> · 16 張圖 · 3 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-aaliya-okonkwo"></p>
     <div class="gvid">
       <div class="vt on" data-p="aaliya-okonkwo" data-rel="Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/daily_v1/aaliya_daily_v1.mp4">
@@ -2985,8 +3024,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="ananya-kapoor">
-    <h2>Ananya Kapoor<small>अनन्या कपूर · 14 張圖 · 1 支影片</small></h2>
+  <section data-p="ananya-kapoor" id="s-ananya-kapoor">
+    <h2>Ananya Kapoor<small>अनन्या कपूर · 14 張圖 · 1 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-ananya-kapoor"></p>
     <div class="gvid">
       <div class="vt on" data-p="ananya-kapoor" data-rel="Virtual_KOL_Studio/kols/ananya-kapoor/videos/daily_v1/ananya_daily_v1.mp4">
@@ -3090,8 +3131,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="faye-tan">
-    <h2>Faye Tan<small>陳曉菲 · 75 張圖 · 38 支影片</small></h2>
+  <section data-p="faye-tan" id="s-faye-tan">
+    <h2>Faye Tan<small>陳曉菲 · 78 張圖 · 38 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-faye-tan"></p>
     <div class="gvid">
       <div class="vt on" data-p="faye-tan" data-rel="showgame-kol/kols/faye-tan/social media/0729/video-9.mp4">
@@ -3986,6 +4029,24 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">圖文/faye-shopwindow-reflection-gptimage.png · 880×1168</span>
       </div>
+      <div class="it" data-p="faye-tan" data-rel="showgame-kol/kols/faye-tan/social media/0901/faye-tan0901_官方海報-國際旅客重遊加碼-自由行.jpg">
+        <img src="/assets/_pick/faye-tan/1i9t4dy.jpg?v=03de688d0c" alt="social media/0901/faye-tan0901_官方海報-國際旅客重遊加碼-自由行.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0901/faye-tan0901_官方海報-國際旅客重遊加碼-自由行.jpg · 2500×2500</span>
+      </div>
+      <div class="it" data-p="faye-tan" data-rel="showgame-kol/kols/faye-tan/social media/0901/faye-tan0901_官方海報-1080.jpg">
+        <img src="/assets/_pick/faye-tan/1lrlpex.jpg?v=7b428fb112" alt="social media/0901/faye-tan0901_官方海報-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0901/faye-tan0901_官方海報-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="faye-tan" data-rel="showgame-kol/kols/faye-tan/social media/0904/faye-tan0904_山田涼介記者會鹹豆漿-1080.jpg">
+        <img src="/assets/_pick/faye-tan/04ftlxi.jpg?v=aae209645a" alt="social media/0904/faye-tan0904_山田涼介記者會鹹豆漿-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/faye-tan0904_山田涼介記者會鹹豆漿-1080.jpg · 1080×1080</span>
+      </div>
       <div class="it" data-p="faye-tan" data-rel="showgame-kol/kols/faye-tan/social media/0820/B03-首幀-採用.png">
         <img src="/assets/_pick/faye-tan/02ka8tk.jpg?v=fcfac6f00f" alt="social media/0820/B03-首幀-採用.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
@@ -4042,8 +4103,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="rachel-ong">
-    <h2>Rachel Ong<small>王瑞秋 · 49 張圖 · 0 支影片</small></h2>
+  <section data-p="rachel-ong" id="s-rachel-ong">
+    <h2>Rachel Ong<small>王瑞秋 · 49 張圖 · 0 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-rachel-ong"></p>
     <div class="gvid">
       <p class="hint">這位人設沒有影片素材。</p>
@@ -4345,8 +4408,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="kai-luo">
-    <h2>Cathy Luo<small>羅凱西 · 25 張圖 · 0 支影片</small></h2>
+  <section data-p="kai-luo" id="s-kai-luo">
+    <h2>Cathy Luo<small>羅凱西 · 35 張圖 · 0 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-kai-luo"></p>
     <div class="gvid">
       <p class="hint">這位人設沒有影片素材。</p>
@@ -4358,8 +4423,20 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/ref/cathy_01_fullbody_front.png · 1744×2336</span>
       </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/ref/cathy_01_fullbody_front.png">
+        <img src="/assets/_pick/kai-luo/1c8v9s4.jpg?v=dc95d21df3" alt="images/ref/cathy_01_fullbody_front.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/ref/cathy_01_fullbody_front.png · 1744×2336</span>
+      </div>
       <div class="it on" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/images/ref/cathy_02_kneeup_side.png">
         <img src="/assets/_pick/kai-luo/0tkgfn6.jpg?v=07d955e476" alt="images/ref/cathy_02_kneeup_side.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/ref/cathy_02_kneeup_side.png · 1744×2336</span>
+      </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/ref/cathy_02_kneeup_side.png">
+        <img src="/assets/_pick/kai-luo/1hexffi.jpg?v=07d955e476" alt="images/ref/cathy_02_kneeup_side.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/ref/cathy_02_kneeup_side.png · 1744×2336</span>
@@ -4370,8 +4447,20 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/ref/cathy_03_face_closeup.png · 1744×2336</span>
       </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/ref/cathy_03_face_closeup.png">
+        <img src="/assets/_pick/kai-luo/1li6fli.jpg?v=b360bb1fe5" alt="images/ref/cathy_03_face_closeup.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/ref/cathy_03_face_closeup.png · 1744×2336</span>
+      </div>
       <div class="it on" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-4-針葉林.png">
         <img src="/assets/_pick/kai-luo/0t910q5.jpg?v=6b71817c12" alt="images/生活照/cathy-avatar-4-針葉林.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/cathy-avatar-4-針葉林.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-4-針葉林.png">
+        <img src="/assets/_pick/kai-luo/0s5lsg1.jpg?v=6b71817c12" alt="images/生活照/cathy-avatar-4-針葉林.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/生活照/cathy-avatar-4-針葉林.png · 1728×2304</span>
@@ -4382,8 +4471,20 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/生活照/cathy-avatar-3-洞口.png · 1728×2304</span>
       </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-3-洞口.png">
+        <img src="/assets/_pick/kai-luo/0nqrh5k.jpg?v=8dc85df1f9" alt="images/生活照/cathy-avatar-3-洞口.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/cathy-avatar-3-洞口.png · 1728×2304</span>
+      </div>
       <div class="it on" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-7-背影回頭石階.png">
         <img src="/assets/_pick/kai-luo/0z8m2qm.jpg?v=3c8f5b47d0" alt="images/生活照/cathy-avatar-7-背影回頭石階.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/cathy-avatar-7-背影回頭石階.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-7-背影回頭石階.png">
+        <img src="/assets/_pick/kai-luo/0t16kc2.jpg?v=3c8f5b47d0" alt="images/生活照/cathy-avatar-7-背影回頭石階.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/生活照/cathy-avatar-7-背影回頭石階.png · 1728×2304</span>
@@ -4394,8 +4495,20 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/生活照/cathy-avatar-5-海邊礁岩.png · 1728×2304</span>
       </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-5-海邊礁岩.png">
+        <img src="/assets/_pick/kai-luo/0un5y9i.jpg?v=12f0753093" alt="images/生活照/cathy-avatar-5-海邊礁岩.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/cathy-avatar-5-海邊礁岩.png · 1728×2304</span>
+      </div>
       <div class="it on" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-6-純側臉湖岸.png">
         <img src="/assets/_pick/kai-luo/0e4fn4b.jpg?v=d8a688ce4f" alt="images/生活照/cathy-avatar-6-純側臉湖岸.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/cathy-avatar-6-純側臉湖岸.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kai-luo" data-rel="Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-6-純側臉湖岸.png">
+        <img src="/assets/_pick/kai-luo/0e46c6f.jpg?v=d8a688ce4f" alt="images/生活照/cathy-avatar-6-純側臉湖岸.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/生活照/cathy-avatar-6-純側臉湖岸.png · 1728×2304</span>
@@ -4417,6 +4530,18 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">圖文/2026-08-21/懸賞令-採用-tiktok810x1080.jpg · 810×1080</span>
+      </div>
+      <div class="it" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/social media/0904/kai-luo0904_台鋼獵鷹官方歡迎圖-高國豪-1080.jpg">
+        <img src="/assets/_pick/kai-luo/0vkxr42.jpg?v=fbcd2d62de" alt="social media/0904/kai-luo0904_台鋼獵鷹官方歡迎圖-高國豪-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/kai-luo0904_台鋼獵鷹官方歡迎圖-高國豪-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/social media/0902/kai-luo0902_颱風路徑圖-1080.jpg">
+        <img src="/assets/_pick/kai-luo/17sycan.jpg?v=9c3e498c1e" alt="social media/0902/kai-luo0902_颱風路徑圖-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/kai-luo0902_颱風路徑圖-1080.jpg · 1080×1080</span>
       </div>
       <div class="it" data-p="kai-luo" data-rel="showgame-kol/kols/kai-luo/social media/0820/鏡頭3-首幀.png">
         <img src="/assets/_pick/kai-luo/1gkoa87.jpg?v=cae77409cb" alt="social media/0820/鏡頭3-首幀.png" loading="lazy" width="320" height="427">
@@ -4504,8 +4629,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="loima-cheung">
-    <h2>Zhang Qinfeng<small>张秦峰 · 64 張圖 · 57 支影片</small></h2>
+  <section data-p="loima-cheung" id="s-loima-cheung">
+    <h2>Zhang Qinfeng<small>张秦峰 · 85 張圖 · 57 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-loima-cheung"></p>
     <div class="gvid">
       <div class="vt on" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0729/video-12.mp4">
@@ -5533,6 +5660,126 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">圖文/qinfeng-cardpack-object-a.png · 880×1168</span>
       </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展2-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/0wefg8m.jpg?v=84a747f5f1" alt="social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展2-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展2-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer-DualPlayMini官方圖-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/09gtwze.jpg?v=f720dcb0b5" alt="social media/0904/loima-cheung0904_Acer-DualPlayMini官方圖-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_Acer-DualPlayMini官方圖-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖02-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1jvr78t.jpg?v=134f847c2a" alt="social media/0904/loima-cheung0904_Acer官方產品圖02-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_Acer官方產品圖02-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_GTA6官方主視覺-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1nlzh6k.jpg?v=dc96ddbaf9" alt="social media/0902/loima-cheung0902_GTA6官方主視覺-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/loima-cheung0902_GTA6官方主視覺-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_GTA6官方實機-城市-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/15cehir.jpg?v=1ade5f3a2d" alt="social media/0902/loima-cheung0902_GTA6官方實機-城市-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/loima-cheung0902_GTA6官方實機-城市-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展1-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/0s3nmhh.jpg?v=58a2182d98" alt="social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展1-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展1-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-近期活動照B-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/18ahuaf.jpg?v=f92e06e6ce" alt="social media/0904/loima-cheung0904_蘆田愛菜-近期活動照B-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_蘆田愛菜-近期活動照B-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖03-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/16ga1os.jpg?v=f8ab7b1d99" alt="social media/0904/loima-cheung0904_Acer官方產品圖03-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_Acer官方產品圖03-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_藥師少女真人版官方視覺-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/021nev6.jpg?v=488edd5e8e" alt="social media/0904/loima-cheung0904_藥師少女真人版官方視覺-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_藥師少女真人版官方視覺-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-2020國勢調查宣傳照-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/0n1k986.jpg?v=5452e0dd45" alt="social media/0904/loima-cheung0904_蘆田愛菜-2020國勢調查宣傳照-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_蘆田愛菜-2020國勢調查宣傳照-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖01-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/147pl5a.jpg?v=1a1ac3c692" alt="social media/0904/loima-cheung0904_Acer官方產品圖01-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_Acer官方產品圖01-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_GTA6官方實機-警察-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1k4hg6e.jpg?v=514f1ee01a" alt="social media/0902/loima-cheung0902_GTA6官方實機-警察-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/loima-cheung0902_GTA6官方實機-警察-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-近期活動照A-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1h2kdx0.jpg?v=55c6f44a27" alt="social media/0904/loima-cheung0904_蘆田愛菜-近期活動照A-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_蘆田愛菜-近期活動照A-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_銀魂神樂劇照-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/021wy40.jpg?v=261ddcc312" alt="social media/0904/loima-cheung0904_銀魂神樂劇照-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_銀魂神樂劇照-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0903/loima-cheung0903_DLSS5開啟-NBA2K27-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/18ldaxn.jpg?v=78584f942c" alt="social media/0903/loima-cheung0903_DLSS5開啟-NBA2K27-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0903/loima-cheung0903_DLSS5開啟-NBA2K27-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0903/loima-cheung0903_DLSS5關閉-NBA2K27-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/0yjir6i.jpg?v=2e9fbdd288" alt="social media/0903/loima-cheung0903_DLSS5關閉-NBA2K27-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0903/loima-cheung0903_DLSS5關閉-NBA2K27-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_LINE貼圖-看電影不關靜音-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1egudh4.jpg?v=344b143a7d" alt="social media/0902/loima-cheung0902_LINE貼圖-看電影不關靜音-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/loima-cheung0902_LINE貼圖-看電影不關靜音-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_MuskGTA5貼文-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1l24ez6.jpg?v=8fddaefcd8" alt="social media/0902/loima-cheung0902_MuskGTA5貼文-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/loima-cheung0902_MuskGTA5貼文-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0901/loima-cheung0901_官方Switch2產品圖-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/0eqk6ze.jpg?v=2606b1e35e" alt="social media/0901/loima-cheung0901_官方Switch2產品圖-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0901/loima-cheung0901_官方Switch2產品圖-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_銀魂神樂挖鼻孔-1080.jpg">
+        <img src="/assets/_pick/loima-cheung/1n697u1.jpg?v=412ca58215" alt="social media/0904/loima-cheung0904_銀魂神樂挖鼻孔-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0904/loima-cheung0904_銀魂神樂挖鼻孔-1080.jpg · 1080×1080</span>
+      </div>
       <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0814/refB-ui-287days-v2.png">
         <img src="/assets/_pick/loima-cheung/028t4a9.jpg?v=f743e32215" alt="social media/0814/refB-ui-287days-v2.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
@@ -5580,6 +5827,12 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">social media/0729/ChatGPT Image 2026年7月29日 下午03_06_09.png · 1448×1086</span>
+      </div>
+      <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0902/官方原圖_rockstar_GTAVI_2560x1440.jpg">
+        <img src="/assets/_pick/loima-cheung/09x4rno.jpg?v=56af0847be" alt="social media/0902/官方原圖_rockstar_GTAVI_2560x1440.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/官方原圖_rockstar_GTAVI_2560x1440.jpg · 2560×1440</span>
       </div>
       <div class="it" data-p="loima-cheung" data-rel="showgame-kol/kols/loima-cheung/social media/0814/probe-2p5-4s.mp4">
         <img src="/assets/_pick/loima-cheung/08198y7.jpg?v=9d1f6f6353" alt="social media/0814/probe-2p5-4s.mp4" loading="lazy" width="320" height="427">
@@ -5637,8 +5890,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="xiaoxiao-tan">
-    <h2>Tan XiaoXiao<small>陳曉曉 · 38 張圖 · 24 支影片</small></h2>
+  <section data-p="xiaoxiao-tan" id="s-xiaoxiao-tan">
+    <h2>Tan XiaoXiao<small>陳曉曉 · 41 張圖 · 24 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-xiaoxiao-tan"></p>
     <div class="gvid">
       <div class="vt on" data-p="xiaoxiao-tan" data-rel="showgame-kol/kols/xiaoxiao-tan/social media/0729/b5e1777d9744f611a9d609901a2165a5-01ee193c-9f74-4aa4-aec1-8ce0b28f2cf1.mp4">
@@ -6117,6 +6372,24 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">social media/0812/ref1-machine-wide-establishing.png · 1520×2688</span>
       </div>
+      <div class="it" data-p="xiaoxiao-tan" data-rel="showgame-kol/kols/xiaoxiao-tan/social media/0902/xiaoxiao-tan0902_皮克敏步數里程-1080.jpg">
+        <img src="/assets/_pick/xiaoxiao-tan/1p0saji.jpg?v=9b84ce47e1" alt="social media/0902/xiaoxiao-tan0902_皮克敏步數里程-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/xiaoxiao-tan0902_皮克敏步數里程-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="xiaoxiao-tan" data-rel="showgame-kol/kols/xiaoxiao-tan/social media/0902/xiaoxiao-tan0902_揮汗有禮官方主標-1080.jpg">
+        <img src="/assets/_pick/xiaoxiao-tan/0lhgz8z.jpg?v=29a58e0522" alt="social media/0902/xiaoxiao-tan0902_揮汗有禮官方主標-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0902/xiaoxiao-tan0902_揮汗有禮官方主標-1080.jpg · 1080×1080</span>
+      </div>
+      <div class="it" data-p="xiaoxiao-tan" data-rel="showgame-kol/kols/xiaoxiao-tan/social media/0901/xiaoxiao-tan0901_少林足球梗圖-1080.jpg">
+        <img src="/assets/_pick/xiaoxiao-tan/1cjj909.jpg?v=203087971d" alt="social media/0901/xiaoxiao-tan0901_少林足球梗圖-1080.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">social media/0901/xiaoxiao-tan0901_少林足球梗圖-1080.jpg · 1080×1080</span>
+      </div>
       <div class="it" data-p="xiaoxiao-tan" data-rel="showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-04/xiaoxiao-chess-tv-pov-v3.png">
         <img src="/assets/_pick/xiaoxiao-tan/0ubo7qb.jpg?v=31be944af9" alt="圖文/2026-08-04/xiaoxiao-chess-tv-pov-v3.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
@@ -6185,8 +6458,10 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
       </div>
     </div>
   </section>
-  <section data-p="leon-lim">
-    <h2>林曜 / Leon Lim<small> · 45 張圖 · 9 支影片</small></h2>
+  <section data-p="leon-lim" id="s-leon-lim">
+    <h2>Leon Lim<small>林曜 · 53 張圖 · 9 支影片</small>
+      
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
     <p class="cnt" id="c-leon-lim"></p>
     <div class="gvid">
       <div class="vt" data-p="leon-lim" data-rel="showgame-kol/kols/leon-lim/social media/0814/leon-troy-seg1-1a-full.mp4">
@@ -6314,14 +6589,32 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/ref/leon_01_fullbody_front.png · 896×1200</span>
       </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/ref/leon_01_fullbody_front.png">
+        <img src="/assets/_pick/leon-lim/04twmfy.jpg?v=0fd4a4be4f" alt="images/ref/leon_01_fullbody_front.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/ref/leon_01_fullbody_front.png · 896×1200</span>
+      </div>
       <div class="it on" data-p="leon-lim" data-rel="showgame-kol/kols/leon-lim/images/ref/leon_03_face_closeup.png">
         <img src="/assets/_pick/leon-lim/0mi3juo.jpg?v=4eec23879d" alt="images/ref/leon_03_face_closeup.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/ref/leon_03_face_closeup.png · 896×1200</span>
       </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/ref/leon_03_face_closeup.png">
+        <img src="/assets/_pick/leon-lim/00dz99o.jpg?v=4eec23879d" alt="images/ref/leon_03_face_closeup.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/ref/leon_03_face_closeup.png · 896×1200</span>
+      </div>
       <div class="it on isHero" data-p="leon-lim" data-rel="showgame-kol/kols/leon-lim/images/ref/leon_02_kneeup_side.png">
         <img src="/assets/_pick/leon-lim/01nmfxk.jpg?v=29aad2c41d" alt="images/ref/leon_02_kneeup_side.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/ref/leon_02_kneeup_side.png · 896×1200</span>
+      </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/ref/leon_02_kneeup_side.png">
+        <img src="/assets/_pick/leon-lim/1kjh078.jpg?v=29aad2c41d" alt="images/ref/leon_02_kneeup_side.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/ref/leon_02_kneeup_side.png · 896×1200</span>
@@ -6338,8 +6631,20 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/生活照/leon-古蹟-2-石階.png · 896×1200</span>
       </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/生活照/leon-古蹟-2-石階.png">
+        <img src="/assets/_pick/leon-lim/1st4tzd.jpg?v=a420f76a52" alt="images/生活照/leon-古蹟-2-石階.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/leon-古蹟-2-石階.png · 896×1200</span>
+      </div>
       <div class="it on" data-p="leon-lim" data-rel="showgame-kol/kols/leon-lim/images/生活照/leon-古蹟-1-石柱廊道.png">
         <img src="/assets/_pick/leon-lim/03zv7s0.jpg?v=36b63071f7" alt="images/生活照/leon-古蹟-1-石柱廊道.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/leon-古蹟-1-石柱廊道.png · 896×1200</span>
+      </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/生活照/leon-古蹟-1-石柱廊道.png">
+        <img src="/assets/_pick/leon-lim/1uacz0s.jpg?v=36b63071f7" alt="images/生活照/leon-古蹟-1-石柱廊道.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/生活照/leon-古蹟-1-石柱廊道.png · 896×1200</span>
@@ -6506,14 +6811,32 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         
         <span class="n">images/生活照/leon-avatar-1-舊書店.png · 1024×1024</span>
       </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/生活照/leon-avatar-1-舊書店.png">
+        <img src="/assets/_pick/leon-lim/03x8w48.jpg?v=a7042ef8d1" alt="images/生活照/leon-avatar-1-舊書店.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/leon-avatar-1-舊書店.png · 1024×1024</span>
+      </div>
       <div class="it on" data-p="leon-lim" data-rel="showgame-kol/kols/leon-lim/images/生活照/leon-avatar-2-檯燈下.png">
         <img src="/assets/_pick/leon-lim/0a89jni.jpg?v=885ddadfce" alt="images/生活照/leon-avatar-2-檯燈下.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/生活照/leon-avatar-2-檯燈下.png · 1024×1024</span>
       </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/生活照/leon-avatar-2-檯燈下.png">
+        <img src="/assets/_pick/leon-lim/1b8mno2.jpg?v=885ddadfce" alt="images/生活照/leon-avatar-2-檯燈下.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/leon-avatar-2-檯燈下.png · 1024×1024</span>
+      </div>
       <div class="it on" data-p="leon-lim" data-rel="showgame-kol/kols/leon-lim/images/生活照/leon-avatar-3-黃昏街上.png">
         <img src="/assets/_pick/leon-lim/1gwtkua.jpg?v=5b1150c980" alt="images/生活照/leon-avatar-3-黃昏街上.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/生活照/leon-avatar-3-黃昏街上.png · 1024×1024</span>
+      </div>
+      <div class="it" data-p="leon-lim" data-rel="Buildup_KOL/kols/leon-lim/images/生活照/leon-avatar-3-黃昏街上.png">
+        <img src="/assets/_pick/leon-lim/1omre7i.jpg?v=5b1150c980" alt="images/生活照/leon-avatar-3-黃昏街上.png" loading="lazy" width="320" height="427">
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">images/生活照/leon-avatar-3-黃昏街上.png · 1024×1024</span>
@@ -6577,6 +6900,1007 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
         <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
         
         <span class="n">social media/0814/leon-troy-2b-ruins-wide-keyframe.png · 752×1344</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="kanon-komori" id="s-kanon-komori" class="fresh">
+    <h2>Kanon Komori<small>小森花音 · 11 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-kanon-komori"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/kanon-komori/1ma6uak.jpg?v=443c4169e0" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_06.jpg">
+        <img src="/assets/_pick/kanon-komori/1m6vba3.jpg?v=9323fec8d4" alt="images/training_v1/train_06.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_06.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/kanon-komori/1m7jbvc.jpg?v=b5ecaa05ab" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/kanon-komori/1m8uwgu.jpg?v=93af95bcc7" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/kanon-komori/1m8793t.jpg?v=daf05e2edb" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/kanon-komori/1m9itpb.jpg?v=9372c53a55" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a01.png">
+        <img src="/assets/_pick/kanon-komori/09whdab.jpg?v=0dfc91b204" alt="images/casting_v1/a01.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a01.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a02.png">
+        <img src="/assets/_pick/kanon-komori/09x543k.jpg?v=74f5fa28ac" alt="images/casting_v1/a02.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a02.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a03.png">
+        <img src="/assets/_pick/kanon-komori/09xt1c1.jpg?v=7567d58f3c" alt="images/casting_v1/a03.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a03.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a04.png">
+        <img src="/assets/_pick/kanon-komori/09t5xfq.jpg?v=128e99ad68" alt="images/casting_v1/a04.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a04.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="kanon-komori" data-rel="Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a04_v1_body_fail.png">
+        <img src="/assets/_pick/kanon-komori/0w5gl9o.jpg?v=726d343830" alt="images/casting_v1/a04_v1_body_fail.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">檔名標示為失敗版</span>
+        <span class="n">images/casting_v1/a04_v1_body_fail.png · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="wendy-yeo" id="s-wendy-yeo" class="fresh">
+    <h2>Wendy Yeo<small>楊薇伊 · 26 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-wendy-yeo"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/wendy-yeo/1bpoq36.jpg?v=0909792e0e" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/wendy-yeo/1bubx1x.jpg?v=04545688c5" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/wendy-yeo/1bqcnbn.jpg?v=696351e6c5" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/wendy-yeo/1bsc8ie.jpg?v=ccfda4a1bc" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/wendy-yeo/1btnztg.jpg?v=c124a1772b" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p01.png">
+        <img src="/assets/_pick/wendy-yeo/0gxk64h.jpg?v=e25bc54ef1" alt="images/a0_probe/p01.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe/p01.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p02.png">
+        <img src="/assets/_pick/wendy-yeo/0gvkkua.jpg?v=8da78a6c46" alt="images/a0_probe/p02.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe/p02.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p03.png">
+        <img src="/assets/_pick/wendy-yeo/0gw8i2r.jpg?v=85b6e1a50e" alt="images/a0_probe/p03.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe/p03.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p04.png">
+        <img src="/assets/_pick/wendy-yeo/0gu8q9w.jpg?v=60b10df5cc" alt="images/a0_probe/p04.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe/p04.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q01.png">
+        <img src="/assets/_pick/wendy-yeo/1hz5fkh.jpg?v=6c17fa911f" alt="images/a0_probe_crop/q01.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe_crop/q01.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q02.png">
+        <img src="/assets/_pick/wendy-yeo/1hx5uaa.jpg?v=d2233b8313" alt="images/a0_probe_crop/q02.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe_crop/q02.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q03.png">
+        <img src="/assets/_pick/wendy-yeo/1hxtrir.jpg?v=f3a79dd049" alt="images/a0_probe_crop/q03.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe_crop/q03.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q04.png">
+        <img src="/assets/_pick/wendy-yeo/1hvtzpw.jpg?v=771c888842" alt="images/a0_probe_crop/q04.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">探測測試，不是成品</span>
+        <span class="n">images/a0_probe_crop/q04.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C1.png">
+        <img src="/assets/_pick/wendy-yeo/08b7to4.jpg?v=29648190c7" alt="images/ablation/C1.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/C1.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C2.png">
+        <img src="/assets/_pick/wendy-yeo/087tb07.jpg?v=8291ee9ca4" alt="images/ablation/C2.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/C2.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C3.png">
+        <img src="/assets/_pick/wendy-yeo/089w5me.jpg?v=6f4db45537" alt="images/ablation/C3.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/C3.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C4.png">
+        <img src="/assets/_pick/wendy-yeo/08bso6p.jpg?v=de89f015c5" alt="images/ablation/C4.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/C4.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D1.png">
+        <img src="/assets/_pick/wendy-yeo/08yh4sz.jpg?v=b750b0c199" alt="images/ablation/D1.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/D1.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D2.png">
+        <img src="/assets/_pick/wendy-yeo/08z4vm8.jpg?v=3b5684ba4f" alt="images/ablation/D2.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/D2.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D3.png">
+        <img src="/assets/_pick/wendy-yeo/08zssup.jpg?v=b530e1ba34" alt="images/ablation/D3.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/D3.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D4.png">
+        <img src="/assets/_pick/wendy-yeo/08v5oye.jpg?v=3e1b31430b" alt="images/ablation/D4.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">比對表，不是成品</span>
+        <span class="n">images/ablation/D4.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a01.png">
+        <img src="/assets/_pick/wendy-yeo/0tkkqtl.jpg?v=3b485951e0" alt="images/casting_v1/a01.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a01.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a02.png">
+        <img src="/assets/_pick/wendy-yeo/0tikz0q.jpg?v=73a0d6c0cf" alt="images/casting_v1/a02.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a02.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a03.png">
+        <img src="/assets/_pick/wendy-yeo/0tj8w97.jpg?v=c1e9ed8dba" alt="images/casting_v1/a03.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a03.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a04.png">
+        <img src="/assets/_pick/wendy-yeo/0th9az0.jpg?v=7bd1d9322a" alt="images/casting_v1/a04.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a04.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wendy-yeo" data-rel="Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a04_v1_body_fail.png">
+        <img src="/assets/_pick/wendy-yeo/0y60k9y.jpg?v=ebf8154c1e" alt="images/casting_v1/a04_v1_body_fail.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">檔名標示為失敗版</span>
+        <span class="n">images/casting_v1/a04_v1_body_fail.png · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="angeline-kwee" id="s-angeline-kwee" class="fresh">
+    <h2>Angeline Kwee<small>郭慧恩 · 10 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-angeline-kwee"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/angeline-kwee/09uerh4.jpg?v=f8fc47b56d" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/angeline-kwee/09tqxej.jpg?v=daba7268e4" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/angeline-kwee/09weftr.jpg?v=96496db124" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/angeline-kwee/09vqila.jpg?v=822060ef1d" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/angeline-kwee/09v2opl.jpg?v=b8328877d1" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a01.png">
+        <img src="/assets/_pick/angeline-kwee/12akipw.jpg?v=7044b9ebf3" alt="images/casting_v1/a01.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a01.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a02.png">
+        <img src="/assets/_pick/angeline-kwee/129wldz.jpg?v=0e29f4f99d" alt="images/casting_v1/a02.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a02.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a03.png">
+        <img src="/assets/_pick/angeline-kwee/1298o5i.jpg?v=5967af4011" alt="images/casting_v1/a03.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a03.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a04.png">
+        <img src="/assets/_pick/angeline-kwee/12dvykh.jpg?v=7706daf5ee" alt="images/casting_v1/a04.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a04.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angeline-kwee" data-rel="Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a04_v1_body_fail.png">
+        <img src="/assets/_pick/angeline-kwee/1ri07rf.jpg?v=8a099ed1a7" alt="images/casting_v1/a04_v1_body_fail.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">檔名標示為失敗版</span>
+        <span class="n">images/casting_v1/a04_v1_body_fail.png · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="yerin-han" id="s-yerin-han" class="fresh">
+    <h2>Yerin Han<small>한예린 · 10 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-yerin-han"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/yerin-han/12kwani.jpg?v=6cd7d8705b" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/yerin-han/12i8s8a.jpg?v=fcf078b683" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/yerin-han/12itg1b.jpg?v=5f89571c90" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/yerin-han/12hhvft.jpg?v=ec88afb044" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/yerin-han/12jkjjc.jpg?v=7460d30b9f" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a01.png">
+        <img src="/assets/_pick/yerin-han/1k49m9h.jpg?v=9d8c2c23d3" alt="images/casting_v1/a01.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a01.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a02.png">
+        <img src="/assets/_pick/yerin-han/1k50mba.jpg?v=dd84549a2a" alt="images/casting_v1/a02.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a02.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a03.png">
+        <img src="/assets/_pick/yerin-han/1k2xrp3.jpg?v=f2fbdd8238" alt="images/casting_v1/a03.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a03.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a04.png">
+        <img src="/assets/_pick/yerin-han/1k8zsz4.jpg?v=fa3fd84eeb" alt="images/casting_v1/a04.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品</span>
+        <span class="n">images/casting_v1/a04.png · 1728×2304</span>
+      </div>
+      <div class="it" data-p="yerin-han" data-rel="Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a04_v1_body_fail.png">
+        <img src="/assets/_pick/yerin-han/180dsnu.jpg?v=3238028bc7" alt="images/casting_v1/a04_v1_body_fail.png" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        <span class="warn">檔名標示為失敗版</span>
+        <span class="n">images/casting_v1/a04_v1_body_fail.png · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="wanyin-jiang" id="s-wanyin-jiang" class="fresh">
+    <h2>Wanyin Jiang<small>江晚吟 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-wanyin-jiang"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="wanyin-jiang" data-rel="Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/wanyin-jiang/1im4vcc.jpg?v=ab7b29fb79" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wanyin-jiang" data-rel="Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/wanyin-jiang/1iheiax.jpg?v=475b4b6cb0" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wanyin-jiang" data-rel="Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/wanyin-jiang/1ii5f3e.jpg?v=b225574c17" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wanyin-jiang" data-rel="Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/wanyin-jiang/1ik20q5.jpg?v=ce933176f4" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="wanyin-jiang" data-rel="Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/wanyin-jiang/1ig2qzv.jpg?v=c114948668" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="cheryl-soh" id="s-cheryl-soh" class="fresh">
+    <h2>Cheryl Soh<small>蘇思穎 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-cheryl-soh"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="cheryl-soh" data-rel="Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/cheryl-soh/16k5c2j.jpg?v=3dd24cb33b" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="cheryl-soh" data-rel="Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/cheryl-soh/16lh9w9.jpg?v=90a7d78a49" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="cheryl-soh" data-rel="Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/cheryl-soh/16jheu2.jpg?v=4f7201586e" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="cheryl-soh" data-rel="Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/cheryl-soh/16o4sbh.jpg?v=7ba1345c7a" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="cheryl-soh" data-rel="Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/cheryl-soh/16ngv30.jpg?v=c16defc94d" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="peggy-lee" id="s-peggy-lee" class="fresh">
+    <h2>Peggy Lee<small>李珮甄 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-peggy-lee"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="peggy-lee" data-rel="Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/peggy-lee/03dohnq.jpg?v=6cdfe2d9f6" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="peggy-lee" data-rel="Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/peggy-lee/03bln1j.jpg?v=c00544a58a" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="peggy-lee" data-rel="Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/peggy-lee/03f08ys.jpg?v=2b3262873a" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="peggy-lee" data-rel="Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/peggy-lee/03ccqjk.jpg?v=05a11a51e0" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="peggy-lee" data-rel="Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/peggy-lee/03aa2g1.jpg?v=c9cf766720" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="rin-ayase" id="s-rin-ayase" class="fresh">
+    <h2>Rin Ayase<small>綾瀨凜 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-rin-ayase"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="rin-ayase" data-rel="Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/rin-ayase/1bwpt6k.jpg?v=dc7c9f8146" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="rin-ayase" data-rel="Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/rin-ayase/1bqnou3.jpg?v=1a54091a97" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="rin-ayase" data-rel="Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/rin-ayase/1bsqjga.jpg?v=baa97f2195" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="rin-ayase" data-rel="Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/rin-ayase/1bve1vi.jpg?v=4f423b746f" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="rin-ayase" data-rel="Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/rin-ayase/1bun531.jpg?v=56b7b830c1" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="ruoruo-tang" id="s-ruoruo-tang" class="fresh">
+    <h2>Ruoruo Tang<small>唐苡若 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-ruoruo-tang"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="ruoruo-tang" data-rel="Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/ruoruo-tang/1h024ak.jpg?v=d3fa7e777f" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="ruoruo-tang" data-rel="Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/ruoruo-tang/1gxz9od.jpg?v=5312e21737" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="ruoruo-tang" data-rel="Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/ruoruo-tang/1gtzzy3.jpg?v=975a410181" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="ruoruo-tang" data-rel="Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/ruoruo-tang/1gw2o1m.jpg?v=b24b2ea8eb" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="ruoruo-tang" data-rel="Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/ruoruo-tang/1gxelvc.jpg?v=a534b24580" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="tammy-chou" id="s-tammy-chou" class="fresh">
+    <h2>Tammy Chou<small>周語彤 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-tammy-chou"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="tammy-chou" data-rel="Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/tammy-chou/0cm9pvf.jpg?v=4d8bca99ce" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="tammy-chou" data-rel="Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/tammy-chou/0cocdyy.jpg?v=8181c80bf8" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="tammy-chou" data-rel="Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/tammy-chou/0cnlh6h.jpg?v=1dad9678ec" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="tammy-chou" data-rel="Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/tammy-chou/0cq8zlp.jpg?v=94d1b8ef1d" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="tammy-chou" data-rel="Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/tammy-chou/0csbu7w.jpg?v=f4731a3c71" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="zhiyi-shen" id="s-zhiyi-shen" class="fresh">
+    <h2>Zhiyi Shen<small>沈知意 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-zhiyi-shen"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="zhiyi-shen" data-rel="Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/zhiyi-shen/1ifofun.jpg?v=544eb4beaa" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zhiyi-shen" data-rel="Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/zhiyi-shen/1if3liy.jpg?v=f6bf95fef2" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zhiyi-shen" data-rel="Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/zhiyi-shen/1ij31rw.jpg?v=412f1c73a9" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zhiyi-shen" data-rel="Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/zhiyi-shen/1ih075p.jpg?v=7fd3c93557" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zhiyi-shen" data-rel="Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/zhiyi-shen/1id0xff.jpg?v=0488fa39c7" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="angel-chiu" id="s-angel-chiu" class="fresh">
+    <h2>Angel Chiu<small>邱安晴 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-angel-chiu"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="angel-chiu" data-rel="Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/angel-chiu/1bj8c3a.jpg?v=e3bbb75400" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angel-chiu" data-rel="Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/angel-chiu/1bh5nzr.jpg?v=a89a5eb958" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angel-chiu" data-rel="Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/angel-chiu/1bhwrhs.jpg?v=5573bcdb7d" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angel-chiu" data-rel="Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/angel-chiu/1bgkto2.jpg?v=258b5565f7" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="angel-chiu" data-rel="Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/angel-chiu/1bftwvl.jpg?v=0129f81c38" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="emma-kao" id="s-emma-kao" class="fresh">
+    <h2>Emma Kao<small>高映真 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-emma-kao"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="emma-kao" data-rel="Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/emma-kao/0h5m5bb.jpg?v=046638c8d1" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="emma-kao" data-rel="Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/emma-kao/0h4akpt.jpg?v=07d6e7639b" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="emma-kao" data-rel="Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/emma-kao/0h6d8tc.jpg?v=a3c0e6c34f" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="emma-kao" data-rel="Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/emma-kao/0h6y351.jpg?v=7fdb29ad99" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="emma-kao" data-rel="Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/emma-kao/0h7ozxi.jpg?v=8487ad416e" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="jia-seo" id="s-jia-seo" class="fresh">
+    <h2>Jia Seo<small>서지아 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-jia-seo"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="jia-seo" data-rel="Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/jia-seo/1ddwxen.jpg?v=4fb4a74b10" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="jia-seo" data-rel="Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/jia-seo/1db9ezf.jpg?v=16d020ada9" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="jia-seo" data-rel="Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/jia-seo/1dalhqy.jpg?v=8f921e4dba" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="jia-seo" data-rel="Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/jia-seo/1df8opp.jpg?v=f8b0d292aa" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="jia-seo" data-rel="Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/jia-seo/1dekrh8.jpg?v=729c280ac5" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="miu-shiraishi" id="s-miu-shiraishi" class="fresh">
+    <h2>Miu Shiraishi<small>白石美羽 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-miu-shiraishi"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="miu-shiraishi" data-rel="Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/miu-shiraishi/1inyqoc.jpg?v=21630b7868" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="miu-shiraishi" data-rel="Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/miu-shiraishi/1iomnwt.jpg?v=65186834f0" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="miu-shiraishi" data-rel="Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/miu-shiraishi/1ikne6j.jpg?v=86191ff038" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="miu-shiraishi" data-rel="Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/miu-shiraishi/1inawlr.jpg?v=21dafa41a8" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="miu-shiraishi" data-rel="Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/miu-shiraishi/1ijzgy2.jpg?v=a0f6bf0203" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="nanami-fujiwara" id="s-nanami-fujiwara" class="fresh">
+    <h2>Nanami Fujiwara<small>藤原七海 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-nanami-fujiwara"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="nanami-fujiwara" data-rel="Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/nanami-fujiwara/0gyy3cg.jpg?v=8972ae1bcd" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="nanami-fujiwara" data-rel="Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/nanami-fujiwara/0h09ugm.jpg?v=df6bf93ac5" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="nanami-fujiwara" data-rel="Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/nanami-fujiwara/0gy6zuf.jpg?v=d6137c938f" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="nanami-fujiwara" data-rel="Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/nanami-fujiwara/0gwvf8x.jpg?v=ccc9919b8f" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="nanami-fujiwara" data-rel="Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/nanami-fujiwara/0gzixo5.jpg?v=e25d36fd5f" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="somi-oh" id="s-somi-oh" class="fresh">
+    <h2>Somi Oh<small>오소미 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-somi-oh"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="somi-oh" data-rel="Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/somi-oh/0ngjhax.jpg?v=ec5af08853" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="somi-oh" data-rel="Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/somi-oh/0nfvk2g.jpg?v=d817b0a99d" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="somi-oh" data-rel="Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/somi-oh/0nh74ny.jpg?v=0f4cb69e43" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="somi-oh" data-rel="Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/somi-oh/0nhv1wf.jpg?v=764d51a21a" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="somi-oh" data-rel="Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/somi-oh/0nf7jh7.jpg?v=edd00505f6" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="sydney-leong" id="s-sydney-leong" class="fresh">
+    <h2>Sydney Leong<small>梁欣妮 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-sydney-leong"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="sydney-leong" data-rel="Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/sydney-leong/0g8p06t.jpg?v=6986405573" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="sydney-leong" data-rel="Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/sydney-leong/0g4pqgj.jpg?v=f29bf0aa2d" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="sydney-leong" data-rel="Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/sydney-leong/0g6sek2.jpg?v=48f3e826b1" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="sydney-leong" data-rel="Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/sydney-leong/0g7d8vr.jpg?v=b79226a05d" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="sydney-leong" data-rel="Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/sydney-leong/0garut0.jpg?v=8e7f8344ce" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+    </div>
+  </section>
+  <section data-p="zoey-yeh" id="s-zoey-yeh" class="fresh">
+    <h2>Zoey Yeh<small>葉芷妍 · 5 張圖 · 0 支影片</small>
+      <b class="new">尚未挑過</b>
+      <span class="all"><button class="ghost sm" data-all="1">全選</button><button class="ghost sm" data-all="0">全不選</button></span></h2>
+    <p class="cnt" id="c-zoey-yeh"></p>
+    <div class="gvid">
+      <p class="hint">這位人設沒有影片素材。</p>
+    </div>
+    <div class="grid">
+      <div class="it" data-p="zoey-yeh" data-rel="Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_04.jpg">
+        <img src="/assets/_pick/zoey-yeh/0w6cj4s.jpg?v=16a755b7a8" alt="images/training_v1/train_04.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_04.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zoey-yeh" data-rel="Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_05.jpg">
+        <img src="/assets/_pick/zoey-yeh/0w70gd9.jpg?v=a87d2b3f82" alt="images/training_v1/train_05.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_05.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zoey-yeh" data-rel="Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_01.jpg">
+        <img src="/assets/_pick/zoey-yeh/0w4cxy1.jpg?v=c6fe4e9619" alt="images/training_v1/train_01.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_01.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zoey-yeh" data-rel="Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_02.jpg">
+        <img src="/assets/_pick/zoey-yeh/0w2d2vu.jpg?v=0305c266e8" alt="images/training_v1/train_02.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_02.jpg · 1728×2304</span>
+      </div>
+      <div class="it" data-p="zoey-yeh" data-rel="Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_03.jpg">
+        <img src="/assets/_pick/zoey-yeh/0w3104b.jpg?v=f98e0fdb47" alt="images/training_v1/train_03.jpg" loading="lazy" width="320" height="427">
+        <span class="tick">✓</span><span class="hero" data-hero="1">封面</span>
+        
+        <span class="n">images/training_v1/train_03.jpg · 1728×2304</span>
       </div>
     </div>
   </section>
@@ -6682,6 +8006,21 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
     vt.classList.toggle('on'); save(); counts();
   });
 
+  // 全選／全不選（只作用在目前這個分頁：圖片或影片）
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('[data-all]'); if(!b) return;
+    var on=b.dataset.all==='1', sec=b.closest('section');
+    sec.querySelectorAll(mode==='vid'?'.vt':'.it').forEach(function(el){
+      el.classList.toggle('on', on);
+      if(!on) el.classList.remove('isHero');
+    });
+    // 全選之後若還沒有封面,先把第一張當封面,免得漏掉
+    if(on && mode!=='vid' && !sec.querySelector('.it.isHero')){
+      var f=sec.querySelector('.it'); if(f) f.classList.add('isHero');
+    }
+    save(); counts();
+  });
+
   // 滑過就播那 3 秒。preload="none" 所以在滑到之前不會下載任何影片,
   // 而且一次只播一支——170 支同時播會把瀏覽器拖垮。
   var playing=null;
@@ -6716,6 +8055,21 @@ body:not(.m-vid) .gvid,body.m-vid .grid{display:none}
   });
 
   document.getElementById('copy').addEventListener('click', function(){
+    // 🛑 沒勾圖的人設會從型錄上消失,沒選封面的會沒有卡片圖。送出前先講,不要事後才發現。
+    var zero=[], nohero=[];
+    document.querySelectorAll('section[data-p]').forEach(function(sec){
+      var nm=sec.querySelector('h2').firstChild.textContent.trim();
+      if(!sec.querySelectorAll('.it.on').length) zero.push(nm);
+      else if(!sec.querySelector('.it.isHero')) nohero.push(nm);
+    });
+    if(zero.length || nohero.length){
+      var L=['送出前先確認：'];
+      if(zero.length){ L.push(''); L.push('・一張圖都沒勾（這幾位會從型錄上消失）：'); L.push('  '+zero.join('、')); }
+      if(nohero.length){ L.push(''); L.push('・還沒選封面（卡片會沒有圖）：'); L.push('  '+nohero.join('、')); }
+      L.push(''); L.push('還是要複製嗎？');
+      var m=L.join(String.fromCharCode(10));
+      if(!confirm(m)) return;
+    }
     var payload={note:'KOLCAT 素材挑選結果（圖片 ＋ 影片）。貼回給 Claude，它會存成 catalog/data/selection.json 並重出型錄。',
       picked_at:new Date().toISOString().slice(0,16).replace('T',' '), personas:collect()};
     document.getElementById('out').value=JSON.stringify(payload,null,1);
