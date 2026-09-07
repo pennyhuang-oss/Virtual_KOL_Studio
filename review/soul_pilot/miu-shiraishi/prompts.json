@@ -1,0 +1,96 @@
+{
+ "1": {
+  "pillar": "私下 / 一人公寓",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<c26d1ba6-5ede-4c82-a275-2cea02dfc50a>>>, a 22-year-old Japanese woman in Nakameguro, Tokyo, sitting on the floor at the low table in her one-room flat after a shift, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: small and slight — 156cm and 44kg, narrow shoulders on a small frame, but a full bust and rounded hips and a very small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a light flaxen beige-blonde, a shoulder-length blunt cut curving inward at the ends, with a wispy air fringe. Both eyebrows and her whole jawline are visible.\n\nShe wears a loose oatmeal cable-knit jumper with a wide neckline sitting on one shoulder, over grey cotton lounge shorts.\n\nHer flat at night: a low wooden table with a mug and a paperback on it, a floor cushion, a folded futon against the wall, her work apron thrown over a chair, a small paper lamp on the floor.\n\nOnly the paper floor lamp is on, an ordinary phone exposure, the rest of the room dark.\n\nShe has both hands round the mug and has just looked up at the lens, a small closed-mouth smile, eyes on the lens, an orange-toned blush under her eyes.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "32252726-8f88-44f0-94ee-d899663e6eef",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "榻榻米、和室矮桌、坐墊、疊起的被褥、椅背上的工作圍裙、紙罩檯燈、馬克杯、書。落肩粗針織（她的人設本來就是這件）。偏差：針織變成短版露腰（覆蓋度偏差同向）。桌上那本書的封面已 native crop 複驗，是抽象色塊、沒有可辨識人臉，**不構成「螢幕／牆上人像」違規**——與 angeline #3 的情況明確不同。"
+ },
+ "2": {
+  "pillar": "咖啡店工作",
+  "frame": "胸上",
+  "angle": "右轉 35°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<c26d1ba6-5ede-4c82-a275-2cea02dfc50a>>>, a 22-year-old Japanese woman working in a coffee shop in Nakameguro, Tokyo, her body turned about thirty-five degrees to her right and her head turned back toward the lens over her near shoulder.\n\nHer build: small and slight — narrow shoulders on a small frame, but a full bust and a very small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light flaxen beige-blonde hair is a shoulder-length blunt cut curving inward at the ends with a wispy air fringe, tucked behind one ear on the near side, both eyebrows and her whole jawline visible.\n\nShe wears a fitted black long-sleeve tee under a canvas work apron with the strap crossing her chest, sleeves pushed to the forearm.\n\nShe is behind the counter before opening. Around her: an espresso machine with a steam wand, a grinder, a stack of ceramic cups, a chalk menu board on the brick wall, a jug of milk on the drip tray, a bag of beans with a folded top.\n\nFlat morning daylight through the shopfront glass, an ordinary phone exposure, the depth of the shop darker.\n\nShe is holding a milk jug under the steam wand with one hand and has glanced over at the lens mid-task, mouth slightly open as if she were about to say something.\n\nThe only person anywhere in this photograph is her — the shop has not opened yet, no customer, no other staff, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "be0b6677-5986-41ca-9c82-f8548036b934",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "**本批最好的一張、可直接發。** 義式咖啡機＋蒸氣管、磨豆機、疊起的紙杯與瓷杯、粉筆菜單板、紅磚牆、牛奶壺、豆袋。開店前、店裡沒有其他人。工作圍裙＋工作場景讓年齡感明確是成年人，符合她人設檔「不得降低年齡感」那條不可鬆動的界線。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<c26d1ba6-5ede-4c82-a275-2cea02dfc50a>>>, a 22-year-old Japanese woman in Tokyo, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: small and slight — narrow shoulders on a small frame, but a full bust and a very small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light flaxen beige-blonde hair is wet and pushed straight back off her face, the air fringe flattened by the water, both eyebrows and her whole jawline bare.\n\nShe wears a plain white towelling robe, the collar folded flat and closed at the front.\n\nShe has just come out of the shower and is standing in the doorway of the unit bathroom in her one-room flat. Behind her: a moulded plastic bath surround, a shower head on a rail, a small shelf of bottles, a towel over the rail. There is no mirror anywhere in this photograph.\n\nCold morning daylight through the small frosted window, an ordinary phone exposure, the room still dim.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "5be8be97-5697-4bdb-baa4-8679886aef08",
+  "file": null,
+  "verdict": "廢棄（服裝被整件換掉）",
+  "note": "指定「白色毛巾浴袍、領口平貼闔上」，模型交出的是**無肩帶浴巾裹身**——不是覆蓋度微幅偏移，是整件衣服被換掉。畫面本身乾淨不裸露，但對童顏人設而言尺度該由使用者決定，不由我決定，因此重跑並留檔於 `_rejected_03_towel_wrap.jpg` 供她比較。"
+ },
+ "3r": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<c26d1ba6-5ede-4c82-a275-2cea02dfc50a>>>, a 22-year-old Japanese woman in Tokyo, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: small and slight — narrow shoulders on a small frame, but a full bust and a very small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light flaxen beige-blonde hair is wet and pushed straight back off her face, the air fringe flattened by the water, both eyebrows and her whole jawline bare.\n\nShe wears a thick white towelling bathrobe with full-length sleeves that reach her wrists, wrapped closed over her chest and tied at the waist with its own belt, the shawl collar folded flat across both shoulders. The robe covers her shoulders, her collarbone and both arms completely.\n\nShe has just come out of the shower and is standing in the doorway of the unit bathroom in her one-room flat. Behind her: a moulded plastic bath surround, a shower head on a rail, a small shelf of bottles, a towel over the rail. There is no mirror anywhere in this photograph, and no phone, tablet, television or lit screen of any kind anywhere in the picture.\n\nCold morning daylight through the small frosted window, an ordinary phone exposure, the room still dim.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall, and no face on any screen.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 340082,
+  "seed_note": null,
+  "job": "ffb3bd4b-d8e6-48d2-a20d-0c79222bc789",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "重跑成功：厚毛巾浴袍、袖子到手腕、腰帶繫起、和服領平貼雙肩，完全照規格。素顏、濕髮往後梳。\n\n**但這一張生出了新發現（見 `_new_finding_named_forbidden_object`）**：畫面右緣有一支手機，鏡頭模組三顆鏡頭清晰可辨（已 native crop + NEAREST 複驗）。那支手機是**我自己在 prompt 裡寫「no phone, tablet, television or lit screen」招來的**。螢幕沒亮、沒有第二張臉、不構成訓練污染，因此收下，但成因要記錄。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<c26d1ba6-5ede-4c82-a275-2cea02dfc50a>>>, a 22-year-old Japanese woman in her one-room flat in Nakameguro, Tokyo, getting ready to leave for her shift. Her whole body from the top of her head down to her shoes is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: small and slight — 156cm and 44kg, narrow shoulders on a small frame, but a full bust and rounded hips and a very small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light flaxen beige-blonde hair is down, a shoulder-length blunt cut curving inward with a wispy air fringe, both eyebrows and her jawline visible.\n\nShe wears a fitted brown ribbed knit top tucked into a long cream corduroy skirt, an open navy cardigan over it, and brown leather loafers.\n\nThe entryway of the flat: a step down to the tiled genkan, a shoe rack, a coat hook with a tote bag and her apron on it, a bicycle helmet on the shelf, a paper bag of coffee beans by the door.\n\nOrdinary daylight through the frosted panel of the front door, an even everyday exposure, the room behind her darker.\n\nHer weight is on one leg with the other knee bent and that foot on the step below, both hands pulling the heel of one loafer on, head down watching what she is doing.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "668bdf67-ed49-4577-86fd-15c81d74dec6",
+  "file": "train_04.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 玄關下沉的三和土、單腳抬起踩在階上、雙手拉樂福鞋後跟、低頭看自己的手。鞋架、掛勾上的圍裙與帆布袋、安全帽、咖啡豆紙袋。頭到鞋全入鏡。"
+ },
+ "5": {
+  "pillar": "外出 / 中目黑",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<c26d1ba6-5ede-4c82-a275-2cea02dfc50a>>>, a 22-year-old Japanese woman, walking along the canal path in Nakameguro, Tokyo, early on a quiet weekday morning. Her whole body from the top of her head down to her shoes is inside the frame, with the pavement beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: small and slight — 156cm and 44kg, narrow shoulders on a small frame, but a full bust and rounded hips and a very small waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light flaxen beige-blonde hair is down and moving a little with her step, the air fringe lifting, both eyebrows and her jawline visible.\n\nShe wears a fitted black turtleneck under an open oversized grey wool coat, straight blue jeans and brown leather loafers, a canvas tote over one shoulder.\n\nThe canal path: the low green railing along the water, bare cherry branches overhead, a shuttered shopfront, a bicycle parked against the railing, a vending machine further down.\n\nEarly overcast daylight along the canal, an even everyday exposure, the shopfronts on the far side darker.\n\nShe is mid-stride with her weight coming down on one leg, a takeaway coffee cup in one hand and the tote strap held with the other, her head turned to look sideways at the water as she passes, not looking at the camera.\n\nThe path is empty this early; the only person anywhere in this photograph is her — no other pedestrians, no cyclists, no one in the background, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "4decebdd-7354-4336-9d20-5e4c5be7d1c8",
+  "file": "train_05.jpg",
+  "verdict": "收（記錄一項已複驗的偏差）",
+  "note": "**§3-E 成功，而且是本批最漂亮的一張。** 目黑川、綠色欄杆、櫻花、自動販賣機、拉下鐵門的店面、停放的腳踏車。走路中單腳承重、一手咖啡杯、一手拉帆布袋帶、側頭看河面。\n\n**已複驗的偏差**：步道遠端確實有一個路人，約 60×90px、完全失焦、**沒有可辨識的臉**。技術上違反「無其他行人」，但因為沒有臉，對 Soul 身分訓練沒有貢獻也沒有污染；對日常素材而言，東京街上遠處有個模糊路人反而是真實感。**與 angeline #3 的差別是決定性的：那張是清楚的第二張臉，這張不是。** 因此收下不重跑。"
+ },
+ "_element": {
+  "id": "c26d1ba6-5ede-4c82-a275-2cea02dfc50a",
+  "name": "miu-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/miu-shiraishi/identity/element_face_tight.jpg（landmark 定位臉部裁切，1407×1529）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_new_finding_named_forbidden_object": {
+  "finding": "在 prompt 裡點名一個「不可以出現的物件」，會把那個物件招進畫面。",
+  "evidence": "#3r 寫了 `no phone, tablet, television or lit screen of any kind anywhere in the picture`，結果畫面右緣出現一支手機（native crop 可見三鏡頭模組）。同一段落其他句子都正常執行。",
+  "prior_art": "與既有的兩條發現同一族：①場景裡寫 mirror 會生出鏡子自拍；②結尾寫裝置名詞會生出手機邊框。三者的共同機制是「名詞被寫進 prompt 就會被畫出來，否定詞不生效」。",
+  "rule": "要讓某個物件不出現，**不要點它的名**。改用肯定句把該處填滿：把走廊寫成「一扇關上的門」、把牆寫成「一面空白的牆」。既有的單人排除條款（`no one else in the frame` 那一整段）是例外——它處理的是「人」，實測長期有效，不要動它。",
+  "cost": "0 credits（該張仍然收下，缺陷不影響訓練）"
+ },
+ "_age_note": "她是童顏人設，profile 的 brand_dont 第一條是「任何降低年齡感或未成年化的呈現（全體不可鬆動的界線）」。五張都放在明確的成年人語境（咖啡店工作、一人公寓、通勤），沒有任何學生／幼態道具。"
+}

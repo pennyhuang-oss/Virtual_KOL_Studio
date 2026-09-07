@@ -2,29 +2,30 @@
   "id": "tammy-chou",
   "ai_assets": {
     "training_images_v1": {
-      "status": "pending",
+      "status": "ready_for_training",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
-      "image_count": 0,
+      "image_count": 5,
       "images_path": "kols/tammy-chou/images/training_v1/",
-      "collected_at": null,
-      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "collected_at": "2026-09-04",
+      "note": "建模圖已準備好，待訓練。5 張皆為可直接發布的生活照／自拍，以純臉緊裁切 Reference Element 錨定臉部身分，身材與服裝完全由 prompt 文字定義。逐張的 prompt、job id 與判定見 review/soul_pilot/tammy-chou/prompts.json，彙整見 generation_notes.md。等 19 位全部備齊後一次送 Soul 訓練。",
       "soul_training": {
         "status": "pending",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": null,
-        "training_image_count": 0,
+        "training_image_count": 5,
         "started_at": null,
         "completed_at": null,
-        "note": "PENDING"
-      }
+        "note": "待執行——等 19 位備齊後一次送訓，每位 25 credits。"
+      },
+      "reference_element_id": "3e1cb76c-accf-420d-9234-e61fd285af9d"
     }
   },
   "meta": {
     "created_at": "2026-08-27",
-    "updated_at": "2026-08-27",
+    "updated_at": "2026-09-04",
     "status": "draft",
     "category": "fashion",
     "canon_version": "PERSONA_CANON.md v2 (2026-08-27)",

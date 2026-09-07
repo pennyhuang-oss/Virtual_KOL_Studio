@@ -1,0 +1,21 @@
+{
+ "_purpose": "ChatGPT R12 S-04 要求：逐格為 B 級 crop 預先登記兩個可辨識簽名。寫得出來＝usable-B（不占未知額度），寫不出來＝維持 provisional。",
+ "_judged_from": "review/donor_cards/ 的實際裁切圖，非原圖",
+ "usable_B": {
+  "ref_01|EYES_AND_BROWS": {"px": 89, "signatures": ["內雙眼皮，褶寬窄且緊貼睫毛根", "眼型長、眼尾平直微上揚；眉低平、眉峰弱、眉尾細長"]},
+  "ref_01|NOSE": {"px": 77, "signatures": ["鼻樑細直、鼻根不低陷", "鼻頭小而圓潤、鼻翼窄不外擴"]},
+  "ref_05|NOSE": {"px": 73, "signatures": ["鼻樑短且平緩", "鼻頭圓鈍、鼻翼寬度中等"]},
+  "ref_15|NOSE": {"px": 82, "signatures": ["鼻樑細直、鼻背線條清楚", "鼻頭小而收、鼻翼窄"]},
+  "ref_01|MOUTH": {"px": 61, "signatures": ["上唇唇珠明顯、唇峰清晰呈 M 形", "上下唇量約 1:1.3，口寬中等、嘴角平"]},
+  "ref_02|MOUTH": {"px": 94, "signatures": ["上唇明顯薄於下唇、唇峰柔和不尖", "嘴角略下垂、唇線邊界清楚、口寬偏窄"]},
+  "ref_15|MOUTH": {"px": 69, "signatures": ["上下唇量接近相等、唇峰圓鈍", "口寬中等、嘴角平直、人中溝明顯"]}
+ },
+ "provisional_B": {
+  "ref_04|NOSE": {"px": 55, "why": "鼻翼邊界糊化，寫不出第二個可驗證簽名"},
+  "ref_06|MOUTH": {"px": 81, "why": "微笑中，嘴角被拉開，唇形已非中性"},
+  "ref_14|MOUTH": {"px": 79, "why": "明顯笑容、嘴角上揚，且裁切左下被畫面邊界切到"}
+ },
+ "excluded": {
+  "ref_04|EYES_AND_BROWS": {"px": 60, "why": "瀏海遮住雙眉，違反 R11 自己的眼槽 HARD GATE「雙眼、內外眼角與雙眉完整」。R11 把它列為『可用』，但 donor card 上眉毛看不到。"}
+ }
+}

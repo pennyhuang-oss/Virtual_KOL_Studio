@@ -1,0 +1,32 @@
+{
+ "pillar": "換裝 / 盤扣",
+ "frame": "及膝 knee-up",
+ "angle": "正面",
+ "view": "他拍",
+ "outfit": "黑色暗紋絲質旗袍＋米白滾邊，盤扣半扣",
+ "template": "2026-09-03 定案版（D/T1 形狀）",
+ "template_rules_applied": [
+  "一句話佈光，非五段式",
+  "明寫拍攝者位置與距離",
+  "保留完整第二人物排除句",
+  "場景明確寫 no mirror（規避 §3-D① 鏡子鬼影）",
+  "無 film grain / 35mm / Instagram 固定尾巴"
+ ],
+ "prompt": "A photograph of <<<a0e68491-43ac-40c8-99d5-fec60596ac50>>>, a 23-year-old Chinese woman in Suzhou, seen from head to just below the knee, standing square to the camera in the side room of an old courtyard house. The camera is directly in front of her, held by someone standing about two and a half metres away at chest height. Her face, the front of her body and both shoulders are toward the lens.\n\nHer build: narrow shoulders and a full rounded bust that reads clearly against how slight the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her lower abdomen is flat and her hips are about as wide as her shoulders. She is 165cm and slight. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer black hair is twisted up into a loose knot at the back of her head and held with a single wooden pin, a few strands escaping at her nape, so her forehead, both eyebrows, her cheekbones and her whole jawline are uncovered.\n\nShe is halfway through getting dressed. She wears a black silk qipao with a fine tone-on-tone woven pattern and pale ivory piping along the collar and the side opening, fitted through the bust, ribcage and waist. The knotted cloth buttons down her right side are fastened at the top and still open lower down, so the panel sits slightly loose across her ribs. Her right hand is at her side working the next button closed, her left hand rests at her waist.\n\nBehind her stands a wooden clothes rack with two other qipao hanging on it and a pair of shoes underneath. There is no mirror in the room.\n\nLate afternoon sun comes in low through the open door behind the camera, an ordinary phone exposure, the far corner of the room noticeably darker.\n\nShe has glanced up at whoever is holding the phone, mid-task, mouth closed, not posing.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera, crisp sharp focus on her, fine detail in the silk and the knotted buttons, natural colour grading.",
+ "job": "5abcfe75-83e9-457a-b9ee-498eb5b97870",
+ "file": "t5_v3.jpg",
+ "verdict": "FAIL",
+ "defects": [
+  "仍然背對鏡頭。指定 standing square to the camera + 臉／身體正面／雙肩朝向鏡頭，仍生成全背面、臉只剩側面朝向畫外。這是這個景別第三次失敗。",
+  "畫面右緣出現一隻不屬於她的手拿著手機。完整的第二人物排除句與『每隻手都連著她自己的手臂』都寫了，仍然失效。"
+ ],
+ "my_error": "我在同一段 prompt 裡把攝影師擬人化了兩次——『held by someone standing about two and a half metres away』與『glanced up at whoever is holding the phone』。成功的 #1／D 只寫 『Shot on a rear phone camera from about a metre away』，沒有 someone。推測『someone』把一個實體的拍攝者請進了畫面。",
+ "correction_to_rule": "§3-D① 要修正：交代鏡頭距離與高度是對的，但**不要把拍攝者寫成一個人**。用『shot on a rear phone camera from about N metres away』，不要用 held by someone / whoever is holding the phone。",
+ "framing_evidence": {
+  "full-length front (garden #4v2)": "成功",
+  "knee-up front (this)": "失敗",
+  "knee-up turned 55° (#5 v1)": "失敗",
+  "knee-up turned 50° (#5 v2)": "失敗",
+  "chest-up / waist-up front or small angle": "4/4 成功"
+ }
+}

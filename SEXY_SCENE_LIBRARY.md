@@ -73,6 +73,65 @@ slightly lower dynamic range, gentle noise in low light, NOT ultra-crisp or over
 >
 > Sherry 的每一張圖，你都可以指著畫面說出「光是從那個東西來的、又被這個表面反射到她臉上」。這才是真實感的來源。
 
+#### 3-0. ⚠️ 2026-09-03 實測裁決：五段式公式**退出生活照與訓練圖的預設模板**
+
+> **這一段優先於 3-A、3-B、3-C。先讀這裡再決定要不要往下用。**
+
+2026-08-05 從競品 @sherry_digitalp510 拆解出五段式公式時，它只是**待驗證假說**——
+`kols/iris-chen/generation_notes.md` 當時的批次結論自己就寫了
+「🔴 打光尚未套用新公式…下一批次應以驗證該公式為首要目標」。
+
+**2026-09-03 首次實際驗證，結果是負面的。**
+
+`wanyin-jiang` 訓練圖批次（`review/soul_pilot/wanyin-jiang/`）：使用者對套用完整五段式的
+5 張成圖評語是「可以用，但 AI 感還是有一點重」。隨後做四張盲測
+（同 seed 683324、同 element、同場景服裝動作，逐字對照，見 `ailook_ab/`）：
+
+| 盲測代號 | 版本 | 與對照組的唯一差異 | 使用者盲評 |
+|---|---|---|---|
+| **D** | T1 | **只把五段式光線段換成一句** `Soft ordinary morning window light, even phone exposure.` | **最好，「很有自拍感」** |
+| B | C0 對照組 | 441 字，完整五段式 | 「中規中矩，堪用」 |
+| C | T2 | 縮到 163 字 | 不採用 |
+| A | T3 | T2 + Iris 風格尾巴 | 不採用 |
+
+**D 勝過 B，兩者唯一的差別就是這段佈光。** 裁決如下：
+
+| 內容類型 | 佈光寫法 |
+|---|---|
+| **日常自拍、家中起居、工作隨拍、散步、咖啡桌、老宅生活、普通街拍、所有 Soul 訓練圖** | **不用五段式。** 一句話：一個主光來源＋一個自然結果。例：`Soft ordinary morning window light, even phone exposure, the room behind her a little darker.` |
+| 場景本來就有一個明確光源且光是敘事的一部分（窗邊晨光、檯燈夜讀、店門自然光） | **縮短版，最多一句。** 不寫具名反射面、測光策略、色溫分裂、clip／crush、遮擋圖案 |
+| 電影劇照、品牌 campaign、舞台、夜店、霓虹、戲劇性逆光、產品廣告 | **才用 3-A 完整版。** 它是風格 preset，不是所有人物的基礎規則 |
+
+3-B 的十組配方（R-1～R-10）**保留**，但改列為上表第三類的選用素材，不再是預設。
+
+---
+
+#### 3-D. 2026-09-03 同批實測的另外兩項結論
+
+**① 不要為了短而短——短 prompt 會丟掉構圖控制。**
+
+同一批盲測裡的 A 與 C 是僅有的兩張短版（163 字），**兩張都生出同一個缺陷**：
+畫面變成對著鏡子拍，而鏡中又有另一隻手拿手機自拍，拍攝者身分自相矛盾。
+長版沒有這個問題。差別在於縮短時被壓掉的兩句：
+
+- `Shot on a rear phone camera from about a metre away`（明確交代拍攝者位置與距離）
+- `no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen`
+  （完整版的第二人物排除句；縮成「no one in any reflection」不夠）
+
+**規則：凡是場景裡有鏡子、玻璃、螢幕等反射面，這兩句一句都不能省。**
+目前驗證有效的模板長度約 **330 字**（盲測 D 的長度），不是 160 字。
+
+**② `film grain / warm tones / shot on 35mm / Instagram style` 這串固定尾巴：從模板刪除。**
+
+盲測 A（有尾巴）沒有優於 C（無尾巴）。另有一次獨立的負面結果：
+`train5` 的 #4 v2 加上這串之後，成圖比未加的版本**更**像精修大片。
+這串字本來就可以描述高級時尚攝影，不是去 AI 感的開關。
+
+`iris-chen` 模板值得保留的是**原則**（「不要過度打光、不要過度構圖」），不是那串字。
+是否使用 `35mm`／暖色調應由該角色與該場景決定，不跨 19 位固定套用。
+
+---
+
 #### 3-A. 五段式光線公式（每個 prompt 的光線段落都要寫滿這五段）
 
 | 段 | 要寫什麼 | 反例（我們現在在寫的） |
@@ -215,6 +274,180 @@ streaking past out of focus
      Small marble highlights clip softly before her skin does.`（把「臉不能欠曝」與「背景要更暗」拆成兩件事）
      ⚠️ n=2、單一室內場景，**高反差場景（有窗／有天空）尚未驗證**，不要當成全域結論。
      完整紀錄見 `CALIBRATION_TEST.md` §24 與 `review/restaurant-b1/LEDGER.md` #15。
+
+### 3-E. 全身照的朝向要寫鏡頭位置，不要寫身體姿勢（2026-09-03，連續三位都踩到）
+
+**事件**：`wanyin`、`kanon`、`cheryl` 三位的訓練集，**每一位的全身照都站得像證件照**，
+而同一位的胸上／腰上照都自然。使用者指出這兩張「完全不能拿來當日常素材發」。
+
+**原因是 prompt，不是模型。** 比對後確認：這句只出現在全身那幾張，其餘一句都沒有——
+
+> She is facing the camera: her face, the front of her body and both shoulders are toward the lens
+> and **her feet point toward it**. Her back is not to the camera and her head is not turned away.
+
+這句原本是為了修「模型把人轉成背面」而加的，它有效；**但它同時是一張證件照的指令**。
+再加上全身那幾張配的動作也都是靜態的（`stands still and looks at the lens`），等於鎖死兩次。
+
+**規則：朝向只寫鏡頭在哪裡，不寫身體要擺成什麼樣。**
+
+| 不要寫 | 改寫成 |
+|---|---|
+| `her face, the front of her body and both shoulders are toward the lens` | `The camera is in front of her, not behind her.` |
+| `her feet point toward it` | （刪除，不要寫腳的方向） |
+| `standing square to the camera` | （刪除） |
+| `She stands still and looks at the lens` | 一個**具體的、有重量的動作**（見下） |
+
+**全身照必須配一個有以下至少兩項的動作**：重心偏在一隻腳、手上拿著或正在操作某個東西、
+身體有一段正在進行的動作（蹲下、跨步、轉身中、把頭髮從領口撥出來）、視線不一定在鏡頭上。
+
+可用的寫法範例：
+
+```
+The camera is in front of her, not behind her.
+She is crouched down zipping the suitcase shut, one knee on the floor, and has just looked up.
+```
+```
+The camera is in front of her, not behind her.
+She is stepping into her shoes with one hand braced on the wardrobe door, weight on one leg,
+still looking down at what she is doing.
+```
+
+**保留**「背對鏡頭」的否定句（`Her back is not to the camera`）——那一句是有效的且不造成僵硬。
+被刪掉的是描述身體正面與雙腳方向的那部分。
+
+---
+
+### 3-F. 不要點名「不可以出現的物件」——點了它就會出現（2026-09-04）
+
+**事件**：`miu-shiraishi` 訓練圖 #3 重跑時，我在 prompt 裡寫了
+`no phone, tablet, television or lit screen of any kind anywhere in the picture`，
+結果畫面右緣就多出一支手機（native crop 可見三顆鏡頭模組）。同一段落其他句子都正常執行。
+
+**這是既有兩條發現的同族現象**，機制相同：**名詞被寫進 prompt 就會被畫出來，否定詞不生效。**
+
+| 已知案例 | 寫了什麼 | 生出了什麼 |
+|---|---|---|
+| Iris Chen | 場景裡寫 `mirror` | 鏡子自拍、手機入鏡 |
+| angel-chiu #4 | 結尾留 `Shot on a rear phone camera` | 整張圖被手機邊框框住 |
+| miu-shiraishi #3r | `no phone, tablet, television or lit screen` | 畫面裡多一支手機 |
+
+**規則**：要讓某個物件不出現，**不要點它的名**。改用肯定句把那個位置填滿：
+
+| 不要寫 | 改寫成 |
+|---|---|
+| `no phone or screen in the hallway` | `a plain painted door filling the wall behind her` |
+| `no television on the wall` | `a bare plastered wall behind her` |
+| `no mirror in the bathroom` | （直接不提牆面，或寫 `a tiled wall behind her`） |
+
+**唯一的例外是單人排除條款**（`The only person anywhere in this photograph is her — no one else…` 那一整段）。
+它處理的是「人」，實測長期有效（本批 10 張裡擋掉了攤商、店員、客人、路人），**不要動它**。
+換句話說：否定「人」有效，否定「物件」反而招來物件。
+
+**這條同時解釋了為什麼「浴室不要有鏡子」一直難寫。** 舊寫法
+`There is no mirror anywhere in this photograph` 至今沒有生出鏡子，
+但它是撞運氣，不是可靠機制——同一句型換成手機就失效了。往後浴室場景改成
+不提鏡子、直接把她放在「關上的門前」或「貼磚牆前」。
+
+#### 3-F 補正（2026-09-04 同日，用第二輪資料修正上面的說法）
+
+上面第一版把規則寫得太寬了。全身照結尾那段裝置排除句**多數情況有效**
+（2026-09-04 首次觀察到失效，見下方「再次補正」），而它明明也點了 phone / screen / device 的名：
+
+```
+This is a plain photograph of the scene, edge to edge. There is no phone, no screen
+and no device anywhere in the picture, and the image is not framed or bordered by
+the edge of any device.
+```
+
+差別在於**它由一句肯定的畫面定義開頭**（`This is a plain photograph of the scene, edge to edge.`），
+否定句是掛在那句後面的補充；而失敗的 miu #3r 是**把裸的否定句直接接在場景描述後面**，
+前面沒有任何肯定的畫面定義。
+
+**修正後的規則**：
+
+1. **不要把裸的否定句接在場景句後面**（`Behind her: … . There is no phone, tablet, television or lit screen.`）——會招來那個物件。
+2. **要排除某物件，先用肯定句把那個位置填滿**：`a plain painted door filling the wall behind her`、`a bare plastered wall behind her`。
+3. **既有的兩段固定句不要動**：全身照的裝置排除句（由肯定句起頭）、
+   單人排除條款（否定「人」，實測長期有效）。它們是驗證過的例外，不受第 1 點約束。
+
+#### 再次補正（2026-09-04 稍晚，同日第三輪資料）
+
+**裝置排除句第一次失效。** `tammy-chou` #4 的 prompt 完整寫了
+`There is no phone, no screen and no device anywhere in the picture`，
+同時場景清單裡有 `a ring light on a stand`——結果環形燈上夾了一支手機。
+
+成因與 §3-F 的「點名招來」**不同**：這次不是因為點了名，
+而是**場景物件的語義本身隱含了裝置**（環形燈＝直播鏡頭架，那個場景的常識就是上面要夾手機）。
+
+**修正**：裝置排除句是強的、但不是絕對的。要真正無裝置，除了保留這句，
+還要**避免在場景清單裡放隱含裝置的物件**（環形燈、三腳架、直播架、螢幕牆、車用手機架）。
+若那個物件是人設必需（像她的直播間），就接受裝置會出現，改為確認它
+**不是第二張臉、不框住畫面**——這兩點才是會傷到訓練集的。
+
+**第二次失效（同日，`zhiyi-shen` #4）把成因收得更緊：連複合名詞裡的裝置詞都算。**
+那一張的場景清單寫了 `a console with a laptop bag`（玄關櫃上有一個筆電包）。
+`laptop bag` 是「包」不是「筆電」，但裡面有 `laptop` 這個詞——結果櫃上真的出現一台筆電，
+旁邊還多生出一支手機。裝置排除句同樣沒擋住。
+
+**所以檢查清單要看的是「詞」，不是「物件」**：寫場景之前先掃過一遍自己的名詞，
+只要字面上出現 phone / laptop / screen / monitor / tablet / camera / ring light，
+不管它是不是被包在別的詞裡（`laptop bag`、`phone case`、`camera strap`），都會把那個裝置招進畫面。
+要提包就寫 `a work tote`、`a leather satchel`，不要寫 `a laptop bag`。
+
+#### 那個「否定句排擠服裝指令」的假設：已被推翻（2026-09-04）
+
+前一輪記錄了一個假設：`sydney-leong` #3 #4 #5 連續三張服裝零偏差，
+共同點是段落裡沒有自創的否定句，所以推測「否定句會排擠掉服裝指令」。
+
+**同一天稍晚的 `wendy-yeo` #3 推翻了它**：用的是與 sydney #3
+**完全相同**的浴袍規格句、段落裡同樣沒有任何自創否定句，浴袍仍然滑到雙肩以下。
+
+**結論：sydney 那三張零偏差是運氣，不是機制。**
+維持既有結論不變——**覆蓋度無法用 prompt 可靠控制，只能事後挑片。**
+往後不要再嘗試用改寫 prompt 來控制服裝覆蓋度。
+
+---
+
+### QA-1. 小面積缺陷不得用插值放大來判讀（2026-09-03，踩過一次）
+
+**事件**：`kanon-komori` 訓練圖 #5 是全身夜景，臉約 140px、虹膜約 13px。
+我把虹膜區域用 LANCZOS 放大 4 倍後目視，判定「兩眼虹膜顏色不同（一眼黃綠）」，
+據此退件並重生一張（1 credit），還把兩條錯誤結論寫進了紀錄。
+
+**實際上沒有色差。** 事後在原生解析度量測 HSV：四組虹膜全部落在深紅褐
+（色相 348–360°、飽和度 0.20–0.31），兩眼一致。那個綠是 **LANCZOS 在十幾個像素上的插值假色**。
+
+**規則**：判讀虹膜、瞳孔、指節、牙齒、耳廓這類**只有十幾到幾十像素**的區域時：
+
+1. **不得**單憑雙三次／LANCZOS 放大的目視結果退件——這類插值會在小區域造出原圖沒有的顏色與邊緣。
+2. 必須至少做以下一項再下判斷：
+   - 用 **NEAREST**（零插值）放大，看到的才是真實像素；
+   - 或直接在原生解析度**量測數值**（例如以 mediapipe iris landmark 定位後比較兩眼 HSV）。
+3. 判讀結果若要寫成「規則的例外」或「新的失敗機制」，**必須先完成第 2 點**。
+   基於誤判寫進規範的結論，比原本的缺陷傷害更大。
+
+---
+
+### QA-2. `status=completed` 不等於出圖成功（2026-09-04，踩過一次）
+
+**事件**：`peggy-lee` 訓練集 #2（job `e8eddf2c`，seedream_v4_5）在 `jobs_wait` 回報
+`status: completed`、有正常的 result_url、檔案 11MB、尺寸 1728×2304——但**打開來是純雜訊**，
+擴散過程完全沒有收斂，畫面上沒有任何可辨識的物件。
+
+**排除過的可能**：
+- 不是縮圖誤判——native-resolution crop 一樣是雜訊（§QA-1 的程序有跑）。
+- 不是下載損毀——重新下載，SHA-256 與第一次完全相同（`254cd229…`），伺服器上的圖就是雜訊。
+- 不是 prompt 問題——同一批同一模型的另外 9 張全部正常，重跑時 prompt 一字未改就成功。
+
+**規則**：
+
+1. **每一張圖在歸檔前都必須實際看過。** 不可因為 `jobs_wait` 回報 `completed`
+   就直接把 result_url 存成訓練圖或素材。
+2. 遇到雜訊圖時**不要改 prompt**——它不是 prompt 造成的，改了反而會失去對照。
+   原樣重送即可（seed 會不同）。
+3. 這種失敗**會計費**（1 credit）。回報成本時要把它算進去，不要假設「失敗不收費」。
+
+---
 
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。

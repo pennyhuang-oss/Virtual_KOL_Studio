@@ -1,0 +1,46 @@
+{
+ "persona": "jia-seo",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "B",
+ "job_id": "27d96787-c576-4acd-8100-9055a9f1eae3",
+ "file": "kols/jia-seo/identity/identity_master.jpg",
+ "sha256": "0c287ecb0d262691dfd90a798908174a13435ba2af6d3cf053593bc3c0a1847c",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_01",
+   "crop": "review/donor_cards/ref_01__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "1251795dd9e7a3a6cc79314af0ac1bd08f6d514db0e9ce48b5364924f20f9641",
+   "grade": "A",
+   "part_px": 309.3,
+   "yaw": 0.0313
+  },
+  "眼與眉": {
+   "ref": "ref_10",
+   "crop": "review/donor_cards/ref_10__EYES_AND_BROWS.jpg",
+   "sha256": "f89027883dfb3590b4708880b5d7f37c058247fb0420b4559d608e465f856d5e",
+   "grade": "A",
+   "part_px": 491.1,
+   "yaw": 0.3025
+  },
+  "鼻": {
+   "ref": "ref_06",
+   "crop": "review/donor_cards/ref_06__NOSE.jpg",
+   "sha256": "59563d700e26a1cf5b0b3d7969dc42e63d09ac39c5f3960c01e83bd52b20f100",
+   "grade": "A",
+   "part_px": 129.3,
+   "yaw": 0.214
+  },
+  "口": {
+   "ref": "ref_08",
+   "crop": "review/donor_cards/ref_08__MOUTH.jpg",
+   "sha256": "ae3fbfd50355809cf21a969c4fc3fe80bcc9ec1d41d0a7209cac3d7d4dfdf307",
+   "grade": "B",
+   "part_px": 52.1,
+   "yaw": 0.1609
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 22-year-old Korean woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 22-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer cool blue-black hair falls straight to just below the shoulders and is swept back away from the central face, with a mint-green under-layer that shows only where the hair lifts at the sides. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "claude_technical_pass": "通過，畫面乾淨。"
+}

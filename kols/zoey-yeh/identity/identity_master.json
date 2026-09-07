@@ -1,0 +1,46 @@
+{
+ "persona": "zoey-yeh",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "A",
+ "job_id": "5daf92ab-686b-48d2-800e-af6a88aacd86",
+ "file": "kols/zoey-yeh/identity/identity_master.jpg",
+ "sha256": "3090ba813dbcf5099d7b372107892c8fce47dd50b2209034cda7cc6c5d6947dc",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_08",
+   "crop": "review/donor_cards/ref_08__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "c42000ccb12da118be5e75b9776325e51a5b4612a92081211caac3a517a8b872",
+   "grade": "A",
+   "part_px": 325.2,
+   "yaw": 0.1609
+  },
+  "眼與眉": {
+   "ref": "ref_14",
+   "crop": "review/donor_cards/ref_14__EYES_AND_BROWS.jpg",
+   "sha256": "804c47d8a0fe5466ac4560b45bad65688055d92ea8a7b1dd30e120179a8d4e30",
+   "grade": "A",
+   "part_px": 138.8,
+   "yaw": 0.0415
+  },
+  "鼻": {
+   "ref": "ref_04",
+   "crop": "review/donor_cards/ref_04__NOSE.jpg",
+   "sha256": "3371d5afdc8c62378ff9704bc02a9334b53870beda74c1b18aadec8602696c46",
+   "grade": "B",
+   "part_px": 55.1,
+   "yaw": 0.0595
+  },
+  "口": {
+   "ref": "ref_05",
+   "crop": "review/donor_cards/ref_05__MOUTH.jpg",
+   "sha256": "ee1e7aa33036213058bcdd68eb45f3938990f4f828969de321ba1a4e7e2151dd",
+   "grade": "B",
+   "part_px": 55.7,
+   "yaw": 0.1902
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 21-year-old Taiwanese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 21-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer fine, soft black hair is long and straight, centre-parted and falling past her shoulders to mid-chest, tucked back away from the central face. Her hairline, both brows, both cheek edges and the full jawline stay visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "claude_technical_pass": "通過，乾淨。"
+}

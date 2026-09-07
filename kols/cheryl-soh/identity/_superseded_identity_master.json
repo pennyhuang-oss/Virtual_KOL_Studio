@@ -1,0 +1,35 @@
+{
+ "persona": "cheryl-soh",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "A",
+ "job_id": "c070a893-119d-43e8-baf0-2f66be3685f3",
+ "file": "kols/cheryl-soh/identity/identity_master.jpg",
+ "sha256": "1623373134d21668dbb41578f6e639813893f0050f729c43389ab567a599c50b",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_02",
+   "crop": "review/donor_cards/ref_02__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "5c213b5e2682a5f7e6433c214b644565bf93b004e22448527cb56a018232d2d1"
+  },
+  "眼與眉": {
+   "ref": "ref_01",
+   "crop": "review/donor_cards/ref_01__EYES_AND_BROWS.jpg",
+   "sha256": "dfefcc4c39928c2ce2cb0980edaf5f223bc7ca68f08298ccfa58f4eabb2ea592"
+  },
+  "鼻": {
+   "ref": "ref_15",
+   "crop": "review/donor_cards/ref_15__NOSE.jpg",
+   "sha256": "c1936ec19c817c3f96fefe99c3f056af83e7796e2dafe7777c539d25c9c53fb6"
+  },
+  "口": {
+   "ref": "ref_07",
+   "crop": "review/donor_cards/ref_07__MOUTH.jpg",
+   "sha256": "12180b049790e741be6b5d34e65379366aa0a6f49c4f7d6c599ac6d14bfea882"
+  }
+ },
+ "prompt": "A vertical head-and-shoulders beauty-casting portrait of a beautiful 25-year-old Singaporean Chinese woman.\n\nBuild one original, coherent identity from the four attached isolated component crops in input order. Image 1 defines the face silhouette, jawline and chin. Image 2 defines the eyes, eyelids and brows. Image 3 defines the nose bridge, tip and alar shape. Image 4 defines the mouth width, lip contour and upper-to-lower lip balance. Integrate the four regions with continuous anatomy, aligned facial midlines, natural transitions, and facial maturity appropriate for a 25-year-old woman.\n\nShe faces forward at eye level and looks directly into the lens. Her expression is calm and composed, with relaxed closed lips.\n\nHer long black hair is neatly styled away from the central face, with the hairline, both brows, both cheek edges and the full jawline visible.\n\nShe wears a simple fine-knit top in a soft neutral tone.\n\nCamera-ready natural makeup: an even lightweight base, softly groomed brows that preserve their source shape, curled separated lashes, and subtle lip colour that preserves the source lip contour.\n\nEven, healthy-looking skin with fine natural texture and subtle professional retouching. The face, eyes, brows and hairline are cleanly resolved, while the background falls into gentle natural separation.\n\nSoft wrapping light from slightly above and in front shapes the face evenly, creates a small natural catchlight in both eyes, and preserves detail through smooth highlight roll-off and gentle facial shadows.\n\nA clean, softly graded neutral background.\n\nA polished, believable beauty-casting portrait suitable for a premium social-media KOL profile.",
+ "credits": 2,
+ "_note": "使用者親自選定。ChatGPT 盲審未執行——兩張都過 Claude 的技術硬退件，且美感最終裁判是使用者本人，見 BATCH3_FACE_INVARIANT.md。",
+ "_superseded": "臉型槽附整張人像，輸出照搬了來源照本人。已由 wave_faceless10 取代。"
+}

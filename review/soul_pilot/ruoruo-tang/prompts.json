@@ -1,0 +1,75 @@
+{
+ "1": {
+  "pillar": "私下 / 家裡的地墊",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<7d30e2b0-b7b3-40cb-9352-592b250e2b60>>>, a 27-year-old Chinese woman in Chengdu, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: long and supple rather than heavily built — a dancer's line. Narrow shoulders with clear definition across the upper back, a naturally full but not large bust, visible collarbone and long lean arms. Fair, luminous porcelain-toned skin with a warm undertone (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light chestnut-brown hair falls to just below her shoulders in a loose natural wave, tucked behind one ear so both eyebrows and her whole jawline are clearly visible.\n\nShe wears a fitted charcoal ribbed long-sleeved bodysuit with a scooped neckline, the fabric close enough to read her ribcage.\n\nShe is sitting back on her heels on a yoga mat on the floor of her own flat, mid-stretch. A foam roller and a resistance band lie on the mat beside her, a water bottle further off on the wooden floor.\n\nLate afternoon light through the window at her side, an ordinary phone exposure, the wall behind her noticeably darker.\n\nShe has stopped between stretches and looks at the lens, breathing, mouth closed, no makeup.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "job": "b7d7f063-0986-438d-be3e-ff2f36826741",
+  "file": "r1.jpg",
+  "note": "臉與 master 一致，栗棕髮色正確，地墊場景與器材到位。服裝偏離：指定「圓領合身羅紋連身衣」，出來領口較低。"
+ },
+ "2": {
+  "pillar": "器械皮拉提斯",
+  "frame": "胸上",
+  "angle": "左 35–40°",
+  "view": "他拍",
+  "new": false,
+  "prompt": "A chest-up photograph of <<<7d30e2b0-b7b3-40cb-9352-592b250e2b60>>>, a 27-year-old Chinese woman in Chengdu, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: long and supple rather than heavily built — a dancer's line. Narrow shoulders with clear definition across the upper back, a naturally full but not large bust, visible collarbone and long lean arms. Fair, luminous porcelain-toned skin with a warm undertone (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light chestnut-brown hair is pulled into a low neat bun at the nape for teaching, a few short strands loose at her temples, her forehead, both eyebrows and her jawline fully exposed.\n\nShe wears a soft sage-green cropped long-sleeved top and matching high-waisted leggings, with grip socks.\n\nShe is in her own small studio before the first client, one reformer machine beside her with its straps hung neatly, three more further back, a mirror-free pale wall, a clipboard on the sill.\n\nFlat daylight through the studio's high window, an ordinary phone exposure, the far end of the room dimmer.\n\nShe looks at the lens with a level, focused expression, the faint start of a smile.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "job": "6ec25031-ac0e-4a56-9661-263a883bd39e",
+  "file": "r2.jpg",
+  "note": "⚠️ 兩項偏離。(a) 朝向：指定左轉 40 度、頭轉回鏡頭，出來接近背面 3/4，背部佔畫面主體。(b) 服裝：指定「合身短版長袖上衣」，出來是大面積露背款。臉仍與 master 一致、可辨識。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "腰上",
+  "angle": "右 30–35°",
+  "view": "自拍",
+  "new": false,
+  "prompt": "A waist-up front-facing selfie of <<<7d30e2b0-b7b3-40cb-9352-592b250e2b60>>>, a 27-year-old Chinese woman in Chengdu, her body angled about thirty-five degrees to her right, her face turned back to the camera which is held slightly above her eye level.\n\nHer build: long and supple rather than heavily built — a dancer's line. Narrow shoulders with clear definition across the upper back, a naturally full but not large bust, visible collarbone and long lean arms. Her waist is long and narrow with soft muscle definition down the sides, and her abdomen is flat. Fair, luminous porcelain-toned skin with a warm undertone (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light chestnut-brown hair is damp and clipped up off her neck, a few wet strands stuck at her temples, both eyebrows visible.\n\nShe wears a plain white cotton camisole and soft grey shorts.\n\nShe is in her bathroom doorway in the morning. Behind her: a fogged mirror edge out of frame, a toothbrush in a cup, a folded towel over the rail, a bottle of face wash on the basin.\n\nCool morning daylight from the small window, an ordinary phone exposure, the bathroom interior dim behind her.\n\nShe looks into the lens with a plain, unmade-up morning face, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nFront camera quality — slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, NOT ultra-crisp or overly HD.",
+  "job": "ac35561a-efb6-4b35-86e9-8eb878ad4814",
+  "file": "r3.jpg",
+  "note": "⚠️ 變成鏡子自拍且手機入鏡。我指定的是 front-facing selfie（前鏡頭視角），但場景寫了浴室與鏡子邊緣，模型改成對鏡拍且手機在畫面裡。這正是 `iris-chen/generation_notes.md` 記載的自拍視角陷阱。臉與 master 一致。服裝也偏離（露腰短版）。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—（不指定姿勢）",
+  "view": "他拍",
+  "new": true,
+  "prompt": "A candid full-length snapshot of <<<7d30e2b0-b7b3-40cb-9352-592b250e2b60>>>, a 27-year-old Chinese woman in Chengdu, photographed from head to feet with her whole body inside the frame, in the entryway of her own flat about to go out. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: long and supple rather than heavily built — a dancer's line. Narrow shoulders with clear definition across the upper back, a naturally full but not large bust, visible collarbone and long lean arms. Her waist is long and narrow with soft muscle definition down the sides, and her abdomen is flat. Her hips are about as wide as her shoulders and her legs are long and straight. She is 167cm. Fair, luminous porcelain-toned skin with a warm undertone (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light chestnut-brown hair is down in loose waves with one side pushed back behind her ear, both eyebrows and her jawline visible.\n\nShe wears a long unbuttoned oatmeal wool coat over a fitted black knit and wide-leg cream trousers, with brown leather loafers.\n\nThe entryway: a shoe rack with three pairs on it, a key dish on a low cabinet, a coat hook with a scarf hanging.\n\nOrdinary daylight from the open door, an ordinary phone exposure, the hallway behind her much darker.\n\nShe is standing with her weight on one hip, drawing the strap of a shoulder bag across her body with one hand while the other settles the front of her coat, looking down at what her hands are doing rather than at the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading.",
+  "job": "e4fbe408-857e-446c-b039-4f23516fd4b5",
+  "file": "r4.jpg",
+  "note": "**§3-E 新寫法：成功。** 玄關、重心偏一側、一手拉包帶一手整理大衣前襟、視線看自己的手。自然，可發布。"
+ },
+ "5": {
+  "pillar": "外出 / 成都",
+  "frame": "全身",
+  "angle": "—（不指定姿勢）",
+  "view": "他拍",
+  "new": true,
+  "prompt": "A candid full-length snapshot of <<<7d30e2b0-b7b3-40cb-9352-592b250e2b60>>>, a 27-year-old Chinese woman, photographed from head to feet with her whole body inside the frame, on a quiet Chengdu lane very early in the morning. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: long and supple rather than heavily built — a dancer's line. Narrow shoulders with clear definition across the upper back, a naturally full but not large bust, visible collarbone and long lean arms. Her waist is long and narrow with soft muscle definition down the sides, and her abdomen is flat. Her hips are about as wide as her shoulders and her legs are long and straight. She is 167cm. Fair, luminous porcelain-toned skin with a warm undertone (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light chestnut-brown hair is tied in a low ponytail with loose strands at the front, both eyebrows and her jawline visible.\n\nShe wears a black zip windbreaker over a white tee and straight grey track trousers, with white trainers.\n\nThe lane: old plane trees along the kerb, a shuttered noodle shop, bicycles leaning against a wall, a stack of plastic stools not yet set out.\n\nSoft overcast early light through the trees, an ordinary phone exposure, the deep shade under the trees noticeably darker.\n\nShe is mid-turn on the pavement with a takeaway cup in one hand, her free hand pushing a loose strand of hair off her face, her weight on her front foot, glancing toward the camera as she turns.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, very slight motion blur at her moving hand.",
+  "job": "c96c9892-e1e2-4b92-9dc8-13985d1e201d",
+  "file": "r5.jpg",
+  "note": "**§3-E 新寫法：成功。** 巷弄轉身中、一手拿外帶杯、一手撥頭髮、重心在前腳。自然，可發布。"
+ },
+ "_meta": {
+  "persona": "ruoruo-tang",
+  "date": "2026-09-04",
+  "credits": 5,
+  "element": "7d30e2b0-b7b3-40cb-9352-592b250e2b60 (ruoruo-face-only-v1，純臉緊裁切，0 credits，hash 已核對)",
+  "outcome": "5/5 臉與 master 一致。#4 #5 用 §3-E 新寫法，兩張都自然可發布。#2 朝向偏離、#3 變鏡子自拍，兩張需判定。"
+ },
+ "_rule_3E_second_validation": {
+  "personas": "nanami（#4 #5）、ruoruo（#4 #5）",
+  "result": "4/4 成功，無一張僵硬",
+  "verdict": "§3-E 連續兩位驗證通過，作為其餘 14 位的標準寫法。"
+ },
+ "_new_finding_selfie_mirror": {
+  "name": "自拍場景寫到鏡子，就會變成對鏡自拍且手機入鏡",
+  "evidence": "ruoruo #3：prompt 寫 front-facing selfie，但場景含「浴室、鏡子邊緣」，成圖變成對鏡拍、手機在畫面中央",
+  "prior_art": "kols/iris-chen/generation_notes.md 已記載自拍視角規則：描述照片本身的視角，不要描述『她在拍自拍』的動作",
+  "rule": "自拍取向的 prompt，場景描述裡不要出現鏡子；要拍鏡子自拍就明講 mirror selfie 並接受手機入鏡。"
+ }
+}

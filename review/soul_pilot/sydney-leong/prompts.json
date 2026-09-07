@@ -1,0 +1,82 @@
+{
+ "1": {
+  "pillar": "私下 / 老屋樓上",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<37413c2e-1fd5-4272-bc42-d58db3aca3b7>>>, a 22-year-old Chinese-Malaysian woman in George Town, Penang, sitting on the floorboards upstairs in her old shophouse after closing the studio, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: small and sweet-looking but full — 159cm and 45kg, narrow shoulders, a full bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a light honey blonde-brown, mid-length and slightly wavy, half fallen out of the tie she wore all day. Both eyebrows and her whole jawline are visible.\n\nShe wears a fitted white cotton tank top with her canvas work apron still on over it, the apron strings loose, a faint dusting of flour along one forearm and across her collarbone.\n\nUpstairs in the old shophouse: worn floorboards, a louvred window with the shutters half open, a ceiling fan, a stack of flat cake boxes against the wall, a mug on the floor beside her.\n\nLate afternoon sun coming in low through the louvres and striping the floor, an ordinary phone exposure, the depth of the room much darker.\n\nShe has one knee up with an arm resting on it and has just looked over at the lens, a tired open smile, eyes on the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "7bf838b7-0f75-4d9e-ad78-1050215611e5",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "老屋樓上、百葉窗透進的南洋午後斜光在地上拉出光條、吊扇、壁扇、堆疊的蛋糕盒、地上的馬克杯、手臂上沾的麵粉。圍裙底下貼身白背心、單膝屈起。人設訊息完整。偏差：背心偏短版（覆蓋度偏差同向），但這正是她私下支柱的設定。"
+ },
+ "2": {
+  "pillar": "烘焙工作",
+  "frame": "胸上",
+  "angle": "左轉 35°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<37413c2e-1fd5-4272-bc42-d58db3aca3b7>>>, a 22-year-old Chinese-Malaysian woman working alone in her small baking studio in George Town, Penang, her body turned about thirty-five degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: small and sweet-looking but full — narrow shoulders, a full bust, a very small waist. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light honey blonde-brown hair is tied back and tucked up off her neck for food safety, with a few short pieces escaping at her temple, her forehead, both eyebrows and her whole jawline fully exposed.\n\nShe wears a fitted short-sleeve black tee under a flour-marked canvas apron, the neck strap crossing her collarbone, and her sleeves pushed up.\n\nThe studio: a stainless worktop with a stand mixer running, a marble slab dusted with flour, a piping bag laid down mid-job, a tray of unbaked tarts, a shelf of labelled jars, a domestic oven with its light on.\n\nFlat daylight from the shophouse window, an ordinary phone exposure, the back of the studio darker.\n\nShe is scraping the side of the mixing bowl with a spatula in one hand and has looked up at the lens mid-task, cheeks a little flushed from the oven, mouth slightly open.\n\nThe only person anywhere in this photograph is her — she works alone, no assistant, no customer, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "62ff92d8-f090-4e03-802f-f250c11093fe",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "攪拌機運轉中、撒了麵粉的大理石板、放下的擠花袋、一盤蛋塔、標籤玻璃罐、開著燈的烤箱、頭髮綁起收好（食安）。一個人工作，沒有助手也沒有客人。工作場景讓年齡感明確是成年人，符合她 `brand_dont` 第一條。偏差：黑T 變成短版露腰（覆蓋度偏差同向）。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<37413c2e-1fd5-4272-bc42-d58db3aca3b7>>>, a 22-year-old Chinese-Malaysian woman in Penang, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: small and sweet-looking but full — narrow shoulders, a full bust, a very small waist. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light honey blonde-brown hair is wet and combed straight back off her face, both eyebrows and her whole jawline bare.\n\nShe wears a thick white towelling bathrobe with full-length sleeves that reach her wrists, wrapped closed over her chest and tied at the waist with its own belt, the shawl collar folded flat across both shoulders.\n\nShe has just come out of the shower and is standing in the upstairs corridor of the old shophouse, a closed panelled door filling the wall behind her, a folded towel over the wooden rail beside her and a pair of slippers on the floorboards.\n\nEarly daylight from a louvred window out of frame, an ordinary phone exposure, the far end of the corridor much darker.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the corridor. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "a430344b-b0be-4d24-8616-119a200e0d13",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "**本批最重要的一張——§3-F 的乾淨驗證。** 全程沒有提到「鏡子」「手機」「螢幕」任何一個詞，改用「一扇關上的鑲板門填滿她身後的牆」把位置填滿。結果：**沒有鏡子、沒有手機、沒有螢幕**，而且**浴袍完全照規格出來**——長袖到手腕、繫腰帶、和服領平貼雙肩，零覆蓋度偏差。\n\n這是整個專案第一張「浴室／晨間」幀在服裝上完全沒有偏移。對照 angeline #3r（同樣寫了浴袍規格，但段落裡塞了兩句否定句，結果浴袍被拉下單肩）——**假設：同一段落裡的否定句會排擠掉服裝指令。尚未證明，只有這一輪的對照。**\n\n場景：老屋樓上走廊、木樓梯、百葉窗、木欄杆上的毛巾、地板上的拖鞋。"
+ },
+ "4": {
+  "pillar": "穿搭",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<37413c2e-1fd5-4272-bc42-d58db3aca3b7>>>, a 22-year-old Chinese-Malaysian woman, downstairs in her shophouse studio packing an order to go out. Her whole body from the top of her head down to her shoes is inside the frame, with the tiled floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: small and sweet-looking but full — 159cm and 45kg, narrow shoulders, a full bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light honey blonde-brown hair is in two low braids, mid-length and slightly wavy, both eyebrows and her jawline visible.\n\nShe wears a fitted cream ribbed top tucked into a light denim midi skirt, a striped apron over the top, and white canvas shoes.\n\nThe studio: encaustic floor tiles, a long wooden work table with cake boxes and ribbon on it, a roll of parchment, a chalkboard with the week's orders, a rattan basket of paper bags by the door.\n\nBright ordinary daylight through the open shopfront, an even everyday exposure, the back of the room much darker.\n\nHer weight is on one leg and she is leaning in over the table with both hands tying a ribbon around a stacked cake box, her head down watching the knot.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no customer, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "ab468859-6bab-49a1-a1bf-18762e65a924",
+  "file": "train_04.jpg",
+  "verdict": "收（記錄一項已複驗的偏差）",
+  "note": "**§3-E 成功。** 俯身在工作桌上雙手綁蛋糕盒緞帶、低頭看結。花磚地、蛋糕盒與緞帶、烘焙紙捲、本週訂單黑板、門邊藤籃裡的紙袋。低雙辮。**服裝也零偏差**——米色羅紋上衣紮進丹寧中裙、條紋圍裙。\n\n**已複驗的偏差**：畫面最左緣、透過敞開的店面玻璃，街上有一個路人（白襯衫軀幹、深色頭髮、完全失焦、**沒有可辨識的臉**）。與 `miu-shiraishi` #5 同一類：技術上違反「無其他人」，但沒有臉就對 Soul 身分訓練既無貢獻也無污染；店面開向街道，遠處有模糊路人反而是真實感。判定標準與先前一致：**只有清楚的第二張臉才廢棄。**"
+ },
+ "5": {
+  "pillar": "外出 / 檳城",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<37413c2e-1fd5-4272-bc42-d58db3aca3b7>>>, a 22-year-old Chinese-Malaysian woman, walking along a five-foot way of old shophouses in George Town, Penang, early in the morning before the shops open. Her whole body from the top of her head down to her sandals is inside the frame, with the tiled walkway beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: small and sweet-looking but full — 159cm and 45kg, narrow shoulders, a full bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer light honey blonde-brown hair is down, mid-length and slightly wavy, moving a little with her step, both eyebrows and her jawline visible.\n\nShe wears a short-sleeve butter-yellow cotton blouse tucked into wide beige linen trousers, with flat leather sandals and a woven basket bag on one arm.\n\nThe five-foot way: a row of arched pillars, peeling pastel shophouse fronts, green wooden shutters, a folded metal gate, a potted plant on the step, the wet tiled walkway.\n\nEarly overcast daylight down the length of the arcade, an even everyday exposure, the shop interiors on one side much darker.\n\nShe is mid-stride with her weight coming down on one leg, the basket bag held in the crook of one arm and a paper bag of bread in the other hand, her head turned to look sideways into a shopfront as she passes, not looking at the camera.\n\nThe street is empty this early; the only person anywhere in this photograph is her — no other pedestrians, no shopkeepers, no one in the background, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person on any wall.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to sandals, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "e4fda493-566a-440d-88db-d88eeebbfd39",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**本批最好的一張、可直接發。** 喬治市五腳基騎樓、拱柱、剝落的粉彩店屋立面、綠色木百葉、摺疊鐵閘、階上盆栽、濕的花磚走道。走路中單腳承重、藤編籃提在臂彎、手拿麵包紙袋、側頭看店面不看鏡頭。街上沒有其他人、無裝置。**服裝零偏差**——奶油黃短袖襯衫紮進寬版米色亞麻褲。"
+ },
+ "_element": {
+  "id": "37413c2e-1fd5-4272-bc42-d58db3aca3b7",
+  "name": "sydney-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/sydney-leong/identity/element_face_tight.jpg（landmark 定位臉部裁切，1449×1598）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_coverage_observation": {
+  "observation": "本輪 sydney 的 #3 #4 #5 三張**完全沒有覆蓋度偏差**，是專案至今第一次連續三張服裝完全照規格。",
+  "shared_property": "這三張的 prompt 都遵守 §3-F，段落裡沒有任何「不要出現某物件」的否定句。",
+  "contrast": "對照組 angeline #3r：同樣用肯定句寫足浴袍規格，但同一段塞了『There is no mirror… and no phone, tablet, television or lit screen』，浴袍被拉下單肩。",
+  "status": "**假設，尚未證明。** 只有一輪對照，樣本不足以推翻既有的「覆蓋度無法用 prompt 控制」結論。下一輪繼續全面套用 §3-F，再看是否重現。",
+  "age_note": "她是甜系童顏人設，`brand_dont` 第一條同樣是不得降低年齡感。五張全部在成年人的工作／生活語境，沒有幼態道具。"
+ }
+}

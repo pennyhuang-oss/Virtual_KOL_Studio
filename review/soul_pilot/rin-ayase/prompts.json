@@ -1,0 +1,76 @@
+{
+ "1": {
+  "pillar": "私下 / 白天的公寓",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<308e2283-bb04-48d7-be67-0b1bc6cf68f5>>>, a 25-year-old Japanese woman in Tokyo, sitting on the edge of her bed in her high-floor apartment in the middle of the day with the curtains drawn, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: an opulent hourglass — 166cm and 50kg, sloping shoulders, a long neck, a full high bust, a very narrow waist and softly rounded hips. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a deep wine-brown that only reads red where the light catches it, long and loose and a little slept-on, pushed behind one shoulder. Both eyebrows and her whole jawline are visible.\n\nShe wears a charcoal silk robe with full-length sleeves, wrapped over and tied at the waist with its sash.\n\nHer bedroom in the daytime: heavy curtains pulled almost shut across a floor-to-ceiling window, a rumpled duvet, a glass of water and a bottle of eye drops on the nightstand, a garment bag hanging on the wardrobe door.\n\nOnly a thin blade of daylight through the gap in the curtains, an ordinary phone exposure, the rest of the room in shadow.\n\nHer makeup is completely off, her face bare and a little tired, and she is looking straight at the lens with a small closed-mouth expression.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "10115c60-498a-4eb6-bd2a-c7ffd8161215",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "白天拉起窗簾的高樓公寓、只有窗簾縫透進的一道光、床、衣物防塵袋、水杯與眼藥水。深酒紅棕在這張最明顯。偏差：①指定「卸妝、素顏」但仍是全妝紅唇；②絲質浴袍被拉下雙肩（覆蓋度偏差同向）。畫面本身完全符合她「私下自己決定尺度」的人設。"
+ },
+ "2": {
+  "pillar": "出勤前準備",
+  "frame": "胸上",
+  "angle": "右轉 35°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<308e2283-bb04-48d7-be67-0b1bc6cf68f5>>>, a 25-year-old Japanese woman in Tokyo, sitting at her dressing table getting ready for work, her body turned about thirty-five degrees to her right and her head turned back toward the lens over her near shoulder.\n\nHer build: an opulent hourglass — sloping shoulders, a long neck, a full high bust, a very narrow waist. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-brown hair is pinned up into a low chignon at the nape with not a strand loose, her forehead, both eyebrows and her whole jawline fully exposed.\n\nShe wears a black silk camisole with a fine strap, a pearl stud in each ear, and a fine gold chain at her collarbone. Her makeup is finished Ginza work makeup: a clean matte base, a precise flicked eyeline, and a true red lip.\n\nThe table in front of her: a lit table lamp, a lacquer tray of brushes, an open compact, a hairpin dish, a folded silk scarf. Behind her is a plain papered wall.\n\nWarm light from the table lamp on one side of her face, an ordinary phone exposure, the wall behind her much darker.\n\nShe has one hand at her ear fitting the second earring and has just glanced over at the lens, chin slightly down, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "98fcd3c3-894a-4fb5-acae-4552e33d88da",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "**§3-F 首次驗證成功。** 梳妝台場景全程沒有提到「鏡子」這個詞，改用「桌上有檯燈、漆盤刷具、粉餅、髮夾碟、絲巾，身後是一面素色壁紙牆」把位置填滿——**畫面裡沒有出現鏡子**，也沒有鏡子自拍污染。銀座妝（乾淨底妝＋精準眼線＋正紅唇）、低髮髻、珍珠耳釘、正在戴第二只耳環，全部執行。偏差：髮色在這張偏近黑，酒紅看不太出來（她的設定本來就是「燈下才看得出來」，可接受但這張最弱）。"
+ },
+ "3": {
+  "pillar": "下班後清晨",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<308e2283-bb04-48d7-be67-0b1bc6cf68f5>>>, a 25-year-old Japanese woman in Tokyo, seen almost straight on, her face turned no more than ten degrees off the lens, home at dawn after a night of work.\n\nHer build: an opulent hourglass — sloping shoulders, a long neck, a full high bust, a very narrow waist. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-brown hair has come half down out of the chignon, a few strands loose at her temple and along her neck, both eyebrows and her whole jawline visible.\n\nShe wears an oversized grey sweatshirt she has pulled on over everything, the neckband sitting flat at her collarbone.\n\nShe is standing in her kitchen at first light, a glass of water in one hand, her coat and bag dropped over a stool behind her, a plate of konbini onigiri still wrapped on the counter, the kettle steaming.\n\nCold first light through the kitchen window, an ordinary phone exposure, the rest of the flat still dark.\n\nHer makeup is half taken off, the red lip mostly gone and the eyeline smudged, and she looks straight at the lens with a tired, unguarded expression, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "b5f7c05e-6c20-4602-96aa-c16e811a80fb",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "**本批身分辨識最好的一張。** 清晨的廚房、天光剛亮、大衣與包丟在椅子上、還沒拆的御飯糰、水壺冒煙、髮髻半散、寬版灰運動衫、手拿水杯。妝半卸、眼線糊掉的狀態有做出來。正面、臉大、光線乾淨。"
+ },
+ "4": {
+  "pillar": "穿搭三人格",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<308e2283-bb04-48d7-be67-0b1bc6cf68f5>>>, a 25-year-old Japanese woman in Tokyo, in the hallway of her apartment on her way out to work. Her whole body from the top of her head down to her shoes is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: an opulent hourglass — 166cm and 50kg, sloping shoulders, a long neck, a full high bust, a very narrow waist and softly rounded hips, with long legs. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-brown hair is blown out into big soft waves down her back, both eyebrows and her jawline visible.\n\nShe wears a fitted black knee-length dress with a high round neckline and elbow sleeves, sheer stockings and black pointed heels.\n\nThe hallway: a shoe cupboard with heels lined up, a coat rail with a camel coat and a garment bag on it, an umbrella stand, a small console with keys and a card case on it.\n\nOrdinary evening light from the hallway ceiling fitting, an even everyday exposure, the room behind her much darker.\n\nHer weight is on one leg with the other heel braced against the shoe cupboard, and she is bent slightly forward with both hands fastening the ankle strap of that shoe, head down watching her fingers.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "3332beaa-d871-4a4c-89ff-be3c66588647",
+  "file": "train_04.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 玄關單腳踩鞋櫃、俯身雙手扣腳踝細帶、低頭看手指。高跟鞋排排站、駝色大衣、傘架、鑰匙與名片夾。頭到鞋全入鏡、地板可見、無裝置。\n\n**偏差（有紀錄價值）**：我寫的是「高圓領、七分袖」，出來的洋裝左肩有一個**露肩開口（cold-shoulder cutout）**。這個缺陷 repo 裡出現過一次——`nico-tsai` 的 `_r10_note`，當時的成因是 Reference Element 本身帶了一件有肩部開口的衣服。**但這次 element 是純臉裁切、根本沒有衣服**，所以這次是 seedream 自己對「合身黑洋裝」的先驗，不是 element 污染。兩者要分開記。服裝細節不影響 Soul（V2 不繼承服裝），故收下。"
+ },
+ "5": {
+  "pillar": "飯店 / 旅遊",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<308e2283-bb04-48d7-be67-0b1bc6cf68f5>>>, a 25-year-old Japanese woman, in a hotel room on a trip, in the morning. Her whole body from the top of her head down to her bare feet is inside the frame, with the carpet beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: an opulent hourglass — 166cm and 50kg, sloping shoulders, a long neck, a full high bust, a very narrow waist and softly rounded hips, with long legs. Fair, cool-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer deep wine-brown hair is down and loosely waved, still a little flat on one side from sleeping, both eyebrows and her jawline visible.\n\nShe wears a long-sleeved ivory knit dress that falls below the knee, with a fine belt at the waist.\n\nThe hotel room: an unmade bed with the duvet pushed back, an open suitcase on the luggage rack with clothes half unpacked, a room-service tray on the desk, a kettle and two cups, the curtain half drawn across a wide window.\n\nOvercast morning daylight through the half-open curtain, an even everyday exposure, the far side of the room much darker.\n\nHer weight is on one leg and she is leaning over the open suitcase with both hands folding something back into it, her head down looking at what she is packing.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to feet, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "64501891-72ff-418e-aa14-e7b8c332736f",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 飯店房間、俯身在打開的行李箱上雙手摺衣服、低頭看自己在收什麼。沒鋪的床、行李架、備品水壺與兩個杯子、半拉的窗簾。頭到赤腳全入鏡、地毯可見、無裝置。**酒紅髮色在這張最清楚。** 偏差：指定「長袖針織洋裝」，領口變成大方領（覆蓋度偏差同向）。"
+ },
+ "_element": {
+  "id": "308e2283-bb04-48d7-be67-0b1bc6cf68f5",
+  "name": "rin-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/rin-ayase/identity/element_face_tight.jpg（landmark 定位臉部裁切，1255×1411）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_no_bathroom_frame": "她的五個支柱裡沒有「浴室／晨間」，所以素顏辨識幀改由 #3「下班後清晨」承擔——妝半卸、正面、光線乾淨，效果比浴袍幀更好且更貼人設。"
+}

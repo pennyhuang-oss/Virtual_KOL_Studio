@@ -62,13 +62,14 @@
       "style_vibe": "蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
       "measurements": {
         "height_cm": 165,
-        "weight_kg": 47,
+        "weight_kg": 50,
         "bust_cm": 86,
         "waist_cm": 57,
         "hip_cm": 88,
         "cup_size": "D",
         "leg_length_cm": 79,
-        "body_ratio_note": "腰臀比約0.65，腿長佔身高47.9%，古典勻稱"
+        "body_ratio_note": "腰臀比約0.65，腿長佔身高47.9%，古典勻稱",
+        "_weight_revision_2026_09_03": "體重由 47kg 調整為 50kg（BMI 17.26 → 18.37）。使用者裁決：只改 wanyin 一位作為 pilot，其餘 18 位維持原設定。註：50kg 落在 BMI 18.37，尚未到 18.5（需 51kg 才到 18.74）；採用 50kg 是因為呈給使用者裁決的表格寫的是 47→50。依 repo 既有裁決 U-03，體重不進入 prompt，只作為 metadata，因此此次調整不影響生成結果；是否推廣到其他 18 位待 wanyin 整條 C-0~C-5 走完後再定。"
       }
     }
   },

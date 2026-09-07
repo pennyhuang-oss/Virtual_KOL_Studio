@@ -1,0 +1,46 @@
+{
+ "persona": "somi-oh",
+ "status": "approved_by_user",
+ "approved_on": "2026-09-01",
+ "chosen": "C",
+ "job_id": "dd23a436-ac8a-4a4f-a539-330011d162c6",
+ "file": "kols/somi-oh/identity/identity_master.jpg",
+ "sha256": "da0cb2c77c22c54cc9a30f324f1a4d1a1776d7f8cc8b1283dce1ac60d0820bdc",
+ "sources": {
+  "臉型顎線": {
+   "ref": "ref_04",
+   "crop": "review/donor_cards/ref_04__FACE_SHAPE_AND_JAW.jpg",
+   "sha256": "d4b97239bb5c83b2130cd4fa4d08f84f2b885ac63b32ca9fedd7f9b9a856b646",
+   "grade": "A",
+   "part_px": 206.6,
+   "yaw": 0.0595
+  },
+  "眼與眉": {
+   "ref": "ref_03",
+   "crop": "review/donor_cards/ref_03__EYES_AND_BROWS.jpg",
+   "sha256": "921df9d17a1b7f70ee19e726434ae302b126efe05fdd4ab74797b57688319690",
+   "grade": "A",
+   "part_px": 200.4,
+   "yaw": 0.021
+  },
+  "鼻": {
+   "ref": "ref_08",
+   "crop": "review/donor_cards/ref_08__NOSE.jpg",
+   "sha256": "9a8d1d3acf4a5789d977e08de5e4d8e7f34207fd941d228d77f97e03f11ccb1e",
+   "grade": "B",
+   "part_px": 87.6,
+   "yaw": 0.1609
+  },
+  "口": {
+   "ref": "ref_01",
+   "crop": "review/donor_cards/ref_01__MOUTH.jpg",
+   "sha256": "55d1521693371f815f9f710f55d1c830aa1965828d91e38c7b9b7f6499aacdff",
+   "grade": "B",
+   "part_px": 60.8,
+   "yaw": 0.0313
+  }
+ },
+ "credits": 2,
+ "_hair_note": "C 是瀏海重跑版：同樣四張來源，只把髮型段落改成露眉的空氣瀏海。使用者偏好有瀏海的造型，見 BATCH3_FACE_INVARIANT.md 的瀏海規則。",
+ "claude_technical_pass": "照做。兩道眉全長清楚可讀，EYES_AND_BROWS（ref_03）驗得到。其餘硬退件項目全過。髮長到鎖骨下、狼尾層次成立。髮色仍偏銅橘，未到蜜橘棕。"
+}

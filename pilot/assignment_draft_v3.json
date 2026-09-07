@@ -1,0 +1,179 @@
+{
+ "_status": "DRAFT v3 — 76 格零違規，待 T-03 相容理由與使用者批准",
+ "_rules": {
+  "cap_ref_slot": 2,
+  "cap_ref_total": 7,
+  "face_exception_source": [
+   "ref_04"
+  ],
+  "ref8_exception_source": [
+   "ref_01"
+  ],
+  "max_shared": 1,
+  "max_unknown_per_persona": 2,
+  "pilot": "cheryl-soh",
+  "pilot_unknown": 1,
+  "_user_ratified": "使用者批准：恰好一張可跨槽用 8 次"
+ },
+ "assignment": {
+  "angel-chiu": {
+   "FACE_SHAPE_AND_JAW": "ref_02",
+   "EYES_AND_BROWS": "ref_08",
+   "NOSE": "ref_03",
+   "MOUTH": "ref_06"
+  },
+  "angeline-kwee": {
+   "FACE_SHAPE_AND_JAW": "ref_04",
+   "EYES_AND_BROWS": "ref_05",
+   "NOSE": "ref_02",
+   "MOUTH": "ref_08"
+  },
+  "cheryl-soh": {
+   "FACE_SHAPE_AND_JAW": "ref_02",
+   "EYES_AND_BROWS": "ref_01",
+   "NOSE": "ref_15",
+   "MOUTH": "ref_07"
+  },
+  "emma-kao": {
+   "FACE_SHAPE_AND_JAW": "ref_01",
+   "EYES_AND_BROWS": "ref_14",
+   "NOSE": "ref_04",
+   "MOUTH": "ref_10"
+  },
+  "jia-seo": {
+   "FACE_SHAPE_AND_JAW": "ref_09",
+   "EYES_AND_BROWS": "ref_07",
+   "NOSE": "ref_14",
+   "MOUTH": "ref_03"
+  },
+  "kanon-komori": {
+   "FACE_SHAPE_AND_JAW": "ref_11",
+   "EYES_AND_BROWS": "ref_03",
+   "NOSE": "ref_10",
+   "MOUTH": "ref_06"
+  },
+  "miu-shiraishi": {
+   "FACE_SHAPE_AND_JAW": "ref_04",
+   "EYES_AND_BROWS": "ref_07",
+   "NOSE": "ref_01",
+   "MOUTH": "ref_02"
+  },
+  "nanami-fujiwara": {
+   "FACE_SHAPE_AND_JAW": "ref_10",
+   "EYES_AND_BROWS": "ref_15",
+   "NOSE": "ref_08",
+   "MOUTH": "ref_01"
+  },
+  "peggy-lee": {
+   "FACE_SHAPE_AND_JAW": "ref_04",
+   "EYES_AND_BROWS": "ref_10",
+   "NOSE": "ref_08",
+   "MOUTH": "ref_15"
+  },
+  "rin-ayase": {
+   "FACE_SHAPE_AND_JAW": "ref_08",
+   "EYES_AND_BROWS": "ref_02",
+   "NOSE": "ref_04",
+   "MOUTH": "ref_15"
+  },
+  "ruoruo-tang": {
+   "FACE_SHAPE_AND_JAW": "ref_11",
+   "EYES_AND_BROWS": "ref_09",
+   "NOSE": "ref_03",
+   "MOUTH": "ref_01"
+  },
+  "somi-oh": {
+   "FACE_SHAPE_AND_JAW": "ref_10",
+   "EYES_AND_BROWS": "ref_09",
+   "NOSE": "ref_07",
+   "MOUTH": "ref_13"
+  },
+  "sydney-leong": {
+   "FACE_SHAPE_AND_JAW": "ref_07",
+   "EYES_AND_BROWS": "ref_01",
+   "NOSE": "ref_10",
+   "MOUTH": "ref_03"
+  },
+  "tammy-chou": {
+   "FACE_SHAPE_AND_JAW": "ref_08",
+   "EYES_AND_BROWS": "ref_10",
+   "NOSE": "ref_07",
+   "MOUTH": "ref_14"
+  },
+  "wanyin-jiang": {
+   "FACE_SHAPE_AND_JAW": "ref_15",
+   "EYES_AND_BROWS": "ref_14",
+   "NOSE": "ref_02",
+   "MOUTH": "ref_05"
+  },
+  "wendy-yeo": {
+   "FACE_SHAPE_AND_JAW": "ref_01",
+   "EYES_AND_BROWS": "ref_03",
+   "NOSE": "ref_14",
+   "MOUTH": "ref_05"
+  },
+  "yerin-han": {
+   "FACE_SHAPE_AND_JAW": "ref_09",
+   "EYES_AND_BROWS": "ref_05",
+   "NOSE": "ref_06",
+   "MOUTH": "ref_13"
+  },
+  "zhiyi-shen": {
+   "FACE_SHAPE_AND_JAW": "ref_07",
+   "EYES_AND_BROWS": "ref_15",
+   "NOSE": "ref_01",
+   "MOUTH": "ref_14"
+  },
+  "zoey-yeh": {
+   "FACE_SHAPE_AND_JAW": "ref_15",
+   "EYES_AND_BROWS": "ref_08",
+   "NOSE": "ref_06",
+   "MOUTH": "ref_02"
+  }
+ },
+ "unknown_per_persona": {
+  "angel-chiu": 2,
+  "angeline-kwee": 2,
+  "cheryl-soh": 1,
+  "emma-kao": 2,
+  "jia-seo": 2,
+  "kanon-komori": 2,
+  "miu-shiraishi": 1,
+  "nanami-fujiwara": 1,
+  "peggy-lee": 2,
+  "rin-ayase": 2,
+  "ruoruo-tang": 1,
+  "somi-oh": 2,
+  "sydney-leong": 2,
+  "tammy-chou": 2,
+  "wanyin-jiang": 2,
+  "wendy-yeo": 1,
+  "yerin-han": 2,
+  "zhiyi-shen": 2,
+  "zoey-yeh": 1
+ },
+ "ref_usage": {
+  "ref_02": 7,
+  "ref_08": 7,
+  "ref_03": 6,
+  "ref_06": 4,
+  "ref_04": 5,
+  "ref_05": 4,
+  "ref_01": 8,
+  "ref_15": 7,
+  "ref_07": 7,
+  "ref_14": 6,
+  "ref_10": 7,
+  "ref_09": 4,
+  "ref_11": 2,
+  "ref_13": 2
+ },
+ "calibration_candidates": [
+  "cheryl-soh",
+  "miu-shiraishi",
+  "nanami-fujiwara",
+  "ruoruo-tang",
+  "wendy-yeo",
+  "zoey-yeh"
+ ]
+}

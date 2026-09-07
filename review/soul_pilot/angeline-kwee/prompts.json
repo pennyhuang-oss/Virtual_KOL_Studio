@@ -1,0 +1,89 @@
+{
+ "1": {
+  "pillar": "私下 / 市中心公寓",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<46e27e11-d98a-41cc-9015-caaa0b5f36c4>>>, a 23-year-old Chinese-Indonesian woman in Jakarta, sitting on the arm of the sofa in her city-centre apartment in the evening after closing the shop, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: tall and evenly proportioned — 171cm and 53kg, long limbs, square-set shoulders, a full bust, a narrow waist and hips about as wide as her shoulders. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a low-saturation milk-tea grey-brown, long and loosely waved, still slightly damp from the shower and pushed over one shoulder. Both eyebrows and her whole jawline are visible.\n\nShe wears a champagne silk slip dress with narrow straps, the hem falling past her knee.\n\nHer apartment at night: floor-to-ceiling windows with the city below, a teak coffee table, a rattan armchair, an open shipping box of new stock, a glass of iced tea sweating on the table.\n\nOne warm floor lamp beside the sofa is the only light on, an ordinary phone exposure, the glass behind her almost black.\n\nShe has one bare foot tucked under her and is winding a strand of hair round one finger, a small closed-mouth smile, eyes on the lens.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "9ae45817-cd1a-4c6e-917e-8bb513e20d6b",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "落地窗＋雅加達夜景、柚木茶几、藤編扶手椅、剛拆的貨箱、冰茶。香檳色絲質吊帶裙、奶茶灰棕長波浪剛洗完頭。指定元素全中，臉與 master 一致。"
+ },
+ "2": {
+  "pillar": "選物店工作",
+  "frame": "胸上",
+  "angle": "左轉 40°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<46e27e11-d98a-41cc-9015-caaa0b5f36c4>>>, a 23-year-old Chinese-Indonesian woman in Jakarta, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: tall and evenly proportioned — long limbs, square-set shoulders, a full bust, a narrow waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea grey-brown hair is down and loosely waved, tucked behind one ear, both eyebrows and her whole jawline visible.\n\nShe wears a fitted cream ribbed knit top tucked into a camel linen midi skirt, with a thin gold chain at her collarbone and a measuring tape hanging round her neck.\n\nShe is standing in the select shop she runs in South Jakarta, beside the rail she is re-hanging. Around her: white plastered walls, a teak display table with folded linen, a rattan stool, a palm throwing a leaf shadow across the wall, a stack of price tags and a pen on the counter.\n\nFlat morning daylight through the shopfront glass, an ordinary phone exposure, the back of the shop darker.\n\nShe is sliding a hanger along the rail with one hand and has just looked over at the lens, eyebrows slightly up, mouth closed.\n\nThe only person anywhere in this photograph is her — the shop has not opened yet, no customer, no staff, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "d42abbcb-0f24-4ec6-be23-9a0c33534bbf",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "白牆上的棕櫚葉影、柚木陳列桌、藤編凳、價格標籤、脖子上的皮尺、手在移動衣架。人設訊息最完整的一張。偏差：針織上衣變成無袖背心（覆蓋度偏差同向）。"
+ },
+ "3": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<46e27e11-d98a-41cc-9015-caaa0b5f36c4>>>, a 23-year-old Chinese-Indonesian woman in Jakarta, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: tall and evenly proportioned — long limbs, square-set shoulders, a full bust, a narrow waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea grey-brown hair is wet and pushed straight back off her face, both eyebrows and her whole jawline bare.\n\nShe wears a plain white towelling robe, the collar folded flat and closed at the front.\n\nShe has just come out of the shower and is standing in the bathroom doorway of her apartment. Behind her: a tiled wall, a glass shower screen still beaded with water, a teak stool with a folded towel, a shelf of bottles. There is no mirror anywhere in this photograph.\n\nEarly daylight through the frosted bathroom window, an ordinary phone exposure, the hallway behind her darker.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "a24023e9-8546-4010-9683-a09c77b75e71",
+  "file": null,
+  "verdict": "廢棄（第二張臉）",
+  "note": "**排除條款失效：走廊深處有一台立在架上的手機／平板，螢幕上是另一個人的臉與上半身。** 已用 native resolution + NEAREST 放大複驗（§QA-1 程序有跑），確認是可辨識的人臉，不是插值假象。第二張臉正是會污染 Soul 身分訓練的東西，因此廢棄。留檔於 `_rejected_03_second_face_on_screen.jpg`。"
+ },
+ "3r": {
+  "pillar": "浴室 / 晨間",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<46e27e11-d98a-41cc-9015-caaa0b5f36c4>>>, a 23-year-old Chinese-Indonesian woman in Jakarta, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: tall and evenly proportioned — long limbs, square-set shoulders, a full bust, a narrow waist. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea grey-brown hair is wet and pushed straight back off her face, both eyebrows and her whole jawline bare.\n\nShe wears a white towelling bathrobe with full-length sleeves, wrapped closed and tied at the waist with its own belt, the collar folded flat across both shoulders.\n\nShe has just come out of the shower and is standing in front of the closed bathroom door of her apartment, a plain painted door filling the wall behind her. Beside her: a tiled wall, a teak stool with a folded towel, a shelf of bottles. There is no mirror anywhere in this photograph, and no phone, tablet, television or lit screen of any kind anywhere in the picture.\n\nEarly daylight from a frosted window out of frame, an ordinary phone exposure, the corner behind her darker.\n\nShe is patting her cheek dry with a hand towel and looking straight at the lens with a completely bare face, no makeup, no eyeliner, no lipstick, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway or corridor, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall, and no face on any screen.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": 308877,
+  "seed_note": null,
+  "job": "52c54b7f-fe39-418b-b1e2-5056f49bbbc8",
+  "file": "train_03.jpg",
+  "verdict": "收",
+  "note": "重跑：把走廊改成一扇關上的門、並明確排除任何螢幕。**螢幕上的第二張臉已消失，訓練用的致命問題解決。** 但覆蓋度反而更偏：我明確寫了「長袖、包覆闔上、腰帶繫起、領口平貼雙肩」，模型仍然把浴袍拉下單肩、前襟大開。這是覆蓋度規則的第三個強證據（見下方 `_coverage_finding`）。"
+ },
+ "4": {
+  "pillar": "穿搭 / 選貨",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<46e27e11-d98a-41cc-9015-caaa0b5f36c4>>>, a 23-year-old Chinese-Indonesian woman in Jakarta, in the stockroom behind her shop unpacking a delivery. Her whole body from the top of her head down to her shoes is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: tall and evenly proportioned — 171cm and 53kg, long limbs, square-set shoulders, a full bust, a narrow waist and hips about as wide as her shoulders, with notably long legs. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea grey-brown hair is down and loosely waved, one side pushed behind her shoulder, both eyebrows and her jawline visible.\n\nShe wears an oversized white cotton shirt tucked into wide-leg black trousers, with flat leather loafers.\n\nThe stockroom: a wall of teak shelving, folded stock in dust bags, a cutting table, a half-opened cardboard carton on the floor, a roll of tissue paper, a clipboard on the shelf.\n\nOrdinary daylight from the propped-open back door, an even everyday exposure, the far end of the stockroom much darker.\n\nHer weight is on one leg and she is crouched slightly forward over the open carton, both hands lifting a folded garment out of it, head down looking at what she has just pulled out.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "80f5b96a-0002-4b5c-949d-78f9e219713a",
+  "file": "train_04.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 店後倉庫、俯身在紙箱上、雙手把摺好的衣服拿出來、單腳承重。柚木層架、防塵袋、裁剪桌、夾板、紙捲。頭到鞋全入鏡、地板可見、無裝置。"
+ },
+ "5": {
+  "pillar": "旅遊 / 度假期",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<46e27e11-d98a-41cc-9015-caaa0b5f36c4>>>, a 23-year-old Chinese-Indonesian woman, on the terrace of a small hotel in Bali early in the morning. Her whole body from the top of her head down to her sandals is inside the frame, with the terrace floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: tall and evenly proportioned — 171cm and 53kg, long limbs, square-set shoulders, a full bust, a narrow waist and hips about as wide as her shoulders, with notably long legs. Fair, luminous porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea grey-brown hair is down and loosely waved, lifting a little in the air off the garden, both eyebrows and her jawline visible.\n\nShe wears a long white linen dress with a straight neckline and a fine belt, and flat leather sandals.\n\nThe terrace: a low teak table with a breakfast tray, a rattan chair with a linen throw over the back, potted palms throwing leaf shadows on the terrazzo floor, an open woven bag on the chair.\n\nEarly overcast daylight over the garden, an even everyday exposure, the room behind the open doors much darker.\n\nHer weight is on one leg and she is bent slightly forward with one hand on the back of the rattan chair and the other lifting a cup off the tray, her head turned down toward the table, not looking at the camera.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in the garden, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to sandals, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "41e6dddf-6a3d-441e-8580-8d0e517c943f",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 峇里島小旅館露台、一手扶藤椅椅背、一手去拿托盤上的杯子、低頭看桌面。棕櫚葉影打在磨石子地上、亞麻蓋毯、草編包。偏差：光線比指定的「陰天」更強、是直射陽光，但仍然自然、可用。"
+ },
+ "_element": {
+  "id": "46e27e11-d98a-41cc-9015-caaa0b5f36c4",
+  "name": "angeline-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/angeline-kwee/identity/element_face_tight.jpg（landmark 定位臉部裁切，1500×1641）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_coverage_finding": "覆蓋度偏差第三次、也是目前最強的一次證據：#3r 的 prompt 用**肯定句**明確寫了長袖、包覆、繫腰帶、領口平貼雙肩，模型仍然拉下單肩、開襟。累計約 20 次觀察，**沒有任何一次往「更多覆蓋」偏**。結論：服裝覆蓋度目前無法用 prompt 控制，只能事後挑片。"
+}

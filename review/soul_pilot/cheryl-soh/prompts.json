@@ -1,0 +1,74 @@
+{
+ "1": {
+  "pillar": "私下 / 一個人的房間",
+  "frame": "胸上",
+  "angle": "正面 0–10°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<5a6c5300-ec07-41aa-9d44-8c7359c6a399>>>, a 25-year-old Chinese-Singaporean woman, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: she is tall, with square-set narrow shoulders and a long neck, and a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long black hair is down and slightly waved from having been pinned up all day, pushed back off her face so both eyebrows and her whole jawline are clearly visible.\n\nShe wears a charcoal silk pyjama set with a notched collar, the top button undone, the fabric creased across one shoulder.\n\nShe sits on the end of the bed in a hotel room. On the nightstand behind her: a room key card, a half-drunk bottle of water, a cotton pad with makeup on it and her phone charging.\n\nOne warm bedside lamp is on and the ceiling light is off, an ordinary phone exposure, the far side of the room falling into shadow.\n\nShe has just taken her makeup off and looks at the lens without any expression she is holding, lips closed.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, fine detail in the silk, natural colour grading.",
+  "job": "0a901f28-f44f-41da-b56e-c8083dc06638",
+  "file": "c1.jpg",
+  "note": "臉與 master 一致。服裝偏離：指定「翻領絲質睡衣、解開第一顆扣子」，出來是滑落單肩的款式，露出度高於指定。"
+ },
+ "2": {
+  "pillar": "制服 / 出勤",
+  "frame": "胸上",
+  "angle": "左 35–40°",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<5a6c5300-ec07-41aa-9d44-8c7359c6a399>>>, a 25-year-old Chinese-Singaporean woman, her body turned about forty degrees to her left and her head turned back toward the lens over her near shoulder.\n\nHer build: she is tall, with square-set narrow shoulders and a long neck, and a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer black hair is pinned into a smooth French twist with no strands loose, her forehead, both eyebrows and her whole jawline fully exposed.\n\nShe wears a plain navy fitted uniform dress with a mandarin collar and a patterned silk scarf knotted at the throat. There is no logo, no badge and no airline insignia anywhere on it.\n\nShe stands in the empty corridor of an airport hotel very early in the morning, a wheeled cabin bag upright beside her and a row of identical closed doors receding behind.\n\nWarm recessed ceiling lights down the corridor, an ordinary phone exposure, the far end of the corridor much darker than she is.\n\nShe looks at the lens with a composed, slightly closed expression, red lipstick already on, not smiling.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "job": "b554b7bf-5b87-41f9-92c2-8873dee1e1ec",
+  "file": "c2.jpg",
+  "note": "臉與 master 一致。法式包頭、正紅唇、無標識制服都正確，清晨無人走廊成立。轉身幅度接近指定。"
+ },
+ "3": {
+  "pillar": "新加坡的家",
+  "frame": "腰上",
+  "angle": "右 30–35°",
+  "view": "自拍",
+  "prompt": "A waist-up front-facing selfie of <<<5a6c5300-ec07-41aa-9d44-8c7359c6a399>>>, a 25-year-old Chinese-Singaporean woman, her body angled about thirty-five degrees to her right, her face turned back to the camera which is held slightly above her eye level.\n\nHer build: she is tall, with square-set narrow shoulders and a long neck, and a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer black hair is twisted into a loose top knot with strands falling at her temples and neck, both eyebrows visible.\n\nShe wears a fitted white ribbed tank top and pale grey lounge trousers.\n\nShe is in the kitchen of her own flat in Singapore. Behind her: an open fridge door with condiments in the shelf, a kettle, a laundry rack with clothes on it and the tropical green of the block opposite through the window.\n\nFlat bright afternoon light from the window, an ordinary phone exposure, the inside of the kitchen a little dim against it.\n\nShe looks straight into the lens, mouth closed, plainly just woken up.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nFront camera quality — slightly softer focus than a rear camera shot, mild natural grain, slightly lower dynamic range, NOT ultra-crisp or overly HD.",
+  "job": "81d5a227-1185-4b40-b163-5c83fe89f990",
+  "file": "c3.jpg",
+  "note": "臉與 master 一致，自拍質感正確。服裝偏離：指定「合身白色羅紋背心＋淺灰家居長褲」，出來是露腰短版背心＋低腰褲。"
+ },
+ "4": {
+  "pillar": "換裝 / 穿搭",
+  "frame": "全身",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A candid full-length snapshot of <<<5a6c5300-ec07-41aa-9d44-8c7359c6a399>>>, a 25-year-old Chinese-Singaporean woman, photographed from head to feet with her whole body inside the frame, standing in the bedroom of her Singapore flat. She is facing the camera: her face, the front of her body and both shoulders are toward the lens and her feet point toward it. Her back is not to the camera and her head is not turned away.\n\nHer build: she is tall, with square-set narrow shoulders and a long neck, and a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her hips are about as wide as her shoulders and her legs are long and straight. She is 169cm. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long black hair is tied back in a low ponytail, her fringe area swept clear so both eyebrows and her jawline are visible.\n\nShe wears a caramel knitted vest over a white cotton shirt with the sleeves rolled, tucked into black straight-leg trousers, with flat loafers.\n\nHer bedroom, with an open wardrobe beside her, two other outfits laid across the bed and an open suitcase on the floor. There is no mirror in the room.\n\nOrdinary late-afternoon light through the window, an even phone exposure, the inside of the wardrobe noticeably darker.\n\nShe has just finished dressing and looked at the camera, mouth closed, not posing.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her from head to feet, natural colour grading.",
+  "job": "73045374-dec5-4d8d-9fc9-778e961987eb",
+  "file": "c4.jpg",
+  "note": "全身正面成功，臉可見（太小 mediapipe 偵測不到，已目視確認）。焦糖針織背心、白襯衫、黑直筒褲、開放衣櫃、無鏡子都正確。"
+ },
+ "5": {
+  "pillar": "飯店 / 各國城市",
+  "frame": "全身",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A candid full-length snapshot of <<<5a6c5300-ec07-41aa-9d44-8c7359c6a399>>>, a 25-year-old Chinese-Singaporean woman, photographed from head to feet with her whole body inside the frame, standing in a hotel room at night beside a floor-to-ceiling window. She is facing the camera: her face, the front of her body and both shoulders are toward the lens and her feet point toward it. Her back is not to the camera and her head is not turned away.\n\nHer build: she is tall, with square-set narrow shoulders and a long neck, and a full rounded bust that reads clearly against how slim the rest of her is. Visible collarbone, slim upper arms. Her waist is narrow, and the contrast between that small waist and the fuller chest is part of her shape. Her hips are about as wide as her shoulders and her legs are long and straight. She is 169cm. Fair, luminous porcelain-toned skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer long black hair is down and straight, pushed behind both shoulders, both eyebrows and her whole jawline clear.\n\nShe wears a black slip dress with fine straps that falls to mid-calf, and bare feet.\n\nThe hotel room behind her: an unmade bed, an open suitcase on the rack, a room-service tray on the desk. Through the window, an unfamiliar city at night, its lights out of focus.\n\nOnly the desk lamp is on inside and the city glow comes through the glass, an ordinary phone exposure, the corners of the room going black.\n\nShe stands still and looks at the lens, jet-lagged, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the room, no one in any doorway, no hand or arm belonging to anybody else, no figure in any mirror or window reflection, no portrait or photograph of a person on any wall or screen. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about three metres away, crisp sharp focus on her, natural colour grading, gentle sensor noise in the dark areas.",
+  "job": "f5706972-9003-4675-8817-cdcf567657a8",
+  "file": "c5.jpg",
+  "note": "臉與 master 一致。全身正面成功。服裝偏離：指定「及小腿的黑色細肩帶長洋裝」，出來是短版迷你洋裝。"
+ },
+ "_meta": {
+  "persona": "cheryl-soh",
+  "date": "2026-09-03",
+  "credits": 5,
+  "element": "5a6c5300-ec07-41aa-9d44-8c7359c6a399 (cheryl-face-only-v1，純臉緊裁切，0 credits，位元組已 hash 核對)",
+  "template": "2026-09-03 定案版",
+  "single_subject": "5 個場景本身即合理獨處（飯店房、清晨空走廊、自家廚房、自家臥室、夜間飯店房）",
+  "brand_safety": "制服明寫無 logo、無識別章、無航空公司標識",
+  "outcome": "5/5 臉與 master 一致，5/5 朝向正確，無背對鏡頭、無鬼影手、無鏡子問題。3 張服裝露出度或長度偏離指定。"
+ },
+ "_cross_persona_finding": {
+  "name": "服裝的覆蓋度與長度不被可靠執行，且偏差方向一致——都往更露、更短",
+  "instances": [
+   "kanon #1：指定高領 → 出來深 V 大開領",
+   "cheryl #1：指定翻領睡衣扣子解一顆 → 出來滑落單肩",
+   "cheryl #3：指定合身背心＋長褲 → 出來露腰短版＋低腰",
+   "cheryl #5：指定及小腿長洋裝 → 出來迷你洋裝"
+  ],
+  "rate": "11 張裡 4 張（約 36%）",
+  "direction": "單向——沒有出現比指定更保守的案例",
+  "implication": "若某一張的覆蓋度有實際要求（平台審核、人設調性），不能靠 prompt 保證，必須逐張目視驗收。這與角度指令失效是同一類：seedream 對這類約束執行率低。"
+ }
+}

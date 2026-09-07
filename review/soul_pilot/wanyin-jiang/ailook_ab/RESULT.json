@@ -1,0 +1,50 @@
+{
+ "date": "2026-09-03",
+ "cost": "3 credits（T4 因 gpt_image_2 內容審核 nsfw 失敗，未扣款）",
+ "design": "覆核 R4 Q-20 指定的封閉實驗。同 seed 683324、同 element a0e68491、同場景服裝動作，逐字對照。",
+ "blind_key": {
+  "A": "T3",
+  "B": "C0",
+  "C": "T2",
+  "D": "T1"
+ },
+ "user_verdict": {
+  "D (T1)": "最好，「很有自拍感」",
+  "B (C0)": "中規中矩，沒有到特別好，但也還堪用",
+  "C (T2)": "完全不會用 —— 構圖變成對鏡拍照，但鏡中又有另一隻手拿手機自拍",
+  "A (T3)": "完全不會用 —— 同一個鏡子構圖缺陷"
+ },
+ "rulings_applied": [
+  {
+   "rule": "T1 明顯優於 C0 → 五段式從生活照模板退役",
+   "fired": true,
+   "strength": "強。D vs B 是整組最乾淨的一對，唯一差異就是那段佈光。",
+   "written_to": "SEXY_SCENE_LIBRARY.md §3-0"
+  },
+  {
+   "rule": "T2 明顯優於 T1 → 採用 140-180 字短模板",
+   "fired": false,
+   "strength": "反向。兩張短版都毀在鏡子構圖，長版沒有。已驗證的模板長度是約 330 字（D 的長度）。",
+   "written_to": "SEXY_SCENE_LIBRARY.md §3-D①"
+  },
+  {
+   "rule": "T3 不優於 T2 → 刪除固定 35mm/warm/film-grain 尾巴",
+   "fired": true,
+   "strength": "弱。兩張都先毀在鏡子構圖，尾巴效果被蓋掉。但方向與 train5 #4v2 的獨立負面結果一致，故採納。",
+   "written_to": "SEXY_SCENE_LIBRARY.md §3-D②"
+  },
+  {
+   "rule": "T4 優於 T2 → 換 gpt_image_2",
+   "fired": null,
+   "strength": "未測。gpt_image_2 回 nsfw（推測觸發點：絲質晨袍敞開＋薄吊帶＋胸型描述），未扣款，未重試。",
+   "open_question": "AI 感是否有一部分來自 Seedream 本身的先驗，仍無答案。"
+  }
+ ],
+ "new_finding_not_in_review": {
+  "name": "鏡子鬼影構圖缺陷",
+  "symptom": "畫面變成對鏡拍照，鏡中又出現另一隻手持手機自拍，拍攝者身分自相矛盾",
+  "cause": "縮短 prompt 時壓掉了兩句：明確的拍攝者位置與距離、以及完整的第二人物排除句",
+  "rule": "凡場景含鏡子／玻璃／螢幕等反射面，這兩句一句都不能省"
+ },
+ "next": "用 D（T1）的形狀當 19 位的模板：約 330 字散文、一句話佈光、保留拍攝者位置與完整第二人物排除句、無固定風格尾巴。"
+}

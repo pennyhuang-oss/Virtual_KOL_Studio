@@ -1,0 +1,82 @@
+{
+ "1": {
+  "pillar": "私下 / 貼身試穿",
+  "frame": "腰上（實出成坐姿近全身）",
+  "angle": "左轉 30°",
+  "view": "他拍",
+  "prompt": "A waist-up photograph of <<<3e1cb76c-accf-420d-9234-e61fd285af9d>>>, a 24-year-old Taiwanese woman in Taipei, sitting on a stack of stock boxes in her clothing warehouse after the day's shoot, her body turned about thirty degrees away from the lens and her head turned back toward it.\n\nHer build: petite and full — 160cm and 46kg, narrow shoulders, a full high bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer hair is a milk-tea golden brown worn in big airy waves down past her shoulders, with a lighter money-piece highlight framing one side of her face. Both eyebrows and her whole jawline are visible.\n\nShe wears a fitted ribbed knit slip dress in dusty rose that falls to mid-thigh, with bare feet.\n\nThe warehouse at night: a double rail crammed with hanging stock in polybags, cardboard cartons stacked against the wall, a steamer on a stand, a tangle of hangers on the floor, a barcode gun on the box beside her.\n\nOne bare overhead strip light is the only light on, an ordinary phone exposure, the far end of the warehouse dark.\n\nShe has one knee drawn up and is resting her chin on it, a small knowing smile, eyes on the lens, glitter eyeshadow and a glossy jelly lip.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about two metres away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "d3800794-6e9a-441b-8d1a-31d84783fc7a",
+  "file": "train_01.jpg",
+  "verdict": "收",
+  "note": "倉庫夜景：套防塵袋的成衣雙桿、紙箱、直立掛燙機、地上散落的衣架、箱子上的條碼槍、單根裸燈管。奶茶金棕大波浪＋臉側 money piece 挑染清楚。**服裝零偏差**——豆沙色羅紋針織細肩洋裝、赤腳、單膝屈起托腮，全部照規格。"
+ },
+ "2": {
+  "pillar": "換裝 / 試穿",
+  "frame": "腰上",
+  "angle": "—",
+  "view": "**刻意的鏡子自拍**",
+  "prompt": "A waist-up mirror selfie of <<<3e1cb76c-accf-420d-9234-e61fd285af9d>>>, a 24-year-old Taiwanese woman in Taipei, taken in the big full-length mirror of her clothing warehouse while she is trying on the new stock. She is holding her phone up in one hand and it is visible in the mirror, which is normal for this kind of photograph and is how she shoots her outfit posts.\n\nHer build: petite and full — 160cm and 46kg, narrow shoulders, a full high bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea golden brown hair is in big airy waves with the lighter money-piece highlight falling forward past her cheek. Both eyebrows and her whole jawline are visible.\n\nShe wears a fitted cropped cardigan buttoned at the front over a high-waisted pleated mini skirt, with the price tag still hanging from the cuff.\n\nThe warehouse: the mirror propped against a pillar, rails of polybagged stock either side, a ring light on a stand switched off, a pile of tried-on clothes over a chair, cartons on the floor.\n\nThe overhead warehouse lights, an ordinary phone exposure, the depth of the room behind her darker.\n\nShe has her free hand on her waist and is checking the fit rather than smiling at the phone, chin slightly down.\n\nThe only person anywhere in this photograph is her, and the only reflection in the mirror is her own — no one else in the room, no one else in the glass, no hand or arm belonging to anybody else. Every visible hand connects to one of her own arms.\n\nFront camera quality reflected in the mirror — slightly softer focus, mild natural grain, slightly lower dynamic range.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "49f663f2-91fb-4628-85bb-263915040ba1",
+  "file": "train_02.jpg",
+  "verdict": "收",
+  "note": "**刻意鏡子自拍，第二次驗證成功（第一次是 jia-seo）。** 她的人設本來就是「倉庫大鏡子前的連續自拍」，所以不迴避鏡子，而是明寫成刻意自拍、手機入鏡。結果：一支手機、一隻手、一個倒影，**沒有幽靈第二隻手**。短版開襟＋高腰百褶短裙、袖口還掛著吊牌、環形燈、試穿堆在椅子上、兩側成衣桿——場景全中。\n\n**身分辨識上的代價**：手機遮住鼻子與嘴。眼、眉、額、下顎線都在，但作為身分幀比其他四張弱。這是這個形式的固有取捨。"
+ },
+ "3": {
+  "pillar": "浴室 / 卸妝",
+  "frame": "胸上",
+  "angle": "正面",
+  "view": "他拍",
+  "prompt": "A chest-up photograph of <<<3e1cb76c-accf-420d-9234-e61fd285af9d>>>, a 24-year-old Taiwanese woman in Taipei, seen almost straight on, her face turned no more than ten degrees off the lens.\n\nHer build: petite and full — narrow shoulders, a full high bust, a very small waist. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea golden brown hair is scraped back off her face into a clip, the lighter money-piece strands pushed back with the rest, both eyebrows and her whole jawline bare.\n\nShe wears a soft grey cotton pyjama top with the collar folded flat and buttoned to the second button.\n\nShe has just taken her makeup off for the night and is standing in the doorway of her flat's bathroom, a closed panelled door filling the wall behind her, a shelf of skincare bottles beside her and a used cotton pad in her free hand.\n\nWarm bathroom light from above and to one side, an ordinary phone exposure, the corner behind her darker.\n\nHer face is completely bare, no makeup, the glitter and the jelly lip gone, and she looks straight at the lens with a plain tired expression, mouth closed.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nShot on a rear phone camera from about a metre and a half away, crisp sharp focus on her face, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "3072c57b-a939-4ccb-b8ff-433fa17a16f8",
+  "file": "train_03.jpg",
+  "verdict": "收（覆蓋度偏差幅度較大，提請使用者確認）",
+  "note": "素顏、髮夾夾起、卸妝棉在手、身後是關上的鑲板門、旁邊保養品層架。**§3-F 在物件層面有效**：沒有鏡子、沒有手機、沒有螢幕。\n\n**但覆蓋度偏差幅度比平常大**：我寫的是「灰棉睡衣上衣、領口平貼、扣到第二顆」，出來的是解到胸下、前襟大開的短版。**與 miu-shiraishi #3 的差別**：那次是整件衣服被換掉（浴袍→無肩帶浴巾）**而且**她是童顏人設、有年齡呈現的紅線，所以我重跑；這次是同一件衣服只是扣得更開，屬於既有的覆蓋度偏差族，而且完全在她自己的人設範圍內（`private_side`：「私人平台賣的是她自己…毫不掩飾」）。所以我收下並標記，不代替使用者決定尺度。"
+ },
+ "4": {
+  "pillar": "直播間幕後",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<3e1cb76c-accf-420d-9234-e61fd285af9d>>>, a 24-year-old Taiwanese woman in Taipei, setting up behind her live-selling corner before going on air. Her whole body from the top of her head down to her shoes is inside the frame, with the floor beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: petite and full — 160cm and 46kg, narrow shoulders, a full high bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea golden brown hair is in big airy waves with the lighter money-piece highlight at one side, both eyebrows and her jawline visible.\n\nShe wears a fitted white knit top tucked into wide black tailored trousers, with chunky white trainers.\n\nThe live-selling corner: a ring light on a stand, a rail of the evening's stock sorted by colour, a folding table with a pricing sheet and a marker, a stack of return bags, a plain backdrop cloth pinned to the wall.\n\nOrdinary daylight from the window at the side, an even everyday exposure, the far corner of the room much darker.\n\nHer weight is on one leg and she is reaching up with both hands to unclip a garment from the top of the rail, head tipped back looking at what she is unhooking.\n\nThe only person anywhere in this photograph is her — no one else in the frame, no one in any doorway, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person anywhere in the room. Every visible hand connects to one of her own arms.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to shoes, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "4a9dcc46-7d78-4fa1-ba0e-7a720ca90f80",
+  "file": "train_04.jpg",
+  "verdict": "收（帶出一條重要的規則修正）",
+  "note": "**§3-E 成功，構圖是本批最好的。** 雙手上舉去解衣桿頂端的夾子、頭往後仰看自己在解什麼、單腳承重另一腳屈膝。環形燈、依顏色分好的當晚成衣桿、折疊桌上的報價單與麥克筆、釘在牆上的素色背景布、退貨袋、紙箱。頭到鞋全入鏡。\n\n**但全身照的「無裝置」句第一次失效**：環形燈上夾著一支手機。成因不是 §3-F 的「點名招來」——我沒有點名，是**場景物件本身隱含了裝置**（環形燈＋直播＝手機支架，這是這個場景的常識）。詳見 `_device_clause_failure`。手機是道具、螢幕沒亮、沒有第二張臉、沒有框住畫面，不構成訓練污染，而且對直播間場景反而更真實，故收下。"
+ },
+ "5": {
+  "pillar": "晨間 / 選貨",
+  "frame": "全身",
+  "angle": "—",
+  "view": "他拍",
+  "prompt": "An ordinary unedited snapshot, full-length, of <<<3e1cb76c-accf-420d-9234-e61fd285af9d>>>, a 24-year-old Taiwanese woman, in the Wufenpu wholesale garment lanes in Taipei very early in the morning before the stalls open. Her whole body from the top of her head down to her boots is inside the frame, with the lane surface beneath her feet visible. The camera is in front of her, not behind her. Her back is not to the camera.\n\nHer build: petite and full — 160cm and 46kg, narrow shoulders, a full high bust, a very small waist and softly rounded hips. Fair, warm-toned porcelain skin (NOT tanned, NOT bronzed, NOT olive, NOT deep golden), visible skin pores, subtle natural skin texture, unretouched skin detail.\n\nHer milk-tea golden brown hair is down in big airy waves, the lighter money-piece strands lifting a little as she walks, both eyebrows and her jawline visible.\n\nShe wears an oversized washed-black leather jacket over a fitted white tee and straight blue jeans, with black ankle boots.\n\nThe wholesale lane: narrow shopfronts with the roller shutters still down, stacked plastic crates and bale bags of stock, a hand trolley leaning against a pillar, hand-written Traditional Chinese signage boards, cables strung overhead, wet ground.\n\nEarly overcast daylight down the narrow lane, an even everyday exposure, the shuttered fronts on either side darker.\n\nShe is mid-stride with her weight coming down on one leg, two big carrier bags of stock in one hand and a paper cup of tea in the other, her head turned to read a signage board as she passes, not looking at the camera.\n\nThe lane is empty this early; the only person anywhere in this photograph is her — no other buyers, no stallholders, no one in the background, no hand or arm belonging to anybody else, no figure in any reflection, no portrait or photograph of a person on any wall.\n\nThis is a plain photograph of the scene, edge to edge. There is no phone, no screen and no device anywhere in the picture, and the image is not framed or bordered by the edge of any device.\n\nCrisp sharp focus on her from head to boots, natural colour grading.",
+  "seed": null,
+  "seed_note": "seed 未記錄；可用 job id 向 show_generation_by_ids 取回",
+  "job": "63accc65-d464-43e1-9336-1aeee876d926",
+  "file": "train_05.jpg",
+  "verdict": "收",
+  "note": "**§3-E 成功。** 五分埔批發巷、鐵捲門還沒拉開、手寫繁體招牌板、堆疊塑膠籃、拖車、打包袋、頭上的電線、濕地面。走路中單腳承重、一手兩大袋貨、一手紙杯茶、側頭看招牌不看鏡頭。無其他人、無裝置。**服裝零偏差。**"
+ },
+ "_element": {
+  "id": "3e1cb76c-accf-420d-9234-e61fd285af9d",
+  "name": "tammy-face-only-v1",
+  "category": "auto:character",
+  "cost": "0 credits",
+  "source": "kols/tammy-chou/identity/element_face_tight.jpg（landmark 定位臉部裁切，1603×1729）",
+  "upload_verified": "上傳後以 SHA-256 比對伺服器端 bytes，一致"
+ },
+ "_device_clause_failure": {
+  "finding": "全身照結尾的「無手機／無螢幕／無裝置」句**不是絕對有效**——當場景裡有一個強烈隱含裝置的物件時，它會輸。",
+  "evidence": "#4 的 prompt 寫了 `There is no phone, no screen and no device anywhere in the picture`，同時場景寫了 `a ring light on a stand`。結果環形燈上夾了一支手機。這是這句話自 angel-chiu 引入以來**第一次觀察到的失效**。",
+  "mechanism": "與 §3-F 的「點名招來」不同：這次我沒有點名手機以外的東西，是**場景物件的語義**（環形燈＝直播鏡頭架）把裝置帶進來的。",
+  "correction": "先前在 §3-F 補正裡寫的「這句 18/18 一直有效」**已被推翻**，必須改成「多數情況有效，但敵不過隱含裝置的場景物件」。",
+  "rule": "要真正無裝置，除了保留這句，還要**避免在場景清單裡放隱含裝置的物件**（環形燈、三腳架、直播架、螢幕牆）。若該物件是人設必需（像她的直播間），就接受裝置會出現，並改為確認它不是第二張臉、不框住畫面。"
+ }
+}
