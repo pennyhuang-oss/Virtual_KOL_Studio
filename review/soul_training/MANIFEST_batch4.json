@@ -1,0 +1,205 @@
+{
+ "_meta": {
+  "batch": 4,
+  "personas": [
+   "ruoruo-tang",
+   "somi-oh",
+   "sydney-leong"
+  ],
+  "submitted": "2026-09-07T09:38Z",
+  "baseline_txn_before": "2026-09-07T09:21:29.696194Z",
+  "reconciliation": {
+   "soul_id_minus25_expected_for_accepted": 2,
+   "soul_id_minus25_observed": 2,
+   "soul_v2_012_repeats": 0,
+   "character_records_created": 2,
+   "calls_failed": 1
+  },
+  "uploads": {
+   "total": 15,
+   "put_http_200": 15,
+   "sha256_server_match": 15,
+   "mismatch": 0,
+   "distinct_hashes": 15
+  },
+  "third_party_account_activity": {
+   "note": "charges appeared that this session did not make, confirming the account is in concurrent use by someone else. Likely also the cause of the queue congestion (rin-ayase queued ~35 min vs ~10 min in batches 1-2).",
+   "observed": [
+    {
+     "display_name": "GPT Image 2.0",
+     "credits": -6.5,
+     "created_at": "2026-09-07T09:37:11.288841Z"
+    },
+    {
+     "display_name": "Seedream 4.5",
+     "credits": -1,
+     "created_at": "2026-09-07T09:33:09.231777Z"
+    },
+    {
+     "display_name": "Seedream 4.5",
+     "credits": -1,
+     "created_at": "2026-09-07T09:33:01.958583Z"
+    },
+    {
+     "display_name": "Seedream 4.5",
+     "credits": -1,
+     "created_at": "2026-09-07T09:32:57.684329Z"
+    }
+   ]
+  }
+ },
+ "ruoruo-tang": {
+  "persona": "ruoruo-tang",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/ruoruo-tang/images/training_v1/train_01.jpg",
+    "sha256": "daea106954f4b93d3b47067758894148285391b7ab78b0f925a05481ee0cf991",
+    "media_id": "f24f9b13-e362-4773-ab74-bacd2561cdae",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/ruoruo-tang/images/training_v1/train_02.jpg",
+    "sha256": "64f6a91d7345864e693e92ff5cf2c1f1300dc609826b788668f613fe555a33fa",
+    "media_id": "9ad43be1-ea6f-420e-af78-7f4d64d23fd4",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/ruoruo-tang/images/training_v1/train_03.jpg",
+    "sha256": "6d8f4193df801a1eaa8074ccf43741e55dbea1286fb906ebc6330a03001b7a4d",
+    "media_id": "ca3d106e-4ec5-4f07-bc3d-8f85d350cfd7",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/ruoruo-tang/images/training_v1/train_04.jpg",
+    "sha256": "25f44dc8e6c41992464fee5d801b762c2614e4b46fb5a513f496e6a108bc2f8e",
+    "media_id": "a9be7521-1b2c-4f91-b41c-50b550849e97",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/ruoruo-tang/images/training_v1/train_05.jpg",
+    "sha256": "a6210f17c56716c965b9d23f2b4b4a27795cb71566efb3d899e881ed48eb8922",
+    "media_id": "96eaf32a-ecee-4ba1-acc6-8b5ad6475c81",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "ruoruo-tang-soul-v1-5img-20260904",
+  "soul_id": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:38:35.522735Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:38:35.522735Z",
+   "count": 1
+  }
+ },
+ "somi-oh": {
+  "persona": "somi-oh",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/somi-oh/images/training_v1/train_01.jpg",
+    "sha256": "cae225099504c6a8b627627ef41acdd92ef9ad9da08ea8377dbe82c8f653a7c0",
+    "media_id": "2b6ada88-761a-45d3-a372-ef841b2ace5c",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/somi-oh/images/training_v1/train_02.jpg",
+    "sha256": "4effcfa3f4a76a037cb13c028848d8522797cb32d220d893e3deae57fe698fdc",
+    "media_id": "534b87db-f2cb-4e31-811c-0c6300aabdbb",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/somi-oh/images/training_v1/train_03.jpg",
+    "sha256": "16e6a6148438c04a4851fa1f4a1d52a237e5368be22a32ef0b1dcb46205d4741",
+    "media_id": "1d54d1f5-77f9-4b13-a49f-53332ad51ee8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/somi-oh/images/training_v1/train_04.jpg",
+    "sha256": "a2b136cb15e59d59c93482dbf5039a0a00bec602439a58b015430b7ebefe59cf",
+    "media_id": "ca01e862-af10-4cb7-8821-adfeb0c2d7cc",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/somi-oh/images/training_v1/train_05.jpg",
+    "sha256": "55263f2f6888e56d82eb2ce30d051153f80ff2fc7bb43583ed44df1f6beff955",
+    "media_id": "b6ca77ab-f035-492d-9ce7-31517a955be5",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "somi-oh-soul-v1-5img-20260904",
+  "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:38:44.183927Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:38:44.183927Z",
+   "count": 1
+  }
+ },
+ "sydney-leong": {
+  "persona": "sydney-leong",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/sydney-leong/images/training_v1/train_01.jpg",
+    "sha256": "9acf0fe248bb331270ae97cbbc560ac5e7e63b6631c0e6f85c52e3706ca8e887",
+    "media_id": "7e9e70bc-e32f-45ad-aba0-dfe72e642438",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/sydney-leong/images/training_v1/train_02.jpg",
+    "sha256": "bc3aabe150089de0d7cc520fe3e613f7fef92e0de324bde25ee6bff81b825d6c",
+    "media_id": "957e1379-eb69-4b62-a78b-2fa2a57c0ba9",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/sydney-leong/images/training_v1/train_03.jpg",
+    "sha256": "9c0a19584ee2b6db68e016d0bfafd55c4ca4fe0e72073bcf0ef1d675ee8ad0ed",
+    "media_id": "54476728-5b71-4bb9-b9ac-71254ffcdd0f",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/sydney-leong/images/training_v1/train_04.jpg",
+    "sha256": "d8de66ab4f47586f66b5f3128c5d50653d8f5952c763e40b3fa97d4df4bdae2c",
+    "media_id": "c256eb0b-1be9-433e-8691-b6e5bc59b687",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/sydney-leong/images/training_v1/train_05.jpg",
+    "sha256": "ab2739d7e2560fd753426fc132cc49cee1ae3ed15cc718cd5de9e5682f3cf07a",
+    "media_id": "cda21bd3-bc48-472f-8974-7c5c4c61aed0",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "sydney-leong-soul-v1-5img-20260904",
+  "soul_id": null,
+  "state": "call_failed_not_charged",
+  "failure": {
+   "error": "Something went wrong. Please try again.",
+   "request_id": "9f7f0018-6e64-48d6-9839-8f2a0ff226d5",
+   "at": "~2026-09-07T09:38:50Z",
+   "soul_id_minus25_for_her": 0,
+   "server_character_record": false,
+   "ruling": "NOT the Vicky Lin billed-but-failed mode - nothing was charged and no record was created. Per ACCEPTANCE_LOCKED.md step 6, a second (and final) call is permitted only after waiting 15 minutes and re-confirming no record and no charge. Images stay uploaded and verified, so the retry needs no re-upload."
+  }
+ }
+}

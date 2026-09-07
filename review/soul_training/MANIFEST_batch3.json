@@ -21,6 +21,11 @@
    "sha256_server_match": 15,
    "mismatch": 0,
    "distinct_hashes": 15
+  },
+  "result": {
+   "ready": 2,
+   "still_training": 1,
+   "failed": 0
   }
  },
  "nanami-fujiwara": {
@@ -65,14 +70,15 @@
   ],
   "soul_name": "nanami-fujiwara-soul-v1-5img-20260904",
   "soul_id": "78761266-69ba-47fa-8aeb-39f0aa95998e",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T09:21:12.876995Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T09:21:12.876995Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:45Z"
  },
  "peggy-lee": {
   "persona": "peggy-lee",
@@ -116,14 +122,15 @@
   ],
   "soul_name": "peggy-lee-soul-v1-5img-20260904",
   "soul_id": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T09:21:20.551595Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T09:21:20.551595Z",
    "count": 1
-  }
+  },
+  "ready_at": "2026-09-07T09:40Z"
  },
  "rin-ayase": {
   "persona": "rin-ayase",
@@ -167,13 +174,14 @@
   ],
   "soul_name": "rin-ayase-soul-v1-5img-20260904",
   "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
-  "state": "training",
+  "state": "training_queued_long",
   "submitted_at": "2026-09-07T09:21:29.696194Z",
   "charge_verified": {
    "display_name": "Soul ID",
    "credits": -25,
    "created_at": "2026-09-07T09:21:29.696194Z",
    "count": 1
-  }
+  },
+  "note": "queued for ~35 min, far longer than batches 1-2 (~10 min). soul_id and Soul ID -25 both exist, so per protocol step 6 no second call is permitted - poll only."
  }
 }
