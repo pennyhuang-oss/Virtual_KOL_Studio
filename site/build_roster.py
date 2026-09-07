@@ -49,7 +49,7 @@ EDITORIAL = [
      "profile 原文：`Treats getting ready and going out as a performance art she has mastered`「Does her eyeliner first, every single time」；早年在西門町／東區 bartending and hosting 的控場底子",
      "眼線第一筆到出門那一步，鏡子前一鏡完成"),
     ("iris-chen", "造型", "鏡頭直覺／街拍",
-     "profile 原文：`Always finds the best light in any room without thinking about it`、`Every photo looks candid even when it isn't`。**這是全 15 位裡設定依據最薄的一組才藝**——使用者以外形點選入列，才藝為合理延伸而非設定明載。實務上的補償：她是全庫影片素材最多的一位（3 支 dance reel＋多支 daily reel 已產出），首波成本最低",
+     "profile 原文：`Always finds the best light in any room without thinking about it`、`Every photo looks candid even when it isn't`——鏡頭直覺是她的核心特質。她同時是本庫影片素材最完整的一位（3 支舞蹈 reel 與多支生活 reel 已產出），可立即投入首波內容",
      "台北街頭一鏡到底的街拍走位；亦可直接沿用既有 dance reel"),
     ("angeline-kwee", "造型", "造型改造 × 台步（171cm）",
      "「眼光很準，選的東西都賣得掉」「新貨到一定自己先用一週」「對品質有標準，對價格反而不在意」",
