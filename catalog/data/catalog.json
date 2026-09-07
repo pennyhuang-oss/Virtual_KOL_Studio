@@ -1,105 +1,29 @@
 {
   "generated_by": "catalog/tools/build_catalog.mjs",
   "generated_at": "2026-09-07",
-  "min_images": 14,
+  "min_images": 7,
   "note": "型錄要顯示的內容。刻意不含：任何狀態、handle、三圍、prompt／Soul ID／模型／credits、營運統計期間。",
-  "included": 18,
+  "included": 37,
   "skipped": [
-    {
-      "id": "wendy-yeo",
-      "why": "可用素材不足（原始 25 張，排除 25 張後只剩 0 張，門檻 14）"
-    },
     {
       "id": "rafael-costa",
       "why": "showgame-kol/CLAUDE.md 2026-08-19 記載已停用，明文不再產出內容。型錄不顯示狀態，但也不該把已停用的人設賣給客戶（少賣不錯賣）。"
     },
     {
-      "id": "angeline-kwee",
-      "why": "可用素材不足（原始 5 張，排除 5 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "kanon-komori",
-      "why": "可用素材不足（原始 5 張，排除 5 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "yerin-han",
-      "why": "可用素材不足（原始 5 張，排除 5 張後只剩 0 張，門檻 14）"
-    },
-    {
       "id": "sofia-vargas",
-      "why": "可用素材不足（原始 1 張，排除 0 張後只剩 1 張，門檻 14）"
-    },
-    {
-      "id": "angel-chiu",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "cheryl-soh",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "emma-kao",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "jia-seo",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "miu-shiraishi",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "nanami-fujiwara",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
+      "why": "可用素材不足（原始 1 張，排除 0 張後只剩 1 張，門檻 7）"
     },
     {
       "id": "nova-lin",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "peggy-lee",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
+      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 7）"
     },
     {
       "id": "rhea-chou",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "rin-ayase",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "ruoruo-tang",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "somi-oh",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "sydney-leong",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "tammy-chou",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "wanyin-jiang",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
+      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 7）"
     },
     {
       "id": "zane-chen",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "zhiyi-shen",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
-    },
-    {
-      "id": "zoey-yeh",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 14）"
+      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 7）"
     }
   ],
   "feature_order_note": "首頁「推薦」排序。使用者 2026-09-01：「最好盡量把美女 KOL 放在前面一點。或者是有一項規律的排序。」\n規律：以人物外形為主訴求的人設（生活風格／美妝／夜生活／健身）在前，以題材為主訴求的人設（知識／科技／戶外／歷史）在後。\n🛑 這是排版判斷，直接改這個陣列的順序就會改變首頁。沒列到的人設排在最後，按素材多寡。",
@@ -2975,7 +2899,7 @@
           "desc": "大理石浴室裡被認真使用的保養品，步驟慢、光線好。"
         },
         {
-          "name": "身體 /",
+          "name": "身體 / Pilates",
           "weight": "3%",
           "desc": "Pilates 與 reformer——安靜、規律、不喊口號的自律。"
         }
@@ -5082,7 +5006,7 @@
         "書籍、文化與藝文機構"
       ],
       "media": {
-        "image_count": 75,
+        "image_count": 78,
         "video_count": 38,
         "candidates": [
           {
@@ -5680,6 +5604,30 @@
             "reasons": [
               "−圖文貼文素材——主角常常是題材物件不是人"
             ]
+          },
+          {
+            "rel": "showgame-kol/kols/faye-tan/social media/0901/faye-tan0901_官方海報-國際旅客重遊加碼-自由行.jpg",
+            "mb": 0.35,
+            "w": 2500,
+            "h": 2500,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/faye-tan/social media/0901/faye-tan0901_官方海報-1080.jpg",
+            "mb": 0.2,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/faye-tan/social media/0904/faye-tan0904_山田涼介記者會鹹豆漿-1080.jpg",
+            "mb": 0.09,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
           },
           {
             "rel": "showgame-kol/kols/faye-tan/social media/0820/B03-首幀-採用.png",
@@ -6560,11 +6508,22 @@
       "aesthetic_mood": null,
       "fit": [],
       "media": {
-        "image_count": 23,
+        "image_count": 33,
         "video_count": 0,
         "candidates": [
           {
             "rel": "showgame-kol/kols/kai-luo/images/ref/cathy_01_fullbody_front.png",
+            "mb": 4.47,
+            "w": 1744,
+            "h": 2336,
+            "score": 105,
+            "reasons": [
+              "+人設正規人像組",
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/kai-luo/images/ref/cathy_01_fullbody_front.png",
             "mb": 4.47,
             "w": 1744,
             "h": 2336,
@@ -6585,7 +6544,27 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/kai-luo/images/ref/cathy_02_kneeup_side.png",
+            "mb": 4.7,
+            "w": 1744,
+            "h": 2336,
+            "score": 75,
+            "reasons": [
+              "+人設正規人像組"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/kai-luo/images/ref/cathy_03_face_closeup.png",
+            "mb": 4.39,
+            "w": 1744,
+            "h": 2336,
+            "score": 75,
+            "reasons": [
+              "+人設正規人像組"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/kai-luo/images/ref/cathy_03_face_closeup.png",
             "mb": 4.39,
             "w": 1744,
             "h": 2336,
@@ -6605,7 +6584,27 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-4-針葉林.png",
+            "mb": 4.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-3-洞口.png",
+            "mb": 4.1,
+            "w": 1728,
+            "h": 2304,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-3-洞口.png",
             "mb": 4.1,
             "w": 1728,
             "h": 2304,
@@ -6625,6 +6624,16 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-7-背影回頭石階.png",
+            "mb": 3.63,
+            "w": 1728,
+            "h": 2304,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-5-海邊礁岩.png",
             "mb": 3.54,
             "w": 1728,
@@ -6635,7 +6644,27 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-5-海邊礁岩.png",
+            "mb": 3.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-6-純側臉湖岸.png",
+            "mb": 2.34,
+            "w": 1728,
+            "h": 2304,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/kai-luo/images/生活照/cathy-avatar-6-純側臉湖岸.png",
             "mb": 2.34,
             "w": 1728,
             "h": 2304,
@@ -6673,6 +6702,22 @@
             "reasons": [
               "−圖文貼文素材——主角常常是題材物件不是人"
             ]
+          },
+          {
+            "rel": "showgame-kol/kols/kai-luo/social media/0904/kai-luo0904_台鋼獵鷹官方歡迎圖-高國豪-1080.jpg",
+            "mb": 0.23,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/kai-luo/social media/0902/kai-luo0902_颱風路徑圖-1080.jpg",
+            "mb": 0.11,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
           },
           {
             "rel": "showgame-kol/kols/kai-luo/social media/0820/鏡頭3-首幀.png",
@@ -6890,7 +6935,7 @@
         "科技媒體與開發者社群活動"
       ],
       "media": {
-        "image_count": 55,
+        "image_count": 76,
         "video_count": 57,
         "candidates": [
           {
@@ -7304,6 +7349,166 @@
             ]
           },
           {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展2-1080.jpg",
+            "mb": 0.17,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer-DualPlayMini官方圖-1080.jpg",
+            "mb": 0.17,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖02-1080.jpg",
+            "mb": 0.15,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_GTA6官方主視覺-1080.jpg",
+            "mb": 0.15,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_GTA6官方實機-城市-1080.jpg",
+            "mb": 0.15,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展1-1080.jpg",
+            "mb": 0.14,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-近期活動照B-1080.jpg",
+            "mb": 0.13,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖03-1080.jpg",
+            "mb": 0.12,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_藥師少女真人版官方視覺-1080.jpg",
+            "mb": 0.11,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-2020國勢調查宣傳照-1080.jpg",
+            "mb": 0.11,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖01-1080.jpg",
+            "mb": 0.1,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_GTA6官方實機-警察-1080.jpg",
+            "mb": 0.1,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-近期活動照A-1080.jpg",
+            "mb": 0.09,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_銀魂神樂劇照-1080.jpg",
+            "mb": 0.08,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0903/loima-cheung0903_DLSS5開啟-NBA2K27-1080.jpg",
+            "mb": 0.08,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0903/loima-cheung0903_DLSS5關閉-NBA2K27-1080.jpg",
+            "mb": 0.08,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_LINE貼圖-看電影不關靜音-1080.jpg",
+            "mb": 0.07,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0902/loima-cheung0902_MuskGTA5貼文-1080.jpg",
+            "mb": 0.06,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0901/loima-cheung0901_官方Switch2產品圖-1080.jpg",
+            "mb": 0.05,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_銀魂神樂挖鼻孔-1080.jpg",
+            "mb": 0.05,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
             "rel": "showgame-kol/kols/loima-cheung/social media/0814/refB-ui-287days-v2.png",
             "mb": 5.9,
             "w": 1520,
@@ -7380,6 +7585,14 @@
             "h": 1086,
             "score": -45,
             "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/loima-cheung/social media/0902/官方原圖_rockstar_GTAVI_2560x1440.jpg",
+            "mb": 0.39,
+            "w": 2560,
+            "h": 1440,
+            "score": -45,
+            "reasons": []
           }
         ],
         "series_groups": [
@@ -7402,6 +7615,15 @@
           [
             "Buildup_KOL/kols/loima-cheung/social media/0729/ChatGPT Image 2026年7月29日 下午03_13_32.png",
             "Buildup_KOL/kols/loima-cheung/social media/0729/ChatGPT Image 2026年7月29日 下午03_06_09.png"
+          ],
+          [
+            "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展2-1080.jpg",
+            "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_蘆田愛菜-威尼斯影展1-1080.jpg"
+          ],
+          [
+            "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖02-1080.jpg",
+            "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖03-1080.jpg",
+            "showgame-kol/kols/loima-cheung/social media/0904/loima-cheung0904_Acer官方產品圖01-1080.jpg"
           ]
         ],
         "videos": [
@@ -7775,7 +7997,7 @@
         "機械錶、桌遊與益智產品"
       ],
       "media": {
-        "image_count": 38,
+        "image_count": 41,
         "video_count": 24,
         "candidates": [
           {
@@ -8035,6 +8257,30 @@
             ]
           },
           {
+            "rel": "showgame-kol/kols/xiaoxiao-tan/social media/0902/xiaoxiao-tan0902_皮克敏步數里程-1080.jpg",
+            "mb": 0.13,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/xiaoxiao-tan/social media/0902/xiaoxiao-tan0902_揮汗有禮官方主標-1080.jpg",
+            "mb": 0.09,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/xiaoxiao-tan/social media/0901/xiaoxiao-tan0901_少林足球梗圖-1080.jpg",
+            "mb": 0.07,
+            "w": 1080,
+            "h": 1080,
+            "score": -15,
+            "reasons": []
+          },
+          {
             "rel": "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-04/xiaoxiao-chess-tv-pov-v3.png",
             "mb": 6.1,
             "w": 1728,
@@ -8279,27 +8525,77 @@
     },
     {
       "id": "leon-lim",
-      "name": "林曜 / Leon Lim",
-      "name_zh": null,
+      "name": "Leon Lim",
+      "name_zh": "林曜",
       "category": "history_immersion",
-      "age": null,
-      "ethnicity": null,
-      "location": null,
-      "languages": [],
+      "age": 34,
+      "ethnicity": "馬來西亞華人",
+      "location": "吉隆坡，馬來西亞",
+      "languages": [
+        "簡體中文"
+      ],
       "tagline": "帶你站在歷史發生的那一刻，離開之前告訴你為什麼。",
-      "archetype": null,
-      "personality": [],
-      "voice_tone": null,
-      "pillars": [],
+      "archetype": "The Reader Who Walks In — 從現在走進過去的那個人，不是當時的人",
+      "personality": [
+        "安靜，不表演——不用驚嘆語氣，不喊「太震撼了」「你絕對想不到」",
+        "講災難時尤其不能亢奮（character.md：那是這個帳號最容易毀掉的地方）",
+        "對人有溫度，對事實很硬——會提到那天有人在買麵包，但不會編造那個人叫什麼、想什麼",
+        "不下道德判斷，不做「誰是壞人」，不評價國家與民族",
+        "會說不知道——史料有爭議時直接講「這一段有兩種說法」，不挑一個講成定論"
+      ],
+      "voice_tone": "音色偏低、句子短。不加戲劇性的停頓與抖音，不做懸疑語調。沉浸段用近乎耳語的音量，知識段音量提起來一點但不亢奮。★ 語速一律用全專案通用固定寫法「語速明快、節奏緊湊、中間不停頓、一氣呵成」，音色與語速要分開寫，不要寫出跟它矛盾的詞（例如 calm, unhurried）。",
+      "pillars": [
+        {
+          "name": "那一天",
+          "weight": "50%",
+          "desc": "一個具體日期的沉浸＋一個知識點。主力欄目。"
+        },
+        {
+          "name": "那個東西",
+          "weight": "20%",
+          "desc": "一個物件的來歷（一枚硬幣、一把鎖、一張船票）。段 1 是無臉物件敘事——桌上那個東西的特寫，他戴手套的手把它拿起來；段 2 在房間裡對鏡頭（這支的世界本來就在現在）。"
+        },
+        {
+          "name": "消失的地方",
+          "weight": "15%",
+          "desc": "已經不存在的城市、建築、街區。段 1 用無人空景慢運鏡。"
+        },
+        {
+          "name": "你以為很久的其實很新",
+          "weight": "10%",
+          "desc": "日常習慣的起源比想像中晚很多。唯一不需要沉浸段的支柱——他對鏡頭講整支，場景用房間。"
+        },
+        {
+          "name": "馬來半島",
+          "weight": "5%",
+          "desc": "他自己的地方。少量，用來建立人物的根。"
+        }
+      ],
       "audience": "20〜40 歲對歷史與古文明感興趣的觀眾，想被帶進現場，不想聽年表。",
-      "aesthetic_mood": null,
-      "fit": [],
+      "aesthetic_mood": "屏息、身歷其境。安靜不表演，講災難不亢奮。",
+      "fit": [
+        "知識是剛剛那個畫面的後果——你看到的那個東西其實是什麼",
+        "一支只給一個知識點，而且那個知識點跟直覺相反",
+        "知識段用第二人稱對觀眾講，但「你」只用在指向觀眾自身經驗的地方，一段一次就夠",
+        "史料有爭議時明講「這一段有兩種說法」"
+      ],
       "media": {
-        "image_count": 45,
+        "image_count": 53,
         "video_count": 9,
         "candidates": [
           {
             "rel": "showgame-kol/kols/leon-lim/images/ref/leon_01_fullbody_front.png",
+            "mb": 1.29,
+            "w": 896,
+            "h": 1200,
+            "score": 105,
+            "reasons": [
+              "+人設正規人像組",
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/leon-lim/images/ref/leon_01_fullbody_front.png",
             "mb": 1.29,
             "w": 896,
             "h": 1200,
@@ -8320,7 +8616,27 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/leon-lim/images/ref/leon_03_face_closeup.png",
+            "mb": 1.65,
+            "w": 896,
+            "h": 1200,
+            "score": 75,
+            "reasons": [
+              "+人設正規人像組"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/leon-lim/images/ref/leon_02_kneeup_side.png",
+            "mb": 1.39,
+            "w": 896,
+            "h": 1200,
+            "score": 75,
+            "reasons": [
+              "+人設正規人像組"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/leon-lim/images/ref/leon_02_kneeup_side.png",
             "mb": 1.39,
             "w": 896,
             "h": 1200,
@@ -8350,7 +8666,27 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/leon-lim/images/生活照/leon-古蹟-2-石階.png",
+            "mb": 2.7,
+            "w": 896,
+            "h": 1200,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/leon-lim/images/生活照/leon-古蹟-1-石柱廊道.png",
+            "mb": 2.02,
+            "w": 896,
+            "h": 1200,
+            "score": 55,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/leon-lim/images/生活照/leon-古蹟-1-石柱廊道.png",
             "mb": 2.02,
             "w": 896,
             "h": 1200,
@@ -8588,6 +8924,16 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/leon-lim/images/生活照/leon-avatar-1-舊書店.png",
+            "mb": 2.44,
+            "w": 1024,
+            "h": 1024,
+            "score": 5,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/leon-lim/images/生活照/leon-avatar-2-檯燈下.png",
             "mb": 1.89,
             "w": 1024,
@@ -8598,7 +8944,27 @@
             ]
           },
           {
+            "rel": "Buildup_KOL/kols/leon-lim/images/生活照/leon-avatar-2-檯燈下.png",
+            "mb": 1.89,
+            "w": 1024,
+            "h": 1024,
+            "score": 5,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
             "rel": "showgame-kol/kols/leon-lim/images/生活照/leon-avatar-3-黃昏街上.png",
+            "mb": 1.37,
+            "w": 1024,
+            "h": 1024,
+            "score": 5,
+            "reasons": [
+              "+生活照"
+            ]
+          },
+          {
+            "rel": "Buildup_KOL/kols/leon-lim/images/生活照/leon-avatar-3-黃昏街上.png",
             "mb": 1.37,
             "w": 1024,
             "h": 1024,
@@ -8753,6 +9119,3060 @@
             "mb": 14.53
           }
         ],
+        "excluded": []
+      }
+    },
+    {
+      "id": "kanon-komori",
+      "name": "Kanon Komori",
+      "name_zh": "小森花音",
+      "category": "entertainment",
+      "age": 20,
+      "ethnicity": "日本",
+      "location": "東京秋葉原",
+      "languages": [
+        "日文",
+        "英文",
+        "韓文"
+      ],
+      "tagline": "店裡的可愛是制服，下班後自己做的角色服才是她真正在玩的。",
+      "archetype": "白天在秋葉原的女僕咖啡廳上班 — 職業性的可愛，而且她很清楚那是職業。",
+      "personality": [
+        "職業性的可愛，開關切換得很快",
+        "手很巧，服裝全部自己做",
+        "對角色的考據非常認真",
+        "私下講話很平，跟上班判若兩人",
+        "省錢，但布料絕不省"
+      ],
+      "voice_tone": "上班是甜的、拉長音的；私下是短句、平的、有點懶。兩種語氣的落差本身就是內容。",
+      "pillars": [
+        {
+          "name": "私下 / Cosplay",
+          "weight": "30%",
+          "desc": "女僕裝是上班制服，私人平台上的才是她真正在玩的：她本來就會自己做角色服，私下的 Cosplay 尺度比店裡大得多。房間、燈條、玩偶牆、角色輪替。全庫唯一「Cosplay 是核心私下內容」的角色。"
+        },
+        {
+          "name": "女僕咖啡廳工作",
+          "weight": "20%",
+          "desc": "秋葉原女僕咖啡廳的上班日：制服、髮飾、招呼客人的那套語氣。她很清楚那是職業性的可愛。"
+        },
+        {
+          "name": "房間 / 居家",
+          "weight": "20%",
+          "desc": "不用上班的日子——玩偶牆、燈條、地上還沒收的角色服布料。"
+        },
+        {
+          "name": "換裝",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 深夜",
+          "weight": "15%",
+          "desc": null
+        }
+      ],
+      "audience": "18〜28 歲的動漫與 Cosplay 圈觀眾，看的是自己做衣服的手藝與角色還原度，不只是美照。",
+      "aesthetic_mood": "舞台的粉紫霓虹 vs 家裡的白日光燈。高飽和 vs 平淡。",
+      "fit": [
+        "Cosplay 材料與假髮",
+        "縫紉與手作",
+        "次文化與動漫周邊",
+        "彩妝（尤其眼妝）"
+      ],
+      "media": {
+        "image_count": 9,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_01.jpg",
+            "mb": 0.79,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_06.jpg",
+            "mb": 0.77,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_05.jpg",
+            "mb": 0.72,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_03.jpg",
+            "mb": 0.65,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_04.jpg",
+            "mb": 0.58,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_02.jpg",
+            "mb": 0.56,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/identity/identity_master.jpg",
+            "mb": 0.55,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/identity/_superseded_copied_face.jpg",
+            "mb": 0.5,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/kanon-komori/identity/element_face_tight.jpg",
+            "mb": 0.48,
+            "w": 1601,
+            "h": 1711,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_06.jpg",
+            "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_02.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": [
+          {
+            "file": "Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a01.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a02.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a03.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a04.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/kanon-komori/images/casting_v1/a04_v1_body_fail.png",
+            "why": "檔名標示為失敗版",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          }
+        ]
+      }
+    },
+    {
+      "id": "wanyin-jiang",
+      "name": "Wanyin Jiang",
+      "name_zh": "江晚吟",
+      "category": "culture",
+      "age": 23,
+      "ethnicity": "中國",
+      "location": "蘇州",
+      "languages": [
+        "中文",
+        "英文"
+      ],
+      "tagline": "科班古典舞的身段，現在用在替客人量一件旗袍上。",
+      "archetype": "蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
+      "personality": [
+        "身段是童子功，站著就跟別人不一樣",
+        "對料子和工藝有講究",
+        "話不多，但講起旗袍會停不下來",
+        "私下比公開形象大膽得多",
+        "對蘇州有很深的感情"
+      ],
+      "voice_tone": "文雅、簡短、偶爾用一句古話。私下的貼文反而很直白。",
+      "pillars": [
+        {
+          "name": "私下 / 老宅暗光",
+          "weight": "30%",
+          "desc": "旗袍本身就是最好的載體：開衩、盤扣一顆一顆解開、肩線。她的私人平台是「旗袍下面」的想像，加上老宅裡的暗光與木床。全庫最有東方情色語彙的一位，但完全不靠裸露。"
+        },
+        {
+          "name": "旗袍店工作 / 量身",
+          "weight": "20%",
+          "desc": "蘇州老宅裡的訂製店：替客人量身、挑料子、車盤扣，一件旗袍從尺寸到完成的過程。"
+        },
+        {
+          "name": "換裝 / 盤扣",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間梳妝",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 園林",
+          "weight": "15%",
+          "desc": "走出老宅的蘇州——園林、河道、巷子裡的老店，古典舞的身段在日常走路時還在。"
+        }
+      ],
+      "audience": "25〜45 歲喜歡新中式與傳統工藝的觀眾，在意料子、剪裁與做工，不是換裝表演。",
+      "aesthetic_mood": "低飽和、高質感，光線像宣紙。園林的水、雨、木格窗。",
+      "fit": [
+        "旗袍與新中式服飾",
+        "茶與香道",
+        "傳統工藝與布料",
+        "蘇州在地文旅"
+      ],
+      "media": {
+        "image_count": 9,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_04.jpg",
+            "mb": 0.86,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_01.jpg",
+            "mb": 0.73,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_02.jpg",
+            "mb": 0.68,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_05.jpg",
+            "mb": 0.67,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_03.jpg",
+            "mb": 0.56,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/identity/identity_master.jpg",
+            "mb": 0.49,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/identity/_superseded_copied_face.jpg",
+            "mb": 0.45,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/identity/element_head_crop.jpg",
+            "mb": 0.29,
+            "w": 1220,
+            "h": 1477,
+            "score": 0,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wanyin-jiang/identity/element_face_tight.jpg",
+            "mb": 0.28,
+            "w": 1249,
+            "h": 1382,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_03.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "cheryl-soh",
+      "name": "Cheryl Soh",
+      "name_zh": "蘇思穎",
+      "category": "travel",
+      "age": 25,
+      "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+      "location": "新加坡（華裔）",
+      "languages": [
+        "英文",
+        "中文",
+        "日文"
+      ],
+      "tagline": "一個月有半個月在別的城市，回到自己的公寓才算落地。",
+      "archetype": "制服與時差 — 一個月有半個月不在家，但她在新加坡有一間自己的公寓，那才是她的基地。",
+      "personality": [
+        "職業性的親切，開關切換得很自然",
+        "時間管理極好，行李永遠不超重",
+        "對時差免疫但對噪音敏感",
+        "在家的時候幾乎不出門",
+        "很念舊，新加坡的家是她的錨"
+      ],
+      "voice_tone": "英文為主、簡潔有禮，偶爾夾中文和 Singlish。私下的貼文很短。",
+      "pillars": [
+        {
+          "name": "私下 / 一個人的房間",
+          "weight": "30%",
+          "desc": "制服脫下後的房間——不管是飯店還是新加坡的家：絲質睡衣、床、落地窗、剛卸完妝。她的性感由「一個人的房間 + 時差」構成，安靜而私密。"
+        },
+        {
+          "name": "制服 / 出勤",
+          "weight": "20%",
+          "desc": "出勤的日子：制服、行李箱、機場與長途飛行之間的空檔。"
+        },
+        {
+          "name": "新加坡的家",
+          "weight": "20%",
+          "desc": "不飛的日子，她在新加坡那間公寓——那才是她的基地，不是飯店。"
+        },
+        {
+          "name": "換裝 / 穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "飯店 / 各國城市",
+          "weight": "15%",
+          "desc": "轉機與過夜停留的城市：飯店房間、時差、半天的空檔怎麼用。"
+        }
+      ],
+      "audience": "25〜40 歲常出差與自己安排行程的旅客，想看長途飛行怎麼撐過來，不是打卡清單。",
+      "aesthetic_mood": "機場冷光與飯店暖光的兩地切換。乾淨、有距離的高級感。",
+      "fit": [
+        "旅行用品與行李箱",
+        "保養與保濕（機上乾燥）",
+        "貼身衣物與睡衣",
+        "飯店與航空周邊"
+      ],
+      "media": {
+        "image_count": 8,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_03.jpg",
+            "mb": 0.61,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_01.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_02.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_05.jpg",
+            "mb": 0.51,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_04.jpg",
+            "mb": 0.51,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/identity/identity_master.jpg",
+            "mb": 0.45,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/identity/_superseded_copied_face.jpg",
+            "mb": 0.27,
+            "w": 975,
+            "h": 1300,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/cheryl-soh/identity/element_face_tight.jpg",
+            "mb": 0.43,
+            "w": 1627,
+            "h": 1784,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_04.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "peggy-lee",
+      "name": "Peggy Lee",
+      "name_zh": "李珮甄",
+      "category": "automotive",
+      "age": 24,
+      "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+      "location": "吉隆坡（華裔）",
+      "languages": [
+        "中文",
+        "英文",
+        "馬來文",
+        "粵語"
+      ],
+      "tagline": "自己開手排、也真的懂車，車展只是她的旺季不是日常。",
+      "archetype": "在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
+      "personality": [
+        "爽朗，跟男生圈子混得開",
+        "真的懂車，講得出規格",
+        "對「花瓶」這個詞很敏感",
+        "工作能力強，不只是門面",
+        "夜衝成癮"
+      ],
+      "voice_tone": "爽快、直接、中英夾雜。講到車會突然變得很專業。",
+      "pillars": [
+        {
+          "name": "私下 / 房間與車庫",
+          "weight": "30%",
+          "desc": "房間裡的貼身短版與長靴、車庫夜燈下的引擎蓋、自己那台車的駕駛座。她私下的尺度比車展上的 showgirl 造型更放，因為那是她自己的地盤。"
+        },
+        {
+          "name": "改裝店工作 / 車",
+          "weight": "20%",
+          "desc": "改裝店的行銷企劃工作：零件、車主、活動籌備，還有她自己那台手排。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "夜衝 / 公路",
+          "weight": "15%",
+          "desc": "深夜的公路與山道——引擎聲、路燈、休息站的一根熱咖啡。"
+        }
+      ],
+      "audience": "20〜40 歲的改裝與車聚圈觀眾，想聽真的懂車的人在講什麼，不是站在車旁邊的樣子。",
+      "aesthetic_mood": "車庫冷白日光燈、車燈紅黃、濕地面反光。高對比、金屬感、夜間為主。",
+      "fit": [
+        "汽車改裝與零件",
+        "機能服飾與長靴",
+        "運動相機與行車紀錄器",
+        "能量飲與夜間相關"
+      ],
+      "media": {
+        "image_count": 8,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_03.jpg",
+            "mb": 1.07,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_02.jpg",
+            "mb": 0.91,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_01.jpg",
+            "mb": 0.68,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_05.jpg",
+            "mb": 0.67,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_04.jpg",
+            "mb": 0.64,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/identity/identity_master.jpg",
+            "mb": 0.66,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/identity/_superseded_copied_face.jpg",
+            "mb": 0.59,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/peggy-lee/identity/element_face_tight.jpg",
+            "mb": 0.48,
+            "w": 1438,
+            "h": 1643,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_04.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "rin-ayase",
+      "name": "Rin Ayase",
+      "name_zh": "綾瀨凜",
+      "category": "nightlife",
+      "age": 25,
+      "ethnicity": "日本",
+      "location": "東京銀座",
+      "languages": [
+        "日文",
+        "英文",
+        "中文"
+      ],
+      "tagline": "銀座的分寸與話術都是專業，回到白天的公寓才卸下來。",
+      "archetype": "銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
+      "personality": [
+        "職業級的分寸感",
+        "記憶力極好，尤其是人的事",
+        "對自己的價值很清楚，不打折",
+        "私下很安靜，幾乎不社交",
+        "對錢很現實，不假裝清高"
+      ],
+      "voice_tone": "優雅、克制、句子完整。私下的貼文反而很短很直接。",
+      "pillars": [
+        {
+          "name": "私下 / 白天的公寓",
+          "weight": "30%",
+          "desc": "她的職業已經很華麗，私下反而更直接：卸掉銀座妝、真絲睡袍、高樓層公寓白天拉起窗簾的暗光、床。檯面上她是「不能碰的」，私人平台上她自己決定尺度——這個主導權就是她的性感來源。"
+        },
+        {
+          "name": "出勤前準備",
+          "weight": "20%",
+          "desc": "上班前的準備：和服或禮服的選擇、盤髮、對著鏡子把分寸調好。"
+        },
+        {
+          "name": "下班後清晨",
+          "weight": "20%",
+          "desc": "收工回家的清晨——妝還在、鞋已經脫了，一天真正結束的那個時段。"
+        },
+        {
+          "name": "穿搭三人格",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "飯店 / 旅遊",
+          "weight": "15%",
+          "desc": "休假時的旅行：高級飯店、溫泉、一個人安靜的兩三天。"
+        }
+      ],
+      "audience": "30〜50 歲重視質感與分寸的觀眾，看的是高級品該怎麼被使用，不是價格標籤。",
+      "aesthetic_mood": "夜間金色燈光、絲絨、玻璃反射。高質感、低喧鬧。",
+      "fit": [
+        "香氛與高級保養",
+        "禮服與訂製服飾",
+        "珠寶與腕錶",
+        "高級酒類（不呈現飲酒）"
+      ],
+      "media": {
+        "image_count": 8,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_03.jpg",
+            "mb": 0.85,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_04.jpg",
+            "mb": 0.78,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_05.jpg",
+            "mb": 0.63,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_01.jpg",
+            "mb": 0.61,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_02.jpg",
+            "mb": 0.57,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/identity/identity_master.jpg",
+            "mb": 0.57,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/identity/_superseded_copied_face.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/rin-ayase/identity/element_face_tight.jpg",
+            "mb": 0.36,
+            "w": 1255,
+            "h": 1411,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_02.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "ruoruo-tang",
+      "name": "Ruoruo Tang",
+      "name_zh": "唐苡若",
+      "category": "fitness",
+      "age": 27,
+      "ethnicity": "中國",
+      "location": "成都",
+      "languages": [
+        "中文",
+        "英文"
+      ],
+      "tagline": "器械皮拉提斯教練——身體的控制力比舉多重重要。",
+      "archetype": "器械皮拉提斯教練 — 身體控制力極強，姿態比重量重要。",
+      "personality": [
+        "對身體的理解極深，能講出每一條肌肉",
+        "溫和但不好糊弄",
+        "受過傷，所以特別強調安全",
+        "二十七歲的從容，不跟人比",
+        "成都人的鬆弛感"
+      ],
+      "voice_tone": "溫和、清楚、有教學者的耐心。私下的貼文短而直接。",
+      "pillars": [
+        {
+          "name": "私下 / 家裡的地墊",
+          "weight": "30%",
+          "desc": "教室的器械體位已經有張力，私下是家裡的地墊：貼身連身衣、拉伸、背肌與腰線。27 歲的身體控制力是她的資本，私人平台上她展示的是「這具身體能做到什麼」。"
+        },
+        {
+          "name": "器械皮拉提斯",
+          "weight": "25%",
+          "desc": "器械上的訓練與帶課：呼吸、發力順序、姿態的細微修正——她的核心身分。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 成都",
+          "weight": "15%",
+          "desc": "成都的日常：茶館、河邊、巷子裡的餐廳，訓練之外那個放鬆的她。"
+        }
+      ],
+      "audience": "25〜40 歲在做低衝擊訓練的人，重視姿態與控制，不想看重量數字與身材焦慮。",
+      "aesthetic_mood": "柔和側光加大面窗。安靜、乾淨、克制。",
+      "fit": [
+        "運動服與連身衣",
+        "皮拉提斯器械與輔具",
+        "恢復與筋膜照護",
+        "天然保養"
+      ],
+      "media": {
+        "image_count": 8,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_05.jpg",
+            "mb": 0.93,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_04.jpg",
+            "mb": 0.61,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_02.jpg",
+            "mb": 0.58,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_03.jpg",
+            "mb": 0.55,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_01.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/identity/identity_master.jpg",
+            "mb": 0.55,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/identity/_superseded_copied_face.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/ruoruo-tang/identity/element_face_tight.jpg",
+            "mb": 0.41,
+            "w": 1422,
+            "h": 1558,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_01.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "tammy-chou",
+      "name": "Tammy Chou",
+      "name_zh": "周語彤",
+      "category": "fashion",
+      "age": 24,
+      "ethnicity": "台灣",
+      "location": "台北五分埔",
+      "languages": [
+        "中文",
+        "台語",
+        "英文"
+      ],
+      "tagline": "選貨、拍圖、直播都自己來，一天換二十套是她的工作日常。",
+      "archetype": "自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
+      "personality": [
+        "生意人腦袋，算得很清楚",
+        "超級外向，直播四小時不會累",
+        "對自己的身材毫不遮掩，那是她的生財工具之一",
+        "講話很快、很有台味",
+        "對數字誠實，賣不好就是賣不好"
+      ],
+      "voice_tone": "快、大聲、很有節奏感。台灣國語混台語，句尾常常上揚。",
+      "pillars": [
+        {
+          "name": "私下 / 貼身試穿",
+          "weight": "30%",
+          "desc": "公開帳號賣的是外衣，私人平台賣的是「她自己」：內衣試穿、貼身洋裝、倉庫大鏡子前的連續自拍。她比任何人都清楚自己哪個角度好看，也毫不掩飾這件事。"
+        },
+        {
+          "name": "換裝 / 試穿",
+          "weight": "25%",
+          "desc": "她的招牌內容：一件一件試穿、對著鏡子決定要不要進這批貨。"
+        },
+        {
+          "name": "直播間幕後",
+          "weight": "20%",
+          "desc": "開播前後的樣子——燈、掛滿的衣架、鏡頭外一邊回訊息一邊換下一套。"
+        },
+        {
+          "name": "浴室 / 卸妝",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "晨間 / 選貨",
+          "weight": "10%",
+          "desc": "五分埔清早的選貨：翻料子、比價、把要拍的貨搬回工作室。"
+        }
+      ],
+      "audience": "18〜35 歲網購服飾的族群，想看同一件衣服穿在真人身上到底如何，不是模特兒照。",
+      "aesthetic_mood": "直播間的高亮補光加倉庫的雜亂真實感。飽和、明亮、有點吵。",
+      "fit": [
+        "服飾與配件",
+        "內衣與塑身衣",
+        "直播設備與電商工具",
+        "彩妝與美髮"
+      ],
+      "media": {
+        "image_count": 8,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_03.jpg",
+            "mb": 1.15,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_02.jpg",
+            "mb": 0.93,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_01.jpg",
+            "mb": 0.88,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_05.jpg",
+            "mb": 0.8,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_04.jpg",
+            "mb": 0.76,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/identity/_superseded_copied_face.jpg",
+            "mb": 0.68,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/identity/identity_master.jpg",
+            "mb": 0.59,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/tammy-chou/identity/element_face_tight.jpg",
+            "mb": 0.57,
+            "w": 1603,
+            "h": 1729,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_04.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "zhiyi-shen",
+      "name": "Zhiyi Shen",
+      "name_zh": "沈知意",
+      "category": "lifestyle",
+      "age": 25,
+      "ethnicity": "中國",
+      "location": "上海陸家嘴",
+      "languages": [
+        "中文",
+        "英文"
+      ],
+      "tagline": "加班到十一點回家，還沒換下班的樣子才是她自己。",
+      "archetype": "陸家嘴大廈裡的高薪社畜 — 高跟鞋、通勤、加班到十一點，是最典型的「正常職業」。",
+      "personality": [
+        "高效率，講話直接切重點",
+        "對自己的外形管理很嚴格",
+        "累但不抱怨，抱怨浪費時間",
+        "獨居，社交需求低",
+        "很清楚自己在用什麼換什麼"
+      ],
+      "voice_tone": "冷靜、簡潔、有點禦姊感。不撒嬌，句子很短。",
+      "pillars": [
+        {
+          "name": "私下 / 還沒換下班的樣子",
+          "weight": "30%",
+          "desc": "回到家不是換睡衣，是**只脫掉外套**——襯衫、黑絲、高跟留著，落地窗前的夜景與自拍。她最大的性感是「還沒完全下班的樣子」，這是全庫最好用的一組私下語彙。"
+        },
+        {
+          "name": "通勤 / 辦公",
+          "weight": "20%",
+          "desc": "陸家嘴的上班日：地鐵、高跟鞋、大廈裡的辦公桌、加班到十一點的那盞燈。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "飯店 / 出差",
+          "weight": "15%",
+          "desc": "出差的城市與飯店房間——行李攤開、隔天早上的簡報。"
+        }
+      ],
+      "audience": "25〜40 歲的都會通勤上班族，看的是撐得過一整天的裝備與狀態，不是週末的精緻生活。",
+      "aesthetic_mood": "玻璃、金屬、夜景。冷灰藍加城市燈火，高級但有溫度。",
+      "fit": [
+        "通勤服飾與正裝",
+        "保養與底妝",
+        "咖啡與機能飲",
+        "金融科技與生產力工具"
+      ],
+      "media": {
+        "image_count": 8,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_01.jpg",
+            "mb": 0.65,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_04.jpg",
+            "mb": 0.63,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_02.jpg",
+            "mb": 0.63,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_03.jpg",
+            "mb": 0.63,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_05.jpg",
+            "mb": 0.6,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/identity/identity_master.jpg",
+            "mb": 0.49,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/identity/_superseded_copied_face.jpg",
+            "mb": 0.46,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zhiyi-shen/identity/element_face_tight.jpg",
+            "mb": 0.36,
+            "w": 1369,
+            "h": 1516,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_05.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "wendy-yeo",
+      "name": "Wendy Yeo",
+      "name_zh": "楊薇伊",
+      "category": "nightlife",
+      "age": 28,
+      "ethnicity": "新加坡華裔（Chinese-Singaporean）",
+      "location": "新加坡丹戎巴葛",
+      "languages": [
+        "英文",
+        "中文",
+        "粵語"
+      ],
+      "tagline": "吧檯後面掌控整個空間節奏的人，成熟、有手藝、話少。",
+      "archetype": "吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
+      "personality": [
+        "主導性強，習慣掌控節奏",
+        "手藝是真的，得過獎",
+        "話少但觀察力極強",
+        "晝夜顛倒，白天在睡",
+        "二十八歲的從容，不需要證明什麼"
+      ],
+      "voice_tone": "低、慢、句子短。英文為主，帶一點新加坡口音。",
+      "pillars": [
+        {
+          "name": "私下 / 打烊後與白天",
+          "weight": "30%",
+          "desc": "打烊後的空吧檯：襯衫解到第三顆、坐在吧檯上、單一暖光源。以及白天公寓拉起窗簾的補眠時間。她的性感是「主導權」——她決定給誰看、給多少。"
+        },
+        {
+          "name": "吧檯工作",
+          "weight": "25%",
+          "desc": "丹戎巴葛那間吧的吧檯後面：器具、冰、手勢，以及掌控整個空間節奏的那個人。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 休假",
+          "weight": "15%",
+          "desc": "不開店的日子：白天的新加坡、唱片行、一個人的午餐。"
+        }
+      ],
+      "audience": "28〜45 歲喜歡調酒與酒吧文化的觀眾，看的是手藝與空間的節奏，不是喝酒本身。",
+      "aesthetic_mood": "單一暖光源加大量陰影，酒液透光。低、慢、有質感。",
+      "fit": [
+        "烈酒與調酒器具（不呈現飲酒）",
+        "男裝剪裁的女裝與襯衫",
+        "腕錶與皮件",
+        "音響與黑膠"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_05.jpg",
+            "mb": 0.86,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_02.jpg",
+            "mb": 0.63,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_04.jpg",
+            "mb": 0.6,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_01.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_03.jpg",
+            "mb": 0.52,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/identity/identity_master.jpg",
+            "mb": 0.54,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/wendy-yeo/identity/element_face_tight.jpg",
+            "mb": 0.57,
+            "w": 1727,
+            "h": 1734,
+            "score": -15,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_03.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": [
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p01.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p02.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p03.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe/p04.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/inputs/img1_shape.jpg",
+            "why": "長邊 640px，低於生成輸出的下限，判定為參考素材",
+            "recoverable": false
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/inputs/img2_eyes.jpg",
+            "why": "長邊 640px，低於生成輸出的下限，判定為參考素材",
+            "recoverable": false
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/inputs/img3_nose.jpg",
+            "why": "長邊 639px，低於生成輸出的下限，判定為參考素材",
+            "recoverable": false
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/inputs/img4_mouth.jpg",
+            "why": "長邊 640px，低於生成輸出的下限，判定為參考素材",
+            "recoverable": false
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q01.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q02.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q03.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/a0_probe_crop/q04.png",
+            "why": "探測測試，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C1.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C2.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C3.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/C4.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D1.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D2.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D3.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/ablation/D4.png",
+            "why": "比對表，不是成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a01.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a02.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a03.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a04.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a04_v1_body_fail.png",
+            "why": "檔名標示為失敗版",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          }
+        ]
+      }
+    },
+    {
+      "id": "angeline-kwee",
+      "name": "Angeline Kwee",
+      "name_zh": "郭慧恩",
+      "category": "fashion",
+      "age": 23,
+      "ethnicity": "印尼華裔（Chinese-Indonesian）",
+      "location": "雅加達（華裔）",
+      "languages": [
+        "中文",
+        "英文"
+      ],
+      "tagline": "家裡做貿易，但那間小小的選物店是她自己想開的。",
+      "archetype": "家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
+      "personality": [
+        "有錢但不張揚，那是她的教養",
+        "眼光很準，選的東西都賣得掉",
+        "不太解釋自己的家世",
+        "獨立，堅持自己開店這件事",
+        "對品質有標準，對價格反而不在意"
+      ],
+      "voice_tone": "平穩、有禮、不炫耀。中英印尼文夾雜，句子不長。",
+      "pillars": [
+        {
+          "name": "私下 / 市中心公寓",
+          "weight": "30%",
+          "desc": "打烊後回到市中心的公寓：落地窗、絲質吊帶裙、剛洗完澡的長髮。家境好的女生私下最捨得花錢的是內衣——她的私人平台大半是這個。"
+        },
+        {
+          "name": "選物店工作",
+          "weight": "25%",
+          "desc": "雅加達南區那間小選物店：選貨、陳列、招呼熟客——她自己想做的事。"
+        },
+        {
+          "name": "穿搭 / 選貨",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "旅遊 / 度假期",
+          "weight": "10%",
+          "desc": "店休時的短假：海邊、鄰近城市，帶回來的東西常常變成下一批貨。"
+        }
+      ],
+      "audience": "20〜35 歲的東南亞都會女性與選物愛好者，看的是眼光與陳列，不是名牌開箱。",
+      "aesthetic_mood": "雅加達的都會室內光為主。白牆、柚木、藤編、棕櫚陰影。乾淨、溫暖、不喧鬧。",
+      "fit": [
+        "選物與生活雜貨",
+        "貼身衣物與家居服",
+        "天然保養與香氛",
+        "印尼在地設計品牌"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_02.jpg",
+            "mb": 0.9,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_01.jpg",
+            "mb": 0.82,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_05.jpg",
+            "mb": 0.74,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_04.jpg",
+            "mb": 0.69,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_03.jpg",
+            "mb": 0.58,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/identity/identity_master.jpg",
+            "mb": 0.56,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angeline-kwee/identity/element_face_tight.jpg",
+            "mb": 0.49,
+            "w": 1500,
+            "h": 1641,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_03.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": [
+          {
+            "file": "Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a01.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a02.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a03.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a04.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/angeline-kwee/images/casting_v1/a04_v1_body_fail.png",
+            "why": "檔名標示為失敗版",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          }
+        ]
+      }
+    },
+    {
+      "id": "yerin-han",
+      "name": "Yerin Han",
+      "name_zh": "한예린",
+      "category": "sports",
+      "age": 26,
+      "ethnicity": "韓國",
+      "location": "首爾",
+      "languages": [
+        "韓文",
+        "英文",
+        "日文"
+      ],
+      "tagline": "球衣就是她的時尚，而球技也真的撐得住。",
+      "archetype": "室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
+      "personality": [
+        "競技出身，勝負心比看起來重",
+        "教學很有耐心，對自己很沒耐心",
+        "陽光是她的公開面貌，私下安靜得多",
+        "對防曬近乎偏執",
+        "很會social，客戶關係經營得好"
+      ],
+      "voice_tone": "開朗、有活力、句尾常常上揚。私下的貼文突然變得很短。",
+      "pillars": [
+        {
+          "name": "私下 / 首爾的家",
+          "weight": "30%",
+          "desc": "教完課回到首爾的公寓：貼身背心、過膝襪、球具靠在牆邊的自拍。她的檯面形象是「健康陽光」，私人平台上是完全不同的溫度——這個落差比戶外的短裙更有效。"
+        },
+        {
+          "name": "練習場 / 教課",
+          "weight": "20%",
+          "desc": "市區室內練習場的教課日：揮桿、修動作、學員的問題。"
+        },
+        {
+          "name": "高球穿搭",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "旅遊 / 球場遠征",
+          "weight": "15%",
+          "desc": "週末真的上球場：不同球場的風、果嶺、一整天在戶外的樣子。"
+        }
+      ],
+      "audience": "25〜45 歲打高爾夫或剛入門的族群，一半來看球衣穿搭，一半來看真的會教球的人。",
+      "aesthetic_mood": "室內練習場的冷白光為主，戶外期才有草地綠。明亮但膚色維持白皙。",
+      "fit": [
+        "高爾夫球具與球衣",
+        "防曬與美白保養",
+        "運動內衣",
+        "運動品牌與墨鏡"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_05.jpg",
+            "mb": 0.7,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_01.jpg",
+            "mb": 0.68,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_04.jpg",
+            "mb": 0.67,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_02.jpg",
+            "mb": 0.65,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_03.jpg",
+            "mb": 0.58,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/identity/identity_master.jpg",
+            "mb": 0.55,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/yerin-han/identity/element_face_tight.jpg",
+            "mb": 0.42,
+            "w": 1452,
+            "h": 1567,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_03.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": [
+          {
+            "file": "Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a01.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a02.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a03.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a04.png",
+            "why": "選角批次——同一個資料夾裡是好幾張不同的臉，不是這位人設的成品",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          },
+          {
+            "file": "Virtual_KOL_Studio/kols/yerin-han/images/casting_v1/a04_v1_body_fail.png",
+            "why": "檔名標示為失敗版",
+            "recoverable": true,
+            "w": 1728,
+            "h": 2304
+          }
+        ]
+      }
+    },
+    {
+      "id": "angel-chiu",
+      "name": "Angel Chiu",
+      "name_zh": "邱安晴",
+      "category": "lifestyle",
+      "age": 23,
+      "ethnicity": "台灣",
+      "location": "台北",
+      "languages": [
+        "中文",
+        "台語",
+        "英文"
+      ],
+      "tagline": "上班綁得死緊、腳步很快，下班才有時間好好打理自己。",
+      "archetype": "醫學中心的內科病房護理師 — 上班綁得死緊、素顏、腳步很快，是同事眼中很可靠的那一個。",
+      "personality": [
+        "對事情有條理，護理工作養出來的",
+        "話不多但講到重點",
+        "下班之後的能量跟上班完全是兩個人",
+        "對自己身體很清楚，也不迴避",
+        "很護短，同事和朋友的事她會擋在前面"
+      ],
+      "voice_tone": "平實、簡短、偶爾很直。不解釋、不撒嬌，講話像在交班。",
+      "pillars": [
+        {
+          "name": "私下 / 房間裡的她",
+          "weight": "30%",
+          "desc": "值完班回租屋處，卸掉刷手服換上絲質睡裙、綁帶家居服，把紮死的頭髮放下露出漂過的髮尾。房間暖黃光、床邊、鏡子。她私下依然精心打理自己，只是打理的方向從「專業得體」換成「給自己看的性感」。"
+        },
+        {
+          "name": "職業 / 醫院檯面",
+          "weight": "20%",
+          "desc": "內科病房的上班日：頭髮綁得死緊、素顏、腳步很快——同事眼中很可靠的那一個。"
+        },
+        {
+          "name": "穿搭 / 換裝",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 休假",
+          "weight": "10%",
+          "desc": "排到休假的日子：台北的咖啡館、看展、跟朋友吃一頓好的。"
+        }
+      ],
+      "audience": "22〜35 歲久站與輪班的上班族，尤其醫護與服務業，看的是怎麼把身體照顧回來。",
+      "aesthetic_mood": "醫院日光燈的冷 vs 租屋處的暖，兩種光是她整個帳號的骨架。",
+      "fit": [
+        "保養與身體護理品牌",
+        "貼身衣物與家居服",
+        "助眠、舒緩、恢復類產品",
+        "機能鞋與久站相關用品"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_05.jpg",
+            "mb": 0.69,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_04.jpg",
+            "mb": 0.61,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_03.jpg",
+            "mb": 0.58,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_01.jpg",
+            "mb": 0.48,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_02.jpg",
+            "mb": 0.47,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/identity/identity_master.jpg",
+            "mb": 0.46,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/angel-chiu/identity/element_face_tight.jpg",
+            "mb": 0.43,
+            "w": 1719,
+            "h": 1802,
+            "score": -15,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_02.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "emma-kao",
+      "name": "Emma Kao",
+      "name_zh": "高映真",
+      "category": "lifestyle",
+      "age": 27,
+      "ethnicity": "台灣",
+      "location": "台南",
+      "languages": [
+        "中文",
+        "台語",
+        "英文"
+      ],
+      "tagline": "棚裡字正腔圓，下播之後才是那個二十七歲的台南人。",
+      "archetype": "地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
+      "personality": [
+        "表達能力極強，說話有結構",
+        "對自己的公開形象非常有意識",
+        "私下比任何人以為的都放得開",
+        "情緒穩定，很難被激怒",
+        "對台南有感情，沒打算北上"
+      ],
+      "voice_tone": "咬字清楚、句子完整、節奏穩。私下的貼文反而很短，落差本身就是效果。",
+      "pillars": [
+        {
+          "name": "私下 / 下播之後",
+          "weight": "30%",
+          "desc": "播完新聞回到台南老公寓，西裝外套掛好，襯衫只扣兩顆、黑絲、高跟鞋留著沒換——她享受這個只有自己知道的落差。頂樓夜風、臥室檯燈、鏡子。全庫「檯面身分越正經、私下落差越大」的極致案例。"
+        },
+        {
+          "name": "職業 / 棚內檯面",
+          "weight": "20%",
+          "desc": "晚間新聞的棚內：西裝、提示機、正式到不容出錯的那個版本。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "旅遊 / 出差",
+          "weight": "15%",
+          "desc": "採訪與出差路上的台南以外——高鐵、飯店、下一個現場。"
+        }
+      ],
+      "audience": "28〜45 歲需要穿正裝上班的專業族群，看的是撐得住鏡頭與一整天的妝與衣服。",
+      "aesthetic_mood": "棚內的紀律感 vs 老公寓的鬆散，兩種秩序的對比。",
+      "fit": [
+        "正裝與職場服飾",
+        "保養與底妝",
+        "咖啡與提神",
+        "台南在地品牌"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_03.jpg",
+            "mb": 0.95,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_05.jpg",
+            "mb": 0.62,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_04.jpg",
+            "mb": 0.57,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_01.jpg",
+            "mb": 0.55,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_02.jpg",
+            "mb": 0.48,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/identity/identity_master.jpg",
+            "mb": 0.53,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/emma-kao/identity/element_face_tight.jpg",
+            "mb": 0.41,
+            "w": 1477,
+            "h": 1640,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_02.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "jia-seo",
+      "name": "Jia Seo",
+      "name_zh": "서지아",
+      "category": "dance",
+      "age": 22,
+      "ethnicity": "韓國",
+      "location": "首爾江南",
+      "languages": [
+        "韓文",
+        "英文",
+        "日文"
+      ],
+      "tagline": "練習生沒出道，改當老師——鏡子前面就是她的主場。",
+      "archetype": "練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
+      "personality": [
+        "紀律極強，練習生留下來的",
+        "對身體的控制力是她最自豪的事",
+        "不太談沒出道那段，但也不迴避",
+        "教學時很兇，私下很好笑",
+        "對音樂的反應快到不需要思考"
+      ],
+      "voice_tone": "直接、有節拍感、句子短。韓文為主，偶爾夾英文。",
+      "pillars": [
+        {
+          "name": "私下 / 收工後的鏡子前",
+          "weight": "30%",
+          "desc": "練舞室關燈後的鏡子前：運動內衣 + 低腰褲、汗、腹肌與背肌的線條。以及家裡的貼身舞衣試穿。她的性感建立在「身體是練出來的」，跟其他人的路線完全不同。"
+        },
+        {
+          "name": "練舞室 / 跳舞",
+          "weight": "25%",
+          "desc": "江南的練舞室：整支跳完、鏡子、汗，以及帶學生時一個一個修動作。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 江南",
+          "weight": "15%",
+          "desc": "江南街上的她——收工後的宵夜、逛街、跟同事在路邊聊完一段。"
+        }
+      ],
+      "audience": "16〜30 歲跳舞與 K-pop 圈的觀眾，看得懂動作乾不乾淨，不是只看氣氛。",
+      "aesthetic_mood": "練舞室的白日光燈、大面鏡、木地板 vs 家裡的暖光。",
+      "fit": [
+        "運動服與舞蹈服",
+        "運動鞋",
+        "恢復與肌肉照護",
+        "耳機與音響"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_01.jpg",
+            "mb": 0.78,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_05.jpg",
+            "mb": 0.65,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_04.jpg",
+            "mb": 0.55,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_03.jpg",
+            "mb": 0.52,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_02.jpg",
+            "mb": 0.51,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/identity/identity_master.jpg",
+            "mb": 0.46,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/jia-seo/identity/element_face_tight.jpg",
+            "mb": 0.22,
+            "w": 1161,
+            "h": 1286,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_02.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "miu-shiraishi",
+      "name": "Miu Shiraishi",
+      "name_zh": "白石美羽",
+      "category": "lifestyle",
+      "age": 22,
+      "ethnicity": "日本",
+      "location": "東京中目黑",
+      "languages": [
+        "日文",
+        "英文",
+        "中文"
+      ],
+      "tagline": "一天講不到幾句話，但整間咖啡店都會多看她一眼。",
+      "archetype": "咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+      "personality": [
+        "安靜，但不是害羞",
+        "手很穩，做事有節奏",
+        "對咖啡是真的懂，不是裝的",
+        "童顏但講話很成熟",
+        "一個人住習慣了，不太約人"
+      ],
+      "voice_tone": "極短、日文為主、常常只有名詞。像便條紙。",
+      "pillars": [
+        {
+          "name": "私下 / 一人公寓",
+          "weight": "30%",
+          "desc": "圍裙脫掉後的一人公寓：寬鬆針織滑到肩下、棉質內衣、地板矮桌前的慵懶。童顏配上這個身材的落差，是她私下最有效的畫面，而且她知道。"
+        },
+        {
+          "name": "咖啡店工作",
+          "weight": "20%",
+          "desc": "中目黑那間咖啡店的班：手沖、擦杯子、跟客人講不到三句話的一天。"
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 中目黑",
+          "weight": "15%",
+          "desc": "中目黑的散步路線——河邊的櫻樹、二手書店、常去的那幾間小店。"
+        }
+      ],
+      "audience": "20〜35 歲喜歡日系極簡與咖啡的觀眾，要的是安靜的氛圍，不是熱鬧的介紹。",
+      "aesthetic_mood": "木質暖調、蒸氣、磨豆機的聲音。安靜但有質地。",
+      "fit": [
+        "咖啡器具與豆商",
+        "生活雜貨與器皿",
+        "簡約服飾",
+        "香氛與居家"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_02.jpg",
+            "mb": 1.02,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_03.jpg",
+            "mb": 0.89,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_05.jpg",
+            "mb": 0.89,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_01.jpg",
+            "mb": 0.85,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_04.jpg",
+            "mb": 0.75,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/identity/identity_master.jpg",
+            "mb": 0.52,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/miu-shiraishi/identity/element_face_tight.jpg",
+            "mb": 0.41,
+            "w": 1407,
+            "h": 1529,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_04.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "nanami-fujiwara",
+      "name": "Nanami Fujiwara",
+      "name_zh": "藤原七海",
+      "category": "lifestyle",
+      "age": 23,
+      "ethnicity": "日本",
+      "location": "箱根",
+      "languages": [
+        "日文",
+        "英文",
+        "韓文"
+      ],
+      "tagline": "從東京回箱根接家業，穿和服上工，下工還是普通的二十三歲。",
+      "archetype": "旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
+      "personality": [
+        "有教養，反射性地替別人著想",
+        "比外表看起來固執",
+        "對家業有責任感但也有掙扎",
+        "私下比誰都想念都市",
+        "動作很輕，走路沒有聲音"
+      ],
+      "voice_tone": "禮貌、柔和、句尾常常留白。私下的貼文會突然變得很口語。",
+      "pillars": [
+        {
+          "name": "私下 / 自家房間",
+          "weight": "30%",
+          "desc": "旅館打烊後回自家房間，浴衣腰帶鬆一格、榻榻米、暖爐。和服把身體包得越緊，私下鬆開的那一格越有效。她私下也會穿完全不和風的貼身衣物——那才是 23 歲的她。"
+        },
+        {
+          "name": "旅館工作 / 和服",
+          "weight": "20%",
+          "desc": "家裡旅館的上班日：和服、迎客、榻榻米走廊，一個從東京回鄉的二十三歲在學著接家業。"
+        },
+        {
+          "name": "浴室 / 溫泉",
+          "weight": "15%",
+          "desc": "箱根的溫泉——水氣、木頭、泡完之後那段安靜的時間。"
+        },
+        {
+          "name": "晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 東京",
+          "weight": "20%",
+          "desc": "回東京的日子：以前住的那一區、朋友、和服換回一般衣服的那個她。"
+        }
+      ],
+      "audience": "28〜50 歲喜歡溫泉旅宿與和風生活的旅客，看的是真的在做這行的人怎麼過日子。",
+      "aesthetic_mood": "木、和紙、水蒸氣、暖黃行燈。低飽和、有霧氣、有溫度。",
+      "fit": [
+        "旅宿與溫泉相關",
+        "和風生活雜貨",
+        "保養與入浴劑",
+        "日本在地食材"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_04.jpg",
+            "mb": 0.73,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_02.jpg",
+            "mb": 0.72,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_03.jpg",
+            "mb": 0.62,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_05.jpg",
+            "mb": 0.6,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_01.jpg",
+            "mb": 0.57,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/identity/identity_master.jpg",
+            "mb": 0.43,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/nanami-fujiwara/identity/element_face_tight.jpg",
+            "mb": 0.28,
+            "w": 1374,
+            "h": 1491,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_01.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "somi-oh",
+      "name": "Somi Oh",
+      "name_zh": "오소미",
+      "category": "food",
+      "age": 24,
+      "ethnicity": "韓國",
+      "location": "釜山",
+      "languages": [
+        "韓文",
+        "英文",
+        "日文"
+      ],
+      "tagline": "吃得比誰都香，海鮮市場到深夜炸雞都是她的場子。",
+      "archetype": "吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
+      "personality": [
+        "超級好相處，跟攤商都熟",
+        "吃東西真的很享受，不是演的",
+        "對身材的評論免疫",
+        "慶尚道腔很重，她不改",
+        "很念舊，常回同一家店"
+      ],
+      "voice_tone": "大聲、熱情、腔調很重。句子常常被嘴巴裡的東西打斷。",
+      "pillars": [
+        {
+          "name": "私下 / 深夜房間",
+          "weight": "30%",
+          "desc": "吃完宵夜回房間，寬版 T 恤底下的鬆感、床上、深夜暖光。她的身材本身就是「這樣吃還這樣」的證據，私人平台上她把這件事講得更直接。"
+        },
+        {
+          "name": "吃播 / 外食",
+          "weight": "25%",
+          "desc": "釜山的吃：海鮮市場、路邊攤、深夜炸雞——吃得比誰都香的那種吃法。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "旅遊 / 美食遠征",
+          "weight": "15%",
+          "desc": "為了吃跑去別的城市：清早的市場、當地人才知道的店。"
+        }
+      ],
+      "audience": "18〜35 歲愛吃與追美食的觀眾，看的是真的吃得開心，不是評分與踩雷清單。",
+      "aesthetic_mood": "食物的蒸氣與油光、市場的雜訊。高飽和、貼近、有聲音。",
+      "fit": [
+        "餐飲與外送平台",
+        "食品與零食",
+        "消化保健",
+        "釜山在地觀光"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_03.jpg",
+            "mb": 0.95,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_02.jpg",
+            "mb": 0.88,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_04.jpg",
+            "mb": 0.86,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_05.jpg",
+            "mb": 0.8,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_01.jpg",
+            "mb": 0.7,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/identity/identity_master.jpg",
+            "mb": 0.58,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/somi-oh/identity/element_face_tight.jpg",
+            "mb": 0.58,
+            "w": 1680,
+            "h": 1851,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_01.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "sydney-leong",
+      "name": "Sydney Leong",
+      "name_zh": "梁欣妮",
+      "category": "food",
+      "age": 22,
+      "ethnicity": "馬來西亞華裔（Chinese-Malaysian）",
+      "location": "檳城喬治市（華裔）",
+      "languages": [
+        "中文",
+        "英文",
+        "馬來文"
+      ],
+      "tagline": "接單、烤、包裝都一個人來，圍裙上總是沾著麵粉。",
+      "archetype": "一個人的小工作室 — 接單、烤、包裝，圍裙上總是沾著麵粉。",
+      "personality": [
+        "手很巧，細活做得住",
+        "甜但不軟，開店兩年沒虧過",
+        "對食材的來源很堅持",
+        "怕熱，工作室裝了三台風扇",
+        "很會照顧人，客人變朋友"
+      ],
+      "voice_tone": "親切、有檳城腔、句子軟。中英夾雜，偶爾福建話。",
+      "pillars": [
+        {
+          "name": "私下 / 老屋樓上",
+          "weight": "30%",
+          "desc": "收工後的老屋樓上：圍裙底下只有貼身背心、麵粉沾在鎖骨與手臂上、南洋午後的斜光。甜點師的手最會做細活——這句話在她的私人平台上有第二層意思。"
+        },
+        {
+          "name": "烘焙工作",
+          "weight": "25%",
+          "desc": "喬治市老屋樓下的一人工作室：揉、烤、包裝、出貨，圍裙上沾著麵粉。"
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 檳城",
+          "weight": "15%",
+          "desc": "檳城的街上——老屋、壁畫、常去補貨的那幾間店。"
+        }
+      ],
+      "audience": "20〜40 歲喜歡烘焙與手作的觀眾，看的是一個人把單子做完的過程，不是完美的成品照。",
+      "aesthetic_mood": "南洋自然光加風扇陰影。暖、潮、有生活感。",
+      "fit": [
+        "烘焙器材與食材",
+        "咖啡與茶",
+        "南洋生活雜貨",
+        "檳城在地觀光"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_03.jpg",
+            "mb": 0.81,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_05.jpg",
+            "mb": 0.81,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_04.jpg",
+            "mb": 0.75,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_01.jpg",
+            "mb": 0.74,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_02.jpg",
+            "mb": 0.7,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/identity/identity_master.jpg",
+            "mb": 0.5,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/sydney-leong/identity/element_face_tight.jpg",
+            "mb": 0.45,
+            "w": 1449,
+            "h": 1598,
+            "score": 0,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_03.jpg",
+            "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_02.jpg"
+          ]
+        ],
+        "videos": [],
+        "excluded": []
+      }
+    },
+    {
+      "id": "zoey-yeh",
+      "name": "Zoey Yeh",
+      "name_zh": "葉芷妍",
+      "category": "lifestyle",
+      "age": 21,
+      "ethnicity": "台灣",
+      "location": "宜蘭",
+      "languages": [
+        "中文",
+        "台語",
+        "英文"
+      ],
+      "tagline": "老屋改的花店，花、雨、木地板和貓，節奏比別人慢一半。",
+      "archetype": "老屋改的花店主理人 — 花、雨、木地板、貓，節奏比別人慢一半。",
+      "personality": [
+        "節奏比所有人慢半拍",
+        "不太會拒絕人",
+        "對植物比對人有耐心",
+        "柔軟但不脆弱，一個人開店兩年了",
+        "很少解釋自己，包括貼文"
+      ],
+      "voice_tone": "很輕、很短、常常只有一句。像自言自語被聽見了。",
+      "pillars": [
+        {
+          "name": "私下 / 老屋樓上",
+          "weight": "25%",
+          "desc": "打烊後的老屋樓上：白色棉質吊帶、赤腳、剛洗完澡的濕髮貼在鎖骨上。她的性感是清透、不用力的那一種——不是擺出來的姿勢，是她本來就這樣待在自己家裡。"
+        },
+        {
+          "name": "花店日常",
+          "weight": "25%",
+          "desc": "老屋改的花店：進貨、修枝、包花、等客人上門，還有那隻店貓。"
+        },
+        {
+          "name": "浴室 / 晨間",
+          "weight": "20%",
+          "desc": null
+        },
+        {
+          "name": "穿搭",
+          "weight": "15%",
+          "desc": null
+        },
+        {
+          "name": "外出 / 小鎮",
+          "weight": "15%",
+          "desc": "宜蘭的小鎮日常：雨、田邊的路、騎車去買午餐的十分鐘。"
+        }
+      ],
+      "audience": "20〜40 歲喜歡慢生活與花藝的觀眾，看的是小鎮的節奏，不是快速教學。",
+      "aesthetic_mood": "低飽和、霧面、潮濕。宜蘭的雨是她的固定配角。",
+      "fit": [
+        "花藝與園藝用品",
+        "天然保養與香氛",
+        "棉麻服飾",
+        "宜蘭在地與民宿"
+      ],
+      "media": {
+        "image_count": 7,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_04.jpg",
+            "mb": 0.91,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_05.jpg",
+            "mb": 0.82,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_01.jpg",
+            "mb": 0.8,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_02.jpg",
+            "mb": 0.72,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_03.jpg",
+            "mb": 0.71,
+            "w": 1728,
+            "h": 2304,
+            "score": 75,
+            "reasons": [
+              "+人像生成批次"
+            ]
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/identity/identity_master.jpg",
+            "mb": 0.46,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "Virtual_KOL_Studio/kols/zoey-yeh/identity/element_face_tight.jpg",
+            "mb": 0.43,
+            "w": 1728,
+            "h": 1718,
+            "score": -15,
+            "reasons": []
+          }
+        ],
+        "series_groups": [
+          [
+            "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_04.jpg",
+            "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_05.jpg",
+            "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_01.jpg",
+            "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_02.jpg",
+            "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_03.jpg"
+          ]
+        ],
+        "videos": [],
         "excluded": []
       }
     }

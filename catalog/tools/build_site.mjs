@@ -28,10 +28,14 @@ try { social = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'social.json'),
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const CAT_LABEL = {
-  travel_culture: '旅遊・城市文化', digital_culture: '數位娛樂・科技', outdoor_adventure: '戶外・登山',
+  travel_culture: '旅遊', digital_culture: '數位娛樂・科技', outdoor_adventure: '戶外・登山',
   knowledge_culture: '知識・規則研究', beauty: '美妝・保養', nightlife: '夜生活', lifestyle: '生活風格',
   fitness: '健身', gaming: '遊戲・實況', wellness: '身心健康', 'luxury lifestyle': '精品生活',
   mythology_immersion: '神話沉浸', history_immersion: '歷史沉浸', null: '其他',
+  // 2026-09-07 新收錄的 19 位帶進來的領域。少一筆對照就會在篩選器裡出現英文,
+  // 而且人設頁的「領域」那一格也會直接印英文（kanon-komori 印出 entertainment 那次）。
+  entertainment: '動漫・次文化', culture: '傳統文化・工藝', travel: '旅遊',
+  automotive: '汽車・改裝', fashion: '服飾・穿搭', sports: '運動', dance: '舞蹈', food: '美食',
 };
 const catLabel = c => CAT_LABEL[c] || c || '其他';
 
@@ -41,11 +45,13 @@ const langShort = s => String(s).replace(/\s*[（(].*?[)）]\s*/g, '').replace(/
 // 地區歸成市場（篩選器用，依 Q2 把語言與地區合併成「市場」）
 function market(loc = '') {
   const l = String(loc);
-  if (/Taiwan|台北|台中|高雄|新竹|台灣/i.test(l)) return '台灣';
+  if (/Taiwan|台北|台中|台南|高雄|新竹|宜蘭|花蓮|台灣/i.test(l)) return '台灣';
   if (/Singapore|新加坡|丹戎巴葛/i.test(l)) return '新加坡';
-  if (/Malaysia|Kuala Lumpur/i.test(l)) return '馬來西亞';
-  if (/Japan|Kyoto|Tokyo|京都/i.test(l)) return '日本';
-  if (/Korea|Seoul|首爾/i.test(l)) return '韓國';
+  if (/Malaysia|Kuala Lumpur|吉隆坡|檳城|喬治市/i.test(l)) return '馬來西亞';
+  if (/Japan|Kyoto|Tokyo|京都|東京|箱根|大阪/i.test(l)) return '日本';
+  if (/Korea|Seoul|首爾|釜山/i.test(l)) return '韓國';
+  if (/China|Shanghai|上海|蘇州|成都|北京|杭州/i.test(l)) return '中國';
+  if (/Indonesia|Jakarta|雅加達/i.test(l)) return '印尼';
   if (/India|Mumbai/i.test(l)) return '印度';
   if (/France|Paris/i.test(l)) return '法國';
   if (/California|Los Angeles|LA\b/i.test(l)) return '美國';
@@ -640,7 +646,7 @@ const kolsPage = layout('虛擬 KOL 型錄 — 兌心科技', `
 <div class="hero"><div class="wrap">
   <h1>虛擬 <em>KOL</em> 型錄</h1>
   <p class="lede">${people.length} 位可合作的虛擬 KOL。每一位都有完整的人物設定、內容主題與視覺調性，
-  並且已經產出可用的圖像與影片素材。</p>
+  以及已經產出的圖像素材；其中 ${people.filter(x => x.media.video_count).length} 位另有可直接播放的影片。</p>
   <div class="disclose">
     <b>這些是 AI 生成的虛擬人物。</b>
     <p>不是真人。所有肖像與影片皆由本團隊自行生成，角色設定、語氣與內容規範亦為原創。
@@ -964,7 +970,7 @@ const homePage = layout('虛擬 KOL 品牌顧問服務 — 兌心科技', `
 <section class="hsec tint"><div class="wrap">
   ${eyebrow('CATALOGUE｜看實際的人設與素材')}
   <h2>不必想像，直接看</h2>
-  <p class="lead">每一位都有完整的人物設定、內容主題與視覺調性，並且已經產出可用的圖像與影片素材。
+  <p class="lead">每一位都有完整的人物設定、內容主題與視覺調性，以及已經產出的圖像素材；其中 ${people.filter(x => x.media.video_count).length} 位另有可直接播放的影片。
   點進任何一位，都能直接在網頁上看完他全部的素材。</p>
   <div class="feat">${featured.map(p => `<a class="fcard" href="/p/${esc(p.id)}.html">
     <div class="ph"><img src="${p.a.hero}" alt="${esc(p.name)}" loading="lazy" width="1080" height="1350"></div>

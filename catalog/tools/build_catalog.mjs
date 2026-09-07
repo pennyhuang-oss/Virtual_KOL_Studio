@@ -28,7 +28,10 @@ const OUT = path.join(DIR, 'data', 'catalog.json');
 
 const argv = process.argv.slice(2);
 const argOf = (k, d) => { const i = argv.indexOf(k); return i >= 0 ? argv[i + 1] : d; };
-const MIN_IMAGES = Number(argOf('--min-images', 14));
+// 收錄門檻:一位人設至少要有這麼多張可用圖。
+// 2026-09-07 從 14 降到 7:使用者要把 19 位「已設定好、還沒建模」的人設也放進型錄,
+// 他們每人只有 7〜9 張。降到 7 之後 37 位進來、5 位仍在門檻外(素材 0〜1 張)。
+const MIN_IMAGES = Number(argOf('--min-images', 7));
 
 const inv = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'inventory.json'), 'utf8'));
 
@@ -243,17 +246,28 @@ const pickZh = v => (v && hasCJK(v) ? v : null);
 // 中文後面接一段英文時，只留中文那一段（純英文則整段丟掉，由 pickZh 處理）。
 // 說明只收中文。英文的一律當成「沒有」——寧可不顯示,也不要在全中文的頁面上
 // 混一段英文（使用者 2026-09-01：全中文）。該補的由 copy.json 的覆寫補。
+// 🛑 指向別的檔案的佔位字不是說明,一律當成沒有。
+// 這 19 位新人設的支柱說明多半是「換裝。詳見 content_style.md 同名段落。」,
+// 而那份 content_style.md 的同名段落又寫著同一句 —— 指回自己,實際上沒有內容。
+// 原本只有 CJK 比例過低的那幾筆會被下面的比例檢查濾掉,還有 21 筆印上了客戶看得到的頁面。
+const isPlaceholder = s => /\.md|詳見|同名段落|見上|待補|TBD|TODO/i.test(s);
+
 const onlyZhText = t => {
   const s = String(t ?? '').trim();
-  if (!s) return null;
+  if (!s || isPlaceholder(s)) return null;
   const zh = (s.match(/[\u4e00-\u9fff]/g) || []).length;
   return zh / s.length > 0.3 ? s : null;
 };
 
+// 砍掉「城市觀察 City Observation」這種雙語重複的英文尾巴。
+// 🛑 砍完剩下懸空的分隔號就代表砍錯了 —— 那個英文是實義詞,不是重複
+//    (「私下 / Cosplay」→「私下 /」)。這種情況保留原文。
 const stripEnTail = v => {
   const t = String(v ?? '').trim();
   if (!hasCJK(t)) return '';
-  return t.replace(/\s*[A-Za-z][A-Za-z0-9 &/'’,.\-]*$/, '').trim() || t;
+  const cut = t.replace(/\s*[A-Za-z][A-Za-z0-9 &/'’,.\-]*$/, '').trim();
+  if (!cut || /[\/·、,，&+]$/.test(cut)) return t;
+  return cut;
 };
 const onlyZh = a => (Array.isArray(a) ? a.filter(hasCJK) : []);
 
