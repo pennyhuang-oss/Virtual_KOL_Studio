@@ -19,8 +19,9 @@ const rich = (s) => esc(s)
   .replace(/`(.+?)`/g, '<code>$1</code>');
 
 const NAV = [
-  ['top', '總覽'], ['flow', '流程'], ['roster', '參賽者'], ['talents', '才藝'],
-  ['checks', '體檢'], ['decisions', '待裁決'], ['alternates', '替補'], ['next', '下一步'],
+  ['top', '總覽'], ['flow', '流程'], ['talentmodel', '才藝架構'], ['roster', '參賽者'],
+  ['talents', '才藝一覽'], ['checks', '體檢'], ['decisions', '待裁決'],
+  ['alternates', '替補'], ['next', '下一步'],
 ];
 
 let PLAN, ROSTER, MEDIA, gallery = [], gi = 0;
@@ -46,10 +47,13 @@ async function boot() {
 
 function render() {
   const { meta, overview } = PLAN;
-  document.title = `${meta.title} — 企劃提案`;
+  document.title = meta.title;
+  const bn = $('#brand-name');
+  bn.firstChild.textContent = meta.short || meta.title;
   $('#brand-sub').textContent = meta.status;
-  $('#hero-status').textContent = `${meta.subtitle}　·　${meta.status}`;
+  $('#hero-status').textContent = `${meta.kicker || meta.subtitle}　·　${meta.status}`;
   $('#hero-headline').textContent = overview.headline;
+  $('#hero-tagline').textContent = overview.tagline || '';
   $('#hero-body').textContent = overview.body;
   $('#hero-positions').innerHTML = `<b style="color:var(--gold)">定位不預先指派　</b>${esc(overview.positions_note)}`;
   $('#foot-note').textContent = meta.note;
@@ -76,6 +80,19 @@ function render() {
     if (s.state === 'current') li.append(el('em', null, '● 目前階段'));
     flow.append(li);
   });
+
+  const tm = PLAN.talent_model;
+  if (tm) {
+    $('#tm-title').textContent = tm.title;
+    $('#tm-body').innerHTML = rich(tm.body);
+    const host = $('#tm-stats');
+    tm.stats.forEach((f) => {
+      const d = el('div', 'fact');
+      d.append(el('b', null, f.k), el('span', null, f.l), el('i', null, f.d));
+      host.append(d);
+    });
+    $('#tm-note').textContent = tm.note;
+  }
 
   renderRoster();
   renderTalents();
@@ -201,7 +218,7 @@ function card(c) {
 function renderTalents() {
   const t = $('#talent-table');
   t.innerHTML = `<thead><tr>
-    <th>參賽者</th><th>類型</th><th>主打才藝</th><th>設定依據</th><th>首波影片提案</th>
+    <th>參賽者</th><th>類型</th><th>主打才藝</th><th>共同必修</th><th>首波影片提案</th>
   </tr></thead>`;
   const tb = el('tbody');
   ROSTER.contestants.forEach((c) => {
@@ -210,9 +227,8 @@ function renderTalents() {
     if (c.native_name) who.append(el('small', null, c.native_name));
     const ty = el('td', null, c.group);
     const ta = el('td', null, c.talent);
-    const ev = el('td', 'ev');
-    ev.innerHTML = rich(c.evidence);
-    tr.append(who, ty, ta, ev, el('td', null, c.video_proposal));
+    const sec = el('td', 'ev', c.secondary || '');
+    tr.append(who, ty, ta, sec, el('td', null, c.video_proposal));
     tb.append(tr);
   });
   t.append(tb);
@@ -277,7 +293,10 @@ function openDetail(c) {
   talent.append(el('h4', null, '主打才藝'), el('p', 'dt-talent', c.talent));
   const q = el('div', 'quote');
   q.innerHTML = rich(c.evidence);
-  talent.append(el('h4', null, '設定依據'), q);
+  talent.append(el('h4', null, '才藝說明'), q);
+  if (c.secondary) {
+    talent.append(el('h4', null, '共同必修（團體表演）'), el('p', null, c.secondary));
+  }
   right.append(talent);
 
   const vid = el('div', 'dt-block');

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>897 女團選秀 — 企劃提案</title>
+<title>897 女團養成計畫</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <div class="wrap topbar">
     <a class="brand" href="#top">
       <span class="brand-mark">897</span>
-      <span class="brand-text">女團選秀<em id="brand-sub"></em></span>
+      <span class="brand-text" id="brand-name">女團養成計畫<em id="brand-sub"></em></span>
     </a>
     <nav id="nav"></nav>
   </div>
@@ -28,6 +28,7 @@
     <div class="wrap">
       <p class="eyebrow" id="hero-status"></p>
       <h1 id="hero-headline"></h1>
+      <p class="tagline" id="hero-tagline"></p>
       <p class="lede" id="hero-body"></p>
       <div class="facts" id="hero-facts"></div>
       <p class="callout" id="hero-positions"></p>
@@ -41,7 +42,16 @@
     </div>
   </section>
 
-  <section id="roster">
+  <section id="talentmodel">
+    <div class="wrap">
+      <h2 id="tm-title"></h2>
+      <p class="section-note" id="tm-body"></p>
+      <div class="facts" id="tm-stats"></div>
+      <p class="callout" id="tm-note"></p>
+    </div>
+  </section>
+
+  <section id="roster" class="band">
     <div class="wrap">
       <h2>15 位 AI 人設參賽者</h2>
       <p class="section-note">依才藝類型分組。<strong>分組不代表團體定位</strong>——定位由投票決定。點任一位可看完整素材、身形規格與才藝依據。</p>
@@ -50,7 +60,7 @@
     </div>
   </section>
 
-  <section id="talents" class="band">
+  <section id="talents">
     <div class="wrap">
       <h2>才藝與首波影片提案</h2>
       <p class="section-note">每位的才藝都必須能回指到她人設檔案裡既有的敘述。沒有依據的才藝一律不派。</p>
@@ -60,7 +70,7 @@
     </div>
   </section>
 
-  <section id="checks">
+  <section id="checks" class="band">
     <div class="wrap">
       <h2>組合體檢</h2>
       <p class="section-note">15 人同台時，四個維度必須拉開：身高、髮色髮型、臉型骨架、才藝類型。</p>
@@ -68,7 +78,7 @@
     </div>
   </section>
 
-  <section id="decisions" class="band">
+  <section id="decisions">
     <div class="wrap">
       <h2>待裁決事項</h2>
       <p class="section-note">以下為需要決策後才能往下執行的項目，含一項法遵前提。</p>
@@ -76,7 +86,7 @@
     </div>
   </section>
 
-  <section id="alternates">
+  <section id="alternates" class="band">
     <div class="wrap">
       <h2>替補名單</h2>
       <p class="section-note">才藝有依據、身材達標，僅因名額而未入選，可一對一替換。</p>
@@ -84,7 +94,7 @@
     </div>
   </section>
 
-  <section id="next" class="band">
+  <section id="next">
     <div class="wrap">
       <h2>下一步</h2>
       <ol class="next" id="next-list"></ol>

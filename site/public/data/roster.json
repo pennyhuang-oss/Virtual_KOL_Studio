@@ -12,6 +12,7 @@
    "talent": "K-pop 編舞（練習生級）",
    "evidence": "「十四歲進練習生體系，待了四年沒能出道」「對音樂的反應快到不需要思考」「手機裡有三百支沒發出去的練習影片」",
    "video_proposal": "練舞室鏡面一鏡到底編舞，甩頭時薄荷綠 inner color 閃出",
+   "secondary": "唱：練習生四年的聲樂訓練底子",
    "archetype": "練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
    "public_face": "K-pop 舞蹈老師 — 練習生沒出道，改當老師 — 舞跳得比誰都好，鏡子前面就是她的主場。",
    "specs": {
@@ -40,6 +41,7 @@
    "talent": "中國古典舞（水袖・身段）",
    "evidence": "「從小學古典舞，藝校畢業」「身段是童子功，站著就跟別人不一樣」——本業旗袍訂製，儀態就是她的產品",
    "video_proposal": "蘇州園林・水袖獨舞，旗袍開衩在轉身時剛好露出",
+   "secondary": "唱：古典舞科班的氣息控制轉唱腔，走民族／古風路線",
    "archetype": "蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
    "public_face": "旗袍店店主 / 古典舞背景 — 蘇州老宅裡的旗袍訂製店主 — 科班古典舞出身，現在替客人量身、選料、做衣服。",
    "specs": {
@@ -68,6 +70,7 @@
    "talent": "日本歌謠／爵士（成熟嗓）",
    "evidence": "「二十一歲進銀座，四年做到店裡固定有指名」「和服與禮服的切換全是專業」——高級店的歌唱待客是職業技能的一部分",
    "video_proposal": "銀座風鋼琴酒吧・一首慢歌，禮服＋手持麥",
+   "secondary": "跳：禮服與和服的所作訓練，走慢板、控制型的舞台走位",
    "archetype": "銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
    "public_face": "高級會員制酒店小姐 — 銀座的職業級待客 — 不是去玩的，是去工作的。分寸、話術、和服與禮服的切換全是專業。",
    "specs": {
@@ -96,6 +99,7 @@
    "talent": "트로트／韓系流行（元氣嗓）",
    "evidence": "「釜山人，家裡在市場旁邊開店，從小就在攤子之間長大」「慶尚道腔很重，她不改」",
    "video_proposal": "釜山市場收攤後的路邊攤自彈自唱／트로트",
+   "secondary": "跳：元氣型唱跳，市場長大的體力與外放度撐得住",
    "archetype": "吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
    "public_face": "美食帳號經營者 / 吃播 — 吃得比誰都香 — 海鮮市場、路邊攤、深夜炸雞，身材卻完全不受影響。",
    "specs": {
@@ -124,6 +128,7 @@
    "talent": "直播歌回／動漫歌",
    "evidence": "profile 原文：`Low-key proud of how good she's gotten at performing for a camera without it feeling like performing`——對鏡頭表演就是她的本業",
    "video_proposal": "直播間歌回，耳機掛頸、聊天室字幕在旁",
+   "secondary": "跳：直播主標配的唱跳曲目，鏡頭前表演本來就是她的本業",
    "archetype": "直播主播 — The Night-Owl Streamer Girl. Her appeal is playful, teasing, after-dark energy: she's a livestreamer and gamer whose whole job is being looked at and reacted to, and she's completely comfortable in that role because she's good at it.",
    "public_face": "全職遊戲實況主——原本設定裡就有，是她公開的身分。檯面上是 SFW 的俏皮遊戲主播。",
    "specs": {
@@ -152,6 +157,7 @@
    "talent": "播報口條／主持",
    "evidence": "「晚間新聞主播，今年是第五年」「表達能力極強，說話有結構」「習慣性在句子前面停半秒」",
    "video_proposal": "「897 女團選秀」開場播報，一次到位不吃字",
+   "secondary": "唱：主播的發聲與氣息訓練直接轉唱功",
    "archetype": "地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
    "public_face": "新聞主播 — 地方台的晚間新聞主播 — 台上西裝、字正腔圓，是最不會有人想到會有私人帳號的那種職業。",
    "specs": {
@@ -180,6 +186,7 @@
    "talent": "直播口才 × 快速換裝秀",
    "evidence": "「超級外向，直播四小時不會累」「晚上八點準時開播」「一件衣服會用三種角度拍」",
    "video_proposal": "60 秒換 6 套的換裝 transition",
+   "secondary": "跳：直播四小時不累的體力，唱跳體能沒問題",
    "archetype": "自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
    "public_face": "網拍老闆娘 / 服飾電商 — 自己當自己的模特兒 — 選貨、拍圖、直播賣衣服，一天換二十套。",
    "specs": {
@@ -208,6 +215,7 @@
    "talent": "鏡頭前的自然反應／綜藝感",
    "evidence": "backstory 明載室友對她的評語：`妳鏡頭前面就是很自然很好笑欸`——帳號就是這樣被推著開起來的。「拍 vlog 拍到一半會突然開始講室友的八卦」「英文偶爾會蹦出可愛的破碎短句，自己講完會先笑場」。另有 4 支舞蹈 reel 已產出，舞蹈內容亦可低成本覆蓋",
    "video_proposal": "宿舍 vlog 式的自我介紹，一鏡到底不剪，中途岔題講室友",
+   "secondary": "跳：已有 4 支舞蹈 reel 產出，全庫舞蹈素材最完整的一位",
    "archetype": "校園甜心（The Campus Sweetheart）— 娃娃臉、笑起來有梨渦的大二生，她的魅力來自對自己柔軟曲線身材毫不設防的自在感，而不是刻意展示。宿舍與校園日常是她內容的全部場景，她從不表演性感，但也不假裝端莊。",
    "public_face": "台中一所大學的大二學生——原本設定裡就有，也是她公開的身分。",
    "specs": {
@@ -236,6 +244,7 @@
    "talent": "Cosplay 自製戲服 × 角色扮演",
    "evidence": "「手很巧，服裝全部自己做」「自己打版、自己縫、自己拍」「房間有一台縫紉機比床還重要」",
    "video_proposal": "從縫紉機到成品的 Cosplay 變身縮時 ＋ 角色定格",
+   "secondary": "唱跳：女僕咖啡廳的現役偶像唱跳，本來就是她的職業技能",
    "archetype": "白天在秋葉原的女僕咖啡廳上班 — 職業性的可愛，而且她很清楚那是職業。",
    "public_face": "女僕咖啡廳店員 — 白天在秋葉原的女僕咖啡廳上班 — 職業性的可愛，而且她很清楚那是職業。",
    "specs": {
@@ -264,6 +273,7 @@
    "talent": "生け花（華道）× 底片攝影",
    "evidence": "「外婆在伏見開一間小小的花藝教室，她繼承了構圖的眼光與等待的耐心」「為了等一朵雲移開等了 45 分鐘」",
    "video_proposal": "生け花一鏡完成，底片機快門聲收尾",
+   "secondary": "跳：已有 2 支舞蹈 reel 產出，走安靜、細節型的舞感",
    "archetype": "The Girl Who Lives Inside a Beautiful Daydream — and lets you visit",
    "public_face": "京都的生活者。她不談自己的身分，只給你看光線、房間、季節。觀眾對她的了解僅限於她願意拍下來的部分。",
    "specs": {
@@ -292,6 +302,7 @@
    "talent": "咖啡拉花",
    "evidence": "「現在是店裡拉花最穩的人」「一天講不到十句話，但客人會為了看她做咖啡而排隊」「開店前一定先擦一次吧台，即使昨天擦過」「圍裙帶子綁在前面，不是後面」",
    "video_proposal": "吧台俯角特寫：一杯拉花從注入到收尾，全程無台詞",
+   "secondary": "唱：氣音、低音量的日系唱法，與她寡言的調性一致",
    "archetype": "咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
    "public_face": "咖啡店員 — 咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
    "specs": {
@@ -320,6 +331,7 @@
    "talent": "變裝 performance（一鏡完成）",
    "evidence": "profile 原文：`Treats getting ready and going out as a performance art she has mastered`「Does her eyeliner first, every single time」；早年在西門町／東區 bartending and hosting 的控場底子",
    "video_proposal": "眼線第一筆到出門那一步，鏡子前一鏡完成",
+   "secondary": "跳：高跟鞋 heels dance，早年夜店控場的舞台張力",
    "archetype": "派對女王 — The Nightlife Queen. The room changes when she walks in. Bold, glamorous, a little dangerous-feeling, and completely unapologetic about how much effort her look takes.",
    "public_face": "台北夜生活圈裡被認得的人。她從調酒與酒吧外場出身（見 backstory），現在靠內容維生，但她在帳號上呈現的是「一個很會打扮、很會玩的人」，不是某個職稱。",
    "specs": {
@@ -348,6 +360,7 @@
    "talent": "鏡頭直覺／街拍",
    "evidence": "profile 原文：`Always finds the best light in any room without thinking about it`、`Every photo looks candid even when it isn't`——鏡頭直覺是她的核心特質。她同時是本庫影片素材最完整的一位（3 支舞蹈 reel 與多支生活 reel 已產出），可立即投入首波內容",
    "video_proposal": "台北街頭一鏡到底的街拍走位；亦可直接沿用既有 dance reel",
+   "secondary": "跳：已有 3 支舞蹈 reel 產出，可立即投入",
    "archetype": "The Taipei It Girl — effortlessly beautiful, living her life in public, unaware of how magnetic she is",
    "public_face": "台北的日常生活者。她在社群上從來沒說過自己在做什麼——不是設定缺漏，是刻意的：她的帳號只呈現生活本身。如果之後想給她一份工作，隨時可以加，但不加也完全成立。",
    "specs": {
@@ -376,6 +389,7 @@
    "talent": "造型改造 × 台步（171cm）",
    "evidence": "「眼光很準，選的東西都賣得掉」「新貨到一定自己先用一週」「對品質有標準，對價格反而不在意」",
    "video_proposal": "選物店改造企劃：素人穿搭 before／after ＋ 她自己的台步",
+   "secondary": "跳：171cm 的伸展台身體控制轉舞台走位",
    "archetype": "家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
    "public_face": "精品選物店主理人 — 家族做貿易，她在雅加達南區開了一間小小的選物店 — 選貨、陳列、招呼熟客，是她自己想做的事，不是家裡安排的。",
    "specs": {
@@ -404,6 +418,7 @@
    "talent": "高爾夫（競技級揮桿）",
    "evidence": "「大學打校隊，差一點轉職業，最後選擇當教練」「記得每個學生的握桿毛病」「室內練習場的固定打位不讓人」——她自己講得很清楚：球技讓人留下來，穿搭讓人進來",
    "video_proposal": "室內練習場・慢動作揮桿與 trick shot，球帽後扣穿馬尾",
+   "secondary": "跳：競技運動底的核心與體能，學編舞快",
    "archetype": "室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
    "public_face": "高爾夫教練 / 練習場 — 室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
    "specs": {

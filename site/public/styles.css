@@ -98,7 +98,11 @@ h2::before {
   font-size: 11px; letter-spacing: .34em; color: var(--gold);
   margin: 0 0 20px; text-transform: uppercase;
 }
-.lede { font-size: 17px; line-height: 1.85; color: var(--ink-2); max-width: 44em; margin: 0; }
+.tagline {
+  font: 500 clamp(16px, 2.1vw, 21px)/1.7 var(--serif);
+  color: var(--gold); margin: 0 0 22px; max-width: 32em; letter-spacing: .01em;
+}
+.lede { font-size: 16px; line-height: 1.85; color: var(--ink-2); max-width: 44em; margin: 0; }
 .section-note {
   color: var(--ink-2); font-size: 14px; max-width: 50em; margin: 0 0 30px;
 }
