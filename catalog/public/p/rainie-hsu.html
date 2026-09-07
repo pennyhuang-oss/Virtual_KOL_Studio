@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -429,7 +444,26 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>私下 / 她自己的房間</b><i>25%</i></li><li><b>穿搭 / 換裝 — 出門前</b><i>22%</i></li><li><b>白天的她</b><i>20%</i></li><li><b>浴室 / 妝前妝後</b><i>13%</i></li><li><b>早晨 / 前一晚之後</b><i>10%</i></li><li><b>旅遊 / 夜生活遠征</b><i>10%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>22〜30 歲、會出門玩的都會女性，出門前要造型、也在意妝撐不撐得住。</p></div>
+    <div class="pil"><div>
+      <p class="nm">私下 / 她自己的房間</p><p class="wt">25%</p>
+      <p class="de">回到自己的公寓、卸掉整套妝之後——絲質睡袍、床邊、只剩一盞燈。檯面上她是張揚的、給整個房間看的；私下是收起來、只給自己看的那個版本。</p>
+    </div><div>
+      <p class="nm">穿搭 / 換裝 — 出門前</p><p class="wt">22%</p>
+      <p class="de">她的招牌內容：出門前的完整換裝過程，鏡子前在洋裝和馬甲之間決定，最後在全身鏡前確認一次。</p>
+    </div><div>
+      <p class="nm">白天的她</p><p class="wt">20%</p>
+      <p class="de">沒有要出門的那些白天——素顏、便利商店、跟朋友吃午餐、市場、日光下的她。新增支柱，補上她原本完全缺席的日間生活。她白天在做什麼是開放的，不綁定任何職業。</p>
+    </div><div>
+      <p class="nm">浴室 / 妝前妝後</p><p class="wt">13%</p>
+      <p class="de">上妝的步驟、造型、香水、鏡子前的最後確認；以及回家後把這一切卸掉。</p>
+    </div><div>
+      <p class="nm">早晨 / 前一晚之後</p><p class="wt">10%</p>
+      <p class="de">大夜之後的早晨——妝沒卸乾淨、寬大的 T 恤、需要咖啡才能運作。</p>
+    </div><div>
+      <p class="nm">旅遊 / 夜生活遠征</p><p class="wt">10%</p>
+      <p class="de">高雄、日本的週末，飯店房間裡出門前的預備。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

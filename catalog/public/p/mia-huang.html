@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -429,7 +444,29 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>私下 / 關台之後</b><i>25%</i></li><li><b>直播間 / 開台的日子</b><i>20%</i></li><li><b>穿搭 / 換裝</b><i>18%</i></li><li><b>白天的新竹</b><i>15%</i></li><li><b>下午甦醒 / 她的早晨</b><i>12%</i></li><li><b>浴室 / 深夜保養</b><i>7%</i></li><li><b>外出 / 展會與見面會</b><i>3%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>18〜30 歲的遊戲與實況觀眾，夜貓子作息，買周邊之前會先看實際在用的人。</p></div>
+    <div class="pil"><div>
+      <p class="nm">私下 / 關台之後</p><p class="wt">25%</p>
+      <p class="de">下播、燈條關掉之後的房間——貼身家居服、床、手機的光。直播時她是表演給彈幕看的版本，關台後是只給自己的版本。這個落差是她真正的反差，而不是『她住在直播間裡』。</p>
+    </div><div>
+      <p class="nm">直播間 / 開台的日子</p><p class="wt">20%</p>
+      <p class="de">電競椅、RGB 光、實況中的即時反應、回合之間的閒聊，還有走過桌面的貓。她的工作在這個房間，但她的生活不只在這裡。</p>
+    </div><div>
+      <p class="nm">穿搭 / 換裝</p><p class="wt">18%</p>
+      <p class="de">挑今晚開台的造型：oversized 帽 T vs 短版背心、要不要戴貓耳、上機前調整過膝襪。也會有跟直播完全無關的私服。</p>
+    </div><div>
+      <p class="nm">白天的新竹</p><p class="wt">15%</p>
+      <p class="de">她也有白天——出門吃飯、去便利商店、朋友約的下午茶、新竹的街。已刪除舊設定裡『任何需要白天戶外拍攝的都不接，她的品牌identity就是夜行性』這條，那正是把角色寫死的典型。</p>
+    </div><div>
+      <p class="nm">下午甦醒 / 她的早晨</p><p class="wt">12%</p>
+      <p class="de">因為她的一天從下午兩點開始，她的晨間 routine 發生在午後的光裡——剛醒、頭髮亂、第一杯咖啡。</p>
+    </div><div>
+      <p class="nm">浴室 / 深夜保養</p><p class="wt">7%</p>
+      <p class="de">開台前的快速保養，或收工後過了午夜的卸妝版本。</p>
+    </div><div>
+      <p class="nm">外出 / 展會與見面會</p><p class="wt">3%</p>
+      <p class="de">偶爾的電競展、創作者聚會。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

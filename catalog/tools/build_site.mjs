@@ -236,6 +236,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -749,8 +764,12 @@ const personPage = p => {
     </div>
   </div>
 
-  ${p.pillars.length ? `<section class="sec"><h2>內容主題</h2>
-    <ul class="plain">${p.pillars.map(x => `<li><b>${esc(x.name)}</b>${x.weight ? `<i>${esc(x.weight)}</i>` : ''}</li>`).join('')}</ul>
+  ${(p.pillars.length || p.audience) ? `<section class="sec"><h2>內容主題</h2>
+    ${p.audience ? `<div class="aud1"><span>目標受眾</span><p>${esc(p.audience)}</p></div>` : ''}
+    ${p.pillars.length ? `<div class="pil">${p.pillars.map(x => `<div>
+      <p class="nm">${esc(x.name)}</p>${x.weight ? `<p class="wt">${esc(x.weight)}</p>` : '<p class="wt"></p>'}
+      ${x.desc ? `<p class="de">${esc(x.desc)}</p>` : ''}
+    </div>`).join('')}</div>` : ''}
   </section>` : ''}
 
   ${(p.personality.length || p.voice_tone || p.aesthetic_mood) ? `<section class="sec"><h2>性格・語氣・視覺調性</h2>

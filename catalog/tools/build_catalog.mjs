@@ -241,6 +241,15 @@ function nameFromCharacterMd(id, repos) {
 const hasCJK = v => /[\u4e00-\u9fff]/.test(String(v ?? ''));
 const pickZh = v => (v && hasCJK(v) ? v : null);
 // 中文後面接一段英文時，只留中文那一段（純英文則整段丟掉，由 pickZh 處理）。
+// 說明只收中文。英文的一律當成「沒有」——寧可不顯示,也不要在全中文的頁面上
+// 混一段英文（使用者 2026-09-01：全中文）。該補的由 copy.json 的覆寫補。
+const onlyZhText = t => {
+  const s = String(t ?? '').trim();
+  if (!s) return null;
+  const zh = (s.match(/[\u4e00-\u9fff]/g) || []).length;
+  return zh / s.length > 0.3 ? s : null;
+};
+
 const stripEnTail = v => {
   const t = String(v ?? '').trim();
   if (!hasCJK(t)) return '';
@@ -302,9 +311,20 @@ for (const p of inv.personas) {
     voice_tone: copy.voice_zh || pickZh(profile?.persona?.voice_tone),
     // 內容主題有些是雙語寫的（「數字娛樂設計 Digital Entertainment Design」），
     // 型錄只留中文那一半——使用者要求全中文。
-    pillars: (profile?.content?.pillars || []).map(x => ({
-      name: stripEnTail(x.name), weight: x.weight || null,
-    })).filter(x => x.name),
+    // 支柱說明：原文在 profile.json 的 description。
+    // ⚠ 兩種原文不能直接對外：英文的（全站中文是硬規則）、帶內部製作註記的
+    //   （「已從 30% 調整為 22%」「這是她目前最缺的一塊」——那是配額討論）。
+    //   那兩種在 copy.json 的 `pillar_desc` 逐條覆寫,覆寫優先。
+    pillars: (profile?.content?.pillars || []).map(x => {
+      const name = stripEnTail(x.name);
+      const over = (COPY.pillar_desc || {})[p.id] || {};
+      const desc = over[name] ?? over[x.name] ?? onlyZhText(x.description);
+      return { name, weight: x.weight || null, desc: desc || null };
+    }).filter(x => x.name),
+
+    // 🛑 目標受眾不是撈出來的,人設檔裡沒有這一欄。它寫在 copy.json 的 `audience`,
+    //    由 Claude 依既有資料寫、由使用者核對。撈不到就不顯示,不要編。
+    audience: (COPY.audience || {})[p.id] || null,
     aesthetic_mood: copy.mood_zh || pickZh(profile?.content?.aesthetic?.mood),
 
     // 🛑 只有「適合方向」，沒有「不接什麼」。

@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -444,7 +459,20 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>數字娛樂設計</b><i>25%</i></li><li><b>紀錄片推薦</b><i>25%</i></li><li><b>經典電影分析</b><i>25%</i></li><li><b>AI 科技觀察</b><i>25%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>22〜40 歲的科技與遊戲愛好者、創作者與設計從業者，想聽的是「為什麼好」而不是開箱。</p></div>
+    <div class="pil"><div>
+      <p class="nm">數字娛樂設計</p><p class="wt">25%</p>
+      <p class="de">他最有辨識度的主題——遊戲、動畫、互動娛樂、主題設計、聲音設計、視覺設計。談的一律是設計、美術與體驗：為什麼一段主題動畫記得住、為什麼一段音樂讓人沉浸、為什麼不同文化偏好不同的表現方式。</p>
+    </div><div>
+      <p class="nm">紀錄片推薦</p><p class="wt">25%</p>
+      <p class="de">他最穩定的內容來源——不是「十大必看」，而是拆解「這部為什麼值得看」：敘事結構、鏡頭語言、資訊設計、情緒設計。科技、自然、歷史、AI、藝術、商業題材都在範圍內。</p>
+    </div><div>
+      <p class="nm">經典電影分析</p><p class="wt">25%</p>
+      <p class="de">電影是體驗設計最成熟的案例。為什麼這一顆鏡頭會緊張、為什麼配樂一進來情緒就轉、為什麼某些角色會變成符號、為什麼一個虛構的世界讓人信。不評好壞，只講「這部作品把體驗設計做完了」。</p>
+    </div><div>
+      <p class="nm">AI 科技觀察</p><p class="wt">25%</p>
+      <p class="de">他的未來方向——AI 工具、AI 創作、機器人、虛擬人、下一代網路、人機互動。不追「哪家公司今天發了什麼模型」，而是問「這個技術會怎麼改變人跟數位世界的關係」。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

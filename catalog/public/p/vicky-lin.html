@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -429,7 +444,29 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>私下 / 她自己的房間</b><i>25%</i></li><li><b>健身 / 訓練</b><i>22%</i></li><li><b>穿搭 / 換裝</b><i>15%</i></li><li><b>早晨 / 剛睡醒</b><i>13%</i></li><li><b>浴室 / 訓練後</b><i>12%</i></li><li><b>外出 / 高雄的日常</b><i>8%</i></li><li><b>旅行</b><i>5%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>20〜35 歲、有在運動的人，要能跟得上的訓練內容，不要身材焦慮的話術。</p></div>
+    <div class="pil"><div>
+      <p class="nm">私下 / 她自己的房間</p><p class="wt">25%</p>
+      <p class="de">回到高雄的公寓、洗完澡之後——貼身家居服、地板上的伸展、床邊。訓練時她是最不在意外表的那種人，私下卻很清楚自己練出來的身體長什麼樣，也願意把它留下來。這個落差就是她的反差。</p>
+    </div><div>
+      <p class="nm">健身 / 訓練</p><p class="wt">22%</p>
+      <p class="de">重訓、功能性循環、PR 挑戰、帶學員上課。汗水與正在發力的肌肉——她的核心身分。</p>
+    </div><div>
+      <p class="nm">穿搭 / 換裝</p><p class="wt">15%</p>
+      <p class="de">挑今天的運動套組、運動內衣與緊身褲的搭配、外面隨手套的 oversized 帽 T。偶爾也會有完全不像她的一套。</p>
+    </div><div>
+      <p class="nm">早晨 / 剛睡醒</p><p class="wt">13%</p>
+      <p class="de">高雄的清晨、熱起來之前——有時已經換好衣服準備早訓，頭髮正要綁起來。</p>
+    </div><div>
+      <p class="nm">浴室 / 訓練後</p><p class="wt">12%</p>
+      <p class="de">訓練後沖掉汗、冰敷或熱敷痠痛的肌肉、皮膚還泛紅。誠實而不精緻。</p>
+    </div><div>
+      <p class="nm">外出 / 高雄的日常</p><p class="wt">8%</p>
+      <p class="de">不在健身房的高雄——菜市場、河堤、朋友的店。她也有完全不運動的一天。</p>
+    </div><div>
+      <p class="nm">旅行</p><p class="wt">5%</p>
+      <p class="de">比賽、健身營，偶爾真正的假期。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

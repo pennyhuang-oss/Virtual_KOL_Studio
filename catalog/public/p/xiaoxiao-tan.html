@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -444,7 +459,20 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>每日閱讀分享</b><i>30%</i></li><li><b>博弈案例分享</b><i>30%</i></li><li><b>經典概率故事</b><i>25%</i></li><li><b>粉絲交流 / 讀書會</b><i>15%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>25〜45 歲愛讀書、對機率與決策有興趣的人，偏好冷靜、有推導過程的內容。</p></div>
+    <div class="pil"><div>
+      <p class="nm">每日閱讀分享</p><p class="wt">30%</p>
+      <p class="de">他最穩定的主題。一天一本、一章、一句，或一個新的理解——數學、機率、賽局、決策科學、歷史、商業、邏輯。不是書評，而是「我今天學到什麼」。一本三百頁的書，可能只分享其中一頁。</p>
+    </div><div>
+      <p class="nm">博弈案例分享</p><p class="wt">30%</p>
+      <p class="de">他最有辨識度的主題。任何「由寫下來的規則決定結果」的系統——西洋棋、圍棋、德州撲克、百家樂、彩券、預測市場，以及金融市場的結構（成分股納入規則、ETF 機制、槓桿型 ETF 的每日重設、交易所的強制平倉與保證金規則）。</p>
+    </div><div>
+      <p class="nm">經典概率故事</p><p class="wt">25%</p>
+      <p class="de">歷史上有名的機率案例——三門問題、聖彼得堡悖論、生日悖論、賭徒謬誤、手感謬誤、貝氏思考。重點不在公式，而在「為什麼人的直覺會算錯」。</p>
+    </div><div>
+      <p class="nm">粉絲交流 / 讀書會</p><p class="wt">15%</p>
+      <p class="de">回覆留言、討論問題、推薦書，每月一次線上讀書會（一本書、一場直播、一次討論）。他要的是一個一起學的社群，不是粉絲群。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

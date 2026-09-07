@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -429,7 +444,29 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>私下 / 她自己的房間</b><i>25%</i></li><li><b>穿搭 / 換裝</b><i>18%</i></li><li><b>外出 / 巴黎的日常</b><i>15%</i></li><li><b>早晨 / 剛睡醒</b><i>15%</i></li><li><b>浴室 / 洗完澡</b><i>12%</i></li><li><b>外出 / 旅行</b><i>10%</i></li><li><b>身體 / 活動</b><i>5%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>嚮往歐洲日常感的 20〜30 歲女性，看的是質感與生活方式，不是名牌清單。</p></div>
+    <div class="pil"><div>
+      <p class="nm">私下 / 她自己的房間</p><p class="wt">25%</p>
+      <p class="de">打工結束回到巴黎的小公寓——絲質吊帶、亞麻襯衫只扣一顆、午後或深夜的光。她的性感一直是不自覺的那種，私下只是把音量放大了一點點，而且她自己知道。</p>
+    </div><div>
+      <p class="nm">穿搭 / 換裝</p><p class="wt">18%</p>
+      <p class="de">亞麻襯衫、絲質吊帶裙、永遠要掉不掉的髮夾。因為她真的沒有在努力。偶爾也會刻意打扮一次。</p>
+    </div><div>
+      <p class="nm">外出 / 巴黎的日常</p><p class="wt">15%</p>
+      <p class="de">不在公寓裡的巴黎——市場、麵包店、河邊、朋友的餐桌。她的生活本來就有一半在外面發生。</p>
+    </div><div>
+      <p class="nm">早晨 / 剛睡醒</p><p class="wt">15%</p>
+      <p class="de">巴黎公寓的早晨——白亞麻、Haussmann 窗光、金髮散在枕頭上。</p>
+    </div><div>
+      <p class="nm">浴室 / 洗完澡</p><p class="wt">12%</p>
+      <p class="de">老磁磚的巴黎浴室：濕的金髮、白浴巾、鏡子上的霧。</p>
+    </div><div>
+      <p class="nm">外出 / 旅行</p><p class="wt">10%</p>
+      <p class="de">里昂、尼斯、羅馬——乾淨的飯店房間、大窗、城市或海邊的光。</p>
+    </div><div>
+      <p class="nm">身體 / 活動</p><p class="wt">5%</p>
+      <p class="de">清晨的散步、偶爾騎 Vélib、窗邊伸展。她不叫它運動。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

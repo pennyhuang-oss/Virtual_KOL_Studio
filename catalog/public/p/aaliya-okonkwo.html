@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -429,7 +444,29 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>私下 / 她自己的房間</b><i>25%</i></li><li><b>穿搭 / 換裝</b><i>18%</i></li><li><b>外出 / LA 的日常</b><i>15%</i></li><li><b>早晨 / 剛睡醒</b><i>15%</i></li><li><b>浴室 / 洗完澡</b><i>12%</i></li><li><b>外出 / 旅行</b><i>10%</i></li><li><b>身體 / 活動</b><i>5%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>18〜30 歲、拉丁與洛杉磯文化圈的觀眾，看的是玩得開心的能量與適合中深膚色的選品。</p></div>
+    <div class="pil"><div>
+      <p class="nm">私下 / 她自己的房間</p><p class="wt">25%</p>
+      <p class="de">收工回到 LA 的公寓之後——貼身家居服、床邊、傍晚的暖光。她本來就對自己的身體毫不設防，私下的畫面是這件事最直接的版本，而且完全是她自己要的。</p>
+    </div><div>
+      <p class="nm">穿搭 / 換裝</p><p class="wt">18%</p>
+      <p class="de">短版上衣、高腰丹寧、合身洋裝。她挑得很快，而且立刻好看。偶爾也會有完全不同路線的一套。</p>
+    </div><div>
+      <p class="nm">外出 / LA 的日常</p><p class="wt">15%</p>
+      <p class="de">不在公寓裡的洛杉磯——家人的聚會、街區、車上、朋友的店。她的世界是吵的、滿的、有人的。</p>
+    </div><div>
+      <p class="nm">早晨 / 剛睡醒</p><p class="wt">15%</p>
+      <p class="de">LA 的晨光很強——她醒進那道光裡，從容不趕時間。</p>
+    </div><div>
+      <p class="nm">浴室 / 洗完澡</p><p class="wt">12%</p>
+      <p class="de">洗完澡：暖光下的皮膚、濕重的深色長捲髮、白浴巾、鏡子。</p>
+    </div><div>
+      <p class="nm">外出 / 旅行</p><p class="wt">10%</p>
+      <p class="de">墨西哥、邁阿密、紐約——飯店房間、城市或海景。</p>
+    </div><div>
+      <p class="nm">身體 / 活動</p><p class="wt">5%</p>
+      <p class="de">健身房、戶外跑步、想跳就跳。真的在用身體的那種自信。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

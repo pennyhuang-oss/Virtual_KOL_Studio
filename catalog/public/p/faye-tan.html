@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -444,7 +459,20 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>城市觀察</b><i>35%</i></li><li><b>酒店體驗</b><i>25%</i></li><li><b>建築與歷史</b><i>25%</i></li><li><b>旅行隨筆</b><i>15%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>25〜45 歲、會自己安排行程的旅行者與商務客，選飯店會看設計與服務，不只看星等。</p></div>
+    <div class="pil"><div>
+      <p class="nm">城市觀察</p><p class="wt">35%</p>
+      <p class="de">每週挑一座城市，深入它的細節——為什麼這樣規劃、為什麼街道有寬有窄、為什麼廣場落在這裡。目的是把一座城市讀懂，不是列出景點。固定專欄《城市的一天》：用早晨、正午、黃昏、夜晚四段講完一座城。</p>
+    </div><div>
+      <p class="nm">酒店體驗</p><p class="wt">25%</p>
+      <p class="de">從建築、服務文化、空間動線與歷史來看一間酒店——衡量的標準不是「豪不豪華」，而是「有沒有把當地文化講出來」。固定專欄《酒店觀察筆記》。</p>
+    </div><div>
+      <p class="nm">建築與歷史</p><p class="wt">25%</p>
+      <p class="de">用建築講歷史人物、城市變遷與文化演進——一棟樓怎麼見證一個時代。固定專欄《建築會說話》：為什麼是這個立面、這個入口、這個中庭、這片空著的廣場。</p>
+    </div><div>
+      <p class="nm">旅行隨筆</p><p class="wt">15%</p>
+      <p class="de">路上的小發現——一間老咖啡館、一張舊地圖、街角的一件雕塑、當地長輩講的一段故事。固定專欄《城市裡的小發現》，一分鐘以內，最能看出她的性格。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>

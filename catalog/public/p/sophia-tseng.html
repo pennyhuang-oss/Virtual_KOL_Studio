@@ -135,6 +135,21 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
   .soc svg{width:17px;height:17px}}
 
 /* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
 .gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
 .gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
@@ -429,7 +444,29 @@ footer p{margin:0 0 7px;max-width:720px}
   </div>
 
   <section class="sec"><h2>內容主題</h2>
-    <ul class="plain"><li><b>私下 / 信義區公寓的她</b><i>25%</i></li><li><b>工作室 / 上班的一天</b><i>20%</i></li><li><b>穿搭 / 換裝</b><i>15%</i></li><li><b>早晨 / 慢的早晨</b><i>15%</i></li><li><b>飯店旅遊</b><i>15%</i></li><li><b>浴室 / 保養儀式</b><i>7%</i></li><li><b>身體 /</b><i>3%</i></li></ul>
+    <div class="aud1"><span>目標受眾</span><p>28〜40 歲、有自己收入的專業女性，買的是省時與從容，不是炫耀。</p></div>
+    <div class="pil"><div>
+      <p class="nm">私下 / 信義區公寓的她</p><p class="wt">25%</p>
+      <p class="de">工作結束、客人走了之後的公寓——絲質睡袍、大理石浴室的燈、落地窗前的夜。她的性感一向是成熟、篤定、不喧嘩的，私下是這件事最完整的版本。</p>
+    </div><div>
+      <p class="nm">工作室 / 上班的一天</p><p class="wt">20%</p>
+      <p class="de">提案、選料、跟客人討論、工作室裡一個人的下午。這是她檯面上的正常職業，也是她『東西要自己賺來』那句話的證據。</p>
+    </div><div>
+      <p class="nm">穿搭 / 換裝</p><p class="wt">15%</p>
+      <p class="de">剪裁俐落的西裝外套、寬版針織、垂墜絲質襯衫、出門前的最後確認。偶爾也會有完全不像她的一套。</p>
+    </div><div>
+      <p class="nm">早晨 / 慢的早晨</p><p class="wt">15%</p>
+      <p class="de">信義區公寓的早晨——落地窗光線、一杯咖啡、還沒開始說話的安靜。</p>
+    </div><div>
+      <p class="nm">飯店旅遊</p><p class="wt">15%</p>
+      <p class="de">五星飯店套房、東京與巴黎的旅程、飯店的浴缸與窗景。</p>
+    </div><div>
+      <p class="nm">浴室 / 保養儀式</p><p class="wt">7%</p>
+      <p class="de">大理石浴室裡被認真使用的保養品，步驟慢、光線好。</p>
+    </div><div>
+      <p class="nm">身體 /</p><p class="wt">3%</p>
+      <p class="de">Pilates 與 reformer——安靜、規律、不喊口號的自律。</p>
+    </div></div>
   </section>
 
   <section class="sec"><h2>性格・語氣・視覺調性</h2>
