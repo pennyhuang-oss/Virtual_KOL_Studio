@@ -21,17 +21,6 @@
    "media/wanyin-jiang/05.webp"
   ]
  },
- "nanami-fujiwara": {
-  "cover": "media/nanami-fujiwara/cover.webp",
-  "shots": [
-   "media/nanami-fujiwara/00.webp",
-   "media/nanami-fujiwara/01.webp",
-   "media/nanami-fujiwara/02.webp",
-   "media/nanami-fujiwara/03.webp",
-   "media/nanami-fujiwara/04.webp",
-   "media/nanami-fujiwara/05.webp"
-  ]
- },
  "rin-ayase": {
   "cover": "media/rin-ayase/cover.webp",
   "shots": [
@@ -89,6 +78,22 @@
    "media/tammy-chou/05.webp"
   ]
  },
+ "coco-wu": {
+  "cover": "media/coco-wu/cover.webp",
+  "shots": [
+   "media/coco-wu/00.webp",
+   "media/coco-wu/01.webp",
+   "media/coco-wu/02.webp",
+   "media/coco-wu/03.webp",
+   "media/coco-wu/04.webp",
+   "media/coco-wu/05.webp",
+   "media/coco-wu/06.webp",
+   "media/coco-wu/07.webp"
+  ],
+  "videos": [
+   "video/coco-wu__coco_dance_clone_r13_ig_reel.mp4"
+  ]
+ },
  "kanon-komori": {
   "cover": "media/kanon-komori/cover.webp",
   "shots": [
@@ -101,20 +106,6 @@
    "media/kanon-komori/06.webp",
    "media/kanon-komori/07.webp",
    "media/kanon-komori/08.webp"
-  ]
- },
- "wendy-yeo": {
-  "cover": "media/wendy-yeo/cover.webp",
-  "shots": [
-   "media/wendy-yeo/00.webp",
-   "media/wendy-yeo/01.webp",
-   "media/wendy-yeo/02.webp",
-   "media/wendy-yeo/03.webp",
-   "media/wendy-yeo/04.webp",
-   "media/wendy-yeo/05.webp",
-   "media/wendy-yeo/06.webp",
-   "media/wendy-yeo/07.webp",
-   "media/wendy-yeo/08.webp"
   ]
  },
  "luna-tanaka": {
@@ -130,6 +121,17 @@
   "videos": [
    "video/luna-tanaka__luna_dance_v1.mp4",
    "video/luna-tanaka__luna_daily_v1.mp4"
+  ]
+ },
+ "miu-shiraishi": {
+  "cover": "media/miu-shiraishi/cover.webp",
+  "shots": [
+   "media/miu-shiraishi/00.webp",
+   "media/miu-shiraishi/01.webp",
+   "media/miu-shiraishi/02.webp",
+   "media/miu-shiraishi/03.webp",
+   "media/miu-shiraishi/04.webp",
+   "media/miu-shiraishi/05.webp"
   ]
  },
  "rainie-hsu": {
@@ -177,15 +179,18 @@
    "media/angeline-kwee/08.webp"
   ]
  },
- "peggy-lee": {
-  "cover": "media/peggy-lee/cover.webp",
+ "yerin-han": {
+  "cover": "media/yerin-han/cover.webp",
   "shots": [
-   "media/peggy-lee/00.webp",
-   "media/peggy-lee/01.webp",
-   "media/peggy-lee/02.webp",
-   "media/peggy-lee/03.webp",
-   "media/peggy-lee/04.webp",
-   "media/peggy-lee/05.webp"
+   "media/yerin-han/00.webp",
+   "media/yerin-han/01.webp",
+   "media/yerin-han/02.webp",
+   "media/yerin-han/03.webp",
+   "media/yerin-han/04.webp",
+   "media/yerin-han/05.webp",
+   "media/yerin-han/06.webp",
+   "media/yerin-han/07.webp",
+   "media/yerin-han/08.webp"
   ]
  }
 }

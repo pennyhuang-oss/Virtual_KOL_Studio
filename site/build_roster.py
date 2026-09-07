@@ -18,9 +18,6 @@ EDITORIAL = [
     ("wanyin-jiang", "舞蹈", "中國古典舞（水袖・身段）",
      "「從小學古典舞，藝校畢業」「身段是童子功，站著就跟別人不一樣」——本業旗袍訂製，儀態就是她的產品",
      "蘇州園林・水袖獨舞，旗袍開衩在轉身時剛好露出"),
-    ("nanami-fujiwara", "舞蹈", "日本舞踊／和服所作",
-     "「動作很輕，走路沒有聲音」「和服一天穿十小時，腰帶綁得很緊」——女將見習的所作訓練",
-     "和室・扇子所作，赤足踏在榻榻米上無聲"),
     ("rin-ayase", "歌唱", "日本歌謠／爵士（成熟嗓）",
      "「二十一歲進銀座，四年做到店裡固定有指名」「和服與禮服的切換全是專業」——高級店的歌唱待客是職業技能的一部分",
      "銀座風鋼琴酒吧・一首慢歌，禮服＋手持麥"),
@@ -36,15 +33,21 @@ EDITORIAL = [
     ("tammy-chou", "口語", "直播口才 × 快速換裝秀",
      "「超級外向，直播四小時不會累」「晚上八點準時開播」「一件衣服會用三種角度拍」",
      "60 秒換 6 套的換裝 transition"),
+    ("coco-wu", "口語", "鏡頭前的自然反應／綜藝感",
+     "backstory 明載室友對她的評語：`妳鏡頭前面就是很自然很好笑欸`——帳號就是這樣被推著開起來的。"
+     "「拍 vlog 拍到一半會突然開始講室友的八卦」「英文偶爾會蹦出可愛的破碎短句，自己講完會先笑場」。"
+     "另有 4 支舞蹈 reel 已產出，舞蹈內容亦可低成本覆蓋",
+     "宿舍 vlog 式的自我介紹，一鏡到底不剪，中途岔題講室友"),
     ("kanon-komori", "手作", "Cosplay 自製戲服 × 角色扮演",
      "「手很巧，服裝全部自己做」「自己打版、自己縫、自己拍」「房間有一台縫紉機比床還重要」",
      "從縫紉機到成品的 Cosplay 變身縮時 ＋ 角色定格"),
-    ("wendy-yeo", "手作", "花式調酒 × 手鑿冰球",
-     "「手藝是真的，得過獎」「首席調酒師」「冰球是自己切的，不用機器」「什麼時候該放什麼音樂」",
-     "手鑿冰球特寫 → 一杯成品，全程幾乎無台詞"),
     ("luna-tanaka", "手作", "生け花（華道）× 底片攝影",
      "「外婆在伏見開一間小小的花藝教室，她繼承了構圖的眼光與等待的耐心」「為了等一朵雲移開等了 45 分鐘」",
      "生け花一鏡完成，底片機快門聲收尾"),
+    ("miu-shiraishi", "手作", "咖啡拉花",
+     "「現在是店裡拉花最穩的人」「一天講不到十句話，但客人會為了看她做咖啡而排隊」"
+     "「開店前一定先擦一次吧台，即使昨天擦過」「圍裙帶子綁在前面，不是後面」",
+     "吧台俯角特寫：一杯拉花從注入到收尾，全程無台詞"),
     ("rainie-hsu", "造型", "變裝 performance（一鏡完成）",
      "profile 原文：`Treats getting ready and going out as a performance art she has mastered`「Does her eyeliner first, every single time」；早年在西門町／東區 bartending and hosting 的控場底子",
      "眼線第一筆到出門那一步，鏡子前一鏡完成"),
@@ -54,12 +57,18 @@ EDITORIAL = [
     ("angeline-kwee", "造型", "造型改造 × 台步（171cm）",
      "「眼光很準，選的東西都賣得掉」「新貨到一定自己先用一週」「對品質有標準，對價格反而不在意」",
      "選物店改造企劃：素人穿搭 before／after ＋ 她自己的台步"),
-    ("peggy-lee", "運動", "手排駕駛 × 車輛知識",
-     "「自己開一台手排，從高中就跟著哥哥們跑車聚」「真的懂車，講得出規格」「對『花瓶』這個詞很敏感」",
-     "夜衝・手排換檔特寫 ＋ 講得出規格的車輛介紹"),
+    ("yerin-han", "運動", "高爾夫（競技級揮桿）",
+     "「大學打校隊，差一點轉職業，最後選擇當教練」「記得每個學生的握桿毛病」"
+     "「室內練習場的固定打位不讓人」——她自己講得很清楚：球技讓人留下來，穿搭讓人進來",
+     "室內練習場・慢動作揮桿與 trick shot，球帽後扣穿馬尾"),
 ]
 
 VIDEOS = {
+    # Smallest of her four dance reels — the others are 42-59MB each and the
+    # site is served whole, so payload matters more than having all four.
+    "coco-wu": [
+        "kols/coco-wu/videos/dance_clone_r13/coco_dance_clone_r13_ig_reel.mp4",
+    ],
     "iris-chen": [
         "kols/iris-chen/videos/dance_v1/dance_v1_seedance_10s_black_crop_vietnam_drum.mp4",
         "kols/iris-chen/videos/dance_v1/dance_v3_seedance_15s_blue_dress_sugar_on_tongue.mp4",

@@ -57,34 +57,6 @@
    "soul": "待送訓"
   },
   {
-   "id": "nanami-fujiwara",
-   "name": "Nanami Fujiwara",
-   "native_name": "藤原七海",
-   "handle": "@nanami.hakone",
-   "age": 23,
-   "ethnicity": "日本",
-   "location": "箱根",
-   "group": "舞蹈",
-   "talent": "日本舞踊／和服所作",
-   "evidence": "「動作很輕，走路沒有聲音」「和服一天穿十小時，腰帶綁得很緊」——女將見習的所作訓練",
-   "video_proposal": "和室・扇子所作，赤足踏在榻榻米上無聲",
-   "archetype": "旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
-   "public_face": "溫泉旅館女將見習 — 旅館的下一代 — 從東京回鄉接家業，穿和服上工，私下還是普通的 23 歲。",
-   "specs": {
-    "height_cm": 162,
-    "bust_cm": 88,
-    "waist_cm": 58,
-    "hip_cm": 88,
-    "cup": "D",
-    "whr": 0.66,
-    "leg_ratio": 46.9
-   },
-   "hair": "現階段是黑色長髮，配合旅館工作的分寸；下工放下時是直順的黑髮。她離開旅館或想換的時候都可以改。",
-   "face": "白皙柔和的日系鵝蛋臉，眉眼溫順，笑起來眼睛彎。清透妝，有教養感。",
-   "figure": "和風柔和",
-   "soul": "待送訓"
-  },
-  {
    "id": "rin-ayase",
    "name": "Rin Ayase",
    "native_name": "綾瀨凜",
@@ -225,6 +197,34 @@
    "soul": "待送訓"
   },
   {
+   "id": "coco-wu",
+   "name": "Coco Wu",
+   "native_name": "吳可可",
+   "handle": "@coco.wu",
+   "age": 20,
+   "ethnicity": "台灣",
+   "location": "Taichung, Taiwan",
+   "group": "口語",
+   "talent": "鏡頭前的自然反應／綜藝感",
+   "evidence": "backstory 明載室友對她的評語：`妳鏡頭前面就是很自然很好笑欸`——帳號就是這樣被推著開起來的。「拍 vlog 拍到一半會突然開始講室友的八卦」「英文偶爾會蹦出可愛的破碎短句，自己講完會先笑場」。另有 4 支舞蹈 reel 已產出，舞蹈內容亦可低成本覆蓋",
+   "video_proposal": "宿舍 vlog 式的自我介紹，一鏡到底不剪，中途岔題講室友",
+   "archetype": "校園甜心（The Campus Sweetheart）— 娃娃臉、笑起來有梨渦的大二生，她的魅力來自對自己柔軟曲線身材毫不設防的自在感，而不是刻意展示。宿舍與校園日常是她內容的全部場景，她從不表演性感，但也不假裝端莊。",
+   "public_face": "台中一所大學的大二學生——原本設定裡就有，也是她公開的身分。",
+   "specs": {
+    "height_cm": 158,
+    "bust_cm": 89,
+    "waist_cm": 56,
+    "hip_cm": 86,
+    "cup": "E",
+    "whr": 0.65,
+    "leg_ratio": 46.8
+   },
+   "hair": "黑棕色長波浪捲髮，帶著蓬鬆的落散劉海（wispy bangs）。日常常常隨手夾起或綁半丸子頭去上課。",
+   "face": "Stunningly pretty, doll-like round face — every feature reads as beautiful and photogenic, the kind of face people call '校花' (school-beauty tier). Deep dimples when she smiles, a small delicate chin, big sweet eyes, fair, luminous porcelain-toned skin (NOT tanned, bronzed, olive, or deep golden/wheat-colored). Purely descriptive, no likeness to any real individual.",
+   "figure": "158cm 嬌小身形，軟嫩帶曲線的圓潤體態，胸部與臀部自然豐滿但不刻意展示。整體感覺是舒服自在地待在自己身體裡，不是刻意擺出來的性感，也完全不會刻意遮掩——她單純沒有在意這件事。",
+   "soul": "已訓練"
+  },
+  {
    "id": "kanon-komori",
    "name": "Kanon Komori",
    "native_name": "小森花音",
@@ -250,34 +250,6 @@
    "hair": "**粉紫漸層（髮根深、髮尾粉紫）**，長度到腰，雙馬尾或放下。全批最鮮明的髮色，也是她 Cosplay 體質的延伸。",
    "face": "白皙、非常小的臉，大眼雙眼皮、圓鼻頭，日系偶像臉。上班的偶像妝卸掉後落差很大。",
    "figure": "極嬌小反差",
-   "soul": "待送訓"
-  },
-  {
-   "id": "wendy-yeo",
-   "name": "Wendy Yeo",
-   "native_name": "楊薇伊",
-   "handle": "@wendy.pour",
-   "age": 28,
-   "ethnicity": "新加坡華裔",
-   "location": "新加坡丹戎巴葛",
-   "group": "手作",
-   "talent": "花式調酒 × 手鑿冰球",
-   "evidence": "「手藝是真的，得過獎」「首席調酒師」「冰球是自己切的，不用機器」「什麼時候該放什麼音樂」",
-   "video_proposal": "手鑿冰球特寫 → 一杯成品，全程幾乎無台詞",
-   "archetype": "吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
-   "public_face": "調酒師 — 吧檯後的主人 — 不是客人，是掌控整個空間節奏的人。成熟、有手藝、話少。",
-   "specs": {
-    "height_cm": 164,
-    "bust_cm": 90,
-    "waist_cm": 59,
-    "hip_cm": 91,
-    "cup": "E",
-    "whr": 0.65,
-    "leg_ratio": 48.2
-   },
-   "hair": "**冷銀灰（漂到底的高階髮色）**，俐落的耳下短髮。28 歲、有手藝、有主導權的女生留這個顏色最說得通，也是全庫唯一的銀灰短髮。",
-   "face": "白皙冷調，成熟輪廓：眉眼深、下顎線俐落，有一點英氣。霧面底妝 + 棕黑眼線 + 裸色唇。",
-   "figure": "成熟曲線",
    "soul": "待送訓"
   },
   {
@@ -307,6 +279,34 @@
    "face": "",
    "figure": "",
    "soul": "已訓練"
+  },
+  {
+   "id": "miu-shiraishi",
+   "name": "Miu Shiraishi",
+   "native_name": "白石美羽",
+   "handle": "@miu.shiraishi",
+   "age": 22,
+   "ethnicity": "日本",
+   "location": "東京中目黑",
+   "group": "手作",
+   "talent": "咖啡拉花",
+   "evidence": "「現在是店裡拉花最穩的人」「一天講不到十句話，但客人會為了看她做咖啡而排隊」「開店前一定先擦一次吧台，即使昨天擦過」「圍裙帶子綁在前面，不是後面」",
+   "video_proposal": "吧台俯角特寫：一杯拉花從注入到收尾，全程無台詞",
+   "archetype": "咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+   "public_face": "咖啡店員 — 咖啡店裡那個大家都會多看一眼的店員 — 一天講不到幾句話，存在感很強。",
+   "specs": {
+    "height_cm": 156,
+    "bust_cm": 87,
+    "waist_cm": 55,
+    "hip_cm": 86,
+    "cup": "E",
+    "whr": 0.64,
+    "leg_ratio": 46.2
+   },
+   "hair": "**淺亞麻米金（漂過兩次的高明度色）**，齊肩內彎 + 空氣瀏海。東京中目黑的咖啡店員染這個顏色是日常，也讓她跟同為日系的 Luna（黑短髮）視覺上完全分得開。",
+   "face": "白到透光的日系膚色，圓臉大眼、下垂眼尾，童顏。橘調腮紅打在眼下、水潤唇。",
+   "figure": "童顏反差",
+   "soul": "待送訓"
   },
   {
    "id": "rainie-hsu",
@@ -393,35 +393,38 @@
    "soul": "待送訓"
   },
   {
-   "id": "peggy-lee",
-   "name": "Peggy Lee",
-   "native_name": "李珮甄",
-   "handle": "@peggy.revs",
-   "age": 24,
-   "ethnicity": "馬來西亞華裔",
-   "location": "吉隆坡（華裔）",
+   "id": "yerin-han",
+   "name": "Yerin Han",
+   "native_name": "한예린",
+   "handle": "@yerin.golf",
+   "age": 26,
+   "ethnicity": "韓國",
+   "location": "首爾",
    "group": "運動",
-   "talent": "手排駕駛 × 車輛知識",
-   "evidence": "「自己開一台手排，從高中就跟著哥哥們跑車聚」「真的懂車，講得出規格」「對『花瓶』這個詞很敏感」",
-   "video_proposal": "夜衝・手排換檔特寫 ＋ 講得出規格的車輛介紹",
-   "archetype": "在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
-   "public_face": "汽車改裝店行銷企劃 — 在改裝店做行銷企劃 — 自己開手排、也懂車，車展是她的旺季而不是日常。",
+   "talent": "高爾夫（競技級揮桿）",
+   "evidence": "「大學打校隊，差一點轉職業，最後選擇當教練」「記得每個學生的握桿毛病」「室內練習場的固定打位不讓人」——她自己講得很清楚：球技讓人留下來，穿搭讓人進來",
+   "video_proposal": "室內練習場・慢動作揮桿與 trick shot，球帽後扣穿馬尾",
+   "archetype": "室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
+   "public_face": "高爾夫教練 / 練習場 — 室內練習場的高球教練 — 球衣就是時尚，球技也真的好，週間在市區教課、週末才上球場。",
    "specs": {
-    "height_cm": 166,
-    "bust_cm": 93,
-    "waist_cm": 58,
-    "hip_cm": 92,
-    "cup": "F",
-    "whr": 0.63,
-    "leg_ratio": 48.2
+    "height_cm": 170,
+    "bust_cm": 90,
+    "waist_cm": 60,
+    "hip_cm": 93,
+    "cup": "E",
+    "whr": 0.65,
+    "leg_ratio": 49.4
    },
-   "hair": "**正酒紅 + 銀灰挑染**，長捲髮蓬鬆張揚。車圈的女生本來就敢玩顏色，這是她在人群中被認出來的原因。",
-   "face": "白皙（明確排除小麥／古銅），濃眉大眼、五官張揚立體。眼線上揚 + 高光 + 亮唇。",
-   "figure": "張揚沙漏",
+   "hair": "**亞麻棕 + 面部框金色挑染**，長髮，多數低馬尾穿過球帽後扣。",
+   "face": "白皙、韓系立體五官，眉眼明亮、笑容大方，健康感。防曬淡妝 + 亮色唇。",
+   "figure": "高挑豐滿",
    "soul": "待送訓"
   }
  ],
  "videos": {
+  "coco-wu": [
+   "kols/coco-wu/videos/dance_clone_r13/coco_dance_clone_r13_ig_reel.mp4"
+  ],
   "iris-chen": [
    "kols/iris-chen/videos/dance_v1/dance_v1_seedance_10s_black_crop_vietnam_drum.mp4",
    "kols/iris-chen/videos/dance_v1/dance_v3_seedance_15s_blue_dress_sugar_on_tongue.mp4",
