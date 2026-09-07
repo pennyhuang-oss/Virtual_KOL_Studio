@@ -41,7 +41,7 @@
   ],
   "soul_name": "yerin-han-soul-v1-5img-20260904",
   "soul_id": "8c447a79-769f-4520-a538-cfb48fef6163",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T10:10:12.594347Z",
   "charge_verified": {
    "display_name": "Soul ID",
@@ -91,15 +91,23 @@
    }
   ],
   "soul_name": "zoey-yeh-soul-v1-5img-20260904",
-  "soul_id": null,
-  "state": "call_failed_not_charged",
+  "soul_id": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "state": "ready_unvalidated",
   "failure": {
    "error": "Something went wrong. Please try again.",
    "request_id": "3753ec9d-dd85-4a5c-ac7e-cfeb2c76c966",
    "at": "~2026-09-07T10:10:20Z",
    "soul_id_minus25_for_her": 0,
    "server_character_record": false,
-   "ruling": "same clean failure as sydney-leong: nothing charged, no record created. Not the billed-but-failed mode. Awaiting the 15-minute protocol window before the single permitted retry. Her 5 images stay uploaded and byte-verified."
+   "ruling": "same clean failure as sydney-leong: nothing charged, no record created. Not the billed-but-failed mode. Awaiting the 15-minute protocol window before the single permitted retry. Her 5 images stay uploaded and byte-verified.",
+   "resolution": "retried once after the full 15-minute window with charge and record re-confirmed absent. Accepted and charged exactly once. She was the slowest of all 19 to train, sitting in queue then in_progress for roughly 35 minutes, consistent with the other account user loading the queue."
+  },
+  "submitted_at": "2026-09-07T10:25:57.107416Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T10:25:57.107416Z",
+   "count": 1
   }
  },
  "_meta": {
@@ -167,7 +175,7 @@
   ],
   "soul_name": "wendy-yeo-soul-v1-5img-20260904",
   "soul_id": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
-  "state": "training",
+  "state": "ready_unvalidated",
   "submitted_at": "2026-09-07T10:10:03.607740Z",
   "charge_verified": {
    "display_name": "Soul ID",
