@@ -12,7 +12,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "37eb5d96-a03d-472a-9527-f2272a228ab3",
+    "server_bytes_verified": true
    },
    {
     "order": 2,
@@ -23,7 +24,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "71df41ca-83a3-421c-b73b-9c60f57d07df",
+    "server_bytes_verified": true
    },
    {
     "order": 3,
@@ -34,7 +36,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "af9b53e6-1db9-49b5-a349-65c9b309dca3",
+    "server_bytes_verified": true
    },
    {
     "order": 4,
@@ -45,7 +48,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "6fa4dee9-cf1a-43f9-94bc-a1cc030d09ee",
+    "server_bytes_verified": true
    },
    {
     "order": 5,
@@ -56,12 +60,23 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "02e2ac27-2c7e-4a94-866f-77e4e91d3d6a",
+    "server_bytes_verified": true
    }
   ],
   "soul_name": "cheryl-soh-soul-v1-5img-20260904",
-  "soul_id": null,
-  "state": "not_submitted"
+  "soul_id": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "state": "training",
+  "upload_verified_at": "2026-09-07",
+  "submitted_at": "2026-09-07T05:13:51Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T05:13:51.324057Z",
+   "count": 1,
+   "soul_v2_012_repeats": 0,
+   "note": "Soul ID -25 = training genuinely accepted. balance not used as evidence."
+  }
  },
  "zhiyi-shen": {
   "persona": "zhiyi-shen",
