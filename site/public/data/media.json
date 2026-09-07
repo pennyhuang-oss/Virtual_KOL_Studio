@@ -1,0 +1,191 @@
+{
+ "jia-seo": {
+  "cover": "media/jia-seo/cover.webp",
+  "shots": [
+   "media/jia-seo/00.webp",
+   "media/jia-seo/01.webp",
+   "media/jia-seo/02.webp",
+   "media/jia-seo/03.webp",
+   "media/jia-seo/04.webp",
+   "media/jia-seo/05.webp"
+  ]
+ },
+ "wanyin-jiang": {
+  "cover": "media/wanyin-jiang/cover.webp",
+  "shots": [
+   "media/wanyin-jiang/00.webp",
+   "media/wanyin-jiang/01.webp",
+   "media/wanyin-jiang/02.webp",
+   "media/wanyin-jiang/03.webp",
+   "media/wanyin-jiang/04.webp",
+   "media/wanyin-jiang/05.webp"
+  ]
+ },
+ "nanami-fujiwara": {
+  "cover": "media/nanami-fujiwara/cover.webp",
+  "shots": [
+   "media/nanami-fujiwara/00.webp",
+   "media/nanami-fujiwara/01.webp",
+   "media/nanami-fujiwara/02.webp",
+   "media/nanami-fujiwara/03.webp",
+   "media/nanami-fujiwara/04.webp",
+   "media/nanami-fujiwara/05.webp"
+  ]
+ },
+ "rin-ayase": {
+  "cover": "media/rin-ayase/cover.webp",
+  "shots": [
+   "media/rin-ayase/00.webp",
+   "media/rin-ayase/01.webp",
+   "media/rin-ayase/02.webp",
+   "media/rin-ayase/03.webp",
+   "media/rin-ayase/04.webp",
+   "media/rin-ayase/05.webp"
+  ]
+ },
+ "somi-oh": {
+  "cover": "media/somi-oh/cover.webp",
+  "shots": [
+   "media/somi-oh/00.webp",
+   "media/somi-oh/01.webp",
+   "media/somi-oh/02.webp",
+   "media/somi-oh/03.webp",
+   "media/somi-oh/04.webp",
+   "media/somi-oh/05.webp"
+  ]
+ },
+ "mia-huang": {
+  "cover": "media/mia-huang/cover.webp",
+  "shots": [
+   "media/mia-huang/00.webp",
+   "media/mia-huang/01.webp",
+   "media/mia-huang/02.webp",
+   "media/mia-huang/03.webp",
+   "media/mia-huang/04.webp",
+   "media/mia-huang/05.webp",
+   "media/mia-huang/06.webp",
+   "media/mia-huang/07.webp"
+  ]
+ },
+ "emma-kao": {
+  "cover": "media/emma-kao/cover.webp",
+  "shots": [
+   "media/emma-kao/00.webp",
+   "media/emma-kao/01.webp",
+   "media/emma-kao/02.webp",
+   "media/emma-kao/03.webp",
+   "media/emma-kao/04.webp",
+   "media/emma-kao/05.webp"
+  ]
+ },
+ "tammy-chou": {
+  "cover": "media/tammy-chou/cover.webp",
+  "shots": [
+   "media/tammy-chou/00.webp",
+   "media/tammy-chou/01.webp",
+   "media/tammy-chou/02.webp",
+   "media/tammy-chou/03.webp",
+   "media/tammy-chou/04.webp",
+   "media/tammy-chou/05.webp"
+  ]
+ },
+ "kanon-komori": {
+  "cover": "media/kanon-komori/cover.webp",
+  "shots": [
+   "media/kanon-komori/00.webp",
+   "media/kanon-komori/01.webp",
+   "media/kanon-komori/02.webp",
+   "media/kanon-komori/03.webp",
+   "media/kanon-komori/04.webp",
+   "media/kanon-komori/05.webp",
+   "media/kanon-komori/06.webp",
+   "media/kanon-komori/07.webp",
+   "media/kanon-komori/08.webp"
+  ]
+ },
+ "wendy-yeo": {
+  "cover": "media/wendy-yeo/cover.webp",
+  "shots": [
+   "media/wendy-yeo/00.webp",
+   "media/wendy-yeo/01.webp",
+   "media/wendy-yeo/02.webp",
+   "media/wendy-yeo/03.webp",
+   "media/wendy-yeo/04.webp",
+   "media/wendy-yeo/05.webp",
+   "media/wendy-yeo/06.webp",
+   "media/wendy-yeo/07.webp",
+   "media/wendy-yeo/08.webp"
+  ]
+ },
+ "luna-tanaka": {
+  "cover": "media/luna-tanaka/cover.webp",
+  "shots": [
+   "media/luna-tanaka/00.webp",
+   "media/luna-tanaka/01.webp",
+   "media/luna-tanaka/02.webp",
+   "media/luna-tanaka/03.webp",
+   "media/luna-tanaka/04.webp",
+   "media/luna-tanaka/05.webp"
+  ],
+  "videos": [
+   "video/luna-tanaka__luna_dance_v1.mp4",
+   "video/luna-tanaka__luna_daily_v1.mp4"
+  ]
+ },
+ "rainie-hsu": {
+  "cover": "media/rainie-hsu/cover.webp",
+  "shots": [
+   "media/rainie-hsu/00.webp",
+   "media/rainie-hsu/01.webp",
+   "media/rainie-hsu/02.webp",
+   "media/rainie-hsu/03.webp",
+   "media/rainie-hsu/04.webp",
+   "media/rainie-hsu/05.webp",
+   "media/rainie-hsu/06.webp",
+   "media/rainie-hsu/07.webp"
+  ]
+ },
+ "iris-chen": {
+  "cover": "media/iris-chen/cover.webp",
+  "shots": [
+   "media/iris-chen/00.webp",
+   "media/iris-chen/01.webp",
+   "media/iris-chen/02.webp",
+   "media/iris-chen/03.webp",
+   "media/iris-chen/04.webp",
+   "media/iris-chen/05.webp",
+   "media/iris-chen/06.webp",
+   "media/iris-chen/07.webp"
+  ],
+  "videos": [
+   "video/iris-chen__dance_v1_seedance_10s_black_crop_vietnam_drum.mp4",
+   "video/iris-chen__dance_v3_seedance_15s_blue_dress_sugar_on_tongue.mp4",
+   "video/iris-chen__iris_daily_reel_r1.mp4"
+  ]
+ },
+ "angeline-kwee": {
+  "cover": "media/angeline-kwee/cover.webp",
+  "shots": [
+   "media/angeline-kwee/00.webp",
+   "media/angeline-kwee/01.webp",
+   "media/angeline-kwee/02.webp",
+   "media/angeline-kwee/03.webp",
+   "media/angeline-kwee/04.webp",
+   "media/angeline-kwee/05.webp",
+   "media/angeline-kwee/06.webp",
+   "media/angeline-kwee/07.webp",
+   "media/angeline-kwee/08.webp"
+  ]
+ },
+ "peggy-lee": {
+  "cover": "media/peggy-lee/cover.webp",
+  "shots": [
+   "media/peggy-lee/00.webp",
+   "media/peggy-lee/01.webp",
+   "media/peggy-lee/02.webp",
+   "media/peggy-lee/03.webp",
+   "media/peggy-lee/04.webp",
+   "media/peggy-lee/05.webp"
+  ]
+ }
+}

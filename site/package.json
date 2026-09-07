@@ -1,0 +1,8 @@
+{
+  "name": "897-audition-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "897 女團選秀企劃 — 客戶簡報用網站",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" }
+}
