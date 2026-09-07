@@ -1,0 +1,179 @@
+{
+ "_meta": {
+  "batch": 3,
+  "personas": [
+   "nanami-fujiwara",
+   "peggy-lee",
+   "rin-ayase"
+  ],
+  "submitted": "2026-09-07T09:21Z",
+  "baseline_txn_before": "2026-09-07T08:56:53.883882Z",
+  "reconciliation": {
+   "soul_id_minus25_expected": 3,
+   "soul_id_minus25_observed": 3,
+   "soul_v2_012_repeats": 0,
+   "unexplained_charges": 0,
+   "character_records": 3
+  },
+  "uploads": {
+   "total": 15,
+   "put_http_200": 15,
+   "sha256_server_match": 15,
+   "mismatch": 0,
+   "distinct_hashes": 15
+  }
+ },
+ "nanami-fujiwara": {
+  "persona": "nanami-fujiwara",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/nanami-fujiwara/images/training_v1/train_01.jpg",
+    "sha256": "54568563ceedee3df4be9f92a407604814707d1e96b5407c95bc9a5e1232a211",
+    "media_id": "e44c9175-a740-4eec-afce-017a1f6e371e",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/nanami-fujiwara/images/training_v1/train_02.jpg",
+    "sha256": "1d384fdac0fb04270cd22dab133cc72c2bce732819e6315711558e8d02dbacac",
+    "media_id": "28c21ba7-7824-487f-a1f5-41715d87a7d9",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/nanami-fujiwara/images/training_v1/train_03.jpg",
+    "sha256": "7c684e2dfb85f82e5533f6b29126672e6903e053777237c34294e2c89523a048",
+    "media_id": "57bfc84a-f4ce-463b-be91-56b0a8f5942f",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/nanami-fujiwara/images/training_v1/train_04.jpg",
+    "sha256": "8b8b0afdaaefcad0b4803849309e1f94167191beeddef4ac12c021fdae8893b0",
+    "media_id": "49194d80-71bc-4c16-b523-94ed5ed9c1f9",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/nanami-fujiwara/images/training_v1/train_05.jpg",
+    "sha256": "b60f59785b6a5a65171210942b691d3f01b68b0ab6569d346dad25f2165d25e7",
+    "media_id": "6eccc52d-b8ba-49bf-a5f9-a422d6eca9b9",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "nanami-fujiwara-soul-v1-5img-20260904",
+  "soul_id": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:21:12.876995Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:21:12.876995Z",
+   "count": 1
+  }
+ },
+ "peggy-lee": {
+  "persona": "peggy-lee",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/peggy-lee/images/training_v1/train_01.jpg",
+    "sha256": "dd6b4b71f77c2ac7bf1ee80b5f8204f3f06c0be905a6f71377feaff5765510ae",
+    "media_id": "fc272e77-3ffd-410a-a28e-3638491e8e60",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/peggy-lee/images/training_v1/train_02.jpg",
+    "sha256": "cdd7e237480682c379197e39bb012a8ed75ef0bf81a0e21a9d8e308cfbed0821",
+    "media_id": "85d92d2a-2fd1-4e51-ad5f-6737c756ad5d",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/peggy-lee/images/training_v1/train_03.jpg",
+    "sha256": "5188188e12fe3d6b90584dede9912bc312c39e0a8b3314751f172092c81756e3",
+    "media_id": "d3dd2fd9-5a66-4ac6-9ddc-c39b899580ae",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/peggy-lee/images/training_v1/train_04.jpg",
+    "sha256": "76515e6a67e2cf83c37796f692dfaced0d13f7534f29536afdd3923ee15a494d",
+    "media_id": "18385dbe-c9c8-483f-819f-3dd11eccc22a",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/peggy-lee/images/training_v1/train_05.jpg",
+    "sha256": "4cccc576dd1cbec252cd1b558fd64d3459d6548d327486a5944dc60a1180f5c8",
+    "media_id": "4ec7f3fb-a622-4477-833e-dcdab83868b9",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "peggy-lee-soul-v1-5img-20260904",
+  "soul_id": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:21:20.551595Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:21:20.551595Z",
+   "count": 1
+  }
+ },
+ "rin-ayase": {
+  "persona": "rin-ayase",
+  "version": "v1-5img",
+  "images": [
+   {
+    "order": 1,
+    "path": "kols/rin-ayase/images/training_v1/train_01.jpg",
+    "sha256": "5f61595db184ee9cf4e1e921729131082614588963828ba4c0504a410644bc31",
+    "media_id": "6a093cc8-29c3-4f3c-9ad7-86e5590bd1b6",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 2,
+    "path": "kols/rin-ayase/images/training_v1/train_02.jpg",
+    "sha256": "7ca0484d497157693783d8fafb9e2ebc9ae62ab302ee77d195e00916eee70bea",
+    "media_id": "9de61df5-a8f7-4091-ba77-80ae16dca57d",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 3,
+    "path": "kols/rin-ayase/images/training_v1/train_03.jpg",
+    "sha256": "da1c7c98543323e58f07112dae1db6206f23a86bc48e7a9dd1f62b07035244c7",
+    "media_id": "552c6dad-b6f0-4d95-b57f-32fbf44d06d8",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 4,
+    "path": "kols/rin-ayase/images/training_v1/train_04.jpg",
+    "sha256": "03b7af71f155b02c77c836fa2ea6f36459aa55866d692d722b01caba3b7b09ce",
+    "media_id": "67989008-473b-48b8-97c2-492fa067d7e7",
+    "server_bytes_verified": true
+   },
+   {
+    "order": 5,
+    "path": "kols/rin-ayase/images/training_v1/train_05.jpg",
+    "sha256": "f9e835db64bec0811010f8dbcab0addef1182f2cf0da64e54a25c5d9de6a5776",
+    "media_id": "dbf7bde5-5357-4f16-ad24-8c9f0f2a5259",
+    "server_bytes_verified": true
+   }
+  ],
+  "soul_name": "rin-ayase-soul-v1-5img-20260904",
+  "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "state": "training",
+  "submitted_at": "2026-09-07T09:21:29.696194Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T09:21:29.696194Z",
+   "count": 1
+  }
+ }
+}
