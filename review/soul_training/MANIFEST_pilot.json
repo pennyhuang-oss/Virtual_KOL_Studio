@@ -91,7 +91,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "8e216b44-3f65-48c1-bc2c-cb120ceb6078",
+    "server_bytes_verified": true
    },
    {
     "order": 2,
@@ -102,7 +103,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "d2bab4fc-783c-4f1e-a4c1-230dcac7b77a",
+    "server_bytes_verified": true
    },
    {
     "order": 3,
@@ -113,7 +115,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "0a1519e9-04ac-4a9c-a17a-b100e774f566",
+    "server_bytes_verified": true
    },
    {
     "order": 4,
@@ -124,7 +127,8 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "aa6bf4a7-e1f9-424a-bd90-a773d7b2975f",
+    "server_bytes_verified": true
    },
    {
     "order": 5,
@@ -135,11 +139,20 @@
      1728,
      2304
     ],
-    "media_id": null
+    "media_id": "ee762e71-3d2f-45bc-9869-2414e0df3946",
+    "server_bytes_verified": true
    }
   ],
   "soul_name": "zhiyi-shen-soul-v1-5img-20260904",
-  "soul_id": null,
-  "state": "not_submitted"
+  "soul_id": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "state": "training",
+  "submitted_at": "2026-09-07T07:33:34Z",
+  "charge_verified": {
+   "display_name": "Soul ID",
+   "credits": -25,
+   "created_at": "2026-09-07T07:33:34.812303Z",
+   "count": 1,
+   "soul_v2_012_repeats": 0
+  }
  }
 }
