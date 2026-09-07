@@ -168,10 +168,19 @@ shot on iPhone, natural lighting, warm tones
 
 | 模型 | 臉部鎖定 | 多鏡頭 | 音樂同步 | 最大時長 | 最適用場景 |
 |------|---------|--------|---------|---------|-----------|
-| `kling3_0` | ✅ start_image | ❌（非自動） | ✅ sound:on | 15s | 親密場景、臉部鎖定單鏡頭 |
+| `kling3_0` | ✅ start_image | ⚠️ **要在 prompt 明確指定，非自動**（見下方註） | ✅ sound:on | 15s | 親密場景、臉部鎖定單鏡頭、**明寫切鏡的多鏡頭段** |
 | `seedance_2_0` | ✅ start_image | ❌ | ✅ audio_references | 15s | **舞蹈影片（首選）** |
 | `cinematic_studio_video_v2` | ❌（會漂移） | ✅ multi_shots | ✅ sound:on | 12s | 多鏡頭電影感（臉部可能漂移） |
 | `soul_2` | ✅ soul_id | N/A | N/A | N/A | 僅用於生成靜態 start frame |
+
+> 🔴 **`kling3_0` 的「多鏡頭」不是不能，是不會自己來。**（2026-09-07 實測補充）
+> `kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1_v2_multishot.mp4`（`kling3_0`、15s）
+> 用 `tools/scene_cuts.sh` 量出 **4 個切點、5 顆鏡頭**（3.63／6.96／9.92／11.50 秒），
+> 而且**跨 5 顆鏡頭臉、服裝、手全部守得住**。
+> 做法是在 prompt 裡**逐顆描述鏡頭**、用「鏡頭切換」的語言而不是「持續動作」。
+> 對照組：`seedance_2_0`／`seedance_2_5` 共 5 支影片，**實測切鏡點全部為 0**——
+> Seedance 把整段當一顆連續鏡頭處理（這正是舞蹈要的），**它不切鏡是設計不是 bug**。
+> 舊表寫「❌（非自動）」容易被讀成「不能多鏡頭」，因此改成 ⚠️。
 
 **重要**：`soul_id` 只能用於 `soul_2` 的靜態圖片生成，**不能用於影片生成**。影片生成的臉部鎖定靠 `start_image` 參數。
 
