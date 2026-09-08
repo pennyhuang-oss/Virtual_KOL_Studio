@@ -726,3 +726,26 @@ body.has-pickbar { padding-bottom: 110px; }
 .grid-table.compare thead th:nth-child(3) { color: var(--gold); }
 .grid-table.compare td { font-size: 13.5px; }
 .grid-table.compare td strong { color: var(--gold); font-weight: 500; }
+
+/* ---------- add-ons ---------- */
+
+.addongrid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+}
+.addon {
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: 11px; padding: 19px 21px;
+}
+.addon > b {
+  display: block; font: 700 16px var(--serif); color: var(--ink); margin-bottom: 8px;
+}
+.addon > p { margin: 0 0 12px; font-size: 13.5px; color: var(--ink-2); line-height: 1.75; }
+.addon > p strong { color: var(--ink); font-weight: 500; }
+.addon-flag {
+  margin-top: 12px; border-left: 2px solid var(--warn);
+  background: rgba(224, 119, 127, .06); padding: 11px 14px; border-radius: 0 7px 7px 0;
+}
+.addon-flag b { display: block; font-size: 12px; color: var(--warn); margin-bottom: 5px; }
+.addon-flag p { margin: 0; font-size: 12.5px; color: var(--ink-2); line-height: 1.7; }

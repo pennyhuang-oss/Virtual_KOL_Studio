@@ -19,8 +19,8 @@ const rich = (s) => esc(s)
   .replace(/`(.+?)`/g, '<code>$1</code>');
 
 const NAV = [
-  ['top', '總覽'], ['division', '分工'], ['options', '營運方案'], ['timeline', '日程'],
-  ['roster', '參賽者'], ['talents', '才藝'], ['specspolicy', '規格分層'],
+  ['top', '總覽'], ['division', '分工'], ['mechanism', '打投機制'], ['options', '要決定的事'],
+  ['addons', '加值玩法'], ['timeline', '日程'], ['roster', '參賽者'],
   ['decisions', '待裁決'], ['next', '下一步'],
 ];
 
@@ -118,6 +118,9 @@ function render() {
   renderAssets();
   renderModules();
   renderChoices();
+  renderMechanism();
+  renderAddons();
+  renderRejected();
   renderSpecsPolicy();
   renderCodename();
   renderTimeline();
@@ -313,6 +316,78 @@ function renderModules() {
   });
 }
 
+function renderMechanism() {
+  const m = PLAN.mechanism;
+  if (!m) return;
+  $('#mc-title').textContent = m.title;
+  $('#mc-lead').innerHTML = rich(m.lead);
+  const t = $('#mc-table');
+  t.innerHTML = '<thead><tr><th>項目</th><th>設計</th></tr></thead>';
+  const tb = el('tbody');
+  m.rows.forEach((r) => {
+    const tr = el('tr');
+    const td = el('td');
+    td.innerHTML = rich(r.v);
+    tr.append(el('th', null, r.k), td);
+    tb.append(tr);
+  });
+  t.append(tb);
+  const why = $('#mc-why');
+  m.why.forEach((w) => {
+    const li = el('li');
+    li.innerHTML = rich(w);
+    why.append(li);
+  });
+  $('#mc-note').innerHTML = rich(m.note);
+}
+
+function renderAddons() {
+  const a = PLAN.addons;
+  if (!a) return;
+  $('#ad-title').textContent = a.title;
+  $('#ad-note').innerHTML = rich(a.note);
+  const host = $('#ad-list');
+  a.items.forEach((it) => {
+    const box = el('div', 'addon');
+    box.append(el('b', null, it.n));
+    const p = el('p');
+    p.innerHTML = rich(it.d);
+    box.append(p);
+    if (it.mods) {
+      const tags = el('div', 'modtags');
+      it.mods.forEach((x) => tags.append(el('span', null, x)));
+      box.append(tags);
+    }
+    if (it.flag) {
+      const f = el('div', 'addon-flag');
+      f.append(el('b', null, '⚠ 需外部法律意見'));
+      const fp = el('p');
+      fp.innerHTML = rich(it.flag);
+      f.append(fp);
+      box.append(f);
+    }
+    host.append(box);
+  });
+}
+
+function renderRejected() {
+  const r = PLAN.rejected;
+  if (!r) return;
+  $('#rj-title').textContent = r.title;
+  $('#rj-note').textContent = r.note;
+  const t = $('#rj-table');
+  t.innerHTML = '<thead><tr><th>做法</th><th>為什麼不採用</th></tr></thead>';
+  const tb = el('tbody');
+  r.items.forEach(([k, v]) => {
+    const tr = el('tr');
+    const td = el('td');
+    td.innerHTML = rich(v);
+    tr.append(el('th', null, k), td);
+    tb.append(tr);
+  });
+  t.append(tb);
+}
+
 function renderSpecsPolicy() {
   const sp = PLAN.specs_policy;
   if (!sp) return;
@@ -385,7 +460,7 @@ function renderTimeline() {
 
 /* ---------- the option picker ---------- */
 
-const PICK_KEY = 'kol897-plan-choice-v1';
+const PICK_KEY = 'kol897-plan-choice-v2';
 let CHOICE = {};
 
 function renderChoices() {
@@ -530,15 +605,13 @@ function syncPickbar() {
     sel.append(chip);
   });
 
-  const v = chosen.find((x) => x.g.group === 'voting');
+  const v = chosen.find((x) => x.g.group === 'schedule');
   const out = $('#pickbar-out');
   out.textContent = '';
   if (v && v.o.weeks) {
     out.append(el('span', null, `賽程約 ${v.o.weeks} 週`),
       el('span', null, `影片需求 ${v.o.videos} 支`),
       el('span', null, `營運負荷 ${v.o.load}`));
-  } else if (v) {
-    out.append(el('span', null, '此方案需搭配 A 或 B 使用'));
   }
   if (chosen.length === groups.length) {
     out.append(el('span', 'done', '✓ 三項都已選定'));
