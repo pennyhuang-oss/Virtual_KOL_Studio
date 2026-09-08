@@ -486,3 +486,213 @@ footer p { margin: 0 0 8px; font-size: 13px; color: var(--ink-3); }
   .lb-prev { left: 6px; } .lb-next { right: 6px; }
   .brand-text { display: none; }
 }
+
+/* ---------- proposal: division / assets / modules ---------- */
+
+.grid-table.split th:first-child {
+  width: 1%; white-space: nowrap; color: var(--ink); font-weight: 500;
+  background: transparent; border-bottom: 1px solid var(--line-soft);
+  font-size: 13.5px; letter-spacing: 0;
+}
+.grid-table.split thead th:first-child { background: var(--bg-3); }
+.grid-table td.us { color: var(--gold); }
+.grid-table td.cn { color: var(--ink-3); font-size: 12.5px; }
+
+.constraints { display: grid; gap: 10px; margin-top: 26px; }
+.constraint {
+  margin: 0; border-left: 2px solid var(--gold-dim); background: var(--bg);
+  padding: 14px 18px; font-size: 14px; color: var(--ink-2); max-width: 62em;
+}
+.constraint strong { color: var(--ink); font-weight: 500; }
+
+.modgrid {
+  display: grid; gap: 1px; background: var(--line-soft);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border: 1px solid var(--line-soft); border-radius: 10px; overflow: hidden;
+}
+.mod { background: var(--bg-2); padding: 16px 18px; }
+.mod b {
+  display: block; font-size: 13.5px; font-weight: 500;
+  color: var(--gold); margin-bottom: 5px;
+}
+.mod span { font-size: 13px; color: var(--ink-2); line-height: 1.65; }
+
+/* ---------- proposal: option picker ---------- */
+
+.recmark {
+  font-style: normal; font-size: 11px; letter-spacing: .1em;
+  color: #14141b; background: var(--gold); padding: 3px 8px; border-radius: 4px;
+}
+.section-note em.recmark { margin: 0 3px; }
+
+.cgroup { margin-bottom: 44px; }
+.cgroup-head {
+  display: flex; align-items: baseline; gap: 12px;
+  padding-bottom: 11px; margin-bottom: 20px; border-bottom: 1px solid var(--line);
+}
+.cgroup-head h3 { margin: 0; font: 500 17px var(--sans); letter-spacing: .08em; }
+.cgroup-n { font-size: 12.5px; color: var(--ink-3); }
+
+.opts {
+  display: grid; gap: 14px; align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+/* The voting group has four dense cards. At three columns the fourth — the
+   recommended one — was orphaned on its own row, which is the opposite of
+   the emphasis it needs in a pitch. Two columns gives a clean 2x2 and the
+   extra width suits how much each card carries. */
+@media (min-width: 900px) {
+  .opts.four { grid-template-columns: repeat(2, 1fr); }
+}
+.opt {
+  display: block; text-align: left; font: inherit; color: inherit;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px 21px 16px; cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.opt:hover { border-color: var(--ink-3); }
+.opt.rec { border-color: var(--gold-dim); }
+.opt.on {
+  border-color: var(--gold); background: var(--bg-3);
+  box-shadow: inset 0 0 0 1px var(--gold);
+}
+.opt:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.opt-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 9px; }
+.opt-tag {
+  font: 500 11px var(--sans); letter-spacing: .12em; color: var(--ink-3);
+  border: 1px solid var(--line); padding: 3px 8px; border-radius: 4px; flex-shrink: 0;
+}
+.opt.on .opt-tag, .opt.rec .opt-tag { color: var(--gold); border-color: var(--gold-dim); }
+.opt-head h4 { margin: 0; font: 700 16.5px/1.4 var(--serif); }
+.opt-lead { margin: 0 0 15px; font-size: 13.5px; color: var(--ink-2); line-height: 1.75; }
+
+.opt-nums {
+  display: flex; gap: 1px; background: var(--line-soft); margin-bottom: 15px;
+  border: 1px solid var(--line-soft); border-radius: 8px; overflow: hidden;
+}
+.numtile { background: var(--bg-2); padding: 11px 13px; flex: 1; }
+.numtile span {
+  display: block; font-size: 11px; color: var(--ink-3); margin-bottom: 4px;
+  letter-spacing: .06em;
+}
+.numtile b {
+  font: 500 17px var(--sans); color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.numtile b u { text-decoration: none; font-size: 11px; color: var(--ink-3); margin-left: 2px; }
+
+.opt-detail {
+  margin: 0 0 15px; display: grid; gap: 0;
+  border-top: 1px solid var(--line-soft);
+}
+.opt-detail > div {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 7px 0; border-bottom: 1px solid var(--line-soft);
+}
+.opt-detail dt { font-size: 12.5px; color: var(--ink-3); flex-shrink: 0; }
+.opt-detail dd {
+  margin: 0; font-size: 12.5px; color: var(--ink); text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.opt-list { margin-bottom: 14px; }
+.opt-list b {
+  display: block; font-size: 11px; letter-spacing: .14em;
+  color: var(--ink-3); font-weight: 400; margin-bottom: 7px;
+}
+.opt-list ul { margin: 0; padding-left: 17px; }
+.opt-list li { font-size: 13px; color: var(--ink-2); line-height: 1.7; margin-bottom: 4px; }
+.opt-list li strong { color: var(--ink); font-weight: 500; }
+.opt-list li code {
+  font-size: 12px; background: var(--bg-3); padding: 1px 5px;
+  border-radius: 3px; color: var(--gold);
+}
+.opt-list.pros li::marker { color: var(--gold-dim); }
+.opt-list.cons li::marker { color: #7a5054; }
+.opt-list.cons li { color: var(--ink-3); }
+
+.opt-mods { margin-bottom: 14px; }
+.opt-mods b {
+  display: block; font-size: 11px; letter-spacing: .14em;
+  color: var(--ink-3); font-weight: 400; margin-bottom: 7px;
+}
+.modtags { display: flex; flex-wrap: wrap; gap: 5px; }
+.modtags span {
+  font-size: 11.5px; color: var(--ink-2); background: var(--bg-3);
+  border: 1px solid var(--line-soft); padding: 3px 9px; border-radius: 99px;
+}
+
+.opt-meta {
+  display: grid; gap: 6px; margin-bottom: 14px;
+  padding-top: 12px; border-top: 1px solid var(--line-soft);
+}
+.opt-meta > div { display: flex; gap: 10px; font-size: 12.5px; }
+.opt-meta b { color: var(--ink-3); font-weight: 400; min-width: 68px; }
+.opt-meta span { color: var(--ink-2); }
+
+.opt-flag {
+  border-left: 2px solid var(--warn); background: rgba(224, 119, 127, .06);
+  padding: 12px 15px; border-radius: 0 7px 7px 0; margin-bottom: 14px;
+}
+.opt-flag b { display: block; font-size: 12.5px; color: var(--warn); margin-bottom: 6px; }
+.opt-flag p { margin: 0; font-size: 12.5px; color: var(--ink-2); line-height: 1.75; }
+.opt-flag strong { color: var(--ink); font-weight: 500; }
+
+.opt-pickhint {
+  display: block; text-align: center; font-size: 12px; letter-spacing: .1em;
+  color: var(--ink-3); padding-top: 13px; border-top: 1px solid var(--line-soft);
+}
+.opt.on .opt-pickhint { color: var(--gold); }
+
+/* ---------- selection summary bar ---------- */
+
+/* Fallback reserve; reserveForBar() in app.js sets the real value from the
+   bar's measured height, because chip wrapping changes it. */
+body.has-pickbar { padding-bottom: 110px; }
+
+.pickbar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 28;
+  background: rgba(16, 16, 23, .97); backdrop-filter: blur(14px);
+  border-top: 1px solid var(--gold-dim);
+}
+.pickbar-in {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-top: 12px; padding-bottom: 12px;
+}
+.pickbar-sel { display: flex; gap: 7px; flex-wrap: wrap; }
+.chip {
+  font-size: 12.5px; color: var(--ink); background: var(--bg-3);
+  border: 1px solid var(--line); padding: 5px 11px; border-radius: 99px;
+}
+.chip b {
+  color: var(--gold); font-weight: 500; margin-right: 7px;
+  font-size: 11px; letter-spacing: .08em;
+}
+.chip i { font-style: normal; margin-right: 6px; color: var(--ink); }
+.chip span { color: var(--ink-2); }
+.pickbar-out {
+  display: flex; gap: 14px; flex-wrap: wrap; margin-left: auto;
+  font-size: 12.5px; color: var(--ink-2); align-items: center;
+}
+.pickbar-out span { white-space: nowrap; }
+.pickbar-out .done { color: var(--gold); font-weight: 500; }
+.pickbar-out .todo { color: var(--ink-3); }
+.pickbar-clear {
+  flex-shrink: 0;
+  background: transparent; border: 1px solid var(--line); color: var(--ink-3);
+  font: 400 12px var(--sans); padding: 6px 12px; border-radius: 6px; cursor: pointer;
+}
+.pickbar-clear:hover { color: var(--ink); border-color: var(--ink-3); }
+
+@media (max-width: 620px) {
+  .opts, .opts.four { grid-template-columns: 1fr; }
+  .pickbar-out { margin-left: 0; font-size: 12px; }
+  body.has-pickbar { padding-bottom: 150px; }
+  /* On a phone the full option names wrapped the bar to ~225px, a third of
+     the screen. Keep the group letter and the tag; the names are on the
+     cards right above. */
+  .chip span { display: none; }
+  .chip i { margin-right: 0; }
+  .pickbar-in { gap: 9px; padding-top: 10px; padding-bottom: 10px; }
+}

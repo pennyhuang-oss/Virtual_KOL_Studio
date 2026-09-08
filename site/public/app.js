@@ -19,9 +19,9 @@ const rich = (s) => esc(s)
   .replace(/`(.+?)`/g, '<code>$1</code>');
 
 const NAV = [
-  ['top', '總覽'], ['flow', '流程'], ['talentmodel', '才藝架構'], ['roster', '參賽者'],
-  ['talents', '才藝一覽'], ['checks', '體檢'], ['decisions', '待裁決'],
-  ['alternates', '替補'], ['next', '下一步'],
+  ['top', '總覽'], ['division', '分工'], ['options', '營運方案'], ['timeline', '日程'],
+  ['roster', '參賽者'], ['talents', '才藝'], ['checks', '體檢'],
+  ['decisions', '待裁決'], ['next', '下一步'],
 ];
 
 let PLAN, ROSTER, MEDIA, gallery = [], gi = 0;
@@ -114,6 +114,12 @@ function render() {
     $('#tm-note').textContent = tm.note;
   }
 
+  renderDivision();
+  renderAssets();
+  renderModules();
+  renderChoices();
+  renderCodename();
+  renderTimeline();
   renderRoster();
   renderTalents();
 
@@ -253,6 +259,269 @@ function renderTalents() {
   });
   t.append(tb);
 }
+
+
+/* ---------- proposal sections ---------- */
+
+function renderDivision() {
+  const d = PLAN.division;
+  if (!d) return;
+  $('#div-title').textContent = d.title;
+  $('#div-note').textContent = d.note;
+  const t = $('#div-table');
+  t.innerHTML = '<thead><tr><th></th><th>兌心科技（我方）</th><th>客戶營運團隊</th></tr></thead>';
+  const tb = el('tbody');
+  d.rows.forEach((r) => {
+    const tr = el('tr');
+    tr.append(el('th', null, r.item), el('td', 'us', r.us), el('td', null, r.them));
+    tb.append(tr);
+  });
+  t.append(tb);
+}
+
+function renderAssets() {
+  const a = PLAN.assets_now;
+  if (!a) return;
+  $('#as-title').textContent = a.title;
+  $('#as-note').textContent = a.note;
+  const host = $('#as-stats');
+  a.stats.forEach((f) => {
+    const x = el('div', 'fact');
+    x.append(el('b', null, f.k), el('span', null, f.l), el('i', null, f.d));
+    host.append(x);
+  });
+  const c = $('#as-cons');
+  a.constraints.forEach((line) => {
+    const p = el('p', 'constraint');
+    p.innerHTML = rich(line);
+    c.append(p);
+  });
+}
+
+function renderModules() {
+  const m = PLAN.modules;
+  if (!m) return;
+  $('#mod-title').textContent = m.title;
+  $('#mod-note').textContent = m.note;
+  const host = $('#mod-list');
+  m.rows.forEach((r) => {
+    const x = el('div', 'mod');
+    x.append(el('b', null, r.m), el('span', null, r.use));
+    host.append(x);
+  });
+}
+
+function renderCodename() {
+  const c = PLAN.codename;
+  if (!c) return;
+  $('#cn-title').textContent = c.title;
+  $('#cn-body').innerHTML = rich(c.body);
+  const t = $('#cn-table');
+  t.innerHTML = '<thead><tr><th>代號</th><th>對應</th><th>理由</th></tr></thead>';
+  const tb = el('tbody');
+  c.rows.forEach((r) => {
+    const tr = el('tr');
+    tr.append(el('th', null, r[0]), el('td', null, r[1]), el('td', 'cn', r[2]));
+    tb.append(tr);
+  });
+  t.append(tb);
+  $('#cn-note').textContent = c.note;
+}
+
+function renderTimeline() {
+  const tl = PLAN.timeline;
+  if (!tl) return;
+  $('#tl-title').textContent = tl.title;
+  const t = $('#tl-table');
+  t.innerHTML = '<thead><tr><th>週次</th><th>客戶營運團隊</th><th>我方交付</th></tr></thead>';
+  const tb = el('tbody');
+  tl.rows.forEach((r) => {
+    const tr = el('tr');
+    const them = el('td');
+    them.innerHTML = rich(r.them);
+    tr.append(el('th', null, r.w), them, el('td', 'us', r.us));
+    tb.append(tr);
+  });
+  t.append(tb);
+}
+
+/* ---------- the option picker ---------- */
+
+const PICK_KEY = 'kol897-plan-choice-v1';
+let CHOICE = {};
+
+function renderChoices() {
+  const groups = PLAN.choices;
+  if (!groups) return;
+  try { CHOICE = JSON.parse(localStorage.getItem(PICK_KEY) || '{}'); } catch (e) { CHOICE = {}; }
+
+  const host = $('#choice-groups');
+  host.textContent = '';
+  groups.forEach((g) => {
+    const sec = el('div', 'cgroup');
+    const head = el('div', 'cgroup-head');
+    head.append(el('h3', null, g.label),
+      el('span', 'cgroup-n', `${g.options.length} 個方案`));
+    sec.append(head);
+
+    const grid = el('div', g.options.length === 4 ? 'opts four' : 'opts');
+    g.options.forEach((o) => grid.append(optionCard(g, o)));
+    sec.append(grid);
+    host.append(sec);
+  });
+  syncPickbar();
+}
+
+function optionCard(g, o) {
+  const card = el('button', 'opt');
+  card.type = 'button';
+  card.dataset.group = g.group;
+  card.dataset.id = o.id;
+  if (o.rec) card.classList.add('rec');
+  if (CHOICE[g.group] === o.id) card.classList.add('on');
+
+  const head = el('div', 'opt-head');
+  head.append(el('span', 'opt-tag', o.tag), el('h4', null, o.name));
+  if (o.rec) head.append(el('em', 'recmark', '建議'));
+  card.append(head);
+  card.append(el('p', 'opt-lead', o.lead));
+
+  if (o.weeks || o.videos || o.load) {
+    const m = el('div', 'opt-nums');
+    if (o.weeks) m.append(numTile('賽程', `${o.weeks}`, '週'));
+    if (o.videos) m.append(numTile('影片需求', `${o.videos}`, '支'));
+    if (o.load) m.append(numTile('營運負荷', o.load, ''));
+    card.append(m);
+  }
+
+  if (o.detail) {
+    const dl = el('dl', 'opt-detail');
+    o.detail.forEach(([k, v]) => {
+      const row = el('div');
+      row.append(el('dt', null, k), el('dd', null, v));
+      dl.append(row);
+    });
+    card.append(dl);
+  }
+
+  if (o.rules) card.append(bullets('設計要點', o.rules, 'rules'));
+  if (o.mods) {
+    const w = el('div', 'opt-mods');
+    w.append(el('b', null, '用到的 897 模組'));
+    const tags = el('div', 'modtags');
+    o.mods.forEach((x) => tags.append(el('span', null, x)));
+    w.append(tags);
+    card.append(w);
+  }
+  if (o.pros) card.append(bullets('優點', o.pros, 'pros'));
+  if (o.cons) card.append(bullets('缺點', o.cons, 'cons'));
+  if (o.meta) {
+    const m = el('div', 'opt-meta');
+    o.meta.forEach(([k, v]) => {
+      const row = el('div');
+      row.append(el('b', null, k), el('span', null, v));
+      m.append(row);
+    });
+    card.append(m);
+  }
+  if (o.flag) {
+    const f = el('div', 'opt-flag');
+    f.append(el('b', null, `⚠ ${o.flag.t}`));
+    const body = el('p');
+    body.innerHTML = rich(o.flag.b);
+    f.append(body);
+    card.append(f);
+  }
+
+  card.append(el('span', 'opt-pickhint', CHOICE[g.group] === o.id ? '✓ 已選擇' : '點選此方案'));
+  card.onclick = () => {
+    CHOICE[g.group] = CHOICE[g.group] === o.id ? null : o.id;
+    if (!CHOICE[g.group]) delete CHOICE[g.group];
+    try { localStorage.setItem(PICK_KEY, JSON.stringify(CHOICE)); } catch (e) { /* private mode */ }
+    renderChoices();
+  };
+  return card;
+}
+
+function numTile(label, val, unit) {
+  const d = el('div', 'numtile');
+  const b = el('b', null, val);
+  if (unit) b.append(el('u', null, unit));
+  d.append(el('span', null, label), b);
+  return d;
+}
+
+function bullets(label, items, cls) {
+  const w = el('div', `opt-list ${cls}`);
+  w.append(el('b', null, label));
+  const ul = el('ul');
+  items.forEach((x) => {
+    const li = el('li');
+    li.innerHTML = rich(x);
+    ul.append(li);
+  });
+  w.append(ul);
+  return w;
+}
+
+/* The bar is the point of the picker: during the pitch the client clicks
+   three cards and reads the resulting schedule and material load off one
+   line, instead of cross-referencing three tables. */
+function syncPickbar() {
+  const bar = $('#pickbar');
+  const groups = PLAN.choices || [];
+  const chosen = groups
+    .map((g) => ({ g, o: g.options.find((x) => x.id === CHOICE[g.group]) }))
+    .filter((x) => x.o);
+
+  if (!chosen.length) {
+    bar.hidden = true;
+    document.body.classList.remove('has-pickbar');
+    reserveForBar();
+    return;
+  }
+  bar.hidden = false;
+  document.body.classList.add('has-pickbar');
+
+  const sel = $('#pickbar-sel');
+  sel.textContent = '';
+  chosen.forEach(({ g, o }) => {
+    const chip = el('span', 'chip');
+    chip.append(el('b', null, g.letter), el('i', null, o.tag),
+      el('span', null, o.name));
+    sel.append(chip);
+  });
+
+  const v = chosen.find((x) => x.g.group === 'voting');
+  const out = $('#pickbar-out');
+  out.textContent = '';
+  if (v && v.o.weeks) {
+    out.append(el('span', null, `賽程約 ${v.o.weeks} 週`),
+      el('span', null, `影片需求 ${v.o.videos} 支`),
+      el('span', null, `營運負荷 ${v.o.load}`));
+  } else if (v) {
+    out.append(el('span', null, '此方案需搭配 A 或 B 使用'));
+  }
+  if (chosen.length === groups.length) {
+    out.append(el('span', 'done', '✓ 三項都已選定'));
+  } else {
+    const left = groups.filter((g) => !CHOICE[g.group]).map((g) => g.letter);
+    out.append(el('span', 'todo', `尚未選：${left.join('、')}`));
+  }
+  reserveForBar();
+}
+
+/* The bar's height depends on how much the chips wrap, so reserve the space
+   it actually occupies rather than a guessed constant. */
+function reserveForBar() {
+  requestAnimationFrame(() => {
+    const bar = $('#pickbar');
+    const h = bar.hidden ? 0 : bar.getBoundingClientRect().height;
+    document.body.style.paddingBottom = h ? `${Math.ceil(h) + 12}px` : '';
+  });
+}
+
+window.addEventListener('resize', reserveForBar);
 
 /* ---------- detail ---------- */
 
@@ -394,6 +663,12 @@ function step(d) {
   gi = (gi + d + gallery.length) % gallery.length;
   showShot();
 }
+
+$('#pickbar-clear').onclick = () => {
+  CHOICE = {};
+  try { localStorage.removeItem(PICK_KEY); } catch (e) { /* private mode */ }
+  renderChoices();
+};
 
 $('#detail-close').onclick = () => closeDetail();
 $('#detail-back').onclick = () => closeDetail();

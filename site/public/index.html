@@ -43,6 +43,63 @@
     </div>
   </section>
 
+  <section id="division">
+    <div class="wrap">
+      <h2 id="div-title"></h2>
+      <p class="section-note" id="div-note"></p>
+      <div class="table-scroll">
+        <table class="grid-table split" id="div-table"></table>
+      </div>
+    </div>
+  </section>
+
+  <section id="assets" class="band">
+    <div class="wrap">
+      <h2 id="as-title"></h2>
+      <p class="section-note" id="as-note"></p>
+      <div class="facts" id="as-stats"></div>
+      <div class="constraints" id="as-cons"></div>
+    </div>
+  </section>
+
+  <section id="modules">
+    <div class="wrap">
+      <h2 id="mod-title"></h2>
+      <p class="section-note" id="mod-note"></p>
+      <div class="modgrid" id="mod-list"></div>
+    </div>
+  </section>
+
+  <section id="options" class="band">
+    <div class="wrap">
+      <h2>營運方案選擇</h2>
+      <p class="section-note">三個決定：<strong>社群帳號策略</strong>、<strong>打投機制</strong>、<strong>成團機制</strong>。
+      標示<em class="recmark">建議</em>的是我方推薦，但每一項都可以選別的。
+      點選卡片可以組合出你們要的方案，頁面下方會即時算出對應的賽程與素材需求。</p>
+      <div id="choice-groups"></div>
+    </div>
+  </section>
+
+  <section id="codename">
+    <div class="wrap">
+      <h2 id="cn-title"></h2>
+      <p class="section-note" id="cn-body"></p>
+      <div class="table-scroll">
+        <table class="grid-table" id="cn-table"></table>
+      </div>
+      <p class="callout" id="cn-note"></p>
+    </div>
+  </section>
+
+  <section id="timeline" class="band">
+    <div class="wrap">
+      <h2 id="tl-title"></h2>
+      <div class="table-scroll">
+        <table class="grid-table split" id="tl-table"></table>
+      </div>
+    </div>
+  </section>
+
   <section id="talentmodel">
     <div class="wrap">
       <h2 id="tm-title"></h2>
@@ -109,6 +166,14 @@
     </div>
   </footer>
 </main>
+
+<div class="pickbar" id="pickbar" hidden>
+  <div class="wrap pickbar-in">
+    <div class="pickbar-sel" id="pickbar-sel"></div>
+    <div class="pickbar-out" id="pickbar-out"></div>
+    <button class="pickbar-clear" id="pickbar-clear">清除</button>
+  </div>
+</div>
 
 <div id="detail" class="detail" hidden aria-modal="true" role="dialog" aria-label="參賽者詳細資料">
   <div class="detail-bar">
