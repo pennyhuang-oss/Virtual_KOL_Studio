@@ -20,7 +20,7 @@ const rich = (s) => esc(s)
 
 const NAV = [
   ['top', '總覽'], ['division', '分工'], ['options', '營運方案'], ['timeline', '日程'],
-  ['roster', '參賽者'], ['talents', '才藝'], ['checks', '體檢'],
+  ['roster', '參賽者'], ['talents', '才藝'], ['specspolicy', '規格分層'],
   ['decisions', '待裁決'], ['next', '下一步'],
 ];
 
@@ -118,6 +118,7 @@ function render() {
   renderAssets();
   renderModules();
   renderChoices();
+  renderSpecsPolicy();
   renderCodename();
   renderTimeline();
   renderRoster();
@@ -136,9 +137,10 @@ function render() {
     const box = el('div', flag ? 'decision flag' : 'decision');
     const head = el('div', 'decision-head');
     head.append(el('h3', null, d.t), el('span', null, d.level));
-    const p = el('p', null, d.body);
+    const p = el('p');
+    p.innerHTML = rich(d.body).replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
     const rec = el('p', 'rec');
-    rec.innerHTML = `<b>建議　</b>${esc(d.rec)}`;
+    rec.innerHTML = `<b>建議　</b>${rich(d.rec).replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>')}`;
     box.append(head, p, rec);
     dl.append(box);
   });
@@ -311,6 +313,20 @@ function renderModules() {
   });
 }
 
+function renderSpecsPolicy() {
+  const sp = PLAN.specs_policy;
+  if (!sp) return;
+  $('#sp-title').textContent = sp.title;
+  $('#sp-body').innerHTML = rich(sp.body).replace(/\n\n/g, '<br><br>');
+  const host = $('#sp-reasons');
+  sp.reasons.forEach((r) => {
+    const li = el('li');
+    li.innerHTML = rich(r);
+    host.append(li);
+  });
+  $('#sp-note').innerHTML = rich(sp.note);
+}
+
 function renderCodename() {
   const c = PLAN.codename;
   if (!c) return;
@@ -325,7 +341,7 @@ function renderCodename() {
     tb.append(tr);
   });
   t.append(tb);
-  $('#cn-note').textContent = c.note;
+  $('#cn-note').innerHTML = rich(c.note).replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
 }
 
 function renderTimeline() {
