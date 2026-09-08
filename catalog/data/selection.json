@@ -1,6 +1,6 @@
 {
  "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準。⚠ Iris 的影片經使用者當面更正兩次：移掉三支 cafe_test（那是挑選頁的預設勾選，不是她挑的），並把她自己補的三支跳舞影片排到最前面。⚠ 另外收了使用者用 Google Drive 補的素材：Iris 15 張圖 ＋ 3 支跳舞影片，Camille／Luna／Yuna／Aaliya 各 1 支跳舞影片。那些原本不在任何 repo 裡，所以挑選頁上不會出現。",
- "picked_at": "2026-09-07 10:49",
+ "picked_at": "2026-09-08 07:23",
  "personas": {
   "iris-chen": {
    "hero": "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/01_taipei_street_01.webp",
@@ -406,6 +406,19 @@
    "videos": [
     "showgame-kol/kols/leon-lim/social media/0814/leon-troy0814_字幕.mp4"
    ]
+  },
+  "nova-lin": {
+   "hero": "showgame-kol/kols/nova-lin/images/nova-avatar-2-窗邊.png",
+   "gallery": [
+    "showgame-kol/kols/nova-lin/images/nova-avatar-8-戶外全身.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-7-戶外半身.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-3-街拍.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-5-沙發滑手機.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-4-咖啡廳回眸.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-2-窗邊.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-1-桌前.png"
+   ],
+   "videos": []
   },
   "kanon-komori": {
    "hero": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_02.jpg",
