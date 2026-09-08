@@ -359,6 +359,28 @@ function renderTimeline() {
     tb.append(tr);
   });
   t.append(tb);
+
+  const c = tl.compare;
+  if (!c) return;
+  $('#tl-compare').hidden = false;
+  $('#tlc-title').textContent = c.title;
+  $('#tlc-note').innerHTML = rich(c.note);
+  const ct = $('#tlc-table');
+  ct.innerHTML = '<thead><tr>' +
+    c.head.map((h) => `<th>${esc(h)}</th>`).join('') + '</tr></thead>';
+  const ctb = el('tbody');
+  c.rows.forEach((r) => {
+    const tr = el('tr');
+    tr.append(el('th', null, r[0]));
+    r.slice(1).forEach((v) => {
+      const td = el('td');
+      td.innerHTML = rich(v);
+      ctb.appendChild;
+      tr.append(td);
+    });
+    ctb.append(tr);
+  });
+  ct.append(ctb);
 }
 
 /* ---------- the option picker ---------- */
