@@ -24,7 +24,7 @@ const NAV = [
   ['roster', '參賽者'], ['decisions', '客戶待辦'],
 ];
 
-let PLAN, ROSTER, MEDIA, gallery = [], gi = 0;
+let PLAN, ROSTER, MEDIA, VIDMETA = {}, gallery = [], gi = 0;
 
 /* Overlays are history entries, not just JS state. People reach for browser
    Back to leave a detail panel, and before this that navigated away from the
@@ -47,14 +47,14 @@ function popOverlay() {
 
 async function boot() {
   try {
-    const [p, r, m] = await Promise.all(
-      ['data/plan.json', 'data/roster.json', 'data/media.json']
+    const [p, r, m, vm] = await Promise.all(
+      ['data/plan.json', 'data/roster.json', 'data/media.json', 'data/video_meta.json']
         .map((u) => fetch(u).then((x) => {
           if (!x.ok) throw new Error(`${u}: ${x.status}`);
           return x.json();
         }))
     );
-    PLAN = p; ROSTER = r; MEDIA = m;
+    PLAN = p; ROSTER = r; MEDIA = m; VIDMETA = vm;
   } catch (e) {
     $('#loading').textContent = `載入失敗：${e.message}`;
     return;
@@ -699,6 +699,8 @@ function openDetail(c, silent) {
       v.controls = true;
       v.preload = 'metadata';
       v.playsInline = true;
+      const d = VIDMETA[src];
+      if (d) v.style.aspectRatio = `${d[0]} / ${d[1]}`;
       vs.append(v);
     });
     blk.append(vs);

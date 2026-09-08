@@ -88,6 +88,16 @@ for cid in sorted(ids_r):
     if not os.path.exists(f"{P}/media/{cid}/hero.webp"):
         bad.append(f"{cid}: no hero.webp — run site/build_hero.py")
 
+# --- every clip needs measured dimensions -------------------------------
+# app.js stamps each <video> with its real aspect ratio so the grid is right
+# on first paint. A clip missing from video_meta.json falls back to the
+# spec's 300x150 default and lays out as a flat letterbox box.
+vmeta = json.load(open(f"{P}/data/video_meta.json"))
+for cid, m in sorted(media.items()):
+    for rel in m.get("videos") or []:
+        if rel not in vmeta:
+            bad.append(f"{rel}: not in video_meta.json — run site/build_video_meta.py")
+
 # --- every video count quoted in prose must match media.json ------------
 # Written after a real failure: media.json was rebuilt from the catalog
 # selection (21 clips across 5 personas) but the 組合體檢 row still read

@@ -429,10 +429,28 @@ footer p { margin: 0 0 8px; font-size: 13px; color: var(--ink-3); }
 }
 .dt-specs span { font: 500 16px var(--sans); color: var(--gold); }
 
-.dt-videos { display: grid; gap: 12px; margin-top: 12px; }
+/* The library's reels are 9:16, so a single full-width column rendered each
+   one about 1050px tall — one video filled the viewport and a persona with
+   nine of them made a page nobody could take in. Cap the height and lay them
+   out as a grid instead. `width: auto` with both maxes lets the browser fit
+   each clip inside the box whatever its orientation, with no letterboxing;
+   native controls still offer fullscreen for a closer look. */
+.dt-videos {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  justify-items: center;
+}
 .dt-videos video {
-  width: 100%; border-radius: 9px; background: #000;
-  border: 1px solid var(--line); display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(46dvh, 360px);
+  border-radius: 9px;
+  background: #000;
+  border: 1px solid var(--line);
+  display: block;
 }
 .dt-badge {
   display: inline-block; font-size: 11px; letter-spacing: .1em;
