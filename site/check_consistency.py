@@ -8,7 +8,8 @@ this guards against. Run it before every push.
 
     python3 site/check_consistency.py
 """
-import json, os, re, sys
+import json
+import re, os, re, sys
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +32,35 @@ for eid in set(re.findall(r"\$\('#([a-z0-9-]+)'\)", js)):
     if f'id="{eid}"' not in html:
         bad.append(f"app.js writes to a missing element: #{eid}")
 
+# --- internal-only facts must not reach the client-facing page -----------
+# The user's ruling: our staffing is internal. It lives in the internal
+# record (clients/girl-group-audition/), never in the site payload.
+site_blob = json.dumps(plan, ensure_ascii=False) + html
+for tok in ("1.5 位", "製作師", "AIGC 製作師", "FTE", "人力配置"):
+    if tok in site_blob:
+        bad.append(f"internal staffing detail on the client-facing site: {tok}")
+
+# --- an option must not claim a superlative its own numbers contradict ---
+# Written after a real failure: the schedule cards sit side by side, so when
+# the full-version card claimed 素材量最省 the stat row directly above it
+# already read 35 支 against the short version's 20 支. Comparative claims
+# have to agree with the numbers rendered next to them.
+for group in plan.get("choices", []):
+    opts = group.get("options", [])
+    for field, label in (("videos", "影片需求"), ("weeks", "賽程")):
+        vals = [o.get(field) for o in opts]
+        if any(v is None for v in vals):
+            continue
+        lowest = min(vals)
+        for o in opts:
+            blob = " ".join(o.get("pros", []) + o.get("cons", []))
+            for sup in ("最省", "最低", "最快", "最少"):
+                if sup in blob and o[field] != lowest:
+                    bad.append(
+                        f"{o.get('id')} claims 「{sup}」 but {label}={o[field]} "
+                        f"(lowest is {lowest})"
+                    )
+
 # --- stale references to structures that were removed --------------------
 blob = json.dumps(plan, ensure_ascii=False) + html + js
 for tok in ("方案 A", "方案 B", "方案 C", "方案 D", "方案 E",
@@ -49,6 +79,27 @@ for cid, m in media.items():
     if not m.get("shots"):
         bad.append(f"{cid}: no images, its card will be blank")
 
+# --- every video count quoted in prose must match media.json ------------
+# Written after a real failure: media.json was rebuilt from the catalog
+# selection (21 clips across 5 personas) but the 組合體檢 row still read
+# "3 位共 6 支" from the previous build, contradicting the 素材現況 tiles
+# on the same page. Counts get quoted in several places; only one is true.
+vid_by_id = {cid: len(m.get("videos") or []) for cid, m in media.items()}
+have_vid = {cid: n for cid, n in vid_by_id.items() if n}
+n_clips, n_people = sum(have_vid.values()), len(have_vid)
+prose = json.dumps(plan, ensure_ascii=False)
+for m_ in re.finditer(r"(\d+)\s*位共\s*(\d+)\s*支", prose):
+    if (int(m_.group(1)), int(m_.group(2))) != (n_people, n_clips):
+        bad.append(
+            f"prose says {m_.group(0)} but media.json has "
+            f"{n_people} 位共 {n_clips} 支"
+        )
+for m_ in re.finditer(r"既有\s*(\d+)\s*支影片", prose):
+    if int(m_.group(1)) != n_clips:
+        bad.append(
+            f"prose says 既有 {m_.group(1)} 支影片 but media.json has {n_clips}"
+        )
+
 # --- talent groups declared vs used -------------------------------------
 declared = {g["key"] for g in plan["groups"]}
 for k in Counter(c["group"] for c in roster["contestants"]):
@@ -65,8 +116,12 @@ h = sorted(c["specs"]["height_cm"] for c in roster["contestants"])
 
 if plan["talent_model"]["stats"][0]["k"] != str(n):
     bad.append(f"talent_model says {plan['talent_model']['stats'][0]['k']}, roster has {n}")
-if str(trained) not in chk.get("建模與產能", ""):
-    bad.append(f"checks/建模與產能 disagrees with roster ({trained} trained)")
+# The row's key has been renamed before; find it by content, not by name.
+soul_row = next((v for k, v in chk.items() if "建模" in k), None)
+if soul_row is None:
+    bad.append("checks has no row about modelling status")
+elif str(trained) not in soul_row:
+    bad.append(f"the 建模 row says '{soul_row}', roster has {trained} trained")
 if cupstr not in chk.get("罩杯", ""):
     bad.append(f"checks/罩杯 is '{chk.get('罩杯')}', roster is '{cupstr}'")
 if f"{h[0]} – {h[-1]} cm" not in chk.get("身高", ""):

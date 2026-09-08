@@ -19,7 +19,7 @@ const rich = (s) => esc(s)
   .replace(/`(.+?)`/g, '<code>$1</code>');
 
 const NAV = [
-  ['top', '總覽'], ['division', '分工'], ['assets', '產能'], ['mechanism', '打投機制'],
+  ['top', '總覽'], ['division', '分工'], ['assets', '素材'], ['mechanism', '打投機制'],
   ['options', '要決定的事'], ['addons', '加值玩法'], ['timeline', '日程'],
   ['roster', '參賽者'], ['decisions', '待裁決'],
 ];
