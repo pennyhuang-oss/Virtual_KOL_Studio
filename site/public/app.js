@@ -19,9 +19,9 @@ const rich = (s) => esc(s)
   .replace(/`(.+?)`/g, '<code>$1</code>');
 
 const NAV = [
-  ['top', '總覽'], ['division', '分工'], ['mechanism', '打投機制'], ['options', '要決定的事'],
-  ['addons', '加值玩法'], ['timeline', '日程'], ['roster', '參賽者'],
-  ['decisions', '待裁決'], ['next', '下一步'],
+  ['top', '總覽'], ['division', '分工'], ['assets', '產能'], ['mechanism', '打投機制'],
+  ['options', '要決定的事'], ['addons', '加值玩法'], ['timeline', '日程'],
+  ['roster', '參賽者'], ['decisions', '待裁決'],
 ];
 
 let PLAN, ROSTER, MEDIA, gallery = [], gi = 0;
@@ -120,7 +120,6 @@ function render() {
   renderChoices();
   renderMechanism();
   renderAddons();
-  renderRejected();
   renderSpecsPolicy();
   renderCodename();
   renderTimeline();
@@ -160,7 +159,11 @@ function render() {
   });
 
   const nl = $('#next-list');
-  PLAN.next.forEach((n) => nl.append(el('li', null, n)));
+  PLAN.next.forEach((n) => {
+    const li = el('li');
+    li.innerHTML = rich(n);
+    nl.append(li);
+  });
 }
 
 function specLine(c) {
@@ -278,7 +281,11 @@ function renderDivision() {
   const tb = el('tbody');
   d.rows.forEach((r) => {
     const tr = el('tr');
-    tr.append(el('th', null, r.item), el('td', 'us', r.us), el('td', null, r.them));
+    const us = el('td', 'us');
+    us.innerHTML = rich(r.us);
+    const them = el('td');
+    them.innerHTML = rich(r.them);
+    tr.append(el('th', null, r.item), us, them);
     tb.append(tr);
   });
   t.append(tb);
@@ -288,7 +295,7 @@ function renderAssets() {
   const a = PLAN.assets_now;
   if (!a) return;
   $('#as-title').textContent = a.title;
-  $('#as-note').textContent = a.note;
+  $('#as-note').innerHTML = rich(a.note);
   const host = $('#as-stats');
   a.stats.forEach((f) => {
     const x = el('div', 'fact');
@@ -311,7 +318,9 @@ function renderModules() {
   const host = $('#mod-list');
   m.rows.forEach((r) => {
     const x = el('div', 'mod');
-    x.append(el('b', null, r.m), el('span', null, r.use));
+    const sp = el('span');
+    sp.innerHTML = rich(r.use);
+    x.append(el('b', null, r.m), sp);
     host.append(x);
   });
 }
@@ -370,24 +379,6 @@ function renderAddons() {
   });
 }
 
-function renderRejected() {
-  const r = PLAN.rejected;
-  if (!r) return;
-  $('#rj-title').textContent = r.title;
-  $('#rj-note').textContent = r.note;
-  const t = $('#rj-table');
-  t.innerHTML = '<thead><tr><th>做法</th><th>為什麼不採用</th></tr></thead>';
-  const tb = el('tbody');
-  r.items.forEach(([k, v]) => {
-    const tr = el('tr');
-    const td = el('td');
-    td.innerHTML = rich(v);
-    tr.append(el('th', null, k), td);
-    tb.append(tr);
-  });
-  t.append(tb);
-}
-
 function renderSpecsPolicy() {
   const sp = PLAN.specs_policy;
   if (!sp) return;
@@ -412,7 +403,9 @@ function renderCodename() {
   const tb = el('tbody');
   c.rows.forEach((r) => {
     const tr = el('tr');
-    tr.append(el('th', null, r[0]), el('td', null, r[1]), el('td', 'cn', r[2]));
+    const mid = el('td');
+    mid.innerHTML = rich(r[1]);
+    tr.append(el('th', null, r[0]), mid, el('td', 'cn', r[2]));
     tb.append(tr);
   });
   t.append(tb);
@@ -430,32 +423,13 @@ function renderTimeline() {
     const tr = el('tr');
     const them = el('td');
     them.innerHTML = rich(r.them);
-    tr.append(el('th', null, r.w), them, el('td', 'us', r.us));
+    const us = el('td', 'us');
+    us.innerHTML = rich(r.us);
+    tr.append(el('th', null, r.w), them, us);
     tb.append(tr);
   });
   t.append(tb);
-
-  const c = tl.compare;
-  if (!c) return;
-  $('#tl-compare').hidden = false;
-  $('#tlc-title').textContent = c.title;
-  $('#tlc-note').innerHTML = rich(c.note);
-  const ct = $('#tlc-table');
-  ct.innerHTML = '<thead><tr>' +
-    c.head.map((h) => `<th>${esc(h)}</th>`).join('') + '</tr></thead>';
-  const ctb = el('tbody');
-  c.rows.forEach((r) => {
-    const tr = el('tr');
-    tr.append(el('th', null, r[0]));
-    r.slice(1).forEach((v) => {
-      const td = el('td');
-      td.innerHTML = rich(v);
-      ctb.appendChild;
-      tr.append(td);
-    });
-    ctb.append(tr);
-  });
-  ct.append(ctb);
+  if (tl.note) $('#tl-note').innerHTML = rich(tl.note);
 }
 
 /* ---------- the option picker ---------- */

@@ -712,20 +712,12 @@ body.has-pickbar { padding-bottom: 110px; }
 }
 .reasons li strong { color: var(--ink); font-weight: 500; }
 
-/* ---------- schedule comparison ---------- */
+/* ---------- shared subhead ---------- */
 
 .subhead {
   font: 500 16px var(--sans); letter-spacing: .08em;
   margin: 44px 0 10px; padding-top: 30px; border-top: 1px solid var(--line);
 }
-.grid-table.compare th:first-child {
-  width: 1%; white-space: nowrap; color: var(--ink-3); font-weight: 400;
-  font-size: 12.5px;
-}
-.grid-table.compare thead th { color: var(--ink); font-weight: 500; font-size: 13px; }
-.grid-table.compare thead th:nth-child(3) { color: var(--gold); }
-.grid-table.compare td { font-size: 13.5px; }
-.grid-table.compare td strong { color: var(--gold); font-weight: 500; }
 
 /* ---------- add-ons ---------- */
 
