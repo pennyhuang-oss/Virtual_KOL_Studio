@@ -1,0 +1,38 @@
+# Railway 打包 build context 時要排除的東西。
+#
+# 🛑 為什麼需要這個檔案（2026-09-01 實測踩到，見 catalog/ 的同名檔案）：
+# Railway 會把**整個 repo** 打包成 snapshot，**即使 Root Directory 設成子目錄也一樣**。
+# 這個 repo 是 2.5 GB，結果 build 卡在
+#     uploading snapshot → failed to fetch snapshot → 重新上傳 → 再失敗
+# 的迴圈裡繞了 17 分鐘。那不是暫時性的，是 snapshot 太大過不去。
+#
+# 本分支部署的是 site/（897 女團選秀企劃站），執行時只需要：
+#   site/public/   HTML/CSS/JS ＋ 已經轉好的圖與影片（38 MB）
+#   site/server.js + site/package.json
+# 素材母檔（kols/ 2.3 GB）只有在**產生**衍生檔時才需要，
+# 那一步是本機跑 site/build_media.py，不在 Railway 跑。
+#
+# ⚠ 只影響 Railway 的 build context，不影響 git，也不影響本機執行。
+#
+# ⚠⚠ 這個檔案是 repo 全域共用的，而這個 repo 現在有兩個 Railway 服務在部署：
+#     897-audition  → rootDirectory /site
+#     kol-catalog    → rootDirectory /catalog
+# 所以 **不可以** 排除 site/ 或 catalog/ 任何一個，否則會讓另一個服務建置時
+# 少掉自己的目錄。要新增排除項時請先確認兩個服務都不需要。
+
+# 最大的來源：人設素材母檔
+kols/
+
+# 覆核工作區（含真人參考照，本來就絕對不該進部署環境）
+review/
+
+# 其他跟本站無關的
+music/
+pilot/
+business/
+tools/
+每周熱門話題/
+
+# repo 根目錄的規則文件與 SOP（企劃本文由 site/public/data/*.json 帶，不需要 md）
+*.md
+clients/
