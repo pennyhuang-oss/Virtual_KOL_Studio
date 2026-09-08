@@ -21,7 +21,7 @@ const rich = (s) => esc(s)
 const NAV = [
   ['top', '總覽'], ['division', '分工'], ['assets', '素材'], ['mechanism', '打投機制'],
   ['options', '要決定的事'], ['addons', '加值玩法'], ['timeline', '日程'],
-  ['roster', '參賽者'], ['decisions', '待裁決'],
+  ['roster', '參賽者'], ['decisions', '客戶待辦'],
 ];
 
 let PLAN, ROSTER, MEDIA, gallery = [], gi = 0;
@@ -76,6 +76,21 @@ function render() {
   $('#hero-tagline').textContent = overview.tagline || '';
   $('#hero-body').textContent = overview.body;
   $('#hero-positions').innerHTML = `<b style="color:var(--gold)">定位不預先指派　</b>${esc(overview.positions_note)}`;
+
+  if (overview.kpi) {
+    const k = $('#hero-kpi');
+    k.append(el('h3', 'kpi-title', overview.kpi.title));
+    const list = el('div', 'kpi-list');
+    overview.kpi.items.forEach(([name, body]) => {
+      const box = el('div', 'kpi');
+      box.append(el('b', null, name));
+      const p = el('p');
+      p.innerHTML = rich(body);
+      box.append(p);
+      list.append(box);
+    });
+    k.append(list);
+  }
   $('#foot-note').textContent = meta.note;
   $('#foot-date').textContent = meta.updated;
 
@@ -133,6 +148,8 @@ function render() {
     checks.append(d);
   });
 
+  if (PLAN.decisions_title) $('#dec-title').textContent = PLAN.decisions_title;
+  if (PLAN.decisions_lead) $('#dec-lead').innerHTML = rich(PLAN.decisions_lead);
   const dl = $('#decision-list');
   PLAN.decisions.forEach((d) => {
     const flag = /法遵|優先度最高/.test(d.level);
