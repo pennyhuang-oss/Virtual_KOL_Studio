@@ -1,0 +1,247 @@
+{
+ "jia-seo": {
+  "cover": "media/jia-seo/cover.webp",
+  "shots": [
+   "media/jia-seo/00.webp",
+   "media/jia-seo/01.webp",
+   "media/jia-seo/02.webp",
+   "media/jia-seo/03.webp",
+   "media/jia-seo/04.webp"
+  ]
+ },
+ "wanyin-jiang": {
+  "cover": "media/wanyin-jiang/cover.webp",
+  "shots": [
+   "media/wanyin-jiang/00.webp",
+   "media/wanyin-jiang/01.webp",
+   "media/wanyin-jiang/02.webp",
+   "media/wanyin-jiang/03.webp",
+   "media/wanyin-jiang/04.webp"
+  ]
+ },
+ "rin-ayase": {
+  "cover": "media/rin-ayase/cover.webp",
+  "shots": [
+   "media/rin-ayase/00.webp",
+   "media/rin-ayase/01.webp",
+   "media/rin-ayase/02.webp",
+   "media/rin-ayase/03.webp"
+  ]
+ },
+ "somi-oh": {
+  "cover": "media/somi-oh/cover.webp",
+  "shots": [
+   "media/somi-oh/00.webp",
+   "media/somi-oh/01.webp",
+   "media/somi-oh/02.webp",
+   "media/somi-oh/03.webp",
+   "media/somi-oh/04.webp"
+  ]
+ },
+ "emma-kao": {
+  "cover": "media/emma-kao/cover.webp",
+  "shots": [
+   "media/emma-kao/00.webp",
+   "media/emma-kao/01.webp",
+   "media/emma-kao/02.webp",
+   "media/emma-kao/03.webp"
+  ]
+ },
+ "tammy-chou": {
+  "cover": "media/tammy-chou/cover.webp",
+  "shots": [
+   "media/tammy-chou/00.webp",
+   "media/tammy-chou/01.webp",
+   "media/tammy-chou/02.webp",
+   "media/tammy-chou/03.webp",
+   "media/tammy-chou/04.webp"
+  ]
+ },
+ "kanon-komori": {
+  "cover": "media/kanon-komori/cover.webp",
+  "shots": [
+   "media/kanon-komori/00.webp",
+   "media/kanon-komori/01.webp",
+   "media/kanon-komori/02.webp",
+   "media/kanon-komori/03.webp"
+  ]
+ },
+ "miu-shiraishi": {
+  "cover": "media/miu-shiraishi/cover.webp",
+  "shots": [
+   "media/miu-shiraishi/00.webp",
+   "media/miu-shiraishi/01.webp",
+   "media/miu-shiraishi/02.webp",
+   "media/miu-shiraishi/03.webp"
+  ]
+ },
+ "angeline-kwee": {
+  "cover": "media/angeline-kwee/cover.webp",
+  "shots": [
+   "media/angeline-kwee/00.webp",
+   "media/angeline-kwee/01.webp",
+   "media/angeline-kwee/02.webp",
+   "media/angeline-kwee/03.webp"
+  ]
+ },
+ "yerin-han": {
+  "cover": "media/yerin-han/cover.webp",
+  "shots": [
+   "media/yerin-han/00.webp",
+   "media/yerin-han/01.webp",
+   "media/yerin-han/02.webp"
+  ]
+ },
+ "iris-chen": {
+  "cover": "media/iris-chen/cover.webp",
+  "shots": [
+   "media/iris-chen/00.webp",
+   "media/iris-chen/01.webp",
+   "media/iris-chen/02.webp",
+   "media/iris-chen/03.webp",
+   "media/iris-chen/04.webp",
+   "media/iris-chen/05.webp",
+   "media/iris-chen/06.webp",
+   "media/iris-chen/07.webp",
+   "media/iris-chen/08.webp",
+   "media/iris-chen/09.webp",
+   "media/iris-chen/10.webp",
+   "media/iris-chen/11.webp",
+   "media/iris-chen/12.webp",
+   "media/iris-chen/13.webp",
+   "media/iris-chen/14.webp",
+   "media/iris-chen/15.webp",
+   "media/iris-chen/16.webp",
+   "media/iris-chen/17.webp",
+   "media/iris-chen/18.webp",
+   "media/iris-chen/19.webp",
+   "media/iris-chen/20.webp",
+   "media/iris-chen/21.webp",
+   "media/iris-chen/22.webp",
+   "media/iris-chen/23.webp",
+   "media/iris-chen/24.webp",
+   "media/iris-chen/25.webp",
+   "media/iris-chen/26.webp",
+   "media/iris-chen/27.webp",
+   "media/iris-chen/28.webp",
+   "media/iris-chen/29.webp",
+   "media/iris-chen/30.webp"
+  ],
+  "videos": [
+   "video/iris-chen__v_1nb7xsa.mp4",
+   "video/iris-chen__v_1nd7nwp.mp4",
+   "video/iris-chen__v_1ncjs94.mp4",
+   "video/iris-chen__v_0k0tukf.mp4",
+   "video/iris-chen__v_04tknvz.mp4",
+   "video/iris-chen__v_1lgmopb.mp4",
+   "video/iris-chen__v_18nzbin.mp4",
+   "video/iris-chen__v_0zn21mg.mp4",
+   "video/iris-chen__v_1iaih7z.mp4"
+  ]
+ },
+ "coco-wu": {
+  "cover": "media/coco-wu/cover.webp",
+  "shots": [
+   "media/coco-wu/00.webp",
+   "media/coco-wu/01.webp",
+   "media/coco-wu/02.webp",
+   "media/coco-wu/03.webp",
+   "media/coco-wu/04.webp",
+   "media/coco-wu/05.webp",
+   "media/coco-wu/06.webp",
+   "media/coco-wu/07.webp",
+   "media/coco-wu/08.webp",
+   "media/coco-wu/09.webp",
+   "media/coco-wu/10.webp"
+  ],
+  "videos": [
+   "video/coco-wu__v_0zwxpn1.mp4",
+   "video/coco-wu__v_19yw8bx.mp4",
+   "video/coco-wu__v_1aee5il.mp4",
+   "video/coco-wu__v_0czupt9.mp4"
+  ]
+ },
+ "luna-tanaka": {
+  "cover": "media/luna-tanaka/cover.webp",
+  "shots": [
+   "media/luna-tanaka/00.webp",
+   "media/luna-tanaka/01.webp",
+   "media/luna-tanaka/02.webp",
+   "media/luna-tanaka/03.webp",
+   "media/luna-tanaka/04.webp",
+   "media/luna-tanaka/05.webp",
+   "media/luna-tanaka/06.webp",
+   "media/luna-tanaka/07.webp",
+   "media/luna-tanaka/08.webp",
+   "media/luna-tanaka/09.webp",
+   "media/luna-tanaka/10.webp",
+   "media/luna-tanaka/11.webp",
+   "media/luna-tanaka/12.webp",
+   "media/luna-tanaka/13.webp",
+   "media/luna-tanaka/14.webp",
+   "media/luna-tanaka/15.webp",
+   "media/luna-tanaka/16.webp",
+   "media/luna-tanaka/17.webp",
+   "media/luna-tanaka/18.webp",
+   "media/luna-tanaka/19.webp"
+  ],
+  "videos": [
+   "video/luna-tanaka__v_01maozj.mp4",
+   "video/luna-tanaka__v_0kgfkf3.mp4",
+   "video/luna-tanaka__v_0cki6yn.mp4",
+   "video/luna-tanaka__v_0h90506.mp4"
+  ]
+ },
+ "rainie-hsu": {
+  "cover": "media/rainie-hsu/cover.webp",
+  "shots": [
+   "media/rainie-hsu/00.webp",
+   "media/rainie-hsu/01.webp",
+   "media/rainie-hsu/02.webp",
+   "media/rainie-hsu/03.webp",
+   "media/rainie-hsu/04.webp",
+   "media/rainie-hsu/05.webp",
+   "media/rainie-hsu/06.webp",
+   "media/rainie-hsu/07.webp",
+   "media/rainie-hsu/08.webp",
+   "media/rainie-hsu/09.webp",
+   "media/rainie-hsu/10.webp",
+   "media/rainie-hsu/11.webp",
+   "media/rainie-hsu/12.webp",
+   "media/rainie-hsu/13.webp",
+   "media/rainie-hsu/14.webp",
+   "media/rainie-hsu/15.webp",
+   "media/rainie-hsu/16.webp",
+   "media/rainie-hsu/17.webp"
+  ],
+  "videos": [
+   "video/rainie-hsu__v_1gahe8x.mp4",
+   "video/rainie-hsu__v_1t0snoh.mp4",
+   "video/rainie-hsu__v_0vz6zi9.mp4"
+  ]
+ },
+ "mia-huang": {
+  "cover": "media/mia-huang/cover.webp",
+  "shots": [
+   "media/mia-huang/00.webp",
+   "media/mia-huang/01.webp",
+   "media/mia-huang/02.webp",
+   "media/mia-huang/03.webp",
+   "media/mia-huang/04.webp",
+   "media/mia-huang/05.webp",
+   "media/mia-huang/06.webp",
+   "media/mia-huang/07.webp",
+   "media/mia-huang/08.webp",
+   "media/mia-huang/09.webp",
+   "media/mia-huang/10.webp",
+   "media/mia-huang/11.webp",
+   "media/mia-huang/12.webp",
+   "media/mia-huang/13.webp",
+   "media/mia-huang/14.webp",
+   "media/mia-huang/15.webp"
+  ],
+  "videos": [
+   "video/mia-huang__v_1qw3ziy.mp4"
+  ]
+ }
+}

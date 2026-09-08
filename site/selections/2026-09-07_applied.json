@@ -1,0 +1,241 @@
+{
+ "picked_at": "2026-09-07 10:43",
+ "note": "10 位為使用者 2026-09-07 在 /pick.html 的挑選結果；另 5 位（iris-chen／coco-wu／luna-tanaka／rainie-hsu／mia-huang）使用者指示沿用型錄站現行素材，故由 kol-catalog 分支的 catalog/assets/<id> 與各人設頁的渲染順序帶入，hero 作為封面。",
+ "personas": {
+  "jia-seo": {
+   "cover": "81af3761f0",
+   "items": [
+    "81af3761f0",
+    "7b16e80f17",
+    "ba98560930",
+    "d64d0d8f38",
+    "3da3253e35"
+   ]
+  },
+  "wanyin-jiang": {
+   "cover": "52893dfe93",
+   "items": [
+    "52893dfe93",
+    "954955fa0a",
+    "5d9530690a",
+    "cab3783628",
+    "7b00e28408"
+   ]
+  },
+  "rin-ayase": {
+   "cover": "45c4e9716a",
+   "items": [
+    "45c4e9716a",
+    "56446ec43f",
+    "01fe267a47",
+    "9e8a05a29b"
+   ]
+  },
+  "somi-oh": {
+   "cover": "de88a54119",
+   "items": [
+    "de88a54119",
+    "642469824a",
+    "c8666fba37",
+    "cd5183abd3",
+    "13255f148e"
+   ]
+  },
+  "emma-kao": {
+   "cover": "d7cd5607d7",
+   "items": [
+    "3a8940fcc1",
+    "d7cd5607d7",
+    "15787b60d7",
+    "88d13cc2a6"
+   ]
+  },
+  "tammy-chou": {
+   "cover": "e320b44454",
+   "items": [
+    "faad949c43",
+    "e320b44454",
+    "277942b66c",
+    "372c83dbdb",
+    "e76ea04471"
+   ]
+  },
+  "kanon-komori": {
+   "cover": "61a8f12e52",
+   "items": [
+    "d14d345841",
+    "61a8f12e52",
+    "55205f5e08",
+    "82f42657c0"
+   ]
+  },
+  "miu-shiraishi": {
+   "cover": "5920416418",
+   "items": [
+    "b6415bc757",
+    "5920416418",
+    "505e2e8ba9",
+    "3b63ef6440"
+   ]
+  },
+  "angeline-kwee": {
+   "cover": "31e1062f8a",
+   "items": [
+    "31e1062f8a",
+    "969858aaf7",
+    "b700cb75a9",
+    "e5dbe184a7"
+   ]
+  },
+  "yerin-han": {
+   "cover": "779da70139",
+   "items": [
+    "28e50d6c61",
+    "779da70139",
+    "74bb57efa7"
+   ]
+  },
+  "iris-chen": {
+   "cover_file": "/tmp/catlive/catalog/assets/iris-chen/hero_0up7baw.jpg",
+   "files": [
+    "/tmp/catlive/catalog/assets/iris-chen/g_095am4a.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0u2qim6.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1so5bxq.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0m0cc60.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0yp4imw.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0up7baw.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0dzmu9k.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_120tshc.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0vsobyw.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1sfgmtk.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_176rol4.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_01hcdr4.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1piyvev.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1hy99jl.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_04otv0f.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1qnh1ep.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0pxziu0.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0i8yhmw.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0n4gnaq.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0eayg77.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_18xe2r8.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_16fdvut.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1yj9swi.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_15ysaar.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_18x9xg2.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0xr6au0.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0by8pzi.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0hdowcc.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_0eql0br.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/g_1yc118e.jpg",
+    "/tmp/catlive/catalog/assets/iris-chen/v_1nb7xsa.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_1nd7nwp.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_1ncjs94.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_0k0tukf.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_04tknvz.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_1lgmopb.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_18nzbin.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_0zn21mg.mp4",
+    "/tmp/catlive/catalog/assets/iris-chen/v_1iaih7z.mp4"
+   ],
+   "source": "kol-catalog 型錄站現行素材"
+  },
+  "coco-wu": {
+   "cover_file": "/tmp/catlive/catalog/assets/coco-wu/hero_1p396s9.jpg",
+   "files": [
+    "/tmp/catlive/catalog/assets/coco-wu/g_0qj61mt.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_1hzite4.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_1v0o9ya.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_0myyw9g.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_12q0jwb.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_1mt2vgd.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_14yeh9q.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_0475rf5.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_1p19li2.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/g_1p396s9.jpg",
+    "/tmp/catlive/catalog/assets/coco-wu/v_0zwxpn1.mp4",
+    "/tmp/catlive/catalog/assets/coco-wu/v_19yw8bx.mp4",
+    "/tmp/catlive/catalog/assets/coco-wu/v_1aee5il.mp4",
+    "/tmp/catlive/catalog/assets/coco-wu/v_0czupt9.mp4"
+   ],
+   "source": "kol-catalog 型錄站現行素材"
+  },
+  "luna-tanaka": {
+   "cover_file": "/tmp/catlive/catalog/assets/luna-tanaka/hero_1eagrzg.jpg",
+   "files": [
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_0uq2ro2.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_0us2cy9.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1jhdqlo.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1a36v9r.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_12bg2hw.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_0occ4uj.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1ry9qj0.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1a0jcn7.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_0z4zups.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1rfe7xm.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1ren7vt.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1a6ib7s.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_0l6jsvg.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1eagrzg.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_18fzm1n.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1lt0ru5.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_1gthnuv.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_03phxel.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/g_03d5axy.jpg",
+    "/tmp/catlive/catalog/assets/luna-tanaka/v_01maozj.mp4",
+    "/tmp/catlive/catalog/assets/luna-tanaka/v_0kgfkf3.mp4",
+    "/tmp/catlive/catalog/assets/luna-tanaka/v_0cki6yn.mp4",
+    "/tmp/catlive/catalog/assets/luna-tanaka/v_0h90506.mp4"
+   ],
+   "source": "kol-catalog 型錄站現行素材"
+  },
+  "rainie-hsu": {
+   "cover_file": "/tmp/catlive/catalog/assets/rainie-hsu/hero_0r0enn0.jpg",
+   "files": [
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_1ghqenj.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_1th4w6q.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_19bzpow.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_03cs6xp.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_05dqala.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0hpgpcj.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_1vqyi35.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0tk6u6k.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_1928z6f.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_122z6cn.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0r5ceeb.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_1y12abg.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0v4llyg.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0qz2t2m.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0qybt0t.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0r0enn0.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/g_0qznnl7.jpg",
+    "/tmp/catlive/catalog/assets/rainie-hsu/v_1gahe8x.mp4",
+    "/tmp/catlive/catalog/assets/rainie-hsu/v_1t0snoh.mp4",
+    "/tmp/catlive/catalog/assets/rainie-hsu/v_0vz6zi9.mp4"
+   ],
+   "source": "kol-catalog 型錄站現行素材"
+  },
+  "mia-huang": {
+   "cover_file": "/tmp/catlive/catalog/assets/mia-huang/hero_1n6f6dp.jpg",
+   "files": [
+    "/tmp/catlive/catalog/assets/mia-huang/g_0r53k55.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0dm3y12.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_1uls72d.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_004srq8.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0a97g00.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_1g8i11n.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0mng94e.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0sxgand.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0z98xw3.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0vgfn3a.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_1yatjjj.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_0n1qjwx.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_1n8errc.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_1n733pm.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/g_1n6f6dp.jpg",
+    "/tmp/catlive/catalog/assets/mia-huang/v_1qw3ziy.mp4"
+   ],
+   "source": "kol-catalog 型錄站現行素材"
+  }
+ }
+}

@@ -7,3 +7,5 @@ __pycache__/
 # 那個理由在部署環境不成立：Railway 上既沒有 ffmpeg 也沒有素材母檔，
 # 結果 2026-09-01 上線後人設頁的圖庫縮圖全部 404 破圖。
 # 「可重產」要看在哪裡重產。多出來的量很小（縮圖約 3.7 MB、poster 約 1.4 MB）。
+node_modules/
+package-lock.json

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>897 女團養成計畫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="loading">載入中…</div>
+
+<header class="top">
+  <div class="wrap topbar">
+    <a class="brand" href="#top">
+      <span class="brand-mark">897</span>
+      <span class="brand-text" id="brand-name">女團養成計畫<em id="brand-sub"></em></span>
+    </a>
+    <nav id="nav"></nav>
+    <a class="pickentry" href="pick.html">素材挑選</a>
+  </div>
+</header>
+
+<main id="app" hidden>
+  <section id="top" class="hero">
+    <div class="wrap">
+      <p class="eyebrow" id="hero-status"></p>
+      <h1 id="hero-headline"></h1>
+      <p class="tagline" id="hero-tagline"></p>
+      <p class="lede" id="hero-body"></p>
+      <div class="facts" id="hero-facts"></div>
+      <p class="callout" id="hero-positions"></p>
+    </div>
+  </section>
+
+  <section id="flow" class="band">
+    <div class="wrap">
+      <h2>執行流程</h2>
+      <ol class="flow" id="flow-list"></ol>
+    </div>
+  </section>
+
+  <section id="talentmodel">
+    <div class="wrap">
+      <h2 id="tm-title"></h2>
+      <p class="section-note" id="tm-body"></p>
+      <div class="facts" id="tm-stats"></div>
+      <p class="callout" id="tm-note"></p>
+    </div>
+  </section>
+
+  <section id="roster" class="band">
+    <div class="wrap">
+      <h2>15 位 AI 人設參賽者</h2>
+      <p class="section-note">依才藝類型分組。<strong>分組不代表團體定位</strong>——定位由投票決定。點任一位可看完整素材、身形規格與才藝依據。</p>
+      <div class="filters" id="filters"></div>
+      <div id="groups"></div>
+    </div>
+  </section>
+
+  <section id="talents">
+    <div class="wrap">
+      <h2>才藝與首波影片提案</h2>
+      <p class="section-note">每位的才藝都必須能回指到她人設檔案裡既有的敘述。沒有依據的才藝一律不派。</p>
+      <div class="table-scroll">
+        <table class="grid-table" id="talent-table"></table>
+      </div>
+    </div>
+  </section>
+
+  <section id="checks" class="band">
+    <div class="wrap">
+      <h2>組合體檢</h2>
+      <p class="section-note">15 人同台時，四個維度必須拉開：身高、髮色髮型、臉型骨架、才藝類型。</p>
+      <div class="checks" id="check-list"></div>
+    </div>
+  </section>
+
+  <section id="decisions">
+    <div class="wrap">
+      <h2>待裁決事項</h2>
+      <p class="section-note">以下為需要決策後才能往下執行的項目，含一項法遵前提。</p>
+      <div class="decisions" id="decision-list"></div>
+    </div>
+  </section>
+
+  <section id="alternates" class="band">
+    <div class="wrap">
+      <h2>替補名單</h2>
+      <p class="section-note">才藝有依據、身材達標，僅因名額而未入選，可一對一替換。</p>
+      <div class="alts" id="alt-list"></div>
+    </div>
+  </section>
+
+  <section id="next">
+    <div class="wrap">
+      <h2>下一步</h2>
+      <ol class="next" id="next-list"></ol>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p id="foot-note"></p>
+      <p class="foot-meta">更新於 <span id="foot-date"></span>　·　本頁內容尚未定案</p>
+    </div>
+  </footer>
+</main>
+
+<div id="detail" class="detail" hidden aria-modal="true" role="dialog" aria-label="參賽者詳細資料">
+  <div class="detail-bar">
+    <div class="detail-bar-in">
+      <button class="detail-back" id="detail-back"><b>←</b>返回名單</button>
+      <span class="detail-who" id="detail-who"></span>
+      <button class="detail-close" id="detail-close" aria-label="關閉">✕</button>
+    </div>
+  </div>
+  <div class="detail-inner" id="detail-inner"></div>
+</div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" aria-label="關閉">✕</button>
+  <button class="lb-prev" aria-label="上一張">‹</button>
+  <img id="lb-img" alt="">
+  <button class="lb-next" aria-label="下一張">›</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
