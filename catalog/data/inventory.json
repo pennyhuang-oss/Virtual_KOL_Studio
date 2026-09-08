@@ -1,6 +1,6 @@
 {
   "generated_by": "catalog/tools/scan_inventory.mjs",
-  "generated_at": "2026-09-07",
+  "generated_at": "2026-09-08",
   "repo_root": "/home/user",
   "missing_repos": [],
   "note": "每個數字都由本程式現算。手寫的數字若與這份不符，那是 bug，不是這份錯。",
@@ -22,9 +22,9 @@
       "tag": "SGK",
       "role": "實戰線（已發布素材、平台連結、Metricool 成效）",
       "totals": {
-        "images": 288,
+        "images": 307,
         "videos": 94,
-        "image_bytes": 939788872,
+        "image_bytes": 1031063908,
         "video_bytes": 1211821748,
         "persona_count": 10
       }
@@ -74,15 +74,15 @@
     "duplicated_personas": 21,
     "personas_with_field_conflicts": 0,
     "published_live": 5,
-    "tier_showcase": 30,
-    "tier_thin": 9,
-    "tier_text_only": 3,
-    "images": 930,
+    "tier_showcase": 31,
+    "tier_thin": 11,
+    "tier_text_only": 0,
+    "images": 949,
     "videos": 194,
-    "image_mb": 2633.4,
+    "image_mb": 2720.4,
     "video_mb": 2714.2,
-    "total_mb": 5347.5,
-    "avg_image_mb": 2.83,
+    "total_mb": 5434.6,
+    "avg_image_mb": 2.87,
     "avg_video_mb": 13.99
   },
   "personas": [
@@ -256,9 +256,9 @@
       "duplicated": true,
       "field_conflicts": [],
       "missing_profile_json": [],
-      "images": 43,
+      "images": 44,
       "videos": 24,
-      "image_bytes": 141269023,
+      "image_bytes": 141412310,
       "video_bytes": 437639543,
       "catalog_tier": "showcase"
     },
@@ -633,6 +633,37 @@
       "videos": 3,
       "image_bytes": 33900663,
       "video_bytes": 46600038,
+      "catalog_tier": "showcase"
+    },
+    {
+      "id": "nova-lin",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "NOVA",
+      "name_zh": "林諾",
+      "nickname": null,
+      "handle": "UNASSIGNED",
+      "category": "ai_digital_human",
+      "age": 24,
+      "ethnicity": "N/A — 女性 AI 數字人，設定上沒有族裔",
+      "location": "數字公寓——高層建築中，大面積落地窗面對城市夜景",
+      "status_by_repo": {
+        "SGK": null,
+        "BUP": "draft"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "SGK"
+      ],
+      "images": 16,
+      "videos": 0,
+      "image_bytes": 83937195,
+      "video_bytes": 0,
       "catalog_tier": "showcase"
     },
     {
@@ -1151,6 +1182,37 @@
       "catalog_tier": "thin"
     },
     {
+      "id": "rhea-chou",
+      "in_repos": [
+        "SGK",
+        "BUP"
+      ],
+      "primary_source": "SGK",
+      "name": "Rhea Chou",
+      "name_zh": "周嵐",
+      "nickname": null,
+      "handle": "UNASSIGNED",
+      "category": "marine_documentary",
+      "age": 25,
+      "ethnicity": "Malaysian Chinese (Sabah)",
+      "location": "仙本那與亞庇之間；現租住仙本那海邊屋",
+      "status_by_repo": {
+        "SGK": null,
+        "BUP": "draft"
+      },
+      "published_live": false,
+      "duplicated": true,
+      "field_conflicts": [],
+      "missing_profile_json": [
+        "SGK"
+      ],
+      "images": 1,
+      "videos": 0,
+      "image_bytes": 3151350,
+      "video_bytes": 0,
+      "catalog_tier": "thin"
+    },
+    {
       "id": "sofia-vargas",
       "in_repos": [
         "BUP"
@@ -1180,68 +1242,6 @@
       "catalog_tier": "thin"
     },
     {
-      "id": "nova-lin",
-      "in_repos": [
-        "SGK",
-        "BUP"
-      ],
-      "primary_source": "SGK",
-      "name": "NOVA",
-      "name_zh": "林諾",
-      "nickname": null,
-      "handle": "UNASSIGNED",
-      "category": "ai_digital_human",
-      "age": 24,
-      "ethnicity": "N/A — 女性 AI 數字人，設定上沒有族裔",
-      "location": "數字公寓——高層建築中，大面積落地窗面對城市夜景",
-      "status_by_repo": {
-        "SGK": null,
-        "BUP": "draft"
-      },
-      "published_live": false,
-      "duplicated": true,
-      "field_conflicts": [],
-      "missing_profile_json": [
-        "SGK"
-      ],
-      "images": 0,
-      "videos": 0,
-      "image_bytes": 0,
-      "video_bytes": 0,
-      "catalog_tier": "text_only"
-    },
-    {
-      "id": "rhea-chou",
-      "in_repos": [
-        "SGK",
-        "BUP"
-      ],
-      "primary_source": "SGK",
-      "name": "Rhea Chou",
-      "name_zh": "周嵐",
-      "nickname": null,
-      "handle": "UNASSIGNED",
-      "category": "marine_documentary",
-      "age": 25,
-      "ethnicity": "Malaysian Chinese (Sabah)",
-      "location": "仙本那與亞庇之間；現租住仙本那海邊屋",
-      "status_by_repo": {
-        "SGK": null,
-        "BUP": "draft"
-      },
-      "published_live": false,
-      "duplicated": true,
-      "field_conflicts": [],
-      "missing_profile_json": [
-        "SGK"
-      ],
-      "images": 0,
-      "videos": 0,
-      "image_bytes": 0,
-      "video_bytes": 0,
-      "catalog_tier": "text_only"
-    },
-    {
       "id": "zane-chen",
       "in_repos": [
         "SGK",
@@ -1266,11 +1266,11 @@
       "missing_profile_json": [
         "SGK"
       ],
-      "images": 0,
+      "images": 1,
       "videos": 0,
-      "image_bytes": 0,
+      "image_bytes": 4043204,
       "video_bytes": 0,
-      "catalog_tier": "text_only"
+      "catalog_tier": "thin"
     }
   ]
 }

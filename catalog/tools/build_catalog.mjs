@@ -264,7 +264,18 @@ const hasCJK = v => /[\u4e00-\u9fff]/.test(String(v ?? ''));
 // 有 CJK 所以 pickZh 放行,結果在人設頁那格窄欄裡折成三行英文。
 // 括號裡沒有任何中文字才拿掉 ——「印度（旁遮普）」這種要留著。
 const dropEnParen = v => String(v ?? '').replace(/\s*[（(][^（()）]*[)）]\s*$/g, m => (hasCJK(m) ? m : '')).trim();
-const pickZh = v => { const t = dropEnParen(v); return t && hasCJK(t) ? t : null; };
+
+// 🛑 Markdown 的粗體標記在網頁上會原樣印成星號。
+// 2026-09-07 抓到:nova-lin 的語氣寫著「**不使用過度甜膩的稱呼……**」,
+// 人設檔是 Markdown 寫的,型錄輸出的是 HTML,星號沒人會幫我們拿掉。
+const dropMd = v => String(v ?? '').replace(/\*\*(.+?)\*\*/g, '$1').replace(/(^|[^*])\*([^*]+)\*/g, '$1$2');
+
+// 🛑「這一欄不適用」的標記不是內容,不要印在頁面上。
+// nova-lin 的族裔寫成「N/A — 女性 AI 數字人，設定上沒有族裔」——她是數字人,
+// 本來就沒有族裔;那格該整格不顯示,而不是顯示一句解釋為什麼沒有。
+const NA = /^\s*(N\/A|NA|無|不適用|none|null)\b/i;
+const notNA = v => (NA.test(String(v ?? '')) ? null : v);
+const pickZh = v => { const t = dropMd(dropEnParen(notNA(v) ?? '')); return t && hasCJK(t) ? t : null; };
 // 中文後面接一段英文時，只留中文那一段（純英文則整段丟掉，由 pickZh 處理）。
 // 說明只收中文。英文的一律當成「沒有」——寧可不顯示,也不要在全中文的頁面上
 // 混一段英文（使用者 2026-09-01：全中文）。該補的由 copy.json 的覆寫補。
@@ -275,7 +286,7 @@ const pickZh = v => { const t = dropEnParen(v); return t && hasCJK(t) ? t : null
 const isPlaceholder = s => /\.md|詳見|同名段落|見上|待補|TBD|TODO/i.test(s);
 
 const onlyZhText = t => {
-  const s = String(t ?? '').trim();
+  const s = dropMd(String(t ?? '')).trim();
   if (!s || isPlaceholder(s)) return null;
   const zh = (s.match(/[\u4e00-\u9fff]/g) || []).length;
   return zh / s.length > 0.3 ? s : null;
@@ -329,7 +340,7 @@ for (const p of inv.personas) {
     name_zh: p.name_zh || null,
     category: copy.category || p.category,
     age: p.age,
-    ethnicity: COPY.ethnicity_zh?.[p.ethnicity] || pickZh(p.ethnicity),
+    ethnicity: COPY.ethnicity_zh?.[p.ethnicity] || pickZh(p.ethnicity),   // notNA 在 pickZh 裡
     location: p.location,
     languages: [...new Set((profile?.identity?.languages || [])
       .map(x => String(x).replace(/\s*[（(].*?[)）]\s*/g, '').trim())

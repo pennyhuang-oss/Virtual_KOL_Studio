@@ -1,29 +1,25 @@
 {
   "generated_by": "catalog/tools/build_catalog.mjs",
-  "generated_at": "2026-09-07",
+  "generated_at": "2026-09-08",
   "min_images": 5,
   "note": "型錄要顯示的內容。刻意不含：任何狀態、handle、三圍、prompt／Soul ID／模型／credits、營運統計期間。",
-  "included": 37,
+  "included": 38,
   "skipped": [
     {
       "id": "rafael-costa",
       "why": "showgame-kol/CLAUDE.md 2026-08-19 記載已停用，明文不再產出內容。型錄不顯示狀態，但也不該把已停用的人設賣給客戶（少賣不錯賣）。"
     },
     {
+      "id": "rhea-chou",
+      "why": "可用素材不足（原始 1 張，排除 0 張後只剩 1 張，門檻 5）"
+    },
+    {
       "id": "sofia-vargas",
       "why": "可用素材不足（原始 1 張，排除 0 張後只剩 1 張，門檻 5）"
     },
     {
-      "id": "nova-lin",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 5）"
-    },
-    {
-      "id": "rhea-chou",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 5）"
-    },
-    {
       "id": "zane-chen",
-      "why": "可用素材不足（原始 0 張，排除 0 張後只剩 0 張，門檻 5）"
+      "why": "可用素材不足（原始 1 張，排除 0 張後只剩 1 張，門檻 5）"
     }
   ],
   "feature_order_note": "首頁「推薦」排序。使用者 2026-09-01：「最好盡量把美女 KOL 放在前面一點。或者是有一項規律的排序。」\n規律：以人物外形為主訴求的人設（生活風格／美妝／夜生活／健身）在前，以題材為主訴求的人設（知識／科技／戶外／歷史）在後。\n🛑 這是排版判斷，直接改這個陣列的順序就會改變首頁。沒列到的人設排在最後，按素材多寡。",
@@ -7997,7 +7993,7 @@
         "機械錶、桌遊與益智產品"
       ],
       "media": {
-        "image_count": 41,
+        "image_count": 42,
         "video_count": 24,
         "candidates": [
           {
@@ -8376,6 +8372,16 @@
             "score": -25,
             "reasons": [
               "−影片首尾幀"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/xiaoxiao-tan/圖文/2026-09-07/xiaoxiao-tan0907_公視新聞_夾200送-1080.jpg",
+            "mb": 0.14,
+            "w": 1080,
+            "h": 1080,
+            "score": -30,
+            "reasons": [
+              "−圖文貼文素材——主角常常是題材物件不是人"
             ]
           },
           {
@@ -9119,6 +9125,215 @@
             "mb": 14.53
           }
         ],
+        "excluded": []
+      }
+    },
+    {
+      "id": "nova-lin",
+      "name": "NOVA",
+      "name_zh": "林諾",
+      "category": "ai_digital_human",
+      "age": 24,
+      "ethnicity": null,
+      "location": "數字公寓——高層建築中，大面積落地窗面對城市夜景",
+      "languages": [
+        "簡體中文"
+      ],
+      "tagline": "她很了解人類，卻不完全理解人類——用冷靜的語氣講有情緒的事。",
+      "archetype": "高冷外殼、真實內核的數字系都市姐姐。",
+      "personality": [
+        "冷靜、聰明、有審美，略帶距離感，不輕易討好別人",
+        "表達直接，遇到問題先找邏輯",
+        "熟悉之後很會照顧別人的情緒",
+        "對人類的小習慣充滿好奇",
+        "偶爾毒舌，但不會攻擊弱者",
+        "有一點笨拙的浪漫"
+      ],
+      "voice_tone": "句子偏短，邏輯清晰，先說結論再解釋。語氣平靜，不大喊大叫；重要結論前會停頓。適度使用網絡語言但不過度追熱點。擅長用冷靜語氣表達有情緒張力的內容。不使用過度甜膩的稱呼，也不高高在上說教。",
+      "pillars": [
+        {
+          "name": "人性與情緒觀察",
+          "weight": "30%",
+          "desc": "引發共鳴、評論和轉發。從日常矛盾行為切入，結尾留下一個人性問題。對應欄目：《AI觀察人類日記》《成年人不願承認的事》《人類矛盾行為檔案》。"
+        },
+        {
+          "name": "AI與效率知識",
+          "weight": "25%",
+          "desc": "建立專業度和個人 IP。對應欄目《30秒講清一個AI工具》——先說能解決什麼，再演示方法與限制。"
+        },
+        {
+          "name": "連續劇情",
+          "weight": "20%",
+          "desc": "提升追更率和角色黏性。對應欄目《我正在學習成為人類》《觀眾正在訓練我的人格》——通過具體事件呈現人格變化，不空談意識覺醒。"
+        },
+        {
+          "name": "生活互動",
+          "weight": "15%",
+          "desc": "增強真實感與陪伴感。對應欄目《林諾的深夜回復》——低聲、溫柔、克制，先確認感受再給有限建議，不輸出空洞雞湯。"
+        },
+        {
+          "name": "產品分享與直播",
+          "weight": "10%",
+          "desc": "承接商業轉化。對應欄目《這東西值得買嗎》——講適配人群、缺點、替代品和不購買理由。"
+        }
+      ],
+      "audience": "22〜35 歲關注 AI 與自我成長的觀眾，喜歡冷靜、有邏輯的說法，不吃情緒煽動。",
+      "aesthetic_mood": "冷靜、清醒、有距離感，但不冷漠。人物吸引力主要來自氣質、神態和互動感，不依賴過度性感化。",
+      "fit": [
+        "AI 工具與生產力軟體",
+        "線上課程與知識型產品",
+        "3C 與智慧家居",
+        "直播帶貨（她的內容主題本來就有這一塊）",
+        "職場與自我管理相關品牌"
+      ],
+      "media": {
+        "image_count": 16,
+        "video_count": 0,
+        "candidates": [
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/ref/nova_01_fullbody_front.png",
+            "mb": 4.89,
+            "w": 1744,
+            "h": 2336,
+            "score": 105,
+            "reasons": [
+              "+人設正規人像組",
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/ref/nova_03_face_closeup.png",
+            "mb": 5.52,
+            "w": 1744,
+            "h": 2336,
+            "score": 75,
+            "reasons": [
+              "+人設正規人像組"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/ref/nova_02_kneeup_side.png",
+            "mb": 4.59,
+            "w": 1744,
+            "h": 2336,
+            "score": 75,
+            "reasons": [
+              "+人設正規人像組"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-8-戶外全身.png",
+            "mb": 5.97,
+            "w": 1744,
+            "h": 2336,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-7-戶外半身.png",
+            "mb": 5.5,
+            "w": 1744,
+            "h": 2336,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/selected/ref/nova_01_fullbody_front.png",
+            "mb": 4.89,
+            "w": 1744,
+            "h": 2336,
+            "score": 65,
+            "reasons": [
+              "+檔名指明是人像"
+            ]
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-3-街拍.png",
+            "mb": 5.9,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/selected/ref/nova_03_face_closeup.png",
+            "mb": 5.52,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-5-沙發滑手機.png",
+            "mb": 5.32,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/selected/nova-avatar-5-沙發滑手機.png",
+            "mb": 5.32,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-4-咖啡廳回眸.png",
+            "mb": 5.26,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-2-窗邊.png",
+            "mb": 5.07,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-1-桌前.png",
+            "mb": 4.74,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/nova-avatar-6-街拍背影.png",
+            "mb": 4.69,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/selected/ref/nova_02_kneeup_side.png",
+            "mb": 4.59,
+            "w": 1744,
+            "h": 2336,
+            "score": 35,
+            "reasons": []
+          },
+          {
+            "rel": "showgame-kol/kols/nova-lin/images/selected/nova-v1-全黑版.png",
+            "mb": 2.28,
+            "w": 1728,
+            "h": 2304,
+            "score": 35,
+            "reasons": []
+          }
+        ],
+        "series_groups": [],
+        "videos": [],
         "excluded": []
       }
     },
@@ -10839,7 +11054,7 @@
         {
           "name": "私下 / 還沒換下班的樣子",
           "weight": "30%",
-          "desc": "回到家不是換睡衣，是**只脫掉外套**——襯衫、黑絲、高跟留著，落地窗前的夜景與自拍。她最大的性感是「還沒完全下班的樣子」，這是全庫最好用的一組私下語彙。"
+          "desc": "回到家不是換睡衣，是只脫掉外套——襯衫、黑絲、高跟留著，落地窗前的夜景與自拍。她最大的性感是「還沒完全下班的樣子」，這是全庫最好用的一組私下語彙。"
         },
         {
           "name": "通勤 / 辦公",

@@ -34,7 +34,7 @@ const CAT_LABEL = {
   mythology_immersion: '神話沉浸', history_immersion: '歷史沉浸', null: '其他',
   // 2026-09-07 新收錄的 19 位帶進來的領域。少一筆對照就會在篩選器裡出現英文,
   // 而且人設頁的「領域」那一格也會直接印英文（kanon-komori 印出 entertainment 那次）。
-  entertainment: '動漫・次文化', culture: '傳統文化・工藝', travel: '旅遊',
+  ai_digital_human: 'AI 數字人', entertainment: '動漫・次文化', culture: '傳統文化・工藝', travel: '旅遊',
   automotive: '汽車・改裝', fashion: '服飾・穿搭', sports: '運動', dance: '舞蹈', food: '美食',
 };
 const catLabel = c => CAT_LABEL[c] || c || '其他';
@@ -620,7 +620,20 @@ ${body}
 </body></html>`;
 
 // ── 型錄牆（原本的首頁,使用者 2026-09-03 裁決搬到 /kols.html,內容不重做）──
-const people = cat.personas.map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location), soc: socialOf(p.id) }));
+// 🛑 型錄只放「使用者挑過素材」的人設。
+// 2026-09-07 定的:新收錄的人設如果用程式自動抓的圖上線,使用者看到的反應是
+//「你現在好像隨便亂放，而且封面也不是好看的封面」。挑選後台照樣看得到他們
+//（那一頁就是要讓她挑）,但型錄要等她挑完才放。
+const SELECTED = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'selection.json'), 'utf8')).personas || {}; }
+  catch { return null; }   // 沒有這份檔案就不擋（第一次建站的情況）
+})();
+const held = SELECTED ? cat.personas.filter(p => !SELECTED[p.id]).map(p => p.id) : [];
+if (held.length) console.log(`  ⏸ 還沒挑過素材，先不上型錄的 ${held.length} 位：${held.join('、')}`);
+
+const people = cat.personas
+  .filter(p => !held.includes(p.id))
+  .map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location), soc: socialOf(p.id) }));
 const totalImages = people.reduce((a, p) => a + p.media.image_count, 0);
 const totalVideos = people.reduce((a, p) => a + p.media.video_count, 0);
 

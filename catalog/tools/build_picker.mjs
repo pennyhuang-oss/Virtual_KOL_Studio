@@ -183,7 +183,10 @@ for (const p of cat.personas) {
     });
   }
 
-  groups.push({ id: p.id, name: p.name, name_zh: p.name_zh, rows, vrows, picked });
+  // 已經挑過的人設,後台可能又多出新素材（合併新的 origin/main 之後常有）。
+  // 沒勾的張數印在跳轉清單上,不然那些新圖埋在 866 張裡沒人看得到。
+  const unticked = rows.filter(r => !r.on).length;
+  groups.push({ id: p.id, name: p.name, name_zh: p.name_zh, rows, vrows, picked, unticked });
   process.stdout.write(`  ${p.name} ${rows.length} 張圖、${vrows.length} 支影片\n`);
 }
 fs.writeFileSync(PROBE_CACHE, JSON.stringify(probe, null, 1));
@@ -202,6 +205,8 @@ a{color:#e8c85a}
 .jump a{display:inline-block;margin:3px 5px 0 0;padding:2px 8px;border:1px solid #2a2a32;
   border-radius:3px;text-decoration:none;font-size:13px}
 .jump a:hover{border-color:#e8c85a}
+.jump a i{font-style:normal;color:#8d8d99;font-size:11.5px}
+.jump p b{color:#c9c9d4;font-weight:500;font-size:12.5px}
 section.fresh h2{color:#e8c85a}
 h2 b.new{margin-left:10px;font-size:11px;padding:2px 8px;border-radius:3px;
   background:#e8c85a;color:#17130a;vertical-align:middle}
@@ -291,10 +296,11 @@ const html = `<!doctype html>
 
 <div class="wrap">
   <div class="jump">
-    <p><b>尚未挑過的 ${groups.filter(g => !g.picked).length} 位</b>（新放上去的,現在站上顯示的是程式自動抓的,不是你挑的）：
+    <p><b>尚未挑過的 ${groups.filter(g => !g.picked).length} 位</b>（新放上去的。<b>挑完才會上型錄</b>，現在型錄上還看不到他們）：
       ${groups.filter(g => !g.picked).map(g => `<a href="#s-${esc(g.id)}">${esc(g.name_zh || g.name)}</a>`).join('')}</p>
-    <p class="hint2">已經挑過的 ${groups.filter(g => g.picked).length} 位：
-      ${groups.filter(g => g.picked).map(g => `<a href="#s-${esc(g.id)}">${esc(g.name_zh || g.name)}</a>`).join('')}</p>
+    <p class="hint2">已經挑過的 ${groups.filter(g => g.picked).length} 位
+      <b>（括號裡是這位還沒勾的張數 —— 那些是你上次沒選、或後來才新增的素材）</b>：
+      ${groups.filter(g => g.picked).map(g => `<a href="#s-${esc(g.id)}">${esc(g.name_zh || g.name)}${g.unticked ? ` <i>${g.unticked}</i>` : ''}</a>`).join('')}</p>
   </div>
   <p class="hint" style="padding:16px 0 0" id="help-img">
     點縮圖＝要／不要。<b>右上角「封面」</b>點一下把那張設成這位人設的封面（每人一張）。<br>

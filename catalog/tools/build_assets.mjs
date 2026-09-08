@@ -74,7 +74,20 @@ fs.mkdirSync(ASSETS, { recursive: true });
 let made = 0, skipped = 0, stale = 0, failed = [];
 let probeLeft = VP9_PROBE;
 
+// 🛑 還沒挑過素材的人設,連衍生檔都不要產。
+// build_site 已經不讓他們上型錄了,但衍生檔進 git 就等於進了公開的網站目錄
+//（頁面沒連結,網址照樣拿得到）。她還沒選過的圖不該以任何形式對外。
+// 挑完之後這裡自然就會產出她挑的那幾張。
+const heldBack = Object.keys(selection).length
+  ? cat.personas.filter(p => !selection[p.id]).map(p => p.id) : [];
+for (const id of heldBack) {
+  const d = path.join(ASSETS, id);
+  if (fs.existsSync(d)) { fs.rmSync(d, { recursive: true, force: true }); }
+}
+if (heldBack.length) console.log(`  ⏸ 還沒挑過素材，不產衍生檔的 ${heldBack.length} 位：${heldBack.join('、')}`);
+
 for (const p of cat.personas) {
+  if (heldBack.includes(p.id)) continue;
   const dir = path.join(ASSETS, p.id);
   fs.mkdirSync(dir, { recursive: true });
 
