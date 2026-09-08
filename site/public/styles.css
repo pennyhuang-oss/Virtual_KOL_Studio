@@ -116,6 +116,7 @@ h2::before {
 .pickentry:hover { background: var(--gold); color: #14141b; border-color: var(--gold); }
 
 .hero { padding: 96px 0 84px; }
+body:has(.lineup) .hero { padding-top: 52px; }
 
 .facts {
   display: grid; gap: 1px; margin: 44px 0 34px;
@@ -779,4 +780,66 @@ body.has-pickbar { padding-bottom: 110px; }
 }
 @media (max-width: 820px) {
   .kpi-list { grid-template-columns: 1fr; }
+}
+
+/* --- 首頁陣容帶 -------------------------------------------------------- */
+/* A row of all 15 portraits above the headline: the audition line-up. It
+   drifts slowly so the page has motion without anything moving under the
+   reader's eye, and fades into the page ground at the bottom so the
+   headline below it never fights the images for attention. */
+.lineup {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line-soft);
+}
+.lineup-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  animation: lineup-drift 150s linear infinite;
+}
+/* The gap is a per-tile margin, not `gap`: the track holds the roster twice and
+   the drift animates to exactly -50%, which only lands seam-free if each half —
+   trailing space included — is exactly half the track's width. */
+.lineup-track img {
+  height: 100%;
+  width: auto;
+  display: block;
+  margin-right: 6px;
+  object-fit: cover;
+  filter: saturate(.82) contrast(1.04) brightness(.86);
+}
+/* fade to the page ground on all four edges so it reads as atmosphere,
+   not as a gallery the client is meant to click */
+.lineup::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(10, 10, 14, .30) 0%, rgba(10, 10, 14, .10) 38%, rgba(10, 10, 14, .92) 88%, var(--bg) 100%),
+    linear-gradient(to right, var(--bg) 0%, transparent 14%, transparent 86%, var(--bg) 100%);
+}
+.lineup-line {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dim) 30%, var(--gold-dim) 70%, transparent);
+  opacity: .5;
+}
+@keyframes lineup-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lineup-track { animation: none; }
+}
+@media (max-width: 820px) {
+  .lineup { height: 190px; }
+  .lineup-track { animation-duration: 100s; }
 }

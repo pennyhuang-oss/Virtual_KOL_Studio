@@ -138,6 +138,7 @@ function render() {
   renderSpecsPolicy();
   renderCodename();
   renderTimeline();
+  renderLineup();
   renderRoster();
   renderTalents();
 
@@ -186,6 +187,25 @@ function render() {
 function specLine(c) {
   const s = c.specs;
   return `${s.height_cm}cm · ${s.cup} · ${s.bust_cm}-${s.waist_cm}-${s.hip_cm}`;
+}
+
+/* The line-up band above the headline. The track holds the roster twice so
+   the drift animation can loop on -50% with no visible seam. */
+function renderLineup() {
+  const track = $('#lineup-track');
+  if (!track) return;
+  const ids = ROSTER.contestants.map((c) => c.id);
+  if (!ids.length) return;
+  [...ids, ...ids].forEach((id, i) => {
+    const img = el('img');
+    img.src = `media/${id}/hero.webp`;
+    img.alt = '';
+    img.loading = i < ids.length ? 'eager' : 'lazy';
+    img.decoding = 'async';
+    track.append(img);
+  });
+  const line = el('div', 'lineup-line');
+  track.parentElement.append(line);
 }
 
 function renderRoster(filter) {

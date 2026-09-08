@@ -9,6 +9,7 @@ this guards against. Run it before every push.
     python3 site/check_consistency.py
 """
 import json
+import os
 import re, os, re, sys
 from collections import Counter
 
@@ -78,6 +79,14 @@ for cid in set(media) - ids_r:
 for cid, m in media.items():
     if not m.get("shots"):
         bad.append(f"{cid}: no images, its card will be blank")
+
+# --- the line-up band needs a tile for every contestant -----------------
+# app.js builds the band by convention from the roster ids, so a missing file
+# is a broken image in the first thing anyone sees. Regenerate with
+# `python3 site/build_hero.py` after any media rebuild.
+for cid in sorted(ids_r):
+    if not os.path.exists(f"{P}/media/{cid}/hero.webp"):
+        bad.append(f"{cid}: no hero.webp — run site/build_hero.py")
 
 # --- every video count quoted in prose must match media.json ------------
 # Written after a real failure: media.json was rebuilt from the catalog
