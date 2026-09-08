@@ -11,7 +11,7 @@
       "collected_at": "2026-09-04",
       "note": "建模圖已準備好，待訓練。5 張皆為可直接發布的生活照／自拍，以純臉緊裁切 Reference Element 錨定臉部身分，身材與服裝完全由 prompt 文字定義。逐張的 prompt、job id 與判定見 review/soul_pilot/sydney-leong/prompts.json，彙整見 generation_notes.md。等 19 位全部備齊後一次送 Soul 訓練。",
       "soul_training": {
-        "status": "face_validated",
+        "status": "production_ready",
         "platform": "Higgsfield.ai",
         "model": "soul_2",
         "soul_id": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
@@ -26,7 +26,10 @@
           "result": "臉 6/6 通過（門檻 1、2、4）",
           "report": "review/soul_pilot/VERIFY_REMAINING_12.md",
           "images": "review/soul_pilot/sydney-leong/verify_v1/"
-        }
+        },
+        "status_definition": "production_ready：Soul V2 訓練完成並通過 6 張驗證的臉部門檻（門檻 1 同一人、門檻 2 無漂移、門檻 4 不重現訓練集）。此分級取代原本的 approved，因為 approved 依 ACCEPTANCE_LOCKED.md §六 第 10 步要求「6 張驗證通過」，而其中兩項並未通過而是被處理掉的，寫成 approved 會失實。【身材】門檻 3 未通過：Soul V2 不繼承身材與身高，全 19 位一致。正式出圖時以 prompt 描述性句子補胸型（已實測有效，見 review/soul_pilot/_body_test_v1/BODY_TEST_v1.md）；profile.json 的三圍數字依決策 (B) 維持不動。嬌小感補正尚未驗證。【碰撞】門檻 5 實測失敗（遮髮盲測 6/8），經使用者裁決接受而非通過，見 review/soul_training/RULING_collision_accepted.md。因此必須遵守強制規則 C-1（每次出圖都要寫她自己的髮色髮型；有碰撞關係者不得換成對象的髮型）與 C-2（有碰撞關係的兩位不得同框），見 PERSONA_CANON.md 原則七。",
+        "body_compensation_required": true,
+        "collision_risk_accepted": true
       },
       "reference_element_id": "37413c2e-1fd5-4272-bc42-d58db3aca3b7"
     }

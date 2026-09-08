@@ -43,11 +43,17 @@
 
 ## 三、狀態欄位的意思
 
-- `trained_face_validated`（2 位）：cheryl-soh、zhiyi-shen。已跑 6 張驗證，臉 6/6 通過。
-- `ready_unvalidated`（17 位）：訓練成功，**尚未跑 6 張驗證圖**。
-- **沒有任何一位標成 `approved`。** 升級條件見 `ACCEPTANCE_LOCKED.md` §六 第 10 步。
+**19 位全部為 `production_ready`。**
 
-17 位若要補驗證：17 × 6 × 0.12 ≈ **12.2 credits**。使用者尚未決定跑幾位。
+19 位全部跑完 6 張驗證（試點 2 + 抽驗 5 + 剩餘 12，共 114 張約 13.7 credits），
+臉部門檻（1、2、4）**19/19 通過**。
+
+`production_ready` 取代原本的 `approved`，因為門檻 3（身材）全 19 位未通過、
+門檻 5（碰撞）實測失敗後由使用者裁決接受——標成 `approved` 會失實。
+定義與兩個強制附帶條件（身材靠 prompt 補、碰撞風險已接受）見
+`ACCEPTANCE_LOCKED.md` 附記二。
+
+驗證報告：`../soul_pilot/SAMPLE_VERIFY_5.md`、`../soul_pilot/VERIFY_REMAINING_12.md`
 
 ## 四、本批確立的事實
 
