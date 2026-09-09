@@ -10,6 +10,11 @@ const tip = document.getElementById('tip');
 // 客戶看到名字認不出長相,還要回去翻圖鑑對照（使用者 2026-09-09）。
 // 所以配對結果一律帶封面：列上有小圖,滑過名字出現大一點的封面卡。
 const face = o => o.img ? `<img class="fc" src="${o.img}" alt="${esc(nameOf(o))}" width="400" height="533">` : '';
+// 分數一模一樣的幾位會疊成同一個點。這時候一樣要看得到臉——並排小圖,名字寫在圖下面。
+// 🛑 原本只有「單獨一位」才放照片,結果客戶滑到疊在一起的點就沒圖,看起來像壞掉（2026-09-09）。
+const faceRow = grp => `<span class="fg">${grp.slice(0, 4).map(x =>
+  `<span>${x.o.img ? `<img src="${x.o.img}" alt="" width="400" height="533">` : ''}<i>${esc(nameOf(x.o))}</i></span>`
+).join('')}</span>`;
 // 名字之後才是註記行,順序要是「中文名 → 原名・市場 → 一句話定位」
 const meta = o => `<i class="fm">${esc([o.zh && o.name !== o.zh ? o.name : '', o.mk].filter(Boolean).join('　'))}</i>`
   + (o.tag ? `<i class="ft">${esc(o.tag)}</i>` : '');
@@ -201,10 +206,11 @@ function drawPlot(res){
   svg.querySelectorAll('.dot').forEach(c => {
     c.addEventListener('pointerenter', () => {
       const grp = groups.get(c.dataset.key) || [], r = grp[0];
-      showTip(c, (grp.length === 1 ? face(r.o) : '')
-        + `<b>${grp.slice(0, 4).map(x => esc(nameOf(x.o))).join('、')}`
-        + `${grp.length > 4 ? ' 等 ' + grp.length + ' 位' : ''}</b>`
-        + (grp.length === 1 ? meta(r.o) : '')
+      const one = grp.length === 1;
+      showTip(c, (one ? face(r.o) : faceRow(grp))
+        + (one ? `<b>${esc(nameOf(r.o))}</b>` + meta(r.o)
+               : `<b>這個位置有 ${grp.length} 位，分數一模一樣</b>`
+                 + (grp.length > 4 ? `<i class="fm">圖上只列前 4 位</i>` : ''))
         + `<span>主題 ${r.topic}　品類 ${r.cate}　匹配度 ${r.total}</span>`);
     });
     c.addEventListener('pointerleave', hideTip);
