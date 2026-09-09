@@ -24,7 +24,8 @@ import json, glob, re
 VIEW = {
  "selfie_close":
    "A close-up front-facing selfie shot, the angle slightly above her looking down at her, "
-   "framed the way her own phone front camera would frame it.",
+   "framed the way her own phone front camera would frame it. Her other arm runs out of the bottom "
+   "corner of the frame toward the camera, so only one of her hands is doing anything else.",
  "mirror_half":
    "A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest "
    "height, and the frame is what that phone sees.",
@@ -81,13 +82,15 @@ LIGHT = {
        "wet pavement, pale tiling — bouncing light back up into her face.",
  "K13":"The shop's own lighting, bright and even from in front of her, falling on her face and the "
        "front of her clothes, the night outside the glass going black behind her.",
+ "K15":"Daylight through the front window together with the counter's own strip lighting, both "
+       "coming from in front of her onto her face, the back of the room falling darker.",
  "K14":"Bright even indoor lighting from panels in front of and above her catching her face, with the "
        "polished floor and the mirrored surfaces bouncing light back up into it.",
  "K12":"Warm interior light from a lamp in front of her at face height, her face the brightest "
        "point, the depth of the room dropping into soft dark.",
 }
 # §3-D② 尾巴：按場景決定，不跨角色固定套用
-TAIL_OK = {"K1","K4","K5","K6","K7","K9"}   # 戶外自然光與咖啡廳；室內人工光不加（§3-D② 原文：按場景決定）
+TAIL_OK = {"K1","K4","K5","K6","K7","K9","K15"}   # 戶外自然光與咖啡廳；室內人工光不加（§3-D② 原文：按場景決定）
 TAIL = "Film grain, candid lifestyle photo, warm tones, shot on 35mm."
 
 PEOPLE = {
@@ -130,7 +133,7 @@ def build(p, s):
 SCENE_LIGHT = [
  (re.compile(r'vanity|washroom|studio wall with a barre', re.I), {"K10"}),
  (re.compile(r'convenience store|corner shop|laundromat|coin laundry|game-arcade|noodle shop|'
-             r'dumpling counter|fast-food|post office counter|wholesale garment', re.I), {"K13","K3","K10"}),
+             r'dumpling|fast-food|post office|wholesale garment', re.I), {"K13","K15","K3","K10"}),
  (re.compile(r'lift|lobby|station (?:exit|passage)|metro station|mall entrance|supermarket entrance|'
              r'gym|stairwell landing|stockroom', re.I), {"K14","K10"}),
  (re.compile(r'\bcafe\b|coffee (?:shop|bar|stand)|kopitiam|teahouse with|bakery', re.I), {"K7","K3"}),
@@ -138,6 +141,17 @@ SCENE_LIGHT = [
              r'lantern-lit|at dusk|bath terrace', re.I), {"K8","K12"}),
  (re.compile(r'beach|paddy-field|boardwalk', re.I), {"K9"}),
 ]
+
+# 這三句光線斷言了夜晚／夜間燈光，場景就必須也是夜晚，否則畫面自相矛盾
+# 「free hand」只有一隻。姿勢用掉了，隨身物就不能再拿走，否則物件會浮在空中
+# （2026-09-09 A/B 實測：rin B 的罐子懸空，因為 pose 與 micro 都指派了 free hand）
+FREE_HAND = re.compile(r'\b(?:her )?free hand\b|\bone hand\b|\bboth hands\b', re.I)
+
+NIGHT_LIGHT = {"K13","K8","K12"}
+NIGHT_SCENE = re.compile(r'\bat night\b|late at night|evening|dusk|\bnight\b', re.I)
+# 場景字串會被套進 "She is in {scene}"，首名詞不能是檯面／桌面／梳妝台
+SCENE_HEAD_BAD = re.compile(r'^(?:a|the)\s+(?:[\w\-]+\s+){0,3}(counter|table|worktop|vanity)\b'
+                            r'(?!.*\b(?:with|in)\b)', re.I)
 
 HANDHELD = re.compile(r'\bin (?:her|one|the|his)\s+(?:\w+\s+){0,2}hands?\b|\bholding\b|'
                       r'\bunder (?:one |her )?arm\b|\bagainst her chest\b|\bcarrying\b|'
@@ -175,6 +189,13 @@ def audit(pid,n,s,txt,p):
             e.append(f"R3 光線 {s['light']} 與場景類別不符（此類場景可用 {sorted(allowed)}）")
             break
 
+    # 光線斷言夜晚 → 場景也必須是夜晚
+    if s["light"] in NIGHT_LIGHT and not NIGHT_SCENE.search(s["scene"]):
+        e.append(f"光線 {s['light']} 斷言夜晚，但場景沒有寫夜晚")
+    # 場景首名詞不能是檯面（"She is in a … counter" 不通）
+    if SCENE_HEAD_BAD.match(s["scene"]):
+        e.append("場景首名詞是檯面／桌面，套進 'She is in' 文法不通")
+
     # R4：服裝不得不時髦
     for w in UNCHIC:
         if w in s["outfit"].lower(): e.append(f"R4 服裝不時髦: {w}")
@@ -188,6 +209,9 @@ def audit(pid,n,s,txt,p):
 
     # R6：不得有廣角人小的構圖
     if s["framing"] not in FRAMING: e.append(f"R6 未知框架 {s['framing']}")
+
+    if FREE_HAND.search(s["pose"]) and FREE_HAND.search(s["micro"]):
+        e.append("free hand 被姿勢與隨身物同時指派——物件會浮空")
 
     # 手部預算：持握物件 ≤2，鏡面/自拍格 ≤1（一隻手已被手機或機身佔用）
     occ=len(HANDHELD.findall(s["pose"]))+len(HANDHELD.findall(s["micro"]))

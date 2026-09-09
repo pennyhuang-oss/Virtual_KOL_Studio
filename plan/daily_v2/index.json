@@ -7,7 +7,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 288
+  "words": 316
  },
  {
   "persona": "angel-chiu",
@@ -57,7 +57,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 305
+  "words": 334
  },
  {
   "persona": "angeline-kwee",
@@ -107,7 +107,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K14",
-  "words": 274
+  "words": 299
  },
  {
   "persona": "cheryl-soh",
@@ -126,8 +126,8 @@
   "view": "friend_near",
   "framing": "three_quarter",
   "zone": "都會上班",
-  "light": "K13",
-  "words": 315
+  "light": "K3",
+  "words": 312
  },
  {
   "persona": "cheryl-soh",
@@ -147,7 +147,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K12",
-  "words": 299
+  "words": 301
  },
  {
   "persona": "emma-kao",
@@ -157,7 +157,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 282
+  "words": 308
  },
  {
   "persona": "emma-kao",
@@ -207,7 +207,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 284
+  "words": 309
  },
  {
   "persona": "jia-seo",
@@ -247,7 +247,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K8",
-  "words": 310
+  "words": 312
  },
  {
   "persona": "kanon-komori",
@@ -257,7 +257,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 295
+  "words": 320
  },
  {
   "persona": "kanon-komori",
@@ -306,8 +306,8 @@
   "view": "selfie_close",
   "framing": "chest_up",
   "zone": "貼身極簡",
-  "light": "K13",
-  "words": 276
+  "light": "K15",
+  "words": 309
  },
  {
   "persona": "miu-shiraishi",
@@ -347,7 +347,7 @@
   "framing": "full_length",
   "zone": "洋裝",
   "light": "K12",
-  "words": 300
+  "words": 302
  },
  {
   "persona": "nanami-fujiwara",
@@ -357,7 +357,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K4",
-  "words": 276
+  "words": 302
  },
  {
   "persona": "nanami-fujiwara",
@@ -367,7 +367,7 @@
   "framing": "waist_up",
   "zone": "針織慵懶",
   "light": "K10",
-  "words": 302
+  "words": 301
  },
  {
   "persona": "nanami-fujiwara",
@@ -407,7 +407,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 289
+  "words": 317
  },
  {
   "persona": "nico-tsai",
@@ -457,7 +457,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K5",
-  "words": 316
+  "words": 344
  },
  {
   "persona": "peggy-lee",
@@ -497,7 +497,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K12",
-  "words": 301
+  "words": 303
  },
  {
   "persona": "rin-ayase",
@@ -507,7 +507,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 277
+  "words": 305
  },
  {
   "persona": "rin-ayase",
@@ -557,7 +557,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 296
+  "words": 323
  },
  {
   "persona": "ruoruo-tang",
@@ -577,7 +577,7 @@
   "framing": "three_quarter",
   "zone": "洋裝",
   "light": "K6",
-  "words": 317
+  "words": 319
  },
  {
   "persona": "ruoruo-tang",
@@ -607,7 +607,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 305
+  "words": 331
  },
  {
   "persona": "somi-oh",
@@ -657,7 +657,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 287
+  "words": 314
  },
  {
   "persona": "sydney-leong",
@@ -706,8 +706,8 @@
   "view": "selfie_close",
   "framing": "chest_up",
   "zone": "貼身極簡",
-  "light": "K13",
-  "words": 279
+  "light": "K15",
+  "words": 312
  },
  {
   "persona": "tammy-chou",
@@ -757,7 +757,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 299
+  "words": 325
  },
  {
   "persona": "wanyin-jiang",
@@ -807,7 +807,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K14",
-  "words": 267
+  "words": 292
  },
  {
   "persona": "wendy-yeo",
@@ -857,7 +857,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 281
+  "words": 308
  },
  {
   "persona": "yerin-han",
@@ -907,7 +907,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 274
+  "words": 300
  },
  {
   "persona": "zhiyi-shen",
@@ -956,8 +956,8 @@
   "view": "selfie_close",
   "framing": "chest_up",
   "zone": "貼身極簡",
-  "light": "K13",
-  "words": 273
+  "light": "K15",
+  "words": 309
  },
  {
   "persona": "zoey-yeh",

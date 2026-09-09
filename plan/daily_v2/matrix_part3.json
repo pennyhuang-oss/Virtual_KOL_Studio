@@ -16,7 +16,7 @@
     "pose": "She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.",
     "expression": "Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.",
     "eye_contact": true,
-    "micro": "a canned coffee in her free hand",
+    "micro": "a canned coffee standing on the shelf edge beside her",
     "people": "solo",
     "light": "K13"
    },
@@ -101,7 +101,7 @@
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.",
     "eye_contact": true,
-    "micro": "a bag of loquats in her free hand",
+    "micro": "a bag of loquats resting on the crate beside her",
     "people": "background_ok",
     "light": "K3"
    },
@@ -131,7 +131,7 @@
     "pose": "She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, her free hand resting at her waist.",
     "expression": "Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.",
     "eye_contact": true,
-    "micro": "a small porcelain cup in her free hand",
+    "micro": "a small porcelain cup on the stone ledge beside her",
     "people": "background_ok",
     "light": "K6"
    },
@@ -184,7 +184,7 @@
     "pose": "She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.",
     "expression": "Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.",
     "eye_contact": true,
-    "micro": "a paper cup of coffee in her free hand",
+    "micro": "a paper cup of coffee on the crate beside her",
     "people": "background_ok",
     "light": "K3"
    },
@@ -267,7 +267,7 @@
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.",
     "eye_contact": true,
-    "micro": "a bottled drink in her free hand",
+    "micro": "a bottled drink on the cooler lid beside her",
     "people": "solo",
     "light": "K13"
    },
@@ -352,7 +352,7 @@
     "eye_contact": true,
     "micro": "a barcode scanner resting on the counter",
     "people": "solo",
-    "light": "K13"
+    "light": "K15"
    },
    {
     "tier": "C",
@@ -380,7 +380,7 @@
     "pose": "She is half-seated on the edge of something with her back long, knees angled away from the lens and her free hand flat on the surface beside her.",
     "expression": "Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.",
     "eye_contact": true,
-    "micro": "a paper carrier bag in her free hand",
+    "micro": "a paper carrier bag hanging from her shoulder",
     "people": "background_ok",
     "light": "K5"
    },

@@ -16,7 +16,7 @@
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.",
     "eye_contact": true,
-    "micro": "a paper bag of loose tea in her free hand",
+    "micro": "a paper bag of loose tea on the box beside her",
     "people": "background_ok",
     "light": "K3"
    },
@@ -46,7 +46,7 @@
     "pose": "She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, her free hand resting at her waist.",
     "expression": "Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.",
     "eye_contact": true,
-    "micro": "a folded silk fan in her free hand",
+    "micro": "a folded silk fan tucked into her waistband",
     "people": "background_ok",
     "light": "K6"
    },
@@ -178,7 +178,7 @@
     "framing": "chest_up",
     "outfit": "a cream fitted rib tank and washed straight jeans",
     "hair_style": "loose with soft waves and a middle part",
-    "scene": "a convenience store window counter at night, a row of stools facing the street and a hot-food case behind",
+    "scene": "a convenience store at night, a window counter with a row of stools facing the street and a hot-food case behind",
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.",
     "eye_contact": true,
@@ -261,7 +261,7 @@
     "framing": "chest_up",
     "outfit": "a white fitted halter top and high-waisted black shorts",
     "hair_style": "loose and straight past the shoulder",
-    "scene": "a late-night dumpling counter, a steel worktop, stacked bamboo steamers and a handwritten board above",
+    "scene": "a late-night dumpling shop, a steel counter in front of her and stacked bamboo steamers behind",
     "pose": "She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.",
     "expression": "Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.",
     "eye_contact": true,
@@ -344,13 +344,13 @@
     "framing": "chest_up",
     "outfit": "a white fitted rib tank and light denim shorts",
     "hair_style": "tied back low with a few soft strands loose",
-    "scene": "a rural post office counter, a franking machine on the worktop and a pinboard of notices behind",
+    "scene": "a rural post office, a franking machine on the worktop in front of her and a pinboard of notices behind",
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is confident and still, only a trace of a smile, her eyes holding the lens.",
     "eye_contact": true,
     "micro": "a posting slip on the counter",
     "people": "solo",
-    "light": "K13"
+    "light": "K15"
    },
    {
     "tier": "C",

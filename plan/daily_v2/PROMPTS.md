@@ -8,7 +8,7 @@
 
 ## angel-chiu
 
-### angel-chiu — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　288 字
+### angel-chiu — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　316 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -20,8 +20,8 @@ She has her head tipped slightly toward the near shoulder, the far shoulder drop
 Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a canned coffee in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a canned coffee standing on the shelf edge beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -106,7 +106,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## angeline-kwee
 
-### angeline-kwee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　305 字
+### angeline-kwee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　334 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -118,8 +118,8 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a bunch of rambutan in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a woven bag on her shoulder with rambutan showing at the top.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -205,7 +205,7 @@ Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 
 ## cheryl-soh
 
-### cheryl-soh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　274 字
+### cheryl-soh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　299 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -217,7 +217,7 @@ She has her head tipped slightly toward the near shoulder, the far shoulder drop
 Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a small parcel tucked under one arm.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -242,7 +242,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### cheryl-soh — D3　[B 級]　都會上班　friend_near　three_quarter　光:K13　315 字
+### cheryl-soh — D3　[B 級]　都會上班　friend_near　three_quarter　光:K3　312 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -252,10 +252,10 @@ She wears a fitted white shirt tucked into tailored black shorts with black slin
 She is in a courtyard of restored shophouses, arched windows, hanging ferns and a coffee window under the arcade.
 She is half-seated on the edge of something with her back long, knees angled away from the lens and her free hand flat on the surface beside her.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.
-The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
+Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
-Visible with her: an espresso cup in her free hand.
+Visible with her: an espresso cup on the ledge beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -279,14 +279,14 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### cheryl-soh — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　299 字
+### cheryl-soh — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　301 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
 Her hair is black, in a sleek centre-part with the ends straight.
 She is slim but distinctly full-chested, a soft heavy curve at the bust above a noticeably narrow waist, with long legs.
 She wears a black satin slip dress with a cowl neck and heeled sandals.
-She is in a hotel bar with a marble counter, brass fittings and warm downlights over the bottles.
+She is in a hotel bar at night with a marble counter, brass fittings and warm downlights over the bottles.
 She is leaning back against the low edge behind her with both elbows resting on it, one knee bent and crossed over the other.
 Her expression is caught mid-laugh, mouth open and eyes half closed, looking just past the lens at whoever made her laugh.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
@@ -302,19 +302,19 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## emma-kao
 
-### emma-kao — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　282 字
+### emma-kao — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　308 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
 Her hair is dark brown with one wine-red highlighted section, in two loose low twists.
 She is slim with a full, softly rounded bust that shapes the front of her clothes, above a defined waist.
 She wears a soft pink fitted short tee and matching pink shorts.
-She is in a fast-food counter area late at night, moulded plastic seating and a backlit menu board above.
+She is in a fast-food restaurant late at night, moulded plastic seating and a backlit menu board above the counter.
 She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a paper cup of soda on the tray.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -400,7 +400,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## jia-seo
 
-### jia-seo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　284 字
+### jia-seo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　309 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -412,7 +412,7 @@ She has her head tipped slightly toward the near shoulder, the far shoulder drop
 Her expression is confident and still, only a trace of a smile, her eyes holding the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a canned drink on the bench.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -474,14 +474,14 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### jia-seo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　310 字
+### jia-seo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　312 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
 Her hair is cool grey-blue black with a mint-green under-layer, slicked back wet-look with a low twist.
 She is lean and athletic with a flat, strong midsection and a small defined waist, long legs and light muscle definition through the shoulders and thighs.
 She wears a silver sequinned mini dress with thin straps and black heels.
-She is in a basement music bar with a low ceiling, a neon strip along the back wall and a mirrored pillar.
+She is in a basement music bar at night with a low ceiling, a neon strip along the back wall and a mirrored pillar.
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg so the line of her back and hip carries the pose.
 Her expression is soft and unguarded, lips slightly parted, her gaze going away past the camera.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
@@ -497,7 +497,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## kanon-komori
 
-### kanon-komori — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　295 字
+### kanon-komori — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　320 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -509,7 +509,7 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a small plush keyring clipped to her belt loop.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -595,7 +595,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## miu-shiraishi
 
-### miu-shiraishi — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　276 字
+### miu-shiraishi — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　309 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -605,12 +605,13 @@ She wears a black fitted tank top and washed straight jeans.
 She is in a coin laundry with a wall of dryers, a plastic stool and a vending machine glowing in the corner.
 She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.
 Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.
-The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
+Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a folded tote on the bench.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
+Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
 ### miu-shiraishi — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　312 字
@@ -670,14 +671,14 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### miu-shiraishi — D5　[A 級]　洋裝　friend_full　full_length　光:K12　300 字
+### miu-shiraishi — D5　[A 級]　洋裝　friend_full　full_length　光:K12　302 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
 Her hair is light ash-blonde, in a low sleek twist with face-framing strands.
 She is petite and slight with narrow shoulders and a short frame, but full-chested enough that fitted tops sit tight across the front.
 She wears a sage green satin bias slip dress with heeled sandals.
-She is in a small wine bar with a zinc counter, shelves of bottles behind and a warm pendant over the pass.
+She is in a small wine bar at night with a zinc counter, shelves of bottles behind and a warm pendant over the pass.
 She is leaning back against the low edge behind her with both elbows resting on it, one knee bent and crossed over the other.
 Her expression is soft and unguarded, lips slightly parted, her gaze going away past the camera.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
@@ -693,7 +694,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## nanami-fujiwara
 
-### nanami-fujiwara — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K4　276 字
+### nanami-fujiwara — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K4　302 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -705,21 +706,21 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.
 Bright overcast daylight coming from in front of her, even and flattering on the face, the sky behind her a touch brighter than she is.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a cold bottled tea in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a cold bottled tea on the bench beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### nanami-fujiwara — D2　[C 級]　針織慵懶　mirror_half　waist_up　光:K10　302 字
+### nanami-fujiwara — D2　[C 級]　針織慵懶　mirror_half　waist_up　光:K10　301 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
 Her hair is black, in a low loose bun with strands at the nape.
 She is slim and evenly proportioned with a full, soft bust and a gently defined waist.
 She wears a fitted cream cable knit with a short pleated skirt and white socks.
-She is in a mirrored washroom vanity in a roadside rest stop, a run of basins and a tiled splashback.
+She is in a roadside rest-stop washroom, a mirrored vanity with a run of basins and a tiled splashback.
 She has one hip pushed out and her torso twisted slightly back toward the lens, her free hand hooked in the waistband.
 Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.
 Soft warm light from a vanity lamp directly in front of her face, the rest of the room falling quickly into shadow.
@@ -792,19 +793,19 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## nico-tsai
 
-### nico-tsai — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　289 字
+### nico-tsai — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　317 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
 Her hair is cool mid-brown with a silver-grey section at the left temple, loose and straight with a centre part.
 She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.
 She wears a black fitted tube top and a short washed denim skirt.
-She is in a late-night noodle shop counter, a steel worktop, a stack of bowls and a handwritten board above.
+She is in a late-night noodle shop, a steel counter in front of her, a stack of bowls and a handwritten board above.
 She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a pair of chopsticks resting across a bowl.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -890,7 +891,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## peggy-lee
 
-### peggy-lee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K5　316 字
+### peggy-lee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K5　344 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -902,8 +903,8 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is confident and still, only a trace of a smile, her eyes holding the lens.
 Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a plastic cup of iced tea in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a plastic cup of iced tea on the table in front of her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
@@ -966,14 +967,14 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### peggy-lee — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　301 字
+### peggy-lee — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　303 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
 Her hair is deep wine-red with silver-grey highlighted strands, swept to one side in glossy curls.
 She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.
 She wears a wine-red satin one-shoulder mini dress with heels.
-She is in a hotel rooftop bar with a lit pool edge, low lounge seating and warm lamps along the rail.
+She is in a hotel rooftop bar at night with a lit pool edge, low lounge seating and warm lamps along the rail.
 She stands with her feet crossed at the ankle and her weight on one hip, one hand lifted to hold her hair off her neck.
 Her expression is soft and unguarded, lips slightly parted, her gaze going away past the camera.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
@@ -989,7 +990,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## rin-ayase
 
-### rin-ayase — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　277 字
+### rin-ayase — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　305 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1001,8 +1002,8 @@ She has her head tipped slightly toward the near shoulder, the far shoulder drop
 Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a canned coffee in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a canned coffee standing on the shelf edge beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -1088,7 +1089,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## ruoruo-tang
 
-### ruoruo-tang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　296 字
+### ruoruo-tang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　323 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1100,8 +1101,8 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a bag of loquats in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a bag of loquats resting on the crate beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -1125,7 +1126,7 @@ A few anonymous strangers are in the mid-ground behind her going about their own
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### ruoruo-tang — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　317 字
+### ruoruo-tang — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　319 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1138,7 +1139,7 @@ Her expression is a warm open smile, the outer corners of her eyes creasing, loo
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
-Visible with her: a small porcelain cup in her free hand.
+Visible with her: a small porcelain cup on the stone ledge beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
@@ -1186,7 +1187,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## somi-oh
 
-### somi-oh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　305 字
+### somi-oh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　331 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1198,8 +1199,8 @@ She has her head tipped slightly toward the near shoulder, the far shoulder drop
 Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a paper cup of coffee in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a paper cup of coffee on the crate beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -1285,7 +1286,7 @@ Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 
 ## sydney-leong
 
-### sydney-leong — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　287 字
+### sydney-leong — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　314 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1297,8 +1298,8 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a bottled drink in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a bottled drink on the cooler lid beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -1383,7 +1384,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## tammy-chou
 
-### tammy-chou — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　279 字
+### tammy-chou — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　312 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1393,12 +1394,13 @@ She wears a white fitted rib tank and a short black skirt.
 She is in a wholesale garment aisle, racks of plastic-wrapped stock either side and a strip-lit ceiling above.
 She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.
 Her expression is confident and still, only a trace of a smile, her eyes holding the lens.
-The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
+Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a barcode scanner resting on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
+Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
 ### tammy-chou — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　325 字
@@ -1433,7 +1435,7 @@ Her expression is cool and composed, lips relaxed and chin level, her eyes on th
 Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
-Visible with her: a paper carrier bag in her free hand.
+Visible with her: a paper carrier bag hanging from her shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
@@ -1482,7 +1484,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## wanyin-jiang
 
-### wanyin-jiang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　299 字
+### wanyin-jiang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　325 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1494,8 +1496,8 @@ She is turned a few degrees off-axis with one shoulder forward and her chin dipp
 Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
-Visible with her: a paper bag of loose tea in her free hand.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
+Visible with her: a paper bag of loose tea on the box beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
@@ -1532,7 +1534,7 @@ Her expression is quietly pleased, lips closed in a small soft smile, her eyes s
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
-Visible with her: a folded silk fan in her free hand.
+Visible with her: a folded silk fan tucked into her waistband.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
@@ -1580,7 +1582,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## wendy-yeo
 
-### wendy-yeo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　267 字
+### wendy-yeo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　292 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1592,7 +1594,7 @@ She has her head tipped slightly toward the near shoulder, the far shoulder drop
 Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a slim parcel under one arm.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -1677,19 +1679,19 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## yerin-han
 
-### yerin-han — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　281 字
+### yerin-han — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　308 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
 Her hair is ash-brown with lighter gold face-framing highlights, loose with soft waves and a middle part.
 She is tall and athletic with long legs, a full bust and light muscle definition through the shoulders and back.
 She wears a cream fitted rib tank and washed straight jeans.
-She is in a convenience store window counter at night, a row of stools facing the street and a hot-food case behind.
+She is in a convenience store at night, a window counter with a row of stools facing the street and a hot-food case behind.
 She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.
 Her expression is cool and composed, lips relaxed and chin level, her eyes on the lens without any smile.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a paper cup on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -1774,19 +1776,19 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## zhiyi-shen
 
-### zhiyi-shen — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　274 字
+### zhiyi-shen — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　300 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
 Her hair is black, loose and straight past the shoulder.
 She is tall and slim with long legs, a full bust and a narrow waist that shows clearly in tailored clothes.
 She wears a white fitted halter top and high-waisted black shorts.
-She is in a late-night dumpling counter, a steel worktop, stacked bamboo steamers and a handwritten board above.
+She is in a late-night dumpling shop, a steel counter in front of her and stacked bamboo steamers behind.
 She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a small dish of vinegar on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
@@ -1872,22 +1874,23 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## zoey-yeh
 
-### zoey-yeh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　273 字
+### zoey-yeh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　309 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
 Her hair is black, tied back low with a few soft strands loose.
 She is small and slight with narrow shoulders and a slender frame, and a modest bust in proportion to it.
 She wears a white fitted rib tank and light denim shorts.
-She is in a rural post office counter, a franking machine on the worktop and a pinboard of notices behind.
+She is in a rural post office, a franking machine on the worktop in front of her and a pinboard of notices behind.
 She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.
 Her expression is confident and still, only a trace of a smile, her eyes holding the lens.
-The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
+Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
-A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it.
+A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a posting slip on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
+Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
 ### zoey-yeh — D2　[C 級]　日系學院　mirror_half　waist_up　光:K3　346 字

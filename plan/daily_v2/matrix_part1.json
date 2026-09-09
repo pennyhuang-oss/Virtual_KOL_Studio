@@ -16,7 +16,7 @@
     "pose": "She has her head tipped slightly toward the near shoulder, the far shoulder dropped away, her free hand resting at the base of her throat.",
     "expression": "Her expression is a warm open smile, the outer corners of her eyes creasing, looking straight into the lens.",
     "eye_contact": true,
-    "micro": "a canned coffee in her free hand",
+    "micro": "a canned coffee standing on the shelf edge beside her",
     "people": "solo",
     "light": "K13"
    },
@@ -99,7 +99,7 @@
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is quietly pleased, lips closed in a small soft smile, her eyes steady on the lens.",
     "eye_contact": true,
-    "micro": "a bunch of rambutan in her free hand",
+    "micro": "a woven bag on her shoulder with rambutan showing at the top",
     "people": "background_ok",
     "light": "K3"
    },
@@ -212,9 +212,9 @@
     "pose": "She is half-seated on the edge of something with her back long, knees angled away from the lens and her free hand flat on the surface beside her.",
     "expression": "Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.",
     "eye_contact": true,
-    "micro": "an espresso cup in her free hand",
+    "micro": "an espresso cup on the ledge beside her",
     "people": "background_ok",
-    "light": "K13"
+    "light": "K3"
    },
    {
     "tier": "B",
@@ -238,7 +238,7 @@
     "framing": "full_length",
     "outfit": "a black satin slip dress with a cowl neck and heeled sandals",
     "hair_style": "in a sleek centre-part with the ends straight",
-    "scene": "a hotel bar with a marble counter, brass fittings and warm downlights over the bottles",
+    "scene": "a hotel bar at night with a marble counter, brass fittings and warm downlights over the bottles",
     "pose": "She is leaning back against the low edge behind her with both elbows resting on it, one knee bent and crossed over the other.",
     "expression": "Her expression is caught mid-laugh, mouth open and eyes half closed, looking just past the lens at whoever made her laugh.",
     "eye_contact": false,
@@ -261,7 +261,7 @@
     "framing": "chest_up",
     "outfit": "a soft pink fitted short tee and matching pink shorts",
     "hair_style": "in two loose low twists",
-    "scene": "a fast-food counter area late at night, moulded plastic seating and a backlit menu board above",
+    "scene": "a fast-food restaurant late at night, moulded plastic seating and a backlit menu board above the counter",
     "pose": "She is turned a few degrees off-axis with one shoulder forward and her chin dipped a fraction, her free hand just touching her hair at the temple.",
     "expression": "Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted — eyes on the lens.",
     "eye_contact": true,
@@ -404,7 +404,7 @@
     "framing": "full_length",
     "outfit": "a silver sequinned mini dress with thin straps and black heels",
     "hair_style": "slicked back wet-look with a low twist",
-    "scene": "a basement music bar with a low ceiling, a neon strip along the back wall and a mirrored pillar",
+    "scene": "a basement music bar at night with a low ceiling, a neon strip along the back wall and a mirrored pillar",
     "pose": "She has stopped and turned back over her shoulder toward the lens, her weight on the far leg so the line of her back and hip carries the pose.",
     "expression": "Her expression is soft and unguarded, lips slightly parted, her gaze going away past the camera.",
     "eye_contact": false,
