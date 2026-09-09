@@ -1,0 +1,457 @@
+<title>品牌配對定位</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+<style>
+  /* 單一深色主題:這是型錄的一個分頁,型錄本身是深色的。色票沿用 build_site.mjs。 */
+  :root{
+    color-scheme: dark;
+    --bg:#0b0b0d; --card:#14141a; --card2:#1a1a22; --card3:#20202a;
+    --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.22);
+    --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
+    --gold:#e7cd74; --gold2:#d8b955; --goldd:#8a7530; --dark:#17130a;
+    --dotq:#4a4a56;
+    --serif:"Noto Serif TC",Georgia,serif;
+    --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7}
+  .wrap{max-width:76rem;margin:0 auto;padding:0 24px}
+
+  header{border-bottom:1px solid var(--line);padding:34px 0 0}
+  .eyebrow{font-size:11px;letter-spacing:.2em;color:var(--gold2);margin:0 0 11px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.4vw,34px);margin:0 0 10px;line-height:1.25}
+  .lede{color:var(--ink2);font-size:15px;max-width:46em;margin:0 0 22px}
+  .lede b{color:var(--ink);font-weight:500}
+  .tabs{display:flex;gap:2px}
+  .tabs button{background:transparent;border:0;border-bottom:2px solid transparent;color:var(--ink3);
+    font:inherit;font-size:14.5px;padding:10px 18px;cursor:pointer}
+  .tabs button[aria-selected=true]{color:var(--gold);border-bottom-color:var(--gold2)}
+  .tabs button:hover{color:var(--ink2)}
+  .tabs button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+  section[role=tabpanel]{padding:26px 0 0}
+  section[hidden]{display:none}
+
+  h2{font-family:var(--serif);font-weight:500;font-size:19px;margin:0 0 4px}
+  .hint{font-size:13px;color:var(--ink4);margin:0 0 18px;max-width:52em}
+  .hint b{color:var(--ink2);font-weight:500}
+
+  /* ── 查詢 ── */
+  .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 8px}
+  input[type=text]{flex:1 1 20rem;min-width:0;background:var(--card2);color:var(--ink);
+    border:1px solid var(--line2);border-radius:4px;padding:11px 14px;font:inherit;font-size:15px}
+  input[type=text]:focus{outline:2px solid var(--gold2);outline-offset:1px;border-color:transparent}
+  button.go{background:var(--gold2);color:var(--dark);border:0;border-radius:4px;padding:11px 22px;
+    font:inherit;font-weight:500;cursor:pointer}
+  button.go:hover{background:var(--gold)}
+  .egs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+  .egs b{font-size:12px;color:var(--ink4);letter-spacing:.08em;align-self:center;margin-right:3px}
+  .egs button,select{background:transparent;color:var(--ink2);border:1px solid var(--line2);
+    border-radius:14px;padding:3px 12px;font:inherit;font-size:13px;cursor:pointer}
+  .egs button:hover{border-color:var(--gold2);color:var(--gold)}
+  .egs button:focus-visible,button.go:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+  .two{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px}
+  @media (max-width:920px){.two{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px}
+  .panel h3{font-family:var(--serif);font-weight:500;font-size:16px;margin:0 0 3px}
+  .panel .ph{font-size:12px;color:var(--ink4);margin:0 0 14px}
+
+  .plot{position:relative;width:100%;aspect-ratio:1/.88;min-height:280px}
+  svg{display:block;width:100%;height:100%;overflow:visible}
+  .qlab{font-size:9.5px;fill:var(--ink4);letter-spacing:.08em}
+  .axlab{font-size:11px;fill:var(--ink3)}
+  .tick{font-size:9.5px;fill:var(--ink4);font-variant-numeric:tabular-nums}
+  .dot{cursor:pointer}
+  .dlab{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:3px}
+  .tip{position:fixed;pointer-events:none;background:var(--card3);border:1px solid var(--line2);
+    border-radius:4px;padding:8px 11px;font-size:12.5px;color:var(--ink);max-width:19rem;z-index:9;
+    box-shadow:0 6px 22px rgba(0,0,0,.55);opacity:0;transition:opacity .1s}
+  .tip b{display:block;font-weight:500;margin-bottom:2px}
+  .tip span{color:var(--ink3);font-variant-numeric:tabular-nums}
+
+  /* 分數拆解 */
+  .anat{width:100%;border-collapse:collapse;font-size:13px}
+  .anat th{text-align:left;font-weight:500;font-size:10.5px;letter-spacing:.1em;color:var(--ink4);
+    border-bottom:1px solid var(--line);padding:0 8px 7px 0}
+  .anat td{padding:8px 8px 8px 0;border-bottom:1px solid var(--line);color:var(--ink2);vertical-align:top}
+  .anat td.n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+  .anat tr.sub td{color:var(--ink4);font-size:12px}
+  .anat tr.tot td{border-bottom:0;padding-top:11px}
+  .anat tr.tot td.n{font-family:var(--serif);font-size:20px;color:var(--gold);line-height:1}
+  .anat tr.grp td{color:var(--ink);font-weight:500;background:rgba(242,242,244,.03)}
+
+  .rank{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .row{background:var(--card2);padding:11px 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;
+    align-items:center;cursor:pointer}
+  .row:hover,.row.on{background:var(--card3)}
+  .row .sc{font-family:var(--serif);font-size:19px;color:var(--gold);font-variant-numeric:tabular-nums;
+    line-height:1;min-width:2rem;text-align:right}
+  .row .nm{font-weight:500;color:var(--ink);font-size:14px}
+  .row .mt{grid-column:2;font-size:12px;color:var(--ink3)}
+  .row .mt i{font-style:normal;color:var(--gold2)}
+  .none{color:var(--ink3);font-size:13.5px;padding:14px 0 0;margin:0}
+
+  /* ── 雷達 ── */
+  .radgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:start}
+  @media (max-width:920px){.radgrid{grid-template-columns:1fr}}
+  .rad{width:100%;aspect-ratio:1/1;max-width:32rem;margin:0 auto}
+  .rax{font-size:10.5px;fill:var(--ink3)}
+  .rax.hi{fill:var(--gold);font-weight:500}
+  .rv{font-size:9.5px;fill:var(--ink4);font-variant-numeric:tabular-nums}
+  .hooks{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+    border-radius:4px;overflow:hidden;margin:12px 0 0}
+  .hook{background:var(--card2);padding:11px 14px}
+  .hook .ht{font-weight:500;color:var(--ink);font-size:13.5px}
+  .hook .ha{font-size:12px;color:var(--ink3);margin-top:2px}
+  .bdg{font-size:10px;letter-spacing:.08em;padding:1px 7px;border-radius:3px;margin-left:7px;
+    border:1px solid rgba(12,163,12,.4);background:rgba(12,163,12,.14);color:#57cf57}
+  .bdg.w{border-color:rgba(250,178,25,.36);background:rgba(250,178,25,.13);color:#f5c452}
+  .bdg.n{border-color:rgba(242,242,244,.2);background:rgba(242,242,244,.06);color:var(--ink3)}
+  .anat tr.sig td{border-bottom:0;padding-top:9px;font-size:12px;color:var(--ink3);line-height:1.55}
+  .anat tr.sig b{color:var(--ink2);font-weight:500}
+  .kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px;margin:14px 0 0}
+  .kv dt{color:var(--ink4);font-size:11.5px;letter-spacing:.06em;white-space:nowrap}
+  .kv dd{margin:0;color:var(--ink2)}
+
+  .how{margin:34px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
+  .how p{color:var(--ink3);font-size:13px;margin:0 0 9px;max-width:54em}
+  .how code{font-size:12px;color:var(--ink2);background:rgba(242,242,244,.06);padding:1px 5px;border-radius:3px}
+  .how b{color:var(--ink2);font-weight:500}
+  footer{padding:24px 0 50px;color:var(--ink4);font-size:12px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">兌心科技虛擬 KOL 型錄 ・ 原型 ・ 尚未上線</p>
+  <h1>品牌配對定位</h1>
+  <p class="lede">輸入一個品牌或題目，看 38 位人設落在哪裡；或者挑一位人設，看她在 10 個合作品類上的強項分布。<b>兩張圖的每一個數字都是同一套配對邏輯算出來的</b>，不是手填。</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" id="t-q" aria-controls="p-q" aria-selected="true">品牌配對</button>
+    <button role="tab" id="t-r" aria-controls="p-r" aria-selected="false">單一人設雷達</button>
+  </div>
+</header>
+
+<section role="tabpanel" id="p-q" aria-labelledby="t-q">
+  <h2>品牌配對</h2>
+  <p class="hint">輸入品牌或題目，看 38 位落在哪裡。兩軸都是<b>照輸入的題目算出來的</b>，換題目整張圖重畫。</p>
+  <div class="bar">
+    <input type="text" id="q" placeholder="例如：精品旅宿、登山裝備、AI 工具、韓系保養、遊戲周邊" autocomplete="off">
+    <button class="go" id="go">配對</button>
+  </div>
+  <div class="egs" id="egs"><b>試試</b></div>
+  <div class="two">
+    <div class="panel">
+      <h3>配對定位圖</h3>
+      <p class="ph">橫軸＝她講不講這個題目　縱軸＝她接不接這個品類。右上角是首選。</p>
+      <div class="plot"><svg id="svg" viewBox="0 0 420 360" role="img" aria-labelledby="svgt"></svg></div>
+    </div>
+    <div class="panel">
+      <h3>分數怎麼來的　<span id="anatwho" style="font-family:var(--sans);font-size:13px;color:var(--gold)"></span></h3>
+      <p class="ph">每一列都是可核對的命中項。點下面排行榜或圖上的點可以換人。</p>
+      <table class="anat" id="anat"></table>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:24px">
+    <h3>匹配度排行</h3>
+    <p class="ph">點任一列，上面的拆解表會換成那一位。</p>
+    <div class="rank" id="rank"></div>
+    <p class="none" id="rest"></p>
+  </div>
+</section>
+
+<section role="tabpanel" id="p-r" aria-labelledby="t-r" hidden>
+  <h2>單一人設雷達</h2>
+  <p class="hint">一位人設在 10 個合作品類上的可切入程度。<b>形狀本身就是她的定位</b>——面積大是通吃型，尖角明顯是專精型。</p>
+  <div class="egs"><b>人設</b><select id="who"></select></div>
+  <div class="radgrid">
+    <div class="panel"><svg class="rad" id="rad" viewBox="0 0 400 400" role="img" aria-labelledby="radt"></svg></div>
+    <div>
+      <div class="panel">
+        <h3 id="radname"></h3>
+        <p class="ph" id="radtag"></p>
+        <dl class="kv" id="radkv"></dl>
+      </div>
+      <div class="hooks" id="radhooks"></div>
+    </div>
+  </div>
+</section>
+
+<div class="how">
+  <p><b>雷達的每一軸</b>＝ 26 × 命中的合作方向 ＋ 14 × 命中的題目連結點 ＋ 9 × 命中的內容主題 ＋ 4 × 命中的關鍵詞 ＋ 18（命中領域），上限 100。
+     <b>配對的兩軸</b>：主題契合＝ 26 × 題目連結點 ＋ 9 × 內容主題 ＋ 7 × 關鍵詞 ＋ 6 × 定位或受眾描述；品類契合＝ 30 × 合作方向 ＋ 25（領域）＋ 5 × 關鍵詞。匹配度＝主題 × 0.6 ＋ 品類 × 0.4。</p>
+  <p>權重是我們定的，印在這裡讓它可以被質疑。<b>沒有任何一個數字來自平台成效或第三方流量資料</b>——每一分都對應到一個看得見的命中項，所以「為什麼是她」隨時可以攤開來看。</p>
+  <p>資料來自 <code>topic_affinity.json</code>（18 位有較細的關鍵詞與題目連結點）與型錄本身的欄位（38 位都有）。輸入的字會先過一組同義詞對照（旅宿＝飯店＝酒店＝hotel、保養＝護膚＝skincare⋯）。</p>
+  <p>🛑 <b>分數低不等於做不了。</b>虛擬人設的內容方向可以照客戶需求重新設定，這裡量的是「現在的設定裡有多少現成的切入點」，不是能力上限。雷達上的「—」同理。</p>
+</div>
+<footer>原型，資料為型錄現況（38 位上線人設）。尚未併進公開型錄。</footer>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+const IDX = __INDEX__;
+const COLS = __COLS__;
+const SYN = __SYN__;
+
+/* ── 共用 ── */
+const norm = s => String(s == null ? '' : s).toLowerCase().replace(/\s+/g, '');
+const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const nameOf = o => o.zh || o.name;
+const has = (text, w) => norm(text).includes(norm(w));
+const tip = document.getElementById('tip');
+const showTip = (el, html) => {
+  tip.innerHTML = html;
+  const r = el.getBoundingClientRect();
+  tip.style.opacity = 1;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.min(window.innerWidth - w - 10, Math.max(8, r.left + r.width / 2 - w / 2)) + 'px';
+  tip.style.top = Math.max(8, r.top - h - 8) + 'px';
+};
+const hideTip = () => { tip.style.opacity = 0; };
+
+/* ── 品類分數（雷達的十軸用同一支）── */
+function cell(o, col){
+  const fits = o.fit.filter(f => col.w.some(w => has(f, w)));
+  const pil  = o.pil.filter(x => col.w.some(w => has(x, w)));
+  const kws  = o.kw.filter(k => col.w.some(w => has(k, w)));
+  const hooks= o.hooks.filter(h => col.w.some(w => has(h.t, w) || (h.k || []).some(x => has(x, w))));
+  const catH = col.w.some(w => has(o.cat, w));
+  return { v: Math.min(100, 26 * fits.length + 14 * hooks.length + 9 * pil.length + 4 * kws.length + (catH ? 18 : 0)),
+           fits, pil, hooks, kws };
+}
+const M = IDX.map(o => ({ o, cells: COLS.map(c => cell(o, c)),
+  get tot(){ return this.cells.reduce((a, c) => a + c.v, 0); } }));
+
+/* ── 配對 ── */
+// 分兩層強度。
+// 🛑 為什麼要分:中文用二字組比對會過度命中——「行車紀錄器」的二字組「紀錄」
+//    會打中「紀錄片推薦」,結果查行車紀錄器時,拍紀錄片的人排在改裝店企劃前面。
+//    三字以上的重疊才算 strong,只靠二字組命中的算 weak,只給一半分。
+function toks(q){
+  const s = norm(q), strong = new Set(), weak = new Set(), short = new Set();
+  (s.match(/[a-z0-9]{2,}/g) || []).forEach(w => (w.length <= 3 ? short : strong).add(w));
+  const cjk = s.replace(/[^一-鿿]/g, '');
+  for (let i = 0; i < cjk.length - 1; i++) weak.add(cjk.slice(i, i + 2));
+  for (let n = 3; n <= cjk.length; n++)
+    for (let i = 0; i + n <= cjk.length; i++) strong.add(cjk.slice(i, i + n));
+  const all = [...strong, ...weak, ...short];
+  for (const row of SYN) if (row.some(w => all.includes(norm(w))))
+    row.forEach(w => { const n = norm(w);
+      if (n.length <= 3 && /^[a-z0-9]+$/.test(n)) short.add(n);
+      else if (n.replace(/[^一-鿿]/g, '').length === 2 && !/[a-z0-9]/.test(n)) weak.add(n);
+      else strong.add(n); });
+  return { strong: [...strong], weak: [...weak], short: [...short] };
+}
+// 回傳 0＝沒命中、1＝只靠二字組（半分）、2＝三字以上或整詞（全分）
+function thit(T, text){
+  const n = norm(text);
+  if (T.strong.some(t => n.includes(t))) return 2;
+  if (T.short.some(t => new RegExp('(^|[^a-z0-9])' + t + '([^a-z0-9]|$)').test(n))) return 2;
+  return T.weak.some(t => n.includes(t)) ? 1 : 0;
+}
+const wsum = (arr, T) => arr.reduce((a, x) => a + thit(T, x) / 2, 0);
+function match(q){
+  const T = toks(q);
+  if (!T.strong.length && !T.weak.length && !T.short.length) return [];
+  const out = [];
+  for (const o of IDX) {
+    if (o.block.some(b => thit(T, b) === 2)) continue;   // 紅線只認強命中,免得二字組誤擋         // 紅線:靜靜排除
+    const hooks = o.hooks.filter(h => thit(T, h.t) || (h.k || []).some(k => thit(T, k)));
+    const kws = o.kw.filter(k => thit(T, k));
+    const pil = o.pil.filter(x => thit(T, x));
+    const fits = o.fit.filter(f => thit(T, f));
+    const soft = [o.tag, o.aud, o.mood].filter(s => thit(T, s));
+    const catH = thit(T, o.cat) === 2;
+    // 每一項按命中強度加權（弱命中算半個）
+    const wh = wsum(hooks.map(h => h.t), T) + 0, wk = wsum(o.kw.filter(k => thit(T, k)), T),
+          wp = wsum(pil, T), wf = wsum(fits, T), ws = wsum(soft, T);
+    const topic = Math.min(100, Math.round(26 * wh + 9 * wp + 7 * wk + 6 * ws));
+    const cate = Math.min(100, Math.round(30 * wf + (catH ? 25 : 0) + 5 * wk));
+    if (!topic && !cate) continue;
+    // 訊號強弱＝庫裡有幾處資料對得上這個查詢字,跟「合不合」是兩件事。
+    // 冷門的單一詞（烤箱、護士鞋）本來就只命中一兩處,分數天生低;
+    // 不標出來,客戶會把「資料少」讀成「人設不合」。
+    const hstr = h => Math.max(thit(T, h.t), ...(h.k || []).map(k => thit(T, k)), 0);
+    let full = catH ? 1 : 0, half = 0;
+    for (const v of [...hooks.map(hstr), ...[...kws, ...pil, ...fits, ...soft].map(x => thit(T, x))])
+      v === 2 ? full++ : half++;
+    const nHit = full + half, ev = full + half * .5;
+    out.push({ o, topic, cate, hooks, kws, pil, fits, soft, catH, nHit,
+               sig: ev >= 4 ? 2 : ev >= 2 ? 1 : 0,
+               total: Math.round(topic * .6 + cate * .4) });
+  }
+  out.sort((a, b) => b.total - a.total);
+  const best = out.length ? out[0].total : 0;
+  out.forEach(r => { r.best = r.total === best; });   // 並列同分都算全庫最高
+  return out;
+}
+const SIG = ['弱', '中', '強'];
+const SIGB = ['<span class="bdg n">訊號弱</span>', '', ''];
+const SIGN = ['這個查詢字冷門，能佐證的資料少，分數天生偏低——低分不等於配不上。',
+              '有幾處對得上，但還沒到滿載。', ''];
+
+const svg = document.getElementById('svg');
+const PAD = { l: 44, r: 14, t: 12, b: 40 }, W = 420, H = 360;
+const px = v => PAD.l + (v / 100) * (W - PAD.l - PAD.r);
+const py = v => H - PAD.b - (v / 100) * (H - PAD.t - PAD.b);
+let RES = [];
+
+function drawPlot(res){
+  const g = [`<title id="svgt">配對定位圖：橫軸主題契合 0 到 100，縱軸品類契合 0 到 100</title>`];
+  g.push(`<rect x="${px(50)}" y="${py(100)}" width="${px(100)-px(50)}" height="${py(50)-py(100)}" fill="#e7cd74" fill-opacity=".05"></rect>`);
+  for (const v of [0, 50, 100]) {
+    g.push(`<line x1="${px(v)}" y1="${py(0)}" x2="${px(v)}" y2="${py(100)}" stroke="rgba(242,242,244,${v===50?'.16':'.09'})"></line>`);
+    g.push(`<line x1="${px(0)}" y1="${py(v)}" x2="${px(100)}" y2="${py(v)}" stroke="rgba(242,242,244,${v===50?'.16':'.09'})"></line>`);
+    g.push(`<text class="tick" x="${px(v)}" y="${py(0)+14}" text-anchor="middle">${v}</text>`);
+    g.push(`<text class="tick" x="${px(0)-7}" y="${py(v)+3.5}" text-anchor="end">${v}</text>`);
+  }
+  g.push(`<text class="qlab" x="${px(100)-4}" y="${py(100)+12}" text-anchor="end">首選</text>`);
+  g.push(`<text class="qlab" x="${px(100)-4}" y="${py(0)-7}" text-anchor="end">會講這題，品類要溝通</text>`);
+  g.push(`<text class="qlab" x="${px(0)+5}" y="${py(100)+12}">接這品類，建議換題目</text>`);
+  g.push(`<text class="axlab" x="${(px(0)+px(100))/2}" y="${H-7}" text-anchor="middle">主題契合</text>`);
+  g.push(`<text class="axlab" transform="translate(12,${(py(0)+py(100))/2}) rotate(-90)" text-anchor="middle">品類契合</text>`);
+  const top = res.slice(0, 4).map(r => r.o.id);
+  const groups = new Map();
+  for (const r of res) { const k = r.topic + '|' + r.cate;
+    if (!groups.has(k)) groups.set(k, []); groups.get(k).push(r); }
+  [...groups.values()].reverse().forEach(grp => {
+    const r = grp[0], on = grp.some(x => top.includes(x.o.id));
+    g.push(`<circle class="dot" data-key="${r.topic}|${r.cate}" cx="${px(r.topic)}" cy="${py(r.cate)}"
+      r="${on ? 7 : (grp.length > 1 ? 6.5 : 5)}" fill="${on ? 'var(--gold2)' : 'var(--dotq)'}"
+      stroke="var(--card)" stroke-width="2"></circle>`);
+    if (grp.length > 1 && !on) g.push(`<text class="tick" x="${px(r.topic)}" y="${py(r.cate)+3}"
+      text-anchor="middle" fill="var(--ink2)" style="font-size:9px">${grp.length}</text>`);
+  });
+  res.slice(0, 4).forEach((r, i) => {
+    const x = px(r.topic), y = py(r.cate), flip = x > W - 100;
+    g.push(`<text class="dlab" x="${flip ? x - 11 : x + 11}" y="${y + (i % 2 ? 13 : 4)}"
+      text-anchor="${flip ? 'end' : 'start'}">${esc(nameOf(r.o))}</text>`);
+  });
+  svg.innerHTML = g.join('');
+  svg.querySelectorAll('.dot').forEach(c => {
+    c.addEventListener('pointerenter', () => {
+      const grp = groups.get(c.dataset.key) || [], r = grp[0];
+      showTip(c, `<b>${grp.slice(0, 4).map(x => esc(nameOf(x.o))).join('、')}`
+        + `${grp.length > 4 ? ' 等 ' + grp.length + ' 位' : ''}</b>`
+        + `<span>主題 ${r.topic}　品類 ${r.cate}　匹配度 ${r.total}</span>`);
+    });
+    c.addEventListener('pointerleave', hideTip);
+    c.addEventListener('click', () => { const grp = groups.get(c.dataset.key); if (grp) drawAnat(grp[0]); });
+  });
+}
+
+function drawAnat(r){
+  document.getElementById('anatwho').textContent = nameOf(r.o);
+  const L = [], row = (a, b, c, cls) => L.push(`<tr class="${cls || ''}"><td>${a}</td><td class="n">${b}</td><td class="n">${c}</td></tr>`);
+  L.push('<tr><th>命中項</th><th style="text-align:right">數量</th><th style="text-align:right">小計</th></tr>');
+  row('<b style="color:var(--ink)">主題契合</b>', '', r.topic, 'grp');
+  row('題目連結點　× 26', r.hooks.length, 26 * r.hooks.length, 'sub');
+  row('內容主題　　× 9', r.pil.length, 9 * r.pil.length, 'sub');
+  row('主題關鍵詞　× 7', r.kws.length, 7 * r.kws.length, 'sub');
+  row('定位／受眾　× 6', r.soft.length, 6 * r.soft.length, 'sub');
+  row('<b style="color:var(--ink)">品類契合</b>', '', r.cate, 'grp');
+  row('合作方向　　× 30', r.fits.length, 30 * r.fits.length, 'sub');
+  row('領域相符　　＋25', r.catH ? 1 : 0, r.catH ? 25 : 0, 'sub');
+  row('關鍵詞　　　× 5', r.kws.length, 5 * r.kws.length, 'sub');
+  row('<b style="color:var(--ink)">匹配度</b>　主題 ' + r.topic + ' × 0.6 ＋ 品類 ' + r.cate + ' × 0.4', '', r.total, 'tot');
+  L.push(`<tr class="sig"><td colspan="3"><b>訊號 ${SIG[r.sig]}</b>　庫裡有 ${r.nHit} 處資料對得上。${SIGN[r.sig]}${r.best && r.sig < 2 ? '這已經是全庫最高分。' : ''}</td></tr>`);
+  const words = [...new Set([...r.fits, ...r.pil, ...r.kws])].slice(0, 6);
+  if (words.length) L.push(`<tr><td colspan="3" style="color:var(--ink3);font-size:12px;border-bottom:0;padding-top:2px">
+    命中的詞：${words.map(w => `<i style="font-style:normal;color:var(--gold2)">${esc(w)}</i>`).join('、')}</td></tr>`);
+  if (r.hooks[0]) L.push(`<tr><td colspan="3" style="border-bottom:0;padding-top:8px">
+    <div style="border-left:2px solid var(--goldd);padding-left:10px;font-size:12.5px;color:var(--ink2)">
+    ${esc(r.hooks[0].t)}${r.hooks[0].ev ? '<span class="bdg">常青</span>' : '<span class="bdg w">需搭時事</span>'}
+    <div style="color:var(--ink3);margin-top:2px">${esc(r.hooks[0].a)}</div></div></td></tr>`);
+  document.getElementById('anat').innerHTML = L.join('');
+  document.querySelectorAll('.row').forEach(x => x.classList.toggle('on', x.dataset.id === r.o.id));
+}
+
+function renderQ(q){
+  RES = match(q);
+  const rank = document.getElementById('rank');
+  if (!RES.length) {
+    svg.innerHTML = ''; rank.innerHTML = ''; document.getElementById('anat').innerHTML = '';
+    document.getElementById('anatwho').textContent = '';
+    document.getElementById('rest').textContent = `沒有人設命中「${q}」——換一個更常見的品類詞試試。`;
+    return;
+  }
+  drawPlot(RES); drawAnat(RES[0]);
+  rank.innerHTML = RES.slice(0, 8).map(r => {
+    const words = [...new Set([...r.fits, ...r.pil, ...r.kws])].slice(0, 4);
+    return `<div class="row" data-id="${r.o.id}"><span class="sc">${r.total}</span>
+      <span class="nm">${esc(nameOf(r.o))}${r.best ? '<span class="bdg">全庫最高</span>' : ''}${SIGB[r.sig]}</span>
+      ${words.length ? `<span class="mt">${words.map(w => `<i>${esc(w)}</i>`).join('、')}</span>` : ''}</div>`;
+  }).join('');
+  rank.querySelectorAll('.row').forEach(el => el.addEventListener('click', () => {
+    const r = RES.find(x => x.o.id === el.dataset.id); if (r) drawAnat(r); }));
+  document.getElementById('rest').textContent = RES.length > 8
+    ? `另外 ${RES.length - 8} 位也有命中，在圖上是灰色的點。` : '';
+}
+
+/* ── 雷達 ── */
+const rad = document.getElementById('rad');
+function drawRad(id){
+  const r = M.find(x => x.o.id === id);
+  const cx = 200, cy = 205, R = 132, n = COLS.length;
+  const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n;
+    return [cx + Math.cos(a) * R * v / 100, cy + Math.sin(a) * R * v / 100]; };
+  const g = [`<title id="radt">${esc(nameOf(r.o))} 在 10 個品類上的可切入程度</title>`];
+  for (const ring of [25, 50, 75, 100]) {
+    const p = COLS.map((_, i) => pt(i, ring).join(',')).join(' ');
+    g.push(`<polygon points="${p}" fill="none" stroke="rgba(242,242,244,${ring === 100 ? '.18' : '.08'})"></polygon>`);
+  }
+  COLS.forEach((_, i) => { const [x, y] = pt(i, 100);
+    g.push(`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(242,242,244,.07)"></line>`); });
+  const poly = r.cells.map((c, i) => pt(i, c.v).join(',')).join(' ');
+  g.push(`<polygon points="${poly}" fill="var(--gold2)" fill-opacity=".22" stroke="var(--gold2)" stroke-width="2"></polygon>`);
+  const max = Math.max(...r.cells.map(c => c.v));
+  r.cells.forEach((c, i) => { if (!c.v) return; const [x, y] = pt(i, c.v);
+    g.push(`<circle cx="${x}" cy="${y}" r="${c.v === max ? 4.5 : 3}" fill="var(--gold)" stroke="var(--card)" stroke-width="1.5"></circle>`); });
+  COLS.forEach((col, i) => {
+    const [x, y] = pt(i, 118), v = r.cells[i].v;
+    const anch = Math.abs(x - cx) < 12 ? 'middle' : (x > cx ? 'start' : 'end');
+    g.push(`<text class="rax${v === max && v ? ' hi' : ''}" x="${x}" y="${y}" text-anchor="${anch}">${esc(col.k)}</text>`);
+    g.push(`<text class="rv" x="${x}" y="${y + 12}" text-anchor="${anch}">${v || '—'}</text>`);
+  });
+  rad.innerHTML = g.join('');
+  document.getElementById('radname').textContent = nameOf(r.o) + '　' + r.o.name;
+  document.getElementById('radtag').textContent = r.o.tag || '';
+  const strong = r.cells.map((c, i) => [COLS[i].k, c.v]).filter(x => x[1] >= 40).sort((a, b) => b[1] - a[1]);
+  const shape = strong.length >= 5 ? '通吃型（五個以上品類都有現成切入點）'
+    : strong.length >= 3 ? '多面型' : strong.length ? '專精型' : '待補切入點';
+  document.getElementById('radkv').innerHTML =
+    `<dt>形狀</dt><dd>${shape}</dd>`
+    + `<dt>最強品類</dt><dd>${strong.length ? strong.slice(0, 3).map(x => esc(x[0]) + ' ' + x[1]).join('　') : '—'}</dd>`
+    + `<dt>合計</dt><dd>${r.tot}（38 位裡第 ${M.slice().sort((a, b) => b.tot - a.tot).findIndex(x => x.o.id === id) + 1} 名）</dd>`
+    + `<dt>資料細度</dt><dd>${r.o.rich ? '有題目連結點與細關鍵詞' : '只有型錄欄位（關鍵詞較少，分數會偏保守）'}</dd>`;
+  document.getElementById('radhooks').innerHTML = r.o.hooks.length
+    ? r.o.hooks.map(h => `<div class="hook"><div class="ht">${esc(h.t)}
+        ${h.ev ? '<span class="bdg">常青</span>' : '<span class="bdg w">需搭時事</span>'}</div>
+        <div class="ha">${esc(h.a)}</div></div>`).join('')
+    : `<div class="hook"><div class="ha">這位人設還沒有寫題目連結點——雷達的分數只用型錄本來的欄位算。</div></div>`;
+}
+
+/* ── 啟動 ── */
+const EG = ['精品旅宿','登山裝備','AI 工具','韓系保養','遊戲周邊','旗袍訂製','烘焙器材','高爾夫球具','咖啡豆','機能服飾'];
+const egs = document.getElementById('egs');
+EG.forEach(e => { const b = document.createElement('button'); b.textContent = e;
+  b.addEventListener('click', () => { document.getElementById('q').value = e; renderQ(e); }); egs.appendChild(b); });
+document.getElementById('go').addEventListener('click', () => renderQ(document.getElementById('q').value));
+document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') renderQ(e.target.value); });
+
+const who = document.getElementById('who');
+M.slice().sort((a, b) => b.tot - a.tot).forEach(r => {
+  const o = document.createElement('option'); o.value = r.o.id; o.textContent = nameOf(r.o); who.appendChild(o); });
+who.addEventListener('change', () => drawRad(who.value));
+
+document.querySelectorAll('[role=tab]').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('[role=tab]').forEach(x => {
+    const on = x === t; x.setAttribute('aria-selected', String(on));
+    document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  hideTip();
+}));
+
+document.getElementById('q').value = '精品旅宿';
+renderQ('精品旅宿');
+drawRad(M.slice().sort((a, b) => b.tot - a.tot)[0].o.id);
+</script>

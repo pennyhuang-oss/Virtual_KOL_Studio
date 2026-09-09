@@ -47,5 +47,9 @@ console.log(`  只有型錄欄位的 ${thin.length} 位平均 ${(thin.reduce((a,
 console.log(`題目連結點 ${out.reduce((a, o) => a + o.hooks.length, 0)} 個｜block 紅線詞 ${out.reduce((a, o) => a + o.block.length, 0)} 個`);
 console.log('--- 只有型錄欄位那批的關鍵詞長什麼樣（angel-chiu）---');
 console.log(out.find(o => o.id === 'angel-chiu').kw.join('、'));
-fs.writeFileSync('/tmp/claude-0/-home-user/8adf1a71-b0cf-561a-9e5c-a38024791086/scratchpad/index.json', JSON.stringify(out));
-console.log('索引大小', (fs.statSync('/tmp/claude-0/-home-user/8adf1a71-b0cf-561a-9e5c-a38024791086/scratchpad/index.json').size / 1024).toFixed(0), 'KB');
+// 索引是衍生檔,不進 git（跑一次就重建）。MATCH_OUT 可指到別處。
+const OUT = process.env.MATCH_OUT || '/home/user/Virtual_KOL_Studio/catalog/build';
+fs.mkdirSync(OUT, { recursive: true });
+const f = OUT + '/match_index.json';
+fs.writeFileSync(f, JSON.stringify(out));
+console.log('索引', f, (fs.statSync(f).size / 1024).toFixed(0), 'KB');

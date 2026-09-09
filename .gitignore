@@ -9,3 +9,6 @@ __pycache__/
 # 「可重產」要看在哪裡重產。多出來的量很小（縮圖約 3.7 MB、poster 約 1.4 MB）。
 node_modules/
 package-lock.json
+
+# 配對器原型的衍生檔（跑 build_match_index.mjs / build_matcher.mjs 就重建）
+catalog/build/
