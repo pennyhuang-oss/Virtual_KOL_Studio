@@ -184,13 +184,15 @@
     "device": "friend_rear",
     "framing": "full_length",
     "zone": "上班正式",
-    "outfit": "a fitted black dress with a high neckline and low heels",
+    "outfit": "a camel knit and dark straight trousers",
     "hair": "in a smooth low chignon",
     "scene": "a narrow lift lobby of an office building, brushed metal doors and a directory panel on the wall",
     "action": "She is standing waiting with her weight on one leg, checking her phone in her free hand, not looking up.",
-    "micro": "a slim structured handbag, a paper shop bag in the other hand",
+    "micro": "the same leather tote on the other shoulder, a paper shop bag in her free hand",
     "people": "solo_interior",
-    "hair_style": "in a smooth low chignon"
+    "hair_style": "in a smooth low chignon",
+    "continuity_from": 2,
+    "continuity_evolution": "the knit sleeves now pushed up to the forearm and creased at the elbow, the tote strap moved to the other shoulder, the newspaper refolded the other way"
    },
    {
     "tier": "B",

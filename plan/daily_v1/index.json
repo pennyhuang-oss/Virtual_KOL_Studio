@@ -7,7 +7,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L1",
-  "words": 318
+  "words": 322
  },
  {
   "persona": "angel-chiu",
@@ -17,7 +17,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L9",
-  "words": 337
+  "words": 340
  },
  {
   "persona": "angel-chiu",
@@ -27,7 +27,7 @@
   "framing": "full_length",
   "zone": "街頭運動",
   "light": "L7",
-  "words": 300
+  "words": 327
  },
  {
   "persona": "angel-chiu",
@@ -37,7 +37,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L3",
-  "words": 294
+  "words": 297
  },
  {
   "persona": "angel-chiu",
@@ -47,7 +47,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L12",
-  "words": 301
+  "words": 328
  },
  {
   "persona": "angeline-kwee",
@@ -57,7 +57,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 291
+  "words": 295
  },
  {
   "persona": "angeline-kwee",
@@ -67,7 +67,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L9",
-  "words": 335
+  "words": 338
  },
  {
   "persona": "angeline-kwee",
@@ -77,7 +77,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L2",
-  "words": 302
+  "words": 305
  },
  {
   "persona": "angeline-kwee",
@@ -87,7 +87,7 @@
   "framing": "mid_environment",
   "zone": "學院甜美",
   "light": "L8",
-  "words": 301
+  "words": 329
  },
  {
   "persona": "angeline-kwee",
@@ -97,7 +97,7 @@
   "framing": "full_length",
   "zone": "度假",
   "light": "L13",
-  "words": 302
+  "words": 329
  },
  {
   "persona": "cheryl-soh",
@@ -107,7 +107,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L1",
-  "words": 282
+  "words": 310
  },
  {
   "persona": "cheryl-soh",
@@ -117,7 +117,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L6",
-  "words": 323
+  "words": 326
  },
  {
   "persona": "cheryl-soh",
@@ -127,7 +127,7 @@
   "framing": "full_length",
   "zone": "街頭運動",
   "light": "L8",
-  "words": 292
+  "words": 319
  },
  {
   "persona": "cheryl-soh",
@@ -137,7 +137,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L2",
-  "words": 295
+  "words": 298
  },
  {
   "persona": "cheryl-soh",
@@ -147,7 +147,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L3",
-  "words": 280
+  "words": 283
  },
  {
   "persona": "emma-kao",
@@ -157,7 +157,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L9",
-  "words": 286
+  "words": 314
  },
  {
   "persona": "emma-kao",
@@ -167,7 +167,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L14",
-  "words": 329
+  "words": 332
  },
  {
   "persona": "emma-kao",
@@ -177,7 +177,7 @@
   "framing": "full_length",
   "zone": "上班正式",
   "light": "L6",
-  "words": 289
+  "words": 292
  },
  {
   "persona": "emma-kao",
@@ -187,7 +187,7 @@
   "framing": "mid_environment",
   "zone": "極休閒",
   "light": "L2",
-  "words": 286
+  "words": 289
  },
  {
   "persona": "emma-kao",
@@ -197,7 +197,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L11",
-  "words": 297
+  "words": 324
  },
  {
   "persona": "jia-seo",
@@ -207,7 +207,7 @@
   "framing": "chest_up",
   "zone": "街頭運動",
   "light": "L6",
-  "words": 302
+  "words": 306
  },
  {
   "persona": "jia-seo",
@@ -217,7 +217,7 @@
   "framing": "full_length",
   "zone": "極休閒",
   "light": "L1",
-  "words": 362
+  "words": 365
  },
  {
   "persona": "jia-seo",
@@ -227,7 +227,7 @@
   "framing": "full_length",
   "zone": "街頭",
   "light": "L4",
-  "words": 293
+  "words": 320
  },
  {
   "persona": "jia-seo",
@@ -237,7 +237,7 @@
   "framing": "mid_environment",
   "zone": "日常有型",
   "light": "L2",
-  "words": 291
+  "words": 294
  },
  {
   "persona": "jia-seo",
@@ -247,7 +247,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L13",
-  "words": 298
+  "words": 325
  },
  {
   "persona": "kanon-komori",
@@ -257,7 +257,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L2",
-  "words": 300
+  "words": 304
  },
  {
   "persona": "kanon-komori",
@@ -267,7 +267,7 @@
   "framing": "full_length",
   "zone": "日常有型",
   "light": "L1",
-  "words": 367
+  "words": 370
  },
  {
   "persona": "kanon-komori",
@@ -277,7 +277,7 @@
   "framing": "full_length",
   "zone": "學院甜美",
   "light": "L6",
-  "words": 309
+  "words": 336
  },
  {
   "persona": "kanon-komori",
@@ -287,7 +287,7 @@
   "framing": "mid_environment",
   "zone": "極休閒",
   "light": "L3",
-  "words": 292
+  "words": 295
  },
  {
   "persona": "kanon-komori",
@@ -297,7 +297,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L12",
-  "words": 302
+  "words": 329
  },
  {
   "persona": "miu-shiraishi",
@@ -307,7 +307,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 289
+  "words": 293
  },
  {
   "persona": "miu-shiraishi",
@@ -317,7 +317,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L5",
-  "words": 333
+  "words": 360
  },
  {
   "persona": "miu-shiraishi",
@@ -327,7 +327,7 @@
   "framing": "full_length",
   "zone": "街頭",
   "light": "L4",
-  "words": 283
+  "words": 310
  },
  {
   "persona": "miu-shiraishi",
@@ -337,7 +337,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L2",
-  "words": 291
+  "words": 294
  },
  {
   "persona": "miu-shiraishi",
@@ -347,7 +347,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L4",
-  "words": 277
+  "words": 304
  },
  {
   "persona": "nanami-fujiwara",
@@ -357,7 +357,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L1",
-  "words": 275
+  "words": 279
  },
  {
   "persona": "nanami-fujiwara",
@@ -367,7 +367,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L4",
-  "words": 312
+  "words": 339
  },
  {
   "persona": "nanami-fujiwara",
@@ -377,7 +377,7 @@
   "framing": "full_length",
   "zone": "上班正式",
   "light": "L2",
-  "words": 283
+  "words": 286
  },
  {
   "persona": "nanami-fujiwara",
@@ -387,7 +387,7 @@
   "framing": "mid_environment",
   "zone": "極休閒",
   "light": "L3",
-  "words": 271
+  "words": 274
  },
  {
   "persona": "nanami-fujiwara",
@@ -397,7 +397,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L4",
-  "words": 272
+  "words": 299
  },
  {
   "persona": "nico-tsai",
@@ -407,7 +407,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L3",
-  "words": 306
+  "words": 310
  },
  {
   "persona": "nico-tsai",
@@ -417,7 +417,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L14",
-  "words": 331
+  "words": 334
  },
  {
   "persona": "nico-tsai",
@@ -427,7 +427,7 @@
   "framing": "full_length",
   "zone": "日常有型",
   "light": "L8",
-  "words": 305
+  "words": 332
  },
  {
   "persona": "nico-tsai",
@@ -437,7 +437,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L9",
-  "words": 307
+  "words": 310
  },
  {
   "persona": "nico-tsai",
@@ -447,7 +447,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L4",
-  "words": 293
+  "words": 320
  },
  {
   "persona": "peggy-lee",
@@ -457,7 +457,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 285
+  "words": 289
  },
  {
   "persona": "peggy-lee",
@@ -467,7 +467,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L13",
-  "words": 342
+  "words": 369
  },
  {
   "persona": "peggy-lee",
@@ -477,7 +477,7 @@
   "framing": "full_length",
   "zone": "街頭",
   "light": "L1",
-  "words": 285
+  "words": 288
  },
  {
   "persona": "peggy-lee",
@@ -487,7 +487,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L2",
-  "words": 286
+  "words": 289
  },
  {
   "persona": "peggy-lee",
@@ -497,7 +497,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L3",
-  "words": 293
+  "words": 296
  },
  {
   "persona": "rin-ayase",
@@ -507,7 +507,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L14",
-  "words": 269
+  "words": 273
  },
  {
   "persona": "rin-ayase",
@@ -517,7 +517,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L1",
-  "words": 322
+  "words": 349
  },
  {
   "persona": "rin-ayase",
@@ -527,7 +527,7 @@
   "framing": "full_length",
   "zone": "上班正式",
   "light": "L6",
-  "words": 283
+  "words": 337
  },
  {
   "persona": "rin-ayase",
@@ -537,7 +537,7 @@
   "framing": "mid_environment",
   "zone": "編輯概念",
   "light": "L3",
-  "words": 281
+  "words": 317
  },
  {
   "persona": "rin-ayase",
@@ -547,7 +547,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L5",
-  "words": 289
+  "words": 316
  },
  {
   "persona": "ruoruo-tang",
@@ -557,7 +557,7 @@
   "framing": "chest_up",
   "zone": "街頭運動",
   "light": "L2",
-  "words": 285
+  "words": 289
  },
  {
   "persona": "ruoruo-tang",
@@ -567,7 +567,7 @@
   "framing": "full_length",
   "zone": "極休閒",
   "light": "L1",
-  "words": 347
+  "words": 350
  },
  {
   "persona": "ruoruo-tang",
@@ -577,7 +577,7 @@
   "framing": "full_length",
   "zone": "日常有型",
   "light": "L8",
-  "words": 284
+  "words": 311
  },
  {
   "persona": "ruoruo-tang",
@@ -587,7 +587,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L2",
-  "words": 275
+  "words": 278
  },
  {
   "persona": "ruoruo-tang",
@@ -597,7 +597,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L4",
-  "words": 277
+  "words": 304
  },
  {
   "persona": "somi-oh",
@@ -607,7 +607,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 290
+  "words": 318
  },
  {
   "persona": "somi-oh",
@@ -617,7 +617,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L8",
-  "words": 331
+  "words": 358
  },
  {
   "persona": "somi-oh",
@@ -627,7 +627,7 @@
   "framing": "full_length",
   "zone": "街頭",
   "light": "L1",
-  "words": 292
+  "words": 319
  },
  {
   "persona": "somi-oh",
@@ -637,7 +637,7 @@
   "framing": "mid_environment",
   "zone": "極休閒",
   "light": "L10",
-  "words": 281
+  "words": 284
  },
  {
   "persona": "somi-oh",
@@ -647,7 +647,7 @@
   "framing": "full_length",
   "zone": "度假",
   "light": "L13",
-  "words": 280
+  "words": 307
  },
  {
   "persona": "sydney-leong",
@@ -657,7 +657,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 287
+  "words": 291
  },
  {
   "persona": "sydney-leong",
@@ -667,7 +667,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L9",
-  "words": 336
+  "words": 363
  },
  {
   "persona": "sydney-leong",
@@ -677,7 +677,7 @@
   "framing": "full_length",
   "zone": "學院甜美",
   "light": "L8",
-  "words": 294
+  "words": 321
  },
  {
   "persona": "sydney-leong",
@@ -687,7 +687,7 @@
   "framing": "mid_environment",
   "zone": "街頭運動",
   "light": "L2",
-  "words": 284
+  "words": 287
  },
  {
   "persona": "sydney-leong",
@@ -697,7 +697,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L11",
-  "words": 293
+  "words": 320
  },
  {
   "persona": "tammy-chou",
@@ -707,7 +707,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 289
+  "words": 293
  },
  {
   "persona": "tammy-chou",
@@ -717,7 +717,7 @@
   "framing": "full_length",
   "zone": "日常有型",
   "light": "L1",
-  "words": 362
+  "words": 365
  },
  {
   "persona": "tammy-chou",
@@ -727,7 +727,7 @@
   "framing": "full_length",
   "zone": "街頭",
   "light": "L5",
-  "words": 293
+  "words": 320
  },
  {
   "persona": "tammy-chou",
@@ -737,7 +737,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L9",
-  "words": 291
+  "words": 294
  },
  {
   "persona": "tammy-chou",
@@ -747,7 +747,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L12",
-  "words": 285
+  "words": 312
  },
  {
   "persona": "wanyin-jiang",
@@ -757,7 +757,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L2",
-  "words": 275
+  "words": 279
  },
  {
   "persona": "wanyin-jiang",
@@ -767,7 +767,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L4",
-  "words": 321
+  "words": 348
  },
  {
   "persona": "wanyin-jiang",
@@ -777,7 +777,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L7",
-  "words": 277
+  "words": 280
  },
  {
   "persona": "wanyin-jiang",
@@ -787,7 +787,7 @@
   "framing": "mid_environment",
   "zone": "上班正式",
   "light": "L2",
-  "words": 286
+  "words": 289
  },
  {
   "persona": "wanyin-jiang",
@@ -797,7 +797,7 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L8",
-  "words": 279
+  "words": 306
  },
  {
   "persona": "wendy-yeo",
@@ -807,7 +807,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L6",
-  "words": 274
+  "words": 278
  },
  {
   "persona": "wendy-yeo",
@@ -817,7 +817,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L9",
-  "words": 323
+  "words": 326
  },
  {
   "persona": "wendy-yeo",
@@ -827,110 +827,10 @@
   "framing": "full_length",
   "zone": "上班正式",
   "light": "L3",
-  "words": 279
+  "words": 282
  },
  {
   "persona": "wendy-yeo",
-  "n": 4,
-  "tier": "B",
-  "device": "propped_timer",
-  "framing": "mid_environment",
-  "zone": "極休閒",
-  "light": "L3",
-  "words": 277
- },
- {
-  "persona": "wendy-yeo",
-  "n": 5,
-  "tier": "A",
-  "device": "friend_rear",
-  "framing": "full_length",
-  "zone": "派對夜間",
-  "light": "L5",
-  "words": 284
- },
- {
-  "persona": "yerin-han",
-  "n": 1,
-  "tier": "C",
-  "device": "front_selfie",
-  "framing": "chest_up",
-  "zone": "街頭運動",
-  "light": "L6",
-  "words": 284
- },
- {
-  "persona": "yerin-han",
-  "n": 2,
-  "tier": "C",
-  "device": "found_mirror",
-  "framing": "full_length",
-  "zone": "極休閒",
-  "light": "L1",
-  "words": 351
- },
- {
-  "persona": "yerin-han",
-  "n": 3,
-  "tier": "B",
-  "device": "friend_rear",
-  "framing": "full_length",
-  "zone": "上班正式",
-  "light": "L6",
-  "words": 285
- },
- {
-  "persona": "yerin-han",
-  "n": 4,
-  "tier": "B",
-  "device": "propped_timer",
-  "framing": "mid_environment",
-  "zone": "日常有型",
-  "light": "L2",
-  "words": 296
- },
- {
-  "persona": "yerin-han",
-  "n": 5,
-  "tier": "A",
-  "device": "friend_rear",
-  "framing": "full_length",
-  "zone": "度假",
-  "light": "L13",
-  "words": 289
- },
- {
-  "persona": "zhiyi-shen",
-  "n": 1,
-  "tier": "C",
-  "device": "front_selfie",
-  "framing": "chest_up",
-  "zone": "極休閒",
-  "light": "L6",
-  "words": 288
- },
- {
-  "persona": "zhiyi-shen",
-  "n": 2,
-  "tier": "C",
-  "device": "found_mirror",
-  "framing": "waist_up",
-  "zone": "日常有型",
-  "light": "L1",
-  "words": 316
- },
- {
-  "persona": "zhiyi-shen",
-  "n": 3,
-  "tier": "B",
-  "device": "friend_rear",
-  "framing": "full_length",
-  "zone": "上班正式",
-  "light": "L13",
-  "words": 288
- },
- {
-  "persona": "zhiyi-shen",
   "n": 4,
   "tier": "B",
   "device": "propped_timer",
@@ -940,6 +840,106 @@
   "words": 280
  },
  {
+  "persona": "wendy-yeo",
+  "n": 5,
+  "tier": "A",
+  "device": "friend_rear",
+  "framing": "full_length",
+  "zone": "派對夜間",
+  "light": "L5",
+  "words": 311
+ },
+ {
+  "persona": "yerin-han",
+  "n": 1,
+  "tier": "C",
+  "device": "front_selfie",
+  "framing": "chest_up",
+  "zone": "街頭運動",
+  "light": "L6",
+  "words": 288
+ },
+ {
+  "persona": "yerin-han",
+  "n": 2,
+  "tier": "C",
+  "device": "found_mirror",
+  "framing": "full_length",
+  "zone": "極休閒",
+  "light": "L1",
+  "words": 354
+ },
+ {
+  "persona": "yerin-han",
+  "n": 3,
+  "tier": "B",
+  "device": "friend_rear",
+  "framing": "full_length",
+  "zone": "上班正式",
+  "light": "L6",
+  "words": 288
+ },
+ {
+  "persona": "yerin-han",
+  "n": 4,
+  "tier": "B",
+  "device": "propped_timer",
+  "framing": "mid_environment",
+  "zone": "日常有型",
+  "light": "L2",
+  "words": 323
+ },
+ {
+  "persona": "yerin-han",
+  "n": 5,
+  "tier": "A",
+  "device": "friend_rear",
+  "framing": "full_length",
+  "zone": "度假",
+  "light": "L13",
+  "words": 316
+ },
+ {
+  "persona": "zhiyi-shen",
+  "n": 1,
+  "tier": "C",
+  "device": "front_selfie",
+  "framing": "chest_up",
+  "zone": "極休閒",
+  "light": "L6",
+  "words": 292
+ },
+ {
+  "persona": "zhiyi-shen",
+  "n": 2,
+  "tier": "C",
+  "device": "found_mirror",
+  "framing": "waist_up",
+  "zone": "日常有型",
+  "light": "L1",
+  "words": 319
+ },
+ {
+  "persona": "zhiyi-shen",
+  "n": 3,
+  "tier": "B",
+  "device": "friend_rear",
+  "framing": "full_length",
+  "zone": "上班正式",
+  "light": "L13",
+  "words": 315
+ },
+ {
+  "persona": "zhiyi-shen",
+  "n": 4,
+  "tier": "B",
+  "device": "propped_timer",
+  "framing": "mid_environment",
+  "zone": "極休閒",
+  "light": "L3",
+  "words": 283
+ },
+ {
   "persona": "zhiyi-shen",
   "n": 5,
   "tier": "A",
@@ -947,7 +947,7 @@
   "framing": "full_length",
   "zone": "派對夜間",
   "light": "L3",
-  "words": 281
+  "words": 284
  },
  {
   "persona": "zoey-yeh",
@@ -957,7 +957,7 @@
   "framing": "chest_up",
   "zone": "極休閒",
   "light": "L2",
-  "words": 282
+  "words": 283
  },
  {
   "persona": "zoey-yeh",
@@ -967,7 +967,7 @@
   "framing": "waist_up",
   "zone": "日常有型",
   "light": "L9",
-  "words": 329
+  "words": 356
  },
  {
   "persona": "zoey-yeh",
@@ -977,7 +977,7 @@
   "framing": "full_length",
   "zone": "學院甜美",
   "light": "L2",
-  "words": 297
+  "words": 300
  },
  {
   "persona": "zoey-yeh",
@@ -987,7 +987,7 @@
   "framing": "mid_environment",
   "zone": "街頭",
   "light": "L2",
-  "words": 286
+  "words": 343
  },
  {
   "persona": "zoey-yeh",
@@ -997,6 +997,6 @@
   "framing": "full_length",
   "zone": "編輯概念",
   "light": "L4",
-  "words": 282
+  "words": 309
  }
 ]

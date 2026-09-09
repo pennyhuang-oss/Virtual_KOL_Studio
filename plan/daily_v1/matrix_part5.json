@@ -232,7 +232,7 @@
     "device": "front_selfie",
     "framing": "chest_up",
     "zone": "極休閒",
-    "outfit": "a faded green work apron over a plain tee, hands not visible",
+    "outfit": "a faded green work apron over a plain tee",
     "hair": "tied back low with a few strands escaping",
     "scene": "the back of a flower shop, buckets of stems on the wet floor and a wall of hanging tools behind her",
     "action": "She has a leaf stuck to her cheek and is looking at the camera with a small resigned smile.",
@@ -271,13 +271,15 @@
     "device": "propped_timer",
     "framing": "mid_environment",
     "zone": "街頭",
-    "outfit": "an oversized denim shirt over a striped tee, wide cotton trousers and canvas shoes",
+    "outfit": "a faded green work apron over a plain tee",
     "hair": "in a loose low plait",
-    "scene": "the shop's work table, stems and offcuts scattered across it, a roll of brown paper and a stack of jars",
+    "scene": "the shop's work area, a long work table with stems and offcuts scattered across it, a roll of brown paper and a stack of jars",
     "action": "She is standing at the table wrapping a bunch in paper, both hands folding the edge, head down.",
     "micro": "a ball of string on the table, a mug of tea near the edge",
     "people": "solo_interior",
-    "hair_style": "in a loose low plait"
+    "hair_style": "in a loose low plait",
+    "continuity_from": 1,
+    "continuity_evolution": "the apron now tied over it and creased, both sleeves pushed up past the elbow and darkened where they have been wet, a green smear of stem sap across one cuff"
    },
    {
     "tier": "A",

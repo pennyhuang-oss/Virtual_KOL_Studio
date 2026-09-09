@@ -1,4 +1,4 @@
-# 日常素材 v1 — 95 段 prompt（產生檔，勿手改）
+# 日常素材 v1 — 100 段 prompt（產生檔，勿手改）
 
 > 由 `build_prompts.py` 從 `matrix_part*.json` + `lights.json` 決定性產生。
 > 要改內容請改資料檔後重跑，不要直接編輯本檔。
@@ -11,10 +11,10 @@
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### angel-chiu — D1　[C 級]　極休閒　front_selfie　chest_up　光:L1　318 字
+### angel-chiu — D1　[C 級]　極休閒　front_selfie　chest_up　光:L1　322 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is dark brown with honey-tea gold lightened ends, pulled into a fast low bun with the gold ends showing at the knot, flyaways everywhere.
 She is slim with a soft, full curve at the bust that clearly shapes whatever she wears, above a narrow waist.
 She wears a washed grey hospital-issue scrub top, the drawstring collar loose, no jewellery.
@@ -24,16 +24,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just sat down for the first time in hours and is staring at the camera with her chin propped on one hand, too tired to arrange her face.
 Visible with her: a lanyard still round her neck, a bottle of hand sanitiser by her elbow.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### angel-chiu — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　337 字
+### angel-chiu — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　340 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is dark brown with honey-tea gold lightened ends, loose and slightly flattened on one side from sleeping.
 She is slim with a soft, full curve at the bust that clearly shapes whatever she wears, above a narrow waist.
 She wears an oversized navy zip hoodie over a white ribbed tank and black cotton shorts.
@@ -50,10 +50,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### angel-chiu — D3　[B 級]　街頭運動　friend_rear　full_length　光:L7　300 字
+### angel-chiu — D3　[B 級]　街頭運動　friend_rear　full_length　光:L7　327 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark brown with honey-tea gold lightened ends, high ponytail with the gold ends swinging.
 She is slim with a soft, full curve at the bust that clearly shapes whatever she wears, above a narrow waist.
 She wears a cropped black windbreaker over a white tee, wide grey track trousers and chunky white trainers.
@@ -67,20 +67,20 @@ Visible with her: a small crossbody pouch, wired earphones in one ear.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### angel-chiu — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L3　294 字
+### angel-chiu — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L3　297 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is dark brown with honey-tea gold lightened ends, a low twisted knot, clean and pinned.
 She is slim with a soft, full curve at the bust that clearly shapes whatever she wears, above a narrow waist.
 She wears a fitted cream knit and navy straight trousers with flat black loafers.
 She is in a small rented flat's dining corner, one chair, a folded uniform on the table and a mug on a coaster, warm lamp on.
 One warm lamp doing all the work, most of the room falling away into shadow.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is standing at the table sorting a stack of shift papers, head down, caught between two movements.
 Visible with her: a hospital ID card on the table, a half-eaten pineapple bun on a plate.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -90,10 +90,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### angel-chiu — D5　[A 級]　派對夜間　friend_rear　full_length　光:L12　301 字
+### angel-chiu — D5　[A 級]　派對夜間　friend_rear　full_length　光:L12　328 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark brown with honey-tea gold lightened ends, loose and brushed out, the gold ends catching the light.
 She is slim with a soft, full curve at the bust that clearly shapes whatever she wears, above a narrow waist.
 She wears a black slip dress with thin straps and simple gold hoops, bare legs, black strappy sandals.
@@ -107,7 +107,7 @@ Visible with her: a slim gold chain, a small beaded bag on the ledge beside her.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -118,10 +118,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### angeline-kwee — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　291 字
+### angeline-kwee — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　295 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is milk-tea greige-brown, scraped into a claw clip with strands falling loose.
 She is tall and slim with a noticeably full bust that fills the top of everything she wears, and a clearly narrower waist below it.
 She wears a faded oversized band tee, no makeup, no accessories.
@@ -131,16 +131,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just blown a strand of hair off her face and is pulling a resigned expression at the camera, one eyebrow up.
 Visible with her: a box cutter in her other hand, a price-gun on the shelf.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### angeline-kwee — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　335 字
+### angeline-kwee — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　338 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is milk-tea greige-brown, loose waves pushed behind one shoulder.
 She is tall and slim with a noticeably full bust that fills the top of everything she wears, and a clearly narrower waist below it.
 She wears a cream linen shirt worn open over a brown tank and wide jeans.
@@ -157,10 +157,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### angeline-kwee — D3　[B 級]　編輯概念　friend_rear　full_length　光:L2　302 字
+### angeline-kwee — D3　[B 級]　編輯概念　friend_rear　full_length　光:L2　305 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is milk-tea greige-brown, waves brushed out fuller, tucked behind one ear.
 She is tall and slim with a noticeably full bust that fills the top of everything she wears, and a clearly narrower waist below it.
 She wears a sage-green satin midi skirt with a fitted ribbed knit and flat leather sandals.
@@ -178,29 +178,29 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### angeline-kwee — D4　[B 級]　學院甜美　propped_timer　mid_environment　光:L8　301 字
+### angeline-kwee — D4　[B 級]　學院甜美　propped_timer　mid_environment　光:L8　329 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is milk-tea greige-brown, half-up with a plain clip.
 She is tall and slim with a noticeably full bust that fills the top of everything she wears, and a clearly narrower waist below it.
 She wears a white cotton blouse with a rounded collar and a navy pleated skirt.
 She is in a corner cafe with a marble-topped table, a plate of kaya toast and a glass of iced tea, tiled floor and a slow ceiling fan.
 Open shade under the roof, the bright street beyond blown out behind her.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is spreading butter on toast with the knife still in her hand, looking down at what she is doing.
-Visible with her: a small notebook and pen beside the plate, a phone face-down on the table.
+Visible with her: a small notebook and pen beside the plate, a folded paper napkin under the glass.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The horizon sits a little crooked and she is placed off-centre, the way a phone balanced on whatever was to hand ends up framing a room.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### angeline-kwee — D5　[A 級]　度假　friend_rear　full_length　光:L13　302 字
+### angeline-kwee — D5　[A 級]　度假　friend_rear　full_length　光:L13　329 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is milk-tea greige-brown, damp at the ends and pushed back off her face.
 She is tall and slim with a noticeably full bust that fills the top of everything she wears, and a clearly narrower waist below it.
 She wears a black one-piece swimsuit under an open ivory linen shirt, bare feet.
@@ -214,7 +214,7 @@ Visible with her: a folded striped towel on the ledge, sunglasses pushed up on h
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -225,10 +225,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### cheryl-soh — D1　[C 級]　極休閒　front_selfie　chest_up　光:L1　282 字
+### cheryl-soh — D1　[C 級]　極休閒　front_selfie　chest_up　光:L1　310 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is black, scraped back into a low bun, no product, baby hairs loose.
 She is slim but distinctly full-chested, a soft heavy curve at the bust above a noticeably narrow waist, with long legs.
 She wears a plain white cotton tee, collar stretched from washing.
@@ -238,16 +238,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is pulling a flat unimpressed face at the camera, eyebrows up, clearly killing time.
 Visible with her: a crew ID on a retractable reel, a passport wallet in her hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### cheryl-soh — D2　[C 級]　日常有型　found_mirror　waist_up　光:L6　323 字
+### cheryl-soh — D2　[C 級]　日常有型　found_mirror　waist_up　光:L6　326 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is black, loose, one side tucked back.
 She is slim but distinctly full-chested, a soft heavy curve at the bust above a noticeably narrow waist, with long legs.
 She wears a grey marl sweatshirt and black leggings.
@@ -264,10 +264,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### cheryl-soh — D3　[B 級]　街頭運動　friend_rear　full_length　光:L8　292 字
+### cheryl-soh — D3　[B 級]　街頭運動　friend_rear　full_length　光:L8　319 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, loose and moving, pushed off her shoulders.
 She is slim but distinctly full-chested, a soft heavy curve at the bust above a noticeably narrow waist, with long legs.
 She wears a fitted black tank, wide olive cargo trousers and white low-top trainers.
@@ -281,20 +281,20 @@ Visible with her: a small nylon sling bag across her chest, a bubble tea cup in 
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### cheryl-soh — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　295 字
+### cheryl-soh — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　298 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is black, in a neat low chignon.
 She is slim but distinctly full-chested, a soft heavy curve at the bust above a noticeably narrow waist, with long legs.
 She wears a crisp white shirt tucked into a navy pencil skirt, sheer stockings, court shoes off to one side.
 She is in her own apartment bedroom, a suitcase open on the floor half-packed, a uniform jacket on a hanger hooked over the wardrobe door.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting on the edge of the bed rolling a pair of stockings, looking down at her hands.
 Visible with her: a travel adaptor and a passport on the bedspread, a rollerball perfume on the nightstand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -304,10 +304,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### cheryl-soh — D5　[A 級]　派對夜間　friend_rear　full_length　光:L3　280 字
+### cheryl-soh — D5　[A 級]　派對夜間　friend_rear　full_length　光:L3　283 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, loose big waves over one shoulder.
 She is slim but distinctly full-chested, a soft heavy curve at the bust above a noticeably narrow waist, with long legs.
 She wears a wine-red satin slip dress and thin-strap heels.
@@ -332,10 +332,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### emma-kao — D1　[C 級]　極休閒　front_selfie　chest_up　光:L9　286 字
+### emma-kao — D1　[C 級]　極休閒　front_selfie　chest_up　光:L9　314 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is dark brown with one wine-red highlighted section, clipped up messily with the ends sticking out.
 She is slim with a full, softly rounded bust that shapes the front of her clothes, above a defined waist.
 She wears a plain oatmeal long-sleeve tee, no makeup at all.
@@ -345,16 +345,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is mid-yawn, one eye half shut, having clearly not planned to take this.
 Visible with her: a rice ball and a canned coffee held against her chest.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### emma-kao — D2　[C 級]　日常有型　found_mirror　waist_up　光:L14　329 字
+### emma-kao — D2　[C 級]　日常有型　found_mirror　waist_up　光:L14　332 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is dark brown with one wine-red highlighted section, tucked behind both ears, one wine-red highlighted section visible.
 She is slim with a full, softly rounded bust that shapes the front of her clothes, above a defined waist.
 She wears a soft grey cardigan over a white tank and straight jeans.
@@ -371,10 +371,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### emma-kao — D3　[B 級]　上班正式　friend_rear　full_length　光:L6　289 字
+### emma-kao — D3　[B 級]　上班正式　friend_rear　full_length　光:L6　292 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark brown with one wine-red highlighted section, smooth and anchor-neat.
 She is slim with a full, softly rounded bust that shapes the front of her clothes, above a defined waist.
 She wears a structured navy blazer over a pale blue shirt, straight trousers and low heels.
@@ -392,16 +392,16 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### emma-kao — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L2　286 字
+### emma-kao — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L2　289 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is dark brown with one wine-red highlighted section, down and slightly flat, unstyled.
 She is slim with a full, softly rounded bust that shapes the front of her clothes, above a defined waist.
 She wears an old university sweatshirt and cotton shorts, bare feet.
 She is in her living room at home, a low sofa, a laundry basket half unpacked and a standing fan in the corner.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting cross-legged on the floor folding a shirt, looking down at the fold.
 Visible with her: a mug of tea on the floor beside her, a remote control on the sofa arm.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -411,10 +411,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### emma-kao — D5　[A 級]　編輯概念　friend_rear　full_length　光:L11　297 字
+### emma-kao — D5　[A 級]　編輯概念　friend_rear　full_length　光:L11　324 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark brown with one wine-red highlighted section, pinned to one side with the wine-red section deliberately showing.
 She is slim with a full, softly rounded bust that shapes the front of her clothes, above a defined waist.
 She wears a deep green satin midi dress with a cowl neck and simple heeled sandals.
@@ -428,7 +428,7 @@ Visible with her: a small structured handbag, a thin gold bracelet.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -439,10 +439,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### jia-seo — D1　[C 級]　街頭運動　front_selfie　chest_up　光:L6　302 字
+### jia-seo — D1　[C 級]　街頭運動　front_selfie　chest_up　光:L6　306 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is cool grey-blue black with a mint-green under-layer, scraped into a high bun, the mint under-layer showing at the nape, wet at the hairline.
 She is lean and athletic with a flat, strong midsection and a small defined waist, long legs and light muscle definition through the shoulders and thighs.
 She wears a sweat-damp black crop top with the collar pulled loose.
@@ -452,16 +452,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is breathing hard with her head tipped back against the wall and has just lifted the phone, mouth slightly open.
 Visible with her: a towel round her neck, a sports drink bottle in her free hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### jia-seo — D2　[C 級]　極休閒　found_mirror　full_length　光:L1　362 字
+### jia-seo — D2　[C 級]　極休閒　found_mirror　full_length　光:L1　365 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool grey-blue black with a mint-green under-layer, loose and unbrushed, mint layer visible where it parts.
 She is lean and athletic with a flat, strong midsection and a small defined waist, long legs and light muscle definition through the shoulders and thighs.
 She wears a baggy grey hoodie, black bike shorts and white socks.
@@ -480,10 +480,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### jia-seo — D3　[B 級]　街頭　friend_rear　full_length　光:L4　293 字
+### jia-seo — D3　[B 級]　街頭　friend_rear　full_length　光:L4　320 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool grey-blue black with a mint-green under-layer, in two low braids with the mint sections woven through.
 She is lean and athletic with a flat, strong midsection and a small defined waist, long legs and light muscle definition through the shoulders and thighs.
 She wears an oversized varsity jacket over a fitted tank, low-slung wide jeans and chunky trainers.
@@ -497,20 +497,20 @@ Visible with her: a small shoulder bag worn high, a canned drink in her free han
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### jia-seo — D4　[B 級]　日常有型　propped_timer　mid_environment　光:L2　291 字
+### jia-seo — D4　[B 級]　日常有型　propped_timer　mid_environment　光:L2　294 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is cool grey-blue black with a mint-green under-layer, in a sleek high ponytail.
 She is lean and athletic with a flat, strong midsection and a small defined waist, long legs and light muscle definition through the shoulders and thighs.
 She wears a fitted black long-sleeve top and straight grey trousers.
 She is in a small studio office, a desk with a laptop, a whiteboard with a class timetable and a rail of practice clothes behind.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is leaning over the desk writing on the whiteboard with her back half-turned, caught mid-word.
 Visible with her: a marker in her hand, a class register clipped to the board.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -520,10 +520,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### jia-seo — D5　[A 級]　編輯概念　friend_rear　full_length　光:L13　298 字
+### jia-seo — D5　[A 級]　編輯概念　friend_rear　full_length　光:L13　325 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool grey-blue black with a mint-green under-layer, straightened flat and glossy, mint layer flashing as it moves.
 She is lean and athletic with a flat, strong midsection and a small defined waist, long legs and light muscle definition through the shoulders and thighs.
 She wears a black leather midi skirt with a fitted grey knit and pointed boots.
@@ -537,7 +537,7 @@ Visible with her: a small structured shoulder bag, silver ear cuffs.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -548,10 +548,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### kanon-komori — D1　[C 級]　極休閒　front_selfie　chest_up　光:L2　300 字
+### kanon-komori — D1　[C 級]　極休閒　front_selfie　chest_up　光:L2　304 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is dark at the roots fading to soft pink-lilac, tied in a lopsided top knot with the pink ends spilling out.
 She is very petite and small-framed with short limbs and a low overall height, yet noticeably full-chested for her frame, which makes the contrast obvious in fitted clothes.
 She wears a shapeless grey sweatshirt with the neckline slipping off one shoulder.
@@ -561,16 +561,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is holding a cup with both hands and has just looked up at the camera mid-blink, unposed.
 Visible with her: an instant soup packet on the counter, a hair tie round her wrist.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### kanon-komori — D2　[C 級]　日常有型　found_mirror　full_length　光:L1　367 字
+### kanon-komori — D2　[C 級]　日常有型　found_mirror　full_length　光:L1　370 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark at the roots fading to soft pink-lilac, in low twin tails.
 She is very petite and small-framed with short limbs and a low overall height, yet noticeably full-chested for her frame, which makes the contrast obvious in fitted clothes.
 She wears a cropped pink cardigan over a white tee and a denim mini skirt with black tights.
@@ -589,10 +589,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### kanon-komori — D3　[B 級]　學院甜美　friend_rear　full_length　光:L6　309 字
+### kanon-komori — D3　[B 級]　學院甜美　friend_rear　full_length　光:L6　336 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark at the roots fading to soft pink-lilac, half-up with a plain barrette.
 She is very petite and small-framed with short limbs and a low overall height, yet noticeably full-chested for her frame, which makes the contrast obvious in fitted clothes.
 She wears a white blouse with a rounded collar, a pleated navy skirt and loafers with white socks.
@@ -606,20 +606,20 @@ Visible with her: a canvas tote with a badge pinned to it, a paper crepe cone in
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### kanon-komori — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　292 字
+### kanon-komori — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　295 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is dark at the roots fading to soft pink-lilac, loose and tangled from sleep.
 She is very petite and small-framed with short limbs and a low overall height, yet noticeably full-chested for her frame, which makes the contrast obvious in fitted clothes.
 She wears a long-sleeved striped pyjama top and shorts, bare feet.
 She is in a single room with a low bed, a wall of shelved figures and a small television on the floor.
 One warm lamp doing all the work, most of the room falling away into shadow.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting on the floor with her back against the bed, reaching up to a shelf, caught mid-reach.
 Visible with her: a games controller on the duvet, an open snack bag beside her.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -629,10 +629,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### kanon-komori — D5　[A 級]　派對夜間　friend_rear　full_length　光:L12　302 字
+### kanon-komori — D5　[A 級]　派對夜間　friend_rear　full_length　光:L12　329 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark at the roots fading to soft pink-lilac, curled loosely with the pink ends prominent.
 She is very petite and small-framed with short limbs and a low overall height, yet noticeably full-chested for her frame, which makes the contrast obvious in fitted clothes.
 She wears a black velvet mini dress with long sleeves and low heeled mary-janes.
@@ -646,7 +646,7 @@ Visible with her: a small chain-strap bag, a claw clip in her hair.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -657,10 +657,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### miu-shiraishi — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　289 字
+### miu-shiraishi — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　293 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is light ash-blonde, tucked behind both ears, fringe pushed flat by the day.
 She is petite and slight with narrow shoulders and a short frame, but full-chested enough that fitted tops sit tight across the front.
 She wears a plain black cafe apron over a white tee, a coffee stain on the strap.
@@ -670,16 +670,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is leaning against the doorframe with a blank tired expression, not smiling, just looking at the lens.
 Visible with her: a dosing spoon in her apron pocket, a stack of takeaway cups behind her.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### miu-shiraishi — D2　[C 級]　日常有型　found_mirror　waist_up　光:L5　333 字
+### miu-shiraishi — D2　[C 級]　日常有型　found_mirror　waist_up　光:L5　360 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is light ash-blonde, clipped back on one side.
 She is petite and slight with narrow shoulders and a short frame, but full-chested enough that fitted tops sit tight across the front.
 She wears a beige knit vest over a white shirt with wide sleeves.
@@ -692,14 +692,14 @@ Visible with her: a canvas tote on her shoulder, a paper bag of bread in it.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### miu-shiraishi — D3　[B 級]　街頭　friend_rear　full_length　光:L4　283 字
+### miu-shiraishi — D3　[B 級]　街頭　friend_rear　full_length　光:L4　310 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is light ash-blonde, loose with the fringe softened.
 She is petite and slight with narrow shoulders and a short frame, but full-chested enough that fitted tops sit tight across the front.
 She wears a washed black band tee under a loose grey overshirt, wide jeans and worn trainers.
@@ -713,20 +713,20 @@ Visible with her: a small woven bag, an iced drink in her free hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### miu-shiraishi — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　291 字
+### miu-shiraishi — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　294 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is light ash-blonde, pushed back with a fabric headband.
 She is petite and slight with narrow shoulders and a short frame, but full-chested enough that fitted tops sit tight across the front.
 She wears a plain white shirt buttoned to the top under the cafe apron, dark trousers.
 She is in a small studio flat, a low table with a laptop and a plant, a futon folded against the wall.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is kneeling at the low table typing with one hand and eating with the other, absorbed in the screen.
 Visible with her: a convenience-store salad container open on the table, a mug beside the laptop.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -736,10 +736,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### miu-shiraishi — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　277 字
+### miu-shiraishi — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　304 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is light ash-blonde, blow-dried fuller, fringe neat.
 She is petite and slight with narrow shoulders and a short frame, but full-chested enough that fitted tops sit tight across the front.
 She wears a long camel wool coat over a black roll-neck and slim trousers with ankle boots.
@@ -753,7 +753,7 @@ Visible with her: a leather crossbody, a paper exhibition ticket in one pocket.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -764,10 +764,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### nanami-fujiwara — D1　[C 級]　極休閒　front_selfie　chest_up　光:L1　275 字
+### nanami-fujiwara — D1　[C 級]　極休閒　front_selfie　chest_up　光:L1　279 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is black, in a fast low ponytail with strands escaping.
 She is slim and evenly proportioned with a full, soft bust and a gently defined waist.
 She wears a plain navy fleece zipped to the chin over a thermal top.
@@ -777,16 +777,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just sat down and pulled a tired half-smile at the camera, eyes a little unfocused.
 Visible with her: a bunch of room keys on the desk, a mug of barley tea.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### nanami-fujiwara — D2　[C 級]　日常有型　found_mirror　waist_up　光:L4　312 字
+### nanami-fujiwara — D2　[C 級]　日常有型　found_mirror　waist_up　光:L4　339 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is black, loose and smooth, tucked behind one ear.
 She is slim and evenly proportioned with a full, soft bust and a gently defined waist.
 She wears a grey knit and dark straight trousers.
@@ -799,14 +799,14 @@ Visible with her: a tote bag with a supermarket logo, a folded umbrella hooked o
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### nanami-fujiwara — D3　[B 級]　上班正式　friend_rear　full_length　光:L2　283 字
+### nanami-fujiwara — D3　[B 級]　上班正式　friend_rear　full_length　光:L2　286 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, pinned up neatly at the nape.
 She is slim and evenly proportioned with a full, soft bust and a gently defined waist.
 She wears a muted indigo kimono with a simple obi and white tabi.
@@ -824,16 +824,16 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### nanami-fujiwara — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　271 字
+### nanami-fujiwara — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　274 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is black, down and slightly messy.
 She is slim and evenly proportioned with a full, soft bust and a gently defined waist.
 She wears a long cardigan over pyjama trousers and thick socks.
 She is in a tatami room with a low table, a kotatsu blanket and a sliding door open to a dark garden.
 One warm lamp doing all the work, most of the room falling away into shadow.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting at the low table with her legs under the blanket, writing in a ledger, head down.
 Visible with her: a calculator and a stack of receipts, a mandarin orange half-peeled.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -843,10 +843,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### nanami-fujiwara — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　272 字
+### nanami-fujiwara — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　299 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, loose and brushed out.
 She is slim and evenly proportioned with a full, soft bust and a gently defined waist.
 She wears a dark green wool coat over a cream knit dress and leather boots.
@@ -860,7 +860,7 @@ Visible with her: a thermos in one hand, a knitted scarf loose round her neck.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -871,10 +871,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### nico-tsai — D1　[C 級]　極休閒　front_selfie　chest_up　光:L3　306 字
+### nico-tsai — D1　[C 級]　極休閒　front_selfie　chest_up　光:L3　310 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is cool mid-brown with a silver-grey section at the left temple, tucked behind both ears with the silver section showing at the left temple.
 She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.
 She wears a plain black tee with a dust mask pulled down under her chin.
@@ -884,16 +884,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just pulled the mask down and is looking at the camera with a blank, worn-out expression, saying nothing.
 Visible with her: a dust extractor fan on the desk, a bottle of top coat by her elbow.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### nico-tsai — D2　[C 級]　日常有型　found_mirror　waist_up　光:L14　331 字
+### nico-tsai — D2　[C 級]　日常有型　found_mirror　waist_up　光:L14　334 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is cool mid-brown with a silver-grey section at the left temple, blow-dried smooth, silver section pushed forward.
 She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.
 She wears a grey ribbed knit and straight black trousers.
@@ -910,10 +910,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### nico-tsai — D3　[B 級]　日常有型　friend_rear　full_length　光:L8　305 字
+### nico-tsai — D3　[B 級]　日常有型　friend_rear　full_length　光:L8　332 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool mid-brown with a silver-grey section at the left temple, loose with the silver section visible as it moves.
 She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.
 She wears an oversized charcoal shirt over a white tank, wide jeans and flat leather loafers.
@@ -927,20 +927,20 @@ Visible with her: a paper bag of supplies, a canvas tote over one shoulder.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### nico-tsai — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L9　307 字
+### nico-tsai — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L9　310 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is cool mid-brown with a silver-grey section at the left temple, clipped back on the right so the silver section falls forward.
 She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.
 She wears a fitted black long-sleeve top and a work apron over dark trousers.
 She is in the studio work table under a bright lamp, a colour wheel of tips fanned out and small pots lined up along the edge.
 Cool light from a lit panel beside her, the rest of the frame much darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is bent close over the table shaping something small with a file, both hands steady and her whole attention on them.
 Visible with her: a lamp arm pulled low over the table, a jar of brushes standing in solvent.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -950,10 +950,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### nico-tsai — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　293 字
+### nico-tsai — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　320 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool mid-brown with a silver-grey section at the left temple, smoothed and glossy.
 She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.
 She wears a long camel coat over a black slip dress and heeled ankle boots.
@@ -967,7 +967,7 @@ Visible with her: a small structured shoulder bag, a single wide silver ring.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -978,10 +978,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### peggy-lee — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　285 字
+### peggy-lee — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　289 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is deep wine-red with silver-grey highlighted strands, knotted up out of the way, curls escaping everywhere.
 She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.
 She wears a loose black work tee with a faded shop logo.
@@ -991,16 +991,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has grease on one knuckle and is pulling a wry face at the camera, clearly mid-job.
 Visible with her: a torque wrench on the trolley, a rag over her shoulder.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### peggy-lee — D2　[C 級]　日常有型　found_mirror　waist_up　光:L13　342 字
+### peggy-lee — D2　[C 級]　日常有型　found_mirror　waist_up　光:L13　369 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is deep wine-red with silver-grey highlighted strands, curls loose over one shoulder.
 She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.
 She wears a fitted black tank and wide grey trousers.
@@ -1013,14 +1013,14 @@ Visible with her: a car key fob in her free hand, a canned drink on the roof of 
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### peggy-lee — D3　[B 級]　街頭　friend_rear　full_length　光:L1　285 字
+### peggy-lee — D3　[B 級]　街頭　friend_rear　full_length　光:L1　288 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is deep wine-red with silver-grey highlighted strands, big and voluminous, pushed back off her face.
 She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.
 She wears a cropped bomber jacket over a fitted tank, straight jeans and low boots.
@@ -1038,16 +1038,16 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### peggy-lee — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　286 字
+### peggy-lee — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　289 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is deep wine-red with silver-grey highlighted strands, smoothed into a low ponytail.
 She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.
 She wears a fitted black shirt tucked into tailored trousers.
 She is in a small marketing office above a workshop, a desk of printed brochures and a wall of event photos.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is standing at the desk spreading out proofs with both hands, head down, comparing two of them.
 Visible with her: a coffee cup with a lid, a highlighter pen behind her ear.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1057,10 +1057,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### peggy-lee — D5　[A 級]　派對夜間　friend_rear　full_length　光:L3　293 字
+### peggy-lee — D5　[A 級]　派對夜間　friend_rear　full_length　光:L3　296 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is deep wine-red with silver-grey highlighted strands, curls set and glossy, one side pinned back.
 She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.
 She wears a deep red satin slip dress with thin straps and black heels.
@@ -1085,10 +1085,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### rin-ayase — D1　[C 級]　極休閒　front_selfie　chest_up　光:L14　269 字
+### rin-ayase — D1　[C 級]　極休閒　front_selfie　chest_up　光:L14　273 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is dark wine-brown, scraped back into a low bun with a claw clip.
 She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.
 She wears a plain grey sweatshirt, face completely bare.
@@ -1098,16 +1098,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just taken off her makeup and is looking at the camera with a flat, unbothered expression.
 Visible with her: a headband pushed up on her hairline, a cotton pad in her hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### rin-ayase — D2　[C 級]　日常有型　found_mirror　waist_up　光:L1　322 字
+### rin-ayase — D2　[C 級]　日常有型　found_mirror　waist_up　光:L1　349 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is dark wine-brown, waves loose, one side tucked back.
 She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.
 She wears a camel knit and dark straight trousers.
@@ -1120,24 +1120,25 @@ Visible with her: a leather tote on one shoulder, a folded newspaper under her a
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### rin-ayase — D3　[B 級]　上班正式　friend_rear　full_length　光:L6　283 字
+### rin-ayase — D3　[B 級]　上班正式　friend_rear　full_length　光:L6　337 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark wine-brown, in a smooth low chignon.
 She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.
-She wears a fitted black dress with a high neckline and low heels.
+She wears a camel knit and dark straight trousers.
+This is the exact same outfit as earlier that same day, the same garments in the same colours, worn a few hours on: the knit sleeves now pushed up to the forearm and creased at the elbow, the tote strap moved to the other shoulder, the newspaper refolded the other way.
 She is in a narrow lift lobby of an office building, brushed metal doors and a directory panel on the wall.
 A single strip light overhead, hard on the top of her head and dim below it.
 The camera is in front of her, not behind her.
 Her back is not to the camera.
 The person holding the phone is standing roughly two metres away at her own eye level, close enough to be someone she is with rather than someone watching her.
 She is standing waiting with her weight on one leg, checking her phone in her free hand, not looking up.
-Visible with her: a slim structured handbag, a paper shop bag in the other hand.
+Visible with her: the same leather tote on the other shoulder, a paper shop bag in her free hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
@@ -1145,16 +1146,17 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### rin-ayase — D4　[B 級]　編輯概念　propped_timer　mid_environment　光:L3　281 字
+### rin-ayase — D4　[B 級]　編輯概念　propped_timer　mid_environment　光:L3　317 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is dark wine-brown, pinned loosely with a lacquer stick.
 She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.
 She wears a dark green silk kimono worn casually over a slip, untied at the waist.
 She is in a small tatami room with a low dresser, a folded futon and a paper lantern lamp.
 One warm lamp doing all the work, most of the room falling away into shadow.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The only reflection in that mirror is her own; there is no second person and no second phone in it, and no portrait or photograph of a person on any wall or screen.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting at the dresser fastening an earring, looking into a small stand mirror rather than at the camera.
 Visible with her: an open jewellery tray, a folded fan on the dresser.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1164,10 +1166,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### rin-ayase — D5　[A 級]　派對夜間　friend_rear　full_length　光:L5　289 字
+### rin-ayase — D5　[A 級]　派對夜間　friend_rear　full_length　光:L5　316 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is dark wine-brown, waves brushed out and set to one side.
 She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.
 She wears a black floor-length gown with a slim silhouette and heeled sandals.
@@ -1181,7 +1183,7 @@ Visible with her: a small satin clutch, a wrap over one forearm.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1192,10 +1194,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### ruoruo-tang — D1　[C 級]　街頭運動　front_selfie　chest_up　光:L2　285 字
+### ruoruo-tang — D1　[C 級]　街頭運動　front_selfie　chest_up　光:L2　289 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is warm light chestnut-brown, in a low bun with damp strands at the temples.
 She is lean and strong with visible long muscle through the arms and thighs, a flat controlled midsection and a moderate bust.
 She wears a fitted grey sports crop top, skin slightly flushed.
@@ -1205,16 +1207,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just finished a class and is looking at the camera with her eyebrows raised, still catching her breath.
 Visible with her: a resistance ring under one arm, a water bottle on the floor.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### ruoruo-tang — D2　[C 級]　極休閒　found_mirror　full_length　光:L1　347 字
+### ruoruo-tang — D2　[C 級]　極休閒　found_mirror　full_length　光:L1　350 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is warm light chestnut-brown, loose and slightly wavy from being tied up.
 She is lean and strong with visible long muscle through the arms and thighs, a flat controlled midsection and a moderate bust.
 She wears an oversized cotton shirt over leggings, socks on.
@@ -1233,10 +1235,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### ruoruo-tang — D3　[B 級]　日常有型　friend_rear　full_length　光:L8　284 字
+### ruoruo-tang — D3　[B 級]　日常有型　friend_rear　full_length　光:L8　311 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is warm light chestnut-brown, down and softly waved.
 She is lean and strong with visible long muscle through the arms and thighs, a flat controlled midsection and a moderate bust.
 She wears a fitted ribbed knit tucked into wide cream trousers with flat sandals.
@@ -1250,20 +1252,20 @@ Visible with her: a woven shoulder bag, a paper cup of tea.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### ruoruo-tang — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　275 字
+### ruoruo-tang — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　278 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is warm light chestnut-brown, in a high ponytail.
 She is lean and strong with visible long muscle through the arms and thighs, a flat controlled midsection and a moderate bust.
 She wears a black long-sleeve top and matching leggings.
 She is in the studio floor, two reformer machines and a wall of printed anatomy diagrams, morning light through blinds.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is crouched beside a machine adjusting the spring settings, head down and hands working.
 Visible with her: a class clipboard on the machine, a spare strap looped over her shoulder.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1273,10 +1275,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### ruoruo-tang — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　277 字
+### ruoruo-tang — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　304 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is warm light chestnut-brown, loose and full.
 She is lean and strong with visible long muscle through the arms and thighs, a flat controlled midsection and a moderate bust.
 She wears a long dark linen dress with a tie waist and flat leather sandals.
@@ -1290,7 +1292,7 @@ Visible with her: a canvas hat held in one hand, a thin bracelet.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1301,10 +1303,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### somi-oh — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　290 字
+### somi-oh — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　318 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is bright honey-orange brown, flattened on one side, wolf-cut layers sticking out.
 She is curvy with a heavy full bust and a soft rounded figure, but a clearly narrower waist that keeps the shape defined.
 She wears a stretched-out orange hoodie with the hood half up.
@@ -1314,16 +1316,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has her cheeks full and is looking at the camera mid-chew with her eyebrows raised, completely unbothered.
 Visible with her: a basket of chicken between her elbows, a pair of tongs on the table.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### somi-oh — D2　[C 級]　日常有型　found_mirror　waist_up　光:L8　331 字
+### somi-oh — D2　[C 級]　日常有型　found_mirror　waist_up　光:L8　358 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is bright honey-orange brown, pushed back off her face.
 She is curvy with a heavy full bust and a soft rounded figure, but a clearly narrower waist that keeps the shape defined.
 She wears a cropped cardigan over a white tank and wide jeans.
@@ -1336,14 +1338,14 @@ Visible with her: a plastic bag of fruit in one hand, a hair clip on her collar.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### somi-oh — D3　[B 級]　街頭　friend_rear　full_length　光:L1　292 字
+### somi-oh — D3　[B 級]　街頭　friend_rear　full_length　光:L1　319 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is bright honey-orange brown, loose, layers moving.
 She is curvy with a heavy full bust and a soft rounded figure, but a clearly narrower waist that keeps the shape defined.
 She wears an oversized denim jacket over a fitted tee, cargo shorts and trainers.
@@ -1357,20 +1359,20 @@ Visible with her: a paper cup of broth in one hand, a bucket hat pushed back on 
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### somi-oh — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L10　281 字
+### somi-oh — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L10　284 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is bright honey-orange brown, in a small messy top knot.
 She is curvy with a heavy full bust and a soft rounded figure, but a clearly narrower waist that keeps the shape defined.
 She wears a loose tee and cotton shorts, bare feet.
 She is in a small kitchen with a low table on the floor, side dishes laid out in small bowls and a rice cooker steaming.
 Warm ceiling light close overhead, steam catching it.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is kneeling at the low table lifting the lid off a pot, leaning back from the steam.
 Visible with her: a pair of metal chopsticks in her free hand, a bottle of soju on the table.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1380,10 +1382,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### somi-oh — D5　[A 級]　度假　friend_rear　full_length　光:L13　280 字
+### somi-oh — D5　[A 級]　度假　friend_rear　full_length　光:L13　307 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is bright honey-orange brown, salt-damp and pushed back.
 She is curvy with a heavy full bust and a soft rounded figure, but a clearly narrower waist that keeps the shape defined.
 She wears a black bikini top under an open white shirt with denim shorts.
@@ -1397,7 +1399,7 @@ Visible with her: sunglasses hooked in her shirt, a beach towel over one shoulde
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1408,10 +1410,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### sydney-leong — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　287 字
+### sydney-leong — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　291 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is light honey gold-brown, tied back in a low knot with a bandana over the front.
 She is short and softly built with a full rounded bust that fills the front of everything she wears, above a small waist.
 She wears a white tee under a flour-dusted canvas apron.
@@ -1421,16 +1423,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has flour on one cheek and is pulling a lopsided grin at the camera, clearly in the middle of something.
 Visible with her: a dough scraper in her hand, a timer clipped to the apron.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### sydney-leong — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　336 字
+### sydney-leong — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　363 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is light honey gold-brown, loose waves, one side tucked back.
 She is short and softly built with a full rounded bust that fills the front of everything she wears, above a small waist.
 She wears a pale blue button shirt over a white tank and denim shorts.
@@ -1443,14 +1445,14 @@ Visible with her: a small parcel with a shipping label, a bunch of keys in her h
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### sydney-leong — D3　[B 級]　學院甜美　friend_rear　full_length　光:L8　294 字
+### sydney-leong — D3　[B 級]　學院甜美　friend_rear　full_length　光:L8　321 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is light honey gold-brown, loose and softly waved.
 She is short and softly built with a full rounded bust that fills the front of everything she wears, above a small waist.
 She wears a white blouse with a rounded collar under a soft knit vest, a pleated skirt and flat shoes.
@@ -1464,20 +1466,20 @@ Visible with her: a rattan basket bag, a paper bag of pastries in it.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### sydney-leong — D4　[B 級]　街頭運動　propped_timer　mid_environment　光:L2　284 字
+### sydney-leong — D4　[B 級]　街頭運動　propped_timer　mid_environment　光:L2　287 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is light honey gold-brown, in two low plaits.
 She is short and softly built with a full rounded bust that fills the front of everything she wears, above a small waist.
 She wears a cropped zip hoodie over a fitted tank, track shorts and slides.
 She is in a small studio flat, a table of cooling racks and stacked boxes, a fan turning in the corner.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting at the table folding a flat-pack box, hands working, head down.
 Visible with her: a roll of ribbon and a stack of stickers, an iced drink sweating on the table.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1487,10 +1489,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### sydney-leong — D5　[A 級]　編輯概念　friend_rear　full_length　光:L11　293 字
+### sydney-leong — D5　[A 級]　編輯概念　friend_rear　full_length　光:L11　320 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is light honey gold-brown, curled loosely and pinned on one side.
 She is short and softly built with a full rounded bust that fills the front of everything she wears, above a small waist.
 She wears a soft yellow midi dress with puff sleeves and low heeled sandals.
@@ -1504,7 +1506,7 @@ Visible with her: a small beaded bag, a thin gold necklace.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1515,10 +1517,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### tammy-chou — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　289 字
+### tammy-chou — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　293 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is milk-tea gold-brown with lighter money-piece strands, clipped up in a claw with the money-piece strands loose.
 She is short and curvy with a full bust and rounded hips, and a small waist that makes the shape read strongly in fitted clothes.
 She wears a plain black tee with a lanyard of sample tags round her neck.
@@ -1528,16 +1530,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is mouthing something at the camera with a hand raised, mid-sentence, clearly talking to someone off-frame.
 Visible with her: a barcode scanner on the table, a marker pen behind her ear.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### tammy-chou — D2　[C 級]　日常有型　found_mirror　full_length　光:L1　362 字
+### tammy-chou — D2　[C 級]　日常有型　found_mirror　full_length　光:L1　365 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is milk-tea gold-brown with lighter money-piece strands, waves brushed out big.
 She is short and curvy with a full bust and rounded hips, and a small waist that makes the shape read strongly in fitted clothes.
 She wears a fitted white ribbed top and a denim mini skirt with white boots.
@@ -1556,10 +1558,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### tammy-chou — D3　[B 級]　街頭　friend_rear　full_length　光:L5　293 字
+### tammy-chou — D3　[B 級]　街頭　friend_rear　full_length　光:L5　320 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is milk-tea gold-brown with lighter money-piece strands, loose and voluminous.
 She is short and curvy with a full bust and rounded hips, and a small waist that makes the shape read strongly in fitted clothes.
 She wears an oversized grey blazer over a cropped tank, wide jeans and chunky loafers.
@@ -1573,20 +1575,20 @@ Visible with her: two paper carrier bags, sunglasses pushed up on her head.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### tammy-chou — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L9　291 字
+### tammy-chou — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L9　294 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is milk-tea gold-brown with lighter money-piece strands, smoothed and half-pinned.
 She is short and curvy with a full bust and rounded hips, and a small waist that makes the shape read strongly in fitted clothes.
 She wears a fitted knit dress with a belt and low heels.
-She is in a small live-selling corner, a ring of hanging garments, a phone on a tripod facing a marked spot on the floor and a light stand.
+She is in a small live-selling corner, a ring of hanging garments, a light stand with its softbox angled in and a marked spot taped on the floor.
 Cool light from a lit panel beside her, the rest of the frame much darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is reaching up to unhook a garment from the rail with her back half-turned, mid-motion.
 Visible with her: a clip-on microphone on her collar, a stack of order slips on a stool.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1596,10 +1598,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### tammy-chou — D5　[A 級]　派對夜間　friend_rear　full_length　光:L12　285 字
+### tammy-chou — D5　[A 級]　派對夜間　friend_rear　full_length　光:L12　312 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is milk-tea gold-brown with lighter money-piece strands, waves set and glossy.
 She is short and curvy with a full bust and rounded hips, and a small waist that makes the shape read strongly in fitted clothes.
 She wears a black cut-out mini dress with heeled sandals.
@@ -1613,7 +1615,7 @@ Visible with her: a small metallic bag on the rail, layered chain necklaces.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1624,10 +1626,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### wanyin-jiang — D1　[C 級]　極休閒　front_selfie　chest_up　光:L2　275 字
+### wanyin-jiang — D1　[C 級]　極休閒　front_selfie　chest_up　光:L2　279 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is black, twisted up and held with a pencil, strands falling.
 She is slim and long-limbed with an even, classical proportion, a moderate bust and a clearly defined waist.
 She wears a plain grey cotton tee with a tape measure round her neck.
@@ -1637,16 +1639,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is squinting slightly at the camera with a pin held between her lips, mid-task.
 Visible with her: a pin cushion on her wrist, tailor's chalk in her hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### wanyin-jiang — D2　[C 級]　日常有型　found_mirror　waist_up　光:L4　321 字
+### wanyin-jiang — D2　[C 級]　日常有型　found_mirror　waist_up　光:L4　348 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is black, loose and straight, one side tucked back.
 She is slim and long-limbed with an even, classical proportion, a moderate bust and a clearly defined waist.
 She wears a soft blue linen shirt and wide black trousers.
@@ -1659,14 +1661,14 @@ Visible with her: a cloth shopping bag with fabric samples in it, a folded recei
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### wanyin-jiang — D3　[B 級]　編輯概念　friend_rear　full_length　光:L7　277 字
+### wanyin-jiang — D3　[B 級]　編輯概念　friend_rear　full_length　光:L7　280 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, pinned into a smooth low knot.
 She is slim and long-limbed with an even, classical proportion, a moderate bust and a clearly defined waist.
 She wears a fitted dark green cheongsam with a low mandarin collar and flat embroidered shoes.
@@ -1684,16 +1686,16 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### wanyin-jiang — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　286 字
+### wanyin-jiang — D4　[B 級]　上班正式　propped_timer　mid_environment　光:L2　289 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is black, in a high smooth ponytail.
 She is slim and long-limbed with an even, classical proportion, a moderate bust and a clearly defined waist.
 She wears a plain black wrap top and straight trousers with a work apron over them.
 She is in the shop floor of a small tailoring studio, a long cutting table with fabric laid out and a wall of thread spools.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is leaning over the table drawing a chalk line along a ruler, both hands working, head down.
 Visible with her: a pair of shears on the table, a paper pattern weighted with a stone.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1703,10 +1705,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### wanyin-jiang — D5　[A 級]　編輯概念　friend_rear　full_length　光:L8　279 字
+### wanyin-jiang — D5　[A 級]　編輯概念　friend_rear　full_length　光:L8　306 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, loose and straight down her back.
 She is slim and long-limbed with an even, classical proportion, a moderate bust and a clearly defined waist.
 She wears a pale ivory silk cheongsam with fine piping and low heels.
@@ -1720,7 +1722,7 @@ Visible with her: a small silk pouch, a single hairpin.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1731,10 +1733,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### wendy-yeo — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　274 字
+### wendy-yeo — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　278 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is cool silver-grey, pushed back off her face, one side tucked behind an ear.
 She is slim with a full bust and a defined waist, the proportion obvious even under a shirt.
 She wears a plain black tee with the sleeves pushed up.
@@ -1744,16 +1746,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is looking straight at the camera with a completely flat expression, unsmiling, mid-inventory.
 Visible with her: a clipboard in her free hand, a bar towel over her shoulder.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### wendy-yeo — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　323 字
+### wendy-yeo — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　326 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is cool silver-grey, tucked behind both ears.
 She is slim with a full bust and a defined waist, the proportion obvious even under a shirt.
 She wears a grey linen shirt worn open over a black tank and straight trousers.
@@ -1770,10 +1772,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### wendy-yeo — D3　[B 級]　上班正式　friend_rear　full_length　光:L3　279 字
+### wendy-yeo — D3　[B 級]　上班正式　friend_rear　full_length　光:L3　282 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool silver-grey, neat, tucked behind one ear.
 She is slim with a full bust and a defined waist, the proportion obvious even under a shirt.
 She wears a fitted black shirt tucked into high-waisted trousers with leather loafers.
@@ -1791,16 +1793,16 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### wendy-yeo — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　277 字
+### wendy-yeo — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　280 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is cool silver-grey, flat on one side from sleeping.
 She is slim with a full bust and a defined waist, the proportion obvious even under a shirt.
 She wears an oversized shirt and boxer-style shorts, bare feet.
 She is in a small flat's kitchen at night, a single lamp on, a chopping board with a half-cut lime and a glass of water.
 One warm lamp doing all the work, most of the room falling away into shadow.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is standing at the counter with one hand flat on it, drinking water, looking at nothing in particular.
 Visible with her: a paperback face-down on the counter, a small speaker playing.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -1810,10 +1812,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### wendy-yeo — D5　[A 級]　派對夜間　friend_rear　full_length　光:L5　284 字
+### wendy-yeo — D5　[A 級]　派對夜間　friend_rear　full_length　光:L5　311 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is cool silver-grey, slicked back off her face.
 She is slim with a full bust and a defined waist, the proportion obvious even under a shirt.
 She wears a black tailored jumpsuit with a deep neckline and heeled mules.
@@ -1827,7 +1829,7 @@ Visible with her: a slim clutch under one arm, a single silver ring.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1838,10 +1840,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### yerin-han — D1　[C 級]　街頭運動　front_selfie　chest_up　光:L6　284 字
+### yerin-han — D1　[C 級]　街頭運動　front_selfie　chest_up　光:L6　288 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is ash-brown with lighter gold face-framing highlights, in a low ponytail pulled through the back of a cap.
 She is tall and athletic with long legs, a full bust and light muscle definition through the shoulders and back.
 She wears a white technical polo with the collar half up.
@@ -1851,16 +1853,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She has just missed a shot and is pulling an exaggerated grimace at the camera.
 Visible with her: a glove tucked into her waistband, a rangefinder on the ledge.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### yerin-han — D2　[C 級]　極休閒　found_mirror　full_length　光:L1　351 字
+### yerin-han — D2　[C 級]　極休閒　found_mirror　full_length　光:L1　354 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is ash-brown with lighter gold face-framing highlights, loose with the gold pieces at the front.
 She is tall and athletic with long legs, a full bust and light muscle definition through the shoulders and back.
 She wears an oversized grey hoodie and black leggings with trainers.
@@ -1879,10 +1881,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### yerin-han — D3　[B 級]　上班正式　friend_rear　full_length　光:L6　285 字
+### yerin-han — D3　[B 級]　上班正式　friend_rear　full_length　光:L6　288 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is ash-brown with lighter gold face-framing highlights, in a high ponytail.
 She is tall and athletic with long legs, a full bust and light muscle definition through the shoulders and back.
 She wears a fitted white polo, a pleated navy skort and low golf shoes.
@@ -1900,29 +1902,29 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### yerin-han — D4　[B 級]　日常有型　propped_timer　mid_environment　光:L2　296 字
+### yerin-han — D4　[B 級]　日常有型　propped_timer　mid_environment　光:L2　323 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is ash-brown with lighter gold face-framing highlights, loose and brushed out.
 She is tall and athletic with long legs, a full bust and light muscle definition through the shoulders and back.
 She wears a beige knit and straight jeans with white trainers.
 She is in a small cafe with a counter of pastries and a window onto a side street, a laptop open on the table.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting at the table with one leg tucked under her, scrolling on the laptop, chin on her hand.
 Visible with her: a takeaway cup with a name scribbled on it, a lesson notebook beside the laptop.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The horizon sits a little crooked and she is placed off-centre, the way a phone balanced on whatever was to hand ends up framing a room.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### yerin-han — D5　[A 級]　度假　friend_rear　full_length　光:L13　289 字
+### yerin-han — D5　[A 級]　度假　friend_rear　full_length　光:L13　316 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is ash-brown with lighter gold face-framing highlights, in a ponytail pulled through the visor.
 She is tall and athletic with long legs, a full bust and light muscle definition through the shoulders and back.
 She wears a white sleeveless polo dress with a visor and low white shoes.
@@ -1936,7 +1938,7 @@ Visible with her: a golf glove on one hand, a tee behind her ear.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
@@ -1947,10 +1949,10 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### zhiyi-shen — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　288 字
+### zhiyi-shen — D1　[C 級]　極休閒　front_selfie　chest_up　光:L6　292 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is black, pulled into a low knot with a pen through it, strands loose.
 She is tall and slim with long legs, a full bust and a narrow waist that shows clearly in tailored clothes.
 She wears a plain white shirt with the collar open and the top button undone.
@@ -1960,16 +1962,16 @@ The phone is in her own hand about half an arm's length from her face, held just
 She is looking at the camera with her eyes half shut and her head tipped, visibly done with the day.
 Visible with her: an instant coffee sachet in her hand, a staff card clipped to her waistband.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### zhiyi-shen — D2　[C 級]　日常有型　found_mirror　waist_up　光:L1　316 字
+### zhiyi-shen — D2　[C 級]　日常有型　found_mirror　waist_up　光:L1　319 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is black, straight and loose, tucked behind one ear.
 She is tall and slim with long legs, a full bust and a narrow waist that shows clearly in tailored clothes.
 She wears a grey knit and black straight trousers.
@@ -1986,10 +1988,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### zhiyi-shen — D3　[B 級]　上班正式　friend_rear　full_length　光:L13　288 字
+### zhiyi-shen — D3　[B 級]　上班正式　friend_rear　full_length　光:L13　315 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, straight and smooth down her back.
 She is tall and slim with long legs, a full bust and a narrow waist that shows clearly in tailored clothes.
 She wears a charcoal blazer over a silk shell top, straight trousers and pointed low heels.
@@ -2003,20 +2005,20 @@ Visible with her: a structured tote on her forearm, a badge in her fingers.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### zhiyi-shen — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　280 字
+### zhiyi-shen — D4　[B 級]　極休閒　propped_timer　mid_environment　光:L3　283 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is black, loose and slightly messy.
 She is tall and slim with long legs, a full bust and a narrow waist that shows clearly in tailored clothes.
 She wears an oversized tee and cotton shorts, bare feet.
 She is in a small high-floor flat at night, a sofa, a low table with takeaway containers and a window full of tower lights.
 One warm lamp doing all the work, most of the room falling away into shadow.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is sitting on the floor against the sofa eating from a container, chopsticks halfway up, looking at the television.
 Visible with her: a laptop closed on the table, a pair of slippers kicked off nearby.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -2026,10 +2028,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### zhiyi-shen — D5　[A 級]　派對夜間　friend_rear　full_length　光:L3　281 字
+### zhiyi-shen — D5　[A 級]　派對夜間　friend_rear　full_length　光:L3　284 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, straight and glossy, one side tucked back.
 She is tall and slim with long legs, a full bust and a narrow waist that shows clearly in tailored clothes.
 She wears a black column dress with thin straps and heeled sandals.
@@ -2054,29 +2056,29 @@ Shot on a phone rear camera by someone standing about two metres away, natural c
 
 `soul_id` 見 `review/soul_training/SOUL_IDS.json`
 
-### zoey-yeh — D1　[C 級]　極休閒　front_selfie　chest_up　光:L2　282 字
+### zoey-yeh — D1　[C 級]　極休閒　front_selfie　chest_up　光:L2　283 字
 
 ```
-A photograph of a young East Asian woman, chest-up.
+A photograph of an adult East Asian woman in her twenties, chest-up.
 Her hair is black, tied back low with a few strands escaping.
 She is small and slight with narrow shoulders and a slender frame, and a modest bust in proportion to it.
-She wears a faded green work apron over a plain tee, hands not visible.
+She wears a faded green work apron over a plain tee.
 She is in the back of a flower shop, buckets of stems on the wet floor and a wall of hanging tools behind her.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
 The phone is in her own hand about half an arm's length from her face, held just above her eye line so the lens looks slightly down at her.
 She has a leaf stuck to her cheek and is looking at the camera with a small resigned smile.
 Visible with her: secateurs in her apron pocket, a coil of twine on the bench.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
-Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and a little too low, the way a real front-camera shot is.
+Her forearm runs out of the bottom corner of the frame toward the phone, and the angle is a little too close and tipped slightly down at her, the way a real front-camera shot is.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Shot on a phone front camera held at arm's length, slight wide-lens distortion, natural color, no beauty filter, no skin smoothing.
 ```
 
-### zoey-yeh — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　329 字
+### zoey-yeh — D2　[C 級]　日常有型　found_mirror　waist_up　光:L9　356 字
 
 ```
-A photograph of a young East Asian woman, from the waist up.
+A photograph of an adult East Asian woman in her twenties, from the waist up.
 Her hair is black, loose and straight.
 She is small and slight with narrow shoulders and a slender frame, and a modest bust in proportion to it.
 She wears a cream cardigan over a white tee and a long denim skirt.
@@ -2089,14 +2091,14 @@ Visible with her: a wrapped bouquet under one arm, a posting slip in her hand.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The reflective surface is not clean — it carries smears, dust and small scratches, and the image in it is slightly dimmer and less sharp than the room itself.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera held about a metre from the reflective surface, the phone visible in her own hand, natural color, no beauty filter, no skin smoothing.
 ```
 
-### zoey-yeh — D3　[B 級]　學院甜美　friend_rear　full_length　光:L2　297 字
+### zoey-yeh — D3　[B 級]　學院甜美　friend_rear　full_length　光:L2　300 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, loose with a small clip at one side.
 She is small and slight with narrow shoulders and a slender frame, and a modest bust in proportion to it.
 She wears a cream blouse with a small round collar under a knitted vest, a long pleated skirt and flat shoes.
@@ -2114,16 +2116,17 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
-### zoey-yeh — D4　[B 級]　街頭　propped_timer　mid_environment　光:L2　286 字
+### zoey-yeh — D4　[B 級]　街頭　propped_timer　mid_environment　光:L2　343 字
 
 ```
-A photograph of a young East Asian woman, a wide shot with her small in the frame and the room around her.
+A photograph of an adult East Asian woman in her twenties, a wide shot with her small in the frame and the room around her.
 Her hair is black, in a loose low plait.
 She is small and slight with narrow shoulders and a slender frame, and a modest bust in proportion to it.
-She wears an oversized denim shirt over a striped tee, wide cotton trousers and canvas shoes.
-She is in the shop's work table, stems and offcuts scattered across it, a roll of brown paper and a stack of jars.
+She wears a faded green work apron over a plain tee.
+This is the exact same outfit as earlier that same day, the same garments in the same colours, worn a few hours on: the apron now tied over it and creased, both sleeves pushed up past the elbow and darkened where they have been wet, a green smear of stem sap across one cuff.
+She is in the shop's work area, a long work table with stems and offcuts scattered across it, a roll of brown paper and a stack of jars.
 Soft daylight from a window off to one side, the far side of the room noticeably darker.
-The phone is resting on a surface roughly three metres from her at about waist height, so the angle looks up at her very slightly and nobody is holding it.
+The phone is resting on a surface roughly three metres from her between chest and eye height, level with her or tipped a fraction downward, and nobody is holding it.
 She is standing at the table wrapping a bunch in paper, both hands folding the edge, head down.
 Visible with her: a ball of string on the table, a mug of tea near the edge.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
@@ -2133,10 +2136,10 @@ She is the only person in the photograph; no other people are visible anywhere i
 Shot on a phone rear camera propped on a surface nearby with the self-timer running, natural color, no beauty retouching.
 ```
 
-### zoey-yeh — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　282 字
+### zoey-yeh — D5　[A 級]　編輯概念　friend_rear　full_length　光:L4　309 字
 
 ```
-A photograph of a young East Asian woman, full length, head to feet inside the frame.
+A photograph of an adult East Asian woman in her twenties, full length, head to feet inside the frame.
 Her hair is black, loose and straight down her back.
 She is small and slight with narrow shoulders and a slender frame, and a modest bust in proportion to it.
 She wears a pale blue midi dress with a soft collar and flat leather shoes.
@@ -2150,7 +2153,7 @@ Visible with her: a woven basket on one arm, a straw hat hanging down her back.
 Her skin has real texture — visible pores, slight unevenness across the cheeks and a little shine where the light lands, printed as it is with no retouching and no smoothing.
 The framing is a fraction loose and slightly off-centre, taken quickly by someone who was already walking with her.
 It reads as an ordinary moment that happened to be caught rather than a picture she sat down to make.
-A few other people are further back behind her, turned away or in profile and well out of focus, none of their faces readable.
+A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing, none of their faces readable.
 Shot on a phone rear camera by someone standing about two metres away, natural color, no beauty retouching.
 ```
 
