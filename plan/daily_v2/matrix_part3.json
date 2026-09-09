@@ -18,7 +18,9 @@
     "eye_contact": true,
     "micro": "a canned coffee standing on the shelf edge beside her",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "a convenience store aisle late at night",
+    "scene_details": "a chilled drinks cabinet glowing beside her and a magazine rack behind"
    },
    {
     "tier": "C",
@@ -33,7 +35,9 @@
     "eye_contact": true,
     "micro": "a black leather tote on one shoulder",
     "people": "background_ok",
-    "light": "K14"
+    "light": "K14",
+    "location": "the mirrored wall of a station passage",
+    "scene_details": "tiled floor and a lit route-map panel beside her"
    },
    {
     "tier": "B",
@@ -48,7 +52,9 @@
     "eye_contact": true,
     "micro": "a small cup on the counter",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a coffee stand under an office building",
+    "scene_details": "a stone counter, a run of stools and a glass frontage onto the plaza"
    },
    {
     "tier": "B",
@@ -63,9 +69,11 @@
     "eye_contact": true,
     "micro": "the same leather tote on the other shoulder",
     "people": "background_ok",
-    "light": "K6",
+    "light": "K3",
     "continuity_from": 3,
-    "continuity_evolution": "the knit now untucked a little at the back, the tote strap moved to the other shoulder and the belt loosened a notch"
+    "continuity_evolution": "the knit now untucked a little at the back, the tote strap moved to the other shoulder and the belt loosened a notch",
+    "location": "a plaza colonnade in the late afternoon",
+    "scene_details": "stone columns, long shadows and planted beds along the edge"
    },
    {
     "tier": "A",
@@ -80,7 +88,9 @@
     "eye_contact": false,
     "micro": "a small satin clutch",
     "people": "background_ok",
-    "light": "K12"
+    "light": "K12",
+    "location": "a covered stone entrance of an old building at night",
+    "scene_details": "warm downlights above and a lit forecourt beyond"
    }
   ]
  },
@@ -103,7 +113,9 @@
     "eye_contact": true,
     "micro": "a bag of loquats resting on the crate beside her",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a covered wet-market lane at midday",
+    "scene_details": "hanging scales, stacked baskets and a plastic awning overhead"
    },
    {
     "tier": "C",
@@ -118,7 +130,9 @@
     "eye_contact": true,
     "micro": "a small shoulder bag",
     "people": "background_ok",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored panel at a shopping-mall entrance",
+    "scene_details": "a directory board beside it and a run of glass doors behind"
    },
    {
     "tier": "B",
@@ -133,7 +147,9 @@
     "eye_contact": true,
     "micro": "a small porcelain cup on the stone ledge beside her",
     "people": "background_ok",
-    "light": "K6"
+    "light": "K3",
+    "location": "a teahouse courtyard with timber lattice screens",
+    "scene_details": "stone planters and a bamboo grove beyond the wall"
    },
    {
     "tier": "B",
@@ -148,7 +164,9 @@
     "eye_contact": true,
     "micro": "a slim shoulder bag",
     "people": "background_ok",
-    "light": "K1"
+    "light": "K1",
+    "location": "a riverside teahouse terrace with timber decking",
+    "scene_details": "low stools and willow branches over the water"
    },
    {
     "tier": "A",
@@ -163,7 +181,9 @@
     "eye_contact": false,
     "micro": "a folded fan in her free hand",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a lantern-lit old-town street at dusk",
+    "scene_details": "timber shopfronts, stone paving and red lanterns strung overhead"
    }
   ]
  },
@@ -186,7 +206,9 @@
     "eye_contact": true,
     "micro": "a paper cup of coffee on the crate beside her",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a fish-market alley in the morning",
+    "scene_details": "blue plastic crates stacked along the wall and a hose coiled on wet concrete"
    },
    {
     "tier": "C",
@@ -201,7 +223,9 @@
     "eye_contact": true,
     "micro": "a small quilted chain bag",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored stairwell landing in a seaside apartment block",
+    "scene_details": "a window onto the harbour and a bike leaning by the rail"
    },
    {
     "tier": "B",
@@ -216,7 +240,9 @@
     "eye_contact": true,
     "micro": "a small cup on the rail",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a hillside cafe with stepped terraces",
+    "scene_details": "painted railings and the harbour laid out below"
    },
    {
     "tier": "B",
@@ -231,7 +257,9 @@
     "eye_contact": true,
     "micro": "a canvas tote on one shoulder",
     "people": "background_ok",
-    "light": "K1"
+    "light": "K1",
+    "location": "a painted-mural stair street",
+    "scene_details": "low houses either side and potted plants on the steps"
    },
    {
     "tier": "A",
@@ -246,7 +274,9 @@
     "eye_contact": false,
     "micro": "a straw bag on one shoulder",
     "people": "background_ok",
-    "light": "K9"
+    "light": "K9",
+    "location": "a wooden boardwalk above a beach at golden hour",
+    "scene_details": "a rope rail and the sea going bright behind"
    }
   ]
  },
@@ -269,7 +299,9 @@
     "eye_contact": true,
     "micro": "a bottled drink on the cooler lid beside her",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "a corner shop entrance at night",
+    "scene_details": "a chest cooler beside the door and handwritten price cards on the glass"
    },
    {
     "tier": "C",
@@ -284,7 +316,9 @@
     "eye_contact": true,
     "micro": "a small structured handbag",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored lift interior in an old shopping arcade",
+    "scene_details": "brass trim and a lit floor panel beside her"
    },
    {
     "tier": "B",
@@ -299,7 +333,9 @@
     "eye_contact": true,
     "micro": "a woven straw bag on one arm",
     "people": "background_ok",
-    "light": "K6"
+    "light": "K3",
+    "location": "a heritage street of painted shophouses",
+    "scene_details": "tiled five-foot way, wooden shutters and hanging baskets"
    },
    {
     "tier": "B",
@@ -314,7 +350,9 @@
     "eye_contact": true,
     "micro": "a small cup and saucer on the table",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a kopitiam with marble-topped tables",
+    "scene_details": "bentwood chairs and a tiled counter behind"
    },
    {
     "tier": "A",
@@ -329,7 +367,9 @@
     "eye_contact": false,
     "micro": "a beaded clutch",
     "people": "background_ok",
-    "light": "K12"
+    "light": "K12",
+    "location": "a colonial-era hotel veranda at night",
+    "scene_details": "ceiling fans, rattan chairs and warm lamps along the arches"
    }
   ]
  },
@@ -352,7 +392,9 @@
     "eye_contact": true,
     "micro": "a barcode scanner resting on the counter",
     "people": "solo",
-    "light": "K15"
+    "light": "K15",
+    "location": "a wholesale garment aisle",
+    "scene_details": "racks of plastic-wrapped stock either side and a strip-lit ceiling above"
    },
    {
     "tier": "C",
@@ -367,7 +409,9 @@
     "eye_contact": true,
     "micro": "a black quilted chain bag on her shoulder",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a full-length mirror leaning against a stockroom wall",
+    "scene_details": "boxes stacked either side and a roll of tape on the floor"
    },
    {
     "tier": "B",
@@ -382,7 +426,9 @@
     "eye_contact": true,
     "micro": "a paper carrier bag hanging from her shoulder",
     "people": "background_ok",
-    "light": "K5"
+    "light": "K5",
+    "location": "a lane of small clothing shops with awnings and hanging stock",
+    "scene_details": "evening lights just coming on"
    },
    {
     "tier": "B",
@@ -399,7 +445,9 @@
     "people": "background_ok",
     "light": "K7",
     "continuity_from": 3,
-    "continuity_evolution": "the shirt knot retied looser and higher, the shorts creased at the front from sitting and the sleeves rolled to the elbow"
+    "continuity_evolution": "the shirt knot retied looser and higher, the shorts creased at the front from sitting and the sleeves rolled to the elbow",
+    "location": "a cafe two doors down with a timber counter",
+    "scene_details": "tall stools and a window onto the lane"
    },
    {
     "tier": "A",
@@ -414,7 +462,9 @@
     "eye_contact": false,
     "micro": "a small chain-strap bag",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a rooftop terrace at night with string lights overhead",
+    "scene_details": "a low rail and the city spread out behind"
    }
   ]
  }

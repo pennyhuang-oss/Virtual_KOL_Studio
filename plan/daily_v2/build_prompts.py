@@ -43,8 +43,13 @@ MIRROR_GUARD = ("The only reflection is her own; there is no second person and n
 # 會照出人像的反射面（水面／濕柏油反射天空不算）。v1 有這條，v2 重寫時漏掉，
 # 造成 jia-seo D5 有鏡面柱子卻沒有反射完整性句 —— 就是 v1 rin D4 的失效模式。
 REFLECTIVE = re.compile(r"\bmirror\b|\bmirrored\b|her reflection|reflective surface", re.I)
+def scene_text(slot):
+    """場景的完整文字。2026-09-09 把 scene 拆成 location + scene_details 之後，
+    所有原本讀 scene 的檢查都必須讀這個合體，否則會像我一開始那樣檢查到已停用的欄位。"""
+    return slot.get("location","")+", "+slot.get("scene_details","")
+
 def has_reflective(slot):
-    return bool(REFLECTIVE.search(slot["scene"]) or REFLECTIVE.search(slot["pose"]))
+    return bool(REFLECTIVE.search(scene_text(slot)) or REFLECTIVE.search(slot["pose"]))
 
 # 次要鏡面：畫面裡有鏡子但相機不是它。仍必須擋掉第二個人與第二支手機。
 MIRROR_SECONDARY = ("The only reflection in that mirror is her own; there is no second person and no "
@@ -134,7 +139,7 @@ def build(p, s):
     if s.get("continuity_from"):
         L.append("This is the exact same outfit as earlier that same day, the same garments in the "
                  "same colours, worn a few hours on: "+s.get("continuity_evolution","")+".")
-    L.append("She is in "+s["scene"]+".")
+    L.append(f"She is in {s['location']}, with {s['scene_details']}.")
     L.append(s["pose"])                                  # R5 具體姿勢
     L.append(s["expression"])                             # R5 具名表情
     L.append(LIGHT[s["light"]])                           # R3 主光在臉上
@@ -164,6 +169,11 @@ SCENE_LIGHT = [
  (re.compile(r'rooftop|bar at night|wine bar|hotel (?:bar|veranda)|music bar|lounge at night|'
              r'lantern-lit|at dusk|bath terrace', re.I), {"K8","K12"}),
  (re.compile(r'beach|paddy-field|boardwalk', re.I), {"K9"}),
+ # U3（2026-09-09）：K6「午後低斜陽＋長影」在 rin D4 柱廊連續兩次沒讀出來，
+ # 出來是散射光、無方向性、無長影。判定該句在有遮蔽的建築場景無效，改用 K3（對面淺牆反射）。
+ # 這是資料映射修正，不是新增黑名單。
+ (re.compile(r'colonnade|shopping arcade|five-foot way|covered|courtyard|under the|shophouse|'
+             r'\barch\b|lobby|passage', re.I), {"K3","K7","K14","K12","K8","K5","K10","K15","K11"}),
 ]
 
 # 這三句光線斷言了夜晚／夜間燈光，場景就必須也是夜晚，否則畫面自相矛盾
@@ -223,7 +233,7 @@ def audit(pid,n,s,txt,p):
     # R1：非鏡面格不得出現任何相機／拍攝者實體
     if s["view"]!="mirror_half":
         for w in ("phone","tripod","camera app","selfie stick","person holding"):
-            if w in (s["scene"]+" "+s["micro"]+" "+s["pose"]).lower():
+            if w in (scene_text(s)+" "+s["micro"]+" "+s["pose"]).lower():
                 e.append(f"R1 非鏡面格的場景/隨身物/姿勢寫了相機實體: {w}")
     if "Everything in this picture is accounted for" not in txt: e.append("R1 封閉集合句缺失")
     if s["view"]=="mirror_half" and "no second phone" not in txt: e.append("R1 鏡面排除句缺失")
@@ -242,16 +252,23 @@ def audit(pid,n,s,txt,p):
     # R3：光線必須在白名單詞庫內（詞庫每句都已通過 §18 檢查）
     if s["light"] not in LIGHT: e.append(f"R3 未知光線代碼 {s['light']}")
     for rx,allowed in SCENE_LIGHT:
-        if rx.search(s["scene"]) and s["light"] not in allowed:
+        if rx.search(scene_text(s)) and s["light"] not in allowed:
             e.append(f"R3 光線 {s['light']} 與場景類別不符（此類場景可用 {sorted(allowed)}）")
             break
 
     # 光線斷言夜晚 → 場景也必須是夜晚
-    if s["light"] in NIGHT_LIGHT and not NIGHT_SCENE.search(s["scene"]):
+    if s["light"] in NIGHT_LIGHT and not NIGHT_SCENE.search(scene_text(s)):
         e.append(f"光線 {s['light']} 斷言夜晚，但場景沒有寫夜晚")
     # 場景首名詞不能是檯面（"She is in a … counter" 不通）
-    if SCENE_HEAD_BAD.match(s["scene"]):
-        e.append("場景首名詞是檯面／桌面，套進 'She is in' 文法不通")
+    # 2026-09-09 依 GPT R2 2-2：原本的「檯面黑名單」只是在記住一次事故
+    #（未來遇到 reception desk / checkout lane 還會再加 regex），
+    # 真正的不變量是「location 必須是能接在 She is in ... 後面的地點片語」。
+    # 拆成 location + scene_details 之後這個錯誤類別在資料層就消掉了，
+    # 這條保留為 lint，抓「把檯面誤填進 location」的資料輸入錯誤。
+    for fld in ("location","scene_details"):
+        if not s.get(fld): e.append(f"{fld} 空白")
+    if SCENE_HEAD_BAD.match(s.get("location","")):
+        e.append("location 首名詞是檯面／桌面，不是地點——應移到 scene_details")
 
     # R4-A：每套都要有露出（使用者 2026-09-09 裁決）
     if not SKIN.search(s["outfit"]):

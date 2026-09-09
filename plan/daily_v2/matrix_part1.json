@@ -18,7 +18,9 @@
     "eye_contact": true,
     "micro": "a canned coffee standing on the shelf edge beside her",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "the doorway of a convenience store at night",
+    "scene_details": "a chest freezer humming beside her and a laminated price board taped to the glass"
    },
    {
     "tier": "C",
@@ -33,7 +35,9 @@
     "eye_contact": true,
     "micro": "a black quilted chain bag on her shoulder",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "the mirrored back wall of a warehouse-store lift",
+    "scene_details": "a flat trolley parked beside her and a floor-number panel lit up"
    },
    {
     "tier": "B",
@@ -48,7 +52,9 @@
     "eye_contact": true,
     "micro": "an iced latte on the counter beside her",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a cafe with a long timber counter",
+    "scene_details": "a row of tall stools and dried flowers hung along the window frame"
    },
    {
     "tier": "B",
@@ -63,7 +69,9 @@
     "eye_contact": true,
     "micro": "a small crossbody pouch",
     "people": "background_ok",
-    "light": "K1"
+    "light": "K1",
+    "location": "a riverside walkway with a low concrete wall",
+    "scene_details": "tall grass on the bank and the city skyline soft behind it"
    },
    {
     "tier": "A",
@@ -78,7 +86,9 @@
     "eye_contact": false,
     "micro": "a small satin clutch",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a rooftop bar at night with a low glass rail",
+    "scene_details": "warm string lights overhead and the lit city spread out beyond"
    }
   ]
  },
@@ -101,7 +111,9 @@
     "eye_contact": true,
     "micro": "a woven bag on her shoulder with rambutan showing at the top",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a covered market aisle at midday",
+    "scene_details": "produce crates stacked either side and a plastic ceiling fan turning overhead"
    },
    {
     "tier": "C",
@@ -116,7 +128,9 @@
     "eye_contact": true,
     "micro": "a structured tan handbag on her shoulder",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "the mirrored lift lobby of an apartment block",
+    "scene_details": "brushed steel doors and a lit call panel beside her"
    },
    {
     "tier": "B",
@@ -131,7 +145,9 @@
     "eye_contact": true,
     "micro": "a slim notebook on the table",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a corner cafe with a marble-topped table",
+    "scene_details": "rattan chairs and patterned floor tiles"
    },
    {
     "tier": "B",
@@ -146,7 +162,9 @@
     "eye_contact": true,
     "micro": "a woven straw bag on one shoulder",
     "people": "background_ok",
-    "light": "K6"
+    "light": "K3",
+    "location": "a shophouse street with painted shutters",
+    "scene_details": "a five-foot way of tiled arches and potted palms along the kerb"
    },
    {
     "tier": "A",
@@ -161,7 +179,9 @@
     "eye_contact": false,
     "micro": "oversized sunglasses pushed up on her head",
     "people": "solo",
-    "light": "K9"
+    "light": "K9",
+    "location": "a shaded beach deck with pale timber boards",
+    "scene_details": "a rolled towel on the rail and turquoise water beyond"
    }
   ]
  },
@@ -184,7 +204,9 @@
     "eye_contact": true,
     "micro": "a small parcel resting on the ledge beside her",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a parcel-locker corner in a housing block lobby",
+    "scene_details": "a bank of numbered metal doors and a scuffed tiled floor"
    },
    {
     "tier": "C",
@@ -199,7 +221,9 @@
     "eye_contact": true,
     "micro": "a leather gym tote at her feet",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a full-length mirror at the end of a gym corridor",
+    "scene_details": "a stack of towels on a shelf and a water cooler beside it"
    },
    {
     "tier": "B",
@@ -214,7 +238,9 @@
     "eye_contact": true,
     "micro": "an espresso cup on the ledge beside her",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a courtyard of restored shophouses",
+    "scene_details": "arched windows, hanging ferns and a coffee window under the arcade"
    },
    {
     "tier": "B",
@@ -229,7 +255,9 @@
     "eye_contact": true,
     "micro": "a slim shoulder bag",
     "people": "background_ok",
-    "light": "K1"
+    "light": "K1",
+    "location": "a canal-side promenade with low stone steps",
+    "scene_details": "planted beds and glass towers soft behind"
    },
    {
     "tier": "A",
@@ -244,7 +272,9 @@
     "eye_contact": false,
     "micro": "a small box clutch on the counter",
     "people": "background_ok",
-    "light": "K12"
+    "light": "K12",
+    "location": "a hotel bar at night with a marble counter",
+    "scene_details": "brass fittings and warm downlights over the bottles"
    }
   ]
  },
@@ -267,7 +297,9 @@
     "eye_contact": true,
     "micro": "a paper cup of soda on the tray",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "a fast-food restaurant late at night",
+    "scene_details": "moulded plastic seating and a backlit menu board above the counter"
    },
    {
     "tier": "C",
@@ -282,7 +314,9 @@
     "eye_contact": true,
     "micro": "a slim crossbody bag worn across her body",
     "people": "solo",
-    "light": "K11"
+    "light": "K11",
+    "location": "the mirrored panel beside a convenience-store pickup machine",
+    "scene_details": "a stack of flattened boxes on the floor"
    },
    {
     "tier": "B",
@@ -297,7 +331,9 @@
     "eye_contact": true,
     "micro": "a paper bag of fruit on one arm",
     "people": "background_ok",
-    "light": "K6"
+    "light": "K6",
+    "location": "a lane of low brick houses with painted shutters",
+    "scene_details": "bougainvillea over a wall and a bicycle leaning by a door"
    },
    {
     "tier": "B",
@@ -312,7 +348,9 @@
     "eye_contact": true,
     "micro": "a ceramic mug on the table beside her",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a converted warehouse cafe with high windows",
+    "scene_details": "a polished concrete floor and a long communal table"
    },
    {
     "tier": "A",
@@ -327,7 +365,9 @@
     "eye_contact": false,
     "micro": "a small beaded bag",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a temple courtyard at dusk",
+    "scene_details": "carved stone columns, hanging lanterns just lit and a swept flagstone floor"
    }
   ]
  },
@@ -350,7 +390,9 @@
     "eye_contact": true,
     "micro": "a canned drink on the bench",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "a laundromat at night",
+    "scene_details": "a row of front-loaders behind her and a folding bench with a plastic basket"
    },
    {
     "tier": "C",
@@ -365,7 +407,9 @@
     "eye_contact": true,
     "micro": "a small quilted crossbody bag",
     "people": "solo",
-    "light": "K10"
+    "light": "K10",
+    "location": "a mirrored studio wall with a barre along it",
+    "scene_details": "a rolled mat propped in the corner"
    },
    {
     "tier": "B",
@@ -380,7 +424,9 @@
     "eye_contact": true,
     "micro": "a slim leather portfolio under one arm",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a narrow gallery street with white-rendered walls",
+    "scene_details": "a steel stair rail and a glass door with small brass lettering"
    },
    {
     "tier": "B",
@@ -395,7 +441,9 @@
     "eye_contact": true,
     "micro": "a small tray with a pastry on it",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a bakery cafe with a curved glass display",
+    "scene_details": "brass pendant lamps and tiled walls behind the counter"
    },
    {
     "tier": "A",
@@ -410,7 +458,9 @@
     "eye_contact": false,
     "micro": "a tiny metallic shoulder bag",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a basement music bar at night with a low ceiling",
+    "scene_details": "a neon strip along the back wall and a mirrored pillar"
    }
   ]
  }

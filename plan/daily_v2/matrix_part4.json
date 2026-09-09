@@ -18,7 +18,9 @@
     "eye_contact": true,
     "micro": "a paper bag of loose tea on the box beside her",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a canal-side grocery lane in the morning",
+    "scene_details": "produce boxes along the wall and a bicycle propped by a doorway"
    },
    {
     "tier": "C",
@@ -33,7 +35,9 @@
     "eye_contact": true,
     "micro": "a small shoulder bag",
     "people": "background_ok",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored panel by a metro station exit",
+    "scene_details": "ticket gates behind and a lit map on the wall"
    },
    {
     "tier": "B",
@@ -48,7 +52,9 @@
     "eye_contact": true,
     "micro": "a folded silk fan tucked into her waistband",
     "people": "background_ok",
-    "light": "K6"
+    "light": "K6",
+    "location": "a classical garden walkway with lattice windows",
+    "scene_details": "a moon gate and a still pond beyond"
    },
    {
     "tier": "B",
@@ -63,7 +69,9 @@
     "eye_contact": true,
     "micro": "a small porcelain cup on the table",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a teahouse with timber screens",
+    "scene_details": "low tables and a window onto a courtyard of stone and moss"
    },
    {
     "tier": "A",
@@ -78,7 +86,9 @@
     "eye_contact": false,
     "micro": "a small beaded bag",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a lantern-lit stone bridge at dusk",
+    "scene_details": "timber shopfronts along the water and reflections on the canal"
    }
   ]
  },
@@ -101,7 +111,9 @@
     "eye_contact": true,
     "micro": "a slim parcel on the counter in front of her",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a parcel-locker bank in an office-block lobby",
+    "scene_details": "numbered metal doors and a polished stone floor"
    },
    {
     "tier": "C",
@@ -116,7 +128,9 @@
     "eye_contact": true,
     "micro": "a structured black tote at her side",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored corridor by a gym entrance",
+    "scene_details": "a towel shelf and a glass wall onto the studio floor"
    },
    {
     "tier": "B",
@@ -131,7 +145,9 @@
     "eye_contact": true,
     "micro": "a small cup on the counter",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a coffee bar under an office tower",
+    "scene_details": "a stone counter, tall stools and a glass frontage onto the street"
    },
    {
     "tier": "B",
@@ -146,7 +162,9 @@
     "eye_contact": true,
     "micro": "a slim shoulder bag",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a restored shophouse courtyard with arched brick openings",
+    "scene_details": "hanging ferns and a tiled floor"
    },
    {
     "tier": "A",
@@ -161,7 +179,9 @@
     "eye_contact": false,
     "micro": "a small metallic clutch",
     "people": "background_ok",
-    "light": "K12"
+    "light": "K12",
+    "location": "a high bar at night with a marble counter",
+    "scene_details": "backlit bottle shelves and the lit skyline through the glass"
    }
   ]
  },
@@ -184,7 +204,9 @@
     "eye_contact": true,
     "micro": "a paper cup on the counter",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "a convenience store at night",
+    "scene_details": "a window counter with a row of stools facing the street and a hot-food case behind"
    },
    {
     "tier": "C",
@@ -199,7 +221,9 @@
     "eye_contact": true,
     "micro": "a small quilted chain bag",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored wall in an apartment gym corridor",
+    "scene_details": "a water cooler beside it and a stack of towels on a shelf"
    },
    {
     "tier": "B",
@@ -214,7 +238,9 @@
     "eye_contact": true,
     "micro": "a small cup and saucer on the table",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a gallery cafe with white walls",
+    "scene_details": "a pale stone counter and a run of arched windows"
    },
    {
     "tier": "B",
@@ -229,7 +255,9 @@
     "eye_contact": true,
     "micro": "a slim leather bag on one shoulder",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "a narrow street of small boutiques with rendered walls",
+    "scene_details": "steel stair rails and brass door lettering"
    },
    {
     "tier": "A",
@@ -244,7 +272,9 @@
     "eye_contact": false,
     "micro": "a small satin clutch",
     "people": "background_ok",
-    "light": "K8"
+    "light": "K8",
+    "location": "a rooftop lounge at night",
+    "scene_details": "low seating, warm lamps along the rail and the lit city behind"
    }
   ]
  },
@@ -267,7 +297,9 @@
     "eye_contact": true,
     "micro": "a small dish of vinegar on the counter",
     "people": "solo",
-    "light": "K13"
+    "light": "K13",
+    "location": "a late-night dumpling shop",
+    "scene_details": "a steel counter in front of her and stacked bamboo steamers behind"
    },
    {
     "tier": "C",
@@ -282,7 +314,9 @@
     "eye_contact": true,
     "micro": "a black quilted chain bag",
     "people": "solo",
-    "light": "K14"
+    "light": "K14",
+    "location": "a mirrored lift lobby in a residential tower",
+    "scene_details": "brushed steel doors and a lit call panel beside her"
    },
    {
     "tier": "B",
@@ -297,7 +331,9 @@
     "eye_contact": true,
     "micro": "a small cup on the counter",
     "people": "background_ok",
-    "light": "K7"
+    "light": "K7",
+    "location": "a coffee bar in a glass tower podium",
+    "scene_details": "a stone counter, tall stools and planters along the frontage"
    },
    {
     "tier": "B",
@@ -312,7 +348,9 @@
     "eye_contact": true,
     "micro": "a slim shoulder bag",
     "people": "background_ok",
-    "light": "K1"
+    "light": "K1",
+    "location": "a waterfront promenade with a low stone rail",
+    "scene_details": "planted beds and the far bank of towers soft behind"
    },
    {
     "tier": "A",
@@ -327,7 +365,9 @@
     "eye_contact": false,
     "micro": "a small box clutch on the counter",
     "people": "background_ok",
-    "light": "K12"
+    "light": "K12",
+    "location": "a high bar at night with a marble counter",
+    "scene_details": "brass fittings and the lit river bend through the glass"
    }
   ]
  },
@@ -350,7 +390,9 @@
     "eye_contact": true,
     "micro": "a posting slip on the counter",
     "people": "solo",
-    "light": "K15"
+    "light": "K15",
+    "location": "a rural post office",
+    "scene_details": "a franking machine on the worktop in front of her and a pinboard of notices behind"
    },
    {
     "tier": "C",
@@ -365,7 +407,9 @@
     "eye_contact": true,
     "micro": "a small canvas shoulder bag worn across her body",
     "people": "background_ok",
-    "light": "K3"
+    "light": "K3",
+    "location": "the glass door of a village shop",
+    "scene_details": "a red postbox at the kerb beside her and shelves visible inside"
    },
    {
     "tier": "B",
@@ -380,7 +424,9 @@
     "eye_contact": true,
     "micro": "a cat sitting on the step beside her",
     "people": "solo",
-    "light": "K7"
+    "light": "K7",
+    "location": "a wooden-floored old house converted to a shop",
+    "scene_details": "sliding glass doors open to a wet garden and rain off the eaves"
    },
    {
     "tier": "B",
@@ -395,7 +441,9 @@
     "eye_contact": true,
     "micro": "a woven basket standing on the wall beside her",
     "people": "background_ok",
-    "light": "K1"
+    "light": "K1",
+    "location": "a lane between low farmhouses",
+    "scene_details": "a stone wall along one side and citrus trees over it"
    },
    {
     "tier": "A",
@@ -410,7 +458,9 @@
     "eye_contact": false,
     "micro": "a straw hat held down at her side",
     "people": "background_ok",
-    "light": "K9"
+    "light": "K9",
+    "location": "a paddy-field path at golden hour",
+    "scene_details": "water bright on both sides and distant hills behind"
    }
   ]
  }
