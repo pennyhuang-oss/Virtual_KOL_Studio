@@ -51,9 +51,17 @@ FRAMING = {
 }
 
 # ── R2 好看：Soul 給身分，這一段給「好看」。每段強制帶。 ──────────────────────
+# 2026-09-09 修正：原本寫 "fine natural texture and a soft sheen"，在 zoey（訓練圖全素顏）
+# 身上讀成斑點色塊，在 rin（訓練圖有妝）身上才讀成光澤。
+# 回頭查 identity_master.json —— 產生那 20 張已認可臉孔的 prompt —— 它寫的是
+#   "Even, healthy-looking skin with fine natural texture AND subtle professional retouching"
+# 兩半成對。我只抄了「紋理」那一半，漏掉「修飾」那一半，紋理就變成瑕疵。
+# 這裡不再寫「紋理」（素顏調性的 Soul 會把它讀成不均勻），改寫均勻膚色＋修飾＋光落處的光澤，
+# 並補上 identity_master 也有的眼神光——真實感交給光線與構圖負責，不交給皮膚負責。
 GLOW = ("Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled "
         "separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her "
-        "skin is even and healthy with fine natural texture and a soft sheen where the light lands.")
+        "skin is even and healthy-looking with subtle professional retouching, clear and consistent "
+        "in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.")
 
 # ── R3 光線：每一句都讓主光落在她臉上。§18 檢查「她的臉是畫面最亮的區域之一嗎？」 ──
 # 逆光只能當輪廓光，且必須指名一個夠強的反射面把光丟回臉上。
@@ -70,7 +78,7 @@ LIGHT = {
       "of her clothes, the street behind her going dark.",
  "K6":"Late afternoon sun low and in front of her, warm across her face, her own long shadow "
       "running back behind her.",
- "K7":"Window light from the front-side in a cafe, clean on her face, the interior behind her "
+ "K7":"Window light from the front-side, clean on her face, the interior behind her "
       "falling into warm shadow with small bright highlights on glass.",
  "K8":"Blue evening light overall with one warm sign glowing in front of her, so her face carries "
       "the warm light and the street behind her stays cool.",
@@ -184,7 +192,7 @@ def audit(pid,n,s,txt,p):
     # R2：好看段落
     # 用獨立字面檢查 GLOW 真正要交付的三件事，不用整段常數比對——
     # 常數被清空時 "" in txt 恆真，會靜默放過（2026-09-09 反向測試抓到）
-    for frag,label in (("natural makeup","妝"),("hair is styled","髮型"),("fine natural texture","膚質")):
+    for frag,label in (("natural makeup","妝"),("hair is styled","髮型"),("subtle professional retouching","膚質修飾")):
         if frag not in txt: e.append(f"R2 GLOW 缺{label}")
     if "beautiful adult" not in txt: e.append("R2 開頭美貌詞缺失")
     for w in ("no retouching","no smoothing","unflattering","no beauty filter"):

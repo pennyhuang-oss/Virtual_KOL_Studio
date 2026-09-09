@@ -7,510 +7,10 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 326
+  "words": 339
  },
  {
   "persona": "angel-chiu",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K14",
-  "words": 332
- },
- {
-  "persona": "angel-chiu",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "日系學院",
-  "light": "K7",
-  "words": 342
- },
- {
-  "persona": "angel-chiu",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "針織慵懶",
-  "light": "K1",
-  "words": 328
- },
- {
-  "persona": "angel-chiu",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "夜間 glam",
-  "light": "K8",
-  "words": 321
- },
- {
-  "persona": "angeline-kwee",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K3",
-  "words": 358
- },
- {
-  "persona": "angeline-kwee",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K14",
-  "words": 319
- },
- {
-  "persona": "angeline-kwee",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "都會上班",
-  "light": "K7",
-  "words": 322
- },
- {
-  "persona": "angeline-kwee",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "洋裝",
-  "light": "K6",
-  "words": 328
- },
- {
-  "persona": "angeline-kwee",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "度假",
-  "light": "K9",
-  "words": 303
- },
- {
-  "persona": "cheryl-soh",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K14",
-  "words": 312
- },
- {
-  "persona": "cheryl-soh",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K14",
-  "words": 324
- },
- {
-  "persona": "cheryl-soh",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "都會上班",
-  "light": "K3",
-  "words": 321
- },
- {
-  "persona": "cheryl-soh",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "針織慵懶",
-  "light": "K1",
-  "words": 324
- },
- {
-  "persona": "cheryl-soh",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "夜間 glam",
-  "light": "K12",
-  "words": 310
- },
- {
-  "persona": "emma-kao",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K13",
-  "words": 329
- },
- {
-  "persona": "emma-kao",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "日系學院",
-  "light": "K11",
-  "words": 323
- },
- {
-  "persona": "emma-kao",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "洋裝",
-  "light": "K6",
-  "words": 333
- },
- {
-  "persona": "emma-kao",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "針織慵懶",
-  "light": "K7",
-  "words": 322
- },
- {
-  "persona": "emma-kao",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "洋裝",
-  "light": "K8",
-  "words": 297
- },
- {
-  "persona": "jia-seo",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K13",
-  "words": 325
- },
- {
-  "persona": "jia-seo",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K10",
-  "words": 327
- },
- {
-  "persona": "jia-seo",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "都會上班",
-  "light": "K3",
-  "words": 335
- },
- {
-  "persona": "jia-seo",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "日系學院",
-  "light": "K7",
-  "words": 319
- },
- {
-  "persona": "jia-seo",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "夜間 glam",
-  "light": "K8",
-  "words": 331
- },
- {
-  "persona": "kanon-komori",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K13",
-  "words": 337
- },
- {
-  "persona": "kanon-komori",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "日系學院",
-  "light": "K14",
-  "words": 357
- },
- {
-  "persona": "kanon-komori",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "洋裝",
-  "light": "K7",
-  "words": 343
- },
- {
-  "persona": "kanon-komori",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "針織慵懶",
-  "light": "K5",
-  "words": 344
- },
- {
-  "persona": "kanon-komori",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "夜間 glam",
-  "light": "K8",
-  "words": 326
- },
- {
-  "persona": "miu-shiraishi",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K15",
-  "words": 326
- },
- {
-  "persona": "miu-shiraishi",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K14",
-  "words": 323
- },
- {
-  "persona": "miu-shiraishi",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "都會上班",
-  "light": "K7",
-  "words": 332
- },
- {
-  "persona": "miu-shiraishi",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "針織慵懶",
-  "light": "K1",
-  "words": 334
- },
- {
-  "persona": "miu-shiraishi",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "洋裝",
-  "light": "K12",
-  "words": 318
- },
- {
-  "persona": "nanami-fujiwara",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K4",
-  "words": 322
- },
- {
-  "persona": "nanami-fujiwara",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "針織慵懶",
-  "light": "K10",
-  "words": 306
- },
- {
-  "persona": "nanami-fujiwara",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "洋裝",
-  "light": "K6",
-  "words": 323
- },
- {
-  "persona": "nanami-fujiwara",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "都會上班",
-  "light": "K7",
-  "words": 311
- },
- {
-  "persona": "nanami-fujiwara",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "度假",
-  "light": "K8",
-  "words": 267
- },
- {
-  "persona": "nico-tsai",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K13",
-  "words": 331
- },
- {
-  "persona": "nico-tsai",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K14",
-  "words": 333
- },
- {
-  "persona": "nico-tsai",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "都會上班",
-  "light": "K7",
-  "words": 336
- },
- {
-  "persona": "nico-tsai",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "日系學院",
-  "light": "K1",
-  "words": 324
- },
- {
-  "persona": "nico-tsai",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "夜間 glam",
-  "light": "K8",
-  "words": 320
- },
- {
-  "persona": "peggy-lee",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K5",
-  "words": 367
- },
- {
-  "persona": "peggy-lee",
-  "n": 2,
-  "tier": "C",
-  "view": "mirror_half",
-  "framing": "waist_up",
-  "zone": "運動休閒＋精品包",
-  "light": "K14",
-  "words": 325
- },
- {
-  "persona": "peggy-lee",
-  "n": 3,
-  "tier": "B",
-  "view": "friend_near",
-  "framing": "three_quarter",
-  "zone": "洋裝",
-  "light": "K6",
-  "words": 324
- },
- {
-  "persona": "peggy-lee",
-  "n": 4,
-  "tier": "B",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "都會上班",
-  "light": "K7",
-  "words": 328
- },
- {
-  "persona": "peggy-lee",
-  "n": 5,
-  "tier": "A",
-  "view": "friend_full",
-  "framing": "full_length",
-  "zone": "夜間 glam",
-  "light": "K12",
-  "words": 320
- },
- {
-  "persona": "rin-ayase",
-  "n": 1,
-  "tier": "C",
-  "view": "selfie_close",
-  "framing": "chest_up",
-  "zone": "貼身極簡",
-  "light": "K13",
-  "words": 315
- },
- {
-  "persona": "rin-ayase",
   "n": 2,
   "tier": "C",
   "view": "mirror_half",
@@ -520,6 +20,506 @@
   "words": 345
  },
  {
+  "persona": "angel-chiu",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "日系學院",
+  "light": "K7",
+  "words": 352
+ },
+ {
+  "persona": "angel-chiu",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "針織慵懶",
+  "light": "K1",
+  "words": 341
+ },
+ {
+  "persona": "angel-chiu",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "夜間 glam",
+  "light": "K8",
+  "words": 334
+ },
+ {
+  "persona": "angeline-kwee",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K3",
+  "words": 371
+ },
+ {
+  "persona": "angeline-kwee",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K14",
+  "words": 332
+ },
+ {
+  "persona": "angeline-kwee",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "都會上班",
+  "light": "K7",
+  "words": 332
+ },
+ {
+  "persona": "angeline-kwee",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "洋裝",
+  "light": "K6",
+  "words": 341
+ },
+ {
+  "persona": "angeline-kwee",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "度假",
+  "light": "K9",
+  "words": 316
+ },
+ {
+  "persona": "cheryl-soh",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K14",
+  "words": 325
+ },
+ {
+  "persona": "cheryl-soh",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K14",
+  "words": 337
+ },
+ {
+  "persona": "cheryl-soh",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "都會上班",
+  "light": "K3",
+  "words": 334
+ },
+ {
+  "persona": "cheryl-soh",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "針織慵懶",
+  "light": "K1",
+  "words": 337
+ },
+ {
+  "persona": "cheryl-soh",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "夜間 glam",
+  "light": "K12",
+  "words": 323
+ },
+ {
+  "persona": "emma-kao",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K13",
+  "words": 342
+ },
+ {
+  "persona": "emma-kao",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "日系學院",
+  "light": "K11",
+  "words": 336
+ },
+ {
+  "persona": "emma-kao",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "洋裝",
+  "light": "K6",
+  "words": 346
+ },
+ {
+  "persona": "emma-kao",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "針織慵懶",
+  "light": "K7",
+  "words": 332
+ },
+ {
+  "persona": "emma-kao",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "洋裝",
+  "light": "K8",
+  "words": 310
+ },
+ {
+  "persona": "jia-seo",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K13",
+  "words": 338
+ },
+ {
+  "persona": "jia-seo",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K10",
+  "words": 340
+ },
+ {
+  "persona": "jia-seo",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "都會上班",
+  "light": "K3",
+  "words": 348
+ },
+ {
+  "persona": "jia-seo",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "日系學院",
+  "light": "K7",
+  "words": 329
+ },
+ {
+  "persona": "jia-seo",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "夜間 glam",
+  "light": "K8",
+  "words": 344
+ },
+ {
+  "persona": "kanon-komori",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K13",
+  "words": 350
+ },
+ {
+  "persona": "kanon-komori",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "日系學院",
+  "light": "K14",
+  "words": 370
+ },
+ {
+  "persona": "kanon-komori",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "洋裝",
+  "light": "K7",
+  "words": 353
+ },
+ {
+  "persona": "kanon-komori",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "針織慵懶",
+  "light": "K5",
+  "words": 357
+ },
+ {
+  "persona": "kanon-komori",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "夜間 glam",
+  "light": "K8",
+  "words": 339
+ },
+ {
+  "persona": "miu-shiraishi",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K15",
+  "words": 339
+ },
+ {
+  "persona": "miu-shiraishi",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K14",
+  "words": 336
+ },
+ {
+  "persona": "miu-shiraishi",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "都會上班",
+  "light": "K7",
+  "words": 342
+ },
+ {
+  "persona": "miu-shiraishi",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "針織慵懶",
+  "light": "K1",
+  "words": 347
+ },
+ {
+  "persona": "miu-shiraishi",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "洋裝",
+  "light": "K12",
+  "words": 331
+ },
+ {
+  "persona": "nanami-fujiwara",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K4",
+  "words": 335
+ },
+ {
+  "persona": "nanami-fujiwara",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "針織慵懶",
+  "light": "K10",
+  "words": 319
+ },
+ {
+  "persona": "nanami-fujiwara",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "洋裝",
+  "light": "K6",
+  "words": 336
+ },
+ {
+  "persona": "nanami-fujiwara",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "都會上班",
+  "light": "K7",
+  "words": 321
+ },
+ {
+  "persona": "nanami-fujiwara",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "度假",
+  "light": "K8",
+  "words": 280
+ },
+ {
+  "persona": "nico-tsai",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K13",
+  "words": 344
+ },
+ {
+  "persona": "nico-tsai",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K14",
+  "words": 346
+ },
+ {
+  "persona": "nico-tsai",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "都會上班",
+  "light": "K7",
+  "words": 346
+ },
+ {
+  "persona": "nico-tsai",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "日系學院",
+  "light": "K1",
+  "words": 337
+ },
+ {
+  "persona": "nico-tsai",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "夜間 glam",
+  "light": "K8",
+  "words": 333
+ },
+ {
+  "persona": "peggy-lee",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K5",
+  "words": 380
+ },
+ {
+  "persona": "peggy-lee",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K14",
+  "words": 338
+ },
+ {
+  "persona": "peggy-lee",
+  "n": 3,
+  "tier": "B",
+  "view": "friend_near",
+  "framing": "three_quarter",
+  "zone": "洋裝",
+  "light": "K6",
+  "words": 337
+ },
+ {
+  "persona": "peggy-lee",
+  "n": 4,
+  "tier": "B",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "都會上班",
+  "light": "K7",
+  "words": 338
+ },
+ {
+  "persona": "peggy-lee",
+  "n": 5,
+  "tier": "A",
+  "view": "friend_full",
+  "framing": "full_length",
+  "zone": "夜間 glam",
+  "light": "K12",
+  "words": 333
+ },
+ {
+  "persona": "rin-ayase",
+  "n": 1,
+  "tier": "C",
+  "view": "selfie_close",
+  "framing": "chest_up",
+  "zone": "貼身極簡",
+  "light": "K13",
+  "words": 328
+ },
+ {
+  "persona": "rin-ayase",
+  "n": 2,
+  "tier": "C",
+  "view": "mirror_half",
+  "framing": "waist_up",
+  "zone": "運動休閒＋精品包",
+  "light": "K14",
+  "words": 358
+ },
+ {
   "persona": "rin-ayase",
   "n": 3,
   "tier": "B",
@@ -527,7 +527,7 @@
   "framing": "three_quarter",
   "zone": "都會上班",
   "light": "K7",
-  "words": 335
+  "words": 345
  },
  {
   "persona": "rin-ayase",
@@ -537,7 +537,7 @@
   "framing": "full_length",
   "zone": "都會上班",
   "light": "K6",
-  "words": 362
+  "words": 375
  },
  {
   "persona": "rin-ayase",
@@ -547,7 +547,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K12",
-  "words": 311
+  "words": 324
  },
  {
   "persona": "ruoruo-tang",
@@ -557,7 +557,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 347
+  "words": 360
  },
  {
   "persona": "ruoruo-tang",
@@ -567,7 +567,7 @@
   "framing": "waist_up",
   "zone": "日系學院",
   "light": "K14",
-  "words": 350
+  "words": 363
  },
  {
   "persona": "ruoruo-tang",
@@ -577,7 +577,7 @@
   "framing": "three_quarter",
   "zone": "洋裝",
   "light": "K6",
-  "words": 322
+  "words": 335
  },
  {
   "persona": "ruoruo-tang",
@@ -587,7 +587,7 @@
   "framing": "full_length",
   "zone": "針織慵懶",
   "light": "K1",
-  "words": 323
+  "words": 336
  },
  {
   "persona": "ruoruo-tang",
@@ -597,7 +597,7 @@
   "framing": "full_length",
   "zone": "洋裝",
   "light": "K8",
-  "words": 307
+  "words": 320
  },
  {
   "persona": "somi-oh",
@@ -607,7 +607,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 344
+  "words": 357
  },
  {
   "persona": "somi-oh",
@@ -617,7 +617,7 @@
   "framing": "waist_up",
   "zone": "運動休閒＋精品包",
   "light": "K14",
-  "words": 321
+  "words": 334
  },
  {
   "persona": "somi-oh",
@@ -627,7 +627,7 @@
   "framing": "three_quarter",
   "zone": "都會上班",
   "light": "K7",
-  "words": 330
+  "words": 340
  },
  {
   "persona": "somi-oh",
@@ -637,7 +637,7 @@
   "framing": "full_length",
   "zone": "日系學院",
   "light": "K1",
-  "words": 315
+  "words": 328
  },
  {
   "persona": "somi-oh",
@@ -647,7 +647,7 @@
   "framing": "full_length",
   "zone": "度假",
   "light": "K9",
-  "words": 331
+  "words": 344
  },
  {
   "persona": "sydney-leong",
@@ -657,7 +657,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 335
+  "words": 348
  },
  {
   "persona": "sydney-leong",
@@ -667,7 +667,7 @@
   "framing": "waist_up",
   "zone": "運動休閒＋精品包",
   "light": "K14",
-  "words": 318
+  "words": 331
  },
  {
   "persona": "sydney-leong",
@@ -677,7 +677,7 @@
   "framing": "three_quarter",
   "zone": "洋裝",
   "light": "K6",
-  "words": 323
+  "words": 336
  },
  {
   "persona": "sydney-leong",
@@ -687,7 +687,7 @@
   "framing": "full_length",
   "zone": "針織慵懶",
   "light": "K7",
-  "words": 325
+  "words": 335
  },
  {
   "persona": "sydney-leong",
@@ -697,7 +697,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K12",
-  "words": 305
+  "words": 318
  },
  {
   "persona": "tammy-chou",
@@ -707,7 +707,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K15",
-  "words": 328
+  "words": 341
  },
  {
   "persona": "tammy-chou",
@@ -717,7 +717,7 @@
   "framing": "waist_up",
   "zone": "運動休閒＋精品包",
   "light": "K14",
-  "words": 334
+  "words": 347
  },
  {
   "persona": "tammy-chou",
@@ -727,7 +727,7 @@
   "framing": "three_quarter",
   "zone": "都會上班",
   "light": "K5",
-  "words": 338
+  "words": 351
  },
  {
   "persona": "tammy-chou",
@@ -737,7 +737,7 @@
   "framing": "full_length",
   "zone": "都會上班",
   "light": "K7",
-  "words": 369
+  "words": 379
  },
  {
   "persona": "tammy-chou",
@@ -747,7 +747,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K8",
-  "words": 314
+  "words": 327
  },
  {
   "persona": "wanyin-jiang",
@@ -757,7 +757,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K3",
-  "words": 342
+  "words": 355
  },
  {
   "persona": "wanyin-jiang",
@@ -767,7 +767,7 @@
   "framing": "waist_up",
   "zone": "日系學院",
   "light": "K14",
-  "words": 337
+  "words": 350
  },
  {
   "persona": "wanyin-jiang",
@@ -777,7 +777,7 @@
   "framing": "three_quarter",
   "zone": "洋裝",
   "light": "K6",
-  "words": 319
+  "words": 332
  },
  {
   "persona": "wanyin-jiang",
@@ -787,7 +787,7 @@
   "framing": "full_length",
   "zone": "針織慵懶",
   "light": "K7",
-  "words": 319
+  "words": 329
  },
  {
   "persona": "wanyin-jiang",
@@ -797,7 +797,7 @@
   "framing": "full_length",
   "zone": "洋裝",
   "light": "K8",
-  "words": 297
+  "words": 310
  },
  {
   "persona": "wendy-yeo",
@@ -807,7 +807,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K14",
-  "words": 309
+  "words": 322
  },
  {
   "persona": "wendy-yeo",
@@ -817,7 +817,7 @@
   "framing": "waist_up",
   "zone": "運動休閒＋精品包",
   "light": "K14",
-  "words": 319
+  "words": 332
  },
  {
   "persona": "wendy-yeo",
@@ -827,7 +827,7 @@
   "framing": "three_quarter",
   "zone": "都會上班",
   "light": "K7",
-  "words": 324
+  "words": 334
  },
  {
   "persona": "wendy-yeo",
@@ -837,7 +837,7 @@
   "framing": "full_length",
   "zone": "洋裝",
   "light": "K3",
-  "words": 300
+  "words": 313
  },
  {
   "persona": "wendy-yeo",
@@ -847,7 +847,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K12",
-  "words": 311
+  "words": 324
  },
  {
   "persona": "yerin-han",
@@ -857,7 +857,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 328
+  "words": 341
  },
  {
   "persona": "yerin-han",
@@ -867,7 +867,7 @@
   "framing": "waist_up",
   "zone": "運動休閒＋精品包",
   "light": "K14",
-  "words": 316
+  "words": 329
  },
  {
   "persona": "yerin-han",
@@ -877,7 +877,7 @@
   "framing": "three_quarter",
   "zone": "洋裝",
   "light": "K7",
-  "words": 334
+  "words": 344
  },
  {
   "persona": "yerin-han",
@@ -887,7 +887,7 @@
   "framing": "full_length",
   "zone": "都會上班",
   "light": "K3",
-  "words": 323
+  "words": 336
  },
  {
   "persona": "yerin-han",
@@ -897,7 +897,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K8",
-  "words": 309
+  "words": 322
  },
  {
   "persona": "zhiyi-shen",
@@ -907,7 +907,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K13",
-  "words": 314
+  "words": 327
  },
  {
   "persona": "zhiyi-shen",
@@ -917,7 +917,7 @@
   "framing": "waist_up",
   "zone": "運動休閒＋精品包",
   "light": "K14",
-  "words": 323
+  "words": 336
  },
  {
   "persona": "zhiyi-shen",
@@ -927,7 +927,7 @@
   "framing": "three_quarter",
   "zone": "都會上班",
   "light": "K7",
-  "words": 326
+  "words": 336
  },
  {
   "persona": "zhiyi-shen",
@@ -937,7 +937,7 @@
   "framing": "full_length",
   "zone": "針織慵懶",
   "light": "K1",
-  "words": 327
+  "words": 340
  },
  {
   "persona": "zhiyi-shen",
@@ -947,7 +947,7 @@
   "framing": "full_length",
   "zone": "夜間 glam",
   "light": "K12",
-  "words": 307
+  "words": 320
  },
  {
   "persona": "zoey-yeh",
@@ -957,7 +957,7 @@
   "framing": "chest_up",
   "zone": "貼身極簡",
   "light": "K15",
-  "words": 332
+  "words": 345
  },
  {
   "persona": "zoey-yeh",
@@ -967,7 +967,7 @@
   "framing": "waist_up",
   "zone": "日系學院",
   "light": "K3",
-  "words": 355
+  "words": 368
  },
  {
   "persona": "zoey-yeh",
@@ -977,7 +977,7 @@
   "framing": "three_quarter",
   "zone": "洋裝",
   "light": "K7",
-  "words": 304
+  "words": 314
  },
  {
   "persona": "zoey-yeh",
@@ -987,7 +987,7 @@
   "framing": "full_length",
   "zone": "針織慵懶",
   "light": "K1",
-  "words": 316
+  "words": 329
  },
  {
   "persona": "zoey-yeh",
@@ -997,6 +997,6 @@
   "framing": "full_length",
   "zone": "度假",
   "light": "K9",
-  "words": 312
+  "words": 325
  }
 ]

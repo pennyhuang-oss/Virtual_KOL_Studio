@@ -8,7 +8,7 @@
 
 ## angel-chiu
 
-### angel-chiu — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　326 字
+### angel-chiu — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　339 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -19,14 +19,14 @@ She is in the doorway of a convenience store at night, a chest freezer humming b
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a canned coffee standing on the shelf edge beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### angel-chiu — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　332 字
+### angel-chiu — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　345 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -37,7 +37,7 @@ She is in the mirrored back wall of a warehouse-store lift, a flat trolley parke
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a black quilted chain bag on her shoulder.
@@ -45,7 +45,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### angel-chiu — D3　[B 級]　日系學院　friend_near　three_quarter　光:K7　342 字
+### angel-chiu — D3　[B 級]　日系學院　friend_near　three_quarter　光:K7　352 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -55,8 +55,8 @@ She wears a white cropped tee tucked into a brown checked mini skirt, white sock
 She is in a cafe with a long timber counter, a row of tall stools and dried flowers hung along the window frame.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: an iced latte on the counter beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -64,7 +64,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### angel-chiu — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　328 字
+### angel-chiu — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　341 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -75,7 +75,7 @@ She is in a riverside walkway with a low concrete wall, tall grass on the bank a
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small crossbody pouch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -83,7 +83,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### angel-chiu — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　321 字
+### angel-chiu — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　334 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -94,7 +94,7 @@ She is in a rooftop bar at night with a low glass rail, warm string lights overh
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small satin clutch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -106,7 +106,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## angeline-kwee
 
-### angeline-kwee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　358 字
+### angeline-kwee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　371 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -117,14 +117,14 @@ She is in a covered market aisle at midday, produce crates stacked either side a
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a woven bag on her shoulder with rambutan showing at the top.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### angeline-kwee — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　319 字
+### angeline-kwee — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　332 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -135,7 +135,7 @@ She is in the mirrored lift lobby of an apartment block, brushed steel doors and
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a structured tan handbag over one forearm.
@@ -143,7 +143,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### angeline-kwee — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　322 字
+### angeline-kwee — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　332 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -153,8 +153,8 @@ She wears a fitted cream sleeveless knit and dark straight-leg trousers with poi
 She is in a corner cafe with a marble-topped table, rattan chairs and patterned floor tiles.
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a slim notebook on the table.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -162,7 +162,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### angeline-kwee — D4　[B 級]　洋裝　friend_full　full_length　光:K6　328 字
+### angeline-kwee — D4　[B 級]　洋裝　friend_full　full_length　光:K6　341 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -173,7 +173,7 @@ She is in a shophouse street with painted shutters, a five-foot way of tiled arc
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a woven straw bag on one shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -181,7 +181,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### angeline-kwee — D5　[A 級]　度假　friend_full　full_length　光:K9　303 字
+### angeline-kwee — D5　[A 級]　度假　friend_full　full_length　光:K9　316 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -192,7 +192,7 @@ She is in a shaded beach deck with pale timber boards, a rolled towel on the rai
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Bright daylight bouncing up off pale ground in front of her, filling under the chin and keeping her face open and clear, the sky behind her brighter than she is.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: oversized sunglasses pushed up on her head.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -205,7 +205,7 @@ Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 
 ## cheryl-soh
 
-### cheryl-soh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　312 字
+### cheryl-soh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　325 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -216,14 +216,14 @@ She is in a parcel-locker corner in a housing block lobby, a bank of numbered me
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a small parcel tucked under one arm.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### cheryl-soh — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　324 字
+### cheryl-soh — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　337 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -234,7 +234,7 @@ She is in a full-length mirror at the end of a gym corridor, a stack of towels o
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a leather gym tote at her feet.
@@ -242,7 +242,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### cheryl-soh — D3　[B 級]　都會上班　friend_near　three_quarter　光:K3　321 字
+### cheryl-soh — D3　[B 級]　都會上班　friend_near　three_quarter　光:K3　334 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -253,14 +253,14 @@ She is in a courtyard of restored shophouses, arched windows, hanging ferns and 
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: an espresso cup on the ledge beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### cheryl-soh — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　324 字
+### cheryl-soh — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　337 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -271,7 +271,7 @@ She is in a canal-side promenade with low stone steps, planted beds and glass to
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim shoulder bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -279,7 +279,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### cheryl-soh — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　310 字
+### cheryl-soh — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　323 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -290,7 +290,7 @@ She is in a hotel bar at night with a marble counter, brass fittings and warm do
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small box clutch on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -302,7 +302,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## emma-kao
 
-### emma-kao — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　329 字
+### emma-kao — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　342 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -313,14 +313,14 @@ She is in a fast-food restaurant late at night, moulded plastic seating and a ba
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a paper cup of soda on the tray.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### emma-kao — D2　[C 級]　日系學院　mirror_half　waist_up　光:K11　323 字
+### emma-kao — D2　[C 級]　日系學院　mirror_half　waist_up　光:K11　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -331,7 +331,7 @@ She is in the mirrored panel beside a convenience-store pickup machine, a stack 
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Overhead daylight softened through cloud with a bright reflective surface in front of her — wet pavement, pale tiling — bouncing light back up into her face.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a slim crossbody bag worn across her body.
@@ -339,7 +339,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### emma-kao — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　333 字
+### emma-kao — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　346 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -350,7 +350,7 @@ She is in a lane of low brick houses with painted shutters, bougainvillea over a
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a paper bag of fruit on one arm.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -358,7 +358,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### emma-kao — D4　[B 級]　針織慵懶　friend_full　full_length　光:K7　322 字
+### emma-kao — D4　[B 級]　針織慵懶　friend_full　full_length　光:K7　332 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -368,8 +368,8 @@ She wears a cream fitted knit vest over a thin white long-sleeve with light deni
 She is in a converted warehouse cafe with high windows, a polished concrete floor and a long communal table.
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a ceramic mug held in her free hand.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -377,7 +377,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### emma-kao — D5　[A 級]　洋裝　friend_full　full_length　光:K8　297 字
+### emma-kao — D5　[A 級]　洋裝　friend_full　full_length　光:K8　310 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -388,7 +388,7 @@ She is in a temple courtyard at dusk, carved stone columns, hanging lanterns jus
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is happily absorbed in what she is doing, a real smile pulling at her mouth, her eyes following her own hands.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small beaded bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -400,7 +400,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## jia-seo
 
-### jia-seo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　325 字
+### jia-seo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　338 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -411,14 +411,14 @@ She is in a laundromat at night, a row of front-loaders behind her and a folding
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a canned drink on the bench.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### jia-seo — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K10　327 字
+### jia-seo — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K10　340 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -429,7 +429,7 @@ She is in a mirrored studio wall with a barre along it, a rolled mat propped in 
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Soft warm light from a vanity lamp directly in front of her face, the rest of the room falling quickly into shadow.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small quilted crossbody bag.
@@ -437,7 +437,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### jia-seo — D3　[B 級]　都會上班　friend_near　three_quarter　光:K3　335 字
+### jia-seo — D3　[B 級]　都會上班　friend_near　three_quarter　光:K3　348 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -448,14 +448,14 @@ She is in a narrow gallery street with white-rendered walls, a steel stair rail 
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a slim leather portfolio under one arm.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### jia-seo — D4　[B 級]　日系學院　friend_full　full_length　光:K7　319 字
+### jia-seo — D4　[B 級]　日系學院　friend_full　full_length　光:K7　329 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -465,8 +465,8 @@ She wears a white cropped shirt with a small collar over a checked mini skirt wi
 She is in a bakery cafe with a curved glass display, brass pendant lamps and tiled walls behind the counter.
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small tray with a pastry on it.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -474,7 +474,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### jia-seo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　331 字
+### jia-seo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　344 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -485,7 +485,7 @@ She is in a basement music bar at night with a low ceiling, a neon strip along t
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a tiny metallic shoulder bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -497,7 +497,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## kanon-komori
 
-### kanon-komori — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　337 字
+### kanon-komori — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　350 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -508,14 +508,14 @@ She is in a game-arcade aisle at night, claw machines glowing either side and a 
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a small plush keyring clipped to her belt loop.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### kanon-komori — D2　[C 級]　日系學院　mirror_half　waist_up　光:K14　357 字
+### kanon-komori — D2　[C 級]　日系學院　mirror_half　waist_up　光:K14　370 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -526,7 +526,7 @@ She is in a mirrored column outside a station exit, a row of ticket gates behind
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a clear-front shoulder bag.
@@ -534,7 +534,7 @@ A few anonymous strangers are in the mid-ground behind her going about their own
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### kanon-komori — D3　[B 級]　洋裝　friend_near　three_quarter　光:K7　343 字
+### kanon-komori — D3　[B 級]　洋裝　friend_near　three_quarter　光:K7　353 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -544,8 +544,8 @@ She wears a pale pink babydoll mini dress with puff sleeves and platform mary-ja
 She is in a themed cafe with pastel banquettes, a case of dessert plates and paper lanterns strung along the ceiling.
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a tall parfait glass on the table.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -553,7 +553,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### kanon-komori — D4　[B 級]　針織慵懶　friend_full　full_length　光:K5　344 字
+### kanon-komori — D4　[B 級]　針織慵懶　friend_full　full_length　光:K5　357 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -564,7 +564,7 @@ She is in a covered shopping street with lit signage overhead, a shuttered stall
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a paper shopping bag in her free hand.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -572,7 +572,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### kanon-komori — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　326 字
+### kanon-komori — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　339 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -583,7 +583,7 @@ She is in a narrow bar street at night, stacked neon signage up the building fac
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small chain-strap bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -595,7 +595,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## miu-shiraishi
 
-### miu-shiraishi — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　326 字
+### miu-shiraishi — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　339 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -606,7 +606,7 @@ She is in a coin laundry with a wall of dryers, a plastic stool and a vending ma
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a folded tote on the bench.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -614,7 +614,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### miu-shiraishi — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　323 字
+### miu-shiraishi — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -625,7 +625,7 @@ She is in a mirrored wall in a supermarket entrance, a stack of baskets beside h
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a black leather shoulder bag.
@@ -633,7 +633,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### miu-shiraishi — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　332 字
+### miu-shiraishi — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　342 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -643,8 +643,8 @@ She wears a fitted ecru shirt tucked into wide black trousers with a thin leathe
 She is in a specialty coffee shop with a concrete bar, a single-origin board on the wall and stools along the window.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup on the bar.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -652,7 +652,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### miu-shiraishi — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　334 字
+### miu-shiraishi — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　347 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -663,7 +663,7 @@ She is in a canal path lined with low trees, a stone bridge behind and old timbe
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim shoulder bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -671,7 +671,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### miu-shiraishi — D5　[A 級]　洋裝　friend_full　full_length　光:K12　318 字
+### miu-shiraishi — D5　[A 級]　洋裝　friend_full　full_length　光:K12　331 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -682,7 +682,7 @@ She is in a small wine bar at night with a zinc counter, shelves of bottles behi
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a glass of white wine on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -694,7 +694,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## nanami-fujiwara
 
-### nanami-fujiwara — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K4　322 字
+### nanami-fujiwara — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K4　335 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -705,7 +705,7 @@ She is in a rural station platform in the afternoon, a painted bench, a timetabl
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Bright overcast daylight coming from in front of her, even and flattering on the face, the sky behind her a touch brighter than she is.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a cold bottled tea on the bench beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -713,7 +713,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### nanami-fujiwara — D2　[C 級]　針織慵懶　mirror_half　waist_up　光:K10　306 字
+### nanami-fujiwara — D2　[C 級]　針織慵懶　mirror_half　waist_up　光:K10　319 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -724,7 +724,7 @@ She is in a roadside rest-stop washroom, a mirrored vanity with a run of basins 
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Soft warm light from a vanity lamp directly in front of her face, the rest of the room falling quickly into shadow.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small pouch lying open on the vanity beside the basin.
@@ -732,7 +732,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### nanami-fujiwara — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　323 字
+### nanami-fujiwara — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -743,7 +743,7 @@ She is in a hot-spring town lane with timber inn frontages, a stone gutter runni
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small drawstring pouch on her wrist.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -751,7 +751,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### nanami-fujiwara — D4　[B 級]　都會上班　friend_full　full_length　光:K7　311 字
+### nanami-fujiwara — D4　[B 級]　都會上班　friend_full　full_length　光:K7　321 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -761,8 +761,8 @@ She wears a fitted grey knit polo and a long navy skirt with loafers.
 She is in a hillside cafe with a wall of glass, a timber counter and forested slopes falling away outside.
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a paperback on the table.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -770,7 +770,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### nanami-fujiwara — D5　[A 級]　度假　friend_full　full_length　光:K8　267 字
+### nanami-fujiwara — D5　[A 級]　度假　friend_full　full_length　光:K8　280 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -781,7 +781,7 @@ She is in an open-air stone bath terrace at dusk, low lanterns along the edge an
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a folded towel over one forearm.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -793,7 +793,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## nico-tsai
 
-### nico-tsai — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　331 字
+### nico-tsai — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　344 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -804,14 +804,14 @@ She is in a late-night noodle shop, a steel counter in front of her, a stack of 
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a pair of chopsticks resting across a bowl.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### nico-tsai — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　333 字
+### nico-tsai — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　346 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -822,7 +822,7 @@ She is in a full-length mirror leaning by a lift in a converted-warehouse studio
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a black quilted chain bag on her shoulder.
@@ -830,7 +830,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### nico-tsai — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　336 字
+### nico-tsai — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　346 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -840,8 +840,8 @@ She wears a fitted white sleeveless knit and tailored cream trousers with pointe
 She is in a plant-filled cafe with a terrazzo counter, arched doorways and a run of stools by the window.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -849,7 +849,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### nico-tsai — D4　[B 級]　日系學院　friend_full　full_length　光:K1　324 字
+### nico-tsai — D4　[B 級]　日系學院　friend_full　full_length　光:K1　337 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -860,7 +860,7 @@ She is in a tree-lined campus walkway with brick buildings, low hedges and long 
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a canvas tote on one shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -868,7 +868,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### nico-tsai — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　320 字
+### nico-tsai — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　333 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -879,7 +879,7 @@ She is in a rooftop terrace at night with a low rail, warm bulbs strung overhead
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is happily absorbed in what she is doing, a real smile pulling at her mouth, her eyes following her own hands.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small satin clutch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -891,7 +891,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## peggy-lee
 
-### peggy-lee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K5　367 字
+### peggy-lee — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K5　380 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -902,7 +902,7 @@ She is in a hawker centre aisle in the evening, steel tables, a ceiling fan turn
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a plastic cup of iced tea on the table in front of her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -910,7 +910,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### peggy-lee — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　325 字
+### peggy-lee — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　338 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -921,7 +921,7 @@ She is in a mirrored wall by a condo gym entrance, a towel shelf and a glass doo
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a structured black handbag.
@@ -929,7 +929,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### peggy-lee — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　324 字
+### peggy-lee — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　337 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -940,7 +940,7 @@ She is in a row of restored shophouses with painted columns, ceramic tiles along
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small woven bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -948,7 +948,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### peggy-lee — D4　[B 級]　都會上班　friend_full　full_length　光:K7　328 字
+### peggy-lee — D4　[B 級]　都會上班　friend_full　full_length　光:K7　338 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -958,8 +958,8 @@ She wears a fitted cream shirt tucked into wide navy trousers with a thin belt a
 She is in a bright cafe with a white terrazzo bar, tall windows and rattan stools along them.
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim notebook on the bar.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -967,7 +967,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### peggy-lee — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　320 字
+### peggy-lee — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　333 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -978,7 +978,7 @@ She is in a hotel rooftop bar at night with a lit pool edge, low lounge seating 
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small clutch under one arm.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -990,7 +990,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## rin-ayase
 
-### rin-ayase — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　315 字
+### rin-ayase — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　328 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1001,14 +1001,14 @@ She is in a convenience store aisle late at night, a chilled drinks cabinet glow
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a canned coffee standing on the shelf edge beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### rin-ayase — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　345 字
+### rin-ayase — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　358 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1019,7 +1019,7 @@ She is in the mirrored wall of a station passage, tiled floor and a lit route-ma
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a black leather tote on one shoulder.
@@ -1027,7 +1027,7 @@ A few anonymous strangers are in the mid-ground behind her going about their own
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### rin-ayase — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　335 字
+### rin-ayase — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　345 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1037,8 +1037,8 @@ She wears a fitted camel knit with a round neck tucked into dark straight-leg tr
 She is in a coffee stand under an office building, a stone counter, a run of stools and a glass frontage onto the plaza.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1046,7 +1046,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### rin-ayase — D4　[B 級]　都會上班　friend_full　full_length　光:K6　362 字
+### rin-ayase — D4　[B 級]　都會上班　friend_full　full_length　光:K6　375 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1058,7 +1058,7 @@ She is in a plaza colonnade in the late afternoon, stone columns, long shadows a
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: the same leather tote on the other shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1066,7 +1066,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### rin-ayase — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　311 字
+### rin-ayase — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　324 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1077,7 +1077,7 @@ She is in a covered stone entrance of an old building at night, warm downlights 
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small satin clutch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1089,7 +1089,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## ruoruo-tang
 
-### ruoruo-tang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　347 字
+### ruoruo-tang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　360 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1100,14 +1100,14 @@ She is in a covered wet-market lane at midday, hanging scales, stacked baskets a
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a bag of loquats resting on the crate beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### ruoruo-tang — D2　[C 級]　日系學院　mirror_half　waist_up　光:K14　350 字
+### ruoruo-tang — D2　[C 級]　日系學院　mirror_half　waist_up　光:K14　363 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1118,7 +1118,7 @@ She is in a mirrored panel at a shopping-mall entrance, a directory board beside
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small shoulder bag.
@@ -1126,7 +1126,7 @@ A few anonymous strangers are in the mid-ground behind her going about their own
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### ruoruo-tang — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　322 字
+### ruoruo-tang — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　335 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1137,7 +1137,7 @@ She is in a teahouse courtyard with timber lattice screens, stone planters and a
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small porcelain cup on the stone ledge beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1145,7 +1145,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### ruoruo-tang — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　323 字
+### ruoruo-tang — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1156,7 +1156,7 @@ She is in a riverside teahouse terrace with timber decking, low stools and willo
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim shoulder bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1164,7 +1164,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### ruoruo-tang — D5　[A 級]　洋裝　friend_full　full_length　光:K8　307 字
+### ruoruo-tang — D5　[A 級]　洋裝　friend_full　full_length　光:K8　320 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1175,7 +1175,7 @@ She is in a lantern-lit old-town street at dusk, timber shopfronts, stone paving
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a folded fan in her free hand.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1187,7 +1187,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## somi-oh
 
-### somi-oh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　344 字
+### somi-oh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　357 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1198,14 +1198,14 @@ She is in a fish-market alley in the morning, blue plastic crates stacked along 
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a paper cup of coffee on the crate beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### somi-oh — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　321 字
+### somi-oh — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　334 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1216,7 +1216,7 @@ She is in a mirrored stairwell landing in a seaside apartment block, a window on
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small quilted chain bag.
@@ -1224,7 +1224,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### somi-oh — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　330 字
+### somi-oh — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　340 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1234,8 +1234,8 @@ She wears a fitted grey high-neck knit and a long charcoal skirt with heeled boo
 She is in a hillside cafe with stepped terraces, painted railings and the harbour laid out below.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup on the rail.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1243,7 +1243,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### somi-oh — D4　[B 級]　日系學院　friend_full　full_length　光:K1　315 字
+### somi-oh — D4　[B 級]　日系學院　friend_full　full_length　光:K1　328 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1254,7 +1254,7 @@ She is in a painted-mural stair street, low houses either side and potted plants
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a canvas tote on one shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1262,7 +1262,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### somi-oh — D5　[A 級]　度假　friend_full　full_length　光:K9　331 字
+### somi-oh — D5　[A 級]　度假　friend_full　full_length　光:K9　344 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1273,7 +1273,7 @@ She is in a wooden boardwalk above a beach at golden hour, a rope rail and the s
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Bright daylight bouncing up off pale ground in front of her, filling under the chin and keeping her face open and clear, the sky behind her brighter than she is.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a straw bag on one shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1286,7 +1286,7 @@ Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 
 ## sydney-leong
 
-### sydney-leong — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　335 字
+### sydney-leong — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　348 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1297,14 +1297,14 @@ She is in a corner shop entrance at night, a chest cooler beside the door and ha
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a bottled drink on the cooler lid beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### sydney-leong — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　318 字
+### sydney-leong — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　331 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1315,7 +1315,7 @@ She is in a mirrored lift interior in an old shopping arcade, brass trim and a l
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small structured handbag.
@@ -1323,7 +1323,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### sydney-leong — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　323 字
+### sydney-leong — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1334,7 +1334,7 @@ She is in a heritage street of painted shophouses, tiled five-foot way, wooden s
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a woven straw bag on one arm.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1342,7 +1342,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### sydney-leong — D4　[B 級]　針織慵懶　friend_full　full_length　光:K7　325 字
+### sydney-leong — D4　[B 級]　針織慵懶　friend_full　full_length　光:K7　335 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1352,8 +1352,8 @@ She wears a fitted oat rib knit with a wide neck and light denim jeans.
 She is in a kopitiam with marble-topped tables, bentwood chairs and a tiled counter behind.
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small cup and saucer on the table.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1361,7 +1361,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### sydney-leong — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　305 字
+### sydney-leong — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　318 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1372,7 +1372,7 @@ She is in a colonial-era hotel veranda at night, ceiling fans, rattan chairs and
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is happily absorbed in what she is doing, a real smile pulling at her mouth, her eyes following her own hands.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a beaded clutch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1384,7 +1384,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## tammy-chou
 
-### tammy-chou — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　328 字
+### tammy-chou — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　341 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1395,7 +1395,7 @@ She is in a wholesale garment aisle, racks of plastic-wrapped stock either side 
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a barcode scanner resting on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -1403,7 +1403,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### tammy-chou — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　334 字
+### tammy-chou — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　347 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1414,7 +1414,7 @@ She is in a full-length mirror leaning against a stockroom wall, boxes stacked e
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a black quilted chain bag on her shoulder.
@@ -1422,7 +1422,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### tammy-chou — D3　[B 級]　都會上班　friend_near　three_quarter　光:K5　338 字
+### tammy-chou — D3　[B 級]　都會上班　friend_near　three_quarter　光:K5　351 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1433,7 +1433,7 @@ She is in a lane of small clothing shops with awnings and hanging stock, evening
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a paper carrier bag hanging from her shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1441,7 +1441,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### tammy-chou — D4　[B 級]　都會上班　friend_full　full_length　光:K7　369 字
+### tammy-chou — D4　[B 級]　都會上班　friend_full　full_length　光:K7　379 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1452,8 +1452,8 @@ This is the exact same outfit as earlier that same day, the same garments in the
 She is in a cafe two doors down with a timber counter, tall stools and a window onto the lane.
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a cold drink on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1461,7 +1461,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### tammy-chou — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　314 字
+### tammy-chou — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　327 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1472,7 +1472,7 @@ She is in a rooftop terrace at night with string lights overhead, a low rail and
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small chain-strap bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1484,7 +1484,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## wanyin-jiang
 
-### wanyin-jiang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　342 字
+### wanyin-jiang — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K3　355 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1495,14 +1495,14 @@ She is in a canal-side grocery lane in the morning, produce boxes along the wall
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a paper bag of loose tea on the box beside her.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### wanyin-jiang — D2　[C 級]　日系學院　mirror_half　waist_up　光:K14　337 字
+### wanyin-jiang — D2　[C 級]　日系學院　mirror_half　waist_up　光:K14　350 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1513,7 +1513,7 @@ She is in a mirrored panel by a metro station exit, ticket gates behind and a li
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small shoulder bag.
@@ -1521,7 +1521,7 @@ A few anonymous strangers are in the mid-ground behind her going about their own
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### wanyin-jiang — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　319 字
+### wanyin-jiang — D3　[B 級]　洋裝　friend_near　three_quarter　光:K6　332 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1532,7 +1532,7 @@ She is in a classical garden walkway with lattice windows, a moon gate and a sti
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a folded silk fan tucked into her waistband.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1540,7 +1540,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### wanyin-jiang — D4　[B 級]　針織慵懶　friend_full　full_length　光:K7　319 字
+### wanyin-jiang — D4　[B 級]　針織慵懶　friend_full　full_length　光:K7　329 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1550,8 +1550,8 @@ She wears a fitted ivory rib knit with a boat neck and a long grey skirt.
 She is in a teahouse with timber screens, low tables and a window onto a courtyard of stone and moss.
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small porcelain cup on the table.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1559,7 +1559,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### wanyin-jiang — D5　[A 級]　洋裝　friend_full　full_length　光:K8　297 字
+### wanyin-jiang — D5　[A 級]　洋裝　friend_full　full_length　光:K8　310 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1570,7 +1570,7 @@ She is in a lantern-lit stone bridge at dusk, timber shopfronts along the water 
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small beaded bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1582,7 +1582,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## wendy-yeo
 
-### wendy-yeo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　309 字
+### wendy-yeo — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K14　322 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1593,14 +1593,14 @@ She is in a parcel-locker bank in an office-block lobby, numbered metal doors an
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a slim parcel under one arm.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### wendy-yeo — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　319 字
+### wendy-yeo — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　332 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1611,7 +1611,7 @@ She is in a mirrored corridor by a gym entrance, a towel shelf and a glass wall 
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a structured black tote at her side.
@@ -1619,7 +1619,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### wendy-yeo — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　324 字
+### wendy-yeo — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　334 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1629,8 +1629,8 @@ She wears a fitted white sleeveless knit and wide charcoal trousers with pointed
 She is in a coffee bar under an office tower, a stone counter, tall stools and a glass frontage onto the street.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1638,7 +1638,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### wendy-yeo — D4　[B 級]　洋裝　friend_full　full_length　光:K3　300 字
+### wendy-yeo — D4　[B 級]　洋裝　friend_full　full_length　光:K3　313 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1649,14 +1649,14 @@ She is in a restored shophouse courtyard with arched brick openings, hanging fer
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim shoulder bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### wendy-yeo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　311 字
+### wendy-yeo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　324 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1667,7 +1667,7 @@ She is in a high bar at night with a marble counter, backlit bottle shelves and 
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small metallic clutch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1679,7 +1679,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## yerin-han
 
-### yerin-han — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　328 字
+### yerin-han — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　341 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1690,14 +1690,14 @@ She is in a convenience store at night, a window counter with a row of stools fa
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a paper cup on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### yerin-han — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　316 字
+### yerin-han — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　329 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1708,7 +1708,7 @@ She is in a mirrored wall in an apartment gym corridor, a water cooler beside it
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small quilted chain bag.
@@ -1716,7 +1716,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### yerin-han — D3　[B 級]　洋裝　friend_near　three_quarter　光:K7　334 字
+### yerin-han — D3　[B 級]　洋裝　friend_near　three_quarter　光:K7　344 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1726,8 +1726,8 @@ She wears a soft beige satin slip midi dress with a fine knit cardigan and flat 
 She is in a gallery cafe with white walls, a pale stone counter and a run of arched windows.
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup and saucer on the table.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1735,7 +1735,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### yerin-han — D4　[B 級]　都會上班　friend_full　full_length　光:K3　323 字
+### yerin-han — D4　[B 級]　都會上班　friend_full　full_length　光:K3　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1746,14 +1746,14 @@ She is in a narrow street of small boutiques with rendered walls, steel stair ra
 She has stopped and turned back over her shoulder toward the lens, her weight on the far leg and her chin coming round past her shoulder, so the line of her back and hip carries the pose.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim leather bag on one shoulder.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### yerin-han — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　309 字
+### yerin-han — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　322 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1764,7 +1764,7 @@ She is in a rooftop lounge at night, low seating, warm lamps along the rail and 
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is caught mid-laugh, mouth open and cheeks lifted, her eyes bright and creased, looking just past the lens at whoever made her laugh.
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small satin clutch.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1776,7 +1776,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## zhiyi-shen
 
-### zhiyi-shen — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　314 字
+### zhiyi-shen — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K13　327 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1787,14 +1787,14 @@ She is in a late-night dumpling shop, a steel counter in front of her and stacke
 Her head is tipped a little toward the near shoulder with her chin slightly down and the far shoulder dropped away, so her neck reads long, and her fingertips rest flat against her collarbone.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a small dish of vinegar on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### zhiyi-shen — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　323 字
+### zhiyi-shen — D2　[C 級]　運動休閒＋精品包　mirror_half　waist_up　光:K14　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1805,7 +1805,7 @@ She is in a mirrored lift lobby in a residential tower, brushed steel doors and 
 She stands with her weight on the back foot and her upper body turned three-quarters, the near shoulder lowered and her spine long, so the line of her waist reads clearly.
 Her expression is quietly pleased, a small smile with her eyes warm and steady on the lens, as if she is looking at someone she likes.
 Bright even indoor lighting from panels in front of and above her catching her face, with the polished floor and the mirrored surfaces bouncing light back up into it.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a black quilted chain bag.
@@ -1813,7 +1813,7 @@ She is the only person in the photograph; no other people are visible anywhere i
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### zhiyi-shen — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　326 字
+### zhiyi-shen — D3　[B 級]　都會上班　friend_near　three_quarter　光:K7　336 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1823,8 +1823,8 @@ She wears a fitted black sleeveless knit and tailored white wide trousers with p
 She is in a coffee bar in a glass tower podium, a stone counter, tall stools and planters along the frontage.
 She is half-seated on the edge of something with her back long and her knees angled away from the lens, one palm pressed flat on the surface beside her taking her weight.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a small cup on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1832,7 +1832,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### zhiyi-shen — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　327 字
+### zhiyi-shen — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　340 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1843,7 +1843,7 @@ She is in a waterfront promenade with a low stone rail, planted beds and the far
 She stands with her feet crossed at the ankle and her weight on one hip, one hand gathering her hair at the nape and actually holding it clear of her neck.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a slim shoulder bag.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1851,7 +1851,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### zhiyi-shen — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　307 字
+### zhiyi-shen — D5　[A 級]　夜間 glam　friend_full　full_length　光:K12　320 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1862,7 +1862,7 @@ She is in a high bar at night with a marble counter, brass fittings and the lit 
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is happily absorbed in what she is doing, a real smile pulling at her mouth, her eyes following her own hands.
 Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a small box clutch on the counter.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1874,7 +1874,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 
 ## zoey-yeh
 
-### zoey-yeh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　332 字
+### zoey-yeh — D1　[C 級]　貼身極簡　selfie_close　chest_up　光:K15　345 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, chest-up.
@@ -1885,7 +1885,7 @@ She is in a rural post office, a franking machine on the worktop in front of her
 She is turned a few degrees off-axis with the near shoulder forward and her chin dipped a fraction, and she has just tucked her hair behind her ear with her fingers still resting against it, elbow kept low and close to her body.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
 Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else.
 Visible with her: a posting slip on the counter.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -1893,7 +1893,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### zoey-yeh — D2　[C 級]　日系學院　mirror_half　waist_up　光:K3　355 字
+### zoey-yeh — D2　[C 級]　日系學院　mirror_half　waist_up　光:K3　368 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, from the waist up.
@@ -1904,7 +1904,7 @@ She is in the glass door of a village shop, a red postbox at the kerb beside her
 She has one hip pushed out and her torso twisted slightly back toward the lens, shoulders down and spine long, her thumb hooked into the waistband.
 Her expression is playful — one brow a fraction higher, the near corner of her mouth lifted, her eyes crinkling with it — looking at the lens.
 Open shade with a bright pale wall directly opposite her throwing a broad soft light back into her face, the sunlit street beyond blown out behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A mirror selfie: she is photographing her own reflection, the phone in her own hand at chest height, and the frame is what that phone sees.
 The only reflection is her own; there is no second person and no second phone in the reflection, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a small canvas shoulder bag worn across her body.
@@ -1912,7 +1912,7 @@ A few anonymous strangers are in the mid-ground behind her going about their own
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
 ```
 
-### zoey-yeh — D3　[B 級]　洋裝　friend_near　three_quarter　光:K7　304 字
+### zoey-yeh — D3　[B 級]　洋裝　friend_near　three_quarter　光:K7　314 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, a three-quarter shot from the knees up.
@@ -1922,8 +1922,8 @@ She wears a pale blue linen midi dress with a soft collar and flat leather sanda
 She is in a wooden-floored old house converted to a shop, sliding glass doors open to a wet garden and rain off the eaves.
 She stands with her weight on one hip and the other knee soft, torso turned three-quarters to the lens and shoulders open, one hand settled on the curve of her waist.
 Her expression is a soft closed-lip smile with the warmth showing in her eyes rather than her mouth, looking right at the lens.
-Window light from the front-side in a cafe, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Window light from the front-side, clean on her face, the interior behind her falling into warm shadow with small bright highlights on glass.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 Shot from about a metre and a half away at her own eye level, a short portrait lens with the background falling into soft blur behind her.
 Visible with her: a cat sitting on the step beside her.
 She is the only person in the photograph; no other people are visible anywhere in the frame.
@@ -1931,7 +1931,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### zoey-yeh — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　316 字
+### zoey-yeh — D4　[B 級]　針織慵懶　friend_full　full_length　光:K1　329 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1942,7 +1942,7 @@ She is in a lane between low farmhouses, a stone wall along one side and citrus 
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.
 Low golden-hour sun coming in from the front at about forty-five degrees, warm on her face, with a bright rim along her hair and shoulder and the background falling darker behind her.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a woven basket on one arm.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
@@ -1950,7 +1950,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### zoey-yeh — D5　[A 級]　度假　friend_full　full_length　光:K9　312 字
+### zoey-yeh — D5　[A 級]　度假　friend_full　full_length　光:K9　325 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -1961,7 +1961,7 @@ She is in a paddy-field path at golden hour, water bright on both sides and dist
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is warm and easy, lips parted at the start of a smile, her eyes lit as she glances away past the camera at something off-frame.
 Bright daylight bouncing up off pale ground in front of her, filling under the chin and keeping her face open and clear, the sky behind her brighter than she is.
-Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy with fine natural texture and a soft sheen where the light lands.
+Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
 Visible with her: a straw hat held down at her side.
 A few anonymous strangers are in the mid-ground behind her going about their own business, backs turned or heads angled away, never looking at the camera, softly out of focus with slight motion blur, clearly different from her in build, age and clothing.
