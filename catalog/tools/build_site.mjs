@@ -9,6 +9,8 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import path from 'node:path';
+// 配對邏輯只有一份（權重、品類群、同義詞）。/match.html 與人設頁的雷達共用。
+import { buildIndex, COLS, cell, SYN } from './match_data.mjs';
 
 const DIR = path.join(import.meta.dirname, '..');
 const PUB = path.join(DIR, 'public');
@@ -130,6 +132,9 @@ const CSS = `
   --bg:#0b0b0d; --bg2:#1e1e26; --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.2);
   --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
   --accent:#d8b955; --accent2:#e7cd74;
+  /* 配對頁（/match.html）與人設頁雷達用。金色指回上面那兩個,不另開一套色票。 */
+  --card:#14141a; --card2:#1a1a22; --card3:#20202a;
+  --gold:var(--accent2); --gold2:var(--accent); --goldd:#8a7530; --dark:#17130a; --dotq:#4a4a56;
   --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
   --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
 }
@@ -532,7 +537,7 @@ footer p{margin:0 0 7px;max-width:720px}
 // 所以預覽卡不是加分項。⚠ og:image 一定要絕對網址,相對路徑抓不到。
 const SITE = 'https://kol-catalog-production.up.railway.app';
 
-const layout = (title, body, { desc = '', nav = '', ogImage = '' } = {}) => `<!doctype html>
+const layout = (title, body, { desc = '', nav = '', ogImage = '', css = '', js = '' } = {}) => `<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
@@ -552,13 +557,14 @@ ${ogImage ? `<meta property="og:image" content="${esc(SITE + ogImage)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
-<style>${CSS}</style>
+<style>${CSS}${css}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
   <nav>
     <a href="/kols.html"${nav === 'kols' ? ' class="on"' : ''}>全部人設</a>
+    <a href="/match.html"${nav === 'match' ? ' class="on"' : ''}>品牌配對</a>
     <a href="/pricing.html"${nav === 'pricing' ? ' class="on"' : ''}>報價</a>
   </nav>
 </div></header>
@@ -617,6 +623,9 @@ ${body}
   });
 })();
 </script>
+${js ? `<script>
+${js}
+</script>` : ''}
 </body></html>`;
 
 // ── 型錄牆（原本的首頁,使用者 2026-09-03 裁決搬到 /kols.html,內容不重做）──
@@ -634,6 +643,62 @@ if (held.length) console.log(`  ⏸ 還沒挑過素材，先不上型錄的 ${he
 const people = cat.personas
   .filter(p => !held.includes(p.id))
   .map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location), soc: socialOf(p.id) }));
+// 配對頁與雷達的樣式／版面／程式都在 tools/matcher/,不塞在這支裡面。
+const part = f => fs.readFileSync(path.join(import.meta.dirname, 'matcher', f), 'utf8');
+const RADAR_CSS = part('radar.css');
+
+// ── 配對索引。/match.html 與人設頁的雷達共用同一份、同一套權重。
+// 只有挑過素材的人設在裡面（buildIndex 自己讀 selection.json）,所以跟 people 對得上。
+const MIDX = buildIndex();
+const midx = Object.fromEntries(MIDX.map(o => [o.id, o]));
+{
+  const miss = people.filter(p => !midx[p.id]).map(p => p.id);
+  if (miss.length) throw new Error('配對索引少了這幾位，兩邊會對不上：' + miss.join('、'));
+}
+
+// 人設頁的合作品類雷達。建置時就畫成 SVG——不送索引到瀏覽器、關掉 JS 也看得到。
+// 🛑 只畫「有多少現成切入點」,不畫她不接什麼。分數低的軸顯示「—」而不是 0,
+//    因為 0 會被讀成「不能做」,而使用者的原則是人設隨時可以照客戶需求改。
+const radarSvg = (p) => {
+  const o = midx[p.id];
+  const cells = COLS.map(c => cell(o, c));
+  if (cells.every(c => !c.v)) return '';                  // 整張空的就不畫
+  const cx = 200, cy = 200, R = 130, n = COLS.length, max = Math.max(...cells.map(c => c.v));
+  const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n;
+    return [(cx + Math.cos(a) * R * v / 100).toFixed(1), (cy + Math.sin(a) * R * v / 100).toFixed(1)]; };
+  const g = [`<title id="radt-${esc(p.id)}">${esc(p.name)} 在 10 個合作品類上的可切入程度</title>`];
+  for (const ring of [25, 50, 75, 100])
+    g.push(`<polygon points="${COLS.map((_, i) => pt(i, ring).join(',')).join(' ')}" fill="none"
+      stroke="rgba(242,242,244,${ring === 100 ? '.18' : '.08'})"></polygon>`);
+  COLS.forEach((_, i) => g.push(`<line x1="${cx}" y1="${cy}" x2="${pt(i, 100)[0]}" y2="${pt(i, 100)[1]}"
+    stroke="rgba(242,242,244,.07)"></line>`));
+  g.push(`<polygon points="${cells.map((c, i) => pt(i, c.v).join(',')).join(' ')}"
+    fill="var(--accent2)" fill-opacity=".22" stroke="var(--accent2)" stroke-width="2"></polygon>`);
+  cells.forEach((c, i) => { if (!c.v) return; const [x, y] = pt(i, c.v);
+    g.push(`<circle cx="${x}" cy="${y}" r="${c.v === max ? 4.5 : 3}" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle>`); });
+  COLS.forEach((col, i) => {
+    const [x, y] = pt(i, 118), v = cells[i].v;
+    const anch = Math.abs(x - cx) < 12 ? 'middle' : (x > cx ? 'start' : 'end');
+    g.push(`<text class="rax${v === max ? ' hi' : ''}" x="${x}" y="${y}" text-anchor="${anch}">${esc(col.k)}</text>`);
+    g.push(`<text class="rv" x="${x}" y="${Number(y) + 12}" text-anchor="${anch}">${v || '—'}</text>`);
+  });
+  const strong = cells.map((c, i) => [COLS[i].k, c.v]).filter(x => x[1] >= 40).sort((a, b) => b[1] - a[1]);
+  const shape = strong.length >= 5 ? '通吃型　五個以上品類都有現成切入點'
+    : strong.length >= 3 ? '多面型　三到四個品類接得上'
+    : strong.length ? '專精型　集中在少數品類' : '起步型　切入點還在累積';
+  return `<div class="radbox">
+    <svg class="rad" viewBox="0 0 400 400" role="img" aria-labelledby="radt-${esc(p.id)}">${g.join('')}</svg>
+    <dl class="rkv">
+      <dt>形狀</dt><dd><b>${esc(shape)}</b></dd>
+      <dt>最強品類</dt><dd>${strong.length ? strong.slice(0, 3).map(x => esc(x[0]) + ' ' + x[1]).join('　') : '—'}</dd>
+      <dt>這張圖怎麼算</dt><dd>用她上面的合作方向、內容主題與角色設定去對十個常見品類，
+        算出「現在的設定裡有多少現成的切入點」。<a href="/match.html" style="color:var(--accent2)">同一套算法也可以反過來查</a>——輸入品牌，看 ${people.length} 位裡誰接得上。</dd>
+      <dt>要注意的</dt><dd>低分或「—」<b>不代表做不了</b>。設定可以照品牌需求重新調整，這裡量的是現況，不是能力上限。</dd>
+    </dl>
+  </div>`;
+};
+
 const totalImages = people.reduce((a, p) => a + p.media.image_count, 0);
 const totalVideos = people.reduce((a, p) => a + p.media.video_count, 0);
 
@@ -817,6 +882,7 @@ const personPage = p => {
 
   ${p.fit.length ? `<section class="sec"><h2>適合的合作方向</h2>
     <ul class="plain">${p.fit.slice(0, 8).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    ${radarSvg(p)}
     <p class="prose" style="margin-top:16px;font-size:13.5px">
       以上是依她現有人設最自然的方向。<b>虛擬 KOL 的設定可以依品牌需求調整</b>——
       選定了外形之後，內容主題與語氣都能配合合作內容重新設定。</p>
@@ -826,7 +892,7 @@ const personPage = p => {
   <p>${esc(p.name)} 為 AI 生成的虛擬角色，非真實人物。</p>
   <p><a href="/kols.html">← 回到全部人設</a></p>
 </div></footer>
-`, { desc: p.tagline || '', nav: 'kols', ogImage: p.a.hero || '' });
+`, { desc: p.tagline || '', nav: 'kols', ogImage: p.a.hero || '', css: RADAR_CSS });
 };
 
 
@@ -1079,6 +1145,28 @@ const pricingPage = layout('方案與報價 — 兌心科技', `
 </div></footer>
 `, { desc: '虛擬 KOL 經營的方案與報價。', nav: 'pricing', ogImage: heroPerson.a.hero });
 
+// ── 品牌配對（/match.html）──────────────────────────────────────────
+// 使用者 2026-09-09 裁決:配對器放前台給客戶看。原話「不是所有客戶我們都會直接對接，
+// 有可能像這個型錄會透過客戶分享給其他客戶」。
+// 🛑 索引裡的紅線詞只用來「靜靜排除」,不輸出成畫面上的文字——不對客戶說她不接什麼。
+// 🛑 分數低要有話講:那一節「分數低不等於做不了」是使用者對「不要寫死」那條顧慮的答覆,不要刪。
+const matchPage = layout('品牌配對定位 — 兌心科技虛擬 KOL 型錄',
+  part('match.body.html').replace('__N__', String(people.length)) + `
+<footer><div class="wrap">
+  <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物。</p>
+  <p><a href="/kols.html">← 回到全部人設</a></p>
+</div></footer>`,
+  { desc: `輸入品牌或題目，看 ${people.length} 位虛擬 KOL 誰接得上，以及那個分數是怎麼算出來的。`,
+    nav: 'match', ogImage: heroPerson.a.hero,
+    css: part('match.css'),
+    js: part('match.js')
+      .replace('__INDEX__', JSON.stringify(MIDX.map(o => ({
+        // 只送畫面上用得到的欄位。pdesc 只有 cell() 在建置時用,不必進瀏覽器。
+        id: o.id, name: o.name, zh: o.zh, cat: o.cat, tag: o.tag, aud: o.aud, mood: o.mood,
+        pil: o.pil, fit: o.fit, kw: o.kw, hooks: o.hooks, block: o.block,
+      }))))
+      .replace('__SYN__', JSON.stringify(SYN)) });
+
 // ── 寫檔 ────────────────────────────────────────────────────────────
 // 🛑 pick.html 是另一支程式（build_picker.mjs）產的,不要被這裡的清空掃掉。
 // 踩過的形狀：跑完 npm run site 之後挑選後台就從部署裡消失,而它不進 git 的話就回不來了。
@@ -1092,11 +1180,12 @@ if (pickHtml) fs.writeFileSync(path.join(PUB, 'pick.html'), pickHtml);
 fs.writeFileSync(path.join(PUB, 'index.html'), homePage);
 fs.writeFileSync(path.join(PUB, 'kols.html'), kolsPage);
 fs.writeFileSync(path.join(PUB, 'pricing.html'), pricingPage);
+fs.writeFileSync(path.join(PUB, 'match.html'), matchPage);
 for (const p of people) fs.writeFileSync(path.join(PUB, 'p', `${p.id}.html`), personPage(p));
 fs.writeFileSync(path.join(PUB, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
-console.log(`產生 ${people.length + 3} 頁 → ${PUB}`);
-for (const f of ['index.html', 'kols.html', 'pricing.html']) {
+console.log(`產生 ${people.length + 4} 頁 → ${PUB}`);
+for (const f of ['index.html', 'kols.html', 'pricing.html', 'match.html']) {
   console.log(`  ${f.padEnd(13)} ${(fs.statSync(path.join(PUB, f)).size / 1024).toFixed(0)} KB`);
 }
 console.log(`  p/*.html      ${people.length} 頁`);

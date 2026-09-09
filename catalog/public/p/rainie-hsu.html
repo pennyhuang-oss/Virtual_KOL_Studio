@@ -23,6 +23,9 @@
   --bg:#0b0b0d; --bg2:#1e1e26; --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.2);
   --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
   --accent:#d8b955; --accent2:#e7cd74;
+  /* 配對頁（/match.html）與人設頁雷達用。金色指回上面那兩個,不另開一套色票。 */
+  --card:#14141a; --card2:#1a1a22; --card3:#20202a;
+  --gold:var(--accent2); --gold2:var(--accent); --goldd:#8a7530; --dark:#17130a; --dotq:#4a4a56;
   --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
   --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
 }
@@ -418,6 +421,17 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
 footer p{margin:0 0 7px;max-width:720px}
 @media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
+/* 人設頁的合作品類雷達。整張圖在建置時就畫好了（純 SVG,不用 JS）。 */
+.radbox{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:26px;align-items:center;margin:22px 0 0}
+@media (max-width:820px){.radbox{grid-template-columns:1fr}}
+.radbox .rad{width:100%;aspect-ratio:1/1;max-width:30rem;margin:0 auto;display:block;overflow:visible}
+.radbox .rax{font-size:10.5px;fill:var(--ink3)}
+.radbox .rax.hi{fill:var(--accent2);font-weight:500}
+.radbox .rv{font-size:9.5px;fill:var(--ink4);font-variant-numeric:tabular-nums}
+.radbox .rkv{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:13.5px;margin:0}
+.radbox .rkv dt{color:var(--ink4);font-size:11.5px;letter-spacing:.06em;white-space:nowrap}
+.radbox .rkv dd{margin:0;color:var(--ink2)}
+.radbox .rkv dd b{color:var(--ink);font-weight:500}
 </style>
 </head>
 <body>
@@ -425,6 +439,7 @@ footer p{margin:0 0 7px;max-width:720px}
   <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
   <nav>
     <a href="/kols.html" class="on">全部人設</a>
+    <a href="/match.html">品牌配對</a>
     <a href="/pricing.html">報價</a>
   </nav>
 </div></header>
@@ -515,6 +530,37 @@ footer p{margin:0 0 7px;max-width:720px}
 
   <section class="sec"><h2>適合的合作方向</h2>
     <ul class="plain"><li>夜生活服飾——貼身洋裝、馬甲上衣、出門成套</li><li>造型感強的高跟鞋與珠寶</li><li>彩妝，尤其是眼線與眼妝</li><li>香水與髮品</li><li>她真的會出現的酒吧、夜店與飯店</li></ul>
+    <div class="radbox">
+    <svg class="rad" viewBox="0 0 400 400" role="img" aria-labelledby="radt-rainie-hsu"><title id="radt-rainie-hsu">Rainie Hsu 在 10 個合作品類上的可切入程度</title><polygon points="200.0,167.5 219.1,173.7 230.9,190.0 230.9,210.0 219.1,226.3 200.0,232.5 180.9,226.3 169.1,210.0 169.1,190.0 180.9,173.7" fill="none"
+      stroke="rgba(242,242,244,.08)"></polygon><polygon points="200.0,135.0 238.2,147.4 261.8,179.9 261.8,220.1 238.2,252.6 200.0,265.0 161.8,252.6 138.2,220.1 138.2,179.9 161.8,147.4" fill="none"
+      stroke="rgba(242,242,244,.08)"></polygon><polygon points="200.0,102.5 257.3,121.1 292.7,169.9 292.7,230.1 257.3,278.9 200.0,297.5 142.7,278.9 107.3,230.1 107.3,169.9 142.7,121.1" fill="none"
+      stroke="rgba(242,242,244,.08)"></polygon><polygon points="200.0,70.0 276.4,94.8 323.6,159.8 323.6,240.2 276.4,305.2 200.0,330.0 123.6,305.2 76.4,240.2 76.4,159.8 123.6,94.8" fill="none"
+      stroke="rgba(242,242,244,.18)"></polygon><line x1="200" y1="200" x2="200.0" y2="70.0"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="276.4" y2="94.8"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="323.6" y2="159.8"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="323.6" y2="240.2"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="276.4" y2="305.2"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="200.0" y2="330.0"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="123.6" y2="305.2"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="76.4" y2="240.2"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="76.4" y2="159.8"
+    stroke="rgba(242,242,244,.07)"></line><line x1="200" y1="200" x2="123.6" y2="94.8"
+    stroke="rgba(242,242,244,.07)"></line><polygon points="200.0,86.9 258.8,119.0 263.1,179.5 263.1,220.5 200.0,200.0 200.0,200.0 200.0,200.0 195.1,201.6 162.9,187.9 200.0,200.0"
+    fill="var(--accent2)" fill-opacity=".22" stroke="var(--accent2)" stroke-width="2"></polygon><circle cx="200.0" cy="86.9" r="4.5" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle><circle cx="258.8" cy="119.0" r="3" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle><circle cx="263.1" cy="179.5" r="3" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle><circle cx="263.1" cy="220.5" r="3" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle><circle cx="195.1" cy="201.6" r="3" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle><circle cx="162.9" cy="187.9" r="3" fill="var(--accent2)"
+      stroke="var(--bg)" stroke-width="1.5"></circle><text class="rax hi" x="200.0" y="46.6" text-anchor="middle">服飾穿搭</text><text class="rv" x="200.0" y="58.6" text-anchor="middle">87</text><text class="rax" x="290.2" y="75.9" text-anchor="start">美妝保養</text><text class="rv" x="290.2" y="87.9" text-anchor="start">77</text><text class="rax" x="345.9" y="152.6" text-anchor="start">飯店旅遊</text><text class="rv" x="345.9" y="164.6" text-anchor="start">51</text><text class="rax" x="345.9" y="247.4" text-anchor="start">餐飲食品</text><text class="rv" x="345.9" y="259.4" text-anchor="start">51</text><text class="rax" x="290.2" y="324.1" text-anchor="start">運動健身</text><text class="rv" x="290.2" y="336.1" text-anchor="start">—</text><text class="rax" x="200.0" y="353.4" text-anchor="middle">3C科技AI</text><text class="rv" x="200.0" y="365.4" text-anchor="middle">—</text><text class="rax" x="109.8" y="324.1" text-anchor="end">遊戲動漫</text><text class="rv" x="109.8" y="336.1" text-anchor="end">—</text><text class="rax" x="54.1" y="247.4" text-anchor="end">居家生活</text><text class="rv" x="54.1" y="259.4" text-anchor="end">4</text><text class="rax" x="54.1" y="152.6" text-anchor="end">精品配件</text><text class="rv" x="54.1" y="164.6" text-anchor="end">30</text><text class="rax" x="109.8" y="75.9" text-anchor="end">知識文化</text><text class="rv" x="109.8" y="87.9" text-anchor="end">—</text></svg>
+    <dl class="rkv">
+      <dt>形狀</dt><dd><b>多面型　三到四個品類接得上</b></dd>
+      <dt>最強品類</dt><dd>服飾穿搭 87　美妝保養 77　飯店旅遊 51</dd>
+      <dt>這張圖怎麼算</dt><dd>用她上面的合作方向、內容主題與角色設定去對十個常見品類，
+        算出「現在的設定裡有多少現成的切入點」。<a href="/match.html" style="color:var(--accent2)">同一套算法也可以反過來查</a>——輸入品牌，看 38 位裡誰接得上。</dd>
+      <dt>要注意的</dt><dd>低分或「—」<b>不代表做不了</b>。設定可以照品牌需求重新調整，這裡量的是現況，不是能力上限。</dd>
+    </dl>
+  </div>
     <p class="prose" style="margin-top:16px;font-size:13.5px">
       以上是依她現有人設最自然的方向。<b>虛擬 KOL 的設定可以依品牌需求調整</b>——
       選定了外形之後，內容主題與語氣都能配合合作內容重新設定。</p>
@@ -579,4 +625,5 @@ footer p{margin:0 0 7px;max-width:720px}
   });
 })();
 </script>
+
 </body></html>

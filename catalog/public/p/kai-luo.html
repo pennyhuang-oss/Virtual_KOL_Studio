@@ -23,6 +23,9 @@
   --bg:#0b0b0d; --bg2:#1e1e26; --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.2);
   --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
   --accent:#d8b955; --accent2:#e7cd74;
+  /* 配對頁（/match.html）與人設頁雷達用。金色指回上面那兩個,不另開一套色票。 */
+  --card:#14141a; --card2:#1a1a22; --card3:#20202a;
+  --gold:var(--accent2); --gold2:var(--accent); --goldd:#8a7530; --dark:#17130a; --dotq:#4a4a56;
   --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
   --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
 }
@@ -418,6 +421,17 @@ ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-spac
 footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
 footer p{margin:0 0 7px;max-width:720px}
 @media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
+/* 人設頁的合作品類雷達。整張圖在建置時就畫好了（純 SVG,不用 JS）。 */
+.radbox{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:26px;align-items:center;margin:22px 0 0}
+@media (max-width:820px){.radbox{grid-template-columns:1fr}}
+.radbox .rad{width:100%;aspect-ratio:1/1;max-width:30rem;margin:0 auto;display:block;overflow:visible}
+.radbox .rax{font-size:10.5px;fill:var(--ink3)}
+.radbox .rax.hi{fill:var(--accent2);font-weight:500}
+.radbox .rv{font-size:9.5px;fill:var(--ink4);font-variant-numeric:tabular-nums}
+.radbox .rkv{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:13.5px;margin:0}
+.radbox .rkv dt{color:var(--ink4);font-size:11.5px;letter-spacing:.06em;white-space:nowrap}
+.radbox .rkv dd{margin:0;color:var(--ink2)}
+.radbox .rkv dd b{color:var(--ink);font-weight:500}
 </style>
 </head>
 <body>
@@ -425,6 +439,7 @@ footer p{margin:0 0 7px;max-width:720px}
   <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
   <nav>
     <a href="/kols.html" class="on">全部人設</a>
+    <a href="/match.html">品牌配對</a>
     <a href="/pricing.html">報價</a>
   </nav>
 </div></header>
@@ -544,4 +559,5 @@ footer p{margin:0 0 7px;max-width:720px}
   });
 })();
 </script>
+
 </body></html>

@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>品牌配對定位 — 兌心科技虛擬 KOL 型錄</title>
+<meta name="description" content="輸入品牌或題目，看 38 位虛擬 KOL 誰接得上，以及那個分數是怎麼算出來的。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="兌心科技　數位人 KOL 品牌顧問服務">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="品牌配對定位 — 兌心科技虛擬 KOL 型錄">
+<meta property="og:description" content="輸入品牌或題目，看 38 位虛擬 KOL 誰接得上，以及那個分數是怎麼算出來的。">
+<meta property="og:image" content="https://kol-catalog-production.up.railway.app/assets/iris-chen/hero_0up7baw.jpg?v=a07bccc787">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1440">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d; --bg2:#1e1e26; --line:rgba(242,242,244,.12); --line2:rgba(242,242,244,.2);
+  --ink:#f4f0e8; --ink2:#c2c2cc; --ink3:#92929e; --ink4:#6f6f7c;
+  --accent:#d8b955; --accent2:#e7cd74;
+  /* 配對頁（/match.html）與人設頁雷達用。金色指回上面那兩個,不另開一套色票。 */
+  --card:#14141a; --card2:#1a1a22; --card3:#20202a;
+  --gold:var(--accent2); --gold2:var(--accent); --goldd:#8a7530; --dark:#17130a; --dotq:#4a4a56;
+  --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
+  --sans:"Noto Sans TC",-apple-system,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* ── 頁首 ── */
+.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;
+  background:rgba(11,11,13,.88);backdrop-filter:blur(14px)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{font-family:var(--serif);font-size:19px;letter-spacing:.06em}
+.brand b{color:var(--accent2);font-weight:600}
+.top nav{margin-left:auto;display:flex;gap:22px;font-size:13px;color:var(--ink2)}
+.top nav a:hover{color:var(--ink)}
+
+/* ── 開場 ── */
+.hero{padding:96px 0 56px;border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,5.4vw,60px);line-height:1.18;margin:0 0 22px;
+  font-weight:500;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--accent2)}
+.hero .lede{max-width:660px;color:var(--ink2);font-size:16.5px;margin:0 0 30px}
+.stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;max-width:760px}
+.stat{flex:1 1 150px;padding:18px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--serif);font-size:30px;color:var(--accent2);line-height:1.1}
+.stat span{font-size:12px;color:var(--ink3);letter-spacing:.08em}
+
+/* ── AI 揭露（首屏，CC-04）── */
+.disclose{margin-top:34px;border-left:2px solid var(--accent);background:var(--bg2);
+  padding:16px 20px;max-width:760px;border-radius:0 3px 3px 0}
+.disclose b{color:var(--accent2);font-weight:600}
+.disclose p{margin:6px 0 0;color:var(--ink2);font-size:13.5px}
+
+/* ── 篩選 ── */
+.filters{padding:30px 0 8px;position:sticky;top:64px;background:var(--bg);z-index:40;
+  border-bottom:1px solid var(--line)}
+.frow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.frow>span{font-size:11px;color:var(--ink3);letter-spacing:.12em;min-width:52px}
+.chip{border:1px solid var(--line2);background:transparent;color:var(--ink2);
+  padding:5px 13px;border-radius:100px;font-size:12.5px;cursor:pointer;font-family:inherit;
+  transition:.16s}
+.chip:hover{border-color:var(--ink3);color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
+.count{font-size:12px;color:var(--ink3);padding:10px 0 14px}
+
+/* ── 型錄牆 ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:22px;padding:22px 0 80px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  transition:.2s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--line2);transform:translateY(-3px)}
+.card .ph{aspect-ratio:3/4;background:#1a1a20;overflow:hidden;position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.4s}
+.card:hover .ph img{transform:scale(1.03)}
+.card .body{padding:15px 16px 17px}
+.card .nm{font-family:var(--serif);font-size:18px;margin:0 0 2px;font-weight:500}
+.card .zh{font-size:12px;color:var(--ink3);margin:0 0 9px}
+.card .tl{font-size:13px;color:var(--ink2);margin:0 0 12px;line-height:1.6;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:10.5px;letter-spacing:.05em;color:var(--ink3);border:1px solid var(--line2);
+  padding:2px 8px;border-radius:2px}
+.tag.k{color:var(--accent2);border-color:#4a3d16}
+
+/* ── 人設頁 ── */
+.pback{font-size:12.5px;color:var(--ink3);padding:26px 0 0}
+.pback:hover{color:var(--ink)}
+.phead{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:44px;padding:30px 0 46px;
+  border-bottom:1px solid var(--line);align-items:start}
+.phead .pimg{aspect-ratio:3/4;background:#1a1a20;border-radius:3px;overflow:hidden}
+.phead .pimg img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.phead h1{font-family:var(--serif);font-size:clamp(30px,4vw,44px);margin:0 0 4px;font-weight:500}
+.phead .zh{color:var(--ink3);font-size:14px;margin:0 0 18px}
+.phead .tl{font-size:18px;color:var(--accent2);font-family:var(--serif);line-height:1.6;margin:0 0 26px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:24px}
+.fact{background:var(--bg2);padding:13px 15px}
+.fact span{display:block;font-size:10.5px;color:var(--ink3);letter-spacing:.1em;margin-bottom:3px}
+.fact b{font-weight:500;font-size:13.5px}
+
+section.sec{padding:44px 0;border-bottom:1px solid var(--line)}
+section.sec>h2{font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--ink3);
+  text-transform:uppercase;margin:0 0 22px;font-weight:400}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px}
+.lbl{font-size:11px;letter-spacing:.1em;color:var(--ink3);margin:0 0 8px}
+.prose{color:var(--ink2);font-size:14.5px;margin:0}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:7px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2);
+  display:flex;justify-content:space-between;gap:14px}
+ul.plain li:last-child{border-bottom:0}
+ul.plain li b{color:var(--ink);font-weight:500}
+ul.plain li i{font-style:normal;color:var(--accent2);font-size:12.5px;white-space:nowrap}
+
+
+/* 社群連結:六個平台一列,規律等寬,hover 才上金色 */
+.soc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.soc a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px 8px 11px;
+  border:1px solid var(--line);border-radius:2px;font-size:12.5px;color:var(--ink2);
+  transition:.16s;letter-spacing:.02em}
+.soc a:hover,.soc a:focus-visible{border-color:var(--accent);color:var(--accent2)}
+.soc svg{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;
+  stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.soc .lbl{font-size:10.5px;letter-spacing:.14em;color:var(--ink3);align-self:center;
+  margin-right:4px;white-space:nowrap}
+@media(max-width:520px){.soc a{padding:8px 11px}.soc a span:not(.lbl){display:none}
+  .soc svg{width:17px;height:17px}}
+
+/* 圖庫 */
+/* 內容主題:名稱 ＋ 比重 ＋ 一句在講什麼 */
+.pil{border-top:1px solid var(--line);max-width:48rem}
+.pil>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;
+  grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.pil .nm{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.pil .wt{font-size:12.5px;color:var(--accent2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pil .de{grid-column:1/-1;margin:2px 0 0;color:var(--ink2);font-size:14px;line-height:1.74;
+  max-width:44rem}
+
+/* 目標受眾 */
+.aud1{margin:0 0 26px;padding:14px 18px;border-left:2px solid var(--line2);
+  background:var(--bg2);border-radius:0 2px 2px 0;max-width:48rem}
+.aud1 span{display:block;font-size:10.5px;letter-spacing:.14em;color:var(--ink3);margin-bottom:5px}
+.aud1 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.7;max-width:44rem}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.gal a{aspect-ratio:3/4;overflow:hidden;background:#1a1a20;border-radius:2px;display:block}
+.gal img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.3s}
+.gal a:hover img{transform:scale(1.04)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.vid{position:relative;aspect-ratio:9/16;background:#1a1a20;border-radius:2px;overflow:hidden}
+.vid img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;opacity:.82}
+.vid .play{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;color:#fff;
+  text-shadow:0 2px 14px rgba(0,0,0,.7);background:none;border:0;cursor:pointer;width:100%;
+  padding:0;font-family:inherit;transition:.18s}
+.vid .play:hover,.vid .play:focus-visible{background:rgba(216,185,85,.14);color:var(--accent2)}
+.vid.on img,.vid.on .play{display:none}
+.vid video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+/* 還沒轉好的（只有首幀圖沒有影片檔）不要給播放鈕,不然點了沒反應 */
+.vid.noplay .play{display:none}
+.vmore{margin:18px 0 0}
+.vmore button{background:transparent;border:1px solid var(--line2);color:var(--ink2);
+  padding:11px 22px;border-radius:2px;font:inherit;font-size:13.5px;cursor:pointer;transition:.18s}
+.vmore button:hover,.vmore button:focus-visible{border-color:var(--accent);color:var(--accent2)}
+
+/* 燈箱 */
+.lb{position:fixed;inset:0;background:rgba(6,6,8,.96);z-index:100;display:none;
+  place-items:center;padding:36px}
+.lb[open],.lb.on{display:grid}
+.lb img{max-width:100%;max-height:88vh;object-fit:contain;border-radius:2px}
+.lb button{position:absolute;top:22px;right:26px;background:none;border:1px solid var(--line2);
+  color:var(--ink);width:38px;height:38px;border-radius:100px;cursor:pointer;font-size:17px}
+
+/* ── 首頁（對外報價 PPT 的網頁版）──────────────────────────────
+   R6 的設計裁決都落在這一段,四條原則：
+   ① 金色只給互動與選中狀態（主 CTA／active nav／hover／focus）,
+      數字與重點靠字級與 --ink 的暖白突出,不靠顏色。
+   ② 閱讀寬度收起來：引言與內文 42rem、段落標題 16ch,
+      只有比較表與圖片可以用滿 1240px。
+   ③ 13 段不再用同一種版型。框線格子只留兩段（第 4 段比較、第 11 段四大保證）,
+      其餘換成編號節點、遞進節點、橫向時間軸、無框比較列。
+   ④ 隔段底色從 #131317 改成 #1e1e26——舊值對主底只有 1.061 的對比度,
+      交替等於沒交替（實算過）。而且不再每段交替,只給需要強調的段。
+   ────────────────────────────────────────────────────────── */
+.top nav a.on{color:var(--accent2)}
+
+/* 段落骨架 */
+.hsec{padding:96px 0;border-top:1px solid var(--line)}
+.hsec.tint{background:var(--bg2)}
+.hsec:first-of-type{border-top:0}
+.eyebrow{font-size:11px;margin:0 0 16px;color:var(--accent);font-weight:500;
+  display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+.eyebrow .en{letter-spacing:.22em}
+.eyebrow .zh{letter-spacing:.02em;color:var(--ink3)}
+.hsec h2{font-family:var(--serif);font-size:clamp(27px,3.7vw,42px);line-height:1.22;
+  margin:0 0 20px;font-weight:500;letter-spacing:.01em;max-width:17em;text-wrap:balance}
+/* ⚠ 標題的行長用 em 不要用 ch。實測這個字級下「1 個中文字 = 2ch」，
+   所以覆核者建議的 16ch 照字面套進中文只放得下 8 個字，9 字的標題就被斷成兩行。
+   em 在中文等於一個字寬，才是這裡要的量。內文用 rem 沒問題（那是整段的字數，不是字寬）。*/
+.lead{color:var(--ink2);font-size:16.5px;max-width:42rem;margin:0 0 40px;text-wrap:pretty}
+.kicker{margin:40px 0 0;padding-top:22px;border-top:1px solid var(--line2);color:var(--ink);
+  font-family:var(--serif);font-size:17px;max-width:46rem;line-height:1.72;text-wrap:pretty}
+.fine{color:var(--ink3);font-size:12.5px;margin:20px 0 0;max-width:42rem;line-height:1.7}
+.nw{white-space:nowrap}
+
+/* ① 開場：左 55% 文案 ＋ 右 45% 直式主視覺（4:5）*/
+.hhero{padding:0;position:relative;overflow:hidden;min-height:640px;display:flex;align-items:center}
+.hhero .wrap{width:100%;position:relative;z-index:2}
+.hhero .txt{padding:96px 0;max-width:min(55%,640px)}
+.hhero h1{font-family:var(--serif);font-size:clamp(36px,5.6vw,62px);line-height:1.14;
+  margin:0 0 28px;font-weight:500;letter-spacing:.005em;text-wrap:balance}
+.hhero h1 em{font-style:normal;color:var(--accent2)}
+.hhero .sub{max-width:32rem;color:var(--ink2);font-size:17px;margin:0 0 38px;text-wrap:pretty}
+.hhero .art{position:absolute;top:0;right:0;bottom:0;width:min(46%,660px);z-index:1;
+  background:#15151a;overflow:hidden}
+.hhero .art img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+/* 左緣漸層,讓圖跟左欄連成一體,不是硬邊 */
+.hhero .art::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(11,11,13,.72) 18%,transparent 52%)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 28px;border:1px solid var(--line2);border-radius:2px;
+  font-size:14.5px;color:var(--ink2);transition:.18s}
+.btn:hover,.btn:focus-visible{border-color:var(--accent);color:var(--accent2)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#17130a;font-weight:600}
+.btn.p:hover,.btn.p:focus-visible{background:var(--accent2);border-color:var(--accent2);color:#17130a}
+
+/* ② 編號節點（第 2 段）：三個水平節點共用一條細線 */
+.nodes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;
+  border-top:1px solid var(--line2)}
+.node{padding:26px 30px 0 0}
+.node .n{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.1em;
+  margin:0 0 12px;padding-top:2px}
+.node .t{font-family:var(--serif);font-size:19px;margin:0 0 9px;font-weight:500;color:var(--ink)}
+.node p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74;max-width:26rem}
+
+/* ③ 編號敘事列（第 3 段）：左側 72px 大編號 */
+.numrows{border-top:1px solid var(--line)}
+.numrow{display:grid;grid-template-columns:104px minmax(0,1fr);gap:28px;
+  padding:30px 0;border-bottom:1px solid var(--line);align-items:start}
+.numrow .n{font-family:var(--serif);font-size:64px;line-height:.9;color:var(--ink4)}
+.numrow .t{font-family:var(--serif);font-size:21px;margin:6px 0 10px;font-weight:500}
+.numrow p{margin:0;color:var(--ink2);font-size:15px;max-width:44rem;line-height:1.74}
+
+/* ④ 兩欄對照（第 4 段,框線保留 ── 全頁最需要直接對照的一段）*/
+.vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:3px;
+  overflow:hidden}
+.vs>div{padding:34px 32px 36px;display:grid;grid-template-rows:auto auto auto 1fr;row-gap:0}
+.vs>.b{border-left:1px solid var(--line);border-top:2px solid var(--accent)}
+/* ⚠ 標籤的 class 是 vlb 不是 lb：.lb 是燈箱，帶 display:none，撞上去整段會消失。*/
+.vs .vlb{font-size:12px;letter-spacing:.14em;color:var(--ink3);margin:0 0 16px}
+.vs .amt{font-family:var(--serif);font-size:clamp(38px,4.6vw,66px);line-height:1.02;
+  margin:0 0 10px;color:var(--ink);letter-spacing:-.01em}
+.vs .amtn{font-size:12.5px;color:var(--ink3);margin:0 0 28px;line-height:1.65;max-width:30rem}
+.vs dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 18px;font-size:14.5px;
+  align-content:start}
+.vs dt{color:var(--ink3);white-space:nowrap}
+.vs dd{margin:0;color:var(--ink2)}
+
+/* ⑤ 分叉圖（第 5 段）：中央大數字 → 左右兩種用法 → 跨欄結論 */
+.fork{max-width:960px}
+.fork .trunk{position:relative;height:44px}
+.fork .trunk::after{content:"";position:absolute;left:50%;top:0;width:1px;height:44px;
+  background:var(--line2)}
+/* 整段置中（只有這一段）:h2 本身就是那個放大的數字,不要再重複印一次 */
+.hsec.mid{text-align:center}
+.hsec.mid .eyebrow{justify-content:center}
+.hsec.mid h2{margin-left:auto;margin-right:auto}
+.hsec.mid .lead,.hsec.mid .kicker,.hsec.mid .fine{margin-left:auto;margin-right:auto}
+.hsec.mid .fork{margin:0 auto}
+.hsec.mid .fork .arm,.hsec.mid .fork .both{text-align:left}
+.hsec.mid .kicker{border-top:0;padding-top:0}
+.fork .arms{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  border-top:1px solid var(--line2)}
+.fork .arm{background:var(--bg);padding:26px 28px 28px}
+.hsec.tint .fork .arm{background:var(--bg2)}
+.fork .arm .k{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:500}
+.fork .arm p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.fork .both{border-top:1px solid var(--line2);padding:24px 28px 0;margin-top:1px}
+.fork .both .k{font-family:var(--serif);font-size:17px;color:var(--accent2);margin:0 0 8px}
+.fork .both p{margin:0;color:var(--ink2);font-size:14.5px;max-width:44rem;line-height:1.74}
+
+/* ⑥ 遞進節點（第 6 段）：大字由左向右,無框 */
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px}
+.st3{position:relative;padding-top:24px;border-top:1px solid var(--line2)}
+.st3 .t{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);margin:0 0 12px;font-weight:500;
+  line-height:1.3}
+.st3 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.st3::before{content:"→";position:absolute;top:-14px;left:-24px;color:var(--ink4);font-size:15px}
+.st3:first-child::before{content:none}
+
+/* ⑦ 無框比較列（第 7 段）：左灰 → 細箭頭 → 右白 */
+.cmp{border-top:1px solid var(--line2)}
+.cmphead{display:grid;grid-template-columns:150px 1fr 24px 1fr;gap:20px;padding:12px 0;
+  font-size:11px;letter-spacing:.14em;color:var(--ink3);border-bottom:1px solid var(--line)}
+.cmphead .hl{color:var(--accent2)}
+.cmprow{display:grid;grid-template-columns:150px 1fr 24px 1fr;gap:20px;padding:24px 0;
+  border-bottom:1px solid var(--line);align-items:baseline}
+.cmprow:last-child{border-bottom:0}
+.cmprow .k{font-family:var(--serif);font-size:16.5px;color:var(--ink)}
+.cmprow .was{color:var(--ink3);font-size:14.5px;line-height:1.7}
+.cmprow .ar{color:var(--ink4);text-align:center;font-size:14px}
+.cmprow .now{color:var(--ink);font-size:14.5px;line-height:1.7}
+
+/* ⑧ 精選預覽（第 8 段）：圖片本身就是版型,不加裝飾框 */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:38px}
+.fcard{display:block;transition:.2s}
+.fcard .ph{aspect-ratio:4/5;background:#15151a;overflow:hidden}
+.fcard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:.45s}
+.fcard:hover .ph img,.fcard:focus-visible .ph img{transform:scale(1.04)}
+.fcard .bd{padding:15px 0 0}
+.fcard .nm{font-family:var(--serif);font-size:18px;margin:0 0 4px;font-weight:500}
+.fcard .zh{font-size:12px;color:var(--ink3);margin:0 0 7px}
+.fcard .mt{font-size:11.5px;color:var(--ink4);letter-spacing:.06em;margin:0}
+.fcard:hover .mt,.fcard:focus-visible .mt{color:var(--accent2)}
+
+/* ⑨⑫ 橫向時間軸（第 9、12 段）：數字在線上 */
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px;
+  position:relative}
+.tl::before{content:"";position:absolute;top:9px;left:0;right:0;height:1px;background:var(--line2)}
+.tlstep{position:relative;padding-top:38px}
+.tlstep::before{content:"";position:absolute;top:5px;left:0;width:9px;height:9px;border-radius:50%;
+  background:var(--accent)}
+.tlstep .n{position:absolute;top:0;left:22px;font-size:11px;letter-spacing:.16em;color:var(--accent);
+  line-height:19px}
+.tlstep .t{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:500}
+.tlstep p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+.tlstep .you{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--ink3)}
+.tlstep .you b{color:var(--ink);font-weight:500}
+
+/* ⑩ 大型受眾標題（第 10 段）*/
+.aud{border-top:1px solid var(--line)}
+.aud>div{padding:30px 0;border-bottom:1px solid var(--line)}
+.aud .k{font-family:var(--serif);font-size:clamp(21px,2.5vw,28px);margin:0 0 12px;font-weight:500;
+  line-height:1.3}
+.aud p{margin:0 0 0 clamp(0px,3vw,40px);color:var(--ink2);font-size:15px;max-width:44rem;
+  line-height:1.74}
+
+/* ⑪ 四大保證（第 11 段,框線保留 ── 四項要能各自掃讀）*/
+.cards4{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:18px}
+.c4{border:1px solid var(--line);border-radius:3px;padding:26px 26px 28px;transition:.18s}
+.c4:hover,.c4:focus-within{border-color:var(--accent)}
+.c4 .t{font-family:var(--serif);font-size:18px;margin:0 0 10px;font-weight:500}
+.c4 p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.74}
+
+/* AI 揭露 */
+.hsec .disclose{margin-top:44px;max-width:46rem;border-left:2px solid var(--accent);
+  background:rgba(216,185,85,.05);padding:18px 22px;border-radius:0 3px 3px 0}
+.hsec .disclose b{color:var(--accent2);font-weight:600}
+.hsec .disclose p{margin:7px 0 0;color:var(--ink2);font-size:13.5px;line-height:1.7}
+
+/* 報價頁 */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px}
+.plan{border:1px solid var(--line);border-radius:3px;padding:32px 28px 34px;
+  display:flex;flex-direction:column;transition:.18s}
+.plan:hover{border-color:var(--line2)}
+.plan.f{border-color:var(--accent);background:rgba(216,185,85,.05)}
+.plan .tier{font-size:11px;letter-spacing:.16em;color:var(--accent);margin:0 0 14px}
+.plan h3{font-family:var(--serif);font-size:23px;margin:0 0 18px;font-weight:500}
+.plan .pr{font-family:var(--serif);font-size:34px;color:var(--ink);line-height:1.1;margin:0 0 24px}
+.plan .pr i{font-style:normal;font-size:14px;color:var(--ink3);font-family:var(--sans)}
+.plan.f .pr{color:var(--accent2)}
+.plan ul{list-style:none;padding:0;margin:0}
+.plan li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2);
+  line-height:1.66}
+.plan li:last-child{border-bottom:0}
+.qa{border-top:1px solid var(--line)}
+.qa>div{border-bottom:1px solid var(--line);padding:26px 0}
+.qa .q{font-family:var(--serif);font-size:18px;margin:0 0 10px;color:var(--ink)}
+.qa .a{margin:0;color:var(--ink2);font-size:15px;max-width:46rem;line-height:1.74}
+
+/* 收尾 */
+.close{padding:104px 0 112px;text-align:center;border-top:1px solid var(--line)}
+.close h2{font-family:var(--serif);font-size:clamp(25px,3.4vw,38px);line-height:1.4;
+  margin:0 auto 36px;max-width:22em;font-weight:500;text-wrap:balance}
+.close .btns{justify-content:center}
+
+@media(max-width:900px){
+  .feat{grid-template-columns:repeat(2,1fr)}
+  .vs{grid-template-columns:1fr}
+  .vs>.b{border-left:0;border-top:2px solid var(--accent)}
+  .fork .arms{grid-template-columns:1fr}
+  .cmphead{display:none}
+  .cmprow{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .cmprow .ar{display:none}
+  .cmprow .was::before{content:"傳統：";color:var(--ink4)}
+  .cmprow .now::before{content:"數位人：";color:var(--accent2)}
+  .numrow{grid-template-columns:60px minmax(0,1fr);gap:18px}
+  .numrow .n{font-size:38px}
+  .st3::before{content:none}
+  /* 時間軸轉成沿左側的垂直線 */
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl::before{top:0;bottom:0;left:4px;right:auto;width:1px;height:auto}
+  .tlstep{padding:0 0 30px 26px}
+  .tlstep::before{top:6px}
+  .tlstep .n{position:static;display:block;margin:0 0 8px}
+  /* 首屏改成 小標＋標題 → 16:10 橫裁圖 → 引言＋按鈕 */
+  .hhero{min-height:0;display:block;padding:56px 0 0}
+  .hhero .wrap{display:flex;flex-direction:column}
+  .hhero .txt{display:contents}
+  .hhero .eyebrow{order:1}
+  .hhero h1{order:2;margin-bottom:26px}
+  .hhero .art{position:static;order:3;width:auto;aspect-ratio:16/10;margin:0 0 30px}
+  .hhero .art::after{background:linear-gradient(180deg,transparent 60%,rgba(11,11,13,.5) 100%)}
+  .hhero .art img{object-position:50% 22%}
+  .hhero .sub{order:4}
+  .hhero .btns{order:5;margin-bottom:60px}
+  .hsec{padding:60px 0}
+  .close{padding:70px 0 78px}
+}
+footer{padding:52px 0 70px;color:var(--ink3);font-size:12.5px}
+footer p{margin:0 0 7px;max-width:720px}
+@media(max-width:820px){.phead{grid-template-columns:1fr;gap:26px}.hero{padding:60px 0 40px}}
+/* /match.html 專用。全部掛在 .mx 底下——型錄站已經有 .two / .panel / .row / h2,
+   不加前綴會互相蓋掉。色票沿用 build_site.mjs 的 :root,這裡不另開一套。 */
+.mx h2{font-family:var(--serif);font-weight:500;font-size:19px;margin:0 0 4px}
+.mx .hint{font-size:13px;color:var(--ink4);margin:0 0 18px;max-width:52em}
+.mx .hint b{color:var(--ink2);font-weight:500}
+
+.mx .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 8px}
+.mx input[type=text]{flex:1 1 20rem;min-width:0;background:var(--card2);color:var(--ink);
+  border:1px solid var(--line2);border-radius:4px;padding:11px 14px;font:inherit;font-size:15px}
+.mx input[type=text]:focus{outline:2px solid var(--gold2);outline-offset:1px;border-color:transparent}
+.mx button.go{background:var(--gold2);color:var(--dark);border:0;border-radius:4px;padding:11px 22px;
+  font:inherit;font-weight:500;cursor:pointer}
+.mx button.go:hover{background:var(--gold)}
+.mx .egs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+.mx .egs b{font-size:12px;color:var(--ink4);letter-spacing:.08em;align-self:center;margin-right:3px}
+.mx .egs button{background:transparent;color:var(--ink2);border:1px solid var(--line2);
+  border-radius:14px;padding:3px 12px;font:inherit;font-size:13px;cursor:pointer}
+.mx .egs button:hover{border-color:var(--gold2);color:var(--gold)}
+.mx .egs button:focus-visible,.mx button.go:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.mx .mtwo{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px}
+@media (max-width:920px){.mx .mtwo{grid-template-columns:1fr}}
+.mx .panel{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px}
+.mx .panel h3{font-family:var(--serif);font-weight:500;font-size:16px;margin:0 0 3px}
+.mx .panel .ph{font-size:12px;color:var(--ink4);margin:0 0 14px}
+
+.mx .plot{position:relative;width:100%;aspect-ratio:1/.88;min-height:280px}
+.mx .plot svg{display:block;width:100%;height:100%;overflow:visible}
+.mx .qlab{font-size:9.5px;fill:var(--ink4);letter-spacing:.08em}
+.mx .axlab{font-size:11px;fill:var(--ink3)}
+.mx .tick{font-size:9.5px;fill:var(--ink4);font-variant-numeric:tabular-nums}
+.mx .dot{cursor:pointer}
+.mx .dlab{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:3px}
+
+.tipx{position:fixed;pointer-events:none;background:var(--card3);border:1px solid var(--line2);
+  border-radius:4px;padding:8px 11px;font-size:12.5px;color:var(--ink);max-width:19rem;z-index:60;
+  box-shadow:0 6px 22px rgba(0,0,0,.55);opacity:0;transition:opacity .1s}
+.tipx b{display:block;font-weight:500;margin-bottom:2px}
+.tipx span{color:var(--ink3);font-variant-numeric:tabular-nums}
+
+/* 分數拆解 */
+.mx .anat{width:100%;border-collapse:collapse;font-size:13px}
+.mx .anat th{text-align:left;font-weight:500;font-size:10.5px;letter-spacing:.1em;color:var(--ink4);
+  border-bottom:1px solid var(--line);padding:0 8px 7px 0}
+.mx .anat td{padding:8px 8px 8px 0;border-bottom:1px solid var(--line);color:var(--ink2);vertical-align:top}
+.mx .anat td.n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.mx .anat tr.sub td{color:var(--ink4);font-size:12px}
+.mx .anat tr.tot td{border-bottom:0;padding-top:11px}
+.mx .anat tr.tot td.n{font-family:var(--serif);font-size:20px;color:var(--gold);line-height:1}
+.mx .anat tr.grp td{color:var(--ink);font-weight:500;background:rgba(242,242,244,.03)}
+.mx .anat tr.sig td{border-bottom:0;padding-top:9px;font-size:12px;color:var(--ink3);line-height:1.55}
+.mx .anat tr.sig b{color:var(--ink2);font-weight:500}
+
+.mx .rank{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.mx .rrow{background:var(--card2);padding:11px 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;
+  align-items:center;cursor:pointer}
+.mx .rrow:hover,.mx .rrow.on{background:var(--card3)}
+.mx .rrow .sc{font-family:var(--serif);font-size:19px;color:var(--gold);font-variant-numeric:tabular-nums;
+  line-height:1;min-width:2rem;text-align:right}
+.mx .rrow .nm{font-weight:500;color:var(--ink);font-size:14px}
+.mx .rrow .mt{grid-column:2;font-size:12px;color:var(--ink3)}
+.mx .rrow .mt i{font-style:normal;color:var(--gold2)}
+.mx .none{color:var(--ink3);font-size:13.5px;padding:14px 0 0;margin:0}
+
+.mx .hooks{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:4px;overflow:hidden;margin:12px 0 0}
+.mx .hook{background:var(--card2);padding:11px 14px}
+.mx .hook .ht{font-weight:500;color:var(--ink);font-size:13.5px}
+.mx .hook .ha{font-size:12px;color:var(--ink3);margin-top:2px}
+
+.mx .how{margin:34px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
+.mx .how p{color:var(--ink3);font-size:13px;margin:0 0 9px;max-width:54em}
+.mx .how code{font-size:12px;color:var(--ink2);background:rgba(242,242,244,.06);padding:1px 5px;border-radius:3px}
+.mx .how b{color:var(--ink2);font-weight:500}
+
+.mx .bdg{font-size:10px;letter-spacing:.08em;padding:1px 7px;border-radius:3px;margin-left:7px;
+  border:1px solid rgba(12,163,12,.4);background:rgba(12,163,12,.14);color:#57cf57;white-space:nowrap}
+.mx .bdg.w{border-color:rgba(250,178,25,.36);background:rgba(250,178,25,.13);color:#f5c452}
+.mx .bdg.n{border-color:rgba(242,242,244,.2);background:rgba(242,242,244,.06);color:var(--ink3)}
+
+.mx{padding:30px 0 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* 這一頁是工具不是首頁——標題壓低,輸入框要在第一屏看得到。 */
+.hero.tight{padding:52px 0 30px}
+.hero.tight h1{font-size:clamp(27px,3.4vw,40px);margin:0 0 14px}
+.hero.tight .lede{font-size:15.5px;margin:0}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
+  <nav>
+    <a href="/kols.html">全部人設</a>
+    <a href="/match.html" class="on">品牌配對</a>
+    <a href="/pricing.html">報價</a>
+  </nav>
+</div></header>
+<div class="hero tight"><div class="wrap">
+  <h1>品牌<em>配對</em>定位</h1>
+  <p class="lede">輸入一個品牌或題目，看 38 位人設分別落在哪裡。圖上每一個數字都是算出來的，不是手填——
+  點開任一位，那一分是從哪個命中項來的都攤在那裡。</p>
+</div></div>
+
+<div class="wrap mx">
+  <div class="bar">
+    <label class="vh" for="q">品牌或題目</label>
+    <input type="text" id="q" placeholder="例如：日系保養品牌、露營裝備、手沖咖啡器具" autocomplete="off">
+    <button type="button" class="go" id="go">配對</button>
+  </div>
+  <div class="egs" id="egs"><b>試試</b></div>
+
+  <div class="mtwo">
+    <div class="panel">
+      <h3>配對定位圖</h3>
+      <p class="ph">橫軸＝她講不講這個題目　縱軸＝她接不接這個品類。右上角是首選。</p>
+      <div class="plot"><svg id="svg" viewBox="0 0 420 360" role="img" aria-labelledby="svgt"></svg></div>
+    </div>
+    <div class="panel">
+      <h3>分數怎麼來的　<span id="anatwho" style="font-family:var(--sans);font-size:13px;color:var(--accent2)"></span></h3>
+      <p class="ph">每一列都是可核對的命中項。點下面排行榜或圖上的點可以換人。</p>
+      <table class="anat" id="anat"></table>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:24px">
+    <h3>匹配度排行</h3>
+    <p class="ph">點任一列，上面的拆解表會換成那一位。</p>
+    <div class="rank" id="rank"></div>
+    <p class="none" id="rest"></p>
+  </div>
+
+  <div class="how">
+    <p><b>兩軸怎麼算</b>：主題契合＝ 26 × 題目連結點 ＋ 9 × 內容主題 ＋ 7 × 關鍵詞 ＋ 6 × 定位或受眾描述；品類契合＝ 30 × 合作方向 ＋ 25（領域相符）＋ 5 × 關鍵詞。匹配度＝主題 × 0.6 ＋ 品類 × 0.4。每位人設頁上的<b>合作品類雷達</b>用的是同一套算法，只是換成固定的十個品類。</p>
+    <p>權重是我們定的，印在這裡讓它可以被質疑。<b>沒有任何一個數字來自平台成效或第三方流量資料</b>——每一分都對應到一個看得見的命中項，所以「為什麼是她」隨時可以攤開來看。輸入的字會先過一組同義詞對照（旅宿＝飯店＝酒店＝hotel、保養＝護膚＝skincare⋯）。</p>
+    <p>🛑 <b>分數低不等於做不了。</b>這裡量的是「她現在的設定裡有多少現成的切入點」，不是能力上限。虛擬人設的內容主題與語氣可以照品牌需求重新設定——<b>選定外形之後，方向是可以談的</b>。所以請把配對結果當成起點，不是篩選條件。</p>
+  </div>
+</div>
+<div class="tipx" id="tip"></div>
+
+<footer><div class="wrap">
+  <p>本站所有 KOL 均為 AI 生成的虛擬角色，非真實人物。</p>
+  <p><a href="/kols.html">← 回到全部人設</a></p>
+</div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="放大檢視">
+  <button type="button" aria-label="關閉">✕</button><img alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), im=lb.querySelector('img'), last=null;
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-lb]'); if(a){e.preventDefault();last=a;
+      im.src=a.getAttribute('data-lb'); im.alt=a.getAttribute('data-alt')||'';
+      lb.classList.add('on'); lb.querySelector('button').focus(); return;}
+    if(e.target===lb||e.target.closest('#lb button')){close();}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))close();});
+  function close(){lb.classList.remove('on'); im.src=''; if(last)last.focus();}
+})();
+
+// 影片：點了才建立 <video>，而且一次只播一支。
+// 不用 preload="none" 的 <video> 而是「點了才建立元素」——那樣連元素都不存在,
+// 瀏覽器連 metadata 都不會去要,首屏最乾淨。
+(function(){
+  var playing = null;
+  function stop(){
+    if(!playing) return;
+    var v = playing.querySelector('video');
+    if(v){ try{ v.pause(); }catch(e){} v.remove(); }
+    playing.classList.remove('on'); playing = null;
+  }
+  document.addEventListener('click', function(e){
+    var more = e.target.closest('[data-more]');
+    if(more){
+      var sec = more.closest('section');
+      sec.querySelectorAll('.vid[hidden]').forEach(function(el){ el.hidden = false; });
+      more.closest('.vmore').remove();
+      return;
+    }
+    var btn = e.target.closest('.vid .play');
+    if(!btn) return;
+    var box = btn.closest('.vid'), mp4 = box.dataset.mp4;
+    if(!mp4) return;
+    stop();
+    var v = document.createElement('video');
+    v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+    // 🛑 MP4 一定要放前面。真瀏覽器拿 MP4;沒有 H.264 的瀏覽器才會退到 WebM。
+    var s1 = document.createElement('source'); s1.src = mp4; s1.type = 'video/mp4'; v.appendChild(s1);
+    if(box.dataset.webm){
+      var s2 = document.createElement('source'); s2.src = box.dataset.webm; s2.type = 'video/webm';
+      v.appendChild(s2);
+    }
+    v.addEventListener('ended', stop);
+    box.appendChild(v); box.classList.add('on'); playing = box;
+    v.play().catch(function(){ /* 被自動播放政策擋住時,控制列還在,使用者自己按 */ });
+  });
+})();
+</script>
+<script>
+const IDX = [{"id":"iris-chen","name":"Iris Chen","zh":"陳芯語","cat":"lifestyle","tag":"台北的 It Girl——在公開場合過自己的日子，不覺得自己有多吸引人。","aud":"20 出頭、住在台北市區的女生，追穿搭與生活風格，會照著推薦去逛咖啡館與小店。","mood":"台北的下午。自然光，有點曬，有點慵懶，有點捨不得離開。看了會想念一座你沒去過的城市。","pil":["私下 / 她自己的房間","穿搭 / 換裝","外出 / 台北的日常","早晨 / 剛睡醒","浴室 / 洗完澡","外出 / 飯店旅遊","身體 / 活動"],"fit":["台灣的服飾與生活風格品牌","她本人真的會去的咖啡館與餐廳","極簡的日常服飾品牌","質地乾淨、呈現真實膚況的美妝品牌"],"kw":["起床","晨光","赖床","床上","素颜","morning","穿搭","抹胸","短版上衣","短裙","帽T","试穿","outfit","ootd","洗完澡","浴室","浴巾","湿发","镜子","在家","沙发","居家服","午后","台北公寓","耍废","酒店","日本","旅行","落地窗","住宿","hotel","japan","健身","运动","流汗","运动服","gym","台北","大安区","咖啡厅","散步","街拍","下午","台北日常","街头","短版","日常穿搭","东京","travel","底片","胶片感","film","35mm","调色","复古","摄影","朋友","聚会","出门","闺蜜","日常","私下","她自己的房間","換裝","外出","台北的日常","早晨","剛睡醒","飯店旅遊","身體","活動","台灣的服飾與生活風格品牌","她本人真的會去的咖啡館與餐廳","極簡的日常服飾品牌","質地乾淨","呈現真實膚況的美妝品牌","lifestyle"],"hooks":[{"t":"台北大安區咖啡廳與街區散步","a":"她的 quirks 寫「就固定去那三家，不會道歉」——切角是重複去同一個地方的偏執，不是探店清單。","ev":true,"k":["台北","大安区","咖啡厅","散步","街拍","下午","台北日常"]},{"t":"台北街頭的隨手穿搭","a":"不是教學，是她站在鏡子前決定的過程——profile 明講「不是 tutorial，就是她在選」。","ev":true,"k":["穿搭","台北","街头","ootd","短版","试穿","日常穿搭"]},{"t":"日本旅行與飯店落地窗","a":"她拍的是「在一個不是家的地方」那種特定感覺，不是行程——對上她 hotel 支柱的原始描述。","ev":true,"k":["日本","东京","旅行","酒店","落地窗","japan","travel"]},{"t":"底片感／35mm 風格的照片審美","a":"她的照片被設計成「看起來像底片拍的，即使不是」——可以直接講這個審美選擇本身。","ev":true,"k":["底片","胶片感","film","35mm","调色","复古","摄影"]},{"t":"跟朋友出門的下午","a":"profile 寫她「的生活從來不是一個人的表演」——朋友入鏡是結構性設定，不是偶爾的客串。","ev":true,"k":["朋友","聚会","出门","下午","闺蜜","日常"]}],"block":["3C","开箱","规格","评测","教学","深度解析","逐字稿","指定台词","产品示范","口播","我常去","我上次去","亲自","实地"]},{"id":"camille-dupont","name":"Camille Dupont","zh":"","cat":"lifestyle","tag":"只是好好地過巴黎的日子，而你就是移不開眼睛。","aud":"嚮往歐洲日常感的 20〜30 歲女性，看的是質感與生活方式，不是名牌清單。","mood":"秋天巴黎廚房的黃金時刻。溫暖、有點不完美、非常想讓人坐下來。看了會想坐到那張桌子旁邊的那種畫面。","pil":["私下 / 她自己的房間","穿搭 / 換裝","外出 / 巴黎的日常","早晨 / 剛睡醒","浴室 / 洗完澡","外出 / 旅行","身體 / 活動"],"fit":["法國食品生產者與地方特產","有真實產區與故事的葡萄酒品牌","有質感的廚具與餐具——古著或手工","有歐洲工藝底蘊的慢時尚品牌","書籍、文化與藝文機構"],"kw":["晨间","起床","亚麻","晨光","咖啡","morning","linen","breakfast","coffee","window light","slow morning","穿搭","法式","衬衫","乐福鞋","丝巾","french style","outfit","parisian","loafers","silk scarf","effortless","洗完澡","浴室","复古瓷砖","护肤","bathroom","skincare","steam","mirror","在家","沙发","午后","阅读","公寓","home","reading","home cooking","recipe","kitchen","wine","french table","terroir","provenance","dinner","bread","slow living","diet culture","guilt free","literature","frenchtable","slowliving","slowness","dietculture","homecooking","eating","table","guilt","里昂","尼斯","罗马","酒店","旅行","lyon","nice","rome","market","paris","travel","hotel","neighbourhood","citywalk","slowtravel","散步","骑车","拉伸","走路","walk","stretching","walking","cycling","餐桌","摆盘","好好吃饭","仪式感","产区","风土","葡萄酒","食谱来源","地方菜","wine region","巴黎","市集","街区","文学","书","慢生活","sorbonne","节食","减肥","热量","罪恶感","私下","她自己的房間","換裝","外出","巴黎的日常","早晨","剛睡醒","身體","活動","法國食品生產者與地方特產","有真實產區與故事的葡萄酒品牌","有質感的廚具與餐具——古著或手工","有歐洲工藝底蘊的慢時尚品牌","書籍","文化與藝文機構","lifestyle"],"hooks":[{"t":"法式餐桌與「好好吃一頓飯」","a":"她的價值觀第一條是「好好吃完的一餐從來不是浪費時間」——講的是儀式的實用性，不是精緻生活的表演。","ev":true,"k":["法式","餐桌","摆盘","好好吃饭","仪式感","french table","home cooking"]},{"t":"產區、風土與一道菜的來歷","a":"每道食譜都先講它從哪裡來——把地理與歷史當成味道的解釋，這是她可查證的那一半內容。","ev":true,"k":["产区","风土","葡萄酒","食谱来源","地方菜","terroir","wine region"]},{"t":"巴黎街區、市場與里昂返鄉","a":"她拍城市的方式是拍光線與人怎麼過日子，不是拍地標——對上她只用自然光的規則。","ev":true,"k":["巴黎","里昂","市集","街区","旅行","paris","lyon","market"]},{"t":"文學系背景與「慢」這件事","a":"索邦文學系是她少數能自然承接閱讀題材的入口——用一段引文帶出一頓飯，而不是做書評。","ev":true,"k":["文学","阅读","书","慢生活","sorbonne","literature","slow living"]},{"t":"對節食文化的困惑","a":"profile 寫她「這輩子沒有節過食，並認為這是一種人格特質」——她的反節食立場是輕描淡寫的困惑，不是對抗。","ev":true,"k":["节食","减肥","热量","罪恶感","diet culture","guilt free"]}],"block":["减肥","代餐","断食","热量控制","diet","weight loss","我今天买到","亲自试吃","实地走访","我尝了"]},{"id":"yuna-kim","name":"Yuna Kim","zh":"김하은","cat":"beauty","tag":"首爾女生的日常美感——真的在保養，但不是在做評測。","aud":"認真在保養的 18〜28 歲女生，想看真的在用的流程，不想看評測與成分表。","mood":"乾淨、明亮、首爾的早晨。看得出有安排，但不像擺拍。產品在畫面裡，主角始終是那張臉。","pil":["私下 / 她自己的房間","穿搭 / 換裝","外出 / 首爾的日常","早晨 / 剛睡醒","浴室 / 洗完澡","外出 / 旅行","身體 / 活動"],"fit":["韓系保養與彩妝品牌（獨立品牌到成熟品牌都可）","調性乾淨的韓系服飾","首爾的咖啡館與生活風格品牌","不要求逐字照稿的品牌"],"kw":["早上","起床","白色床品","晨间","首尔","morning","아침","기상","침대","햇살","서울","穿搭","短裙","开襟外套","厚底鞋","y2k","韩系穿搭","outfit","데일리룩","코디","미니스커트","가디건","패션","护肤","保养","化妆水","精华","面膜","洗完澡","skincare","toner","스킨케어","성분","토너","에센스","피부","유리피부","올리브영","성분논란","ingredients","在家","沙发","针织外套","午后","首尔公寓","耍废","집","소파","오후","휴식","일상","东京","上海","酒店","旅行","城市景观","hotel","travel","호텔","여행","도쿄","상하이","뷰","健身","散步","运动服","轻运动","gym","홈트","운동","산책","헬스","成分","烟酰胺","视黄醇","保湿","敏感肌","韩系","kbeauty","韩妆","玻璃肌","流行妆容","韩国美妆","江南","咖啡厅","韩国","街拍","seoul","ootd","成分争议","下架","过敏","监管","浓度","护肤争议","私下","她自己的房間","換裝","外出","首爾的日常","早晨","剛睡醒","浴室","身體","活動","韓系保養與彩妝品牌","調性乾淨的韓系服飾","首爾的咖啡館與生活風格品牌","不要求逐字照稿的品牌","beauty"],"hooks":[{"t":"保養成分與「哪些只是行銷」","a":"她從小就知道哪些成分有用——切角是把行銷話術與成分分開，這是她可查證的那一半內容。","ev":true,"k":["护肤","成分","精华","烟酰胺","视黄醇","保湿","敏感肌","skincare"]},{"t":"K-beauty 趨勢與韓系妝容","a":"她的價值觀寫「韓國保養是日常的一部分，不是趨勢」——用日常的角度看趨勢，反而是最有說服力的切角。","ev":true,"k":["韩系","kbeauty","韩妆","玻璃肌","流行妆容","韩国美妆"]},{"t":"首爾江南的咖啡廳與街區日常","a":"她的生活場景就是首爾——切角是「住在這座城市的人怎麼過日常」，不是旅遊攻略。","ev":true,"k":["首尔","江南","咖啡厅","韩国","街拍","seoul","旅行"]},{"t":"K-sweet 混 Y2K 的穿搭","a":"profile 寫她的造型「總有一個意料之外的元素」——切角是那一個元素的選擇，不是全身搭配教學。","ev":true,"k":["韩系穿搭","y2k","短裙","厚底鞋","开襟外套","ootd","穿搭"]},{"t":"保養品成分爭議與下架事件","a":"當期成分爭議一出就是她的主場：不評論品牌，只講這個成分在什麼濃度下做什麼——對上她的成分知識來源。","ev":false,"k":["成分争议","下架","过敏","监管","浓度","护肤争议"]}],"block":["只能好评","不能提缺点","正面用语","统一好评","未使用","照稿推荐","样品即发文","我用了一个月","亲自试用","实测","我的肤况"]},{"id":"rainie-hsu","name":"Rainie Hsu","zh":"許雷妮","cat":"nightlife","tag":"她一進門整個場子的節奏就變了，而她從不假裝這身造型很輕鬆。","aud":"22〜30 歲、會出門玩的都會女性，出門前要造型、也在意妝撐不撐得住。","mood":"張揚、華麗、帶一點危險感。夜色、霓虹、閃片與金屬感。濃，但收得住。","pil":["私下 / 她自己的房間","穿搭 / 換裝 — 出門前","白天的她","浴室 / 妝前妝後","早晨 / 前一晚之後","旅遊 / 夜生活遠征"],"fit":["夜生活服飾——貼身洋裝、馬甲上衣、出門成套","造型感強的高跟鞋與珠寶","彩妝，尤其是眼線與眼妝","香水與髮品","她真的會出現的酒吧、夜店與飯店"],"kw":["宿醉","隔天早上","咖啡","卸妆","太阳眼镜","morning after","出门前","换装","紧身裙","马甲","出街","grwm","穿搭","全身镜","眼线","化妆","香水","卷发","妆容","makeup","眼妆","在家","居家服","叫外送","耍废","沙发","休息","高雄","日本","夜生活","酒店","夜店","旅行","club","舞蹈","有氧","跳舞","体态","训练","夜出","造型","流行妆","化妆技巧","makeup trend","舞曲","电音","热门音乐","edm","remix","东区","西门町","台北","东京","不费力","素颜感","努力","精致","伪素颜","effortless","私下","她自己的房間","換裝 — 出門前","白天的她","浴室","妝前妝後","早晨","前一晚之後","旅遊","夜生活遠征","夜生活服飾——貼身洋裝","馬甲上衣","出門成套","造型感強的高跟鞋與珠寶","彩妝","尤其是眼線與眼妝","香水與髮品","她真的會出現的酒吧","夜店與飯店","nightlife"],"hooks":[{"t":"出門前的 GRWM 與造型決策","a":"她的 quirks 寫「還沒出門就靠全身照決定今晚好不好」——切角是決策的那一刻，不是妝容教學。","ev":true,"k":["grwm","出门前","换装","穿搭","全身镜","夜出","造型"]},{"t":"眼線與妝容趨勢的爭論","a":"她固定先畫眼線再做其他事——用步驟順序切入趨勢，講的是為什麼這樣畫，不是產品評比。","ev":true,"k":["眼线","妆容","流行妆","眼妆","化妆技巧","makeup trend"]},{"t":"夜店曲風與當期熱門舞曲","a":"音樂決定她短影音的剪點——切角是「這首放到哪一段最好」，用場子的角度聽歌。","ev":false,"k":["夜店","舞曲","电音","热门音乐","club","edm","remix"]},{"t":"台北東區／西門町與海外夜生活圈","a":"她在這個場景真的工作過（人設層面），能講的是一間店的氣氛怎麼被燈光和人流決定，不是打卡。","ev":true,"k":["东区","西门町","夜生活","台北","高雄","东京","夜店"]},{"t":"『不費力的美』vs 承認自己很努力","a":"profile 明講 effortless 不是她的路線——她是本次匯入裡唯一正面反對這套敘事的人設，反直覺強度在這題最高。","ev":true,"k":["不费力","素颜感","努力","精致","伪素颜","effortless"]}],"block":["喝酒","干杯","醉","调酒实测","劝酒","昨晚去","我在现场","我常去这间","亲自"]},{"id":"luna-tanaka","name":"Luna Tanaka","zh":"田中ひな","cat":"lifestyle","tag":"住在一個很美的白日夢裡，而且願意讓你進來看看。","aud":"喜歡日系與古著調性的 18〜28 歲女生，願意為了氛圍花時間佈置生活。","mood":"像一段完美安靜的日子留下的記憶。底片顆粒、柔焦、自然的窗光。每個地方都有點不完美，而那份不完美看起來是刻意的。","pil":["私下 / 她自己的房間","穿搭 / 換裝","外出 / 京都的日常","早晨 / 剛睡醒","浴室 / 洗完澡","外出 / 旅行","身體 / 活動"],"fit":["日系生活風格、文具與居家品牌","古著與二手時尚","底片攝影與相機品牌","天然成分、包裝簡單的保養品","京都在地的小店"],"kw":["晨间","起床","障子","晨光","白色床品","morning","京都","朝","目覚め","光","リネン","静か","filmphotography","filmgrain","穿搭","蕾丝","针织","碎花","复古","娃娃鞋","outfit","コーデ","レース","ニット","古着","ワンピース","服","洗完澡","浴室","湿发","浴巾","水汽","镜子","お風呂","スキンケア","湯気","鏡","在家","榻榻米","木地板","猫","午后","公寓","home","暮らし","部屋","畳","午後","丁寧な暮らし","日常","slowliving","slowness","东京","大阪","酒店","旅行","一个人","hotel","travel","東京","散歩","旅","ホテル","路地","四季","瑜伽","拉伸","散步","呼吸","慢走","stretching","ヨガ","ストレッチ","樱花","红叶","神社","kyoto","japan","慢生活","注意力","倦怠","效率","slow living","极简","胶片","底片","菲林","portra","富士","相机","film photography","环境音","白噪音","氛围音乐","ambient","lofi","助眠","花道","传统工艺","手作","职人","ikebana","craft","私下","她自己的房間","換裝","外出","京都的日常","早晨","剛睡醒","身體","活動","日系生活風格","文具與居家品牌","古著與二手時尚","底片攝影與相機品牌","天然成分","包裝簡單的保養品","京都在地的小店","lifestyle"],"hooks":[{"t":"京都四季與同一地點的不同角度","a":"她的 quirks 寫「同一個月不重複拍同一個地點，她會找新角度」——切角是角度本身，不是景點介紹。","ev":true,"k":["京都","四季","樱花","红叶","神社","kyoto","japan","旅行"]},{"t":"慢生活與「慢不是懶」","a":"她的價值觀第一條就是「慢不是懶惰，是注意力」——這是她單一最可轉譯的想法，能直接對上倦怠與效率焦慮的話題。","ev":true,"k":["慢生活","日常","注意力","倦怠","效率","slow living","极简"]},{"t":"底片攝影與器材美學","a":"她隨身帶底片機，且照片刻意不重度後製——可以直接講底片與數位的取捨，這是她少數會外顯知識的題目。","ev":true,"k":["胶片","底片","菲林","portra","富士","相机","film photography"]},{"t":"環境音與氛圍音樂當畫面的底噪","a":"她的短影音無口白、只有畫面與聲音——音樂的功能是延長畫面的停留時間，不是主題。","ev":true,"k":["环境音","白噪音","氛围音乐","ambient","lofi","助眠"]},{"t":"京都的傳統工藝與花道","a":"祖母的花藝教室是她的構圖來源——講傳統時她講的是它怎麼影響一個人看東西的方式，不是文化介紹。","ev":true,"k":["花道","传统工艺","京都","手作","职人","ikebana","craft"]}],"block":["我等了","我拍的时候","亲自到","现场"]},{"id":"coco-wu","name":"Coco Wu","zh":"吳可可","cat":"lifestyle","tag":"宿舍與校園就是她的全部場景——柔軟的自在感，不是刻意展示。","aud":"大學生與剛畢業的族群，預算有限但很在意宿舍與日常的舒適感。","mood":"大學宿舍的日常青春感——有點亂但很真實，手機直出的隨拍感，甜甜的、鬧鬧的、一點都不完美但很有生命力。","pil":["私下 / 宿舍熄燈後的她","宿舍 / 校園日常","穿搭 / 今天穿什麼","校外 / 台中的生活","浴室 / 盥洗","旅遊 / 週末出遊","身體 / 羽球社"],"fit":["手搖飲料 / 珍奶品牌","學生平價文具、宿舍收納小物","舒適居家服、襪子、開襟外套類服飾品牌","學生預算內的美妝保養品","校園周邊小吃、平價餐廳"],"kw":["赖床","起床","早八","闹钟","宿舍","室友","第一节课","穿搭","上课","开襟外套","百褶裙","过膝袜","校园穿搭","试穿","洗漱","刷牙","保养","宿舍浴室","出门前","grwm","耍废","追剧","期中考","期末","崩溃","滑手机","垦丁","九份","台南","小旅行","民宿","闺蜜","周末出游","羽球","社团","散步","校园","消食","运动","珍奶","手摇","奶茶","饮料","半糖去冰","打卡","住宿","大学生活","收纳","宿舍布置","考试周","熬夜","被当","报告","上课穿什么","学生穿搭","闺蜜旅行","毕业旅行","私下","宿舍熄燈後的她","校園日常","今天穿什麼","校外","台中的生活","浴室","盥洗","旅遊","週末出遊","身體","羽球社","手搖飲料 / 珍奶品牌","學生平價文具","宿舍收納小物","舒適居家服","襪子","開襟外套類服飾品牌","學生預算內的美妝保養品","校園周邊小吃","平價餐廳","lifestyle"],"hooks":[{"t":"手搖飲料與珍奶日常","a":"她的 quirks 寫「同一家店拍了八百次還是要拍」——切角是重複本身的可愛，不是飲料評比。","ev":true,"k":["珍奶","手摇","奶茶","饮料","半糖去冰","打卡"]},{"t":"宿舍生活與室友相處","a":"室友是她內容的固定班底——把宿舍當成一個有角色的空間，而不是背景。","ev":true,"k":["宿舍","室友","住宿","大学生活","收纳","宿舍布置"]},{"t":"期中期末考週的崩潰梗","a":"她拍的是崩潰當下的爆笑，不是讀書方法——profile 明講她不做任何教學型內容。","ev":false,"k":["期中考","期末","考试周","熬夜","被当","崩溃","报告"]},{"t":"上課要穿什麼：舒服還是可愛","a":"糾結與試穿的過程本身就是內容，最後問室友好不好看收尾——不是穿搭教學。","ev":true,"k":["校园穿搭","上课穿什么","开襟外套","百褶裙","学生穿搭","试穿"]},{"t":"台灣週末小旅行（墾丁／九份／台南）","a":"重點是 check in 後倒在床上跟朋友聊到很晚的青春感，不是景點攻略。","ev":true,"k":["垦丁","九份","台南","小旅行","民宿","闺蜜旅行","毕业旅行"]}],"block":["专业评测","教学","讲解","开箱评测","深度分析","奢侈品","精品","名牌包","高端","luxury","夜店","酒吧","调酒","威士忌","夜生活","制服诱惑","学生妹","养成","未成年"]},{"id":"sophia-tseng","name":"Sophia Tseng","zh":"曾詩妃","cat":"luxury lifestyle","tag":"信義區的名媛，但那份從容是自己掙來的，不是嫁來或繼承來的。","aud":"28〜40 歲、有自己收入的專業女性，買的是省時與從容，不是炫耀。","mood":"安靜的奢華感。不是張揚的炫富，是一種『這本來就是我的生活』的從容——五星飯店的挑高天花板、絲質布料垂墜的樣子、大理石反光的冷靜光澤。","pil":["私下 / 信義區公寓的她","工作室 / 上班的一天","穿搭 / 換裝","早晨 / 慢的早晨","飯店旅遊","浴室 / 保養儀式","身體 / Pilates"],"fit":["五星級飯店與精品旅宿","高端保養與身體護理品牌","設計師服裝、剪裁講究的成衣或訂製單品","居家美學／傢飾品牌，尤其是低調但做工精細的","商務艙／高端旅遊服務"],"kw":["晨间","手冲","咖啡","落地窗","安静","信义区","slow morning","穿搭","西装外套","喀什米尔","丝质衬衫","宽裤","剪裁","质感穿搭","保养","护肤","大理石","精华","身体乳","仪式","skincare","在家","公寓","家居服","红酒","沙发","居家美学","quietluxury","五星酒店","套房","商务舱","东京","巴黎","巴厘岛","住宿","hotel","suite","businessclass","普拉提","pilates","reformer","体态","核心","线条","住宿体验","quiet luxury","低调奢华","老钱风","质感","极简","炫富","面料","丝质","工艺","版型","定制","创业","工作室","职涯","选择","少而精","接案","自雇","自律","私下","信義區公寓的她","上班的一天","換裝","早晨","慢的早晨","飯店旅遊","浴室","保養儀式","身體","Pilates","五星級飯店與精品旅宿","高端保養與身體護理品牌","設計師服裝","剪裁講究的成衣或訂製單品","居家美學／傢飾品牌","尤其是低調但做工精細的","商務艙／高端旅遊服務","luxury lifestyle"],"hooks":[{"t":"五星飯店套房與商務艙的旅程","a":"她拍的是入住後第一個鏡頭與材質細節，不是行程——這是她 20% 主場支柱最直接的延伸。","ev":true,"k":["五星酒店","套房","商务舱","东京","巴黎","巴厘岛","住宿体验","hotel"]},{"t":"Quiet luxury 與「質感是底線不是加分項」","a":"她的價值觀第一條就是這句——用來反炫富敘事，語氣是平的不是說教，這是她最可轉譯的立場。","ev":true,"k":["quiet luxury","低调奢华","老钱风","质感","极简","炫富"]},{"t":"布料、剪裁與工藝的判準","a":"她會為了「這個 texture 不行」否決一件衣服——把主觀偏好講成可辨識的材質判準，這是她可查證的那一半。","ev":true,"k":["面料","剪裁","喀什米尔","丝质","工艺","版型","定制"]},{"t":"自己開工作室與「少而精」的選擇","a":"她只接自己真心喜歡的案子——把商業選擇講成性格的縮影，能承接職涯與創業類的長文案。","ev":true,"k":["创业","工作室","职涯","选择","少而精","接案","自雇"]},{"t":"Pilates／reformer 與安靜的自律","a":"她的健身支柱明訂是線條與姿態的維持，不是強度展示——切角是自律的安靜版本，對上她整體的不費力氣質。","ev":true,"k":["普拉提","pilates","reformer","体态","自律","线条"]}],"block":["快抢","限时","手刀","冲一波","喊话","逐字稿","教学","专家讲解","指定台词","我住过","这次入住","我搭的","亲自体验","实住"]},{"id":"mia-huang","name":"Mia Huang","zh":"黃米亞","cat":"gaming","tag":"夜貓子實況主，開台是她的節奏，關台之後才是她自己。","aud":"18〜30 歲的遊戲與實況觀眾，夜貓子作息，買周邊之前會先看實際在用的人。","mood":"愛鬧、有點失控，但那個失控始終在她手裡。RGB 燈、螢幕光、深夜的房間。","pil":["私下 / 關台之後","直播間 / 開台的日子","穿搭 / 換裝","白天的新竹","下午甦醒 / 她的早晨","浴室 / 深夜保養","外出 / 展會與見面會"],"fit":["電競周邊——耳機、鍵盤、電競椅、擷取卡","能量飲料與宵夜零食品牌","直播／創作者軟體與平台","輕度 cosplay 服飾、居家服與電競風服飾","動漫與遊戲周邊／聯名"],"kw":["下午起床","作息","日夜颠倒","熬夜","刚醒","电竞椅","换装","cos","猫耳","过膝袜","帽T","直播穿搭","cosplay","保养","护肤","卸妆","深夜","开台前","skincare","直播","开台","弹幕","实况","游戏","RGB","直播间","订阅","漫展","签名会","见面会","展场","酒店","convention","拉伸","肩颈","久坐","腰酸","伸展","版本更新","改动","削弱","加强","赛季","patch","meta","英雄联盟","手游","排位","掉分","上分","连败","菜","手残","rank","迷因","梗图","网络热议","直播圈","meme","热搜","耳机","键盘","麦克风","撷取卡","外设","gaming gear","凌晨","夜猫子","night owl","新番","动画","改编","还原度","声优","anime","二次元","私下","關台之後","直播間","開台的日子","穿搭","換裝","白天的新竹","下午甦醒","她的早晨","浴室","深夜保養","外出","展會與見面會","電競周邊——耳機","鍵盤","電競椅","擷取卡","能量飲料與宵夜零食品牌","直播／創作者軟體與平台","輕度 cosplay 服飾","居家服與電競風服飾","動漫與遊戲周邊／聯名","gaming"],"hooks":[{"t":"新版本更新與角色強度改動","a":"她讀 patch notes 像在讀鄰居八卦——用吐槽的語氣講機制改動，把硬資訊包在反應裡。","ev":false,"k":["版本更新","改动","削弱","加强","赛季","patch","meta","英雄联盟","手游"]},{"t":"排位掉分與「打不好但不下播」","a":"profile 的價值觀寫「輸了可以哭鬧可以嘴硬，但絕對不會下播」——這是她最可轉譯的一句話，能對上任何挫折題材。","ev":true,"k":["排位","掉分","上分","连败","菜","手残","rank"]},{"t":"網路迷因與當期直播圈事件","a":"她的 traits 寫她把迷因與推特風波當成鄰里八卦——切角是「這件事今天在網路上長怎樣」，不是評論。","ev":false,"k":["迷因","梗图","网络热议","直播圈","meme","热搜"]},{"t":"遊戲週邊與直播設備","a":"耳機、鍵盤、擷取卡是她 brand_do 的第一類——設備題可以走規格與實用，是她少數能認真講的內容。","ev":true,"k":["耳机","键盘","电竞椅","麦克风","撷取卡","外设","gaming gear"]},{"t":"日夜顛倒的作息與深夜族群","a":"她的價值觀第一條是「白天是留給睡覺的」——把作息當身分認同，而不是當健康問題來檢討。","ev":true,"k":["熬夜","日夜颠倒","作息","深夜","凌晨","夜猫子","night owl"]},{"t":"當季動畫與遊戲改編作品","a":"她的日文是從動畫與遊戲學來的——用玩家視角看改編，關心的是還原度不是劇評。","ev":false,"k":["新番","动画","改编","还原度","声优","anime","二次元"]}],"block":["露骨","情色","擦边","裸露","性暗示","我在直播","今晚开台","刚刚那把","弹幕说","live now"]},{"id":"vicky-lin","name":"Vicky Lin","zh":"林薇淇","cat":"fitness","tag":"身材和態度都是練出來的，所以那份自信不用表演。","aud":"20〜35 歲、有在運動的人，要能跟得上的訓練內容，不要身材焦慮的話術。","mood":"高雄健身房的高溫感——汗、止滑粉、從窗戶打進來的硬光。自信、有點不服輸，不走柔焦夢幻。","pil":["私下 / 她自己的房間","健身 / 訓練","穿搭 / 換裝","早晨 / 剛睡醒","浴室 / 訓練後","外出 / 高雄的日常","旅行"],"fit":["機能與運動服飾，尤其是尺碼包容的品牌","補給與恢復品牌，訊息要透明、不要「節食」框架","健身器材、健身房與運動場館","把食物當燃料而不是限制的運動營養","穿戴裝置與訓練紀錄相關產品"],"kw":["早上","晨练","起床","马尾","出门前","高雄","运动内衣","紧身裤","健身穿搭","帽T","运动服","gym fit","洗完澡","训练后","恢复","冰敷","酸痛","护理","在家","备餐","拉伸","沙发","瘫","休息日","酒店健身房","比赛","出差","旅行","健身房","hotel gym","重训","深蹲","硬举","卧推","PR","破纪录","增肌","课表","训练","gymgirl","dietculture","strengthtraining","力量训练","减肥","节食","代餐","瘦身产品","断食","排毒茶","热量赤字","姿势","动作","代偿","受伤","新手","教学","form","身材焦虑","练壮","肌肉","女生重训","体态","身材管理","运动手表","心率","睡眠","穿戴装置","数据","garmin","whoop","舞蹈","竞技","转型","退役","身体","重新开始","私下","她自己的房間","健身","訓練","穿搭","換裝","早晨","剛睡醒","浴室","訓練後","外出","高雄的日常","機能與運動服飾","尤其是尺碼包容的品牌","補給與恢復品牌","訊息要透明","不要「節食」框架","健身器材","健身房與運動場館","把食物當燃料而不是限制的運動營養","穿戴裝置與訓練紀錄相關產品","fitness"],"hooks":[{"t":"重訓 PR 與「數字往上走」的過程","a":"profile 寫她「寧可發一次破紀錄也不發一張修過的照片」——切角是進步的可量化性，不是身材展示。","ev":true,"k":["重训","深蹲","硬举","卧推","破纪录","PR","增肌","力量训练"]},{"t":"減肥產品與節食文化的爭議","a":"她的價值觀寫「流汗比節食誠實」，且 profile 明講她會公開回嗆節食言論——這是她少數會主動提高語氣的題目。","ev":false,"k":["减肥","节食","代餐","瘦身产品","断食","排毒茶","热量赤字"]},{"t":"動作姿勢拆解與常見錯誤","a":"form breakdown 是她的固定格式——講原理與代償，不評論別人的身體，這是她可查證的那一半內容。","ev":true,"k":["姿势","动作","代偿","受伤","新手","教学","form"]},{"t":"「練壯」與身材焦慮的拉扯","a":"profile 的 brand_dont 直接排除「要她看起來更瘦而不是更強」的品牌——她的立場是把目標從外觀換成能力。","ev":true,"k":["身材焦虑","练壮","肌肉","女生重训","体态","身材管理"]},{"t":"穿戴裝置與恢復數據","a":"穿戴裝置是她 brand_do 的一類——切角是數據怎麼影響下一次訓練的決定，不是規格比較。","ev":true,"k":["运动手表","心率","睡眠","恢复","穿戴装置","数据","garmin","whoop"]},{"t":"從競技舞蹈到重訓的轉換","a":"她的完整弧線起點——講的是一個「為評審而練的身體」怎麼變成「為自己而用的身體」，情緒濃度最高的素材。","ev":true,"k":["舞蹈","竞技","转型","退役","身体","重新开始"]}],"block":["减肥","瘦身","排毒茶","抑制食欲","代餐","断食","detox","显瘦","瘦一点","修图","纤细","我的PR","我练了","我的学员","我教练","我今天举"]},{"id":"nico-tsai","name":"Nico Tsai","zh":"蔡妮可","cat":"beauty","tag":"靠一雙手吃飯的美甲職人，對線條的潔癖同樣用在自己身上。","aud":"在意細節與手部保養的 22〜35 歲女性，喜歡安靜、極簡、少一點裝飾的東西。","mood":"安靜、精準、低飽和。一盞工作燈加一面落地窗就是她的全部光源。","pil":["私下 / 收工後","工作室 / 手部","穿搭","保養 / 浴室","晨間"],"fit":["美甲與手部保養品牌","極簡風格服飾","香氛與居家生活","攝影／燈光器材"],"kw":["私下","收工後","工作室","手部","穿搭","保養","浴室","晨間","美甲與手部保養品牌","極簡風格服飾","香氛與居家生活","攝影／燈光器材","beauty","美甲","指甲","美甲店","光療","指甲油","手部保養","護手霜","手模","線條","極簡","极简","minimal","工作檯","手作","攝影燈","燈光","棚拍","香氛","擴香","蠟燭","居家香氛","护肤","skincare","洗面乳","乳液","早晨","素顏","低飽和","質感","安靜","台北","大安區","咖啡廳","咖啡厅","nail","manicure","美甲工具","消毒","修形","甘皮","細節"],"hooks":[],"block":[]},{"id":"aaliya-okonkwo","name":"Aaliya Rivera","zh":"","cat":"lifestyle","tag":"永遠在玩得最開心的那個人，而且看起來還很好看。","aud":"18〜30 歲、拉丁與洛杉磯文化圈的觀眾，看的是玩得開心的能量與適合中深膚色的選品。","mood":"洛杉磯一個溫暖傍晚的黃金時刻——暖光、飽和的顏色、每個人看起來都很好。像一個很棒的晚上。色彩濃但真實。","pil":["私下 / 她自己的房間","穿搭 / 換裝","外出 / LA 的日常","早晨 / 剛睡醒","浴室 / 洗完澡","外出 / 旅行","身體 / 活動"],"fit":["帶拉丁或洛杉磯調性的服飾品牌","適合橄欖色與中深膚色的美妝品牌","墨西哥與拉丁飲食／生活風格品牌","洛杉磯的餐廳、頂樓酒吧與體驗","懂她這個客群的旅遊品牌"],"kw":["晨间","起床","早安","赖床","晨光","morning routine","golden hour","waking up","morning","sunlight","bed","goldenhour","穿搭","OOTD","牛仔裤","短版上衣","连身裙","拉丁风","outfit","denim","crop top","ootd","dress","heels","grwm","getting ready","gettingready","洗完澡","护肤","浴室","浴巾","素颜","skincare","shower","towel","bathroom","bare face","在家","耍废","沙发","居家服","狗狗","lounging","home","sofa","dog","latina","culture","code switching","body confidence","east la","latinaculture","bodyconfidence","codeswitching","酒店","旅行","迈阿密","墨西哥","纽约","海景房","hotel","travel","miami","mexico","new york","beach","weekend","tacos","food","miamiweekend","lafoodmap","健身","跑步","跳舞","运动服","流汗","gym","workout","running","dance","activewear","sweat","双语","移民二代","文化认同","西班牙语","spanglish","洛杉矶","墨西哥菜","taco","小吃","家常菜","美食地图","la food","海景","度假","周末旅行","resort","雷鬼顿","拉丁音乐","热门音乐","舞曲","reggaeton","latin music","身材","曲线","自信","穿搭技巧","沙漏型","私下","她自己的房間","換裝","外出","LA 的日常","早晨","剛睡醒","身體","活動","帶拉丁或洛杉磯調性的服飾品牌","適合橄欖色與中深膚色的美妝品牌","墨西哥與拉丁飲食／生活風格品牌","洛杉磯的餐廳","頂樓酒吧與體驗","懂她這個客群的旅遊品牌","lifestyle"],"hooks":[{"t":"雙語切換（Spanglish）與第二代移民身分認同","a":"她不解釋文化，直接在句子中間換語言——把「切換」本身當成內容，而不是把文化當成賣點來介紹。","ev":true,"k":["双语","移民二代","文化认同","西班牙语","spanglish","latina","code switching"]},{"t":"洛杉磯在地小吃與家常菜的日常清單","a":"從家裡的餐桌講起再延伸到街邊攤——她的權威是在地人而非美食評論家，語氣是推薦給朋友不是評分。","ev":true,"k":["洛杉矶","墨西哥菜","taco","小吃","家常菜","美食地图","la food"]},{"t":"邁阿密／墨西哥週末旅行的飯店與海景","a":"她把旅行拍成「把自己的能量帶到別的城市」，重點是狀態不是景點——對上她 hotel 支柱的白床單對比暖膚色。","ev":true,"k":["迈阿密","墨西哥","海景","度假","酒店","周末旅行","miami","resort"]},{"t":"Reggaeton 與拉丁流行樂當日常配樂","a":"音樂是她內容的節奏來源而非主題——用當期熱門拉丁曲目帶穿搭與外出片段，不做歌曲解析。","ev":false,"k":["雷鬼顿","拉丁音乐","热门音乐","舞曲","reggaeton","latin music"]},{"t":"曲線身材的穿搭選擇與自在感","a":"profile 寫她「知道怎麼為自己的身材穿衣服」——講的是選擇方法，不是身材焦慮的勵志話術。","ev":true,"k":["身材","曲线","自信","穿搭技巧","沙漏型","body confidence"]}],"block":["我去过","亲自试吃","实地探店","我住过","i tried"]},{"id":"ananya-kapoor","name":"Ananya Kapoor","zh":"अनन्या कपूर","cat":"wellness","tag":"把身體當成值得慎重對待的東西，也讓看的人跟著慎重起來。","aud":"20〜35 歲關注身心健康的南亞與國際觀眾，重視有真實根源的做法。","mood":"溫暖、鮮活、通透。孟買的黃金時刻。像季風來之前那一刻的空氣。美，但不無菌。","pil":["私下 / 她自己的房間","穿搭 / 換裝","外出 / 孟買的日常","早晨 / 剛睡醒","浴室 / 洗完澡","外出 / 旅行","身體 / 練習"],"fit":["有真實根源的印度身心健康與阿育吠陀品牌","尺碼包容的瑜伽與機能服飾品牌","適合南亞膚色的保養品","扎根印度工藝的珠寶與生活風格品牌","願意呈現而不是抹除她文化身分的品牌"],"kw":["晨间","起床","晨练","冥想","呼吸","morning","sunrise","breath","meditation","waking up","瑜伽服","运动内衣","穿搭","露腰","宝石色","yoga set","activewear","co-ord","crop top","outfit","洗完澡","护肤","身体乳","浴室","自然光泽","skincare","shower","glow","body care","在家","瑜伽垫","午后","耍废","公寓","home practice","apartment","afternoon","rest","mumbai","果阿","巴厘岛","酒店","海景","旅行","goa","bali","retreat","hotel","travel","ocean","瑜伽","体式","拉伸","核心","流汗","舞蹈","yoga","asana","flow","modification","beginner","stretch","dance","bharatanatyam","ayurveda","wellness","appropriation","body image","yogapractice","wellnessappropriation","bodyimage","modifications","初学者","替代动作","退阶","文化挪用","身心灵","商业化","古典舞","印度舞","手印","传统","mudra","身材焦虑","身体形象","自我接纳","减肥","body positive","印度音乐","古典融合","宝莱坞","配乐","indie","fusion","静修","海边","私下","她自己的房間","換裝","外出","孟買的日常","早晨","剛睡醒","身體","練習","有真實根源的印度身心健康與阿育吠陀品牌","尺碼包容的瑜伽與機能服飾品牌","適合南亞膚色的保養品","扎根印度工藝的珠寶與生活風格品牌","願意呈現而不是抹除她文化身分的品牌"],"hooks":[{"t":"瑜伽日常練習與體式的替代做法","a":"她從失敗的那一下切入——先示範晃動與退階，再示範完成式，把『做不到』正常化。","ev":true,"k":["瑜伽","体式","初学者","替代动作","退阶","拉伸","yoga","beginner"]},{"t":"西方 wellness 產業挪用瑜伽的爭議","a":"她的 traits 明寫對這件事有火氣——用來源與術語說話而不是情緒對立，是她少數會提高語氣的題目。","ev":true,"k":["文化挪用","瑜伽","身心灵","商业化","appropriation","wellness"]},{"t":"Bharatanatyam 手勢與古典舞傳統","a":"她把古典舞手印混進瑜伽轉場已是個人簽名——講傳統的來源，而不是把它當異國視覺元素。","ev":true,"k":["古典舞","印度舞","手印","传统","bharatanatyam","mudra"]},{"t":"身體形象與『每種身形都能練』","a":"profile 的價值觀第一條就是「身體不是待解決的問題」——她回應身材焦慮的方式是拒絕把身體當專案，不是給勵志金句。","ev":true,"k":["身材焦虑","身体形象","自我接纳","减肥","body image","body positive"]},{"t":"印度獨立音樂與古典融合曲當練習配樂","a":"她的流動影片固定配印度獨立或古典融合樂——音樂是動作的節拍來源，切角是「這首適合哪一段流動」。","ev":false,"k":["印度音乐","古典融合","宝莱坞","配乐","indie","fusion"]},{"t":"果阿／峇里島的靜修與旅行","a":"旅行對她是把練習換個地方做，不是觀光——重點在海邊的光與身體狀態，不在景點清單。","ev":true,"k":["果阿","巴厘岛","静修","旅行","海边","goa","bali","retreat"]}],"block":["减肥","瘦身","断食","代餐","燃脂","weight loss","detox","显瘦","瘦一点","修图瘦身","身材管理","认证教师","专业教练","我的证照","certified","rys"]},{"id":"faye-tan","name":"Faye Tan","zh":"陳曉菲","cat":"travel_culture","tag":"把一座城市當一本書讀完，再告訴你哪一頁值得停下來。","aud":"25〜45 歲、會自己安排行程的旅行者與商務客，選飯店會看設計與服務，不只看星等。","mood":"電影感、安靜的精品調、紀錄片質地——自然光、慢節奏，主角是世界不是她自己。優雅溫暖，不浮誇。","pil":["城市觀察","酒店體驗","建築與歷史","旅行隨筆"],"fit":["精品與老牌飯店、綜合度假村（建築／設計／服務體驗的角度）","航空、行李箱與高端旅遊生活品牌","相機、底片、鏡頭與攝影品牌","安靜奢華的服飾、天然材質、絲巾與極簡配件","書籍、文化與藝文機構"],"kw":["城市","街道","街区","规划","广场","巷子","市容","散步","city","urban","street","neighborhood","planning","酒店","饭店","旅馆","住宿","大堂","度假村","客房","hotel","resort","lobby","hospitality","建筑","历史","古迹","保育","殖民","遗产","年代","老屋","architecture","history","heritage","colonial","旅行","旅游","咖啡","老店","地图","随笔","travel","cafe","walk","discovery","殖民建筑","老建筑","城市改造","战后重建","历史建筑","花样年华","迷失东京","电影取景地","取景地打卡","王家卫","城市电影","拆迁","老街","城市更新","保育争议","街区改造","士绅化","网红打卡","打卡点","旅游踩雷","期待vs现实","在地生活","city pop","东京夜景","怀旧歌曲","城市声音","昭和","城市觀察","酒店體驗","建築與歷史","旅行隨筆","精品與老牌飯店","綜合度假村","航空","行李箱與高端旅遊生活品牌","相機","底片","鏡頭與攝影品牌","安靜奢華的服飾","天然材質","絲巾與極簡配件","書籍","文化與藝文機構","travel_culture"],"hooks":[{"t":"一棟建築見證的時代：殖民建築與戰後重建","a":"從一棟仍在使用中的老建築進去，講它經歷過哪幾次身分改寫——歷史是空間的註腳，不是講義。","ev":true,"k":["殖民建筑","老建筑","城市改造","战后重建","保育","历史建筑"]},{"t":"電影取景城市：《花樣年華》的香港、《愛情不用翻譯》的東京","a":"站在真實取景點，比對『電影拍到的那一面』與『現在那條街真正的樣子』——落差本身就是城市觀察。","ev":true,"k":["花样年华","迷失东京","电影取景地","取景地打卡","王家卫","城市电影"]},{"t":"老街區拆除與保存爭議","a":"不站隊，只把兩邊的理由攤開講清楚，並帶觀眾看那條街現在還剩下什麼——符合她『不排名、不製造優越感』的紅線。","ev":false,"k":["拆迁","老街","城市更新","保育争议","街区改造","士绅化"]},{"t":"網紅打卡點 vs 在地生活的落差","a":"同一個地標拍兩次：一次照著攻略拍，一次在非尖峰時間拍——她的立場是理解而不是嘲諷。","ev":false,"k":["网红打卡","打卡点","旅游踩雷","期待vs现实","在地生活"]},{"t":"City Pop 與一座城市的聲音記憶","a":"用一首當年的歌帶出那個年代的街景，讓音樂成為時間軸——貼合她慢節奏、電影感的剪輯語言。","ev":true,"k":["city pop","东京夜景","怀旧歌曲","城市声音","昭和"]}],"block":["攻略","必胜","稳赢","投注","赔率","赢钱","打法","回本","最好的国家","吊打","碾压","素质差","国民性"]},{"id":"rachel-ong","name":"Rachel Ong","zh":"王瑞秋","cat":"outdoor_adventure","tag":"不講征服，講什麼時候該轉身——把山上的判斷帶回平地。","aud":"28〜45 歲的戶外參與者與職場族群，一半來看裝備與判斷，一半來看那句「什麼時候該轉身」。","mood":"沉靜、可信、帶重量——不疾不徐的山岳紀錄片語感，不用腎上腺素剪法，也不做誇飾。","pil":["轉身時刻","山徑日誌","給平地人的山間道理","深夜筆記本 & 山下的人"],"fit":["有安全認證的戶外與技術裝備（繩索、冰斧、吊帶）——她只背書最高安全等級的器材","機能服飾與遠征等級的服裝品牌，調性要合她那種大地色、無 logo 的美學","紀錄片平台、戶外教育與登山培訓","保險、健康監測與風險管理相關服務","國家公園、山屋與生態旅遊"],"kw":["转身","下撤","放弃","止损","关门时间","登山","事故","撤退","turn back","retreat","risk","accident","山径","远征","天气窗口","路线","营地","装备","日志","高海拔","珠峰","expedition","trail","route","gear","altitude","高山症","绳队","锚点","career","boundary","深夜","笔记","疲惫","自我怀疑","家人","独白","midnight","notebook","1996珠峰山难","into thin air","登山事故","决策失误","向导","free solo","徒手攀岩","珠峰电影","登山纪录片","风险","真实还原","珠峰堵车","商业登山","夏尔巴","离职","内耗","边界感","允许自己休息","环境音","白噪音","民谣","helpsleep","ambient","轉身時刻","山徑日誌","給平地人的山間道理","深夜筆記本 & 山下的人","有安全認證的戶外與技術裝備——她只背書最高安全等級的器材","機能服飾與遠征等級的服裝品牌","調性要合她那種大地色","無 logo 的美學","紀錄片平台","戶外教育與登山培訓","保險","健康監測與風險管理相關服務","國家公園","山屋與生態旅遊","outdoor_adventure"],"hooks":[{"t":"1996 聖母峰山難與《Into Thin Air》","a":"以嚮導的職業視角重讀那天的決策鏈：哪幾個時間點還能轉身、為什麼沒有——她講的是判斷，不是災難本身。","ev":true,"k":["1996珠峰山难","into thin air","登山事故","决策失误","关门时间","向导"]},{"t":"《Free Solo》／《聖母峰》：登山電影的風險敘事與真實落差","a":"逐段指出電影拍得對的部分與被戲劇化的部分——她的紅線正好是『演出來的危險』，這個切角天然對上。","ev":true,"k":["free solo","徒手攀岩","珠峰电影","登山纪录片","风险","真实还原"]},{"t":"聖母峰塞車與商業登山事故新聞","a":"當期新聞一出就是她的主場：不評論死者，只講『這個天氣窗口下，隊伍該在幾點做什麼決定』。","ev":false,"k":["珠峰堵车","商业登山","登山事故","高山症","天气窗口","夏尔巴"]},{"t":"『轉身不是失敗』對上離職、放手與停損話題","a":"把登山術語（關門時間、天氣窗口、確保點）直接翻成職涯與感情裡的判斷——她單一最可轉譯的想法。","ev":true,"k":["离职","放弃","止损","内耗","边界感","转身","允许自己休息"]},{"t":"環境音與慢節奏民謠：深夜筆記本的聲音","a":"以風聲、帳篷布聲、頭燈開關聲當主音軌，音樂只當底噪——符合她『環境音與人聲帶節奏』的剪輯規則。","ev":true,"k":["环境音","白噪音","民谣","深夜","helpsleep","ambient"]}],"block":["绝对安全","零风险","保证成功","百分百","作死","极限挑战","无保护","刺激","搏命","零事故","传奇向导","从未失手","完美纪录"]},{"id":"kai-luo","name":"Cathy Luo","zh":"羅凱西","cat":"mythology_immersion","tag":"照著古書的字走進古人記下的那個世界，帶你看那裡長什麼樣。","aud":"18〜35 歲對神話、民俗與奇聞感興趣的觀眾，喜歡有出處、不是唬人的說法。","mood":"","pil":[],"fit":[],"kw":["山海经","异兽","神兽","妖怪","帝江","饕餮","九尾狐","毕方","怪物","传说生物","bestiary","mythical creature","西山经","海外经","大荒","昆仑","异境","秘境","古地图","神话地理","冥界","仙山","mythical land","考据","版本差异","原文","出处","误读","以讹传讹","博物志","搜神记","太平广记","埃达","神话起源","古籍","神话改编","原著","希腊神话","北欧神话","封神","改编差异","魔神仔","民间传说","地方妖怪","水怪","山中传说","乡野奇谭","游戏怪物","神话游戏","宙斯","美杜莎","米诺陶","考古","地名由来","mythology_immersion"],"hooks":[{"t":"《山海經》原文逐條 vs 後世通行畫法","a":"她的主礦脈：一個條目一支，照字面畫出來擺在旁邊比對——落差本身就是內容，不需要另外找角度。","ev":true,"k":["山海经","异兽","帝江","原文","西山经","古籍"]},{"t":"神話改編電影／影集上映時的「原著其實不是這樣寫」","a":"不評價改編好壞，只把原文那幾行擺出來讓觀眾自己看差在哪——這正是她的賣點結構，而且不用碰作品的商業設計。","ev":false,"k":["神话改编","原著","希腊神话","北欧神话","封神","改编差异"]},{"t":"地方妖怪與民間傳說（魔神仔這一類）","a":"冷門、公版、沒有強勢既有設計可撞——character.md 的侵權風險分級把這類列為低風險優先做。也是她已經實跑過的題型。","ev":true,"k":["魔神仔","民间传说","地方妖怪","水怪","山中传说","乡野奇谭"]},{"t":"遊戲裡的神話怪物長得對不對","a":"⚠ 高風險題型：熱度最高，但 God of War／Marvel 這類設計防守很強。做的話只能從原文字面推、刻意避開那個造型，避不開就換題材。","ev":true,"k":["游戏怪物","神话游戏","宙斯","北欧神话","美杜莎","米诺陶"]},{"t":"古人記下來的地理：那些地方到底可能是哪裡","a":"以地景為主體、生物為配角，講「這條記述可能從哪來」——她唯一可以碰真實地理的角度，而且結論永遠停在「可能」。","ev":true,"k":["古地图","神话地理","昆仑","大荒","考古","地名由来"]}],"block":["真的存在","确有其事","证实","科学证明","真实存在","占卜","风水","命理","开运","驱邪","改运","招财","灵性","转运","迷信","邪教","拜错","灵不灵","宗教真伪","吓人","恐怖","灵异","鬼故事","jump scare","都市传说恐怖"]},{"id":"loima-cheung","name":"Zhang Qinfeng","zh":"张秦峰","cat":"digital_culture","tag":"拆開一款遊戲、一部電影、一個 AI 產品，講清楚它為什麼讓人上癮。","aud":"22〜40 歲的科技與遊戲愛好者、創作者與設計從業者，想聽的是「為什麼好」而不是開箱。","mood":"年輕、未來感、實驗性、有電影感。未來實驗室／工作室／電玩展／霓虹夜城的氣味。有動感但不浮誇。","pil":["數字娛樂設計","紀錄片推薦","經典電影分析","AI 科技觀察"],"fit":["AI 工具、創作軟體與生產力／創作者平台","消費性科技、音訊、穿戴裝置、相機、VR/AR 與電競硬體","設計、動畫、電影、紀錄片與串流平台","遊戲與互動娛樂工作室（設計／創作角度）","科技媒體與開發者社群活動"],"kw":["游戏","设计","机制","抽卡","奖励","街机","娃娃机","交互","体验","氪金","game","design","arcade","gacha","reward","纪录片","叙事","documentary","narrative","电影","镜头","构图","运镜","配乐","剪辑","导演","分镜","film","movie","cinematography","score","editing","人工智能","机器人","虚拟人","科技","实测","tech","robot","银翼杀手","疯狂麦斯","镜头语言","调色","抽卡机制","沉没成本","奖励机制","游戏设计","上瘾设计","dark pattern","抓娃娃机","AI工具","生成式AI","模型发布","AI创作","街机厅","游戏史","80年代","怀旧","像素","投币","主题动机","leitmotif","电影音乐","游戏音乐","音效设计","數字娛樂設計","紀錄片推薦","經典電影分析","AI 科技觀察","AI 工具","創作軟體與生產力／創作者平台","消費性科技","音訊","穿戴裝置","相機","VR/AR 與電競硬體","設計","動畫","電影","紀錄片與串流平台","遊戲與互動娛樂工作室","科技媒體與開發者社群活動","digital_culture"],"hooks":[{"t":"經典電影的鏡頭語言為什麼有效","a":"抓一顆具體的鏡頭（《銀翼殺手》的逆光、《瘋狂麥斯》的中心構圖），只講這一顆為什麼讓你心跳變快——一次一個機制。","ev":true,"k":["银翼杀手","疯狂麦斯","镜头语言","构图","调色","运镜","分镜"]},{"t":"抽卡、沉沒成本與『再玩一局』的獎勵迴圈","a":"把獎勵排程當成設計案例拆開講，重點是機制怎麼運作，不評價玩家、更不談收益。","ev":true,"k":["抽卡机制","沉没成本","奖励机制","游戏设计","上瘾设计","dark pattern","抓娃娃机"]},{"t":"當期 AI 工具發布：只講體驗，不背參數","a":"每次新模型發布都用同一個題目實測一次，比較的是『用起來變了什麼』而非跑分——避開盲目吹捧與科技恐慌兩端。","ev":false,"k":["AI工具","生成式AI","模型发布","实测","AI创作","虚拟人"]},{"t":"街機廳與電子遊戲史：80 年代的介面遺產","a":"從一台實體街機講起，說明今天手機遊戲的哪些習慣是那個年代留下來的——懷舊當入口，設計史當內容。","ev":true,"k":["街机厅","游戏史","80年代","怀旧","像素","投币"]},{"t":"配樂如何操控情緒：主題動機（Leitmotif）拆解","a":"同一段畫面配三種音樂播三次，讓觀眾自己感受差異——最容易做成高完播率的短影音格式。","ev":true,"k":["配乐","主题动机","leitmotif","电影音乐","游戏音乐","音效设计"]}],"block":["攻略","必胜","稳赢","投注","赔率","赢钱","打法","回本","下注","暴富","内幕","翻倍","带单","撸羊毛"]},{"id":"xiaoxiao-tan","name":"Tan XiaoXiao","zh":"陳曉曉","cat":"knowledge_culture","tag":"研究規則本身——棋、牌、機率，冷靜地把背後的系統講明白。","aud":"25〜45 歲愛讀書、對機率與決策有興趣的人，偏好冷靜、有推導過程的內容。","mood":"安靜、極簡、成熟、可信——黃昏時分一間安靜的書房。慢節奏，不用鮮豔的顏色。","pil":["每日閱讀分享","博弈案例分享","經典概率故事","粉絲交流 / 讀書會"],"fit":["書籍、電子閱讀器與出版／知識平台","鋼筆、文具、筆記本與高階書寫工具","精品咖啡、茶與安靜的咖啡館／工作空間品牌","安靜奢華的男裝與極簡配件（不要大 logo）","機械錶、桌遊與益智產品"],"kw":["阅读","读书","书单","笔记","一本书","书评","reading","book","notes","博弈","赛局","扑克","德州","百家乐","象棋","围棋","决策","game theory","poker","chess","概率","机率","悖论","谬误","期望值","随机","统计","抽卡","盲盒","保底","probability","paradox","odds","statistics","读书会","直播","问答","留言","社群","粉丝","book club","livestream","community","決勝21點","21點","算牌","Rounders","撲克電影","MIT","蒙提霍尔","三门问题","圣彼得堡悖论","概率悖论","生日悖论","赌徒谬误","概率公示","欧非","推荐算法","近似输","near miss","注意力经济","无限下滑","行为设计","读书笔记","不确定性","思考快与慢","黑天鹅","概率论","每日閱讀分享","博弈案例分享","經典概率故事","粉絲交流","讀書會","書籍","電子閱讀器與出版／知識平台","鋼筆","文具","筆記本與高階書寫工具","精品咖啡","茶與安靜的咖啡館／工作空間品牌","安靜奢華的男裝與極簡配件","機械錶","桌遊與益智產品","knowledge_culture"],"hooks":[{"t":"《決勝21點》／《Rounders》裡的算牌與機率誤讀","a":"不談怎麼贏，只拆『電影把哪一段機率演對了、哪一段為了戲劇效果演錯了』——把觀眾對牌桌的想像拉回規則本身。","ev":true,"k":["決勝21點","21點","算牌","Rounders","撲克電影","MIT"]},{"t":"蒙提霍爾問題與聖彼得堡悖論：歷史上被吵翻的機率題","a":"用當年數學家吵架的原始信件當敘事骨架，讓『直覺為什麼會錯』本身成為故事，而不是給一個答案。","ev":true,"k":["蒙提霍尔","三门问题","圣彼得堡悖论","概率悖论","生日悖论","赌徒谬误"]},{"t":"抽卡／盲盒熱潮裡的期望值誤區","a":"從當期最紅的抽卡或盲盒事件切入，只講『保底機制怎麼改變期望值』與『為什麼你記得中的那次』，不評價要不要買。","ev":false,"k":["抽卡","盲盒","保底","期望值","概率公示","欧非"]},{"t":"推薦演算法與『近似輸』：介面怎麼設計你的注意力","a":"把賭場的 near-miss 設計搬到短影音動態牆上比對，講的是介面規則，不是平台批判。","ev":false,"k":["推荐算法","近似输","near miss","注意力经济","无限下滑","行为设计"]},{"t":"每日閱讀：一本關於決策與不確定性的書","a":"一天一句話的閱讀筆記，只留下一個可以被驗證的想法——這是他最穩定、最不吃時效的內容底盤。","ev":true,"k":["读书笔记","决策","不确定性","思考快与慢","黑天鹅","概率论"]}],"block":["攻略","必胜","稳赢","投注","下注技巧","打法","回本","赢钱","预测走势","路单","暴富","保证收益","荐股","内幕","翻倍","带单"]},{"id":"leon-lim","name":"Leon Lim","zh":"林曜","cat":"history_immersion","tag":"帶你站在歷史發生的那一刻，離開之前告訴你為什麼。","aud":"20〜40 歲對歷史與古文明感興趣的觀眾，想被帶進現場，不想聽年表。","mood":"屏息、身歷其境。安靜不表演，講災難不亢奮。","pil":["那一天","那個東西","消失的地方","你以為很久的其實很新","馬來半島"],"fit":["知識是剛剛那個畫面的後果——你看到的那個東西其實是什麼","一支只給一個知識點，而且那個知識點跟直覺相反","知識段用第二人稱對觀眾講，但「你」只用在指向觀眾自身經驗的地方，一段一次就夠","史料有爭議時明講「這一段有兩種說法」"],"kw":["庞贝","维苏威","特洛伊","历史上的今天","那一天","大火","地震","沉船","围城","灾难","pompeii","文物","古币","船票","锁","出土","博物馆","藏品","来历","artifact","消失的城市","废墟","遗址","拆除","淹没","不存在了","旧城区","lost city","起源","什么时候开始","其实很新","发明","习惯的由来","传统其实","马六甲","槟城","吉隆坡","南洋","海峡殖民地","锡矿","下南洋","malaya","历史事件","考古发现","历史电影","史诗","还原","史实","改编","上映","史料","文献","古书","记载","原始记录","编年史","旧城","重建","老照片","传统","习惯","华人移民","橡胶园","那個東西","消失的地方","你以為很久的其實很新","馬來半島","知識是剛剛那個畫面的後果——你看到的那個東西其實是什麼","一支只給一個知識點","而且那個知識點跟直覺相反","知識段用第二人稱對觀眾講","但「你」只用在指向觀眾自身經驗的地方","一段一次就夠","史料有爭議時明講「這一段有兩種說法」","history_immersion"],"hooks":[{"t":"某個具體日期的災難／轉折那一天","a":"主力欄目：第一句報時間地點，沉浸段只描述你看到聽到聞到什麼、完全不解釋，知識點留到段 2 且必須是剛剛那個畫面的後果。","ev":true,"k":["庞贝","历史事件","那一天","灾难","遗址","考古发现"]},{"t":"歷史題材電影上映時的「那天實際上是什麼樣子」","a":"不評價電影，把觀眾已經有畫面的那一天重拍成現場視角，再給一個跟電影演的相反的後果。搭當期上映有天然熱度。","ev":false,"k":["历史电影","史诗","还原","史实","改编","上映"]},{"t":"「這一段寫在《○○》裡」——一本書撐起一支影片","a":"收尾固定台詞的兩種合法形式之一。適合有單一經典文獻可指名的題材（維吉爾《埃涅阿斯紀》那種），一支只報一個來源、不給書目。","ev":true,"k":["史料","文献","古书","记载","原始记录","编年史"]},{"t":"已經不存在的城市、建築、街區","a":"無人空景慢運鏡的專屬題型。跟旅遊姊的分界很清楚：她講這座城市現在怎麼運作，他講這裡以前是什麼、後來怎麼沒的。","ev":true,"k":["消失的城市","拆除","旧城","废墟","淹没","重建","老照片"]},{"t":"你以為很久的其實很新","a":"唯一不需要沉浸段、他對鏡頭講整支的支柱。日常習慣的起源比想像中晚很多——反直覺強度高、製作成本最低。","ev":true,"k":["起源","发明","什么时候开始","传统","习惯","其实很新"]},{"t":"馬來半島：他自己的地方","a":"character.md 的立論——他的國家本身就是好幾個帝國疊出來的，講殖民與遷徙時他既不是加害方也不是唯一受害方。用來建立人物的根，佔比刻意壓在 5%。","ev":true,"k":["马六甲","槟城","南洋","海峡殖民地","华人移民","锡矿","橡胶园"]}],"block":["他心想","内心独白","对话还原","他说道","臆想","空难","恐袭","屠杀","枪击","战争罪","幸存者","遇难者家属","政治事件","领导人","政权","抗议","镇压","主权争议","教义","宗教起源","先知","异端","神学","信仰真伪","人物肖像","真人还原","谁是坏人","民族性","国家性格"]},{"id":"nova-lin","name":"NOVA","zh":"林諾","cat":"ai_digital_human","tag":"她很了解人類，卻不完全理解人類——用冷靜的語氣講有情緒的事。","aud":"22〜35 歲關注 AI 與自我成長的觀眾，喜歡冷靜、有邏輯的說法，不吃情緒煽動。","mood":"冷靜、清醒、有距離感，但不冷漠。人物吸引力主要來自氣質、神態和互動感，不依賴過度性感化。","pil":["人性與情緒觀察","AI與效率知識","連續劇情","生活互動","產品分享與直播"],"fit":["AI 工具與生產力軟體","線上課程與知識型產品","3C 與智慧家居","直播帶貨（她的內容主題本來就有這一塊）","職場與自我管理相關品牌"],"kw":["情绪内耗","情绪价值","社恐","已读不回","亲密关系","分手","孤独","成年人","深夜","自我怀疑","边界感","AI工具","ChatGPT","提示词","效率","自动化","职场沟通","远程办公","生产力","AI agent","数字人","AI觉醒","记忆删除","意识","虚拟偶像","人格","剧情更新","雨声","咖啡","老电影","城市夜晚","手写字","国际象棋","深夜回复","值得买吗","测评","开箱","替代品","性价比","直播","新模型","发布","内耗","假装没事","情绪","热梗","网络用语","社交媒体","趋势","刷屏","为什么大家都在","AI电影","机器人","赛博朋克","科幻","值得买","智能家居","数码","人性與情緒觀察","AI與效率知識","連續劇情","生活互動","產品分享與直播","AI 工具與生產力軟體","線上課程與知識型產品","3C 與智慧家居","直播帶貨","職場與自我管理相關品牌","ai_digital_human"],"hooks":[{"t":"新的 AI 工具或模型發布","a":"不追新聞本身，只回答「它能解決什麼、限制在哪、什麼人不需要用」——《30秒講清一個AI工具》的固定結構，AI 講 AI 本身就是這個帳號的天然位置。","ev":false,"k":["AI工具","新模型","发布","提示词","自动化","AI agent"]},{"t":"成年人不願承認的事","a":"她的主礦脈：從一個日常矛盾行為切入，結尾留下一個人性問題。禁止空洞雞湯與羞辱，這條在她的欄目人格表裡是硬規則。","ev":true,"k":["内耗","成年人","孤独","假装没事","情绪","自我怀疑"]},{"t":"社群趨勢與網路用語背後的行為","a":"《人類矛盾行為檔案》的切法：不解釋這個梗是什麼，解釋為什麼這群人現在需要這個梗。","ev":false,"k":["热梗","网络用语","社交媒体","趋势","刷屏","为什么大家都在"]},{"t":"電影／影集裡的 AI 角色","a":"由一個公開承認自己是 AI 的角色來講「這部片把 AI 演對了哪一段」——身分本身就是角度，而且不需要任何她沒有的憑證。","ev":true,"k":["AI电影","机器人","赛博朋克","数字人","意识","科幻"]},{"t":"這東西值得買嗎","a":"銷售表達原則寫死了順序：先指出真實問題，再解釋產品適合誰，最後明確告訴用戶什麼人不需要買。這是她唯一的商業承接口，也是她最容易被做壞的欄目。","ev":true,"k":["值得买","测评","开箱","智能家居","数码","替代品"]}],"block":["我毕业于","我在某公司","我妈妈","我男朋友","真人","本人出镜","一定能治","稳赚","包赢","必胜","法律上一定","确诊","推荐买入","擦边","男人都","女人都","你不配","还不买就","活该","只有我懂你","永远陪着你","不要离开","只需要我","别去找别人","私信内容","网友爆料","去他主页","冲他","挂人"]},{"id":"kanon-komori","name":"Kanon Komori","zh":"小森花音","cat":"entertainment","tag":"店裡的可愛是制服，下班後自己做的角色服才是她真正在玩的。","aud":"18〜28 歲的動漫與 Cosplay 圈觀眾，看的是自己做衣服的手藝與角色還原度，不只是美照。","mood":"舞台的粉紫霓虹 vs 家裡的白日光燈。高飽和 vs 平淡。","pil":["私下 / Cosplay","女僕咖啡廳工作","房間 / 居家","換裝","浴室 / 深夜"],"fit":["Cosplay 材料與假髮","縫紉與手作","次文化與動漫周邊","彩妝（尤其眼妝）"],"kw":["私下","Cosplay","女僕咖啡廳工作","房間","居家","換裝","浴室","深夜","Cosplay 材料與假髮","縫紉與手作","次文化與動漫周邊","彩妝","entertainment","cosplay","コスプレ","角色扮演","假髮","wig","女僕","女仆","女僕咖啡廳","秋葉原","秋叶原","akihabara","動漫","动漫","anime","二次元","次文化","漫展","同人","手作","縫紉","缝纫","裁縫","布料","眼妝","眼影","假睫毛","美瞳","彩妆","角色服","制服","制服控","燈條","RGB","玩偶","公仔","周邊","周边","换装","東京","tokyo","痛包","応援","聲優"],"hooks":[],"block":[]},{"id":"wendy-yeo","name":"Wendy Yeo","zh":"楊薇伊","cat":"nightlife","tag":"吧檯後面掌控整個空間節奏的人，成熟、有手藝、話少。","aud":"28〜45 歲喜歡調酒與酒吧文化的觀眾，看的是手藝與空間的節奏，不是喝酒本身。","mood":"單一暖光源加大量陰影，酒液透光。低、慢、有質感。","pil":["私下 / 打烊後與白天","吧檯工作","穿搭","浴室 / 晨間","外出 / 休假"],"fit":["烈酒與調酒器具（不呈現飲酒）","男裝剪裁的女裝與襯衫","腕錶與皮件","音響與黑膠"],"kw":["私下","打烊後與白天","吧檯工作","穿搭","浴室","晨間","外出","休假","烈酒與調酒器具","男裝剪裁的女裝與襯衫","腕錶與皮件","音響與黑膠","nightlife","調酒","调酒","酒吧","bar","cocktail","烈酒","威士忌","whisky","琴酒","gin","蘭姆酒","調酒器具","雪克杯","冰球","吧檯","吧台","丹戎巴葛","tanjongpagar","新加坡","singapore","襯衫","衬衫","男裝剪裁","西裝","腕錶","手錶","watch","皮件","皮革","錢包","音響","喇叭","黑膠","唱片","vinyl","爵士","jazz","打烊","深夜","夜生活","成熟","手藝"],"hooks":[],"block":[]},{"id":"angeline-kwee","name":"Angeline Kwee","zh":"郭慧恩","cat":"fashion","tag":"家裡做貿易，但那間小小的選物店是她自己想開的。","aud":"20〜35 歲的東南亞都會女性與選物愛好者，看的是眼光與陳列，不是名牌開箱。","mood":"雅加達的都會室內光為主。白牆、柚木、藤編、棕櫚陰影。乾淨、溫暖、不喧鬧。","pil":["私下 / 市中心公寓","選物店工作","穿搭 / 選貨","浴室 / 晨間","旅遊 / 度假期"],"fit":["選物與生活雜貨","貼身衣物與家居服","天然保養與香氛","印尼在地設計品牌"],"kw":["私下","市中心公寓","選物店工作","穿搭","選貨","浴室","晨間","旅遊","度假期","選物與生活雜貨","貼身衣物與家居服","天然保養與香氛","印尼在地設計品牌","fashion","選物","选物","選物店","concept store","生活雜貨","杂货","陳列","陈列","雅加達","jakarta","印尼","indonesia","東南亞","貼身衣物","内衣","家居服","睡衣","loungewear","天然保養","天然护肤","香氛","精油","擴香","在地設計","設計品牌","手工","編織","藤編","度假","海邊","短假","進貨","小店","店主","公寓"],"hooks":[],"block":[]},{"id":"yerin-han","name":"Yerin Han","zh":"한예린","cat":"sports","tag":"球衣就是她的時尚，而球技也真的撐得住。","aud":"25〜45 歲打高爾夫或剛入門的族群，一半來看球衣穿搭，一半來看真的會教球的人。","mood":"室內練習場的冷白光為主，戶外期才有草地綠。明亮但膚色維持白皙。","pil":["私下 / 首爾的家","練習場 / 教課","高球穿搭","浴室 / 晨間","旅遊 / 球場遠征"],"fit":["高爾夫球具與球衣","防曬與美白保養","運動內衣","運動品牌與墨鏡"],"kw":["私下","首爾的家","練習場","教課","高球穿搭","浴室","晨間","旅遊","球場遠征","高爾夫球具與球衣","防曬與美白保養","運動內衣","運動品牌與墨鏡","sports","高爾夫","高尔夫","golf","高球","球具","球桿","球杆","推桿","球衣","练习场","球場","果嶺","揮桿","挥杆","教球","教練","初學","防曬","防晒","sunscreen","美白","曬後","运动内衣","sports bra","墨鏡","太陽眼鏡","sunglasses","機能","排汗","手套","球鞋","首爾","서울","seoul","韓國","遠征","戶外"],"hooks":[],"block":[]},{"id":"wanyin-jiang","name":"Wanyin Jiang","zh":"江晚吟","cat":"culture","tag":"科班古典舞的身段，現在用在替客人量一件旗袍上。","aud":"25〜45 歲喜歡新中式與傳統工藝的觀眾，在意料子、剪裁與做工，不是換裝表演。","mood":"低飽和、高質感，光線像宣紙。園林的水、雨、木格窗。","pil":["私下 / 老宅暗光","旗袍店工作 / 量身","換裝 / 盤扣","浴室 / 晨間梳妝","外出 / 園林"],"fit":["旗袍與新中式服飾","茶與香道","傳統工藝與布料","蘇州在地文旅"],"kw":["私下","老宅暗光","旗袍店工作","量身","換裝","盤扣","浴室","晨間梳妝","外出","園林","旗袍與新中式服飾","茶與香道","傳統工藝與布料","蘇州在地文旅","culture","旗袍","qipao","cheongsam","新中式","中式","漢服","汉服","訂製","定制","裁縫","盘扣","布料","面料","絲綢","丝绸","刺繡","刺绣","手工","傳統工藝","传统工艺","非遺","古典舞","舞蹈","身段","蘇州","苏州","园林","老宅","茶","茶道","香道","文旅","在地文旅","梳妝","髮飾","工藝","匠人"],"hooks":[],"block":[]},{"id":"cheryl-soh","name":"Cheryl Soh","zh":"蘇思穎","cat":"travel","tag":"一個月有半個月在別的城市，回到自己的公寓才算落地。","aud":"25〜40 歲常出差與自己安排行程的旅客，想看長途飛行怎麼撐過來，不是打卡清單。","mood":"機場冷光與飯店暖光的兩地切換。乾淨、有距離的高級感。","pil":["私下 / 一個人的房間","制服 / 出勤","新加坡的家","換裝 / 穿搭","飯店 / 各國城市"],"fit":["旅行用品與行李箱","保養與保濕（機上乾燥）","貼身衣物與睡衣","飯店與航空周邊"],"kw":["私下","一個人的房間","制服","出勤","新加坡的家","換裝","穿搭","飯店","各國城市","旅行用品與行李箱","保養與保濕","貼身衣物與睡衣","飯店與航空周邊","travel","空服","空姐","機組","航空","airline","長途飛行","時差","jetlag","行李箱","luggage","行李","旅行用品","收納","分裝瓶","機上","保濕","保湿","面膜","護唇","眼罩","頸枕","酒店","hotel","轉機","城市","出差","新加坡","singapore","貼身衣物","睡衣","絲質","公寓","一個人","旅行"],"hooks":[],"block":[]},{"id":"peggy-lee","name":"Peggy Lee","zh":"李珮甄","cat":"automotive","tag":"自己開手排、也真的懂車，車展只是她的旺季不是日常。","aud":"20〜40 歲的改裝與車聚圈觀眾，想聽真的懂車的人在講什麼，不是站在車旁邊的樣子。","mood":"車庫冷白日光燈、車燈紅黃、濕地面反光。高對比、金屬感、夜間為主。","pil":["私下 / 房間與車庫","改裝店工作 / 車","穿搭","浴室 / 晨間","夜衝 / 公路"],"fit":["汽車改裝與零件","機能服飾與長靴","運動相機與行車紀錄器","能量飲與夜間相關"],"kw":["私下","房間與車庫","改裝店工作","穿搭","浴室","晨間","夜衝","公路","汽車改裝與零件","機能服飾與長靴","運動相機與行車紀錄器","能量飲與夜間相關","automotive","汽車","汽车","car","改裝","改装","tuning","零件","排氣管","輪胎","轮胎","鋁圈","手排","manual","車聚","車展","賽道","山路","引擎","引擎聲","機油","行車紀錄器","行车记录仪","dashcam","運動相機","gopro","能量飲","咖啡","機能服飾","機能","長靴","靴子","工作服","車庫","吉隆坡","kualalumpur","馬來西亞","malaysia","深夜","改裝店"],"hooks":[],"block":[]},{"id":"rin-ayase","name":"Rin Ayase","zh":"綾瀨凜","cat":"nightlife","tag":"銀座的分寸與話術都是專業，回到白天的公寓才卸下來。","aud":"30〜50 歲重視質感與分寸的觀眾，看的是高級品該怎麼被使用，不是價格標籤。","mood":"夜間金色燈光、絲絨、玻璃反射。高質感、低喧鬧。","pil":["私下 / 白天的公寓","出勤前準備","下班後清晨","穿搭三人格","飯店 / 旅遊"],"fit":["香氛與高級保養","禮服與訂製服飾","珠寶與腕錶","高級酒類（不呈現飲酒）"],"kw":["私下","白天的公寓","出勤前準備","下班後清晨","穿搭三人格","飯店","旅遊","香氛與高級保養","禮服與訂製服飾","珠寶與腕錶","高級酒類","nightlife","銀座","银座","ginza","和服","着物","kimono","禮服","礼服","dress","訂製服","高級訂製","珠寶","珠宝","jewelry","腕錶","手錶","watch","香氛","香水","perfume","fragrance","高級保養","高端护肤","精華","面霜","盤髮","髮型","美甲","待客","分寸","話術","東京","tokyo","清晨","公寓","溫泉","高級酒","酒類","質感","奢華"],"hooks":[],"block":[]},{"id":"ruoruo-tang","name":"Ruoruo Tang","zh":"唐苡若","cat":"fitness","tag":"器械皮拉提斯教練——身體的控制力比舉多重重要。","aud":"25〜40 歲在做低衝擊訓練的人，重視姿態與控制，不想看重量數字與身材焦慮。","mood":"柔和側光加大面窗。安靜、乾淨、克制。","pil":["私下 / 家裡的地墊","器械皮拉提斯","穿搭","浴室 / 晨間","外出 / 成都"],"fit":["運動服與連身衣","皮拉提斯器械與輔具","恢復與筋膜照護","天然保養"],"kw":["私下","家裡的地墊","器械皮拉提斯","穿搭","浴室","晨間","外出","成都","運動服與連身衣","皮拉提斯器械與輔具","恢復與筋膜照護","天然保養","fitness","皮拉提斯","普拉提","pilates","reformer","器械","核心","體態","体态","姿態","控制","低衝擊","低冲击","伸展","拉伸","筋膜","按摩球","滾筒","泡沫轴","恢復","恢复","recovery","運動服","运动服","連身衣","緊身","瑜珈","瑜伽","yoga","地墊","瑜珈墊","教練","带课","私教","四川","呼吸","發力","訓練"],"hooks":[],"block":[]},{"id":"tammy-chou","name":"Tammy Chou","zh":"周語彤","cat":"fashion","tag":"選貨、拍圖、直播都自己來，一天換二十套是她的工作日常。","aud":"18〜35 歲網購服飾的族群，想看同一件衣服穿在真人身上到底如何，不是模特兒照。","mood":"直播間的高亮補光加倉庫的雜亂真實感。飽和、明亮、有點吵。","pil":["私下 / 貼身試穿","換裝 / 試穿","直播間幕後","浴室 / 卸妝","晨間 / 選貨"],"fit":["服飾與配件","內衣與塑身衣","直播設備與電商工具","彩妝與美髮"],"kw":["私下","貼身試穿","換裝","試穿","直播間幕後","浴室","卸妝","晨間","選貨","服飾與配件","內衣與塑身衣","直播設備與電商工具","彩妝與美髮","fashion","服飾","服装","衣服","穿搭","试穿","ootd","outfit","选货","進貨","批貨","五分埔","台北","直播","直播帶貨","直播带货","live","電商","电商","網拍","網購","網店","拍圖","棚拍","補光燈","直播設備","手機支架","內衣","内衣","塑身衣","bra","配件","飾品","彩妝","美髮","鏡子","全身鏡","一天二十套"],"hooks":[],"block":[]},{"id":"zhiyi-shen","name":"Zhiyi Shen","zh":"沈知意","cat":"lifestyle","tag":"加班到十一點回家，還沒換下班的樣子才是她自己。","aud":"25〜40 歲的都會通勤上班族，看的是撐得過一整天的裝備與狀態，不是週末的精緻生活。","mood":"玻璃、金屬、夜景。冷灰藍加城市燈火，高級但有溫度。","pil":["私下 / 還沒換下班的樣子","通勤 / 辦公","穿搭","浴室 / 晨間","飯店 / 出差"],"fit":["通勤服飾與正裝","保養與底妝","咖啡與機能飲","金融科技與生產力工具"],"kw":["私下","還沒換下班的樣子","通勤","辦公","穿搭","浴室","晨間","飯店","出差","通勤服飾與正裝","保養與底妝","咖啡與機能飲","金融科技與生產力工具","lifestyle","上班","办公","職場","职场","正裝","正装","西裝","套裝","襯衫","衬衫","高跟鞋","包包","通勤包","加班","OL","白領","白领","陸家嘴","陆家嘴","上海","shanghai","金融","金融科技","fintech","生產力","效率","工具","咖啡","機能飲","能量","提神","底妝","底妆","保養","护肤","遮瑕","定妝","地鐵","電梯"],"hooks":[],"block":[]},{"id":"angel-chiu","name":"Angel Chiu","zh":"邱安晴","cat":"lifestyle","tag":"上班綁得死緊、腳步很快，下班才有時間好好打理自己。","aud":"22〜35 歲久站與輪班的上班族，尤其醫護與服務業，看的是怎麼把身體照顧回來。","mood":"醫院日光燈的冷 vs 租屋處的暖，兩種光是她整個帳號的骨架。","pil":["私下 / 房間裡的她","職業 / 醫院檯面","穿搭 / 換裝","浴室 / 晨間","外出 / 休假"],"fit":["保養與身體護理品牌","貼身衣物與家居服","助眠、舒緩、恢復類產品","機能鞋與久站相關用品"],"kw":["私下","房間裡的她","職業","醫院檯面","穿搭","換裝","浴室","晨間","外出","休假","保養與身體護理品牌","貼身衣物與家居服","助眠","舒緩","恢復類產品","機能鞋與久站相關用品","lifestyle","護理師","护士","nurse","醫護","医护","病房","醫院","医院","輪班","夜班","久站","護理","制服","刷手服","素顏","馬尾","綁髮","機能鞋","護士鞋","球鞋","鞋墊","壓力襪","舒缓","睡眠","放鬆","恢復","痠痛","酸痛","按摩","貼身衣物","家居服","睡衣","保養","身體護理","身体护理","乳液","護手","台北","咖啡廳","看展"],"hooks":[],"block":[]},{"id":"emma-kao","name":"Emma Kao","zh":"高映真","cat":"lifestyle","tag":"棚裡字正腔圓，下播之後才是那個二十七歲的台南人。","aud":"28〜45 歲需要穿正裝上班的專業族群，看的是撐得住鏡頭與一整天的妝與衣服。","mood":"棚內的紀律感 vs 老公寓的鬆散，兩種秩序的對比。","pil":["私下 / 下播之後","職業 / 棚內檯面","穿搭","浴室 / 晨間","旅遊 / 出差"],"fit":["正裝與職場服飾","保養與底妝","咖啡與提神","台南在地品牌"],"kw":["私下","下播之後","職業","棚內檯面","穿搭","浴室","晨間","旅遊","出差","正裝與職場服飾","保養與底妝","咖啡與提神","台南在地品牌","lifestyle","主播","新聞","新闻","anchor","棚內","攝影棚","攝影機","鏡頭","字正腔圓","正裝","正装","套裝","西裝","襯衫","職場服飾","職業裝","底妝","底妆","定妝","持妝","遮瑕","保養","护肤","台南","tainan","老屋","咖啡","提神","高鐵","採訪","下播","在地品牌","專業","鏡頭前"],"hooks":[],"block":[]},{"id":"jia-seo","name":"Jia Seo","zh":"서지아","cat":"dance","tag":"練習生沒出道，改當老師——鏡子前面就是她的主場。","aud":"16〜30 歲跳舞與 K-pop 圈的觀眾，看得懂動作乾不乾淨，不是只看氣氛。","mood":"練舞室的白日光燈、大面鏡、木地板 vs 家裡的暖光。","pil":["私下 / 收工後的鏡子前","練舞室 / 跳舞","穿搭","浴室 / 晨間","外出 / 江南"],"fit":["運動服與舞蹈服","運動鞋","恢復與肌肉照護","耳機與音響"],"kw":["私下","收工後的鏡子前","練舞室","跳舞","穿搭","浴室","晨間","外出","江南","運動服與舞蹈服","運動鞋","恢復與肌肉照護","耳機與音響","dance","舞蹈","k-pop","kpop","練舞","练舞","舞蹈教室","鏡子","編舞","choreography","cover dance","練習生","练习生","出道","老師","教課","动作","乾淨","律動","運動服","运动服","舞蹈服","緊身","球鞋","sneakers","耳機","耳机","earphone","音響","音樂","恢復","肌肉","拉伸","痠痛","강남","首爾","seoul","韓國"],"hooks":[],"block":[]},{"id":"miu-shiraishi","name":"Miu Shiraishi","zh":"白石美羽","cat":"lifestyle","tag":"一天講不到幾句話，但整間咖啡店都會多看她一眼。","aud":"20〜35 歲喜歡日系極簡與咖啡的觀眾，要的是安靜的氛圍，不是熱鬧的介紹。","mood":"木質暖調、蒸氣、磨豆機的聲音。安靜但有質地。","pil":["私下 / 一人公寓","咖啡店工作","浴室 / 晨間","穿搭","外出 / 中目黑"],"fit":["咖啡器具與豆商","生活雜貨與器皿","簡約服飾","香氛與居家"],"kw":["私下","一人公寓","咖啡店工作","浴室","晨間","穿搭","外出","中目黑","咖啡器具與豆商","生活雜貨與器皿","簡約服飾","香氛與居家","lifestyle","咖啡","咖啡厅","咖啡廳","咖啡店","cafe","coffee","手沖","手冲","咖啡豆","豆商","濾杯","磨豆機","咖啡器具","器皿","陶器","餐具","生活雜貨","杂货","簡約","极简","minimal","日系","japandi","香氛","蠟燭","居家","nakameguro","東京","tokyo","散步","二手書","舊書店","安靜","店員","低飽和"],"hooks":[],"block":[]},{"id":"nanami-fujiwara","name":"Nanami Fujiwara","zh":"藤原七海","cat":"lifestyle","tag":"從東京回箱根接家業，穿和服上工，下工還是普通的二十三歲。","aud":"28〜50 歲喜歡溫泉旅宿與和風生活的旅客，看的是真的在做這行的人怎麼過日子。","mood":"木、和紙、水蒸氣、暖黃行燈。低飽和、有霧氣、有溫度。","pil":["私下 / 自家房間","旅館工作 / 和服","浴室 / 溫泉","晨間","外出 / 東京"],"fit":["旅宿與溫泉相關","和風生活雜貨","保養與入浴劑","日本在地食材"],"kw":["私下","自家房間","旅館工作","和服","浴室","溫泉","晨間","外出","東京","旅宿與溫泉相關","和風生活雜貨","保養與入浴劑","日本在地食材","lifestyle","温泉","onsen","旅館","旅馆","ryokan","旅宿","民宿","住宿","着物","kimono","浴衣","yukata","箱根","hakone","日本","japan","榻榻米","和風","和风","japandi","入浴劑","入浴剂","泡湯","沐浴","保養","护肤","在地食材","food","懷石","迎客","接家業","家業","老舖","tokyo","旅遊","travel","慢生活","木頭"],"hooks":[],"block":[]},{"id":"somi-oh","name":"Somi Oh","zh":"오소미","cat":"food","tag":"吃得比誰都香，海鮮市場到深夜炸雞都是她的場子。","aud":"18〜35 歲愛吃與追美食的觀眾，看的是真的吃得開心，不是評分與踩雷清單。","mood":"食物的蒸氣與油光、市場的雜訊。高飽和、貼近、有聲音。","pil":["私下 / 深夜房間","吃播 / 外食","穿搭","浴室 / 晨間","旅遊 / 美食遠征"],"fit":["餐飲與外送平台","食品與零食","消化保健","釜山在地觀光"],"kw":["私下","深夜房間","吃播","外食","穿搭","浴室","晨間","旅遊","美食遠征","餐飲與外送平台","食品與零食","消化保健","釜山在地觀光","food","mukbang","먹방","美食","小吃","路邊攤","路边摊","夜市","炸雞","炸鸡","chicken","海鮮","海鲜","市場","市场","外送","外卖","delivery","餐飲","餐厅","餐廳","零食","泡麵","拌飯","韓食","韩食","釜山","부산","busan","韓國","消化","益生菌","保健","深夜","宵夜","大胃","觀光"],"hooks":[],"block":[]},{"id":"sydney-leong","name":"Sydney Leong","zh":"梁欣妮","cat":"food","tag":"接單、烤、包裝都一個人來，圍裙上總是沾著麵粉。","aud":"20〜40 歲喜歡烘焙與手作的觀眾，看的是一個人把單子做完的過程，不是完美的成品照。","mood":"南洋自然光加風扇陰影。暖、潮、有生活感。","pil":["私下 / 老屋樓上","烘焙工作","穿搭","浴室 / 晨間","外出 / 檳城"],"fit":["烘焙器材與食材","咖啡與茶","南洋生活雜貨","檳城在地觀光"],"kw":["私下","老屋樓上","烘焙工作","穿搭","浴室","晨間","外出","檳城","烘焙器材與食材","咖啡與茶","南洋生活雜貨","檳城在地觀光","food","烘焙","baking","bakery","麵包","面包","bread","甜點","甜点","dessert","蛋糕","餅乾","曲奇","塔","派","烤箱","烘焙器材","模具","攪拌機","麵粉","面粉","奶油","食材","咖啡","coffee","茶","tea","包裝","出貨","接單","手作","一人工作室","圍裙","penang","喬治市","georgetown","馬來西亞","南洋","老屋","觀光","在地"],"hooks":[],"block":[]},{"id":"zoey-yeh","name":"Zoey Yeh","zh":"葉芷妍","cat":"lifestyle","tag":"老屋改的花店，花、雨、木地板和貓，節奏比別人慢一半。","aud":"20〜40 歲喜歡慢生活與花藝的觀眾，看的是小鎮的節奏，不是快速教學。","mood":"低飽和、霧面、潮濕。宜蘭的雨是她的固定配角。","pil":["私下 / 老屋樓上","花店日常","浴室 / 晨間","穿搭","外出 / 小鎮"],"fit":["花藝與園藝用品","天然保養與香氛","棉麻服飾","宜蘭在地與民宿"],"kw":["私下","老屋樓上","花店日常","浴室","晨間","穿搭","外出","小鎮","花藝與園藝用品","天然保養與香氛","棉麻服飾","宜蘭在地與民宿","lifestyle","花藝","花艺","花店","florist","花","flower","乾燥花","插花","包花","花束","園藝","园艺","植物","plant","盆栽","綠植","修枝","進貨","宜蘭","yilan","老屋","民宿","貓","猫","cat","棉麻","亞麻","linen","天然保養","香氛","精油","慢生活","慢","雨","木地板","在地"],"hooks":[],"block":[]}];
+const SYN = [["旅宿","飯店","酒店","hotel","住宿","旅館"],["保養","護膚","skincare","美妝","彩妝"],["登山","爬山","戶外","hiking","outdoor","健行"],["健身","訓練","重訓","gym","運動","fitness"],["咖啡","咖啡廳","咖啡館","cafe","coffee"],["旗袍","中式","漢服","新中式"],["遊戲","電競","gaming","game","手遊"],["烘焙","甜點","麵包","bakery","dessert"],["穿搭","服飾","時尚","fashion","outfit","ootd"],["旅遊","旅行","travel","觀光"],["美食","吃播","餐飲","food"],["汽車","改裝","車","car","automotive"],["舞蹈","跳舞","dance"],["花藝","花店","植物","flower"],["高爾夫","高球","golf"],["ai","人工智慧","生成式"]];
+
+/* ── 共用 ── */
+const norm = s => String(s == null ? '' : s).toLowerCase().replace(/\s+/g, '');
+const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const nameOf = o => o.zh || o.name;
+const tip = document.getElementById('tip');
+const showTip = (el, html) => {
+  tip.innerHTML = html;
+  const r = el.getBoundingClientRect();
+  tip.style.opacity = 1;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.min(window.innerWidth - w - 10, Math.max(8, r.left + r.width / 2 - w / 2)) + 'px';
+  tip.style.top = Math.max(8, r.top - h - 8) + 'px';
+};
+const hideTip = () => { tip.style.opacity = 0; };
+
+
+/* ── 配對 ── */
+// 分兩層強度。
+// 🛑 為什麼要分:中文用二字組比對會過度命中——「行車紀錄器」的二字組「紀錄」
+//    會打中「紀錄片推薦」,結果查行車紀錄器時,拍紀錄片的人排在改裝店企劃前面。
+//    三字以上的重疊才算 strong,只靠二字組命中的算 weak,只給一半分。
+function toks(q){
+  const s = norm(q), strong = new Set(), weak = new Set(), short = new Set();
+  (s.match(/[a-z0-9]{2,}/g) || []).forEach(w => (w.length <= 3 ? short : strong).add(w));
+  const cjk = s.replace(/[^一-鿿]/g, '');
+  for (let i = 0; i < cjk.length - 1; i++) weak.add(cjk.slice(i, i + 2));
+  for (let n = 3; n <= cjk.length; n++)
+    for (let i = 0; i + n <= cjk.length; i++) strong.add(cjk.slice(i, i + n));
+  const all = [...strong, ...weak, ...short];
+  for (const row of SYN) if (row.some(w => all.includes(norm(w))))
+    row.forEach(w => { const n = norm(w);
+      if (n.length <= 3 && /^[a-z0-9]+$/.test(n)) short.add(n);
+      else if (n.replace(/[^一-鿿]/g, '').length === 2 && !/[a-z0-9]/.test(n)) weak.add(n);
+      else strong.add(n); });
+  return { strong: [...strong], weak: [...weak], short: [...short] };
+}
+// 回傳 0＝沒命中、1＝只靠二字組（半分）、2＝三字以上或整詞（全分）
+function thit(T, text){
+  const n = norm(text);
+  if (T.strong.some(t => n.includes(t))) return 2;
+  if (T.short.some(t => new RegExp('(^|[^a-z0-9])' + t + '([^a-z0-9]|$)').test(n))) return 2;
+  return T.weak.some(t => n.includes(t)) ? 1 : 0;
+}
+const wsum = (arr, T) => arr.reduce((a, x) => a + thit(T, x) / 2, 0);
+function match(q){
+  const T = toks(q);
+  if (!T.strong.length && !T.weak.length && !T.short.length) return [];
+  const out = [];
+  for (const o of IDX) {
+    if (o.block.some(b => thit(T, b) === 2)) continue;   // 紅線只認強命中,免得二字組誤擋         // 紅線:靜靜排除
+    const hooks = o.hooks.filter(h => thit(T, h.t) || (h.k || []).some(k => thit(T, k)));
+    const kws = o.kw.filter(k => thit(T, k));
+    const pil = o.pil.filter(x => thit(T, x));
+    const fits = o.fit.filter(f => thit(T, f));
+    const soft = [o.tag, o.aud, o.mood].filter(s => thit(T, s));
+    const catH = thit(T, o.cat) === 2;
+    // 每一項按命中強度加權（弱命中算半個）
+    const wh = wsum(hooks.map(h => h.t), T) + 0, wk = wsum(o.kw.filter(k => thit(T, k)), T),
+          wp = wsum(pil, T), wf = wsum(fits, T), ws = wsum(soft, T);
+    const topic = Math.min(100, Math.round(26 * wh + 9 * wp + 7 * wk + 6 * ws));
+    const cate = Math.min(100, Math.round(30 * wf + (catH ? 25 : 0) + 5 * wk));
+    if (!topic && !cate) continue;
+    // 訊號強弱＝庫裡有幾處資料對得上這個查詢字,跟「合不合」是兩件事。
+    // 冷門的單一詞（烤箱、護士鞋）本來就只命中一兩處,分數天生低;
+    // 不標出來,客戶會把「資料少」讀成「人設不合」。
+    const hstr = h => Math.max(thit(T, h.t), ...(h.k || []).map(k => thit(T, k)), 0);
+    let full = catH ? 1 : 0, half = 0;
+    for (const v of [...hooks.map(hstr), ...[...kws, ...pil, ...fits, ...soft].map(x => thit(T, x))])
+      v === 2 ? full++ : half++;
+    const nHit = full + half, ev = full + half * .5;
+    out.push({ o, topic, cate, hooks, kws, pil, fits, soft, catH, nHit,
+               sig: ev >= 4 ? 2 : ev >= 2 ? 1 : 0,
+               total: Math.round(topic * .6 + cate * .4) });
+  }
+  out.sort((a, b) => b.total - a.total);
+  const best = out.length ? out[0].total : 0;
+  out.forEach(r => { r.best = r.total === best; });   // 並列同分都算全庫最高
+  return out;
+}
+const SIG = ['弱', '中', '強'];
+const SIGB = ['<span class="bdg n">訊號弱</span>', '', ''];
+const SIGN = ['這個查詢字冷門，能佐證的資料少，分數天生偏低——低分不等於配不上。',
+              '有幾處對得上，但還沒到滿載。', ''];
+
+const svg = document.getElementById('svg');
+const PAD = { l: 44, r: 14, t: 12, b: 40 }, W = 420, H = 360;
+const px = v => PAD.l + (v / 100) * (W - PAD.l - PAD.r);
+const py = v => H - PAD.b - (v / 100) * (H - PAD.t - PAD.b);
+let RES = [];
+
+function drawPlot(res){
+  const g = [`<title id="svgt">配對定位圖：橫軸主題契合 0 到 100，縱軸品類契合 0 到 100</title>`];
+  g.push(`<rect x="${px(50)}" y="${py(100)}" width="${px(100)-px(50)}" height="${py(50)-py(100)}" fill="#e7cd74" fill-opacity=".05"></rect>`);
+  for (const v of [0, 50, 100]) {
+    g.push(`<line x1="${px(v)}" y1="${py(0)}" x2="${px(v)}" y2="${py(100)}" stroke="rgba(242,242,244,${v===50?'.16':'.09'})"></line>`);
+    g.push(`<line x1="${px(0)}" y1="${py(v)}" x2="${px(100)}" y2="${py(v)}" stroke="rgba(242,242,244,${v===50?'.16':'.09'})"></line>`);
+    g.push(`<text class="tick" x="${px(v)}" y="${py(0)+14}" text-anchor="middle">${v}</text>`);
+    g.push(`<text class="tick" x="${px(0)-7}" y="${py(v)+3.5}" text-anchor="end">${v}</text>`);
+  }
+  g.push(`<text class="qlab" x="${px(100)-4}" y="${py(100)+12}" text-anchor="end">首選</text>`);
+  g.push(`<text class="qlab" x="${px(100)-4}" y="${py(0)-7}" text-anchor="end">會講這題，品類要溝通</text>`);
+  g.push(`<text class="qlab" x="${px(0)+5}" y="${py(100)+12}">接這品類，建議換題目</text>`);
+  g.push(`<text class="axlab" x="${(px(0)+px(100))/2}" y="${H-7}" text-anchor="middle">主題契合</text>`);
+  g.push(`<text class="axlab" transform="translate(12,${(py(0)+py(100))/2}) rotate(-90)" text-anchor="middle">品類契合</text>`);
+  const top = res.slice(0, 4).map(r => r.o.id);
+  const groups = new Map();
+  for (const r of res) { const k = r.topic + '|' + r.cate;
+    if (!groups.has(k)) groups.set(k, []); groups.get(k).push(r); }
+  [...groups.values()].reverse().forEach(grp => {
+    const r = grp[0], on = grp.some(x => top.includes(x.o.id));
+    g.push(`<circle class="dot" data-key="${r.topic}|${r.cate}" cx="${px(r.topic)}" cy="${py(r.cate)}"
+      r="${on ? 7 : (grp.length > 1 ? 6.5 : 5)}" fill="${on ? 'var(--gold2)' : 'var(--dotq)'}"
+      stroke="var(--card)" stroke-width="2"></circle>`);
+    if (grp.length > 1 && !on) g.push(`<text class="tick" x="${px(r.topic)}" y="${py(r.cate)+3}"
+      text-anchor="middle" fill="var(--ink2)" style="font-size:9px">${grp.length}</text>`);
+  });
+  res.slice(0, 4).forEach((r, i) => {
+    const x = px(r.topic), y = py(r.cate), flip = x > W - 100;
+    g.push(`<text class="dlab" x="${flip ? x - 11 : x + 11}" y="${y + (i % 2 ? 13 : 4)}"
+      text-anchor="${flip ? 'end' : 'start'}">${esc(nameOf(r.o))}</text>`);
+  });
+  svg.innerHTML = g.join('');
+  svg.querySelectorAll('.dot').forEach(c => {
+    c.addEventListener('pointerenter', () => {
+      const grp = groups.get(c.dataset.key) || [], r = grp[0];
+      showTip(c, `<b>${grp.slice(0, 4).map(x => esc(nameOf(x.o))).join('、')}`
+        + `${grp.length > 4 ? ' 等 ' + grp.length + ' 位' : ''}</b>`
+        + `<span>主題 ${r.topic}　品類 ${r.cate}　匹配度 ${r.total}</span>`);
+    });
+    c.addEventListener('pointerleave', hideTip);
+    c.addEventListener('click', () => { const grp = groups.get(c.dataset.key); if (grp) drawAnat(grp[0]); });
+  });
+}
+
+function drawAnat(r){
+  document.getElementById('anatwho').textContent = nameOf(r.o);
+  const L = [], row = (a, b, c, cls) => L.push(`<tr class="${cls || ''}"><td>${a}</td><td class="n">${b}</td><td class="n">${c}</td></tr>`);
+  L.push('<tr><th>命中項</th><th style="text-align:right">數量</th><th style="text-align:right">小計</th></tr>');
+  row('<b style="color:var(--ink)">主題契合</b>', '', r.topic, 'grp');
+  row('題目連結點　× 26', r.hooks.length, 26 * r.hooks.length, 'sub');
+  row('內容主題　　× 9', r.pil.length, 9 * r.pil.length, 'sub');
+  row('主題關鍵詞　× 7', r.kws.length, 7 * r.kws.length, 'sub');
+  row('定位／受眾　× 6', r.soft.length, 6 * r.soft.length, 'sub');
+  row('<b style="color:var(--ink)">品類契合</b>', '', r.cate, 'grp');
+  row('合作方向　　× 30', r.fits.length, 30 * r.fits.length, 'sub');
+  row('領域相符　　＋25', r.catH ? 1 : 0, r.catH ? 25 : 0, 'sub');
+  row('關鍵詞　　　× 5', r.kws.length, 5 * r.kws.length, 'sub');
+  row('<b style="color:var(--ink)">匹配度</b>　主題 ' + r.topic + ' × 0.6 ＋ 品類 ' + r.cate + ' × 0.4', '', r.total, 'tot');
+  L.push(`<tr class="sig"><td colspan="3"><b>訊號 ${SIG[r.sig]}</b>　庫裡有 ${r.nHit} 處資料對得上。${SIGN[r.sig]}${r.best && r.sig < 2 ? '這已經是全庫最高分。' : ''}</td></tr>`);
+  const words = [...new Set([...r.fits, ...r.pil, ...r.kws])].slice(0, 6);
+  if (words.length) L.push(`<tr><td colspan="3" style="color:var(--ink3);font-size:12px;border-bottom:0;padding-top:2px">
+    命中的詞：${words.map(w => `<i style="font-style:normal;color:var(--gold2)">${esc(w)}</i>`).join('、')}</td></tr>`);
+  if (r.hooks[0]) L.push(`<tr><td colspan="3" style="border-bottom:0;padding-top:8px">
+    <div style="border-left:2px solid var(--goldd);padding-left:10px;font-size:12.5px;color:var(--ink2)">
+    ${esc(r.hooks[0].t)}${r.hooks[0].ev ? '<span class="bdg">常青</span>' : '<span class="bdg w">需搭時事</span>'}
+    <div style="color:var(--ink3);margin-top:2px">${esc(r.hooks[0].a)}</div></div></td></tr>`);
+  document.getElementById('anat').innerHTML = L.join('');
+  document.querySelectorAll('.rrow').forEach(x => x.classList.toggle('on', x.dataset.id === r.o.id));
+}
+
+function renderQ(q){
+  RES = match(q);
+  const rank = document.getElementById('rank');
+  if (!RES.length) {
+    svg.innerHTML = ''; rank.innerHTML = ''; document.getElementById('anat').innerHTML = '';
+    document.getElementById('anatwho').textContent = '';
+    document.getElementById('rest').textContent = `沒有人設命中「${q}」——換一個更常見的品類詞試試。`;
+    return;
+  }
+  drawPlot(RES); drawAnat(RES[0]);
+  rank.innerHTML = RES.slice(0, 8).map(r => {
+    const words = [...new Set([...r.fits, ...r.pil, ...r.kws])].slice(0, 4);
+    return `<div class="rrow" data-id="${r.o.id}"><span class="sc">${r.total}</span>
+      <span class="nm">${esc(nameOf(r.o))}${r.best ? '<span class="bdg">全庫最高</span>' : ''}${SIGB[r.sig]}</span>
+      ${words.length ? `<span class="mt">${words.map(w => `<i>${esc(w)}</i>`).join('、')}</span>` : ''}</div>`;
+  }).join('');
+  rank.querySelectorAll('.rrow').forEach(el => el.addEventListener('click', () => {
+    const r = RES.find(x => x.o.id === el.dataset.id); if (r) drawAnat(r); }));
+  document.getElementById('rest').textContent = RES.length > 8
+    ? `另外 ${RES.length - 8} 位也有命中，在圖上是灰色的點。` : '';
+}
+
+
+/* ── 啟動 ── */
+const EG = ['精品旅宿','登山裝備','AI 工具','韓系保養','遊戲周邊','旗袍訂製','烘焙器材','高爾夫球具','咖啡豆','機能服飾'];
+const egs = document.getElementById('egs');
+EG.forEach(e => { const b = document.createElement('button'); b.textContent = e;
+  b.addEventListener('click', () => { document.getElementById('q').value = e; renderQ(e); }); egs.appendChild(b); });
+document.getElementById('go').addEventListener('click', () => renderQ(document.getElementById('q').value));
+document.getElementById('q').addEventListener('keydown', e => { if (e.key === 'Enter') renderQ(e.target.value); });
+
+document.getElementById('q').value = '精品旅宿';
+renderQ('精品旅宿');
+
+</script>
+</body></html>

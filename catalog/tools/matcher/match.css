@@ -1,0 +1,87 @@
+/* /match.html 專用。全部掛在 .mx 底下——型錄站已經有 .two / .panel / .row / h2,
+   不加前綴會互相蓋掉。色票沿用 build_site.mjs 的 :root,這裡不另開一套。 */
+.mx h2{font-family:var(--serif);font-weight:500;font-size:19px;margin:0 0 4px}
+.mx .hint{font-size:13px;color:var(--ink4);margin:0 0 18px;max-width:52em}
+.mx .hint b{color:var(--ink2);font-weight:500}
+
+.mx .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 8px}
+.mx input[type=text]{flex:1 1 20rem;min-width:0;background:var(--card2);color:var(--ink);
+  border:1px solid var(--line2);border-radius:4px;padding:11px 14px;font:inherit;font-size:15px}
+.mx input[type=text]:focus{outline:2px solid var(--gold2);outline-offset:1px;border-color:transparent}
+.mx button.go{background:var(--gold2);color:var(--dark);border:0;border-radius:4px;padding:11px 22px;
+  font:inherit;font-weight:500;cursor:pointer}
+.mx button.go:hover{background:var(--gold)}
+.mx .egs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+.mx .egs b{font-size:12px;color:var(--ink4);letter-spacing:.08em;align-self:center;margin-right:3px}
+.mx .egs button{background:transparent;color:var(--ink2);border:1px solid var(--line2);
+  border-radius:14px;padding:3px 12px;font:inherit;font-size:13px;cursor:pointer}
+.mx .egs button:hover{border-color:var(--gold2);color:var(--gold)}
+.mx .egs button:focus-visible,.mx button.go:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.mx .mtwo{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px}
+@media (max-width:920px){.mx .mtwo{grid-template-columns:1fr}}
+.mx .panel{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px}
+.mx .panel h3{font-family:var(--serif);font-weight:500;font-size:16px;margin:0 0 3px}
+.mx .panel .ph{font-size:12px;color:var(--ink4);margin:0 0 14px}
+
+.mx .plot{position:relative;width:100%;aspect-ratio:1/.88;min-height:280px}
+.mx .plot svg{display:block;width:100%;height:100%;overflow:visible}
+.mx .qlab{font-size:9.5px;fill:var(--ink4);letter-spacing:.08em}
+.mx .axlab{font-size:11px;fill:var(--ink3)}
+.mx .tick{font-size:9.5px;fill:var(--ink4);font-variant-numeric:tabular-nums}
+.mx .dot{cursor:pointer}
+.mx .dlab{font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:3px}
+
+.tipx{position:fixed;pointer-events:none;background:var(--card3);border:1px solid var(--line2);
+  border-radius:4px;padding:8px 11px;font-size:12.5px;color:var(--ink);max-width:19rem;z-index:60;
+  box-shadow:0 6px 22px rgba(0,0,0,.55);opacity:0;transition:opacity .1s}
+.tipx b{display:block;font-weight:500;margin-bottom:2px}
+.tipx span{color:var(--ink3);font-variant-numeric:tabular-nums}
+
+/* 分數拆解 */
+.mx .anat{width:100%;border-collapse:collapse;font-size:13px}
+.mx .anat th{text-align:left;font-weight:500;font-size:10.5px;letter-spacing:.1em;color:var(--ink4);
+  border-bottom:1px solid var(--line);padding:0 8px 7px 0}
+.mx .anat td{padding:8px 8px 8px 0;border-bottom:1px solid var(--line);color:var(--ink2);vertical-align:top}
+.mx .anat td.n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.mx .anat tr.sub td{color:var(--ink4);font-size:12px}
+.mx .anat tr.tot td{border-bottom:0;padding-top:11px}
+.mx .anat tr.tot td.n{font-family:var(--serif);font-size:20px;color:var(--gold);line-height:1}
+.mx .anat tr.grp td{color:var(--ink);font-weight:500;background:rgba(242,242,244,.03)}
+.mx .anat tr.sig td{border-bottom:0;padding-top:9px;font-size:12px;color:var(--ink3);line-height:1.55}
+.mx .anat tr.sig b{color:var(--ink2);font-weight:500}
+
+.mx .rank{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.mx .rrow{background:var(--card2);padding:11px 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;
+  align-items:center;cursor:pointer}
+.mx .rrow:hover,.mx .rrow.on{background:var(--card3)}
+.mx .rrow .sc{font-family:var(--serif);font-size:19px;color:var(--gold);font-variant-numeric:tabular-nums;
+  line-height:1;min-width:2rem;text-align:right}
+.mx .rrow .nm{font-weight:500;color:var(--ink);font-size:14px}
+.mx .rrow .mt{grid-column:2;font-size:12px;color:var(--ink3)}
+.mx .rrow .mt i{font-style:normal;color:var(--gold2)}
+.mx .none{color:var(--ink3);font-size:13.5px;padding:14px 0 0;margin:0}
+
+.mx .hooks{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:4px;overflow:hidden;margin:12px 0 0}
+.mx .hook{background:var(--card2);padding:11px 14px}
+.mx .hook .ht{font-weight:500;color:var(--ink);font-size:13.5px}
+.mx .hook .ha{font-size:12px;color:var(--ink3);margin-top:2px}
+
+.mx .how{margin:34px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
+.mx .how p{color:var(--ink3);font-size:13px;margin:0 0 9px;max-width:54em}
+.mx .how code{font-size:12px;color:var(--ink2);background:rgba(242,242,244,.06);padding:1px 5px;border-radius:3px}
+.mx .how b{color:var(--ink2);font-weight:500}
+
+.mx .bdg{font-size:10px;letter-spacing:.08em;padding:1px 7px;border-radius:3px;margin-left:7px;
+  border:1px solid rgba(12,163,12,.4);background:rgba(12,163,12,.14);color:#57cf57;white-space:nowrap}
+.mx .bdg.w{border-color:rgba(250,178,25,.36);background:rgba(250,178,25,.13);color:#f5c452}
+.mx .bdg.n{border-color:rgba(242,242,244,.2);background:rgba(242,242,244,.06);color:var(--ink3)}
+
+.mx{padding:30px 0 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* 這一頁是工具不是首頁——標題壓低,輸入框要在第一屏看得到。 */
+.hero.tight{padding:52px 0 30px}
+.hero.tight h1{font-size:clamp(27px,3.4vw,40px);margin:0 0 14px}
+.hero.tight .lede{font-size:15.5px;margin:0}
