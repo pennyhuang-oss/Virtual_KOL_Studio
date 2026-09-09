@@ -1046,14 +1046,14 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### rin-ayase — D4　[B 級]　都會上班　friend_full　full_length　光:K6　371 字
+### rin-ayase — D4　[B 級]　都會上班　friend_full　full_length　光:K6　377 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
 Her hair is dark wine-brown, the chignon loosened with strands down at the nape.
 She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.
 She wears a fitted cream sleeveless knit tucked into a high-waisted tailored mini skirt with slingbacks.
-This is the exact same outfit as earlier that same day, the same garments in the same colours, worn a few hours on: the knit sleeves now pushed up to the forearm, the tote strap moved to the other shoulder.
+This is the exact same outfit as earlier that same day, the same garments in the same colours, worn a few hours on: the knit now untucked a little at the back, the tote strap moved to the other shoulder and the belt loosened a notch.
 She is in a plaza colonnade in the late afternoon, stone columns, long shadows and planted beds along the edge.
 She is leaning back against the low edge behind her with both elbows resting solidly on it and her chest open, one knee bent and crossed over the other.
 Her expression is self-possessed and a little knowing, the faintest lift at one corner of her mouth, her eyes bright and holding the lens.
@@ -1441,14 +1441,14 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### tammy-chou — D4　[B 級]　都會上班　friend_full　full_length　光:K7　369 字
+### tammy-chou — D4　[B 級]　都會上班　friend_full　full_length　光:K7　372 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
 Her hair is milk-tea gold-brown with lighter money-piece strands, the ends pushed behind one shoulder, a little less neat.
 She is short and curvy with a full bust and rounded hips, and a small waist that makes the shape read strongly in fitted clothes.
 She wears a fitted white shirt knotted at the waist over high-waisted tailored shorts.
-This is the exact same outfit as earlier that same day, the same garments in the same colours, worn a few hours on: the trousers now creased at the knee from sitting and the knit's shoulder seam pulled slightly out of line.
+This is the exact same outfit as earlier that same day, the same garments in the same colours, worn a few hours on: the shirt knot retied looser and higher, the shorts creased at the front from sitting and the sleeves rolled to the elbow.
 She is in a cafe two doors down with a timber counter, tall stools and a window onto the lane.
 She is mid-stride with her weight rolling onto the front foot, torso turned three-quarters and her trailing arm swinging back behind her.
 Her expression is a warm open smile that reaches her eyes, the outer corners creasing, looking straight into the lens.

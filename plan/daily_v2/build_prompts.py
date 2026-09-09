@@ -270,6 +270,18 @@ def audit(pid,n,s,txt,p):
     cap=1 if s["view"] in ("mirror_half","selfie_close") else 2
     if occ>cap: e.append(f"手部超額: 持握物件≈{occ} > 上限{cap}")
 
+    # §12-B：延續句不得提到這套衣服沒有的部件
+    #   2026-09-09：改寫服裝後 rin D4 變成無袖針織，延續句卻還寫「袖子推起來」；
+    #   tammy D4 變成襯衫＋短褲，延續句還寫「長褲」與「針織」。兩件都是我漏改。
+    if s.get("continuity_evolution"):
+        ev=s["continuity_evolution"].lower(); of=s["outfit"].lower()
+        for part,absent in (("sleeve","sleeveless"),):
+            if part in ev and absent in of:
+                e.append(f"§12 延續句提到 {part}，但服裝是 {absent}")
+        for part in ("trousers","jeans","skirt","shorts","knit","shirt","dress","coat","blazer"):
+            if part in ev and part not in of:
+                e.append(f"§12 延續句提到「{part}」，但這套服裝沒有")
+
     # §12 同穿搭資料完整性
     if s.get("continuity_from"):
         if not s.get("continuity_evolution"): e.append("continuity_from 有值但缺 continuity_evolution")
