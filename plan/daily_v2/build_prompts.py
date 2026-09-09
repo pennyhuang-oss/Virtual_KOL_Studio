@@ -145,6 +145,14 @@ SCENE_LIGHT = [
 # 這三句光線斷言了夜晚／夜間燈光，場景就必須也是夜晚，否則畫面自相矛盾
 # 「free hand」只有一隻。姿勢用掉了，隨身物就不能再拿走，否則物件會浮在空中
 # （2026-09-09 A/B 實測：rin B 的罐子懸空，因為 pose 與 micro 都指派了 free hand）
+# 表情必須交代眼睛在做什麼。zoey 那張面無表情的成因就是「眼睛沒有被指派任何事」。
+EYES_DOING = re.compile(r'\beyes?\b|\bgaze\b', re.I)
+# 讀起來冷／死／低頭的措辭，實測過會出面無表情或 v1 的低頭問題
+DEAD_EXPR = ("without any smile","eyes lowered","expressionless","unbothered","too tired",
+             "eyes half closed","chin level","flat, ")
+# 手不准懸空，也不准手肘外翻——zoey 的手就是懸在鬢角旁邊沒碰到
+HOVER_POSE = ("just touching","hovering","held near","close to her hair","elbow out","elbows out")
+
 FREE_HAND = re.compile(r'\b(?:her )?free hand\b|\bone hand\b|\bboth hands\b', re.I)
 
 NIGHT_LIGHT = {"K13","K8","K12"}
@@ -199,6 +207,15 @@ def audit(pid,n,s,txt,p):
     # R4：服裝不得不時髦
     for w in UNCHIC:
         if w in s["outfit"].lower(): e.append(f"R4 服裝不時髦: {w}")
+
+    # R5-A：表情必須交代眼睛，且不得用已知會出死臉的措辭
+    if not EYES_DOING.search(s.get("expression","")):
+        e.append("R5 表情沒有交代眼睛在做什麼")
+    for w in DEAD_EXPR:
+        if w in s.get("expression","").lower(): e.append(f"R5 死臉措辭: {w}")
+    # R5-B：姿勢不得讓手懸空或手肘外翻
+    for w in HOVER_POSE:
+        if w in s.get("pose","").lower(): e.append(f"R5 姿勢會讓手懸空/手肘外翻: {w}")
 
     # R5：表情必須具名（§20）
     if not s.get("expression") or "expression" not in s["expression"].lower().replace("expressive",""):
