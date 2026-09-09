@@ -873,6 +873,19 @@ const personPage = p => {
     </div>
   </div>
 
+  <!-- 🛑 這一節（含雷達）刻意排在第一個。使用者 2026-09-09：
+       「這個區塊我覺得要在點開人設的前面一點就呈現，也就是上面一點，不要滑到最下面才呈現。」
+       第一版放在頁尾、第二版放在「內容主題」後面都還要滑 2.5 屏（內容主題有 5 個支柱,很長）,
+       所以直接放第一個。客戶點進來要決定的第一件事就是「她能接什麼」,這一節正好回答那個。 -->
+  ${p.fit.length ? `<section class="sec"><h2>適合的合作方向</h2>
+    <ul class="plain">${p.fit.slice(0, 8).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    ${radarSvg(p)}
+    <p class="prose" style="margin-top:16px;font-size:13.5px">
+      以上是依她現有人設最自然的方向。<b>虛擬 KOL 的設定可以依品牌需求調整</b>——
+      選定了外形之後，內容主題與語氣都能配合合作內容重新設定。</p>
+  </section>` : ''}
+
+
   ${(p.pillars.length || p.audience) ? `<section class="sec"><h2>內容主題</h2>
     ${p.audience ? `<div class="aud1"><span>目標受眾</span><p>${esc(p.audience)}</p></div>` : ''}
     ${p.pillars.length ? `<div class="pil">${p.pillars.map(x => `<div>
@@ -905,13 +918,6 @@ const personPage = p => {
     <p class="prose" style="margin-top:14px;font-size:13px">影片可於洽談時提供完整檔案。</p>
   </section>` : ''}
 
-  ${p.fit.length ? `<section class="sec"><h2>適合的合作方向</h2>
-    <ul class="plain">${p.fit.slice(0, 8).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-    ${radarSvg(p)}
-    <p class="prose" style="margin-top:16px;font-size:13.5px">
-      以上是依她現有人設最自然的方向。<b>虛擬 KOL 的設定可以依品牌需求調整</b>——
-      選定了外形之後，內容主題與語氣都能配合合作內容重新設定。</p>
-  </section>` : ''}
 </div>
 <footer><div class="wrap">
   <p>${esc(p.name)} 為 AI 生成的虛擬角色，非真實人物。</p>
