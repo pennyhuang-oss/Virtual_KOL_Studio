@@ -97,8 +97,13 @@ const assetsOf = id => {
     process.exit(2);
   }
   const has = f => f && fs.existsSync(path.join(d, f));
+  // 封面的縮圖。封面檔是從挑中的那張圖複製出來的（檔名帶同一個 id）,所以它的縮圖本來就在,
+  // 不用另外轉一張——這個容器沒有 ffmpeg,轉不了。實測 38 位全部找得到。
+  const hid = /^hero_(.+)\.\w+$/.exec(man.hero || '');
+  const hg = hid && man.gallery.find(g => g.web.includes(hid[1]));
   return {
     hero: has(man.hero) ? u(man.hero) : (has(man.gallery[0]?.web) ? u(man.gallery[0].web) : null),
+    heroThumb: hg && has(hg.thumb) ? u(hg.thumb) : (has(man.gallery[0]?.thumb) ? u(man.gallery[0].thumb) : null),
     gallery: man.gallery.filter(g => has(g.web)).map(g => ({ web: u(g.web), thumb: u(g.thumb) })),
     // 影片本體還沒轉,所以這一輪仍然只有 poster;轉好之後 mp4/webm 就會自己出現。
     videos: man.videos.filter(v => has(v.poster)).map(v => ({
@@ -691,7 +696,8 @@ const radarSvg = (p) => {
   const cx = 200, cy = 200, R = 130, n = COLS.length, max = Math.max(...cells.map(c => c.v));
   const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n;
     return [(cx + Math.cos(a) * R * v / 100).toFixed(1), (cy + Math.sin(a) * R * v / 100).toFixed(1)]; };
-  const g = [`<title id="radt-${esc(p.id)}">${esc(p.name)} 在 10 個合作品類上的可切入程度</title>`];
+  // 🛑 不用 <title>:瀏覽器會把它當原生 tooltip,滑過圖就跳一個灰框出來。無障礙名稱掛在 svg 的 aria-label。
+  const g = [];
   for (const ring of [25, 50, 75, 100])
     g.push(`<polygon points="${COLS.map((_, i) => pt(i, ring).join(',')).join(' ')}" fill="none"
       stroke="rgba(242,242,244,${ring === 100 ? '.18' : '.08'})"></polygon>`);
@@ -713,7 +719,8 @@ const radarSvg = (p) => {
     : strong.length >= 3 ? '多面型　三到四個品類接得上'
     : strong.length ? '專精型　集中在少數品類' : '起步型　切入點還在累積';
   return `<div class="radbox">
-    <svg class="rad" viewBox="0 0 400 400" role="img" aria-labelledby="radt-${esc(p.id)}">${g.join('')}</svg>
+    <svg class="rad" viewBox="0 0 400 400" role="img"
+      aria-label="${esc(p.name)} 在 10 個合作品類上的可切入程度">${g.join('')}</svg>
     <dl class="rkv">
       <dt>形狀</dt><dd><b>${esc(shape)}</b></dd>
       <dt>最強品類</dt><dd>${strong.length ? strong.slice(0, 3).map(x => esc(x[0]) + ' ' + x[1]).join('　') : '—'}</dd>
@@ -724,6 +731,7 @@ const radarSvg = (p) => {
   </div>`;
 };
 
+const byPid = Object.fromEntries(people.map(p => [p.id, p]));
 const totalImages = people.reduce((a, p) => a + p.media.image_count, 0);
 const totalVideos = people.reduce((a, p) => a + p.media.video_count, 0);
 
@@ -1196,6 +1204,10 @@ const matchPage = layout('品牌配對定位 — 兌心科技虛擬 KOL 型錄',
         id: o.id, name: o.name, zh: o.zh, cat: o.cat, tag: o.tag, aud: o.aud, mood: o.mood,
         pil: o.pil, fit: o.fit, kw: o.kw, hooks: o.hooks, block: o.block,
         bd: breadth[o.id],
+        // 使用者 2026-09-09：「客戶不會像我們這樣直接看到名字就知道長相」——
+        // 所以配對結果要帶封面圖,不能只給名字。
+        img: byPid[o.id].a.heroThumb,
+        mk: byPid[o.id].mk || '',
       }))))
       .replace('__SYN__', JSON.stringify(SYN))
       .replace('__IND__', JSON.stringify(INDUSTRY.buckets.map(b => ({ name: b.name, hit: b.hit, expand: b.expand })))) });

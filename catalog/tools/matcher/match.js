@@ -7,13 +7,23 @@ const norm = s => String(s == null ? '' : s).toLowerCase().replace(/\s+/g, '');
 const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const nameOf = o => o.zh || o.name;
 const tip = document.getElementById('tip');
+// 客戶看到名字認不出長相,還要回去翻圖鑑對照（使用者 2026-09-09）。
+// 所以配對結果一律帶封面：列上有小圖,滑過名字出現大一點的封面卡。
+const face = o => o.img ? `<img class="fc" src="${o.img}" alt="${esc(nameOf(o))}" width="400" height="533">` : '';
+// 名字之後才是註記行,順序要是「中文名 → 原名・市場 → 一句話定位」
+const meta = o => `<i class="fm">${esc([o.zh && o.name !== o.zh ? o.name : '', o.mk].filter(Boolean).join('　'))}</i>`
+  + (o.tag ? `<i class="ft">${esc(o.tag)}</i>` : '');
 const showTip = (el, html) => {
   tip.innerHTML = html;
   const r = el.getBoundingClientRect();
   tip.style.opacity = 1;
   const w = tip.offsetWidth, h = tip.offsetHeight;
   tip.style.left = Math.min(window.innerWidth - w - 10, Math.max(8, r.left + r.width / 2 - w / 2)) + 'px';
-  tip.style.top = Math.max(8, r.top - h - 8) + 'px';
+  // 帶封面的卡片高得多,上方塞不下就翻到下面——不然它會蓋住滑過的那一列。
+  // 🛑 上緣要留給置頂的頁首（64px),不然卡片會被壓在頁首底下（2026-09-09 截圖抓到）。
+  const TOP = 74;
+  tip.style.top = (r.top - h - 8 >= TOP ? r.top - h - 8
+    : Math.min(Math.max(TOP, window.innerHeight - h - 8), r.bottom + 8)) + 'px';
 };
 const hideTip = () => { tip.style.opacity = 0; };
 
@@ -145,7 +155,9 @@ const py = v => H - PAD.b - (v / 100) * (H - PAD.t - PAD.b);
 let RES = [];
 
 function drawPlot(res){
-  const g = [`<title id="svgt">配對定位圖：橫軸主題契合 0 到 100，縱軸品類契合 0 到 100</title>`];
+  // 🛑 這裡不要放 <title>。瀏覽器會把 SVG 的 <title> 當成原生 tooltip 顯示,
+  //    跟我們自己的那個疊在一起（2026-09-09 使用者截圖抓到）。無障礙名稱改掛在 svg 的 aria-label。
+  const g = [];
   g.push(`<rect x="${px(50)}" y="${py(100)}" width="${px(100)-px(50)}" height="${py(50)-py(100)}" fill="#e7cd74" fill-opacity=".05"></rect>`);
   for (const v of [0, 50, 100]) {
     g.push(`<line x1="${px(v)}" y1="${py(0)}" x2="${px(v)}" y2="${py(100)}" stroke="rgba(242,242,244,${v===50?'.16':'.09'})"></line>`);
@@ -159,6 +171,15 @@ function drawPlot(res){
   g.push(`<text class="axlab" x="${(px(0)+px(100))/2}" y="${H-7}" text-anchor="middle">主題契合</text>`);
   g.push(`<text class="axlab" transform="translate(12,${(py(0)+py(100))/2}) rotate(-90)" text-anchor="middle">品類契合</text>`);
   const top = res.slice(0, 4).map(r => r.o.id);
+  // 標籤放過的位置。分數相近的兩位標籤會疊在一起（2026-09-09 使用者截圖裡的蘇思穎／陳曉菲）,
+  // 所以撞到就往下推一行,推到不撞為止。
+  const placed = [];
+  const freeY = (x, y) => { let t = y;
+    for (let n = 0; n < 4; n++) {
+      if (!placed.some(p => Math.abs(p.x - x) < 46 && Math.abs(p.y - t) < 11)) break;
+      t += 12;
+    }
+    placed.push({ x, y: t }); return t; };
   const groups = new Map();
   for (const r of res) { const k = r.topic + '|' + r.cate;
     if (!groups.has(k)) groups.set(k, []); groups.get(k).push(r); }
@@ -172,15 +193,18 @@ function drawPlot(res){
   });
   res.slice(0, 4).forEach((r, i) => {
     const x = px(r.topic), y = py(r.cate), flip = x > W - 100;
-    g.push(`<text class="dlab" x="${flip ? x - 11 : x + 11}" y="${y + (i % 2 ? 13 : 4)}"
+    const lx = flip ? x - 11 : x + 11;
+    g.push(`<text class="dlab" x="${lx}" y="${freeY(lx, y + 4)}"
       text-anchor="${flip ? 'end' : 'start'}">${esc(nameOf(r.o))}</text>`);
   });
   svg.innerHTML = g.join('');
   svg.querySelectorAll('.dot').forEach(c => {
     c.addEventListener('pointerenter', () => {
       const grp = groups.get(c.dataset.key) || [], r = grp[0];
-      showTip(c, `<b>${grp.slice(0, 4).map(x => esc(nameOf(x.o))).join('、')}`
+      showTip(c, (grp.length === 1 ? face(r.o) : '')
+        + `<b>${grp.slice(0, 4).map(x => esc(nameOf(x.o))).join('、')}`
         + `${grp.length > 4 ? ' 等 ' + grp.length + ' 位' : ''}</b>`
+        + (grp.length === 1 ? meta(r.o) : '')
         + `<span>主題 ${r.topic}　品類 ${r.cate}　匹配度 ${r.total}</span>`);
     });
     c.addEventListener('pointerleave', hideTip);
@@ -270,14 +294,30 @@ function renderQ(q){
   if (mode !== 'wide') { drawPlot(RES); drawAnat(RES[0]); }
   rank.innerHTML = RES.slice(0, 8).map(r => {
     const words = [...new Set([...r.fits, ...r.pil, ...r.kws])].slice(0, 4);
-    return `<div class="rrow" data-id="${r.o.id}"><span class="sc">${r.wide ? '—' : r.total}</span>
-      <span class="nm">${esc(nameOf(r.o))}${r.lit ? '<span class="bdg">字面命中</span>' : ''}${
+    return `<div class="rrow" data-id="${r.o.id}">
+      <span class="sc">${r.wide ? '—' : r.total}</span>
+      ${r.o.img ? `<img class="av" src="${r.o.img}" alt="" width="400" height="533" loading="lazy">` : '<span class="av"></span>'}
+      <span class="nm" data-face="${r.o.id}" tabindex="0">${esc(nameOf(r.o))}${
+        r.lit ? '<span class="bdg">字面命中</span>' : ''}${
         r.best && !r.lit ? '<span class="bdg">全庫最高</span>' : ''}${r.wide ? '' : SIGB[r.sig]}</span>
+      <a class="go2" href="/p/${r.o.id}.html">看人設 →</a>
       ${r.wide ? `<span class="mt">可切入 ${r.o.pil.length ? r.o.pil.length + ' 個內容主題' : '多個品類'}　${esc((r.o.fit || [])[0] || '')}</span>`
         : words.length ? `<span class="mt">${words.map(w => `<i>${esc(w)}</i>`).join('、')}</span>` : ''}</div>`;
   }).join('');
-  rank.querySelectorAll('.rrow').forEach(el => el.addEventListener('click', () => {
-    const r = RES.find(x => x.o.id === el.dataset.id); if (r) drawAnat(r); }));
+  rank.querySelectorAll('.rrow').forEach(el => el.addEventListener('click', e => {
+    if (e.target.closest('a')) return;                       // 「看人設 →」照它自己的行為走
+    const r = RES.find(x => x.o.id === el.dataset.id); if (r && !r.wide) drawAnat(r); }));
+  // 滑過（或用鍵盤 focus 到）名字就出現封面。鍵盤也要能看到,不然只有滑鼠使用者拿得到這個資訊。
+  rank.querySelectorAll('.nm[data-face]').forEach(el => {
+    const r = RES.find(x => x.o.id === el.dataset.face);
+    if (!r) return;
+    const show = () => showTip(el, face(r.o) + `<b>${esc(nameOf(r.o))}</b>` + meta(r.o)
+      + (r.wide ? '' : `<span>主題 ${r.topic}　品類 ${r.cate}　匹配度 ${r.total}</span>`));
+    el.addEventListener('pointerenter', show);
+    el.addEventListener('focus', show);
+    el.addEventListener('pointerleave', hideTip);
+    el.addEventListener('blur', hideTip);
+  });
   document.getElementById('rest').textContent = mode === 'wide' ? ''
     : RES.length > 8 ? `另外 ${RES.length - 8} 位也有命中，在圖上是灰色的點。` : '';
 }
