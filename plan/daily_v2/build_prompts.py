@@ -103,9 +103,12 @@ TAIL = "Film grain, candid lifestyle photo, warm tones, shot on 35mm."
 
 PEOPLE = {
  "solo":"She is the only person in the photograph; no other people are visible anywhere in the frame.",
- "background_ok":"A few anonymous strangers are in the mid-ground behind her going about their own "
-   "business, backs turned or heads angled away, never looking at the camera, softly out of focus "
-   "with slight motion blur, clearly different from her in build, age and clothing.",
+ # 2026-09-09 改寫：原措辭允許「heads angled away」，那仍會渲染出側臉 → 撞臉。
+ # 改成只准後腦勺、加重失焦、人數降到一兩位。§9 的四條件仍在，但改為更強的版本。
+ "background_ok":"One or two anonymous strangers are well back behind her, walking away with the "
+   "backs of their heads to the camera so that no face is visible at any angle, heavily out of "
+   "focus and reduced to soft shapes with motion blur, clearly different from her in build, age "
+   "and clothing.",
 }
 
 # R4：不時髦的服裝關鍵詞——出現就中止
@@ -178,7 +181,13 @@ WAIST = re.compile(r'high-waisted|tucked into|knotted at the waist|tied at the w
 # 全身框架必須有動作，不得正面直立
 DYNAMIC_POSE = re.compile(r'leaning back|mid-stride|turned back over her shoulder|half-seated', re.I)
 
-FREE_HAND = re.compile(r'\b(?:her )?free hand\b|\bone hand\b|\bboth hands\b', re.I)
+# 手／臂的佔用計數。2026-09-09：zoey D4 長出第三隻手，因為姿勢寫 both elbows resting
+# （兩臂都被佔用）而隨身物又寫 basket on one arm。舊正則只認 hand 不認 elbow/arm。
+LIMB_ONE  = re.compile(r'\b(?:her )?free hand\b|\bone hand\b|\bone arm\b|\bone forearm\b|'
+                       r'\bher (?:near|far|other) hand\b|\bfingertips\b|\bher fingers\b|'
+                       r'\bone palm\b|\bthumb hooked\b|\bon one arm\b', re.I)
+LIMB_TWO  = re.compile(r'\bboth hands\b|\bboth elbows\b|\bboth arms\b', re.I)
+FREE_HAND = LIMB_ONE
 
 NIGHT_LIGHT = {"K13","K8","K12"}
 NIGHT_SCENE = re.compile(r'\bat night\b|late at night|evening|dusk|\bnight\b', re.I)
@@ -262,8 +271,20 @@ def audit(pid,n,s,txt,p):
     # R6：不得有廣角人小的構圖
     if s["framing"] not in FRAMING: e.append(f"R6 未知框架 {s['framing']}")
 
-    if FREE_HAND.search(s["pose"]) and FREE_HAND.search(s["micro"]):
-        e.append("free hand 被姿勢與隨身物同時指派——物件會浮空")
+    # §9 強化版措辭不得被改回舊版（舊版允許側臉 → 撞臉）
+    if s["people"]=="background_ok":
+        for frag in ("no face is visible at any angle","heavily out of focus",
+                     "build, age and clothing"):
+            if frag not in txt: e.append(f"§9 背景路人措辭不完整，缺: {frag}")
+
+    # 四肢預算：姿勢與隨身物加起來不得超過她有的兩隻手臂
+    def limbs(txt):
+        return 2*len(LIMB_TWO.findall(txt)) + len(LIMB_ONE.findall(txt))
+    cap_limb = 1 if s["view"] in ("mirror_half","selfie_close") else 2
+    used = limbs(s["pose"]) + limbs(s["micro"])
+    if used > cap_limb:
+        e.append(f"四肢超額：姿勢＋隨身物共佔用 {used} 隻手臂，上限 {cap_limb}"
+                 f"（自拍／鏡面格一隻手已被手機佔用）")
 
     # 手部預算：持握物件 ≤2，鏡面/自拍格 ≤1（一隻手已被手機或機身佔用）
     occ=len(HANDHELD.findall(s["pose"]))+len(HANDHELD.findall(s["micro"]))
