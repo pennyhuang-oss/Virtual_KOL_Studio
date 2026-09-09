@@ -161,6 +161,23 @@ DEAD_EXPR = ("without any smile","eyes lowered","expressionless","unbothered","t
 # 手不准懸空，也不准手肘外翻——zoey 的手就是懸在鬢角旁邊沒碰到
 HOVER_POSE = ("just touching","hovering","held near","close to her hair","elbow out","elbows out")
 
+# 2026-09-09 使用者裁決：100 格全部要有露出，程度全面往上一級。
+# 依據：她通過的 7 張每張至少一項露出，否決的 3 張一項都沒有。
+SKIN = re.compile(r'crop tank|crop top|crop tee|crop shirt|cropped|bandeau|halter|camisole|spaghetti|'
+                  r'sleeveless|tube top|slip dress|bikini|cover-up|low (?:open )?back|'
+                  r'plunging|deep V|deep scoop|sweetheart|off-shoulder|one-shoulder|strapless|'
+                  r'sports bra|shorts|mini skirt|micro skirt|short (?:\w+ ){0,3}skirt|'
+                  r'leggings|midriff|cowl neck|low cowl|'
+                  r'slit|corset|thin straps|sheer', re.I)
+# 腰線斷點：不增加露出也能做出形狀。rin D4 的柱狀剪影就是缺這個。
+WAIST = re.compile(r'high-waisted|tucked into|knotted at the waist|tied at the waist|belted|'
+                   r'with a belt|corset|cinched|tie waist|wrap|smocked|ruched|bodycon|'
+                   r'low-rise|worn short|worn cropped|cropped at the waist|at the waist|'
+                   r'tied low on the hips|knotted at the hip|crop top|crop tank|crop tee|'
+                   r'cropped|crop shirt|bandeau|sports bra', re.I)
+# 全身框架必須有動作，不得正面直立
+DYNAMIC_POSE = re.compile(r'leaning back|mid-stride|turned back over her shoulder|half-seated', re.I)
+
 FREE_HAND = re.compile(r'\b(?:her )?free hand\b|\bone hand\b|\bboth hands\b', re.I)
 
 NIGHT_LIGHT = {"K13","K8","K12"}
@@ -211,6 +228,16 @@ def audit(pid,n,s,txt,p):
     # 場景首名詞不能是檯面（"She is in a … counter" 不通）
     if SCENE_HEAD_BAD.match(s["scene"]):
         e.append("場景首名詞是檯面／桌面，套進 'She is in' 文法不通")
+
+    # R4-A：每套都要有露出（使用者 2026-09-09 裁決）
+    if not SKIN.search(s["outfit"]):
+        e.append("R4 服裝沒有任何露出元素（使用者裁決 100 格全部要有）")
+    # R4-B：每套都要有腰線斷點
+    if not WAIST.search(s["outfit"]):
+        e.append("R4 服裝沒有腰線斷點，剪影會變成柱子")
+    # R4-C：全身框架不得配正面直立姿勢
+    if s["framing"]=="full_length" and not DYNAMIC_POSE.search(s["pose"]):
+        e.append("R4 全身框架配了正面直立姿勢（rin D3 坐姿通過／D4 站姿否決，同一套衣服）")
 
     # R4：服裝不得不時髦
     for w in UNCHIC:
