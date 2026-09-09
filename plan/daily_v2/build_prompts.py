@@ -40,6 +40,16 @@ VIEW = {
 MIRROR_GUARD = ("The only reflection is her own; there is no second person and no second phone in the "
                 "reflection, and no portrait or photograph of a person on any wall or screen.")
 # R1 的正面封閉集合句（§9(b) 已驗證措辭），同時擋多餘手臂與入鏡相機
+# 會照出人像的反射面（水面／濕柏油反射天空不算）。v1 有這條，v2 重寫時漏掉，
+# 造成 jia-seo D5 有鏡面柱子卻沒有反射完整性句 —— 就是 v1 rin D4 的失效模式。
+REFLECTIVE = re.compile(r"\bmirror\b|\bmirrored\b|her reflection|reflective surface", re.I)
+def has_reflective(slot):
+    return bool(REFLECTIVE.search(slot["scene"]) or REFLECTIVE.search(slot["pose"]))
+
+# 次要鏡面：畫面裡有鏡子但相機不是它。仍必須擋掉第二個人與第二支手機。
+MIRROR_SECONDARY = ("The only reflection in that mirror is her own; there is no second person and no "
+                    "second phone in it, and no portrait or photograph of a person on any wall or screen.")
+
 CLOSURE = ("Everything in this picture is accounted for: the only person in it is her, and every "
            "visible hand connects to one of her own arms.")
 
@@ -130,7 +140,10 @@ def build(p, s):
     L.append(LIGHT[s["light"]])                           # R3 主光在臉上
     L.append(GLOW)                                        # R2 好看
     L.append(VIEW[s["view"]])                             # R1 只寫視角
-    if s["view"]=="mirror_half": L.append(MIRROR_GUARD)
+    if s["view"]=="mirror_half":
+        L.append(MIRROR_GUARD)
+    elif has_reflective(s):
+        L.append(MIRROR_SECONDARY)
     L.append("Visible with her: "+s["micro"]+".")
     L.append(PEOPLE[s["people"]])
     L.append(CLOSURE)                                     # R1 封閉集合
@@ -214,6 +227,8 @@ def audit(pid,n,s,txt,p):
                 e.append(f"R1 非鏡面格的場景/隨身物/姿勢寫了相機實體: {w}")
     if "Everything in this picture is accounted for" not in txt: e.append("R1 封閉集合句缺失")
     if s["view"]=="mirror_half" and "no second phone" not in txt: e.append("R1 鏡面排除句缺失")
+    if s["view"]!="mirror_half" and has_reflective(s) and "no second phone in it" not in txt:
+        e.append("R1 場景/姿勢有會照出人像的反射面，卻沒有反射完整性句")
 
     # R2：好看段落
     # 用獨立字面檢查 GLOW 真正要交付的三件事，不用整段常數比對——

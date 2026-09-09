@@ -474,7 +474,7 @@ Everything in this picture is accounted for: the only person in it is her, and e
 Film grain, candid lifestyle photo, warm tones, shot on 35mm.
 ```
 
-### jia-seo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　354 字
+### jia-seo — D5　[A 級]　夜間 glam　friend_full　full_length　光:K8　387 字
 
 ```
 A photograph of a beautiful adult East Asian woman in her twenties, full length.
@@ -487,6 +487,7 @@ Her expression is warm and easy, lips parted at the start of a smile, her eyes l
 Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and the street behind her stays cool.
 Camera-ready natural makeup — an even lightweight base, softly groomed brows, curled separated lashes and a subtle lip colour. Her hair is styled and finished, not messy. Her skin is even and healthy-looking with subtle professional retouching, clear and consistent in tone, with a soft sheen where the light lands and a small natural catchlight in both eyes.
 A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus.
+The only reflection in that mirror is her own; there is no second person and no second phone in it, and no portrait or photograph of a person on any wall or screen.
 Visible with her: a tiny metallic shoulder bag.
 One or two anonymous strangers are well back behind her, walking away with the backs of their heads to the camera so that no face is visible at any angle, heavily out of focus and reduced to soft shapes with motion blur, clearly different from her in build, age and clothing.
 Everything in this picture is accounted for: the only person in it is her, and every visible hand connects to one of her own arms.
