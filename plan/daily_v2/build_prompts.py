@@ -114,7 +114,14 @@ LIGHT = {
 }
 # §3-D② 尾巴：按場景決定，不跨角色固定套用
 TAIL_OK = {"K1","K4","K5","K6","K7","K9","K15"}   # 戶外自然光與咖啡廳；室內人工光不加（§3-D② 原文：按場景決定）
-TAIL = "Film grain, candid lifestyle photo, warm tones, shot on 35mm."
+# 2026-09-09 移除。實測：帶這串尾巴的每一張都出現模擬底片邊框＋橘色邊緣亂碼文字
+# （左右邊條平均亮度只有中央的 30-45%），不帶的都沒有。相關性 4/4 vs 3/3。
+# 從 10 張那輪就存在，我連三輪漏掉，是用量測而不是目視才抓到。
+#
+# 我先前重新加回它的理由是「§3-D② 原文說按場景決定，不是禁用」＋「早期 Iris 好看的
+# 14 張都帶這串」。但早期 Iris 是 Seedream 4.5，不是 Soul V2 —— 在 Soul V2 上它產生片框。
+# 所以 §3-D② 當初「從模板刪除」的裁決在這個模型上是對的，我的重新加回是錯的。
+TAIL = ""
 
 PEOPLE = {
  "solo":"She is the only person in the photograph; no other people are visible anywhere in the frame.",
@@ -152,7 +159,7 @@ def build(p, s):
     L.append("Visible with her: "+s["micro"]+".")
     L.append(PEOPLE[s["people"]])
     L.append(CLOSURE)                                     # R1 封閉集合
-    if s["light"] in TAIL_OK: L.append(TAIL)
+    if TAIL and s["light"] in TAIL_OK: L.append(TAIL)
     return "\n".join(L)
 
 # 允許 "in her free hand" / "in the other hand" 這類中間插形容詞的寫法——
@@ -237,6 +244,10 @@ def audit(pid,n,s,txt,p):
                 e.append(f"R1 非鏡面格的場景/隨身物/姿勢寫了相機實體: {w}")
     if "Everything in this picture is accounted for" not in txt: e.append("R1 封閉集合句缺失")
     if s["view"]=="mirror_half" and "no second phone" not in txt: e.append("R1 鏡面排除句缺失")
+    # 2026-09-09：鏡面排除句說「反射裡只有她」，背景路人句說後面有人，
+    # 在鏡面構圖下兩句互相矛盾（路人會出現在反射裡）。鏡面格一律單人。
+    if s["view"]=="mirror_half" and s["people"]!="solo":
+        e.append("鏡面格不得有背景路人——反射裡會出現他們，與鏡面排除句矛盾")
     if s["view"]!="mirror_half" and has_reflective(s) and "no second phone in it" not in txt:
         e.append("R1 場景/姿勢有會照出人像的反射面，卻沒有反射完整性句")
 
@@ -341,6 +352,12 @@ def audit(pid,n,s,txt,p):
         if "exact same outfit" not in txt: e.append("§12 同穿搭句缺失")
 
     # §3-F 裸否定句
+    # §3-D②：這串尾巴已於 2026-09-09 因底片邊框實測移除，不得再出現。
+    # 這條規則先前在一次改寫中整條消失，而 rule_regression 的清單也漏列它，
+    # 所以測試回報「齊全」。兩個漏洞一起補。
+    for w in ("grain","35mm","instagram","film"):
+        if w in txt.lower(): e.append(f"§3-D② 出現已移除的尾巴字樣: {w}")
+
     for m in ["no phone","no screen","no television","no mirror"]:
         if m in txt.lower(): e.append(f"§3-F 裸否定句風險: {m}")
     if e: raise SystemExit(f"[FAIL] {pid} D{n}: "+"; ".join(e))
