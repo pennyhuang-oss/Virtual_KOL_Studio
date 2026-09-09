@@ -1,0 +1,298 @@
+{
+ "nanami-fujiwara": {
+  "ethnic": "East Asian",
+  "city": "Hakone",
+  "hair_base": "long sleek black hair",
+  "body": "She is slim and evenly proportioned with a full, soft bust and a gently defined waist.",
+  "slots": [
+   {
+    "tier": "C",
+    "device": "front_selfie",
+    "framing": "chest_up",
+    "zone": "極休閒",
+    "outfit": "a plain navy fleece zipped to the chin over a thermal top",
+    "hair": "in a fast low ponytail with strands escaping",
+    "scene": "the back office of a small inn, a wall of key hooks, a desk calendar and a stack of folded towels",
+    "action": "She has just sat down and pulled a tired half-smile at the camera, eyes a little unfocused.",
+    "micro": "a bunch of room keys on the desk, a mug of barley tea",
+    "people": "solo_interior",
+    "hair_style": "in a fast low ponytail with strands escaping"
+   },
+   {
+    "tier": "C",
+    "device": "found_mirror",
+    "framing": "waist_up",
+    "zone": "日常有型",
+    "outfit": "a grey knit and dark straight trousers",
+    "hair": "loose and smooth, tucked behind one ear",
+    "scene": "the glass door of a rural bus shelter, her reflection over the empty road behind, a timetable board bolted beside it",
+    "action": "She is standing sideways checking the reflection while waiting, phone held at hip height.",
+    "micro": "a tote bag with a supermarket logo, a folded umbrella hooked over her arm",
+    "people": "outdoor_background_ok",
+    "hair_style": "loose and smooth, tucked behind one ear"
+   },
+   {
+    "tier": "B",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "上班正式",
+    "outfit": "a muted indigo kimono with a simple obi and white tabi",
+    "hair": "pinned up neatly at the nape",
+    "scene": "the wooden entrance hall of a traditional inn, a stone step down to the door and paper screens along one side",
+    "action": "She is crouched to straighten a pair of guest slippers on the step, one hand on the floor, just glancing up.",
+    "micro": "a folded cloth over her forearm, a small tray on the step",
+    "people": "solo_interior",
+    "hair_style": "pinned up neatly at the nape"
+   },
+   {
+    "tier": "B",
+    "device": "propped_timer",
+    "framing": "mid_environment",
+    "zone": "極休閒",
+    "outfit": "a long cardigan over pyjama trousers and thick socks",
+    "hair": "down and slightly messy",
+    "scene": "a tatami room with a low table, a kotatsu blanket and a sliding door open to a dark garden",
+    "action": "She is sitting at the low table with her legs under the blanket, writing in a ledger, head down.",
+    "micro": "a calculator and a stack of receipts, a mandarin orange half-peeled",
+    "people": "solo_interior",
+    "hair_style": "down and slightly messy"
+   },
+   {
+    "tier": "A",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "編輯概念",
+    "outfit": "a dark green wool coat over a cream knit dress and leather boots",
+    "hair": "loose and brushed out",
+    "scene": "a mountain road viewpoint with layered ridges fading into mist behind the railing",
+    "action": "She is standing at the railing with both hands on it, looking out at the ridges away from the camera.",
+    "micro": "a thermos in one hand, a knitted scarf loose round her neck",
+    "people": "outdoor_background_ok",
+    "hair_style": "loose and brushed out"
+   }
+  ],
+  "hair_colour": "black"
+ },
+ "peggy-lee": {
+  "ethnic": "East Asian",
+  "city": "Kuala Lumpur",
+  "hair_base": "long deep wine-red curly hair with silver-grey highlighted strands",
+  "body": "She is curvy with a heavy full bust and wide hips that give her a strong hourglass line, and a clearly narrow waist between them.",
+  "slots": [
+   {
+    "tier": "C",
+    "device": "front_selfie",
+    "framing": "chest_up",
+    "zone": "極休閒",
+    "outfit": "a loose black work tee with a faded shop logo",
+    "hair": "knotted up out of the way, curls escaping everywhere",
+    "scene": "the service bay of a car workshop, a tool trolley and a lifted vehicle behind her, strip lights overhead",
+    "action": "She has grease on one knuckle and is pulling a wry face at the camera, clearly mid-job.",
+    "micro": "a torque wrench on the trolley, a rag over her shoulder",
+    "people": "solo_interior",
+    "hair_style": "knotted up out of the way, curls escaping everywhere"
+   },
+   {
+    "tier": "C",
+    "device": "found_mirror",
+    "framing": "waist_up",
+    "zone": "日常有型",
+    "outfit": "a fitted black tank and wide grey trousers",
+    "hair": "curls loose over one shoulder",
+    "scene": "the wing mirror and door glass of a parked car in an open-air lot, her reflection doubled across both surfaces, painted bay lines on the tarmac",
+    "action": "She is leaning toward the door glass with the phone held low, checking her own reflection with a flat expression.",
+    "micro": "a car key fob in her free hand, a canned drink on the roof of the car",
+    "people": "outdoor_background_ok",
+    "hair_style": "curls loose over one shoulder"
+   },
+   {
+    "tier": "B",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "街頭",
+    "outfit": "a cropped bomber jacket over a fitted tank, straight jeans and low boots",
+    "hair": "big and voluminous, pushed back off her face",
+    "scene": "an underground car park level with painted numbered bays and low concrete beams",
+    "action": "She is walking between two bays with her keys spinning on one finger, looking off to the side.",
+    "micro": "a small crossbody bag, sunglasses hooked in her neckline",
+    "people": "solo_interior",
+    "hair_style": "big and voluminous, pushed back off her face"
+   },
+   {
+    "tier": "B",
+    "device": "propped_timer",
+    "framing": "mid_environment",
+    "zone": "上班正式",
+    "outfit": "a fitted black shirt tucked into tailored trousers",
+    "hair": "smoothed into a low ponytail",
+    "scene": "a small marketing office above a workshop, a desk of printed brochures and a wall of event photos",
+    "action": "She is standing at the desk spreading out proofs with both hands, head down, comparing two of them.",
+    "micro": "a coffee cup with a lid, a highlighter pen behind her ear",
+    "people": "solo_interior",
+    "hair_style": "smoothed into a low ponytail"
+   },
+   {
+    "tier": "A",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "派對夜間",
+    "outfit": "a deep red satin slip dress with thin straps and black heels",
+    "hair": "curls set and glossy, one side pinned back",
+    "scene": "a hotel lobby bar at night, low warm lighting, a marble counter and a glass wall onto the street",
+    "action": "She is walking away from the bar with a drink in one hand and has turned her head back toward the camera.",
+    "micro": "a small clutch under one arm, drop earrings",
+    "people": "solo_interior",
+    "hair_style": "curls set and glossy, one side pinned back"
+   }
+  ],
+  "hair_colour": "deep wine-red with silver-grey highlighted strands"
+ },
+ "rin-ayase": {
+  "ethnic": "East Asian",
+  "city": "Ginza, Tokyo",
+  "hair_base": "long dark wine-brown hair in soft waves",
+  "body": "She is tall and curvy with a heavy full bust and a narrow waist, the proportions obvious even in structured clothing.",
+  "slots": [
+   {
+    "tier": "C",
+    "device": "front_selfie",
+    "framing": "chest_up",
+    "zone": "極休閒",
+    "outfit": "a plain grey sweatshirt, face completely bare",
+    "hair": "scraped back into a low bun with a claw clip",
+    "scene": "a small apartment bathroom doorway, a towel over the rail and a shelf of skincare bottles behind",
+    "action": "She has just taken off her makeup and is looking at the camera with a flat, unbothered expression.",
+    "micro": "a headband pushed up on her hairline, a cotton pad in her hand",
+    "people": "solo_interior",
+    "hair_style": "scraped back into a low bun with a claw clip"
+   },
+   {
+    "tier": "C",
+    "device": "found_mirror",
+    "framing": "waist_up",
+    "zone": "日常有型",
+    "outfit": "a camel knit and dark straight trousers",
+    "hair": "waves loose, one side tucked back",
+    "scene": "the mirrored wall of a subway station passage, tiled floor and a route map panel beside her",
+    "action": "She is standing side-on to the mirror with the phone held low, adjusting the strap of her bag.",
+    "micro": "a leather tote on one shoulder, a folded newspaper under her arm",
+    "people": "outdoor_background_ok",
+    "hair_style": "waves loose, one side tucked back"
+   },
+   {
+    "tier": "B",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "上班正式",
+    "outfit": "a fitted black dress with a high neckline and low heels",
+    "hair": "in a smooth low chignon",
+    "scene": "a narrow lift lobby of an office building, brushed metal doors and a directory panel on the wall",
+    "action": "She is standing waiting with her weight on one leg, checking her phone in her free hand, not looking up.",
+    "micro": "a slim structured handbag, a paper shop bag in the other hand",
+    "people": "solo_interior",
+    "hair_style": "in a smooth low chignon"
+   },
+   {
+    "tier": "B",
+    "device": "propped_timer",
+    "framing": "mid_environment",
+    "zone": "編輯概念",
+    "outfit": "a dark green silk kimono worn casually over a slip, untied at the waist",
+    "hair": "pinned loosely with a lacquer stick",
+    "scene": "a small tatami room with a low dresser, a folded futon and a paper lantern lamp",
+    "action": "She is sitting at the dresser fastening an earring, looking into a small stand mirror rather than at the camera.",
+    "micro": "an open jewellery tray, a folded fan on the dresser",
+    "people": "solo_interior",
+    "hair_style": "pinned loosely with a lacquer stick"
+   },
+   {
+    "tier": "A",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "派對夜間",
+    "outfit": "a black floor-length gown with a slim silhouette and heeled sandals",
+    "hair": "waves brushed out and set to one side",
+    "scene": "a covered stone entrance of an old building at night, warm downlights and a black car parked at the kerb beyond",
+    "action": "She is stepping down from the entrance holding the hem clear with one hand, looking down at the step.",
+    "micro": "a small satin clutch, a wrap over one forearm",
+    "people": "outdoor_background_ok",
+    "hair_style": "waves brushed out and set to one side"
+   }
+  ],
+  "hair_colour": "dark wine-brown"
+ },
+ "ruoruo-tang": {
+  "ethnic": "East Asian",
+  "city": "Chengdu",
+  "hair_base": "mid-length warm light chestnut-brown hair with a soft wave",
+  "body": "She is lean and strong with visible long muscle through the arms and thighs, a flat controlled midsection and a moderate bust.",
+  "slots": [
+   {
+    "tier": "C",
+    "device": "front_selfie",
+    "framing": "chest_up",
+    "zone": "街頭運動",
+    "outfit": "a fitted grey sports crop top, skin slightly flushed",
+    "hair": "in a low bun with damp strands at the temples",
+    "scene": "the equipment corner of a pilates studio, a reformer machine behind her and a rack of straps on the wall",
+    "action": "She has just finished a class and is looking at the camera with her eyebrows raised, still catching her breath.",
+    "micro": "a resistance ring under one arm, a water bottle on the floor",
+    "people": "solo_interior",
+    "hair_style": "in a low bun with damp strands at the temples"
+   },
+   {
+    "tier": "C",
+    "device": "found_mirror",
+    "framing": "full_length",
+    "zone": "極休閒",
+    "outfit": "an oversized cotton shirt over leggings, socks on",
+    "hair": "loose and slightly wavy from being tied up",
+    "scene": "the mirrored wall of a studio changing area, lockers along one side and a bench with a folded towel",
+    "action": "She is standing square to the mirror with the phone at chest height, one hand resting on her hip, checking her posture.",
+    "micro": "a canvas bag on the bench, grip socks in her free hand",
+    "people": "solo_interior",
+    "hair_style": "loose and slightly wavy from being tied up"
+   },
+   {
+    "tier": "B",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "日常有型",
+    "outfit": "a fitted ribbed knit tucked into wide cream trousers with flat sandals",
+    "hair": "down and softly waved",
+    "scene": "a tree-shaded lane of old brick buildings with a teahouse sign and stools set outside",
+    "action": "She is walking slowly with one hand adjusting the strap of her bag, looking off to one side at the shopfronts.",
+    "micro": "a woven shoulder bag, a paper cup of tea",
+    "people": "outdoor_background_ok",
+    "hair_style": "down and softly waved"
+   },
+   {
+    "tier": "B",
+    "device": "propped_timer",
+    "framing": "mid_environment",
+    "zone": "上班正式",
+    "outfit": "a black long-sleeve top and matching leggings",
+    "hair": "in a high ponytail",
+    "scene": "the studio floor, two reformer machines and a wall of printed anatomy diagrams, morning light through blinds",
+    "action": "She is crouched beside a machine adjusting the spring settings, head down and hands working.",
+    "micro": "a class clipboard on the machine, a spare strap looped over her shoulder",
+    "people": "solo_interior",
+    "hair_style": "in a high ponytail"
+   },
+   {
+    "tier": "A",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "編輯概念",
+    "outfit": "a long dark linen dress with a tie waist and flat leather sandals",
+    "hair": "loose and full",
+    "scene": "a wide stone terrace above a river bend with mist over the far bank",
+    "action": "She is standing at the parapet with both forearms resting on it, looking out and away from the camera.",
+    "micro": "a canvas hat held in one hand, a thin bracelet",
+    "people": "outdoor_background_ok",
+    "hair_style": "loose and full"
+   }
+  ],
+  "hair_colour": "warm light chestnut-brown"
+ }
+}

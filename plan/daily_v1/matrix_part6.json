@@ -1,0 +1,76 @@
+{
+ "nico-tsai": {
+  "ethnic": "East Asian",
+  "city": "Da'an, Taipei",
+  "hair_base": "a chin-length cool mid-brown bob with a silver-grey highlighted section at the left temple",
+  "body": "She is slim-framed with a full, rounded bust and a clearly narrow waist, the contrast between the two obvious in fitted clothes.",
+  "slots": [
+   {
+    "tier": "C",
+    "device": "front_selfie",
+    "framing": "chest_up",
+    "zone": "極休閒",
+    "outfit": "a plain black tee with a dust mask pulled down under her chin",
+    "hair": "the bob tucked behind both ears with the silver section showing at the left temple",
+    "scene": "her nail studio at the end of the day, a lamp arm folded back and a tray of files and buffers on the desk behind her",
+    "action": "She has just pulled the mask down and is looking at the camera with a blank, worn-out expression, saying nothing.",
+    "micro": "a dust extractor fan on the desk, a bottle of top coat by her elbow",
+    "people": "solo_interior",
+    "hair_style": "tucked behind both ears with the silver section showing at the left temple"
+   },
+   {
+    "tier": "C",
+    "device": "found_mirror",
+    "framing": "waist_up",
+    "zone": "日常有型",
+    "outfit": "a grey ribbed knit and straight black trousers",
+    "hair": "the bob blow-dried smooth, silver section pushed forward",
+    "scene": "the mirror above a public washroom basin in an office building, a soap dispenser and a folded paper towel stack beside it",
+    "action": "She is washing her hands at the basin and has glanced up at her own reflection, phone held low in one wet hand.",
+    "micro": "a hand cream tube on the ledge, a small ring tray beside the tap",
+    "people": "solo_interior",
+    "hair_style": "blow-dried smooth, silver section pushed forward"
+   },
+   {
+    "tier": "B",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "日常有型",
+    "outfit": "an oversized charcoal shirt over a white tank, wide jeans and flat leather loafers",
+    "hair": "the bob loose with the silver section visible as it moves",
+    "scene": "a lane of low buildings with a nail-supply shop window and a scooter parked against the kerb",
+    "action": "She is walking out of the shop doorway with a paper bag in one hand, checking the receipt in the other, not looking up.",
+    "micro": "a paper bag of supplies, a canvas tote over one shoulder",
+    "people": "outdoor_background_ok",
+    "hair_style": "loose with the silver section visible as it moves"
+   },
+   {
+    "tier": "B",
+    "device": "propped_timer",
+    "framing": "mid_environment",
+    "zone": "上班正式",
+    "outfit": "a fitted black long-sleeve top and a work apron over dark trousers",
+    "hair": "the bob clipped back on the right so the silver section falls forward",
+    "scene": "the studio work table under a bright lamp, a colour wheel of tips fanned out and small pots lined up along the edge",
+    "action": "She is bent close over the table shaping something small with a file, both hands steady and her whole attention on them.",
+    "micro": "a lamp arm pulled low over the table, a jar of brushes standing in solvent",
+    "people": "solo_interior",
+    "hair_style": "clipped back on the right so the silver section falls forward"
+   },
+   {
+    "tier": "A",
+    "device": "friend_rear",
+    "framing": "full_length",
+    "zone": "編輯概念",
+    "outfit": "a long camel coat over a black slip dress and heeled ankle boots",
+    "hair": "the bob smoothed and glossy",
+    "scene": "the covered forecourt of a converted warehouse gallery, tall metal doors open behind her and a concrete ramp underfoot",
+    "action": "She is walking down the ramp with both hands in the coat pockets, looking off to one side at something outside the frame.",
+    "micro": "a small structured shoulder bag, a single wide silver ring",
+    "people": "outdoor_background_ok",
+    "hair_style": "smoothed and glossy"
+   }
+  ],
+  "hair_colour": "cool mid-brown with a silver-grey section at the left temple"
+ }
+}
