@@ -85,3 +85,14 @@
 .hero.tight{padding:52px 0 30px}
 .hero.tight h1{font-size:clamp(27px,3.4vw,40px);margin:0 0 14px}
 .hero.tight .lede{font-size:15.5px;margin:0}
+
+/* 查不到時的說明列。🛑 這一段是「不要留空白畫面」的答案,不要拿掉。 */
+.mx .note{background:var(--card2);border:1px solid var(--line2);border-left:3px solid var(--gold2);
+  border-radius:4px;padding:13px 16px;margin:0 0 20px;font-size:13.5px;color:var(--ink2);line-height:1.72}
+.mx .note b{color:var(--ink);font-weight:500}
+.mx .note b.g{color:var(--gold)}
+.mx .note .s{display:block;color:var(--ink4);font-size:12.5px;margin-top:5px}
+
+/* 🛑 .mtwo 是 display:grid,會蓋掉瀏覽器預設的 [hidden]{display:none}——
+   少了這一行,通用排序時「收起來」的定位圖照樣看得見（而且顯示的是上一次查詢的結果）。 */
+.mx [hidden]{display:none!important}

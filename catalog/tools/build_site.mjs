@@ -647,6 +647,10 @@ const people = cat.personas
 const part = f => fs.readFileSync(path.join(import.meta.dirname, 'matcher', f), 'utf8');
 const RADAR_CSS = part('radar.css');
 
+// 產業對照表（客戶打的字庫裡沒有時，用它找最接近的品類）。
+// 🛑 每一桶的 expand 都必須真的排得出人，否則那一桶等於死路——所以在這裡驗，湊不到就整份建置失敗。
+const INDUSTRY = JSON.parse(fs.readFileSync(path.join(DIR, 'data', 'industry_map.json'), 'utf8'));
+
 // ── 配對索引。/match.html 與人設頁的雷達共用同一份、同一套權重。
 // 只有挑過素材的人設在裡面（buildIndex 自己讀 selection.json）,所以跟 people 對得上。
 const MIDX = buildIndex();
@@ -654,6 +658,27 @@ const midx = Object.fromEntries(MIDX.map(o => [o.id, o]));
 {
   const miss = people.filter(p => !midx[p.id]).map(p => p.id);
   if (miss.length) throw new Error('配對索引少了這幾位，兩邊會對不上：' + miss.join('、'));
+}
+
+// 每位人設的「可切入面」＝十軸總分。連產業對照表都對不上時（工廠、物流這類），
+// 就是用這個數字排「最好改設定的幾位」,所以它要跟雷達同源。
+const breadth = Object.fromEntries(MIDX.map(o => [o.id, COLS.reduce((a, c) => a + cell(o, c).v, 0)]));
+
+// 驗產業對照表：每一桶的 expand 至少要排得出 2 位,不然客戶查到那一桶會拿到空的
+{
+  const nz = s => String(s ?? '').toLowerCase().replace(/\s+/g, '');
+  const bagOf = o => [...o.kw, ...o.fit, ...o.pil, o.cat, o.tag, o.aud, o.mood, ...o.hooks.map(h => h.t)].map(nz);
+  const bags = MIDX.map(o => ({ id: o.id, b: bagOf(o) }));
+  const bad = [];
+  for (const bk of INDUSTRY.buckets) {
+    const hit = bags.filter(x => bk.expand.some(w => x.b.some(t => t.includes(nz(w)))));
+    const dead = bk.expand.filter(w => !bags.some(x => x.b.some(t => t.includes(nz(w)))));
+    if (hit.length < 2 || dead.length)
+      bad.push(`${bk.name}（排得出 ${hit.length} 位${dead.length ? '、庫裡沒有的詞：' + dead.join('／') : ''}）`);
+  }
+  if (bad.length) throw new Error('industry_map.json 這幾桶會給客戶空結果：\n  ' + bad.join('\n  '));
+  const words = INDUSTRY.buckets.reduce((a, b) => a + b.hit.length, 0);
+  console.log(`  🔍 產業對照表 ${INDUSTRY.buckets.length} 類、涵蓋 ${words} 個客戶可能會打的字，全部排得出人`);
 }
 
 // 人設頁的合作品類雷達。建置時就畫成 SVG——不送索引到瀏覽器、關掉 JS 也看得到。
@@ -1164,8 +1189,10 @@ const matchPage = layout('品牌配對定位 — 兌心科技虛擬 KOL 型錄',
         // 只送畫面上用得到的欄位。pdesc 只有 cell() 在建置時用,不必進瀏覽器。
         id: o.id, name: o.name, zh: o.zh, cat: o.cat, tag: o.tag, aud: o.aud, mood: o.mood,
         pil: o.pil, fit: o.fit, kw: o.kw, hooks: o.hooks, block: o.block,
+        bd: breadth[o.id],
       }))))
-      .replace('__SYN__', JSON.stringify(SYN)) });
+      .replace('__SYN__', JSON.stringify(SYN))
+      .replace('__IND__', JSON.stringify(INDUSTRY.buckets.map(b => ({ name: b.name, hit: b.hit, expand: b.expand })))) });
 
 // ── 寫檔 ────────────────────────────────────────────────────────────
 // 🛑 pick.html 是另一支程式（build_picker.mjs）產的,不要被這裡的清空掃掉。
