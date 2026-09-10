@@ -569,6 +569,7 @@ ${ogImage ? `<meta property="og:image" content="${esc(SITE + ogImage)}">
   <div class="brand"><a href="/"><b>兌心</b>科技</a></div>
   <nav>
     <a href="/kols.html"${nav === 'kols' ? ' class="on"' : ''}>全部人設</a>
+    <a href="/reels.html"${nav === 'reels' ? ' class="on"' : ''}>影音</a>
     <a href="/match.html"${nav === 'match' ? ' class="on"' : ''}>品牌配對</a>
     <a href="/pricing.html"${nav === 'pricing' ? ' class="on"' : ''}>報價</a>
   </nav>
@@ -650,6 +651,7 @@ const people = cat.personas
   .map(p => ({ ...p, a: assetsOf(p.id), mk: market(p.location), soc: socialOf(p.id) }));
 // 配對頁與雷達的樣式／版面／程式都在 tools/matcher/,不塞在這支裡面。
 const part = f => fs.readFileSync(path.join(import.meta.dirname, 'matcher', f), 'utf8');
+const part2 = f => fs.readFileSync(path.join(import.meta.dirname, 'reels', f), 'utf8');
 const RADAR_CSS = part('radar.css');
 
 // 產業對照表（客戶打的字庫裡沒有時，用它找最接近的品類）。
@@ -1212,6 +1214,31 @@ const matchPage = layout('品牌配對定位 — 兌心科技虛擬 KOL 型錄',
       .replace('__SYN__', JSON.stringify(SYN))
       .replace('__IND__', JSON.stringify(INDUSTRY.buckets.map(b => ({ name: b.name, hit: b.hit, expand: b.expand })))) });
 
+// ── 影音（/reels.html）────────────────────────────────────────────
+// 使用者 2026-09-10:「不是每個人設都有影片素材⋯⋯別人在點的時候，也不知道哪幾個人設是
+// 有影片素材可以點的。」所以要一頁把全部影片攤開,並且做成可以一路往下滑的短影音形式。
+// 🛑 每一支都要能連回她的人設頁——這一頁是入口,不是終點。
+const reelItems = people.flatMap(p => p.a.videos
+  .filter(v => v.mp4)                      // 只放真的播得動的,沒有 mp4 的不列
+  .map((v, i) => ({
+    key: p.id + '-' + (i + 1), id: p.id, name: p.name, zh: p.name_zh || '',
+    tag: p.tagline || '', img: p.a.heroThumb,
+    poster: v.poster, mp4: v.mp4, webm: v.webm,
+  })));
+{
+  const noVideo = people.length - new Set(reelItems.map(v => v.id)).size;
+  console.log(`  🎬 影音頁 ${reelItems.length} 支（${new Set(reelItems.map(v => v.id)).size} 位有影片、${noVideo} 位目前只有圖）`);
+  if (!reelItems.length) throw new Error('影音頁一支影片都排不出來,不要出一頁空的');
+}
+const reelsPage = layout('影音素材 — 兌心科技虛擬 KOL 型錄',
+  part2('reels.body.html')
+    .replace('__N__', String(new Set(reelItems.map(v => v.id)).size))
+    .replace('__V__', String(reelItems.length)),
+  { desc: `${reelItems.length} 支虛擬 KOL 影片素材，可直接播放。`,
+    nav: 'reels', ogImage: heroPerson.a.hero,
+    css: part2('reels.css'),
+    js: part2('reels.js').replace('__VIDS__', JSON.stringify(reelItems)) });
+
 // ── 寫檔 ────────────────────────────────────────────────────────────
 // 🛑 pick.html 是另一支程式（build_picker.mjs）產的,不要被這裡的清空掃掉。
 // 踩過的形狀：跑完 npm run site 之後挑選後台就從部署裡消失,而它不進 git 的話就回不來了。
@@ -1226,11 +1253,12 @@ fs.writeFileSync(path.join(PUB, 'index.html'), homePage);
 fs.writeFileSync(path.join(PUB, 'kols.html'), kolsPage);
 fs.writeFileSync(path.join(PUB, 'pricing.html'), pricingPage);
 fs.writeFileSync(path.join(PUB, 'match.html'), matchPage);
+fs.writeFileSync(path.join(PUB, 'reels.html'), reelsPage);
 for (const p of people) fs.writeFileSync(path.join(PUB, 'p', `${p.id}.html`), personPage(p));
 fs.writeFileSync(path.join(PUB, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
-console.log(`產生 ${people.length + 4} 頁 → ${PUB}`);
-for (const f of ['index.html', 'kols.html', 'pricing.html', 'match.html']) {
+console.log(`產生 ${people.length + 5} 頁 → ${PUB}`);
+for (const f of ['index.html', 'kols.html', 'pricing.html', 'match.html', 'reels.html']) {
   console.log(`  ${f.padEnd(13)} ${(fs.statSync(path.join(PUB, f)).size / 1024).toFixed(0)} KB`);
 }
 console.log(`  p/*.html      ${people.length} 頁`);

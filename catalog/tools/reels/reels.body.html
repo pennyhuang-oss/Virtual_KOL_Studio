@@ -1,0 +1,29 @@
+<div class="hero tight"><div class="wrap">
+  <h1>影音<em>素材</em></h1>
+  <p class="lede">__N__ 位人設、__V__ 支影片，全部可以直接播。點任何一支會進到全螢幕，
+  往下滑就是下一支——不用一個一個人設點進去找。</p>
+</div></div>
+
+<div class="wrap rl">
+  <div class="egs" id="who"><b>人設</b></div>
+  <div class="grid" id="grid"></div>
+  <p class="none" id="empty" hidden></p>
+
+  <div class="how">
+    <p><b>這一頁放的是什麼</b>：目前已經產出、而且客戶挑選過的影片素材。
+    沒有出現在這裡的人設，代表她現在只有圖像素材——<b>不代表不能拍影片</b>，
+    影片是照合作內容再製作的。</p>
+    <p>所有影片都是 AI 生成的虛擬角色，非真實人物。完整檔案（原始解析度、無壓縮）於洽談時提供。</p>
+  </div>
+</div>
+
+<!-- 全螢幕播放器。一次只建立目前這支與前後各一支的 <video>,其餘只留首幀。 -->
+<div class="reels" id="reels" hidden>
+  <div class="rtop">
+    <span class="rcount" id="rcount"></span>
+    <button type="button" class="rbtn" id="rmute" aria-label="開啟聲音">🔇</button>
+    <button type="button" class="rbtn" id="rclose" aria-label="關閉">✕</button>
+  </div>
+  <div class="rfeed" id="rfeed" tabindex="-1"></div>
+  <p class="rhint" id="rhint">往下滑看下一支・按 Esc 離開</p>
+</div>
