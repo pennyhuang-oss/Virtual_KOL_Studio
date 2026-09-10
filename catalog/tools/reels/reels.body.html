@@ -21,9 +21,24 @@
 <div class="reels" id="reels" hidden>
   <div class="rtop">
     <span class="rcount" id="rcount"></span>
-    <button type="button" class="rbtn" id="rmute" aria-label="開啟聲音">🔇</button>
+    <button type="button" class="rsound on" id="rmute" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path class="x" d="M16 9l5 6M21 9l-5 6"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <b>開啟聲音</b></button>
     <button type="button" class="rbtn" id="rclose" aria-label="關閉">✕</button>
   </div>
+
   <div class="rfeed" id="rfeed" tabindex="-1"></div>
-  <p class="rhint" id="rhint">往下滑看下一支・按 Esc 離開</p>
+
+  <!-- 第一次進來的大提示。客戶不一定知道可以滑、也不知道可以開聲音（使用者 2026-09-10）。 -->
+  <div class="rtap" id="rtap">
+    <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path class="x" d="M16 9l5 6M21 9l-5 6"/></svg></span>
+    <b>點一下開啟聲音</b>
+  </div>
+
+  <button type="button" class="rnav prev" id="rprev" aria-label="上一支"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
+  <button type="button" class="rnav next" id="rnext" aria-label="下一支">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    <i>下一支</i></button>
+
+  <div class="rbar"><span id="rbar"></span></div>
 </div>

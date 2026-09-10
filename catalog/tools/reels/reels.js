@@ -47,8 +47,9 @@ renderGrid();
 /* ── 全螢幕播放器 ──
    🛑 一次只建立目前這支與前後各一支的 <video>。48 支加起來 139 MB,
       全部建出來瀏覽器會同時去要 metadata,手機直接卡住。 */
-const box = $('reels'), feed = $('rfeed'), hint = $('rhint');
-let cur = 0, muted = true, open_ = false;
+const box = $('reels'), feed = $('rfeed');
+const tapHint = $('rtap'), sound = $('rmute'), bar = $('rbar');
+let cur = 0, muted = true, open_ = false, touched = false;
 
 function open(i) {
   open_ = true; cur = i;
@@ -65,8 +66,7 @@ function open(i) {
   feed.scrollTop = feed.clientHeight * i;
   mount();
   feed.focus({ preventScroll: true });
-  hint.hidden = false;
-  setTimeout(() => { hint.style.opacity = 0; }, 4000);
+  tapHint.hidden = touched || !muted;      // 開過聲音就不用再提示一次
   history.replaceState(null, '', '#v' + (list[i] ? list[i].key : i));
 }
 
@@ -76,7 +76,6 @@ function close() {
   feed.innerHTML = '';
   box.hidden = true;
   document.body.style.overflow = '';
-  hint.style.opacity = '';
   history.replaceState(null, '', location.pathname);
 }
 
@@ -101,11 +100,40 @@ function mount() {
   feed.querySelectorAll('video').forEach(el => {
     const n = Number(el.closest('section').dataset.n);
     el.muted = muted;
-    if (n === cur) el.play().catch(() => {});   // 被自動播放政策擋住就算了,使用者自己按
-    else el.pause();
+    if (n === cur) {
+      // 旁邊那兩支是用 preload="metadata" 建的,輪到它時升級成 auto。
+      // 🛑 不要在這裡叫 load()。mount() 每次換片都會跑,只要資料還沒到就再 load 一次,
+      //    而 load() 會中斷正在下載的那一次——實測會一路 ERR_ABORTED 到 networkState=3
+      //    （NO_SOURCE），那一支就永遠停在首幀。play() 本身就會去載。
+      el.preload = 'auto';
+      el.play().catch(() => {});                // 被自動播放政策擋住就算了,使用者自己按
+    } else el.pause();
   });
   $('rcount').textContent = (cur + 1) + ' / ' + list.length;
+  $('rprev').hidden = cur === 0;
+  $('rnext').hidden = cur >= list.length - 1;
 }
+
+// 開／關聲音。這是這一頁最容易被錯過的動作,所以三個地方都能觸發:
+// 上面那顆金色的鈕、畫面中央的大提示、以及直接點影片本身。
+function setMuted(m) {
+  muted = m; touched = true;
+  sound.classList.toggle('on', muted);
+  sound.setAttribute('aria-pressed', String(muted));
+  sound.querySelector('b').textContent = muted ? '開啟聲音' : '';
+  sound.setAttribute('aria-label', muted ? '開啟聲音' : '關閉聲音');
+  tapHint.hidden = true;
+  feed.querySelectorAll('video').forEach(v => { v.muted = muted; });
+  const v = feed.querySelector(`[data-stage="${cur}"] video`);
+  if (v) v.play().catch(() => {});
+}
+
+// 進度條。跟著目前這一支的播放時間走。
+setInterval(() => {
+  if (!open_) return;
+  const v = feed.querySelector(`[data-stage="${cur}"] video`);
+  bar.style.width = v && v.duration ? (v.currentTime / v.duration * 100).toFixed(1) + '%' : '0%';
+}, 160);
 
 feed.addEventListener('scroll', () => {
   if (!open_) return;
@@ -116,16 +144,34 @@ feed.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-const go = d => { feed.scrollTo({ top: (cur + d) * feed.clientHeight, behavior: 'smooth' }); };
+const go = d => {
+  const n = Math.min(list.length - 1, Math.max(0, cur + d));
+  feed.scrollTo({ top: n * feed.clientHeight, behavior: 'smooth' });
+};
 $('rclose').addEventListener('click', close);
-$('rmute').addEventListener('click', () => {
-  muted = !muted;
-  $('rmute').textContent = muted ? '🔇' : '🔊';
-  $('rmute').setAttribute('aria-label', muted ? '開啟聲音' : '關閉聲音');
-  feed.querySelectorAll('video').forEach(v => { v.muted = muted; });
+sound.addEventListener('click', () => setMuted(!muted));
+tapHint.addEventListener('click', () => setMuted(false));
+$('rnext').addEventListener('click', () => go(1));
+$('rprev').addEventListener('click', () => go(-1));
+
+// 點影片本身：還在靜音就開聲音（最容易猜到的動作）,已經有聲音就暫停／繼續。
+feed.addEventListener('click', e => {
+  if (e.target.closest('a') || e.target.closest('button')) return;
+  if (muted) { setMuted(false); return; }
   const v = feed.querySelector(`[data-stage="${cur}"] video`);
-  if (v) v.play().catch(() => {});
+  if (v) { v.paused ? v.play().catch(() => {}) : v.pause(); }
 });
+
+// 滾輪一格＝換一支。原本靠 scroll-snap,一格滾輪只走一小段,感覺不像在滑短影音。
+let lock = 0;
+feed.addEventListener('wheel', e => {
+  if (!open_ || Math.abs(e.deltaY) < 4) return;
+  e.preventDefault();
+  const now = Date.now();
+  if (now < lock) return;
+  lock = now + 520;
+  go(e.deltaY > 0 ? 1 : -1);
+}, { passive: false });
 document.addEventListener('keydown', e => {
   if (!open_) return;
   if (e.key === 'Escape') { close(); return; }

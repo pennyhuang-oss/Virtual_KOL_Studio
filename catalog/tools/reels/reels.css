@@ -55,14 +55,56 @@
 .rfeed .meta a{flex:0 0 auto;font-size:12.5px;color:#fff;border:1px solid rgba(255,255,255,.4);
   border-radius:15px;padding:5px 13px;white-space:nowrap}
 .rfeed .meta a:hover{background:rgba(255,255,255,.14)}
-.rtop{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;gap:10px;align-items:center;
+.rtop{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;gap:10px;align-items:center;
   padding:14px 16px;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,0))}
 .rcount{margin-right:auto;font-size:12.5px;color:rgba(255,255,255,.8);font-variant-numeric:tabular-nums}
 .rbtn{width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.28);
   color:#fff;font-size:15px;cursor:pointer;display:grid;place-items:center;padding:0}
 .rbtn:hover{background:rgba(0,0,0,.68)}
-.rbtn:focus-visible{outline:2px solid #e7cd74;outline-offset:2px}
-.rhint{position:absolute;left:0;right:0;bottom:8px;text-align:center;margin:0;z-index:2;
-  font-size:11.5px;color:rgba(255,255,255,.42);transition:opacity .4s}
-.rhint[hidden]{display:none!important}
-@media (max-width:700px){.rhint{display:none}}
+.rbtn:focus-visible,.rsound:focus-visible,.rnav:focus-visible{outline:2px solid #e7cd74;outline-offset:2px}
+
+/* 🛑 靜音時這顆要「看起來就是要按的」——金底、有字、會呼吸。
+   使用者 2026-09-10：「有些人其實不太知道⋯⋯可以這樣開啟音量」。開了聲音之後才縮回小圖示。 */
+.rsound{display:flex;align-items:center;gap:7px;border-radius:20px;padding:7px 14px 7px 11px;
+  font:inherit;font-size:13px;cursor:pointer;border:1px solid rgba(255,255,255,.28);
+  background:rgba(0,0,0,.42);color:#fff}
+.rsound svg{width:19px;height:19px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.rsound svg .w{display:none}
+.rsound b{font-weight:500;white-space:nowrap}
+.rsound.on{background:#e7cd74;border-color:#e7cd74;color:#17130a;animation:rpulse 2.2s ease-in-out infinite}
+.rsound.on:hover{background:#f0da91;animation:none}
+.rsound:not(.on){padding:9px;gap:0}
+.rsound:not(.on) b{display:none}
+.rsound:not(.on) svg .x{display:none}
+.rsound:not(.on) svg .w{display:inline}
+@keyframes rpulse{0%,100%{box-shadow:0 0 0 0 rgba(231,205,116,.5)}70%{box-shadow:0 0 0 11px rgba(231,205,116,0)}}
+
+/* 第一次進來的大提示,點一下就開聲音並消失 */
+.rtap{position:absolute;inset:0;z-index:2;display:grid;place-content:center;justify-items:center;gap:14px;
+  cursor:pointer;background:rgba(0,0,0,.34);transition:opacity .35s}
+.rtap[hidden]{display:none!important}
+.rtap .ic{width:74px;height:74px;border-radius:50%;background:rgba(0,0,0,.55);
+  border:1.5px solid rgba(255,255,255,.55);display:grid;place-items:center;backdrop-filter:blur(3px)}
+.rtap svg{width:34px;height:34px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rtap b{font-weight:500;font-size:14.5px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+
+/* 上下切換。箭頭會上下輕輕動,讓人知道這是可以滑的 */
+.rnav{position:absolute;left:50%;transform:translateX(-50%);z-index:3;background:rgba(0,0,0,.44);
+  border:1px solid rgba(255,255,255,.26);color:#fff;cursor:pointer;display:grid;place-items:center;
+  border-radius:22px;padding:6px 14px;gap:1px}
+.rnav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rnav i{font-style:normal;font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.78)}
+.rnav:hover{background:rgba(0,0,0,.72)}
+.rnav[hidden]{display:none!important}
+.rnav.prev{top:64px;padding:5px 12px}
+/* 只彈三下就停。一直彈很吵,而且會變成很難按中——Playwright 直接判定「元素不穩定」點不下去,
+   那代表手不穩的人也點不到。提示的目的達到就該安靜。 */
+.rnav.next{bottom:16px;animation:rbob 1.9s ease-in-out 3}
+.rnav.next:hover{animation:none}
+@keyframes rbob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+@media (prefers-reduced-motion:reduce){.rnav.next,.rsound.on{animation:none}}
+
+/* 播放進度。短影音都有這一條,沒有的話不知道這支多長 */
+.rbar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}
+.rbar span{display:block;height:100%;width:0;background:#e7cd74;transition:width .18s linear}

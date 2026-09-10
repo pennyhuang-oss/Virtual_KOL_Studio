@@ -478,17 +478,59 @@ footer p{margin:0 0 7px;max-width:720px}
 .rfeed .meta a{flex:0 0 auto;font-size:12.5px;color:#fff;border:1px solid rgba(255,255,255,.4);
   border-radius:15px;padding:5px 13px;white-space:nowrap}
 .rfeed .meta a:hover{background:rgba(255,255,255,.14)}
-.rtop{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;gap:10px;align-items:center;
+.rtop{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;gap:10px;align-items:center;
   padding:14px 16px;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,0))}
 .rcount{margin-right:auto;font-size:12.5px;color:rgba(255,255,255,.8);font-variant-numeric:tabular-nums}
 .rbtn{width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.28);
   color:#fff;font-size:15px;cursor:pointer;display:grid;place-items:center;padding:0}
 .rbtn:hover{background:rgba(0,0,0,.68)}
-.rbtn:focus-visible{outline:2px solid #e7cd74;outline-offset:2px}
-.rhint{position:absolute;left:0;right:0;bottom:8px;text-align:center;margin:0;z-index:2;
-  font-size:11.5px;color:rgba(255,255,255,.42);transition:opacity .4s}
-.rhint[hidden]{display:none!important}
-@media (max-width:700px){.rhint{display:none}}
+.rbtn:focus-visible,.rsound:focus-visible,.rnav:focus-visible{outline:2px solid #e7cd74;outline-offset:2px}
+
+/* 🛑 靜音時這顆要「看起來就是要按的」——金底、有字、會呼吸。
+   使用者 2026-09-10：「有些人其實不太知道⋯⋯可以這樣開啟音量」。開了聲音之後才縮回小圖示。 */
+.rsound{display:flex;align-items:center;gap:7px;border-radius:20px;padding:7px 14px 7px 11px;
+  font:inherit;font-size:13px;cursor:pointer;border:1px solid rgba(255,255,255,.28);
+  background:rgba(0,0,0,.42);color:#fff}
+.rsound svg{width:19px;height:19px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.rsound svg .w{display:none}
+.rsound b{font-weight:500;white-space:nowrap}
+.rsound.on{background:#e7cd74;border-color:#e7cd74;color:#17130a;animation:rpulse 2.2s ease-in-out infinite}
+.rsound.on:hover{background:#f0da91;animation:none}
+.rsound:not(.on){padding:9px;gap:0}
+.rsound:not(.on) b{display:none}
+.rsound:not(.on) svg .x{display:none}
+.rsound:not(.on) svg .w{display:inline}
+@keyframes rpulse{0%,100%{box-shadow:0 0 0 0 rgba(231,205,116,.5)}70%{box-shadow:0 0 0 11px rgba(231,205,116,0)}}
+
+/* 第一次進來的大提示,點一下就開聲音並消失 */
+.rtap{position:absolute;inset:0;z-index:2;display:grid;place-content:center;justify-items:center;gap:14px;
+  cursor:pointer;background:rgba(0,0,0,.34);transition:opacity .35s}
+.rtap[hidden]{display:none!important}
+.rtap .ic{width:74px;height:74px;border-radius:50%;background:rgba(0,0,0,.55);
+  border:1.5px solid rgba(255,255,255,.55);display:grid;place-items:center;backdrop-filter:blur(3px)}
+.rtap svg{width:34px;height:34px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rtap b{font-weight:500;font-size:14.5px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+
+/* 上下切換。箭頭會上下輕輕動,讓人知道這是可以滑的 */
+.rnav{position:absolute;left:50%;transform:translateX(-50%);z-index:3;background:rgba(0,0,0,.44);
+  border:1px solid rgba(255,255,255,.26);color:#fff;cursor:pointer;display:grid;place-items:center;
+  border-radius:22px;padding:6px 14px;gap:1px}
+.rnav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rnav i{font-style:normal;font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.78)}
+.rnav:hover{background:rgba(0,0,0,.72)}
+.rnav[hidden]{display:none!important}
+.rnav.prev{top:64px;padding:5px 12px}
+/* 只彈三下就停。一直彈很吵,而且會變成很難按中——Playwright 直接判定「元素不穩定」點不下去,
+   那代表手不穩的人也點不到。提示的目的達到就該安靜。 */
+.rnav.next{bottom:16px;animation:rbob 1.9s ease-in-out 3}
+.rnav.next:hover{animation:none}
+@keyframes rbob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+@media (prefers-reduced-motion:reduce){.rnav.next,.rsound.on{animation:none}}
+
+/* 播放進度。短影音都有這一條,沒有的話不知道這支多長 */
+.rbar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}
+.rbar span{display:block;height:100%;width:0;background:#e7cd74;transition:width .18s linear}
 </style>
 </head>
 <body>
@@ -524,11 +566,26 @@ footer p{margin:0 0 7px;max-width:720px}
 <div class="reels" id="reels" hidden>
   <div class="rtop">
     <span class="rcount" id="rcount"></span>
-    <button type="button" class="rbtn" id="rmute" aria-label="開啟聲音">🔇</button>
+    <button type="button" class="rsound on" id="rmute" aria-pressed="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path class="x" d="M16 9l5 6M21 9l-5 6"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <b>開啟聲音</b></button>
     <button type="button" class="rbtn" id="rclose" aria-label="關閉">✕</button>
   </div>
+
   <div class="rfeed" id="rfeed" tabindex="-1"></div>
-  <p class="rhint" id="rhint">往下滑看下一支・按 Esc 離開</p>
+
+  <!-- 第一次進來的大提示。客戶不一定知道可以滑、也不知道可以開聲音（使用者 2026-09-10）。 -->
+  <div class="rtap" id="rtap">
+    <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path class="x" d="M16 9l5 6M21 9l-5 6"/></svg></span>
+    <b>點一下開啟聲音</b>
+  </div>
+
+  <button type="button" class="rnav prev" id="rprev" aria-label="上一支"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
+  <button type="button" class="rnav next" id="rnext" aria-label="下一支">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    <i>下一支</i></button>
+
+  <div class="rbar"><span id="rbar"></span></div>
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="放大檢視">
@@ -635,8 +692,9 @@ renderGrid();
 /* ── 全螢幕播放器 ──
    🛑 一次只建立目前這支與前後各一支的 <video>。48 支加起來 139 MB,
       全部建出來瀏覽器會同時去要 metadata,手機直接卡住。 */
-const box = $('reels'), feed = $('rfeed'), hint = $('rhint');
-let cur = 0, muted = true, open_ = false;
+const box = $('reels'), feed = $('rfeed');
+const tapHint = $('rtap'), sound = $('rmute'), bar = $('rbar');
+let cur = 0, muted = true, open_ = false, touched = false;
 
 function open(i) {
   open_ = true; cur = i;
@@ -653,8 +711,7 @@ function open(i) {
   feed.scrollTop = feed.clientHeight * i;
   mount();
   feed.focus({ preventScroll: true });
-  hint.hidden = false;
-  setTimeout(() => { hint.style.opacity = 0; }, 4000);
+  tapHint.hidden = touched || !muted;      // 開過聲音就不用再提示一次
   history.replaceState(null, '', '#v' + (list[i] ? list[i].key : i));
 }
 
@@ -664,7 +721,6 @@ function close() {
   feed.innerHTML = '';
   box.hidden = true;
   document.body.style.overflow = '';
-  hint.style.opacity = '';
   history.replaceState(null, '', location.pathname);
 }
 
@@ -689,11 +745,40 @@ function mount() {
   feed.querySelectorAll('video').forEach(el => {
     const n = Number(el.closest('section').dataset.n);
     el.muted = muted;
-    if (n === cur) el.play().catch(() => {});   // 被自動播放政策擋住就算了,使用者自己按
-    else el.pause();
+    if (n === cur) {
+      // 旁邊那兩支是用 preload="metadata" 建的,輪到它時升級成 auto。
+      // 🛑 不要在這裡叫 load()。mount() 每次換片都會跑,只要資料還沒到就再 load 一次,
+      //    而 load() 會中斷正在下載的那一次——實測會一路 ERR_ABORTED 到 networkState=3
+      //    （NO_SOURCE），那一支就永遠停在首幀。play() 本身就會去載。
+      el.preload = 'auto';
+      el.play().catch(() => {});                // 被自動播放政策擋住就算了,使用者自己按
+    } else el.pause();
   });
   $('rcount').textContent = (cur + 1) + ' / ' + list.length;
+  $('rprev').hidden = cur === 0;
+  $('rnext').hidden = cur >= list.length - 1;
 }
+
+// 開／關聲音。這是這一頁最容易被錯過的動作,所以三個地方都能觸發:
+// 上面那顆金色的鈕、畫面中央的大提示、以及直接點影片本身。
+function setMuted(m) {
+  muted = m; touched = true;
+  sound.classList.toggle('on', muted);
+  sound.setAttribute('aria-pressed', String(muted));
+  sound.querySelector('b').textContent = muted ? '開啟聲音' : '';
+  sound.setAttribute('aria-label', muted ? '開啟聲音' : '關閉聲音');
+  tapHint.hidden = true;
+  feed.querySelectorAll('video').forEach(v => { v.muted = muted; });
+  const v = feed.querySelector(`[data-stage="${cur}"] video`);
+  if (v) v.play().catch(() => {});
+}
+
+// 進度條。跟著目前這一支的播放時間走。
+setInterval(() => {
+  if (!open_) return;
+  const v = feed.querySelector(`[data-stage="${cur}"] video`);
+  bar.style.width = v && v.duration ? (v.currentTime / v.duration * 100).toFixed(1) + '%' : '0%';
+}, 160);
 
 feed.addEventListener('scroll', () => {
   if (!open_) return;
@@ -704,16 +789,34 @@ feed.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-const go = d => { feed.scrollTo({ top: (cur + d) * feed.clientHeight, behavior: 'smooth' }); };
+const go = d => {
+  const n = Math.min(list.length - 1, Math.max(0, cur + d));
+  feed.scrollTo({ top: n * feed.clientHeight, behavior: 'smooth' });
+};
 $('rclose').addEventListener('click', close);
-$('rmute').addEventListener('click', () => {
-  muted = !muted;
-  $('rmute').textContent = muted ? '🔇' : '🔊';
-  $('rmute').setAttribute('aria-label', muted ? '開啟聲音' : '關閉聲音');
-  feed.querySelectorAll('video').forEach(v => { v.muted = muted; });
+sound.addEventListener('click', () => setMuted(!muted));
+tapHint.addEventListener('click', () => setMuted(false));
+$('rnext').addEventListener('click', () => go(1));
+$('rprev').addEventListener('click', () => go(-1));
+
+// 點影片本身：還在靜音就開聲音（最容易猜到的動作）,已經有聲音就暫停／繼續。
+feed.addEventListener('click', e => {
+  if (e.target.closest('a') || e.target.closest('button')) return;
+  if (muted) { setMuted(false); return; }
   const v = feed.querySelector(`[data-stage="${cur}"] video`);
-  if (v) v.play().catch(() => {});
+  if (v) { v.paused ? v.play().catch(() => {}) : v.pause(); }
 });
+
+// 滾輪一格＝換一支。原本靠 scroll-snap,一格滾輪只走一小段,感覺不像在滑短影音。
+let lock = 0;
+feed.addEventListener('wheel', e => {
+  if (!open_ || Math.abs(e.deltaY) < 4) return;
+  e.preventDefault();
+  const now = Date.now();
+  if (now < lock) return;
+  lock = now + 520;
+  go(e.deltaY > 0 ? 1 : -1);
+}, { passive: false });
 document.addEventListener('keydown', e => {
   if (!open_) return;
   if (e.key === 'Escape') { close(); return; }
