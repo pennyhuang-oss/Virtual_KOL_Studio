@@ -1,0 +1,1230 @@
+{
+ "_note": "v3 全新場景庫。v2 用過的場景一律不重複使用（使用者裁定：已生成過的場景就是用掉了）。每個場景自帶 publicness 決定有無路人、crowd 決定路人穿什麼、dress 限制她能穿什麼、light 限制可用打光。",
+ "scenes": [
+  {
+   "id": "tp-record",
+   "city": "Taipei",
+   "name": "the doorway of a second-hand record shop at night",
+   "detail": "crates of sleeves under an awning and a hand-lettered board propped by the step",
+   "publicness": "busy",
+   "crowd": "young people in t-shirts and jeans with tote bags",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "tp-flower",
+   "city": "Taipei",
+   "name": "a flower shop just before closing",
+   "detail": "buckets of stems along the wet floor and a chilled glass cabinet throwing light forward",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_COUNTER_DAY",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tp-footbridge",
+   "city": "Taipei",
+   "name": "a pedestrian footbridge over a boulevard in the late afternoon",
+   "detail": "a painted steel handrail and the traffic below already in shade",
+   "publicness": "busy",
+   "crowd": "commuters in short sleeves with backpacks",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_LOW",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "tp-fabric",
+   "city": "Taipei",
+   "name": "a fabric shop in the textile quarter",
+   "detail": "bolts of cloth stacked to the ceiling and a cutting table under a work lamp",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tp-carpark",
+   "city": "Taipei",
+   "name": "the top deck of an open-air car park at night",
+   "detail": "a single lamp post, painted bay lines and the city glow low on the horizon",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_LOW",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "jk-satay",
+   "city": "Jakarta",
+   "name": "a satay cart under a string of bulbs at night",
+   "detail": "a low plastic stool, a tin of skewers and smoke drifting past the light",
+   "publicness": "busy",
+   "crowd": "locals in short-sleeved shirts and sandals",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "jk-batik",
+   "city": "Jakarta",
+   "name": "a batik shop with fabric hung on wooden rails",
+   "detail": "a glass counter, a standing lamp and the back of the shop in shadow",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "resort"
+   ],
+   "light": [
+    "L_COUNTER_DAY",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "jk-poolside",
+   "city": "Jakarta",
+   "name": "a hotel pool deck after dark",
+   "detail": "underwater lights in the pool, folded loungers and planting black behind",
+   "publicness": "quiet",
+   "dress": [
+    "resort",
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_LOW",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sg-kopi-night",
+   "city": "Singapore",
+   "name": "a coffee shop shuttered on one side at night",
+   "detail": "a tiled wall, stacked stools and one strip light still on over the counter",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "sg-bookstore",
+   "city": "Singapore",
+   "name": "a narrow second-hand bookshop at night",
+   "detail": "shelves to the ceiling, a step stool and a reading lamp on the counter",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "sg-hdb-corridor",
+   "city": "Singapore",
+   "name": "an open apartment-block corridor at dusk",
+   "detail": "a painted balustrade, potted plants along it and lit windows across the void deck",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sg-cinema",
+   "city": "Singapore",
+   "name": "the ticket lobby of an old cinema at night",
+   "detail": "a curved counter, backlit showtimes and carpet running off into the dark",
+   "publicness": "busy",
+   "crowd": "couples in casual evening clothes",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "sg-supper",
+   "city": "Singapore",
+   "name": "a late-night supper stall on a corner",
+   "detail": "a steel prep bench, hanging lamps and folding tables put out on the pavement",
+   "publicness": "busy",
+   "crowd": "office workers with their sleeves rolled up",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tn-pottery",
+   "city": "Tainan",
+   "name": "a pottery studio in an old shophouse",
+   "detail": "a wheel, shelves of unglazed bowls and a work lamp clamped to the bench",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "L_COUNTER_DAY",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tn-herb",
+   "city": "Tainan",
+   "name": "a traditional herbal medicine shop",
+   "detail": "a wall of small wooden drawers, brass scales and a counter lamp",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tn-brick-lane",
+   "city": "Tainan",
+   "name": "a red-brick lane between old houses in the late afternoon",
+   "detail": "a low wall, a bicycle against it and the far end of the lane already in shade",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "street_night"
+   ],
+   "light": [
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sl-vinyl-bar",
+   "city": "Seoul",
+   "name": "the stairwell down to a listening bar at night",
+   "detail": "painted concrete steps, a small neon sign at the turn and darkness above",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sl-pojangmacha",
+   "city": "Seoul",
+   "name": "a tented street stall on a side street at night",
+   "detail": "an orange tarp, a griddle steaming and stools pulled up to a plank counter",
+   "publicness": "busy",
+   "crowd": "friends in hoodies and padded jackets",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sl-photobooth",
+   "city": "Seoul",
+   "name": "a self-photo studio at night",
+   "detail": "a white cyclorama, a props rail and the strip of prints coming out of the slot",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sl-han-path",
+   "city": "Seoul",
+   "name": "a riverside running path under lamp posts at night",
+   "detail": "a low rail, cut grass either side and the bridge lights strung out behind",
+   "publicness": "busy",
+   "crowd": "runners in sportswear",
+   "dress": [
+    "street_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_LOW",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "sl-bowling",
+   "city": "Seoul",
+   "name": "the entrance of an old bowling alley at night",
+   "detail": "a rack of shoes, carpet with a pattern and lit lane numbers behind",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tk-standing-bar",
+   "city": "Tokyo",
+   "name": "a standing bar under the railway arches at night",
+   "detail": "a zinc ledge along the wall, bottles on a shelf and the arch mouth black beyond",
+   "publicness": "venue_seated",
+   "crowd": "office workers in shirtsleeves",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tk-stationery",
+   "city": "Tokyo",
+   "name": "a stationery shop at night",
+   "detail": "pen trays under glass, paper samples on the wall and a warm counter lamp",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tk-yokocho",
+   "city": "Tokyo",
+   "name": "a narrow alley of tiny bars at night",
+   "detail": "paper lanterns and hand-painted signs stacked up both walls, the alley floor wet",
+   "publicness": "busy",
+   "crowd": "salarymen in white shirts with jackets over an arm",
+   "dress": [
+    "street_night",
+    "glam_night"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "kl-nightmarket",
+   "city": "Kuala Lumpur",
+   "name": "a night-market aisle under strung bulbs",
+   "detail": "trestle tables of fruit, tarpaulin overhead and crates stacked at the edge",
+   "publicness": "busy",
+   "crowd": "families in t-shirts and sandals with plastic bags",
+   "dress": [
+    "market_day",
+    "street_night"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "kl-rooftop-pool",
+   "city": "Kuala Lumpur",
+   "name": "an infinity pool edge at night",
+   "detail": "water running over the lip, low uplights and towers lit up far behind",
+   "publicness": "quiet",
+   "dress": [
+    "resort",
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_SIT",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "kl-lift-lobby",
+   "city": "Kuala Lumpur",
+   "name": "a hotel lift lobby at night",
+   "detail": "brushed brass doors, a console table with a lamp and dark carpet",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "cd-teahouse-night",
+   "city": "Chengdu",
+   "name": "a bamboo teahouse after dark",
+   "detail": "folding chairs stacked, a kettle on a burner and one bulb over the counter",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "cd-hotpot-street",
+   "city": "Chengdu",
+   "name": "a hotpot street at night",
+   "detail": "red signage stacked up the buildings, steam rolling out of a doorway",
+   "publicness": "busy",
+   "crowd": "groups of friends in casual jackets",
+   "dress": [
+    "street_night"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "bs-fish-cake",
+   "city": "Busan",
+   "name": "a fish-cake shop window at night",
+   "detail": "skewers steaming in a lit case and the shutters half down next door",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "bs-hillside-steps",
+   "city": "Busan",
+   "name": "painted concrete steps between hillside houses at dusk",
+   "detail": "a handrail down the middle, potted plants on the treads and the harbour going dark below",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_SIT",
+    "V_LOW",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "bs-pier-lamp",
+   "city": "Busan",
+   "name": "a working pier under sodium lamps at night",
+   "detail": "coils of rope, a bollard and moored boats black against the water",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "glam_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "pg-eyewear",
+   "city": "George Town",
+   "name": "an eyewear shop in a shophouse at night",
+   "detail": "frames on lit shelves, a mirror table and terrazzo floor",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "pg-arcade-dusk",
+   "city": "George Town",
+   "name": "a shophouse five-foot way at dusk",
+   "detail": "painted columns, hanging plants and warm light coming out of the doorway beside her",
+   "publicness": "busy",
+   "crowd": "tourists in shorts and sun hats",
+   "dress": [
+    "market_day",
+    "street_night"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sz-silk",
+   "city": "Suzhou",
+   "name": "a silk shop at night",
+   "detail": "folded bolts on shelves, a brass lamp on the counter and lacquer screens behind",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "sz-canal-night",
+   "city": "Suzhou",
+   "name": "a canal-side walkway lit by lanterns at night",
+   "detail": "a stone kerb, moored wooden boats and whitewashed walls falling into dark",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sh-noodle-window",
+   "city": "Shanghai",
+   "name": "a noodle shop's street window at night",
+   "detail": "a counter along the glass, a row of stools and the street outside black",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sh-artdeco-lobby",
+   "city": "Shanghai",
+   "name": "the lobby of an art-deco building at night",
+   "detail": "a terrazzo floor with brass inlay, a bevelled-glass door and a single wall sconce",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "sh-plane-tree-lane",
+   "city": "Shanghai",
+   "name": "a plane-tree lane in the old concession at dusk",
+   "detail": "a low garden wall, wrought-iron gates and lit windows behind the leaves",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sh-rooftop-stair",
+   "city": "Shanghai",
+   "name": "the top of a rooftop stairwell at night",
+   "detail": "a painted steel door propped open, a bare bulb over it and the skyline beyond the parapet",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_LOW",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sh-bakery-case",
+   "city": "Shanghai",
+   "name": "a late-opening bakery at night",
+   "detail": "a lit curved display case, brass trays and the shop behind her dark",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "yl-hot-spring-lane",
+   "city": "Yilan",
+   "name": "a hot-spring town lane at night",
+   "detail": "steam off a public foot bath, wooden signage and a stone gutter running beside her",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "resort"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "yl-fruit-stand",
+   "city": "Yilan",
+   "name": "a roadside fruit stand lit by one bulb at night",
+   "detail": "crates of wax apples, a hanging scale and the road behind going black",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "yl-old-cinema",
+   "city": "Yilan",
+   "name": "the neon porch of a closed-down cinema at night",
+   "detail": "a curved ticket window, tiled steps and dead neon tubing above the entrance",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "glam_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_LOW",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "tp-tea-stand",
+   "city": "Taipei",
+   "name": "a bubble-tea window on a lane corner at night",
+   "detail": "a lit menu board above the hatch and sealed cups lined up on the ledge",
+   "publicness": "busy",
+   "crowd": "students in shorts and slides",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_SHOPFRONT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "tp-camera-shop",
+   "city": "Taipei",
+   "name": "a used camera shop at night",
+   "detail": "glass cases of lenses, a padded counter mat and a desk lamp pulled low",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "sg-tailor",
+   "city": "Singapore",
+   "name": "a tailor's shop in a shophouse at night",
+   "detail": "a cutting table, chalk and shears on it and bolts of suiting behind",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "sg-void-deck",
+   "city": "Singapore",
+   "name": "a void deck at night",
+   "detail": "painted pillars, a stone table-and-stools set and lit stairwells beyond",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SIT",
+    "V_FULL",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sg-quay-steps",
+   "city": "Singapore",
+   "name": "the stone river steps by the quay at night",
+   "detail": "worn treads down to the water, a mooring ring and shophouse lights reflected below",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night",
+    "street_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SIT",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "sl-cafe-window-night",
+   "city": "Seoul",
+   "name": "a dessert cafe window seat at night",
+   "detail": "a marble ledge along the glass, a single pendant above it and the street outside dark",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sl-alley-stairs",
+   "city": "Seoul",
+   "name": "a set of painted alley stairs at dusk",
+   "detail": "a metal handrail, mural work on the retaining wall and the lane below already dim",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_LOW",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sh-flower-market-night",
+   "city": "Shanghai",
+   "name": "a flower wholesaler's stall at night",
+   "detail": "buckets of cut stems on the wet floor and one work light hung over the bench",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "sh-tram-stop",
+   "city": "Shanghai",
+   "name": "a lit tram shelter at night",
+   "detail": "a route map panel, a moulded bench and the road black beyond the glass",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SIT",
+    "V_FULL",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "bs-market-arcade-night",
+   "city": "Busan",
+   "name": "a covered market arcade after the stalls shut",
+   "detail": "rolled shutters, a rack of empty crates and one string of bulbs still lit",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "jk-warung-night",
+   "city": "Jakarta",
+   "name": "a warung with its shutters half down at night",
+   "detail": "a glass cabinet of side dishes, a hanging bulb and stools tucked under the ledge",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "yl-station-bench",
+   "city": "Yilan",
+   "name": "a small train station platform at night",
+   "detail": "a painted bench, a lit timetable board and the track running off into black",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "street_night"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_SIT",
+    "V_FULL",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "pg-clan-jetty",
+   "city": "George Town",
+   "name": "a clan jetty walkway at dusk",
+   "detail": "timber planks over the water, a hand-painted house number and lamps strung along",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "street_night"
+   ],
+   "light": [
+    "L_BLUE_SIGN",
+    "L_LOW_SUN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sz-moon-gate",
+   "city": "Suzhou",
+   "name": "a garden moon gate lit from inside at night",
+   "detail": "a round stone opening, lattice shadows on the paving and the courtyard beyond glowing",
+   "publicness": "quiet",
+   "dress": [
+    "glam_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_LAMP_FACE",
+    "L_BLUE_SIGN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "tn-tofu-shop",
+   "city": "Tainan",
+   "name": "a soy-milk shop open early with the lights on",
+   "detail": "steel vats, a ladle on a hook and the street outside still dark",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "L_SHOP_NIGHT",
+    "L_COUNTER_DAY"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "kl-mamak-night",
+   "city": "Kuala Lumpur",
+   "name": "a mamak stall on a corner at night",
+   "detail": "a roti griddle, marble-topped tables and a fan turning over the pass",
+   "publicness": "busy",
+   "crowd": "men in polo shirts and sandals",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_SHOP_NIGHT"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "cd-alley-mahjong",
+   "city": "Chengdu",
+   "name": "a lantern-lit alley outside a mahjong parlour at night",
+   "detail": "a stone step, folding stools stacked by the door and the alley behind unlit",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "shop_casual"
+   ],
+   "light": [
+    "L_SHOPFRONT",
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_SIT",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "tk-kissaten",
+   "city": "Tokyo",
+   "name": "an old coffee house at night",
+   "detail": "velvet booths, a siphon rack on the counter and a low lamp on each table",
+   "publicness": "venue_seated",
+   "crowd": "regulars in the far booths",
+   "dress": [
+    "shop_casual",
+    "glam_night"
+   ],
+   "light": [
+    "L_LAMP_FACE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  }
+ ],
+ "people_rule": {
+  "_note": "規則甲 —— people 由 publicness 推導，不再逐格手掛",
+  "quiet": "solo",
+  "busy": "background_crowd",
+  "venue_seated": "background_seated"
+ },
+ "people_text": {
+  "solo": "She is the only person in the photograph; no other people are visible anywhere in the frame.",
+  "background_crowd": "Far behind her and much smaller in the frame than she is, one or two {crowd} are already walking out of the frame, so far back that they read only as soft blurred silhouettes with no facial features. Nobody stands level with her or beside either shoulder; the ground and air immediately around her are empty, and she is the only sharply focused thing in the picture.",
+  "background_seated": "Well behind her and much smaller in the frame, one or two {crowd} stay seated and turned away, held far enough back and far enough out of focus that they read as soft shapes with no facial features. Nobody is standing, walking past, or level with her shoulders, and she is the only sharply focused thing in the picture."
+ },
+ "wall_rule": "規則丙 —— 沿用 rulefix_v1 已驗證的正面描述（2/2 通過）：Every wall, panel and screen behind her carries only plain surfaces and printed text — notices, price cards and signage lettering — and no framed pictures, posters or displays of any kind hang on them."
+}

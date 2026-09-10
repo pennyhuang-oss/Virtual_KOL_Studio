@@ -1,0 +1,163 @@
+{
+ "_note": "v3 詞庫。打光只留使用者留存率高的一族（光集中在臉、背景壓暗）；鏡位砍掉對鏡自拍與膝上。",
+ "light": {
+  "L_SHOP_NIGHT": {
+   "retention": "78% (K13)",
+   "time": "night",
+   "text": "The shop's own lighting, bright and even from in front of her, falling on her face and the front of her clothes, the night outside the glass going black behind her."
+  },
+  "L_COUNTER_DAY": {
+   "retention": "100% n=2 (K15)",
+   "time": "day_interior",
+   "text": "Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker."
+  },
+  "L_SHOPFRONT": {
+   "retention": "75% n=4 (K5)",
+   "time": "evening",
+   "text": "Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark."
+  },
+  "L_BLUE_SIGN": {
+   "retention": "65% (K8)",
+   "time": "night",
+   "text": "Blue evening light overall with one warm sign glowing in front of her, so her face carries the warm light and everything behind her stays cool and dark."
+  },
+  "L_LAMP_FACE": {
+   "retention": "64% (K12)",
+   "time": "night",
+   "text": "Warm interior light from a lamp in front of her at face height, her face the brightest point, the depth of the room dropping into soft dark."
+  },
+  "L_LOW_SUN": {
+   "retention": "67% n=3 (K6)",
+   "time": "late_afternoon",
+   "open_sky_only": true,
+   "text": "Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her and the far end of the street already in shade."
+  }
+ },
+ "_light_banned": {
+  "K9": "0% — 白天地面反光、天空比她亮",
+  "K14": "22% — 室內均勻面光板＋鏡面反光",
+  "K7": "25% — 側前窗光、室內落暖影",
+  "K3": "44% — 開放陰影、街道過曝",
+  "K1": "50% — 黃金時刻順光＋髮際輪廓光",
+  "K11": "0% n=1 — 雲層柔化頂光＋地面反光"
+ },
+ "view": {
+  "V_SELFIE": {
+   "retention": "84% (16/19)",
+   "framing": "chest_up",
+   "hands_free": 1,
+   "text": "A close-up front-facing selfie shot, the angle slightly above her looking down at her, framed the way her own phone front camera would frame it. Her other arm runs out of the bottom corner of the frame toward the camera, so only one of her hands is doing anything else."
+  },
+  "V_FULL": {
+   "retention": "49% (39/80)",
+   "framing": "full_length",
+   "hands_free": 2,
+   "text": "A full-length shot from about three metres away at her own eye level, head to feet inside the frame, the background softly out of focus."
+  },
+  "V_LOW": {
+   "retention": "new",
+   "framing": "full_length",
+   "hands_free": 2,
+   "text": "A full-length shot taken from low down, the camera at about her knee height looking up past her, so her legs run long into the frame and the sky or ceiling opens out behind her head."
+  },
+  "V_BACK": {
+   "retention": "new",
+   "framing": "three_quarter",
+   "hands_free": 2,
+   "text": "Shot from behind her at about two metres, her back and the line of her shoulders filling the near part of the frame while she turns her head round to the lens, so most of what the camera sees is her back view."
+  },
+  "V_SIT": {
+   "retention": "new",
+   "framing": "three_quarter",
+   "hands_free": 2,
+   "text": "Shot from about two metres at a slightly higher angle looking down at her where she sits, a short portrait lens, the ground and her legs reading clearly in the lower half of the frame."
+  }
+ },
+ "_view_dropped": {
+  "mirror_half": "20% (4/20) — 且手機物理本來就錯（螢幕朝她自己、背對鏡子）",
+  "friend_near": "26% (5/19) — 膝上 1.5 公尺"
+ },
+ "pose": {
+  "V_SELFIE": [
+   "Her free hand is up beside her jaw with two fingers just touching her cheekbone, the wrist relaxed and the elbow held low.",
+   "Her free hand has caught the strap on her shoulder and is holding it there, knuckles turned toward the lens.",
+   "She has her free hand flat against the base of her throat, fingers spread a little, chin turned a few degrees off the lens.",
+   "Her free hand is lifting the ends of her hair away from her neck and letting them fall, caught mid-motion.",
+   "She has hooked her free thumb under the neckline of her top and pulled it a fraction straighter, shoulder rolled forward.",
+   "Her free hand is curled loosely around the strap of her bag at chest height, her shoulder lifted toward her ear.",
+   "She is resting her free forearm along the top of whatever is beside her and leaning her weight onto it, so one shoulder drops.",
+   "Her free hand is at her temple pushing her fringe sideways off her eyebrow, head tipped that way with it.",
+   "Her free hand is holding a strand of hair away from her mouth where the wind put it, fingers light.",
+   "She has her free hand cupped under her own chin with the knuckles turned in, elbow tucked to her ribs.",
+   "Her free hand is flat on the wall beside her head and she is leaning her temple toward it.",
+   "She has just pushed her sleeve up her forearm and her free hand is still resting on the cuff."
+  ],
+  "V_FULL": [
+   "She is stepping down off a kerb or step with the front foot already lower than the back one, one arm out a little for balance.",
+   "She has both hands behind her holding the edge she is leaning against, shoulders drawn back and one ankle crossed over the other.",
+   "She is crouched down on the balls of her feet with her knees together and her forearms resting across them, looking up at the lens.",
+   "She has one hand up gathering her hair at the back of her head, the elbow high, her weight sunk into the opposite hip.",
+   "She is walking straight toward the lens with her arms swinging naturally, caught with both feet off the centre line.",
+   "She has one foot up on a low step or ledge so that knee comes forward, both hands resting on the raised thigh.",
+   "She has turned her back three-quarters away and is looking down over her own shoulder at the ground, one hand at her nape.",
+   "She is standing with her feet crossed at the ankle and both hands loose at her sides, spine long and shoulders level.",
+   "She is holding the hem of her skirt or dress out to one side with one hand as if the air just caught it.",
+   "She is mid-turn with her torso already round to the lens and her hips still facing away, one arm crossing her body.",
+   "She is standing on one leg with the other foot tucked behind that ankle, one hand out to the wall for balance.",
+   "She has just turned on the spot so her hem is still swinging, both arms loose and slightly out from her body.",
+   "She is leaning her shoulder blades flat against the wall with her heels away from it and her chin up.",
+   "She is standing with her feet together and her weight rocked back onto her heels, chin dropped to the lens.",
+   "She has one arm raised straight overhead in a stretch and is looking sideways at the lens as she does it.",
+   "She is standing at the top of a step with her toes at the edge, both hands loose and her shoulders squared."
+  ],
+  "V_LOW": [
+   "She is standing over the camera with her weight on the back leg and the front knee soft, one hand pushed into her hair.",
+   "She has one hand on the rail or wall beside her and is leaning her weight into that arm, the other hand on her hip.",
+   "She is stepping over the camera position, the front leg already past it, looking down the length of her own body at the lens.",
+   "She is standing square with both thumbs hooked in her waistband and her chin lifted slightly away from the lens.",
+   "She is standing with her feet planted apart and one hand shading her eyes, looking down at the lens.",
+   "She has one knee lifted onto a low ledge above the camera, both hands resting on that raised thigh.",
+   "She is standing astride the frame with one hand at her collarbone and her chin turned to the side."
+  ],
+  "V_BACK": [
+   "She has stopped walking and turned only her head back to the lens, both arms hanging still at her sides.",
+   "She is reaching one arm forward to a door handle or rail and has looked back over the raised shoulder.",
+   "She has both hands lifted to the back of her neck gathering her hair up, and is looking back under her own arm.",
+   "She is walking away with one hand trailing along the wall beside her, head turned back and chin near that shoulder.",
+   "She is standing with her hands clasped behind her back and has turned her chin to one shoulder.",
+   "She has one hand up flat against the wall in front of her and is looking back past her own elbow.",
+   "She is standing with her weight on one hip, the far arm bent so that hand sits at her waist, head turned back."
+  ],
+  "V_SIT": [
+   "She is sitting on the step with her knees drawn up and together, arms wrapped loosely around her shins.",
+   "She is sitting sideways on the ledge with her legs angled away and both palms flat on the stone behind her hips.",
+   "She is sitting cross-legged with her back long, one hand on the ground beside her taking a little weight.",
+   "She is sitting on the kerb with her legs stretched out in front and her ankles crossed, leaning back on straight arms.",
+   "She is sitting on the step leaning forward with her forearms across her knees and her chin lifted to the lens.",
+   "She is perched on the edge with one leg tucked under her and one hand resting on the raised knee.",
+   "She is sitting on the step with one heel up on the tread below and her chin resting on that knee."
+  ]
+ },
+ "expression": [
+  "Her mouth is closed in a small pleased line and the smile is all in her eyes, which are steady on the lens.",
+  "She is caught in the middle of saying something, lips apart mid-word, her eyes bright and amused at the lens.",
+  "She is laughing with her chin tipped up and her eyes almost shut, the whole face lifted with it.",
+  "One eyebrow is a fraction higher than the other and the near corner of her mouth is pulled in, holding the lens.",
+  "Her eyes have just come up to the lens as if she has only this second noticed the camera, brows still relaxed.",
+  "Her lips are pressed together to keep a laugh in and it is escaping through her eyes anyway.",
+  "She is looking straight down the lens with her lips slightly parted and completely still, calm rather than posed.",
+  "Her head is tipped and she is smiling with the corners of her mouth low and her eyes crinkled, warm and unhurried.",
+  "She has glanced off to the side of the camera at something and is smiling at that, not at the lens.",
+  "Her chin is dropped and she is looking up through her lashes at the lens with the faintest smile.",
+  "She is blowing out a breath with her cheeks slightly rounded, half a laugh at herself, eyes on the lens.",
+  "Her eyes are wide and delighted and her mouth is open in a small O, reacting to something just off-frame."
+ ],
+ "outfit_register": {
+  "street_night": "夜間街頭：貼身短版上衣、高腰短褲或迷你裙、可露腰",
+  "shop_casual": "店內／室內休閒：貼身簡約、細肩帶、短版針織",
+  "glam_night": "夜間 glam：緞面／亮片／開衩／低背",
+  "resort": "度假：泳裝外搭、亞麻、罩衫",
+  "market_day": "白天市街：短版＋長褲或長裙，不露腰以下"
+ },
+ "_tier_note": "只用 A 與 C 級（留存 55% / 51%）；B 級（都會上班、針織慵懶）37% 全數不用。"
+}
