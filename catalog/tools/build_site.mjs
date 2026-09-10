@@ -179,8 +179,10 @@ a{color:inherit;text-decoration:none}
 .disclose p{margin:6px 0 0;color:var(--ink2);font-size:13.5px}
 
 /* ── 篩選 ── */
-.filters{padding:30px 0 8px;position:sticky;top:64px;background:var(--bg);z-index:40;
-  border-bottom:1px solid var(--line)}
+/* 🛑 這一列不要 sticky。使用者 2026-09-10:「每次滑下去，能顯示的人設就只有一排而已，
+   然後都會一直被這一列擋住」——它有四行、將近 300px 高,黏在上面等於吃掉大半個畫面。
+   改成跟著頁面捲走,捲過去之後由下面那條 46px 的細列接手。 */
+.filters{padding:30px 0 8px;background:var(--bg);border-bottom:1px solid var(--line)}
 .frow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
 .frow>span{font-size:11px;color:var(--ink3);letter-spacing:.12em;min-width:52px}
 .chip{border:1px solid var(--line2);background:transparent;color:var(--ink2);
@@ -189,6 +191,19 @@ a{color:inherit;text-decoration:none}
 .chip:hover{border-color:var(--ink3);color:var(--ink)}
 .chip[aria-pressed=true]{background:var(--accent2);border-color:var(--accent2);color:#17130a;font-weight:600}
 .count{font-size:12px;color:var(--ink3);padding:10px 0 14px}
+
+/* 捲過篩選列之後才出現的細列:只有「幾位」＋目前選了什麼＋一顆回去改的鈕 */
+.minif{position:fixed;left:0;right:0;top:64px;z-index:39;border-bottom:1px solid var(--line);
+  background:rgba(11,11,13,.92);backdrop-filter:blur(14px)}
+.minif[hidden]{display:none!important}
+.minif .wrap{display:flex;align-items:center;gap:14px;height:46px}
+.minif .n{font-size:12.5px;color:var(--ink2);white-space:nowrap}
+.minif .act{font-size:12px;color:var(--accent2);min-width:0;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.minif .go{margin-left:auto;flex:0 0 auto;border:1px solid var(--line2);background:transparent;
+  color:var(--ink2);border-radius:100px;padding:5px 15px;font:inherit;font-size:12.5px;cursor:pointer}
+.minif .go:hover{border-color:var(--accent2);color:var(--accent2)}
+.minif .go:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
 
 /* ── 型錄牆 ── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:22px;padding:22px 0 80px}
@@ -789,6 +804,12 @@ const kolsPage = layout('虛擬 KOL 型錄 — 兌心科技', `
   <p class="count" id="count">顯示 ${people.length} 位</p>
 </div></div>
 
+<div class="minif" id="minif" hidden><div class="wrap">
+  <span class="n" id="mfn">顯示 ${people.length} 位</span>
+  <span class="act" id="mfa"></span>
+  <button type="button" class="go" id="mfgo">篩選 ↑</button>
+</div></div>
+
 <div class="wrap"><div class="grid" id="grid">
 ${people.map((p, i) => `<div class="cell" data-cat="${esc(catLabel(p.category))}" data-mk="${esc(p.mk)}" data-video="${p.media.video_count ? 'video' : ''}" data-feat="${i}" data-material="${p.media.image_count * 10 + p.media.video_count}" data-age="${p.age || 99}" data-name="${esc(p.name)}">${card(p)}</div>`).join('')}
 </div></div>
@@ -821,6 +842,9 @@ ${people.map((p, i) => `<div class="cell" data-cat="${esc(catLabel(p.category))}
       c.hidden=!ok; if(ok)n++;
     });
     document.getElementById('count').textContent='顯示 '+n+' 位';
+    document.getElementById('mfn').textContent='顯示 '+n+' 位';
+    var lab=[st.cat,st.mk,st.med==='video'?'有影片素材':'' ].filter(Boolean);
+    document.getElementById('mfa').textContent=lab.length?lab.join('・'):'';
 
     var sorted=cells.slice().sort(function(a,b){
       if(sort==='feat')     return (+a.dataset.feat)-(+b.dataset.feat);
@@ -848,6 +872,17 @@ ${people.map((p, i) => `<div class="cell" data-cat="${esc(catLabel(p.category))}
     });
   });
   apply();
+
+  // 篩選列捲出畫面之後,才換那條細的上來。用 IntersectionObserver 盯著篩選列本身,
+  // 不用監聽 scroll——那個每一格都會觸發,手機上很浪費。
+  var panel=document.querySelector('.filters'), mini=document.getElementById('minif');
+  if(panel&&mini&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){ mini.hidden = e[0].isIntersecting; },
+      { rootMargin:'-64px 0px 0px 0px', threshold:0 }).observe(panel);
+  }
+  document.getElementById('mfgo').addEventListener('click',function(){
+    window.scrollTo({ top:0, behavior:'smooth' });
+  });
 })();
 </script>
 `, { desc: '可合作的虛擬 KOL 型錄，含完整角色設定與可用素材。', nav: 'kols',
