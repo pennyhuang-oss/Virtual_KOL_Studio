@@ -67,6 +67,13 @@ function open(i) {
   mount();
   feed.focus({ preventScroll: true });
   tapHint.hidden = touched || !muted;      // 開過聲音就不用再提示一次
+  // 「滾一下換下一支」只在剛進來時提一次,幾秒後淡掉——長期掛著會擋畫面
+  const tip = $('rtip');
+  tip.textContent = matchMedia('(pointer:coarse)').matches ? '往上滑看下一支' : '滾一下換下一支';
+  tip.hidden = false; tip.style.opacity = '';
+  clearTimeout(tip._t);
+  tip._t = setTimeout(() => { tip.style.opacity = 0;
+    setTimeout(() => { tip.hidden = true; }, 700); }, 4200);
   history.replaceState(null, '', '#v' + (list[i] ? list[i].key : i));
 }
 
@@ -112,6 +119,7 @@ function mount() {
   $('rcount').textContent = (cur + 1) + ' / ' + list.length;
   $('rprev').hidden = cur === 0;
   $('rnext').hidden = cur >= list.length - 1;
+  if (cur > 0) { const t = $('rtip'); t.hidden = true; }   // 已經會換片了就不用再提示
 }
 
 // 開／關聲音。這是這一頁最容易被錯過的動作,所以三個地方都能觸發:
