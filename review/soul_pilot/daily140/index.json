@@ -1,0 +1,1402 @@
+[
+ {
+  "idx": 1,
+  "file": "001.png",
+  "pid": "angel-chiu",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 2,
+  "file": "002.png",
+  "pid": "angel-chiu",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 3,
+  "file": "003.png",
+  "pid": "angel-chiu",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 4,
+  "file": "004.png",
+  "pid": "angel-chiu",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 5,
+  "file": "005.png",
+  "pid": "angel-chiu",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 6,
+  "file": "006.png",
+  "pid": "angeline-kwee",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 7,
+  "file": "007.png",
+  "pid": "angeline-kwee",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 8,
+  "file": "008.png",
+  "pid": "angeline-kwee",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 9,
+  "file": "009.png",
+  "pid": "angeline-kwee",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 10,
+  "file": "010.png",
+  "pid": "angeline-kwee",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 11,
+  "file": "011.png",
+  "pid": "cheryl-soh",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 12,
+  "file": "012.png",
+  "pid": "cheryl-soh",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 13,
+  "file": "013.png",
+  "pid": "cheryl-soh",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 14,
+  "file": "014.png",
+  "pid": "cheryl-soh",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 15,
+  "file": "015.png",
+  "pid": "cheryl-soh",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 16,
+  "file": "016.png",
+  "pid": "emma-kao",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 17,
+  "file": "017.png",
+  "pid": "emma-kao",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 18,
+  "file": "018.png",
+  "pid": "emma-kao",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 19,
+  "file": "019.png",
+  "pid": "emma-kao",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 20,
+  "file": "020.png",
+  "pid": "emma-kao",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 21,
+  "file": "021.png",
+  "pid": "jia-seo",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 22,
+  "file": "022.png",
+  "pid": "jia-seo",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 23,
+  "file": "023.png",
+  "pid": "jia-seo",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 24,
+  "file": "024.png",
+  "pid": "jia-seo",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 25,
+  "file": "025.png",
+  "pid": "jia-seo",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 26,
+  "file": "026.png",
+  "pid": "kanon-komori",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 27,
+  "file": "027.png",
+  "pid": "kanon-komori",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 28,
+  "file": "028.png",
+  "pid": "kanon-komori",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 29,
+  "file": "029.png",
+  "pid": "kanon-komori",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 30,
+  "file": "030.png",
+  "pid": "kanon-komori",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 31,
+  "file": "031.png",
+  "pid": "miu-shiraishi",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "failed_refunded"
+ },
+ {
+  "idx": 32,
+  "file": "032.png",
+  "pid": "miu-shiraishi",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "ok"
+ },
+ {
+  "idx": 33,
+  "file": "033.png",
+  "pid": "miu-shiraishi",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "failed_refunded"
+ },
+ {
+  "idx": 34,
+  "file": "034.png",
+  "pid": "miu-shiraishi",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "ok"
+ },
+ {
+  "idx": 35,
+  "file": "035.png",
+  "pid": "miu-shiraishi",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "ok"
+ },
+ {
+  "idx": 36,
+  "file": "036.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 37,
+  "file": "037.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 38,
+  "file": "038.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 39,
+  "file": "039.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 40,
+  "file": "040.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 41,
+  "file": "041.png",
+  "pid": "nico-tsai",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 42,
+  "file": "042.png",
+  "pid": "nico-tsai",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 43,
+  "file": "043.png",
+  "pid": "nico-tsai",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 44,
+  "file": "044.png",
+  "pid": "nico-tsai",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 45,
+  "file": "045.png",
+  "pid": "nico-tsai",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 46,
+  "file": "046.png",
+  "pid": "peggy-lee",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 47,
+  "file": "047.png",
+  "pid": "peggy-lee",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 48,
+  "file": "048.png",
+  "pid": "peggy-lee",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 49,
+  "file": "049.png",
+  "pid": "peggy-lee",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 50,
+  "file": "050.png",
+  "pid": "peggy-lee",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 51,
+  "file": "051.png",
+  "pid": "rin-ayase",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 52,
+  "file": "052.png",
+  "pid": "rin-ayase",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 53,
+  "file": "053.png",
+  "pid": "rin-ayase",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 54,
+  "file": "054.png",
+  "pid": "rin-ayase",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 55,
+  "file": "055.png",
+  "pid": "rin-ayase",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 56,
+  "file": "056.png",
+  "pid": "ruoruo-tang",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 57,
+  "file": "057.png",
+  "pid": "ruoruo-tang",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 58,
+  "file": "058.png",
+  "pid": "ruoruo-tang",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 59,
+  "file": "059.png",
+  "pid": "ruoruo-tang",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 60,
+  "file": "060.png",
+  "pid": "ruoruo-tang",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 61,
+  "file": "061.png",
+  "pid": "somi-oh",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 62,
+  "file": "062.png",
+  "pid": "somi-oh",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 63,
+  "file": "063.png",
+  "pid": "somi-oh",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 64,
+  "file": "064.png",
+  "pid": "somi-oh",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 65,
+  "file": "065.png",
+  "pid": "somi-oh",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 66,
+  "file": "066.png",
+  "pid": "sydney-leong",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 67,
+  "file": "067.png",
+  "pid": "sydney-leong",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 68,
+  "file": "068.png",
+  "pid": "sydney-leong",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 69,
+  "file": "069.png",
+  "pid": "sydney-leong",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 70,
+  "file": "070.png",
+  "pid": "sydney-leong",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 71,
+  "file": "071.png",
+  "pid": "tammy-chou",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 72,
+  "file": "072.png",
+  "pid": "tammy-chou",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 73,
+  "file": "073.png",
+  "pid": "tammy-chou",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 74,
+  "file": "074.png",
+  "pid": "tammy-chou",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 75,
+  "file": "075.png",
+  "pid": "tammy-chou",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 76,
+  "file": "076.png",
+  "pid": "wanyin-jiang",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 77,
+  "file": "077.png",
+  "pid": "wanyin-jiang",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 78,
+  "file": "078.png",
+  "pid": "wanyin-jiang",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 79,
+  "file": "079.png",
+  "pid": "wanyin-jiang",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 80,
+  "file": "080.png",
+  "pid": "wanyin-jiang",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 81,
+  "file": "081.png",
+  "pid": "wendy-yeo",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 82,
+  "file": "082.png",
+  "pid": "wendy-yeo",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 83,
+  "file": "083.png",
+  "pid": "wendy-yeo",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 84,
+  "file": "084.png",
+  "pid": "wendy-yeo",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 85,
+  "file": "085.png",
+  "pid": "wendy-yeo",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 86,
+  "file": "086.png",
+  "pid": "yerin-han",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 87,
+  "file": "087.png",
+  "pid": "yerin-han",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 88,
+  "file": "088.png",
+  "pid": "yerin-han",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 89,
+  "file": "089.png",
+  "pid": "yerin-han",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 90,
+  "file": "090.png",
+  "pid": "yerin-han",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 91,
+  "file": "091.png",
+  "pid": "zhiyi-shen",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 92,
+  "file": "092.png",
+  "pid": "zhiyi-shen",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 93,
+  "file": "093.png",
+  "pid": "zhiyi-shen",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 94,
+  "file": "094.png",
+  "pid": "zhiyi-shen",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 95,
+  "file": "095.png",
+  "pid": "zhiyi-shen",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 96,
+  "file": "096.png",
+  "pid": "zoey-yeh",
+  "slot": "D1",
+  "take": 1,
+  "framing_spec": "chest_up",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ },
+ {
+  "idx": 97,
+  "file": "097.png",
+  "pid": "zoey-yeh",
+  "slot": "D2",
+  "take": 1,
+  "framing_spec": "waist_up",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ },
+ {
+  "idx": 98,
+  "file": "098.png",
+  "pid": "zoey-yeh",
+  "slot": "D3",
+  "take": 1,
+  "framing_spec": "three_quarter",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ },
+ {
+  "idx": 99,
+  "file": "099.png",
+  "pid": "zoey-yeh",
+  "slot": "D4",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ },
+ {
+  "idx": 100,
+  "file": "100.png",
+  "pid": "zoey-yeh",
+  "slot": "D5",
+  "take": 1,
+  "framing_spec": "full_length",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ },
+ {
+  "idx": 101,
+  "file": "101.png",
+  "pid": "angel-chiu",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 102,
+  "file": "102.png",
+  "pid": "angel-chiu",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "6e638286-be57-45fa-961e-51bde6cba87f",
+  "status": "ok"
+ },
+ {
+  "idx": 103,
+  "file": "103.png",
+  "pid": "angeline-kwee",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 104,
+  "file": "104.png",
+  "pid": "angeline-kwee",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "a1802330-65a7-43d7-89d3-84aacca67bfa",
+  "status": "ok"
+ },
+ {
+  "idx": 105,
+  "file": "105.png",
+  "pid": "cheryl-soh",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 106,
+  "file": "106.png",
+  "pid": "cheryl-soh",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "6d4c90b5-bd40-4c2c-9c1d-c689702863e1",
+  "status": "ok"
+ },
+ {
+  "idx": 107,
+  "file": "107.png",
+  "pid": "emma-kao",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 108,
+  "file": "108.png",
+  "pid": "emma-kao",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "4374a074-fb89-45be-b80f-30cd78fea451",
+  "status": "ok"
+ },
+ {
+  "idx": 109,
+  "file": "109.png",
+  "pid": "jia-seo",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 110,
+  "file": "110.png",
+  "pid": "jia-seo",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "ecf19246-c697-419c-b978-fe9373586c19",
+  "status": "ok"
+ },
+ {
+  "idx": 111,
+  "file": "111.png",
+  "pid": "kanon-komori",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 112,
+  "file": "112.png",
+  "pid": "kanon-komori",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+  "status": "ok"
+ },
+ {
+  "idx": 113,
+  "file": "113.png",
+  "pid": "miu-shiraishi",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "ok"
+ },
+ {
+  "idx": 114,
+  "file": "114.png",
+  "pid": "miu-shiraishi",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "270c31fa-afd4-4609-b9d5-7302745f137c",
+  "status": "ok"
+ },
+ {
+  "idx": 115,
+  "file": "115.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 116,
+  "file": "116.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "78761266-69ba-47fa-8aeb-39f0aa95998e",
+  "status": "ok"
+ },
+ {
+  "idx": 117,
+  "file": "117.png",
+  "pid": "nico-tsai",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 118,
+  "file": "118.png",
+  "pid": "nico-tsai",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "46d1e11e-92a7-4fd7-8776-dcd4e2067627",
+  "status": "ok"
+ },
+ {
+  "idx": 119,
+  "file": "119.png",
+  "pid": "peggy-lee",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 120,
+  "file": "120.png",
+  "pid": "peggy-lee",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+  "status": "ok"
+ },
+ {
+  "idx": 121,
+  "file": "121.png",
+  "pid": "rin-ayase",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 122,
+  "file": "122.png",
+  "pid": "rin-ayase",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+  "status": "ok"
+ },
+ {
+  "idx": 123,
+  "file": "123.png",
+  "pid": "ruoruo-tang",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 124,
+  "file": "124.png",
+  "pid": "ruoruo-tang",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "4dc2bf79-0098-4c2a-b529-2b2b74117c81",
+  "status": "ok"
+ },
+ {
+  "idx": 125,
+  "file": "125.png",
+  "pid": "somi-oh",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 126,
+  "file": "126.png",
+  "pid": "somi-oh",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+  "status": "ok"
+ },
+ {
+  "idx": 127,
+  "file": "127.png",
+  "pid": "sydney-leong",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 128,
+  "file": "128.png",
+  "pid": "sydney-leong",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "a41d8aab-fe2e-44c0-9d6a-c068565ac800",
+  "status": "ok"
+ },
+ {
+  "idx": 129,
+  "file": "129.png",
+  "pid": "tammy-chou",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 130,
+  "file": "130.png",
+  "pid": "tammy-chou",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+  "status": "ok"
+ },
+ {
+  "idx": 131,
+  "file": "131.png",
+  "pid": "wanyin-jiang",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 132,
+  "file": "132.png",
+  "pid": "wanyin-jiang",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+  "status": "ok"
+ },
+ {
+  "idx": 133,
+  "file": "133.png",
+  "pid": "wendy-yeo",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 134,
+  "file": "134.png",
+  "pid": "wendy-yeo",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf",
+  "status": "ok"
+ },
+ {
+  "idx": 135,
+  "file": "135.png",
+  "pid": "yerin-han",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 136,
+  "file": "136.png",
+  "pid": "yerin-han",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "8c447a79-769f-4520-a538-cfb48fef6163",
+  "status": "ok"
+ },
+ {
+  "idx": 137,
+  "file": "137.png",
+  "pid": "zhiyi-shen",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 138,
+  "file": "138.png",
+  "pid": "zhiyi-shen",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "8b1e0a44-1c7b-4b65-b878-be428d00e4b8",
+  "status": "ok"
+ },
+ {
+  "idx": 139,
+  "file": "139.png",
+  "pid": "zoey-yeh",
+  "slot": "D4",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ },
+ {
+  "idx": 140,
+  "file": "140.png",
+  "pid": "zoey-yeh",
+  "slot": "D5",
+  "take": 2,
+  "framing_spec": "full_length",
+  "soul": "feb5f196-a60e-4ef9-9f8e-5daabbdacb52",
+  "status": "ok"
+ }
+]

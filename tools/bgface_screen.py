@@ -48,6 +48,64 @@ def dist(A,B):
     if np.linalg.det(R)<0: Vt[-1]*=-1; R=U@Vt
     return float(np.sqrt(((A@R-B)**2).sum(1)).mean())
 
+# ── 分塊偵測（2026-09-10 修好合併去重 bug）─────────────────────────────
+# 舊版 bug：去重半徑用「偵測到的臉寬」，遇到一張異常大的誤偵測就會把真的臉一起吃掉，
+# 導致合併後只剩 1 張、甚至把背景臉當主體。
+# 修法三點：
+#   1. 主體只由整張圖那一輪決定，分塊結果永遠不能取代主體
+#   2. 去重半徑改用「兩張臉當中較小的那一張」的寬度，異常大的臉吃不掉小的
+#   3. 分塊偵測到的臉若比主體還大，直接丟掉（背景臉不可能比主體大）
+def faces_tiled(path, grid=(3,4), overlap=0.25, upscale=2.5, n_whole=5, n_tile=3):
+    img=cv2.cvtColor(cv2.imread(path),cv2.COLOR_BGR2RGB)
+    H,W=img.shape[:2]
+    lm_w=landmarker(n_whole); lm_t=landmarker(n_tile)
+
+    def collect(sub, ox, oy, sx, sy, lm):
+        res=lm.detect(mp.Image(image_format=mp.ImageFormat.SRGB,data=sub))
+        sh,sw=sub.shape[:2]
+        got=[]
+        for f in res.face_landmarks:
+            P=np.array([[f[i].x*sw/sx+ox, f[i].y*sh/sy+oy, f[i].z*sw/sx] for i in OVAL])
+            xs=[p.x*sw/sx+ox for p in f]; ys=[p.y*sh/sy+oy for p in f]
+            bw=max(xs)-min(xs); bh=max(ys)-min(ys)
+            got.append({"pts":P,"area":bw*bh,"cx":float(np.mean(xs)),"cy":float(np.mean(ys)),
+                        "bw":float(bw),"bh":float(bh)})
+        return got
+
+    merged = collect(img,0,0,1.0,1.0,lm_w)
+    merged.sort(key=lambda d:-d["area"])
+    main_area = merged[0]["area"] if merged else None
+
+    gx,gy=grid
+    tw=W/(gx-(gx-1)*overlap); th=H/(gy-(gy-1)*overlap)
+    step_x=tw*(1-overlap); step_y=th*(1-overlap)
+    for iy in range(gy):
+        for ix in range(gx):
+            x0=int(round(ix*step_x)); y0=int(round(iy*step_y))
+            x1=min(W,int(round(x0+tw))); y1=min(H,int(round(y0+th)))
+            if x1-x0<40 or y1-y0<40: continue
+            tile=img[y0:y1, x0:x1]
+            up=cv2.resize(tile,None,fx=upscale,fy=upscale,interpolation=cv2.INTER_CUBIC)
+            for f in collect(up,x0,y0,upscale,upscale,lm_t):
+                # 修法 3：比主體還大的分塊臉丟掉
+                if main_area is not None and f["area"] > main_area*1.05: continue
+                # 修法 2：去重半徑用較小那張臉的寬度
+                dup=False
+                for g in merged:
+                    r=0.6*min(f["bw"], g["bw"])
+                    if (f["cx"]-g["cx"])**2+(f["cy"]-g["cy"])**2 < r*r:
+                        dup=True; break
+                if not dup: merged.append(f)
+
+    # 修法 1：主體固定為整張圖那一輪的最大臉
+    if main_area is not None:
+        head=[f for f in merged if f["area"]==main_area][:1]
+        rest=sorted([f for f in merged if f["area"]!=main_area], key=lambda d:-d["area"])
+        merged=head+rest
+    else:
+        merged.sort(key=lambda d:-d["area"])
+    return merged,(W,H)
+
 if __name__=="__main__":
     ref_path, *imgs = sys.argv[1:]
     ref,_=faces(ref_path,1)
@@ -56,7 +114,7 @@ if __name__=="__main__":
     print(f"參考臉：{ref_path}")
     print(f"{'圖':28} {'臉數':>4} {'主體距離':>9}  背景臉距離（<0.0157 = 高度可疑）")
     for p in imgs:
-        fs,(w,h)=faces(p)
+        fs,(w,h)=faces_tiled(p)
         if not fs: print(f"{p.split('/')[-1]:28} {0:>4}"); continue
         d0=dist(R,fs[0]["pts"])
         rest=[]

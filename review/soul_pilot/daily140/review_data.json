@@ -1,0 +1,1882 @@
+{
+ "cells": [
+  {
+   "n": 1,
+   "file": "001.png",
+   "pid": "angel-chiu",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 2,
+   "file": "002.png",
+   "pid": "angel-chiu",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 3,
+   "file": "003.png",
+   "pid": "angel-chiu",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 4,
+   "file": "004.png",
+   "pid": "angel-chiu",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 5,
+   "file": "005.png",
+   "pid": "angel-chiu",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 101,
+   "file": "101.png",
+   "pid": "angel-chiu",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 102,
+   "file": "102.png",
+   "pid": "angel-chiu",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 6,
+   "file": "006.png",
+   "pid": "angeline-kwee",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "胸上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 7,
+   "file": "007.png",
+   "pid": "angeline-kwee",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 8,
+   "file": "008.png",
+   "pid": "angeline-kwee",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "全身",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 9,
+   "file": "009.png",
+   "pid": "angeline-kwee",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 10,
+   "file": "010.png",
+   "pid": "angeline-kwee",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "pill",
+     "左右黑邊"
+    ]
+   ]
+  },
+  {
+   "n": 103,
+   "file": "103.png",
+   "pid": "angeline-kwee",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 104,
+   "file": "104.png",
+   "pid": "angeline-kwee",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "pill",
+     "左右黑邊"
+    ]
+   ]
+  },
+  {
+   "n": 11,
+   "file": "011.png",
+   "pid": "cheryl-soh",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 12,
+   "file": "012.png",
+   "pid": "cheryl-soh",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "全身",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 13,
+   "file": "013.png",
+   "pid": "cheryl-soh",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "anat",
+     "肢體變形"
+    ],
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 14,
+   "file": "014.png",
+   "pid": "cheryl-soh",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "anat",
+     "肢體變形"
+    ],
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 15,
+   "file": "015.png",
+   "pid": "cheryl-soh",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 105,
+   "file": "105.png",
+   "pid": "cheryl-soh",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ],
+    [
+     "bgok",
+     "背景符合規格"
+    ]
+   ]
+  },
+  {
+   "n": 106,
+   "file": "106.png",
+   "pid": "cheryl-soh",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 16,
+   "file": "016.png",
+   "pid": "emma-kao",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": [
+    [
+     "anat",
+     "肢體變形"
+    ]
+   ]
+  },
+  {
+   "n": 17,
+   "file": "017.png",
+   "pid": "emma-kao",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "全身",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 18,
+   "file": "018.png",
+   "pid": "emma-kao",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 19,
+   "file": "019.png",
+   "pid": "emma-kao",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 20,
+   "file": "020.png",
+   "pid": "emma-kao",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 107,
+   "file": "107.png",
+   "pid": "emma-kao",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 108,
+   "file": "108.png",
+   "pid": "emma-kao",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 21,
+   "file": "021.png",
+   "pid": "jia-seo",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 22,
+   "file": "022.png",
+   "pid": "jia-seo",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 23,
+   "file": "023.png",
+   "pid": "jia-seo",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 24,
+   "file": "024.png",
+   "pid": "jia-seo",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 25,
+   "file": "025.png",
+   "pid": "jia-seo",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 109,
+   "file": "109.png",
+   "pid": "jia-seo",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 110,
+   "file": "110.png",
+   "pid": "jia-seo",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 26,
+   "file": "026.png",
+   "pid": "kanon-komori",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 27,
+   "file": "027.png",
+   "pid": "kanon-komori",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 28,
+   "file": "028.png",
+   "pid": "kanon-komori",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 29,
+   "file": "029.png",
+   "pid": "kanon-komori",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 30,
+   "file": "030.png",
+   "pid": "kanon-komori",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 111,
+   "file": "111.png",
+   "pid": "kanon-komori",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 112,
+   "file": "112.png",
+   "pid": "kanon-komori",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 32,
+   "file": "032.png",
+   "pid": "miu-shiraishi",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 34,
+   "file": "034.png",
+   "pid": "miu-shiraishi",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 35,
+   "file": "035.png",
+   "pid": "miu-shiraishi",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 113,
+   "file": "113.png",
+   "pid": "miu-shiraishi",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 114,
+   "file": "114.png",
+   "pid": "miu-shiraishi",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 36,
+   "file": "036.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 37,
+   "file": "037.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 38,
+   "file": "038.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 39,
+   "file": "039.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 40,
+   "file": "040.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 115,
+   "file": "115.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 116,
+   "file": "116.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 41,
+   "file": "041.png",
+   "pid": "nico-tsai",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 42,
+   "file": "042.png",
+   "pid": "nico-tsai",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 43,
+   "file": "043.png",
+   "pid": "nico-tsai",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 44,
+   "file": "044.png",
+   "pid": "nico-tsai",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 45,
+   "file": "045.png",
+   "pid": "nico-tsai",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 117,
+   "file": "117.png",
+   "pid": "nico-tsai",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 118,
+   "file": "118.png",
+   "pid": "nico-tsai",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bgok",
+     "背景符合規格"
+    ]
+   ]
+  },
+  {
+   "n": 46,
+   "file": "046.png",
+   "pid": "peggy-lee",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 47,
+   "file": "047.png",
+   "pid": "peggy-lee",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 48,
+   "file": "048.png",
+   "pid": "peggy-lee",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 49,
+   "file": "049.png",
+   "pid": "peggy-lee",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 50,
+   "file": "050.png",
+   "pid": "peggy-lee",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 119,
+   "file": "119.png",
+   "pid": "peggy-lee",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 120,
+   "file": "120.png",
+   "pid": "peggy-lee",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bgok",
+     "背景符合規格"
+    ]
+   ]
+  },
+  {
+   "n": 51,
+   "file": "051.png",
+   "pid": "rin-ayase",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "胸上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 52,
+   "file": "052.png",
+   "pid": "rin-ayase",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 53,
+   "file": "053.png",
+   "pid": "rin-ayase",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 54,
+   "file": "054.png",
+   "pid": "rin-ayase",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 55,
+   "file": "055.png",
+   "pid": "rin-ayase",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 121,
+   "file": "121.png",
+   "pid": "rin-ayase",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 122,
+   "file": "122.png",
+   "pid": "rin-ayase",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 56,
+   "file": "056.png",
+   "pid": "ruoruo-tang",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 57,
+   "file": "057.png",
+   "pid": "ruoruo-tang",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ],
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 58,
+   "file": "058.png",
+   "pid": "ruoruo-tang",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 59,
+   "file": "059.png",
+   "pid": "ruoruo-tang",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 60,
+   "file": "060.png",
+   "pid": "ruoruo-tang",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 123,
+   "file": "123.png",
+   "pid": "ruoruo-tang",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 124,
+   "file": "124.png",
+   "pid": "ruoruo-tang",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 61,
+   "file": "061.png",
+   "pid": "somi-oh",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 62,
+   "file": "062.png",
+   "pid": "somi-oh",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 63,
+   "file": "063.png",
+   "pid": "somi-oh",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 64,
+   "file": "064.png",
+   "pid": "somi-oh",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 65,
+   "file": "065.png",
+   "pid": "somi-oh",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 125,
+   "file": "125.png",
+   "pid": "somi-oh",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 126,
+   "file": "126.png",
+   "pid": "somi-oh",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 66,
+   "file": "066.png",
+   "pid": "sydney-leong",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 67,
+   "file": "067.png",
+   "pid": "sydney-leong",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 68,
+   "file": "068.png",
+   "pid": "sydney-leong",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 69,
+   "file": "069.png",
+   "pid": "sydney-leong",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 70,
+   "file": "070.png",
+   "pid": "sydney-leong",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 127,
+   "file": "127.png",
+   "pid": "sydney-leong",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 128,
+   "file": "128.png",
+   "pid": "sydney-leong",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 71,
+   "file": "071.png",
+   "pid": "tammy-chou",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "胸上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 72,
+   "file": "072.png",
+   "pid": "tammy-chou",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "全身",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 73,
+   "file": "073.png",
+   "pid": "tammy-chou",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 74,
+   "file": "074.png",
+   "pid": "tammy-chou",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 75,
+   "file": "075.png",
+   "pid": "tammy-chou",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 129,
+   "file": "129.png",
+   "pid": "tammy-chou",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 130,
+   "file": "130.png",
+   "pid": "tammy-chou",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 76,
+   "file": "076.png",
+   "pid": "wanyin-jiang",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 77,
+   "file": "077.png",
+   "pid": "wanyin-jiang",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 78,
+   "file": "078.png",
+   "pid": "wanyin-jiang",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 79,
+   "file": "079.png",
+   "pid": "wanyin-jiang",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 80,
+   "file": "080.png",
+   "pid": "wanyin-jiang",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 131,
+   "file": "131.png",
+   "pid": "wanyin-jiang",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 132,
+   "file": "132.png",
+   "pid": "wanyin-jiang",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 81,
+   "file": "081.png",
+   "pid": "wendy-yeo",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 82,
+   "file": "082.png",
+   "pid": "wendy-yeo",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "wall",
+     "牆上人像＝她的臉"
+    ]
+   ]
+  },
+  {
+   "n": 83,
+   "file": "083.png",
+   "pid": "wendy-yeo",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 84,
+   "file": "084.png",
+   "pid": "wendy-yeo",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 85,
+   "file": "085.png",
+   "pid": "wendy-yeo",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 133,
+   "file": "133.png",
+   "pid": "wendy-yeo",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 134,
+   "file": "134.png",
+   "pid": "wendy-yeo",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 86,
+   "file": "086.png",
+   "pid": "yerin-han",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "腰上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 87,
+   "file": "087.png",
+   "pid": "yerin-han",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 88,
+   "file": "088.png",
+   "pid": "yerin-han",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": [
+    [
+     "anat",
+     "肢體變形"
+    ],
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 89,
+   "file": "089.png",
+   "pid": "yerin-han",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 90,
+   "file": "090.png",
+   "pid": "yerin-han",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 135,
+   "file": "135.png",
+   "pid": "yerin-han",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 136,
+   "file": "136.png",
+   "pid": "yerin-han",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 91,
+   "file": "091.png",
+   "pid": "zhiyi-shen",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "胸上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 92,
+   "file": "092.png",
+   "pid": "zhiyi-shen",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 93,
+   "file": "093.png",
+   "pid": "zhiyi-shen",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 94,
+   "file": "094.png",
+   "pid": "zhiyi-shen",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 95,
+   "file": "095.png",
+   "pid": "zhiyi-shen",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 137,
+   "file": "137.png",
+   "pid": "zhiyi-shen",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 138,
+   "file": "138.png",
+   "pid": "zhiyi-shen",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 96,
+   "file": "096.png",
+   "pid": "zoey-yeh",
+   "slot": "D1",
+   "take": 1,
+   "spec": "胸上",
+   "act": "胸上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 97,
+   "file": "097.png",
+   "pid": "zoey-yeh",
+   "slot": "D2",
+   "take": 1,
+   "spec": "腰上",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 98,
+   "file": "098.png",
+   "pid": "zoey-yeh",
+   "slot": "D3",
+   "take": 1,
+   "spec": "膝上",
+   "act": "膝上",
+   "match": true,
+   "flags": []
+  },
+  {
+   "n": 99,
+   "file": "099.png",
+   "pid": "zoey-yeh",
+   "slot": "D4",
+   "take": 1,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": []
+  },
+  {
+   "n": 100,
+   "file": "100.png",
+   "pid": "zoey-yeh",
+   "slot": "D5",
+   "take": 1,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  },
+  {
+   "n": 139,
+   "file": "139.png",
+   "pid": "zoey-yeh",
+   "slot": "D4",
+   "take": 2,
+   "spec": "全身",
+   "act": "膝上",
+   "match": false,
+   "flags": [
+    [
+     "bgok",
+     "背景符合規格"
+    ]
+   ]
+  },
+  {
+   "n": 140,
+   "file": "140.png",
+   "pid": "zoey-yeh",
+   "slot": "D5",
+   "take": 2,
+   "spec": "全身",
+   "act": "全身",
+   "match": true,
+   "flags": [
+    [
+     "bg",
+     "背景路人過近／過清"
+    ]
+   ]
+  }
+ ]
+}

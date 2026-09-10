@@ -1,0 +1,2210 @@
+[
+ {
+  "file": "001.png",
+  "pid": "angel-chiu",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2543,
+  "actual": "close",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.984,
+   "knee": 0.596,
+   "ankle": 0.482,
+   "foot": 0.375
+  }
+ },
+ {
+  "file": "002.png",
+  "pid": "angel-chiu",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1543,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.954,
+   "ankle": 0.43,
+   "foot": 0.152
+  }
+ },
+ {
+  "file": "003.png",
+  "pid": "angel-chiu",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1569,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.931,
+   "ankle": 0.786,
+   "foot": 0.684
+  }
+ },
+ {
+  "file": "004.png",
+  "pid": "angel-chiu",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1197,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.995,
+   "knee": 0.729,
+   "ankle": 0.733,
+   "foot": 0.635
+  }
+ },
+ {
+  "file": "005.png",
+  "pid": "angel-chiu",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.914,
+   "ankle": 0.916,
+   "foot": 0.836
+  }
+ },
+ {
+  "file": "006.png",
+  "pid": "angeline-kwee",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2358,
+  "actual": "close",
+  "actual_pose": "close",
+  "vis": {
+   "hip": 0.448,
+   "knee": 0.101,
+   "ankle": 0.033,
+   "foot": 0.045
+  }
+ },
+ {
+  "file": "007.png",
+  "pid": "angeline-kwee",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1644,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.967,
+   "ankle": 0.094,
+   "foot": 0.021
+  }
+ },
+ {
+  "file": "008.png",
+  "pid": "angeline-kwee",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1345,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.977,
+   "ankle": 0.961,
+   "foot": 0.925
+  }
+ },
+ {
+  "file": "009.png",
+  "pid": "angeline-kwee",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1222,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.919,
+   "ankle": 0.907,
+   "foot": 0.89
+  }
+ },
+ {
+  "file": "010.png",
+  "pid": "angeline-kwee",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1198,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.922,
+   "ankle": 0.823,
+   "foot": 0.862
+  }
+ },
+ {
+  "file": "011.png",
+  "pid": "cheryl-soh",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.281,
+  "actual": "close",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.93,
+   "knee": 0.512,
+   "ankle": 0.347,
+   "foot": 0.346
+  }
+ },
+ {
+  "file": "012.png",
+  "pid": "cheryl-soh",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1177,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.981,
+   "ankle": 0.934,
+   "foot": 0.884
+  }
+ },
+ {
+  "file": "013.png",
+  "pid": "cheryl-soh",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1438,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.681,
+   "ankle": 0.135,
+   "foot": 0.058
+  }
+ },
+ {
+  "file": "014.png",
+  "pid": "cheryl-soh",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1192,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.877,
+   "ankle": 0.823,
+   "foot": 0.76
+  }
+ },
+ {
+  "file": "015.png",
+  "pid": "cheryl-soh",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1435,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.997,
+   "knee": 0.822,
+   "ankle": 0.521,
+   "foot": 0.413
+  }
+ },
+ {
+  "file": "016.png",
+  "pid": "emma-kao",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2596,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.96,
+   "knee": 0.437,
+   "ankle": 0.322,
+   "foot": 0.261
+  }
+ },
+ {
+  "file": "017.png",
+  "pid": "emma-kao",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.129,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.972,
+   "ankle": 0.799,
+   "foot": 0.773
+  }
+ },
+ {
+  "file": "018.png",
+  "pid": "emma-kao",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1296,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.917,
+   "ankle": 0.816,
+   "foot": 0.664
+  }
+ },
+ {
+  "file": "019.png",
+  "pid": "emma-kao",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.922,
+   "ankle": 0.886,
+   "foot": 0.851
+  }
+ },
+ {
+  "file": "020.png",
+  "pid": "emma-kao",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.95,
+   "ankle": 0.917,
+   "foot": 0.912
+  }
+ },
+ {
+  "file": "021.png",
+  "pid": "jia-seo",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.244,
+  "actual": "close",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.979,
+   "knee": 0.637,
+   "ankle": 0.214,
+   "foot": 0.193
+  }
+ },
+ {
+  "file": "022.png",
+  "pid": "jia-seo",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1474,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.947,
+   "ankle": 0.608,
+   "foot": 0.263
+  }
+ },
+ {
+  "file": "023.png",
+  "pid": "jia-seo",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1605,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.949,
+   "ankle": 0.342,
+   "foot": 0.282
+  }
+ },
+ {
+  "file": "024.png",
+  "pid": "jia-seo",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.117,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.971,
+   "ankle": 0.88,
+   "foot": 0.757
+  }
+ },
+ {
+  "file": "025.png",
+  "pid": "jia-seo",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1106,
+  "actual": "knee",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.914,
+   "ankle": 0.9,
+   "foot": 0.842
+  }
+ },
+ {
+  "file": "026.png",
+  "pid": "kanon-komori",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.256,
+  "actual": "close",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.997,
+   "knee": 0.81,
+   "ankle": 0.882,
+   "foot": 0.813
+  }
+ },
+ {
+  "file": "027.png",
+  "pid": "kanon-komori",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1551,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.989,
+   "ankle": 0.794,
+   "foot": 0.348
+  }
+ },
+ {
+  "file": "028.png",
+  "pid": "kanon-komori",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1517,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.96,
+   "ankle": 0.589,
+   "foot": 0.176
+  }
+ },
+ {
+  "file": "029.png",
+  "pid": "kanon-komori",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1376,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.93,
+   "ankle": 0.853,
+   "foot": 0.706
+  }
+ },
+ {
+  "file": "030.png",
+  "pid": "kanon-komori",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1881,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.975,
+   "ankle": 0.384,
+   "foot": 0.398
+  }
+ },
+ {
+  "file": "032.png",
+  "pid": "miu-shiraishi",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1786,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.909,
+   "ankle": 0.15,
+   "foot": 0.023
+  }
+ },
+ {
+  "file": "034.png",
+  "pid": "miu-shiraishi",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1448,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.843,
+   "ankle": 0.778,
+   "foot": 0.679
+  }
+ },
+ {
+  "file": "035.png",
+  "pid": "miu-shiraishi",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1348,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.986,
+   "ankle": 0.932,
+   "foot": 0.848
+  }
+ },
+ {
+  "file": "036.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2578,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.901,
+   "knee": 0.247,
+   "ankle": 0.064,
+   "foot": 0.068
+  }
+ },
+ {
+  "file": "037.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1762,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.77,
+   "ankle": 0.182,
+   "foot": 0.05
+  }
+ },
+ {
+  "file": "038.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1323,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.866,
+   "ankle": 0.711,
+   "foot": 0.526
+  }
+ },
+ {
+  "file": "039.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.134,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.907,
+   "ankle": 0.394,
+   "foot": 0.163
+  }
+ },
+ {
+  "file": "040.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1253,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.983,
+   "ankle": 0.976,
+   "foot": 0.936
+  }
+ },
+ {
+  "file": "041.png",
+  "pid": "nico-tsai",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2934,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.725,
+   "knee": 0.227,
+   "ankle": 0.063,
+   "foot": 0.068
+  }
+ },
+ {
+  "file": "042.png",
+  "pid": "nico-tsai",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1309,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.941,
+   "ankle": 0.301,
+   "foot": 0.11
+  }
+ },
+ {
+  "file": "043.png",
+  "pid": "nico-tsai",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1802,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.925,
+   "ankle": 0.477,
+   "foot": 0.374
+  }
+ },
+ {
+  "file": "044.png",
+  "pid": "nico-tsai",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1254,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.861,
+   "ankle": 0.546,
+   "foot": 0.318
+  }
+ },
+ {
+  "file": "045.png",
+  "pid": "nico-tsai",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1266,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.943,
+   "ankle": 0.94,
+   "foot": 0.882
+  }
+ },
+ {
+  "file": "046.png",
+  "pid": "peggy-lee",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2534,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.899,
+   "knee": 0.4,
+   "ankle": 0.165,
+   "foot": 0.205
+  }
+ },
+ {
+  "file": "047.png",
+  "pid": "peggy-lee",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1561,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.947,
+   "ankle": 0.162,
+   "foot": 0.034
+  }
+ },
+ {
+  "file": "048.png",
+  "pid": "peggy-lee",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1525,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.965,
+   "ankle": 0.683,
+   "foot": 0.664
+  }
+ },
+ {
+  "file": "049.png",
+  "pid": "peggy-lee",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1374,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.991,
+   "knee": 0.719,
+   "ankle": 0.389,
+   "foot": 0.331
+  }
+ },
+ {
+  "file": "050.png",
+  "pid": "peggy-lee",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.119,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.991,
+   "ankle": 0.959,
+   "foot": 0.922
+  }
+ },
+ {
+  "file": "051.png",
+  "pid": "rin-ayase",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2619,
+  "actual": "close",
+  "actual_pose": "close",
+  "vis": {
+   "hip": 0.149,
+   "knee": 0.137,
+   "ankle": 0.031,
+   "foot": 0.032
+  }
+ },
+ {
+  "file": "052.png",
+  "pid": "rin-ayase",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1634,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.966,
+   "ankle": 0.201,
+   "foot": 0.022
+  }
+ },
+ {
+  "file": "053.png",
+  "pid": "rin-ayase",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1501,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.827,
+   "ankle": 0.16,
+   "foot": 0.091
+  }
+ },
+ {
+  "file": "054.png",
+  "pid": "rin-ayase",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1308,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.981,
+   "ankle": 0.869,
+   "foot": 0.845
+  }
+ },
+ {
+  "file": "055.png",
+  "pid": "rin-ayase",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.132,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.965,
+   "ankle": 0.946,
+   "foot": 0.914
+  }
+ },
+ {
+  "file": "056.png",
+  "pid": "ruoruo-tang",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2416,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.852,
+   "knee": 0.371,
+   "ankle": 0.204,
+   "foot": 0.2
+  }
+ },
+ {
+  "file": "057.png",
+  "pid": "ruoruo-tang",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1325,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.957,
+   "ankle": 0.626,
+   "foot": 0.317
+  }
+ },
+ {
+  "file": "058.png",
+  "pid": "ruoruo-tang",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.141,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.963,
+   "ankle": 0.446,
+   "foot": 0.172
+  }
+ },
+ {
+  "file": "059.png",
+  "pid": "ruoruo-tang",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.997,
+   "knee": 0.93,
+   "ankle": 0.886,
+   "foot": 0.845
+  }
+ },
+ {
+  "file": "060.png",
+  "pid": "ruoruo-tang",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1171,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.951,
+   "ankle": 0.77,
+   "foot": 0.694
+  }
+ },
+ {
+  "file": "061.png",
+  "pid": "somi-oh",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2528,
+  "actual": "close",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.843,
+   "knee": 0.5,
+   "ankle": 0.295,
+   "foot": 0.213
+  }
+ },
+ {
+  "file": "062.png",
+  "pid": "somi-oh",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1488,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.961,
+   "ankle": 0.483,
+   "foot": 0.22
+  }
+ },
+ {
+  "file": "063.png",
+  "pid": "somi-oh",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.174,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.924,
+   "ankle": 0.415,
+   "foot": 0.37
+  }
+ },
+ {
+  "file": "064.png",
+  "pid": "somi-oh",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1299,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.946,
+   "ankle": 0.796,
+   "foot": 0.446
+  }
+ },
+ {
+  "file": "065.png",
+  "pid": "somi-oh",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1587,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.997,
+   "knee": 0.881,
+   "ankle": 0.835,
+   "foot": 0.755
+  }
+ },
+ {
+  "file": "066.png",
+  "pid": "sydney-leong",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2597,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.881,
+   "knee": 0.246,
+   "ankle": 0.094,
+   "foot": 0.109
+  }
+ },
+ {
+  "file": "067.png",
+  "pid": "sydney-leong",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1659,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.955,
+   "ankle": 0.446,
+   "foot": 0.292
+  }
+ },
+ {
+  "file": "068.png",
+  "pid": "sydney-leong",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1313,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.794,
+   "ankle": 0.422,
+   "foot": 0.232
+  }
+ },
+ {
+  "file": "069.png",
+  "pid": "sydney-leong",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1126,
+  "actual": "knee",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.751,
+   "ankle": 0.759,
+   "foot": 0.702
+  }
+ },
+ {
+  "file": "070.png",
+  "pid": "sydney-leong",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1239,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.996,
+   "knee": 0.879,
+   "ankle": 0.846,
+   "foot": 0.746
+  }
+ },
+ {
+  "file": "071.png",
+  "pid": "tammy-chou",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2502,
+  "actual": "close",
+  "actual_pose": "close",
+  "vis": {
+   "hip": 0.496,
+   "knee": 0.08,
+   "ankle": 0.043,
+   "foot": 0.052
+  }
+ },
+ {
+  "file": "072.png",
+  "pid": "tammy-chou",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1184,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.967,
+   "ankle": 0.882,
+   "foot": 0.885
+  }
+ },
+ {
+  "file": "073.png",
+  "pid": "tammy-chou",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1528,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.954,
+   "ankle": 0.315,
+   "foot": 0.392
+  }
+ },
+ {
+  "file": "074.png",
+  "pid": "tammy-chou",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1237,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.807,
+   "ankle": 0.249,
+   "foot": 0.126
+  }
+ },
+ {
+  "file": "075.png",
+  "pid": "tammy-chou",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1314,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.942,
+   "ankle": 0.352,
+   "foot": 0.286
+  }
+ },
+ {
+  "file": "076.png",
+  "pid": "wanyin-jiang",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2246,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.952,
+   "knee": 0.163,
+   "ankle": 0.06,
+   "foot": 0.043
+  }
+ },
+ {
+  "file": "077.png",
+  "pid": "wanyin-jiang",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1506,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.872,
+   "ankle": 0.051,
+   "foot": 0.004
+  }
+ },
+ {
+  "file": "078.png",
+  "pid": "wanyin-jiang",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1276,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.922,
+   "ankle": 0.677,
+   "foot": 0.307
+  }
+ },
+ {
+  "file": "079.png",
+  "pid": "wanyin-jiang",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1295,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.933,
+   "ankle": 0.802,
+   "foot": 0.696
+  }
+ },
+ {
+  "file": "080.png",
+  "pid": "wanyin-jiang",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.941,
+   "ankle": 0.93,
+   "foot": 0.909
+  }
+ },
+ {
+  "file": "081.png",
+  "pid": "wendy-yeo",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2723,
+  "actual": "close",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.566,
+   "knee": 0.502,
+   "ankle": 0.241,
+   "foot": 0.173
+  }
+ },
+ {
+  "file": "082.png",
+  "pid": "wendy-yeo",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1558,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.974,
+   "ankle": 0.354,
+   "foot": 0.097
+  }
+ },
+ {
+  "file": "083.png",
+  "pid": "wendy-yeo",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1789,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.961,
+   "ankle": 0.397,
+   "foot": 0.354
+  }
+ },
+ {
+  "file": "084.png",
+  "pid": "wendy-yeo",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1293,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.931,
+   "ankle": 0.894,
+   "foot": 0.839
+  }
+ },
+ {
+  "file": "085.png",
+  "pid": "wendy-yeo",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1297,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.996,
+   "ankle": 0.992,
+   "foot": 0.98
+  }
+ },
+ {
+  "file": "086.png",
+  "pid": "yerin-han",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2212,
+  "actual": "close",
+  "actual_pose": "waist",
+  "vis": {
+   "hip": 0.967,
+   "knee": 0.188,
+   "ankle": 0.1,
+   "foot": 0.135
+  }
+ },
+ {
+  "file": "087.png",
+  "pid": "yerin-han",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1517,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.914,
+   "ankle": 0.144,
+   "foot": 0.019
+  }
+ },
+ {
+  "file": "088.png",
+  "pid": "yerin-han",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1432,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.934,
+   "ankle": 0.32,
+   "foot": 0.21
+  }
+ },
+ {
+  "file": "089.png",
+  "pid": "yerin-han",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1255,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.818,
+   "ankle": 0.726,
+   "foot": 0.7
+  }
+ },
+ {
+  "file": "090.png",
+  "pid": "yerin-han",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1229,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.976,
+   "ankle": 0.965,
+   "foot": 0.949
+  }
+ },
+ {
+  "file": "091.png",
+  "pid": "zhiyi-shen",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.301,
+  "actual": "close",
+  "actual_pose": "close",
+  "vis": {
+   "hip": 0.301,
+   "knee": 0.155,
+   "ankle": 0.073,
+   "foot": 0.075
+  }
+ },
+ {
+  "file": "092.png",
+  "pid": "zhiyi-shen",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1314,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.88,
+   "ankle": 0.105,
+   "foot": 0.029
+  }
+ },
+ {
+  "file": "093.png",
+  "pid": "zhiyi-shen",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.1636,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.763,
+   "ankle": 0.045,
+   "foot": 0.014
+  }
+ },
+ {
+  "file": "094.png",
+  "pid": "zhiyi-shen",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1152,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.944,
+   "ankle": 0.901,
+   "foot": 0.815
+  }
+ },
+ {
+  "file": "095.png",
+  "pid": "zhiyi-shen",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1483,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.959,
+   "ankle": 0.748,
+   "foot": 0.613
+  }
+ },
+ {
+  "file": "096.png",
+  "pid": "zoey-yeh",
+  "slot": "D1",
+  "take": 1,
+  "spec": "chest_up",
+  "face_h": 0.2608,
+  "actual": "close",
+  "actual_pose": "close",
+  "vis": {
+   "hip": 0.223,
+   "knee": 0.025,
+   "ankle": 0.01,
+   "foot": 0.008
+  }
+ },
+ {
+  "file": "097.png",
+  "pid": "zoey-yeh",
+  "slot": "D2",
+  "take": 1,
+  "spec": "waist_up",
+  "face_h": 0.1541,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.999,
+   "ankle": 0.994,
+   "foot": 0.983
+  }
+ },
+ {
+  "file": "098.png",
+  "pid": "zoey-yeh",
+  "slot": "D3",
+  "take": 1,
+  "spec": "three_quarter",
+  "face_h": 0.139,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.9,
+   "ankle": 0.552,
+   "foot": 0.342
+  }
+ },
+ {
+  "file": "099.png",
+  "pid": "zoey-yeh",
+  "slot": "D4",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1316,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.968,
+   "ankle": 0.904,
+   "foot": 0.848
+  }
+ },
+ {
+  "file": "100.png",
+  "pid": "zoey-yeh",
+  "slot": "D5",
+  "take": 1,
+  "spec": "full_length",
+  "face_h": 0.1278,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.996,
+   "knee": 0.672,
+   "ankle": 0.553,
+   "foot": 0.486
+  }
+ },
+ {
+  "file": "101.png",
+  "pid": "angel-chiu",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1252,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.95,
+   "ankle": 0.906,
+   "foot": 0.81
+  }
+ },
+ {
+  "file": "102.png",
+  "pid": "angel-chiu",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1168,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.971,
+   "ankle": 0.956,
+   "foot": 0.933
+  }
+ },
+ {
+  "file": "103.png",
+  "pid": "angeline-kwee",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1274,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.889,
+   "ankle": 0.894,
+   "foot": 0.815
+  }
+ },
+ {
+  "file": "104.png",
+  "pid": "angeline-kwee",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1295,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.945,
+   "ankle": 0.905,
+   "foot": 0.892
+  }
+ },
+ {
+  "file": "105.png",
+  "pid": "cheryl-soh",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.118,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.892,
+   "ankle": 0.826,
+   "foot": 0.746
+  }
+ },
+ {
+  "file": "106.png",
+  "pid": "cheryl-soh",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1329,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.888,
+   "ankle": 0.815,
+   "foot": 0.725
+  }
+ },
+ {
+  "file": "107.png",
+  "pid": "emma-kao",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1289,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.922,
+   "ankle": 0.868,
+   "foot": 0.839
+  }
+ },
+ {
+  "file": "108.png",
+  "pid": "emma-kao",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1164,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.976,
+   "ankle": 0.915,
+   "foot": 0.915
+  }
+ },
+ {
+  "file": "109.png",
+  "pid": "jia-seo",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1128,
+  "actual": "knee",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.955,
+   "ankle": 0.722,
+   "foot": 0.401
+  }
+ },
+ {
+  "file": "110.png",
+  "pid": "jia-seo",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1127,
+  "actual": "knee",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.946,
+   "ankle": 0.949,
+   "foot": 0.913
+  }
+ },
+ {
+  "file": "111.png",
+  "pid": "kanon-komori",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1593,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.862,
+   "ankle": 0.713,
+   "foot": 0.604
+  }
+ },
+ {
+  "file": "112.png",
+  "pid": "kanon-komori",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.153,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.996,
+   "knee": 0.556,
+   "ankle": 0.183,
+   "foot": 0.186
+  }
+ },
+ {
+  "file": "113.png",
+  "pid": "miu-shiraishi",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.137,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.877,
+   "ankle": 0.791,
+   "foot": 0.675
+  }
+ },
+ {
+  "file": "114.png",
+  "pid": "miu-shiraishi",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1489,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.975,
+   "ankle": 0.776,
+   "foot": 0.53
+  }
+ },
+ {
+  "file": "115.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1337,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.867,
+   "ankle": 0.724,
+   "foot": 0.627
+  }
+ },
+ {
+  "file": "116.png",
+  "pid": "nanami-fujiwara",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1203,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.856,
+   "ankle": 0.829,
+   "foot": 0.805
+  }
+ },
+ {
+  "file": "117.png",
+  "pid": "nico-tsai",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1136,
+  "actual": "knee",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.953,
+   "ankle": 0.874,
+   "foot": 0.782
+  }
+ },
+ {
+  "file": "118.png",
+  "pid": "nico-tsai",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1328,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.982,
+   "ankle": 0.983,
+   "foot": 0.965
+  }
+ },
+ {
+  "file": "119.png",
+  "pid": "peggy-lee",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1271,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.995,
+   "knee": 0.814,
+   "ankle": 0.719,
+   "foot": 0.628
+  }
+ },
+ {
+  "file": "120.png",
+  "pid": "peggy-lee",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1197,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.962,
+   "ankle": 0.738,
+   "foot": 0.717
+  }
+ },
+ {
+  "file": "121.png",
+  "pid": "rin-ayase",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.126,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.914,
+   "ankle": 0.915,
+   "foot": 0.847
+  }
+ },
+ {
+  "file": "122.png",
+  "pid": "rin-ayase",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1394,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.958,
+   "ankle": 0.932,
+   "foot": 0.887
+  }
+ },
+ {
+  "file": "123.png",
+  "pid": "ruoruo-tang",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1161,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.941,
+   "ankle": 0.76,
+   "foot": 0.694
+  }
+ },
+ {
+  "file": "124.png",
+  "pid": "ruoruo-tang",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1242,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.926,
+   "ankle": 0.502,
+   "foot": 0.304
+  }
+ },
+ {
+  "file": "125.png",
+  "pid": "somi-oh",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1313,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.946,
+   "ankle": 0.748,
+   "foot": 0.292
+  }
+ },
+ {
+  "file": "126.png",
+  "pid": "somi-oh",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1522,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.743,
+   "ankle": 0.603,
+   "foot": 0.599
+  }
+ },
+ {
+  "file": "127.png",
+  "pid": "sydney-leong",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1199,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.941,
+   "ankle": 0.944,
+   "foot": 0.902
+  }
+ },
+ {
+  "file": "128.png",
+  "pid": "sydney-leong",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1253,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.998,
+   "knee": 0.888,
+   "ankle": 0.87,
+   "foot": 0.81
+  }
+ },
+ {
+  "file": "129.png",
+  "pid": "tammy-chou",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1255,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.934,
+   "ankle": 0.827,
+   "foot": 0.722
+  }
+ },
+ {
+  "file": "130.png",
+  "pid": "tammy-chou",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1345,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.965,
+   "ankle": 0.545,
+   "foot": 0.472
+  }
+ },
+ {
+  "file": "131.png",
+  "pid": "wanyin-jiang",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1199,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.936,
+   "ankle": 0.894,
+   "foot": 0.838
+  }
+ },
+ {
+  "file": "132.png",
+  "pid": "wanyin-jiang",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.978,
+   "ankle": 0.978,
+   "foot": 0.943
+  }
+ },
+ {
+  "file": "133.png",
+  "pid": "wendy-yeo",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1311,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.955,
+   "ankle": 0.714,
+   "foot": 0.221
+  }
+ },
+ {
+  "file": "134.png",
+  "pid": "wendy-yeo",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1288,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.985,
+   "ankle": 0.985,
+   "foot": 0.962
+  }
+ },
+ {
+  "file": "135.png",
+  "pid": "yerin-han",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1198,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.596,
+   "ankle": 0.5,
+   "foot": 0.488
+  }
+ },
+ {
+  "file": "136.png",
+  "pid": "yerin-han",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1408,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.941,
+   "ankle": 0.896,
+   "foot": 0.856
+  }
+ },
+ {
+  "file": "137.png",
+  "pid": "zhiyi-shen",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": null,
+  "actual": "unknown",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.95,
+   "ankle": 0.916,
+   "foot": 0.849
+  }
+ },
+ {
+  "file": "138.png",
+  "pid": "zhiyi-shen",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1314,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 1.0,
+   "knee": 0.959,
+   "ankle": 0.865,
+   "foot": 0.826
+  }
+ },
+ {
+  "file": "139.png",
+  "pid": "zoey-yeh",
+  "slot": "D4",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1341,
+  "actual": "waist",
+  "actual_pose": "knee",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.952,
+   "ankle": 0.821,
+   "foot": 0.686
+  }
+ },
+ {
+  "file": "140.png",
+  "pid": "zoey-yeh",
+  "slot": "D5",
+  "take": 2,
+  "spec": "full_length",
+  "face_h": 0.1274,
+  "actual": "waist",
+  "actual_pose": "full",
+  "vis": {
+   "hip": 0.999,
+   "knee": 0.796,
+   "ankle": 0.75,
+   "foot": 0.663
+  }
+ }
+]
