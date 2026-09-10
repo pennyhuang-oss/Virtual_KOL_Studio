@@ -56,9 +56,7 @@ function open(i) {
   document.body.style.overflow = 'hidden';
   feed.innerHTML = list.map((v, n) => `<section data-n="${n}">
     <div class="bg" style="background-image:url('${v.poster}')"></div>
-    <div class="stage" data-stage="${n}">
-      <div class="ph" style="background-image:url('${v.poster}')"></div>
-    </div>
+    <div class="stage" data-stage="${n}" style="background-image:url('${v.poster}')"></div>
     <div class="meta">
       ${v.img ? `<img src="${v.img}" alt="">` : ''}
       <span class="t"><b>${esc(v.zh || v.name)}</b><i>${esc(v.tag || '')}</i></span>
