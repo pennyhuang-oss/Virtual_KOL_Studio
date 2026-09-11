@@ -30,6 +30,22 @@ for f in files:
         key=s["place"]
         if key in allp: errs.append(f"跨人設撞場域：{d['pid']} 與 {allp[key]} 都用了「{key[:30]}」")
         allp[key]=d["pid"]
+# 格號必須全域唯一，而且要跟 en/ 的英文稿對得上。
+# 這條是補的：wanyin-jiang 原本用 W1–W5，跟 wendy-yeo 整組撞號，
+# 而 en/ 那邊已經改成 Q1–Q5，等於同一個格號在兩份檔案指向不同人設。
+seen={}
+for f in files:
+    d=json.load(open(f))
+    for s in d["slots"]:
+        if s["id"] in seen: errs.append(f"格號重複：{d['pid']} 與 {seen[s['id']]} 都有 {s['id']}")
+        seen[s["id"]]=d["pid"]
+for f in files:
+    d=json.load(open(f)); e=f.replace("specs/","en/")
+    try: en=json.load(open(e))
+    except FileNotFoundError: errs.append(f"{d['pid']}: 找不到 {e}"); continue
+    a=[s["id"] for s in d["slots"]]; b=[s["id"] for s in en["slots"]]
+    if a!=b: errs.append(f"{d['pid']}: specs 格號 {a} 與 en 格號 {b} 不一致")
+
 print(f"{'人設':18s} {'格':>2s} {'私下':>4s} {'工作':>4s} {'外出':>4s} {'配額':>4s} {'本輪缺':>6s}")
 for r in rows: print(f"{r[0]:18s} {r[1]:2d} {r[2]:4d} {r[3]:4d} {r[4]:4d} {r[5]:4d} {r[6]:>6}")
 print(f"\n人設 {len(rows)} 位 · 總格數 {sum(r[1] for r in rows)} · 場域 {len(allp)} 個（零重複）")
