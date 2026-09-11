@@ -100,10 +100,33 @@ wendy 修正後：吧檯 ×1（同時用掉標誌性配額）、她的公寓 ×3
 
 `SAMPLE_wendy-yeo.md` —— 她 v2 的 7 張全被否決，拿她當第一個樣本。
 
-## 樣本網頁
+## 16 份規劃
 
-https://claude.ai/code/artifact/dfcd287b-277a-45b6-9f43-8c369c73164c
+https://claude.ai/code/artifact/2112a371-fe54-47bf-ad9b-e6a5312380a8
 
-`render_sample.py <spec.json>` 產生。頁面配色直接用該人設自己的色盤 ——
-這本身就是 v4 的論點：每位人設有自己的樣子，連她的規劃頁都不該長得一樣。
-之後 15 位各自一份 spec.json，同一支程式渲染，頁面會各自長成她們的顏色。
+`specs/<pid>.json` × 16 → `render_all.py` → 一頁。
+**每位人設的區塊用她自己的色盤配色**，暗底或亮底由她檔案的「氛圍／後製」決定，不是我隨便配：
+
+| 暗底（低光／單一光源／夜間） | 亮底（自然光／明亮／低對比） |
+|---|---|
+| wendy-yeo、zhiyi-shen、angel-chiu、emma-kao、cheryl-soh、peggy-lee、wanyin-jiang、jia-seo、somi-oh | zoey-yeh、tammy-chou、sydney-leong、miu-shiraishi、ruoruo-tang、angeline-kwee、yerin-han |
+
+往下滑就看得出 16 個人不一樣 —— 這正是 v2／v3 做不到的事。
+
+## 稽核
+
+`validate_v4.py`：
+
+```
+人設 16 位 · 總格數 80 · 場域 80 個（零重複）
+✅ 稽核全數通過
+```
+
+檢查項：每人 5 格 · 工作場域 ≤ 1 · 她自己的空間 ≥ 3 · 標誌性配額 ≤ 1 ·
+每格六個欄位齊全（場域／動作／服裝／光／表情／路人，且動作、服裝、光、表情都要有出處）·
+同一人設場域不重複 · 跨人設場域不重複。
+
+## 本輪要補的是 39 格
+
+80 格是每位人設完整的一組；本輪只補使用者選片後不足的 39 格
+（每位人設補到 5 張）。要不要連已經有留存的那些也一起重拍，由使用者決定。
