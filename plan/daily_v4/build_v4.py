@@ -84,6 +84,13 @@ def audit(rows):
         if re.search(r'\bmirror\b',blob) and re.search(r'\bphone\b',blob):
             e.append(f"{t}: place/action 同時有鏡子與手機 — 實質上是已停用的對鏡自拍")
         if not r["light"].strip().endswith("."): e.append(f"{t}: light 句沒有句號")
+        # floor 鏡位的敘述是「坐在地板上」，場景必須真的是坐在地面／床／台階上。
+        # 注意要先排除 floor-to-ceiling window 與 floor lamp，否則會誤判過關
+        if r["view"]=="floor":
+            blob=re.sub(r'floor-to-ceiling|floor lamp','',r["place"]+" "+r["action"],flags=re.I)
+            if not re.search(r'on the (wooden )?floor\b|on the mat\b|on the exercise mat|cross-legged|'
+                             r'on the kerb|on the step|sitting on the ground|on (the|her) bed\b',blob,re.I):
+                e.append(f"{t}: floor 鏡位但場景不是坐在地面／床／台階上")
         for k in ("place","action","outfit","light","face","hair","view"):
             if not r.get(k): e.append(f"{t}: 缺 {k}")
     # 跨全批不得撞服裝／動作
