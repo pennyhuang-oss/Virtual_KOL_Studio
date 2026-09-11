@@ -1,0 +1,60 @@
+{
+ "pid": "sydney-leong",
+ "slots": [
+  {
+   "id": "D1",
+   "view": "floor",
+   "hair": "mid-length and slightly wavy, in low double braids",
+   "outfit": "a beige apron with nothing under it but a white fitted vest, flour on her collarbones and arms",
+   "place": "upstairs in the old house in the afternoon after finishing work, a fan turning and louvre shadows across the wall",
+   "action": "She is sitting on the wooden floor against the wall with the apron still on and the flour still on her.",
+   "face": "A tired but very loose smile, her eyes on the lens.",
+   "light": "The slanting tropical light through the louvres comes from in front of her, the shadow of the fan moves across her, and the inner side of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "D2",
+   "view": "near",
+   "hair": "mid-length and slightly wavy, loose",
+   "outfit": "a pink cotton fine-strap nightdress",
+   "place": "at the low table upstairs in the old house with today's failed bake sitting on it",
+   "action": "She is sitting cross-legged holding the piece that came out wrong with a bite already taken from it.",
+   "face": "Still chewing, laughing at herself in a slightly daft way.",
+   "light": "The afternoon light from the window comes from one side in front of her and the depth of the room is dark, the whole picture warm.",
+   "people": null
+  },
+  {
+   "id": "D3",
+   "view": "selfie",
+   "hair": "mid-length, pushed back wet",
+   "outfit": "a butter-yellow cotton towel wrapped around her",
+   "place": "in the bathroom of the old house with its green tiles at half past three in the morning, about to go down and start the oven",
+   "action": "Her free hand is pushing her hair back off her face as she comes up from washing it.",
+   "face": "Not awake, her eyes half open.",
+   "light": "The light above the mirror is directly in front of her and both the depth of the bathroom and the night outside the window are black.",
+   "people": null
+  },
+  {
+   "id": "D4",
+   "view": "knee",
+   "hair": "mid-length, tied up out of the way",
+   "outfit": "a beige apron over a wood-brown short-sleeved top with the sleeves rolled to the shoulder",
+   "place": "in the ground-floor studio in the hot part of the afternoon with all three fans running and the cat on the window ledge",
+   "action": "She has one hand braced on the work bench and is pushing a tray into the oven with the other, the cat on the ledge behind her.",
+   "face": "Her attention is on the oven and not the lens, with sweat on her forehead.",
+   "light": "The window light of the studio comes from in front of her, the shadow of a fan sweeps across, and the depth of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "D5",
+   "view": "full",
+   "hair": "mid-length and slightly wavy, loose",
+   "outfit": "an old-tile-green cropped knit and a rattan-beige long skirt",
+   "place": "under the eaves of an old street in George Town at dusk, just after a shower of rain",
+   "action": "She is standing under the eaves waiting for the rain to stop with a paper box for a customer in one hand.",
+   "face": "A very soft smile with her eyes narrowed.",
+   "light": "The dusk light beyond the eaves falls on her face and the depth of the covered walkway is dark.",
+   "people": null
+  }
+ ]
+}

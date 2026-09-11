@@ -1,0 +1,60 @@
+{
+ "pid": "angeline-kwee",
+ "slots": [
+  {
+   "id": "G1",
+   "view": "near",
+   "hair": "long waves, still wet, pushed over one shoulder",
+   "outfit": "a white silk fine-strap slip with one strap down",
+   "place": "standing at the floor-to-ceiling window of her apartment with no curtains on it at all, the South Jakarta night outside and one floor lamp on",
+   "action": "She is leaning against the window frame pushing her freshly washed hair over one shoulder with one hand.",
+   "face": "Looking calmly at the lens with nothing being performed.",
+   "light": "The floor lamp is to one side in front of her, the glass carries a little of the room back, and the city outside is dark.",
+   "people": null
+  },
+  {
+   "id": "G2",
+   "view": "knee",
+   "hair": "long waves, loose",
+   "outfit": "a rattan-beige silk shirt-style loungewear set undone to the third button",
+   "place": "half sitting on the edge of the teak low cabinet in her apartment, a single scent diffuser and a small lamp on it",
+   "action": "She is perched on the edge of the cabinet having just put the lid back on the diffuser, her hand still resting on it.",
+   "face": "A small amount of smile, the eyes polite but keeping their distance.",
+   "light": "The small lamp on the cabinet is in front of her and low, the teak turns it warm, and the depth of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "G3",
+   "view": "selfie",
+   "hair": "long and wet, being coiled up and let go",
+   "outfit": "a white cotton robe tied loosely with the line of her shoulder showing",
+   "place": "in the bathroom of her apartment, white tiles and a teak counter, morning light through a high window",
+   "action": "Her free hand is gathering her long hair up and letting it drop again.",
+   "face": "The looseness of just having got up, looking at the lens without smiling.",
+   "light": "The daylight from the high window comes down from in front of her onto her face and shoulders while the inner side of the bathroom falls into shadow.",
+   "people": null
+  },
+  {
+   "id": "G4",
+   "view": "knee",
+   "hair": "long waves tucked behind both ears",
+   "outfit": "a pale green sleeveless linen dress with the belt loosely tied",
+   "place": "in her own little shop after closing with a single lamp left on, white walls, teak shelving and rattan baskets",
+   "action": "She is sitting on the edge of the display table with this week's new stock in her hands, trying it herself first.",
+   "face": "A faint smile, the kind that comes with making a joke about how small the shop is.",
+   "light": "The lamp on the shelving is in front of her and the depth of the shop is unlit.",
+   "people": null
+  },
+  {
+   "id": "G5",
+   "view": "full",
+   "hair": "long waves, loose",
+   "outfit": "a white fine-strap vest and teak-brown linen trousers, her shoulders and collarbones bare",
+   "place": "in a coffee shop converted from an old house in South Jakarta in the afternoon, palm shadows falling across a white wall",
+   "action": "She has just set the cloth bag she brought onto a rattan chair with her hand still on the chair back.",
+   "face": "Level, looking at the lens, her mouth not moving.",
+   "light": "The daylight comes in from in front of her while the depth of the room and the palm shadows on the white wall stay darker than she is.",
+   "people": null
+  }
+ ]
+}

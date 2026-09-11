@@ -1,0 +1,60 @@
+{
+ "pid": "zhiyi-shen",
+ "slots": [
+  {
+   "id": "Z1",
+   "view": "knee",
+   "hair": "long and straight with a centre part, still smooth from the office",
+   "outfit": "a white shirt still buttoned, a black pencil skirt and black stockings, with only the jacket taken off",
+   "place": "just inside the entryway of her apartment, her coat already off and over one arm",
+   "action": "She is nudging her heels into the line of shoes along the wall with her foot, the coat still hanging over one arm.",
+   "face": "No expression at all, her eyes straight into the lens as if she has just said the words eleven o'clock.",
+   "light": "The single warm lamp in the entryway is on her and the living room behind is not lit at all.",
+   "people": null
+  },
+  {
+   "id": "Z2",
+   "view": "floor",
+   "hair": "long and straight, pushed behind one shoulder",
+   "outfit": "the same white shirt with the hem pulled out and undone to the third button, black stockings still on",
+   "place": "sitting on the floor against the frame of her floor-to-ceiling window, the Lujiazui towers lit up outside",
+   "action": "She is leaning back against the window frame with one hand flat on the floor and a can of sparkling water in the other.",
+   "face": "Her eyes are unfocused but pointed at the lens, tired without complaining about it.",
+   "light": "One warm lamp sits in front of her to the side while the city outside stays cold blue, and the two colours meet across her.",
+   "people": null
+  },
+  {
+   "id": "Z3",
+   "view": "selfie",
+   "hair": "pinned up roughly off her neck",
+   "outfit": "a grey silk robe with the belt loosely tied",
+   "place": "in her own bathroom, the glass screen fogged over",
+   "action": "Her free hand has wiped a clear patch in the fogged mirror just big enough to hold her face.",
+   "face": "Not smiling, looking at herself in the glass rather than at the lens.",
+   "light": "The light above the mirror is directly in front of her and the steam eats the rest of the room.",
+   "people": null
+  },
+  {
+   "id": "Z4",
+   "view": "near",
+   "hair": "tied back low, a few pieces already falling out",
+   "outfit": "a navy pencil-skirt suit with the jacket not yet on, the shirt tucked in",
+   "place": "in front of the open wardrobe in her apartment, a row of dark jackets and shirts, five pairs of heels on the floor",
+   "action": "She has one hand on the rail and is turning her shirt collar flat with the other while five alarms are still going.",
+   "face": "The corner of her mouth is holding a joke about how late she works.",
+   "light": "One warm lamp inside the wardrobe throws light forward onto her and the dark clothes swallow the background.",
+   "people": null
+  },
+  {
+   "id": "Z5",
+   "view": "full",
+   "hair": "long and straight, a little flattened after the day",
+   "outfit": "a navy pencil-skirt suit, black stockings and heels, the jacket over her forearm",
+   "place": "outside her office tower at eleven at night, the glass curtain wall still lit above her, having just come through the revolving door",
+   "action": "She has stopped outside the door to move her bag to the other hand and is glancing up at the floors still lit.",
+   "face": "No expression into the lens, with the tiredness under her eyes left in.",
+   "light": "The warm lamps at the building entrance are in front of her while the glass curtain wall behind her stays cold.",
+   "people": null
+  }
+ ]
+}

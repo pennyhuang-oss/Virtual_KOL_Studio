@@ -1,0 +1,60 @@
+{
+ "pid": "angel-chiu",
+ "slots": [
+  {
+   "id": "A1",
+   "view": "near",
+   "hair": "just let down out of a tight tie, the lightened honey-tea ends showing",
+   "outfit": "a nude-pink silk nightdress with one strap down on her arm",
+   "place": "sitting on the edge of the bed in her rented room after a night shift, the curtains still drawn against the morning",
+   "action": "She has just taken her hair down and one hand is still up behind her head.",
+   "face": "The tiredness of a finished night shift is not hidden; she is looking at the lens without smiling.",
+   "light": "One warm lamp at the bedside is in front of her and the rest of the room is dark, the grain left in the picture.",
+   "people": null
+  },
+  {
+   "id": "A2",
+   "view": "selfie",
+   "hair": "wet at the ends, pushed back behind her ears",
+   "outfit": "a beige-grey cotton towel wrapped around her, water still on her shoulders and collarbones",
+   "place": "in the bathroom of her rented flat, straight out of the shower, water still on the mirror",
+   "action": "Her free hand is pressing a towel against the ends of her hair.",
+   "face": "A little more awake now, the set of her mouth loosening slightly.",
+   "light": "The warm lamp above the mirror is directly in front of her and the depth of the bathroom falls away.",
+   "people": null
+  },
+  {
+   "id": "A3",
+   "view": "knee",
+   "hair": "down over both shoulders so the lightened ends show",
+   "outfit": "an altered nurse's uniform taken in close to the body and shortened, the neckline lower than the original, lace visible underneath",
+   "place": "in front of the full-length mirror in her room, her scrubs hanging on the back of the door with a corner of them in frame",
+   "action": "She is standing at the mirror smoothing the hem of the altered uniform flat with one hand.",
+   "face": "No expression, but her eyes are very direct, the way she talks at a shift handover.",
+   "light": "The warm lamp in the room is in front of her and the door and wall behind the mirror go dark.",
+   "people": null
+  },
+  {
+   "id": "A4",
+   "view": "floor",
+   "hair": "tied up loosely, the ends escaping",
+   "outfit": "a navy tie-front loungewear set with the neckline open",
+   "place": "on the floor of her room with a bowl of late-night takeaway on the low table",
+   "action": "She is sitting cross-legged with her phone in one hand typing handover notes and a spoon in the other.",
+   "face": "Her attention is on the phone and the corner of her mouth is somewhere between tired and amused at herself.",
+   "light": "A single warm lamp on the low table throws light up at her from the front and the rest of the room is dark, grain and shadow left in.",
+   "people": null
+  },
+  {
+   "id": "A5",
+   "view": "full",
+   "hair": "all the way down, the honey-tea ends obvious",
+   "outfit": "a nude-pink cropped knit and navy high-waisted trousers",
+   "place": "outside a late-opening pharmacy in Taipei on her day off, standing under its lit sign",
+   "action": "She is looking down at the small paper bag she is carrying.",
+   "face": "A very ordinary expression, her eyes on the bag rather than the lens.",
+   "light": "The pharmacy's light box is in front of her and off to one side, and the street beyond it is dark.",
+   "people": null
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "pid": "miu-shiraishi",
+ "slots": [
+  {
+   "id": "M1",
+   "view": "floor",
+   "hair": "a shoulder-length inward-curled bob with a wispy fringe",
+   "outfit": "an apron kept on with its ties tied at the front, and underneath it a loose cream knit slipped below the shoulder",
+   "place": "sitting on the floor of her very small apartment against the low table, everything she owns on the floor around her",
+   "action": "She is sitting against the low table with the apron still on but changed underneath it, the ties knotted at the front.",
+   "face": "Completely expressionless, looking at the lens.",
+   "light": "The window light comes from in front of her, the inner side of the flat is dark, and nothing is over-sharpened.",
+   "people": null
+  },
+  {
+   "id": "M2",
+   "view": "floor",
+   "hair": "a shoulder-length bob tucked behind one ear",
+   "outfit": "a beige-grey cotton fine-strap top and shorts",
+   "place": "on the floor of her apartment with the convenience-store pudding she always buys on the low table",
+   "action": "She is sitting cross-legged about to dig into the pudding with a spoon in one hand.",
+   "face": "Looking at the pudding rather than the lens, her expression not changing at all.",
+   "light": "A small lamp beside the low table is in front of her and low, and the rest of the flat is dark.",
+   "people": null
+  },
+  {
+   "id": "M3",
+   "view": "selfie",
+   "hair": "a shoulder-length bob, damp, being tucked behind one ear",
+   "outfit": "a cream towel wrapped around her",
+   "place": "in the very small bathroom of her apartment straight out of the shower",
+   "action": "Her free hand is tucking the damp shoulder-length hair behind her ear.",
+   "face": "Just woken with a very empty look.",
+   "light": "The light above the mirror is directly in front of her and the depth of the bathroom is dark.",
+   "people": null
+  },
+  {
+   "id": "M4",
+   "view": "knee",
+   "hair": "a shoulder-length bob with the wispy fringe, tidy",
+   "outfit": "a dark coffee-brown apron with its ties knotted at the front over a wood-brown short-sleeved top",
+   "place": "in the Nakameguro coffee shop before opening, the shop lights not on yet and only the window light in",
+   "action": "She is wiping the counter down with a cloth in one hand, the steam wand not switched on yet.",
+   "face": "Her attention is on the counter and not the lens, with no expression at all.",
+   "light": "The window light comes in from in front of her onto the counter and her face, the depth of the shop is still dark, and dust hangs in the air.",
+   "people": null
+  },
+  {
+   "id": "M5",
+   "view": "near",
+   "hair": "a shoulder-length bob with the fringe brushed straight",
+   "outfit": "a window-light-yellow fine knit cardigan over a cream fitted vest",
+   "place": "inside a convenience store in Nakameguro on her way home, standing at the chilled dessert cabinet",
+   "action": "She is standing at the chilled cabinet lifting out the same pudding she always buys.",
+   "face": "Looking at the pudding in the cabinet with no expression.",
+   "light": "The light inside the chilled cabinet throws forward onto her face and the rest of the shop is not as bright as she is.",
+   "people": null
+  }
+ ]
+}

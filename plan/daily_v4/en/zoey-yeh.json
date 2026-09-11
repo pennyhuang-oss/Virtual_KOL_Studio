@@ -1,0 +1,60 @@
+{
+ "pid": "zoey-yeh",
+ "slots": [
+  {
+   "id": "O1",
+   "view": "floor",
+   "hair": "long and straight with a centre part, wet and stuck to her collarbone",
+   "outfit": "a white cotton fine-strap top with the strap slipped down a little",
+   "place": "in the wooden-floored room on the second floor of the old house on a rainy day, the window open onto the rain",
+   "action": "She is sitting barefoot and cross-legged on the wooden floor with one hand braced on it, her wet hair against her collarbone.",
+   "face": "No expression, looking at the lens as if caught staring into space.",
+   "light": "The overcast daylight from the window comes from in front of her, the inner side of the room falls dark, and the picture is allowed to blow out a little and lose focus.",
+   "people": null
+  },
+  {
+   "id": "O2",
+   "view": "near",
+   "hair": "long and straight, damp, over one shoulder",
+   "outfit": "a misty green thin cotton vest with one shoulder strap slipped onto her arm, the shoulder bare",
+   "place": "at the window upstairs in the old house with an unprocessed bunch of flowers and a pair of scissors on the low table",
+   "action": "She is sitting side-on at the window ledge holding one stem against her shoulder, the small cuts from thorns on her fingers.",
+   "face": "Looking at the flower in her hand rather than the lens, the expression very faint.",
+   "light": "The window light comes from one side in front of her, the depth of the room is hazy, and the contrast is very low.",
+   "people": null
+  },
+  {
+   "id": "O3",
+   "view": "selfie",
+   "hair": "long and wet, being pushed to one side",
+   "outfit": "a pale pink cotton towel wrapped around her",
+   "place": "in the second-floor bathroom of the old house with its old tiles, morning light through a small window",
+   "action": "Her free hand is pushing the wet hair over to one side.",
+   "face": "Just awake, her eyes half open, not smiling.",
+   "light": "The daylight from the small window is in front of her and to the side, the inner side of the bathroom is dark, and her skin is left completely as it is.",
+   "people": null
+  },
+  {
+   "id": "O4",
+   "view": "floor",
+   "hair": "long and straight with a centre part, tied back loosely",
+   "outfit": "a cream cotton long shirt worn open over a misty green cropped vest",
+   "place": "in the flower shop on the ground floor on a rainy day with the shop shut, a note taped to the door and the cat on the wooden floor",
+   "action": "She is crouched down at the cat's level with one hand held out for it to push its head against.",
+   "face": "A very small, very blunt kind of smile at the corner of her mouth.",
+   "light": "The rainy daylight through the glass door comes from in front of her, the depth of the shop is dark, and the whole picture is hazy and low in contrast.",
+   "people": null
+  },
+  {
+   "id": "O5",
+   "view": "full",
+   "hair": "long and straight, a little damp from the air",
+   "outfit": "a grey fine knit cropped top and a cream long skirt",
+   "place": "under the eaves of an old grocery shop in a small Yilan town just after rain, puddles on the ground",
+   "action": "She is standing under the eaves waiting for the rain to ease with a paper bag in one hand and the other held out to catch the drips.",
+   "face": "Looking up at the rain rather than the lens, the expression very light.",
+   "light": "The overcast light beyond the eaves falls on her face, the depth under the eaves is dark, and the puddles carry a little reflection.",
+   "people": null
+  }
+ ]
+}

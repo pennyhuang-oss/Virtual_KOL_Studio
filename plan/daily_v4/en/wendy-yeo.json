@@ -1,0 +1,60 @@
+{
+ "pid": "wendy-yeo",
+ "slots": [
+  {
+   "id": "W1",
+   "view": "near",
+   "hair": "in a sharp jaw-length crop tucked behind both ears",
+   "outfit": "a black silk shirt undone to the third button with the sleeves rolled three fingers above the elbow, and dark straight-leg trousers",
+   "place": "sitting up on the counter of her own bar after closing, the room empty, one lamp left on over the bar top",
+   "action": "She is sitting on the bar counter with the last glass of the night still in one hand, the polishing cloth beside her.",
+   "face": "She is looking straight into the lens with one eyebrow raised and no smile at all.",
+   "light": "One warm lamp over the bar is the only light, so half her face falls into shadow and the rim of the glass catches a line of it.",
+   "people": null
+  },
+  {
+   "id": "W2",
+   "view": "floor",
+   "hair": "the crop pushed back off her face, a little flattened from sleeping",
+   "outfit": "a dark green silk slip with thin straps",
+   "place": "on the floor beside her bed in her apartment in the middle of the day, the curtains pulled all the way shut",
+   "action": "She has just sat up and one hand is still pressed flat on the edge of the bed.",
+   "face": "She has just woken and her eyes have not focused yet, but they are on the lens.",
+   "light": "A single blade of daylight gets through the gap in the curtains and lands on her face and shoulder; the rest of the room stays dark.",
+   "people": null
+  },
+  {
+   "id": "W3",
+   "view": "knee",
+   "hair": "the crop tucked behind one ear",
+   "outfit": "a loose black silk long-sleeved pyjama top with the neckline slipped off one shoulder",
+   "place": "curled into the corner of the sofa in her own living room, a brass floor lamp beside her and a low table in front",
+   "action": "She has one foot tucked under her and is holding a glass on her knee, the hand-cut ice in it still whole.",
+   "face": "She is not smiling; her eyes come up over the rim of the glass to the lens.",
+   "light": "The floor lamp sits to one side in front of her and the far half of the sofa and the depth of the room are completely dark.",
+   "people": null
+  },
+  {
+   "id": "W4",
+   "view": "selfie",
+   "hair": "the crop damp and pushed straight back",
+   "outfit": "a black silk robe tied loosely",
+   "place": "in her own bathroom, brass tap and dark tiles, first thing after getting up",
+   "action": "Her free hand has just pushed the short hair back off her forehead and is still resting at her temple.",
+   "face": "She is looking into the lens, awake but not ready to speak yet.",
+   "light": "The lamp above the mirror is directly in front of her face and the depth of the bathroom drops away into dark.",
+   "people": null
+  },
+  {
+   "id": "W5",
+   "view": "full",
+   "hair": "the crop slicked back wet-look",
+   "outfit": "an amber satin shirt dress with a black belt and fine-strap black heels",
+   "place": "at an old coffee stall on the East Coast that stays open late, on a Sunday night when she is not working",
+   "action": "She has just set her coffee down on the table and one hand is still on the back of the chair beside it.",
+   "face": "One eyebrow is up and the corner of her mouth is holding back a very dry joke.",
+   "light": "The single warm bulb over the stall is in front of her and the road outside the stall goes dark.",
+   "people": null
+  }
+ ]
+}

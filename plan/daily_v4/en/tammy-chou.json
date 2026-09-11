@@ -1,0 +1,60 @@
+{
+ "pid": "tammy-chou",
+ "slots": [
+  {
+   "id": "T1",
+   "view": "selfie",
+   "hair": "long loose waves with the money-piece pieces at the front",
+   "outfit": "a beige fitted lingerie set with an unbuttoned shirt that has not been listed yet thrown over it",
+   "place": "in the room upstairs where she lives, clothes she has not picked up still on the floor and a rail of new stock behind her",
+   "action": "Her free hand is pulling the hem of the piece flat — this is the third angle she has shot of it.",
+   "face": "Talking with a lot of rhythm, her mouth open, the version whose sentences rise at the end.",
+   "light": "The bright fill light in the room is in front of her, the mirror throws it back, and the clothes on the floor are in the shot as they are.",
+   "people": null
+  },
+  {
+   "id": "T2",
+   "view": "knee",
+   "hair": "long loose waves, pushed back",
+   "outfit": "a black fitted fine-strap bodysuit, holding a neon pink dress up against herself",
+   "place": "on the edge of the bed upstairs with boxes still half unpacked and new stock piled on the bed",
+   "action": "She is sitting on the bed holding a dress up against herself with one hand and an iced americano in the other.",
+   "face": "Laughing out loud, in the middle of a story about a bad buying trip.",
+   "light": "The fill light in the room is in front of her, bright and saturated, and the boxes and clutter are all in the shot.",
+   "people": null
+  },
+  {
+   "id": "T3",
+   "view": "selfie",
+   "hair": "long waves clipped up out of the way",
+   "outfit": "a bright white robe tied loosely",
+   "place": "in the bathroom upstairs with makeup spread across the counter, straight off a live stream",
+   "action": "Her free hand is wiping one eye with a cleansing pad.",
+   "face": "Half her makeup gone, very loose, still talking.",
+   "light": "The strip light above the mirror is directly in front of her and the rest of the bathroom is bright too, since she does not shoot in the dark.",
+   "people": null
+  },
+  {
+   "id": "T4",
+   "view": "full",
+   "hair": "long waves, a bit flattened this early",
+   "outfit": "a denim-blue cropped shirt knotted at the waist and high-waisted shorts",
+   "place": "in a Wufenpu lane at dawn with the shops still shut, just out from buying stock",
+   "action": "She is carrying two big bags of stock in one hand with an iced americano in the other and another bag over her shoulder.",
+   "face": "Laughing with a lot of energy, the kind of face that comes with a loud voice.",
+   "light": "The early daylight and the first shop lights are in front of her while the far end of the lane is still dark.",
+   "people": null
+  },
+  {
+   "id": "T5",
+   "view": "knee",
+   "hair": "long waves, full and blown out",
+   "outfit": "a neon pink fitted crop top and black high-waisted shorts",
+   "place": "in the live-streaming room downstairs with the fill lights rigged, rails of stock behind and clothes on the floor",
+   "action": "She is sitting in the streaming seat straightening the phone mount with a half-finished iced americano on the desk.",
+   "face": "The face she makes saying 「this one I kept for myself too」.",
+   "light": "The streaming fill light is directly in front of her, very bright and very flat, and the rails deeper in the warehouse are only slightly darker.",
+   "people": null
+  }
+ ]
+}

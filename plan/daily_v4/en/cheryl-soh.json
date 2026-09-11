@@ -1,0 +1,60 @@
+{
+ "pid": "cheryl-soh",
+ "slots": [
+  {
+   "id": "C1",
+   "view": "knee",
+   "hair": "a French bun being taken down, pins still in it",
+   "outfit": "a navy uniform pencil skirt and white shirt with the scarf already untied and lying on the bed, the top two buttons open",
+   "place": "sitting on the edge of the bed in a hotel room she has just landed into, the curtains already pulled open on a city she does not live in",
+   "action": "She has both hands up taking the French bun apart with a pin still held between her lips.",
+   "face": "No expression because of the pin in her lips, her eyes on the lens with the tiredness of just landing.",
+   "light": "One warm bedside lamp is in front of her, the city outside the window stays cold, and the depth of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "C2",
+   "view": "floor",
+   "hair": "all the way down in loose waves",
+   "outfit": "a white silk slip with thin straps",
+   "place": "curled into the single armchair by the floor-to-ceiling window of her own apartment in Singapore, on one of the days she is home",
+   "action": "She is tucked into the chair lighting the candle she carries in her luggage with one hand.",
+   "face": "Not a trace of makeup and a very loose expression, not smiling.",
+   "light": "The candle and one floor lamp are both in front of her and low, and the night outside the window is dark.",
+   "people": null
+  },
+  {
+   "id": "C3",
+   "view": "near",
+   "hair": "loose and spread over her shoulders",
+   "outfit": "a cool grey silk pyjama top with the neckline slipped to one side",
+   "place": "lying across the bed in her Singapore apartment at three in the morning, still awake with the time zones wrong",
+   "action": "She is lying on her front propped up on her elbows with her hair down over her shoulders.",
+   "face": "The particular alertness of not being able to sleep, her eyes on the lens.",
+   "light": "The bedside lamp is in front of her and low and the rest of the room is completely dark.",
+   "people": null
+  },
+  {
+   "id": "C4",
+   "view": "selfie",
+   "hair": "gathered into one length and brought forward over one shoulder",
+   "outfit": "a gold silk robe tied loosely",
+   "place": "in the bathroom of her Singapore apartment, only a bottle of cleanser and that same candle on the counter",
+   "action": "Her free hand is gathering her hair into a rope and bringing it forward over her shoulder.",
+   "face": "Bare-faced and completely expressionless.",
+   "light": "The lamp above the mirror is directly in front of her and the depth of the bathroom is dark.",
+   "people": null
+  },
+  {
+   "id": "C5",
+   "view": "full",
+   "hair": "in a neat French bun",
+   "outfit": "the complete navy cabin-crew uniform with the scarf tied properly",
+   "place": "at the mouth of an airbridge at Changi in the early morning, an aircraft parked outside the glass",
+   "action": "She has stopped by the window pulling her cabin bag, one hand still on the handle.",
+   "face": "The professional warmth, the switch already flipped on.",
+   "light": "The cold white lights at the airbridge are in front of her and the apron outside is still dark.",
+   "people": null
+  }
+ ]
+}
