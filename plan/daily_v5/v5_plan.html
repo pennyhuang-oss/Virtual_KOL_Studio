@@ -1,0 +1,725 @@
+<title>v5 拍攝表</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+ --bg:#F7F7F5; --card:#FFFFFF; --ink:#16171A; --mid:#5C5F66; --dim:#8A8E96;
+ --rule:#E2E2DE; --accent:#C2410C; --day:#B45309; --dayb:#FEF3C7;
+ --night:#334E86; --nightb:#DEE7F7; --work:#6D28D9; --workb:#EDE4FC;
+ --out:#047857; --outb:#D6F0E6; --quota:#B91C1C; --quotab:#FBE0DE;
+ --priv:#4B5563; --privb:#E9EAEC; --probe:#FFF8E6; --probel:#E8A317;
+ --disp:"Saira Condensed",-apple-system,"Noto Sans TC",sans-serif;
+ --body:"Newsreader",Georgia,"Noto Serif TC",serif;
+ --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#101114; --card:#181A1E; --ink:#EDEDEA; --mid:#A2A6AE; --dim:#767A83;
+ --rule:#2A2D33; --accent:#F97316; --day:#FBBF24; --dayb:#3A2E10;
+ --night:#93B4F0; --nightb:#17233C; --work:#C4A6FB; --workb:#2A2140;
+ --out:#5EC9A0; --outb:#0F2E25; --quota:#F8A5A0; --quotab:#3A1917;
+ --priv:#B6BAC2; --privb:#26282D; --probe:#231D0E; --probel:#8A6A14;
+}}
+:root[data-theme="dark"]{
+ --bg:#101114; --card:#181A1E; --ink:#EDEDEA; --mid:#A2A6AE; --dim:#767A83;
+ --rule:#2A2D33; --accent:#F97316; --day:#FBBF24; --dayb:#3A2E10;
+ --night:#93B4F0; --nightb:#17233C; --work:#C4A6FB; --workb:#2A2140;
+ --out:#5EC9A0; --outb:#0F2E25; --quota:#F8A5A0; --quotab:#3A1917;
+ --priv:#B6BAC2; --privb:#26282D; --probe:#231D0E; --probel:#8A6A14;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);
+ font-size:15px;line-height:1.55;padding:0 16px;padding-block:0 64px;
+ max-width:1180px;margin:0 auto;-webkit-text-size-adjust:100%}
+h1,h2,h3,th,.chip,.code,.kpi b{font-family:var(--disp)}
+header{padding-block:40px 24px;border-bottom:2px solid var(--ink)}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:0 0 10px;
+ letter-spacing:.01em;text-wrap:balance;font-weight:700}
+.sub{color:var(--mid);margin:0;max-width:62ch}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+ gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 0}
+.kpi{background:var(--card);padding:14px 14px 12px}
+.kpi b{display:block;font-size:27px;line-height:1;font-weight:600}
+.kpi span{display:block;font-size:12.5px;color:var(--dim);margin-top:5px}
+.kpi i{font-style:normal;color:var(--accent);font-size:12.5px}
+.band{margin:34px 0 0;padding:18px 20px;background:var(--card);
+ border-left:3px solid var(--accent)}
+.band h3{margin:0 0 10px;font-size:16px;letter-spacing:.04em;text-transform:uppercase}
+.deltas{list-style:none;margin:0;padding:0;display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 26px}
+.deltas li{display:flex;gap:10px;align-items:baseline;font-size:14px;
+ border-bottom:1px dotted var(--rule);padding-bottom:7px}
+.deltas em{font-style:normal;color:var(--mid);flex:1}
+.deltas .was{font-family:var(--mono);color:var(--dim);text-decoration:line-through}
+.deltas .now{font-family:var(--mono);color:var(--accent);font-weight:600}
+.famlist{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.famlist li{display:flex;gap:6px;align-items:baseline;background:var(--card);
+ border:1px solid var(--rule);padding:3px 9px;font-size:13px}
+.famlist b{font-family:var(--mono)}
+.p{margin:38px 0 0;background:var(--card);border:1px solid var(--rule)}
+.p h2{margin:0;padding:13px 16px;border-bottom:1px solid var(--rule);
+ display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;font-size:20px;font-weight:600}
+.nm{letter-spacing:.01em}
+.city{color:var(--dim);font-size:13.5px;font-family:var(--body)}
+.comp{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--mid)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+ color:var(--dim);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--rule);
+ white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.slot.probe{background:var(--probe);box-shadow:inset 3px 0 0 var(--probel)}
+.code{font-family:var(--mono);font-weight:600;font-size:13px;white-space:nowrap}
+.chip{display:inline-block;padding:1px 8px;font-size:11.5px;font-weight:600;
+ letter-spacing:.06em;white-space:nowrap}
+.day{background:var(--dayb);color:var(--day)} .night{background:var(--nightb);color:var(--night)}
+.work{background:var(--workb);color:var(--work)} .out{background:var(--outb);color:var(--out)}
+.quota{background:var(--quotab);color:var(--quota)} .priv{background:var(--privb);color:var(--priv)}
+.fam{white-space:nowrap;color:var(--mid);font-size:13px}
+.ev{min-width:260px} .ev b{font-weight:600}
+.pl{color:var(--mid);font-size:13px;margin-top:3px}
+.why{margin-top:6px;font-size:12.5px;color:var(--probel);font-family:var(--mono)}
+.meta{font-size:12.5px;color:var(--mid);white-space:nowrap}
+.dim{color:var(--dim)}
+.ppl{font-size:12.5px;color:var(--mid);white-space:nowrap}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);
+ color:var(--dim);font-size:13px}
+@media(max-width:640px){.ev{min-width:180px} .comp{margin-left:0;width:100%}}
+</style>
+<header>
+<h1>虛擬 KOL 日常拍攝表 v5</h1>
+<p class="sub">十六位人設，八十格。每一格先有「只有她會發生的那個時刻」，場域、動作、服裝與光才從那個時刻長出來。
+底色標黃的十六格是探針批次，通過之後才續拍其餘六十四格。</p>
+<div class="kpis">
+<div class="kpi"><b>80</b><span>總格數 · 16 位各 5 格</span></div>
+<div class="kpi"><b>40 / 40</b><span>日 / 夜</span></div>
+<div class="kpi"><b>6</b><span>浴室格 <i>v4 是 16</i></span></div>
+<div class="kpi"><b>12</b><span>有路人 <i>v4 是 0</i></span></div>
+<div class="kpi"><b>16</b><span>探針 · 1.92 credits</span></div>
+<div class="kpi"><b>9.6</b><span>全部拍完的總成本</span></div>
+</div>
+<div class="band">
+<h3>v4 → v5 改了什麼</h3>
+<ul class="deltas">
+<li><em>每位都有一格浴室，13 位還在同一順位</em><span class="was">16/16</span><span class="now">6/80</span></li>
+<li><em>完全沒有路人的格數</em><span class="was">80/80</span><span class="now">68/80</span></li>
+<li><em>日夜比</em><span class="was">約 6:2</span><span class="now">40:40</span></li>
+<li><em>膚質句違反已拍板的 D3</em><span class="was">7/16</span><span class="now">0/16</span></li>
+<li><em>帶反射面卻沒有鏡面守則的格</em><span class="was">15</span><span class="now">0</span></li>
+<li><em>守則與場景直接打架的格</em><span class="was">2</span><span class="now">0</span></li>
+<li><em>每格守則字數</em><span class="was">約 60</span><span class="now">約 37</span></li>
+<li><em>五格組成只有一種</em><span class="was">1 種</span><span class="now">6 種</span></li>
+</ul>
+<ul class="famlist"><li><span>臥室</span><b>16</b></li><li><span>客廳</span><b>13</b></li><li><span>街道</span><b>11</b></li><li><span>工作場域</span><b>9</b></li><li><span>浴室</span><b>6</b></li><li><span>衣櫃 / 更衣</span><b>5</b></li><li><span>店內</span><b>5</b></li><li><span>市場</span><b>3</b></li><li><span>園林 / 戶外自然</span><b>3</b></li><li><span>車內</span><b>2</b></li><li><span>老街</span><b>2</b></li><li><span>車站機場</span><b>1</b></li><li><span>陽台 / 頂樓</span><b>1</b></li><li><span>車庫</span><b>1</b></li><li><span>廚房</span><b>1</b></li><li><span>玄關</span><b>1</b></li></ul>
+</div>
+</header>
+<section class="p">
+<h2><span class="nm">Angel Chiu 邱安晴</span><span class="city">台北</span><span class="comp">3私1工0外→3私0工2外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">A1</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">浴室</td>
+<td class="ev"><b>大夜下班進門第一件事是洗澡，洗完才想到還沒吃東西</b><div class="pl">她租屋處的浴室，剛洗完澡，鏡子上還有水氣</div></td>
+<td class="meta">站·空手<br><span class="dim">selfie·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">A2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>洗完澡坐在床邊，才發現自己整個人跟上班時完全不一樣——她的帳號就是從這一刻開始的</b><div class="pl">她租屋處的床邊，窗簾拉著，外面天其實已經亮了</div></td>
+<td class="meta">坐床沿·空手<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">A3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>補完眠下午出門，繞去巷子裡那間開了很久的早餐店買東西</b><div class="pl">台北巷子裡一間開了很久的早餐店門口，下午，鐵捲門拉了一半</div></td>
+<td class="meta">站·單手持物<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">A4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">衣櫃 / 更衣</td>
+<td class="ev"><b>翻衣櫃找明天要穿的，刷手服就掛在同一根桿子上</b><div class="pl">她房間的開放式衣架前，刷手服和便服掛在同一根桿子上</div></td>
+<td class="meta">站·單手扶物<br><span class="dim">knee·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">A5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">市場</td>
+<td class="ev"><b>休假日走去傳統市場，那個時間攤子都還在</b><div class="pl">台北一個傳統市場的走道，上午，兩側攤子都開著</div><div class="why">探針理由：路人：傳統市場走道，數人中距離</div></td>
+<td class="meta">走動·單手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">數人·中</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Angeline Kwee 郭慧恩</span><span class="city">雅加達</span><span class="comp">2私1工2外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">G1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">店內</td>
+<td class="ev"><b>店裡有客人在看架上的東西，她站在一旁沒有上前推銷</b><div class="pl">她在南雅加達那間很小的選物店裡，營業時間，白牆與柚木層架</div><div class="why">探針理由：路人：選物店營業中，客人在層架前</div></td>
+<td class="meta">倚牆·空手<br><span class="dim">knee·窗光側面</span></td>
+<td class="ppl">1-2人·中</td></tr><tr class="slot">
+<td class="code">G2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>打烊回公寓，落地窗沒有窗簾，外面的燈就是房間的燈</b><div class="pl">她市中心公寓的落地窗前，整片窗上完全沒有窗簾</div></td>
+<td class="meta">站·單手扶物<br><span class="dim">near·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">G3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>新到的貨她一定自己先用一週，這週是這個</b><div class="pl">她公寓的柚木矮櫃旁，新到的貨拆開放在櫃面上</div></td>
+<td class="meta">坐椅·單手持物<br><span class="dim">knee·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">G4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">店內</td>
+<td class="ev"><b>下午約在一間老房子改的咖啡店，棕櫚的影子打在牆上</b><div class="pl">南雅加達一間老房子改的咖啡店，午後，棕櫚的影子落在白牆上</div></td>
+<td class="meta">坐椅·雙手持物<br><span class="dim">near·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">G5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>晚上走回公寓，那條街上的店還開著</b><div class="pl">南雅加達一條晚上還開著幾間店的街，剛下過雨，地是濕的</div></td>
+<td class="meta">走動·空手<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Cheryl Soh 蘇思穎</span><span class="city">新加坡</span><span class="comp">3私1工1外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">C1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">車站機場</td>
+<td class="ev"><b>清晨到樟宜準備出勤，航廈已經有旅客了</b><div class="pl">樟宜機場的航廈走道，清晨，玻璃外停著一架飛機</div><div class="why">探針理由：路人：樟宜航廈，旅客遠距離</div></td>
+<td class="meta">走動·單手持物<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">數人·遠</td></tr><tr class="slot">
+<td class="code">C2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>落地進飯店房間，第一件事是把包頭放下來，再點那款蠟燭</b><div class="pl">一間剛落地的飯店房間，窗簾已經被她拉開，行李攤在地上</div></td>
+<td class="meta">坐床沿·整理頭髮<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">C3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>回新加坡的家，時差還沒調回來，凌晨三點還醒著</b><div class="pl">她新加坡公寓的床上，凌晨三點，整間房只有一盞燈</div></td>
+<td class="meta">半躺·空手<br><span class="dim">floor·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">C4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">浴室</td>
+<td class="ev"><b>在家的日子完全不化妝，這天早上也是</b><div class="pl">她新加坡公寓的浴室，早上，檯面上只有一瓶卸妝和那款蠟燭</div></td>
+<td class="meta">站·單手扶物<br><span class="dim">selfie·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">C5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>在東京那一晚不想待在房間，出去走了一段還開著的街</b><div class="pl">東京一條晚上還開著幾間小店的街，招牌的光落在路面上</div></td>
+<td class="meta">站·空手<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Emma Kao 高映真</span><span class="city">台南</span><span class="comp">2私1工2外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">E1</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>晚間新聞收播，棚裡其他燈都關了，只剩主播桌上那一盞</b><div class="pl">台南地方台的新聞棚，收播後，棚內其他燈已經關了</div></td>
+<td class="meta">坐椅·單手持物<br><span class="dim">near·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">E2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>回到老公寓，第一件事是把西裝外套掛好，然後才去拿梳妝台第一格的挑染片</b><div class="pl">台南老公寓的梳妝台前，第一格抽屜是開著的</div><div class="why">探針理由：梳妝台——鏡面守則＋雙手整理頭髮</div></td>
+<td class="meta">坐椅·整理頭髮<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">E3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">衣櫃 / 更衣</td>
+<td class="ev"><b>白天翻那一整櫃只在鏡頭前穿的衣服，找下一集要穿的</b><div class="pl">老公寓的衣櫃前，整櫃都是只在鏡頭前穿的衣服</div></td>
+<td class="meta">站·單手扶物<br><span class="dim">knee·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">E4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">陽台 / 頂樓</td>
+<td class="ev"><b>睡不著，上頂樓吹風，洗衣繩上還晾著東西</b><div class="pl">老公寓的頂樓，夜裡，一條洗衣繩還橫在那裡</div></td>
+<td class="meta">倚牆·空手<br><span class="dim">knee·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">E5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">園林 / 戶外自然</td>
+<td class="ev"><b>出差到別的城市，白天有兩個小時是自己的</b><div class="pl">出差那個城市的舊城河堤，白天，對岸是低矮的老房子，堤上這一段沒有別人</div></td>
+<td class="meta">倚牆·單手持物<br><span class="dim">full·背光</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Jia Seo 徐지아</span><span class="city">首爾江南</span><span class="comp">2私1工2外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">J1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>白天在家的全身鏡前看膝蓋，冰敷袋就放在旁邊</b><div class="pl">她家客廳角落的全身鏡前，白天，冰敷袋擱在地板上</div></td>
+<td class="meta">坐地·單手扶物<br><span class="dim">floor·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">J2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">浴室</td>
+<td class="ev"><b>練完之後洗澡，那是她一天真正結束的點</b><div class="pl">她家的浴室，剛練完澡，鏡子上有一層水氣</div><div class="why">探針理由：浴室自拍——鏡面守則最吃重的一格</div></td>
+<td class="meta">站·單手扶物<br><span class="dim">selfie·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">J3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>學生都走了，她把大燈關掉自己再跑一次</b><div class="pl">江南那間練舞室，收工後關了大燈，只剩鏡子旁的一盞，木地板</div></td>
+<td class="meta">站·空手<br><span class="dim">full·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">J4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>教完最後一堂走出來，便利商店外面的座位還有人</b><div class="pl">江南一間便利商店外面的座位，深夜，剛教完課</div></td>
+<td class="meta">坐椅·單手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">J5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>白天在江南街上，她那身穿搭比舞蹈影片還多人看</b><div class="pl">江南一條白天的街，商業大樓的玻璃在她身後</div></td>
+<td class="meta">站·空手<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Miu Shiraishi 白石美羽</span><span class="city">東京中目黑</span><span class="comp">2私1工2外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">M1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">店內</td>
+<td class="ev"><b>營業中，有人為了看她做咖啡在排隊</b><div class="pl">中目黑那間自家烘焙咖啡店的吧檯後面，營業時間，蒸氣正在上來</div><div class="why">探針理由：路人：咖啡店營業中，吧檯另一側有人</div></td>
+<td class="meta">站·操作器具<br><span class="dim">near·窗光側面</span></td>
+<td class="ppl">1-2人·中</td></tr><tr class="slot">
+<td class="code">M2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>下班繞去便利商店買那款布丁，回到公寓坐在地板上吃</b><div class="pl">她那間很小的公寓，所有東西都在地板上，矮桌上放著那款布丁</div></td>
+<td class="meta">坐地·雙手持物<br><span class="dim">floor·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">M3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>白天休假走目黑川那一段，河邊有人在散步</b><div class="pl">中目黑目黑川旁邊的步道，白天，河的另一側是低矮的店</div></td>
+<td class="meta">走動·空手<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">M4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">店內</td>
+<td class="ev"><b>很晚了還是繞進便利商店，冷藏櫃前面站了一下</b><div class="pl">中目黑一間便利商店裡，深夜，她站在冷藏甜點櫃前</div></td>
+<td class="meta">蹲·單手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">M5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">浴室</td>
+<td class="ev"><b>很小的浴室，一天結束</b><div class="pl">她公寓那間很小的浴室，剛洗完，牆是舊的磁磚</div></td>
+<td class="meta">倚牆·單手扶物<br><span class="dim">selfie·單一光源正前</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Peggy Lee 李珮甄</span><span class="city">吉隆坡</span><span class="comp">3私0工2外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">P1</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>房間裡試那雙長靴，牆上還掛著那張車的海報</b><div class="pl">她房間的床邊，牆上掛著一張她那台車的海報，只有床頭一盞燈</div></td>
+<td class="meta">坐床沿·單手扶物<br><span class="dim">knee·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">P2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>週末的車聚，她從高中就跟著跑</b><div class="pl">吉隆坡郊區一場週末車聚的停車場，白天，一排改裝車停在那裡</div><div class="why">探針理由：路人：車聚，數人遠距離＋背光</div></td>
+<td class="meta">倚牆·空手<br><span class="dim">full·背光</span></td>
+<td class="ppl">數人·遠</td></tr><tr class="slot">
+<td class="code">P3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">車內</td>
+<td class="ev"><b>夜衝停在那間固定的加油站，人還坐在駕駛座上</b><div class="pl">她那台車的駕駛座上，停在夜衝固定會停的那間加油站</div></td>
+<td class="meta">坐椅·單手扶物<br><span class="dim">near·多光源</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">P4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">車庫</td>
+<td class="ev"><b>回家前在車庫停一下，引擎蓋開著，她沒打算現在弄</b><div class="pl">她家的車庫，夜裡，一盞工作燈打在打開的引擎蓋上</div></td>
+<td class="meta">倚牆·單手持物<br><span class="dim">knee·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">P5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">衣櫃 / 更衣</td>
+<td class="ev"><b>白天出門前挑鞋，指甲還是留得很短</b><div class="pl">她房間的鞋櫃前，白天，幾雙鞋已經被拿出來排在地上</div></td>
+<td class="meta">蹲·雙手持物<br><span class="dim">floor·窗光側面</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Ruoruo Tang 唐苡若</span><span class="city">成都</span><span class="comp">3私1工1外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">R5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip quota">配額</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>夜裡回到墊子上，只做一個她自己最喜歡的體位</b><div class="pl">夜裡的地墊上，客廳只開了一盞落地燈</div><div class="why">探針理由：low 鏡位＋高難度體位，雙手都不扶——四肢最容易出錯</div></td>
+<td class="meta">坐地·空手<br><span class="dim">low·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">R1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>下午在家的地墊上拉伸，這是她自己的時間</b><div class="pl">她家的地墊上，下午，一整面窗沿著一側牆</div></td>
+<td class="meta">坐地·單手扶物<br><span class="dim">floor·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">R2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>那二十雙襪子每一雙都不一樣，她在挑今天要穿哪一雙</b><div class="pl">地墊旁邊，一整排襪子攤在地板上，沒有兩雙一樣</div></td>
+<td class="meta">跪坐·雙手持物<br><span class="dim">knee·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">R3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>最後一堂課下了，她照慣例把器械再擦一遍</b><div class="pl">她在成都那間只有四台器械的小教室，最後一堂課結束，只剩她一個人</div></td>
+<td class="meta">蹲·單手持物<br><span class="dim">floor·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">R4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>傍晚走去巷子裡那間還開著的茶館</b><div class="pl">成都一條安靜的巷子，傍晚，巷底那間茶館還亮著</div></td>
+<td class="meta">走動·空手<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Somi Oh 吳소미</span><span class="city">釜山</span><span class="comp">2私0工3外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">S1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">市場</td>
+<td class="ev"><b>白天回市場，她從小就在這些攤子之間長大</b><div class="pl">釜山海鮮市場的走道，白天，水箱在兩側</div></td>
+<td class="meta">站·單手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">數人·中</td></tr><tr class="slot probe">
+<td class="code">S2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>深夜的路邊攤，吃之前先撩頭髮到耳後——那是她的招牌鏡頭</b><div class="pl">釜山一個深夜的路邊攤，一張小桌，鍋子的蒸氣在上來</div><div class="why">探針理由：路人：深夜路邊攤＋單一光源＋整理頭髮</div></td>
+<td class="meta">坐椅·整理頭髮<br><span class="dim">near·單一光源正前</span></td>
+<td class="ppl">1-2人·中</td></tr><tr class="slot">
+<td class="code">S3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>吃完宵夜回房間，什麼都不想做</b><div class="pl">她房間的床上，深夜，宵夜的袋子還丟在地上</div></td>
+<td class="meta">半躺·空手<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">S4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>手機相簿滑到底全部都是食物，她自己都笑了</b><div class="pl">她房間的地板上，背靠著床，深夜</div></td>
+<td class="meta">坐地·單手持物<br><span class="dim">floor·多光源</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">S5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">市場</td>
+<td class="ev"><b>遠征到別的城市找吃的，市場白天正熱鬧</b><div class="pl">另一個城市的傳統市場外圍，白天，攤子沿街排開</div></td>
+<td class="meta">走動·雙手持物<br><span class="dim">full·背光</span></td>
+<td class="ppl">數人·遠</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Sydney Leong 梁欣妮</span><span class="city">檳城喬治市</span><span class="comp">3私1工1外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">D1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>下午最熱的時候，三台風扇全開，她還在包裝</b><div class="pl">喬治市老屋一樓的烘焙工作室，下午最熱的時候，三台風扇都開著</div></td>
+<td class="meta">坐椅·雙手持物<br><span class="dim">knee·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">D2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip quota">配額</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>收工上樓，圍裙還沒脫，麵粉還沾在鎖骨上</b><div class="pl">老屋樓上，收工後的午後，百葉窗的影子橫在牆上</div></td>
+<td class="meta">坐椅·空手<br><span class="dim">near·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">D3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">廚房</td>
+<td class="ev"><b>每天四點開烤箱，風雨無阻——所以三點半就得起來</b><div class="pl">老屋樓上的小廚房，凌晨三點半，只開了流理台上方那一盞</div></td>
+<td class="meta">站·單手持物<br><span class="dim">near·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">D4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">老街</td>
+<td class="ev"><b>白天走出去買料，喬治市老街上都是人</b><div class="pl">喬治市一條白天的老街，五腳基與店屋的騎樓連成一排</div><div class="why">探針理由：路人：喬治市老街，觀光客中距離</div></td>
+<td class="meta">走動·單手持物<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">數人·中</td></tr><tr class="slot">
+<td class="code">D5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>今天烤壞的那盤，她自己吃掉</b><div class="pl">老屋樓上的矮桌前，夜裡，今天失敗的那一盤放在桌上</div></td>
+<td class="meta">跪坐·雙手持物<br><span class="dim">floor·單一光源側前</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Tammy Chou 周語彤</span><span class="city">台北五分埔</span><span class="comp">3私1工1外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">T1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>清晨去五分埔批貨，那個時間店家正在拉開鐵門</b><div class="pl">五分埔一條清晨的巷子，店家正在拉開鐵門，推車堆著衣服</div><div class="why">探針理由：路人：五分埔清晨，數人＋多光源</div></td>
+<td class="meta">走動·雙手持物<br><span class="dim">full·多光源</span></td>
+<td class="ppl">數人·中</td></tr><tr class="slot">
+<td class="code">T2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>同一件衣服她會拍三個角度，自己決定哪張上架</b><div class="pl">樓上她住的地方，白天，地板上散著今天還沒收的衣服</div></td>
+<td class="meta">站·整理衣物<br><span class="dim">knee·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">T3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">浴室</td>
+<td class="ev"><b>剛下播，妝還在臉上，化妝品攤了一檯面</b><div class="pl">樓上的浴室，剛下播，檯面上化妝品攤開沒收</div></td>
+<td class="meta">站·單手扶物<br><span class="dim">selfie·環境均勻</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">T4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>八點準時開播，倉庫的衣架陣就在她後面</b><div class="pl">樓下的直播間，補光燈架著，後面是倉庫的衣架陣</div></td>
+<td class="meta">坐椅·雙手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">T5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>播完上樓，紙箱還沒拆完就先坐下來了</b><div class="pl">樓上房間的床邊，紙箱還沒拆完，床上堆著剛到的貨</div></td>
+<td class="meta">坐床沿·空手<br><span class="dim">near·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Wanyin Jiang 江晚吟</span><span class="city">蘇州</span><span class="comp">3私1工1外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">Q1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">園林 / 戶外自然</td>
+<td class="ev"><b>下雨天她一定去園林走一趟，那天遊客不多但還是有</b><div class="pl">蘇州一座園林的迴廊下，下雨天，水面有雨點，這個時間沒有別人</div></td>
+<td class="meta">站·單手持物<br><span class="dim">full·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Q2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip quota">配額</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>夜裡的老宅臥房，一顆一顆解盤扣</b><div class="pl">蘇州老宅的臥房，木格窗，一張老木床，只有一盞燈</div></td>
+<td class="meta">站·整理衣物<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Q3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>早上自己盤髮，這件事她從不假手他人</b><div class="pl">老宅臥房的梳妝檯前，早上，量身的軟尺掛在椅背上</div></td>
+<td class="meta">坐椅·整理頭髮<br><span class="dim">near·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Q4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>客人走了，長桌上還攤著今天挑的料</b><div class="pl">老宅一樓的旗袍店，打烊後，料子攤在長桌上，木格窗外是天井</div></td>
+<td class="meta">坐椅·雙手持物<br><span class="dim">knee·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">Q5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>夜裡在老木床上，一天結束</b><div class="pl">老宅的老木床上，夜裡，床帳的一邊垂下來</div><div class="why">探針理由：low 鏡位＋半躺＋床帳遮光</div></td>
+<td class="meta">半躺·空手<br><span class="dim">low·單一光源側前</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Wendy Yeo 楊薇伊</span><span class="city">新加坡丹戎巴葛</span><span class="comp">3私1工1外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">W1</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>打烊後她一定自己擦完最後一輪杯子，冰球也是自己切的</b><div class="pl">丹戎巴葛那間十六個位子的酒吧，打烊後，只剩吧檯上那一盞燈</div><div class="why">探針理由：玻璃杯＋雙手持物＋臉半明半暗</div></td>
+<td class="meta">站·雙手持物<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">W2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>白天窗簾拉到底，這是她的睡覺時間</b><div class="pl">她公寓的臥室，白天，窗簾拉到底，只有縫隙漏進來的一線光</div></td>
+<td class="meta">半躺·空手<br><span class="dim">floor·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">W3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>起來以後在客廳自己調一杯，不為了誰</b><div class="pl">她公寓的客廳，夜裡，一盞黃銅落地燈，矮桌上一杯自己調的</div></td>
+<td class="meta">坐椅·單手持物<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">W4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">衣櫃 / 更衣</td>
+<td class="ev"><b>白天出門前把襯衫的袖子捲好，三指，每次都一樣</b><div class="pl">她公寓的衣櫃前，白天，一整排深色襯衫</div></td>
+<td class="meta">站·整理衣物<br><span class="dim">near·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">W5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">店內</td>
+<td class="ev"><b>週日不上班，去東海岸那間開到很晚的老咖啡攤</b><div class="pl">東海岸一間開到很晚的老咖啡攤，週日入夜，塑膠椅與鐵桌</div></td>
+<td class="meta">坐椅·單手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Yerin Han 韓예린</span><span class="city">首爾</span><span class="comp">2私1工2外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">Y1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>白天在練習場帶課，旁邊的打位也有人在打</b><div class="pl">首爾市區室內練習場她那個固定打位，白天上課中，隔壁打位也有人</div><div class="why">探針理由：路人：練習場隔壁打位＋雙手握桿</div></td>
+<td class="meta">站·雙手持物<br><span class="dim">knee·環境均勻</span></td>
+<td class="ppl">1-2人·遠</td></tr><tr class="slot">
+<td class="code">Y2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>教完課回公寓，球具袋就靠在牆邊沒收</b><div class="pl">她首爾公寓的客廳，夜裡，球具袋靠在牆邊，只開了一盞落地燈</div></td>
+<td class="meta">半躺·單手扶物<br><span class="dim">floor·單一光源側前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Y3</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>睡前那三罐防曬排在床頭櫃上，明天還是要補</b><div class="pl">她公寓的床邊，夜裡，床頭櫃上排著三罐防曬</div></td>
+<td class="meta">坐床沿·單手持物<br><span class="dim">near·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Y4</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">車內</td>
+<td class="ev"><b>下課後去市區那間運動用品店，白天門口一直有人進出</b><div class="pl">她自己那台車的駕駛座，白天，正要開去球場，後座放著球具袋</div></td>
+<td class="meta">坐椅·單手扶物<br><span class="dim">near·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Y5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">園林 / 戶外自然</td>
+<td class="ev"><b>週末真的上球場那天，開球前在果嶺邊等</b><div class="pl">週末的球場，開球前，果嶺那一側的草坡連到遠處的樹線</div></td>
+<td class="meta">站·單手持物<br><span class="dim">full·環境均勻</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Zhiyi Shen 沈知意</span><span class="city">上海陸家嘴</span><span class="comp">4私0工1外 · 2日3夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot probe">
+<td class="code">Z1</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip quota">配額</span></td>
+<td class="fam">玄關</td>
+<td class="ev"><b>十一點多進門，只脫外套，其他的等一下再說</b><div class="pl">她公寓的玄關，剛進門，高跟鞋已經在旁邊排成一列</div><div class="why">探針理由：玄關：外套搭在手上＋還拿著包，四肢負載最重</div></td>
+<td class="meta">站·單手持物<br><span class="dim">knee·單一光源正前</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Z2</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>夜深了坐在落地窗前，外面的塔還亮著</b><div class="pl">她公寓的落地窗前，深夜，陸家嘴的塔還亮著</div></td>
+<td class="meta">坐地·空手<br><span class="dim">floor·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Z3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">衣櫃 / 更衣</td>
+<td class="ev"><b>週末白天整理那排高跟鞋，五雙裡她只常穿兩雙</b><div class="pl">她公寓的衣帽間，白天，一排深色西裝外套與襯衫，地上五雙高跟鞋</div></td>
+<td class="meta">蹲·雙手持物<br><span class="dim">floor·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Z4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">街道</td>
+<td class="ev"><b>十一點下樓，大樓外面還有人在等車</b><div class="pl">陸家嘴她那棟辦公大樓外面，十一點，玻璃帷幕在她上方還亮著</div></td>
+<td class="meta">站·單手持物<br><span class="dim">full·多光源</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">Z5</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>出差住的飯店，白天有半天不用開會</b><div class="pl">出差飯店的房間，白天，窗簾拉開，桌上放著還沒收的資料</div></td>
+<td class="meta">坐椅·單手持物<br><span class="dim">knee·窗光側面</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section><section class="p">
+<h2><span class="nm">Zoey Yeh 葉芷妍</span><span class="city">宜蘭</span><span class="comp">3私1工1外 · 3日2夜</span></h2>
+<div class="tw"><table><thead><tr><th>格</th><th>時</th><th>類</th><th>場景族</th><th>事件與場域</th><th>姿勢 · 鏡位</th><th>路人</th></tr></thead>
+<tbody><tr class="slot">
+<td class="code">O1</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip work">工作</span></td>
+<td class="fam">工作場域</td>
+<td class="ev"><b>下雨天不營業，她在門口貼紙條</b><div class="pl">宜蘭老屋一樓的花店，下雨天，門關著，她正在門上貼紙條</div></td>
+<td class="meta">站·雙手持物<br><span class="dim">near·背光</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">O2</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">浴室</td>
+<td class="ev"><b>洗完澡上樓，濕頭髮還貼在鎖骨上</b><div class="pl">老屋二樓的浴室，白天，舊磁磚，高窗的光從一側進來</div></td>
+<td class="meta">倚牆·單手扶物<br><span class="dim">selfie·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot">
+<td class="code">O3</td>
+<td><span class="chip day">日</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">客廳</td>
+<td class="ev"><b>雨天樓上把窗開著，那隻不知道誰的貓在地板上</b><div class="pl">老屋二樓的木地板房間，下雨天，窗開著，一隻貓趴在旁邊</div></td>
+<td class="meta">坐地·空手<br><span class="dim">floor·窗光側面</span></td>
+<td class="ppl">—</td></tr><tr class="slot probe">
+<td class="code">O4</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip out">外出</span></td>
+<td class="fam">老街</td>
+<td class="ev"><b>雨停了走去鎮上的雜貨店，屋簷下還有人在躲</b><div class="pl">宜蘭小鎮一間老雜貨店的屋簷下，雨剛停，地上還有水窪</div><div class="why">探針理由：路人：雨後屋簷下，1-2 人中距離</div></td>
+<td class="meta">站·單手持物<br><span class="dim">full·單一光源側前</span></td>
+<td class="ppl">1-2人·中</td></tr><tr class="slot">
+<td class="code">O5</td>
+<td><span class="chip night">夜</span></td>
+<td><span class="chip priv">私下</span></td>
+<td class="fam">臥室</td>
+<td class="ev"><b>夜裡樓上只開一盞，她就這樣待著</b><div class="pl">老屋二樓她睡的房間，夜裡，只開了床邊那一盞</div></td>
+<td class="meta">半躺·空手<br><span class="dim">near·單一光源側前</span></td>
+<td class="ppl">—</td></tr></tbody></table></div></section>
+<footer>依 PERSONA_CANON.md 原則二，工作場域每位至多一格。<br>
+每一格的動作、服裝、光、表情都可回溯到該位人設 character.md 的哪一句，出處寫在 <code>plan/daily_v5/specs/</code> 的中文規劃稿裡。</footer>
