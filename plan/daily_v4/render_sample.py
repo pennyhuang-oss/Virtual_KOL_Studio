@@ -119,9 +119,16 @@ B=[f'''<div class="wrap"><header>
 <code>content_style.md</code>、<code>profile.json</code>。daily_v2 與 v3 一筆都沒讀。</p>
 </header>
 
+<h2 class="sec">場域配額</h2>
+<p class="sec-note">先前的版本把「支柱」當成「場域」在排，5 格裡有 3 格在吧檯或店門口＝60%，
+違反憲章原則二（高辨識度場景不得成為主支柱、不得超過 25%）。改成硬規則：</p>
+<div class="tw"><table><thead><tr><th>場域</th><th>格數</th><th>依據</th></tr></thead><tbody>'''
++''.join(f'<tr><td class="k">{esc(a)}</td><td class="new">{esc(b)}</td><td class="old">{esc(c)}</td></tr>'
+         for a,b,c in d["alloc_rule"])
++'''</tbody></table></div>
+
 <h2 class="sec">她的五格</h2>
-<p class="sec-note">格數與支柱照 <code>profile.json</code> 的比重分：私下 30% 給 2 格，
-吧檯 25%、穿搭 15%、晨間 15% 各 1 格。每一項設定後面標的是它的出處。</p>''']
+<p class="sec-note">每一項設定後面標的是它的出處。</p>''']
 
 for s in d["slots"]:
     B.append(f'''<div class="shot"><div class="shot-head">
