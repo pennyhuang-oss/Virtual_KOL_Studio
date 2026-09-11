@@ -1213,6 +1213,409 @@
     "V_SELFIE",
     "V_SIT"
    ]
+  },
+  {
+   "id": "tp-arcade-day",
+   "city": "Taipei",
+   "name": "the arcade walkway under an old apartment block",
+   "detail": "tiled columns, a shuttered unit and the walkway running back into shade",
+   "publicness": "busy",
+   "crowd": "office workers in short sleeves",
+   "dress": [
+    "market_day",
+    "street_night"
+   ],
+   "light": [
+    "D_ARCADE",
+    "D_TUNNEL_MOUTH"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "tp-bookshop-window",
+   "city": "Taipei",
+   "name": "a bookshop's window bay in the afternoon",
+   "detail": "a reading ledge against the glass and shelves running back into the dim shop",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "tp-banyan-path",
+   "city": "Taipei",
+   "name": "a banyan-shaded path in a park",
+   "detail": "aerial roots hanging down and the path behind her in deep green shade",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_TREE_SHAFT",
+    "D_OVERCAST_DARK_BG"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sg-fivefoot-day",
+   "city": "Singapore",
+   "name": "a shophouse five-foot way at midday",
+   "detail": "painted columns, mosaic floor tiles and the covered walkway dark behind her",
+   "publicness": "busy",
+   "crowd": "office workers with lanyards",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_ARCADE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sg-conservatory",
+   "city": "Singapore",
+   "name": "a glasshouse planting room in the afternoon",
+   "detail": "a gravel path between dense planting, the far end of the house in shadow",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "resort"
+   ],
+   "light": [
+    "D_TREE_SHAFT",
+    "D_OVERCAST_DARK_BG"
+   ],
+   "views": [
+    "V_FULL",
+    "V_SIT",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "sg-underpass",
+   "city": "Singapore",
+   "name": "the mouth of a pedestrian underpass",
+   "detail": "tiled walls, a painted stripe along them and the tunnel running back dark",
+   "publicness": "quiet",
+   "dress": [
+    "street_night",
+    "market_day"
+   ],
+   "light": [
+    "D_TUNNEL_MOUTH"
+   ],
+   "views": [
+    "V_FULL",
+    "V_LOW",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "sl-hanok-eaves",
+   "city": "Seoul",
+   "name": "the eaves of a hanok courtyard in the afternoon",
+   "detail": "timber posts, a paper-screened door and the interior behind it dark",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "D_ARCADE",
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_SIT",
+    "V_FULL",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "sl-cafe-window-day",
+   "city": "Seoul",
+   "name": "a corner cafe's window table in the afternoon",
+   "detail": "a marble top against the glass and the room behind her falling into shade",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual"
+   ],
+   "light": [
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "sh-longtang",
+   "city": "Shanghai",
+   "name": "a longtang alley entrance in the afternoon",
+   "detail": "a brick archway, laundry poles above and the alley behind running into shadow",
+   "publicness": "busy",
+   "crowd": "residents in light shirts",
+   "dress": [
+    "market_day",
+    "street_night"
+   ],
+   "light": [
+    "D_TUNNEL_MOUTH",
+    "D_ARCADE"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "sh-gallery-day",
+   "city": "Shanghai",
+   "name": "a gallery's tall window bay",
+   "detail": "a polished concrete floor and the exhibition room behind her unlit",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "glam_night"
+   ],
+   "light": [
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_FULL",
+    "V_SELFIE",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "sh-plane-shade",
+   "city": "Shanghai",
+   "name": "a plane-tree pavement in the old concession at midday",
+   "detail": "dappled shade on the flagstones and a dark garden wall running behind her",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_TREE_SHAFT",
+    "D_OVERCAST_DARK_BG"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "bs-breakwater",
+   "city": "Busan",
+   "name": "a breakwater walkway on an overcast afternoon",
+   "detail": "stacked concrete blocks and a dark headland filling the frame behind her",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "resort"
+   ],
+   "light": [
+    "D_OVERCAST_DARK_BG"
+   ],
+   "views": [
+    "V_FULL",
+    "V_LOW",
+    "V_BACK"
+   ]
+  },
+  {
+   "id": "jk-kiosk-day",
+   "city": "Jakarta",
+   "name": "a corner kiosk under a wide awning at midday",
+   "detail": "jars on the counter, a stool in the shade and the shop interior dark behind",
+   "publicness": "busy",
+   "crowd": "neighbours in sandals and printed shirts",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_ARCADE"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "kl-covered-market-day",
+   "city": "Kuala Lumpur",
+   "name": "a covered market hall in the morning",
+   "detail": "steel trusses overhead, produce crates and the far aisles in shadow",
+   "publicness": "busy",
+   "crowd": "shoppers with woven baskets",
+   "dress": [
+    "market_day"
+   ],
+   "light": [
+    "D_ARCADE",
+    "D_TUNNEL_MOUTH"
+   ],
+   "views": [
+    "V_FULL",
+    "V_SELFIE"
+   ]
+  },
+  {
+   "id": "yl-forest-trail",
+   "city": "Yilan",
+   "name": "a cedar forest boardwalk in the afternoon",
+   "detail": "tall dark trunks either side and the trail behind her deep in shade",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_TREE_SHAFT"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "yl-old-shop-window",
+   "city": "Yilan",
+   "name": "an old grocery's window counter in the morning",
+   "detail": "glass jars along the sill and the shop behind her unlit",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "tn-temple-arcade",
+   "city": "Tainan",
+   "name": "the covered side arcade of an old temple",
+   "detail": "carved timber columns and the hall behind her deep in shadow",
+   "publicness": "quiet",
+   "dress": [
+    "market_day"
+   ],
+   "light": [
+    "D_ARCADE",
+    "D_TUNNEL_MOUTH"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "pg-shophouse-window",
+   "city": "George Town",
+   "name": "a shophouse cafe's shuttered window bay",
+   "detail": "louvred shutters folded back and the room behind her in shade",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual",
+    "market_day"
+   ],
+   "light": [
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT",
+    "V_FULL"
+   ]
+  },
+  {
+   "id": "sz-covered-bridge",
+   "city": "Suzhou",
+   "name": "a covered stone bridge over the canal",
+   "detail": "a timber roof over the span and the walkway running back into shade",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_ARCADE",
+    "D_TUNNEL_MOUTH"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_LOW"
+   ]
+  },
+  {
+   "id": "cd-bamboo-path",
+   "city": "Chengdu",
+   "name": "a bamboo grove path in the afternoon",
+   "detail": "dense culms either side and the path behind her in green shade",
+   "publicness": "quiet",
+   "dress": [
+    "market_day",
+    "shop_casual"
+   ],
+   "light": [
+    "D_TREE_SHAFT"
+   ],
+   "views": [
+    "V_FULL",
+    "V_BACK",
+    "V_SIT"
+   ]
+  },
+  {
+   "id": "tk-kissa-window",
+   "city": "Tokyo",
+   "name": "a coffee house window counter in the afternoon",
+   "detail": "a wooden ledge along the glass and the room behind her low-lit",
+   "publicness": "quiet",
+   "dress": [
+    "shop_casual"
+   ],
+   "light": [
+    "D_WINDOW_IN"
+   ],
+   "views": [
+    "V_SELFIE",
+    "V_SIT"
+   ]
   }
  ],
  "people_rule": {

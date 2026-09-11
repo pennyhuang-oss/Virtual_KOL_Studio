@@ -84,6 +84,11 @@ def assign():
     expr_count=Counter(); view_count=Counter(); hair_count=Counter(); micro_count=Counter()
     # 鏡位目標配額：已驗證的優先，新鏡位各給 4 格
     quota = {"V_SELFIE":11,"V_FULL":16,"V_LOW":4,"V_BACK":4,"V_SIT":4}
+    # 日／夜各半 —— 使用者要求。判準不是白天晚上，是「她比背景亮」，
+    # 所以白天那一組每一句都明寫背景比她暗（見 vocab._light_principle）。
+    total = sum(SHORT.values())
+    time_quota = {"day": (total+1)//2, "night": total//2}
+    time_count = Counter()
     rows=[]
     # 輪替配發：先每人一張，再第二張…… 避免需求大的人設把該城市的場景吃光，
     # 讓只缺 1 張的人設也拿得到（先前 persona-major 的順序會餓死他們）
@@ -92,6 +97,10 @@ def assign():
     for pid,k in jobs:
         cands = [i for i in by_city[CITY[pid]] if i not in used_scene]
         random.shuffle(cands)
+        # 日／夜配額要驅動「選哪個場景」，不能只在場景選定後才挑光 ——
+        # 否則抽到只有夜景光的場景時配額根本補不回來
+        want = max(time_quota, key=lambda t: time_quota[t]-time_count[t])
+        cands.sort(key=lambda i: 0 if any(V["light"][L]["time"]==want for L in scenes[i]["light"]) else 1)
         if True:
             placed=False
             for sid in list(cands):
@@ -108,9 +117,11 @@ def assign():
                     regs = [r for r in sc["dress"] if r in OF]
                     pool = [o for r in regs for o in OF[r] if o["text"] not in used_outfit]
                     if not pool: continue
+                    # 先挑還沒滿額的時段，滿了才放寬
                     lights = sc["light"][:]
                     random.shuffle(lights)
-                    light = lights[0]
+                    under_t = [L for L in lights if time_count[V["light"][L]["time"]] < time_quota[V["light"][L]["time"]]]
+                    light = (under_t or lights)[0]
                     budget = V["view"][view]["hands_free"]
                     fit = [q for q in poses if pose_cost(q) <= budget]
                     if not fit: continue
@@ -129,6 +140,7 @@ def assign():
                                  "register":[r for r in regs if any(o["text"]==outfit["text"] for o in OF[r])][0]})
                     used_scene.add(sid); used_pose.add(pose); used_outfit.add(outfit["text"])
                     expr_count[expr]+=1; view_count[view]+=1; hair_count[hair]+=1; micro_count[micro]+=1
+                    time_count[V["light"][light]["time"]]+=1
                     cands.remove(sid); placed=True; break
                 if placed: break
             if not placed:
@@ -209,6 +221,7 @@ if __name__=="__main__":
     print(f"產出 {len(out)} 格 | 字數 min={min(lens)} max={max(lens)} avg={sum(lens)//len(lens)}")
     print("鏡位：",dict(Counter(x['view'] for x in out)))
     print("打光：",dict(Counter(x['light'] for x in out)))
+    print("日／夜：",dict(Counter(V["light"][x['light']]["time"] for x in out)))
     print("路人：",dict(Counter(x['people'] for x in out)))
     print("露出：",dict(Counter(x['tier'] for x in out)))
     print("表情最多重複：",Counter(x['expr'] for x in out).most_common(1)[0][1],"次")

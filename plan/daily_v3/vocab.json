@@ -8,12 +8,12 @@
   },
   "L_COUNTER_DAY": {
    "retention": "100% n=2 (K15)",
-   "time": "day_interior",
+   "time": "day",
    "text": "Daylight through the front window together with the counter's own strip lighting, both coming from in front of her onto her face, the back of the room falling darker."
   },
   "L_SHOPFRONT": {
    "retention": "75% n=4 (K5)",
-   "time": "evening",
+   "time": "night",
    "text": "Warm light spilling out of the shopfronts in front of her, catching her face and the front of her clothes, the street behind her going dark."
   },
   "L_BLUE_SIGN": {
@@ -28,9 +28,39 @@
   },
   "L_LOW_SUN": {
    "retention": "67% n=3 (K6)",
-   "time": "late_afternoon",
+   "time": "day",
    "open_sky_only": true,
    "text": "Late afternoon sun low and in front of her, warm across her face, her own long shadow running back behind her and the far end of the street already in shade."
+  },
+  "D_ARCADE": {
+   "retention": "new · 同族推論",
+   "time": "day",
+   "open_sky_only": false,
+   "text": "Daylight from the open side of the walkway falling across her face while the depth of the arcade behind her drops into shade, so she is clearly the brightest thing in the frame and the background is darker than she is."
+  },
+  "D_TREE_SHAFT": {
+   "retention": "new · 同族推論",
+   "time": "day",
+   "open_sky_only": true,
+   "text": "One shaft of sunlight has come through the canopy and landed on her face and shoulders, everything around and behind her still in the deep shade of the trees, so the background reads darker than she does."
+  },
+  "D_TUNNEL_MOUTH": {
+   "retention": "new · 同族推論",
+   "time": "day",
+   "open_sky_only": false,
+   "text": "She is facing the bright opening so the daylight comes straight onto her face, and the passage behind her runs back into darkness."
+  },
+  "D_WINDOW_IN": {
+   "retention": "100% n=2 (K15 同型)",
+   "time": "day",
+   "open_sky_only": false,
+   "text": "Daylight coming in through the window in front of her lands on her face and the front of her clothes, while the inside of the room behind her falls away into shadow."
+  },
+  "D_OVERCAST_DARK_BG": {
+   "retention": "100% n=1 (K4)",
+   "time": "day",
+   "open_sky_only": true,
+   "text": "Soft overcast daylight from in front of her, even and flattering on her face, framed so that what sits behind her is dark stone, dark foliage or a shaded facade rather than open sky."
   }
  },
  "_light_banned": {
@@ -159,5 +189,6 @@
   "resort": "度假：泳裝外搭、亞麻、罩衫",
   "market_day": "白天市街：短版＋長褲或長裙，不露腰以下"
  },
- "_tier_note": "只用 A 與 C 級（留存 55% / 51%）；B 級（都會上班、針織慵懶）37% 全數不用。"
+ "_tier_note": "只用 A 與 C 級（留存 55% / 51%）；B 級（都會上班、針織慵懶）37% 全數不用。",
+ "_light_principle": "判準不是白天或晚上，是「她比背景亮」。K9 失敗（0%）的原因是天空比她亮，不是因為白天；K15 與 K4 都是白天而且 100%。所以白天那一組每一句都必須明寫背景比她暗。"
 }
