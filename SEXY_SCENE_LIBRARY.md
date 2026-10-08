@@ -449,6 +449,41 @@ the edge of any device.
 
 ---
 
+#### 3-D. 「夜晚」不能只寫 `late at night`，黑暗本身要被當成生成目標來描述（2026-08-12 新增，實測結論）
+
+Iris Chen `daily_sexy_night_v3_implied` 批次實測：prompt 寫了 `late at night`、也寫了具名的暖色檯燈，生成結果仍是**白天感的平光**——因為模型只把 `late at night` 當成氛圍形容詞，沒有理由把任何區域壓黑。
+
+**有效的寫法是把黑暗寫成一個要生成的具體物件**，同一張重生時改寫為以下要素後立刻正確：
+
+```
+night interior, the main ceiling light switched off and the room in darkness,
+the only two light sources in the room are [具名光源 A] and [具名光源 B],
+... the entire left half of the room and the ceiling fall three stops darker and
+crush to near black with no detail, deep pools of darkness between the two light
+sources, no daylight anywhere in frame
+```
+
+四個關鍵句：**① 主燈是關的 ② 全室只有哪幾個光源（數量要講死）③ 哪一大塊暗幾級、壓死到沒有細節 ④ `no daylight anywhere in frame`**。這是 3-A 第④段「曝光取捨」在夜景的專用加強版——夜景要犧牲的不是一個小角落，是畫面的一大半。
+
+**⚠️ 補充（2026-08-12 同日，第二次實測）：夜景指令必須放在 prompt 的最前面，不能放結尾。** Iris Chen `daily_sexy_night_v4_bolder` 批次為了加大服裝尺度，`SUBJECT`／`OUTFIT` 段落寫得比平常長很多，結果 5 張裡有 3 張夜感失守（整體偏亮、無壓黑區，其中一張甚至直接生出窗外日光，明確違反同一個 prompt 裡寫的 `no daylight anywhere in frame`）。**前段描述越長，尾端的光線段權重就越低。** 把整段夜景描述搬到人物描述之前開頭第一句，重生即完全正確：
+
+```
+A photo taken late at night in a dark bedroom with the ceiling light switched off.
+The room is genuinely dark: the only light in the entire frame is [具名光源].
+Everything more than a metre from that lamp falls three stops darker and crushes to
+near black with no detail ... there is no daylight anywhere in frame.
+SUBJECT: ...（人物描述接在後面）
+```
+
+**通則：任何一個「模型容易忽略」的硬性條件，都應該放在 prompt 開頭，而不是塞在結尾的樣式字串旁邊。**
+
+**另一個相關的坑：不要讓「壓黑」寫成模型可以照字面畫的幾何區域。** 同批寫 `the left half of the room crushes to near black` 時，模型真的生出「畫面左側三分之一是一整條純黑色塊」＋一個亂生的 ⚠ 圖示，變成構圖 bug。改寫成「房間的角落、天花板與她身後的縱深沒入陰影」這種**依附在實體空間上的描述**，並加上下面這串防呆，即可避免：
+
+```
+a single full-frame photo, subject centred and filling the frame edge to edge,
+no black bars, no borders, no letterboxing, no screen UI or icons anywhere
+```
+
 ### 4. 背景場景具體度
 避免「乾淨、對稱、沒有雜物」的背景，主動寫入生活感細節（皺褶床單、地上的充電線、喝到一半的水瓶、隨手放的手機），而不是只寫地點名稱。
 
@@ -558,6 +593,65 @@ hand connects to one of her own arms.
 - 背景物件是否有明顯的生成錯亂（例如文字亂碼、物體邊緣融合錯誤）
 
 有瑕疵的圖片要在文件中明確標記出來（哪一張、什麼問題），不要因為整體「看起來還可以」就略過細節檢查；如果瑕疵明顯，該張應該重新生成或替換，不要直接送入訓練集。
+
+**10-a. 發現問題之後：什麼可以直接重生，什麼要先問使用者（2026-08-12 新增，使用者明確指示）。**
+
+> **使用者原話（2026-08-12 第一次）**：「以後如果只有環境因素，不一定要直接重新生成，先問過我覺得行不行。」
+>
+> **使用者原話（2026-08-12 第二次，擴大範圍到服裝）**：「如果之後生成到一半，發現只有環境因素**或衣服稍微跟我們要的設定不同**，但表情等其他部分都很正常，你不一定要直接重新生成。可以先讓我看一下，如果我覺得 OK，就不需要重新生成了。」
+
+檢查出來的問題要分成兩類，處置方式完全不同：
+
+| 類別 | 內容 | 處置 |
+|---|---|---|
+| **AI 生成瑕疵** | 手指根數錯誤或融合、肢體扭曲、多餘肢體、拼貼/多格畫面、身分與角色不符、構圖 bug（黑邊、亂生的 UI 圖示）、物件穿模、明顯生成錯亂 | **直接重生**，不必先問。這類畫面本身是壞的，沒有討論空間 |
+| **設定落差**（環境／服裝／道具） | ・**環境**：光線氛圍不對（該是夜晚卻像白天）、時間感不對、背景陳設不夠有生活感、場景質感不符、色調偏差<br>・**服裝**：生成出來的單品跟指定的不完全一樣（指定絲質睡裙生成合身洋裝、指定 babydoll 生成內衣套組、顏色或材質略有出入）<br>・**道具**：指定的小物沒出現或換成別的（指定芒果冰生成炸物） | **不要自動重生。** 先把圖給使用者看，明確說出落差在哪，由他決定要不要重生 |
+
+**判準：畫面本身壞掉了 → 直接重生；畫面是好的，只是跟原本設想的不一樣 → 先問。**
+
+理由：設定落差是「跟原本設想的不一樣」，不是「錯」——生成出來的氛圍或服裝有可能比原本設想的更好，這個判斷屬於使用者，不該由生成端替他決定，也不該為此自動燒 credit。**一張圖同時有兩類問題時以瑕疵優先**：先把瑕疵修好，落差的部分連同新圖一起問。
+
+**⚠️ 但表情不屬於這一類。** 表情跟設定不符（例如指定 E-4 大笑卻生成閉嘴微笑）要**當成瑕疵直接重生**——因為 `EXPRESSION_SYSTEM.md` 的整個目的就是打破「一號表情」，表情生錯等於這張圖沒有達成它存在的理由。使用者原話也明確把表情排除在「先問」之外：「但**表情等其他部分都很正常**，你不一定要直接重新生成」。
+
+（`.claude/workflows/kol_content_qa_pipeline.js` 已依此規則實作：critique 階段把問題分成 `defectIssues` 與 `environmentIssues`，只有前者觸發自動重生；只有環境落差的素材會停在 `awaiting_user_call_on_environment` 狀態，不重生也不歸檔，等使用者判斷。）
+
+**10-b. 檢查方式：要放大裁切看，不能只看縮圖（2026-08-12 新增）。** 手部瑕疵在全圖尺寸下經常看不出來——Iris Chen `daily_sexy_night_v1` 批次那張「手放在抬起的膝蓋上」的沙發照，全圖看完全正常，放大後才發現手指與膝蓋融合、掌腕連接不清。實作方式：生成後用 PIL 對**每一隻入鏡的手**做 2–3 倍放大裁切另存，再用 Read 逐張檢視，數清楚每隻手的手指數。這一步成本極低（本機運算，零 credit），但它是唯一能真正抓到手部瑕疵的方法。
+
+**10-c. 手部瑕疵的已知觸發姿勢與修法（2026-08-12 新增，實測有效）。** 觸發點是**手與自己的身體重疊**——手放在膝蓋上、手貼在大腿上、手環抱小腿，模型在「手」與「皮膚色的身體部位」之間分不出邊界，就會生出融合的手。修法不是重骰，是**改姿勢讓手離開身體**，並在 prompt 明寫：
+
+```
+one hand resting flat and open on [對比色的表面] with all five fingers clearly separated and visible,
+the other arm draped loosely along [支撐物] with that hand hanging free in open air,
+both hands well clear of her legs and body, no hand overlapping her knees,
+anatomically correct hands with exactly five fingers each
+```
+
+重點有兩個：(1) 手要放在**與膚色對比的表面**上（沙發布、床單、白色檯面），不要放在自己的皮膚上；(2) 明寫 `five fingers clearly separated`。Iris 該張用這組措辭重生一次即成功，兩隻手放大檢視皆為正確五指。
+
+> **⚠️ 2026-08-12 同日修正：「讓手懸空」是錯的，已推翻。** 本條原本建議把另一隻手寫成 `hanging free in open air`（理由是背景單純應該最安全）。`daily_sexy_night_v2_lingerie` 批次用這個寫法實測 **2/2 全部失敗**——站姿全身鏡自拍中，垂在身側的手位於畫面下緣、尺寸小，兩張的手指都糊成一片分不出根數。**真正的變因不是背景單純，是這隻手在畫面裡佔多大、離臉多遠。** 修正後的做法二選一，都已實測成功：
+> - **給這隻手一件事做，而且要靠近臉**（撥頭髮、把碎髮塞耳後、手扶鏡框）——手在畫面裡變大，模型畫得出結構
+> - **平放在對比色的實體表面上**（白色洗手檯、床單、桌面），維持 `resting flat and open ... all five fingers clearly separated`
+>
+> 一句話：**手要嘛大、要嘛有支撐面；小又懸空的手一定糊。**
+
+### 10-d. 遮擋式「零裸露」素材的寫法（2026-08-12 新增，5/5 實測成功）
+
+需要做「看起來什麼都沒穿、但實際上完全沒有裸露」的素材時（暗示感最強的一類），**不要在 prompt 裡出現任何裸露字眼**——那既會踩生成平台的審核，也無法控制遮蔽範圍。改用下列兩段式寫法，Iris Chen `daily_sexy_night_v3_implied` 批次 5/5 一次成功、零審核失敗：
+
+**① 獨立一個 `COVERAGE:` 欄位**，把遮蔽邏輯講完整——穿了什麼「隱形的」、被什麼遮住、哪些部位可見、哪些絕對不可見：
+
+```
+COVERAGE: she wears a [與遮蔽物同色] strapless bandeau that is completely hidden behind
+[遮蔽物] and never visible in frame, so the shot reads as if she has nothing on underneath
+while everything below her collarbone stays entirely covered by [遮蔽物] — only her bare
+shoulders, collarbone and arms are visible, no exposed chest, fully SFW
+```
+
+**② 遮蔽物本身寫進 `WARDROBE VISIBLE IN FRAME:`**，當成一件畫面上真正存在的衣服來寫（材質、顏色、怎麼被拿著）。
+
+**已驗證有效的五種遮蔽物**（同一批不要重複用同一招）：厚棉被抱在胸前／**俯臥＋棉被蓋到腰下**（正面完全不入鏡，最安全）／大抱枕抱在身前／泡泡浴的泡沫覆蓋到鎖骨／床單裹身。
+
+**一個實測踩到的細節**：隱形內衣要指定成**與遮蔽物同色**，不要寫「與膚色同色」。當遮蔽物是白色時，膚色內衣的邊緣一旦露出來就會被看成「白布下面還有一層」，反而破壞「什麼都沒穿」的錯覺；同色就算露邊也讀成遮蔽物本身的一部分。
 
 ### 11. 地點要寫「在地質感」，不要點名地標（2026-08-05 新增，實測結論）
 
@@ -682,7 +776,8 @@ hand connects to one of her own arms.
 - [ ] **（2026-08-27 新增，第 22 點，最容易犯）全身／3-4 身是否寫了 50–85mm 與拍攝距離？** 寫 `35mm` 是廣角、會讓全身變形，一律退回
 - [ ] **（2026-08-27 新增，第 22 點）站姿是否用了顯腿長定番**（一腳前伸＋重心後腳＋一手插腰／撥髮＋身體 3/4 側）**、構圖是否腳在下 1/3、上方留白？**
 - [ ] **（2026-08-27 新增，第 22 點）表情與姿勢是否寫成同一個連續動作，而不是兩個獨立段落？** 分兩段寫模型會各吃一半，拼出動作與表情不一致的畫面
-- [ ] **（2026-07-30 新增）生成後是否逐張實際檢查手部/肢體/鏡頭透視等 AI 瑕疵**，不是只看大方向像不像——見上方第 10 點
+- [ ] **（2026-08-12 新增，使用者明確指示）發現問題後有沒有先分類再處置**：AI 瑕疵（手指/肢體/拼貼/身分/構圖 bug）直接重生；**只有環境類落差（光線氛圍、時間感、背景質感）時不要自動重生，先把圖給使用者看並說明落差，由他決定**——見上方第 10-a 點
+- [ ] **（2026-07-30 新增，2026-08-12 補強）生成後是否逐張實際檢查手部/肢體/鏡頭透視等 AI 瑕疵**，不是只看大方向像不像——見上方第 10 點。**檢查手部必須放大裁切（2–3 倍）逐隻看，全圖尺寸看不出融合的手**（見 10-b）；若姿勢會讓手與自己的膝蓋/大腿重疊，先照 10-c 改成「手放在對比色表面上、五指分明」再送出
 - [ ] **（2026-08-12 新增，使用者實測反饋，見第 16 點）鏡頭角度是否避開「由下往上」的低角度仰拍**：多鏡頭切換 prompt（如 `kling3_0`）裡每個鏡頭都要逐一檢查，不要為了角度多樣性硬塞這種本身就顯得怪的視角
 - [ ] **（建立實際 Soul 訓練集專用，非探索性預覽）是否用 Reference Element 錨定身分，而不是每張獨立文字生成**：2026-07-25 Vicky Lin 案例發現，用同一組文字 prompt 各自獨立呼叫 8 次生成（無身分錨點），每次生成模型都會重新「想像」一個符合描述但**不是同一個人**的臉/身形——8 張圖風格看起來一致，但實際上是 8 個不同的人，不是同一人的 8 個角度。若把這種身分不一致的圖直接送進 Soul 訓練，訓練結果會是多人特徵的平均/混合，而非使用者想要的單一穩定身分。**正確流程**：(1) 先生成或從既有圖中選出**一張**使用者核准的參考圖；(2) 用 `media_upload` → PUT 位元組 → `media_confirm` → `show_reference_elements(action='create')` 把這張圖轉成可重複使用的 Reference Element，取得 `element_id`；(3) 之後每張訓練圖的 prompt 都內嵌 `<<<element_id>>>` 取代文字描述五官/身形，只變化角度、景別、姿勢、場景、穿搭——這樣後端會把同一張參考圖直接注入生成，確保臉部/身形真正共享同一身分。此流程適用於**任何角色**建立正式 Soul 訓練集之前，不只是 Vicky Lin 的個案；純探索性的一次性風格預覽（不打算送訓練）則不受此限制。
 
