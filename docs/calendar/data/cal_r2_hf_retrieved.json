@@ -19,7 +19,7 @@
     1152,
     1536
    ],
-   "sha256": "26a4a324cd6f3b02",
+   "sha256": "26a4a324cd6f3b0201698997c047ef3b95495da2306cd773d03715d62cb168f9",
    "bytes": 2062346,
    "local": "raw/identity_check_somi-oh_522e5018.png"
   },
@@ -34,7 +34,7 @@
     1152,
     1536
    ],
-   "sha256": "32b41e2af9e1340f",
+   "sha256": "32b41e2af9e1340fcd9a5fa6961c36da67d4f1431ff4792e12a8a46c11b6f0b9",
    "bytes": 2169268,
    "local": "raw/identity_check_vicky-lin_d7d002ac.png"
   },
@@ -49,7 +49,7 @@
     1152,
     1536
    ],
-   "sha256": "fe0d6a2877433bcd",
+   "sha256": "fe0d6a2877433bcde4d29c0da869645f4fc4adf331f15eb3dee4bb303ba105e2",
    "bytes": 2211047,
    "local": "raw/identity_check_kanon-komori_29e551fc.png"
   },
@@ -64,7 +64,7 @@
     1152,
     1536
    ],
-   "sha256": "39a33497c7501606",
+   "sha256": "39a33497c7501606a075931ad7c5cadb8b4295e972e6e33663ed73b09def3fb7",
    "bytes": 1967637,
    "local": "raw/identity_check_kanon-komori_ecf6739f.png"
   },
@@ -79,7 +79,7 @@
     1152,
     1536
    ],
-   "sha256": "48068ca673cf3a20",
+   "sha256": "48068ca673cf3a2021ae89f47c0f3d115684ec6eac98c0f0a1e2ca91f22c4f62",
    "bytes": 2180978,
    "local": "raw/identity_check_wendy-yeo_6e9f772d.png"
   },
@@ -94,7 +94,7 @@
     1152,
     1536
    ],
-   "sha256": "5f2c02b6f497bbce",
+   "sha256": "5f2c02b6f497bbce8ecc4a01fb50f00adec2a2ee11277eb0afbd1e3a23d04147",
    "bytes": 2223718,
    "local": "raw/identity_check_wendy-yeo_0b64c3a7.png"
   },
@@ -109,7 +109,7 @@
     1152,
     1536
    ],
-   "sha256": "9cef5e3376670a6a",
+   "sha256": "9cef5e3376670a6ad94e21e153f03de1125518843793b14d1fc6c8dd7f7a4e81",
    "bytes": 1818285,
    "local": "raw/identity_check_wendy-yeo_08f16aaa.png"
   },
@@ -124,7 +124,7 @@
     1152,
     1536
    ],
-   "sha256": "3da4e258a426ff2d",
+   "sha256": "3da4e258a426ff2dbf06477ebd14269a636231b2bf120dd776c909fa2069551c",
    "bytes": 1749483,
    "local": "raw/identity_check_kanon-komori_94fd7535.png"
   },
@@ -139,7 +139,7 @@
     1152,
     1536
    ],
-   "sha256": "2da0a2c4ba70b2ea",
+   "sha256": "2da0a2c4ba70b2ea8e14d6b5bfb50a8cb630538e1ef9a46b792d16fb4cacc359",
    "bytes": 2088188,
    "local": "raw/identity_check_vicky-lin_0dee3f04.png"
   },
@@ -154,7 +154,7 @@
     1152,
     1536
    ],
-   "sha256": "6393eefc8f463224",
+   "sha256": "6393eefc8f463224842b3bb8d582cf1d917648aef1db5a57338fc8d5abde1f29",
    "bytes": 2078893,
    "local": "raw/casting_headshot_vicky-lin_4ec53afd.png"
   },
@@ -169,7 +169,7 @@
     1152,
     1536
    ],
-   "sha256": "26b3e8f64cdb3d72",
+   "sha256": "26b3e8f64cdb3d723742fa0216b49b77880589d42fd8f7071e00b0485aade75a",
    "bytes": 1697692,
    "local": "raw/casting_headshot_wendy-yeo_a25d51ef.png"
   },
@@ -184,7 +184,7 @@
     1152,
     1536
    ],
-   "sha256": "9426ffb160b0d789",
+   "sha256": "9426ffb160b0d789cb987b735beab4664fbeee112ec9b2c3b1e18687c5b98477",
    "bytes": 2186226,
    "local": "raw/casting_headshot_ananya-kapoor_edaea5d3.png"
   },
@@ -199,7 +199,7 @@
     1152,
     1536
    ],
-   "sha256": "a8f702cfdda4b0d2",
+   "sha256": "a8f702cfdda4b0d282826d9a761571b1058afbe8920cbfa3fd09f6cc7b54c381",
    "bytes": 1799090,
    "local": "raw/casting_headshot_rainie-hsu_9021734e.png"
   },
@@ -214,7 +214,7 @@
     1152,
     1536
    ],
-   "sha256": "cb330cfb08e6f8e3",
+   "sha256": "cb330cfb08e6f8e3091cf78b5acfe3358436c0d4319301f5c1d2610856abbb7c",
    "bytes": 1950581,
    "local": "raw/casting_headshot_yuna-kim_ec1583f2.png"
   },
@@ -229,7 +229,7 @@
     1152,
     1536
    ],
-   "sha256": "b5fdcdf089e439b5",
+   "sha256": "b5fdcdf089e439b55337d6231e562a369817aa05adae67cb5d206b13910e64d9",
    "bytes": 1941030,
    "local": "raw/casting_headshot_coco-wu_83f0a242.png"
   },
@@ -244,7 +244,7 @@
     1152,
     1536
    ],
-   "sha256": "7aaec57fcc4a6a53",
+   "sha256": "7aaec57fcc4a6a5357ff71e18b8356a0d6c018f5793d3222730d2072030a9aec",
    "bytes": 1607787,
    "local": "raw/casting_headshot_tammy-chou_1843d3de.png"
   },
@@ -259,7 +259,7 @@
     1152,
     1536
    ],
-   "sha256": "dbea37ab8ccb6589",
+   "sha256": "dbea37ab8ccb6589545ee5eb6979ffe4ffb097391432e723a41c748b46976f96",
    "bytes": 1940174,
    "local": "raw/casting_headshot_iris-chen_f7e815ae.png"
   },
@@ -274,7 +274,7 @@
     1152,
     1536
    ],
-   "sha256": "2b63c78399db82a0",
+   "sha256": "2b63c78399db82a0fa06ad18137da017898d1e4bc35a42a489b3f8e11957b3e1",
    "bytes": 1786011,
    "local": "raw/casting_headshot_mia-huang_55e4e154.png"
   },
@@ -289,7 +289,7 @@
     1152,
     1536
    ],
-   "sha256": "863d7cecb757e00f",
+   "sha256": "863d7cecb757e00fd96f863b6a0623d98767669a1193dfd6a7fdaf5c23fcd558",
    "bytes": 1859881,
    "local": "raw/casting_headshot_sophia-tseng_b7de3f95.png"
   },
@@ -304,7 +304,7 @@
     1152,
     1536
    ],
-   "sha256": "57ff4df5d0e172bc",
+   "sha256": "57ff4df5d0e172bc2034120e185f728fd3d699a73911abdeb7e94ac838842e15",
    "bytes": 2048631,
    "local": "raw/casting_headshot_vicky-lin_14d841c1.png"
   },
@@ -319,7 +319,7 @@
     1152,
     1536
    ],
-   "sha256": "6315298cd0472493",
+   "sha256": "6315298cd0472493e998ba049d4555a74446d12304ea9788fdf63d5d01411ba9",
    "bytes": 2095693,
    "local": "raw/casting_headshot_kanon-komori_20402217.png"
   },
@@ -334,7 +334,7 @@
     1152,
     1536
    ],
-   "sha256": "00857bb289898b53",
+   "sha256": "00857bb289898b53b5a61d81857f3bca6774332de38d7771f19743f5efb921b2",
    "bytes": 1902226,
    "local": "raw/casting_headshot_luna-tanaka_abd8b297.png"
   },
@@ -349,7 +349,7 @@
     1152,
     1536
    ],
-   "sha256": "afd69af0539abd08",
+   "sha256": "afd69af0539abd082e854852dad2c2eb4e115ed8ae7dd191eafe0cc173a887f6",
    "bytes": 2086862,
    "local": "raw/casting_headshot_angel-chiu_8ca951a1.png"
   },
@@ -364,7 +364,7 @@
     1152,
     1536
    ],
-   "sha256": "8047055832910913",
+   "sha256": "8047055832910913afbf65b259b589ff0267ce21f66a1da2a1ba87f79a8014f0",
    "bytes": 2003066,
    "local": "raw/casting_headshot_somi-oh_573297d5.png"
   },
@@ -379,7 +379,7 @@
     1152,
     1536
    ],
-   "sha256": "408f29ca3b4723fe",
+   "sha256": "408f29ca3b4723fe892d02fed449cff43b8cb31a47e4d88efc10115610bc1152",
    "bytes": 2082674,
    "local": "raw/casting_headshot_rin-ayase_e3f4b43f.png"
   },
@@ -394,7 +394,7 @@
     1152,
     1536
    ],
-   "sha256": "0686fd5cf69bb077",
+   "sha256": "0686fd5cf69bb077f2f090d5c706a7a473b2746764d21bef731b91ec8e1bdf38",
    "bytes": 2036109,
    "local": "raw/casting_headshot_wendy-yeo_3ae80a53.png"
   },
@@ -409,7 +409,7 @@
     1152,
     1536
    ],
-   "sha256": "85a5d7c7097fb71a",
+   "sha256": "85a5d7c7097fb71a9becb1748f9214713bb39244c6972829e3ef233459d121c8",
    "bytes": 1533067,
    "local": "raw/casting_headshot_wanyin-jiang_6fed8ba7.png"
   },
@@ -423,7 +423,7 @@
     1536,
     2048
    ],
-   "sha256": "a38168cdb57ea16f",
+   "sha256": "a38168cdb57ea16fa4f1bf1212a95b29bc79cf89d436d9efc3e59bc37c3fdc19",
    "bytes": 4117116,
    "local": "raw/daily_v2_angel-chiu_0fa2f505.png",
    "daily140_file": "001.png",
@@ -440,7 +440,7 @@
     1536,
     2048
    ],
-   "sha256": "c35dbb54dd59dfe8",
+   "sha256": "c35dbb54dd59dfe855f4fc805bc3eb45b2595969a3cd090d8b496f363cf202ef",
    "bytes": 3602101,
    "local": "raw/daily_v2_angel-chiu_236c6d10.png",
    "daily140_file": "002.png",
@@ -457,7 +457,7 @@
     1536,
     2048
    ],
-   "sha256": "30ef390d53c3f6c6",
+   "sha256": "30ef390d53c3f6c6722979c59395b3e64ead576befe97a2cd83f27549a421e6b",
    "bytes": 3703622,
    "local": "raw/daily_v2_angel-chiu_080fe64f.png",
    "daily140_file": "003.png",
@@ -474,7 +474,7 @@
     1536,
     2048
    ],
-   "sha256": "b4a2f15899fdf595",
+   "sha256": "b4a2f15899fdf59522e228d6cf23b7b12209f5e9be28910877cf45b975f9006e",
    "bytes": 3835887,
    "local": "raw/daily_v2_angel-chiu_a28ee8ee.png",
    "daily140_file": "004.png",
@@ -491,7 +491,7 @@
     1536,
     2048
    ],
-   "sha256": "2601fb0aa823a82e",
+   "sha256": "2601fb0aa823a82e834a75457ed0d238b0b7eceb104748537c6de13cfb6ea61c",
    "bytes": 3207485,
    "local": "raw/daily_v2_angel-chiu_b07f3fe9.png",
    "daily140_file": "005.png",
@@ -508,7 +508,7 @@
     1536,
     2048
    ],
-   "sha256": "a7d8af7910d58f00",
+   "sha256": "a7d8af7910d58f0062bacd4ac7d00f7a946ccc3953c79a5000595777851a3d64",
    "bytes": 3649529,
    "local": "raw/daily_v2_angel-chiu_94da910b.png",
    "daily140_file": "101.png",
@@ -525,7 +525,7 @@
     1536,
     2048
    ],
-   "sha256": "0943922036ea0e79",
+   "sha256": "0943922036ea0e79c77721b2b15336f483886af4a33d30e613c686d2691eca24",
    "bytes": 3673048,
    "local": "raw/daily_v2_angel-chiu_9653877d.png",
    "daily140_file": "102.png",
@@ -542,7 +542,7 @@
     1536,
     2048
    ],
-   "sha256": "fcdcea7cc4a1f462",
+   "sha256": "fcdcea7cc4a1f4624e0bcdf9cf152608ecee506bcd63d35a1f88df782507d32e",
    "bytes": 4247154,
    "local": "raw/daily_v2_kanon-komori_8e4d02cc.png",
    "daily140_file": "026.png",
@@ -559,7 +559,7 @@
     1536,
     2048
    ],
-   "sha256": "e4bfeac47913edf9",
+   "sha256": "e4bfeac47913edf950e465cd61ec4a1993d0b7debe14c801074052830d6b43f4",
    "bytes": 4178350,
    "local": "raw/daily_v2_kanon-komori_2fa953a1.png",
    "daily140_file": "027.png",
@@ -576,7 +576,7 @@
     1536,
     2048
    ],
-   "sha256": "22573ab02de2b8e0",
+   "sha256": "22573ab02de2b8e012ff36f0a4c4fd95c12bf0a024508064e9f742109f68304e",
    "bytes": 3477180,
    "local": "raw/daily_v2_kanon-komori_06f9c1d5.png",
    "daily140_file": "028.png",
@@ -593,7 +593,7 @@
     1536,
     2048
    ],
-   "sha256": "8f96007959f79fdb",
+   "sha256": "8f96007959f79fdbe8e3cf2e8cd81da952d3ff091bd51f838fe59c4f3daedbbf",
    "bytes": 3303030,
    "local": "raw/daily_v2_kanon-komori_8c3ebdce.png",
    "daily140_file": "029.png",
@@ -610,7 +610,7 @@
     1536,
     2048
    ],
-   "sha256": "edeb0415c662a81b",
+   "sha256": "edeb0415c662a81b328a2b9e009e7c5609768ae4a27afa450f458f35eebd260c",
    "bytes": 3919595,
    "local": "raw/daily_v2_kanon-komori_72d282c7.png",
    "daily140_file": "030.png",
@@ -627,7 +627,7 @@
     1536,
     2048
    ],
-   "sha256": "5b3ae66125c94301",
+   "sha256": "5b3ae66125c943017184b7626c3978e55fdb946904a6ddf86555fd1331615752",
    "bytes": 3190887,
    "local": "raw/daily_v2_kanon-komori_fcac7740.png",
    "daily140_file": "111.png",
@@ -644,7 +644,7 @@
     1536,
     2048
    ],
-   "sha256": "8e5d505df5032744",
+   "sha256": "8e5d505df5032744903b21010d69015d82194d40763ea86b9c553f1f2687d660",
    "bytes": 3571660,
    "local": "raw/daily_v2_kanon-komori_e05794e6.png",
    "daily140_file": "112.png",
@@ -661,7 +661,7 @@
     1536,
     2048
    ],
-   "sha256": "0b9e0d02bee38b2b",
+   "sha256": "0b9e0d02bee38b2b72ea26c689b3f7a384dc0696864a0135d2c4ee2462e7111f",
    "bytes": 3664328,
    "local": "raw/daily_v2_rin-ayase_adcfde8a.png",
    "daily140_file": "051.png",
@@ -678,7 +678,7 @@
     1536,
     2048
    ],
-   "sha256": "ab7cf779f10f2e9c",
+   "sha256": "ab7cf779f10f2e9c6649b36081ee683d4fd1c79f1dac7d4e936494af863ad276",
    "bytes": 3692826,
    "local": "raw/daily_v2_rin-ayase_bd2ff934.png",
    "daily140_file": "052.png",
@@ -695,7 +695,7 @@
     1536,
     2048
    ],
-   "sha256": "a9182db4d0831630",
+   "sha256": "a9182db4d0831630966bb149d509217f0435c102e858eefa5865721dfb51a9fa",
    "bytes": 3315241,
    "local": "raw/daily_v2_rin-ayase_aac89087.png",
    "daily140_file": "053.png",
@@ -712,7 +712,7 @@
     1536,
     2048
    ],
-   "sha256": "f7186b84955028ef",
+   "sha256": "f7186b84955028efea54c2d48f8771fa6fbd147cd0c62b0d289cfe2fbeceb55f",
    "bytes": 3568079,
    "local": "raw/daily_v2_rin-ayase_17b71327.png",
    "daily140_file": "054.png",
@@ -729,7 +729,7 @@
     1536,
     2048
    ],
-   "sha256": "7d743bf48e41aa28",
+   "sha256": "7d743bf48e41aa28348c45235c5a3e356b85e3e88db5dd01d7cda4103ca77e26",
    "bytes": 3840207,
    "local": "raw/daily_v2_rin-ayase_183da50b.png",
    "daily140_file": "055.png",
@@ -746,7 +746,7 @@
     1536,
     2048
    ],
-   "sha256": "f2312ccaed222f85",
+   "sha256": "f2312ccaed222f8541dc6ce5afe5fd61c5d6fe31f2fbac5ca793663736f73bad",
    "bytes": 3499569,
    "local": "raw/daily_v2_rin-ayase_812dcec4.png",
    "daily140_file": "121.png",
@@ -763,7 +763,7 @@
     1536,
     2048
    ],
-   "sha256": "97cb82f22e657924",
+   "sha256": "97cb82f22e657924070d86cfcbcef077dcd95ada90b2fb06cdcc6b4f86701ea9",
    "bytes": 4027556,
    "local": "raw/daily_v2_rin-ayase_14795e85.png",
    "daily140_file": "122.png",
@@ -780,7 +780,7 @@
     1536,
     2048
    ],
-   "sha256": "820840001e1f4af4",
+   "sha256": "820840001e1f4af498efba47cd5249c5c37c82ab945f431b7737a0b315ededa4",
    "bytes": 4379937,
    "local": "raw/daily_v2_somi-oh_e154b72a.png",
    "daily140_file": "061.png",
@@ -797,7 +797,7 @@
     1536,
     2048
    ],
-   "sha256": "6d80588c42842edc",
+   "sha256": "6d80588c42842edc5fce86ad9c9b8d0e26ce230a2c63e904f74d075c6c34c2a1",
    "bytes": 3604087,
    "local": "raw/daily_v2_somi-oh_717b95f7.png",
    "daily140_file": "062.png",
@@ -814,7 +814,7 @@
     1536,
     2048
    ],
-   "sha256": "104cb9a8f5bad52d",
+   "sha256": "104cb9a8f5bad52d7b24a9b13b3e574d5c45cf81094ab5612bd8f3cb9cc09328",
    "bytes": 3537417,
    "local": "raw/daily_v2_somi-oh_4e54ab6b.png",
    "daily140_file": "063.png",
@@ -831,7 +831,7 @@
     1536,
     2048
    ],
-   "sha256": "0caa048feda3c162",
+   "sha256": "0caa048feda3c162af24c563da2245713bba568b8586ec36ad6af16228794910",
    "bytes": 3682578,
    "local": "raw/daily_v2_somi-oh_faeb0bf3.png",
    "daily140_file": "064.png",
@@ -848,7 +848,7 @@
     1536,
     2048
    ],
-   "sha256": "1556a7e4cb0cfcb6",
+   "sha256": "1556a7e4cb0cfcb6c726218f647e093b09ad6a20e168065ffea1f0276081d4c5",
    "bytes": 3365268,
    "local": "raw/daily_v2_somi-oh_57a1fc53.png",
    "daily140_file": "065.png",
@@ -865,7 +865,7 @@
     1536,
     2048
    ],
-   "sha256": "57d89b9e7594efef",
+   "sha256": "57d89b9e7594efef3326be6053713fe407bb67e5ede30ea26ef703cab4d3f2c6",
    "bytes": 3428197,
    "local": "raw/daily_v2_somi-oh_87d10020.png",
    "daily140_file": "125.png",
@@ -882,7 +882,7 @@
     1536,
     2048
    ],
-   "sha256": "3f9ae29b6c1da6ed",
+   "sha256": "3f9ae29b6c1da6ed883b77e5ee7c1ac7356525aa38d36f97884fba735c057b8d",
    "bytes": 3126264,
    "local": "raw/daily_v2_somi-oh_5101030d.png",
    "daily140_file": "126.png",
@@ -899,7 +899,7 @@
     1536,
     2048
    ],
-   "sha256": "5beaf00c45f3c134",
+   "sha256": "5beaf00c45f3c1347d13c29442bb4fc9343aca2069e1b5de06ba7d0c12fe6f8f",
    "bytes": 4589662,
    "local": "raw/daily_v2_tammy-chou_5b7715e1.png",
    "daily140_file": "071.png",
@@ -916,7 +916,7 @@
     1536,
     2048
    ],
-   "sha256": "d3c3f1c3fe927658",
+   "sha256": "d3c3f1c3fe927658d485658ea2a05f2f0762fe7e01571640c7b0fd91cb8fd68f",
    "bytes": 3857711,
    "local": "raw/daily_v2_tammy-chou_0847ce27.png",
    "daily140_file": "072.png",
@@ -933,7 +933,7 @@
     1536,
     2048
    ],
-   "sha256": "26b5ae30b8cebfd0",
+   "sha256": "26b5ae30b8cebfd0ae1f330aa9b20dc72c4a231013361cea9c4c4d78a88fbd81",
    "bytes": 3359446,
    "local": "raw/daily_v2_tammy-chou_3455add8.png",
    "daily140_file": "073.png",
@@ -950,7 +950,7 @@
     1536,
     2048
    ],
-   "sha256": "17292c642a785a53",
+   "sha256": "17292c642a785a535e549a7a297159f8f68f9652e97524064bee56e1c37b6f2b",
    "bytes": 3423118,
    "local": "raw/daily_v2_tammy-chou_991f7ae7.png",
    "daily140_file": "074.png",
@@ -967,7 +967,7 @@
     1536,
     2048
    ],
-   "sha256": "9fe857f7990f28b7",
+   "sha256": "9fe857f7990f28b79613ecb0dda7d16541fdc7d0faac94166501e54da42b289e",
    "bytes": 3512140,
    "local": "raw/daily_v2_tammy-chou_8b320d27.png",
    "daily140_file": "075.png",
@@ -984,7 +984,7 @@
     1536,
     2048
    ],
-   "sha256": "946e25b9995b353e",
+   "sha256": "946e25b9995b353e7de43ce0668a9c38540517d90cdd920a0fa697050b2e10e3",
    "bytes": 3457977,
    "local": "raw/daily_v2_tammy-chou_50ebe9ee.png",
    "daily140_file": "129.png",
@@ -1001,7 +1001,7 @@
     1536,
     2048
    ],
-   "sha256": "83d2f7b97e9d6d79",
+   "sha256": "83d2f7b97e9d6d795d93a0660607474620b887c5791ae71e3ad6b73afebd42c4",
    "bytes": 3393324,
    "local": "raw/daily_v2_tammy-chou_dca8ec08.png",
    "daily140_file": "130.png",
@@ -1018,7 +1018,7 @@
     1536,
     2048
    ],
-   "sha256": "ae7ac133f284d5f8",
+   "sha256": "ae7ac133f284d5f8446b549bd19261b1afc79af91616e16949785e391e09346e",
    "bytes": 4094248,
    "local": "raw/daily_v2_wanyin-jiang_3df45038.png",
    "daily140_file": "076.png",
@@ -1035,7 +1035,7 @@
     1536,
     2048
    ],
-   "sha256": "9d77925b054c7b28",
+   "sha256": "9d77925b054c7b28fc0302f3113f0cdc69f42bc2d0c7a75d74a708d47dbe5fed",
    "bytes": 3905461,
    "local": "raw/daily_v2_wanyin-jiang_5177cacc.png",
    "daily140_file": "077.png",
@@ -1052,7 +1052,7 @@
     1536,
     2048
    ],
-   "sha256": "c6ec7b7e0a344242",
+   "sha256": "c6ec7b7e0a344242dfb9b9663a5cea38d834dc1bc1e493ab42d6d5fa66ab082f",
    "bytes": 3308719,
    "local": "raw/daily_v2_wanyin-jiang_8fbbe6e2.png",
    "daily140_file": "078.png",
@@ -1069,7 +1069,7 @@
     1536,
     2048
    ],
-   "sha256": "c52a777792f58809",
+   "sha256": "c52a777792f588098b7515b7866a845ee6a8c51fe9f3f84623978783737a72fe",
    "bytes": 3591762,
    "local": "raw/daily_v2_wanyin-jiang_57ff2a23.png",
    "daily140_file": "079.png",
@@ -1086,7 +1086,7 @@
     1536,
     2048
    ],
-   "sha256": "4eda26fef63a82ff",
+   "sha256": "4eda26fef63a82fff7939554fce18e7840a7c610817ed714b6ccec95dbd2088e",
    "bytes": 3516741,
    "local": "raw/daily_v2_wanyin-jiang_45c73179.png",
    "daily140_file": "080.png",
@@ -1103,7 +1103,7 @@
     1536,
     2048
    ],
-   "sha256": "c85ee268e18ef036",
+   "sha256": "c85ee268e18ef0369890fa54ea53334eb5df5654197e93874ddb4d04137ec8c7",
    "bytes": 3539818,
    "local": "raw/daily_v2_wanyin-jiang_79b35e49.png",
    "daily140_file": "131.png",
@@ -1120,7 +1120,7 @@
     1536,
     2048
    ],
-   "sha256": "dd754536fe22911a",
+   "sha256": "dd754536fe22911a9bdf86db52cd2bd9909047492d4eab26394754b4e8263551",
    "bytes": 3391243,
    "local": "raw/daily_v2_wanyin-jiang_375257a9.png",
    "daily140_file": "132.png",
@@ -1137,7 +1137,7 @@
     1536,
     2048
    ],
-   "sha256": "09cc9ff24548b39e",
+   "sha256": "09cc9ff24548b39e2c6ebe6d99e2feb7925f5ba2666a20075ec990469960363e",
    "bytes": 4193356,
    "local": "raw/daily_v2_wendy-yeo_8348950c.png",
    "daily140_file": "081.png",
@@ -1154,7 +1154,7 @@
     1536,
     2048
    ],
-   "sha256": "32358f25382d1928",
+   "sha256": "32358f25382d19287c0637d73f85cd1b5b4c50445b5ca96ebc6681f791bebbf5",
    "bytes": 3561814,
    "local": "raw/daily_v2_wendy-yeo_52fada33.png",
    "daily140_file": "082.png",
@@ -1171,7 +1171,7 @@
     1536,
     2048
    ],
-   "sha256": "5ba37b8589bb2d42",
+   "sha256": "5ba37b8589bb2d4211ad7fa34d200f70423f7c1adc9aa9e6c4a5cc4f0517ddd0",
    "bytes": 3401869,
    "local": "raw/daily_v2_wendy-yeo_6dcf6753.png",
    "daily140_file": "083.png",
@@ -1188,7 +1188,7 @@
     1536,
     2048
    ],
-   "sha256": "2c73a82aaff8ccc9",
+   "sha256": "2c73a82aaff8ccc93df411e32610737c5f2e4349c1fea5594dcaea4d5c14fc48",
    "bytes": 3188288,
    "local": "raw/daily_v2_wendy-yeo_4221ed40.png",
    "daily140_file": "084.png",
@@ -1205,7 +1205,7 @@
     1536,
     2048
    ],
-   "sha256": "3ccb26447706de71",
+   "sha256": "3ccb26447706de71da04e151671e88d29c369dcc374cc73de1a93a29b8c402c5",
    "bytes": 3304768,
    "local": "raw/daily_v2_wendy-yeo_c74665a0.png",
    "daily140_file": "085.png",
@@ -1222,7 +1222,7 @@
     1536,
     2048
    ],
-   "sha256": "c4c9ea832c8893a2",
+   "sha256": "c4c9ea832c8893a25b1459c70dfef1536f4e53f011385a34d25dfd43d1569d94",
    "bytes": 3337640,
    "local": "raw/daily_v2_wendy-yeo_32fdb7bb.png",
    "daily140_file": "133.png",
@@ -1239,7 +1239,7 @@
     1536,
     2048
    ],
-   "sha256": "5a1ab67ca36fe8cc",
+   "sha256": "5a1ab67ca36fe8ccca2f3b1563252058463eead98f409bcbb81d004c1306e800",
    "bytes": 3271809,
    "local": "raw/daily_v2_wendy-yeo_529a0097.png",
    "daily140_file": "134.png",
@@ -1257,7 +1257,7 @@
     1152,
     1536
    ],
-   "sha256": "8e04e47acb2cbcd3",
+   "sha256": "8e04e47acb2cbcd34bdb4e023141e827058aacfc07a8dec898cd99d0883dc14c",
    "bytes": 1708097,
    "local": "raw/identity_check_mia-huang_5f7dd962.png"
   },
@@ -1272,7 +1272,7 @@
     1152,
     1536
    ],
-   "sha256": "29a73c0fd0ca3fe3",
+   "sha256": "29a73c0fd0ca3fe36f49a515a5681b630a321d7917ad56f80020e3ef31495c8c",
    "bytes": 1502475,
    "local": "raw/identity_check_mia-huang_80442a89.png"
   },
@@ -1287,7 +1287,7 @@
     1152,
     1536
    ],
-   "sha256": "ed4fa041e23d6221",
+   "sha256": "ed4fa041e23d6221b7159ea5aaafca212bf3be47007735d516330df1a322a974",
    "bytes": 1516458,
    "local": "raw/identity_check_mia-huang_5472a7a1.png"
   },
@@ -1302,7 +1302,7 @@
     1152,
     1536
    ],
-   "sha256": "cda14017923403d0",
+   "sha256": "cda14017923403d09d6e04a5aa14fade709d9daea4d905d9e73cbad55c899294",
    "bytes": 2272249,
    "local": "raw/identity_check_somi-oh_fd0f4358.png"
   },
@@ -1317,7 +1317,7 @@
     1152,
     1536
    ],
-   "sha256": "78adf30379a69a8d",
+   "sha256": "78adf30379a69a8db966ab797bf8364b7ef9172f7ec30c4172d8cfc5fe02215a",
    "bytes": 2179124,
    "local": "raw/identity_check_somi-oh_7f72c60b.png"
   },
@@ -1332,9 +1332,17 @@
     1152,
     1536
    ],
-   "sha256": "d1d04dec0fe7c539",
+   "sha256": "d1d04dec0fe7c539563ebe232e81497f754d1ead52cde5115a60b284b116ece3",
    "bytes": 2266419,
    "local": "raw/identity_check_vicky-lin_5f1c24b6.png"
   }
- ]
+ ],
+ "cache_check": {
+  "checked_on": "2026-10-08",
+  "items": 82,
+  "ok": 82,
+  "problems": [],
+  "unresolved_hf_refs": [],
+  "note": "本機快取逐檔核對：存在、可解碼、尺寸與紀錄相同、sha256 與 R2 紀錄的前 16 碼相同後寫入完整 64 碼；未重新下載。"
+ }
 }

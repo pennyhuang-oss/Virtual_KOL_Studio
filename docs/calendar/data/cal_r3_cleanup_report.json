@@ -1,0 +1,401 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r3_cleanup.py",
+ "spec": "data/cal_r3_cleanup.json",
+ "note": "清理後完整圖存在本機快取（不進 repo）；clean_sha256 用來核對樣張實際使用的是哪一版。",
+ "items": [
+  {
+   "cid": "rainie_H",
+   "why": "右下角假日期戳「2023/18/07」",
+   "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+   "src_sha256": "987fdb32c7103df8b867a2db2beb27797ecfdf614b67510eea8b531250ee6775",
+   "clean_file": "clean/rainie_H.png",
+   "clean_sha256": "550febfb3545b89fafeb931e46902015a8427022ef4fd8e40ccaa0608cce5cbc",
+   "size": [
+    1440,
+    2560
+   ],
+   "subject_pixels": 1681023,
+   "protect_dilate_px": 11,
+   "max_abs_diff_inside_subject_except_allowed": 0,
+   "max_abs_diff_face_skin_hair_accessory": 0,
+   "clothes_pixels_changed_by_allowed_ops": 402,
+   "ops": [
+    {
+     "op": "inpaint",
+     "box": [
+      0.72,
+      0.945,
+      0.985,
+      0.995
+     ],
+     "select": "contrast",
+     "k": 31,
+     "thr": 22,
+     "grow": 5,
+     "method": "vertical",
+     "grain": true,
+     "what": "日期戳字樣與外框（逐欄上下內插，保留鏡框直邊；字戳左端壓在馬甲上，該處放行衣服像素，臉／皮膚／頭髮仍保護）",
+     "warm": true,
+     "allow_on_clothes": true,
+     "box_px": [
+      1036,
+      2419,
+      1419,
+      2548
+     ],
+     "pixels_changed": 16407
+    }
+   ]
+  },
+  {
+   "cid": "coco_alt01",
+   "why": "枕頭上的 Hello Kitty 手機殼（可辨識角色；成品清理選擇）與紅色指示燈",
+   "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+   "src_sha256": "f9ee2d3ffbc99cbf1301fcddd240ec5630e5f42093cd7aee92e42f1d54ded89d",
+   "clean_file": "clean/coco_alt01.png",
+   "clean_sha256": "9f5df286158919d38b0a93239ff48c7361f1e8f49c883ea3406135431a35bc1c",
+   "size": [
+    1440,
+    2560
+   ],
+   "subject_pixels": 1597257,
+   "protect_dilate_px": 11,
+   "max_abs_diff_inside_subject_except_allowed": 0,
+   "max_abs_diff_face_skin_hair_accessory": 0,
+   "clothes_pixels_changed_by_allowed_ops": 0,
+   "ops": [
+    {
+     "op": "inpaint",
+     "box": [
+      0.17,
+      0.27,
+      0.34,
+      0.4
+     ],
+     "select": "poly",
+     "polys": [
+      [
+       [
+        0.1847,
+        0.3125
+       ],
+       [
+        0.2292,
+        0.3008
+       ],
+       [
+        0.2333,
+        0.2883
+       ],
+       [
+        0.2639,
+        0.2898
+       ],
+       [
+        0.2778,
+        0.2984
+       ],
+       [
+        0.3306,
+        0.3648
+       ],
+       [
+        0.2444,
+        0.3898
+       ],
+       [
+        0.1861,
+        0.3258
+       ]
+      ]
+     ],
+     "circles": [
+      [
+       0.2417,
+       0.3,
+       0.0292
+      ]
+     ],
+     "grow": 8,
+     "method": "clone",
+     "offset": [
+      -0.0833,
+      0.0586
+     ],
+     "what": "手機、手機殼與紅色指示燈（人工描邊；以左下方同一枕頭紋理做 Poisson 無縫複製）",
+     "box_px": [
+      244,
+      691,
+      490,
+      1024
+     ],
+     "pixels_changed": 40540
+    }
+   ]
+  },
+  {
+   "cid": "coco_H",
+   "why": "左側軟木板上的多張人像照片搶主角",
+   "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+   "src_sha256": "5db11c2bb565a5ee114f8aefde74786c84c6cafb521f70d4e365d5bffdf46eae",
+   "clean_file": "clean/coco_H.png",
+   "clean_sha256": "004f9d3550329c444647c44d9dc8234403f4b2ca40e0b343930c419a94a48d26",
+   "size": [
+    1440,
+    2560
+   ],
+   "subject_pixels": 2297662,
+   "protect_dilate_px": 11,
+   "max_abs_diff_inside_subject_except_allowed": 0,
+   "max_abs_diff_face_skin_hair_accessory": 0,
+   "clothes_pixels_changed_by_allowed_ops": 0,
+   "ops": [
+    {
+     "op": "blur",
+     "box": [
+      0.0,
+      0.14,
+      0.3,
+      0.52
+     ],
+     "sigma": 0.014,
+     "feather": 0.012,
+     "what": "人像牆",
+     "box_px": [
+      0,
+      358,
+      432,
+      1332
+     ],
+     "pixels_changed": 335431
+    }
+   ]
+  },
+  {
+   "cid": "iris_V",
+   "why": "上方招牌的 AI 假中文字清楚可讀",
+   "src": "kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+   "src_sha256": "c160b57111d45b7849c489803ea9e5e61a5e7e7c669ad73d67a8a45f663a3c61",
+   "clean_file": "clean/iris_V.png",
+   "clean_sha256": "c1f76a90eee590a431db2ea7e1e3e05299b794c8f68b06c67e9352250614a928",
+   "size": [
+    1920,
+    2560
+   ],
+   "subject_pixels": 1528824,
+   "protect_dilate_px": 15,
+   "max_abs_diff_inside_subject_except_allowed": 0,
+   "max_abs_diff_face_skin_hair_accessory": 0,
+   "clothes_pixels_changed_by_allowed_ops": 0,
+   "ops": [
+    {
+     "op": "blur",
+     "box": [
+      0.165,
+      0.0,
+      0.3,
+      0.155
+     ],
+     "sigma": 0.013,
+     "feather": 0.014,
+     "what": "左上深藍直招牌",
+     "box_px": [
+      316,
+      0,
+      576,
+      397
+     ],
+     "pixels_changed": 158696
+    },
+    {
+     "op": "blur",
+     "box": [
+      0.515,
+      0.0,
+      0.75,
+      0.235
+     ],
+     "sigma": 0.01,
+     "feather": 0.014,
+     "what": "黃、藍、紅直招牌",
+     "box_px": [
+      988,
+      0,
+      1440,
+      602
+     ],
+     "pixels_changed": 337843
+    },
+    {
+     "op": "blur",
+     "box": [
+      0.55,
+      0.19,
+      0.7,
+      0.28
+     ],
+     "sigma": 0.008,
+     "feather": 0.014,
+     "what": "中段小招牌",
+     "box_px": [
+      1056,
+      486,
+      1344,
+      717
+     ],
+     "pixels_changed": 110678
+    },
+    {
+     "op": "blur",
+     "box": [
+      0.715,
+      0.22,
+      0.795,
+      0.28
+     ],
+     "sigma": 0.008,
+     "feather": 0.014,
+     "what": "橘色招牌",
+     "box_px": [
+      1372,
+      563,
+      1527,
+      717
+     ],
+     "pixels_changed": 62560
+    },
+    {
+     "op": "blur",
+     "box": [
+      0.785,
+      0.15,
+      0.93,
+      0.29
+     ],
+     "sigma": 0.008,
+     "feather": 0.014,
+     "what": "右側直招牌",
+     "box_px": [
+      1507,
+      384,
+      1786,
+      743
+     ],
+     "pixels_changed": 175041
+    }
+   ]
+  },
+  {
+   "cid": "kanon_alt028",
+   "why": "身後黑衣路人貼著主角、臉清楚（右側路人不處理：試做時在主角手臂旁產生接縫，已撤回）",
+   "src": "hf:06f9c1d5-bf50-4b4c-bbb7-dc95c8743133",
+   "src_sha256": "22573ab02de2b8e012ff36f0a4c4fd95c12bf0a024508064e9f742109f68304e",
+   "clean_file": "clean/kanon_alt028.png",
+   "clean_sha256": "fe10792c07f24ab806ae5d232dbbd6b9adac01727898e1447bf1c5c73fd9cb22",
+   "size": [
+    1536,
+    2048
+   ],
+   "subject_pixels": 928195,
+   "protect_dilate_px": 12,
+   "max_abs_diff_inside_subject_except_allowed": 0,
+   "max_abs_diff_face_skin_hair_accessory": 0,
+   "clothes_pixels_changed_by_allowed_ops": 0,
+   "ops": [
+    {
+     "op": "blur_dim",
+     "box": [
+      0.13,
+      0.18,
+      0.37,
+      0.95
+     ],
+     "sigma": 0.008,
+     "dim": 0.8,
+     "feather": 0.015,
+     "what": "左後方黑衣路人",
+     "box_px": [
+      199,
+      368,
+      569,
+      1946
+     ],
+     "pixels_changed": 564647
+    }
+   ]
+  },
+  {
+   "cid": "rin_V",
+   "why": "右側西裝男與最右路人很清楚，搶主角",
+   "src": "hf:aac89087-4f3e-48d7-ad21-e406b21e69ba",
+   "src_sha256": "a9182db4d0831630966bb149d509217f0435c102e858eefa5865721dfb51a9fa",
+   "clean_file": "clean/rin_V.png",
+   "clean_sha256": "b1351414fa320e5a48404eec5b133b57d3ae2f43d57c9c0fa256be92cc90b37e",
+   "size": [
+    1536,
+    2048
+   ],
+   "subject_pixels": 1093459,
+   "protect_dilate_px": 12,
+   "max_abs_diff_inside_subject_except_allowed": 0,
+   "max_abs_diff_face_skin_hair_accessory": 0,
+   "clothes_pixels_changed_by_allowed_ops": 0,
+   "ops": [
+    {
+     "op": "blur_dim",
+     "box": [
+      0.69,
+      0.15,
+      1.0,
+      0.84
+     ],
+     "sigma": 0.008,
+     "dim": 0.85,
+     "feather": 0.015,
+     "what": "右側路人",
+     "box_px": [
+      1059,
+      307,
+      1536,
+      1721
+     ],
+     "pixels_changed": 666089
+    }
+   ]
+  }
+ ],
+ "evaluated_no_op": [
+  {
+   "cid": "somi_V",
+   "why": "左後方男子在暗部且已失焦，不搶主角；地上紙杯在直式統一框外"
+  },
+  {
+   "cid": "vicky_H",
+   "why": "運動內衣上的小圖形：未辨識，保留（不斷言是否為品牌）"
+  },
+  {
+   "cid": "vicky_V",
+   "why": "同上"
+  },
+  {
+   "cid": "rainie_V",
+   "why": "無假字、無路人"
+  },
+  {
+   "cid": "tammy_H",
+   "why": "不在主推薦（主推薦橫直都用 tammy_V 頂樓）；若選倉庫版，紙箱上小假條碼另處理"
+  },
+  {
+   "cid": "somi_H",
+   "why": "R3 試過矩形模糊紙袋假字，結果是一塊硬邊糊塊、比原本更顯眼 → 撤回；Somi 主推薦改為橫直都用 #063（somi_V），train_01 降為選項，紙袋假字未處理"
+  },
+  {
+   "cid": "coco_alt01",
+   "why": "手機殼已用 Poisson 無縫複製移除，但 100% 檢視仍看得出修補區紋理較平、邊緣可察覺 → 列「部分完成」；Coco 主推薦改為橫直都用 candidate_01，床上自拍降為選項"
+  },
+  {
+   "cid": "tammy_V",
+   "why": "頂樓路人都在女牆後方、不搶主角，保留生活感。R3 試過三種模糊範圍，都會在天際線留下看得出的模糊方塊 → 撤回，不處理"
+  }
+ ]
+}

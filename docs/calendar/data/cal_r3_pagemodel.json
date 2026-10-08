@@ -1,0 +1,993 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r3_pagemodel.py",
+ "models": {
+  "H": {
+   "spec": {
+    "sheets": 14,
+    "faces": 28,
+    "name": "橫式 200×151 mm"
+   },
+   "faces": [
+    {
+     "face": 1,
+     "template": {
+      "8385": "封面",
+      "8364": "封面"
+     },
+     "r3_draft": "封面草稿（品牌佔位）"
+    },
+    {
+     "face": 2,
+     "template": {
+      "8385": "1 月大格月曆面",
+      "8364": "1 月照片面（含小月曆）"
+     },
+     "r3_draft": "1 月照片面（橫 A）"
+    },
+    {
+     "face": 3,
+     "template": {
+      "8385": "1 月照片面（照片＋單行日期條）",
+      "8364": "1 月大格月曆面"
+     },
+     "r3_draft": "1 月大格月曆面（代表）"
+    },
+    {
+     "face": 4,
+     "template": {
+      "8385": "2 月大格月曆面",
+      "8364": "2 月照片面（含小月曆）"
+     },
+     "r3_draft": "2 月照片面（橫 A）"
+    },
+    {
+     "face": 5,
+     "template": {
+      "8385": "2 月照片面（照片＋單行日期條）",
+      "8364": "2 月大格月曆面"
+     },
+     "r3_draft": "2 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 6,
+     "template": {
+      "8385": "3 月大格月曆面",
+      "8364": "3 月照片面（含小月曆）"
+     },
+     "r3_draft": "3 月照片面（橫 A）"
+    },
+    {
+     "face": 7,
+     "template": {
+      "8385": "3 月照片面（照片＋單行日期條）",
+      "8364": "3 月大格月曆面"
+     },
+     "r3_draft": "3 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 8,
+     "template": {
+      "8385": "4 月大格月曆面",
+      "8364": "4 月照片面（含小月曆）"
+     },
+     "r3_draft": "4 月照片面（橫 A）"
+    },
+    {
+     "face": 9,
+     "template": {
+      "8385": "4 月照片面（照片＋單行日期條）",
+      "8364": "4 月大格月曆面"
+     },
+     "r3_draft": "4 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 10,
+     "template": {
+      "8385": "5 月大格月曆面",
+      "8364": "5 月照片面（含小月曆）"
+     },
+     "r3_draft": "5 月照片面（橫 A）"
+    },
+    {
+     "face": 11,
+     "template": {
+      "8385": "5 月照片面（照片＋單行日期條）",
+      "8364": "5 月大格月曆面"
+     },
+     "r3_draft": "5 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 12,
+     "template": {
+      "8385": "6 月大格月曆面",
+      "8364": "6 月照片面（含小月曆）"
+     },
+     "r3_draft": "6 月照片面（橫 A）"
+    },
+    {
+     "face": 13,
+     "template": {
+      "8385": "6 月照片面（照片＋單行日期條）",
+      "8364": "6 月大格月曆面"
+     },
+     "r3_draft": "6 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 14,
+     "template": {
+      "8385": "7 月大格月曆面",
+      "8364": "7 月照片面（含小月曆）"
+     },
+     "r3_draft": "7 月照片面（橫 A）"
+    },
+    {
+     "face": 15,
+     "template": {
+      "8385": "7 月照片面（照片＋單行日期條）",
+      "8364": "7 月大格月曆面"
+     },
+     "r3_draft": "7 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 16,
+     "template": {
+      "8385": "8 月大格月曆面",
+      "8364": "8 月照片面（含小月曆）"
+     },
+     "r3_draft": "8 月照片面（橫 A）"
+    },
+    {
+     "face": 17,
+     "template": {
+      "8385": "8 月照片面（照片＋單行日期條）",
+      "8364": "8 月大格月曆面"
+     },
+     "r3_draft": "8 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 18,
+     "template": {
+      "8385": "9 月大格月曆面",
+      "8364": "9 月照片面（含小月曆）"
+     },
+     "r3_draft": "9 月照片面（橫 A）"
+    },
+    {
+     "face": 19,
+     "template": {
+      "8385": "9 月照片面（照片＋單行日期條）",
+      "8364": "9 月大格月曆面"
+     },
+     "r3_draft": "9 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 20,
+     "template": {
+      "8385": "10 月大格月曆面",
+      "8364": "10 月照片面（含小月曆）"
+     },
+     "r3_draft": "10 月照片面（橫 A）"
+    },
+    {
+     "face": 21,
+     "template": {
+      "8385": "10 月照片面（照片＋單行日期條）",
+      "8364": "10 月大格月曆面"
+     },
+     "r3_draft": "10 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 22,
+     "template": {
+      "8385": "11 月大格月曆面",
+      "8364": "11 月照片面（含小月曆）"
+     },
+     "r3_draft": "11 月照片面（橫 A）"
+    },
+    {
+     "face": 23,
+     "template": {
+      "8385": "11 月照片面（照片＋單行日期條）",
+      "8364": "11 月大格月曆面"
+     },
+     "r3_draft": "11 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 24,
+     "template": {
+      "8385": "12 月大格月曆面",
+      "8364": "12 月照片面（含小月曆）"
+     },
+     "r3_draft": "12 月照片面（橫 A）"
+    },
+    {
+     "face": 25,
+     "template": {
+      "8385": "12 月照片面（照片＋單行日期條）",
+      "8364": "12 月大格月曆面"
+     },
+     "r3_draft": "12 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 26,
+     "template": {
+      "8385": "MEMO",
+      "8364": "MEMO"
+     },
+     "r3_draft": "MEMO（本輪不製作）"
+    },
+    {
+     "face": 27,
+     "template": {
+      "8385": "MEMO／裝飾底頁",
+      "8364": "MEMO／裝飾底頁"
+     },
+     "r3_draft": "MEMO（本輪不製作；可放年曆）"
+    },
+    {
+     "face": 28,
+     "template": {
+      "8385": "條碼頁（不可編輯）",
+      "8364": "條碼頁（不可編輯）"
+     },
+     "r3_draft": "條碼頁（廠商固定）"
+    }
+   ],
+   "H1": {
+    "sheets": [
+     {
+      "sheet": 1,
+      "front": 1,
+      "back": 2
+     },
+     {
+      "sheet": 2,
+      "front": 3,
+      "back": 4
+     },
+     {
+      "sheet": 3,
+      "front": 5,
+      "back": 6
+     },
+     {
+      "sheet": 4,
+      "front": 7,
+      "back": 8
+     },
+     {
+      "sheet": 5,
+      "front": 9,
+      "back": 10
+     },
+     {
+      "sheet": 6,
+      "front": 11,
+      "back": 12
+     },
+     {
+      "sheet": 7,
+      "front": 13,
+      "back": 14
+     },
+     {
+      "sheet": 8,
+      "front": 15,
+      "back": 16
+     },
+     {
+      "sheet": 9,
+      "front": 17,
+      "back": 18
+     },
+     {
+      "sheet": 10,
+      "front": 19,
+      "back": 20
+     },
+     {
+      "sheet": 11,
+      "front": 21,
+      "back": 22
+     },
+     {
+      "sheet": 12,
+      "front": 23,
+      "back": 24
+     },
+     {
+      "sheet": 13,
+      "front": 25,
+      "back": 26
+     },
+     {
+      "sheet": 14,
+      "front": 27,
+      "back": 28
+     }
+    ],
+    "check": {
+     "sheets": 14,
+     "spec_sheets": 14,
+     "faces_placed": 28,
+     "all_faces_once": true,
+     "blank_sides": 0,
+     "fits_spec": true
+    },
+    "states": [
+     {
+      "flipped": 0,
+      "front_slope": 1,
+      "back_slope": null
+     },
+     {
+      "flipped": 1,
+      "front_slope": 3,
+      "back_slope": 2
+     },
+     {
+      "flipped": 2,
+      "front_slope": 5,
+      "back_slope": 4
+     },
+     {
+      "flipped": 3,
+      "front_slope": 7,
+      "back_slope": 6
+     },
+     {
+      "flipped": 4,
+      "front_slope": 9,
+      "back_slope": 8
+     },
+     {
+      "flipped": 5,
+      "front_slope": 11,
+      "back_slope": 10
+     },
+     {
+      "flipped": 6,
+      "front_slope": 13,
+      "back_slope": 12
+     },
+     {
+      "flipped": 7,
+      "front_slope": 15,
+      "back_slope": 14
+     },
+     {
+      "flipped": 8,
+      "front_slope": 17,
+      "back_slope": 16
+     },
+     {
+      "flipped": 9,
+      "front_slope": 19,
+      "back_slope": 18
+     },
+     {
+      "flipped": 10,
+      "front_slope": 21,
+      "back_slope": 20
+     },
+     {
+      "flipped": 11,
+      "front_slope": 23,
+      "back_slope": 22
+     },
+     {
+      "flipped": 12,
+      "front_slope": 25,
+      "back_slope": 24
+     },
+     {
+      "flipped": 13,
+      "front_slope": 27,
+      "back_slope": 26
+     },
+     {
+      "flipped": 14,
+      "front_slope": null,
+      "back_slope": 28
+     }
+    ]
+   },
+   "H2": {
+    "sheets": [
+     {
+      "sheet": 1,
+      "front": 1,
+      "back": null
+     },
+     {
+      "sheet": 2,
+      "front": 2,
+      "back": 3
+     },
+     {
+      "sheet": 3,
+      "front": 4,
+      "back": 5
+     },
+     {
+      "sheet": 4,
+      "front": 6,
+      "back": 7
+     },
+     {
+      "sheet": 5,
+      "front": 8,
+      "back": 9
+     },
+     {
+      "sheet": 6,
+      "front": 10,
+      "back": 11
+     },
+     {
+      "sheet": 7,
+      "front": 12,
+      "back": 13
+     },
+     {
+      "sheet": 8,
+      "front": 14,
+      "back": 15
+     },
+     {
+      "sheet": 9,
+      "front": 16,
+      "back": 17
+     },
+     {
+      "sheet": 10,
+      "front": 18,
+      "back": 19
+     },
+     {
+      "sheet": 11,
+      "front": 20,
+      "back": 21
+     },
+     {
+      "sheet": 12,
+      "front": 22,
+      "back": 23
+     },
+     {
+      "sheet": 13,
+      "front": 24,
+      "back": 25
+     },
+     {
+      "sheet": 14,
+      "front": 26,
+      "back": 27
+     },
+     {
+      "sheet": 15,
+      "front": 28,
+      "back": null
+     }
+    ],
+    "check": {
+     "sheets": 15,
+     "spec_sheets": 14,
+     "faces_placed": 28,
+     "all_faces_once": true,
+     "blank_sides": 2,
+     "fits_spec": false
+    }
+   }
+  },
+  "V": {
+   "spec": {
+    "sheets": 16,
+    "faces": 32,
+    "name": "直式 140×200 mm"
+   },
+   "faces": [
+    {
+     "face": 1,
+     "template": {
+      "8404": "封面"
+     },
+     "r3_draft": "封面草稿（品牌佔位）"
+    },
+    {
+     "face": 2,
+     "template": {
+      "8404": "1 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "1 月照片面（直式統一框）"
+    },
+    {
+     "face": 3,
+     "template": {
+      "8404": "1 月大格月曆面"
+     },
+     "r3_draft": "1 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 4,
+     "template": {
+      "8404": "2 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "2 月照片面（直式統一框）"
+    },
+    {
+     "face": 5,
+     "template": {
+      "8404": "2 月大格月曆面"
+     },
+     "r3_draft": "2 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 6,
+     "template": {
+      "8404": "3 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "3 月照片面（直式統一框）"
+    },
+    {
+     "face": 7,
+     "template": {
+      "8404": "3 月大格月曆面"
+     },
+     "r3_draft": "3 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 8,
+     "template": {
+      "8404": "4 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "4 月照片面（直式統一框）"
+    },
+    {
+     "face": 9,
+     "template": {
+      "8404": "4 月大格月曆面"
+     },
+     "r3_draft": "4 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 10,
+     "template": {
+      "8404": "5 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "5 月照片面（直式統一框）"
+    },
+    {
+     "face": 11,
+     "template": {
+      "8404": "5 月大格月曆面"
+     },
+     "r3_draft": "5 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 12,
+     "template": {
+      "8404": "6 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "6 月照片面（直式統一框）"
+    },
+    {
+     "face": 13,
+     "template": {
+      "8404": "6 月大格月曆面"
+     },
+     "r3_draft": "6 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 14,
+     "template": {
+      "8404": "7 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "7 月照片面（直式統一框）"
+    },
+    {
+     "face": 15,
+     "template": {
+      "8404": "7 月大格月曆面"
+     },
+     "r3_draft": "7 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 16,
+     "template": {
+      "8404": "8 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "8 月照片面（直式統一框）"
+    },
+    {
+     "face": 17,
+     "template": {
+      "8404": "8 月大格月曆面"
+     },
+     "r3_draft": "8 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 18,
+     "template": {
+      "8404": "9 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "9 月照片面（直式統一框）"
+    },
+    {
+     "face": 19,
+     "template": {
+      "8404": "9 月大格月曆面"
+     },
+     "r3_draft": "9 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 20,
+     "template": {
+      "8404": "10 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "10 月照片面（直式統一框）"
+    },
+    {
+     "face": 21,
+     "template": {
+      "8404": "10 月大格月曆面"
+     },
+     "r3_draft": "10 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 22,
+     "template": {
+      "8404": "11 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "11 月照片面（直式統一框）"
+    },
+    {
+     "face": 23,
+     "template": {
+      "8404": "11 月大格月曆面"
+     },
+     "r3_draft": "11 月大格月曆面（本輪未製作）"
+    },
+    {
+     "face": 24,
+     "template": {
+      "8404": "12 月照片面（照片＋日期條）"
+     },
+     "r3_draft": "12 月照片面（直式統一框）"
+    },
+    {
+     "face": 25,
+     "template": {
+      "8404": "12 月大格月曆面"
+     },
+     "r3_draft": "12 月大格月曆面（代表）"
+    },
+    {
+     "face": 26,
+     "template": {
+      "8404": "MEMO 1"
+     },
+     "r3_draft": "MEMO（本輪不製作）"
+    },
+    {
+     "face": 27,
+     "template": {
+      "8404": "MEMO 2"
+     },
+     "r3_draft": "MEMO（本輪不製作）"
+    },
+    {
+     "face": 28,
+     "template": {
+      "8404": "MEMO 3"
+     },
+     "r3_draft": "MEMO（本輪不製作）"
+    },
+    {
+     "face": 29,
+     "template": {
+      "8404": "MEMO 4"
+     },
+     "r3_draft": "MEMO（本輪不製作）"
+    },
+    {
+     "face": 30,
+     "template": {
+      "8404": "MEMO 5"
+     },
+     "r3_draft": "MEMO（本輪不製作）"
+    },
+    {
+     "face": 31,
+     "template": {
+      "8404": "2027 全年年曆"
+     },
+     "r3_draft": "2027 年曆（草稿）"
+    },
+    {
+     "face": 32,
+     "template": {
+      "8404": "條碼頁（不可編輯）"
+     },
+     "r3_draft": "條碼頁（廠商固定）"
+    }
+   ],
+   "H1": {
+    "sheets": [
+     {
+      "sheet": 1,
+      "front": 1,
+      "back": 2
+     },
+     {
+      "sheet": 2,
+      "front": 3,
+      "back": 4
+     },
+     {
+      "sheet": 3,
+      "front": 5,
+      "back": 6
+     },
+     {
+      "sheet": 4,
+      "front": 7,
+      "back": 8
+     },
+     {
+      "sheet": 5,
+      "front": 9,
+      "back": 10
+     },
+     {
+      "sheet": 6,
+      "front": 11,
+      "back": 12
+     },
+     {
+      "sheet": 7,
+      "front": 13,
+      "back": 14
+     },
+     {
+      "sheet": 8,
+      "front": 15,
+      "back": 16
+     },
+     {
+      "sheet": 9,
+      "front": 17,
+      "back": 18
+     },
+     {
+      "sheet": 10,
+      "front": 19,
+      "back": 20
+     },
+     {
+      "sheet": 11,
+      "front": 21,
+      "back": 22
+     },
+     {
+      "sheet": 12,
+      "front": 23,
+      "back": 24
+     },
+     {
+      "sheet": 13,
+      "front": 25,
+      "back": 26
+     },
+     {
+      "sheet": 14,
+      "front": 27,
+      "back": 28
+     },
+     {
+      "sheet": 15,
+      "front": 29,
+      "back": 30
+     },
+     {
+      "sheet": 16,
+      "front": 31,
+      "back": 32
+     }
+    ],
+    "check": {
+     "sheets": 16,
+     "spec_sheets": 16,
+     "faces_placed": 32,
+     "all_faces_once": true,
+     "blank_sides": 0,
+     "fits_spec": true
+    },
+    "states": [
+     {
+      "flipped": 0,
+      "front_slope": 1,
+      "back_slope": null
+     },
+     {
+      "flipped": 1,
+      "front_slope": 3,
+      "back_slope": 2
+     },
+     {
+      "flipped": 2,
+      "front_slope": 5,
+      "back_slope": 4
+     },
+     {
+      "flipped": 3,
+      "front_slope": 7,
+      "back_slope": 6
+     },
+     {
+      "flipped": 4,
+      "front_slope": 9,
+      "back_slope": 8
+     },
+     {
+      "flipped": 5,
+      "front_slope": 11,
+      "back_slope": 10
+     },
+     {
+      "flipped": 6,
+      "front_slope": 13,
+      "back_slope": 12
+     },
+     {
+      "flipped": 7,
+      "front_slope": 15,
+      "back_slope": 14
+     },
+     {
+      "flipped": 8,
+      "front_slope": 17,
+      "back_slope": 16
+     },
+     {
+      "flipped": 9,
+      "front_slope": 19,
+      "back_slope": 18
+     },
+     {
+      "flipped": 10,
+      "front_slope": 21,
+      "back_slope": 20
+     },
+     {
+      "flipped": 11,
+      "front_slope": 23,
+      "back_slope": 22
+     },
+     {
+      "flipped": 12,
+      "front_slope": 25,
+      "back_slope": 24
+     },
+     {
+      "flipped": 13,
+      "front_slope": 27,
+      "back_slope": 26
+     },
+     {
+      "flipped": 14,
+      "front_slope": 29,
+      "back_slope": 28
+     },
+     {
+      "flipped": 15,
+      "front_slope": 31,
+      "back_slope": 30
+     },
+     {
+      "flipped": 16,
+      "front_slope": null,
+      "back_slope": 32
+     }
+    ]
+   },
+   "H2": {
+    "sheets": [
+     {
+      "sheet": 1,
+      "front": 1,
+      "back": null
+     },
+     {
+      "sheet": 2,
+      "front": 2,
+      "back": 3
+     },
+     {
+      "sheet": 3,
+      "front": 4,
+      "back": 5
+     },
+     {
+      "sheet": 4,
+      "front": 6,
+      "back": 7
+     },
+     {
+      "sheet": 5,
+      "front": 8,
+      "back": 9
+     },
+     {
+      "sheet": 6,
+      "front": 10,
+      "back": 11
+     },
+     {
+      "sheet": 7,
+      "front": 12,
+      "back": 13
+     },
+     {
+      "sheet": 8,
+      "front": 14,
+      "back": 15
+     },
+     {
+      "sheet": 9,
+      "front": 16,
+      "back": 17
+     },
+     {
+      "sheet": 10,
+      "front": 18,
+      "back": 19
+     },
+     {
+      "sheet": 11,
+      "front": 20,
+      "back": 21
+     },
+     {
+      "sheet": 12,
+      "front": 22,
+      "back": 23
+     },
+     {
+      "sheet": 13,
+      "front": 24,
+      "back": 25
+     },
+     {
+      "sheet": 14,
+      "front": 26,
+      "back": 27
+     },
+     {
+      "sheet": 15,
+      "front": 28,
+      "back": 29
+     },
+     {
+      "sheet": 16,
+      "front": 30,
+      "back": 31
+     },
+     {
+      "sheet": 17,
+      "front": 32,
+      "back": null
+     }
+    ],
+    "check": {
+     "sheets": 17,
+     "spec_sheets": 16,
+     "faces_placed": 32,
+     "all_faces_once": true,
+     "blank_sides": 2,
+     "fits_spec": false
+    }
+   }
+  }
+ }
+}

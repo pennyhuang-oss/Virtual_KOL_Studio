@@ -1,0 +1,390 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r3_pages.py",
+ "method": "讀回實際輸出的 300 dpi JPEG；依格線幾何切出每一格（不使用渲染時的文字位置）；以同字型字形比對讀出數字／星期，以墨色判定紅黑；期望值用 calendar.monthdayscalendar 另行推算，紅字依人事總處放假日。",
+ "pages": [
+  {
+   "page": "H_A_01_iris-chen",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.965,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_01_iris-chen",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.939,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_02_kanon-komori",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_02_kanon-komori",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.954,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_03_luna-tanaka",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_03_luna-tanaka",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.699,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_04_angel-chiu",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_04_angel-chiu",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.697,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_05_somi-oh",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.969,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_05_somi-oh",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.946,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_06_vicky-lin",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_06_vicky-lin",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.948,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_07_coco-wu",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_07_coco-wu",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.697,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_08_mia-huang",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_08_mia-huang",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.696,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_09_yuna-kim",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_09_yuna-kim",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.699,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_10_tammy-chou",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.965,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_10_tammy-chou",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.939,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_11_rin-ayase",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_11_rin-ayase",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.699,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_A_12_rainie-hsu",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.967,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_U_12_rainie-hsu",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.699,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "H_grid_09_yuna-kim",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.969,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_grid_12_rainie-hsu",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.799,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_year_2027",
+   "cells_checked": 588,
+   "dates_matched": 365,
+   "min_date_score": 0.624,
+   "failures": [],
+   "group": "main"
+  },
+  {
+   "page": "V_A_01_iris-chen",
+   "cells_checked": 49,
+   "dates_matched": 31,
+   "min_date_score": 0.95,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "V_A_06_vicky-lin",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.946,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "V_A_11_rin-ayase",
+   "cells_checked": 49,
+   "dates_matched": 30,
+   "min_date_score": 0.942,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "V_A_02_kanon-komori",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.704,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_01_iris-chen",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.945,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_02_kanon-komori",
+   "cells_checked": 56,
+   "dates_matched": 28,
+   "min_date_score": 0.953,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_03_luna-tanaka",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.951,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_04_angel-chiu",
+   "cells_checked": 60,
+   "dates_matched": 30,
+   "min_date_score": 0.703,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_05_somi-oh",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.945,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_06_vicky-lin",
+   "cells_checked": 60,
+   "dates_matched": 30,
+   "min_date_score": 0.703,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_07_coco-wu",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.945,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_08_mia-huang",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.945,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_09_yuna-kim",
+   "cells_checked": 60,
+   "dates_matched": 30,
+   "min_date_score": 0.704,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_10_tammy-chou",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.945,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_11_rin-ayase",
+   "cells_checked": 60,
+   "dates_matched": 30,
+   "min_date_score": 0.703,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "H_B_12_rainie-hsu",
+   "cells_checked": 62,
+   "dates_matched": 31,
+   "min_date_score": 0.945,
+   "failures": [],
+   "group": "compare"
+  },
+  {
+   "page": "CHK_kanon_kanon_V_V_A",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.704,
+   "failures": [],
+   "group": "check"
+  },
+  {
+   "page": "CHK_kanon_kanon_V_V_B_R2",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.708,
+   "failures": [],
+   "group": "check"
+  },
+  {
+   "page": "CHK_kanon_kanon_V_V_U",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.954,
+   "failures": [],
+   "group": "check"
+  },
+  {
+   "page": "CHK_kanon_kanon_H_V_U",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.954,
+   "failures": [],
+   "group": "check"
+  },
+  {
+   "page": "CHK_kanon_kanon_alt028_V_U",
+   "cells_checked": 49,
+   "dates_matched": 28,
+   "min_date_score": 0.954,
+   "failures": [],
+   "group": "check"
+  }
+ ]
+}

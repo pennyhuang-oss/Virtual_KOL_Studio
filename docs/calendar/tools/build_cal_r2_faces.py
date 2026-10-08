@@ -23,6 +23,7 @@ from cal_face_lib import geometry, head_crop, masked_face  # noqa: E402
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
 CAL = os.path.join(ROOT, 'docs', 'calendar')
 OUT = os.path.join(CAL, 'r2', 'faces')
+AUD = os.path.join(CAL, 'r2', 'audit_otherline')  # R3：他線 headshot 只留稽核，不放在主要比較資料夾
 FONT = '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc'
 
 
@@ -87,8 +88,10 @@ def main():
     a = ap.parse_args()
     spec = json.load(open(os.path.join(CAL, 'data', 'cal_r2_face_pairs.json')))
     retrieved = json.load(open(os.path.join(CAL, 'data', 'cal_r2_hf_retrieved.json')))['items']
-    for sub in ('heads', 'masked'):
-        os.makedirs(os.path.join(OUT, sub), exist_ok=True)
+    for base in (OUT, AUD):
+        for sub in ('heads', 'masked'):
+            os.makedirs(os.path.join(base, sub), exist_ok=True)
+    group = {p['id']: p['group'] for p in spec['people']}
 
     geo = {}
     for person in spec['people']:
@@ -99,8 +102,9 @@ def main():
             g = geometry(p)
             if g is None:
                 raise SystemExit(f'no face: {pid} {item["src"]}')
-            h = os.path.join(OUT, 'heads', f'{pid}_{k}.jpg')
-            m = os.path.join(OUT, 'masked', f'{pid}_{k}.jpg')
+            base = AUD if person['group'] == 'observation' else OUT
+            h = os.path.join(base, 'heads', f'{pid}_{k}.jpg')
+            m = os.path.join(base, 'masked', f'{pid}_{k}.jpg')
             head_crop(p, g, h)
             masked_face(p, g, m)
             geo[pid].append({'src': item['src'], 'tag': item['tag'], 'yaw_proxy': round(g['yaw'], 3),
@@ -132,7 +136,8 @@ def main():
             for i in ids:
                 cs = cells(i, kind, 300 if len(geo[i]) <= 4 else 230)
                 rows += [tile_row(cs[j:j + 6]) for j in range(0, len(cs), 6)]
-        stack(rows, title, os.path.join(OUT, f'CAL_R2_focus_{key}.jpg'))
+        base = AUD if any(group[i] == 'observation' for i in ids) else OUT
+        stack(rows, title, os.path.join(base, f'CAL_R2_focus_{key}.jpg'))
     print('ok', sum(len(v) for v in geo.values()), 'faces')
 
 

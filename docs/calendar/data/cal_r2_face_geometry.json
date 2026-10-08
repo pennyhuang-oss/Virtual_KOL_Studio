@@ -425,8 +425,8 @@
     "yaw_proxy": -0.006,
     "roll_deg": -0.3,
     "eye_distance_px": 269.3,
-    "head": "r2/faces/heads/otherline_headshots_1.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_1.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_1.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_1.jpg"
    },
    {
     "src": "hf:20402217-8dad-4d59-855b-c9af90d43c68",
@@ -434,8 +434,8 @@
     "yaw_proxy": 0.005,
     "roll_deg": -0.1,
     "eye_distance_px": 247.1,
-    "head": "r2/faces/heads/otherline_headshots_2.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_2.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_2.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_2.jpg"
    },
    {
     "src": "hf:abd8b297-3461-4616-9929-45e201007ffa",
@@ -443,8 +443,8 @@
     "yaw_proxy": 0.017,
     "roll_deg": -0.6,
     "eye_distance_px": 252.3,
-    "head": "r2/faces/heads/otherline_headshots_3.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_3.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_3.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_3.jpg"
    },
    {
     "src": "hf:8ca951a1-dc56-4384-9b19-c9e3c6cd8aa1",
@@ -452,8 +452,8 @@
     "yaw_proxy": 0.01,
     "roll_deg": -2.8,
     "eye_distance_px": 258.3,
-    "head": "r2/faces/heads/otherline_headshots_4.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_4.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_4.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_4.jpg"
    },
    {
     "src": "hf:573297d5-e945-42ed-a92b-09366835aca4",
@@ -461,8 +461,8 @@
     "yaw_proxy": -0.015,
     "roll_deg": -0.4,
     "eye_distance_px": 247.5,
-    "head": "r2/faces/heads/otherline_headshots_5.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_5.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_5.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_5.jpg"
    },
    {
     "src": "hf:14d841c1-d3fd-4286-ac91-8750c02033ed",
@@ -470,8 +470,8 @@
     "yaw_proxy": -0.003,
     "roll_deg": -0.9,
     "eye_distance_px": 278.3,
-    "head": "r2/faces/heads/otherline_headshots_6.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_6.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_6.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_6.jpg"
    },
    {
     "src": "hf:83f0a242-ab14-4ee0-88c8-2a022c436eb9",
@@ -479,8 +479,8 @@
     "yaw_proxy": 0.022,
     "roll_deg": -1.0,
     "eye_distance_px": 263.1,
-    "head": "r2/faces/heads/otherline_headshots_7.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_7.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_7.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_7.jpg"
    },
    {
     "src": "hf:55e4e154-95e1-42dc-8b0c-d5107af27bae",
@@ -488,8 +488,8 @@
     "yaw_proxy": -0.003,
     "roll_deg": 0.5,
     "eye_distance_px": 260.8,
-    "head": "r2/faces/heads/otherline_headshots_8.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_8.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_8.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_8.jpg"
    },
    {
     "src": "hf:ec1583f2-5d10-4563-82f3-ffdc208df5e1",
@@ -497,8 +497,8 @@
     "yaw_proxy": -0.002,
     "roll_deg": -1.4,
     "eye_distance_px": 233.4,
-    "head": "r2/faces/heads/otherline_headshots_9.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_9.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_9.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_9.jpg"
    },
    {
     "src": "hf:1843d3de-50b7-4ce3-b206-75674475a5ae",
@@ -506,8 +506,8 @@
     "yaw_proxy": -0.013,
     "roll_deg": -0.7,
     "eye_distance_px": 243.6,
-    "head": "r2/faces/heads/otherline_headshots_10.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_10.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_10.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_10.jpg"
    },
    {
     "src": "hf:e3f4b43f-eb8c-43d3-9f75-19f9acee484e",
@@ -515,8 +515,8 @@
     "yaw_proxy": 0.003,
     "roll_deg": -1.3,
     "eye_distance_px": 263.7,
-    "head": "r2/faces/heads/otherline_headshots_11.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_11.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_11.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_11.jpg"
    },
    {
     "src": "hf:9021734e-c0d4-4c2f-b174-12fe0bc79689",
@@ -524,8 +524,8 @@
     "yaw_proxy": 0.029,
     "roll_deg": 2.0,
     "eye_distance_px": 260.4,
-    "head": "r2/faces/heads/otherline_headshots_12.jpg",
-    "masked": "r2/faces/masked/otherline_headshots_12.jpg"
+    "head": "r2/audit_otherline/heads/otherline_headshots_12.jpg",
+    "masked": "r2/audit_otherline/masked/otherline_headshots_12.jpg"
    }
   ]
  }

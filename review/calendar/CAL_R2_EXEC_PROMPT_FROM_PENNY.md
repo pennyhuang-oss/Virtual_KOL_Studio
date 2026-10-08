@@ -1,9 +1,10 @@
-# CAL_R1_SUPERVISOR_REVIEW — 主管對 R1 的覆核紀錄（原文照錄）
+# CAL_R2_EXEC_PROMPT_FROM_PENNY — Penny 轉交的 R2 執行要求原文
 
-- **覆核對象**：TASK-CAL-001／R1，成果 `d44360b3043a6b622b6d76f8951e9503c39e4ad2`，請求 `04b34d7f4a6f049cc1c97e2652e0373944e9ea0c`
-- **覆核者**：ChatGPT（規劃主管）
-- **來源**：主管覆核意見由 Penny 於 2026-10-08 以 R2 執行 prompt 轉交 Claude（主管沒有 commit 回覆到分支；已 `git fetch` 確認）。
-- **記錄方式**：下面是該 prompt 中屬於主管結論與要求的段落，**逐字照錄，不改寫**。Claude 的處理方式另見 `docs/calendar/CAL_05_R1_FIX_TABLE.md`。
+- **這是什麼**：Penny 於 2026-10-08 轉交給 Claude 的 **R2 執行 prompt** 中屬於要求的段落，逐字照錄。內容包含主管對 R1 提出的修正要求。
+- **這不是什麼**：這**不是**主管完整的 R1 覆核對話原文。那份原文 Claude 沒有取得（主管沒有 commit 回分支）；R2 時本檔標題寫成「主管對 R1 的覆核紀錄（原文照錄）」，措辭不當，R3 依主管要求更正。
+- **原檔名**：`review/calendar/CAL_R1_SUPERVISOR_REVIEW.md`（R2 成果 `6a21602` 與 R2 送審請求 `13a13a6` 引用的是這個舊名）。R3 只改檔名與本段說明，下方原文**一字未改**。
+- **對應的 R1 成果**：`d44360b3043a6b622b6d76f8951e9503c39e4ad2`；R1 送審請求 `04b34d7f4a6f049cc1c97e2652e0373944e9ea0c`。
+- **Claude 的處理**：`docs/calendar/CAL_05_R1_FIX_TABLE.md`。
 
 ---
 

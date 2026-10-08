@@ -1,5 +1,6 @@
-# CAL_07 — 替代選圖與 Higgsfield 既有原圖取回紀錄（TASK-CAL-001／R2）
+# CAL_07 — 替代選圖與 Higgsfield 既有原圖取回紀錄（TASK-CAL-001／R2，R3 更新）
 
+> **R3**：主推薦已改為 `data/cal_r3_picks.json`（4 位橫直同圖：Kanon #028、Somi #063、Coco candidate_01、Tammy #130）；本檔 §3 是 R2 的逐位替代紀錄。
 > 選圖都是**建議**，未經 Penny 拍板。圖片請看 `r2/decisions/CAL_R2_decide_people_1.jpg`～`_3.jpg`（每月一列：H 建議、V 建議、替代）。逐張的技術、一致性、美感、瑕疵、動作在 `CAL_11b_ASSET_TABLE.generated.md`。
 
 ## 1. 取回範圍與方式
@@ -12,17 +13,23 @@
 | 取回了哪些 | daily140 涵蓋 20 位人設；**只取回與本案有關的 7 位**（Batch 3 的 kanon、somi、angel、tammy、rin＋備選 wanyin＋比較用 wendy），每位 7 張（D1–D5 第 1 輪＋D4、D5 第 2 輪）＝**49 張**，全部成功 |
 | 沒取回 | daily140 的其他 13 位（與本案無關）；miu-shiraishi（不在工作名單，只在替換組合裡被提到） |
 | 原檔存放 | 本機快取，**不進 repo**（49＋33 張共約 221 MB）。repo 只放裁切／縮圖等衍生檔。重建衍生檔的腳本都吃 `--hf-dir <快取資料夾>` |
-| 逐張紀錄 | 程式產生的 `CAL_07b_HF_RETRIEVAL.generated.md`（job_id、daily140 編號、slot／take、生成時間、原始尺寸、取回狀態、sha256 前 16 碼、本輪用途）；原始資料 `data/cal_r2_hf_retrieved.json` |
+| 逐張紀錄 | 程式產生的 `CAL_07b_HF_RETRIEVAL.generated.md`（job_id、daily140 編號、slot／take、生成時間、原始尺寸、取回狀態、完整 sha256（R3 補齊）、本輪用途）；原始資料 `data/cal_r2_hf_retrieved.json` |
 
 ### 1.1 「留用 64 張」
 
 **未確認。** repo 沒有逐張的留用清單；Higgsfield 紀錄的 liked 欄位 138 張全部是 false。本輪取回的圖**不推定已獲 Penny 採用**；被選作候選只代表「Claude 認為可以給 Penny 看」。
 
-### 1.2 需要主管知悉：另外取回了 33 張其他工作線的圖
+### 1.2 其他工作線的 33 張 headshot（R3：維持排除，只留稽核）
 
-- 查詢 Batch 3 紀錄時，看到同帳號 **2026-10-08（本日）由其他工作線產生**的 neutral casting headshot 18 張（08:23–09:14 UTC）與 identity check 15 張（09:39–09:42 UTC），都是本案名單內的人設（含原 11 位）。
-- 為了在統一光線下補一組臉部觀察，我把這 33 張也唯讀取回。它們**不是本任務生成、用途未知、未經 Penny 審**，只放在觀察頁 `r2/faces/CAL_R2_focus_otherline_headshots.jpg`，**不作比較依據、不作候選**。
-- 這是否超出「相關既有原圖」的範圍，請主管判斷；若認為越界，下一輪刪除該觀察頁與 `data/cal_r2_hf_retrieved.json` 中這 33 筆即可（原檔本來就不在 repo）。
+- 查詢 Batch 3 紀錄時，同帳號 **2026-10-08 由其他工作線產生**的 neutral casting headshot 18 張（08:23–09:14 UTC）與 identity check 15 張（09:39–09:42 UTC）也被唯讀取回。它們**不是本任務生成、用途未知、未經 Penny 審**。
+- 主管 R2 Q5：「33 張他線圖維持排除於依據之外」。R3 處理：**不作本案主角、身份參考、碰撞或辨識度結論的依據；不再擴大取回**；觀察頁從主要比較資料夾移到 `r2/audit_otherline/`（只留稽核），不放進 Penny 決策包。
+- 稽核紀錄保留（`data/cal_r2_hf_retrieved.json`、`CAL_07b` §2）；**沒有刪除或修改任何 Higgsfield 紀錄**。
+
+### 1.3 R3 本機快取核對
+
+- `tools/verify_cal_r3_hfcache.py` 逐檔核對 82 張本機原圖：**82/82** 檔案存在、可解碼、尺寸與紀錄相同、sha256 與 R2 記下的前 16 碼相同後，把**完整 64 碼 sha256** 寫回 `data/cal_r2_hf_retrieved.json`（`CAL_07b` 表格改列完整 sha256）。**沒有重新下載。**
+- judgments、臉部比較、R3 選圖裡所有 `hf:<job_id>` 參照都能在紀錄中定位（無法定位 0 個）。
+- 留用 64 張：繼續標**未確認**。
 
 ## 2. 下載成功 ≠ 合格
 
