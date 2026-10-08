@@ -1,0 +1,1658 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r1.py",
+ "collision_threshold": 0.022,
+ "batch3_lead_pairs_min": [
+  {
+   "a": "rin-ayase",
+   "b": "kanon-komori",
+   "d": 0.02302
+  },
+  {
+   "a": "kanon-komori",
+   "b": "somi-oh",
+   "d": 0.02794
+  },
+  {
+   "a": "rin-ayase",
+   "b": "somi-oh",
+   "d": 0.0296
+  },
+  {
+   "a": "rin-ayase",
+   "b": "tammy-chou",
+   "d": 0.03214
+  },
+  {
+   "a": "kanon-komori",
+   "b": "tammy-chou",
+   "d": 0.03646
+  }
+ ],
+ "candidates": [
+  {
+   "id": "iris-chen",
+   "role": "lead",
+   "month": 1,
+   "H": {
+    "path": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+    "anchor": [
+     0.5,
+     0.3
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵；窗邊高光略過曝"
+   },
+   "V": {
+    "path": "kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+    "anchor": [
+     0.5,
+     0.17
+    ],
+    "verdict": "可直接用",
+    "defects": "背景招牌是 AI 假字（小、可選修）"
+   },
+   "extra": [
+    "kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png"
+   ],
+   "why": "圓臉、大雙眼皮、笑起來最甜的鄰家型；素材最多（repo 79 張，訓練集 1920×2560），從街拍到內衣都有現成圖，尺度可上可下。",
+   "cons": "長直黑髮與 rainie 同髮型路線；日間甜美系只有 Seedream 訓練集 14 張（Soul 前），Soul 後的圖多是夜間內衣系列，兩批光線質感不同。",
+   "diff": "12 人中臉最圓、妝最淡；與 rainie 的差在臉型（圓 vs 立體）與妝感（裸妝 vs 濃妝）。",
+   "name": "Iris Chen",
+   "native_name": "陳芯語",
+   "age": 22,
+   "ethnicity_src": "Taiwanese",
+   "origin_src": "Taipei, Taiwan",
+   "asian_evidence": "kols/iris-chen/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taipei, Taiwan」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/iris-chen.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "5fe3b6ba-1277-4822-9141-fb06eb3b93a0",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/iris-chen/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-0m0cc60",
+     "path": "kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "thumb": "img/cand/iris-chen_1.jpg",
+     "catalog_asset": "g_0m0cc60",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/iris-chen/images/training_v1/02_taipei_street_02.webp"
+    },
+    {
+     "asset_id": "A-14l9wls",
+     "path": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "thumb": "img/cand/iris-chen_2.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/iris-chen/images/training_v1/06_cafe_window_02.webp"
+    },
+    {
+     "asset_id": "A-0vhrzs2",
+     "path": "kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/iris-chen_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png"
+    }
+   ]
+  },
+  {
+   "id": "luna-tanaka",
+   "role": "lead",
+   "month": 3,
+   "H": {
+    "path": "kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+    "anchor": [
+     0.48,
+     0.25
+    ],
+    "verdict": "需修圖",
+    "defects": "左上有假 IG 介面字樣「Plaremgilent 1.g」、右上「×」，半版裁切後仍在框內"
+   },
+   "V": {
+    "path": "kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+    "anchor": [
+     0.5,
+     0.13
+    ],
+    "verdict": "需修圖",
+    "defects": "畫面乾淨，但原圖只有 1152 px 寬，直式滿版約 203 ppi（解析度邊緣）"
+   },
+   "extra": [
+    "kols/luna-tanaka/images/preflight/LG-04.png"
+   ],
+   "why": "黑色齊瀏海短鮑伯、嬌小、日系清純，整組辨識度最高的髮型之一；京都街景、櫻花、浴衣都有現成圖。",
+   "cons": "原圖多為 1152×2048，直式滿版解析度邊緣；性感表現偏保守（以低胸上衣為上限）。",
+   "diff": "唯一黑色齊瀏海短鮑伯；臉型小圓、五官集中，與 coco 的長捲髮瀏海是兩種甜。",
+   "name": "Luna Tanaka",
+   "native_name": "田中ひな",
+   "age": 20,
+   "ethnicity_src": "Japanese",
+   "origin_src": "Kyoto, Japan",
+   "asian_evidence": "kols/luna-tanaka/profile.json identity.ethnicity=「Japanese」/ origin=「Kyoto, Japan」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/luna-tanaka.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "a3dc13ec-16e7-4990-89c6-9e0461db46ef",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/luna-tanaka/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-1eagrzg",
+     "path": "kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/luna-tanaka_1.jpg",
+     "catalog_asset": "g_1eagrzg",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png"
+    },
+    {
+     "asset_id": "A-12bg2hw",
+     "path": "kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/luna-tanaka_2.jpg",
+     "catalog_asset": "g_12bg2hw",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png"
+    },
+    {
+     "asset_id": "A-03phxel",
+     "path": "kols/luna-tanaka/images/preflight/LG-04.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/luna-tanaka_3.jpg",
+     "catalog_asset": "g_03phxel",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/luna-tanaka/images/preflight/LG-04.png"
+    }
+   ]
+  },
+  {
+   "id": "yuna-kim",
+   "role": "lead",
+   "month": 9,
+   "H": {
+    "path": "kols/yuna-kim/images/face_reference/ref_01.webp",
+    "anchor": [
+     0.5,
+     0.17
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵；韓文招牌為背景"
+   },
+   "V": {
+    "path": "kols/yuna-kim/images/soul_test_v1/street_02.png",
+    "anchor": [
+     0.45,
+     0.1
+    ],
+    "verdict": "需修圖",
+    "defects": "肩背包疑似 GG 類老花、裙子近似名牌格紋；原圖 1152 px 寬，直式滿版約 203 ppi"
+   },
+   "extra": [
+    "kols/yuna-kim/images/face_reference/ref_03.webp"
+   ],
+   "why": "及肩黑棕微捲、韓系素顏清透、氣質冷靜；首爾街頭的金色斜陽有秋天感。",
+   "cons": "直式候選解析度邊緣且有品牌花紋風險；表情變化少（多為微笑或放空）。",
+   "diff": "唯一「清透冷淡」的韓系素顏路線；髮長介於 iris 與 luna 之間。",
+   "name": "Yuna Kim",
+   "native_name": "김하은",
+   "age": 21,
+   "ethnicity_src": "Korean",
+   "origin_src": "Seoul, South Korea",
+   "asian_evidence": "kols/yuna-kim/profile.json identity.ethnicity=「Korean」/ origin=「Seoul, South Korea」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/yuna-kim.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "235794a5-2eff-45fb-91b4-3232910afefa",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/yuna-kim/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-1c1xag2",
+     "path": "kols/yuna-kim/images/soul_test_v1/street_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/yuna-kim_1.jpg",
+     "catalog_asset": "g_1c1xag2",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yuna-kim/images/soul_test_v1/street_02.png"
+    },
+    {
+     "asset_id": "A-1o5s3s9",
+     "path": "kols/yuna-kim/images/face_reference/ref_01.webp",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/yuna-kim_2.jpg",
+     "catalog_asset": "g_1o5s3s9",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yuna-kim/images/face_reference/ref_01.webp"
+    },
+    {
+     "asset_id": "A-1mxu3mz",
+     "path": "kols/yuna-kim/images/face_reference/ref_03.webp",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/yuna-kim_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yuna-kim/images/face_reference/ref_03.webp"
+    }
+   ]
+  },
+  {
+   "id": "rainie-hsu",
+   "role": "lead",
+   "month": 12,
+   "H": {
+    "path": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+    "anchor": [
+     0.45,
+     0.25
+    ],
+    "verdict": "需修圖",
+    "defects": "右下有假日期戳記（2023/18/0?）；鏡面閃光與鏡中反射人影"
+   },
+   "V": {
+    "path": "kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png",
+    "anchor": [
+     0.55,
+     0.2
+    ],
+    "verdict": "可直接用",
+    "defects": "人物在門框裡偏小，月份主視覺辨識度中等"
+   },
+   "extra": [
+    "kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png"
+   ],
+   "rejected": [
+    {
+     "path": "kols/rainie-hsu/images/training_v2/12_hotel_window_selfie.png",
+     "why": "窗框十字壓在胸前，裁不掉"
+    },
+    {
+     "path": "kols/rainie-hsu/images/training_v2/06_perfume_selfie_meitu.png",
+     "why": "香水瓶懸空在鎖骨前、沒有手拿"
+    }
+   ],
+   "why": "濃妝立體、夜店女王的成熟性感；金色緞面長洋裝、馬甲適合年末派對月。",
+   "cons": "只有 training_v2（Soul v2）這組臉一致；舊資料夾（dance_clone、face_reference round1）是另一張臉，不可混用。多為鏡子自拍與手機入鏡。與 iris 同為長直黑髮，兩人沒有臉部距離量測，需並排目視確認。",
+   "diff": "整組妝最濃、輪廓最立體；夜景＋金屬光澤服裝。",
+   "name": "Rainie Hsu",
+   "native_name": "許雷妮",
+   "age": 24,
+   "ethnicity_src": "Taiwanese",
+   "origin_src": "Taipei, Taiwan",
+   "asian_evidence": "kols/rainie-hsu/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taipei, Taiwan」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/rainie-hsu.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "994e33d2-7df1-47da-8478-7a6fd849fa33",
+      "status": "deprecated"
+     },
+     {
+      "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/rainie-hsu/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-0s8825e",
+     "path": "kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/rainie-hsu_1.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png"
+    },
+    {
+     "asset_id": "A-0s89vvy",
+     "path": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/rainie-hsu_2.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png"
+    },
+    {
+     "asset_id": "A-1vqyi35",
+     "path": "kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/rainie-hsu_3.jpg",
+     "catalog_asset": "g_1vqyi35",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png"
+    }
+   ]
+  },
+  {
+   "id": "coco-wu",
+   "role": "lead",
+   "month": 7,
+   "H": {
+    "path": "kols/coco-wu/images/face_reference/candidate_01.png",
+    "anchor": [
+     0.47,
+     0.25
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵"
+   },
+   "V": {
+    "path": "kols/coco-wu/images/face_reference/candidate_03.png",
+    "anchor": [
+     0.4,
+     0.18
+    ],
+    "verdict": "可直接用",
+    "defects": "背景手機螢幕顯示她自己的照片（可接受）"
+   },
+   "extra": [
+    "kols/coco-wu/images/dance_clone_r12/start_frame.png"
+   ],
+   "rejected": [
+    {
+     "path": "kols/coco-wu/images/face_reference/round1_candidate_04.png",
+     "why": "背後多一個黑衣人入鏡；臉部偏糊、與其他圖一致性弱"
+    }
+   ],
+   "why": "大笑容、深棕長捲髮配瀏海、宿舍甜心，親近感最強；有比基尼現成圖（尺度 C 參考）。",
+   "cons": "校園／宿舍設定，成品必須避開制服元素；不同輪次 face_reference 臉略有差異。",
+   "diff": "整組笑得最開的「元氣甜」；與 luna 同有瀏海但髮長、臉型都不同。",
+   "name": "Coco Wu",
+   "native_name": "吳可可",
+   "age": 20,
+   "ethnicity_src": "Taiwanese",
+   "origin_src": "Taichung, Taiwan",
+   "asian_evidence": "kols/coco-wu/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taichung, Taiwan」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/coco-wu.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "cf7045dc-4e69-4c56-9621-aa8c40bf39b4",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/coco-wu/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-1p2l9js",
+     "path": "kols/coco-wu/images/face_reference/candidate_03.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/coco-wu_1.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/coco-wu/images/face_reference/candidate_03.png"
+    },
+    {
+     "asset_id": "A-1p19li2",
+     "path": "kols/coco-wu/images/face_reference/candidate_01.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/coco-wu_2.jpg",
+     "catalog_asset": "g_1p19li2",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/coco-wu/images/face_reference/candidate_01.png"
+    },
+    {
+     "asset_id": "A-0475rf5",
+     "path": "kols/coco-wu/images/dance_clone_r12/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/coco-wu_3.jpg",
+     "catalog_asset": "g_0475rf5",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/coco-wu/images/dance_clone_r12/start_frame.png"
+    }
+   ]
+  },
+  {
+   "id": "mia-huang",
+   "role": "lead",
+   "month": 8,
+   "H": {
+    "path": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+    "anchor": [
+     0.55,
+     0.25
+    ],
+    "verdict": "可直接用",
+    "defects": "霓虹紫光色偏重，印刷色差需打樣確認"
+   },
+   "V": {
+    "path": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+    "anchor": [
+     0.5,
+     0.17
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵；同樣是紫光"
+   },
+   "extra": [
+    "kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png"
+   ],
+   "rejected": [
+    {
+     "path": "kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png",
+     "why": "門口全身照人物過小（只當比較圖，不當主視覺）"
+    },
+    {
+     "path": "kols/mia-huang/images/dance_clone_r1/start_frame.png",
+     "why": "水手領＋百褶裙屬校服風格；性感取向的桌曆一律避開制服元素"
+    }
+   ],
+   "why": "灰金挑粉的捲短髮、電競霓虹房，造型與場景辨識度都高，甜而俏皮。",
+   "cons": "不同圖之間臉有些飄（face_reference round1 兩張明顯不同，只用 training_v1）；場景幾乎都是同一間紫光電競房。",
+   "diff": "唯一淺色挑染短髮＋霓虹電競場景。",
+   "name": "Mia Huang",
+   "native_name": "黃米亞",
+   "age": 22,
+   "ethnicity_src": "Taiwanese",
+   "origin_src": "Hsinchu, Taiwan (新竹)",
+   "asian_evidence": "kols/mia-huang/profile.json identity.ethnicity=「Taiwanese」/ origin=「Hsinchu, Taiwan (新竹)」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/mia-huang.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/mia-huang/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-0vgfn3a",
+     "path": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/mia-huang_1.jpg",
+     "catalog_asset": "g_0vgfn3a",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/mia-huang/images/training_v1/13_stretch_break_candid.png"
+    },
+    {
+     "asset_id": "A-0r53k55",
+     "path": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/mia-huang_2.jpg",
+     "catalog_asset": "g_0r53k55",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png"
+    },
+    {
+     "asset_id": "A-0z98xw3",
+     "path": "kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/mia-huang_3.jpg",
+     "catalog_asset": "g_0z98xw3",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png"
+    }
+   ]
+  },
+  {
+   "id": "vicky-lin",
+   "role": "lead",
+   "month": 6,
+   "H": {
+    "path": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+    "anchor": [
+     0.42,
+     0.13
+    ],
+    "verdict": "需修圖",
+    "defects": "短褲上有 Nike 勾勾商標；背景路人"
+   },
+   "V": {
+    "path": "kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+    "anchor": [
+     0.45,
+     0.13
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵（運動內衣上的標誌是虛構的）"
+   },
+   "extra": [
+    "kols/vicky-lin/images/face_reference/v4_anchored_12_front_fullbody_turnback.png"
+   ],
+   "why": "小麥膚色、高馬尾、健身身材，性感來自身體線條而非衣著，夏天月份最自然。",
+   "cons": "早期 face_reference 幾張臉不同（v3/v4 錨定後才穩定）；原圖混有 1152×2048。",
+   "diff": "唯一深膚色、唯一運動體態；整組身形差異最大的一位。",
+   "name": "Vicky Lin",
+   "native_name": "林薇淇",
+   "age": 25,
+   "ethnicity_src": "Taiwanese",
+   "origin_src": "Kaohsiung, Taiwan (高雄)",
+   "asian_evidence": "kols/vicky-lin/profile.json identity.ethnicity=「Taiwanese」/ origin=「Kaohsiung, Taiwan (高雄)」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/vicky-lin.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "bdb1d879-da36-4c1a-bc63-9f5b49a3e94e",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/vicky-lin/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-1lwnons",
+     "path": "kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/vicky-lin_1.jpg",
+     "catalog_asset": "g_1lwnons",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png"
+    },
+    {
+     "asset_id": "A-1uihlac",
+     "path": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "thumb": "img/cand/vicky-lin_2.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v3_01_front_headshot.png"
+    },
+    {
+     "asset_id": "A-1nwuxvo",
+     "path": "kols/vicky-lin/images/face_reference/v4_anchored_12_front_fullbody_turnback.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/vicky-lin_3.jpg",
+     "catalog_asset": "g_1nwuxvo",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v4_anchored_12_front_fullbody_turnback.png"
+    }
+   ]
+  },
+  {
+   "id": "rin-ayase",
+   "role": "lead",
+   "month": 11,
+   "H": {
+    "path": "kols/rin-ayase/images/training_v1/train_02.jpg",
+    "anchor": [
+     0.42,
+     0.22
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵"
+   },
+   "V": {
+    "path": "kols/rin-ayase/images/training_v1/train_01.jpg",
+    "anchor": [
+     0.65,
+     0.12
+    ],
+    "verdict": "可直接用",
+    "defects": "側身回頭、臉在右上偏小，辨識度中等"
+   },
+   "extra": [
+    "review/soul_pilot/rin-ayase/verify_v1/V1.png"
+   ],
+   "why": "酒紅長捲髮、銀座夜色、裸背與緞面晨袍，成熟性感最強，且不靠暴露。",
+   "cons": "repo 只有 5 張訓練圖＋6 張 Soul 驗證圖（驗證圖是統一服裝，不適合當主視覺）；直式候選臉偏小。",
+   "diff": "唯一酒紅髮色、唯一「夜晚的成熟女人」氣質；盤髮時與長髮時判若兩種造型，但臉一致。",
+   "name": "Rin Ayase",
+   "native_name": "綾瀨凜",
+   "age": 25,
+   "ethnicity_src": "日本",
+   "origin_src": "東京銀座",
+   "asian_evidence": "kols/rin-ayase/profile.json identity.ethnicity=「日本」/ origin=「東京銀座」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/rin-ayase.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/rin-ayase/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "ruoruo-tang",
+     0.01848
+    ],
+    "hits_le_0220": 4,
+    "hits_with_leads": []
+   },
+   "images": [
+    {
+     "asset_id": "A-1bve1vi",
+     "path": "kols/rin-ayase/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/rin-ayase_1.jpg",
+     "catalog_asset": "g_1bve1vi",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rin-ayase/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-1bun531",
+     "path": "kols/rin-ayase/images/training_v1/train_02.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/rin-ayase_2.jpg",
+     "catalog_asset": "g_1bun531",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rin-ayase/images/training_v1/train_02.jpg"
+    },
+    {
+     "asset_id": "A-1v5o3th",
+     "path": "review/soul_pilot/rin-ayase/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/rin-ayase_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/rin-ayase/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "kanon-komori",
+   "role": "lead",
+   "month": 2,
+   "H": {
+    "path": "kols/kanon-komori/images/training_v1/train_02.jpg",
+    "anchor": [
+     0.47,
+     0.28
+    ],
+    "verdict": "可直接用",
+    "defects": "背景黑板是 AI 假字（可接受）"
+   },
+   "V": {
+    "path": "kols/kanon-komori/images/training_v1/train_01.jpg",
+    "anchor": [
+     0.47,
+     0.22
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵；線圈區壓到瀏海上緣（不傷臉）"
+   },
+   "extra": [
+    "review/soul_pilot/kanon-komori/verify_v1/V1.png"
+   ],
+   "rejected": [
+    {
+     "path": "kols/kanon-komori/images/training_v1/train_04.jpg",
+     "why": "全身站姿人物過小，臉在 204 mm 高的頁面上辨識度不足"
+    }
+   ],
+   "why": "粉紫長髮＋瀏海、女僕咖啡廳，甜＋性感兼具，2 月的粉色系不必另外套節慶裝。",
+   "cons": "repo 只有 6 張訓練圖＋6 張驗證圖；女僕裝屬角色制服（不是校服），尺度仍需 Penny 確認。",
+   "diff": "唯一粉色系長髮；整組最「二次元偶像」的外型。",
+   "name": "Kanon Komori",
+   "native_name": "小森花音",
+   "age": 20,
+   "ethnicity_src": "日本",
+   "origin_src": "東京秋葉原",
+   "asian_evidence": "kols/kanon-komori/profile.json identity.ethnicity=「日本」/ origin=「東京秋葉原」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/kanon-komori.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "642ba554-6f87-4be9-9aa7-4b66529b4995",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/kanon-komori/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "miu-shiraishi",
+     0.01734
+    ],
+    "hits_le_0220": 4,
+    "hits_with_leads": []
+   },
+   "images": [
+    {
+     "asset_id": "A-1ma6uak",
+     "path": "kols/kanon-komori/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/kanon-komori_1.jpg",
+     "catalog_asset": "g_1ma6uak",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/kanon-komori/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-1m9itpb",
+     "path": "kols/kanon-komori/images/training_v1/train_02.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/kanon-komori_2.jpg",
+     "catalog_asset": "g_1m9itpb",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/kanon-komori/images/training_v1/train_02.jpg"
+    },
+    {
+     "asset_id": "A-0j1i7ef",
+     "path": "review/soul_pilot/kanon-komori/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/kanon-komori_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/kanon-komori/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "tammy-chou",
+   "role": "lead",
+   "month": 10,
+   "H": {
+    "path": "kols/tammy-chou/images/training_v1/train_03.jpg",
+    "anchor": [
+     0.42,
+     0.33
+    ],
+    "verdict": "需補生成",
+    "defects": "自拍手臂入鏡、頭髮綁起看不出蜜金大波浪、灰襯衫素色，辨識度弱 → 不採用；先取回 daily_v2 原圖（#075/#130 頂樓黑洋裝），不行再補生成"
+   },
+   "V": {
+    "path": "kols/tammy-chou/images/training_v1/train_01.jpg",
+    "anchor": [
+     0.43,
+     0.22
+    ],
+    "verdict": "可直接用",
+    "defects": "紙箱上有假條碼標籤（小）"
+   },
+   "extra": [
+    "review/soul_pilot/tammy-chou/verify_v1/V1.png"
+   ],
+   "why": "蜜金色大波浪、網拍老闆娘的時髦感，髮色是整組最亮的一位。",
+   "cons": "repo 5 張訓練圖只有 train_01 成立；與 peggy-lee（0.02008）有碰撞紀錄（本名單已避開）。",
+   "diff": "唯一蜜金髮色；與 angel 的棕金漸層是不同明度。",
+   "name": "Tammy Chou",
+   "native_name": "周語彤",
+   "age": 24,
+   "ethnicity_src": "台灣",
+   "origin_src": "台北五分埔",
+   "asian_evidence": "kols/tammy-chou/profile.json identity.ethnicity=「台灣」/ origin=「台北五分埔」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/tammy-chou.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/tammy-chou/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "ruoruo-tang",
+     0.01886
+    ],
+    "hits_le_0220": 2,
+    "hits_with_leads": []
+   },
+   "images": [
+    {
+     "asset_id": "A-0cnlh6h",
+     "path": "kols/tammy-chou/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/tammy-chou_1.jpg",
+     "catalog_asset": "g_0cnlh6h",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/tammy-chou/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-0cm9pvf",
+     "path": "kols/tammy-chou/images/training_v1/train_03.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/tammy-chou_2.jpg",
+     "catalog_asset": "g_0cm9pvf",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/tammy-chou/images/training_v1/train_03.jpg"
+    },
+    {
+     "asset_id": "A-1whlelu",
+     "path": "review/soul_pilot/tammy-chou/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/tammy-chou_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/tammy-chou/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "somi-oh",
+   "role": "lead",
+   "month": 5,
+   "H": {
+    "path": "kols/somi-oh/images/training_v1/train_01.jpg",
+    "anchor": [
+     0.42,
+     0.13
+    ],
+    "verdict": "可直接用",
+    "defects": "炸雞紙盒配色像品牌包裝（無可讀 logo）"
+   },
+   "V": {
+    "path": "kols/somi-oh/images/training_v1/train_02.jpg",
+    "anchor": [
+     0.3,
+     0.2
+    ],
+    "verdict": "可直接用",
+    "defects": "吃串燒張嘴，親和但不性感；若要更甜，取回 daily_v2 原圖 #065/#126（海邊白洋裝）"
+   },
+   "extra": [
+    "review/soul_pilot/somi-oh/verify_v1/V1.png"
+   ],
+   "why": "銅橘色短髮、釜山吃播的爽朗暖色調，整組最有生活感的一位。",
+   "cons": "repo 只有訓練圖；夜景多；與 miu、jia 有碰撞紀錄（本名單已避開）。",
+   "diff": "唯一銅橘髮色；表情最外放。",
+   "name": "Somi Oh",
+   "native_name": "오소미",
+   "age": 24,
+   "ethnicity_src": "韓國",
+   "origin_src": "釜山",
+   "asian_evidence": "kols/somi-oh/profile.json identity.ethnicity=「韓國」/ origin=「釜山」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/somi-oh.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/somi-oh/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "miu-shiraishi",
+     0.01894
+    ],
+    "hits_le_0220": 2,
+    "hits_with_leads": []
+   },
+   "images": [
+    {
+     "asset_id": "A-0nfvk2g",
+     "path": "kols/somi-oh/images/training_v1/train_02.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/somi-oh_1.jpg",
+     "catalog_asset": "g_0nfvk2g",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/somi-oh/images/training_v1/train_02.jpg"
+    },
+    {
+     "asset_id": "A-0nf7jh7",
+     "path": "kols/somi-oh/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/somi-oh_2.jpg",
+     "catalog_asset": "g_0nf7jh7",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/somi-oh/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-03mm900",
+     "path": "review/soul_pilot/somi-oh/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/somi-oh_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/somi-oh/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "angel-chiu",
+   "role": "lead",
+   "month": 4,
+   "H": {
+    "path": "kols/angel-chiu/images/training_v1/train_02.jpg",
+    "anchor": [
+     0.4,
+     0.3
+    ],
+    "verdict": "可直接用",
+    "defects": "胸前識別證是空白卡（可接受）"
+   },
+   "V": {
+    "path": "kols/angel-chiu/images/training_v1/train_01.jpg",
+    "anchor": [
+     0.45,
+     0.2
+    ],
+    "verdict": "可直接用",
+    "defects": "床上有識別證掛繩（可留、可修）"
+   },
+   "extra": [
+    "review/soul_pilot/angel-chiu/verify_v1/V1.png"
+   ],
+   "rejected": [
+    {
+     "path": "kols/angel-chiu/images/training_v1/train_03.jpg",
+     "why": "自拍手臂佔前景、廣角變形"
+    }
+   ],
+   "why": "修長、窄臉尖下巴、棕金漸層長髮；緞面細肩帶洋裝有性感、護理師制服有人設辨識。",
+   "cons": "repo 只有訓練圖；她與原 11 位（iris、yuna 等）沒有臉部距離量測。",
+   "diff": "19 位碰撞表中最「乾淨」的一位（最近是 zoey 0.0236）；唯一高瘦模特兒比例＋棕金漸層。",
+   "name": "Angel Chiu",
+   "native_name": "邱安晴",
+   "age": 23,
+   "ethnicity_src": "台灣",
+   "origin_src": "台北",
+   "asian_evidence": "kols/angel-chiu/profile.json identity.ethnicity=「台灣」/ origin=「台北」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/angel-chiu.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "6e638286-be57-45fa-961e-51bde6cba87f",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/angel-chiu/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "zoey-yeh",
+     0.02361
+    ],
+    "hits_le_0220": 0,
+    "hits_with_leads": []
+   },
+   "images": [
+    {
+     "asset_id": "A-1bgkto2",
+     "path": "kols/angel-chiu/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/angel-chiu_1.jpg",
+     "catalog_asset": "g_1bgkto2",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/angel-chiu/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-1bftwvl",
+     "path": "kols/angel-chiu/images/training_v1/train_02.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/angel-chiu_2.jpg",
+     "catalog_asset": "g_1bftwvl",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/angel-chiu/images/training_v1/train_02.jpg"
+    },
+    {
+     "asset_id": "A-1k4k9uh",
+     "path": "review/soul_pilot/angel-chiu/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/angel-chiu_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/angel-chiu/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "wanyin-jiang",
+   "role": "backup",
+   "replaces": "rainie-hsu 或 iris-chen（同屬長直黑髮）",
+   "H": {
+    "path": "kols/wanyin-jiang/images/training_v1/train_05.jpg",
+    "anchor": [
+     0.48,
+     0.17
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵"
+   },
+   "V": {
+    "path": "kols/wanyin-jiang/images/training_v1/train_04.jpg",
+    "anchor": [
+     0.47,
+     0.13
+    ],
+    "verdict": "可直接用",
+    "defects": "全身照人物比例中等"
+   },
+   "extra": [
+    "review/soul_pilot/wanyin-jiang/verify_v1/V1.png"
+   ],
+   "rejected": [
+    {
+     "path": "kols/wanyin-jiang/images/training_v1/train_01.jpg",
+     "why": "自拍裁太緊，臉左側出框"
+    }
+   ],
+   "why": "旗袍、蘇州園林，東方古典；臉型修長，氣質安靜。",
+   "cons": "與 iris／rainie 同為長直黑髮；與 rin 距離 0.02234，只比門檻 0.0220 多一點；差異有相當部分來自旗袍造型，需確認臉本身夠不同。",
+   "diff": "唯一古典東方路線。",
+   "name": "Wanyin Jiang",
+   "native_name": "江晚吟",
+   "age": 23,
+   "ethnicity_src": "中國",
+   "origin_src": "蘇州",
+   "asian_evidence": "kols/wanyin-jiang/profile.json identity.ethnicity=「中國」/ origin=「蘇州」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/wanyin-jiang.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "2e7de3f8-63ee-4302-a684-2245f6c54ea1",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/wanyin-jiang/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "ruoruo-tang",
+     0.02157
+    ],
+    "hits_le_0220": 1,
+    "hits_with_leads": []
+   },
+   "images": [
+    {
+     "asset_id": "A-1im4vcc",
+     "path": "kols/wanyin-jiang/images/training_v1/train_04.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/wanyin-jiang_1.jpg",
+     "catalog_asset": "g_1im4vcc",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/wanyin-jiang/images/training_v1/train_04.jpg"
+    },
+    {
+     "asset_id": "A-1ik20q5",
+     "path": "kols/wanyin-jiang/images/training_v1/train_05.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/wanyin-jiang_2.jpg",
+     "catalog_asset": "g_1ik20q5",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/wanyin-jiang/images/training_v1/train_05.jpg"
+    },
+    {
+     "asset_id": "A-1upizoi",
+     "path": "review/soul_pilot/wanyin-jiang/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/wanyin-jiang_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/wanyin-jiang/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "sophia-tseng",
+   "role": "backup",
+   "replaces": "rin-ayase 或 yuna-kim",
+   "H": {
+    "path": "kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png",
+    "anchor": [
+     0.33,
+     0.27
+    ],
+    "verdict": "可直接用",
+    "defects": "無明顯瑕疵"
+   },
+   "V": {
+    "path": "kols/sophia-tseng/images/training_v1/01_morning_window_candid.png",
+    "anchor": [
+     0.48,
+     0.17
+    ],
+    "verdict": "需補生成",
+    "defects": "側臉背影、臀部入鏡，辨識度弱 → 不採用；training_v1 其他 12 張可再挑"
+   },
+   "extra": [
+    "kols/sophia-tseng/images/training_v1/11_hotel_candid_bed_window.png"
+   ],
+   "why": "28 歲貴婦感、信義區夜景、緞面晨袍，補整組「成熟」的年齡層；training_v1 有 13 張 1440×2560。",
+   "cons": "face_reference 各輪臉差異大，只能用 training_v1；與 yuna 同為深棕及肩捲髮。",
+   "diff": "整組年齡最大的選項（28）；精品生活感。",
+   "name": "Sophia Tseng",
+   "native_name": "曾詩妃",
+   "age": 28,
+   "ethnicity_src": "Taiwanese",
+   "origin_src": "Taipei, Taiwan",
+   "asian_evidence": "kols/sophia-tseng/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taipei, Taiwan」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/sophia-tseng.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "192562bb-ca64-4615-9515-13d34807857c",
+      "status": "ready"
+     }
+    ],
+    "source": "kols/sophia-tseng/profile.json",
+    "cross_check": "SOUL_IDS.json 未收錄（只有 Batch 3）",
+    "platform_checked": false
+   },
+   "collision": null,
+   "images": [
+    {
+     "asset_id": "A-14qd6cw",
+     "path": "kols/sophia-tseng/images/training_v1/01_morning_window_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/sophia-tseng_1.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/sophia-tseng/images/training_v1/01_morning_window_candid.png"
+    },
+    {
+     "asset_id": "A-1s5wtw5",
+     "path": "kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/sophia-tseng_2.jpg",
+     "catalog_asset": "g_1s5wtw5",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png"
+    },
+    {
+     "asset_id": "A-0ayv0tl",
+     "path": "kols/sophia-tseng/images/training_v1/11_hotel_candid_bed_window.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "thumb": "img/cand/sophia-tseng_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/sophia-tseng/images/training_v1/11_hotel_candid_bed_window.png"
+    }
+   ]
+  },
+  {
+   "id": "miu-shiraishi",
+   "role": "out",
+   "why": "白金短鮑伯＋瀏海、咖啡店員，個人吸引力高、甜。",
+   "cons": "落選主因：與 jia-seo 距離 0.01219（19 位中最接近的一對）、與 kanon 0.01734、與 somi 0.01894、與 nanami 0.0177。要放她，必須同時拿掉 kanon 與 somi。",
+   "diff": "唯一白金髮。若 Penny 指定要她，建議替換組合：miu 進、kanon 與 somi 出，再從 wanyin／sophia 補一位。",
+   "name": "Miu Shiraishi",
+   "native_name": "白石美羽",
+   "age": 22,
+   "ethnicity_src": "日本",
+   "origin_src": "東京中目黑",
+   "asian_evidence": "kols/miu-shiraishi/profile.json identity.ethnicity=「日本」/ origin=「東京中目黑」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/miu-shiraishi.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "270c31fa-afd4-4609-b9d5-7302745f137c",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/miu-shiraishi/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "jia-seo",
+     0.01219
+    ],
+    "hits_le_0220": 7,
+    "hits_with_leads": [
+     [
+      "kanon-komori",
+      0.01734
+     ],
+     [
+      "somi-oh",
+      0.01894
+     ]
+    ]
+   },
+   "images": [
+    {
+     "asset_id": "A-1inawlr",
+     "path": "kols/miu-shiraishi/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/miu-shiraishi_1.jpg",
+     "catalog_asset": "g_1inawlr",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/miu-shiraishi/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-1inyqoc",
+     "path": "kols/miu-shiraishi/images/training_v1/train_02.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/miu-shiraishi_2.jpg",
+     "catalog_asset": "g_1inyqoc",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/miu-shiraishi/images/training_v1/train_02.jpg"
+    },
+    {
+     "asset_id": "A-0ju89j8",
+     "path": "review/soul_pilot/miu-shiraishi/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/miu-shiraishi_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/miu-shiraishi/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "jia-seo",
+   "role": "out",
+   "why": "藍黑髮＋薄荷內染、K-pop 舞蹈老師，造型辨識度高。",
+   "cons": "落選：與 somi 0.01986、miu 0.01219 碰撞；冷感、甜美度弱；舞蹈體態與 vicky 的運動路線部分重疊。",
+   "diff": "唯一薄荷內染。",
+   "name": "Jia Seo",
+   "native_name": "서지아",
+   "age": 22,
+   "ethnicity_src": "韓國",
+   "origin_src": "首爾江南",
+   "asian_evidence": "kols/jia-seo/profile.json identity.ethnicity=「韓國」/ origin=「首爾江南」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/jia-seo.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "ecf19246-c697-419c-b978-fe9373586c19",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/jia-seo/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "miu-shiraishi",
+     0.01219
+    ],
+    "hits_le_0220": 6,
+    "hits_with_leads": [
+     [
+      "somi-oh",
+      0.01986
+     ]
+    ]
+   },
+   "images": [
+    {
+     "asset_id": "A-1ddwxen",
+     "path": "kols/jia-seo/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/jia-seo_1.jpg",
+     "catalog_asset": "g_1ddwxen",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/jia-seo/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-1df8opp",
+     "path": "kols/jia-seo/images/training_v1/train_03.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/jia-seo_2.jpg",
+     "catalog_asset": "g_1df8opp",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/jia-seo/images/training_v1/train_03.jpg"
+    },
+    {
+     "asset_id": "A-0hsh9hw",
+     "path": "review/soul_pilot/jia-seo/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/jia-seo_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/jia-seo/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "peggy-lee",
+   "role": "out",
+   "why": "酒紅大捲髮＋灰挑染、改裝車行銷，帥氣性感。",
+   "cons": "落選：與 tammy 0.02008、angeline 0.01788 碰撞；酒紅系髮色與 rin 撞色。",
+   "diff": "唯一大捲髮＋車廠場景。",
+   "name": "Peggy Lee",
+   "native_name": "李珮甄",
+   "age": 24,
+   "ethnicity_src": "馬來西亞華裔（Chinese-Malaysian）",
+   "origin_src": "吉隆坡（華裔）",
+   "asian_evidence": "kols/peggy-lee/profile.json identity.ethnicity=「馬來西亞華裔（Chinese-Malaysian）」/ origin=「吉隆坡（華裔）」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/peggy-lee.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "3e3f4f72-2a89-4f05-af61-0c6701c97a5c",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/peggy-lee/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "angeline-kwee",
+     0.01788
+    ],
+    "hits_le_0220": 3,
+    "hits_with_leads": [
+     [
+      "tammy-chou",
+      0.02008
+     ]
+    ]
+   },
+   "images": [
+    {
+     "asset_id": "A-03f08ys",
+     "path": "kols/peggy-lee/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/peggy-lee_1.jpg",
+     "catalog_asset": "g_03f08ys",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/peggy-lee/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-03ccqjk",
+     "path": "kols/peggy-lee/images/training_v1/train_05.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/peggy-lee_2.jpg",
+     "catalog_asset": "g_03ccqjk",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/peggy-lee/images/training_v1/train_05.jpg"
+    },
+    {
+     "asset_id": "A-0sctbf3",
+     "path": "review/soul_pilot/peggy-lee/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/peggy-lee_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/peggy-lee/verify_v1/V1.png"
+    }
+   ]
+  },
+  {
+   "id": "yerin-han",
+   "role": "out",
+   "why": "亞麻棕長髮、高爾夫教練，運動甜美。",
+   "cons": "落選：與 rin 0.02085、sydney 0.01722、emma 0.01851、nanami 0.0194 碰撞；運動路線與 vicky 重疊。",
+   "diff": "唯一高爾夫場景。",
+   "name": "Yerin Han",
+   "native_name": "한예린",
+   "age": 26,
+   "ethnicity_src": "韓國",
+   "origin_src": "首爾",
+   "asian_evidence": "kols/yerin-han/profile.json identity.ethnicity=「韓國」/ origin=「首爾」",
+   "catalog_url": "https://kol-catalog-production.up.railway.app/p/yerin-han.html",
+   "soul": {
+    "profile_ids": [
+     {
+      "soul_id": "8c447a79-769f-4520-a538-cfb48fef6163",
+      "status": "production_ready"
+     }
+    ],
+    "source": "kols/yerin-han/profile.json",
+    "cross_check": "SOUL_IDS.json 一致",
+    "platform_checked": false
+   },
+   "collision": {
+    "nearest": [
+     "sydney-leong",
+     0.01722
+    ],
+    "hits_le_0220": 4,
+    "hits_with_leads": [
+     [
+      "rin-ayase",
+      0.02085
+     ]
+    ]
+   },
+   "images": [
+    {
+     "asset_id": "A-12i8s8a",
+     "path": "kols/yerin-han/images/training_v1/train_01.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/yerin-han_1.jpg",
+     "catalog_asset": "g_12i8s8a",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yerin-han/images/training_v1/train_01.jpg"
+    },
+    {
+     "asset_id": "A-12hhvft",
+     "path": "kols/yerin-han/images/training_v1/train_02.jpg",
+     "px": [
+      1728,
+      2304
+     ],
+     "thumb": "img/cand/yerin-han_2.jpg",
+     "catalog_asset": "g_12hhvft",
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yerin-han/images/training_v1/train_02.jpg"
+    },
+    {
+     "asset_id": "A-17c8wn5",
+     "path": "review/soul_pilot/yerin-han/verify_v1/V1.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "thumb": "img/cand/yerin-han_3.jpg",
+     "catalog_asset": null,
+     "original_url": "https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/yerin-han/verify_v1/V1.png"
+    }
+   ]
+  }
+ ],
+ "excluded_before_shortlist": [
+  {
+   "ids": [
+    "nico-tsai"
+   ],
+   "why": "灰棕短鮑伯、冷調時髦，不屬甜美方向；Phase D 待裁決；沒有納入 19 位碰撞篩檢。"
+  },
+  {
+   "ids": [
+    "zoey-yeh",
+    "zhiyi-shen",
+    "nanami-fujiwara",
+    "cheryl-soh"
+   ],
+   "why": "都是長直黑髮，與 iris／rainie 同一類；nanami 有 9 組碰撞（含 kanon 0.01741）、cheryl 6 組、zhiyi 6 組。"
+  },
+  {
+   "ids": [
+    "ruoruo-tang",
+    "sydney-leong"
+   ],
+   "why": "碰撞組數最多（11、10），臉最「平均」，最不利於展示差異。"
+  },
+  {
+   "ids": [
+    "emma-kao"
+   ],
+   "why": "主播的知性成熟路線；與 rin 0.01863 碰撞。"
+  },
+  {
+   "ids": [
+    "angeline-kwee"
+   ],
+   "why": "奶茶灰棕長捲髮與 tammy、angel 的髮色區間重疊；與 peggy 0.01788。"
+  },
+  {
+   "ids": [
+    "wendy-yeo"
+   ],
+   "why": "銀灰鮑伯辨識度很高，但冷酷中性，不符甜美方向；若 Penny 想要一位「反差冷感」可回頭考慮（與 12 位主角無碰撞）。"
+  },
+  {
+   "ids": [
+    "ananya-kapoor"
+   ],
+   "why": "印度旁遮普，屬亞洲；本輪以東亞甜美方向為準而未入選。是否納入南亞以拉開差異，屬 Penny 的美感判斷，列為可討論，不當作硬性排除。"
+  },
+  {
+   "ids": [
+    "camille-dupont",
+    "aaliya-okonkwo"
+   ],
+   "why": "設定為法國、拉丁裔，非亞洲人設。"
+  },
+  {
+   "ids": [
+    "faye-tan",
+    "rachel-ong",
+    "kai-luo"
+   ],
+   "why": "屬 showgame-kol／Buildup_KOL，本 repo 沒有設定文件與 Soul ID；型錄圖是紀實、冷調風格（設定 30、34、27 歲），不符「漂亮、性感、甜美」。"
+  },
+  {
+   "ids": [
+    "nova-lin"
+   ],
+   "why": "型錄 ethnicity 欄為空、設定是 AI 數位人，亞洲背景無法用設定文件查證；Soul ID 未確認。"
+  },
+  {
+   "ids": [
+    "xiaoxiao-tan",
+    "loima-cheung",
+    "leon-lim"
+   ],
+   "why": "型錄現有圖皆為男性形象（xiaoxiao-tan 是否為設定錯置，未確認）。"
+  }
+ ]
+}

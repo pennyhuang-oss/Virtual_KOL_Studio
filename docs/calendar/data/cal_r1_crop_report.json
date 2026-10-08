@@ -1,0 +1,1155 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r1.py",
+ "frames_assumed": {
+  "H_full": {
+   "w": 204,
+   "h": 155,
+   "coil": 12,
+   "strip": 30,
+   "fy": 0.36,
+   "src": "H",
+   "label": "橫式滿版（假設日期條 30 mm）"
+  },
+  "H_split": {
+   "w": 102,
+   "h": 155,
+   "coil": 12,
+   "strip": 0,
+   "fy": 0.3,
+   "src": "H",
+   "label": "橫式半版直幅照片框（另一半放日期）"
+  },
+  "V_full": {
+   "w": 144,
+   "h": 204,
+   "coil": 12,
+   "strip": 34,
+   "fy": 0.28,
+   "src": "V",
+   "label": "直式滿版（假設日期條 34 mm）"
+  }
+ },
+ "ppi_bands_assumed": "≥300 充裕｜250–299 可｜200–249 邊緣｜<200 不足（本專案工作判準，非廠商要求）",
+ "results": {
+  "iris-chen": {
+   "H_full": {
+    "src": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+    "src_px": [
+     1920,
+     2560
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     243,
+     1920,
+     1459
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 239,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/iris-chen_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+    "src_px": [
+     1920,
+     2560
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     118,
+     0,
+     1685,
+     2560
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 420,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 46.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/iris-chen_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+    "src_px": [
+     1920,
+     2560
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     56,
+     0,
+     1807,
+     2560
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 319,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 34.7,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/iris-chen_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "luna-tanaka": {
+   "H_full": {
+    "src": "kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+    "src_px": [
+     1152,
+     2048
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     197,
+     1152,
+     875
+    ],
+    "keeps_pct_of_source": 43,
+    "effective_ppi": 143,
+    "ppi_band": "不足",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/luna-tanaka_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+    "src_px": [
+     1152,
+     2048
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1152,
+     1751
+    ],
+    "keeps_pct_of_source": 85,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 45.3,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/luna-tanaka_H_split.jpg",
+    "verdict_slot": "需修圖"
+   },
+   "V_full": {
+    "src": "kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+    "src_px": [
+     1152,
+     2048
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1152,
+     1632
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 203,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 33.3,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/luna-tanaka_V_full.jpg",
+    "verdict_slot": "需修圖"
+   }
+  },
+  "yuna-kim": {
+   "H_full": {
+    "src": "kols/yuna-kim/images/face_reference/ref_01.webp",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     0,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 46.2,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/yuna-kim_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/yuna-kim/images/face_reference/ref_01.webp",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     106,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 26.4,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/yuna-kim_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/yuna-kim/images/soul_test_v1/street_02.png",
+    "src_px": [
+     1152,
+     2048
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1152,
+     1632
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 203,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 25.6,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/yuna-kim_V_full.jpg",
+    "verdict_slot": "需修圖"
+   }
+  },
+  "rainie-hsu": {
+   "H_full": {
+    "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     246,
+     1440,
+     1094
+    ],
+    "keeps_pct_of_source": 43,
+    "effective_ppi": 179,
+    "ppi_band": "不足",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/rainie-hsu_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2188
+    ],
+    "keeps_pct_of_source": 85,
+    "effective_ppi": 359,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 45.3,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/rainie-hsu_H_split.jpg",
+    "verdict_slot": "需修圖"
+   },
+   "V_full": {
+    "src": "kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2040
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 254,
+    "ppi_band": "可",
+    "face_center_y_mm": 51.2,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/rainie-hsu_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "coco-wu": {
+   "H_full": {
+    "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     246,
+     1440,
+     1094
+    ],
+    "keeps_pct_of_source": 43,
+    "effective_ppi": 179,
+    "ppi_band": "不足",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/coco-wu_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2188
+    ],
+    "keeps_pct_of_source": 85,
+    "effective_ppi": 359,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 45.3,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/coco-wu_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/coco-wu/images/face_reference/candidate_03.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2040
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 254,
+    "ppi_band": "可",
+    "face_center_y_mm": 46.1,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/coco-wu_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "mia-huang": {
+   "H_full": {
+    "src": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     246,
+     1440,
+     1094
+    ],
+    "keeps_pct_of_source": 43,
+    "effective_ppi": 179,
+    "ppi_band": "不足",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/mia-huang_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2188
+    ],
+    "keeps_pct_of_source": 85,
+    "effective_ppi": 359,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 45.3,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/mia-huang_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2040
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 254,
+    "ppi_band": "可",
+    "face_center_y_mm": 43.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/mia-huang_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "vicky-lin": {
+   "H_full": {
+    "src": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+    "src_px": [
+     1152,
+     2048
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     0,
+     1152,
+     875
+    ],
+    "keeps_pct_of_source": 43,
+    "effective_ppi": 143,
+    "ppi_band": "不足",
+    "face_center_y_mm": 47.2,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/vicky-lin_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+    "src_px": [
+     1152,
+     2048
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1152,
+     1751
+    ],
+    "keeps_pct_of_source": 85,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 23.6,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/vicky-lin_H_split.jpg",
+    "verdict_slot": "需修圖"
+   },
+   "V_full": {
+    "src": "kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2040
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 254,
+    "ppi_band": "可",
+    "face_center_y_mm": 33.3,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/vicky-lin_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "rin-ayase": {
+   "H_full": {
+    "src": "kols/rin-ayase/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     34,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/rin-ayase_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/rin-ayase/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 34.1,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/rin-ayase_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/rin-ayase/images/training_v1/train_01.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     102,
+     0,
+     1626,
+     2304
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 24.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/rin-ayase_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "kanon-komori": {
+   "H_full": {
+    "src": "kols/kanon-komori/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     172,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 55.9,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/kanon-komori_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/kanon-komori/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     54,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 43.4,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/kanon-komori_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/kanon-komori/images/training_v1/train_01.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1626,
+     2304
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 44.9,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/kanon-komori_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "tammy-chou": {
+   "H_full": {
+    "src": "kols/tammy-chou/images/training_v1/train_03.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     288,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 55.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/tammy-chou_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/tammy-chou/images/training_v1/train_03.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 51.2,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/tammy-chou_H_split.jpg",
+    "verdict_slot": "需補生成"
+   },
+   "V_full": {
+    "src": "kols/tammy-chou/images/training_v1/train_01.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1626,
+     2304
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 44.9,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/tammy-chou_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "somi-oh": {
+   "H_full": {
+    "src": "kols/somi-oh/images/training_v1/train_01.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     0,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 35.4,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/somi-oh_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/somi-oh/images/training_v1/train_01.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 20.2,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/somi-oh_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/somi-oh/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1626,
+     2304
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 40.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/somi-oh_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "angel-chiu": {
+   "H_full": {
+    "src": "kols/angel-chiu/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     219,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 55.7,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/angel-chiu_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/angel-chiu/images/training_v1/train_02.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 46.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/angel-chiu_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/angel-chiu/images/training_v1/train_01.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1626,
+     2304
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 40.8,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/angel-chiu_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "wanyin-jiang": {
+   "H_full": {
+    "src": "kols/wanyin-jiang/images/training_v1/train_05.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     0,
+     1728,
+     1313
+    ],
+    "keeps_pct_of_source": 57,
+    "effective_ppi": 215,
+    "ppi_band": "邊緣",
+    "face_center_y_mm": 46.2,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/wanyin-jiang_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/wanyin-jiang/images/training_v1/train_05.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     71,
+     0,
+     1516,
+     2304
+    ],
+    "keeps_pct_of_source": 88,
+    "effective_ppi": 378,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 26.4,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/wanyin-jiang_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/wanyin-jiang/images/training_v1/train_04.jpg",
+    "src_px": [
+     1728,
+     2304
+    ],
+    "src_aspect": 0.75,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1626,
+     2304
+    ],
+    "keeps_pct_of_source": 94,
+    "effective_ppi": 287,
+    "ppi_band": "可",
+    "face_center_y_mm": 26.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/wanyin-jiang_V_full.jpg",
+    "verdict_slot": "可直接用"
+   }
+  },
+  "sophia-tseng": {
+   "H_full": {
+    "src": "kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     204,
+     155
+    ],
+    "frame_aspect": 1.3161,
+    "crop_box_px": [
+     0,
+     297,
+     1440,
+     1094
+    ],
+    "keeps_pct_of_source": 43,
+    "effective_ppi": 179,
+    "ppi_band": "不足",
+    "face_center_y_mm": 55.9,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/sophia-tseng_H_full.jpg",
+    "verdict_slot": "不採用（現有直幅原圖）"
+   },
+   "H_split": {
+    "src": "kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     102,
+     155
+    ],
+    "frame_aspect": 0.6581,
+    "crop_box_px": [
+     0,
+     35,
+     1440,
+     2188
+    ],
+    "keeps_pct_of_source": 85,
+    "effective_ppi": 359,
+    "ppi_band": "充裕",
+    "face_center_y_mm": 46.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/sophia-tseng_H_split.jpg",
+    "verdict_slot": "可直接用"
+   },
+   "V_full": {
+    "src": "kols/sophia-tseng/images/training_v1/01_morning_window_candid.png",
+    "src_px": [
+     1440,
+     2560
+    ],
+    "src_aspect": 0.5625,
+    "frame_mm": [
+     144,
+     204
+    ],
+    "frame_aspect": 0.7059,
+    "crop_box_px": [
+     0,
+     0,
+     1440,
+     2040
+    ],
+    "keeps_pct_of_source": 80,
+    "effective_ppi": 254,
+    "ppi_band": "可",
+    "face_center_y_mm": 43.5,
+    "face_clear_of_coil_and_strip": true,
+    "preview": "img/crop/sophia-tseng_V_full.jpg",
+    "verdict_slot": "需補生成"
+   }
+  }
+ }
+}

@@ -1,0 +1,27 @@
+# CAL_02b — 18 位候選客觀欄位（程式產生，請勿手改）
+
+> 由 `docs/calendar/tools/build_cal_r1.py` 從 `kols/{id}/profile.json`、`review/soul_training/SOUL_IDS.json`、
+> `review/soul_pilot/_screen19_v1/screen19_pairs.json` 現抓。Soul ID 只核對 repo 紀錄，**沒有**在 Higgsfield 端查驗。
+
+| 角色 | 角色 ID | 姓名 | 設定年齡 | 亞洲背景依據（profile.json 原文） | 型錄頁 | Soul ID（狀態） | Soul 交叉核對 | 臉部碰撞（≤0.0220） |
+|---|---|---|---|---|---|---|---|---|
+| 主角 1月 | `iris-chen` | Iris Chen 陳芯語 | 22 | ethnicity「Taiwanese」／origin「Taipei, Taiwan」 | [連結](https://kol-catalog-production.up.railway.app/p/iris-chen.html) | `5fe3b6ba-1277-4822-9141-fb06eb3b93a0`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 3月 | `luna-tanaka` | Luna Tanaka 田中ひな | 20 | ethnicity「Japanese」／origin「Kyoto, Japan」 | [連結](https://kol-catalog-production.up.railway.app/p/luna-tanaka.html) | `a3dc13ec-16e7-4990-89c6-9e0461db46ef`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 9月 | `yuna-kim` | Yuna Kim 김하은 | 21 | ethnicity「Korean」／origin「Seoul, South Korea」 | [連結](https://kol-catalog-production.up.railway.app/p/yuna-kim.html) | `235794a5-2eff-45fb-91b4-3232910afefa`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 12月 | `rainie-hsu` | Rainie Hsu 許雷妮 | 24 | ethnicity「Taiwanese」／origin「Taipei, Taiwan」 | [連結](https://kol-catalog-production.up.railway.app/p/rainie-hsu.html) | `994e33d2-7df1-47da-8478-7a6fd849fa33`（deprecated）<br>`a4a000fe-fd96-4c36-97ff-0df9358a9b47`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 7月 | `coco-wu` | Coco Wu 吳可可 | 20 | ethnicity「Taiwanese」／origin「Taichung, Taiwan」 | [連結](https://kol-catalog-production.up.railway.app/p/coco-wu.html) | `cf7045dc-4e69-4c56-9621-aa8c40bf39b4`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 8月 | `mia-huang` | Mia Huang 黃米亞 | 22 | ethnicity「Taiwanese」／origin「Hsinchu, Taiwan (新竹)」 | [連結](https://kol-catalog-production.up.railway.app/p/mia-huang.html) | `e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 6月 | `vicky-lin` | Vicky Lin 林薇淇 | 25 | ethnicity「Taiwanese」／origin「Kaohsiung, Taiwan (高雄)」 | [連結](https://kol-catalog-production.up.railway.app/p/vicky-lin.html) | `bdb1d879-da36-4c1a-bc63-9f5b49a3e94e`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 主角 11月 | `rin-ayase` | Rin Ayase 綾瀨凜 | 25 | ethnicity「日本」／origin「東京銀座」 | [連結](https://kol-catalog-production.up.railway.app/p/rin-ayase.html) | `34b7fd71-c8dd-4d6a-983e-881b1d012219`（production_ready） | SOUL_IDS.json 一致 | 最近 ruoruo-tang 0.01848；共 4 組；與主角：無 |
+| 主角 2月 | `kanon-komori` | Kanon Komori 小森花音 | 20 | ethnicity「日本」／origin「東京秋葉原」 | [連結](https://kol-catalog-production.up.railway.app/p/kanon-komori.html) | `642ba554-6f87-4be9-9aa7-4b66529b4995`（production_ready） | SOUL_IDS.json 一致 | 最近 miu-shiraishi 0.01734；共 4 組；與主角：無 |
+| 主角 10月 | `tammy-chou` | Tammy Chou 周語彤 | 24 | ethnicity「台灣」／origin「台北五分埔」 | [連結](https://kol-catalog-production.up.railway.app/p/tammy-chou.html) | `5069a35a-dd85-4161-8d0f-952bccbe676d`（production_ready） | SOUL_IDS.json 一致 | 最近 ruoruo-tang 0.01886；共 2 組；與主角：無 |
+| 主角 5月 | `somi-oh` | Somi Oh 오소미 | 24 | ethnicity「韓國」／origin「釜山」 | [連結](https://kol-catalog-production.up.railway.app/p/somi-oh.html) | `c7915888-e566-4c9d-bc26-4bf40ab35c4c`（production_ready） | SOUL_IDS.json 一致 | 最近 miu-shiraishi 0.01894；共 2 組；與主角：無 |
+| 主角 4月 | `angel-chiu` | Angel Chiu 邱安晴 | 23 | ethnicity「台灣」／origin「台北」 | [連結](https://kol-catalog-production.up.railway.app/p/angel-chiu.html) | `6e638286-be57-45fa-961e-51bde6cba87f`（production_ready） | SOUL_IDS.json 一致 | 最近 zoey-yeh 0.02361；共 0 組；與主角：無 |
+| 備選 | `wanyin-jiang` | Wanyin Jiang 江晚吟 | 23 | ethnicity「中國」／origin「蘇州」 | [連結](https://kol-catalog-production.up.railway.app/p/wanyin-jiang.html) | `2e7de3f8-63ee-4302-a684-2245f6c54ea1`（production_ready） | SOUL_IDS.json 一致 | 最近 ruoruo-tang 0.02157；共 1 組；與主角：無 |
+| 備選 | `sophia-tseng` | Sophia Tseng 曾詩妃 | 28 | ethnicity「Taiwanese」／origin「Taipei, Taiwan」 | [連結](https://kol-catalog-production.up.railway.app/p/sophia-tseng.html) | `192562bb-ca64-4615-9515-13d34807857c`（ready） | SOUL_IDS.json 未收錄（只有 Batch 3） | 未量測（非 Batch 3 的 19 位） |
+| 落選 | `miu-shiraishi` | Miu Shiraishi 白石美羽 | 22 | ethnicity「日本」／origin「東京中目黑」 | [連結](https://kol-catalog-production.up.railway.app/p/miu-shiraishi.html) | `270c31fa-afd4-4609-b9d5-7302745f137c`（production_ready） | SOUL_IDS.json 一致 | 最近 jia-seo 0.01219；共 7 組；與主角：kanon-komori 0.01734、somi-oh 0.01894 |
+| 落選 | `jia-seo` | Jia Seo 서지아 | 22 | ethnicity「韓國」／origin「首爾江南」 | [連結](https://kol-catalog-production.up.railway.app/p/jia-seo.html) | `ecf19246-c697-419c-b978-fe9373586c19`（production_ready） | SOUL_IDS.json 一致 | 最近 miu-shiraishi 0.01219；共 6 組；與主角：somi-oh 0.01986 |
+| 落選 | `peggy-lee` | Peggy Lee 李珮甄 | 24 | ethnicity「馬來西亞華裔（Chinese-Malaysian）」／origin「吉隆坡（華裔）」 | [連結](https://kol-catalog-production.up.railway.app/p/peggy-lee.html) | `3e3f4f72-2a89-4f05-af61-0c6701c97a5c`（production_ready） | SOUL_IDS.json 一致 | 最近 angeline-kwee 0.01788；共 3 組；與主角：tammy-chou 0.02008 |
+| 落選 | `yerin-han` | Yerin Han 한예린 | 26 | ethnicity「韓國」／origin「首爾」 | [連結](https://kol-catalog-production.up.railway.app/p/yerin-han.html) | `8c447a79-769f-4520-a538-cfb48fef6163`（production_ready） | SOUL_IDS.json 一致 | 最近 sydney-leong 0.01722；共 4 組；與主角：rin-ayase 0.02085 |
+
+Batch 3 主角之間最近的三組：rin-ayase↔kanon-komori 0.02302；kanon-komori↔somi-oh 0.02794；rin-ayase↔somi-oh 0.02960（全部 > 0.0220）。

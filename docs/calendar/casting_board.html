@@ -1,0 +1,379 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2027 桌曆選角板</title>
+<style>
+:root{--bg:#f6f5f3;--fg:#1d1d1f;--mut:#666;--card:#fff;--line:#ddd;--lead:#b3261e;--bak:#0b62c4;--out:#777}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17181a;--fg:#ececec;--mut:#aaa;--card:#222326;--line:#3a3a3a}}
+:root[data-theme=dark]{--bg:#17181a;--fg:#ececec;--mut:#aaa;--card:#222326;--line:#3a3a3a}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+main{max-width:1280px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:8px 0}h2{font-size:18px;margin:28px 0 8px;border-bottom:2px solid var(--line);padding-bottom:4px}
+.note{color:var(--mut);font-size:13px}.warn{background:#fff3cd;color:#5c4700;padding:8px 12px;border-radius:6px;font-size:14px}
+.grid12{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.m{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px}
+.m img{width:100%;display:block;border-radius:4px}.m b{display:block;font-size:14px;margin:4px 0}
+.cand{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0}
+.cand h3{margin:0 0 6px;font-size:17px}.tag{display:inline-block;font-size:12px;color:#fff;border-radius:4px;padding:1px 6px;margin-left:6px}
+.lead{background:var(--lead)}.backup{background:var(--bak)}.out{background:var(--out)}
+.imgs{display:flex;gap:8px;flex-wrap:wrap}.imgs figure{margin:0;width:200px}.imgs img{width:200px;border-radius:4px;display:block}
+figcaption{font-size:11.5px;color:var(--mut);word-break:break-all}
+dl{display:grid;grid-template-columns:110px 1fr;gap:2px 10px;margin:8px 0;font-size:13.5px}dt{color:var(--mut)}dd{margin:0;min-width:0;overflow-wrap:anywhere}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--card)}th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+.crops{display:flex;gap:6px;flex-wrap:wrap}.crops img{height:220px;border-radius:3px}
+a{color:inherit}.tw{overflow-x:auto;max-width:100%}img{max-width:100%}
+@media (max-width:600px){.imgs figure,.imgs img{width:100%}dl{grid-template-columns:90px 1fr}.crops img{height:160px}}
+</style></head><body><main>
+<h1>2027 KOL 雙款桌曆｜選角板 R1</h1>
+<p class="warn">建議稿，未經 Penny 拍板。本輪沒有生成任何圖片、沒有花 credits、沒有下單或聯絡廠商。所有圖片都是 repo 內既有原檔的縮圖。</p>
+<p class="note">素材 ID = A-＋型錄同一套 djb2 雜湊（對得上型錄衍生檔 g_xxxxxxx）。「原圖」連到 GitHub 上的原檔（需 repo 權限）。碰撞距離出自 review/soul_pilot/_screen19_v1/screen19_pairs.json（只量過 Batch 3 的 19 位，門檻 ≤0.0220）。</p>
+<h2>一、12 位主角同版面總覽（暫定月份順序）</h2><p class="note">每格上：直式滿版裁切；下：橫式半版裁切。裁切框為本輪假設，見下方第三節。</p><div class="grid12">
+<div class="m"><b>1 月｜Iris Chen 陳芯語</b><img src="img/crop/iris-chen_V_full_clean.jpg" alt="Iris Chen 直式"><img style="margin-top:4px" src="img/crop/iris-chen_H_split_clean.jpg" alt="Iris Chen 橫式"></div>
+<div class="m"><b>2 月｜Kanon Komori 小森花音</b><img src="img/crop/kanon-komori_V_full_clean.jpg" alt="Kanon Komori 直式"><img style="margin-top:4px" src="img/crop/kanon-komori_H_split_clean.jpg" alt="Kanon Komori 橫式"></div>
+<div class="m"><b>3 月｜Luna Tanaka 田中ひな</b><img src="img/crop/luna-tanaka_V_full_clean.jpg" alt="Luna Tanaka 直式"><img style="margin-top:4px" src="img/crop/luna-tanaka_H_split_clean.jpg" alt="Luna Tanaka 橫式"></div>
+<div class="m"><b>4 月｜Angel Chiu 邱安晴</b><img src="img/crop/angel-chiu_V_full_clean.jpg" alt="Angel Chiu 直式"><img style="margin-top:4px" src="img/crop/angel-chiu_H_split_clean.jpg" alt="Angel Chiu 橫式"></div>
+<div class="m"><b>5 月｜Somi Oh 오소미</b><img src="img/crop/somi-oh_V_full_clean.jpg" alt="Somi Oh 直式"><img style="margin-top:4px" src="img/crop/somi-oh_H_split_clean.jpg" alt="Somi Oh 橫式"></div>
+<div class="m"><b>6 月｜Vicky Lin 林薇淇</b><img src="img/crop/vicky-lin_V_full_clean.jpg" alt="Vicky Lin 直式"><img style="margin-top:4px" src="img/crop/vicky-lin_H_split_clean.jpg" alt="Vicky Lin 橫式"></div>
+<div class="m"><b>7 月｜Coco Wu 吳可可</b><img src="img/crop/coco-wu_V_full_clean.jpg" alt="Coco Wu 直式"><img style="margin-top:4px" src="img/crop/coco-wu_H_split_clean.jpg" alt="Coco Wu 橫式"></div>
+<div class="m"><b>8 月｜Mia Huang 黃米亞</b><img src="img/crop/mia-huang_V_full_clean.jpg" alt="Mia Huang 直式"><img style="margin-top:4px" src="img/crop/mia-huang_H_split_clean.jpg" alt="Mia Huang 橫式"></div>
+<div class="m"><b>9 月｜Yuna Kim 김하은</b><img src="img/crop/yuna-kim_V_full_clean.jpg" alt="Yuna Kim 直式"><img style="margin-top:4px" src="img/crop/yuna-kim_H_split_clean.jpg" alt="Yuna Kim 橫式"></div>
+<div class="m"><b>10 月｜Tammy Chou 周語彤</b><img src="img/crop/tammy-chou_V_full_clean.jpg" alt="Tammy Chou 直式"><img style="margin-top:4px" src="img/crop/tammy-chou_H_split_clean.jpg" alt="Tammy Chou 橫式"></div>
+<div class="m"><b>11 月｜Rin Ayase 綾瀨凜</b><img src="img/crop/rin-ayase_V_full_clean.jpg" alt="Rin Ayase 直式"><img style="margin-top:4px" src="img/crop/rin-ayase_H_split_clean.jpg" alt="Rin Ayase 橫式"></div>
+<div class="m"><b>12 月｜Rainie Hsu 許雷妮</b><img src="img/crop/rainie-hsu_V_full_clean.jpg" alt="Rainie Hsu 直式"><img style="margin-top:4px" src="img/crop/rainie-hsu_H_split_clean.jpg" alt="Rainie Hsu 橫式"></div>
+</div>
+<h2>二、候選比較（18 位：12 主角＋2 備選＋4 主要落選）</h2>
+<section class="cand" id="iris-chen"><h3>Iris Chen 陳芯語<span class="tag lead">主角</span>｜1 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/iris-chen_1.jpg" alt="A-0m0cc60"><figcaption><b>A-0m0cc60</b> 1920×2560；型錄同圖 g_0m0cc60<br>kols/iris-chen/images/training_v1/02_taipei_street_02.webp<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/iris-chen/images/training_v1/02_taipei_street_02.webp">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/iris-chen_2.jpg" alt="A-14l9wls"><figcaption><b>A-14l9wls</b> 1920×2560<br>kols/iris-chen/images/training_v1/06_cafe_window_02.webp<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/iris-chen/images/training_v1/06_cafe_window_02.webp">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/iris-chen_3.jpg" alt="A-0vhrzs2"><figcaption><b>A-0vhrzs2</b> 1152×2048<br>kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>iris-chen</dd>
+<dt>設定年齡</dt><dd>22</dd>
+<dt>亞洲背景依據</dt><dd>kols/iris-chen/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taipei, Taiwan」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/iris-chen.html">https://kol-catalog-production.up.railway.app/p/iris-chen.html</a></dd>
+<dt>Soul ID</dt><dd>5fe3b6ba-1277-4822-9141-fb06eb3b93a0（ready）<br><span class="note">來源 kols/iris-chen/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>圓臉、大雙眼皮、笑起來最甜的鄰家型；素材最多（repo 79 張，訓練集 1920×2560），從街拍到內衣都有現成圖，尺度可上可下。</dd>
+<dt>具體缺點</dt><dd>長直黑髮與 rainie 同髮型路線；日間甜美系只有 Seedream 訓練集 14 張（Soul 前），Soul 後的圖多是夜間內衣系列，兩批光線質感不同。</dd>
+<dt>與他人差異</dt><dd>12 人中臉最圓、妝最淡；與 rainie 的差在臉型（圓 vs 立體）與妝感（裸妝 vs 濃妝）。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵；窗邊高光略過曝</dd>
+<dt>直式候選判定</dt><dd>可直接用：背景招牌是 AI 假字（小、可選修）</dd>
+</dl></section>
+<section class="cand" id="luna-tanaka"><h3>Luna Tanaka 田中ひな<span class="tag lead">主角</span>｜3 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/luna-tanaka_1.jpg" alt="A-1eagrzg"><figcaption><b>A-1eagrzg</b> 1152×2048；型錄同圖 g_1eagrzg<br>kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/luna-tanaka_2.jpg" alt="A-12bg2hw"><figcaption><b>A-12bg2hw</b> 1152×2048；型錄同圖 g_12bg2hw<br>kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/luna-tanaka_3.jpg" alt="A-03phxel"><figcaption><b>A-03phxel</b> 1152×2048；型錄同圖 g_03phxel<br>kols/luna-tanaka/images/preflight/LG-04.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/luna-tanaka/images/preflight/LG-04.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>luna-tanaka</dd>
+<dt>設定年齡</dt><dd>20</dd>
+<dt>亞洲背景依據</dt><dd>kols/luna-tanaka/profile.json identity.ethnicity=「Japanese」/ origin=「Kyoto, Japan」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/luna-tanaka.html">https://kol-catalog-production.up.railway.app/p/luna-tanaka.html</a></dd>
+<dt>Soul ID</dt><dd>a3dc13ec-16e7-4990-89c6-9e0461db46ef（ready）<br><span class="note">來源 kols/luna-tanaka/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>黑色齊瀏海短鮑伯、嬌小、日系清純，整組辨識度最高的髮型之一；京都街景、櫻花、浴衣都有現成圖。</dd>
+<dt>具體缺點</dt><dd>原圖多為 1152×2048，直式滿版解析度邊緣；性感表現偏保守（以低胸上衣為上限）。</dd>
+<dt>與他人差異</dt><dd>唯一黑色齊瀏海短鮑伯；臉型小圓、五官集中，與 coco 的長捲髮瀏海是兩種甜。</dd>
+<dt>橫式候選判定</dt><dd>需修圖：左上有假 IG 介面字樣「Plaremgilent 1.g」、右上「×」，半版裁切後仍在框內</dd>
+<dt>直式候選判定</dt><dd>需修圖：畫面乾淨，但原圖只有 1152 px 寬，直式滿版約 203 ppi（解析度邊緣）</dd>
+</dl></section>
+<section class="cand" id="yuna-kim"><h3>Yuna Kim 김하은<span class="tag lead">主角</span>｜9 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/yuna-kim_1.jpg" alt="A-1c1xag2"><figcaption><b>A-1c1xag2</b> 1152×2048；型錄同圖 g_1c1xag2<br>kols/yuna-kim/images/soul_test_v1/street_02.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yuna-kim/images/soul_test_v1/street_02.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/yuna-kim_2.jpg" alt="A-1o5s3s9"><figcaption><b>A-1o5s3s9</b> 1728×2304；型錄同圖 g_1o5s3s9<br>kols/yuna-kim/images/face_reference/ref_01.webp<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yuna-kim/images/face_reference/ref_01.webp">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/yuna-kim_3.jpg" alt="A-1mxu3mz"><figcaption><b>A-1mxu3mz</b> 1728×2304<br>kols/yuna-kim/images/face_reference/ref_03.webp<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yuna-kim/images/face_reference/ref_03.webp">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>yuna-kim</dd>
+<dt>設定年齡</dt><dd>21</dd>
+<dt>亞洲背景依據</dt><dd>kols/yuna-kim/profile.json identity.ethnicity=「Korean」/ origin=「Seoul, South Korea」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/yuna-kim.html">https://kol-catalog-production.up.railway.app/p/yuna-kim.html</a></dd>
+<dt>Soul ID</dt><dd>235794a5-2eff-45fb-91b4-3232910afefa（ready）<br><span class="note">來源 kols/yuna-kim/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>及肩黑棕微捲、韓系素顏清透、氣質冷靜；首爾街頭的金色斜陽有秋天感。</dd>
+<dt>具體缺點</dt><dd>直式候選解析度邊緣且有品牌花紋風險；表情變化少（多為微笑或放空）。</dd>
+<dt>與他人差異</dt><dd>唯一「清透冷淡」的韓系素顏路線；髮長介於 iris 與 luna 之間。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵；韓文招牌為背景</dd>
+<dt>直式候選判定</dt><dd>需修圖：肩背包疑似 GG 類老花、裙子近似名牌格紋；原圖 1152 px 寬，直式滿版約 203 ppi</dd>
+</dl></section>
+<section class="cand" id="rainie-hsu"><h3>Rainie Hsu 許雷妮<span class="tag lead">主角</span>｜12 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/rainie-hsu_1.jpg" alt="A-0s8825e"><figcaption><b>A-0s8825e</b> 1440×2560<br>kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/rainie-hsu_2.jpg" alt="A-0s89vvy"><figcaption><b>A-0s89vvy</b> 1440×2560<br>kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/rainie-hsu_3.jpg" alt="A-1vqyi35"><figcaption><b>A-1vqyi35</b> 1440×2560；型錄同圖 g_1vqyi35<br>kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>rainie-hsu</dd>
+<dt>設定年齡</dt><dd>24</dd>
+<dt>亞洲背景依據</dt><dd>kols/rainie-hsu/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taipei, Taiwan」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/rainie-hsu.html">https://kol-catalog-production.up.railway.app/p/rainie-hsu.html</a></dd>
+<dt>Soul ID</dt><dd>994e33d2-7df1-47da-8478-7a6fd849fa33（deprecated）、a4a000fe-fd96-4c36-97ff-0df9358a9b47（ready）<br><span class="note">來源 kols/rainie-hsu/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>濃妝立體、夜店女王的成熟性感；金色緞面長洋裝、馬甲適合年末派對月。</dd>
+<dt>具體缺點</dt><dd>只有 training_v2（Soul v2）這組臉一致；舊資料夾（dance_clone、face_reference round1）是另一張臉，不可混用。多為鏡子自拍與手機入鏡。與 iris 同為長直黑髮，兩人沒有臉部距離量測，需並排目視確認。</dd>
+<dt>與他人差異</dt><dd>整組妝最濃、輪廓最立體；夜景＋金屬光澤服裝。</dd>
+<dt>橫式候選判定</dt><dd>需修圖：右下有假日期戳記（2023/18/0?）；鏡面閃光與鏡中反射人影</dd>
+<dt>直式候選判定</dt><dd>可直接用：人物在門框裡偏小，月份主視覺辨識度中等</dd>
+<dt>已剔除圖</dt><dd>kols/rainie-hsu/images/training_v2/12_hotel_window_selfie.png：窗框十字壓在胸前，裁不掉</dd>
+<dt>已剔除圖</dt><dd>kols/rainie-hsu/images/training_v2/06_perfume_selfie_meitu.png：香水瓶懸空在鎖骨前、沒有手拿</dd>
+</dl></section>
+<section class="cand" id="coco-wu"><h3>Coco Wu 吳可可<span class="tag lead">主角</span>｜7 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/coco-wu_1.jpg" alt="A-1p2l9js"><figcaption><b>A-1p2l9js</b> 1440×2560<br>kols/coco-wu/images/face_reference/candidate_03.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/coco-wu/images/face_reference/candidate_03.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/coco-wu_2.jpg" alt="A-1p19li2"><figcaption><b>A-1p19li2</b> 1440×2560；型錄同圖 g_1p19li2<br>kols/coco-wu/images/face_reference/candidate_01.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/coco-wu/images/face_reference/candidate_01.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/coco-wu_3.jpg" alt="A-0475rf5"><figcaption><b>A-0475rf5</b> 1152×2048；型錄同圖 g_0475rf5<br>kols/coco-wu/images/dance_clone_r12/start_frame.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/coco-wu/images/dance_clone_r12/start_frame.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>coco-wu</dd>
+<dt>設定年齡</dt><dd>20</dd>
+<dt>亞洲背景依據</dt><dd>kols/coco-wu/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taichung, Taiwan」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/coco-wu.html">https://kol-catalog-production.up.railway.app/p/coco-wu.html</a></dd>
+<dt>Soul ID</dt><dd>cf7045dc-4e69-4c56-9621-aa8c40bf39b4（ready）<br><span class="note">來源 kols/coco-wu/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>大笑容、深棕長捲髮配瀏海、宿舍甜心，親近感最強；有比基尼現成圖（尺度 C 參考）。</dd>
+<dt>具體缺點</dt><dd>校園／宿舍設定，成品必須避開制服元素；不同輪次 face_reference 臉略有差異。</dd>
+<dt>與他人差異</dt><dd>整組笑得最開的「元氣甜」；與 luna 同有瀏海但髮長、臉型都不同。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵</dd>
+<dt>直式候選判定</dt><dd>可直接用：背景手機螢幕顯示她自己的照片（可接受）</dd>
+<dt>已剔除圖</dt><dd>kols/coco-wu/images/face_reference/round1_candidate_04.png：背後多一個黑衣人入鏡；臉部偏糊、與其他圖一致性弱</dd>
+</dl></section>
+<section class="cand" id="mia-huang"><h3>Mia Huang 黃米亞<span class="tag lead">主角</span>｜8 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/mia-huang_1.jpg" alt="A-0vgfn3a"><figcaption><b>A-0vgfn3a</b> 1440×2560；型錄同圖 g_0vgfn3a<br>kols/mia-huang/images/training_v1/13_stretch_break_candid.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/mia-huang/images/training_v1/13_stretch_break_candid.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/mia-huang_2.jpg" alt="A-0r53k55"><figcaption><b>A-0r53k55</b> 1440×2560；型錄同圖 g_0r53k55<br>kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/mia-huang_3.jpg" alt="A-0z98xw3"><figcaption><b>A-0z98xw3</b> 1440×2560；型錄同圖 g_0z98xw3<br>kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>mia-huang</dd>
+<dt>設定年齡</dt><dd>22</dd>
+<dt>亞洲背景依據</dt><dd>kols/mia-huang/profile.json identity.ethnicity=「Taiwanese」/ origin=「Hsinchu, Taiwan (新竹)」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/mia-huang.html">https://kol-catalog-production.up.railway.app/p/mia-huang.html</a></dd>
+<dt>Soul ID</dt><dd>e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4（ready）<br><span class="note">來源 kols/mia-huang/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>灰金挑粉的捲短髮、電競霓虹房，造型與場景辨識度都高，甜而俏皮。</dd>
+<dt>具體缺點</dt><dd>不同圖之間臉有些飄（face_reference round1 兩張明顯不同，只用 training_v1）；場景幾乎都是同一間紫光電競房。</dd>
+<dt>與他人差異</dt><dd>唯一淺色挑染短髮＋霓虹電競場景。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：霓虹紫光色偏重，印刷色差需打樣確認</dd>
+<dt>直式候選判定</dt><dd>可直接用：無明顯瑕疵；同樣是紫光</dd>
+<dt>已剔除圖</dt><dd>kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png：門口全身照人物過小（只當比較圖，不當主視覺）</dd>
+<dt>已剔除圖</dt><dd>kols/mia-huang/images/dance_clone_r1/start_frame.png：水手領＋百褶裙屬校服風格；性感取向的桌曆一律避開制服元素</dd>
+</dl></section>
+<section class="cand" id="vicky-lin"><h3>Vicky Lin 林薇淇<span class="tag lead">主角</span>｜6 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/vicky-lin_1.jpg" alt="A-1lwnons"><figcaption><b>A-1lwnons</b> 1440×2560；型錄同圖 g_1lwnons<br>kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/vicky-lin_2.jpg" alt="A-1uihlac"><figcaption><b>A-1uihlac</b> 1152×2048<br>kols/vicky-lin/images/face_reference/v3_01_front_headshot.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v3_01_front_headshot.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/vicky-lin_3.jpg" alt="A-1nwuxvo"><figcaption><b>A-1nwuxvo</b> 1440×2560；型錄同圖 g_1nwuxvo<br>kols/vicky-lin/images/face_reference/v4_anchored_12_front_fullbody_turnback.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v4_anchored_12_front_fullbody_turnback.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>vicky-lin</dd>
+<dt>設定年齡</dt><dd>25</dd>
+<dt>亞洲背景依據</dt><dd>kols/vicky-lin/profile.json identity.ethnicity=「Taiwanese」/ origin=「Kaohsiung, Taiwan (高雄)」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/vicky-lin.html">https://kol-catalog-production.up.railway.app/p/vicky-lin.html</a></dd>
+<dt>Soul ID</dt><dd>bdb1d879-da36-4c1a-bc63-9f5b49a3e94e（ready）<br><span class="note">來源 kols/vicky-lin/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>小麥膚色、高馬尾、健身身材，性感來自身體線條而非衣著，夏天月份最自然。</dd>
+<dt>具體缺點</dt><dd>早期 face_reference 幾張臉不同（v3/v4 錨定後才穩定）；原圖混有 1152×2048。</dd>
+<dt>與他人差異</dt><dd>唯一深膚色、唯一運動體態；整組身形差異最大的一位。</dd>
+<dt>橫式候選判定</dt><dd>需修圖：短褲上有 Nike 勾勾商標；背景路人</dd>
+<dt>直式候選判定</dt><dd>可直接用：無明顯瑕疵（運動內衣上的標誌是虛構的）</dd>
+</dl></section>
+<section class="cand" id="rin-ayase"><h3>Rin Ayase 綾瀨凜<span class="tag lead">主角</span>｜11 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/rin-ayase_1.jpg" alt="A-1bve1vi"><figcaption><b>A-1bve1vi</b> 1728×2304；型錄同圖 g_1bve1vi<br>kols/rin-ayase/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rin-ayase/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/rin-ayase_2.jpg" alt="A-1bun531"><figcaption><b>A-1bun531</b> 1728×2304；型錄同圖 g_1bun531<br>kols/rin-ayase/images/training_v1/train_02.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/rin-ayase/images/training_v1/train_02.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/rin-ayase_3.jpg" alt="A-1v5o3th"><figcaption><b>A-1v5o3th</b> 1536×2048<br>review/soul_pilot/rin-ayase/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/rin-ayase/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>rin-ayase</dd>
+<dt>設定年齡</dt><dd>25</dd>
+<dt>亞洲背景依據</dt><dd>kols/rin-ayase/profile.json identity.ethnicity=「日本」/ origin=「東京銀座」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/rin-ayase.html">https://kol-catalog-production.up.railway.app/p/rin-ayase.html</a></dd>
+<dt>Soul ID</dt><dd>34b7fd71-c8dd-4d6a-983e-881b1d012219（production_ready）<br><span class="note">來源 kols/rin-ayase/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 ruoruo-tang 0.01848；≤0.0220 共 4 組；與主角碰撞 無</dd>
+<dt>推薦理由</dt><dd>酒紅長捲髮、銀座夜色、裸背與緞面晨袍，成熟性感最強，且不靠暴露。</dd>
+<dt>具體缺點</dt><dd>repo 只有 5 張訓練圖＋6 張 Soul 驗證圖（驗證圖是統一服裝，不適合當主視覺）；直式候選臉偏小。</dd>
+<dt>與他人差異</dt><dd>唯一酒紅髮色、唯一「夜晚的成熟女人」氣質；盤髮時與長髮時判若兩種造型，但臉一致。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵</dd>
+<dt>直式候選判定</dt><dd>可直接用：側身回頭、臉在右上偏小，辨識度中等</dd>
+</dl></section>
+<section class="cand" id="kanon-komori"><h3>Kanon Komori 小森花音<span class="tag lead">主角</span>｜2 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/kanon-komori_1.jpg" alt="A-1ma6uak"><figcaption><b>A-1ma6uak</b> 1728×2304；型錄同圖 g_1ma6uak<br>kols/kanon-komori/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/kanon-komori/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/kanon-komori_2.jpg" alt="A-1m9itpb"><figcaption><b>A-1m9itpb</b> 1728×2304；型錄同圖 g_1m9itpb<br>kols/kanon-komori/images/training_v1/train_02.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/kanon-komori/images/training_v1/train_02.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/kanon-komori_3.jpg" alt="A-0j1i7ef"><figcaption><b>A-0j1i7ef</b> 1536×2048<br>review/soul_pilot/kanon-komori/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/kanon-komori/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>kanon-komori</dd>
+<dt>設定年齡</dt><dd>20</dd>
+<dt>亞洲背景依據</dt><dd>kols/kanon-komori/profile.json identity.ethnicity=「日本」/ origin=「東京秋葉原」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/kanon-komori.html">https://kol-catalog-production.up.railway.app/p/kanon-komori.html</a></dd>
+<dt>Soul ID</dt><dd>642ba554-6f87-4be9-9aa7-4b66529b4995（production_ready）<br><span class="note">來源 kols/kanon-komori/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 miu-shiraishi 0.01734；≤0.0220 共 4 組；與主角碰撞 無</dd>
+<dt>推薦理由</dt><dd>粉紫長髮＋瀏海、女僕咖啡廳，甜＋性感兼具，2 月的粉色系不必另外套節慶裝。</dd>
+<dt>具體缺點</dt><dd>repo 只有 6 張訓練圖＋6 張驗證圖；女僕裝屬角色制服（不是校服），尺度仍需 Penny 確認。</dd>
+<dt>與他人差異</dt><dd>唯一粉色系長髮；整組最「二次元偶像」的外型。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：背景黑板是 AI 假字（可接受）</dd>
+<dt>直式候選判定</dt><dd>可直接用：無明顯瑕疵；線圈區壓到瀏海上緣（不傷臉）</dd>
+<dt>已剔除圖</dt><dd>kols/kanon-komori/images/training_v1/train_04.jpg：全身站姿人物過小，臉在 204 mm 高的頁面上辨識度不足</dd>
+</dl></section>
+<section class="cand" id="tammy-chou"><h3>Tammy Chou 周語彤<span class="tag lead">主角</span>｜10 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/tammy-chou_1.jpg" alt="A-0cnlh6h"><figcaption><b>A-0cnlh6h</b> 1728×2304；型錄同圖 g_0cnlh6h<br>kols/tammy-chou/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/tammy-chou/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/tammy-chou_2.jpg" alt="A-0cm9pvf"><figcaption><b>A-0cm9pvf</b> 1728×2304；型錄同圖 g_0cm9pvf<br>kols/tammy-chou/images/training_v1/train_03.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/tammy-chou/images/training_v1/train_03.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/tammy-chou_3.jpg" alt="A-1whlelu"><figcaption><b>A-1whlelu</b> 1536×2048<br>review/soul_pilot/tammy-chou/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/tammy-chou/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>tammy-chou</dd>
+<dt>設定年齡</dt><dd>24</dd>
+<dt>亞洲背景依據</dt><dd>kols/tammy-chou/profile.json identity.ethnicity=「台灣」/ origin=「台北五分埔」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/tammy-chou.html">https://kol-catalog-production.up.railway.app/p/tammy-chou.html</a></dd>
+<dt>Soul ID</dt><dd>5069a35a-dd85-4161-8d0f-952bccbe676d（production_ready）<br><span class="note">來源 kols/tammy-chou/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 ruoruo-tang 0.01886；≤0.0220 共 2 組；與主角碰撞 無</dd>
+<dt>推薦理由</dt><dd>蜜金色大波浪、網拍老闆娘的時髦感，髮色是整組最亮的一位。</dd>
+<dt>具體缺點</dt><dd>repo 5 張訓練圖只有 train_01 成立；與 peggy-lee（0.02008）有碰撞紀錄（本名單已避開）。</dd>
+<dt>與他人差異</dt><dd>唯一蜜金髮色；與 angel 的棕金漸層是不同明度。</dd>
+<dt>橫式候選判定</dt><dd>需補生成：自拍手臂入鏡、頭髮綁起看不出蜜金大波浪、灰襯衫素色，辨識度弱 → 不採用；先取回 daily_v2 原圖（#075/#130 頂樓黑洋裝），不行再補生成</dd>
+<dt>直式候選判定</dt><dd>可直接用：紙箱上有假條碼標籤（小）</dd>
+</dl></section>
+<section class="cand" id="somi-oh"><h3>Somi Oh 오소미<span class="tag lead">主角</span>｜5 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/somi-oh_1.jpg" alt="A-0nfvk2g"><figcaption><b>A-0nfvk2g</b> 1728×2304；型錄同圖 g_0nfvk2g<br>kols/somi-oh/images/training_v1/train_02.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/somi-oh/images/training_v1/train_02.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/somi-oh_2.jpg" alt="A-0nf7jh7"><figcaption><b>A-0nf7jh7</b> 1728×2304；型錄同圖 g_0nf7jh7<br>kols/somi-oh/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/somi-oh/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/somi-oh_3.jpg" alt="A-03mm900"><figcaption><b>A-03mm900</b> 1536×2048<br>review/soul_pilot/somi-oh/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/somi-oh/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>somi-oh</dd>
+<dt>設定年齡</dt><dd>24</dd>
+<dt>亞洲背景依據</dt><dd>kols/somi-oh/profile.json identity.ethnicity=「韓國」/ origin=「釜山」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/somi-oh.html">https://kol-catalog-production.up.railway.app/p/somi-oh.html</a></dd>
+<dt>Soul ID</dt><dd>c7915888-e566-4c9d-bc26-4bf40ab35c4c（production_ready）<br><span class="note">來源 kols/somi-oh/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 miu-shiraishi 0.01894；≤0.0220 共 2 組；與主角碰撞 無</dd>
+<dt>推薦理由</dt><dd>銅橘色短髮、釜山吃播的爽朗暖色調，整組最有生活感的一位。</dd>
+<dt>具體缺點</dt><dd>repo 只有訓練圖；夜景多；與 miu、jia 有碰撞紀錄（本名單已避開）。</dd>
+<dt>與他人差異</dt><dd>唯一銅橘髮色；表情最外放。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：炸雞紙盒配色像品牌包裝（無可讀 logo）</dd>
+<dt>直式候選判定</dt><dd>可直接用：吃串燒張嘴，親和但不性感；若要更甜，取回 daily_v2 原圖 #065/#126（海邊白洋裝）</dd>
+</dl></section>
+<section class="cand" id="angel-chiu"><h3>Angel Chiu 邱安晴<span class="tag lead">主角</span>｜4 月</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/angel-chiu_1.jpg" alt="A-1bgkto2"><figcaption><b>A-1bgkto2</b> 1728×2304；型錄同圖 g_1bgkto2<br>kols/angel-chiu/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/angel-chiu/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/angel-chiu_2.jpg" alt="A-1bftwvl"><figcaption><b>A-1bftwvl</b> 1728×2304；型錄同圖 g_1bftwvl<br>kols/angel-chiu/images/training_v1/train_02.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/angel-chiu/images/training_v1/train_02.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/angel-chiu_3.jpg" alt="A-1k4k9uh"><figcaption><b>A-1k4k9uh</b> 1536×2048<br>review/soul_pilot/angel-chiu/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/angel-chiu/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>angel-chiu</dd>
+<dt>設定年齡</dt><dd>23</dd>
+<dt>亞洲背景依據</dt><dd>kols/angel-chiu/profile.json identity.ethnicity=「台灣」/ origin=「台北」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/angel-chiu.html">https://kol-catalog-production.up.railway.app/p/angel-chiu.html</a></dd>
+<dt>Soul ID</dt><dd>6e638286-be57-45fa-961e-51bde6cba87f（production_ready）<br><span class="note">來源 kols/angel-chiu/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 zoey-yeh 0.02361；≤0.0220 共 0 組；與主角碰撞 無</dd>
+<dt>推薦理由</dt><dd>修長、窄臉尖下巴、棕金漸層長髮；緞面細肩帶洋裝有性感、護理師制服有人設辨識。</dd>
+<dt>具體缺點</dt><dd>repo 只有訓練圖；她與原 11 位（iris、yuna 等）沒有臉部距離量測。</dd>
+<dt>與他人差異</dt><dd>19 位碰撞表中最「乾淨」的一位（最近是 zoey 0.0236）；唯一高瘦模特兒比例＋棕金漸層。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：胸前識別證是空白卡（可接受）</dd>
+<dt>直式候選判定</dt><dd>可直接用：床上有識別證掛繩（可留、可修）</dd>
+<dt>已剔除圖</dt><dd>kols/angel-chiu/images/training_v1/train_03.jpg：自拍手臂佔前景、廣角變形</dd>
+</dl></section>
+<section class="cand" id="wanyin-jiang"><h3>Wanyin Jiang 江晚吟<span class="tag backup">備選</span>｜可替：rainie-hsu 或 iris-chen（同屬長直黑髮）</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/wanyin-jiang_1.jpg" alt="A-1im4vcc"><figcaption><b>A-1im4vcc</b> 1728×2304；型錄同圖 g_1im4vcc<br>kols/wanyin-jiang/images/training_v1/train_04.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/wanyin-jiang/images/training_v1/train_04.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/wanyin-jiang_2.jpg" alt="A-1ik20q5"><figcaption><b>A-1ik20q5</b> 1728×2304；型錄同圖 g_1ik20q5<br>kols/wanyin-jiang/images/training_v1/train_05.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/wanyin-jiang/images/training_v1/train_05.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/wanyin-jiang_3.jpg" alt="A-1upizoi"><figcaption><b>A-1upizoi</b> 1536×2048<br>review/soul_pilot/wanyin-jiang/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/wanyin-jiang/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>wanyin-jiang</dd>
+<dt>設定年齡</dt><dd>23</dd>
+<dt>亞洲背景依據</dt><dd>kols/wanyin-jiang/profile.json identity.ethnicity=「中國」/ origin=「蘇州」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/wanyin-jiang.html">https://kol-catalog-production.up.railway.app/p/wanyin-jiang.html</a></dd>
+<dt>Soul ID</dt><dd>2e7de3f8-63ee-4302-a684-2245f6c54ea1（production_ready）<br><span class="note">來源 kols/wanyin-jiang/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 ruoruo-tang 0.02157；≤0.0220 共 1 組；與主角碰撞 無</dd>
+<dt>推薦理由</dt><dd>旗袍、蘇州園林，東方古典；臉型修長，氣質安靜。</dd>
+<dt>具體缺點</dt><dd>與 iris／rainie 同為長直黑髮；與 rin 距離 0.02234，只比門檻 0.0220 多一點；差異有相當部分來自旗袍造型，需確認臉本身夠不同。</dd>
+<dt>與他人差異</dt><dd>唯一古典東方路線。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵</dd>
+<dt>直式候選判定</dt><dd>可直接用：全身照人物比例中等</dd>
+<dt>已剔除圖</dt><dd>kols/wanyin-jiang/images/training_v1/train_01.jpg：自拍裁太緊，臉左側出框</dd>
+</dl></section>
+<section class="cand" id="sophia-tseng"><h3>Sophia Tseng 曾詩妃<span class="tag backup">備選</span>｜可替：rin-ayase 或 yuna-kim</h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/sophia-tseng_1.jpg" alt="A-14qd6cw"><figcaption><b>A-14qd6cw</b> 1440×2560<br>kols/sophia-tseng/images/training_v1/01_morning_window_candid.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/sophia-tseng/images/training_v1/01_morning_window_candid.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/sophia-tseng_2.jpg" alt="A-1s5wtw5"><figcaption><b>A-1s5wtw5</b> 1440×2560；型錄同圖 g_1s5wtw5<br>kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/sophia-tseng_3.jpg" alt="A-0ayv0tl"><figcaption><b>A-0ayv0tl</b> 1440×2560<br>kols/sophia-tseng/images/training_v1/11_hotel_candid_bed_window.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/sophia-tseng/images/training_v1/11_hotel_candid_bed_window.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>sophia-tseng</dd>
+<dt>設定年齡</dt><dd>28</dd>
+<dt>亞洲背景依據</dt><dd>kols/sophia-tseng/profile.json identity.ethnicity=「Taiwanese」/ origin=「Taipei, Taiwan」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/sophia-tseng.html">https://kol-catalog-production.up.railway.app/p/sophia-tseng.html</a></dd>
+<dt>Soul ID</dt><dd>192562bb-ca64-4615-9515-13d34807857c（ready）<br><span class="note">來源 kols/sophia-tseng/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
+<dt>推薦理由</dt><dd>28 歲貴婦感、信義區夜景、緞面晨袍，補整組「成熟」的年齡層；training_v1 有 13 張 1440×2560。</dd>
+<dt>具體缺點</dt><dd>face_reference 各輪臉差異大，只能用 training_v1；與 yuna 同為深棕及肩捲髮。</dd>
+<dt>與他人差異</dt><dd>整組年齡最大的選項（28）；精品生活感。</dd>
+<dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵</dd>
+<dt>直式候選判定</dt><dd>需補生成：側臉背影、臀部入鏡，辨識度弱 → 不採用；training_v1 其他 12 張可再挑</dd>
+</dl></section>
+<section class="cand" id="miu-shiraishi"><h3>Miu Shiraishi 白石美羽<span class="tag out">落選</span></h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/miu-shiraishi_1.jpg" alt="A-1inawlr"><figcaption><b>A-1inawlr</b> 1728×2304；型錄同圖 g_1inawlr<br>kols/miu-shiraishi/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/miu-shiraishi/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/miu-shiraishi_2.jpg" alt="A-1inyqoc"><figcaption><b>A-1inyqoc</b> 1728×2304；型錄同圖 g_1inyqoc<br>kols/miu-shiraishi/images/training_v1/train_02.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/miu-shiraishi/images/training_v1/train_02.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/miu-shiraishi_3.jpg" alt="A-0ju89j8"><figcaption><b>A-0ju89j8</b> 1536×2048<br>review/soul_pilot/miu-shiraishi/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/miu-shiraishi/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>miu-shiraishi</dd>
+<dt>設定年齡</dt><dd>22</dd>
+<dt>亞洲背景依據</dt><dd>kols/miu-shiraishi/profile.json identity.ethnicity=「日本」/ origin=「東京中目黑」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/miu-shiraishi.html">https://kol-catalog-production.up.railway.app/p/miu-shiraishi.html</a></dd>
+<dt>Soul ID</dt><dd>270c31fa-afd4-4609-b9d5-7302745f137c（production_ready）<br><span class="note">來源 kols/miu-shiraishi/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 jia-seo 0.01219；≤0.0220 共 7 組；與主角碰撞 [(&amp;#x27;kanon-komori&amp;#x27;, 0.01734), (&amp;#x27;somi-oh&amp;#x27;, 0.01894)]</dd>
+<dt>推薦理由</dt><dd>白金短鮑伯＋瀏海、咖啡店員，個人吸引力高、甜。</dd>
+<dt>具體缺點</dt><dd>落選主因：與 jia-seo 距離 0.01219（19 位中最接近的一對）、與 kanon 0.01734、與 somi 0.01894、與 nanami 0.0177。要放她，必須同時拿掉 kanon 與 somi。</dd>
+<dt>與他人差異</dt><dd>唯一白金髮。若 Penny 指定要她，建議替換組合：miu 進、kanon 與 somi 出，再從 wanyin／sophia 補一位。</dd>
+</dl></section>
+<section class="cand" id="jia-seo"><h3>Jia Seo 서지아<span class="tag out">落選</span></h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/jia-seo_1.jpg" alt="A-1ddwxen"><figcaption><b>A-1ddwxen</b> 1728×2304；型錄同圖 g_1ddwxen<br>kols/jia-seo/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/jia-seo/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/jia-seo_2.jpg" alt="A-1df8opp"><figcaption><b>A-1df8opp</b> 1728×2304；型錄同圖 g_1df8opp<br>kols/jia-seo/images/training_v1/train_03.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/jia-seo/images/training_v1/train_03.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/jia-seo_3.jpg" alt="A-0hsh9hw"><figcaption><b>A-0hsh9hw</b> 1536×2048<br>review/soul_pilot/jia-seo/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/jia-seo/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>jia-seo</dd>
+<dt>設定年齡</dt><dd>22</dd>
+<dt>亞洲背景依據</dt><dd>kols/jia-seo/profile.json identity.ethnicity=「韓國」/ origin=「首爾江南」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/jia-seo.html">https://kol-catalog-production.up.railway.app/p/jia-seo.html</a></dd>
+<dt>Soul ID</dt><dd>ecf19246-c697-419c-b978-fe9373586c19（production_ready）<br><span class="note">來源 kols/jia-seo/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 miu-shiraishi 0.01219；≤0.0220 共 6 組；與主角碰撞 [(&amp;#x27;somi-oh&amp;#x27;, 0.01986)]</dd>
+<dt>推薦理由</dt><dd>藍黑髮＋薄荷內染、K-pop 舞蹈老師，造型辨識度高。</dd>
+<dt>具體缺點</dt><dd>落選：與 somi 0.01986、miu 0.01219 碰撞；冷感、甜美度弱；舞蹈體態與 vicky 的運動路線部分重疊。</dd>
+<dt>與他人差異</dt><dd>唯一薄荷內染。</dd>
+</dl></section>
+<section class="cand" id="peggy-lee"><h3>Peggy Lee 李珮甄<span class="tag out">落選</span></h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/peggy-lee_1.jpg" alt="A-03f08ys"><figcaption><b>A-03f08ys</b> 1728×2304；型錄同圖 g_03f08ys<br>kols/peggy-lee/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/peggy-lee/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/peggy-lee_2.jpg" alt="A-03ccqjk"><figcaption><b>A-03ccqjk</b> 1728×2304；型錄同圖 g_03ccqjk<br>kols/peggy-lee/images/training_v1/train_05.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/peggy-lee/images/training_v1/train_05.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/peggy-lee_3.jpg" alt="A-0sctbf3"><figcaption><b>A-0sctbf3</b> 1536×2048<br>review/soul_pilot/peggy-lee/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/peggy-lee/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>peggy-lee</dd>
+<dt>設定年齡</dt><dd>24</dd>
+<dt>亞洲背景依據</dt><dd>kols/peggy-lee/profile.json identity.ethnicity=「馬來西亞華裔（Chinese-Malaysian）」/ origin=「吉隆坡（華裔）」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/peggy-lee.html">https://kol-catalog-production.up.railway.app/p/peggy-lee.html</a></dd>
+<dt>Soul ID</dt><dd>3e3f4f72-2a89-4f05-af61-0c6701c97a5c（production_ready）<br><span class="note">來源 kols/peggy-lee/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 angeline-kwee 0.01788；≤0.0220 共 3 組；與主角碰撞 [(&amp;#x27;tammy-chou&amp;#x27;, 0.02008)]</dd>
+<dt>推薦理由</dt><dd>酒紅大捲髮＋灰挑染、改裝車行銷，帥氣性感。</dd>
+<dt>具體缺點</dt><dd>落選：與 tammy 0.02008、angeline 0.01788 碰撞；酒紅系髮色與 rin 撞色。</dd>
+<dt>與他人差異</dt><dd>唯一大捲髮＋車廠場景。</dd>
+</dl></section>
+<section class="cand" id="yerin-han"><h3>Yerin Han 한예린<span class="tag out">落選</span></h3><div class="imgs">
+<figure><img loading="lazy" src="img/cand/yerin-han_1.jpg" alt="A-12i8s8a"><figcaption><b>A-12i8s8a</b> 1728×2304；型錄同圖 g_12i8s8a<br>kols/yerin-han/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yerin-han/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/yerin-han_2.jpg" alt="A-12hhvft"><figcaption><b>A-12hhvft</b> 1728×2304；型錄同圖 g_12hhvft<br>kols/yerin-han/images/training_v1/train_02.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/yerin-han/images/training_v1/train_02.jpg">原圖</a></figcaption></figure>
+<figure><img loading="lazy" src="img/cand/yerin-han_3.jpg" alt="A-17c8wn5"><figcaption><b>A-17c8wn5</b> 1536×2048<br>review/soul_pilot/yerin-han/verify_v1/V1.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/review/soul_pilot/yerin-han/verify_v1/V1.png">原圖</a></figcaption></figure>
+</div><dl>
+<dt>角色 ID</dt><dd>yerin-han</dd>
+<dt>設定年齡</dt><dd>26</dd>
+<dt>亞洲背景依據</dt><dd>kols/yerin-han/profile.json identity.ethnicity=「韓國」/ origin=「首爾」</dd>
+<dt>型錄頁</dt><dd><a href="https://kol-catalog-production.up.railway.app/p/yerin-han.html">https://kol-catalog-production.up.railway.app/p/yerin-han.html</a></dd>
+<dt>Soul ID</dt><dd>8c447a79-769f-4520-a538-cfb48fef6163（production_ready）<br><span class="note">來源 kols/yerin-han/profile.json；SOUL_IDS.json 一致；未在 Higgsfield 端查驗</span></dd>
+<dt>臉部碰撞</dt><dd>最近 sydney-leong 0.01722；≤0.0220 共 4 組；與主角碰撞 [(&amp;#x27;rin-ayase&amp;#x27;, 0.02085)]</dd>
+<dt>推薦理由</dt><dd>亞麻棕長髮、高爾夫教練，運動甜美。</dd>
+<dt>具體缺點</dt><dd>落選：與 rin 0.02085、sydney 0.01722、emma 0.01851、nanami 0.0194 碰撞；運動路線與 vicky 重疊。</dd>
+<dt>與他人差異</dt><dd>唯一高爾夫場景。</dd>
+</dl></section>
+<h2>三、裁切與有效印刷解析度（12 主角＋2 備選）</h2><p class="note">紅＝線圈區（上緣 12 mm 畫布，含 2 mm 出血）；藍＝假設的日期條；白框＝裁切線（出血內縮 2 mm）。ppi = 裁切後實際像素 ÷ 框寬英吋，沒有任何放大。分級是本專案的工作判準，不是廠商要求。</p><div class="tw"><table><tr><th>月</th><th>人設</th><th>橫式滿版 204×155</th><th>橫式半版 102×155</th><th>直式滿版 144×204</th><th>預覽</th></tr>
+<tr><td>1</td><td>Iris Chen</td><td>239 ppi（邊緣）<br>1920×2560<br>不採用（現有直幅原圖）</td><td>420 ppi（充裕）<br>1920×2560<br>可直接用</td><td>319 ppi（充裕）<br>1920×2560<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/iris-chen_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/iris-chen_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/iris-chen_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>2</td><td>Kanon Komori</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>可直接用</td><td>287 ppi（可）<br>1728×2304<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/kanon-komori_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/kanon-komori_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/kanon-komori_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>3</td><td>Luna Tanaka</td><td>143 ppi（不足）<br>1152×2048<br>不採用（現有直幅原圖）</td><td>287 ppi（可）<br>1152×2048<br>需修圖</td><td>203 ppi（邊緣）<br>1152×2048<br>需修圖</td><td><div class="crops"><img loading="lazy" src="img/crop/luna-tanaka_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/luna-tanaka_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/luna-tanaka_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>4</td><td>Angel Chiu</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>可直接用</td><td>287 ppi（可）<br>1728×2304<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/angel-chiu_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/angel-chiu_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/angel-chiu_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>5</td><td>Somi Oh</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>可直接用</td><td>287 ppi（可）<br>1728×2304<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/somi-oh_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/somi-oh_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/somi-oh_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>6</td><td>Vicky Lin</td><td>143 ppi（不足）<br>1152×2048<br>不採用（現有直幅原圖）</td><td>287 ppi（可）<br>1152×2048<br>需修圖</td><td>254 ppi（可）<br>1440×2560<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/vicky-lin_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/vicky-lin_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/vicky-lin_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>7</td><td>Coco Wu</td><td>179 ppi（不足）<br>1440×2560<br>不採用（現有直幅原圖）</td><td>359 ppi（充裕）<br>1440×2560<br>可直接用</td><td>254 ppi（可）<br>1440×2560<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/coco-wu_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/coco-wu_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/coco-wu_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>8</td><td>Mia Huang</td><td>179 ppi（不足）<br>1440×2560<br>不採用（現有直幅原圖）</td><td>359 ppi（充裕）<br>1440×2560<br>可直接用</td><td>254 ppi（可）<br>1440×2560<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/mia-huang_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/mia-huang_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/mia-huang_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>9</td><td>Yuna Kim</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>可直接用</td><td>203 ppi（邊緣）<br>1152×2048<br>需修圖</td><td><div class="crops"><img loading="lazy" src="img/crop/yuna-kim_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/yuna-kim_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/yuna-kim_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>10</td><td>Tammy Chou</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>需補生成</td><td>287 ppi（可）<br>1728×2304<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/tammy-chou_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/tammy-chou_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/tammy-chou_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>11</td><td>Rin Ayase</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>可直接用</td><td>287 ppi（可）<br>1728×2304<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/rin-ayase_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/rin-ayase_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/rin-ayase_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>12</td><td>Rainie Hsu</td><td>179 ppi（不足）<br>1440×2560<br>不採用（現有直幅原圖）</td><td>359 ppi（充裕）<br>1440×2560<br>需修圖</td><td>254 ppi（可）<br>1440×2560<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/rainie-hsu_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/rainie-hsu_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/rainie-hsu_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>備</td><td>Wanyin Jiang</td><td>215 ppi（邊緣）<br>1728×2304<br>不採用（現有直幅原圖）</td><td>378 ppi（充裕）<br>1728×2304<br>可直接用</td><td>287 ppi（可）<br>1728×2304<br>可直接用</td><td><div class="crops"><img loading="lazy" src="img/crop/wanyin-jiang_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/wanyin-jiang_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/wanyin-jiang_V_full.jpg" alt="V_full"></div></td></tr>
+<tr><td>備</td><td>Sophia Tseng</td><td>179 ppi（不足）<br>1440×2560<br>不採用（現有直幅原圖）</td><td>359 ppi（充裕）<br>1440×2560<br>可直接用</td><td>254 ppi（可）<br>1440×2560<br>需補生成</td><td><div class="crops"><img loading="lazy" src="img/crop/sophia-tseng_H_full.jpg" alt="H_full"><img loading="lazy" src="img/crop/sophia-tseng_H_split.jpg" alt="H_split"><img loading="lazy" src="img/crop/sophia-tseng_V_full.jpg" alt="V_full"></div></td></tr>
+</table></div>
+<h2>四、篩選前即排除</h2><div class="tw"><table><tr><th>人設</th><th>原因</th></tr>
+<tr><td>nico-tsai</td><td>灰棕短鮑伯、冷調時髦，不屬甜美方向；Phase D 待裁決；沒有納入 19 位碰撞篩檢。</td></tr>
+<tr><td>zoey-yeh、zhiyi-shen、nanami-fujiwara、cheryl-soh</td><td>都是長直黑髮，與 iris／rainie 同一類；nanami 有 9 組碰撞（含 kanon 0.01741）、cheryl 6 組、zhiyi 6 組。</td></tr>
+<tr><td>ruoruo-tang、sydney-leong</td><td>碰撞組數最多（11、10），臉最「平均」，最不利於展示差異。</td></tr>
+<tr><td>emma-kao</td><td>主播的知性成熟路線；與 rin 0.01863 碰撞。</td></tr>
+<tr><td>angeline-kwee</td><td>奶茶灰棕長捲髮與 tammy、angel 的髮色區間重疊；與 peggy 0.01788。</td></tr>
+<tr><td>wendy-yeo</td><td>銀灰鮑伯辨識度很高，但冷酷中性，不符甜美方向；若 Penny 想要一位「反差冷感」可回頭考慮（與 12 位主角無碰撞）。</td></tr>
+<tr><td>ananya-kapoor</td><td>印度旁遮普，屬亞洲；本輪以東亞甜美方向為準而未入選。是否納入南亞以拉開差異，屬 Penny 的美感判斷，列為可討論，不當作硬性排除。</td></tr>
+<tr><td>camille-dupont、aaliya-okonkwo</td><td>設定為法國、拉丁裔，非亞洲人設。</td></tr>
+<tr><td>faye-tan、rachel-ong、kai-luo</td><td>屬 showgame-kol／Buildup_KOL，本 repo 沒有設定文件與 Soul ID；型錄圖是紀實、冷調風格（設定 30、34、27 歲），不符「漂亮、性感、甜美」。</td></tr>
+<tr><td>nova-lin</td><td>型錄 ethnicity 欄為空、設定是 AI 數位人，亞洲背景無法用設定文件查證；Soul ID 未確認。</td></tr>
+<tr><td>xiaoxiao-tan、loima-cheung、leon-lim</td><td>型錄現有圖皆為男性形象（xiaoxiao-tan 是否為設定錯置，未確認）。</td></tr>
+</table></div>
+<p class="note">主角中屬 Batch 3 者的最近配對：rin-ayase↔kanon-komori 0.02302；kanon-komori↔somi-oh 0.02794；rin-ayase↔somi-oh 0.02960（皆 &gt; 0.0220）。原 11 位與 Batch 3 之間沒有量測，臉部差異以目視判斷。</p>
+</main></body></html>

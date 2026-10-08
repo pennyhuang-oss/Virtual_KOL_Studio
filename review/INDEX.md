@@ -1,6 +1,6 @@
 # review/ 資料夾索引
 
-**這個 repo 目前有三條各自獨立的覆核工作線。前兩條都在用 `review/`，第三條刻意不用。**
+**這個 repo 目前有四條各自獨立的覆核工作線。前兩條都在用 `review/`，第三條刻意不用，第四條（2027 桌曆）只用 `review/calendar/` 子資料夾。**
 2026-08-28 合併時發現雙方都佔用了 `LEDGER.md` 與 `README.md` 這兩個檔名，
 內容完全不同、不能合併，所以分開放。**動檔案前先確認自己在哪一條線。**
 
@@ -9,6 +9,7 @@
 | **Nico Pilot** | 建模照計畫、Phase A–C、20 段 prompt | `review/LEDGER.md` | `review/README.md` |
 | **餐廳批次一** | 壽司太陽／如膠 · Yuna＋Luna · 21 件 IG 素材 | `review/restaurant-b1/LEDGER.md` | `review/restaurant-b1/README.md` |
 | **KOLCAT 型錄站** | 三個 repo 的 42 位 KOL 做成 Railway 公開型錄 | 🛑 **不在 `review/`**：帳本內嵌於 `catalog/KOLCAT_REVIEW_PACKET.md` §4 | `catalog/README.md` |
+| **2027 桌曆試做**（TASK-CAL-001，2026-10-08 開張） | 橫直兩款桌曆、12 位人設選角與素材盤點 | 成果在 `docs/calendar/`；送審請求一律放 `review/calendar/CAL_REVIEW_REQUEST_R<n>.md`（不用本資料夾根目錄的任何檔名） | `docs/calendar/README.md` |
 
 ## 共用但未分家的檔名
 
@@ -35,6 +36,7 @@
 | `C-` `K-` `U-` | Nico Pilot |
 | `D-` `LG-` `YG-` | 餐廳批次一 |
 | `KC-` `CC-` `PP-` | KOLCAT 型錄站 |
+| `CAL-` | 2027 桌曆試做 |
 
 **新工作線開張時先來這張表挑沒被用過的前綴**，不然兩條線的帳本會出現同一個 ID
 指兩件事，而覆核者只讀單一檔案、看不出撞號。
