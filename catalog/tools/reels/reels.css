@@ -1,0 +1,123 @@
+/* /reels.html。全部掛在 .rl 或 .reels 底下,不要碰到型錄其他頁的類別。 */
+.rl{padding:28px 0 0}
+.rl .egs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 22px;align-items:center}
+.rl .egs b{font-size:12px;color:var(--ink4);letter-spacing:.08em;margin-right:3px}
+.rl .egs button{background:transparent;color:var(--ink2);border:1px solid var(--line2);
+  border-radius:14px;padding:4px 13px;font:inherit;font-size:13px;cursor:pointer}
+.rl .egs button:hover{border-color:var(--gold2);color:var(--gold)}
+.rl .egs button[aria-pressed=true]{background:var(--gold2);border-color:var(--gold2);color:var(--dark);font-weight:500}
+.rl .egs button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.rl .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+@media (max-width:520px){.rl .grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+.rl .vc{position:relative;aspect-ratio:9/16;border-radius:5px;overflow:hidden;background:var(--card2);
+  border:1px solid var(--line);cursor:pointer;padding:0;display:block;width:100%;text-align:left}
+.rl .vc img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.rl .vc:hover img{transform:scale(1.045)}
+.rl .vc:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.rl .vc .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 10px 9px;display:flex;gap:7px;align-items:center;
+  background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,0))}
+.rl .vc .cap img{width:22px;height:22px;border-radius:50%;flex:0 0 auto}
+.rl .vc .cap b{font-weight:500;font-size:12.5px;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rl .vc .pl{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.rl .vc .pl span{width:42px;height:42px;border-radius:50%;background:rgba(12,12,14,.55);
+  border:1px solid rgba(255,255,255,.34);display:grid;place-items:center;font-size:14px;color:#fff;
+  backdrop-filter:blur(3px);transition:transform .25s}
+.rl .vc:hover .pl span{transform:scale(1.12)}
+.rl .none{color:var(--ink3);font-size:13.5px}
+.rl .how{margin:34px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
+.rl .how p{color:var(--ink3);font-size:13px;margin:0 0 9px;max-width:54em}
+.rl .how b{color:var(--ink2);font-weight:500}
+
+/* ── 全螢幕播放器 ── */
+.reels{position:fixed;inset:0;z-index:200;background:#000}
+.reels[hidden]{display:none!important}
+.rfeed{height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none}
+.rfeed::-webkit-scrollbar{display:none}
+.rfeed section{height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;
+  display:grid;place-items:center;overflow:hidden}
+.rfeed .bg{position:absolute;inset:0;background-size:cover;background-position:center;
+  filter:blur(34px) brightness(.34);transform:scale(1.18)}
+/* 🛑 首幀是 .stage 自己的背景,影片絕對定位疊在上面。
+   原本首幀是一個獨立的 <div>,跟 <video> 一起排在流程裡,兩個各佔 100% 高——
+   影片被推到看不見的地方,結果是「聽得到聲音、只看得到封面」（2026-09-10 客戶回報）。 */
+.rfeed .stage{position:relative;height:100dvh;aspect-ratio:9/16;max-width:100vw;background:#000;
+  background-size:cover;background-position:center;background-repeat:no-repeat}
+.rfeed .stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.rfeed .meta{position:absolute;left:0;right:0;bottom:0;padding:70px 18px 26px;
+  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,0));display:flex;gap:11px;align-items:center}
+.rfeed .meta img{width:40px;height:40px;border-radius:50%;flex:0 0 auto;border:1px solid rgba(255,255,255,.28)}
+.rfeed .meta .t{min-width:0;flex:1 1 auto}
+.rfeed .meta b{display:block;font-weight:500;font-size:15px;color:#fff}
+.rfeed .meta i{display:block;font-style:normal;font-size:12px;color:rgba(255,255,255,.62);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rfeed .meta a{flex:0 0 auto;font-size:12.5px;color:#fff;border:1px solid rgba(255,255,255,.4);
+  border-radius:15px;padding:5px 13px;white-space:nowrap}
+.rfeed .meta a:hover{background:rgba(255,255,255,.14)}
+.rtop{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;gap:10px;align-items:center;
+  padding:14px 16px;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,0))}
+.rcount{margin-right:auto;font-size:12.5px;color:rgba(255,255,255,.8);font-variant-numeric:tabular-nums}
+.rbtn{width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.28);
+  color:#fff;font-size:15px;cursor:pointer;display:grid;place-items:center;padding:0}
+.rbtn:hover{background:rgba(0,0,0,.68)}
+.rbtn:focus-visible,.rsound:focus-visible,.rnav:focus-visible{outline:2px solid #e7cd74;outline-offset:2px}
+
+/* 🛑 靜音時這顆要「看起來就是要按的」——金底、有字、會呼吸。
+   使用者 2026-09-10：「有些人其實不太知道⋯⋯可以這樣開啟音量」。開了聲音之後才縮回小圖示。 */
+.rsound{display:flex;align-items:center;gap:7px;border-radius:20px;padding:7px 14px 7px 11px;
+  font:inherit;font-size:13px;cursor:pointer;border:1px solid rgba(255,255,255,.28);
+  background:rgba(0,0,0,.42);color:#fff}
+.rsound svg{width:19px;height:19px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.rsound svg .w{display:none}
+.rsound b{font-weight:500;white-space:nowrap}
+.rsound.on{background:#e7cd74;border-color:#e7cd74;color:#17130a;animation:rpulse 2.2s ease-in-out infinite}
+.rsound.on:hover{background:#f0da91;animation:none}
+.rsound:not(.on){padding:9px;gap:0}
+.rsound:not(.on) b{display:none}
+.rsound:not(.on) svg .x{display:none}
+.rsound:not(.on) svg .w{display:inline}
+@keyframes rpulse{0%,100%{box-shadow:0 0 0 0 rgba(231,205,116,.5)}70%{box-shadow:0 0 0 11px rgba(231,205,116,0)}}
+
+/* 第一次進來的大提示,點一下就開聲音並消失 */
+.rtap{position:absolute;inset:0;z-index:2;display:grid;place-content:center;justify-items:center;gap:14px;
+  cursor:pointer;background:rgba(0,0,0,.34);transition:opacity .35s}
+.rtap[hidden]{display:none!important}
+.rtap .ic{width:74px;height:74px;border-radius:50%;background:rgba(0,0,0,.55);
+  border:1.5px solid rgba(255,255,255,.55);display:grid;place-items:center;backdrop-filter:blur(3px)}
+.rtap svg{width:34px;height:34px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rtap b{font-weight:500;font-size:14.5px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+
+/* 上下切換。🛑 一定要靠右邊緣,不能放畫面正中央——放中間會蓋住人設的臉
+   （2026-09-10 客戶截圖：上一支的箭頭正好壓在額頭上）。 */
+.rnav{position:absolute;right:16px;z-index:3;background:rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.26);color:#fff;cursor:pointer;display:grid;place-items:center;
+  width:42px;height:42px;border-radius:50%;padding:0}
+.rnav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rnav:hover{background:rgba(0,0,0,.78)}
+.rnav[hidden]{display:none!important}
+.rnav.prev{top:calc(50% - 48px)}
+/* 只彈三下就停。一直彈很吵,而且會變成很難按中——Playwright 直接判定「元素不穩定」點不下去,
+   那代表手不穩的人也點不到。提示的目的達到就該安靜。 */
+.rnav.next{top:calc(50% + 6px);animation:rbob 1.9s ease-in-out 3}
+.rnav.next:hover{animation:none}
+@keyframes rbob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.rnav.next,.rsound.on{animation:none}}
+
+/* 「下一支」四個字只在剛進來時出現在箭頭旁邊,幾秒後淡掉,不長期佔著畫面 */
+.rtip{position:absolute;right:66px;top:calc(50% + 14px);z-index:3;margin:0;font-size:12px;
+  color:rgba(255,255,255,.82);background:rgba(0,0,0,.5);border-radius:13px;padding:4px 11px;
+  white-space:nowrap;pointer-events:none;transition:opacity .6s}
+.rtip[hidden]{display:none!important}
+
+/* 觸控裝置本來就是用滑的,不用箭頭——少兩個東西壓在畫面上。
+   提示改放底部中央（在資訊列上方）,那裡不會擋到臉。 */
+@media (pointer:coarse){
+  .rnav{display:none!important}
+  .rtip{right:auto;left:50%;transform:translateX(-50%);top:auto;bottom:104px}
+}
+
+/* 播放進度。短影音都有這一條,沒有的話不知道這支多長 */
+.rbar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}
+.rbar span{display:block;height:100%;width:0;background:#e7cd74;transition:width .18s linear}

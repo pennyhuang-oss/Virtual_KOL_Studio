@@ -1,0 +1,841 @@
+{
+  "generated_by": "catalog/tools/sample_derive_measure.mjs",
+  "generated_at": "2026-08-31",
+  "method": "分層抽樣（每 repo 按原始檔案大小分四區間取樣，並強制納入各 repo 最大的一支）＋用最終轉檔參數實際轉檔後量檔案大小。不是估值。",
+  "ffmpeg": "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2024 the FFmpeg developers",
+  "spec": {
+    "thumb": {
+      "desc": "首頁卡片",
+      "width": 400,
+      "quality": 78
+    },
+    "web": {
+      "desc": "人設頁圖庫",
+      "longEdge": 1440,
+      "quality": 82
+    },
+    "poster": {
+      "desc": "影片播放前的首幀",
+      "width": 720,
+      "quality": 80
+    },
+    "video": {
+      "desc": "人設頁影片",
+      "height": 1280,
+      "crf": 26,
+      "audioKbps": 96,
+      "preset": "medium"
+    }
+  },
+  "population": {
+    "images": 727,
+    "videos": 187
+  },
+  "sampled": {
+    "images": 48,
+    "videos": 27,
+    "image_errors": 0,
+    "video_errors": 0
+  },
+  "distribution_mb": {
+    "image_src": {
+      "n": 48,
+      "min": 0.076,
+      "p50": 3.08,
+      "p95": 7.708,
+      "max": 9.065,
+      "mean": 2.991
+    },
+    "image_web": {
+      "n": 48,
+      "min": 0.031,
+      "p50": 0.076,
+      "p95": 0.188,
+      "max": 0.206,
+      "mean": 0.086
+    },
+    "image_thumb": {
+      "n": 48,
+      "min": 0.007,
+      "p50": 0.018,
+      "p95": 0.039,
+      "max": 0.05,
+      "mean": 0.019
+    },
+    "video_src": {
+      "n": 27,
+      "min": 1.363,
+      "p50": 9.299,
+      "p95": 58.953,
+      "max": 65.59,
+      "mean": 18.497
+    },
+    "video_out": {
+      "n": 27,
+      "min": 0.335,
+      "p50": 1.722,
+      "p95": 5.788,
+      "max": 6.47,
+      "mean": 2.308
+    },
+    "video_poster": {
+      "n": 27,
+      "min": 0.031,
+      "p50": 0.064,
+      "p95": 0.107,
+      "max": 0.11,
+      "mean": 0.071
+    }
+  },
+  "video_seconds": {
+    "n": 27,
+    "min": 5,
+    "p50": 12.1,
+    "p95": 50.2,
+    "max": 68,
+    "mean": 19.03
+  },
+  "video_mb_per_sec": {
+    "n": 27,
+    "min": 0.065,
+    "p50": 0.116,
+    "p95": 0.243,
+    "max": 0.358,
+    "mean": 0.133
+  },
+  "samples": {
+    "images": [
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/14_car_selfie_02.webp",
+        "src_w": 1920,
+        "src_h": 2560,
+        "src_mb": 0.235,
+        "web_mb": 0.076,
+        "thumb_mb": 0.015
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/luna-tanaka/images/face_reference/ref_03.webp",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 0.076,
+        "web_mb": 0.058,
+        "thumb_mb": 0.013
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/yuna-kim/images/batch1/YG-03_fail_b.png",
+        "src_w": 1152,
+        "src_h": 2048,
+        "src_mb": 3.005,
+        "web_mb": 0.065,
+        "thumb_mb": 0.018
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/yuna-kim/images/batch1/YG-04.png",
+        "src_w": 1152,
+        "src_h": 2048,
+        "src_mb": 2.901,
+        "web_mb": 0.057,
+        "thumb_mb": 0.016
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/luna-tanaka/images/dance_clone_r16/start_frame.png",
+        "src_w": 1152,
+        "src_h": 2048,
+        "src_mb": 3.811,
+        "web_mb": 0.063,
+        "thumb_mb": 0.018
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/sophia-tseng/images/face_reference/round2_candidate_02.png",
+        "src_w": 1440,
+        "src_h": 2560,
+        "src_mb": 3.349,
+        "web_mb": 0.042,
+        "thumb_mb": 0.014
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+        "src_w": 1152,
+        "src_h": 2048,
+        "src_mb": 3.166,
+        "web_mb": 0.086,
+        "thumb_mb": 0.026
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/restaurant_01.png",
+        "src_w": 1152,
+        "src_h": 2048,
+        "src_mb": 3.264,
+        "web_mb": 0.061,
+        "thumb_mb": 0.017
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/04_outfit_mirror_selfie_tryon.png",
+        "src_w": 1440,
+        "src_h": 2560,
+        "src_mb": 4.34,
+        "web_mb": 0.079,
+        "thumb_mb": 0.024
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v2/01_mirror_tryon_candid.png",
+        "src_w": 1440,
+        "src_h": 2560,
+        "src_mb": 4.174,
+        "web_mb": 0.067,
+        "thumb_mb": 0.023
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/17_c10.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 4.84,
+        "web_mb": 0.102,
+        "thumb_mb": 0.02
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/round2_candidate_04.png",
+        "src_w": 1440,
+        "src_h": 2560,
+        "src_mb": 4.622,
+        "web_mb": 0.053,
+        "thumb_mb": 0.017
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a02.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 5.341,
+        "web_mb": 0.104,
+        "thumb_mb": 0.02
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/nico-tsai/images/phase_a_r3/r3_c04.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 5.009,
+        "web_mb": 0.085,
+        "thumb_mb": 0.016
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/wendy-yeo/images/casting_v1/a04_v1_body_fail.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 5.343,
+        "web_mb": 0.088,
+        "thumb_mb": 0.019
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/02_a02.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 5.361,
+        "web_mb": 0.086,
+        "thumb_mb": 0.018
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/leon-lim/social media/0818/_old-2-had-mountain.png",
+        "src_w": 752,
+        "src_h": 1344,
+        "src_mb": 1.482,
+        "web_mb": 0.083,
+        "thumb_mb": 0.026
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/rachel-ong/social media/0824/image-1-tiktok.jpg",
+        "src_w": 810,
+        "src_h": 1080,
+        "src_mb": 0.465,
+        "web_mb": 0.188,
+        "thumb_mb": 0.039
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/social media/0828/image-1.jpg",
+        "src_w": 1744,
+        "src_h": 2336,
+        "src_mb": 0.355,
+        "web_mb": 0.082,
+        "thumb_mb": 0.017
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-12/img/gate-empty-seats-1.png",
+        "src_w": 896,
+        "src_h": 1200,
+        "src_mb": 1.559,
+        "web_mb": 0.099,
+        "thumb_mb": 0.021
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/leon-lim/圖文/2026-08-14/img/zeus-1-halfbody-standing-作廢.png",
+        "src_w": 896,
+        "src_h": 1200,
+        "src_mb": 2.032,
+        "web_mb": 0.077,
+        "thumb_mb": 0.018
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/leon-lim/social media/0814/leon-troy-2b-ruins-wide-keyframe.png",
+        "src_w": 752,
+        "src_h": 1344,
+        "src_mb": 2.295,
+        "web_mb": 0.188,
+        "thumb_mb": 0.05
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/social media/0729/ChatGPT Image 2026年7月29日 下午12_08_54.png",
+        "src_w": 1448,
+        "src_h": 1086,
+        "src_mb": 1.802,
+        "web_mb": 0.089,
+        "thumb_mb": 0.011
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/social media/0804/faye-station-bg.png",
+        "src_w": 768,
+        "src_h": 1376,
+        "src_mb": 2.135,
+        "web_mb": 0.125,
+        "thumb_mb": 0.031
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/images/ref/xiaoxiao_02_kneeup_side.png",
+        "src_w": 1792,
+        "src_h": 2400,
+        "src_mb": 4.157,
+        "web_mb": 0.037,
+        "thumb_mb": 0.007
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/rafael-costa/images/ref/rafael_01_fullbody_front.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 3.08,
+        "web_mb": 0.051,
+        "thumb_mb": 0.008
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-04/xiaoxiao-chess-tv-pov.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 4.435,
+        "web_mb": 0.084,
+        "thumb_mb": 0.019
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/rachel-ong/images/ref/rachel_03_face_closeup.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 4.06,
+        "web_mb": 0.06,
+        "thumb_mb": 0.01
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/leon-lim/social media/0828/duan2-顆4-林曜廢墟-側角-首幀.png",
+        "src_w": 1536,
+        "src_h": 2752,
+        "src_mb": 7.181,
+        "web_mb": 0.186,
+        "thumb_mb": 0.047
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/圖文/2026-08-11/faye-seine-nophoto.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 7.708,
+        "web_mb": 0.169,
+        "thumb_mb": 0.03
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/圖文/2026-08-13/faye-ithaca-selfie-street.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 9.065,
+        "web_mb": 0.191,
+        "thumb_mb": 0.027
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/圖文/2026-08-13/faye-ithaca-selfie-sea.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 8.755,
+        "web_mb": 0.206,
+        "thumb_mb": 0.03
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/mia-huang/images/ref/03_cosplay_mirror_selfie.webp",
+        "src_w": 900,
+        "src_h": 1600,
+        "src_mb": 0.076,
+        "web_mb": 0.055,
+        "thumb_mb": 0.019
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/vicky-lin/images/ref/v4_anchored_10_front_halfbody_rooftop.webp",
+        "src_w": 900,
+        "src_h": 1600,
+        "src_mb": 0.092,
+        "web_mb": 0.049,
+        "thumb_mb": 0.015
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/luna-tanaka/images/ref/ref_01.webp",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 0.092,
+        "web_mb": 0.061,
+        "thumb_mb": 0.014
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/rainie-hsu/images/ref/05_vanity_liner_candid.webp",
+        "src_w": 900,
+        "src_h": 1600,
+        "src_mb": 0.089,
+        "web_mb": 0.06,
+        "thumb_mb": 0.021
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0804/qinfeng-outfit-ref.png",
+        "src_w": 896,
+        "src_h": 1200,
+        "src_mb": 0.995,
+        "web_mb": 0.031,
+        "thumb_mb": 0.008
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/faye-tan/images/ref/021785219969901b1e926b94f741badb049b6681cf829b8db73f8_0.jpeg",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 0.237,
+        "web_mb": 0.043,
+        "thumb_mb": 0.009
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/camille-dupont/images/ref/ref_04.webp",
+        "src_w": 1664,
+        "src_h": 2496,
+        "src_mb": 0.11,
+        "web_mb": 0.065,
+        "thumb_mb": 0.017
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/vicky-lin/images/ref/anchor__v3_06_3q_fullbody.webp",
+        "src_w": 900,
+        "src_h": 1600,
+        "src_mb": 0.132,
+        "web_mb": 0.064,
+        "thumb_mb": 0.019
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/圖文/qinfeng-cardpack-object-a.png",
+        "src_w": 880,
+        "src_h": 1168,
+        "src_mb": 1.524,
+        "web_mb": 0.113,
+        "thumb_mb": 0.027
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0729/ChatGPT Image 2026年7月29日 下午03_06_09.png",
+        "src_w": 1448,
+        "src_h": 1086,
+        "src_mb": 1.52,
+        "web_mb": 0.064,
+        "thumb_mb": 0.007
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/xiaoxiao-tan/圖文/xiaoxiao-chess-tv-gptimage.png",
+        "src_w": 880,
+        "src_h": 1168,
+        "src_mb": 1.265,
+        "web_mb": 0.056,
+        "thumb_mb": 0.016
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0807/ChatGPT Image 2026年8月6日 下午04_58_31.png",
+        "src_w": 1086,
+        "src_h": 1448,
+        "src_mb": 2.24,
+        "web_mb": 0.107,
+        "thumb_mb": 0.018
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/faye-tan/images/seedream_v1/face_a_4bcb6758.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 4.807,
+        "web_mb": 0.061,
+        "thumb_mb": 0.013
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/rafael-costa/images/ref/rafael_01_fullbody_front.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 3.08,
+        "web_mb": 0.051,
+        "thumb_mb": 0.008
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/xiaoxiao-tan/圖文/xiaoxiao-chess-tv-pov.png",
+        "src_w": 1728,
+        "src_h": 2304,
+        "src_mb": 4.435,
+        "web_mb": 0.084,
+        "thumb_mb": 0.019
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/sofia-vargas/images/realism_v1/sofia_waistup_sheer_window.png",
+        "src_w": 1152,
+        "src_h": 2048,
+        "src_mb": 3.451,
+        "web_mb": 0.076,
+        "thumb_mb": 0.019
+      }
+    ],
+    "videos": [
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_v1/dance_v1_seedance_15s_pink_bodycon_white_studio.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 15.1,
+        "src_mb": 6.761,
+        "out_mb": 2.086,
+        "poster_mb": 0.031,
+        "mb_per_sec": 0.1384
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 8,
+        "src_mb": 1.363,
+        "out_mb": 0.612,
+        "poster_mb": 0.058,
+        "mb_per_sec": 0.0761
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 9.9,
+        "src_mb": 9.408,
+        "out_mb": 1.573,
+        "poster_mb": 0.038,
+        "mb_per_sec": 0.1593
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/yuna-kim/videos/dance_clone_r7/yuna_dance_clone_r7_ig_reel.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 13.7,
+        "src_mb": 10.719,
+        "out_mb": 1.722,
+        "poster_mb": 0.041,
+        "mb_per_sec": 0.1257
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/mia-huang/videos/dance_clone_r1/mia_dance_clone_r1_ig_reel.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 9.7,
+        "src_mb": 22.113,
+        "out_mb": 1.558,
+        "poster_mb": 0.064,
+        "mb_per_sec": 0.1601
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 15,
+        "src_mb": 17.049,
+        "out_mb": 3.158,
+        "poster_mb": 0.044,
+        "mb_per_sec": 0.21
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r15/iris_dance_clone_r15_ig_reel.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 14.8,
+        "src_mb": 54.899,
+        "out_mb": 5.285,
+        "poster_mb": 0.092,
+        "mb_per_sec": 0.3578
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r17/luna_dance_clone_r17_ig_reel.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 10.9,
+        "src_mb": 31.033,
+        "out_mb": 2.054,
+        "poster_mb": 0.062,
+        "mb_per_sec": 0.1879
+      },
+      {
+        "repo": "VKS",
+        "file": "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r4/coco_dance_clone_r4_ig_reel.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 14.9,
+        "src_mb": 58.953,
+        "out_mb": 3.473,
+        "poster_mb": 0.088,
+        "mb_per_sec": 0.2329
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/loima-cheung/social media/0812/qinfeng-scroll-segment1.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 11.1,
+        "src_mb": 2.595,
+        "out_mb": 0.715,
+        "poster_mb": 0.073,
+        "mb_per_sec": 0.0647
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/leon-lim/social media/0814/leon-troy-voice-test-6s.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 6.1,
+        "src_mb": 1.416,
+        "out_mb": 0.524,
+        "poster_mb": 0.107,
+        "mb_per_sec": 0.0864
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/social media/0804/faye-newcity-segment2.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 10.1,
+        "src_mb": 3.646,
+        "out_mb": 1.162,
+        "poster_mb": 0.059,
+        "mb_per_sec": 0.1156
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment2.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 10.1,
+        "src_mb": 3.516,
+        "out_mb": 0.954,
+        "poster_mb": 0.11,
+        "mb_per_sec": 0.0949
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/faye-tan/social media/0806/faye-fan-segment3.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 13.1,
+        "src_mb": 5.656,
+        "out_mb": 1.77,
+        "poster_mb": 0.066,
+        "mb_per_sec": 0.1354
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/social media/0812/seg1-approach-claw.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 12.1,
+        "src_mb": 5.775,
+        "out_mb": 1.35,
+        "poster_mb": 0.083,
+        "mb_per_sec": 0.1121
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731_字幕.mp4",
+        "src_w": 1080,
+        "src_h": 1920,
+        "seconds": 31.9,
+        "src_mb": 32.125,
+        "out_mb": 5.788,
+        "poster_mb": 0.078,
+        "mb_per_sec": 0.1815
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/xiaoxiao-tan/social media/0812/Tan XiaoXiao0812.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 47.2,
+        "src_mb": 22.334,
+        "out_mb": 6.47,
+        "poster_mb": 0.081,
+        "mb_per_sec": 0.137
+      },
+      {
+        "repo": "SGK",
+        "file": "showgame-kol/kols/loima-cheung/social media/0817/loima-cheung0817_字幕.mp4",
+        "src_w": 1080,
+        "src_h": 1920,
+        "seconds": 68,
+        "src_mb": 65.59,
+        "out_mb": 4.955,
+        "poster_mb": 0.06,
+        "mb_per_sec": 0.0729
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-segment1-v2.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 10.1,
+        "src_mb": 2.51,
+        "out_mb": 0.699,
+        "poster_mb": 0.064,
+        "mb_per_sec": 0.0695
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/videos/reels_v1/clip_future_lab_screenglow.mp4",
+        "src_w": 828,
+        "src_h": 1108,
+        "seconds": 5,
+        "src_mb": 2.115,
+        "out_mb": 0.335,
+        "poster_mb": 0.048,
+        "mb_per_sec": 0.0665
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/xiaoxiao-park-segment4.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 14.1,
+        "src_mb": 4.065,
+        "out_mb": 1.296,
+        "poster_mb": 0.102,
+        "mb_per_sec": 0.0921
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0807/qinfeng-gems-segment4-v2.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 12.1,
+        "src_mb": 4.387,
+        "out_mb": 1.113,
+        "poster_mb": 0.09,
+        "mb_per_sec": 0.0923
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0805/qinfeng-lastround-combined.mp4",
+        "src_w": 720,
+        "src_h": 1280,
+        "seconds": 37.2,
+        "src_mb": 9.046,
+        "out_mb": 2.495,
+        "poster_mb": 0.064,
+        "mb_per_sec": 0.067
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/sofia-vargas/videos/sofia_realism_v2_beauty_filter.mp4",
+        "src_w": 1072,
+        "src_h": 1936,
+        "seconds": 9.4,
+        "src_mb": 9.299,
+        "out_mb": 2.293,
+        "poster_mb": 0.055,
+        "mb_per_sec": 0.2427
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/xiaoxiao-tan/social media/0729/b5e1777d9744f611a9d609901a2165a5-01ee193c-9f74-4aa4-aec1-8ce0b28f2cf1.mp4",
+        "src_w": 1080,
+        "src_h": 1920,
+        "seconds": 10,
+        "src_mb": 21.069,
+        "out_mb": 1.602,
+        "poster_mb": 0.064,
+        "mb_per_sec": 0.1595
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/loima-cheung/social media/0807/loima-cheung0807_字幕.mp4",
+        "src_w": 1080,
+        "src_h": 1920,
+        "seconds": 44,
+        "src_mb": 42.564,
+        "out_mb": 3.187,
+        "poster_mb": 0.08,
+        "mb_per_sec": 0.0724
+      },
+      {
+        "repo": "BUP",
+        "file": "Buildup_KOL/kols/xiaoxiao-tan/social media/0803/Tan XiaoXiao0803_字幕.mp4",
+        "src_w": 1080,
+        "src_h": 1920,
+        "seconds": 50.2,
+        "src_mb": 49.405,
+        "out_mb": 4.092,
+        "poster_mb": 0.104,
+        "mb_per_sec": 0.0816
+      }
+    ]
+  }
+}

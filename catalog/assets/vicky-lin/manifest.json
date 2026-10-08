@@ -1,0 +1,52 @@
+{
+ "hero": "hero_1lwnons.jpg",
+ "gallery": [
+  {
+   "web": "g_0ydzwgb.jpg",
+   "thumb": "g_0ydzwgb_t.jpg"
+  },
+  {
+   "web": "g_0oegdml.jpg",
+   "thumb": "g_0oegdml_t.jpg"
+  },
+  {
+   "web": "g_13hlsgy.jpg",
+   "thumb": "g_13hlsgy_t.jpg"
+  },
+  {
+   "web": "g_1nwuxvo.jpg",
+   "thumb": "g_1nwuxvo_t.jpg"
+  },
+  {
+   "web": "g_1lwnons.jpg",
+   "thumb": "g_1lwnons_t.jpg"
+  },
+  {
+   "web": "g_1jkrec8.jpg",
+   "thumb": "g_1jkrec8_t.jpg"
+  },
+  {
+   "web": "g_10c7qrj.jpg",
+   "thumb": "g_10c7qrj_t.jpg"
+  },
+  {
+   "web": "g_1ax2lhp.jpg",
+   "thumb": "g_1ax2lhp_t.jpg"
+  },
+  {
+   "web": "g_05copk4.jpg",
+   "thumb": "g_05copk4_t.jpg"
+  },
+  {
+   "web": "g_02smgs2.jpg",
+   "thumb": "g_02smgs2_t.jpg"
+  }
+ ],
+ "videos": [
+  {
+   "poster": "v_19tpf2c_poster.jpg",
+   "mp4": "v_19tpf2c.mp4",
+   "webm": "v_19tpf2c.webm"
+  }
+ ]
+}

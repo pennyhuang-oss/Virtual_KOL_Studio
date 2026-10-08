@@ -1,0 +1,619 @@
+{
+ "note": "使用者 2026-09-04 在 /pick.html 挑選的結果（圖片 ＋ 影片）。型錄以這一份為準。⚠ Iris 的影片經使用者當面更正兩次：移掉三支 cafe_test（那是挑選頁的預設勾選，不是她挑的），並把她自己補的三支跳舞影片排到最前面。⚠ 另外收了使用者用 Google Drive 補的素材：Iris 15 張圖 ＋ 3 支跳舞影片，Camille／Luna／Yuna／Aaliya 各 1 支跳舞影片。那些原本不在任何 repo 裡，所以挑選頁上不會出現。",
+ "picked_at": "2026-09-08 07:23",
+ "personas": {
+  "iris-chen": {
+   "hero": "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/01_taipei_street_01.webp",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/13_car_selfie_01.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/14_car_selfie_02.webp",
+    "Buildup_KOL/kols/iris-chen/images/ref/13_car_selfie_01.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/04_taipei_street_04.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/01_taipei_street_01.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/03_taipei_street_03.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/07_cafe_window_03.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/training_v1/08_cafe_window_04.webp",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_bubblebath_candle_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bedroom_black_lace_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_lyingbed_navy_lace_bodysuit_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_duvet_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_mirror_burgundy_teddy_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_black_lace_babydoll_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_dressingtable_ivory_garter_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/03_bathroom_towel_wet_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_mirror_micro_lace_stockings_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/01_bed_deepv_silkslip_selfie.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_bathroom_wethair_mirror.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/05_window_open_cardigan_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/03_floor_cushion_hug_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/02_prone_bareback_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/lingerie_mirror_r1/start_frame.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/dance_clone_r18/start_frame.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/video_startframes_v1/frame01_cafe_seated.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/dance_clone_r6/start_frame.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/drive_v1/04_sidelying_bareback_candid.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/onsen_bucket_r1/start_frame.png",
+    "Virtual_KOL_Studio/kols/iris-chen/images/daily_reel_music_r1/start_frame.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/iris-chen/videos/daily_v1/iris_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r15/iris_dance_clone_r15_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r18/iris_dance_clone_r18_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/dance_clone_r6/iris_dance_clone_r6_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_01.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_02.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/drive_v1/iris_03.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/lingerie_mirror_r1/iris_lingerie_reel_r1.mp4",
+    "Virtual_KOL_Studio/kols/iris-chen/videos/onsen_bucket_r1/iris_onsen_reel_r1.mp4"
+   ]
+  },
+  "camille-dupont": {
+   "hero": "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/window_lowangle_01.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/seine_wide_01.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/rooftop_wide_01.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/rooftop_shoulder_01.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/window_01.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/seine_02.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/window_lowangle_01.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/rooftop_01.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/rooftop_02.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/soul_test_v1/window_02.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/face_reference/ref_04.webp",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/self_intro_v1/shot04_window_gaze.png",
+    "Virtual_KOL_Studio/kols/camille-dupont/images/self_intro_v1/shot02_taste_sauce.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/camille-dupont/videos/daily_v1/camille_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/camille-dupont/videos/drive_v1/camille_dance.mp4"
+   ]
+  },
+  "yuna-kim": {
+   "hero": "Virtual_KOL_Studio/kols/yuna-kim/images/face_reference/ref_01.webp",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/yuna-kim/images/soul_test_v1/selfie_02.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/pilot_b1/YG06_a.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/soul_test_v1/cafe_01.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/soul_test_v1/cafe_02.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/batch1/YG-04.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/soul_test_v1/street_02.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/batch1/YG-02_alt.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/face_reference/ref_01.webp",
+    "Buildup_KOL/kols/yuna-kim/images/ref/ref_03.webp",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/batch1/YG05fix_b.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/calibration/arm_D.png",
+    "Virtual_KOL_Studio/kols/yuna-kim/images/calibration/indoor_mirror.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/yuna-kim/videos/daily_v1/yuna_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/yuna-kim/videos/drive_v1/yuna_dance.mp4"
+   ]
+  },
+  "rainie-hsu": {
+   "hero": "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_03.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v1/10_couch_selfie_loungewear.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v1/12_hotel_window_selfie.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v1/02_mirror_selfie_outfit_check.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v1/06_perfume_selfie_meitu.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v2/06_perfume_selfie_meitu.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v2/10_couch_selfie_loungewear.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/training_v2/01_mirror_tryon_candid.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/dance_clone_r10/start_frame.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/dance_clone_r14/start_frame.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/dance_clone_r10/start_frame_v2.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/dance_clone_r5/start_frame_v2.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_01.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_02.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_03.png",
+    "Virtual_KOL_Studio/kols/rainie-hsu/images/face_reference/candidate_04.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r10/rainie_dance_clone_r10_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r14/rainie_dance_clone_r14_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/rainie-hsu/videos/dance_clone_r5/rainie_dance_clone_r5_ig_reel.mp4"
+   ]
+  },
+  "luna-tanaka": {
+   "hero": "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/pilot_b1/LG05_b.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/05_park_golden_01.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/batch1/LG-04.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/batch1/LG-10A.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/06_park_golden_02.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/batch1/LG-08.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/04_cafe_window_02.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/batch1/t1_LG08_a.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/batch1/t1_LG08_b.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/batch1/LG-03.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/02_tokyo_street_02.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/ab_lg10a/ab_A1.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/dance_clone_r1/start_frame_alt_magazine_artifact.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/dance_clone_r1/start_frame.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/preflight/LG-04.png",
+    "Virtual_KOL_Studio/kols/luna-tanaka/images/calibration_dessert_street.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r1/luna_dance_clone_r1_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r16/luna_dance_clone_r16_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/dance_clone_r17/luna_dance_clone_r17_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/luna-tanaka/videos/drive_v1/luna_dance.mp4"
+   ]
+  },
+  "coco-wu": {
+   "hero": "Virtual_KOL_Studio/kols/coco-wu/images/face_reference/candidate_02.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/06_bathroom_grwm_meitu_selfie.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/12_badminton_courtside_selfie.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/10_home_late_night_selfie.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/04_outfit_mirror_selfie.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/08_home_hangout_laugh.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/training_v1/07_bathroom_grwm_candid.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/dance_clone_r12/start_frame.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/face_reference/candidate_01.png",
+    "Virtual_KOL_Studio/kols/coco-wu/images/face_reference/candidate_02.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r12/coco_dance_clone_r12_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r13/coco_dance_clone_r13_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_r4/coco_dance_clone_r4_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/coco-wu/videos/dance_clone_v1/coco_dance_clone_v1_ig_reel.mp4"
+   ]
+  },
+  "sophia-tseng": {
+   "hero": "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/02_morning_selfie_bed.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/12_hotel_mirror_selfie_ccd.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/02_morning_selfie_bed.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/04_outfit_mirror_selfie_tryon.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/07_bathroom_mirror_selfie_meitu.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/06_bathroom_candid_skincare.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/training_v1/13_fitness_candid_reformer.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/dance_clone_r11/start_frame.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/dance_clone_r8/start_frame.png",
+    "Virtual_KOL_Studio/kols/sophia-tseng/images/face_reference/candidate_01.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r11/sophia_dance_clone_r11_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r8/sophia_dance_clone_r8_ig_reel.mp4",
+    "Virtual_KOL_Studio/kols/sophia-tseng/videos/dance_clone_r9/sophia_dance_clone_r9_ig_reel.mp4"
+   ]
+  },
+  "mia-huang": {
+   "hero": "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_04.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/11_hotel_expo_selfie_meitu.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/07_stream_break_selfie.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/04_outfit_decision_selfie.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/03_cosplay_mirror_selfie.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/08_afternoon_wakeup_selfie_ccd.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/12_daytime_outing_candid_cafe.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/09_afternoon_wakeup_candid_couch.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/training_v1/01_gaming_chair_candid.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/dance_clone_r1/start_frame.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_01.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_03.png",
+    "Virtual_KOL_Studio/kols/mia-huang/images/face_reference/candidate_04.png"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/mia-huang/videos/dance_clone_r1/mia_dance_clone_r1_ig_reel.mp4"
+   ]
+  },
+  "vicky-lin": {
+   "hero": "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_06_3q_fullbody.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_09_side_fullbody.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_04_3q_headshot.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_12_front_fullbody_turnback.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_07_side_headshot.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_10_front_halfbody_rooftop.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_03_front_fullbody.png",
+    "Virtual_KOL_Studio/kols/vicky-lin/images/face_reference/v4_anchored_01_front_headshot.png",
+    "Buildup_KOL/kols/vicky-lin/images/ref/anchor__v3_06_3q_fullbody.webp"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/vicky-lin/videos/dance_clone_r3/vicky_dance_clone_r3_ig_reel.mp4"
+   ]
+  },
+  "nico-tsai": {
+   "hero": "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/02_a02.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/16_c09.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/03_a03.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/08_c01.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/04_a04.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/01_a01.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/13_c06.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/02_a02.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/11_c04.png",
+    "Virtual_KOL_Studio/kols/nico-tsai/images/training_v1/12_c05.png"
+   ],
+   "videos": []
+  },
+  "aaliya-okonkwo": {
+   "hero": "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/restaurant_02.png",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/selfie_02.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/selfie_01.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/poolside_01_v1.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v1.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v2.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/poolside_01_v2.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/restaurant_02.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/soul_test_v1/restaurant_01.png",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_03.webp",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_01.webp",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_04.webp",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/images/face_reference/ref_02.webp"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/daily_v1/aaliya_daily_v1.mp4",
+    "Virtual_KOL_Studio/kols/aaliya-okonkwo/videos/drive_v1/aaliya_dance.mp4"
+   ]
+  },
+  "ananya-kapoor": {
+   "hero": "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_04.webp",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/ananya-kapoor/images/soul_test_v1/03_cafe_window_01.png",
+    "Virtual_KOL_Studio/kols/ananya-kapoor/images/soul_test_v1/02_mumbai_street_02.png",
+    "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_04.webp",
+    "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_03.webp",
+    "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_02.webp",
+    "Virtual_KOL_Studio/kols/ananya-kapoor/images/face_reference/ref_01.webp"
+   ],
+   "videos": [
+    "Virtual_KOL_Studio/kols/ananya-kapoor/videos/daily_v1/ananya_daily_v1.mp4"
+   ]
+  },
+  "faye-tan": {
+   "hero": "showgame-kol/kols/faye-tan/images/seedream_v1/face_b_303f8566.png",
+   "gallery": [
+    "showgame-kol/kols/faye-tan/images/seedream_v1/face_b_303f8566.png",
+    "Buildup_KOL/kols/faye-tan/images/seedream_v1/face_a_4bcb6758.png",
+    "Buildup_KOL/kols/faye-tan/images/seedream_v1/scene_A_hotel_lobby.png",
+    "showgame-kol/kols/faye-tan/圖文/2026-08-13/faye-ithaca-selfie-street.png",
+    "showgame-kol/kols/faye-tan/圖文/2026-08-13/faye-ithaca-selfie-sea.png",
+    "showgame-kol/kols/faye-tan/圖文/2026-08-11/faye-seine-swim-portrait-bikini.png",
+    "showgame-kol/kols/faye-tan/圖文/2026-08-07/faye-market-portrait-c.png",
+    "showgame-kol/kols/faye-tan/social media/0828/image-2.png",
+    "showgame-kol/kols/faye-tan/social media/0729/ChatGPT Image 2026年7月28日 下午06_22_52.png",
+    "showgame-kol/kols/faye-tan/圖文/2026-08-11/faye-seine-visor.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/faye-tan/social media/0729/video-9.mp4",
+    "showgame-kol/kols/faye-tan/social media/0731/Faye Tan0731_字幕.mp4",
+    "showgame-kol/kols/faye-tan/social media/0806/Faye Tan0806_字幕.mp4",
+    "showgame-kol/kols/faye-tan/social media/0810/faye-trash0810_字幕.mp4",
+    "Buildup_KOL/kols/faye-tan/social media/0804/Faye Tan 0804_字幕.mp4"
+   ]
+  },
+  "rachel-ong": {
+   "hero": "showgame-kol/kols/rachel-ong/social media/0821/shot3-first-she-talking.png",
+   "gallery": [
+    "showgame-kol/kols/rachel-ong/images/ref/rachel_01_fullbody_front.png",
+    "showgame-kol/kols/rachel-ong/images/ref/rachel_03_face_closeup.png",
+    "showgame-kol/kols/rachel-ong/images/ref/rachel_02_kneeup_side.png",
+    "showgame-kol/kols/rachel-ong/social media/0824/image-3-checking-permit.png",
+    "showgame-kol/kols/rachel-ong/social media/0821/shot3-first-she-talking.png",
+    "showgame-kol/kols/rachel-ong/social media/0821/shot6-first-she-closing.png",
+    "showgame-kol/kols/rachel-ong/social media/0824/image-3.jpg",
+    "showgame-kol/kols/rachel-ong/images/生活照/rachel-04-mountain-hut.png",
+    "showgame-kol/kols/rachel-ong/images/生活照/rachel-02-camp-stove.png",
+    "showgame-kol/kols/rachel-ong/images/生活照/rachel-03-rope-closeup.png",
+    "showgame-kol/kols/rachel-ong/images/生活照/rachel-01-cafe.png",
+    "showgame-kol/kols/rachel-ong/social media/0825/顆C1-首幀.png",
+    "showgame-kol/kols/rachel-ong/images/生活照/rachel-07-hiking-ridge-wide.png"
+   ],
+   "videos": []
+  },
+  "kai-luo": {
+   "hero": "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-5-海邊礁岩.png",
+   "gallery": [
+    "showgame-kol/kols/kai-luo/images/ref/cathy_01_fullbody_front.png",
+    "showgame-kol/kols/kai-luo/images/ref/cathy_02_kneeup_side.png",
+    "showgame-kol/kols/kai-luo/images/ref/cathy_03_face_closeup.png",
+    "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-4-針葉林.png",
+    "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-3-洞口.png",
+    "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-7-背影回頭石階.png",
+    "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-5-海邊礁岩.png",
+    "showgame-kol/kols/kai-luo/images/生活照/cathy-avatar-6-純側臉湖岸.png",
+    "showgame-kol/kols/kai-luo/圖文/2026-08-21/懸賞令-採用.png",
+    "showgame-kol/kols/kai-luo/social media/0820/鏡頭4-首幀-v5.png",
+    "showgame-kol/kols/kai-luo/social media/0820/鏡頭5-首幀.png",
+    "showgame-kol/kols/kai-luo/social media/0820/鏡頭1-2-首幀.png"
+   ],
+   "videos": []
+  },
+  "loima-cheung": {
+   "hero": "showgame-kol/kols/loima-cheung/images/ref/face_b_8e4eaa74.png",
+   "gallery": [
+    "Buildup_KOL/kols/loima-cheung/images/seedream_v1/scene_A_future_lab_desk.png",
+    "showgame-kol/kols/loima-cheung/images/seedream_v1/face_a_6cae163f.png",
+    "showgame-kol/kols/loima-cheung/images/ref/face_b_8e4eaa74.png",
+    "showgame-kol/kols/loima-cheung/圖文/2026-08-07/qinfeng-cardpack-portrait-b.png",
+    "showgame-kol/kols/loima-cheung/social media/0812/qinfeng-scroll-establish.png",
+    "showgame-kol/kols/loima-cheung/social media/0817/qinfeng-niulai-establish.png",
+    "Buildup_KOL/kols/loima-cheung/social media/0807/ChatGPT Image 2026年8月6日 下午04_58_31.png",
+    "showgame-kol/kols/loima-cheung/social media/0804/qinfeng-sofa-establish.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/loima-cheung/social media/0729/video-12.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0803/Zhang Qinfeng0803_字幕.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0805/video-1.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0807/loima-cheung0807_字幕.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0812/video-1.mp4",
+    "showgame-kol/kols/loima-cheung/social media/0817/loima-cheung0817_字幕.mp4"
+   ]
+  },
+  "xiaoxiao-tan": {
+   "hero": "showgame-kol/kols/xiaoxiao-tan/images/ref/xiaoxiao_03_face_closeup.png",
+   "gallery": [
+    "showgame-kol/kols/xiaoxiao-tan/images/ref/xiaoxiao_01_fullbody_front.png",
+    "showgame-kol/kols/xiaoxiao-tan/images/ref/xiaoxiao_03_face_closeup.png",
+    "showgame-kol/kols/xiaoxiao-tan/images/ref/xiaoxiao_02_kneeup_side.png",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0812/ref4-xiaoxiao-standing.png",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0812/ref2-glass-closeup.png",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0812/ref3-coinslot-closeup.png",
+    "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-04/xiaoxiao-chess-candid.png",
+    "showgame-kol/kols/xiaoxiao-tan/圖文/2026-08-06/xiaoxiao-pachinko-display.png",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0825/鏡頭1-首幀.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/xiaoxiao-tan/social media/0729/b5e1777d9744f611a9d609901a2165a5-01ee193c-9f74-4aa4-aec1-8ce0b28f2cf1.mp4",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0731/Tan XiaoXiao0731_字幕.mp4",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0803/Tan XiaoXiao0803_字幕.mp4",
+    "showgame-kol/kols/xiaoxiao-tan/social media/0812/video-1.mp4"
+   ]
+  },
+  "leon-lim": {
+   "hero": "showgame-kol/kols/leon-lim/images/ref/leon_02_kneeup_side.png",
+   "gallery": [
+    "showgame-kol/kols/leon-lim/images/ref/leon_01_fullbody_front.png",
+    "showgame-kol/kols/leon-lim/images/ref/leon_03_face_closeup.png",
+    "showgame-kol/kols/leon-lim/images/ref/leon_02_kneeup_side.png",
+    "showgame-kol/kols/leon-lim/social media/0818/seg2-角度2-全身遠景蹲姿俯視.png",
+    "showgame-kol/kols/leon-lim/images/生活照/leon-古蹟-2-石階.png",
+    "showgame-kol/kols/leon-lim/images/生活照/leon-古蹟-1-石柱廊道.png",
+    "showgame-kol/kols/leon-lim/social media/0818/seg2-戶外3-劇場石階坐姿.png",
+    "showgame-kol/kols/leon-lim/social media/0818/seg2-戶外1-柱廊中景.png",
+    "showgame-kol/kols/leon-lim/social media/0818/seg2-戶外2-廣場遠景大天空.png",
+    "showgame-kol/kols/leon-lim/social media/0818/seg2-角度1-中景邊走邊講.png",
+    "showgame-kol/kols/leon-lim/social media/0818/seg2-角度3-近景停下微仰.png",
+    "showgame-kol/kols/leon-lim/social media/0815/image-1.jpg",
+    "showgame-kol/kols/leon-lim/圖文/2026-08-14/img/zeus-2-scale-leon-俯角-舊版.png",
+    "showgame-kol/kols/leon-lim/images/生活照/leon-avatar-1-舊書店.png",
+    "showgame-kol/kols/leon-lim/images/生活照/leon-avatar-2-檯燈下.png",
+    "showgame-kol/kols/leon-lim/images/生活照/leon-avatar-3-黃昏街上.png",
+    "showgame-kol/kols/leon-lim/social media/0828/duan2-顆4-林曜廢墟-側角-首幀.png",
+    "showgame-kol/kols/leon-lim/social media/0818/顆4-尾幀-林曜站在凹陷旁.png",
+    "showgame-kol/kols/leon-lim/social media/0814/leon-troy-2a-ruins-keyframe.png",
+    "showgame-kol/kols/leon-lim/social media/0814/leon-troy-2b-ruins-wide-keyframe.png"
+   ],
+   "videos": [
+    "showgame-kol/kols/leon-lim/social media/0814/leon-troy0814_字幕.mp4"
+   ]
+  },
+  "nova-lin": {
+   "hero": "showgame-kol/kols/nova-lin/images/nova-avatar-2-窗邊.png",
+   "gallery": [
+    "showgame-kol/kols/nova-lin/images/nova-avatar-8-戶外全身.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-7-戶外半身.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-3-街拍.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-5-沙發滑手機.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-4-咖啡廳回眸.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-2-窗邊.png",
+    "showgame-kol/kols/nova-lin/images/nova-avatar-1-桌前.png"
+   ],
+   "videos": []
+  },
+  "kanon-komori": {
+   "hero": "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_02.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_06.jpg",
+    "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/kanon-komori/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "wendy-yeo": {
+   "hero": "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_02.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/wendy-yeo/images/training_v1/train_01.jpg"
+   ],
+   "videos": []
+  },
+  "angeline-kwee": {
+   "hero": "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/angeline-kwee/images/training_v1/train_03.jpg"
+   ],
+   "videos": []
+  },
+  "yerin-han": {
+   "hero": "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_02.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/yerin-han/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "wanyin-jiang": {
+   "hero": "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/wanyin-jiang/images/training_v1/train_03.jpg"
+   ],
+   "videos": []
+  },
+  "cheryl-soh": {
+   "hero": "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/cheryl-soh/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "peggy-lee": {
+   "hero": "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/peggy-lee/images/training_v1/train_04.jpg"
+   ],
+   "videos": []
+  },
+  "rin-ayase": {
+   "hero": "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_03.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/rin-ayase/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "ruoruo-tang": {
+   "hero": "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/ruoruo-tang/images/training_v1/train_01.jpg"
+   ],
+   "videos": []
+  },
+  "tammy-chou": {
+   "hero": "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/tammy-chou/images/training_v1/train_04.jpg"
+   ],
+   "videos": []
+  },
+  "zhiyi-shen": {
+   "hero": "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_02.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/zhiyi-shen/images/training_v1/train_05.jpg"
+   ],
+   "videos": []
+  },
+  "angel-chiu": {
+   "hero": "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_03.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/angel-chiu/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "emma-kao": {
+   "hero": "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_04.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/emma-kao/images/training_v1/train_01.jpg"
+   ],
+   "videos": []
+  },
+  "jia-seo": {
+   "hero": "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/jia-seo/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "miu-shiraishi": {
+   "hero": "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_02.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/miu-shiraishi/images/training_v1/train_04.jpg"
+   ],
+   "videos": []
+  },
+  "nanami-fujiwara": {
+   "hero": "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_04.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_03.jpg",
+    "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/nanami-fujiwara/images/training_v1/train_01.jpg"
+   ],
+   "videos": []
+  },
+  "somi-oh": {
+   "hero": "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/somi-oh/images/training_v1/train_01.jpg"
+   ],
+   "videos": []
+  },
+  "sydney-leong": {
+   "hero": "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_04.jpg",
+    "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/sydney-leong/images/training_v1/train_02.jpg"
+   ],
+   "videos": []
+  },
+  "zoey-yeh": {
+   "hero": "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_01.jpg",
+   "gallery": [
+    "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_05.jpg",
+    "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_01.jpg",
+    "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_02.jpg",
+    "Virtual_KOL_Studio/kols/zoey-yeh/images/training_v1/train_03.jpg"
+   ],
+   "videos": []
+  }
+ }
+}
