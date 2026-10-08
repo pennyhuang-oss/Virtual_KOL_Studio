@@ -181,7 +181,7 @@
       "status": "in_progress",
       "created_at": "2026-08-27",
       "path": "kols/nico-tsai/",
-      "note": "Batch 3 pilot。選角與錨定驗證已完成，錨點 68ff990e；20 張訓練集的 prompt 待覆核後生成。規格真理來源：pilot/nico_pilot.json"
+      "note": "Batch 3 pilot。選角、錨定（68ff990e）、20 張訓練集皆完成，2026-08-28 Soul V2 訓練完成（soul_id 46d1e11e，ready）；Phase D 壓力測試待裁決。規格真理來源：pilot/nico_pilot.json"
     },
     {
       "id": "tammy-chou",

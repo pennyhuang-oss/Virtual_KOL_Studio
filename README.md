@@ -78,37 +78,48 @@
 
 ### Batch 3（2026-08-27 建檔，20 位）
 
-> **Nico Tsai 是 pilot，正在走完整流程**（選角 → 錨定 → 訓練集 → Soul → 壓力測試）。
-> 她的規格真理來源是 [`pilot/nico_pilot.json`](pilot/nico_pilot.json)，不是 `MODELING_SHOOT_PLAN.md`。
-> **其餘 19 位凍結中**（`blocked_pending_v2_pilot`，v1 validator 會 HARD FAIL exit 2），
-> 等 Nico 走完才解凍。
+> **20 位全數完成 Soul V2 訓練（2026-09-07）。**
+> Nico Tsai 是 pilot，2026-08-28 以 20 張訓練集先訓練完成；其餘 19 位依 2026-09-03 使用者裁決
+> 改為「5 張訓練集、19 位備齊後一次送訓」（見 [`SOUL_TRAINING_PLAN.md`](SOUL_TRAINING_PLAN.md)），
+> 2026-09-07 全數 `ready`，零失敗、零重複扣款，共約 594 credits。
+> 最終報告：[`review/soul_training/FINAL_REPORT.md`](review/soul_training/FINAL_REPORT.md)
+> （機器可讀：[`SOUL_IDS.json`](review/soul_training/SOUL_IDS.json)）。
 
+> **19 位為 `production_ready`**：每位跑完 6 張驗證圖，臉部門檻（同一人／無漂移／不重現訓練集）19/19 通過。
+> 附帶兩個強制條件，出圖前必讀：
+> 1. **身材靠 prompt 補**——Soul V2 不繼承身材與身高，全 19 位一致；`profile.json` 的三圍依決策 (B) 維持不動。
+> 2. **撞臉風險是「經裁決接受」不是「通過」**——必須遵守 [`PERSONA_CANON.md`](PERSONA_CANON.md) 原則七的
+>    C-1（每次出圖寫明她自己的髮色髮型）與 C-2（有碰撞關係的兩位不得同框）。
+>
+> **Nico Tsai 為 `ready`**：Phase D 壓力測試待裁決，且她沒有納入 19 位的碰撞篩檢（見 `plan/daily_v1/PLAN.md` 第二節）。
 
-> 全部依 [`PERSONA_CANON.md`](PERSONA_CANON.md) 五條原則建立。`generation_notes.md` 皆為 PENDING，尚未執行任何生成。
-> 規劃全文見 [`NEW_20_PERSONAS_PLAN.md`](NEW_20_PERSONAS_PLAN.md)。
+> 帳號尚未上線，各 `profile.json` 的 `meta.status` 仍為 `draft`；下表「狀態」欄是 Soul 訓練分級。
+> 訓練後的日常素材規劃在 `plan/daily_v1/`～`plan/daily_v5/`：v2 試產 138 張、使用者留用 64 張；
+> 最新的 v5 已建好 80 格英文 prompt，16 格探針批次（`plan/daily_v5/probe16.json`）待送生成。
+> 人設規劃全文見 [`NEW_20_PERSONAS_PLAN.md`](NEW_20_PERSONAS_PLAN.md)。
 
 | ID | 名字 | 城市 | 檯面設定 | Soul ID | 狀態 |
 |----|------|------|----------|---------|------|
-| [angel-chiu](kols/angel-chiu/) | **Angel Chiu** 邱安晴 | 台北 | 護理師 | 待訓練 | draft |
-| [nico-tsai](kols/nico-tsai/) | **Nico Tsai** 蔡妮可 | 台北大安 | 美甲師 / 個人工作室 | **選角＋錨定完成，20 張訓練集待覆核放行** | in_progress |
-| [tammy-chou](kols/tammy-chou/) | **Tammy Chou** 周語彤 | 台北五分埔 | 網拍老闆娘 / 服飾電商 | 待訓練 | draft |
-| [emma-kao](kols/emma-kao/) | **Emma Kao** 高映真 | 台南 | 新聞主播 | 待訓練 | draft |
-| [zoey-yeh](kols/zoey-yeh/) | **Zoey Yeh** 葉芷妍 | 宜蘭 | 花藝師 | 待訓練 | draft |
-| [miu-shiraishi](kols/miu-shiraishi/) | **Miu Shiraishi** 白石美羽 | 東京中目黑 | 咖啡店員 | 待訓練 | draft |
-| [rin-ayase](kols/rin-ayase/) | **Rin Ayase** 綾瀨凜 | 東京銀座 | 高級會員制酒店小姐 | 待訓練 | draft |
-| [nanami-fujiwara](kols/nanami-fujiwara/) | **Nanami Fujiwara** 藤原七海 | 箱根 | 溫泉旅館女將見習 | 待訓練 | draft |
-| [kanon-komori](kols/kanon-komori/) | **Kanon Komori** 小森花音 | 東京秋葉原 | 女僕咖啡廳店員 | 待訓練 | draft |
-| [jia-seo](kols/jia-seo/) | **Jia Seo** 서지아 | 首爾江南 | K-pop 舞蹈老師 | 待訓練 | draft |
-| [yerin-han](kols/yerin-han/) | **Yerin Han** 한예린 | 首爾 | 高爾夫教練 / 練習場 | 待訓練 | draft |
-| [somi-oh](kols/somi-oh/) | **Somi Oh** 오소미 | 釜山 | 美食帳號經營者 / 吃播 | 待訓練 | draft |
-| [zhiyi-shen](kols/zhiyi-shen/) | **Zhiyi Shen** 沈知意 | 上海陸家嘴 | 金融業 OL | 待訓練 | draft |
-| [wanyin-jiang](kols/wanyin-jiang/) | **Wanyin Jiang** 江晚吟 | 蘇州 | 旗袍店店主 / 古典舞背景 | 待訓練 | draft |
-| [ruoruo-tang](kols/ruoruo-tang/) | **Ruoruo Tang** 唐苡若 | 成都 | 皮拉提斯教練 | 待訓練 | draft |
-| [cheryl-soh](kols/cheryl-soh/) | **Cheryl Soh** 蘇思穎 | 新加坡（華裔） | 空服員 | 待訓練 | draft |
-| [wendy-yeo](kols/wendy-yeo/) | **Wendy Yeo** 楊薇伊 | 新加坡丹戎巴葛 | 調酒師 | 待訓練 | draft |
-| [peggy-lee](kols/peggy-lee/) | **Peggy Lee** 李珮甄 | 吉隆坡（華裔） | 汽車改裝店行銷企劃 | 待訓練 | draft |
-| [sydney-leong](kols/sydney-leong/) | **Sydney Leong** 梁欣妮 | 檳城喬治市（華裔） | 甜點師 / 烘焙工作室 | 待訓練 | draft |
-| [angeline-kwee](kols/angeline-kwee/) | **Angeline Kwee** 郭慧恩 | 雅加達（華裔） | 精品選物店主理人 | 待訓練 | draft |
+| [angel-chiu](kols/angel-chiu/) | **Angel Chiu** 邱安晴 | 台北 | 護理師 | `6e638286-be57-45fa-961e-51bde6cba87f` | production_ready |
+| [nico-tsai](kols/nico-tsai/) | **Nico Tsai** 蔡妮可 | 台北大安 | 美甲師 / 個人工作室 | `46d1e11e-92a7-4fd7-8776-dcd4e2067627`（pilot，20 張訓練，2026-08-28） | ready（Phase D 待裁決） |
+| [tammy-chou](kols/tammy-chou/) | **Tammy Chou** 周語彤 | 台北五分埔 | 網拍老闆娘 / 服飾電商 | `5069a35a-dd85-4161-8d0f-952bccbe676d` | production_ready |
+| [emma-kao](kols/emma-kao/) | **Emma Kao** 高映真 | 台南 | 新聞主播 | `4374a074-fb89-45be-b80f-30cd78fea451` | production_ready |
+| [zoey-yeh](kols/zoey-yeh/) | **Zoey Yeh** 葉芷妍 | 宜蘭 | 花藝師 | `feb5f196-a60e-4ef9-9f8e-5daabbdacb52` | production_ready |
+| [miu-shiraishi](kols/miu-shiraishi/) | **Miu Shiraishi** 白石美羽 | 東京中目黑 | 咖啡店員 | `270c31fa-afd4-4609-b9d5-7302745f137c` | production_ready |
+| [rin-ayase](kols/rin-ayase/) | **Rin Ayase** 綾瀨凜 | 東京銀座 | 高級會員制酒店小姐 | `34b7fd71-c8dd-4d6a-983e-881b1d012219` | production_ready |
+| [nanami-fujiwara](kols/nanami-fujiwara/) | **Nanami Fujiwara** 藤原七海 | 箱根 | 溫泉旅館女將見習 | `78761266-69ba-47fa-8aeb-39f0aa95998e` | production_ready |
+| [kanon-komori](kols/kanon-komori/) | **Kanon Komori** 小森花音 | 東京秋葉原 | 女僕咖啡廳店員 | `642ba554-6f87-4be9-9aa7-4b66529b4995`（6 張訓練） | production_ready |
+| [jia-seo](kols/jia-seo/) | **Jia Seo** 서지아 | 首爾江南 | K-pop 舞蹈老師 | `ecf19246-c697-419c-b978-fe9373586c19` | production_ready |
+| [yerin-han](kols/yerin-han/) | **Yerin Han** 한예린 | 首爾 | 高爾夫教練 / 練習場 | `8c447a79-769f-4520-a538-cfb48fef6163` | production_ready |
+| [somi-oh](kols/somi-oh/) | **Somi Oh** 오소미 | 釜山 | 美食帳號經營者 / 吃播 | `c7915888-e566-4c9d-bc26-4bf40ab35c4c` | production_ready |
+| [zhiyi-shen](kols/zhiyi-shen/) | **Zhiyi Shen** 沈知意 | 上海陸家嘴 | 金融業 OL | `8b1e0a44-1c7b-4b65-b878-be428d00e4b8` | production_ready |
+| [wanyin-jiang](kols/wanyin-jiang/) | **Wanyin Jiang** 江晚吟 | 蘇州 | 旗袍店店主 / 古典舞背景 | `2e7de3f8-63ee-4302-a684-2245f6c54ea1` | production_ready |
+| [ruoruo-tang](kols/ruoruo-tang/) | **Ruoruo Tang** 唐苡若 | 成都 | 皮拉提斯教練 | `4dc2bf79-0098-4c2a-b529-2b2b74117c81` | production_ready |
+| [cheryl-soh](kols/cheryl-soh/) | **Cheryl Soh** 蘇思穎 | 新加坡（華裔） | 空服員 | `6d4c90b5-bd40-4c2c-9c1d-c689702863e1` | production_ready |
+| [wendy-yeo](kols/wendy-yeo/) | **Wendy Yeo** 楊薇伊 | 新加坡丹戎巴葛 | 調酒師 | `cb91c63f-0fa2-4c8f-94b2-a70a00acdbaf` | production_ready |
+| [peggy-lee](kols/peggy-lee/) | **Peggy Lee** 李珮甄 | 吉隆坡（華裔） | 汽車改裝店行銷企劃 | `3e3f4f72-2a89-4f05-af61-0c6701c97a5c` | production_ready |
+| [sydney-leong](kols/sydney-leong/) | **Sydney Leong** 梁欣妮 | 檳城喬治市（華裔） | 甜點師 / 烘焙工作室 | `a41d8aab-fe2e-44c0-9d6a-c068565ac800` | production_ready |
+| [angeline-kwee](kols/angeline-kwee/) | **Angeline Kwee** 郭慧恩 | 雅加達（華裔） | 精品選物店主理人 | `a1802330-65a7-43d7-89d3-84aacca67bfa` | production_ready |
 
 
 ---

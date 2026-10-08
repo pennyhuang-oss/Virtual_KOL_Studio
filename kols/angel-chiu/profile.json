@@ -9,7 +9,7 @@
       "image_count": 5,
       "images_path": "kols/angel-chiu/images/training_v1/",
       "collected_at": "2026-09-04",
-      "note": "PENDING — 尚未執行選角與訓練集生成。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
+      "note": "訓練集已完成，2026-09-07 已送 Soul V2 訓練完成（見下方 soul_training）。流程見 KOL_TRAINING_SOP.md。生成前務必套用 PERSONA_CANON.md 五條原則與本檔的 appearance 硬規格（膚色、東亞五官、身材數據）。",
       "soul_training": {
         "status": "production_ready",
         "platform": "Higgsfield.ai",

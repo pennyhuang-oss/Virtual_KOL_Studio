@@ -6,14 +6,14 @@
 
 ---
 
-## 狀態：**建模圖已準備好，待訓練**（2026-09-04）
+## 狀態：**Soul V2 訓練完成 — `production_ready`**（2026-09-08 更新）
 
 | 階段 | 狀態 |
 |------|------|
 | 選角（identity master） | ✅ 完成 |
 | Reference Element 錨定 | ✅ `7d30e2b0-b7b3-40cb-9352-592b250e2b60`（ruoruo-face-only-v1，純臉緊裁切） |
 | 訓練集（**5 張**） | ✅ `images/training_v1/train_01..05.jpg` |
-| **Soul 訓練** | ⏸ 待執行——等 19 位備齊後一次送訓 |
+| **Soul 訓練** | ✅ 2026-09-07 完成，`soul_id` `4dc2bf79-0098-4c2a-b529-2b2b74117c81`（5 張訓練集）；6 張驗證臉部門檻通過，2026-09-08 定為 `production_ready`——身材須靠 prompt 補、撞臉風險經裁決接受（C-1／C-2），見 `profile.json` 的 `status_definition` |
 | 首批內容生成 | ⬜ 未執行 |
 
 | # | 支柱 | 景別 | 服裝 | 光線 | job |

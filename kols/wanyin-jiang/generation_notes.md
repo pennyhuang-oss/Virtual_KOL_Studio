@@ -6,7 +6,7 @@
 
 ---
 
-## 狀態：**建模圖已準備好，待訓練**（2026-09-03）
+## 狀態：**Soul V2 訓練完成 — `production_ready`**（2026-09-08 更新）
 
 建立日期：2026-08-27（Batch 3）｜狀態更新：2026-09-03
 
@@ -15,7 +15,7 @@
 | 選角（identity master） | ✅ 完成，鎖在 `identity/identity_master.jpg` |
 | Reference Element 錨定 | ✅ 完成，`a0e68491-43ac-40c8-99d5-fec60596ac50`（wanyin-face-only-v2，純臉緊裁切） |
 | 訓練集（**5 張**） | ✅ 完成，`images/training_v1/train_01..05.jpg` |
-| **Soul 訓練** | ⏸ **待執行——使用者裁決：等 19 位的建模圖全部備齊後一次送訓** |
+| **Soul 訓練** | ✅ 2026-09-07 完成，`soul_id` `2e7de3f8-63ee-4302-a684-2245f6c54ea1`（5 張訓練集）；6 張驗證臉部門檻通過，2026-09-08 定為 `production_ready`——身材須靠 prompt 補、撞臉風險經裁決接受（C-1／C-2），見 `profile.json` 的 `status_definition` |
 | 首批內容生成 | ⬜ 未執行 |
 
 ### 訓練集清單（5/5，全部同時是可發布素材）

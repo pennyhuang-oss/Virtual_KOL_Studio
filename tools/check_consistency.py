@@ -108,7 +108,7 @@ if not nico_row:
     err("README.md 找不到 nico-tsai 那一列")
 elif 'draft' in nico_row[0]:
     err("README.md 的 Nico 狀態仍是 draft，但選角與錨定已完成")
-# 其餘 19 位維持 draft/待訓練是正確的（凍結中），不檢查
+# 其餘 19 位的 Soul 狀態以各自 profile.json 的 soul_training 為準（2026-09-07 已全數訓練完成），此處不檢查
 
 # ── 8. 憲章原則六與職責分界必須存在 ──
 if '原則六' not in read('PERSONA_CANON.md'):

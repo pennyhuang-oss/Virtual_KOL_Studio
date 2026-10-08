@@ -37,7 +37,9 @@
 
 
 
-### Batch 3 pilot（2026-08-28 進行中）
+### Batch 3（20 位，2026-09-07 全數完成 Soul V2 訓練）
+
+**Nico Tsai（pilot）**
 
 | 階段 | 狀態 |
 |------|------|
@@ -46,11 +48,20 @@
 | Reference Element 錨點 | ✅ `68ff990e-1862-4003-bfe3-fe288275cdd4`（`nico-tsai-anchor`）|
 | B1 驗重現 | ✅ |
 | B2 驗輕度外推（全身＝身材最終把關）| ✅ 第一次拍成背影作廢，修正後通過 |
-| C 訓練集 20 張 | ⏸ prompt 已產生，待 ChatGPT 覆核（`review/REVIEW_PHASE_C.md`）|
-| Soul 訓練 → D 壓力測試 | 未開始 |
+| C 訓練集 20 張 | ✅ 2026-08-28 生成並經使用者驗收 |
+| Soul 訓練 | ✅ 2026-08-28 完成（`ready`），`soul_id` `46d1e11e-92a7-4fd7-8776-dcd4e2067627` |
+| D 壓力測試 | ⏸ 待裁決；另外她未納入 19 位的碰撞篩檢（見 `plan/daily_v1/PLAN.md` 第二節） |
 
-> **其餘 19 位仍凍結**（`blocked_pending_v2_pilot`），等 Nico 這條 vertical slice 走完才解凍。
 > Nico 的規格真理來源是 `pilot/nico_pilot.json`，不是 `MODELING_SHOOT_PLAN.md`。
+
+**其餘 19 位**：原本凍結等 Nico 走完（`blocked_pending_v2_pilot`），2026-09-03 使用者裁決改為
+「5 張訓練集、19 位備齊後一次送訓」（見 `SOUL_TRAINING_PLAN.md`）。2026-09-07 全數訓練完成，
+零失敗；每位跑完 6 張驗證圖，臉部門檻 19/19 通過，2026-09-08 定為 `production_ready`。
+各自的 `soul_id` 見 `README.md` 的 Batch 3 表或 `review/soul_training/SOUL_IDS.json`，
+最終報告見 `review/soul_training/FINAL_REPORT.md`。
+
+> `production_ready` 附帶兩個強制條件：身材靠 prompt 描述補（Soul V2 不繼承身材與身高），
+> 撞臉風險經裁決接受，出圖必須遵守 `PERSONA_CANON.md` 原則七的 C-1／C-2。
 
 ---
 

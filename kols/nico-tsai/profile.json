@@ -27,17 +27,17 @@
       "images_path": "kols/nico-tsai/images/phase_a_r3/"
     },
     "training_images_v1": {
-      "status": "prompts_ready_pending_review",
+      "status": "completed",
       "platform": "Higgsfield.ai",
       "model": "Seedream 4.5",
       "model_slug": "seedream_v4_5",
-      "image_count": 0,
+      "image_count": 20,
       "target_count": 20,
       "images_path": "kols/nico-tsai/images/training_v1/",
-      "collected_at": null,
+      "collected_at": "2026-08-28",
       "spec_source": "pilot/nico_pilot.json",
       "prompts": "pilot/phase_c_prompts.json（由 tools/build_phase_c_prompts.py 從 spec 產生）",
-      "note": "20 張（endpoint 實際接受 5–20，非官網寫的 minimum 20）。規劃已通過 ChatGPT R1–R9 覆核：validator exit 0、語意逐列覆核 20/20、對抗測試 26/26。20 段 prompt 待覆核（review/REVIEW_PHASE_C.md），放行後才生成。",
+      "note": "20 張（endpoint 實際接受 5–20，非官網寫的 minimum 20）。規劃已通過 ChatGPT R1–R9 覆核：validator exit 0、語意逐列覆核 20/20、對抗測試 26/26。20 張已於 2026-08-28 生成並經使用者驗收，同日送 Soul V2 訓練（見下方 soul_training）。",
       "soul_training": {
         "status": "ready",
         "platform": "Higgsfield.ai",

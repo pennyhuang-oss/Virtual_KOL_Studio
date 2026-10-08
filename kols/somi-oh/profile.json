@@ -9,7 +9,7 @@
       "image_count": 5,
       "images_path": "kols/somi-oh/images/training_v1/",
       "collected_at": "2026-09-04",
-      "note": "建模圖已準備好，待訓練。5 張皆為可直接發布的生活照／自拍，以純臉緊裁切 Reference Element 錨定臉部身分，身材與服裝完全由 prompt 文字定義。逐張的 prompt、seed、job id 與判定見 review/soul_pilot/somi-oh/prompts.json，彙整見 generation_notes.md。等 19 位全部備齊後一次送 Soul 訓練。",
+      "note": "建模圖已準備好，2026-09-07 已送 Soul V2 訓練完成（見下方 soul_training）。5 張皆為可直接發布的生活照／自拍，以純臉緊裁切 Reference Element 錨定臉部身分，身材與服裝完全由 prompt 文字定義。逐張的 prompt、seed、job id 與判定見 review/soul_pilot/somi-oh/prompts.json，彙整見 generation_notes.md。等 19 位全部備齊後一次送 Soul 訓練。",
       "soul_training": {
         "status": "production_ready",
         "platform": "Higgsfield.ai",

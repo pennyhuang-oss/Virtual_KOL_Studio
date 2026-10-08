@@ -1,5 +1,9 @@
 # Soul 訓練規劃 v3（19 位）
 
+> **✅ 已執行完畢（2026-09-07）：19 位全數完成 Soul V2 訓練，零失敗，2026-09-08 定為 `production_ready`。**
+> 結果、soul_id 與成本見 [`review/soul_training/FINAL_REPORT.md`](review/soul_training/FINAL_REPORT.md)。
+> 下方「待訓練」等字樣是送訓前的規劃紀錄，保留不改。
+
 > **⚠️ 2026-09-03 使用者裁決，取代下方 v2 的執行順序：**
 > **不再「一位跑完整條 C-0～C-5 再跑下一位」。改為先把 19 位的建模圖全部備齊，最後一次送訓。**
 >

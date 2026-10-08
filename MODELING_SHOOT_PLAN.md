@@ -1,5 +1,8 @@
 # Batch 3 — 20 位建模照完整規劃
 
+> **⚠️ 本檔已被取代（2026-09-03 起）：19 位的凍結已解除，改依 [`SOUL_TRAINING_PLAN.md`](SOUL_TRAINING_PLAN.md)**
+> 以 5 張訓練集備齊後一次送訓，2026-09-07 全數訓練完成。以下為 v1 規劃的歷史紀錄。
+>
 > 狀態：**v1 規劃，其中 19 位已凍結**（`blocked_pending_v2_pilot`），
 > 等 Nico 這條 vertical slice 走完才解凍。
 > **Nico Tsai 的規格真理來源已移轉到 [`pilot/nico_pilot.json`](pilot/nico_pilot.json)**——
