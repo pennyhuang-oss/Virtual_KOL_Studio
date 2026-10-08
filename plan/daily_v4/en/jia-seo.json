@@ -1,0 +1,60 @@
+{
+ "pid": "jia-seo",
+ "slots": [
+  {
+   "id": "J1",
+   "view": "floor",
+   "hair": "just pulled out of a high ponytail",
+   "outfit": "a black sports bra and low-rise cotton trousers with her midriff bare",
+   "place": "on the floor in front of the full-length mirror in the corner of her own living room, an ice pack on the floor beside her",
+   "action": "She is sitting cross-legged with her back to the mirror, turned round to the lens, pressing the ice pack to her knee with one hand.",
+   "face": "Very flat, with a trace of the joke she always makes about her own knees.",
+   "light": "One floor lamp in the living room is in front of her, the depth of the room is dark and the focus falls off quickly.",
+   "people": null
+  },
+  {
+   "id": "J2",
+   "view": "near",
+   "hair": "a high ponytail being taken down, the mint-green inner layer showing as it falls",
+   "outfit": "a mint-green fitted sleeveless dance top and black shorts",
+   "place": "sitting on the edge of her bed at home with her phone propped beside her, a practice video paused on the screen",
+   "action": "She is scrolling through the three hundred unposted practice videos with one hand and pulling the ponytail out with the other.",
+   "face": "Her attention is on the phone, not the lens, with a slight frown.",
+   "light": "The bedside lamp is in front of her and low, and the rest of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "J3",
+   "view": "selfie",
+   "hair": "wet and just flicked over, the mint-green inner layer showing",
+   "outfit": "a cool white towel wrapped around her, the line of her shoulders and back showing",
+   "place": "in her bathroom straight out of the shower, steam on the mirror",
+   "action": "Her free hand has just flicked the wet hair over so the mint-green underneath shows.",
+   "face": "Caught mid-flick, her eyes not back to the lens yet.",
+   "light": "The light above the mirror is directly in front of her and the steam eats the depth of the room.",
+   "people": null
+  },
+  {
+   "id": "J4",
+   "view": "floor",
+   "hair": "still in a high ponytail, damp at the temples",
+   "outfit": "a black midriff-baring dance top and low-rise track trousers, sweat marks at the collarbone and waist",
+   "place": "on the wooden floor of the Gangnam dance studio after hours, the main lights off and only one lamp beside the mirror wall",
+   "action": "She is sitting on the wooden floor with her back against the mirror, still breathing hard, the ponytail still tied.",
+   "face": "Out of breath from finishing, looking straight into the lens without smiling.",
+   "light": "The one lamp beside the mirror is in front of her, the depth of the studio is black, and the mirror throws one line of light back.",
+   "people": null
+  },
+  {
+   "id": "J5",
+   "view": "knee",
+   "hair": "down and a little damp, tucked behind one ear",
+   "outfit": "a grey cropped hooded jacket left open over a black fitted tank and low-rise trousers",
+   "place": "at the outdoor seating of a convenience store in Gangnam late at night, straight after teaching",
+   "action": "She is sitting on the plastic chair outside with a drink in one hand and the ice pack still hooked on her bag.",
+   "face": "Very tired but laughing, the funny version of her rather than the strict teacher.",
+   "light": "The light spilling out of the convenience store is in front of her and the street beyond the seating is black.",
+   "people": null
+  }
+ ]
+}

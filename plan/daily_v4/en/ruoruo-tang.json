@@ -1,0 +1,60 @@
+{
+ "pid": "ruoruo-tang",
+ "slots": [
+  {
+   "id": "R1",
+   "view": "floor",
+   "hair": "mid-length, loose and slightly wavy",
+   "outfit": "a milk-tea coloured fitted one-piece exercise suit",
+   "place": "on the exercise mat at home in the afternoon, a large window along one wall",
+   "action": "She is doing a side stretch on the mat with one hand braced on the floor and the other reaching up and over.",
+   "face": "Her attention is on the movement and not the lens, the breath long.",
+   "light": "The soft side light from the large window crosses her from in front while her far side stays in shadow, and the shadows are what draw the lines of her body.",
+   "people": null
+  },
+  {
+   "id": "R2",
+   "view": "floor",
+   "hair": "mid-length, tied up in a low bun",
+   "outfit": "a grey-pink fitted cropped top and high-waisted leggings",
+   "place": "beside the exercise mat at home with a whole row of socks laid out on the floor, no two pairs the same",
+   "action": "She is sitting on the mat choosing which socks to wear today, holding two of them up against each other.",
+   "face": "Head down comparing the socks, a slow mild smile at the corner of her mouth.",
+   "light": "The soft side light from the window keeps the room low in contrast and her skin real.",
+   "people": null
+  },
+  {
+   "id": "R3",
+   "view": "selfie",
+   "hair": "mid-length, being wound into a low bun",
+   "outfit": "a cream bath robe tied loosely",
+   "place": "in her bathroom in the morning with the window light coming in from the side",
+   "action": "Her free hand is winding her mid-length hair into a low bun.",
+   "face": "Very calm, looking at herself in the glass.",
+   "light": "The side window light lands on her face and shoulder while the other side of the bathroom stays in shadow.",
+   "people": null
+  },
+  {
+   "id": "R4",
+   "view": "knee",
+   "hair": "mid-length, in a low bun",
+   "outfit": "a pale grey fitted one-piece exercise suit",
+   "place": "in her own small studio with its four machines after the last class, only her left, a large window along the wall",
+   "action": "She is sitting on one of the machines wiping the handle down with one hand and braced on the frame with the other.",
+   "face": "Very gentle, the look she has when she says slow it down again.",
+   "light": "The soft side light from the large window comes from in front of her and the far side of the studio and the shadows of the machines are left as they are.",
+   "people": null
+  },
+  {
+   "id": "R5",
+   "view": "full",
+   "hair": "mid-length, loose and slightly wavy",
+   "outfit": "a natural-wood-toned cropped knit and a cream long skirt",
+   "place": "in a quiet Chengdu lane outside a teahouse that stays open late, early evening",
+   "action": "She is standing by the teahouse's wooden door waiting for someone with one hand in her coat pocket.",
+   "face": "A very faint smile, her eyes on the lens.",
+   "light": "The light from inside the teahouse comes through from in front of her and the lane beyond goes dark.",
+   "people": null
+  }
+ ]
+}

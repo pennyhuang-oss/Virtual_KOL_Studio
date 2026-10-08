@@ -1,0 +1,3 @@
+# 原圖與 montage 共約 480MB，不進版控；需要時用 index.json 的 job id 重新下載
+*.png
+montage/

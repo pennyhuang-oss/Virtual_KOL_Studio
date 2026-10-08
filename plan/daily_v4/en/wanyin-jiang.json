@@ -1,0 +1,60 @@
+{
+ "pid": "wanyin-jiang",
+ "slots": [
+  {
+   "id": "Q1",
+   "view": "knee",
+   "hair": "long and straight to the waist, taken down out of a coiled bun",
+   "outfit": "a slate-blue qipao with the frog fastenings at the collar undone to the third one and the side slit open above the knee",
+   "place": "sitting on the edge of an old wooden bed in the bedroom of the old Suzhou house, a lattice window beside her and one lamp on",
+   "action": "She is sitting on the edge of the bed undoing the qipao's frog fastenings one at a time, already down to the third.",
+   "face": "She is not smiling; her eyes are straight on the lens, much bolder than her public face.",
+   "light": "One lamp sits to the side in front of her and the light is as soft as paper; the lattice window and the depth of the room fall dark.",
+   "people": null
+  },
+  {
+   "id": "Q2",
+   "view": "near",
+   "hair": "being coiled up by her own hands, a pin held between her lips",
+   "outfit": "a moon-white silk under-shirt with the shoulder and neckline exposed",
+   "place": "at the dressing table in the bedroom of the old house, an old mirror in front of her and the tailor's tape over the back of the chair",
+   "action": "She is coiling her own hair with both hands raised behind her head and a hairpin held in her lips.",
+   "face": "No expression because of the pin in her lips, her eyes in the mirror.",
+   "light": "The lamp on the dressing table is directly in front of her and the mirror returns it softly; the rest of the room is left empty and dark.",
+   "people": null
+  },
+  {
+   "id": "Q3",
+   "view": "selfie",
+   "hair": "long and wet, being wrung out",
+   "outfit": "a bamboo-green thin cotton bath robe tied loosely",
+   "place": "in the washroom of the old house, a wooden basin and old tiles, early morning light through a high window",
+   "action": "Her free hand is wringing the water out of the ends of her long hair.",
+   "face": "Just woken, a very faint expression, not looking at the lens.",
+   "light": "The light from the high window comes down from in front of her while the inner side of the washroom stays in shadow, the contrast low.",
+   "people": null
+  },
+  {
+   "id": "Q4",
+   "view": "knee",
+   "hair": "coiled into a smooth bun",
+   "outfit": "an ink-black qipao-style top and long skirt with every frog fastening closed",
+   "place": "in the qipao workshop on the ground floor of the old house after closing, bolts of cloth spread on the long table and a courtyard beyond the lattice window",
+   "action": "She is standing at the long table with the tailor's tape still around her neck, running one hand across the open cloth.",
+   "face": "Her attention is on the cloth rather than the lens, standing the way years of classical dance training make her stand.",
+   "light": "The lamp above the long table is in front of her and the depth of the shop and the courtyard fall dark.",
+   "people": null
+  },
+  {
+   "id": "Q5",
+   "view": "full",
+   "hair": "long and straight, down",
+   "outfit": "a rouge-red qipao with a moon-white light jacket over it",
+   "place": "in a Suzhou garden on a rainy day, under the covered walkway, rain dimpling the water",
+   "action": "She is standing by a pillar of the walkway watching the rain land on the water with one hand on the pillar.",
+   "face": "Her head is turned to the rain rather than the lens, the expression reserved.",
+   "light": "The rainy daylight beyond the walkway falls on her face while the depth of the walkway stays dark and the water holds a little reflection.",
+   "people": null
+  }
+ ]
+}

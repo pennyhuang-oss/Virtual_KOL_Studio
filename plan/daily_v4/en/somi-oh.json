@@ -1,0 +1,60 @@
+{
+ "pid": "somi-oh",
+ "slots": [
+  {
+   "id": "S1",
+   "view": "floor",
+   "hair": "in a layered wolf cut, being tucked behind one ear",
+   "outfit": "an oversized white t-shirt slipped off one shoulder over shorts",
+   "place": "sitting on her bed late at night with takeaway boxes open around her, one warm bedside lamp on",
+   "action": "She is sitting cross-legged on the bed tucking her hair behind her ear with one hand and holding chopsticks in the other.",
+   "face": "Still chewing, her eyes laughing at the lens, a sentence cut off halfway.",
+   "light": "The bedside lamp is in front of her and low and the rest of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "S2",
+   "view": "near",
+   "hair": "a layered wolf cut, pushed back",
+   "outfit": "a fitted orange fine-strap camisole and cotton shorts",
+   "place": "sitting on the floor of her room with her back against the bed, her phone screen lit",
+   "action": "She is scrolling a camera roll that is nothing but food with one hand and braced on the floor with the other.",
+   "face": "Her lip tint is eaten off and she has not replaced it; the corner of her mouth is very satisfied.",
+   "light": "The phone screen and the bedside lamp are both in front of her and low, and everything behind her is dark.",
+   "people": null
+  },
+  {
+   "id": "S3",
+   "view": "selfie",
+   "hair": "wet, being pushed behind her ear",
+   "outfit": "a steam-white towel wrapped round her, her shoulders still wet",
+   "place": "in her bathroom straight out of the shower, water on the mirror",
+   "action": "Her free hand is pushing the wet hair back behind her ear the way she always does.",
+   "face": "Not properly awake yet, but she laughs once at the lens.",
+   "light": "The light above the mirror is directly in front of her and the steam takes the depth of the room.",
+   "people": null
+  },
+  {
+   "id": "S4",
+   "view": "near",
+   "hair": "a layered wolf cut, tucked behind one ear",
+   "outfit": "a red fitted cropped knit with a wide neckline and high-waisted jeans",
+   "place": "at a stall with a single table beside the Busan market late at night, steam coming up off the pot",
+   "action": "She is tucking her hair behind her ear through the steam, about to start eating.",
+   "face": "Extremely expectant, eyes wide and her mouth already open.",
+   "light": "The warm bulb over the stall is in front of her, the steam is lit through, and the street outside the stall is black.",
+   "people": null
+  },
+  {
+   "id": "S5",
+   "view": "full",
+   "hair": "a layered wolf cut, wind-blown",
+   "outfit": "an orange cropped top and wood-brown wide trousers with her waist bare",
+   "place": "on a small street of shops by the Busan seafront that are still open late, the signage warm",
+   "action": "She is walking between the shops with a bag of hot food in one hand and tucking her hair back with the other.",
+   "face": "Laughing out loud with her teeth showing, the whole face lit up.",
+   "light": "The warm shop signage is in front of her and the far end of the street goes dark.",
+   "people": null
+  }
+ ]
+}

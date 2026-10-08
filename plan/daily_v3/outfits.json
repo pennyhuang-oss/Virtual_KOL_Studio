@@ -1,0 +1,56 @@
+{
+ "_note": "v3 服裝庫。v2 的 100 套已用掉，全部重新寫。只有 A 與 C 級（B 級留存 37% 不用）。每套綁 register，register 由場景決定 —— 這是規則乙。",
+ "street_night": [
+  {"tier":"C","text":"a fitted charcoal rib crop tank with thin straps and high-waisted washed denim shorts"},
+  {"tier":"C","text":"a black fitted halter crop top and a high-waisted pleated micro skirt"},
+  {"tier":"C","text":"a cropped white sleeveless tee tucked up under itself and low-slung cargo shorts"},
+  {"tier":"C","text":"a fitted olive tube top and a high-waisted denim mini skirt with a raw hem"},
+  {"tier":"A","text":"a strapless black rib bodysuit and a high-waisted leather mini skirt"},
+  {"tier":"A","text":"a cropped ivory bandeau and low-rise wide black trousers, the midriff bare"},
+  {"tier":"C","text":"a soft grey cropped hoodie pushed up to the elbows over a high-waisted running skirt"},
+  {"tier":"C","text":"a fitted rust rib crop top with a deep square neck and high-waisted black shorts"},
+  {"tier":"A","text":"a black mesh-panelled crop top over a bandeau, with a high-waisted mini skirt"},
+  {"tier":"C","text":"a cropped denim jacket open over a fitted white bandeau, with a short pleated skirt"},
+  {"tier":"C","text":"a fitted navy crop tank and high-waisted white cotton shorts"},
+  {"tier":"A","text":"a cropped satin cami with a lace trim and a high-waisted mini skirt with a slit"}
+ ],
+ "shop_casual": [
+  {"tier":"C","text":"a cream fitted rib camisole with a deep scoop neck tucked into a high-waisted linen mini skirt"},
+  {"tier":"C","text":"a fitted pale blue crop shirt knotted once at the waist over high-waisted shorts"},
+  {"tier":"C","text":"a soft pink fitted crop tank with thin straps and a high-waisted short wrap skirt"},
+  {"tier":"A","text":"a fitted white bandeau under an unbuttoned oversized shirt worn off both shoulders, with shorts"},
+  {"tier":"C","text":"a sage green fitted crop top with a square neck and a high-waisted short skirt"},
+  {"tier":"C","text":"a fitted butter-yellow rib crop tee and high-waisted washed shorts"},
+  {"tier":"A","text":"a cropped ribbed knit worn off one shoulder over a bandeau, with a high-waisted mini skirt"},
+  {"tier":"C","text":"a fitted lilac cami with a scoop neck and a high-waisted pleated mini skirt"},
+  {"tier":"C","text":"a fitted terracotta crop top with a twist front and high-waisted linen shorts"},
+  {"tier":"A","text":"a fitted cream halter top with a deep neckline and a high-waisted short skirt"}
+ ],
+ "glam_night": [
+  {"tier":"A","text":"a black satin cowl-neck mini dress with a low open back and a thin belt at the waist"},
+  {"tier":"A","text":"a bronze sequinned halter mini dress with a cinched waist and heeled sandals"},
+  {"tier":"A","text":"a deep plum velvet mini dress with a plunging neckline and long sleeves"},
+  {"tier":"A","text":"a champagne slip dress with a lace bodice, a high side slit and strappy heels"},
+  {"tier":"A","text":"an emerald satin one-shoulder mini dress with a corset waist"},
+  {"tier":"A","text":"a black lace-panelled bodycon mini dress with sheer inserts at the waist"},
+  {"tier":"A","text":"a pearl-grey satin halter dress with a low cowl back and a thigh slit"},
+  {"tier":"A","text":"a wine-red mini dress with a sweetheart bodice and a wrapped waist"},
+  {"tier":"A","text":"an ink-blue silk slip dress with thin straps, a low back and a knee slit"},
+  {"tier":"A","text":"a cream corset-bodice mini dress with a sculpted neckline and heeled mules"}
+ ],
+ "resort": [
+  {"tier":"A","text":"a white crochet cover-up open over a plain triangle bikini top, with a sarong knotted low"},
+  {"tier":"A","text":"a pale linen halter maxi dress with a tie waist and a high slit, over a bikini top"},
+  {"tier":"A","text":"a sheer sand-coloured kaftan over a fitted swimsuit, belted at the waist"},
+  {"tier":"C","text":"a fitted white rib tank and a wrapped linen skirt tied at the hip"},
+  {"tier":"A","text":"a black one-piece swimsuit with a deep back under an open oversized shirt"}
+ ],
+ "market_day": [
+  {"tier":"C","text":"a fitted white crop tee and high-waisted wide linen trousers"},
+  {"tier":"C","text":"a fitted black rib crop top and a high-waisted long skirt with a front slit"},
+  {"tier":"C","text":"a cropped chambray shirt tied at the waist over high-waisted straight jeans"},
+  {"tier":"C","text":"a fitted cream sleeveless knit tucked into a high-waisted long linen skirt"},
+  {"tier":"C","text":"a fitted khaki crop tank and high-waisted pleated trousers with a belt"},
+  {"tier":"C","text":"a fitted sage crop top with cap sleeves and a high-waisted midi skirt with a slit"}
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "pid": "emma-kao",
+ "slots": [
+  {
+   "id": "E1",
+   "view": "near",
+   "hair": "shoulder-length and blow-dried under at the ends, with a wine-red clip-in piece being put in",
+   "outfit": "a white shirt done up to only the second button, a black pencil skirt, black stockings and heels not yet taken off",
+   "place": "at the dressing table in her old Tainan apartment after the broadcast, her suit jacket already hung on the back of the door",
+   "action": "She is sitting at the dressing table clipping the wine-red hair piece in, the jacket already hung up behind her.",
+   "face": "She is watching herself in the mirror with a small smile that only she knows the reason for.",
+   "light": "The dressing-table lamp is the only light in the room, coming from one side in front of her, everything else black, the framing deliberately off-centre.",
+   "people": null
+  },
+  {
+   "id": "E2",
+   "view": "knee",
+   "hair": "shoulder-length, pushed behind one ear by the wind",
+   "outfit": "a dark green silk slip with a cream light jacket over her shoulders, not put on properly",
+   "place": "up on the roof of her old apartment building at night, a washing line still strung across and the low Tainan rooftops beyond",
+   "action": "She has sat down against the base of the water tank with one hand pushing her hair behind her ear.",
+   "face": "The expression she makes in the half-second before she starts a sentence, her eyes reaching the lens first.",
+   "light": "One old lamp on the roof sits to the side in front of her and the night sky and rooftops are completely dark.",
+   "people": null
+  },
+  {
+   "id": "E3",
+   "view": "selfie",
+   "hair": "shoulder-length and slightly flattened from sleeping, the clip-in piece gone",
+   "outfit": "a cream cotton robe thrown on and tied anyhow",
+   "place": "in the bathroom of her old apartment, the tiles old and the edge of the mirror rusted",
+   "action": "Her free hand has just taken the clip-in hair piece out and is setting it down on the counter.",
+   "face": "Just woken, none of the broadcast voice in her face, no expression at all.",
+   "light": "The lamp above the mirror is directly in front of her and the depth of the bathroom goes dark.",
+   "people": null
+  },
+  {
+   "id": "E4",
+   "view": "near",
+   "hair": "shoulder-length, tucked behind both ears",
+   "outfit": "a black fine-strap camisole, holding a wine-red dress up in front of herself",
+   "place": "in front of the open wardrobe in her old apartment, a whole rail of clothes she only wears on camera, mostly dark",
+   "action": "She is standing at the open wardrobe holding a wine-red dress up against herself with one hand.",
+   "face": "Completely deadpan, the way she says very ordinary things in a news-anchor voice.",
+   "light": "A small light inside the wardrobe throws up at her from the front and low, the rest of the room dark.",
+   "people": null
+  },
+  {
+   "id": "E5",
+   "view": "near",
+   "hair": "shoulder-length with the anchor's blow-dried inward curl, no clip-in piece",
+   "outfit": "a broadcast suit jacket over a white shirt buttoned all the way to the top",
+   "place": "at the news desk in the local station's studio after the broadcast has ended, the desk light still on and the rest of the studio switched off",
+   "action": "She is still sitting behind the desk with the scripts already put away, unclipping the microphone with one hand.",
+   "face": "Crisply articulate, sitting straight, her eyes directly on the lens.",
+   "light": "The lamp over the news desk is still on and the rest of the studio is black, the framing clean and symmetrical.",
+   "people": null
+  }
+ ]
+}

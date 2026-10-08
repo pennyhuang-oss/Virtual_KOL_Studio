@@ -1,0 +1,60 @@
+{
+ "pid": "peggy-lee",
+ "slots": [
+  {
+   "id": "P1",
+   "view": "knee",
+   "hair": "long and full in loose curls",
+   "outfit": "a black fitted crop tank and high-waisted shorts, long boots still on",
+   "place": "sitting on the edge of the bed in her room, a poster of a car on the wall, one bedside lamp on",
+   "action": "She is sitting on the edge of the bed looking at a phone case in the same colour as her own car.",
+   "face": "A quick open laugh, half of it aimed at herself.",
+   "light": "The bedside lamp is in front of her and the rest of the room is completely black, the contrast high.",
+   "people": null
+  },
+  {
+   "id": "P2",
+   "view": "near",
+   "hair": "long curls pushed back off her face",
+   "outfit": "a car-tail-light red fitted camisole and a black leather mini skirt",
+   "place": "in the driver's seat of her own car in the garage, the garage lights coming in through the windscreen",
+   "action": "She has one hand on the wheel and has picked up the cleaning cloth she keeps on the passenger seat with the other.",
+   "face": "She has turned her head to the lens with a very direct look, her nails cut short.",
+   "light": "The garage light comes in through the windscreen from in front of her, the inside of the car stays dark, and the metal and glass throw hard reflections.",
+   "people": null
+  },
+  {
+   "id": "P3",
+   "view": "selfie",
+   "hair": "long curls damp and pushed back",
+   "outfit": "a metallic grey silk robe tied loosely",
+   "place": "in her bathroom, a little steam still at the edge of the mirror",
+   "action": "Her free hand is sweeping the damp curls back behind her.",
+   "face": "Just out of bed and not in the mood to say anything.",
+   "light": "The light above the mirror is directly in front of her and the depth of the bathroom is black, the contrast high.",
+   "people": null
+  },
+  {
+   "id": "P4",
+   "view": "knee",
+   "hair": "long curls tied back out of the way",
+   "outfit": "a black fitted short-sleeve top and high-waisted work trousers with the sleeves rolled up",
+   "place": "in the workshop bay at night, a work lamp trained on a car with its bonnet propped open",
+   "action": "She is half leaning on the edge of the open bonnet with one hand braced on it and the cleaning cloth in the other.",
+   "face": "The look she gets when she starts talking specifications, not performing for the lens at all.",
+   "light": "The work lamp is in front of her and low, the depth of the workshop is black, and the metal throws strong reflections.",
+   "people": null
+  },
+  {
+   "id": "P5",
+   "view": "full",
+   "hair": "long curls loose and a little wind-blown",
+   "outfit": "an amber-yellow cropped hooded jacket left open over a black fitted tank and leather trousers",
+   "place": "at the petrol station she always stops at on a night run, the ground still wet from rain",
+   "action": "She is leaning back against her own car beside the pump with the nozzle still in her hand.",
+   "face": "A wide open laugh with her teeth showing.",
+   "light": "The canopy lights of the station are in front of her, the road beyond is black, and the wet ground holds the reflections.",
+   "people": null
+  }
+ ]
+}

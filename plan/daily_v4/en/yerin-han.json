@@ -1,0 +1,60 @@
+{
+ "pid": "yerin-han",
+ "slots": [
+  {
+   "id": "Y1",
+   "view": "floor",
+   "hair": "down out of its ponytail, the gold face-framing pieces loose",
+   "outfit": "a white fitted tank and beige over-the-knee socks",
+   "place": "on the floor of her Seoul apartment living room with her golf bag propped against the wall, one floor lamp on",
+   "action": "She is sitting on the floor with her back against the sofa and one hand resting on her knee, the ponytail already out.",
+   "face": "Quiet — the version of her whose sentences do not rise at the end — looking at the lens.",
+   "light": "The floor lamp is to one side in front of her and the depth of the room and the golf bag fall into shadow.",
+   "people": null
+  },
+  {
+   "id": "Y2",
+   "view": "near",
+   "hair": "long and loose, pushed over one shoulder",
+   "outfit": "a gold fine-strap silk nightdress",
+   "place": "sitting on the edge of the bed in her apartment, three bottles of sunscreen lined up on the nightstand",
+   "action": "She is sitting on the bed edge working sunscreen into one arm with the other hand still on the bottle.",
+   "face": "Her attention is on her arm rather than the lens, the expression very level.",
+   "light": "The bedside lamp is in front of her and the rest of the room is dark.",
+   "people": null
+  },
+  {
+   "id": "Y3",
+   "view": "selfie",
+   "hair": "being tied into a ponytail, a hair tie held in her lips",
+   "outfit": "a white cotton robe with the neckline open",
+   "place": "in her bathroom in the morning, sunscreen still sitting on the counter in front of the mirror",
+   "action": "Her free hand is pulling her long hair up into a ponytail with the hair tie held in her lips.",
+   "face": "No expression with the tie in her lips, her eyes on herself in the glass.",
+   "light": "The light above the mirror is directly in front of her and the depth of the bathroom is dark.",
+   "people": null
+  },
+  {
+   "id": "Y4",
+   "view": "knee",
+   "hair": "in a low ponytail pulled through the back of a cap she is holding rather than wearing",
+   "outfit": "a white fitted short-sleeved polo and a grass-green high-waisted skirt",
+   "place": "at her own regular bay in the indoor driving range after hours, the cool white lights above that bay still on and every other bay dark",
+   "action": "She is leaning against the divider of the bay with a club tucked between her arm and her body and the cap in her hand.",
+   "face": "The bright open laugh, the version whose sentences rise at the end.",
+   "light": "The cool white light over her own bay is in front of her and the rest of the range is completely dark.",
+   "people": null
+  },
+  {
+   "id": "Y5",
+   "view": "full",
+   "hair": "long and loose",
+   "outfit": "a sky-blue fitted short-sleeved top and white high-waisted shorts",
+   "place": "outside a sports shop in central Seoul that is still open late, having just come out",
+   "action": "She has stopped at the shop door pulling on a new glove and is looking down to see whether it fits.",
+   "face": "Looking down, concentrating, with a small smile at the corner of her mouth.",
+   "light": "The shop doorway light is in front of her and the pavement beyond it goes dark.",
+   "people": null
+  }
+ ]
+}
