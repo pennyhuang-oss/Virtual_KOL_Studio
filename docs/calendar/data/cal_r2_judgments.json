@@ -1,0 +1,1861 @@
+{
+ "note": "人寫的判斷。技術數字不要寫在這裡，由 build_cal_r2_assets.py 現算。",
+ "candidates": [
+  {
+   "cid": "iris_H",
+   "pid": "iris-chen",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+   "ref": "kols/iris-chen/images/training_v1/08_cafe_window_04.webp",
+   "ref_zh": "training_v1/08",
+   "details": [
+    {
+     "what": "窗邊高光",
+     "box": [
+      0.7,
+      0.2,
+      1.0,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "1 月橫式半版；也可當直式大照片（同一張兩用）",
+   "tech": "橫半 420／直大 339 ppi，臉在框內、額頭避開線圈。",
+   "consistency": "與 training_v1/08 同批、同一張臉。",
+   "aesthetic": "甜、親近；粉色抹胸露肩，微性感；背景窗光乾淨。",
+   "defects": "窗邊高光過曝（原圖本身）；無手、無文字。",
+   "action": "保留候選",
+   "adoption": "草稿採用；最終交稿前打樣看高光",
+   "h_wide_note": "239 ppi（邊緣）；額頭落在線圈內（距上緣 7 mm），變成大頭特寫 → 不成立。"
+  },
+  {
+   "cid": "iris_V",
+   "pid": "iris-chen",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+   "ref": "kols/iris-chen/images/training_v1/08_cafe_window_04.webp",
+   "ref_zh": "training_v1/08",
+   "details": [
+    {
+     "what": "左手",
+     "box": [
+      0.12,
+      0.72,
+      0.34,
+      0.92
+     ]
+    },
+    {
+     "what": "右手",
+     "box": [
+      0.66,
+      0.76,
+      0.9,
+      0.97
+     ]
+    },
+    {
+     "what": "招牌假字",
+     "box": [
+      0.4,
+      0.0,
+      0.78,
+      0.3
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "1 月直式大照片",
+   "tech": "直大 339 ppi；全身街拍，臉高約 25 mm，可辨識但不大。",
+   "consistency": "同上。",
+   "aesthetic": "街拍甜美、細肩帶＋牛仔短裙，整體比例好。",
+   "defects": "背景招牌是 AI 假中文字（清楚可讀到是亂字）；雙手自然。",
+   "action": "修圖",
+   "adoption": "招牌假字淡化後草稿採用",
+   "h_wide_note": "239 ppi（邊緣）；額頭距上緣 27 mm，頭頂估 11 mm（髮頂碰到線圈區邊緣），構圖成立（街景＋上半身）。"
+  },
+  {
+   "cid": "kanon_H",
+   "pid": "kanon-komori",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/kanon-komori/images/training_v1/train_02.jpg",
+   "ref": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "黑板假字",
+     "box": [
+      0.0,
+      0.0,
+      0.45,
+      0.3
+     ]
+    },
+    {
+     "what": "菜單卡",
+     "box": [
+      0.08,
+      0.55,
+      0.38,
+      0.8
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "2 月橫式半版（女僕造型）",
+   "tech": "橫半 378 ppi，臉在框內。",
+   "consistency": "與 Soul 驗證 V6 一致（3/4 側臉）。",
+   "aesthetic": "女僕裝甜美；她的人設本業，屬職業制服，不是校服。",
+   "defects": "黑板與菜單卡是假字（遠景、可接受）。",
+   "action": "保留候選",
+   "adoption": "草稿採用（若 Penny 想要非女僕造型，改用 alt112／alt028）",
+   "h_wide_note": "215 ppi（邊緣）；頭頂髮帶進線圈 → 需往下移或縮框。"
+  },
+  {
+   "cid": "kanon_V",
+   "pid": "kanon-komori",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/kanon-komori/images/training_v1/train_01.jpg",
+   "ref": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "胸前扣件與蕾絲",
+     "box": [
+      0.3,
+      0.45,
+      0.75,
+      0.8
+     ]
+    },
+    {
+     "what": "人台",
+     "box": [
+      0.0,
+      0.0,
+      0.3,
+      0.45
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "2 月直式（女僕高領造型）",
+   "tech": "臉很大；直大時頭頂被切（頭頂估 −13 mm），只有縮框（V_inset）時頭頂保得住。",
+   "consistency": "一致。",
+   "aesthetic": "性感度最高的一張（胸口開口）；背景人台。",
+   "defects": "胸前扣件與蕾絲正常；人台是正常道具。",
+   "action": "保留候選",
+   "adoption": "只適合縮框版",
+   "h_wide_note": "額頭被切 → 不成立。"
+  },
+  {
+   "cid": "kanon_alt112",
+   "pid": "kanon-komori",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "hf:e05794e6-da98-4177-9c3b-2b144e69c909",
+   "ref": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手扶欄杆",
+     "box": [
+      0.0,
+      0.52,
+      0.3,
+      0.78
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.55,
+      0.05,
+      1.0,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "2 月非女僕替代（酒紅單肩洋裝、夜街）",
+   "tech": "直大 271 ppi；臉在框內。",
+   "consistency": "與 V6 一致（開口笑）。",
+   "aesthetic": "甜而性感、街頭夜景有生活感。",
+   "defects": "背景兩位男性路人清楚；上方招牌假字。",
+   "action": "保留候選",
+   "adoption": "草稿可用；最終需決定是否修掉路人",
+   "h_wide_note": "191 ppi（不足）；構圖成立。"
+  },
+  {
+   "cid": "kanon_alt028",
+   "pid": "kanon-komori",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "hf:06f9c1d5-bf50-4b4c-bbb7-dc95c8743133",
+   "ref": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "聖代杯",
+     "box": [
+      0.0,
+      0.75,
+      0.2,
+      1.0
+     ]
+    },
+    {
+     "what": "手插腰",
+     "box": [
+      0.65,
+      0.25,
+      0.95,
+      0.5
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.6,
+      0.0,
+      1.0,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "2 月非女僕替代（碎花洋裝、甜點店）",
+   "tech": "直大 271 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "最甜的一張，符合 2 月粉色調。",
+   "defects": "背景黑衣路人貼在身後；聖代杯正常。",
+   "action": "保留候選",
+   "adoption": "草稿可用；最終需修路人",
+   "h_wide_note": "191 ppi（不足）。"
+  },
+  {
+   "cid": "kanon_alt_t03",
+   "pid": "kanon-komori",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "kols/kanon-komori/images/training_v1/train_03.jpg",
+   "ref": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "自拍手臂",
+     "box": [
+      0.0,
+      0.45,
+      0.3,
+      1.0
+     ]
+    },
+    {
+     "what": "皮尺刻度",
+     "box": [
+      0.33,
+      0.37,
+      0.6,
+      0.75
+     ]
+    },
+    {
+     "what": "縫紉機面板字",
+     "box": [
+      0.65,
+      0.42,
+      1.0,
+      0.68
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "2 月非女僕替代（repo 訓練圖：cosplay 工作室、灰色短背心）",
+   "tech": "1728×2304 repo 原圖；橫半 378／直大 305 ppi，臉在框內；自拍手臂佔左下。",
+   "consistency": "Soul 訓練集本身（與 V6 同一張臉，3/4 側臉）。",
+   "aesthetic": "性感度高（短背心、露腰）、帶人設本業（cosplay 縫紉）；表情偏冷，不如 #028 甜。",
+   "defects": "左側自拍手臂從畫面邊緣伸出；皮尺刻度是假數字（小）；縫紉機面板假字（小）；筆電螢幕空白。",
+   "action": "保留候選",
+   "adoption": "草稿可用；R1 漏看這張（R1 只剔除了全身過小的 train_04），R2 補列",
+   "h_wide_note": "215 ppi（邊緣）；額頭避開線圈但頭頂髮夾進線圈，變成胸上特寫 → 勉強成立。"
+  },
+  {
+   "cid": "luna_H",
+   "pid": "luna-tanaka",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/luna-tanaka/images/face_reference/ref_01.webp",
+   "ref": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+   "ref_zh": "pilot_b1/LG05_a",
+   "details": [
+    {
+     "what": "雙手",
+     "box": [
+      0.25,
+      0.75,
+      0.75,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "3 月橫式半版（取代 R1 假 IG 介面圖）",
+   "tech": "1728×2304 原圖，橫半 378 ppi；全身站姿，臉高約 21 mm（偏小）。",
+   "consistency": "與 pilot_b1/LG05 一致。",
+   "aesthetic": "清純、京都巷弄，畫面乾淨。",
+   "defects": "無文字、無標誌；雙手藏在身後。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "215 ppi（邊緣）；人物在中間窄條，兩側大量街景 → 構圖成立但人物小。"
+  },
+  {
+   "cid": "luna_V",
+   "pid": "luna-tanaka",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/luna-tanaka/images/face_reference/ref_02.webp",
+   "ref": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+   "ref_zh": "pilot_b1/LG05_a",
+   "details": [
+    {
+     "what": "手",
+     "box": [
+      0.3,
+      0.65,
+      0.65,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "3 月直式（取代 R1 1152 px 圖）",
+   "tech": "直大 305 ppi（R1 那張只有 203）。",
+   "consistency": "一致。",
+   "aesthetic": "側身倚牆、蕾絲上衣，清純。",
+   "defects": "無明顯瑕疵。",
+   "action": "保留候選",
+   "adoption": "草稿採用（203 ppi 問題以換圖解決）",
+   "h_wide_note": "215 ppi（邊緣）；構圖成立。"
+  },
+  {
+   "cid": "luna_R1H",
+   "pid": "luna-tanaka",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+   "ref": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+   "ref_zh": "pilot_b1/LG05_a",
+   "details": [
+    {
+     "what": "假 IG 介面",
+     "box": [
+      0.0,
+      0.0,
+      0.55,
+      0.08
+     ]
+    },
+    {
+     "what": "飲料吸管",
+     "box": [
+      0.3,
+      0.75,
+      0.65,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "1152×2048；直大只有 203 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "甜。",
+   "defects": "左上假 IG 介面字樣「Plaremgilenl 1.g」在原圖 100% 下清楚。",
+   "action": "換圖",
+   "adoption": "不採用（已由 luna_H 取代）",
+   "h_wide_note": "143 ppi（不足）。"
+  },
+  {
+   "cid": "luna_R1V",
+   "pid": "luna-tanaka",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+   "ref": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+   "ref_zh": "pilot_b1/LG05_a",
+   "details": [
+    {
+     "what": "手",
+     "box": [
+      0.12,
+      0.8,
+      0.35,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "1152×2048；直大 203、縮框 236 ppi（都屬邊緣）。",
+   "consistency": "一致。",
+   "aesthetic": "甜。",
+   "defects": "無明顯瑕疵。",
+   "action": "換圖",
+   "adoption": "不採用（解析度；縮框也只到 236 ppi）",
+   "h_wide_note": "143 ppi（不足）。"
+  },
+  {
+   "cid": "angel_H",
+   "pid": "angel-chiu",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/angel-chiu/images/training_v1/train_02.jpg",
+   "ref": "review/soul_pilot/angel-chiu/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手與錶",
+     "box": [
+      0.18,
+      0.65,
+      0.5,
+      0.88
+     ]
+    },
+    {
+     "what": "識別證",
+     "box": [
+      0.43,
+      0.82,
+      0.66,
+      1.0
+     ]
+    },
+    {
+     "what": "乾洗手瓶標",
+     "box": [
+      0.15,
+      0.48,
+      0.38,
+      0.7
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "4 月橫式半版（護理師）",
+   "tech": "橫半 378 ppi；臉高約 20 mm（偏小）。",
+   "consistency": "與 V6 一致。",
+   "aesthetic": "職業制服（護理師，屬人設本業）；性感度低、親和。",
+   "defects": "乾洗手瓶標籤無可讀字；識別證空白；錶正常。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "215 ppi（邊緣）；構圖成立，人物偏右小。"
+  },
+  {
+   "cid": "angel_V",
+   "pid": "angel-chiu",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/angel-chiu/images/training_v1/train_01.jpg",
+   "ref": "review/soul_pilot/angel-chiu/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "掛繩與床頭",
+     "box": [
+      0.8,
+      0.7,
+      1.0,
+      0.95
+     ]
+    },
+    {
+     "what": "手",
+     "box": [
+      0.15,
+      0.85,
+      0.4,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "4 月直式（緞面細肩帶）",
+   "tech": "直大 305 ppi，臉高 42 mm。",
+   "consistency": "一致。",
+   "aesthetic": "微性感、成熟甜美。",
+   "defects": "床邊識別證掛繩（小，可留可修）。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "215 ppi；頭頂被切（−11 mm）→ 不成立。"
+  },
+  {
+   "cid": "angel_alt004",
+   "pid": "angel-chiu",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "hf:a28ee8ee-4926-4bfb-a705-8745d8c3a1bb",
+   "ref": "review/soul_pilot/angel-chiu/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手",
+     "box": [
+      0.0,
+      0.35,
+      0.3,
+      0.6
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.5,
+      0.05,
+      1.0,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "4 月外景替代（河岸針織長洋裝）",
+   "tech": "直大 271 ppi。",
+   "consistency": "與 V6 高度一致（正臉）。",
+   "aesthetic": "溫柔優雅、身形修長。",
+   "defects": "背景兩位男性路人背影很近。",
+   "action": "保留候選",
+   "adoption": "草稿可用；最終需處理路人",
+   "h_wide_note": "191 ppi（不足）。"
+  },
+  {
+   "cid": "somi_H",
+   "pid": "somi-oh",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/somi-oh/images/training_v1/train_01.jpg",
+   "ref": "review/soul_pilot/somi-oh/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "握罐",
+     "box": [
+      0.52,
+      0.33,
+      0.8,
+      0.6
+     ]
+    },
+    {
+     "what": "炸雞盒",
+     "box": [
+      0.68,
+      0.78,
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "what": "紙袋",
+     "box": [
+      0.0,
+      0.72,
+      0.28,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "5 月橫式半版",
+   "tech": "橫半 378 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "甜笑、生活感。",
+   "defects": "炸雞盒正常；左下紙袋有品牌風格假字（需修或裁掉）；握罐的手正常。",
+   "action": "修圖",
+   "adoption": "紙袋假字處理後草稿採用",
+   "h_wide_note": "215 ppi；構圖成立。"
+  },
+  {
+   "cid": "somi_V",
+   "pid": "somi-oh",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "hf:4e54ab6b-d9a1-4173-ab81-82a6948d1f15",
+   "ref": "review/soul_pilot/somi-oh/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手",
+     "box": [
+      0.08,
+      0.68,
+      0.36,
+      0.92
+     ]
+    },
+    {
+     "what": "杯子",
+     "box": [
+      0.55,
+      0.88,
+      0.8,
+      1.0
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.05,
+      0.05,
+      0.45,
+      0.45
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "5 月直式（取代張嘴吃串燒）",
+   "tech": "daily_v2 原圖 1536×2048；直大 271 ppi。",
+   "consistency": "與 V6 一致（正臉）。",
+   "aesthetic": "白西裝外套＋抹胸，微性感、甜。",
+   "defects": "背景左後方男子；地上紙杯（可裁）。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "191 ppi（不足）；頭頂髮絲貼線圈。"
+  },
+  {
+   "cid": "somi_alt065",
+   "pid": "somi-oh",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "hf:57a1fc53-5ea7-491d-a6c5-9aad0d97da17",
+   "ref": "review/soul_pilot/somi-oh/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "提籃的手",
+     "box": [
+      0.25,
+      0.3,
+      0.52,
+      0.56
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.0,
+      0.1,
+      0.5,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "5 月第二替代（海邊白洋裝）",
+   "tech": "直大 271 ppi。",
+   "consistency": "一致（開口笑）。",
+   "aesthetic": "初夏感最強、甜。",
+   "defects": "背景三位路人近距離（含一位男性正面朝外走）。",
+   "action": "保留候選",
+   "adoption": "草稿可用；最終需修路人",
+   "h_wide_note": "191 ppi（不足）。"
+  },
+  {
+   "cid": "somi_R1V",
+   "pid": "somi-oh",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/somi-oh/images/training_v1/train_02.jpg",
+   "ref": "review/soul_pilot/somi-oh/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "咬串燒",
+     "box": [
+      0.35,
+      0.28,
+      0.78,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "直大 305 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "張嘴咬串燒，親和但不甜美。",
+   "defects": "食物與握持本身正常，但表情不適合主視覺。",
+   "action": "換圖",
+   "adoption": "不採用（主管意見）",
+   "h_wide_note": "—（R1 對照圖，已換掉，不再評）"
+  },
+  {
+   "cid": "vicky_H",
+   "pid": "vicky-lin",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/vicky-lin/images/face_reference/v4_anchored_04_3q_headshot.png",
+   "ref": "kols/vicky-lin/images/face_reference/v4_anchored_02_front_halfbody.png",
+   "ref_zh": "v4_anchored_02（已核准訓練集）",
+   "details": [
+    {
+     "what": "手與錶",
+     "box": [
+      0.25,
+      0.85,
+      0.6,
+      1.0
+     ]
+    },
+    {
+     "what": "胸前標誌",
+     "box": [
+      0.3,
+      0.33,
+      0.6,
+      0.5
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "6 月橫式半版（取代 R1 不一致的 v3 圖）",
+   "tech": "1440×2560，橫半 352 ppi。",
+   "consistency": "屬已核准訓練集 v4_anchored → 一致性最高。",
+   "aesthetic": "回頭甜笑、露背，健康性感。",
+   "defects": "運動內衣上的小標誌是虛構圖形（非真品牌）；錶正常。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "179 ppi（不足）；額頭進線圈。"
+  },
+  {
+   "cid": "vicky_V",
+   "pid": "vicky-lin",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+   "ref": "kols/vicky-lin/images/face_reference/v4_anchored_02_front_halfbody.png",
+   "ref_zh": "v4_anchored_02（已核准訓練集）",
+   "details": [
+    {
+     "what": "手插腰",
+     "box": [
+      0.5,
+      0.58,
+      0.8,
+      0.76
+     ]
+    },
+    {
+     "what": "手機",
+     "box": [
+      0.15,
+      0.72,
+      0.38,
+      0.86
+     ]
+    },
+    {
+     "what": "標誌",
+     "box": [
+      0.22,
+      0.33,
+      0.48,
+      0.47
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "6 月直式",
+   "tech": "直大 254 ppi（可）。",
+   "consistency": "已核准訓練集，一致。",
+   "aesthetic": "插腰、體態展示完整。",
+   "defects": "手機握持正常；虛構小標誌。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "179 ppi；頭頂被切。"
+  },
+  {
+   "cid": "vicky_R1H",
+   "pid": "vicky-lin",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+   "ref": "kols/vicky-lin/images/face_reference/v4_anchored_02_front_halfbody.png",
+   "ref_zh": "v4_anchored_02（已核准訓練集）",
+   "details": [
+    {
+     "what": "Nike 勾勾",
+     "box": [
+      0.62,
+      0.84,
+      0.88,
+      0.98
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "1152×2048。",
+   "consistency": "與已核准 v4 訓練集臉型明顯不同（v3 屬訓練前一輪；generation_notes 記錄第二、三輪圖各自獨立生成、身分不一致，只保留供對照）。",
+   "aesthetic": "—",
+   "defects": "短褲 Nike 勾勾（100% 下清楚）。",
+   "action": "換圖",
+   "adoption": "不採用（角色一致性不符）",
+   "h_wide_note": "—（R1 對照圖，已換掉，不再評）"
+  },
+  {
+   "cid": "coco_H",
+   "pid": "coco-wu",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+   "ref": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+   "ref_zh": "training_v1/01",
+   "details": [
+    {
+     "what": "人像牆",
+     "box": [
+      0.0,
+      0.1,
+      0.28,
+      0.62
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "7 月橫式半版",
+   "tech": "橫半 352 ppi；頭頂髮絲貼線圈（2 mm），臉不受影響。",
+   "consistency": "與 training_v1/01 一致。",
+   "aesthetic": "甜、豐滿、粉色細肩帶，親近感強。",
+   "defects": "背景整面人像牆（多張人臉），會分散注意，但主角臉最大最清楚。",
+   "action": "修圖",
+   "adoption": "人像牆淡化／虛化後草稿採用",
+   "h_wide_note": "179 ppi；額頭被切 → 不成立。"
+  },
+  {
+   "cid": "coco_V",
+   "pid": "coco-wu",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/coco-wu/images/face_reference/candidate_03.png",
+   "ref": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+   "ref_zh": "training_v1/01",
+   "details": [
+    {
+     "what": "人像牆",
+     "box": [
+      0.62,
+      0.03,
+      1.0,
+      0.45
+     ]
+    },
+    {
+     "what": "手機畫面",
+     "box": [
+      0.72,
+      0.42,
+      1.0,
+      0.75
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 直式候選",
+   "tech": "直大 254 ppi。",
+   "consistency": "臉大幅傾斜大笑，與參考臉的比對度較低。",
+   "aesthetic": "元氣大笑。",
+   "defects": "人像牆＋右側手機畫面顯示她自己的另一張臉 → 搶主角。",
+   "action": "換圖",
+   "adoption": "不採用",
+   "h_wide_note": "179 ppi。"
+  },
+  {
+   "cid": "coco_alt01",
+   "pid": "coco-wu",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+   "ref": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+   "ref_zh": "training_v1/01",
+   "details": [
+    {
+     "what": "手機殼",
+     "box": [
+      0.08,
+      0.22,
+      0.3,
+      0.45
+     ]
+    },
+    {
+     "what": "手在頭上",
+     "box": [
+      0.6,
+      0.15,
+      0.95,
+      0.42
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "7 月直式替代（宿舍床上）",
+   "tech": "直大 254 ppi。",
+   "consistency": "就是參考圖本身。",
+   "aesthetic": "甜、慵懶、off-shoulder。",
+   "defects": "左上 Hello Kitty 手機殼（有版權角色）→ 必須修掉或裁掉。",
+   "action": "修圖",
+   "adoption": "手機殼處理後草稿採用",
+   "h_wide_note": "179 ppi（不足）；額頭落在線圈內（距上緣 9 mm）→ 不成立。"
+  },
+  {
+   "cid": "mia_H",
+   "pid": "mia-huang",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+   "ref": "kols/mia-huang/images/training_v1/08_afternoon_wakeup_selfie_ccd.png",
+   "ref_zh": "training_v1/08",
+   "details": [
+    {
+     "what": "手與手機",
+     "box": [
+      0.0,
+      0.82,
+      0.3,
+      1.0
+     ]
+    },
+    {
+     "what": "耳機線",
+     "box": [
+      0.35,
+      0.55,
+      0.75,
+      0.8
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "8 月橫式半版",
+   "tech": "橫半 352 ppi；頭頂髮絲略被切（−1 mm）。",
+   "consistency": "與 training_v1/08 一致。",
+   "aesthetic": "甜笑、紫藍霓虹，造型辨識度高。",
+   "defects": "自拍手機在左下；耳機線正常；霓虹色偏需打樣。",
+   "action": "保留候選",
+   "adoption": "草稿採用；最終需打樣看紫光",
+   "h_wide_note": "179 ppi；額頭被切 → 不成立。"
+  },
+  {
+   "cid": "mia_V",
+   "pid": "mia-huang",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+   "ref": "kols/mia-huang/images/training_v1/08_afternoon_wakeup_selfie_ccd.png",
+   "ref_zh": "training_v1/08",
+   "details": [
+    {
+     "what": "手在頭後",
+     "box": [
+      0.0,
+      0.08,
+      0.45,
+      0.35
+     ]
+    },
+    {
+     "what": "桌面 RGB 鍵盤",
+     "box": [
+      0.0,
+      0.62,
+      0.3,
+      0.85
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "8 月直式",
+   "tech": "直大 254 ppi。",
+   "consistency": "一致（頭傾 36°）。",
+   "aesthetic": "伸懶腰、短上衣，俏皮微性感。",
+   "defects": "手在頭後自然；桌上 RGB 鍵盤正常。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "179 ppi（不足）；構圖成立。"
+  },
+  {
+   "cid": "yuna_H",
+   "pid": "yuna-kim",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/yuna-kim/images/face_reference/ref_01.webp",
+   "ref": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+   "ref_zh": "soul_test_v1/selfie_01",
+   "details": [
+    {
+     "what": "招牌假字",
+     "box": [
+      0.0,
+      0.08,
+      0.32,
+      0.35
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "9 月橫式半版",
+   "tech": "1728×2304，橫半 378 ppi。",
+   "consistency": "與 soul_test_v1/selfie_01 一致。",
+   "aesthetic": "清冷素顏、白背心。",
+   "defects": "背景韓文招牌字樣（遠景，非品牌）。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "215 ppi；頭頂被切（−3 mm）。"
+  },
+  {
+   "cid": "yuna_V",
+   "pid": "yuna-kim",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/yuna-kim/images/face_reference/ref_04.webp",
+   "ref": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+   "ref_zh": "soul_test_v1/selfie_01",
+   "details": [
+    {
+     "what": "手插腰",
+     "box": [
+      0.55,
+      0.65,
+      0.98,
+      0.95
+     ]
+    },
+    {
+     "what": "招牌",
+     "box": [
+      0.6,
+      0.0,
+      0.95,
+      0.3
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "9 月直式（取代 R1 1152 px 圖）",
+   "tech": "直大 305 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "插腰、略帶性感，臉清楚。",
+   "defects": "無明顯瑕疵。",
+   "action": "保留候選",
+   "adoption": "草稿採用（203 ppi 問題以換圖解決）",
+   "h_wide_note": "215 ppi；頭頂被切。"
+  },
+  {
+   "cid": "yuna_altsoft",
+   "pid": "yuna-kim",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "kols/yuna-kim/images/soul_test_v1/selfie_02.png",
+   "ref": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+   "ref_zh": "soul_test_v1/selfie_01",
+   "details": [
+    {
+     "what": "毛衣假字",
+     "box": [
+      0.1,
+      0.52,
+      0.9,
+      0.95
+     ]
+    },
+    {
+     "what": "手在頭上",
+     "box": [
+      0.0,
+      0.0,
+      0.35,
+      0.3
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "9 月柔和替代（近距離）",
+   "tech": "1152×2048：直大 203、縮框 236 ppi（邊緣），只適合更小的框。",
+   "consistency": "一致。",
+   "aesthetic": "最柔和、臉最清楚。",
+   "defects": "毛衣上有 AI 假英文＋韓文字（必修）。",
+   "action": "修圖",
+   "adoption": "只建議小框；需修假字",
+   "h_wide_note": "143 ppi（不足）；額頭被切 → 不成立。"
+  },
+  {
+   "cid": "yuna_R1V",
+   "pid": "yuna-kim",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/yuna-kim/images/soul_test_v1/street_02.png",
+   "ref": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+   "ref_zh": "soul_test_v1/selfie_01",
+   "details": [
+    {
+     "what": "包包花紋",
+     "box": [
+      0.48,
+      0.32,
+      0.68,
+      0.52
+     ]
+    },
+    {
+     "what": "格紋裙",
+     "box": [
+      0.3,
+      0.6,
+      0.7,
+      0.82
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "1152×2048，直大 203 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "—",
+   "defects": "原圖 100% 檢查：包包看不到可辨識的品牌標記，格紋裙是一般格紋 → 撤回 R1「名牌格紋必修」。",
+   "action": "換圖",
+   "adoption": "不採用（理由是解析度與構圖，不是格紋）",
+   "h_wide_note": "—（R1 對照圖，已換掉，不再評）"
+  },
+  {
+   "cid": "tammy_H",
+   "pid": "tammy-chou",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/tammy-chou/images/training_v1/train_01.jpg",
+   "ref": "review/soul_pilot/tammy-chou/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手托下巴",
+     "box": [
+      0.42,
+      0.12,
+      0.7,
+      0.32
+     ]
+    },
+    {
+     "what": "條碼標籤",
+     "box": [
+      0.2,
+      0.84,
+      0.52,
+      1.0
+     ]
+    },
+    {
+     "what": "腳",
+     "box": [
+      0.6,
+      0.82,
+      0.88,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "10 月橫式半版（倉庫坐箱）",
+   "tech": "橫半 378 ppi；臉高約 19 mm。",
+   "consistency": "一致（手托下巴 3/4）。",
+   "aesthetic": "長捲髮完整、坐姿顯身形、表情柔和；玫瑰色針織洋裝。",
+   "defects": "紙箱上假條碼貼紙（小）；赤腳；衣架雜亂。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "215 ppi；構圖成立。"
+  },
+  {
+   "cid": "tammy_V",
+   "pid": "tammy-chou",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "hf:dca8ec08-704c-4ed3-ba5f-4d7dddcfbaba",
+   "ref": "review/soul_pilot/tammy-chou/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "左手",
+     "box": [
+      0.0,
+      0.52,
+      0.22,
+      0.7
+     ]
+    },
+    {
+     "what": "右手",
+     "box": [
+      0.78,
+      0.52,
+      1.0,
+      0.7
+     ]
+    },
+    {
+     "what": "腿與膝",
+     "box": [
+      0.35,
+      0.78,
+      0.85,
+      1.0
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.0,
+      0.3,
+      0.32,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "10 月直式（頂樓夜景黑洋裝）",
+   "tech": "daily_v2 原圖，直大 271 ppi。",
+   "consistency": "與 V6 一致。",
+   "aesthetic": "長捲髮、身形曲線最完整，性感柔和。",
+   "defects": "背景 4–5 位路人；雙手正常。",
+   "action": "保留候選",
+   "adoption": "草稿採用；最終需修路人",
+   "h_wide_note": "191 ppi；構圖成立。"
+  },
+  {
+   "cid": "tammy_alt075",
+   "pid": "tammy-chou",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "hf:8b320d27-6fa6-4172-8d1d-1650515c76d8",
+   "ref": "review/soul_pilot/tammy-chou/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "左手",
+     "box": [
+      0.0,
+      0.52,
+      0.22,
+      0.7
+     ]
+    },
+    {
+     "what": "右手",
+     "box": [
+      0.78,
+      0.52,
+      1.0,
+      0.7
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "10 月同場景第二張",
+   "tech": "直大 271 ppi。",
+   "consistency": "一致（側看）。",
+   "aesthetic": "同上，表情更柔。",
+   "defects": "背景路人；雙手正常。",
+   "action": "保留候選",
+   "adoption": "備用",
+   "h_wide_note": "191 ppi。"
+  },
+  {
+   "cid": "tammy_R1H",
+   "pid": "tammy-chou",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/tammy-chou/images/training_v1/train_03.jpg",
+   "ref": "review/soul_pilot/tammy-chou/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "化妝棉",
+     "box": [
+      0.72,
+      0.78,
+      1.0,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "—",
+   "consistency": "一致。",
+   "aesthetic": "灰襯衫自拍、頭髮綁起，看不出長捲髮。",
+   "defects": "手持化妝棉。",
+   "action": "換圖",
+   "adoption": "不採用",
+   "h_wide_note": "—（R1 對照圖，已換掉，不再評）"
+  },
+  {
+   "cid": "rin_H",
+   "pid": "rin-ayase",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/rin-ayase/images/training_v1/train_02.jpg",
+   "ref": "review/soul_pilot/rin-ayase/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手在耳邊",
+     "box": [
+      0.52,
+      0.18,
+      0.82,
+      0.42
+     ]
+    },
+    {
+     "what": "化妝品",
+     "box": [
+      0.0,
+      0.82,
+      0.55,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "11 月橫式半版",
+   "tech": "橫半 378 ppi。",
+   "consistency": "一致。",
+   "aesthetic": "盤髮裸背、成熟性感。",
+   "defects": "化妝盤道具正常；手指靠眼角自然。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "215 ppi；盤髮頂被切。"
+  },
+  {
+   "cid": "rin_V",
+   "pid": "rin-ayase",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "hf:aac89087-4f3e-48d7-ad21-e406b21e69ba",
+   "ref": "review/soul_pilot/rin-ayase/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手扶椅",
+     "box": [
+      0.05,
+      0.72,
+      0.32,
+      0.95
+     ]
+    },
+    {
+     "what": "咖啡杯",
+     "box": [
+      0.0,
+      0.42,
+      0.16,
+      0.56
+     ]
+    },
+    {
+     "what": "背景路人",
+     "box": [
+      0.7,
+      0.08,
+      1.0,
+      0.6
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "11 月直式（柔和替代）",
+   "tech": "daily_v2 原圖，直大 271 ppi。",
+   "consistency": "與 V6 高度一致（正臉微笑）。",
+   "aesthetic": "柔和、臉最清楚；白背心窄裙。",
+   "defects": "背景右側西裝男等路人；咖啡杯與扶椅的手正常。",
+   "action": "保留候選",
+   "adoption": "草稿採用；最終需修路人",
+   "h_wide_note": "191 ppi；構圖成立。"
+  },
+  {
+   "cid": "rin_altR1V",
+   "pid": "rin-ayase",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "kols/rin-ayase/images/training_v1/train_01.jpg",
+   "ref": "review/soul_pilot/rin-ayase/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "手",
+     "box": [
+      0.55,
+      0.72,
+      0.85,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 直式（緞面晨袍回頭）",
+   "tech": "直大 305 ppi，臉小（側後方）。",
+   "consistency": "側臉，可比對部位少。",
+   "aesthetic": "最性感的一張。",
+   "defects": "手與緞面正常。",
+   "action": "保留候選",
+   "adoption": "備用",
+   "h_wide_note": "215 ppi；構圖成立，臉小。"
+  },
+  {
+   "cid": "rainie_H",
+   "pid": "rainie-hsu",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+   "ref": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+   "ref_zh": "training_v2/02",
+   "details": [
+    {
+     "what": "手與耳環",
+     "box": [
+      0.03,
+      0.13,
+      0.36,
+      0.36
+     ]
+    },
+    {
+     "what": "鏡中閃光／人影",
+     "box": [
+      0.58,
+      0.12,
+      1.0,
+      0.48
+     ]
+    },
+    {
+     "what": "假日期戳",
+     "box": [
+      0.6,
+      0.92,
+      1.0,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "12 月橫式半版",
+   "tech": "橫半 352 ppi。",
+   "consistency": "與 training_v2 一致（閃光讓遮罩臉偏亮）。",
+   "aesthetic": "濃豔、珠寶、馬甲。",
+   "defects": "右下假日期戳「2023/18/07」（必修）；鏡面閃光與鏡中人影。",
+   "action": "修圖",
+   "adoption": "日期戳處理後草稿採用",
+   "h_wide_note": "179 ppi；額頭進線圈。"
+  },
+  {
+   "cid": "rainie_V",
+   "pid": "rainie-hsu",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png",
+   "ref": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+   "ref_zh": "training_v2/02",
+   "details": [
+    {
+     "what": "被子與手",
+     "box": [
+      0.7,
+      0.55,
+      1.0,
+      0.85
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "12 月直式（柔和表情替代、取代門口照）",
+   "tech": "直大 254 ppi，臉高 50 mm。",
+   "consistency": "一致（雀斑點為該組妝感）。",
+   "aesthetic": "柔和、居家，臉最清楚。",
+   "defects": "被子與手正常。",
+   "action": "保留候選",
+   "adoption": "草稿採用",
+   "h_wide_note": "179 ppi；額頭進線圈。"
+  },
+  {
+   "cid": "rainie_alt02",
+   "pid": "rainie-hsu",
+   "role": "alt",
+   "role_zh": "替代候選",
+   "src": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+   "ref": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+   "ref_zh": "training_v2/02",
+   "details": [
+    {
+     "what": "手機閃光",
+     "box": [
+      0.68,
+      0.18,
+      1.0,
+      0.42
+     ]
+    },
+    {
+     "what": "洗衣籃",
+     "box": [
+      0.0,
+      0.7,
+      0.3,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "12 月性感替代",
+   "tech": "直大 254 ppi。",
+   "consistency": "與參考同一張。",
+   "aesthetic": "濃豔性感。",
+   "defects": "手機閃光；左下洗衣籃雜亂（需裁或修）。",
+   "action": "修圖",
+   "adoption": "備用",
+   "h_wide_note": "179 ppi。"
+  },
+  {
+   "cid": "rainie_R1V",
+   "pid": "rainie-hsu",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png",
+   "ref": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+   "ref_zh": "training_v2/02",
+   "details": [
+    {
+     "what": "人物（偏小）",
+     "box": [
+      0.3,
+      0.15,
+      0.75,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "人物太小，臉偵測不到。",
+   "consistency": "—",
+   "aesthetic": "—",
+   "defects": "—",
+   "action": "換圖",
+   "adoption": "不採用（主管意見：人物偏小）",
+   "h_wide_note": "—（R1 對照圖，已換掉，不再評）"
+  },
+  {
+   "cid": "wanyin_H",
+   "pid": "wanyin-jiang",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/wanyin-jiang/images/training_v1/train_05.jpg",
+   "ref": "review/soul_pilot/wanyin-jiang/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "盤扣與手",
+     "box": [
+      0.35,
+      0.35,
+      0.7,
+      0.65
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "備選｜橫式",
+   "tech": "橫半 378 ppi；全身，臉太小偵測不到。",
+   "consistency": "—",
+   "aesthetic": "旗袍古典。",
+   "defects": "盤扣與手正常。",
+   "action": "保留候選",
+   "adoption": "備用（臉小）",
+   "h_wide_note": "215 ppi（邊緣）；全身，臉太小偵測不到 → 人物過小。"
+  },
+  {
+   "cid": "wanyin_V",
+   "pid": "wanyin-jiang",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/wanyin-jiang/images/training_v1/train_04.jpg",
+   "ref": "review/soul_pilot/wanyin-jiang/verify_v1/V6.png",
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "池面倒影",
+     "box": [
+      0.2,
+      0.82,
+      0.85,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "備選｜直式",
+   "tech": "直大 305 ppi；全身，臉小。",
+   "consistency": "—",
+   "aesthetic": "園林旗袍。",
+   "defects": "池面倒影正常。",
+   "action": "保留候選",
+   "adoption": "備用（臉小）",
+   "h_wide_note": "215 ppi（邊緣）；全身，臉太小偵測不到 → 人物過小。"
+  },
+  {
+   "cid": "sophia_H",
+   "pid": "sophia-tseng",
+   "role": "H",
+   "role_zh": "橫式主候選",
+   "src": "kols/sophia-tseng/images/training_v1/08_home_candid_sofa_wine.png",
+   "ref": "kols/sophia-tseng/images/training_v1/10_home_selfie_couch_loungewear.png",
+   "ref_zh": "training_v1/10",
+   "details": [
+    {
+     "what": "酒杯與手",
+     "box": [
+      0.48,
+      0.28,
+      0.78,
+      0.5
+     ]
+    },
+    {
+     "what": "酒瓶標",
+     "box": [
+      0.72,
+      0.75,
+      1.0,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "備選｜橫式",
+   "tech": "直大 254 ppi；側臉，偵測不到正臉。",
+   "consistency": "—",
+   "aesthetic": "夜景紅酒，成熟。",
+   "defects": "酒瓶無標籤；手與杯正常。",
+   "action": "保留候選",
+   "adoption": "備用",
+   "h_wide_note": "179 ppi（不足）；側臉偵測不到，構圖本身是夜景全身。"
+  },
+  {
+   "cid": "sophia_V",
+   "pid": "sophia-tseng",
+   "role": "V",
+   "role_zh": "直式主候選",
+   "src": "kols/sophia-tseng/images/training_v1/02_morning_selfie_bed.png",
+   "ref": "kols/sophia-tseng/images/training_v1/10_home_selfie_couch_loungewear.png",
+   "ref_zh": "training_v1/10",
+   "details": [
+    {
+     "what": "自拍手臂邊緣",
+     "box": [
+      0.0,
+      0.6,
+      0.2,
+      1.0
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "備選｜直式（取代背影）",
+   "tech": "直大 254 ppi；頭頂被切（−6 mm），縮框可保。",
+   "consistency": "與 training_v1/10 一致。",
+   "aesthetic": "甜笑、緞面細肩帶。",
+   "defects": "自拍手臂邊緣。",
+   "action": "保留候選",
+   "adoption": "備用；建議用縮框",
+   "h_wide_note": "179 ppi（不足）；額頭貼上緣 → 不成立。"
+  },
+  {
+   "cid": "sophia_R1V",
+   "pid": "sophia-tseng",
+   "role": "r1",
+   "role_zh": "R1 原候選（對照）",
+   "src": "kols/sophia-tseng/images/training_v1/01_morning_window_candid.png",
+   "ref": "kols/sophia-tseng/images/training_v1/10_home_selfie_couch_loungewear.png",
+   "ref_zh": "training_v1/10",
+   "details": [
+    {
+     "what": "背影",
+     "box": [
+      0.25,
+      0.15,
+      0.75,
+      0.95
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "R1 原候選（對照）",
+   "tech": "—",
+   "consistency": "—",
+   "aesthetic": "背影。",
+   "defects": "—",
+   "action": "換圖",
+   "adoption": "不採用（主管意見）",
+   "h_wide_note": "—（R1 對照圖，已換掉，不再評）"
+  },
+  {
+   "cid": "ananya_1",
+   "pid": "ananya-kapoor",
+   "role": "cmp",
+   "role_zh": "比較用",
+   "src": "kols/ananya-kapoor/images/face_reference/ref_01.webp",
+   "ref": null,
+   "ref_zh": "face_reference/ref_02",
+   "details": [],
+   "status": "原圖已查",
+   "use_for": "比較用（未入選）",
+   "tech": "1728×2304，可做任何框。",
+   "consistency": "—",
+   "aesthetic": "深膚色、長捲髮、運動背心，自信性感。",
+   "defects": "背景街景虛化。",
+   "action": "比較用",
+   "adoption": "—",
+   "h_wide_note": "215 ppi（邊緣）；頭頂估 2 mm（貼線圈），構圖成立。"
+  },
+  {
+   "cid": "ananya_2",
+   "pid": "ananya-kapoor",
+   "role": "cmp",
+   "role_zh": "比較用",
+   "src": "kols/ananya-kapoor/images/face_reference/ref_02.webp",
+   "ref": null,
+   "ref_zh": "face_reference/ref_02",
+   "details": [],
+   "status": "原圖已查",
+   "use_for": "比較用（未入選）",
+   "tech": "同上。",
+   "consistency": "—",
+   "aesthetic": "正面、臉清楚。",
+   "defects": "同上。",
+   "action": "比較用",
+   "adoption": "—",
+   "h_wide_note": "215 ppi（邊緣）；頭頂被切（−2 mm）。"
+  },
+  {
+   "cid": "ananya_3",
+   "pid": "ananya-kapoor",
+   "role": "cmp",
+   "role_zh": "比較用",
+   "src": "kols/ananya-kapoor/images/soul_test_v1/04_cafe_window_02.png",
+   "ref": null,
+   "ref_zh": "face_reference/ref_02",
+   "details": [
+    {
+     "what": "拿杯的手",
+     "box": [
+      0.25,
+      0.28,
+      0.58,
+      0.45
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "比較用（未入選）",
+   "tech": "1152×2048（邊緣）。",
+   "consistency": "—",
+   "aesthetic": "咖啡館、甜笑。",
+   "defects": "拿杯的手正常。",
+   "action": "比較用",
+   "adoption": "—",
+   "h_wide_note": "143 ppi（不足）；額頭進線圈 → 不成立。"
+  },
+  {
+   "cid": "wendy_1",
+   "pid": "wendy-yeo",
+   "role": "cmp",
+   "role_zh": "比較用",
+   "src": "hf:6dcf6753-7db2-4e90-ad88-c23a59ec8ddc",
+   "ref": null,
+   "ref_zh": "Soul 驗證 V6",
+   "details": [],
+   "status": "原圖已查",
+   "use_for": "比較用（未入選）",
+   "tech": "daily_v2 原圖 1536×2048。",
+   "consistency": "—",
+   "aesthetic": "銀灰鮑伯、冷感成熟；臉清楚。",
+   "defects": "窗外路人。",
+   "action": "比較用",
+   "adoption": "—",
+   "h_wide_note": "191 ppi（不足）；頭頂貼上緣。"
+  },
+  {
+   "cid": "wendy_2",
+   "pid": "wendy-yeo",
+   "role": "cmp",
+   "role_zh": "比較用",
+   "src": "hf:c74665a0-1095-4c48-b9cd-aea93f9e74f6",
+   "ref": null,
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "拿包的手",
+     "box": [
+      0.55,
+      0.62,
+      0.78,
+      0.8
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "比較用（未入選）",
+   "tech": "同上。",
+   "consistency": "—",
+   "aesthetic": "紅色抹胸、背影回頭。",
+   "defects": "酒吧路人多；手拿包正常。",
+   "action": "比較用",
+   "adoption": "—",
+   "h_wide_note": "191 ppi（不足）；構圖成立。"
+  },
+  {
+   "cid": "wendy_3",
+   "pid": "wendy-yeo",
+   "role": "cmp",
+   "role_zh": "比較用",
+   "src": "kols/wendy-yeo/images/training_v1/train_03.jpg",
+   "ref": null,
+   "ref_zh": "Soul 驗證 V6",
+   "details": [
+    {
+     "what": "拿毛巾的手",
+     "box": [
+      0.35,
+      0.18,
+      0.6,
+      0.35
+     ]
+    }
+   ],
+   "status": "原圖已查",
+   "use_for": "比較用（未入選）",
+   "tech": "1728×2304。",
+   "consistency": "—",
+   "aesthetic": "浴袍、毛巾。",
+   "defects": "手正常。",
+   "action": "比較用",
+   "adoption": "—",
+   "h_wide_note": "215 ppi（邊緣）；構圖成立。"
+  }
+ ]
+}

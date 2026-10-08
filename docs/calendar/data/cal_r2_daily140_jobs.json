@@ -1,0 +1,1385 @@
+{
+ "note": "review/soul_pilot/daily140/thumbs/<編號>.jpg ↔ Higgsfield job_id（file 欄是 index.json 的原檔名，例 001.png）；以縮圖與 Higgsfield 預覽圖的相關係數比對（最低 0.9999）。按時間先後對應是錯的（90/138 不符），已改用影像比對。",
+ "rows": [
+  {
+   "file": "001.png",
+   "pid": "angel-chiu",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "0fa2f505-9fe6-46ab-a9c3-77dc8d85c7ae",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "002.png",
+   "pid": "angel-chiu",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "236c6d10-70f1-422c-a345-ba36bf8c7ad8",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "003.png",
+   "pid": "angel-chiu",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "080fe64f-4e30-469b-b675-15ffcc65cde5",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "004.png",
+   "pid": "angel-chiu",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "a28ee8ee-4926-4bfb-a705-8745d8c3a1bb",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "005.png",
+   "pid": "angel-chiu",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "b07f3fe9-fdba-4437-9a70-9ef1e080e333",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "101.png",
+   "pid": "angel-chiu",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "94da910b-3254-4a48-a4f4-b6875ac42b95",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "102.png",
+   "pid": "angel-chiu",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "9653877d-715f-4524-bf4e-d2a0d5e557b6",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "006.png",
+   "pid": "angeline-kwee",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "cb084746-8f41-4b89-b829-39155b4fdb75",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "007.png",
+   "pid": "angeline-kwee",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "12422168-b6d0-4786-972e-de91dbc4586f",
+   "created_utc": "2026-09-10T08:24:50+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "008.png",
+   "pid": "angeline-kwee",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "df25b4c4-1ecb-4e33-b2ab-d7b3f72761e1",
+   "created_utc": "2026-09-10T08:24:49+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "009.png",
+   "pid": "angeline-kwee",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "7b840901-9f98-44e7-8fbc-348d74749290",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "010.png",
+   "pid": "angeline-kwee",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "936f9d72-f2c4-42f0-89f8-6f5cc8161f0e",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "103.png",
+   "pid": "angeline-kwee",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "6f093012-1eda-48c5-b147-9148a7432877",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "104.png",
+   "pid": "angeline-kwee",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "ffe78dc9-bfc6-4fa6-9dc7-00d5155e7106",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "011.png",
+   "pid": "cheryl-soh",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "de76189a-121e-4dc6-ab75-ed5df7bba7fa",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "012.png",
+   "pid": "cheryl-soh",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "340e646c-60cf-4763-8998-c6a67875686e",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "013.png",
+   "pid": "cheryl-soh",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "ca7908e7-b03b-4ca6-bd07-26eb14e048c8",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "014.png",
+   "pid": "cheryl-soh",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "1de8ce75-138a-413a-a8a9-e50c9efb7217",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "015.png",
+   "pid": "cheryl-soh",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "65c1cd52-12de-4cbe-9208-599ab9638ad7",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "105.png",
+   "pid": "cheryl-soh",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "796088cf-5c01-45d5-9c3e-7b5d080852e6",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "106.png",
+   "pid": "cheryl-soh",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "2607577e-62ac-4150-9625-5c02169d5311",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "016.png",
+   "pid": "emma-kao",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "69ce977c-961f-4048-bd55-1c408978acd5",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "017.png",
+   "pid": "emma-kao",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "ff15d6e2-85a5-49eb-b12f-b1a683706a07",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "018.png",
+   "pid": "emma-kao",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "748aa582-ff30-4a59-b235-3ef1e9c119ae",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "019.png",
+   "pid": "emma-kao",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "e422fdac-a17c-4325-9ff6-51354ceac2f6",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "020.png",
+   "pid": "emma-kao",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "cb97ff95-abc8-4c63-92ef-b22466de3668",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "107.png",
+   "pid": "emma-kao",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "41016ee5-6dd8-4a79-8b60-333801dd1b7b",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "108.png",
+   "pid": "emma-kao",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "70762083-b5d8-4318-be94-4718469e03cd",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "021.png",
+   "pid": "jia-seo",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "69990b94-0a4d-4b8e-9fe8-88929a35ff38",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "022.png",
+   "pid": "jia-seo",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "cdc08ecc-1627-435c-99ca-2aff83ec0b15",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "023.png",
+   "pid": "jia-seo",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "51f83b69-05dc-431b-8f84-a3a16c91aa64",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "024.png",
+   "pid": "jia-seo",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "8e72ab27-e968-4f1b-b1fe-90822b833b52",
+   "created_utc": "2026-09-10T08:27:26+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "025.png",
+   "pid": "jia-seo",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "91a333be-73c2-48f0-b75c-64795fdcd766",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "109.png",
+   "pid": "jia-seo",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "081673e3-77a3-4778-b6a7-b0088b875e05",
+   "created_utc": "2026-09-10T08:45:31+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "110.png",
+   "pid": "jia-seo",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "857d71c6-72cc-4065-9552-44a48ea85d93",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "026.png",
+   "pid": "kanon-komori",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "8e4d02cc-8c79-4ef9-ac63-50904643d480",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "027.png",
+   "pid": "kanon-komori",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "2fa953a1-9767-4980-af47-4c662a5661b2",
+   "created_utc": "2026-09-10T08:32:56+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "028.png",
+   "pid": "kanon-komori",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "06f9c1d5-bf50-4b4c-bbb7-dc95c8743133",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "029.png",
+   "pid": "kanon-komori",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "8c3ebdce-f393-4d7a-abae-bef90c1a313c",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "030.png",
+   "pid": "kanon-komori",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "72d282c7-a97e-46d6-b370-bb04a9538462",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "111.png",
+   "pid": "kanon-komori",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "fcac7740-3904-4d2c-aa02-a16781354e79",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "112.png",
+   "pid": "kanon-komori",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "e05794e6-da98-4177-9c3b-2b144e69c909",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "032.png",
+   "pid": "miu-shiraishi",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "fd426ab8-be42-4831-b2eb-bbd44ad86c97",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "034.png",
+   "pid": "miu-shiraishi",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "b8dc55cb-5957-4447-9071-e1dfcc32c469",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "035.png",
+   "pid": "miu-shiraishi",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "030785d2-278b-4604-b23d-deb12ecc94ff",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "113.png",
+   "pid": "miu-shiraishi",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "93d12a41-8f5b-4350-96e0-890257abf9a3",
+   "created_utc": "2026-09-10T08:45:31+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "114.png",
+   "pid": "miu-shiraishi",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "697e6962-2f66-4bc1-af49-c5ace5b336c7",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "036.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "44af95e5-8d6f-4ada-aa3e-a52a890cf078",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "037.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "33910cc0-4cf9-4c2e-9d8c-1f991470ce69",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "038.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "c7304377-1b30-4673-9f22-32385f1fe699",
+   "created_utc": "2026-09-10T08:34:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "039.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "98203cba-2a02-4797-b5f8-77855d469888",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "040.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "752708a1-ea0d-4486-97da-4a599e492619",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "115.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "b65c9401-b9f2-4a2e-bfe7-3f13581629da",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "116.png",
+   "pid": "nanami-fujiwara",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "986152c5-fb4e-4afc-b04d-1cc59a536e48",
+   "created_utc": "2026-09-10T08:45:33+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "041.png",
+   "pid": "nico-tsai",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "49081419-8a4d-4014-8ee2-ae2fe857b5ce",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "042.png",
+   "pid": "nico-tsai",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "da1bf4b9-f518-4b2b-a0a7-1626c2d01f85",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "043.png",
+   "pid": "nico-tsai",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "10d7781d-8923-483d-b815-a01f242782ce",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "044.png",
+   "pid": "nico-tsai",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "eb00d980-ccbd-422a-b3e3-eed938812de0",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "045.png",
+   "pid": "nico-tsai",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "96825af2-de78-443c-b0a6-d429a9ec78e3",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "117.png",
+   "pid": "nico-tsai",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "53a1fc18-4993-4c73-8f36-edfa15d2ccbb",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "118.png",
+   "pid": "nico-tsai",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "c4d8b82a-e054-4008-899d-f0e41c325185",
+   "created_utc": "2026-09-10T08:45:31+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "046.png",
+   "pid": "peggy-lee",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "0c288304-e13b-43d5-8d70-0f868f1c70a4",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "047.png",
+   "pid": "peggy-lee",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "b34611c2-f30c-4d46-8535-d48476fc9864",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "048.png",
+   "pid": "peggy-lee",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "1606abab-8d33-4642-883d-848539bf3aef",
+   "created_utc": "2026-09-10T08:34:36+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "049.png",
+   "pid": "peggy-lee",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "d4bd7450-d1fe-4f4a-b608-bc1b31ba3157",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "050.png",
+   "pid": "peggy-lee",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "0f275877-6ded-410e-830a-c1eab2096c2d",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "119.png",
+   "pid": "peggy-lee",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "3f1ceb5a-cd83-42d2-b2ad-b19cec190dba",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "120.png",
+   "pid": "peggy-lee",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "21131648-1344-440e-9a34-597cb4f86a69",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "051.png",
+   "pid": "rin-ayase",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "adcfde8a-136e-4853-b908-33b02ae866ac",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "052.png",
+   "pid": "rin-ayase",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "bd2ff934-315c-488c-9710-f3f7902430de",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "053.png",
+   "pid": "rin-ayase",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "aac89087-4f3e-48d7-ad21-e406b21e69ba",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "054.png",
+   "pid": "rin-ayase",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "17b71327-b419-4a84-a778-599cd98ab955",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "055.png",
+   "pid": "rin-ayase",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "183da50b-9ee4-406a-827e-55d6a52b6a67",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "121.png",
+   "pid": "rin-ayase",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "812dcec4-1f8a-42e0-a045-625df2daec4e",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "122.png",
+   "pid": "rin-ayase",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "14795e85-e504-41dc-bb29-1d95ff9e62f5",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "056.png",
+   "pid": "ruoruo-tang",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "96017125-8980-4ba4-9fd8-d0f9733f8441",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "057.png",
+   "pid": "ruoruo-tang",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "29509664-ff74-404b-b469-98db7dd56934",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "058.png",
+   "pid": "ruoruo-tang",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "046e52b8-0f6c-4356-8037-db5544bc609f",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "059.png",
+   "pid": "ruoruo-tang",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "c499096b-ace8-424f-bfc7-935e7528adcd",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "060.png",
+   "pid": "ruoruo-tang",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "bb89a354-8071-41d6-8286-2d2f0fe56a32",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "123.png",
+   "pid": "ruoruo-tang",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "ad5670c3-e129-4316-b8b2-68ab6e30ff8b",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "124.png",
+   "pid": "ruoruo-tang",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "f365a7ed-1587-4f28-9649-fbc8e4a38ca4",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "061.png",
+   "pid": "somi-oh",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "e154b72a-b433-4643-856b-cef9ca02623c",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "062.png",
+   "pid": "somi-oh",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "717b95f7-18a7-4f21-ad6b-8898c5bb2e28",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "063.png",
+   "pid": "somi-oh",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "4e54ab6b-d9a1-4173-ab81-82a6948d1f15",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "064.png",
+   "pid": "somi-oh",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "faeb0bf3-e85d-432e-8ef1-b9a46cd31be6",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "065.png",
+   "pid": "somi-oh",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "57a1fc53-5ea7-491d-a6c5-9aad0d97da17",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "125.png",
+   "pid": "somi-oh",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "87d10020-b899-4ef4-9dc0-04308e5a2057",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "126.png",
+   "pid": "somi-oh",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "5101030d-c0da-4ac3-a134-165d7fa15b17",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "066.png",
+   "pid": "sydney-leong",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "d28bd8fd-dd40-479d-8a78-2c4f02039269",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "067.png",
+   "pid": "sydney-leong",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "eca51076-8b2d-47de-aeb5-8d9181de1e3d",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "068.png",
+   "pid": "sydney-leong",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "46a52c13-fb58-44d7-be27-103bb0889835",
+   "created_utc": "2026-09-10T08:38:03+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "069.png",
+   "pid": "sydney-leong",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "f948a47f-f1d8-45bc-b34b-1e33be5579cb",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "070.png",
+   "pid": "sydney-leong",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "6fc50aef-f55c-43ec-8d21-b24972a75258",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "127.png",
+   "pid": "sydney-leong",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "0733e3c6-10f1-4ede-9cdc-6880fc32297c",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "128.png",
+   "pid": "sydney-leong",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "56d18349-914d-4259-8b3a-d1dce7e9ddbf",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "071.png",
+   "pid": "tammy-chou",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "5b7715e1-98a6-42ad-bee3-4bfdd780beb4",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "072.png",
+   "pid": "tammy-chou",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "0847ce27-047e-474d-9b80-26ed084b4709",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "073.png",
+   "pid": "tammy-chou",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "3455add8-1c2f-4b30-977a-eb63163396af",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "074.png",
+   "pid": "tammy-chou",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "991f7ae7-9501-4fa0-87ad-ca30ee69187a",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "075.png",
+   "pid": "tammy-chou",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "8b320d27-6fa6-4172-8d1d-1650515c76d8",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "129.png",
+   "pid": "tammy-chou",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "50ebe9ee-e6d6-487b-b350-51312e167bc1",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "130.png",
+   "pid": "tammy-chou",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "dca8ec08-704c-4ed3-ba5f-4d7dddcfbaba",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "076.png",
+   "pid": "wanyin-jiang",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "3df45038-6ae9-45e9-a07f-6890614df417",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "077.png",
+   "pid": "wanyin-jiang",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "5177cacc-98da-465d-874f-46708c7e617f",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "078.png",
+   "pid": "wanyin-jiang",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "8fbbe6e2-b58f-4e66-b2dd-b5d79405b829",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "079.png",
+   "pid": "wanyin-jiang",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "57ff2a23-8b88-4db0-a89b-7e6660061ae5",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "080.png",
+   "pid": "wanyin-jiang",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "45c73179-d906-4bc7-87d0-a3ef20555f76",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "131.png",
+   "pid": "wanyin-jiang",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "79b35e49-c984-4c8d-a533-320849b3e32d",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "132.png",
+   "pid": "wanyin-jiang",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "375257a9-32a9-41fc-94f4-dd718a3977ea",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "081.png",
+   "pid": "wendy-yeo",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "8348950c-f63f-44cc-9127-888682e42951",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "082.png",
+   "pid": "wendy-yeo",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "52fada33-482d-4fe8-85d7-a6a480cc918a",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "083.png",
+   "pid": "wendy-yeo",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "6dcf6753-7db2-4e90-ad88-c23a59ec8ddc",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "084.png",
+   "pid": "wendy-yeo",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "4221ed40-9257-4223-92d9-c689d57e00ba",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "085.png",
+   "pid": "wendy-yeo",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "c74665a0-1095-4c48-b9cd-aea93f9e74f6",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "133.png",
+   "pid": "wendy-yeo",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "32fdb7bb-549a-4878-a502-bd9040fd6061",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "134.png",
+   "pid": "wendy-yeo",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "529a0097-76d2-4f2f-9c8c-033e29baef24",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "086.png",
+   "pid": "yerin-han",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "7aa429fc-23f4-45f3-a58a-791085b84b52",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "087.png",
+   "pid": "yerin-han",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "8ac3397e-4cb4-4691-8114-611c4cb94a99",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "088.png",
+   "pid": "yerin-han",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "8f748fed-09b6-4e71-823b-f4d40fd9e7a8",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "089.png",
+   "pid": "yerin-han",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "205031f0-01b1-4119-ac47-1463af873501",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "090.png",
+   "pid": "yerin-han",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "13c5fa4f-9d4f-4b2e-a108-9bcac1db31b7",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "135.png",
+   "pid": "yerin-han",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "6d515adf-7e5f-48e3-9e9c-054a20e74c1f",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "136.png",
+   "pid": "yerin-han",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "78821eb2-332a-4067-8c94-5f35936ff9f2",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "091.png",
+   "pid": "zhiyi-shen",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "538c4f5f-c2aa-4134-8d42-1199c628b3a5",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "092.png",
+   "pid": "zhiyi-shen",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "7f1d441f-045a-468d-8592-9604cf3a561b",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "093.png",
+   "pid": "zhiyi-shen",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "d9585619-e8ef-4ea0-8788-5cfaf4c2128f",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "094.png",
+   "pid": "zhiyi-shen",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "ca7c7a66-b26d-467e-8c6b-68201aba0c6e",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "095.png",
+   "pid": "zhiyi-shen",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "c9aaed6b-f765-43cd-85c8-3cf9e1b232dd",
+   "created_utc": "2026-09-10T08:42:06+00:00",
+   "match_corr": 0.9999
+  },
+  {
+   "file": "137.png",
+   "pid": "zhiyi-shen",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "753bfd67-091c-47f0-993b-4a755f3c8084",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "138.png",
+   "pid": "zhiyi-shen",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "d256e013-8d89-46f9-b3a0-370bdd11b9a3",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "096.png",
+   "pid": "zoey-yeh",
+   "slot": "D1",
+   "take": 1,
+   "framing_spec": "chest_up",
+   "job_id": "18dd0d80-72ce-409a-8ded-da179213917a",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "097.png",
+   "pid": "zoey-yeh",
+   "slot": "D2",
+   "take": 1,
+   "framing_spec": "waist_up",
+   "job_id": "4e96a97f-7173-49f0-8b0c-ce06f83d8c6f",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "098.png",
+   "pid": "zoey-yeh",
+   "slot": "D3",
+   "take": 1,
+   "framing_spec": "three_quarter",
+   "job_id": "9bede5e9-3166-45c4-8337-6141a3fc88ef",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "099.png",
+   "pid": "zoey-yeh",
+   "slot": "D4",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "9bb54d8a-984c-4923-b801-ee6c56b53983",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "100.png",
+   "pid": "zoey-yeh",
+   "slot": "D5",
+   "take": 1,
+   "framing_spec": "full_length",
+   "job_id": "0cefa348-faed-4750-b776-12844c87bea3",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "139.png",
+   "pid": "zoey-yeh",
+   "slot": "D4",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "de47a7b0-846b-4593-b458-510053063675",
+   "created_utc": "2026-09-10T08:50:07+00:00",
+   "match_corr": 1.0
+  },
+  {
+   "file": "140.png",
+   "pid": "zoey-yeh",
+   "slot": "D5",
+   "take": 2,
+   "framing_spec": "full_length",
+   "job_id": "29f4dee7-c35b-45ef-b2d1-2da0eaf7d232",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "match_corr": 1.0
+  }
+ ]
+}

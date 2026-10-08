@@ -1,0 +1,452 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r2_mockups.py",
+ "dpi": 300,
+ "coil_mm": 12,
+ "note": "effective_ppi＝原圖裁切後像素 ÷ 框寬英吋；upscaled=true 表示排版時有放大（只影響預覽品質判斷，不代表原圖細節足夠）。",
+ "placements": {
+  "iris-chen_H_A": {
+   "src_px": [
+    1920,
+    2560
+   ],
+   "crop_px": [
+    108,
+    0,
+    1718,
+    2560
+   ],
+   "frame_mm": [
+    104,
+    155
+   ],
+   "effective_ppi": 420,
+   "upscaled": false,
+   "forehead_y_mm": 31.9,
+   "chin_y_mm": 74.9,
+   "face_clear_of_coil": true
+  },
+  "iris-chen_H_B": {
+   "src_px": [
+    1920,
+    2560
+   ],
+   "crop_px": [
+    0,
+    263,
+    1920,
+    1040
+   ],
+   "frame_mm": [
+    192,
+    104
+   ],
+   "effective_ppi": 254,
+   "upscaled": true,
+   "forehead_y_mm": 38.8,
+   "chin_y_mm": 72.5,
+   "face_clear_of_coil": true
+  },
+  "iris-chen_V_A": {
+   "src_px": [
+    1920,
+    2560
+   ],
+   "crop_px": [
+    0,
+    0,
+    1920,
+    2000
+   ],
+   "frame_mm": [
+    144,
+    150
+   ],
+   "effective_ppi": 339,
+   "upscaled": false,
+   "forehead_y_mm": 38.3,
+   "chin_y_mm": 63.6,
+   "face_clear_of_coil": true
+  },
+  "iris-chen_V_B": {
+   "src_px": [
+    1920,
+    2560
+   ],
+   "crop_px": [
+    0,
+    0,
+    1920,
+    2044
+   ],
+   "frame_mm": [
+    124,
+    132
+   ],
+   "effective_ppi": 393,
+   "upscaled": false,
+   "forehead_y_mm": 49.0,
+   "chin_y_mm": 70.8,
+   "face_clear_of_coil": true
+  },
+  "vicky-lin_H_A": {
+   "src_px": [
+    1440,
+    2560
+   ],
+   "crop_px": [
+    0,
+    0,
+    1440,
+    2146
+   ],
+   "frame_mm": [
+    104,
+    155
+   ],
+   "effective_ppi": 352,
+   "upscaled": false,
+   "forehead_y_mm": 32.3,
+   "chin_y_mm": 65.7,
+   "face_clear_of_coil": true
+  },
+  "vicky-lin_H_B": {
+   "src_px": [
+    1440,
+    2560
+   ],
+   "crop_px": [
+    0,
+    385,
+    1440,
+    780
+   ],
+   "frame_mm": [
+    192,
+    104
+   ],
+   "effective_ppi": 190,
+   "upscaled": true,
+   "forehead_y_mm": 31.6,
+   "chin_y_mm": 79.6,
+   "face_clear_of_coil": true
+  },
+  "vicky-lin_V_A": {
+   "src_px": [
+    1440,
+    2560
+   ],
+   "crop_px": [
+    0,
+    157,
+    1440,
+    1500
+   ],
+   "frame_mm": [
+    144,
+    150
+   ],
+   "effective_ppi": 254,
+   "upscaled": true,
+   "forehead_y_mm": 36.0,
+   "chin_y_mm": 72.0,
+   "face_clear_of_coil": true
+  },
+  "vicky-lin_V_B": {
+   "src_px": [
+    1440,
+    2560
+   ],
+   "crop_px": [
+    0,
+    145,
+    1440,
+    1533
+   ],
+   "frame_mm": [
+    124,
+    132
+   ],
+   "effective_ppi": 295,
+   "upscaled": true,
+   "forehead_y_mm": 48.0,
+   "chin_y_mm": 79.0,
+   "face_clear_of_coil": true
+  },
+  "rin-ayase_H_A": {
+   "src_px": [
+    1728,
+    2304
+   ],
+   "crop_px": [
+    73,
+    0,
+    1546,
+    2304
+   ],
+   "frame_mm": [
+    104,
+    155
+   ],
+   "effective_ppi": 378,
+   "upscaled": false,
+   "forehead_y_mm": 28.0,
+   "chin_y_mm": 61.0,
+   "face_clear_of_coil": true
+  },
+  "rin-ayase_H_B": {
+   "src_px": [
+    1728,
+    2304
+   ],
+   "crop_px": [
+    0,
+    185,
+    1728,
+    936
+   ],
+   "frame_mm": [
+    192,
+    104
+   ],
+   "effective_ppi": 229,
+   "upscaled": true,
+   "forehead_y_mm": 39.9,
+   "chin_y_mm": 71.2,
+   "face_clear_of_coil": true
+  },
+  "rin-ayase_V_A": {
+   "src_px": [
+    1536,
+    2048
+   ],
+   "crop_px": [
+    0,
+    0,
+    1536,
+    1600
+   ],
+   "frame_mm": [
+    144,
+    150
+   ],
+   "effective_ppi": 271,
+   "upscaled": true,
+   "forehead_y_mm": 23.9,
+   "chin_y_mm": 52.4,
+   "face_clear_of_coil": true
+  },
+  "rin-ayase_V_B": {
+   "src_px": [
+    1536,
+    2048
+   ],
+   "crop_px": [
+    0,
+    0,
+    1536,
+    1635
+   ],
+   "frame_mm": [
+    124,
+    132
+   ],
+   "effective_ppi": 315,
+   "upscaled": false,
+   "forehead_y_mm": 36.5,
+   "chin_y_mm": 61.1,
+   "face_clear_of_coil": true
+  },
+  "cover_H_Iris": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 1058,
+   "upscaled": false
+  },
+  "cover_H_Kanon": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 462,
+   "upscaled": false
+  },
+  "cover_H_Luna": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 511,
+   "upscaled": false
+  },
+  "cover_H_Angel": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 364,
+   "upscaled": false
+  },
+  "cover_H_Somi": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 524,
+   "upscaled": false
+  },
+  "cover_H_Vicky": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 535,
+   "upscaled": false
+  },
+  "cover_H_Coco": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 957,
+   "upscaled": false
+  },
+  "cover_H_Mia": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 1036,
+   "upscaled": false
+  },
+  "cover_H_Yuna": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 663,
+   "upscaled": false
+  },
+  "cover_H_Tammy": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 404,
+   "upscaled": false
+  },
+  "cover_H_Rin": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 453,
+   "upscaled": false
+  },
+  "cover_H_Rainie": {
+   "tile_mm": [
+    29.5,
+    44.4
+   ],
+   "effective_ppi": 748,
+   "upscaled": false
+  },
+  "cover_V_Iris": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 1117,
+   "upscaled": false
+  },
+  "cover_V_Kanon": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 488,
+   "upscaled": false
+  },
+  "cover_V_Luna": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 541,
+   "upscaled": false
+  },
+  "cover_V_Angel": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 385,
+   "upscaled": false
+  },
+  "cover_V_Somi": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 554,
+   "upscaled": false
+  },
+  "cover_V_Vicky": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 565,
+   "upscaled": false
+  },
+  "cover_V_Coco": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 1012,
+   "upscaled": false
+  },
+  "cover_V_Mia": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 1094,
+   "upscaled": false
+  },
+  "cover_V_Yuna": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 700,
+   "upscaled": false
+  },
+  "cover_V_Tammy": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 426,
+   "upscaled": false
+  },
+  "cover_V_Rin": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 478,
+   "upscaled": false
+  },
+  "cover_V_Rainie": {
+   "tile_mm": [
+    30.4,
+    42.0
+   ],
+   "effective_ppi": 791,
+   "upscaled": false
+  }
+ }
+}

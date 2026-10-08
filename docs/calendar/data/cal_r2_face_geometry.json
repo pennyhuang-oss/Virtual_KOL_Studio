@@ -1,0 +1,532 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r2_faces.py",
+ "yaw_proxy": "鼻尖相對兩眼中點的水平偏移 ÷ 眼距；0 為正臉。只用來挑角度相近的圖，不是辨識分數。",
+ "people": {
+  "iris-chen": [
+   {
+    "src": "kols/iris-chen/images/training_v1/08_cafe_window_04.webp",
+    "tag": "R training_v1",
+    "yaw_proxy": -0.058,
+    "roll_deg": 0.4,
+    "eye_distance_px": 294.7,
+    "head": "r2/faces/heads/iris-chen_1.jpg",
+    "masked": "r2/faces/masked/iris-chen_1.jpg"
+   },
+   {
+    "src": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+    "tag": "R training_v1",
+    "yaw_proxy": 0.009,
+    "roll_deg": -4.6,
+    "eye_distance_px": 288.6,
+    "head": "r2/faces/heads/iris-chen_2.jpg",
+    "masked": "r2/faces/masked/iris-chen_2.jpg"
+   }
+  ],
+  "kanon-komori": [
+   {
+    "src": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": 0.048,
+    "roll_deg": 0.2,
+    "eye_distance_px": 266.5,
+    "head": "r2/faces/heads/kanon-komori_1.jpg",
+    "masked": "r2/faces/masked/kanon-komori_1.jpg"
+   },
+   {
+    "src": "hf:8e4d02cc-8c79-4ef9-ac63-50904643d480",
+    "tag": "D daily_v2",
+    "yaw_proxy": -0.046,
+    "roll_deg": -2.4,
+    "eye_distance_px": 217.3,
+    "head": "r2/faces/heads/kanon-komori_2.jpg",
+    "masked": "r2/faces/masked/kanon-komori_2.jpg"
+   }
+  ],
+  "luna-tanaka": [
+   {
+    "src": "kols/luna-tanaka/images/soul_test_v1/04_cafe_window_02.png",
+    "tag": "R soul_test_v1",
+    "yaw_proxy": 0.037,
+    "roll_deg": -4.5,
+    "eye_distance_px": 197.2,
+    "head": "r2/faces/heads/luna-tanaka_1.jpg",
+    "masked": "r2/faces/masked/luna-tanaka_1.jpg"
+   },
+   {
+    "src": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+    "tag": "R pilot_b1",
+    "yaw_proxy": 0.075,
+    "roll_deg": -2.4,
+    "eye_distance_px": 123.2,
+    "head": "r2/faces/heads/luna-tanaka_2.jpg",
+    "masked": "r2/faces/masked/luna-tanaka_2.jpg"
+   }
+  ],
+  "angel-chiu": [
+   {
+    "src": "review/soul_pilot/angel-chiu/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": -0.008,
+    "roll_deg": -0.4,
+    "eye_distance_px": 252.1,
+    "head": "r2/faces/heads/angel-chiu_1.jpg",
+    "masked": "r2/faces/masked/angel-chiu_1.jpg"
+   },
+   {
+    "src": "hf:080fe64f-4e30-469b-b675-15ffcc65cde5",
+    "tag": "D daily_v2",
+    "yaw_proxy": -0.031,
+    "roll_deg": -2.2,
+    "eye_distance_px": 126.4,
+    "head": "r2/faces/heads/angel-chiu_2.jpg",
+    "masked": "r2/faces/masked/angel-chiu_2.jpg"
+   }
+  ],
+  "somi-oh": [
+   {
+    "src": "review/soul_pilot/somi-oh/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": -0.006,
+    "roll_deg": -3.0,
+    "eye_distance_px": 275.2,
+    "head": "r2/faces/heads/somi-oh_1.jpg",
+    "masked": "r2/faces/masked/somi-oh_1.jpg"
+   },
+   {
+    "src": "hf:4e54ab6b-d9a1-4173-ab81-82a6948d1f15",
+    "tag": "D daily_v2",
+    "yaw_proxy": -0.084,
+    "roll_deg": -3.0,
+    "eye_distance_px": 131.2,
+    "head": "r2/faces/heads/somi-oh_2.jpg",
+    "masked": "r2/faces/masked/somi-oh_2.jpg"
+   }
+  ],
+  "vicky-lin": [
+   {
+    "src": "kols/vicky-lin/images/face_reference/v4_anchored_08_side_halfbody.png",
+    "tag": "R face_reference",
+    "yaw_proxy": -0.107,
+    "roll_deg": -8.8,
+    "eye_distance_px": 147.7,
+    "head": "r2/faces/heads/vicky-lin_1.jpg",
+    "masked": "r2/faces/masked/vicky-lin_1.jpg"
+   },
+   {
+    "src": "kols/vicky-lin/images/face_reference/v4_anchored_02_front_halfbody.png",
+    "tag": "R face_reference",
+    "yaw_proxy": -0.14,
+    "roll_deg": -9.7,
+    "eye_distance_px": 126.1,
+    "head": "r2/faces/heads/vicky-lin_2.jpg",
+    "masked": "r2/faces/masked/vicky-lin_2.jpg"
+   }
+  ],
+  "coco-wu": [
+   {
+    "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+    "tag": "R training_v1",
+    "yaw_proxy": -0.042,
+    "roll_deg": 7.9,
+    "eye_distance_px": 217.2,
+    "head": "r2/faces/heads/coco-wu_1.jpg",
+    "masked": "r2/faces/masked/coco-wu_1.jpg"
+   },
+   {
+    "src": "kols/coco-wu/images/face_reference/candidate_02.png",
+    "tag": "R face_reference",
+    "yaw_proxy": -0.064,
+    "roll_deg": 6.6,
+    "eye_distance_px": 194.8,
+    "head": "r2/faces/heads/coco-wu_2.jpg",
+    "masked": "r2/faces/masked/coco-wu_2.jpg"
+   }
+  ],
+  "mia-huang": [
+   {
+    "src": "kols/mia-huang/images/training_v1/08_afternoon_wakeup_selfie_ccd.png",
+    "tag": "R training_v1",
+    "yaw_proxy": 0.042,
+    "roll_deg": -10.9,
+    "eye_distance_px": 138.9,
+    "head": "r2/faces/heads/mia-huang_1.jpg",
+    "masked": "r2/faces/masked/mia-huang_1.jpg"
+   },
+   {
+    "src": "kols/mia-huang/images/training_v1/06_stream_reaction_webcam.png",
+    "tag": "R training_v1",
+    "yaw_proxy": 0.047,
+    "roll_deg": -13.8,
+    "eye_distance_px": 217.0,
+    "head": "r2/faces/heads/mia-huang_2.jpg",
+    "masked": "r2/faces/masked/mia-huang_2.jpg"
+   }
+  ],
+  "yuna-kim": [
+   {
+    "src": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+    "tag": "R soul_test_v1",
+    "yaw_proxy": -0.047,
+    "roll_deg": -5.0,
+    "eye_distance_px": 210.6,
+    "head": "r2/faces/heads/yuna-kim_1.jpg",
+    "masked": "r2/faces/masked/yuna-kim_1.jpg"
+   },
+   {
+    "src": "kols/yuna-kim/images/soul_test_v1/selfie_02.png",
+    "tag": "R soul_test_v1",
+    "yaw_proxy": -0.105,
+    "roll_deg": -3.9,
+    "eye_distance_px": 217.7,
+    "head": "r2/faces/heads/yuna-kim_2.jpg",
+    "masked": "r2/faces/masked/yuna-kim_2.jpg"
+   }
+  ],
+  "tammy-chou": [
+   {
+    "src": "review/soul_pilot/tammy-chou/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": 0.008,
+    "roll_deg": 4.9,
+    "eye_distance_px": 285.5,
+    "head": "r2/faces/heads/tammy-chou_1.jpg",
+    "masked": "r2/faces/masked/tammy-chou_1.jpg"
+   },
+   {
+    "src": "hf:5b7715e1-98a6-42ad-bee3-4bfdd780beb4",
+    "tag": "D daily_v2",
+    "yaw_proxy": 0.043,
+    "roll_deg": 9.7,
+    "eye_distance_px": 180.3,
+    "head": "r2/faces/heads/tammy-chou_2.jpg",
+    "masked": "r2/faces/masked/tammy-chou_2.jpg"
+   }
+  ],
+  "rin-ayase": [
+   {
+    "src": "review/soul_pilot/rin-ayase/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": -0.019,
+    "roll_deg": -2.4,
+    "eye_distance_px": 263.3,
+    "head": "r2/faces/heads/rin-ayase_1.jpg",
+    "masked": "r2/faces/masked/rin-ayase_1.jpg"
+   },
+   {
+    "src": "hf:adcfde8a-136e-4853-b908-33b02ae866ac",
+    "tag": "D daily_v2",
+    "yaw_proxy": 0.066,
+    "roll_deg": -5.6,
+    "eye_distance_px": 215.2,
+    "head": "r2/faces/heads/rin-ayase_2.jpg",
+    "masked": "r2/faces/masked/rin-ayase_2.jpg"
+   }
+  ],
+  "rainie-hsu": [
+   {
+    "src": "kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png",
+    "tag": "R training_v2",
+    "yaw_proxy": -0.002,
+    "roll_deg": 13.2,
+    "eye_distance_px": 200.2,
+    "head": "r2/faces/heads/rainie-hsu_1.jpg",
+    "masked": "r2/faces/masked/rainie-hsu_1.jpg"
+   },
+   {
+    "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+    "tag": "R training_v2",
+    "yaw_proxy": 0.166,
+    "roll_deg": 14.6,
+    "eye_distance_px": 170.9,
+    "head": "r2/faces/heads/rainie-hsu_2.jpg",
+    "masked": "r2/faces/masked/rainie-hsu_2.jpg"
+   }
+  ],
+  "wanyin-jiang": [
+   {
+    "src": "review/soul_pilot/wanyin-jiang/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": -0.051,
+    "roll_deg": -4.1,
+    "eye_distance_px": 234.7,
+    "head": "r2/faces/heads/wanyin-jiang_1.jpg",
+    "masked": "r2/faces/masked/wanyin-jiang_1.jpg"
+   },
+   {
+    "src": "hf:3df45038-6ae9-45e9-a07f-6890614df417",
+    "tag": "D daily_v2",
+    "yaw_proxy": -0.033,
+    "roll_deg": -7.0,
+    "eye_distance_px": 176.8,
+    "head": "r2/faces/heads/wanyin-jiang_2.jpg",
+    "masked": "r2/faces/masked/wanyin-jiang_2.jpg"
+   }
+  ],
+  "sophia-tseng": [
+   {
+    "src": "kols/sophia-tseng/images/training_v1/10_home_selfie_couch_loungewear.png",
+    "tag": "R training_v1",
+    "yaw_proxy": 0.052,
+    "roll_deg": 8.5,
+    "eye_distance_px": 203.2,
+    "head": "r2/faces/heads/sophia-tseng_1.jpg",
+    "masked": "r2/faces/masked/sophia-tseng_1.jpg"
+   },
+   {
+    "src": "kols/sophia-tseng/images/training_v1/12_hotel_mirror_selfie_ccd.png",
+    "tag": "R training_v1",
+    "yaw_proxy": 0.076,
+    "roll_deg": 4.2,
+    "eye_distance_px": 130.4,
+    "head": "r2/faces/heads/sophia-tseng_2.jpg",
+    "masked": "r2/faces/masked/sophia-tseng_2.jpg"
+   }
+  ],
+  "ananya-kapoor": [
+   {
+    "src": "kols/ananya-kapoor/images/face_reference/ref_02.webp",
+    "tag": "R face_reference",
+    "yaw_proxy": -0.066,
+    "roll_deg": -5.0,
+    "eye_distance_px": 164.6,
+    "head": "r2/faces/heads/ananya-kapoor_1.jpg",
+    "masked": "r2/faces/masked/ananya-kapoor_1.jpg"
+   },
+   {
+    "src": "kols/ananya-kapoor/images/soul_test_v1/04_cafe_window_02.png",
+    "tag": "R soul_test_v1",
+    "yaw_proxy": -0.105,
+    "roll_deg": -3.3,
+    "eye_distance_px": 172.9,
+    "head": "r2/faces/heads/ananya-kapoor_2.jpg",
+    "masked": "r2/faces/masked/ananya-kapoor_2.jpg"
+   }
+  ],
+  "wendy-yeo": [
+   {
+    "src": "review/soul_pilot/wendy-yeo/verify_v1/V6.png",
+    "tag": "R verify_v1",
+    "yaw_proxy": -0.038,
+    "roll_deg": -2.4,
+    "eye_distance_px": 287.3,
+    "head": "r2/faces/heads/wendy-yeo_1.jpg",
+    "masked": "r2/faces/masked/wendy-yeo_1.jpg"
+   },
+   {
+    "src": "kols/wendy-yeo/images/training_v1/train_03.jpg",
+    "tag": "R training_v1",
+    "yaw_proxy": -0.014,
+    "roll_deg": -7.5,
+    "eye_distance_px": 133.4,
+    "head": "r2/faces/heads/wendy-yeo_2.jpg",
+    "masked": "r2/faces/masked/wendy-yeo_2.jpg"
+   }
+  ],
+  "vicky-lin__c": [
+   {
+    "src": "kols/vicky-lin/images/face_reference/v4_anchored_08_side_halfbody.png",
+    "tag": "比較用",
+    "yaw_proxy": -0.107,
+    "roll_deg": -8.8,
+    "eye_distance_px": 147.7,
+    "head": "r2/faces/heads/vicky-lin__c_1.jpg",
+    "masked": "r2/faces/masked/vicky-lin__c_1.jpg"
+   },
+   {
+    "src": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+    "tag": "R1 橫候選",
+    "yaw_proxy": 0.14,
+    "roll_deg": -18.5,
+    "eye_distance_px": 144.2,
+    "head": "r2/faces/heads/vicky-lin__c_2.jpg",
+    "masked": "r2/faces/masked/vicky-lin__c_2.jpg"
+   },
+   {
+    "src": "kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+    "tag": "R1 直候選",
+    "yaw_proxy": -0.134,
+    "roll_deg": -9.6,
+    "eye_distance_px": 127.2,
+    "head": "r2/faces/heads/vicky-lin__c_3.jpg",
+    "masked": "r2/faces/masked/vicky-lin__c_3.jpg"
+   }
+  ],
+  "coco-wu__c": [
+   {
+    "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+    "tag": "比較用＝R2 直替代",
+    "yaw_proxy": -0.042,
+    "roll_deg": 7.9,
+    "eye_distance_px": 217.2,
+    "head": "r2/faces/heads/coco-wu__c_1.jpg",
+    "masked": "r2/faces/masked/coco-wu__c_1.jpg"
+   },
+   {
+    "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+    "tag": "R1 橫候選",
+    "yaw_proxy": -0.03,
+    "roll_deg": 10.2,
+    "eye_distance_px": 264.6,
+    "head": "r2/faces/heads/coco-wu__c_2.jpg",
+    "masked": "r2/faces/masked/coco-wu__c_2.jpg"
+   },
+   {
+    "src": "kols/coco-wu/images/face_reference/candidate_03.png",
+    "tag": "R1 直候選",
+    "yaw_proxy": -0.368,
+    "roll_deg": 20.2,
+    "eye_distance_px": 180.9,
+    "head": "r2/faces/heads/coco-wu__c_3.jpg",
+    "masked": "r2/faces/masked/coco-wu__c_3.jpg"
+   },
+   {
+    "src": "kols/coco-wu/images/training_v1/12_badminton_courtside_selfie.png",
+    "tag": "其他既有圖",
+    "yaw_proxy": -0.166,
+    "roll_deg": 11.2,
+    "eye_distance_px": 241.0,
+    "head": "r2/faces/heads/coco-wu__c_4.jpg",
+    "masked": "r2/faces/masked/coco-wu__c_4.jpg"
+   }
+  ],
+  "mia-huang__c": [
+   {
+    "src": "kols/mia-huang/images/training_v1/10_skincare_bathroom_selfie.png",
+    "tag": "比較用",
+    "yaw_proxy": 0.055,
+    "roll_deg": -8.2,
+    "eye_distance_px": 128.9,
+    "head": "r2/faces/heads/mia-huang__c_1.jpg",
+    "masked": "r2/faces/masked/mia-huang__c_1.jpg"
+   },
+   {
+    "src": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+    "tag": "R1 橫候選",
+    "yaw_proxy": -0.271,
+    "roll_deg": 20.1,
+    "eye_distance_px": 302.8,
+    "head": "r2/faces/heads/mia-huang__c_2.jpg",
+    "masked": "r2/faces/masked/mia-huang__c_2.jpg"
+   },
+   {
+    "src": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+    "tag": "R1 直候選",
+    "yaw_proxy": -0.23,
+    "roll_deg": 36.5,
+    "eye_distance_px": 133.9,
+    "head": "r2/faces/heads/mia-huang__c_3.jpg",
+    "masked": "r2/faces/masked/mia-huang__c_3.jpg"
+   }
+  ],
+  "otherline_headshots": [
+   {
+    "src": "hf:f7e815ae-f0e4-478d-9916-07fe0d2e76e4",
+    "tag": "Iris",
+    "yaw_proxy": -0.006,
+    "roll_deg": -0.3,
+    "eye_distance_px": 269.3,
+    "head": "r2/faces/heads/otherline_headshots_1.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_1.jpg"
+   },
+   {
+    "src": "hf:20402217-8dad-4d59-855b-c9af90d43c68",
+    "tag": "Kanon",
+    "yaw_proxy": 0.005,
+    "roll_deg": -0.1,
+    "eye_distance_px": 247.1,
+    "head": "r2/faces/heads/otherline_headshots_2.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_2.jpg"
+   },
+   {
+    "src": "hf:abd8b297-3461-4616-9929-45e201007ffa",
+    "tag": "Luna",
+    "yaw_proxy": 0.017,
+    "roll_deg": -0.6,
+    "eye_distance_px": 252.3,
+    "head": "r2/faces/heads/otherline_headshots_3.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_3.jpg"
+   },
+   {
+    "src": "hf:8ca951a1-dc56-4384-9b19-c9e3c6cd8aa1",
+    "tag": "Angel",
+    "yaw_proxy": 0.01,
+    "roll_deg": -2.8,
+    "eye_distance_px": 258.3,
+    "head": "r2/faces/heads/otherline_headshots_4.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_4.jpg"
+   },
+   {
+    "src": "hf:573297d5-e945-42ed-a92b-09366835aca4",
+    "tag": "Somi",
+    "yaw_proxy": -0.015,
+    "roll_deg": -0.4,
+    "eye_distance_px": 247.5,
+    "head": "r2/faces/heads/otherline_headshots_5.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_5.jpg"
+   },
+   {
+    "src": "hf:14d841c1-d3fd-4286-ac91-8750c02033ed",
+    "tag": "Vicky",
+    "yaw_proxy": -0.003,
+    "roll_deg": -0.9,
+    "eye_distance_px": 278.3,
+    "head": "r2/faces/heads/otherline_headshots_6.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_6.jpg"
+   },
+   {
+    "src": "hf:83f0a242-ab14-4ee0-88c8-2a022c436eb9",
+    "tag": "Coco",
+    "yaw_proxy": 0.022,
+    "roll_deg": -1.0,
+    "eye_distance_px": 263.1,
+    "head": "r2/faces/heads/otherline_headshots_7.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_7.jpg"
+   },
+   {
+    "src": "hf:55e4e154-95e1-42dc-8b0c-d5107af27bae",
+    "tag": "Mia",
+    "yaw_proxy": -0.003,
+    "roll_deg": 0.5,
+    "eye_distance_px": 260.8,
+    "head": "r2/faces/heads/otherline_headshots_8.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_8.jpg"
+   },
+   {
+    "src": "hf:ec1583f2-5d10-4563-82f3-ffdc208df5e1",
+    "tag": "Yuna",
+    "yaw_proxy": -0.002,
+    "roll_deg": -1.4,
+    "eye_distance_px": 233.4,
+    "head": "r2/faces/heads/otherline_headshots_9.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_9.jpg"
+   },
+   {
+    "src": "hf:1843d3de-50b7-4ce3-b206-75674475a5ae",
+    "tag": "Tammy",
+    "yaw_proxy": -0.013,
+    "roll_deg": -0.7,
+    "eye_distance_px": 243.6,
+    "head": "r2/faces/heads/otherline_headshots_10.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_10.jpg"
+   },
+   {
+    "src": "hf:e3f4b43f-eb8c-43d3-9f75-19f9acee484e",
+    "tag": "Rin",
+    "yaw_proxy": 0.003,
+    "roll_deg": -1.3,
+    "eye_distance_px": 263.7,
+    "head": "r2/faces/heads/otherline_headshots_11.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_11.jpg"
+   },
+   {
+    "src": "hf:9021734e-c0d4-4c2f-b174-12fe0bc79689",
+    "tag": "Rainie",
+    "yaw_proxy": 0.029,
+    "roll_deg": 2.0,
+    "eye_distance_px": 260.4,
+    "head": "r2/faces/heads/otherline_headshots_12.jpg",
+    "masked": "r2/faces/masked/otherline_headshots_12.jpg"
+   }
+  ]
+ }
+}

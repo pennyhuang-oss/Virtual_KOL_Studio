@@ -122,7 +122,7 @@ a{color:inherit}.tw{overflow-x:auto;max-width:100%}img{max-width:100%}
 <dt>Soul ID</dt><dd>cf7045dc-4e69-4c56-9621-aa8c40bf39b4（ready）<br><span class="note">來源 kols/coco-wu/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
 <dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
 <dt>推薦理由</dt><dd>大笑容、深棕長捲髮配瀏海、宿舍甜心，親近感最強；有比基尼現成圖（尺度 C 參考）。</dd>
-<dt>具體缺點</dt><dd>校園／宿舍設定，成品必須避開制服元素；不同輪次 face_reference 臉略有差異。</dd>
+<dt>具體缺點</dt><dd>不同輪次 face_reference 臉略有差異；背景人像牆會分散注意。（R2 修正：刪除 R1「成品必須避開制服元素」——那不是 Penny 指定的規則，是否用制服造型屬尺度選擇）</dd>
 <dt>與他人差異</dt><dd>整組笑得最開的「元氣甜」；與 luna 同有瀏海但髮長、臉型都不同。</dd>
 <dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵</dd>
 <dt>直式候選判定</dt><dd>可直接用：背景手機螢幕顯示她自己的照片（可接受）</dd>
@@ -145,7 +145,7 @@ a{color:inherit}.tw{overflow-x:auto;max-width:100%}img{max-width:100%}
 <dt>橫式候選判定</dt><dd>可直接用：霓虹紫光色偏重，印刷色差需打樣確認</dd>
 <dt>直式候選判定</dt><dd>可直接用：無明顯瑕疵；同樣是紫光</dd>
 <dt>已剔除圖</dt><dd>kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png：門口全身照人物過小（只當比較圖，不當主視覺）</dd>
-<dt>已剔除圖</dt><dd>kols/mia-huang/images/dance_clone_r1/start_frame.png：水手領＋百褶裙屬校服風格；性感取向的桌曆一律避開制服元素</dd>
+<dt>已剔除圖</dt><dd>kols/mia-huang/images/dance_clone_r1/start_frame.png：原圖只有 1152×2048、構圖偏全身。（R2 修正：R1 寫的「性感取向桌曆一律避開制服元素」不是 Penny 指定的規則，已撤回；這張仍不推薦，理由改為解析度與構圖）</dd>
 </dl></section>
 <section class="cand" id="vicky-lin"><h3>Vicky Lin 林薇淇<span class="tag lead">主角</span>｜6 月</h3><div class="imgs">
 <figure><img loading="lazy" src="img/cand/vicky-lin_1.jpg" alt="A-1lwnons"><figcaption><b>A-1lwnons</b> 1440×2560；型錄同圖 g_1lwnons<br>kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png">原圖</a></figcaption></figure>
@@ -281,7 +281,7 @@ a{color:inherit}.tw{overflow-x:auto;max-width:100%}img{max-width:100%}
 <dt>Soul ID</dt><dd>192562bb-ca64-4615-9515-13d34807857c（ready）<br><span class="note">來源 kols/sophia-tseng/profile.json；SOUL_IDS.json 未收錄（只有 Batch 3）；未在 Higgsfield 端查驗</span></dd>
 <dt>臉部碰撞</dt><dd>未量測（不在 Batch 3 的 19 位篩檢內）</dd>
 <dt>推薦理由</dt><dd>28 歲貴婦感、信義區夜景、緞面晨袍，補整組「成熟」的年齡層；training_v1 有 13 張 1440×2560。</dd>
-<dt>具體缺點</dt><dd>face_reference 各輪臉差異大，只能用 training_v1；與 yuna 同為深棕及肩捲髮。</dd>
+<dt>具體缺點</dt><dd>face_reference 各輪臉差異大，只能用 training_v1；與 yuna 同為深棕及肩捲髮。（R2 修正：她屬原 11 位，沒有臉部量測；未量測不等於不碰撞）</dd>
 <dt>與他人差異</dt><dd>整組年齡最大的選項（28）；精品生活感。</dd>
 <dt>橫式候選判定</dt><dd>可直接用：無明顯瑕疵</dd>
 <dt>直式候選判定</dt><dd>需補生成：側臉背影、臀部入鏡，辨識度弱 → 不採用；training_v1 其他 12 張可再挑</dd>
@@ -299,7 +299,7 @@ a{color:inherit}.tw{overflow-x:auto;max-width:100%}img{max-width:100%}
 <dt>臉部碰撞</dt><dd>最近 jia-seo 0.01219；≤0.0220 共 7 組；與主角碰撞 [(&amp;#x27;kanon-komori&amp;#x27;, 0.01734), (&amp;#x27;somi-oh&amp;#x27;, 0.01894)]</dd>
 <dt>推薦理由</dt><dd>白金短鮑伯＋瀏海、咖啡店員，個人吸引力高、甜。</dd>
 <dt>具體缺點</dt><dd>落選主因：與 jia-seo 距離 0.01219（19 位中最接近的一對）、與 kanon 0.01734、與 somi 0.01894、與 nanami 0.0177。要放她，必須同時拿掉 kanon 與 somi。</dd>
-<dt>與他人差異</dt><dd>唯一白金髮。若 Penny 指定要她，建議替換組合：miu 進、kanon 與 somi 出，再從 wanyin／sophia 補一位。</dd>
+<dt>與他人差異</dt><dd>唯一白金髮。若 Penny 指定要她：kanon 與 somi 都要出（既有碰撞值 ≤0.0220），所以要進 2 位——miu＋另一位，才是 12 人（R2 修正）。</dd>
 </dl></section>
 <section class="cand" id="jia-seo"><h3>Jia Seo 서지아<span class="tag out">落選</span></h3><div class="imgs">
 <figure><img loading="lazy" src="img/cand/jia-seo_1.jpg" alt="A-1ddwxen"><figcaption><b>A-1ddwxen</b> 1728×2304；型錄同圖 g_1ddwxen<br>kols/jia-seo/images/training_v1/train_01.jpg<br><a href="https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/main/kols/jia-seo/images/training_v1/train_01.jpg">原圖</a></figcaption></figure>
@@ -368,8 +368,8 @@ a{color:inherit}.tw{overflow-x:auto;max-width:100%}img{max-width:100%}
 <tr><td>ruoruo-tang、sydney-leong</td><td>碰撞組數最多（11、10），臉最「平均」，最不利於展示差異。</td></tr>
 <tr><td>emma-kao</td><td>主播的知性成熟路線；與 rin 0.01863 碰撞。</td></tr>
 <tr><td>angeline-kwee</td><td>奶茶灰棕長捲髮與 tammy、angel 的髮色區間重疊；與 peggy 0.01788。</td></tr>
-<tr><td>wendy-yeo</td><td>銀灰鮑伯辨識度很高，但冷酷中性，不符甜美方向；若 Penny 想要一位「反差冷感」可回頭考慮（與 12 位主角無碰撞）。</td></tr>
-<tr><td>ananya-kapoor</td><td>印度旁遮普，屬亞洲；本輪以東亞甜美方向為準而未入選。是否納入南亞以拉開差異，屬 Penny 的美感判斷，列為可討論，不當作硬性排除。</td></tr>
+<tr><td>wendy-yeo</td><td>銀灰鮑伯辨識度很高，偏冷感成熟；R2 已補 3 張既有圖供 Penny 比較（既有碰撞值與 12 位主角中的 Batch 3 都 &gt; 0.0220，照錄，不代表辨識度已通過）。</td></tr>
+<tr><td>ananya-kapoor</td><td>印度旁遮普設定、成年，屬亞洲。R1 曾寫「以東亞甜美方向為準」——R2 撤回，Penny 沒有指定東亞。未入選的實際原因是沒有臉部量測、可用素材少；R2 已補 3 張既有圖供 Penny 比較，也撤回「可替任意人」的說法。</td></tr>
 <tr><td>camille-dupont、aaliya-okonkwo</td><td>設定為法國、拉丁裔，非亞洲人設。</td></tr>
 <tr><td>faye-tan、rachel-ong、kai-luo</td><td>屬 showgame-kol／Buildup_KOL，本 repo 沒有設定文件與 Soul ID；型錄圖是紀實、冷調風格（設定 30、34、27 歲），不符「漂亮、性感、甜美」。</td></tr>
 <tr><td>nova-lin</td><td>型錄 ethnicity 欄為空、設定是 AI 數位人，亞洲背景無法用設定文件查證；Soul ID 未確認。</td></tr>

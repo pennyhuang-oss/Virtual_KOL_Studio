@@ -1,0 +1,1340 @@
+{
+ "retrieved_on": "2026-10-08",
+ "how": "Higgsfield show_generations（唯讀）找到 job，再以該 job 的結果網址下載原檔到本機快取；未生成、未修改紀錄、未花 credits。原檔不進 repo（共約 221 MB），只放衍生檔。",
+ "kinds": {
+  "daily_v2": "2026-09-10 daily_v2 過採樣批次（repo 只有 360×480 縮圖於 review/soul_pilot/daily140/thumbs）；以影像相關係數逐張對回縮圖（138/138，r≥0.9999）",
+  "casting_headshot": "2026-10-08 08:23–09:14 UTC 由**其他工作線**產生的 Neutral casting headshot（非本任務生成、用途未知、未經 Penny 審）",
+  "identity_check": "2026-10-08 09:39–09:42 UTC，同上，Identity check 系列（正面／3/4／側面）"
+ },
+ "kept_64_status": "未確認：repo 沒有逐張留用清單；history 的 liked 欄 138 張皆為 false",
+ "items": [
+  {
+   "pid": "somi-oh",
+   "kind": "identity_check",
+   "view": "front",
+   "job_id": "522e5018-f9f1-4332-8c82-f3e058a46241",
+   "created_utc": "2026-10-08T09:41:18+00:00",
+   "soul_ref_name": "somi-oh-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "26a4a324cd6f3b02",
+   "bytes": 2062346,
+   "local": "raw/identity_check_somi-oh_522e5018.png"
+  },
+  {
+   "pid": "vicky-lin",
+   "kind": "identity_check",
+   "view": "3q",
+   "job_id": "d7d002ac-b1e7-4da6-8d89-8e193010193d",
+   "created_utc": "2026-10-08T09:41:17+00:00",
+   "soul_ref_name": "Vicky Lin",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "32b41e2af9e1340f",
+   "bytes": 2169268,
+   "local": "raw/identity_check_vicky-lin_d7d002ac.png"
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "identity_check",
+   "view": "profile",
+   "job_id": "29e551fc-14a3-46ea-81aa-542e6f3dd8d9",
+   "created_utc": "2026-10-08T09:39:49+00:00",
+   "soul_ref_name": "kanon-komori-soul-v1-6img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "fe0d6a2877433bcd",
+   "bytes": 2211047,
+   "local": "raw/identity_check_kanon-komori_29e551fc.png"
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "identity_check",
+   "view": "front",
+   "job_id": "ecf6739f-d24c-483a-884a-6536d2155152",
+   "created_utc": "2026-10-08T09:39:48+00:00",
+   "soul_ref_name": "kanon-komori-soul-v1-6img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "39a33497c7501606",
+   "bytes": 1967637,
+   "local": "raw/identity_check_kanon-komori_ecf6739f.png"
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "identity_check",
+   "view": "profile",
+   "job_id": "6e9f772d-878d-43c9-9708-2dd77992d43b",
+   "created_utc": "2026-10-08T09:39:48+00:00",
+   "soul_ref_name": "wendy-yeo-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "48068ca673cf3a20",
+   "bytes": 2180978,
+   "local": "raw/identity_check_wendy-yeo_6e9f772d.png"
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "identity_check",
+   "view": "front",
+   "job_id": "0b64c3a7-99a6-40ef-89d6-da8f1e8066d4",
+   "created_utc": "2026-10-08T09:39:48+00:00",
+   "soul_ref_name": "wendy-yeo-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "5f2c02b6f497bbce",
+   "bytes": 2223718,
+   "local": "raw/identity_check_wendy-yeo_0b64c3a7.png"
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "identity_check",
+   "view": "3q",
+   "job_id": "08f16aaa-4f30-48c7-8616-d11698f30337",
+   "created_utc": "2026-10-08T09:39:47+00:00",
+   "soul_ref_name": "wendy-yeo-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "9cef5e3376670a6a",
+   "bytes": 1818285,
+   "local": "raw/identity_check_wendy-yeo_08f16aaa.png"
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "identity_check",
+   "view": "3q",
+   "job_id": "94fd7535-4060-4ad0-8f9c-ecda70c0bcd5",
+   "created_utc": "2026-10-08T09:39:47+00:00",
+   "soul_ref_name": "kanon-komori-soul-v1-6img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "3da4e258a426ff2d",
+   "bytes": 1749483,
+   "local": "raw/identity_check_kanon-komori_94fd7535.png"
+  },
+  {
+   "pid": "vicky-lin",
+   "kind": "identity_check",
+   "view": "front",
+   "job_id": "0dee3f04-b1b6-4bc3-95f1-75af6a1f3d26",
+   "created_utc": "2026-10-08T09:39:47+00:00",
+   "soul_ref_name": "Vicky Lin",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "2da0a2c4ba70b2ea",
+   "bytes": 2088188,
+   "local": "raw/identity_check_vicky-lin_0dee3f04.png"
+  },
+  {
+   "pid": "vicky-lin",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "4ec53afd-78d1-4d5b-8608-c2a3f4cad7f7",
+   "created_utc": "2026-10-08T09:14:37+00:00",
+   "soul_ref_name": "Vicky Lin",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "6393eefc8f463224",
+   "bytes": 2078893,
+   "local": "raw/casting_headshot_vicky-lin_4ec53afd.png"
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "a25d51ef-bcfe-479b-9e71-05d78ba7ce0c",
+   "created_utc": "2026-10-08T09:14:37+00:00",
+   "soul_ref_name": "wendy-yeo-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "26b3e8f64cdb3d72",
+   "bytes": 1697692,
+   "local": "raw/casting_headshot_wendy-yeo_a25d51ef.png"
+  },
+  {
+   "pid": "ananya-kapoor",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "edaea5d3-a01f-48b9-bfac-9165e6a3abf9",
+   "created_utc": "2026-10-08T08:33:47+00:00",
+   "soul_ref_name": "Ananya Kapoor",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "9426ffb160b0d789",
+   "bytes": 2186226,
+   "local": "raw/casting_headshot_ananya-kapoor_edaea5d3.png"
+  },
+  {
+   "pid": "rainie-hsu",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "9021734e-c0d4-4c2f-b174-12fe0bc79689",
+   "created_utc": "2026-10-08T08:33:46+00:00",
+   "soul_ref_name": "Rainie Hsu v2",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "a8f702cfdda4b0d2",
+   "bytes": 1799090,
+   "local": "raw/casting_headshot_rainie-hsu_9021734e.png"
+  },
+  {
+   "pid": "yuna-kim",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "ec1583f2-5d10-4563-82f3-ffdc208df5e1",
+   "created_utc": "2026-10-08T08:33:45+00:00",
+   "soul_ref_name": "Yuna Kim",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "cb330cfb08e6f8e3",
+   "bytes": 1950581,
+   "local": "raw/casting_headshot_yuna-kim_ec1583f2.png"
+  },
+  {
+   "pid": "coco-wu",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "83f0a242-ab14-4ee0-88c8-2a022c436eb9",
+   "created_utc": "2026-10-08T08:33:45+00:00",
+   "soul_ref_name": "Coco Wu",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "b5fdcdf089e439b5",
+   "bytes": 1941030,
+   "local": "raw/casting_headshot_coco-wu_83f0a242.png"
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "1843d3de-50b7-4ce3-b206-75674475a5ae",
+   "created_utc": "2026-10-08T08:32:06+00:00",
+   "soul_ref_name": "tammy-chou-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "7aaec57fcc4a6a53",
+   "bytes": 1607787,
+   "local": "raw/casting_headshot_tammy-chou_1843d3de.png"
+  },
+  {
+   "pid": "iris-chen",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "f7e815ae-f0e4-478d-9916-07fe0d2e76e4",
+   "created_utc": "2026-10-08T08:24:04+00:00",
+   "soul_ref_name": "Iris Chen",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "dbea37ab8ccb6589",
+   "bytes": 1940174,
+   "local": "raw/casting_headshot_iris-chen_f7e815ae.png"
+  },
+  {
+   "pid": "mia-huang",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "55e4e154-95e1-42dc-8b0c-d5107af27bae",
+   "created_utc": "2026-10-08T08:24:03+00:00",
+   "soul_ref_name": "Mia Huang",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "2b63c78399db82a0",
+   "bytes": 1786011,
+   "local": "raw/casting_headshot_mia-huang_55e4e154.png"
+  },
+  {
+   "pid": "sophia-tseng",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "b7de3f95-9eb2-4105-9c02-79da6416c5c8",
+   "created_utc": "2026-10-08T08:24:02+00:00",
+   "soul_ref_name": "Sophia Tseng",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "863d7cecb757e00f",
+   "bytes": 1859881,
+   "local": "raw/casting_headshot_sophia-tseng_b7de3f95.png"
+  },
+  {
+   "pid": "vicky-lin",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "14d841c1-d3fd-4286-ac91-8750c02033ed",
+   "created_utc": "2026-10-08T08:23:39+00:00",
+   "soul_ref_name": "Vicky Lin",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "57ff4df5d0e172bc",
+   "bytes": 2048631,
+   "local": "raw/casting_headshot_vicky-lin_14d841c1.png"
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "20402217-8dad-4d59-855b-c9af90d43c68",
+   "created_utc": "2026-10-08T08:23:38+00:00",
+   "soul_ref_name": "kanon-komori-soul-v1-6img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "6315298cd0472493",
+   "bytes": 2095693,
+   "local": "raw/casting_headshot_kanon-komori_20402217.png"
+  },
+  {
+   "pid": "luna-tanaka",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "abd8b297-3461-4616-9929-45e201007ffa",
+   "created_utc": "2026-10-08T08:23:38+00:00",
+   "soul_ref_name": "Luna Tanaka v2",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "00857bb289898b53",
+   "bytes": 1902226,
+   "local": "raw/casting_headshot_luna-tanaka_abd8b297.png"
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "8ca951a1-dc56-4384-9b19-c9e3c6cd8aa1",
+   "created_utc": "2026-10-08T08:23:37+00:00",
+   "soul_ref_name": "angel-chiu-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "afd69af0539abd08",
+   "bytes": 2086862,
+   "local": "raw/casting_headshot_angel-chiu_8ca951a1.png"
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "573297d5-e945-42ed-a92b-09366835aca4",
+   "created_utc": "2026-10-08T08:23:02+00:00",
+   "soul_ref_name": "somi-oh-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "8047055832910913",
+   "bytes": 2003066,
+   "local": "raw/casting_headshot_somi-oh_573297d5.png"
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "e3f4b43f-eb8c-43d3-9f75-19f9acee484e",
+   "created_utc": "2026-10-08T08:23:02+00:00",
+   "soul_ref_name": "rin-ayase-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "408f29ca3b4723fe",
+   "bytes": 2082674,
+   "local": "raw/casting_headshot_rin-ayase_e3f4b43f.png"
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "3ae80a53-b8c5-4505-9329-0093084cb99e",
+   "created_utc": "2026-10-08T08:23:01+00:00",
+   "soul_ref_name": "wendy-yeo-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "0686fd5cf69bb077",
+   "bytes": 2036109,
+   "local": "raw/casting_headshot_wendy-yeo_3ae80a53.png"
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "casting_headshot",
+   "view": "front",
+   "job_id": "6fed8ba7-db5f-4539-974b-449523714206",
+   "created_utc": "2026-10-08T08:23:01+00:00",
+   "soul_ref_name": "wanyin-jiang-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "85a5d7c7097fb71a",
+   "bytes": 1533067,
+   "local": "raw/casting_headshot_wanyin-jiang_6fed8ba7.png"
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "0fa2f505-9fe6-46ab-a9c3-77dc8d85c7ae",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "a38168cdb57ea16f",
+   "bytes": 4117116,
+   "local": "raw/daily_v2_angel-chiu_0fa2f505.png",
+   "daily140_file": "001.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "236c6d10-70f1-422c-a345-ba36bf8c7ad8",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "c35dbb54dd59dfe8",
+   "bytes": 3602101,
+   "local": "raw/daily_v2_angel-chiu_236c6d10.png",
+   "daily140_file": "002.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "080fe64f-4e30-469b-b675-15ffcc65cde5",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "30ef390d53c3f6c6",
+   "bytes": 3703622,
+   "local": "raw/daily_v2_angel-chiu_080fe64f.png",
+   "daily140_file": "003.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "a28ee8ee-4926-4bfb-a705-8745d8c3a1bb",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "b4a2f15899fdf595",
+   "bytes": 3835887,
+   "local": "raw/daily_v2_angel-chiu_a28ee8ee.png",
+   "daily140_file": "004.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "b07f3fe9-fdba-4437-9a70-9ef1e080e333",
+   "created_utc": "2026-09-10T08:24:48+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "2601fb0aa823a82e",
+   "bytes": 3207485,
+   "local": "raw/daily_v2_angel-chiu_b07f3fe9.png",
+   "daily140_file": "005.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "94da910b-3254-4a48-a4f4-b6875ac42b95",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "a7d8af7910d58f00",
+   "bytes": 3649529,
+   "local": "raw/daily_v2_angel-chiu_94da910b.png",
+   "daily140_file": "101.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "angel-chiu",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "9653877d-715f-4524-bf4e-d2a0d5e557b6",
+   "created_utc": "2026-09-10T08:43:51+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "0943922036ea0e79",
+   "bytes": 3673048,
+   "local": "raw/daily_v2_angel-chiu_9653877d.png",
+   "daily140_file": "102.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "8e4d02cc-8c79-4ef9-ac63-50904643d480",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "fcdcea7cc4a1f462",
+   "bytes": 4247154,
+   "local": "raw/daily_v2_kanon-komori_8e4d02cc.png",
+   "daily140_file": "026.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "2fa953a1-9767-4980-af47-4c662a5661b2",
+   "created_utc": "2026-09-10T08:32:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "e4bfeac47913edf9",
+   "bytes": 4178350,
+   "local": "raw/daily_v2_kanon-komori_2fa953a1.png",
+   "daily140_file": "027.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "06f9c1d5-bf50-4b4c-bbb7-dc95c8743133",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "22573ab02de2b8e0",
+   "bytes": 3477180,
+   "local": "raw/daily_v2_kanon-komori_06f9c1d5.png",
+   "daily140_file": "028.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "8c3ebdce-f393-4d7a-abae-bef90c1a313c",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "8f96007959f79fdb",
+   "bytes": 3303030,
+   "local": "raw/daily_v2_kanon-komori_8c3ebdce.png",
+   "daily140_file": "029.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "72d282c7-a97e-46d6-b370-bb04a9538462",
+   "created_utc": "2026-09-10T08:32:55+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "edeb0415c662a81b",
+   "bytes": 3919595,
+   "local": "raw/daily_v2_kanon-komori_72d282c7.png",
+   "daily140_file": "030.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "fcac7740-3904-4d2c-aa02-a16781354e79",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "5b3ae66125c94301",
+   "bytes": 3190887,
+   "local": "raw/daily_v2_kanon-komori_fcac7740.png",
+   "daily140_file": "111.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "kanon-komori",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "e05794e6-da98-4177-9c3b-2b144e69c909",
+   "created_utc": "2026-09-10T08:45:30+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "8e5d505df5032744",
+   "bytes": 3571660,
+   "local": "raw/daily_v2_kanon-komori_e05794e6.png",
+   "daily140_file": "112.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "adcfde8a-136e-4853-b908-33b02ae866ac",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "0b9e0d02bee38b2b",
+   "bytes": 3664328,
+   "local": "raw/daily_v2_rin-ayase_adcfde8a.png",
+   "daily140_file": "051.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "bd2ff934-315c-488c-9710-f3f7902430de",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "ab7cf779f10f2e9c",
+   "bytes": 3692826,
+   "local": "raw/daily_v2_rin-ayase_bd2ff934.png",
+   "daily140_file": "052.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "aac89087-4f3e-48d7-ad21-e406b21e69ba",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "a9182db4d0831630",
+   "bytes": 3315241,
+   "local": "raw/daily_v2_rin-ayase_aac89087.png",
+   "daily140_file": "053.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "17b71327-b419-4a84-a778-599cd98ab955",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "f7186b84955028ef",
+   "bytes": 3568079,
+   "local": "raw/daily_v2_rin-ayase_17b71327.png",
+   "daily140_file": "054.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "183da50b-9ee4-406a-827e-55d6a52b6a67",
+   "created_utc": "2026-09-10T08:36:28+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "7d743bf48e41aa28",
+   "bytes": 3840207,
+   "local": "raw/daily_v2_rin-ayase_183da50b.png",
+   "daily140_file": "055.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "812dcec4-1f8a-42e0-a045-625df2daec4e",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "f2312ccaed222f85",
+   "bytes": 3499569,
+   "local": "raw/daily_v2_rin-ayase_812dcec4.png",
+   "daily140_file": "121.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "rin-ayase",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "14795e85-e504-41dc-bb29-1d95ff9e62f5",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "97cb82f22e657924",
+   "bytes": 4027556,
+   "local": "raw/daily_v2_rin-ayase_14795e85.png",
+   "daily140_file": "122.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "e154b72a-b433-4643-856b-cef9ca02623c",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "820840001e1f4af4",
+   "bytes": 4379937,
+   "local": "raw/daily_v2_somi-oh_e154b72a.png",
+   "daily140_file": "061.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "717b95f7-18a7-4f21-ad6b-8898c5bb2e28",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "6d80588c42842edc",
+   "bytes": 3604087,
+   "local": "raw/daily_v2_somi-oh_717b95f7.png",
+   "daily140_file": "062.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "4e54ab6b-d9a1-4173-ab81-82a6948d1f15",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "104cb9a8f5bad52d",
+   "bytes": 3537417,
+   "local": "raw/daily_v2_somi-oh_4e54ab6b.png",
+   "daily140_file": "063.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "faeb0bf3-e85d-432e-8ef1-b9a46cd31be6",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "0caa048feda3c162",
+   "bytes": 3682578,
+   "local": "raw/daily_v2_somi-oh_faeb0bf3.png",
+   "daily140_file": "064.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "57a1fc53-5ea7-491d-a6c5-9aad0d97da17",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "1556a7e4cb0cfcb6",
+   "bytes": 3365268,
+   "local": "raw/daily_v2_somi-oh_57a1fc53.png",
+   "daily140_file": "065.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "87d10020-b899-4ef4-9dc0-04308e5a2057",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "57d89b9e7594efef",
+   "bytes": 3428197,
+   "local": "raw/daily_v2_somi-oh_87d10020.png",
+   "daily140_file": "125.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "5101030d-c0da-4ac3-a134-165d7fa15b17",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "3f9ae29b6c1da6ed",
+   "bytes": 3126264,
+   "local": "raw/daily_v2_somi-oh_5101030d.png",
+   "daily140_file": "126.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "5b7715e1-98a6-42ad-bee3-4bfdd780beb4",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "5beaf00c45f3c134",
+   "bytes": 4589662,
+   "local": "raw/daily_v2_tammy-chou_5b7715e1.png",
+   "daily140_file": "071.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "0847ce27-047e-474d-9b80-26ed084b4709",
+   "created_utc": "2026-09-10T08:38:02+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "d3c3f1c3fe927658",
+   "bytes": 3857711,
+   "local": "raw/daily_v2_tammy-chou_0847ce27.png",
+   "daily140_file": "072.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "3455add8-1c2f-4b30-977a-eb63163396af",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "26b5ae30b8cebfd0",
+   "bytes": 3359446,
+   "local": "raw/daily_v2_tammy-chou_3455add8.png",
+   "daily140_file": "073.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "991f7ae7-9501-4fa0-87ad-ca30ee69187a",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "17292c642a785a53",
+   "bytes": 3423118,
+   "local": "raw/daily_v2_tammy-chou_991f7ae7.png",
+   "daily140_file": "074.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "8b320d27-6fa6-4172-8d1d-1650515c76d8",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "9fe857f7990f28b7",
+   "bytes": 3512140,
+   "local": "raw/daily_v2_tammy-chou_8b320d27.png",
+   "daily140_file": "075.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "50ebe9ee-e6d6-487b-b350-51312e167bc1",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "946e25b9995b353e",
+   "bytes": 3457977,
+   "local": "raw/daily_v2_tammy-chou_50ebe9ee.png",
+   "daily140_file": "129.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "tammy-chou",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "dca8ec08-704c-4ed3-ba5f-4d7dddcfbaba",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "83d2f7b97e9d6d79",
+   "bytes": 3393324,
+   "local": "raw/daily_v2_tammy-chou_dca8ec08.png",
+   "daily140_file": "130.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "3df45038-6ae9-45e9-a07f-6890614df417",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "ae7ac133f284d5f8",
+   "bytes": 4094248,
+   "local": "raw/daily_v2_wanyin-jiang_3df45038.png",
+   "daily140_file": "076.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "5177cacc-98da-465d-874f-46708c7e617f",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "9d77925b054c7b28",
+   "bytes": 3905461,
+   "local": "raw/daily_v2_wanyin-jiang_5177cacc.png",
+   "daily140_file": "077.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "8fbbe6e2-b58f-4e66-b2dd-b5d79405b829",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "c6ec7b7e0a344242",
+   "bytes": 3308719,
+   "local": "raw/daily_v2_wanyin-jiang_8fbbe6e2.png",
+   "daily140_file": "078.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "57ff2a23-8b88-4db0-a89b-7e6660061ae5",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "c52a777792f58809",
+   "bytes": 3591762,
+   "local": "raw/daily_v2_wanyin-jiang_57ff2a23.png",
+   "daily140_file": "079.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "45c73179-d906-4bc7-87d0-a3ef20555f76",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "4eda26fef63a82ff",
+   "bytes": 3516741,
+   "local": "raw/daily_v2_wanyin-jiang_45c73179.png",
+   "daily140_file": "080.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "79b35e49-c984-4c8d-a533-320849b3e32d",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "c85ee268e18ef036",
+   "bytes": 3539818,
+   "local": "raw/daily_v2_wanyin-jiang_79b35e49.png",
+   "daily140_file": "131.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "wanyin-jiang",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "375257a9-32a9-41fc-94f4-dd718a3977ea",
+   "created_utc": "2026-09-10T08:48:37+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "dd754536fe22911a",
+   "bytes": 3391243,
+   "local": "raw/daily_v2_wanyin-jiang_375257a9.png",
+   "daily140_file": "132.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "chest_up",
+   "job_id": "8348950c-f63f-44cc-9127-888682e42951",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "09cc9ff24548b39e",
+   "bytes": 4193356,
+   "local": "raw/daily_v2_wendy-yeo_8348950c.png",
+   "daily140_file": "081.png",
+   "slot": "D1",
+   "take": 1
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "waist_up",
+   "job_id": "52fada33-482d-4fe8-85d7-a6a480cc918a",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "32358f25382d1928",
+   "bytes": 3561814,
+   "local": "raw/daily_v2_wendy-yeo_52fada33.png",
+   "daily140_file": "082.png",
+   "slot": "D2",
+   "take": 1
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "three_quarter",
+   "job_id": "6dcf6753-7db2-4e90-ad88-c23a59ec8ddc",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "5ba37b8589bb2d42",
+   "bytes": 3401869,
+   "local": "raw/daily_v2_wendy-yeo_6dcf6753.png",
+   "daily140_file": "083.png",
+   "slot": "D3",
+   "take": 1
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "4221ed40-9257-4223-92d9-c689d57e00ba",
+   "created_utc": "2026-09-10T08:39:56+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "2c73a82aaff8ccc9",
+   "bytes": 3188288,
+   "local": "raw/daily_v2_wendy-yeo_4221ed40.png",
+   "daily140_file": "084.png",
+   "slot": "D4",
+   "take": 1
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "c74665a0-1095-4c48-b9cd-aea93f9e74f6",
+   "created_utc": "2026-09-10T08:42:04+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "3ccb26447706de71",
+   "bytes": 3304768,
+   "local": "raw/daily_v2_wendy-yeo_c74665a0.png",
+   "daily140_file": "085.png",
+   "slot": "D5",
+   "take": 1
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "32fdb7bb-549a-4878-a502-bd9040fd6061",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "c4c9ea832c8893a2",
+   "bytes": 3337640,
+   "local": "raw/daily_v2_wendy-yeo_32fdb7bb.png",
+   "daily140_file": "133.png",
+   "slot": "D4",
+   "take": 2
+  },
+  {
+   "pid": "wendy-yeo",
+   "kind": "daily_v2",
+   "view": "full_length",
+   "job_id": "529a0097-76d2-4f2f-9c8c-033e29baef24",
+   "created_utc": "2026-09-10T08:50:05+00:00",
+   "px": [
+    1536,
+    2048
+   ],
+   "sha256": "5a1ab67ca36fe8cc",
+   "bytes": 3271809,
+   "local": "raw/daily_v2_wendy-yeo_529a0097.png",
+   "daily140_file": "134.png",
+   "slot": "D5",
+   "take": 2
+  },
+  {
+   "pid": "mia-huang",
+   "kind": "identity_check",
+   "view": "front",
+   "job_id": "5f7dd962-b0fd-45b7-b36c-8ac1abe804f0",
+   "created_utc": "2026-10-08T09:42:47+00:00",
+   "soul_ref_name": "Mia Huang",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "8e04e47acb2cbcd3",
+   "bytes": 1708097,
+   "local": "raw/identity_check_mia-huang_5f7dd962.png"
+  },
+  {
+   "pid": "mia-huang",
+   "kind": "identity_check",
+   "view": "3q",
+   "job_id": "80442a89-90ff-4a52-b0e4-40defbac960d",
+   "created_utc": "2026-10-08T09:42:48+00:00",
+   "soul_ref_name": "Mia Huang",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "29a73c0fd0ca3fe3",
+   "bytes": 1502475,
+   "local": "raw/identity_check_mia-huang_80442a89.png"
+  },
+  {
+   "pid": "mia-huang",
+   "kind": "identity_check",
+   "view": "profile",
+   "job_id": "5472a7a1-63e6-4f72-bcac-04d35fdad0e1",
+   "created_utc": "2026-10-08T09:42:49+00:00",
+   "soul_ref_name": "Mia Huang",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "ed4fa041e23d6221",
+   "bytes": 1516458,
+   "local": "raw/identity_check_mia-huang_5472a7a1.png"
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "identity_check",
+   "view": "3q",
+   "job_id": "fd0f4358-b81b-4e90-86b2-1d05cfc1ddde",
+   "created_utc": "2026-10-08T09:41:20+00:00",
+   "soul_ref_name": "somi-oh-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "cda14017923403d0",
+   "bytes": 2272249,
+   "local": "raw/identity_check_somi-oh_fd0f4358.png"
+  },
+  {
+   "pid": "somi-oh",
+   "kind": "identity_check",
+   "view": "profile",
+   "job_id": "7f72c60b-1937-4b02-91aa-7db3aff21cc1",
+   "created_utc": "2026-10-08T09:42:49+00:00",
+   "soul_ref_name": "somi-oh-soul-v1-5img-20260904",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "78adf30379a69a8d",
+   "bytes": 2179124,
+   "local": "raw/identity_check_somi-oh_7f72c60b.png"
+  },
+  {
+   "pid": "vicky-lin",
+   "kind": "identity_check",
+   "view": "profile",
+   "job_id": "5f1c24b6-f297-4d05-ae1a-86d5fc5eb34b",
+   "created_utc": "2026-10-08T09:41:19+00:00",
+   "soul_ref_name": "Vicky Lin",
+   "px": [
+    1152,
+    1536
+   ],
+   "sha256": "d1d04dec0fe7c539",
+   "bytes": 2266419,
+   "local": "raw/identity_check_vicky-lin_5f1c24b6.png"
+  }
+ ]
+}

@@ -1,0 +1,416 @@
+{
+ "note": "每位 2 張既有人設圖（repo 或 daily_v2 原圖），依「最接近正臉、roll 小、臉夠大，第二張盡量取不同拍攝批次」挑；iris／yuna／vicky 為人工覆寫（理由見 CAL_06）。他線 headshot 只放觀察頁。；rainie 第一張原為閉眼（06_perfume），mia 第一張原有手持化妝棉遮臉頰（10_skincare），均改用下一張睜眼、無遮擋的圖。",
+ "people": [
+  {
+   "id": "iris-chen",
+   "label": "Iris",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/iris-chen/images/training_v1/08_cafe_window_04.webp",
+     "tag": "R training_v1"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+     "tag": "R training_v1"
+    }
+   ]
+  },
+  {
+   "id": "kanon-komori",
+   "label": "Kanon",
+   "group": "lead",
+   "images": [
+    {
+     "src": "review/soul_pilot/kanon-komori/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "hf:8e4d02cc-8c79-4ef9-ac63-50904643d480",
+     "tag": "D daily_v2"
+    }
+   ]
+  },
+  {
+   "id": "luna-tanaka",
+   "label": "Luna",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/luna-tanaka/images/soul_test_v1/04_cafe_window_02.png",
+     "tag": "R soul_test_v1"
+    },
+    {
+     "src": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+     "tag": "R pilot_b1"
+    }
+   ]
+  },
+  {
+   "id": "angel-chiu",
+   "label": "Angel",
+   "group": "lead",
+   "images": [
+    {
+     "src": "review/soul_pilot/angel-chiu/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "hf:080fe64f-4e30-469b-b675-15ffcc65cde5",
+     "tag": "D daily_v2"
+    }
+   ]
+  },
+  {
+   "id": "somi-oh",
+   "label": "Somi",
+   "group": "lead",
+   "images": [
+    {
+     "src": "review/soul_pilot/somi-oh/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "hf:4e54ab6b-d9a1-4173-ab81-82a6948d1f15",
+     "tag": "D daily_v2"
+    }
+   ]
+  },
+  {
+   "id": "vicky-lin",
+   "label": "Vicky",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/vicky-lin/images/face_reference/v4_anchored_08_side_halfbody.png",
+     "tag": "R face_reference"
+    },
+    {
+     "src": "kols/vicky-lin/images/face_reference/v4_anchored_02_front_halfbody.png",
+     "tag": "R face_reference"
+    }
+   ]
+  },
+  {
+   "id": "coco-wu",
+   "label": "Coco",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+     "tag": "R training_v1"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/candidate_02.png",
+     "tag": "R face_reference"
+    }
+   ]
+  },
+  {
+   "id": "mia-huang",
+   "label": "Mia",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/mia-huang/images/training_v1/08_afternoon_wakeup_selfie_ccd.png",
+     "tag": "R training_v1"
+    },
+    {
+     "src": "kols/mia-huang/images/training_v1/06_stream_reaction_webcam.png",
+     "tag": "R training_v1"
+    }
+   ]
+  },
+  {
+   "id": "yuna-kim",
+   "label": "Yuna",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+     "tag": "R soul_test_v1"
+    },
+    {
+     "src": "kols/yuna-kim/images/soul_test_v1/selfie_02.png",
+     "tag": "R soul_test_v1"
+    }
+   ]
+  },
+  {
+   "id": "tammy-chou",
+   "label": "Tammy",
+   "group": "lead",
+   "images": [
+    {
+     "src": "review/soul_pilot/tammy-chou/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "hf:5b7715e1-98a6-42ad-bee3-4bfdd780beb4",
+     "tag": "D daily_v2"
+    }
+   ]
+  },
+  {
+   "id": "rin-ayase",
+   "label": "Rin",
+   "group": "lead",
+   "images": [
+    {
+     "src": "review/soul_pilot/rin-ayase/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "hf:adcfde8a-136e-4853-b908-33b02ae866ac",
+     "tag": "D daily_v2"
+    }
+   ]
+  },
+  {
+   "id": "rainie-hsu",
+   "label": "Rainie",
+   "group": "lead",
+   "images": [
+    {
+     "src": "kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png",
+     "tag": "R training_v2"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+     "tag": "R training_v2"
+    }
+   ]
+  },
+  {
+   "id": "wanyin-jiang",
+   "label": "Wanyin",
+   "group": "compare",
+   "images": [
+    {
+     "src": "review/soul_pilot/wanyin-jiang/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "hf:3df45038-6ae9-45e9-a07f-6890614df417",
+     "tag": "D daily_v2"
+    }
+   ]
+  },
+  {
+   "id": "sophia-tseng",
+   "label": "Sophia",
+   "group": "compare",
+   "images": [
+    {
+     "src": "kols/sophia-tseng/images/training_v1/10_home_selfie_couch_loungewear.png",
+     "tag": "R training_v1"
+    },
+    {
+     "src": "kols/sophia-tseng/images/training_v1/12_hotel_mirror_selfie_ccd.png",
+     "tag": "R training_v1"
+    }
+   ]
+  },
+  {
+   "id": "ananya-kapoor",
+   "label": "Ananya",
+   "group": "compare",
+   "images": [
+    {
+     "src": "kols/ananya-kapoor/images/face_reference/ref_02.webp",
+     "tag": "R face_reference"
+    },
+    {
+     "src": "kols/ananya-kapoor/images/soul_test_v1/04_cafe_window_02.png",
+     "tag": "R soul_test_v1"
+    }
+   ]
+  },
+  {
+   "id": "wendy-yeo",
+   "label": "Wendy",
+   "group": "compare",
+   "images": [
+    {
+     "src": "review/soul_pilot/wendy-yeo/verify_v1/V6.png",
+     "tag": "R verify_v1"
+    },
+    {
+     "src": "kols/wendy-yeo/images/training_v1/train_03.jpg",
+     "tag": "R training_v1"
+    }
+   ]
+  },
+  {
+   "id": "vicky-lin__c",
+   "label": "Vicky",
+   "group": "consistency",
+   "images": [
+    {
+     "src": "kols/vicky-lin/images/face_reference/v4_anchored_08_side_halfbody.png",
+     "tag": "比較用"
+    },
+    {
+     "src": "kols/vicky-lin/images/face_reference/v3_01_front_headshot.png",
+     "tag": "R1 橫候選"
+    },
+    {
+     "src": "kols/vicky-lin/images/face_reference/v4_anchored_05_3q_halfbody.png",
+     "tag": "R1 直候選"
+    }
+   ]
+  },
+  {
+   "id": "coco-wu__c",
+   "label": "Coco",
+   "group": "consistency",
+   "images": [
+    {
+     "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+     "tag": "比較用＝R2 直替代"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+     "tag": "R1 橫候選"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/candidate_03.png",
+     "tag": "R1 直候選"
+    },
+    {
+     "src": "kols/coco-wu/images/training_v1/12_badminton_courtside_selfie.png",
+     "tag": "其他既有圖"
+    }
+   ]
+  },
+  {
+   "id": "mia-huang__c",
+   "label": "Mia",
+   "group": "consistency",
+   "images": [
+    {
+     "src": "kols/mia-huang/images/training_v1/10_skincare_bathroom_selfie.png",
+     "tag": "比較用"
+    },
+    {
+     "src": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+     "tag": "R1 橫候選"
+    },
+    {
+     "src": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+     "tag": "R1 直候選"
+    }
+   ]
+  },
+  {
+   "id": "otherline_headshots",
+   "label": "他線",
+   "group": "observation",
+   "images": [
+    {
+     "src": "hf:f7e815ae-f0e4-478d-9916-07fe0d2e76e4",
+     "tag": "Iris"
+    },
+    {
+     "src": "hf:20402217-8dad-4d59-855b-c9af90d43c68",
+     "tag": "Kanon"
+    },
+    {
+     "src": "hf:abd8b297-3461-4616-9929-45e201007ffa",
+     "tag": "Luna"
+    },
+    {
+     "src": "hf:8ca951a1-dc56-4384-9b19-c9e3c6cd8aa1",
+     "tag": "Angel"
+    },
+    {
+     "src": "hf:573297d5-e945-42ed-a92b-09366835aca4",
+     "tag": "Somi"
+    },
+    {
+     "src": "hf:14d841c1-d3fd-4286-ac91-8750c02033ed",
+     "tag": "Vicky"
+    },
+    {
+     "src": "hf:83f0a242-ab14-4ee0-88c8-2a022c436eb9",
+     "tag": "Coco"
+    },
+    {
+     "src": "hf:55e4e154-95e1-42dc-8b0c-d5107af27bae",
+     "tag": "Mia"
+    },
+    {
+     "src": "hf:ec1583f2-5d10-4563-82f3-ffdc208df5e1",
+     "tag": "Yuna"
+    },
+    {
+     "src": "hf:1843d3de-50b7-4ce3-b206-75674475a5ae",
+     "tag": "Tammy"
+    },
+    {
+     "src": "hf:e3f4b43f-eb8c-43d3-9f75-19f9acee484e",
+     "tag": "Rin"
+    },
+    {
+     "src": "hf:9021734e-c0d4-4c2f-b174-12fe0bc79689",
+     "tag": "Rainie"
+    }
+   ]
+  }
+ ],
+ "focus": [
+  [
+   "kanon_somi_tammy",
+   [
+    "kanon-komori",
+    "somi-oh",
+    "tammy-chou"
+   ],
+   "重點比較｜Kanon／Somi／Tammy（上三列：遮罩；下三列：完整頭像）"
+  ],
+  [
+   "angel_tammy",
+   [
+    "angel-chiu",
+    "tammy-chou"
+   ],
+   "重點比較｜Angel／Tammy（上：遮罩；下：完整頭像）"
+  ],
+  [
+   "iris_rainie",
+   [
+    "iris-chen",
+    "rainie-hsu"
+   ],
+   "重點比較｜Iris／Rainie（上：遮罩；下：完整頭像）"
+  ],
+  [
+   "consistency_vicky",
+   [
+    "vicky-lin__c"
+   ],
+   "一致性｜Vicky（上：遮罩；下：完整頭像）"
+  ],
+  [
+   "consistency_coco",
+   [
+    "coco-wu__c"
+   ],
+   "一致性｜Coco（上：遮罩；下：完整頭像）"
+  ],
+  [
+   "consistency_mia",
+   [
+    "mia-huang__c"
+   ],
+   "一致性｜Mia（上：遮罩；下：完整頭像）"
+  ],
+  [
+   "otherline_headshots",
+   [
+    "otherline_headshots"
+   ],
+   "觀察｜2026-10-08 其他工作線的 neutral casting headshot（不作為本輪比較依據；見說明）"
+  ]
+ ]
+}

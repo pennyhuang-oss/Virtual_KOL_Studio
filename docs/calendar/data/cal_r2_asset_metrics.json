@@ -1,0 +1,6699 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_r2_assets.py",
+ "frames": {
+  "H_split": {
+   "w": 104,
+   "h": 155,
+   "top": 0,
+   "coil": 12,
+   "fy": 0.3,
+   "label": "橫式半版照片框 104×155（日期在另一半）"
+  },
+  "V_big": {
+   "w": 144,
+   "h": 150,
+   "top": 0,
+   "coil": 12,
+   "fy": 0.36,
+   "label": "直式大照片 144×150（日期在下方白底）"
+  },
+  "V_inset": {
+   "w": 124,
+   "h": 132,
+   "top": 16,
+   "coil": 12,
+   "fy": 0.36,
+   "label": "直式縮框 124×132（四周留白）"
+  },
+  "H_wide": {
+   "w": 204,
+   "h": 112,
+   "top": 0,
+   "coil": 12,
+   "fy": 0.4,
+   "label": "橫式大照片 204×112（日期在下方）"
+  }
+ },
+ "ppi_bands": "≥300 充裕｜250–299 可｜200–249 邊緣｜<200 不足（本專案工作判準，非廠商要求）",
+ "head_top_note": "head_top_y_mm_est = 額頭點往上加 0.45×臉高的粗估，只用來看頭髮會不會被線圈壓到",
+ "metrics": {
+  "iris_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      108,
+      0,
+      1718,
+      2560
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 420,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 43.1,
+     "forehead_y_mm": 31.9,
+     "head_top_y_mm_est": 12.5,
+     "chin_y_mm": 74.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      162,
+      1920,
+      2000
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 339,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 53.4,
+     "forehead_y_mm": 27.3,
+     "head_top_y_mm_est": 3.3,
+     "chin_y_mm": 80.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      146,
+      1920,
+      2044
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 393,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 46.0,
+     "forehead_y_mm": 40.6,
+     "head_top_y_mm_est": 19.9,
+     "chin_y_mm": 86.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      460,
+      1920,
+      1054
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 239,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 75.6,
+     "forehead_y_mm": 7.0,
+     "head_top_y_mm_est": -27.0,
+     "chin_y_mm": 82.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/iris_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      522,
+      364,
+      1452,
+      1392
+     ],
+     "shown_at_pct": 62,
+     "file": "r2/assets/details/iris_H_0.jpg"
+    },
+    {
+     "what": "窗邊高光",
+     "box_px": [
+      1344,
+      512,
+      1920,
+      1536
+     ],
+     "shown_at_pct": 62,
+     "file": "r2/assets/details/iris_H_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/iris_H_cand.jpg",
+    "r2/assets/consistency/iris_H_ref.jpg"
+   ]
+  },
+  "iris_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      0,
+      1718,
+      2560
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 420,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 20.4,
+     "forehead_y_mm": 30.9,
+     "head_top_y_mm_est": 21.7,
+     "chin_y_mm": 51.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      0,
+      1920,
+      2000
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 339,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 25.3,
+     "forehead_y_mm": 38.3,
+     "head_top_y_mm_est": 26.9,
+     "chin_y_mm": 63.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      0,
+      1920,
+      2044
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 393,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 21.8,
+     "forehead_y_mm": 49.0,
+     "head_top_y_mm_est": 39.2,
+     "chin_y_mm": 70.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1920,
+      2560
+     ],
+     "crop_px": [
+      0,
+      258,
+      1920,
+      1054
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 239,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 35.9,
+     "forehead_y_mm": 26.9,
+     "head_top_y_mm_est": 10.7,
+     "chin_y_mm": 62.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/iris_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      558,
+      386,
+      1091,
+      945
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/iris_V_0.jpg"
+    },
+    {
+     "what": "左手",
+     "box_px": [
+      230,
+      1843,
+      652,
+      2355
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/iris_V_1.jpg"
+    },
+    {
+     "what": "右手",
+     "box_px": [
+      1267,
+      1945,
+      1728,
+      2483
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/iris_V_2.jpg"
+    },
+    {
+     "what": "招牌假字",
+     "box_px": [
+      768,
+      0,
+      1497,
+      768
+     ],
+     "shown_at_pct": 83,
+     "file": "r2/assets/details/iris_V_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/iris_V_cand.jpg",
+    "r2/assets/consistency/iris_V_ref.jpg"
+   ]
+  },
+  "kanon_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      181,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.4,
+     "forehead_y_mm": 37.8,
+     "head_top_y_mm_est": 26.8,
+     "chin_y_mm": 62.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      95,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 30.2,
+     "forehead_y_mm": 38.9,
+     "head_top_y_mm_est": 25.3,
+     "chin_y_mm": 69.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      81,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 26.0,
+     "forehead_y_mm": 50.5,
+     "head_top_y_mm_est": 38.8,
+     "chin_y_mm": 76.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      363,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 42.7,
+     "forehead_y_mm": 23.5,
+     "head_top_y_mm_est": 4.2,
+     "chin_y_mm": 66.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      721,
+      464,
+      1238,
+      1024
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_H_0.jpg"
+    },
+    {
+     "what": "黑板假字",
+     "box_px": [
+      0,
+      0,
+      777,
+      691
+     ],
+     "shown_at_pct": 82,
+     "file": "r2/assets/details/kanon_H_1.jpg"
+    },
+    {
+     "what": "菜單卡",
+     "box_px": [
+      138,
+      1267,
+      656,
+      1843
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_H_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/kanon_H_cand.jpg",
+    "r2/assets/consistency/kanon_H_ref.jpg"
+   ]
+  },
+  "kanon_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      147,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 51.7,
+     "forehead_y_mm": 12.8,
+     "head_top_y_mm_est": -10.5,
+     "chin_y_mm": 64.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/kanon_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 64.0,
+     "forehead_y_mm": 15.8,
+     "head_top_y_mm_est": -13.0,
+     "chin_y_mm": 79.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 55.2,
+     "forehead_y_mm": 29.6,
+     "head_top_y_mm_est": 4.8,
+     "chin_y_mm": 84.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      195,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 90.7,
+     "forehead_y_mm": -0.6,
+     "head_top_y_mm_est": -41.4,
+     "chin_y_mm": 90.1,
+     "face_inside_frame": false,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/kanon_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      486,
+      0,
+      1520,
+      1130
+     ],
+     "shown_at_pct": 57,
+     "file": "r2/assets/details/kanon_V_0.jpg"
+    },
+    {
+     "what": "胸前扣件與蕾絲",
+     "box_px": [
+      518,
+      1036,
+      1296,
+      1843
+     ],
+     "shown_at_pct": 79,
+     "file": "r2/assets/details/kanon_V_1.jpg"
+    },
+    {
+     "what": "人台",
+     "box_px": [
+      0,
+      0,
+      518,
+      1036
+     ],
+     "shown_at_pct": 62,
+     "file": "r2/assets/details/kanon_V_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/kanon_V_cand.jpg",
+    "r2/assets/consistency/kanon_V_ref.jpg"
+   ]
+  },
+  "kanon_alt112": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      60,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 23.5,
+     "forehead_y_mm": 22.3,
+     "head_top_y_mm_est": 11.7,
+     "chin_y_mm": 45.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt112_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 29.2,
+     "forehead_y_mm": 27.6,
+     "head_top_y_mm_est": 14.5,
+     "chin_y_mm": 56.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt112_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 25.1,
+     "forehead_y_mm": 39.8,
+     "head_top_y_mm_est": 28.5,
+     "chin_y_mm": 64.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt112_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      113,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 41.3,
+     "forehead_y_mm": 24.2,
+     "head_top_y_mm_est": 5.6,
+     "chin_y_mm": 65.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt112_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      549,
+      226,
+      947,
+      672
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_alt112_0.jpg"
+    },
+    {
+     "what": "手扶欄杆",
+     "box_px": [
+      0,
+      1064,
+      460,
+      1597
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_alt112_1.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      844,
+      102,
+      1536,
+      1228
+     ],
+     "shown_at_pct": 57,
+     "file": "r2/assets/details/kanon_alt112_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/kanon_alt112_cand.jpg",
+    "r2/assets/consistency/kanon_alt112_ref.jpg"
+   ]
+  },
+  "kanon_alt028": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      95,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 23.5,
+     "forehead_y_mm": 25.5,
+     "head_top_y_mm_est": 15.0,
+     "chin_y_mm": 49.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt028_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 29.1,
+     "forehead_y_mm": 31.6,
+     "head_top_y_mm_est": 18.5,
+     "chin_y_mm": 60.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt028_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 25.1,
+     "forehead_y_mm": 43.2,
+     "head_top_y_mm_est": 32.0,
+     "chin_y_mm": 68.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt028_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      156,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 41.3,
+     "forehead_y_mm": 24.1,
+     "head_top_y_mm_est": 5.5,
+     "chin_y_mm": 65.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt028_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      588,
+      273,
+      972,
+      712
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_alt028_0.jpg"
+    },
+    {
+     "what": "聖代杯",
+     "box_px": [
+      0,
+      1536,
+      307,
+      2048
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_alt028_1.jpg"
+    },
+    {
+     "what": "手插腰",
+     "box_px": [
+      998,
+      512,
+      1459,
+      1024
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_alt028_2.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      921,
+      0,
+      1536,
+      1228
+     ],
+     "shown_at_pct": 52,
+     "file": "r2/assets/details/kanon_alt028_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/kanon_alt028_cand.jpg",
+    "r2/assets/consistency/kanon_alt028_ref.jpg"
+   ]
+  },
+  "kanon_alt_t03": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      182,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.1,
+     "forehead_y_mm": 32.3,
+     "head_top_y_mm_est": 19.7,
+     "chin_y_mm": 60.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt_t03_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      42,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 34.9,
+     "forehead_y_mm": 36.6,
+     "head_top_y_mm_est": 20.9,
+     "chin_y_mm": 71.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt_t03_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      28,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 30.0,
+     "forehead_y_mm": 48.5,
+     "head_top_y_mm_est": 35.0,
+     "chin_y_mm": 78.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt_t03_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      310,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 49.4,
+     "forehead_y_mm": 20.2,
+     "head_top_y_mm_est": -2.1,
+     "chin_y_mm": 69.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/kanon_alt_t03_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      693,
+      254,
+      1431,
+      1030
+     ],
+     "shown_at_pct": 83,
+     "file": "r2/assets/details/kanon_alt_t03_0.jpg"
+    },
+    {
+     "what": "自拍手臂",
+     "box_px": [
+      0,
+      1036,
+      518,
+      2304
+     ],
+     "shown_at_pct": 50,
+     "file": "r2/assets/details/kanon_alt_t03_1.jpg"
+    },
+    {
+     "what": "皮尺刻度",
+     "box_px": [
+      570,
+      852,
+      1036,
+      1728
+     ],
+     "shown_at_pct": 73,
+     "file": "r2/assets/details/kanon_alt_t03_2.jpg"
+    },
+    {
+     "what": "縫紉機面板字",
+     "box_px": [
+      1123,
+      967,
+      1728,
+      1566
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/kanon_alt_t03_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/kanon_alt_t03_cand.jpg",
+    "r2/assets/consistency/kanon_alt_t03_ref.jpg"
+   ]
+  },
+  "luna_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      104,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 20.9,
+     "forehead_y_mm": 69.3,
+     "head_top_y_mm_est": 59.8,
+     "chin_y_mm": 90.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      504,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 25.9,
+     "forehead_y_mm": 43.8,
+     "head_top_y_mm_est": 32.1,
+     "chin_y_mm": 69.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      465,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 22.3,
+     "forehead_y_mm": 56.5,
+     "head_top_y_mm_est": 46.5,
+     "chin_y_mm": 78.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      805,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 36.7,
+     "forehead_y_mm": 26.5,
+     "head_top_y_mm_est": 10.0,
+     "chin_y_mm": 63.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      685,
+      959,
+      1080,
+      1405
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_H_0.jpg"
+    },
+    {
+     "what": "雙手",
+     "box_px": [
+      432,
+      1728,
+      1296,
+      2304
+     ],
+     "shown_at_pct": 74,
+     "file": "r2/assets/details/luna_H_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/luna_H_cand.jpg",
+    "r2/assets/consistency/luna_H_ref.jpg"
+   ]
+  },
+  "luna_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 23.2,
+     "forehead_y_mm": 37.7,
+     "head_top_y_mm_est": 27.3,
+     "chin_y_mm": 60.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      84,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.7,
+     "forehead_y_mm": 39.7,
+     "head_top_y_mm_est": 26.8,
+     "chin_y_mm": 68.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      70,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.7,
+     "forehead_y_mm": 51.2,
+     "head_top_y_mm_est": 40.1,
+     "chin_y_mm": 75.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      353,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 40.7,
+     "forehead_y_mm": 24.4,
+     "head_top_y_mm_est": 6.1,
+     "chin_y_mm": 65.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      425,
+      479,
+      887,
+      981
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_V_0.jpg"
+    },
+    {
+     "what": "手",
+     "box_px": [
+      518,
+      1497,
+      1123,
+      2188
+     ],
+     "shown_at_pct": 93,
+     "file": "r2/assets/details/luna_V_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/luna_V_cand.jpg",
+    "r2/assets/consistency/luna_V_ref.jpg"
+   ]
+  },
+  "luna_R1H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      191,
+      1152,
+      1717
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 281,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 34.9,
+     "forehead_y_mm": 29.0,
+     "head_top_y_mm_est": 13.3,
+     "chin_y_mm": 64.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_R1H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      274,
+      1152,
+      1200
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 203,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 48.4,
+     "forehead_y_mm": 29.8,
+     "head_top_y_mm_est": 8.1,
+     "chin_y_mm": 78.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_R1H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      265,
+      1152,
+      1226
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 236,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 41.7,
+     "forehead_y_mm": 42.7,
+     "head_top_y_mm_est": 23.9,
+     "chin_y_mm": 84.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_R1H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      454,
+      1152,
+      632
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 143,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 68.6,
+     "forehead_y_mm": 10.4,
+     "head_top_y_mm_est": -20.4,
+     "chin_y_mm": 79.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/luna_R1H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      347,
+      426,
+      858,
+      985
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_R1H_0.jpg"
+    },
+    {
+     "what": "假 IG 介面",
+     "box_px": [
+      0,
+      0,
+      633,
+      163
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_R1H_1.jpg"
+    },
+    {
+     "what": "飲料吸管",
+     "box_px": [
+      345,
+      1536,
+      748,
+      2048
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_R1H_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/luna_R1H_cand.jpg",
+    "r2/assets/consistency/luna_R1H_ref.jpg"
+   ]
+  },
+  "luna_R1V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      55,
+      1152,
+      1717
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 281,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 33.0,
+     "forehead_y_mm": 30.0,
+     "head_top_y_mm_est": 15.1,
+     "chin_y_mm": 63.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_R1V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      138,
+      1152,
+      1200
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 203,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 45.7,
+     "forehead_y_mm": 31.1,
+     "head_top_y_mm_est": 10.6,
+     "chin_y_mm": 76.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_R1V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      129,
+      1152,
+      1226
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 236,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 39.4,
+     "forehead_y_mm": 43.8,
+     "head_top_y_mm_est": 26.1,
+     "chin_y_mm": 83.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/luna_R1V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      317,
+      1152,
+      632
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 143,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 64.8,
+     "forehead_y_mm": 12.4,
+     "head_top_y_mm_est": -16.7,
+     "chin_y_mm": 77.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/luna_R1V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      303,
+      284,
+      840,
+      842
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_R1V_0.jpg"
+    },
+    {
+     "what": "手",
+     "box_px": [
+      138,
+      1638,
+      403,
+      2048
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/luna_R1V_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/luna_R1V_cand.jpg",
+    "r2/assets/consistency/luna_R1V_ref.jpg"
+   ]
+  },
+  "angel_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      144,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 19.7,
+     "forehead_y_mm": 41.7,
+     "head_top_y_mm_est": 32.8,
+     "chin_y_mm": 61.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      118,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.4,
+     "forehead_y_mm": 41.8,
+     "head_top_y_mm_est": 30.8,
+     "chin_y_mm": 66.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      104,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 21.0,
+     "forehead_y_mm": 53.0,
+     "head_top_y_mm_est": 43.5,
+     "chin_y_mm": 74.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      386,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 34.6,
+     "forehead_y_mm": 27.6,
+     "head_top_y_mm_est": 12.0,
+     "chin_y_mm": 62.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      664,
+      511,
+      1184,
+      1032
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_H_0.jpg"
+    },
+    {
+     "what": "手與錶",
+     "box_px": [
+      311,
+      1497,
+      864,
+      2027
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_H_1.jpg"
+    },
+    {
+     "what": "識別證",
+     "box_px": [
+      743,
+      1889,
+      1140,
+      2304
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_H_2.jpg"
+    },
+    {
+     "what": "乾洗手瓶標",
+     "box_px": [
+      259,
+      1105,
+      656,
+      1612
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_H_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/angel_H_cand.jpg",
+    "r2/assets/consistency/angel_H_ref.jpg"
+   ]
+  },
+  "angel_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      57,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 33.7,
+     "forehead_y_mm": 34.5,
+     "head_top_y_mm_est": 19.4,
+     "chin_y_mm": 68.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      115,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 41.7,
+     "forehead_y_mm": 33.2,
+     "head_top_y_mm_est": 14.4,
+     "chin_y_mm": 74.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      101,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 35.9,
+     "forehead_y_mm": 45.6,
+     "head_top_y_mm_est": 29.4,
+     "chin_y_mm": 81.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      384,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 59.1,
+     "forehead_y_mm": 15.2,
+     "head_top_y_mm_est": -11.4,
+     "chin_y_mm": 74.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      437,
+      402,
+      1103,
+      1126
+     ],
+     "shown_at_pct": 88,
+     "file": "r2/assets/details/angel_V_0.jpg"
+    },
+    {
+     "what": "掛繩與床頭",
+     "box_px": [
+      1382,
+      1612,
+      1728,
+      2188
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_V_1.jpg"
+    },
+    {
+     "what": "手",
+     "box_px": [
+      259,
+      1958,
+      691,
+      2304
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_V_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/angel_V_cand.jpg",
+    "r2/assets/consistency/angel_V_ref.jpg"
+   ]
+  },
+  "angel_alt004": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      78,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 18.6,
+     "forehead_y_mm": 17.8,
+     "head_top_y_mm_est": 9.4,
+     "chin_y_mm": 36.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_alt004_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 23.0,
+     "forehead_y_mm": 22.0,
+     "head_top_y_mm_est": 11.7,
+     "chin_y_mm": 45.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_alt004_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 19.8,
+     "forehead_y_mm": 35.0,
+     "head_top_y_mm_est": 26.1,
+     "chin_y_mm": 54.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_alt004_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      20,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 32.6,
+     "forehead_y_mm": 28.6,
+     "head_top_y_mm_est": 13.9,
+     "chin_y_mm": 61.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/angel_alt004_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      614,
+      184,
+      917,
+      530
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_alt004_0.jpg"
+    },
+    {
+     "what": "手",
+     "box_px": [
+      0,
+      716,
+      460,
+      1228
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/angel_alt004_1.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      768,
+      102,
+      1536,
+      1228
+     ],
+     "shown_at_pct": 57,
+     "file": "r2/assets/details/angel_alt004_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/angel_alt004_cand.jpg",
+    "r2/assets/consistency/angel_alt004_ref.jpg"
+   ]
+  },
+  "somi_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 21.5,
+     "forehead_y_mm": 29.4,
+     "head_top_y_mm_est": 19.7,
+     "chin_y_mm": 50.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 26.7,
+     "forehead_y_mm": 36.4,
+     "head_top_y_mm_est": 24.4,
+     "chin_y_mm": 63.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 23.0,
+     "forehead_y_mm": 47.4,
+     "head_top_y_mm_est": 37.0,
+     "chin_y_mm": 70.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      217,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 37.8,
+     "forehead_y_mm": 25.9,
+     "head_top_y_mm_est": 8.9,
+     "chin_y_mm": 63.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      419,
+      332,
+      904,
+      848
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_H_0.jpg"
+    },
+    {
+     "what": "握罐",
+     "box_px": [
+      898,
+      760,
+      1382,
+      1382
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_H_1.jpg"
+    },
+    {
+     "what": "炸雞盒",
+     "box_px": [
+      1175,
+      1797,
+      1728,
+      2304
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_H_2.jpg"
+    },
+    {
+     "what": "紙袋",
+     "box_px": [
+      0,
+      1658,
+      483,
+      2188
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_H_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/somi_H_cand.jpg",
+    "r2/assets/consistency/somi_H_ref.jpg"
+   ]
+  },
+  "somi_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      93,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 26.7,
+     "forehead_y_mm": 24.4,
+     "head_top_y_mm_est": 12.3,
+     "chin_y_mm": 51.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 33.1,
+     "forehead_y_mm": 30.2,
+     "head_top_y_mm_est": 15.3,
+     "chin_y_mm": 63.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.5,
+     "forehead_y_mm": 42.0,
+     "head_top_y_mm_est": 29.2,
+     "chin_y_mm": 70.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      161,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 46.9,
+     "forehead_y_mm": 21.4,
+     "head_top_y_mm_est": 0.3,
+     "chin_y_mm": 68.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      580,
+      242,
+      1034,
+      750
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_V_0.jpg"
+    },
+    {
+     "what": "手",
+     "box_px": [
+      122,
+      1392,
+      552,
+      1884
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_V_1.jpg"
+    },
+    {
+     "what": "杯子",
+     "box_px": [
+      844,
+      1802,
+      1228,
+      2048
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_V_2.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      76,
+      102,
+      691,
+      921
+     ],
+     "shown_at_pct": 78,
+     "file": "r2/assets/details/somi_V_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/somi_V_cand.jpg",
+    "r2/assets/consistency/somi_V_ref.jpg"
+   ]
+  },
+  "somi_alt065": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      92,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.1,
+     "forehead_y_mm": 17.4,
+     "head_top_y_mm_est": 6.6,
+     "chin_y_mm": 41.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_alt065_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 29.9,
+     "forehead_y_mm": 21.6,
+     "head_top_y_mm_est": 8.1,
+     "chin_y_mm": 51.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_alt065_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 25.7,
+     "forehead_y_mm": 34.6,
+     "head_top_y_mm_est": 23.0,
+     "chin_y_mm": 60.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_alt065_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      53,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 42.4,
+     "forehead_y_mm": 23.6,
+     "head_top_y_mm_est": 4.5,
+     "chin_y_mm": 65.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_alt065_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      567,
+      161,
+      958,
+      617
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_alt065_0.jpg"
+    },
+    {
+     "what": "提籃的手",
+     "box_px": [
+      384,
+      614,
+      798,
+      1146
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/somi_alt065_1.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      0,
+      204,
+      768,
+      1228
+     ],
+     "shown_at_pct": 62,
+     "file": "r2/assets/details/somi_alt065_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/somi_alt065_cand.jpg",
+    "r2/assets/consistency/somi_alt065_ref.jpg"
+   ]
+  },
+  "somi_R1V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 29.6,
+     "forehead_y_mm": 46.5,
+     "head_top_y_mm_est": 33.2,
+     "chin_y_mm": 76.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_R1V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      264,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 36.7,
+     "forehead_y_mm": 35.7,
+     "head_top_y_mm_est": 19.1,
+     "chin_y_mm": 72.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_R1V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      250,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 31.6,
+     "forehead_y_mm": 47.7,
+     "head_top_y_mm_est": 33.5,
+     "chin_y_mm": 79.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_R1V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      533,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 52.0,
+     "forehead_y_mm": 18.8,
+     "head_top_y_mm_est": -4.7,
+     "chin_y_mm": 70.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/somi_R1V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      243,
+      562,
+      874,
+      1260
+     ],
+     "shown_at_pct": 92,
+     "file": "r2/assets/details/somi_R1V_0.jpg"
+    },
+    {
+     "what": "咬串燒",
+     "box_px": [
+      604,
+      645,
+      1347,
+      1382
+     ],
+     "shown_at_pct": 86,
+     "file": "r2/assets/details/somi_R1V_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/somi_R1V_cand.jpg",
+    "r2/assets/consistency/somi_R1V_ref.jpg"
+   ]
+  },
+  "vicky_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      35,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 33.4,
+     "forehead_y_mm": 29.8,
+     "head_top_y_mm_est": 14.7,
+     "chin_y_mm": 63.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      139,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 46.3,
+     "forehead_y_mm": 30.8,
+     "head_top_y_mm_est": 10.0,
+     "chin_y_mm": 77.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      127,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 39.8,
+     "forehead_y_mm": 43.6,
+     "head_top_y_mm_est": 25.6,
+     "chin_y_mm": 83.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      362,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 65.5,
+     "forehead_y_mm": 12.1,
+     "head_top_y_mm_est": -17.4,
+     "chin_y_mm": 77.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/vicky_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      472,
+      346,
+      1075,
+      1011
+     ],
+     "shown_at_pct": 96,
+     "file": "r2/assets/details/vicky_H_0.jpg"
+    },
+    {
+     "what": "手與錶",
+     "box_px": [
+      360,
+      2176,
+      864,
+      2560
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_H_1.jpg"
+    },
+    {
+     "what": "胸前標誌",
+     "box_px": [
+      432,
+      844,
+      864,
+      1280
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_H_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/vicky_H_cand.jpg",
+    "r2/assets/consistency/vicky_H_ref.jpg"
+   ]
+  },
+  "vicky_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      53,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 26.0,
+     "forehead_y_mm": 33.5,
+     "head_top_y_mm_est": 21.8,
+     "chin_y_mm": 59.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      157,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 36.0,
+     "forehead_y_mm": 36.0,
+     "head_top_y_mm_est": 19.8,
+     "chin_y_mm": 72.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      145,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 31.0,
+     "forehead_y_mm": 48.0,
+     "head_top_y_mm_est": 34.1,
+     "chin_y_mm": 79.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      381,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 51.0,
+     "forehead_y_mm": 19.3,
+     "head_top_y_mm_est": -3.6,
+     "chin_y_mm": 70.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      520,
+      430,
+      978,
+      953
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_V_0.jpg"
+    },
+    {
+     "what": "手插腰",
+     "box_px": [
+      720,
+      1484,
+      1152,
+      1945
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_V_1.jpg"
+    },
+    {
+     "what": "手機",
+     "box_px": [
+      216,
+      1843,
+      547,
+      2201
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_V_2.jpg"
+    },
+    {
+     "what": "標誌",
+     "box_px": [
+      316,
+      844,
+      691,
+      1203
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_V_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/vicky_V_cand.jpg",
+    "r2/assets/consistency/vicky_V_ref.jpg"
+   ]
+  },
+  "vicky_R1H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      156,
+      1152,
+      1717
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 281,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 31.1,
+     "forehead_y_mm": 30.9,
+     "head_top_y_mm_est": 16.9,
+     "chin_y_mm": 62.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_R1H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      239,
+      1152,
+      1200
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 203,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 43.1,
+     "forehead_y_mm": 32.5,
+     "head_top_y_mm_est": 13.1,
+     "chin_y_mm": 75.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_R1H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      230,
+      1152,
+      1226
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 236,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 37.1,
+     "forehead_y_mm": 44.9,
+     "head_top_y_mm_est": 28.2,
+     "chin_y_mm": 82.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/vicky_R1H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      418,
+      1152,
+      632
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 143,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 61.1,
+     "forehead_y_mm": 14.3,
+     "head_top_y_mm_est": -13.2,
+     "chin_y_mm": 75.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/vicky_R1H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      258,
+      385,
+      771,
+      931
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_R1H_0.jpg"
+    },
+    {
+     "what": "Nike 勾勾",
+     "box_px": [
+      714,
+      1720,
+      1013,
+      2007
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/vicky_R1H_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/vicky_R1H_cand.jpg",
+    "r2/assets/consistency/vicky_R1H_ref.jpg"
+   ]
+  },
+  "coco_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      226,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 46.5,
+     "forehead_y_mm": 23.3,
+     "head_top_y_mm_est": 2.3,
+     "chin_y_mm": 69.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      330,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 64.4,
+     "forehead_y_mm": 21.8,
+     "head_top_y_mm_est": -7.2,
+     "chin_y_mm": 86.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      318,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 55.5,
+     "forehead_y_mm": 35.8,
+     "head_top_y_mm_est": 10.8,
+     "chin_y_mm": 91.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      554,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 91.2,
+     "forehead_y_mm": -0.8,
+     "head_top_y_mm_est": -41.9,
+     "chin_y_mm": 90.4,
+     "face_inside_frame": false,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/coco_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      330,
+      382,
+      1205,
+      1338
+     ],
+     "shown_at_pct": 67,
+     "file": "r2/assets/details/coco_H_0.jpg"
+    },
+    {
+     "what": "人像牆",
+     "box_px": [
+      0,
+      256,
+      403,
+      1587
+     ],
+     "shown_at_pct": 48,
+     "file": "r2/assets/details/coco_H_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/coco_H_cand.jpg",
+    "r2/assets/consistency/coco_H_ref.jpg"
+   ]
+  },
+  "coco_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      78,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.1,
+     "forehead_y_mm": 32.4,
+     "head_top_y_mm_est": 19.8,
+     "chin_y_mm": 60.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      182,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 38.9,
+     "forehead_y_mm": 34.5,
+     "head_top_y_mm_est": 17.0,
+     "chin_y_mm": 73.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      170,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 33.5,
+     "forehead_y_mm": 46.7,
+     "head_top_y_mm_est": 31.6,
+     "chin_y_mm": 80.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      405,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 55.1,
+     "forehead_y_mm": 17.3,
+     "head_top_y_mm_est": -7.5,
+     "chin_y_mm": 72.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      231,
+      400,
+      873,
+      1047
+     ],
+     "shown_at_pct": 99,
+     "file": "r2/assets/details/coco_V_0.jpg"
+    },
+    {
+     "what": "人像牆",
+     "box_px": [
+      892,
+      76,
+      1440,
+      1152
+     ],
+     "shown_at_pct": 59,
+     "file": "r2/assets/details/coco_V_1.jpg"
+    },
+    {
+     "what": "手機畫面",
+     "box_px": [
+      1036,
+      1075,
+      1440,
+      1920
+     ],
+     "shown_at_pct": 76,
+     "file": "r2/assets/details/coco_V_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/coco_V_cand.jpg",
+    "r2/assets/consistency/coco_V_ref.jpg"
+   ]
+  },
+  "coco_alt01": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      414,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 36.6,
+     "forehead_y_mm": 42.9,
+     "head_top_y_mm_est": 26.4,
+     "chin_y_mm": 79.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_alt01_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      720,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 50.6,
+     "forehead_y_mm": 28.7,
+     "head_top_y_mm_est": 6.0,
+     "chin_y_mm": 79.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_alt01_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      709,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 43.6,
+     "forehead_y_mm": 41.7,
+     "head_top_y_mm_est": 22.1,
+     "chin_y_mm": 85.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/coco_alt01_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      944,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 71.7,
+     "forehead_y_mm": 9.0,
+     "head_top_y_mm_est": -23.3,
+     "chin_y_mm": 80.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/coco_alt01_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      413,
+      878,
+      1111,
+      1629
+     ],
+     "shown_at_pct": 85,
+     "file": "r2/assets/details/coco_alt01_0.jpg"
+    },
+    {
+     "what": "手機殼",
+     "box_px": [
+      115,
+      563,
+      432,
+      1152
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/coco_alt01_1.jpg"
+    },
+    {
+     "what": "手在頭上",
+     "box_px": [
+      864,
+      384,
+      1368,
+      1075
+     ],
+     "shown_at_pct": 93,
+     "file": "r2/assets/details/coco_alt01_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/coco_alt01_cand.jpg",
+    "r2/assets/consistency/coco_alt01_ref.jpg"
+   ]
+  },
+  "mia_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      300,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 50.3,
+     "forehead_y_mm": 21.3,
+     "head_top_y_mm_est": -1.3,
+     "chin_y_mm": 71.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      404,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 69.7,
+     "forehead_y_mm": 19.1,
+     "head_top_y_mm_est": -12.2,
+     "chin_y_mm": 88.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      392,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 60.0,
+     "forehead_y_mm": 33.5,
+     "head_top_y_mm_est": 6.5,
+     "chin_y_mm": 93.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      627,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 98.6,
+     "forehead_y_mm": -4.5,
+     "head_top_y_mm_est": -48.9,
+     "chin_y_mm": 94.2,
+     "face_inside_frame": false,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/mia_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      281,
+      389,
+      1275,
+      1471
+     ],
+     "shown_at_pct": 59,
+     "file": "r2/assets/details/mia_H_0.jpg"
+    },
+    {
+     "what": "手與手機",
+     "box_px": [
+      0,
+      2099,
+      432,
+      2560
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/mia_H_1.jpg"
+    },
+    {
+     "what": "耳機線",
+     "box_px": [
+      503,
+      1408,
+      1080,
+      2048
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/mia_H_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/mia_H_cand.jpg",
+    "r2/assets/consistency/mia_H_ref.jpg"
+   ]
+  },
+  "mia_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      262,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 19.9,
+     "forehead_y_mm": 36.6,
+     "head_top_y_mm_est": 27.6,
+     "chin_y_mm": 56.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      366,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 27.6,
+     "forehead_y_mm": 40.2,
+     "head_top_y_mm_est": 27.8,
+     "chin_y_mm": 67.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      354,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 23.7,
+     "forehead_y_mm": 51.7,
+     "head_top_y_mm_est": 41.0,
+     "chin_y_mm": 75.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      590,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 39.0,
+     "forehead_y_mm": 25.2,
+     "head_top_y_mm_est": 7.7,
+     "chin_y_mm": 64.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/mia_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      691,
+      619,
+      1216,
+      1143
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/mia_V_0.jpg"
+    },
+    {
+     "what": "手在頭後",
+     "box_px": [
+      0,
+      204,
+      648,
+      896
+     ],
+     "shown_at_pct": 92,
+     "file": "r2/assets/details/mia_V_1.jpg"
+    },
+    {
+     "what": "桌面 RGB 鍵盤",
+     "box_px": [
+      0,
+      1587,
+      432,
+      2176
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/mia_V_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/mia_V_cand.jpg",
+    "r2/assets/consistency/mia_V_ref.jpg"
+   ]
+  },
+  "yuna_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      177,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.7,
+     "forehead_y_mm": 30.6,
+     "head_top_y_mm_est": 17.7,
+     "chin_y_mm": 59.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      20,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 35.5,
+     "forehead_y_mm": 36.3,
+     "head_top_y_mm_est": 20.3,
+     "chin_y_mm": 71.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      6,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 30.6,
+     "forehead_y_mm": 48.2,
+     "head_top_y_mm_est": 34.5,
+     "chin_y_mm": 78.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      288,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 50.3,
+     "forehead_y_mm": 19.7,
+     "head_top_y_mm_est": -2.9,
+     "chin_y_mm": 70.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      711,
+      361,
+      1257,
+      972
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/yuna_H_0.jpg"
+    },
+    {
+     "what": "招牌假字",
+     "box_px": [
+      0,
+      184,
+      552,
+      806
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/yuna_H_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/yuna_H_cand.jpg",
+    "r2/assets/consistency/yuna_H_ref.jpg"
+   ]
+  },
+  "yuna_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 30.0,
+     "forehead_y_mm": 41.2,
+     "head_top_y_mm_est": 27.7,
+     "chin_y_mm": 71.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      188,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 37.1,
+     "forehead_y_mm": 35.4,
+     "head_top_y_mm_est": 18.7,
+     "chin_y_mm": 72.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      174,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 32.0,
+     "forehead_y_mm": 47.5,
+     "head_top_y_mm_est": 33.1,
+     "chin_y_mm": 79.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      456,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 52.6,
+     "forehead_y_mm": 18.5,
+     "head_top_y_mm_est": -5.1,
+     "chin_y_mm": 71.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      444,
+      511,
+      1023,
+      1155
+     ],
+     "shown_at_pct": 99,
+     "file": "r2/assets/details/yuna_V_0.jpg"
+    },
+    {
+     "what": "手插腰",
+     "box_px": [
+      950,
+      1497,
+      1693,
+      2188
+     ],
+     "shown_at_pct": 86,
+     "file": "r2/assets/details/yuna_V_1.jpg"
+    },
+    {
+     "what": "招牌",
+     "box_px": [
+      1036,
+      0,
+      1641,
+      691
+     ],
+     "shown_at_pct": 93,
+     "file": "r2/assets/details/yuna_V_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/yuna_V_cand.jpg",
+    "r2/assets/consistency/yuna_V_ref.jpg"
+   ]
+  },
+  "yuna_altsoft": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      207,
+      1152,
+      1717
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 281,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 52.5,
+     "forehead_y_mm": 20.3,
+     "head_top_y_mm_est": -3.4,
+     "chin_y_mm": 72.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_altsoft_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      290,
+      1152,
+      1200
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 203,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 72.7,
+     "forehead_y_mm": 17.7,
+     "head_top_y_mm_est": -15.1,
+     "chin_y_mm": 90.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_altsoft_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      281,
+      1152,
+      1226
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 236,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 62.6,
+     "forehead_y_mm": 32.2,
+     "head_top_y_mm_est": 4.0,
+     "chin_y_mm": 94.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_altsoft_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      469,
+      1152,
+      632
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 143,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 103.1,
+     "forehead_y_mm": -6.7,
+     "head_top_y_mm_est": -53.1,
+     "chin_y_mm": 96.4,
+     "face_inside_frame": false,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/yuna_altsoft_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      234,
+      299,
+      983,
+      1137
+     ],
+     "shown_at_pct": 76,
+     "file": "r2/assets/details/yuna_altsoft_0.jpg"
+    },
+    {
+     "what": "毛衣假字",
+     "box_px": [
+      115,
+      1064,
+      1036,
+      1945
+     ],
+     "shown_at_pct": 69,
+     "file": "r2/assets/details/yuna_altsoft_1.jpg"
+    },
+    {
+     "what": "手在頭上",
+     "box_px": [
+      0,
+      0,
+      403,
+      614
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/yuna_altsoft_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/yuna_altsoft_cand.jpg",
+    "r2/assets/consistency/yuna_altsoft_ref.jpg"
+   ]
+  },
+  "yuna_R1V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      10,
+      1152,
+      1717
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 281,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 23.5,
+     "forehead_y_mm": 34.8,
+     "head_top_y_mm_est": 24.2,
+     "chin_y_mm": 58.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_R1V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      93,
+      1152,
+      1200
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 203,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 32.6,
+     "forehead_y_mm": 37.7,
+     "head_top_y_mm_est": 23.1,
+     "chin_y_mm": 70.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_R1V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      84,
+      1152,
+      1226
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 236,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 28.1,
+     "forehead_y_mm": 49.5,
+     "head_top_y_mm_est": 36.8,
+     "chin_y_mm": 77.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_R1V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      273,
+      1152,
+      632
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 143,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 46.2,
+     "forehead_y_mm": 21.6,
+     "head_top_y_mm_est": 0.8,
+     "chin_y_mm": 67.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/yuna_R1V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      424,
+      338,
+      748,
+      709
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/yuna_R1V_0.jpg"
+    },
+    {
+     "what": "包包花紋",
+     "box_px": [
+      552,
+      655,
+      783,
+      1064
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/yuna_R1V_1.jpg"
+    },
+    {
+     "what": "格紋裙",
+     "box_px": [
+      345,
+      1228,
+      806,
+      1679
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/yuna_R1V_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/yuna_R1V_cand.jpg",
+    "r2/assets/consistency/yuna_R1V_ref.jpg"
+   ]
+  },
+  "tammy_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 19.4,
+     "forehead_y_mm": 41.7,
+     "head_top_y_mm_est": 33.0,
+     "chin_y_mm": 61.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      117,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.1,
+     "forehead_y_mm": 42.0,
+     "head_top_y_mm_est": 31.1,
+     "chin_y_mm": 66.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      103,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 20.7,
+     "forehead_y_mm": 53.1,
+     "head_top_y_mm_est": 43.8,
+     "chin_y_mm": 73.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      385,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 34.1,
+     "forehead_y_mm": 27.8,
+     "head_top_y_mm_est": 12.4,
+     "chin_y_mm": 61.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      484,
+      535,
+      916,
+      1006
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_H_0.jpg"
+    },
+    {
+     "what": "手托下巴",
+     "box_px": [
+      725,
+      276,
+      1209,
+      737
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_H_1.jpg"
+    },
+    {
+     "what": "條碼標籤",
+     "box_px": [
+      345,
+      1935,
+      898,
+      2304
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_H_2.jpg"
+    },
+    {
+     "what": "腳",
+     "box_px": [
+      1036,
+      1889,
+      1520,
+      2304
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_H_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/tammy_H_cand.jpg",
+    "r2/assets/consistency/tammy_H_ref.jpg"
+   ]
+  },
+  "tammy_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      150,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 20.6,
+     "forehead_y_mm": 29.1,
+     "head_top_y_mm_est": 19.9,
+     "chin_y_mm": 49.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 25.5,
+     "forehead_y_mm": 36.1,
+     "head_top_y_mm_est": 24.6,
+     "chin_y_mm": 61.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 21.9,
+     "forehead_y_mm": 47.1,
+     "head_top_y_mm_est": 37.2,
+     "chin_y_mm": 69.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      183,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 36.1,
+     "forehead_y_mm": 26.8,
+     "head_top_y_mm_est": 10.5,
+     "chin_y_mm": 62.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      639,
+      326,
+      966,
+      710
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_V_0.jpg"
+    },
+    {
+     "what": "左手",
+     "box_px": [
+      0,
+      1064,
+      337,
+      1433
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_V_1.jpg"
+    },
+    {
+     "what": "右手",
+     "box_px": [
+      1198,
+      1064,
+      1536,
+      1433
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_V_2.jpg"
+    },
+    {
+     "what": "腿與膝",
+     "box_px": [
+      537,
+      1597,
+      1305,
+      2048
+     ],
+     "shown_at_pct": 83,
+     "file": "r2/assets/details/tammy_V_3.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      0,
+      614,
+      491,
+      1228
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_V_4.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/tammy_V_cand.jpg",
+    "r2/assets/consistency/tammy_V_ref.jpg"
+   ]
+  },
+  "tammy_alt075": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      66,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 19.9,
+     "forehead_y_mm": 28.3,
+     "head_top_y_mm_est": 19.4,
+     "chin_y_mm": 48.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_alt075_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 24.7,
+     "forehead_y_mm": 35.1,
+     "head_top_y_mm_est": 24.0,
+     "chin_y_mm": 59.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_alt075_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 21.3,
+     "forehead_y_mm": 46.2,
+     "head_top_y_mm_est": 36.7,
+     "chin_y_mm": 67.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_alt075_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      169,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 35.0,
+     "forehead_y_mm": 27.3,
+     "head_top_y_mm_est": 11.5,
+     "chin_y_mm": 62.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_alt075_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      610,
+      316,
+      940,
+      695
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_alt075_0.jpg"
+    },
+    {
+     "what": "左手",
+     "box_px": [
+      0,
+      1064,
+      337,
+      1433
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_alt075_1.jpg"
+    },
+    {
+     "what": "右手",
+     "box_px": [
+      1198,
+      1064,
+      1536,
+      1433
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_alt075_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/tammy_alt075_cand.jpg",
+    "r2/assets/consistency/tammy_alt075_ref.jpg"
+   ]
+  },
+  "tammy_R1H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      182,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 36.4,
+     "forehead_y_mm": 52.9,
+     "head_top_y_mm_est": 36.6,
+     "chin_y_mm": 89.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_R1H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      409,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 45.0,
+     "forehead_y_mm": 31.5,
+     "head_top_y_mm_est": 11.2,
+     "chin_y_mm": 76.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_R1H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      395,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 38.8,
+     "forehead_y_mm": 44.1,
+     "head_top_y_mm_est": 26.7,
+     "chin_y_mm": 82.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/tammy_R1H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      677,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 63.8,
+     "forehead_y_mm": 12.9,
+     "head_top_y_mm_est": -15.7,
+     "chin_y_mm": 76.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/tammy_R1H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      589,
+      625,
+      1359,
+      1455
+     ],
+     "shown_at_pct": 77,
+     "file": "r2/assets/details/tammy_R1H_0.jpg"
+    },
+    {
+     "what": "化妝棉",
+     "box_px": [
+      1244,
+      1797,
+      1728,
+      2188
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/tammy_R1H_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/tammy_R1H_cand.jpg",
+    "r2/assets/consistency/tammy_R1H_ref.jpg"
+   ]
+  },
+  "rin_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      73,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 33.0,
+     "forehead_y_mm": 28.0,
+     "head_top_y_mm_est": 13.1,
+     "chin_y_mm": 61.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      13,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 40.9,
+     "forehead_y_mm": 33.5,
+     "head_top_y_mm_est": 15.2,
+     "chin_y_mm": 74.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 35.2,
+     "forehead_y_mm": 45.8,
+     "head_top_y_mm_est": 30.0,
+     "chin_y_mm": 81.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      281,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 57.9,
+     "forehead_y_mm": 15.9,
+     "head_top_y_mm_est": -10.2,
+     "chin_y_mm": 73.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      462,
+      310,
+      1094,
+      1014
+     ],
+     "shown_at_pct": 91,
+     "file": "r2/assets/details/rin_H_0.jpg"
+    },
+    {
+     "what": "手在耳邊",
+     "box_px": [
+      898,
+      414,
+      1416,
+      967
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rin_H_1.jpg"
+    },
+    {
+     "what": "化妝品",
+     "box_px": [
+      0,
+      1889,
+      950,
+      2304
+     ],
+     "shown_at_pct": 67,
+     "file": "r2/assets/details/rin_H_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/rin_H_cand.jpg",
+    "r2/assets/consistency/rin_H_ref.jpg"
+   ]
+  },
+  "rin_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      65,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 23.1,
+     "forehead_y_mm": 19.3,
+     "head_top_y_mm_est": 8.9,
+     "chin_y_mm": 42.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 28.6,
+     "forehead_y_mm": 23.9,
+     "head_top_y_mm_est": 11.0,
+     "chin_y_mm": 52.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.6,
+     "forehead_y_mm": 36.5,
+     "head_top_y_mm_est": 25.5,
+     "chin_y_mm": 61.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      70,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 40.5,
+     "forehead_y_mm": 24.5,
+     "head_top_y_mm_est": 6.3,
+     "chin_y_mm": 65.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      563,
+      186,
+      955,
+      624
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rin_V_0.jpg"
+    },
+    {
+     "what": "手扶椅",
+     "box_px": [
+      76,
+      1474,
+      491,
+      1945
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rin_V_1.jpg"
+    },
+    {
+     "what": "咖啡杯",
+     "box_px": [
+      0,
+      860,
+      245,
+      1146
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rin_V_2.jpg"
+    },
+    {
+     "what": "背景路人",
+     "box_px": [
+      1075,
+      163,
+      1536,
+      1228
+     ],
+     "shown_at_pct": 60,
+     "file": "r2/assets/details/rin_V_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/rin_V_cand.jpg",
+    "r2/assets/consistency/rin_V_ref.jpg"
+   ]
+  },
+  "rin_altR1V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      182,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 18.9,
+     "forehead_y_mm": 28.1,
+     "head_top_y_mm_est": 19.6,
+     "chin_y_mm": 47.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_altR1V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 23.4,
+     "forehead_y_mm": 34.9,
+     "head_top_y_mm_est": 24.3,
+     "chin_y_mm": 58.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_altR1V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 20.2,
+     "forehead_y_mm": 46.0,
+     "head_top_y_mm_est": 37.0,
+     "chin_y_mm": 66.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_altR1V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      179,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 33.2,
+     "forehead_y_mm": 28.3,
+     "head_top_y_mm_est": 13.3,
+     "chin_y_mm": 61.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rin_altR1V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      876,
+      327,
+      1352,
+      818
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rin_altR1V_0.jpg"
+    },
+    {
+     "what": "手",
+     "box_px": [
+      950,
+      1658,
+      1468,
+      2188
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rin_altR1V_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/rin_altR1V_cand.jpg",
+    "r2/assets/consistency/rin_altR1V_ref.jpg"
+   ]
+  },
+  "rainie_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      414,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 33.2,
+     "forehead_y_mm": 34.6,
+     "head_top_y_mm_est": 19.7,
+     "chin_y_mm": 67.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      583,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 45.9,
+     "forehead_y_mm": 31.0,
+     "head_top_y_mm_est": 10.4,
+     "chin_y_mm": 76.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      571,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 39.5,
+     "forehead_y_mm": 43.8,
+     "head_top_y_mm_est": 26.0,
+     "chin_y_mm": 83.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      807,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 65.0,
+     "forehead_y_mm": 12.2,
+     "head_top_y_mm_est": -17.0,
+     "chin_y_mm": 77.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/rainie_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      452,
+      757,
+      1095,
+      1459
+     ],
+     "shown_at_pct": 91,
+     "file": "r2/assets/details/rainie_H_0.jpg"
+    },
+    {
+     "what": "手與耳環",
+     "box_px": [
+      43,
+      332,
+      518,
+      921
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rainie_H_1.jpg"
+    },
+    {
+     "what": "鏡中閃光／人影",
+     "box_px": [
+      835,
+      307,
+      1440,
+      1228
+     ],
+     "shown_at_pct": 69,
+     "file": "r2/assets/details/rainie_H_2.jpg"
+    },
+    {
+     "what": "假日期戳",
+     "box_px": [
+      864,
+      2355,
+      1440,
+      2560
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rainie_H_3.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/rainie_H_cand.jpg",
+    "r2/assets/consistency/rainie_H_ref.jpg"
+   ]
+  },
+  "rainie_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      414,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 36.4,
+     "forehead_y_mm": 48.1,
+     "head_top_y_mm_est": 31.7,
+     "chin_y_mm": 84.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      791,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 50.3,
+     "forehead_y_mm": 28.9,
+     "head_top_y_mm_est": 6.2,
+     "chin_y_mm": 79.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      780,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 43.3,
+     "forehead_y_mm": 41.8,
+     "head_top_y_mm_est": 22.3,
+     "chin_y_mm": 85.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      1015,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 71.3,
+     "forehead_y_mm": 9.2,
+     "head_top_y_mm_est": -22.9,
+     "chin_y_mm": 80.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/rainie_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      518,
+      946,
+      1196,
+      1697
+     ],
+     "shown_at_pct": 85,
+     "file": "r2/assets/details/rainie_V_0.jpg"
+    },
+    {
+     "what": "被子與手",
+     "box_px": [
+      1007,
+      1408,
+      1440,
+      2176
+     ],
+     "shown_at_pct": 83,
+     "file": "r2/assets/details/rainie_V_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/rainie_V_cand.jpg",
+    "r2/assets/consistency/rainie_V_ref.jpg"
+   ]
+  },
+  "rainie_alt02": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      231,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.2,
+     "forehead_y_mm": 32.4,
+     "head_top_y_mm_est": 19.7,
+     "chin_y_mm": 60.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_alt02_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      335,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 39.1,
+     "forehead_y_mm": 34.5,
+     "head_top_y_mm_est": 16.9,
+     "chin_y_mm": 73.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_alt02_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      323,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 33.6,
+     "forehead_y_mm": 46.7,
+     "head_top_y_mm_est": 31.6,
+     "chin_y_mm": 80.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_alt02_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      559,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 55.3,
+     "forehead_y_mm": 17.1,
+     "head_top_y_mm_est": -7.8,
+     "chin_y_mm": 72.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/rainie_alt02_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      452,
+      552,
+      1034,
+      1167
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rainie_alt02_0.jpg"
+    },
+    {
+     "what": "手機閃光",
+     "box_px": [
+      979,
+      460,
+      1440,
+      1075
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rainie_alt02_1.jpg"
+    },
+    {
+     "what": "洗衣籃",
+     "box_px": [
+      0,
+      1792,
+      432,
+      2432
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/rainie_alt02_2.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/rainie_alt02_cand.jpg",
+    "r2/assets/consistency/rainie_alt02_ref.jpg"
+   ]
+  },
+  "rainie_R1V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      0,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/rainie_R1V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      100,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": false,
+     "ppi_band": "可",
+     "preview": "r2/assets/crops/rainie_R1V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      88,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": false,
+     "ppi_band": "可",
+     "preview": "r2/assets/crops/rainie_R1V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      324,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": false,
+     "ppi_band": "不足",
+     "preview": "r2/assets/crops/rainie_R1V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "人物（偏小）",
+     "box_px": [
+      432,
+      384,
+      1080,
+      2432
+     ],
+     "shown_at_pct": 31,
+     "file": "r2/assets/details/rainie_R1V_0.jpg"
+    }
+   ]
+  },
+  "wanyin_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      91,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/wanyin_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/wanyin_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/wanyin_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      196,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": false,
+     "ppi_band": "邊緣",
+     "preview": "r2/assets/crops/wanyin_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "盤扣與手",
+     "box_px": [
+      604,
+      806,
+      1209,
+      1497
+     ],
+     "shown_at_pct": 93,
+     "file": "r2/assets/details/wanyin_H_0.jpg"
+    }
+   ]
+  },
+  "wanyin_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      91,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/wanyin_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/wanyin_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/wanyin_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      196,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": false,
+     "ppi_band": "邊緣",
+     "preview": "r2/assets/crops/wanyin_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "池面倒影",
+     "box_px": [
+      345,
+      1889,
+      1468,
+      2304
+     ],
+     "shown_at_pct": 57,
+     "file": "r2/assets/details/wanyin_V_0.jpg"
+    }
+   ]
+  },
+  "sophia_H": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      0,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/sophia_H_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      100,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": false,
+     "ppi_band": "可",
+     "preview": "r2/assets/crops/sophia_H_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      88,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": false,
+     "ppi_band": "可",
+     "preview": "r2/assets/crops/sophia_H_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      324,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": false,
+     "ppi_band": "不足",
+     "preview": "r2/assets/crops/sophia_H_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "酒杯與手",
+     "box_px": [
+      691,
+      716,
+      1123,
+      1280
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/sophia_H_0.jpg"
+    },
+    {
+     "what": "酒瓶標",
+     "box_px": [
+      1036,
+      1920,
+      1440,
+      2560
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/sophia_H_1.jpg"
+    }
+   ]
+  },
+  "sophia_V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      90,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 45.4,
+     "forehead_y_mm": 23.8,
+     "head_top_y_mm_est": 3.4,
+     "chin_y_mm": 69.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/sophia_V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      194,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 62.8,
+     "forehead_y_mm": 22.6,
+     "head_top_y_mm_est": -5.7,
+     "chin_y_mm": 85.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/sophia_V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      182,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 54.1,
+     "forehead_y_mm": 36.5,
+     "head_top_y_mm_est": 12.1,
+     "chin_y_mm": 90.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/sophia_V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      418,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 89.0,
+     "forehead_y_mm": 0.3,
+     "head_top_y_mm_est": -39.8,
+     "chin_y_mm": 89.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/sophia_V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      341,
+      234,
+      1243,
+      1199
+     ],
+     "shown_at_pct": 66,
+     "file": "r2/assets/details/sophia_V_0.jpg"
+    },
+    {
+     "what": "自拍手臂邊緣",
+     "box_px": [
+      0,
+      1536,
+      288,
+      2560
+     ],
+     "shown_at_pct": 62,
+     "file": "r2/assets/details/sophia_V_1.jpg"
+    }
+   ],
+   "consistency_pair": [
+    "r2/assets/consistency/sophia_V_cand.jpg",
+    "r2/assets/consistency/sophia_V_ref.jpg"
+   ]
+  },
+  "sophia_R1V": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      0,
+      1440,
+      2146
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 352,
+     "face_detected": false,
+     "ppi_band": "充裕",
+     "preview": "r2/assets/crops/sophia_R1V_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      100,
+      1440,
+      1500
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 254,
+     "face_detected": false,
+     "ppi_band": "可",
+     "preview": "r2/assets/crops/sophia_R1V_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      88,
+      1440,
+      1533
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 295,
+     "face_detected": false,
+     "ppi_band": "可",
+     "preview": "r2/assets/crops/sophia_R1V_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1440,
+      2560
+     ],
+     "crop_px": [
+      0,
+      324,
+      1440,
+      791
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 179,
+     "face_detected": false,
+     "ppi_band": "不足",
+     "preview": "r2/assets/crops/sophia_R1V_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "背影",
+     "box_px": [
+      360,
+      384,
+      1080,
+      2432
+     ],
+     "shown_at_pct": 31,
+     "file": "r2/assets/details/sophia_R1V_0.jpg"
+    }
+   ]
+  },
+  "ananya_1": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      174,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 25.5,
+     "forehead_y_mm": 19.1,
+     "head_top_y_mm_est": 7.6,
+     "chin_y_mm": 44.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_1_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 31.6,
+     "forehead_y_mm": 23.7,
+     "head_top_y_mm_est": 9.5,
+     "chin_y_mm": 55.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_1_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 27.2,
+     "forehead_y_mm": 36.4,
+     "head_top_y_mm_est": 24.1,
+     "chin_y_mm": 63.6,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_1_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      94,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 44.7,
+     "forehead_y_mm": 22.4,
+     "head_top_y_mm_est": 2.3,
+     "chin_y_mm": 67.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_1_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      638,
+      195,
+      1171,
+      754
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/ananya_1_0.jpg"
+    }
+   ]
+  },
+  "ananya_2": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      57,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 27.7,
+     "forehead_y_mm": 20.3,
+     "head_top_y_mm_est": 7.8,
+     "chin_y_mm": 48.0,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_2_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 34.3,
+     "forehead_y_mm": 25.1,
+     "head_top_y_mm_est": 9.6,
+     "chin_y_mm": 59.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_2_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      0,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 29.6,
+     "forehead_y_mm": 37.6,
+     "head_top_y_mm_est": 24.3,
+     "chin_y_mm": 67.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_2_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      128,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 48.6,
+     "forehead_y_mm": 20.4,
+     "head_top_y_mm_est": -1.5,
+     "chin_y_mm": 69.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_2_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      577,
+      205,
+      1123,
+      804
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/ananya_2_0.jpg"
+    }
+   ]
+  },
+  "ananya_3": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      73,
+      1152,
+      1717
+     ],
+     "keeps_pct": 84,
+     "effective_ppi": 281,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 38.3,
+     "forehead_y_mm": 27.4,
+     "head_top_y_mm_est": 10.2,
+     "chin_y_mm": 65.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_3_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      156,
+      1152,
+      1200
+     ],
+     "keeps_pct": 59,
+     "effective_ppi": 203,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 53.0,
+     "forehead_y_mm": 27.6,
+     "head_top_y_mm_est": 3.7,
+     "chin_y_mm": 80.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_3_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      147,
+      1152,
+      1226
+     ],
+     "keeps_pct": 60,
+     "effective_ppi": 236,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 45.6,
+     "forehead_y_mm": 40.7,
+     "head_top_y_mm_est": 20.2,
+     "chin_y_mm": 86.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/ananya_3_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1152,
+      2048
+     ],
+     "crop_px": [
+      0,
+      336,
+      1152,
+      632
+     ],
+     "keeps_pct": 31,
+     "effective_ppi": 143,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 75.1,
+     "forehead_y_mm": 7.2,
+     "head_top_y_mm_est": -26.6,
+     "chin_y_mm": 82.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/ananya_3_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      276,
+      277,
+      843,
+      894
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/ananya_3_0.jpg"
+    },
+    {
+     "what": "拿杯的手",
+     "box_px": [
+      288,
+      573,
+      668,
+      921
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/ananya_3_1.jpg"
+    }
+   ]
+  },
+  "wendy_1": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 27.0,
+     "forehead_y_mm": 15.3,
+     "head_top_y_mm_est": 3.1,
+     "chin_y_mm": 42.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_1_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 33.4,
+     "forehead_y_mm": 18.9,
+     "head_top_y_mm_est": 3.9,
+     "chin_y_mm": 52.3,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_1_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.8,
+     "forehead_y_mm": 32.3,
+     "head_top_y_mm_est": 19.3,
+     "chin_y_mm": 61.1,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_1_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      43,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 47.4,
+     "forehead_y_mm": 21.1,
+     "head_top_y_mm_est": -0.2,
+     "chin_y_mm": 68.4,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_1_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      474,
+      113,
+      942,
+      636
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/wendy_1_0.jpg"
+    }
+   ]
+  },
+  "wendy_2": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      92,
+      0,
+      1374,
+      2048
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 336,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 18.8,
+     "forehead_y_mm": 14.7,
+     "head_top_y_mm_est": 6.2,
+     "chin_y_mm": 33.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": false,
+     "preview": "r2/assets/crops/wendy_2_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1600
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 271,
+     "face_detected": true,
+     "ppi_band": "可",
+     "face_height_mm": 23.3,
+     "forehead_y_mm": 18.2,
+     "head_top_y_mm_est": 7.7,
+     "chin_y_mm": 41.5,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_2_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      1635
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 315,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 20.0,
+     "forehead_y_mm": 31.7,
+     "head_top_y_mm_est": 22.6,
+     "chin_y_mm": 51.7,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_2_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1536,
+      2048
+     ],
+     "crop_px": [
+      0,
+      0,
+      1536,
+      843
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 191,
+     "face_detected": true,
+     "ppi_band": "不足",
+     "face_height_mm": 33.0,
+     "forehead_y_mm": 25.8,
+     "head_top_y_mm_est": 10.9,
+     "chin_y_mm": 58.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_2_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      581,
+      126,
+      932,
+      509
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/wendy_2_0.jpg"
+    },
+    {
+     "what": "拿包的手",
+     "box_px": [
+      844,
+      1269,
+      1198,
+      1638
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/wendy_2_1.jpg"
+    }
+   ]
+  },
+  "wendy_3": {
+   "frames": {
+    "H_split": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      68,
+      0,
+      1546,
+      2304
+     ],
+     "keeps_pct": 89,
+     "effective_ppi": 378,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 22.9,
+     "forehead_y_mm": 64.2,
+     "head_top_y_mm_est": 53.9,
+     "chin_y_mm": 87.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_3_H_split.jpg"
+    },
+    "V_big": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      477,
+      1728,
+      1800
+     ],
+     "keeps_pct": 78,
+     "effective_ppi": 305,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 28.4,
+     "forehead_y_mm": 39.8,
+     "head_top_y_mm_est": 27.0,
+     "chin_y_mm": 68.2,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_3_V_big.jpg"
+    },
+    "V_inset": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      463,
+      1728,
+      1839
+     ],
+     "keeps_pct": 80,
+     "effective_ppi": 354,
+     "face_detected": true,
+     "ppi_band": "充裕",
+     "face_height_mm": 24.5,
+     "forehead_y_mm": 51.3,
+     "head_top_y_mm_est": 40.3,
+     "chin_y_mm": 75.8,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_3_V_inset.jpg"
+    },
+    "H_wide": {
+     "src_px": [
+      1728,
+      2304
+     ],
+     "crop_px": [
+      0,
+      746,
+      1728,
+      949
+     ],
+     "keeps_pct": 41,
+     "effective_ppi": 215,
+     "face_detected": true,
+     "ppi_band": "邊緣",
+     "face_height_mm": 40.2,
+     "forehead_y_mm": 24.6,
+     "head_top_y_mm_est": 6.5,
+     "chin_y_mm": 64.9,
+     "face_inside_frame": true,
+     "forehead_clear_of_coil": true,
+     "preview": "r2/assets/crops/wendy_3_H_wide.jpg"
+    }
+   },
+   "details": [
+    {
+     "what": "臉",
+     "box_px": [
+      633,
+      872,
+      1084,
+      1370
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/wendy_3_0.jpg"
+    },
+    {
+     "what": "拿毛巾的手",
+     "box_px": [
+      604,
+      414,
+      1036,
+      806
+     ],
+     "shown_at_pct": 100,
+     "file": "r2/assets/details/wendy_3_1.jpg"
+    }
+   ]
+  }
+ }
+}
