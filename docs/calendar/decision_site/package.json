@@ -1,0 +1,15 @@
+{
+  "name": "cal-2027-decision-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "2027 KOL 桌曆決策頁（靜態頁＋簡單存取保護；不接收任何資料）",
+  "main": "server.js",
+  "scripts": {
+    "_comment": "不要加名為 build 的 script：Railway 會自動執行。圖片與 data.js 由 docs/calendar/tools/build_cal_decision_site.py 預先產生並 commit。",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

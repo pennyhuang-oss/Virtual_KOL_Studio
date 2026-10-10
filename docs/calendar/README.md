@@ -84,4 +84,4 @@ python3 docs/calendar/tools/build_cal_r2_assets.py --hf-dir <快取>
 ## 怎麼看
 
 - GitHub 網頁：直接點 `r3/` 底下的 JPG；Markdown 裡的路徑都相對於 `docs/calendar/`。
-- 刻意沒有發佈到任何新的網頁服務。
+- 決策頁（給 Penny 看圖選擇；有存取保護、不進搜尋索引）：`decision_site/`，見 [`decision_site/README.md`](decision_site/README.md)。頁面內容以固定成果 commit `4fd3995` 為準；上線不代表主管或印刷核准。

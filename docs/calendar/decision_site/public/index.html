@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<meta name="page-commit" content="__PAGE_COMMIT__">
+<title>2027 KOL 桌曆決策頁</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <h1>2027 KOL 桌曆決策頁</h1>
+    <p class="meta">基準成果 SHA <code class="sha" id="sha"></code></p>
+    <p class="meta">決策頁版本 <code id="pagever"></code></p>
+    <p class="warn">本頁所有圖都是<strong>工作樣張（草稿 R3）</strong>：未經 Penny 核准、未經廠商確認。頁面上線不代表主管核准或印刷核准。</p>
+    <nav class="toc" aria-label="段落">
+      <a href="#s1">一 總覽</a><a href="#s2">二 人選與照片</a><a href="#s3">三 尺度與造型</a><a href="#s4">四 版面</a><a href="#s5">五 收件與品牌</a><a href="#out">輸出結果</a>
+    </nav>
+  </div>
+</header>
+<noscript><p class="wrap warn">本頁需要開啟 JavaScript 才能選擇與複製結果。</p></noscript>
+<main id="app" class="wrap"></main>
+<div class="bar" id="bar">
+  <div class="wrap bar-in">
+    <span id="bar-count">載入中…</span>
+    <a href="#out" class="btn ghost">看未回答</a>
+    <button type="button" class="btn" id="bar-copy">複製結果</button>
+  </div>
+</div>
+<div id="viewer" class="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="viewer-cap">
+  <div class="viewer-bar">
+    <span id="viewer-cap"></span>
+    <button type="button" class="btn ghost" id="viewer-mode">原尺寸</button>
+    <button type="button" class="btn" id="viewer-close" aria-label="關閉放大檢視">關閉 ✕</button>
+  </div>
+  <div class="viewer-body" id="viewer-body"><img id="viewer-img" alt=""></div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
