@@ -122,3 +122,48 @@ html.noscroll, html.noscroll body { overflow: hidden; }
   .month { padding: 10px; }
   #bar-count { font-size: .88rem; }
 }
+
+/* 摘要與步驟 */
+.quick { border: 2px solid #0b57d0; }
+.steps { margin: .2em 0 .6em; padding-left: 1.4em; font-size: .93rem; }
+.steps li { margin: .25em 0; }
+table.sum td:first-child { white-space: nowrap; }
+table.sum td:last-child { white-space: nowrap; }
+.changes { font-size: .9rem; margin: .3em 0; padding-left: 1.2em; }
+
+/* 月卡：推薦（固定）與目前選擇 */
+.mrow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 6px; }
+.mcol { min-width: 0; border: 1px solid #e6e3dc; border-radius: 8px; padding: 8px; background: #fff; }
+.mcol h4 { margin: 0 0 .4em; font-size: .9rem; }
+.mcol.cur { background: #f5f8ff; border-color: #b9c8e6; }
+.cur-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.cur-side { min-width: 0; }
+.cur-h { font-size: .85rem; line-height: 1.5; margin-bottom: 4px; }
+.cur-v { overflow-wrap: anywhere; }
+.cur-none { font-size: .82rem; color: #666; margin: .2em 0; }
+.cur-same { font-size: .85rem; color: #12572a; font-weight: 600; margin: .2em 0; }
+.notlaid { display: inline-block; font-size: .82rem; font-weight: 700; color: #8a3b00; background: #fff0e0; border: 1px solid #f0b47a; border-radius: 6px; padding: 2px 8px; margin: .2em 0 .3em; }
+details.edit { margin-top: 10px; }
+details.edit > summary { display: inline-block; background: #eef3fd; color: #0b4cb8; border: 1px solid #b9c8e6; border-radius: 6px; padding: 6px 10px; font-size: .9rem; }
+details.edit[open] > summary { margin-bottom: 6px; }
+details.tech > summary { font-size: .92rem; color: #333; }
+
+/* 解析度標示 */
+.resb { position: absolute; left: 4px; top: 4px; font-size: 10.5px; line-height: 1.6; border-radius: 4px; padding: 0 5px; color: #fff; background: rgba(0,0,0,.55); }
+.resb.lowres { background: #b35900; }
+.resb.hires { background: #1d6b3a; }
+.resb.page300 { background: rgba(30,40,60,.7); }
+.resnote { display: block; color: #8a3b00; font-size: .74rem; }
+
+@media (min-width: 760px) {
+  .mrow { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+@media (max-width: 759px) {
+  table.sum thead { display: none; }
+  table.sum, table.sum tbody, table.sum tr, table.sum td { display: block; width: 100%; }
+  table.sum tr { border: 1px solid #ddd; border-radius: 6px; padding: 4px 6px; margin-bottom: 6px; }
+  table.sum td { border: 0; padding: 1px 0; white-space: normal; }
+  table.sum td:first-child { font-weight: 600; white-space: normal; }
+  table.sum td:last-child { white-space: normal; }
+}

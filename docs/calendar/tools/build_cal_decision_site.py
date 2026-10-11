@@ -5,11 +5,14 @@
 - 整張複製：位元組不變，manifest 記錄來源路徑與 git blob。
 - 裁切：從固定 commit 的決策拼圖裁出單張照片（只裁切、四邊內縮 2 px 避開拼貼邊界，重新存成 JPEG q95），manifest 記錄裁切框。
 - 縮圖：上面兩者的等比縮小（Lanczos，JPEG q82），只給卡片顯示；點開放大一律看原檔或裁切檔。
-不生成、不外擴、不增強、不修圖。
+- 高解析預覽（替代照片）：來源只限可核對的既有檔——固定 commit 的 repo 檔（git blob）、R2 已取回的 Higgsfield 快取
+  （data/cal_r2_hf_retrieved.json 的 sha256）、R3 清理輸出（data/cal_r3_cleanup_report.json 的 clean_sha256）。
+  只做等比縮小（長邊 1600 px，JPEG q88，不帶原檔中繼資料）。頁面資料只放圖片 ID，不放 job_id、來源路徑或帳號資料。
+不生成、不外擴、不增強、不修圖、不重新下載。
 
 輸出：docs/calendar/decision_site/public/img/{z,t}/、public/data.js、decision_site/ASSET_MANIFEST.json
-用法：python3 docs/calendar/tools/build_cal_decision_site.py          # 產生
-      python3 docs/calendar/tools/build_cal_decision_site.py --check  # 核對已產生的檔案與固定 commit 一致
+用法：python3 docs/calendar/tools/build_cal_decision_site.py --hf-dir <取回快取> --clean-dir <R3 清理輸出>   # 產生
+      python3 docs/calendar/tools/build_cal_decision_site.py --check [--hf-dir ... --clean-dir ...]  # 核對
 """
 import argparse
 import hashlib
@@ -115,7 +118,15 @@ IMAGES = {}
 MANIFEST = []
 
 
-def put(iid, data, thumb_box, meta):
+def res_of(rel):
+    if rel.startswith(('r3/pages/hires/', 'r3/compare/hires/', 'r3/checks/hires/')):
+        return 'page300'
+    if rel.startswith('r3/previews/'):
+        return 'preview100'
+    return 'sheet'
+
+
+def put(iid, data, thumb_box, meta, res, extra=None):
     z = os.path.join(PUB, 'img', 'z', iid + '.jpg')
     t = os.path.join(PUB, 'img', 't', iid + '.jpg')
     with open(z, 'wb') as f:
@@ -127,7 +138,9 @@ def put(iid, data, thumb_box, meta):
     with open(t, 'wb') as f:
         f.write(tdata)
     IMAGES[iid] = {'z': f'img/z/{iid}.jpg', 't': f'img/t/{iid}.jpg', 'w': im.width, 'h': im.height,
-                   'tw': th.width, 'th': th.height, 'src': meta['source'], 'kind': meta['kind']}
+                   'tw': th.width, 'th': th.height, 'kind': meta['kind'], 'res': res, **(extra or {})}
+    if meta['kind'] != 'hires_preview':
+        IMAGES[iid]['src'] = meta['source']
     MANIFEST.append({'published': f'public/img/z/{iid}.jpg', 'sha256': sha256(data), **meta})
     MANIFEST.append({'published': f'public/img/t/{iid}.jpg', 'sha256': sha256(tdata), 'kind': 'thumbnail',
                      'source': f'public/img/z/{iid}.jpg', 'op': f'等比縮小至 {th.width}×{th.height}（Lanczos，JPEG q82）'})
@@ -136,14 +149,52 @@ def put(iid, data, thumb_box, meta):
 def copy(iid, rel, thumb_box=(720, 720)):
     data = git_bytes(rel)
     assert blob_of(data) == git_blob(rel)
-    put(iid, data, thumb_box, {'kind': 'copy', 'source': CAL + rel, 'source_blob': git_blob(rel), 'op': '位元組不變複製'})
+    put(iid, data, thumb_box, {'kind': 'copy', 'source': CAL + rel, 'source_blob': git_blob(rel), 'op': '位元組不變複製'}, res_of(rel))
 
 
 def crop(iid, rel, box, thumb_box=(720, 720)):
     src = Image.open(io.BytesIO(git_bytes(rel))).convert('RGB')
     data = jpeg(src.crop(tuple(box)), 95)
     put(iid, data, thumb_box, {'kind': 'crop', 'source': CAL + rel, 'source_blob': git_blob(rel), 'box_px': box,
-                               'op': f'裁切 {box}（只裁切；JPEG q95）'})
+                               'op': f'裁切 {box}（只裁切；JPEG q95）'}, 'lowres')
+
+
+HIRES_LONG = 1600
+
+
+def hires_bytes(src_bytes):
+    im = Image.open(io.BytesIO(src_bytes)).convert('RGB')
+    w, h = im.size
+    im.thumbnail((HIRES_LONG, HIRES_LONG), Image.LANCZOS)
+    return jpeg(im, 88), (w, h)
+
+
+def hires_source(cid, J, R, C, hf_dir, clean_dir):
+    """回傳 (原檔位元組, manifest 來源描述)；核對不過就丟例外。不回傳 job_id。"""
+    if cid in C:  # 有 R3 清理版的用清理版（與頁面其他地方一致）
+        c = C[cid]
+        b = open(os.path.join(clean_dir, os.path.basename(c['clean_file'])), 'rb').read()
+        assert sha256(b) == c['clean_sha256'], cid
+        return b, {'source': 'R3 清理輸出（data/cal_r3_cleanup_report.json 的 clean_sha256 核對）', 'source_sha256': c['clean_sha256']}
+    src = J[cid]['src']
+    if src.startswith('hf:'):
+        r = next(x for x in R if x['job_id'] == src[3:])
+        b = open(os.path.join(hf_dir, r['local']), 'rb').read()
+        assert sha256(b) == r['sha256'], cid
+        return b, {'source': 'R2 已取回的 Higgsfield 快取（data/cal_r2_hf_retrieved.json 的 sha256 核對）', 'source_sha256': r['sha256']}
+    b = subprocess.check_output(['git', '-C', ROOT, 'show', f'{FIXED}:{src}'])
+    blob = subprocess.check_output(['git', '-C', ROOT, 'rev-parse', f'{FIXED}:{src}'], text=True).strip()
+    assert blob_of(b) == blob, cid
+    return b, {'source': f'repo@{FIXED}:{src}', 'source_blob': blob, 'source_sha256': sha256(b)}
+
+
+def hires(cid, J, R, C, hf_dir, clean_dir):
+    b, meta = hires_source(cid, J, R, C, hf_dir, clean_dir)
+    data, (w, h) = hires_bytes(b)
+    im = Image.open(io.BytesIO(data))
+    put('hi_' + cid, data, (720, 720), {'kind': 'hires_preview', 'cid': cid, **meta,
+        'op': f'原檔 {w}×{h} 等比縮小至 {im.width}×{im.height}（Lanczos，JPEG q88，不帶中繼資料）'},
+        'hires', {'cid': cid, 'orig_px': [w, h]})
 
 
 # ---------- 資料 ----------
@@ -155,9 +206,13 @@ def load_json(rel):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true')
+    ap.add_argument('--hf-dir', help='R2 已取回的 Higgsfield 原圖快取（核對 sha256 後才使用）')
+    ap.add_argument('--clean-dir', help='R3 清理輸出資料夾（含 coco_alt01.png 等；核對 clean_sha256）')
     a = ap.parse_args()
     if a.check:
-        return check()
+        return check(a.hf_dir, a.clean_dir)
+    if not (a.hf_dir and a.clean_dir):
+        ap.error('產生時需要 --hf-dir 與 --clean-dir')
     for d in ('z', 't'):
         os.makedirs(os.path.join(PUB, 'img', d), exist_ok=True)
         for fn in os.listdir(os.path.join(PUB, 'img', d)):
@@ -188,6 +243,16 @@ def main():
     copy('CAL_R2_decide_people_compare', 'r2/decisions/CAL_R2_decide_people_compare.jpg', (1205, 1100))
     copy('coco_alt01_compare', 'r3/cleanup/coco_alt01_compare_hires.jpg', (1000, 1000))
     copy('CAL_R3_100pct_V_year_top', 'r3/previews/CAL_R3_100pct_V_year_top.jpg', (1000, 1000))
+    copy('CAL_R3_100pct_H_grid_09_small_photo', 'r3/previews/CAL_R3_100pct_H_grid_09_small_photo.jpg', (1000, 1000))
+
+    # 高解析預覽：有實際替代選項的照片＋名單比較用的 somi_V（來源核對後等比縮小）
+    J = {c['cid']: c for c in load_json('data/cal_r2_judgments.json')['candidates']}
+    R = load_json('data/cal_r2_hf_retrieved.json')['items']
+    C = {c['cid']: c for c in load_json('data/cal_r3_cleanup_report.json')['items']}
+    HI = ['kanon_H', 'angel_alt004', 'ananya_2', 'somi_V', 'somi_H', 'somi_alt065', 'coco_alt01',
+          'tammy_H', 'tammy_alt075', 'rin_altR1V', 'rainie_alt02']
+    for cid in HI:
+        hires(cid, J, R, C, a.hf_dir, a.clean_dir)
 
     # 裁切：決策 B（每格 390×520）
     B = 'r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg'
@@ -196,7 +261,9 @@ def main():
     assert [len(r) for r in rowsB] == [3, 3, 3], rowsB
     for names, boxes in zip(namesB, rowsB):
         for n, b in zip(names, boxes):
-            crop('tile_' + n, B, b)
+            # 有高解析預覽，或已有 300 dpi 樣張可看的推薦圖，不再發佈低解析裁切
+            if n not in HI and n not in ('kanon_alt028', 'angel_H', 'angel_V'):
+                crop('tile_' + n, B, b)
     # 裁切：各月選項附表（每格高 380）
     O = 'r3/decisions/CAL_R3_decide_options_hires.jpg'
     rowsO = composite_tiles(O, 380, lambda y: 62 if y else 118)
@@ -205,7 +272,7 @@ def main():
               11: ['rin_H', 'rin_V', 'rin_altR1V'], 12: ['rainie_H', 'rainie_V', 'rainie_alt02']}
     om = [M['m'] for M in months if M['options']]
     assert om == list(namesO) and [len(r) for r in rowsO] == [len(namesO[m]) for m in om], rowsO
-    want = {'somi_V', 'somi_H', 'somi_alt065', 'coco_alt01', 'yuna_altsoft', 'tammy_H', 'tammy_alt075', 'rin_altR1V', 'rainie_alt02'}
+    want = set()  # 附表裡的替代照片都已有高解析預覽（9b 用固定 commit 的 100% 預覽），不再裁切
     for m, boxes in zip(om, rowsO):
         for n, b in zip(namesO[m], boxes):
             if n in want:
@@ -220,8 +287,6 @@ def main():
     # A0、A1 各自的 12 人格（每格 300×298、間距 8；整格 1232×918）
     for gx, n in ((260, 'roster_A0'), (1506, 'roster_A1')):
         crop(n, A, [gx, ry0 + 5 + 62, gx + 1232 - 8, ry0 + 5 + 62 + 918 - 8], (900, 900))
-    # 裁切：R2 比較圖的 ananya_2（邊界由像素剖面量得：x 555–870、y 94–514）
-    crop('tile_ananya_2', 'r2/decisions/CAL_R2_decide_people_compare.jpg', inset([555, 94, 870, 514]))
 
     # ---------- 頁面資料 ----------
     def ph(p):
@@ -244,13 +309,14 @@ def main():
         'months': out_months,
         'checks': {p: ph(p) for p in ('CHK_kanon_kanon_H_V_U', 'CHK_kanon_kanon_V_V_U', 'CHK_kanon_kanon_alt028_V_U')},
         'grid9': ph('H_grid_09_yuna-kim'),
+        'hires_of': {cid: 'hi_' + cid for cid in HI},
         'images': IMAGES,
     }
     with open(os.path.join(PUB, 'data.js'), 'w', encoding='utf-8') as f:
         f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。資料來源：固定成果 commit ' + FIXED + '\n')
         f.write('window.CAL_DATA = ' + json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     man = {'generated_by': 'docs/calendar/tools/build_cal_decision_site.py', 'fixed_sha': FIXED,
-           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切；thumbnail＝等比縮小。沒有生成、外擴、增強或修圖。',
+           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小。沒有生成、外擴、增強或修圖。本檔不對外提供。',
            'files': MANIFEST}
     with open(os.path.join(SITE, 'ASSET_MANIFEST.json'), 'w', encoding='utf-8') as f:
         json.dump(man, f, ensure_ascii=False, indent=1)
@@ -258,11 +324,15 @@ def main():
     print(f'ok: {len(IMAGES)} images, {len(MANIFEST)} files')
 
 
-def check():
+def check(hf_dir=None, clean_dir=None):
     man = json.load(open(os.path.join(SITE, 'ASSET_MANIFEST.json'), encoding='utf-8'))
     assert man['fixed_sha'] == FIXED
     listed = set()
     bad = 0
+    J = {c['cid']: c for c in load_json('data/cal_r2_judgments.json')['candidates']}
+    R = load_json('data/cal_r2_hf_retrieved.json')['items']
+    C = {c['cid']: c for c in load_json('data/cal_r3_cleanup_report.json')['items']}
+    not_recomputed = []
     for e in man['files']:
         p = os.path.join(SITE, e['published'])
         listed.add(os.path.relpath(p, PUB))
@@ -276,6 +346,12 @@ def check():
             src = Image.open(io.BytesIO(git_bytes(e['source'][len(CAL):]))).convert('RGB')
             if jpeg(src.crop(tuple(e['box_px'])), 95) != data:
                 print('裁切無法重現', e['published']); bad += 1
+        if e['kind'] == 'hires_preview':
+            needs_cache = not e['source'].startswith('repo@')
+            if needs_cache and not (hf_dir and clean_dir):
+                not_recomputed.append(e['cid'])
+            elif hires_bytes(hires_source(e['cid'], J, R, C, hf_dir, clean_dir)[0])[0] != data:
+                print('高解析預覽無法重現', e['published']); bad += 1
     on_disk = set()
     for d in ('z', 't'):
         for fn in os.listdir(os.path.join(PUB, 'img', d)):
@@ -283,9 +359,9 @@ def check():
     extra = on_disk - listed
     if extra:
         print('manifest 以外的圖片：', sorted(extra)); bad += 1
-    copies = sum(e['kind'] == 'copy' for e in man['files'])
-    crops = sum(e['kind'] == 'crop' for e in man['files'])
-    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {copies}、crop {crops}、thumbnail {len(man["files"]) - copies - crops}），問題 {bad}')
+    n = {k: sum(e['kind'] == k for e in man['files']) for k in ('copy', 'crop', 'hires_preview', 'thumbnail')}
+    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}），問題 {bad}'
+          + (f'；未提供快取、只核對 sha256 的高解析預覽：{", ".join(not_recomputed)}' if not_recomputed else ''))
     return 1 if bad else 0
 
 

@@ -99,10 +99,24 @@ window.CAL_DATA = {
    "m": 12
   }
  },
+ "hires_of": {
+  "ananya_2": "hi_ananya_2",
+  "angel_alt004": "hi_angel_alt004",
+  "coco_alt01": "hi_coco_alt01",
+  "kanon_H": "hi_kanon_H",
+  "rainie_alt02": "hi_rainie_alt02",
+  "rin_altR1V": "hi_rin_altR1V",
+  "somi_H": "hi_somi_H",
+  "somi_V": "hi_somi_V",
+  "somi_alt065": "hi_somi_alt065",
+  "tammy_H": "hi_tammy_H",
+  "tammy_alt075": "hi_tammy_alt075"
+ },
  "images": {
   "CAL_R2_decide_people_backup": {
    "h": 996,
    "kind": "copy",
+   "res": "sheet",
    "src": "docs/calendar/r2/decisions/CAL_R2_decide_people_backup.jpg",
    "t": "img/t/CAL_R2_decide_people_backup.jpg",
    "th": 996,
@@ -113,6 +127,7 @@ window.CAL_DATA = {
   "CAL_R2_decide_people_compare": {
    "h": 996,
    "kind": "copy",
+   "res": "sheet",
    "src": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
    "t": "img/t/CAL_R2_decide_people_compare.jpg",
    "th": 996,
@@ -123,6 +138,7 @@ window.CAL_DATA = {
   "CAL_R2_focus_iris_rainie": {
    "h": 1662,
    "kind": "copy",
+   "res": "sheet",
    "src": "docs/calendar/r2/faces/CAL_R2_focus_iris_rainie_hires.jpg",
    "t": "img/t/CAL_R2_focus_iris_rainie.jpg",
    "th": 1662,
@@ -133,6 +149,7 @@ window.CAL_DATA = {
   "CAL_R2_focus_kanon_somi_tammy": {
    "h": 2465,
    "kind": "copy",
+   "res": "sheet",
    "src": "docs/calendar/r2/faces/CAL_R2_focus_kanon_somi_tammy_hires.jpg",
    "t": "img/t/CAL_R2_focus_kanon_somi_tammy.jpg",
    "th": 2465,
@@ -140,9 +157,21 @@ window.CAL_DATA = {
    "w": 616,
    "z": "img/z/CAL_R2_focus_kanon_somi_tammy.jpg"
   },
+  "CAL_R3_100pct_H_grid_09_small_photo": {
+   "h": 1133,
+   "kind": "copy",
+   "res": "preview100",
+   "src": "docs/calendar/r3/previews/CAL_R3_100pct_H_grid_09_small_photo.jpg",
+   "t": "img/t/CAL_R3_100pct_H_grid_09_small_photo.jpg",
+   "th": 940,
+   "tw": 1000,
+   "w": 1205,
+   "z": "img/z/CAL_R3_100pct_H_grid_09_small_photo.jpg"
+  },
   "CAL_R3_100pct_V_year_top": {
    "h": 944,
    "kind": "copy",
+   "res": "preview100",
    "src": "docs/calendar/r3/previews/CAL_R3_100pct_V_year_top.jpg",
    "t": "img/t/CAL_R3_100pct_V_year_top.jpg",
    "th": 850,
@@ -153,6 +182,7 @@ window.CAL_DATA = {
   "CHK_kanon_kanon_H_V_U": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/checks/hires/CHK_kanon_kanon_H_V_U.jpg",
    "t": "img/t/CHK_kanon_kanon_H_V_U.jpg",
    "th": 720,
@@ -163,6 +193,7 @@ window.CAL_DATA = {
   "CHK_kanon_kanon_V_V_U": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/checks/hires/CHK_kanon_kanon_V_V_U.jpg",
    "t": "img/t/CHK_kanon_kanon_V_V_U.jpg",
    "th": 720,
@@ -173,6 +204,7 @@ window.CAL_DATA = {
   "H_A_01_iris-chen": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_01_iris-chen.jpg",
    "t": "img/t/H_A_01_iris-chen.jpg",
    "th": 547,
@@ -183,6 +215,7 @@ window.CAL_DATA = {
   "H_A_02_kanon-komori": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_02_kanon-komori.jpg",
    "t": "img/t/H_A_02_kanon-komori.jpg",
    "th": 547,
@@ -193,6 +226,7 @@ window.CAL_DATA = {
   "H_A_03_luna-tanaka": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_03_luna-tanaka.jpg",
    "t": "img/t/H_A_03_luna-tanaka.jpg",
    "th": 547,
@@ -203,6 +237,7 @@ window.CAL_DATA = {
   "H_A_04_angel-chiu": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_04_angel-chiu.jpg",
    "t": "img/t/H_A_04_angel-chiu.jpg",
    "th": 547,
@@ -213,6 +248,7 @@ window.CAL_DATA = {
   "H_A_05_somi-oh": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_05_somi-oh.jpg",
    "t": "img/t/H_A_05_somi-oh.jpg",
    "th": 547,
@@ -223,6 +259,7 @@ window.CAL_DATA = {
   "H_A_06_vicky-lin": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_06_vicky-lin.jpg",
    "t": "img/t/H_A_06_vicky-lin.jpg",
    "th": 547,
@@ -233,6 +270,7 @@ window.CAL_DATA = {
   "H_A_07_coco-wu": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_07_coco-wu.jpg",
    "t": "img/t/H_A_07_coco-wu.jpg",
    "th": 547,
@@ -243,6 +281,7 @@ window.CAL_DATA = {
   "H_A_08_mia-huang": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_08_mia-huang.jpg",
    "t": "img/t/H_A_08_mia-huang.jpg",
    "th": 547,
@@ -253,6 +292,7 @@ window.CAL_DATA = {
   "H_A_09_yuna-kim": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_09_yuna-kim.jpg",
    "t": "img/t/H_A_09_yuna-kim.jpg",
    "th": 547,
@@ -263,6 +303,7 @@ window.CAL_DATA = {
   "H_A_10_tammy-chou": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_10_tammy-chou.jpg",
    "t": "img/t/H_A_10_tammy-chou.jpg",
    "th": 547,
@@ -273,6 +314,7 @@ window.CAL_DATA = {
   "H_A_11_rin-ayase": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_11_rin-ayase.jpg",
    "t": "img/t/H_A_11_rin-ayase.jpg",
    "th": 547,
@@ -283,6 +325,7 @@ window.CAL_DATA = {
   "H_A_12_rainie-hsu": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_A_12_rainie-hsu.jpg",
    "t": "img/t/H_A_12_rainie-hsu.jpg",
    "th": 547,
@@ -293,6 +336,7 @@ window.CAL_DATA = {
   "H_B_01_iris-chen": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_01_iris-chen.jpg",
    "t": "img/t/H_B_01_iris-chen.jpg",
    "th": 547,
@@ -303,6 +347,7 @@ window.CAL_DATA = {
   "H_B_02_kanon-komori": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_02_kanon-komori.jpg",
    "t": "img/t/H_B_02_kanon-komori.jpg",
    "th": 547,
@@ -313,6 +358,7 @@ window.CAL_DATA = {
   "H_B_03_luna-tanaka": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_03_luna-tanaka.jpg",
    "t": "img/t/H_B_03_luna-tanaka.jpg",
    "th": 547,
@@ -323,6 +369,7 @@ window.CAL_DATA = {
   "H_B_04_angel-chiu": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_04_angel-chiu.jpg",
    "t": "img/t/H_B_04_angel-chiu.jpg",
    "th": 547,
@@ -333,6 +380,7 @@ window.CAL_DATA = {
   "H_B_05_somi-oh": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_05_somi-oh.jpg",
    "t": "img/t/H_B_05_somi-oh.jpg",
    "th": 547,
@@ -343,6 +391,7 @@ window.CAL_DATA = {
   "H_B_06_vicky-lin": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_06_vicky-lin.jpg",
    "t": "img/t/H_B_06_vicky-lin.jpg",
    "th": 547,
@@ -353,6 +402,7 @@ window.CAL_DATA = {
   "H_B_07_coco-wu": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_07_coco-wu.jpg",
    "t": "img/t/H_B_07_coco-wu.jpg",
    "th": 547,
@@ -363,6 +413,7 @@ window.CAL_DATA = {
   "H_B_08_mia-huang": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_08_mia-huang.jpg",
    "t": "img/t/H_B_08_mia-huang.jpg",
    "th": 547,
@@ -373,6 +424,7 @@ window.CAL_DATA = {
   "H_B_09_yuna-kim": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_09_yuna-kim.jpg",
    "t": "img/t/H_B_09_yuna-kim.jpg",
    "th": 547,
@@ -383,6 +435,7 @@ window.CAL_DATA = {
   "H_B_10_tammy-chou": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_10_tammy-chou.jpg",
    "t": "img/t/H_B_10_tammy-chou.jpg",
    "th": 547,
@@ -393,6 +446,7 @@ window.CAL_DATA = {
   "H_B_11_rin-ayase": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_11_rin-ayase.jpg",
    "t": "img/t/H_B_11_rin-ayase.jpg",
    "th": 547,
@@ -403,6 +457,7 @@ window.CAL_DATA = {
   "H_B_12_rainie-hsu": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/H_B_12_rainie-hsu.jpg",
    "t": "img/t/H_B_12_rainie-hsu.jpg",
    "th": 547,
@@ -413,6 +468,7 @@ window.CAL_DATA = {
   "H_cover": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_cover.jpg",
    "t": "img/t/H_cover.jpg",
    "th": 547,
@@ -423,6 +479,7 @@ window.CAL_DATA = {
   "H_grid_09_yuna-kim": {
    "h": 1831,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/H_grid_09_yuna-kim.jpg",
    "t": "img/t/H_grid_09_yuna-kim.jpg",
    "th": 547,
@@ -433,6 +490,7 @@ window.CAL_DATA = {
   "V_A_01_iris-chen": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/V_A_01_iris-chen.jpg",
    "t": "img/t/V_A_01_iris-chen.jpg",
    "th": 720,
@@ -443,6 +501,7 @@ window.CAL_DATA = {
   "V_A_02_kanon-komori": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/V_A_02_kanon-komori.jpg",
    "t": "img/t/V_A_02_kanon-komori.jpg",
    "th": 720,
@@ -453,6 +512,7 @@ window.CAL_DATA = {
   "V_A_06_vicky-lin": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/V_A_06_vicky-lin.jpg",
    "t": "img/t/V_A_06_vicky-lin.jpg",
    "th": 720,
@@ -463,6 +523,7 @@ window.CAL_DATA = {
   "V_A_11_rin-ayase": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/compare/hires/V_A_11_rin-ayase.jpg",
    "t": "img/t/V_A_11_rin-ayase.jpg",
    "th": 720,
@@ -473,6 +534,7 @@ window.CAL_DATA = {
   "V_U_01_iris-chen": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_01_iris-chen.jpg",
    "t": "img/t/V_U_01_iris-chen.jpg",
    "th": 720,
@@ -483,6 +545,7 @@ window.CAL_DATA = {
   "V_U_02_kanon-komori": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_02_kanon-komori.jpg",
    "t": "img/t/V_U_02_kanon-komori.jpg",
    "th": 720,
@@ -493,6 +556,7 @@ window.CAL_DATA = {
   "V_U_03_luna-tanaka": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_03_luna-tanaka.jpg",
    "t": "img/t/V_U_03_luna-tanaka.jpg",
    "th": 720,
@@ -503,6 +567,7 @@ window.CAL_DATA = {
   "V_U_04_angel-chiu": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_04_angel-chiu.jpg",
    "t": "img/t/V_U_04_angel-chiu.jpg",
    "th": 720,
@@ -513,6 +578,7 @@ window.CAL_DATA = {
   "V_U_05_somi-oh": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_05_somi-oh.jpg",
    "t": "img/t/V_U_05_somi-oh.jpg",
    "th": 720,
@@ -523,6 +589,7 @@ window.CAL_DATA = {
   "V_U_06_vicky-lin": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_06_vicky-lin.jpg",
    "t": "img/t/V_U_06_vicky-lin.jpg",
    "th": 720,
@@ -533,6 +600,7 @@ window.CAL_DATA = {
   "V_U_07_coco-wu": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_07_coco-wu.jpg",
    "t": "img/t/V_U_07_coco-wu.jpg",
    "th": 720,
@@ -543,6 +611,7 @@ window.CAL_DATA = {
   "V_U_08_mia-huang": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_08_mia-huang.jpg",
    "t": "img/t/V_U_08_mia-huang.jpg",
    "th": 720,
@@ -553,6 +622,7 @@ window.CAL_DATA = {
   "V_U_09_yuna-kim": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_09_yuna-kim.jpg",
    "t": "img/t/V_U_09_yuna-kim.jpg",
    "th": 720,
@@ -563,6 +633,7 @@ window.CAL_DATA = {
   "V_U_10_tammy-chou": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_10_tammy-chou.jpg",
    "t": "img/t/V_U_10_tammy-chou.jpg",
    "th": 720,
@@ -573,6 +644,7 @@ window.CAL_DATA = {
   "V_U_11_rin-ayase": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_11_rin-ayase.jpg",
    "t": "img/t/V_U_11_rin-ayase.jpg",
    "th": 720,
@@ -583,6 +655,7 @@ window.CAL_DATA = {
   "V_U_12_rainie-hsu": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_U_12_rainie-hsu.jpg",
    "t": "img/t/V_U_12_rainie-hsu.jpg",
    "th": 720,
@@ -593,6 +666,7 @@ window.CAL_DATA = {
   "V_cover": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_cover.jpg",
    "t": "img/t/V_cover.jpg",
    "th": 720,
@@ -603,6 +677,7 @@ window.CAL_DATA = {
   "V_grid_12_rainie-hsu": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_grid_12_rainie-hsu.jpg",
    "t": "img/t/V_grid_12_rainie-hsu.jpg",
    "th": 720,
@@ -613,6 +688,7 @@ window.CAL_DATA = {
   "V_year_2027": {
    "h": 2409,
    "kind": "copy",
+   "res": "page300",
    "src": "docs/calendar/r3/pages/hires/V_year_2027.jpg",
    "t": "img/t/V_year_2027.jpg",
    "th": 720,
@@ -623,6 +699,7 @@ window.CAL_DATA = {
   "coco_alt01_compare": {
    "h": 677,
    "kind": "copy",
+   "res": "sheet",
    "src": "docs/calendar/r3/cleanup/coco_alt01_compare_hires.jpg",
    "t": "img/t/coco_alt01_compare.jpg",
    "th": 677,
@@ -633,6 +710,7 @@ window.CAL_DATA = {
   "head_ananya_2": {
    "h": 226,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_A_roster_hires.jpg",
    "t": "img/t/head_ananya_2.jpg",
    "th": 226,
@@ -643,6 +721,7 @@ window.CAL_DATA = {
   "head_somi_V": {
    "h": 226,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_A_roster_hires.jpg",
    "t": "img/t/head_somi_V.jpg",
    "th": 226,
@@ -650,9 +729,175 @@ window.CAL_DATA = {
    "w": 173,
    "z": "img/z/head_somi_V.jpg"
   },
+  "hi_ananya_2": {
+   "cid": "ananya_2",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/hi_ananya_2.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_ananya_2.jpg"
+  },
+  "hi_angel_alt004": {
+   "cid": "angel_alt004",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/hi_angel_alt004.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_angel_alt004.jpg"
+  },
+  "hi_coco_alt01": {
+   "cid": "coco_alt01",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/hi_coco_alt01.jpg",
+   "th": 720,
+   "tw": 405,
+   "w": 900,
+   "z": "img/z/hi_coco_alt01.jpg"
+  },
+  "hi_kanon_H": {
+   "cid": "kanon_H",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/hi_kanon_H.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_kanon_H.jpg"
+  },
+  "hi_rainie_alt02": {
+   "cid": "rainie_alt02",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/hi_rainie_alt02.jpg",
+   "th": 720,
+   "tw": 405,
+   "w": 900,
+   "z": "img/z/hi_rainie_alt02.jpg"
+  },
+  "hi_rin_altR1V": {
+   "cid": "rin_altR1V",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/hi_rin_altR1V.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_rin_altR1V.jpg"
+  },
+  "hi_somi_H": {
+   "cid": "somi_H",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/hi_somi_H.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_somi_H.jpg"
+  },
+  "hi_somi_V": {
+   "cid": "somi_V",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/hi_somi_V.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_somi_V.jpg"
+  },
+  "hi_somi_alt065": {
+   "cid": "somi_alt065",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/hi_somi_alt065.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_somi_alt065.jpg"
+  },
+  "hi_tammy_H": {
+   "cid": "tammy_H",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/hi_tammy_H.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_tammy_H.jpg"
+  },
+  "hi_tammy_alt075": {
+   "cid": "tammy_alt075",
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/hi_tammy_alt075.jpg",
+   "th": 720,
+   "tw": 540,
+   "w": 1200,
+   "z": "img/z/hi_tammy_alt075.jpg"
+  },
   "roster_A0": {
    "h": 910,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_A_roster_hires.jpg",
    "t": "img/t/roster_A0.jpg",
    "th": 669,
@@ -663,6 +908,7 @@ window.CAL_DATA = {
   "roster_A1": {
    "h": 910,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_A_roster_hires.jpg",
    "t": "img/t/roster_A1.jpg",
    "th": 669,
@@ -670,59 +916,10 @@ window.CAL_DATA = {
    "w": 1224,
    "z": "img/z/roster_A1.jpg"
   },
-  "tile_ananya_2": {
-   "h": 416,
-   "kind": "crop",
-   "src": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
-   "t": "img/t/tile_ananya_2.jpg",
-   "th": 416,
-   "tw": 311,
-   "w": 311,
-   "z": "img/z/tile_ananya_2.jpg"
-  },
-  "tile_angel_H": {
-   "h": 516,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
-   "t": "img/t/tile_angel_H.jpg",
-   "th": 516,
-   "tw": 388,
-   "w": 388,
-   "z": "img/z/tile_angel_H.jpg"
-  },
-  "tile_angel_V": {
-   "h": 516,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
-   "t": "img/t/tile_angel_V.jpg",
-   "th": 516,
-   "tw": 387,
-   "w": 387,
-   "z": "img/z/tile_angel_V.jpg"
-  },
-  "tile_angel_alt004": {
-   "h": 516,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
-   "t": "img/t/tile_angel_alt004.jpg",
-   "th": 516,
-   "tw": 386,
-   "w": 386,
-   "z": "img/z/tile_angel_alt004.jpg"
-  },
-  "tile_coco_alt01": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_coco_alt01.jpg",
-   "th": 376,
-   "tw": 211,
-   "w": 211,
-   "z": "img/z/tile_coco_alt01.jpg"
-  },
   "tile_iris_H": {
    "h": 516,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
    "t": "img/t/tile_iris_H.jpg",
    "th": 516,
@@ -733,6 +930,7 @@ window.CAL_DATA = {
   "tile_iris_V": {
    "h": 516,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
    "t": "img/t/tile_iris_V.jpg",
    "th": 516,
@@ -740,19 +938,10 @@ window.CAL_DATA = {
    "w": 388,
    "z": "img/z/tile_iris_V.jpg"
   },
-  "tile_kanon_H": {
-   "h": 516,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
-   "t": "img/t/tile_kanon_H.jpg",
-   "th": 516,
-   "tw": 388,
-   "w": 388,
-   "z": "img/z/tile_kanon_H.jpg"
-  },
   "tile_kanon_V": {
    "h": 516,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
    "t": "img/t/tile_kanon_V.jpg",
    "th": 516,
@@ -760,105 +949,16 @@ window.CAL_DATA = {
    "w": 386,
    "z": "img/z/tile_kanon_V.jpg"
   },
-  "tile_kanon_alt028": {
-   "h": 516,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
-   "t": "img/t/tile_kanon_alt028.jpg",
-   "th": 516,
-   "tw": 387,
-   "w": 387,
-   "z": "img/z/tile_kanon_alt028.jpg"
-  },
-  "tile_rainie_alt02": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_rainie_alt02.jpg",
-   "th": 376,
-   "tw": 211,
-   "w": 211,
-   "z": "img/z/tile_rainie_alt02.jpg"
-  },
-  "tile_rin_altR1V": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_rin_altR1V.jpg",
-   "th": 376,
-   "tw": 281,
-   "w": 281,
-   "z": "img/z/tile_rin_altR1V.jpg"
-  },
   "tile_scale_S3_ref": {
    "h": 516,
    "kind": "crop",
+   "res": "lowres",
    "src": "docs/calendar/r3/decisions/CAL_R3_decide_B_scale_style_hires.jpg",
    "t": "img/t/tile_scale_S3_ref.jpg",
    "th": 516,
    "tw": 388,
    "w": 388,
    "z": "img/z/tile_scale_S3_ref.jpg"
-  },
-  "tile_somi_H": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_somi_H.jpg",
-   "th": 376,
-   "tw": 283,
-   "w": 283,
-   "z": "img/z/tile_somi_H.jpg"
-  },
-  "tile_somi_V": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_somi_V.jpg",
-   "th": 376,
-   "tw": 282,
-   "w": 282,
-   "z": "img/z/tile_somi_V.jpg"
-  },
-  "tile_somi_alt065": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_somi_alt065.jpg",
-   "th": 376,
-   "tw": 281,
-   "w": 281,
-   "z": "img/z/tile_somi_alt065.jpg"
-  },
-  "tile_tammy_H": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_tammy_H.jpg",
-   "th": 376,
-   "tw": 282,
-   "w": 282,
-   "z": "img/z/tile_tammy_H.jpg"
-  },
-  "tile_tammy_alt075": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_tammy_alt075.jpg",
-   "th": 376,
-   "tw": 282,
-   "w": 282,
-   "z": "img/z/tile_tammy_alt075.jpg"
-  },
-  "tile_yuna_altsoft": {
-   "h": 376,
-   "kind": "crop",
-   "src": "docs/calendar/r3/decisions/CAL_R3_decide_options_hires.jpg",
-   "t": "img/t/tile_yuna_altsoft.jpg",
-   "th": 376,
-   "tw": 300,
-   "w": 300,
-   "z": "img/z/tile_yuna_altsoft.jpg"
   }
  },
  "months": [
