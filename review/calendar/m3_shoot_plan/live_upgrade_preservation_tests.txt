@@ -1,0 +1,44 @@
+PASS	[verify 256859b] 升版後 localStorage 內容與升版前位元組相同	
+PASS	[verify] 升版後 Iris 橫 iris-03、直 iris-01、備 iris-12，仍是草稿	
+PASS	[verify] 升版後 Luna、Coco、Yerin 仍是「已確認」（確認時間不變）	
+PASS	[verify] 升版後 Coco 備註保留	
+PASS	[verify] 升版後按鈕狀態對應原選擇（iris-03 橫、coco-04 橫、coco-15 備選）	
+PASS	[verify] 已選 ID 的縮圖檔名不變（img/t/m_<ID>.jpg）	
+PASS	[verify] 「泳裝／內衣素材參考」只在 Iris（7）與 Coco（2）	[["iris-chen",7],["coco-wu",2]]
+PASS	[verify] 該區說明寫「照片選擇意向；若採用此尺度，交印前需確認廠商接受範圍」	
+PASS	[verify] 19 張恢復照片都有「泳裝／內衣」標籤與尺度提示	
+PASS	[verify] 恢復照片的分區：代表圖 9 張在參考區、其餘 10 張在更多素材	
+PASS	[verify] 頁面沒有「禁止／違法／需 owner 再批准」字樣	
+PASS	[verify] 卡片總數 190（原 171＋新增 19）	190
+PASS	[verify] Iris 招牌清理版：「已處理；近看有失焦色塊，成品質感待覆核」	
+PASS	[verify] 5 張清理版都寫「成品質感待覆核」、沒有「完成」	
+PASS	[verify] 背景路人、牆上本人照片標為「構圖注意（可選清理）」，不是必修	構圖注意（可選清理）：背景三位路人距離近（含一位男性正面） / 構圖注意（可選清理）：低解析縮圖；牆上人像是她自己的臉（daily 審查標記）
+PASS	[verify] 假字仍標「待修」	
+PASS	[verify] 恢復照片可列為備選；只影響 Iris（Iris 草稿，Luna 仍已確認）	
+PASS	[verify] 選恢復照片作直式會撤銷 Coco 的確認	
+PASS	[verify] 複製文字：iris-26 列在備選、coco-20 直式且註明泳裝／內衣、附尺度說明	
+PASS	[verify] 展開全部後沒有橫向捲動	0
+PASS	[verify] 所有縮圖載入	0
+PASS	[verify] 沒有 console 錯誤	
+PASS	[verify-mobile 256859b] 升版後 localStorage 內容與升版前位元組相同	
+PASS	[verify-mobile] 升版後 Iris 橫 iris-03、直 iris-01、備 iris-12，仍是草稿	
+PASS	[verify-mobile] 升版後 Luna、Coco、Yerin 仍是「已確認」（確認時間不變）	
+PASS	[verify-mobile] 升版後 Coco 備註保留	
+PASS	[verify-mobile] 升版後按鈕狀態對應原選擇（iris-03 橫、coco-04 橫、coco-15 備選）	
+PASS	[verify-mobile] 已選 ID 的縮圖檔名不變（img/t/m_<ID>.jpg）	
+PASS	[verify-mobile] 「泳裝／內衣素材參考」只在 Iris（7）與 Coco（2）	[["iris-chen",7],["coco-wu",2]]
+PASS	[verify-mobile] 該區說明寫「照片選擇意向；若採用此尺度，交印前需確認廠商接受範圍」	
+PASS	[verify-mobile] 19 張恢復照片都有「泳裝／內衣」標籤與尺度提示	
+PASS	[verify-mobile] 恢復照片的分區：代表圖 9 張在參考區、其餘 10 張在更多素材	
+PASS	[verify-mobile] 頁面沒有「禁止／違法／需 owner 再批准」字樣	
+PASS	[verify-mobile] 卡片總數 190（原 171＋新增 19）	190
+PASS	[verify-mobile] Iris 招牌清理版：「已處理；近看有失焦色塊，成品質感待覆核」	
+PASS	[verify-mobile] 5 張清理版都寫「成品質感待覆核」、沒有「完成」	
+PASS	[verify-mobile] 背景路人、牆上本人照片標為「構圖注意（可選清理）」，不是必修	構圖注意（可選清理）：背景三位路人距離近（含一位男性正面） / 構圖注意（可選清理）：低解析縮圖；牆上人像是她自己的臉（daily 審查標記）
+PASS	[verify-mobile] 假字仍標「待修」	
+PASS	[verify-mobile] 恢復照片可列為備選；只影響 Iris（Iris 草稿，Luna 仍已確認）	
+PASS	[verify-mobile] 選恢復照片作直式會撤銷 Coco 的確認	
+PASS	[verify-mobile] 複製文字：iris-26 列在備選、coco-20 直式且註明泳裝／內衣、附尺度說明	
+PASS	[verify-mobile] 展開全部後沒有橫向捲動	0
+PASS	[verify-mobile] 所有縮圖載入	0
+PASS	[verify-mobile] 沒有 console 錯誤	

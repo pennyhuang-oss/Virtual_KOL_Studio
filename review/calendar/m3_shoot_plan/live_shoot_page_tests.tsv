@@ -1,0 +1,74 @@
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /shoot.css	200
+PASS	不帶憑證可開 /index.html	200
+PASS	不帶憑證可開 /data.js	200
+PASS	不帶憑證可開 /img/z/aal_ref02.jpg	200
+PASS	不帶憑證可開 /img/t/aal_pool22.jpg	200
+PASS	不帶憑證可開 /img/z/m_rin-04.jpg	200
+PASS	shoot.html 有 X-Robots-Tag noindex	
+PASS	shoot.html 有 CSP connect-src none	
+PASS	公開資料沒有 job_id／hf:／kols 路徑	
+PASS	公開資料沒有任何 Soul ID 前綴	
+PASS	公開資料的生成數、credits、訓練數都是 0	
+PASS	shoot.html 頁面第一行標題是指定的輪次字串	
+PASS	[desktop] 素材頁有 M-3 企劃連結	
+PASS	[desktop] 素材頁照舊讀出既有選擇（iris-04 為橫式）	
+PASS	[desktop] 頂端第一行是指定的輪次字串	
+PASS	[desktop] 頂端寫明尚未生成、0 張 0 credits 0 訓練	
+PASS	[desktop] Aaliya 參考 5 張	
+PASS	[desktop] Aaliya 警語（臉不能當身分參考）	
+PASS	[desktop] Penny 喜歡的 4 張	
+PASS	[desktop] 4 張 ID 正確且寫明不轉成主照片	
+PASS	[desktop] 12 張企劃卡，順序同名單	
+PASS	[desktop] 每張卡：2 張既有參考（標示不是新成品）＋橫直兩個「尚未生成」框	
+PASS	[desktop] 每張卡的 prompt 收在展開區且標示尚未執行	
+PASS	[desktop] 首批建議標記 4 位	
+PASS	[desktop] 所有圖片都載入	57 張，失敗 
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 卡片狀態顯示回饋	
+PASS	[desktop] 重新整理後回饋保留	
+PASS	[desktop] 複製：第一行是 M-3 回饋標頭	TASK-CAL-001／M-3｜12 位人設專業寫真拍攝規劃｜Penny 企劃回饋
+PASS	[desktop] 複製：各位結果與備註	
+PASS	[desktop] 複製：橫直、首批、整體備註；寫明不是生成授權	
+PASS	[desktop] 預覽框與剪貼簿相同	
+PASS	[desktop] 放大圖在 30 秒內載入	
+PASS	[desktop] 放大 Aaliya 照片並標示只參考拍法	
+PASS	[desktop] 關閉放大	
+PASS	[desktop] 素材選擇與舊資料位元組不變	
+PASS	[desktop] 清除單人回饋	
+PASS	[desktop] 清除本頁全部回饋只刪本頁 key	
+PASS	[desktop] 清除後全部未回覆	
+PASS	[desktop] 回到素材頁，選擇仍在	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 素材頁有 M-3 企劃連結	
+PASS	[mobile390] 素材頁照舊讀出既有選擇（iris-04 為橫式）	
+PASS	[mobile390] 頂端第一行是指定的輪次字串	
+PASS	[mobile390] 頂端寫明尚未生成、0 張 0 credits 0 訓練	
+PASS	[mobile390] Aaliya 參考 5 張	
+PASS	[mobile390] Aaliya 警語（臉不能當身分參考）	
+PASS	[mobile390] Penny 喜歡的 4 張	
+PASS	[mobile390] 4 張 ID 正確且寫明不轉成主照片	
+PASS	[mobile390] 12 張企劃卡，順序同名單	
+PASS	[mobile390] 每張卡：2 張既有參考（標示不是新成品）＋橫直兩個「尚未生成」框	
+PASS	[mobile390] 每張卡的 prompt 收在展開區且標示尚未執行	
+PASS	[mobile390] 首批建議標記 4 位	
+PASS	[mobile390] 所有圖片都載入	57 張，失敗 
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 卡片狀態顯示回饋	
+PASS	[mobile390] 重新整理後回饋保留	
+PASS	[mobile390] 複製：第一行是 M-3 回饋標頭	TASK-CAL-001／M-3｜12 位人設專業寫真拍攝規劃｜Penny 企劃回饋
+PASS	[mobile390] 複製：各位結果與備註	
+PASS	[mobile390] 複製：橫直、首批、整體備註；寫明不是生成授權	
+PASS	[mobile390] 預覽框與剪貼簿相同	
+PASS	[mobile390] 放大圖在 30 秒內載入	
+PASS	[mobile390] 放大 Aaliya 照片並標示只參考拍法	
+PASS	[mobile390] 關閉放大	
+PASS	[mobile390] 素材選擇與舊資料位元組不變	
+PASS	[mobile390] 清除單人回饋	
+PASS	[mobile390] 清除本頁全部回饋只刪本頁 key	
+PASS	[mobile390] 清除後全部未回覆	
+PASS	[mobile390] 回到素材頁，選擇仍在	
+PASS	[mobile390] 沒有 JS 錯誤	

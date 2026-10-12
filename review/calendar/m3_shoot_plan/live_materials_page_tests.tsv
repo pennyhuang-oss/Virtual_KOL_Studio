@@ -1,0 +1,123 @@
+PASS	不帶任何憑證可開 /	200
+PASS	不帶任何憑證可開 /index.html	200
+PASS	不帶任何憑證可開 /mat.js	200
+PASS	不帶任何憑證可開 /data.js	200
+PASS	不帶任何憑證可開 /cast.html	200
+PASS	不帶任何憑證可開 /plan.html	200
+PASS	不帶任何憑證可開 /img/z/m_iris-01.jpg	200
+PASS	不帶任何憑證可開 /img/t/m_yerin-06.jpg	200
+PASS	不帶任何憑證可開 /img/z/m_coco-04.jpg	200
+PASS	保留 X-Robots-Tag noindex	
+PASS	保留 CSP（connect-src none）	
+PASS	robots.txt 仍全站 Disallow	
+PASS	路徑穿越回 404	
+PASS	公開資料沒有 job_id／hf:／soul_id／kols 路徑	
+PASS	頁面沒有帳號密碼字樣（DECISION_）	
+PASS	[desktop] 頁首固定 SHA	
+PASS	[desktop] 頁首名單版本	
+PASS	[desktop] 載入時沒有自動複製	
+PASS	[desktop] 名單區恰好 12 位且與紀錄一致（順序相同）	iris-chen,luna-tanaka,somi-oh,coco-wu,mia-huang,yuna-kim,tammy-chou,rin-ayase,rainie-hsu,miu-shiraishi,jia-seo,yerin-han
+PASS	[desktop] 逐位區恰好 12 位且與紀錄一致	
+PASS	[desktop] 沒有名單外的人（Kanon／Angel／Vicky）	
+PASS	[desktop] 舊選角資料顯示提示（不同於名單、不算照片核准）	
+PASS	[desktop] 舊版決策資料顯示提示、不帶進照片選擇	
+PASS	[desktop] 有舊資料時素材選擇仍全部「未選」	
+PASS	[desktop] 卡片數＝素材清單（190）	190
+PASS	[desktop] 每張卡的 ID、所屬人、標註、圖片、主要／更多分區都與清單一致	
+PASS	[desktop] 卡片縮圖檔名對應素材 ID	
+PASS	[desktop] 低解析標示只在 Miu／Jia／Yerin 的 daily 縮圖（12 張）	jia-04,jia-05,jia-06,jia-07,jia-08,miu-04,miu-05,miu-06,yerin-06,yerin-07,yerin-08,yerin-09
+PASS	[desktop] R3 清理版分開標示（5 張）	iris-02,coco-02,coco-04,rin-03,rainie-02
+PASS	[desktop] Coco 手機殼清理版註明修補不完全自然	
+PASS	[desktop] 所有縮圖載入（展開更多素材後）	
+PASS	[desktop] 展開全部後沒有橫向捲動	0
+PASS	[desktop] 沒選任何照片時「確認」按鈕停用	
+PASS	[desktop] 未選輸出「未選（不算核准）」12 次	
+PASS	[desktop] Iris：橫 iris-03、直 iris-01、備 iris-04＋iris-12	
+PASS	[desktop] Luna：橫直同一張 luna-02	
+PASS	[desktop] Yerin：只選直式（低解析縮圖），橫式維持未選	
+PASS	[desktop] 其他 9 位不受影響（未選）	
+PASS	[desktop] 已選主照片的卡片「列為備選」停用	
+PASS	[desktop] 把備選選作橫式後，自動離開備選（每格最多一張主照片）	
+PASS	[desktop] 確認視窗列出未選的人「不會被確認」	
+PASS	[desktop] 確認後：有選的 3 位為已確認	
+PASS	[desktop] 確認後：未選的人仍是「未選」	
+PASS	[desktop] 全部確認後「確認」按鈕停用	
+PASS	[desktop] 有「已確認」狀態時也沒有橫向捲動	0,1366
+PASS	[desktop] 重新整理後選擇與確認保留	
+PASS	[desktop] 確認後再改（取消一張備選）→ 回到草稿	
+PASS	[desktop] 改回原樣仍維持草稿	
+PASS	[desktop] 只影響那一位（Luna 仍已確認）	
+PASS	[desktop] 有草稿時「確認」按鈕可按	
+PASS	[desktop] 改備註不撤銷確認	
+PASS	[desktop] 放大顯示高解析預覽檔，標題有素材 ID、來源與原圖尺寸	Somi Oh｜somi-01｜港邊・白西裝外套＋抹胸・甜笑｜既有原圖（R2 已取回）｜原圖 1536×2048 px｜預覽 1200×1600 px（等比縮小）｜未排版，能否滿版或印刷尚未判斷
+PASS	[desktop] 放大可切換原尺寸	
+PASS	[desktop] 關閉放大	
+PASS	[desktop] 低解析縮圖放大時註明「低解析縮圖」	
+PASS	[desktop] Esc 關閉放大	
+PASS	[desktop] 複製文字內容完整	
+PASS	[desktop] 複製文字：未選 9 位寫「未選（不算核准）」	
+PASS	[desktop] 複製文字：Luna、Yerin 為已確認	
+PASS	[desktop] 複製文字沒有 job_id／soul	
+PASS	[desktop] 第一階段選角與舊版決策資料都沒有被改寫	
+PASS	[desktop] 清除單人只清這位（Yerin 回未選，Iris 不變）	
+PASS	[desktop] 沒有橫向捲動	0
+PASS	[desktop] cast.html 可開、沒有橫向捲動	0
+PASS	[desktop] plan.html 可開、沒有橫向捲動	0
+PASS	[desktop] 開過選角頁／參考頁後舊資料仍不變	
+PASS	[desktop] 重設全部只清素材選擇（舊資料保留）	
+PASS	[desktop] 沒有 console 錯誤	
+PASS	[desktop] 沒有失敗的請求	
+PASS	[mobile390] 頁首固定 SHA	
+PASS	[mobile390] 頁首名單版本	
+PASS	[mobile390] 載入時沒有自動複製	
+PASS	[mobile390] 名單區恰好 12 位且與紀錄一致（順序相同）	iris-chen,luna-tanaka,somi-oh,coco-wu,mia-huang,yuna-kim,tammy-chou,rin-ayase,rainie-hsu,miu-shiraishi,jia-seo,yerin-han
+PASS	[mobile390] 逐位區恰好 12 位且與紀錄一致	
+PASS	[mobile390] 沒有名單外的人（Kanon／Angel／Vicky）	
+PASS	[mobile390] 舊選角資料顯示提示（不同於名單、不算照片核准）	
+PASS	[mobile390] 舊版決策資料顯示提示、不帶進照片選擇	
+PASS	[mobile390] 有舊資料時素材選擇仍全部「未選」	
+PASS	[mobile390] 卡片數＝素材清單（190）	190
+PASS	[mobile390] 每張卡的 ID、所屬人、標註、圖片、主要／更多分區都與清單一致	
+PASS	[mobile390] 卡片縮圖檔名對應素材 ID	
+PASS	[mobile390] 低解析標示只在 Miu／Jia／Yerin 的 daily 縮圖（12 張）	jia-04,jia-05,jia-06,jia-07,jia-08,miu-04,miu-05,miu-06,yerin-06,yerin-07,yerin-08,yerin-09
+PASS	[mobile390] R3 清理版分開標示（5 張）	iris-02,coco-02,coco-04,rin-03,rainie-02
+PASS	[mobile390] Coco 手機殼清理版註明修補不完全自然	
+PASS	[mobile390] 所有縮圖載入（展開更多素材後）	
+PASS	[mobile390] 展開全部後沒有橫向捲動	0
+PASS	[mobile390] 沒選任何照片時「確認」按鈕停用	
+PASS	[mobile390] 未選輸出「未選（不算核准）」12 次	
+PASS	[mobile390] Iris：橫 iris-03、直 iris-01、備 iris-04＋iris-12	
+PASS	[mobile390] Luna：橫直同一張 luna-02	
+PASS	[mobile390] Yerin：只選直式（低解析縮圖），橫式維持未選	
+PASS	[mobile390] 其他 9 位不受影響（未選）	
+PASS	[mobile390] 已選主照片的卡片「列為備選」停用	
+PASS	[mobile390] 把備選選作橫式後，自動離開備選（每格最多一張主照片）	
+PASS	[mobile390] 確認視窗列出未選的人「不會被確認」	
+PASS	[mobile390] 確認後：有選的 3 位為已確認	
+PASS	[mobile390] 確認後：未選的人仍是「未選」	
+PASS	[mobile390] 全部確認後「確認」按鈕停用	
+PASS	[mobile390] 有「已確認」狀態時也沒有橫向捲動	0,390
+PASS	[mobile390] 重新整理後選擇與確認保留	
+PASS	[mobile390] 確認後再改（取消一張備選）→ 回到草稿	
+PASS	[mobile390] 改回原樣仍維持草稿	
+PASS	[mobile390] 只影響那一位（Luna 仍已確認）	
+PASS	[mobile390] 有草稿時「確認」按鈕可按	
+PASS	[mobile390] 改備註不撤銷確認	
+PASS	[mobile390] 放大顯示高解析預覽檔，標題有素材 ID、來源與原圖尺寸	Somi Oh｜somi-01｜港邊・白西裝外套＋抹胸・甜笑｜既有原圖（R2 已取回）｜原圖 1536×2048 px｜預覽 1200×1600 px（等比縮小）｜未排版，能否滿版或印刷尚未判斷
+PASS	[mobile390] 放大可切換原尺寸	
+PASS	[mobile390] 關閉放大	
+PASS	[mobile390] 低解析縮圖放大時註明「低解析縮圖」	
+PASS	[mobile390] Esc 關閉放大	
+PASS	[mobile390] 複製文字內容完整	
+PASS	[mobile390] 複製文字：未選 9 位寫「未選（不算核准）」	
+PASS	[mobile390] 複製文字：Luna、Yerin 為已確認	
+PASS	[mobile390] 複製文字沒有 job_id／soul	
+PASS	[mobile390] 第一階段選角與舊版決策資料都沒有被改寫	
+PASS	[mobile390] 清除單人只清這位（Yerin 回未選，Iris 不變）	
+PASS	[mobile390] 沒有橫向捲動	0
+PASS	[mobile390] cast.html 可開、沒有橫向捲動	0
+PASS	[mobile390] plan.html 可開、沒有橫向捲動	0
+PASS	[mobile390] 開過選角頁／參考頁後舊資料仍不變	
+PASS	[mobile390] 重設全部只清素材選擇（舊資料保留）	
+PASS	[mobile390] 沒有 console 錯誤	
+PASS	[mobile390] 沒有失敗的請求	
