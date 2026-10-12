@@ -172,7 +172,7 @@ window.CAL_DATA = {
      "cast_coco-wu_c1",
      "cast_coco-wu_c2"
     ],
-    "face": "cast_coco-wu_h1",
+    "face": "cast_coco-wu_h2",
     "group": "rec",
     "id": "coco-wu",
     "measured": false,
@@ -1377,16 +1377,16 @@ window.CAL_DATA = {
    "w": 315,
    "z": "img/z/cast_coco-wu_c2.jpg"
   },
-  "cast_coco-wu_h1": {
+  "cast_coco-wu_h2": {
    "h": 420,
    "kind": "copy",
    "res": "lowres",
-   "src": "docs/calendar/r2/faces/heads/coco-wu_1.jpg",
-   "t": "img/t/cast_coco-wu_h1.jpg",
+   "src": "docs/calendar/r2/faces/heads/coco-wu_2.jpg",
+   "t": "img/t/cast_coco-wu_h2.jpg",
    "th": 420,
    "tw": 420,
    "w": 420,
-   "z": "img/z/cast_coco-wu_h1.jpg"
+   "z": "img/z/cast_coco-wu_h2.jpg"
   },
   "cast_iris-chen_c1": {
    "h": 560,

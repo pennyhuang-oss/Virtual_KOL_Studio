@@ -64,3 +64,4 @@
   .cmp-grid.n3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cmp-grid.n4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+.pk-grid > .pk-empty { grid-column: 1 / -1; }

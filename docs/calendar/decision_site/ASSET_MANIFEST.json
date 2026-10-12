@@ -1434,18 +1434,18 @@
    "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
   },
   {
-   "published": "public/img/z/cast_coco-wu_h1.jpg",
-   "sha256": "a5528e11bc08c2a4d507e080585d9a2540fcb7118605cf1defbba7a9707cc121",
+   "published": "public/img/z/cast_coco-wu_h2.jpg",
+   "sha256": "d0c60c400d980ba4a7a7cda89d026f1faf02baa13f8eb1f49aad4189025bdd74",
    "kind": "copy",
-   "source": "docs/calendar/r2/faces/heads/coco-wu_1.jpg",
-   "source_blob": "88be860d8b6c70a59fbd0fb6c339f76385e3c383",
+   "source": "docs/calendar/r2/faces/heads/coco-wu_2.jpg",
+   "source_blob": "a7a6575b608322aa2a9341fc2b39a83e6835b2f5",
    "op": "位元組不變複製"
   },
   {
-   "published": "public/img/t/cast_coco-wu_h1.jpg",
-   "sha256": "0a6f9886f38666f4dc4f1a5ebccf78491963d3ec8129ba97e52df465c53cb6b9",
+   "published": "public/img/t/cast_coco-wu_h2.jpg",
+   "sha256": "cbbc31f869d860fbdb9dba54527a5da58d91008e156fec759cd8cf90f5465a54",
    "kind": "thumbnail",
-   "source": "public/img/z/cast_coco-wu_h1.jpg",
+   "source": "public/img/z/cast_coco-wu_h2.jpg",
    "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
   },
   {

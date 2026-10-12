@@ -195,7 +195,7 @@ ${pairs.length ? `<details class="cc-pairs"><summary>既有相似度紀錄（${p
       const c = BY[id];
       return `<div class="pk"><div class="pk-img">${fig(c.face, `${fullName(c)}｜正臉`)}</div><div class="pk-t"><b>${esc(c.name)}</b>${c.native ? `<br><span class="nat">${esc(c.native)}</span>` : ''}<br><span class="tag g-${esc(c.group)}">${esc(GROUP_ZH[c.group])}</span></div>` +
         `<button type="button" class="btn ghost small" data-act="toggle" data-id="${esc(id)}">移出</button></div>`;
-    }).join('') : '<p class="note">還沒有選人。可以「從空白開始選」，在下方候選卡片按「加入名單」；或「載入主管原推薦 12 人作為草稿」再只換想換的人。</p>';
+    }).join('') : '<p class="note pk-empty">還沒有選人。可以「從空白開始選」，在下方候選卡片按「加入名單」；或「載入主管原推薦 12 人作為草稿」再只換想換的人。</p>';
     const d = diffRec();
     $('#pk-diff').innerHTML = n ? `相對主管原推薦 12 人：保留 ${d.kept.length}、移除 ${d.removed.length}${d.removed.length ? `（${esc(d.removed.map(pairName).join('、'))}）` : ''}、加入 ${d.added.length}${d.added.length ? `（${esc(d.added.map(pairName).join('、'))}）` : ''}` : '';
     // 卡片狀態
