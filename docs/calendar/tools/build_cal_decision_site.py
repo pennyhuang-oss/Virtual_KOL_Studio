@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """TASK-CAL-001 — 2027 KOL 桌曆決策頁的素材與資料。
 
-所有圖片與資料一律從固定成果 commit（FIXED）讀取（git show），不讀工作目錄、不讀分支頭。
+所有圖片一律從固定成果 commit（FIXED，git show）或可核對 sha256 的本機快取讀取，不讀工作目錄、不讀分支頭；
+資料也從固定 commit 讀，只有第二階段的兩份人寫清單（cal_m1_*.json，本輪新增）從工作目錄讀，並在頁面資料記錄其 git blob。
 - 整張複製：位元組不變，manifest 記錄來源路徑與 git blob。
 - 裁切：從固定 commit 的決策拼圖裁出單張照片（只裁切、四邊內縮 2 px 避開拼貼邊界，重新存成 JPEG q95），manifest 記錄裁切框。
 - 縮圖：上面兩者的等比縮小（Lanczos，JPEG q82），只給卡片顯示；點開放大一律看原檔或裁切檔。
 - 高解析預覽（替代照片）：來源只限可核對的既有檔——固定 commit 的 repo 檔（git blob）、R2 已取回的 Higgsfield 快取
   （data/cal_r2_hf_retrieved.json 的 sha256）、R3 清理輸出（data/cal_r3_cleanup_report.json 的 clean_sha256）。
   只做等比縮小（長邊 1600 px，JPEG q88，不帶原檔中繼資料）。頁面資料只放圖片 ID，不放 job_id、來源路徑或帳號資料。
+- 第二階段素材（data/cal_m1_materials.json，本輪人寫清單，從工作目錄讀）：每張照片用同一套來源核對後等比縮小；
+  沒有取回原圖的 daily140 照片只複製 repo 的 360×480 縮圖（位元組不變）。名單只依 data/cal_m1_owner_roster.json。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
 輸出：docs/calendar/decision_site/public/img/{z,t}/、public/data.js、decision_site/ASSET_MANIFEST.json
@@ -128,7 +131,7 @@ def res_of(rel):
     return 'sheet'
 
 
-def put(iid, data, thumb_box, meta, res, extra=None):
+def put(iid, data, thumb_box, meta, res, extra=None, public_src=True):
     z = os.path.join(PUB, 'img', 'z', iid + '.jpg')
     t = os.path.join(PUB, 'img', 't', iid + '.jpg')
     with open(z, 'wb') as f:
@@ -141,7 +144,7 @@ def put(iid, data, thumb_box, meta, res, extra=None):
         f.write(tdata)
     IMAGES[iid] = {'z': f'img/z/{iid}.jpg', 't': f'img/t/{iid}.jpg', 'w': im.width, 'h': im.height,
                    'tw': th.width, 'th': th.height, 'kind': meta['kind'], 'res': res, **(extra or {})}
-    if meta['kind'] != 'hires_preview':
+    if meta['kind'] != 'hires_preview' and public_src:
         IMAGES[iid]['src'] = meta['source']
     MANIFEST.append({'published': f'public/img/z/{iid}.jpg', 'sha256': sha256(data), **meta})
     MANIFEST.append({'published': f'public/img/t/{iid}.jpg', 'sha256': sha256(tdata), 'kind': 'thumbnail',
@@ -198,6 +201,105 @@ def hires(cid, J, R, C, hf_dir, clean_dir):
         'op': f'原檔 {w}×{h} 等比縮小至 {im.width}×{im.height}（Lanczos，JPEG q88，不帶中繼資料）'},
         'hires', {'cid': cid, 'orig_px': [w, h]})
 
+
+
+# ---------- 第二階段素材（data/cal_m1_materials.json；本輪新增的人寫清單，讀工作目錄） ----------
+# 圖片仍一律從固定 commit 讀（repo 檔、daily140 縮圖），或從可核對 sha256 的本機快取讀（R2 取回原圖、R3 清理輸出）。
+M1_FILE = 'docs/calendar/data/cal_m1_materials.json'
+ROSTER_FILE = 'docs/calendar/data/cal_m1_owner_roster.json'
+MAT_THUMB = (480, 480)
+SRC_ZH = {'repo': '既有原圖（repo）', 'hf': '既有原圖（R2 已取回）', 'clean': 'R3 局部清理版（本機清理輸出）',
+          'thumb': '360×480 縮圖（原圖未取回）'}
+
+
+def wt_bytes(rel):
+    return open(os.path.join(ROOT, rel), 'rb').read()
+
+
+def root_show(rel):
+    b = subprocess.check_output(['git', '-C', ROOT, 'show', f'{FIXED}:{rel}'])
+    blob = subprocess.check_output(['git', '-C', ROOT, 'rev-parse', f'{FIXED}:{rel}'], text=True).strip()
+    assert blob_of(b) == blob, rel
+    return b, blob
+
+
+def mat_source(src, D140, R, C, hf_dir, clean_dir):
+    """回傳 (原檔位元組, 種類 repo／hf／clean／thumb, manifest 來源描述)；核對不過就丟例外。不回傳 job_id。"""
+    if src.startswith('clean:'):
+        c = C[src[6:]]
+        b = open(os.path.join(clean_dir, os.path.basename(c['clean_file'])), 'rb').read()
+        assert sha256(b) == c['clean_sha256'], src
+        return b, 'clean', {'source': f'R3 清理輸出 {src[6:]}（data/cal_r3_cleanup_report.json 的 clean_sha256 核對；原圖 {c["src"] if not c["src"].startswith("hf:") else "R2 取回原圖"}）',
+                            'source_sha256': c['clean_sha256']}
+    if src.startswith('daily140:'):
+        f = src.split(':', 1)[1]
+        row = D140[f]
+        r = next((x for x in R if x['job_id'] == row['job_id']), None)
+        if r:
+            b = open(os.path.join(hf_dir, r['local']), 'rb').read()
+            assert sha256(b) == r['sha256'], src
+            return b, 'hf', {'source': f'R2 已取回的 Higgsfield 快取：daily140 {f}（data/cal_r2_daily140_jobs.json 對到 data/cal_r2_hf_retrieved.json，sha256 核對）',
+                             'source_sha256': r['sha256']}
+        rel = f'review/soul_pilot/daily140/thumbs/{f[:-4]}.jpg'
+        b, blob = root_show(rel)
+        return b, 'thumb', {'source': f'repo@{FIXED}:{rel}', 'source_blob': blob}
+    b, blob = root_show(src)
+    return b, 'repo', {'source': f'repo@{FIXED}:{src}', 'source_blob': blob, 'source_sha256': sha256(b)}
+
+
+def excl_group(reason):
+    if any(k in reason for k in ('臉與', '臉部候選', '目視臉', '定案臉', '定案的 training_v2', '臉的版本')):
+        return 'face'
+    if 'C 級' in reason:
+        return 'scale'
+    if '近似重複' in reason:
+        return 'dup'
+    return 'defect'
+
+
+def build_materials(cast, R, C, hf_dir, clean_dir):
+    M = json.loads(wt_bytes(M1_FILE))
+    roster = json.loads(wt_bytes(ROSTER_FILE))
+    assert [p['pid'] for p in M['people']] == roster['list'], '素材清單與名單紀錄不一致'
+    D140 = {r['file']: r for r in load_json('data/cal_r2_daily140_jobs.json')['rows']}
+    cands = {c['id']: c for c in cast['candidates']}
+    people = []
+    for p in M['people']:
+        pid = p['pid']
+        items, gaps = [], []
+        for it in p['items']:
+            b, kind, meta = mat_source(it['src'], D140, R, C, hf_dir, clean_dir)
+            iid = 'm_' + it['id']
+            src_im = Image.open(io.BytesIO(b))
+            w, h = src_im.size
+            if kind == 'thumb':
+                put(iid, b, MAT_THUMB, {'kind': 'copy', 'mid': it['id'], 'mat_src': it['src'], **meta, 'op': '位元組不變複製（360×480 縮圖）'},
+                    'lowres', {'orig_px': [w, h]}, public_src=False)
+                gaps.append(f"{it['id']}（daily140 {it['src'].split(':', 1)[1][:3]}）只有 360×480 縮圖，原圖未取回")
+            else:
+                data, _ = hires_bytes(b)
+                pim = Image.open(io.BytesIO(data))
+                put(iid, data, MAT_THUMB, {'kind': 'hires_preview', 'mid': it['id'], 'mat_src': it['src'], **meta,
+                    'op': f'原檔 {w}×{h} 等比縮小至 {pim.width}×{pim.height}（Lanczos，JPEG q88，不帶中繼資料）'},
+                    'hires', {'orig_px': [w, h]})
+            items.append({'id': it['id'], 'img': iid, 'tier': it['tier'], 'label': it['label'], 'fix': it['fix'],
+                          'check': it['check'], 'r3': it.get('r3', ''), 'clean_of': it.get('clean_of', ''),
+                          'kind': kind, 'src_zh': SRC_ZH[kind], 'orig_px': [w, h]})
+        ex = {}
+        for e in p['excluded']:
+            g = excl_group(e['reason'])
+            ex[g] = ex.get(g, 0) + 1
+        c = cands[pid]
+        people.append({'pid': pid, 'name': c['name'], 'native': c['native'], 'desc': c['desc'], 'face': c['face'],
+                       'items': items, 'gaps': gaps, 'excluded': ex})
+    in12 = set(roster['list'])
+    pairs = [q for q in cast['pairs'] if q['a'] in in12 and q['b'] in in12]
+    return {'roster': {k: roster[k] for k in ('version', 'decided_on', 'decided_by', 'list', 'order_note',
+                                                'vs_original_recommendation', 'scope', 'access')},
+            'roster_file': ROSTER_FILE, 'materials_file': M1_FILE,
+            'materials_blob': blob_of(wt_bytes(M1_FILE)), 'roster_blob': blob_of(wt_bytes(ROSTER_FILE)),
+            'checks': M['checks'], 'people': people, 'pairs': pairs,
+            'unmeasured': roster['similarity_concerns']['unmeasured']}
 
 # ---------- 資料 ----------
 
@@ -390,6 +492,9 @@ def main():
     # ---------- 第一階段選角：候選人設與辨識用圖 ----------
     cast = build_cast()
 
+    # ---------- 第二階段：入選 12 位的素材 ----------
+    mat = build_materials(cast, R, C, a.hf_dir, a.clean_dir)
+
     # ---------- 頁面資料 ----------
     def ph(p):
         q = lay[p]['photos'][0]
@@ -413,6 +518,7 @@ def main():
         'grid9': ph('H_grid_09_yuna-kim'),
         'hires_of': {cid: 'hi_' + cid for cid in HI},
         'cast': cast,
+        'mat': mat,
         'images': IMAGES,
     }
     with open(os.path.join(PUB, 'data.js'), 'w', encoding='utf-8') as f:
@@ -435,6 +541,7 @@ def check(hf_dir=None, clean_dir=None):
     J = {c['cid']: c for c in load_json('data/cal_r2_judgments.json')['candidates']}
     R = load_json('data/cal_r2_hf_retrieved.json')['items']
     C = {c['cid']: c for c in load_json('data/cal_r3_cleanup_report.json')['items']}
+    D140 = {r['file']: r for r in load_json('data/cal_r2_daily140_jobs.json')['rows']}
     not_recomputed = []
     for e in man['files']:
         p = os.path.join(SITE, e['published'])
@@ -442,7 +549,11 @@ def check(hf_dir=None, clean_dir=None):
         data = open(p, 'rb').read()
         if sha256(data) != e['sha256']:
             print('sha256 不符', e['published']); bad += 1
-        if e['kind'] == 'copy':
+        if e['kind'] == 'copy' and 'mid' in e:
+            b, kind, _ = mat_source(e['mat_src'], D140, R, C, hf_dir, clean_dir)
+            if kind != 'thumb' or b != data:
+                print('素材縮圖與固定 commit 不同', e['published']); bad += 1
+        elif e['kind'] == 'copy':
             if blob_of(data) != e['source_blob'] or git_blob(e['source'][len(CAL):]) != e['source_blob']:
                 print('與固定 commit 不同', e['published']); bad += 1
         if e['kind'] == 'crop':
@@ -451,10 +562,13 @@ def check(hf_dir=None, clean_dir=None):
                 print('裁切無法重現', e['published']); bad += 1
         if e['kind'] == 'hires_preview':
             needs_cache = not e['source'].startswith('repo@')
+            name = e.get('mid') or e['cid']
             if needs_cache and not (hf_dir and clean_dir):
-                not_recomputed.append(e['cid'])
-            elif hires_bytes(hires_source(e['cid'], J, R, C, hf_dir, clean_dir)[0])[0] != data:
-                print('高解析預覽無法重現', e['published']); bad += 1
+                not_recomputed.append(name)
+            else:
+                src = mat_source(e['mat_src'], D140, R, C, hf_dir, clean_dir)[0] if 'mid' in e else hires_source(e['cid'], J, R, C, hf_dir, clean_dir)[0]
+                if hires_bytes(src)[0] != data:
+                    print('高解析預覽無法重現', e['published']); bad += 1
     on_disk = set()
     for d in ('z', 't'):
         for fn in os.listdir(os.path.join(PUB, 'img', d)):

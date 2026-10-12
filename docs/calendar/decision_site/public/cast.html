@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<meta name="page-commit" content="__PAGE_COMMIT__">
+<title>第一階段選角（參考）｜2027 KOL 桌曆</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="cast.css">
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <p class="back"><a href="index.html">← 回到第二階段：為入選人設挑照片</a></p>
+    <p class="warn"><strong>第一階段已完成，本頁保留作參考。</strong>Penny 已在對話中確認 12 位（名單紀錄 roster-v1，見第二階段頁）。這裡的選角狀態只存在這個瀏覽器，即使顯示「草稿」也不影響名單紀錄；在這裡改動不會改變已確認的名單。</p>
+    <h1>2027 KOL 桌曆｜第一階段：先選出 12 位人設（參考）</h1>
+    <p class="meta">素材基準 SHA <code class="sha" id="sha"></code></p>
+    <p class="meta">頁面版本 <code id="pagever"></code></p>
+    <ol class="flow" aria-label="流程">
+      <li>① 選人（已完成）</li><li>② 確認名單（已完成）</li><li>③ 選素材</li><li>④ 排月份與版面</li>
+    </ol>
+    <p class="warn">這一步只選人。照片只用來辨認人設，<strong>不代表</strong>桌曆要用的照片；不必回答尺度、制服、照片、月份、品牌、Logo、QR。</p>
+    <nav class="toc" aria-label="段落">
+      <a href="#picked">已選名單</a><a href="#compare">並排比較</a><a href="#cands">候選 18 位</a><a href="#r2c">R2 追加比較</a><a href="#notes">其他人設與意見</a><a href="#out">複製選角結果</a><a href="index.html">第二階段：挑照片</a><a href="plan.html">原推薦方案參考</a>
+    </nav>
+  </div>
+</header>
+<noscript><p class="wrap warn">本頁需要開啟 JavaScript 才能選擇與複製結果。</p></noscript>
+<main id="app" class="wrap"></main>
+<div class="bar" id="bar">
+  <div class="wrap bar-in">
+    <span id="bar-count">載入中…</span>
+    <a href="#picked" class="btn ghost">已選名單</a>
+    <button type="button" class="btn" id="bar-copy">複製選角結果</button>
+  </div>
+</div>
+<div id="review" class="review" hidden role="dialog" aria-modal="true" aria-labelledby="review-h">
+  <div class="review-in">
+    <h2 id="review-h">確認這 12 位人設</h2>
+    <p class="note">請再看一次照片與姓名。確認後若再更動任一人選，整份名單會回到草稿，需要重新確認。素材、月份與版面之後才選。</p>
+    <div id="review-list" class="review-grid"></div>
+    <div id="review-warn"></div>
+    <div class="actions">
+      <button type="button" class="btn" id="review-ok">確認這 12 位人設</button>
+      <button type="button" class="btn ghost" id="review-cancel">返回修改</button>
+    </div>
+  </div>
+</div>
+<div id="viewer" class="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="viewer-cap">
+  <div class="viewer-bar">
+    <span id="viewer-cap"></span>
+    <button type="button" class="btn ghost" id="viewer-mode">原尺寸</button>
+    <button type="button" class="btn" id="viewer-close" aria-label="關閉放大檢視">關閉 ✕</button>
+  </div>
+  <div class="viewer-body" id="viewer-body"><img id="viewer-img" alt=""></div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="data.js"></script>
+<script src="cast.js"></script>
+</body>
+</html>

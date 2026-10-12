@@ -1,0 +1,2898 @@
+{
+ "note": "人寫的第二階段素材清單（TASK-CAL-001 M-1）。只含 Penny 已確認的 12 位。src：repo 路徑（固定 commit）、daily140:<編號>.png（對應 data/cal_r2_daily140_jobs.json，原圖由 R2 取回快取提供；沒有取回的只用 repo 360×480 縮圖）、clean:<R3 圖片 ID>（R3 局部清理版，data/cal_r3_cleanup_report.json）。排除清單不發佈到頁面。r3 欄只是舊推薦參考，不是 Penny 的選擇；沒有月份綁定。",
+ "checks": {
+  "R2": "R2 原圖已查",
+  "EYE": "本輪目視（縮小檢視，未逐張 100%）",
+  "TH": "縮圖目視（360×480）"
+ },
+ "people": [
+  {
+   "pid": "iris-chen",
+   "items": [
+    {
+     "id": "iris-01",
+     "src": "kols/iris-chen/images/training_v1/02_taipei_street_02.webp",
+     "tier": "main",
+     "label": "台北街拍・白細肩帶短上衣＋牛仔短裙・全身甜笑",
+     "fix": "背景招牌是 AI 假中文字（清楚可讀到亂字）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "iris-02",
+     "src": "clean:iris_V",
+     "tier": "main",
+     "label": "同上，R3 局部清理版（招牌模糊）",
+     "fix": "清理狀態：完成，但近看看得出（招牌變成失焦色塊）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+     "clean_of": "iris-01"
+    },
+    {
+     "id": "iris-03",
+     "src": "kols/iris-chen/images/training_v1/06_cafe_window_02.webp",
+     "tier": "main",
+     "label": "咖啡店窗邊・粉色抹胸露肩・胸上甜笑",
+     "fix": "窗邊高光過曝（原圖本身）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "iris-04",
+     "src": "kols/iris-chen/images/training_v1/12_park_golden_04.webp",
+     "tier": "main",
+     "label": "公園夕陽・白色連帽短上衣＋黑短褲・回頭",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-05",
+     "src": "kols/iris-chen/images/training_v1/13_car_selfie_01.webp",
+     "tier": "main",
+     "label": "車內自拍特寫・黑細肩帶・逆光",
+     "fix": "臉上有窗框陰影",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-06",
+     "src": "kols/iris-chen/images/video_startframes_v1/frame01_cafe_seated.png",
+     "tier": "main",
+     "label": "咖啡館窗邊坐姿・白短上衣＋牛仔短裙",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-07",
+     "src": "kols/iris-chen/images/dance_clone_u2_night_street/start_frame.png",
+     "tier": "main",
+     "label": "夜晚街頭・黑短背心＋白襯衫＋黑工裝褲",
+     "fix": "背景招牌文字與機車車牌待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-08",
+     "src": "kols/iris-chen/images/dance_clone_r18/start_frame.png",
+     "tier": "main",
+     "label": "黑白條紋短上衣＋灰短褲・雙手抱頭大笑",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-09",
+     "src": "kols/iris-chen/images/dance_clone_u1_hotel/start_frame.png",
+     "tier": "main",
+     "label": "飯店窗邊・香檳色緞面細肩帶睡裙＋薄外袍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-10",
+     "src": "kols/iris-chen/images/dance_clone_r6/start_frame.png",
+     "tier": "main",
+     "label": "黑色細肩帶紗裙洋裝・雙手舉高",
+     "fix": "純白背景，場景感較弱",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-11",
+     "src": "kols/iris-chen/images/training_v1/03_taipei_street_03.webp",
+     "tier": "more",
+     "label": "同一套街拍・夜市街口",
+     "fix": "背景招牌文字待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-12",
+     "src": "kols/iris-chen/images/training_v1/08_cafe_window_04.webp",
+     "tier": "more",
+     "label": "同一套咖啡店窗邊・笑得較開",
+     "fix": "窗邊高光",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-13",
+     "src": "kols/iris-chen/images/training_v1/09_park_golden_01.webp",
+     "tier": "more",
+     "label": "同一套公園夕陽・較遠景",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-14",
+     "src": "kols/iris-chen/images/training_v1/14_car_selfie_02.webp",
+     "tier": "more",
+     "label": "車內自拍・畫面傾斜特寫",
+     "fix": "構圖傾斜",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-15",
+     "src": "kols/iris-chen/images/dance_clone_u1_hotel/start_frame_v1.png",
+     "tier": "more",
+     "label": "飯店・黑背心＋短褲（較早版本）",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-16",
+     "src": "kols/iris-chen/images/dance_clone_u2_night_street/start_frame_v1.png",
+     "tier": "more",
+     "label": "夜晚街頭・白色長袖短上衣（較早版本）",
+     "fix": "背景招牌文字待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-17",
+     "src": "kols/iris-chen/images/dance_clone_u3_home/start_frame.png",
+     "tier": "more",
+     "label": "客廳・白背心＋灰短褲＋針織外套",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-18",
+     "src": "kols/iris-chen/images/dance_clone_u3_home/start_frame_v1.png",
+     "tier": "more",
+     "label": "客廳・黃色背心＋牛仔褲（較早版本）",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-19",
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/01b_E11_bitelip_FAILED_openlaugh.png",
+     "tier": "more",
+     "label": "浴室・白細肩帶背心・大笑（胸上）",
+     "fix": "肩帶滑落；檔名的 FAILED 指表情沒達到原拍攝目標，不是畫面缺陷",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-20",
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/03_sofa_wine_satin_candid.png",
+     "tier": "more",
+     "label": "客廳沙發・酒紅緞面細肩帶睡裙",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-21",
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/05_floor_window_sportsbra_candid.png",
+     "tier": "more",
+     "label": "夜景窗邊・運動內衣＋短褲",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-22",
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/alternates/02_alt_bathroom_dryhair_mirror.png",
+     "tier": "more",
+     "label": "浴室鏡子自拍・米白緞面短洋裝",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/04_window_glass_E1_smirk.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/05_rug_prone_E13_finger_lip.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/06_bathroom_counter_E4_laugh.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "坐姿短洋裝裙下可見內褲（原圖放大確認）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/01a_E11_bitelip_FAILED_smile.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/02a_E5_suppressed_FAILED_smile.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/02b_E5_partial_but_outfit_out_of_scope.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/03a_E12_exhale_FAILED_smile.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/03b_E12_exhale_FAILED_became_laugh.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_reel_music_r1/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/01_bedroom_black_lace_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/02_bathroom_wethair_mirror.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 iris-22 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/04_fulllength_mirror_ivory_silk.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/alternates/03_alt_sofa_hand_defect.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "檔名標示手部瑕疵（與 iris 的沙發睡裙同場景）"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/01_bed_black_lace_babydoll_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/02_mirror_burgundy_teddy_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/03_bathroom_pink_babydoll_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/04_lyingbed_navy_lace_bodysuit_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/05_dressingtable_ivory_garter_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/alternates/02_alt_mirror_vanitybulbs_hand_defect.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "檔名標示手部瑕疵；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/alternates/03_alt_bathroom_hand_defect.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "檔名標示手部瑕疵；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/01_bed_duvet_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/02_prone_bareback_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/03_floor_cushion_hug_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/04_bubblebath_candle_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/05_window_bedsheet_wrap_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/alternates/03_alt_floor_cushion_daylight_mood.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/01_bed_deepv_silkslip_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/02_mirror_micro_lace_stockings_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/03_bathroom_towel_wet_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/04_sidelying_bareback_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/05_window_open_cardigan_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/01_alt_bright_room.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_black_bar_framing_bug.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "檔名標示構圖錯誤（黑邊）；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_daylight_window.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/04_alt_bright_room.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/dance_clone_r15/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "泳裝＋衣服上有圖文；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/01_bed_black_lace_babydoll_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/01_bed_deepv_silkslip_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/01_bed_duvet_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/01_bedroom_black_lace_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/02_bathroom_wethair_mirror.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/02_mirror_burgundy_teddy_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/02_mirror_micro_lace_stockings_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/02_prone_bareback_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/03_bathroom_towel_wet_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/03_floor_cushion_hug_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/04_bubblebath_candle_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/04_lyingbed_navy_lace_bodysuit_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/04_sidelying_bareback_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/05_dressingtable_ivory_garter_selfie.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/drive_v1/05_window_open_cardigan_candid.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/lingerie_mirror_r1/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/onsen_bucket_r1/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/selfie_expression_v6/E14_wink.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/selfie_expression_v6/E15_tongue_out.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/selfie_expression_v6/E17_cheek_squeeze_cute.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/selfie_expression_v6/E19_bite_hair.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/selfie_expression_v6/expression_failed/E16_pout_FAILED_became_smile.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/selfie_expression_v6/expression_failed/E18_sultry_FAILED_became_toothy_smile.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/01_taipei_street_01.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "reason": "與 iris-01 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/04_taipei_street_04.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "reason": "與 iris-01 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/05_cafe_window_01.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "reason": "與 iris-03 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/07_cafe_window_03.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "reason": "與 iris-03 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/10_park_golden_02.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "reason": "與 iris-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/training_v1/11_park_golden_03.webp",
+     "px": [
+      1920,
+      2560
+     ],
+     "reason": "與 iris-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/iris-chen/images/video_startframes_v1/frame02_cafe_seated.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 iris-06 近似重複（同場景、同造型、姿勢幾乎相同）"
+    }
+   ]
+  },
+  {
+   "pid": "luna-tanaka",
+   "items": [
+    {
+     "id": "luna-01",
+     "src": "kols/luna-tanaka/images/face_reference/ref_01.webp",
+     "tier": "main",
+     "label": "京都巷弄・白蕾絲上衣＋長裙・正面",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "luna-02",
+     "src": "kols/luna-tanaka/images/face_reference/ref_02.webp",
+     "tier": "main",
+     "label": "京都巷弄・側身倚牆・蕾絲上衣",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "luna-03",
+     "src": "kols/luna-tanaka/images/ab_lg10a/ab_B2.png",
+     "tier": "main",
+     "label": "浴衣・神社參道・手拿蘋果糖",
+     "fix": "背景店招文字待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-04",
+     "src": "kols/luna-tanaka/images/batch1/LG-01.png",
+     "tier": "main",
+     "label": "窗邊雙手托腮・白短袖上衣・近照",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-05",
+     "src": "kols/luna-tanaka/images/batch1/LG-03.png",
+     "tier": "main",
+     "label": "窗邊摸橘貓・白上衣短褲・低頭微笑",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-06",
+     "src": "kols/luna-tanaka/images/batch1/LG-04.png",
+     "tier": "main",
+     "label": "櫻花樹下・髮箍＋白上衣粉格裙・手拿小花",
+     "fix": "表情偏驚訝（嘴微張）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-07",
+     "src": "kols/luna-tanaka/images/preflight/LG07_len_a.png",
+     "tier": "main",
+     "label": "旋轉木馬前・貓耳髮箍＋爆米花",
+     "fix": "爆米花桶上是 AI 假字；背景路人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-08",
+     "src": "kols/luna-tanaka/images/batch1/LG-08.png",
+     "tier": "main",
+     "label": "浴室・白色平口・閉眼擦臉",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-09",
+     "src": "kols/luna-tanaka/images/preflight/LG05_r17_a.png",
+     "tier": "main",
+     "label": "雨天・透明傘＋白上衣格紋裙",
+     "fix": "背景路人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-10",
+     "src": "kols/luna-tanaka/images/soul_test_v1/06_park_golden_02.png",
+     "tier": "main",
+     "label": "公園夕陽・白色小碎花洋裝・全身",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-11",
+     "src": "kols/luna-tanaka/images/face_reference/ref_04.webp",
+     "tier": "more",
+     "label": "同一套京都巷弄・側身",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-12",
+     "src": "kols/luna-tanaka/images/soul_test_v1/01_tokyo_street_01.png",
+     "tier": "more",
+     "label": "東京街頭・白蕾絲上衣＋碎花裙",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "luna-13",
+     "src": "kols/luna-tanaka/images/soul_test_v1/03_cafe_window_01.png",
+     "tier": "more",
+     "label": "咖啡店窗邊・米色針織",
+     "fix": "左上假 IG 介面字樣（R2 原圖 100% 清楚可見）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "luna-14",
+     "src": "kols/luna-tanaka/images/soul_test_v1/05_park_golden_01.png",
+     "tier": "more",
+     "label": "同一套公園夕陽・回頭",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-15",
+     "src": "kols/luna-tanaka/images/pilot_b1/LG05_a.png",
+     "tier": "more",
+     "label": "雨後街頭・白上衣藍短裙・拿傘",
+     "fix": "背景路人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-16",
+     "src": "kols/luna-tanaka/images/preflight/LG-04.png",
+     "tier": "more",
+     "label": "櫻花樹下・米色開襟外套",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-17",
+     "src": "kols/luna-tanaka/images/preflight/LG-05.png",
+     "tier": "more",
+     "label": "雨天・比 YA＋傘",
+     "fix": "背景地圖看板文字",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-18",
+     "src": "kols/luna-tanaka/images/ab_lg10a/ab_B1.png",
+     "tier": "more",
+     "label": "浴衣・回頭背影",
+     "fix": "背景店招文字待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-19",
+     "src": "kols/luna-tanaka/images/batch1/LG-07.png",
+     "tier": "more",
+     "label": "旋轉木馬・背影回頭",
+     "fix": "背景路人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-20",
+     "src": "kols/luna-tanaka/images/batch1/t1_LG08_a.png",
+     "tier": "more",
+     "label": "浴室鏡前・白色平口",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-21",
+     "src": "kols/luna-tanaka/images/calibration_dessert_street.png",
+     "tier": "more",
+     "label": "甜點街・粉色短裙・全身",
+     "fix": "人物較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "luna-22",
+     "src": "kols/luna-tanaka/images/dance_clone_r1/start_frame.png",
+     "tier": "more",
+     "label": "和室・米白連身短褲＋針織外套",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/luna-tanaka/images/ab_lg10a/ab_A1.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-03 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/ab_lg10a/ab_A2.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-03 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/batch1/LG-07_alt.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-19 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/batch1/LG-10A.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-03 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/batch1/t1_LG08_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-20 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/dance_clone_r1/start_frame_alt_magazine_artifact.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "人設紀錄：雜誌掃描感瑕疵，保留存查、不採用"
+    },
+    {
+     "src": "kols/luna-tanaka/images/dance_clone_r16/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "目視臉與人設不一致（人設紀錄：R16/R17 起始畫面的生成方式有身分落差）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/dance_clone_r17/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "目視臉與人設不一致（人設紀錄：R16/R17 起始畫面的生成方式有身分落差）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/face_reference/ref_03.webp",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "與 luna-01／luna-11 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/pilot_b1/LG05_b.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 luna-15 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG-10A.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-03 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG01_a.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG05_a.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-09 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG05_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-09 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG05_r17_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-09 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG07_len_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-07 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG07_v2_a.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-07 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/preflight/LG07_v2_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-07 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/soul_test_v1/02_tokyo_street_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-12 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/luna-tanaka/images/soul_test_v1/04_cafe_window_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 luna-13 近似重複（同場景、同造型、姿勢幾乎相同）；同樣有假介面字樣"
+    }
+   ]
+  },
+  {
+   "pid": "somi-oh",
+   "items": [
+    {
+     "id": "somi-01",
+     "src": "daily140:063.png",
+     "tier": "main",
+     "label": "港邊・白西裝外套＋抹胸・甜笑",
+     "fix": "背景左後方男子（暗部、已失焦）；地上紙杯",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "somi-02",
+     "src": "kols/somi-oh/images/training_v1/train_01.jpg",
+     "tier": "main",
+     "label": "深夜炸雞・握罐甜笑・生活感",
+     "fix": "左下紙袋品牌風格假字（R3 試修後撤回，未處理）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "somi-03",
+     "src": "daily140:065.png",
+     "tier": "main",
+     "label": "海邊・白洋裝・初夏感",
+     "fix": "背景三位路人距離近（含一位男性正面）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "somi-04",
+     "src": "daily140:061.png",
+     "tier": "main",
+     "label": "市場・抹胸自拍",
+     "fix": "背景路人（daily 審查標記）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "somi-05",
+     "src": "daily140:062.png",
+     "tier": "main",
+     "label": "鏡子自拍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "somi-06",
+     "src": "kols/somi-oh/images/training_v1/train_03.jpg",
+     "tier": "main",
+     "label": "浴袍＋頭巾自拍・素顏感",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "somi-07",
+     "src": "kols/somi-oh/images/training_v1/train_05.jpg",
+     "tier": "main",
+     "label": "市場散步・全身",
+     "fix": "人物較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "somi-08",
+     "src": "daily140:064.png",
+     "tier": "main",
+     "label": "街頭・黑色外套",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "somi-09",
+     "src": "kols/somi-oh/images/training_v1/train_02.jpg",
+     "tier": "more",
+     "label": "張嘴咬串燒",
+     "fix": "表情不適合主視覺（R2 判斷）",
+     "check": "R2 原圖已查"
+    },
+    {
+     "id": "somi-10",
+     "src": "kols/somi-oh/images/training_v1/train_04.jpg",
+     "tier": "more",
+     "label": "廚房做菜",
+     "fix": "臉小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "daily140:125.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 somi-08 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人"
+    },
+    {
+     "src": "daily140:126.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 somi-03 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人"
+    }
+   ]
+  },
+  {
+   "pid": "coco-wu",
+   "items": [
+    {
+     "id": "coco-01",
+     "src": "kols/coco-wu/images/face_reference/candidate_01.png",
+     "tier": "main",
+     "label": "宿舍・粉色細肩帶＋開襟外套・甜笑",
+     "fix": "背景整面人像牆（多張人臉）會分散注意",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "coco-02",
+     "src": "clean:coco_H",
+     "tier": "main",
+     "label": "同上，R3 局部清理版（人像牆強模糊）",
+     "fix": "清理狀態：完成（人像牆變成失焦色塊）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+     "clean_of": "coco-01"
+    },
+    {
+     "id": "coco-03",
+     "src": "kols/coco-wu/images/training_v1/01_morning_wake_selfie.png",
+     "tier": "main",
+     "label": "床上晨起自拍・off-shoulder・慵懶",
+     "fix": "枕頭上有 Hello Kitty 手機殼（可辨識角色）與紅色指示燈",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "coco-04",
+     "src": "clean:coco_alt01",
+     "tier": "main",
+     "label": "同上，R3 局部清理版（移除手機殼）",
+     "fix": "清理狀態：部分完成——手機殼已不在，但修補不完全自然：修補區紋理較平，左緣與下緣在 100% 下看得出",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+     "clean_of": "coco-03"
+    },
+    {
+     "id": "coco-05",
+     "src": "kols/coco-wu/images/training_v1/04_outfit_mirror_selfie.png",
+     "tier": "main",
+     "label": "鏡子自拍・薄荷綠細肩帶＋白百褶裙＋白長襪",
+     "fix": "Hello Kitty 手機殼；背景人像牆",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-06",
+     "src": "kols/coco-wu/images/training_v1/08_home_hangout_laugh.png",
+     "tier": "main",
+     "label": "宿舍・紫色開襟抱枕大笑",
+     "fix": "背景人像牆",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-07",
+     "src": "kols/coco-wu/images/training_v1/12_badminton_courtside_selfie.png",
+     "tier": "main",
+     "label": "羽球場邊自拍・運動背心・馬尾",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-08",
+     "src": "kols/coco-wu/images/training_v1/11_hotel_arrival_flop.png",
+     "tier": "main",
+     "label": "飯店跳上床・白T＋牛仔短褲・動態",
+     "fix": "臉較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-09",
+     "src": "kols/coco-wu/images/training_v1/03_morning_ccd_getting_ready.png",
+     "tier": "main",
+     "label": "宿舍床邊・紫色襯衫・撥髮",
+     "fix": "背景人像牆",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-10",
+     "src": "kols/coco-wu/images/dance_clone_r4/start_frame.png",
+     "tier": "main",
+     "label": "夜晚街頭・黑蕾絲上衣＋牛仔短褲＋長靴",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-11",
+     "src": "kols/coco-wu/images/training_v1/10_home_late_night_selfie.png",
+     "tier": "main",
+     "label": "深夜趴床自拍・暖光",
+     "fix": "手機螢幕有人像",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-12",
+     "src": "kols/coco-wu/images/training_v1/06_bathroom_grwm_meitu_selfie.png",
+     "tier": "main",
+     "label": "浴室鏡子自拍・粉色細肩帶・比 YA 嘟嘴",
+     "fix": "洗面乳瓶身有品牌風格字樣",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-13",
+     "src": "kols/coco-wu/images/face_reference/candidate_04.png",
+     "tier": "more",
+     "label": "宿舍全身・開襟外套＋白百褶裙",
+     "fix": "右側有另一人的手拿手機入鏡；背景人像牆",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-14",
+     "src": "kols/coco-wu/images/face_reference/candidate_02.png",
+     "tier": "more",
+     "label": "宿舍・粉色細肩帶＋開襟外套・撥髮",
+     "fix": "Hello Kitty 手機殼；背景人像牆",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-15",
+     "src": "kols/coco-wu/images/face_reference/candidate_03.png",
+     "tier": "more",
+     "label": "宿舍・側身大笑",
+     "fix": "右側手機畫面顯示她自己的另一張臉，搶主角（R2：換圖）",
+     "check": "R2 原圖已查"
+    },
+    {
+     "id": "coco-16",
+     "src": "kols/coco-wu/images/training_v1/05_outfit_twirl_candid.png",
+     "tier": "more",
+     "label": "走廊轉圈・紫色開襟＋白百褶裙",
+     "fix": "前景有另一人的後腦",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-17",
+     "src": "kols/coco-wu/images/training_v1/02_morning_blanket_pull.png",
+     "tier": "more",
+     "label": "宿舍晨起・被室友拉被子大笑",
+     "fix": "另一位女性與他人的手入鏡",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-18",
+     "src": "kols/coco-wu/images/training_v1/09_home_snacks_ccd.png",
+     "tier": "more",
+     "label": "宿舍地上吃零食",
+     "fix": "另一人入鏡；零食包裝假字",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "coco-19",
+     "src": "kols/coco-wu/images/training_v1/07_bathroom_grwm_candid.png",
+     "tier": "more",
+     "label": "浴室鏡前梳妝（鏡中）",
+     "fix": "鏡中另一位女性入鏡",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/coco-wu/images/dance_clone_r12/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "比基尼；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/coco-wu/images/dance_clone_r13/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "比基尼；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+    },
+    {
+     "src": "kols/coco-wu/images/dance_clone_r4/start_frame_v1_rejected_wrong_hair_color.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "檔名標示退件（髮色錯）"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/round1_candidate_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/round1_candidate_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/round1_candidate_03.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    },
+    {
+     "src": "kols/coco-wu/images/face_reference/round1_candidate_04.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    }
+   ]
+  },
+  {
+   "pid": "mia-huang",
+   "items": [
+    {
+     "id": "mia-01",
+     "src": "kols/mia-huang/images/training_v1/02_gaming_chair_selfie.png",
+     "tier": "main",
+     "label": "電競房自拍・白背心＋耳機・甜笑",
+     "fix": "自拍手機在左下；霓虹色偏需打樣",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "mia-02",
+     "src": "kols/mia-huang/images/training_v1/13_stretch_break_candid.png",
+     "tier": "main",
+     "label": "電競房伸懶腰・黑短上衣",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "mia-03",
+     "src": "kols/mia-huang/images/training_v1/03_cosplay_mirror_selfie.png",
+     "tier": "main",
+     "label": "鏡子自拍・貓耳毛帽＋黑背心＋牛仔短褲＋白長襪",
+     "fix": "床上動漫角色抱枕（是否為可辨識角色待確認）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-04",
+     "src": "kols/mia-huang/images/training_v1/05_cosplay_candid_doorway.png",
+     "tier": "main",
+     "label": "門口・貓耳＋黑背心＋白長襪・全身",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-05",
+     "src": "kols/mia-huang/images/training_v1/06_stream_reaction_webcam.png",
+     "tier": "main",
+     "label": "直播反應・白背心＋耳機",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-06",
+     "src": "kols/mia-huang/images/training_v1/09_afternoon_wakeup_candid_couch.png",
+     "tier": "main",
+     "label": "沙發抱貓滑手機・黑帽 T",
+     "fix": "臉朝下；零食包裝",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-07",
+     "src": "kols/mia-huang/images/training_v1/11_hotel_expo_selfie_meitu.png",
+     "tier": "main",
+     "label": "飯店床上比 YA・深藍短帽 T＋識別證",
+     "fix": "識別證與海報筒上的文字待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-08",
+     "src": "kols/mia-huang/images/training_v1/12_daytime_outing_candid_cafe.png",
+     "tier": "main",
+     "label": "戶外咖啡座・白 T・大笑",
+     "fix": "前景有他人的手與後腦",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-09",
+     "src": "kols/mia-huang/images/training_v1/08_afternoon_wakeup_selfie_ccd.png",
+     "tier": "main",
+     "label": "灰帽 T 拿相機自拍",
+     "fix": "帽 T 上是 AI 假英文字",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-10",
+     "src": "kols/mia-huang/images/dance_clone_r1/start_frame.png",
+     "tier": "main",
+     "label": "電競房・水手服 cosplay",
+     "fix": "制服／cosplay 造型是否採用由 Penny 決定",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-11",
+     "src": "kols/mia-huang/images/training_v1/01_gaming_chair_candid.png",
+     "tier": "more",
+     "label": "電競椅・黑帽 T 坐姿",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-12",
+     "src": "kols/mia-huang/images/training_v1/04_outfit_decision_selfie.png",
+     "tier": "more",
+     "label": "衣櫃前・灰背心拿帽 T",
+     "fix": "帽 T 上是 AI 假英文字",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-13",
+     "src": "kols/mia-huang/images/training_v1/07_stream_break_selfie.png",
+     "tier": "more",
+     "label": "電競房自拍・吐舌",
+     "fix": "前景手機很大",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-14",
+     "src": "kols/mia-huang/images/training_v1/10_skincare_bathroom_selfie.png",
+     "tier": "more",
+     "label": "浴室鏡子・化妝棉・丸子頭",
+     "fix": "畫面偏暗",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "mia-15",
+     "src": "kols/mia-huang/images/face_reference/candidate_01.png",
+     "tier": "more",
+     "label": "電競椅・黑帽 T＋耳機",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/mia-huang/images/face_reference/candidate_02.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "與 mia-15 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/mia-huang/images/face_reference/candidate_03.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "與 mia-15 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/mia-huang/images/face_reference/candidate_04.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "與 mia-15 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/mia-huang/images/face_reference/round1_candidate_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    },
+    {
+     "src": "kols/mia-huang/images/face_reference/round1_candidate_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    },
+    {
+     "src": "kols/mia-huang/images/face_reference/round1_candidate_03.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    },
+    {
+     "src": "kols/mia-huang/images/face_reference/round1_candidate_04.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "第一輪臉部候選（人設紀錄：使用者判定臉不一致、已退回），不是定案臉"
+    }
+   ]
+  },
+  {
+   "pid": "yuna-kim",
+   "items": [
+    {
+     "id": "yuna-01",
+     "src": "kols/yuna-kim/images/face_reference/ref_01.webp",
+     "tier": "main",
+     "label": "首爾街頭・白背心・清冷素顏",
+     "fix": "背景韓文招牌（遠景，非品牌）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "yuna-02",
+     "src": "kols/yuna-kim/images/face_reference/ref_04.webp",
+     "tier": "main",
+     "label": "首爾街頭・插腰・白背心",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "yuna-03",
+     "src": "kols/yuna-kim/images/soul_test_v1/selfie_02.png",
+     "tier": "main",
+     "label": "柔和近照・米白毛衣",
+     "fix": "毛衣上有 AI 假英文＋韓文字（必修）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "yuna-04",
+     "src": "kols/yuna-kim/images/ab_light/B1a.png",
+     "tier": "main",
+     "label": "浴室・白細肩帶・閉眼手貼臉",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-05",
+     "src": "kols/yuna-kim/images/batch1/YG-01.png",
+     "tier": "main",
+     "label": "窗邊・米白短袖・撥髮",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-06",
+     "src": "kols/yuna-kim/images/batch1/YG-02.png",
+     "tier": "main",
+     "label": "窗邊喝咖啡・白背心＋開襟＋灰短褲",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-07",
+     "src": "kols/yuna-kim/images/batch1/t1_YG05_a.png",
+     "tier": "main",
+     "label": "地鐵站口・黑 T＋卡其百褶裙",
+     "fix": "背景站名看板文字待確認",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-08",
+     "src": "kols/yuna-kim/images/shot3_r1/shot3_A.png",
+     "tier": "main",
+     "label": "韓式餐館・捧湯碗",
+     "fix": "背景招牌文字與客人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-09",
+     "src": "kols/yuna-kim/images/soul_test_v1/street_02.png",
+     "tier": "main",
+     "label": "街頭・白背心＋格紋裙＋包包",
+     "fix": "格紋與包包經 R2 原圖檢查無可辨識品牌",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "yuna-10",
+     "src": "kols/yuna-kim/images/dance_clone_r7/start_frame.png",
+     "tier": "main",
+     "label": "走廊・白短 T＋牛仔短褲・全身",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-11",
+     "src": "kols/yuna-kim/images/face_reference/ref_03.webp",
+     "tier": "more",
+     "label": "首爾街頭夕陽・回頭",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-12",
+     "src": "kols/yuna-kim/images/batch1/YG-07.png",
+     "tier": "more",
+     "label": "客廳地上滑手機・吃零食",
+     "fix": "零食袋與雜誌文字",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-13",
+     "src": "kols/yuna-kim/images/batch1/YG05fix_a.png",
+     "tier": "more",
+     "label": "黑 T＋卡其裙・撥髮",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-14",
+     "src": "kols/yuna-kim/images/calibration/indoor_mirror.png",
+     "tier": "more",
+     "label": "浴室洗手台・白細肩帶",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-15",
+     "src": "kols/yuna-kim/images/calibration/indoor_cafe.png",
+     "tier": "more",
+     "label": "咖啡店・捧杯遮嘴",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-16",
+     "src": "kols/yuna-kim/images/shot3_r2/shot3_C.png",
+     "tier": "more",
+     "label": "韓式餐館・坐姿正面",
+     "fix": "背景客人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-17",
+     "src": "kols/yuna-kim/images/pilot_b1/YG06_a.png",
+     "tier": "more",
+     "label": "巷弄・白短 T＋黑短褲・回頭全身",
+     "fix": "人物較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-18",
+     "src": "kols/yuna-kim/images/preflight/YG-03.png",
+     "tier": "more",
+     "label": "便利商店・眼鏡＋灰 T",
+     "fix": "T 恤上有字樣（待確認）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-19",
+     "src": "kols/yuna-kim/images/soul_test_v1/cafe_01.png",
+     "tier": "more",
+     "label": "咖啡店外座位・遠景",
+     "fix": "人物較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yuna-20",
+     "src": "kols/yuna-kim/images/calibration/arm_C.png",
+     "tier": "more",
+     "label": "街頭全身・遠景",
+     "fix": "人物很小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/yuna-kim/images/ab_light/A1.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/ab_light/A2.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/ab_light/B1b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-01_alt.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-05 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-02_alt.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-06 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-03_fail_a.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "檔名標示失敗；T 恤字樣"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-03_fail_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "檔名標示失敗；T 恤字樣"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-04.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-04_alt.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-04 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG-07_alt.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-12 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/YG05fix_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-13 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/batch1/t1_YG05_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-07 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/calibration/arm_D.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-20 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/calibration/arm_P_background.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-20 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/face_reference/ref_02.webp",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "與 yuna-01／yuna-02 同一套；頭部傾斜約 25°（CAL_06 記錄）"
+    },
+    {
+     "src": "kols/yuna-kim/images/pilot_b1/YG06_b.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 yuna-17 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/preflight/YG07_a.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-12 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/preflight/YG07_b.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-12 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/shot3_r1/shot3_B.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-08 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/shot3_r2/shot3_D.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-16 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/soul_test_v1/cafe_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-19 近似重複（同場景、同造型、姿勢幾乎相同）"
+    },
+    {
+     "src": "kols/yuna-kim/images/soul_test_v1/selfie_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-03 近似重複（同場景、同造型、姿勢幾乎相同）；同樣有毛衣假字"
+    },
+    {
+     "src": "kols/yuna-kim/images/soul_test_v1/street_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "與 yuna-09 近似重複（同場景、同造型、姿勢幾乎相同）"
+    }
+   ]
+  },
+  {
+   "pid": "tammy-chou",
+   "items": [
+    {
+     "id": "tammy-01",
+     "src": "daily140:130.png",
+     "tier": "main",
+     "label": "頂樓夜景・黑色平口貼身洋裝・長捲髮",
+     "fix": "背景路人在女牆後（R3 評估不處理）",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "tammy-02",
+     "src": "kols/tammy-chou/images/training_v1/train_01.jpg",
+     "tier": "main",
+     "label": "倉庫坐紙箱・玫瑰色針織洋裝",
+     "fix": "紙箱上假條碼貼紙（小）；赤腳；衣架雜亂",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "tammy-03",
+     "src": "daily140:075.png",
+     "tier": "main",
+     "label": "頂樓・黑色洋裝・表情較柔",
+     "fix": "背景路人",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "tammy-04",
+     "src": "daily140:071.png",
+     "tier": "main",
+     "label": "黑色上衣自拍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "tammy-05",
+     "src": "daily140:074.png",
+     "tier": "main",
+     "label": "咖啡館・白襯衫",
+     "fix": "背景路人（daily 審查標記）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "tammy-06",
+     "src": "daily140:073.png",
+     "tier": "main",
+     "label": "街頭・白襯衫",
+     "fix": "背景路人（daily 審查標記）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "tammy-07",
+     "src": "kols/tammy-chou/images/training_v1/train_02.jpg",
+     "tier": "main",
+     "label": "鏡子自拍・環形燈",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "tammy-08",
+     "src": "kols/tammy-chou/images/training_v1/train_05.jpg",
+     "tier": "main",
+     "label": "街頭提購物袋",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "tammy-09",
+     "src": "kols/tammy-chou/images/training_v1/train_03.jpg",
+     "tier": "more",
+     "label": "灰襯衫自拍・頭髮綁起・手持化妝棉",
+     "fix": "看不出招牌長捲髮（R2 判斷）",
+     "check": "R2 原圖已查"
+    },
+    {
+     "id": "tammy-10",
+     "src": "kols/tammy-chou/images/training_v1/train_04.jpg",
+     "tier": "more",
+     "label": "環形燈前・側臉",
+     "fix": "臉轉向側面",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "tammy-11",
+     "src": "daily140:072.png",
+     "tier": "more",
+     "label": "鏡子自拍",
+     "fix": "牆上人像是她自己的臉（daily 審查標記）",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "daily140:129.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 tammy-05 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人"
+    }
+   ]
+  },
+  {
+   "pid": "rin-ayase",
+   "items": [
+    {
+     "id": "rin-01",
+     "src": "kols/rin-ayase/images/training_v1/train_02.jpg",
+     "tier": "main",
+     "label": "盤髮裸背・化妝・成熟性感",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "rin-02",
+     "src": "daily140:053.png",
+     "tier": "main",
+     "label": "咖啡館・白背心窄裙・正臉微笑",
+     "fix": "背景右側西裝男等路人",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "rin-03",
+     "src": "clean:rin_V",
+     "tier": "main",
+     "label": "同上，R3 局部清理版（右側路人模糊減光）",
+     "fix": "清理狀態：完成；左後方女子保留",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+     "clean_of": "rin-02"
+    },
+    {
+     "id": "rin-04",
+     "src": "kols/rin-ayase/images/training_v1/train_01.jpg",
+     "tier": "main",
+     "label": "緞面晨袍・回頭背影",
+     "fix": "臉小、側後方",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "rin-05",
+     "src": "daily140:055.png",
+     "tier": "main",
+     "label": "夜景・緞面開衩洋裝",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rin-06",
+     "src": "daily140:051.png",
+     "tier": "main",
+     "label": "卡其短上衣自拍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rin-07",
+     "src": "daily140:052.png",
+     "tier": "main",
+     "label": "紫色上衣・鏡子自拍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rin-08",
+     "src": "kols/rin-ayase/images/training_v1/train_03.jpg",
+     "tier": "main",
+     "label": "廚房・灰色毛衣",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rin-09",
+     "src": "kols/rin-ayase/images/training_v1/train_04.jpg",
+     "tier": "main",
+     "label": "走廊・黑洋裝＋高跟鞋",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rin-10",
+     "src": "kols/rin-ayase/images/training_v1/train_05.jpg",
+     "tier": "more",
+     "label": "打包行李・白洋裝",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rin-11",
+     "src": "daily140:054.png",
+     "tier": "more",
+     "label": "電玩場",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "daily140:121.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 rin-11 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人"
+    },
+    {
+     "src": "daily140:122.png",
+     "px": [
+      1536,
+      2048
+     ],
+     "reason": "與 rin-05 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人"
+    }
+   ]
+  },
+  {
+   "pid": "rainie-hsu",
+   "items": [
+    {
+     "id": "rainie-01",
+     "src": "kols/rainie-hsu/images/training_v2/04_leaving_apartment_ccd.png",
+     "tier": "main",
+     "label": "出門前鏡子自拍・黑馬甲＋珠寶・濃豔",
+     "fix": "右下假日期戳「2023/18/07」（必修）；鏡面閃光與鏡中人影",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "rainie-02",
+     "src": "clean:rainie_H",
+     "tier": "main",
+     "label": "同上，R3 局部清理版（移除日期戳）",
+     "fix": "清理狀態：完成；100% 下只剩極淡直向紋理；鏡面閃光與鏡中人影未處理",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+     "clean_of": "rainie-01"
+    },
+    {
+     "id": "rainie-03",
+     "src": "kols/rainie-hsu/images/training_v2/08_bed_selfie_morning.png",
+     "tier": "main",
+     "label": "床上晨光自拍・柔和居家",
+     "fix": "",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "rainie-04",
+     "src": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+     "tier": "main",
+     "label": "鏡子自拍・黑馬甲＋開衩裙",
+     "fix": "手機閃光；左下洗衣籃雜亂",
+     "check": "R2 原圖已查",
+     "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
+    },
+    {
+     "id": "rainie-05",
+     "src": "kols/rainie-hsu/images/training_v2/05_vanity_liner_candid.png",
+     "tier": "main",
+     "label": "化妝鏡前畫眼線・香檳色緞面晨袍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-06",
+     "src": "kols/rainie-hsu/images/training_v2/11_hotel_mirror_candid.png",
+     "tier": "main",
+     "label": "飯店窗邊・銀色細肩帶短洋裝・城市景",
+     "fix": "前景行李箱雜亂",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-07",
+     "src": "kols/rainie-hsu/images/training_v2/12_hotel_window_selfie.png",
+     "tier": "main",
+     "label": "夜景窗前自拍・白 T＋牛仔褲・拿高跟鞋",
+     "fix": "窗框直線橫過畫面",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-08",
+     "src": "kols/rainie-hsu/images/training_v2/06_perfume_selfie_meitu.png",
+     "tier": "main",
+     "label": "噴香水自拍・白 T・垂眼",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-09",
+     "src": "kols/rainie-hsu/images/training_v2/13_dance_studio_candid.png",
+     "tier": "main",
+     "label": "舞蹈教室鏡前・黑短上衣＋緊身褲",
+     "fix": "人物在畫面中較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-10",
+     "src": "kols/rainie-hsu/images/training_v2/03_doorway_reveal_candid.png",
+     "tier": "main",
+     "label": "門框・金色緞面長洋裝・全身",
+     "fix": "人物在門框裡偏小",
+     "check": "R2 原圖已查"
+    },
+    {
+     "id": "rainie-11",
+     "src": "kols/rainie-hsu/images/training_v2/01_mirror_tryon_candid.png",
+     "tier": "main",
+     "label": "鏡中試穿・黑色細肩帶洋裝・回頭",
+     "fix": "床上衣物雜亂",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-12",
+     "src": "kols/rainie-hsu/images/training_v2/07_sofa_hungover_candid.png",
+     "tier": "more",
+     "label": "沙發・太陽眼鏡＋白色家居服",
+     "fix": "戴墨鏡看不到眼睛；左側有路過的人",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-13",
+     "src": "kols/rainie-hsu/images/training_v2/09_kitchen_baking_candid.png",
+     "tier": "more",
+     "label": "廚房揉麵團",
+     "fix": "畫面暗、臉小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "rainie-14",
+     "src": "kols/rainie-hsu/images/training_v2/10_couch_selfie_loungewear.png",
+     "tier": "more",
+     "label": "沙發滑手機・暗光",
+     "fix": "畫面暗",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/rainie-hsu/images/dance_clone_r10/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "不在紀錄核可的 training_v2 內，臉的版本無法從紀錄確認（CAL_02：素材只用 training_v2）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/dance_clone_r10/start_frame_v2.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "不在紀錄核可的 training_v2 內，臉的版本無法從紀錄確認（CAL_02：素材只用 training_v2）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/dance_clone_r14/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "不在紀錄核可的 training_v2 內，臉的版本無法從紀錄確認（CAL_02：素材只用 training_v2）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/dance_clone_r5/start_frame.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "不在紀錄核可的 training_v2 內，臉的版本無法從紀錄確認（CAL_02：素材只用 training_v2）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/dance_clone_r5/start_frame_v1_rejected_winged_eyeliner.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "不在紀錄核可的 training_v2 內，臉的版本無法從紀錄確認（CAL_02：素材只用 training_v2）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/dance_clone_r5/start_frame_v2.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "不在紀錄核可的 training_v2 內，臉的版本無法從紀錄確認（CAL_02：素材只用 training_v2）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/candidate_01.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/candidate_02.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/candidate_03.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/candidate_04.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round1_candidate_01.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round1_candidate_02.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round1_candidate_03.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round1_candidate_04.png",
+     "px": [
+      1152,
+      2048
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round2_candidate_01.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round2_candidate_02.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round2_candidate_03.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round2_candidate_04.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round3_candidate_01.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round3_candidate_02.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round3_candidate_03.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/face_reference/round3_candidate_04.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "定案前的臉部候選，與定案的 training_v2 不同（CAL_02：只有 training_v2 能用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/01_mirror_tryon_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/02_mirror_selfie_outfit_check.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/03_doorway_reveal_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/04_leaving_apartment_ccd.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/05_vanity_liner_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/06_perfume_selfie_meitu.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/07_sofa_hungover_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/08_bed_selfie_morning.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/09_kitchen_baking_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/10_couch_selfie_loungewear.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/11_hotel_mirror_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/12_hotel_window_selfie.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    },
+    {
+     "src": "kols/rainie-hsu/images/training_v1/13_dance_studio_candid.png",
+     "px": [
+      1440,
+      2560
+     ],
+     "reason": "舊版（已棄用）資料夾，臉與定案的 training_v2 不同（CAL_02：不可混用）"
+    }
+   ]
+  },
+  {
+   "pid": "miu-shiraishi",
+   "items": [
+    {
+     "id": "miu-01",
+     "src": "kols/miu-shiraishi/images/training_v1/train_01.jpg",
+     "tier": "main",
+     "label": "毛衣捧杯坐姿・甜",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "miu-02",
+     "src": "kols/miu-shiraishi/images/training_v1/train_02.jpg",
+     "tier": "main",
+     "label": "咖啡店吧台・側身",
+     "fix": "臉偏側面",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "miu-03",
+     "src": "kols/miu-shiraishi/images/training_v1/train_03.jpg",
+     "tier": "main",
+     "label": "浴袍＋毛巾自拍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "miu-04",
+     "src": "daily140:035.png",
+     "tier": "main",
+     "label": "酒吧・紫色碎花細肩帶洋裝",
+     "fix": "低解析縮圖；背景有人",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "miu-05",
+     "src": "daily140:034.png",
+     "tier": "main",
+     "label": "運河邊・米白露肩上衣＋牛仔褲・回頭",
+     "fix": "低解析縮圖；背景路人（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "miu-06",
+     "src": "daily140:032.png",
+     "tier": "main",
+     "label": "鏡子自拍・米白背心＋短裙",
+     "fix": "低解析縮圖；牆上人像是她自己的臉（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "miu-07",
+     "src": "kols/miu-shiraishi/images/training_v1/train_05.jpg",
+     "tier": "main",
+     "label": "運河散步・全身",
+     "fix": "臉小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "miu-08",
+     "src": "kols/miu-shiraishi/images/training_v1/train_04.jpg",
+     "tier": "main",
+     "label": "門口穿鞋",
+     "fix": "低頭，臉幾乎看不到",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "daily140:113.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "與 miu-05 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人；原圖未取回"
+    },
+    {
+     "src": "daily140:114.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "與 miu-04 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人；原圖未取回"
+    }
+   ]
+  },
+  {
+   "pid": "jia-seo",
+   "items": [
+    {
+     "id": "jia-01",
+     "src": "kols/jia-seo/images/training_v1/train_01.jpg",
+     "tier": "main",
+     "label": "健身房鏡子自拍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "jia-02",
+     "src": "kols/jia-seo/images/training_v1/train_02.jpg",
+     "tier": "main",
+     "label": "攝影棚・黑色上衣",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "jia-03",
+     "src": "kols/jia-seo/images/training_v1/train_03.jpg",
+     "tier": "main",
+     "label": "床上・白色繞頸上衣",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "jia-04",
+     "src": "daily140:021.png",
+     "tier": "main",
+     "label": "洗衣間・粉色抹胸＋白短褲自拍",
+     "fix": "低解析縮圖",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "jia-05",
+     "src": "daily140:022.png",
+     "tier": "main",
+     "label": "走廊鏡子自拍・灰短上衣＋灰運動褲",
+     "fix": "低解析縮圖；褲頭露出內褲帶",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "jia-06",
+     "src": "daily140:024.png",
+     "tier": "main",
+     "label": "麵包店・灰背心＋黑短裙",
+     "fix": "低解析縮圖；背景路人（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "jia-07",
+     "src": "daily140:023.png",
+     "tier": "main",
+     "label": "巷口坐姿・白色綁結上衣＋白短褲",
+     "fix": "低解析縮圖；背景路人（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "jia-08",
+     "src": "daily140:025.png",
+     "tier": "main",
+     "label": "夜晚・亮片平口上衣＋短裙・回頭",
+     "fix": "低解析縮圖；牆上螢幕是她自己的臉（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "jia-09",
+     "src": "kols/jia-seo/images/training_v1/train_05.jpg",
+     "tier": "main",
+     "label": "街頭",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "jia-10",
+     "src": "kols/jia-seo/images/training_v1/train_04.jpg",
+     "tier": "more",
+     "label": "綁鞋帶",
+     "fix": "低頭，臉幾乎看不到",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "daily140:109.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "與 jia-06 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人；原圖未取回"
+    },
+    {
+     "src": "daily140:110.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "與 jia-08 近似重複（同場景、同造型、姿勢幾乎相同）；牆上螢幕是她的臉；原圖未取回"
+    }
+   ]
+  },
+  {
+   "pid": "yerin-han",
+   "items": [
+    {
+     "id": "yerin-01",
+     "src": "kols/yerin-han/images/training_v1/train_02.jpg",
+     "tier": "main",
+     "label": "高爾夫練習場・白帽＋白 polo・甜笑",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yerin-02",
+     "src": "kols/yerin-han/images/training_v1/train_01.jpg",
+     "tier": "main",
+     "label": "客廳坐地・白背心＋灰短褲＋及膝襪",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yerin-03",
+     "src": "kols/yerin-han/images/training_v1/train_03.jpg",
+     "tier": "main",
+     "label": "走廊晨光・白色毛巾浴袍",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yerin-04",
+     "src": "kols/yerin-han/images/training_v1/train_05.jpg",
+     "tier": "main",
+     "label": "清晨球場・淺藍 polo＋白長褲・全身",
+     "fix": "",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yerin-05",
+     "src": "kols/yerin-han/images/training_v1/train_04.jpg",
+     "tier": "main",
+     "label": "玄關・米色 polo＋深藍百褶球裙・俯身裝包",
+     "fix": "低頭俯身，臉較小",
+     "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "yerin-06",
+     "src": "daily140:087.png",
+     "tier": "main",
+     "label": "走廊鏡子自拍・深藍拉鍊背心＋白短褲",
+     "fix": "低解析縮圖",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "yerin-07",
+     "src": "daily140:086.png",
+     "tier": "main",
+     "label": "咖啡店自拍・白色平口＋白短裙",
+     "fix": "低解析縮圖；坐姿裙下區域在縮圖上無法確認",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "yerin-08",
+     "src": "daily140:090.png",
+     "tier": "main",
+     "label": "頂樓夜景・黑色深 V 開衩長洋裝・大笑",
+     "fix": "低解析縮圖；背景路人（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    },
+    {
+     "id": "yerin-09",
+     "src": "daily140:089.png",
+     "tier": "main",
+     "label": "巷弄・灰色背心＋灰長褲・回頭",
+     "fix": "低解析縮圖；背景路人（daily 審查標記）",
+     "check": "縮圖目視（360×480）"
+    }
+   ],
+   "excluded": [
+    {
+     "src": "kols/yerin-han/images/casting_v1/a01.png",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+    },
+    {
+     "src": "kols/yerin-han/images/casting_v1/a02.png",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+    },
+    {
+     "src": "kols/yerin-han/images/casting_v1/a03.png",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+    },
+    {
+     "src": "kols/yerin-han/images/casting_v1/a04.png",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+    },
+    {
+     "src": "kols/yerin-han/images/casting_v1/a04_v1_body_fail.png",
+     "px": [
+      1728,
+      2304
+     ],
+     "reason": "檔名標示身形失敗；且同 casting_v1 臉與定案不同"
+    },
+    {
+     "src": "daily140:088.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "daily 審查標記「肢體變形」（腿部）＋背景路人；不放主候選；原圖未取回"
+    },
+    {
+     "src": "daily140:135.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "與 yerin-09 近似重複（同場景、同造型、姿勢幾乎相同）；牆面假英文字；原圖未取回"
+    },
+    {
+     "src": "daily140:136.png",
+     "px": [
+      360,
+      480
+     ],
+     "reason": "與 yerin-08 近似重複（同場景、同造型、姿勢幾乎相同）；背景路人；原圖未取回"
+    }
+   ]
+  }
+ ]
+}

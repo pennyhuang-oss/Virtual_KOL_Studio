@@ -2147,6 +2147,2400 @@ window.CAL_DATA = {
    "w": 1200,
    "z": "img/z/hi_tammy_alt075.jpg"
   },
+  "m_coco-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-01.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-01.jpg"
+  },
+  "m_coco-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-02.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-02.jpg"
+  },
+  "m_coco-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-03.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-03.jpg"
+  },
+  "m_coco-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-04.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-04.jpg"
+  },
+  "m_coco-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-05.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-05.jpg"
+  },
+  "m_coco-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-06.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-06.jpg"
+  },
+  "m_coco-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-07.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-07.jpg"
+  },
+  "m_coco-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-08.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-08.jpg"
+  },
+  "m_coco-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-09.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-09.jpg"
+  },
+  "m_coco-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-10.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-10.jpg"
+  },
+  "m_coco-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-11.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-11.jpg"
+  },
+  "m_coco-12": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-12.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-12.jpg"
+  },
+  "m_coco-13": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-13.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-13.jpg"
+  },
+  "m_coco-14": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-14.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-14.jpg"
+  },
+  "m_coco-15": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-15.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-15.jpg"
+  },
+  "m_coco-16": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-16.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-16.jpg"
+  },
+  "m_coco-17": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-17.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-17.jpg"
+  },
+  "m_coco-18": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-18.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-18.jpg"
+  },
+  "m_coco-19": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-19.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-19.jpg"
+  },
+  "m_iris-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-01.jpg"
+  },
+  "m_iris-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-02.jpg"
+  },
+  "m_iris-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-03.jpg"
+  },
+  "m_iris-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-04.jpg"
+  },
+  "m_iris-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-05.jpg"
+  },
+  "m_iris-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-06.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-06.jpg"
+  },
+  "m_iris-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-07.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-07.jpg"
+  },
+  "m_iris-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-08.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-08.jpg"
+  },
+  "m_iris-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-09.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-09.jpg"
+  },
+  "m_iris-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-10.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-10.jpg"
+  },
+  "m_iris-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-11.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-11.jpg"
+  },
+  "m_iris-12": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-12.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-12.jpg"
+  },
+  "m_iris-13": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-13.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-13.jpg"
+  },
+  "m_iris-14": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1920,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-14.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-14.jpg"
+  },
+  "m_iris-15": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-15.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-15.jpg"
+  },
+  "m_iris-16": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-16.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-16.jpg"
+  },
+  "m_iris-17": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-17.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-17.jpg"
+  },
+  "m_iris-18": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-18.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-18.jpg"
+  },
+  "m_iris-19": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-19.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-19.jpg"
+  },
+  "m_iris-20": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-20.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-20.jpg"
+  },
+  "m_iris-21": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-21.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-21.jpg"
+  },
+  "m_iris-22": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-22.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-22.jpg"
+  },
+  "m_jia-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_jia-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_jia-01.jpg"
+  },
+  "m_jia-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_jia-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_jia-02.jpg"
+  },
+  "m_jia-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_jia-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_jia-03.jpg"
+  },
+  "m_jia-04": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_jia-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_jia-04.jpg"
+  },
+  "m_jia-05": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_jia-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_jia-05.jpg"
+  },
+  "m_jia-06": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_jia-06.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_jia-06.jpg"
+  },
+  "m_jia-07": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_jia-07.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_jia-07.jpg"
+  },
+  "m_jia-08": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_jia-08.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_jia-08.jpg"
+  },
+  "m_jia-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_jia-09.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_jia-09.jpg"
+  },
+  "m_jia-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_jia-10.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_jia-10.jpg"
+  },
+  "m_luna-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_luna-01.jpg"
+  },
+  "m_luna-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_luna-02.jpg"
+  },
+  "m_luna-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-03.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-03.jpg"
+  },
+  "m_luna-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-04.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-04.jpg"
+  },
+  "m_luna-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-05.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-05.jpg"
+  },
+  "m_luna-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-06.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-06.jpg"
+  },
+  "m_luna-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-07.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-07.jpg"
+  },
+  "m_luna-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-08.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-08.jpg"
+  },
+  "m_luna-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-09.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-09.jpg"
+  },
+  "m_luna-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-10.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-10.jpg"
+  },
+  "m_luna-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-11.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_luna-11.jpg"
+  },
+  "m_luna-12": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-12.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-12.jpg"
+  },
+  "m_luna-13": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-13.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-13.jpg"
+  },
+  "m_luna-14": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-14.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-14.jpg"
+  },
+  "m_luna-15": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-15.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_luna-15.jpg"
+  },
+  "m_luna-16": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-16.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-16.jpg"
+  },
+  "m_luna-17": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-17.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-17.jpg"
+  },
+  "m_luna-18": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-18.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-18.jpg"
+  },
+  "m_luna-19": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-19.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-19.jpg"
+  },
+  "m_luna-20": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-20.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-20.jpg"
+  },
+  "m_luna-21": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-21.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-21.jpg"
+  },
+  "m_luna-22": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_luna-22.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_luna-22.jpg"
+  },
+  "m_mia-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-01.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-01.jpg"
+  },
+  "m_mia-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-02.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-02.jpg"
+  },
+  "m_mia-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-03.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-03.jpg"
+  },
+  "m_mia-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-04.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-04.jpg"
+  },
+  "m_mia-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-05.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-05.jpg"
+  },
+  "m_mia-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-06.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-06.jpg"
+  },
+  "m_mia-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-07.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-07.jpg"
+  },
+  "m_mia-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-08.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-08.jpg"
+  },
+  "m_mia-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-09.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-09.jpg"
+  },
+  "m_mia-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-10.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-10.jpg"
+  },
+  "m_mia-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-11.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-11.jpg"
+  },
+  "m_mia-12": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-12.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-12.jpg"
+  },
+  "m_mia-13": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-13.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-13.jpg"
+  },
+  "m_mia-14": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-14.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-14.jpg"
+  },
+  "m_mia-15": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_mia-15.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_mia-15.jpg"
+  },
+  "m_miu-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_miu-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_miu-01.jpg"
+  },
+  "m_miu-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_miu-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_miu-02.jpg"
+  },
+  "m_miu-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_miu-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_miu-03.jpg"
+  },
+  "m_miu-04": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_miu-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_miu-04.jpg"
+  },
+  "m_miu-05": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_miu-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_miu-05.jpg"
+  },
+  "m_miu-06": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_miu-06.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_miu-06.jpg"
+  },
+  "m_miu-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_miu-07.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_miu-07.jpg"
+  },
+  "m_miu-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_miu-08.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_miu-08.jpg"
+  },
+  "m_rainie-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-01.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-01.jpg"
+  },
+  "m_rainie-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-02.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-02.jpg"
+  },
+  "m_rainie-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-03.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-03.jpg"
+  },
+  "m_rainie-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-04.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-04.jpg"
+  },
+  "m_rainie-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-05.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-05.jpg"
+  },
+  "m_rainie-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-06.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-06.jpg"
+  },
+  "m_rainie-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-07.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-07.jpg"
+  },
+  "m_rainie-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-08.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-08.jpg"
+  },
+  "m_rainie-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-09.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-09.jpg"
+  },
+  "m_rainie-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-10.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-10.jpg"
+  },
+  "m_rainie-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-11.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-11.jpg"
+  },
+  "m_rainie-12": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-12.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-12.jpg"
+  },
+  "m_rainie-13": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-13.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-13.jpg"
+  },
+  "m_rainie-14": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1440,
+    2560
+   ],
+   "res": "hires",
+   "t": "img/t/m_rainie-14.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_rainie-14.jpg"
+  },
+  "m_rin-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-01.jpg"
+  },
+  "m_rin-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-02.jpg"
+  },
+  "m_rin-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-03.jpg"
+  },
+  "m_rin-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-04.jpg"
+  },
+  "m_rin-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-05.jpg"
+  },
+  "m_rin-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-06.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-06.jpg"
+  },
+  "m_rin-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-07.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-07.jpg"
+  },
+  "m_rin-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-08.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-08.jpg"
+  },
+  "m_rin-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-09.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-09.jpg"
+  },
+  "m_rin-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-10.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-10.jpg"
+  },
+  "m_rin-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_rin-11.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_rin-11.jpg"
+  },
+  "m_somi-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-01.jpg"
+  },
+  "m_somi-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-02.jpg"
+  },
+  "m_somi-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-03.jpg"
+  },
+  "m_somi-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-04.jpg"
+  },
+  "m_somi-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-05.jpg"
+  },
+  "m_somi-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-06.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-06.jpg"
+  },
+  "m_somi-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-07.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-07.jpg"
+  },
+  "m_somi-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-08.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-08.jpg"
+  },
+  "m_somi-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-09.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-09.jpg"
+  },
+  "m_somi-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_somi-10.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_somi-10.jpg"
+  },
+  "m_tammy-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-01.jpg"
+  },
+  "m_tammy-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-02.jpg"
+  },
+  "m_tammy-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-03.jpg"
+  },
+  "m_tammy-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-04.jpg"
+  },
+  "m_tammy-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-05.jpg"
+  },
+  "m_tammy-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-06.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-06.jpg"
+  },
+  "m_tammy-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-07.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-07.jpg"
+  },
+  "m_tammy-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-08.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-08.jpg"
+  },
+  "m_tammy-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-09.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-09.jpg"
+  },
+  "m_tammy-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-10.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-10.jpg"
+  },
+  "m_tammy-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_tammy-11.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_tammy-11.jpg"
+  },
+  "m_yerin-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yerin-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yerin-01.jpg"
+  },
+  "m_yerin-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yerin-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yerin-02.jpg"
+  },
+  "m_yerin-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yerin-03.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yerin-03.jpg"
+  },
+  "m_yerin-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yerin-04.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yerin-04.jpg"
+  },
+  "m_yerin-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yerin-05.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yerin-05.jpg"
+  },
+  "m_yerin-06": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_yerin-06.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_yerin-06.jpg"
+  },
+  "m_yerin-07": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_yerin-07.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_yerin-07.jpg"
+  },
+  "m_yerin-08": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_yerin-08.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_yerin-08.jpg"
+  },
+  "m_yerin-09": {
+   "h": 480,
+   "kind": "copy",
+   "orig_px": [
+    360,
+    480
+   ],
+   "res": "lowres",
+   "t": "img/t/m_yerin-09.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 360,
+   "z": "img/z/m_yerin-09.jpg"
+  },
+  "m_yuna-01": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-01.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yuna-01.jpg"
+  },
+  "m_yuna-02": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-02.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yuna-02.jpg"
+  },
+  "m_yuna-03": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-03.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-03.jpg"
+  },
+  "m_yuna-04": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-04.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-04.jpg"
+  },
+  "m_yuna-05": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-05.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-05.jpg"
+  },
+  "m_yuna-06": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-06.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-06.jpg"
+  },
+  "m_yuna-07": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-07.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-07.jpg"
+  },
+  "m_yuna-08": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-08.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-08.jpg"
+  },
+  "m_yuna-09": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-09.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-09.jpg"
+  },
+  "m_yuna-10": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-10.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-10.jpg"
+  },
+  "m_yuna-11": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1728,
+    2304
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-11.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yuna-11.jpg"
+  },
+  "m_yuna-12": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-12.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-12.jpg"
+  },
+  "m_yuna-13": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-13.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-13.jpg"
+  },
+  "m_yuna-14": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-14.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-14.jpg"
+  },
+  "m_yuna-15": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-15.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-15.jpg"
+  },
+  "m_yuna-16": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-16.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-16.jpg"
+  },
+  "m_yuna-17": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-17.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_yuna-17.jpg"
+  },
+  "m_yuna-18": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-18.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-18.jpg"
+  },
+  "m_yuna-19": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-19.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-19.jpg"
+  },
+  "m_yuna-20": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_yuna-20.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_yuna-20.jpg"
+  },
   "roster_A0": {
    "h": 910,
    "kind": "crop",
@@ -2213,6 +4607,3025 @@ window.CAL_DATA = {
    "w": 388,
    "z": "img/z/tile_scale_S3_ref.jpg"
   }
+ },
+ "mat": {
+  "checks": {
+   "EYE": "本輪目視（縮小檢視，未逐張 100%）",
+   "R2": "R2 原圖已查",
+   "TH": "縮圖目視（360×480）"
+  },
+  "materials_blob": "742c4bee08c9ea3dba314787c73151a93752d58b",
+  "materials_file": "docs/calendar/data/cal_m1_materials.json",
+  "pairs": [
+   {
+    "a": "miu-shiraishi",
+    "b": "jia-seo",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01219
+   },
+   {
+    "a": "miu-shiraishi",
+    "b": "somi-oh",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01894
+   },
+   {
+    "a": "jia-seo",
+    "b": "somi-oh",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01986
+   },
+   {
+    "a": "yerin-han",
+    "b": "rin-ayase",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.02085
+   },
+   {
+    "a": "somi-oh",
+    "b": "tammy-chou",
+    "kind": "visual",
+    "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+    "v": 0.04018
+   },
+   {
+    "a": "iris-chen",
+    "b": "rainie-hsu",
+    "kind": "visual",
+    "text": "兩位都是長直黑髮、沒有臉部量測；R2 目視：差異多來自妝感與表情",
+    "v": null
+   }
+  ],
+  "people": [
+   {
+    "desc": "長直黑髮、圓臉大眼，笑起來最甜的鄰家型",
+    "excluded": {
+     "defect": 2,
+     "dup": 8,
+     "scale": 56
+    },
+    "face": "cast_iris-chen_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景招牌是 AI 假中文字（清楚可讀到亂字）",
+      "id": "iris-01",
+      "img": "m_iris-01",
+      "kind": "repo",
+      "label": "台北街拍・白細肩帶短上衣＋牛仔短裙・全身甜笑",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "iris-01",
+      "fix": "清理狀態：完成，但近看看得出（招牌變成失焦色塊）",
+      "id": "iris-02",
+      "img": "m_iris-02",
+      "kind": "clean",
+      "label": "同上，R3 局部清理版（招牌模糊）",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "R3 局部清理版（本機清理輸出）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "窗邊高光過曝（原圖本身）",
+      "id": "iris-03",
+      "img": "m_iris-03",
+      "kind": "repo",
+      "label": "咖啡店窗邊・粉色抹胸露肩・胸上甜笑",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-04",
+      "img": "m_iris-04",
+      "kind": "repo",
+      "label": "公園夕陽・白色連帽短上衣＋黑短褲・回頭",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉上有窗框陰影",
+      "id": "iris-05",
+      "img": "m_iris-05",
+      "kind": "repo",
+      "label": "車內自拍特寫・黑細肩帶・逆光",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-06",
+      "img": "m_iris-06",
+      "kind": "repo",
+      "label": "咖啡館窗邊坐姿・白短上衣＋牛仔短裙",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景招牌文字與機車車牌待確認",
+      "id": "iris-07",
+      "img": "m_iris-07",
+      "kind": "repo",
+      "label": "夜晚街頭・黑短背心＋白襯衫＋黑工裝褲",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-08",
+      "img": "m_iris-08",
+      "kind": "repo",
+      "label": "黑白條紋短上衣＋灰短褲・雙手抱頭大笑",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-09",
+      "img": "m_iris-09",
+      "kind": "repo",
+      "label": "飯店窗邊・香檳色緞面細肩帶睡裙＋薄外袍",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "純白背景，場景感較弱",
+      "id": "iris-10",
+      "img": "m_iris-10",
+      "kind": "repo",
+      "label": "黑色細肩帶紗裙洋裝・雙手舉高",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景招牌文字待確認",
+      "id": "iris-11",
+      "img": "m_iris-11",
+      "kind": "repo",
+      "label": "同一套街拍・夜市街口",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "窗邊高光",
+      "id": "iris-12",
+      "img": "m_iris-12",
+      "kind": "repo",
+      "label": "同一套咖啡店窗邊・笑得較開",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-13",
+      "img": "m_iris-13",
+      "kind": "repo",
+      "label": "同一套公園夕陽・較遠景",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "構圖傾斜",
+      "id": "iris-14",
+      "img": "m_iris-14",
+      "kind": "repo",
+      "label": "車內自拍・畫面傾斜特寫",
+      "orig_px": [
+       1920,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-15",
+      "img": "m_iris-15",
+      "kind": "repo",
+      "label": "飯店・黑背心＋短褲（較早版本）",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景招牌文字待確認",
+      "id": "iris-16",
+      "img": "m_iris-16",
+      "kind": "repo",
+      "label": "夜晚街頭・白色長袖短上衣（較早版本）",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-17",
+      "img": "m_iris-17",
+      "kind": "repo",
+      "label": "客廳・白背心＋灰短褲＋針織外套",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-18",
+      "img": "m_iris-18",
+      "kind": "repo",
+      "label": "客廳・黃色背心＋牛仔褲（較早版本）",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "肩帶滑落；檔名的 FAILED 指表情沒達到原拍攝目標，不是畫面缺陷",
+      "id": "iris-19",
+      "img": "m_iris-19",
+      "kind": "repo",
+      "label": "浴室・白細肩帶背心・大笑（胸上）",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-20",
+      "img": "m_iris-20",
+      "kind": "repo",
+      "label": "客廳沙發・酒紅緞面細肩帶睡裙",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-21",
+      "img": "m_iris-21",
+      "kind": "repo",
+      "label": "夜景窗邊・運動內衣＋短褲",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-22",
+      "img": "m_iris-22",
+      "kind": "repo",
+      "label": "浴室鏡子自拍・米白緞面短洋裝",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Iris Chen",
+    "native": "陳芯語",
+    "pid": "iris-chen"
+   },
+   {
+    "desc": "黑色齊瀏海短鮑伯、嬌小，日系清純",
+    "excluded": {
+     "defect": 1,
+     "dup": 17,
+     "face": 2
+    },
+    "face": "cast_luna-tanaka_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-01",
+      "img": "m_luna-01",
+      "kind": "repo",
+      "label": "京都巷弄・白蕾絲上衣＋長裙・正面",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-02",
+      "img": "m_luna-02",
+      "kind": "repo",
+      "label": "京都巷弄・側身倚牆・蕾絲上衣",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景店招文字待確認",
+      "id": "luna-03",
+      "img": "m_luna-03",
+      "kind": "repo",
+      "label": "浴衣・神社參道・手拿蘋果糖",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-04",
+      "img": "m_luna-04",
+      "kind": "repo",
+      "label": "窗邊雙手托腮・白短袖上衣・近照",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-05",
+      "img": "m_luna-05",
+      "kind": "repo",
+      "label": "窗邊摸橘貓・白上衣短褲・低頭微笑",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "表情偏驚訝（嘴微張）",
+      "id": "luna-06",
+      "img": "m_luna-06",
+      "kind": "repo",
+      "label": "櫻花樹下・髮箍＋白上衣粉格裙・手拿小花",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "爆米花桶上是 AI 假字；背景路人",
+      "id": "luna-07",
+      "img": "m_luna-07",
+      "kind": "repo",
+      "label": "旋轉木馬前・貓耳髮箍＋爆米花",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-08",
+      "img": "m_luna-08",
+      "kind": "repo",
+      "label": "浴室・白色平口・閉眼擦臉",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景路人",
+      "id": "luna-09",
+      "img": "m_luna-09",
+      "kind": "repo",
+      "label": "雨天・透明傘＋白上衣格紋裙",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-10",
+      "img": "m_luna-10",
+      "kind": "repo",
+      "label": "公園夕陽・白色小碎花洋裝・全身",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-11",
+      "img": "m_luna-11",
+      "kind": "repo",
+      "label": "同一套京都巷弄・側身",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-12",
+      "img": "m_luna-12",
+      "kind": "repo",
+      "label": "東京街頭・白蕾絲上衣＋碎花裙",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "左上假 IG 介面字樣（R2 原圖 100% 清楚可見）",
+      "id": "luna-13",
+      "img": "m_luna-13",
+      "kind": "repo",
+      "label": "咖啡店窗邊・米色針織",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-14",
+      "img": "m_luna-14",
+      "kind": "repo",
+      "label": "同一套公園夕陽・回頭",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景路人",
+      "id": "luna-15",
+      "img": "m_luna-15",
+      "kind": "repo",
+      "label": "雨後街頭・白上衣藍短裙・拿傘",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-16",
+      "img": "m_luna-16",
+      "kind": "repo",
+      "label": "櫻花樹下・米色開襟外套",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景地圖看板文字",
+      "id": "luna-17",
+      "img": "m_luna-17",
+      "kind": "repo",
+      "label": "雨天・比 YA＋傘",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景店招文字待確認",
+      "id": "luna-18",
+      "img": "m_luna-18",
+      "kind": "repo",
+      "label": "浴衣・回頭背影",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景路人",
+      "id": "luna-19",
+      "img": "m_luna-19",
+      "kind": "repo",
+      "label": "旋轉木馬・背影回頭",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-20",
+      "img": "m_luna-20",
+      "kind": "repo",
+      "label": "浴室鏡前・白色平口",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "人物較小",
+      "id": "luna-21",
+      "img": "m_luna-21",
+      "kind": "repo",
+      "label": "甜點街・粉色短裙・全身",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "luna-22",
+      "img": "m_luna-22",
+      "kind": "repo",
+      "label": "和室・米白連身短褲＋針織外套",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Luna Tanaka",
+    "native": "田中ひな",
+    "pid": "luna-tanaka"
+   },
+   {
+    "desc": "銅橘短髮、表情外放，爽朗暖色的美食帳號",
+    "excluded": {
+     "dup": 2
+    },
+    "face": "cast_somi-oh_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景左後方男子（暗部、已失焦）；地上紙杯",
+      "id": "somi-01",
+      "img": "m_somi-01",
+      "kind": "hf",
+      "label": "港邊・白西裝外套＋抹胸・甜笑",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "左下紙袋品牌風格假字（R3 試修後撤回，未處理）",
+      "id": "somi-02",
+      "img": "m_somi-02",
+      "kind": "repo",
+      "label": "深夜炸雞・握罐甜笑・生活感",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景三位路人距離近（含一位男性正面）",
+      "id": "somi-03",
+      "img": "m_somi-03",
+      "kind": "hf",
+      "label": "海邊・白洋裝・初夏感",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景路人（daily 審查標記）",
+      "id": "somi-04",
+      "img": "m_somi-04",
+      "kind": "hf",
+      "label": "市場・抹胸自拍",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "somi-05",
+      "img": "m_somi-05",
+      "kind": "hf",
+      "label": "鏡子自拍",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "somi-06",
+      "img": "m_somi-06",
+      "kind": "repo",
+      "label": "浴袍＋頭巾自拍・素顏感",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "人物較小",
+      "id": "somi-07",
+      "img": "m_somi-07",
+      "kind": "repo",
+      "label": "市場散步・全身",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "somi-08",
+      "img": "m_somi-08",
+      "kind": "hf",
+      "label": "街頭・黑色外套",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "表情不適合主視覺（R2 判斷）",
+      "id": "somi-09",
+      "img": "m_somi-09",
+      "kind": "repo",
+      "label": "張嘴咬串燒",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉小",
+      "id": "somi-10",
+      "img": "m_somi-10",
+      "kind": "repo",
+      "label": "廚房做菜",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Somi Oh",
+    "native": "오소미",
+    "pid": "somi-oh"
+   },
+   {
+    "desc": "深棕長捲髮配瀏海，笑得最開的元氣甜",
+    "excluded": {
+     "defect": 1,
+     "face": 4,
+     "scale": 2
+    },
+    "face": "cast_coco-wu_h2",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景整面人像牆（多張人臉）會分散注意",
+      "id": "coco-01",
+      "img": "m_coco-01",
+      "kind": "repo",
+      "label": "宿舍・粉色細肩帶＋開襟外套・甜笑",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "coco-01",
+      "fix": "清理狀態：完成（人像牆變成失焦色塊）",
+      "id": "coco-02",
+      "img": "m_coco-02",
+      "kind": "clean",
+      "label": "同上，R3 局部清理版（人像牆強模糊）",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "R3 局部清理版（本機清理輸出）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "枕頭上有 Hello Kitty 手機殼（可辨識角色）與紅色指示燈",
+      "id": "coco-03",
+      "img": "m_coco-03",
+      "kind": "repo",
+      "label": "床上晨起自拍・off-shoulder・慵懶",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "coco-03",
+      "fix": "清理狀態：部分完成——手機殼已不在，但修補不完全自然：修補區紋理較平，左緣與下緣在 100% 下看得出",
+      "id": "coco-04",
+      "img": "m_coco-04",
+      "kind": "clean",
+      "label": "同上，R3 局部清理版（移除手機殼）",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "R3 局部清理版（本機清理輸出）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "Hello Kitty 手機殼；背景人像牆",
+      "id": "coco-05",
+      "img": "m_coco-05",
+      "kind": "repo",
+      "label": "鏡子自拍・薄荷綠細肩帶＋白百褶裙＋白長襪",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景人像牆",
+      "id": "coco-06",
+      "img": "m_coco-06",
+      "kind": "repo",
+      "label": "宿舍・紫色開襟抱枕大笑",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "coco-07",
+      "img": "m_coco-07",
+      "kind": "repo",
+      "label": "羽球場邊自拍・運動背心・馬尾",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉較小",
+      "id": "coco-08",
+      "img": "m_coco-08",
+      "kind": "repo",
+      "label": "飯店跳上床・白T＋牛仔短褲・動態",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景人像牆",
+      "id": "coco-09",
+      "img": "m_coco-09",
+      "kind": "repo",
+      "label": "宿舍床邊・紫色襯衫・撥髮",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "coco-10",
+      "img": "m_coco-10",
+      "kind": "repo",
+      "label": "夜晚街頭・黑蕾絲上衣＋牛仔短褲＋長靴",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "手機螢幕有人像",
+      "id": "coco-11",
+      "img": "m_coco-11",
+      "kind": "repo",
+      "label": "深夜趴床自拍・暖光",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "洗面乳瓶身有品牌風格字樣",
+      "id": "coco-12",
+      "img": "m_coco-12",
+      "kind": "repo",
+      "label": "浴室鏡子自拍・粉色細肩帶・比 YA 嘟嘴",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "右側有另一人的手拿手機入鏡；背景人像牆",
+      "id": "coco-13",
+      "img": "m_coco-13",
+      "kind": "repo",
+      "label": "宿舍全身・開襟外套＋白百褶裙",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "Hello Kitty 手機殼；背景人像牆",
+      "id": "coco-14",
+      "img": "m_coco-14",
+      "kind": "repo",
+      "label": "宿舍・粉色細肩帶＋開襟外套・撥髮",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "右側手機畫面顯示她自己的另一張臉，搶主角（R2：換圖）",
+      "id": "coco-15",
+      "img": "m_coco-15",
+      "kind": "repo",
+      "label": "宿舍・側身大笑",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "前景有另一人的後腦",
+      "id": "coco-16",
+      "img": "m_coco-16",
+      "kind": "repo",
+      "label": "走廊轉圈・紫色開襟＋白百褶裙",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "另一位女性與他人的手入鏡",
+      "id": "coco-17",
+      "img": "m_coco-17",
+      "kind": "repo",
+      "label": "宿舍晨起・被室友拉被子大笑",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "另一人入鏡；零食包裝假字",
+      "id": "coco-18",
+      "img": "m_coco-18",
+      "kind": "repo",
+      "label": "宿舍地上吃零食",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "鏡中另一位女性入鏡",
+      "id": "coco-19",
+      "img": "m_coco-19",
+      "kind": "repo",
+      "label": "浴室鏡前梳妝（鏡中）",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Coco Wu",
+    "native": "吳可可",
+    "pid": "coco-wu"
+   },
+   {
+    "desc": "灰金挑粉的捲短髮、霓虹電競房，甜而俏皮",
+    "excluded": {
+     "dup": 3,
+     "face": 4
+    },
+    "face": "cast_mia-huang_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "自拍手機在左下；霓虹色偏需打樣",
+      "id": "mia-01",
+      "img": "m_mia-01",
+      "kind": "repo",
+      "label": "電競房自拍・白背心＋耳機・甜笑",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "mia-02",
+      "img": "m_mia-02",
+      "kind": "repo",
+      "label": "電競房伸懶腰・黑短上衣",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "床上動漫角色抱枕（是否為可辨識角色待確認）",
+      "id": "mia-03",
+      "img": "m_mia-03",
+      "kind": "repo",
+      "label": "鏡子自拍・貓耳毛帽＋黑背心＋牛仔短褲＋白長襪",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "mia-04",
+      "img": "m_mia-04",
+      "kind": "repo",
+      "label": "門口・貓耳＋黑背心＋白長襪・全身",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "mia-05",
+      "img": "m_mia-05",
+      "kind": "repo",
+      "label": "直播反應・白背心＋耳機",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉朝下；零食包裝",
+      "id": "mia-06",
+      "img": "m_mia-06",
+      "kind": "repo",
+      "label": "沙發抱貓滑手機・黑帽 T",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "識別證與海報筒上的文字待確認",
+      "id": "mia-07",
+      "img": "m_mia-07",
+      "kind": "repo",
+      "label": "飯店床上比 YA・深藍短帽 T＋識別證",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "前景有他人的手與後腦",
+      "id": "mia-08",
+      "img": "m_mia-08",
+      "kind": "repo",
+      "label": "戶外咖啡座・白 T・大笑",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "帽 T 上是 AI 假英文字",
+      "id": "mia-09",
+      "img": "m_mia-09",
+      "kind": "repo",
+      "label": "灰帽 T 拿相機自拍",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "制服／cosplay 造型是否採用由 Penny 決定",
+      "id": "mia-10",
+      "img": "m_mia-10",
+      "kind": "repo",
+      "label": "電競房・水手服 cosplay",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "mia-11",
+      "img": "m_mia-11",
+      "kind": "repo",
+      "label": "電競椅・黑帽 T 坐姿",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "帽 T 上是 AI 假英文字",
+      "id": "mia-12",
+      "img": "m_mia-12",
+      "kind": "repo",
+      "label": "衣櫃前・灰背心拿帽 T",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "前景手機很大",
+      "id": "mia-13",
+      "img": "m_mia-13",
+      "kind": "repo",
+      "label": "電競房自拍・吐舌",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "畫面偏暗",
+      "id": "mia-14",
+      "img": "m_mia-14",
+      "kind": "repo",
+      "label": "浴室鏡子・化妝棉・丸子頭",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "mia-15",
+      "img": "m_mia-15",
+      "kind": "repo",
+      "label": "電競椅・黑帽 T＋耳機",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Mia Huang",
+    "native": "黃米亞",
+    "pid": "mia-huang"
+   },
+   {
+    "desc": "及肩黑棕微捲、韓系素顏，清冷安靜",
+    "excluded": {
+     "defect": 3,
+     "dup": 20
+    },
+    "face": "cast_yuna-kim_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景韓文招牌（遠景，非品牌）",
+      "id": "yuna-01",
+      "img": "m_yuna-01",
+      "kind": "repo",
+      "label": "首爾街頭・白背心・清冷素顏",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-02",
+      "img": "m_yuna-02",
+      "kind": "repo",
+      "label": "首爾街頭・插腰・白背心",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "毛衣上有 AI 假英文＋韓文字（必修）",
+      "id": "yuna-03",
+      "img": "m_yuna-03",
+      "kind": "repo",
+      "label": "柔和近照・米白毛衣",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-04",
+      "img": "m_yuna-04",
+      "kind": "repo",
+      "label": "浴室・白細肩帶・閉眼手貼臉",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-05",
+      "img": "m_yuna-05",
+      "kind": "repo",
+      "label": "窗邊・米白短袖・撥髮",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-06",
+      "img": "m_yuna-06",
+      "kind": "repo",
+      "label": "窗邊喝咖啡・白背心＋開襟＋灰短褲",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景站名看板文字待確認",
+      "id": "yuna-07",
+      "img": "m_yuna-07",
+      "kind": "repo",
+      "label": "地鐵站口・黑 T＋卡其百褶裙",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景招牌文字與客人",
+      "id": "yuna-08",
+      "img": "m_yuna-08",
+      "kind": "repo",
+      "label": "韓式餐館・捧湯碗",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "格紋與包包經 R2 原圖檢查無可辨識品牌",
+      "id": "yuna-09",
+      "img": "m_yuna-09",
+      "kind": "repo",
+      "label": "街頭・白背心＋格紋裙＋包包",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-10",
+      "img": "m_yuna-10",
+      "kind": "repo",
+      "label": "走廊・白短 T＋牛仔短褲・全身",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-11",
+      "img": "m_yuna-11",
+      "kind": "repo",
+      "label": "首爾街頭夕陽・回頭",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "零食袋與雜誌文字",
+      "id": "yuna-12",
+      "img": "m_yuna-12",
+      "kind": "repo",
+      "label": "客廳地上滑手機・吃零食",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-13",
+      "img": "m_yuna-13",
+      "kind": "repo",
+      "label": "黑 T＋卡其裙・撥髮",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-14",
+      "img": "m_yuna-14",
+      "kind": "repo",
+      "label": "浴室洗手台・白細肩帶",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yuna-15",
+      "img": "m_yuna-15",
+      "kind": "repo",
+      "label": "咖啡店・捧杯遮嘴",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景客人",
+      "id": "yuna-16",
+      "img": "m_yuna-16",
+      "kind": "repo",
+      "label": "韓式餐館・坐姿正面",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "人物較小",
+      "id": "yuna-17",
+      "img": "m_yuna-17",
+      "kind": "repo",
+      "label": "巷弄・白短 T＋黑短褲・回頭全身",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "T 恤上有字樣（待確認）",
+      "id": "yuna-18",
+      "img": "m_yuna-18",
+      "kind": "repo",
+      "label": "便利商店・眼鏡＋灰 T",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "人物較小",
+      "id": "yuna-19",
+      "img": "m_yuna-19",
+      "kind": "repo",
+      "label": "咖啡店外座位・遠景",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "人物很小",
+      "id": "yuna-20",
+      "img": "m_yuna-20",
+      "kind": "repo",
+      "label": "街頭全身・遠景",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Yuna Kim",
+    "native": "김하은",
+    "pid": "yuna-kim"
+   },
+   {
+    "desc": "蜜金色大波浪，時髦的網拍老闆娘",
+    "excluded": {
+     "dup": 1
+    },
+    "face": "cast_tammy-chou_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景路人在女牆後（R3 評估不處理）",
+      "id": "tammy-01",
+      "img": "m_tammy-01",
+      "kind": "hf",
+      "label": "頂樓夜景・黑色平口貼身洋裝・長捲髮",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "紙箱上假條碼貼紙（小）；赤腳；衣架雜亂",
+      "id": "tammy-02",
+      "img": "m_tammy-02",
+      "kind": "repo",
+      "label": "倉庫坐紙箱・玫瑰色針織洋裝",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景路人",
+      "id": "tammy-03",
+      "img": "m_tammy-03",
+      "kind": "hf",
+      "label": "頂樓・黑色洋裝・表情較柔",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "tammy-04",
+      "img": "m_tammy-04",
+      "kind": "hf",
+      "label": "黑色上衣自拍",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景路人（daily 審查標記）",
+      "id": "tammy-05",
+      "img": "m_tammy-05",
+      "kind": "hf",
+      "label": "咖啡館・白襯衫",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "背景路人（daily 審查標記）",
+      "id": "tammy-06",
+      "img": "m_tammy-06",
+      "kind": "hf",
+      "label": "街頭・白襯衫",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "tammy-07",
+      "img": "m_tammy-07",
+      "kind": "repo",
+      "label": "鏡子自拍・環形燈",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "tammy-08",
+      "img": "m_tammy-08",
+      "kind": "repo",
+      "label": "街頭提購物袋",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "看不出招牌長捲髮（R2 判斷）",
+      "id": "tammy-09",
+      "img": "m_tammy-09",
+      "kind": "repo",
+      "label": "灰襯衫自拍・頭髮綁起・手持化妝棉",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉轉向側面",
+      "id": "tammy-10",
+      "img": "m_tammy-10",
+      "kind": "repo",
+      "label": "環形燈前・側臉",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "牆上人像是她自己的臉（daily 審查標記）",
+      "id": "tammy-11",
+      "img": "m_tammy-11",
+      "kind": "hf",
+      "label": "鏡子自拍",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "more"
+     }
+    ],
+    "name": "Tammy Chou",
+    "native": "周語彤",
+    "pid": "tammy-chou"
+   },
+   {
+    "desc": "酒紅長捲髮、銀座夜色，成熟性感、不靠暴露",
+    "excluded": {
+     "dup": 2
+    },
+    "face": "cast_rin-ayase_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-01",
+      "img": "m_rin-01",
+      "kind": "repo",
+      "label": "盤髮裸背・化妝・成熟性感",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "背景右側西裝男等路人",
+      "id": "rin-02",
+      "img": "m_rin-02",
+      "kind": "hf",
+      "label": "咖啡館・白背心窄裙・正臉微笑",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "rin-02",
+      "fix": "清理狀態：完成；左後方女子保留",
+      "id": "rin-03",
+      "img": "m_rin-03",
+      "kind": "clean",
+      "label": "同上，R3 局部清理版（右側路人模糊減光）",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "R3 局部清理版（本機清理輸出）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "臉小、側後方",
+      "id": "rin-04",
+      "img": "m_rin-04",
+      "kind": "repo",
+      "label": "緞面晨袍・回頭背影",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-05",
+      "img": "m_rin-05",
+      "kind": "hf",
+      "label": "夜景・緞面開衩洋裝",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-06",
+      "img": "m_rin-06",
+      "kind": "hf",
+      "label": "卡其短上衣自拍",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-07",
+      "img": "m_rin-07",
+      "kind": "hf",
+      "label": "紫色上衣・鏡子自拍",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-08",
+      "img": "m_rin-08",
+      "kind": "repo",
+      "label": "廚房・灰色毛衣",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-09",
+      "img": "m_rin-09",
+      "kind": "repo",
+      "label": "走廊・黑洋裝＋高跟鞋",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-10",
+      "img": "m_rin-10",
+      "kind": "repo",
+      "label": "打包行李・白洋裝",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rin-11",
+      "img": "m_rin-11",
+      "kind": "hf",
+      "label": "電玩場",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（R2 已取回）",
+      "tier": "more"
+     }
+    ],
+    "name": "Rin Ayase",
+    "native": "綾瀨凜",
+    "pid": "rin-ayase"
+   },
+   {
+    "desc": "長直黑髮、濃妝立體，夜店派對感",
+    "excluded": {
+     "face": 35
+    },
+    "face": "cast_rainie-hsu_h1",
+    "gaps": [],
+    "items": [
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "右下假日期戳「2023/18/07」（必修）；鏡面閃光與鏡中人影",
+      "id": "rainie-01",
+      "img": "m_rainie-01",
+      "kind": "repo",
+      "label": "出門前鏡子自拍・黑馬甲＋珠寶・濃豔",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "rainie-01",
+      "fix": "清理狀態：完成；100% 下只剩極淡直向紋理；鏡面閃光與鏡中人影未處理",
+      "id": "rainie-02",
+      "img": "m_rainie-02",
+      "kind": "clean",
+      "label": "同上，R3 局部清理版（移除日期戳）",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "R3 局部清理版（本機清理輸出）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "",
+      "id": "rainie-03",
+      "img": "m_rainie-03",
+      "kind": "repo",
+      "label": "床上晨光自拍・柔和居家",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "手機閃光；左下洗衣籃雜亂",
+      "id": "rainie-04",
+      "img": "m_rainie-04",
+      "kind": "repo",
+      "label": "鏡子自拍・黑馬甲＋開衩裙",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rainie-05",
+      "img": "m_rainie-05",
+      "kind": "repo",
+      "label": "化妝鏡前畫眼線・香檳色緞面晨袍",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "前景行李箱雜亂",
+      "id": "rainie-06",
+      "img": "m_rainie-06",
+      "kind": "repo",
+      "label": "飯店窗邊・銀色細肩帶短洋裝・城市景",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "窗框直線橫過畫面",
+      "id": "rainie-07",
+      "img": "m_rainie-07",
+      "kind": "repo",
+      "label": "夜景窗前自拍・白 T＋牛仔褲・拿高跟鞋",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "rainie-08",
+      "img": "m_rainie-08",
+      "kind": "repo",
+      "label": "噴香水自拍・白 T・垂眼",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "人物在畫面中較小",
+      "id": "rainie-09",
+      "img": "m_rainie-09",
+      "kind": "repo",
+      "label": "舞蹈教室鏡前・黑短上衣＋緊身褲",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "R2 原圖已查",
+      "clean_of": "",
+      "fix": "人物在門框裡偏小",
+      "id": "rainie-10",
+      "img": "m_rainie-10",
+      "kind": "repo",
+      "label": "門框・金色緞面長洋裝・全身",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "床上衣物雜亂",
+      "id": "rainie-11",
+      "img": "m_rainie-11",
+      "kind": "repo",
+      "label": "鏡中試穿・黑色細肩帶洋裝・回頭",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "戴墨鏡看不到眼睛；左側有路過的人",
+      "id": "rainie-12",
+      "img": "m_rainie-12",
+      "kind": "repo",
+      "label": "沙發・太陽眼鏡＋白色家居服",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "畫面暗、臉小",
+      "id": "rainie-13",
+      "img": "m_rainie-13",
+      "kind": "repo",
+      "label": "廚房揉麵團",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "畫面暗",
+      "id": "rainie-14",
+      "img": "m_rainie-14",
+      "kind": "repo",
+      "label": "沙發滑手機・暗光",
+      "orig_px": [
+       1440,
+       2560
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Rainie Hsu",
+    "native": "許雷妮",
+    "pid": "rainie-hsu"
+   },
+   {
+    "desc": "白金短鮑伯＋瀏海、咖啡店員，甜",
+    "excluded": {
+     "dup": 2
+    },
+    "face": "cast_miu-shiraishi_c3",
+    "gaps": [
+     "miu-04（daily140 035）只有 360×480 縮圖，原圖未取回",
+     "miu-05（daily140 034）只有 360×480 縮圖，原圖未取回",
+     "miu-06（daily140 032）只有 360×480 縮圖，原圖未取回"
+    ],
+    "items": [
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "miu-01",
+      "img": "m_miu-01",
+      "kind": "repo",
+      "label": "毛衣捧杯坐姿・甜",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉偏側面",
+      "id": "miu-02",
+      "img": "m_miu-02",
+      "kind": "repo",
+      "label": "咖啡店吧台・側身",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "miu-03",
+      "img": "m_miu-03",
+      "kind": "repo",
+      "label": "浴袍＋毛巾自拍",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；背景有人",
+      "id": "miu-04",
+      "img": "m_miu-04",
+      "kind": "thumb",
+      "label": "酒吧・紫色碎花細肩帶洋裝",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；背景路人（daily 審查標記）",
+      "id": "miu-05",
+      "img": "m_miu-05",
+      "kind": "thumb",
+      "label": "運河邊・米白露肩上衣＋牛仔褲・回頭",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；牆上人像是她自己的臉（daily 審查標記）",
+      "id": "miu-06",
+      "img": "m_miu-06",
+      "kind": "thumb",
+      "label": "鏡子自拍・米白背心＋短裙",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "臉小",
+      "id": "miu-07",
+      "img": "m_miu-07",
+      "kind": "repo",
+      "label": "運河散步・全身",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "低頭，臉幾乎看不到",
+      "id": "miu-08",
+      "img": "m_miu-08",
+      "kind": "repo",
+      "label": "門口穿鞋",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     }
+    ],
+    "name": "Miu Shiraishi",
+    "native": "白石美羽",
+    "pid": "miu-shiraishi"
+   },
+   {
+    "desc": "藍黑髮＋薄荷內染、K-pop 舞蹈老師，偏冷",
+    "excluded": {
+     "dup": 2
+    },
+    "face": "cast_jia-seo_c3",
+    "gaps": [
+     "jia-04（daily140 021）只有 360×480 縮圖，原圖未取回",
+     "jia-05（daily140 022）只有 360×480 縮圖，原圖未取回",
+     "jia-06（daily140 024）只有 360×480 縮圖，原圖未取回",
+     "jia-07（daily140 023）只有 360×480 縮圖，原圖未取回",
+     "jia-08（daily140 025）只有 360×480 縮圖，原圖未取回"
+    ],
+    "items": [
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "jia-01",
+      "img": "m_jia-01",
+      "kind": "repo",
+      "label": "健身房鏡子自拍",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "jia-02",
+      "img": "m_jia-02",
+      "kind": "repo",
+      "label": "攝影棚・黑色上衣",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "jia-03",
+      "img": "m_jia-03",
+      "kind": "repo",
+      "label": "床上・白色繞頸上衣",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖",
+      "id": "jia-04",
+      "img": "m_jia-04",
+      "kind": "thumb",
+      "label": "洗衣間・粉色抹胸＋白短褲自拍",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；褲頭露出內褲帶",
+      "id": "jia-05",
+      "img": "m_jia-05",
+      "kind": "thumb",
+      "label": "走廊鏡子自拍・灰短上衣＋灰運動褲",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；背景路人（daily 審查標記）",
+      "id": "jia-06",
+      "img": "m_jia-06",
+      "kind": "thumb",
+      "label": "麵包店・灰背心＋黑短裙",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；背景路人（daily 審查標記）",
+      "id": "jia-07",
+      "img": "m_jia-07",
+      "kind": "thumb",
+      "label": "巷口坐姿・白色綁結上衣＋白短褲",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；牆上螢幕是她自己的臉（daily 審查標記）",
+      "id": "jia-08",
+      "img": "m_jia-08",
+      "kind": "thumb",
+      "label": "夜晚・亮片平口上衣＋短裙・回頭",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "jia-09",
+      "img": "m_jia-09",
+      "kind": "repo",
+      "label": "街頭",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "低頭，臉幾乎看不到",
+      "id": "jia-10",
+      "img": "m_jia-10",
+      "kind": "repo",
+      "label": "綁鞋帶",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     }
+    ],
+    "name": "Jia Seo",
+    "native": "서지아",
+    "pid": "jia-seo"
+   },
+   {
+    "desc": "亞麻棕長髮、高爾夫教練，運動甜美",
+    "excluded": {
+     "defect": 1,
+     "dup": 2,
+     "face": 5
+    },
+    "face": "cast_yerin-han_c3",
+    "gaps": [
+     "yerin-06（daily140 087）只有 360×480 縮圖，原圖未取回",
+     "yerin-07（daily140 086）只有 360×480 縮圖，原圖未取回",
+     "yerin-08（daily140 090）只有 360×480 縮圖，原圖未取回",
+     "yerin-09（daily140 089）只有 360×480 縮圖，原圖未取回"
+    ],
+    "items": [
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yerin-01",
+      "img": "m_yerin-01",
+      "kind": "repo",
+      "label": "高爾夫練習場・白帽＋白 polo・甜笑",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yerin-02",
+      "img": "m_yerin-02",
+      "kind": "repo",
+      "label": "客廳坐地・白背心＋灰短褲＋及膝襪",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yerin-03",
+      "img": "m_yerin-03",
+      "kind": "repo",
+      "label": "走廊晨光・白色毛巾浴袍",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "yerin-04",
+      "img": "m_yerin-04",
+      "kind": "repo",
+      "label": "清晨球場・淺藍 polo＋白長褲・全身",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "本輪目視（縮小檢視，未逐張 100%）",
+      "clean_of": "",
+      "fix": "低頭俯身，臉較小",
+      "id": "yerin-05",
+      "img": "m_yerin-05",
+      "kind": "repo",
+      "label": "玄關・米色 polo＋深藍百褶球裙・俯身裝包",
+      "orig_px": [
+       1728,
+       2304
+      ],
+      "r3": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖",
+      "id": "yerin-06",
+      "img": "m_yerin-06",
+      "kind": "thumb",
+      "label": "走廊鏡子自拍・深藍拉鍊背心＋白短褲",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；坐姿裙下區域在縮圖上無法確認",
+      "id": "yerin-07",
+      "img": "m_yerin-07",
+      "kind": "thumb",
+      "label": "咖啡店自拍・白色平口＋白短裙",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；背景路人（daily 審查標記）",
+      "id": "yerin-08",
+      "img": "m_yerin-08",
+      "kind": "thumb",
+      "label": "頂樓夜景・黑色深 V 開衩長洋裝・大笑",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     },
+     {
+      "check": "縮圖目視（360×480）",
+      "clean_of": "",
+      "fix": "低解析縮圖；背景路人（daily 審查標記）",
+      "id": "yerin-09",
+      "img": "m_yerin-09",
+      "kind": "thumb",
+      "label": "巷弄・灰色背心＋灰長褲・回頭",
+      "orig_px": [
+       360,
+       480
+      ],
+      "r3": "",
+      "src_zh": "360×480 縮圖（原圖未取回）",
+      "tier": "main"
+     }
+    ],
+    "name": "Yerin Han",
+    "native": "한예린",
+    "pid": "yerin-han"
+   }
+  ],
+  "roster": {
+   "access": "Penny 要求取消決策頁帳號密碼，並明確同意此展示頁公開可讀；不另設密碼或其他存取障礙",
+   "decided_by": "Penny（owner）在對話中明確表示「我選完了」；主管轉述為確認名單",
+   "decided_on": "2026-10-12",
+   "list": [
+    "iris-chen",
+    "luna-tanaka",
+    "somi-oh",
+    "coco-wu",
+    "mia-huang",
+    "yuna-kim",
+    "tammy-chou",
+    "rin-ayase",
+    "rainie-hsu",
+    "miu-shiraishi",
+    "jia-seo",
+    "yerin-han"
+   ],
+   "order_note": "以上順序不是月份順序",
+   "scope": [
+    "只確認 12 位人設名單",
+    "不是照片核准、不是月份核准、不是版面核准、不是印刷或廠商核准"
+   ],
+   "version": "roster-v1",
+   "vs_original_recommendation": {
+    "added": [
+     "miu-shiraishi",
+     "jia-seo",
+     "yerin-han"
+    ],
+    "removed": [
+     "kanon-komori",
+     "angel-chiu",
+     "vicky-lin"
+    ]
+   }
+  },
+  "roster_blob": "b648a22a6a234374083763f3cd48d65f27393d7d",
+  "roster_file": "docs/calendar/data/cal_m1_owner_roster.json",
+  "unmeasured": [
+   "iris-chen",
+   "luna-tanaka",
+   "coco-wu",
+   "mia-huang",
+   "yuna-kim",
+   "rainie-hsu"
+  ]
  },
  "months": [
   {
