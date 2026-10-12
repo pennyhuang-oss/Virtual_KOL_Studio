@@ -5221,7 +5221,7 @@ window.CAL_DATA = {
       "who": "Somi、Tammy、Rin、Miu、Jia、Yerin"
      },
      {
-      "status": "ready（較早訓練；R1 紀錄寫 SOUL_IDS.json 未收錄，是否跑過同樣的 6 張驗證未知）",
+      "status": "ready（較早訓練；R1 紀錄寫這幾位不在 Soul 總表內，是否跑過同樣的 6 張驗證未知）",
       "who": "Iris、Luna、Coco、Mia、Yuna"
      },
      {
@@ -5247,7 +5247,7 @@ window.CAL_DATA = {
     "catalog_commit": "d3fb91ab87547bfa04ee46cf4cfddd6750fcfe52",
     "catalog_url": "https://kol-catalog-production.up.railway.app/p/aaliya-okonkwo.html",
     "identity_note": "repo 資料夾名稱是 aaliya-okonkwo，profile.json 的 id 是 aaliya-rivera、姓名 Aaliya Rivera。README.md 註明「資料夾名稱為 aaliya-okonkwo（歷史原因，人格已改為 LA 拉丁裔設定）」。本輪不改人設、不改資料夾。",
-    "model_check": "2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、soul_id、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。",
+    "model_check": "2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、Soul ID、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。",
     "note": "型錄頁的 12 張圖（catalog/data/selection.json 的 aaliya-okonkwo）＝repo 裡 Aaliya 資料夾的 soul_test_v1 8 張＋face_reference 4 張；三個版本（本分支 HEAD、型錄分支 d3fb91a、素材基準 4fd3995）git blob 逐一相同。",
     "repo_commit": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45"
    },
@@ -5976,7 +5976,7 @@ window.CAL_DATA = {
     "why": "「球衣就是時尚，球技也真的好」。清晨的球道、薄霧、一套精緻的淺藍與白，把她的健康感與大方的笑拍成度假時尚照。"
    }
   ],
-  "plan_blob": "1abe29d45083d86384bd79a568672eb03338a2c0",
+  "plan_blob": "1602343d63e7f610d39d5463c6bff7d1da27d3dd",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "questions": [
    "12 位的主方向：每位在頁面上選「接受主方向／改用替代方向／想修改」，想修改的請直接寫在備註。",

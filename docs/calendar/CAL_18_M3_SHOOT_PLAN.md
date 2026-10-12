@@ -15,7 +15,7 @@ TASK-CAL-001／M-3｜12 位人設專業寫真拍攝規劃｜送審報告
 | 桌曆基準 | `4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45` |
 | Aaliya 圖片來源 | repo `4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45`；型錄分支 `claude/kol-dashboard-catalog-gqw9jz` @ `d3fb91ab87547bfa04ee46cf4cfddd6750fcfe52` |
 | 型錄頁 | https://kol-catalog-production.up.railway.app/p/aaliya-okonkwo.html |
-| 模型查詢 | 2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、soul_id、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。 |
+| 模型查詢 | 2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、Soul ID、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。 |
 
 ## 1. Penny 喜歡的 4 張（審美參考）
 
@@ -650,7 +650,7 @@ A 26-year-old adult Korean woman with fair, luminous porcelain-toned skin, brigh
 | 人設 | Soul 狀態（紀錄） |
 |---|---|
 | Somi、Tammy、Rin、Miu、Jia、Yerin | production_ready（2026-09-07／08 訓練；6 張驗證臉部門檻通過） |
-| Iris、Luna、Coco、Mia、Yuna | ready（較早訓練；R1 紀錄寫 SOUL_IDS.json 未收錄，是否跑過同樣的 6 張驗證未知） |
+| Iris、Luna、Coco、Mia、Yuna | ready（較早訓練；R1 紀錄寫這幾位不在 Soul 總表內，是否跑過同樣的 6 張驗證未知） |
 | Rainie | 只能用 v2 的 Soul（ready）；舊的 deprecated Soul 不可用 |
 
 Soul ID 不列在本文件與公開頁面。

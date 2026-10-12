@@ -316,8 +316,8 @@ def build_m3(mat):
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
     assert P['counts'] == {'generated': 0, 'credits': 0, 'trainings': 0}
     text = json.dumps(P, ensure_ascii=False)
-    for bad in ('job_id', 'sophia'):
-        assert bad not in text, bad
+    for bad in ('job_id', 'soul_id', 'sophia'):
+        assert bad not in text.lower(), bad
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit']}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', text))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id
