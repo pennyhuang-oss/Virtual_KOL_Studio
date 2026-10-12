@@ -4,6 +4,610 @@ window.CAL_DATA = {
   "docs/calendar/data/cal_r3_picks.json",
   "docs/calendar/data/cal_r3_layout_report.json"
  ],
+ "cast": {
+  "candidates": [
+   {
+    "age": 22,
+    "desc": "長直黑髮、圓臉大眼，笑起來最甜的鄰家型",
+    "extras": [
+     "cast_iris-chen_c1",
+     "cast_iris-chen_c2"
+    ],
+    "face": "cast_iris-chen_h1",
+    "group": "rec",
+    "id": "iris-chen",
+    "measured": false,
+    "name": "Iris Chen",
+    "native": "陳芯語",
+    "origin": "Taipei, Taiwan",
+    "pairs": [
+     {
+      "kind": "visual",
+      "text": "兩位都是長直黑髮、沒有臉部量測；R2 目視：差異多來自妝感與表情",
+      "v": null,
+      "with": "rainie-hsu"
+     }
+    ]
+   },
+   {
+    "age": 20,
+    "desc": "粉紫長髮＋瀏海，二次元偶像感；女僕咖啡廳人設",
+    "extras": [
+     "cast_kanon-komori_c2",
+     "cast_kanon-komori_c3"
+    ],
+    "face": "cast_kanon-komori_h1",
+    "group": "rec",
+    "id": "kanon-komori",
+    "measured": true,
+    "name": "Kanon Komori",
+    "native": "小森花音",
+    "origin": "東京秋葉原",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01734,
+      "with": "miu-shiraishi"
+     },
+     {
+      "kind": "near",
+      "text": "既有遮髮量測接近門檻，但未觸發",
+      "v": 0.02299,
+      "with": "wanyin-jiang"
+     },
+     {
+      "kind": "near",
+      "text": "既有遮髮量測接近門檻，但未觸發",
+      "v": 0.02302,
+      "with": "rin-ayase"
+     },
+     {
+      "kind": "visual",
+      "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+      "v": 0.02794,
+      "with": "somi-oh"
+     },
+     {
+      "kind": "visual",
+      "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+      "v": 0.03646,
+      "with": "tammy-chou"
+     }
+    ]
+   },
+   {
+    "age": 20,
+    "desc": "黑色齊瀏海短鮑伯、嬌小，日系清純",
+    "extras": [
+     "cast_luna-tanaka_c1",
+     "cast_luna-tanaka_c3"
+    ],
+    "face": "cast_luna-tanaka_h1",
+    "group": "rec",
+    "id": "luna-tanaka",
+    "measured": false,
+    "name": "Luna Tanaka",
+    "native": "田中ひな",
+    "origin": "Kyoto, Japan",
+    "pairs": []
+   },
+   {
+    "age": 23,
+    "desc": "高瘦窄臉、尖下巴，棕金漸層長髮；護理師人設",
+    "extras": [
+     "cast_angel-chiu_c1",
+     "cast_angel-chiu_c2"
+    ],
+    "face": "cast_angel-chiu_h1",
+    "group": "rec",
+    "id": "angel-chiu",
+    "measured": true,
+    "name": "Angel Chiu",
+    "native": "邱安晴",
+    "origin": "台北",
+    "pairs": []
+   },
+   {
+    "age": 24,
+    "desc": "銅橘短髮、表情外放，爽朗暖色的美食帳號",
+    "extras": [
+     "cast_somi-oh_c2",
+     "cast_somi-oh_c3"
+    ],
+    "face": "cast_somi-oh_h1",
+    "group": "rec",
+    "id": "somi-oh",
+    "measured": true,
+    "name": "Somi Oh",
+    "native": "오소미",
+    "origin": "釜山",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01894,
+      "with": "miu-shiraishi"
+     },
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01986,
+      "with": "jia-seo"
+     },
+     {
+      "kind": "visual",
+      "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+      "v": 0.02794,
+      "with": "kanon-komori"
+     },
+     {
+      "kind": "visual",
+      "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+      "v": 0.04018,
+      "with": "tammy-chou"
+     }
+    ]
+   },
+   {
+    "age": 25,
+    "desc": "小麥膚色、高馬尾、健身體態，性感來自身體線條",
+    "extras": [
+     "cast_vicky-lin_c1",
+     "cast_vicky-lin_c2"
+    ],
+    "face": "cast_vicky-lin_h1",
+    "group": "rec",
+    "id": "vicky-lin",
+    "measured": false,
+    "name": "Vicky Lin",
+    "native": "林薇淇",
+    "origin": "Kaohsiung, Taiwan (高雄)",
+    "pairs": []
+   },
+   {
+    "age": 20,
+    "desc": "深棕長捲髮配瀏海，笑得最開的元氣甜",
+    "extras": [
+     "cast_coco-wu_c1",
+     "cast_coco-wu_c2"
+    ],
+    "face": "cast_coco-wu_h1",
+    "group": "rec",
+    "id": "coco-wu",
+    "measured": false,
+    "name": "Coco Wu",
+    "native": "吳可可",
+    "origin": "Taichung, Taiwan",
+    "pairs": []
+   },
+   {
+    "age": 22,
+    "desc": "灰金挑粉的捲短髮、霓虹電競房，甜而俏皮",
+    "extras": [
+     "cast_mia-huang_c1",
+     "cast_mia-huang_c2"
+    ],
+    "face": "cast_mia-huang_h1",
+    "group": "rec",
+    "id": "mia-huang",
+    "measured": false,
+    "name": "Mia Huang",
+    "native": "黃米亞",
+    "origin": "Hsinchu, Taiwan (新竹)",
+    "pairs": []
+   },
+   {
+    "age": 21,
+    "desc": "及肩黑棕微捲、韓系素顏，清冷安靜",
+    "extras": [
+     "cast_yuna-kim_c1",
+     "cast_yuna-kim_c2"
+    ],
+    "face": "cast_yuna-kim_h1",
+    "group": "rec",
+    "id": "yuna-kim",
+    "measured": false,
+    "name": "Yuna Kim",
+    "native": "김하은",
+    "origin": "Seoul, South Korea",
+    "pairs": []
+   },
+   {
+    "age": 24,
+    "desc": "蜜金色大波浪，時髦的網拍老闆娘",
+    "extras": [
+     "cast_tammy-chou_c1",
+     "cast_tammy-chou_c3"
+    ],
+    "face": "cast_tammy-chou_h1",
+    "group": "rec",
+    "id": "tammy-chou",
+    "measured": true,
+    "name": "Tammy Chou",
+    "native": "周語彤",
+    "origin": "台北五分埔",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.02008,
+      "with": "peggy-lee"
+     },
+     {
+      "kind": "visual",
+      "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+      "v": 0.03646,
+      "with": "kanon-komori"
+     },
+     {
+      "kind": "visual",
+      "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+      "v": 0.04018,
+      "with": "somi-oh"
+     }
+    ]
+   },
+   {
+    "age": 25,
+    "desc": "酒紅長捲髮、銀座夜色，成熟性感、不靠暴露",
+    "extras": [
+     "cast_rin-ayase_c2",
+     "cast_rin-ayase_c3"
+    ],
+    "face": "cast_rin-ayase_h1",
+    "group": "rec",
+    "id": "rin-ayase",
+    "measured": true,
+    "name": "Rin Ayase",
+    "native": "綾瀨凜",
+    "origin": "東京銀座",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.02085,
+      "with": "yerin-han"
+     },
+     {
+      "kind": "near",
+      "text": "既有遮髮量測接近門檻，但未觸發",
+      "v": 0.02234,
+      "with": "wanyin-jiang"
+     },
+     {
+      "kind": "near",
+      "text": "既有遮髮量測接近門檻，但未觸發",
+      "v": 0.02302,
+      "with": "kanon-komori"
+     }
+    ]
+   },
+   {
+    "age": 24,
+    "desc": "長直黑髮、濃妝立體，夜店派對感",
+    "extras": [
+     "cast_rainie-hsu_c1",
+     "cast_rainie-hsu_c2"
+    ],
+    "face": "cast_rainie-hsu_h1",
+    "group": "rec",
+    "id": "rainie-hsu",
+    "measured": false,
+    "name": "Rainie Hsu",
+    "native": "許雷妮",
+    "origin": "Taipei, Taiwan",
+    "pairs": [
+     {
+      "kind": "visual",
+      "text": "兩位都是長直黑髮、沒有臉部量測；R2 目視：差異多來自妝感與表情",
+      "v": null,
+      "with": "iris-chen"
+     }
+    ]
+   },
+   {
+    "age": 23,
+    "desc": "長直黑髮、旗袍與蘇州園林，東方古典、安靜",
+    "extras": [
+     "cast_wanyin-jiang_c1",
+     "cast_wanyin-jiang_c2"
+    ],
+    "face": "cast_wanyin-jiang_h1",
+    "group": "backup",
+    "id": "wanyin-jiang",
+    "measured": true,
+    "name": "Wanyin Jiang",
+    "native": "江晚吟",
+    "origin": "蘇州",
+    "pairs": [
+     {
+      "kind": "near",
+      "text": "既有遮髮量測接近門檻，但未觸發",
+      "v": 0.02234,
+      "with": "rin-ayase"
+     },
+     {
+      "kind": "near",
+      "text": "既有遮髮量測接近門檻，但未觸發",
+      "v": 0.02299,
+      "with": "kanon-komori"
+     }
+    ]
+   },
+   {
+    "age": 28,
+    "desc": "深棕及肩捲髮、28 歲貴婦感，都會夜景",
+    "extras": [
+     "cast_sophia-tseng_c2",
+     "cast_sophia-tseng_c3"
+    ],
+    "face": "cast_sophia-tseng_h1",
+    "group": "backup",
+    "id": "sophia-tseng",
+    "measured": false,
+    "name": "Sophia Tseng",
+    "native": "曾詩妃",
+    "origin": "Taipei, Taiwan",
+    "pairs": []
+   },
+   {
+    "age": 22,
+    "desc": "白金短鮑伯＋瀏海、咖啡店員，甜",
+    "extras": [
+     "cast_miu-shiraishi_c1",
+     "cast_miu-shiraishi_c2"
+    ],
+    "face": "cast_miu-shiraishi_c3",
+    "group": "out",
+    "id": "miu-shiraishi",
+    "measured": true,
+    "name": "Miu Shiraishi",
+    "native": "白石美羽",
+    "origin": "東京中目黑",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01219,
+      "with": "jia-seo"
+     },
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01734,
+      "with": "kanon-komori"
+     },
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01894,
+      "with": "somi-oh"
+     }
+    ]
+   },
+   {
+    "age": 22,
+    "desc": "藍黑髮＋薄荷內染、K-pop 舞蹈老師，偏冷",
+    "extras": [
+     "cast_jia-seo_c2",
+     "cast_jia-seo_c1"
+    ],
+    "face": "cast_jia-seo_c3",
+    "group": "out",
+    "id": "jia-seo",
+    "measured": true,
+    "name": "Jia Seo",
+    "native": "서지아",
+    "origin": "首爾江南",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01219,
+      "with": "miu-shiraishi"
+     },
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.01986,
+      "with": "somi-oh"
+     }
+    ]
+   },
+   {
+    "age": 24,
+    "desc": "酒紅大捲髮＋灰挑染、改裝車行銷，帥氣性感",
+    "extras": [
+     "cast_peggy-lee_c1",
+     "cast_peggy-lee_c2"
+    ],
+    "face": "cast_peggy-lee_c3",
+    "group": "out",
+    "id": "peggy-lee",
+    "measured": true,
+    "name": "Peggy Lee",
+    "native": "李珮甄",
+    "origin": "吉隆坡（華裔）",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.02008,
+      "with": "tammy-chou"
+     }
+    ]
+   },
+   {
+    "age": 26,
+    "desc": "亞麻棕長髮、高爾夫教練，運動甜美",
+    "extras": [
+     "cast_yerin-han_c1",
+     "cast_yerin-han_c2"
+    ],
+    "face": "cast_yerin-han_c3",
+    "group": "out",
+    "id": "yerin-han",
+    "measured": true,
+    "name": "Yerin Han",
+    "native": "한예린",
+    "origin": "首爾",
+    "pairs": [
+     {
+      "kind": "hit",
+      "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+      "v": 0.02085,
+      "with": "rin-ayase"
+     }
+    ]
+   },
+   {
+    "age": null,
+    "desc": "深膚色、長捲髮、南亞五官（印度旁遮普設定）",
+    "extras": [
+     "hi_ananya_2",
+     "cast_ananya_3"
+    ],
+    "face": "cast_ananya-kapoor_h1",
+    "group": "r2",
+    "id": "ananya-kapoor",
+    "measured": false,
+    "name": "Ananya Kapoor",
+    "native": "",
+    "origin": "",
+    "pairs": []
+   },
+   {
+    "age": null,
+    "desc": "銀灰鮑伯，冷感中性的反差路線",
+    "extras": [
+     "cast_wendy_1",
+     "cast_wendy_2"
+    ],
+    "face": "cast_wendy-yeo_h1",
+    "group": "r2",
+    "id": "wendy-yeo",
+    "measured": true,
+    "name": "Wendy Yeo",
+    "native": "",
+    "origin": "",
+    "pairs": []
+   }
+  ],
+  "pairs": [
+   {
+    "a": "miu-shiraishi",
+    "b": "jia-seo",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01219
+   },
+   {
+    "a": "miu-shiraishi",
+    "b": "kanon-komori",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01734
+   },
+   {
+    "a": "miu-shiraishi",
+    "b": "somi-oh",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01894
+   },
+   {
+    "a": "jia-seo",
+    "b": "somi-oh",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.01986
+   },
+   {
+    "a": "peggy-lee",
+    "b": "tammy-chou",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.02008
+   },
+   {
+    "a": "yerin-han",
+    "b": "rin-ayase",
+    "kind": "hit",
+    "text": "既有遮髮量測落在既有同框門檻內（≤0.0220）",
+    "v": 0.02085
+   },
+   {
+    "a": "wanyin-jiang",
+    "b": "rin-ayase",
+    "kind": "near",
+    "text": "既有遮髮量測接近門檻，但未觸發",
+    "v": 0.02234
+   },
+   {
+    "a": "wanyin-jiang",
+    "b": "kanon-komori",
+    "kind": "near",
+    "text": "既有遮髮量測接近門檻，但未觸發",
+    "v": 0.02299
+   },
+   {
+    "a": "kanon-komori",
+    "b": "rin-ayase",
+    "kind": "near",
+    "text": "既有遮髮量測接近門檻，但未觸發",
+    "v": 0.02302
+   },
+   {
+    "a": "kanon-komori",
+    "b": "somi-oh",
+    "kind": "visual",
+    "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+    "v": 0.02794
+   },
+   {
+    "a": "kanon-komori",
+    "b": "tammy-chou",
+    "kind": "visual",
+    "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+    "v": 0.03646
+   },
+   {
+    "a": "somi-oh",
+    "b": "tammy-chou",
+    "kind": "visual",
+    "text": "R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型",
+    "v": 0.04018
+   },
+   {
+    "a": "iris-chen",
+    "b": "rainie-hsu",
+    "kind": "visual",
+    "text": "兩位都是長直黑髮、沒有臉部量測；R2 目視：差異多來自妝感與表情",
+    "v": null
+   }
+  ],
+  "rec12": [
+   "iris-chen",
+   "kanon-komori",
+   "luna-tanaka",
+   "angel-chiu",
+   "somi-oh",
+   "vicky-lin",
+   "coco-wu",
+   "mia-huang",
+   "yuna-kim",
+   "tammy-chou",
+   "rin-ayase",
+   "rainie-hsu"
+  ],
+  "sources": [
+   "docs/calendar/CAL_02_CASTING.md §3（18 位）",
+   "docs/calendar/data/cal_r1_candidates.json",
+   "docs/calendar/CAL_02_CASTING.md §5.3、§6（Ananya、Wendy）",
+   "docs/calendar/CAL_06_FACES.md §2、§4"
+  ]
+ },
  "checks": {
   "CHK_kanon_kanon_H_V_U": {
    "cid": "kanon_H",
@@ -695,6 +1299,655 @@ window.CAL_DATA = {
    "tw": 508,
    "w": 1701,
    "z": "img/z/V_year_2027.jpg"
+  },
+  "cast_ananya-kapoor_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/ananya-kapoor_1.jpg",
+   "t": "img/t/cast_ananya-kapoor_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_ananya-kapoor_h1.jpg"
+  },
+  "cast_ananya_3": {
+   "h": 416,
+   "kind": "crop",
+   "res": "lowres",
+   "src": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
+   "t": "img/t/cast_ananya_3.jpg",
+   "th": 416,
+   "tw": 232,
+   "w": 232,
+   "z": "img/z/cast_ananya_3.jpg"
+  },
+  "cast_angel-chiu_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/angel-chiu_1.jpg",
+   "t": "img/t/cast_angel-chiu_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_angel-chiu_c1.jpg"
+  },
+  "cast_angel-chiu_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/angel-chiu_2.jpg",
+   "t": "img/t/cast_angel-chiu_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_angel-chiu_c2.jpg"
+  },
+  "cast_angel-chiu_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/angel-chiu_1.jpg",
+   "t": "img/t/cast_angel-chiu_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_angel-chiu_h1.jpg"
+  },
+  "cast_coco-wu_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/coco-wu_1.jpg",
+   "t": "img/t/cast_coco-wu_c1.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_coco-wu_c1.jpg"
+  },
+  "cast_coco-wu_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/coco-wu_2.jpg",
+   "t": "img/t/cast_coco-wu_c2.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_coco-wu_c2.jpg"
+  },
+  "cast_coco-wu_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/coco-wu_1.jpg",
+   "t": "img/t/cast_coco-wu_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_coco-wu_h1.jpg"
+  },
+  "cast_iris-chen_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/iris-chen_1.jpg",
+   "t": "img/t/cast_iris-chen_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_iris-chen_c1.jpg"
+  },
+  "cast_iris-chen_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/iris-chen_2.jpg",
+   "t": "img/t/cast_iris-chen_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_iris-chen_c2.jpg"
+  },
+  "cast_iris-chen_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/iris-chen_1.jpg",
+   "t": "img/t/cast_iris-chen_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_iris-chen_h1.jpg"
+  },
+  "cast_jia-seo_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/jia-seo_1.jpg",
+   "t": "img/t/cast_jia-seo_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_jia-seo_c1.jpg"
+  },
+  "cast_jia-seo_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/jia-seo_2.jpg",
+   "t": "img/t/cast_jia-seo_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_jia-seo_c2.jpg"
+  },
+  "cast_jia-seo_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/jia-seo_3.jpg",
+   "t": "img/t/cast_jia-seo_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_jia-seo_c3.jpg"
+  },
+  "cast_kanon-komori_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/kanon-komori_2.jpg",
+   "t": "img/t/cast_kanon-komori_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_kanon-komori_c2.jpg"
+  },
+  "cast_kanon-komori_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/kanon-komori_3.jpg",
+   "t": "img/t/cast_kanon-komori_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_kanon-komori_c3.jpg"
+  },
+  "cast_kanon-komori_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/kanon-komori_1.jpg",
+   "t": "img/t/cast_kanon-komori_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_kanon-komori_h1.jpg"
+  },
+  "cast_luna-tanaka_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/luna-tanaka_1.jpg",
+   "t": "img/t/cast_luna-tanaka_c1.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_luna-tanaka_c1.jpg"
+  },
+  "cast_luna-tanaka_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/luna-tanaka_3.jpg",
+   "t": "img/t/cast_luna-tanaka_c3.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_luna-tanaka_c3.jpg"
+  },
+  "cast_luna-tanaka_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/luna-tanaka_1.jpg",
+   "t": "img/t/cast_luna-tanaka_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_luna-tanaka_h1.jpg"
+  },
+  "cast_mia-huang_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/mia-huang_1.jpg",
+   "t": "img/t/cast_mia-huang_c1.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_mia-huang_c1.jpg"
+  },
+  "cast_mia-huang_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/mia-huang_2.jpg",
+   "t": "img/t/cast_mia-huang_c2.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_mia-huang_c2.jpg"
+  },
+  "cast_mia-huang_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/mia-huang_1.jpg",
+   "t": "img/t/cast_mia-huang_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_mia-huang_h1.jpg"
+  },
+  "cast_miu-shiraishi_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/miu-shiraishi_1.jpg",
+   "t": "img/t/cast_miu-shiraishi_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_miu-shiraishi_c1.jpg"
+  },
+  "cast_miu-shiraishi_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/miu-shiraishi_2.jpg",
+   "t": "img/t/cast_miu-shiraishi_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_miu-shiraishi_c2.jpg"
+  },
+  "cast_miu-shiraishi_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/miu-shiraishi_3.jpg",
+   "t": "img/t/cast_miu-shiraishi_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_miu-shiraishi_c3.jpg"
+  },
+  "cast_peggy-lee_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/peggy-lee_1.jpg",
+   "t": "img/t/cast_peggy-lee_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_peggy-lee_c1.jpg"
+  },
+  "cast_peggy-lee_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/peggy-lee_2.jpg",
+   "t": "img/t/cast_peggy-lee_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_peggy-lee_c2.jpg"
+  },
+  "cast_peggy-lee_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/peggy-lee_3.jpg",
+   "t": "img/t/cast_peggy-lee_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_peggy-lee_c3.jpg"
+  },
+  "cast_rainie-hsu_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/rainie-hsu_1.jpg",
+   "t": "img/t/cast_rainie-hsu_c1.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_rainie-hsu_c1.jpg"
+  },
+  "cast_rainie-hsu_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/rainie-hsu_2.jpg",
+   "t": "img/t/cast_rainie-hsu_c2.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_rainie-hsu_c2.jpg"
+  },
+  "cast_rainie-hsu_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/rainie-hsu_1.jpg",
+   "t": "img/t/cast_rainie-hsu_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_rainie-hsu_h1.jpg"
+  },
+  "cast_rin-ayase_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/rin-ayase_2.jpg",
+   "t": "img/t/cast_rin-ayase_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_rin-ayase_c2.jpg"
+  },
+  "cast_rin-ayase_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/rin-ayase_3.jpg",
+   "t": "img/t/cast_rin-ayase_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_rin-ayase_c3.jpg"
+  },
+  "cast_rin-ayase_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/rin-ayase_1.jpg",
+   "t": "img/t/cast_rin-ayase_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_rin-ayase_h1.jpg"
+  },
+  "cast_somi-oh_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/somi-oh_2.jpg",
+   "t": "img/t/cast_somi-oh_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_somi-oh_c2.jpg"
+  },
+  "cast_somi-oh_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/somi-oh_3.jpg",
+   "t": "img/t/cast_somi-oh_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_somi-oh_c3.jpg"
+  },
+  "cast_somi-oh_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/somi-oh_1.jpg",
+   "t": "img/t/cast_somi-oh_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_somi-oh_h1.jpg"
+  },
+  "cast_sophia-tseng_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/sophia-tseng_2.jpg",
+   "t": "img/t/cast_sophia-tseng_c2.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_sophia-tseng_c2.jpg"
+  },
+  "cast_sophia-tseng_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/sophia-tseng_3.jpg",
+   "t": "img/t/cast_sophia-tseng_c3.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_sophia-tseng_c3.jpg"
+  },
+  "cast_sophia-tseng_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/sophia-tseng_1.jpg",
+   "t": "img/t/cast_sophia-tseng_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_sophia-tseng_h1.jpg"
+  },
+  "cast_tammy-chou_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/tammy-chou_1.jpg",
+   "t": "img/t/cast_tammy-chou_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_tammy-chou_c1.jpg"
+  },
+  "cast_tammy-chou_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/tammy-chou_3.jpg",
+   "t": "img/t/cast_tammy-chou_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_tammy-chou_c3.jpg"
+  },
+  "cast_tammy-chou_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/tammy-chou_1.jpg",
+   "t": "img/t/cast_tammy-chou_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_tammy-chou_h1.jpg"
+  },
+  "cast_vicky-lin_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/vicky-lin_1.jpg",
+   "t": "img/t/cast_vicky-lin_c1.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_vicky-lin_c1.jpg"
+  },
+  "cast_vicky-lin_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/vicky-lin_2.jpg",
+   "t": "img/t/cast_vicky-lin_c2.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_vicky-lin_c2.jpg"
+  },
+  "cast_vicky-lin_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/vicky-lin_1.jpg",
+   "t": "img/t/cast_vicky-lin_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_vicky-lin_h1.jpg"
+  },
+  "cast_wanyin-jiang_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/wanyin-jiang_1.jpg",
+   "t": "img/t/cast_wanyin-jiang_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_wanyin-jiang_c1.jpg"
+  },
+  "cast_wanyin-jiang_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/wanyin-jiang_2.jpg",
+   "t": "img/t/cast_wanyin-jiang_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_wanyin-jiang_c2.jpg"
+  },
+  "cast_wanyin-jiang_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/wanyin-jiang_1.jpg",
+   "t": "img/t/cast_wanyin-jiang_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_wanyin-jiang_h1.jpg"
+  },
+  "cast_wendy-yeo_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/wendy-yeo_1.jpg",
+   "t": "img/t/cast_wendy-yeo_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_wendy-yeo_h1.jpg"
+  },
+  "cast_wendy_1": {
+   "h": 416,
+   "kind": "crop",
+   "res": "lowres",
+   "src": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
+   "t": "img/t/cast_wendy_1.jpg",
+   "th": 416,
+   "tw": 311,
+   "w": 311,
+   "z": "img/z/cast_wendy_1.jpg"
+  },
+  "cast_wendy_2": {
+   "h": 416,
+   "kind": "crop",
+   "res": "lowres",
+   "src": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
+   "t": "img/t/cast_wendy_2.jpg",
+   "th": 416,
+   "tw": 311,
+   "w": 311,
+   "z": "img/z/cast_wendy_2.jpg"
+  },
+  "cast_yerin-han_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/yerin-han_1.jpg",
+   "t": "img/t/cast_yerin-han_c1.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_yerin-han_c1.jpg"
+  },
+  "cast_yerin-han_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/yerin-han_2.jpg",
+   "t": "img/t/cast_yerin-han_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_yerin-han_c2.jpg"
+  },
+  "cast_yerin-han_c3": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/yerin-han_3.jpg",
+   "t": "img/t/cast_yerin-han_c3.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_yerin-han_c3.jpg"
+  },
+  "cast_yuna-kim_c1": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/yuna-kim_1.jpg",
+   "t": "img/t/cast_yuna-kim_c1.jpg",
+   "th": 560,
+   "tw": 315,
+   "w": 315,
+   "z": "img/z/cast_yuna-kim_c1.jpg"
+  },
+  "cast_yuna-kim_c2": {
+   "h": 560,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/img/cand/yuna-kim_2.jpg",
+   "t": "img/t/cast_yuna-kim_c2.jpg",
+   "th": 560,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_yuna-kim_c2.jpg"
+  },
+  "cast_yuna-kim_h1": {
+   "h": 420,
+   "kind": "copy",
+   "res": "lowres",
+   "src": "docs/calendar/r2/faces/heads/yuna-kim_1.jpg",
+   "t": "img/t/cast_yuna-kim_h1.jpg",
+   "th": 420,
+   "tw": 420,
+   "w": 420,
+   "z": "img/z/cast_yuna-kim_h1.jpg"
   },
   "coco_alt01_compare": {
    "h": 677,

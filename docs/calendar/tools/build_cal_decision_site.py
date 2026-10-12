@@ -119,6 +119,8 @@ MANIFEST = []
 
 
 def res_of(rel):
+    if rel.startswith(('img/cand/', 'r2/faces/heads/')):
+        return 'lowres'
     if rel.startswith(('r3/pages/hires/', 'r3/compare/hires/', 'r3/checks/hires/')):
         return 'page300'
     if rel.startswith('r3/previews/'):
@@ -201,6 +203,103 @@ def hires(cid, J, R, C, hf_dir, clean_dir):
 
 def load_json(rel):
     return json.loads(git_bytes(rel))
+
+
+# R1 入圍比較 18 位（CAL_02 §3，data/cal_r1_candidates.json）＋R2 追加比較 2 位（CAL_02 §5.3／§6）。
+# 描述只取自 R1／R2 文件（cal_r1_candidates.json 的 why／diff、CAL_02 §5.1、CAL_06），一句話；不新增量測。
+REC12 = ['iris-chen', 'kanon-komori', 'luna-tanaka', 'angel-chiu', 'somi-oh', 'vicky-lin',
+         'coco-wu', 'mia-huang', 'yuna-kim', 'tammy-chou', 'rin-ayase', 'rainie-hsu']
+CAST_INFO = {  # id: (一句外型／氣質, 臉部照片來源, 其他照片)
+    'iris-chen': ('長直黑髮、圓臉大眼，笑起來最甜的鄰家型', 'h1', ['c1', 'c2']),
+    'kanon-komori': ('粉紫長髮＋瀏海，二次元偶像感；女僕咖啡廳人設', 'h1', ['c2', 'c3']),
+    'luna-tanaka': ('黑色齊瀏海短鮑伯、嬌小，日系清純', 'h1', ['c1', 'c3']),
+    'angel-chiu': ('高瘦窄臉、尖下巴，棕金漸層長髮；護理師人設', 'h1', ['c1', 'c2']),
+    'somi-oh': ('銅橘短髮、表情外放，爽朗暖色的美食帳號', 'h1', ['c2', 'c3']),
+    'vicky-lin': ('小麥膚色、高馬尾、健身體態，性感來自身體線條', 'h1', ['c1', 'c2']),
+    'coco-wu': ('深棕長捲髮配瀏海，笑得最開的元氣甜', 'h1', ['c1', 'c2']),
+    'mia-huang': ('灰金挑粉的捲短髮、霓虹電競房，甜而俏皮', 'h1', ['c1', 'c2']),
+    'yuna-kim': ('及肩黑棕微捲、韓系素顏，清冷安靜', 'h1', ['c1', 'c2']),
+    'tammy-chou': ('蜜金色大波浪，時髦的網拍老闆娘', 'h1', ['c1', 'c3']),
+    'rin-ayase': ('酒紅長捲髮、銀座夜色，成熟性感、不靠暴露', 'h1', ['c2', 'c3']),
+    'rainie-hsu': ('長直黑髮、濃妝立體，夜店派對感', 'h1', ['c1', 'c2']),
+    'wanyin-jiang': ('長直黑髮、旗袍與蘇州園林，東方古典、安靜', 'h1', ['c1', 'c2']),
+    'sophia-tseng': ('深棕及肩捲髮、28 歲貴婦感，都會夜景', 'h1', ['c2', 'c3']),
+    'miu-shiraishi': ('白金短鮑伯＋瀏海、咖啡店員，甜', 'c3', ['c1', 'c2']),
+    'jia-seo': ('藍黑髮＋薄荷內染、K-pop 舞蹈老師，偏冷', 'c3', ['c2', 'c1']),
+    'peggy-lee': ('酒紅大捲髮＋灰挑染、改裝車行銷，帥氣性感', 'c3', ['c1', 'c2']),
+    'yerin-han': ('亞麻棕長髮、高爾夫教練，運動甜美', 'c3', ['c1', 'c2']),
+    'ananya-kapoor': ('深膚色、長捲髮、南亞五官（印度旁遮普設定）', 'h1', ['hi_ananya_2', 'x_ananya_3']),
+    'wendy-yeo': ('銀灰鮑伯，冷感中性的反差路線', 'h1', ['x_wendy_1', 'x_wendy_2']),
+}
+EXTRA = {'ananya-kapoor': ('Ananya Kapoor', '', ''), 'wendy-yeo': ('Wendy Yeo', '', '')}
+BATCH3 = {'kanon-komori', 'somi-oh', 'angel-chiu', 'tammy-chou', 'rin-ayase', 'wanyin-jiang', 'wendy-yeo',
+          'miu-shiraishi', 'jia-seo', 'peggy-lee', 'yerin-han'}
+# 既有遮髮量測紀錄（照錄；hit＝≤0.0220 既有同框門檻，near＝接近但未觸發，visual＝R2 目視觀察）
+PAIRS = [
+    ('miu-shiraishi', 'jia-seo', 0.01219, 'hit'), ('miu-shiraishi', 'kanon-komori', 0.01734, 'hit'),
+    ('miu-shiraishi', 'somi-oh', 0.01894, 'hit'), ('jia-seo', 'somi-oh', 0.01986, 'hit'),
+    ('peggy-lee', 'tammy-chou', 0.02008, 'hit'), ('yerin-han', 'rin-ayase', 0.02085, 'hit'),
+    ('wanyin-jiang', 'rin-ayase', 0.02234, 'near'), ('wanyin-jiang', 'kanon-komori', 0.02299, 'near'),
+    ('kanon-komori', 'rin-ayase', 0.02302, 'near'),
+    ('kanon-komori', 'somi-oh', 0.02794, 'visual'), ('kanon-komori', 'tammy-chou', 0.03646, 'visual'),
+    ('somi-oh', 'tammy-chou', 0.04018, 'visual'), ('iris-chen', 'rainie-hsu', None, 'visual'),
+]
+PAIR_NOTE = {
+    'hit': '既有遮髮量測落在既有同框門檻內（≤0.0220）',
+    'near': '既有遮髮量測接近門檻，但未觸發',
+    'visual': '',
+}
+VISUAL = {
+    frozenset(['kanon-komori', 'somi-oh']): 'R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型',
+    frozenset(['kanon-komori', 'tammy-chou']): 'R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型',
+    frozenset(['somi-oh', 'tammy-chou']): 'R2 目視：遮髮後骨架接近，區分主要靠髮色與髮型',
+    frozenset(['iris-chen', 'rainie-hsu']): '兩位都是長直黑髮、沒有臉部量測；R2 目視：差異多來自妝感與表情',
+}
+
+
+def build_cast():
+    r1 = {c['id']: c for c in load_json('data/cal_r1_candidates.json')['candidates']}
+    assert len(r1) == 18 and set(REC12) <= set(r1)
+    X = 'r2/decisions/CAL_R2_decide_people_compare.jpg'
+    xbox = {'x_ananya_3': [880, 94, 1116, 514], 'x_wendy_1': [230, 564, 545, 984], 'x_wendy_2': [555, 564, 870, 984]}
+    out = []
+    for pid, (desc, face, extras) in CAST_INFO.items():
+        def img(ref):
+            if ref in ('h1', 'h2'):
+                rel, iid = f'r2/faces/heads/{pid}_{ref[1]}.jpg', f'cast_{pid}_h{ref[1]}'
+            elif ref in ('c1', 'c2', 'c3'):
+                rel, iid = f'img/cand/{pid}_{ref[1]}.jpg', f'cast_{pid}_c{ref[1]}'
+            elif ref.startswith('x_'):
+                iid = 'cast_' + ref[2:]
+                if iid not in IMAGES:
+                    crop(iid, X, inset(xbox[ref]))
+                return iid
+            else:
+                return ref  # 既有的高解析預覽
+            if iid not in IMAGES:
+                copy(iid, rel)
+            return iid
+        if pid in r1:
+            c = r1[pid]
+            group = 'rec' if pid in REC12 else ('backup' if c['role'] == 'backup' else 'out')
+            name, native, origin, age = c['name'], c['native_name'], c['origin_src'], c['age']
+        else:
+            group = 'r2'
+            name, native, origin = EXTRA[pid]
+            age = None
+        notes = []
+        for a, b, v, kind in PAIRS:
+            if pid in (a, b):
+                other = b if pid == a else a
+                notes.append({'with': other, 'v': v, 'kind': kind,
+                              'text': VISUAL.get(frozenset([a, b]), PAIR_NOTE[kind])})
+        out.append({'id': pid, 'name': name, 'native': native, 'origin': origin, 'age': age, 'group': group,
+                    'desc': desc, 'face': img(face), 'extras': [img(e) for e in extras],
+                    'measured': pid in BATCH3, 'pairs': notes})
+    return {'candidates': out, 'rec12': REC12,
+            'pairs': [{'a': a, 'b': b, 'v': v, 'kind': k, 'text': VISUAL.get(frozenset([a, b]), PAIR_NOTE[k])} for a, b, v, k in PAIRS],
+            'sources': ['docs/calendar/CAL_02_CASTING.md §3（18 位）', 'docs/calendar/data/cal_r1_candidates.json',
+                        'docs/calendar/CAL_02_CASTING.md §5.3、§6（Ananya、Wendy）', 'docs/calendar/CAL_06_FACES.md §2、§4']}
 
 
 def main():
@@ -288,6 +387,9 @@ def main():
     for gx, n in ((260, 'roster_A0'), (1506, 'roster_A1')):
         crop(n, A, [gx, ry0 + 5 + 62, gx + 1232 - 8, ry0 + 5 + 62 + 918 - 8], (900, 900))
 
+    # ---------- 第一階段選角：候選人設與辨識用圖 ----------
+    cast = build_cast()
+
     # ---------- 頁面資料 ----------
     def ph(p):
         q = lay[p]['photos'][0]
@@ -310,6 +412,7 @@ def main():
         'checks': {p: ph(p) for p in ('CHK_kanon_kanon_H_V_U', 'CHK_kanon_kanon_V_V_U', 'CHK_kanon_kanon_alt028_V_U')},
         'grid9': ph('H_grid_09_yuna-kim'),
         'hires_of': {cid: 'hi_' + cid for cid in HI},
+        'cast': cast,
         'images': IMAGES,
     }
     with open(os.path.join(PUB, 'data.js'), 'w', encoding='utf-8') as f:

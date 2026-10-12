@@ -1162,6 +1162,909 @@
    "kind": "thumbnail",
    "source": "public/img/z/roster_A1.jpg",
    "op": "等比縮小至 900×669（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_iris-chen_h1.jpg",
+   "sha256": "c99bc40e7d1dce6d0ccf41f33d22ab249e044cf7a4dc5f78253c80eec416f193",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/iris-chen_1.jpg",
+   "source_blob": "af8d24fe88a4954c41c9d3ba3182b6f66e3ae4d3",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_iris-chen_h1.jpg",
+   "sha256": "ba0aa519882cd88f3285c2c31d7117bee48fbc858d9ab86fd812833364d7ce2b",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_iris-chen_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_iris-chen_c1.jpg",
+   "sha256": "f3658c69ce14796679bfbe2a68781f5461e46f9a9bb9e2356e5d45dd167d6ab6",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/iris-chen_1.jpg",
+   "source_blob": "ed08901094d710135d00891fd26ea795cf056237",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_iris-chen_c1.jpg",
+   "sha256": "82e9c9be36269175a58a8916ae1c11505745ba9290628460d36ec79e8405edf1",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_iris-chen_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_iris-chen_c2.jpg",
+   "sha256": "4c9efd5383c7d1a5458ac7c7ff1b3614da7f6b770d05ebdbedeb0908de4ff1f8",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/iris-chen_2.jpg",
+   "source_blob": "a815501e1b6b35bd9b727a86b2890645423b00bd",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_iris-chen_c2.jpg",
+   "sha256": "74c85090cc32497aacd7d81b98f667ddf81d1fa6fd48668cc44e821d9e9a0bc7",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_iris-chen_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_kanon-komori_h1.jpg",
+   "sha256": "bff0a5760020aa9e4a44cbed8d30064ebd5de6121982170c07ba34a3beeb678d",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/kanon-komori_1.jpg",
+   "source_blob": "f1a41399e7b20c77eec95ea6c97b7d5de6ea18cc",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_kanon-komori_h1.jpg",
+   "sha256": "aa56c2c4b93d60273b7e26af1b5b120ea6c31acab291a585be3124baa98dca3e",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_kanon-komori_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_kanon-komori_c2.jpg",
+   "sha256": "10561ecc31cf79a0306a22b69462964c559ef31ab5a4ba9077b1cd8e5d1a5202",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/kanon-komori_2.jpg",
+   "source_blob": "cdf9f65c9b67dfb29250fa60103ece7122104648",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_kanon-komori_c2.jpg",
+   "sha256": "75b7280f65388a47bd2243f4b6dfd1ba101d81241f3735f5e38669725e09d940",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_kanon-komori_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_kanon-komori_c3.jpg",
+   "sha256": "2d7740d319b0bdd2bc5c136b945bf9b26dc995361ef37b9af99cd629f0816ac9",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/kanon-komori_3.jpg",
+   "source_blob": "a16ff1b109039680926ca425c33d064b5fe0eb00",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_kanon-komori_c3.jpg",
+   "sha256": "00073d253b5952d3f536c5cfdd9f31e3817f3ec4b11c00e28e43e42b2a4edbce",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_kanon-komori_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_luna-tanaka_h1.jpg",
+   "sha256": "99f0d630b9580fae0acc07408f6bddf0276a6cda2a4d2cdfe0b02c7a1730e747",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/luna-tanaka_1.jpg",
+   "source_blob": "de7baf84dd0bd9abfb0f9ae74874a59110006c09",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_luna-tanaka_h1.jpg",
+   "sha256": "3d07af3a8026c2780e1ffaaf40874e92a112ef80fc11ae6e9af53fc06053ace4",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_luna-tanaka_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_luna-tanaka_c1.jpg",
+   "sha256": "e1705976ee2938a1ea72456a6e87ae20606f74a46273eedfa8396679a45d1faf",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/luna-tanaka_1.jpg",
+   "source_blob": "0769b79b0ad1cd9108ba07ea655f1dd44be48f08",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_luna-tanaka_c1.jpg",
+   "sha256": "bf002b7368514f5dfe37e51dd02fb3bff24d6259ce9ae5b1832d3ee576ae4894",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_luna-tanaka_c1.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_luna-tanaka_c3.jpg",
+   "sha256": "2f3a3eb21d2039b356462565cb6ac9c73acea21df1130a6578aff0d309c4fd8f",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/luna-tanaka_3.jpg",
+   "source_blob": "e06b248302433c96afde0d7375624bbc04512c20",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_luna-tanaka_c3.jpg",
+   "sha256": "284c7c266bba044c104f0715fb53e938b4241624ab030a510f5019bcf7a76699",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_luna-tanaka_c3.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_angel-chiu_h1.jpg",
+   "sha256": "6b752eff960de4e9170a2afe10738fbd9719dd148b243e6cb9a8af3db8008f31",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/angel-chiu_1.jpg",
+   "source_blob": "9f23e5c8ebaebbd34c5bf133649b59a1fcbe36de",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_angel-chiu_h1.jpg",
+   "sha256": "18077c2db8264a78ee3a7bd88e0a23acb9f95d4f82c6281c079e7baa6366ebb5",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_angel-chiu_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_angel-chiu_c1.jpg",
+   "sha256": "1266e0453a48b90f23b3865a34cfdeac48ee844703fec27d475012d4e7d3c5f1",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/angel-chiu_1.jpg",
+   "source_blob": "e688605b3c1651991af625a0ae1f8ab61dd92305",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_angel-chiu_c1.jpg",
+   "sha256": "dcee407fce4d99552db17671645e4fcecfa2150acaec1676046357fcace35db8",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_angel-chiu_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_angel-chiu_c2.jpg",
+   "sha256": "027eb64d6dfae998baeea62f26c50e2904132f5a30461f51b1bda74408a439fb",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/angel-chiu_2.jpg",
+   "source_blob": "4dc7bc0f9539e97870982b2d8fe21c39f784586c",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_angel-chiu_c2.jpg",
+   "sha256": "2af9876ab1455980d201137eafa472737d9e4f85fe27faede9f0434e22844098",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_angel-chiu_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_somi-oh_h1.jpg",
+   "sha256": "4d91cbbbfa36f75f8b8fa30c7e3b58fe49780eb11279ec5d76b75878356c8803",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/somi-oh_1.jpg",
+   "source_blob": "fc09b9861ddd6a75bf66857edb6cf5d2a47d0499",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_somi-oh_h1.jpg",
+   "sha256": "eee35bc71bad7cb85a32c8b55165fcf0c610d2434d4e739d8466c24c6d15e3bb",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_somi-oh_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_somi-oh_c2.jpg",
+   "sha256": "5492834bd2e0f8c31251548c7fab9b53ce93cbd2c1bd9a3e2478a472e6dd37fd",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/somi-oh_2.jpg",
+   "source_blob": "8b4fd871e726dd23cdecb54ecf16775a502477a3",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_somi-oh_c2.jpg",
+   "sha256": "87b9a3a207b8fca45cf62ee8bf90b72f527a6ecb182980dbc1f7d79181602160",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_somi-oh_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_somi-oh_c3.jpg",
+   "sha256": "f98e50f4719b60a73b886a533ac38fe788e15fb9ab706334f9eda7b18279f5a8",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/somi-oh_3.jpg",
+   "source_blob": "316b0ea2eb09cdbef0d29b783a6e27921f797f64",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_somi-oh_c3.jpg",
+   "sha256": "2cd788c613beaa490afe1f7b39a74790aeeab447b9b5d34a8a4d12ec004bf67f",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_somi-oh_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_vicky-lin_h1.jpg",
+   "sha256": "d86079ded2066675eb029fef011168f8a8e97e7ec68ef62cfb6c914dd9b2eee5",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/vicky-lin_1.jpg",
+   "source_blob": "d06ca78e7b19de9f1823d1ec15b34c3c757ea3a3",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_vicky-lin_h1.jpg",
+   "sha256": "e751726b5358d7a9fe322e34a5b03c19864c9f7fa8590b70f89492a4946357cd",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_vicky-lin_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_vicky-lin_c1.jpg",
+   "sha256": "f34303a20b0e820879881510da159773d6639d2e7c5cc81cac7e129b46689ce5",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/vicky-lin_1.jpg",
+   "source_blob": "ed2c38d00d5a7df7601a00c56f37919aede59db6",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_vicky-lin_c1.jpg",
+   "sha256": "a8a583b38efe6756299d05d6c93f6a2184c5888dae9ac9089c4f243de756f1c3",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_vicky-lin_c1.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_vicky-lin_c2.jpg",
+   "sha256": "2e525ab9d4f358135e2708093bb86b5c020ec9f5f95e93fc2a50ff29a132a255",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/vicky-lin_2.jpg",
+   "source_blob": "0c882e51d333f771d3447415b6560030032a4d1f",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_vicky-lin_c2.jpg",
+   "sha256": "4f65824c684e1899a299e3cb16ecdb8a7bf91637f498202cd2596cc4d269dc29",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_vicky-lin_c2.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_coco-wu_h1.jpg",
+   "sha256": "a5528e11bc08c2a4d507e080585d9a2540fcb7118605cf1defbba7a9707cc121",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/coco-wu_1.jpg",
+   "source_blob": "88be860d8b6c70a59fbd0fb6c339f76385e3c383",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_coco-wu_h1.jpg",
+   "sha256": "0a6f9886f38666f4dc4f1a5ebccf78491963d3ec8129ba97e52df465c53cb6b9",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_coco-wu_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_coco-wu_c1.jpg",
+   "sha256": "9c8812479439d3c0edbf38e1fc6e179a5307a9c87f1cbd32697c9c2868518f5c",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/coco-wu_1.jpg",
+   "source_blob": "a6dde8c97ed0ba58f0a46caef5503ca517d0341f",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_coco-wu_c1.jpg",
+   "sha256": "b03cb624fbec36a83890770853a7fc8bb8f5bc99ae699b9b527104af7f47a792",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_coco-wu_c1.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_coco-wu_c2.jpg",
+   "sha256": "8bf15de4d0836067c3983c7603337f04a4b900c542b92e4c3591f74725b7cf10",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/coco-wu_2.jpg",
+   "source_blob": "6e42b53d9e218247d9d477718515ef7de0cf08b5",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_coco-wu_c2.jpg",
+   "sha256": "fe2bcc6763cdb1ae4ffb996e2d4fa1d4af31bb12827467672966b02c42b93eeb",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_coco-wu_c2.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_mia-huang_h1.jpg",
+   "sha256": "c878a09a598ebd4fc2be75bf8a78e125b4045631f07f7ad69c4b37f13468bcff",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/mia-huang_1.jpg",
+   "source_blob": "d5955ee29eb828e3e70225638fcb99d65fdf9f2f",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_mia-huang_h1.jpg",
+   "sha256": "e881f73ed92dc880c9d3a88c47f850ea4dcbab4dd4e5ddef228004a37dbc4511",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_mia-huang_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_mia-huang_c1.jpg",
+   "sha256": "dfdbb893d4f5e36f99317ca03dabe51ca5b89af7d3d70aeec63cea03e39d4364",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/mia-huang_1.jpg",
+   "source_blob": "fc518412bd9a5497255b98bc4c3e988a67b45567",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_mia-huang_c1.jpg",
+   "sha256": "653c254305184244b0e6792fe0697a070b5407975fcd787ed9f391cc01a08b15",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_mia-huang_c1.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_mia-huang_c2.jpg",
+   "sha256": "83160bc006f18408dc3923a8f2267fdbaba088c53bd56e54decf37f4d0a9c762",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/mia-huang_2.jpg",
+   "source_blob": "d50c965333037558984894d0725c2df27749761e",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_mia-huang_c2.jpg",
+   "sha256": "b6b9e98512d1571063e20c494ce79efe4f577718083c6910250f1fc1f6eaaad7",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_mia-huang_c2.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_yuna-kim_h1.jpg",
+   "sha256": "4a204b3b7929f66dcb51146e87a04c733b5a2cbdf64c25256f82af07f79319f5",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/yuna-kim_1.jpg",
+   "source_blob": "65b2db93d27588ba6cb05f3a745ea3632af50d3b",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_yuna-kim_h1.jpg",
+   "sha256": "8c05b5bf5f2554931c541f0c4bf0bb669b1b9dd44e26192f89b7940e3d104173",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_yuna-kim_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_yuna-kim_c1.jpg",
+   "sha256": "6449dcec49baa9ca42d035d6fc9c1dee537a33fa0a56147435db394f99d5ba67",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/yuna-kim_1.jpg",
+   "source_blob": "c86dcdd4846016045f41a7598aa1f44854cb5b36",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_yuna-kim_c1.jpg",
+   "sha256": "4126330cfe2fc3ccc61774d97afab08afad0f608aaa31db965a11ccdccacc895",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_yuna-kim_c1.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_yuna-kim_c2.jpg",
+   "sha256": "59b1a29c720e63281e21ef7442dc138ae07577ee0b75d64c452de74f0a01fc13",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/yuna-kim_2.jpg",
+   "source_blob": "49048b8a8789663d76748cd129b740ab0d03b6c0",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_yuna-kim_c2.jpg",
+   "sha256": "d60529e4edcdb00c66592438c1f928b4d7e2afc8e6d1bf5c0bd82df782b87b74",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_yuna-kim_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_tammy-chou_h1.jpg",
+   "sha256": "122280207c52cbc725192d107e327811407f025377de05fb210cab256cb2352f",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/tammy-chou_1.jpg",
+   "source_blob": "d8624ca1e3268aa5c72a9aee4f8adc0489011d1e",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_tammy-chou_h1.jpg",
+   "sha256": "e53612464c14837da4dff74753e5df69633a2dd5a802cb696433aff2a407882d",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_tammy-chou_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_tammy-chou_c1.jpg",
+   "sha256": "b0bf2604903e9ff598560bc62ca163ad896780723f60359a9593a48639794f03",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/tammy-chou_1.jpg",
+   "source_blob": "52c74fda579f1b2d9b23818aed5e9f9ef9d07532",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_tammy-chou_c1.jpg",
+   "sha256": "0174b50c787d3b1a3b447c49c4802cd8f983f22b7a1d7bfe7284dad9053c9359",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_tammy-chou_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_tammy-chou_c3.jpg",
+   "sha256": "9b97f27712a9040788d005467f2723647ef285de8384bf5478f3814077d3aeaa",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/tammy-chou_3.jpg",
+   "source_blob": "b5827f3b8f9f1cd23b0c83417dc796033519516e",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_tammy-chou_c3.jpg",
+   "sha256": "fd66c58de7baf6032b6cd09670631132e6557709d6cf3be2324ed2b384d4b8cb",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_tammy-chou_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_rin-ayase_h1.jpg",
+   "sha256": "2108815487403f4fb3a599838653b9fee056b1eb6dd40338880d24da0513d2a3",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/rin-ayase_1.jpg",
+   "source_blob": "6652eda150e3d3bbeb74629687c01069a47a10ee",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_rin-ayase_h1.jpg",
+   "sha256": "f577be48af18e6cdec736d41ca086d4299f9ab7effdfca8b119f772f6ecacced",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_rin-ayase_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_rin-ayase_c2.jpg",
+   "sha256": "3351a9385527a13a11fd0d30d38c8faec0896e92465419b7436895fa87f1646c",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/rin-ayase_2.jpg",
+   "source_blob": "0a179d7ac2eece514b613d4cde6bfc2b0f70b594",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_rin-ayase_c2.jpg",
+   "sha256": "53d3a78228774d95f49e3a11514c28e432b607517719b687661043b8f5443824",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_rin-ayase_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_rin-ayase_c3.jpg",
+   "sha256": "151c123eb9288a20e1f8e1a67d9348a501051816375fd2056c5f73c25a40997d",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/rin-ayase_3.jpg",
+   "source_blob": "958a294466876c3b791e51027a835d21c502999f",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_rin-ayase_c3.jpg",
+   "sha256": "adac7efc7e0aabf13c8d4b2428330ab1f22bd0c236cca956b8214a50d119ff60",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_rin-ayase_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_rainie-hsu_h1.jpg",
+   "sha256": "71b98319cbb237157216761e63bae720c9ded30fd71932e3ea33ac94d76fcb4f",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/rainie-hsu_1.jpg",
+   "source_blob": "195d762f9861062a2564d728ede42c7305135c44",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_rainie-hsu_h1.jpg",
+   "sha256": "9e6dc4ed1b34038980f6963897edbff67a49b3dc02be3a5edf3c9703c34adc9f",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_rainie-hsu_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_rainie-hsu_c1.jpg",
+   "sha256": "007c9fbe1bfbc69e4ffb1bcffabcb45c0eb99404078fa53a156e84fbcd2a5f2c",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/rainie-hsu_1.jpg",
+   "source_blob": "7bd3bf21834b224f62a9329926d405f977af648e",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_rainie-hsu_c1.jpg",
+   "sha256": "96f9afbf5332eafef9a10b44025f304f0d9fc38f8d0b8f1db91e7bec068c49da",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_rainie-hsu_c1.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_rainie-hsu_c2.jpg",
+   "sha256": "f288da5fd4f21d51227ca8664ea7fee38151bb2f19e1f6af7a1b4b7b02476ca3",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/rainie-hsu_2.jpg",
+   "source_blob": "7f8b93cfdb81852d3118e619f1caff26235d41f6",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_rainie-hsu_c2.jpg",
+   "sha256": "1b645277e5761d57daf991b569ea530bc478a308f10478c0165b107f1504b64b",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_rainie-hsu_c2.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_wanyin-jiang_h1.jpg",
+   "sha256": "062db98ceed6654aa55fa739a086f124f9a1e258be41ffa190d883ffc09803e5",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/wanyin-jiang_1.jpg",
+   "source_blob": "64ae7a116a5729cf390b95c2447ca49db3928c68",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_wanyin-jiang_h1.jpg",
+   "sha256": "5f73210bb4faa49148a41c0949bf8444c031c13cd43323872353fd7e5c3ed214",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_wanyin-jiang_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_wanyin-jiang_c1.jpg",
+   "sha256": "e809dc578d84eb5bf02e2ec42313e9ec3c743d81517df80549a1b0aaaf37153c",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/wanyin-jiang_1.jpg",
+   "source_blob": "d22d899ba671f80ad9403159e2498d90fce6ed33",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_wanyin-jiang_c1.jpg",
+   "sha256": "ca30be3128cbf605760202737fc00103ea707fe956668502ce3044147d2ecec5",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_wanyin-jiang_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_wanyin-jiang_c2.jpg",
+   "sha256": "8ebbad12e6ca63000bef15697bb9949c1990e77bfcc13780ab53113c4aee3553",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/wanyin-jiang_2.jpg",
+   "source_blob": "a390828bc198801f496f50d5ccaae6f6175754f6",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_wanyin-jiang_c2.jpg",
+   "sha256": "7d93c148c1aa1a682eef015086f16badd7b9273e2b8cd31fe93c672e24aabf87",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_wanyin-jiang_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_sophia-tseng_h1.jpg",
+   "sha256": "7d4eaaf2412ca614729cf860f0544882d32225c4b20074cc95755e051fb3442b",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/sophia-tseng_1.jpg",
+   "source_blob": "5bc06d5d6572f76d165a8626e1af7a6aab05dfd2",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_sophia-tseng_h1.jpg",
+   "sha256": "84e0a27af6cb7797f80b3555fd2fac4094d6307cb90490a57a1bec507f0eca2c",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_sophia-tseng_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_sophia-tseng_c2.jpg",
+   "sha256": "1d0b92619c619c41d1e1e8033152d6c0a59ada20cebb70c76b8e5b62cf474a0e",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/sophia-tseng_2.jpg",
+   "source_blob": "d00d2a01aa47f5241ece6e14ce527e662a4aa204",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_sophia-tseng_c2.jpg",
+   "sha256": "a1b412d54ce2a87f6da94588316e55364575ae210700ef7078376f97e9614961",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_sophia-tseng_c2.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_sophia-tseng_c3.jpg",
+   "sha256": "c70a7e81e47dd7a8d2948b9cb2abe2eebe4de94226e474b547f814df48deb17f",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/sophia-tseng_3.jpg",
+   "source_blob": "bdb656c2d740e74980fef34b0f5e994eae3cf861",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_sophia-tseng_c3.jpg",
+   "sha256": "fce417f3eb5c4b08d962eb259309893edad069c2483d233993c98d3f1c5c86f8",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_sophia-tseng_c3.jpg",
+   "op": "等比縮小至 315×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_miu-shiraishi_c3.jpg",
+   "sha256": "56a68f76d8baf2dc22d1fc84dd58b57b9a7848bc27612528c00750c09760b0bd",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/miu-shiraishi_3.jpg",
+   "source_blob": "f7ba97301a239c7fd8e1587ced3515d9392063b3",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_miu-shiraishi_c3.jpg",
+   "sha256": "3918a687e6f9cade253ea2ddcf8a5dc199d3ea54f1679946025fc52f70206d07",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_miu-shiraishi_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_miu-shiraishi_c1.jpg",
+   "sha256": "24b49379f7e440391f39b3b43cdd977e322f71da33d7f9f2824bf0a56d0e8c6f",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/miu-shiraishi_1.jpg",
+   "source_blob": "85fb234d02d2d49942dadcd12a14b36a190da397",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_miu-shiraishi_c1.jpg",
+   "sha256": "dea61b0d44e6035a660719de98624bb0d40d933a09186a7ddad947c194c89132",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_miu-shiraishi_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_miu-shiraishi_c2.jpg",
+   "sha256": "f87da8e6e080b28ebaeef82a242d625014c4bfd195ca1ce841e16df036dde302",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/miu-shiraishi_2.jpg",
+   "source_blob": "f6d6710dde714900c74a60567c725cd6a888dbc3",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_miu-shiraishi_c2.jpg",
+   "sha256": "70967e3751b2fbf19f967678e4bab1a5eda37f3c930986292df5acb264c2dd2f",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_miu-shiraishi_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_jia-seo_c3.jpg",
+   "sha256": "be89ffc147c63c68b2f0f67d7a1ade6bb165838142f2d2d66c47090a24c6e994",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/jia-seo_3.jpg",
+   "source_blob": "3c093bd0680752bbf72ee242f4fb9c0f9704cbb8",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_jia-seo_c3.jpg",
+   "sha256": "cbd3f03d41fd7943f9a19f2a6850b129b7dee5edaf826ab94c99c81c494a2697",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_jia-seo_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_jia-seo_c2.jpg",
+   "sha256": "ba0003e12980b8106824bfb937c83bd5bef8e4508b5a9166bda81e5d30920676",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/jia-seo_2.jpg",
+   "source_blob": "f94efed406678a4976a64d989f25d440c46f5c73",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_jia-seo_c2.jpg",
+   "sha256": "df3020f9a193097548935e830c032cad4283671e99bb601269feff144af96013",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_jia-seo_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_jia-seo_c1.jpg",
+   "sha256": "f64c26400b84e34a062796f3f158f4f55538d1d124f42762bdf3c1bc1b502d27",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/jia-seo_1.jpg",
+   "source_blob": "fa693323ae9495c74ff0871fa05bbf53e25a98da",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_jia-seo_c1.jpg",
+   "sha256": "cc45bc854506110b020d23b93f4233e75db29ef18d58c07a27304d48bfbdc9f7",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_jia-seo_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_peggy-lee_c3.jpg",
+   "sha256": "1b7b839ae71a95ac7559f008a1eb442facf7a58e5451c280a9092c02ae623f61",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/peggy-lee_3.jpg",
+   "source_blob": "814b9e19b81e26977487197f97fd0d068976d3bc",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_peggy-lee_c3.jpg",
+   "sha256": "7a9a7d633152d562c91f3e9cffc88a229032a7480a19360820a28ba2d1210e72",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_peggy-lee_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_peggy-lee_c1.jpg",
+   "sha256": "4eb9fe03b1f921ed1fb10f273b99d7e7ae898e6c6e5a3ecbf4c2790b58a99a78",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/peggy-lee_1.jpg",
+   "source_blob": "82d8f72d98152cafc98425a9256903120ad1282d",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_peggy-lee_c1.jpg",
+   "sha256": "2e3300a8cc0c58673dcdb3cb8089f27ec2c824a84f51a937367e184264d49d49",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_peggy-lee_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_peggy-lee_c2.jpg",
+   "sha256": "c7fc180892eb7a51767c7541c71b57bd3ddfd78fd31d73fd031da6434a701f66",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/peggy-lee_2.jpg",
+   "source_blob": "f240ffbf999cf3d15039975eb46740e2d4fda8b9",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_peggy-lee_c2.jpg",
+   "sha256": "5284c4b0ba2e36406715abbc69f37cb85909df7378b37878144d299b0e7bc665",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_peggy-lee_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_yerin-han_c3.jpg",
+   "sha256": "09db172ebbfcd42a289074bff5447e399857f187d0a466f06a576da3cd5406aa",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/yerin-han_3.jpg",
+   "source_blob": "4196d6053d7c9d3df5dd9f60ddee91940f95c8b6",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_yerin-han_c3.jpg",
+   "sha256": "184c21a2a33b09131083ed921f5c3ea31fb9b496075aa177c1fc15ff67de144f",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_yerin-han_c3.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_yerin-han_c1.jpg",
+   "sha256": "c65e63de1d7e6031855a16397d22fcf7528e151cee1d27ff234d4b728d460c37",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/yerin-han_1.jpg",
+   "source_blob": "08b5b9c63d8fcbd882c6230fbd8190edf016c400",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_yerin-han_c1.jpg",
+   "sha256": "95ac8caca191c7ff4198366d5122a6ad0480e844f14c1411c85513fc44199865",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_yerin-han_c1.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_yerin-han_c2.jpg",
+   "sha256": "99b02eb30f366dc707eeb11a4013a6b60985bcf54b4cd14c2d0c7f38f4ba7bf4",
+   "kind": "copy",
+   "source": "docs/calendar/img/cand/yerin-han_2.jpg",
+   "source_blob": "bd680440c216169e5d5b329335fe98ffd861befa",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_yerin-han_c2.jpg",
+   "sha256": "6bccaafccc77c2f32d06842c0c96898f1f73c76a824a91feb81fc8c43767ca12",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_yerin-han_c2.jpg",
+   "op": "等比縮小至 420×560（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_ananya-kapoor_h1.jpg",
+   "sha256": "5abd0794b87d28c10c2dfde5b8f36ccf279999f737ce26ee7b9f305e23e7797e",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/ananya-kapoor_1.jpg",
+   "source_blob": "c6ec4f3ed63d2b242cd5a4e8ad985773d2da3c0a",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_ananya-kapoor_h1.jpg",
+   "sha256": "3bf6f604dedf9e459501a3dac4e9313df960125478d9e176a12c0cfe39a813e2",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_ananya-kapoor_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_ananya_3.jpg",
+   "sha256": "1e169aaca79866dc7ebbe0ef200beb61cd12a14c47a448f6bada804afb79e487",
+   "kind": "crop",
+   "source": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
+   "source_blob": "bdfc5c65f5fb2994a606934cc6a741d4b97740f5",
+   "box_px": [
+    882,
+    96,
+    1114,
+    512
+   ],
+   "op": "裁切 [882, 96, 1114, 512]（只裁切；JPEG q95）"
+  },
+  {
+   "published": "public/img/t/cast_ananya_3.jpg",
+   "sha256": "f4cc28792191645a62c97c5b4e0e7c72d2c55313d060209d76696935acbc1963",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_ananya_3.jpg",
+   "op": "等比縮小至 232×416（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_wendy-yeo_h1.jpg",
+   "sha256": "93968ac6b07958e1c3b79cd56132ed8fa74d4e30540c21209da11f61d5535c25",
+   "kind": "copy",
+   "source": "docs/calendar/r2/faces/heads/wendy-yeo_1.jpg",
+   "source_blob": "3c3fe2b4ce42b3853cc2fcff6ea0f8b56a5d9fd0",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/t/cast_wendy-yeo_h1.jpg",
+   "sha256": "6df0e9d2ff9ac6a6a8cfd3453b6dbcd7a94d8b1bf2a691f14d375040742e6b9e",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_wendy-yeo_h1.jpg",
+   "op": "等比縮小至 420×420（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_wendy_1.jpg",
+   "sha256": "0d5ecbae196e978c1ff41c331c9393f17807fec18f58e2fc746fe817cb327f5f",
+   "kind": "crop",
+   "source": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
+   "source_blob": "bdfc5c65f5fb2994a606934cc6a741d4b97740f5",
+   "box_px": [
+    232,
+    566,
+    543,
+    982
+   ],
+   "op": "裁切 [232, 566, 543, 982]（只裁切；JPEG q95）"
+  },
+  {
+   "published": "public/img/t/cast_wendy_1.jpg",
+   "sha256": "836e6420c0aa4fa7200627fca6be6a5f979148d2c4c6a50d6d2278ab5549bb35",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_wendy_1.jpg",
+   "op": "等比縮小至 311×416（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/cast_wendy_2.jpg",
+   "sha256": "d38c6fc05fc56fe49d7b7a7590c40670c9e17873db587a31c1d54084eba55288",
+   "kind": "crop",
+   "source": "docs/calendar/r2/decisions/CAL_R2_decide_people_compare.jpg",
+   "source_blob": "bdfc5c65f5fb2994a606934cc6a741d4b97740f5",
+   "box_px": [
+    557,
+    566,
+    868,
+    982
+   ],
+   "op": "裁切 [557, 566, 868, 982]（只裁切；JPEG q95）"
+  },
+  {
+   "published": "public/img/t/cast_wendy_2.jpg",
+   "sha256": "aac40c1aeeca278493b048ffb7b11b3af486c159cd4b022af238950f8c244f34",
+   "kind": "thumbnail",
+   "source": "public/img/z/cast_wendy_2.jpg",
+   "op": "等比縮小至 311×416（Lanczos，JPEG q82）"
   }
  ]
 }

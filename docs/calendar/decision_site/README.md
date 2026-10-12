@@ -11,7 +11,8 @@
 | 檔案 | 內容 |
 |---|---|
 | `server.js` | 只提供 `public/` 的靜態檔；HTTP Basic 存取保護；沒設定帳密就一律回 503 |
-| `public/index.html`、`app.js`、`app.css` | 頁面（人寫） |
+| `public/index.html`、`cast.js`、`cast.css` | **第一階段：自由選 12 位人設**（主入口；人寫） |
+| `public/plan.html`、`app.js`、`app.css` | 原推薦方案參考（舊版決策頁：照片、尺度、版面、品牌；第一階段不必填；人寫） |
 | `public/data.js`、`public/img/` | **程式產生**，不要手改（產生方式見下方） |
 | `ASSET_MANIFEST.json` | 每個發佈檔的來源（固定 commit 的路徑與 git blob）、處理方式（位元組不變複製／純裁切／高解析預覽／等比縮圖）與 sha256；不對外提供（不在 `public/`） |
 
@@ -25,7 +26,16 @@
 - 產生：`python3 docs/calendar/tools/build_cal_decision_site.py --hf-dir <R2 取回快取> --clean-dir <R3 清理輸出>`（兩個快取都不在 repo）。
 - 核對：`python3 docs/calendar/tools/build_cal_decision_site.py --check [--hf-dir … --clean-dir …]`（複製檔與固定 commit 同一 blob、裁切與高解析預覽可重現、沒有 manifest 以外的圖片；沒給快取時，來自快取的高解析預覽只核對 sha256）。
 
-## 確認狀態的規則
+## 第一階段選角（index.html）
+
+- 候選：R1 入圍比較 18 位（`CAL_02_CASTING.md` §3、`data/cal_r1_candidates.json`）＋R2 追加比較 2 位（Ananya、Wendy；`CAL_02` §5.3、§6），分開列出。
+- 每位一張卡：姓名（英文＋本名）、ID、正臉（R2 臉部比較頭像；Miu、Jia、Peggy、Yerin 沒有 R2 頭像，用 R1 選角板的正面圖）、另 2 張 R1 選角板圖、一句外型／氣質（取自 R1／R2 文件）、量測狀態、既有相似度紀錄（照錄）。圖都是低解析辨識用圖，只用來認人，不代表桌曆素材。
+- 名單狀態存在 `localStorage` 的 `cal2027-casting-v1:<SHA>`，與舊版決策頁的 `cal2027-decision-v1:<SHA>` 分開；選角頁只讀舊版資料來顯示提示，從不寫入或轉換。
+- 恰好 12 位才能確認；確認前顯示 12 位照片與姓名。確認後名單有任何更動（即使換回原名單）都回到草稿，要重新確認。
+- 超過 12 位只提示，不自動刪人；相似度紀錄只提示，不停用按鈕、不自動換人。
+- 「複製選角結果」不需要素材、月份、版面或品牌。
+
+## 確認狀態的規則（原推薦方案參考頁）
 
 - 每項有三種狀態：未回答、草稿・待 Penny 確認、Penny 已確認。
 - 按「確認目前已選的項目」只確認已回答的項目；之後只要再改（即使改回原值），該項就回到草稿。

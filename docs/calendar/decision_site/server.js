@@ -90,7 +90,7 @@ const server = http.createServer((req, res) => {
   const isImg = type.startsWith('image/');
   const headers = { ...BASE_HEADERS, 'Content-Type': type,
     'Cache-Control': isImg ? 'private, max-age=3600' : 'private, no-cache' };
-  if (file.endsWith('index.html')) {
+  if (file.endsWith('.html')) {
     const html = fs.readFileSync(file, 'utf8').replace('__PAGE_COMMIT__', COMMIT || 'unknown');
     res.writeHead(200, headers);
     return res.end(req.method === 'HEAD' ? undefined : html);

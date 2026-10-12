@@ -167,3 +167,4 @@ details.tech > summary { font-size: .92rem; color: #333; }
   table.sum td:first-child { font-weight: 600; white-space: normal; }
   table.sum td:last-child { white-space: normal; }
 }
+.back { margin: 0 0 4px; font-size: .9rem; }
