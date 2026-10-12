@@ -2413,6 +2413,34 @@ window.CAL_DATA = {
    "w": 900,
    "z": "img/z/m_coco-19.jpg"
   },
+  "m_coco-20": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-20.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-20.jpg"
+  },
+  "m_coco-21": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_coco-21.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_coco-21.jpg"
+  },
   "m_iris-01": {
    "h": 1600,
    "kind": "hires_preview",
@@ -2720,6 +2748,244 @@ window.CAL_DATA = {
    "tw": 360,
    "w": 1200,
    "z": "img/z/m_iris-22.jpg"
+  },
+  "m_iris-23": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-23.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-23.jpg"
+  },
+  "m_iris-24": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-24.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-24.jpg"
+  },
+  "m_iris-25": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-25.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-25.jpg"
+  },
+  "m_iris-26": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-26.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-26.jpg"
+  },
+  "m_iris-27": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-27.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-27.jpg"
+  },
+  "m_iris-28": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-28.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-28.jpg"
+  },
+  "m_iris-29": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-29.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-29.jpg"
+  },
+  "m_iris-30": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-30.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-30.jpg"
+  },
+  "m_iris-31": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-31.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-31.jpg"
+  },
+  "m_iris-32": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-32.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-32.jpg"
+  },
+  "m_iris-33": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-33.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-33.jpg"
+  },
+  "m_iris-34": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-34.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-34.jpg"
+  },
+  "m_iris-35": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-35.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-35.jpg"
+  },
+  "m_iris-36": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-36.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-36.jpg"
+  },
+  "m_iris-37": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-37.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-37.jpg"
+  },
+  "m_iris-38": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1536,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-38.jpg",
+   "th": 480,
+   "tw": 360,
+   "w": 1200,
+   "z": "img/z/m_iris-38.jpg"
+  },
+  "m_iris-39": {
+   "h": 1600,
+   "kind": "hires_preview",
+   "orig_px": [
+    1152,
+    2048
+   ],
+   "res": "hires",
+   "t": "img/t/m_iris-39.jpg",
+   "th": 480,
+   "tw": 270,
+   "w": 900,
+   "z": "img/z/m_iris-39.jpg"
   },
   "m_jia-01": {
    "h": 1600,
@@ -4614,7 +4880,7 @@ window.CAL_DATA = {
    "R2": "R2 原圖已查",
    "TH": "縮圖目視（360×480）"
   },
-  "materials_blob": "742c4bee08c9ea3dba314787c73151a93752d58b",
+  "materials_blob": "9b8e9b8d2df859a470a4ffbabaffd7bd645ec49d",
   "materials_file": "docs/calendar/data/cal_m1_materials.json",
   "pairs": [
    {
@@ -4664,9 +4930,9 @@ window.CAL_DATA = {
    {
     "desc": "長直黑髮、圓臉大眼，笑起來最甜的鄰家型",
     "excluded": {
-     "defect": 2,
-     "dup": 8,
-     "scale": 56
+     "defect": 4,
+     "dup": 26,
+     "exposure": 19
     },
     "face": "cast_iris-chen_h1",
     "gaps": [],
@@ -4679,27 +4945,31 @@ window.CAL_DATA = {
       "img": "m_iris-01",
       "kind": "repo",
       "label": "台北街拍・白細肩帶短上衣＋牛仔短裙・全身甜笑",
+      "level": "fix",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
      {
       "check": "R2 原圖已查",
       "clean_of": "iris-01",
-      "fix": "清理狀態：完成，但近看看得出（招牌變成失焦色塊）",
+      "fix": "已處理；近看有失焦色塊，成品質感待覆核",
       "id": "iris-02",
       "img": "m_iris-02",
       "kind": "clean",
       "label": "同上，R3 局部清理版（招牌模糊）",
+      "level": "",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "R3 局部清理版（本機清理輸出）",
       "tier": "main"
      },
@@ -4711,11 +4981,13 @@ window.CAL_DATA = {
       "img": "m_iris-03",
       "kind": "repo",
       "label": "咖啡店窗邊・粉色抹胸露肩・胸上甜笑",
+      "level": "note",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4727,11 +4999,13 @@ window.CAL_DATA = {
       "img": "m_iris-04",
       "kind": "repo",
       "label": "公園夕陽・白色連帽短上衣＋黑短褲・回頭",
+      "level": "",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4743,11 +5017,13 @@ window.CAL_DATA = {
       "img": "m_iris-05",
       "kind": "repo",
       "label": "車內自拍特寫・黑細肩帶・逆光",
+      "level": "note",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4759,11 +5035,13 @@ window.CAL_DATA = {
       "img": "m_iris-06",
       "kind": "repo",
       "label": "咖啡館窗邊坐姿・白短上衣＋牛仔短裙",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4775,11 +5053,13 @@ window.CAL_DATA = {
       "img": "m_iris-07",
       "kind": "repo",
       "label": "夜晚街頭・黑短背心＋白襯衫＋黑工裝褲",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4791,11 +5071,13 @@ window.CAL_DATA = {
       "img": "m_iris-08",
       "kind": "repo",
       "label": "黑白條紋短上衣＋灰短褲・雙手抱頭大笑",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4807,11 +5089,13 @@ window.CAL_DATA = {
       "img": "m_iris-09",
       "kind": "repo",
       "label": "飯店窗邊・香檳色緞面細肩帶睡裙＋薄外袍",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4823,11 +5107,13 @@ window.CAL_DATA = {
       "img": "m_iris-10",
       "kind": "repo",
       "label": "黑色細肩帶紗裙洋裝・雙手舉高",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -4839,11 +5125,13 @@ window.CAL_DATA = {
       "img": "m_iris-11",
       "kind": "repo",
       "label": "同一套街拍・夜市街口",
+      "level": "note",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4855,11 +5143,13 @@ window.CAL_DATA = {
       "img": "m_iris-12",
       "kind": "repo",
       "label": "同一套咖啡店窗邊・笑得較開",
+      "level": "note",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4871,11 +5161,13 @@ window.CAL_DATA = {
       "img": "m_iris-13",
       "kind": "repo",
       "label": "同一套公園夕陽・較遠景",
+      "level": "",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4887,11 +5179,13 @@ window.CAL_DATA = {
       "img": "m_iris-14",
       "kind": "repo",
       "label": "車內自拍・畫面傾斜特寫",
+      "level": "note",
       "orig_px": [
        1920,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4903,11 +5197,13 @@ window.CAL_DATA = {
       "img": "m_iris-15",
       "kind": "repo",
       "label": "飯店・黑背心＋短褲（較早版本）",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4919,11 +5215,13 @@ window.CAL_DATA = {
       "img": "m_iris-16",
       "kind": "repo",
       "label": "夜晚街頭・白色長袖短上衣（較早版本）",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4935,11 +5233,13 @@ window.CAL_DATA = {
       "img": "m_iris-17",
       "kind": "repo",
       "label": "客廳・白背心＋灰短褲＋針織外套",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4951,11 +5251,13 @@ window.CAL_DATA = {
       "img": "m_iris-18",
       "kind": "repo",
       "label": "客廳・黃色背心＋牛仔褲（較早版本）",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4967,11 +5269,13 @@ window.CAL_DATA = {
       "img": "m_iris-19",
       "kind": "repo",
       "label": "浴室・白細肩帶背心・大笑（胸上）",
+      "level": "note",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4983,11 +5287,13 @@ window.CAL_DATA = {
       "img": "m_iris-20",
       "kind": "repo",
       "label": "客廳沙發・酒紅緞面細肩帶睡裙",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -4999,11 +5305,13 @@ window.CAL_DATA = {
       "img": "m_iris-21",
       "kind": "repo",
       "label": "夜景窗邊・運動內衣＋短褲",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5015,11 +5323,319 @@ window.CAL_DATA = {
       "img": "m_iris-22",
       "kind": "repo",
       "label": "浴室鏡子自拍・米白緞面短洋裝",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "泳衣上的圖文是 AI 假字",
+      "id": "iris-23",
+      "img": "m_iris-23",
+      "kind": "repo",
+      "label": "海邊・黑色連身泳衣＋眼鏡・推眼鏡微笑",
+      "level": "fix",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "scale": "swim",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "檔名的 FAILED 指表情沒達到原拍攝目標，不是畫面缺陷",
+      "id": "iris-24",
+      "img": "m_iris-24",
+      "kind": "repo",
+      "label": "廚房檯面坐姿・白襯衫敞開＋黑色內衣褲",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "腰腹蕾絲半透（交印前以原圖確認）",
+      "id": "iris-25",
+      "img": "m_iris-25",
+      "kind": "repo",
+      "label": "床上自拍・黑色蕾絲內衣褲・甜笑",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-26",
+      "img": "m_iris-26",
+      "kind": "repo",
+      "label": "鏡子自拍・酒紅內衣褲＋黑絲襪＋薄外袍",
+      "level": "",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "內褲前片蕾絲半透（交印前以原圖確認）",
+      "id": "iris-27",
+      "img": "m_iris-27",
+      "kind": "repo",
+      "label": "梳妝台坐姿・米白內衣＋吊帶襪",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-28",
+      "img": "m_iris-28",
+      "kind": "repo",
+      "label": "百葉窗日光・床上・白色蕾絲內衣＋毯子",
+      "level": "",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "一側肩帶滑落",
+      "id": "iris-29",
+      "img": "m_iris-29",
+      "kind": "repo",
+      "label": "床上近距離自拍・黑色內衣・戳臉頰",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "丁字褲，臀部大面積外露",
+      "id": "iris-30",
+      "img": "m_iris-30",
+      "kind": "repo",
+      "label": "地毯趴姿・黑色長袖上衣＋丁字褲・比噓",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "與 iris-19 同場景、不同取景",
+      "id": "iris-31",
+      "img": "m_iris-31",
+      "kind": "repo",
+      "label": "浴室・白細肩帶背心＋黑色內褲・揮手",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-32",
+      "img": "m_iris-32",
+      "kind": "repo",
+      "label": "沙發・黑色內衣＋蕾絲內褲・雙手舉高",
+      "level": "",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "床上零食包裝雜亂",
+      "id": "iris-33",
+      "img": "m_iris-33",
+      "kind": "repo",
+      "label": "床邊自拍・黑色蕾絲內衣＋灰色開襟",
+      "level": "clean_opt",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "左側霓虹招牌文字",
+      "id": "iris-34",
+      "img": "m_iris-34",
+      "kind": "repo",
+      "label": "全身鏡自拍・米白內衣褲＋白襯衫",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-35",
+      "img": "m_iris-35",
+      "kind": "repo",
+      "label": "浴室鏡子自拍・粉色內衣褲",
+      "level": "",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "腹部蕾絲半透（交印前以原圖確認）",
+      "id": "iris-36",
+      "img": "m_iris-36",
+      "kind": "repo",
+      "label": "躺床自拍・深藍蕾絲連身內衣",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-37",
+      "img": "m_iris-37",
+      "kind": "repo",
+      "label": "夜景窗邊坐姿・黑色平口內衣＋高腰內褲＋灰開襟",
+      "level": "",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "內褲蕾絲半透（交印前以原圖確認）",
+      "id": "iris-38",
+      "img": "m_iris-38",
+      "kind": "repo",
+      "label": "日光鏡子自拍・黑色內衣褲＋黑絲襪",
+      "level": "note",
+      "orig_px": [
+       1536,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
+      "src_zh": "既有原圖（repo）",
+      "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "iris-39",
+      "img": "m_iris-39",
+      "kind": "repo",
+      "label": "水泥牆房間・黑色內衣褲・鏡子自拍",
+      "level": "",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "scale": "lingerie",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -5046,11 +5662,13 @@ window.CAL_DATA = {
       "img": "m_luna-01",
       "kind": "repo",
       "label": "京都巷弄・白蕾絲上衣＋長裙・正面",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5062,11 +5680,13 @@ window.CAL_DATA = {
       "img": "m_luna-02",
       "kind": "repo",
       "label": "京都巷弄・側身倚牆・蕾絲上衣",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5078,11 +5698,13 @@ window.CAL_DATA = {
       "img": "m_luna-03",
       "kind": "repo",
       "label": "浴衣・神社參道・手拿蘋果糖",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5094,11 +5716,13 @@ window.CAL_DATA = {
       "img": "m_luna-04",
       "kind": "repo",
       "label": "窗邊雙手托腮・白短袖上衣・近照",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5110,11 +5734,13 @@ window.CAL_DATA = {
       "img": "m_luna-05",
       "kind": "repo",
       "label": "窗邊摸橘貓・白上衣短褲・低頭微笑",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5126,11 +5752,13 @@ window.CAL_DATA = {
       "img": "m_luna-06",
       "kind": "repo",
       "label": "櫻花樹下・髮箍＋白上衣粉格裙・手拿小花",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5142,11 +5770,13 @@ window.CAL_DATA = {
       "img": "m_luna-07",
       "kind": "repo",
       "label": "旋轉木馬前・貓耳髮箍＋爆米花",
+      "level": "fix",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5158,11 +5788,13 @@ window.CAL_DATA = {
       "img": "m_luna-08",
       "kind": "repo",
       "label": "浴室・白色平口・閉眼擦臉",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5174,11 +5806,13 @@ window.CAL_DATA = {
       "img": "m_luna-09",
       "kind": "repo",
       "label": "雨天・透明傘＋白上衣格紋裙",
+      "level": "clean_opt",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5190,11 +5824,13 @@ window.CAL_DATA = {
       "img": "m_luna-10",
       "kind": "repo",
       "label": "公園夕陽・白色小碎花洋裝・全身",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5206,11 +5842,13 @@ window.CAL_DATA = {
       "img": "m_luna-11",
       "kind": "repo",
       "label": "同一套京都巷弄・側身",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5222,11 +5860,13 @@ window.CAL_DATA = {
       "img": "m_luna-12",
       "kind": "repo",
       "label": "東京街頭・白蕾絲上衣＋碎花裙",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5238,11 +5878,13 @@ window.CAL_DATA = {
       "img": "m_luna-13",
       "kind": "repo",
       "label": "咖啡店窗邊・米色針織",
+      "level": "fix",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5254,11 +5896,13 @@ window.CAL_DATA = {
       "img": "m_luna-14",
       "kind": "repo",
       "label": "同一套公園夕陽・回頭",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5270,11 +5914,13 @@ window.CAL_DATA = {
       "img": "m_luna-15",
       "kind": "repo",
       "label": "雨後街頭・白上衣藍短裙・拿傘",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5286,11 +5932,13 @@ window.CAL_DATA = {
       "img": "m_luna-16",
       "kind": "repo",
       "label": "櫻花樹下・米色開襟外套",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5302,11 +5950,13 @@ window.CAL_DATA = {
       "img": "m_luna-17",
       "kind": "repo",
       "label": "雨天・比 YA＋傘",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5318,11 +5968,13 @@ window.CAL_DATA = {
       "img": "m_luna-18",
       "kind": "repo",
       "label": "浴衣・回頭背影",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5334,11 +5986,13 @@ window.CAL_DATA = {
       "img": "m_luna-19",
       "kind": "repo",
       "label": "旋轉木馬・背影回頭",
+      "level": "clean_opt",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5350,11 +6004,13 @@ window.CAL_DATA = {
       "img": "m_luna-20",
       "kind": "repo",
       "label": "浴室鏡前・白色平口",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5366,11 +6022,13 @@ window.CAL_DATA = {
       "img": "m_luna-21",
       "kind": "repo",
       "label": "甜點街・粉色短裙・全身",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5382,11 +6040,13 @@ window.CAL_DATA = {
       "img": "m_luna-22",
       "kind": "repo",
       "label": "和室・米白連身短褲＋針織外套",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -5411,11 +6071,13 @@ window.CAL_DATA = {
       "img": "m_somi-01",
       "kind": "hf",
       "label": "港邊・白西裝外套＋抹胸・甜笑",
+      "level": "note",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -5427,11 +6089,13 @@ window.CAL_DATA = {
       "img": "m_somi-02",
       "kind": "repo",
       "label": "深夜炸雞・握罐甜笑・生活感",
+      "level": "fix",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5443,11 +6107,13 @@ window.CAL_DATA = {
       "img": "m_somi-03",
       "kind": "hf",
       "label": "海邊・白洋裝・初夏感",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -5459,11 +6125,13 @@ window.CAL_DATA = {
       "img": "m_somi-04",
       "kind": "hf",
       "label": "市場・抹胸自拍",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -5475,11 +6143,13 @@ window.CAL_DATA = {
       "img": "m_somi-05",
       "kind": "hf",
       "label": "鏡子自拍",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -5491,11 +6161,13 @@ window.CAL_DATA = {
       "img": "m_somi-06",
       "kind": "repo",
       "label": "浴袍＋頭巾自拍・素顏感",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5507,11 +6179,13 @@ window.CAL_DATA = {
       "img": "m_somi-07",
       "kind": "repo",
       "label": "市場散步・全身",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5523,11 +6197,13 @@ window.CAL_DATA = {
       "img": "m_somi-08",
       "kind": "hf",
       "label": "街頭・黑色外套",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -5539,11 +6215,13 @@ window.CAL_DATA = {
       "img": "m_somi-09",
       "kind": "repo",
       "label": "張嘴咬串燒",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5555,11 +6233,13 @@ window.CAL_DATA = {
       "img": "m_somi-10",
       "kind": "repo",
       "label": "廚房做菜",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -5572,8 +6252,7 @@ window.CAL_DATA = {
     "desc": "深棕長捲髮配瀏海，笑得最開的元氣甜",
     "excluded": {
      "defect": 1,
-     "face": 4,
-     "scale": 2
+     "face": 4
     },
     "face": "cast_coco-wu_h2",
     "gaps": [],
@@ -5586,27 +6265,31 @@ window.CAL_DATA = {
       "img": "m_coco-01",
       "kind": "repo",
       "label": "宿舍・粉色細肩帶＋開襟外套・甜笑",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
      {
       "check": "R2 原圖已查",
       "clean_of": "coco-01",
-      "fix": "清理狀態：完成（人像牆變成失焦色塊）",
+      "fix": "已處理（人像牆強模糊成失焦色塊）；成品質感待覆核",
       "id": "coco-02",
       "img": "m_coco-02",
       "kind": "clean",
       "label": "同上，R3 局部清理版（人像牆強模糊）",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "R3 局部清理版（本機清理輸出）",
       "tier": "main"
      },
@@ -5618,27 +6301,31 @@ window.CAL_DATA = {
       "img": "m_coco-03",
       "kind": "repo",
       "label": "床上晨起自拍・off-shoulder・慵懶",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
      {
       "check": "R2 原圖已查",
       "clean_of": "coco-03",
-      "fix": "清理狀態：部分完成——手機殼已不在，但修補不完全自然：修補區紋理較平，左緣與下緣在 100% 下看得出",
+      "fix": "已處理但修補不完全自然：手機殼已不在，修補區紋理較平，左緣與下緣在 100% 下看得出；成品質感待覆核",
       "id": "coco-04",
       "img": "m_coco-04",
       "kind": "clean",
       "label": "同上，R3 局部清理版（移除手機殼）",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "R3 局部清理版（本機清理輸出）",
       "tier": "main"
      },
@@ -5650,11 +6337,13 @@ window.CAL_DATA = {
       "img": "m_coco-05",
       "kind": "repo",
       "label": "鏡子自拍・薄荷綠細肩帶＋白百褶裙＋白長襪",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5666,11 +6355,13 @@ window.CAL_DATA = {
       "img": "m_coco-06",
       "kind": "repo",
       "label": "宿舍・紫色開襟抱枕大笑",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5682,11 +6373,13 @@ window.CAL_DATA = {
       "img": "m_coco-07",
       "kind": "repo",
       "label": "羽球場邊自拍・運動背心・馬尾",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5698,11 +6391,13 @@ window.CAL_DATA = {
       "img": "m_coco-08",
       "kind": "repo",
       "label": "飯店跳上床・白T＋牛仔短褲・動態",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5714,11 +6409,13 @@ window.CAL_DATA = {
       "img": "m_coco-09",
       "kind": "repo",
       "label": "宿舍床邊・紫色襯衫・撥髮",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5730,11 +6427,13 @@ window.CAL_DATA = {
       "img": "m_coco-10",
       "kind": "repo",
       "label": "夜晚街頭・黑蕾絲上衣＋牛仔短褲＋長靴",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5746,11 +6445,13 @@ window.CAL_DATA = {
       "img": "m_coco-11",
       "kind": "repo",
       "label": "深夜趴床自拍・暖光",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5762,11 +6463,13 @@ window.CAL_DATA = {
       "img": "m_coco-12",
       "kind": "repo",
       "label": "浴室鏡子自拍・粉色細肩帶・比 YA 嘟嘴",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5778,11 +6481,13 @@ window.CAL_DATA = {
       "img": "m_coco-13",
       "kind": "repo",
       "label": "宿舍全身・開襟外套＋白百褶裙",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5794,11 +6499,13 @@ window.CAL_DATA = {
       "img": "m_coco-14",
       "kind": "repo",
       "label": "宿舍・粉色細肩帶＋開襟外套・撥髮",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5810,11 +6517,13 @@ window.CAL_DATA = {
       "img": "m_coco-15",
       "kind": "repo",
       "label": "宿舍・側身大笑",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5826,11 +6535,13 @@ window.CAL_DATA = {
       "img": "m_coco-16",
       "kind": "repo",
       "label": "走廊轉圈・紫色開襟＋白百褶裙",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5842,11 +6553,13 @@ window.CAL_DATA = {
       "img": "m_coco-17",
       "kind": "repo",
       "label": "宿舍晨起・被室友拉被子大笑",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5858,11 +6571,13 @@ window.CAL_DATA = {
       "img": "m_coco-18",
       "kind": "repo",
       "label": "宿舍地上吃零食",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -5874,13 +6589,51 @@ window.CAL_DATA = {
       "img": "m_coco-19",
       "kind": "repo",
       "label": "浴室鏡前梳妝（鏡中）",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "coco-20",
+      "img": "m_coco-20",
+      "kind": "repo",
+      "label": "綠色三角比基尼＋腰鏈・雙馬尾・伸手",
+      "level": "",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "scale": "swim",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
+     },
+     {
+      "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+      "clean_of": "",
+      "fix": "",
+      "id": "coco-21",
+      "img": "m_coco-21",
+      "kind": "repo",
+      "label": "紅色碎花比基尼・抓雙馬尾大笑",
+      "level": "",
+      "orig_px": [
+       1152,
+       2048
+      ],
+      "r3": "",
+      "scale": "swim",
+      "src_zh": "既有原圖（repo）",
+      "tier": "swim"
      }
     ],
     "name": "Coco Wu",
@@ -5904,11 +6657,13 @@ window.CAL_DATA = {
       "img": "m_mia-01",
       "kind": "repo",
       "label": "電競房自拍・白背心＋耳機・甜笑",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5920,11 +6675,13 @@ window.CAL_DATA = {
       "img": "m_mia-02",
       "kind": "repo",
       "label": "電競房伸懶腰・黑短上衣",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5936,11 +6693,13 @@ window.CAL_DATA = {
       "img": "m_mia-03",
       "kind": "repo",
       "label": "鏡子自拍・貓耳毛帽＋黑背心＋牛仔短褲＋白長襪",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5952,11 +6711,13 @@ window.CAL_DATA = {
       "img": "m_mia-04",
       "kind": "repo",
       "label": "門口・貓耳＋黑背心＋白長襪・全身",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5968,11 +6729,13 @@ window.CAL_DATA = {
       "img": "m_mia-05",
       "kind": "repo",
       "label": "直播反應・白背心＋耳機",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -5984,11 +6747,13 @@ window.CAL_DATA = {
       "img": "m_mia-06",
       "kind": "repo",
       "label": "沙發抱貓滑手機・黑帽 T",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6000,11 +6765,13 @@ window.CAL_DATA = {
       "img": "m_mia-07",
       "kind": "repo",
       "label": "飯店床上比 YA・深藍短帽 T＋識別證",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6016,11 +6783,13 @@ window.CAL_DATA = {
       "img": "m_mia-08",
       "kind": "repo",
       "label": "戶外咖啡座・白 T・大笑",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6032,11 +6801,13 @@ window.CAL_DATA = {
       "img": "m_mia-09",
       "kind": "repo",
       "label": "灰帽 T 拿相機自拍",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6048,11 +6819,13 @@ window.CAL_DATA = {
       "img": "m_mia-10",
       "kind": "repo",
       "label": "電競房・水手服 cosplay",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6064,11 +6837,13 @@ window.CAL_DATA = {
       "img": "m_mia-11",
       "kind": "repo",
       "label": "電競椅・黑帽 T 坐姿",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6080,11 +6855,13 @@ window.CAL_DATA = {
       "img": "m_mia-12",
       "kind": "repo",
       "label": "衣櫃前・灰背心拿帽 T",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6096,11 +6873,13 @@ window.CAL_DATA = {
       "img": "m_mia-13",
       "kind": "repo",
       "label": "電競房自拍・吐舌",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6112,11 +6891,13 @@ window.CAL_DATA = {
       "img": "m_mia-14",
       "kind": "repo",
       "label": "浴室鏡子・化妝棉・丸子頭",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6128,11 +6909,13 @@ window.CAL_DATA = {
       "img": "m_mia-15",
       "kind": "repo",
       "label": "電競椅・黑帽 T＋耳機",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -6158,11 +6941,13 @@ window.CAL_DATA = {
       "img": "m_yuna-01",
       "kind": "repo",
       "label": "首爾街頭・白背心・清冷素顏",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6174,11 +6959,13 @@ window.CAL_DATA = {
       "img": "m_yuna-02",
       "kind": "repo",
       "label": "首爾街頭・插腰・白背心",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6190,11 +6977,13 @@ window.CAL_DATA = {
       "img": "m_yuna-03",
       "kind": "repo",
       "label": "柔和近照・米白毛衣",
+      "level": "fix",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6206,11 +6995,13 @@ window.CAL_DATA = {
       "img": "m_yuna-04",
       "kind": "repo",
       "label": "浴室・白細肩帶・閉眼手貼臉",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6222,11 +7013,13 @@ window.CAL_DATA = {
       "img": "m_yuna-05",
       "kind": "repo",
       "label": "窗邊・米白短袖・撥髮",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6238,11 +7031,13 @@ window.CAL_DATA = {
       "img": "m_yuna-06",
       "kind": "repo",
       "label": "窗邊喝咖啡・白背心＋開襟＋灰短褲",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6254,11 +7049,13 @@ window.CAL_DATA = {
       "img": "m_yuna-07",
       "kind": "repo",
       "label": "地鐵站口・黑 T＋卡其百褶裙",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6270,11 +7067,13 @@ window.CAL_DATA = {
       "img": "m_yuna-08",
       "kind": "repo",
       "label": "韓式餐館・捧湯碗",
+      "level": "clean_opt",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6286,11 +7085,13 @@ window.CAL_DATA = {
       "img": "m_yuna-09",
       "kind": "repo",
       "label": "街頭・白背心＋格紋裙＋包包",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6302,11 +7103,13 @@ window.CAL_DATA = {
       "img": "m_yuna-10",
       "kind": "repo",
       "label": "走廊・白短 T＋牛仔短褲・全身",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6318,11 +7121,13 @@ window.CAL_DATA = {
       "img": "m_yuna-11",
       "kind": "repo",
       "label": "首爾街頭夕陽・回頭",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6334,11 +7139,13 @@ window.CAL_DATA = {
       "img": "m_yuna-12",
       "kind": "repo",
       "label": "客廳地上滑手機・吃零食",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6350,11 +7157,13 @@ window.CAL_DATA = {
       "img": "m_yuna-13",
       "kind": "repo",
       "label": "黑 T＋卡其裙・撥髮",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6366,11 +7175,13 @@ window.CAL_DATA = {
       "img": "m_yuna-14",
       "kind": "repo",
       "label": "浴室洗手台・白細肩帶",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6382,11 +7193,13 @@ window.CAL_DATA = {
       "img": "m_yuna-15",
       "kind": "repo",
       "label": "咖啡店・捧杯遮嘴",
+      "level": "",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6398,11 +7211,13 @@ window.CAL_DATA = {
       "img": "m_yuna-16",
       "kind": "repo",
       "label": "韓式餐館・坐姿正面",
+      "level": "clean_opt",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6414,11 +7229,13 @@ window.CAL_DATA = {
       "img": "m_yuna-17",
       "kind": "repo",
       "label": "巷弄・白短 T＋黑短褲・回頭全身",
+      "level": "note",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6430,11 +7247,13 @@ window.CAL_DATA = {
       "img": "m_yuna-18",
       "kind": "repo",
       "label": "便利商店・眼鏡＋灰 T",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6446,11 +7265,13 @@ window.CAL_DATA = {
       "img": "m_yuna-19",
       "kind": "repo",
       "label": "咖啡店外座位・遠景",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6462,11 +7283,13 @@ window.CAL_DATA = {
       "img": "m_yuna-20",
       "kind": "repo",
       "label": "街頭全身・遠景",
+      "level": "note",
       "orig_px": [
        1152,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -6491,11 +7314,13 @@ window.CAL_DATA = {
       "img": "m_tammy-01",
       "kind": "hf",
       "label": "頂樓夜景・黑色平口貼身洋裝・長捲髮",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6507,11 +7332,13 @@ window.CAL_DATA = {
       "img": "m_tammy-02",
       "kind": "repo",
       "label": "倉庫坐紙箱・玫瑰色針織洋裝",
+      "level": "fix",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6523,11 +7350,13 @@ window.CAL_DATA = {
       "img": "m_tammy-03",
       "kind": "hf",
       "label": "頂樓・黑色洋裝・表情較柔",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6539,11 +7368,13 @@ window.CAL_DATA = {
       "img": "m_tammy-04",
       "kind": "hf",
       "label": "黑色上衣自拍",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6555,11 +7386,13 @@ window.CAL_DATA = {
       "img": "m_tammy-05",
       "kind": "hf",
       "label": "咖啡館・白襯衫",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6571,11 +7404,13 @@ window.CAL_DATA = {
       "img": "m_tammy-06",
       "kind": "hf",
       "label": "街頭・白襯衫",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6587,11 +7422,13 @@ window.CAL_DATA = {
       "img": "m_tammy-07",
       "kind": "repo",
       "label": "鏡子自拍・環形燈",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6603,11 +7440,13 @@ window.CAL_DATA = {
       "img": "m_tammy-08",
       "kind": "repo",
       "label": "街頭提購物袋",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6619,11 +7458,13 @@ window.CAL_DATA = {
       "img": "m_tammy-09",
       "kind": "repo",
       "label": "灰襯衫自拍・頭髮綁起・手持化妝棉",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6635,11 +7476,13 @@ window.CAL_DATA = {
       "img": "m_tammy-10",
       "kind": "repo",
       "label": "環形燈前・側臉",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6651,11 +7494,13 @@ window.CAL_DATA = {
       "img": "m_tammy-11",
       "kind": "hf",
       "label": "鏡子自拍",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "more"
      }
@@ -6680,11 +7525,13 @@ window.CAL_DATA = {
       "img": "m_rin-01",
       "kind": "repo",
       "label": "盤髮裸背・化妝・成熟性感",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6696,27 +7543,31 @@ window.CAL_DATA = {
       "img": "m_rin-02",
       "kind": "hf",
       "label": "咖啡館・白背心窄裙・正臉微笑",
+      "level": "clean_opt",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
      {
       "check": "R2 原圖已查",
       "clean_of": "rin-02",
-      "fix": "清理狀態：完成；左後方女子保留",
+      "fix": "已處理（右側路人模糊減光；左後方女子保留）；成品質感待覆核",
       "id": "rin-03",
       "img": "m_rin-03",
       "kind": "clean",
       "label": "同上，R3 局部清理版（右側路人模糊減光）",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "R3 局部清理版（本機清理輸出）",
       "tier": "main"
      },
@@ -6728,11 +7579,13 @@ window.CAL_DATA = {
       "img": "m_rin-04",
       "kind": "repo",
       "label": "緞面晨袍・回頭背影",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6744,11 +7597,13 @@ window.CAL_DATA = {
       "img": "m_rin-05",
       "kind": "hf",
       "label": "夜景・緞面開衩洋裝",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6760,11 +7615,13 @@ window.CAL_DATA = {
       "img": "m_rin-06",
       "kind": "hf",
       "label": "卡其短上衣自拍",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6776,11 +7633,13 @@ window.CAL_DATA = {
       "img": "m_rin-07",
       "kind": "hf",
       "label": "紫色上衣・鏡子自拍",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "main"
      },
@@ -6792,11 +7651,13 @@ window.CAL_DATA = {
       "img": "m_rin-08",
       "kind": "repo",
       "label": "廚房・灰色毛衣",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6808,11 +7669,13 @@ window.CAL_DATA = {
       "img": "m_rin-09",
       "kind": "repo",
       "label": "走廊・黑洋裝＋高跟鞋",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6824,11 +7687,13 @@ window.CAL_DATA = {
       "img": "m_rin-10",
       "kind": "repo",
       "label": "打包行李・白洋裝",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -6840,11 +7705,13 @@ window.CAL_DATA = {
       "img": "m_rin-11",
       "kind": "hf",
       "label": "電玩場",
+      "level": "",
       "orig_px": [
        1536,
        2048
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（R2 已取回）",
       "tier": "more"
      }
@@ -6869,27 +7736,31 @@ window.CAL_DATA = {
       "img": "m_rainie-01",
       "kind": "repo",
       "label": "出門前鏡子自拍・黑馬甲＋珠寶・濃豔",
+      "level": "fix",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
      {
       "check": "R2 原圖已查",
       "clean_of": "rainie-01",
-      "fix": "清理狀態：完成；100% 下只剩極淡直向紋理；鏡面閃光與鏡中人影未處理",
+      "fix": "已處理（日期戳已移除，100% 下只剩極淡直向紋理；鏡面閃光與鏡中人影未處理）；成品質感待覆核",
       "id": "rainie-02",
       "img": "m_rainie-02",
       "kind": "clean",
       "label": "同上，R3 局部清理版（移除日期戳）",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "R3 局部清理版（本機清理輸出）",
       "tier": "main"
      },
@@ -6901,11 +7772,13 @@ window.CAL_DATA = {
       "img": "m_rainie-03",
       "kind": "repo",
       "label": "床上晨光自拍・柔和居家",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6917,11 +7790,13 @@ window.CAL_DATA = {
       "img": "m_rainie-04",
       "kind": "repo",
       "label": "鏡子自拍・黑馬甲＋開衩裙",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6933,11 +7808,13 @@ window.CAL_DATA = {
       "img": "m_rainie-05",
       "kind": "repo",
       "label": "化妝鏡前畫眼線・香檳色緞面晨袍",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6949,11 +7826,13 @@ window.CAL_DATA = {
       "img": "m_rainie-06",
       "kind": "repo",
       "label": "飯店窗邊・銀色細肩帶短洋裝・城市景",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6965,11 +7844,13 @@ window.CAL_DATA = {
       "img": "m_rainie-07",
       "kind": "repo",
       "label": "夜景窗前自拍・白 T＋牛仔褲・拿高跟鞋",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6981,11 +7862,13 @@ window.CAL_DATA = {
       "img": "m_rainie-08",
       "kind": "repo",
       "label": "噴香水自拍・白 T・垂眼",
+      "level": "",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -6997,11 +7880,13 @@ window.CAL_DATA = {
       "img": "m_rainie-09",
       "kind": "repo",
       "label": "舞蹈教室鏡前・黑短上衣＋緊身褲",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7013,11 +7898,13 @@ window.CAL_DATA = {
       "img": "m_rainie-10",
       "kind": "repo",
       "label": "門框・金色緞面長洋裝・全身",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7029,11 +7916,13 @@ window.CAL_DATA = {
       "img": "m_rainie-11",
       "kind": "repo",
       "label": "鏡中試穿・黑色細肩帶洋裝・回頭",
+      "level": "clean_opt",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7045,11 +7934,13 @@ window.CAL_DATA = {
       "img": "m_rainie-12",
       "kind": "repo",
       "label": "沙發・太陽眼鏡＋白色家居服",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -7061,11 +7952,13 @@ window.CAL_DATA = {
       "img": "m_rainie-13",
       "kind": "repo",
       "label": "廚房揉麵團",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      },
@@ -7077,11 +7970,13 @@ window.CAL_DATA = {
       "img": "m_rainie-14",
       "kind": "repo",
       "label": "沙發滑手機・暗光",
+      "level": "note",
       "orig_px": [
        1440,
        2560
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -7110,11 +8005,13 @@ window.CAL_DATA = {
       "img": "m_miu-01",
       "kind": "repo",
       "label": "毛衣捧杯坐姿・甜",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7126,11 +8023,13 @@ window.CAL_DATA = {
       "img": "m_miu-02",
       "kind": "repo",
       "label": "咖啡店吧台・側身",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7142,11 +8041,13 @@ window.CAL_DATA = {
       "img": "m_miu-03",
       "kind": "repo",
       "label": "浴袍＋毛巾自拍",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7158,11 +8059,13 @@ window.CAL_DATA = {
       "img": "m_miu-04",
       "kind": "thumb",
       "label": "酒吧・紫色碎花細肩帶洋裝",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7174,11 +8077,13 @@ window.CAL_DATA = {
       "img": "m_miu-05",
       "kind": "thumb",
       "label": "運河邊・米白露肩上衣＋牛仔褲・回頭",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7190,11 +8095,13 @@ window.CAL_DATA = {
       "img": "m_miu-06",
       "kind": "thumb",
       "label": "鏡子自拍・米白背心＋短裙",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7206,11 +8113,13 @@ window.CAL_DATA = {
       "img": "m_miu-07",
       "kind": "repo",
       "label": "運河散步・全身",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7222,11 +8131,13 @@ window.CAL_DATA = {
       "img": "m_miu-08",
       "kind": "repo",
       "label": "門口穿鞋",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      }
@@ -7257,11 +8168,13 @@ window.CAL_DATA = {
       "img": "m_jia-01",
       "kind": "repo",
       "label": "健身房鏡子自拍",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7273,11 +8186,13 @@ window.CAL_DATA = {
       "img": "m_jia-02",
       "kind": "repo",
       "label": "攝影棚・黑色上衣",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7289,11 +8204,13 @@ window.CAL_DATA = {
       "img": "m_jia-03",
       "kind": "repo",
       "label": "床上・白色繞頸上衣",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7305,11 +8222,13 @@ window.CAL_DATA = {
       "img": "m_jia-04",
       "kind": "thumb",
       "label": "洗衣間・粉色抹胸＋白短褲自拍",
+      "level": "note",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7321,11 +8240,13 @@ window.CAL_DATA = {
       "img": "m_jia-05",
       "kind": "thumb",
       "label": "走廊鏡子自拍・灰短上衣＋灰運動褲",
+      "level": "note",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7337,11 +8258,13 @@ window.CAL_DATA = {
       "img": "m_jia-06",
       "kind": "thumb",
       "label": "麵包店・灰背心＋黑短裙",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7353,11 +8276,13 @@ window.CAL_DATA = {
       "img": "m_jia-07",
       "kind": "thumb",
       "label": "巷口坐姿・白色綁結上衣＋白短褲",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7369,11 +8294,13 @@ window.CAL_DATA = {
       "img": "m_jia-08",
       "kind": "thumb",
       "label": "夜晚・亮片平口上衣＋短裙・回頭",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7385,11 +8312,13 @@ window.CAL_DATA = {
       "img": "m_jia-09",
       "kind": "repo",
       "label": "街頭",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7401,11 +8330,13 @@ window.CAL_DATA = {
       "img": "m_jia-10",
       "kind": "repo",
       "label": "綁鞋帶",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "more"
      }
@@ -7419,7 +8350,7 @@ window.CAL_DATA = {
     "excluded": {
      "defect": 1,
      "dup": 2,
-     "face": 5
+     "pending": 5
     },
     "face": "cast_yerin-han_c3",
     "gaps": [
@@ -7437,11 +8368,13 @@ window.CAL_DATA = {
       "img": "m_yerin-01",
       "kind": "repo",
       "label": "高爾夫練習場・白帽＋白 polo・甜笑",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7453,11 +8386,13 @@ window.CAL_DATA = {
       "img": "m_yerin-02",
       "kind": "repo",
       "label": "客廳坐地・白背心＋灰短褲＋及膝襪",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7469,11 +8404,13 @@ window.CAL_DATA = {
       "img": "m_yerin-03",
       "kind": "repo",
       "label": "走廊晨光・白色毛巾浴袍",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7485,11 +8422,13 @@ window.CAL_DATA = {
       "img": "m_yerin-04",
       "kind": "repo",
       "label": "清晨球場・淺藍 polo＋白長褲・全身",
+      "level": "",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7501,11 +8440,13 @@ window.CAL_DATA = {
       "img": "m_yerin-05",
       "kind": "repo",
       "label": "玄關・米色 polo＋深藍百褶球裙・俯身裝包",
+      "level": "note",
       "orig_px": [
        1728,
        2304
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "既有原圖（repo）",
       "tier": "main"
      },
@@ -7517,27 +8458,31 @@ window.CAL_DATA = {
       "img": "m_yerin-06",
       "kind": "thumb",
       "label": "走廊鏡子自拍・深藍拉鍊背心＋白短褲",
+      "level": "note",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
      {
       "check": "縮圖目視（360×480）",
       "clean_of": "",
-      "fix": "低解析縮圖；坐姿裙下區域在縮圖上無法確認",
+      "fix": "低解析縮圖；坐姿裙下區域在縮圖上無法確認，若選用需先取回原圖確認遮蔽",
       "id": "yerin-07",
       "img": "m_yerin-07",
       "kind": "thumb",
       "label": "咖啡店自拍・白色平口＋白短裙",
+      "level": "note",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7549,11 +8494,13 @@ window.CAL_DATA = {
       "img": "m_yerin-08",
       "kind": "thumb",
       "label": "頂樓夜景・黑色深 V 開衩長洋裝・大笑",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      },
@@ -7565,11 +8512,13 @@ window.CAL_DATA = {
       "img": "m_yerin-09",
       "kind": "thumb",
       "label": "巷弄・灰色背心＋灰長褲・回頭",
+      "level": "clean_opt",
       "orig_px": [
        360,
        480
       ],
       "r3": "",
+      "scale": "",
       "src_zh": "360×480 縮圖（原圖未取回）",
       "tier": "main"
      }

@@ -46,7 +46,8 @@
 
 ## 5. 第二階段素材盤點的發現（與名單無關，但會影響選照片）
 
-- **Yerin**：`kols/yerin-han/images/casting_v1/` 的 4 張（a01–a04）是選角前期圖，目視臉與 2026-09-01 定案的 identity master 及 Soul 訓練集（`training_v1`）不同 → 不放進素材候選。第一階段選角頁的 Yerin 卡片用的是 `training_v1` 與驗證圖，不受影響。
+- **Yerin**：`kols/yerin-han/images/casting_v1/` 的 4 張（a01–a04）**暫不採用，待主管覆核判斷**。並排證據板：`review/calendar/yerin_face_check/CAL_M1_yerin_casting_v1_vs_canon.jpg`（與 identity master 及 `training_v1` 對照，含遮掉頭髮的臉部格；觀察與限制寫在板上）。不以「早於 identity master 定案」作為錯臉證明。第一階段選角頁的 Yerin 卡片用的是 `training_v1` 與驗證圖，不受影響。
 - **Rainie**：只有 `training_v2` 是定案臉（`CAL_02`：舊資料夾是另一張臉，不可混用）；`training_v1`、`face_reference`、舞蹈起始畫面都不放進候選。
 - **Coco／Mia**：`face_reference/round1_*` 是被退回的第一輪臉部候選，不放進候選。
+- **尺度重審（2026-10-12 主管 Q1）**：廠商尺度未確認**不是** owner 不能看或選照片的理由。原先因尺度排除的 Iris 56 張、Coco 2 張已逐張重審：非裸露、遮蔽可確認的泳裝／內衣恢復 19 張（新 ID `iris-23`–`iris-39`、`coco-20`–`coco-21`；代表圖放「泳裝／內衣素材參考」，其餘放「更多素材」），頁面標示「照片選擇意向；若採用此尺度，交印前需確認廠商接受範圍」。疑似裸露、走光或無法確定遮蔽範圍的 18 張先不發布、逐張記錄理由；其餘 21 張依品質排除（重複檔、近似重複、檔名標示瑕疵）。
 - 完整剔除清單與理由：`data/cal_m1_materials.json` 每位的 `excluded`。

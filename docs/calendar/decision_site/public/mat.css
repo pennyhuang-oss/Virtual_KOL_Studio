@@ -12,6 +12,7 @@
 .t-clean { background: #1d5a7a; color: #fff; }
 .t-low { background: #b35900; color: #fff; }
 .t-r3 { background: #f3e6c8; color: #5d4a00; }
+.t-scale { background: #6b3fa0; color: #fff; }
 .k-hit { color: #8a3b00; }
 .k-visual { color: #444; }
 .un { color: #8a3b00; }
@@ -48,6 +49,9 @@
 .mc-s, .mc-c { font-size: .74rem; color: #555; line-height: 1.4; }
 .mc-fix { font-size: .76rem; color: #8a3b00; line-height: 1.4; }
 .mc-ok { font-size: .76rem; color: #12572a; line-height: 1.4; }
+.mc-fix.lv-note, .mc-fix.lv-clean_opt { color: #5d4a00; }
+.mc-fix.lv-clean { color: #1d5a7a; }
+.mc-scale { font-size: .74rem; color: #4b2a75; background: #f4eefb; border-radius: 4px; padding: 2px 5px; line-height: 1.4; }
 .mc-act { margin-top: auto; padding-top: 6px; display: flex; flex-direction: column; gap: 4px; }
 .mc-act .btn { width: 100%; }
 .mc-act .btn.ghost { color: #0b57d0; }

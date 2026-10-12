@@ -248,11 +248,13 @@ def mat_source(src, D140, R, C, hf_dir, clean_dir):
 
 
 def excl_group(reason):
+    if '待主管覆核' in reason:
+        return 'pending'
     if any(k in reason for k in ('臉與', '臉部候選', '目視臉', '定案臉', '定案的 training_v2', '臉的版本')):
         return 'face'
-    if 'C 級' in reason:
-        return 'scale'
-    if '近似重複' in reason:
+    if any(k in reason for k in ('疑似裸露', '暗示裸露', '走光')):
+        return 'exposure'
+    if any(k in reason for k in ('近似重複', '重複檔')):
         return 'dup'
     return 'defect'
 
@@ -284,6 +286,7 @@ def build_materials(cast, R, C, hf_dir, clean_dir):
                     'hires', {'orig_px': [w, h]})
             items.append({'id': it['id'], 'img': iid, 'tier': it['tier'], 'label': it['label'], 'fix': it['fix'],
                           'check': it['check'], 'r3': it.get('r3', ''), 'clean_of': it.get('clean_of', ''),
+                          'scale': it.get('scale', ''), 'level': it.get('level', ''),
                           'kind': kind, 'src_zh': SRC_ZH[kind], 'orig_px': [w, h]})
         ex = {}
         for e in p['excluded']:

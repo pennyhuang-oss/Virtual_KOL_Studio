@@ -2462,6 +2462,312 @@
    "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
   },
   {
+   "published": "public/img/z/m_iris-23.jpg",
+   "sha256": "6a190d6daf8e54215374aa70f0dc4863802888da36db93e3582973d472960707",
+   "kind": "hires_preview",
+   "mid": "iris-23",
+   "mat_src": "kols/iris-chen/images/dance_clone_r15/start_frame.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/dance_clone_r15/start_frame.png",
+   "source_blob": "0c64da610eff78f5c16299fba1edca9ece439ef3",
+   "source_sha256": "4a9069c08fe8b1d97f6899fa1aa08ee765990bcf45f2260d0aa803ae6b8becbd",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-23.jpg",
+   "sha256": "5f5a9c179faeb4e82897e43bdea3b6db1eef0a2baab5b41d39b99bbc2c94176e",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-23.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-24.jpg",
+   "sha256": "04dc9d3b0691637749c6634d873f48f026e0eeaeb5e0cc6d7469a461cf4cd29a",
+   "kind": "hires_preview",
+   "mid": "iris-24",
+   "mat_src": "kols/iris-chen/images/daily_expression_v5/expression_failed/02a_E5_suppressed_FAILED_smile.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_expression_v5/expression_failed/02a_E5_suppressed_FAILED_smile.png",
+   "source_blob": "6d835aafffe74037da1fb17e9c4391ed1afe102a",
+   "source_sha256": "38dcc98ff31e21f1e83ed9962a771be975dad8914d9c3b4139f07c7eeca40127",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-24.jpg",
+   "sha256": "1aea8fdb72496c29eff12ad9e04d22e43affaafd09fac96c04fcdc93cc774f14",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-24.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-25.jpg",
+   "sha256": "4ca49a2c4ba8e70c4692cd99a92664f9bc3078b4b3a0fa6607fbe75234209524",
+   "kind": "hires_preview",
+   "mid": "iris-25",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/01_bed_black_lace_babydoll_selfie.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v2_lingerie/01_bed_black_lace_babydoll_selfie.png",
+   "source_blob": "c7ad384e01bdbea80eace3e8bc6758c4c5ceade9",
+   "source_sha256": "33daf0c8cbf87ce736387d980096bc37484ac9b9625694d0094a785810db0394",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-25.jpg",
+   "sha256": "88fd0d02aa68263bc1aa7916181be45cc7856e033565dc526e34045697957814",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-25.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-26.jpg",
+   "sha256": "f4eb26ec6362b6a62b066827932360cd326763fd0a1b8bcce23ee70da7b991a4",
+   "kind": "hires_preview",
+   "mid": "iris-26",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/02_mirror_burgundy_teddy_selfie.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v2_lingerie/02_mirror_burgundy_teddy_selfie.png",
+   "source_blob": "6bbf06f9119c3293a8bc9f6de4905be7200247eb",
+   "source_sha256": "3a00db35ad0e91b5015340326e9bf502119c6156412a10f839562ebefeafbeb1",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-26.jpg",
+   "sha256": "75ef7adc731d68becd1db5e40c96ce7f8327c9c09007f669ae9554effda6dfde",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-26.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-27.jpg",
+   "sha256": "3d90fd6634e2519d267a009f25b14d210458a8e5c6a08f674d0f063e6590dc8e",
+   "kind": "hires_preview",
+   "mid": "iris-27",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/05_dressingtable_ivory_garter_selfie.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v2_lingerie/05_dressingtable_ivory_garter_selfie.png",
+   "source_blob": "92e05fec729c728252dea95232f13bb68feaff4d",
+   "source_sha256": "c0fed0c104831a5ff6e64470dedecfa32a174e9254dd8b1be4777ef6f5a8477c",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-27.jpg",
+   "sha256": "7c349f7cda950b18ef52fcf5776c7b01843585b0725d7988ed9c836f24d96c08",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-27.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-28.jpg",
+   "sha256": "ee7cdcb19add7bc2826a3eadaf28845ee3e1181f1984644793e2f87a46aa7033",
+   "kind": "hires_preview",
+   "mid": "iris-28",
+   "mat_src": "kols/iris-chen/images/daily_reel_music_r1/start_frame.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_reel_music_r1/start_frame.png",
+   "source_blob": "30b516a3f197330e9e55b20b8e2980fb54077cc0",
+   "source_sha256": "b8d51da2a6ec1f595edc9e024d038cdeb268eb8bc8d61e827d7773908e0ee0ca",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-28.jpg",
+   "sha256": "3c18ba5e06b9420050b10fb23cb33b9fb7284812f4720cab22c8831f6be2376a",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-28.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-29.jpg",
+   "sha256": "8ad3bef9cda8f098d49c3a47131d009dfd1902d3f54ee4b313a71ce0c58041a6",
+   "kind": "hires_preview",
+   "mid": "iris-29",
+   "mat_src": "kols/iris-chen/images/selfie_expression_v6/E17_cheek_squeeze_cute.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/selfie_expression_v6/E17_cheek_squeeze_cute.png",
+   "source_blob": "3bb840c4327705f812e948fd6b75f6d8974ef960",
+   "source_sha256": "7af37493be6c8d33fe4019b00094d9ad09e2a62f2fb9d983cd9a3de697996714",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-29.jpg",
+   "sha256": "9139d4f37af5a87ceaf5a6a2067f438863556666a2037433da828cbaa8f0289f",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-29.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-30.jpg",
+   "sha256": "1c2422959922e1de08fc7d3fc445d4b8deaa89664e73619e9109e3b81f87246f",
+   "kind": "hires_preview",
+   "mid": "iris-30",
+   "mat_src": "kols/iris-chen/images/daily_expression_v5/05_rug_prone_E13_finger_lip.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_expression_v5/05_rug_prone_E13_finger_lip.png",
+   "source_blob": "319cda157ec036dc81c4632cd3c40f1f2c1f5f80",
+   "source_sha256": "19f3284ca970771185bf4133919d30a9e9e9875cdc1153864906a84dd984be65",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-30.jpg",
+   "sha256": "25d24f49eb2bd0c5ead0c531375c8e45ad1ad245057cabe86efce7210a2c16ba",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-30.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-31.jpg",
+   "sha256": "7eefa593f7672a694d94a1673e3fdb45ac94b9515ae97cad48d1c89ce19a0874",
+   "kind": "hires_preview",
+   "mid": "iris-31",
+   "mat_src": "kols/iris-chen/images/daily_expression_v5/expression_failed/01a_E11_bitelip_FAILED_smile.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_expression_v5/expression_failed/01a_E11_bitelip_FAILED_smile.png",
+   "source_blob": "2a6b5473ed45b9d1f6fa6c2d4dc9aff727fffcd5",
+   "source_sha256": "9e36447e3ed3e5dea7a4a696b2674cf0d7707484656dfd2a24f5e8c88bc44b0c",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-31.jpg",
+   "sha256": "34c24dbc53308acb5e52cda987fe7f3a3ecbe618e2f4401ac0d30dfa4a0f1cd3",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-31.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-32.jpg",
+   "sha256": "4200ddb90022017433f0a3669343834a2dace842211e9e73f15d686c25667d54",
+   "kind": "hires_preview",
+   "mid": "iris-32",
+   "mat_src": "kols/iris-chen/images/daily_expression_v5/expression_failed/03a_E12_exhale_FAILED_smile.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_expression_v5/expression_failed/03a_E12_exhale_FAILED_smile.png",
+   "source_blob": "16d66f4fd1b240e86c631ac11ba3277a1df156e0",
+   "source_sha256": "86c51ca8b45cc0ba171451e52a51fdfebf8fc2c0637433fbe249775b64885fda",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-32.jpg",
+   "sha256": "dc37638086446c1c3bef309716e0dbae34825111cecf7d9e19dae35f2e176ad4",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-32.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-33.jpg",
+   "sha256": "89dd72eac34e997db1b102caa2acd132d2d2def9359c677f2c02bc9ec5662da4",
+   "kind": "hires_preview",
+   "mid": "iris-33",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v1/01_bedroom_black_lace_selfie.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v1/01_bedroom_black_lace_selfie.png",
+   "source_blob": "2530eff80a286cebe0eda14c5ac55890394d2619",
+   "source_sha256": "a3d5d5d0c30948a0d1a28d5ed24f6da2154e44b3c3ec573719086e4bca196cac",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-33.jpg",
+   "sha256": "ed4b4c2a5ba66669b399daa84ab6a5702037c19a17dba3c2d4576b2064a9b1ca",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-33.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-34.jpg",
+   "sha256": "5de9cc75414692d352b69fd8beedcf420f5a32865a2af03afc348be24de32e08",
+   "kind": "hires_preview",
+   "mid": "iris-34",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v1/04_fulllength_mirror_ivory_silk.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v1/04_fulllength_mirror_ivory_silk.png",
+   "source_blob": "b76acf220b4044200bb58bd49c1550ae6f2963c4",
+   "source_sha256": "989ddbc333a11dacdead22cf750508717c926cf4ff784025ee4e7f7250a5edf6",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-34.jpg",
+   "sha256": "0917f356f157bbdf5ea367fe336b1978e995bc4ef195229b456a33ea8d29da9a",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-34.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-35.jpg",
+   "sha256": "daadd8013e092d3ce7444b389149ba40a49f165fc4bd2976b9f446f75aae4167",
+   "kind": "hires_preview",
+   "mid": "iris-35",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/03_bathroom_pink_babydoll_selfie.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v2_lingerie/03_bathroom_pink_babydoll_selfie.png",
+   "source_blob": "dc76008edd3e7e501196a229bfe7b229aa5e3ca2",
+   "source_sha256": "14ea9ef76e9544bb68e1b6d03d7496bfad1c469e73915821264cc6a83d89a1c9",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-35.jpg",
+   "sha256": "a0998abb000cbdf481f20cdac5a11711bb9ab3ed0863dc4ce62d161e6e48920e",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-35.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-36.jpg",
+   "sha256": "bf2c732eaabbf377a178a57a79af3415091065f66f7df82bf6f0cd10fe97622a",
+   "kind": "hires_preview",
+   "mid": "iris-36",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/04_lyingbed_navy_lace_bodysuit_selfie.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v2_lingerie/04_lyingbed_navy_lace_bodysuit_selfie.png",
+   "source_blob": "b82765a2f3d553ac3a89fdb529d7847fe0117f36",
+   "source_sha256": "9d6fd3a7279bf567ab937d7b1d673ed3e1aca60bef16a7451f2926b1d62ea04d",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-36.jpg",
+   "sha256": "9516e889e6a5d527e4633136252694f3be9ff1c00c3b7bd8fe1d21c0b1e7a5cd",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-36.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-37.jpg",
+   "sha256": "941b7a1f516ba0a6acd91ab28b493472183f21f7b4a0f2e68080f4bee8aa287e",
+   "kind": "hires_preview",
+   "mid": "iris-37",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/05_window_open_cardigan_candid.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v4_bolder/05_window_open_cardigan_candid.png",
+   "source_blob": "64f0dbd81b9c85c07a0cb31519607140f9e61cce",
+   "source_sha256": "7d735b67dfd216bc7770857f1b9a3ece100a61716581abdb90884e1687184c2a",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-37.jpg",
+   "sha256": "aad047fa3b8ab1466d0b084d09153f5c2dc958cdd4707ac9b2bfc1a35e6e2fc7",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-37.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-38.jpg",
+   "sha256": "d6b2ccfdb5639242295db07051e4cf36e0587f450042af9732ead5bde34e3864",
+   "kind": "hires_preview",
+   "mid": "iris-38",
+   "mat_src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_daylight_window.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_daylight_window.png",
+   "source_blob": "dc02c43073384abf9d0ce87de7d38246552e2770",
+   "source_sha256": "4b07d7bd23bb6a5754441e31128112fc4dff3b512f2cf39377ec40ec761221cb",
+   "op": "原檔 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-38.jpg",
+   "sha256": "ea7f691c96c6916035e3988a7a134e71a68d58c16d88ca4de74ec93eec450e34",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-38.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_iris-39.jpg",
+   "sha256": "8020fc68d4c8dbd9eac93db2e7648294cfc04c55c5e6f24392a45ba3e72f3b5a",
+   "kind": "hires_preview",
+   "mid": "iris-39",
+   "mat_src": "kols/iris-chen/images/lingerie_mirror_r1/start_frame.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/iris-chen/images/lingerie_mirror_r1/start_frame.png",
+   "source_blob": "90680c0ee42ea41af7d9b60d44a2304e3a950a1c",
+   "source_sha256": "7e42dc33eca82377aa6f6c05fceff55f902e1e6c5b7ef12a749b1023b3a9acb1",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_iris-39.jpg",
+   "sha256": "7276000360849f5b32e6715e03c5762a2d2d82b336b0fbce09135c67af02e42f",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_iris-39.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
    "published": "public/img/z/m_luna-01.jpg",
    "sha256": "b8d80a552344d86af6eadd14281a38c3f0e8fcb7960ac3d4d0839ba589df5d22",
    "kind": "hires_preview",
@@ -3370,6 +3676,42 @@
    "sha256": "b4d27c0a6eddfc4ccb287c99ea86ca14504a5eed60ea9c0336f8845f05474d21",
    "kind": "thumbnail",
    "source": "public/img/z/m_coco-19.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_coco-20.jpg",
+   "sha256": "d67c14c1b79c256d5b9718a2f501a5b234a895bfa12ccd581362490342af612d",
+   "kind": "hires_preview",
+   "mid": "coco-20",
+   "mat_src": "kols/coco-wu/images/dance_clone_r12/start_frame.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/coco-wu/images/dance_clone_r12/start_frame.png",
+   "source_blob": "6911546a378cb1bb1b9697336cca2a467a2dd229",
+   "source_sha256": "ac6de8cbdf1dffe3812a663f12522e20a17ea1c947e9fc3f8192ed710bdbb10e",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_coco-20.jpg",
+   "sha256": "c8a33ba685bd183f312f5888c769731ca82aa13e892ffb3c40ab9becf417af93",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_coco-20.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/m_coco-21.jpg",
+   "sha256": "49d3a3c22ff3387ef8d9bc83c92461d95f696f459ebd1dd0cb4edbc337939989",
+   "kind": "hires_preview",
+   "mid": "coco-21",
+   "mat_src": "kols/coco-wu/images/dance_clone_r13/start_frame.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/coco-wu/images/dance_clone_r13/start_frame.png",
+   "source_blob": "2c6d9cd9cbba4b21ce2e7506d375ed3285e738a7",
+   "source_sha256": "5c64edd9aada3065f1b0b8b43bf8adb4dd915124afea941e2963df9f0032a10c",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/m_coco-21.jpg",
+   "sha256": "4eda5003c989188523a4748bce780e659ec23f023634402094cd3b865c51c4ee",
+   "kind": "thumbnail",
+   "source": "public/img/z/m_coco-21.jpg",
    "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
   },
   {

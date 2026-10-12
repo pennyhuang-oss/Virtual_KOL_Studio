@@ -70,6 +70,8 @@
   }
   const ST = { none: '未選', draft: '草稿・待 Penny 確認', conf: 'Penny 已確認目前選擇' };
   const ST_SHORT = { none: '未選', draft: '草稿', conf: '已確認' };
+  const LEVEL_ZH = { fix: '待修', clean_opt: '構圖注意（可選清理）', note: '注意' };
+  const SCALE_NOTE = '照片選擇意向；若採用此尺度，交印前需確認廠商接受範圍。選這張不代表整本尺度已決定。';
   function change(pid, fn) {
     fn(S.p[pid]);
     const q = S.p[pid];
@@ -116,6 +118,7 @@
     if (it.clean_of) t.push('<span class="tag t-clean">R3 局部清理版</span>');
     else t.push('<span class="tag t-orig">原圖・未修圖</span>');
     if (it.kind === 'thumb') t.push('<span class="tag t-low">低解析縮圖</span>');
+    if (it.scale) t.push(`<span class="tag t-scale">${it.scale === 'swim' ? '泳裝' : '內衣'}</span>`);
     if (it.r3) t.push(`<span class="tag t-r3" title="${esc(it.r3)}">R3 舊推薦（參考）</span>`);
     return t.join(' ');
   }
@@ -126,7 +129,8 @@ ${fig(it.img, capOf({ ...it, pid: ITEM[it.id].pid }))}
 <p class="mc-id"><code>${esc(it.id)}</code> ${tags(it)}</p>
 <p class="mc-l">${esc(it.label)}</p>
 <p class="mc-s">${esc(it.src_zh)}｜原圖 ${w}×${h} px</p>
-${it.fix ? `<p class="mc-fix"><b>${it.clean_of ? '清理狀態' : '待修／注意'}：</b>${esc(it.clean_of ? it.fix.replace(/^清理狀態：/, '') : it.fix)}</p>` : '<p class="mc-ok">未見明顯瑕疵（檢查方式見下行）</p>'}
+${it.fix ? `<p class="mc-fix lv-${esc(it.clean_of ? 'clean' : (it.level || 'note'))}"><b>${it.clean_of ? '清理狀態' : LEVEL_ZH[it.level || 'note']}：</b>${esc(it.fix)}</p>` : '<p class="mc-ok">未見明顯瑕疵（檢查方式見下行）</p>'}
+${it.scale ? `<p class="mc-scale">${SCALE_NOTE}</p>` : ''}
 <p class="mc-c">${esc(it.check)}${it.r3 ? `｜${esc(it.r3)}` : ''}</p>
 <div class="mc-act">
 <button type="button" class="btn small" data-act="H" data-mid="${esc(it.id)}">選作橫式照片</button>
@@ -134,7 +138,7 @@ ${it.fix ? `<p class="mc-fix"><b>${it.clean_of ? '清理狀態' : '待修／注�
 <button type="button" class="btn small ghost" data-act="B" data-mid="${esc(it.id)}">列為備選</button>
 </div></article>`;
   }
-  const EXCL_ZH = { dup: '近似重複', scale: '尺度（內衣／泳裝／暗示裸露）', face: '臉與定案人設不符或非定案臉', defect: '瑕疵、檔名標示失敗或不宜公開' };
+  const EXCL_ZH = { dup: '近似重複或重複檔', exposure: '疑似裸露、走光或無法確定遮蔽範圍', face: '臉與定案人設不符或非定案臉', pending: '暫不採用（待主管覆核判斷）', defect: '瑕疵或檔名標示失敗' };
   function pairLine(q) {
     const v = q.v != null ? ` ${q.v}` : '';
     const lead = q.kind === 'hit' ? '既有碰撞紀錄' : (q.kind === 'near' ? '接近門檻' : '相似度提示');
@@ -143,6 +147,7 @@ ${it.fix ? `<p class="mc-fix"><b>${it.clean_of ? '清理狀態' : '待修／注�
   function person(p, i) {
     const main = p.items.filter(it => it.tier === 'main');
     const more = p.items.filter(it => it.tier === 'more');
+    const swim = p.items.filter(it => it.tier === 'swim');
     const pairs = M.pairs.filter(q => q.a === p.pid || q.b === p.pid);
     const ex = Object.entries(p.excluded);
     const nEx = ex.reduce((a, [, n]) => a + n, 0);
@@ -156,6 +161,7 @@ ${it.fix ? `<p class="mc-fix"><b>${it.clean_of ? '清理狀態' : '待修／注�
 <h3>主要候選（${main.length} 張）</h3>
 ${main.length < 6 ? `<p class="note">這位可用的既有照片不足 6 張，如實列出。</p>` : ''}
 <div class="mgrid">${main.map(card).join('')}</div>
+${swim.length ? `<details class="more swim"><summary>泳裝／內衣素材參考（${swim.length} 張）</summary><p class="note">有差異的代表圖，可以選作橫式、直式或備選。${SCALE_NOTE}同類的其他照片放在「更多素材」。</p><div class="mgrid">${swim.map(card).join('')}</div></details>` : ''}
 ${more.length ? `<details class="more"><summary>更多素材（${more.length} 張）</summary><p class="note">其他合格的既有照片：多半是同一套造型的其他角度、人物較小或有較多待修處。</p><div class="mgrid">${more.map(card).join('')}</div></details>` : ''}
 <details class="info"><summary>素材說明：缺口、未列出的照片、相似度</summary>
 <ul class="facts">
@@ -197,7 +203,9 @@ ${legacyNote()}
 <li>每張照片有固定的素材 ID（例 <code>iris-01</code>），複製結果時用這個 ID。</li>
 <li>綠色「高解析預覽」是可核對原圖的等比縮小；橘色「低解析」是 360×480 縮圖，原圖沒有取回（列為缺口）。點照片可放大，再點一下看原尺寸。</li>
 <li>「R3 局部清理版」與原圖分開列，各有自己的 ID；目前<b>沒有</b>任何正式修圖版。「R3 舊推薦」只是舊方案的參考，<b>不是</b> Penny 的選擇。</li>
-<li>照片能否滿版、裁切後解析度夠不夠，要排版時才判斷；這裡不下結論。</li>
+<li>照片能否滿版、裁切後解析度夠不夠，要排版時才判斷；這裡不下結論。選中的主照片取得原圖後，才做實際裁切與細節覆核。</li>
+<li>標示分三種：「待修」是假字、可辨識角色等需要處理的地方；「構圖注意（可選清理）」是背景路人、牆上本人照片、雜物等，可以保留也可以清理；「注意」是其他提醒。</li>
+<li>部分人有「泳裝／內衣素材參考」：可以照常選。這是照片選擇意向，若採用此尺度，交印前需確認廠商接受範圍；選單張照片不代表整本尺度已決定。</li>
 </ul></section>
 ${PEOPLE.map(person).join('')}
 <section class="sec" id="out"><h2>確認與複製</h2>
@@ -215,7 +223,7 @@ ${PEOPLE.map(person).join('')}
   }
   function idLabel(id) {
     const it = ITEM[id];
-    return `${id}（${it.label}${it.kind === 'thumb' ? '；360×480 縮圖，原圖未取回' : ''}）`;
+    return `${id}（${it.label}${it.kind === 'thumb' ? '；360×480 縮圖，原圖未取回' : ''}${it.scale ? '；泳裝／內衣' : ''}）`;
   }
   function refreshPerson(pid, quiet) {
     const q = S.p[pid];
@@ -282,6 +290,8 @@ ${PEOPLE.map(person).join('')}
     t.push('');
     t.push('整體補充意見（自由文字，不屬於確認項目）：' + ((S.gnote || '').trim() || '（無）'));
     t.push('');
+    const scaled = PEOPLE.some(({ pid }) => { const q = S.p[pid]; return [q.H, q.V, ...q.B].some(id => id && ITEM[id].scale); });
+    if (scaled) t.push('※ 已選照片中有泳裝／內衣：這是照片選擇意向，不代表整本尺度已決定；若採用此尺度，交印前需確認廠商接受範圍。');
     t.push('※ 月份、版面、修圖與印刷可用性都還沒決定；照片能否滿版要排版後才知道。品牌、Logo、QR 本輪不需要。');
     t.push('※ 這是 Penny 的素材選擇草稿／確認紀錄，不是主管核准，也不是印刷或廠商核准。名單確認不等於照片核准。');
     return t.join('\n');

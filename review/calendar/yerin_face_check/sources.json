@@ -1,0 +1,125 @@
+{
+ "generated_by": "docs/calendar/tools/build_cal_m1_yerin_check.py",
+ "fixed_sha": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
+ "ops": "裁切、等比縮放、臉部輪廓外塗灰（cal_face_lib.head_crop／masked_face）；不旋轉、不變形、不修臉",
+ "board": "review/calendar/yerin_face_check/CAL_M1_yerin_casting_v1_vs_canon.jpg",
+ "board_sha256": "e296f8c3428e83b74b8a8a58b58b74ab7a1b2d42a2667c47b6c612c36e1511f5",
+ "sources": {
+  "identity_master": {
+   "path": "kols/yerin-han/identity/identity_master.jpg",
+   "git_blob": "ee88d4b83a63ea41b8d992c98cf376039b99cea9",
+   "sha256": "4c337caf4529ccbc4f3f9fa3b75c251442e5daf1197f710cdd3a16d60204f895",
+   "px": [
+    1728,
+    2304
+   ],
+   "yaw": -0.01,
+   "roll_deg": -0.7,
+   "eye_dist_px": 398.1
+  },
+  "a01": {
+   "casting": {
+    "path": "kols/yerin-han/images/casting_v1/a01.png",
+    "git_blob": "eda416f9f62a9d4a6ef04a1247aeb808231318c3",
+    "sha256": "d1dc01b047e8a4c7c3043c99ff0ebb410305aa7ba2e6914ac536cee20023638d",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": -0.02,
+    "roll_deg": 0.2,
+    "eye_dist_px": 242.0
+   },
+   "reference": {
+    "path": "kols/yerin-han/images/training_v1/train_03.jpg",
+    "git_blob": "c606ff833973cfad0984fb732626c032d97336a9",
+    "sha256": "23f5694f85f69af78309f3c0a4a2d99e52e6e52a2467813630b6e2ce89b54aa3",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": 0.03,
+    "roll_deg": -2.0,
+    "eye_dist_px": 170.7
+   }
+  },
+  "a02": {
+   "casting": {
+    "path": "kols/yerin-han/images/casting_v1/a02.png",
+    "git_blob": "fc50faa034b6313d4d56f77aa5fbaf68b4eec56b",
+    "sha256": "df1c4e0bed4be4fe15ee6e4ede710a56521e014cf8f0a8018bed75e28cdd5057",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": 0.04,
+    "roll_deg": -2.7,
+    "eye_dist_px": 141.9
+   },
+   "reference": {
+    "path": "kols/yerin-han/images/training_v1/train_02.jpg",
+    "git_blob": "a265ec65abd274c44f3497ae33c64570d79fe8c5",
+    "sha256": "bfab2c5cdd2bf02cadcc0346b9d1735bb3dd29d0cdcf830955d4b79646a56834",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": -0.51,
+    "roll_deg": 26.4,
+    "eye_dist_px": 194.3
+   }
+  },
+  "a03": {
+   "casting": {
+    "path": "kols/yerin-han/images/casting_v1/a03.png",
+    "git_blob": "1582280d072e0461e79bb3f636e5ac60fd36b0fe",
+    "sha256": "4e4e77cda900a23d4084867b23144717ae3d122b1d95edfd1fc292e7e032d2df",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": 0.47,
+    "roll_deg": -10.8,
+    "eye_dist_px": 90.0
+   },
+   "reference": {
+    "path": "kols/yerin-han/images/training_v1/train_01.jpg",
+    "git_blob": "6539aaaed388703be4b90eb3a2f68ae301754823",
+    "sha256": "ca7344114df840ae08be50ac07eb00697c3c9e9a2c288740b16c33840e7906e2",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": -0.6,
+    "roll_deg": 25.2,
+    "eye_dist_px": 120.0
+   }
+  },
+  "a04": {
+   "casting": {
+    "path": "kols/yerin-han/images/casting_v1/a04.png",
+    "git_blob": "9930c654b7da3eb7fa38258696139b26bb5fa457",
+    "sha256": "e74d25168b9347c8d17d34a6483db4959a044570e48bee6929ddb066ac57ef02",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": 0.04,
+    "roll_deg": -5.5,
+    "eye_dist_px": 78.2
+   },
+   "reference": {
+    "path": "kols/yerin-han/images/training_v1/train_03.jpg",
+    "git_blob": "c606ff833973cfad0984fb732626c032d97336a9",
+    "sha256": "23f5694f85f69af78309f3c0a4a2d99e52e6e52a2467813630b6e2ce89b54aa3",
+    "px": [
+     1728,
+     2304
+    ],
+    "yaw": 0.03,
+    "roll_deg": -2.0,
+    "eye_dist_px": 170.7
+   }
+  }
+ }
+}

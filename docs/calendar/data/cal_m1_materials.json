@@ -16,6 +16,7 @@
      "label": "台北街拍・白細肩帶短上衣＋牛仔短裙・全身甜笑",
      "fix": "背景招牌是 AI 假中文字（清楚可讀到亂字）",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -23,7 +24,7 @@
      "src": "clean:iris_V",
      "tier": "main",
      "label": "同上，R3 局部清理版（招牌模糊）",
-     "fix": "清理狀態：完成，但近看看得出（招牌變成失焦色塊）",
+     "fix": "已處理；近看有失焦色塊，成品質感待覆核",
      "check": "R2 原圖已查",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
      "clean_of": "iris-01"
@@ -35,6 +36,7 @@
      "label": "咖啡店窗邊・粉色抹胸露肩・胸上甜笑",
      "fix": "窗邊高光過曝（原圖本身）",
      "check": "R2 原圖已查",
+     "level": "note",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -51,7 +53,8 @@
      "tier": "main",
      "label": "車內自拍特寫・黑細肩帶・逆光",
      "fix": "臉上有窗框陰影",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-06",
@@ -67,7 +70,8 @@
      "tier": "main",
      "label": "夜晚街頭・黑短背心＋白襯衫＋黑工裝褲",
      "fix": "背景招牌文字與機車車牌待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-08",
@@ -91,7 +95,8 @@
      "tier": "main",
      "label": "黑色細肩帶紗裙洋裝・雙手舉高",
      "fix": "純白背景，場景感較弱",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-11",
@@ -99,7 +104,8 @@
      "tier": "more",
      "label": "同一套街拍・夜市街口",
      "fix": "背景招牌文字待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-12",
@@ -107,7 +113,8 @@
      "tier": "more",
      "label": "同一套咖啡店窗邊・笑得較開",
      "fix": "窗邊高光",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-13",
@@ -123,7 +130,8 @@
      "tier": "more",
      "label": "車內自拍・畫面傾斜特寫",
      "fix": "構圖傾斜",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-15",
@@ -139,7 +147,8 @@
      "tier": "more",
      "label": "夜晚街頭・白色長袖短上衣（較早版本）",
      "fix": "背景招牌文字待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-17",
@@ -163,7 +172,8 @@
      "tier": "more",
      "label": "浴室・白細肩帶背心・大笑（胸上）",
      "fix": "肩帶滑落；檔名的 FAILED 指表情沒達到原拍攝目標，不是畫面缺陷",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "iris-20",
@@ -188,6 +198,170 @@
      "label": "浴室鏡子自拍・米白緞面短洋裝",
      "fix": "",
      "check": "本輪目視（縮小檢視，未逐張 100%）"
+    },
+    {
+     "id": "iris-23",
+     "src": "kols/iris-chen/images/dance_clone_r15/start_frame.png",
+     "tier": "swim",
+     "label": "海邊・黑色連身泳衣＋眼鏡・推眼鏡微笑",
+     "fix": "泳衣上的圖文是 AI 假字",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "swim",
+     "level": "fix"
+    },
+    {
+     "id": "iris-24",
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/02a_E5_suppressed_FAILED_smile.png",
+     "tier": "swim",
+     "label": "廚房檯面坐姿・白襯衫敞開＋黑色內衣褲",
+     "fix": "檔名的 FAILED 指表情沒達到原拍攝目標，不是畫面缺陷",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-25",
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/01_bed_black_lace_babydoll_selfie.png",
+     "tier": "swim",
+     "label": "床上自拍・黑色蕾絲內衣褲・甜笑",
+     "fix": "腰腹蕾絲半透（交印前以原圖確認）",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-26",
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/02_mirror_burgundy_teddy_selfie.png",
+     "tier": "swim",
+     "label": "鏡子自拍・酒紅內衣褲＋黑絲襪＋薄外袍",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie"
+    },
+    {
+     "id": "iris-27",
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/05_dressingtable_ivory_garter_selfie.png",
+     "tier": "swim",
+     "label": "梳妝台坐姿・米白內衣＋吊帶襪",
+     "fix": "內褲前片蕾絲半透（交印前以原圖確認）",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-28",
+     "src": "kols/iris-chen/images/daily_reel_music_r1/start_frame.png",
+     "tier": "swim",
+     "label": "百葉窗日光・床上・白色蕾絲內衣＋毯子",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie"
+    },
+    {
+     "id": "iris-29",
+     "src": "kols/iris-chen/images/selfie_expression_v6/E17_cheek_squeeze_cute.png",
+     "tier": "swim",
+     "label": "床上近距離自拍・黑色內衣・戳臉頰",
+     "fix": "一側肩帶滑落",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-30",
+     "src": "kols/iris-chen/images/daily_expression_v5/05_rug_prone_E13_finger_lip.png",
+     "tier": "more",
+     "label": "地毯趴姿・黑色長袖上衣＋丁字褲・比噓",
+     "fix": "丁字褲，臀部大面積外露",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-31",
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/01a_E11_bitelip_FAILED_smile.png",
+     "tier": "more",
+     "label": "浴室・白細肩帶背心＋黑色內褲・揮手",
+     "fix": "與 iris-19 同場景、不同取景",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-32",
+     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/03a_E12_exhale_FAILED_smile.png",
+     "tier": "more",
+     "label": "沙發・黑色內衣＋蕾絲內褲・雙手舉高",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie"
+    },
+    {
+     "id": "iris-33",
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/01_bedroom_black_lace_selfie.png",
+     "tier": "more",
+     "label": "床邊自拍・黑色蕾絲內衣＋灰色開襟",
+     "fix": "床上零食包裝雜亂",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "clean_opt"
+    },
+    {
+     "id": "iris-34",
+     "src": "kols/iris-chen/images/daily_sexy_night_v1/04_fulllength_mirror_ivory_silk.png",
+     "tier": "more",
+     "label": "全身鏡自拍・米白內衣褲＋白襯衫",
+     "fix": "左側霓虹招牌文字",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-35",
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/03_bathroom_pink_babydoll_selfie.png",
+     "tier": "more",
+     "label": "浴室鏡子自拍・粉色內衣褲",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie"
+    },
+    {
+     "id": "iris-36",
+     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/04_lyingbed_navy_lace_bodysuit_selfie.png",
+     "tier": "more",
+     "label": "躺床自拍・深藍蕾絲連身內衣",
+     "fix": "腹部蕾絲半透（交印前以原圖確認）",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-37",
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/05_window_open_cardigan_candid.png",
+     "tier": "more",
+     "label": "夜景窗邊坐姿・黑色平口內衣＋高腰內褲＋灰開襟",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie"
+    },
+    {
+     "id": "iris-38",
+     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_daylight_window.png",
+     "tier": "more",
+     "label": "日光鏡子自拍・黑色內衣褲＋黑絲襪",
+     "fix": "內褲蕾絲半透（交印前以原圖確認）",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie",
+     "level": "note"
+    },
+    {
+     "id": "iris-39",
+     "src": "kols/iris-chen/images/lingerie_mirror_r1/start_frame.png",
+     "tier": "more",
+     "label": "水泥牆房間・黑色內衣褲・鏡子自拍",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "lingerie"
     }
    ],
    "excluded": [
@@ -197,15 +371,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_expression_v5/05_rug_prone_E13_finger_lip.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "疑似裸露／無法確定遮蔽：紅色蕾絲內衣透視，胸部遮蔽範圍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/daily_expression_v5/06_bathroom_counter_E4_laugh.png",
@@ -213,23 +379,7 @@
       1536,
       2048
      ],
-     "reason": "坐姿短洋裝裙下可見內褲（原圖放大確認）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/01a_E11_bitelip_FAILED_smile.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/02a_E5_suppressed_FAILED_smile.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "走光：坐姿短洋裝裙下可見內褲（原圖放大確認）；不發布"
     },
     {
      "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/02b_E5_partial_but_outfit_out_of_scope.png",
@@ -237,15 +387,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/03a_E12_exhale_FAILED_smile.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "疑似裸露：襯衫敞開、內未穿內衣，胸部側面外露；不發布"
     },
     {
      "src": "kols/iris-chen/images/daily_expression_v5/expression_failed/03b_E12_exhale_FAILED_became_laugh.png",
@@ -253,23 +395,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_reel_music_r1/start_frame.png",
-     "px": [
-      1152,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v1/01_bedroom_black_lace_selfie.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 iris-32 近似重複（同場景、同造型、姿勢幾乎相同）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v1/02_bathroom_wethair_mirror.png",
@@ -280,14 +406,6 @@
      "reason": "與 iris-22 近似重複（同場景、同造型、姿勢幾乎相同）"
     },
     {
-     "src": "kols/iris-chen/images/daily_sexy_night_v1/04_fulllength_mirror_ivory_silk.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
      "src": "kols/iris-chen/images/daily_sexy_night_v1/alternates/03_alt_sofa_hand_defect.png",
      "px": [
       1536,
@@ -296,52 +414,12 @@
      "reason": "檔名標示手部瑕疵（與 iris 的沙發睡裙同場景）"
     },
     {
-     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/01_bed_black_lace_babydoll_selfie.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/02_mirror_burgundy_teddy_selfie.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/03_bathroom_pink_babydoll_selfie.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/04_lyingbed_navy_lace_bodysuit_selfie.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/05_dressingtable_ivory_garter_selfie.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
      "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/alternates/02_alt_mirror_vanitybulbs_hand_defect.png",
      "px": [
       1536,
       2048
      ],
-     "reason": "檔名標示手部瑕疵；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "檔名標示手部瑕疵；與 iris-26 是同一套酒紅內衣的鏡子自拍"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v2_lingerie/alternates/03_alt_bathroom_hand_defect.png",
@@ -349,7 +427,7 @@
       1536,
       2048
      ],
-     "reason": "檔名標示手部瑕疵；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "檔名標示手部瑕疵；與 iris-35 是同一套粉色內衣的浴室鏡子自拍"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/01_bed_duvet_selfie.png",
@@ -357,7 +435,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：以被子遮胸，上身是否著衣無法確定；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/02_prone_bareback_candid.png",
@@ -365,7 +443,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：裸背趴姿、下身蓋床單，未見衣物；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/03_floor_cushion_hug_candid.png",
@@ -373,7 +451,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：以抱枕遮胸，上身是否著衣無法確定；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/04_bubblebath_candle_selfie.png",
@@ -381,7 +459,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：泡泡浴，泡沫以下未見衣物；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/05_window_bedsheet_wrap_candid.png",
@@ -389,7 +467,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：以床單包裹身體；畫面遮蔽完整，但屬暗示裸身；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v3_implied/alternates/03_alt_floor_cushion_daylight_mood.png",
@@ -397,7 +475,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：以抱枕遮胸，上身是否著衣無法確定（同系列另一張）；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/01_bed_deepv_silkslip_selfie.png",
@@ -405,7 +483,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "走光：坐姿短睡裙，裙下可見內褲（局部放大確認）；不發布"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/02_mirror_micro_lace_stockings_selfie.png",
@@ -413,7 +491,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "疑似裸露／無法確定遮蔽：細蕾絲內衣褲透視，胸部與下身遮蔽範圍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/03_bathroom_towel_wet_selfie.png",
@@ -421,7 +499,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：以浴巾包裹上身與下身；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/04_sidelying_bareback_candid.png",
@@ -429,15 +507,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/05_window_open_cardigan_candid.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：上身裸背、手持毛巾遮前胸；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/01_alt_bright_room.png",
@@ -445,7 +515,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "走光疑慮：坐姿短睡裙，裙下區域局部放大仍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_black_bar_framing_bug.png",
@@ -453,15 +523,7 @@
       1536,
       2048
      ],
-     "reason": "檔名標示構圖錯誤（黑邊）；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/02_alt_daylight_window.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "檔名標示構圖錯誤（左側黑邊）；與 iris-38 是同一套黑色內衣的鏡子自拍"
     },
     {
      "src": "kols/iris-chen/images/daily_sexy_night_v4_bolder/alternates/04_alt_bright_room.png",
@@ -469,15 +531,7 @@
       1536,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/dance_clone_r15/start_frame.png",
-     "px": [
-      1152,
-      2048
-     ],
-     "reason": "泳裝＋衣服上有圖文；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "暗示裸露：上身裸背、臀部大面積外露；不發布（與一般泳裝／內衣分開記錄）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/01_bed_black_lace_babydoll_selfie.png",
@@ -485,7 +539,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/01_bed_deepv_silkslip_selfie.png",
@@ -493,7 +547,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/01_bed_duvet_selfie.png",
@@ -501,7 +555,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/01_bedroom_black_lace_selfie.png",
@@ -509,7 +563,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/02_bathroom_wethair_mirror.png",
@@ -517,7 +571,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/02_mirror_burgundy_teddy_selfie.png",
@@ -525,7 +579,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/02_mirror_micro_lace_stockings_selfie.png",
@@ -533,7 +587,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/02_prone_bareback_candid.png",
@@ -541,7 +595,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/03_bathroom_towel_wet_selfie.png",
@@ -549,7 +603,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/03_floor_cushion_hug_candid.png",
@@ -557,7 +611,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/04_bubblebath_candle_selfie.png",
@@ -565,7 +619,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/04_lyingbed_navy_lace_bodysuit_selfie.png",
@@ -573,7 +627,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/04_sidelying_bareback_candid.png",
@@ -581,7 +635,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/05_dressingtable_ivory_garter_selfie.png",
@@ -589,7 +643,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/drive_v1/05_window_open_cardigan_candid.png",
@@ -597,15 +651,7 @@
       1536,
       2048
      ],
-     "reason": "與 daily_sexy_night 系列重複的同一批檔案；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/lingerie_mirror_r1/start_frame.png",
-     "px": [
-      1152,
-      2048
-     ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 daily_sexy_night 系列同名檔位元組完全相同（重複檔）"
     },
     {
      "src": "kols/iris-chen/images/onsen_bucket_r1/start_frame.png",
@@ -613,7 +659,7 @@
       1152,
       2048
      ],
-     "reason": "內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "疑似裸露／無法確定遮蔽：溫泉水中，水面下遮蔽範圍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/selfie_expression_v6/E14_wink.png",
@@ -621,7 +667,7 @@
       1536,
       2048
      ],
-     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "走光疑慮：肩帶滑落、罩杯下緣翻起，胸下緣外露範圍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/selfie_expression_v6/E15_tongue_out.png",
@@ -629,15 +675,7 @@
       1536,
       2048
      ],
-     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/iris-chen/images/selfie_expression_v6/E17_cheek_squeeze_cute.png",
-     "px": [
-      1536,
-      2048
-     ],
-     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "走光疑慮：肩帶滑落、罩杯下緣翻起，胸下緣外露範圍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/selfie_expression_v6/E19_bite_hair.png",
@@ -645,7 +683,7 @@
       1536,
       2048
      ],
-     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 iris-29 近似重複（同場景、同造型、姿勢幾乎相同）"
     },
     {
      "src": "kols/iris-chen/images/selfie_expression_v6/expression_failed/E16_pout_FAILED_became_smile.png",
@@ -653,7 +691,7 @@
       1536,
       2048
      ],
-     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "與 iris-29 近似重複（同場景、同造型、姿勢幾乎相同）"
     },
     {
      "src": "kols/iris-chen/images/selfie_expression_v6/expression_failed/E18_sultry_FAILED_became_toothy_smile.png",
@@ -661,7 +699,7 @@
       1536,
       2048
      ],
-     "reason": "同一套黑色內衣；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
+     "reason": "走光疑慮：肩帶滑落、罩杯下緣翻起，胸下緣外露範圍無法確定；不發布"
     },
     {
      "src": "kols/iris-chen/images/training_v1/01_taipei_street_01.webp",
@@ -748,7 +786,8 @@
      "tier": "main",
      "label": "浴衣・神社參道・手拿蘋果糖",
      "fix": "背景店招文字待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "luna-04",
@@ -772,7 +811,8 @@
      "tier": "main",
      "label": "櫻花樹下・髮箍＋白上衣粉格裙・手拿小花",
      "fix": "表情偏驚訝（嘴微張）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "luna-07",
@@ -780,7 +820,8 @@
      "tier": "main",
      "label": "旋轉木馬前・貓耳髮箍＋爆米花",
      "fix": "爆米花桶上是 AI 假字；背景路人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "luna-08",
@@ -796,7 +837,8 @@
      "tier": "main",
      "label": "雨天・透明傘＋白上衣格紋裙",
      "fix": "背景路人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "luna-10",
@@ -830,6 +872,7 @@
      "label": "咖啡店窗邊・米色針織",
      "fix": "左上假 IG 介面字樣（R2 原圖 100% 清楚可見）",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -846,7 +889,8 @@
      "tier": "more",
      "label": "雨後街頭・白上衣藍短裙・拿傘",
      "fix": "背景路人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "luna-16",
@@ -862,7 +906,8 @@
      "tier": "more",
      "label": "雨天・比 YA＋傘",
      "fix": "背景地圖看板文字",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "luna-18",
@@ -870,7 +915,8 @@
      "tier": "more",
      "label": "浴衣・回頭背影",
      "fix": "背景店招文字待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "luna-19",
@@ -878,7 +924,8 @@
      "tier": "more",
      "label": "旋轉木馬・背影回頭",
      "fix": "背景路人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "luna-20",
@@ -894,7 +941,8 @@
      "tier": "more",
      "label": "甜點街・粉色短裙・全身",
      "fix": "人物較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "luna-22",
@@ -1078,6 +1126,7 @@
      "label": "港邊・白西裝外套＋抹胸・甜笑",
      "fix": "背景左後方男子（暗部、已失焦）；地上紙杯",
      "check": "R2 原圖已查",
+     "level": "note",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1087,6 +1136,7 @@
      "label": "深夜炸雞・握罐甜笑・生活感",
      "fix": "左下紙袋品牌風格假字（R3 試修後撤回，未處理）",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1096,6 +1146,7 @@
      "label": "海邊・白洋裝・初夏感",
      "fix": "背景三位路人距離近（含一位男性正面）",
      "check": "R2 原圖已查",
+     "level": "clean_opt",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1104,7 +1155,8 @@
      "tier": "main",
      "label": "市場・抹胸自拍",
      "fix": "背景路人（daily 審查標記）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "somi-05",
@@ -1128,7 +1180,8 @@
      "tier": "main",
      "label": "市場散步・全身",
      "fix": "人物較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "somi-08",
@@ -1144,7 +1197,8 @@
      "tier": "more",
      "label": "張嘴咬串燒",
      "fix": "表情不適合主視覺（R2 判斷）",
-     "check": "R2 原圖已查"
+     "check": "R2 原圖已查",
+     "level": "note"
     },
     {
      "id": "somi-10",
@@ -1152,7 +1206,8 @@
      "tier": "more",
      "label": "廚房做菜",
      "fix": "臉小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     }
    ],
    "excluded": [
@@ -1184,6 +1239,7 @@
      "label": "宿舍・粉色細肩帶＋開襟外套・甜笑",
      "fix": "背景整面人像牆（多張人臉）會分散注意",
      "check": "R2 原圖已查",
+     "level": "clean_opt",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1191,7 +1247,7 @@
      "src": "clean:coco_H",
      "tier": "main",
      "label": "同上，R3 局部清理版（人像牆強模糊）",
-     "fix": "清理狀態：完成（人像牆變成失焦色塊）",
+     "fix": "已處理（人像牆強模糊成失焦色塊）；成品質感待覆核",
      "check": "R2 原圖已查",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
      "clean_of": "coco-01"
@@ -1203,6 +1259,7 @@
      "label": "床上晨起自拍・off-shoulder・慵懶",
      "fix": "枕頭上有 Hello Kitty 手機殼（可辨識角色）與紅色指示燈",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1210,7 +1267,7 @@
      "src": "clean:coco_alt01",
      "tier": "main",
      "label": "同上，R3 局部清理版（移除手機殼）",
-     "fix": "清理狀態：部分完成——手機殼已不在，但修補不完全自然：修補區紋理較平，左緣與下緣在 100% 下看得出",
+     "fix": "已處理但修補不完全自然：手機殼已不在，修補區紋理較平，左緣與下緣在 100% 下看得出；成品質感待覆核",
      "check": "R2 原圖已查",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）",
      "clean_of": "coco-03"
@@ -1221,7 +1278,8 @@
      "tier": "main",
      "label": "鏡子自拍・薄荷綠細肩帶＋白百褶裙＋白長襪",
      "fix": "Hello Kitty 手機殼；背景人像牆",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "coco-06",
@@ -1229,7 +1287,8 @@
      "tier": "main",
      "label": "宿舍・紫色開襟抱枕大笑",
      "fix": "背景人像牆",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "coco-07",
@@ -1245,7 +1304,8 @@
      "tier": "main",
      "label": "飯店跳上床・白T＋牛仔短褲・動態",
      "fix": "臉較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "coco-09",
@@ -1253,7 +1313,8 @@
      "tier": "main",
      "label": "宿舍床邊・紫色襯衫・撥髮",
      "fix": "背景人像牆",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "coco-10",
@@ -1269,7 +1330,8 @@
      "tier": "main",
      "label": "深夜趴床自拍・暖光",
      "fix": "手機螢幕有人像",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "coco-12",
@@ -1277,7 +1339,8 @@
      "tier": "main",
      "label": "浴室鏡子自拍・粉色細肩帶・比 YA 嘟嘴",
      "fix": "洗面乳瓶身有品牌風格字樣",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "coco-13",
@@ -1285,7 +1348,8 @@
      "tier": "more",
      "label": "宿舍全身・開襟外套＋白百褶裙",
      "fix": "右側有另一人的手拿手機入鏡；背景人像牆",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "coco-14",
@@ -1293,7 +1357,8 @@
      "tier": "more",
      "label": "宿舍・粉色細肩帶＋開襟外套・撥髮",
      "fix": "Hello Kitty 手機殼；背景人像牆",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "coco-15",
@@ -1301,7 +1366,8 @@
      "tier": "more",
      "label": "宿舍・側身大笑",
      "fix": "右側手機畫面顯示她自己的另一張臉，搶主角（R2：換圖）",
-     "check": "R2 原圖已查"
+     "check": "R2 原圖已查",
+     "level": "note"
     },
     {
      "id": "coco-16",
@@ -1309,7 +1375,8 @@
      "tier": "more",
      "label": "走廊轉圈・紫色開襟＋白百褶裙",
      "fix": "前景有另一人的後腦",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "coco-17",
@@ -1317,7 +1384,8 @@
      "tier": "more",
      "label": "宿舍晨起・被室友拉被子大笑",
      "fix": "另一位女性與他人的手入鏡",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "coco-18",
@@ -1325,7 +1393,8 @@
      "tier": "more",
      "label": "宿舍地上吃零食",
      "fix": "另一人入鏡；零食包裝假字",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "coco-19",
@@ -1333,26 +1402,29 @@
      "tier": "more",
      "label": "浴室鏡前梳妝（鏡中）",
      "fix": "鏡中另一位女性入鏡",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
+    },
+    {
+     "id": "coco-20",
+     "src": "kols/coco-wu/images/dance_clone_r12/start_frame.png",
+     "tier": "swim",
+     "label": "綠色三角比基尼＋腰鏈・雙馬尾・伸手",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "swim"
+    },
+    {
+     "id": "coco-21",
+     "src": "kols/coco-wu/images/dance_clone_r13/start_frame.png",
+     "tier": "swim",
+     "label": "紅色碎花比基尼・抓雙馬尾大笑",
+     "fix": "",
+     "check": "本輪逐張目視＋局部放大檢查遮蔽（未逐張 100%）",
+     "scale": "swim"
     }
    ],
    "excluded": [
-    {
-     "src": "kols/coco-wu/images/dance_clone_r12/start_frame.png",
-     "px": [
-      1152,
-      2048
-     ],
-     "reason": "比基尼；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
-    {
-     "src": "kols/coco-wu/images/dance_clone_r13/start_frame.png",
-     "px": [
-      1152,
-      2048
-     ],
-     "reason": "比基尼；內衣／泳裝／暗示裸露（CAL_04 D2 的 C 級：只作參考、要用需先問廠商）；本頁已公開，不放上頁面"
-    },
     {
      "src": "kols/coco-wu/images/dance_clone_r4/start_frame_v1_rejected_wrong_hair_color.png",
      "px": [
@@ -1405,6 +1477,7 @@
      "label": "電競房自拍・白背心＋耳機・甜笑",
      "fix": "自拍手機在左下；霓虹色偏需打樣",
      "check": "R2 原圖已查",
+     "level": "note",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1422,7 +1495,8 @@
      "tier": "main",
      "label": "鏡子自拍・貓耳毛帽＋黑背心＋牛仔短褲＋白長襪",
      "fix": "床上動漫角色抱枕（是否為可辨識角色待確認）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "mia-04",
@@ -1446,7 +1520,8 @@
      "tier": "main",
      "label": "沙發抱貓滑手機・黑帽 T",
      "fix": "臉朝下；零食包裝",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "mia-07",
@@ -1454,7 +1529,8 @@
      "tier": "main",
      "label": "飯店床上比 YA・深藍短帽 T＋識別證",
      "fix": "識別證與海報筒上的文字待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "mia-08",
@@ -1462,7 +1538,8 @@
      "tier": "main",
      "label": "戶外咖啡座・白 T・大笑",
      "fix": "前景有他人的手與後腦",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "mia-09",
@@ -1470,7 +1547,8 @@
      "tier": "main",
      "label": "灰帽 T 拿相機自拍",
      "fix": "帽 T 上是 AI 假英文字",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "mia-10",
@@ -1478,7 +1556,8 @@
      "tier": "main",
      "label": "電競房・水手服 cosplay",
      "fix": "制服／cosplay 造型是否採用由 Penny 決定",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "mia-11",
@@ -1494,7 +1573,8 @@
      "tier": "more",
      "label": "衣櫃前・灰背心拿帽 T",
      "fix": "帽 T 上是 AI 假英文字",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "fix"
     },
     {
      "id": "mia-13",
@@ -1502,7 +1582,8 @@
      "tier": "more",
      "label": "電競房自拍・吐舌",
      "fix": "前景手機很大",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "mia-14",
@@ -1510,7 +1591,8 @@
      "tier": "more",
      "label": "浴室鏡子・化妝棉・丸子頭",
      "fix": "畫面偏暗",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "mia-15",
@@ -1590,6 +1672,7 @@
      "label": "首爾街頭・白背心・清冷素顏",
      "fix": "背景韓文招牌（遠景，非品牌）",
      "check": "R2 原圖已查",
+     "level": "note",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1608,6 +1691,7 @@
      "label": "柔和近照・米白毛衣",
      "fix": "毛衣上有 AI 假英文＋韓文字（必修）",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1640,7 +1724,8 @@
      "tier": "main",
      "label": "地鐵站口・黑 T＋卡其百褶裙",
      "fix": "背景站名看板文字待確認",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "yuna-08",
@@ -1648,7 +1733,8 @@
      "tier": "main",
      "label": "韓式餐館・捧湯碗",
      "fix": "背景招牌文字與客人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "yuna-09",
@@ -1657,6 +1743,7 @@
      "label": "街頭・白背心＋格紋裙＋包包",
      "fix": "格紋與包包經 R2 原圖檢查無可辨識品牌",
      "check": "R2 原圖已查",
+     "level": "note",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1681,7 +1768,8 @@
      "tier": "more",
      "label": "客廳地上滑手機・吃零食",
      "fix": "零食袋與雜誌文字",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "yuna-13",
@@ -1713,7 +1801,8 @@
      "tier": "more",
      "label": "韓式餐館・坐姿正面",
      "fix": "背景客人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "yuna-17",
@@ -1721,7 +1810,8 @@
      "tier": "more",
      "label": "巷弄・白短 T＋黑短褲・回頭全身",
      "fix": "人物較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "yuna-18",
@@ -1729,7 +1819,8 @@
      "tier": "more",
      "label": "便利商店・眼鏡＋灰 T",
      "fix": "T 恤上有字樣（待確認）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "yuna-19",
@@ -1737,7 +1828,8 @@
      "tier": "more",
      "label": "咖啡店外座位・遠景",
      "fix": "人物較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "yuna-20",
@@ -1745,7 +1837,8 @@
      "tier": "more",
      "label": "街頭全身・遠景",
      "fix": "人物很小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     }
    ],
    "excluded": [
@@ -1945,6 +2038,7 @@
      "label": "頂樓夜景・黑色平口貼身洋裝・長捲髮",
      "fix": "背景路人在女牆後（R3 評估不處理）",
      "check": "R2 原圖已查",
+     "level": "clean_opt",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1954,6 +2048,7 @@
      "label": "倉庫坐紙箱・玫瑰色針織洋裝",
      "fix": "紙箱上假條碼貼紙（小）；赤腳；衣架雜亂",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1963,6 +2058,7 @@
      "label": "頂樓・黑色洋裝・表情較柔",
      "fix": "背景路人",
      "check": "R2 原圖已查",
+     "level": "clean_opt",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -1979,7 +2075,8 @@
      "tier": "main",
      "label": "咖啡館・白襯衫",
      "fix": "背景路人（daily 審查標記）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "tammy-06",
@@ -1987,7 +2084,8 @@
      "tier": "main",
      "label": "街頭・白襯衫",
      "fix": "背景路人（daily 審查標記）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "tammy-07",
@@ -2011,7 +2109,8 @@
      "tier": "more",
      "label": "灰襯衫自拍・頭髮綁起・手持化妝棉",
      "fix": "看不出招牌長捲髮（R2 判斷）",
-     "check": "R2 原圖已查"
+     "check": "R2 原圖已查",
+     "level": "note"
     },
     {
      "id": "tammy-10",
@@ -2019,7 +2118,8 @@
      "tier": "more",
      "label": "環形燈前・側臉",
      "fix": "臉轉向側面",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "tammy-11",
@@ -2027,7 +2127,8 @@
      "tier": "more",
      "label": "鏡子自拍",
      "fix": "牆上人像是她自己的臉（daily 審查標記）",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     }
    ],
    "excluded": [
@@ -2060,6 +2161,7 @@
      "label": "咖啡館・白背心窄裙・正臉微笑",
      "fix": "背景右側西裝男等路人",
      "check": "R2 原圖已查",
+     "level": "clean_opt",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -2067,7 +2169,7 @@
      "src": "clean:rin_V",
      "tier": "main",
      "label": "同上，R3 局部清理版（右側路人模糊減光）",
-     "fix": "清理狀態：完成；左後方女子保留",
+     "fix": "已處理（右側路人模糊減光；左後方女子保留）；成品質感待覆核",
      "check": "R2 原圖已查",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
      "clean_of": "rin-02"
@@ -2079,6 +2181,7 @@
      "label": "緞面晨袍・回頭背影",
      "fix": "臉小、側後方",
      "check": "R2 原圖已查",
+     "level": "note",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -2167,6 +2270,7 @@
      "label": "出門前鏡子自拍・黑馬甲＋珠寶・濃豔",
      "fix": "右下假日期戳「2023/18/07」（必修）；鏡面閃光與鏡中人影",
      "check": "R2 原圖已查",
+     "level": "fix",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -2174,7 +2278,7 @@
      "src": "clean:rainie_H",
      "tier": "main",
      "label": "同上，R3 局部清理版（移除日期戳）",
-     "fix": "清理狀態：完成；100% 下只剩極淡直向紋理；鏡面閃光與鏡中人影未處理",
+     "fix": "已處理（日期戳已移除，100% 下只剩極淡直向紋理；鏡面閃光與鏡中人影未處理）；成品質感待覆核",
      "check": "R2 原圖已查",
      "r3": "R3 舊推薦圖（只供參考，不是 Penny 的選擇）",
      "clean_of": "rainie-01"
@@ -2195,6 +2299,7 @@
      "label": "鏡子自拍・黑馬甲＋開衩裙",
      "fix": "手機閃光；左下洗衣籃雜亂",
      "check": "R2 原圖已查",
+     "level": "clean_opt",
      "r3": "R3 舊選項圖（只供參考，不是 Penny 的選擇）"
     },
     {
@@ -2211,7 +2316,8 @@
      "tier": "main",
      "label": "飯店窗邊・銀色細肩帶短洋裝・城市景",
      "fix": "前景行李箱雜亂",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "rainie-07",
@@ -2219,7 +2325,8 @@
      "tier": "main",
      "label": "夜景窗前自拍・白 T＋牛仔褲・拿高跟鞋",
      "fix": "窗框直線橫過畫面",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "rainie-08",
@@ -2235,7 +2342,8 @@
      "tier": "main",
      "label": "舞蹈教室鏡前・黑短上衣＋緊身褲",
      "fix": "人物在畫面中較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "rainie-10",
@@ -2243,7 +2351,8 @@
      "tier": "main",
      "label": "門框・金色緞面長洋裝・全身",
      "fix": "人物在門框裡偏小",
-     "check": "R2 原圖已查"
+     "check": "R2 原圖已查",
+     "level": "note"
     },
     {
      "id": "rainie-11",
@@ -2251,7 +2360,8 @@
      "tier": "main",
      "label": "鏡中試穿・黑色細肩帶洋裝・回頭",
      "fix": "床上衣物雜亂",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "clean_opt"
     },
     {
      "id": "rainie-12",
@@ -2259,7 +2369,8 @@
      "tier": "more",
      "label": "沙發・太陽眼鏡＋白色家居服",
      "fix": "戴墨鏡看不到眼睛；左側有路過的人",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "rainie-13",
@@ -2267,7 +2378,8 @@
      "tier": "more",
      "label": "廚房揉麵團",
      "fix": "畫面暗、臉小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "rainie-14",
@@ -2275,7 +2387,8 @@
      "tier": "more",
      "label": "沙發滑手機・暗光",
      "fix": "畫面暗",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     }
    ],
    "excluded": [
@@ -2578,7 +2691,8 @@
      "tier": "main",
      "label": "咖啡店吧台・側身",
      "fix": "臉偏側面",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "miu-03",
@@ -2594,7 +2708,8 @@
      "tier": "main",
      "label": "酒吧・紫色碎花細肩帶洋裝",
      "fix": "低解析縮圖；背景有人",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "miu-05",
@@ -2602,7 +2717,8 @@
      "tier": "main",
      "label": "運河邊・米白露肩上衣＋牛仔褲・回頭",
      "fix": "低解析縮圖；背景路人（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "miu-06",
@@ -2610,7 +2726,8 @@
      "tier": "main",
      "label": "鏡子自拍・米白背心＋短裙",
      "fix": "低解析縮圖；牆上人像是她自己的臉（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "miu-07",
@@ -2618,7 +2735,8 @@
      "tier": "main",
      "label": "運河散步・全身",
      "fix": "臉小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "miu-08",
@@ -2626,7 +2744,8 @@
      "tier": "main",
      "label": "門口穿鞋",
      "fix": "低頭，臉幾乎看不到",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     }
    ],
    "excluded": [
@@ -2681,7 +2800,8 @@
      "tier": "main",
      "label": "洗衣間・粉色抹胸＋白短褲自拍",
      "fix": "低解析縮圖",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "note"
     },
     {
      "id": "jia-05",
@@ -2689,7 +2809,8 @@
      "tier": "main",
      "label": "走廊鏡子自拍・灰短上衣＋灰運動褲",
      "fix": "低解析縮圖；褲頭露出內褲帶",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "note"
     },
     {
      "id": "jia-06",
@@ -2697,7 +2818,8 @@
      "tier": "main",
      "label": "麵包店・灰背心＋黑短裙",
      "fix": "低解析縮圖；背景路人（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "jia-07",
@@ -2705,7 +2827,8 @@
      "tier": "main",
      "label": "巷口坐姿・白色綁結上衣＋白短褲",
      "fix": "低解析縮圖；背景路人（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "jia-08",
@@ -2713,7 +2836,8 @@
      "tier": "main",
      "label": "夜晚・亮片平口上衣＋短裙・回頭",
      "fix": "低解析縮圖；牆上螢幕是她自己的臉（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "jia-09",
@@ -2729,7 +2853,8 @@
      "tier": "more",
      "label": "綁鞋帶",
      "fix": "低頭，臉幾乎看不到",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     }
    ],
    "excluded": [
@@ -2792,7 +2917,8 @@
      "tier": "main",
      "label": "玄關・米色 polo＋深藍百褶球裙・俯身裝包",
      "fix": "低頭俯身，臉較小",
-     "check": "本輪目視（縮小檢視，未逐張 100%）"
+     "check": "本輪目視（縮小檢視，未逐張 100%）",
+     "level": "note"
     },
     {
      "id": "yerin-06",
@@ -2800,15 +2926,17 @@
      "tier": "main",
      "label": "走廊鏡子自拍・深藍拉鍊背心＋白短褲",
      "fix": "低解析縮圖",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "note"
     },
     {
      "id": "yerin-07",
      "src": "daily140:086.png",
      "tier": "main",
      "label": "咖啡店自拍・白色平口＋白短裙",
-     "fix": "低解析縮圖；坐姿裙下區域在縮圖上無法確認",
-     "check": "縮圖目視（360×480）"
+     "fix": "低解析縮圖；坐姿裙下區域在縮圖上無法確認，若選用需先取回原圖確認遮蔽",
+     "check": "縮圖目視（360×480）",
+     "level": "note"
     },
     {
      "id": "yerin-08",
@@ -2816,7 +2944,8 @@
      "tier": "main",
      "label": "頂樓夜景・黑色深 V 開衩長洋裝・大笑",
      "fix": "低解析縮圖；背景路人（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     },
     {
      "id": "yerin-09",
@@ -2824,7 +2953,8 @@
      "tier": "main",
      "label": "巷弄・灰色背心＋灰長褲・回頭",
      "fix": "低解析縮圖；背景路人（daily 審查標記）",
-     "check": "縮圖目視（360×480）"
+     "check": "縮圖目視（360×480）",
+     "level": "clean_opt"
     }
    ],
    "excluded": [
@@ -2834,7 +2964,7 @@
       1728,
       2304
      ],
-     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+     "reason": "暫不採用（待主管覆核判斷）：目視臉與定案 identity master／training_v1 不同；並排證據見 review/calendar/yerin_face_check/"
     },
     {
      "src": "kols/yerin-han/images/casting_v1/a02.png",
@@ -2842,7 +2972,7 @@
       1728,
       2304
      ],
-     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+     "reason": "暫不採用（待主管覆核判斷）：目視臉與定案 identity master／training_v1 不同；並排證據見 review/calendar/yerin_face_check/"
     },
     {
      "src": "kols/yerin-han/images/casting_v1/a03.png",
@@ -2850,7 +2980,7 @@
       1728,
       2304
      ],
-     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+     "reason": "暫不採用（待主管覆核判斷）：目視臉與定案 identity master／training_v1 不同；並排證據見 review/calendar/yerin_face_check/"
     },
     {
      "src": "kols/yerin-han/images/casting_v1/a04.png",
@@ -2858,7 +2988,7 @@
       1728,
       2304
      ],
-     "reason": "選角前期圖（早於 2026-09-01 定案的 identity master），目視臉與定案人設（training_v1）不同"
+     "reason": "暫不採用（待主管覆核判斷）：目視臉與定案 identity master／training_v1 不同；並排證據見 review/calendar/yerin_face_check/"
     },
     {
      "src": "kols/yerin-han/images/casting_v1/a04_v1_body_fail.png",
@@ -2866,7 +2996,7 @@
       1728,
       2304
      ],
-     "reason": "檔名標示身形失敗；且同 casting_v1 臉與定案不同"
+     "reason": "暫不採用（待主管覆核判斷）：檔名標示身形失敗；同屬 casting_v1，臉的判斷見比較板 review/calendar/yerin_face_check/"
     },
     {
      "src": "daily140:088.png",
