@@ -5452,6 +5452,96 @@
    "kind": "thumbnail",
    "source": "public/img/z/m_yerin-09.jpg",
    "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/aal_ref02.jpg",
+   "sha256": "0576e6b1b96cec77c89dfe10db38a3bd2992aec43f9836c2d0bd55c7c5304eb1",
+   "kind": "hires_preview",
+   "aal": "ref02",
+   "aal_src": "kols/aaliya-okonkwo/images/face_reference/ref_02.webp",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/aaliya-okonkwo/images/face_reference/ref_02.webp",
+   "source_blob": "3044fa0bb2bfb3570f0270cb8e1cb35527a340bd",
+   "source_sha256": "8233a8836055edea98944f24330f98d96fa2c377a6bf0d2f7f7c3ebab84f658a",
+   "op": "原檔 1728×2304 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/aal_ref02.jpg",
+   "sha256": "3e935bd17954e9a7902956237f4fe36ccfb70c17fa59ae4397fd55a3125fcd64",
+   "kind": "thumbnail",
+   "source": "public/img/z/aal_ref02.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/aal_ref03.jpg",
+   "sha256": "07ff8156a2af30df37a7f932ac2049342df22d37d3142ef23d04f2019a495f70",
+   "kind": "hires_preview",
+   "aal": "ref03",
+   "aal_src": "kols/aaliya-okonkwo/images/face_reference/ref_03.webp",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/aaliya-okonkwo/images/face_reference/ref_03.webp",
+   "source_blob": "cf2e6ffe0da10658cbb6b808f50eb3d1311ae743",
+   "source_sha256": "3a8c629f98bc423a8cf6be9bdefc7534b5cae7d0f317d1edda2f789af3d7ad7b",
+   "op": "原檔 1728×2304 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/aal_ref03.jpg",
+   "sha256": "923ac7ac601c82b3edf9cc2310c56b0f03f5237f8f2d8a92becedcfa089f86e3",
+   "kind": "thumbnail",
+   "source": "public/img/z/aal_ref03.jpg",
+   "op": "等比縮小至 360×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/aal_rest02.jpg",
+   "sha256": "c53c4aea72cb71fcfcc4b51283d66d937a62fdaeed1236bb91a23519713ae128",
+   "kind": "hires_preview",
+   "aal": "rest02",
+   "aal_src": "kols/aaliya-okonkwo/images/soul_test_v1/restaurant_02.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/aaliya-okonkwo/images/soul_test_v1/restaurant_02.png",
+   "source_blob": "783edcabbcc107fd9067863ef22abf5b89b64404",
+   "source_sha256": "d4f0f387ae019483eebabf9d1a2a43cc380318a02bbd261553d0e4f31fdb8952",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/aal_rest02.jpg",
+   "sha256": "ffcc2130a9c501feea3fed4fa96e9e060fed48f6b5c45af535f4cd334f3fb6d0",
+   "kind": "thumbnail",
+   "source": "public/img/z/aal_rest02.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/aal_pool21.jpg",
+   "sha256": "b5d5037612b153fe30753772875dc28d8c258b07d6f5bff9bdd7f26dcae98de2",
+   "kind": "hires_preview",
+   "aal": "pool21",
+   "aal_src": "kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v1.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v1.png",
+   "source_blob": "dd0830bf91855ff273f96d2bf398f422cfb52c17",
+   "source_sha256": "6fafc7fc276b67b778017132a97f59049881b96e6146f2a981d6e6b619cfdb76",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/aal_pool21.jpg",
+   "sha256": "2aff4150a1d1ecc648b35cd3bf0e0d543925504ca51e9f7f43c69f01e174e2ba",
+   "kind": "thumbnail",
+   "source": "public/img/z/aal_pool21.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/z/aal_pool22.jpg",
+   "sha256": "c7229aece7f9dc198cbd89c04d1a687b93108d8d8e2632007b0c211b7e49a9f5",
+   "kind": "hires_preview",
+   "aal": "pool22",
+   "aal_src": "kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v2.png",
+   "source": "repo@4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45:kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v2.png",
+   "source_blob": "a3e55dd838b01e9c1bad948d721d4d3cc531b91d",
+   "source_sha256": "8703056c444d322acf560b613389bd728a2202f62d9fbf15f90cea79b575f8a2",
+   "op": "原檔 1152×2048 等比縮小至 900×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/t/aal_pool22.jpg",
+   "sha256": "77ef51015bd4550867a8332a630e9614fd6f27a3eb388ecdfec08bb2cc5327ee",
+   "kind": "thumbnail",
+   "source": "public/img/z/aal_pool22.jpg",
+   "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
   }
  ]
 }

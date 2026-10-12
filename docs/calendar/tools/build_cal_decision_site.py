@@ -11,6 +11,8 @@
   只做等比縮小（長邊 1600 px，JPEG q88，不帶原檔中繼資料）。頁面資料只放圖片 ID，不放 job_id、來源路徑或帳號資料。
 - 第二階段素材（data/cal_m1_materials.json，本輪人寫清單，從工作目錄讀）：每張照片用同一套來源核對後等比縮小；
   沒有取回原圖的 daily140 照片只複製 repo 的 360×480 縮圖（位元組不變）。名單只依 data/cal_m1_owner_roster.json。
+- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
+  其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
 輸出：docs/calendar/decision_site/public/img/{z,t}/、public/data.js、decision_site/ASSET_MANIFEST.json
@@ -22,6 +24,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -207,6 +210,7 @@ def hires(cid, J, R, C, hf_dir, clean_dir):
 # 圖片仍一律從固定 commit 讀（repo 檔、daily140 縮圖），或從可核對 sha256 的本機快取讀（R2 取回原圖、R3 清理輸出）。
 M1_FILE = 'docs/calendar/data/cal_m1_materials.json'
 ROSTER_FILE = 'docs/calendar/data/cal_m1_owner_roster.json'
+M3_FILE = 'docs/calendar/data/cal_m3_shoot_plan.json'
 MAT_THUMB = (480, 480)
 SRC_ZH = {'repo': '既有原圖（repo）', 'hf': '既有原圖（R2 已取回）', 'clean': 'R3 局部清理版（本機清理輸出）',
           'thumb': '360×480 縮圖（原圖未取回）'}
@@ -303,6 +307,44 @@ def build_materials(cast, R, C, hf_dir, clean_dir):
             'materials_blob': blob_of(wt_bytes(M1_FILE)), 'roster_blob': blob_of(wt_bytes(ROSTER_FILE)),
             'checks': M['checks'], 'people': people, 'pairs': pairs,
             'unmeasured': roster['similarity_concerns']['unmeasured']}
+
+def build_m3(mat):
+    """M-3 拍攝企劃：企劃文字照搬；Aaliya 參考照片（固定 commit）等比縮小；其他圖片只引用既有素材預覽。"""
+    raw = wt_bytes(M3_FILE)
+    P = json.loads(raw)
+    roster = json.loads(wt_bytes(ROSTER_FILE))
+    assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
+    assert P['counts'] == {'generated': 0, 'credits': 0, 'trainings': 0}
+    text = json.dumps(P, ensure_ascii=False)
+    for bad in ('job_id', 'sophia'):
+        assert bad not in text, bad
+    shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit']}
+    hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', text))
+    assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id
+    have = {it['id'] for p in mat['people'] for it in p['items']}
+    for x in P['owner_refs']['items']:
+        assert x['id'] in have, x['id']
+    for p in P['people']:
+        for r in p['refs']:
+            assert r in have, r
+    aal = {}
+    for x in P['aaliya']['items']:
+        b, blob = root_show(x['src'])
+        data, (w, h) = hires_bytes(b)
+        assert [w, h] == x['px'], (x['src'], w, h)
+        pim = Image.open(io.BytesIO(data))
+        iid = 'aal_' + x['key']
+        put(iid, data, MAT_THUMB, {'kind': 'hires_preview', 'aal': x['key'], 'aal_src': x['src'],
+                                   'source': f'repo@{FIXED}:{x["src"]}', 'source_blob': blob, 'source_sha256': sha256(b),
+                                   'op': f'原檔 {w}×{h} 等比縮小至 {pim.width}×{pim.height}（Lanczos，JPEG q88，不帶中繼資料）'},
+            'hires', {'orig_px': [w, h]})
+        aal[x['key']] = iid
+    pub = json.loads(raw)  # 公開資料不放 repo 路徑：Aaliya 只留「子資料夾/檔名」
+    for x in pub['aaliya']['items']:
+        x['file'] = '/'.join(x.pop('src').split('/')[-2:])
+    assert 'kols/' not in json.dumps(pub, ensure_ascii=False)
+    return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
+
 
 # ---------- 資料 ----------
 
@@ -498,6 +540,9 @@ def main():
     # ---------- 第二階段：入選 12 位的素材 ----------
     mat = build_materials(cast, R, C, a.hf_dir, a.clean_dir)
 
+    # ---------- M-3：拍攝企劃 ----------
+    m3 = build_m3(mat)
+
     # ---------- 頁面資料 ----------
     def ph(p):
         q = lay[p]['photos'][0]
@@ -522,6 +567,7 @@ def main():
         'hires_of': {cid: 'hi_' + cid for cid in HI},
         'cast': cast,
         'mat': mat,
+        'm3': m3,
         'images': IMAGES,
     }
     with open(os.path.join(PUB, 'data.js'), 'w', encoding='utf-8') as f:
@@ -565,11 +611,16 @@ def check(hf_dir=None, clean_dir=None):
                 print('裁切無法重現', e['published']); bad += 1
         if e['kind'] == 'hires_preview':
             needs_cache = not e['source'].startswith('repo@')
-            name = e.get('mid') or e['cid']
+            name = e.get('mid') or e.get('aal') or e['cid']
             if needs_cache and not (hf_dir and clean_dir):
                 not_recomputed.append(name)
             else:
-                src = mat_source(e['mat_src'], D140, R, C, hf_dir, clean_dir)[0] if 'mid' in e else hires_source(e['cid'], J, R, C, hf_dir, clean_dir)[0]
+                if 'aal' in e:
+                    src = root_show(e['aal_src'])[0]
+                elif 'mid' in e:
+                    src = mat_source(e['mat_src'], D140, R, C, hf_dir, clean_dir)[0]
+                else:
+                    src = hires_source(e['cid'], J, R, C, hf_dir, clean_dir)[0]
                 if hires_bytes(src)[0] != data:
                     print('高解析預覽無法重現', e['published']); bad += 1
     on_disk = set()

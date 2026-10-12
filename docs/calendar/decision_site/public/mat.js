@@ -216,7 +216,8 @@ ${PEOPLE.map(person).join('')}
 <label class="lbl" for="out-text">將複製的文字（預覽）</label><textarea id="out-text" rows="16" readonly></textarea>
 </section>
 <section class="sec" id="refs"><h2>參考頁</h2>
-<ul class="facts"><li><a href="cast.html">第一階段選角</a>：保留作參考；那裡的草稿狀態不影響已確認的名單。</li>
+<ul class="facts"><li><a href="shoot.html">M-3 寫真拍攝企劃</a>：12 位新寫真的拍攝企劃（尚未生成任何照片），在那裡回饋；不影響這頁的素材選擇。</li>
+<li><a href="cast.html">第一階段選角</a>：保留作參考；那裡的草稿狀態不影響已確認的名單。</li>
 <li><a href="plan.html">原推薦方案參考</a>：R3 的月份樣張與裁切（舊推薦、舊月份）只供參考，<b>不限制</b>這裡的選擇。</li></ul></section>`;
     PEOPLE.forEach(p => refreshPerson(p.pid, true));
     refreshSummary();

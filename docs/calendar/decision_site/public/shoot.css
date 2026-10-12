@@ -1,0 +1,52 @@
+/* M-3 寫真拍攝企劃（shoot.html）；基本樣式沿用 app.css、mat.css */
+.tline { font-weight: 600; color: #333; overflow-wrap: anywhere; }
+.t-ref { background: #e9eef6; color: #1c3150; }
+.t-first { background: #0b6b3a; color: #fff; }
+.callout.warn { background: #fff4e0; border-color: #e7c27a; }
+
+/* Aaliya 與 Penny 參考 */
+.agrid, .ogrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: 10px; margin: 8px 0; }
+.ac, .oc { border: 1px solid #e2dfd8; border-radius: 10px; padding: 6px; background: #fff; min-width: 0; }
+.ac .zoom, .oc .zoom, .rgrid .zoom { aspect-ratio: 3 / 4; background: #e8e6e1; }
+.ac .zoom img, .oc .zoom img, .rgrid .zoom img { height: 100%; object-fit: contain; }
+.ac .facts { font-size: .8rem; line-height: 1.5; }
+.ac-rec { font-size: .74rem; color: #555; margin: .3em 0 0; line-height: 1.4; overflow-wrap: anywhere; }
+.oc-w { font-size: .84rem; font-weight: 600; margin: .3em 0 0; overflow-wrap: anywhere; }
+.oc-c { font-size: .78rem; color: #444; margin: .2em 0 0; overflow-wrap: anywhere; }
+.mdl, .pdl { margin: 6px 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px 12px; font-size: .9rem; line-height: 1.6; }
+.mdl dt, .pdl dt { font-weight: 700; color: #1c3150; margin-top: 6px; }
+.mdl dd, .pdl dd { margin: 0; overflow-wrap: anywhere; }
+.pdl.small { font-size: .84rem; }
+
+/* 12 位 */
+.ov { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: 8px; margin: 10px 0; }
+.ptitle { font-size: 1.02rem; font-weight: 700; color: #7a2d00; margin: .1em 0 .3em; overflow-wrap: anywhere; }
+.plan .st { margin-left: 0; white-space: normal; }
+.pgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 10px 0; }
+.pn-h { font-size: .84rem; font-weight: 600; margin: 0 0 4px; }
+.pn-n { font-size: .76rem; color: #555; margin: 4px 0 0; }
+.ng { display: flex; gap: 8px; align-items: flex-end; }
+.nb { border: 2px dashed #9aa4b2; border-radius: 8px; background: repeating-linear-gradient(45deg, #f4f5f7, #f4f5f7 8px, #eceef1 8px, #eceef1 16px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; color: #4a5260; font-size: .8rem; text-align: center; min-width: 0; }
+.nb b { font-size: .86rem; }
+.nb-h { width: 150px; aspect-ratio: 3 / 2; }
+.nb-v { width: 84px; aspect-ratio: 3 / 4; }
+.rgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+pre.prompt { white-space: pre-wrap; overflow-wrap: anywhere; background: #f6f7f9; border: 1px solid #e1e4e8; border-radius: 6px; padding: 8px; font-size: .78rem; line-height: 1.5; margin: 4px 0 8px; }
+.fb { border: 2px solid #c9d6ee; border-radius: 10px; padding: 8px 10px 10px; margin: 12px 0 0; background: #f7faff; min-width: 0; }
+.fb legend { font-weight: 700; padding: 0 4px; }
+.fb-opts { display: flex; flex-wrap: wrap; gap: 6px 10px; }
+.fb-opts.col { flex-direction: column; }
+.fb-o { display: inline-flex; align-items: flex-start; gap: 6px; border: 1px solid #c9d6ee; border-radius: 6px; padding: 6px 10px; background: #fff; cursor: pointer; font-size: .9rem; line-height: 1.4; min-width: 0; overflow-wrap: anywhere; }
+.fb-o input { margin-top: .2em; flex: none; }
+.fb textarea { width: 100%; }
+.fb .btn.small { margin-top: 6px; }
+
+@media (min-width: 760px) {
+  .pgrid { grid-template-columns: 280px minmax(0, 1fr); align-items: start; }
+  .rgrid { grid-template-columns: repeat(2, minmax(0, 200px)); }
+  .mdl, .pdl { grid-template-columns: 9em minmax(0, 1fr); }
+  .mdl dt, .pdl dt { margin-top: 0; }
+  .agrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .ogrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
