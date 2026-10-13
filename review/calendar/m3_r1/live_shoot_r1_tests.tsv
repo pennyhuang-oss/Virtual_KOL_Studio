@@ -1,0 +1,71 @@
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /shoot.css	200
+PASS	不帶憑證可開 /data.js	200
+PASS	不帶憑證可開 /index.html	200
+PASS	不帶憑證可開 /img/z/aal_ref02.jpg	200
+PASS	不帶憑證可開 /img/t/m_somi-02.jpg	200
+PASS	公開資料沒有 job_id／soul_id／kols 路徑／Soul ID	
+PASS	公開資料是 shoot-plan-v2，生成／credits／訓練都是 0	
+PASS	[desktop] 載入後 localStorage 與 v1 存的內容位元組相同（沒有改寫）	
+PASS	[desktop] 頂端第一行是 R1 輪次字串	
+PASS	[desktop] 新版已回覆 0／12	
+PASS	[desktop] 「這版改了什麼」列出有舊版回饋的 4 位	
+PASS	[desktop] iris-chen：舊版回饋「接受主方向」顯示為舊版、新版選項未勾	
+PASS	[desktop] luna-tanaka：舊版回饋「改用替代方向」顯示為舊版、新版選項未勾	
+PASS	[desktop] somi-oh：舊版回饋「接受主方向」顯示為舊版、新版選項未勾	
+PASS	[desktop] miu-shiraishi：舊版回饋「想修改」顯示為舊版、新版選項未勾	
+PASS	[desktop] Somi 舊備註保留並標示寫於舊版	
+PASS	[desktop] 舊版第 5 題（首批＋credits）標成已撤回、不算新版	
+PASS	[desktop] 新版題目沒有任何費用核准選項	
+PASS	[desktop] 複製：舊回饋寫成「未回覆新版（舊版回饋…不算新版回覆）」	
+PASS	[desktop] 複製第一行是 R1 回饋標頭	
+PASS	[desktop] 24 段 prompt，沒有 porcelain／luminous／brightest	
+PASS	[desktop] Somi：不再手拿炸雞；橫幅只在右緣失焦，直幅沒有食物	
+PASS	[desktop] Miu：沒有圍裙、沒有捧杯，坐在窗邊座位	
+PASS	[desktop] Mia：沒有勾扶手、扭身、拉耳機	
+PASS	[desktop] Iris：站定回眸，不走向鏡頭	
+PASS	[desktop] 每張卡都有取景設計表（8 列）與修訂標示	
+PASS	[desktop] 費用段落：撤回舊預算、生成暫停、第一階段只有 Iris	
+PASS	[desktop] 所有圖片都載入	
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 新選擇後：新版 2／12，Iris 狀態為新版選擇	
+PASS	[desktop] 重新整理後保留；舊選擇與舊備註搬進 prev 保存	
+PASS	[desktop] 複製：新版選擇＋舊版參考分開寫	
+PASS	[desktop] 預覽框與剪貼簿相同	
+PASS	[desktop] 放大檢視可用	
+PASS	[desktop] 素材選擇位元組不變	
+PASS	[desktop] 素材頁照舊讀出選擇（iris-04 橫式、iris-03 備選）	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後 localStorage 與 v1 存的內容位元組相同（沒有改寫）	
+PASS	[mobile390] 頂端第一行是 R1 輪次字串	
+PASS	[mobile390] 新版已回覆 0／12	
+PASS	[mobile390] 「這版改了什麼」列出有舊版回饋的 4 位	
+PASS	[mobile390] iris-chen：舊版回饋「接受主方向」顯示為舊版、新版選項未勾	
+PASS	[mobile390] luna-tanaka：舊版回饋「改用替代方向」顯示為舊版、新版選項未勾	
+PASS	[mobile390] somi-oh：舊版回饋「接受主方向」顯示為舊版、新版選項未勾	
+PASS	[mobile390] miu-shiraishi：舊版回饋「想修改」顯示為舊版、新版選項未勾	
+PASS	[mobile390] Somi 舊備註保留並標示寫於舊版	
+PASS	[mobile390] 舊版第 5 題（首批＋credits）標成已撤回、不算新版	
+PASS	[mobile390] 新版題目沒有任何費用核准選項	
+PASS	[mobile390] 複製：舊回饋寫成「未回覆新版（舊版回饋…不算新版回覆）」	
+PASS	[mobile390] 複製第一行是 R1 回饋標頭	
+PASS	[mobile390] 24 段 prompt，沒有 porcelain／luminous／brightest	
+PASS	[mobile390] Somi：不再手拿炸雞；橫幅只在右緣失焦，直幅沒有食物	
+PASS	[mobile390] Miu：沒有圍裙、沒有捧杯，坐在窗邊座位	
+PASS	[mobile390] Mia：沒有勾扶手、扭身、拉耳機	
+PASS	[mobile390] Iris：站定回眸，不走向鏡頭	
+PASS	[mobile390] 每張卡都有取景設計表（8 列）與修訂標示	
+PASS	[mobile390] 費用段落：撤回舊預算、生成暫停、第一階段只有 Iris	
+PASS	[mobile390] 所有圖片都載入	
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 新選擇後：新版 2／12，Iris 狀態為新版選擇	
+PASS	[mobile390] 重新整理後保留；舊選擇與舊備註搬進 prev 保存	
+PASS	[mobile390] 複製：新版選擇＋舊版參考分開寫	
+PASS	[mobile390] 預覽框與剪貼簿相同	
+PASS	[mobile390] 放大檢視可用	
+PASS	[mobile390] 素材選擇位元組不變	
+PASS	[mobile390] 素材頁照舊讀出選擇（iris-04 橫式、iris-03 備選）	
+PASS	[mobile390] 沒有 JS 錯誤	
