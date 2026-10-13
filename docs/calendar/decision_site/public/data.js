@@ -5176,7 +5176,7 @@ window.CAL_DATA = {
       },
       {
        "k": "設定",
-       "v": "soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖、不用免費額度以外的特殊模式。"
+       "v": "soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖；use_unlim 設為 false（用 credits 付費；查詢時帳號沒有可用的免費額度）。"
       },
       {
        "k": "報價",
@@ -5696,7 +5696,7 @@ window.CAL_DATA = {
     "shared": ""
    }
   ],
-  "plan_blob": "e02ee2fe453c3406acc04079d492ea070c20aa05",
+  "plan_blob": "b4bf90bc181149ca225670541fc247232364cf87",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "questions": [
    "24 套企劃：每套選「接受」或「想修改」，想修改的寫在備註。未回覆不算接受。",

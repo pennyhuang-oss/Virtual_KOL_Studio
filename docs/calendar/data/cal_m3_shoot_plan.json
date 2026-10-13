@@ -2642,7 +2642,7 @@
      },
      {
       "k": "設定",
-      "v": "soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖、不用免費額度以外的特殊模式。"
+      "v": "soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖；use_unlim 設為 false（用 credits 付費；查詢時帳號沒有可用的免費額度）。"
      },
      {
       "k": "報價",

@@ -1106,7 +1106,7 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 | 項目 | 內容 |
 |---|---|
 | 範圍 | 只做 1 張：V-iris-chen 的 prompt 草稿（本頁「prompt 草稿」原文，不沿用上一輪被 Penny 修改的 Iris prompt）。 |
-| 設定 | soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖、不用免費額度以外的特殊模式。 |
+| 設定 | soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖；use_unlim 設為 false（用 credits 付費；查詢時帳號沒有可用的免費額度）。 |
 | 報價 | 今天的預檢：credits 1／credits_exact 0.12；實扣未確認。 |
 | 重試 | 不自動重試。無論結果好壞、成功或失敗，都先停下回報。 |
 | 對帳 | 送出前後各查一次交易明細，記錄這一張的實際扣款；不用餘額對帳（帳號有他人同時使用）。 |
