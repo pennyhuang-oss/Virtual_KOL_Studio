@@ -1,897 +1,1056 @@
-TASK-CAL-001／M-3／R1｜專業寫真企劃修訂與費用查證｜送審報告
+TASK-CAL-001／M-3／R2｜24套雙款獨立寫真企劃｜送審報告
 
-# CAL_18 — M-3 12 位人設專業寫真拍攝企劃（R1 修訂版）
+# CAL_18 — M-3 24 套雙款獨立寫真企劃（shoot-plan-v3）
 
-> 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v2，R1，2026-10-13）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
+> 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v3，R2，2026-10-13）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
 > **僅規劃：沒有生成任何圖片（含測試圖、示意圖），沒有花 credits，沒有上傳，沒有訓練，沒有改 canon 或 Soul ID。** 本輪生成數 0、credits 0、訓練數 0。
-> 這是企劃，不是核准：每一項都要 Penny 拍板；生成放行目前是 BLOCK，之後由主管另發執行指令。
+> 這是企劃，不是核准：24 套內容、月份、版面與 H／V 分配都待 Penny 拍板；生成與費用都未授權。Owner 決策逐字紀錄見 `CAL_19_M3_R2_OWNER_DECISION.md`。
 
-## 0. 版本、範圍與主管覆核
+## 0. 版本
 
 | 項目 | 內容 |
 |---|---|
-| 名單 | roster-v1（docs/calendar/data/cal_m1_owner_roster.json）；不換人，順序不是月份 |
+| 名單 | roster-v1（docs/calendar/data/cal_m1_owner_roster.json）；不換人 |
+| 上一版企劃 | shoot-plan-v2（commit `792d4f4e23ebb85dc10f6b1ebc392c1e35b86e07`） |
+| 這一版 | 依 Penny 決定改成 24 套雙款獨立企劃；撤回「同造型橫直各一張」與「同圖兩款裁切」主策略。 |
 | 素材頁版本 | `b8108eb648a46a57e3bb4dc2158cf878c23d7963` |
 | 桌曆基準 | `4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45` |
-| 上一版企劃 | shoot-plan-v1（commit `256859b3d6bb77b7647837ccdcc14428dcdb7744`） |
-| Aaliya 圖片來源 | repo `4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45`；型錄分支 `claude/kol-dashboard-catalog-gqw9jz` @ `d3fb91ab87547bfa04ee46cf4cfddd6750fcfe52` |
-| 型錄頁 | https://kol-catalog-production.up.railway.app/p/aaliya-okonkwo.html |
-| 模型查詢 | 2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、Soul ID、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。 |
 
-| 主管覆核項目 | 結論 |
-|---|---|
-| Aaliya 研究 | PASS |
-| 整組差異 | PASS |
-| 拍攝內容、姿態 prompt、橫直構圖 | REVISE |
-| 生成放行 | BLOCK（費用依據尚未可信） |
+**參考照片：** 參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。
 
-**R1 移除的全組硬性規則**（不是專業寫真的必要條件）：每位都要寫滿五層服裝、每張都要一件飄動的東西、每張都要兩種色溫、補光一定要來自畫面中看得到的物件。
+## 1. Penny 回饋落實表
 
-## 1. Penny 喜歡的 4 張（審美參考，不變）
+| 人設 | Penny 回饋（逐字） | 怎麼落實 | 橫式款 | 直式款 |
+|---|---|---|---|---|
+| Iris | Iris： - 更顯身材的上衣，搭牛仔迷你裙。 - 身體面向鏡頭，專業寫真姿態、有笑容。 - 不要背部回眸或轉頭看鏡頭。 | 更顯身材的上衣：V 白色貼身方領短上衣（露腰）；H 貼身羅紋針織平口；牛仔迷你裙：V 淺藍高腰牛仔迷你裙；身體面向鏡頭、專業姿態、有笑容：兩款都正面站定（扶柱／插腰／碰髮）並微笑；不要背部回眸或轉頭：兩款 prompt 經程式檢查，不含回頭、轉身字樣 | 午後紅磚騎樓裡，穿米杏色針織套裝的 Iris 正面站定、對鏡頭笑。 | 黃金時段的河濱草地，白色方領短上衣配牛仔迷你裙，正面站著甜笑（Penny 指定的穿搭）。 |
+| Luna | Luna： - 衣服要顯身材。 - 既有參考照片的身材不符合設定。 - 只能借表情／環境，不能當身材標準。 | 衣服顯身材：H 貼身緞面細肩洋裝；V 心形領有骨架的貼身洋裝；既有照片身材不符：所有 Luna 參考照片都標「不作身材參考」，身材依設定數字；只借表情／環境：參考用途只標「表情」與「場景」 | 清晨的京都町家和室，象牙白蕾絲緞面細肩洋裝，席地而坐的安靜微笑。 | 紫陽花盛開的町家庭院，鼠尾草綠馬甲感洋裝，正面站在石板路上。 |
+| Somi | Somi：接受新版暖橘復古棚景主方向。（以上各保留為其中一款，再另設完全不同的一款。） | 接受暖橘復古棚景：H-somi-oh 沿用 v2 原文（含炸雞只在橫幅邊緣）；另一款完全不同：V 雪夜溫泉小鎮、白色針織洋裝＋紅色長大衣 | Penny 已接受的方向：暖橘復古小吃店棚景，針織短開襟＋高腰針織短裙，輕靠吧台大笑。 | 下雪的溫泉小鎮夜晚，象牙白貼身針織洋裝外披紅色長大衣，在燈籠光裡大笑。 |
+| Coco | Coco：接受泳池主方向。（以上各保留為其中一款，再另設完全不同的一款。） | 接受泳池：V-coco-wu 沿用 v2 原文；另一款完全不同：H 初夏薰衣草花田、白色亞麻洋裝 | 初夏傍晚的薰衣草花田，白色細肩亞麻洋裝，拿著草帽大笑。 | Penny 已接受的方向：週末飯店泳池，薄荷綠比基尼＋淺紫透膚罩衫，坐在池邊大笑。 |
+| Mia | Mia： - 場景、服裝全面去電競化。 - 原咖啡座替代方案太普通，兩款重新設計。 - 不放電競椅、耳機、RGB房間等職業符號。 | 全面去電競化：兩款都沒有電競椅、耳機、RGB 房間或霓虹（程式檢查）；咖啡座太普通、兩款重設：H 夏日黃昏遊樂碼頭；V 春夜櫻花步道 | 夏日黃昏的海邊遊樂碼頭，粉色緞面馬甲上衣配白色迷你裙，拿著棉花糖俏皮眨眼。 | 春夜的櫻花河岸步道，淺紫貼身露肩針織洋裝，站在花枝下甜笑。 |
+| Yuna | Yuna： - 普通白色公寓不足。 - 需要更具韓系氛圍的專業寫真。 - 用服裝、妝髮、色調、場景與攝影建立韓系美感，   不靠文字標籤、國旗或隨意塞韓國地標。 | 普通白色公寓不足：兩款都不在公寓；韓系氛圍：H 通透的咖啡館（水光肌、奶油黃＋淺藍）；V 銀杏大道（毛呢短外套套裝＋長靴、柔和底片感）；不靠文字、國旗、地標：prompt 不含國旗、韓文、地名或招牌（程式檢查） | 明亮通透的感性咖啡館，奶油黃短版開襟配淺藍緞面中長裙，坐在窗邊的清透美感。 | 深秋的銀杏大道，奶油色毛呢短外套套裝配黑色長靴，站在落葉上的韓劇感街拍寫真。 |
+| Tammy | Tammy： - 已提的合身洋裝與高跟鞋方向可保留。 - 重新安排與穿搭匹配的高級場景。 - 不是任意白牆或普通階梯。 | 保留合身洋裝＋高跟鞋：H 熱粉方領針織洋裝＋白色露跟高跟鞋；高級場景：H 精品店；V 大飯店大廳（白色西裝洋裝＋黑色細高跟）；不是白牆或普通階梯：prompt 不含階梯與白牆（程式檢查） | 高級精品店裡，熱粉色貼身針織洋裝配白色露跟高跟鞋，站在展示櫃旁的明亮笑容。 | 夜晚的大飯店大廳，白色西裝外套洋裝配黑色細跟鞋，雙手插腰的自信全身照。 |
+| Rin | Rin：採用 shoot-plan-v2 的替代方向。 先精確讀出原替代內容，不猜測或自行替換。 作為其中一款，另一款另設不同服裝與場景。 | v2 替代方向逐字讀出：「出勤前的銀座：黑色絲絨細肩帶長禮服，坐在金色燈光的吧台邊（不拿酒杯）。」→ V-rin-ayase 依原文（黑色絲絨細肩帶長禮服、金色燈光吧台、不拿酒杯）；另一款不同服裝與場景：H 夕陽飯店套房、酒紅緞面垂墜領洋裝、斜躺 | 夕陽中的高樓飯店套房，酒紅緞面垂墜領細肩長洋裝，斜躺在深綠絲絨貴妃椅上。 | Penny 採用的 v2 替代方向：出勤前的銀座，黑色絲絨細肩帶長禮服，坐在金色燈光的吧台邊（不拿酒杯）。 |
+| Rainie | Rainie：接受頂樓夜景血紅洋裝主方向。（以上各保留為其中一款，再另設完全不同的一款。） | 接受頂樓夜景血紅洋裝：H-rainie-hsu 沿用 v2 原文；另一款完全不同：V 雨後夜街、黑色緞面繞頸洋裝＋長皮風衣 | Penny 已接受的方向：頂樓夜景，血紅緞面馬甲高衩迷你洋裝，背靠玻璃欄杆直視鏡頭。 | 雨後的夜晚街道，黑色緞面繞頸迷你洋裝外搭黑色長皮風衣，站在濕亮的路面上直視鏡頭。 |
+| Miu | Miu： - 服裝要呈現設定身材，尤其胸型與腰線。 - 不再以厚重寬鬆毛衣、圍裙遮住身材。 - 性感與甜美並存，不把她只拍成咖啡店工作照。 | 呈現胸型與腰線：H 貼身緞面細肩小可愛；V V 領合身針織洋裝＋細腰帶；不用厚重寬鬆毛衣、圍裙：程式檢查不含 apron、chunky、oversized；性感與甜美並存、不是咖啡店工作照：H 一人公寓晨光；V 運河步道 | 一人公寓的早晨，象牙白蕾絲緞面細肩小可愛與短褲，坐在床邊歪頭甜笑。 | 暮春的運河步道，奶油色 V 領合身針織洋裝繫細腰帶，靠著欄杆甜笑。 |
+| Jia | Jia： - 服裝與場景重新設計。 - 不運動風、不舞蹈工作照。 - 不在攝影棚拍。 - 專業攝影質感可在實景完成，不需要棚景才成立。 | 服裝與場景重設：H 美術館黑色單肩洋裝；V 玻璃溫室白色短上衣＋薄荷綠緞面開衩裙；不運動、不舞蹈、不棚拍：程式檢查不含 studio、dance、sport、sneakers；兩款都是實景 | 現代美術館的白色展廳，黑色單肩貼身中長洋裝帶腰側鏤空，冷靜站在畫作之間。 | 明亮的玻璃溫室，白色無袖立領短上衣配薄荷綠緞面開衩中長裙，站在大葉植物之間。 |
+| Yerin | Yerin： - 可穿高爾夫迷你裙裝。 - 性感、可愛、漂亮是拍攝重點。 - 不打球、不收桿、不拿球桿展示球技。 - 如高爾夫形象寫真，不把她改成啦啦隊職業。 | 高爾夫迷你裙裝：H 淺藍百褶高爾夫迷你裙＋白色針織 polo＋球帽；性感、可愛、漂亮：H 坐在球車上的可愛笑容；V 日落海灘的貼身白洋裝；不打球、不收桿、不拿球桿：程式檢查不含 club、driver、swing；不改成啦啦隊：不含 cheer、pom | 春天早晨的球場，白色無袖針織 polo 配淺藍百褶高爾夫迷你裙，坐在白色球車上的可愛笑容。 | 日落的白沙海灘，白色圓領貼身針織背心洋裝，赤腳站在淺浪邊的燦笑。 |
 
-Penny 在第二階段素材頁把下列 4 張列為備選，沒有指定橫式／直式。記錄為 owner 喜歡的既有候選與審美參考；不轉成主照片、不清空瀏覽器裡的選擇。其餘 8 位沒有選中照片，不代表可以套用舊推薦。
+## 2. 橫式款 12 套總覽
 
-| 素材 ID | 照片 | 可借用的特徵 |
-|---|---|---|
-| iris-04 | Iris｜公園夕陽、白色連帽短上衣＋黑短褲、回頭 | 黃金時段逆光、戶外草地、身形完整的 3/4 身 |
-| luna-10 | Luna｜公園夕陽、白色小碎花洋裝、全身 | 柔和暖光、淺色洋裝、乾淨的戶外背景 |
-| somi-02 | Somi｜深夜炸雞、握罐甜笑 | 人設本業（吃）＋暖色、笑容、生活感 |
-| rin-04 | Rin｜緞面晨袍、回頭背影 | 緞面質感、裸肩回眸、成熟性感 |
+| 月份（推薦） | ID | 主題 | 環境 | 服裝 | 色彩 | 姿態 | 表情 | 性感程度 | 攝影方法 | 景別 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 月 | H-yuna-kim | 明亮通透的感性咖啡館，奶油黃短版開襟配淺藍緞面中長裙，坐在窗邊的清透美感。 | 明亮咖啡館（室內） | 上身：奶油黃貼身短版針織開襟（當上衣扣起，柔和 V 領）；下身：淺藍緞面斜裁中長裙；鞋：白色尖頭平底鞋；配件：耳上紅色櫻桃髮夾 | 奶油黃・淺藍・奶油白 | 坐在轉向鏡頭的咖啡椅上，雙腿在膝上交疊。一手放在桌緣，一手放在膝上。 | 平靜柔和的微笑 | 低 | 明亮漫射窗光、略偏亮的通透曝光 | 坐姿全身（16:9） |
+| 2 月 | H-rin-ayase | 夕陽中的高樓飯店套房，酒紅緞面垂墜領細肩長洋裝，斜躺在深綠絲絨貴妃椅上。 | 飯店套房（室內夕陽） | 洋裝：深酒紅真絲緞面垂墜領細肩中長洋裝；鞋：赤腳；配件：細金鍊項鍊、金色小耳針 | 酒紅・深綠・柔金 | 面向鏡頭斜躺在貴妃椅上，用一邊手肘撐著。一手撐在手肘下，一手放在臀側。 | 平靜、心照不宣的半笑 | 高 | 夕陽窗光＋柔光補光 | 斜躺全身（16:9） |
+| 3 月 | H-miu-shiraishi | 一人公寓的早晨，象牙白蕾絲緞面細肩小可愛與短褲，坐在床邊歪頭甜笑。 | 一人公寓（室內早晨） | 上身：象牙白緞面細肩小可愛（細蕾絲滾邊）；下身：同色緞面短褲；鞋：赤腳；配件：細金耳針、細金手鍊 | 象牙白・奶油・暖木 | 面向鏡頭坐在床邊，雙膝併攏、略偏向一側。雙手撐在身旁的床上。 | 歪頭、柔和的甜笑 | 高 | 紗簾晨光＋反光 | 坐姿全身（16:9） |
+| 4 月 | H-tammy-chou | 高級精品店裡，熱粉色貼身針織洋裝配白色露跟高跟鞋，站在展示櫃旁的明亮笑容。 | 精品店（室內） | 洋裝：熱粉色方領羅紋針織貼身迷你洋裝（保留 Penny 同意的方向）；鞋：白色尖頭露跟高跟鞋；配件：手臂掛小型白色硬挺素面手提包、金色圈耳環 | 熱粉・奶油・大理石白・柔金 | 正面站在玻璃展示櫃旁，重心在一隻腳。一手放在展示櫃上，一手插腰。 | 明亮的笑容 | 中 | 柔光主光＋展示櫃投射燈 | 膝上（16:9） |
+| 5 月 | H-yerin-han | 春天早晨的球場，白色無袖針織 polo 配淺藍百褶高爾夫迷你裙，坐在白色球車上的可愛笑容。 | 高爾夫球場（戶外） | 上身：白色無袖貼身針織高爾夫 polo；下身：淺天空藍百褶高爾夫迷你裙；鞋：白色高爾夫鞋；配件：素面白色球帽、小金色耳針 | 亮綠・天空藍・白 | 側坐在球車前座、身體面向鏡頭，雙腿伸出車外、在腳踝交叉。一手搭在椅背上，一手放在膝上。 | 明亮可愛的笑 | 中 | 晴朗晨光＋反光板 | 坐姿全身（16:9） |
+| 6 月 | H-coco-wu | 初夏傍晚的薰衣草花田，白色細肩亞麻洋裝，拿著草帽大笑。 | 花田（戶外） | 洋裝：白色亞麻細肩洋裝，抓皺貼身上身、柔和 V 領、收腰、微蓬迷你裙；鞋：白色平底涼鞋；配件：白色雛菊髮夾、腳踝細金鍊、草帽（拿在手上） | 薰衣草紫・白・暖金 | 正面站在花壟之間。一手把草帽拿在身側，一手把頭髮塞到耳後。 | 瞇眼大笑、深酒窩 | 中 | 傍晚逆光＋反光板 | 膝上（16:9） |
+| 7 月 | H-mia-huang | 夏日黃昏的海邊遊樂碼頭，粉色緞面馬甲上衣配白色迷你裙，拿著棉花糖俏皮眨眼。 | 海邊遊樂碼頭（戶外黃昏） | 上身：粉色緞面馬甲上衣（心形領）；下身：白色高腰 A 字迷你裙；鞋：白色厚底涼鞋；配件：小珍珠耳環、細銀手鍊、一支粉色棉花糖 | 棉花糖粉・薰衣草紫・柔金 | 正面站在木棧道上。一手插腰，一手把棉花糖拿在肩高、離開臉。 | 俏皮眨眼、挑逗的半笑 | 中 | 黃昏天光＋柔光主光 | 膝上（16:9） |
+| 8 月 | H-iris-chen | 午後紅磚騎樓裡，穿米杏色針織套裝的 Iris 正面站定、對鏡頭笑。 | 城市老街（戶外） | 上身：米杏色貼身羅紋針織平口上衣；下身：同色高腰針織迷你裙（套裝）；鞋：米色厚底繫帶涼鞋；配件：細金鍊項鍊 | 紅磚・米杏・暖灰 | 正面站在磚柱旁，重心在左腳。一手輕扶肩高的磚柱，一手插腰。 | 溫暖的笑容 | 中 | 側面午後光＋反光板 | 膝上（16:9） |
+| 9 月 | H-jia-seo | 現代美術館的白色展廳，黑色單肩貼身中長洋裝帶腰側鏤空，冷靜站在畫作之間。 | 美術館（室內） | 洋裝：黑色單肩貼身中長洋裝，腰側一小塊鏤空；鞋：黑色細帶高跟鞋；配件：小銀色圈耳環 | 黑・白・灰・薄荷 | 正面站在展廳中央，重心在一隻腳。一手放在腰側，一手自然垂放。 | 冷靜自信的半笑 | 中 | 天窗冷光＋柔光主光 | 膝上（16:9） |
+| 10 月 | H-luna-tanaka | 清晨的京都町家和室，象牙白蕾絲緞面細肩洋裝，席地而坐的安靜微笑。 | 和室（室內） | 洋裝：象牙白真絲細肩洋裝，細蕾絲滾邊、貼身上身、裙長大腿中段；鞋：赤腳（室內）；配件：細金鍊項鍊、耳上珍珠髮夾 | 柔白・暖木・淡粉 | 在榻榻米上側坐、雙腿收在一側，身體面向鏡頭。兩手輕放在大腿上。 | 安靜的淺笑 | 中高 | 紙門柔光＋反光卡 | 席地坐姿全身（16:9） |
+| 11 月 | H-somi-oh | Penny 已接受的方向：暖橘復古小吃店棚景，針織短開襟＋高腰針織短裙，輕靠吧台大笑。 | 復古小吃店棚景（棚內） | 上身：奶油色合身羅紋針織短開襟（扣起）；下身：高腰鏽橘色針織迷你裙；鞋：棕色有跟皮革樂福鞋；配件：紅色琺瑯小愛心耳環 | 暖橘・奶油・紅 | 站著，一側臀部輕靠磁磚吧台，重心在後腳、前腳輕交叉。一手放在吧台邊緣，一手把頭髮塞到耳後。 | 月牙眼大笑、露出酒窩 | 中 | 暖色柔光箱棚拍 | 膝上（16:9） |
+| 12 月 | H-rainie-hsu | Penny 已接受的方向：頂樓夜景，血紅緞面馬甲高衩迷你洋裝，背靠玻璃欄杆直視鏡頭。 | 頂樓露台（戶外夜晚） | 洋裝：血紅緞面馬甲迷你洋裝（大腿高衩）；鞋：黑色細帶高跟涼鞋；配件：大型銀色垂墜耳環、細銀手環 | 血紅・黑・銀・深藍 | 背靠玻璃欄杆，一腳從高衩往前。雙手放在身後的欄杆上；不拿任何杯子。 | 自信又帶點壞的笑 | 高 | 夜景柔光箱主光＋城市散景 | 膝上（16:9） |
 
-四張共同點：光線有方向（夕陽、暖燈）、人物是主角、服裝或材質好看（連帽短上衣、碎花洋裝、緞面）、表情自然；不是手機自拍。這和 Penny 這輪要的「專業寫真質感」一致，企劃直接沿用這些特徵。
+## 3. 直式款 12 套總覽
 
-## 2. Aaliya 研究（主管 PASS；方法清單 R1 修訂）
+| 月份（推薦） | ID | 主題 | 環境 | 服裝 | 色彩 | 姿態 | 表情 | 性感程度 | 攝影方法 | 景別 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 月 | V-tammy-chou | 夜晚的大飯店大廳，白色西裝外套洋裝配黑色細跟鞋，雙手插腰的自信全身照。 | 飯店大廳（室內夜晚） | 洋裝：白色合身西裝外套式迷你洋裝（深 V 翻領、金色扣子、繫腰帶）；鞋：黑色尖頭細高跟鞋；配件：金色垂墜耳環 | 白・金・暖大理石 | 正面站在大理石柱旁，一腳略往前。雙手插腰。 | 自信的笑容 | 中 | 吊燈環境光＋柔光主光 | 全身（3:4） |
+| 2 月 | V-jia-seo | 明亮的玻璃溫室，白色無袖立領短上衣配薄荷綠緞面開衩中長裙，站在大葉植物之間。 | 玻璃溫室（室內實景） | 上身：白色無袖立領貼身短上衣（露腰）；下身：高腰薄荷鼠尾草綠緞面中長裙（側開衩）；鞋：白色細帶涼鞋；配件：細銀耳針 | 白・薄荷・深綠 | 正面站在植物之間的石板路上。一手輕觸身旁的大片龜背芋葉，一手插腰。 | 冷靜柔和的微笑 | 中 | 溫室漫射天光＋柔光 | 膝上（3:4） |
+| 3 月 | V-mia-huang | 春夜的櫻花河岸步道，淺紫貼身露肩針織洋裝，站在花枝下甜笑。 | 櫻花河岸（戶外夜晚） | 洋裝：淺紫細針織貼身露肩迷你洋裝；鞋：白色及膝長靴；配件：一側小珍珠髮夾、細銀耳環 | 粉櫻・淺紫・夜藍 | 正面站在低垂的花枝下。一手輕觸肩旁的花枝，一手自然垂放。 | 甜甜的微笑 | 中 | 夜景柔光主光＋燈籠 | 膝上（3:4） |
+| 4 月 | V-miu-shiraishi | 暮春的運河步道，奶油色 V 領合身針織洋裝繫細腰帶，靠著欄杆甜笑。 | 運河步道（戶外） | 洋裝：奶油色 V 領細羅紋合身針織迷你洋裝（前排小扣、細棕色腰帶）；鞋：奶油色繫踝低跟鞋；配件：細金耳針 | 奶油・新綠・淺棕 | 正面站在欄杆旁，重心在一隻腳。一手扶著欄杆，一手輕輕拿著臉旁的一縷頭髮。 | 甜甜的微笑 | 中 | 陰天柔光＋反光板 | 膝上（3:4） |
+| 5 月 | V-rainie-hsu | 雨後的夜晚街道，黑色緞面繞頸迷你洋裝外搭黑色長皮風衣，站在濕亮的路面上直視鏡頭。 | 雨後夜街（戶外夜晚） | 洋裝：黑色緞面繞頸迷你洋裝；外套：黑色長版皮革風衣（敞開）；鞋：黑色細跟尖頭短靴；配件：大型銀色垂墜耳環 | 黑・銀・深藍・琥珀 | 正面站在濕亮的人行道上，重心在一隻腳。一手拉著敞開的風衣衣襟在腰間，一手自然垂放。 | 自信、帶點壞的笑 | 中高 | 夜景柔光主光＋濕路面倒影 | 膝上（3:4） |
+| 6 月 | V-luna-tanaka | 紫陽花盛開的町家庭院，鼠尾草綠馬甲感洋裝，正面站在石板路上。 | 町家庭院（戶外） | 洋裝：淺鼠尾草綠棉質洋裝，心形領、有骨架的貼身上身、微蓬迷你裙；鞋：米色低跟繫帶涼鞋；配件：細金手鍊 | 鼠尾草綠・白・青苔綠 | 正面站在石板路上，重心在一隻腳。雙手輕輕交握在身後。 | 溫柔的微笑 | 中 | 陰天柔光＋反光板 | 全身（3:4） |
+| 7 月 | V-coco-wu | Penny 已接受的方向：週末飯店泳池，薄荷綠比基尼＋淺紫透膚罩衫，坐在池邊大笑。 | 飯店泳池（戶外） | 泳裝：薄荷綠羅紋三角比基尼上衣與同色側綁下著（完整遮蔽）；外搭：敞開的淺紫透膚短袖罩衫（落在肩後）；配件：白色雛菊髮夾、腳踝細金鍊 | 薄荷綠・淺紫・湖水綠 | 坐在池邊、兩條小腿泡在水裡，身體往後。雙手撐在身後地上。 | 歪頭、瞇眼大笑、酒窩 | 高 | 晴天高光＋反光板 | 坐姿到水面（3:4） |
+| 8 月 | V-yerin-han | 日落的白沙海灘，白色圓領貼身針織背心洋裝，赤腳站在淺浪邊的燦笑。 | 海灘夕陽（戶外） | 洋裝：白色圓領羅紋貼身背心迷你洋裝；鞋：赤腳；配件：小金色圈耳環、腳踝細金鍊 | 暖金・蜜桃・白・淡藍 | 正面站在浪花邊的淺水裡，重心在一隻腳。一手輕放在鎖骨，一手自然垂放。 | 大方燦爛的笑 | 中 | 夕陽逆光＋反光板 | 膝上（3:4） |
+| 9 月 | V-iris-chen | 黃金時段的河濱草地，白色方領短上衣配牛仔迷你裙，正面站著甜笑（Penny 指定的穿搭）。 | 河濱草地（戶外） | 上身：白色貼身羅紋方領短袖短上衣（露腰）；下身：淺藍高腰牛仔迷你裙；鞋：白色低筒帆布鞋；配件：小金色圈耳環 | 米白・淺牛仔藍・暖金 | 身體正面朝鏡頭站著，重心在一隻腳、另一膝放鬆。一手插腰，一手輕碰太陽穴旁的頭髮。 | 明亮溫暖的笑 | 中 | 黃金時段逆光＋反光板 | 膝上（3:4） |
+| 10 月 | V-rin-ayase | Penny 採用的 v2 替代方向：出勤前的銀座，黑色絲絨細肩帶長禮服，坐在金色燈光的吧台邊（不拿酒杯）。 | 會員制酒吧（室內夜晚） | 洋裝：黑色絲絨細肩帶及地長禮服（貼身上身）；鞋：黑色細帶高跟鞋；配件：小金色垂墜耳環、細金手鍊 | 黑・金・深木 | 坐在高腳椅上、身體轉向鏡頭，雙腿交疊。一手手肘靠在吧台上，一手放在膝上；手上不拿杯子。 | 平靜、端莊的微笑 | 中 | 金色吊燈＋柔光主光 | 坐姿全身（3:4） |
+| 11 月 | V-yuna-kim | 深秋的銀杏大道，奶油色毛呢短外套套裝配黑色長靴，站在落葉上的韓劇感街拍寫真。 | 銀杏大道（戶外） | 上身：奶油色毛呢短外套（無領、扣起、合身）；下身：同色高腰毛呢迷你裙；鞋：黑色及膝皮長靴；配件：小珍珠耳環、小黑色肩背包 | 銀杏金黃・奶油・黑 | 正面站在落葉人行道上，重心在一隻腳。一手拉著肩上的包包背帶，一手自然垂放。 | 頭微傾、柔和的微笑 | 低中 | 午後逆光＋反光板 | 全身（3:4） |
+| 12 月 | V-somi-oh | 下雪的溫泉小鎮夜晚，象牙白貼身針織洋裝外披紅色長大衣，在燈籠光裡大笑。 | 溫泉小鎮雪夜（戶外） | 洋裝：象牙白貼身羅紋針織迷你洋裝（高圓領）；外套：紅色羊毛長大衣（敞開）；鞋：白色及膝長靴；配件：小珍珠耳環 | 紅・象牙白・燈籠琥珀・雪夜藍 | 正面站在雪地上，重心在一隻腳。雙手插在敞開的大衣口袋裡，把大衣往後撐開。 | 月牙眼大笑、露出酒窩 | 低中 | 夜景暖色主光＋燈籠 | 膝上（3:4） |
 
-**身分對應：** repo 資料夾名稱是 aaliya-okonkwo，profile.json 的 id 是 aaliya-rivera、姓名 Aaliya Rivera。README.md 註明「資料夾名稱為 aaliya-okonkwo（歷史原因，人格已改為 LA 拉丁裔設定）」。本輪不改人設、不改資料夾。
+## 4. 兩本月份推薦（待 Penny 拍板）
 
-**來源一致性：** 型錄頁的 12 張圖（catalog/data/selection.json 的 aaliya-okonkwo）＝repo 裡 Aaliya 資料夾的 soul_test_v1 8 張＋face_reference 4 張；三個版本（本分支 HEAD、型錄分支 d3fb91a、素材基準 4fd3995）git blob 逐一相同。
+| 月份 | 橫式款 | 理由 | 直式款 | 理由 |
+|---|---|---|---|---|
+| 1 月 | H-yuna-kim（Yuna） | 冬日的明亮咖啡館，用清透的奶油黃開場 | V-tammy-chou（Tammy） | 新年的大飯店大廳，白金色開場 |
+| 2 月 | H-rin-ayase（Rin） | 夕陽套房的酒紅緞面，冬季的溫暖華麗 | V-jia-seo（Jia） | 冬末溫室的新綠 |
+| 3 月 | H-miu-shiraishi（Miu） | 早春晨光的一人公寓 | V-mia-huang（Mia） | 春夜櫻花 |
+| 4 月 | H-tammy-chou（Tammy） | 春天逛精品店的熱粉洋裝 | V-miu-shiraishi（Miu） | 暮春運河新綠 |
+| 5 月 | H-yerin-han（Yerin） | 春日球場的清新綠 | V-rainie-hsu（Rainie） | 梅雨季的雨後夜街 |
+| 6 月 | H-coco-wu（Coco） | 初夏薰衣草花田 | V-luna-tanaka（Luna） | 紫陽花季的庭院 |
+| 7 月 | H-mia-huang（Mia） | 盛夏黃昏的遊樂碼頭 | V-coco-wu（Coco） | 盛夏泳池 |
+| 8 月 | H-iris-chen（Iris） | 夏末午後的紅磚騎樓 | V-yerin-han（Yerin） | 夏日夕陽海灘 |
+| 9 月 | H-jia-seo（Jia） | 初秋美術館的冷調 | V-iris-chen（Iris） | 夏末黃金時段草地 |
+| 10 月 | H-luna-tanaka（Luna） | 秋日清晨的和室柔光 | V-rin-ayase（Rin） | 秋夜的金色酒吧 |
+| 11 月 | H-somi-oh（Somi） | 晚秋的暖橘棚景 | V-yuna-kim（Yuna） | 深秋銀杏大道 |
+| 12 月 | H-rainie-hsu（Rainie） | 年末頂樓夜景的派對感收尾 | V-somi-oh（Somi） | 冬天下雪的溫泉小鎮 |
 
-**⚠ Aaliya 的臉不能當其他人設的身分參考。下面只移植拍攝方法：光線、構圖、姿態、服裝材質；不複製她的服裝、場景、燈光組合或 prompt。**
+- 每本 12 位各出現一次；同一月份兩本是不同的人。
+- 既有碰撞配對（Miu–Jia、Miu–Somi、Jia–Somi、Yerin–Rin）與 R2 目視相似（Somi–Tammy、Iris–Rainie）：不放同一月份，也不放在同一本的相鄰月份。這不是同框規則（每頁只有一人），只是避免翻頁時直接並排比較。
+- 先看季節（花田、紫陽花、櫻花、銀杏、雪景、海灘、泳池這些有季節的場景放在對的月份），再讓前後月份的色調交替；不為了季節改動已接受的企劃。
+- 不把 12 人編成劇情。月份只是推薦，待 Penny 拍板。
 
-### 2.1 紀錄（有寫的 vs 沒寫的）
+## 5. 24 套企劃
 
-- face_reference：generation_notes.md 只記載這 4 張是 Soul 訓練輸入（ref_01–ref_04）；沒有逐張的模型、prompt 或 job。Coco 的 generation_notes.md 轉述初代 6 位（含 Aaliya）的參考圖用 seedream_v4_5——這是轉述，不是 Aaliya 逐張紀錄，列為「推定、未確認」。Soul ID：不適用（這 4 張是訓練前的輸入）。
-- soul_test_v1：generation_notes.md「訓練後測試生成（2026-06-29）」：明寫「生成記錄遺失：未即時記錄 Job ID 和 prompt」。章節位置與 Usage 範例（soul_2＋該人設的 Soul ID）推定為 soul_2＋該 Soul ID，但逐張未確認；quality、aspect_ratio 都沒有紀錄。
-- 後製／中繼資料：檔案沒有 EXIF、PNG 文字區塊或其他中繼資料；repo 是淺層 clone，加入這些檔案的 commit 不在可見歷史內。沒有任何紀錄提到後製、裁切或增強——「沒有紀錄」不等於「沒有做」，列為未知。
+### 5.1 H-iris-chen｜Iris｜橫式款（新企劃）
 
-### 2.2 入選 5 張的證據表
-
-| # | 檔案（repo 路徑） | 尺寸 | 類別 | 模型 | 原始 prompt | Soul ID | 後製／裁切／增強 | 拍攝形式（目視） |
-|---|---|---|---|---|---|---|---|---|
-| 1 | `kols/aaliya-okonkwo/images/face_reference/ref_02.webp` | 1728×2304 | face_reference（Soul 訓練輸入） | 未逐張記錄（推定 seedream_v4_5，依他人筆記轉述，未確認） | 未知（無紀錄） | 不適用（訓練前） | 未知 | 黃金時段逆光・斜倚 3/4 身 |
-| 2 | `kols/aaliya-okonkwo/images/face_reference/ref_03.webp` | 1728×2304 | face_reference（Soul 訓練輸入） | 未逐張記錄（同上，推定、未確認） | 未知（無紀錄） | 不適用（訓練前） | 未知 | 側光・插腰站姿 3/4 身 |
-| 3 | `kols/aaliya-okonkwo/images/soul_test_v1/restaurant_02.png` | 1152×2048 | soul_test_v1（Soul 訓練後測試） | 推定 soul_2＋該 Soul ID（紀錄遺失，未確認） | 未知（紀錄明寫遺失） | 推定使用，未確認 | 未知 | 夜間室內暖燈・坐姿 3/4 身 |
-| 4 | `kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v1.png` | 1152×2048 | soul_test_v1（Soul 訓練後測試） | 推定 soul_2＋該 Soul ID（紀錄遺失，未確認） | 未知（紀錄明寫遺失） | 推定使用，未確認 | 未知 | 戶外硬光・全身正面站姿 |
-| 5 | `kols/aaliya-okonkwo/images/soul_test_v1/poolside_02_v2.png` | 1152×2048 | soul_test_v1（Soul 訓練後測試） | 推定 soul_2＋該 Soul ID（紀錄遺失，未確認） | 未知（紀錄明寫遺失） | 推定使用，未確認 | 未知 | 坐姿・遠景城市留白 |
-
-「尺寸」是讀檔實測；「模型／prompt／Soul ID／後製」只照錄紀錄，紀錄沒有的寫「未知」或「推定」。
-
-### 2.3 目視觀察（不是紀錄）
-
-1. **黃金時段逆光・斜倚 3/4 身**：太陽在她身後斜上方，頭髮與肩線有一圈暖色輪廓光；臉部靠前方的環境反光補亮，沒有死黑；背景是失焦的綠樹與天空，只有一個主體；身體斜倚形成對角線；服裝單純（素色短 T＋牛仔褲），讓身形與光線成為重點。
-2. **側光・插腰站姿 3/4 身**：低角度暖陽從側面打來，臉的受光面清楚、陰影面柔和；一手插腰、身體 3/4 側、重心在後腳——典型顯身形的站姿；背景樹叢失焦，地面與天空都乾淨。
-3. **夜間室內暖燈・坐姿 3/4 身**：光源是畫面裡看得到的暖色串燈，背景整片暖色散景、遠處較暗；貼身針織洋裝的材質與曲線清楚；坐在木椅上、身體微側，一手放在腿上；直視鏡頭、表情收斂——是「拍照」的姿態，不是隨拍。
-4. **戶外硬光・全身正面站姿**：晴天高角度陽光，泳池水面把青綠色反光打回腿與身體下側；全身置中、腳在畫面下緣、上方留天空——全身照沒有變形；長版針織罩衫垂到小腿，拉長身形線條；背景只有棕櫚樹與泳池，沒有人。
-5. **坐姿・遠景城市留白**：人物只占畫面約三分之一，大片城市遠景與天空當留白——這種構圖最容易改成橫式；坐在池邊、雙腿入水，身體形成 S 形；白天柔和的自然光；缺點：人物偏小，臉的細節不足，桌曆用要更靠近。
-
-未採用：自拍 2 張（selfie_01／02）是手機自拍角度，正是 Penny 這輪要避免的形式，不列為參考；restaurant_01、poolside_01_v1／v2 與入選的同場景，不重複列。
-
-### 2.4 可移植的方法（R1 修訂版）
-
-| 項目 | 做法 |
-|---|---|
-| 主光／補光 | 主光要有方向（夕陽在身後、窗在右側、柔光箱在左前）。補光可以來自畫面外的柔光箱、反光板或補光燈，不必是畫面裡看得到的東西。逆光一定要有足夠的臉部補光，讓臉曝光正確、看得清楚。 |
-| 背景層次 | 前景乾淨、主體清楚、背景失焦。場景寫「有什麼」而不是「沒有什麼」：例如「草地與小徑空無一人」。 |
-| 人物比例 | 先定景別（全身、膝上、大腿以上），再依焦段算距離，讓人物佔畫面高度約 80–88%；不要讓橫幅三分之二是空背景。每張的換算見各位的「取景設計」。 |
-| 服裝 | 造型要完整、像寫真穿搭：材質、剪裁、顏色寫清楚，配件依畫面需要；不硬性規定件數。 |
-| 表情 | 一個有名字的表情加視線，是一個靜止的瞬間；不寫「先……再……」這種需要時間的變化。 |
-| 姿態 | 每張只有一個主要姿態：重心在哪隻腳、兩手各放哪裡；手部安排簡單，不疊加多個動作。 |
-| 鏡頭感 | 他拍、全片幅相機、指定焦段與距離；不寫手機前鏡頭、不寫自拍。 |
-| 色彩與皮膚 | 保留人物原本的膚色與自然肌膚質感（毛孔、細紋理）；膚色只寫一次，不重複堆疊「瓷白」之類的字；色溫跟著場景走，不強制每張兩種色溫。 |
-
-## 3. 12 位差異總表
-
-| 人設 | 企劃名稱 | 修訂 | 時段 | 光線 | 配色 | 場景 | 服裝 | 姿勢 | 表情 | 取景 | 第一階段 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Iris Chen（陳芯語，22） | 河濱草地的黃金時段 | 姿態與細節 | 傍晚 | 逆光＋畫面外反光板 | 米白・淺藍・暖金 | 河濱草地 | 平口短上衣＋牛仔短褲＋開襟 | 站定、越肩回眸 | 甜笑 | 橫 膝上／直 全身 | 建議 |
-| Luna Tanaka（田中ひな，20） | 京都老宅後院的紫陽花 | 姿態與細節 | 白天（陰天） | 大面積柔光＋反光板 | 鼠尾草綠・白 | 町家後院紫陽花 | 方領蕾絲迷你洋裝 | 站姿、一手扶籬笆 | 安靜淺笑 | 橫 膝上／直 全身 |  |
-| Somi Oh（오소미，24） | 暖橘色的復古棚景 | 主方向 | 棚內 | 暖色柔光箱 | 暖橘・奶油・紅 | 復古小吃店棚景 | 針織短開襟＋高腰針織短裙 | 輕靠吧台、塞頭髮 | 月牙眼大笑 | 橫 膝上／直 全身 |  |
-| Coco Wu（吳可可，20） | 週末飯店泳池的薄荷綠 | 姿態與細節 | 上午 | 晴天高光＋反光板 | 薄荷綠・淺紫・湖水綠 | 飯店泳池 | 比基尼＋透膚罩衫 | 池邊坐姿往後撐 | 歪頭瞇眼大笑 | 橫 坐姿到水面／直 坐姿到水面 |  |
-| Mia Huang（黃米亞，22） | 粉紫霓虹的電競時尚棚 | 主方向 | 棚內 | 中性柔光箱＋粉紫輪廓 | 洋紅・紫・黑 | 電競棚景 | 短版帽 T＋背心＋短褲＋過膝襪 | 站在椅旁、插腰 | 眨眼半笑 | 橫 膝上／直 全身 |  |
-| Yuna Kim（김하은，21） | 首爾公寓的極簡窗光 | 姿態與細節 | 早晨 | 紗簾漫射窗光 | 冷白・柔灰・象牙 | 極簡白色公寓 | 針織開襟＋緞面中長裙 | 長凳併膝側坐 | 平靜淺笑 | 橫 坐姿全身／直 坐姿膝上 |  |
-| Tammy Chou（周語彤，24） | 都會白色建築的熱粉色洋裝（型錄外拍） | 姿態與細節 | 晴天白天 | 硬光＋反光板 | 熱粉・白・藍灰 | 白色建築階梯 | 貼身針織洋裝＋高跟鞋 | 站在階梯上、插腰 | 明亮笑容 | 橫 全身／直 膝上 |  |
-| Rin Ayase（綾瀨凜，25） | 黎明公寓的祖母綠緞袍 | 姿態與細節 | 黎明 | 冷色窗光＋暖色檯燈 | 祖母綠・金・象牙 | 高樓公寓臥室 | 緞面晨袍 | 背影 3/4、越肩回眸 | 心照不宣的半笑 | 橫 大腿中段以上／直 膝上 |  |
-| Rainie Hsu（許雷妮，24） | 頂樓夜景的血紅緞面馬甲洋裝 | 姿態與細節 | 夜晚 | 明亮柔光箱＋城市散景 | 血紅・黑・銀・深藍 | 頂樓露台 | 緞面馬甲高衩迷你洋裝 | 背靠欄杆、一腳向前 | 直視、自信壞笑 | 橫 膝上／直 全身 |  |
-| Miu Shiraishi（白石美羽，22） | 奶油色咖啡館的窗邊座位 | 主方向 | 早晨 | 暖色窗光＋補光 | 奶油・橡木・淺棕 | 咖啡館窗邊座位 | 露肩粗針織＋收腰麂皮短裙 | 窗邊長凳、交疊腿坐姿 | 歪頭甜笑 | 橫 坐姿全身／直 坐姿膝上 |  |
-| Jia Seo（서지아，22） | 灰色無縫棚的舞者時尚 | 姿態與細節 | 棚內 | 冷白柔光箱＋條燈輪廓 | 黑・灰・木色・薄荷綠 | 灰色無縫棚 | 單肩連身衣＋窄管褲 | 停住的舞蹈線條 | 冷靜自信半笑 | 橫 全身／直 全身 |  |
-| Yerin Han（한예린，26） | 清晨霧中的球道 | 姿態與細節 | 清晨 | 逆光＋反光板 | 天空藍・白・草綠 | 高爾夫球道 | 無袖針織 polo＋百褶短裙＋球帽 | 球桿橫掛肩後 | 大方明亮的笑 | 橫 膝上／直 全身 |  |
-
-**仍然接近、需要 Penny 判斷的地方（不宣稱已消除）：**
-
-- 窗邊光有三位：Yuna（冷白漫射、極簡、併膝坐姿）、Miu（暖色窗光、咖啡館木頭、交疊腿坐姿）、Rin（黎明冷光＋暖燈、暗色、背影回眸）。Miu 這版從吧台改到窗邊座位，和 Yuna 更接近了；若 Penny 覺得太近，其中一位可以用替代方向。
-- 坐姿有三位：Coco、Yuna、Miu；其餘九位站姿。
-- 開懷大笑剩 Somi、Coco；Tammy、Yerin 是明亮笑容；Iris 改成甜笑。
-- 棚拍三位：Somi（暖橘搭景）、Mia（霓虹電競）、Jia（灰色無縫），色彩與道具完全不同。
-- 碰撞配對（Miu–Jia、Miu–Somi、Jia–Somi、Yerin–Rin）與 R2 目視相似（Somi–Tammy、Iris–Rainie）：只用拍攝調性拉開，不改臉、不換人；不宣稱能消除碰撞。每張只有一位，不違反同框規則。
-
-## 4. 每位企劃
-
-每位一個主推薦、一個替代方向。「參考照片」是第二階段素材頁既有的照片 ID，只用來認人與看氣質，**不是新成品、不會照抄**；新企劃的照片**尚未生成**。
-prompt 是可直接使用的草稿，**尚未執行**；橫、直兩段的取景句依各自的取景設計寫成。
-
-### 4.1 Iris Chen（陳芯語，22）｜河濱草地的黃金時段（第一階段建議）
-
-**R1 修訂（姿態與細節）：**
-
-- 姿勢改成單一姿態：背部斜向鏡頭、站定越肩回眸（取消「走向鏡頭＋回頭＋扭轉」）
-- 表情改成甜笑（取消張口大笑），一手扶開襟、一手自然垂放
-- 逆光加上畫面外反光板與柔光補臉；膚色只寫一次
-- 取景重算：橫幅膝上、直幅全身（v1 的橫幅數字不成立）
-
-- **與人設核對：** 主方向不變：金色戶外、短上衣＋短褲、甜笑，也是 Penny 喜歡的 iris-04。這版只修姿勢、補光與取景。
-- **為什麼適合她：** 她的魅力是「不費力的好看」。把 iris-04 的回眸與夕陽拍成正式寫真：人站定、光從背後勾邊、臉用反光板補亮。
-- **參考照片（既有）：** iris-04、iris-03
-- **逐項檢查：** 隨拍感：v1「走向鏡頭＋回頭＋扭轉」像抓拍 → 改成站定回眸；道具遮身形：無；動作數量：改成一個姿態、一手扶開襟；穿搭完整度：平口上衣＋短褲＋開襟＋帆布鞋＋耳環，完整
-- **舊版姿勢：** 前腳往前一步、重心在後腳，回頭時上身扭轉；右手把頭髮塞到耳後，左手自然垂放；針織外套下襬隨轉身擺動。
+**一句話：** 午後紅磚騎樓裡，穿米杏色針織套裝的 Iris 正面站定、對鏡頭笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 台北河濱公園的開闊草地，傍晚太陽低，遠處一排柔綠樹與低矮公寓，草地與小徑空無一人。 |
-| 服裝 | 米白羅紋平口短上衣、淺藍高腰牛仔短褲、燕麥色薄針織開襟滑落一側肩、白色低筒帆布鞋。 |
-| 髮型／髮色 | 黑色柔順直髮自然垂放過肩。 |
-| 配件 | 小金色圈耳環。 |
-| 光線 | 主光：低角度夕陽在她身後左上，頭髮與肩線一圈暖色輪廓光。補光：畫面外前方的大反光板加柔光，讓臉曝光正確、清楚。整體暖金色調，太陽旁的天空可以過曝。 |
-| 表情 | 甜甜的微笑，嘴唇微開，看鏡頭。 |
-| 姿勢與雙手 | 站定，背部斜向鏡頭約 45 度，重心在後腳；越過肩膀回頭看鏡頭；一手輕扶肩上的開襟，另一手自然垂放。 |
-| 甜美元素 | 回眸的甜笑、暖色夕陽、米白與淺藍的乾淨配色。 |
-| 性感元素 | 平口上衣露出的肩背與腰線、牛仔短褲下的長腿、滑落一側的開襟。 |
-| 替代方向 | 午後窗光的白色公寓：米白針織小可愛＋牛仔迷你裙，坐在窗邊木地板上，側光，甜而慵懶。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 膝上 | 全身 |
-| 人物佔畫面高度 | 約 84% | 約 86% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在膝蓋下方 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 85mm／約 5.1 公尺 | 85mm／約 5.1 公尺 |
-| 視野（寬×高，公尺） | 2.16×1.44 | 1.44×1.92 |
-| 人物範圍高度（公尺） | 1.22 | 1.65 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框（約 1.85:1）要上下共裁約 19%：約剩大腿以上，頭頂留白變少但人物完整。 | 放進橫式半版直幅框（約 0.67:1）左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 台北老街的紅磚拱廊騎樓，午後；一排拱形磚柱、關著的木門店面，走廊空無一人。 |
+| 服裝 | 上身：米杏色貼身羅紋針織平口上衣；下身：同色高腰針織迷你裙（套裝）；鞋：米色厚底繫帶涼鞋；配件：細金鍊項鍊 |
+| 髮型 | 黑色柔順直髮自然垂放過肩。 |
+| 妝感 | 乾淨的日常妝、自然唇色。 |
+| 身材設定（數字） | 162 cm／87-58-90／D |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 平口針織貼合胸型、露出肩線；高腰迷你裙收出腰線，短裙長讓腿顯長。 |
+| 主光 | 從騎樓開口側面斜射進來的午後陽光，在地面與身上留下柔和光帶 |
+| 補光 | 畫面外的大白色反光板，臉均勻 |
+| 姿態 | 正面站在磚柱旁，重心在左腳。 |
+| 手的位置 | 一手輕扶肩高的磚柱，一手插腰。 |
+| 表情 | 溫暖的笑容 |
+| 視線 | 直視鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 86%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，70mm，約 4.9 公尺，視野 2.52×1.42 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她是「台北的日常生活者」：老街的紅磚與午後光，加上隨手就好看的針織套裝，是她的城市感。 |
+| 與同一人另一款的差異 | 直式款在河濱草地、白色短上衣＋牛仔迷你裙、黃金時段逆光；這款是城市老街、米杏針織套裝、側面午後光。 |
+| 參考照片（用途） | iris-01：身分（認臉與甜笑；服裝不同）；iris-12：表情（開心的笑） |
+| 推薦月份 | 8 月（夏末） |
 
 | 風險 | 處理 |
 |---|---|
-| 逆光臉暗 | 寫明畫面外反光板與柔光補臉、測光給臉 |
-| 膚色被夕陽拍偏 | 只寫一次她原本的白皙膚色，不堆疊形容詞 |
-| 回頭角度過大造成脖子扭曲 | 背部斜向約 45 度，回頭幅度自然 |
-| 太陽眩光蓋住臉 | 太陽放在左上、臉在右側 |
+| 騎樓招牌出現假字 | 寫明店面關著、只有木門，不寫招牌 |
+| 側光讓臉一半暗 | 寫明反光板補臉 |
+| 扶柱的手指變形 | 生成後放大檢查 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 22-year-old adult Taiwanese woman with her natural fair skin tone and black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, full chest and slim waist. She wears an off-white fitted ribbed tube top, high-waisted light-blue denim shorts, a thin oatmeal knit cardigan slipped off one shoulder, white low canvas sneakers and small gold hoop earrings. Setting: an open riverside lawn in a Taipei park in the late afternoon, a line of soft green trees and low distant apartment blocks far behind her, the lawn and the path empty. She stands still with her back angled about forty-five degrees to the camera and her weight on her back leg, looking back over her shoulder at the camera with a soft, sweet smile, lips slightly parted; one hand lightly holds the cardigan at her shoulder and the other arm hangs relaxed. Horizontal 3:2 frame, full-frame camera with an 85mm lens from about 5.1 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, standing left of centre with the sunlit lawn and soft trees filling the right side. Lighting: the low sun behind her and to the upper left draws a warm rim along her hair and shoulders; a large white reflector and a soft fill light just out of frame in front of her light her face evenly and correctly; warm golden tones overall, the sky near the sun allowed to clip. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（16:9，尚未執行）：
 
 ```text
-A 22-year-old adult Taiwanese woman with her natural fair skin tone and black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, full chest and slim waist. She wears an off-white fitted ribbed tube top, high-waisted light-blue denim shorts, a thin oatmeal knit cardigan slipped off one shoulder, white low canvas sneakers and small gold hoop earrings. Setting: an open riverside lawn in a Taipei park in the late afternoon, a line of soft green trees and low distant apartment blocks far behind her, the lawn and the path empty. She stands still with her back angled about forty-five degrees to the camera and her weight on her back leg, looking back over her shoulder at the camera with a soft, sweet smile, lips slightly parted; one hand lightly holds the cardigan at her shoulder and the other arm hangs relaxed. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 5.1 metres, camera at her navel height; full length from her sneakers to a little above her head, she fills about 86% of the frame height, centred with soft lawn under her feet. Lighting: the low sun behind her and to the upper left draws a warm rim along her hair and shoulders; a large white reflector and a soft fill light just out of frame in front of her light her face evenly and correctly; warm golden tones overall, the sky near the sun allowed to clip. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips. She wears a fitted dusty-beige ribbed knit tube top and a matching high-waisted knit mini skirt, beige strappy platform sandals and a thin gold chain necklace. Setting: an old red-brick arcade walkway on a historic Taipei shopping street in the afternoon, a row of arched brick pillars, closed wooden shopfront doors, the walkway empty and clean. She stands facing the camera beside one of the brick pillars, weight on her left leg, one hand resting lightly on the pillar at shoulder height and the other on her hip, smiling warmly at the camera. Horizontal 16:9 frame, full-frame camera with a 70mm lens from about 4.9 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 86% of the frame height, standing left of centre with the arched brick arcade receding to the right. Lighting: warm afternoon sunlight enters from the open side of the arcade and lays soft shafts of light across the floor and her body; a large white reflector just out of frame fills her face evenly; warm brick, beige and soft grey tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.2 Luna Tanaka（田中ひな，20）｜京都老宅後院的紫陽花
+### 5.2 H-luna-tanaka｜Luna｜橫式款（新企劃）
 
-**R1 修訂（姿態與細節）：**
-
-- 取消「風吹掀裙、手按裙襬」，性感改由方領、合身腰線、迷你裙長與腿部線條呈現
-- 表情改成單一瞬間的安靜微笑（取消「先垂眼再抬眼」）
-- 補光改為畫面外反光板；光斑只落在背景
-- 取景重算：橫幅膝上、直幅全身
-
-- **與人設核對：** 主方向不變：花園、淺色小洋裝、柔和日光。她 20 歲、童顏：用合身腰線、低跟涼鞋、細金項鍊等成人線索；不用白襪、娃娃裝。
-- **為什麼適合她：** 她是「住在美麗白日夢裡的人」。老宅庭院、白紫陽花、淺綠蕾絲洋裝，用剪裁與站姿呈現她的曲線，不靠風吹的小意外。
-- **參考照片（既有）：** luna-10、luna-01
-- **逐項檢查：** 隨拍感：v1 的「風吹掀裙＋按住」像抓拍瞬間 → 改成站定的姿態；道具遮身形：無；動作數量：v1 有按裙、摸鎖骨、垂眼再抬眼三件事 → 改成一手扶籬笆、一手自然垂放；穿搭完整度：洋裝＋涼鞋＋項鍊＋髮夾，完整
-- **舊版姿勢：** 站在石板路上，重心在右腳、左膝微彎；一手輕按大腿處的裙襬（風在吹），另一手放在鎖骨。
+**一句話：** 清晨的京都町家和室，象牙白蕾絲緞面細肩洋裝，席地而坐的安靜微笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 京都風老木造町家的後院：青苔地、石板小徑、低矮木籬笆旁一整排白色紫陽花，頭上有楓樹枝。 |
-| 服裝 | 淺鼠尾草綠棉質蕾絲迷你洋裝（方領、短袖、合身腰線）、米色低跟繫帶涼鞋。 |
-| 髮型／髮色 | 黑色細直髮，中分下巴長度的鮑伯，髮尾貼著下顎。 |
-| 配件 | 細金鍊項鍊、耳上一支珍珠髮夾。 |
-| 光線 | 主光：明亮陰天的大面積柔光。補光：畫面外的白色反光板，讓臉乾淨均勻。楓葉縫隙的光斑只落在背景的小徑與花上，不落在臉上。清新的綠與白。 |
-| 表情 | 安靜的淺笑，看鏡頭。 |
-| 姿勢與雙手 | 站在石板路上，重心在右腳、左膝微彎向前，露出腿部線條；一手輕放在木籬笆上，另一手自然垂放。 |
-| 甜美元素 | 安靜的淺笑、白紫陽花、淺綠與白。 |
-| 性感元素 | 方領與合身腰線、迷你裙長與微彎膝蓋的腿部線條、她的身材比例。 |
-| 替代方向 | 雨後的木造緣側：白色蕾絲細肩洋裝＋薄針織外套，坐在木廊邊、腳垂向庭院，晨間柔光。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 膝上 | 全身 |
-| 人物佔畫面高度 | 約 86% | 約 86% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在膝蓋下方 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏右，左側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 85mm／約 4.8 公尺 | 85mm／約 4.9 公尺 |
-| 視野（寬×高，公尺） | 2.03×1.36 | 1.38×1.84 |
-| 人物範圍高度（公尺） | 1.16 | 1.59 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框（約 1.85:1）要上下共裁約 19%：約剩大腿以上，頭頂留白變少但人物完整。 | 放進橫式半版直幅框（約 0.67:1）左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 京都風老町家的和室，早晨；一面紙拉門、低矮木桌上一小瓶白花，房間整齊。 |
+| 服裝 | 洋裝：象牙白真絲細肩洋裝，細蕾絲滾邊、貼身上身、裙長大腿中段；鞋：赤腳（室內）；配件：細金鍊項鍊、耳上珍珠髮夾 |
+| 髮型 | 黑色細直髮，中分下巴長度的鮑伯。 |
+| 妝感 | 柔和自然妝、玫瑰色唇。 |
+| 身材設定（數字） | 155 cm／88-56-87／E（童顏與曲線的反差） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身緞面上身與細肩帶呈現 E 罩杯的飽滿胸型與細腰；大腿中段的裙長露出腿部線條。 |
+| 主光 | 紙拉門透進的柔和晨光（相機左側） |
+| 補光 | 畫面外右側白色反光卡 |
+| 姿態 | 在榻榻米上側坐、雙腿收在一側，身體面向鏡頭。 |
+| 手的位置 | 兩手輕放在大腿上。 |
+| 表情 | 安靜的淺笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 席地坐姿全身；人物約佔畫面高度 85%；席地坐姿完整，雙手在框內；人物偏右，左側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，50mm，約 2.5 公尺，視野 1.8×1.01 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她是「住在美麗白日夢裡的人」：和室、紙門、柔光與復古細肩洋裝，安靜又帶一點性感。 |
+| 與同一人另一款的差異 | 直式款在戶外紫陽花庭院、鼠尾草綠馬甲洋裝、站姿；這款在室內和室、象牙白緞面洋裝、席地坐姿。 |
+| 參考照片（用途） | luna-22：場景（和室的環境；不作身材參考：既有照片的身材不符合設定（Penny））；luna-04：表情（窗邊安靜的表情；不作身材參考：既有照片的身材不符合設定（Penny）） |
+| 推薦月份 | 10 月（秋） |
 
 | 風險 | 處理 |
 |---|---|
-| 童顏＋花園＋小洋裝顯小 | 寫明 adult、合身腰線、低跟涼鞋與首飾；不用白襪與娃娃裝 |
+| 童顏＋細肩洋裝顯小 | 寫明 adult、金項鍊與成熟妝感；不用娃娃裝元素 |
+| 緞面坐姿皺褶怪異 | 生成後檢查 |
+| 紙門出現文字 | 只寫紙門與木桌 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears an ivory silk slip dress with fine lace trim, thin straps and a fitted bodice that follows her full chest and slim waist, the hem at mid-thigh, a thin gold chain necklace and a pearl hair pin above one ear; her feet are bare. Setting: a quiet tatami room in an old Kyoto-style townhouse in the morning, paper shoji screens along one wall, a low wooden table with a small vase of white flowers, the room tidy. She sits on the tatami with her legs folded to one side and her body facing the camera, both hands resting lightly on her lap, looking at the camera with a small, quiet smile. Horizontal 16:9 frame, full-frame camera with a 50mm lens from about 2.5 metres, camera at her seated chest height; her whole seated figure from the floor to a little above her head, she fills about 85% of the frame height, right of centre with the shoji screens and low table on the left. Lighting: soft morning daylight diffused through the shoji screens from camera-left as a large gentle key, a white bounce card just out of frame on the right keeping her face clear; soft white, warm wood and pale blush tones with a gentle film-like softness. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.3 H-somi-oh｜Somi｜橫式款（Penny 已接受的 v2 主方向）
+
+**一句話：** Penny 已接受的方向：暖橘復古小吃店棚景，針織短開襟＋高腰針織短裙，輕靠吧台大笑。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 搭景的韓式復古小吃店：暖橘色磁磚吧台、一排紅色皮面高腳椅、一盞暖色吊燈；橫幅右緣有一小盤失焦的炸雞。 |
+| 服裝 | 上身：奶油色合身羅紋針織短開襟（扣起）；下身：高腰鏽橘色針織迷你裙；鞋：棕色有跟皮革樂福鞋；配件：紅色琺瑯小愛心耳環 |
+| 髮型 | 明亮蜜橘棕的韓式狼尾層次剪。 |
+| 妝感 | 淡妝、亮澤唇釉。 |
+| 身材設定（數字） | 161 cm／91-58-90／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 合身短開襟包覆 F 罩杯胸型並露出腰線；高腰短裙與交叉的腿呈現腰臀比。 |
+| 主光 | 前右方頭部高度的大型暖色柔光箱 |
+| 補光 | 畫面外左側柔光；吊燈在頭髮上加暖光 |
+| 姿態 | 站著，一側臀部輕靠磁磚吧台，重心在後腳、前腳輕交叉。 |
+| 手的位置 | 一手放在吧台邊緣，一手把頭髮塞到耳後。 |
+| 表情 | 月牙眼大笑、露出酒窩 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 85%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，70mm，約 4.9 公尺，視野 2.52×1.42 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | Penny 接受的 v2 主方向；吧台與高腳椅橫向延伸，最適合橫式款。 |
+| 與同一人另一款的差異 | 直式款在雪夜溫泉小鎮、象牙白針織洋裝＋紅色長大衣、戶外冬夜；這款是棚內暖橘、針織短開襟＋短裙。 |
+| 參考照片（用途） | somi-02：表情（Penny 喜歡的笑容與暖色調）；somi-01：身分（認臉） |
+| 推薦月份 | 11 月（秋） |
+
+| 風險 | 處理 |
+|---|---|
+| 炸雞搶戲或出現包裝假字 | 只在橫幅右緣、失焦、放在盤子上 |
+| 棚景雜物多 | 寫明整齊 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. She wears a fitted cream rib-knit cropped cardigan buttoned up, a high-waisted rust-orange knit mini skirt, brown leather heeled loafers and small red enamel heart earrings. Setting: a studio-built retro Korean snack-bar set with a warm orange tiled counter, a row of red vinyl bar stools and a warm pendant lamp, everything tidy. She stands leaning one hip lightly against the tiled counter, weight on her back leg with the front leg crossed in front, one hand resting on the counter edge and the other tucking her hair behind her ear, laughing openly at the camera with her eyes curved into crescents and dimples showing. Horizontal 16:9 frame, full-frame camera with a 70mm lens from about 4.9 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, left of centre with the orange counter running to the right and a small plate of golden fried chicken resting soft and out of focus at the right edge. Lighting: a large warm softbox key from the front right at head height and a soft fill from the left just out of frame light her face evenly; the pendant lamp adds a warm glow on her hair; warm orange and cream tones throughout. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.4 H-coco-wu｜Coco｜橫式款（新企劃）
+
+**一句話：** 初夏傍晚的薰衣草花田，白色細肩亞麻洋裝，拿著草帽大笑。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 初夏傍晚一大片薰衣草花田，紫色花壟延伸到遠方，地平線上幾棵柔綠樹，花田裡沒有其他人。 |
+| 服裝 | 洋裝：白色亞麻細肩洋裝，抓皺貼身上身、柔和 V 領、收腰、微蓬迷你裙；鞋：白色平底涼鞋；配件：白色雛菊髮夾、腳踝細金鍊、草帽（拿在手上） |
+| 髮型 | 深棕長波浪捲髮、蓬鬆空氣瀏海。 |
+| 妝感 | 甜美淡妝、粉色唇。 |
+| 身材設定（數字） | 158 cm／89-56-86／E |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 抓皺貼身上身與 V 領呈現 E 罩杯胸型，收腰線清楚；迷你裙長露出腿。 |
+| 主光 | 她身後的低角度傍晚陽光，頭髮與肩膀暖色輪廓光 |
+| 補光 | 畫面外前方大反光板與柔光 |
+| 姿態 | 正面站在花壟之間。 |
+| 手的位置 | 一手把草帽拿在身側，一手把頭髮塞到耳後。 |
+| 表情 | 瞇眼大笑、深酒窩 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，85mm，約 5.9 公尺，視野 2.5×1.41 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她的配色有淺紫丁香與奶油白；週末出遊的花田讓她的大笑與甜美成立，不需要校園元素。 |
+| 與同一人另一款的差異 | 直式款是飯店泳池、薄荷綠比基尼、坐姿；這款是花田、白色亞麻洋裝、站姿。 |
+| 參考照片（用途） | coco-08：身分（認臉與身形比例）；coco-15：表情（大笑） |
+| 推薦月份 | 6 月（初夏） |
+
+| 風險 | 處理 |
+|---|---|
+| 花田出現遊客或標示牌 | 寫明花田空無一人 |
+| 逆光臉暗 | 寫明反光板補臉 |
+| 甜美＋洋裝顯小 | 寫明 adult、成熟剪裁 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 20-year-old adult Taiwanese woman with her natural fair skin tone, a doll-like round face with big sweet eyes and deep dimples when she smiles, dark-brown long wavy hair with soft wispy bangs. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. She wears a white linen sundress with thin straps, a fitted ruched bodice with a soft V neckline that shapes her full chest, a cinched waist and a flared mini skirt, white flat sandals, a white daisy hair clip and a thin gold anklet. Setting: a wide lavender field in early summer in the late afternoon, long purple rows running into the distance, a few soft green trees on the horizon, the field empty. She stands between the lavender rows facing the camera, holding a straw sun hat loosely at her side with one hand and tucking her hair behind her ear with the other, laughing with her eyes squeezed into crescents and deep dimples showing. Horizontal 16:9 frame, full-frame camera with an 85mm lens from about 5.9 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, left of centre with the lavender rows running away to the right. Lighting: the low late-afternoon sun behind her draws a warm rim along her hair and shoulders; a large white reflector and a soft fill just out of frame light her face evenly; soft lilac, white and warm gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.5 H-mia-huang｜Mia｜橫式款（新企劃）
+
+**一句話：** 夏日黃昏的海邊遊樂碼頭，粉色緞面馬甲上衣配白色迷你裙，拿著棉花糖俏皮眨眼。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 夏天黃昏的海邊遊樂碼頭：遠處亮燈的摩天輪與串燈化成柔和光點、粉紫色晚霞映在海上，木棧道上沒有其他人。 |
+| 服裝 | 上身：粉色緞面馬甲上衣（心形領）；下身：白色高腰 A 字迷你裙；鞋：白色厚底涼鞋；配件：小珍珠耳環、細銀手鍊、一支粉色棉花糖 |
+| 髮型 | 灰棕色長髮鬆散大波浪，左側臉旁粉紅 money piece 挑染。 |
+| 妝感 | 柔和動漫感眼妝、上揚眼線、圓形腮紅、水光唇。 |
+| 身材設定（數字） | 160 cm／91-57-88／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 心形領馬甲上衣塑出 F 罩杯胸型與細腰；高腰 A 字短裙讓腰臀比與腿長清楚。 |
+| 主光 | 畫面外右前方的大型柔光，臉乾淨、膚色自然明亮 |
+| 補光 | 黃昏天光與遠處遊樂設施的粉紫光點只當背景色 |
+| 姿態 | 正面站在木棧道上。 |
+| 手的位置 | 一手插腰，一手把棉花糖拿在肩高、離開臉。 |
+| 表情 | 俏皮眨眼、挑逗的半笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 85%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，70mm，約 4.9 公尺，視野 2.52×1.42 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她的配色是棉花糖粉與紫；把「被看、被反應」的俏皮放進夏夜遊樂碼頭，不需要任何直播或電競符號。 |
+| 與同一人另一款的差異 | 直式款是春夜櫻花步道、淺紫露肩針織洋裝；這款是夏日黃昏碼頭、粉色緞面馬甲＋白裙。 |
+| 參考照片（用途） | mia-08：表情（戶外大笑；畫面裡的白 T 不採用）；mia-12：身分（認臉與髮色挑染；不採用畫面裡的帽 T） |
+| 推薦月份 | 7 月（盛夏） |
+
+| 風險 | 處理 |
+|---|---|
+| 棉花糖遮臉 | 寫明拿在肩高、離開臉 |
+| 遊樂設施招牌字 | 只寫摩天輪與串燈光點 |
+| 出現電競元素 | 程式檢查 prompt 不含 gaming、headset、RGB、neon |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft round face with big expressive eyes, softly winged liner, rounded blush and glossy tinted lips, long ash-brown hair in loose waves with a pastel-pink money-piece highlight framing the left side of her face. Curvy figure, 160 cm tall, bust 91 cm, waist 57 cm, hips 88 cm, F cup, a full chest and a slim waist. She wears a pastel-pink satin corset top with a sweetheart neckline that shapes her full chest and slim waist, a white high-waisted A-line mini skirt, white platform sandals, small pearl earrings and a thin silver bracelet. Setting: a seaside amusement pier at dusk in summer, a lit Ferris wheel and string lights far behind her softening into bokeh, a pink and lavender sunset sky over the sea, the wooden boardwalk empty. She stands on the boardwalk facing the camera, one hand on her hip and the other holding a small pink cotton candy at shoulder height away from her face, giving a playful wink with a teasing half-smile. Horizontal 16:9 frame, full-frame camera with a 70mm lens from about 4.9 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, left of centre with the Ferris wheel bokeh and sunset sea on the right. Lighting: a large soft key light from front-right just out of frame lights her face cleanly with natural, bright skin tones; the dusk sky and the distant ride lights add pink and lavender colour behind her; cotton-candy pink, lavender and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.6 H-yuna-kim｜Yuna｜橫式款（新企劃）
+
+**一句話：** 明亮通透的感性咖啡館，奶油黃短版開襟配淺藍緞面中長裙，坐在窗邊的清透美感。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 明亮的極簡咖啡館：大片窗戶與白紗、淺木桌、奶油色牆面、玻璃瓶裡一朵白色鬱金香，店內沒有其他人。 |
+| 服裝 | 上身：奶油黃貼身短版針織開襟（當上衣扣起，柔和 V 領）；下身：淺藍緞面斜裁中長裙；鞋：白色尖頭平底鞋；配件：耳上紅色櫻桃髮夾 |
+| 髮型 | 深棕自然波浪、鎖骨長度、空氣感八字瀏海。 |
+| 妝感 | 水光肌、眼妝為重點、珊瑚漸層唇。 |
+| 身材設定（數字） | 168 cm／84-58-89／C（纖細長腿） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 短版開襟收在腰上、緞面裙貼著腰臀，呈現她纖細的腰與長腿比例（C 罩杯、偏纖細，不寫成豐滿）。 |
+| 主光 | 大窗透進的明亮漫射日光（背後與側面） |
+| 補光 | 畫面外前方柔光；曝光略偏亮、通透 |
+| 姿態 | 坐在轉向鏡頭的咖啡椅上，雙腿在膝上交疊。 |
+| 手的位置 | 一手放在桌緣，一手放在膝上。 |
+| 表情 | 平靜柔和的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 坐姿全身；人物約佔畫面高度 86%；坐姿頭頂到腳完整，雙手在框內；人物偏右，左側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，50mm，約 3.8 公尺，視野 2.74×1.54 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 韓系寫真的美感來自通透的光、水光肌、奶油與淺藍的柔和配色、乾淨的空間——不需要文字、國旗或地標。 |
+| 與同一人另一款的差異 | 直式款是秋日銀杏大道、奶油色毛呢短外套套裝＋長靴、站姿；這款是室內咖啡館、奶油黃開襟＋淺藍緞面裙、坐姿。 |
+| 參考照片（用途） | yuna-15：場景（咖啡店氛圍；捧杯遮嘴的姿勢不採用）；yuna-05：表情（窗邊柔和的表情） |
+| 推薦月份 | 1 月（冬末初春） |
+
+| 風險 | 處理 |
+|---|---|
+| 咖啡館出現招牌字或菜單 | 只寫窗、紗簾、木桌與花瓶 |
+| 過曝吃掉臉 | 測光給臉、補光 |
+| 變成普通咖啡店照 | 用色調、妝感與構圖撐起雜誌感 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 21-year-old adult Korean woman with her natural fair skin tone, large bright double-eyelid eyes as the focus of her makeup, a dewy glass-skin finish and soft coral gradient lips, dark-brown natural wavy hair at collarbone length with airy curtain bangs. Slim, long-legged figure, 168 cm tall, bust 84 cm, waist 58 cm, hips 89 cm, C cup, a narrow waist and long legs. She wears a soft butter-yellow fitted cropped cardigan buttoned as a top with a gentle V neckline, a pale-blue satin bias-cut midi skirt that follows her waist and hips, white pointed flats and a small red cherry hair clip above one ear. Setting: a bright minimalist café with large windows and sheer white curtains, pale wood tables, cream walls and a glass vase with a single white tulip, the room empty and calm. She sits on a café chair turned toward the camera with her legs crossed at the knee, one hand resting on the table edge and the other on her knee, looking at the camera with a calm, soft smile. Horizontal 16:9 frame, full-frame camera with a 50mm lens from about 3.8 metres, camera at her seated chest height; full length seated, from her flats to a little above her head, she fills about 86% of the frame height, right of centre with the bright windows and curtains on the left. Lighting: bright diffused daylight from the large windows behind and to the side, a soft fill just out of frame in front; an airy, slightly bright exposure with clean cream, butter-yellow and pale-blue tones, a soft fashion-lookbook mood. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.7 H-tammy-chou｜Tammy｜橫式款（新企劃）
+
+**一句話：** 高級精品店裡，熱粉色貼身針織洋裝配白色露跟高跟鞋，站在展示櫃旁的明亮笑容。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 高級時裝精品店內：淺色大理石地板、奶油色牆、柔光照亮的玻璃展示櫃（只有素面皮包、無任何標誌）、一張低矮絲絨長凳，店內沒有其他人。 |
+| 服裝 | 洋裝：熱粉色方領羅紋針織貼身迷你洋裝（保留 Penny 同意的方向）；鞋：白色尖頭露跟高跟鞋；配件：手臂掛小型白色硬挺素面手提包、金色圈耳環 |
+| 髮型 | 奶茶金棕大波浪長捲髮，臉側淺色 money piece 挑染。 |
+| 妝感 | 閃粉眼影、果凍唇。 |
+| 身材設定（數字） | 160 cm／90-57-89／E |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身針織洋裝完整勾出 E 罩杯胸型、細腰與臀線；高跟鞋拉長腿。 |
+| 主光 | 畫面外左前方大型柔光 |
+| 補光 | 背景展示櫃的暖色投射燈 |
+| 姿態 | 正面站在玻璃展示櫃旁，重心在一隻腳。 |
+| 手的位置 | 一手放在展示櫃上，一手插腰。 |
+| 表情 | 明亮的笑容 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 85%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，50mm，約 3.5 公尺，視野 2.52×1.42 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她做服飾電商、自己當模特兒；精品店是和合身洋裝與高跟鞋相配的高級場景，不是白牆或階梯。 |
+| 與同一人另一款的差異 | 直式款是飯店大廳夜晚、白色西裝外套洋裝＋黑色高跟鞋；這款是白天精品店、熱粉針織洋裝＋白色高跟鞋。 |
+| 參考照片（用途） | tammy-02：服裝材質（貼身針織洋裝的質感）；tammy-08：身分（認臉與購物穿搭氣質） |
+| 推薦月份 | 4 月（春） |
+
+| 風險 | 處理 |
+|---|---|
+| 包包或櫃子出現品牌 logo | 寫明素面、無標誌 |
+| 像在工作賣貨 | 寫成她在店裡被拍的時裝照，不寫店員動作 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a fitted hot-pink square-neck rib-knit mini dress that follows her full chest, slim waist and hips, white pointed slingback heels, a small structured plain white handbag on her arm and gold hoop earrings. Setting: an upscale fashion boutique with pale marble floors, cream walls and softly lit glass display shelves holding plain leather handbags without any logos, a low velvet bench, the boutique empty. She stands beside a glass display counter facing the camera, weight on one leg, one hand resting on the counter and the other on her hip, smiling brightly at the camera. Horizontal 16:9 frame, full-frame camera with a 50mm lens from about 3.5 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, left of centre with the glowing display shelves on the right. Lighting: a large soft key light from front-left just out of frame lights her face evenly while warm display spotlights glow on the shelves behind her; hot pink against cream, marble white and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.8 H-rin-ayase｜Rin｜橫式款（新企劃）
+
+**一句話：** 夕陽中的高樓飯店套房，酒紅緞面垂墜領細肩長洋裝，斜躺在深綠絲絨貴妃椅上。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 日落時的高級飯店套房：落地窗邊一張深綠絲絨貴妃椅，窗外遠方城市天際線籠罩在暖色暮靄，房間整齊。 |
+| 服裝 | 洋裝：深酒紅真絲緞面垂墜領細肩中長洋裝；鞋：赤腳；配件：細金鍊項鍊、金色小耳針 |
+| 髮型 | 深酒紅棕長髮，柔和大波浪撥到一側肩上。 |
+| 妝感 | 乾淨底妝、精準眼線、豆沙紅唇。 |
+| 身材設定（數字） | 166 cm／92-58-90／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 垂墜領緞面貼著 F 罩杯胸型與細腰流動；斜躺姿勢讓身體曲線與長腿成為畫面主線。 |
+| 主光 | 相機右側落地窗進來的低角度夕陽 |
+| 補光 | 畫面外左側柔光 |
+| 姿態 | 面向鏡頭斜躺在貴妃椅上，用一邊手肘撐著。 |
+| 手的位置 | 一手撐在手肘下，一手放在臀側。 |
+| 表情 | 平靜、心照不宣的半笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 斜躺全身；人物約佔畫面寬度 87%；斜躺全身完整，雙手在框內；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 16:9，50mm，約 2.6 公尺，視野 1.87×1.05 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她的配色是深綠、酒紅與金，旅遊／飯店是她的支柱之一；斜躺的緞面是成熟艷麗但收斂的性感。 |
+| 與同一人另一款的差異 | 直式款是銀座酒吧、黑色絲絨長禮服、坐吧台（Penny 指定的替代方向）；這款是飯店套房、酒紅緞面、斜躺。 |
+| 參考照片（用途） | rin-05：服裝材質（緞面開衩洋裝的質感）；rin-01：身分（盤髮與妝感） |
+| 推薦月份 | 2 月（冬） |
+
+| 風險 | 處理 |
+|---|---|
+| 斜躺肢體結構錯誤 | 寫明手肘撐地與雙腿併攏 |
+| 緞面遮蔽 | 寫中長洋裝、細肩帶 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair styled in soft big waves over one shoulder. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a deep wine-red silk satin cowl-neck slip midi dress with thin straps that drapes over her full chest and slim waist, a thin gold chain necklace and small gold stud earrings; her feet are bare. Setting: a luxury hotel suite at sunset, a deep green velvet chaise longue beside a floor-to-ceiling window, the city skyline far below in warm evening haze, the room tidy. She reclines on the chaise longue facing the camera, propped on one elbow, her other hand resting on her hip and her legs extended together along the chaise, looking at the camera with a calm, knowing half-smile. Horizontal 16:9 frame, full-frame camera with a 50mm lens from about 2.6 metres, camera at the height of the chaise; her whole reclining figure from her bare feet to her head, she fills about 87% of the frame width, centred along the chaise with the window and skyline behind her. Lighting: warm low sunset light through the window from camera-right as the key, a soft fill just out of frame on the left keeping her face clear; wine red, deep green and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.9 H-rainie-hsu｜Rainie｜橫式款（Penny 已接受的 v2 主方向）
+
+**一句話：** Penny 已接受的方向：頂樓夜景，血紅緞面馬甲高衩迷你洋裝，背靠玻璃欄杆直視鏡頭。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 高樓頂層露台的夜晚：玻璃欄杆、腳下城市燈光化成柔和散景、平滑深色石材地面，露台上沒有其他東西。 |
+| 服裝 | 洋裝：血紅緞面馬甲迷你洋裝（大腿高衩）；鞋：黑色細帶高跟涼鞋；配件：大型銀色垂墜耳環、細銀手環 |
+| 髮型 | 長直黑髮，光滑有光澤，深側分。 |
+| 妝感 | 柔和魅惑妝、貼近睫毛的淡棕眼線。 |
+| 身材設定（數字） | 165 cm／94-59-92／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 馬甲塑出 F 罩杯胸型與細腰；高衩露出的腿呈現臀腿比例。 |
+| 主光 | 左前方頭部高度的大型明亮柔光箱 |
+| 補光 | 畫面外右側柔光；背後深藍夜空與暖金城市散景 |
+| 姿態 | 背靠玻璃欄杆，一腳從高衩往前。 |
+| 手的位置 | 雙手放在身後的欄杆上；不拿任何杯子。 |
+| 表情 | 自信又帶點壞的笑 |
+| 視線 | 直視鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏右，左側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，85mm，約 6.0 公尺，視野 2.54×1.43 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | Penny 接受的 v2 主方向；城市燈海是橫向展開的景，最適合橫式款。 |
+| 與同一人另一款的差異 | 直式款是雨後夜街、黑色緞面繞頸洋裝＋黑色長皮風衣；這款是頂樓城市燈海、血紅馬甲洋裝。 |
+| 參考照片（用途） | rainie-06：場景（飯店窗邊的城市景）；rainie-10：服裝材質（緞面長洋裝的光澤） |
+| 推薦月份 | 12 月（年末） |
+
+| 風險 | 處理 |
+|---|---|
+| 出現酒杯或酒瓶 | 手放在欄杆上，場景只寫欄杆與地面 |
+| 高衩遮蔽 | 生成後逐張檢查 |
+| 玻璃反射出另一個人 | 寫明玻璃只反射城市燈光 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a blood-red satin corset mini dress with a thigh-high slit, strappy black stiletto sandals, large silver statement drop earrings and a slim silver cuff. Setting: a high-rise penthouse terrace at night, a glass balustrade with the city lights far below spread into soft bokeh, a smooth dark stone floor, nothing else on the terrace, the glass reflecting only city lights. She leans back against the glass balustrade with both hands resting on the rail behind her and one leg forward through the slit, looking straight into the camera with a confident, slightly mischievous smirk. Horizontal 16:9 frame, full-frame camera with an 85mm lens from about 6 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, right of centre with the glowing city bokeh on the left. Lighting: a large bright softbox key from front-left at head height lights her face and catches crisp red highlights on the satin; a soft fill from the right just out of frame; deep navy night sky and warm gold city bokeh behind her. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.10 H-miu-shiraishi｜Miu｜橫式款（新企劃）
+
+**一句話：** 一人公寓的早晨，象牙白蕾絲緞面細肩小可愛與短褲，坐在床邊歪頭甜笑。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 早晨陽光灑進的東京小公寓：鋪奶油色亞麻床單的整齊床鋪、木製床邊架上一小盆植物、窗上白紗簾，房間整齊。 |
+| 服裝 | 上身：象牙白緞面細肩小可愛（細蕾絲滾邊）；下身：同色緞面短褲；鞋：赤腳；配件：細金耳針、細金手鍊 |
+| 髮型 | 淺亞麻米金，齊肩內彎鮑伯、空氣瀏海。 |
+| 妝感 | 眼下橘調腮紅、水潤唇。 |
+| 身材設定（數字） | 156 cm／87-55-86／E |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身緞面小可愛直接呈現 E 罩杯胸型與很細的腰；雙手撐在身側讓胸腰線打開，不被毛衣或圍裙遮住。 |
+| 主光 | 相機左側白紗簾透進的溫暖晨光 |
+| 補光 | 畫面外右側白色反光 |
+| 姿態 | 面向鏡頭坐在床邊，雙膝併攏、略偏向一側。 |
+| 手的位置 | 雙手撐在身旁的床上。 |
+| 表情 | 歪頭、柔和的甜笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 坐姿全身；人物約佔畫面高度 84%；坐姿頭頂到腳完整，雙手在框內；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，35mm，約 2.7 公尺，視野 2.78×1.56 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她的支柱是「私下／一人公寓」；晨光、奶油色與緞面讓她的甜美和性感同時成立，不是咖啡店工作照。 |
+| 與同一人另一款的差異 | 直式款是春天運河步道、奶油色 V 領針織洋裝＋細腰帶；這款是室內晨光、緞面小可愛＋短褲、坐床邊。 |
+| 參考照片（用途） | miu-06：身分（米白背心＋短裙的身形比例）；miu-01：表情（坐姿的甜美表情；厚毛衣不採用） |
+| 推薦月份 | 3 月（冬末初春） |
+
+| 風險 | 處理 |
+|---|---|
+| 童顏顯小 | 寫明 adult、成熟的緞面與金飾；不用娃娃裝與制服元素 |
+| 居家服尺度 | 細肩小可愛＋短褲，完整遮蔽 |
+| 碰撞紀錄（Jia、Somi） | 暖白奶油色、安靜甜美、淺亞麻短髮；不改臉、不宣稱能消除 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, a full chest and a very slim waist. She wears an ivory satin camisole with thin straps and fine lace trim that follows her full chest, matching ivory satin shorts, small gold stud earrings and a thin gold bracelet; her feet are bare. Setting: a small sunlit Tokyo apartment in the morning, a neatly made bed with cream linen, a wooden bedside shelf with a small potted plant, sheer white curtains at the window, the room tidy. She sits on the edge of the bed facing the camera, knees together and angled slightly to one side, both hands resting on the bed beside her hips, tilting her head with a soft, sweet smile at the camera. Horizontal 16:9 frame, full-frame camera with a 35mm lens from about 2.7 metres, camera at her seated chest height; full length seated, from her feet to a little above her head, she fills about 84% of the frame height, left of centre with the bright curtained window on the right. Lighting: warm morning sunlight through the sheer curtains from camera-left as a soft key, a white bounce just out of frame on the right so her face is evenly lit; cream, ivory and warm wood tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.11 H-jia-seo｜Jia｜橫式款（新企劃）
+
+**一句話：** 現代美術館的白色展廳，黑色單肩貼身中長洋裝帶腰側鏤空，冷靜站在畫作之間。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 現代美術館展廳：挑高白牆、拋光水泥地、牆上大幅灰色與薄荷色調的抽象畫、天花板軌道燈，展廳空無一人。 |
+| 服裝 | 洋裝：黑色單肩貼身中長洋裝，腰側一小塊鏤空；鞋：黑色細帶高跟鞋；配件：小銀色圈耳環 |
+| 髮型 | 冷灰藍黑長髮，一側塞在耳後露出薄荷綠內層。 |
+| 妝感 | 水光無妝感、淡棕眼線、漸層唇。 |
+| 身材設定（數字） | 168 cm／85-58-90／C（直角肩、長腿） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 單肩剪裁露出直角肩；貼身中長洋裝與腰側鏤空呈現細腰與 168 cm 的修長線條（C 罩杯，寫成纖細，不寫成豐滿）。 |
+| 主光 | 畫面外左前方柔光 |
+| 補光 | 天窗的冷調日光＋畫作上的暖色軌道燈 |
+| 姿態 | 正面站在展廳中央，重心在一隻腳。 |
+| 手的位置 | 一手放在腰側，一手自然垂放。 |
+| 表情 | 冷靜自信的半笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，50mm，約 3.7 公尺，視野 2.66×1.5 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 她冷調、俐落；美術館的白牆與抽象畫讓她的身體線條像時裝作品，實景完成、不需要攝影棚，也不跳舞。 |
+| 與同一人另一款的差異 | 直式款是玻璃溫室、白色立領短上衣＋薄荷綠緞面開衩長裙；這款是美術館、黑色單肩洋裝。 |
+| 參考照片（用途） | jia-08：身分（夜晚穿搭與認臉；回頭姿勢不採用）；jia-02：表情（冷靜的表情；棚拍背景不採用） |
+| 推薦月份 | 9 月（秋） |
+
+| 風險 | 處理 |
+|---|---|
+| 畫作出現文字或真實作品 | 寫抽象色塊，不寫藝術家 |
+| 展廳出現其他人 | 寫明空無一人 |
+| 碰撞紀錄（Miu、Somi） | 冷色、黑白、薄荷內層；不改臉、不宣稱能消除 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a black one-shoulder fitted midi dress with a small cut-out at the waist that shows her slim waist and long lines, black strappy heels and small silver hoop earrings. Setting: a modern art gallery with high white walls, a polished concrete floor and large abstract paintings in soft grey and mint tones, track lights on the ceiling, the gallery empty. She stands in the middle of the gallery facing the camera, weight on one leg, one hand resting at her waist and the other relaxed at her side, looking at the camera with a cool, confident half-smile. Horizontal 16:9 frame, full-frame camera with a 50mm lens from about 3.7 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, left of centre with the abstract paintings on the white wall to the right. Lighting: cool daylight from a skylight with warm track lights on the paintings; a soft key light from front-left just out of frame lights her face evenly; black, white, grey and mint tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.12 H-yerin-han｜Yerin｜橫式款（新企劃）
+
+**一句話：** 春天早晨的球場，白色無袖針織 polo 配淺藍百褶高爾夫迷你裙，坐在白色球車上的可愛笑容。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 晴朗春日早晨的高爾夫球場：一台素面白色球車停在車道旁，旁邊是亮綠的球道，遠方柔和的樹林，球場上沒有其他人。 |
+| 服裝 | 上身：白色無袖貼身針織高爾夫 polo；下身：淺天空藍百褶高爾夫迷你裙；鞋：白色高爾夫鞋；配件：素面白色球帽、小金色耳針 |
+| 髮型 | 亞麻棕長髮、臉側金色挑染，低馬尾從球帽後方穿出。 |
+| 妝感 | 防曬淡妝、亮色唇。 |
+| 身材設定（數字） | 170 cm／90-60-93／E（健康曲線） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 無袖貼身 polo 呈現 E 罩杯胸型與手臂線條；百褶迷你裙與伸出車外的雙腿呈現 170 cm 的長腿比例。 |
+| 主光 | 左前上方的晴朗晨光 |
+| 補光 | 畫面外大反光板，柔化帽簷下臉上的陰影 |
+| 姿態 | 側坐在球車前座、身體面向鏡頭，雙腿伸出車外、在腳踝交叉。 |
+| 手的位置 | 一手搭在椅背上，一手放在膝上。 |
+| 表情 | 明亮可愛的笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 坐姿全身；人物約佔畫面高度 86%；坐姿頭頂到腳完整，雙手在框內；人物偏左，右側約四到五成給場景 |
+| 焦段／距離／視野 | 16:9，50mm，約 4.4 公尺，視野 3.17×1.78 公尺 |
+| 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
+| 版面適配 | 橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。 |
+| 為何符合人設 | 高爾夫形象寫真：球場、球車與高爾夫裙裝讓人一看就知道是她，但不打球、不拿球桿，重點是可愛與漂亮。 |
+| 與同一人另一款的差異 | 直式款是日落海灘、白色圓領針織背心洋裝、赤腳；這款是球場球車、polo＋百褶裙＋球帽。 |
+| 參考照片（用途） | yerin-01：服裝材質（白帽＋白 polo 的高爾夫穿搭）；yerin-05：服裝材質（polo＋百褶球裙的比例；俯身動作不採用） |
+| 推薦月份 | 5 月（春） |
+
+| 風險 | 處理 |
+|---|---|
+| 球車或衣帽出現品牌 logo | 寫素面白色球車與素面帽 |
+| 帽簷陰影遮臉 | 寫明反光板補光 |
+| 碰撞紀錄（Rin） | 明亮戶外清新色 vs Rin 的夜晚深色；不改臉 |
+
+prompt 草稿（16:9，尚未執行）：
+
+```text
+A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white fitted sleeveless knit golf polo that follows her full chest and slim waist, a pale sky-blue pleated golf mini skirt, white golf shoes, a plain white cap and small gold stud earrings. Setting: a golf course on a clear spring morning, a plain white golf cart parked on the cart path beside a bright green fairway, soft trees in the distance, the course empty. She sits sideways on the front seat of the golf cart facing the camera, her legs out of the cart and crossed at the ankles, one hand resting on the seat back and the other on her knee, smiling brightly at the camera. Horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.4 metres, camera at her seated chest height; full length seated, from her golf shoes to a little above her head, she fills about 86% of the frame height, left of centre with the white golf cart and green fairway on the right. Lighting: clear morning sun from high front-left, a large white reflector just out of frame softening the shadow of the cap on her face; bright green, sky blue and white tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.13 V-iris-chen｜Iris｜直式款（新企劃）
+
+**一句話：** 黃金時段的河濱草地，白色方領短上衣配牛仔迷你裙，正面站著甜笑（Penny 指定的穿搭）。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 台北河濱公園的開闊草地，傍晚太陽低，遠處柔綠樹林與低矮公寓，草地與小徑空無一人。 |
+| 服裝 | 上身：白色貼身羅紋方領短袖短上衣（露腰）；下身：淺藍高腰牛仔迷你裙；鞋：白色低筒帆布鞋；配件：小金色圈耳環 |
+| 髮型 | 黑色柔順直髮自然垂放過肩。 |
+| 妝感 | 乾淨的日常妝、自然唇色。 |
+| 身材設定（數字） | 162 cm／87-58-90／D |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身方領短上衣清楚呈現 D 罩杯胸型、露出細腰；高腰牛仔迷你裙強調腰臀比與腿長。 |
+| 主光 | 她身後側方的低角度夕陽，頭髮與肩線一圈暖色輪廓光 |
+| 補光 | 畫面外前方的大反光板加柔光，臉與身體均勻 |
+| 姿態 | 身體正面朝鏡頭站著，重心在一隻腳、另一膝放鬆。 |
+| 手的位置 | 一手插腰，一手輕碰太陽穴旁的頭髮。 |
+| 表情 | 明亮溫暖的笑 |
+| 視線 | 直視鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 85%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 3.8 公尺，視野 1.07×1.43 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | Penny 的回饋：更顯身材的上衣＋牛仔迷你裙、身體面向鏡頭、專業姿態、有笑容；保留她喜歡的 iris-04 夕陽草地氛圍。 |
+| 與同一人另一款的差異 | 橫式款在紅磚騎樓、米杏針織套裝、側光；這款在河濱草地、白上衣＋牛仔迷你裙、逆光。 |
+| 參考照片（用途） | iris-04：場景（草地、夕陽光線氛圍（Penny 喜歡的照片）；不採用回頭姿勢）；iris-06：服裝材質（白短上衣＋牛仔短裙的穿搭方向） |
+| 推薦月份 | 9 月（夏末初秋） |
+
+| 風險 | 處理 |
+|---|---|
+| 逆光臉暗 | 寫明反光板與柔光補臉 |
+| 膚色被夕陽拍偏 | 只寫一次她原本的白皙膚色 |
+| 碰頭髮的手指融合 | 生成後放大檢查；不行改成兩手插腰 |
+
+prompt 草稿（3:4，尚未執行）：
+
+```text
+A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips. She wears a fitted white ribbed square-neck short-sleeve crop top that shows the shape of her chest and her bare waist, a high-waisted light-blue denim mini skirt, white low canvas sneakers and small gold hoop earrings. Setting: an open riverside lawn in a Taipei park in the late afternoon, soft green trees and low distant apartment blocks far behind her, the lawn and the path empty. She stands with her body facing the camera, weight on one leg and the other knee relaxed, one hand on her hip and the other lightly touching her hair at her temple, smiling at the camera with a bright, warm smile. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.8 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, centred with soft lawn and trees behind her. Lighting: the low sun behind her and to one side draws a warm rim along her hair and shoulders; a large white reflector and a soft fill light just out of frame in front of her light her face and body evenly; warm golden tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+```
+
+### 5.14 V-luna-tanaka｜Luna｜直式款（新企劃）
+
+**一句話：** 紫陽花盛開的町家庭院，鼠尾草綠馬甲感洋裝，正面站在石板路上。
+
+| 項目 | 內容 |
+|---|---|
+| 場景 | 京都風老町家的後院：青苔地、石板小徑、木籬笆旁一整排白色紫陽花，頭上有楓樹枝。 |
+| 服裝 | 洋裝：淺鼠尾草綠棉質洋裝，心形領、有骨架的貼身上身、微蓬迷你裙；鞋：米色低跟繫帶涼鞋；配件：細金手鍊 |
+| 髮型 | 黑色細直髮，中分下巴長度的鮑伯。 |
+| 妝感 | 柔和自然妝、玫瑰色唇。 |
+| 身材設定（數字） | 155 cm／88-56-87／E（童顏與曲線的反差） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 心形領與有骨架的上身塑出飽滿胸型與細腰；雙手放身後讓胸腰線完整露出。 |
+| 主光 | 明亮陰天的大面積柔光 |
+| 補光 | 畫面外白色反光板；光斑只落在背景 |
+| 姿態 | 正面站在石板路上，重心在一隻腳。 |
+| 手的位置 | 雙手輕輕交握在身後。 |
+| 表情 | 溫柔的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 全身；人物約佔畫面高度 86%；頭頂到腳完整，雙手在框內；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 4.9 公尺，視野 1.38×1.84 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 保留 Penny 沒有否定的紫陽花庭院，換成真正顯身材的剪裁。 |
+| 與同一人另一款的差異 | 橫式款是室內和室、象牙白緞面、席地坐；這款是戶外庭院、綠色馬甲洋裝、站姿全身。 |
+| 參考照片（用途） | luna-10：表情（Penny 喜歡的表情與柔光；不作身材參考：既有照片的身材不符合設定（Penny））；luna-01：場景（京都巷弄氛圍；不作身材參考：既有照片的身材不符合設定（Penny）） |
+| 推薦月份 | 6 月（初夏（梅雨季紫陽花）） |
+
+| 風險 | 處理 |
+|---|---|
+| 童顏＋花園顯小 | 寫明 adult、成熟剪裁與首飾 |
 | 光斑落在臉上 | 寫明光斑只在背景 |
-| 地名寫「京都」生出錯的地標 | 只寫環境元素，不點名地標 |
+| 地名生出錯的地標 | 只寫環境元素 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 20-year-old adult Japanese woman with her natural fair skin tone and black fine straight hair in a centre-parted, chin-length bob, the ends brushing her jaw. Petite curvy figure, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup, full chest and slim waist. She wears a pale sage-green cotton lace mini dress with a square neckline, short sleeves and a fitted waist, cream low block-heel strappy sandals, a thin gold chain necklace and a pearl hair pin above one ear. Setting: a quiet garden behind an old wooden Kyoto-style townhouse, moss ground, a stone path, white hydrangeas in bloom along a low wooden fence, maple branches overhead. She stands on the stone path with her weight on her right leg and her left knee softly bent forward, one hand resting lightly on the top of the wooden fence and the other relaxed at her side, looking at the camera with a small, quiet smile. Horizontal 3:2 frame, full-frame camera with an 85mm lens from about 4.8 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 86% of the frame height, right of centre with the hydrangea-lined path and fence on the left. Lighting: bright overcast daylight as one large soft source from above and in front, with a white reflector just out of frame so her face is clean and evenly lit; soft dappled light through the maple leaves falls only on the path and hydrangeas behind her; fresh green and white tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 20-year-old adult Japanese woman with her natural fair skin tone and black fine straight hair in a centre-parted, chin-length bob, the ends brushing her jaw. Petite curvy figure, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup, full chest and slim waist. She wears a pale sage-green cotton lace mini dress with a square neckline, short sleeves and a fitted waist, cream low block-heel strappy sandals, a thin gold chain necklace and a pearl hair pin above one ear. Setting: a quiet garden behind an old wooden Kyoto-style townhouse, moss ground, a stone path, white hydrangeas in bloom along a low wooden fence, maple branches overhead. She stands on the stone path with her weight on her right leg and her left knee softly bent forward, one hand resting lightly on the top of the wooden fence and the other relaxed at her side, looking at the camera with a small, quiet smile. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 4.9 metres, camera at her navel height; full length from her sandals to a little above her head, she fills about 86% of the frame height, centred with maple branches across the top edge. Lighting: bright overcast daylight as one large soft source from above and in front, with a white reflector just out of frame so her face is clean and evenly lit; soft dappled light through the maple leaves falls only on the path and hydrangeas behind her; fresh green and white tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a pale sage-green cotton sundress with a sweetheart neckline, a fitted boned bodice that shapes her full chest and narrow waist and a softly flared mini skirt, cream low block-heel strappy sandals and a thin gold bracelet. Setting: a quiet garden behind an old wooden Kyoto-style townhouse, moss ground, a stone path, white hydrangeas in bloom along a low wooden fence, maple branches overhead. She stands on the stone path facing the camera, weight on one leg, both hands clasped lightly behind her back, looking at the camera with a gentle smile. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 4.9 metres, camera at her navel height; full length from her sandals to a little above her head, she fills about 86% of the frame height, centred with maple branches across the top edge. Lighting: bright overcast daylight as one large soft source, with a white reflector just out of frame so her face is clean and evenly lit; soft dappled light falls only on the hydrangeas and path behind her; fresh green, white and sage tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.3 Somi Oh（오소미，24）｜暖橘色的復古棚景
+### 5.15 V-somi-oh｜Somi｜直式款（新企劃）
 
-**R1 修訂（主方向）：**舊版標題「暖橘色的復古小吃店棚景」。
-
-- 主推薦取消「舉炸雞」：臉、腰線與姿態優先
-- 保留暖橘復古棚景；炸雞只放在橫幅右緣、失焦的一小盤，直幅不放
-- 服裝改成針織短開襟＋高腰針織短裙（取消格紋百褶，避免制服感）
-- 原本的「手拿炸雞」改列為備選拍法
-- 取景重算：橫幅膝上、直幅全身
-
-- **與人設核對：** 保留主管要的暖橘復古棚、漂亮針織裙裝、爽朗笑容。她是美食人設，但不必每張都在吃：食物只當場景邊緣的小線索。
-- **為什麼適合她：** 她最好看的是爽朗的笑和健康的曲線。暖橘磁磚、紅色高腳椅、一盞吊燈，讓她站著大笑，畫面主角是她，不是食物。
-- **參考照片（既有）：** somi-02、somi-01
-- **舊版姿勢：** 側坐高腳椅、雙腿在膝上交疊，一手肘靠在吧台；另一手把一隻炸雞腿舉在臉頰旁；百褶裙在椅面上散開。
+**一句話：** 下雪的溫泉小鎮夜晚，象牙白貼身針織洋裝外披紅色長大衣，在燈籠光裡大笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 搭景的韓式復古小吃店：暖橘色磁磚吧台、一排紅色皮面高腳椅、一盞暖色吊燈，整齊乾淨。橫幅右緣的吧台末端有一小盤失焦的金黃炸雞；直幅不放食物。 |
-| 服裝 | 奶油色合身羅紋針織短開襟（扣起）、高腰鏽橘色針織迷你裙、棕色有跟皮革樂福鞋。 |
-| 髮型／髮色 | 明亮蜜橘棕的韓式狼尾層次剪。 |
-| 配件 | 紅色琺瑯小愛心耳環。 |
-| 光線 | 主光：前右方頭部高度的大型暖色柔光箱。補光：畫面外左側柔光，臉均勻。吊燈在頭髮上加一點暖光。暖橘與奶油色調。 |
-| 表情 | 月牙眼大笑、露出酒窩，看鏡頭。 |
-| 姿勢與雙手 | 站著，一側臀部輕靠磁磚吧台，重心在後腳、前腳輕交叉；一手放在吧台邊緣，另一手把頭髮塞到耳後（她的招牌動作）。 |
-| 甜美元素 | 月牙眼與酒窩的大笑、暖色調。 |
-| 性感元素 | 短版針織收出的腰線、高腰短裙與交叉的腿、她的曲線身材。 |
-| 替代方向 | 炸雞拍法（備選）：同一棚景，側坐高腳椅、手拿一隻炸雞腿舉在臉旁，咬下去前的停頓——保留她的美食人設，但不當主推薦。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 膝上 | 全身 |
-| 人物佔畫面高度 | 約 86% | 約 85% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在膝蓋下方 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 70mm／約 4.1 公尺 | 70mm／約 4.2 公尺 |
-| 視野（寬×高，公尺） | 2.11×1.41 | 1.44×1.92 |
-| 人物範圍高度（公尺） | 1.21 | 1.64 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框（約 1.85:1）要上下共裁約 19%：約剩大腿以上，頭頂留白變少但人物完整。 | 放進橫式半版直幅框（約 0.67:1）左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 小型溫泉小鎮的街道，冬夜飄雪；低矮木造旅館掛著暖色紙燈籠、路旁石溝冒出薄薄的蒸氣，地上一層薄雪，街上沒有人。 |
+| 服裝 | 洋裝：象牙白貼身羅紋針織迷你洋裝（高圓領）；外套：紅色羊毛長大衣（敞開）；鞋：白色及膝長靴；配件：小珍珠耳環 |
+| 髮型 | 明亮蜜橘棕的韓式狼尾層次剪。 |
+| 妝感 | 淡妝、亮澤唇釉、凍紅的臉頰。 |
+| 身材設定（數字） | 161 cm／91-58-90／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身羅紋針織洋裝清楚勾出 F 罩杯胸型、細腰與臀線；雙手插在大衣口袋把大衣撐開，讓洋裝線條露出來。 |
+| 主光 | 畫面外前左方的柔和暖色主光 |
+| 補光 | 背後燈籠的暖光；雪地上的冷藍夜色 |
+| 姿態 | 正面站在雪地上，重心在一隻腳。 |
+| 手的位置 | 雙手插在敞開的大衣口袋裡，把大衣往後撐開。 |
+| 表情 | 月牙眼大笑、露出酒窩 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 3.8 公尺，視野 1.07×1.43 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 她的配色有「蒸氣白」與紅；溫泉街的蒸氣與燈籠暖光延續她的溫暖感，但完全不靠食物。 |
+| 與同一人另一款的差異 | 橫式款是棚內暖橘小吃店、針織短開襟＋短裙；這款是戶外雪夜、白色針織洋裝＋紅大衣＋長靴。 |
+| 參考照片（用途） | somi-08：服裝材質（外套穿搭與身分）；somi-02：表情（月牙眼的笑） |
+| 推薦月份 | 12 月（冬） |
 
 | 風險 | 處理 |
 |---|---|
-| 棚景太像真實餐廳、雜物多 | 寫明整齊、只有吧台、高腳椅與吊燈 |
-| 炸雞搶戲或出現包裝假字 | 只在橫幅右緣、失焦、放在盤子上，不寫包裝 |
-| 與 Miu、Jia 的碰撞紀錄 | 暖橘高飽和、站姿大笑、蜜橘狼尾；不改臉，不宣稱能消除碰撞 |
+| 雪夜臉暗或發灰 | 寫明柔和暖色主光 |
+| 燈籠或招牌出現文字 | 只寫紙燈籠、不寫招牌 |
+| 雪花蓋住臉 | 只寫空中少量雪花 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. She wears a fitted cream rib-knit cropped cardigan buttoned up, a high-waisted rust-orange knit mini skirt, brown leather heeled loafers and small red enamel heart earrings. Setting: a studio-built retro Korean snack-bar set with a warm orange tiled counter, a row of red vinyl bar stools and a warm pendant lamp, everything tidy. She stands leaning one hip lightly against the tiled counter, weight on her back leg with the front leg crossed in front, one hand resting on the counter edge and the other tucking her hair behind her ear, laughing openly at the camera with her eyes curved into crescents and dimples showing. Horizontal 3:2 frame, full-frame camera with a 70mm lens from about 4.1 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 86% of the frame height, left of centre with the orange counter running to the right and a small plate of golden fried chicken resting soft and out of focus at the right edge. Lighting: a large warm softbox key from the front right at head height and a soft fill from the left just out of frame light her face evenly; the pendant lamp adds a warm glow on her hair; warm orange and cream tones throughout. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. She wears a fitted cream rib-knit cropped cardigan buttoned up, a high-waisted rust-orange knit mini skirt, brown leather heeled loafers and small red enamel heart earrings. Setting: a studio-built retro Korean snack-bar set with a warm orange tiled counter, a row of red vinyl bar stools and a warm pendant lamp, everything tidy. She stands leaning one hip lightly against the tiled counter, weight on her back leg with the front leg crossed in front, one hand resting on the counter edge and the other tucking her hair behind her ear, laughing openly at the camera with her eyes curved into crescents and dimples showing. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 4.2 metres, camera at her navel height; full length from her loafers to a little above her head, she fills about 85% of the frame height, centred with the pendant lamp just inside the top edge and no food in the frame. Lighting: a large warm softbox key from the front right at head height and a soft fill from the left just out of frame light her face evenly; the pendant lamp adds a warm glow on her hair; warm orange and cream tones throughout. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. She wears a fitted ivory ribbed knit mini dress with a high round neck that follows her full chest, slim waist and hips, a long red wool coat worn open, white knee-high boots and small pearl earrings. Setting: a quiet street in a small hot-spring town on a snowy winter evening, low wooden inns with warm paper lanterns, thin steam rising from a stone channel at the roadside, a light layer of snow on the ground, the street empty. She stands facing the camera with her weight on one leg, both hands in the pockets of the open coat holding it back so the fitted dress shows, laughing at the camera with her eyes curved into crescents and dimples showing, a few snowflakes in the air. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.8 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, centred with the lantern-lit street behind her. Lighting: a soft warm key light from front-left just out of frame lights her face evenly; the paper lanterns behind her glow warm amber against the cool blue evening light on the snow; red, ivory and warm amber tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.4 Coco Wu（吳可可，20）｜週末飯店泳池的薄荷綠
+### 5.16 V-coco-wu｜Coco｜直式款（Penny 已接受的 v2 主方向）
 
-**R1 修訂（姿態與細節）：**
-
-- 動作簡化：取消踢水濺花與罩衫被風掀起，只保留「坐池邊、往後撐、歪頭大笑」
-- 補光改為畫面外反光板；膚色只寫一次
-- 取景重算：橫幅較遠、直幅較近，兩張都到水面
-
-- **與人設核對：** 主方向不變：週末泳池、薄荷綠與淺紫。她 20 歲、大學生人設：不用校園或制服元素，寫明成人。泳裝尺度與第二階段的泳裝參考相同，交印前需確認廠商接受範圍。
-- **為什麼適合她：** 她的魅力是對自己柔軟曲線的自在與大笑。泳池、薄荷綠比基尼、透膚淺紫罩衫，清透又甜。
-- **參考照片（既有）：** coco-21、coco-08
-- **逐項檢查：** 隨拍感：v1 踢水濺花、罩衫被風掀起像抓拍 → 拿掉；道具遮身形：罩衫落在肩後，不遮身形；動作數量：只剩坐池邊往後撐＋歪頭大笑；穿搭完整度：比基尼＋罩衫＋髮夾＋腳鍊，完整
-- **舊版姿勢：** 坐在池邊、兩條小腿泡在水裡，身體往後用雙手撐地；一腳踢水濺起水花；透膚罩衫被風掀起。
+**一句話：** Penny 已接受的方向：週末飯店泳池，薄荷綠比基尼＋淺紫透膚罩衫，坐在池邊大笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 週末早上的度假飯店泳池：淺米色石材地磚、清澈的湖水綠池水、遠處收起的白色陽傘，池畔乾淨無人。 |
-| 服裝 | 薄荷綠羅紋三角比基尼上衣與同色側綁下著（完整遮蔽）、敞開的淺紫透膚短袖罩衫（落在肩後）、腳踝細金鍊。 |
-| 髮型／髮色 | 深棕長波浪捲髮、蓬鬆空氣瀏海，髮尾微濕。 |
-| 配件 | 白色雛菊髮夾。 |
-| 光線 | 主光：晚上午的陽光從左前上方。補光：畫面外的大反光板補亮臉與身體的陰影，臉均勻。池水在腿上留下淡淡的水光。清爽的夏日色彩。 |
-| 表情 | 歪頭、瞇成一條線的大笑、露出酒窩。 |
-| 姿勢與雙手 | 坐在池邊、兩條小腿泡在水裡，身體往後用雙手撐地。 |
-| 甜美元素 | 瞇眼大笑、酒窩、雛菊髮夾、粉嫩配色。 |
-| 性感元素 | 比基尼與透膚罩衫、往後撐的姿勢展現曲線、濕髮與水光。 |
-| 替代方向 | 清晨的乾淨房間：奶油白針織開襟＋淺紫細肩小可愛＋百褶迷你裙，坐在床邊，窗光；背景整理乾淨。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 坐姿到水面 | 坐姿到水面 |
-| 人物佔畫面高度 | 約 81% | 約 81% |
-| 頭頂／手腳範圍 | 頭頂完整、撐地的雙手在框內，小腿在水中 | 頭頂完整、撐地的雙手在框內，小腿在水中 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 70mm／約 3.6 公尺 | 70mm／約 2.7 公尺 |
-| 視野（寬×高，公尺） | 1.85×1.23 | 0.93×1.23 |
-| 人物範圍高度（公尺） | 1.0 | 1.0 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框要上下共裁約 19%：約剩胸口到腰的位置以上，水面會被裁掉大半。 | 放進橫式半版直幅框左右共裁約 11%：撐地的手會貼近邊緣。 |
+| 場景 | 週末早上的度假飯店泳池：淺米色石材地磚、清澈的湖水綠池水、遠處收起的白色陽傘，池畔無人。 |
+| 服裝 | 泳裝：薄荷綠羅紋三角比基尼上衣與同色側綁下著（完整遮蔽）；外搭：敞開的淺紫透膚短袖罩衫（落在肩後）；配件：白色雛菊髮夾、腳踝細金鍊 |
+| 髮型 | 深棕長波浪捲髮、蓬鬆空氣瀏海，髮尾微濕。 |
+| 妝感 | 甜美淡妝。 |
+| 身材設定（數字） | 158 cm／89-56-86／E |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 比基尼呈現 E 罩杯胸型與細腰；往後撐的坐姿拉長身體線條。 |
+| 主光 | 晚上午的陽光從左前上方 |
+| 補光 | 畫面外大反光板；池水在腿上留下淡淡水光 |
+| 姿態 | 坐在池邊、兩條小腿泡在水裡，身體往後。 |
+| 手的位置 | 雙手撐在身後地上。 |
+| 表情 | 歪頭、瞇眼大笑、酒窩 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 坐姿到水面；人物約佔畫面高度 81%；頭頂完整、撐地的雙手在框內，小腿在水中；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，70mm，約 2.7 公尺，視野 0.93×1.23 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | Penny 接受的 v2 主方向；坐姿與下方水面在直幅裡讓身體更大、更清楚，所以建議放直式款。 |
+| 與同一人另一款的差異 | 橫式款是花田、白色亞麻洋裝、站姿；這款是泳池、比基尼、坐姿。 |
+| 參考照片（用途） | coco-21：表情（泳裝照的大笑；尺度同第二階段泳裝參考）；coco-20：身分（認臉與身形） |
+| 推薦月份 | 7 月（盛夏） |
 
 | 風險 | 處理 |
 |---|---|
-| 泳裝遮蔽與走光 | 寫明完整遮蔽、坐姿；生成後逐張檢查，比照第二階段的遮蔽規則 |
-| 水下腳掌與撐地手指變形 | 小腿入水、腳掌不必看清；檢查手 |
-| 校園甜心＋泳裝顯小 | 寫明 adult、不用校園元素 |
+| 泳裝遮蔽與走光 | 寫明完整遮蔽；交印前需確認廠商接受範圍 |
+| 水下腳掌與撐地手指變形 | 生成後檢查 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 20-year-old adult Taiwanese woman with her natural fair skin tone, deep dimples when she smiles and dark-brown long wavy hair with soft wispy bangs, the ends slightly wet. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. She wears a mint-green ribbed triangle bikini top with matching side-tie bottoms that fully cover, an open sheer lilac short-sleeve cover-up shirt resting off her shoulders, a white daisy hair clip and a thin gold anklet. Setting: a resort hotel pool on a weekend morning, pale cream stone tiles, clear turquoise water, white umbrellas folded in the distance, the pool deck empty. She sits on the pool edge with both lower legs in the water, leaning back on her hands, head tilted, laughing with her eyes squeezed into crescents and dimples showing. Horizontal 3:2 frame, full-frame camera with a 70mm lens from about 3.6 metres, camera at her seated chest height; framed from the waterline to a little above her head, she fills about 81% of the frame height, left of centre with the open turquoise pool on the right. Lighting: bright late-morning sun from high front-left; a large white reflector just out of frame fills the shadows on her face and body so her face is evenly lit; the turquoise water adds soft aqua reflections on her legs; clear, fresh summer colours. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
 A 20-year-old adult Taiwanese woman with her natural fair skin tone, deep dimples when she smiles and dark-brown long wavy hair with soft wispy bangs, the ends slightly wet. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. She wears a mint-green ribbed triangle bikini top with matching side-tie bottoms that fully cover, an open sheer lilac short-sleeve cover-up shirt resting off her shoulders, a white daisy hair clip and a thin gold anklet. Setting: a resort hotel pool on a weekend morning, pale cream stone tiles, clear turquoise water, white umbrellas folded in the distance, the pool deck empty. She sits on the pool edge with both lower legs in the water, leaning back on her hands, head tilted, laughing with her eyes squeezed into crescents and dimples showing. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 2.7 metres, camera at her seated chest height; framed from the waterline to a little above her head, she fills about 81% of the frame height, centred with the water across the bottom of the frame. Lighting: bright late-morning sun from high front-left; a large white reflector just out of frame fills the shadows on her face and body so her face is evenly lit; the turquoise water adds soft aqua reflections on her legs; clear, fresh summer colours. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.5 Mia Huang（黃米亞，22）｜粉紫霓虹的電競時尚棚
+### 5.17 V-mia-huang｜Mia｜直式款（新企劃）
 
-**R1 修訂（主方向）：**
-
-- 姿勢改成簡潔站姿：站在電競椅旁，一手扶椅背、一手插腰（取消腳勾扶手＋扭身＋拉耳機）
-- 耳機只是掛在脖子上的小配件，不遮臉、不拿在手上
-- 保留粉紫霓虹輪廓光；臉用中性柔光箱打出自然明亮的膚色
-- 桌子與鍵盤拿掉，畫面只剩椅子與霓虹牆
-- 取景重算：橫幅膝上、直幅全身
-
-- **與人設核對：** 保留電競風時尚棚與粉紫輪廓光；姿勢改成簡潔、乾淨，像棚拍而不是直播截圖。
-- **為什麼適合她：** 她的工作就是被看。把直播間的 RGB 光變成棚拍的輪廓光，臉用乾淨的白光打；站姿簡單，讓俏皮的表情和身形成為重點。
-- **參考照片（既有）：** mia-11、mia-02
-- **舊版姿勢：** 橫坐在電競椅上，一腳勾在扶手、另一腳踩地，上身扭向鏡頭；一手把耳機從脖子上拉開，另一手放在膝上；帽 T 下襬擺動。
+**一句話：** 春夜的櫻花河岸步道，淺紫貼身露肩針織洋裝，站在花枝下甜笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 乾淨的攝影棚，布置成電競場景：一張白色電競椅、深炭灰牆上幾支直立的洋紅與紫色霓虹燈管，畫面裡沒有其他東西。 |
-| 服裝 | 黑色短版拉鍊帽 T（敞開）、淺紫羅紋短版背心、黑色高腰短褲、白色過膝襪、白色厚底球鞋。 |
-| 髮型／髮色 | 灰棕色長髮鬆散大波浪，左側臉旁一片粉紅 money piece 挑染。 |
-| 配件 | 細白耳機掛在脖子上（小配件）、細銀手鍊。 |
-| 光線 | 主光：相機左側的大型中性柔光箱，臉乾淨、膚色自然明亮。輪廓：身後的洋紅與紫色霓虹在頭髮與肩膀邊緣留下粉紫輪廓光。背景沉到深炭灰。 |
-| 表情 | 俏皮眨眼、挑逗的半笑。 |
-| 姿勢與雙手 | 站在電競椅旁，重心在一隻腳；一手放在椅背頂端，另一手插腰。 |
-| 甜美元素 | 眨眼、二次元感的眼妝、粉紅挑染。 |
-| 性感元素 | 短版背心露腰、短褲與過膝襪之間的腿部線條、插腰的身形。 |
-| 替代方向 | 白天的新竹咖啡座：白色短版 T＋牛仔短褲＋灰色帽 T 綁在腰間，戶外座位、午後側光，去電競化。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 膝上 | 全身 |
-| 人物佔畫面高度 | 約 85% | 約 85% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在膝蓋下方 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 70mm／約 4.1 公尺 | 70mm／約 4.2 公尺 |
-| 視野（寬×高，公尺） | 2.11×1.41 | 1.44×1.92 |
-| 人物範圍高度（公尺） | 1.2 | 1.64 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框（約 1.85:1）要上下共裁約 19%：約剩大腿以上，頭頂留白變少但人物完整。 | 放進橫式半版直幅框（約 0.67:1）左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 春天夜晚的河岸步道，盛開的櫻花樹在頭上交錯，步道旁掛著柔和紙燈籠，步道空無一人。 |
+| 服裝 | 洋裝：淺紫細針織貼身露肩迷你洋裝；鞋：白色及膝長靴；配件：一側小珍珠髮夾、細銀耳環 |
+| 髮型 | 灰棕色長髮鬆散大波浪，左側臉旁粉紅 money piece 挑染。 |
+| 妝感 | 柔和動漫感眼妝、圓形腮紅、水光唇。 |
+| 身材設定（數字） | 160 cm／91-57-88／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 露肩貼身針織洋裝勾出 F 罩杯胸型、細腰與臀線；及膝靴拉長腿部。 |
+| 主光 | 畫面外左前方柔和暖色主光 |
+| 補光 | 燈籠讓櫻花透出暖粉色，背後深藍夜空 |
+| 姿態 | 正面站在低垂的花枝下。 |
+| 手的位置 | 一手輕觸肩旁的花枝，一手自然垂放。 |
+| 表情 | 甜甜的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 3.8 公尺，視野 1.07×1.43 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 她是夜貓子，夜晚的櫻花與燈籠延續她的粉紫配色與「深夜」氣質，但完全是寫真場景。 |
+| 與同一人另一款的差異 | 橫式款是夏日黃昏海邊碼頭、粉色緞面馬甲＋白裙；這款是春夜櫻花、淺紫針織洋裝＋長靴。 |
+| 參考照片（用途） | mia-08：表情（開朗的笑）；mia-06：身分（認臉；畫面裡的帽 T 與貓不採用） |
+| 推薦月份 | 3 月（春） |
 
 | 風險 | 處理 |
 |---|---|
-| 霓虹讓臉變紫、變髒 | 中性柔光箱是臉的主光，霓虹只當輪廓 |
-| 耳機或椅子出現品牌字 | 寫素白耳機、白色電競椅，不寫品牌 |
-| 過膝襪＋電競感顯小 | 寫明 adult，不加貓耳等幼化道具 |
+| 燈籠上出現文字 | 寫素面紙燈籠 |
+| 夜景臉暗 | 寫明柔和主光 |
+| 碰花枝的手指變形 | 生成後檢查 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 22-year-old adult Taiwanese woman with her natural fair skin tone and big expressive eyes with soft anime-inspired makeup, softly winged liner and glossy tinted lips, long ash-brown hair in loose waves with a pastel-pink money-piece highlight framing the left side of her face. Curvy figure, 160 cm tall, bust 91 cm, waist 57 cm, hips 88 cm, F cup, full chest and slim waist. She wears a black cropped zip-up hoodie worn open over a lilac ribbed crop tank, black high-waisted shorts, white over-the-knee socks, chunky white platform sneakers, a slim plain white headset resting around her neck and a thin silver chain bracelet. Setting: a clean photo studio styled as a gaming set, a white gaming chair and vertical magenta and violet neon tubes on a dark charcoal wall behind, nothing else in the frame. She stands beside the gaming chair with her weight on one leg, one hand resting on top of the chair back and the other on her hip, giving a playful wink with a teasing half-smile. Horizontal 3:2 frame, full-frame camera with a 70mm lens from about 4.1 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, left of centre with the white chair and neon-lit wall on the right. Lighting: a large neutral softbox key from camera-left lights her face cleanly with natural, bright skin tones; the magenta and violet neon tubes behind her draw a soft pink-purple rim along her hair and shoulders; the background falls to deep charcoal. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 22-year-old adult Taiwanese woman with her natural fair skin tone and big expressive eyes with soft anime-inspired makeup, softly winged liner and glossy tinted lips, long ash-brown hair in loose waves with a pastel-pink money-piece highlight framing the left side of her face. Curvy figure, 160 cm tall, bust 91 cm, waist 57 cm, hips 88 cm, F cup, full chest and slim waist. She wears a black cropped zip-up hoodie worn open over a lilac ribbed crop tank, black high-waisted shorts, white over-the-knee socks, chunky white platform sneakers, a slim plain white headset resting around her neck and a thin silver chain bracelet. Setting: a clean photo studio styled as a gaming set, a white gaming chair and vertical magenta and violet neon tubes on a dark charcoal wall behind, nothing else in the frame. She stands beside the gaming chair with her weight on one leg, one hand resting on top of the chair back and the other on her hip, giving a playful wink with a teasing half-smile. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 4.2 metres, camera at her navel height; full length from her sneakers to a little above her head, she fills about 85% of the frame height, centred with the neon tubes rising behind her. Lighting: a large neutral softbox key from camera-left lights her face cleanly with natural, bright skin tones; the magenta and violet neon tubes behind her draw a soft pink-purple rim along her hair and shoulders; the background falls to deep charcoal. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft round face with big expressive eyes, softly winged liner, rounded blush and glossy tinted lips, long ash-brown hair in loose waves with a pastel-pink money-piece highlight framing the left side of her face. Curvy figure, 160 cm tall, bust 91 cm, waist 57 cm, hips 88 cm, F cup, a full chest and a slim waist. She wears a lilac fitted fine-knit off-shoulder mini dress that follows her full chest, slim waist and hips, white knee-high boots, small pearl hair clips on one side and thin silver earrings. Setting: a riverside promenade at night in spring, cherry trees in full bloom arching overhead, soft plain paper lanterns hanging along the path, the path empty. She stands under a low blossom branch facing the camera, one hand lightly touching the branch above her shoulder and the other relaxed at her side, smiling sweetly at the camera. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.8 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, centred under the arching blossoms. Lighting: a soft warm key light from front-left just out of frame lights her face evenly; the lanterns give the blossoms a warm pink glow against a deep blue night sky; pink, lilac and deep blue tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.6 Yuna Kim（김하은，21）｜首爾公寓的極簡窗光
+### 5.18 V-yuna-kim｜Yuna｜直式款（新企劃）
 
-**R1 修訂（姿態與細節）：**
-
-- 手部簡化：一手放在緞面裙上、一手放在長凳上（取消「手碰窗簾＋窗簾飄動」）
-- 補光改為畫面外白色反光卡
-- 取景重算：橫幅坐姿全身（50mm）、直幅坐姿膝上（85mm）
-
-- **與人設核對：** 主方向不變：極簡窗光、針織＋緞面裙、安靜氣質。和 Rin 的緞面晨袍分得開（Yuna 是白天、極簡、正面坐姿）。
-- **為什麼適合她：** 她的氣質是「清冷、乾淨」。大窗、白紗簾、一張長凳，讓臉成為畫面的重點。
-- **參考照片（既有）：** yuna-06、yuna-01
-- **逐項檢查：** 隨拍感：低，本來就是擺好的坐姿；道具遮身形：無；動作數量：v1 手碰窗簾＋窗簾飄動 → 改成兩手各放裙上與長凳；穿搭完整度：開襟＋緞面裙＋髮夾＋項鍊；赤腳符合室內場景
-- **舊版姿勢：** 側坐在窗邊長凳，雙膝併攏朝向鏡頭；一手放在緞面裙上，另一手輕碰窗簾邊緣；窗簾在微風中飄動。
+**一句話：** 深秋的銀杏大道，奶油色毛呢短外套套裝配黑色長靴，站在落葉上的韓劇感街拍寫真。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 極簡白色首爾公寓：大窗配白色薄紗簾、淺橡木地板、一張低矮白色長凳，房間裡沒有其他東西。 |
-| 服裝 | 柔灰細針織短版開襟（扣中間一顆、滑落一側肩）、象牙白緞面斜裁中長裙、赤腳。 |
-| 髮型／髮色 | 深棕到黑的自然波浪、鎖骨長度、空氣感、八字瀏海。 |
-| 配件 | 耳上一支紅色櫻桃髮夾、細銀鍊。 |
-| 光線 | 主光：早晨日光透過白紗簾，從相機右側大面積柔光。補光：畫面外左側白色反光卡，臉的陰影面保持清楚。乾淨的白與柔灰。 |
-| 表情 | 平靜、幾乎看不出來的微笑，眼神穩定看鏡頭。 |
-| 姿勢與雙手 | 側坐在窗邊長凳，雙膝併攏朝向鏡頭；一手放在緞面裙上，另一手放在長凳上。 |
-| 甜美元素 | 櫻桃髮夾、溫柔的微笑、柔軟的針織。 |
-| 性感元素 | 開襟滑落露肩、緞面裙的光澤與身體線條。 |
-| 替代方向 | 清晨的空屋頂：白色細肩背心＋灰色迷你格紋裙＋短版外套，站在欄杆邊，藍調時刻的冷光。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 坐姿全身 | 坐姿膝上 |
-| 人物佔畫面高度 | 約 86% | 約 84% |
-| 頭頂／手腳範圍 | 坐姿頭頂到腳完整，雙手在框內 | 坐姿頭頂完整、雙手在框內，從膝蓋以上 |
-| 留白位置 | 人物偏右，左側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 50mm／約 3.2 公尺 | 85mm／約 2.6 公尺 |
-| 視野（寬×高，公尺） | 2.3×1.54 | 0.73×0.98 |
-| 人物範圍高度（公尺） | 1.32 | 0.82 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框要上下共裁約 19%：坐姿全身會切到腳；若最後選大照片框，改用坐姿膝上。 | 放進橫式半版直幅框左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 深秋安靜的住宅大道，兩旁金黃銀杏，人行道鋪滿落葉，低矮的現代建築在背景失焦，街上沒有人。 |
+| 服裝 | 上身：奶油色毛呢短外套（無領、扣起、合身）；下身：同色高腰毛呢迷你裙；鞋：黑色及膝皮長靴；配件：小珍珠耳環、小黑色肩背包 |
+| 髮型 | 深棕自然波浪、鎖骨長度、空氣感八字瀏海。 |
+| 妝感 | 水光肌、眼妝為重點、珊瑚漸層唇。 |
+| 身材設定（數字） | 168 cm／84-58-89／C（纖細長腿） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 合身短外套收在腰上、高腰迷你裙與及膝長靴拉長 168 cm 的腿部比例。 |
+| 主光 | 銀杏樹後方的低角度午後陽光，頭髮上一圈暖色輪廓 |
+| 補光 | 畫面外前方大反光板 |
+| 姿態 | 正面站在落葉人行道上，重心在一隻腳。 |
+| 手的位置 | 一手拉著肩上的包包背帶，一手自然垂放。 |
+| 表情 | 頭微傾、柔和的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 全身；人物約佔畫面高度 87%；頭頂到腳完整，雙手在框內；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 5.3 公尺，視野 1.5×2.0 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 毛呢套裝、長靴、水光妝與銀杏的金黃——用穿搭、色調與季節建立韓系美感，沒有任何文字或地標。 |
+| 與同一人另一款的差異 | 橫式款是室內咖啡館、奶油黃開襟＋緞面裙、坐姿；這款是戶外銀杏大道、毛呢套裝＋長靴、站姿全身。 |
+| 參考照片（用途） | yuna-11：場景（首爾街頭夕陽光線；回頭姿勢不採用）；yuna-03：表情（柔和近照與妝感） |
+| 推薦月份 | 11 月（深秋） |
 
 | 風險 | 處理 |
 |---|---|
-| 窗戶過曝吃掉臉的輪廓 | 測光給臉、寫明反光卡補光 |
-| 緞面裙坐姿皺褶怪異 | 生成後檢查；不行改站姿靠窗 |
-| 房間太空像假棚 | 保留長凳與木地板的細節 |
+| 背景出現招牌或文字 | 寫明低矮建築失焦、不寫店面 |
+| 逆光臉暗 | 寫明反光板 |
+| 包包出現 logo | 寫素面小包 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 21-year-old adult Korean woman with her natural fair skin tone and large bright double-eyelid eyes, dark-brown natural wavy hair at collarbone length with airy volume and curtain bangs, a small red cherry hair clip above one ear. Slim figure, 168 cm tall, bust 84 cm, waist 58 cm, hips 89 cm, C cup. She wears a soft grey fine-knit cropped cardigan buttoned at the middle and sliding off one shoulder, an ivory satin bias-cut midi slip skirt, bare feet and a thin silver chain necklace. Setting: a minimalist white Seoul apartment with a large window and sheer white curtains, a pale oak floor and one low white bench, nothing else in the room. She sits sideways on the bench by the window with her knees together and angled toward the camera, one hand resting on the satin skirt and the other on the bench beside her, facing the camera with a calm, barely-there smile. Horizontal 3:2 frame, full-frame camera with a 50mm lens from about 3.2 metres, camera at her seated chest height; full length seated, from her bare feet to a little above her head, she fills about 86% of the frame height, right of centre with the bright window and curtains on the left. Lighting: soft morning daylight through the sheer curtains from camera-right as a large diffused key, with a white bounce card just out of frame on the left so the shadow side of her face stays open; clean whites and soft greys. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 21-year-old adult Korean woman with her natural fair skin tone and large bright double-eyelid eyes, dark-brown natural wavy hair at collarbone length with airy volume and curtain bangs, a small red cherry hair clip above one ear. Slim figure, 168 cm tall, bust 84 cm, waist 58 cm, hips 89 cm, C cup. She wears a soft grey fine-knit cropped cardigan buttoned at the middle and sliding off one shoulder, an ivory satin bias-cut midi slip skirt, bare feet and a thin silver chain necklace. Setting: a minimalist white Seoul apartment with a large window and sheer white curtains, a pale oak floor and one low white bench, nothing else in the room. She sits sideways on the bench by the window with her knees together and angled toward the camera, one hand resting on the satin skirt and the other on the bench beside her, facing the camera with a calm, barely-there smile. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 2.6 metres, camera at her seated chest height; framed from her knees to a little above her head, she fills about 84% of the frame height, centred with the top of the window frame near the top edge. Lighting: soft morning daylight through the sheer curtains from camera-right as a large diffused key, with a white bounce card just out of frame on the left so the shadow side of her face stays open; clean whites and soft greys. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 21-year-old adult Korean woman with her natural fair skin tone, large bright double-eyelid eyes as the focus of her makeup, a dewy glass-skin finish and soft coral gradient lips, dark-brown natural wavy hair at collarbone length with airy curtain bangs. Slim, long-legged figure, 168 cm tall, bust 84 cm, waist 58 cm, hips 89 cm, C cup, a narrow waist and long legs. She wears a cream tweed cropped jacket, collarless and buttoned, fitted close to her chest and waist, a matching high-waisted tweed mini skirt, black knee-high leather boots, small pearl earrings and a small plain black shoulder bag. Setting: a quiet residential avenue in late autumn lined with golden ginkgo trees, fallen yellow leaves covering the sidewalk, low modern buildings softly out of focus, the street empty. She stands on the leaf-covered sidewalk facing the camera, weight on one leg, one hand holding the strap of the bag at her shoulder and the other relaxed at her side, head tilted slightly with a soft smile. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 5.3 metres, camera at her navel height; full length from her boots to a little above her head, she fills about 87% of the frame height, centred with golden ginkgo trees on both sides. Lighting: low afternoon sun behind the ginkgo trees lights the leaves and draws a warm rim on her hair; a large white reflector just out of frame lights her face evenly; golden yellow, cream and black tones with a soft film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.7 Tammy Chou（周語彤，24）｜都會白色建築的熱粉色洋裝（型錄外拍）
+### 5.19 V-tammy-chou｜Tammy｜直式款（新企劃）
 
-**R1 修訂（姿態與細節）：**
-
-- 取消「走下階梯＋插腰＋撥髮＋頭髮彈動」，改成站定在階梯上：一手插腰、一手拉包包肩帶
-- 硬光加上畫面外反光板柔化臉上陰影
-- 取景重算：橫幅全身 70mm（約 5.9 公尺）、直幅膝上
-
-- **與人設核對：** 主方向不變：都會白色建築、熱粉色貼身洋裝，像一張型錄外拍；用白天熱粉與 Rainie 的夜景血紅分開。
-- **為什麼適合她：** 她的工作就是「把衣服穿到讓人想買」。白色建築、晴天、一件飽和的熱粉洋裝，站定就是一張乾淨明亮的型錄照。
-- **參考照片（既有）：** tammy-08、tammy-01
-- **逐項檢查：** 隨拍感：v1 走下階梯像街拍抓拍 → 改成站定；道具遮身形：包包小、背在肩上，不遮；動作數量：v1 走路＋插腰＋撥髮＋頭髮彈動 → 改成插腰＋拉肩帶；穿搭完整度：洋裝＋高跟鞋＋包＋耳環，完整
-- **舊版姿勢：** 走下階梯、朝鏡頭走來：重心在後腳，前腳正要踏到下一階；一手插腰，另一手把頭髮往後撥；大波浪隨步伐彈動。
+**一句話：** 夜晚的大飯店大廳，白色西裝外套洋裝配黑色細跟鞋，雙手插腰的自信全身照。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 現代白色建築外觀，晴天：寬大的清水混凝土階梯、身後一面平滑的白色弧形牆，階梯上沒有其他人。 |
-| 服裝 | 熱粉色方領羅紋針織貼身迷你洋裝、白色尖頭露跟鞋、小型白色硬挺素面肩背包。 |
-| 髮型／髮色 | 奶茶金棕大波浪長捲髮、蓬鬆有空氣感，臉側一片淺色 money piece 挑染。 |
-| 配件 | 金色圈耳環。 |
-| 光線 | 主光：晴天硬光從右前上方，階梯邊緣有清楚的斜線陰影。補光：畫面外的大反光板柔化臉上陰影，臉均勻。熱粉對白牆與淡藍灰陰影。 |
-| 表情 | 明亮的笑容，看鏡頭。 |
-| 姿勢與雙手 | 站在階梯上、身體微側面向鏡頭，重心在後腳、前腳踩在低一階；一手插腰，另一手拉著肩上的包包肩帶。 |
-| 甜美元素 | 明亮的笑、蓬鬆的長捲髮、熱粉色。 |
-| 性感元素 | 貼身針織洋裝的曲線、方領、長腿與高跟鞋。 |
-| 替代方向 | 白色無縫棚的型錄風：淺色牛仔外套披肩＋白色貼身針織洋裝，高亮均勻棚光。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 全身 | 膝上 |
-| 人物佔畫面高度 | 約 86% | 約 85% |
-| 頭頂／手腳範圍 | 頭頂到腳完整，雙手在框內 | 頭頂完整、雙手在框內，切在膝蓋下方 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 70mm／約 5.7 公尺 | 70mm／約 3.1 公尺 |
-| 視野（寬×高，公尺） | 2.93×1.95 | 1.06×1.42 |
-| 人物範圍高度（公尺） | 1.68 | 1.2 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框要上下共裁約 19%：全身會切到腳或頭頂；若最後選大照片框，這張要改拍膝上。 | 放進橫式半版直幅框左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 夜晚大飯店的大廳：拋光大理石地板與柱子、頭頂溫暖的水晶吊燈、背景圓桌上一大盆白花，大廳沒有其他人。 |
+| 服裝 | 洋裝：白色合身西裝外套式迷你洋裝（深 V 翻領、金色扣子、繫腰帶）；鞋：黑色尖頭細高跟鞋；配件：金色垂墜耳環 |
+| 髮型 | 奶茶金棕大波浪長捲髮，臉側淺色 money piece 挑染。 |
+| 妝感 | 閃粉眼影、果凍唇。 |
+| 身材設定（數字） | 160 cm／90-57-89／E |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 深 V 翻領與腰帶勾出 E 罩杯胸型與細腰；迷你裙長與高跟鞋讓腿部比例完整。 |
+| 主光 | 畫面外右前方柔光 |
+| 補光 | 水晶吊燈的暖色環境光 |
+| 姿態 | 正面站在大理石柱旁，一腳略往前。 |
+| 手的位置 | 雙手插腰。 |
+| 表情 | 自信的笑容 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 全身；人物約佔畫面高度 85%；頭頂到腳完整，雙手在框內；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，70mm，約 4.3 公尺，視野 1.47×1.97 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 合身洋裝＋高跟鞋，換成白色俐落的西裝洋裝，配上大飯店的大理石與吊燈——高級感來自場景與剪裁。 |
+| 與同一人另一款的差異 | 橫式款是白天精品店、熱粉針織洋裝；這款是夜晚飯店大廳、白色西裝洋裝、全身站姿。 |
+| 參考照片（用途） | tammy-01：服裝材質（貼身洋裝的線條）；tammy-03：表情（較柔的表情） |
+| 推薦月份 | 1 月（年末） |
 
 | 風險 | 處理 |
 |---|---|
-| 硬光在臉上留下深陰影 | 寫明反光板補光 |
-| 高跟鞋＋階梯的腳部結構錯誤 | 站定、前腳踩低一階；生成後放大檢查 |
-| 包包出現 logo 或文字 | 寫素面、無標誌 |
-| 與 Rainie 太像 | 白天、熱粉、白色建築 vs 夜景血紅緞面 |
-| 與 Somi 的 R2 目視相似紀錄 | 冷白建築與熱粉；不改臉，不宣稱能消除相似 |
+| 大廳出現其他人或招牌 | 寫明大廳無人、不寫招牌 |
+| 高跟鞋腳部結構 | 生成後放大檢查 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, full chest and slim waist. She wears a fitted hot-pink square-neck rib-knit mini dress, white pointed slingback heels, a small structured plain white shoulder bag and gold hoop earrings. Setting: a modern white building exterior on a clear day, a wide concrete staircase with clean geometric shadows and a smooth white curved wall behind, the steps empty. She stands on the staircase facing the camera at a slight angle, weight on her back leg with the front foot resting one step lower, one hand on her hip and the other holding the strap of the bag at her shoulder, smiling brightly at the camera. Horizontal 3:2 frame, full-frame camera with a 70mm lens from about 5.7 metres, camera at her navel height; full length from her heels to a little above her head, she fills about 86% of the frame height, left of centre with the staircase and curved white wall forming clean lines on the right. Lighting: clear sun from high front-right casting crisp diagonal stair shadows; a large white reflector just out of frame softens the shadows on her face so it is evenly lit; saturated hot pink against clean white and soft blue-grey shade. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a white tailored blazer mini dress with a deep V lapel, gold buttons and a belted waist that defines her full chest and slim waist, black pointed stiletto heels and gold drop earrings. Setting: the lobby of a grand hotel at night, polished marble floor and columns, a warm crystal chandelier overhead, a large arrangement of white flowers on a round table in the background, the lobby empty. She stands beside a marble column facing the camera with both hands on her hips and one foot slightly forward, smiling confidently at the camera. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 4.3 metres, camera at her navel height; full length from her heels to a little above her head, she fills about 85% of the frame height, centred with the chandelier glow above her. Lighting: warm chandelier light fills the space; a soft key light from front-right just out of frame lights her face evenly; white, gold and warm marble tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-直構圖 prompt 草稿（3:4，未執行）：
+### 5.20 V-rin-ayase｜Rin｜直式款（Penny 採用的 v2 替代方向）
 
-```text
-A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, full chest and slim waist. She wears a fitted hot-pink square-neck rib-knit mini dress, white pointed slingback heels, a small structured plain white shoulder bag and gold hoop earrings. Setting: a modern white building exterior on a clear day, a wide concrete staircase with clean geometric shadows and a smooth white curved wall behind, the steps empty. She stands on the staircase facing the camera at a slight angle, weight on her back leg with the front foot resting one step lower, one hand on her hip and the other holding the strap of the bag at her shoulder, smiling brightly at the camera. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 3.1 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, centred with the diagonal stair shadows behind her. Lighting: clear sun from high front-right casting crisp diagonal stair shadows; a large white reflector just out of frame softens the shadows on her face so it is evenly lit; saturated hot pink against clean white and soft blue-grey shade. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-### 4.8 Rin Ayase（綾瀨凜，25）｜黎明公寓的祖母綠緞袍
-
-**R1 修訂（姿態與細節）：**
-
-- 保留越肩回眸這一個主要姿態；取消「緞面下襬擺動」
-- 加上畫面外柔光補臉；冷色天光＋暖色檯燈是這個場景本身的光，不是全組規則
-- 取景重算：橫幅大腿中段以上、直幅膝上（70mm）
-
-- **與人設核對：** 主方向不變：與 Penny 喜歡的 rin-04 一致，也符合她的「下班後清晨」支柱。和 Yerin 的碰撞：暗色室內黎明 vs Yerin 的明亮戶外。
-- **為什麼適合她：** 銀座下班後的清晨，是她私下安靜的那一面。緞面、裸肩、回眸，把 rin-04 的感覺拍成正式的大片。
-- **參考照片（既有）：** rin-04、rin-01
-- **逐項檢查：** 隨拍感：低，擺好的回眸；道具遮身形：無；動作數量：保留回眸＋兩手位置；拿掉下襬擺動；穿搭完整度：晨袍是這個場景的完整造型（Penny 喜歡的 rin-04 同類）
-- **舊版姿勢：** 站在窗邊、背部 3/4 朝鏡頭：重心在左腳，一手在胸前拉住晨袍，另一手扶著窗框；越過裸肩回頭看鏡頭（轉頭不超過 90 度）；緞面下襬輕輕擺動。
+**一句話：** Penny 採用的 v2 替代方向：出勤前的銀座，黑色絲絨細肩帶長禮服，坐在金色燈光的吧台邊（不拿酒杯）。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 東京高樓層公寓的黎明：高窗外是淡色天空與遠方柔和的城市，一張鋪象牙白床單的低床，床邊一盞還亮著的黃銅檯燈，房間整齊。 |
-| 服裝 | 深祖母綠真絲緞面晨袍，腰間鬆鬆繫起，從一側肩膀滑落露出上背。 |
-| 髮型／髮色 | 深酒紅棕長髮，鬆鬆盤成低髻，頸邊落下幾縷。 |
-| 配件 | 小金色垂墜耳環、細金手鍊。 |
-| 光線 | 主光：高窗進來的柔和冷色黎明光打在臉與肩上。補光：畫面外的柔光板讓臉清楚。她身後的黃銅檯燈在緞面上加一點暖光。深綠、象牙白與金色。 |
-| 表情 | 平靜、心照不宣的半笑。 |
-| 姿勢與雙手 | 站在窗邊、背部 3/4 朝鏡頭，重心在左腳；一手在胸前拉住晨袍，另一手扶著窗框；越過裸肩回頭看鏡頭（轉頭不超過 90 度）。 |
-| 甜美元素 | 回眸的淺笑、柔和的晨光。 |
-| 性感元素 | 滑落的緞面露出肩與背、低髻露出頸線、緞面貼著身形的光澤。 |
-| 替代方向 | 出勤前的銀座：黑色絲絨細肩帶長禮服，坐在金色燈光的吧台邊（不拿酒杯）。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 大腿中段以上 | 膝上 |
-| 人物佔畫面高度 | 約 86% | 約 85% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在大腿中段 | 頭頂完整、雙手在框內，切在膝蓋下方 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 70mm／約 3.1 公尺 | 70mm／約 3.2 公尺 |
-| 視野（寬×高，公尺） | 1.59×1.06 | 1.1×1.46 |
-| 人物範圍高度（公尺） | 0.91 | 1.24 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框要上下共裁約 19%：約剩腰上，回眸的臉與肩仍完整。 | 放進橫式半版直幅框左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 開店前的高級會員制酒吧：一長條拋光深色木吧台、溫暖的金色吊燈、背後柔焦的層架，吧台面乾淨，店內沒有其他人。 |
+| 服裝 | 洋裝：黑色絲絨細肩帶及地長禮服（貼身上身）；鞋：黑色細帶高跟鞋；配件：小金色垂墜耳環、細金手鍊 |
+| 髮型 | 深酒紅棕長髮，光滑的低髻。 |
+| 妝感 | 乾淨底妝、精準眼線、豆沙紅唇。 |
+| 身材設定（數字） | 166 cm／92-58-90／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身絲絨上身呈現 F 罩杯胸型與細腰；坐在高腳椅上、雙腿交疊，長禮服順著腿部線條垂下。 |
+| 主光 | 頭頂溫暖的金色吊燈＋畫面外左前方柔光 |
+| 補光 | 吧台與層架的金色反光 |
+| 姿態 | 坐在高腳椅上、身體轉向鏡頭，雙腿交疊。 |
+| 手的位置 | 一手手肘靠在吧台上，一手放在膝上；手上不拿杯子。 |
+| 表情 | 平靜、端莊的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 坐姿全身；人物約佔畫面高度 84%；坐姿頭頂到腳完整，雙手在框內；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，70mm，約 4.2 公尺，視野 1.44×1.92 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 逐字依 Penny 採用的替代方向（出勤前的銀座：黑色絲絨細肩帶長禮服，坐在金色燈光的吧台邊，不拿酒杯）；及地長禮服適合直幅。 |
+| 與同一人另一款的差異 | 橫式款是飯店套房夕陽、酒紅緞面中長洋裝、斜躺；這款是酒吧金色燈光、黑色絲絨長禮服、坐高腳椅。 |
+| 參考照片（用途） | rin-09：服裝材質（黑洋裝＋高跟鞋的線條）；rin-04：表情（Penny 喜歡的成熟氣質） |
+| 推薦月份 | 10 月（秋） |
 
 | 風險 | 處理 |
 |---|---|
-| 回頭造成脖子扭曲 | 背部 3/4 朝鏡頭、轉頭不超過 90 度 |
-| 晨袍遮蔽不足 | 一手在胸前拉住晨袍，只露肩與上背 |
-| 暗場景噪點、臉發灰 | 窗光主光加畫面外補光 |
+| 出現酒杯或酒瓶 | 只寫乾淨的吧台與柔焦層架，手上不拿東西 |
+| 寫「銀座」生出招牌字 | prompt 只寫高級會員制酒吧的元素，不寫地名招牌 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face and long narrow eyes, precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a loose low bun with a few strands at her neck. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. She wears a deep emerald-green silk satin robe tied loosely at the waist and slipping off one shoulder to show her upper back, small gold drop earrings and a thin gold bracelet. Setting: a quiet high-floor Tokyo apartment at dawn, a tall window with pale sky and a soft distant city, a low bed with ivory linen and a brass bedside lamp still switched on, the room tidy. She stands by the window with her back three-quarters to the camera, weight on her left leg, one hand holding the robe closed at her chest and the other resting on the window frame, looking back over her bare shoulder at the camera with a calm, knowing half-smile. Horizontal 3:2 frame, full-frame camera with a 70mm lens from about 3.1 metres, camera at her chest height; framed from mid-thigh to a little above her head, she fills about 86% of the frame height, left of centre with the tall window and dawn city on the right. Lighting: soft cool dawn light from the tall window as the key on her face and shoulder, a soft fill panel just out of frame keeping her face clear, and the brass lamp behind her adding a small warm glow on the satin; deep green, ivory and gold tones, the far corners of the room in shadow. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face and long narrow eyes, precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a loose low bun with a few strands at her neck. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. She wears a deep emerald-green silk satin robe tied loosely at the waist and slipping off one shoulder to show her upper back, small gold drop earrings and a thin gold bracelet. Setting: a quiet high-floor Tokyo apartment at dawn, a tall window with pale sky and a soft distant city, a low bed with ivory linen and a brass bedside lamp still switched on, the room tidy. She stands by the window with her back three-quarters to the camera, weight on her left leg, one hand holding the robe closed at her chest and the other resting on the window frame, looking back over her bare shoulder at the camera with a calm, knowing half-smile. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 3.2 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, centred with the window edge beside her. Lighting: soft cool dawn light from the tall window as the key on her face and shoulder, a soft fill panel just out of frame keeping her face clear, and the brass lamp behind her adding a small warm glow on the satin; deep green, ivory and gold tones, the far corners of the room in shadow. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a sleek low bun. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a black velvet floor-length gown with thin spaghetti straps and a fitted bodice that follows her full chest and slim waist, black strappy heels, small gold drop earrings and a thin gold bracelet. Setting: an elegant high-end Tokyo members' bar before opening, a long polished dark-wood counter, warm golden pendant lights and softly blurred shelves behind the counter, the counter clean and clear, the bar empty. She sits on a tall bar stool turned toward the camera with her legs crossed under the long gown, one elbow resting on the counter and the other hand on her knee, looking at the camera with a calm, poised smile. Vertical 3:4 frame, full-frame camera with a 70mm lens from about 4.2 metres, camera at her seated chest height; full length seated, from her heels to a little above her head, she fills about 84% of the frame height, centred with the golden bar counter beside her. Lighting: warm golden pendant light from above and a soft key light from front-left just out of frame light her face evenly; the velvet holds deep black while the counter glows gold; black, gold and deep wood tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.9 Rainie Hsu（許雷妮，24）｜頂樓夜景的血紅緞面馬甲洋裝
+### 5.21 V-rainie-hsu｜Rainie｜直式款（新企劃）
 
-**R1 修訂（姿態與細節）：**
-
-- 取消「撥髮＋頭髮擺動」：雙手放在身後欄杆上、一腳從高衩往前
-- 補光改為畫面外柔光
-- 取景重算：橫幅膝上、直幅全身
-
-- **與人設核對：** 主方向不變：夜色華麗、派對禮服、明亮主光＋城市散景。她的禁忌清單排除飲酒畫面：畫面不放酒杯酒瓶。
-- **為什麼適合她：** 她「走進來整個房間就變了」。血紅緞面、城市燈海、直視鏡頭的自信笑，臉打得夠亮，不是暗暗的夜拍。
-- **參考照片（既有）：** rainie-06、rainie-10
-- **逐項檢查：** 隨拍感：低；道具遮身形：無；不拿酒杯；動作數量：v1 撥髮＋頭髮擺動 → 改成雙手放欄杆；穿搭完整度：馬甲洋裝＋細帶高跟＋耳環＋手環，完整
-- **舊版姿勢：** 背靠玻璃欄杆：重心在一側臀部，一腳從高衩往前伸；一手放在欄杆上，另一手把頭髮撥到一側肩上；頭髮隨動作擺動。
+**一句話：** 雨後的夜晚街道，黑色緞面繞頸迷你洋裝外搭黑色長皮風衣，站在濕亮的路面上直視鏡頭。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 高樓頂層露台的夜晚：玻璃欄杆、腳下城市燈光化成柔和散景、平滑的深色石材地面，露台上沒有其他東西，玻璃只反射城市燈光。 |
-| 服裝 | 血紅緞面馬甲迷你洋裝（大腿高衩）、黑色細帶高跟涼鞋。 |
-| 髮型／髮色 | 長直黑髮，梳得光滑有光澤，深側分。 |
-| 配件 | 大型銀色垂墜耳環、細銀手環。 |
-| 光線 | 主光：左前方頭部高度的大型明亮柔光箱，臉與緞面都清楚。補光：畫面外右側柔光。背後是深藍夜空與暖金城市散景。 |
-| 表情 | 直視鏡頭、自信又帶點壞的笑。 |
-| 姿勢與雙手 | 背靠玻璃欄杆，雙手放在身後的欄杆上，一腳從高衩往前。 |
-| 甜美元素 | 笑容裡的俏皮。 |
-| 性感元素 | 血紅緞面馬甲、高衩露出的腿、直視的眼神。 |
-| 替代方向 | 銀色背景布的派對棚拍：黑色亮片細肩帶短洋裝，硬一點的閃燈主光。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 膝上 | 全身 |
-| 人物佔畫面高度 | 約 86% | 約 86% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在膝蓋下方 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏右，左側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 85mm／約 5.0 公尺 | 85mm／約 5.3 公尺 |
-| 視野（寬×高，公尺） | 2.12×1.41 | 1.5×2.0 |
-| 人物範圍高度（公尺） | 1.21 | 1.72 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框（約 1.85:1）要上下共裁約 19%：約剩大腿以上，頭頂留白變少但人物完整。 | 放進橫式半版直幅框（約 0.67:1）左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 夜晚剛下過雨的城市街道：濕亮的路面倒映暖色櫥窗光與冷色路燈，店面已打烊、只有素面霧玻璃，街上沒有人。 |
+| 服裝 | 洋裝：黑色緞面繞頸迷你洋裝；外套：黑色長版皮革風衣（敞開）；鞋：黑色細跟尖頭短靴；配件：大型銀色垂墜耳環 |
+| 髮型 | 長直黑髮，光滑有光澤，深側分。 |
+| 妝感 | 柔和魅惑妝、貼近睫毛的淡棕眼線。 |
+| 身材設定（數字） | 165 cm／94-59-92／F |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 繞頸緞面洋裝貼合 F 罩杯胸型、細腰與臀線；敞開的長風衣形成直向線條，讓 165 cm 的身形更修長。 |
+| 主光 | 畫面外左前方大型柔光，臉清楚 |
+| 補光 | 濕路面上暖琥珀與冷藍的倒影 |
+| 姿態 | 正面站在濕亮的人行道上，重心在一隻腳。 |
+| 手的位置 | 一手拉著敞開的風衣衣襟在腰間，一手自然垂放。 |
+| 表情 | 自信、帶點壞的笑 |
+| 視線 | 直視鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 3.9 公尺，視野 1.1×1.47 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 她的配色是黑、煙灰、金屬銀；雨夜街道的倒影是派對夜的另一種華麗，與頂樓燈海完全不同。 |
+| 與同一人另一款的差異 | 橫式款是頂樓燈海、血紅馬甲洋裝、靠欄杆；這款是雨夜街道、黑色緞面＋長皮風衣、站在路面。 |
+| 參考照片（用途） | rainie-01：表情（濃豔妝感與氣場）；rainie-11：服裝材質（黑色細肩帶洋裝的線條） |
+| 推薦月份 | 5 月（春末梅雨） |
 
 | 風險 | 處理 |
 |---|---|
-| 夜景噪點、臉發暗 | 大面積明亮主光＋補光 |
-| 出現酒杯或酒瓶 | 手放在欄杆上，場景只寫欄杆與地面 |
-| 高衩遮蔽 | 生成後逐張檢查 |
-| 玻璃反射出另一個人 | 寫明玻璃只反射城市燈光 |
-| 與 Iris 的 R2 目視相似 | 夜景華麗、側分光滑髮、血紅 vs Iris 的白天河濱；不改臉 |
+| 店面出現招牌文字 | 寫明打烊的素面霧玻璃 |
+| 夜景臉暗 | 寫明大型柔光主光 |
+| 路面倒影出現其他人 | 寫明街上沒有人 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a blood-red satin corset mini dress with a thigh-high slit, strappy black stiletto sandals, large silver statement drop earrings and a slim silver cuff. Setting: a high-rise penthouse terrace at night, a glass balustrade with the city lights far below spread into soft bokeh, a smooth dark stone floor, nothing else on the terrace, the glass reflecting only city lights. She leans back against the glass balustrade with both hands resting on the rail behind her and one leg forward through the slit, looking straight into the camera with a confident, slightly mischievous smirk. Horizontal 3:2 frame, full-frame camera with an 85mm lens from about 5 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 86% of the frame height, right of centre with the glowing city bokeh on the left. Lighting: a large bright softbox key from front-left at head height lights her face and catches crisp red highlights on the satin; a soft fill from the right just out of frame; deep navy night sky and warm gold city bokeh behind her. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a black satin halter mini dress that follows her full chest, slim waist and hips, a long black leather trench coat worn open, black pointed ankle boots with a slim heel and large silver statement drop earrings. Setting: a city street at night just after rain, the wet pavement reflecting warm amber light from closed shopfronts with plain frosted glass and cool blue street lights, the street empty. She stands on the wet pavement facing the camera, weight on one leg, one hand holding the edge of the open coat at her waist and the other relaxed at her side, looking straight into the camera with a confident, slightly mischievous smirk. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.9 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, centred with the reflective wet street behind her. Lighting: a large soft key light from front-left just out of frame lights her face clearly; warm amber and cool blue reflections shimmer on the wet street behind her; black, silver and deep blue tones with a hint of amber. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-直構圖 prompt 草稿（3:4，未執行）：
+### 5.22 V-miu-shiraishi｜Miu｜直式款（新企劃）
 
-```text
-A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a blood-red satin corset mini dress with a thigh-high slit, strappy black stiletto sandals, large silver statement drop earrings and a slim silver cuff. Setting: a high-rise penthouse terrace at night, a glass balustrade with the city lights far below spread into soft bokeh, a smooth dark stone floor, nothing else on the terrace, the glass reflecting only city lights. She leans back against the glass balustrade with both hands resting on the rail behind her and one leg forward through the slit, looking straight into the camera with a confident, slightly mischievous smirk. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 5.3 metres, camera at her navel height; full length from her stilettos to a little above her head, she fills about 86% of the frame height, centred. Lighting: a large bright softbox key from front-left at head height lights her face and catches crisp red highlights on the satin; a soft fill from the right just out of frame; deep navy night sky and warm gold city bokeh behind her. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-### 4.10 Miu Shiraishi（白石美羽，22）｜奶油色咖啡館的窗邊座位
-
-**R1 修訂（主方向）：**舊版標題「開店前的奶油色咖啡館」。
-
-- 主推薦改到咖啡館座位區：窗邊木長凳、奶油色牆面，坐姿讓腰線與裙裝可見
-- 取消圍裙與胸前捧杯；杯子只放在旁邊小桌上
-- 毛衣紮進高腰麂皮短裙並加細腰帶，收出腰線
-- 原本的「吧台後、圍裙、捧拿鐵」改列為職業風備選
-- 取景重算：橫幅坐姿全身（50mm）、直幅坐姿膝上（85mm）
-
-- **與人設核對：** 保留奶油色咖啡館、露肩針織與甜美氣質；不拍成咖啡店員的工作照。童顏：寫明 adult、成熟的服裝。碰撞（Jia、Somi）：暖木奶油色、安靜、淺亞麻短髮；不宣稱能消除碰撞。
-- **為什麼適合她：** 她安靜、存在感很強。不讓她工作，讓她坐在窗邊——露肩毛衣、收腰短裙、交疊的腿，甜而有曲線。
-- **參考照片（既有）：** miu-01、miu-02
-- **舊版姿勢：** 站在吧台後面、面向鏡頭：雙手在胸口高度捧著一杯冒著熱氣的陶瓷拿鐵杯；毛衣滑落一側肩。
+**一句話：** 暮春的運河步道，奶油色 V 領合身針織洋裝繫細腰帶，靠著欄杆甜笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 中目黑小咖啡館的座位區：暖色橡木窗邊長凳、平滑的奶油色灰泥牆、身旁一扇大窗，一張小圓桌上放著一只陶瓷杯，店內乾淨無人。 |
-| 服裝 | 奶油色粗針織露肩毛衣紮進高腰淺棕麂皮迷你裙、細棕色腰帶、奶油色繫踝低跟鞋。 |
-| 髮型／髮色 | 淺亞麻米金，齊肩內彎鮑伯、空氣瀏海。 |
-| 配件 | 細金耳針。 |
-| 光線 | 主光：相機左側大窗進來的柔和晨光。補光：畫面外右側柔光，臉均勻。奶油、橡木與淺棕色調。 |
-| 表情 | 輕輕歪頭、柔和的甜笑，看鏡頭。 |
-| 姿勢與雙手 | 坐在窗邊長凳，身體 3/4 朝鏡頭、雙腿在膝上交疊；雙手放在膝上。 |
-| 甜美元素 | 歪頭的甜笑、柔和的晨光、奶油色。 |
-| 性感元素 | 露肩毛衣、細腰帶收出的腰線、交疊的腿與短裙（童顏與身材的反差）。 |
-| 替代方向 | 職業風（備選）：吧台後、短版亞麻圍裙、雙手捧一杯拿鐵，開店前的晨光——保留咖啡店員人設，但不當主推薦。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 坐姿全身 | 坐姿膝上 |
-| 人物佔畫面高度 | 約 85% | 約 84% |
-| 頭頂／手腳範圍 | 坐姿頭頂到腳完整，雙手在框內 | 坐姿頭頂完整、雙手在框內，從膝蓋以上 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 50mm／約 3.1 公尺 | 85mm／約 2.4 公尺 |
-| 視野（寬×高，公尺） | 2.23×1.49 | 0.68×0.9 |
-| 人物範圍高度（公尺） | 1.26 | 0.76 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框要上下共裁約 19%：坐姿全身會切到腳；若最後選大照片框，改用坐姿膝上。 | 放進橫式半版直幅框左右共裁約 11%：人物置中，不受影響。 |
+| 場景 | 暮春安靜的運河步道：窄窄的運河兩岸新綠的樹、低矮金屬欄杆、對岸的小咖啡館在背景失焦，步道上沒有人。 |
+| 服裝 | 洋裝：奶油色 V 領細羅紋合身針織迷你洋裝（前排小扣、細棕色腰帶）；鞋：奶油色繫踝低跟鞋；配件：細金耳針 |
+| 髮型 | 淺亞麻米金，齊肩內彎鮑伯、空氣瀏海。 |
+| 妝感 | 眼下橘調腮紅、水潤唇。 |
+| 身材設定（數字） | 156 cm／87-55-86／E |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | V 領與合身細針織清楚呈現 E 罩杯胸型，細腰帶收出 55 cm 的腰線；迷你裙長露出腿。 |
+| 主光 | 明亮柔和的陰天光 |
+| 補光 | 畫面外白色反光板 |
+| 姿態 | 正面站在欄杆旁，重心在一隻腳。 |
+| 手的位置 | 一手扶著欄杆，一手輕輕拿著臉旁的一縷頭髮。 |
+| 表情 | 甜甜的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 84%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 3.7 公尺，視野 1.04×1.39 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 她的支柱「外出／中目黑」：運河新綠與奶油色針織洋裝，甜美裡有曲線，不是厚重寬鬆的毛衣。 |
+| 與同一人另一款的差異 | 橫式款是室內晨光床邊、緞面小可愛＋短褲；這款是戶外運河步道、V 領針織洋裝＋腰帶。 |
+| 參考照片（用途） | miu-05：場景（運河邊的環境與光線；回頭姿勢不採用）；miu-07：身分（運河散步的全身比例） |
+| 推薦月份 | 4 月（春） |
 
 | 風險 | 處理 |
 |---|---|
-| 童顏顯小 | 寫明 adult、成熟服裝與低跟鞋，不用娃娃裝與制服元素 |
-| 杯子或窗外出現文字 | 素面陶杯、窗外只寫柔光 |
-| 髮色被拍得太白 | 寫淺亞麻米金（flaxen beige-blonde） |
-| 與 Jia、Somi 的碰撞紀錄 | 暖木奶油、坐姿安靜、短髮；不改臉，不宣稱能消除碰撞 |
+| 對岸店面出現招牌字 | 寫明失焦，不寫店名 |
+| 拿頭髮的手指融合 | 生成後檢查 |
+| 童顏顯小 | 寫明 adult、成熟剪裁 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
-
-```text
-A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, full chest and slim waist. She wears a cream chunky off-shoulder knit sweater tucked into a high-waisted light-brown suede mini skirt with a thin brown belt, cream ankle-strap low heels and thin gold stud earrings. Setting: the seating corner of a small Nakameguro-style café, a warm oak window bench, a smooth cream plaster wall and a big window beside her, a small round table with one plain ceramic cup resting on it, the room clean and empty. She sits on the window bench with her body angled three-quarters to the camera and her legs crossed at the knee, both hands resting on her knee, tilting her head slightly with a soft, sweet smile at the camera. Horizontal 3:2 frame, full-frame camera with a 50mm lens from about 3.1 metres, camera at her seated chest height; full length seated, from her heels to a little above her head, she fills about 85% of the frame height, left of centre with the window and cream wall on the right and the small table at the edge. Lighting: warm soft morning light through the big window from camera-left as the key, a soft fill just out of frame on the right so her face is evenly lit; cream, oak and soft brown tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-直構圖 prompt 草稿（3:4，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, full chest and slim waist. She wears a cream chunky off-shoulder knit sweater tucked into a high-waisted light-brown suede mini skirt with a thin brown belt, cream ankle-strap low heels and thin gold stud earrings. Setting: the seating corner of a small Nakameguro-style café, a warm oak window bench, a smooth cream plaster wall and a big window beside her, a small round table with one plain ceramic cup resting on it, the room clean and empty. She sits on the window bench with her body angled three-quarters to the camera and her legs crossed at the knee, both hands resting on her knee, tilting her head slightly with a soft, sweet smile at the camera. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 2.4 metres, camera at her seated chest height; framed from her knees to a little above her head, she fills about 84% of the frame height, centred with the window frame beside her. Lighting: warm soft morning light through the big window from camera-left as the key, a soft fill just out of frame on the right so her face is evenly lit; cream, oak and soft brown tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, a full chest and a very slim waist. She wears a cream fitted V-neck fine-rib knit mini dress with small front buttons and a thin brown belt at the waist that shows her full chest and very slim waist, cream ankle-strap low heels and thin gold stud earrings. Setting: a quiet canal-side promenade in late spring, fresh green trees along a narrow canal, a low metal railing, small cafés softly out of focus on the far bank, the promenade empty. She stands by the railing facing the camera, weight on one leg, one hand resting on the railing and the other lightly holding a strand of her hair at her cheek, smiling sweetly at the camera. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.7 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 84% of the frame height, centred with the green canal behind her. Lighting: soft bright overcast daylight with a white reflector just out of frame lighting her face evenly; fresh green, cream and soft brown tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 4.11 Jia Seo（서지아，22）｜灰色無縫棚的舞者時尚
+### 5.23 V-jia-seo｜Jia｜直式款（新企劃）
 
-**R1 修訂（姿態與細節）：**
-
-- 動作改成一個停住的舞蹈線條：重心右腳、左腳側伸、一手平伸、一手放腰（取消扭身＋甩頭髮）
-- 寬褲改成合身窄管褲、拿掉透膚襯衫，讓腿與身體線條看得見
-- 薄荷綠內層改成塞在耳後露出，不靠甩頭
-- 取景重算：橫直都是全身，50mm；伸展的手腳都在框內
-
-- **與人設核對：** 主方向不變：舞者時尚棚拍、身體線條。檢查發現 v1 的寬褲與透膚襯衫會遮住身形、動作也太多，已修正。
-- **為什麼適合她：** 她「對身體的控制力是最自豪的事」。乾淨的灰色棚、木地板、一個停住的舞蹈線條，讓身體本身成為時裝。
-- **參考照片（既有）：** jia-02、jia-08
-- **逐項檢查：** 隨拍感：v1 甩頭動態像影片截圖 → 改成停住的舞蹈線條；道具遮身形：v1 寬褲與透膚襯衫遮住腿與身形 → 改合身窄管褲、拿掉襯衫；動作數量：v1 扭身＋伸手＋甩頭 → 改成一個線條；穿搭完整度：連身衣＋窄管褲＋球鞋＋耳環，完整
-- **舊版姿勢：** 舞蹈動作停格：重心在右腳、左腳向側邊延伸，上身扭向鏡頭；一手往外伸展、另一手在鎖骨；頭髮甩過去露出薄荷綠內層。
+**一句話：** 明亮的玻璃溫室，白色無袖立領短上衣配薄荷綠緞面開衩中長裙，站在大葉植物之間。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 乾淨的攝影棚：淺灰無縫牆、溫暖的木地板，棚內沒有其他東西。 |
-| 服裝 | 黑色單肩貼身連身衣、高腰合身灰色窄管褲、白色厚底球鞋。 |
-| 髮型／髮色 | 冷灰藍黑長髮，一側塞在耳後，露出內層的薄荷綠。 |
-| 配件 | 小銀色圈耳環。 |
-| 光線 | 主光：左前方的大型冷白柔光箱。補光：畫面外右側柔光，臉均勻。輪廓：身後一支窄條燈在肩膀與頭髮畫出乾淨的輪廓。冷灰與木色。 |
-| 表情 | 冷靜自信的半笑，看鏡頭。 |
-| 姿勢與雙手 | 停住的舞蹈線條：重心在右腳，左腳向側邊伸直、腳尖點地；一手向外平伸到肩高，另一手放在腰上；臉朝鏡頭。 |
-| 甜美元素 | 半笑、露出的薄荷綠髮色。 |
-| 性感元素 | 單肩貼身連身衣、伸展的腿與身體線條、直角肩與長腿。 |
-| 替代方向 | 收工後的練舞室窗邊：黑色運動內衣外搭寬版白 T、灰色運動褲，坐在大鏡子前的木地板上，傍晚窗光（不拍鏡中倒影）。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 全身 | 全身 |
-| 人物佔畫面高度 | 約 85% | 約 79% |
-| 頭頂／手腳範圍 | 頭頂到腳完整，雙手在框內 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏左，右側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 50mm／約 4.2 公尺 | 50mm／約 3.4 公尺 |
-| 視野（寬×高，公尺） | 3.02×2.02 | 1.63×2.18 |
-| 人物範圍高度（公尺） | 1.72 | 1.72 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框要上下共裁約 19%：全身會切到腳或頭頂；若最後選大照片框，這張要改拍膝上。 | 放進橫式半版直幅框左右共裁約 11%：伸展的手與腳會貼近邊緣；若最後選半版，拍攝時要再拉遠一點。 |
+| 場景 | 玻璃溫室：白色鋼骨結構、茂密的熱帶植物與大片龜背芋葉、石板小徑，溫室裡沒有其他人。 |
+| 服裝 | 上身：白色無袖立領貼身短上衣（露腰）；下身：高腰薄荷鼠尾草綠緞面中長裙（側開衩）；鞋：白色細帶涼鞋；配件：細銀耳針 |
+| 髮型 | 冷灰藍黑長髮，一側塞在耳後露出薄荷綠內層。 |
+| 妝感 | 水光無妝感、淡棕眼線、漸層唇。 |
+| 身材設定（數字） | 168 cm／85-58-90／C（直角肩、長腿） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 短上衣露出細腰，緞面長裙貼著臀線、側開衩露出一條長腿。 |
+| 主光 | 玻璃屋頂的大面積明亮漫射光 |
+| 補光 | 畫面外前方柔光 |
+| 姿態 | 正面站在植物之間的石板路上。 |
+| 手的位置 | 一手輕觸身旁的大片龜背芋葉，一手插腰。 |
+| 表情 | 冷靜柔和的微笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 86%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 3.9 公尺，視野 1.1×1.47 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 薄荷綠是她的髮色內層與配色；溫室的綠與白延伸她的冷調，實景、無運動感。 |
+| 與同一人另一款的差異 | 橫式款是美術館白牆、黑色單肩洋裝；這款是溫室綠意、白色短上衣＋薄荷緞面開衩裙。 |
+| 參考照片（用途） | jia-03：身分（白色上衣與認臉）；jia-07：服裝材質（白色綁結上衣的露腰比例） |
+| 推薦月份 | 2 月（冬末） |
 
 | 風險 | 處理 |
 |---|---|
-| 伸展肢體錯誤（多手、斷腿） | 寫明重心腳與兩手位置；生成後逐肢檢查 |
-| 肌肉感過強 | 寫 soft feminine curves |
-| 薄荷綠沒出現 | 寫明塞在耳後露出；不出現就接受，不為此重生 |
-| 與 Miu、Somi 的碰撞紀錄 | 冷色、舞蹈線條、薄荷綠；不改臉，不宣稱能消除碰撞 |
+| 植物遮住身體 | 寫明站在小徑上、葉子在身旁 |
+| 開衩遮蔽 | 生成後檢查 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight broad shoulders and long narrow upturned eyes, dewy no-makeup Korean makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim dancer figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, long legs and a slim waist. She wears a black one-shoulder fitted bodysuit, high-waisted slim-fit grey trousers, white chunky sneakers and small silver hoop earrings. Setting: a clean photo studio with a seamless pale grey wall and a warm wooden dance floor, nothing else in the room. She holds a still dance line: weight on her right leg, left leg extended straight to the side with the toe touching the floor, one arm extended out at shoulder height and the other hand resting at her waist, face toward the camera with a cool, confident half-smile. Horizontal 3:2 frame, full-frame camera with a 50mm lens from about 4.2 metres, camera at her navel height; full length from her sneakers to a little above her head, she fills about 85% of the frame height, left of centre with her outstretched arm and leg inside the frame and the pale grey wall open on the right. Lighting: a large cool-white softbox key from front-left and a soft fill from the right just out of frame light her face evenly; a narrow strip light behind her draws a clean rim along her shoulder and hair; cool grey and warm wood tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a white sleeveless mock-neck fitted crop top that shows her slim waist, a high-waisted mint-sage satin midi skirt with a side slit, white strappy sandals and small silver stud earrings. Setting: a glass greenhouse conservatory with white steel frames, lush tropical plants and large monstera leaves, a stone path, the greenhouse empty. She stands on the stone path among the plants facing the camera, one hand lightly touching a large monstera leaf beside her and the other on her hip, the slit of the skirt showing one leg, looking at the camera with a cool, soft smile. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.9 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 86% of the frame height, centred among the plants. Lighting: bright diffused daylight through the glass roof as a large soft key, a soft fill just out of frame in front; white, mint and deep green tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-直構圖 prompt 草稿（3:4，未執行）：
+### 5.24 V-yerin-han｜Yerin｜直式款（新企劃）
 
-```text
-A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight broad shoulders and long narrow upturned eyes, dewy no-makeup Korean makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim dancer figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, long legs and a slim waist. She wears a black one-shoulder fitted bodysuit, high-waisted slim-fit grey trousers, white chunky sneakers and small silver hoop earrings. Setting: a clean photo studio with a seamless pale grey wall and a warm wooden dance floor, nothing else in the room. She holds a still dance line: weight on her right leg, left leg extended straight to the side with the toe touching the floor, one arm extended out at shoulder height and the other hand resting at her waist, face toward the camera with a cool, confident half-smile. Vertical 3:4 frame, full-frame camera with a 50mm lens from about 3.4 metres, camera at her navel height; full length from her sneakers to a little above her head, she fills about 79% of the frame height, centred with her outstretched arm and leg inside the frame and extra space above her head. Lighting: a large cool-white softbox key from front-left and a soft fill from the right just out of frame light her face evenly; a narrow strip light behind her draws a clean rim along her shoulder and hair; cool grey and warm wood tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-### 4.12 Yerin Han（한예린，26）｜清晨霧中的球道
-
-**R1 修訂（姿態與細節）：**
-
-- 保留球桿橫掛肩後這一個姿態；取消「馬尾擺動」
-- 逆光加上畫面外反光板與柔光補臉；不再重複寫膚色
-- 取景重算：橫幅膝上、直幅全身，球桿兩端都在框內
-
-- **與人設核對：** 主方向不變：高爾夫度假、精緻運動套裝、清晨球場，也接近她現有的 yerin-04。和 Rin 的碰撞：明亮戶外運動 vs 暗色室內。
-- **為什麼適合她：** 「球衣就是時尚」。清晨球道、薄霧、一套淺藍與白，把她的健康感和大方的笑拍成度假時尚照。
-- **參考照片（既有）：** yerin-04、yerin-01
-- **逐項檢查：** 隨拍感：低，擺好的姿態；道具遮身形：球桿橫在肩後，不遮身體；動作數量：拿掉馬尾擺動；穿搭完整度：polo＋百褶裙＋手套＋球鞋＋球帽，完整
-- **舊版姿勢：** 一支一號木橫放在肩後、兩手腕掛在球桿上；重心在後腳，前腳輕輕交叉在前；轉頭看鏡頭；馬尾擺動。
+**一句話：** 日落的白沙海灘，白色圓領貼身針織背心洋裝，赤腳站在淺浪邊的燦笑。
 
 | 項目 | 內容 |
 |---|---|
-| 場景 | 清晨的高爾夫球道：遠處樹林上方有薄霧，短草上有露水，遠方一支白色旗桿，球道上沒有其他人。 |
-| 服裝 | 淺天空藍無袖針織高爾夫 polo、白色百褶高爾夫迷你裙、左手白色皮手套、白色高爾夫鞋、素面白色球帽。 |
-| 髮型／髮色 | 亞麻棕長髮、臉側金色挑染，低馬尾從球帽後方穿出。 |
-| 配件 | 小金色耳針。 |
-| 光線 | 主光：她身後右側的低角度晨光，在馬尾與肩膀畫出暖金輪廓。補光：畫面外前方的大反光板與柔光，臉均勻清楚。柔和晨霧與清新綠色。 |
-| 表情 | 大方明亮的笑，看鏡頭。 |
-| 姿勢與雙手 | 一支一號木橫放在肩後、兩手腕掛在球桿上；重心在後腳，前腳輕輕交叉在前。 |
-| 甜美元素 | 大方的笑、淺藍與白的清爽配色。 |
-| 性感元素 | 無袖針織貼身 polo、百褶迷你裙與長腿、170 cm 的身形比例。 |
-| 替代方向 | 高級室內練習場：白色合身 polo＋海軍藍百褶短裙，站在打擊位、收桿姿勢，冷白均勻光。 |
-
-**取景設計：**
-
-|  | 橫 3:2 | 直 3:4 |
-|---|---|---|
-| 景別 | 膝上 | 全身 |
-| 人物佔畫面高度 | 約 85% | 約 87% |
-| 頭頂／手腳範圍 | 頭頂完整、雙手在框內，切在膝蓋下方 | 頭頂到腳完整，雙手在框內 |
-| 留白位置 | 人物偏右，左側約四成給背景 | 人物置中，頭頂與兩側少量留白 |
-| 焦段／距離 | 85mm／約 5.5 公尺 | 85mm／約 5.4 公尺 |
-| 視野（寬×高，公尺） | 2.33×1.55 | 1.52×2.03 |
-| 人物範圍高度（公尺） | 1.31 | 1.76 |
-| 模型原生輸出 | 3:2 原生尺寸未知：沒有 soul_2 3:2 的實際輸出紀錄；約 2048×1365 只是依長邊 2048 推算 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 版面適配 | 放進橫式大照片框（約 1.85:1）要上下共裁約 19%：約剩大腿以上，頭頂留白變少但人物完整。 | 放進橫式半版直幅框左右共裁約 11%：球桿兩端會貼近邊緣。 |
+| 場景 | 日落時寬闊的白沙海灘，平靜的淺水、海上金色與蜜桃色的天空，海灘上沒有其他人。 |
+| 服裝 | 洋裝：白色圓領羅紋貼身背心迷你洋裝；鞋：赤腳；配件：小金色圈耳環、腳踝細金鍊 |
+| 髮型 | 亞麻棕長髮、臉側金色挑染，放下的鬆散波浪。 |
+| 妝感 | 防曬淡妝、亮色唇。 |
+| 身材設定（數字） | 170 cm／90-60-93／E（健康曲線） |
+| 畫面上怎麼呈現胸型、腰線、臀腿 | 貼身羅紋背心洋裝勾出 E 罩杯胸型、細腰與 93 cm 的臀線；赤腳站立讓長腿比例自然。 |
+| 主光 | 她身後的低角度夕陽，頭髮與肩膀暖色輪廓光 |
+| 補光 | 畫面外前方大反光板與柔光 |
+| 姿態 | 正面站在浪花邊的淺水裡，重心在一隻腳。 |
+| 手的位置 | 一手輕放在鎖骨，一手自然垂放。 |
+| 表情 | 大方燦爛的笑 |
+| 視線 | 看鏡頭 |
+| 景別與人物佔比 | 膝上；人物約佔畫面高度 85%；頭頂完整、雙手在框內，切在膝蓋下方；人物置中，頭頂與兩側少量留白 |
+| 焦段／距離／視野 | 3:4，85mm，約 4.0 公尺，視野 1.13×1.51 公尺 |
+| 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
+| 版面適配 | 直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。 |
+| 為何符合人設 | 她的支柱「旅遊／球場遠征」的另一面：度假海灘的夕陽，健康又性感，和球場完全不同。 |
+| 與同一人另一款的差異 | 橫式款是春日球場、polo＋百褶裙＋球帽、坐球車；這款是日落海灘、白色背心洋裝、赤腳站在水邊。 |
+| 參考照片（用途） | yerin-07：服裝材質（白色平口＋白短裙的清爽穿搭）；yerin-08：表情（燦爛的大笑） |
+| 推薦月份 | 8 月（盛夏） |
 
 | 風險 | 處理 |
 |---|---|
-| 握球桿的手與桿身變形 | 手腕掛在球桿上；生成後放大檢查 |
-| 肌肉感過強 | 寫 soft feminine lines |
-| 逆光臉暗 | 寫明反光板與柔光補臉 |
-| 球帽或衣服出現文字或品牌 | 寫素面白帽、無標誌 |
-| 與 Rin 的碰撞紀錄 | 明亮戶外 vs 暗色室內；不改臉，不宣稱能消除碰撞 |
+| 逆光臉暗 | 寫明反光板與柔光 |
+| 白色洋裝濕透透光 | 寫明站在淺浪邊、洋裝是乾的 |
+| 膚色被曬成小麥色 | 只寫一次她原本的白皙膚色 |
 
-橫構圖 prompt 草稿（3:2，未執行）：
+prompt 草稿（3:4，尚未執行）：
 
 ```text
-A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a pale sky-blue sleeveless knit golf polo, a white pleated golf mini skirt, a white leather glove on her left hand, white golf shoes and small gold stud earrings. Setting: a golf course fairway in the early morning, soft mist over the far trees, dew on the short grass, a white flagstick far in the distance, the fairway empty. She stands with a driver resting across her shoulders behind her neck, wrists draped over the club, weight on her back leg with the front leg crossed lightly in front, smiling brightly at the camera. Horizontal 3:2 frame, full-frame camera with an 85mm lens from about 5.5 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, right of centre with the whole club inside the frame and the misty fairway on the left. Lighting: the low early sun behind her and to the right draws a warm rim along her ponytail and shoulders; a large white reflector and a soft fill just out of frame in front of her light her face evenly; soft morning mist and fresh green tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights worn down in loose waves. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white fitted ribbed scoop-neck tank mini dress that follows her full chest, slim waist and hips, small gold hoop earrings and a thin gold anklet; her feet are bare and the dress is dry. Setting: a wide white-sand beach at sunset, calm shallow water and a soft gold and peach sky over the sea, the beach empty. She stands in the shallow foam at the water's edge facing the camera, weight on one leg, one hand lightly at her collarbone and the other relaxed at her side, smiling brightly at the camera. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 4 metres, camera at her waist height; framed from just below her knees to a little above her head, she fills about 85% of the frame height, centred with the sunset sea behind her. Lighting: the low sun behind her draws a warm rim along her hair and shoulders; a large white reflector and a soft fill just out of frame in front light her face evenly; warm gold, peach and soft blue tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-直構圖 prompt 草稿（3:4，未執行）：
+## 6. 構圖與生成提案
 
-```text
-A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a pale sky-blue sleeveless knit golf polo, a white pleated golf mini skirt, a white leather glove on her left hand, white golf shoes and small gold stud earrings. Setting: a golf course fairway in the early morning, soft mist over the far trees, dew on the short grass, a white flagstick far in the distance, the fairway empty. She stands with a driver resting across her shoulders behind her neck, wrists draped over the club, weight on her back leg with the front leg crossed lightly in front, smiling brightly at the camera. Vertical 3:4 frame, full-frame camera with an 85mm lens from about 5.4 metres, camera at her navel height; full length from her golf shoes to a little above her head, she fills about 87% of the frame height, centred with the whole club inside the frame. Lighting: the low early sun behind her and to the right draws a warm rim along her ponytail and shoulders; a large white reflector and a soft fill just out of frame in front of her light her face evenly; soft morning mist and fresh green tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
-```
-
-## 5. 橫直構圖策略（R1 修訂）
-
-**建議：同一主題、同一造型，橫構圖（3:2）與直構圖（3:4）分開拍——這是建議，Penny 還沒有批准這個策略。**
-
-- 版面還沒定。橫式大照片框（約 1.85:1）與半版直幅框（約 0.67:1）形狀差很多，一張照片很難兩邊都好用。
-- 分開拍時，橫幅與直幅用不同景別：多數人橫幅拍膝上（人物大、留白在一側）、直幅拍全身；坐姿或需要伸展空間的人另外設計。
-- 同一個距離把相機轉直，視野高度會多三分之一，所以「橫幅膝上、直幅全身」可以在同一個位置完成；每張的焦段、距離與視野都換算過。
-- soul_2 沒有 seed，橫直兩次生成的服裝與場景細節會有小差異；這要在第一階段試拍確認能不能接受。
-
-**另一種做法：** 只拍一張 3:4 直幅：若版面最後選「橫式半版直幅框」，一張 3:4 就夠用。版面確定前，兩種做法都保留給 Penny 決定。
-
-**換算與檢查：**
-
-- 換算方法：全片幅 36×24 mm。橫 3:2 的視野高度＝24 mm×距離÷焦段；直 3:4（直拿、裁成 3:4）的視野高度＝32 mm×距離÷焦段。
-- v1 的錯誤：85mm、5 公尺、橫 3:2 的視野高度只有約 1.41 公尺，拍不下 1.6–1.7 公尺的全身還留白。v2 的全身橫幅改用 50–70mm 或拉遠到約 7 公尺。
-- 人物佔畫面高度控制在約 80–88%；橫幅留白在一側約四成，不是三分之二。
-- 版面未定：不再預設要大片日期區。下面的適配說明只做比例換算，不承諾 ppi，也不判斷線圈安全。
-
-| 層次 | 說明 |
+| 款式 | 建議 |
 |---|---|
-| 拍攝構圖需求 | 每位的橫、直各有景別、人物佔比、頭頂與手腳範圍、留白位置（見各位的取景設計）。 |
-| 模型原生輸出 | 3:4（2k）＝1536×2048，已知；3:2 未知（約 2048×1365 只是推算，第一階段試拍時一併確認）。 |
-| 版面適配 | 橫幅放進橫式大照片框（約 1.85:1）要上下共裁約 19%；直幅放進橫式半版直幅框（約 0.67:1）要左右共裁約 11%。其他組合不做。 |
-| 出血／線圈 | 沿用 R3 假設（出血 2 mm、線圈在上緣）；頭頂都有留白，但線圈是否安全要等版面與廠商尺寸確定，不在這裡判斷。 |
-| 廠商待確認 | 線圈尺寸、印刷品質門檻、尺度審稿——本輪不聯絡廠商。 |
-| 不預設的手段 | 外擴與 AI 放大不列為必要步驟。 |
+| 橫式款（H） | 建議版面用「大照片」框（約 1.85:1）。生成用 16:9（工具支援；原生尺寸未知）：只需上下共裁約 4%。取景以膝上或坐姿全身為主，人物佔畫面高度約 85%，場景放在另一側；不寫成胸上特寫。 |
+| 直式款（V） | 建議照片區至少 3:4。生成用 3:4（原生 1536×2048，已知）。取景以膝上為主，Luna、Yuna、Tammy 與 Rin 的長禮服用全身或坐姿全身，讓整套服裝看得到。 |
 
-## 6. 執行與費用（R1 唯讀查證）
+**評估：**
 
-**狀態：** 未確認可執行預算：工具報價查到了，但與實際扣款的對應只在部分設定上觀察過。生成放行仍是 BLOCK。
+- 橫式款的價值在於「人＋環境」的寬畫面：大照片框比半版適合。半版直幅框比較適合直式照片，而直式款已經另有 12 套直幅照片。
+- 若 Penny 最後選擇橫式款用半版直幅框：這 12 套 16:9 不適用，要另外規劃與生成直幅版本——不從 16:9 硬裁成直幅。
+- 直式款若最後用近方形框（約 0.94:1），3:4 要上下共裁約 20%：膝上變大腿以上、全身會切到腳。所以建議直式款的照片區至少 3:4。
+- 避免人物縮小到背景裡：所有企劃的人物都佔畫面高度約 80–88%（斜躺的 Rin 佔畫面寬度約 85%），服裝與身形可以辨認。
 
-**模型：** soul_2＋各人設既有 Soul，quality 2k，每次請求只出 1 張（count 1）；橫 3:2、直 3:4；不掛 Reference Element、不用參考圖。
+**限制：**
 
-| 人設 | Soul 狀態（紀錄） |
-|---|---|
-| Somi、Tammy、Rin、Miu、Jia、Yerin | production_ready（2026-09-07／08 訓練；6 張驗證臉部門檻通過） |
-| Iris、Luna、Coco、Mia、Yuna | ready（較早訓練；R1 紀錄寫這幾位不在 Soul 總表內，是否跑過同樣的 6 張驗證未知） |
-| Rainie | 只能用 v2 的 Soul（ready）；舊的 deprecated Soul 不可用 |
+- 16:9 原生尺寸未知（推測 2048×1152，未驗證）；3:2 也未知。3:4 已知 1536×2048。
+- 換算只做比例，不承諾 ppi，也不判斷線圈安全；廠商尺寸與印刷門檻還沒問。
+- 外擴與 AI 放大不列為必要步驟。
 
-Soul ID 不列在本文件與公開頁面。
+換算方法：全片幅 36×24 mm。橫式款 16:9 取 36×20.25 mm，視野高＝20.25 mm×距離÷焦段；直式款 3:4 直拿裁成 24×32 mm，視野高＝32 mm×距離÷焦段。每套的焦段、距離、視野與人物佔比都由程式換算，數字矛盾會讓建置失敗。
 
-### 6.1 歷史實際扣款
+## 7. 費用（分開精確報價、歷史實扣、未知）
 
-| 項目 | 數值 | 依據 | 等級 | 來源檔 |
-|---|---|---|---|---|
-| Soul V2 實際扣款（交易明細） | 每筆 −0.12 | Soul 訓練總報告（2026-09-08）：驗證圖 114 張約 13.7 credits，交易明細為重複的「Higgsfield Soul V2 −0.12」；驗證紀錄寫明「每 spec 只生一張」，所以是一次請求 1 張。這批的比例與畫質沒有寫在讀到的文件裡。 | 歷史實扣（交易明細） | `review/soul_training/FINAL_REPORT.md`、`review/soul_pilot/VERIFY_REMAINING_12.md` |
-| 2026-10-13 帳號交易明細 | 今天也有 Soul V2 −0.12 的扣款 | 唯讀查詢 transactions：這些是帳號上其他人的工作，不是本案；只說明 Soul V2 目前仍以 −0.12 一筆扣款。 | 歷史實扣（他人工作，只作參考） |  |
-| Iris 先前的 Soul 生成 | 費用未逐筆記錄 | Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 共 7 次生成成功、輸出 1536×2048，但沒有逐筆扣款。 | 無費用紀錄 | `kols/iris-chen/generation_notes.md` |
+**狀態：** 仍未授權：沒有生成授權、沒有費用核准。下面的數字分成「精確報價」「歷史實扣」「未知」，情境試算不是預算。
 
-### 6.2 今天的工具報價（get_cost 預檢，2026-10-13）
+**模型：** soul_2＋各人設既有 Soul，quality 2k，每次請求 1 張（count 1）；橫式款 16:9、直式款 3:4；不掛 Reference Element、不用參考圖。
+
+### 7.1 精確報價（generate_image 的 get_cost 預檢，不送出工作）
 
 | 設定 | 回傳 |
 |---|---|
@@ -901,10 +1060,20 @@ Soul ID 不列在本文件與公開頁面。
 | soul_2＋Soul（Iris）、1.5k、3:4、count 1 | credits 1／credits_exact 0.12 |
 | soul_2、不帶 Soul、2k、3:4、count 1 | credits 1／credits_exact 0.12 |
 | soul_2＋Soul（Iris）、2k、3:4、count 4 | credits 1／credits_exact 0.12（與 count 1 相同） |
+| soul_2＋Soul（Iris）、2k、16:9、count 1（2026-10-13，本輪查詢） | credits 1／credits_exact 0.12 |
 
-2026-10-13 用 generate_image 的 get_cost 預檢查詢 6 次（工具說明：只回傳費用、不送出工作）；查詢前後交易明細沒有新增任何一筆。回傳有兩個欄位：credits（整數顯示值 1）與 credits_exact（0.12）。不把 1 解讀成 0.12，也不把 0.12 當成已證實的實扣：0.12 與歷史 Soul V2 交易明細一致，但 3:2、2:3、1.5k 這幾種設定從沒有實扣紀錄。
+2026-10-13 用 generate_image 的 get_cost 預檢查詢 6 次（工具說明：只回傳費用、不送出工作）；查詢前後交易明細沒有新增任何一筆。回傳有兩個欄位：credits（整數顯示值 1）與 credits_exact（0.12）。不把 1 解讀成 0.12，也不把 0.12 當成已證實的實扣：0.12 與歷史 Soul V2 交易明細一致，但 3:2、2:3、1.5k 這幾種設定從沒有實扣紀錄。 本輪另查 16:9 一次，回傳相同；查詢前後交易明細沒有新增。
 
-### 6.3 計價方式、每次張數、費用上限、異常
+### 7.2 歷史實扣與紀錄
+
+| 項目 | 數值 | 依據 | 等級 | 來源檔 |
+|---|---|---|---|---|
+| Soul V2 實際扣款（交易明細） | 每筆 −0.12 | Soul 訓練總報告（2026-09-08）：驗證圖 114 張約 13.7 credits，交易明細為重複的「Higgsfield Soul V2 −0.12」；驗證紀錄寫明「每 spec 只生一張」，所以是一次請求 1 張。這批的比例與畫質沒有寫在讀到的文件裡。 | 歷史實扣（交易明細） | `review/soul_training/FINAL_REPORT.md`、`review/soul_pilot/VERIFY_REMAINING_12.md` |
+| 2026-10-13 帳號交易明細 | 今天也有 Soul V2 −0.12 的扣款 | 唯讀查詢 transactions：這些是帳號上其他人的工作，不是本案；只說明 Soul V2 目前仍以 −0.12 一筆扣款。 | 歷史實扣（他人工作，只作參考） |  |
+| Iris 先前的 Soul 生成 | 費用未逐筆記錄 | Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 共 7 次生成成功、輸出 1536×2048，但沒有逐筆扣款。 | 無費用紀錄 | `kols/iris-chen/generation_notes.md` |
+| 失敗也可能扣款 | 有紀錄 | Soul 訓練總報告的對帳判準：曾出現「重複的 Soul V2 −0.12 扣款但工作失敗」的情況（Vicky Lin 案例），所以重試也要算進上限。 | 歷史紀錄 | `review/soul_training/FINAL_REPORT.md` |
+
+### 7.3 計價方式、張數、上限、異常
 
 | 項目 | 說明 | 來源檔 |
 |---|---|---|
@@ -913,47 +1082,47 @@ Soul ID 不列在本文件與公開頁面。
 | 能不能限制總費用 | generate_image 與 generate_image_batch 都沒有「費用上限」參數（只有 AI Influencer 工具有，不適用）。只能靠流程控制：一次一個請求、每次之後查交易明細、累計達上限就停。餘額不能用來對帳——帳號同時有其他人在用。 |  |
 | 異常扣款 | 原因未知。另一位人設的生成筆記記錄過三次「實扣高於預檢」：seedream_v4_5 4 張扣 50、seedream_v4_5 4 張扣 8、soul_2（不帶 Soul）4 張扣 2.16。三次都是用帳戶餘額前後相減算的，而帳號同時有其他人在用；沒有用交易明細逐筆核對，所以不能歸因，也不能排除。其中兩次是不同模型（seedream_v4_5）。 | `kols/sophia-tseng/generation_notes.md`、`review/soul_training/FINAL_REPORT.md` |
 
-### 6.4 撤回的數字
+### 7.4 24 套獨立拍攝的情境試算（不是預算）
 
-- 首批 2.88–5.76 credits、全案 8.64–17.28 credits：撤回，不再作為可執行預算。
-- 10／40 credits：只保留為待核定的上限提案，不承諾能完成多少張。
+| 情境 | 請求數 | 依 credits_exact 報價 | 若實扣是顯示值（每次 1） |
+|---|---|---|---|
+| 每套 1 次請求 | 24 | 約 2.88 | 24 |
+| 每套 2 次請求 | 48 | 約 5.76 | 48 |
+| 每套 3 次請求 | 72 | 約 8.64 | 72 |
 
-### 6.5 分階段測試（提案）
+只是用今天的報價換算的情境，不是預算、不保證能做完幾張。「依 credits_exact」是工具的精確報價欄位；「若實扣是顯示值」是假設每次請求扣 1 credit 的上界情境。實扣是哪一個，要等第一張試拍用交易明細確認。失敗與重試都可能扣款。
+
+**未知：** 16:9 與 3:2 的實際輸出像素、16:9、3:4 在這些企劃下的實際扣款（只有報價）、count 大於 1 時的費用、ready 狀態的 Soul 在逆光、夜景、室內暖光下的身分穩定度、24 套獨立造型各自需要幾次才能成功
+
+### 7.5 Iris 首張試拍提案（只是提案）
+
+**推薦：V-iris-chen**
+
+- 直式 3:4 的原生尺寸已知（1536×2048）、報價已查，第一張只需要驗證「寫真質感、身分、身材與實際扣款」，少一個未知數。
+- 直幅膝上最能看清 Penny 這次指定的穿搭與姿態：更顯身材的上衣＋牛仔迷你裙、身體面向鏡頭、笑容。
+- 保留她喜歡的 iris-04 草地夕陽氛圍，又是全組最難的逆光，先驗證補光是否足夠。
+- 橫式款（H-iris-chen，16:9 原生尺寸未知）放在之後，等第一張結果與費用確認再測。
 
 | 項目 | 內容 |
 |---|---|
-| 第一階段（建議） | 只試 Iris 一位：橫 3:2 與直 3:4 各一個 spec，每個 spec 最多 2 次單張請求（共最多 4 次）。目的：看寫真質感、身分穩定度、3:2 原生尺寸與實際扣款。 |
-| 第一階段上限（待核定） | 建議 1 credit。依今天的報價，4 次單張請求合計約 0.48；實扣未確認，所以不承諾一定做得完 4 次。 |
-| 第一階段停止條件 | 任何一筆實扣與報價不同、累計達上限、身分跑掉、平台拒絕——立刻停止並回報，不自動重試。 |
-| 之後 | 第一階段結果與實扣經 Penny 看過，才決定擴大到四位（Iris、Rin、Miu、Mia）或十二位；費用用第一階段的實扣重新估算。 |
+| 範圍 | 只做 1 張：V-iris-chen 的 prompt 草稿（本頁「prompt 草稿」原文，不沿用上一輪被 Penny 修改的 Iris prompt）。 |
+| 設定 | soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖、不用免費額度以外的特殊模式。 |
+| 報價 | 今天的預檢：credits 1／credits_exact 0.12；實扣未確認。 |
+| 重試 | 不自動重試。無論結果好壞、成功或失敗，都先停下回報。 |
+| 對帳 | 送出前後各查一次交易明細，記錄這一張的實際扣款；不用餘額對帳（帳號有他人同時使用）。 |
+| 前提 | 需要 Penny 核定這套造型與費用，再由主管另發 M-4 指令；本輪什麼都不送出。 |
 
-**為什麼第一階段是 Iris：**
+**授權：** 本輪沒有任何花費授權。任何試拍都要 Penny 批准，再由主管另發 M-4 指令。
 
-- Penny 最喜歡的 iris-04 正是這個方向（戶外黃金時段、回眸）。
-- 逆光戶外是最容易臉暗、膚色被拍偏的光線，先驗證最難的情況。
-- 她的 Soul 是較早的 ready 版本，是否跑過 6 張驗證未知；先確認身分穩定度。
-- 她的 3:4 輸出尺寸已有紀錄，可以拿來對照 3:2 的實際尺寸。
+## 8. 要請 Penny 決定的事
 
-**已知限制：**
+1. 24 套企劃：每套選「接受」或「想修改」，想修改的寫在備註。未回覆不算接受。
+2. 兩本月份推薦（橫式款、直式款）：接受，或想怎麼調。
+3. 版面與構圖建議（橫式款用大照片框＋16:9；直式款照片區至少 3:4）：接受，或想改。
+4. Iris 首張試拍候選：建議先試 V-iris-chen（只是候選；生成與費用仍要另外核定）。
+5. 已接受方向的 H／V 分配（Somi、Rainie 放橫式款；Coco、Rin 放直式款）：接受，或想對調。
 
-- Soul V2 不繼承髮型與髮色：每張 prompt 都要寫她自己的髮色髮型（原則七 C-1）。
-- Soul V2 不繼承身材：身材要用 prompt 句子補（數字直接寫）。
-- 沒有 negative prompt：不要的東西只能用正面描述避開（例如「小徑空無一人」）。
-- 碰撞配對（Miu–Jia、Miu–Somi、Jia–Somi、Yerin–Rin）不得同框（C-2）；本企劃每張只有一人。
-
-**多階段：** 不規劃多階段（先生成再換臉、外擴、放大）。若首批發現橫直兩張服裝差太多，才考慮把第一張當唯一的參考圖餵第二張——這可能把構圖或身分一起帶過去，要另外測、另外批准。
-
-**未知：** 3:2 的實際輸出像素、3:2 與其他設定的實際扣款（只有報價）、count 大於 1 時的費用、ready 狀態的 Soul 在逆光／棚拍／夜景下的身分穩定度、同一造型跨兩次生成的一致性
-
-**授權：** 本輪不設定任何花費授權。任何測試都要 Penny 批准，再由主管另發執行指令。
-
-## 7. 要請 Penny 決定的事
-
-1. 12 位的方向：每位在頁面上選「接受主方向／改用替代方向／想修改」。這版每位都有修訂，舊版的回饋保留在頁面上，但不算新版的回覆。
-2. 橫直構圖：「同一造型橫、直各拍一張」是建議，不是已批准的策略。要先採用它，還是先只拍 3:4 直幅、等版面決定？
-3. 第一階段只試 Iris 一位：同意這個方向嗎？這一題不是費用核准——費用上限另外查證、另外核定。
-
-## 8. 共同的皮膚與質感句（每段 prompt 結尾都加）
+## 9. 共同的皮膚與質感句（每段 prompt 結尾都加）
 
 ```text
 Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.

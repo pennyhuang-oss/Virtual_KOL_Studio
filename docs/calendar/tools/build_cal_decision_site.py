@@ -11,7 +11,7 @@
   只做等比縮小（長邊 1600 px，JPEG q88，不帶原檔中繼資料）。頁面資料只放圖片 ID，不放 job_id、來源路徑或帳號資料。
 - 第二階段素材（data/cal_m1_materials.json，本輪人寫清單，從工作目錄讀）：每張照片用同一套來源核對後等比縮小；
   沒有取回原圖的 daily140 照片只複製 repo 的 360×480 縮圖（位元組不變）。名單只依 data/cal_m1_owner_roster.json。
-- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
+- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，R2 起為 24 套雙款，人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
   其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
@@ -315,13 +315,19 @@ def build_m3(mat):
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
     assert P['counts'] == {'generated': 0, 'credits': 0, 'trainings': 0}
-    assert P['version'] == 'shoot-plan-v2' and P['revision']['from_version'] == 'shoot-plan-v1'
+    assert P['version'] == 'shoot-plan-v3' and P['revision']['from_version'] == 'shoot-plan-v2'
+    ids = [x['id'] for x in P['sets']]
+    assert len(ids) == 24 and len(set(ids)) == 24 and sorted(ids) == sorted(b + '-' + pid for pid in roster['list'] for b in 'HV'), '24 套 ID 不對'
+    for b in 'HV':
+        col = [m[b] for m in P['months']]
+        assert [m['m'] for m in P['months']] == list(range(1, 13)) and sorted(col) == sorted(b + '-' + pid for pid in roster['list']), '月份不對'
+    assert all(m['H'][2:] != m['V'][2:] for m in P['months']), '同月兩本同一人'
     have = {it['id'] for p in mat['people'] for it in p['items']}
     for x in P['owner_refs']['items']:
         assert x['id'] in have, x['id']
-    for p in P['people']:
-        for r in p['refs']:
-            assert r in have, r
+    for x in P['sets']:
+        for r in x['refs']:
+            assert r['id'] in have, r
     aal = {}
     for x in P['aaliya']['items']:
         b, blob = root_show(x['src'])
