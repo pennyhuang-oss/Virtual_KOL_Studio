@@ -1,0 +1,2 @@
+files 664, mismatches 0 []
+html {'index.html': (True, 'd56aee44b6cd8aabdedb8e1eda36fdc7f20980f8'), 'cast.html': (True, 'd56aee44b6cd8aabdedb8e1eda36fdc7f20980f8'), 'plan.html': (True, 'd56aee44b6cd8aabdedb8e1eda36fdc7f20980f8'), 'shoot.html': (True, 'd56aee44b6cd8aabdedb8e1eda36fdc7f20980f8')}

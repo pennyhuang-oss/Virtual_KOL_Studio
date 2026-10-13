@@ -1,0 +1,76 @@
+PASS	24 套 ID 唯一，每人 H／V 各一套	
+PASS	橫式款月份 1–12 各一位、12 位不重複	
+PASS	直式款月份 1–12 各一位、12 位不重複	
+PASS	同一月份兩本是不同的人	
+PASS	同一人兩款的場景與服裝不同	
+PASS	Iris：V 有牛仔迷你裙、兩款都面向鏡頭、沒有回頭	
+PASS	Rin 直式款依 v2 替代方向原文（黑色絲絨細肩帶長禮服、金色吧台、不拿杯）	
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /shoot.css	200
+PASS	不帶憑證可開 /data.js	200
+PASS	不帶憑證可開 /index.html	200
+PASS	不帶憑證可開 /img/z/m_luna-22.jpg	200
+PASS	不帶憑證可開 /img/t/m_yerin-07.jpg	200
+PASS	公開資料沒有 job_id／soul_id／kols 路徑／Soul ID	
+PASS	公開資料是 shoot-plan-v3，生成／credits／訓練都是 0	
+PASS	[desktop] 載入後 localStorage 與 v2 存的內容位元組相同（沒有改寫）	
+PASS	[desktop] 頂端第一行是 R2 輪次字串	
+PASS	[desktop] 24 張企劃卡、ID 唯一	
+PASS	[desktop] 每位一組 H／V 並列	
+PASS	[desktop] H／V 卡片左右並排	
+PASS	[desktop] 每張卡都有「尚未生成」框與對應比例	
+PASS	[desktop] 每張參考圖都標用途（表情／場景／服裝材質／身分）	
+PASS	[desktop] Luna 的 4 張參考圖都標「不作身材參考」	
+PASS	[desktop] 月份對照 12 列、每列兩本不同人	
+PASS	[desktop] 未回覆：0／24、沒有任何選項被勾	
+PASS	[desktop] iris-chen 舊版回饋保留、標「不算 v3」	
+PASS	[desktop] somi-oh 舊版回饋保留、標「不算 v3」	
+PASS	[desktop] coco-wu 舊版回饋保留、標「不算 v3」	
+PASS	[desktop] rin-ayase 舊版回饋保留、標「不算 v3」	
+PASS	[desktop] luna-tanaka 舊版回饋保留、標「不算 v3」	
+PASS	[desktop] miu-shiraishi 舊版回饋保留、標「不算 v3」	
+PASS	[desktop] 複製（未回覆）：24 套都寫未回覆、附舊版回饋、寫明未回覆不算接受	
+PASS	[desktop] 狀態更新：已回覆 2／24	
+PASS	[desktop] 重新整理後 v3 回饋保留	
+PASS	[desktop] v1／v2 舊欄位與 v2 存的內容完全相同（只多了 v3 欄位）	
+PASS	[desktop] 複製：v3 選擇、備註、題目、統計	
+PASS	[desktop] 預覽框與剪貼簿相同	
+PASS	[desktop] 所有圖片都載入	81 張；失敗 
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 放大檢視可用	
+PASS	[desktop] 清除 v3 回饋後，舊版回饋與 v2 存的內容位元組相同	
+PASS	[desktop] 素材選擇位元組不變	
+PASS	[desktop] 素材頁照舊讀出選擇（iris-04 橫式、iris-03 備選）	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後 localStorage 與 v2 存的內容位元組相同（沒有改寫）	
+PASS	[mobile390] 頂端第一行是 R2 輪次字串	
+PASS	[mobile390] 24 張企劃卡、ID 唯一	
+PASS	[mobile390] 每位一組 H／V 並列	
+PASS	[mobile390] H／V 卡片上下排列	
+PASS	[mobile390] 每張卡都有「尚未生成」框與對應比例	
+PASS	[mobile390] 每張參考圖都標用途（表情／場景／服裝材質／身分）	
+PASS	[mobile390] Luna 的 4 張參考圖都標「不作身材參考」	
+PASS	[mobile390] 月份對照 12 列、每列兩本不同人	
+PASS	[mobile390] 未回覆：0／24、沒有任何選項被勾	
+PASS	[mobile390] iris-chen 舊版回饋保留、標「不算 v3」	
+PASS	[mobile390] somi-oh 舊版回饋保留、標「不算 v3」	
+PASS	[mobile390] coco-wu 舊版回饋保留、標「不算 v3」	
+PASS	[mobile390] rin-ayase 舊版回饋保留、標「不算 v3」	
+PASS	[mobile390] luna-tanaka 舊版回饋保留、標「不算 v3」	
+PASS	[mobile390] miu-shiraishi 舊版回饋保留、標「不算 v3」	
+PASS	[mobile390] 複製（未回覆）：24 套都寫未回覆、附舊版回饋、寫明未回覆不算接受	
+PASS	[mobile390] 狀態更新：已回覆 2／24	
+PASS	[mobile390] 重新整理後 v3 回饋保留	
+PASS	[mobile390] v1／v2 舊欄位與 v2 存的內容完全相同（只多了 v3 欄位）	
+PASS	[mobile390] 複製：v3 選擇、備註、題目、統計	
+PASS	[mobile390] 預覽框與剪貼簿相同	
+PASS	[mobile390] 所有圖片都載入	81 張；失敗 
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 放大檢視可用	
+PASS	[mobile390] 清除 v3 回饋後，舊版回饋與 v2 存的內容位元組相同	
+PASS	[mobile390] 素材選擇位元組不變	
+PASS	[mobile390] 素材頁照舊讀出選擇（iris-04 橫式、iris-03 備選）	
+PASS	[mobile390] 沒有 JS 錯誤	
