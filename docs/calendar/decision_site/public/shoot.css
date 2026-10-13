@@ -50,3 +50,14 @@ pre.prompt { white-space: pre-wrap; overflow-wrap: anywhere; background: #f6f7f9
   .agrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .ogrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+
+/* R1 修訂標示與舊版回饋 */
+.rv-direction { background: #8a3b00; color: #fff; }
+.rv-pose { background: #e9eef6; color: #1c3150; }
+.rs-p.rv-direction, .rs-p.rv-pose { background: none; color: #8a3b00; font-weight: 600; }
+.rs-p.rv-pose { color: #1c3150; }
+.revbox { background: #fff8ef; border: 1px solid #f0d9b5; border-radius: 8px; padding: 6px 10px; margin: 8px 0; }
+.revbox .facts { font-size: .86rem; margin: .2em 0; }
+.oldfb { font-size: .82rem; color: #6d4c00; background: #fff0bf; border-radius: 6px; padding: 4px 8px; margin: 6px 0; overflow-wrap: anywhere; }
+.oldnote { font-weight: 400; color: #6d4c00; font-size: .82rem; margin-left: 4px; }
+.sec h4 { margin: 12px 0 4px; font-size: .92rem; }

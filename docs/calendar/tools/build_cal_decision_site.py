@@ -315,12 +315,7 @@ def build_m3(mat):
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
     assert P['counts'] == {'generated': 0, 'credits': 0, 'trainings': 0}
-    text = json.dumps(P, ensure_ascii=False)
-    for bad in ('job_id', 'soul_id', 'sophia'):
-        assert bad not in text.lower(), bad
-    shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit']}
-    hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', text))
-    assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id
+    assert P['version'] == 'shoot-plan-v2' and P['revision']['from_version'] == 'shoot-plan-v1'
     have = {it['id'] for p in mat['people'] for it in p['items']}
     for x in P['owner_refs']['items']:
         assert x['id'] in have, x['id']
@@ -339,10 +334,22 @@ def build_m3(mat):
                                    'op': f'原檔 {w}×{h} 等比縮小至 {pim.width}×{pim.height}（Lanczos，JPEG q88，不帶中繼資料）'},
             'hires', {'orig_px': [w, h]})
         aal[x['key']] = iid
-    pub = json.loads(raw)  # 公開資料不放 repo 路徑：Aaliya 只留「子資料夾/檔名」
+    pub = json.loads(raw)  # 公開資料不放 repo 路徑：Aaliya 只留「子資料夾/檔名」，其餘來源欄位（src）不發佈
     for x in pub['aaliya']['items']:
         x['file'] = '/'.join(x.pop('src').split('/')[-2:])
-    assert 'kols/' not in json.dumps(pub, ensure_ascii=False)
+
+    def drop_src(o):
+        if isinstance(o, dict):
+            return {k: drop_src(v) for k, v in o.items() if k != 'src'}
+        return [drop_src(v) for v in o] if isinstance(o, list) else o
+    pub = drop_src(pub)
+    text = json.dumps(pub, ensure_ascii=False)
+    for bad in ('kols/', 'job_id', 'soul_id', 'sophia'):
+        assert bad not in text.lower(), bad
+    shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
+            P['revision']['from_commit']}
+    hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
+    assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
 
 
