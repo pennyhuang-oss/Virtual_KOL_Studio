@@ -1,0 +1,14 @@
+PASS	[8f061fc → 9fa1343] 升版後企劃回饋與素材選擇的 localStorage 位元組相同	
+PASS	[8f061fc → 9fa1343] 頁面是 shoot-plan-v5（R4）	
+PASS	[8f061fc → 9fa1343] v5 修訂已回覆 0／16（舊回饋不算 v5）、沒有選項被勾	
+PASS	[8f061fc → 9fa1343] iris-chen 顯示 v1／v2 舊版回饋並標「不算 v5」	
+PASS	[8f061fc → 9fa1343] coco-wu 顯示 v1／v2 舊版回饋並標「不算 v5」	
+PASS	[8f061fc → 9fa1343] rin-ayase 顯示 v1／v2 舊版回饋並標「不算 v5」	
+PASS	[8f061fc → 9fa1343] somi-oh 顯示 v1／v2 舊版回饋並標「不算 v5」	
+PASS	[8f061fc → 9fa1343] H-iris-chen 顯示 v3／v4 舊版回饋並標「不算 v5」	舊版回饋（保留，不算 v5）：v3「接受」
+PASS	[8f061fc → 9fa1343] V-iris-chen 顯示 v3／v4 舊版回饋並標「不算 v5」	舊版回饋（保留，不算 v5）：v4「接受」；v3「想修改」；備註（v3）：v3備註：想看更近一點
+PASS	[8f061fc → 9fa1343] V-coco-wu 顯示 v3／v4 舊版回饋並標「不算 v5」	舊版回饋（保留，不算 v5）：v3「接受」
+PASS	[8f061fc → 9fa1343] H-coco-wu 顯示 v3／v4 舊版回饋並標「不算 v5」	舊版回饋（保留，不算 v5）：v4「接受」
+PASS	[8f061fc → 9fa1343] H-jia-seo 顯示 v3／v4 舊版回饋並標「不算 v5」	舊版回饋（保留，不算 v5）：v4「想修改」；備註（v4）：v4備註：想換場景
+PASS	[8f061fc → 9fa1343] v4／v3 題目與整體備註顯示為舊版	
+PASS	[8f061fc → 9fa1343] 只是開頁，localStorage 仍未被改寫	

@@ -1,0 +1,141 @@
+PASS	24 套 ID 唯一，每人 H／V 各一套	
+PASS	企劃版本 shoot-plan-v5（R4）	
+PASS	橫式款月份排序與已確認的排序完全相同（1–12 月）	
+PASS	橫式款月份與 v4 相同（未變動）	
+PASS	直式款月份排序與已確認的排序完全相同（1–12 月）	
+PASS	直式款月份與 v4 相同（未變動）	
+PASS	狀態：已接受 8 套＝owner 名單、修訂 16 套、月份 confirmed	
+PASS	8 套已接受：服裝、場景、表情、攝影、prompt 與 v4 逐欄相同	
+PASS	owner 紀錄：已接受 8 套、修訂 16 套逐字段落（含月份）	
+PASS	owner 要求落實 H-iris-chen：夏日海灣淺色平坦岩台；有支撐的鮮色馬甲上衣＋低腰裙；身體正面、笑	
+PASS	owner 要求落實 H-luna-tanaka：新穎整潔的日式旅宿；緞面；慵懶斜坐或半倚	
+PASS	owner 要求落實 H-somi-oh：開襟敞開、內搭貼身上衣結構寫清楚；不吃東西	
+PASS	owner 要求落實 H-yuna-kim：韓系冬季戶外；敞開短外套＋貼身內搭	
+PASS	owner 要求落實 H-tammy-chou：春日花園露台平整石板；保留粉色洋裝與高跟鞋；不要精品店	
+PASS	owner 要求落實 H-rin-ayase：酒紅緞面斜躺；不看鏡頭、看夕陽；姿勢寫細	
+PASS	owner 要求落實 H-miu-shiraishi：床上自然半倚；不像 Rin 的貴妃椅	
+PASS	owner 要求落實 H-jia-seo：換場景：初秋湖畔木平台或長椅	
+PASS	owner 要求落實 H-yerin-han：球車性感坐姿、展現腿；不走光、不低角度	
+PASS	owner 要求落實 V-somi-oh：不看鏡頭、看雪	
+PASS	owner 要求落實 V-yuna-kim：不看鏡頭、望向大道深處	
+PASS	owner 要求落實 V-tammy-chou：加素面小包（不仿品牌）；不再稱「全身照」	
+PASS	owner 要求落實 V-rin-ayase：把酒吧換成秋日港灣與新服裝	
+PASS	owner 要求落實 V-rainie-hsu：不看鏡頭、放鬆、微啟唇、看街燈	
+PASS	owner 要求落實 V-miu-shiraishi：春日木平台／吊床；有支撐的細肩洋裝；顏色和其他 23 套不撞	
+PASS	owner 要求落實 V-jia-seo：高腰貼臀窄裙，寫清開衩位置	
+PASS	修訂的 16 套 prompt 都和 v4 不同；七個攝影欄位英文逐字在 prompt 裡	
+PASS	同一人兩款的場景與服裝不同；24 個環境不重複	
+PASS	不看鏡頭的比 v4 多；戶外比 v4 多	不看鏡頭 8／24、戶外 18
+PASS	沒有未成年或幼態字眼	
+PASS	印刷：已知尺寸（成品 200×151／140×200、出血 2 mm、畫布 204×155／144×204）	
+PASS	印刷：照片框座標與尺寸一致（橫 192×104、直 120×160）	
+PASS	印刷：照片框在裁切線內、避開假設線圈區 0–12 mm	
+PASS	印刷：16:9 放進 192×104 → 192×108、上下各約 2 mm；3:4 放進 120×160 不裁	
+PASS	印刷：24 套都有逐張判斷（照片框、裁切、邊緣、餘量、判斷、原生尺寸、ppi）	
+PASS	印刷：V-iris-chen 首試的結論與前提都寫明	
+PASS	印刷示意 print/layout_H.svg：1304×886、不含照片、標示已知／假設	
+PASS	印刷示意 print/layout_V.svg：1064×1082、不含照片、標示已知／假設	
+PASS	不帶憑證可開 /shoot.html	200 text/html; charset=utf-8
+PASS	不帶憑證可開 /shoot.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /shoot.css	200 text/css; charset=utf-8
+PASS	不帶憑證可開 /data.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /index.html	200 text/html; charset=utf-8
+PASS	不帶憑證可開 /print/layout_H.svg	200 image/svg+xml
+PASS	不帶憑證可開 /print/layout_V.svg	200 image/svg+xml
+PASS	不帶憑證可開 /img/z/m_luna-22.jpg	200 image/jpeg
+PASS	公開資料沒有 job_id／soul_id／kols 路徑／Soul ID；企劃資料（m3）也沒有 sophia	
+PASS	公開資料是 shoot-plan-v5，生成／credits／訓練都是 0	
+PASS	[desktop] 載入後 localStorage 與 v4 存的內容位元組相同（沒有改寫）	
+PASS	[desktop] 頂端第一行是 R4 輪次字串	
+PASS	[desktop] 企劃版本顯示 shoot-plan-v5（R4）	
+PASS	[desktop] 目錄有「印刷構圖」連到 #print	
+PASS	[desktop] 24 張企劃卡、ID 唯一、每位 H／V 一組	
+PASS	[desktop] 8 套已接受：綠色「已接受」、不需回覆、沒有回饋選項	
+PASS	[desktop] 16 套修訂：「R4 修訂」、寫明改了什麼（與資料相同）、有接受／想修改	
+PASS	[desktop] 24 張卡片的月份都標「已確認」，月份與資料相同	
+PASS	[desktop] 月份對照 12 列，順序與已確認的兩本排序相同	
+PASS	[desktop] 24 張卡片直接顯示「景別｜身體方向｜臉與視線｜拍攝角度」（不在展開區、與資料一致）	
+PASS	[desktop] 每張卡都有「尚未生成」框、構圖示意說明與一行印刷判斷	
+PASS	[desktop] 構圖示意：24 個框都有人物範圍（在框內）	
+PASS	[desktop] 攝影總覽兩本各 12 列含狀態欄；修訂表 16 列	
+PASS	[desktop] R4 決策區：逐字決定、已接受 8／修訂 16／月份已確認／V-Iris 首試四格	
+PASS	[desktop] 印刷構圖：兩張示意圖載入（1304×886、1064×1082），有開新分頁連結	
+PASS	[desktop] 印刷構圖：已知、假設、未知、24 列逐張判斷	
+PASS	[desktop] 印刷構圖：V-iris-chen 首試答案與前提顯示	
+PASS	[desktop] 印刷示意可放大檢視（說明不是照片）	
+PASS	[desktop] 未回覆：0／16、沒有任何選項被勾（舊版不算 v5）	
+PASS	[desktop] iris-chen v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[desktop] somi-oh v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[desktop] coco-wu v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[desktop] rin-ayase v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[desktop] H-iris-chen v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v3「接受」
+PASS	[desktop] V-iris-chen v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v4「接受」；v3「想修改」；備註（v3）：v3備註：想看更近一點
+PASS	[desktop] V-coco-wu v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v3「接受」
+PASS	[desktop] H-coco-wu v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v4「接受」
+PASS	[desktop] H-jia-seo v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v4「想修改」；備註（v4）：v4備註：想換場景
+PASS	[desktop] 沒有舊回饋的卡片不顯示舊版	
+PASS	[desktop] v4／v3 題目與整體備註顯示為舊版	
+PASS	[desktop] 題目只剩 2 題（16 套修訂＋印刷示意），回饋區 1 個題目欄	
+PASS	[desktop] 複製（未回覆）：R4 標頭、16 套修訂都寫未回覆並附月份與攝影列、已接受 8 套另列、月份已確認	
+PASS	[desktop] 複製（未回覆）：v4、v3、v1／v2 舊版回饋另列並標不算 v5	
+PASS	[desktop] 狀態更新：修訂已回覆 2／16	
+PASS	[desktop] 重新整理後 v5 回饋保留；v5 只存 16 套修訂	
+PASS	[desktop] v1–v4 舊欄位與 v4 存的內容完全相同（只多了 v5 欄位）	
+PASS	[desktop] 複製：v5 選擇、備註、印刷題、統計，舊版另列	
+PASS	[desktop] 預覽框與剪貼簿相同	
+PASS	[desktop] 所有圖片都載入	83 張；失敗 
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 照片放大檢視可用	
+PASS	[desktop] 清除 v5 回饋後，舊版回饋與 v4 存的內容位元組相同	
+PASS	[desktop] 素材選擇位元組不變	
+PASS	[desktop] 素材頁照舊讀出選擇（iris-04 橫式、iris-03 備選）	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後 localStorage 與 v4 存的內容位元組相同（沒有改寫）	
+PASS	[mobile390] 頂端第一行是 R4 輪次字串	
+PASS	[mobile390] 企劃版本顯示 shoot-plan-v5（R4）	
+PASS	[mobile390] 目錄有「印刷構圖」連到 #print	
+PASS	[mobile390] 24 張企劃卡、ID 唯一、每位 H／V 一組	
+PASS	[mobile390] 8 套已接受：綠色「已接受」、不需回覆、沒有回饋選項	
+PASS	[mobile390] 16 套修訂：「R4 修訂」、寫明改了什麼（與資料相同）、有接受／想修改	
+PASS	[mobile390] 24 張卡片的月份都標「已確認」，月份與資料相同	
+PASS	[mobile390] 月份對照 12 列，順序與已確認的兩本排序相同	
+PASS	[mobile390] 24 張卡片直接顯示「景別｜身體方向｜臉與視線｜拍攝角度」（不在展開區、與資料一致）	
+PASS	[mobile390] 每張卡都有「尚未生成」框、構圖示意說明與一行印刷判斷	
+PASS	[mobile390] 構圖示意：24 個框都有人物範圍（在框內）	
+PASS	[mobile390] 攝影總覽兩本各 12 列含狀態欄；修訂表 16 列	
+PASS	[mobile390] R4 決策區：逐字決定、已接受 8／修訂 16／月份已確認／V-Iris 首試四格	
+PASS	[mobile390] 印刷構圖：兩張示意圖載入（1304×886、1064×1082），有開新分頁連結	
+PASS	[mobile390] 印刷構圖：已知、假設、未知、24 列逐張判斷	
+PASS	[mobile390] 印刷構圖：V-iris-chen 首試答案與前提顯示	
+PASS	[mobile390] 印刷示意可放大檢視（說明不是照片）	
+PASS	[mobile390] 未回覆：0／16、沒有任何選項被勾（舊版不算 v5）	
+PASS	[mobile390] iris-chen v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[mobile390] somi-oh v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[mobile390] coco-wu v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[mobile390] rin-ayase v1／v2 舊版回饋保留、標「不算 v5」	
+PASS	[mobile390] H-iris-chen v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v3「接受」
+PASS	[mobile390] V-iris-chen v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v4「接受」；v3「想修改」；備註（v3）：v3備註：想看更近一點
+PASS	[mobile390] V-coco-wu v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v3「接受」
+PASS	[mobile390] H-coco-wu v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v4「接受」
+PASS	[mobile390] H-jia-seo v3／v4 舊版回饋保留在卡片上、標「不算 v5」	舊版回饋（保留，不算 v5）：v4「想修改」；備註（v4）：v4備註：想換場景
+PASS	[mobile390] 沒有舊回饋的卡片不顯示舊版	
+PASS	[mobile390] v4／v3 題目與整體備註顯示為舊版	
+PASS	[mobile390] 題目只剩 2 題（16 套修訂＋印刷示意），回饋區 1 個題目欄	
+PASS	[mobile390] 複製（未回覆）：R4 標頭、16 套修訂都寫未回覆並附月份與攝影列、已接受 8 套另列、月份已確認	
+PASS	[mobile390] 複製（未回覆）：v4、v3、v1／v2 舊版回饋另列並標不算 v5	
+PASS	[mobile390] 狀態更新：修訂已回覆 2／16	
+PASS	[mobile390] 重新整理後 v5 回饋保留；v5 只存 16 套修訂	
+PASS	[mobile390] v1–v4 舊欄位與 v4 存的內容完全相同（只多了 v5 欄位）	
+PASS	[mobile390] 複製：v5 選擇、備註、印刷題、統計，舊版另列	
+PASS	[mobile390] 預覽框與剪貼簿相同	
+PASS	[mobile390] 所有圖片都載入	83 張；失敗 
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 手機：印刷逐張表與攝影總覽改成一列一張小卡（欄名在格內）	
+PASS	[mobile390] 手機：示意圖寬度不超過畫面	
+PASS	[mobile390] 照片放大檢視可用	
+PASS	[mobile390] 清除 v5 回饋後，舊版回饋與 v4 存的內容位元組相同	
+PASS	[mobile390] 素材選擇位元組不變	
+PASS	[mobile390] 素材頁照舊讀出選擇（iris-04 橫式、iris-03 備選）	
+PASS	[mobile390] 沒有 JS 錯誤	
