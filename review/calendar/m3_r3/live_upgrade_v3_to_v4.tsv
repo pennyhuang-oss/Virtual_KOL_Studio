@@ -1,0 +1,11 @@
+PASS	[d56aee4 → 8f061fc] 升版後企劃回饋與素材選擇的 localStorage 位元組相同	
+PASS	[d56aee4 → 8f061fc] v4 已回覆 0／24（舊回饋不算 v4）、沒有選項被勾	
+PASS	[d56aee4 → 8f061fc] iris-chen 顯示 v1／v2 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] coco-wu 顯示 v1／v2 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] rin-ayase 顯示 v1／v2 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] somi-oh 顯示 v1／v2 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] H-iris-chen 顯示 v3 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] V-iris-chen 顯示 v3 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] V-coco-wu 顯示 v3 舊版回饋並標「不算 v4」	
+PASS	[d56aee4 → 8f061fc] v3 題目與整體備註顯示為舊版	
+PASS	[d56aee4 → 8f061fc] 只是開頁，localStorage 仍未被改寫	
