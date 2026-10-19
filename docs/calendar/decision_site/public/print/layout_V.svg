@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1064" height="1082" viewBox="0 0 1064 1082" role="img">
+<title>直式款（YFP-CA08）版型與裁切示意（不含照片）</title>
+<defs><pattern id="coil" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff4e0"/><line x1="0" y1="0" x2="0" y2="8" stroke="#e8a33c" stroke-width="3"/></pattern><pattern id="cut" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="6" height="6" fill="#efe3fb"/><line x1="0" y1="0" x2="0" y2="6" stroke="#7e3fb8" stroke-width="2"/></pattern></defs>
+<rect x="0" y="0" width="1064" height="1082" fill="#ffffff"/>
+<text x="64.0" y="26.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#1f2937">直式款（YFP-CA08）：版型與裁切示意（不含生成照片；只是方框，不是印刷安全證明）</text>
+<text x="64.0" y="48.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#4b5563">實線＝已知（廠商編輯器設定）　虛線＝本案假設或暫定　點線＝照片比例示範</text>
+<rect x="64.0" y="96.0" width="576.0" height="816.0" fill="#fde2e2" stroke="#9ca3af" stroke-width="1"/>
+<rect x="72.0" y="104.0" width="560.0" height="800.0" fill="#ffffff" stroke="#c62828" stroke-width="2.5"/>
+<rect x="64.0" y="96.0" width="576.0" height="48.0" fill="url(#coil)" stroke="#c26a00" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="64" y1="134.8" x2="640" y2="134.8" stroke="#c26a00" stroke-width="1" stroke-dasharray="2 3"/>
+<rect x="72.0" y="104.0" width="560.0" height="800.0" fill="none" stroke="#2e7d32" stroke-width="1"/>
+<rect x="112.0" y="160.0" width="480.0" height="512.0" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="2 3"/>
+<rect x="112.0" y="160.0" width="480.0" height="640.0" fill="#dbeafe" fill-opacity="0.35" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="10 5"/>
+<rect x="112.0" y="816.0" width="480.0" height="80.0" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="352.0" y="861.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#4b5563">日期區（暫定）</text>
+<text x="352.0" y="474.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#1d4ed8">暫定照片框 120×160 mm</text>
+<text x="352.0" y="496.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#1d4ed8">3:4 放入：不裁切</text>
+<text x="352.0" y="664.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="11" font-weight="400" text-anchor="middle" fill="#6b7280">灰點線＝R3 統一框 120×128（若改用，3:4 要上下共裁 20%）</text>
+<text x="352.0" y="86.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#374151">含出血畫布 144 mm（成品 140 mm）</text>
+<text x="50" y="504.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" text-anchor="middle" fill="#374151" transform="rotate(-90 50 504.0)">含出血畫布 204 mm（成品 200 mm）</text>
+<rect x="658" y="95" width="18" height="12" fill="#c62828"/>
+<text x="684.0" y="106.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">裁切線＝成品 140×200 mm［已知］</text>
+<rect x="658" y="121" width="18" height="12" fill="#e7a7a7"/>
+<text x="684.0" y="132.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">出血四邊各 2 mm，畫布 144×204 mm［</text>
+<text x="684.0" y="148.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">已知］</text>
+<rect x="658" y="163" width="18" height="12" fill="#2e7d32"/>
+<text x="684.0" y="174.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">編輯器安全框 0 mm＝裁切線［已知］</text>
+<rect x="658" y="189" width="18" height="12" fill="#c26a00"/>
+<text x="684.0" y="200.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">線圈／裝訂區 畫布上緣 0–12 mm［假設］</text>
+<rect x="658" y="215" width="18" height="12" fill="#c26a00"/>
+<text x="684.0" y="226.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">編輯器線圈示意圖約 9.7 mm［量測，非書面規格</text>
+<text x="684.0" y="242.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">］</text>
+<rect x="658" y="257" width="18" height="12" fill="#1d4ed8"/>
+<text x="684.0" y="268.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">暫定照片框 120×160 mm［假設］</text>
+<rect x="658" y="283" width="18" height="12" fill="#6b7280"/>
+<text x="684.0" y="294.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#1f2937">日期區［假設］</text>
+<text x="658.0" y="326.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#b45309">直式安全框是 0，不代表沒有裝訂區：實際線圈尺寸</text>
+<text x="658.0" y="342.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#b45309">仍待廠商確認。</text>
+<text x="64.0" y="946.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#1f2937">・照片框整個在安全區內、避開假設線圈區：照片本身不碰出血與裁切線。</text>
+<text x="64.0" y="968.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#1f2937">・3:4 照片寬 120 mm 時高 160 mm，剛好放滿暫定框，不裁切；1536×2048 約 325 ppi。</text>
+<text x="64.0" y="990.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#1f2937">・若改用 R3 直式統一框 120×128（約 0.94:1），3:4 要上下共裁 32 mm（20%）。</text>
+<text x="64.0" y="1012.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#1f2937">・月曆大格面在另一面；這一面只放照片與日期條（廠商直式範本的結構）。</text>
+<text x="64.0" y="1042.0" font-family="Noto Sans TC, Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, WenQuanYi Zen Hei, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#4b5563">背景延伸到出血區是正常的；只有臉、髮頂、手腳與關鍵服裝要避開裁切與裝訂風險。生成後仍要用實圖逐張確認裁切與有效 ppi。</text>
+</svg>

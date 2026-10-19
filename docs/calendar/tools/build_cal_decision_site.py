@@ -11,7 +11,7 @@
   只做等比縮小（長邊 1600 px，JPEG q88，不帶原檔中繼資料）。頁面資料只放圖片 ID，不放 job_id、來源路徑或帳號資料。
 - 第二階段素材（data/cal_m1_materials.json，本輪人寫清單，從工作目錄讀）：每張照片用同一套來源核對後等比縮小；
   沒有取回原圖的 daily140 照片只複製 repo 的 360×480 縮圖（位元組不變）。名單只依 data/cal_m1_owner_roster.json。
-- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，R2 起為 24 套雙款，R3 起每套附攝影設計，人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
+- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，R2 起為 24 套雙款，R3 起每套附攝影設計，R4 起附印刷構圖判斷，人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
   其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
@@ -315,7 +315,15 @@ def build_m3(mat):
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
     assert P['counts'] == {'generated': 0, 'credits': 0, 'trainings': 0}
-    assert P['version'] == 'shoot-plan-v4' and P['revision']['from_version'] == 'shoot-plan-v3'
+    assert P['version'] == 'shoot-plan-v5' and P['revision']['from_version'] == 'shoot-plan-v4'
+    acc, rev = P['status']['accepted'], P['status']['revised']
+    assert len(acc) == 8 and len(rev) == 16 and sorted(acc + rev) == sorted(x['id'] for x in P['sets']), 'R4 狀態不對'
+    for x in P['sets']:  # R4：每套有狀態與印刷判斷；修訂的 16 套有 owner 原文與「改了什麼」
+        assert x['status'] == ('accepted' if x['id'] in acc else 'revised') and x['print']['frame'] and x['print']['verdict'], x['id']
+        if x['status'] == 'revised':
+            assert x['r4']['owner'].strip() and x['r4']['change'].strip(), x['id']
+    for b in 'HV':
+        assert os.path.isfile(os.path.join(ROOT, 'docs/calendar/decision_site/public', P['printing']['diagrams'][b])), b
     for x in P['sets']:  # R3：每套都要有七個攝影欄位（中文＋英文），英文句逐字在 prompt 裡
         c = x['cam']
         for k in ('shot', 'bounds', 'body', 'face', 'gaze', 'angle', 'comp', 'purpose'):

@@ -134,3 +134,37 @@ table.adj td:first-child { white-space: nowrap; }
   table.photo td::before { content: attr(data-label); font-weight: 700; color: #1c3150; }
   table.photo td:first-child { white-space: normal; }
 }
+
+/* R4：接受／修訂狀態、印刷構圖 */
+.tag.acc { background: #0b6b3a; color: #fff; }
+.tag.rev { background: #8a3b00; color: #fff; }
+.statgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin: 10px 0; }
+.stat { border: 1px solid #d9d9d9; border-left: 6px solid #9aa4b2; border-radius: 8px; padding: 6px 10px; background: #fff; min-width: 0; overflow-wrap: anywhere; }
+.stat b { display: block; font-size: 1rem; }
+.stat span { display: block; font-size: .84rem; color: #444; line-height: 1.45; }
+.stat p { margin: .3em 0 0; font-size: .8rem; line-height: 1.6; }
+.stat.acc { border-left-color: #0b6b3a; background: #f1f9f4; }
+.stat.rev { border-left-color: #8a3b00; background: #fff8ef; }
+.stat.conf { border-left-color: #0b57d0; background: #eef3fd; }
+.stat.warn { border-left-color: #b3261e; background: #fdf0ef; }
+.r4box { border-radius: 8px; padding: 6px 10px; margin: 8px 0; font-size: .88rem; line-height: 1.55; overflow-wrap: anywhere; }
+.r4box p { margin: .2em 0; }
+.r4box.acc { background: #f1f9f4; border: 1px solid #b6dcc4; border-left: 5px solid #0b6b3a; }
+.r4box.rev { background: #fff8ef; border: 1px solid #f0d9b5; border-left: 5px solid #8a3b00; }
+.r4box details summary { font-weight: 600; cursor: pointer; }
+.scard.isacc { border-color: #b6dcc4; }
+.prline { font-size: .76rem; line-height: 1.45; color: #4b2a75; margin: 3px 0 0; overflow-wrap: anywhere; }
+.pdiags { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 10px 0; }
+.pdiag { margin: 0; min-width: 0; }
+.pdiag .zoom { background: #fff; }
+.pdiag .zoom img { width: 100%; height: auto; }
+.pdiag figcaption { font-size: .82rem; line-height: 1.5; margin-top: 4px; overflow-wrap: anywhere; }
+.viewer-body img[src$=".svg"] { background: #fff; }
+table.ptab { font-size: .78rem; }
+@media (min-width: 900px) {
+  .statgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pdiags { grid-template-columns: 1.23fr 1fr; align-items: start; }
+}
+@media (max-width: 700px) {
+  table.photo td > .tag { justify-self: start; align-self: start; }
+}
