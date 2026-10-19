@@ -177,7 +177,7 @@ Penny 尚未批准其餘人物的具體角度。
 
 **同一位的兩款：** 12 位中有 10 位的 H／V 景別不同；Rainie 兩款都是膝上（正面直視 vs 斜側看街燈），Miu 兩款都是坐姿全身（室內床上半倚看鏡頭 vs 戶外吊床邊看果樹）。每位的兩款在身體方向、相機高度或視線上至少一項不同。
 
-**戶外與重複：** 整組戶外 18 套（R3 是 15 套）：新增 H-Iris 岩岸、H-Yuna 白樺林、H-Tammy 花園露台、H-Jia 湖畔、V-Rin 港灣、V-Miu 度假木平台；庭園類 4 套（Coco 花田、V-Luna 紫陽花庭院、H-Tammy、V-Miu）、海景類 4 套（H-Iris 夏日上午岩岸、H-Mia 黃昏遊樂碼頭、V-Yerin 夕陽沙灘、V-Rin 秋日陰天港灣）時間與環境都不同；針織服裝 7 套，多數是已接受或指定保留的方向。
+**戶外與重複：** 整組戶外 18 套（R3 是 14 套）：室內改戶外 4 套（H-yuna-kim、H-tammy-chou、H-jia-seo、V-rin-ayase）；原本就在戶外、換了場景 2 套（H-iris-chen、V-miu-shiraishi）；庭園類 4 套（Coco 花田、V-Luna 町家庭院、H-Tammy 花園露台、V-Miu 度假木平台）、海景類 4 套（H-Iris 夏日上午岩岸、H-Mia 黃昏遊樂碼頭、V-Yerin 夕陽沙灘、V-Rin 秋日陰天港灣）時間與環境都不同；針織服裝 6 套（H-somi-oh、H-yuna-kim、H-tammy-chou、H-yerin-han、V-somi-oh、V-mia-huang），除了 H-yuna-kim 的內搭是本輪新選，其餘是已接受或 Penny 指定保留的服裝。
 
 ### 2.3 prompt 一致性檢查（產生資料時逐套執行，不通過就無法建置）
 

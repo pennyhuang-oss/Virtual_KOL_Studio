@@ -6215,7 +6215,7 @@ window.CAL_DATA = {
     "V": "直式款：胸上 1、大腿中段以上 2、膝上 3、全身 4、坐姿全身 1、坐姿到水面 1。戶外 10 套、室內 2 套；站姿置中只有 Tammy、Iris、Jia 三張，景別或角度各不相同。",
     "angles": "不看鏡頭 8 套（H-luna-tanaka、H-rin-ayase、H-jia-seo、V-somi-oh、V-yuna-kim、V-rin-ayase、V-rainie-hsu、V-miu-shiraishi），每套都有明確的視線目標；其餘看鏡頭。正面膝上站姿只剩 H-rainie-hsu（已接受）。側面 2 套（H-jia-seo 側坐、H-rin-ayase 側躺）。",
     "near": "近景：V-mia-huang 胸上；大腿中段以上 4 張（H-mia-huang、H-yuna-kim、V-iris-chen、V-tammy-chou）。沒有純臉部特寫，身材展示優先。",
-    "outdoor": "整組戶外 18 套（R3 是 15 套）：新增 H-Iris 岩岸、H-Yuna 白樺林、H-Tammy 花園露台、H-Jia 湖畔、V-Rin 港灣、V-Miu 度假木平台；庭園類 4 套（Coco 花田、V-Luna 紫陽花庭院、H-Tammy、V-Miu）、海景類 4 套（H-Iris 夏日上午岩岸、H-Mia 黃昏遊樂碼頭、V-Yerin 夕陽沙灘、V-Rin 秋日陰天港灣）時間與環境都不同；針織服裝 7 套，多數是已接受或指定保留的方向。",
+    "outdoor": "整組戶外 18 套（R3 是 14 套）：室內改戶外 4 套（H-yuna-kim、H-tammy-chou、H-jia-seo、V-rin-ayase）；原本就在戶外、換了場景 2 套（H-iris-chen、V-miu-shiraishi）；庭園類 4 套（Coco 花田、V-Luna 町家庭院、H-Tammy 花園露台、V-Miu 度假木平台）、海景類 4 套（H-Iris 夏日上午岩岸、H-Mia 黃昏遊樂碼頭、V-Yerin 夕陽沙灘、V-Rin 秋日陰天港灣）時間與環境都不同；針織服裝 6 套（H-somi-oh、H-yuna-kim、H-tammy-chou、H-yerin-han、V-somi-oh、V-mia-huang），除了 H-yuna-kim 的內搭是本輪新選，其餘是已接受或 Penny 指定保留的服裝。",
     "pair": "12 位中有 10 位的 H／V 景別不同；Rainie 兩款都是膝上（正面直視 vs 斜側看街燈），Miu 兩款都是坐姿全身（室內床上半倚看鏡頭 vs 戶外吊床邊看果樹）。每位的兩款在身體方向、相機高度或視線上至少一項不同。"
    },
    "rules": [
@@ -6233,7 +6233,7 @@ window.CAL_DATA = {
    },
    "summary": "R4：8 套已接受照 v4；16 套依 owner 回饋修訂，每套一個主推薦，七個攝影欄位（景別、畫面上下界、身體朝向、臉部朝向與視線、相機高度與俯仰、畫面配置、攝影目的）中文與英文 prompt 由同一份設定產生並逐套檢查。16 套的新主推薦是主管推薦的修訂起點加上執行者的細化，尚未經 Penny 批准。"
   },
-  "plan_blob": "b7a72e66f20307689c43c051b376dc2d784da593",
+  "plan_blob": "10d2035faab3e543cd472832938dbbefe8cd30cc",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
