@@ -324,6 +324,7 @@ def build_m3(mat):
             assert x['r4']['owner'].strip() and x['r4']['change'].strip(), x['id']
     for b in 'HV':
         assert os.path.isfile(os.path.join(ROOT, 'docs/calendar/decision_site/public', P['printing']['diagrams'][b])), b
+    assert all(x['id'] in acc for x in P['accepted_notes']['items']), '技術備註只列已接受的套數'
     for x in P['sets']:  # R3：每套都要有七個攝影欄位（中文＋英文），英文句逐字在 prompt 裡
         c = x['cam']
         for k in ('shot', 'bounds', 'body', 'face', 'gaze', 'angle', 'comp', 'purpose'):

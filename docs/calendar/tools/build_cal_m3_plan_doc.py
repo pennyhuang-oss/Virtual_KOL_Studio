@@ -92,6 +92,10 @@ def render18(d):
     L += ['### 8 套已接受（不重設）', '']
     L += table(['ID', '月份', '主題', '攝影', '印刷判斷'], [[s['id'], f"{s['month']} 月", s['theme'], s['cam']['line'], s['print']['verdict']] for s in d['sets'] if s['status'] == 'accepted'])
     L += ['', PR['accepted_impact']['summary'], '']
+    AN = d['accepted_notes']
+    L += [f"**已接受套數的技術備註（{AN['status']}）：** {AN['summary']}", '']
+    L += table(['ID', '中文妝感（已接受）', '建議補進英文 prompt 的一句'], [[x['id'], x['makeup_zh'], f"`{x['proposal_en']}`"] for x in AN['items']])
+    L.append('')
 
     L += ['## 3b. 印刷規格與安全構圖（已知／假設／未知）', '', PR['note'], '', '**已知：**', '']
     L += table(['項目', '橫式', '直式', '來源'], [[x['k'], x['H'], x['V'], x['src']] for x in PR['known']])

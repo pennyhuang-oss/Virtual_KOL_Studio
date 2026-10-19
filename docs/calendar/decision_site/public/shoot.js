@@ -2,6 +2,7 @@
 // Penny 的回饋只存在本機瀏覽器 localStorage（cal2027-shoot-v1:<SHA>），不送到伺服器；沒有追蹤或分析。
 // v5 的回饋另存在同一筆資料的 v5 欄位；v1／v2／v3／v4 留下的欄位原樣保留，只顯示成「舊版」、不算 v5。載入時不改寫，只有 Penny 動手後才存。
 // R4 owner 紀錄的 8 套已接受與兩本月份直接顯示為已確認，不再要求回覆；只有 16 套修訂與印刷示意需要回饋。
+// 已接受套數的技術備註（中文妝感沒寫進英文 prompt）只顯示、不改內容，待主管確認。
 // 構圖示意與印刷示意都只是方框與尺寸（依企劃數字畫），不是照片，也不是生成圖。
 // 第二階段素材選擇（cal2027-materials-v1:<SHA>）本頁不讀、不寫、不刪。
 'use strict';
@@ -157,6 +158,7 @@
 <div class="stat warn"><b>V-iris-chen 首試</b><span>${esc(Sm.iris_first)}</span></div>
 </div>
 <p class="callout warn">${esc(Sm.jia_note)} 16 套的新主推薦與暫定照片框都<b>還沒有經 Penny 批准</b>；生成與費用都未授權。</p>
+<div class="callout"><b>已接受套數的技術備註（${esc(P.accepted_notes.status)}）</b>：${esc(P.accepted_notes.summary)}${ul(P.accepted_notes.items.map(x => `${x.id}：中文「${x.makeup_zh}」→ 建議補一句「${x.proposal_en}」`))}</div>
 <details class="info"><summary>R4 逐套修改要求（逐字，主管轉述）</summary>${REV.map(s => `<pre class="verb">${esc(s.r4.owner)}</pre>`).join('')}<pre class="verb">${esc(O4.verbatim.closing)}</pre></details>
 <details class="info"><summary>R3 攝影設計要求（逐字，仍適用）</summary><pre class="verb">${esc(O3.verbatim.requirement)}</pre><pre class="verb">${esc(O3.verbatim.keep_existing)}</pre></details>
 <details class="info"><summary>R2 已生效的決定（逐字）</summary><pre class="verb">${esc(O2.verbatim.decisions)}</pre>${ul(O2.summary.decided)}</details>
@@ -263,7 +265,11 @@ ${stbl(['ID', '狀態', '照片框', '比例裁切', '邊緣的重要部位', '�
 </dl></details>`;
   }
   function r4Box(s) {
-    if (s.status === 'accepted') return `<p class="r4box acc"><b>已接受（R4 owner 紀錄）</b>：服裝、場景、表情與攝影照上一版，不需再回覆。</p>`;
+    if (s.status === 'accepted') {
+      const n = P.accepted_notes.items.find(x => x.id === s.id);
+      return `<div class="r4box acc"><p><b>已接受（R4 owner 紀錄）</b>：服裝、場景、表情與攝影照上一版，不需再回覆。</p>` +
+        (n ? `<p class="tnote"><b>技術備註（${esc(P.accepted_notes.status)}）</b>：中文妝感「${esc(n.makeup_zh)}」沒有寫進英文 prompt；建議生成前補一句，不改其他內容。</p>` : '') + '</div>';
+    }
     return `<div class="r4box rev"><p><b>R4 改了什麼：</b>${esc(s.r4.change)}</p>
 <details class="info"><summary>Penny 的修改要求（逐字，主管轉述）</summary><pre class="verb">${esc(s.r4.owner)}</pre></details></div>`;
   }

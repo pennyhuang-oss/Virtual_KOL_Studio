@@ -168,3 +168,4 @@ table.ptab { font-size: .78rem; }
 @media (max-width: 700px) {
   table.photo td > .tag { justify-self: start; align-self: start; }
 }
+.r4box .tnote { font-size: .82rem; color: #6d4c00; background: #fff4e0; border-radius: 6px; padding: 3px 8px; }
