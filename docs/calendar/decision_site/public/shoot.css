@@ -104,3 +104,33 @@ table.book td:nth-child(1), table.book td:nth-child(2), table.book td:nth-child(
   .mrow2 { grid-template-columns: 2.6em minmax(0, 1fr); }
   .mrow2 .mchip.v { grid-column: 2; }
 }
+
+/* R3：攝影設計（景別｜身體方向｜臉與視線｜拍攝角度）、構圖示意、攝影總覽 */
+.camrow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; margin: 6px 0 8px; background: #eef3fd; border: 1px solid #b9c8e6; border-left: 5px solid #0b57d0; border-radius: 8px; padding: 6px 8px; }
+.camrow div { min-width: 0; }
+.camrow dt { font-size: .72rem; color: #1c3150; font-weight: 700; }
+.camrow dd { margin: 0; font-size: .92rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.scard.bv .camrow { background: #e9f5ee; border-color: #b6dcc4; border-left-color: #0b6b3a; }
+.pdl dd.camline { font-weight: 600; color: #1c3150; }
+.nb2.sch { position: relative; display: block; overflow: hidden; }
+.sch-fig { position: absolute; display: block; }
+.sch-h { position: absolute; top: 0; left: 50%; transform: translateX(-50%); border: 2px solid #4a5260; border-radius: 50%; background: rgba(255, 255, 255, .7); box-sizing: border-box; }
+.sch-fig[data-lie] .sch-h { transform: none; }
+.sch-b { position: absolute; left: 0; right: 0; bottom: 0; border: 2px dashed #4a5260; border-radius: 10px 10px 0 0; background: rgba(255, 255, 255, .45); box-sizing: border-box; }
+.sch-fig[data-lie] .sch-b { border-radius: 10px; }
+.schw { margin: 6px 0; }
+.schw .nb2 { margin: 0; }
+.sch-t { font-size: .74rem; line-height: 1.4; color: #4a5260; margin: 3px 0 0; overflow-wrap: anywhere; }
+.sch-t b { display: block; font-size: .8rem; color: #333; }
+table.photo { font-size: .8rem; }
+table.photo td:first-child { white-space: nowrap; }
+table.adj td:first-child { white-space: nowrap; }
+.camd summary { font-weight: 600; }
+@media (max-width: 700px) {
+  table.photo thead { display: none; }
+  table.photo, table.photo tbody, table.photo tr, table.photo td { display: block; width: 100%; box-sizing: border-box; }
+  table.photo tr { border: 1px solid #c9d6ee; border-radius: 8px; margin: 0 0 8px; padding: 4px 6px; background: #fff; }
+  table.photo td { border: 0; padding: 2px 0; display: grid; grid-template-columns: 6.6em minmax(0, 1fr); gap: 6px; }
+  table.photo td::before { content: attr(data-label); font-weight: 700; color: #1c3150; }
+  table.photo td:first-child { white-space: normal; }
+}
