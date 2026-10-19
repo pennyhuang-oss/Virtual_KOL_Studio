@@ -24,6 +24,9 @@ PASS	owner 要求落實 V-rainie-hsu：不看鏡頭、放鬆、微啟唇、看�
 PASS	owner 要求落實 V-miu-shiraishi：春日木平台／吊床；有支撐的細肩洋裝；顏色和其他 23 套不撞	
 PASS	owner 要求落實 V-jia-seo：高腰貼臀窄裙，寫清開衩位置	
 PASS	修訂的 16 套 prompt 都和 v4 不同；七個攝影欄位英文逐字在 prompt 裡	
+PASS	16 套修訂：中文「妝感」與英文 prompt 逐項一致（含 H-Yuna 珊瑚唇，不再寫玫瑰）	
+PASS	16 套修訂：人設身分句（臉、膚色、身材）與 v4 相同（V-Rin 只換髮型）	
+PASS	已接受 3 套缺英文妝感句：只列技術備註（待主管確認），prompt 未改	
 PASS	同一人兩款的場景與服裝不同；24 個環境不重複	
 PASS	不看鏡頭的比 v4 多；戶外比 v4 多	不看鏡頭 8／24、戶外 18
 PASS	沒有未成年或幼態字眼	
@@ -51,6 +54,7 @@ PASS	[desktop] 企劃版本顯示 shoot-plan-v5（R4）
 PASS	[desktop] 目錄有「印刷構圖」連到 #print	
 PASS	[desktop] 24 張企劃卡、ID 唯一、每位 H／V 一組	
 PASS	[desktop] 8 套已接受：綠色「已接受」、不需回覆、沒有回饋選項	
+PASS	[desktop] 已接受 3 套卡片顯示技術備註（待主管確認），其他 5 套沒有；決策區列出備註	
 PASS	[desktop] 16 套修訂：「R4 修訂」、寫明改了什麼（與資料相同）、有接受／想修改	
 PASS	[desktop] 24 張卡片的月份都標「已確認」，月份與資料相同	
 PASS	[desktop] 月份對照 12 列，順序與已確認的兩本排序相同	
@@ -97,6 +101,7 @@ PASS	[mobile390] 企劃版本顯示 shoot-plan-v5（R4）
 PASS	[mobile390] 目錄有「印刷構圖」連到 #print	
 PASS	[mobile390] 24 張企劃卡、ID 唯一、每位 H／V 一組	
 PASS	[mobile390] 8 套已接受：綠色「已接受」、不需回覆、沒有回饋選項	
+PASS	[mobile390] 已接受 3 套卡片顯示技術備註（待主管確認），其他 5 套沒有；決策區列出備註	
 PASS	[mobile390] 16 套修訂：「R4 修訂」、寫明改了什麼（與資料相同）、有接受／想修改	
 PASS	[mobile390] 24 張卡片的月份都標「已確認」，月份與資料相同	
 PASS	[mobile390] 月份對照 12 列，順序與已確認的兩本排序相同	

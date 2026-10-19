@@ -1,3 +1,3 @@
 files 666, mismatches 0 []
-html {'index.html': (True, '9fa134330787c48cf10fc63b70fd490f1bdbca07'), 'cast.html': (True, '9fa134330787c48cf10fc63b70fd490f1bdbca07'), 'plan.html': (True, '9fa134330787c48cf10fc63b70fd490f1bdbca07'), 'shoot.html': (True, '9fa134330787c48cf10fc63b70fd490f1bdbca07')}
+html {'index.html': (True, '4f1591790d0e04cd58b93d95be470c2ff602e63b'), 'cast.html': (True, '4f1591790d0e04cd58b93d95be470c2ff602e63b'), 'plan.html': (True, '4f1591790d0e04cd58b93d95be470c2ff602e63b'), 'shoot.html': (True, '4f1591790d0e04cd58b93d95be470c2ff602e63b')}
 catalog https://kol-catalog-production.up.railway.app/ 44801 bytes; cmp with m3r2 catalog_final.html: identical

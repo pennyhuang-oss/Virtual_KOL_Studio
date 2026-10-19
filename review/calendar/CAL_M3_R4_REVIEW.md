@@ -3,8 +3,8 @@ TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對｜送審報告
 # M-3／R4 送審紀錄
 
 - **範圍**：只規劃。**生成 0、credits 0、訓練 0、上傳 0**；本輪沒有呼叫任何 Higgsfield 工具（連報價也沒有）。沒有改 canon、Soul ID、人設設定與身材數字；roster-v1、24 套兩本策略、兩本月份排序都不變；免登入、素材頁不變；沒有登入廠商、上傳、接受條款、聯絡廠商、執行 M-4 或製作交印包；沒有假設 AI 放大或外擴已獲授權。
-- **成果 SHA**：`9fa134330787c48cf10fc63b70fd490f1bdbca07`（本輪兩個 commit：`13fa4a0751b577a00f87a4a1ac6356878ab0ce3f` 主要內容、`9fa134330787c48cf10fc63b70fd490f1bdbca07` 修正攝影總覽裡寫錯的戶外與針織套數；上一輪成果 `8f061fcec58e3dd0451bab8947fe6ed411eb377f`、送審 `2d0784742aad9d4c900223331efe1b8ce0f03ce5`）
-- **部署**：Railway `cal2027-decision`，來源固定在 `9fa134330787c48cf10fc63b70fd490f1bdbca07`，deployment `dbb82db5-01b1-4bae-b618-8ea775ae0161`（SUCCESS；前一個 13fa4a0 的部署 `681f0e98-96a6-49ad-8116-08e36506e13f` 已被取代）；其他 service 未動
+- **成果 SHA**：`4f1591790d0e04cd58b93d95be470c2ff602e63b`（本輪成果 commit 依序：`13fa4a0751b577a00f87a4a1ac6356878ab0ce3f` 主要內容；`9fa134330787c48cf10fc63b70fd490f1bdbca07` 修正攝影總覽寫錯的戶外與針織套數；`4f1591790d0e04cd58b93d95be470c2ff602e63b` 複查後修正中文「妝感」與英文 prompt 不一致。中間送審 commit `4cb57ba2ad66d7283886e22a93c27594909b44ee` 的內容已由本檔取代。上一輪成果 `8f061fcec58e3dd0451bab8947fe6ed411eb377f`、送審 `2d0784742aad9d4c900223331efe1b8ce0f03ce5`）
+- **部署**：Railway `cal2027-decision`，來源固定在 `4f1591790d0e04cd58b93d95be470c2ff602e63b`，deployment `a57e31f0-2478-4b22-a028-6adcbed2e56b`（SUCCESS；先前 13fa4a0 的 `681f0e98-96a6-49ad-8116-08e36506e13f`、9fa1343 的 `dbb82db5-01b1-4bae-b618-8ea775ae0161` 都已被取代）；其他 service 未動
 - **企劃頁**：https://cal2027-decision-production.up.railway.app/shoot.html（免登入）；印刷示意：`/print/layout_H.svg`、`/print/layout_V.svg`
 - **資料與文件**：`docs/calendar/data/cal_m3_shoot_plan.json`（shoot-plan-v5）、`docs/calendar/data/cal_m3_owner_feedback_r4.json`（R4 owner 回饋逐字＋執行摘要）、`docs/calendar/CAL_18_M3_SHOOT_PLAN.md`（R4 標題）、`docs/calendar/CAL_19_M3_R2_OWNER_DECISION.md`（R2 紀錄，位元組不變）
 - **owner 原文來源**：Penny 頁面複製的原始回饋文字沒有直接提供給執行者；本輪保存的是主管轉述的逐字段落，不是頁面 radio 統計，也沒有把舊版回饋當成新回饋。
@@ -30,7 +30,8 @@ TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對｜送審報告
 | 表情不再幾乎全部直視鏡頭 | 不看鏡頭 8 套（H-luna-tanaka、H-rin-ayase、H-jia-seo、V-somi-oh、V-yuna-kim、V-rin-ayase、V-rainie-hsu、V-miu-shiraishi），每套都有明確的視線目標；其餘看鏡頭。正面膝上站姿只剩 H-rainie-hsu（已接受）。側面 2 套（H-jia-seo 側坐、H-rin-ayase 側躺）。 |
 | 性感姿態自然、手腳支撐合理、衣物遮蔽明確 | 每套姿勢都寫支撐點與手的位置；服裝寫結構（例：H-Somi 開襟全部不扣＋貼身細肩小可愛；V-Jia 高腰窄裙左前側開衩到大腿中段；V-Miu 有骨架的心形領上身）；H-Yerin 雙膝併攏、相機在坐姿腰部高度平視，不低角度、不走光 |
 | 不用未成年化的服裝、表情或措辭 | 禁字檢查通過；所有身分句都是 adult 與設定年齡 |
-| 臉、身材維持設定，不靠換臉製造差異 | 24 套身材數字與 v4 相同；臉、膚色、妝感句不變；只有 V-Rin 的髮型因新場景從俐落低髮髻改為鬆軟低髮髻（造型，不是換臉） |
+| 臉、身材維持設定，不靠換臉製造差異 | 24 套身材數字與 v4 相同；16 套修訂的人設身分句（臉、膚色、身材）與 v4 相同（程式比對），只有 V-Rin 的髮型因新場景從俐落低髮髻改為鬆軟低髮髻（造型，不是換臉）；H-Iris、H-Somi、V-Somi 在身分句後另加一句妝感，內容就是中文本來寫的妝感 |
+| 中文與 prompt 一致（必要驗證） | 七個攝影欄位、服裝顏色與材質、妝感逐套比對；複查時修正 H-Yuna 中文唇色（玫瑰→珊瑚，依人設）並替 H-Iris、H-Somi、V-Somi 補英文妝感句；已接受的 V-iris、H-coco、V-coco 同樣缺英文妝感句，不改、列待確認（§3） |
 | 主角優先，不為家具建築道具縮小人物 | 橫式全身套人物佔畫面高度約 84%（下緣留 7%）；坐躺套依景別留白；道具只作支撐（長椅、吊床、繫船柱、球車） |
 
 ## 2. 16 套新主推薦
@@ -66,7 +67,14 @@ TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對｜送審報告
 
 - 企劃內容：**不受影響**。8 套的主題、場景、服裝、姿態、表情、光線、攝影七欄位與 prompt 都與 v4 逐字相同（程式比對）。
 - 印刷：8 套已接受的企劃內容都不需要為印刷改動；H-coco-wu、H-rainie-hsu 是橫式膝上，放入框後下緣會再往上移約 2–3 cm，生成後若接近膝蓋，4 mm 的裁切改由頭頂留白多取——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。
-- 因此沒有任何已接受套數列為「待確認」。
+- 印刷方面沒有任何已接受套數列為「待確認」。
+- **技術備註（待主管確認，本輪未改動）**：已接受 8 套的服裝、場景、表情、攝影與 prompt 本輪都沒有改。複查中文與 prompt 時發現 3 套（V-iris-chen、H-coco-wu、V-coco-wu）的中文「妝感」有寫、英文 prompt 沒寫——Iris 與 Coco 的人設身分句沒有妝感，上一版（v4）就是如此。建議生成前在英文 prompt 補一句與中文相同的妝感（只補妝感，不改服裝、場景、表情或攝影），請主管確認；V-iris-chen 是 M-4 首試，若首試獲准，建議先補上。
+
+| ID | 中文妝感（已接受） | 建議補進英文 prompt 的一句 |
+|---|---|---|
+| V-iris-chen | 乾淨的日常妝、自然唇色。 | Fresh, light everyday makeup with a natural lip colour. |
+| H-coco-wu | 甜美淡妝、粉色唇。 | Sweet, light makeup with a pink lip. |
+| V-coco-wu | 甜美淡妝。 | Sweet, light makeup. |
 
 | ID | 月 | 景別｜身體方向｜臉與視線｜拍攝角度 | 印刷判斷 |
 |---|---|---|---|
@@ -185,9 +193,9 @@ TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對｜送審報告
 
 | 項目 | 結果 | 檔案 |
 |---|---|---|
-| 企劃頁（桌機＋390px）與資料：24 套 ID、兩本月份與確認排序相同；8 套已接受與 v4 逐欄相同；16 套 owner 要求逐項（英文 prompt 與中文欄位都比對）；七欄位英文在 prompt；同人兩款不同、24 個環境不重複；不看鏡頭與戶外都比 v4 多；無幼態字眼；印刷已知尺寸、照片框座標、16:9／3:4 裁切計算、24 套逐張判斷、兩張示意圖尺寸與內容；公開資料 v5、無 Soul ID／job_id／repo 路徑、免登入、SVG 以 image/svg+xml 提供；頁面狀態標示、R4 改了什麼、月份已確認、攝影四格直接可見、構圖示意、總覽與修訂表、印刷區與放大檢視；v1–v4 舊回饋保留並標「不算 v5」；回饋保存、重新整理、複製；清除 v5 只刪 v5；素材選擇不變；圖片載入、手機表格改小卡、無水平溢出、無 JS 錯誤 | 線上 141/141（本機 141/141） | /home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_shoot_v5_tests.tsv、local_shoot_v5_tests.tsv |
+| 企劃頁（桌機＋390px）與資料：24 套 ID、兩本月份與確認排序相同；8 套已接受與 v4 逐欄相同；16 套 owner 要求逐項（英文 prompt 與中文欄位都比對）；七欄位英文在 prompt；16 套妝感中英逐項一致、身分句與 v4 相同；已接受 3 套技術備註只列不改並顯示在卡片；同人兩款不同、24 個環境不重複；不看鏡頭與戶外都比 v4 多；無幼態字眼；印刷已知尺寸、照片框座標、16:9／3:4 裁切計算、24 套逐張判斷、兩張示意圖尺寸與內容；公開資料 v5、無 Soul ID／job_id／repo 路徑、免登入、SVG 以 image/svg+xml 提供；頁面狀態標示、R4 改了什麼、月份已確認、攝影四格直接可見、構圖示意、總覽與修訂表、印刷區與放大檢視；v1–v4 舊回饋保留並標「不算 v5」；回饋保存、重新整理、複製；清除 v5 只刪 v5；素材選擇不變；圖片載入、手機表格改小卡、無水平溢出、無 JS 錯誤 | 線上 146/146（本機 146/146） | /home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_shoot_v5_tests.tsv、local_shoot_v5_tests.tsv |
 | 真實升版：同一個測試瀏覽器設定檔先在線上 v1–v4 各填回饋（最後在 8f061fc 填 v4），再打開線上 v5 | 14/14（localStorage 位元組相同；v1–v4 顯示為舊版；v5 為 0／16；只開頁不改寫） | /home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_upgrade_v4_to_v5.tsv |
-| 線上檔案 sha256 與本機比對（圖片、資料、頁面程式、兩張印刷示意，加 4 個 HTML 頁） | 666 檔，不符 0；四個 HTML 頁與本機相同（頁面版本 9fa1343） | /home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_bytes_check.txt |
+| 線上檔案 sha256 與本機比對（圖片、資料、頁面程式、兩張印刷示意，加 4 個 HTML 頁） | 666 檔，不符 0；四個 HTML 頁與本機相同（頁面版本 4f15917） | /home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_bytes_check.txt |
 | 網站建置器 --check | PASS：654 檔，問題 0；ASSET_MANIFEST.json 與上一版位元組相同 | — |
 | 文件產生器 --check | PASS；CAL_19 與上一版位元組相同 | — |
 | kol-catalog 首頁 | 與上一輪存檔位元組相同（44801 bytes） | /home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_bytes_check.txt |
@@ -200,10 +208,11 @@ TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對｜送審報告
 - 示意圖：標題壓到尺寸文字、圖例換行不佳（加上邊距、圖例在 25 字處換行、加上裁切標示與直式安全線）。
 - 頁面測試本身的錯誤（不是頁面問題）：owner 段落用錯資料型別、「小吃店」的「吃」誤中「不吃東西」檢查、V-Tammy 的「改了什麼」本來就寫「不再稱『全身照』」、複製文字的人名是 Jia／Rin 不是全名、sophia 檢查應只看企劃資料（素材候選名單本來就有 sophia-tseng）——都改正測試後全數通過。
 - 手機版：狀態標籤在小卡表格裡被拉滿整列，部署前改成靠左。
+- **送審後複查發現、已修正並重新部署**：R4 指令再次送來，我逐字對照後發現中文「妝感」和英文 prompt 不一致——H-Yuna 中文寫玫瑰漸層唇、人設身分句是珊瑚漸層唇；H-Iris、H-Somi、V-Somi 的妝感只寫在中文（人設身分句沒有妝感）。上一版的測試只比對攝影七欄位，沒有比對妝感。修正：H-Yuna 中文改為珊瑚；三套另加一句英文妝感（身分句本身不改）；已接受的 V-iris、H-coco、V-coco 有同樣缺口，prompt 不改、列技術備註待主管確認。測試新增妝感、身分句與技術備註檢查（commit `4f15917`）。
 
 ## 7. 截圖與覆核檔案（完整路徑）
 
-截圖都來自線上企劃頁（9fa1343）；`oldfb_` 開頭的是帶 v1–v4 測試回饋的畫面，`upgraded_` 開頭的是真實升版後的畫面，`print_layout_` 是示意圖的點陣預覽。
+截圖都來自線上企劃頁（4f15917）；`oldfb_` 開頭的是帶 v1–v4 測試回饋的畫面，`upgraded_` 開頭的是真實升版後的畫面，`print_layout_` 是示意圖的點陣預覽。
 
 - `/home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_desktop_books_months_confirmed.jpg`
 - `/home/user/Virtual_KOL_Studio/review/calendar/m3_r4/live_desktop_card_H-iris_camera_detail.jpg`
@@ -262,8 +271,9 @@ TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對｜送審報告
 | 2 | 在線上 v4 頁（8f061fc）用測試瀏覽器設定檔（已有 v1–v3 回饋）再填 v4 測試回饋，供升版測試 | 只在本機測試瀏覽器；不影響 Penny 的瀏覽器 |
 | 3 | 本機產生 R4 owner 紀錄、shoot-plan-v5、兩張印刷示意 SVG、CAL_18；建置網站資料並 --check；本機伺服器測試與截圖 | 本機 |
 | 4 | commit 13fa4a0，push 到 claude/epic-carson-n5w0qu；Railway 只把 cal2027-decision 固定到 13fa4a0（681f0e98）並做線上驗證 | 未合併 main、未開 PR |
-| 5 | 發現戶外／針織套數說明有誤，修正後 commit 9fa1343、push，cal2027-decision 改固定到 9fa1343（dbb82db5-01b1-4bae-b618-8ea775ae0161） | 其他 service 未動、沒有新增付費服務 |
-| 6 | 線上升版驗證、頁面測試、檔案比對、截圖；讀 kol-catalog 首頁比對 | 唯讀 |
-| 7 | 寫本送審紀錄並 commit、push | — |
+| 5 | 發現戶外／針織套數說明有誤，修正後 commit 9fa1343、push，cal2027-decision 改固定到 9fa1343（dbb82db5），線上全部測試重跑；送審 commit 4cb57ba | 其他 service 未動、沒有新增付費服務 |
+| 6 | R4 指令再次送來；逐字複查後修正妝感中英不一致，commit 4f15917、push，cal2027-decision 改固定到 4f15917（a57e31f0-2478-4b22-a028-6adcbed2e56b） | 其他 service 未動 |
+| 7 | 線上升版驗證、頁面測試、檔案比對、截圖；讀 kol-catalog 首頁比對 | 唯讀 |
+| 8 | 更新本送審紀錄並 commit、push | — |
 
 **本輪數字：** 生成 0、credits 0、訓練 0、上傳 0、Higgsfield 呼叫 0、聯絡廠商 0、登入 0。V-Iris 費用未核准，不執行 M-4。
