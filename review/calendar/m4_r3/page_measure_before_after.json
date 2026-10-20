@@ -1,0 +1,58 @@
+{
+ "note": "shoot.html 精簡前後（同一量測腳本，線上；text_chars＝頁面可見文字去空白後字數）",
+ "before": {
+  "commit": "32fec1df14071be27858d038b88304eaff67a31a",
+  "desktop": {
+   "height_px": 48995,
+   "screens": 54.4,
+   "text_chars": 52809,
+   "tables": 80,
+   "table_rows": 589,
+   "sections": 22,
+   "details": 113,
+   "images": 83,
+   "photos_in_first_screen": []
+  },
+  "mobile390": {
+   "height_px": 106198,
+   "screens": 125.8,
+   "text_chars": 52581,
+   "tables": 80,
+   "table_rows": 589,
+   "sections": 22,
+   "details": 113,
+   "images": 83,
+   "photos_in_first_screen": []
+  }
+ },
+ "after": {
+  "commit": "c6c6d98e93e44837ec9da2bbcd7710e86b4aa932",
+  "desktop": {
+   "height_px": 2181,
+   "screens": 2.4,
+   "text_chars": 827,
+   "tables": 0,
+   "table_rows": 0,
+   "sections": 5,
+   "details": 1,
+   "images": 3,
+   "photos_in_first_screen": [
+    "V-iris-chen_m4r2_view.jpg",
+    "V-iris-chen_m4r2_frame_V_120x160.jpg"
+   ]
+  },
+  "mobile390": {
+   "height_px": 2870,
+   "screens": 3.4,
+   "text_chars": 827,
+   "tables": 0,
+   "table_rows": 0,
+   "sections": 5,
+   "details": 1,
+   "images": 3,
+   "photos_in_first_screen": [
+    "V-iris-chen_m4r2_view.jpg"
+   ]
+  }
+ }
+}

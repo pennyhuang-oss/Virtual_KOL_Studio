@@ -1,0 +1,3 @@
+files 673, mismatches 0 []
+html {'index.html': (True, 'c6c6d98e93e44837ec9da2bbcd7710e86b4aa932'), 'cast.html': (True, 'c6c6d98e93e44837ec9da2bbcd7710e86b4aa932'), 'plan.html': (True, 'c6c6d98e93e44837ec9da2bbcd7710e86b4aa932'), 'shoot.html': (True, 'c6c6d98e93e44837ec9da2bbcd7710e86b4aa932'), 'history.html': (True, 'c6c6d98e93e44837ec9da2bbcd7710e86b4aa932')}
+kol-catalog / identical to archived catalog_final.html (44801 bytes)

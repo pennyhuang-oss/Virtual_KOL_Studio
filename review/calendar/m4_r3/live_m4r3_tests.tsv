@@ -1,0 +1,80 @@
+PASS	主管 M-4 R3 指令逐字保存（第一行、照片公開許可、不公開 Soul ID／工作ID／交易原始資料）	
+PASS	目前檢視資料：M-4 R3；標「首試樣張，尚未定稿」；待處理兩項（反光板必修、人物與身材待 Penny）	
+PASS	回饋用新鍵（與企劃回饋、素材選擇的舊鍵不同）	
+PASS	專案證據不刪不改：企劃資料、授權、主管紀錄、CAL_18／19／20、review/calendar、kols 與送審 commit 相同（只新增）	
+PASS	原圖 sha256 與 M-4 R2 紀錄相同	
+PASS	下載檔只少了一個 tEXt 區塊；IHDR／IDAT／IEND 依序逐位元組相同（影像資料不變）	4665969→4665911
+PASS	原圖的 tEXt 區塊就是工作 ID（所以不能原檔公開）；下載檔沒有	
+PASS	套框預覽與送審 commit 的檔案位元組相同	
+PASS	不帶憑證可開 /shoot.html	200 text/html; charset=utf-8
+PASS	不帶憑證可開 /review.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /review.css	200 text/css; charset=utf-8
+PASS	不帶憑證可開 /review-data.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /history.html	200 text/html; charset=utf-8
+PASS	不帶憑證可開 /history.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /history.css	200 text/css; charset=utf-8
+PASS	不帶憑證可開 /data.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /index.html	200 text/html; charset=utf-8
+PASS	不帶憑證可開 /mat.js	200 text/javascript; charset=utf-8
+PASS	不帶憑證可開 /app.css	200 text/css; charset=utf-8
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_frame_V_120x160.jpg	200 image/jpeg
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_first_test.png	200 image/png
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_reflector_crop.jpg	200 image/jpeg
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_view.jpg	200 image/jpeg
+PASS	站內提供圖片：PNG 是 image/png、其他是 image/jpeg；與本機發佈檔位元組相同	
+PASS	所有公開檔（含 4 張圖的位元組）不含 Soul ID 或工作 ID（含去掉連字號的寫法）	
+PASS	公開文字檔沒有交易原始資料（交易時間、他人交易列與統計）	
+PASS	目前檢視頁資料沒有 UUID、repo 路徑、job／soul 字樣、扣款或交易字樣	
+PASS	舊的 shoot.js 已改名為 history.js（舊網址 404，不會載入舊長頁）	
+PASS	[desktop] 開頁後舊的兩筆 localStorage 位元組不變；新鍵在使用者操作前不寫入	
+PASS	[desktop] 主頁精簡：只有照片、套框、待處理、回饋、歷史連結 5 段；沒有表格、企劃卡或逐字長文	680 字、高 2181px（2.4 屏）
+PASS	[desktop] 主頁不再展示 24 套企劃卡、月份、owner 原文、模型核查、費用與執行流水帳	
+PASS	[desktop] 簡短進度：24 套企劃已定稿，目前檢視 V-Iris 首試；有「已定稿企劃／歷史紀錄」連結	
+PASS	[desktop] 照片優先：開頁第一屏就看到照片（上緣 157px、可見高度 693px），圖片已載入	
+PASS	[desktop] 照片上標「首試樣張，尚未定稿」，說明寫不修圖、不調身材、不重新生成	
+PASS	[desktop] 點照片開大圖（顯示版 1200×1600）；「原尺寸」改看原圖 PNG 1536×2048，可捲動	V-Iris 首試｜直式款 9 月｜3:4｜首試樣張，尚未定稿｜原圖 1536×2048 px
+PASS	[desktop] 關閉大圖（Esc）回到頁面	
+PASS	[desktop] 下載原圖：檔名 V-iris-chen_M4_first_test_1536x2048.png、PNG 1536×2048、與發佈檔相同、不含工作 ID	4665911 bytes
+PASS	[desktop] 套框預覽載入，標「工作照片框預覽，不是印刷核准」	
+PASS	[desktop] 套框預覽可開大圖	
+PASS	[desktop] 本次待處理兩項：反光板及支架（主管判定必修）、人物與身材呈現（待Penny看圖回饋）；附反光板原圖裁切	反光板及支架：主管判定必修（不需要回覆） / 人物與身材呈現：待Penny看圖回饋（請在下方回饋）
+PASS	[desktop] 回饋說明：只存在這個瀏覽器、不會自動傳給主管；沒有企劃問卷	
+PASS	[desktop] 按「儲存」寫入新鍵（想修改＋備註＋時間）	
+PASS	[desktop] 重新整理後回饋還在（選項與備註）	
+PASS	[desktop] 複製回饋：標題、照片與標示、人物與身材呈現：想修改、備註、反光板必修、只存在瀏覽器且沒有通知主管	
+PASS	[desktop] 改選「接受」立即保存	
+PASS	[desktop] 操作回饋後，舊的企劃回饋與素材選擇 localStorage 位元組仍不變	
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（展開複製文字）	0
+PASS	[desktop] 歷史頁：「已定稿企劃／歷史紀錄」、24 套企劃卡、只讀（沒有填寫欄位）、有回目前檢視的連結	
+PASS	[desktop] 歷史頁：首試紀錄寫主管 R3 結論（反光板必修、人物與身材待 Penny），R2 狀態標「R2 當時」，交易只留摘要	
+PASS	[desktop] 歷史頁沒有水平溢出	0
+PASS	[desktop] 開過歷史頁後舊 localStorage 仍不變	
+PASS	[desktop] 素材頁：Iris 的選擇照舊；入口連到目前檢視頁與歷史頁	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 開頁後舊的兩筆 localStorage 位元組不變；新鍵在使用者操作前不寫入	
+PASS	[mobile390] 主頁精簡：只有照片、套框、待處理、回饋、歷史連結 5 段；沒有表格、企劃卡或逐字長文	680 字、高 2870px（3.4 屏）
+PASS	[mobile390] 主頁不再展示 24 套企劃卡、月份、owner 原文、模型核查、費用與執行流水帳	
+PASS	[mobile390] 簡短進度：24 套企劃已定稿，目前檢視 V-Iris 首試；有「已定稿企劃／歷史紀錄」連結	
+PASS	[mobile390] 照片優先：開頁第一屏就看到照片（上緣 180px、可見高度 477px），圖片已載入	
+PASS	[mobile390] 照片上標「首試樣張，尚未定稿」，說明寫不修圖、不調身材、不重新生成	
+PASS	[mobile390] 點照片開大圖（顯示版 1200×1600）；「原尺寸」改看原圖 PNG 1536×2048，可捲動	V-Iris 首試｜直式款 9 月｜3:4｜首試樣張，尚未定稿｜原圖 1536×2048 px
+PASS	[mobile390] 關閉大圖（Esc）回到頁面	
+PASS	[mobile390] 下載原圖：檔名 V-iris-chen_M4_first_test_1536x2048.png、PNG 1536×2048、與發佈檔相同、不含工作 ID	4665911 bytes
+PASS	[mobile390] 套框預覽載入，標「工作照片框預覽，不是印刷核准」	
+PASS	[mobile390] 套框預覽可開大圖	
+PASS	[mobile390] 本次待處理兩項：反光板及支架（主管判定必修）、人物與身材呈現（待Penny看圖回饋）；附反光板原圖裁切	反光板及支架：主管判定必修（不需要回覆） / 人物與身材呈現：待Penny看圖回饋（請在下方回饋）
+PASS	[mobile390] 回饋說明：只存在這個瀏覽器、不會自動傳給主管；沒有企劃問卷	
+PASS	[mobile390] 按「儲存」寫入新鍵（想修改＋備註＋時間）	
+PASS	[mobile390] 重新整理後回饋還在（選項與備註）	
+PASS	[mobile390] 複製回饋：標題、照片與標示、人物與身材呈現：想修改、備註、反光板必修、只存在瀏覽器且沒有通知主管	
+PASS	[mobile390] 改選「接受」立即保存	
+PASS	[mobile390] 操作回饋後，舊的企劃回饋與素材選擇 localStorage 位元組仍不變	
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（展開複製文字）	0
+PASS	[mobile390] 歷史頁：「已定稿企劃／歷史紀錄」、24 套企劃卡、只讀（沒有填寫欄位）、有回目前檢視的連結	
+PASS	[mobile390] 歷史頁：首試紀錄寫主管 R3 結論（反光板必修、人物與身材待 Penny），R2 狀態標「R2 當時」，交易只留摘要	
+PASS	[mobile390] 歷史頁沒有水平溢出	0
+PASS	[mobile390] 開過歷史頁後舊 localStorage 仍不變	
+PASS	[mobile390] 素材頁：Iris 的選擇照舊；入口連到目前檢視頁與歷史頁	
+PASS	[mobile390] 沒有 JS 錯誤	
