@@ -16,7 +16,7 @@ CAL = os.path.join(ROOT, 'docs', 'calendar')
 PLAN = os.path.join(CAL, 'data', 'cal_m3_shoot_plan.json')
 OUT18 = os.path.join(CAL, 'CAL_18_M3_SHOOT_PLAN.md')
 OUT19 = os.path.join(CAL, 'CAL_19_M3_R2_OWNER_DECISION.md')
-FIRST_LINE = 'TASK-CAL-001／M-3／R5｜企劃資料一致性與生成前技術收尾｜送審報告'
+FIRST_LINE = 'TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂｜送審報告'
 FIRST_19 = 'TASK-CAL-001／M-3／R2｜24套雙款獨立寫真企劃｜送審報告'   # R2 的決策紀錄，標題不改
 ORIGIN_ZH = {'new': '新企劃', 'accepted-v2-main': 'Penny 已接受的 v2 主方向', 'accepted-v2-alt': 'Penny 採用的 v2 替代方向'}
 BOOK_ZH = {'H': '橫式款', 'V': '直式款'}
@@ -49,22 +49,36 @@ def render18(d):
     O3 = d['owner_r3']
     O4 = d['owner_r4']
     PR = d['printing']
-    L = [FIRST_LINE, '', '# CAL_18 — M-3 24 套雙款寫真企劃、攝影設計與印刷構圖（shoot-plan-v5）', '',
+    L = [FIRST_LINE, '', f"# CAL_18 — M-3 24 套雙款寫真企劃、攝影設計與印刷構圖（{d['version']}）", '',
          f"> 資料檔：`data/cal_m3_shoot_plan.json`（{d['version']}，{d['round']}，{d['written_on']}）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。",
          f"> **{m['status']}。** 本輪生成數 {d['counts']['generated']}、credits {d['counts']['credits']}、訓練數 {d['counts']['trainings']}。",
-         '> R4 狀態：8 套已接受、16 套修訂待 Penny 定案；兩本月份人選排序已確認；版面（照片框）尚未定案；生成與費用都未授權。R2 的 Owner 決策逐字紀錄見 `CAL_19_M3_R2_OWNER_DECISION.md`。',
-         '> R5：只修資料一致性與措辭（見 0b），沒有攝影方向變更；企劃版本仍是 shoot-plan-v5，Penny 的回饋延續、不需重填。', '',
+         '> R4 狀態（歷史）：8 套已接受、16 套修訂待 Penny 定案；兩本月份人選排序已確認；版面（照片框）尚未定案；生成與費用都未授權。R2 的 Owner 決策逐字紀錄見 `CAL_19_M3_R2_OWNER_DECISION.md`。',
+         '> R5：只修資料一致性與措辭（見 0b），沒有攝影方向變更。',
+         '> **R6 狀態：22 套已接受；H-jia-seo、H-luna-tanaka 兩套新推薦待 Penny 定案；兩本月份與工作照片框已接受（工作版型，不是廠商規格、印刷安全或成品核准）；生成與費用都未授權。**', '',
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['R5 資料修訂', f"{d['r5']['summary']}（基準 commit `{d['r5']['from_commit']}`）"],
                                   ['素材頁版本', f"`{m['material_page_commit']}`"], ['桌曆基準', f"`{m['calendar_baseline']}`"]])
     L += ['', f"**參考照片：** {d['ref_note']}", '']
-    L += ['## 0b. R5 資料修訂（差異）', '', '**不變：** ' + '；'.join(d['r5']['unchanged']) + '。', '']
+    L += ['## 0a. R6 修改（差異）', '', f"{d['r6']['summary']}", '']
+    L += table(['類別', '位置', '舊', '新'], [[x['kind'], x['where'], x['old'], x['new']] for x in d['r6']['changes'] if x['kind'] != '狀態（owner 決策）'])
+    L += ['', f"狀態：{sum(1 for x in d['r6']['changes'] if x['kind'] == '狀態（owner 決策）')} 套由「修訂」改為「已接受」（R6 owner 紀錄）。", '']
+    L += ['## 0b. R5 資料修訂（差異，歷史）', '', '**不變：** ' + '；'.join(d['r5']['unchanged']) + '。', '']
     L += table(['類別', '位置', '舊', '新'], [[x['kind'], x['where'], x['old'], x['new']] for x in d['r5']['changes'] if not x['where'].startswith('sets[') or x['kind'] != '印刷措辭'])
     L += ['', f"另有 24 套逐張印刷文字的措辭修訂（共 {sum(1 for x in d['r5']['changes'] if x['where'].startswith('sets[') and x['kind'] == '印刷措辭')} 套），新文字見 3c；舊文字保留在資料檔 `r5.changes`。", '']
 
+    O6 = d['owner_r6']
+    S6 = O6['summary']
+    L += ['## 1. R6：owner 決策（逐字，主管轉述）', '', f"> 資料檔：`data/cal_m3_owner_feedback_r6.json`（{O6['recorded_on']}）。{O6['source']}{O6['note']}", '',
+          '```text', O6['verbatim']['decisions'], '```', '', '**Penny 對兩套的原文回饋：**', '']
+    for sid, x in O6['verbatim']['per_set'].items():
+        L += [f"- {sid}（{x['month']} 月）：「{x['text']}」"]
+    L += ['', '**可執行摘要（整理，不是 Penny 原話）：**', '',
+          f"- 已接受 22 套（R4 的 8 套＋R6 的 14 套）：{'、'.join(S6['accepted'])}——拍攝內容與 prompt 不變，不再要求回覆。",
+          f"- 待決 2 套：{'、'.join(S6['pending'])}（R6 新推薦，見第 3 節）。", f"- 月份：{S6['months']}", f"- 照片框：{S6['frames']}",
+          f"- 首試：{S6['iris_first']}", f"- 尚未核准：{'、'.join(S6['not_approved'])}。", '']
     Sm = O4['summary']
-    L += ['## 1. R4：owner 決策（逐字，主管轉述）', '', f"> 資料檔：`data/cal_m3_owner_feedback_r4.json`（{O4['recorded_on']}）。{O4['note']}", '',
+    L += ['## 1a. R4：owner 決策（歷史，逐字，主管轉述）', '', f"> 資料檔：`data/cal_m3_owner_feedback_r4.json`（{O4['recorded_on']}）。{O4['note']}", '',
           '```text', O4['verbatim']['decisions'], '```', '', '```text', O4['verbatim']['status'], '```', '',
           '**可執行摘要（整理，不是 Penny 原話）：**', '',
           f"- 已接受 8 套：{'、'.join(Sm['accepted'])}——服裝、場景、表情與攝影照 v4，不因整體偏好重設。",
@@ -76,7 +90,7 @@ def render18(d):
           '```text', O3['verbatim']['not_approved'], '```', '', f"**落實方式：** {Ph['summary']}", '']
     L += ['**共同規則：**', ''] + [f'- {x}' for x in Ph['rules']] + ['']
 
-    L += ['## 2. 兩本攝影總覽（月份已確認；16 套修訂待 Penny 定案）', '']
+    L += ['## 2. 兩本攝影總覽（月份已確認；22 套已接受、2 套待 Penny 定案）', '']
     head = ['月份（已確認）', '人物', '狀態', '景別', '身體方向', '臉部方向', '視線', '相機角度', '人物位置', '主要展示重點']
     for b, n in (('H', '2.1'), ('V', '2.2')):
         L += [f"### {n} {BOOK_ZH[b]}（{'16:9' if b == 'H' else '3:4'}）", '']
@@ -88,14 +102,18 @@ def render18(d):
           f"**戶外與重複：** {Ph['rhythm']['outdoor']}", '']
     L += ['### 2.3 prompt 一致性檢查（產生資料時逐套執行，不通過就無法建置）', ''] + [f'- {x}' for x in Ph['checks']] + ['']
 
-    L += ['## 3. R4 16 套修訂：owner 原文、新主推薦與改了什麼', '', '主推薦都是主管推薦的修訂起點加上執行者的細化，尚未經 Penny 批准。', '']
+    L += ['## 3. R6 待決的 2 套：Penny 原文、主管推薦、新主推薦與改了什麼', '', '新主推薦是主管推薦加上執行者的細化，尚未經 Penny 批准；未回覆不算接受。', '']
     for s in d['sets']:
         if s['status'] != 'revised':
             continue
-        L += [f"### {s['id']}｜{s['month']} 月｜{s['name']}", '', '```text', s['r4']['owner'], '```', '',
-              f"- **新主推薦：** {s['theme']}", f"- **攝影：** {s['cam']['line']}", f"- **改了什麼：** {s['r4']['change']}", f"- **選擇理由：** {s['cam']['why']}", '']
-    L += ['### 8 套已接受（不重設）', '']
-    L += table(['ID', '月份', '主題', '攝影', '印刷判斷'], [[s['id'], f"{s['month']} 月", s['theme'], s['cam']['line'], s['print']['verdict']] for s in d['sets'] if s['status'] == 'accepted'])
+        r6 = s['r6']
+        L += [f"### {s['id']}｜{s['month']} 月｜{s['name']}", '', f"**Penny 原文：**「{r6['owner']}」", '', '**主管推薦（逐字）：**', '', '```text', r6['supervisor'], '```', '',
+              f"- **原設計（R5）：** {r6['from_theme']}｜{r6['from_line']}", f"- **新主推薦：** {s['theme']}", f"- **攝影：** {s['cam']['line']}",
+              f"- **改了什麼：** {r6['change']}", f"- **選擇理由：** {s['cam']['why']}", f"- **參考照片：** " + '；'.join(f"{r['id']}（{r['use']}）：{r['note']}" for r in s['refs']), '']
+    L += ['### 22 套已接受（拍攝內容與 prompt 不變）', '']
+    L += table(['ID', '月份', '接受輪次', '主題', '攝影', '印刷判斷'], [[s['id'], f"{s['month']} 月", s['r6']['accepted_in'], s['theme'], s['cam']['line'], s['print']['verdict']] for s in d['sets'] if s['status'] == 'accepted'])
+    L += ['', '### R4 的 16 套修訂（歷史：當時的 owner 原文與改動，見第 8 節各套）', '']
+    L += table(['ID', 'R4 改了什麼（歷史）'], [[s['id'], s['r4']['change']] for s in d['sets'] if s['r4'].get('change')])
     L += ['', PR['accepted_impact']['summary'], '']
     AN = d['accepted_notes']
     L += [f"**已接受套數的中英同步（{AN['status']}）：** {AN['summary']}", '']
@@ -117,7 +135,7 @@ def render18(d):
     L += ['', '**如果改用其他框：**', ''] + [f"- {x['k']}：{x['v']}" for x in PR['compare']]
     L += ['', f"**示意圖：** 橫式 `decision_site/public/{PR['diagrams']['H']}`、直式 `decision_site/public/{PR['diagrams']['V']}`（只有方框與尺寸，不含照片；不是印刷安全證明）。", '',
           '**原則：**', ''] + [f'- {x}' for x in PR['rules']]
-    L += ['', '### 3c. 24 套逐張印刷構圖判斷（依暫定照片框）', '']
+    L += ['', '### 3c. 24 套逐張印刷構圖判斷（依已接受的工作照片框）', '']
     L += ['百分比與「套框後約 x%」都是依規劃構圖推算的理論／規劃預估，不是實圖量測。', '']
     L += table(['ID', '狀態', '照片框', '比例計算', '邊緣（規劃預估）', '不能切／規劃目標', '印刷判斷（條件）', '生成後待驗證', '原生尺寸', '有效 ppi'],
                [[s['id'], '已接受' if s['status'] == 'accepted' else '修訂', s['print']['frame'], s['print']['crop'], '；'.join(s['print']['edges']),
@@ -125,7 +143,7 @@ def render18(d):
     I = PR['iris_first']
     L += ['', '### 3d. V-Iris 首試是否需要構圖微調', '', f"- {I['answer']}", f"- {I['condition']}", f"- {I['verify']}", '']
 
-    L += ['## 4. R2 Penny 回饋落實表（歷史紀錄；R4 的最新決定見第 1、3 節）', '']
+    L += ['## 4. R2 Penny 回饋落實表（歷史紀錄；最新決定見第 1、3 節）', '']
     L += table(['人設', 'Penny 回饋（逐字）', '當時（R2）怎麼落實（歷史，部分場景已在 R4 撤回）', '目前橫式款', '目前直式款'],
                [[p['name'], p['feedback'] + (f"（{p['shared']}）" if p['shared'] else ''), '；'.join(p['applied']), S[p['sets'][0]]['theme'], S[p['sets'][1]]['theme']] for p in d['people']])
     L.append('')
@@ -139,7 +157,7 @@ def render18(d):
                      s['sexy'], s['method'], s['cam']['line']] for s in rows])
         L.append('')
 
-    L += ['## 7. 兩本月份（R4 已確認）', '']
+    L += ['## 7. 兩本月份（已確認）', '']
     L += table(['月份', '橫式款', '理由', '直式款', '理由'],
                [[f"{x['m']} 月", f"{x['H']}（{S[x['H']]['name']}）", x['why_h'], f"{x['V']}（{S[x['V']]['name']}）", x['why_v']] for x in d['months']])
     L += [''] + [f'- {x}' for x in d['month_rules']] + ['']
@@ -147,7 +165,7 @@ def render18(d):
     L += ['## 8. 24 套企劃', '']
     for n, s in enumerate(d['sets'], 1):
         fr, c = s['frame'], s['cam']
-        st = '已接受（R4 owner 紀錄）' if s['status'] == 'accepted' else 'R4 修訂（待 Penny 定案）'
+        st = f"已接受（{s['r6']['accepted_in']} owner 紀錄）" if s['status'] == 'accepted' else 'R6 新推薦（待 Penny 定案）'
         L += [f"### 8.{n} {s['id']}｜{s['name']}｜{BOOK_ZH[s['book']]}（{ORIGIN_ZH[s['origin']]}｜{st}）", '', f"**一句話：** {s['theme']}", '',
               f"**攝影：** {c['line']}", '']
         L += table(['攝影欄位', '中文', 'prompt 對應句'], [
@@ -157,7 +175,9 @@ def render18(d):
             ['5. 相機高度與俯仰', f"{c['angle']['zh']}（{c['angle']['ref']}）", c['angle']['en']],
             ['6. 畫面配置', c['comp']['zh'], c['comp']['en']], ['7. 攝影目的', c['purpose']['zh'], c['purpose']['en']]])
         L += ['', f"**選擇理由：** {c['why']}", '',
-              (f"**R4：** {s['r4']['note']}" if s['status'] == 'accepted' else f"**R4 改了什麼：** {s['r4']['change']}"), '']
+              (f"**R6：** {s['r6']['note']}" if s['status'] == 'accepted' else f"**R6 改了什麼：** {s['r6']['change']}"), '']
+        if s['r4'].get('change'):
+            L += [f"**R4 改了什麼（歷史）：** {s['r4']['change']}", '']
         if 'r5' in s:
             L += [f"**R5：** {s['r5']['note']}補上的句子：`{s['r5']['added_en']}`", '']
         crop = fr['shot'] in ('chest', 'waist', 'thigh', 'knee')
@@ -194,7 +214,7 @@ def render18(d):
     L += table(['情境', '請求數', '依 credits_exact 報價', '若實扣是顯示值（每次 1）'], [[x['k'], x['n'], x['exact'], x['display']] for x in K['scenarios']])
     L += ['', K['scenario_note'], '', '**未知：** ' + '、'.join(M['unknown']), '']
     I = K['iris_first']
-    L += ['### 10.5 Iris 首張試拍提案（只是提案）', '', f"**推薦：{I['set']}**", ''] + [f'- {x}' for x in I['why']] + ['']
+    L += ['### 10.5 Iris 首張試拍提案（只是提案）', '', f"**推薦：{I['set']}**　{I['status_r6']}", ''] + [f'- {x}' for x in I['why']] + ['']
     L += table(['項目', '內容'], [[x['k'], x['v']] for x in I['plan']])
     L += ['', f"**授權：** {K['gate']}", '', '## 11. 要請 Penny 決定的事', ''] + [f'{i}. {q}' for i, q in enumerate(d['questions'], 1)]
     L += ['', '## 12. 共同的皮膚與質感句（每段 prompt 結尾都加）', '', '```text', d['skin_line'], '```', '']
