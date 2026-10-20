@@ -1,7 +1,7 @@
-// 2027 KOL 桌曆｜M-3 寫真拍攝企劃（R6：22 套已接受＋H-Jia／H-Luna 兩套新推薦；月份與工作照片框已接受）。企劃內容來自 data.js 的 m3（產生自 data/cal_m3_shoot_plan.json）；本頁沒有任何生成圖。
-// Penny 的回饋只存在本機瀏覽器 localStorage（cal2027-shoot-v1:<SHA>），不送到伺服器；沒有追蹤或分析。
-// v6 的回饋另存在同一筆資料的 v6 欄位；v1–v5 留下的欄位原樣保留，只顯示成「舊版」、不算 v6。載入時不改寫，只有 Penny 動手後才存。
-// R6 owner 紀錄的 22 套已接受、兩本月份與工作照片框直接顯示為已接受，不再要求回覆；只有 H-jia-seo、H-luna-tanaka 兩套需要回饋。
+// 2027 KOL 桌曆｜M-3 寫真拍攝企劃（R7：23 套已接受＋H-Luna 依 owner 指定修訂、待主管核對；V-Iris 首試準備）。企劃內容來自 data.js 的 m3（產生自 data/cal_m3_shoot_plan.json）；本頁沒有任何生成圖。
+// 舊版回饋（v1–v6）只存在本機瀏覽器 localStorage（cal2027-shoot-v1:<SHA>），不送到伺服器；沒有追蹤或分析。
+// R7 沒有必填決策：本頁只讀那筆資料、把 v1–v6 列為歷史，不寫入、不清除（沒有任何會呼叫 localStorage.setItem／removeItem 的程式）。
+// R7 owner 紀錄的 23 套已接受、兩本月份與工作照片框直接顯示為已接受；H-luna-tanaka 顯示「依owner指定修訂，待主管核對落實」與改動前後，不請 Penny 回覆。
 // 構圖示意與印刷示意都只是方框與尺寸（依企劃數字畫），不是照片，也不是生成圖。
 // 第二階段素材選擇（cal2027-materials-v1:<SHA>）本頁不讀、不寫、不刪。
 'use strict';
@@ -14,14 +14,13 @@
   const KEY = 'cal2027-shoot-v1:' + SHA;
   const IMG = D.images;
   const P = D.m3;
-  const CUR = P.version;
   const MP = {};
   const ITEM = {};
   D.mat.people.forEach(p => { MP[p.pid] = p; p.items.forEach(it => { ITEM[it.id] = { ...it, pid: p.pid }; }); });
   const SETS = P.sets;
   const SET = {};
   SETS.forEach(s => { SET[s.id] = s; });
-  const REV = SETS.filter(s => s.status === 'revised');
+  const OREV = SETS.filter(s => s.status === 'owner_revised');
   const ACC = SETS.filter(s => s.status === 'accepted');
   const PEOPLE = P.people;
   const $ = (s, r = document) => r.querySelector(s);
@@ -43,8 +42,7 @@
   };
   const VER = v => (v === 'shoot-plan-v1' ? 'v1' : (v === 'shoot-plan-v2' ? 'v2' : v));
   let RAW = {};
-  let storageOK = true;
-  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && typeof s === 'object') RAW = s; } catch (e) { storageOK = false; }
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && typeof s === 'object') RAW = s; } catch (e) { /* 讀不到就當作沒有舊回饋；本頁不寫入 */ }
   function oldFor(pid) {
     const q = (RAW.p || {})[pid];
     if (!q || typeof q !== 'object') return { choices: [], notes: [] };
@@ -82,7 +80,7 @@
     assign: { label: '已接受方向的 H／V 分配', opts: { ok: '接受', edit: '想對調（寫在備註）' } },
     frames: { label: '印刷構圖示意與暫定照片框', opts: { ok: '接受', edit: '想修改（寫在備註）' } },
   };
-  const OLDV = ['v5', 'v4', 'v3'];
+  const OLDV = ['v6', 'v5', 'v4', 'v3'];
   const oldRaw = ver => (RAW[ver] && typeof RAW[ver] === 'object' ? RAW[ver] : {});
   function oldSet(ver, id) {
     const x = (oldRaw(ver).sets || {})[id];
@@ -99,23 +97,8 @@
   const oldG = ver => (str(oldRaw(ver).gnote).trim() ? oneLine(oldRaw(ver).gnote) : '');
   const oldSetAll = id => OLDV.map(v => oldSet(v, id)).filter(Boolean).join('；');
 
-  // ---------- v6 回饋：只有 H-jia-seo、H-luna-tanaka；22 套、月份與工作照片框已接受，不再問 ----------
-  const QS = {};
-  function loadV6() {
-    const v = RAW.v6 && typeof RAW.v6 === 'object' ? RAW.v6 : {};
-    const out = { ver: CUR, sets: {}, q: {}, gnote: str(v.gnote) };
-    REV.forEach(s => { const x = (v.sets || {})[s.id] || {}; out.sets[s.id] = { c: CH[x.c] ? x.c : '', note: str(x.note) }; });
-    Object.keys(QS).forEach(k => { const x = (v.q || {})[k] || {}; out.q[k] = { c: QS[k].opts[x.c] ? x.c : '', note: str(x.note) }; });
-    return out;
-  }
-  let V6 = loadV6();
-  function save() {
-    RAW.v6 = V6;
-    try { localStorage.setItem(KEY, JSON.stringify(RAW)); storageOK = true; } catch (e) {
-      if (storageOK) toast('這個瀏覽器不允許儲存（例如無痕模式）：重新整理後回饋會消失，請先複製。');
-      storageOK = false;
-    }
-  }
+  // ---------- R7：沒有必填決策，也沒有新的回饋欄位；v6 的兩套回覆與 v1–v5 一樣只讀、列為歷史 ----------
+  const OREV_LABEL = P.owner_r7.summary.owner_revised_label;
 
   // ---------- 畫面元件 ----------
   function fig(iid, cap, label) {
@@ -143,40 +126,42 @@
     rows.map(r => `<tr>${r.map((c, i) => `<td data-label="${esc(head[i])}">${c && c.html ? c.html : esc(c)}</td>`).join('')}</tr>`).join('') + '</tbody></table></div>';
   const link = id => ({ html: `<a href="#c-${esc(id)}">${esc(id)}</a>` });
   const outfitList = o => `<ul class="facts">${Object.entries(o).map(([k, v]) => `<li><b>${esc(k)}</b>：${esc(v)}</li>`).join('')}</ul>`;
-  const stTag = s => (s.status === 'accepted' ? '<span class="tag acc">已接受</span>' : '<span class="tag rev">R6 待決</span>');
+  const stTag = s => (s.status === 'accepted' ? '<span class="tag acc">已接受</span>' : '<span class="tag rev">R7 依owner指定修訂・待主管核對</span>');
+  const stText = s => (s.status === 'accepted' ? '已接受' : OREV_LABEL);
 
   function decSec() {
-    const O6 = P.owner_r6, S6 = O6.summary, O4 = P.owner_r4, O3 = P.owner_r3, O2 = P.owner_r2;
+    const O7 = P.owner_r7, S7 = O7.summary, O6 = P.owner_r6, O4 = P.owner_r4, O3 = P.owner_r3, O2 = P.owner_r2, C = P.m4_prep.counts;
     const hasOld = PEOPLE.some(p => oldLine(p.pid)) || oldQs().length || oldGnotes().length || SETS.some(s => oldSetAll(s.id)) || OLDV.some(v => oldQ(v).length || oldG(v));
     const ids = a => a.map(s => `<a href="#c-${esc(s.id)}">${esc(s.id)}</a>`).join('、');
-    return `<section class="sec" id="dec"><h2>R6 owner 決策與目前狀態</h2>
-<pre class="verb">${esc(O6.verbatim.decisions)}</pre>
-<p class="note">${esc(O6.source)}${esc(O6.note)}</p>
+    return `<section class="sec" id="dec"><h2>R7 owner 決策與定稿進度</h2>
+<pre class="verb">${esc(O7.verbatim.decisions)}</pre>
+<p class="note">${esc(O7.source)}${esc(O7.note)}</p>
 <div class="statgrid">
-<div class="stat acc"><b>已接受 ${ACC.length} 套</b><span>拍攝內容與 prompt 不變，不需再回覆（R4 的 8 套＋R6 的 14 套）</span><p>${ids(ACC)}</p></div>
-<div class="stat rev"><b>待決 ${REV.length} 套</b><span>R6 新推薦，請選「接受」或「想修改」</span><p>${ids(REV)}</p></div>
-<div class="stat conf"><b>月份與工作照片框已接受</b><span>${esc(S6.months)}${esc(S6.frames)}</span></div>
-<div class="stat warn"><b>V-iris-chen 首試</b><span>${esc(S6.iris_first)}</span></div>
+<div class="stat acc"><b>已接受 ${ACC.length} 套</b><span>拍攝內容與 prompt 不變，不需再回覆（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo）</span><p>${ids(ACC)}</p></div>
+<div class="stat rev"><b>依owner指定修訂 ${OREV.length} 套</b><span>${esc(OREV_LABEL)}：只改雙手與香袋；Penny 還沒有看過修訂後的版本</span><p>${ids(OREV)}</p></div>
+<div class="stat conf"><b>本輪沒有必填決策</b><span>${esc(S7.no_more_owner_questions)}</span></div>
+<div class="stat warn"><b>V-iris-chen 首試準備</b><span>${esc(S7.iris_first)}。本輪生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}。<a href="#prep">看首試準備</a></span></div>
 </div>
-<p class="callout warn">兩套新推薦都<b>還沒有經 Penny 批准</b>，未回覆不算接受；生成與費用都未授權。</p>
-<details class="info"><summary>R6：Penny 對兩套的原文與主管推薦（逐字）</summary>${REV.map(s => `<p class="note"><b>${esc(s.id)}（${s.month} 月）Penny：</b>「${esc(s.r6.owner)}」</p><pre class="verb">${esc(s.r6.supervisor)}</pre>`).join('')}</details>
-<details class="info"><summary>R6 改了哪些文字（舊 → 新）</summary>${ul(P.r6.changes.filter(x => x.kind !== '狀態（owner 決策）').map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
+<p class="callout warn">月份維持；工作照片框維持（${esc(S7.frames)}）。<b>生成與費用都未授權</b>；首試準備只是文件，不是生成或印刷驗收。</p>
+<details class="info"><summary>R7：Penny 原文與主管補充細節（逐字；只有引號內是 Penny 原話）</summary>${OREV.map(s => `<p class="note"><b>${esc(s.id)}（${s.month} 月）Penny：</b>「${esc(s.r7.owner)}」</p><p class="note">主管補充的落實細節（不是 Penny 原話）：</p><pre class="verb">${esc(s.r7.supervisor)}</pre>`).join('')}<p class="note">主管的收尾指示（不是 Penny 原話）：</p><pre class="verb">${esc(O7.verbatim.supervisor.wrap_up)}</pre></details>
+<details class="info"><summary>R7 改了哪些文字（舊 → 新）</summary>${ul(P.r7.changes.filter(x => x.kind !== '狀態（owner 決策）').map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
+<details class="info"><summary>R6 owner 決策、兩套原文與改動（歷史，逐字）</summary><pre class="verb">${esc(O6.verbatim.decisions)}</pre>${SETS.filter(s => s.r6.owner).map(s => `<p class="note"><b>${esc(s.id)}（${s.month} 月）Penny（R6）：</b>「${esc(s.r6.owner)}」</p><pre class="verb">${esc(s.r6.supervisor)}</pre>`).join('')}${ul(P.r6.changes.filter(x => x.kind !== '狀態（owner 決策）').map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
 <details class="info"><summary>R5 資料修訂與已接受套數的中英同步（歷史）</summary><p class="note">${esc(P.r5.summary)}</p>${ul(P.r5.changes.filter(x => !(x.kind === '印刷措辭' && x.where.startsWith('sets['))).map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}<p class="note">${esc(P.accepted_notes.status)}：${esc(P.accepted_notes.summary)}</p>${ul(P.accepted_notes.items.map(x => `${x.id}：中文「${x.makeup_zh}」→ 英文補上「${x.added_en}」`))}</details>
 <details class="info"><summary>R4 owner 決策與逐套要求（歷史，逐字）</summary><pre class="verb">${esc(O4.verbatim.decisions)}</pre>${SETS.filter(s => s.r4.owner).map(s => `<pre class="verb">${esc(s.r4.owner)}</pre>`).join('')}<pre class="verb">${esc(O4.verbatim.closing)}</pre></details>
 <details class="info"><summary>R3 攝影設計要求（逐字，仍適用）</summary><pre class="verb">${esc(O3.verbatim.requirement)}</pre><pre class="verb">${esc(O3.verbatim.keep_existing)}</pre></details>
 <details class="info"><summary>R2 已生效的決定（逐字）</summary><pre class="verb">${esc(O2.verbatim.decisions)}</pre>${ul(O2.summary.decided)}</details>
-<div class="callout${hasOld ? ' warn' : ''}">${hasOld ? '這個瀏覽器裡有舊版（v1–v5）的回饋：都還在，各套與各位的區塊會列出來，<b>不算</b>這一版（v6）的回覆，也不會變成新的核准。' : '這個瀏覽器沒有舊版回饋紀錄。'}</div>
+<div class="callout${hasOld ? ' warn' : ''}">${hasOld ? '這個瀏覽器裡有舊版（v1–v6）的回饋：都還在，各套與各位的區塊會列出來，只是歷史，<b>不會</b>變成新的核准；本頁不改寫也不清除它們。' : '這個瀏覽器沒有舊版回饋紀錄。'}</div>
 </section>`;
   }
 
   function bookTable(b) {
     const rows = SETS.filter(s => s.book === b).sort((x, y) => x.month - y.month);
     return tbl(['月', 'ID', '狀態', '人設', '主題', '環境', '服裝', '色彩', '姿態', '表情', '性感', '攝影方法', '景別｜身體方向｜臉與視線｜拍攝角度'],
-      rows.map(s => [`${s.month} 月`, link(s.id), s.status === 'accepted' ? '已接受' : 'R6 待決', s.name, s.theme, s.env, Object.values(s.outfit).join('、'), s.palette, s.pose, s.expr, s.sexy, s.method, s.cam.line]), 'book');
+      rows.map(s => [`${s.month} 月`, link(s.id), stText(s), s.name, s.theme, s.env, Object.values(s.outfit).join('、'), s.palette, s.pose, s.expr, s.sexy, s.method, s.cam.line]), 'book');
   }
   function booksSec() {
     return `<section class="sec" id="books"><h2>兩本月份（已確認）與總覽</h2>
-<p class="callout"><b>兩本月份人選排序已確認（R4 確認、R6 維持）。</b>不再請 Penny 重新核准；服裝與場景配合既定月份。</p>
+<p class="callout"><b>兩本月份人選排序已確認（R4 確認、R6／R7 維持）。</b>不再請 Penny 重新核准；服裝與場景配合既定月份。</p>
 <div class="mgrid2">${P.months.map(m => `<div class="mrow2"><span class="mn2">${m.m} 月</span>` +
       `<a class="mchip h" href="#c-${esc(m.H)}"><b>橫</b> ${esc(SET[m.H].name)}<small>${esc(m.why_h)}</small></a>` +
       `<a class="mchip v" href="#c-${esc(m.V)}"><b>直</b> ${esc(SET[m.V].name)}<small>${esc(m.why_v)}</small></a></div>`).join('')}</div>
@@ -203,8 +188,9 @@ ${['H', 'V'].map(b => `<h3>${BOOK[b]}（${b === 'H' ? '16:9' : '3:4'}）攝影�
 <p class="note"><b>景別：</b>${esc(cnt(F.counts[b].shot))}；<b>身體方向：</b>${esc(cnt(F.counts[b].body))}。</p>
 <p class="note"><b>節奏：</b>${esc(F.rhythm[b])}</p><p class="note"><b>依月份：</b>${esc(F.sequence[b])}</p>`).join('')}
 ${ul([`近景：${F.rhythm.near}`, `角度與視線：${F.rhythm.angles}`, `同一位的兩款：${F.rhythm.pair}`, `戶外與重複：${F.rhythm.outdoor}`])}
-<h3>R6 待決的 ${REV.length} 套：改了什麼</h3>
-${stbl(['ID', '原設計（R5）', '新設計', '改了什麼'], REV.map(s => [link(s.id), s.r6.from_line, s.cam.line, s.r6.change]), 'adj')}
+<h3>R7 依owner指定修訂的 ${OREV.length} 套：改了什麼</h3>
+${stbl(['ID', '攝影（不變）', '改了什麼'], OREV.map(s => [link(s.id), s.cam.line, s.r7.change]), 'adj')}
+<details class="info"><summary>R6 的 2 套新推薦（歷史）</summary>${stbl(['ID', '現在', '原設計（R5）', 'R6 改了什麼'], SETS.filter(s => s.r6.change).map(s => [link(s.id), { html: stTag(s) }, s.r6.from_line, s.r6.change]), 'adj')}</details>
 <details class="info"><summary>R4 的 16 套修訂（歷史）</summary>${stbl(['ID', '現在', 'R4 改了什麼'], SETS.filter(s => s.r4.change).map(s => [link(s.id), { html: stTag(s) }, s.r4.change]), 'adj4')}</details>
 <details class="info"><summary>共同規則與 prompt 一致性檢查</summary><h4>共同規則</h4>${ul(F.rules)}<h4>逐套檢查（產生資料時執行，不通過就無法建置）</h4>${ul(F.checks)}</details>
 </section>`;
@@ -271,19 +257,24 @@ ${stbl(['ID', '狀態', '照片框', '比例計算', '邊緣（規劃預估）',
 <dt>印刷（工作照片框）</dt><dd>${esc(s.print.edges.join('；'))}；不能切：${esc(s.print.keep)}；${esc(s.print.need)}；${esc(s.print.ppi)}；${esc(s.print.verify)}</dd>
 </dl></details>`;
   }
+  const r6Hist = s => (s.r6.change ? `<details class="info"><summary>R6 的修改（歷史）</summary><p class="note">Penny（R6）：「${esc(s.r6.owner)}」</p><pre class="verb">${esc(s.r6.supervisor)}</pre><p class="note">${esc(s.r6.change)}</p><p class="note">原設計（R5）：${esc(s.r6.from_theme)}｜${esc(s.r6.from_line)}</p></details>` : '');
   function r4Box(s) {
     if (s.status === 'accepted') {
-      return `<div class="r4box acc"><p><b>已接受（${esc(s.r6.accepted_in)} owner 紀錄）</b>：服裝、場景、表情與攝影照目前版本，不需再回覆。</p>` +
-        (s.r5 ? `<p class="tnote"><b>R5 主管核可的中英同步</b>：英文 prompt 補上中文妝感「${esc(s.r5.makeup_zh)}」的一句（${esc(s.r5.added_en)}）；服裝、場景、表情、姿態、攝影與身分不變，接受狀態沿用。</p>` : '') + '</div>';
+      return `<div class="r4box acc"><p><b>已接受（${esc(s.r7.accepted_in)} owner 紀錄）</b>：服裝、場景、表情與攝影照目前版本，不需再回覆。</p>` +
+        (s.r5 ? `<p class="tnote"><b>R5 主管核可的中英同步</b>：英文 prompt 補上中文妝感「${esc(s.r5.makeup_zh)}」的一句（${esc(s.r5.added_en)}）；服裝、場景、表情、姿態、攝影與身分不變，接受狀態沿用。</p>` : '') + r6Hist(s) + '</div>';
     }
-    return `<div class="r4box rev"><p><b>R6 改了什麼：</b>${esc(s.r6.change)}</p>
-<p><b>Penny 原文：</b>「${esc(s.r6.owner)}」</p>
-<details class="info"><summary>主管推薦（逐字）與原設計</summary><pre class="verb">${esc(s.r6.supervisor)}</pre><p class="note">原設計（R5）：${esc(s.r6.from_theme)}｜${esc(s.r6.from_line)}</p></details>
+    const r7 = s.r7;
+    return `<div class="r4box rev"><p><b>${esc(r7.label)}</b>：${esc(r7.note)}</p>
+<p><b>R7 改了什麼：</b>${esc(r7.change)}</p>
+<p><b>Penny 原文（R7）：</b>「${esc(r7.owner)}」</p>
+<p class="tnote">${esc(r7.no_ref)}</p>
+<details class="info" open><summary>修改前（R6）→ 修改後（R7）</summary>${stbl(['欄位', '修改前（R6）', '修改後（R7）'], r7.diff.map(x => [x.k, x.before, x.after]), 'diff7')}<p class="note">不變：${esc(r7.kept)}</p></details>
+<details class="info"><summary>主管補充的落實細節（逐字，不是 Penny 原話）</summary><pre class="verb">${esc(r7.supervisor)}</pre></details>
+${r6Hist(s)}
 <details class="info"><summary>R4 的修改要求與改動（歷史）</summary><pre class="verb">${esc(s.r4.owner)}</pre><p class="note">${esc(s.r4.change)}</p></details></div>`;
   }
   function card(s) {
     const acc = s.status === 'accepted';
-    const x = acc ? null : V6.sets[s.id];
     const old = oldSetAll(s.id);
     return `<article class="scard ${s.book === 'H' ? 'bh' : 'bv'}${acc ? ' isacc' : ''}" id="c-${esc(s.id)}" data-set="${esc(s.id)}" data-status="${esc(s.status)}">
 <p class="sc-head"><code class="sid">${esc(s.id)}</code> <span class="tag book">${BOOK[s.book]}（${esc(s.ratio)}）</span> ${stTag(s)} <span class="tag mon">${s.month} 月（已確認）</span> <span class="st none" data-st="${esc(s.id)}"></span></p>
@@ -315,13 +306,8 @@ ${frameTable(s.frame)}
 ${tbl(['風險', '處理'], s.risks)}
 </details>
 <details class="info"><summary>prompt 草稿（尚未執行）</summary><pre class="prompt">${esc(s.prompt)}</pre></details>
-${old ? `<p class="oldfb">舊版回饋（歷史，不算 v6）：${esc(old)}</p>` : ''}
-${acc ? '' : `<fieldset class="fb"><legend>回饋：${esc(s.id)}（R6 新推薦）</legend>
-<div class="fb-opts">${Object.entries(CH).map(([k, v]) => `<label class="fb-o"><input type="radio" name="s-${esc(s.id)}" value="${k}" data-s="${esc(s.id)}"${x.c === k ? ' checked' : ''}> ${esc(v)}</label>`).join('')}</div>
-<label class="lbl" for="n-${esc(s.id)}">備註</label>
-<textarea id="n-${esc(s.id)}" data-n="${esc(s.id)}" rows="2" maxlength="2000" placeholder="例：想改成全身；想看側面；衣服想換顏色">${esc(x.note)}</textarea>
-<button type="button" class="btn ghost small" data-clear="${esc(s.id)}">清除這套的回饋</button>
-</fieldset>`}</article>`;
+${old ? `<p class="oldfb">舊版回饋（歷史，不是新的核准）：${esc(old)}</p>` : ''}
+${acc ? '' : `<p class="callout">這套不需要 Penny 回覆：${esc(s.r7.note)}</p>`}</article>`;
   }
   function person(p, i) {
     const old = oldLine(p.pid);
@@ -330,7 +316,7 @@ ${acc ? '' : `<fieldset class="fb"><legend>回饋：${esc(s.id)}（R6 新推薦�
 <div class="ph-t"><h2>${i + 1}. ${esc(MP[p.pid].name)}${MP[p.pid].native ? ` <span class="nat">${esc(MP[p.pid].native)}</span>` : ''}</h2>
 <p class="cc-meta">身材設定：${esc(p.meas)}</p></div></div>
 <details class="info fbq"><summary>R2 回饋與當時的落實（歷史紀錄；最新決定見各套卡片）</summary><pre class="verb">${esc(p.feedback)}${p.shared ? '\n' + esc(p.shared) : ''}</pre>${ul(p.applied)}</details>
-${old ? `<p class="oldfb">舊版 v1／v2 回饋（保留，不算 v6）：${esc(old)}</p>` : ''}
+${old ? `<p class="oldfb">舊版 v1／v2 回饋（保留，歷史）：${esc(old)}</p>` : ''}
 <div class="pair">${card(SET['H-' + p.pid])}${card(SET['V-' + p.pid])}</div>
 </section>`;
   }
@@ -344,7 +330,7 @@ ${tbl(['款式', '建議'], C.recommend.map(x => [x.k, x.v]))}
   function costSec() {
     const K = P.execution.cost, M = P.execution.model, I = K.iris_first;
     return `<section class="sec" id="cost"><h2>費用與 Iris 首張試拍（費用方案不變）</h2>
-<p class="callout warn"><b>${esc(I.status_r6)}</b> ${esc(K.status)} ${esc(K.gate)}</p>
+<p class="callout warn"><b>${esc(I.status_r7)}</b> ${esc(K.status)} ${esc(K.gate)}</p>
 <h3>Iris 首張：<a href="#c-${esc(I.set)}">${esc(I.set)}</a>（方向已接受）</h3>${ul(I.why)}
 ${tbl(['項目', '內容'], I.plan.map(x => [x.k, x.v]))}
 <h3>24 套的情境試算（不是預算）</h3>
@@ -359,22 +345,34 @@ ${tbl(['情境', '請求數', '依 credits_exact 報價', '若實扣是顯示值
 <p class="note"><b>怎麼拍：</b>${esc(M.recommend)}（Soul ID 不列在公開頁）</p>
 <p class="note"><b>多階段與參考圖（R5 更正）：</b>${esc(M.multi_stage)}</p></details></section>`;
   }
+  // ---------- V-Iris 首試準備（R7）：只整理，不生成 ----------
+  function prepSec() {
+    const M4 = P.m4_prep, C = M4.counts, IV = SET[M4.set];
+    return `<section class="sec" id="prep"><h2>${esc(M4.title)}（R7）</h2>
+<p class="callout warn"><b>${esc(M4.status)}</b> 本輪生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}、報價預檢 ${C.price_prechecks}。</p>
+<p class="note">完整文件：repo 的 <code>${esc(M4.doc)}</code>。企劃內容見 <a href="#c-${esc(M4.set)}">${esc(M4.set)} 卡片</a>；Penny 不需要再選企劃。</p>
+<h3>已接受的企劃</h3>${stbl(['項目', '內容'], M4.plan.map(x => [x.k, x.v]), 'prep2')}
+<h3>身分參考</h3>${stbl(['項目', '內容'], M4.identity.map(x => [x.k, x.v]), 'prep2')}
+<h3>最終 prompt 與生成比例</h3><p class="note"><b>生成比例：</b>${esc(M4.ratio)}</p>
+<details class="info"><summary>最終 prompt（已接受版本，尚未執行；與卡片上的 prompt 草稿逐字相同）</summary><pre class="prompt">${esc(IV.prompt)}</pre></details>
+<h3>工作流（前提未滿足前不執行）</h3>${stbl(['步驟', '內容'], M4.workflow.map(x => [x.k, x.v]), 'prep2')}
+<h3>現在能準備的</h3>${ul(M4.ready_now)}
+<h3>真正生成前仍需確認（不猜測）</h3>${stbl(['項目', '目前狀態'], M4.tbc.map(x => [x.k, x.v]), 'prep2')}
+<h3>首張驗收條件</h3>${M4.accept.map(g => `<h4>${esc(g.k)}</h4>${ul(g.items)}`).join('')}
+<details class="info"><summary>送生成前檢查（R7 預先核對；送出當下要再核一次）</summary>${stbl(['檢查', '結果', '說明'], M4.lint.map(x => [x.k, x.r, x.v]), 'prep3')}</details>
+<h3>這份準備不代表</h3>${ul(M4.not)}
+</section>`;
+  }
   function outSec() {
     const oq = oldQs(), og = oldGnotes();
-    return `<section class="sec" id="out"><h2>回饋與複製</h2>
-<div class="callout">回饋只存在這個瀏覽器，<b>不會送到伺服器</b>，也不會通知主管。<b>未回覆不算接受。</b>複製後請貼回 ChatGPT。這是對企劃方向的回饋，不是生成授權或費用核准。已接受的 22 套、兩本月份與工作照片框都已接受，不需要再回覆。</div>
-<h3>想請 Penny 決定的事</h3><ol class="facts">${P.questions.map(x => `<li>${esc(x)}</li>`).join('')}</ol>
-<p class="note">在 H-jia-seo、H-luna-tanaka 兩張卡片上選；下面可以寫整體備註。</p>
-${Object.entries(QS).map(([k, Q]) => `<fieldset class="fb"><legend>${esc(Q.label)}</legend><p class="note"><a href="#print">看印刷構圖示意</a></p><div class="fb-opts col">${Object.entries(Q.opts).map(([v, t]) =>
-      `<label class="fb-o"><input type="radio" name="q-${k}" value="${v}" data-q="${k}"${V6.q[k].c === v ? ' checked' : ''}> ${esc(t)}</label>`).join('')}</div>
-<label class="lbl" for="qn-${k}">備註</label><textarea id="qn-${k}" data-qn="${k}" rows="1" maxlength="1500">${esc(V6.q[k].note)}</textarea></fieldset>`).join('')}
-${OLDV.map(v => { const q = oldQ(v); return q.length ? `<p class="oldfb">${v} 題目的回答（保留，不算 v6）：${esc(q.join('；'))}</p>` : ''; }).join('')}
-${oq.length ? `<p class="oldfb">v1／v2 題目的回答（保留，不算 v6）：${esc(oq.join('；'))}</p>` : ''}
-<label class="lbl" for="gnote">整體備註</label>
-<textarea id="gnote" rows="3" maxlength="3000" placeholder="例：整體想要更多戶外；性感程度想再高一點">${esc(V6.gnote)}</textarea>
-${OLDV.map(v => (oldG(v) ? `<p class="oldfb">${v} 整體備註（保留）：${esc(oldG(v))}</p>` : '')).join('')}
-${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(x => `${VER(x.v)}「${oneLine(x.note)}」`).join('；'))}</p>` : ''}
-<div class="actions"><button type="button" class="btn" id="act-copy">複製回饋</button><button type="button" class="btn danger" id="act-reset">清除 v6 回饋</button></div>
+    return `<section class="sec" id="out"><h2>定稿進度與複製</h2>
+<div class="callout"><b>本輪沒有必填決策。</b>${esc(P.owner_r7.summary.no_more_owner_questions)}這一頁不是生成授權，也不是費用核准。</div>
+<p class="note">本頁只讀、不寫入也不清除這個瀏覽器的資料：v1–v6 的舊回饋與第二階段素材選擇都原樣保留，只在下面列為歷史。複製的文字是定稿進度，可以貼回 ChatGPT 備查。</p>
+${OLDV.map(v => { const q = oldQ(v); return q.length ? `<p class="oldfb">${v} 題目的回答（保留，歷史）：${esc(q.join('；'))}</p>` : ''; }).join('')}
+${oq.length ? `<p class="oldfb">v1／v2 題目的回答（保留，歷史）：${esc(oq.join('；'))}</p>` : ''}
+${OLDV.map(v => (oldG(v) ? `<p class="oldfb">${v} 整體備註（保留，歷史）：${esc(oldG(v))}</p>` : '')).join('')}
+${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${esc(og.map(x => `${VER(x.v)}「${oneLine(x.note)}」`).join('；'))}</p>` : ''}
+<div class="actions"><button type="button" class="btn" id="act-copy">複製定稿進度</button></div>
 <label class="lbl" for="out-text">將複製的文字（預覽）</label><textarea id="out-text" rows="16" readonly></textarea>
 </section>`;
   }
@@ -388,7 +386,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(
 <div class="agrid">${A.items.map(x => `<article class="ac">${fig(P.aaliya_img[x.key], `Aaliya｜${x.form}｜既有照片，只參考拍法`, `<span class="tag t-ref">Aaliya 既有照片</span> ${esc(x.form)}`)}</article>`).join('')}</div>
 <dl class="mdl">${A.method.map(m => `<dt>${esc(m.item)}</dt><dd>${esc(m.how)}</dd>`).join('')}</dl></details>
 <ul class="facts"><li><a href="index.html">第二階段：為入選人設挑照片</a>：素材選擇照舊保留在那一頁，本頁不讀也不改。</li>
-<li>完整企劃、攝影設計與印刷構圖：repo 的 <code>docs/calendar/CAL_18_M3_SHOOT_PLAN.md</code>（R6）；R2 Owner 決策逐字紀錄：<code>docs/calendar/CAL_19_M3_R2_OWNER_DECISION.md</code>。</li></ul></section>`;
+<li>完整企劃、攝影設計與印刷構圖：repo 的 <code>docs/calendar/CAL_18_M3_SHOOT_PLAN.md</code>（R7）；V-Iris 首試準備：<code>${esc(P.m4_prep.doc)}</code>；R2 Owner 決策逐字紀錄：<code>docs/calendar/CAL_19_M3_R2_OWNER_DECISION.md</code>。</li></ul></section>`;
   }
 
   function render() {
@@ -397,11 +395,11 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(
     app.innerHTML = decSec() + photoSec() + printSec() + booksSec() +
       `<section class="sec" id="people"><h2>12 位 × 橫式款／直式款</h2>
 <ul class="facts"><li>每位兩套獨立企劃：服裝與場景都不同。左邊是橫式款（16:9），右邊是直式款（3:4）；手機上上下排列。</li>
-<li>綠色「已接受」的 22 套照目前版本、不需再回覆；橘色「R6 待決」的 2 套（H-jia-seo、H-luna-tanaka）先寫「改了什麼」與你的原文，再請你選「接受」或「想修改」。</li>
+<li>綠色「已接受」的 23 套照目前版本、不需再回覆；橘色「R7 依owner指定修訂・待主管核對」的 H-luna-tanaka 寫明改了什麼、你的原文與修改前後，不需要回覆。</li>
 <li>每張卡片最上面直接寫<b>景別｜身體方向｜臉與視線｜拍攝角度</b>；七個攝影欄位與理由在「攝影設計細節」展開；虛線框下方一行是這張的印刷判斷。</li>
 <li>虛線框是「尚未生成」的新照片位置，裡面的方框與圓點只是<b>構圖示意</b>，不是照片。卡片下方的照片都是<b>既有照片</b>，只按標示的用途參考，不是新構圖的成品；身材一律以設定數字為準。</li></ul>
 <div class="ov">${PEOPLE.map((p, i) => { const m = IMG[MP[p.pid].face]; return `<a class="rs" href="#p-${esc(p.pid)}"><img src="${esc(m.t)}" width="${m.tw}" height="${m.th}" alt="" loading="lazy" decoding="async"><span class="rs-t"><b>${i + 1}. ${esc(MP[p.pid].name)}</b><span class="rs-p" data-ov="${esc(p.pid)}"></span></span></a>`; }).join('')}</div>
-</section>` + PEOPLE.map(person).join('') + compSec() + costSec() + outSec() + refsSec();
+</section>` + PEOPLE.map(person).join('') + compSec() + costSec() + prepSec() + outSec() + refsSec();
     placeSchem();
     SETS.forEach(s => refresh(s.id));
     refreshOut();
@@ -425,38 +423,35 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(
     });
   }
   window.addEventListener('resize', () => { clearTimeout(placeSchem.t); placeSchem.t = setTimeout(placeSchem, 150); });
-  const stOf = id => (SET[id].status === 'accepted' ? '已接受' : (V6.sets[id].c ? CH[V6.sets[id].c] : '未回覆'));
+  const stOf = id => (SET[id].status === 'accepted' ? '已接受' : '待主管核對');
   function refresh(id) {
     const el = $(`[data-st="${id}"]`);
     if (el) {
-      const acc = SET[id].status === 'accepted', c = acc ? '' : V6.sets[id].c;
-      el.textContent = acc ? '不需回覆' : (c ? CH[c] : '未回覆');
-      el.className = `st ${acc ? 'conf' : (c === 'ok' ? 'conf' : (c ? 'draft' : 'none'))}`;
+      const acc = SET[id].status === 'accepted';
+      el.textContent = acc ? '不需回覆' : '待主管核對（不需回覆）';
+      el.className = `st ${acc ? 'conf' : 'draft'}`;
     }
     const pid = SET[id].pid;
     const ov = $(`[data-ov="${pid}"]`);
     if (ov) ov.textContent = ['H', 'V'].map(b => `${b}：${stOf(b + '-' + pid)}`).join('｜');
   }
   function buildText() {
-    const L = ['TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂｜Penny 企劃回饋',
+    const M4 = P.m4_prep, C = M4.counts;
+    const L = ['TASK-CAL-001／M-3／R7｜Luna香袋修訂與首試準備｜企劃定稿進度',
       `企劃版本：${P.version}（${P.round}）｜頁面版本：${PAGE_COMMIT || '本機預覽（未部署）'}`,
-      `說明：這是對 ${REV.length} 套待決新推薦的回饋，不是生成授權，也不是費用核准；未回覆不算接受。`];
-    let ok = 0, ed = 0;
-    L.push('', `【R6 待決的 ${REV.length} 套】`);
-    REV.slice().sort((x, y) => x.month - y.month).forEach(s => {
-      const x = V6.sets[s.id];
-      if (x.c === 'ok') ok++; else if (x.c === 'edit') ed++;
-      L.push(`${s.id}｜${s.month}月｜${s.name}｜${s.theme}｜${s.cam.line}：${x.c ? CH[x.c] : '未回覆'}`);
-      if (x.note.trim()) L.push(`   備註：${oneLine(x.note)}`);
+      '說明：本輪沒有必填決策（Penny 已要求小幅修訂後直接往後執行）。這是定稿進度，不是生成授權，也不是費用核准。'];
+    L.push('', `【已接受 ${ACC.length} 套（R4／R6／R7 owner 紀錄，不需再回覆）】`, ACC.map(s => s.id).join('、'));
+    L.push('', `【${OREV_LABEL}：${OREV.length} 套】`);
+    OREV.forEach(s => {
+      L.push(`${s.id}｜${s.month}月｜${s.name}｜${s.theme}｜${s.cam.line}`, `   改了什麼：${s.r7.change}`, `   Penny 原文（R7）：「${s.r7.owner}」`, `   ${s.r7.note}`);
     });
-    L.push('', `（待決 ${REV.length} 套已回覆 ${ok + ed}／${REV.length}：接受 ${ok}、想修改 ${ed}、未回覆 ${REV.length - ok - ed}）`);
-    L.push('', `【已接受 ${ACC.length} 套（R4／R6 owner 紀錄，不需再回覆）】`, ACC.map(s => s.id).join('、'));
-    L.push('【兩本月份】已確認（R4 確認、R6 維持）', `【工作照片框】已接受（R6）：${P.owner_r6.summary.frames}`, '');
-    L.push(`【整體備註】${V6.gnote.trim() ? oneLine(V6.gnote) : '（無）'}`);
+    L.push('', '【兩本月份】已確認（R4 確認、R6／R7 維持）', `【工作照片框】已接受（R6）：${P.owner_r6.summary.frames}`);
+    L.push(`【V-Iris 首試準備】${M4.status}文件：${M4.doc}`);
+    L.push(`【本輪】生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}、報價預檢 ${C.price_prechecks}`);
     OLDV.forEach(v => {
       const sets = SETS.map(s => [s, oldSet(v, s.id)]).filter(([, t]) => t), q = oldQ(v), g = oldG(v);
       if (!sets.length && !q.length && !g) return;
-      L.push('', `【舊版回饋（${v}，僅供參考，不算 v6）】`);
+      L.push('', `【舊版回饋（${v}，僅供參考，不是新的核准）】`);
       sets.forEach(([s, t]) => L.push(`${s.id}：${t}`));
       q.forEach(t => L.push(`${v} 題目　${t}`));
       if (g) L.push(`整體備註（${v}）：${g}`);
@@ -464,7 +459,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(
     const olds = PEOPLE.map(p => [p, oldLine(p.pid)]).filter(([, t]) => t);
     const oq = oldQs(), og = oldGnotes();
     if (olds.length || oq.length || og.length) {
-      L.push('', '【舊版回饋（v1／v2，僅供參考，不算 v6）】');
+      L.push('', '【舊版回饋（v1／v2，僅供參考，不是新的核准）】');
       olds.forEach(([p, t]) => L.push(`${MP[p.pid].name}：${t}`));
       oq.forEach(t => L.push(`舊版題目　${t}`));
       og.forEach(x => L.push(`整體備註（${VER(x.v)}）：${oneLine(x.note)}`));
@@ -472,47 +467,16 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(
     return L.join('\n');
   }
   function refreshOut() {
-    const n = REV.filter(s => V6.sets[s.id].c).length;
-    $('#bar-count').textContent = `待決已回覆 ${n}／${REV.length} 套｜已接受 ${ACC.length} 套｜尚未生成任何照片`;
+    $('#bar-count').textContent = `定稿進度：已接受 ${ACC.length} 套｜待主管核對 ${OREV.length} 套｜本輪無必填決策｜尚未生成任何照片`;
     const ta = $('#out-text');
     if (ta) ta.value = buildText();
   }
 
   // ---------- 事件 ----------
-  app.addEventListener('change', e => {
-    const t = e.target;
-    if (t.dataset.s) { V6.sets[t.dataset.s].c = t.value; save(); refresh(t.dataset.s); refreshOut(); }
-    else if (t.dataset.q) { V6.q[t.dataset.q].c = t.value; save(); refreshOut(); }
-  });
-  app.addEventListener('input', e => {
-    const t = e.target;
-    if (t.dataset.n) { V6.sets[t.dataset.n].note = t.value; save(); refreshOut(); }
-    else if (t.dataset.qn) { V6.q[t.dataset.qn].note = t.value; save(); refreshOut(); }
-    else if (t.id === 'gnote') { V6.gnote = t.value; save(); refreshOut(); }
-  });
   app.addEventListener('click', e => {
     const z = e.target.closest('.zoom');
     if (z) { openViewer(z); return; }
-    const cl = e.target.closest('[data-clear]');
-    if (cl) {
-      const id = cl.dataset.clear;
-      V6.sets[id] = { c: '', note: '' };
-      save();
-      $$(`input[name="s-${id}"]`).forEach(r => { r.checked = false; });
-      $(`#n-${id}`).value = '';
-      refresh(id); refreshOut();
-      toast(`已清除 ${id} 的回饋。`);
-      return;
-    }
     if (e.target.id === 'act-copy') copyOut();
-    if (e.target.id === 'act-reset') {
-      if (!window.confirm('清除本頁 v6 的全部回饋？（v1–v5 舊回饋與第二階段素材選擇都不受影響）')) return;
-      delete RAW.v6;
-      V6 = loadV6();
-      try { localStorage.setItem(KEY, JSON.stringify(RAW)); } catch (e2) { /* 只清記憶體 */ }
-      render();
-      toast('已清除 v6 回饋；舊版回饋保留。');
-    }
   });
   $('#bar-copy').addEventListener('click', copyOut);
 
@@ -520,7 +484,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留）：${esc(og.map(
     const text = buildText();
     const ta = $('#out-text');
     ta.value = text;
-    const done = '已複製回饋。請貼回 ChatGPT；本頁不會通知主管。';
+    const done = '已複製定稿進度。可以貼回 ChatGPT；本頁不會通知主管。';
     try { await navigator.clipboard.writeText(text); toast(done); } catch (e) {
       ta.focus(); ta.select();
       let ok = false;

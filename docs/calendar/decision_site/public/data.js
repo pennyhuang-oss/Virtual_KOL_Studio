@@ -5128,16 +5128,16 @@ window.CAL_DATA = {
     "why": "Iris 依 Penny 要求身體正面、有笑容；橫式用全身＋膝蓋高度輕仰拉長腿，直式是大腿中段以上＋胸口高度，景別與相機高度都不同。"
    },
    {
-    "change": "依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。",
+    "change": "依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。",
     "from": "席地坐姿全身｜約45度斜側（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側窗外的紅葉庭院｜坐姿時的胸口高度・平視",
     "id": "H-luna-tanaka",
     "line": "全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視",
     "major": [
-     "R6 修訂"
+     "R7 依 owner 指定修訂（只改手部與香袋）"
     ],
     "name": "Luna",
     "origin": "new",
-    "status": "revised",
+    "status": "owner_revised",
     "why": "依 Penny 指示改為站在室外的和服寫真：站姿全身讓和服與腰帶完整；身體約30度斜側、臉轉向鏡頭，扭轉約30度；相機在臀部高度平視（直式款是膝蓋高度輕仰），不讓建築壓過人物。"
    },
    {
@@ -5248,7 +5248,7 @@ window.CAL_DATA = {
     ],
     "name": "Jia",
     "origin": "new",
-    "status": "revised",
+    "status": "accepted",
     "why": "Penny 只問衣服和場景有沒有搭：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都照 R4；只把晚宴感的黑色單肩鏤空洋裝換成適合湖畔傍晚的深酒紅細針織繞頸短洋裝。頭轉回約55度成三分之二側臉，仍能認人。"
    },
    {
@@ -5517,6 +5517,7 @@ window.CAL_DATA = {
      "set": "V-iris-chen",
      "status_r4": "R4：V-iris-chen 首試方向已同意；費用與生成仍未授權，不執行 M-4。",
      "status_r6": "R6：V-Iris 首試方向已接受；生成與費用仍未授權，不執行 M-4。",
+     "status_r7": "R7：只整理 V-Iris 首試準備（見首試準備文件），沒有生成、沒有花 credits、沒有呼叫 Higgsfield、沒有做報價預檢；生成與費用仍未授權，不執行 M-4。",
      "why": [
       "直式 3:4 的原生尺寸已知（1536×2048）、報價已查，第一張只需要驗證「寫真質感、身分、身材與實際扣款」，少一個未知數。",
       "直幅大腿中段以上最能看清 Penny 這次指定的穿搭與姿態：更顯身材的上衣＋牛仔迷你裙、身體面向鏡頭、笑容。",
@@ -5614,6 +5615,355 @@ window.CAL_DATA = {
     ]
    }
   },
+  "m4_prep": {
+   "accept": [
+    {
+     "items": [
+      "臉與 Iris 人設一致：圓臉甜美、大雙眼皮深棕眼、飽滿嘴唇、小下巴；不像另一個人。",
+      "膚色是她原本的白皙自然，沒有被夕陽拍偏或過飽和（風險：膚色被夕陽拍偏）。",
+      "黑色柔順直髮自然垂放過肩；成人樣貌。",
+      "身材比例符合 162 cm、87-58-90、D：胸部飽滿、腰細、臀部有形；不是童顏或身材縮水。"
+     ],
+     "k": "身分與身材"
+    },
+    {
+     "items": [
+      "白色貼身羅紋方領短袖短上衣，露出腰；呈現胸型但不走光。",
+      "淺藍高腰牛仔迷你裙，整條入鏡。",
+      "小金色圈耳環；鞋不入鏡。",
+      "衣服上沒有亂碼文字、品牌或多餘配件。"
+     ],
+     "k": "服裝"
+    },
+    {
+     "items": [
+      "身體正對鏡頭站立，重心在一腳、臀部微偏；沒有回頭或轉身。",
+      "一手插腰、一手輕碰太陽穴旁的頭髮；兩隻手各五指，沒有融合、黏連或多指（風險：碰頭髮的手指融合）。",
+      "沒有多餘肢體；掃過畫面四角與背景（SEXY_SCENE_LIBRARY.md §10）。",
+      "手指判讀用原生解析度或零插值放大（QA-1）。若手指壞掉，只記錄、停下回報；改成兩手插腰要另外的指令。"
+     ],
+     "k": "姿態與手指"
+    },
+    {
+     "items": [
+      "明亮溫暖的笑，只有一個表情。",
+      "看鏡頭；眼睛對焦清楚。"
+     ],
+     "k": "表情與視線"
+    },
+    {
+     "items": [
+      "台北河濱公園開闊草地、傍晚低太陽、遠處柔綠樹林與低矮公寓。",
+      "草地與小徑沒有可辨識臉的路人；若遠處有失焦、認不出臉的人形，依 SEXY_SCENE_LIBRARY.md §3-F 第三次補正不算瑕疵，但與企劃「空無一人」有落差，要記錄回報。",
+      "沒有招牌或亂碼文字；背景不像拼貼、沒有糊掉的區塊。",
+      "光向一致：夕陽在她身後側方形成頭髮與肩線輪廓光，臉由前方補光照亮、不暗（風險：逆光臉暗）。"
+     ],
+     "k": "場景"
+    },
+    {
+     "items": [
+      "直式 3:4；大腿中段以上，下緣在大腿中段、明顯高於膝蓋。",
+      "人物置中、頭頂上方少量留白（規劃約 8%）；兩側是柔焦的草地與樹林。",
+      "雙手都在畫面內；85mm 自然透視、沒有廣角變形；水平不歪。"
+     ],
+     "k": "構圖"
+    },
+    {
+     "items": [
+      "自然皮膚紋理、看得到毛孔，不過度光滑或蠟感。",
+      "專業寫真質感，不是手機自拍感。"
+     ],
+     "k": "質感"
+    },
+    {
+     "items": [
+      "記錄實際輸出像素（預期 1536×2048，以實際為準）。",
+      "套進直式工作照片框 120×160 mm：3:4 放入 3:4 不裁切；若實際不是 3:4，記錄裁切量與位置。",
+      "套框後髮頂上方 ≥4%，臉與雙手都在框內。",
+      "有效 ppi＝實際寬度像素 ÷（120 mm ÷ 25.4）；1536 px 約 325 ppi。300 ppi 是本案工作目標，不是廠商已確認的門檻。",
+      "不靠放大補像素；這是工作版型核對，不是印刷驗收（廠商規格與實際套版仍未知）。"
+     ],
+     "k": "生成後套框與有效 ppi"
+    },
+    {
+     "items": [
+      "逐項寫「符合／不符合／待 Penny 判斷」，附實圖與實際扣款。",
+      "通過也好、不通過也好，都先停下交主管覆核；不自動重試。"
+     ],
+     "k": "判定與回報"
+    }
+   ],
+   "counts": {
+    "credits": 0,
+    "generated": 0,
+    "higgsfield_calls": 0,
+    "price_prechecks": 0
+   },
+   "doc": "docs/calendar/CAL_20_M4_IRIS_FIRST_TEST_PREP.md",
+   "identity": [
+    {
+     "k": "身分來源",
+     "v": "Iris 既有的 Soul（狀態見「真正生成前仍需確認」）。Soul ID 不寫進企劃、頁面或本文件；生成時從專案既有紀錄取用，並由主管指令核對。"
+    },
+    {
+     "k": "人設外貌（設定，不改）",
+     "v": "22 歲台灣女生；圓臉甜美型、大雙眼皮深棕色眼睛、精緻鼻梁、飽滿嘴唇、小下巴；黑色柔順直髮自然放下；162 cm、87-58-90、D 罩杯，嬌小沙漏比例。"
+    },
+    {
+     "k": "prompt 開頭的身分句",
+     "v": "A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips."
+    },
+    {
+     "k": "Soul V2 不繼承的部分",
+     "v": "髮型、髮色與身材不從 Soul 繼承，已在身分句寫明黑色直髮過肩與身材數字（Soul V2 不繼承髮型與髮色：每張 prompt 都要寫她自己的髮色髮型（原則七 C-1）。Soul V2 不繼承身材：身材要用 prompt 句子補（數字直接寫）。）"
+    },
+    {
+     "k": "企劃參考照片（只用於企劃，不送進生成）",
+     "v": "iris-04（場景）：草地、夕陽光線氛圍（Penny 喜歡的照片）；不採用回頭姿勢；iris-06（服裝材質）：白短上衣＋牛仔短裙的穿搭方向。首試不掛參考圖、不掛 Reference Element。"
+    }
+   ],
+   "lint": [
+    {
+     "k": "§25-1 需要幾隻手（≤2）",
+     "r": "符合",
+     "v": "兩隻：一手插腰、一手輕碰太陽穴旁的頭髮；沒有自拍手機。"
+    },
+    {
+     "k": "§25-2 自拍手機是否入鏡",
+     "r": "不適用",
+     "v": "不是自拍；prompt 沒有 phone／selfie。"
+    },
+    {
+     "k": "§25-3 中文規格的姿勢與表情是否真的在英文 prompt 裡",
+     "r": "符合",
+     "v": "「一手插腰，一手輕碰太陽穴旁的頭髮」「明亮溫暖的笑」都在英文句裡（程式比對）。"
+    },
+    {
+     "k": "§25-4 只描述一個靜止表情",
+     "r": "符合",
+     "v": "沒有 then／breaking into／just starting to。"
+    },
+    {
+     "k": "§25-5 動態衣物或髮絲",
+     "r": "不適用",
+     "v": "沒有寫飄動；頭髮自然垂放。"
+    },
+    {
+     "k": "§25-6 髮長有明確幾何描述",
+     "r": "符合",
+     "v": "black silky straight hair worn down past her shoulders。"
+    },
+    {
+     "k": "§25-7 主要服裝 ≤3–4 件，最不能錯的在前",
+     "r": "符合",
+     "v": "入鏡 3 件：白色方領短上衣（第一）、淺藍高腰牛仔迷你裙、小金色圈耳環；白色帆布鞋不入鏡、不寫進 prompt。"
+    },
+    {
+     "k": "§25-8 visible pores 只用在看得到臉部細節的景別",
+     "r": "符合",
+     "v": "大腿中段以上、85mm，臉部細節可見；不是全身遠景。"
+    },
+    {
+     "k": "§25-9 機位高度、視線、頭部朝向一致",
+     "r": "符合",
+     "v": "相機在胸口高度平視；臉正面、看鏡頭。"
+    },
+    {
+     "k": "§25-10 一段 prompt 只對應一張",
+     "r": "符合",
+     "v": "只有一個景別（大腿中段以上），count 1。"
+    },
+    {
+     "k": "§七 機位寫離地公分數",
+     "r": "與稽核表不同（已接受版本照舊）",
+     "v": "prompt 寫「camera at her chest height」，沒有寫公分；企劃參考值約 1.19 公尺（胸口高度）。R7 不改已接受的 prompt。"
+    },
+    {
+     "k": "§七 鏡頭水平",
+     "r": "符合",
+     "v": "level，俯仰換算約 −0.1 度。"
+    },
+    {
+     "k": "§七 焦段與距離",
+     "r": "符合",
+     "v": "85mm、約 2.9 公尺（不是全身照；全身 3–5 公尺的條目不適用）。"
+    },
+    {
+     "k": "§七 腳在下 1/3、上方留白",
+     "r": "不適用（腳不入鏡）",
+     "v": "大腿中段以上；規劃髮頂留白約 8%。"
+    },
+    {
+     "k": "§七 兩隻手分別在哪",
+     "r": "符合",
+     "v": "插腰、碰頭髮；沒有僵直垂在身側。"
+    },
+    {
+     "k": "§七 道具互動或側身回望，不正面直視鏡頭",
+     "r": "與稽核表不同（依 Penny 指定）",
+     "v": "Penny 指定 Iris 身體面向鏡頭、有笑容、不要背部回眸或轉頭；所以正面看鏡頭。"
+    },
+    {
+     "k": "§七 表情與姿勢是同一個連續動作",
+     "r": "符合",
+     "v": "站定、插腰碰髮、明亮的笑。"
+    },
+    {
+     "k": "§七 主光打在臉上、背景光與臉部光一致",
+     "r": "與稽核表不同（企劃選擇，列驗收）",
+     "v": "主光是她身後側方的低角度夕陽（輪廓光），臉靠前方大反光板與柔光；風險「逆光臉暗」已列，出圖後檢查臉部亮度與光向一致。"
+    },
+    {
+     "k": "§七 皮膚寫毛孔與質感，沒有 smooth／flawless／porcelain",
+     "r": "符合",
+     "v": "Natural skin texture with visible pores, unretouched。"
+    }
+   ],
+   "not": [
+    "不代表已生成：本輪生成 0 張。",
+    "不代表費用核准：credits 0、Higgsfield 呼叫 0、報價預檢 0。",
+    "不代表印刷驗收：照片框是本案工作版型，不是廠商規格或印刷安全。",
+    "不重新請 Penny 選企劃：V-iris-chen 已接受。"
+   ],
+   "plan": [
+    {
+     "k": "接受狀態",
+     "v": "已接受（R4 owner 紀錄；R5 主管核可補上英文妝感句；R6、R7 維持）。Penny 不需要再選企劃。"
+    },
+    {
+     "k": "月份與款式",
+     "v": "直式款 9 月，生成比例 3:4（直式）"
+    },
+    {
+     "k": "主題",
+     "v": "黃金時段的河濱草地，白色方領短上衣配牛仔迷你裙，正面站著甜笑（Penny 指定的穿搭）。"
+    },
+    {
+     "k": "場景",
+     "v": "台北河濱公園的開闊草地，傍晚太陽低，遠處柔綠樹林與低矮公寓，草地與小徑空無一人。"
+    },
+    {
+     "k": "服裝",
+     "v": "上身：白色貼身羅紋方領短袖短上衣（露腰）；下身：淺藍高腰牛仔迷你裙；鞋：白色低筒帆布鞋（不入鏡）；配件：小金色圈耳環"
+    },
+    {
+     "k": "姿態與手",
+     "v": "站在草地上。一手插腰，一手輕碰太陽穴旁的頭髮。"
+    },
+    {
+     "k": "表情與視線",
+     "v": "明亮溫暖的笑；看鏡頭"
+    },
+    {
+     "k": "攝影",
+     "v": "大腿中段以上｜正面｜臉正面・看鏡頭｜胸口高度・平視；85mm、約 2.9 公尺；人物置中；頭頂上方少量留白，兩側是柔焦的草地與樹林，夕陽輪廓光落在頭髮與肩線"
+    },
+    {
+     "k": "光線",
+     "v": "主光：她身後側方的低角度夕陽，頭髮與肩線一圈暖色輪廓光；補光：畫面外前方的大反光板加柔光，臉與身體均勻"
+    },
+    {
+     "k": "妝髮",
+     "v": "黑色柔順直髮自然垂放過肩。乾淨的日常妝、自然唇色。"
+    },
+    {
+     "k": "身材設定",
+     "v": "162 cm／87-58-90／D；貼身方領短上衣清楚呈現 D 罩杯胸型、露出細腰；高腰牛仔迷你裙強調腰臀比與腿長。"
+    },
+    {
+     "k": "已知風險",
+     "v": "逆光臉暗（寫明反光板與柔光補臉）；膚色被夕陽拍偏（只寫一次她原本的白皙膚色）；碰頭髮的手指融合（生成後放大檢查；不行改成兩手插腰）"
+    }
+   ],
+   "ratio": "3:4 直式；R6 已接受的直式工作照片框 120×160 mm（3:4 放入 3:4 框不裁切）。",
+   "ready_now": [
+    "V-iris-chen 的企劃內容與最終 prompt（已接受版本，R7 不改）。",
+    "生成比例 3:4 與直式工作照片框 120×160 mm（R6 已接受）。",
+    "身分句與身材數字（寫在 prompt 開頭）；Soul 使用方式（ID 不公開）。",
+    "送生成前檢查的預先核對結果（第 5 節）。",
+    "首張驗收條件與套框、有效 ppi 的計算方式。",
+    "送出前後查交易明細的對帳步驟與回報格式。"
+   ],
+   "set": "V-iris-chen",
+   "status": "準備文件：只整理既有資料與首張驗收條件。沒有生成、沒有花 credits、沒有呼叫 Higgsfield、沒有做報價預檢；不是生成授權、不是費用核准，也不是印刷驗收。",
+   "tbc": [
+    {
+     "k": "生成與費用授權",
+     "v": "目前沒有：需要 Penny 核定造型與費用，再由主管另發 M-4 指令。"
+    },
+    {
+     "k": "模型與參數",
+     "v": "上一次唯讀紀錄是 2026-10-12（soul_2：quality 1.5k／2k、Soul ID、1 張參考圖、比例含 3:4、沒有 seed 與 negative prompt）。生成當下是否相同，未確認。"
+    },
+    {
+     "k": "Iris 的 Soul 狀態",
+     "v": "ready（較早訓練；R1 紀錄寫這幾位不在 Soul 總表內，是否跑過同樣的 6 張驗證未知）。"
+    },
+    {
+     "k": "輸出尺寸",
+     "v": "歷史紀錄：Iris 先前用 soul_2＋Soul、2k、3:4 生成 7 次，輸出皆 1536×2048。這一張的實際像素要出圖後確認，不預先當成事實。"
+    },
+    {
+     "k": "費用",
+     "v": "2026-10-13 的預檢回傳 credits 1／credits_exact 0.12（soul_2＋Iris Soul、2k、3:4、count 1），是一週前的報價、不是實扣；生成前要不要重新預檢由主管決定（R7 不做）。歷史紀錄互相不一致：Soul V2 的交易明細每筆 −0.12；但 Iris 的生成筆記記錄 2026-08-05 一批「全批 14 張約 8 credits」（7 位角色各 2 張，「約」數，沒寫怎麼算）。實扣只能用送出前後的交易明細確認。"
+    },
+    {
+     "k": "免費額度",
+     "v": "企劃設定 use_unlim false（查詢時帳號沒有可用的免費額度）；生成當下的狀態未確認。"
+    },
+    {
+     "k": "失敗與上限",
+     "v": "失敗也可能扣款；企劃是只送 1 個請求、不自動重試。若要允許重試或設定累計上限，需要主管另外指示。"
+    },
+    {
+     "k": "已接受 prompt 與稽核表的差異",
+     "v": "機位沒寫公分數、正面直視鏡頭、逆光主光三項與稽核表不同；前兩項是已接受內容與 Penny 指定，第三項是企劃選擇並列入驗收。R7 不改 prompt；若主管要調整，需另行指示。"
+    }
+   ],
+   "title": "V-Iris 首試準備（M-4 前置作業）",
+   "workflow": [
+    {
+     "k": "0. 前提",
+     "v": "Penny 核定這套造型與費用，再由主管另發 M-4 指令；沒有這兩件事之前，下面所有步驟都不做。"
+    },
+    {
+     "k": "1. 核對工具當下的參數",
+     "v": "生成前以工具當下的說明為準，核對 soul_2 的可用參數與比例。上一次唯讀紀錄：2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、Soul ID、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。"
+    },
+    {
+     "k": "2. prompt 送出前檢查",
+     "v": "用下方「送生成前檢查」逐項核對（SEXY_SCENE_LIBRARY.md §25 的 10 項＋PHOTO_DIRECTION_STANDARD.md §七）；R7 已預先核對一次，結果見表。prompt 用企劃頁的 V-iris-chen 原文，一字不改。"
+    },
+    {
+     "k": "3. 送出前查交易明細",
+     "v": "送出前查一次交易明細，記下最後一筆；不用餘額對帳（帳號同時有其他人在用）。"
+    },
+    {
+     "k": "4. 送出 1 個請求",
+     "v": "設定照企劃：soul_2＋Iris 既有 Soul、quality 2k、aspect 3:4、count 1、不掛參考圖、use_unlim false；一次只送一個請求。"
+    },
+    {
+     "k": "5. 取得結果並實際看圖",
+     "v": "status=completed 不等於成功：每一張都要實際打開看（SEXY_SCENE_LIBRARY.md QA-2）；小區域（手指、眼睛）判讀不用插值放大（QA-1）。"
+    },
+    {
+     "k": "6. 送出後查交易明細",
+     "v": "記錄這一張的實際扣款（逐筆）；失敗也可能扣款，一樣記錄。"
+    },
+    {
+     "k": "7. 不自動重試",
+     "v": "無論結果好壞、成功或失敗，都先停下回報（企劃「重試」規則；優先於 SEXY_SCENE_LIBRARY.md §10-a「瑕疵可直接重生」的一般做法）。"
+    },
+    {
+     "k": "8. 依驗收條件逐項判定",
+     "v": "下方首張驗收條件；記錄實際像素、套框結果與有效 ppi。"
+    },
+    {
+     "k": "9. 回報",
+     "v": "把圖、設定、實扣與逐項驗收結果交主管覆核，再給 Penny 看；設定落差（環境、服裝、道具）不自行重生，交 Penny 判斷（SEXY_SCENE_LIBRARY.md §10-a）。"
+    }
+   ]
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -5628,10 +5978,10 @@ window.CAL_DATA = {
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
    "status": "僅規劃：沒有生成任何圖片（含測試圖、示意圖），沒有花 credits，沒有上傳，沒有訓練，沒有改 canon 或 Soul ID",
-   "task": "TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂"
+   "task": "TASK-CAL-001／M-3／R7｜Luna香袋修訂與首試準備"
   },
   "month_rules": [
-   "月份人選排序已確認（R4 owner 紀錄，R6 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。",
+   "月份人選排序已確認（R4 owner 紀錄，R6、R7 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。",
    "每本 12 位各出現一次；同一月份兩本是不同的人。",
    "既有碰撞配對（Miu–Jia、Miu–Somi、Jia–Somi、Yerin–Rin）與 R2 目視相似（Somi–Tammy、Iris–Rainie）：不放同一月份，也不放在同一本的相鄰月份。這不是同框規則（每頁只有一人），只是避免翻頁時直接並排比較。",
    "先看季節（花田、紫陽花、櫻花、銀杏、雪景、海灘、泳池這些有季節的場景放在對的月份），再讓前後月份的色調交替；不為了季節改動已接受的企劃。"
@@ -6029,6 +6379,70 @@ window.CAL_DATA = {
     }
    }
   },
+  "owner_r7": {
+   "note": "逐字保存主管轉述的 Penny 決策與 H-luna-tanaka 的原文。只有引號內那一句是 Penny 原話；香袋的位置、顏色、材質、大小與手勢細節是主管在 R7 任務單「一、H-Luna 局部修訂」的補充，另列在 supervisor，不是 Penny 原話。Penny 還沒有看過修訂後的 H-Luna，這裡不記為已接受；也不是生成或費用授權。",
+   "recorded_on": "2026-10-20",
+   "round": "R7",
+   "source": "主管（ChatGPT）在 R7 任務單「【Penny 最新指示，直接落實】」轉述的 Penny 決策與一則原文；企劃版本是 shoot-plan-v6、頁面版本是 c47b911（R6 部署）。",
+   "summary": {
+    "accepted": [
+     "H-coco-wu",
+     "H-mia-huang",
+     "H-rainie-hsu",
+     "V-iris-chen",
+     "V-luna-tanaka",
+     "V-coco-wu",
+     "V-mia-huang",
+     "V-yerin-han",
+     "H-iris-chen",
+     "H-somi-oh",
+     "H-yuna-kim",
+     "H-tammy-chou",
+     "H-rin-ayase",
+     "H-miu-shiraishi",
+     "H-yerin-han",
+     "V-somi-oh",
+     "V-yuna-kim",
+     "V-tammy-chou",
+     "V-rin-ayase",
+     "V-rainie-hsu",
+     "V-miu-shiraishi",
+     "V-jia-seo",
+     "H-jia-seo"
+    ],
+    "frames": "維持（R6 已接受的工作照片框）",
+    "iris_first": "方向已接受（R6）；R7 只做首試準備，生成與費用仍未授權",
+    "months": "維持（R4 已確認）",
+    "newly_accepted": [
+     "H-jia-seo"
+    ],
+    "no_more_owner_questions": "Penny 已要求小幅修訂後直接往後執行：不再請 Penny 回覆香袋顏色、手勢或整套企劃；主管核對 H-Luna 落實後即完成 M-3。",
+    "not_approved": [
+     "生成",
+     "費用（credits）",
+     "Higgsfield 呼叫與報價預檢",
+     "M-4 執行",
+     "廠商規格或印刷安全"
+    ],
+    "owner_revised": [
+     "H-luna-tanaka"
+    ],
+    "owner_revised_label": "依owner指定修訂，待主管核對落實"
+   },
+   "verbatim": {
+    "decisions": "1. H-jia-seo 接受，連同原22套，共23套明確接受。\n2. H-luna-tanaka 唯一修改：\n「讓她雙手拿一個日式小香包，小香袋那種，很典雅氣質的感覺」\n3. Penny 已要求小幅修訂後直接往後執行，不再回來詢問相同企劃決策。\n4. 月份、照片框與其餘23套維持。\n5. 這次仍不是生成或費用授權。",
+    "per_set": {
+     "H-luna-tanaka": {
+      "month": 10,
+      "text": "讓她雙手拿一個日式小香包，小香袋那種，很典雅氣質的感覺"
+     }
+    },
+    "supervisor": {
+     "H-luna-tanaka": "保留R6和服、庭院、月份、表情、身體朝向及攝影設定。\n只將原本「一手扶腰帶、一手放下」改為：\n- 雙手在腰帶下方、下腹前自然輕捧一個小巧日式布製香袋。\n- 香袋採低飽和奶油色或淡金色、細緻織紋與短束口繩，與藕粉和服及深梅色腰帶協調。\n- 尺寸小巧，不做成手提包；不加品牌、文字或誇張吊飾。\n- 肩膀放鬆、手肘自然微彎，手腕不交叉，手指與香袋接觸合理。\n- 袖子自然垂落，不遮臉、不完全蓋住雙手或香袋；腰帶仍清楚可見。\n同步中文、英文prompt、道具欄、姿態與必要構圖說明。\n若沒有香袋參考圖，照實標示；不新增生成。",
+     "wrap_up": "- H-Jia 記為本次已接受。\n- H-Luna 記為「依owner指定修訂，待主管核對落實」。\n- 不虛構Penny已看過並接受修改後版本。\n- 主管核對符合指示後即可完成M-3，不再要求Penny回覆香袋顏色、手勢或整套企劃。\n- 頁面改為定稿進度與內容查閱，取消本輪必填決策。\n- 保留v1–v6回饋、素材選擇與localStorage，不重設舊資料。"
+    }
+   }
+  },
   "owner_refs": {
    "items": [
     {
@@ -6275,7 +6689,9 @@ window.CAL_DATA = {
     "R4：16 套修訂的中文「妝感」都寫進英文 prompt（人設身分句沒有妝感的 H-iris、H-somi、V-somi 另加一句；身分句本身不改）；已接受的 V-iris、H-coco、V-coco 在 R5 依主管核可補上妝感句。",
     "R6：H-jia-seo、H-luna-tanaka 用 R4 的同一套產生與檢查程式（禁字、鞋與腳、手、扭轉、俯仰、景別、prompt 片段各出現一次）；Luna 另加禁字 yukata、oiran、geisha、headdress、tiara、cleavage、antique、shabby 等，Jia 另加 gown、sequin、cut-out、one-shoulder。",
     "R6：其他 22 套由同一程式重新產生後，與 R5 版本逐欄相同（程式比對）；兩套的身分句（臉、膚色、髮、妝、身材）與 R5 相同。",
-    "R6：不看鏡頭 7 套（H-Luna 依 Penny 指示改為看鏡頭）；戶外 19 套；同一位兩款同景別：Rainie、Miu、Luna（身體方向與相機高度不同）。"
+    "R6：不看鏡頭 7 套（H-Luna 依 Penny 指示改為看鏡頭）；戶外 19 套；同一位兩款同景別：Rainie、Miu、Luna（身體方向與相機高度不同）。",
+    "R7：H-luna-tanaka 用 R6 的同一套產生與檢查程式重新產生（禁字、鞋與腳、手、遮擋、景別、prompt 片段各出現一次）；與 R6 產生器的輸出比對，只有手部、姿態、道具、入鏡、攝影目的、主要展示重點、英文 prompt 的三段、風險與參考備註不同。",
+    "R7：其他 23 套由同一程式重新產生後與 R6 逐欄相同；企劃檔裡 23 套除了狀態與 R7 註記，整套資料與 R6 逐欄相同（程式比對）。"
    ],
    "counts": {
     "H": {
@@ -6333,9 +6749,9 @@ window.CAL_DATA = {
     "H": "1月 大腿中段以上（Yuna）→2月 斜躺全身（Rin）→3月 坐姿全身（Miu）→4月 全身（Tammy）→5月 坐姿全身（Yerin）→6月 膝上（Coco）→7月 大腿中段以上（Mia）→8月 全身（Iris）→9月 坐姿全身（Jia）→10月 全身（Luna）→11月 膝上（Somi）→12月 膝上（Rainie）",
     "V": "1月 大腿中段以上（Tammy）→2月 全身（Jia）→3月 胸上（Mia）→4月 坐姿全身（Miu）→5月 膝上（Rainie）→6月 全身（Luna）→7月 坐姿到水面（Coco）→8月 膝上（Yerin）→9月 大腿中段以上（Iris）→10月 膝上（Rin）→11月 全身（Yuna）→12月 全身（Somi）"
    },
-   "summary": "R6：22 套已接受（R4 的 8 套＋R6 的 14 套），拍攝內容與 prompt 不變；H-jia-seo、H-luna-tanaka 依 Penny 最新回饋各給一個新推薦，七個攝影欄位（景別、畫面上下界、身體朝向、臉部朝向與視線、相機高度與俯仰、畫面配置、攝影目的）中文與英文 prompt 由同一份設定產生並逐套檢查。兩套新推薦尚未經 Penny 批准。"
+   "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。H-Luna 是「依owner指定修訂，待主管核對落實」，Penny 還沒有看過修訂後的版本。"
   },
-  "plan_blob": "7bf8270a1dddfe0f205bca05cfd66baac45eb335",
+  "plan_blob": "08931e0a5cdddc9d8f15b80d4c4e295e03f19a8e",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -6354,7 +6770,7 @@ window.CAL_DATA = {
       "note": "膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。"
      }
     ],
-    "summary": "依已接受的工作照片框與規劃構圖，22 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。"
+    "summary": "依已接受的工作照片框與規劃構圖，23 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。H-luna-tanaka（依 owner 指定修訂）只改雙手與香袋：畫面上下界、人物佔比與印刷判斷都與 R6 相同。"
    },
    "assumed": [
     {
@@ -6532,9 +6948,7 @@ window.CAL_DATA = {
     "拼版與背面是否自動旋轉（影響立架兩側看到哪兩面，CAL_01 §3.3）"
    ]
   },
-  "questions": [
-   "H-jia-seo、H-luna-tanaka 兩套新推薦：各選「接受」或「想修改」，想修改的寫在備註。未回覆不算接受。（其他 22 套、兩本月份與工作照片框都已接受，不需再回覆。）"
-  ],
+  "questions": [],
   "r5": {
    "changes": [
     {
@@ -7093,13 +7507,139 @@ window.CAL_DATA = {
    "from_commit": "9434b839f589c19832a88e36975fbb31527b7284",
    "summary": "依 R6 owner 決策：22 套已接受（拍攝內容與 prompt 不變）、H-jia-seo 換穿搭、H-luna-tanaka 改為日式宅邸庭院的和服外景；兩本月份與工作照片框已接受。企劃版本升為 shoot-plan-v6，回饋另存 v6；v1–v5 的回饋保留為歷史。"
   },
+  "r7": {
+   "changes": [
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "雙手在腰帶下方輕捧小巧的日式布製香袋（手部、姿態、道具、入鏡、攝影目的、英文 prompt 三段、風險與參考備註）",
+     "old": "一手輕扶腰帶側邊、一手自然放下",
+     "where": "sets[H-luna-tanaka]"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。",
+     "old": "一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。",
+     "where": "sets[H-luna-tanaka].hands"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。",
+     "old": "站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。",
+     "where": "sets[H-luna-tanaka].pose"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。",
+     "old": "秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。",
+     "where": "sets[H-luna-tanaka].theme"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。",
+     "old": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。",
+     "where": "sets[H-luna-tanaka].why"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+     "old": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. One hand rests lightly at the side of her obi and the other hangs naturally, her sleeves falling clear of her face; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+     "where": "sets[H-luna-tanaka].prompt"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾）",
+     "old": "（無）",
+     "where": "sets[H-luna-tanaka].outfit.道具"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "{\"zh\": \"完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；雙手在腰帶下方輕捧的小香袋，腰帶露出，袖子不遮臉、也不完全蓋住雙手與香袋\", \"en\": \"from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet\"}",
+     "old": "{\"zh\": \"完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；輕扶腰帶側邊的手與自然放下的手，袖子不遮臉\", \"en\": \"from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face\"}",
+     "where": "sets[H-luna-tanaka].cam.bounds"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "{\"zh\": \"站姿全身呈現完整的和服、腰帶位置與身形比例；雙手在腰帶下方輕捧小香袋，典雅端莊；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑\", \"en\": \"the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile\"}",
+     "old": "{\"zh\": \"站姿全身呈現完整的和服、腰帶位置與身形比例；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑\", \"en\": \"the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile\"}",
+     "where": "sets[H-luna-tanaka].cam.purpose"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "\"完整和服與腰帶、雙手輕捧的小香袋、身形比例、甜美淺笑\"",
+     "old": "\"完整和服與腰帶、身形比例、甜美淺笑\"",
+     "where": "sets[H-luna-tanaka].cam.focus"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "\"依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。\"",
+     "old": "\"依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。\"",
+     "where": "sets[H-luna-tanaka].cam.change"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "10 項（新增香袋、手指、遮擋、沒有香袋參考圖）",
+     "old": "6 項",
+     "where": "sets[H-luna-tanaka].risks"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；也沒有香袋的參考圖（R7 香袋外觀只靠文字）；不作身材參考：既有照片的身材不符合設定（Penny）",
+     "old": "既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny）",
+     "where": "sets[H-luna-tanaka].refs[luna-03].note"
+    },
+    {
+     "kind": "狀態（owner 決策）",
+     "new": "accepted",
+     "old": "revised",
+     "where": "sets[H-jia-seo].status"
+    },
+    {
+     "kind": "R7 依 owner 指定修訂",
+     "new": "依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。",
+     "old": "依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。",
+     "where": "adjust[H-luna-tanaka].change"
+    },
+    {
+     "kind": "攝影總覽",
+     "new": "R7 說明與檢查",
+     "old": "R6 文字",
+     "where": "photo.summary／photo.checks"
+    },
+    {
+     "kind": "印刷文字",
+     "new": "依已接受的工作照片框與規劃構圖，23 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。H-luna-tanaka（依 owner 指定修訂）只改雙手與香袋：畫面上下界、人物佔比與印刷判斷都與 R6 相同。",
+     "old": "依已接受的工作照片框與規劃構圖，22 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。",
+     "where": "printing.accepted_impact.summary"
+    },
+    {
+     "kind": "月份規則",
+     "new": "月份人選排序已確認（R4 owner 紀錄，R6、R7 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。",
+     "old": "月份人選排序已確認（R4 owner 紀錄，R6 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。",
+     "where": "month_rules[0]"
+    },
+    {
+     "kind": "待決問題",
+     "new": "（清空：本輪沒有要 Penny 回覆的企劃決策）",
+     "old": "[\"H-jia-seo、H-luna-tanaka 兩套新推薦：各選「接受」或「想修改」，想修改的寫在備註。未回覆不算接受。（其他 22 套、兩本月份與工作照片框都已接受，不需再回覆。）\"]",
+     "where": "questions"
+    },
+    {
+     "kind": "V-Iris 首試準備",
+     "new": "首試準備：企劃、身分、prompt、比例、工作流、待確認、驗收條件、送生成前檢查（只整理，未生成）",
+     "old": "（無）",
+     "where": "m4_prep"
+    }
+   ],
+   "from_commit": "c47b91192ca1c76abfec9a93f1e183f7c3fd11f9",
+   "summary": "依 R7 owner 決策：H-jia-seo 接受（共 23 套已接受，拍攝內容與 prompt 不變）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，記為「依owner指定修訂，待主管核對落實」；月份與工作照片框維持；另整理 V-Iris 首試準備（不生成）。企劃版本升為 shoot-plan-v7；本輪沒有必填決策，v1–v6 的回饋保留為歷史。"
+  },
   "ref_note": "參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。既有照片也不是新構圖的成品。",
   "revision": {
-   "from_commit": "9434b839f589c19832a88e36975fbb31527b7284",
-   "from_version": "shoot-plan-v5",
-   "summary": "依 R6 owner 決策：22 套已接受（拍攝內容與 prompt 不變）、H-jia-seo 換穿搭、H-luna-tanaka 改為日式宅邸庭院的和服外景；兩本月份與工作照片框已接受。企劃版本升為 shoot-plan-v6，回饋另存 v6；v1–v5 的回饋保留為歷史。"
+   "from_commit": "c47b91192ca1c76abfec9a93f1e183f7c3fd11f9",
+   "from_version": "shoot-plan-v6",
+   "summary": "依 R7 owner 決策：H-jia-seo 接受（共 23 套已接受，拍攝內容與 prompt 不變）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，記為「依owner指定修訂，待主管核對落實」；月份與工作照片框維持；另整理 V-Iris 首試準備（不生成）。企劃版本升為 shoot-plan-v7；本輪沒有必填決策，v1–v6 的回饋保留為歷史。"
   },
-  "round": "R6",
+  "round": "R7",
   "sets": [
    {
     "body_show": "有骨架的平口馬甲收出 D 罩杯胸型與細腰；低腰迷你裙露出腰線到胯骨，呈現腰臀比與腿長。",
@@ -7236,6 +7776,11 @@ window.CAL_DATA = {
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "16:9",
     "refs": [
      {
@@ -7296,10 +7841,10 @@ window.CAL_DATA = {
       "zh": "站在石板步道上，重心在後腳、前腳微微向前；身體朝畫面左轉約30度，肩線放鬆、背脊挺直，腰帶位置清楚"
      },
      "bounds": {
-      "en": "from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face",
-      "zh": "完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；輕扶腰帶側邊的手與自然放下的手，袖子不遮臉"
+      "en": "from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet",
+      "zh": "完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；雙手在腰帶下方輕捧的小香袋，腰帶露出，袖子不遮臉、也不完全蓋住雙手與香袋"
      },
-     "change": "依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。",
+     "change": "依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。",
      "comp": {
       "en": "she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop",
       "zh": "人物在右側約六成處；她身後左側是木造緣側與敞開的拉門、看得到整潔的和室，右上角是一棵紅葉；建築只作背景，人物佔畫面高度約八成四"
@@ -7309,7 +7854,7 @@ window.CAL_DATA = {
       "k": "front",
       "zh": "臉正面"
      },
-     "focus": "完整和服與腰帶、身形比例、甜美淺笑",
+     "focus": "完整和服與腰帶、雙手輕捧的小香袋、身形比例、甜美淺笑",
      "gaze": {
       "camera": true,
       "en": "looking into the camera",
@@ -7320,8 +7865,8 @@ window.CAL_DATA = {
      "major": [],
      "pos": "右側約六成（左側緣側與和室）",
      "purpose": {
-      "en": "the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile",
-      "zh": "站姿全身呈現完整的和服、腰帶位置與身形比例；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑"
+      "en": "the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile",
+      "zh": "站姿全身呈現完整的和服、腰帶位置與身形比例；雙手在腰帶下方輕捧小香袋，典雅端莊；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑"
      },
      "shot": {
       "en": "a full-length shot",
@@ -7362,7 +7907,7 @@ window.CAL_DATA = {
     },
     "gaze": "看鏡頭",
     "hair": "黑色細直髮，中分下巴長度的鮑伯，梳理整齊、一側以小珍珠髮夾固定（依人設的鮑伯長度，不改成盤髮）。",
-    "hands": "一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。",
+    "hands": "雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。",
     "id": "H-luna-tanaka",
     "light": {
      "主光": "畫面左前方秋天午後偏斜的柔和陽光",
@@ -7378,11 +7923,12 @@ window.CAL_DATA = {
      "和服": "低飽和藕粉色正絹和服（小紋，細緻的秋草紋；左襟壓右襟、白色半襟，正式穿法）",
      "腰帶": "深梅色名古屋帶（太鼓結），淡金色帶締、奶油色帶揚",
      "襪履": "白足袋、低跟草履",
+     "道具": "小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾）",
      "配件": "耳上一支小珍珠髮夾（不加大型頭飾）"
     },
     "palette": "藕粉・深梅・木色・紅葉",
     "pid": "luna-tanaka",
-    "pose": "站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。",
+    "pose": "站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。",
     "print": {
      "adjust": [],
      "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
@@ -7399,7 +7945,7 @@ window.CAL_DATA = {
      "verdict": "依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
      "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
     },
-    "prompt": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. One hand rests lightly at the side of her obi and the other hangs naturally, her sleeves falling clear of her face; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+    "prompt": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
     "r4": {
      "change": "房間改成新穎整潔的當代日式旅宿（新榻榻米、乾淨木作、白色寢具），不再是古舊和室；服裝改為香檳色斜裁緞面細肩洋裝（仍是貼身緞面方向）；姿勢由端正側坐、雙手放腿上改為單手撐地的慵懶斜坐；視線看窗外紅葉。",
      "owner": "H-Luna／10月：\n保留日式室內氛圍，改成新穎整潔的當代日式旅宿：\n新榻榻米、乾淨木作、精緻寢具，不是古舊家具。\n保留貼身緞面服裝方向。\n姿態改慵懶、有身體曲線的斜坐或半倚，\n不是端正跪坐、證件式擺拍。\n寫清支撐手、腿的位置、臉朝向與視線。",
@@ -7413,11 +7959,89 @@ window.CAL_DATA = {
      "status": "revised",
      "supervisor": "月份維持10月，橫式16:9。\n依 Penny 指示：\n- 人物站在日式建築外的庭院／緣側旁石板路。\n- 背景可透過敞開拉門看見整潔、新穎的和室；\n  木作與榻榻米保持良好狀態，不是破舊老宅。\n- 穿完整搭配的和服，建議低飽和藕粉底、\n  細緻秋草紋樣、深梅色腰帶；避開大面積鮮豔花紋搶臉。\n- 正式和服穿法，腰帶及衣襟合理，不擅自改成浴衣、\n  花魁裝、露胸改造和服或加入大型頭飾。\n- 用腰帶、身體斜側與自然站姿呈現比例，\n  不要求傳統和服同時呈現貼身胸腰曲線。\n- 建議站姿全身、身體約30度斜側，臉轉向鏡頭甜美淺笑。\n  一手輕扶腰帶側邊，另一手自然放下，袖子不要遮臉。\n- 午後柔光與少量秋葉營造氛圍；\n  主角仍占主要畫面，建築與紅葉只是陪襯。\n- 和服、襪履、髮型與小配件整體協調；\n  依既有人設調整髮型，不改五官、髮色或身材設定。"
     },
+    "r7": {
+     "change": "依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。",
+     "diff": [
+      {
+       "after": "雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。",
+       "before": "一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。",
+       "k": "手"
+      },
+      {
+       "after": "站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。",
+       "before": "站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。",
+       "k": "姿態"
+      },
+      {
+       "after": "小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾）",
+       "before": "（無）",
+       "k": "道具"
+      },
+      {
+       "after": "秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。",
+       "before": "秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。",
+       "k": "主題"
+      },
+      {
+       "after": "入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；雙手在腰帶下方輕捧的小香袋，腰帶露出，袖子不遮臉、也不完全蓋住雙手與香袋",
+       "before": "入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；輕扶腰帶側邊的手與自然放下的手，袖子不遮臉",
+       "k": "畫面上下界（入鏡）"
+      },
+      {
+       "after": "站姿全身呈現完整的和服、腰帶位置與身形比例；雙手在腰帶下方輕捧小香袋，典雅端莊；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑",
+       "before": "站姿全身呈現完整的和服、腰帶位置與身形比例；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑",
+       "k": "攝影目的"
+      },
+      {
+       "after": "完整和服與腰帶、雙手輕捧的小香袋、身形比例、甜美淺笑",
+       "before": "完整和服與腰帶、身形比例、甜美淺笑",
+       "k": "主要展示重點"
+      },
+      {
+       "after": "Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile.",
+       "before": "One hand rests lightly at the side of her obi and the other hangs naturally, her sleeves falling clear of her face; she gives a sweet, gentle smile.",
+       "k": "英文 prompt：姿勢與手"
+      },
+      {
+       "after": "from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet",
+       "before": "from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face",
+       "k": "英文 prompt：畫面上下界"
+      },
+      {
+       "after": "the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile",
+       "before": "the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile",
+       "k": "英文 prompt：攝影目的"
+      },
+      {
+       "after": "香袋畫成手提包、太大，或出現品牌、文字、誇張吊飾→寫明掌心大小的布製香袋、短束口繩、without any logos；生成後檢查大小與表面；雙手或手指錯誤（手指數量、交纏、手腕交叉）→寫明雙手輕捧、手肘微彎、手腕不交叉；生成後逐指檢查；手或袖子遮住腰帶，香袋被袖子蓋住→寫明雙手在腰帶下方、腰帶露出、袖子自然垂落、不完全蓋住雙手與香袋；沒有香袋參考圖→既有照片都沒有香袋；外觀只靠文字，生成後檢查顏色、大小、束口繩與手的接觸",
+       "before": "（R6 的 6 項不變）",
+       "k": "風險（新增 4 項）"
+      },
+      {
+       "after": "既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；也沒有香袋的參考圖（R7 香袋外觀只靠文字）；不作身材參考：既有照片的身材不符合設定（Penny）",
+       "before": "既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny）",
+       "k": "參考照片備註（luna-03）"
+      },
+      {
+       "after": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。",
+       "before": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。",
+       "k": "為何符合她"
+      }
+     ],
+     "kept": "保留 R6 的和服、庭院、月份（10 月）、表情（甜美的淺笑、看鏡頭）、身體方向（約30度斜側）與攝影設定（全身、50mm 約 4.6 公尺、臀部高度平視、人物佔畫面高度約 84%）；印刷判斷不變。",
+     "label": "依owner指定修訂，待主管核對落實",
+     "no_ref": "既有照片都沒有香袋，也沒有正式和服；香袋外觀只靠文字描述，本輪不新增任何生成或示意圖。",
+     "note": "Penny 指定了這個修改，但還沒有看過修訂後的版本；主管核對落實後即完成 M-3，不再請 Penny 回覆香袋顏色、手勢或整套企劃。",
+     "owner": "讓她雙手拿一個日式小香包，小香袋那種，很典雅氣質的感覺",
+     "seen_by_owner": false,
+     "status": "owner_revised",
+     "supervisor": "保留R6和服、庭院、月份、表情、身體朝向及攝影設定。\n只將原本「一手扶腰帶、一手放下」改為：\n- 雙手在腰帶下方、下腹前自然輕捧一個小巧日式布製香袋。\n- 香袋採低飽和奶油色或淡金色、細緻織紋與短束口繩，與藕粉和服及深梅色腰帶協調。\n- 尺寸小巧，不做成手提包；不加品牌、文字或誇張吊飾。\n- 肩膀放鬆、手肘自然微彎，手腕不交叉，手指與香袋接觸合理。\n- 袖子自然垂落，不遮臉、不完全蓋住雙手或香袋；腰帶仍清楚可見。\n同步中文、英文prompt、道具欄、姿態與必要構圖說明。\n若沒有香袋參考圖，照實標示；不新增生成。"
+    },
     "ratio": "16:9",
     "refs": [
      {
       "id": "luna-03",
-      "note": "既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny）",
+      "note": "既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；也沒有香袋的參考圖（R7 香袋外觀只靠文字）；不作身材參考：既有照片的身材不符合設定（Penny）",
       "use": "服裝材質"
      },
      {
@@ -7450,15 +8074,31 @@ window.CAL_DATA = {
      [
       "沒有和服參考圖",
       "既有照片只有夏季浴衣（luna-03），只參考比例與笑容；和服細節靠文字，生成後逐項檢查衣襟、腰帶與襪履"
+     ],
+     [
+      "香袋畫成手提包、太大，或出現品牌、文字、誇張吊飾",
+      "寫明掌心大小的布製香袋、短束口繩、without any logos；生成後檢查大小與表面"
+     ],
+     [
+      "雙手或手指錯誤（手指數量、交纏、手腕交叉）",
+      "寫明雙手輕捧、手肘微彎、手腕不交叉；生成後逐指檢查"
+     ],
+     [
+      "手或袖子遮住腰帶，香袋被袖子蓋住",
+      "寫明雙手在腰帶下方、腰帶露出、袖子自然垂落、不完全蓋住雙手與香袋"
+     ],
+     [
+      "沒有香袋參考圖",
+      "既有照片都沒有香袋；外觀只靠文字，生成後檢查顏色、大小、束口繩與手的接觸"
      ]
     ],
     "scene": "當代日式宅邸的庭院，秋天午後：她站在室外的石板步道上，身旁是寬敞的木造緣側，敞開的紙拉門後看得到整潔嶄新的和室（新榻榻米、乾淨淺色木作）；庭院鋪白砂、幾株修剪整齊的松，畫面邊緣一棵紅葉、石板上幾片落葉；建築新穎整潔、不是古舊老宅，庭院裡沒有其他人。",
     "season": "秋",
     "sexy": "低（正式和服，不強調身體曲線）",
-    "status": "revised",
-    "theme": "秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。",
+    "status": "owner_revised",
+    "theme": "秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。",
     "vs_other": "直式款是初夏京都老町家後院、白色紫陽花與木籬笆、鼠尾草綠馬甲洋裝、正面站姿、膝蓋高度輕仰；這款是秋天的當代日式宅邸庭院、緣側與敞開拉門後的和室、藕粉和服、約30度斜側、臀部高度平視。兩款都在日式庭院，所以用季節、建築新舊、服裝（和服對西式洋裝）、身體方向與相機高度拉開。",
-    "why": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。"
+    "why": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。"
    },
    {
     "body_show": "敞開的短開襟在兩側框住貼身小可愛，清楚呈現 F 罩杯胸型與腰線；高腰短裙與交叉的腿呈現腰臀比。",
@@ -7596,6 +8236,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "16:9",
@@ -7774,6 +8419,11 @@ window.CAL_DATA = {
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "16:9",
     "refs": [
      {
@@ -7941,6 +8591,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R4",
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "16:9",
@@ -8114,6 +8769,11 @@ window.CAL_DATA = {
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "16:9",
     "refs": [
      {
@@ -8285,6 +8945,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "16:9",
@@ -8461,6 +9126,11 @@ window.CAL_DATA = {
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "16:9",
     "refs": [
      {
@@ -8631,6 +9301,11 @@ window.CAL_DATA = {
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "16:9",
     "refs": [
      {
@@ -8799,6 +9474,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "16:9",
@@ -8977,6 +9657,11 @@ window.CAL_DATA = {
      "status": "revised",
      "supervisor": "月份維持9月，橫式16:9。\n主管判斷：原黑色單肩鏤空洋裝偏晚宴感，與普通湖畔長椅的搭配不夠完整。\n本輪主推薦：\n- 初秋傍晚湖畔木平台、乾淨簡潔的臨水長椅，保留自然環境。\n- 深酒紅色合身繞頸針織短洋裝，露肩與上背、明確收腰，\n  裙長至大腿中段，材質細緻，沒有運動元素或大型圖案。\n- 低跟細帶涼鞋，配件簡單。\n- 側坐、雙腿交疊，手臂有自然支撐，不遮腰線；\n  不看鏡頭，視線望向湖面。\n- 維持坐姿全身，完整髮頂與雙腳，人物為焦點，\n  避免長椅與湖景佔去主要畫面。"
     },
+    "r7": {
+     "accepted_in": "R7",
+     "note": "已接受（R7 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照 R6 版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "16:9",
     "refs": [
      {
@@ -9023,7 +9708,7 @@ window.CAL_DATA = {
     "scene": "初秋傍晚安靜的湖畔：延伸到水面上的淺色木平台、一張簡潔的木製長椅，平靜的湖面映著低斜的陽光，遠岸是開始轉黃的樹林，畫面沒有其他人。",
     "season": "初秋",
     "sexy": "中",
-    "status": "revised",
+    "status": "accepted",
     "theme": "初秋傍晚的湖畔木平台，深酒紅合身繞頸細針織短洋裝露肩與上背，側坐在臨水長椅上、雙腿交疊望向湖面。",
     "vs_other": "直式款是玻璃溫室、白色立領短上衣＋薄荷綠緞面高腰窄裙、斜側站姿看鏡頭；這款是戶外湖畔、深酒紅細針織繞頸短洋裝、側坐長椅、望向湖面。和 2 月 H-Rin 的酒紅緞面同色系，但材質（針織對緞面）、場景（湖畔對飯店套房）、姿勢（側坐對斜躺）與月份都分開。",
     "why": "主管判斷原本的黑色單肩鏤空中長洋裝偏晚宴感，和普通湖畔長椅不夠搭；改成日常外出也合理的深酒紅細針織繞頸短洋裝：秋天的材質與顏色和湖畔傍晚更協調，露肩、上背與收腰仍保留她俐落的線條。實景、不棚拍、不運動、不晚宴。"
@@ -9161,6 +9846,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "16:9",
@@ -9346,6 +10036,11 @@ window.CAL_DATA = {
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "3:4",
     "refs": [
      {
@@ -9512,6 +10207,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R4",
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "3:4",
@@ -9682,6 +10382,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "3:4",
@@ -9862,6 +10567,11 @@ window.CAL_DATA = {
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "3:4",
     "refs": [
      {
@@ -10026,6 +10736,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R4",
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "3:4",
@@ -10196,6 +10911,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "3:4",
@@ -10371,6 +11091,11 @@ window.CAL_DATA = {
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "3:4",
     "refs": [
      {
@@ -10538,6 +11263,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "3:4",
@@ -10718,6 +11448,11 @@ window.CAL_DATA = {
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "3:4",
     "refs": [
      {
@@ -10889,6 +11624,11 @@ window.CAL_DATA = {
     "r6": {
      "accepted_in": "R6",
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
     "ratio": "3:4",
@@ -11069,6 +11809,11 @@ window.CAL_DATA = {
      "note": "已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R6",
+     "note": "已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "3:4",
     "refs": [
      {
@@ -11237,6 +11982,11 @@ window.CAL_DATA = {
      "note": "已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
      "status": "accepted"
     },
+    "r7": {
+     "accepted_in": "R4",
+     "note": "已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。",
+     "status": "accepted"
+    },
     "ratio": "3:4",
     "refs": [
      {
@@ -11297,17 +12047,19 @@ window.CAL_DATA = {
     "V-rin-ayase",
     "V-rainie-hsu",
     "V-miu-shiraishi",
-    "V-jia-seo"
+    "V-jia-seo",
+    "H-jia-seo"
    ],
    "frames": "accepted",
-   "iris_first": "direction-accepted-cost-not-authorized",
+   "iris_first": "direction-accepted-prep-only-not-authorized",
    "months": "confirmed",
-   "revised": [
-    "H-luna-tanaka",
-    "H-jia-seo"
-   ]
+   "owner_decisions_open": 0,
+   "owner_revised": [
+    "H-luna-tanaka"
+   ],
+   "revised": []
   },
-  "version": "shoot-plan-v6",
+  "version": "shoot-plan-v7",
   "written_on": "2026-10-20"
  },
  "mat": {

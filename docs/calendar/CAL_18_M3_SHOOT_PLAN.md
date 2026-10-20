@@ -1,27 +1,57 @@
-TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂｜送審報告
+TASK-CAL-001／M-3／R7｜Luna香袋修訂與首試準備｜送審報告
 
-# CAL_18 — M-3 24 套雙款寫真企劃、攝影設計與印刷構圖（shoot-plan-v6）
+# CAL_18 — M-3 24 套雙款寫真企劃、攝影設計與印刷構圖（shoot-plan-v7）
 
-> 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v6，R6，2026-10-20）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
+> 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v7，R7，2026-10-20）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
 > **僅規劃：沒有生成任何圖片（含測試圖、示意圖），沒有花 credits，沒有上傳，沒有訓練，沒有改 canon 或 Soul ID。** 本輪生成數 0、credits 0、訓練數 0。
 > R4 狀態（歷史）：8 套已接受、16 套修訂待 Penny 定案；兩本月份人選排序已確認；版面（照片框）尚未定案；生成與費用都未授權。R2 的 Owner 決策逐字紀錄見 `CAL_19_M3_R2_OWNER_DECISION.md`。
 > R5：只修資料一致性與措辭（見 0b），沒有攝影方向變更。
-> **R6 狀態：22 套已接受；H-jia-seo、H-luna-tanaka 兩套新推薦待 Penny 定案；兩本月份與工作照片框已接受（工作版型，不是廠商規格、印刷安全或成品核准）；生成與費用都未授權。**
+> R6 狀態（歷史）：22 套已接受；H-jia-seo、H-luna-tanaka 兩套新推薦待 Penny 定案；兩本月份與工作照片框已接受（工作版型，不是廠商規格、印刷安全或成品核准）。
+> **R7 狀態：23 套已接受（加上 H-jia-seo）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，記為「依owner指定修訂，待主管核對落實」（Penny 還沒有看過修訂後的版本）；本輪沒有要 Penny 回覆的企劃決策；月份與工作照片框維持；V-Iris 首試準備見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`；生成與費用都未授權。**
 
 ## 0. 版本
 
 | 項目 | 內容 |
 |---|---|
 | 名單 | roster-v1（docs/calendar/data/cal_m1_owner_roster.json）；不換人 |
-| 上一版企劃 | shoot-plan-v5（commit `9434b839f589c19832a88e36975fbb31527b7284`） |
-| 這一版 | 依 R6 owner 決策：22 套已接受（拍攝內容與 prompt 不變）、H-jia-seo 換穿搭、H-luna-tanaka 改為日式宅邸庭院的和服外景；兩本月份與工作照片框已接受。企劃版本升為 shoot-plan-v6，回饋另存 v6；v1–v5 的回饋保留為歷史。 |
+| 上一版企劃 | shoot-plan-v6（commit `c47b91192ca1c76abfec9a93f1e183f7c3fd11f9`） |
+| 這一版 | 依 R7 owner 決策：H-jia-seo 接受（共 23 套已接受，拍攝內容與 prompt 不變）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，記為「依owner指定修訂，待主管核對落實」；月份與工作照片框維持；另整理 V-Iris 首試準備（不生成）。企劃版本升為 shoot-plan-v7；本輪沒有必填決策，v1–v6 的回饋保留為歷史。 |
+| R6（歷史） | 依 R6 owner 決策：22 套已接受（拍攝內容與 prompt 不變）、H-jia-seo 換穿搭、H-luna-tanaka 改為日式宅邸庭院的和服外景；兩本月份與工作照片框已接受。企劃版本升為 shoot-plan-v6，回饋另存 v6；v1–v5 的回饋保留為歷史。（基準 commit `9434b839f589c19832a88e36975fbb31527b7284`） |
 | R5 資料修訂 | R5 只修資料一致性與措辭：月份理由與過時的交叉引用改成目前企劃；撤回「橫直服裝差太多就拿第一張當參考圖」的策略；依主管核可替已接受的 V-iris-chen、H-coco-wu、V-coco-wu 補英文妝感句；印刷結論分成已知尺寸、比例計算、規劃目標、生成後待驗證，並改成條件句。24 套方向、月份人選、8 套已接受／16 套待決都不變；企劃版本仍是 shoot-plan-v5，Penny 的回饋延續、不需重填。（基準 commit `4f1591790d0e04cd58b93d95be470c2ff602e63b`） |
 | 素材頁版本 | `b8108eb648a46a57e3bb4dc2158cf878c23d7963` |
 | 桌曆基準 | `4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45` |
 
 **參考照片：** 參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。既有照片也不是新構圖的成品。
 
-## 0a. R6 修改（差異）
+## 0a. R7 修改（差異）
+
+依 R7 owner 決策：H-jia-seo 接受（共 23 套已接受，拍攝內容與 prompt 不變）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，記為「依owner指定修訂，待主管核對落實」；月份與工作照片框維持；另整理 V-Iris 首試準備（不生成）。企劃版本升為 shoot-plan-v7；本輪沒有必填決策，v1–v6 的回饋保留為歷史。
+
+| 類別 | 位置 | 舊 | 新 |
+|---|---|---|---|
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka] | 一手輕扶腰帶側邊、一手自然放下 | 雙手在腰帶下方輕捧小巧的日式布製香袋（手部、姿態、道具、入鏡、攝影目的、英文 prompt 三段、風險與參考備註） |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].hands | 一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。 | 雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。 |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].pose | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。 |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].theme | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].why | 依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。 | 依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。 |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].prompt | A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. One hand rests lightly at the side of her obi and the other hangs naturally, her sleeves falling clear of her face; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph. | A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph. |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].outfit.道具 | （無） | 小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾） |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].cam.bounds | {"zh": "完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；輕扶腰帶側邊的手與自然放下的手，袖子不遮臉", "en": "from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face"} | {"zh": "完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；雙手在腰帶下方輕捧的小香袋，腰帶露出，袖子不遮臉、也不完全蓋住雙手與香袋", "en": "from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet"} |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].cam.purpose | {"zh": "站姿全身呈現完整的和服、腰帶位置與身形比例；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑", "en": "the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile"} | {"zh": "站姿全身呈現完整的和服、腰帶位置與身形比例；雙手在腰帶下方輕捧小香袋，典雅端莊；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑", "en": "the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile"} |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].cam.focus | "完整和服與腰帶、身形比例、甜美淺笑" | "完整和服與腰帶、雙手輕捧的小香袋、身形比例、甜美淺笑" |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].cam.change | "依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。" | "依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。" |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].risks | 6 項 | 10 項（新增香袋、手指、遮擋、沒有香袋參考圖） |
+| R7 依 owner 指定修訂 | sets[H-luna-tanaka].refs[luna-03].note | 既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny） | 既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；也沒有香袋的參考圖（R7 香袋外觀只靠文字）；不作身材參考：既有照片的身材不符合設定（Penny） |
+| R7 依 owner 指定修訂 | adjust[H-luna-tanaka].change | 依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。 | 依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。 |
+| 攝影總覽 | photo.summary／photo.checks | R6 文字 | R7 說明與檢查 |
+| 印刷文字 | printing.accepted_impact.summary | 依已接受的工作照片框與規劃構圖，22 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。 | 依已接受的工作照片框與規劃構圖，23 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。H-luna-tanaka（依 owner 指定修訂）只改雙手與香袋：畫面上下界、人物佔比與印刷判斷都與 R6 相同。 |
+| 月份規則 | month_rules[0] | 月份人選排序已確認（R4 owner 紀錄，R6 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。 | 月份人選排序已確認（R4 owner 紀錄，R6、R7 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。 |
+| 待決問題 | questions | ["H-jia-seo、H-luna-tanaka 兩套新推薦：各選「接受」或「想修改」，想修改的寫在備註。未回覆不算接受。（其他 22 套、兩本月份與工作照片框都已接受，不需再回覆。）"] | （清空：本輪沒有要 Penny 回覆的企劃決策） |
+| V-Iris 首試準備 | m4_prep | （無） | 首試準備：企劃、身分、prompt、比例、工作流、待確認、驗收條件、送生成前檢查（只整理，未生成） |
+
+狀態：1 套由「R6 待決」改為「已接受」（R7 owner 紀錄：H-jia-seo）；H-luna-tanaka 記為「依owner指定修訂，待主管核對落實」。
+
+## 0b. R6 修改（差異，歷史）
 
 依 R6 owner 決策：22 套已接受（拍攝內容與 prompt 不變）、H-jia-seo 換穿搭、H-luna-tanaka 改為日式宅邸庭院的和服外景；兩本月份與工作照片框已接受。企劃版本升為 shoot-plan-v6，回饋另存 v6；v1–v5 的回饋保留為歷史。
 
@@ -52,7 +82,7 @@ TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂｜送審報�
 
 狀態：14 套由「修訂」改為「已接受」（R6 owner 紀錄）。
 
-## 0b. R5 資料修訂（差異，歷史）
+## 0c. R5 資料修訂（差異，歷史）
 
 **不變：** 24 套的服裝、場景、表情、姿態、攝影七欄位（已接受 3 套只多一句妝感）；兩本月份人選與排序；8 套已接受／16 套待決；shoot-plan-v5 回饋欄位與既有瀏覽器資料。
 
@@ -90,7 +120,45 @@ TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂｜送審報�
 
 另有 24 套逐張印刷文字的措辭修訂（共 25 套），新文字見 3c；舊文字保留在資料檔 `r5.changes`。
 
-## 1. R6：owner 決策（逐字，主管轉述）
+## 1. R7：owner 決策（逐字，主管轉述）
+
+> 資料檔：`data/cal_m3_owner_feedback_r7.json`（2026-10-20）。主管（ChatGPT）在 R7 任務單「【Penny 最新指示，直接落實】」轉述的 Penny 決策與一則原文；企劃版本是 shoot-plan-v6、頁面版本是 c47b911（R6 部署）。逐字保存主管轉述的 Penny 決策與 H-luna-tanaka 的原文。只有引號內那一句是 Penny 原話；香袋的位置、顏色、材質、大小與手勢細節是主管在 R7 任務單「一、H-Luna 局部修訂」的補充，另列在 supervisor，不是 Penny 原話。Penny 還沒有看過修訂後的 H-Luna，這裡不記為已接受；也不是生成或費用授權。
+
+```text
+1. H-jia-seo 接受，連同原22套，共23套明確接受。
+2. H-luna-tanaka 唯一修改：
+「讓她雙手拿一個日式小香包，小香袋那種，很典雅氣質的感覺」
+3. Penny 已要求小幅修訂後直接往後執行，不再回來詢問相同企劃決策。
+4. 月份、照片框與其餘23套維持。
+5. 這次仍不是生成或費用授權。
+```
+
+**Penny 原文（R7）：**
+
+- H-luna-tanaka（10 月）：「讓她雙手拿一個日式小香包，小香袋那種，很典雅氣質的感覺」
+
+**主管的收尾指示（逐字，不是 Penny 原話）：**
+
+```text
+- H-Jia 記為本次已接受。
+- H-Luna 記為「依owner指定修訂，待主管核對落實」。
+- 不虛構Penny已看過並接受修改後版本。
+- 主管核對符合指示後即可完成M-3，不再要求Penny回覆香袋顏色、手勢或整套企劃。
+- 頁面改為定稿進度與內容查閱，取消本輪必填決策。
+- 保留v1–v6回饋、素材選擇與localStorage，不重設舊資料。
+```
+
+**可執行摘要（整理，不是 Penny 原話）：**
+
+- 已接受 23 套（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo）：H-coco-wu、H-mia-huang、H-rainie-hsu、V-iris-chen、V-luna-tanaka、V-coco-wu、V-mia-huang、V-yerin-han、H-iris-chen、H-somi-oh、H-yuna-kim、H-tammy-chou、H-rin-ayase、H-miu-shiraishi、H-yerin-han、V-somi-oh、V-yuna-kim、V-tammy-chou、V-rin-ayase、V-rainie-hsu、V-miu-shiraishi、V-jia-seo、H-jia-seo——拍攝內容與 prompt 不變，不再要求回覆。
+- H-luna-tanaka：依owner指定修訂，待主管核對落實（見第 3 節）。
+- Penny 已要求小幅修訂後直接往後執行：不再請 Penny 回覆香袋顏色、手勢或整套企劃；主管核對 H-Luna 落實後即完成 M-3。
+- 月份：維持（R4 已確認）
+- 照片框：維持（R6 已接受的工作照片框）
+- 首試：方向已接受（R6）；R7 只做首試準備，生成與費用仍未授權
+- 尚未核准：生成、費用（credits）、Higgsfield 呼叫與報價預檢、M-4 執行、廠商規格或印刷安全。
+
+## 1a. R6：owner 決策（歷史，逐字，主管轉述）
 
 > 資料檔：`data/cal_m3_owner_feedback_r6.json`（2026-10-20）。主管（ChatGPT）轉述 Penny 在企劃頁（shoot-plan-v5，頁面版本 9434b83，R5 部署）填寫並複製的回饋。Penny 複製的文字第一行沿用頁面當時的「M-3／R4」標題，但企劃版本是 shoot-plan-v5、頁面版本是 9434b83，所以這是本輪（R6）最新回饋，不是舊決策。逐字保存主管轉述的 Penny 決策與兩則原文回饋；Penny 頁面上複製的完整原文沒有直接提供給執行者，所以這裡不是頁面 radio 統計，也沒有把舊版回饋當成新回饋。主管的修訂推薦另列，不是 Penny 原話。
 
@@ -120,7 +188,7 @@ TASK-CAL-001／M-3／R6｜H-Jia 穿搭與 H-Luna 和服外景修訂｜送審報�
 - 首試：V-Iris 首試方向已接受；生成與費用仍未授權，不執行 M-4。
 - 尚未核准：H-jia-seo、H-luna-tanaka 的 R6 新推薦（待 Penny 看頁面決定）、任何生成與費用、廠商規格、印刷安全與成品。
 
-## 1a. R4：owner 決策（歷史，逐字，主管轉述）
+## 1b. R4：owner 決策（歷史，逐字，主管轉述）
 
 > 資料檔：`data/cal_m3_owner_feedback_r4.json`（2026-10-19）。M-3／R4 owner 決策與逐套修改要求逐字紀錄。來源是主管（ChatGPT）轉述的本輪指令；Penny 在頁面複製的原始回饋文字沒有直接提供給執行者，所以這裡保存的是主管轉述的原文，不是頁面 radio 統計，也不是舊版回饋。
 
@@ -164,7 +232,7 @@ V-yerin-han
 - 首試：V-iris-chen 首試方向已同意；費用與生成仍未授權，不執行 M-4。
 - 尚未核准：16 套的新主推薦（主管推薦的修訂起點，尚未經 Penny 批准）、暫定照片框與印刷安全構圖（只是示意，不是印刷安全證明）、生成與費用。
 
-## 1b. R3：Penny 的攝影設計要求（逐字，仍適用）
+## 1c. R3：Penny 的攝影設計要求（逐字，仍適用）
 
 > 資料檔：`data/cal_m3_owner_feedback_r3.json`（2026-10-19）。M-3／R3 Penny 最新要求逐字紀錄（主管轉述）。只保存需求原文；本輪執行的攝影設計是推薦，不是 owner 核准。
 
@@ -213,7 +281,7 @@ Penny 尚未批准其餘人物的具體角度。
 你可以提出推薦，不能寫成 owner 已核准。
 ```
 
-**落實方式：** R6：22 套已接受（R4 的 8 套＋R6 的 14 套），拍攝內容與 prompt 不變；H-jia-seo、H-luna-tanaka 依 Penny 最新回饋各給一個新推薦，七個攝影欄位（景別、畫面上下界、身體朝向、臉部朝向與視線、相機高度與俯仰、畫面配置、攝影目的）中文與英文 prompt 由同一份設定產生並逐套檢查。兩套新推薦尚未經 Penny 批准。
+**落實方式：** R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。H-Luna 是「依owner指定修訂，待主管核對落實」，Penny 還沒有看過修訂後的版本。
 
 **共同規則：**
 
@@ -225,7 +293,7 @@ Penny 尚未批准其餘人物的具體角度。
 - 身體與頭部的扭轉不超過約 60 度（側身站姿、臉轉成三分之二側臉約 55 度）；完整側臉不能同時寫看鏡頭。24 套都沒有背面或回眸。
 - 焦段與距離只是給模型的合理參考，比例換算不是生成保證。本輪不新增固定的日期區，也不做未確認的印刷承諾。
 
-## 2. 兩本攝影總覽（月份已確認；22 套已接受、2 套待 Penny 定案）
+## 2. 兩本攝影總覽（月份已確認；23 套已接受、H-Luna 依 owner 指定修訂待主管核對）
 
 ### 2.1 橫式款（16:9）
 
@@ -239,8 +307,8 @@ Penny 尚未批准其餘人物的具體角度。
 | 6 月 | Coco（H-coco-wu） | 已接受 | 膝上 | 約30度斜側（朝畫面右） | 臉正面 | 看鏡頭 | 胸口高度・平視 | 置中（花壟對稱收攏） | 大笑、V 領胸型與收腰 |
 | 7 月 | Mia（H-mia-huang） | 已接受 | 大腿中段以上 | 約30度斜側（朝畫面左） | 臉正面 | 看鏡頭 | 胸口高度・平視 | 置中（摩天輪光點在右肩後） | 馬甲胸腰比例、俏皮眨眼 |
 | 8 月 | Iris（H-iris-chen） | 已接受 | 全身 | 正面 | 臉正面 | 看鏡頭 | 膝蓋高度・輕仰 | 略偏左（右側海灣） | 胸腰臀線、腿長、燦笑 |
-| 9 月 | Jia（H-jia-seo） | 修訂 | 坐姿全身 | 側面（朝畫面左） | 三分之二側臉 | 看向畫面左側的湖面與遠岸（不看鏡頭） | 坐姿時的腰部高度・平視 | 中央偏右（左側湖面） | 直角肩、上背、收腰、交疊的長腿 |
-| 10 月 | Luna（H-luna-tanaka） | 修訂 | 全身 | 約30度斜側（朝畫面左） | 臉正面 | 看鏡頭 | 臀部高度・平視 | 右側約六成（左側緣側與和室） | 完整和服與腰帶、身形比例、甜美淺笑 |
+| 9 月 | Jia（H-jia-seo） | 已接受 | 坐姿全身 | 側面（朝畫面左） | 三分之二側臉 | 看向畫面左側的湖面與遠岸（不看鏡頭） | 坐姿時的腰部高度・平視 | 中央偏右（左側湖面） | 直角肩、上背、收腰、交疊的長腿 |
+| 10 月 | Luna（H-luna-tanaka） | 依owner指定修訂，待主管核對落實 | 全身 | 約30度斜側（朝畫面左） | 臉正面 | 看鏡頭 | 臀部高度・平視 | 右側約六成（左側緣側與和室） | 完整和服與腰帶、雙手輕捧的小香袋、身形比例、甜美淺笑 |
 | 11 月 | Somi（H-somi-oh） | 已接受 | 膝上 | 約30度斜側（朝畫面左） | 臉正面 | 看鏡頭 | 腰部高度・平視 | 偏左（吧台往右延伸） | 敞開開襟下的胸型、腰臀曲線、月牙眼大笑 |
 | 12 月 | Rainie（H-rainie-hsu） | 已接受 | 膝上 | 正面 | 臉正面 | 直視鏡頭 | 腰部高度・平視 | 偏右（左側城市燈海） | 氣場、馬甲胸腰線、高衩腿線 |
 
@@ -300,72 +368,63 @@ Penny 尚未批准其餘人物的具體角度。
 - R6：H-jia-seo、H-luna-tanaka 用 R4 的同一套產生與檢查程式（禁字、鞋與腳、手、扭轉、俯仰、景別、prompt 片段各出現一次）；Luna 另加禁字 yukata、oiran、geisha、headdress、tiara、cleavage、antique、shabby 等，Jia 另加 gown、sequin、cut-out、one-shoulder。
 - R6：其他 22 套由同一程式重新產生後，與 R5 版本逐欄相同（程式比對）；兩套的身分句（臉、膚色、髮、妝、身材）與 R5 相同。
 - R6：不看鏡頭 7 套（H-Luna 依 Penny 指示改為看鏡頭）；戶外 19 套；同一位兩款同景別：Rainie、Miu、Luna（身體方向與相機高度不同）。
+- R7：H-luna-tanaka 用 R6 的同一套產生與檢查程式重新產生（禁字、鞋與腳、手、遮擋、景別、prompt 片段各出現一次）；與 R6 產生器的輸出比對，只有手部、姿態、道具、入鏡、攝影目的、主要展示重點、英文 prompt 的三段、風險與參考備註不同。
+- R7：其他 23 套由同一程式重新產生後與 R6 逐欄相同；企劃檔裡 23 套除了狀態與 R7 註記，整套資料與 R6 逐欄相同（程式比對）。
 
-## 3. R6 待決的 2 套：Penny 原文、主管推薦、新主推薦與改了什麼
+## 3. R7：H-Luna 依 owner 指定修訂（待主管核對落實）
 
-新主推薦是主管推薦加上執行者的細化，尚未經 Penny 批准；未回覆不算接受。
+只改手部與香袋；Penny 指定了這個修改，但還沒有看過修訂後的版本。本輪不再請 Penny 回覆香袋顏色、手勢或整套企劃。
 
-### H-luna-tanaka｜10 月｜Luna
+### H-luna-tanaka｜10 月｜Luna｜依owner指定修訂，待主管核對落實
 
-**Penny 原文：**「這樣的場景，你不如讓他穿和服，很日式那種感覺，也不是一定要在和室內，可以在日式建築的庭院內，看得到建築內是和室，但他是站在室外，穿著和服」
+**Penny 原文（R7）：**「讓她雙手拿一個日式小香包，小香袋那種，很典雅氣質的感覺」
 
-**主管推薦（逐字）：**
-
-```text
-月份維持10月，橫式16:9。
-依 Penny 指示：
-- 人物站在日式建築外的庭院／緣側旁石板路。
-- 背景可透過敞開拉門看見整潔、新穎的和室；
-  木作與榻榻米保持良好狀態，不是破舊老宅。
-- 穿完整搭配的和服，建議低飽和藕粉底、
-  細緻秋草紋樣、深梅色腰帶；避開大面積鮮豔花紋搶臉。
-- 正式和服穿法，腰帶及衣襟合理，不擅自改成浴衣、
-  花魁裝、露胸改造和服或加入大型頭飾。
-- 用腰帶、身體斜側與自然站姿呈現比例，
-  不要求傳統和服同時呈現貼身胸腰曲線。
-- 建議站姿全身、身體約30度斜側，臉轉向鏡頭甜美淺笑。
-  一手輕扶腰帶側邊，另一手自然放下，袖子不要遮臉。
-- 午後柔光與少量秋葉營造氛圍；
-  主角仍占主要畫面，建築與紅葉只是陪襯。
-- 和服、襪履、髮型與小配件整體協調；
-  依既有人設調整髮型，不改五官、髮色或身材設定。
-```
-
-- **原設計（R5）：** 新穎整潔的當代日式旅宿房間，香檳色斜裁緞面細肩洋裝，在榻榻米上單手撐地慵懶斜坐、望向窗外的紅葉。｜席地坐姿全身｜約45度斜側（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側窗外的紅葉庭院｜坐姿時的胸口高度・平視
-- **新主推薦：** 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。
-- **攝影：** 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視
-- **改了什麼：** 依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。
-- **選擇理由：** 依 Penny 指示改為站在室外的和服寫真：站姿全身讓和服與腰帶完整；身體約30度斜側、臉轉向鏡頭，扭轉約30度；相機在臀部高度平視（直式款是膝蓋高度輕仰），不讓建築壓過人物。
-- **參考照片：** luna-03（服裝材質）：既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny）；luna-12（表情）：甜美的淺笑與鮑伯髮型；街景與服裝不採用；不作身材參考：既有照片的身材不符合設定（Penny）
-
-### H-jia-seo｜9 月｜Jia
-
-**Penny 原文：**「他這個衣服跟場景有搭嗎？」
-
-**主管推薦（逐字）：**
+**主管補充的落實細節（逐字，不是 Penny 原話）：**
 
 ```text
-月份維持9月，橫式16:9。
-主管判斷：原黑色單肩鏤空洋裝偏晚宴感，與普通湖畔長椅的搭配不夠完整。
-本輪主推薦：
-- 初秋傍晚湖畔木平台、乾淨簡潔的臨水長椅，保留自然環境。
-- 深酒紅色合身繞頸針織短洋裝，露肩與上背、明確收腰，
-  裙長至大腿中段，材質細緻，沒有運動元素或大型圖案。
-- 低跟細帶涼鞋，配件簡單。
-- 側坐、雙腿交疊，手臂有自然支撐，不遮腰線；
-  不看鏡頭，視線望向湖面。
-- 維持坐姿全身，完整髮頂與雙腳，人物為焦點，
-  避免長椅與湖景佔去主要畫面。
+保留R6和服、庭院、月份、表情、身體朝向及攝影設定。
+只將原本「一手扶腰帶、一手放下」改為：
+- 雙手在腰帶下方、下腹前自然輕捧一個小巧日式布製香袋。
+- 香袋採低飽和奶油色或淡金色、細緻織紋與短束口繩，與藕粉和服及深梅色腰帶協調。
+- 尺寸小巧，不做成手提包；不加品牌、文字或誇張吊飾。
+- 肩膀放鬆、手肘自然微彎，手腕不交叉，手指與香袋接觸合理。
+- 袖子自然垂落，不遮臉、不完全蓋住雙手或香袋；腰帶仍清楚可見。
+同步中文、英文prompt、道具欄、姿態與必要構圖說明。
+若沒有香袋參考圖，照實標示；不新增生成。
 ```
 
-- **原設計（R5）：** 初秋傍晚的湖畔木平台，黑色單肩貼身中長洋裝帶腰側鏤空與側開衩，側坐在臨水長椅上望向湖面。｜坐姿全身｜側面（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側的湖面與遠岸｜坐姿時的腰部高度・平視
-- **新主推薦：** 初秋傍晚的湖畔木平台，深酒紅合身繞頸細針織短洋裝露肩與上背，側坐在臨水長椅上、雙腿交疊望向湖面。
-- **攝影：** 坐姿全身｜側面（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側的湖面與遠岸｜坐姿時的腰部高度・平視
-- **改了什麼：** 依 Penny「他這個衣服跟場景有搭嗎？」與主管判斷：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都保留；偏晚宴的黑色單肩鏤空中長洋裝改為深酒紅細針織繞頸合身短洋裝（露肩與上背、收腰、裙長大腿中段、沒有運動元素或大型圖案）；鞋與配件維持簡單。
-- **選擇理由：** Penny 只問衣服和場景有沒有搭：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都照 R4；只把晚宴感的黑色單肩鏤空洋裝換成適合湖畔傍晚的深酒紅細針織繞頸短洋裝。頭轉回約55度成三分之二側臉，仍能認人。
-- **參考照片：** jia-08（身分）：夜晚穿搭與認臉；回頭姿勢不採用；沒有這件深酒紅針織洋裝的參考圖；jia-02（表情）：冷靜的表情；室內背景不採用
+- **改了什麼：** 依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。
+- **不變：** 保留 R6 的和服、庭院、月份（10 月）、表情（甜美的淺笑、看鏡頭）、身體方向（約30度斜側）與攝影設定（全身、50mm 約 4.6 公尺、臀部高度平視、人物佔畫面高度約 84%）；印刷判斷不變。
+- **參考圖：** 既有照片都沒有香袋，也沒有正式和服；香袋外觀只靠文字描述，本輪不新增任何生成或示意圖。
+- **狀態：** Penny 指定了這個修改，但還沒有看過修訂後的版本；主管核對落實後即完成 M-3，不再請 Penny 回覆香袋顏色、手勢或整套企劃。
+- **攝影（不變）：** 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視
 
-### 22 套已接受（拍攝內容與 prompt 不變）
+**修改前（R6）→ 修改後（R7）：**
+
+| 欄位 | 修改前（R6） | 修改後（R7） |
+|---|---|---|
+| 手 | 一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。 | 雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。 |
+| 姿態 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。 |
+| 道具 | （無） | 小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾） |
+| 主題 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 |
+| 畫面上下界（入鏡） | 入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；輕扶腰帶側邊的手與自然放下的手，袖子不遮臉 | 入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；雙手在腰帶下方輕捧的小香袋，腰帶露出，袖子不遮臉、也不完全蓋住雙手與香袋 |
+| 攝影目的 | 站姿全身呈現完整的和服、腰帶位置與身形比例；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑 | 站姿全身呈現完整的和服、腰帶位置與身形比例；雙手在腰帶下方輕捧小香袋，典雅端莊；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑 |
+| 主要展示重點 | 完整和服與腰帶、身形比例、甜美淺笑 | 完整和服與腰帶、雙手輕捧的小香袋、身形比例、甜美淺笑 |
+| 英文 prompt：姿勢與手 | One hand rests lightly at the side of her obi and the other hangs naturally, her sleeves falling clear of her face; she gives a sweet, gentle smile. | Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile. |
+| 英文 prompt：畫面上下界 | from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face | from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet |
+| 英文 prompt：攝影目的 | the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile | the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile |
+| 風險（新增 4 項） | （R6 的 6 項不變） | 香袋畫成手提包、太大，或出現品牌、文字、誇張吊飾→寫明掌心大小的布製香袋、短束口繩、without any logos；生成後檢查大小與表面；雙手或手指錯誤（手指數量、交纏、手腕交叉）→寫明雙手輕捧、手肘微彎、手腕不交叉；生成後逐指檢查；手或袖子遮住腰帶，香袋被袖子蓋住→寫明雙手在腰帶下方、腰帶露出、袖子自然垂落、不完全蓋住雙手與香袋；沒有香袋參考圖→既有照片都沒有香袋；外觀只靠文字，生成後檢查顏色、大小、束口繩與手的接觸 |
+| 參考照片備註（luna-03） | 既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny） | 既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；也沒有香袋的參考圖（R7 香袋外觀只靠文字）；不作身材參考：既有照片的身材不符合設定（Penny） |
+| 為何符合她 | 依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。 | 依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。 |
+
+### R6 的 2 套新推薦（歷史：當時的 Penny 原文與改動）
+
+| ID | R6 Penny 原文 | R6 改了什麼 | 目前 |
+|---|---|---|---|
+| H-luna-tanaka | 這樣的場景，你不如讓他穿和服，很日式那種感覺，也不是一定要在和室內，可以在日式建築的庭院內，看得到建築內是和室，但他是站在室外，穿著和服 | 依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。 | 依owner指定修訂，待主管核對落實 |
+| H-jia-seo | 他這個衣服跟場景有搭嗎？ | 依 Penny「他這個衣服跟場景有搭嗎？」與主管判斷：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都保留；偏晚宴的黑色單肩鏤空中長洋裝改為深酒紅細針織繞頸合身短洋裝（露肩與上背、收腰、裙長大腿中段、沒有運動元素或大型圖案）；鞋與配件維持簡單。 | 已接受（R7） |
+
+### 23 套已接受（拍攝內容與 prompt 不變）
 
 | ID | 月份 | 接受輪次 | 主題 | 攝影 | 印刷判斷 |
 |---|---|---|---|---|---|
@@ -378,6 +437,7 @@ Penny 尚未批准其餘人物的具體角度。
 | H-rin-ayase | 2 月 | R6 | 夕陽中的高樓飯店套房，酒紅緞面垂墜領細肩長洋裝，側躺在深綠絲絨貴妃椅上望向窗外的夕陽。 | 斜躺全身｜側面斜躺（朝畫面右）｜三分之二側臉・不看鏡頭：看畫面右側窗外的夕陽｜略高於她斜躺時頭部的高度・輕俯 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 |
 | H-rainie-hsu | 12 月 | R4 | Penny 已接受的方向：頂樓夜景，血紅緞面馬甲高衩迷你洋裝，背靠玻璃欄杆直視鏡頭。 | 膝上｜正面｜臉正面・看鏡頭｜腰部高度・平視 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。 |
 | H-miu-shiraishi | 3 月 | R6 | 晨光灑進的一人公寓，象牙白蕾絲緞面細肩小可愛與短褲，背靠床頭的枕頭堆自然半倚、歪頭甜笑。 | 坐姿全身｜約45度斜側（朝畫面左）｜臉正面・看鏡頭｜坐姿時的腰部高度・平視 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 |
+| H-jia-seo | 9 月 | R7 | 初秋傍晚的湖畔木平台，深酒紅合身繞頸細針織短洋裝露肩與上背，側坐在臨水長椅上、雙腿交疊望向湖面。 | 坐姿全身｜側面（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側的湖面與遠岸｜坐姿時的腰部高度・平視 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 |
 | H-yerin-han | 5 月 | R6 | 春日球場的白色球車，白色無袖針織 polo＋淺藍百褶高爾夫迷你裙，坐在座椅邊緣微微後靠、伸長雙腿的俏皮笑容。 | 坐姿全身｜約45度斜側（朝畫面左）｜臉正面・看鏡頭｜坐姿時的腰部高度・平視 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 |
 | V-iris-chen | 9 月 | R4 | 黃金時段的河濱草地，白色方領短上衣配牛仔迷你裙，正面站著甜笑（Penny 指定的穿搭）。 | 大腿中段以上｜正面｜臉正面・看鏡頭｜胸口高度・平視 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 |
 | V-luna-tanaka | 6 月 | R4 | 紫陽花盛開的町家庭院，鼠尾草綠馬甲感洋裝，正面站在石板路上。 | 全身｜正面｜臉正面・看鏡頭｜膝蓋高度・輕仰 | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 |
@@ -413,7 +473,7 @@ Penny 尚未批准其餘人物的具體角度。
 | V-miu-shiraishi | 撤回運河與奶油 V 領針織裙：改為春日度假別墅木平台與白色帆布吊床，杏桃色有骨架的細肩短洋裝（配色與其他 23 套比較後選定）；姿勢由欄杆站姿改為坐在吊床邊、雙手抓布邊、微微前傾；不看鏡頭、看向開花的果樹；景別由大腿中段以上改為坐姿全身。 |
 | V-jia-seo | 保留玻璃溫室；薄荷緞面中長裙改為高腰貼臀窄裙（腰頭在肚臍上方、貼臀往膝下收窄、左前側開衩到大腿中段）；景別由膝上改為全身、身體改為約45度斜側並把臀部往後側，讓輪廓真的看得出曲線；白色細帶涼鞋因全身入鏡寫回 prompt。 |
 
-依已接受的工作照片框與規劃構圖，22 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。
+依已接受的工作照片框與規劃構圖，23 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-somi-oh、H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。H-luna-tanaka（依 owner 指定修訂）只改雙手與香袋：畫面上下界、人物佔比與印刷判斷都與 R6 相同。
 
 **已接受套數的中英同步（已套用（R5，主管核可的中英同步））：** V-iris-chen、H-coco-wu、V-coco-wu 的中文「妝感」原本沒有寫進英文 prompt（Iris 與 Coco 的人設身分句沒有妝感）。R5 依主管核可，只在英文 prompt 的身分句後補一句妝感；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。因此這 3 套的 prompt 不再與 v4 逐字相同；其他 5 套已接受的 prompt 仍與 v4 相同。
 
@@ -494,7 +554,7 @@ Penny 尚未批准其餘人物的具體角度。
 | ID | 狀態 | 照片框 | 比例計算 | 邊緣（規劃預估） | 不能切／規劃目標 | 印刷判斷（條件） | 生成後待驗證 | 原生尺寸 | 有效 ppi |
 |---|---|---|---|---|---|---|---|---|---|
 | H-iris-chen | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 9%（套框後理論約 7.6%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
-| H-luna-tanaka | 修訂 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 9%（套框後理論約 7.1%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| H-luna-tanaka | 依owner指定修訂，待主管核對落實 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 9%（套框後理論約 7.1%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | H-somi-oh | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 8%（套框後理論約 6.4%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm） | 髮頂、臉、入鏡的雙手／規劃目標（套框後）：髮頂上方 ≥4% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | H-coco-wu | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 7%（套框後理論約 5.0%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm） | 髮頂、臉、入鏡的雙手／規劃目標（套框後）：髮頂上方 ≥4% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | H-mia-huang | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 8%（套框後理論約 5.9%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm） | 髮頂、臉、入鏡的雙手／規劃目標（套框後）：髮頂上方 ≥4% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
@@ -503,7 +563,7 @@ Penny 尚未批准其餘人物的具體角度。
 | H-rin-ayase | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 24%（套框後理論約 22.9%）；左右：規劃頭與腳離左右邊緣各約 7% | 髮頂、臉、入鏡的雙手、頭與腳／規劃目標（套框後）：髮頂上方 ≥4%、左右各 ≥5% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、頭與腳是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | H-rainie-hsu | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 8%（套框後理論約 6.1%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 3 cm） | 髮頂、臉、入鏡的雙手／規劃目標（套框後）：髮頂上方 ≥4% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | H-miu-shiraishi | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 9%（套框後理論約 7.5%）；下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
-| H-jia-seo | 修訂 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 8%（套框後理論約 6.7%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| H-jia-seo | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 8%（套框後理論約 6.7%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | H-yerin-han | 已接受 | 橫式工作照片框（R6 已接受）（192×104 mm） | 比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖 | 上緣：規劃髮頂留白約 10%（套框後理論約 8.4%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%） | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | H 16:9：原生尺寸未知（推測 2048×1152，未驗證） | 規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | V-iris-chen | 已接受 | 直式 3:4 工作照片框（R6 已接受）（120×160 mm） | 比例計算：3:4 放入 3:4 框不裁切 | 上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在大腿中段 | 髮頂、臉、入鏡的雙手／規劃目標（套框後）：髮頂上方 ≥4% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi | V 3:4：原生 1536×2048（已知） | 比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | V-luna-tanaka | 已接受 | 直式 3:4 工作照片框（R6 已接受）（120×160 mm） | 比例計算：3:4 放入 3:4 框不裁切 | 上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5% | 髮頂、臉、入鏡的雙手、雙腳與鞋／規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3% | 依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。 | 生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi | V 3:4：原生 1536×2048（已知） | 比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
@@ -523,13 +583,14 @@ Penny 尚未批准其餘人物的具體角度。
 - 依暫定 3:4 框與規劃構圖，暫無須為印刷調整 V-Iris 的拍攝方向：3:4 照片放進 3:4 框在比例上不裁切；髮頂留白約 8%、下緣在大腿中段、雙手在框內是 prompt 規劃目標，不是實圖量測（R4 文字誤寫髮頂約 7%，依逐張表更正為約 8%）。
 - 直式 3:4 工作照片框已在 R6 由 Penny 接受（120×160 mm），所以 V-Iris 依目前企劃不需要為照片框重排構圖；120×128 等其他框不再是現行方案。實際裁切仍要用實圖確認。
 - 首試出圖後用實圖確認：實際輸出像素（預期 1536×2048，以實際輸出為準）、套框後髮頂與雙手是否在框內、有效 ppi（若 1536 px／120 mm 約 325 ppi；300 是本案工作目標，不是廠商已確認的最低標準）。
+- R7：首張驗收條件（含套框與有效 ppi）見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。
 
 ## 4. R2 Penny 回饋落實表（歷史紀錄；最新決定見第 1、3 節）
 
 | 人設 | Penny 回饋（逐字） | 當時（R2）怎麼落實（歷史，部分場景已在 R4 撤回） | 目前橫式款 | 目前直式款 |
 |---|---|---|---|---|
 | Iris | Iris： - 更顯身材的上衣，搭牛仔迷你裙。 - 身體面向鏡頭，專業寫真姿態、有笑容。 - 不要背部回眸或轉頭看鏡頭。 | 更顯身材的上衣：V 白色貼身方領短上衣（露腰）；H 貼身羅紋針織平口；牛仔迷你裙：V 淺藍高腰牛仔迷你裙；身體面向鏡頭、專業姿態、有笑容：兩款都正面站定（扶柱／插腰／碰髮）並微笑；不要背部回眸或轉頭：兩款 prompt 經程式檢查，不含回頭、轉身字樣 | 夏日上午的淺色平坦岩岸海灣，向日葵黃有骨架的平口馬甲短上衣配同色低腰迷你裙，身體正面燦笑。 | 黃金時段的河濱草地，白色方領短上衣配牛仔迷你裙，正面站著甜笑（Penny 指定的穿搭）。 |
-| Luna | Luna： - 衣服要顯身材。 - 既有參考照片的身材不符合設定。 - 只能借表情／環境，不能當身材標準。 | 衣服顯身材：H 貼身緞面細肩洋裝；V 心形領有骨架的貼身洋裝；既有照片身材不符：所有 Luna 參考照片都標「不作身材參考」，身材依設定數字；只借表情／環境：參考用途只標「表情」與「場景」 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 | 紫陽花盛開的町家庭院，鼠尾草綠馬甲感洋裝，正面站在石板路上。 |
+| Luna | Luna： - 衣服要顯身材。 - 既有參考照片的身材不符合設定。 - 只能借表情／環境，不能當身材標準。 | 衣服顯身材：H 貼身緞面細肩洋裝；V 心形領有骨架的貼身洋裝；既有照片身材不符：所有 Luna 參考照片都標「不作身材參考」，身材依設定數字；只借表情／環境：參考用途只標「表情」與「場景」 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 | 紫陽花盛開的町家庭院，鼠尾草綠馬甲感洋裝，正面站在石板路上。 |
 | Somi | Somi：接受新版暖橘復古棚景主方向。（以上各保留為其中一款，再另設完全不同的一款。） | 接受暖橘復古棚景：H-somi-oh 沿用 v2 原文（含炸雞只在橫幅邊緣）；另一款完全不同：V 雪夜溫泉小鎮、白色針織洋裝＋紅色長大衣 | Penny 已接受的方向（R4 只改上衣穿法）：暖橘復古小吃店棚景，敞開的奶油色短開襟＋鏽橘貼身細肩小可愛＋高腰針織短裙，輕靠吧台大笑。 | 下雪的溫泉小鎮夜晚，象牙白貼身針織洋裝外披紅色長大衣，抬眼看著燈籠旁飄落的雪，自然地笑開。 |
 | Coco | Coco：接受泳池主方向。（以上各保留為其中一款，再另設完全不同的一款。） | 接受泳池：V-coco-wu 沿用 v2 原文；另一款完全不同：H 初夏薰衣草花田、白色亞麻洋裝 | 初夏傍晚的薰衣草花田，白色細肩亞麻洋裝，拿著草帽大笑。 | Penny 已接受的方向：週末飯店泳池，薄荷綠比基尼＋淺紫透膚罩衫，坐在池邊大笑。 |
 | Mia | Mia： - 場景、服裝全面去電競化。 - 原咖啡座替代方案太普通，兩款重新設計。 - 不放電競椅、耳機、RGB房間等職業符號。 | 全面去電競化：兩款都沒有電競椅、耳機、RGB 房間或霓虹（程式檢查）；咖啡座太普通、兩款重設：H 夏日黃昏遊樂碼頭；V 春夜櫻花步道 | 夏日黃昏的海邊遊樂碼頭，粉色緞面馬甲上衣配白色迷你裙，拿著棉花糖俏皮眨眼。 | 春夜的櫻花河岸步道，淺紫貼身露肩針織洋裝，站在花枝下甜笑。 |
@@ -553,8 +614,8 @@ Penny 尚未批准其餘人物的具體角度。
 | 6 月 | H-coco-wu | 已接受 | 初夏傍晚的薰衣草花田，白色細肩亞麻洋裝，拿著草帽大笑。 | 花田（戶外） | 洋裝：白色亞麻細肩洋裝，抓皺貼身上身、柔和 V 領、收腰、微蓬迷你裙；鞋：白色平底涼鞋（不入鏡）；配件：白色雛菊髮夾、腳踝細金鍊（不入鏡）、草帽（拿在手上） | 薰衣草紫・白・暖金 | 站在花壟之間。一手把草帽拿在身側，一手把頭髮塞到耳後。 | 瞇眼大笑、深酒窩 | 中 | 傍晚逆光＋反光板 | 膝上｜約30度斜側（朝畫面右）｜臉正面・看鏡頭｜胸口高度・平視 |
 | 7 月 | H-mia-huang | 已接受 | 夏日黃昏的海邊遊樂碼頭，粉色緞面馬甲上衣配白色迷你裙，拿著棉花糖俏皮眨眼。 | 海邊遊樂碼頭（戶外黃昏） | 上身：粉色緞面馬甲上衣（心形領）；下身：白色高腰 A 字迷你裙；鞋：白色厚底涼鞋（不入鏡）；配件：小珍珠耳環、細銀手鍊、一支粉色棉花糖 | 棉花糖粉・薰衣草紫・柔金 | 站在木棧道上。一手插腰，一手把棉花糖拿在肩高、離開臉。 | 俏皮眨眼、挑逗的半笑 | 中 | 黃昏天光＋柔光主光 | 大腿中段以上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜胸口高度・平視 |
 | 8 月 | H-iris-chen | 已接受 | 夏日上午的淺色平坦岩岸海灣，向日葵黃有骨架的平口馬甲短上衣配同色低腰迷你裙，身體正面燦笑。 | 夏日岩岸海灣（戶外） | 上身：向日葵黃有骨架的平口馬甲短上衣（棉質府綢、細肩帶，收出胸型與腰線）；下身：同色低腰迷你裙（腰頭在肚臍下方、側邊小開衩）；鞋：白色平底繫帶涼鞋；配件：細金鍊項鍊、小金色耳針 | 向日葵黃・湖水綠・淺岩灰 | 站在平坦的岩石平台上。雙手輕放在低腰裙的腰頭兩側（胯骨上）。 | 燦爛溫暖的笑容 | 中高 | 上午斜光＋大反光板 | 全身｜正面｜臉正面・看鏡頭｜膝蓋高度・輕仰 |
-| 9 月 | H-jia-seo | 修訂 | 初秋傍晚的湖畔木平台，深酒紅合身繞頸細針織短洋裝露肩與上背，側坐在臨水長椅上、雙腿交疊望向湖面。 | 湖畔木平台（戶外） | 洋裝：深酒紅細針織繞頸合身短洋裝（露肩與上背、腰部明確收窄、裙長大腿中段；細緻針織，沒有運動元素或大型圖案）；鞋：黑色細帶低跟涼鞋；配件：小銀色圈耳環 | 深酒紅・湖水灰藍・暖金 | 側坐在湖畔長椅上，雙腿交疊。靠鏡頭的手輕放在交疊的膝上，另一手手臂搭在長椅椅背上（不遮腰線）。 | 冷靜、若有所思的淺笑 | 中 | 傍晚逆光＋反光板 | 坐姿全身｜側面（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側的湖面與遠岸｜坐姿時的腰部高度・平視 |
-| 10 月 | H-luna-tanaka | 修訂 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 | 日式宅邸庭院與緣側（戶外） | 和服：低飽和藕粉色正絹和服（小紋，細緻的秋草紋；左襟壓右襟、白色半襟，正式穿法）；腰帶：深梅色名古屋帶（太鼓結），淡金色帶締、奶油色帶揚；襪履：白足袋、低跟草履；配件：耳上一支小珍珠髮夾（不加大型頭飾） | 藕粉・深梅・木色・紅葉 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。 | 甜美的淺笑 | 低（正式和服，不強調身體曲線） | 午後斜光＋大反光板 | 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視 |
+| 9 月 | H-jia-seo | 已接受 | 初秋傍晚的湖畔木平台，深酒紅合身繞頸細針織短洋裝露肩與上背，側坐在臨水長椅上、雙腿交疊望向湖面。 | 湖畔木平台（戶外） | 洋裝：深酒紅細針織繞頸合身短洋裝（露肩與上背、腰部明確收窄、裙長大腿中段；細緻針織，沒有運動元素或大型圖案）；鞋：黑色細帶低跟涼鞋；配件：小銀色圈耳環 | 深酒紅・湖水灰藍・暖金 | 側坐在湖畔長椅上，雙腿交疊。靠鏡頭的手輕放在交疊的膝上，另一手手臂搭在長椅椅背上（不遮腰線）。 | 冷靜、若有所思的淺笑 | 中 | 傍晚逆光＋反光板 | 坐姿全身｜側面（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側的湖面與遠岸｜坐姿時的腰部高度・平視 |
+| 10 月 | H-luna-tanaka | 依owner指定修訂，待主管核對落實 | 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。 | 日式宅邸庭院與緣側（戶外） | 和服：低飽和藕粉色正絹和服（小紋，細緻的秋草紋；左襟壓右襟、白色半襟，正式穿法）；腰帶：深梅色名古屋帶（太鼓結），淡金色帶締、奶油色帶揚；襪履：白足袋、低跟草履；配件：耳上一支小珍珠髮夾（不加大型頭飾）；道具：小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾） | 藕粉・深梅・木色・紅葉 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。 | 甜美的淺笑 | 低（正式和服，不強調身體曲線） | 午後斜光＋大反光板 | 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視 |
 | 11 月 | H-somi-oh | 已接受 | Penny 已接受的方向（R4 只改上衣穿法）：暖橘復古小吃店棚景，敞開的奶油色短開襟＋鏽橘貼身細肩小可愛＋高腰針織短裙，輕靠吧台大笑。 | 復古小吃店棚景（棚內） | 外搭：奶油色合身羅紋針織短開襟（全部不扣、敞開，從肩上自然垂下）；上身：鏽橘色貼身羅紋方領細肩小可愛（包覆胸型）；下身：高腰鏽橘色針織迷你裙；鞋：棕色有跟皮革樂福鞋（不入鏡）；配件：紅色琺瑯小愛心耳環 | 暖橘・奶油・紅 | 站著，一側臀部輕靠磁磚吧台，重心在後腳、前腳輕交叉。一手放在吧台邊緣，一手把頭髮塞到耳後。 | 月牙眼大笑、露出酒窩 | 中高 | 暖色柔光箱棚拍 | 膝上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜腰部高度・平視 |
 | 12 月 | H-rainie-hsu | 已接受 | Penny 已接受的方向：頂樓夜景，血紅緞面馬甲高衩迷你洋裝，背靠玻璃欄杆直視鏡頭。 | 頂樓露台（戶外夜晚） | 洋裝：血紅緞面馬甲迷你洋裝（大腿高衩）；鞋：黑色細帶高跟涼鞋（不入鏡）；配件：大型銀色垂墜耳環、細銀手環 | 血紅・黑・銀・深藍 | 背靠玻璃欄杆，一腳從高衩往前。雙手放在身後的欄杆上；不拿任何杯子。 | 自信又帶點壞的笑 | 高 | 夜景柔光箱主光＋城市散景 | 膝上｜正面｜臉正面・看鏡頭｜腰部高度・平視 |
 
@@ -592,7 +653,7 @@ Penny 尚未批准其餘人物的具體角度。
 | 11 月 | H-somi-oh（Somi） | 晚秋的暖橘棚景 | V-yuna-kim（Yuna） | 深秋銀杏大道 |
 | 12 月 | H-rainie-hsu（Rainie） | 年末頂樓夜景的派對感收尾 | V-somi-oh（Somi） | 冬天下雪的溫泉小鎮 |
 
-- 月份人選排序已確認（R4 owner 紀錄，R6 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。
+- 月份人選排序已確認（R4 owner 紀錄，R6、R7 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。
 - 每本 12 位各出現一次；同一月份兩本是不同的人。
 - 既有碰撞配對（Miu–Jia、Miu–Somi、Jia–Somi、Yerin–Rin）與 R2 目視相似（Somi–Tammy、Iris–Rainie）：不放同一月份，也不放在同一本的相鄰月份。這不是同框規則（每頁只有一人），只是避免翻頁時直接並排比較。
 - 先看季節（花田、紫陽花、櫻花、銀杏、雪景、海灘、泳池這些有季節的場景放在對的月份），再讓前後月份的色調交替；不為了季節改動已接受的企劃。
@@ -617,7 +678,7 @@ Penny 尚未批准其餘人物的具體角度。
 
 **選擇理由：** Iris 依 Penny 要求身體正面、有笑容；橫式用全身＋膝蓋高度輕仰拉長腿，直式是大腿中段以上＋胸口高度，景別與相機高度都不同。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 全面換掉紅磚騎樓與米杏針織套裝：改成夏日上午的淺色平坦岩岸海灣、向日葵黃有骨架的平口馬甲短上衣＋同色低腰迷你裙；身體正面、笑容不變；手改成雙手放在低腰裙腰頭兩側；相機改為膝蓋高度輕仰。
 
@@ -637,7 +698,7 @@ Penny 尚未批准其餘人物的具體角度。
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，50mm，約 4.8 公尺，視野 3.46×1.94 公尺；人物約佔畫面高度 84%（規劃）；相機約 0.46 公尺高、畫面中心約 0.84 公尺高，俯仰約 +4.4 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.6%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.6%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 她是台北的日常生活者，夏天就去海邊：亮黃與湖水綠讓她的甜美與身材都更外放；身體正面、有笑容是 Penny 的要求。 |
 | 與同一人另一款的差異 | 直式款是河濱草地、白色方領短上衣＋牛仔迷你裙、黃金時段逆光；這款是夏日上午的岩岸海灣、向日葵黃馬甲套裝、正面全身。與 Coco 泳池（比基尼、坐池邊）、Yerin 夕陽沙灘（白色背心洋裝）的時間、地面與服裝都不同；與 7 月 Mia 的粉色緞面馬甲（黃昏碼頭、眨眼、大腿以上）用顏色、材質、時間與景別拉開。 |
 | 參考照片（用途） | iris-01：身分（認臉與甜笑；服裝不同）；iris-12：表情（開心的笑） |
@@ -656,48 +717,50 @@ prompt 草稿（16:9，尚未執行）：
 A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips. Fresh, light everyday makeup with a natural lip colour and softly glowing skin. She wears a sunflower-yellow structured cotton bustier crop top with thin straps and light boning that shapes her chest and narrow waist, a matching low-rise mini skirt sitting below her navel with a small side slit, flat white strappy sandals, a thin gold chain necklace and small gold stud earrings. Setting: a summer bay in the late morning, a wide, flat and dry pale rock shelf well back from the water, clear turquoise water and a distant green headland, a clean blue sky, the shore empty. Both hands rest lightly on her hips at the low waistband of the skirt; she smiles brightly and warmly. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to sandals, the structured bustier top, her bare waist, the low-rise mini skirt, her legs and the flat white sandals, both hands resting at the waistband on her hips. Body: standing on the flat rock shelf with her weight on her left leg and her right knee softly bent, her body square to the camera, shoulders level and relaxed, her hips shifted slightly with her weight. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.8 metres, camera at her knee height, tilted slightly upward, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands slightly left of centre, the bay and a distant headland on the right, the horizon low behind her knees and clean blue sky above her. Emphasis: the full figure from the front shows the chest, waist and hip lines drawn by the bustier top and low-rise skirt, and her long legs, with her smile clear. Lighting: bright late-morning sun from high front-left, not overhead; a large white reflector just out of frame softens the shadows on her face and body; sunny yellow, turquoise and pale stone tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 8.2 H-luna-tanaka｜Luna｜橫式款（新企劃｜R6 新推薦（待 Penny 定案））
+### 8.2 H-luna-tanaka｜Luna｜橫式款（新企劃｜依owner指定修訂，待主管核對落實）
 
-**一句話：** 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。
+**一句話：** 秋日午後當代日式宅邸的庭院，藕粉秋草紋和服配深梅色腰帶，雙手在腰帶下方輕捧一個小巧的日式香袋，站在緣側旁的石板路上，身體斜側、轉頭對鏡頭甜美淺笑。
 
 **攝影：** 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視
 
 | 攝影欄位 | 中文 | prompt 對應句 |
 |---|---|---|
 | 1. 景別 | 全身 | a full-length shot |
-| 2. 畫面上下界 | 完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；輕扶腰帶側邊的手與自然放下的手，袖子不遮臉 | from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face |
+| 2. 畫面上下界 | 完整髮頂，上緣少量留白；下緣在腳下方，雙腳完整。入鏡：從髮頂到草履完整；藕粉秋草紋和服、深梅色腰帶與帶締、白足袋與草履；雙手在腰帶下方輕捧的小香袋，腰帶露出，袖子不遮臉、也不完全蓋住雙手與香袋 | from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet |
 | 3. 身體朝向 | 約30度斜側（朝畫面左）：站在石板步道上，重心在後腳、前腳微微向前；身體朝畫面左轉約30度，肩線放鬆、背脊挺直，腰帶位置清楚 | standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear |
 | 4. 臉部朝向與視線 | 臉正面，看鏡頭 | her face toward the camera, looking into the camera |
 | 5. 相機高度與俯仰 | 相機在她臀部高度，平視（參考：50mm 鏡頭、約 4.6 公尺；畫面中心與相機高度差換算俯仰約 -0.3 度） | camera at her hip height, level |
 | 6. 畫面配置 | 人物在右側約六成處；她身後左側是木造緣側與敞開的拉門、看得到整潔的和室，右上角是一棵紅葉；建築只作背景，人物佔畫面高度約八成四 | she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop |
-| 7. 攝影目的 | 站姿全身呈現完整的和服、腰帶位置與身形比例；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑 | the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile |
+| 7. 攝影目的 | 站姿全身呈現完整的和服、腰帶位置與身形比例；雙手在腰帶下方輕捧小香袋，典雅端莊；身體斜側帶出線條，臉轉向鏡頭的甜美淺笑 | the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile |
 
 **選擇理由：** 依 Penny 指示改為站在室外的和服寫真：站姿全身讓和服與腰帶完整；身體約30度斜側、臉轉向鏡頭，扭轉約30度；相機在臀部高度平視（直式款是膝蓋高度輕仰），不讓建築壓過人物。
 
-**R6 改了什麼：** 依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。
+**R7 改了什麼：** 依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。
+
+**R6 改了什麼（歷史）：** 依 Penny 指示：由室內旅宿的緞面斜坐，改為站在當代日式宅邸庭院（緣側旁石板路）的和服寫真；背景透過敞開的拉門看得到整潔嶄新的和室；服裝改為低飽和藕粉秋草紋正式和服＋深梅色名古屋帶、白足袋與草履；姿勢改為站姿全身、約30度斜側、臉轉向鏡頭甜美淺笑，一手輕扶腰帶側邊、一手自然放下；相機改為臀部高度平視。
 
 **R4 改了什麼（歷史）：** 房間改成新穎整潔的當代日式旅宿（新榻榻米、乾淨木作、白色寢具），不再是古舊和室；服裝改為香檳色斜裁緞面細肩洋裝（仍是貼身緞面方向）；姿勢由端正側坐、雙手放腿上改為單手撐地的慵懶斜坐；視線看窗外紅葉。
 
 | 項目 | 內容 |
 |---|---|
 | 場景 | 當代日式宅邸的庭院，秋天午後：她站在室外的石板步道上，身旁是寬敞的木造緣側，敞開的紙拉門後看得到整潔嶄新的和室（新榻榻米、乾淨淺色木作）；庭院鋪白砂、幾株修剪整齊的松，畫面邊緣一棵紅葉、石板上幾片落葉；建築新穎整潔、不是古舊老宅，庭院裡沒有其他人。 |
-| 服裝 | 和服：低飽和藕粉色正絹和服（小紋，細緻的秋草紋；左襟壓右襟、白色半襟，正式穿法）；腰帶：深梅色名古屋帶（太鼓結），淡金色帶締、奶油色帶揚；襪履：白足袋、低跟草履；配件：耳上一支小珍珠髮夾（不加大型頭飾） |
+| 服裝 | 和服：低飽和藕粉色正絹和服（小紋，細緻的秋草紋；左襟壓右襟、白色半襟，正式穿法）；腰帶：深梅色名古屋帶（太鼓結），淡金色帶締、奶油色帶揚；襪履：白足袋、低跟草履；配件：耳上一支小珍珠髮夾（不加大型頭飾）；道具：小巧的日式布製香袋（掌心大小；低飽和奶油色帶淡金細緻織紋、短束口繩；不是手提包，沒有品牌、文字或誇張吊飾） |
 | 髮型 | 黑色細直髮，中分下巴長度的鮑伯，梳理整齊、一側以小珍珠髮夾固定（依人設的鮑伯長度，不改成盤髮）。 |
 | 妝感 | 柔和自然妝、玫瑰色唇、微微的光澤肌。 |
 | 身材設定（數字） | 155 cm／88-56-87／E（童顏與曲線的反差） |
 | 畫面上怎麼呈現胸型、腰線、臀腿 | 傳統和服不強調貼身曲線：用腰帶位置收出腰線，身體約30度斜側與自然站姿呈現嬌小、勻稱的比例（身材設定數字不變；不要求和服同時呈現胸腰曲線）。 |
 | 主光 | 畫面左前方秋天午後偏斜的柔和陽光 |
 | 補光 | 畫面外右前方大反光板，臉均勻清楚 |
-| 姿態 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭。 |
-| 手的位置 | 一手輕扶腰帶側邊，另一手自然放下；袖子不遮臉。 |
+| 姿態 | 站在緣側旁的石板路上，身體斜側、臉轉向鏡頭，雙手在腰帶下方輕捧小香袋。 |
+| 手的位置 | 雙手在腰帶下方、下腹前自然輕捧一個小巧的日式布製香袋；肩膀放鬆、手肘自然微彎，手腕不交叉，手指自然貼著香袋；袖子自然垂落，不遮臉，也不完全蓋住雙手與香袋，腰帶清楚可見。 |
 | 表情 | 甜美的淺笑 |
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，50mm，約 4.6 公尺，視野 3.31×1.86 公尺；人物約佔畫面高度 84%（規劃）；相機約 0.83 公尺高、畫面中心約 0.8 公尺高，俯仰約 -0.3 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.1%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
-| 為何符合人設 | 依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.1%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 為何符合人設 | 依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。 |
 | 與同一人另一款的差異 | 直式款是初夏京都老町家後院、白色紫陽花與木籬笆、鼠尾草綠馬甲洋裝、正面站姿、膝蓋高度輕仰；這款是秋天的當代日式宅邸庭院、緣側與敞開拉門後的和室、藕粉和服、約30度斜側、臀部高度平視。兩款都在日式庭院，所以用季節、建築新舊、服裝（和服對西式洋裝）、身體方向與相機高度拉開。 |
-| 參考照片（用途） | luna-03：服裝材質（既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；不作身材參考：既有照片的身材不符合設定（Penny））；luna-12：表情（甜美的淺笑與鮑伯髮型；街景與服裝不採用；不作身材參考：既有照片的身材不符合設定（Penny）） |
+| 參考照片（用途） | luna-03：服裝材質（既有照片是夏季祭典浴衣（淺藍棉質＋深藍腰帶），不是本套的秋季正式和服；只參考她穿日式服裝、繫腰帶時的整體比例與笑容；浴衣、顏色、蘋果與神社街景都不採用；沒有正式和服的參考圖；也沒有香袋的參考圖（R7 香袋外觀只靠文字）；不作身材參考：既有照片的身材不符合設定（Penny））；luna-12：表情（甜美的淺笑與鮑伯髮型；街景與服裝不採用；不作身材參考：既有照片的身材不符合設定（Penny）） |
 | 月份（已確認） | 10 月（秋） |
 
 | 風險 | 處理 |
@@ -708,11 +771,15 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round swe
 | 和室或建築顯得古舊 | 寫明當代宅邸、嶄新榻榻米、乾淨木作 |
 | 童顏顯小 | 寫明 adult、正式穿法與成熟配色 |
 | 沒有和服參考圖 | 既有照片只有夏季浴衣（luna-03），只參考比例與笑容；和服細節靠文字，生成後逐項檢查衣襟、腰帶與襪履 |
+| 香袋畫成手提包、太大，或出現品牌、文字、誇張吊飾 | 寫明掌心大小的布製香袋、短束口繩、without any logos；生成後檢查大小與表面 |
+| 雙手或手指錯誤（手指數量、交纏、手腕交叉） | 寫明雙手輕捧、手肘微彎、手腕不交叉；生成後逐指檢查 |
+| 手或袖子遮住腰帶，香袋被袖子蓋住 | 寫明雙手在腰帶下方、腰帶露出、袖子自然垂落、不完全蓋住雙手與香袋 |
+| 沒有香袋參考圖 | 既有照片都沒有香袋；外觀只靠文字，生成後檢查顏色、大小、束口繩與手的接觸 |
 
 prompt 草稿（16:9，尚未執行）：
 
 ```text
-A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. One hand rests lightly at the side of her obi and the other hangs naturally, her sleeves falling clear of her face; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, one hand resting at the side of the obi and the other hanging naturally, her sleeves clear of her face. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
+A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
 ### 8.3 H-somi-oh｜Somi｜橫式款（Penny 已接受的 v2 主方向｜已接受（R6 owner 紀錄））
@@ -733,7 +800,7 @@ A 20-year-old adult Japanese woman with her natural fair skin tone, large round 
 
 **選擇理由：** 已接受方向：場景、光線、姿勢、取景與「人物偏左、吧台往右、炸雞在右緣」都照 v4；只改上衣的穿法與入鏡描述。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 短開襟不再全扣：改成「敞開的奶油色短開襟（全部不扣、從肩上垂下）＋鏽橘貼身方領細肩小可愛」兩層，衣物結構寫明；場景、光線、姿勢、大笑與構圖照 v4，不新增吃東西的動作。
 
@@ -753,7 +820,7 @@ A 20-year-old adult Japanese woman with her natural fair skin tone, large round 
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，70mm，約 4.6 公尺，視野 2.37×1.33 公尺；頭頂上方留白約 8%（規劃）；相機約 1.03 公尺高、畫面中心約 1.08 公尺高，俯仰約 +0.7 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.4%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.4%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | Penny 接受的 v2 主方向；R4 只把「全扣的短開襟」改成明確的兩層穿法，讓胸型露出來。場景、光線、姿勢與大笑都照舊，不新增吃東西的動作。 |
 | 與同一人另一款的差異 | 直式款在雪夜溫泉小鎮、象牙白針織洋裝＋紅色長大衣、抬眼看雪；這款是棚內暖橘、敞開短開襟＋小可愛＋短裙、對鏡頭大笑。 |
 | 參考照片（用途） | somi-02：表情（Penny 喜歡的笑容與暖色調）；somi-01：身分（認臉） |
@@ -789,7 +856,7 @@ A 24-year-old adult Korean woman with her natural fair skin tone and round cheek
 
 **選擇理由：** 橫式改用置中＋對稱引導線，避免又是「人在一側、另一側空景」；身體約30度斜側讓收腰的線條更明顯，臉正對鏡頭大笑。直式款是池邊坐姿，景別完全不同。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R5：** 主管核可的中英同步（R5）：英文 prompt 在身分句後補一句中文「妝感」已寫的內容；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。補上的句子：`Sweet, light makeup with a pink lip.`
 
@@ -809,7 +876,7 @@ A 24-year-old adult Korean woman with her natural fair skin tone and round cheek
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，85mm，約 5.4 公尺，視野 2.29×1.29 公尺；頭頂上方留白約 7%（規劃）；相機約 1.15 公尺高、畫面中心約 1.03 公尺高，俯仰約 -1.2 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 7%（套框後理論約 5.0%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 7%（套框後理論約 5.0%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 她的配色有淺紫丁香與奶油白；週末出遊的花田讓她的大笑與甜美成立，不需要校園元素。 |
 | 與同一人另一款的差異 | 直式款是飯店泳池、薄荷綠比基尼、坐姿；這款是花田、白色亞麻洋裝、站姿。 |
 | 參考照片（用途） | coco-08：身分（認臉與身形比例）；coco-15：表情（大笑） |
@@ -845,7 +912,7 @@ A 20-year-old adult Taiwanese woman with her natural fair skin tone, a doll-like
 
 **選擇理由：** Mia 的魅力在表情與 F 罩杯曲線：大腿中段以上讓臉與身形都夠大；斜側＋插腰做出腰臀曲線。橫式改置中，背景光點只作氛圍。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 | 項目 | 內容 |
 |---|---|
@@ -863,7 +930,7 @@ A 20-year-old adult Taiwanese woman with her natural fair skin tone, a doll-like
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，85mm，約 4.5 公尺，視野 1.91×1.07 公尺；頭頂上方留白約 7%（規劃）；相機約 1.2 公尺高、畫面中心約 1.19 公尺高，俯仰約 -0.1 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 5.9%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 5.9%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 她的配色是棉花糖粉與紫；把「被看、被反應」的俏皮放進夏夜遊樂碼頭，不需要任何直播或電競符號。 |
 | 與同一人另一款的差異 | 直式款是春夜櫻花步道、淺紫露肩針織洋裝；這款是夏日黃昏碼頭、粉色緞面馬甲＋白裙。 |
 | 參考照片（用途） | mia-08：表情（戶外大笑；畫面裡的白 T 不採用）；mia-12：身分（認臉與髮色挑染；不採用畫面裡的帽 T） |
@@ -899,7 +966,7 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft roun
 
 **選擇理由：** 主管推薦雪後庭園或冬日花園露台；整組已有 Coco 花田、V-Luna 紫陽花庭院、H-Tammy 春日花園露台、V-Miu 花園木平台四個庭園類場景，所以改提同樣安靜、但不是庭園的雪後白樺林。大腿中段以上讓韓系妝感與身形都夠大；直式款是全身銀杏大道、不看鏡頭，兩款景別與視線都不同。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 撤回咖啡館與奶油黃開襟＋淺藍裙：改成雪後白樺林小徑的戶外冬日寫真，霧玫瑰貼身方領針織＋淺灰高腰迷你裙＋敞開的白色羊羔毛短外套；景別由腰上改為大腿中段以上。主管推薦是雪後庭園／冬日花園露台，因整組庭園類場景已有 4 個，改提白樺林（理由見選擇理由）。
 
@@ -919,7 +986,7 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft roun
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，85mm，約 4.8 公尺，視野 2.03×1.14 公尺；頭頂上方留白約 9%（規劃）；相機約 1.25 公尺高、畫面中心約 1.25 公尺高，俯仰約 +0.0 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.3%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.3%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 韓系冬日寫真落在具體元素上：妝髮（水光肌、凍紅臉頰、八字瀏海）、穿搭（白、灰、霧玫瑰的柔和配色）、光（雪地反光的偏亮通透曝光）與低對比色調；白樺林乾淨安靜，沒有文字或地標。 |
 | 與同一人另一款的差異 | 直式款是深秋銀杏大道、奶油色毛呢套裝＋黑色長靴、望向大道深處；這款是雪後白樺林、霧玫瑰針織＋灰色迷你裙＋白色羊羔毛短外套、看鏡頭。與 12 月 V-Somi 的雪夜燈籠溫泉街不同：白天、森林、冷柔色調。 |
 | 參考照片（用途） | yuna-05：表情（柔和、手撥頭髮的近照；室內背景不採用）；yuna-02：身分（認臉與身形比例；街景不採用） |
@@ -956,7 +1023,7 @@ A 21-year-old adult Korean woman with her natural fair skin tone, large bright d
 
 **選擇理由：** Penny 說合身洋裝＋高跟鞋可保留，所以橫式款用全身讓高跟鞋入鏡；膝蓋高度輕仰拉長腿。直式款是大腿中段以上，兩款景別不同。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 取消精品店：改成春日花園露台的平整石板步道（不踩泥地、碎石或沙灘），熱粉合身洋裝＋白色高跟鞋保留；手改為一手扶白色庭園長椅、一手插腰；拿掉手提包（素面小包放到直式款）。
 
@@ -976,7 +1043,7 @@ A 21-year-old adult Korean woman with her natural fair skin tone, large bright d
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，70mm，約 6.9 公尺，視野 3.55×2.0 公尺；人物約佔畫面高度 84%（規劃）；相機約 0.53 公尺高、畫面中心約 0.86 公尺高，俯仰約 +2.7 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.2%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.2%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 合身洋裝＋高跟鞋保留；平整的石板步道讓高跟鞋站得穩、合理，春天的白花與鬱金香讓熱粉色更亮眼，是自然、有質感的高級感，不靠店面或商標。 |
 | 與同一人另一款的差異 | 直式款是夜晚大飯店大廳、白色西裝洋裝、大腿中段以上、拿素面小包；這款是白天春日花園露台、熱粉針織洋裝、全身與高跟鞋。 |
 | 參考照片（用途） | tammy-02：服裝材質（貼身洋裝的線條）；tammy-05：身分（認臉與柔和的笑；室內不採用） |
@@ -1013,7 +1080,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almon
 
 **選擇理由：** 保留酒紅緞面與斜躺；不看鏡頭、視線有明確目標（窗外夕陽）。相機略高於她的頭、輕俯，讓 S 形完整，不從椅面高度仰拍。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 保留酒紅緞面與斜躺；改為不看鏡頭、望向窗外夕陽；姿勢寫清楚：下方前臂撐椅墊、肩頸放鬆往後、腰側下凹臀線抬高、上方腿微彎搭在伸直的下方腿上、上方手放在大腿上。
 
@@ -1033,7 +1100,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almon
 | 視線 | 看向畫面右側窗外的夕陽（不看鏡頭） |
 | 焦段／距離／視野（參考） | 16:9，50mm，約 2.6 公尺，視野 1.87×1.05 公尺；人物約佔畫面寬度 87%（規劃）；相機約 1.02 公尺高、畫面中心約 0.69 公尺高，俯仰約 -7.1 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 24%（套框後理論約 22.9%）；左右：規劃頭與腳離左右邊緣各約 7%；不能切：髮頂、臉、入鏡的雙手、頭與腳；規劃目標（套框後）：髮頂上方 ≥4%、左右各 ≥5%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、頭與腳是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 24%（套框後理論約 22.9%）；左右：規劃頭與腳離左右邊緣各約 7%；不能切：髮頂、臉、入鏡的雙手、頭與腳；規劃目標（套框後）：髮頂上方 ≥4%、左右各 ≥5%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、頭與腳是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 她是成熟艷麗但收斂的性感：不看鏡頭、望向窗外夕陽，比直視更有寫真感；姿勢靠側躺的腰臀曲線與長腿，不靠高難度扭轉，也不靠「性感」這個字。 |
 | 與同一人另一款的差異 | 直式款是秋日港灣、墨綠仿麂皮裹身洋裝、倚著繫船柱；這款是室內套房夕陽、酒紅緞面、側躺。與 3 月 Miu（床上靠枕半倚）分開：Rin 是全身側躺在貴妃椅上（10 月 Luna 在 R6 改為站姿和服）。 |
 | 參考照片（用途） | rin-05：服裝材質（緞面開衩洋裝的質感）；rin-01：身分（盤髮與妝感） |
@@ -1069,7 +1136,7 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 
 **選擇理由：** 已接受方向：姿勢、取景、焦段與「人物偏右、左側燈海」都照舊；24 套中只剩這一張是正面膝上站姿，因為背靠欄杆的姿勢本來就正對鏡頭。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 | 項目 | 內容 |
 |---|---|
@@ -1087,7 +1154,7 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 | 視線 | 直視鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，85mm，約 5.7 公尺，視野 2.41×1.36 公尺；頭頂上方留白約 8%（規劃）；相機約 1.12 公尺高、畫面中心約 1.17 公尺高，俯仰約 +0.5 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.1%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 3 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.1%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 3 cm）；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | Penny 接受的 v2 主方向；城市燈海是橫向展開的景，最適合橫式款。 |
 | 與同一人另一款的差異 | 直式款是雨後夜街、黑色緞面繞頸洋裝＋黑色長皮風衣；這款是頂樓城市燈海、血紅馬甲洋裝。 |
 | 參考照片（用途） | rainie-06：場景（飯店窗邊的城市景）；rainie-10：服裝材質（緞面長洋裝的光澤） |
@@ -1123,7 +1190,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekb
 
 **選擇理由：** 從端坐改成床上靠枕的自然半倚，與 Rin 的貴妃椅側躺不同（Luna 在 R6 改為站姿和服）；小公寓空間有限，35mm 約 2.6 公尺、人物在中央不貼邊，避免廣角變形。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 從端坐床邊、雙膝併攏雙手撐床，改為背靠枕頭的自然半倚（一膝立起、一腿伸直、手肘搭膝、另一手放床上），床改成斜放的對角線；服裝與晨光不變。
 
@@ -1143,7 +1210,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekb
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，35mm，約 2.7 公尺，視野 2.78×1.56 公尺；人物約佔畫面高度 84%（規劃）；相機約 0.72 公尺高、畫面中心約 0.67 公尺高，俯仰約 -1.0 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.5%）；下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.5%）；下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 她的支柱是「私下／一人公寓」：自然半倚比端坐更放鬆，胸腰與腿線都出來，仍是甜美的成人氣質（成熟的緞面與金飾、不用娃娃裝元素）。 |
 | 與同一人另一款的差異 | 直式款是春日度假木平台、杏桃色細肩短洋裝、坐在吊床邊看向一旁；這款是室內晨光、緞面小可愛＋短褲、床上半倚看鏡頭。與 2 月 Rin 的貴妃椅全身側躺不同：Miu 是背靠枕頭的坐姿半倚，床是斜放的對角線。 |
 | 參考照片（用途） | miu-06：身分（米白背心＋短裙的身形比例）；miu-01：表情（坐姿的甜美表情；厚毛衣不採用） |
@@ -1162,7 +1229,7 @@ prompt 草稿（16:9，尚未執行）：
 A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, a full chest and a very slim waist. She wears an ivory satin camisole with thin straps and fine lace trim that follows her full chest, matching ivory satin shorts, small gold stud earrings and a thin gold bracelet; her feet are bare. Setting: a small sunlit Tokyo apartment in the morning, a neatly made bed with cream linen, a wooden bedside shelf with a small potted plant, sheer white curtains at the window, the room tidy. One elbow rests lightly on her raised knee with the wrist relaxed and her other hand lies on the sheet beside her hip; she tilts her head with a soft, slightly lazy sweet smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole half-reclining figure, the satin camisole over her full chest and very slim waist, the shorts, her raised knee, her stretched leg and her bare feet, one arm resting on her knee and the other hand on the bed, nothing covering her chest or waist. Body: sitting on the bed and leaning back against a pile of pillows at the headboard, her body turned about 45 degrees toward camera-left, one knee raised and the other leg stretched out along the bed, shoulders relaxed and her waist lengthened. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 35mm lens from about 2.7 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: the bed runs diagonally across the frame and she sits just right of centre against the pillows, the sheer-curtained window glowing on the left and the wooden bedside shelf on the right. Emphasis: the relaxed half-recline opens up her chest, very slim waist and legs at once, with a sweet head-tilted smile to the camera; a level camera keeps her looking like an adult. Lighting: warm morning sunlight through the sheer curtains from camera-left as a soft key, a white bounce just out of frame on the right so her face is evenly lit; cream, ivory and warm wood tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.
 ```
 
-### 8.11 H-jia-seo｜Jia｜橫式款（新企劃｜R6 新推薦（待 Penny 定案））
+### 8.11 H-jia-seo｜Jia｜橫式款（新企劃｜已接受（R7 owner 紀錄））
 
 **一句話：** 初秋傍晚的湖畔木平台，深酒紅合身繞頸細針織短洋裝露肩與上背，側坐在臨水長椅上、雙腿交疊望向湖面。
 
@@ -1180,7 +1247,9 @@ A 22-year-old adult Japanese woman with her natural very fair skin tone, a round
 
 **選擇理由：** Penny 只問衣服和場景有沒有搭：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都照 R4；只把晚宴感的黑色單肩鏤空洋裝換成適合湖畔傍晚的深酒紅細針織繞頸短洋裝。頭轉回約55度成三分之二側臉，仍能認人。
 
-**R6 改了什麼：** 依 Penny「他這個衣服跟場景有搭嗎？」與主管判斷：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都保留；偏晚宴的黑色單肩鏤空中長洋裝改為深酒紅細針織繞頸合身短洋裝（露肩與上背、收腰、裙長大腿中段、沒有運動元素或大型圖案）；鞋與配件維持簡單。
+**R7：** 已接受（R7 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照 R6 版本，不再要求回覆。
+
+**R6 改了什麼（歷史）：** 依 Penny「他這個衣服跟場景有搭嗎？」與主管判斷：湖畔木平台、臨水長椅、側坐、雙腿交疊、看湖面與相機都保留；偏晚宴的黑色單肩鏤空中長洋裝改為深酒紅細針織繞頸合身短洋裝（露肩與上背、收腰、裙長大腿中段、沒有運動元素或大型圖案）；鞋與配件維持簡單。
 
 **R4 改了什麼（歷史）：** 撤回美術館與畫作背景：改為初秋傍晚的湖畔木平台與臨水長椅；黑色單肩鏤空洋裝保留，加側開衩、鞋改低跟細帶涼鞋（木平台上較合理）；姿勢由側身站改為側坐、雙腿交疊；景別由全身改為坐姿全身；視線看向湖面。
 
@@ -1200,7 +1269,7 @@ A 22-year-old adult Japanese woman with her natural very fair skin tone, a round
 | 視線 | 看向畫面左側的湖面與遠岸（不看鏡頭） |
 | 焦段／距離／視野（參考） | 16:9，70mm，約 5.4 公尺，視野 2.78×1.56 公尺；人物約佔畫面高度 85%（規劃）；相機約 0.69 公尺高、畫面中心約 0.67 公尺高，俯仰約 -0.1 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.7%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.7%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 主管判斷原本的黑色單肩鏤空中長洋裝偏晚宴感，和普通湖畔長椅不夠搭；改成日常外出也合理的深酒紅細針織繞頸短洋裝：秋天的材質與顏色和湖畔傍晚更協調，露肩、上背與收腰仍保留她俐落的線條。實景、不棚拍、不運動、不晚宴。 |
 | 與同一人另一款的差異 | 直式款是玻璃溫室、白色立領短上衣＋薄荷綠緞面高腰窄裙、斜側站姿看鏡頭；這款是戶外湖畔、深酒紅細針織繞頸短洋裝、側坐長椅、望向湖面。和 2 月 H-Rin 的酒紅緞面同色系，但材質（針織對緞面）、場景（湖畔對飯店套房）、姿勢（側坐對斜躺）與月份都分開。 |
 | 參考照片（用途） | jia-08：身分（夜晚穿搭與認臉；回頭姿勢不採用；沒有這件深酒紅針織洋裝的參考圖）；jia-02：表情（冷靜的表情；室內背景不採用） |
@@ -1240,7 +1309,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 
 **選擇理由：** 保留高爾夫迷你裙裝與球車；坐姿寫清楚身體與腿的方向、腳踝、雙手支撐；相機在坐姿腰部高度平視，不俯拍縮腿、不用胯下仰拍。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 保留高爾夫迷你裙裝與球車；坐姿改為坐在座椅邊緣、身體微微後靠、後手撐座椅、前手放膝上，雙膝併攏、腳踝交叉、腳尖點地；相機維持坐姿腰部高度平視，不俯拍、不低角度。
 
@@ -1260,7 +1329,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 16:9，50mm，約 4.5 公尺，視野 3.24×1.82 公尺；人物約佔畫面高度 83%（規劃）；相機約 0.84 公尺高、畫面中心約 0.78 公尺高，俯仰約 -0.7 度 |
 | 原生尺寸 | 16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證） |
-| 印刷（暫定照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 10%（套框後理論約 8.4%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
+| 印刷（工作照片框） | 橫式工作照片框（R6 已接受）（192×104 mm）；比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 10%（套框後理論約 8.4%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證 |
 | 為何符合人設 | 性感可愛的高爾夫形象寫真：重點是坐姿伸長的腿與笑容；雙膝併攏、相機在側前方的坐姿腰部高度平視，不從低處往上拍，也不以裙下為構圖目的；不拿球桿、不打球。 |
 | 與同一人另一款的差異 | 直式款是日落海灘、白色背心洋裝、赤腳站在浪花邊；這款是球場球車、polo＋百褶裙＋球帽、坐姿伸長雙腿。 |
 | 參考照片（用途） | yerin-01：服裝材質（白帽＋白 polo 的高爾夫穿搭）；yerin-05：服裝材質（polo＋百褶球裙的比例；俯身動作不採用） |
@@ -1298,7 +1367,7 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 
 **選擇理由：** 直式是首張試拍候選：大腿中段以上讓穿搭與笑容最清楚，又保留腰臀比例；胸口高度平視不變形。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R5：** 主管核可的中英同步（R5）：英文 prompt 在身分句後補一句中文「妝感」已寫的內容；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。補上的句子：`Fresh, light everyday makeup with a natural lip colour.`
 
@@ -1318,7 +1387,7 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 2.9 公尺，視野 0.82×1.09 公尺；頭頂上方留白約 8%（規劃）；相機約 1.19 公尺高、畫面中心約 1.18 公尺高，俯仰約 -0.1 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在大腿中段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在大腿中段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | Penny 的回饋：更顯身材的上衣＋牛仔迷你裙、身體面向鏡頭、專業姿態、有笑容；保留她喜歡的 iris-04 夕陽草地氛圍。 |
 | 與同一人另一款的差異 | 橫式款在夏日上午的岩岸海灣、向日葵黃馬甲短上衣＋低腰迷你裙、正面全身；這款在河濱草地、白上衣＋牛仔迷你裙、逆光。 |
 | 參考照片（用途） | iris-04：場景（草地、夕陽光線氛圍（Penny 喜歡的照片）；不採用回頭姿勢）；iris-06：服裝材質（白短上衣＋牛仔短裙的穿搭方向） |
@@ -1354,7 +1423,7 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round swe
 
 **選擇理由：** 嬌小的 Luna 用膝蓋高度輕仰拍全身，比例更修長；雙手在身後讓胸腰線完全不被遮住。與橫式款的秋季和服（約30度斜側、臀部高度平視）不同。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 | 項目 | 內容 |
 |---|---|
@@ -1372,7 +1441,7 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round swe
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 4.9 公尺，視野 1.38×1.84 公尺；人物約佔畫面高度 86%（規劃）；相機約 0.47 公尺高、畫面中心約 0.83 公尺高，俯仰約 +4.2 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 保留 Penny 沒有否定的紫陽花庭院，換成真正顯身材的剪裁。 |
 | 與同一人另一款的差異 | 橫式款是秋天的當代日式宅邸庭院、藕粉秋草紋和服、約30度斜側站姿、臀部高度平視；這款是初夏的京都老町家後院、白色紫陽花、綠色馬甲洋裝、正面站姿全身、膝蓋高度輕仰。 |
 | 參考照片（用途） | luna-10：表情（Penny 喜歡的表情與柔光；不作身材參考：既有照片的身材不符合設定（Penny））；luna-01：場景（京都巷弄氛圍；不作身材參考：既有照片的身材不符合設定（Penny）） |
@@ -1408,7 +1477,7 @@ A 20-year-old adult Japanese woman with her natural fair skin tone, large round 
 
 **選擇理由：** 保留雪夜溫泉小鎮與冬季穿搭；視線改成看向右上方燈籠旁的雪，人物移到略偏左，右上方留給視線與燈籠。臉只微抬、三分之二側臉、眼睛睜開。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 保留雪夜溫泉小鎮與冬季穿搭；改為不看鏡頭：抬眼看向右上方燈籠旁飄落的雪，一手攤開接雪，笑容由情境帶出；臉是三分之二側臉、眼睛睜開，不仰頭到看不清五官；人物改到略偏左。
 
@@ -1428,7 +1497,7 @@ A 20-year-old adult Japanese woman with her natural fair skin tone, large round 
 | 視線 | 看向畫面右上方燈籠旁飄落的雪（不看鏡頭） |
 | 焦段／距離／視野（參考） | 3:4，70mm，約 4.2 公尺，視野 1.44×1.92 公尺；人物約佔畫面高度 85%（規劃）；相機約 0.87 公尺高、畫面中心約 0.86 公尺高，俯仰約 -0.0 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 10%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 10%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 她的配色有「蒸氣白」與紅；不看鏡頭、抬眼看雪的笑容由情境自然帶出，比對鏡頭大笑更像寫真；臉是三分之二側臉、眼睛睜開，仍認得出她。 |
 | 與同一人另一款的差異 | 橫式款是棚內暖橘小吃店、敞開短開襟＋小可愛＋短裙、對鏡頭大笑；這款是戶外雪夜、白色針織洋裝＋紅大衣＋長靴、看雪。 |
 | 參考照片（用途） | somi-08：服裝材質（外套穿搭與身分）；somi-02：表情（月牙眼的笑） |
@@ -1465,7 +1534,7 @@ A 24-year-old adult Korean woman with her natural fair skin tone and round cheek
 
 **選擇理由：** 已接受方向：姿勢、取景與焦段距離都照 v3；只把身體正面、臉正面、相機在坐姿胸口高度平視寫明。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R5：** 主管核可的中英同步（R5）：英文 prompt 在身分句後補一句中文「妝感」已寫的內容；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。補上的句子：`Sweet, light makeup.`
 
@@ -1485,7 +1554,7 @@ A 24-year-old adult Korean woman with her natural fair skin tone and round cheek
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，70mm，約 2.7 公尺，視野 0.93×1.23 公尺；人物約佔畫面高度 81%（規劃）；相機約 0.36 公尺高、畫面中心約 0.32 公尺高，俯仰約 -0.8 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 11%；下緣：規劃水面下方留白約 8%；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 11%；下緣：規劃水面下方留白約 8%；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | Penny 接受的 v2 主方向；坐姿與下方水面在直幅裡讓身體更大、更清楚，所以建議放直式款。 |
 | 與同一人另一款的差異 | 橫式款是花田、白色亞麻洋裝、站姿；這款是泳池、比基尼、坐姿。 |
 | 參考照片（用途） | coco-21：表情（泳裝照的大笑；尺度同第二階段泳裝參考）；coco-20：身分（認臉與身形） |
@@ -1520,7 +1589,7 @@ A 20-year-old adult Taiwanese woman with her natural fair skin tone, deep dimple
 
 **選擇理由：** 24 套中唯一的胸上近景，放在表情最豐富的 Mia；她的身形由橫式款的大腿中段以上負責，所以這張不會大幅減少身材展示。眼睛高度輕俯是常見的美顏角度，不會變形。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 | 項目 | 內容 |
 |---|---|
@@ -1538,7 +1607,7 @@ A 20-year-old adult Taiwanese woman with her natural fair skin tone, deep dimple
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 1.5 公尺，視野 0.42×0.56 公尺；頭頂上方留白約 9%（規劃）；相機約 1.52 公尺高、畫面中心約 1.4 公尺高，俯仰約 -4.5 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃裁切線在胸線下方；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃裁切線在胸線下方；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 她是夜貓子，夜晚的櫻花與燈籠延續她的粉紫配色與「深夜」氣質，但完全是寫真場景。 |
 | 與同一人另一款的差異 | 橫式款是夏日黃昏海邊碼頭、粉色緞面馬甲＋白裙；這款是春夜櫻花、淺紫針織洋裝＋長靴。 |
 | 參考照片（用途） | mia-08：表情（開朗的笑）；mia-06：身分（認臉；畫面裡的帽 T 與貓不採用） |
@@ -1574,7 +1643,7 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft roun
 
 **選擇理由：** 保留銀杏大道與毛呢套裝；視線改為看向右側大道深處，與身體、腳步同一個方向，右側留給視線；三分之二側臉仍能認人。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 保留銀杏大道與毛呢套裝；改為不看鏡頭：停下腳步望向右側大道深處，柔和若有所思的微笑；另一手改成指尖輕拿一片銀杏葉在腰側；不擺打卡姿勢。
 
@@ -1594,7 +1663,7 @@ A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft roun
 | 視線 | 看向畫面右側銀杏大道的深處（不看鏡頭） |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 5.3 公尺，視野 1.5×2.0 公尺；人物約佔畫面高度 87%（規劃）；相機約 0.92 公尺高、畫面中心約 0.9 公尺高，俯仰約 -0.3 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 毛呢套裝、長靴、水光妝與銀杏的金黃——韓系美感落在穿搭、妝髮、逆光金黃與柔和底片色調上；看向大道深處的自然神情像電影的一格，不是打卡擺拍。 |
 | 與同一人另一款的差異 | 橫式款是雪後白樺林、霧玫瑰針織＋灰色迷你裙＋白色羊羔毛短外套、看鏡頭；這款是深秋銀杏大道、毛呢套裝＋長靴、望向大道深處。 |
 | 參考照片（用途） | yuna-11：場景（首爾街頭夕陽光線；回頭姿勢不採用）；yuna-03：表情（柔和近照與妝感） |
@@ -1631,7 +1700,7 @@ A 21-year-old adult Korean woman with her natural fair skin tone, large bright d
 
 **選擇理由：** 大腿中段以上剛好收進拎在臀側的小包與插腰的手；正面配腰部高度輕仰，拍出大飯店夜晚的氣場。高跟鞋由橫式款全身呈現。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 加入素面黑色小手提包（不仿特定品牌）：一手拎包在臀側、一手插腰，包不遮胸腰；文案改正：這張是大腿中段以上，不再稱「全身照」；場景、服裝、景別、相機不變。
 
@@ -1651,7 +1720,7 @@ A 21-year-old adult Korean woman with her natural fair skin tone, large bright d
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，70mm，約 2.3 公尺，視野 0.79×1.05 公尺；頭頂上方留白約 6%（規劃）；相機約 1.08 公尺高、畫面中心約 1.22 公尺高，俯仰約 +3.5 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 6%；下緣：規劃裁切線在大腿中段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 6%；下緣：規劃裁切線在大腿中段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 合身洋裝的高級感延續到夜晚飯店；加上一只素面小包讓造型更完整，也讓手有自然的事做；不仿任何品牌。 |
 | 與同一人另一款的差異 | 橫式款是白天春日花園露台、熱粉針織洋裝、全身與高跟鞋；這款是夜晚飯店大廳、白色西裝洋裝、大腿中段以上、拎著小包。 |
 | 參考照片（用途） | tammy-01：服裝材質（貼身洋裝的線條）；tammy-03：表情（較柔的表情） |
@@ -1687,7 +1756,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almon
 
 **選擇理由：** 最新意見取代先前選擇：撤回黑金吧台，改戶外秋日港灣，時間（秋天午後陰天）、環境（石砌碼頭與帆船）、服裝（墨綠麂皮）與角度（約45度斜側倚柱、看港口）都和其他海景拉開；膝上讓人物夠大。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 撤回黑金高級吧台（最新意見取代先前選擇）：改成秋日午後的安靜港灣石砌碼頭，服裝改為墨綠仿麂皮裹身洋裝（深 V、繫帶收腰、前開衩）＋深棕踝靴；髮型改為鬆低髮髻；景別由坐姿全身改為膝上；不看鏡頭、望向港口。
 
@@ -1707,7 +1776,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almon
 | 視線 | 看向畫面左側港口的出口與海面（不看鏡頭） |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 3.6 公尺，視野 1.02×1.36 公尺；頭頂上方留白約 7%（規劃）；相機約 1.07 公尺高、畫面中心約 1.12 公尺高，俯仰約 +0.7 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 7%；下緣：規劃裁切線在膝蓋下方的小腿上段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 7%；下緣：規劃裁切線在膝蓋下方的小腿上段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 秋天的港灣與墨綠麂皮是她「深綠、酒紅、金」配色的戶外版本：成熟、安靜的性感，和橫式款的室內夕陽套房完全不同；不是酒吧、不是長禮服。 |
 | 與同一人另一款的差異 | 橫式款是室內飯店套房夕陽、酒紅緞面、側躺；這款是戶外秋日港灣、墨綠麂皮裹身洋裝、倚柱站姿、望向港口。與其他海景拉開：Iris 是夏日上午的岩岸、Yerin 是夕陽沙灘、Mia 是黃昏遊樂碼頭；Rin 是秋天陰天的石砌港口與帆船。 |
 | 參考照片（用途） | rin-04：表情（Penny 喜歡的成熟氣質）；rin-11：身分（戶外坐姿的身形比例；背景不採用） |
@@ -1745,7 +1814,7 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 
 **選擇理由：** 保留雨後夜街與黑色服裝；改不看鏡頭、看向前方街燈，人物移到右側、左側留給視線與街燈；身體改為約30度斜側，比側身更好認臉。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 保留雨後夜街與黑色服裝；改為不看鏡頭：看向前方街燈，表情改成放鬆、微啟唇、帶點沉思（不是橫式款的自信壞笑），臉不改；身體由側面改為約30度斜側；人物改到右側約六成，左側留給街燈。
 
@@ -1765,7 +1834,7 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 | 視線 | 看向畫面左側前方的街燈（不看鏡頭） |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 3.6 公尺，視野 1.02×1.36 公尺；頭頂上方留白約 7%（規劃）；相機約 1.09 公尺高、畫面中心約 1.14 公尺高，俯仰約 +0.8 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在膝蓋下方的小腿上段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在膝蓋下方的小腿上段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 她的配色是黑、煙灰、金屬銀；雨夜街燈下放鬆、微啟唇的沉思神情，是和橫式款自信壞笑完全不同的另一面；臉不改。 |
 | 與同一人另一款的差異 | 橫式款是頂樓燈海、血紅馬甲洋裝、正面直視鏡頭的自信壞笑；這款是雨夜街道、黑色緞面＋長皮風衣、看向街燈的沉思神情。 |
 | 參考照片（用途） | rainie-01：表情（只參考妝感與氣場；表情改成放鬆的沉思）；rainie-11：服裝材質（黑色細肩帶洋裝的線條） |
@@ -1802,7 +1871,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekb
 
 **選擇理由：** 吊床邊的坐姿和橫式款的床上半倚都是坐姿，但身體方向（約30度斜側 vs 約45度）、視線（看果樹 vs 看鏡頭）、場景（戶外 vs 室內）都不同。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 撤回運河與奶油 V 領針織裙：改為春日度假別墅木平台與白色帆布吊床，杏桃色有骨架的細肩短洋裝（配色與其他 23 套比較後選定）；姿勢由欄杆站姿改為坐在吊床邊、雙手抓布邊、微微前傾；不看鏡頭、看向開花的果樹；景別由大腿中段以上改為坐姿全身。
 
@@ -1822,7 +1891,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekb
 | 視線 | 看向畫面右側開滿白花的果樹（不看鏡頭） |
 | 焦段／距離／視野（參考） | 3:4，70mm，約 3.3 公尺，視野 1.13×1.51 公尺；人物約佔畫面高度 87%（規劃）；相機約 0.72 公尺高、畫面中心約 0.68 公尺高，俯仰約 -0.7 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | Miu 的「外出」支柱換成春日度假：杏桃色是 24 套裡沒有用過的顏色（整組已有薄荷、淺紫、粉、熱粉、白、鼠尾草綠、向日葵黃、紅黑、墨綠、霧玫瑰、奶油、酒紅、淺藍），有骨架的上身直接呈現胸型與很細的腰；不是奶油針織、不是欄杆站姿。 |
 | 與同一人另一款的差異 | 橫式款是室內晨光公寓、象牙白緞面小可愛＋短褲、床上半倚看鏡頭；這款是戶外春日木平台、杏桃色細肩短洋裝、坐在吊床邊看向果樹。 |
 | 參考照片（用途） | miu-04：服裝材質（細肩帶洋裝的線條；紫色花紋與室內背景不採用）；miu-05：身分（認臉與髮型；運河場景不採用） |
@@ -1860,7 +1929,7 @@ A 22-year-old adult Japanese woman with her natural very fair skin tone, a round
 
 **選擇理由：** 保留玻璃溫室；窄裙改成高腰貼臀並寫明開衩位置，景別改全身、身體約45度斜側、臀部往後側，輪廓才看得出曲線。橫式款是坐姿、看湖面，兩款景別與視線都不同。
 
-**R6：** 已接受（R6 owner 紀錄）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R6 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 **R4 改了什麼（歷史）：** 保留玻璃溫室；薄荷緞面中長裙改為高腰貼臀窄裙（腰頭在肚臍上方、貼臀往膝下收窄、左前側開衩到大腿中段）；景別由膝上改為全身、身體改為約45度斜側並把臀部往後側，讓輪廓真的看得出曲線；白色細帶涼鞋因全身入鏡寫回 prompt。
 
@@ -1880,7 +1949,7 @@ A 22-year-old adult Japanese woman with her natural very fair skin tone, a round
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 5.3 公尺，視野 1.5×2.0 公尺；人物約佔畫面高度 86%（規劃）；相機約 0.9 公尺高、畫面中心約 0.9 公尺高，俯仰約 -0.1 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5%；不能切：髮頂、臉、入鏡的雙手、雙腳與鞋；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 薄荷綠是她的髮色內層與配色；溫室的綠與白延伸她的冷調。高腰貼臀窄裙＋斜側站姿讓曲線真的看得出來，實景、無運動感。 |
 | 與同一人另一款的差異 | 橫式款是初秋湖畔、深酒紅細針織繞頸短洋裝、側坐長椅、望向湖面；這款是溫室綠意、白色短上衣＋薄荷緞面高腰窄裙、斜側站姿看鏡頭。 |
 | 參考照片（用途） | jia-03：身分（白色上衣與認臉）；jia-07：服裝材質（白色綁結上衣的露腰比例） |
@@ -1916,7 +1985,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 
 **選擇理由：** 海灘夕陽用臀部高度輕仰，讓天空成為乾淨背景、身形更長；斜側呈現 93 公分臀線的健康曲線。與橫式款的坐姿全身不同。
 
-**R6：** 已接受（R4 owner 紀錄，R6 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
+**R7：** 已接受（R4 owner 紀錄，R7 維持）：服裝、場景、表情、姿態、攝影與 prompt 照目前版本，不再要求回覆。
 
 | 項目 | 內容 |
 |---|---|
@@ -1934,7 +2003,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 視線 | 看鏡頭 |
 | 焦段／距離／視野（參考） | 3:4，85mm，約 3.7 公尺，視野 1.04×1.39 公尺；頭頂上方留白約 7%（規劃）；相機約 0.88 公尺高、畫面中心約 1.1 公尺高，俯仰約 +3.4 度 |
 | 原生尺寸 | 3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048） |
-| 印刷（暫定照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 7%；下緣：規劃裁切線在膝蓋下方的小腿上段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
+| 印刷（工作照片框） | 直式 3:4 工作照片框（R6 已接受）（120×160 mm）；比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 7%；下緣：規劃裁切線在膝蓋下方的小腿上段；不能切：髮頂、臉、入鏡的雙手；規劃目標（套框後）：髮頂上方 ≥4%；判斷：依已接受的工作照片框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準 |
 | 為何符合人設 | 她的支柱「旅遊／球場遠征」的另一面：度假海灘的夕陽，健康又性感，和球場完全不同。 |
 | 與同一人另一款的差異 | 橫式款是春日球場、polo＋百褶裙＋球帽、坐球車；這款是日落海灘、白色背心洋裝、赤腳站在水邊。 |
 | 參考照片（用途） | yerin-07：服裝材質（白色平口＋白短裙的清爽穿搭）；yerin-08：表情（燦爛的大笑） |
@@ -2028,7 +2097,9 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 
 ### 10.5 Iris 首張試拍提案（只是提案）
 
-**推薦：V-iris-chen**　R6：V-Iris 首試方向已接受；生成與費用仍未授權，不執行 M-4。
+**推薦：V-iris-chen**　R7：只整理 V-Iris 首試準備（見首試準備文件），沒有生成、沒有花 credits、沒有呼叫 Higgsfield、沒有做報價預檢；生成與費用仍未授權，不執行 M-4。（歷史：R6：V-Iris 首試方向已接受；生成與費用仍未授權，不執行 M-4。）
+
+首試準備（工作流、待確認事項、首張驗收條件）見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。
 
 - 直式 3:4 的原生尺寸已知（1536×2048）、報價已查，第一張只需要驗證「寫真質感、身分、身材與實際扣款」，少一個未知數。
 - 直幅大腿中段以上最能看清 Penny 這次指定的穿搭與姿態：更顯身材的上衣＋牛仔迷你裙、身體面向鏡頭、笑容。
@@ -2048,7 +2119,7 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 
 ## 11. 要請 Penny 決定的事
 
-1. H-jia-seo、H-luna-tanaka 兩套新推薦：各選「接受」或「想修改」，想修改的寫在備註。未回覆不算接受。（其他 22 套、兩本月份與工作照片框都已接受，不需再回覆。）
+本輪沒有要請 Penny 決定的企劃事項（Penny 已要求小幅修訂後直接往後執行）。H-luna-tanaka 待主管核對落實；主管核對符合後即完成 M-3。
 
 ## 12. 共同的皮膚與質感句（每段 prompt 結尾都加）
 
