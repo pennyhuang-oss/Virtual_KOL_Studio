@@ -11,7 +11,7 @@
   只做等比縮小（長邊 1600 px，JPEG q88，不帶原檔中繼資料）。頁面資料只放圖片 ID，不放 job_id、來源路徑或帳號資料。
 - 第二階段素材（data/cal_m1_materials.json，本輪人寫清單，從工作目錄讀）：每張照片用同一套來源核對後等比縮小；
   沒有取回原圖的 daily140 照片只複製 repo 的 360×480 縮圖（位元組不變）。名單只依 data/cal_m1_owner_roster.json。
-- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，R2 起為 24 套雙款，R3 起每套附攝影設計，R4 起附印刷構圖判斷，M-4 R1 起 M-3 完成（23 套已接受＋H-Luna 主管覆核通過）並附 V-Iris 首試準備與首試前核查，人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
+- M-3 拍攝企劃（data/cal_m3_shoot_plan.json，R2 起為 24 套雙款，R3 起每套附攝影設計，R4 起附印刷構圖判斷，M-4 R1 起 M-3 完成（23 套已接受＋H-Luna 主管覆核通過）並附 V-Iris 首試準備與首試前核查，M-4 R2 起附單張首試結果（照片不公開），人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
   其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
@@ -314,8 +314,8 @@ def build_m3(mat):
     P = json.loads(raw)
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
-    assert P['counts'] == {'generated': 0, 'credits': 0, 'trainings': 0}
-    assert P['version'] == 'shoot-plan-v8' and P['revision']['from_version'] == 'shoot-plan-v7'
+    assert P['counts'] == {'generated': 1, 'credits': 0.12, 'trainings': 0}, 'M-4 R2 只授權生成 1 張'
+    assert P['version'] == 'shoot-plan-v9' and P['revision']['from_version'] == 'shoot-plan-v8'
     acc, ver = P['status']['accepted'], P['status']['supervisor_verified']
     assert P['status']['m3'] == 'complete' and len(acc) == 23 and ver == ['H-luna-tanaka'] and not P['status']['revised'], 'M-4 R1 狀態不對'
     assert sorted(acc + ver) == sorted(x['id'] for x in P['sets'])
@@ -333,6 +333,10 @@ def build_m3(mat):
     R1 = M4['r1']
     assert R1['counts']['generated'] == 0 and R1['counts']['credits'] == 0 and R1['counts']['generation_jobs'] == 0 and R1['blockers'] and R1['cap']['v']
     assert all('state' in x for x in M4['tbc']) and not M4['workflow'][0]['v'].startswith('Penny 核定這套造型與費用'), '首試前提未更新'
+    R2 = M4['r2']  # M-4 R2：只送一次；歸屬只標「依時窗及唯一任務推定」；照片與工作 ID 不放公開資料
+    assert R2['counts']['generation_requests'] == 1 and R2['counts']['images'] == 1 and R2['counts']['retries'] == 0, '首試只能送一次'
+    assert R2['attribution']['level'] == '依時窗及唯一任務推定' and R2['charge']['within_budget'] and R2['accept'] and R2['verdict']
+    assert '已關聯」' not in json.dumps(R1['recon'], ensure_ascii=False) and not R1['cap']['why'].startswith('當前報價 0.12；整數顯示值是 1'), 'R1 覆核用語未同步'
     for b in 'HV':
         assert os.path.isfile(os.path.join(ROOT, 'docs/calendar/decision_site/public', P['printing']['diagrams'][b])), b
     assert all(x['id'] in acc for x in P['accepted_notes']['items']), '技術備註只列已接受的套數'
@@ -383,7 +387,7 @@ def build_m3(mat):
     for bad in ('kols/', 'job_id', 'soul_id', 'sophia'):
         assert bad not in text.lower(), bad
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
-            P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit']}
+            P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit'], P['m4r1']['from_commit']}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}

@@ -1459,3 +1459,14 @@ v5 的結論是「大動作 vs 純肌肉細節」，本批把線切得更準：
 - `expression_failed/` 內 2 張留檔（E16 嘟嘴、E18 迷離），表情未達成
 
 **狀態：3 張通過、1 張部分可用，待使用者核准。** 規則已寫入 `EXPRESSION_SYSTEM.md` 第四之三節。
+
+---
+
+## 2026-10-20 桌曆 V-iris-chen 單張首試（TASK-CAL-001／M-4／R2）
+
+- **授權**：Penny 同意 1 張、預算最多 1 credit、送出前精確報價 ≤0.12、只送一次（`docs/calendar/data/cal_m4_authorization_r2.json`）。
+- **設定**：`generate_image`｜`soul_2`＋本角色 Soul｜`quality: "2k"`｜`aspect_ratio: "3:4"`｜`count: 1`｜`use_unlim: false`｜不掛參考圖、不用 style_id｜prompt 是 `docs/calendar/data/cal_m3_shoot_plan.json` 的 V-iris-chen 已接受原文。任務中繼資料記錄後台預設風格 General、quality 欄位標為 1080p，輸出仍是 1536×2048。
+- **結果**：一次完成，輸出 1536×2048 → `images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png`。工作 ID 只記在私有執行紀錄 `review/calendar/m4_r2/execution_log.json`。
+- **費用**：送出前精確報價 0.12；交易明細一筆 Higgsfield Soul V2 −0.12（依時窗及唯一任務推定，不是直接對帳）。
+- **驗收重點**（詳見 `review/calendar/CAL_M4_R2_REVIEW.md`）：臉、髮、服裝、雙手（含碰髮手指）、笑容、構圖、逆光補光都符合；**prompt 寫在畫面外的「large white reflector」被畫進左側草地**（§3-F 點名物件會出現的又一例）；胸型目視比 87 cm／D 保守（與 2026-08-12 記錄的身材還原不穩一致）；臉部皮膚偏光滑。
+- **教訓**：要用反光板補光時，不要在 prompt 點名 reflector；改寫成光的結果（例如「soft even fill light on her face from the front」）。
