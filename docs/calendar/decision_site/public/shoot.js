@@ -1,7 +1,7 @@
-// 2027 KOL 桌曆｜M-3 寫真拍攝企劃（R7：23 套已接受＋H-Luna 依 owner 指定修訂、待主管核對；V-Iris 首試準備）。企劃內容來自 data.js 的 m3（產生自 data/cal_m3_shoot_plan.json）；本頁沒有任何生成圖。
+// 2027 KOL 桌曆｜M-3 寫真拍攝企劃（M-4 R1：M-3 完成——23 套已接受＋H-Luna 依 owner 指示修訂、主管覆核通過；V-Iris 首試準備與首試前核查）。企劃內容來自 data.js 的 m3（產生自 data/cal_m3_shoot_plan.json）；本頁沒有任何生成圖。
 // 舊版回饋（v1–v6）只存在本機瀏覽器 localStorage（cal2027-shoot-v1:<SHA>），不送到伺服器；沒有追蹤或分析。
-// R7 沒有必填決策：本頁只讀那筆資料、把 v1–v6 列為歷史，不寫入、不清除（沒有任何會呼叫 localStorage.setItem／removeItem 的程式）。
-// R7 owner 紀錄的 23 套已接受、兩本月份與工作照片框直接顯示為已接受；H-luna-tanaka 顯示「依owner指定修訂，待主管核對落實」與改動前後，不請 Penny 回覆。
+// R7 起沒有必填決策：本頁只讀那筆資料、把 v1–v6 列為歷史，不寫入、不清除（沒有任何會呼叫 localStorage.setItem／removeItem 的程式）。
+// M-4 R1：23 套已接受、H-luna-tanaka「依owner指示修訂，主管覆核通過」（Penny 沒有看過修訂後版本），M-3 完成；不請 Penny 回覆。
 // 構圖示意與印刷示意都只是方框與尺寸（依企劃數字畫），不是照片，也不是生成圖。
 // 第二階段素材選擇（cal2027-materials-v1:<SHA>）本頁不讀、不寫、不刪。
 'use strict';
@@ -20,7 +20,7 @@
   const SETS = P.sets;
   const SET = {};
   SETS.forEach(s => { SET[s.id] = s; });
-  const OREV = SETS.filter(s => s.status === 'owner_revised');
+  const VSETS = SETS.filter(s => s.status === 'supervisor_verified');
   const ACC = SETS.filter(s => s.status === 'accepted');
   const PEOPLE = P.people;
   const $ = (s, r = document) => r.querySelector(s);
@@ -97,8 +97,8 @@
   const oldG = ver => (str(oldRaw(ver).gnote).trim() ? oneLine(oldRaw(ver).gnote) : '');
   const oldSetAll = id => OLDV.map(v => oldSet(v, id)).filter(Boolean).join('；');
 
-  // ---------- R7：沒有必填決策，也沒有新的回饋欄位；v6 的兩套回覆與 v1–v5 一樣只讀、列為歷史 ----------
-  const OREV_LABEL = P.owner_r7.summary.owner_revised_label;
+  // ---------- R7 起沒有必填決策，也沒有新的回饋欄位；v6 的兩套回覆與 v1–v5 一樣只讀、列為歷史 ----------
+  const VER_LABEL = VSETS.length ? VSETS[0].m4r1.label : '';
 
   // ---------- 畫面元件 ----------
   function fig(iid, cap, label) {
@@ -126,25 +126,28 @@
     rows.map(r => `<tr>${r.map((c, i) => `<td data-label="${esc(head[i])}">${c && c.html ? c.html : esc(c)}</td>`).join('')}</tr>`).join('') + '</tbody></table></div>';
   const link = id => ({ html: `<a href="#c-${esc(id)}">${esc(id)}</a>` });
   const outfitList = o => `<ul class="facts">${Object.entries(o).map(([k, v]) => `<li><b>${esc(k)}</b>：${esc(v)}</li>`).join('')}</ul>`;
-  const stTag = s => (s.status === 'accepted' ? '<span class="tag acc">已接受</span>' : '<span class="tag rev">R7 依owner指定修訂・待主管核對</span>');
-  const stText = s => (s.status === 'accepted' ? '已接受' : OREV_LABEL);
+  const stTag = s => (s.status === 'accepted' ? '<span class="tag acc">已接受</span>' : '<span class="tag acc ver">依owner指示修訂・主管覆核通過</span>');
+  const stText = s => (s.status === 'accepted' ? '已接受' : VER_LABEL);
 
   function decSec() {
-    const O7 = P.owner_r7, S7 = O7.summary, O6 = P.owner_r6, O4 = P.owner_r4, O3 = P.owner_r3, O2 = P.owner_r2, C = P.m4_prep.counts;
+    const O7 = P.owner_r7, S7 = O7.summary, O6 = P.owner_r6, O4 = P.owner_r4, O3 = P.owner_r3, O2 = P.owner_r2, SU = P.sup_m4r1, C1 = P.m4_prep.r1.counts;
     const hasOld = PEOPLE.some(p => oldLine(p.pid)) || oldQs().length || oldGnotes().length || SETS.some(s => oldSetAll(s.id)) || OLDV.some(v => oldQ(v).length || oldG(v));
     const ids = a => a.map(s => `<a href="#c-${esc(s.id)}">${esc(s.id)}</a>`).join('、');
-    return `<section class="sec" id="dec"><h2>R7 owner 決策與定稿進度</h2>
-<pre class="verb">${esc(O7.verbatim.decisions)}</pre>
-<p class="note">${esc(O7.source)}${esc(O7.note)}</p>
+    return `<section class="sec" id="dec"><h2>M-3 完成（主管結論）與 V-Iris 首試前核查</h2>
+<pre class="verb">${esc(SU.verbatim.conclusion)}</pre>
+<p class="note">${esc(SU.source)}${esc(SU.note)}</p>
 <div class="statgrid">
-<div class="stat acc"><b>已接受 ${ACC.length} 套</b><span>拍攝內容與 prompt 不變，不需再回覆（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo）</span><p>${ids(ACC)}</p></div>
-<div class="stat rev"><b>依owner指定修訂 ${OREV.length} 套</b><span>${esc(OREV_LABEL)}：只改雙手與香袋；Penny 還沒有看過修訂後的版本</span><p>${ids(OREV)}</p></div>
-<div class="stat conf"><b>本輪沒有必填決策</b><span>${esc(S7.no_more_owner_questions)}</span></div>
-<div class="stat warn"><b>V-iris-chen 首試準備</b><span>${esc(S7.iris_first)}。本輪生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}。<a href="#prep">看首試準備</a></span></div>
+<div class="stat acc"><b>已接受 ${ACC.length} 套</b><span>owner 接受，拍攝內容與 prompt 不變（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo）</span><p>${ids(ACC)}</p></div>
+<div class="stat acc"><b>${esc(VER_LABEL)} ${VSETS.length} 套</b><span>只改雙手與香袋；Penny 指定了這個修改，但沒有看過修訂後的版本</span><p>${ids(VSETS)}</p></div>
+<div class="stat conf"><b>M-3 完成，沒有待決事項</b><span>不再要求 owner 填企劃問卷；月份與工作照片框維持（${esc(S7.frames)}）。</span></div>
+<div class="stat warn"><b>V-iris-chen 首試前核查</b><span>造型已接受；<b>生成與費用尚未授權</b>。本輪生成 ${C1.generated}、credits ${C1.credits}、生成任務 ${C1.generation_jobs}；唯讀查詢 ${C1.readonly_queries} 次。<a href="#prep">看首試前核查</a></span></div>
 </div>
-<p class="callout warn">月份維持；工作照片框維持（${esc(S7.frames)}）。<b>生成與費用都未授權</b>；首試準備只是文件，不是生成或印刷驗收。</p>
-<details class="info"><summary>R7：Penny 原文與主管補充細節（逐字；只有引號內是 Penny 原話）</summary>${OREV.map(s => `<p class="note"><b>${esc(s.id)}（${s.month} 月）Penny：</b>「${esc(s.r7.owner)}」</p><p class="note">主管補充的落實細節（不是 Penny 原話）：</p><pre class="verb">${esc(s.r7.supervisor)}</pre>`).join('')}<p class="note">主管的收尾指示（不是 Penny 原話）：</p><pre class="verb">${esc(O7.verbatim.supervisor.wrap_up)}</pre></details>
-<details class="info"><summary>R7 改了哪些文字（舊 → 新）</summary>${ul(P.r7.changes.filter(x => x.kind !== '狀態（owner 決策）').map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
+<p class="callout warn"><b>生成與費用都未授權</b>；首試準備與核查只是文件，不是生成或印刷驗收。</p>
+<details class="info"><summary>主管本輪指示（逐字）</summary><pre class="verb">${esc(SU.verbatim.instructions)}</pre></details>
+<details class="info"><summary>M-4 R1 改了哪些文字（舊 → 新）</summary>${ul(P.m4r1.changes.map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
+<details class="info"><summary>R7 owner 決策（歷史，逐字）</summary><pre class="verb">${esc(O7.verbatim.decisions)}</pre><p class="note">${esc(O7.source)}${esc(O7.note)}</p></details>
+<details class="info"><summary>R7：Penny 原文與主管補充細節（逐字；只有引號內是 Penny 原話）</summary>${VSETS.map(s => `<p class="note"><b>${esc(s.id)}（${s.month} 月）Penny：</b>「${esc(s.r7.owner)}」</p><p class="note">主管補充的落實細節（不是 Penny 原話）：</p><pre class="verb">${esc(s.r7.supervisor)}</pre>`).join('')}<p class="note">主管的收尾指示（不是 Penny 原話）：</p><pre class="verb">${esc(O7.verbatim.supervisor.wrap_up)}</pre></details>
+<details class="info"><summary>R7 改了哪些文字（舊 → 新，歷史）</summary>${ul(P.r7.changes.filter(x => x.kind !== '狀態（owner 決策）').map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
 <details class="info"><summary>R6 owner 決策、兩套原文與改動（歷史，逐字）</summary><pre class="verb">${esc(O6.verbatim.decisions)}</pre>${SETS.filter(s => s.r6.owner).map(s => `<p class="note"><b>${esc(s.id)}（${s.month} 月）Penny（R6）：</b>「${esc(s.r6.owner)}」</p><pre class="verb">${esc(s.r6.supervisor)}</pre>`).join('')}${ul(P.r6.changes.filter(x => x.kind !== '狀態（owner 決策）').map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}</details>
 <details class="info"><summary>R5 資料修訂與已接受套數的中英同步（歷史）</summary><p class="note">${esc(P.r5.summary)}</p>${ul(P.r5.changes.filter(x => !(x.kind === '印刷措辭' && x.where.startsWith('sets['))).map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}<p class="note">${esc(P.accepted_notes.status)}：${esc(P.accepted_notes.summary)}</p>${ul(P.accepted_notes.items.map(x => `${x.id}：中文「${x.makeup_zh}」→ 英文補上「${x.added_en}」`))}</details>
 <details class="info"><summary>R4 owner 決策與逐套要求（歷史，逐字）</summary><pre class="verb">${esc(O4.verbatim.decisions)}</pre>${SETS.filter(s => s.r4.owner).map(s => `<pre class="verb">${esc(s.r4.owner)}</pre>`).join('')}<pre class="verb">${esc(O4.verbatim.closing)}</pre></details>
@@ -161,7 +164,7 @@
   }
   function booksSec() {
     return `<section class="sec" id="books"><h2>兩本月份（已確認）與總覽</h2>
-<p class="callout"><b>兩本月份人選排序已確認（R4 確認、R6／R7 維持）。</b>不再請 Penny 重新核准；服裝與場景配合既定月份。</p>
+<p class="callout"><b>兩本月份人選排序已確認（R4 確認、R6／R7 維持；M-3 完成）。</b>不再請 Penny 重新核准；服裝與場景配合既定月份。</p>
 <div class="mgrid2">${P.months.map(m => `<div class="mrow2"><span class="mn2">${m.m} 月</span>` +
       `<a class="mchip h" href="#c-${esc(m.H)}"><b>橫</b> ${esc(SET[m.H].name)}<small>${esc(m.why_h)}</small></a>` +
       `<a class="mchip v" href="#c-${esc(m.V)}"><b>直</b> ${esc(SET[m.V].name)}<small>${esc(m.why_v)}</small></a></div>`).join('')}</div>
@@ -188,8 +191,8 @@ ${['H', 'V'].map(b => `<h3>${BOOK[b]}（${b === 'H' ? '16:9' : '3:4'}）攝影�
 <p class="note"><b>景別：</b>${esc(cnt(F.counts[b].shot))}；<b>身體方向：</b>${esc(cnt(F.counts[b].body))}。</p>
 <p class="note"><b>節奏：</b>${esc(F.rhythm[b])}</p><p class="note"><b>依月份：</b>${esc(F.sequence[b])}</p>`).join('')}
 ${ul([`近景：${F.rhythm.near}`, `角度與視線：${F.rhythm.angles}`, `同一位的兩款：${F.rhythm.pair}`, `戶外與重複：${F.rhythm.outdoor}`])}
-<h3>R7 依owner指定修訂的 ${OREV.length} 套：改了什麼</h3>
-${stbl(['ID', '攝影（不變）', '改了什麼'], OREV.map(s => [link(s.id), s.cam.line, s.r7.change]), 'adj')}
+<h3>R7 依owner指定修訂的 ${VSETS.length} 套（主管覆核通過）：改了什麼</h3>
+${stbl(['ID', '攝影（不變）', '改了什麼'], VSETS.map(s => [link(s.id), s.cam.line, s.r7.change]), 'adj')}
 <details class="info"><summary>R6 的 2 套新推薦（歷史）</summary>${stbl(['ID', '現在', '原設計（R5）', 'R6 改了什麼'], SETS.filter(s => s.r6.change).map(s => [link(s.id), { html: stTag(s) }, s.r6.from_line, s.r6.change]), 'adj')}</details>
 <details class="info"><summary>R4 的 16 套修訂（歷史）</summary>${stbl(['ID', '現在', 'R4 改了什麼'], SETS.filter(s => s.r4.change).map(s => [link(s.id), { html: stTag(s) }, s.r4.change]), 'adj4')}</details>
 <details class="info"><summary>共同規則與 prompt 一致性檢查</summary><h4>共同規則</h4>${ul(F.rules)}<h4>逐套檢查（產生資料時執行，不通過就無法建置）</h4>${ul(F.checks)}</details>
@@ -264,7 +267,7 @@ ${stbl(['ID', '狀態', '照片框', '比例計算', '邊緣（規劃預估）',
         (s.r5 ? `<p class="tnote"><b>R5 主管核可的中英同步</b>：英文 prompt 補上中文妝感「${esc(s.r5.makeup_zh)}」的一句（${esc(s.r5.added_en)}）；服裝、場景、表情、姿態、攝影與身分不變，接受狀態沿用。</p>` : '') + r6Hist(s) + '</div>';
     }
     const r7 = s.r7;
-    return `<div class="r4box rev"><p><b>${esc(r7.label)}</b>：${esc(r7.note)}</p>
+    return `<div class="r4box acc ver"><p><b>${esc(s.m4r1.label)}</b>：${esc(s.m4r1.note)}</p>
 <p><b>R7 改了什麼：</b>${esc(r7.change)}</p>
 <p><b>Penny 原文（R7）：</b>「${esc(r7.owner)}」</p>
 <p class="tnote">${esc(r7.no_ref)}</p>
@@ -307,7 +310,7 @@ ${tbl(['風險', '處理'], s.risks)}
 </details>
 <details class="info"><summary>prompt 草稿（尚未執行）</summary><pre class="prompt">${esc(s.prompt)}</pre></details>
 ${old ? `<p class="oldfb">舊版回饋（歷史，不是新的核准）：${esc(old)}</p>` : ''}
-${acc ? '' : `<p class="callout">這套不需要 Penny 回覆：${esc(s.r7.note)}</p>`}</article>`;
+${acc ? '' : `<p class="callout">這套不需要 Penny 回覆：${esc(s.m4r1.note)}</p>`}</article>`;
   }
   function person(p, i) {
     const old = oldLine(p.pid);
@@ -330,7 +333,7 @@ ${tbl(['款式', '建議'], C.recommend.map(x => [x.k, x.v]))}
   function costSec() {
     const K = P.execution.cost, M = P.execution.model, I = K.iris_first;
     return `<section class="sec" id="cost"><h2>費用與 Iris 首張試拍（費用方案不變）</h2>
-<p class="callout warn"><b>${esc(I.status_r7)}</b> ${esc(K.status)} ${esc(K.gate)}</p>
+<p class="callout warn"><b>${esc(I.status_m4r1)}</b> ${esc(K.status)} ${esc(K.gate)}</p>
 <h3>Iris 首張：<a href="#c-${esc(I.set)}">${esc(I.set)}</a>（方向已接受）</h3>${ul(I.why)}
 ${tbl(['項目', '內容'], I.plan.map(x => [x.k, x.v]))}
 <h3>24 套的情境試算（不是預算）</h3>
@@ -347,26 +350,38 @@ ${tbl(['情境', '請求數', '依 credits_exact 報價', '若實扣是顯示值
   }
   // ---------- V-Iris 首試準備（R7）：只整理，不生成 ----------
   function prepSec() {
-    const M4 = P.m4_prep, C = M4.counts, IV = SET[M4.set];
-    return `<section class="sec" id="prep"><h2>${esc(M4.title)}（R7）</h2>
-<p class="callout warn"><b>${esc(M4.status)}</b> 本輪生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}、報價預檢 ${C.price_prechecks}。</p>
+    const M4 = P.m4_prep, C = M4.counts, IV = SET[M4.set], R1 = M4.r1, C1 = R1.counts;
+    return `<section class="sec" id="prep"><h2>${esc(M4.title)}</h2>
+<p class="callout warn"><b>${esc(M4.status)}</b> M-4 R1：生成 ${C1.generated}、credits ${C1.credits}、生成任務 ${C1.generation_jobs}、訓練 ${C1.trainings}、上傳 ${C1.uploads}；${esc(R1.counts_note)}（R7：生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}、報價預檢 ${C.price_prechecks}。）</p>
 <p class="note">完整文件：repo 的 <code>${esc(M4.doc)}</code>。企劃內容見 <a href="#c-${esc(M4.set)}">${esc(M4.set)} 卡片</a>；Penny 不需要再選企劃。</p>
+<h3>${esc(R1.title)}</h3><p class="callout"><b>結論：</b>${esc(R1.verdict)}</p>
+<h4>剩餘阻礙</h4>${stbl(['阻礙', '說明', '誰決定'], R1.blockers.map(x => [x.k, x.v, x.who]), 'block')}
+<p class="note"><b>已不是阻礙：</b>${esc(R1.not_blockers.join('、'))}。<b>首張驗收要特別看的風險：</b>${esc(R1.risks.join('、'))}。</p>
+<h4>建議費用上限</h4><p class="callout warn"><b>${esc(R1.cap.v)}</b>　${esc(R1.cap.why)}</p>${ul(R1.cap.stop.map(x => '停止條件：' + x))}<p class="note">${esc(R1.cap.stop_note)}</p>
+<h4>Soul 證據</h4>${stbl(['項目', '內容'], R1.soul.map(x => [x.k, x.v]), 'prep2')}
+<h4>當前模型參數與 Soul 狀態（2026-10-20 唯讀查詢）</h4>${stbl(['項目', '內容'], R1.params.map(x => [x.k, x.v]), 'prep2')}
+<h4>首試單次請求的確切設定</h4>${stbl(['項目', '設定'], R1.request.map(x => [x.k, x.v]), 'prep2')}
+<h4>報價（當前）</h4>${stbl(['報價', '回傳', '依據'], R1.quote.map(x => [x.k, x.v, x.basis]), 'prep3')}
+<h4>歷史紀錄（另列，不拿來估算本次）</h4>${stbl(['紀錄', '數值', '說明'], R1.history.map(x => [x.k, x.v, x.basis]), 'prep3')}
+<h4>計價單位</h4>${ul(R1.pricing)}<h4>失敗扣款規則</h4>${ul(R1.failure)}
+<h4>交易核對：如何把本次請求與扣款對上</h4><ol class="facts">${R1.recon.map(x => `<li>${esc(x)}</li>`).join('')}</ol>${ul(R1.recon_limits.map(x => '限制：' + x))}
+<h3>V-Iris 首試準備（R7 整理，M-4 R1 更新）</h3>
 <h3>已接受的企劃</h3>${stbl(['項目', '內容'], M4.plan.map(x => [x.k, x.v]), 'prep2')}
 <h3>身分參考</h3>${stbl(['項目', '內容'], M4.identity.map(x => [x.k, x.v]), 'prep2')}
 <h3>最終 prompt 與生成比例</h3><p class="note"><b>生成比例：</b>${esc(M4.ratio)}</p>
 <details class="info"><summary>最終 prompt（已接受版本，尚未執行；與卡片上的 prompt 草稿逐字相同）</summary><pre class="prompt">${esc(IV.prompt)}</pre></details>
 <h3>工作流（前提未滿足前不執行）</h3>${stbl(['步驟', '內容'], M4.workflow.map(x => [x.k, x.v]), 'prep2')}
 <h3>現在能準備的</h3>${ul(M4.ready_now)}
-<h3>真正生成前仍需確認（不猜測）</h3>${stbl(['項目', '目前狀態'], M4.tbc.map(x => [x.k, x.v]), 'prep2')}
+<h3>生成前的確認事項（M-4 R1 逐項狀態）</h3>${stbl(['項目', '狀態', '說明'], M4.tbc.map(x => [x.k, x.state, x.v]), 'prep3')}
 <h3>首張驗收條件</h3>${M4.accept.map(g => `<h4>${esc(g.k)}</h4>${ul(g.items)}`).join('')}
-<details class="info"><summary>送生成前檢查（R7 預先核對；送出當下要再核一次）</summary>${stbl(['檢查', '結果', '說明'], M4.lint.map(x => [x.k, x.r, x.v]), 'prep3')}</details>
+<details class="info"><summary>送生成前檢查（R7 預先核對；主管 M-4 R1 接受三項差異；送出當下要再核一次）</summary>${stbl(['檢查', '結果', '說明'], M4.lint.map(x => [x.k, x.r, x.v]), 'prep3')}</details>
 <h3>這份準備不代表</h3>${ul(M4.not)}
 </section>`;
   }
   function outSec() {
     const oq = oldQs(), og = oldGnotes();
     return `<section class="sec" id="out"><h2>定稿進度與複製</h2>
-<div class="callout"><b>本輪沒有必填決策。</b>${esc(P.owner_r7.summary.no_more_owner_questions)}這一頁不是生成授權，也不是費用核准。</div>
+<div class="callout"><b>M-3 已完成，沒有必填決策。</b>主管結論：23 套 owner 接受＋H-Luna 依 owner 指示修訂、主管覆核通過；不再要求 owner 填企劃問卷。這一頁不是生成授權，也不是費用核准。</div>
 <p class="note">本頁只讀、不寫入也不清除這個瀏覽器的資料：v1–v6 的舊回饋與第二階段素材選擇都原樣保留，只在下面列為歷史。複製的文字是定稿進度，可以貼回 ChatGPT 備查。</p>
 ${OLDV.map(v => { const q = oldQ(v); return q.length ? `<p class="oldfb">${v} 題目的回答（保留，歷史）：${esc(q.join('；'))}</p>` : ''; }).join('')}
 ${oq.length ? `<p class="oldfb">v1／v2 題目的回答（保留，歷史）：${esc(oq.join('；'))}</p>` : ''}
@@ -386,7 +401,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
 <div class="agrid">${A.items.map(x => `<article class="ac">${fig(P.aaliya_img[x.key], `Aaliya｜${x.form}｜既有照片，只參考拍法`, `<span class="tag t-ref">Aaliya 既有照片</span> ${esc(x.form)}`)}</article>`).join('')}</div>
 <dl class="mdl">${A.method.map(m => `<dt>${esc(m.item)}</dt><dd>${esc(m.how)}</dd>`).join('')}</dl></details>
 <ul class="facts"><li><a href="index.html">第二階段：為入選人設挑照片</a>：素材選擇照舊保留在那一頁，本頁不讀也不改。</li>
-<li>完整企劃、攝影設計與印刷構圖：repo 的 <code>docs/calendar/CAL_18_M3_SHOOT_PLAN.md</code>（R7）；V-Iris 首試準備：<code>${esc(P.m4_prep.doc)}</code>；R2 Owner 決策逐字紀錄：<code>docs/calendar/CAL_19_M3_R2_OWNER_DECISION.md</code>。</li></ul></section>`;
+<li>完整企劃、攝影設計與印刷構圖：repo 的 <code>docs/calendar/CAL_18_M3_SHOOT_PLAN.md</code>（M-4 R1）；V-Iris 首試準備與首試前核查：<code>${esc(P.m4_prep.doc)}</code>；R2 Owner 決策逐字紀錄：<code>docs/calendar/CAL_19_M3_R2_OWNER_DECISION.md</code>。</li></ul></section>`;
   }
 
   function render() {
@@ -395,7 +410,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     app.innerHTML = decSec() + photoSec() + printSec() + booksSec() +
       `<section class="sec" id="people"><h2>12 位 × 橫式款／直式款</h2>
 <ul class="facts"><li>每位兩套獨立企劃：服裝與場景都不同。左邊是橫式款（16:9），右邊是直式款（3:4）；手機上上下排列。</li>
-<li>綠色「已接受」的 23 套照目前版本、不需再回覆；橘色「R7 依owner指定修訂・待主管核對」的 H-luna-tanaka 寫明改了什麼、你的原文與修改前後，不需要回覆。</li>
+<li>M-3 已完成：綠色「已接受」的 23 套照目前版本；H-luna-tanaka 標「依owner指示修訂・主管覆核通過」，寫明改了什麼、你的原文與修改前後。都不需要回覆。</li>
 <li>每張卡片最上面直接寫<b>景別｜身體方向｜臉與視線｜拍攝角度</b>；七個攝影欄位與理由在「攝影設計細節」展開；虛線框下方一行是這張的印刷判斷。</li>
 <li>虛線框是「尚未生成」的新照片位置，裡面的方框與圓點只是<b>構圖示意</b>，不是照片。卡片下方的照片都是<b>既有照片</b>，只按標示的用途參考，不是新構圖的成品；身材一律以設定數字為準。</li></ul>
 <div class="ov">${PEOPLE.map((p, i) => { const m = IMG[MP[p.pid].face]; return `<a class="rs" href="#p-${esc(p.pid)}"><img src="${esc(m.t)}" width="${m.tw}" height="${m.th}" alt="" loading="lazy" decoding="async"><span class="rs-t"><b>${i + 1}. ${esc(MP[p.pid].name)}</b><span class="rs-p" data-ov="${esc(p.pid)}"></span></span></a>`; }).join('')}</div>
@@ -423,31 +438,32 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     });
   }
   window.addEventListener('resize', () => { clearTimeout(placeSchem.t); placeSchem.t = setTimeout(placeSchem, 150); });
-  const stOf = id => (SET[id].status === 'accepted' ? '已接受' : '待主管核對');
+  const stOf = id => (SET[id].status === 'accepted' ? '已接受' : '主管覆核通過');
   function refresh(id) {
     const el = $(`[data-st="${id}"]`);
     if (el) {
       const acc = SET[id].status === 'accepted';
-      el.textContent = acc ? '不需回覆' : '待主管核對（不需回覆）';
-      el.className = `st ${acc ? 'conf' : 'draft'}`;
+      el.textContent = acc ? '不需回覆' : '主管覆核通過（不需回覆）';
+      el.className = 'st conf';
     }
     const pid = SET[id].pid;
     const ov = $(`[data-ov="${pid}"]`);
     if (ov) ov.textContent = ['H', 'V'].map(b => `${b}：${stOf(b + '-' + pid)}`).join('｜');
   }
   function buildText() {
-    const M4 = P.m4_prep, C = M4.counts;
-    const L = ['TASK-CAL-001／M-3／R7｜Luna香袋修訂與首試準備｜企劃定稿進度',
+    const M4 = P.m4_prep, R1 = M4.r1, C1 = R1.counts;
+    const L = ['TASK-CAL-001／M-4／R1｜V-Iris首試前核查｜企劃定稿與首試核查進度',
       `企劃版本：${P.version}（${P.round}）｜頁面版本：${PAGE_COMMIT || '本機預覽（未部署）'}`,
-      '說明：本輪沒有必填決策（Penny 已要求小幅修訂後直接往後執行）。這是定稿進度，不是生成授權，也不是費用核准。'];
-    L.push('', `【已接受 ${ACC.length} 套（R4／R6／R7 owner 紀錄，不需再回覆）】`, ACC.map(s => s.id).join('、'));
-    L.push('', `【${OREV_LABEL}：${OREV.length} 套】`);
-    OREV.forEach(s => {
-      L.push(`${s.id}｜${s.month}月｜${s.name}｜${s.theme}｜${s.cam.line}`, `   改了什麼：${s.r7.change}`, `   Penny 原文（R7）：「${s.r7.owner}」`, `   ${s.r7.note}`);
+      '說明：M-3 已完成（主管結論），沒有必填決策。這是定稿與核查進度，不是生成授權，也不是費用核准。'];
+    L.push('', `【已接受 ${ACC.length} 套（R4／R6／R7 owner 紀錄）】`, ACC.map(s => s.id).join('、'));
+    L.push('', `【${VER_LABEL}：${VSETS.length} 套】`);
+    VSETS.forEach(s => {
+      L.push(`${s.id}｜${s.month}月｜${s.name}｜${s.theme}｜${s.cam.line}`, `   改了什麼：${s.r7.change}`, `   Penny 原文（R7）：「${s.r7.owner}」`, `   ${s.m4r1.note}`);
     });
     L.push('', '【兩本月份】已確認（R4 確認、R6／R7 維持）', `【工作照片框】已接受（R6）：${P.owner_r6.summary.frames}`);
-    L.push(`【V-Iris 首試準備】${M4.status}文件：${M4.doc}`);
-    L.push(`【本輪】生成 ${C.generated}、credits ${C.credits}、Higgsfield 呼叫 ${C.higgsfield_calls}、報價預檢 ${C.price_prechecks}`);
+    L.push('', `【V-Iris 首試前核查】${R1.verdict}`, `   報價：${R1.quote[0].v}（${R1.quote[0].k}）`, `   建議上限：${R1.cap.v}`,
+      ...R1.blockers.map(x => `   剩餘阻礙：${x.k}——${x.v}`), `   文件：${M4.doc}`);
+    L.push(`【本輪】生成 ${C1.generated}、credits ${C1.credits}、生成任務 ${C1.generation_jobs}、訓練 ${C1.trainings}、上傳 ${C1.uploads}；唯讀查詢 ${C1.readonly_queries} 次（含不扣款的報價預檢 ${C1.price_prechecks} 次）`);
     OLDV.forEach(v => {
       const sets = SETS.map(s => [s, oldSet(v, s.id)]).filter(([, t]) => t), q = oldQ(v), g = oldG(v);
       if (!sets.length && !q.length && !g) return;
@@ -467,7 +483,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     return L.join('\n');
   }
   function refreshOut() {
-    $('#bar-count').textContent = `定稿進度：已接受 ${ACC.length} 套｜待主管核對 ${OREV.length} 套｜本輪無必填決策｜尚未生成任何照片`;
+    $('#bar-count').textContent = `M-3 完成：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris 首試：生成與費用未授權｜尚未生成任何照片`;
     const ta = $('#out-text');
     if (ta) ta.value = buildText();
   }
@@ -484,7 +500,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     const text = buildText();
     const ta = $('#out-text');
     ta.value = text;
-    const done = '已複製定稿進度。可以貼回 ChatGPT；本頁不會通知主管。';
+    const done = '已複製定稿與核查進度。可以貼回 ChatGPT；本頁不會通知主管。';
     try { await navigator.clipboard.writeText(text); toast(done); } catch (e) {
       ta.focus(); ta.select();
       let ok = false;

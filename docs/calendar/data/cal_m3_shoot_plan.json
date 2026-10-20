@@ -1,15 +1,15 @@
 {
  "note": "人寫的 M-3 拍攝企劃（TASK-CAL-001）。R4：8 套已接受、16 套修訂、兩本月份已確認，加上印刷構圖核對；只是規劃——沒有生成任何圖片、沒有花 credits、沒有訓練、沒有改 canon 或 Soul ID。說明見 docs/calendar/CAL_18_M3_SHOOT_PLAN.md。",
- "version": "shoot-plan-v7",
- "round": "R7",
+ "version": "shoot-plan-v8",
+ "round": "M-4 R1",
  "written_on": "2026-10-20",
  "revision": {
-  "from_version": "shoot-plan-v6",
-  "from_commit": "c47b91192ca1c76abfec9a93f1e183f7c3fd11f9",
-  "summary": "依 R7 owner 決策：H-jia-seo 接受（共 23 套已接受，拍攝內容與 prompt 不變）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，記為「依owner指定修訂，待主管核對落實」；月份與工作照片框維持；另整理 V-Iris 首試準備（不生成）。企劃版本升為 shoot-plan-v7；本輪沒有必填決策，v1–v6 的回饋保留為歷史。"
+  "from_version": "shoot-plan-v7",
+  "from_commit": "f694e1b0a070942cad5ac247dfd3af7c17efb5b4",
+  "summary": "依主管 M-4 R1 結論：M-3 完成（23 套 owner 接受＋H-Luna 依 owner 指示修訂、主管覆核通過；Penny 沒有看過修訂後的版本）。修正首試準備的過期前提（造型已接受，生成與費用未授權）；主管接受三項檢查表差異；加上 V-Iris 首試前核查結果。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v8。"
  },
  "meta": {
-  "task": "TASK-CAL-001／M-3／R7｜Luna香袋修訂與首試準備",
+  "task": "TASK-CAL-001／M-4／R1｜V-Iris首試前核查",
   "status": "僅規劃：沒有生成任何圖片（含測試圖、示意圖），沒有花 credits，沒有上傳，沒有訓練，沒有改 canon 或 Soul ID",
   "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
   "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
@@ -420,6 +420,7 @@
   ]
  },
  "status": {
+  "m3": "complete",
   "accepted": [
    "H-coco-wu",
    "H-mia-huang",
@@ -445,13 +446,13 @@
    "V-jia-seo",
    "H-jia-seo"
   ],
-  "owner_revised": [
+  "supervisor_verified": [
    "H-luna-tanaka"
   ],
   "revised": [],
   "months": "confirmed",
   "frames": "accepted",
-  "iris_first": "direction-accepted-prep-only-not-authorized",
+  "iris_first": "look-accepted-generation-and-cost-not-authorized",
   "owner_decisions_open": 0
  },
  "accepted_notes": {
@@ -826,7 +827,7 @@
     "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a properly dressed silk kimono in a soft, muted dusty lotus-pink with a fine, small autumn-grass pattern, the left side wrapped over the right with a neat white under-collar, a deep plum Nagoya obi tied in a neat drum knot with a pale-gold obijime cord and a cream obiage, white tabi socks and low zori sandals, and a small pearl hair pin above one ear. Setting: the stone-paved garden path of a contemporary Japanese residence on an autumn afternoon, a wide wooden engawa veranda beside her and open sliding shoji doors revealing a clean, new tatami room with crisp light-wood details, raked white gravel and a few neatly pruned pines, one maple with red leaves at the edge of the frame and a few red leaves on the stones, everything new and well kept, nobody else in the garden. Both hands rest together just below her obi in front of her lower abdomen, lightly holding a small, palm-sized Japanese fabric sachet in soft cream with a fine pale-gold woven texture and a short drawstring cord, plain and without any logos; her shoulders are relaxed, her elbows softly bent and her wrists uncrossed, her fingers resting naturally on the sachet, her sleeves falling naturally; she gives a sweet, gentle smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to her zori sandals, the dusty-pink kimono with its small autumn-grass pattern, the deep plum obi and its cord, the white tabi socks and zori, both hands just below the obi holding the small sachet, the obi left clear above them, her sleeves clear of her face, her hands and the sachet. Body: standing on the stone path with her weight on her back foot and her front foot slightly forward, her body turned about 30 degrees toward camera-left, her shoulders relaxed and her back straight, the line of the obi clear. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.6 metres, camera at her hip height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands right of centre on the stone path, the wooden veranda and the open shoji with the clean tatami room behind her on the left, a red maple at the upper-right edge, the building kept as a backdrop. Emphasis: the full standing figure shows the whole kimono, where the obi sits and her proportions, both hands holding the small sachet below the obi for a graceful, elegant air, the oblique stance adding shape while her face turns to the camera with a sweet smile. Lighting: soft, slanting autumn afternoon sun from front-left, a large white reflector just out of frame on the right keeping her face soft and clear; muted lotus pink, plum, warm wood and a few maple reds against white gravel, with a gentle film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
-   "status": "owner_revised",
+   "status": "supervisor_verified",
    "r4": {
     "status": "revised",
     "owner": "H-Luna／10月：\n保留日式室內氛圍，改成新穎整潔的當代日式旅宿：\n新榻榻米、乾淨木作、精緻寢具，不是古舊家具。\n保留貼身緞面服裝方向。\n姿態改慵懶、有身體曲線的斜坐或半倚，\n不是端正跪坐、證件式擺拍。\n寫清支撐手、腿的位置、臉朝向與視線。",
@@ -933,6 +934,12 @@
       "after": "依 Penny 指示：她是「住在美麗白日夢裡的人」，秋天的日式庭院、看得到和室的建築與正式和服，讓 Luna 的日式氣質最完整；人物站在室外，建築與紅葉只是陪襯。R7 依 Penny 指定：雙手輕捧一個日式小香袋，增加典雅氣質。"
      }
     ]
+   },
+   "m4r1": {
+    "status": "supervisor_verified",
+    "label": "依owner指示修訂，主管覆核通過",
+    "seen_by_owner": false,
+    "note": "主管 M-4 R1 結論：M-3／R7 PASS，M-3 完成。Penny 指定了這個修改，但沒有看過修訂後的版本；不再要求 Penny 回覆。"
    }
   },
   {
@@ -4859,7 +4866,7 @@
   }
  ],
  "photo": {
-  "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。H-Luna 是「依owner指定修訂，待主管核對落實」，Penny 還沒有看過修訂後的版本。",
+  "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。",
   "rules": [
    "景別依 Penny 指定的名稱：胸上／腰上／大腿中段以上／膝上／全身，坐姿與斜躺另寫「坐姿全身」「席地坐姿全身」「斜躺全身」，池邊坐姿寫「坐姿到水面」。不用含糊的「半身」。",
    "裁切不落在關節：膝上切在膝蓋下方的小腿上段；大腿中段以上切在膝蓋上方很遠；腰上切在腰線下方、臀部上方；胸上切在胸線下方、手肘上方。所有景別都保留完整髮頂。",
@@ -4956,7 +4963,7 @@
    "id": "H-luna-tanaka",
    "name": "Luna",
    "origin": "new",
-   "status": "owner_revised",
+   "status": "supervisor_verified",
    "from": "席地坐姿全身｜約45度斜側（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側窗外的紅葉庭院｜坐姿時的胸口高度・平視",
    "line": "全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視",
    "change": "依 Penny 指定（R7）：只把手部由「一手輕扶腰帶側邊、一手自然放下」改為雙手在腰帶下方、下腹前輕捧一個小巧的日式布製香袋（低飽和奶油色帶淡金細緻織紋、短束口繩）；肩膀放鬆、手肘微彎、手腕不交叉，袖子不遮臉、不完全蓋住雙手與香袋，腰帶清楚可見。和服、庭院、月份、表情、身體方向與相機設定都不變。",
@@ -5934,12 +5941,13 @@
      },
      {
       "k": "前提",
-      "v": "需要 Penny 核定這套造型與費用，再由主管另發 M-4 指令；本輪什麼都不送出。"
+      "v": "V-Iris 造型已接受（R4 owner 紀錄；M-3 已完成），不再等待造型核准。生成與費用尚未授權：需要費用核准與主管另發的 M-4 生成指令；在那之前什麼都不送出。"
      }
     ],
     "status_r4": "R4：V-iris-chen 首試方向已同意；費用與生成仍未授權，不執行 M-4。",
     "status_r6": "R6：V-Iris 首試方向已接受；生成與費用仍未授權，不執行 M-4。",
-    "status_r7": "R7：只整理 V-Iris 首試準備（見首試準備文件），沒有生成、沒有花 credits、沒有呼叫 Higgsfield、沒有做報價預檢；生成與費用仍未授權，不執行 M-4。"
+    "status_r7": "R7：只整理 V-Iris 首試準備（見首試準備文件），沒有生成、沒有花 credits、沒有呼叫 Higgsfield、沒有做報價預檢；生成與費用仍未授權，不執行 M-4。",
+    "status_m4r1": "M-4 R1：V-Iris 造型已接受；首試前核查完成（唯讀查詢與不扣款的報價預檢）；生成與費用仍未授權，不執行生成。"
    },
    "gate": "本輪沒有任何花費授權。任何試拍都要 Penny 批准，再由主管另發 M-4 指令。"
   }
@@ -6588,9 +6596,9 @@
   ]
  },
  "m4_prep": {
-  "title": "V-Iris 首試準備（M-4 前置作業）",
+  "title": "V-Iris 首試準備與首試前核查（M-4 前置作業）",
   "doc": "docs/calendar/CAL_20_M4_IRIS_FIRST_TEST_PREP.md",
-  "status": "準備文件：只整理既有資料與首張驗收條件。沒有生成、沒有花 credits、沒有呼叫 Higgsfield、沒有做報價預檢；不是生成授權、不是費用核准，也不是印刷驗收。",
+  "status": "準備文件與首試前核查：整理既有資料、首張驗收條件與 M-4 R1 的唯讀核查。沒有生成、沒有扣 credits、沒有建立生成任務；V-Iris 造型已接受；生成與費用尚未授權，也不是印刷驗收。",
   "counts": {
    "generated": 0,
    "credits": 0,
@@ -6677,14 +6685,14 @@
   "workflow": [
    {
     "k": "0. 前提",
-    "v": "Penny 核定這套造型與費用，再由主管另發 M-4 指令；沒有這兩件事之前，下面所有步驟都不做。",
+    "v": "V-Iris 造型已接受（R4 owner 紀錄；M-3 已完成），不再等待造型核准。生成與費用尚未授權：需要費用核准與主管另發的 M-4 生成指令；在那之前什麼都不送出。",
     "src": [
      "docs/calendar/data/cal_m3_shoot_plan.json（execution.cost.iris_first.plan「前提」）"
     ]
    },
    {
     "k": "1. 核對工具當下的參數",
-    "v": "生成前以工具當下的說明為準，核對 soul_2 的可用參數與比例。上一次唯讀紀錄：2026-10-12 唯讀查詢 Higgsfield models_explore(get, soul_2)：參數只有 quality（1.5k／2k，預設 2k）、Soul ID、1 張參考圖；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；沒有 seed、沒有 negative prompt；回傳沒有價格。與 AI_PROMPT_METHOD_REVIEW.md（2026-09-03）記錄一致。",
+    "v": "生成前以工具當下的說明為準，再核一次 soul_2 的參數、比例與報價（M-4 R1 已在 2026-10-20 核對，結果見「首試前核查」）。",
     "src": [
      "docs/calendar/data/cal_m3_shoot_plan.json（meta.aaliya_sources.model_check）"
     ]
@@ -6695,7 +6703,7 @@
    },
    {
     "k": "3. 送出前查交易明細",
-    "v": "送出前查一次交易明細，記下最後一筆；不用餘額對帳（帳號同時有其他人在用）。"
+    "v": "送出前查交易明細，記下最新一列與其中所有 Soul V2 列；不用餘額對帳（帳號同時有其他人在用）。關聯方法見「首試前核查」的交易核對。"
    },
    {
     "k": "4. 送出 1 個請求",
@@ -6710,7 +6718,7 @@
    },
    {
     "k": "6. 送出後查交易明細",
-    "v": "記錄這一張的實際扣款（逐筆）；失敗也可能扣款，一樣記錄。"
+    "v": "查交易明細到涵蓋送出前的最新一列為止；依「首試前核查」的關聯判準記錄這一張的扣款，無法唯一關聯就照實記為無法關聯。"
    },
    {
     "k": "7. 不自動重試",
@@ -6736,42 +6744,50 @@
   "tbc": [
    {
     "k": "生成與費用授權",
-    "v": "目前沒有：需要 Penny 核定造型與費用，再由主管另發 M-4 指令。"
+    "v": "仍未授權：需要費用核准與主管另發的 M-4 生成指令。V-Iris 造型已接受，不再等待造型核准。",
+    "state": "待決定"
    },
    {
     "k": "模型與參數",
-    "v": "上一次唯讀紀錄是 2026-10-12（soul_2：quality 1.5k／2k、Soul ID、1 張參考圖、比例含 3:4、沒有 seed 與 negative prompt）。生成當下是否相同，未確認。"
+    "v": "2026-10-20 唯讀查詢 soul_2：quality 1.5k／2k（預設 2k）、Soul ID、style_id（選填）、最多 1 張參考圖；比例含 3:4；沒有 seed 與 negative prompt。生成當下再核一次。",
+    "state": "已核對（M-4 R1）"
    },
    {
     "k": "Iris 的 Soul 狀態",
-    "v": "ready（較早訓練；R1 紀錄寫這幾位不在 Soul 總表內，是否跑過同樣的 6 張驗證未知）。"
+    "v": "唯讀查詢：名稱 Iris Chen、soul_2、ready。專案內 12 處紀錄指向同一個 Soul。沒有 6 張驗證紀錄；依指示不重訓、不補生，以既有生產紀錄＋首張驗收代替（需主管接受）。",
+    "state": "已核對（M-4 R1）；正式驗證沒有"
    },
    {
     "k": "輸出尺寸",
-    "v": "歷史紀錄：Iris 先前用 soul_2＋Soul、2k、3:4 生成 7 次，輸出皆 1536×2048。這一張的實際像素要出圖後確認，不預先當成事實。",
+    "v": "本機 Iris 的 3:4 輸出 59 張都是 1536×2048；生成筆記明寫 soul_2＋此 Soul、2k、3:4 輸出 1536×2048。這一張的實際像素要出圖後確認。",
     "src": [
      "kols/iris-chen/generation_notes.md 第 971–973 行"
-    ]
+    ],
+    "state": "歷史紀錄已核對；本張待出圖"
    },
    {
     "k": "費用",
-    "v": "2026-10-13 的預檢回傳 credits 1／credits_exact 0.12（soul_2＋Iris Soul、2k、3:4、count 1），是一週前的報價、不是實扣；生成前要不要重新預檢由主管決定（R7 不做）。歷史紀錄互相不一致：Soul V2 的交易明細每筆 −0.12；但 Iris 的生成筆記記錄 2026-08-05 一批「全批 14 張約 8 credits」（7 位角色各 2 張，「約」數，沒寫怎麼算）。實扣只能用送出前後的交易明細確認。",
+    "v": "2026-10-20 不扣款的報價預檢（與首試設定和 prompt 完全相同）：credits 1／credits_exact 0.12；前後交易明細沒有新增。0.12 是報價，不是實扣；歷史約數另列。",
     "src": [
      "kols/iris-chen/generation_notes.md 第 448–453 行",
      "docs/calendar/data/cal_m3_shoot_plan.json（execution.cost）"
-    ]
+    ],
+    "state": "報價已取得（M-4 R1）；實扣待生成"
    },
    {
     "k": "免費額度",
-    "v": "企劃設定 use_unlim false（查詢時帳號沒有可用的免費額度）；生成當下的狀態未確認。"
+    "v": "soul_2 支援免費無限額度，但這個帳號目前不可用（available false）；首試設定 use_unlim false，用 credits 付費。",
+    "state": "已核對（M-4 R1）"
    },
    {
     "k": "失敗與上限",
-    "v": "失敗也可能扣款；企劃是只送 1 個請求、不自動重試。若要允許重試或設定累計上限，需要主管另外指示。"
+    "v": "失敗可能退款也可能不退（兩種都有紀錄）；建議單次上限 1 credit、1 個請求、不重試。見「首試前核查」。",
+    "state": "建議已提出（M-4 R1）"
    },
    {
     "k": "已接受 prompt 與稽核表的差異",
-    "v": "機位沒寫公分數、正面直視鏡頭、逆光主光三項與稽核表不同；前兩項是已接受內容與 Penny 指定，第三項是企劃選擇並列入驗收。R7 不改 prompt；若主管要調整，需另行指示。"
+    "v": "胸口高度不補寫公分、正面看鏡頭、夕陽輪廓光配前方補光；prompt 不變，出圖後依驗收條件判定。",
+    "state": "主管已接受（M-4 R1）"
    }
   ],
   "accept": [
@@ -6904,8 +6920,8 @@
    },
    {
     "k": "§七 機位寫離地公分數",
-    "r": "與稽核表不同（已接受版本照舊）",
-    "v": "prompt 寫「camera at her chest height」，沒有寫公分；企劃參考值約 1.19 公尺（胸口高度）。R7 不改已接受的 prompt。"
+    "r": "與稽核表不同（主管 M-4 R1 接受）",
+    "v": "prompt 寫「camera at her chest height」，沒有寫公分；企劃參考值約 1.19 公尺（胸口高度）。R7 不改已接受的 prompt。主管 M-4 R1 接受「胸口高度不補寫公分」；prompt 不變，出圖後依驗收條件判定。"
    },
    {
     "k": "§七 鏡頭水平",
@@ -6929,8 +6945,8 @@
    },
    {
     "k": "§七 道具互動或側身回望，不正面直視鏡頭",
-    "r": "與稽核表不同（依 Penny 指定）",
-    "v": "Penny 指定 Iris 身體面向鏡頭、有笑容、不要背部回眸或轉頭；所以正面看鏡頭。"
+    "r": "與稽核表不同（主管 M-4 R1 接受）",
+    "v": "Penny 指定 Iris 身體面向鏡頭、有笑容、不要背部回眸或轉頭；所以正面看鏡頭。主管 M-4 R1 接受「正面看鏡頭」；prompt 不變，出圖後依驗收條件判定。"
    },
    {
     "k": "§七 表情與姿勢是同一個連續動作",
@@ -6939,8 +6955,8 @@
    },
    {
     "k": "§七 主光打在臉上、背景光與臉部光一致",
-    "r": "與稽核表不同（企劃選擇，列驗收）",
-    "v": "主光是她身後側方的低角度夕陽（輪廓光），臉靠前方大反光板與柔光；風險「逆光臉暗」已列，出圖後檢查臉部亮度與光向一致。"
+    "r": "與稽核表不同（主管 M-4 R1 接受）",
+    "v": "主光是她身後側方的低角度夕陽（輪廓光），臉靠前方大反光板與柔光；風險「逆光臉暗」已列，出圖後檢查臉部亮度與光向一致。主管 M-4 R1 接受「夕陽輪廓光配前方補光」；prompt 不變，出圖後依驗收條件判定。"
    },
    {
     "k": "§七 皮膚寫毛孔與質感，沒有 smooth／flawless／porcelain",
@@ -6949,11 +6965,246 @@
    }
   ],
   "not": [
-   "不代表已生成：本輪生成 0 張。",
-   "不代表費用核准：credits 0、Higgsfield 呼叫 0、報價預檢 0。",
+   "不代表已生成：生成 0 張、生成任務 0。",
+   "不代表費用核准：credits 0；M-4 R1 只做唯讀查詢與不扣款的報價預檢。",
    "不代表印刷驗收：照片框是本案工作版型，不是廠商規格或印刷安全。",
    "不重新請 Penny 選企劃：V-iris-chen 已接受。"
-  ]
+  ],
+  "r1": {
+   "title": "M-4 R1 首試前核查（2026-10-20，不生成）",
+   "verdict": "Soul 身分對應已確認；當前模型參數、Soul 狀態與報價已用唯讀查詢取得；單次首試的設定、計價、失敗扣款規則、建議上限與交易核對方法已整理。剩餘阻礙：生成與費用授權、交易關聯判準的接受、Soul 沒有正式 6 張驗證的接受。",
+   "counts": {
+    "generated": 0,
+    "credits": 0,
+    "generation_jobs": 0,
+    "trainings": 0,
+    "uploads": 0,
+    "readonly_queries": 7,
+    "price_prechecks": 1
+   },
+   "counts_note": "唯讀查詢 7 次：模型參數 1、Soul 狀態 1、交易明細 3、帳號餘額 1、不扣款的報價預檢 1；前後交易明細相同，沒有新增扣款。",
+   "soul": [
+    {
+     "k": "身分對應",
+     "v": "專案內 12 處紀錄指向同一個 Soul（程式比對，ID 不公開）；2026-10-20 唯讀查詢回傳名稱 Iris Chen、類型 soul_2、狀態 ready（completed）。",
+     "src": [
+      "kols/iris-chen/profile.json（ai_assets.training_images_v1.soul_training）",
+      "kols/iris-chen/generation_notes.md 第 244–1188 行（11 處）",
+      "review/LEDGER.md 第 94、128–134 行（U-01）"
+     ]
+    },
+    {
+     "k": "訓練來源",
+     "v": "2026-06-25 用 14 張 Seedream 4.5 訓練圖（1920×2560）訓練。不在 2026-09 的 19 位 Soul 總表內，那批另有 6 張驗證協定。",
+     "src": [
+      "kols/iris-chen/profile.json（ai_assets.training_images_v1）",
+      "review/soul_training/SOUL_IDS.json",
+      "review/soul_training/FINAL_REPORT.md"
+     ]
+    },
+    {
+     "k": "驗證證據",
+     "v": "沒有 6 張驗證紀錄。以 Iris 為 GOOD 基準的 Retroactive Benchmark 有設計，但沒有執行紀錄。依指示不重訓、不補生 6 張。",
+     "src": [
+      "review/LEDGER.md（U-01、C-08）",
+      "review/REVIEW.md 第 398 行"
+     ]
+    },
+    {
+     "k": "既有成圖",
+     "v": "本機 Iris 的 soul_2 輸出 73 張：3:4 1536×2048 59 張、9:16 1152×2048 14 張（其中 3:4 的 drive_v1 15 張沒有生成紀錄）。生成筆記明寫 soul_2＋此 Soul、2k、3:4 輸出 1536×2048；6 批有逐張生成後檢查紀錄（手部、規格落差、瑕疵重生）。",
+     "src": [
+      "kols/iris-chen/generation_notes.md 第 969–1014、1042–1101、1176–1248、1261–1453 行"
+     ]
+    },
+    {
+     "k": "生產中已知的行為",
+     "v": "身材還原不穩：部分成圖胸型小於 87 cm／D（第 1007–1010 行）；嘴型多鎖在微笑／笑（第 1436–1446 行），V-Iris 要的是明亮的笑，相容；上身前傾＋靠近鏡頭的姿勢曾觸發拼貼（第 617–628 行），V-Iris 是正面站定，不屬此類。使用者曾裁決 Iris 為 GOOD 基準：「訓練後在生產環境跨場景跨造型使用最久」。",
+     "src": [
+      "kols/iris-chen/generation_notes.md",
+      "review/LEDGER.md 第 132 行"
+     ]
+    },
+    {
+     "k": "目視（縮小檢視，不是量測）",
+     "v": "3 張訓練圖與 6 張不同日期的 Soul 輸出並排：臉型、雙眼皮大眼、唇形與黑色長直髮一致；身材在部分輸出偏纖細。接觸表只存在本機暫存，沒有放進 repo。"
+    },
+    {
+     "k": "結論",
+     "v": "身分對應確認；沒有正式驗證，但既有生產紀錄支持用「單張首試＋首張驗收」判定。不重訓、不補生 6 張；身材與逆光臉部列入首張驗收。"
+    }
+   ],
+   "params": [
+    {
+     "k": "模型",
+     "v": "soul_2（Higgsfield Soul 2.0；說明：Realistic UGC, fashion editorial and character generation）"
+    },
+    {
+     "k": "參數",
+     "v": "quality（1.5k／2k，預設 2k）、Soul ID（選填）、style_id（選填，Soul 風格預設；首試不用）、參考圖最多 1 張（首試不用）"
+    },
+    {
+     "k": "比例",
+     "v": "1:1、16:9、9:16、4:3、3:4、3:2、2:3"
+    },
+    {
+     "k": "沒有的參數",
+     "v": "沒有 seed、沒有 negative prompt、沒有費用上限參數"
+    },
+    {
+     "k": "免費無限額度",
+     "v": "soul_2 支援，但這個帳號目前不可用（available false、剩餘 null）"
+    },
+    {
+     "k": "Soul 狀態",
+     "v": "Iris Chen｜soul_2｜ready（completed）"
+    },
+    {
+     "k": "帳號",
+     "v": "Plus 方案；餘額只作參考（多人共用，不用來對帳）"
+    }
+   ],
+   "request": [
+    {
+     "k": "工具",
+     "v": "generate_image（一次一個請求；不用 generate_image_batch）"
+    },
+    {
+     "k": "模型",
+     "v": "soul_2"
+    },
+    {
+     "k": "Soul",
+     "v": "Iris 既有 Soul（Iris Chen、ready；ID 依專案紀錄，不公開）"
+    },
+    {
+     "k": "quality",
+     "v": "2k"
+    },
+    {
+     "k": "aspect_ratio",
+     "v": "3:4"
+    },
+    {
+     "k": "count",
+     "v": "1"
+    },
+    {
+     "k": "use_unlim",
+     "v": "false（用 credits 付費）"
+    },
+    {
+     "k": "參考圖／style_id",
+     "v": "不用"
+    },
+    {
+     "k": "prompt",
+     "v": "V-iris-chen 已接受 prompt 原文，一字不改（2095 字元）"
+    },
+    {
+     "k": "存放位置",
+     "v": "依工具規則：送出前先唯讀查 get_preferences 決定是否需要專案資料夾；不自行建立專案（需要時由主管指示）"
+    },
+    {
+     "k": "重試",
+     "v": "不重試；傳輸逾時也不重送，先確認原請求結果"
+    }
+   ],
+   "quote": [
+    {
+     "k": "當前報價（2026-10-20）",
+     "v": "credits 1／credits_exact 0.12",
+     "basis": "不扣款的報價預檢，設定與 prompt 和首試完全相同；工具說明：「return the cost in credits for this generation without submitting any job」；預檢前後交易明細相同，沒有新增。"
+    },
+    {
+     "k": "上一輪報價（2026-10-13）",
+     "v": "credits 1／credits_exact 0.12",
+     "basis": "同設定的報價預檢（R4 紀錄）"
+    }
+   ],
+   "history": [
+    {
+     "k": "Soul V2 交易明細（2026-09）",
+     "v": "每筆 −0.12",
+     "basis": "Soul 訓練報告：驗證圖 114 張約 13.7 credits，交易明細為重複的 Soul V2 −0.12。"
+    },
+    {
+     "k": "帳號交易明細（2026-10-19）",
+     "v": "Soul V2 −0.12 後 32 秒 +0.12 退款",
+     "basis": "非本案、歸屬不明；說明 Soul V2 目前在交易明細仍以 0.12 記帳，且失敗可能退款。"
+    },
+    {
+     "k": "Iris 生成筆記（2026-08-05）",
+     "v": "「全批 14 張約 8 credits」",
+     "basis": "7 位角色各 2 張的約數，沒有寫怎麼算；與 0.12 不一致，只列為歷史，不拿來估算。"
+    }
+   ],
+   "pricing": [
+    "報價以「每次請求」回傳；本案每次只送 count 1，所以一個請求就是一張。",
+    "credits 1 是整數顯示值、credits_exact 0.12 是精確值；交易明細的 Soul V2 列以 0.12 記帳（歷史紀錄）。這些都不等於本次實扣，實扣以送出後的交易明細為準。",
+    "不把 0.12 推測為實扣；也不以餘額前後差額推算。"
+   ],
+   "failure": [
+    "失敗可能退款：2026-10-19 帳號交易明細有 Soul V2 −0.12 後同額退款（非本案）；其他模型也常見扣款後退款。",
+    "失敗也可能扣款不退：Soul 訓練協定記錄過「呼叫失敗但仍計費」的 Soul V2 −0.12（Vicky Lin 模式）。",
+    "傳輸逾時時結果未知：工具說明要求不要自動重送，先確認原請求結果。",
+    "規則：任何扣款（含失敗未退）都算進上限；失敗就停下回報，不重試。"
+   ],
+   "cap": {
+    "v": "單次核准上限 1 credit（1 個請求、count 1、不重試）",
+    "why": "當前報價 0.12；整數顯示值是 1。上限 1 credit 涵蓋顯示值計費的情況，但只允許一次請求；預期實扣 0.12。",
+    "stop": [
+     "交易明細出現高於 0.12 的 Soul V2 扣款",
+     "同一視窗出現兩筆以上 Soul V2 扣款、無法分辨哪一筆是本次",
+     "出現任何無法解釋的扣款",
+     "請求失敗、逾時或結果不明（無論是否扣款）"
+    ],
+    "stop_note": "任一停止條件成立：不再送出，照實回報交易明細原始列與判斷。"
+   },
+   "recon": [
+    "送出前：查交易明細，記下最新一列的時間，以及這一頁內所有 Soul V2 列。",
+    "送出：只呼叫一次；記下回傳的工作 ID（只寫進送審紀錄，不放公開頁）與回傳時間；若回應含費用欄位一併記錄。",
+    "等待：輪詢到終態（完成、失敗或審核拒絕）；不重送。",
+    "送出後：查交易明細，直到涵蓋送出前的最新一列；終態後 15 分鐘再查一次，看有沒有遲到的扣款或退款。",
+    "關聯判準（全部符合才算「已關聯」）：(1) 視窗內（送出前最新一列之後，到終態後 15 分鐘）新增的 Soul V2 列恰好一筆扣款，另可有一筆同額退款；(2) 帳號生成紀錄（唯讀，含進行中）在同一視窗只有本次這一個 soul_2 任務；(3) 金額與報價一致，或差異已說明。",
+    "任一不符（0 筆、2 筆以上、或視窗內有其他 soul_2 任務）：記為「無法唯一關聯」，只回報視窗內 Soul V2 列的原始資料；不以時間相近或餘額差額歸屬，停止並回報。"
+   ],
+   "recon_limits": [
+    "交易明細每列只有模型名稱、金額、動作（扣款／退款）與時間，沒有工作 ID，所以無法直接用 ID 對上；只能用「模型名稱＋時間視窗＋生成紀錄一對一」排除。",
+    "第 (2) 項要讀取帳號的生成紀錄（唯讀，但會看到帳號上其他人的作品），需要主管同意生成時使用。",
+    "2026-10-18 02:15 到 10-20 08:57（UTC）共 120 筆交易裡，Soul V2 只有 2 筆（10-19 一扣一退）；視窗內撞到他人 Soul V2 的機會低，但不能排除。"
+   ],
+   "blockers": [
+    {
+     "k": "生成與費用授權",
+     "v": "需要費用核准（建議上限 1 credit）與主管另發的 M-4 生成指令。",
+     "who": "主管／Penny（費用）"
+    },
+    {
+     "k": "交易關聯判準",
+     "v": "交易明細沒有工作 ID；請主管接受「交易核對」一節的排除法判準，並同意生成時唯讀查看帳號生成紀錄。不接受時，實扣只能記為「視窗內的 Soul V2 列」，不能歸屬。",
+     "who": "主管"
+    },
+    {
+     "k": "Soul 沒有正式 6 張驗證",
+     "v": "依指示不重訓、不補生；請主管接受以既有生產紀錄＋首張驗收判定。",
+     "who": "主管"
+    }
+   ],
+   "not_blockers": [
+    "V-Iris 造型（已接受）",
+    "已接受 prompt（不變）",
+    "三項檢查表差異（主管已接受）",
+    "模型參數與 Soul 狀態（已核對；生成當下再核一次）",
+    "報價（已取得 0.12）"
+   ],
+   "risks": [
+    "身材還原不穩（胸型可能小於 D）",
+    "逆光臉暗",
+    "碰頭髮的手指",
+    "戶外公園背景可能出現路人"
+   ]
+  }
  },
  "owner_r7": {
   "round": "R7",
@@ -7142,6 +7393,98 @@
     "where": "m4_prep",
     "old": "（無）",
     "new": "首試準備：企劃、身分、prompt、比例、工作流、待確認、驗收條件、送生成前檢查（只整理，未生成）"
+   }
+  ]
+ },
+ "sup_m4r1": {
+  "round": "M-4 R1",
+  "recorded_on": "2026-10-20",
+  "source": "主管（ChatGPT）的 M-4／R1 任務單「TASK-CAL-001／M-4／R1｜V-Iris首試前核查（不生成）」：【主管結論】與【直接執行】。成果基準 f694e1b、送審基準 88e3944。",
+  "note": "逐字保存主管結論與本輪指示。這是主管的覆核結論，不是 Penny 的新回饋；H-Luna 是「依 owner 指示修訂、主管覆核通過」，不寫成 Penny 看過修訂後的版本。不再要求 owner 填企劃問卷。",
+  "verbatim": {
+   "conclusion": "M-3／R7 PASS，M-3完成。\n23套owner接受＋H-Luna依owner指示修訂、主管覆核通過。\n不要把Luna寫成Penny看過新版本；不再要求owner填企劃問卷。",
+   "instructions": "1. 保存本次主管結論，同步資料、文件與頁面為M-3完成，保留歷史與localStorage。\n2. 修正CAL_20及其來源資料中「Penny核定這套造型與費用」的過期前提：\nV-Iris造型已接受，不再等待造型核准；生成與費用尚未授權。\n3. 定向查既有Iris紀錄，確認Soul身分對應、驗證證據及既有成圖可否支持首試。不因缺少6張驗證紀錄就自行重新訓練或補生6張。\n4. 本輪允許不扣credits、不建立生成任務的唯讀查詢，核對當前模型參數、Soul狀態及可取得的費用資訊。報價預檢只在工具明確保證不扣款、不生成時執行；否則列待確認。\n5. 整理首試單次請求的確切設定、報價與計價單位、失敗扣款規則，以及建議費用上限。歷史約數與當前報價分列，不把0.12推測為實扣。\n6. 交易核對須能關聯本次請求與扣款；多人共用帳號時，不能只憑時間相近或前後差額認定。\n7. V-Iris已接受prompt保持不變。主管接受本次檢查表差異：胸口高度不補寫公分、正面看鏡頭、夕陽輪廓光配前方補光；出圖後依驗收條件判定。\n8. 不生成、不重試、不訓練、不上傳、不取回新原圖、不扣credits。"
+  },
+  "summary": {
+   "m3": "complete",
+   "accepted": 23,
+   "luna": "H-luna-tanaka：依owner指示修訂、主管覆核通過（Penny 未看過修訂後版本）",
+   "iris_look": "V-Iris 造型已接受（R4），不再等待造型核准",
+   "not_authorized": [
+    "生成",
+    "費用（credits）",
+    "M-4 生成指令"
+   ],
+   "checklist_diffs_accepted": [
+    "胸口高度不補寫公分",
+    "正面看鏡頭",
+    "夕陽輪廓光配前方補光"
+   ]
+  }
+ },
+ "m4r1": {
+  "from_commit": "f694e1b0a070942cad5ac247dfd3af7c17efb5b4",
+  "summary": "依主管 M-4 R1 結論：M-3 完成（23 套 owner 接受＋H-Luna 依 owner 指示修訂、主管覆核通過；Penny 沒有看過修訂後的版本）。修正首試準備的過期前提（造型已接受，生成與費用未授權）；主管接受三項檢查表差異；加上 V-Iris 首試前核查結果。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v8。",
+  "changes": [
+   {
+    "kind": "M-3 完成（主管結論）",
+    "where": "sets[H-luna-tanaka].status",
+    "old": "owner_revised（依owner指定修訂，待主管核對落實）",
+    "new": "supervisor_verified（依owner指示修訂，主管覆核通過；Penny 未看過修訂後版本）"
+   },
+   {
+    "kind": "M-3 完成（主管結論）",
+    "where": "photo.summary",
+    "old": "H-Luna 是「依owner指定修訂，待主管核對落實」，Penny 還沒有看過修訂後的版本。",
+    "new": "R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
+   },
+   {
+    "kind": "過期前提修正",
+    "where": "execution.cost.iris_first.plan[前提]",
+    "old": "需要 Penny 核定這套造型與費用，再由主管另發 M-4 指令；本輪什麼都不送出。",
+    "new": "V-Iris 造型已接受（R4 owner 紀錄；M-3 已完成），不再等待造型核准。生成與費用尚未授權：需要費用核准與主管另發的 M-4 生成指令；在那之前什麼都不送出。"
+   },
+   {
+    "kind": "過期前提修正",
+    "where": "m4_prep.workflow[0. 前提]",
+    "old": "Penny 核定這套造型與費用，再由主管另發 M-4 指令；沒有這兩件事之前，下面所有步驟都不做。",
+    "new": "V-Iris 造型已接受（R4 owner 紀錄；M-3 已完成），不再等待造型核准。生成與費用尚未授權：需要費用核准與主管另發的 M-4 生成指令；在那之前什麼都不送出。"
+   },
+   {
+    "kind": "首試準備（工作流）",
+    "where": "m4_prep.workflow[1／3／6]",
+    "old": "核對參數與對帳的一般說明",
+    "new": "指向 M-4 R1 的核查結果與關聯判準"
+   },
+   {
+    "kind": "檢查表差異（主管接受）",
+    "where": "m4_prep.lint[§七 機位寫離地公分數]",
+    "old": "與稽核表不同（已接受版本照舊）",
+    "new": "與稽核表不同（主管 M-4 R1 接受）"
+   },
+   {
+    "kind": "檢查表差異（主管接受）",
+    "where": "m4_prep.lint[§七 道具互動或側身回望，不正面直視鏡頭]",
+    "old": "與稽核表不同（依 Penny 指定）",
+    "new": "與稽核表不同（主管 M-4 R1 接受）"
+   },
+   {
+    "kind": "檢查表差異（主管接受）",
+    "where": "m4_prep.lint[§七 主光打在臉上、背景光與臉部光一致]",
+    "old": "與稽核表不同（企劃選擇，列驗收）",
+    "new": "與稽核表不同（主管 M-4 R1 接受）"
+   },
+   {
+    "kind": "待確認事項",
+    "where": "m4_prep.tbc",
+    "old": "8 項（R7 狀態）",
+    "new": "8 項逐項標 M-4 R1 狀態：已核對 5、已提出建議 1、主管已接受 1、待決定 1"
+   },
+   {
+    "kind": "首試前核查",
+    "where": "m4_prep.r1",
+    "old": "（無）",
+    "new": "Soul 證據、當前參數、單次請求設定、報價、計價、失敗扣款、建議上限 1 credit、交易核對方法、剩餘阻礙"
    }
   ]
  }
