@@ -5,6 +5,8 @@
 // M-4 R2：V-Iris 依授權生成 1 張首試，本頁只顯示結果文字（驗收、扣款、歸屬層級），照片與工作 ID 不放本頁。
 // 構圖示意與印刷示意都只是方框與尺寸（依企劃數字畫），不是照片，也不是生成圖。
 // 第二階段素材選擇（cal2027-materials-v1:<SHA>）本頁不讀、不寫、不刪。
+// M-4 R3：本頁改為「已定稿企劃／歷史紀錄」（history.html，只讀）；目前檢視（首試照片、待決事項、回饋）在 shoot.html。
+// 公開資料不含交易原始資料（建置器只留實扣摘要）；照片只放在目前檢視頁。
 'use strict';
 (() => {
   const D = window.CAL_DATA;
@@ -31,6 +33,7 @@
   const oneLine = s => String(s).trim().replace(/\s*\n\s*/g, '／');
   const str = x => (typeof x === 'string' ? x : '');
   const BOOK = { H: '橫式款', V: '直式款' };
+  const R3NOTE = '主管 M-4 R3：反光板及支架必修；人物與身材待 Penny 看圖回饋。';
   const ORIGIN = { new: '新企劃', 'accepted-v2-main': 'Penny 已接受的方向', 'accepted-v2-alt': 'Penny 採用的 v2 替代方向' };
 
   // ---------- 舊版（v1／v2）回饋：只讀 ----------
@@ -141,7 +144,7 @@
 <div class="stat acc"><b>已接受 ${ACC.length} 套</b><span>owner 接受，拍攝內容與 prompt 不變（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo）</span><p>${ids(ACC)}</p></div>
 <div class="stat acc"><b>${esc(VER_LABEL)} ${VSETS.length} 套</b><span>只改雙手與香袋；Penny 指定了這個修改，但沒有看過修訂後的版本</span><p>${ids(VSETS)}</p></div>
 <div class="stat conf"><b>M-3 完成，沒有待決事項</b><span>不再要求 owner 填企劃問卷；月份與工作照片框維持（${esc(S7.frames)}）。</span></div>
-<div class="stat warn"><b>V-iris-chen 單張首試（M-4 R2）</b><span>${esc(R2.status)}實扣 ${R2.charge.net}（${esc(R2.attribution.level)}）。<a href="#prep">看首試結果</a></span></div>
+<div class="stat warn"><b>V-iris-chen 單張首試（M-4 R2）</b><span>R2 當時：${esc(R2.status)}實扣 ${R2.charge.net}（${esc(R2.attribution.level)}）。${esc(R3NOTE)}<a href="shoot.html">看首試照片（目前檢視頁）</a>｜<a href="#prep">首試紀錄</a></span></div>
 </div>
 <p class="callout warn"><b>只授權了 V-Iris 首試 1 張</b>（Penny 同意：預算最多 1 credit、精確報價 ≤0.12、只送一次），已送出一次並停止；沒有 24 套生成、訓練或重試授權。首試結果不是印刷驗收。</p>
 <details class="info"><summary>M-4 R2 授權與主管對 R1 的覆核（逐字）</summary><pre class="verb">${esc(P.auth_m4r2.verbatim.authorization)}</pre><pre class="verb">${esc(P.auth_m4r2.verbatim.r1_review)}</pre><p class="note">${esc(P.auth_m4r2.note)}</p></details>
@@ -239,7 +242,7 @@ ${stbl(['ID', '狀態', '照片框', '比例計算', '邊緣（規劃預估）',
     const k = s.frame.sch;
     return `<figure class="schw"><div class="nb2 sch r${s.book}" role="img" aria-label="${esc(`${s.id} 構圖示意：${s.cam.line}`)}">` +
       `<span class="sch-fig" data-x="${k.x}" data-w="${k.w}" data-top="${k.top}" data-bot="${k.bot}" data-head="${k.head}"${k.lie ? ' data-lie="1"' : ''}><i class="sch-h"></i><i class="sch-b"></i></span></div>` +
-      (s.id === P.m4_prep.set ? `<figcaption class="sch-t"><b>${BOOK[s.book]}新照片 ${esc(s.ratio)}：首試已生成 1 張（M-4 R2，待主管覆核）</b>照片只在私有 repo 送審，不放本頁；框內仍只是構圖示意</figcaption>`
+      (s.id === P.m4_prep.set ? `<figcaption class="sch-t"><b>${BOOK[s.book]}新照片 ${esc(s.ratio)}：首試已生成 1 張（M-4 R2；${esc(R3NOTE)}）</b>照片在<a href="shoot.html">目前檢視頁</a>，本頁不放；框內仍只是構圖示意</figcaption>`
         : `<figcaption class="sch-t"><b>${BOOK[s.book]}新照片 ${esc(s.ratio)}：尚未生成</b>框內只是構圖示意（人物範圍與頭的位置），不是照片</figcaption>`) +
       `<p class="prline"><a href="#print">印刷</a>：${esc(s.print.frame)}｜${esc(s.print.crop)}｜${esc(s.print.verdict)}</p></figure>`;
   }
@@ -359,12 +362,13 @@ ${tbl(['情境', '請求數', '依 credits_exact 報價', '若實扣是顯示值
     R2.accept.forEach(g => g.items.forEach(x => rows2.push([g.k, x.c, x.r, x.v])));
     return `<section class="sec" id="prep"><h2>${esc(M4.title)}</h2>
 <h3>${esc(R2.title)}</h3>
-<p class="callout warn"><b>${esc(R2.status)}</b> ${esc(R2.auth)}生成請求 ${C2.generation_requests}、圖片 ${C2.images}、重送 ${C2.retries}、訓練 ${C2.trainings}、上傳 ${C2.uploads}。</p>
+<p class="callout warn"><b>R2 當時：${esc(R2.status)}</b> ${esc(R2.auth)}生成請求 ${C2.generation_requests}、圖片 ${C2.images}、重送 ${C2.retries}、訓練 ${C2.trainings}、上傳 ${C2.uploads}。</p>
 <p class="callout"><b>判定：</b>${esc(R2.verdict)}</p>
+<p class="callout warn"><b>${esc(R3NOTE)}</b>照片、待決事項與回饋在<a href="shoot.html">目前檢視頁</a>。</p>
 <h4>逐項驗收</h4>${stbl(['類別', '條件', '結果', '說明'], rows2, 'acc2')}
 <h4>扣款與歸屬</h4>${stbl(['項目', '內容'], [
-      ['扣款', CH.spend.map(x => `${x.at} ${x.credits}`).join('；')], ['退款', CH.refund.map(x => `${x.at} ${x.credits}`).join('；') || '無'],
-      ['淨額', `${CH.net}（精確報價 ${CH.quote_exact}；核准預算 ${CH.budget} credit；查到 ${CH.checked_at}）`], ['異常', CH.anomaly],
+      ['扣款／退款', `扣款 ${CH.n_spend} 筆、退款 ${CH.n_refund} 筆（${CH.rows}）`],
+      ['淨額', `${CH.net}（精確報價 ${CH.quote_exact}；核准預算 ${CH.budget} credit；任務完成後與終態後 15 分鐘各查一次）`], ['異常', CH.anomaly],
       ['歸屬層級', `${R2.attribution.level}；${R2.attribution.not}`]], 'chg2')}${ul(R2.attribution.basis)}
 <details class="info"><summary>送出前核對與實際設定</summary>${stbl(['項目', '結果'], R2.pre.map(x => [x.k, x.v]), 'prep2')}<p class="note"><b>送出：</b>${esc(R2.request)}</p><p class="note"><b>任務：</b>${esc(R2.job.status)}；輸出 ${R2.job.px[0]}×${R2.job.px[1]}。${esc(R2.job.observed)}</p></details>
 <p class="note">${esc(R2.files)}</p>
@@ -470,7 +474,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
   }
   function buildText() {
     const M4 = P.m4_prep, R1 = M4.r1, R2 = M4.r2, C2 = R2.counts;
-    const L = ['TASK-CAL-001／M-4／R2｜V-Iris單張首試｜企劃與首試進度',
+    const L = ['TASK-CAL-001｜已定稿企劃／歷史紀錄（M-3 企劃與 M-4 R1–R2）',
       `企劃版本：${P.version}（${P.round}）｜頁面版本：${PAGE_COMMIT || '本機預覽（未部署）'}`,
       '說明：M-3 已完成（主管結論），沒有必填決策。V-Iris 首試只授權 1 張，已送出一次並停止；這份進度不是新的生成授權或費用核准。'];
     L.push('', `【已接受 ${ACC.length} 套（R4／R6／R7 owner 紀錄）】`, ACC.map(s => s.id).join('、'));
@@ -479,9 +483,9 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
       L.push(`${s.id}｜${s.month}月｜${s.name}｜${s.theme}｜${s.cam.line}`, `   改了什麼：${s.r7.change}`, `   Penny 原文（R7）：「${s.r7.owner}」`, `   ${s.m4r1.note}`);
     });
     L.push('', '【兩本月份】已確認（R4 確認、R6／R7 維持）', `【工作照片框】已接受（R6）：${P.owner_r6.summary.frames}`);
-    L.push('', `【V-Iris 單張首試（M-4 R2）】${R2.status}`, `   判定：${R2.verdict}`,
-      `   扣款：${R2.charge.spend.map(x => `${x.at} ${x.credits}`).join('；')}；退款：${R2.charge.refund.length ? R2.charge.refund.map(x => `${x.at} ${x.credits}`).join('；') : '無'}；淨額 ${R2.charge.net}`,
-      `   歸屬：${R2.attribution.level}（${R2.attribution.not}）`, `   照片：只在私有 repo 送審，不放本頁`, `   文件：${M4.doc}`);
+    L.push('', `【V-Iris 單張首試（M-4 R2）】R2 當時：${R2.status}`, `   判定：${R2.verdict}`,
+      `   扣款 ${R2.charge.n_spend} 筆、退款 ${R2.charge.n_refund} 筆；淨額 ${R2.charge.net}（${R2.charge.rows}）`,
+      `   歸屬：${R2.attribution.level}（${R2.attribution.not}）`, `   ${R3NOTE}`, `   照片：目前檢視頁 shoot.html`, `   文件：${M4.doc}`);
     L.push(`【本輪】生成請求 ${C2.generation_requests}、圖片 ${C2.images}、重送 ${C2.retries}、訓練 ${C2.trainings}、上傳 ${C2.uploads}；實扣 ${C2.credits_charged}（${R2.attribution.level}）`);
     OLDV.forEach(v => {
       const sets = SETS.map(s => [s, oldSet(v, s.id)]).filter(([, t]) => t), q = oldQ(v), g = oldG(v);
@@ -502,7 +506,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     return L.join('\n');
   }
   function refreshOut() {
-    $('#bar-count').textContent = `M-3 完成：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris 首試 1 張已生成，待主管覆核（照片不放本頁）`;
+    $('#bar-count').textContent = `歷史紀錄（只讀）｜M-3：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris 首試：反光板必修，人物與身材待 Penny 回饋`;
     const ta = $('#out-text');
     if (ta) ta.value = buildText();
   }
@@ -519,7 +523,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     const text = buildText();
     const ta = $('#out-text');
     ta.value = text;
-    const done = '已複製企劃與首試進度。可以貼回 ChatGPT；本頁不會通知主管。';
+    const done = '已複製企劃與歷史紀錄。可以貼回 ChatGPT；本頁不會通知主管。';
     try { await navigator.clipboard.writeText(text); toast(done); } catch (e) {
       ta.focus(); ta.select();
       let ok = false;

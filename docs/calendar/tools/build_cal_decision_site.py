@@ -12,10 +12,13 @@
 - 第二階段素材（data/cal_m1_materials.json，本輪人寫清單，從工作目錄讀）：每張照片用同一套來源核對後等比縮小；
   沒有取回原圖的 daily140 照片只複製 repo 的 360×480 縮圖（位元組不變）。名單只依 data/cal_m1_owner_roster.json。
 - M-3 拍攝企劃（data/cal_m3_shoot_plan.json，R2 起為 24 套雙款，R3 起每套附攝影設計，R4 起附印刷構圖判斷，M-4 R1 起 M-3 完成（23 套已接受＋H-Luna 主管覆核通過）並附 V-Iris 首試準備與首試前核查，M-4 R2 起附單張首試結果（照片不公開），人寫，從工作目錄讀）：企劃文字照搬；Aaliya 參考照片從固定 commit 讀檔後等比縮小，
-  其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。
+  其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。M-4 R3 起這份企劃改在歷史頁（history.html），
+  公開資料再移除交易原始資料（交易時間、他人交易列與統計），只留實扣摘要。
+- M-4 R3 目前檢視頁（shoot.html；data/cal_review_current.json，人寫，從工作目錄讀）：V-Iris 首試照片（主管同意公開）——原圖 PNG 只移除
+  文字中繼資料區塊（含工作識別碼）、顯示版等比縮小、套框預覽位元組不變、反光板純裁切；來源 commit 與 sha256 記在資料檔。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
-輸出：docs/calendar/decision_site/public/img/{z,t}/、public/data.js、decision_site/ASSET_MANIFEST.json
+輸出：docs/calendar/decision_site/public/img/{z,t,review}/、public/data.js、public/review-data.js、decision_site/ASSET_MANIFEST.json
 用法：python3 docs/calendar/tools/build_cal_decision_site.py --hf-dir <取回快取> --clean-dir <R3 清理輸出>   # 產生
       python3 docs/calendar/tools/build_cal_decision_site.py --check [--hf-dir ... --clean-dir ...]  # 核對
 """
@@ -383,14 +386,158 @@ def build_m3(mat):
             return {k: drop_src(v) for k, v in o.items() if k != 'src'}
         return [drop_src(v) for v in o] if isinstance(o, list) else o
     pub = drop_src(pub)
+    redact_tx(pub)
     text = json.dumps(pub, ensure_ascii=False)
     for bad in ('kols/', 'job_id', 'soul_id', 'sophia'):
         assert bad not in text.lower(), bad
+    assert not TX_RAW.search(text), f'公開資料出現交易原始資料：{TX_RAW.search(text).group(0)}'
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
             P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit'], P['m4r1']['from_commit']}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
+
+
+# M-4 R3：交易原始資料不公開。公開資料（歷史頁）只留摘要：實扣淨額、精確報價、核准預算、歸屬層級；
+# 交易時間、送出前邊界列、他人的交易與任務、帳號交易統計只留在 repo（data/cal_m3_shoot_plan.json、私有執行紀錄）。
+TX_HIDDEN = '交易明細原始列不公開（保存在私有 repo）'
+TX_RAW = re.compile(r'\d{2}:\d{2}:\d{2}|\d{1,2}-\d{2} \d{2}:\d{2}|列 Nano Banana|個 nano_banana|筆交易|秒 \+0')  # 交易時間、他人交易列與統計
+
+
+def redact_tx(pub):
+    def sub(o, k, must, new):
+        assert must in o[k], (k, must)
+        o[k] = new
+    M4 = pub['m4_prep']
+    R1, R2 = M4['r1'], M4['r2']
+    ch = R2['charge']
+    R2['charge'] = {k: ch[k] for k in ('net', 'budget', 'quote_exact', 'within_budget', 'above_quote', 'anomaly')} | {
+        'n_spend': len(ch['spend']), 'n_refund': len(ch['refund']), 'rows': TX_HIDDEN}
+    pre = next(x for x in R2['pre'] if x['k'] == '交易邊界')
+    sub(pre, 'v', '送出前最新一列', '送出前已記下交易明細的最新一列；前 30 列沒有 Soul V2。' + TX_HIDDEN)
+    sub(R2['attribution']['basis'], 1, 'nano_banana_2', '同一時窗帳號的圖片任務裡，soul_2 只有本次這一個；其他模型的任務與扣款不是 Soul V2，不影響歸屬（明細不公開）。')
+    h = R1['history'][1]
+    sub(h, 'k', '帳號交易明細（2026-10-19）', '帳號交易明細（非本案）')
+    sub(h, 'v', '32 秒', '曾有 Soul V2 扣款後同額退款')
+    sub(R1['failure'], 0, '2026-10-19', '失敗可能退款：帳號交易明細有 Soul V2 扣款後同額退款的紀錄（非本案）；其他模型也常見扣款後退款。')
+    sub(R1['recon_limits'], 2, '120 筆交易', '送出前兩天的帳號交易裡 Soul V2 很少（明細不公開）；視窗內撞到他人 Soul V2 的機會低，但不能排除。')
+    h = pub['execution']['cost']['history'][1]
+    sub(h, 'k', '2026-10-13 帳號交易明細', '帳號交易明細（2026-10-13 查詢，非本案）')
+    sub(h, 'v', '今天也有', 'Soul V2 仍以每筆 −0.12 記帳（明細不公開）')
+
+
+# ---------- M-4 R3：目前檢視頁（shoot.html）——首試照片、套框預覽、待決事項 ----------
+# 主頁只放「當前照片＋待決事項」（data/cal_review_current.json，人寫，從工作目錄讀）；完成項目移到歷史頁（history.html）。
+# 圖片從資料檔記錄的 commit 讀檔並核對 sha256：
+# - 原圖 PNG：只移除文字中繼資料區塊（tEXt／iTXt／zTXt；原檔帶有生成平台的工作識別碼），其餘區塊位元組不變，解碼後像素相同；
+# - 顯示版：原圖等比縮小（長邊 1600 px，JPEG q88，不帶中繼資料）；套框預覽：位元組不變複製；反光板：原圖純裁切（JPEG q95）。
+# 不修圖、不調身材、不重新生成。輸出 public/img/review/ 與 public/review-data.js（不放 Soul ID、工作 ID、交易資料、repo 路徑）。
+REVIEW_FILE = 'docs/calendar/data/cal_review_current.json'
+REVIEW_DIR = os.path.join(PUB, 'img', 'review')
+PNG_SIG = b'\x89PNG\r\n\x1a\n'
+PNG_TEXT = (b'tEXt', b'iTXt', b'zTXt')
+
+
+def png_chunks(b):
+    assert b[:8] == PNG_SIG
+    i, out = 8, []
+    while i < len(b):
+        n = int.from_bytes(b[i:i + 4], 'big')
+        out.append((b[i + 4:i + 8], b[i:i + 12 + n]))
+        i += 12 + n
+    assert i == len(b) and out[-1][0] == b'IEND'
+    return out
+
+
+def png_strip_text(b):
+    ch = png_chunks(b)
+    return PNG_SIG + b''.join(c for t, c in ch if t not in PNG_TEXT), [t.decode() for t, _ in ch if t in PNG_TEXT]
+
+
+def review_src(s):
+    b = subprocess.check_output(['git', '-C', ROOT, 'show', f'{s["commit"]}:{s["path"]}'])
+    assert sha256(b) == s['sha256'], s['path']
+    return b
+
+
+def review_outputs(R):
+    """回傳 [(檔名, 位元組, manifest 欄位)]；產生與 --check 共用。"""
+    ph, fr = R['photo'], R['frame']
+    png = review_src(ph['src'])
+    clean, removed = png_strip_text(png)
+    assert removed == ['tEXt'], removed
+    idat = lambda b: b''.join(c for t, c in png_chunks(b) if t == b'IDAT')
+    a, c = Image.open(io.BytesIO(png)), Image.open(io.BytesIO(clean))
+    assert idat(clean) == idat(png) and list(a.size) == ph['px'] and a.tobytes() == c.tobytes() and not c.info, '去中繼資料後影像不同'
+    view, _ = hires_bytes(png)
+    vim = Image.open(io.BytesIO(view))
+    src = lambda s: {'source': f'{s["commit"]}:{s["path"]}', 'source_sha256': s['sha256']}
+    rf = next(x for x in R['pending'] if x['id'] == 'reflector')
+    box = rf['crop']['box']
+    pre = ph['set'] + '_m4r2_'
+    return [
+        (pre + 'first_test.png', clean, {'kind': 'review_png', **src(ph['src']),
+            'op': f'只移除文字中繼資料區塊 {"、".join(removed)}（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同'}),
+        (pre + 'view.jpg', view, {'kind': 'review_preview', **src(ph['src']),
+            'op': f'原圖 {a.width}×{a.height} 等比縮小至 {vim.width}×{vim.height}（Lanczos，JPEG q88，不帶中繼資料）'}),
+        (pre + 'frame_V_120x160.jpg', review_src(fr['src']), {'kind': 'review_copy', **src(fr['src']), 'op': '位元組不變複製'}),
+        (pre + 'reflector_crop.jpg', jpeg(a.convert('RGB').crop(tuple(box)), 95), {'kind': 'review_crop', **src(ph['src']), 'box_px': box,
+            'op': f'裁切 {box}（只裁切；JPEG q95）'}),
+    ]
+
+
+def public_secrets():
+    """不能出現在任何公開檔的字串：Iris 的 Soul ID、首試工作 ID（私有執行紀錄與原圖文字區塊）。只在記憶體比對，不輸出。"""
+    prof = json.loads(wt_bytes('kols/iris-chen/profile.json'))
+    out = {prof['ai_assets']['training_images_v1']['soul_training']['soul_id']}
+    out |= set(re.findall(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', wt_bytes('review/calendar/m4_r2/execution_log.json').decode()))
+    R = json.loads(wt_bytes(REVIEW_FILE))
+    png = review_src(R['photo']['src'])
+    for t, c in png_chunks(png):
+        if t in PNG_TEXT:
+            out.add(c[8:-4].split(b'\0', 1)[1].decode('latin-1'))
+    assert len(out) >= 2 and all(len(x) >= 32 for x in out)
+    return out
+
+
+def scan_public(secrets):
+    """回傳公開資料夾裡含私有識別碼的檔案（含去掉連字號的寫法）。"""
+    needles = [x.encode() for x in secrets] + [x.replace('-', '').encode() for x in secrets]
+    hits = []
+    for d, _, fs in os.walk(PUB):
+        for fn in fs:
+            b = open(os.path.join(d, fn), 'rb').read()
+            if any(n in b for n in needles):
+                hits.append(os.path.relpath(os.path.join(d, fn), PUB))
+    return hits
+
+
+def build_review():
+    raw = wt_bytes(REVIEW_FILE)
+    R = json.loads(raw)
+    assert R['round'] == 'M-4 R3' and R['photo']['label'] == '首試樣張，尚未定稿' and '不是印刷核准' in R['frame']['label']
+    assert [(x['k'], x['state']) for x in R['pending']] == [('反光板及支架', '主管判定必修'), ('人物與身材呈現', '待Penny看圖回饋')]
+    assert R['feedback']['key'].startswith('cal2027-review-v1:') and '不會自動傳給主管' in R['feedback']['storage_note']
+    os.makedirs(REVIEW_DIR, exist_ok=True)
+    for fn in os.listdir(REVIEW_DIR):
+        os.remove(os.path.join(REVIEW_DIR, fn))
+    files = {}
+    for name, data, meta in review_outputs(R):
+        with open(os.path.join(REVIEW_DIR, name), 'wb') as f:
+            f.write(data)
+        MANIFEST.append({'published': f'public/img/review/{name}', 'sha256': sha256(data), **meta})
+        im = Image.open(io.BytesIO(data))
+        files[meta['kind']] = {'src': f'img/review/{name}', 'w': im.width, 'h': im.height, 'bytes': len(data)}
+    pub = json.loads(raw)
+    pub.pop('note')
+    for x in (pub['photo'], pub['frame']):
+        x.pop('src')
+    pub['img'] = {'png': files['review_png'], 'view': files['review_preview'], 'frame': files['review_copy'], 'reflector': files['review_crop']}
+    text = json.dumps(pub, ensure_ascii=False)
+    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易'):
+        assert bad not in text.lower(), bad
+    assert not re.search(r'[0-9a-f]{8,}', text), '檢視頁資料出現疑似 ID'
+    return pub
 
 
 # ---------- 資料 ----------
@@ -617,15 +764,21 @@ def main():
         'm3': m3,
         'images': IMAGES,
     }
+    review = build_review()
+    with open(os.path.join(PUB, 'review-data.js'), 'w', encoding='utf-8') as f:
+        f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。目前檢視頁（shoot.html）的資料，來源 docs/calendar/data/cal_review_current.json\n')
+        f.write('window.CAL_REVIEW = ' + json.dumps(review, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     with open(os.path.join(PUB, 'data.js'), 'w', encoding='utf-8') as f:
         f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。資料來源：固定成果 commit ' + FIXED + '\n')
         f.write('window.CAL_DATA = ' + json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     man = {'generated_by': 'docs/calendar/tools/build_cal_decision_site.py', 'fixed_sha': FIXED,
-           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小。沒有生成、外擴、增強或修圖。本檔不對外提供。',
+           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小；review_*＝目前檢視頁的首試照片（review_png 只移除 PNG 文字中繼資料區塊、review_preview 等比縮小、review_copy 位元組不變、review_crop 純裁切）。沒有生成、外擴、增強或修圖。本檔不對外提供。',
            'files': MANIFEST}
     with open(os.path.join(SITE, 'ASSET_MANIFEST.json'), 'w', encoding='utf-8') as f:
         json.dump(man, f, ensure_ascii=False, indent=1)
         f.write('\n')
+    hits = scan_public(public_secrets())
+    assert not hits, f'公開檔含私有識別碼：{hits}'
     print(f'ok: {len(IMAGES)} images, {len(MANIFEST)} files')
 
 
@@ -639,6 +792,7 @@ def check(hf_dir=None, clean_dir=None):
     C = {c['cid']: c for c in load_json('data/cal_r3_cleanup_report.json')['items']}
     D140 = {r['file']: r for r in load_json('data/cal_r2_daily140_jobs.json')['rows']}
     not_recomputed = []
+    RV = {f'public/img/review/{n}': (d, m) for n, d, m in review_outputs(json.loads(wt_bytes(REVIEW_FILE)))}
     for e in man['files']:
         p = os.path.join(SITE, e['published'])
         listed.add(os.path.relpath(p, PUB))
@@ -652,6 +806,9 @@ def check(hf_dir=None, clean_dir=None):
         elif e['kind'] == 'copy':
             if blob_of(data) != e['source_blob'] or git_blob(e['source'][len(CAL):]) != e['source_blob']:
                 print('與固定 commit 不同', e['published']); bad += 1
+        if e['kind'].startswith('review_'):
+            if e['published'] not in RV or RV[e['published']][0] != data or RV[e['published']][1]['kind'] != e['kind']:
+                print('目前檢視頁圖片無法重現', e['published']); bad += 1
         if e['kind'] == 'crop':
             src = Image.open(io.BytesIO(git_bytes(e['source'][len(CAL):]))).convert('RGB')
             if jpeg(src.crop(tuple(e['box_px'])), 95) != data:
@@ -671,14 +828,23 @@ def check(hf_dir=None, clean_dir=None):
                 if hires_bytes(src)[0] != data:
                     print('高解析預覽無法重現', e['published']); bad += 1
     on_disk = set()
-    for d in ('z', 't'):
+    for d in ('z', 't', 'review'):
         for fn in os.listdir(os.path.join(PUB, 'img', d)):
             on_disk.add(f'img/{d}/{fn}')
     extra = on_disk - listed
     if extra:
         print('manifest 以外的圖片：', sorted(extra)); bad += 1
+    if set(RV) - {e['published'] for e in man['files']}:
+        print('目前檢視頁圖片未發佈：', sorted(set(RV) - {e['published'] for e in man['files']})); bad += 1
+    hits = scan_public(public_secrets())
+    if hits:
+        print('公開檔含私有識別碼：', hits); bad += 1
+    pubtext = ''.join(open(os.path.join(PUB, f), encoding='utf-8').read() for f in os.listdir(PUB) if f.endswith(('.js', '.html', '.css')))
+    if TX_RAW.search(pubtext):
+        print('公開檔出現交易原始資料：', TX_RAW.search(pubtext).group(0)); bad += 1
     n = {k: sum(e['kind'] == k for e in man['files']) for k in ('copy', 'crop', 'hires_preview', 'thumbnail')}
-    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}），問題 {bad}'
+    nr = sum(e['kind'].startswith('review_') for e in man['files'])
+    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、目前檢視頁 {nr}），問題 {bad}；公開檔無私有識別碼、無交易原始資料'
           + (f'；未提供快取、只核對 sha256 的高解析預覽：{", ".join(not_recomputed)}' if not_recomputed else ''))
     return 1 if bad else 0
 

@@ -12,10 +12,12 @@
 | 檔案 | 內容 |
 |---|---|
 | `server.js` | 只提供 `public/` 的靜態檔（不需登入；noindex、robots、CSP 等標頭） |
-| `public/index.html`、`mat.js`、`mat.css` | **第二階段：為 Penny 已確認的 12 位挑照片**（主入口；人寫） |
+| `public/shoot.html`、`review.js`、`review.css` | **目前檢視頁**（M-4 R3 起）：只放當前照片＋待決事項＋回饋；資料 `review-data.js`（程式產生，來源 `docs/calendar/data/cal_review_current.json`）（人寫） |
+| `public/history.html`、`history.js`、`history.css` | **已定稿企劃／歷史紀錄**（M-3 拍攝企劃與 M-4 R1–R2 紀錄；只讀；M-4 R3 前是 `shoot.html`）（人寫） |
+| `public/index.html`、`mat.js`、`mat.css` | **第二階段：為 Penny 已確認的 12 位挑照片**（人寫） |
 | `public/cast.html`、`cast.js`、`cast.css` | 第一階段：自由選 12 位人設（已完成，保留作參考；人寫） |
 | `public/plan.html`、`app.js`、`app.css` | 原推薦方案參考（舊版決策頁：照片、尺度、版面、品牌；第一階段不必填；人寫） |
-| `public/data.js`、`public/img/` | **程式產生**，不要手改（產生方式見下方） |
+| `public/data.js`、`public/review-data.js`、`public/img/` | **程式產生**，不要手改（產生方式見下方） |
 | `ASSET_MANIFEST.json` | 每個發佈檔的來源（固定 commit 的路徑與 git blob）、處理方式（位元組不變複製／純裁切／高解析預覽／等比縮圖）與 sha256；不對外提供（不在 `public/`） |
 
 ## 圖片的來源與處理
@@ -28,6 +30,17 @@
 - 沒有生成、外擴、AI 增強、修圖或重新下載。**不發佈**：原始訓練集、Soul ID、job_id、帳號資料、完整工作紀錄、他線 headshot（`r2/audit_otherline/`）、R2 逐人素材表（`r2/assets/CAL_R2_assets_*`，圖上印有 job_id）。
 - 產生：`python3 docs/calendar/tools/build_cal_decision_site.py --hf-dir <R2 取回快取> --clean-dir <R3 清理輸出>`（兩個快取都不在 repo）。
 - 核對：`python3 docs/calendar/tools/build_cal_decision_site.py --check [--hf-dir … --clean-dir …]`（複製檔與固定 commit 同一 blob、裁切與高解析預覽可重現、沒有 manifest 以外的圖片；沒給快取時，來自快取的高解析預覽只核對 sha256）。
+
+## 目前檢視頁（shoot.html，M-4 R3 起）
+
+- 主頁只放「當前照片＋待決事項」：簡短進度、首試照片（標「首試樣張，尚未定稿」；點開大圖，「原尺寸」看原圖；可下載原圖）、工作照片框預覽（標「不是印刷核准」）、本次待處理、回饋。每輪更新 `docs/calendar/data/cal_review_current.json`；完成的項目移到歷史頁，不在主頁追加全文。
+- 首試照片經主管 M-4 R3 同意放在本站公開頁（站內提供，不連私有 GitHub）。原圖 PNG 只移除文字中繼資料區塊（原檔帶有生成平台的工作識別碼），影像資料位元組不變；顯示版等比縮小（長邊 1600 px）；套框預覽位元組不變；反光板位置是原圖純裁切。不修圖、不調身材、不重新生成。來源 commit 與 sha256 記在資料檔，`--check` 會重現每個檔。
+- 回饋（接受／想修改＋備註）存在 `localStorage` 的新鍵 `cal2027-review-v1:V-iris-chen-m4r2`，只在這個瀏覽器，不會自動通知主管；「複製回饋」貼回對話。舊鍵（`cal2027-shoot-v1:<SHA>`、`cal2027-materials-v1:<SHA>`）本頁不讀、不寫、不刪。
+- 公開檔不含 Soul ID、工作 ID、交易原始資料：`--check` 掃描整個 `public/`（含圖片位元組）找私有識別碼，並檢查文字檔沒有交易時間或他人交易列；歷史頁的公開資料只留實扣摘要。
+
+## 已定稿企劃／歷史紀錄（history.html）
+
+- M-3 拍攝企劃（24 套已定稿）、兩本月份、照片框、歷次 owner 原文與主管覆核、首試前核查與首試紀錄；只讀，不再要求 owner 填企劃問卷。舊版回饋（v1–v6，`cal2027-shoot-v1:<SHA>`）只讀顯示，不寫入、不清除。
 
 ## 第二階段：挑照片（index.html）
 

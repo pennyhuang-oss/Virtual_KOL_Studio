@@ -1,7 +1,7 @@
 {
  "generated_by": "docs/calendar/tools/build_cal_decision_site.py",
  "fixed_sha": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
- "note": "只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小。沒有生成、外擴、增強或修圖。本檔不對外提供。",
+ "note": "只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小；review_*＝目前檢視頁的首試照片（review_png 只移除 PNG 文字中繼資料區塊、review_preview 等比縮小、review_copy 位元組不變、review_crop 純裁切）。沒有生成、外擴、增強或修圖。本檔不對外提供。",
  "files": [
   {
    "published": "public/img/z/H_cover.jpg",
@@ -5542,6 +5542,44 @@
    "kind": "thumbnail",
    "source": "public/img/z/aal_pool22.jpg",
    "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
+  },
+  {
+   "published": "public/img/review/V-iris-chen_m4r2_first_test.png",
+   "sha256": "90ef6c019ca9274ba6f44e4512f905d96d7953f7d2537d4ae4948d2619e0fbf4",
+   "kind": "review_png",
+   "source": "32fec1df14071be27858d038b88304eaff67a31a:kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+   "source_sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
+   "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
+  },
+  {
+   "published": "public/img/review/V-iris-chen_m4r2_view.jpg",
+   "sha256": "52e2a550df4ff77b1689a8177dac184fc5f9af56f063858e767ab326e3c2916a",
+   "kind": "review_preview",
+   "source": "32fec1df14071be27858d038b88304eaff67a31a:kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+   "source_sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/review/V-iris-chen_m4r2_frame_V_120x160.jpg",
+   "sha256": "1926d363edd1b97bdd4af38c950f2eb2b27cd3eea4c1945873f64f7177fa35dd",
+   "kind": "review_copy",
+   "source": "20b5ee89d0c354362bb2f78bcb4eb4ce23c9b7e3:review/calendar/m4_r2/frame_preview_V_120x160.jpg",
+   "source_sha256": "1926d363edd1b97bdd4af38c950f2eb2b27cd3eea4c1945873f64f7177fa35dd",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/review/V-iris-chen_m4r2_reflector_crop.jpg",
+   "sha256": "01914099614677da94e38fc359ca78a9e5e017c9e7b1e987297658396faddbf1",
+   "kind": "review_crop",
+   "source": "32fec1df14071be27858d038b88304eaff67a31a:kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+   "source_sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
+   "box_px": [
+    0,
+    580,
+    400,
+    880
+   ],
+   "op": "裁切 [0, 580, 400, 880]（只裁切；JPEG q95）"
   }
  ]
 }
