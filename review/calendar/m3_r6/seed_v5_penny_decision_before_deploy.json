@@ -1,0 +1,86 @@
+{
+ "commit": "9434b839f589c19832a88e36975fbb31527b7284",
+ "bar": "修訂已回覆 16／16 套｜已接受 8 套｜尚未生成任何照片",
+ "v5": {
+  "ver": "shoot-plan-v5",
+  "sets": {
+   "H-iris-chen": {
+    "c": "ok",
+    "note": "v5備註：馬甲顏色想再看一個選項"
+   },
+   "H-luna-tanaka": {
+    "c": "edit",
+    "note": "這樣的場景，你不如讓他穿和服，很日式那種感覺，也不是一定要在和室內，可以在日式建築的庭院內，看得到建築內是和室，但他是站在室外，穿著和服"
+   },
+   "H-somi-oh": {
+    "c": "ok",
+    "note": ""
+   },
+   "H-yuna-kim": {
+    "c": "ok",
+    "note": ""
+   },
+   "H-tammy-chou": {
+    "c": "ok",
+    "note": ""
+   },
+   "H-rin-ayase": {
+    "c": "ok",
+    "note": ""
+   },
+   "H-miu-shiraishi": {
+    "c": "ok",
+    "note": ""
+   },
+   "H-jia-seo": {
+    "c": "edit",
+    "note": "他這個衣服跟場景有搭嗎？"
+   },
+   "H-yerin-han": {
+    "c": "ok",
+    "note": ""
+   },
+   "V-somi-oh": {
+    "c": "ok",
+    "note": ""
+   },
+   "V-yuna-kim": {
+    "c": "ok",
+    "note": ""
+   },
+   "V-tammy-chou": {
+    "c": "ok",
+    "note": ""
+   },
+   "V-rin-ayase": {
+    "c": "ok",
+    "note": "v5備註：港灣想要多一點風"
+   },
+   "V-rainie-hsu": {
+    "c": "ok",
+    "note": ""
+   },
+   "V-miu-shiraishi": {
+    "c": "ok",
+    "note": ""
+   },
+   "V-jia-seo": {
+    "c": "ok",
+    "note": ""
+   }
+  },
+  "q": {
+   "frames": {
+    "c": "ok",
+    "note": "v5備註：框先這樣"
+   }
+  },
+  "gnote": "v5整體備註：整體方向可以"
+ },
+ "materials_conf": {
+  "iris-chen": {
+   "v": "{\"H\":\"iris-04\",\"V\":\"\",\"B\":[\"iris-03\"]}",
+   "at": "2026-10-20T04:27:50.083Z"
+  }
+ }
+}
