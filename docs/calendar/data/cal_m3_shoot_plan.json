@@ -1,15 +1,15 @@
 {
  "note": "人寫的 M-3 拍攝企劃（TASK-CAL-001）。R4：8 套已接受、16 套修訂、兩本月份已確認，加上印刷構圖核對；只是規劃——沒有生成任何圖片、沒有花 credits、沒有訓練、沒有改 canon 或 Soul ID。說明見 docs/calendar/CAL_18_M3_SHOOT_PLAN.md。",
  "version": "shoot-plan-v5",
- "round": "R4",
- "written_on": "2026-10-19",
+ "round": "R5",
+ "written_on": "2026-10-20",
  "revision": {
   "from_version": "shoot-plan-v4",
   "from_commit": "8f061fcec58e3dd0451bab8947fe6ed411eb377f",
   "summary": "依 R4 owner 決策：8 套已接受照搬、16 套修訂（每套一個主推薦）、兩本月份已確認；新增印刷規格（已知／假設／未知）、暫定照片框、兩款裁切示意與 24 套逐張印刷構圖判斷。"
  },
  "meta": {
-  "task": "TASK-CAL-001／M-3／R4｜16 套寫真修訂與印刷構圖核對",
+  "task": "TASK-CAL-001／M-3／R5｜企劃資料一致性與生成前技術收尾",
   "status": "僅規劃：沒有生成任何圖片（含測試圖、示意圖），沒有花 credits，沒有上傳，沒有訓練，沒有改 canon 或 Soul ID",
   "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
   "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
@@ -452,23 +452,23 @@
   "iris_first": "direction-agreed-cost-not-authorized"
  },
  "accepted_notes": {
-  "status": "待主管確認，本輪未改動",
-  "summary": "已接受 8 套的服裝、場景、表情、攝影與 prompt 本輪都沒有改。複查中文與 prompt 時發現 3 套（V-iris-chen、H-coco-wu、V-coco-wu）的中文「妝感」有寫、英文 prompt 沒寫——Iris 與 Coco 的人設身分句沒有妝感，上一版（v4）就是如此。建議生成前在英文 prompt 補一句與中文相同的妝感（只補妝感，不改服裝、場景、表情或攝影），請主管確認；V-iris-chen 是 M-4 首試，若首試獲准，建議先補上。",
+  "status": "已套用（R5，主管核可的中英同步）",
+  "summary": "V-iris-chen、H-coco-wu、V-coco-wu 的中文「妝感」原本沒有寫進英文 prompt（Iris 與 Coco 的人設身分句沒有妝感）。R5 依主管核可，只在英文 prompt 的身分句後補一句妝感；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。因此這 3 套的 prompt 不再與 v4 逐字相同；其他 5 套已接受的 prompt 仍與 v4 相同。",
   "items": [
    {
     "id": "V-iris-chen",
     "makeup_zh": "乾淨的日常妝、自然唇色。",
-    "proposal_en": "Fresh, light everyday makeup with a natural lip colour."
+    "added_en": "Fresh, light everyday makeup with a natural lip colour."
    },
    {
     "id": "H-coco-wu",
     "makeup_zh": "甜美淡妝、粉色唇。",
-    "proposal_en": "Sweet, light makeup with a pink lip."
+    "added_en": "Sweet, light makeup with a pink lip."
    },
    {
     "id": "V-coco-wu",
     "makeup_zh": "甜美淡妝。",
-    "proposal_en": "Sweet, light makeup."
+    "added_en": "Sweet, light makeup."
    }
   ]
  },
@@ -616,7 +616,7 @@
     },
     "fill_of": "畫面高度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips. Fresh, light everyday makeup with a natural lip colour and softly glowing skin. She wears a sunflower-yellow structured cotton bustier crop top with thin straps and light boning that shapes her chest and narrow waist, a matching low-rise mini skirt sitting below her navel with a small side slit, flat white strappy sandals, a thin gold chain necklace and small gold stud earrings. Setting: a summer bay in the late morning, a wide, flat and dry pale rock shelf well back from the water, clear turquoise water and a distant green headland, a clean blue sky, the shore empty. Both hands rest lightly on her hips at the low waistband of the skirt; she smiles brightly and warmly. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to sandals, the structured bustier top, her bare waist, the low-rise mini skirt, her legs and the flat white sandals, both hands resting at the waistband on her hips. Body: standing on the flat rock shelf with her weight on her left leg and her right knee softly bent, her body square to the camera, shoulders level and relaxed, her hips shifted slightly with her weight. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.8 metres, camera at her knee height, tilted slightly upward, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands slightly left of centre, the bay and a distant headland on the right, the horizon low behind her knees and clean blue sky above her. Emphasis: the full figure from the front shows the chest, waist and hip lines drawn by the bustier top and low-rise skirt, and her long legs, with her smile clear. Lighting: bright late-morning sun from high front-left, not overhead; a large white reflector just out of frame softens the shadows on her face and body; sunny yellow, turquoise and pale stone tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -627,18 +627,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 9%，放入框後約 7.6%",
-     "下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%"
+     "上緣：規劃髮頂留白約 9%（套框後理論約 7.6%）",
+     "下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 7.6
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 7.6,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -783,7 +784,7 @@
     },
     "fill_of": "畫面高度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a champagne silk satin slip dress with fine lace trim, thin straps and a bias cut that follows her full chest and slim waist, the hem at mid-thigh, a thin gold chain necklace and a pearl hair pin above one ear; her feet are bare. Setting: a contemporary Japanese inn room in the late afternoon, brand-new pale-green tatami, clean light wood panels, a floor-to-ceiling glass window onto a small garden of red autumn maples, a low futon bed with crisp white linen to one side, the room tidy and modern. She leans back onto one straight arm with that hand flat on the tatami behind her hip, her other hand resting lightly on her thigh, with a relaxed, quiet smile. Shot: a full-length shot of her seated on the floor, her whole seated figure from a little above her head down to the tatami, folded legs and feet whole, showing the champagne satin slip dress and thin straps, her folded legs and bare feet, the supporting hand behind her hip and the other hand on her thigh, nothing covering her chest or waist. Body: sitting on the tatami with her legs folded toward camera-right, her body turned about 45 degrees toward camera-left, her upper body leaning back onto her straight supporting arm, shoulders relaxed and her waist lengthened, her hips on the floor. Face and gaze: her face in a three-quarter view, looking out of the window at the autumn garden on camera-left, away from the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 2.4 metres, camera at her seated chest height, level, natural perspective without distortion; she fills about 83% of the frame height. Composition: she sits right of centre, turned toward the floor-to-ceiling window on the left, leaving space on the left for her gaze, the light and the autumn leaves outside, the low futon bed behind her on the right. Emphasis: leaning back on one arm draws her chest, waist and hips into one diagonal line, and the three-quarter face toward the window carries her lazy, dreamy mood. Lighting: soft late-afternoon daylight from the window on camera-left as a large gentle key, a white bounce card just out of frame on the right keeping her face clear; champagne, pale green and warm maple-red tones with a soft film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -794,18 +795,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 10%，放入框後約 8.6%",
-     "下緣：雙腳下方留白約 7%，放入框後約 5.3%"
+     "上緣：規劃髮頂留白約 10%（套框後理論約 8.6%）",
+     "下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%）"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 8.6
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 8.6,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi"
    }
   },
   {
@@ -948,7 +950,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip. She wears a fitted cream rib-knit cropped cardigan worn fully unbuttoned and open, hanging from her shoulders over a fitted rust-orange ribbed square-neck camisole with thin straps that follows her full chest, a high-waisted rust-orange knit mini skirt and small red enamel heart earrings. Setting: a studio-built retro Korean snack-bar set with a warm orange tiled counter, a row of red vinyl bar stools and a warm pendant lamp, everything tidy. She stands leaning one hip lightly against the tiled counter, weight on her back leg with the front leg crossed in front, one hand resting on the counter edge and the other tucking her hair behind her ear, laughing openly with her eyes curved into crescents and dimples showing. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the open cardigan framing the camisole over her chest, her waistline, the high-waisted knit mini skirt and her crossed legs down to just below the knees, one hand on the counter and the other at her ear. Body: standing with her hip leaning on the counter on camera-right, her body turned about 30 degrees toward camera-left, weight on her back leg with the front leg crossed, shoulders relaxed. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 70mm lens from about 4.6 metres, camera at her waist height, level, natural perspective without distortion. Composition: left of centre with the orange counter running to the right and a small plate of golden fried chicken resting soft and out of focus at the right edge. Emphasis: the oblique lean shows her waist-to-hip curve and crossed legs, the open cardigan shows her chest line, and her face stays toward the camera for the crescent-eyed laugh. Lighting: a large warm softbox key from the front right at head height and a soft fill from the left just out of frame light her face evenly; the pendant lamp adds a warm glow on her hair; warm orange and cream tones throughout. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -959,20 +961,21 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 8%，放入框後約 6.4%",
-     "下緣：裁切線在膝蓋下方的小腿上段，放入框後往上移約 2 cm"
+     "上緣：規劃髮頂留白約 8%（套框後理論約 6.4%）",
+     "下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [
-     "膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁"
+     "膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。"
     ],
-    "verdict": "注意：膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 6.4
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 6.4,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -1113,9 +1116,9 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
-   "prompt": "A 20-year-old adult Taiwanese woman with her natural fair skin tone, a doll-like round face with big sweet eyes and deep dimples when she smiles, dark-brown long wavy hair with soft wispy bangs. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. She wears a white linen sundress with thin straps, a fitted ruched bodice with a soft V neckline that shapes her full chest, a cinched waist and a flared mini skirt, and a white daisy hair clip. Setting: a wide lavender field in early summer in the late afternoon, long purple rows running into the distance, a few soft green trees on the horizon, the field empty. She holds a straw sun hat loosely at her side with one hand and tucks her hair behind her ear with the other, laughing with her eyes squeezed into crescents and deep dimples showing. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the ruched bodice and soft V neckline, the cinched waist and the flared mini skirt down to just below her knees, the straw hat held at her side and the other hand at her ear. Body: standing between the lavender rows with her weight on her back leg and her front knee relaxed, her body turned about 30 degrees toward camera-right, shoulders and hips turned together. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with an 85mm lens from about 5.4 metres, camera at her chest height, level, natural perspective without distortion. Composition: she is centred, the lavender rows converging from the bottom edge to the horizon behind her as symmetrical leading lines. Emphasis: the centred frame and converging rows lead the eye to her laugh, while the knee-up framing keeps the V neckline, cinched waist and skirt length. Lighting: the low late-afternoon sun behind her draws a warm rim along her hair and shoulders; a large white reflector and a soft fill just out of frame light her face evenly; soft lilac, white and warm gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt": "A 20-year-old adult Taiwanese woman with her natural fair skin tone, a doll-like round face with big sweet eyes and deep dimples when she smiles, dark-brown long wavy hair with soft wispy bangs. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. Sweet, light makeup with a pink lip. She wears a white linen sundress with thin straps, a fitted ruched bodice with a soft V neckline that shapes her full chest, a cinched waist and a flared mini skirt, and a white daisy hair clip. Setting: a wide lavender field in early summer in the late afternoon, long purple rows running into the distance, a few soft green trees on the horizon, the field empty. She holds a straw sun hat loosely at her side with one hand and tucks her hair behind her ear with the other, laughing with her eyes squeezed into crescents and deep dimples showing. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the ruched bodice and soft V neckline, the cinched waist and the flared mini skirt down to just below her knees, the straw hat held at her side and the other hand at her ear. Body: standing between the lavender rows with her weight on her back leg and her front knee relaxed, her body turned about 30 degrees toward camera-right, shoulders and hips turned together. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with an 85mm lens from about 5.4 metres, camera at her chest height, level, natural perspective without distortion. Composition: she is centred, the lavender rows converging from the bottom edge to the horizon behind her as symmetrical leading lines. Emphasis: the centred frame and converging rows lead the eye to her laugh, while the knee-up framing keeps the V neckline, cinched waist and skirt length. Lighting: the low late-afternoon sun behind her draws a warm rim along her hair and shoulders; a large white reflector and a soft fill just out of frame light her face evenly; soft lilac, white and warm gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
    "r4": {
     "status": "accepted",
@@ -1123,20 +1126,27 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 7%，放入框後約 5.0%",
-     "下緣：裁切線在膝蓋下方的小腿上段，放入框後往上移約 2 cm"
+     "上緣：規劃髮頂留白約 7%（套框後理論約 5.0%）",
+     "下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [
-     "膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁"
+     "膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。"
     ],
-    "verdict": "不需改企劃（膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁）",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 5.0
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 5.0,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   "r5": {
+    "sync": "makeup",
+    "added_en": "Sweet, light makeup with a pink lip.",
+    "makeup_zh": "甜美淡妝、粉色唇。",
+    "note": "主管核可的中英同步（R5）：英文 prompt 在身分句後補一句中文「妝感」已寫的內容；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。"
    }
   },
   {
@@ -1278,7 +1288,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft round face with big expressive eyes, softly winged liner, rounded blush and glossy tinted lips, long ash-brown hair in loose waves with a pastel-pink money-piece highlight framing the left side of her face. Curvy figure, 160 cm tall, bust 91 cm, waist 57 cm, hips 88 cm, F cup, a full chest and a slim waist. She wears a pastel-pink satin corset top with a sweetheart neckline that shapes her full chest and slim waist, a white high-waisted A-line mini skirt, small pearl earrings and a thin silver bracelet. Setting: a seaside amusement pier at dusk in summer, a lit Ferris wheel and string lights far behind her softening into bokeh, a pink and lavender sunset sky over the sea, the wooden boardwalk empty. One hand rests on her hip and the other holds a small pink cotton candy at shoulder height, away from her face; she gives a playful wink with a teasing half-smile. Shot: a mid-thigh-up shot, from a little above her head down to mid-thigh, well above the knees, showing the sweetheart corset top, her slim waist and the whole white A-line mini skirt with her upper thighs, one hand on her hip and the cotton candy held at shoulder height. Body: standing on the boardwalk with her weight on her back leg, her body turned about 30 degrees toward camera-left, shoulders and hips turned together, the hip on her hand-on-hip side pushed out slightly. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with an 85mm lens from about 4.5 metres, camera at her chest height, level, natural perspective without distortion. Composition: she is centred, the lit Ferris wheel glowing as bokeh behind her shoulder on camera-right and the pink and lavender sunset sea across the background. Emphasis: a closer frame that enlarges the chest-to-waist shape of the corset top, with her playful wink as the focal point. Lighting: a large soft key light from front-right just out of frame lights her face cleanly with natural, bright skin tones; the dusk sky and the distant ride lights add pink and lavender colour behind her; cotton-candy pink, lavender and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
@@ -1288,18 +1298,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 8%，放入框後約 5.9%",
-     "下緣：裁切線在大腿中段，放入框後往上移約 2 cm"
+     "上緣：規劃髮頂留白約 8%（套框後理論約 5.9%）",
+     "下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "不需改企劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 5.9
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 5.9,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -1446,7 +1457,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 21-year-old adult Korean woman with her natural fair skin tone, large bright double-eyelid eyes as the focus of her makeup, a dewy glass-skin finish and soft coral gradient lips, dark-brown natural wavy hair at collarbone length with airy curtain bangs. Slim, long-legged figure, 168 cm tall, bust 84 cm, waist 58 cm, hips 89 cm, C cup, a narrow waist and long legs. She wears an open white cropped shearling jacket, a fitted dusty-rose fine-rib square-neck long-sleeve knit top that follows her chest and narrow waist, a high-waisted pale-grey wool mini skirt and thin silver earrings. Setting: a quiet birch forest on a winter morning after fresh snow, slim white trunks in even rows, a path covered with a smooth layer of new snow, a little soft mist, the forest empty. One hand holds the edge of the open jacket at her waist and the other tucks a strand of hair behind her ear; she gives a soft, gentle smile. Shot: a mid-thigh-up shot, from a little above her head down to mid-thigh, well above the knees, showing the open white shearling jacket, the dusty-rose square-neck knit top over her chest, her narrow waist, the whole grey mini skirt and her upper thighs, one hand holding the jacket edge at her waist and the other tucking her hair behind her ear. Body: standing on the snowy path with her weight on her back leg, her body turned about 30 degrees toward camera-right, shoulders and hips turned together, her waist lengthened. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with an 85mm lens from about 4.8 metres, camera at her chest height, level, natural perspective without distortion. Composition: she stands slightly left of centre, slim white birch trunks making a vertical rhythm on both sides and the snowy path receding softly on the right. Emphasis: a closer frame that brings forward her dewy skin, flushed cheeks and the curves of the winter outfit, the snow light keeping the picture airy. Lighting: soft diffused morning light through the trees with bright bounce from the snow, a soft fill just out of frame in front keeping her face clear; an airy, slightly bright exposure with clean snow-white, ash-grey and dusty-rose tones and soft contrast. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -1457,18 +1468,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 9%，放入框後約 7.3%",
-     "下緣：裁切線在大腿中段，放入框後往上移約 2 cm"
+     "上緣：規劃髮頂留白約 9%（套框後理論約 7.3%）",
+     "下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 7.3
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 7.3,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -1613,7 +1625,7 @@
     },
     "fill_of": "畫面高度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a fitted hot-pink square-neck rib-knit mini dress that follows her full chest, slim waist and hips, white pointed slingback heels, gold hoop earrings and a thin gold bracelet. Setting: a private garden terrace on a clear April afternoon, a smooth pale stone-paved path, neatly trimmed hedges, white flowering trees and beds of tulips on both sides, a white wrought-iron garden bench, the garden empty. One hand rests lightly on the back of the garden bench and the other on her hip; she smiles brightly. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to heels, the fitted hot-pink knit dress over her chest, waist and hips, her legs and the white slingback heels, one hand on the bench back and the other on her hip. Body: standing on the smooth stone path with her weight on her back leg and her front foot pointed toward the camera, legs one in front of the other, her body turned about 30 degrees toward camera-left, shoulders and hips turned together. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 70mm lens from about 6.9 metres, camera at her knee height, tilted slightly upward, natural perspective without distortion; she fills about 84% of the frame height. Composition: she stands slightly left of centre with the white garden bench just beside her on the right, the blossoms and tulips soft on both sides and behind. Emphasis: the fitted dress and heels shown head to toe with an oblique stance and a slightly low camera that lengthens her legs, the spring garden giving a natural, refined feel. Lighting: soft, slightly low spring afternoon sun from front-left with a large white reflector just out of frame on the right lighting her face evenly; hot pink against white blossoms and fresh green tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -1624,18 +1636,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 9%，放入框後約 7.2%",
-     "下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%"
+     "上緣：規劃髮頂留白約 9%（套框後理論約 7.2%）",
+     "下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 7.2
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 7.2,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -1777,7 +1790,7 @@
     },
     "fill_of": "畫面寬度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair styled in soft big waves over one shoulder. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a deep wine-red silk satin cowl-neck slip midi dress with thin straps that drapes over her full chest and slim waist, a thin gold chain necklace and small gold stud earrings; her feet are bare. Setting: a luxury hotel suite at sunset, a deep green velvet chaise longue beside a floor-to-ceiling window, the city skyline far below in warm evening haze, the room tidy. She is propped on her lower forearm flat on the raised end of the chaise, her other hand resting lightly on her thigh near her hip, with a calm, slightly languid half-smile. Shot: a full-length reclining shot, her whole reclining length from her head to her feet, with space above her head and the frame bottom below the seat, showing the cowl-neck satin dress over her chest and waist, her raised hip, her long crossed legs and bare feet, the supporting forearm on the cushion and the other hand resting on her thigh. Body: lying on her side along the chaise, her legs in side view toward camera-right and her upper body turned about 45 degrees toward the camera, propped on her lower forearm with her shoulders and neck relaxed and drawn back, her waist dipping and her hip raised, her top leg softly bent forward over her straight lower leg. Face and gaze: her face in a three-quarter view, looking out of the window toward the sunset on camera-right, away from the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 2.6 metres, camera at a height slightly above her head as she reclines, tilted slightly downward, natural perspective without distortion; she fills about 87% of the frame width. Composition: she lies across the centre of the frame along the chaise, her head on the left and her bare feet on the right in a long horizontal S-curve, gazing along her body toward the sunset in the window on the right, the skyline behind her. Emphasis: her side-lying waist and hip curve and long legs are the main line of the picture, and the three-quarter face toward the sunset makes her languid and mature. Lighting: warm low sunset light through the window from camera-right as the key, a soft fill just out of frame on the left keeping her face clear; wine red, deep green and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -1788,18 +1801,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 24%，放入框後約 22.9%",
-     "左右：頭與腳離左右邊緣各約 7%"
+     "上緣：規劃髮頂留白約 24%（套框後理論約 22.9%）",
+     "左右：規劃頭與腳離左右邊緣各約 7%"
     ],
     "keep": "髮頂、臉、入鏡的雙手、頭與腳",
-    "need": "放入框後：髮頂上方 ≥4%、左右各 ≥5%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、左右各 ≥5%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 22.9
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 22.9,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、頭與腳是否都在框內、有效 ppi"
    }
   },
   {
@@ -1940,7 +1954,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a blood-red satin corset mini dress with a thigh-high slit, large silver statement drop earrings and a slim silver cuff. Setting: a high-rise penthouse terrace at night, a glass balustrade with the city lights far below spread into soft bokeh, a smooth dark stone floor, nothing else on the terrace, the glass reflecting only city lights. She leans back against the glass balustrade with both hands resting on the rail behind her and one leg forward through the slit, with a confident, slightly mischievous smirk. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the corset bodice over her chest and slim waist and her leg through the thigh-high slit down to just below the knee, both hands on the rail behind her. Body: leaning back against the glass balustrade with her weight on her back leg and one leg forward through the slit, her body square to the camera, her shoulders resting lightly on the glass. Face and gaze: her face toward the camera, looking straight into the camera. Camera: horizontal 16:9 frame, full-frame camera with an 85mm lens from about 5.7 metres, camera at her waist height, level, natural perspective without distortion. Composition: right of centre with the glowing city bokeh on the left. Emphasis: her direct gaze carries her presence while the knee-up frame keeps the corset lines and the slit leg. Lighting: a large bright softbox key from front-left at head height lights her face and catches crisp red highlights on the satin; a soft fill from the right just out of frame; deep navy night sky and warm gold city bokeh behind her. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
@@ -1950,20 +1964,21 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 8%，放入框後約 6.1%",
-     "下緣：裁切線在膝蓋下方的小腿上段，放入框後往上移約 3 cm"
+     "上緣：規劃髮頂留白約 8%（套框後理論約 6.1%）",
+     "下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 3 cm）"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [
-     "膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁"
+     "膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。"
     ],
-    "verdict": "不需改企劃（膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁）",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 6.1
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 6.1,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -2109,7 +2124,7 @@
     },
     "fill_of": "畫面高度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, a full chest and a very slim waist. She wears an ivory satin camisole with thin straps and fine lace trim that follows her full chest, matching ivory satin shorts, small gold stud earrings and a thin gold bracelet; her feet are bare. Setting: a small sunlit Tokyo apartment in the morning, a neatly made bed with cream linen, a wooden bedside shelf with a small potted plant, sheer white curtains at the window, the room tidy. One elbow rests lightly on her raised knee with the wrist relaxed and her other hand lies on the sheet beside her hip; she tilts her head with a soft, slightly lazy sweet smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole half-reclining figure, the satin camisole over her full chest and very slim waist, the shorts, her raised knee, her stretched leg and her bare feet, one arm resting on her knee and the other hand on the bed, nothing covering her chest or waist. Body: sitting on the bed and leaning back against a pile of pillows at the headboard, her body turned about 45 degrees toward camera-left, one knee raised and the other leg stretched out along the bed, shoulders relaxed and her waist lengthened. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 35mm lens from about 2.7 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 84% of the frame height. Composition: the bed runs diagonally across the frame and she sits just right of centre against the pillows, the sheer-curtained window glowing on the left and the wooden bedside shelf on the right. Emphasis: the relaxed half-recline opens up her chest, very slim waist and legs at once, with a sweet head-tilted smile to the camera; a level camera keeps her looking like an adult. Lighting: warm morning sunlight through the sheer curtains from camera-left as a soft key, a white bounce just out of frame on the right so her face is evenly lit; cream, ivory and warm wood tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -2120,18 +2135,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 9%，放入框後約 7.5%",
-     "下緣：雙腳下方留白約 7%，放入框後約 5.3%"
+     "上緣：規劃髮頂留白約 9%（套框後理論約 7.5%）",
+     "下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%）"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 7.5
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 7.5,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi"
    }
   },
   {
@@ -2280,7 +2296,7 @@
     },
     "fill_of": "畫面高度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a black one-shoulder fitted midi dress with a small cut-out at the waist and a side slit to mid-thigh, the bare shoulder and the cut-out on the side toward the camera, black strappy low-heeled sandals and small silver hoop earrings. Setting: a quiet lakeside on an early-autumn evening, a pale wooden deck reaching over the water, a simple wooden bench at its edge, calm water holding the low sunlight, a far shore of trees just turning yellow, nobody else in sight. One hand rests lightly on her crossed knee and the other arm lies along the bench back; she has a cool, thoughtful half-smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole seated figure, the bare straight shoulder of the one-shoulder cut, the waist cut-out, her long crossed legs through the side slit and the black strappy sandals, one hand on her knee and the other arm along the bench back. Body: sitting sideways on the bench, her body side-on to the camera, facing camera-left, her legs crossed and reaching toward camera-left, her straight shoulders and back upright, one arm along the bench back. Face and gaze: her face in a three-quarter view, looking out over the lake toward the far shore on camera-left, away from the camera. Camera: horizontal 16:9 frame, full-frame camera with a 70mm lens from about 5.4 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 85% of the frame height. Composition: she sits just right of centre facing the lake on the left, leaving space on the left for the water and her gaze, the deck and the far tree line soft on the right. Emphasis: sitting sideways draws her straight shoulders, slim waist and long crossed legs into clean lines, and the three-quarter face toward the lake carries a calm early-autumn mood. Lighting: low early-autumn evening sun behind her draws a warm rim along her hair and shoulders; a large white reflector just out of frame in front keeps her face clear; black, soft lake blue-grey and warm gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -2291,18 +2307,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 8%，放入框後約 6.7%",
-     "下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%"
+     "上緣：規劃髮頂留白約 8%（套框後理論約 6.7%）",
+     "下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 6.7
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 6.7,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -2452,7 +2469,7 @@
     },
     "fill_of": "畫面高度",
     "native": "16:9 原生尺寸未知：沒有 soul_2 16:9 的實際輸出紀錄（9:16 為 1152×2048，16:9 推測約 2048×1152，未驗證）",
-    "fit": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。"
+    "fit": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。"
    },
    "prompt": "A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white fitted sleeveless knit golf polo that follows her full chest and slim waist, a pale sky-blue pleated golf mini skirt, white golf shoes, a plain white cap and small gold stud earrings. Setting: a golf course on a clear spring morning, a plain white golf cart parked on the cart path beside a bright green fairway, soft trees in the distance, the course empty. Her back hand is braced on the seat behind her hip and her front hand rests lightly on her knees; she gives a playful, bright smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole seated figure, the sleeveless polo over her full chest and her toned arms, the pleated mini skirt, her long legs together with ankles crossed and the white golf shoes, one hand braced on the seat and the other on her knees. Body: sitting sideways on the edge of the golf cart front seat and leaning back slightly, her body turned about 45 degrees toward camera-left, her long legs reaching out of the cart toward the lower left with her knees together, ankles crossed and toes touching the ground, shoulders relaxed. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.5 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 83% of the frame height. Composition: the white golf cart sits at an angle across the frame with its front toward the left; she sits just right of centre in the open side of the cart, her long legs reaching diagonally toward the lower left, the bright green fairway behind. Emphasis: the diagonal of the cart carries her long legs into the frame and the slight lean back relaxes her body lines; the focus is her smile and leg length. Lighting: clear morning sun from high front-left, a large white reflector just out of frame softening the shadow of the cap on her face; bright green, sky blue and white tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -2463,18 +2480,19 @@
    },
    "print": {
     "frame": "橫式大照片框（暫定）（192×104 mm）",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖",
     "edges": [
-     "上緣：髮頂留白約 10%，放入框後約 8.4%",
-     "下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%"
+     "上緣：規劃髮頂留白約 10%（套框後理論約 8.4%）",
+     "下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "H 16:9：原生尺寸未知（推測 2048×1152，未驗證）",
-    "ppi": "若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
-    "top_after": 8.4
+    "ppi": "規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證",
+    "top_after": 8.4,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -2501,7 +2519,7 @@
    "expr": "明亮溫暖的笑",
    "gaze": "看鏡頭",
    "why": "Penny 的回饋：更顯身材的上衣＋牛仔迷你裙、身體面向鏡頭、專業姿態、有笑容；保留她喜歡的 iris-04 夕陽草地氛圍。",
-   "vs_other": "橫式款在紅磚騎樓、米杏針織套裝、側光；這款在河濱草地、白上衣＋牛仔迷你裙、逆光。",
+   "vs_other": "橫式款在夏日上午的岩岸海灣、向日葵黃馬甲短上衣＋低腰迷你裙、正面全身；這款在河濱草地、白上衣＋牛仔迷你裙、逆光。",
    "risks": [
     [
      "逆光臉暗",
@@ -2616,9 +2634,9 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
-   "prompt": "A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips. She wears a fitted white ribbed square-neck short-sleeve crop top that shows the shape of her chest and her bare waist, a high-waisted light-blue denim mini skirt and small gold hoop earrings. Setting: an open riverside lawn in a Taipei park in the late afternoon, soft green trees and low distant apartment blocks far behind her, the lawn and the path empty. One hand rests on her hip and the other lightly touches her hair at her temple; she smiles brightly and warmly. Shot: a mid-thigh-up shot, from a little above her head down to mid-thigh, well above the knees, showing the square-neck crop top, her bare waist, the whole denim mini skirt and her upper thighs, one hand on her hip and the other at her hair. Body: standing with her weight on one leg, her body square to the camera, shoulders level and relaxed, her hips shifted slightly to one side. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 2.9 metres, camera at her chest height, level, natural perspective without distortion. Composition: she is centred with a little space above her head and the soft lawn and trees on both sides. Emphasis: Penny's chosen outfit up close, the crop top on her chest, her bare waist and the denim mini skirt, with her bright smile. Lighting: the low sun behind her and to one side draws a warm rim along her hair and shoulders; a large white reflector and a soft fill light just out of frame in front of her light her face and body evenly; warm golden tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt": "A 22-year-old adult Taiwanese woman with her natural fair skin tone, a round sweet face with large bright double-eyelid eyes and full lips, black silky straight hair worn down past her shoulders. Petite curvy figure, 162 cm tall, bust 87 cm, waist 58 cm, hips 90 cm, D cup, a full chest, a slim waist and rounded hips. Fresh, light everyday makeup with a natural lip colour. She wears a fitted white ribbed square-neck short-sleeve crop top that shows the shape of her chest and her bare waist, a high-waisted light-blue denim mini skirt and small gold hoop earrings. Setting: an open riverside lawn in a Taipei park in the late afternoon, soft green trees and low distant apartment blocks far behind her, the lawn and the path empty. One hand rests on her hip and the other lightly touches her hair at her temple; she smiles brightly and warmly. Shot: a mid-thigh-up shot, from a little above her head down to mid-thigh, well above the knees, showing the square-neck crop top, her bare waist, the whole denim mini skirt and her upper thighs, one hand on her hip and the other at her hair. Body: standing with her weight on one leg, her body square to the camera, shoulders level and relaxed, her hips shifted slightly to one side. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 2.9 metres, camera at her chest height, level, natural perspective without distortion. Composition: she is centred with a little space above her head and the soft lawn and trees on both sides. Emphasis: Penny's chosen outfit up close, the crop top on her chest, her bare waist and the denim mini skirt, with her bright smile. Lighting: the low sun behind her and to one side draws a warm rim along her hair and shoulders; a large white reflector and a soft fill light just out of frame in front of her light her face and body evenly; warm golden tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
    "r4": {
     "status": "accepted",
@@ -2626,18 +2644,25 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 8%",
-     "下緣：裁切線在大腿中段"
+     "上緣：規劃髮頂留白約 8%",
+     "下緣：規劃裁切線在大腿中段"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "不需改企劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 8.0
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 8.0,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   "r5": {
+    "sync": "makeup",
+    "added_en": "Fresh, light everyday makeup with a natural lip colour.",
+    "makeup_zh": "乾淨的日常妝、自然唇色。",
+    "note": "主管核可的中英同步（R5）：英文 prompt 在身分句後補一句中文「妝感」已寫的內容；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。"
    }
   },
   {
@@ -2663,7 +2688,7 @@
    "expr": "溫柔的微笑",
    "gaze": "看鏡頭",
    "why": "保留 Penny 沒有否定的紫陽花庭院，換成真正顯身材的剪裁。",
-   "vs_other": "橫式款是室內和室、象牙白緞面、席地坐；這款是戶外庭院、綠色馬甲洋裝、站姿全身。",
+   "vs_other": "橫式款是室內當代日式旅宿、香檳色緞面、榻榻米上慵懶斜坐；這款是戶外庭院、綠色馬甲洋裝、站姿全身。",
    "risks": [
     [
      "童顏＋花園顯小",
@@ -2778,7 +2803,7 @@
     },
     "fill_of": "畫面高度",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 20-year-old adult Japanese woman with her natural fair skin tone, large round dark-brown eyes and soft natural makeup with a rosy lip, black fine straight hair in a centre-parted, chin-length bob. Petite figure with a noticeably full chest and a slim waist, 155 cm tall, bust 88 cm, waist 56 cm, hips 87 cm, E cup. She wears a pale sage-green cotton sundress with a sweetheart neckline, a fitted boned bodice that shapes her full chest and narrow waist and a softly flared mini skirt, cream low block-heel strappy sandals and a thin gold bracelet. Setting: a quiet garden behind an old wooden Kyoto-style townhouse, moss ground, a stone path, white hydrangeas in bloom along a low wooden fence, maple branches overhead. Both hands are clasped lightly behind her back; she smiles gently. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to sandals, the boned sweetheart bodice, the flared mini skirt and her legs, with both hands clasped behind her back so her chest and waist stay clear. Body: standing on the stone path with her weight on one leg and the other knee softly bent, her body square to the camera, her shoulders drawn gently back by her hands behind her. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 4.9 metres, camera at her knee height, tilted slightly upward, natural perspective without distortion; she fills about 86% of the frame height. Composition: she stands slightly left of centre, the stone path curving away behind her to the right past the hydrangeas, maple branches across the top edge. Emphasis: a slightly low camera lengthens her petite legs, and the full figure shows how the boned bodice shapes her chest and waist and the whole dress. Lighting: bright overcast daylight as one large soft source, with a white reflector just out of frame so her face is clean and evenly lit; soft dappled light falls only on the hydrangeas and path behind her; fresh green, white and sage tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
@@ -2788,18 +2813,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 9%",
-     "下緣：雙腳與鞋下方留白約 5%"
+     "上緣：規劃髮頂留白約 9%",
+     "下緣：規劃雙腳與鞋下方留白約 5%"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "不需改企劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 8.8
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 8.8,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -2945,7 +2971,7 @@
     },
     "fill_of": "畫面高度",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a fitted ivory ribbed knit mini dress with a high round neck that follows her full chest, slim waist and hips, a long red wool coat worn open, white knee-high boots and small pearl earrings. Setting: a quiet street in a small hot-spring town on a snowy winter evening, low wooden inns with warm paper lanterns, thin steam rising from a stone channel at the roadside, a light layer of snow on the ground, the street empty. One hand is in the pocket of the open coat holding it back so the fitted dress shows, and the other is raised at shoulder height with the palm up catching snowflakes, away from her face; her chin lifts slightly and she smiles with natural delight, eyes open, a few snowflakes in the air. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to boots, the open red coat, the fitted ivory knit dress over her chest, waist and hips, and the white knee-high boots, one hand in a coat pocket and the other raised at shoulder height catching snow, away from her face. Body: standing on the thin snow with her weight on her back leg and her front foot slightly forward, her body square to the camera, her chin lifted slightly and shoulders relaxed, the open coat falling naturally. Face and gaze: her face in a three-quarter view, looking up toward the snow falling beside a lantern at the upper right, away from the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 4.2 metres, camera at her hip height, level, natural perspective without distortion; she fills about 85% of the frame height. Composition: she stands slightly left of centre, the glowing paper lanterns and falling snow at the upper right where she is looking, the street receding behind her to the right. Emphasis: her natural smile as she looks up at the snow makes the picture feel like a captured moment, and the full figure keeps the whole winter look and the curves of the dress. Lighting: a soft warm key light from front-left just out of frame lights her face evenly; the paper lanterns behind her glow warm amber against the cool blue evening light on the snow; red, ivory and warm amber tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -2956,18 +2982,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 10%",
-     "下緣：雙腳與鞋下方留白約 5%"
+     "上緣：規劃髮頂留白約 10%",
+     "下緣：規劃雙腳與鞋下方留白約 5%"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 9.6
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 9.6,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -3104,9 +3131,9 @@
     },
     "fill_of": "畫面高度",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
-   "prompt": "A 20-year-old adult Taiwanese woman with her natural fair skin tone, deep dimples when she smiles and dark-brown long wavy hair with soft wispy bangs, the ends slightly wet. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. She wears a mint-green ribbed triangle bikini top with matching side-tie bottoms that fully cover, an open sheer lilac short-sleeve cover-up shirt resting off her shoulders and a white daisy hair clip. Setting: a resort hotel pool on a weekend morning, pale cream stone tiles, clear turquoise water, white umbrellas folded in the distance, the pool deck empty. She sits on the pool edge with both lower legs in the water, leaning back on her hands, head tilted, laughing with her eyes squeezed into crescents and dimples showing. Shot: a seated shot down to the waterline, from a little above her head down to just below the waterline, her knees and the upper part of her lower legs showing, showing the bikini top and bottoms, her slim waist, her knees and the upper part of her lower legs in the water, with both hands braced behind her. Body: sitting on the pool edge with both lower legs in the water, leaning back on her hands, her body square to the camera, her shoulders open. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 2.7 metres, camera at her seated chest height, level, natural perspective without distortion; she fills about 81% of the frame height. Composition: she is centred, with the water across the bottom of the frame and the pool deck and folded umbrellas behind her. Emphasis: the seated pose and the water below keep her body large and complete in the vertical frame, showing the bikini, her chest and waist, and her laugh. Lighting: bright late-morning sun from high front-left; a large white reflector just out of frame fills the shadows on her face and body so her face is evenly lit; the turquoise water adds soft aqua reflections on her legs; clear, fresh summer colours. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt": "A 20-year-old adult Taiwanese woman with her natural fair skin tone, deep dimples when she smiles and dark-brown long wavy hair with soft wispy bangs, the ends slightly wet. Petite curvy figure, 158 cm tall, bust 89 cm, waist 56 cm, hips 86 cm, E cup, full chest and slim waist. Sweet, light makeup. She wears a mint-green ribbed triangle bikini top with matching side-tie bottoms that fully cover, an open sheer lilac short-sleeve cover-up shirt resting off her shoulders and a white daisy hair clip. Setting: a resort hotel pool on a weekend morning, pale cream stone tiles, clear turquoise water, white umbrellas folded in the distance, the pool deck empty. She sits on the pool edge with both lower legs in the water, leaning back on her hands, head tilted, laughing with her eyes squeezed into crescents and dimples showing. Shot: a seated shot down to the waterline, from a little above her head down to just below the waterline, her knees and the upper part of her lower legs showing, showing the bikini top and bottoms, her slim waist, her knees and the upper part of her lower legs in the water, with both hands braced behind her. Body: sitting on the pool edge with both lower legs in the water, leaning back on her hands, her body square to the camera, her shoulders open. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 2.7 metres, camera at her seated chest height, level, natural perspective without distortion; she fills about 81% of the frame height. Composition: she is centred, with the water across the bottom of the frame and the pool deck and folded umbrellas behind her. Emphasis: the seated pose and the water below keep her body large and complete in the vertical frame, showing the bikini, her chest and waist, and her laugh. Lighting: bright late-morning sun from high front-left; a large white reflector just out of frame fills the shadows on her face and body so her face is evenly lit; the turquoise water adds soft aqua reflections on her legs; clear, fresh summer colours. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
    "r4": {
     "status": "accepted",
@@ -3114,18 +3141,25 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 11%",
-     "下緣：水面下方留白約 8%"
+     "上緣：規劃髮頂留白約 11%",
+     "下緣：規劃水面下方留白約 8%"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "不需改企劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 11.0
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 11.0,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   "r5": {
+    "sync": "makeup",
+    "added_en": "Sweet, light makeup.",
+    "makeup_zh": "甜美淡妝。",
+    "note": "主管核可的中英同步（R5）：英文 prompt 在身分句後補一句中文「妝感」已寫的內容；服裝、場景、表情、姿態、攝影與身分都不變，接受狀態沿用。"
    }
   },
   {
@@ -3268,7 +3302,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 22-year-old adult Taiwanese woman with her natural fair skin tone, a soft round face with big expressive eyes, softly winged liner, rounded blush and glossy tinted lips, long ash-brown hair in loose waves with a pastel-pink money-piece highlight framing the left side of her face. Curvy figure, 160 cm tall, bust 91 cm, waist 57 cm, hips 88 cm, F cup, a full chest and a slim waist. She wears a lilac fitted fine-knit off-shoulder mini dress that follows her full chest, small pearl hair clips on one side and thin silver earrings. Setting: a riverside promenade at night in spring, cherry trees in full bloom arching overhead, soft plain paper lanterns hanging along the path, the path empty. One hand lightly touches a blossom branch beside her shoulder; she smiles sweetly. Shot: a chest-up portrait, from a little above her head down to just below her bust, above the elbows, showing the off-shoulder knit neckline, her shoulders, collarbones and chest, one hand touching a blossom branch beside her shoulder and the other arm relaxed below the frame. Body: standing under a low blossom branch, her body turned about 30 degrees toward camera-right, shoulders relaxed so the off-shoulder neckline sits evenly. Face and gaze: her face in a three-quarter view, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 1.5 metres, camera at her eye level, tilted slightly downward, natural perspective without distortion. Composition: she is slightly left of centre, blossom branches framing the top and upper right, the lanterns softened into warm bokeh, her face in the upper third. Emphasis: the closest shot of the set: her soft eye makeup, sweet smile and off-shoulder neckline, with blossoms and lanterns only as mood. Lighting: a soft warm key light from front-left just out of frame lights her face evenly; the lanterns give the blossoms a warm pink glow against a deep blue night sky; pink, lilac and deep blue tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
@@ -3278,18 +3312,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 9%",
-     "下緣：裁切線在胸線下方"
+     "上緣：規劃髮頂留白約 9%",
+     "下緣：規劃裁切線在胸線下方"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "不需改企劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 9.3
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 9.3,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -3435,7 +3470,7 @@
     },
     "fill_of": "畫面高度",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 21-year-old adult Korean woman with her natural fair skin tone, large bright double-eyelid eyes as the focus of her makeup, a dewy glass-skin finish and soft coral gradient lips, dark-brown natural wavy hair at collarbone length with airy curtain bangs. Slim, long-legged figure, 168 cm tall, bust 84 cm, waist 58 cm, hips 89 cm, C cup, a narrow waist and long legs. She wears a cream tweed cropped jacket, collarless and buttoned, fitted close to her chest and waist, a matching high-waisted tweed mini skirt, black knee-high leather boots, small pearl earrings and a small plain black shoulder bag. Setting: a quiet residential avenue in late autumn lined with golden ginkgo trees, fallen yellow leaves covering the sidewalk, low modern buildings softly out of focus, the street empty. One hand holds the strap of the bag at her shoulder and the other lightly holds a golden ginkgo leaf at her waist; her head tilts slightly with a soft, faraway smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to boots, the cropped tweed jacket, the high-waisted mini skirt, her legs and the black knee-high boots, one hand on the bag strap and the other holding a ginkgo leaf at her waist. Body: standing on the leaf-covered sidewalk with her weight on her back leg and her front foot stepping lightly toward camera-right, her body turned about 30 degrees toward camera-right, shoulders and hips turned together. Face and gaze: her face in a three-quarter view, looking down the avenue toward camera-right, away from the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 5.3 metres, camera at her hip height, level, natural perspective without distortion; she fills about 87% of the frame height. Composition: she stands slightly left of centre, her body, step and gaze toward the right where the ginkgo avenue recedes into the distance, golden trees framing both sides. Emphasis: the full-length oblique stance and her faraway look down the avenue make the tweed set and boots feel like a film still rather than a posed street snap. Lighting: low afternoon sun behind the ginkgo trees lights the leaves and draws a warm rim on her hair; a large white reflector just out of frame lights her face evenly; golden yellow, cream and black tones with a soft film-like finish. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -3446,18 +3481,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 8%",
-     "下緣：雙腳與鞋下方留白約 5%"
+     "上緣：規劃髮頂留白約 8%",
+     "下緣：規劃雙腳與鞋下方留白約 5%"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 8.3
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 8.3,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -3598,7 +3634,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a white tailored blazer mini dress with a deep V lapel, gold buttons and a belted waist that defines her full chest and slim waist, gold drop earrings and a small plain black patent top-handle bag without any logos. Setting: the lobby of a grand hotel at night, polished marble floor and columns, a warm crystal chandelier overhead, a large arrangement of white flowers on a round table in the background, the lobby empty. One hand holds the short handle of the small bag at her hip, slightly away from her body, and the other rests on her waist; she smiles confidently. Shot: a mid-thigh-up shot, from a little above her head down to mid-thigh, well above the knees, showing the deep V lapel, the gold buttons and belted waist, the mini skirt hem and her upper thighs, the small bag held at her hip and the other hand on her waist, both hands inside the frame. Body: standing beside a marble column with her weight on one leg, her body square to the camera, shoulders open, her hips shifted slightly toward the side holding the bag. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 2.3 metres, camera at her waist height, tilted slightly upward, natural perspective without distortion. Composition: she is centred, the warm crystal chandelier glowing above her head, a marble column at one side and the white flowers soft in the background. Emphasis: a closer frame with a slightly low camera that shows her confidence, how the blazer dress defines her chest and waist, and a small plain bag. Lighting: warm chandelier light fills the space; a soft key light from front-right just out of frame lights her face evenly; white, gold and warm marble tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -3609,18 +3645,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 6%",
-     "下緣：裁切線在大腿中段"
+     "上緣：規劃髮頂留白約 6%",
+     "下緣：規劃裁切線在大腿中段"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 5.7
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 5.7,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -3769,7 +3806,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a deep forest-green faux-suede wrap dress with a deep V neckline, a tie at the waist that defines her full chest and slim waist, a knee-length hem and a front slit to mid-thigh, thin gold earrings and a thin gold bracelet. Setting: a quiet small harbour on an autumn afternoon, an old stone quay with a thick wooden mooring post and a coiled rope, a few plain white sailboats moored on calm water, soft silver-grey overcast light, standing well back from the quay edge, the quay empty. One hand reaches back to rest on the mooring post and the other rests at the tie on her waist; she has a calm, slightly distant half-smile. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the deep V neckline of the wrap dress, the tie that defines her chest and waist, and her thigh through the front slit down to just below the knee, one hand reaching back to the post and the other at the tie on her waist. Body: leaning back against a thick wooden mooring post, her body turned about 45 degrees toward camera-left, her weight on the leg nearer the post and the other knee softly bent with the toes touching the ground, shoulders relaxed against the post. Face and gaze: her face in a three-quarter view, looking out toward the harbour mouth on camera-left, away from the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.6 metres, camera at her waist height, level, natural perspective without distortion. Composition: she stands just right of centre, her body and gaze turned toward the harbour mouth on the left, the water and moored white sailboats filling the space on the left, the mooring post behind her. Emphasis: leaning on the post at an angle shows both the chest and waist line of the wrap dress and the leg through the slit, and the three-quarter face toward the harbour brings a mature, quiet distance. Lighting: soft overcast autumn afternoon light as one large gentle source, a white reflector just out of frame in front lighting her face evenly; silver-grey reflections on the water; deep green, silver-grey and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -3780,18 +3817,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 7%",
-     "下緣：裁切線在膝蓋下方的小腿上段"
+     "上緣：規劃髮頂留白約 7%",
+     "下緣：規劃裁切線在膝蓋下方的小腿上段"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 6.9
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 6.9,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -3937,7 +3975,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a black satin halter mini dress that follows her full chest, slim waist and hips, a long black leather trench coat worn open and large silver statement drop earrings. Setting: a city street at night just after rain, the wet pavement reflecting warm amber light from closed shopfronts with plain frosted glass and cool blue street lights, the street empty. One hand holds the edge of the open coat at her waist and the other is relaxed beside her thigh; her expression is relaxed and thoughtful, her lips slightly parted. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the satin halter dress over her chest, waist and hips and the long open coat down to just below the knees, one hand holding the coat edge at her waist and the other relaxed beside her thigh. Body: standing on the wet pavement, her body turned about 30 degrees toward camera-left, her weight on her back leg and her shoulders relaxed and slightly lowered, the open coat falling in a straight line from her shoulders. Face and gaze: her face in a three-quarter view, looking ahead toward the street lights on camera-left, away from the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.6 metres, camera at her waist height, level, natural perspective without distortion. Composition: she stands right of centre with her body and gaze toward the left, the wet street and its glowing street lights receding on the left. Emphasis: the relaxed, parted-lip look away from the camera is the opposite of her confident smirk in the horizontal set, and the oblique stance keeps both her curves and the straight line of the coat. Lighting: a large soft key light from front-left just out of frame lights her face clearly; warm amber and cool blue reflections shimmer on the wet street behind her; black, silver and deep blue tones with a hint of amber. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -3948,18 +3986,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 8%",
-     "下緣：裁切線在膝蓋下方的小腿上段"
+     "上緣：規劃髮頂留白約 8%",
+     "下緣：規劃裁切線在膝蓋下方的小腿上段"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 7.5
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 7.5,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   },
   {
@@ -4108,7 +4147,7 @@
     },
     "fill_of": "畫面高度",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 22-year-old adult Japanese woman with her natural very fair skin tone, a round face with big soft downturned eyes, orange-toned blush under the eyes and glossy lips, light flaxen beige-blonde hair in a shoulder-length bob curled inward with airy see-through bangs. Petite curvy figure, 156 cm tall, bust 87 cm, waist 55 cm, hips 86 cm, E cup, a full chest and a very slim waist. She wears an apricot cotton-sateen mini dress with thin straps, a fitted boned bodice with a sweetheart neckline that shapes her full chest and very slim waist and a softly flared skirt to mid-thigh, white strappy flat sandals and small pearl earrings. Setting: a wooden deck at a holiday villa on a spring morning, a white canvas hammock hung between two wooden posts, fruit trees in white blossom and fresh green hedges beside the deck, soft bright daylight, the deck empty. Both hands hold the edge of the hammock beside her hips; she laughs naturally with a bright, happy smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole seated figure, the sweetheart boned bodice over her chest, her very slim waist, the softly flared skirt, her legs together and the white strappy sandals, both hands holding the hammock edge beside her hips. Body: sitting on the edge of the hammock, her body turned about 30 degrees toward camera-right, both feet on the deck with her knees together and angled toward camera-left, her upper body leaning slightly forward. Face and gaze: her face in a three-quarter view, looking toward the blossoming fruit tree on camera-right, away from the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 3.3 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 87% of the frame height. Composition: she sits just left of centre, the white hammock running diagonally across the frame, the blossoming fruit tree on the right where she is looking, fresh green soft behind. Emphasis: sitting forward on the hammock edge with a natural smile toward the tree shows her chest, very slim waist and legs clearly while keeping a sweet holiday mood. Lighting: soft bright spring daylight under thin cloud as a large gentle key, a white reflector just out of frame in front lighting her face evenly; apricot, blossom white and fresh green tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -4119,18 +4158,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 8%",
-     "下緣：雙腳與鞋下方留白約 5%"
+     "上緣：規劃髮頂留白約 8%",
+     "下緣：規劃雙腳與鞋下方留白約 5%"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 8.1
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 8.1,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -4272,7 +4312,7 @@
     },
     "fill_of": "畫面高度",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a white sleeveless mock-neck fitted crop top that shows her slim waist, a high-waisted mint-sage satin pencil skirt that sits above her navel, hugs her hips and narrows to just below the knee with a front-left slit to mid-thigh, white strappy sandals and small silver stud earrings. Setting: a glass greenhouse conservatory with white steel frames, lush tropical plants and large monstera leaves, a stone path, the greenhouse empty. One hand rests on her hip at the high waistband and the other lightly touches a large monstera leaf beside her, the slit opening over her front leg; she has a cool, soft smile. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to sandals, the white mock-neck crop top and her bare slim waist, the line of the high-waisted pencil skirt hugging her hips and narrowing below, the slit opening over her front leg and the white strappy sandals, one hand on the waistband and the other touching a monstera leaf. Body: standing on the stone path, her body turned about 45 degrees toward camera-right, her weight on her back leg with her hip shifted back and to the side, the front leg on the slit side stepping slightly forward, shoulders relaxed. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 5.3 metres, camera at her hip height, level, natural perspective without distortion; she fills about 86% of the frame height. Composition: she is centred on the path, large monstera leaves framing both side edges and the white steel frames of the greenhouse above, the leaves never covering her body. Emphasis: the full figure at about 45 degrees shows the waist-to-hip outline of the high-waisted pencil skirt and the leg through the slit, with the crop top showing her slim waist. Lighting: bright diffused daylight through the glass roof as a large soft key, a soft fill just out of frame in front; white, mint and deep green tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "revised",
@@ -4283,18 +4323,19 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 9%",
-     "下緣：雙腳與鞋下方留白約 5%"
+     "上緣：規劃髮頂留白約 9%",
+     "下緣：規劃雙腳與鞋下方留白約 5%"
     ],
     "keep": "髮頂、臉、入鏡的雙手、雙腳與鞋",
-    "need": "放入框後：髮頂上方 ≥4%、腳下 ≥3%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%",
     "adjust": [],
-    "verdict": "已依印刷餘量規劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 9.3
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 9.3,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
    }
   },
   {
@@ -4435,7 +4476,7 @@
     },
     "fill_of": "畫面高度（頭頂到下緣）",
     "native": "3:4 原生 1536×2048（已知：Iris 的生成筆記記錄 soul_2＋Soul、2k、3:4 輸出皆 1536×2048）",
-    "fit": "直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。"
+    "fit": "直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
    },
    "prompt": "A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights worn down in loose waves. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white fitted ribbed scoop-neck tank mini dress that follows her full chest, slim waist and hips, and small gold hoop earrings; the dress is dry. Setting: a wide white-sand beach at sunset, calm shallow water and a soft gold and peach sky over the sea, the beach empty. One hand rests lightly at her collarbone and the other is relaxed at her side; she smiles brightly. Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the fitted ribbed tank dress over her full chest, slim waist and hips and her legs down to just below the knees, one hand at her collarbone and the other relaxed at her side. Body: standing at the water's edge with her weight on her back leg and her front knee softly bent, her body turned about 30 degrees toward camera-left, shoulders and hips turned together. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.7 metres, camera at her hip height, tilted slightly upward, natural perspective without distortion. Composition: she stands slightly right of centre, the horizon low behind her hips and the gold and peach sunset sky filling the space above and to the left. Emphasis: the slightly low camera and low horizon make her tall figure look longer, and the oblique stance shows the healthy curve of her hips. Lighting: the low sun behind her draws a warm rim along her hair and shoulders; a large white reflector and a soft fill just out of frame in front light her face evenly; warm gold, peach and soft blue tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
    "status": "accepted",
@@ -4445,25 +4486,26 @@
    },
    "print": {
     "frame": "直式 3:4 照片框（暫定）（120×160 mm）",
-    "crop": "不裁切",
+    "crop": "比例計算：3:4 放入 3:4 框不裁切",
     "edges": [
-     "上緣：髮頂留白約 7%",
-     "下緣：裁切線在膝蓋下方的小腿上段"
+     "上緣：規劃髮頂留白約 7%",
+     "下緣：規劃裁切線在膝蓋下方的小腿上段"
     ],
     "keep": "髮頂、臉、入鏡的雙手",
-    "need": "放入框後：髮頂上方 ≥4%",
+    "need": "規劃目標（套框後）：髮頂上方 ≥4%",
     "adjust": [],
-    "verdict": "不需改企劃",
+    "verdict": "依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。",
     "native": "V 3:4：原生 1536×2048（已知）",
-    "ppi": "約 325 ppi（1536 px／120 mm）",
-    "top_after": 7.2
+    "ppi": "比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準",
+    "top_after": 7.2,
+    "verify": "生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
    }
   }
  ],
  "photo": {
   "summary": "R4：8 套已接受照 v4；16 套依 owner 回饋修訂，每套一個主推薦，七個攝影欄位（景別、畫面上下界、身體朝向、臉部朝向與視線、相機高度與俯仰、畫面配置、攝影目的）中文與英文 prompt 由同一份設定產生並逐套檢查。16 套的新主推薦是主管推薦的修訂起點加上執行者的細化，尚未經 Penny 批准。",
   "rules": [
-   "景別依 Penny 指定的名稱：胸上／腰上／大腿中段以上／膝上／全身，坐姿與斜躺另寫「坐姿全身」「席地坐姿全身」「斜躺全身」，池邊坐姿寫「坐姿到水面」。不用含糊的「半身」。Rin 的及地長禮服蓋住雙腳，她的坐姿全身下緣寫在禮服下襬下方。",
+   "景別依 Penny 指定的名稱：胸上／腰上／大腿中段以上／膝上／全身，坐姿與斜躺另寫「坐姿全身」「席地坐姿全身」「斜躺全身」，池邊坐姿寫「坐姿到水面」。不用含糊的「半身」。",
    "裁切不落在關節：膝上切在膝蓋下方的小腿上段；大腿中段以上切在膝蓋上方很遠；腰上切在腰線下方、臀部上方；胸上切在胸線下方、手肘上方。所有景別都保留完整髮頂。",
    "鞋只在腳會入鏡的景別（全身、坐姿全身、席地坐姿全身、斜躺全身）寫進 prompt；其他景別的鞋在中文服裝欄標「不入鏡」，不當成這張照片的賣點。",
    "身體朝向、臉部朝向、相機高度分開寫：身體用「正面／約30度斜側／約45度斜側／側面」，臉用「臉正面／三分之二側臉」，相機寫「她的哪個高度＋平視／輕俯／輕仰」。",
@@ -4527,11 +4569,11 @@
    "身體與頭部扭轉在 0–55 度；Iris 兩款身體正面、臉正面、看鏡頭、笑，沒有回眸字樣。",
    "沿用 v3 的禁字檢查（Mia 去電競、Jia 不棚拍不運動、Yerin 不打球、Yuna 不靠地標文字等）、膚色只寫一次、adult。",
    "同一位兩款服裝、場景仍不同；已接受方向（H-somi-oh、V-coco-wu、H-rainie-hsu、V-rin-ayase）的場景與光線原文不動；月份不變，且同一本相鄰月份不出現相同景別＋相同身體方向。",
-   "R4：已接受 8 套的 prompt、攝影設計與服裝和 v4 逐字相同（程式比對）。",
+   "R4：已接受 8 套的 prompt、攝影設計與服裝和 v4 逐字相同（程式比對）。R5：其中 V-iris-chen、H-coco-wu、V-coco-wu 依主管核可在 prompt 補一句妝感，其餘欄位仍與 v4 相同；另 5 套 prompt 仍與 v4 逐字相同。",
    "R4：16 套各有 owner 回饋原文（逐字）與「改了什麼」；兩本月份與 v4 相同。",
    "R4：整組禁字新增 sexy、girl、teen、schoolgirl、childlike、uniform、kawaii、Korean aesthetic、luxury brand；逐位新增：Yuna 不寫 café、Tammy 不寫 boutique／泥地／碎石／沙、Miu 不寫運河與欄杆、Jia 不寫美術館與畫作、Rin 不寫吧台與長禮服、Yerin 不寫 upskirt。",
    "R4：24 套的場景（env）彼此都不同；同一本相鄰月份不出現相同景別＋相同身體方向。",
-   "R4：16 套修訂的中文「妝感」都寫進英文 prompt（人設身分句沒有妝感的 H-iris、H-somi、V-somi 另加一句；身分句本身不改）；已接受的 V-iris、H-coco、V-coco 同樣缺妝感句，本輪不改、列待主管確認。"
+   "R4：16 套修訂的中文「妝感」都寫進英文 prompt（人設身分句沒有妝感的 H-iris、H-somi、V-somi 另加一句；身分句本身不改）；已接受的 V-iris、H-coco、V-coco 在 R5 依主管核可補上妝感句。"
   ],
   "major_rule": "R4 的「修訂」是 owner 指定的 16 套；每套的「改了什麼」列在卡片與下表。8 套已接受不重設。",
   "near": "近景：V-mia-huang 胸上；大腿中段以上 4 張（H-mia-huang、H-yuna-kim、V-iris-chen、V-tammy-chou）。沒有純臉部特寫，身材展示優先。"
@@ -4835,7 +4877,7 @@
   }
  ],
  "printing": {
-  "note": "以下分成「已知」「假設」「未知」。已知值來自廠商編輯器設定與商品頁（R1 查證，本輪只重讀既有證據、沒有重查網站）；假設值是本案為了規劃先定的數字，不是廠商規格；未知要等廠商回覆或實際打樣。只有構圖方框不代表印刷安全。",
+  "note": "以下分成「已知」「假設」「未知」。已知值來自廠商編輯器設定與商品頁（R1 查證，本輪只重讀既有證據、沒有重查網站）；假設值是本案為了規劃先定的數字，不是廠商規格；未知要等廠商回覆或實際打樣。只有構圖方框不代表印刷安全。印刷數字再分成四類：已知尺寸、比例計算、prompt 規劃目標、生成後待驗證；表中的髮頂留白、腳下留白與「套框後約 x%」都是依規劃構圖推算的理論／規劃預估，不是實圖量測。",
   "known": [
    {
     "k": "成品尺寸（裁切線）",
@@ -4956,24 +4998,24 @@
    "H": {
     "img": "16:9",
     "scaled": "192×108 mm",
-    "crop": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "crop": "比例計算：高度共裁 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm（各約 1.9%），實際分配依實圖",
     "pct": 1.9
    },
    "V": {
     "img": "3:4",
     "scaled": "120×160 mm",
-    "crop": "不裁切",
+    "crop": "比例計算：不裁切",
     "pct": 0.0
    }
   },
   "compare": [
    {
     "k": "若橫式改用 R3「橫 A 半版」104×155（直幅）",
-    "v": "16:9 橫幅照片不適用（要裁掉約七成寬度），必須另拍直幅——不從 16:9 硬裁。"
+    "v": "比例計算：16:9 照片要裁掉約 62% 寬度才放得進這個直幅框（原文誤寫「約七成」），所以不建議從 16:9 硬裁，要另外規劃直幅照片。"
    },
    {
     "k": "若直式改用 R3「直式統一框」120×128（約 0.94:1）",
-    "v": "3:4 照片上下共要裁掉 32 mm（20%）：大腿中段以上會切到髮頂或腿、全身會切到腳——12 套直式款都要重排構圖。"
+    "v": "比例計算：3:4 原圖放進 120×128 要裁掉高度 20%（160→128 mm）。裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然；直式款可能要重新規劃上下留白。"
    },
    {
     "k": "若改成滿版出血照片",
@@ -4988,28 +5030,47 @@
    "背景延伸到出血區是正常需求；臉、髮頂、手腳與關鍵服裝細節才要避開裁切與裝訂風險。",
    "本輪的暫定照片框整個在安全區內，所以照片不碰出血線；真正會裁掉的只有「照片比例≠框比例」的部分（橫式 16:9→約 1.85:1，上下各約 2 mm）。",
    "16:9 放進橫式框的 4 mm 裁切，原則上上下平均；若頭頂留白不足 4%，改從下緣多裁，反之亦然——以髮頂留白 ≥3%、下緣不落在膝或肘為準，生成後用實圖決定。",
-   "生成後仍須用實圖逐張確認裁切與有效 ppi；不預設 AI 放大或外擴已獲授權；不為安全餘量把人物縮小。"
+   "生成後仍須用實圖逐張確認裁切與有效 ppi；不預設 AI 放大或外擴已獲授權；不為安全餘量把人物縮小。",
+   "限制：線圈／裝訂區 12 mm 是假設；16:9 實際輸出尺寸未知；300 ppi 是本案工作目標，不是已確認的廠商最低標準。"
   ],
   "accepted_impact": {
    "changed": [],
    "notes": [
     {
      "id": "H-coco-wu",
-     "note": "膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁"
+     "note": "膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。"
     },
     {
      "id": "H-rainie-hsu",
-     "note": "膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁"
+     "note": "膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。"
     }
    ],
-   "summary": "8 套已接受的企劃內容都不需要為印刷改動；H-coco-wu、H-rainie-hsu 是橫式膝上，放入框後下緣會再往上移約 2–3 cm，生成後若接近膝蓋，4 mm 的裁切改由頭頂留白多取——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。"
+   "summary": "依暫定框與規劃構圖，8 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。"
   },
   "iris_first": {
    "set": "V-iris-chen",
-   "answer": "不需要構圖微調：直式 3:4 照片放進暫定的 3:4 框不裁切，髮頂留白約 7%、下緣在大腿中段，人物置中、雙手都在框內；prompt 不改。",
-   "condition": "前提是直式採 3:4 照片框。若 Penny 最後選 R3 的直式統一框（120×128，約 0.94:1），3:4 照片上下要共裁 20%，這張的髮頂與下緣都會被切到，需要重排構圖；所以建議在 M-4 首試前先確認直式照片框。",
-   "verify": "首試出圖後要用實圖確認：實際像素（預期 1536×2048）、髮頂與雙手是否在框內、有效 ppi（120 mm 寬約 325 ppi）。"
-  }
+   "answer": "依暫定 3:4 框與規劃構圖，暫無須為印刷調整 V-Iris 的拍攝方向：3:4 照片放進 3:4 框在比例上不裁切；髮頂留白約 8%、下緣在大腿中段、雙手在框內是 prompt 規劃目標，不是實圖量測（R4 文字誤寫髮頂約 7%，依逐張表更正為約 8%）。",
+   "condition": "前提是直式採 3:4 照片框。若改用 R3 直式統一框（120×128），3:4 原圖高度要裁掉 20%（比例事實）；會不會切到髮頂、手或下緣，要看實圖與裁切位置，可能需要重新規劃留白——所以建議 M-4 首試前先確認直式照片框。",
+   "verify": "首試出圖後用實圖確認：實際輸出像素（預期 1536×2048，以實際輸出為準）、套框後髮頂與雙手是否在框內、有效 ppi（若 1536 px／120 mm 約 325 ppi；300 是本案工作目標，不是廠商已確認的最低標準）。"
+  },
+  "categories": [
+   {
+    "k": "已知尺寸",
+    "v": "成品 H 200×151、V 140×200 mm；出血四邊 2 mm；含出血畫布 H 204×155、V 144×204 mm；編輯器安全框 H 上 10、其餘 2 mm，V 0 mm（廠商編輯器設定與商品頁，見「已知」表）。"
+   },
+   {
+    "k": "比例計算",
+    "v": "由已知尺寸與照片比例算出的事實：16:9 放進 192×104 要裁掉高度 4 mm（約 3.7%）；3:4 放進 120×160 不裁；3:4 放進 120×128 要裁掉高度 20%；16:9 放進 104×155 要裁掉約 62% 寬度；1536 px 放在 120 mm 寬約 325 ppi、2048 px 放在 192 mm 寬約 271 ppi（像素數本身待驗證）。"
+   },
+   {
+    "k": "prompt 規劃目標",
+    "v": "企劃寫給生成的構圖：髮頂留白、下緣位置、人物佔畫面比例、左右邊距。逐張表中的百分比與「套框後約 x%」都是依規劃構圖推算的理論／規劃預估，不是實圖量測。"
+   },
+   {
+    "k": "生成後待驗證",
+    "v": "實際輸出像素、套框後髮頂／臉／手／腳與關鍵服裝是否都在框內、有效 ppi、色彩與暗部——都要用實圖逐張確認。"
+   }
+  ]
  },
  "people": [
   {
@@ -5218,7 +5279,7 @@
    "m": 1,
    "H": "H-yuna-kim",
    "V": "V-tammy-chou",
-   "why_h": "冬日的明亮咖啡館，用清透的奶油黃開場",
+   "why_h": "雪後清晨的白樺林，用雪白與霧玫瑰的冬日寫真開場",
    "why_v": "新年的大飯店大廳，白金色開場"
   },
   {
@@ -5239,8 +5300,8 @@
    "m": 4,
    "H": "H-tammy-chou",
    "V": "V-miu-shiraishi",
-   "why_h": "春天逛精品店的熱粉洋裝",
-   "why_v": "暮春運河新綠"
+   "why_h": "春日花園露台的熱粉洋裝",
+   "why_v": "春日別墅木平台與開滿白花的果樹"
   },
   {
    "m": 5,
@@ -5267,22 +5328,22 @@
    "m": 8,
    "H": "H-iris-chen",
    "V": "V-yerin-han",
-   "why_h": "夏末午後的紅磚騎樓",
+   "why_h": "盛夏上午的岩岸海灣與向日葵黃",
    "why_v": "夏日夕陽海灘"
   },
   {
    "m": 9,
    "H": "H-jia-seo",
    "V": "V-iris-chen",
-   "why_h": "初秋美術館的冷調",
+   "why_h": "初秋傍晚的湖畔木平台",
    "why_v": "夏末黃金時段草地"
   },
   {
    "m": 10,
    "H": "H-luna-tanaka",
    "V": "V-rin-ayase",
-   "why_h": "秋日清晨的和室柔光",
-   "why_v": "秋夜的金色酒吧"
+   "why_h": "秋日傍晚前的當代日式旅宿與窗外紅葉",
+   "why_v": "秋日午後的安靜港灣"
   },
   {
    "m": 11,
@@ -5309,18 +5370,18 @@
   "recommend": [
    {
     "k": "橫式款（H）",
-    "v": "暫定照片框：橫式大照片框 192×104 mm（畫布 6,14–198,118）。生成用 16:9（原生尺寸未知）：放入後上下各裁約 2 mm。版面待 Penny 定案，見「印刷構圖」。"
+    "v": "暫定照片框：橫式大照片框 192×104 mm（畫布 6,14–198,118）。生成用 16:9（原生尺寸未知）：比例上要裁掉高度 4 mm，規劃上下各約 2 mm。版面待 Penny 定案，見「印刷構圖」。"
    },
    {
     "k": "直式款（V）",
-    "v": "暫定照片框：直式 3:4 框 120×160 mm（畫布 12,16–132,176）。生成用 3:4（原生 1536×2048，已知）：放入不裁切、約 325 ppi。版面待 Penny 定案。"
+    "v": "暫定照片框：直式 3:4 框 120×160 mm（畫布 12,16–132,176）。生成用 3:4：比例上不裁切；若輸出 1536×2048，約 325 ppi（比例計算，以實際輸出為準）。版面待 Penny 定案。"
    }
   ],
   "eval": [
    "橫式款的價值在於「人＋環境」的寬畫面：大照片框比半版適合。半版直幅框比較適合直式照片，而直式款已經另有 12 套直幅照片。",
    "若 Penny 最後選擇橫式款用半版直幅框：這 12 套 16:9 不適用，要另外規劃與生成直幅版本——不從 16:9 硬裁成直幅。",
-   "直式款若最後用近方形框（約 0.94:1），3:4 要上下共裁約 20%：膝上變大腿以上、全身會切到腳。所以建議直式款的照片區至少 3:4。",
-   "避免人物縮小到背景裡：全身與坐姿的人物佔畫面高度約 85%（斜躺的 Rin 佔畫面寬度約 87%）；裁切景別保留完整髮頂、上緣約 4–10% 留白。"
+   "直式款若最後用近方形框（120×128，約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；會不會切到髮頂或腳要看實圖與裁切位置。所以建議直式款的照片區至少 3:4。",
+   "避免人物縮小到背景裡（以下是 prompt 規劃目標，不是實圖量測）：全身與坐姿的人物佔畫面高度約 85%（斜躺的 Rin 佔畫面寬度約 87%）；裁切景別保留完整髮頂、上緣約 4–10% 留白。"
   ],
   "limits": [
    "16:9 原生尺寸未知（推測 2048×1152，未驗證）；3:2 也未知。3:4 已知 1536×2048。",
@@ -5356,7 +5417,7 @@
     "沒有 negative prompt：不要的東西只能用正面描述避開（例如「小徑空無一人」）。",
     "碰撞配對（Miu–Jia、Miu–Somi、Jia–Somi、Yerin–Rin）不得同框（C-2）；本企劃每張只有一人。"
    ],
-   "multi_stage": "不規劃多階段（先生成再換臉、外擴、放大）。若首批發現橫直兩張服裝差太多，才考慮把第一張當唯一的參考圖餵第二張——這可能把構圖或身分一起帶過去，要另外測、另外批准。",
+   "multi_stage": "不規劃多階段（先生成再換臉、外擴、放大）。H／V 本來就是兩套獨立的服裝與場景，兩張只需要共同維持人設身分（同一個 Soul 與身分句）與設定身材；不得為了讓服裝或環境相同而把一款的成品當參考圖餵給另一款。任何未來使用參考圖的方案都要另外提出、另外批准，本輪不執行。（R5 撤回先前「橫直服裝差太多就把第一張當參考圖餵第二張」的寫法。）",
    "unknown": [
     "16:9 與 3:2 的實際輸出像素",
     "16:9、3:4 在這些企劃下的實際扣款（只有報價）",
@@ -5526,5 +5587,341 @@
   "generated": 0,
   "credits": 0,
   "trainings": 0
+ },
+ "r5": {
+  "from_commit": "4f1591790d0e04cd58b93d95be470c2ff602e63b",
+  "summary": "R5 只修資料一致性與措辭：月份理由與過時的交叉引用改成目前企劃；撤回「橫直服裝差太多就拿第一張當參考圖」的策略；依主管核可替已接受的 V-iris-chen、H-coco-wu、V-coco-wu 補英文妝感句；印刷結論分成已知尺寸、比例計算、規劃目標、生成後待驗證，並改成條件句。24 套方向、月份人選、8 套已接受／16 套待決都不變；企劃版本仍是 shoot-plan-v5，Penny 的回饋延續、不需重填。",
+  "unchanged": [
+   "24 套的服裝、場景、表情、姿態、攝影七欄位（已接受 3 套只多一句妝感）",
+   "兩本月份人選與排序",
+   "8 套已接受／16 套待決",
+   "shoot-plan-v5 回饋欄位與既有瀏覽器資料"
+  ],
+  "changes": [
+   {
+    "kind": "月份理由",
+    "where": "months[1月].why_h",
+    "old": "冬日的明亮咖啡館，用清透的奶油黃開場",
+    "new": "雪後清晨的白樺林，用雪白與霧玫瑰的冬日寫真開場"
+   },
+   {
+    "kind": "月份理由",
+    "where": "months[4月].why_h",
+    "old": "春天逛精品店的熱粉洋裝",
+    "new": "春日花園露台的熱粉洋裝"
+   },
+   {
+    "kind": "月份理由",
+    "where": "months[4月].why_v",
+    "old": "暮春運河新綠",
+    "new": "春日別墅木平台與開滿白花的果樹"
+   },
+   {
+    "kind": "月份理由",
+    "where": "months[8月].why_h",
+    "old": "夏末午後的紅磚騎樓",
+    "new": "盛夏上午的岩岸海灣與向日葵黃"
+   },
+   {
+    "kind": "月份理由",
+    "where": "months[9月].why_h",
+    "old": "初秋美術館的冷調",
+    "new": "初秋傍晚的湖畔木平台"
+   },
+   {
+    "kind": "月份理由",
+    "where": "months[10月].why_h",
+    "old": "秋日清晨的和室柔光",
+    "new": "秋日傍晚前的當代日式旅宿與窗外紅葉"
+   },
+   {
+    "kind": "月份理由",
+    "where": "months[10月].why_v",
+    "old": "秋夜的金色酒吧",
+    "new": "秋日午後的安靜港灣"
+   },
+   {
+    "kind": "交叉引用（已接受套數的比較文字，不是服裝場景表情）",
+    "where": "sets[V-iris-chen].vs_other",
+    "old": "橫式款在紅磚騎樓、米杏針織套裝、側光；這款在河濱草地、白上衣＋牛仔迷你裙、逆光。",
+    "new": "橫式款在夏日上午的岩岸海灣、向日葵黃馬甲短上衣＋低腰迷你裙、正面全身；這款在河濱草地、白上衣＋牛仔迷你裙、逆光。"
+   },
+   {
+    "kind": "交叉引用（已接受套數的比較文字，不是服裝場景表情）",
+    "where": "sets[V-luna-tanaka].vs_other",
+    "old": "橫式款是室內和室、象牙白緞面、席地坐；這款是戶外庭院、綠色馬甲洋裝、站姿全身。",
+    "new": "橫式款是室內當代日式旅宿、香檳色緞面、榻榻米上慵懶斜坐；這款是戶外庭院、綠色馬甲洋裝、站姿全身。"
+   },
+   {
+    "kind": "過時規則",
+    "where": "photo.rules[0]",
+    "old": "Rin 的及地長禮服蓋住雙腳，她的坐姿全身下緣寫在禮服下襬下方。",
+    "new": "（刪除：R4 起 V-Rin 改為港灣膝上，不再有及地長禮服）"
+   },
+   {
+    "kind": "撤回策略",
+    "where": "execution.model.multi_stage",
+    "old": "不規劃多階段（先生成再換臉、外擴、放大）。若首批發現橫直兩張服裝差太多，才考慮把第一張當唯一的參考圖餵第二張——這可能把構圖或身分一起帶過去，要另外測、另外批准。",
+    "new": "不規劃多階段（先生成再換臉、外擴、放大）。H／V 本來就是兩套獨立的服裝與場景，兩張只需要共同維持人設身分（同一個 Soul 與身分句）與設定身材；不得為了讓服裝或環境相同而把一款的成品當參考圖餵給另一款。任何未來使用參考圖的方案都要另外提出、另外批准，本輪不執行。（R5 撤回先前「橫直服裝差太多就把第一張當參考圖餵第二張」的寫法。）"
+   },
+   {
+    "kind": "已接受妝感中英同步（主管核可）",
+    "where": "sets[V-iris-chen].prompt",
+    "old": "（身分句後、She wears 前無妝感句）",
+    "new": "Fresh, light everyday makeup with a natural lip colour."
+   },
+   {
+    "kind": "已接受妝感中英同步（主管核可）",
+    "where": "sets[H-coco-wu].prompt",
+    "old": "（身分句後、She wears 前無妝感句）",
+    "new": "Sweet, light makeup with a pink lip."
+   },
+   {
+    "kind": "已接受妝感中英同步（主管核可）",
+    "where": "sets[V-coco-wu].prompt",
+    "old": "（身分句後、She wears 前無妝感句）",
+    "new": "Sweet, light makeup."
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-iris-chen].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 9%，放入框後約 7.6%；下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.6%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-luna-tanaka].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 10%，放入框後約 8.6%；下緣：雙腳下方留白約 7%，放入框後約 5.3%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 10%（套框後理論約 8.6%）；下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%）；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-somi-oh].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 8%，放入框後約 6.4%；下緣：裁切線在膝蓋下方的小腿上段，放入框後往上移約 2 cm；放入框後：髮頂上方 ≥4%；注意：膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.4%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-coco-wu].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 7%，放入框後約 5.0%；下緣：裁切線在膝蓋下方的小腿上段，放入框後往上移約 2 cm；放入框後：髮頂上方 ≥4%；不需改企劃（膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁）；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 7%（套框後理論約 5.0%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 2 cm）；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-mia-huang].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 8%，放入框後約 5.9%；下緣：裁切線在大腿中段，放入框後往上移約 2 cm；放入框後：髮頂上方 ≥4%；不需改企劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 5.9%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-yuna-kim].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 9%，放入框後約 7.3%；下緣：裁切線在大腿中段，放入框後往上移約 2 cm；放入框後：髮頂上方 ≥4%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.3%）；下緣：規劃裁切線在大腿中段（套框後理論上往上移約 2 cm）；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-tammy-chou].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 9%，放入框後約 7.2%；下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.2%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-rin-ayase].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 24%，放入框後約 22.9%；左右：頭與腳離左右邊緣各約 7%；放入框後：髮頂上方 ≥4%、左右各 ≥5%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 24%（套框後理論約 22.9%）；左右：規劃頭與腳離左右邊緣各約 7%；規劃目標（套框後）：髮頂上方 ≥4%、左右各 ≥5%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、頭與腳是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-rainie-hsu].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 8%，放入框後約 6.1%；下緣：裁切線在膝蓋下方的小腿上段，放入框後往上移約 3 cm；放入框後：髮頂上方 ≥4%；不需改企劃（膝上的下緣會因上下裁切再往上移，生成後若接近膝蓋，4 mm 改由頭頂留白多裁）；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.1%）；下緣：規劃裁切線在膝蓋下方的小腿上段（套框後理論上往上移約 3 cm）；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。膝上的下緣套框後理論上會略往上移；若實圖接近膝蓋，4 mm 改由頭頂留白多裁（後製裁切位置，不改拍攝方向）。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-miu-shiraishi].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 9%，放入框後約 7.5%；下緣：雙腳下方留白約 7%，放入框後約 5.3%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 9%（套框後理論約 7.5%）；下緣：規劃雙腳下方留白約 7%（套框後理論約 5.3%）；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-jia-seo].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 8%，放入框後約 6.7%；下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 8%（套框後理論約 6.7%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[H-yerin-han].print",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁；上緣：髮頂留白約 10%，放入框後約 8.4%；下緣：雙腳與鞋下方留白約 7%，放入框後約 5.3%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；若是 2048×1152：約 271 ppi（低於 300 工作目標，待驗證實際輸出）",
+    "new": "比例計算：16:9 放入要裁掉高度 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm，實際分配依實圖；上緣：規劃髮頂留白約 10%（套框後理論約 8.4%）；下緣：規劃雙腳與鞋下方留白約 7%（套框後理論約 5.3%）；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；規劃估算：若輸出 2048×1152，約 271 ppi，低於本案 300 ppi 工作目標（不是已確認的廠商最低標準）；16:9 實際輸出尺寸未知，待驗證；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-iris-chen].print",
+    "old": "不裁切；上緣：髮頂留白約 8%；下緣：裁切線在大腿中段；放入框後：髮頂上方 ≥4%；不需改企劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在大腿中段；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-luna-tanaka].print",
+    "old": "不裁切；上緣：髮頂留白約 9%；下緣：雙腳與鞋下方留白約 5%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；不需改企劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5%；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-somi-oh].print",
+    "old": "不裁切；上緣：髮頂留白約 10%；下緣：雙腳與鞋下方留白約 5%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 10%；下緣：規劃雙腳與鞋下方留白約 5%；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-coco-wu].print",
+    "old": "不裁切；上緣：髮頂留白約 11%；下緣：水面下方留白約 8%；放入框後：髮頂上方 ≥4%；不需改企劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 11%；下緣：規劃水面下方留白約 8%；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-mia-huang].print",
+    "old": "不裁切；上緣：髮頂留白約 9%；下緣：裁切線在胸線下方；放入框後：髮頂上方 ≥4%；不需改企劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃裁切線在胸線下方；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-yuna-kim].print",
+    "old": "不裁切；上緣：髮頂留白約 8%；下緣：雙腳與鞋下方留白約 5%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃雙腳與鞋下方留白約 5%；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-tammy-chou].print",
+    "old": "不裁切；上緣：髮頂留白約 6%；下緣：裁切線在大腿中段；放入框後：髮頂上方 ≥4%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 6%；下緣：規劃裁切線在大腿中段；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-rin-ayase].print",
+    "old": "不裁切；上緣：髮頂留白約 7%；下緣：裁切線在膝蓋下方的小腿上段；放入框後：髮頂上方 ≥4%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 7%；下緣：規劃裁切線在膝蓋下方的小腿上段；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-rainie-hsu].print",
+    "old": "不裁切；上緣：髮頂留白約 8%；下緣：裁切線在膝蓋下方的小腿上段；放入框後：髮頂上方 ≥4%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃裁切線在膝蓋下方的小腿上段；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-miu-shiraishi].print",
+    "old": "不裁切；上緣：髮頂留白約 8%；下緣：雙腳與鞋下方留白約 5%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 8%；下緣：規劃雙腳與鞋下方留白約 5%；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-jia-seo].print",
+    "old": "不裁切；上緣：髮頂留白約 9%；下緣：雙腳與鞋下方留白約 5%；放入框後：髮頂上方 ≥4%、腳下 ≥3%；已依印刷餘量規劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 9%；下緣：規劃雙腳與鞋下方留白約 5%；規劃目標（套框後）：髮頂上方 ≥4%、腳下 ≥3%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手、雙腳與鞋是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[V-yerin-han].print",
+    "old": "不裁切；上緣：髮頂留白約 7%；下緣：裁切線在膝蓋下方的小腿上段；放入框後：髮頂上方 ≥4%；不需改企劃；約 325 ppi（1536 px／120 mm）",
+    "new": "比例計算：3:4 放入 3:4 框不裁切；上緣：規劃髮頂留白約 7%；下緣：規劃裁切線在膝蓋下方的小腿上段；規劃目標（套框後）：髮頂上方 ≥4%；依暫定框與規劃構圖，暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。；比例計算：若輸出 1536×2048，約 325 ppi（1536 px／120 mm）；300 ppi 是本案工作目標、廠商門檻未知；以實際輸出為準；生成後待驗證：實際輸出像素、套框後髮頂、臉、入鏡的雙手是否都在框內、有效 ppi"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "sets[*].frame.fit（H 12 套、V 12 套共用的兩段文字）",
+    "old": "橫式款建議用「大照片」框（約 1.85:1）：16:9 只需上下共裁約 4%，人物完整。若橫式款最後改用半版直幅框，這張不適用，要另拍直幅，不能硬裁。；直式款建議照片區至少 3:4：原生 3:4 可完整使用。若最後選近方形框（約 0.94:1），要上下共裁約 20%：膝上會變成大腿以上、全身會切到腳——不承諾任意裁切都成立。",
+    "new": "橫式款建議用「大照片」框（約 1.85:1）：比例上 16:9 只需上下共裁約 4%（高度 4 mm）；人物是否完整要用實圖套框確認。若橫式款最後改用半版直幅框，16:9 要裁掉約 62% 寬度，不建議硬裁，要另外規劃直幅照片。；直式款建議照片區至少 3:4：3:4 照片放進 3:4 框在比例上可完整使用。若最後選近方形框（約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.fit.H.crop",
+    "old": "上下各約 2 mm（照片高度的 1.9%），左右不裁",
+    "new": "比例計算：高度共裁 4 mm（約 3.7%），左右不裁；規劃上下各約 2 mm（各約 1.9%），實際分配依實圖"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.fit.V.crop",
+    "old": "不裁切",
+    "new": "比例計算：不裁切"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.note",
+    "old": "以下分成「已知」「假設」「未知」。已知值來自廠商編輯器設定與商品頁（R1 查證，本輪只重讀既有證據、沒有重查網站）；假設值是本案為了規劃先定的數字，不是廠商規格；未知要等廠商回覆或實際打樣。只有構圖方框不代表印刷安全。",
+    "new": "以下分成「已知」「假設」「未知」。已知值來自廠商編輯器設定與商品頁（R1 查證，本輪只重讀既有證據、沒有重查網站）；假設值是本案為了規劃先定的數字，不是廠商規格；未知要等廠商回覆或實際打樣。只有構圖方框不代表印刷安全。印刷數字再分成四類：已知尺寸、比例計算、prompt 規劃目標、生成後待驗證；表中的髮頂留白、腳下留白與「套框後約 x%」都是依規劃構圖推算的理論／規劃預估，不是實圖量測。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.categories",
+    "old": "（無）",
+    "new": "新增四類說明"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.rules",
+    "old": "（無）",
+    "new": "限制：線圈／裝訂區 12 mm 是假設；16:9 實際輸出尺寸未知；300 ppi 是本案工作目標，不是已確認的廠商最低標準。"
+   },
+   {
+    "kind": "印刷措辭（並更正比例數字）",
+    "where": "printing.compare[橫 A 半版]",
+    "old": "16:9 橫幅照片不適用（要裁掉約七成寬度），必須另拍直幅——不從 16:9 硬裁。",
+    "new": "比例計算：16:9 照片要裁掉約 62% 寬度才放得進這個直幅框（原文誤寫「約七成」），所以不建議從 16:9 硬裁，要另外規劃直幅照片。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.compare[直式統一框]",
+    "old": "3:4 照片上下共要裁掉 32 mm（20%）：大腿中段以上會切到髮頂或腿、全身會切到腳——12 套直式款都要重排構圖。",
+    "new": "比例計算：3:4 原圖放進 120×128 要裁掉高度 20%（160→128 mm）。裁在哪裡、會不會切到髮頂、腳或其他部位，要看實圖與裁切位置，不是必然；直式款可能要重新規劃上下留白。"
+   },
+   {
+    "kind": "印刷措辭（並更正數字）",
+    "where": "printing.iris_first.answer",
+    "old": "不需要構圖微調：直式 3:4 照片放進暫定的 3:4 框不裁切，髮頂留白約 7%、下緣在大腿中段，人物置中、雙手都在框內；prompt 不改。",
+    "new": "依暫定 3:4 框與規劃構圖，暫無須為印刷調整 V-Iris 的拍攝方向：3:4 照片放進 3:4 框在比例上不裁切；髮頂留白約 8%、下緣在大腿中段、雙手在框內是 prompt 規劃目標，不是實圖量測（R4 文字誤寫髮頂約 7%，依逐張表更正為約 8%）。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.iris_first.condition",
+    "old": "前提是直式採 3:4 照片框。若 Penny 最後選 R3 的直式統一框（120×128，約 0.94:1），3:4 照片上下要共裁 20%，這張的髮頂與下緣都會被切到，需要重排構圖；所以建議在 M-4 首試前先確認直式照片框。",
+    "new": "前提是直式採 3:4 照片框。若改用 R3 直式統一框（120×128），3:4 原圖高度要裁掉 20%（比例事實）；會不會切到髮頂、手或下緣，要看實圖與裁切位置，可能需要重新規劃留白——所以建議 M-4 首試前先確認直式照片框。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.iris_first.verify",
+    "old": "首試出圖後要用實圖確認：實際像素（預期 1536×2048）、髮頂與雙手是否在框內、有效 ppi（120 mm 寬約 325 ppi）。",
+    "new": "首試出圖後用實圖確認：實際輸出像素（預期 1536×2048，以實際輸出為準）、套框後髮頂與雙手是否在框內、有效 ppi（若 1536 px／120 mm 約 325 ppi；300 是本案工作目標，不是廠商已確認的最低標準）。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "printing.accepted_impact.summary",
+    "old": "8 套已接受的企劃內容都不需要為印刷改動；H-coco-wu、H-rainie-hsu 是橫式膝上，放入框後下緣會再往上移約 2–3 cm，生成後若接近膝蓋，4 mm 的裁切改由頭頂留白多取——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。",
+    "new": "依暫定框與規劃構圖，8 套已接受暫無須為印刷更改拍攝方向；生成後仍須實圖套框、檢查重要部位與有效 ppi。H-coco-wu、H-rainie-hsu 是橫式膝上：套框後下緣理論上會往上移（依規劃構圖估算約 2–3 cm），若實圖接近膝蓋，4 mm 改由頭頂留白多裁——這是後製裁切位置，不改服裝、場景、表情或 prompt，不列待確認。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "composition.recommend[H]",
+    "old": "暫定照片框：橫式大照片框 192×104 mm（畫布 6,14–198,118）。生成用 16:9（原生尺寸未知）：放入後上下各裁約 2 mm。版面待 Penny 定案，見「印刷構圖」。",
+    "new": "暫定照片框：橫式大照片框 192×104 mm（畫布 6,14–198,118）。生成用 16:9（原生尺寸未知）：比例上要裁掉高度 4 mm，規劃上下各約 2 mm。版面待 Penny 定案，見「印刷構圖」。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "composition.recommend[V]",
+    "old": "暫定照片框：直式 3:4 框 120×160 mm（畫布 12,16–132,176）。生成用 3:4（原生 1536×2048，已知）：放入不裁切、約 325 ppi。版面待 Penny 定案。",
+    "new": "暫定照片框：直式 3:4 框 120×160 mm（畫布 12,16–132,176）。生成用 3:4：比例上不裁切；若輸出 1536×2048，約 325 ppi（比例計算，以實際輸出為準）。版面待 Penny 定案。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "composition.eval[近方形框]",
+    "old": "直式款若最後用近方形框（約 0.94:1），3:4 要上下共裁約 20%：膝上變大腿以上、全身會切到腳。所以建議直式款的照片區至少 3:4。",
+    "new": "直式款若最後用近方形框（120×128，約 0.94:1），3:4 原圖高度要裁掉約 20%（比例事實）；會不會切到髮頂或腳要看實圖與裁切位置。所以建議直式款的照片區至少 3:4。"
+   },
+   {
+    "kind": "印刷措辭",
+    "where": "composition.eval[人物大小]",
+    "old": "避免人物縮小到背景裡：全身與坐姿的人物佔畫面高度約 85%（斜躺的 Rin 佔畫面寬度約 87%）；裁切景別保留完整髮頂、上緣約 4–10% 留白。",
+    "new": "避免人物縮小到背景裡（以下是 prompt 規劃目標，不是實圖量測）：全身與坐姿的人物佔畫面高度約 85%（斜躺的 Rin 佔畫面寬度約 87%）；裁切景別保留完整髮頂、上緣約 4–10% 留白。"
+   }
+  ]
  }
 }

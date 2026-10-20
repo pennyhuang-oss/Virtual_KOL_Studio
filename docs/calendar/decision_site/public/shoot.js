@@ -2,8 +2,8 @@
 // Penny 的回饋只存在本機瀏覽器 localStorage（cal2027-shoot-v1:<SHA>），不送到伺服器；沒有追蹤或分析。
 // v5 的回饋另存在同一筆資料的 v5 欄位；v1／v2／v3／v4 留下的欄位原樣保留，只顯示成「舊版」、不算 v5。載入時不改寫，只有 Penny 動手後才存。
 // R4 owner 紀錄的 8 套已接受與兩本月份直接顯示為已確認，不再要求回覆；只有 16 套修訂與印刷示意需要回饋。
-// 已接受套數的技術備註（中文妝感沒寫進英文 prompt）只顯示、不改內容，待主管確認。
 // 構圖示意與印刷示意都只是方框與尺寸（依企劃數字畫），不是照片，也不是生成圖。
+// R5 只修資料一致性與措辭：企劃版本仍是 shoot-plan-v5，v5 回饋照常延續，不重設、不要求重填。
 // 第二階段素材選擇（cal2027-materials-v1:<SHA>）本頁不讀、不寫、不刪。
 'use strict';
 (() => {
@@ -158,7 +158,9 @@
 <div class="stat warn"><b>V-iris-chen 首試</b><span>${esc(Sm.iris_first)}</span></div>
 </div>
 <p class="callout warn">${esc(Sm.jia_note)} 16 套的新主推薦與暫定照片框都<b>還沒有經 Penny 批准</b>；生成與費用都未授權。</p>
-<div class="callout"><b>已接受套數的技術備註（${esc(P.accepted_notes.status)}）</b>：${esc(P.accepted_notes.summary)}${ul(P.accepted_notes.items.map(x => `${x.id}：中文「${x.makeup_zh}」→ 建議補一句「${x.proposal_en}」`))}</div>
+<div class="callout"><b>R5 資料修訂（不影響回饋，不需重填）</b>：${esc(P.r5.summary)}
+<details class="info"><summary>R5 改了哪些文字（舊 → 新）</summary>${ul(P.r5.changes.filter(x => !(x.kind === '印刷措辭' && x.where.startsWith('sets['))).map(x => `［${x.kind}］${x.where}：${x.old} → ${x.new}`))}<p class="note">另有 24 套逐張印刷文字改成條件句並標明規劃預估，見<a href="#print">印刷構圖</a>。</p></details></div>
+<div class="callout"><b>已接受套數的中英同步（${esc(P.accepted_notes.status)}）</b>：${esc(P.accepted_notes.summary)}${ul(P.accepted_notes.items.map(x => `${x.id}：中文「${x.makeup_zh}」→ 英文補上「${x.added_en}」`))}</div>
 <details class="info"><summary>R4 逐套修改要求（逐字，主管轉述）</summary>${REV.map(s => `<pre class="verb">${esc(s.r4.owner)}</pre>`).join('')}<pre class="verb">${esc(O4.verbatim.closing)}</pre></details>
 <details class="info"><summary>R3 攝影設計要求（逐字，仍適用）</summary><pre class="verb">${esc(O3.verbatim.requirement)}</pre><pre class="verb">${esc(O3.verbatim.keep_existing)}</pre></details>
 <details class="info"><summary>R2 已生效的決定（逐字）</summary><pre class="verb">${esc(O2.verbatim.decisions)}</pre>${ul(O2.summary.decided)}</details>
@@ -214,6 +216,7 @@ ${stbl(['ID', '原設計（v4）', '新設計', '改了什麼'], REV.map(s => { 
       `<figcaption>${esc(BOOK[b])}：${esc(R.frames[b].name)} ${R.frames[b].mm[0]}×${R.frames[b].mm[1]} mm｜${esc(R.fit[b].img)} 放入：${esc(R.fit[b].crop)}｜<a href="${esc(R.diagrams[b])}" target="_blank" rel="noopener">開新分頁看原圖</a></figcaption></figure>`;
     return `<section class="sec" id="print"><h2>印刷構圖核對：裁切、出血與裝訂安全</h2>
 <p class="callout warn">${esc(R.note)}</p>
+<h3>四類數字</h3>${stbl(['類別', '內容'], R.categories.map(x => [x.k, x.v]), 'cat4')}
 <div class="pdiags">${dg('H')}${dg('V')}</div>
 <h3>已知（廠商編輯器設定與商品頁）</h3>${stbl(['項目', '橫式', '直式', '來源'], R.known.map(x => [x.k, x.H, x.V, x.src]))}
 <h3>假設（本案規劃用，不是廠商規格）</h3>${stbl(['項目', '橫式', '直式', '為什麼'], R.assumed.map(x => [x.k, x.H, x.V, x.why]))}
@@ -223,14 +226,15 @@ ${stbl(['ID', '原設計（v4）', '新設計', '改了什麼'], REV.map(s => { 
 <h3>V-iris-chen 首試是否需要構圖微調</h3>${ul([I.answer, I.condition, I.verify])}
 <h3>8 套已接受是否受影響</h3><p class="note">${esc(R.accepted_impact.summary)}</p>
 <details class="info" open><summary>24 套逐張印刷構圖判斷（依暫定照片框）</summary>
-${stbl(['ID', '狀態', '照片框', '比例裁切', '邊緣的重要部位', '不能切', '需要的餘量', '判斷', '原生尺寸', '有效 ppi'],
-      SETS.map(s => [link(s.id), { html: stTag(s) }, s.print.frame, s.print.crop, s.print.edges.join('；'), s.print.keep, s.print.need, s.print.verdict, s.print.native, s.print.ppi]), 'ptab')}</details>
+<p class="note">百分比與「套框後約 x%」都是依規劃構圖推算的理論／規劃預估，不是實圖量測。</p>
+${stbl(['ID', '狀態', '照片框', '比例計算', '邊緣（規劃預估）', '不能切', '規劃目標', '印刷判斷（條件）', '生成後待驗證', '原生尺寸', '有效 ppi'],
+      SETS.map(s => [link(s.id), { html: stTag(s) }, s.print.frame, s.print.crop, s.print.edges.join('；'), s.print.keep, s.print.need, s.print.verdict, s.print.verify, s.print.native, s.print.ppi]), 'ptab')}</details>
 </section>`;
   }
 
   function frameTable(fr) {
     const crop = ['chest', 'waist', 'thigh', 'knee'].includes(fr.shot);
-    return tbl(['項目', '內容'], [['景別', fr.shot_zh], [crop ? '頭頂上方留白' : '人物佔比', crop ? `約 ${fr.headroom}%` : `約佔${fr.fill_of} ${fr.fill}%`],
+    return tbl(['項目', '內容'], [['景別', fr.shot_zh], [crop ? '頭頂上方留白（規劃）' : '人物佔比（規劃）', crop ? `約 ${fr.headroom}%` : `約佔${fr.fill_of} ${fr.fill}%`],
       ['焦段／距離（參考）', `${fr.f}mm／約 ${fr.d} 公尺`], ['視野（寬×高）', `${fr.view_w}×${fr.view_h} 公尺`],
       ['相機與畫面中心', `相機約 ${fr.cam_m} 公尺高、畫面中心約 ${fr.centre_m} 公尺高，換算俯仰約 ${fr.tilt_deg > 0 ? '+' : ''}${fr.tilt_deg} 度`],
       ['原生尺寸', fr.native]]);
@@ -261,14 +265,13 @@ ${stbl(['ID', '狀態', '照片框', '比例裁切', '邊緣的重要部位', '�
 <dt>6. 畫面配置</dt><dd>${esc(c.comp.zh)}</dd>
 <dt>7. 攝影目的</dt><dd>${esc(c.purpose.zh)}</dd>
 <dt>選擇理由</dt><dd>${esc(c.why)}</dd>
-<dt>印刷（暫定照片框）</dt><dd>${esc(s.print.edges.join('；'))}；不能切：${esc(s.print.keep)}；${esc(s.print.need)}；${esc(s.print.ppi)}</dd>
+<dt>印刷（暫定照片框）</dt><dd>${esc(s.print.edges.join('；'))}；不能切：${esc(s.print.keep)}；${esc(s.print.need)}；${esc(s.print.ppi)}；${esc(s.print.verify)}</dd>
 </dl></details>`;
   }
   function r4Box(s) {
     if (s.status === 'accepted') {
-      const n = P.accepted_notes.items.find(x => x.id === s.id);
       return `<div class="r4box acc"><p><b>已接受（R4 owner 紀錄）</b>：服裝、場景、表情與攝影照上一版，不需再回覆。</p>` +
-        (n ? `<p class="tnote"><b>技術備註（${esc(P.accepted_notes.status)}）</b>：中文妝感「${esc(n.makeup_zh)}」沒有寫進英文 prompt；建議生成前補一句，不改其他內容。</p>` : '') + '</div>';
+        (s.r5 ? `<p class="tnote"><b>R5 主管核可的中英同步</b>：英文 prompt 補上中文妝感「${esc(s.r5.makeup_zh)}」的一句（${esc(s.r5.added_en)}）；服裝、場景、表情、姿態、攝影與身分不變，接受狀態沿用。</p>` : '') + '</div>';
     }
     return `<div class="r4box rev"><p><b>R4 改了什麼：</b>${esc(s.r4.change)}</p>
 <details class="info"><summary>Penny 的修改要求（逐字，主管轉述）</summary><pre class="verb">${esc(s.r4.owner)}</pre></details></div>`;
@@ -348,7 +351,8 @@ ${tbl(['情境', '請求數', '依 credits_exact 報價', '若實扣是顯示值
 <h4>歷史實扣與紀錄</h4>${tbl(['項目', '數值', '依據', '等級'], K.history.map(x => [x.k, x.v, x.basis, x.level]))}
 <h4>計價方式、張數、上限、異常</h4>${tbl(['項目', '說明'], K.facts.map(x => [x.k, x.v]))}
 <p class="note"><b>未知：</b>${esc(M.unknown.join('、'))}</p>
-<p class="note"><b>怎麼拍：</b>${esc(M.recommend)}（Soul ID 不列在公開頁）</p></details></section>`;
+<p class="note"><b>怎麼拍：</b>${esc(M.recommend)}（Soul ID 不列在公開頁）</p>
+<p class="note"><b>多階段與參考圖（R5 更正）：</b>${esc(M.multi_stage)}</p></details></section>`;
   }
   function outSec() {
     const oq = oldQs(), og = oldGnotes();

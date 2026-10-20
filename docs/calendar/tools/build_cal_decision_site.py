@@ -325,6 +325,11 @@ def build_m3(mat):
     for b in 'HV':
         assert os.path.isfile(os.path.join(ROOT, 'docs/calendar/decision_site/public', P['printing']['diagrams'][b])), b
     assert all(x['id'] in acc for x in P['accepted_notes']['items']), '技術備註只列已接受的套數'
+    # R5：已接受套數的英文妝感同步只多一句；橫直兩款不互相當參考圖
+    for x in P['sets']:
+        if 'r5' in x:
+            assert x['status'] == 'accepted' and x['prompt'].count(x['r5']['added_en']) == 1, x['id']
+    assert not P['execution']['model']['multi_stage'].startswith('不規劃多階段（先生成再換臉、外擴、放大）。若首批發現'), '已撤回的橫直參考圖策略'
     for x in P['sets']:  # R3：每套都要有七個攝影欄位（中文＋英文），英文句逐字在 prompt 裡
         c = x['cam']
         for k in ('shot', 'bounds', 'body', 'face', 'gaze', 'angle', 'comp', 'purpose'):
@@ -367,7 +372,7 @@ def build_m3(mat):
     for bad in ('kols/', 'job_id', 'soul_id', 'sophia'):
         assert bad not in text.lower(), bad
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
-            P['revision']['from_commit']}
+            P['revision']['from_commit'], P.get('r5', {}).get('from_commit', P['revision']['from_commit'])}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
