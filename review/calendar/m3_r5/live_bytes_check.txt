@@ -1,0 +1,3 @@
+files 666, mismatches 0 []
+html {'index.html': (True, '9434b839f589c19832a88e36975fbb31527b7284'), 'cast.html': (True, '9434b839f589c19832a88e36975fbb31527b7284'), 'plan.html': (True, '9434b839f589c19832a88e36975fbb31527b7284'), 'shoot.html': (True, '9434b839f589c19832a88e36975fbb31527b7284')}
+catalog https://kol-catalog-production.up.railway.app/ 44801 bytes; cmp with m3r2 catalog_final.html: identical

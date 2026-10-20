@@ -1,0 +1,70 @@
+PASS	24 套 ID、順序與 R4 相同；8 套已接受／16 套待決不變	
+PASS	H 月份人選與排序不變（1–12 月）	
+PASS	V 月份人選與排序不變（1–12 月）	
+PASS	24 套方向不變：除了印刷文字（print 與 frame.fit），只有已接受 3 套的 prompt＋r5、V-iris／V-luna 的比較文字有變	[["H-coco-wu",["prompt","print","r5"]],["V-iris-chen",["vs_other","prompt","print","r5"]],["V-luna-tanaka",["vs_other","print"]],["V-coco-wu",["prompt","print","r5"]]]
+PASS	16 套待決的 prompt 與 R4 逐字相同（攝影方向不變，不需重填）	
+PASS	已接受 3 套：prompt＝R4 原文在身分句後多一句主管核可的妝感（逐字），其餘不變	
+PASS	其他 5 套已接受的 prompt 仍與 v4 逐字相同；3 套不再宣稱與 v4 逐字相同	
+PASS	已接受 3 套的服裝、場景、表情、姿態、攝影、身分句都不變	
+PASS	現行文字（月份理由、比較文字、共同規則、構圖、執行、印刷）不再出現已撤回的場景	
+PASS	7 個月份理由改成目前企劃；其他 17 個不變	
+PASS	歷史紀錄保留：R4 owner 原文、R2 回饋、R4「改了什麼」未改	
+PASS	多階段策略：撤回「第一張當參考圖餵第二張」；改成 H／V 獨立、只共同維持身分與身材、不跨款套參考圖、未來另提	
+PASS	印刷：已知尺寸、照片框、示意圖檔不變（不重畫、不換框）	
+PASS	印刷：四類（已知尺寸、比例計算、prompt 規劃目標、生成後待驗證）	
+PASS	比例計算正確：16:9→192 寬高 108、裁 4 mm；3:4→120×160 不裁；120×128 裁高 20%；104×155 裁寬約 62%；325／271 ppi	
+PASS	24 套判斷改成條件句；百分比標成規劃預估；有生成後待驗證欄	
+PASS	膝上 3 套（H-somi、H-coco、H-rainie）附裁切位置說明，不改拍攝方向	
+PASS	「不需改企劃」「已依印刷餘量規劃」「會切到髮頂或腿」「全身會切到腳」不再出現在現行資料（只留在 R5 差異的舊值）	
+PASS	120×128：寫成比例事實，是否切到部位要看實圖（不寫必然）	
+PASS	限制保留：線圈 12 mm 是假設、16:9 輸出尺寸未知、300 ppi 是工作目標不是廠商最低標準	
+PASS	V-Iris：髮頂留白與逐張表一致（約 8%），標成規劃目標、非實圖量測	
+PASS	R5 差異紀錄完整：每項有類別、位置、舊值、新值	
+PASS	CAL_18：第一行 R5、有 0b 差異、四類、條件句、多階段更正	
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /data.js	200
+PASS	不帶憑證可開 /index.html	200
+PASS	不帶憑證可開 /print/layout_H.svg	200
+PASS	公開資料：shoot-plan-v5／R5，生成 0；沒有 job_id／soul_id／kols／sophia	
+PASS	[desktop] 載入後 localStorage 與 R4 頁實填的內容位元組相同（沒有改寫）	
+PASS	[desktop] 頂端第一行 R5；企劃版本 shoot-plan-v5（R5）	
+PASS	[desktop] 既有 v5 回饋照常顯示：修訂已回覆 4／16	
+PASS	[desktop] 各套選擇與備註保留（H-Iris 想修改＋備註、H-Jia 接受、V-Rin 想修改＋備註、V-Miu 接受）	
+PASS	[desktop] 印刷題與整體備註保留	
+PASS	[desktop] 8 套已接受仍「不需回覆」、沒有回饋選項；16 套仍有回饋選項	
+PASS	[desktop] 已接受 3 套卡片顯示「R5 主管核可的中英同步」，其他 5 套沒有	
+PASS	[desktop] 決策區有 R5 資料修訂說明（不需重填）與中英同步「已套用」	
+PASS	[desktop] 月份對照顯示新的月份理由、月份標「已確認」	
+PASS	[desktop] 景別｜身體方向｜臉與視線｜拍攝角度仍直接可見且與資料一致	
+PASS	[desktop] 印刷區：四類表 4 列；逐張表 24 列 11 欄，判斷與待驗證欄與資料一致	
+PASS	[desktop] 印刷示意兩張仍可載入（不重畫）	
+PASS	[desktop] 費用區顯示更正後的多階段與參考圖原則	
+PASS	[desktop] 複製內容含既有 v5 回饋（4／16、備註、印刷題、整體備註），版本 shoot-plan-v5（R5）	
+PASS	[desktop] 開頁與複製都沒有改寫 localStorage	
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 可以繼續填：新選擇存進 v5，原本的回饋與 v1–v4 都不變	
+PASS	[desktop] 素材頁：選擇與確認狀態照舊（Iris 已確認）	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後 localStorage 與 R4 頁實填的內容位元組相同（沒有改寫）	
+PASS	[mobile390] 頂端第一行 R5；企劃版本 shoot-plan-v5（R5）	
+PASS	[mobile390] 既有 v5 回饋照常顯示：修訂已回覆 4／16	
+PASS	[mobile390] 各套選擇與備註保留（H-Iris 想修改＋備註、H-Jia 接受、V-Rin 想修改＋備註、V-Miu 接受）	
+PASS	[mobile390] 印刷題與整體備註保留	
+PASS	[mobile390] 8 套已接受仍「不需回覆」、沒有回饋選項；16 套仍有回饋選項	
+PASS	[mobile390] 已接受 3 套卡片顯示「R5 主管核可的中英同步」，其他 5 套沒有	
+PASS	[mobile390] 決策區有 R5 資料修訂說明（不需重填）與中英同步「已套用」	
+PASS	[mobile390] 月份對照顯示新的月份理由、月份標「已確認」	
+PASS	[mobile390] 景別｜身體方向｜臉與視線｜拍攝角度仍直接可見且與資料一致	
+PASS	[mobile390] 印刷區：四類表 4 列；逐張表 24 列 11 欄，判斷與待驗證欄與資料一致	
+PASS	[mobile390] 印刷示意兩張仍可載入（不重畫）	
+PASS	[mobile390] 費用區顯示更正後的多階段與參考圖原則	
+PASS	[mobile390] 複製內容含既有 v5 回饋（4／16、備註、印刷題、整體備註），版本 shoot-plan-v5（R5）	
+PASS	[mobile390] 開頁與複製都沒有改寫 localStorage	
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 手機：四類表與逐張表改成小卡	
+PASS	[mobile390] 可以繼續填：新選擇存進 v5，原本的回饋與 v1–v4 都不變	
+PASS	[mobile390] 素材頁：選擇與確認狀態照舊（Iris 已確認）	
+PASS	[mobile390] 沒有 JS 錯誤	
