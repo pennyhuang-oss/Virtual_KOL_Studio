@@ -1,0 +1,43 @@
+PASS	授權逐字保存：1 張、預算最多 1 credit、精確報價 ≤0.12、只送一次、不擴大授權；不是無限制授權	
+PASS	shoot-plan-v9（M-4 R2）；計數：生成 1、credits 0.12、訓練 0	
+PASS	24 套與 706618f 逐欄相同（拍攝內容、prompt、狀態都不變）	
+PASS	R1 覆核同步：歸屬只標「依時窗及唯一任務推定」、刪除顯示值推論、預算不是平台保證、3 項阻礙已解除	
+PASS	首試計數：生成請求 1、圖片 1、重送 0、訓練 0、上傳 0	
+PASS	扣款與歸屬：一筆 Soul V2 −0.12、沒有退款、在預算內、不高於報價；層級「依時窗及唯一任務推定」，寫明不是直接對帳	
+PASS	逐項驗收：8 類齊全；反光板入鏡標「不符合」；身材標待 Penny 判斷；判定是「部分通過」	
+PASS	首試結果：1536×2048、終態 completed	
+PASS	原圖在私有 repo 的 Iris 素材位置；sha256 與執行紀錄相同	
+PASS	照片不在公開網站資料夾（逐檔 sha256 比對）	
+PASS	工作 ID 與 Soul ID 只在私有執行紀錄：企劃、CAL_18、CAL_20、data.js、頁面程式、授權紀錄都沒有	
+PASS	CAL_20：第一行 M-4 R2；有首試結果、逐項驗收、交易與歸屬層級	
+PASS	CAL_18：第一行 M-4 R2；授權與 R1 覆核逐字	
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /data.js	200
+PASS	公開資料：shoot-plan-v9；沒有 job_id／soul_id／kols／工作 ID／UUID	
+PASS	[desktop] 載入後兩筆 localStorage 位元組不變	
+PASS	[desktop] 第一行 M-4 R2；企劃版本 shoot-plan-v9（M-4 R2）	
+PASS	[desktop] 狀態列：M-3 完成、V-Iris 首試 1 張已生成待覆核、照片不放本頁	
+PASS	[desktop] 沒有必填欄位	
+PASS	[desktop] 首試結果區：狀態、判定、逐項驗收表（27 列）、扣款與歸屬表 5 列、不公開照片說明	
+PASS	[desktop] V-iris-chen 卡標「首試已生成 1 張（待主管覆核）」；其他 23 張仍是「尚未生成」	
+PASS	[desktop] 頁面沒有載入首試照片（沒有任何請求指向原圖或首試檔名）	
+PASS	[desktop] 複製：M-4 R2 標頭、首試狀態與判定、扣款、歸屬層級、本輪計數；沒有工作 ID	
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 重新整理後 localStorage 仍不變（v1–v6 都在）	
+PASS	[desktop] 素材頁：Iris 的選擇與「已確認」照舊	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後兩筆 localStorage 位元組不變	
+PASS	[mobile390] 第一行 M-4 R2；企劃版本 shoot-plan-v9（M-4 R2）	
+PASS	[mobile390] 狀態列：M-3 完成、V-Iris 首試 1 張已生成待覆核、照片不放本頁	
+PASS	[mobile390] 沒有必填欄位	
+PASS	[mobile390] 首試結果區：狀態、判定、逐項驗收表（27 列）、扣款與歸屬表 5 列、不公開照片說明	
+PASS	[mobile390] V-iris-chen 卡標「首試已生成 1 張（待主管覆核）」；其他 23 張仍是「尚未生成」	
+PASS	[mobile390] 頁面沒有載入首試照片（沒有任何請求指向原圖或首試檔名）	
+PASS	[mobile390] 複製：M-4 R2 標頭、首試狀態與判定、扣款、歸屬層級、本輪計數；沒有工作 ID	
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 重新整理後 localStorage 仍不變（v1–v6 都在）	
+PASS	[mobile390] 素材頁：Iris 的選擇與「已確認」照舊	
+PASS	[mobile390] 沒有 JS 錯誤	

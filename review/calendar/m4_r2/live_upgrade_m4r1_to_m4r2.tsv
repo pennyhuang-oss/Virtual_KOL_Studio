@@ -1,0 +1,5 @@
+PASS	[→ 32fec1d] 部署後 v1–v6 回饋與素材選擇（含確認）的 localStorage 位元組與 R6 頁填完時相同（中間經過 R7、M-4 R1 頁）	
+PASS	[→ 32fec1d] 頁面是 shoot-plan-v9（M-4 R2）、M-3 完成、首試待覆核	
+PASS	[→ 32fec1d] H-Luna 主管覆核通過；v6 回覆列為歷史	
+PASS	[→ 32fec1d] 素材頁：Iris 的選擇與「已確認」狀態保留	
+PASS	[→ 32fec1d] 只是開頁，兩筆 localStorage 都沒有被改寫	

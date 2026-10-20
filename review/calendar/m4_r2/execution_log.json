@@ -1,0 +1,182 @@
+{
+ "task": "TASK-CAL-001／M-4／R2｜V-Iris單張首試",
+ "private": "執行紀錄（私有 repo 送審用；工作 ID 只放這裡，不放公開頁；Soul ID 不寫入）",
+ "events": [
+  {
+   "t": "2026-10-20T09:44:05.179357Z",
+   "step": "pre-check",
+   "soul": {
+    "name": "Iris Chen",
+    "type": "soul_2",
+    "status": "ready",
+    "raw_status": "completed",
+    "id_matches_project_records": true
+   },
+   "params": "soul_2: quality 1.5k/2k (default 2k), style_id optional, Soul ID optional, medias max 1; ratios 1:1,16:9,9:16,4:3,3:4,3:2,2:3; unlim available false",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12,
+    "threshold": 0.12,
+    "pass": true
+   },
+   "preferences": {
+    "auto_create_project": false,
+    "folder": "none (omit folder_id per tool rule)"
+   },
+   "prior_submission_this_round": "none (execution log empty; this session made only get_cost calls)",
+   "tx_boundary": {
+    "newest_row": "2026-10-20T09:31:49.174243Z Nano Banana 2.1 -2 spend",
+    "rows_checked": 30,
+    "oldest_checked": "2026-10-20T08:11:44.864470Z",
+    "soul_v2_rows_in_page": 0,
+    "last_soul_v2_rows_known": [
+     "2026-10-19T09:05:33.652704Z -0.12 spend",
+     "2026-10-19T09:06:05.935516Z +0.12 refund"
+    ]
+   },
+   "job_baseline": {
+    "tool": "show_generations(only_completed=false, type=image, size=20)",
+    "newest_createdAt": 1792488514.359823,
+    "oldest_createdAt": 1792484409.008517,
+    "soul_2_jobs": 0,
+    "note": "只看模型與時間；沒有開啟、下載或保存他人作品"
+   }
+  },
+  {
+   "t": "2026-10-20T09:44:05.180117Z",
+   "step": "intent",
+   "tool": "generate_image",
+   "settings": {
+    "model": "soul_2",
+    "soul": "Iris 既有 Soul（不公開 ID）",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_chars": 2095,
+   "prompt_sha256": "df2e29089f0e710f0cb295a7db6f2d1f29fb83d49493733f4bb3513fedf020a0",
+   "rule": "只送一次；失敗、逾時、回應遺失或結果不明都不重送，只查原任務"
+  },
+  {
+   "t": "2026-10-20T09:44:36.327064+00:00",
+   "step": "submitted (response received)",
+   "job_id": "49783f8c-bf8d-4a0f-b315-4eb52bcd1637",
+   "status": "pending",
+   "model_echo": "text2image_soul_v2",
+   "soul_echo": "Iris Chen",
+   "quality": "2k",
+   "aspect_ratio": "3:4",
+   "calls_made": 1
+  },
+  {
+   "t": "2026-10-20T09:45:09.805302+00:00",
+   "step": "terminal",
+   "job_id": "49783f8c-bf8d-4a0f-b315-4eb52bcd1637",
+   "status": "completed",
+   "result_file_timestamp": "hf_20261020_094429 (UTC 09:44:29)",
+   "polls": 2,
+   "downloaded_to": "kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+   "sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
+   "bytes": 4665969,
+   "px": [
+    1536,
+    2048
+   ],
+   "mode": "RGB"
+  },
+  {
+   "t": "2026-10-20T09:47:45.599081+00:00",
+   "step": "post-check 1 (09:46Z)",
+   "tx_new_since_boundary": [
+    {
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend",
+     "created_at": "2026-10-20T09:44:29.926120Z"
+    }
+   ],
+   "tx_other_new_rows": 0,
+   "refund_rows": 0,
+   "jobs_in_window": {
+    "tool": "show_generations(only_completed=false, type=image, size=10)",
+    "new_since_baseline": [
+     {
+      "job_id": "49783f8c-bf8d-4a0f-b315-4eb52bcd1637",
+      "model": "text2image_soul_v2",
+      "status": "completed",
+      "createdAt": 1792489469.840506
+     }
+    ],
+    "other_jobs_in_window": 0,
+    "note": "只看模型、狀態與時間；沒有開啟、下載或保存他人作品"
+   },
+   "job_metadata_observed": {
+    "width": 1536,
+    "height": 2048,
+    "quality_field": "1080p (backend label; request was quality 2k)",
+    "style": "General (backend default; no style_id was passed)",
+    "style_strength": 1,
+    "enhance_prompt": false,
+    "seed": 827807,
+    "soul_reference_name": "Iris Chen"
+   }
+  },
+  {
+   "t": "2026-10-20T09:59:50Z",
+   "step": "post-check 2 (terminal + 15 min)",
+   "tx_soul_v2_rows_in_window": [
+    {
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend",
+     "created_at": "2026-10-20T09:44:29.926120Z"
+    }
+   ],
+   "other_soul_v2_rows": [],
+   "other_model_rows_in_window": [
+    {
+     "display_name": "Nano Banana Pro",
+     "credits": -2,
+     "action": "spend",
+     "created_at": "2026-10-20T09:52:33.076452Z"
+    },
+    {
+     "display_name": "Nano Banana Pro",
+     "credits": -2,
+     "action": "spend",
+     "created_at": "2026-10-20T09:52:33.201427Z"
+    },
+    {
+     "display_name": "Nano Banana Pro",
+     "credits": -2,
+     "action": "spend",
+     "created_at": "2026-10-20T09:52:33.374607Z"
+    }
+   ],
+   "refund_rows": 0,
+   "jobs_in_window": {
+    "soul_2": [
+     {
+      "job_id": "49783f8c-bf8d-4a0f-b315-4eb52bcd1637",
+      "model": "text2image_soul_v2",
+      "createdAt": 1792489469.840506
+     }
+    ],
+    "other_models": [
+     {
+      "model": "nano_banana_2",
+      "count": 3,
+      "createdAt": "~1792489952.9 (09:52:32Z)"
+     }
+    ]
+   },
+   "other_soul2_jobs_in_window": [],
+   "attribution": "依時窗及唯一任務推定（交易明細沒有工作 ID；不是直接對帳確認）",
+   "note": "只看模型、狀態與時間；沒有開啟、下載或保存他人作品；沒有用帳號餘額推算"
+  }
+ ]
+}
