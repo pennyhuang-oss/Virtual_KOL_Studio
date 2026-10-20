@@ -1,0 +1,77 @@
+PASS	owner R7 紀錄：決策逐字、Penny 原文只有一句、主管細節另列	
+PASS	R7 狀態：23 套已接受、H-Luna「依owner指定修訂，待主管核對落實」、沒有待決問題、月份與照片框維持	
+PASS	H-Luna：沒有記成已接受、註明 Penny 未看過修訂後版本	
+PASS	H-Jia：本輪已接受（R7）；R6 的修改保留為歷史	
+PASS	24 套 ID 與順序、兩本月份人選與理由不變	
+PASS	23 套：與 R6 成果（c47b911）逐欄相同，只多 r7 註記（H-Jia 另有狀態）	[]
+PASS	23 套：prompt 逐字相同（程式比對 23 段）	
+PASS	23 套：攝影七欄位、構圖數字與印刷判斷相同	
+PASS	H-Luna：只有手部相關欄位不同（主題、姿態、手、道具、為何符合、風險、參考備註、prompt、攝影的入鏡／目的／重點／改了什麼）	cam,hands,outfit,pose,prompt,r7,refs,risks,status,theme,why
+PASS	H-Luna：和服、庭院、月份、表情、身體朝向與攝影設定不變	
+PASS	H-Luna 英文 prompt：只有「姿勢與手」「入鏡」「攝影目的」三段不同	
+PASS	H-Luna 英文：雙手在腰帶下方、下腹前輕捧掌心大小的日式布製香袋（奶油色、淡金細織紋、短束口繩、沒有標誌），肩鬆、肘微彎、腕不交叉、袖子不遮臉手與香袋	
+PASS	H-Luna 中文：雙手、腰帶下方、下腹前、小巧日式布製香袋、奶油色＋淡金細緻織紋、短束口繩、不是手提包、肩膀放鬆、手肘微彎、手腕不交叉、袖子不遮臉不全蓋、腰帶清楚	
+PASS	H-Luna 中英對照：11 組關鍵詞兩邊都有	
+PASS	H-Luna：照實標示沒有香袋參考圖；新增 4 項香袋風險；參考照片仍是 luna-03／luna-12	
+PASS	H-Luna：改動前後紀錄（13 項）對得上資料	
+PASS	首試準備：生成 0、credits 0、Higgsfield 呼叫 0、報價預檢 0；不是授權	
+PASS	首試準備：V-iris-chen 已接受，prompt 與 R6 相同、3:4、120×160 工作照片框	
+PASS	首試準備：待確認列出授權、模型參數、Soul 狀態、輸出尺寸、費用（0.12 報價與「14 張約 8 credits」不一致）、免費額度、失敗與上限	
+PASS	首試準備：驗收條件涵蓋身分與身材、服裝、姿態與手指、表情與視線、場景、構圖、質感、套框與有效 ppi	
+PASS	首試準備：送生成前檢查 19 項（§25 的 10 項＋§七 9 項），差異照實標示	
+PASS	CAL_20：第一行標明 R7、含最終 prompt 原文、沒有 Soul ID 或 UUID	
+PASS	CAL_18：第一行 R7、R7 決策、H-Luna 改動前後、23 套已接受表、R6 轉歷史	
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /data.js	200
+PASS	不帶憑證可開 /img/t/m_luna-03.jpg	200
+PASS	不帶憑證可開 /img/t/m_iris-04.jpg	200
+PASS	公開資料：shoot-plan-v7，生成 0；沒有 job_id／soul_id／kols／sophia、沒有 UUID	
+PASS	[desktop] 載入後兩筆 localStorage 與 R6 頁填的內容位元組相同（沒有改寫）	
+PASS	[desktop] 頂端第一行 R7；企劃版本 shoot-plan-v7（R7）；標題與 h1 是 R7	
+PASS	[desktop] 狀態列：定稿進度、已接受 23、待主管核對 1、本輪無必填決策	
+PASS	[desktop] 沒有任何必填決策：沒有選項、沒有回饋欄位、沒有清除按鈕	
+PASS	[desktop] 23 張已接受卡「不需回覆」；H-Luna 卡標「R7 依owner指定修訂・待主管核對」	
+PASS	[desktop] 已接受卡註明接受輪次：R4 8、R6 14、R7 1（H-Jia）	
+PASS	[desktop] H-Luna 卡：狀態說明、R7 改了什麼、Penny 原文、沒有香袋參考圖、Penny 未看過	
+PASS	[desktop] H-Luna 卡：修改前後表 13 列（第一列「手」前後與資料相同），主管細節標「不是 Penny 原話」	
+PASS	[desktop] H-Luna 卡：姿態欄是新的雙手香袋、服裝列有「道具」、prompt 草稿是新的	
+PASS	[desktop] 攝影列（景別｜身體方向｜臉與視線｜拍攝角度）24 張與資料一致；H-Luna 不變	
+PASS	[desktop] 歷史保存：H-Luna 卡顯示 v6「想修改」與 Penny 的 R7 原文、H-Jia 卡顯示 v6「接受」，都標為歷史	
+PASS	[desktop] 歷史保存：v6 整體備註、v1–v5 回饋都列出	
+PASS	[desktop] 決策區：R7 逐字決策；已接受 23／依owner指定修訂 1／本輪沒有必填決策／V-Iris 首試準備	
+PASS	[desktop] 攝影總覽：R7 修訂表 1 列（H-Luna），R6 的 2 套列為歷史	
+PASS	[desktop] V-Iris 首試準備區：狀態與 0 計數、企劃、身分、prompt、工作流、待確認、9 組驗收條件、19 項檢查	
+PASS	[desktop] 印刷區：23 套已接受的影響說明；逐張表 24 列、H-Luna 印刷判斷與 R6 相同	
+PASS	[desktop] H-Luna 卡參考圖載入；luna-03 圖說標明沒有香袋參考圖	
+PASS	[desktop] 複製：R7 進度標頭、23 套、H-Luna 狀態與原文、月份與照片框、首試準備與 0 計數、v6 及更早的回饋列為歷史	
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 複製、展開、重新整理後兩筆 localStorage 仍與 R6 頁填的內容位元組相同	
+PASS	[desktop] v1–v6 欄位都在且未變（含 v6 的兩套回覆）	
+PASS	[desktop] 素材頁：Iris 的選擇與「已確認」照舊	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後兩筆 localStorage 與 R6 頁填的內容位元組相同（沒有改寫）	
+PASS	[mobile390] 頂端第一行 R7；企劃版本 shoot-plan-v7（R7）；標題與 h1 是 R7	
+PASS	[mobile390] 狀態列：定稿進度、已接受 23、待主管核對 1、本輪無必填決策	
+PASS	[mobile390] 沒有任何必填決策：沒有選項、沒有回饋欄位、沒有清除按鈕	
+PASS	[mobile390] 23 張已接受卡「不需回覆」；H-Luna 卡標「R7 依owner指定修訂・待主管核對」	
+PASS	[mobile390] 已接受卡註明接受輪次：R4 8、R6 14、R7 1（H-Jia）	
+PASS	[mobile390] H-Luna 卡：狀態說明、R7 改了什麼、Penny 原文、沒有香袋參考圖、Penny 未看過	
+PASS	[mobile390] H-Luna 卡：修改前後表 13 列（第一列「手」前後與資料相同），主管細節標「不是 Penny 原話」	
+PASS	[mobile390] H-Luna 卡：姿態欄是新的雙手香袋、服裝列有「道具」、prompt 草稿是新的	
+PASS	[mobile390] 攝影列（景別｜身體方向｜臉與視線｜拍攝角度）24 張與資料一致；H-Luna 不變	
+PASS	[mobile390] 歷史保存：H-Luna 卡顯示 v6「想修改」與 Penny 的 R7 原文、H-Jia 卡顯示 v6「接受」，都標為歷史	
+PASS	[mobile390] 歷史保存：v6 整體備註、v1–v5 回饋都列出	
+PASS	[mobile390] 決策區：R7 逐字決策；已接受 23／依owner指定修訂 1／本輪沒有必填決策／V-Iris 首試準備	
+PASS	[mobile390] 攝影總覽：R7 修訂表 1 列（H-Luna），R6 的 2 套列為歷史	
+PASS	[mobile390] V-Iris 首試準備區：狀態與 0 計數、企劃、身分、prompt、工作流、待確認、9 組驗收條件、19 項檢查	
+PASS	[mobile390] 印刷區：23 套已接受的影響說明；逐張表 24 列、H-Luna 印刷判斷與 R6 相同	
+PASS	[mobile390] H-Luna 卡參考圖載入；luna-03 圖說標明沒有香袋參考圖	
+PASS	[mobile390] 複製：R7 進度標頭、23 套、H-Luna 狀態與原文、月份與照片框、首試準備與 0 計數、v6 及更早的回饋列為歷史	
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 複製、展開、重新整理後兩筆 localStorage 仍與 R6 頁填的內容位元組相同	
+PASS	[mobile390] v1–v6 欄位都在且未變（含 v6 的兩套回覆）	
+PASS	[mobile390] 素材頁：Iris 的選擇與「已確認」照舊	
+PASS	[mobile390] 沒有 JS 錯誤	

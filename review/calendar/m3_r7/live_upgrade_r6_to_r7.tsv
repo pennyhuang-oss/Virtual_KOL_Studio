@@ -1,0 +1,8 @@
+PASS	[c47b911 → f694e1b] 部署後企劃回饋（v1–v6）與素材選擇（含確認）的 localStorage 位元組與部署前相同	
+PASS	[c47b911 → f694e1b] 頁面是 shoot-plan-v7（R7）	
+PASS	[c47b911 → f694e1b] 定稿進度：已接受 23、待主管核對 1、本輪無必填決策；頁面沒有任何選項或回饋欄位	
+PASS	[c47b911 → f694e1b] v6 的兩套回覆顯示為歷史（H-Luna「想修改」＋R7 原文、H-Jia「接受」），不是新的核准	
+PASS	[c47b911 → f694e1b] H-Luna 狀態是「依owner指定修訂，待主管核對落實」，H-Jia 已接受（R7）	
+PASS	[c47b911 → f694e1b] v6 整體備註與 v5 題目回答列為歷史	
+PASS	[c47b911 → f694e1b] 素材頁：Iris 的選擇與「已確認」狀態保留	
+PASS	[c47b911 → f694e1b] 只是開頁，兩筆 localStorage 都沒有被改寫	
