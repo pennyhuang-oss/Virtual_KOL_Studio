@@ -1,0 +1,122 @@
+{
+ "note": "M-4 R1 唯讀查詢紀錄（2026-10-20）。不含 Soul ID、工作 ID 或圖片網址；交易明細只摘錄本案相關的列。",
+ "queries": [
+  {
+   "n": 1,
+   "tool": "models_explore(action=get, model_id=soul_2)",
+   "charge": "none (read-only)",
+   "result": {
+    "name": "Higgsfield Soul 2.0",
+    "parameters": [
+     "quality (1.5k/2k, default 2k)",
+     "style_id (optional)",
+     "Soul ID (optional)"
+    ],
+    "medias": "image x1 (max 1)",
+    "aspect_ratios": [
+     "1:1",
+     "16:9",
+     "9:16",
+     "4:3",
+     "3:4",
+     "3:2",
+     "2:3"
+    ],
+    "supports_unlim": true,
+    "unlim": {
+     "available": false,
+     "remaining": null
+    },
+    "price_in_response": false
+   }
+  },
+  {
+   "n": 2,
+   "tool": "show_characters(action=status, type=soul_2, Iris Soul)",
+   "charge": "none (read-only)",
+   "result": {
+    "name": "Iris Chen",
+    "type": "soul_2",
+    "status": "ready",
+    "raw_status": "completed",
+    "id_matches_project_records": true
+   }
+  },
+  {
+   "n": 3,
+   "tool": "transactions(size=20)  — before pre-check",
+   "charge": "none (read-only)",
+   "result": {
+    "rows": 20,
+    "newest": "2026-10-20T08:57:39Z Nano Banana Pro -2 spend",
+    "fields_per_row": [
+     "display_name",
+     "credits",
+     "action",
+     "created_at"
+    ],
+    "job_id_field": false
+   }
+  },
+  {
+   "n": 4,
+   "tool": "transactions(size=100, cursor=20)",
+   "charge": "none (read-only)",
+   "result": {
+    "rows": 100,
+    "span_utc": "2026-10-18T02:15 .. 2026-10-20T07:57",
+    "soul_v2_rows": [
+     "2026-10-19T09:05:33Z Higgsfield Soul V2 -0.12 spend",
+     "2026-10-19T09:06:05Z Higgsfield Soul V2 +0.12 refund"
+    ],
+    "other_models_seen": [
+     "Nano Banana Pro",
+     "Nano Banana 2.1",
+     "Seedream 4.5",
+     "Seedance 2.5",
+     "Seed Audio 1.0",
+     "Outpaint",
+     "Image Background Remover"
+    ],
+    "account_shared": true
+   }
+  },
+  {
+   "n": 5,
+   "tool": "generate_image(get_cost=true; soul_2, Iris Soul, quality 2k, aspect 3:4, count 1, use_unlim false, accepted V-iris-chen prompt)",
+   "charge": "none (tool: \"return the cost in credits for this generation without submitting any job\")",
+   "result": {
+    "credits": 1,
+    "credits_exact": 0.12
+   }
+  },
+  {
+   "n": 6,
+   "tool": "transactions(size=20)  — after pre-check",
+   "charge": "none (read-only)",
+   "result": {
+    "identical_to_query_3": true,
+    "new_rows": 0
+   }
+  },
+  {
+   "n": 7,
+   "tool": "balance()",
+   "charge": "none (read-only)",
+   "result": {
+    "credits": 1687.72,
+    "plan": "plus",
+    "note": "shared account; reference only, never used for reconciliation"
+   }
+  }
+ ],
+ "not_done": [
+  "generation",
+  "generation jobs",
+  "retries",
+  "training",
+  "uploads",
+  "retrieving originals",
+  "show_generations (needs supervisor OK at generation time)"
+ ]
+}

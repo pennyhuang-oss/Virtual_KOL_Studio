@@ -1,0 +1,57 @@
+PASS	主管結論逐字保存：M-3／R7 PASS、M-3 完成、不把 Luna 寫成 Penny 看過新版本、不再要求 owner 填問卷；8 項指示	
+PASS	shoot-plan-v8（M-4 R1）：M-3 complete、23 套已接受、H-Luna supervisor_verified、沒有待決	
+PASS	H-Luna：「依owner指示修訂，主管覆核通過」，Penny 沒有看過修訂後版本（m4r1 與 r7 都記 false）	
+PASS	資料裡沒有任何「Penny 看過／接受修訂後版本」的說法（主管原文「不虛構Penny已看過…」是否定句，不算）	
+PASS	24 套與 f694e1b 逐欄相同（只有 H-Luna 多 status 與 m4r1）	[["H-luna-tanaka",["m4r1","status"]]]
+PASS	24 段 prompt 逐字相同；V-Iris 已接受 prompt 不變	
+PASS	過期前提已修正（工作流與費用段）：造型已接受、不再等造型核准；生成與費用未授權	
+PASS	CAL_20：第一行 M-4 R1；沒有「Penny 核定這套造型」的過期前提	
+PASS	檢查表三項差異標為主管 M-4 R1 接受，其他 16 項不變	
+PASS	核查計數：生成 0、credits 0、生成任務 0、訓練 0、上傳 0；唯讀查詢 7（含報價預檢 1）	
+PASS	Soul 證據：身分對應（12 處、ready）、訓練來源、沒有 6 張驗證、既有成圖、已知行為、目視、結論	
+PASS	當前參數：quality 1.5k／2k、比例含 3:4、沒有 seed／negative／費用上限、免費額度不可用	
+PASS	單次請求設定：generate_image、soul_2、2k、3:4、count 1、use_unlim false、不用參考圖、prompt 原文、不重試	
+PASS	報價與歷史分列：當前 0.12（不扣款預檢、前後交易明細相同）；歷史約數「14 張約 8 credits」另列；不把 0.12 當實扣	
+PASS	失敗扣款規則：可能退款、也可能不退、逾時不重送、算進上限	
+PASS	建議上限：單次 1 credit、1 個請求、不重試；4 個停止條件	
+PASS	交易核對：沒有工作 ID 照實寫；判準要求視窗內一筆 Soul V2＋生成紀錄一對一；不符記「無法唯一關聯」，不用時間相近或餘額	
+PASS	剩餘阻礙 3 項：授權、交易關聯判準、Soul 沒有正式驗證	
+PASS	待確認 8 項都有 M-4 R1 狀態；只有授權是「待決定」	
+PASS	CAL_18：第一行 M-4 R1；有主管結論逐字、R7 轉歷史、H-Luna 標主管覆核通過	
+PASS	Iris 的 Soul ID 沒有寫進本輪任何檔案（企劃、主管紀錄、CAL_18、CAL_20、data.js）	
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /shoot.js	200
+PASS	不帶憑證可開 /data.js	200
+PASS	公開資料：shoot-plan-v8，生成 0；沒有 job_id／soul_id／kols／sophia、沒有 UUID	
+PASS	[desktop] 載入後兩筆 localStorage 位元組不變	
+PASS	[desktop] 第一行 M-4 R1；企劃版本 shoot-plan-v8（M-4 R1）；標題與 h1	
+PASS	[desktop] 狀態列：M-3 完成、23＋1、生成與費用未授權	
+PASS	[desktop] 沒有必填欄位：沒有 input、fieldset、清除按鈕	
+PASS	[desktop] 23 張已接受卡；H-Luna 卡標「依owner指示修訂・主管覆核通過」、狀態「主管覆核通過（不需回覆）」	
+PASS	[desktop] H-Luna 卡：主管覆核通過、Penny 沒有看過修訂後版本；R7 改動前後與原文仍在	
+PASS	[desktop] 決策區：主管結論逐字、M-3 完成、首試前核查（生成與費用未授權）	
+PASS	[desktop] 首試前核查區：結論、3 項阻礙、上限 1 credit、Soul 證據 7 列、參數、請求 11 列、報價 0.12、歷史另列、交易核對 6 步、待確認 8 列含狀態	
+PASS	[desktop] 首試前核查區：最終 prompt 與卡片相同、沒有「Penny 核定這套造型」	
+PASS	[desktop] 歷史保存：H-Luna 卡 v6「想修改」、H-Jia 卡 v6「接受」、v6 整體備註與 v1–v5 都列為歷史	
+PASS	[desktop] 複製：M-4 R1 標頭、M-3 完成、H-Luna 主管覆核通過、首試核查（報價、上限、3 項阻礙）、本輪計數、舊回饋列為歷史	
+PASS	[desktop] 沒有水平溢出（收合）	0
+PASS	[desktop] 沒有水平溢出（全部展開）	0
+PASS	[desktop] 複製、展開、重新整理後兩筆 localStorage 仍位元組不變；v1–v6 欄位都在	
+PASS	[desktop] 素材頁：Iris 的選擇與「已確認」照舊	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 載入後兩筆 localStorage 位元組不變	
+PASS	[mobile390] 第一行 M-4 R1；企劃版本 shoot-plan-v8（M-4 R1）；標題與 h1	
+PASS	[mobile390] 狀態列：M-3 完成、23＋1、生成與費用未授權	
+PASS	[mobile390] 沒有必填欄位：沒有 input、fieldset、清除按鈕	
+PASS	[mobile390] 23 張已接受卡；H-Luna 卡標「依owner指示修訂・主管覆核通過」、狀態「主管覆核通過（不需回覆）」	
+PASS	[mobile390] H-Luna 卡：主管覆核通過、Penny 沒有看過修訂後版本；R7 改動前後與原文仍在	
+PASS	[mobile390] 決策區：主管結論逐字、M-3 完成、首試前核查（生成與費用未授權）	
+PASS	[mobile390] 首試前核查區：結論、3 項阻礙、上限 1 credit、Soul 證據 7 列、參數、請求 11 列、報價 0.12、歷史另列、交易核對 6 步、待確認 8 列含狀態	
+PASS	[mobile390] 首試前核查區：最終 prompt 與卡片相同、沒有「Penny 核定這套造型」	
+PASS	[mobile390] 歷史保存：H-Luna 卡 v6「想修改」、H-Jia 卡 v6「接受」、v6 整體備註與 v1–v5 都列為歷史	
+PASS	[mobile390] 複製：M-4 R1 標頭、M-3 完成、H-Luna 主管覆核通過、首試核查（報價、上限、3 項阻礙）、本輪計數、舊回饋列為歷史	
+PASS	[mobile390] 沒有水平溢出（收合）	0
+PASS	[mobile390] 沒有水平溢出（全部展開）	0
+PASS	[mobile390] 複製、展開、重新整理後兩筆 localStorage 仍位元組不變；v1–v6 欄位都在	
+PASS	[mobile390] 素材頁：Iris 的選擇與「已確認」照舊	
+PASS	[mobile390] 沒有 JS 錯誤	
