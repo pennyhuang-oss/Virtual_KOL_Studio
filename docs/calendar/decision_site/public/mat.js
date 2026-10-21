@@ -216,7 +216,7 @@ ${PEOPLE.map(person).join('')}
 <label class="lbl" for="out-text">將複製的文字（預覽）</label><textarea id="out-text" rows="16" readonly></textarea>
 </section>
 <section class="sec" id="refs"><h2>參考頁</h2>
-<ul class="facts"><li><a href="shoot.html">V-Iris 首試檢視</a>：目前要看的首試照片與回饋；<a href="history.html">已定稿企劃／歷史紀錄</a>：12 位 24 套拍攝企劃（已定稿）。兩頁都不影響這頁的素材選擇。</li>
+<ul class="facts"><li><a href="shoot.html">目前檢視</a>：已接受的照片與製作進度；<a href="history.html">已定稿企劃／歷史紀錄</a>：12 位 24 套拍攝企劃（已定稿）。兩頁都不影響這頁的素材選擇。</li>
 <li><a href="cast.html">第一階段選角</a>：保留作參考；那裡的草稿狀態不影響已確認的名單。</li>
 <li><a href="plan.html">原推薦方案參考</a>：R3 的月份樣張與裁切（舊推薦、舊月份）只供參考，<b>不限制</b>這裡的選擇。</li></ul></section>`;
     PEOPLE.forEach(p => refreshPerson(p.pid, true));

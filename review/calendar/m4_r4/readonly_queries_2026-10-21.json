@@ -1,0 +1,47 @@
+{
+ "note": "M-4 R4 唯讀查詢紀錄（不含 Soul ID、工作 ID；他人任務只記模型與時間，沒有開啟、下載或保存）。本輪沒有建立任何生成任務、沒有扣款。",
+ "date": "2026-10-21",
+ "queries": [
+  {
+   "n": 1,
+   "tool": "transactions(size 10)",
+   "purpose": "報價預檢前的交易邊界",
+   "result": "最新一列 2026-10-21T03:53:39Z GPT Image 2.5 Flare −0.25（非 Soul V2）；前 10 列沒有 Soul V2"
+  },
+  {
+   "n": 2,
+   "tool": "models_explore(get soul_2)",
+   "purpose": "當前參數",
+   "result": "quality 1.5k／2k（預設 2k）；style_id、soul_id 選填；參考圖最多 1 張；比例 1:1、16:9、9:16、4:3、3:4、3:2、2:3；unlim available false"
+  },
+  {
+   "n": 3,
+   "tool": "show_characters(list soul_2, size 100)",
+   "purpose": "5 位 Soul 狀態與身分對應",
+   "result": "35 個 Soul、沒有下一頁；yerin-han／somi-oh／tammy-chou／rin-ayase／jia-seo 各一個同名 Soul，status ready（raw completed），ID 與各自 profile.json 相同（程式比對，ID 不寫出）"
+  },
+  {
+   "n": 4,
+   "tool": "generate_image get_cost:true ×5",
+   "purpose": "不扣款報價預檢（設定與 prompt 與預定送出相同）",
+   "result": "5 張都是 credits 1／credits_exact 0.12；工具說明：只回傳費用、不送出工作"
+  },
+  {
+   "n": 5,
+   "tool": "transactions(size 10)",
+   "purpose": "預檢後確認沒有扣款",
+   "result": "新增 1 列 2026-10-21T05:12:22Z GPT Image 2.5 Flare −1；沒有 Soul V2 列"
+  },
+  {
+   "n": 6,
+   "tool": "show_generations(image, 含所有狀態, size 8)",
+   "purpose": "確認新增那列不是本輪造成",
+   "result": "05:12:22Z 是帳號上他人的 gpt_image_2_5 任務；最近 8 個圖片任務沒有任何 soul_2 任務（本輪預檢沒有建立任務）"
+  }
+ ],
+ "counts": {
+  "readonly_calls": 10,
+  "generation_jobs": 0,
+  "credits": 0
+ }
+}

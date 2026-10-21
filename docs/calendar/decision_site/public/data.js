@@ -5435,6 +5435,19 @@ window.CAL_DATA = {
     "r1_review": "1. M-4 R1首試準備PASS。\n2. 接受以既有生產紀錄＋單張首試驗收；不補生6張、不重訓。\n3. 交易歸屬只標「依時窗及唯一任務推定」；沒有工作ID的帳單不得標成直接對帳確認。\n4. 刪除「credits 1足以證明會扣1 credit」的推論；精確報價與實扣分列。\n5. 工具沒有強制費用上限；1 credit是本次核准預算，不能宣稱平台保證不超扣。\n6. 保存Penny本次授權與上下文，不寫成無限制授權。"
    }
   },
+  "batch1": {
+   "doc": "docs/calendar/CAL_21_M4_BATCH1_PREP.md",
+   "file": "docs/calendar/data/cal_m4_batch1_prep.json",
+   "note": "Penny 同意下一步採 5 位角色批次製作；5 份 prompt、設定與報價待主管覆核，通過後主管另發整批生成指令。本輪生成 0。",
+   "sets": [
+    "V-tammy-chou",
+    "V-rin-ayase",
+    "V-somi-oh",
+    "H-yerin-han",
+    "H-jia-seo"
+   ],
+   "status": "prepared-pending-supervisor-review"
+  },
   "composition": {
    "eval": [
     "橫式款的價值在於「人＋環境」的寬畫面：大照片框比半版適合。半版直幅框比較適合直式照片，而直式款已經另有 12 套直幅照片。",
@@ -5464,7 +5477,7 @@ window.CAL_DATA = {
    "generated": 1,
    "trainings": 0
   },
-  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。",
+  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。",
   "execution": {
    "cost": {
     "facts": [
@@ -6373,6 +6386,26 @@ window.CAL_DATA = {
     "title": "M-4 R2 V-Iris 單張首試（2026-10-20）",
     "verdict": "部分通過：身分、服裝、姿態與手指、表情、構圖、套框與有效 ppi 都符合；一項不符合——左側草地上出現白色反光板（prompt 寫在畫面外）；兩項待判斷——胸型目視比人設保守、臉部皮膚偏光滑；遠處有失焦人形的小落差。依指示不重送、不再生成，交主管覆核；反光板與身材屬設定落差，由 Penny 判斷。"
    },
+   "r4": {
+    "accepted": [
+     "臉",
+     "身材",
+     "表情",
+     "服裝",
+     "光線",
+     "反光板（保留）"
+    ],
+    "file": "docs/calendar/data/cal_m4_owner_r4.json",
+    "not": "不修圖、不重生、不再詢問是否接受。",
+    "owner": [
+     "Penny已接受V-Iris首試：",
+     "臉、身材、表情、服裝與光線均接受；反光板也接受保留，照片直接採用。"
+    ],
+    "source": "主管（ChatGPT）轉述 Penny 的回饋；不是 Penny 在網頁回饋欄位填寫的內容（網頁回饋只存在她的瀏覽器，執行者看不到）。",
+    "status": "Penny 接受，照片直接採用",
+    "supersedes": "取代主管 M-4 R3「反光板及支架必修」的判定；反光板保留",
+    "title": "M-4 R4 Penny 接受 V-Iris 首試（2026-10-21）"
+   },
    "ratio": "3:4 直式；R6 已接受的直式工作照片框 120×160 mm（3:4 放入 3:4 框不裁切）。",
    "ready_now": [
     "V-iris-chen 的企劃內容與最終 prompt（已接受版本，R7 不改）。",
@@ -6590,6 +6623,48 @@ window.CAL_DATA = {
    "from_commit": "706618f66707087e9a27dbb94f9ee3b9d256fd6f",
    "summary": "依 M-4 R2 指令：同步主管對 R1 的覆核（歸屬用語、刪除顯示值推論、預算不是平台上限），保存 Penny 的限定授權，並記錄 V-Iris 單張首試結果（部分通過，待主管覆核；照片不放公開頁）。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v9。"
   },
+  "m4r4": {
+   "changes": [
+    {
+     "kind": "Penny 定案",
+     "new": "accepted-by-owner",
+     "old": "first-test-generated-pending-supervisor-review",
+     "where": "status.iris_first"
+    },
+    {
+     "kind": "Penny 定案",
+     "new": "24 套定稿；已生成 1、已接受 1（V-iris-chen）、其餘 23 套待製作；第一批 5 位準備中，待主管覆核",
+     "old": "—",
+     "where": "status.production（新增）"
+    },
+    {
+     "kind": "Penny 定案",
+     "new": "Penny 接受臉、身材、表情、服裝、光線與反光板，照片直接採用；取代主管 M-4 R3 反光板必修",
+     "old": "—",
+     "where": "m4_prep.r4（新增）"
+    },
+    {
+     "kind": "批次準備",
+     "new": "第一批 5 位：V-tammy-chou、V-rin-ayase、V-somi-oh、H-yerin-han、H-jia-seo（見 data/cal_m4_batch1_prep.json）",
+     "old": "—",
+     "where": "batch1（新增）"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用（照片 M-4 R3 起放在目前檢視頁）；下一批 5 位只做準備、未生成；沒有上傳、訓練，也沒有改 canon 或 Soul ID",
+     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張（照片只在私有 repo 送審，不放公開頁）；沒有上傳、訓練，也沒有改 canon 或 Soul ID",
+     "where": "meta.status"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備",
+     "old": "TASK-CAL-001／M-4／R2｜V-Iris單張首試",
+     "where": "meta.task"
+    }
+   ],
+   "from_commit": "c6c6d98e93e44837ec9da2bbcd7710e86b4aa932",
+   "summary": "依 M-4 R4 指令：保存 Penny 對 V-Iris 首試的完整回饋（臉、身材、表情、服裝、光線與反光板都接受，照片直接採用），取代主管 M-4 R3「反光板及支架必修」的判定；進度改為 24 套定稿、已生成 1 張、已接受 1 張、其餘 23 套待製作；下一批 5 位的生成準備另存 data/cal_m4_batch1_prep.json（待主管覆核、未生成）。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v10。"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -6603,8 +6678,8 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張（照片只在私有 repo 送審，不放公開頁）；沒有上傳、訓練，也沒有改 canon 或 Soul ID",
-   "task": "TASK-CAL-001／M-4／R2｜V-Iris單張首試"
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用（照片 M-4 R3 起放在目前檢視頁）；下一批 5 位只做準備、未生成；沒有上傳、訓練，也沒有改 canon 或 Soul ID",
+   "task": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備"
   },
   "month_rules": [
    "月份人選排序已確認（R4 owner 紀錄，R6、R7 維持），不再請 Penny 重新核准；服裝與場景配合既定月份。",
@@ -7377,7 +7452,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "b4a5e5a09ac88bdba4601c4bc86071f1bcade5bb",
+  "plan_blob": "4622ef2a2af48130de37d35403ce92dffa68caad",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -8261,11 +8336,11 @@ window.CAL_DATA = {
   },
   "ref_note": "參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。既有照片也不是新構圖的成品。",
   "revision": {
-   "from_commit": "706618f66707087e9a27dbb94f9ee3b9d256fd6f",
-   "from_version": "shoot-plan-v8",
-   "summary": "依 M-4 R2 指令：同步主管對 R1 的覆核（歸屬用語、刪除顯示值推論、預算不是平台上限），保存 Penny 的限定授權，並記錄 V-Iris 單張首試結果（部分通過，待主管覆核；照片不放公開頁）。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v9。"
+   "from_commit": "c6c6d98e93e44837ec9da2bbcd7710e86b4aa932",
+   "from_version": "shoot-plan-v9",
+   "summary": "依 M-4 R4 指令：保存 Penny 對 V-Iris 首試的完整回饋（臉、身材、表情、服裝、光線與反光板都接受，照片直接採用），取代主管 M-4 R3「反光板及支架必修」的判定；進度改為 24 套定稿、已生成 1 張、已接受 1 張、其餘 23 套待製作；下一批 5 位的生成準備另存 data/cal_m4_batch1_prep.json（待主管覆核、未生成）。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v10。"
   },
-  "round": "M-4 R2",
+  "round": "M-4 R4",
   "sets": [
    {
     "body_show": "有骨架的平口馬甲收出 D 罩杯胸型與細腰；低腰迷你裙露出腰線到胯骨，呈現腰臀比與腿長。",
@@ -12683,10 +12758,20 @@ window.CAL_DATA = {
     "H-jia-seo"
    ],
    "frames": "accepted",
-   "iris_first": "first-test-generated-pending-supervisor-review",
+   "iris_first": "accepted-by-owner",
    "m3": "complete",
    "months": "confirmed",
    "owner_decisions_open": 0,
+   "production": {
+    "accepted": 1,
+    "accepted_sets": [
+     "V-iris-chen"
+    ],
+    "batch1": "prepared-pending-supervisor-review",
+    "generated": 1,
+    "remaining": 23,
+    "sets_final": 24
+   },
    "revised": [],
    "supervisor_verified": [
     "H-luna-tanaka"
@@ -12718,8 +12803,8 @@ window.CAL_DATA = {
     "instructions": "1. 保存本次主管結論，同步資料、文件與頁面為M-3完成，保留歷史與localStorage。\n2. 修正CAL_20及其來源資料中「Penny核定這套造型與費用」的過期前提：\nV-Iris造型已接受，不再等待造型核准；生成與費用尚未授權。\n3. 定向查既有Iris紀錄，確認Soul身分對應、驗證證據及既有成圖可否支持首試。不因缺少6張驗證紀錄就自行重新訓練或補生6張。\n4. 本輪允許不扣credits、不建立生成任務的唯讀查詢，核對當前模型參數、Soul狀態及可取得的費用資訊。報價預檢只在工具明確保證不扣款、不生成時執行；否則列待確認。\n5. 整理首試單次請求的確切設定、報價與計價單位、失敗扣款規則，以及建議費用上限。歷史約數與當前報價分列，不把0.12推測為實扣。\n6. 交易核對須能關聯本次請求與扣款；多人共用帳號時，不能只憑時間相近或前後差額認定。\n7. V-Iris已接受prompt保持不變。主管接受本次檢查表差異：胸口高度不補寫公分、正面看鏡頭、夕陽輪廓光配前方補光；出圖後依驗收條件判定。\n8. 不生成、不重試、不訓練、不上傳、不取回新原圖、不扣credits。"
    }
   },
-  "version": "shoot-plan-v9",
-  "written_on": "2026-10-20"
+  "version": "shoot-plan-v10",
+  "written_on": "2026-10-21"
  },
  "mat": {
   "checks": {
@@ -17223,6 +17308,29 @@ window.CAL_DATA = {
    "sweet": "直式中高（床上晨光、柔和）；橫式低（濃妝）",
    "tag": "夜色派對",
    "zh": "許雷妮"
+  }
+ ],
+ "review_hist": [
+  {
+   "feedback_key": "cal2027-review-v1:V-iris-chen-m4r2",
+   "feedback_note": "這一題的網頁回饋只存在 Penny 的瀏覽器；歷史頁只讀顯示，不改寫、不清除。",
+   "feedback_q": "人物與身材呈現",
+   "label_then": "首試樣張，尚未定稿",
+   "pending_then": [
+    {
+     "k": "反光板及支架",
+     "state": "主管判定必修"
+    },
+    {
+     "k": "人物與身材呈現",
+     "state": "待Penny看圖回饋"
+    }
+   ],
+   "photo": "V-Iris 首試｜直式款 9 月｜3:4",
+   "resolved": "M-4 R4（2026-10-21）：Penny 接受臉、身材、表情、服裝與光線，反光板也接受保留，照片直接採用；取代主管 M-4 R3「反光板及支架必修」。",
+   "round": "M-4 R3",
+   "set": "V-iris-chen",
+   "shown": "2026-10-20 至 2026-10-21"
   }
  ],
  "roster_compare": {

@@ -1,15 +1,16 @@
 {
- "note": "目前檢視頁（shoot.html）的內容，人寫。主頁只放「當前照片＋待決事項」；每輪更新這個檔，完成的項目移到 history 欄與歷史頁（history.html），不在主頁追加全文。src 欄位只在 repo，不發佈；公開資料不放 Soul ID、工作 ID、交易原始資料。",
- "version": "review-current-v1",
- "task": "TASK-CAL-001／M-4／R3｜精簡檢視頁與展示首試照片",
- "round": "M-4 R3",
- "written_on": "2026-10-20",
- "progress": "24 套企劃已定稿，目前檢視 V-Iris 首試。",
+ "note": "目前檢視頁（shoot.html）的內容，人寫。主頁只放「當前照片＋待決事項」；每輪更新這個檔，完成的項目移到 cal_review_history.json 與歷史頁（history.html），不在主頁追加全文。src 欄位只在 repo，不發佈；公開資料不放 Soul ID、工作 ID、交易原始資料，也不放生成用的長 prompt。",
+ "version": "review-current-v2",
+ "task": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備",
+ "round": "M-4 R4",
+ "written_on": "2026-10-21",
+ "progress": "24 套企劃定稿；已生成 1 張、已接受 1 張，其餘 23 套待製作。",
  "photo": {
   "set": "V-iris-chen",
-  "title": "V-Iris 首試｜直式款 9 月｜3:4",
-  "label": "首試樣張，尚未定稿",
-  "made": "M-4 R2 依授權生成的 1 張（2026-10-20）。本頁照原樣展示：不修圖、不調身材、不重新生成。",
+  "title": "V-Iris｜直式款 9 月｜3:4",
+  "label": "已接受（Penny）",
+  "status": "accepted",
+  "made": "M-4 R2 生成的 1 張。Penny 接受臉、身材、表情、服裝與光線，反光板也接受保留，照片直接採用；不修圖、不重生。",
   "px": [
    1536,
    2048
@@ -19,7 +20,7 @@
    "path": "kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
    "sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76"
   },
-  "download_name": "V-iris-chen_M4_first_test_1536x2048.png",
+  "download_name": "V-iris-chen_M4_accepted_1536x2048.png",
   "download_note": "原圖 PNG 1536×2048。檔案內原有一段文字標記（生成平台的工作識別碼）依規定不公開，下載檔只移除這一段；影像資料逐位元組不變，不是修圖。"
  },
  "frame": {
@@ -32,51 +33,42 @@
    "sha256": "1926d363edd1b97bdd4af38c950f2eb2b27cd3eea4c1945873f64f7177fa35dd"
   }
  },
- "pending": [
-  {
-   "id": "reflector",
-   "k": "反光板及支架",
-   "state": "主管判定必修",
-   "owner_action": "不需要回覆",
-   "v": "照片左側草地上有一面白色圓形反光板和支架，在照片框內。主管已判定必須處理；怎麼處理另行決定，本頁不修圖、不重新生成。",
-   "crop": {
-    "box": [
-     0,
-     580,
-     400,
-     880
-    ],
-    "cap": "原圖左側裁切（只裁切，未修圖）"
-   }
-  },
-  {
-   "id": "figure",
-   "k": "人物與身材呈現",
-   "state": "待Penny看圖回饋",
-   "owner_action": "請在下方回饋",
-   "v": "請看臉、整體比例與身材呈現是否是你要的 Iris。執行者目視（不是量測）：胸型比人設「飽滿」保守、臉部皮膚偏光滑。接受或想修改，由你決定。"
-  }
- ],
- "feedback": {
-  "key": "cal2027-review-v1:V-iris-chen-m4r2",
-  "q": "人物與身材呈現",
-  "choices": [
+ "next": {
+  "k": "下一批 5 位角色",
+  "state": "準備中，待主管覆核",
+  "v": "每位一張、共 5 張。prompt、設定與費用由主管覆核，通過後才生成；你不需要回覆。",
+  "sets": [
    [
-    "accept",
-    "接受"
+    "Tammy",
+    "1 月",
+    "直式"
    ],
    [
-    "change",
-    "想修改"
+    "Rin",
+    "10 月",
+    "直式"
+   ],
+   [
+    "Somi",
+    "12 月",
+    "直式"
+   ],
+   [
+    "Yerin",
+    "5 月",
+    "橫式"
+   ],
+   [
+    "Jia",
+    "9 月",
+    "橫式"
    ]
-  ],
-  "placeholder": "想修改的地方（臉、身材、表情、服裝、光線……）或其他意見",
-  "storage_note": "回饋只存在這個瀏覽器（這台裝置），重新整理後還在，但不會自動傳給主管。請按「複製回饋」，貼回對話。",
-  "copy_title": "TASK-CAL-001／M-4／R3｜V-Iris 首試回饋"
+  ]
  },
+ "owner_action": "目前沒有需要你回覆的事。",
  "history": {
   "href": "history.html",
   "label": "已定稿企劃／歷史紀錄",
-  "v": "24 套企劃、兩本月份、照片框、歷次 owner 原文與主管覆核、首試前核查與首試紀錄都移到這一頁（只讀，不需回覆）。你之前填的企劃回饋與素材選擇都保留，沒有刪除或重設。"
+  "v": "24 套企劃、兩本月份、照片框、歷次 owner 原文與主管覆核、Iris 首試紀錄與上一輪的回饋題都在這一頁（只讀，不需回覆）。你之前填的回饋與素材選擇都保留在你的瀏覽器，沒有刪除或重設。"
  }
 }

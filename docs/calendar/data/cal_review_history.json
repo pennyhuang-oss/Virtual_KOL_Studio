@@ -1,0 +1,26 @@
+{
+ "note": "目前檢視頁（shoot.html）完成的項目，從 cal_review_current.json 移到這裡；歷史頁（history.html）只讀顯示。",
+ "items": [
+  {
+   "round": "M-4 R3",
+   "shown": "2026-10-20 至 2026-10-21",
+   "set": "V-iris-chen",
+   "photo": "V-Iris 首試｜直式款 9 月｜3:4",
+   "label_then": "首試樣張，尚未定稿",
+   "pending_then": [
+    {
+     "k": "反光板及支架",
+     "state": "主管判定必修"
+    },
+    {
+     "k": "人物與身材呈現",
+     "state": "待Penny看圖回饋"
+    }
+   ],
+   "feedback_key": "cal2027-review-v1:V-iris-chen-m4r2",
+   "feedback_q": "人物與身材呈現",
+   "resolved": "M-4 R4（2026-10-21）：Penny 接受臉、身材、表情、服裝與光線，反光板也接受保留，照片直接採用；取代主管 M-4 R3「反光板及支架必修」。",
+   "feedback_note": "這一題的網頁回饋只存在 Penny 的瀏覽器；歷史頁只讀顯示，不改寫、不清除。"
+  }
+ ]
+}

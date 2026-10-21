@@ -15,7 +15,8 @@
   其餘參考圖沿用第二階段素材的預覽。企劃資料不含 Soul ID 或 job_id；新企劃沒有任何生成圖。M-4 R3 起這份企劃改在歷史頁（history.html），
   公開資料再移除交易原始資料（交易時間、他人交易列與統計），只留實扣摘要。
 - M-4 R3 目前檢視頁（shoot.html；data/cal_review_current.json，人寫，從工作目錄讀）：V-Iris 首試照片（主管同意公開）——原圖 PNG 只移除
-  文字中繼資料區塊（含工作識別碼）、顯示版等比縮小、套框預覽位元組不變、反光板純裁切；來源 commit 與 sha256 記在資料檔。
+  文字中繼資料區塊（含工作識別碼）、顯示版等比縮小、套框預覽位元組不變；來源 commit 與 sha256 記在資料檔。M-4 R4：Penny 接受這張（含反光板），
+  主頁標「已接受」、拿掉回饋題與反光板裁切；完成的檢視項目（data/cal_review_history.json）放進 data.js 給歷史頁只讀顯示。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
 輸出：docs/calendar/decision_site/public/img/{z,t,review}/、public/data.js、public/review-data.js、decision_site/ASSET_MANIFEST.json
@@ -317,8 +318,11 @@ def build_m3(mat):
     P = json.loads(raw)
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
-    assert P['counts'] == {'generated': 1, 'credits': 0.12, 'trainings': 0}, 'M-4 R2 只授權生成 1 張'
-    assert P['version'] == 'shoot-plan-v9' and P['revision']['from_version'] == 'shoot-plan-v8'
+    assert P['counts'] == {'generated': 1, 'credits': 0.12, 'trainings': 0}, 'M-4 R2 只授權生成 1 張；M-4 R4 只準備、不生成'
+    assert P['version'] == 'shoot-plan-v10' and P['revision']['from_version'] == 'shoot-plan-v9'
+    PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板），直接採用；下一批 5 位只準備
+    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['generated'], PR['accepted'], PR['remaining']) == (1, 1, 23)
+    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'prepared-pending-supervisor-review' and len(P['batch1']['sets']) == 5
     acc, ver = P['status']['accepted'], P['status']['supervisor_verified']
     assert P['status']['m3'] == 'complete' and len(acc) == 23 and ver == ['H-luna-tanaka'] and not P['status']['revised'], 'M-4 R1 狀態不對'
     assert sorted(acc + ver) == sorted(x['id'] for x in P['sets'])
@@ -392,7 +396,8 @@ def build_m3(mat):
         assert bad not in text.lower(), bad
     assert not TX_RAW.search(text), f'公開資料出現交易原始資料：{TX_RAW.search(text).group(0)}'
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
-            P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit'], P['m4r1']['from_commit']}
+            P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit'], P['m4r1']['from_commit'],
+            P['m4r2']['from_commit'], P['m4r4']['from_commit']}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
@@ -426,13 +431,15 @@ def redact_tx(pub):
     sub(h, 'v', '今天也有', 'Soul V2 仍以每筆 −0.12 記帳（明細不公開）')
 
 
-# ---------- M-4 R3：目前檢視頁（shoot.html）——首試照片、套框預覽、待決事項 ----------
-# 主頁只放「當前照片＋待決事項」（data/cal_review_current.json，人寫，從工作目錄讀）；完成項目移到歷史頁（history.html）。
+# ---------- 目前檢視頁（shoot.html，M-4 R3 起）——當前照片、套框預覽、待決事項 ----------
+# 主頁只放「當前照片＋待決事項」（data/cal_review_current.json，人寫，從工作目錄讀）；完成項目移到 data/cal_review_history.json 與歷史頁（history.html）。
+# M-4 R4：Penny 接受 V-Iris（含反光板），主頁改為「已接受」並拿掉回饋題；反光板裁切不再發佈。
 # 圖片從資料檔記錄的 commit 讀檔並核對 sha256：
 # - 原圖 PNG：只移除文字中繼資料區塊（tEXt／iTXt／zTXt；原檔帶有生成平台的工作識別碼），其餘區塊位元組不變，解碼後像素相同；
-# - 顯示版：原圖等比縮小（長邊 1600 px，JPEG q88，不帶中繼資料）；套框預覽：位元組不變複製；反光板：原圖純裁切（JPEG q95）。
+# - 顯示版：原圖等比縮小（長邊 1600 px，JPEG q88，不帶中繼資料）；套框預覽：位元組不變複製。
 # 不修圖、不調身材、不重新生成。輸出 public/img/review/ 與 public/review-data.js（不放 Soul ID、工作 ID、交易資料、repo 路徑）。
 REVIEW_FILE = 'docs/calendar/data/cal_review_current.json'
+REVIEW_HIST = 'docs/calendar/data/cal_review_history.json'
 REVIEW_DIR = os.path.join(PUB, 'img', 'review')
 PNG_SIG = b'\x89PNG\r\n\x1a\n'
 PNG_TEXT = (b'tEXt', b'iTXt', b'zTXt')
@@ -472,8 +479,6 @@ def review_outputs(R):
     view, _ = hires_bytes(png)
     vim = Image.open(io.BytesIO(view))
     src = lambda s: {'source': f'{s["commit"]}:{s["path"]}', 'source_sha256': s['sha256']}
-    rf = next(x for x in R['pending'] if x['id'] == 'reflector')
-    box = rf['crop']['box']
     pre = ph['set'] + '_m4r2_'
     return [
         (pre + 'first_test.png', clean, {'kind': 'review_png', **src(ph['src']),
@@ -481,8 +486,6 @@ def review_outputs(R):
         (pre + 'view.jpg', view, {'kind': 'review_preview', **src(ph['src']),
             'op': f'原圖 {a.width}×{a.height} 等比縮小至 {vim.width}×{vim.height}（Lanczos，JPEG q88，不帶中繼資料）'}),
         (pre + 'frame_V_120x160.jpg', review_src(fr['src']), {'kind': 'review_copy', **src(fr['src']), 'op': '位元組不變複製'}),
-        (pre + 'reflector_crop.jpg', jpeg(a.convert('RGB').crop(tuple(box)), 95), {'kind': 'review_crop', **src(ph['src']), 'box_px': box,
-            'op': f'裁切 {box}（只裁切；JPEG q95）'}),
     ]
 
 
@@ -515,9 +518,8 @@ def scan_public(secrets):
 def build_review():
     raw = wt_bytes(REVIEW_FILE)
     R = json.loads(raw)
-    assert R['round'] == 'M-4 R3' and R['photo']['label'] == '首試樣張，尚未定稿' and '不是印刷核准' in R['frame']['label']
-    assert [(x['k'], x['state']) for x in R['pending']] == [('反光板及支架', '主管判定必修'), ('人物與身材呈現', '待Penny看圖回饋')]
-    assert R['feedback']['key'].startswith('cal2027-review-v1:') and '不會自動傳給主管' in R['feedback']['storage_note']
+    assert R['round'] == 'M-4 R4' and R['photo']['status'] == 'accepted' and R['photo']['label'] == '已接受（Penny）' and '不是印刷核准' in R['frame']['label']
+    assert R['next']['state'] == '準備中，待主管覆核' and len(R['next']['sets']) == 5 and 'feedback' not in R and 'pending' not in R, '主頁只留已接受的照片與下一批狀態，不放回饋題'
     os.makedirs(REVIEW_DIR, exist_ok=True)
     for fn in os.listdir(REVIEW_DIR):
         os.remove(os.path.join(REVIEW_DIR, fn))
@@ -532,12 +534,20 @@ def build_review():
     pub.pop('note')
     for x in (pub['photo'], pub['frame']):
         x.pop('src')
-    pub['img'] = {'png': files['review_png'], 'view': files['review_preview'], 'frame': files['review_copy'], 'reflector': files['review_crop']}
+    pub['img'] = {'png': files['review_png'], 'view': files['review_preview'], 'frame': files['review_copy']}
     text = json.dumps(pub, ensure_ascii=False)
-    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易'):
+    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易', 'natural skin texture', 'lighting:', 'she wears'):  # 主頁不放長 prompt
         assert bad not in text.lower(), bad
     assert not re.search(r'[0-9a-f]{8,}', text), '檢視頁資料出現疑似 ID'
     return pub
+
+
+def build_review_hist():
+    H = json.loads(wt_bytes(REVIEW_HIST))
+    assert [x['round'] for x in H['items']] == ['M-4 R3'] and H['items'][0]['feedback_key'] == 'cal2027-review-v1:V-iris-chen-m4r2'
+    text = json.dumps(H, ensure_ascii=False)
+    assert not re.search(r'[0-9a-f]{8,}', text) and not any(b in text.lower() for b in ('kols/', 'job', 'soul'))
+    return H['items']
 
 
 # ---------- 資料 ----------
@@ -762,6 +772,7 @@ def main():
         'cast': cast,
         'mat': mat,
         'm3': m3,
+        'review_hist': build_review_hist(),
         'images': IMAGES,
     }
     review = build_review()
@@ -772,7 +783,7 @@ def main():
         f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。資料來源：固定成果 commit ' + FIXED + '\n')
         f.write('window.CAL_DATA = ' + json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     man = {'generated_by': 'docs/calendar/tools/build_cal_decision_site.py', 'fixed_sha': FIXED,
-           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小；review_*＝目前檢視頁的首試照片（review_png 只移除 PNG 文字中繼資料區塊、review_preview 等比縮小、review_copy 位元組不變、review_crop 純裁切）。沒有生成、外擴、增強或修圖。本檔不對外提供。',
+           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小；review_*＝目前檢視頁的照片（review_png 只移除 PNG 文字中繼資料區塊、review_preview 等比縮小、review_copy 位元組不變）。沒有生成、外擴、增強或修圖。本檔不對外提供。',
            'files': MANIFEST}
     with open(os.path.join(SITE, 'ASSET_MANIFEST.json'), 'w', encoding='utf-8') as f:
         json.dump(man, f, ensure_ascii=False, indent=1)

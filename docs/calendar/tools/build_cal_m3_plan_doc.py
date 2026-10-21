@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""TASK-CAL-001／M-4（R2）— 由 data/cal_m3_shoot_plan.json（shoot-plan-v9，人寫企劃）產生三份文件：
+"""TASK-CAL-001／M-4（R4）— 由 data/cal_m3_shoot_plan.json（shoot-plan-v10，人寫企劃）產生四份文件：
   CAL_18_M3_SHOOT_PLAN.md          主管結論（M-3 完成）、23 套已接受＋H-Luna 主管覆核通過、攝影設計、兩本攝影總覽與月份、印刷構圖核對、費用與 Iris 首張
   CAL_19_M3_R2_OWNER_DECISION.md   R2 Owner 決策紀錄（逐字回饋＋執行摘要；來源 data/cal_m3_owner_feedback_r2.json；R3 起內容不變）
-  CAL_20_M4_IRIS_FIRST_TEST_PREP.md  V-Iris 首試準備（R7 起）、首試前核查（M-4 R1 起）與單張首試結果（M-4 R2 起）；企劃資料的 m4_prep
+  CAL_20_M4_IRIS_FIRST_TEST_PREP.md  V-Iris 首試準備（R7 起）、首試前核查（M-4 R1 起）、單張首試結果（M-4 R2 起）與 Penny 定案（M-4 R4）；企劃資料的 m4_prep
+  CAL_21_M4_BATCH1_PREP.md         第一批 5 位角色的生成準備（M-4 R4；來源 data/cal_m4_batch1_prep.json）：完整 prompt、差異、Soul 證據、設定與報價；
+                                   prompt 必須等於已接受企劃原文套用資料檔列出的光線句改寫，產生器逐張核對
 只排版既有文字，不新增內容；沒有呼叫任何生成服務。
 用法：python3 docs/calendar/tools/build_cal_m3_plan_doc.py           # 產生
       python3 docs/calendar/tools/build_cal_m3_plan_doc.py --check   # 核對文件與資料一致
 """
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -18,8 +21,10 @@ PLAN = os.path.join(CAL, 'data', 'cal_m3_shoot_plan.json')
 OUT18 = os.path.join(CAL, 'CAL_18_M3_SHOOT_PLAN.md')
 OUT19 = os.path.join(CAL, 'CAL_19_M3_R2_OWNER_DECISION.md')
 OUT20 = os.path.join(CAL, 'CAL_20_M4_IRIS_FIRST_TEST_PREP.md')
-FIRST_LINE = 'TASK-CAL-001／M-4／R2｜V-Iris單張首試｜送審報告'
-FIRST_20 = 'TASK-CAL-001／M-4／R2｜V-Iris 首試準備、首試前核查與單張首試（依授權 1 張）'
+OUT21 = os.path.join(CAL, 'CAL_21_M4_BATCH1_PREP.md')
+BATCH = os.path.join(CAL, 'data', 'cal_m4_batch1_prep.json')
+FIRST_LINE = 'TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備｜送審報告'
+FIRST_20 = 'TASK-CAL-001／M-4／R4｜V-Iris 首試準備、首試前核查、單張首試與定案（Penny 接受）'
 FIRST_19 = 'TASK-CAL-001／M-3／R2｜24套雙款獨立寫真企劃｜送審報告'   # R2 的決策紀錄，標題不改
 ORIGIN_ZH = {'new': '新企劃', 'accepted-v2-main': 'Penny 已接受的 v2 主方向', 'accepted-v2-alt': 'Penny 採用的 v2 替代方向'}
 BOOK_ZH = {'H': '橫式款', 'V': '直式款'}
@@ -61,10 +66,11 @@ def render18(d):
          '> R6 狀態（歷史）：22 套已接受；H-jia-seo、H-luna-tanaka 兩套新推薦待 Penny 定案；兩本月份與工作照片框已接受（工作版型，不是廠商規格、印刷安全或成品核准）。',
          '> R7 狀態（歷史）：23 套已接受（加上 H-jia-seo）；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，當時記為「依owner指定修訂，待主管核對落實」。',
          '> M-4 R1 狀態（歷史）：主管結論 M-3／R7 PASS，M-3 完成——23 套 owner 接受＋H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）；不再要求 owner 填企劃問卷。',
-         f"> **M-4 R2 狀態：{d['m4_prep']['r2']['status']}{d['m4_prep']['r2']['verdict']} 詳見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。**", '',
+         f"> M-4 R2 狀態（歷史）：{d['m4_prep']['r2']['status']}{d['m4_prep']['r2']['verdict']}",
+         f"> **M-4 R4 狀態：{d['m4_prep']['r4']['status']}（{d['m4_prep']['r4']['supersedes']}）；24 套定稿、已生成 {d['status']['production']['generated']} 張、已接受 {d['status']['production']['accepted']} 張、其餘 {d['status']['production']['remaining']} 套待製作。第一批 5 位的生成準備見 `CAL_21_M4_BATCH1_PREP.md`（待主管覆核，未生成）；首試紀錄見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。**", '',
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
-                                  ['這一版', d['revision']['summary']], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],
+                                  ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],
                                   ['R5 資料修訂', f"{d['r5']['summary']}（基準 commit `{d['r5']['from_commit']}`）"],
                                   ['素材頁版本', f"`{m['material_page_commit']}`"], ['桌曆基準', f"`{m['calendar_baseline']}`"]])
     L += ['', f"**參考照片：** {d['ref_note']}", '']
@@ -255,11 +261,11 @@ def render18(d):
     L += table(['情境', '請求數', '依 credits_exact 報價', '若實扣是顯示值（每次 1）'], [[x['k'], x['n'], x['exact'], x['display']] for x in K['scenarios']])
     L += ['', K['scenario_note'], '', '**未知：** ' + '、'.join(M['unknown']), '']
     I = K['iris_first']
-    L += ['### 10.5 Iris 首張試拍提案（只是提案）', '', f"**推薦：{I['set']}**　{I['status_m4r2']}（歷史：{I['status_m4r1']}；{I['status_r7']}；{I['status_r6']}）", '',
+    L += ['### 10.5 Iris 首張試拍', '', f"**{I['set']}**　M-4 R4：{d['m4_prep']['r4']['status']}（歷史：{I['status_m4r2']}；{I['status_m4r1']}；{I['status_r7']}；{I['status_r6']}）", '',
           f"首試準備（工作流、待確認事項、首張驗收條件）見 `{os.path.basename(d['m4_prep']['doc'])}`。", ''] + [f'- {x}' for x in I['why']] + ['']
     L += table(['項目', '內容'], [[x['k'], x['v']] for x in I['plan']])
     L += ['', f"**授權：** {K['gate']}", '', '## 11. 要請 Penny 決定的事', '']
-    L += [f'{i}. {q}' for i, q in enumerate(d['questions'], 1)] or ['沒有要請 Penny 決定的企劃事項：M-3 已完成（主管 M-4 R1 結論），不再要求 owner 填企劃問卷。V-Iris 單張首試結果待主管覆核，其中的設定落差（反光板入鏡、胸型保守）由 Penny 判斷，見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。']
+    L += [f'{i}. {q}' for i, q in enumerate(d['questions'], 1)] or ['沒有要請 Penny 決定的企劃事項：M-3 已完成（主管 M-4 R1 結論），不再要求 owner 填企劃問卷。V-Iris 首試 Penny 已接受（M-4 R4，含反光板），不再詢問；第一批 5 位的 prompt 與費用交主管覆核，不需要 Penny 再選名單，見 `CAL_21_M4_BATCH1_PREP.md`。']
     L += ['', '## 12. 共同的皮膚與質感句（每段 prompt 結尾都加）', '', '```text', d['skin_line'], '```', '']
     return '\n'.join(L)
 
@@ -278,8 +284,11 @@ def render20(d):
     R2 = M4['r2']
     C2 = R2['counts']
     L += [f"> M-4 R2：生成請求 {C2['generation_requests']}、圖片 {C2['images']}、重送 {C2['retries']}、實扣 {C2['credits_charged']} credits（{R2['attribution']['level']}）、訓練 {C2['trainings']}、上傳 {C2['uploads']}。"]
+    R4 = M4['r4']
     L += [f"> M-4 R1：生成 {C1['generated']}、credits {C1['credits']}、生成任務 {C1['generation_jobs']}、訓練 {C1['trainings']}、上傳 {C1['uploads']}；{R1['counts_note']}", '',
-          f"## A. {R2['title']}", '', f"**狀態：** {R2['status']}", '', f"**判定：** {R2['verdict']}", '', f"**授權：** {R2['auth']}", '', '### A.1 送出前核對', '']
+          f"## R4. {R4['title']}", '', f"**狀態：** {R4['status']}。{R4['supersedes']}。{R4['not']}", '', f"**Penny 的回饋（{R4['source']}）：**", '', '```text', '\n'.join(R4['owner']), '```', '',
+          f"**接受項目：** {'、'.join(R4['accepted'])}。逐字紀錄：`{R4['file']}`。", '',
+          f"## A. {R2['title']}", '', f"**R2 當時狀態：** {R2['status']}", '', f"**判定：** {R2['verdict']}", '', f"**授權：** {R2['auth']}", '', '### A.1 送出前核對', '']
     L += table(['項目', '結果'], [[x['k'], x['v']] for x in R2['pre']])
     J2 = R2['job']
     L += ['', '### A.2 實際設定與任務', '', f"**送出：** {R2['request']}", '', f"**任務：** {J2['status']}（輪詢 {J2['polls']} 次）；輸出 {J2['px'][0]}×{J2['px'][1]}。{J2['observed']}", '',
@@ -290,7 +299,7 @@ def render20(d):
           f"| 扣款 | {'；'.join(f'{x['at']} {x['credits']}' for x in CH['spend'])} |", f"| 退款 | {'；'.join(f'{x['at']} {x['credits']}' for x in CH['refund']) or '無'} |",
           f"| 淨額 | {CH['net']}（精確報價 {CH['quote_exact']}；核准預算 {CH['budget']} credit；查到 {CH['checked_at']}） |", f"| 異常 | {CH['anomaly']} |",
           f"| 歸屬層級 | **{R2['attribution']['level']}**；{R2['attribution']['not']} |", '', '**依據：**', ''] + [f'- {x}' for x in R2['attribution']['basis']]
-    L += ['', '### A.5 停止', '', '依指示在這一次請求後停止：沒有重送、沒有其他生成；交主管覆核。', '',
+    L += ['', '### A.5 停止', '', '依指示在這一次請求後停止：沒有重送、沒有其他生成；交主管覆核（M-4 R4 由 Penny 接受，見上方 R4）。', '',
           f"## 0. {R1['title']}", '', f"**結論：** {R1['verdict']}", '', f"**主管覆核：** {R1['review']}", '', '### 0.1 Soul 證據', '']
     L += table(['項目', '內容', '來源檔'], [[x['k'], x['v'], src(x)] for x in R1['soul']])
     L += ['', '### 0.2 當前模型參數與 Soul 狀態（2026-10-20 唯讀查詢）', '']
@@ -330,6 +339,84 @@ def render20(d):
     return '\n'.join(L)
 
 
+EQUIP = re.compile(r'reflector|softbox|soft box|key light|fill light|\bfill\b|ring light|strobe|flash|light stand|out of frame|umbrella|scrim|diffuser|studio light', re.I)
+MARKERS = ['She wears', 'Setting:', 'Shot:', 'Body:', 'Face and gaze:', 'Camera:', 'Composition:', 'Emphasis:', 'Lighting:', 'Natural skin texture']
+
+
+def render21(d, B):
+    """第一批 5 位的生成準備：prompt 由已接受企劃原文套用光線句改寫算出，逐張核對後才排版。"""
+    S = {s['id']: s for s in d['sets']}
+    X = B['sets']
+    assert B['round'] == d['round'] == 'M-4 R4' and len(X) == 5 and len({x['pid'] for x in X}) == 5 and all(x['pid'] != 'iris-chen' for x in X), '第一批要 5 位不同角色、不含 Iris'
+    assert B['counts']['generated'] == 0 and B['counts']['credits'] == 0 and B['status'] == d['batch1']['status'] and [x['id'] for x in X] == d['batch1']['sets']
+    rows = []
+    for x in X:
+        s = S[x['id']]
+        assert s['status'] == 'accepted' and x['ratio'] == s['ratio'] and x['month'] == s['month'] and x['frame'] == s['print']['frame'], x['id']
+        p = s['prompt']
+        for c in x['changes']:
+            assert p.count(c['before']) == 1, x['id']
+            p = p.replace(c['before'], c['after'])
+        assert p == x['prompt'], f"{x['id']}：prompt 與「已接受原文＋列出的改寫」不同"
+        cam = all(x['prompt'].count(s['cam'][k]['en']) >= 1 for k in ('shot', 'bounds', 'body', 'face', 'gaze', 'angle', 'comp', 'purpose'))
+        pos = [x['prompt'].find(m) for m in MARKERS]
+        assert cam and all(v >= 0 for v in pos) and pos == sorted(pos), x['id']
+        assert not EQUIP.search(x['prompt']), (x['id'], EQUIP.search(x['prompt']).group(0))
+        assert x['request']['count'] == 1 and x['request']['model'] == 'soul_2' and x['request']['quality'] == '2k' and x['request']['aspect_ratio'] == s['ratio'] and x['quote']['credits_exact'] == B['quote']['per_request_exact']
+        assert not re.search(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}', json.dumps(x)), '不寫 Soul ID'
+        rows.append([x['id'], '✓ 原文＋%d 處光線改寫' % len(x['changes']), '✓ 8 個攝影欄位英文句都在', '✓ 依序', '✓ 沒有', f"✓ {x['ratio']}／count 1"])
+    assert round(sum(x['quote']['credits_exact'] for x in X), 2) == B['quote']['total_exact']
+    Q = B['quote']
+    R = B['request']
+    L = [FIRST_LINE, '', '# CAL_21 — 第一批 5 位角色生成準備（M-4 R4；待主管覆核，未生成）', '',
+         f"> 資料檔：`data/cal_m4_batch1_prep.json`（{B['version']}，{B['written_on']}）與 `data/cal_m3_shoot_plan.json`（{d['version']}）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準；5 份 prompt 由產生器核對「已接受企劃原文＋下列光線句改寫」後才排版。",
+         f"> **本輪生成 {B['counts']['generated']}、修圖 {B['counts']['retouched']}、訓練 {B['counts']['trainings']}、扣 credits {B['counts']['credits']}；唯讀查詢 {B['counts']['readonly_queries']} 次（含不扣款報價預檢 {B['counts']['quote_prechecks']} 次）。**", '',
+         '## 0. 依據與範圍', '', f"- {B['basis']['owner']}", f"- {B['basis']['not_authorized']}",
+         f"- V-Iris：{d['m4_prep']['r4']['status']}（M-4 R4；{d['m4_prep']['r4']['supersedes']}）。進度：24 套定稿、已生成 {d['status']['production']['generated']}、已接受 {d['status']['production']['accepted']}、其餘 {d['status']['production']['remaining']} 套待製作。", '',
+         '## 1. 5 位總覽（依送出順序）', '']
+    L += table(['#', '角色', '套別', '月份', '比例', '景別（企劃）', '推薦理由', '選這一款的理由'],
+               [[x['order'], x['name'], x['id'], f"{x['month']} 月", x['ratio'], x['cam_line'], x['why_pick'], x['why_ratio']] for x in X])
+    Sel = B['selection']
+    L += ['', '## 2. 怎麼選的', '', f"**範圍：** {Sel['pool']}", '', f"**規則：** {Sel['rule']}", '', '**本批差異：**', '']
+    L += table(['面向', '本批'], [['比例', Sel['mix']['ratio']], ['光線', Sel['mix']['light']], ['景別', Sel['mix']['framing']], ['視線', Sel['mix']['gaze']], ['外觀', Sel['mix']['look']]])
+    L += ['', '**沒有選的人與原因：**', '']
+    L += table(['角色', '原因'], [[e['who'], e['why']] for e in Sel['excluded']])
+    L += ['', '## 3. 描述方法（沿用 V-Iris 首試的組織方式）', '', '順序：' + ' → '.join(B['method']['order']) + '。', '', B['method']['note'], '', f"**唯一的修改：** {B['method']['only_change']}", '',
+          '## 4. 共同設定、報價與費用', '']
+    L += table(['項目', '設定'], [['工具', R['tool']], ['模型', R['model']], ['Soul', '各人設既有 Soul（見逐張）；ID 只在 profile.json，不寫出'], ['quality', R['quality']], ['count', f"{R['count']}（每次請求 1 張；共 {R['requests']} 次請求）"],
+                                  ['use_unlim', 'false（用 credits）'], ['參考圖', R['medias']], ['style_id', R['style_id']], ['送出方式', R['sequence']], ['重試', R['retry']],
+                                  ['明確失敗且未扣款', R['failed_clean']], ['存放', R['storage']]])
+    L += ['', f"**報價（{Q['date']}；{Q['how']}）：**", '']
+    L += table(['#', '套別', '比例', '顯示值', '精確報價（credits_exact）'], [[x['order'], x['id'], x['ratio'], x['quote']['credits'], x['quote']['credits_exact']] for x in X])
+    L += ['', f"**合計（精確報價）：{Q['total_exact']:.2f} credits**（{Q['requests']} 次 × {Q['per_request_exact']}）。", '', f"**建議整批預算：** {Q['budget']}", '', Q['not_guarantee'], '',
+          f"**預檢前後的交易：** {Q['tx_check']}", '', f"**參考：** {Q['history']}", '', '**停止條件（任一成立就停，不補送）：**', ''] + [f'- {x}' for x in R['stop']]
+    L += ['', R['after_stop'], '', '**交易核對：**', '', f"- {B['recon']['method']}", f"- {B['recon']['criteria']}", f"- {B['recon']['late']}", '',
+          '## 5. 生成前核對', ''] + [f'- {x}' for x in B['checks']]
+    L += ['', '**程式核對結果（產生器）：**', '']
+    L += table(['套別', 'prompt 來源', '中英攝影欄位', '描述順序', '器材字', '比例／張數'], rows)
+    for i, x in enumerate(X, 6):
+        s = S[x['id']]
+        z = x['zh']
+        L += ['', f"## {i}. {x['name']}｜{x['id']}｜{x['month']} 月｜{x['ratio']}", '',
+              f"**企劃來源：** {x['plan_source']}", '', f"**為什麼選她：** {x['why_pick']}", '', f"**為什麼是這一款：** {x['why_ratio']}", '',
+              f"**canon 摘要：** {x['meas']}；髮：{z['髮妝'].split('；')[0]}（Soul V2 不繼承髮型與身材，prompt 逐字寫明）。", '', '### 中文拍攝摘要', '']
+        L += table(['項目', '內容'], [[k, z[k]] for k in ('場景', '服裝', '髮妝', '姿態與雙手', '表情', '視線', '光線')] + [['景別', x['cam_line']], ['畫面上下界', x['bounds']]])
+        so = x['soul']
+        L += ['', '### Soul 與設定', '']
+        L += table(['項目', '內容'], [['Soul', f"{so['name']}（指紋 sha256 前 8 碼 `{so['fingerprint']}`；ID 不寫出）"], ['紀錄位置', so['record']], ['專案狀態', f"{so['profile_status']}；訓練圖 {so['training_images']} 張"],
+                                      ['既有驗證', so['verification']], ['帳號查詢', so['account_2026_10_21']], ['限制', so['limits']],
+                                      ['設定', f"model {x['request']['model']}｜quality {x['request']['quality']}｜aspect_ratio {x['request']['aspect_ratio']}｜count {x['request']['count']}｜use_unlim false｜{x['request']['medias']}｜style_id {x['request']['style_id']}"],
+                                      ['存放位置', x['request']['folder_id']], ['報價', f"顯示值 {x['quote']['credits']}／精確 {x['quote']['credits_exact']}（{x['quote']['at']}）"]])
+        L += ['', '### 相對已定稿 prompt 的修改', '']
+        for c in x['changes']:
+            L += ['前：', '', '```text', c['before'], '```', '', '後：', '', '```text', c['after'], '```', '', f"理由：{c['why']}", '']
+        L += ['### 完整英文 prompt（可直接送出）', '', '```text', x['prompt'], '```', '', '### 最重要的驗收重點', ''] + [f'- {f}' for f in x['accept_focus']]
+        L += ['', '### 已知風險', ''] + [f'- {r}' for r in x['risks']]
+        L += ['', '### 工作照片框', '', f"- {x['frame']}", f"- {x['native']}", f"- {x['ppi']}"] + [f'- {e}' for e in x['edges']]
+    L += ['', f"## {len(X) + 6}. 生成後（主管另發整批生成指令之後）", ''] + [f'- {x}' for x in B['after_generation']] + ['']
+    return '\n'.join(L)
+
+
 def render19(d):
     o = d['owner_r2']
     s = o['summary']
@@ -352,7 +439,8 @@ def render19(d):
 
 def main():
     d = json.load(open(PLAN, encoding='utf-8'))
-    docs = {OUT18: render18(d), OUT19: render19(d), OUT20: render20(d)}
+    B = json.load(open(BATCH, encoding='utf-8'))
+    docs = {OUT18: render18(d), OUT19: render19(d), OUT20: render20(d), OUT21: render21(d, B)}
     if '--check' in sys.argv:
         bad = [os.path.basename(p) for p, t in docs.items() if not os.path.exists(p) or open(p, encoding='utf-8').read() != t]
         print('PASS' if not bad else 'FAIL：文件與資料不一致，請重新產生：' + '、'.join(bad))
