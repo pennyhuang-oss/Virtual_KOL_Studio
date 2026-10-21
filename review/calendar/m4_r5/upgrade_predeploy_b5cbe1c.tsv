@@ -1,0 +1,6 @@
+PASS	[b5cbe1c] v1–v6 回饋與素材選擇（含確認）的 localStorage 位元組與 R6 頁填完時相同	
+PASS	[b5cbe1c] 目前檢視頁照片已載入（舊版：Iris 已接受）；打開頁面不寫任何新鍵	cal2027-materials-v1:4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45,cal2027-shoot-v1:4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45
+PASS	[b5cbe1c] 歷史頁：v6 回覆仍列為歷史（舊資料照常讀出）	
+PASS	[b5cbe1c] 素材頁：Iris 的選擇與「已確認」狀態保留	
+PASS	[b5cbe1c] 開過三頁後舊 localStorage 沒有被改寫、沒有新鍵	
+PASS	[b5cbe1c] 沒有 JS 錯誤	
