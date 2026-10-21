@@ -1,0 +1,14 @@
+# 部署前（c6c6d98，同一測試瀏覽器設定檔）
+PASS	[→ c6c6d98] 部署後 v1–v6 回饋與素材選擇（含確認）的 localStorage 位元組與 R6 頁填完時相同（中間經過 R7、M-4 R1、M-4 R2 頁）	
+PASS	[→ c6c6d98] 目前檢視頁：照片已載入、標「首試樣張，尚未定稿」；只開頁不寫新鍵	
+PASS	[→ c6c6d98] 歷史頁：v6 回覆仍列為歷史（舊資料照常讀出）	
+PASS	[→ c6c6d98] 素材頁：Iris 的選擇與「已確認」狀態保留	
+PASS	[→ c6c6d98] 開過三頁後兩筆舊 localStorage 沒有被改寫、新鍵沒有被寫入	
+PASS	[→ c6c6d98] 沒有 JS 錯誤	
+# 部署後（b5cbe1c）
+PASS	[→ b5cbe1c] 部署後 v1–v6 回饋與素材選擇（含確認）的 localStorage 位元組與 R6 頁填完時相同（中間經過 R7、M-4 R1、R2、R3 頁）	
+PASS	[→ b5cbe1c] 目前檢視頁：照片已載入、標「已接受（Penny）」；沒有回饋欄位、不寫任何 localStorage	
+PASS	[→ b5cbe1c] 歷史頁：v6 回覆仍列為歷史（舊資料照常讀出）	
+PASS	[→ b5cbe1c] 素材頁：Iris 的選擇與「已確認」狀態保留	
+PASS	[→ b5cbe1c] 開過三頁後兩筆舊 localStorage 沒有被改寫、新鍵沒有被寫入	
+PASS	[→ b5cbe1c] 沒有 JS 錯誤	

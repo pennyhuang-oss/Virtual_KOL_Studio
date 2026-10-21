@@ -1,0 +1,65 @@
+PASS	Penny 回饋逐字保存（臉、身材、表情、服裝與光線均接受；反光板保留、直接採用），取代主管 R3 反光板必修	
+PASS	企劃 shoot-plan-v10（M-4 R4）：V-Iris accepted-by-owner；24 套定稿、已生成 1、已接受 1、其餘 23	
+PASS	24 套企劃、月份、M-4 R2 紀錄與 c6c6d98 相同（不改已定稿內容）	
+PASS	執行證據、owner 與主管紀錄不刪不改（review/calendar、kols、R3 指令、R2 授權、CAL_19）	
+PASS	第一批 5 位不同角色、不含 Iris；每位一套；與企劃的 batch1 名單一致	V-tammy-chou、V-rin-ayase、V-somi-oh、H-yerin-han、H-jia-seo
+PASS	5 位都是已接受的企劃，月份與比例照企劃（3 直式＋2 橫式）	
+PASS	5 位的 Soul：profile 狀態 production_ready、2026-09-07 臉 6/6 驗證；Soul 名稱與紀錄一致	
+PASS	prompt＝已接受原文＋列出的光線句改寫（每套 1 處），其餘逐字相同	
+PASS	5 份 prompt 都沒有器材字（reflector、softbox、key light、fill light、out of frame…）；原文 5 份都有	
+PASS	8 個攝影欄位英文句仍逐字在 prompt 裡；描述順序沿用 V-Iris（身分→服裝→場景→…→光線與質感）	
+PASS	設定：soul_2、quality 2k、count 1、use_unlim false、不用參考圖；一次一個請求、不重試	
+PASS	報價：每張精確 0.12（顯示值 1），5 張合計 0.60；建議整批預算 1 credit；本輪生成 0、扣款 0	
+PASS	CAL_21：第一行 R4 報告；5 份完整 prompt 逐字在文件裡；含修改前後、Soul 證據、報價與停止條件	
+PASS	批次資料、CAL_21、owner 紀錄都不含 Soul ID 或工作 ID	
+PASS	不帶憑證可開 /shoot.html	200
+PASS	不帶憑證可開 /review.js	200
+PASS	不帶憑證可開 /review.css	200
+PASS	不帶憑證可開 /review-data.js	200
+PASS	不帶憑證可開 /history.html	200
+PASS	不帶憑證可開 /history.js	200
+PASS	不帶憑證可開 /data.js	200
+PASS	不帶憑證可開 /index.html	200
+PASS	不帶憑證可開 /mat.js	200
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_view.jpg	200
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_first_test.png	200
+PASS	不帶憑證可開 /img/review/V-iris-chen_m4r2_frame_V_120x160.jpg	200
+PASS	反光板裁切已從公開頁移除（Penny 接受保留，不再列待處理）	
+PASS	公開檔（含圖片位元組）沒有 6 位的 Soul ID 與工作 ID	
+PASS	目前檢視頁資料：沒有長 prompt、Soul、扣款或交易字樣、UUID	
+PASS	主頁資料沒有 prompt；公開資料沒有第一批改寫後的光線句與 Soul 指紋（24 套已接受企劃原文本來就在歷史頁）	
+PASS	公開文字檔沒有交易原始資料	
+PASS	[desktop] 主頁只有：已接受的照片、目前進度、套框、歷史連結；沒有回饋題或任何輸入欄位、沒有表格	高 1399px（1.6 屏）
+PASS	[desktop] 進度：24 套企劃定稿；已生成 1 張、已接受 1 張，其餘 23 套待製作	
+PASS	[desktop] 照片標「已接受（Penny）」（綠色），說明寫反光板也接受保留、不修圖不重生	
+PASS	[desktop] 下一批 5 位：準備中、待主管覆核；只列名字、月份與橫直，不放 prompt 或費用	
+PASS	[desktop] 主頁不再有反光板待處理項目	
+PASS	[desktop] 照片在第一屏且已載入	
+PASS	[desktop] 大圖與原尺寸（原圖 1536×2048）正常，Esc 關閉	
+PASS	[desktop] 下載原圖：V-iris-chen_M4_accepted_1536x2048.png、與發佈檔相同、不含工作 ID	
+PASS	[desktop] 套框預覽載入，標「不是印刷核准」	
+PASS	[desktop] 主頁沒有水平溢出	0
+PASS	[desktop] 開主頁後三筆 localStorage（企劃回饋、素材選擇、R3 回饋）位元組不變	
+PASS	[desktop] 歷史頁：Penny R4 接受（取代 R3 反光板必修）；M-4 R3 回饋題列為已完成，只讀顯示瀏覽器裡的回饋	
+PASS	[desktop] 歷史頁 V-Iris 卡片標「Penny 已接受」；24 套企劃卡仍在	
+PASS	[desktop] 歷史頁沒有水平溢出（全部展開）	0
+PASS	[desktop] 開過歷史頁後三筆 localStorage 仍不變	
+PASS	[desktop] 素材頁：Iris 的選擇照舊；入口連到目前檢視	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 主頁只有：已接受的照片、目前進度、套框、歷史連結；沒有回饋題或任何輸入欄位、沒有表格	高 2109px（2.5 屏）
+PASS	[mobile390] 進度：24 套企劃定稿；已生成 1 張、已接受 1 張，其餘 23 套待製作	
+PASS	[mobile390] 照片標「已接受（Penny）」（綠色），說明寫反光板也接受保留、不修圖不重生	
+PASS	[mobile390] 下一批 5 位：準備中、待主管覆核；只列名字、月份與橫直，不放 prompt 或費用	
+PASS	[mobile390] 主頁不再有反光板待處理項目	
+PASS	[mobile390] 照片在第一屏且已載入	
+PASS	[mobile390] 大圖與原尺寸（原圖 1536×2048）正常，Esc 關閉	
+PASS	[mobile390] 下載原圖：V-iris-chen_M4_accepted_1536x2048.png、與發佈檔相同、不含工作 ID	
+PASS	[mobile390] 套框預覽載入，標「不是印刷核准」	
+PASS	[mobile390] 主頁沒有水平溢出	0
+PASS	[mobile390] 開主頁後三筆 localStorage（企劃回饋、素材選擇、R3 回饋）位元組不變	
+PASS	[mobile390] 歷史頁：Penny R4 接受（取代 R3 反光板必修）；M-4 R3 回饋題列為已完成，只讀顯示瀏覽器裡的回饋	
+PASS	[mobile390] 歷史頁 V-Iris 卡片標「Penny 已接受」；24 套企劃卡仍在	
+PASS	[mobile390] 歷史頁沒有水平溢出（全部展開）	0
+PASS	[mobile390] 開過歷史頁後三筆 localStorage 仍不變	
+PASS	[mobile390] 素材頁：Iris 的選擇照舊；入口連到目前檢視	
+PASS	[mobile390] 沒有 JS 錯誤	

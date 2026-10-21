@@ -1,0 +1,29 @@
+{
+ "desktop": {
+  "height_px": 1399,
+  "screens": 1.6,
+  "text_chars": 683,
+  "tables": 0,
+  "table_rows": 0,
+  "sections": 4,
+  "details": 0,
+  "images": 2,
+  "photos_in_first_screen": [
+   "V-iris-chen_m4r2_view.jpg",
+   "V-iris-chen_m4r2_frame_V_120x160.jpg"
+  ]
+ },
+ "mobile390": {
+  "height_px": 2155,
+  "screens": 2.6,
+  "text_chars": 683,
+  "tables": 0,
+  "table_rows": 0,
+  "sections": 4,
+  "details": 0,
+  "images": 2,
+  "photos_in_first_screen": [
+   "V-iris-chen_m4r2_view.jpg"
+  ]
+ }
+}
