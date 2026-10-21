@@ -1,0 +1,521 @@
+{
+ "note": "M-4 R5 第一批 5 位生成的私有執行紀錄（含工作 ID 與交易原始列；不放公開頁）。每張送出前先寫提交意圖，避免中斷後重複提交。",
+ "events": [
+  {
+   "t": "2026-10-21T06:55:47Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r5.json",
+   "sets": [
+    "V-tammy-chou",
+    "V-rin-ayase",
+    "V-somi-oh",
+    "H-yerin-han",
+    "H-jia-seo"
+   ],
+   "requests_max": 5,
+   "budget_credits": 0.6
+  },
+  {
+   "t": "2026-10-21T06:55:47Z",
+   "step": "pre-check",
+   "preferences": {
+    "auto_create_project": false
+   },
+   "folder_id": "不指定",
+   "model_params": "soul_2：quality 1.5k/2k、比例含 3:4 與 16:9、style_id 選填、參考圖最多 1；unlim available false",
+   "souls": {
+    "tammy-chou": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+    "rin-ayase": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+    "somi-oh": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "yerin-han": "8c447a79-769f-4520-a538-cfb48fef6163",
+    "jia-seo": "ecf19246-c697-419c-b978-fe9373586c19"
+   },
+   "souls_status": "5 個都 ready（raw completed），與 profile.json 相同"
+  },
+  {
+   "t": "2026-10-21T06:58:45Z",
+   "step": "1 V-tammy-chou intent",
+   "set": "V-tammy-chou",
+   "order": 1,
+   "settings": {
+    "model": "soul_2",
+    "soul": "tammy-chou",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "d4e1278f496c20cd4c0eea922dfcb21736cc63ee1ebb4bb9531e6e7847ef0a18",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "tx_boundary": {
+    "newest_row": "2026-10-21T06:53:18.294078Z GPT Image 2.5 Flare -1 spend",
+    "rows_checked": 10,
+    "soul_v2_rows": 0
+   },
+   "inflight_soul2_jobs": 0
+  },
+  {
+   "t": "2026-10-21T06:59:31Z",
+   "step": "1 V-tammy-chou submitted",
+   "set": "V-tammy-chou",
+   "job_id": "e0fb9aa7-869a-4ef0-88ed-190d36452f60",
+   "response": "pending",
+   "model_echo": "text2image_soul_v2",
+   "soul_echo": "tammy-chou-soul-v1-5img-20260904",
+   "quality_echo": "2k",
+   "aspect_echo": "3:4",
+   "prompt_echo_equals_final": true
+  },
+  {
+   "t": "2026-10-21T07:00:17Z",
+   "step": "1 V-tammy-chou terminal",
+   "set": "V-tammy-chou",
+   "job_id": "e0fb9aa7-869a-4ef0-88ed-190d36452f60",
+   "status": "completed",
+   "polls": 1,
+   "px": [
+    1536,
+    2048
+   ],
+   "downloaded_to": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+   "bytes": 4041301,
+   "sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9",
+   "png_text": [
+    "hf-job-id"
+   ],
+   "job_meta": {
+    "quality_field": "1080p",
+    "style": "General（後台預設）",
+    "seed": 544371,
+    "width": 1536,
+    "height": 2048,
+    "prompt_equals_final": true
+   }
+  },
+  {
+   "t": "2026-10-21T07:00:17Z",
+   "step": "1 V-tammy-chou tx",
+   "set": "V-tammy-chou",
+   "window": "2026-10-21T06:53:18.294078Z 之後",
+   "soul_v2_rows": [
+    {
+     "at": "2026-10-21T06:59:20.966716Z",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": [],
+   "other_rows_in_window": "Nano Banana Pro -2 ×2（06:58:29Z、06:58:32Z，他人、非 Soul V2）",
+   "soul2_jobs_in_window": 1,
+   "other_jobs_in_window": "nano_banana_2 ×2（他人，只看模型與狀態）",
+   "attribution": "依時窗及唯一任務推定",
+   "charge_vs_quote": "等於 0.12"
+  },
+  {
+   "t": "2026-10-21T07:00:36Z",
+   "step": "2 V-rin-ayase intent",
+   "set": "V-rin-ayase",
+   "order": 2,
+   "settings": {
+    "model": "soul_2",
+    "soul": "rin-ayase",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "7b692691c3ed2aa809c5c8e32e76dbb6eee9193ac594b9bcd8502b8d997b1407",
+   "r5_fix_applied": true,
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "tx_boundary": {
+    "newest_row": "2026-10-21T06:59:20.966716Z Higgsfield Soul V2 -0.12 spend（本批 V-Tammy）"
+   },
+   "inflight_soul2_jobs": 0,
+   "inflight_other": "nano_banana_2 ×1（他人）"
+  },
+  {
+   "t": "2026-10-21T07:01:03Z",
+   "step": "2 V-rin-ayase submitted",
+   "set": "V-rin-ayase",
+   "job_id": "2677a125-eafa-4ea2-934f-2be30312d1fe",
+   "response": "pending",
+   "model_echo": "text2image_soul_v2",
+   "soul_echo": "rin-ayase-soul-v1-5img-20260904",
+   "quality_echo": "2k",
+   "aspect_echo": "3:4"
+  },
+  {
+   "t": "2026-10-21T07:01:56Z",
+   "step": "2 V-rin-ayase terminal",
+   "set": "V-rin-ayase",
+   "job_id": "2677a125-eafa-4ea2-934f-2be30312d1fe",
+   "status": "completed",
+   "polls": 2,
+   "px": [
+    1536,
+    2048
+   ],
+   "downloaded_to": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+   "bytes": 4709528,
+   "sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4",
+   "png_text": [
+    "hf-job-id"
+   ],
+   "job_meta": {
+    "quality_field": "1080p",
+    "style": "General（後台預設）",
+    "seed": 804278,
+    "width": 1536,
+    "height": 2048
+   }
+  },
+  {
+   "t": "2026-10-21T07:01:56Z",
+   "step": "2 V-rin-ayase tx",
+   "set": "V-rin-ayase",
+   "window": "2026-10-21T06:59:20.966716Z 之後",
+   "soul_v2_rows": [
+    {
+     "at": "2026-10-21T07:00:57.479119Z",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": [],
+   "other_rows_in_window": "無",
+   "soul2_jobs_in_window": 1,
+   "other_jobs_in_window": "nano_banana_2 ×1 進行中（他人）",
+   "attribution": "依時窗及唯一任務推定",
+   "charge_vs_quote": "等於 0.12"
+  },
+  {
+   "t": "2026-10-21T07:01:56Z",
+   "step": "3 V-somi-oh intent",
+   "set": "V-somi-oh",
+   "order": 3,
+   "settings": {
+    "model": "soul_2",
+    "soul": "somi-oh",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "792a6cdb18f354919f000ad305abb3e0f914d300dd1bb4a5497cb3275e55bdcf",
+   "quote": "見下一筆",
+   "tx_boundary": {
+    "newest_row": "2026-10-21T07:00:57.479119Z Higgsfield Soul V2 -0.12 spend（本批 V-Rin）"
+   },
+   "inflight_soul2_jobs": 0
+  },
+  {
+   "t": "2026-10-21T07:04:32Z",
+   "step": "3 V-somi-oh submitted",
+   "set": "V-somi-oh",
+   "job_id": "a1f9680e-6f4c-45c9-9e48-dd672a7e6832",
+   "response": "pending",
+   "model_echo": "text2image_soul_v2",
+   "soul_echo": "somi-oh-soul-v1-5img-20260904",
+   "quality_echo": "2k",
+   "aspect_echo": "3:4",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   }
+  },
+  {
+   "t": "2026-10-21T07:05:18Z",
+   "step": "3 V-somi-oh terminal",
+   "set": "V-somi-oh",
+   "job_id": "a1f9680e-6f4c-45c9-9e48-dd672a7e6832",
+   "status": "completed",
+   "polls": 2,
+   "px": [
+    1536,
+    2048
+   ],
+   "downloaded_to": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+   "bytes": 4893007,
+   "sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561",
+   "png_text": [
+    "hf-job-id"
+   ],
+   "job_meta": {
+    "quality_field": "1080p",
+    "style": "General（後台預設）",
+    "seed": 549323,
+    "width": 1536,
+    "height": 2048
+   }
+  },
+  {
+   "t": "2026-10-21T07:05:18Z",
+   "step": "3 V-somi-oh tx",
+   "set": "V-somi-oh",
+   "window": "2026-10-21T07:00:57.479119Z 之後",
+   "soul_v2_rows": [
+    {
+     "at": "2026-10-21T07:04:27.362109Z",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": [],
+   "other_rows_in_window": "無",
+   "soul2_jobs_in_window": 1,
+   "attribution": "依時窗及唯一任務推定",
+   "charge_vs_quote": "等於 0.12",
+   "cumulative": 0.36
+  },
+  {
+   "t": "2026-10-21T07:05:18Z",
+   "step": "4 H-yerin-han intent",
+   "set": "H-yerin-han",
+   "order": 4,
+   "settings": {
+    "model": "soul_2",
+    "soul": "yerin-han",
+    "quality": "2k",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "457c84e0dce05c854d9649f5983d5f85d45e9a27f1f7ed49ff360db28939e90b",
+   "tx_boundary": {
+    "newest_row": "2026-10-21T07:04:27.362109Z Higgsfield Soul V2 -0.12 spend（本批 V-Somi）"
+   },
+   "inflight_soul2_jobs": 0
+  },
+  {
+   "t": "2026-10-21T07:08:21Z",
+   "step": "4 H-yerin-han submitted",
+   "set": "H-yerin-han",
+   "job_id": "0a5a0a6a-cce0-410f-b703-9db7610c86e4",
+   "response": "pending",
+   "model_echo": "text2image_soul_v2",
+   "soul_echo": "yerin-han-soul-v1-5img-20260904",
+   "quality_echo": "2k",
+   "aspect_echo": "16:9",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   }
+  },
+  {
+   "t": "2026-10-21T07:09:10Z",
+   "step": "4 H-yerin-han terminal",
+   "set": "H-yerin-han",
+   "job_id": "0a5a0a6a-cce0-410f-b703-9db7610c86e4",
+   "status": "completed",
+   "polls": 2,
+   "px": [
+    2048,
+    1152
+   ],
+   "downloaded_to": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+   "bytes": 3167311,
+   "sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a",
+   "png_text": [
+    "hf-job-id"
+   ],
+   "job_meta": {
+    "quality_field": "1080p",
+    "style": "General（後台預設）",
+    "seed": 66030,
+    "width": 2048,
+    "height": 1152
+   }
+  },
+  {
+   "t": "2026-10-21T07:09:10Z",
+   "step": "4 H-yerin-han tx",
+   "set": "H-yerin-han",
+   "window": "2026-10-21T07:04:27.362109Z 之後",
+   "soul_v2_rows": [
+    {
+     "at": "2026-10-21T07:08:16.694715Z",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": [],
+   "other_rows_in_window": "無",
+   "soul2_jobs_in_window": 1,
+   "attribution": "依時窗及唯一任務推定",
+   "charge_vs_quote": "等於 0.12",
+   "cumulative": 0.48
+  },
+  {
+   "t": "2026-10-21T07:09:10Z",
+   "step": "5 H-jia-seo intent",
+   "set": "H-jia-seo",
+   "order": 5,
+   "settings": {
+    "model": "soul_2",
+    "soul": "jia-seo",
+    "quality": "2k",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "c5e6c1db1dcfea455632fe84764f6c463a0756b6e60b076c97d218b92762f761",
+   "tx_boundary": {
+    "newest_row": "2026-10-21T07:08:16.694715Z Higgsfield Soul V2 -0.12 spend（本批 H-Yerin）"
+   },
+   "inflight_soul2_jobs": 0
+  },
+  {
+   "t": "2026-10-21T07:24:05Z",
+   "step": "5 H-jia-seo restart-check",
+   "set": "H-jia-seo",
+   "note": "執行環境重啟；送出前確認沒有重複提交：最後紀錄是提交意圖，沒有工作 ID；帳號生成紀錄在 H-Yerin（07:08:16Z）之後沒有任何 soul_2 任務；交易在 07:08:16Z 之後沒有 Soul V2 列。",
+   "tx_boundary": {
+    "newest_row": "2026-10-21T07:23:21.799570Z Seedream 4.5 -1 spend（他人、非 Soul V2）",
+    "soul_v2_after_yerin": 0
+   },
+   "inflight_soul2_jobs": 0,
+   "inflight_other": "seedream_v4_5 ×1 進行中（他人）"
+  },
+  {
+   "t": "2026-10-21T07:29:37Z",
+   "step": "5 H-jia-seo submitted",
+   "set": "H-jia-seo",
+   "job_id": "82a3ffc3-ec4b-42fe-8342-013512d5196f",
+   "response": "pending",
+   "model_echo": "text2image_soul_v2",
+   "soul_echo": "jia-seo-soul-v1-5img-20260904",
+   "quality_echo": "2k",
+   "aspect_echo": "16:9",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   }
+  },
+  {
+   "t": "2026-10-21T07:30:21Z",
+   "step": "5 H-jia-seo terminal",
+   "set": "H-jia-seo",
+   "job_id": "82a3ffc3-ec4b-42fe-8342-013512d5196f",
+   "status": "completed",
+   "polls": 2,
+   "px": [
+    2048,
+    1152
+   ],
+   "downloaded_to": "kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+   "bytes": 3055137,
+   "sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431",
+   "png_text": [
+    "hf-job-id"
+   ],
+   "job_meta": {
+    "quality_field": "1080p",
+    "style": "General（後台預設）",
+    "seed": 909933,
+    "width": 2048,
+    "height": 1152
+   }
+  },
+  {
+   "t": "2026-10-21T07:30:21Z",
+   "step": "5 H-jia-seo tx",
+   "set": "H-jia-seo",
+   "window": "2026-10-21T07:23:21.799570Z 之後",
+   "soul_v2_rows": [
+    {
+     "at": "2026-10-21T07:29:31.883249Z",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": [],
+   "other_rows_in_window": "Seedream 4.5 -1（07:27:53Z，他人、非 Soul V2）",
+   "soul2_jobs_in_window": 1,
+   "other_jobs_in_window": "seedream_v4_5（他人）",
+   "attribution": "依時窗及唯一任務推定",
+   "charge_vs_quote": "等於 0.12",
+   "cumulative": 0.6,
+   "note": "送出前因環境重啟延後；已先確認沒有重複提交"
+  },
+  {
+   "t": "2026-10-21T07:30:21Z",
+   "step": "batch done",
+   "requests": 5,
+   "completed": 5,
+   "failed": 0,
+   "retries": 0,
+   "charged_total": 0.6,
+   "budget": 0.6,
+   "last_terminal": "2026-10-21T07:29:31Z",
+   "late_recheck_due": "2026-10-21T07:44:31Z"
+  },
+  {
+   "t": "2026-10-21T07:46:02Z",
+   "step": "late recheck",
+   "due_after": "2026-10-21T07:45:21Z（第 5 張終態紀錄 07:30:21Z＋15 分鐘；扣款列 07:29:31Z＋15 分鐘＝07:44:31Z）",
+   "queried": "transactions size 20＋cursor 20 size 40（涵蓋到 2026-10-20）；show_generations only_completed false type image size 20（只核對模型、狀態、時間與工作 ID 是否為本批；不開啟作品，不記他人內容）",
+   "window": "2026-10-21T06:53:18.294078Z（送出前邊界）之後到 07:45:07.452821Z（最新一列）",
+   "soul_v2_rows_in_batch_window": [
+    {
+     "at": "2026-10-21T06:59:20.966716Z",
+     "credits": -0.12,
+     "set": "V-tammy-chou"
+    },
+    {
+     "at": "2026-10-21T07:00:57.479119Z",
+     "credits": -0.12,
+     "set": "V-rin-ayase"
+    },
+    {
+     "at": "2026-10-21T07:04:27.362109Z",
+     "credits": -0.12,
+     "set": "V-somi-oh"
+    },
+    {
+     "at": "2026-10-21T07:08:16.694715Z",
+     "credits": -0.12,
+     "set": "H-yerin-han"
+    },
+    {
+     "at": "2026-10-21T07:29:31.883249Z",
+     "credits": -0.12,
+     "set": "H-jia-seo"
+    }
+   ],
+   "soul_v2_refunds": [],
+   "late_charges_for_batch": 0,
+   "after_batch": {
+    "row": "2026-10-21T07:43:51.743282Z Higgsfield Soul V2 -0.12 spend",
+    "matched_job": "帳號上另一個 soul_2 任務，建立於 07:43:51Z，已完成；工作 ID 不是本批 5 個之一；它以帳號上他人的圖片作為參考（只看中繼資料）",
+    "ours": false,
+    "why": "本批最後一次送出是 07:29:37Z、之後沒有任何提交；這一列在本批 5 個時窗都結束之後，對應的是另一個任務",
+    "same_burst": "07:43:52–07:44:45Z 同時有 Nano Banana 2、Kling O1、Seedream 5.0 Lite/Flash/Pro、Grok Image/2.0、Ideogram 4.5、FLUX 3、Flux Kontext、FLUX.2 Pro 等他人扣款與部分退款"
+   },
+   "batch_net": 0.6,
+   "batch_refunds": 0,
+   "attribution": "5 列都依時窗及唯一任務推定，歸屬不變；07:43:51Z 那列判定不屬本批（依時間與任務 ID）",
+   "anomaly": "本批沒有異常：沒有遲到扣款、沒有退款、沒有超出報價"
+  }
+ ]
+}

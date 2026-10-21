@@ -1,0 +1,47 @@
+{
+ "note": "M-4 R5 主管結論與整批生成指令（逐字）。授權只限下列 5 套、每套 1 次請求、共最多 5 次、不補送；費用額度 0.60 credits。本檔只在 repo。",
+ "task": "TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖",
+ "received": "2026-10-21T06:53:49Z",
+ "base": {
+  "result": "b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b",
+  "review": "d09975652a751dd17a45d2aaf5c83b4dc4b18f5c"
+ },
+ "scope": {
+  "sets": [
+   "V-tammy-chou",
+   "V-rin-ayase",
+   "V-somi-oh",
+   "H-yerin-han",
+   "H-jia-seo"
+  ],
+  "requests_max": 5,
+  "per_set": 1,
+  "resend": false,
+  "quote_max_each": 0.12,
+  "quote_max_total": 0.6,
+  "budget_credits": 0.6,
+  "count": 1,
+  "model": "soul_2",
+  "quality": "2k",
+  "use_unlim": false,
+  "medias": "none",
+  "style_id": "none"
+ },
+ "rules": [
+  "工具沒有強制扣款上限，不得宣稱平台保證；超出報價的實扣列異常並停止後續請求。",
+  "不把整數顯示值當成實扣，不以餘額差推算。",
+  "退款不增加生成次數或額度。",
+  "逾時或結果不明：先查原任務，未釐清前停止後續提交。",
+  "明確失敗且無扣款或已退款：記錄並繼續下一位，不重送失敗角色。",
+  "成功但照片有瑕疵：保存、驗收並繼續下一位，不自行補生。",
+  "交易異常、超報價或無法排除其他 soul_2 任務造成歸屬混淆時，停止剩餘提交並回報。"
+ ],
+ "prompt_fix": {
+  "set": "V-rin-ayase",
+  "before": "Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees,",
+  "after": "Shot: framed from a little above her head down to her upper shins just below the knees,",
+  "zh": "拍至膝下小腿上段，不切膝關節",
+  "why": "消除文字衝突（knee-up 與膝下上下界）；實際上下界、相機與造型不變；不必再送審"
+ },
+ "verbatim": "TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖\n你是執行者，ChatGPT是主管，Penny是owner。\n【基準】\nRepo：pennyhuang-oss/Virtual_KOL_Studio\n分支：claude/epic-carson-n5w0qu\n固定成果：b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b\n送審：d09975652a751dd17a45d2aaf5c83b4dc4b18f5c\n生成依據：docs/calendar/CAL_21_M4_BATCH1_PREP.md\n資料：docs/calendar/data/cal_m4_batch1_prep.json\n【主管結論與授權】\nR4的5份prompt與設定PASS。\nPenny已要求一次製作5位，主管覆核後即可生成，本指令即整批生成指令。\n不再逐位詢問；本批每位1次、共最多5次請求，不補送。\n名單依序：\nV-tammy-chou、V-rin-ayase、V-somi-oh、H-yerin-han、H-jia-seo。\n費用條件：\n\n* 每張送出前精確報價≤0.12 credits。\n* 本批5張精確報價合計≤0.60 credits。\n* 本輪採0.60 credits作為核准費用額度，不採建議的1 credit餘量。\n* 工具沒有強制扣款上限，不得宣稱平台保證；超出報價的實扣列異常並停止後續請求。\n* 不把整數顯示值當成實扣，不以餘額差推算。\n* 退款不增加生成次數或額度。\n\n【一、送出前小修正】\n只修V-Rin景別用語：\n原：\nShot: a knee-up shot, from a little above her head down to her upper shins just below the knees,\n改：\nShot: framed from a little above her head down to her upper shins just below the knees,\n中文標示同步為「拍至膝下小腿上段，不切膝關節」。\n這是消除文字衝突，實際上下界、相機與造型不變。\n其餘4份prompt照送審版原文，不自行增加身材、姿勢或器材描述。\n保存最終送出文字與差異，不必為這項小修正再送審。\n【二、生成】\n\n* 各自既有Soul，逐一核對角色對應及ready。\n* soul_2、quality 2k、count 1、use_unlim false。\n* 比例依各套：前三張3:4、後兩張16:9。\n* 不掛參考圖、不傳style_id。\n* 依工具當前規則使用存放偏好。\n* 每張保存提交意圖與設定，送出後保存工作ID，避免中斷重複提交。\n* 依序：送一次→原任務到終態→取回原圖→查交易→下一位。\n* 同一輪完成5位，不需要每張都先等主管或owner看圖。\n\n不自動重試：\n\n* 逾時或結果不明：先查原任務，未釐清前停止後續提交。\n* 明確失敗且無扣款或已退款：記錄並繼續下一位，不重送失敗角色。\n* 成功但照片有瑕疵：保存、驗收並繼續下一位，不自行補生。\n\n交易異常、超報價或無法排除其他soul_2任務造成歸屬混淆時，停止剩餘提交並回報。\n帳號任務只讀必要中繼資料，不開啟他人作品。\n【三、驗收】\n逐張實際看圖，記錄：\n身分與髮色髮型、身材呈現、服裝、手腳結構、表情視線、場景、光線、構圖與質感。\n不從照片宣稱量測出精確三圍或罩杯。\n重點：\n\n* Tammy：包與提把、雙手、暖光膚色。\n* Rin：側臉辨識、扶柱手、開衩、膝下裁切。\n* Somi：抬眼五官、接雪手、大衣敞開、靴底完整。\n* Yerin：坐姿腿部、雙腳、帽簷陰影、球車。\n* Jia：側臉、交疊腿、露肩背與腰線、逆光臉部。\n\n記錄實際像素及套框有效ppi：\nV 120×160 mm；H 192×104 mm。\n橫式若約271 ppi，照實列低於300 ppi工作目標，不因此自行重生、放大補像素或宣稱印刷失敗。\n交易標示「依時窗及唯一任務推定」；無法唯一歸屬則明寫。\n最後一個已提交任務終態後15分鐘，複查整批扣款與退款。\n【四、Railway直接審圖】\n生成後將本批可用結果加入既有shoot.html，不讓Penny跳GitHub。\n沿用已授權的公開展示方式，公開副本移除工作ID等中繼資料，保留私有原檔。\n主頁保持精簡：\n\n* 簡短進度與5位導覽。\n* 一次只展示一位：照片、大圖、下載、工作套框、必要驗收提醒與接受／想修改／備註。\n* 可一次複製本批回饋，未回覆不算接受。\n* 不做5張並排網格或接觸表；遵守既有C-2限制。\n* 完成的Iris移到已接受紀錄，不再要求回覆。\n* 回饋使用本批與各照片獨立識別鍵，不覆蓋舊資料。\n* 不將prompt、交易明細與長報告堆到主頁。\n* 實扣與工作ID留在私有紀錄。\n\n【五、驗證與交付】\n只做相關產生器--check及桌機／390px必要驗證：\n切換角色、圖片、大圖、下載、回饋保存與整批複製、舊資料保留、公開副本無私有ID。\n只部署cal2027-decision；不改其他service、不新增付費服務、不合併main、不開PR。\n最終報告第一行：\nTASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖｜送審報告\n先提供直接審圖網址，再提供：\n固定成果SHA、送審SHA、各角色請求及結果、最終prompt紀錄、原圖路徑、驗收、實際像素與ppi、逐筆扣款／退款及歸屬層級、部署與驗證。\n不論照片是否通過，本批最多5次請求後停止，不自行擴大製作。"
+}
