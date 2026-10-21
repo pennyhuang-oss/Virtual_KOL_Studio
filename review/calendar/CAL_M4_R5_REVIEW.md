@@ -1,9 +1,9 @@
-TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖｜送審報告
+TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 
 # M-4 R5 送審紀錄
 
-- **直接審圖網址**：https://cal2027-decision-production.up.railway.app/shoot.html
-- **固定成果 SHA**：`a95e52feb0858f28de7ffbd6a105215d8f961f87`（原圖與私有紀錄 `b7784f697883b99c28aaf85b9c36c2c3b3415415`；基準：成果 `b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b`、送審 `d09975652a751dd17a45d2aaf5c83b4dc4b18f5c`）
+- **選片頁網址**：https://cal2027-decision-production.up.railway.app/shoot.html（**尚未更新**：Railway 平台暫停建置，線上仍是上一版 `b5cbe1c`，見 §6）
+- **待部署成果 SHA**：`f04bc3d06c28ece44983f2f7ddd740021c33aa33`（選片頁；照片固定成果 `a95e52feb0858f28de7ffbd6a105215d8f961f87`；原圖與私有紀錄 `b7784f697883b99c28aaf85b9c36c2c3b3415415`；基準：成果 `b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b`、送審 `d09975652a751dd17a45d2aaf5c83b4dc4b18f5c`）
 - **集中紀錄**：`docs/calendar/CAL_22_M4_BATCH1_RESULTS.md`（最終送出文字、差異、驗收、像素與 ppi、逐筆扣款）。資料：`docs/calendar/data/cal_m4_batch1_run.json`；主管指令逐字：`docs/calendar/data/cal_m4_auth_r5.json`；私有執行紀錄（含工作 ID）：`review/calendar/m4_r5/execution_log.json`。
 - 以下是執行者自測，不是主管覆核；部署不等於核准；照片接受與否由 Penny 在審圖頁決定。
 
@@ -62,4 +62,25 @@ TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖｜送審報�
 
 ## 6. 部署與驗證
 
-（部署後填寫）
+**狀態：未部署成功。** 只更新 `cal2027-decision`，5 次部署呼叫都被 Railway 拒絕，錯誤訊息相同：`Deploys have been paused temporarily`。
+
+| # | 時間（UTC，約） | 部署來源 | 結果 |
+|---|---|---|---|
+| 1 | 07:59 | `a95e52f` | 拒絕：Deploys have been paused temporarily |
+| 2 | 08:11 | `a95e52f` | 同上 |
+| 3 | 08:13 | `a95e52f` | 同上 |
+| 4 | 08:41 | `f04bc3d` | 同上 |
+| 5 | 09:01 | `f04bc3d` | 同上（之前有限等待 20 分鐘，每 2 分鐘看一次狀態頁，仍未恢復） |
+
+- 平台狀態：status.railway.com「Builds are temporarily paused — Partial Outage」，Builds（US West、EU West、Southeast Asia、US East）、API、Support 都列為受影響；07:24 UTC 開始調查，08:28 UTC 更新「後端也有問題，仍在調查」。不是本專案設定或程式錯誤。
+- Railway 狀態查詢（09:0x）：`cal2027-decision` 最新部署仍是 `8116b9c3-578b-424d-baee-5da6500ce147`（SUCCESS，`b5cbe1c`），沒有排隊中的工作；其他 service 沒有動。線上 `shoot.html` 的 page-commit 是 `b5cbe1c`。
+- 沒有改存取設定、沒有新增登入或付費服務、沒有另做替代網站。
+- **已完成（本機，Claude 自測）**：`--check` 兩個產生器 PASS（網站 671 檔，公開檔無私有識別碼、無交易原始資料）；本機桌機與 390px 定向驗證 80/80（`m4_r5/local_m4r5_tests.tsv`）；部署前保留測試（線上 `b5cbe1c`）6/6（`m4_r5/upgrade_predeploy_b5cbe1c.tsv`）；kol-catalog 首頁與存檔相同（44,801 bytes）。
+- **f04bc3d 相對 a95e52f 的差異**：「複製本批回饋」第一行加上照片版本（M-4 R5 第一批 5 張，照片固定成果 a95e52f），合計行明列「已回覆 n／5、未回覆 m」。照片、回饋鍵與已存回饋都不變。
+
+**接續步驟（Railway 恢復後）：**
+
+1. `connect-service-source`（project `d8312837-74c9-40b0-99fc-08cbf0b3faf5`、service `06e24e36-80db-4a26-a02f-51c42ae8722e`、commitSha `f04bc3d06c28ece44983f2f7ddd740021c33aa33`）。
+2. 等線上 `shoot.html` 的 page-commit 變成 `f04bc3d`，`list-deployments` 記下 deployment ID 與狀態。
+3. 線上驗收：5 張照片實際載入（naturalWidth）、放大與原尺寸、接受／想修改與備註、重新整理保留、複製內容與畫面一致、桌機與 390px 無水平溢出、舊資料不變（同一測試設定檔）、公開檔無私有 ID。
+4. 更新本節與送審報告。
