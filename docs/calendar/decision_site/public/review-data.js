@@ -35,6 +35,7 @@ window.CAL_REVIEW = {
   "id": "batch1-m4r5",
   "key_prefix": "cal2027-batch1-v1:",
   "made": "M-4 R5 生成，每位 1 張；沒有修圖、沒有重生。",
+  "photo_version": "M-4 R5 第一批 5 張（照片固定成果 a95e52f）",
   "photos": [
    {
     "book": "直式",

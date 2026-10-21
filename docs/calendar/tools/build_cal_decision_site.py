@@ -538,6 +538,7 @@ def build_review():
     B = R['batch']
     assert R['round'] == 'M-4 R5' and [p['set'] for p in B['photos']] == BATCH1_SETS and B['key_prefix'] == 'cal2027-batch1-v1:'
     assert all(p['key'] == B['key_prefix'] + p['set'] and 1 <= len(p['checks']) <= 5 for p in B['photos']), '回饋鍵一張一個；看圖提醒精簡'
+    assert B['photo_version'].startswith('M-4 R5 第一批 5 張'), '複製的回饋要帶照片版本'
     assert [a['set'] for a in R['accepted']] == ['V-iris-chen'] and '不需回覆' in R['accepted'][0]['v'] and '不是印刷核准' in B['frame_label']
     assert 'feedback' not in R and 'photo' not in R and 'next' not in R
     os.makedirs(REVIEW_DIR, exist_ok=True)

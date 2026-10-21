@@ -108,8 +108,8 @@ ${ACC.map((a, i) => `<p class="td-h"><b>${esc(a.title)}</b>｜<b class="rv-lbl o
       const head = `${i + 1}. ${p.name}｜${p.set}｜${p.month}${p.book}：${f.v ? CHOICE[f.v] : '未回覆（不算接受）'}`;
       return f.note.trim() ? `${head}\n   備註：${f.note.trim().replace(/\s*\n\s*/g, '／')}` : head;
     });
-    const head = `${R.task}｜${B.title} Penny 回饋（頁面版本 ${PAGE_COMMIT ? PAGE_COMMIT.slice(0, 7) : '本機預覽'}）`;
-    return { n, text: [head, ...lines, `合計：接受 ${n.accept}、想修改 ${n.edit}、未回覆 ${n.none}（未回覆不算接受）。`].join('\n') };
+    const head = `${R.task}｜${B.title} Penny 回饋（頁面版本 ${PAGE_COMMIT ? PAGE_COMMIT.slice(0, 7) : '本機預覽'}；照片版本 ${B.photo_version}）`;
+    return { n, text: [head, ...lines, `合計：已回覆 ${n.accept + n.edit}／${PH.length}、未回覆 ${n.none}（接受 ${n.accept}、想修改 ${n.edit}；未回覆不算接受）。`].join('\n') };
   }
   function updateCopy() {
     const { n, text } = batchText();
