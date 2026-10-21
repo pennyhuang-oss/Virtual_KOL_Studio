@@ -2,7 +2,7 @@ TASK-CAL-001／M-4／R4｜V-Iris 首試準備、首試前核查、單張首試�
 
 # CAL_20 — V-Iris 首試準備、首試前核查與單張首試（M-4）
 
-> 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v10，M-4 R4）的 `m4_prep` 與 `V-iris-chen`。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
+> 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v11，M-4 R5）的 `m4_prep` 與 `V-iris-chen`。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
 > **M-4 R2：依 Penny 授權生成 V-Iris 首試 1 張（只送一次），結果待主管覆核；照片不放公開頁。準備文件、首張驗收條件與 M-4 R1 的核查仍適用；這不是印刷驗收。**
 > R7：生成 0、credits 0、Higgsfield 呼叫 0、報價預檢 0。
 > M-4 R2：生成請求 1、圖片 1、重送 0、實扣 0.12 credits（依時窗及唯一任務推定）、訓練 0、上傳 0。

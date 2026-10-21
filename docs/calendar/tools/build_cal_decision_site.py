@@ -17,6 +17,7 @@
 - M-4 R3 目前檢視頁（shoot.html；data/cal_review_current.json，人寫，從工作目錄讀）：V-Iris 首試照片（主管同意公開）——原圖 PNG 只移除
   文字中繼資料區塊（含工作識別碼）、顯示版等比縮小、套框預覽位元組不變；來源 commit 與 sha256 記在資料檔。M-4 R4：Penny 接受這張（含反光板），
   主頁標「已接受」、拿掉回饋題與反光板裁切；完成的檢視項目（data/cal_review_history.json）放進 data.js 給歷史頁只讀顯示。
+  M-4 R5：第一批 5 張（一次看一位；原圖去文字區塊、顯示版、套框預覽位元組不變），V-Iris 移到「已接受紀錄」（只留原圖與顯示版）。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
 輸出：docs/calendar/decision_site/public/img/{z,t,review}/、public/data.js、public/review-data.js、decision_site/ASSET_MANIFEST.json
@@ -318,11 +319,11 @@ def build_m3(mat):
     P = json.loads(raw)
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
-    assert P['counts'] == {'generated': 1, 'credits': 0.12, 'trainings': 0}, 'M-4 R2 只授權生成 1 張；M-4 R4 只準備、不生成'
-    assert P['version'] == 'shoot-plan-v10' and P['revision']['from_version'] == 'shoot-plan-v9'
-    PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板），直接採用；下一批 5 位只準備
-    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['generated'], PR['accepted'], PR['remaining']) == (1, 1, 23)
-    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'prepared-pending-supervisor-review' and len(P['batch1']['sets']) == 5
+    assert P['counts'] == {'generated': 6, 'credits': 0.72, 'trainings': 0}, 'M-4 R2 生成 1 張；M-4 R5 第一批 5 張（每位 1 次請求）'
+    assert P['version'] == 'shoot-plan-v11' and P['revision']['from_version'] == 'shoot-plan-v10'
+    PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板）；M-4 R5：第一批 5 位已生成，待 Penny 看圖
+    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['generated'], PR['accepted'], PR['pending_owner_review'], PR['remaining']) == (6, 1, 5, 18)
+    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'generated-pending-owner-review' and P['batch1']['sets'] == PR['pending_sets'] == BATCH1_SETS
     acc, ver = P['status']['accepted'], P['status']['supervisor_verified']
     assert P['status']['m3'] == 'complete' and len(acc) == 23 and ver == ['H-luna-tanaka'] and not P['status']['revised'], 'M-4 R1 狀態不對'
     assert sorted(acc + ver) == sorted(x['id'] for x in P['sets'])
@@ -397,7 +398,7 @@ def build_m3(mat):
     assert not TX_RAW.search(text), f'公開資料出現交易原始資料：{TX_RAW.search(text).group(0)}'
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
             P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit'], P['m4r1']['from_commit'],
-            P['m4r2']['from_commit'], P['m4r4']['from_commit']}
+            P['m4r2']['from_commit'], P['m4r4']['from_commit'], P['m4r5']['from_commit']}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
@@ -467,9 +468,8 @@ def review_src(s):
     return b
 
 
-def review_outputs(R):
-    """回傳 [(檔名, 位元組, manifest 欄位)]；產生與 --check 共用。"""
-    ph, fr = R['photo'], R['frame']
+def review_png(ph, name):
+    """原圖 PNG 只移除文字中繼資料區塊；回傳 (公開檔名, 位元組, manifest 欄位, 顯示版)。"""
     png = review_src(ph['src'])
     clean, removed = png_strip_text(png)
     assert removed == ['tEXt'], removed
@@ -478,28 +478,42 @@ def review_outputs(R):
     assert idat(clean) == idat(png) and list(a.size) == ph['px'] and a.tobytes() == c.tobytes() and not c.info, '去中繼資料後影像不同'
     view, _ = hires_bytes(png)
     vim = Image.open(io.BytesIO(view))
-    src = lambda s: {'source': f'{s["commit"]}:{s["path"]}', 'source_sha256': s['sha256']}
-    pre = ph['set'] + '_m4r2_'
+    src = {'source': f'{ph["src"]["commit"]}:{ph["src"]["path"]}', 'source_sha256': ph['src']['sha256']}
     return [
-        (pre + 'first_test.png', clean, {'kind': 'review_png', **src(ph['src']),
+        (name + '.png', clean, {'kind': 'review_png', 'set': ph['set'], **src,
             'op': f'只移除文字中繼資料區塊 {"、".join(removed)}（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同'}),
-        (pre + 'view.jpg', view, {'kind': 'review_preview', **src(ph['src']),
+        (name + '_view.jpg', view, {'kind': 'review_preview', 'set': ph['set'], **src,
             'op': f'原圖 {a.width}×{a.height} 等比縮小至 {vim.width}×{vim.height}（Lanczos，JPEG q88，不帶中繼資料）'}),
-        (pre + 'frame_V_120x160.jpg', review_src(fr['src']), {'kind': 'review_copy', **src(fr['src']), 'op': '位元組不變複製'}),
     ]
 
 
+def review_outputs(R):
+    """回傳 [(檔名, 位元組, manifest 欄位)]；產生與 --check 共用。
+    M-4 R5：第一批 5 張（原圖去文字區塊、顯示版、套框預覽位元組不變）＋已接受紀錄的 V-Iris（沿用 M-4 R3 起的公開檔名）。"""
+    out = []
+    for ph in R['batch']['photos']:
+        out += review_png(ph, ph['set'] + '_m4r5')
+        fr = ph['frame_src']
+        out.append((os.path.basename(fr['path']), review_src(fr), {'kind': 'review_copy', 'set': ph['set'],
+                    'source': f'{fr["commit"]}:{fr["path"]}', 'source_sha256': fr['sha256'], 'op': '位元組不變複製'}))
+    for a in R['accepted']:
+        out += [(n.replace('_m4r2.png', '_m4r2_first_test.png'), d, m) for n, d, m in review_png(a, a['set'] + '_m4r2')]
+    return out
+
+
 def public_secrets():
-    """不能出現在任何公開檔的字串：Iris 的 Soul ID、首試工作 ID（私有執行紀錄與原圖文字區塊）。只在記憶體比對，不輸出。"""
-    prof = json.loads(wt_bytes('kols/iris-chen/profile.json'))
-    out = {prof['ai_assets']['training_images_v1']['soul_training']['soul_id']}
-    out |= set(re.findall(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', wt_bytes('review/calendar/m4_r2/execution_log.json').decode()))
+    """不能出現在任何公開檔的字串：Iris 與第一批 5 位的 Soul ID、首試與第一批的工作 ID（私有執行紀錄與原圖文字區塊）。只在記憶體比對，不輸出。"""
     R = json.loads(wt_bytes(REVIEW_FILE))
-    png = review_src(R['photo']['src'])
-    for t, c in png_chunks(png):
-        if t in PNG_TEXT:
-            out.add(c[8:-4].split(b'\0', 1)[1].decode('latin-1'))
-    assert len(out) >= 2 and all(len(x) >= 32 for x in out)
+    out = set()
+    for pid in ['iris-chen'] + [ph['src']['path'].split('/')[1] for ph in R['batch']['photos']]:
+        out.add(json.loads(wt_bytes(f'kols/{pid}/profile.json'))['ai_assets']['training_images_v1']['soul_training']['soul_id'])
+    for log in ('review/calendar/m4_r2/execution_log.json', 'review/calendar/m4_r5/execution_log.json'):
+        out |= set(re.findall(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', wt_bytes(log).decode()))
+    for ph in R['batch']['photos'] + R['accepted']:
+        for t, c in png_chunks(review_src(ph['src'])):
+            if t in PNG_TEXT:
+                out.add(c[8:-4].split(b'\0', 1)[1].decode('latin-1'))
+    assert len(out) >= 12 and all(len(x) >= 32 for x in out)
     return out
 
 
@@ -515,11 +529,17 @@ def scan_public(secrets):
     return hits
 
 
+BATCH1_SETS = ['V-tammy-chou', 'V-rin-ayase', 'V-somi-oh', 'H-yerin-han', 'H-jia-seo']
+
+
 def build_review():
     raw = wt_bytes(REVIEW_FILE)
     R = json.loads(raw)
-    assert R['round'] == 'M-4 R4' and R['photo']['status'] == 'accepted' and R['photo']['label'] == '已接受（Penny）' and '不是印刷核准' in R['frame']['label']
-    assert R['next']['state'] == '準備中，待主管覆核' and len(R['next']['sets']) == 5 and 'feedback' not in R and 'pending' not in R, '主頁只留已接受的照片與下一批狀態，不放回饋題'
+    B = R['batch']
+    assert R['round'] == 'M-4 R5' and [p['set'] for p in B['photos']] == BATCH1_SETS and B['key_prefix'] == 'cal2027-batch1-v1:'
+    assert all(p['key'] == B['key_prefix'] + p['set'] and 1 <= len(p['checks']) <= 5 for p in B['photos']), '回饋鍵一張一個；看圖提醒精簡'
+    assert [a['set'] for a in R['accepted']] == ['V-iris-chen'] and '不需回覆' in R['accepted'][0]['v'] and '不是印刷核准' in B['frame_label']
+    assert 'feedback' not in R and 'photo' not in R and 'next' not in R
     os.makedirs(REVIEW_DIR, exist_ok=True)
     for fn in os.listdir(REVIEW_DIR):
         os.remove(os.path.join(REVIEW_DIR, fn))
@@ -529,14 +549,17 @@ def build_review():
             f.write(data)
         MANIFEST.append({'published': f'public/img/review/{name}', 'sha256': sha256(data), **meta})
         im = Image.open(io.BytesIO(data))
-        files[meta['kind']] = {'src': f'img/review/{name}', 'w': im.width, 'h': im.height, 'bytes': len(data)}
+        files.setdefault(meta['set'], {})[{'review_png': 'png', 'review_preview': 'view', 'review_copy': 'frame'}[meta['kind']]] = {
+            'src': f'img/review/{name}', 'w': im.width, 'h': im.height, 'bytes': len(data)}
     pub = json.loads(raw)
     pub.pop('note')
-    for x in (pub['photo'], pub['frame']):
+    for x in pub['batch']['photos'] + pub['accepted']:
         x.pop('src')
-    pub['img'] = {'png': files['review_png'], 'view': files['review_preview'], 'frame': files['review_copy']}
+        x.pop('frame_src', None)
+        x['img'] = files[x['set']]
+        assert set(x['img']) == ({'png', 'view', 'frame'} if 'key' in x else {'png', 'view'})
     text = json.dumps(pub, ensure_ascii=False)
-    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易', 'natural skin texture', 'lighting:', 'she wears'):  # 主頁不放長 prompt
+    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易', '扣款', 'natural skin texture', 'lighting:', 'she wears', 'prompt'):  # 主頁不放長 prompt 與費用
         assert bad not in text.lower(), bad
     assert not re.search(r'[0-9a-f]{8,}', text), '檢視頁資料出現疑似 ID'
     return pub

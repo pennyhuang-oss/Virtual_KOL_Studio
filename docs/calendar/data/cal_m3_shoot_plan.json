@@ -1,16 +1,16 @@
 {
  "note": "人寫的 M-3 拍攝企劃（TASK-CAL-001）。R4：8 套已接受、16 套修訂、兩本月份已確認，加上印刷構圖核對；只是規劃——沒有生成任何圖片、沒有花 credits、沒有訓練、沒有改 canon 或 Soul ID。說明見 docs/calendar/CAL_18_M3_SHOOT_PLAN.md。",
- "version": "shoot-plan-v10",
- "round": "M-4 R4",
+ "version": "shoot-plan-v11",
+ "round": "M-4 R5",
  "written_on": "2026-10-21",
  "revision": {
-  "from_version": "shoot-plan-v9",
-  "from_commit": "c6c6d98e93e44837ec9da2bbcd7710e86b4aa932",
-  "summary": "依 M-4 R4 指令：保存 Penny 對 V-Iris 首試的完整回饋（臉、身材、表情、服裝、光線與反光板都接受，照片直接採用），取代主管 M-4 R3「反光板及支架必修」的判定；進度改為 24 套定稿、已生成 1 張、已接受 1 張、其餘 23 套待製作；下一批 5 位的生成準備另存 data/cal_m4_batch1_prep.json（待主管覆核、未生成）。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v10。"
+  "from_version": "shoot-plan-v10",
+  "from_commit": "b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b",
+  "summary": "依 M-4 R5 指令：第一批 5 位（V-tammy-chou、V-rin-ayase、V-somi-oh、H-yerin-han、H-jia-seo）各生成 1 張（5 次請求、0 次重試，實扣 0.60，依時窗及唯一任務推定）；V-Rin 只改景別用語（knee-up → framed from…，實際上下界不變）。照片放上目前檢視頁，一次看一位，待 Penny 接受／想修改。進度改為 24 套定稿、已生成 6、已接受 1、待 Penny 看圖 5、其餘 18 套待製作。結果與驗收在 data/cal_m4_batch1_run.json 與 CAL_22。24 套拍攝內容不變；企劃版本升為 shoot-plan-v11。"
  },
  "meta": {
-  "task": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備",
-  "status": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用（照片 M-4 R3 起放在目前檢視頁）；下一批 5 位只做準備、未生成；沒有上傳、訓練，也沒有改 canon 或 Soul ID",
+  "task": "TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖",
+  "status": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用；M-4 R5 依授權生成第一批 5 位各 1 張（放在目前檢視頁，待 Penny 看圖）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
   "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
   "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
   "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
@@ -456,13 +456,21 @@
   "owner_decisions_open": 0,
   "production": {
    "sets_final": 24,
-   "generated": 1,
+   "generated": 6,
    "accepted": 1,
-   "remaining": 23,
+   "pending_owner_review": 5,
+   "remaining": 18,
    "accepted_sets": [
     "V-iris-chen"
    ],
-   "batch1": "prepared-pending-supervisor-review"
+   "pending_sets": [
+    "V-tammy-chou",
+    "V-rin-ayase",
+    "V-somi-oh",
+    "H-yerin-han",
+    "H-jia-seo"
+   ],
+   "batch1": "generated-pending-owner-review"
   }
  },
  "accepted_notes": {
@@ -5967,8 +5975,8 @@
  "questions": [],
  "ref_note": "參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。既有照片也不是新構圖的成品。",
  "counts": {
-  "generated": 1,
-  "credits": 0.12,
+  "generated": 6,
+  "credits": 0.72,
   "trainings": 0
  },
  "r5": {
@@ -7785,7 +7793,7 @@
    }
   ]
  },
- "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。",
+ "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。",
  "auth_m4r2": {
   "round": "M-4 R2",
   "recorded_on": "2026-10-20",
@@ -7867,7 +7875,7 @@
  "batch1": {
   "file": "docs/calendar/data/cal_m4_batch1_prep.json",
   "doc": "docs/calendar/CAL_21_M4_BATCH1_PREP.md",
-  "status": "prepared-pending-supervisor-review",
+  "status": "generated-pending-owner-review",
   "sets": [
    "V-tammy-chou",
    "V-rin-ayase",
@@ -7875,7 +7883,9 @@
    "H-yerin-han",
    "H-jia-seo"
   ],
-  "note": "Penny 同意下一步採 5 位角色批次製作；5 份 prompt、設定與報價待主管覆核，通過後主管另發整批生成指令。本輪生成 0。"
+  "note": "M-4 R4 準備、主管覆核 PASS；M-4 R5 依整批生成指令每位送 1 次（共 5 次、無重試），5 張都完成，待 Penny 在目前檢視頁逐張接受／想修改。準備內容見 CAL_21；結果、驗收、像素與 ppi、扣款見 CAL_22。",
+  "run": "docs/calendar/data/cal_m4_batch1_run.json",
+  "results_doc": "docs/calendar/CAL_22_M4_BATCH1_RESULTS.md"
  },
  "m4r4": {
   "from_commit": "c6c6d98e93e44837ec9da2bbcd7710e86b4aa932",
@@ -7916,6 +7926,48 @@
     "where": "meta.task",
     "old": "TASK-CAL-001／M-4／R2｜V-Iris單張首試",
     "new": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備"
+   }
+  ]
+ },
+ "m4r5": {
+  "from_commit": "b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b",
+  "summary": "依 M-4 R5 指令：第一批 5 位（V-tammy-chou、V-rin-ayase、V-somi-oh、H-yerin-han、H-jia-seo）各生成 1 張（5 次請求、0 次重試，實扣 0.60，依時窗及唯一任務推定）；V-Rin 只改景別用語（knee-up → framed from…，實際上下界不變）。照片放上目前檢視頁，一次看一位，待 Penny 接受／想修改。進度改為 24 套定稿、已生成 6、已接受 1、待 Penny 看圖 5、其餘 18 套待製作。結果與驗收在 data/cal_m4_batch1_run.json 與 CAL_22。24 套拍攝內容不變；企劃版本升為 shoot-plan-v11。",
+  "changes": [
+   {
+    "kind": "生成",
+    "where": "batch1.status",
+    "old": "prepared-pending-supervisor-review",
+    "new": "generated-pending-owner-review"
+   },
+   {
+    "kind": "生成",
+    "where": "status.production",
+    "old": "{\"sets_final\": 24, \"generated\": 1, \"accepted\": 1, \"remaining\": 23, \"accepted_sets\": [\"V-iris-chen\"], \"batch1\": \"prepared-pending-supervisor-review\"}",
+    "new": "24 套定稿；已生成 6、已接受 1（V-iris-chen）、待 Penny 看圖 5、其餘 18 套待製作"
+   },
+   {
+    "kind": "生成",
+    "where": "counts",
+    "old": "generated 1、credits 0.12",
+    "new": "generated 6、credits 0.72"
+   },
+   {
+    "kind": "用語修正",
+    "where": "V-rin-ayase 送出 prompt（只在 data/cal_m4_batch1_run.json）",
+    "old": "Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees,",
+    "new": "Shot: framed from a little above her head down to her upper shins just below the knees,（中文標示「拍至膝下小腿上段，不切膝關節」）；企劃本文 sets[] 不改"
+   },
+   {
+    "kind": "狀態文字",
+    "where": "meta.task",
+    "old": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備",
+    "new": "TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖"
+   },
+   {
+    "kind": "狀態文字",
+    "where": "meta.status",
+    "old": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用（照片 M-4 R3 起放在目前檢視頁）；下一批 5 位只做準備、未生成；沒有上傳、訓練，也沒有改 canon 或 Soul ID",
+    "new": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用；M-4 R5 依授權生成第一批 5 位各 1 張（放在目前檢視頁，待 Penny 看圖）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID"
    }
   ]
  }

@@ -1,74 +1,203 @@
 {
- "note": "目前檢視頁（shoot.html）的內容，人寫。主頁只放「當前照片＋待決事項」；每輪更新這個檔，完成的項目移到 cal_review_history.json 與歷史頁（history.html），不在主頁追加全文。src 欄位只在 repo，不發佈；公開資料不放 Soul ID、工作 ID、交易原始資料，也不放生成用的長 prompt。",
- "version": "review-current-v2",
- "task": "TASK-CAL-001／M-4／R4｜Iris定案與5位角色批次生成準備",
- "round": "M-4 R4",
+ "note": "目前檢視頁（shoot.html）的內容，人寫。主頁只放「當前要看的照片＋回饋」；每輪更新這個檔，完成的項目移到 cal_review_history.json 與歷史頁（history.html），不在主頁追加全文。src 欄位只在 repo，不發佈；公開資料不放 Soul ID、工作 ID、交易資料，也不放生成用的長 prompt。M-4 R5：第一批 5 位一次看一位；回饋存在 Penny 的瀏覽器，一張一個鍵（cal2027-batch1-v1:<套別>），不覆蓋舊鍵；未回覆不算接受。看圖提醒來自 data/cal_m4_batch1_run.json 的 page_checks（執行者自測，不是主管覆核）。",
+ "version": "review-current-v3",
+ "task": "TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖",
+ "round": "M-4 R5",
  "written_on": "2026-10-21",
- "progress": "24 套企劃定稿；已生成 1 張、已接受 1 張，其餘 23 套待製作。",
- "photo": {
-  "set": "V-iris-chen",
-  "title": "V-Iris｜直式款 9 月｜3:4",
-  "label": "已接受（Penny）",
-  "status": "accepted",
-  "made": "M-4 R2 生成的 1 張。Penny 接受臉、身材、表情、服裝與光線，反光板也接受保留，照片直接採用；不修圖、不重生。",
-  "px": [
-   1536,
-   2048
-  ],
-  "src": {
-   "commit": "32fec1df14071be27858d038b88304eaff67a31a",
-   "path": "kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
-   "sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76"
-  },
-  "download_name": "V-iris-chen_M4_accepted_1536x2048.png",
-  "download_note": "原圖 PNG 1536×2048。檔案內原有一段文字標記（生成平台的工作識別碼）依規定不公開，下載檔只移除這一段；影像資料逐位元組不變，不是修圖。"
- },
- "frame": {
-  "title": "套進直式款工作照片框（120×160 mm）",
-  "label": "工作照片框預覽，不是印刷核准",
-  "note": "本案工作版型的示意：1536×2048 放進 120×160 mm 不裁切，約 325 ppi（300 ppi 是本案工作目標，不是廠商門檻）。不是廠商規格、印刷安全或成品核准。",
-  "src": {
-   "commit": "20b5ee89d0c354362bb2f78bcb4eb4ce23c9b7e3",
-   "path": "review/calendar/m4_r2/frame_preview_V_120x160.jpg",
-   "sha256": "1926d363edd1b97bdd4af38c950f2eb2b27cd3eea4c1945873f64f7177fa35dd"
-  }
- },
- "next": {
-  "k": "下一批 5 位角色",
-  "state": "準備中，待主管覆核",
-  "v": "每位一張、共 5 張。prompt、設定與費用由主管覆核，通過後才生成；你不需要回覆。",
-  "sets": [
-   [
-    "Tammy",
-    "1 月",
-    "直式"
-   ],
-   [
-    "Rin",
-    "10 月",
-    "直式"
-   ],
-   [
-    "Somi",
-    "12 月",
-    "直式"
-   ],
-   [
-    "Yerin",
-    "5 月",
-    "橫式"
-   ],
-   [
-    "Jia",
-    "9 月",
-    "橫式"
-   ]
+ "progress": "第一批 5 位已生成（每位 1 張），請一張一張看：接受、想修改或寫備註。全案 24 套：已生成 6 張（已接受 1、待你看 5），其餘 18 套待製作。",
+ "batch": {
+  "id": "batch1-m4r5",
+  "title": "第一批 5 位",
+  "key_prefix": "cal2027-batch1-v1:",
+  "made": "M-4 R5 生成，每位 1 張；沒有修圖、沒有重生。",
+  "download_note": "原圖 PNG。檔案內原有一段文字標記（生成平台的工作識別碼）依規定不公開，下載檔只移除這一段；影像資料逐位元組不變，不是修圖。",
+  "checks_note": "這是執行者看圖時注意到、和企劃不同或需要你判斷的地方（不是主管覆核）；接不接受由你決定。",
+  "frame_label": "工作照片框預覽，不是印刷核准",
+  "copy_note": "看完後按「複製本批回饋」，把文字貼給主管。未回覆的照片不算接受；回饋只存在這台裝置的瀏覽器，不會自動送出。",
+  "photos": [
+   {
+    "set": "V-tammy-chou",
+    "name": "Tammy",
+    "month": "1 月",
+    "book": "直式",
+    "ratio": "3:4",
+    "title": "Tammy｜直式款 1 月｜3:4",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+     "sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9"
+    },
+    "download_name": "V-tammy-chou_M4R5_1536x2048.png",
+    "frame_title": "套進直式款工作照片框（120×160 mm）",
+    "frame_note": "1536×2048 放進 120×160 mm 不裁切，約 325 ppi（300 ppi 是本案工作目標，不是廠商門檻）。紅色虛線是髮頂 4%、腳底 3% 的工作留白參考。",
+    "frame_src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "review/calendar/m4_r5/V-tammy-chou_m4r5_frame_V_120x160.jpg",
+     "sha256": "123ee1a0429189aafc28b58ce6c8188bbdb7ee1e8ccd8c70b888def0c85b5f44"
+    },
+    "checks": [
+     "手提包外型接近某個精品經典款（沒有標誌），企劃寫的是「不仿特定品牌」。",
+     "深 V 開得比企劃低，露出較多；遮蔽完整。",
+     "畫面比企劃鬆：下緣到小腿（企劃大腿中段）、頭上留白較多。",
+     "花旁有一張帶模糊字樣的小立牌。"
+    ],
+    "key": "cal2027-batch1-v1:V-tammy-chou"
+   },
+   {
+    "set": "V-rin-ayase",
+    "name": "Rin",
+    "month": "10 月",
+    "book": "直式",
+    "ratio": "3:4",
+    "title": "Rin｜直式款 10 月｜3:4",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+     "sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4"
+    },
+    "download_name": "V-rin-ayase_M4R5_1536x2048.png",
+    "frame_title": "套進直式款工作照片框（120×160 mm）",
+    "frame_note": "1536×2048 放進 120×160 mm 不裁切，約 325 ppi（300 ppi 是本案工作目標，不是廠商門檻）。紅色虛線是髮頂 4%、腳底 3% 的工作留白參考。",
+    "frame_src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "review/calendar/m4_r5/V-rin-ayase_m4r5_frame_V_120x160.jpg",
+     "sha256": "2311e5c3caa860c420c9bac775b9eb1bb2c4f6174ef275c24078bcd5f991d0c3"
+    },
+    "checks": [
+     "她看鏡頭；企劃是三分之二側臉、看港口。",
+     "拍成全身赤腳；企劃是裁在膝下小腿上段。",
+     "頭髮是肩前低馬尾；企劃是低髮髻。",
+     "開衩到大腿上段，遮蔽完整；站位離碼頭邊不遠。"
+    ],
+    "key": "cal2027-batch1-v1:V-rin-ayase"
+   },
+   {
+    "set": "V-somi-oh",
+    "name": "Somi",
+    "month": "12 月",
+    "book": "直式",
+    "ratio": "3:4",
+    "title": "Somi｜直式款 12 月｜3:4",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+     "sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561"
+    },
+    "download_name": "V-somi-oh_M4R5_1536x2048.png",
+    "frame_title": "套進直式款工作照片框（120×160 mm）",
+    "frame_note": "1536×2048 放進 120×160 mm 不裁切，約 325 ppi（300 ppi 是本案工作目標，不是廠商門檻）。紅色虛線是髮頂 4%、腳底 3% 的工作留白參考。",
+    "frame_src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "review/calendar/m4_r5/V-somi-oh_m4r5_frame_V_120x160.jpg",
+     "sha256": "6f3d72e23642f37f3eedb52090f739cbccb02a309814b4558191911313428723"
+    },
+    "checks": [
+     "右腳靴子的鞋頭超出照片下緣，靴底不完整。",
+     "燈籠和招牌上出現字樣，路旁有交通標誌與電線。",
+     "天色偏傍晚，不是企劃的冬夜。",
+     "眼睛睜開、接雪的手沒有遮臉、大衣敞開。"
+    ],
+    "key": "cal2027-batch1-v1:V-somi-oh"
+   },
+   {
+    "set": "H-yerin-han",
+    "name": "Yerin",
+    "month": "5 月",
+    "book": "橫式",
+    "ratio": "16:9",
+    "title": "Yerin｜橫式款 5 月｜16:9",
+    "px": [
+     2048,
+     1152
+    ],
+    "src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+     "sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a"
+    },
+    "download_name": "H-yerin-han_M4R5_2048x1152.png",
+    "frame_title": "套進橫式款工作照片框（192×104 mm）",
+    "frame_note": "2048×1152 放進 192×104 mm，約 271 ppi，低於本案 300 ppi 工作目標（照實列出，不重生、不放大，也不代表不能印）。帽頂太靠上緣，所以多出的 4 mm 全部從下緣裁（框外半透明部分）。",
+    "frame_src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "review/calendar/m4_r5/H-yerin-han_m4r5_frame_H_192x104.jpg",
+     "sha256": "f4d2fe7630a5d3e906e8faf3a9fcbe11ff5ffd549b3b85c43cfe2d8d30d90fae"
+    },
+    "checks": [
+     "雙腳放在球車踏板上；企劃是腿伸出車外、腳踝交叉點地。",
+     "帽頂離照片上緣很近，套框時 4 mm 全部從下緣裁。",
+     "樹多半沒有葉子，季節像冬末，不像春天。",
+     "球車車身有一個看不出字的小徽章。"
+    ],
+    "key": "cal2027-batch1-v1:H-yerin-han"
+   },
+   {
+    "set": "H-jia-seo",
+    "name": "Jia",
+    "month": "9 月",
+    "book": "橫式",
+    "ratio": "16:9",
+    "title": "Jia｜橫式款 9 月｜16:9",
+    "px": [
+     2048,
+     1152
+    ],
+    "src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+     "sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431"
+    },
+    "download_name": "H-jia-seo_M4R5_2048x1152.png",
+    "frame_title": "套進橫式款工作照片框（192×104 mm）",
+    "frame_note": "2048×1152 放進 192×104 mm，約 271 ppi，低於本案 300 ppi 工作目標（照實列出，不重生、不放大，也不代表不能印）。頭頂和鞋底都很靠邊：上緣裁約 3.2 mm、下緣裁約 0.8 mm，兩邊都沒切到，但各只剩約 1 mm。",
+    "frame_src": {
+     "commit": "b7784f697883b99c28aaf85b9c36c2c3b3415415",
+     "path": "review/calendar/m4_r5/H-jia-seo_m4r5_frame_H_192x104.jpg",
+     "sha256": "d25a61904ef604698f81f7a6dab3b951444570244dccbf7e16dc3b972090fc40"
+    },
+    "checks": [
+     "她回頭看鏡頭；企劃是三分之二側臉、看湖面。",
+     "雙手都放在膝上；企劃是一手搭在椅背。",
+     "臉清楚，但沒有身後低角度的逆光輪廓。",
+     "上下都很緊：套進照片框後頭頂與鞋底各只剩約 1 mm。"
+    ],
+    "key": "cal2027-batch1-v1:H-jia-seo"
+   }
   ]
  },
- "owner_action": "目前沒有需要你回覆的事。",
+ "accepted": [
+  {
+   "set": "V-iris-chen",
+   "title": "V-Iris｜直式款 9 月｜3:4",
+   "label": "已接受（Penny，M-4 R4）",
+   "v": "不需回覆。",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "32fec1df14071be27858d038b88304eaff67a31a",
+    "path": "kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+    "sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76"
+   },
+   "download_name": "V-iris-chen_M4_accepted_1536x2048.png"
+  }
+ ],
  "history": {
   "href": "history.html",
   "label": "已定稿企劃／歷史紀錄",
-  "v": "24 套企劃、兩本月份、照片框、歷次 owner 原文與主管覆核、Iris 首試紀錄與上一輪的回饋題都在這一頁（只讀，不需回覆）。你之前填的回饋與素材選擇都保留在你的瀏覽器，沒有刪除或重設。"
+  "v": "24 套企劃、兩本月份、照片框、歷次 owner 原文與主管覆核、Iris 首試紀錄與之前的回饋題都在這一頁（只讀，不需回覆）。你之前填的回饋與素材選擇都保留在你的瀏覽器，沒有刪除或重設。"
  }
 }

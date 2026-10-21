@@ -36,7 +36,7 @@
   const str = x => (typeof x === 'string' ? x : '');
   const BOOK = { H: '橫式款', V: '直式款' };
   const R3NOTE = '主管 M-4 R3：反光板及支架必修；人物與身材待 Penny 看圖回饋。';
-  const R4NOTE = 'Penny M-4 R4：接受 V-Iris（臉、身材、表情、服裝、光線，反光板也保留），照片直接採用，取代主管 R3 的反光板必修；下一批 5 位待主管覆核。';
+  const R4NOTE = 'Penny M-4 R4：接受 V-Iris（臉、身材、表情、服裝、光線，反光板也保留），照片直接採用，取代主管 R3 的反光板必修；（M-4 R5：第一批 5 位已生成，待 Penny 在目前檢視頁看圖）。';
   const ORIGIN = { new: '新企劃', 'accepted-v2-main': 'Penny 已接受的方向', 'accepted-v2-alt': 'Penny 採用的 v2 替代方向' };
 
   // ---------- 舊版（v1／v2）回饋：只讀 ----------
@@ -525,7 +525,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     return L.join('\n');
   }
   function refreshOut() {
-    $('#bar-count').textContent = `歷史紀錄（只讀）｜M-3：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris：Penny 已接受｜下一批 5 位待主管覆核`;
+    $('#bar-count').textContent = `歷史紀錄（只讀）｜M-3：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris：Penny 已接受｜第一批 5 位已生成，待 Penny 看圖`;
     const ta = $('#out-text');
     if (ta) ta.value = buildText();
   }

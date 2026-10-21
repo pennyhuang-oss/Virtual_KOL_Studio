@@ -1,0 +1,632 @@
+{
+ "note": "第一批 5 位生成結果（M-4 R5）。人寫驗收＋從私有執行紀錄整理的請求與交易摘要；不含工作 ID 與 Soul ID（只在 profile.json 與 review/calendar/m4_r5/execution_log.json）。這個檔不發佈到網站；網站只用 cal_review_current.json。",
+ "version": "batch1-run-v1",
+ "task": "TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖",
+ "round": "M-4 R5",
+ "written_on": "2026-10-21",
+ "basis": {
+  "result": "b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b",
+  "review": "d09975652a751dd17a45d2aaf5c83b4dc4b18f5c",
+  "prep": "docs/calendar/data/cal_m4_batch1_prep.json",
+  "prep_doc": "docs/calendar/CAL_21_M4_BATCH1_PREP.md",
+  "auth": "docs/calendar/data/cal_m4_auth_r5.json",
+  "log": "review/calendar/m4_r5/execution_log.json"
+ },
+ "prompt_fix": {
+  "set": "V-rin-ayase",
+  "before": "Shot: a knee-up shot, from a little above her head down to her upper shins just below the knees,",
+  "after": "Shot: framed from a little above her head down to her upper shins just below the knees,",
+  "zh": "拍至膝下小腿上段，不切膝關節",
+  "why": "消除文字衝突（knee-up 與膝下上下界）；實際上下界、相機與造型不變；不必再送審"
+ },
+ "precheck": {
+  "souls": "5 個 Soul 都是 ready，與各自 profile.json 記錄的一致",
+  "preferences": "auto_create_project false → 不建專案、不指定資料夾",
+  "model": "soul_2 支援 2k、3:4 與 16:9；unlim 不可用"
+ },
+ "sets": [
+  {
+   "order": 1,
+   "id": "V-tammy-chou",
+   "pid": "tammy-chou",
+   "name": "Tammy",
+   "month": 1,
+   "book": "V",
+   "ratio": "3:4",
+   "prompt_final": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a white tailored blazer mini dress with a deep V lapel, gold buttons and a belted waist that defines her full chest and slim waist, gold drop earrings and a small plain black patent top-handle bag without any logos. Setting: the lobby of a grand hotel at night, polished marble floor and columns, a warm crystal chandelier overhead, a large arrangement of white flowers on a round table in the background, the lobby empty. One hand holds the short handle of the small bag at her hip, slightly away from her body, and the other rests on her waist; she smiles confidently. Shot: a mid-thigh-up shot, from a little above her head down to mid-thigh, well above the knees, showing the deep V lapel, the gold buttons and belted waist, the mini skirt hem and her upper thighs, the small bag held at her hip and the other hand on her waist, both hands inside the frame. Body: standing beside a marble column with her weight on one leg, her body square to the camera, shoulders open, her hips shifted slightly toward the side holding the bag. Face and gaze: her face toward the camera, looking into the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 2.3 metres, camera at her waist height, tilted slightly upward, natural perspective without distortion. Composition: she is centred, the warm crystal chandelier glowing above her head, a marble column at one side and the white flowers soft in the background. Emphasis: a closer frame with a slightly low camera that shows her confidence, how the blazer dress defines her chest and waist, and a small plain bag. Lighting: warm chandelier light fills the space; soft light from the front-right falls evenly on her face; white, gold and warm marble tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt_sha256": "d4e1278f496c20cd4c0eea922dfcb21736cc63ee1ebb4bb9531e6e7847ef0a18",
+   "prompt_vs_prep": "逐字等於 CAL_21 送審版",
+   "request": {
+    "model": "soul_2",
+    "soul": "tammy-chou 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "無",
+    "style_id": "不傳",
+    "folder": "不指定（偏好 auto_create_project false）"
+   },
+   "echo": {
+    "model": "text2image_soul_v2",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "soul_name": "tammy-chou-soul-v1-5img-20260904"
+   },
+   "requests": 1,
+   "status": "completed",
+   "submitted_logged": "2026-10-21T06:59:31Z",
+   "terminal_logged": "2026-10-21T07:00:17Z",
+   "polls": 1,
+   "result": {
+    "path": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+    "bytes": 4041301,
+    "sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9",
+    "px": [
+     1536,
+     2048
+    ],
+    "png_text_chunks": "1 段 tEXt（生成平台工作 ID；只在私有原檔，公開副本移除）",
+    "job_meta": {
+     "quality_field": "1080p",
+     "style": "General（後台預設）",
+     "seed": 544371
+    }
+   },
+   "ppi": {
+    "frame_mm": [
+     120,
+     160
+    ],
+    "effective": 325,
+    "target": 300,
+    "below_target": false,
+    "how": "1536×2048 放進 120×160 mm，不裁切：1536 px ÷ (120 mm ÷ 25.4) ≈ 325 ppi（高於 300 ppi 工作目標）。"
+   },
+   "frame": {
+    "placement": "3:4 放滿 120×160 mm，不裁切。",
+    "preview": "review/calendar/m4_r5/V-tammy-chou_m4r5_frame_V_120x160.jpg"
+   },
+   "acceptance": {
+    "identity": "臉型、杏眼與臥蠶與 Tammy 一致；奶茶金棕大波浪長捲髮、臉側淺色挑染都有。",
+    "body": "曲線身形；深 V 翻領開得比企劃更低，胸前露出面積明顯較大，遮蔽完整。（只描述畫面，不從照片推量尺寸。）",
+    "outfit": "白色西裝外套式迷你洋裝、金扣、同色腰帶、金色耳環都有。手提包：黑色亮面、梯形翻蓋、金色轉鎖與扣帶，外型接近特定精品的經典款（沒有標誌或文字），不符合企劃「不仿特定品牌」。",
+    "hands_feet": "右手握包的短提把，四指自然包住提把；左手插腰，手指完整。腳不入鏡（企劃本來就不入鏡）。",
+    "expression_gaze": "臉正面看鏡頭，淺淺的微笑，符合企劃。",
+    "scene": "夜晚飯店大廳：大理石地板與柱、水晶吊燈、圓桌上一大盆白花，大廳沒有其他人。花旁有一張小立牌，帶看不清的字樣。",
+    "light": "吊燈暖光，臉亮度足夠、膚色沒有偏黃。",
+    "composition": "上緣髮頂留白約 14%（企劃約 6%）；下緣在膝下的小腿（企劃在大腿中段），人物整體偏小。",
+    "texture": "100% 檢視：皮膚有細紋理、不塑膠；髮絲自然。",
+    "focus": [
+     "包與提把：提把與手指結構正常；包款像特定精品款（沒有標誌），需判斷。",
+     "雙手：都在框內、手指完整。",
+     "暖光膚色：不偏黃、臉夠亮。"
+    ],
+    "gaps": [
+     "包款外型接近特定精品款（企劃要求不仿特定品牌）",
+     "深 V 開得比企劃更低、露出較多",
+     "景別比企劃鬆：下緣到小腿、髮頂留白約 14%",
+     "花旁小立牌帶模糊字樣"
+    ],
+    "margins": {
+     "head": "約 14%",
+     "feet": "腳不入鏡（下緣在小腿）"
+    }
+   },
+   "page_checks": [
+    "手提包外型接近某個精品經典款（沒有標誌），企劃寫的是「不仿特定品牌」。",
+    "深 V 開得比企劃低，露出較多；遮蔽完整。",
+    "畫面比企劃鬆：下緣到小腿（企劃大腿中段）、頭上留白較多。",
+    "花旁有一張帶模糊字樣的小立牌。"
+   ],
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "charge": {
+    "rows": [
+     {
+      "at": "2026-10-21T06:59:20.966716Z",
+      "credits": -0.12,
+      "action": "spend"
+     }
+    ],
+    "refunds": [],
+    "window_after": "2026-10-21T06:53:18.294078Z",
+    "soul2_jobs_in_window": 1,
+    "others_in_window": "Nano Banana Pro -2 ×2（06:58:29Z、06:58:32Z，他人、非 Soul V2）",
+    "vs_quote": "等於 0.12",
+    "attribution": "依時窗及唯一任務推定"
+   }
+  },
+  {
+   "order": 2,
+   "id": "V-rin-ayase",
+   "pid": "rin-ayase",
+   "name": "Rin",
+   "month": 10,
+   "book": "V",
+   "ratio": "3:4",
+   "prompt_final": "A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a deep forest-green faux-suede wrap dress with a deep V neckline, a tie at the waist that defines her full chest and slim waist, a knee-length hem and a front slit to mid-thigh, thin gold earrings and a thin gold bracelet. Setting: a quiet small harbour on an autumn afternoon, an old stone quay with a thick wooden mooring post and a coiled rope, a few plain white sailboats moored on calm water, soft silver-grey overcast light, standing well back from the quay edge, the quay empty. One hand reaches back to rest on the mooring post and the other rests at the tie on her waist; she has a calm, slightly distant half-smile. Shot: framed from a little above her head down to her upper shins just below the knees, not cutting at the knee joint, showing the deep V neckline of the wrap dress, the tie that defines her chest and waist, and her thigh through the front slit down to just below the knee, one hand reaching back to the post and the other at the tie on her waist. Body: leaning back against a thick wooden mooring post, her body turned about 45 degrees toward camera-left, her weight on the leg nearer the post and the other knee softly bent with the toes touching the ground, shoulders relaxed against the post. Face and gaze: her face in a three-quarter view, looking out toward the harbour mouth on camera-left, away from the camera. Camera: vertical 3:4 frame, full-frame camera with an 85mm lens from about 3.6 metres, camera at her waist height, level, natural perspective without distortion. Composition: she stands just right of centre, her body and gaze turned toward the harbour mouth on the left, the water and moored white sailboats filling the space on the left, the mooring post behind her. Emphasis: leaning on the post at an angle shows both the chest and waist line of the wrap dress and the leg through the slit, and the three-quarter face toward the harbour brings a mature, quiet distance. Lighting: soft overcast autumn afternoon light as one large gentle source, her face evenly and clearly lit with soft, gentle shadows; silver-grey reflections on the water; deep green, silver-grey and soft gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt_sha256": "7b692691c3ed2aa809c5c8e32e76dbb6eee9193ac594b9bcd8502b8d997b1407",
+   "prompt_vs_prep": "V-Rin 景別用語修正（見 prompt_fix）；其餘逐字等於 CAL_21 送審版",
+   "request": {
+    "model": "soul_2",
+    "soul": "rin-ayase 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "無",
+    "style_id": "不傳",
+    "folder": "不指定（偏好 auto_create_project false）"
+   },
+   "echo": {
+    "model": "text2image_soul_v2",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "soul_name": "rin-ayase-soul-v1-5img-20260904"
+   },
+   "requests": 1,
+   "status": "completed",
+   "submitted_logged": "2026-10-21T07:01:03Z",
+   "terminal_logged": "2026-10-21T07:01:56Z",
+   "polls": 2,
+   "result": {
+    "path": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+    "bytes": 4709528,
+    "sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4",
+    "px": [
+     1536,
+     2048
+    ],
+    "png_text_chunks": "1 段 tEXt（生成平台工作 ID；只在私有原檔，公開副本移除）",
+    "job_meta": {
+     "quality_field": "1080p",
+     "style": "General（後台預設）",
+     "seed": 804278
+    }
+   },
+   "ppi": {
+    "frame_mm": [
+     120,
+     160
+    ],
+    "effective": 325,
+    "target": 300,
+    "below_target": false,
+    "how": "1536×2048 放進 120×160 mm，不裁切：1536 px ÷ (120 mm ÷ 25.4) ≈ 325 ppi（高於 300 ppi 工作目標）。"
+   },
+   "frame": {
+    "placement": "3:4 放滿 120×160 mm，不裁切。",
+    "preview": "review/calendar/m4_r5/V-rin-ayase_m4r5_frame_V_120x160.jpg"
+   },
+   "acceptance": {
+    "identity": "臉與 Rin 一致；深酒紅棕長髮，但綁成垂在肩前的低馬尾，不是企劃的低髮髻。",
+    "body": "纖細身形；裹身洋裝收腰明確。（只描述畫面，不從照片推量尺寸。）",
+    "outfit": "深墨綠仿麂皮裹身洋裝、深 V 領、繫帶收腰；前開衩開到大腿上段（企劃大腿中段），裹身遮蔽完整。赤腳（企劃的踝靴本來不入鏡，但因為拍到全身而變成赤腳）。",
+    "hands_feet": "一手扶在繫船柱上，手指完整自然；另一手放在腰間繫帶。腳趾完整，離下緣很近。",
+    "expression_gaze": "臉幾乎正面看鏡頭，平靜淺笑；企劃是三分之二側臉看港口、不看鏡頭，不符合。",
+    "scene": "石砌碼頭、粗木繫船柱與麻繩、素面白色帆船，帆船與碼頭沒有文字，沒有其他人。站位離碼頭邊不遠（企劃寫站在碼頭內側、離岸邊有距離）。",
+    "light": "陰天柔光，臉均勻清楚、不發灰。",
+    "composition": "拍成全身（企劃是膝下小腿上段裁切、R5 只改了用語）；髮頂留白約 8%，腳趾離下緣約 0.3%。",
+    "texture": "100% 檢視：皮膚與絨面質感自然。",
+    "focus": [
+     "側臉辨識：照片是看鏡頭的正面臉，沒有拍成側臉；臉可辨識為 Rin。",
+     "扶柱手：自然、手指完整。",
+     "開衩：到大腿上段，裹身遮蔽完整。",
+     "膝下裁切：沒有做到，拍成全身赤腳。"
+    ],
+    "gaps": [
+     "視線看鏡頭（企劃不看鏡頭、三分之二側臉）",
+     "拍成全身赤腳（企劃膝下裁切）",
+     "低馬尾（企劃低髮髻）",
+     "開衩比企劃高",
+     "站位離碼頭邊不遠"
+    ],
+    "margins": {
+     "head": "約 8%",
+     "feet": "腳趾離下緣約 0.3%（沒有切到）"
+    }
+   },
+   "page_checks": [
+    "她看鏡頭；企劃是三分之二側臉、看港口。",
+    "拍成全身赤腳；企劃是裁在膝下小腿上段。",
+    "頭髮是肩前低馬尾；企劃是低髮髻。",
+    "開衩到大腿上段，遮蔽完整；站位離碼頭邊不遠。"
+   ],
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "charge": {
+    "rows": [
+     {
+      "at": "2026-10-21T07:00:57.479119Z",
+      "credits": -0.12,
+      "action": "spend"
+     }
+    ],
+    "refunds": [],
+    "window_after": "2026-10-21T06:59:20.966716Z",
+    "soul2_jobs_in_window": 1,
+    "others_in_window": "無",
+    "vs_quote": "等於 0.12",
+    "attribution": "依時窗及唯一任務推定"
+   }
+  },
+  {
+   "order": 3,
+   "id": "V-somi-oh",
+   "pid": "somi-oh",
+   "name": "Somi",
+   "month": 12,
+   "book": "V",
+   "ratio": "3:4",
+   "prompt_final": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a fitted ivory ribbed knit mini dress with a high round neck that follows her full chest, slim waist and hips, a long red wool coat worn open, white knee-high boots and small pearl earrings. Setting: a quiet street in a small hot-spring town on a snowy winter evening, low wooden inns with warm paper lanterns, thin steam rising from a stone channel at the roadside, a light layer of snow on the ground, the street empty. One hand is in the pocket of the open coat holding it back so the fitted dress shows, and the other is raised at shoulder height with the palm up catching snowflakes, away from her face; her chin lifts slightly and she smiles with natural delight, eyes open, a few snowflakes in the air. Shot: a full-length shot, from a little above her head to just below her feet, both feet whole, showing her whole figure from head to boots, the open red coat, the fitted ivory knit dress over her chest, waist and hips, and the white knee-high boots, one hand in a coat pocket and the other raised at shoulder height catching snow, away from her face. Body: standing on the thin snow with her weight on her back leg and her front foot slightly forward, her body square to the camera, her chin lifted slightly and shoulders relaxed, the open coat falling naturally. Face and gaze: her face in a three-quarter view, looking up toward the snow falling beside a lantern at the upper right, away from the camera. Camera: vertical 3:4 frame, full-frame camera with a 70mm lens from about 4.2 metres, camera at her hip height, level, natural perspective without distortion; she fills about 85% of the frame height. Composition: she stands slightly left of centre, the glowing paper lanterns and falling snow at the upper right where she is looking, the street receding behind her to the right. Emphasis: her natural smile as she looks up at the snow makes the picture feel like a captured moment, and the full figure keeps the whole winter look and the curves of the dress. Lighting: soft warm light from the front-left falls evenly on her face; the paper lanterns behind her glow warm amber against the cool blue evening light on the snow; red, ivory and warm amber tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt_sha256": "792a6cdb18f354919f000ad305abb3e0f914d300dd1bb4a5497cb3275e55bdcf",
+   "prompt_vs_prep": "逐字等於 CAL_21 送審版",
+   "request": {
+    "model": "soul_2",
+    "soul": "somi-oh 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "無",
+    "style_id": "不傳",
+    "folder": "不指定（偏好 auto_create_project false）"
+   },
+   "echo": {
+    "model": "text2image_soul_v2",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "soul_name": "somi-oh-soul-v1-5img-20260904"
+   },
+   "requests": 1,
+   "status": "completed",
+   "submitted_logged": "2026-10-21T07:04:32Z",
+   "terminal_logged": "2026-10-21T07:05:18Z",
+   "polls": 2,
+   "result": {
+    "path": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+    "bytes": 4893007,
+    "sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561",
+    "px": [
+     1536,
+     2048
+    ],
+    "png_text_chunks": "1 段 tEXt（生成平台工作 ID；只在私有原檔，公開副本移除）",
+    "job_meta": {
+     "quality_field": "1080p",
+     "style": "General（後台預設）",
+     "seed": 549323
+    }
+   },
+   "ppi": {
+    "frame_mm": [
+     120,
+     160
+    ],
+    "effective": 325,
+    "target": 300,
+    "below_target": false,
+    "how": "1536×2048 放進 120×160 mm，不裁切：1536 px ÷ (120 mm ÷ 25.4) ≈ 325 ppi（高於 300 ppi 工作目標）。"
+   },
+   "frame": {
+    "placement": "3:4 放滿 120×160 mm，不裁切。",
+    "preview": "review/calendar/m4_r5/V-somi-oh_m4r5_frame_V_120x160.jpg"
+   },
+   "acceptance": {
+    "identity": "臉與 Somi 一致；明亮橘棕短髮、有瀏海，狼尾層次不明顯。",
+    "body": "貼身針織洋裝的胸腰臀線條清楚。（只描述畫面，不從照片推量尺寸。）",
+    "outfit": "象牙白高圓領羅紋針織迷你洋裝、紅色羊毛長大衣敞開、白色及膝長靴、珍珠耳環，都符合。",
+    "hands_feet": "一手插在大衣口袋，一手在肩高攤開接雪、不遮臉，手指完整。左靴靴底完整；右靴鞋頭超出原圖下緣，靴底不完整。",
+    "expression_gaze": "三分之二側臉、抬眼看右上方，眼睛睜開、五官清楚，符合。",
+    "scene": "雪中的溫泉小鎮街道、木造店屋、紙燈籠、石溝冒蒸氣、薄雪，沒有行人。燈籠與招牌上有韓文字樣、路旁有交通標誌、電線與遠處的車（企劃要求沒有文字或招牌）。",
+    "light": "偏傍晚的陰天雪景，燈籠亮著；臉亮度足夠、不發灰。比企劃的「冬夜」亮。",
+    "composition": "全身；髮頂留白約 13%；左靴底離下緣約 3.4%，右靴碰到並超出下緣。",
+    "texture": "100% 檢視：皮膚紋理與毛呢、針織質感自然。",
+    "focus": [
+     "抬眼五官：眼睛睜開、清楚。",
+     "接雪手：在肩高、不遮臉。",
+     "大衣敞開：是。",
+     "靴底完整：左靴完整；右靴鞋頭超出原圖下緣，不完整。"
+    ],
+    "gaps": [
+     "右靴靴底超出原圖下緣",
+     "燈籠與招牌出現字樣、有交通標誌",
+     "時間感偏傍晚，不是夜晚",
+     "狼尾層次不明顯"
+    ],
+    "margins": {
+     "head": "約 13%",
+     "feet": "左靴約 3.4%；右靴超出下緣"
+    }
+   },
+   "page_checks": [
+    "右腳靴子的鞋頭超出照片下緣，靴底不完整。",
+    "燈籠和招牌上出現字樣，路旁有交通標誌與電線。",
+    "天色偏傍晚，不是企劃的冬夜。",
+    "眼睛睜開、接雪的手沒有遮臉、大衣敞開。"
+   ],
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "charge": {
+    "rows": [
+     {
+      "at": "2026-10-21T07:04:27.362109Z",
+      "credits": -0.12,
+      "action": "spend"
+     }
+    ],
+    "refunds": [],
+    "window_after": "2026-10-21T07:00:57.479119Z",
+    "soul2_jobs_in_window": 1,
+    "others_in_window": "無",
+    "vs_quote": "等於 0.12",
+    "attribution": "依時窗及唯一任務推定"
+   }
+  },
+  {
+   "order": 4,
+   "id": "H-yerin-han",
+   "pid": "yerin-han",
+   "name": "Yerin",
+   "month": 5,
+   "book": "H",
+   "ratio": "16:9",
+   "prompt_final": "A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white fitted sleeveless knit golf polo that follows her full chest and slim waist, a pale sky-blue pleated golf mini skirt, white golf shoes, a plain white cap and small gold stud earrings. Setting: a golf course on a clear spring morning, a plain white golf cart parked on the cart path beside a bright green fairway, soft trees in the distance, the course empty. Her back hand is braced on the seat behind her hip and her front hand rests lightly on her knees; she gives a playful, bright smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole seated figure, the sleeveless polo over her full chest and her toned arms, the pleated mini skirt, her long legs together with ankles crossed and the white golf shoes, one hand braced on the seat and the other on her knees. Body: sitting sideways on the edge of the golf cart front seat and leaning back slightly, her body turned about 45 degrees toward camera-left, her long legs reaching out of the cart toward the lower left with her knees together, ankles crossed and toes touching the ground, shoulders relaxed. Face and gaze: her face toward the camera, looking into the camera. Camera: horizontal 16:9 frame, full-frame camera with a 50mm lens from about 4.5 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 83% of the frame height. Composition: the white golf cart sits at an angle across the frame with its front toward the left; she sits just right of centre in the open side of the cart, her long legs reaching diagonally toward the lower left, the bright green fairway behind. Emphasis: the diagonal of the cart carries her long legs into the frame and the slight lean back relaxes her body lines; the focus is her smile and leg length. Lighting: clear morning sun from high front-left; the shadow of the cap brim on her face is soft and light, her eyes and face clearly lit; bright green, sky blue and white tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt_sha256": "457c84e0dce05c854d9649f5983d5f85d45e9a27f1f7ed49ff360db28939e90b",
+   "prompt_vs_prep": "逐字等於 CAL_21 送審版",
+   "request": {
+    "model": "soul_2",
+    "soul": "yerin-han 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+    "quality": "2k",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "無",
+    "style_id": "不傳",
+    "folder": "不指定（偏好 auto_create_project false）"
+   },
+   "echo": {
+    "model": "text2image_soul_v2",
+    "quality": "2k",
+    "aspect_ratio": "16:9",
+    "soul_name": "yerin-han-soul-v1-5img-20260904"
+   },
+   "requests": 1,
+   "status": "completed",
+   "submitted_logged": "2026-10-21T07:08:21Z",
+   "terminal_logged": "2026-10-21T07:09:10Z",
+   "polls": 2,
+   "result": {
+    "path": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+    "bytes": 3167311,
+    "sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a",
+    "px": [
+     2048,
+     1152
+    ],
+    "png_text_chunks": "1 段 tEXt（生成平台工作 ID；只在私有原檔，公開副本移除）",
+    "job_meta": {
+     "quality_field": "1080p",
+     "style": "General（後台預設）",
+     "seed": 66030
+    }
+   },
+   "ppi": {
+    "frame_mm": [
+     192,
+     104
+    ],
+    "effective": 271,
+    "target": 300,
+    "below_target": true,
+    "how": "2048×1152 放進 192×104 mm：寬 2048 px ÷ (192 mm ÷ 25.4) ≈ 271 ppi，低於 300 ppi 工作目標（照實列出；不重生、不放大補像素，也不代表印刷失敗）。16:9 高 108 mm、框高 104 mm，共裁 4 mm（約 43 px，3.7%），實際用到 2048×1109 px。"
+   },
+   "frame": {
+    "placement": "帽頂只有約 27 px，4 mm（約 43 px）全部從下緣裁；套框後帽頂留白約 2.4%（低於 4% 工作參考），鞋底留白約 3.9%（≥3%）。球車輪子下緣被裁掉一部分。",
+    "preview": "review/calendar/m4_r5/H-yerin-han_m4r5_frame_H_192x104.jpg"
+   },
+   "acceptance": {
+    "identity": "臉與 Yerin 一致；亞麻棕長髮、金色挑染低馬尾從白色球帽後穿出。",
+    "body": "纖細身形；無袖 polo 貼身。（只描述畫面，不從照片推量尺寸。）",
+    "outfit": "白色無袖 polo、淺藍百褶迷你裙、白色高爾夫鞋、白色球帽、小耳針，都符合；帽與衣服沒有標誌。",
+    "hands_feet": "坐在球車座位上、身體朝左；前手放在膝上，後手扶在座椅側邊扶手。雙膝併攏、雙腳併放在球車踏板上（企劃是雙腿伸出車外、腳踝交叉、腳尖點地）。雙腳與鞋完整。",
+    "expression_gaze": "臉正面看鏡頭、露齒笑，符合。",
+    "scene": "高爾夫球場、亮綠球道、白色球車，沒有其他人。樹多半沒有葉子，季節感像冬末而不是春天。球車車身有一個小徽章（看不出字）；車後有黑色球袋。",
+    "light": "晴天柔光，帽簷陰影很淡、眼睛清楚。",
+    "composition": "坐姿全身；帽頂離上緣約 2.3%（企劃約 10%）；鞋底離下緣約 7.5%。",
+    "texture": "100% 檢視：皮膚紋理自然。",
+    "focus": [
+     "坐姿腿部：雙膝併攏，沒有裙下構圖；雙腳放在踏板上，不是企劃的腳踝交叉點地。",
+     "雙腳：完整。",
+     "帽簷陰影：淡，不遮眼。",
+     "球車：素面白色，車身有一個看不出字的小徽章。"
+    ],
+    "gaps": [
+     "腳的擺法與企劃不同（放在踏板上）",
+     "帽頂留白很少",
+     "樹沒有葉子，不像春天",
+     "球車小徽章"
+    ],
+    "margins": {
+     "head": "帽頂約 2.3%",
+     "feet": "約 7.5%"
+    }
+   },
+   "page_checks": [
+    "雙腳放在球車踏板上；企劃是腿伸出車外、腳踝交叉點地。",
+    "帽頂離照片上緣很近，套框時 4 mm 全部從下緣裁。",
+    "樹多半沒有葉子，季節像冬末，不像春天。",
+    "球車車身有一個看不出字的小徽章。"
+   ],
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "charge": {
+    "rows": [
+     {
+      "at": "2026-10-21T07:08:16.694715Z",
+      "credits": -0.12,
+      "action": "spend"
+     }
+    ],
+    "refunds": [],
+    "window_after": "2026-10-21T07:04:27.362109Z",
+    "soul2_jobs_in_window": 1,
+    "others_in_window": "無",
+    "vs_quote": "等於 0.12",
+    "attribution": "依時窗及唯一任務推定"
+   }
+  },
+  {
+   "order": 5,
+   "id": "H-jia-seo",
+   "pid": "jia-seo",
+   "name": "Jia",
+   "month": 9,
+   "book": "H",
+   "ratio": "16:9",
+   "prompt_final": "A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a deep wine-red fine-knit fitted halter mini dress that leaves her shoulders and upper back bare, drawn in clearly at the waist, the hem at mid-thigh, a smooth fine knit with no athletic details and no large patterns, black strappy low-heeled sandals and small silver hoop earrings. Setting: a quiet lakeside on an early-autumn evening, a pale wooden deck reaching over the water, a simple wooden bench at its edge, calm water holding the low sunlight, a far shore of trees just turning yellow, nobody else in sight. One hand rests lightly on her crossed knee and the other arm lies along the bench back, clear of her waist; she has a cool, thoughtful half-smile. Shot: a full-length seated shot, her whole seated figure from a little above her head to just below her feet, legs and feet whole, showing her whole seated figure, the bare shoulders and upper back of the halter cut, the fitted knit drawn in at her waist, the hem at mid-thigh, her long crossed legs and the black strappy sandals, one hand on her knee and the other arm along the bench back, nothing covering her waist. Body: sitting sideways on the bench, her body side-on to the camera, facing camera-left, her legs crossed and reaching toward camera-left, her straight shoulders and back upright, one arm along the bench back. Face and gaze: her face in a three-quarter view, looking out over the lake toward the far shore on camera-left, away from the camera. Camera: horizontal 16:9 frame, full-frame camera with a 70mm lens from about 5.4 metres, camera at her seated waist height, level, natural perspective without distortion; she fills about 85% of the frame height. Composition: she sits just right of centre facing the lake on the left, leaving space on the left for the water and her gaze, the deck and the far tree line soft on the right. Emphasis: sitting sideways draws her straight shoulders, bare upper back, cinched waist and long crossed legs into clean lines, and the three-quarter face toward the lake carries a calm early-autumn mood. Lighting: low early-autumn evening sun behind her draws a warm rim along her hair and shoulders; her face stays softly and clearly lit from the front, not in shadow; deep wine red, soft lake blue-grey and warm gold tones. Natural skin texture with visible pores, unretouched, crisp focus on her eyes, fine fabric detail, natural colour grading, a professional fashion editorial photograph.",
+   "prompt_sha256": "c5e6c1db1dcfea455632fe84764f6c463a0756b6e60b076c97d218b92762f761",
+   "prompt_vs_prep": "逐字等於 CAL_21 送審版",
+   "request": {
+    "model": "soul_2",
+    "soul": "jia-seo 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+    "quality": "2k",
+    "aspect_ratio": "16:9",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "無",
+    "style_id": "不傳",
+    "folder": "不指定（偏好 auto_create_project false）"
+   },
+   "echo": {
+    "model": "text2image_soul_v2",
+    "quality": "2k",
+    "aspect_ratio": "16:9",
+    "soul_name": "jia-seo-soul-v1-5img-20260904"
+   },
+   "requests": 1,
+   "status": "completed",
+   "submitted_logged": "2026-10-21T07:29:37Z",
+   "terminal_logged": "2026-10-21T07:30:21Z",
+   "polls": 2,
+   "result": {
+    "path": "kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+    "bytes": 3055137,
+    "sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431",
+    "px": [
+     2048,
+     1152
+    ],
+    "png_text_chunks": "1 段 tEXt（生成平台工作 ID；只在私有原檔，公開副本移除）",
+    "job_meta": {
+     "quality_field": "1080p",
+     "style": "General（後台預設）",
+     "seed": 909933
+    }
+   },
+   "ppi": {
+    "frame_mm": [
+     192,
+     104
+    ],
+    "effective": 271,
+    "target": 300,
+    "below_target": true,
+    "how": "2048×1152 放進 192×104 mm：寬 2048 px ÷ (192 mm ÷ 25.4) ≈ 271 ppi，低於 300 ppi 工作目標（照實列出；不重生、不放大補像素，也不代表印刷失敗）。16:9 高 108 mm、框高 104 mm，共裁 4 mm（約 43 px，3.7%），實際用到 2048×1109 px。"
+   },
+   "frame": {
+    "placement": "髮頂約 44 px、鞋底離下緣約 17 px；平均上下各裁約 21 px 會切到鞋底，所以上緣裁 34 px（約 3.2 mm）、下緣裁約 9 px（約 0.8 mm）。套框後髮頂約 0.9%、鞋底約 0.7%，都沒切到，但都低於 4%／3% 工作參考；任何放法都達不到。",
+    "preview": "review/calendar/m4_r5/H-jia-seo_m4r5_frame_H_192x104.jpg"
+   },
+   "acceptance": {
+    "identity": "臉與 Jia 一致；冷灰藍黑長髮、薄荷綠內層露出。",
+    "body": "纖細身形；繞頸剪裁露出肩與上背，腰線清楚。（只描述畫面，不從照片推量尺寸。）",
+    "outfit": "深酒紅細針織繞頸短洋裝、黑色細帶低跟涼鞋、小銀圈耳環，都符合；針織細緻、沒有運動感。",
+    "hands_feet": "雙手交疊放在膝上（企劃是一手放膝上、一手搭椅背）；雙腿交疊伸向左側，腳與涼鞋完整，手指正常。",
+    "expression_gaze": "身體朝左側坐，回頭看鏡頭、淺笑；企劃是三分之二側臉看湖面、不看鏡頭，不符合。",
+    "scene": "湖畔木平台、木長椅、平靜湖面、遠岸黃葉樹林，沒有其他人，畫面沒有任何器材。",
+    "light": "傍晚柔和光，臉清楚不暗；但沒有拍出企劃的身後低角度逆光輪廓光。",
+    "composition": "坐姿全身；髮頂離上緣約 3.8%，鞋底離下緣約 1.5%，上下都很緊。",
+    "texture": "100% 檢視：皮膚比其他 4 張更光滑（偏瓷感）；針織紋理清楚。",
+    "focus": [
+     "側臉：照片是回頭看鏡頭，不是看湖的側臉。",
+     "交疊腿：完整、結構正常。",
+     "露肩背與腰線：都有，手沒有遮腰線。",
+     "逆光臉部：臉清楚；但沒有明顯的逆光輪廓。"
+    ],
+    "gaps": [
+     "回頭看鏡頭（企劃看湖面）",
+     "手的擺法不同（沒有搭椅背）",
+     "沒有逆光輪廓光",
+     "上下留白都很緊",
+     "皮膚偏光滑"
+    ],
+    "margins": {
+     "head": "約 3.8%",
+     "feet": "約 1.5%"
+    }
+   },
+   "page_checks": [
+    "她回頭看鏡頭；企劃是三分之二側臉、看湖面。",
+    "雙手都放在膝上；企劃是一手搭在椅背。",
+    "臉清楚，但沒有身後低角度的逆光輪廓。",
+    "上下都很緊：套進照片框後頭頂與鞋底各只剩約 1 mm。"
+   ],
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "charge": {
+    "rows": [
+     {
+      "at": "2026-10-21T07:29:31.883249Z",
+      "credits": -0.12,
+      "action": "spend"
+     }
+    ],
+    "refunds": [],
+    "window_after": "2026-10-21T07:23:21.799570Z",
+    "soul2_jobs_in_window": 1,
+    "others_in_window": "Seedream 4.5 -1（07:27:53Z，他人、非 Soul V2）",
+    "vs_quote": "等於 0.12",
+    "attribution": "依時窗及唯一任務推定"
+   }
+  }
+ ],
+ "charges": {
+  "quote_total_exact": 0.6,
+  "charged_total": 0.6,
+  "refunds_total": 0,
+  "budget": 0.6,
+  "per_request": "每張時窗裡只有一筆 Soul V2 −0.12 扣款、沒有退款，同一時窗只有本次這一個 soul_2 任務",
+  "attribution": "依時窗及唯一任務推定（交易明細沒有工作 ID，不標成直接對帳確認）",
+  "not_guarantee": "工具沒有強制扣款上限；不以整數顯示值當實扣、不以餘額差推算。",
+  "late_recheck": {
+   "at": "2026-10-21T07:46:02Z",
+   "window": "2026-10-21T06:53:18Z（送出前邊界）到 07:45:07Z（查詢時最新一列）",
+   "result": "本批 5 列 Soul V2 −0.12 都在、沒有遲到扣款、沒有退款；本批淨扣 0.60。",
+   "after_batch": "07:43:51Z 另有一列 Soul V2 −0.12：對應帳號上另一個 soul_2 任務（07:43:51Z 建立，不是本批 5 個工作 ID 之一），本批最後一次送出是 07:29:37Z，之後沒有提交，所以不屬本批；同時段還有十多列其他模型的他人扣款與退款。只看中繼資料，沒有開啟作品。"
+  }
+ },
+ "interruption": "第 5 張（H-Jia）寫下提交意圖後執行環境重啟；送出前查過私有紀錄沒有工作 ID、帳號生成紀錄沒有新的 soul_2 任務、交易沒有新的 Soul V2 列，確認沒有重複提交後重新報價（0.12）並只送一次。",
+ "counts": {
+  "requests": 5,
+  "completed": 5,
+  "failed": 0,
+  "retries": 0,
+  "generated": 5,
+  "retouched": 0,
+  "trainings": 0,
+  "upscaled": 0,
+  "credits": 0.6
+ }
+}

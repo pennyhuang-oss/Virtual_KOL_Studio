@@ -5544,9 +5544,145 @@
    "op": "等比縮小至 270×480（Lanczos，JPEG q82）"
   },
   {
+   "published": "public/img/review/V-tammy-chou_m4r5.png",
+   "sha256": "2e0b6781fe6f287dc9d480628ea0e81149b44fe471c490bb8dd56bb5886ad17f",
+   "kind": "review_png",
+   "set": "V-tammy-chou",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+   "source_sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9",
+   "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
+  },
+  {
+   "published": "public/img/review/V-tammy-chou_m4r5_view.jpg",
+   "sha256": "4876a4e3421005c7a2f88badbe8a0d73cbcfe24fa6d66910888bb33c23753444",
+   "kind": "review_preview",
+   "set": "V-tammy-chou",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+   "source_sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/review/V-tammy-chou_m4r5_frame_V_120x160.jpg",
+   "sha256": "123ee1a0429189aafc28b58ce6c8188bbdb7ee1e8ccd8c70b888def0c85b5f44",
+   "kind": "review_copy",
+   "set": "V-tammy-chou",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:review/calendar/m4_r5/V-tammy-chou_m4r5_frame_V_120x160.jpg",
+   "source_sha256": "123ee1a0429189aafc28b58ce6c8188bbdb7ee1e8ccd8c70b888def0c85b5f44",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/review/V-rin-ayase_m4r5.png",
+   "sha256": "53dff831107c6b9dc86e382280b70eb3ed2a60cfec44fa23a49a4cf63e78474a",
+   "kind": "review_png",
+   "set": "V-rin-ayase",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+   "source_sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4",
+   "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
+  },
+  {
+   "published": "public/img/review/V-rin-ayase_m4r5_view.jpg",
+   "sha256": "b628e68ad1a7b3039859c61a2b790d1d119a79106d8dcfccbba5d49c882dfaaa",
+   "kind": "review_preview",
+   "set": "V-rin-ayase",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+   "source_sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/review/V-rin-ayase_m4r5_frame_V_120x160.jpg",
+   "sha256": "2311e5c3caa860c420c9bac775b9eb1bb2c4f6174ef275c24078bcd5f991d0c3",
+   "kind": "review_copy",
+   "set": "V-rin-ayase",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:review/calendar/m4_r5/V-rin-ayase_m4r5_frame_V_120x160.jpg",
+   "source_sha256": "2311e5c3caa860c420c9bac775b9eb1bb2c4f6174ef275c24078bcd5f991d0c3",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/review/V-somi-oh_m4r5.png",
+   "sha256": "59028c736529eede6943f67ccd4e356a18293e40252908726aaec3cff43ecc58",
+   "kind": "review_png",
+   "set": "V-somi-oh",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+   "source_sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561",
+   "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
+  },
+  {
+   "published": "public/img/review/V-somi-oh_m4r5_view.jpg",
+   "sha256": "32010db58e8acee7ae345607b43ac757cc509e08b38191bf37b43f61449ab89f",
+   "kind": "review_preview",
+   "set": "V-somi-oh",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+   "source_sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/review/V-somi-oh_m4r5_frame_V_120x160.jpg",
+   "sha256": "6f3d72e23642f37f3eedb52090f739cbccb02a309814b4558191911313428723",
+   "kind": "review_copy",
+   "set": "V-somi-oh",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:review/calendar/m4_r5/V-somi-oh_m4r5_frame_V_120x160.jpg",
+   "source_sha256": "6f3d72e23642f37f3eedb52090f739cbccb02a309814b4558191911313428723",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/review/H-yerin-han_m4r5.png",
+   "sha256": "ab7fcaeeb4eb2e0f8c44834b971cac58812869ce8dec40b8900d850708b80ae4",
+   "kind": "review_png",
+   "set": "H-yerin-han",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+   "source_sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a",
+   "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
+  },
+  {
+   "published": "public/img/review/H-yerin-han_m4r5_view.jpg",
+   "sha256": "8db650054d86c92febb00e99bcb18716c3636f0753969406b00e5f1e0924ca31",
+   "kind": "review_preview",
+   "set": "H-yerin-han",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+   "source_sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/review/H-yerin-han_m4r5_frame_H_192x104.jpg",
+   "sha256": "f4d2fe7630a5d3e906e8faf3a9fcbe11ff5ffd549b3b85c43cfe2d8d30d90fae",
+   "kind": "review_copy",
+   "set": "H-yerin-han",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:review/calendar/m4_r5/H-yerin-han_m4r5_frame_H_192x104.jpg",
+   "source_sha256": "f4d2fe7630a5d3e906e8faf3a9fcbe11ff5ffd549b3b85c43cfe2d8d30d90fae",
+   "op": "位元組不變複製"
+  },
+  {
+   "published": "public/img/review/H-jia-seo_m4r5.png",
+   "sha256": "6f9ebd776f559d629359db544484db4d9922ac8b74b06f666483f776e57ee110",
+   "kind": "review_png",
+   "set": "H-jia-seo",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+   "source_sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431",
+   "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
+  },
+  {
+   "published": "public/img/review/H-jia-seo_m4r5_view.jpg",
+   "sha256": "d2bb86d65828cb90ba2ef6871d61f12e5aede09b0a84ae73b26a0d550210745e",
+   "kind": "review_preview",
+   "set": "H-jia-seo",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+   "source_sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/review/H-jia-seo_m4r5_frame_H_192x104.jpg",
+   "sha256": "d25a61904ef604698f81f7a6dab3b951444570244dccbf7e16dc3b972090fc40",
+   "kind": "review_copy",
+   "set": "H-jia-seo",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:review/calendar/m4_r5/H-jia-seo_m4r5_frame_H_192x104.jpg",
+   "source_sha256": "d25a61904ef604698f81f7a6dab3b951444570244dccbf7e16dc3b972090fc40",
+   "op": "位元組不變複製"
+  },
+  {
    "published": "public/img/review/V-iris-chen_m4r2_first_test.png",
    "sha256": "90ef6c019ca9274ba6f44e4512f905d96d7953f7d2537d4ae4948d2619e0fbf4",
    "kind": "review_png",
+   "set": "V-iris-chen",
    "source": "32fec1df14071be27858d038b88304eaff67a31a:kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
    "source_sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
    "op": "只移除文字中繼資料區塊 tEXt（含生成平台工作識別碼）；IHDR／IDAT／IEND 位元組不變，解碼像素相同"
@@ -5555,17 +5691,10 @@
    "published": "public/img/review/V-iris-chen_m4r2_view.jpg",
    "sha256": "52e2a550df4ff77b1689a8177dac184fc5f9af56f063858e767ab326e3c2916a",
    "kind": "review_preview",
+   "set": "V-iris-chen",
    "source": "32fec1df14071be27858d038b88304eaff67a31a:kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
    "source_sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
    "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/review/V-iris-chen_m4r2_frame_V_120x160.jpg",
-   "sha256": "1926d363edd1b97bdd4af38c950f2eb2b27cd3eea4c1945873f64f7177fa35dd",
-   "kind": "review_copy",
-   "source": "20b5ee89d0c354362bb2f78bcb4eb4ce23c9b7e3:review/calendar/m4_r2/frame_preview_V_120x160.jpg",
-   "source_sha256": "1926d363edd1b97bdd4af38c950f2eb2b27cd3eea4c1945873f64f7177fa35dd",
-   "op": "位元組不變複製"
   }
  ]
 }
