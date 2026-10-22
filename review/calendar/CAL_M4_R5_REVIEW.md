@@ -81,6 +81,8 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 - **已完成（本機，Claude 自測）**：`--check` 兩個產生器 PASS（網站 671 檔，公開檔無私有識別碼、無交易原始資料）；本機桌機與 390px 定向驗證 80/80（`m4_r5/local_m4r5_tests.tsv`）；部署前保留測試（線上 `b5cbe1c`）6/6（`m4_r5/upgrade_predeploy_b5cbe1c.tsv`）；kol-catalog 首頁與存檔相同（44,801 bytes）。
 - **f04bc3d 相對 a95e52f 的差異**：「複製本批回饋」第一行加上照片版本（M-4 R5 第一批 5 張，照片固定成果 a95e52f），合計行明列「已回覆 n／5、未回覆 m」。照片、回饋鍵與已存回饋都不變。
 
+- **原因確認（10-22 06:53 UTC）**：Penny 提供 Railway 後台截圖，本工作區是 **Hobby 方案**。Railway 狀態頁 06:29 UTC 起只開放 Enterprise 與 Pro 建置，公告的恢復順序是 Pro → Hobby → Free／Trial，所以第 7 次被拒是因為 Hobby 尚未開放，不是設定或程式問題。不升級付費方案（本輪限制），等 Railway 對 Hobby 開放後再部署 f04bc3d。
+
 **接續步驟（Railway 恢復後）：**
 
 1. `connect-service-source`（project `d8312837-74c9-40b0-99fc-08cbf0b3faf5`、service `06e24e36-80db-4a26-a02f-51c42ae8722e`、commitSha `f04bc3d06c28ece44983f2f7ddd740021c33aa33`）。
