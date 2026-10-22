@@ -71,8 +71,10 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 | 3 | 08:13 | `a95e52f` | 同上 |
 | 4 | 08:41 | `f04bc3d` | 同上 |
 | 5 | 09:01 | `f04bc3d` | 同上（之前有限等待 20 分鐘，每 2 分鐘看一次狀態頁，仍未恢復） |
+| 6 | 10-22 04:58 | `f04bc3d` | 同上。部署前先查：沒有進行中或新的部署（最新仍是 8116b9c3 SUCCESS／b5cbe1c、pendingWork 空）；連接器已重新連上同一帳號（pennyhuang-oss）與同一 project／service。被拒後停止重試 |
 
-- 平台狀態：status.railway.com「Builds are temporarily paused — Partial Outage」，Builds（US West、EU West、Southeast Asia、US East）、API、Support 都列為受影響；07:24 UTC 開始調查，08:28 UTC 更新「後端也有問題，仍在調查」。不是本專案設定或程式錯誤。
+- 平台狀態（10-22 04:57 UTC）：事故升級為「Railway Platform Outage — Major Outage」；Railway 依安全揭露作廢所有 API token（04:17）；建置只先開放 Enterprise（04:00 起），其他方案分批恢復中，04:52 公告「持續為其他方案恢復建置，05:30 UTC 前再更新」。
+- 平台狀態（10-21）：status.railway.com「Builds are temporarily paused — Partial Outage」，Builds（US West、EU West、Southeast Asia、US East）、API、Support 都列為受影響；07:24 UTC 開始調查，08:28 UTC 更新「後端也有問題，仍在調查」。不是本專案設定或程式錯誤。
 - Railway 狀態查詢（09:0x）：`cal2027-decision` 最新部署仍是 `8116b9c3-578b-424d-baee-5da6500ce147`（SUCCESS，`b5cbe1c`），沒有排隊中的工作；其他 service 沒有動。線上 `shoot.html` 的 page-commit 是 `b5cbe1c`。
 - 沒有改存取設定、沒有新增登入或付費服務、沒有另做替代網站。
 - **已完成（本機，Claude 自測）**：`--check` 兩個產生器 PASS（網站 671 檔，公開檔無私有識別碼、無交易原始資料）；本機桌機與 390px 定向驗證 80/80（`m4_r5/local_m4r5_tests.tsv`）；部署前保留測試（線上 `b5cbe1c`）6/6（`m4_r5/upgrade_predeploy_b5cbe1c.tsv`）；kol-catalog 首頁與存檔相同（44,801 bytes）。
