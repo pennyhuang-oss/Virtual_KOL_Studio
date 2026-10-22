@@ -72,6 +72,7 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 | 4 | 08:41 | `f04bc3d` | 同上 |
 | 5 | 09:01 | `f04bc3d` | 同上（之前有限等待 20 分鐘，每 2 分鐘看一次狀態頁，仍未恢復） |
 | 6 | 10-22 04:58 | `f04bc3d` | 同上。部署前先查：沒有進行中或新的部署（最新仍是 8116b9c3 SUCCESS／b5cbe1c、pendingWork 空）；連接器已重新連上同一帳號（pennyhuang-oss）與同一 project／service。被拒後停止重試 |
+| 7 | 10-22 06:50 | `f04bc3d` | 拒絕，錯誤訊息改為：`Deploys have been paused due to an upstream issue`。部署前先查：帳號 pennyhuang-oss、同一 project／service；沒有進行中或新的部署（最新仍是 8116b9c3 SUCCESS／b5cbe1c、pendingWork 空）；線上 page-commit＝b5cbe1c。狀態頁 06:29 UTC 公告 Pro 與 Enterprise 已可建置，但本次仍被拒；工作區類型為 personal，工具查不到方案別。被拒後停止重試，沒有背景監看 |
 
 - 平台狀態（10-22 04:57 UTC）：事故升級為「Railway Platform Outage — Major Outage」；Railway 依安全揭露作廢所有 API token（04:17）；建置只先開放 Enterprise（04:00 起），其他方案分批恢復中，04:52 公告「持續為其他方案恢復建置，05:30 UTC 前再更新」。
 - 平台狀態（10-21）：status.railway.com「Builds are temporarily paused — Partial Outage」，Builds（US West、EU West、Southeast Asia、US East）、API、Support 都列為受影響；07:24 UTC 開始調查，08:28 UTC 更新「後端也有問題，仍在調查」。不是本專案設定或程式錯誤。
