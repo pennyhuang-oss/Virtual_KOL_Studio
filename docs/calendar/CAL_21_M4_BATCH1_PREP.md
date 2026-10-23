@@ -1,17 +1,17 @@
-TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖｜送審報告
+TASK-CAL-001／M-4／R6｜全套寫真企劃重審｜送審報告
 
 # CAL_21 — 第一批 5 位角色生成準備（M-4 R4 準備；M-4 R5 已依本文件生成）
 
 > **M-4 R5：主管覆核 PASS，已依本文件每位送出 1 次（共 5 次、無重試）；V-Rin 只改授權的景別用語，其餘 4 份逐字照送。結果、最終送出文字與差異、驗收與扣款見 `CAL_22_M4_BATCH1_RESULTS.md`。以下保留 M-4 R4 準備時的內容與數字，不回改。**
 
-> 資料檔：`data/cal_m4_batch1_prep.json`（batch1-prep-v1，2026-10-21）與 `data/cal_m3_shoot_plan.json`（shoot-plan-v11）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準；5 份 prompt 由產生器核對「已接受企劃原文＋下列光線句改寫」後才排版。
+> 資料檔：`data/cal_m4_batch1_prep.json`（batch1-prep-v1，2026-10-21）與 `data/cal_m3_shoot_plan.json`（shoot-plan-v12）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準；5 份 prompt 由產生器核對「已接受企劃原文＋下列光線句改寫」後才排版。
 > **本輪生成 0、修圖 0、訓練 0、扣 credits 0；唯讀查詢 10 次（含不扣款報價預檢 5 次）。**
 
 ## 0. 依據與範圍
 
 - Penny 要求加快製作、不再逐位首試，並同意下一步採 5 位角色批次製作（主管轉述，docs/calendar/data/cal_m4_owner_r4.json）。名單由執行者推薦，不要求 Penny 再選。
 - 本輪不生成；5 份 prompt、設定與費用待主管覆核，通過後另發整批生成指令。
-- V-Iris：Penny 接受，照片直接採用（M-4 R4；取代主管 M-4 R3「反光板及支架必修」的判定；反光板保留）。目前進度（M-4 R5）：24 套定稿、已生成 6、已接受 1、待 Penny 看圖 5、其餘 18 套待製作。
+- V-Iris：Penny 接受，照片直接採用（M-4 R4；取代主管 M-4 R3「反光板及支架必修」的判定；反光板保留）。目前進度（M-4 R5）：24 套定稿、已生成 6、已接受 1、待 Penny 看圖 0、其餘 23 套待製作。
 
 ## 1. 5 位總覽（依送出順序）
 

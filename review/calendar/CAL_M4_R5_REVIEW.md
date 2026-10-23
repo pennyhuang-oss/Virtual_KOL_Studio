@@ -149,3 +149,11 @@ Railway恢復、接續本輪時：
 - 待部署成果保留為 `f04bc3d06c28ece44983f2f7ddd740021c33aa33`。已停止部署重試與狀態輪詢，沒有背景監看。
 - 本輪停在這裡：照片不改、不生成、不修圖、不啟動下一批；不另建網站、不改存取設定、不合併 main；仍屬 M-4／R5。
 - 接續時依上列 1–5 與 §6 的接續步驟執行。另註：本工作環境的 Railway 連接器目前已斷線、需要重新授權（claude.ai 的 connector 設定），授權恢復前無法查詢服務或部署。
+
+## 8. M-4 R6：Owner 決定（來源：Penny 決定，主管轉交，2026-10-23）
+
+- **M-4 R5 結論：生成與部署完成；第一批照片 Owner 全數退回。** 這不是品質驗收通過。
+- 第一批 5 張全部「想修改」、接受 0：V-tammy-chou、V-rin-ayase、V-somi-oh、H-yerin-han、H-jia-seo，逐張記為「Penny 退回／待重規劃」；不得列為已接受或可交印。
+- V-iris-chen 已接受，保留，不撤銷、不修改。
+- 指令與 Penny 逐張重點逐字保存在 `docs/calendar/data/cal_m4_owner_r6.json`；重審與重建提案見 `docs/calendar/CAL_23_M4_R6_REPLAN.md` 與 `review/calendar/CAL_M4_R6_REVIEW.md`。
+- 本節以前的照片、測試、部署與扣款紀錄都保留，不改寫。

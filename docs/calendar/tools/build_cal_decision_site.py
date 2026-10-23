@@ -320,10 +320,10 @@ def build_m3(mat):
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
     assert P['counts'] == {'generated': 6, 'credits': 0.72, 'trainings': 0}, 'M-4 R2 生成 1 張；M-4 R5 第一批 5 張（每位 1 次請求）'
-    assert P['version'] == 'shoot-plan-v11' and P['revision']['from_version'] == 'shoot-plan-v10'
-    PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板）；M-4 R5：第一批 5 位已生成，待 Penny 看圖
-    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['generated'], PR['accepted'], PR['pending_owner_review'], PR['remaining']) == (6, 1, 5, 18)
-    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'generated-pending-owner-review' and P['batch1']['sets'] == PR['pending_sets'] == BATCH1_SETS
+    assert P['version'] == 'shoot-plan-v12' and P['revision']['from_version'] == 'shoot-plan-v11'
+    PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板）；M-4 R6：第一批 5 張 Penny 全數退回，24 套重審提案待主管覆核
+    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['generated'], PR['accepted'], PR['owner_rejected'], PR['pending_owner_review'], PR['remaining']) == (6, 1, 5, 0, 23)
+    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'owner-rejected-r6' and P['batch1']['sets'] == PR['rejected_sets'] == BATCH1_SETS
     acc, ver = P['status']['accepted'], P['status']['supervisor_verified']
     assert P['status']['m3'] == 'complete' and len(acc) == 23 and ver == ['H-luna-tanaka'] and not P['status']['revised'], 'M-4 R1 狀態不對'
     assert sorted(acc + ver) == sorted(x['id'] for x in P['sets'])
@@ -398,7 +398,7 @@ def build_m3(mat):
     assert not TX_RAW.search(text), f'公開資料出現交易原始資料：{TX_RAW.search(text).group(0)}'
     shas = {P['meta']['material_page_commit'], P['meta']['calendar_baseline'], P['meta']['aaliya_sources']['catalog_commit'],
             P['revision']['from_commit'], P['r5']['from_commit'], P['r6']['from_commit'], P['r7']['from_commit'], P['m4r1']['from_commit'],
-            P['m4r2']['from_commit'], P['m4r4']['from_commit'], P['m4r5']['from_commit']}
+            P['m4r2']['from_commit'], P['m4r4']['from_commit'], P['m4r5']['from_commit'], P['m4r6']['from_commit']}
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}

@@ -1,10 +1,11 @@
-TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖｜送審報告
+TASK-CAL-001／M-4／R6｜全套寫真企劃重審｜送審報告
 
 # CAL_22 — 第一批 5 位角色生成結果（M-4 R5）
 
 > 資料檔：`data/cal_m4_batch1_run.json`（batch1-run-v1，2026-10-21）、`data/cal_m4_auth_r5.json`（主管指令逐字）、`data/cal_m4_batch1_prep.json`（CAL_21）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，產生器逐張核對送出 prompt、原圖 sha256 與扣款合計後才排版。工作 ID 與 Soul ID 只在私有執行紀錄 `review/calendar/m4_r5/execution_log.json` 與各人設 profile.json。
 > **本輪請求 5 次（每位 1 次、無重試）、完成 5、失敗 0；生成 5 張；修圖 0、放大 0、訓練 0；實扣 0.60 credits（核准額度 0.60），退款 0。**
 > 以下驗收是執行者自測，不是主管覆核；照片是否接受由 Penny 在目前檢視頁決定。
+> **M-4 R6：Penny 已全數退回（想修改 5、接受 0；逐張「Penny 退回／待重規劃」）。M-4 R5 是「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。重審與重建提案見 `CAL_23_M4_R6_REPLAN.md`（待主管覆核）。**
 
 ## 0. 授權範圍
 

@@ -28,7 +28,7 @@ BATCH = os.path.join(CAL, 'data', 'cal_m4_batch1_prep.json')
 OUT22 = os.path.join(CAL, 'CAL_22_M4_BATCH1_RESULTS.md')
 RUN = os.path.join(CAL, 'data', 'cal_m4_batch1_run.json')
 AUTH = os.path.join(CAL, 'data', 'cal_m4_auth_r5.json')
-FIRST_LINE = 'TASK-CAL-001／M-4／R5｜第一批5位角色生成與上線審圖｜送審報告'
+FIRST_LINE = 'TASK-CAL-001／M-4／R6｜全套寫真企劃重審｜送審報告'
 FIRST_20 = 'TASK-CAL-001／M-4／R4｜V-Iris 首試準備、首試前核查、單張首試與定案（Penny 接受）'
 FIRST_19 = 'TASK-CAL-001／M-3／R2｜24套雙款獨立寫真企劃｜送審報告'   # R2 的決策紀錄，標題不改
 ORIGIN_ZH = {'new': '新企劃', 'accepted-v2-main': 'Penny 已接受的 v2 主方向', 'accepted-v2-alt': 'Penny 採用的 v2 替代方向'}
@@ -73,7 +73,8 @@ def render18(d):
          '> M-4 R1 狀態（歷史）：主管結論 M-3／R7 PASS，M-3 完成——23 套 owner 接受＋H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）；不再要求 owner 填企劃問卷。',
          f"> M-4 R2 狀態（歷史）：{d['m4_prep']['r2']['status']}{d['m4_prep']['r2']['verdict']}",
          f"> M-4 R4 狀態（歷史）：{d['m4_prep']['r4']['status']}（{d['m4_prep']['r4']['supersedes']}）；首試紀錄見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。",
-         f"> **M-4 R5 狀態：第一批 5 位各生成 1 張，待 Penny 在目前檢視頁看圖；24 套定稿、已生成 {d['status']['production']['generated']} 張、已接受 {d['status']['production']['accepted']} 張、待 Penny 看圖 {d['status']['production']['pending_owner_review']} 張、其餘 {d['status']['production']['remaining']} 套待製作。生成準備見 `CAL_21_M4_BATCH1_PREP.md`；結果、驗收與扣款見 `CAL_22_M4_BATCH1_RESULTS.md`。**", '',
+         "> M-4 R5 狀態（歷史）：第一批 5 位各生成 1 張並上線審圖；生成準備見 `CAL_21_M4_BATCH1_PREP.md`，結果與扣款見 `CAL_22_M4_BATCH1_RESULTS.md`。",
+         f"> **M-4 R6 狀態：{d['m4r6']['batch1_line']} 已生成 {d['status']['production']['generated']} 張、已接受 {d['status']['production']['accepted']} 張、退回 {d['status']['production']['owner_rejected']} 張、其餘 {d['status']['production']['remaining']} 套待製作。以下 24 套是採用重審提案前的原文。**", '',
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],
@@ -271,7 +272,7 @@ def render18(d):
           f"首試準備（工作流、待確認事項、首張驗收條件）見 `{os.path.basename(d['m4_prep']['doc'])}`。", ''] + [f'- {x}' for x in I['why']] + ['']
     L += table(['項目', '內容'], [[x['k'], x['v']] for x in I['plan']])
     L += ['', f"**授權：** {K['gate']}", '', '## 11. 要請 Penny 決定的事', '']
-    L += [f'{i}. {q}' for i, q in enumerate(d['questions'], 1)] or ['沒有要請 Penny 決定的企劃事項：M-3 已完成（主管 M-4 R1 結論），不再要求 owner 填企劃問卷。V-Iris 首試 Penny 已接受（M-4 R4，含反光板），不再詢問；第一批 5 位已生成（M-4 R5），請 Penny 在目前檢視頁逐張選「接受」或「想修改」，結果見 `CAL_22_M4_BATCH1_RESULTS.md`。']
+    L += [f'{i}. {q}' for i, q in enumerate(d['questions'], 1)] or ['沒有要請 Penny 決定的企劃事項：M-3 已完成（主管 M-4 R1 結論），不再要求 owner 填企劃問卷。V-Iris 首試 Penny 已接受（M-4 R4，含反光板），不再詢問；第一批 5 張 Penny 已全數退回（M-4 R6）；24 套重審與重建提案見 `CAL_23_M4_R6_REPLAN.md`，其中需要 Penny 決定的事項列在該文件第 8 節。']
     L += ['', '## 12. 共同的皮膚與質感句（每段 prompt 結尾都加）', '', '```text', d['skin_line'], '```', '']
     return '\n'.join(L)
 
@@ -353,8 +354,8 @@ def render21(d, B):
     """第一批 5 位的生成準備：prompt 由已接受企劃原文套用光線句改寫算出，逐張核對後才排版。"""
     S = {s['id']: s for s in d['sets']}
     X = B['sets']
-    assert B['round'] == 'M-4 R4' and d['round'] == 'M-4 R5' and len(X) == 5 and len({x['pid'] for x in X}) == 5 and all(x['pid'] != 'iris-chen' for x in X), '第一批要 5 位不同角色、不含 Iris'
-    assert B['counts']['generated'] == 0 and B['counts']['credits'] == 0 and B['status'] == 'prepared-pending-supervisor-review' and d['batch1']['status'] == 'generated-pending-owner-review' and [x['id'] for x in X] == d['batch1']['sets']
+    assert B['round'] == 'M-4 R4' and d['round'] in ('M-4 R5', 'M-4 R6') and len(X) == 5 and len({x['pid'] for x in X}) == 5 and all(x['pid'] != 'iris-chen' for x in X), '第一批要 5 位不同角色、不含 Iris'
+    assert B['counts']['generated'] == 0 and B['counts']['credits'] == 0 and B['status'] == 'prepared-pending-supervisor-review' and d['batch1']['status'] in ('generated-pending-owner-review', 'owner-rejected-r6') and [x['id'] for x in X] == d['batch1']['sets']
     rows = []
     for x in X:
         s = S[x['id']]
@@ -430,7 +431,7 @@ def render22(d, B, U, A):
     X = {x['id']: x for x in B['sets']}
     Z = U['sets']
     sc = A['scope']
-    assert U['round'] == d['round'] == 'M-4 R5' and [z['id'] for z in Z] == sc['sets'] == d['batch1']['sets'] and len(Z) <= sc['requests_max']
+    assert U['round'] == 'M-4 R5' and d['round'] in ('M-4 R5', 'M-4 R6') and [z['id'] for z in Z] == sc['sets'] == d['batch1']['sets'] and len(Z) <= sc['requests_max']
     fix = U['prompt_fix']
     assert fix == A['prompt_fix'] and fix['set'] == 'V-rin-ayase'
     rows, money = [], []
@@ -456,7 +457,8 @@ def render22(d, B, U, A):
     L = [FIRST_LINE, '', '# CAL_22 — 第一批 5 位角色生成結果（M-4 R5）', '',
          f"> 資料檔：`data/cal_m4_batch1_run.json`（{U['version']}，{U['written_on']}）、`data/cal_m4_auth_r5.json`（主管指令逐字）、`data/cal_m4_batch1_prep.json`（CAL_21）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，產生器逐張核對送出 prompt、原圖 sha256 與扣款合計後才排版。工作 ID 與 Soul ID 只在私有執行紀錄 `review/calendar/m4_r5/execution_log.json` 與各人設 profile.json。",
          f"> **本輪請求 {K['requests']} 次（每位 1 次、無重試）、完成 {K['completed']}、失敗 {K['failed']}；生成 {K['generated']} 張；修圖 {K['retouched']}、放大 {K['upscaled']}、訓練 {K['trainings']}；實扣 {C['charged_total']:.2f} credits（核准額度 {C['budget']:.2f}），退款 {C['refunds_total']}。**",
-         '> 以下驗收是執行者自測，不是主管覆核；照片是否接受由 Penny 在目前檢視頁決定。', '',
+         '> 以下驗收是執行者自測，不是主管覆核；照片是否接受由 Penny 在目前檢視頁決定。',
+         f"> **{d['m4r6']['batch1_line']}**" if 'm4r6' in d else '', '',
          '## 0. 授權範圍', '']
     L += table(['項目', '內容'], [['指令', A['task']], ['基準', f"成果 `{A['base']['result']}`、送審 `{A['base']['review']}`"], ['名單與順序', '、'.join(sc['sets'])],
                                   ['請求上限', f"每位 {sc['per_set']} 次、共最多 {sc['requests_max']} 次、不補送"], ['費用', f"每張精確報價 ≤ {sc['quote_max_each']}、合計 ≤ {sc['quote_max_total']:.2f}、核准額度 {sc['budget_credits']:.2f} credits"],

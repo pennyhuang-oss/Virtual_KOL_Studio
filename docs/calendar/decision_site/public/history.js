@@ -525,7 +525,7 @@ ${og.length ? `<p class="oldfb">v1／v2 整體備註（保留，歷史）：${es
     return L.join('\n');
   }
   function refreshOut() {
-    $('#bar-count').textContent = `歷史紀錄（只讀）｜M-3：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris：Penny 已接受｜第一批 5 位已生成，待 Penny 看圖`;
+    $('#bar-count').textContent = `歷史紀錄（只讀）｜M-3：已接受 ${ACC.length} 套＋主管覆核通過 ${VSETS.length} 套｜V-Iris：Penny 已接受｜第一批 5 張 Penny 全數退回（M-4 R6 重審中）`;
     const ta = $('#out-text');
     if (ta) ta.value = buildText();
   }
