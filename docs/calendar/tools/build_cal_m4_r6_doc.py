@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""TASK-CAL-001／M-4（R6）— 由 data/cal_m4_r6_replan.json（執行者分析與提案，replan-r6-v2）、data/cal_m4_owner_r6.json（Owner 決定逐字）、
-data/cal_m4_supervisor_r6.json（主管 R6 覆核 REVISE 逐字）與 data/cal_m3_shoot_plan.json（現行 24 套企劃）產生：
-  CAL_23_M4_R6_REPLAN.md   第一批全數退回後的全套寫真企劃重審：來源分層、修改對照（v1→v2）、實際看圖比較（Iris 與 5 張退回照片）、
+"""TASK-CAL-001／M-4（R6）— 由 data/cal_m4_r6_replan.json（執行者分析與提案，replan-r6-v3）、data/cal_m4_owner_r6.json（Owner 決定逐字）、
+data/cal_m4_supervisor_r6.json（主管 R6 覆核 REVISE 與 v2 覆核逐字）與 data/cal_m3_shoot_plan.json（現行 24 套企劃）產生：
+  CAL_23_M4_R6_REPLAN.md   第一批全數退回後的全套寫真企劃重審：來源分層、修改對照（v2→v3、v1→v2）、實際看圖比較（Iris 與 5 張退回照片）、
                            共用規則（舊規則重新定性＋修訂規則）、24 套逐套審查與節奏表、23 套設計卡與構圖核算（第一批 5 張附 prompt 草稿）、
-                           生成前後審美把關、決策重整
+                           生成前後審美把關、決策重整、下一步單張試拍計畫（只提計畫，不執行）
 產生器核對：
 - 只有 V-Iris 是「已接受（不改）」；第一批 5 張整案重寫；其餘 23 套都有設計卡，結論分類一致；每套都有具體的「最吸引人的地方」。
-- 構圖核算（全片幅等效的設計參考）：預期配置加總 100%、人物占比在範圍內、不低於最低安全邊界；由焦段與占比算出距離、成品人物高度、
-  畫面涵蓋範圍、相機俯仰與地平線位置；俯仰不超過 6°、地平線不穿過頭頸、橫式不落在上下 2 mm 裁切帶；景別分類與數字相符。
+- 構圖核算（全片幅等效的設計參考）：每套自身的預期配置加總 100%、人物占比在自己的範圍內、不低於最低安全邊界（不設其他固定門檻）；
+  由焦段與占比算出距離、成品人物高度、畫面涵蓋範圍與相機俯仰（不超過 6°）；海平線／平地地平線與水平地面的消失點在相機視線高度，
+  可推算位置並核對不穿過頭頸、不落在橫式裁切帶；對岸水線、樹線、坡道只列設計意圖與估計，不稱幾何驗證；景別分類與數字相符。
 - 第一批 prompt 的身分句與 CAL_21 逐字相同（canon 不改）；焦段與距離和核算一致；沒有器材名詞、百分比、身材展示目的句、
   「fashion editorial」與「unretouched／unposed／available light」。
 - Penny 的每個重點都有對應的證據與 A／B／C 歸因；重複動作的 v2 套數由節奏資料重新計算；決策項目都標明是否碰到 Owner 已定事項。
@@ -27,7 +28,7 @@ ROOT = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], text=Tru
 CAL = os.path.join(ROOT, 'docs', 'calendar')
 DATA = os.path.join(CAL, 'data')
 OUT = os.path.join(CAL, 'CAL_23_M4_R6_REPLAN.md')
-FIRST_LINE = 'TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛盾｜送審報告'
+FIRST_LINE = 'TASK-CAL-001／M-4／R6｜v2 主管覆核與有限收尾｜送審報告'
 BATCH1 = ['V-tammy-chou', 'V-rin-ayase', 'V-somi-oh', 'H-yerin-han', 'H-jia-seo']
 LEVELS = ('已接受（不改）', '保留設計', '局部修改', '整案重寫')
 # 器材名詞（避免器材入鏡）；補光本身可以寫成效果
@@ -46,6 +47,7 @@ SAFE = {'V': (3, 3), 'H': (6, 5)}                               # 最低安全�
 SENSOR = {'V': (24, 32), 'H': (36, 20.25)}                      # 全片幅等效畫面寬、高（mm）
 PRINT = {'V': (120, 160), 'H': (192, 108)}                      # 進桌曆框後的原圖寬、高（mm）；橫式框內 104 mm
 HEAD = 0.13                                                     # 頭高約身高 13%（核對地平線不穿過頭頸用）
+LINE_GEO = {'horizon': '在相機視線高度，前提是海面或平地延伸到遠處', 'vp': '在相機視線高度，前提是地面水平、線條與地面平行'}
 
 
 def cell(s):
@@ -99,7 +101,6 @@ def framing(sid, s, fr):
     assert lo <= p <= hi, (sid, 'layout 人物不在占比範圍')
     if fr['ext'] in CROP:
         assert lay[2] is None and lay[0] + lay[1] == 100, (sid, '裁切景別：頭頂留白＋人物＝100%')
-        assert lay[0] <= 20, (sid, '裁切景別的人物占比不可能低於 80%（v1 的「膝上約 60%」就是這種矛盾）')
     else:
         assert lay[2] is not None and sum(lay) == 100, (sid, '頭頂＋人物＋腳下＝100%')
     span = sw if recline else sh
@@ -108,7 +109,7 @@ def framing(sid, s, fr):
     pw, ph = PRINT[book]
     size = (lo * (pw if recline else ph), hi * (pw if recline else ph))
     head = None if recline else HEAD * h / Hf * ph            # 成品頭部約略高度（mm）
-    out = dict(h=h, E=E, label=label, D=D, Dlo=Dlo, Dhi=Dhi, Hf=Hf, Wf=Wf, size=size, head=head, tilt=None, line_y=None)
+    out = dict(h=h, E=E, label=label, D=D, Dlo=Dlo, Dhi=Dhi, Hf=Hf, Wf=Wf, size=size, head=head, tilt=None, line=None)
     if not recline:
         top_safe, bot_safe = SAFE[book]
         assert lay[0] >= top_safe, (sid, '頭頂低於最低安全邊界')
@@ -121,12 +122,16 @@ def framing(sid, s, fr):
         assert abs(tilt) <= 6, (sid, f'相機高度與留白不一致：需俯仰 {tilt:.1f}°')
         out.update(hc=hc, tilt=tilt)
         if fr.get('line'):
-            y = (frame_top - fr['cam_h']) / Hf * 100            # 地平線（相機高度）在畫面中的位置，% 由上往下
-            head_end = lay[0] + HEAD * h / Hf * 100
-            assert not (lay[0] - 2 <= y <= head_end + 4), (sid, f'地平線 {y:.0f}% 穿過頭頸')
-            if book == 'H':
-                assert 2 < y < 98, (sid, '地平線落在橫式裁切帶')
-            out['line_y'] = y
+            kind, name, note = fr['line']
+            y = (frame_top - fr['cam_h']) / Hf * 100            # 相機視線高度在畫面中的位置，% 由上往下
+            if kind in LINE_GEO:                                 # 地平線、水平地面的消失點：幾何推算
+                head_end = lay[0] + HEAD * h / Hf * 100
+                assert not (lay[0] - 2 <= y <= head_end + 4), (sid, f'{name} {y:.0f}% 穿過頭頸')
+                if book == 'H':
+                    assert 2 < y < 98, (sid, f'{name}落在橫式裁切帶')
+            else:                                                # 對岸線、樹線、坡道：只寫設計意圖與估計
+                assert kind == 'est' and '{y}' in note and '設計意圖' in note, (sid, '估計類線條要寫設計意圖')
+            out['line'] = (kind, name, note, y)
     cls = fr['cls']
     if fr['ext'] in NEAR:
         assert cls == '近', sid
@@ -135,6 +140,17 @@ def framing(sid, s, fr):
     else:
         assert (cls == '中' and p >= 0.60) or (cls == '遠' and p <= 0.65), (sid, '景別分類與占比不符')
     return out
+
+
+def line_txt(c, short=False):
+    if c['line'] is None:
+        return '—' if short else '—（畫面中沒有明顯地平線，或為近景）'
+    kind, name, note, y = c['line']
+    if kind == 'est':
+        return f'{name}：估計約 {y:.0f}%（不是幾何驗證）' if short else f'{name}：估計，不是幾何驗證。' + note.format(y=f'{y:.0f}')
+    if short:
+        return f'{name}：由上 {y:.0f}%（推算）'
+    return f"{name}：約在畫面由上往下 {y:.0f}%（幾何推算：{LINE_GEO[kind]}），不穿過頭頸" + (f'；{note}' if note else '')
 
 
 def tilt_txt(t):
@@ -159,9 +175,13 @@ def render(P, O, SUP, X):
     prep = {x['id']: x for x in load('cal_m4_batch1_prep.json')['sets']}
     PR = P['status']['production']
     # ---- 核對：來源與狀態 ----
-    assert X['round'] == 'M-4 R6' and X['version'] == 'replan-r6-v2' and O['decision']['batch1'] == {s: 'Penny 退回／待重規劃' for s in BATCH1}
+    assert X['round'] == 'M-4 R6' and X['version'] == 'replan-r6-v3' and O['decision']['batch1'] == {s: 'Penny 退回／待重規劃' for s in BATCH1}
     assert O['page_copy']['status'].startswith('交接缺件') and O['page_copy']['text'] is None and 'owner_points' in O['source_layers']
-    assert SUP['verbatim'].startswith('TASK-CAL-001／M-4／R6｜主管覆核 REVISE') and SUP['reviewed']['result_commit'] == X['supersedes']['commit']
+    assert SUP['verbatim'].startswith('TASK-CAL-001／M-4／R6｜主管覆核 REVISE') and SUP['reviewed']['result_commit'] == X['history'][0]['commit']
+    SV2 = SUP['v2_review']
+    assert SV2['verbatim'].startswith('TASK-CAL-001／M-4／R6｜v2 主管覆核與有限收尾') and SV2['reviewed']['result_commit'] == X['supersedes']['commit'] == X['history'][1]['commit']
+    T = X['trial']
+    assert T['set'] in BATCH1 and T['request']['count'] == 1 and T['request']['requests'] == 1 and T['cost']['proposed_cap'] == T['cost']['r5_quote'] and len(T['flow']) == 4, '單張試拍：一張、一次請求、不自動重試'
     assert PR['accepted'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24 and PR['to_complete'] == PR['rejected_replan'] + PR['not_generated']
     assert PR['generated_cumulative'] == PR['accepted'] + PR['rejected_replan'] and PR['rejected_sets'] == BATCH1
     # ---- 核對：結論、設計卡、節奏 ----
@@ -224,14 +244,15 @@ def render(P, O, SUP, X):
     books = {b: sorted((i for i in order if i[0] == b), key=lambda i: S[i]['month']) for b in 'HV'}
 
     # ---- 排版 ----
-    L = [FIRST_LINE, '', '# CAL_23 — M-4 R6 第一批全數退回與全套寫真企劃重審（v2：依主管覆核 REVISE 修訂）', '',
+    L = [FIRST_LINE, '', '# CAL_23 — M-4 R6 第一批全數退回與全套寫真企劃重審（v3：依主管 v2 覆核有限補正）', '',
          f"> 資料檔：`data/cal_m4_r6_replan.json`（{X['version']}，{X['written_on']}；執行者分析與提案，取代 {X['supersedes']['version']}＠`{X['supersedes']['commit'][:7]}`）、"
-         f"`data/cal_m4_supervisor_r6.json`（主管覆核 REVISE 逐字）、`data/cal_m4_owner_r6.json`（Owner 決定與 R6 指令逐字）、`data/cal_m3_shoot_plan.json`（{P['version']}；現行 24 套）。本文件由 `tools/build_cal_m4_r6_doc.py` 產生。",
+         f"`data/cal_m4_supervisor_r6.json`（主管覆核 REVISE 與 v2 覆核逐字）、`data/cal_m4_owner_r6.json`（Owner 決定與 R6 指令逐字）、`data/cal_m3_shoot_plan.json`（{P['version']}；現行 24 套）。本文件由 `tools/build_cal_m4_r6_doc.py` 產生。",
          f"> **狀態：提案，待主管覆核。** 採用前，`cal_m3_shoot_plan.json` 的 24 套原文不改。本輪生成 {X['counts']['generated']}、修圖 {X['counts']['retouched']}、訓練 {X['counts']['trainings']}、付費操作 {X['counts']['paid']}、部署 {X['counts']['deploys']}。"
          '以下是 Claude（執行者）自查，不是主管驗收，也不是 Penny 接受。', '',
          '## 0. 來源與狀態', '',
          '| 層級 | 內容 | 位置 |', '|---|---|---|',
-         f"| 主管覆核（REVISE） | {SUP['conclusion']} | `data/cal_m4_supervisor_r6.json` verbatim（{SUP['source']}） |"]
+         f"| 主管 v2 覆核（本輪） | {SV2['conclusion']} 這是文字企劃覆核，不是照片品質接受或生成授權。 | `data/cal_m4_supervisor_r6.json` v2_review.verbatim |",
+         f"| 主管覆核（REVISE，上一輪） | {SUP['conclusion']} | `data/cal_m4_supervisor_r6.json` verbatim（{SUP['source']}） |"]
     L += [f"| {lab} | {txt} | `data/cal_m4_owner_r6.json` {k} |" for k, lab, txt in (
         ('verbatim', 'R6 指令原文', O['source_layers']['verbatim']), ('decision', 'Owner 決定', O['source_layers']['decision']),
         ('owner_points', '主管摘要', O['source_layers']['owner_points']), ('page_copy', 'Penny 頁面原文', O['source_layers']['page_copy']))]
@@ -239,12 +260,14 @@ def render(P, O, SUP, X):
     L += [f"- {s}：{v}" for s, v in O['decision']['batch1'].items()]
     L += [f"- Iris：{O['decision']['iris']}", f"- 範圍：{O['decision']['scope']}", f"- M-4 R5：{O['decision']['r5_status']}",
           f"- 進度：{PR['sets_total']} 套＝已接受 {PR['accepted']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計）。",
-          f"- 主管 REVISE 限制：{SUP['limits']}",
+          f"- 主管 v2 覆核範圍：{SV2['scope']}", f"- 本輪限制：{SV2['limits']}",
           f"- Penny 頁面原文：{O['page_copy']['note']}", '',
           '**Penny 逐張重點（主管摘要，轉交自 R6 指令；不是 Penny 頁面原文）：**', '']
     L += [f"- {v.replace(chr(10), '').replace('  ', '')}" for v in O['owner_points'].values()]
-    L += ['', '## 0.1 修改對照（v1 → v2）', '']
-    L += table(['項目', 'v1（5bed3a3）', 'v2（本版）', '依據'], [[c['area'], c['v1'], c['v2'], c['why']] for c in X['changes']])
+    L += ['', '## 0.1 有限修改對照（v2 → v3，本輪）', '']
+    L += table(['項目', 'v2（1af8170）', 'v3（本版）', '依據'], [[c['area'], c['v2'], c['v3'], c['why']] for c in X['changes_v3']])
+    L += ['', '## 0.2 修改對照（v1 → v2，上一輪；其中補光判準與裁切景別的說法已在 v3 更正）', '']
+    L += table(['項目', 'v1（5bed3a3）', 'v2（1af8170）', '依據'], [[c['area'], c['v1'], c['v2'], c['why']] for c in X['changes']])
     L += ['', '## 1. 實際看圖的檔案', '']
     L += table(['套別', '實際打開的檔案'], [[v['set'], '；'.join(v['files'])] for v in X['viewed']])
     I = X['iris']
@@ -306,7 +329,8 @@ def render(P, O, SUP, X):
           '**怎麼讀這些數字：** 焦段與距離都是全片幅等效的設計參考，用來確認占比、留白、相機高度與套框互相合理；prompt 只拿來當透視提示，不保證模型精準遵守。'
           '成品尺寸＝人物占比×進框後的原圖高度（直式 160 mm；橫式 192×108 mm 原圖、框內 104 mm；斜躺以畫寬 192 mm 計）。'
           '距離＝可見範圍×焦段÷（畫面高×占比）；可見範圍依身高乘景別比例估計（全身 1.00、膝上 0.72、腰上 0.42、胸上 0.30、坐椅 0.75、坐台階 0.65、坐地 0.55、坐姿半身 0.50、斜躺 0.95）。'
-          '相機俯仰＝相機高度與「平視時應在的高度」的差；地平線位置＝相機高度在畫面中的位置（由上往下）。', '',
+          '相機俯仰＝相機高度與「平視時應在的高度」的差。線條分三類：海平線與平地地平線、水平地面上的消失點，都在相機視線高度，可推算位置（由上往下）；'
+          '對岸水線、樹線、坡道受距離與地形影響，只寫設計意圖與估計，不稱幾何驗證。', '',
           f"**最低安全邊界（下限）：** 直式 3:4 不裁切，頭頂與腳下各至少 {SAFE['V'][0]}%；橫式 16:9 上下共裁 4 mm，頭頂至少 {SAFE['H'][0]}%、腳下至少 {SAFE['H'][1]}%，地平線避開上下 2 mm 帶。下表「預期配置」是各套實際設計的位置，和下限分開。", '']
     rows = []
     for i in BATCH1 + [x for x in order if x in W and x not in BATCH1]:
@@ -314,7 +338,7 @@ def render(P, O, SUP, X):
         rows.append([i, cls[i], fr['shot'].split('（')[0], f"{fr['f']}mm", f"{fr['occ'][0] * 100:.0f}–{fr['occ'][1] * 100:.0f}%", layout_txt(fr),
                      f"約 {c['D']:.1f} m（{c['Dlo']:.1f}–{c['Dhi']:.1f}）", f"{c['size'][0]:.0f}–{c['size'][1]:.0f} mm" + (f"（頭約 {c['head']:.0f}）" if c['head'] else ''),
                      f"{c['Wf']:.1f}×{c['Hf']:.1f} m", f"{fr['cam_h']:.2f} m（{fr['cam_ref']}）{tilt_txt(c['tilt'])}".rstrip(),
-                     f"{fr['line']}：由上 {c['line_y']:.0f}%" if c['line_y'] is not None else '—'])
+                     line_txt(c, short=True)])
     L += table(['套別', '景別', '景別類型', '焦段', '人物占比', '預期配置', '距離（核算）', '成品人物高度（mm）', '她的位置畫面涵蓋（寬×高）', '相機高度與俯仰', '地平線／消失點'], rows)
     L += ['']
     for i in BATCH1 + [x for x in order if x in W and x not in BATCH1]:
@@ -329,7 +353,7 @@ def render(P, O, SUP, X):
             ['預期配置', layout_txt(fr)], ['最低安全邊界', safe],
             ['焦段與距離（全片幅等效，設計參考）', f"{fr['f']}mm，約 {c['D']:.1f} m（占比範圍對應 {c['Dlo']:.1f}–{c['Dhi']:.1f} m）；她的位置畫面涵蓋約 {c['Wf']:.1f} m 寬 × {c['Hf']:.1f} m 高"],
             ['相機高度', f"約 {fr['cam_h']:.2f} m（{fr['cam_ref']}）；" + ('斜躺依畫面描述' if c['tilt'] is None else f"依預期配置，平視時相機應在約 {c['hc']:.2f} m；" + ('差距在 1° 內，即平視' if abs(c['tilt']) < 1 else f"所以相機需{tilt_txt(c['tilt'])}"))],
-            ['地平線／消失點', f"{fr['line']}：約在畫面由上往下 {c['line_y']:.0f}%，不穿過頭頸" if c['line_y'] is not None else '—（畫面中沒有明顯地平線，或為近景）'],
+            ['地平線／消失點', line_txt(c)],
             ['成品人物高度', f"{c['size'][0]:.0f}–{c['size'][1]:.0f} mm" + ('（斜躺身長，畫寬 192 mm）' if fr['ext'] == 'recline' else
                                                                         f"（{'直式框高 160 mm' if i[0] == 'V' else '橫式原圖高 108 mm、框內 104 mm'}{'；裁切景別為髮頂到下緣的可見部分' if fr['ext'] in CROP else ''}）；頭部約 {c['head']:.0f} mm")],
             ['服裝與鞋', w['outfit']], ['主要動作', w['action']], ['光源、明暗與色彩', w['light']], ['背景整理', w['background']],
@@ -348,7 +372,17 @@ def render(P, O, SUP, X):
     L += table(['項目', 'v1 提案', '是否碰到 Owner 已定事項', 'v2 處理', '理由', '需要 Penny 決定'],
                [[f"{d['id']} {d['k']}", d['v1'], d['owner'], d['v2'], d['why'], '是' if d['needs_owner'] else '否'] for d in X['decisions']])
     L += ['', f"**尚待 Penny 決定：{'、'.join(X['pending_owner']) or '無'}。** 照片生成後仍由 Penny 看圖決定接受或修改；下一次生成的範圍與費用另行確認。", '',
-          '## 9. 本輪範圍', '', '- 只做分析、企劃重建與送審：生成 0、修圖 0、訓練 0、付費操作 0、部署 0；不啟動下一批、不改已接受的 V-Iris、不合併 main。',
+          f"## 9. 下一步單張試拍計畫（提案，不執行）：{T['set']}", '', f"**狀態：** {T['status']}", '', '**為什麼最適合驗證新的寫真方向：**', '']
+    L += [f'{n}. {t}' for n, t in enumerate(T['why'], 1)]
+    L += ['', '**能驗證：**', ''] + [f'- {t}' for t in T['validates']] + ['', '**不能代表：**', ''] + [f'- {t}' for t in T['not_cover']]
+    Q = T['request']
+    L += ['', '**模型、設定與張數：**', ''] + table(['項目', '內容'], [['模型', Q['model']], ['Soul', Q['soul']], ['品質／比例', f"{Q['quality']}／{Q['aspect_ratio']}"],
+          ['張數／請求', f"count {Q['count']}、{Q['requests']} 次請求（不自動重試）"], ['unlim／參考圖／style', f"{'是' if Q['use_unlim'] else '否'}／{Q['medias']}／{Q['style_id']}"], ['存放', Q['folder']], ['prompt', Q['prompt']],
+          ['預期輸出', T['output']]])
+    C2 = T['cost']
+    L += ['', f"**費用資訊：** {C2['source']} 建議授權上限 {C2['proposed_cap']:.2f} credits。{C2['caveat']}", '', '**生成後流程：**', ''] + [f'{n}. {t}' for n, t in enumerate(T['flow'], 1)]
+    L += ['', '**其他候選為什麼不先試：**', ''] + [f"- {a['set']}：{a['why_not_first']}" for a in T['alternatives']] + ['', f"**之後：** {T['next']}", '',
+          '## 10. 本輪範圍', '', '- 單張試拍只提計畫，沒有呼叫任何生成或報價工具；不一次安排 5 張。', '- 只做分析、企劃重建與送審：生成 0、修圖 0、訓練 0、付費操作 0、部署 0；不啟動下一批、不改已接受的 V-Iris、不合併 main。',
           '- 人物 canon、身分、已定案月份都不改；第一批 prompt 的身分句逐字沿用 CAL_21。',
           '- 舊照片、舊企劃、v1 提案、測試與扣款證據保留，不覆蓋、不刪除。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。',
           '- 以上是 Claude 自查，不是主管驗收或 Penny 接受。', '']

@@ -1,15 +1,16 @@
-TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛盾｜送審報告
+TASK-CAL-001／M-4／R6｜v2 主管覆核與有限收尾｜送審報告
 
-# CAL_23 — M-4 R6 第一批全數退回與全套寫真企劃重審（v2：依主管覆核 REVISE 修訂）
+# CAL_23 — M-4 R6 第一批全數退回與全套寫真企劃重審（v3：依主管 v2 覆核有限補正）
 
-> 資料檔：`data/cal_m4_r6_replan.json`（replan-r6-v2，2026-10-23；執行者分析與提案，取代 replan-r6-v1＠`5bed3a3`）、`data/cal_m4_supervisor_r6.json`（主管覆核 REVISE 逐字）、`data/cal_m4_owner_r6.json`（Owner 決定與 R6 指令逐字）、`data/cal_m3_shoot_plan.json`（shoot-plan-v12；現行 24 套）。本文件由 `tools/build_cal_m4_r6_doc.py` 產生。
+> 資料檔：`data/cal_m4_r6_replan.json`（replan-r6-v3，2026-10-23；執行者分析與提案，取代 replan-r6-v2＠`1af8170`）、`data/cal_m4_supervisor_r6.json`（主管覆核 REVISE 與 v2 覆核逐字）、`data/cal_m4_owner_r6.json`（Owner 決定與 R6 指令逐字）、`data/cal_m3_shoot_plan.json`（shoot-plan-v12；現行 24 套）。本文件由 `tools/build_cal_m4_r6_doc.py` 產生。
 > **狀態：提案，待主管覆核。** 採用前，`cal_m3_shoot_plan.json` 的 24 套原文不改。本輪生成 0、修圖 0、訓練 0、付費操作 0、部署 0。以下是 Claude（執行者）自查，不是主管驗收，也不是 Penny 接受。
 
 ## 0. 來源與狀態
 
 | 層級 | 內容 | 位置 |
 |---|---|---|
-| 主管覆核（REVISE） | 全面重審方向正確；規則與重建稿 REVISE。尚未授權生成；第一批 5 張仍為 Penny 退回；V-Iris 保持已接受。 | `data/cal_m4_supervisor_r6.json` verbatim（主管（ChatGPT）覆核意見，經 Penny 轉交執行者） |
+| 主管 v2 覆核（本輪） | 企劃方向 PASS；生成前文件有限補正，整輪 REVISE。保留 23 套重建與第一批 5 份候選方案，不再全面推翻。 這是文字企劃覆核，不是照片品質接受或生成授權。 | `data/cal_m4_supervisor_r6.json` v2_review.verbatim |
+| 主管覆核（REVISE，上一輪） | 全面重審方向正確；規則與重建稿 REVISE。尚未授權生成；第一批 5 張仍為 Penny 退回；V-Iris 保持已接受。 | `data/cal_m4_supervisor_r6.json` verbatim（主管（ChatGPT）覆核意見，經 Penny 轉交執行者） |
 | R6 指令原文 | 主管轉交的 R6 指令原文（逐字） | `data/cal_m4_owner_r6.json` verbatim |
 | Owner 決定 | Penny 決定（依主管指令轉述） | `data/cal_m4_owner_r6.json` decision |
 | 主管摘要 | 主管摘要（轉交 Penny 逐張重點；不是 Penny 頁面原文） | `data/cal_m4_owner_r6.json` owner_points |
@@ -25,7 +26,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 - 範圍：審查擴及 24 套月面企劃（橫式與直式）；與本次要求抵觸的企劃必須重寫。
 - M-4 R5：生成與部署完成；第一批照片 Owner 全數退回（不是品質驗收通過）。
 - 進度：24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。
-- 主管 REVISE 限制：生成 0、修圖 0、訓練 0、付費操作 0、部署 0；不啟動下一批、不改已接受 Iris、不合併 main。完成後停止，交主管覆核。
+- 主管 v2 覆核範圍：只修正四項（刪除裁切景別 ≥80% 斷言與硬檢查；分清地平線、消失點、對岸水線與樹線；補光判準不要求同源或同色溫；第一批設計卡與 prompt 一致性），並提出單張試拍計畫（不執行）。
+- 本輪限制：生成 0、修圖 0、訓練 0、付費操作 0、部署 0；不改已接受 V-Iris、不啟動下一批、不合併 main；不新增無關測試或重跑無關全套檢查。
 - Penny 頁面原文：Penny 在選片頁按「複製本批回饋」產生的完整原文沒有附在上一輪（R6）的指令中，屬於交接缺件，不是執行者漏讀。目前只有主管指令中的決定與主管摘要（owner_points）。取得原文後逐字補存在 text，不由執行者重建或改寫。
 
 **Penny 逐張重點（主管摘要，轉交自 R6 指令；不是 Penny 頁面原文）：**
@@ -36,26 +38,39 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 - Yerin：人物與球車尺度失衡、透視不合理、姿態做作。
 - Jia：景可保留為方向，但人物過大、服裝與情境不合、人景構圖失衡。
 
-## 0.1 修改對照（v1 → v2）
+## 0.1 有限修改對照（v2 → v3，本輪）
 
-| 項目 | v1（5bed3a3） | v2（本版） | 依據 |
+| 項目 | v2（1af8170） | v3（本版） | 依據 |
+|---|---|---|---|
+| 裁切景別占比斷言（更正） | 把 v1「膝上約 60–65%」稱為必然矛盾，並在產生器加「裁切景別人物占比不得低於 80%」的硬檢查（R6 REVISE 時主管也這樣看）。 | 刪除通用斷言與硬檢查，記錄更正：主管上輪視為必然矛盾過於武斷，膝上配大量頭頂留白也是可能的構圖。v1 的問題改述為「沒寫頭頂留白、占比和配置對不起來」。保留每套自身配置的一致性檢查（加總 100%、占比在自己的範圍內、最低安全邊界、相機俯仰），不新增其他固定門檻。 | 主管 v2 覆核 一-1 |
+| 地平線、消失點、對岸線、樹線分類 | 所有線條都用相機高度推算位置，並一律核對「不穿過頭頸」，稱為核算。 | 分三類：海平線與平地地平線（在相機視線高度，幾何推算）；水平地面上的消失點（同上，前提是地面水平）；對岸水線、樹線、坡道（受距離與地形影響，只寫設計意圖與估計，不稱幾何驗證、不做硬檢查）。H-Jia、H-Coco、H-Yerin、V-Somi 改為估計；H-Iris、H-Mia、H-Rainie、V-Yerin 為地平線；V-Rin、V-Rainie、V-Yuna 為消失點。 | 主管 v2 覆核 一-2 |
+| 補光判準 | R6-3 與多張設計卡寫「補光要和主光同方向、同色溫」「同色溫補光」。 | 不要求同源或同色溫，也不把同色溫當成融合保證；判準改為人物與環境的光向、亮暗、色彩、陰影、接觸與反射是否可信、人物不浮貼。不改成禁止補光。R6-3、舊規則表、生成前後把關與設計卡用語同步。 | 主管 v2 覆核 一-3 |
+| V-Tammy 卡片與 prompt | 卡片寫「她右側的落地燈」、prompt 寫「from her right」，但構圖把燈罩放在畫面右側（她面向鏡頭時，她的右側是畫面左側）；相機高度卡片寫「腰到胸口之間」、prompt 寫 seated chest height。 | 統一為「畫面右側的落地燈」與「她坐著時的胸口高度」。 | 主管 v2 覆核 一-4 |
+| V-Somi 卡片與 prompt | 寫「慢慢走上坡」，而街道往畫面深處升高：她會背對相機，和「抬頭看雪的驚喜笑容」矛盾；燈籠位置卡片寫「右前上方」、prompt 只寫 above and in front。 | 改為沿緩坡朝相機慢慢走下來（街道在她身後升高退遠）；燈籠統一為「她前上方（畫面右上）」。 | 主管 v2 覆核 一-4 |
+| H-Yerin 卡片與 prompt | 她在左三分之一、面向畫面右側，晨光卻寫「從左側照、側前方」：從畫面左側來的光會落在她身後。 | 晨光改從畫面右側、她視線前方低角度斜照，照亮臉與身體正面，影子往她身後拉長。 | 主管 v2 覆核 一-4 |
+| H-Jia 卡片與 prompt | 光寫「從左前方照亮臉」，沒說是畫面還是她的方向，也沒交代日落後天空最亮在哪；平台寫「從右下斜向畫面中間」，她卻坐在右三分之一的盡頭。 | 太陽剛落在畫面左側的對岸後方，那一側天空最亮，她面向那一側；平台從右下角斜入、終點就在右三分之一。 | 主管 v2 覆核 一-4 |
+| V-Rin 卡片與 prompt（核對） | 秋陽從畫面左側穿過拱洞；她在中央偏右、肩靠右緣石柱、臉轉向光；相機胸口高度。 | 核對後光向、視線與相機位置互相一致，不修改。 | 主管 v2 覆核 一-4 |
+
+## 0.2 修改對照（v1 → v2，上一輪；其中補光判準與裁切景別的說法已在 v3 更正）
+
+| 項目 | v1（5bed3a3） | v2（1af8170） | 依據 |
 |---|---|---|---|
 | 寫真定位與收尾句 | R6-10 要求「不精修、unposed、available light」，收尾句「…unretouched, natural colour, an unposed photobook photograph taken on location in available light.」 | 刪除這些全套必要條件；目標是寫真集完成度（允許姿態指導、補光、調色、膚質與環境整理）。收尾句改為 end_line（v2）。 | 主管 REVISE 一 |
-| 補光 | R6-3 不寫補光、反光板；產生器要求重建稿的補光字樣只能出現在「拿掉／不加」之後。 | 補光可以用，但要和主光同方向、同色溫；產生器改核對每份重建稿都寫明主光來源。 | 主管 REVISE 一 |
+| 補光 | R6-3 不寫補光、反光板；產生器要求重建稿的補光字樣只能出現在「拿掉／不加」之後。 | 補光可以用（v2 當時寫成需和主光同方向、同色溫，v3 已更正判準）；產生器核對每份設計卡都寫明主光來源。 | 主管 REVISE 一 |
 | 插腰、看鏡頭、近景、身材、高飽和 | R6-6 禁插腰等展示姿勢；R6-8 身材只留在身分句；多套以此判為局部重寫。 | 都不再直接判為失敗；逐套判斷在那一張是否漂亮、自然、協調（H-Iris、V-Jia 保留插腰；V-Coco 保留撐手後仰；H-Miu 保留床上）。 | 主管 REVISE 一 |
 | 舊規則表 | 9 條舊規則都當成問題，受影響的套不得列為保留。 | 分「廢止」（85% 占比、鞋不寫、fashion editorial）與「條件」（其餘 6 條：元素本身不是問題）；表格改列「出現的套」，不等於有問題。 | 主管 REVISE 一 |
 | 結論分類 | 保留 1／局部重寫 16／整案重寫 7。 | 已接受（不改）1／保留設計 3／局部修改 14／整案重寫 6。H-Coco、V-Coco、V-Mia 改為保留設計；H-Miu 由整案改局部（保留床上）。 | 依修訂規則重看 23 套 |
 | 24 套節奏 | 沒有節奏表；重建稿幾乎都是全身約 50%、多數逆光暖光。 | 新增節奏表（景別、主次、明暗、色彩、情緒、動作、視線、吸引點）與分布統計；修正 V 8–9 月、V 10–11 月、V 2／6 月、H 5–6 月等重複（§5.2）。 | 主管 REVISE 二 |
 | 重複動作 | 撥髮 6 套、回頭笑 5 套、看窗外 3 套、碰花葉 5 套（含接花瓣）。 | 撥髮 3 套（V-Iris、H-Coco、H-Somi）、回頭笑 0、看窗外 1（H-Rin）、碰花葉 1（V-Mia）；接花瓣與手拿銀杏葉刪除；一張一個主要動作。 | 主管 REVISE 四 |
-| 構圖數字 | 只寫「約 50% 畫高」與「頭頂留約 8%、腳下留約 5%」，兩者加起來不是 100%；膝上也寫成約 60–65%（裁切景別不可能）。 | 每套寫占比範圍與預期配置（頭頂＋人物＋腳下＝100%），最低安全邊界另列；產生器由焦段與占比算出距離、成品尺寸、畫面涵蓋範圍、相機俯仰與地平線位置，並核對一致（§6）。 | 主管 REVISE 三 |
+| 構圖數字 | 只寫「約 50% 畫高」與「頭頂留約 8%、腳下留約 5%」，兩者加起來不是 100%；膝上也寫成約 60–65%，沒寫頭頂留白。 | 每套寫占比範圍與預期配置（頭頂＋人物＋腳下＝100%），最低安全邊界另列；產生器由焦段與占比算出距離、成品尺寸、畫面涵蓋範圍、相機俯仰與地平線位置，並核對一致（§6）。 | 主管 REVISE 三 |
 | 成品尺寸 | V-Somi「成品約 5 cm 高」；H-Jia「成品約 4 cm 高」。 | V-Somi 40–45% → 64–72 mm；H-Jia 42–48% → 45–52 mm（橫式原圖高 108 mm、框內 104 mm）。所有成品尺寸（含頭部約略尺寸）改由產生器計算，文字中的 mm 數字由產生器核對。 | 主管 REVISE 三 |
 | 距離 | V-Somi 寫 50mm 約 8 m（算起來只占約 31%，和 40–45% 矛盾）；V-Rin 50mm 約 7 m、V-Tammy 50mm 約 6 m 等未核算。 | 距離由占比反推：V-Somi 約 6 m、V-Rin 約 2 m、V-Tammy 約 3 m、H-Yerin 約 12 m、H-Jia 約 5 m；prompt 的距離與核算一致（產生器檢查）。焦段與距離標為全片幅等效的設計參考。 | 主管 REVISE 三 |
 | Yerin 尺度描述 | 以常見球車尺寸推估「人約大了三成」。 | 刪除推估；保留可觀察的異常：帽頂幾乎貼到車頂、大腿相對座椅與車頭過長、球車有廣角透視而人物沒有。 | 主管 REVISE 三 |
-| V-Tammy | 高拱窗邊看窗外，臉靠窗外夜光照亮。 | 絲絨扶手椅＋黃銅落地燈：檯燈是主光，同色溫補光讓臉清楚；看鏡頭；坐姿全身約 62%。 | 主管 REVISE 四 |
+| V-Tammy | 高拱窗邊看窗外，臉靠窗外夜光照亮。 | 絲絨扶手椅＋黃銅落地燈：落地燈是主光，加補光讓臉清楚；看鏡頭；坐姿全身約 62%。 | 主管 REVISE 四 |
 | V-Rin | 駝色大衣＋象牙針織、走進陽光、全身約 50%。 | 保留迴廊；硬光光影為主體；黑色針織＋披肩駝色大衣；肩靠石柱、臉迎光；膝上。 | 主管 REVISE 四 |
 | V-Somi | 燕麥色大衣＋磚紅圍巾＋中長洋裝＋褲襪；燈籠在她右側；50mm 約 8 m。 | 保留 Owner 已接受造型（大衣改深蔓越莓紅）；她走到最近的燈籠下，燈籠光同時落在她和周圍雪地、木牆；背光側是藍調天光；約 6 m、40–45%（64–72 mm）。 | 主管 REVISE 四、五 |
-| H-Yerin | 走路＋拎桿＋碰帽＋轉頭笑；逆光。 | 一個動作：雙手扶著立在草上的球桿站定、望向球道遠端；側前方晨光＋同色溫補光。 | 主管 REVISE 四 |
-| H-Jia | 「人很小，安靜很大」，約 35–40%，夕陽逆光。 | 具體構圖：平台從右下斜入、她在右三分之一、對岸線在上三分之一且不切過頭部（相機略高於她的頭）；日落後餘暉從左前方照亮臉；42–48%（成品人物 45–52 mm）。 | 主管 REVISE 四 |
+| H-Yerin | 走路＋拎桿＋碰帽＋轉頭笑；逆光。 | 一個動作：雙手扶著立在草上的球桿站定、望向球道遠端；畫面右側、她前方的低角度晨光＋柔和補光。 | 主管 REVISE 四 |
+| H-Jia | 「人很小，安靜很大」，約 35–40%，夕陽逆光。 | 具體構圖：平台從右下斜入、她在右三分之一、對岸線在上三分之一且不切過頭部（相機略高於她的頭）；日落後餘暉從畫面左側（太陽剛落下的方向）照亮臉；42–48%（成品人物 45–52 mm）。 | 主管 REVISE 四 |
 | 待 Penny 決定 | D1–D5 五項交 Penny。 | 逐項確認：D1、D2、D4 保留 Owner 已定內容；D3、D5 是本輪授權內的設計，給完整推薦。需要 Penny 決定：無。 | 主管 REVISE 五 |
 | 來源與進度 | 「已生成 6、已接受 1、退回 5、其餘 23」；Penny 頁面原文寫成「執行者未取得」。 | 24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23；累計已生成 6（另計）。頁面原文標為交接缺件；主管摘要與 Owner 決定分層標示；主管 REVISE 逐字另存。 | 主管 REVISE 六 |
 
@@ -89,7 +104,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 **可延續的品質原則（不是內容模板）：**
 
-1. 光從哪裡來看得出來（夕陽），而且同時落在人與景上；臉上的補光（反光板）和夕陽同一個暖色、方向也講得通，所以臉亮但不像另外打光。
+1. 光從哪裡來看得出來（夕陽），而且同時落在人與景上；臉上有補光（反光板），但臉的亮暗方向、暖色、陰影和草地上的光都講得通，所以臉亮卻不像浮貼。
 2. 衣服屬於這個地點與時間：看得出她為什麼在這裡。
 3. 有一個主要動作（撥頭髮、笑）讓姿勢有理由；插腰是擺拍元素，但配上這個動作就成立。
 4. 靠景深把人和背景分開，不靠高對比或硬邊。
@@ -255,7 +270,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 |---|---|---|---|---|---|---|
 | 「避免人物縮小到背景裡：全身與坐姿的人物佔畫面高度約 85%」，並把「she fills about N% of the frame height」寫進 prompt | 廢止 | cal_m3_shoot_plan.json：composition.eval 第 4 條；各套 cam.comp 與 prompt | 不分場景一律把人放大，風景只剩邊框；R5 的 Somi、Jia 是直接結果。 | 廢止統一數字；占比依每張畫面設計（R6-2），並和留白、焦段、距離、相機高度一起核算（§6）。 | 13 | H-iris-chen、H-luna-tanaka、H-tammy-chou、H-rin-ayase、H-miu-shiraishi、H-jia-seo、H-yerin-han、V-luna-tanaka、V-somi-oh、V-coco-wu、V-yuna-kim、V-miu-shiraishi、V-jia-seo |
 | 「沒有純臉部特寫，身材展示優先」；各套 cam.purpose／Emphasis 句以展示胸、腰、臀、腿為目的 | 條件 | photo.rhythm.near；各套 cam.purpose、prompt 的 Emphasis 句、body_show 欄 | 問題不在身材表現，而在把「要露哪個部位」當成構圖起點，場景與姿勢只是配合；近景也被規則排除。 | 身材與服裝魅力保留（R6-8）；prompt 改寫「這張最吸引人的地方」，不再用部位展示目的句；近景可以用。 | 21 | H-iris-chen、H-luna-tanaka、H-somi-oh、H-coco-wu、H-mia-huang、H-yuna-kim、H-tammy-chou、H-rin-ayase、H-rainie-hsu、H-miu-shiraishi、H-jia-seo、H-yerin-han、V-iris-chen、V-luna-tanaka、V-coco-wu、V-tammy-chou、V-rin-ayase、V-rainie-hsu、V-miu-shiraishi、V-jia-seo、V-yerin-han |
-| 每套都寫「主光＋畫面外反光板／柔光／柔光箱」；R4 把器材字改寫成「臉從前方被柔和、清楚地照亮」這類效果句 | 條件 | 各套 light.補光、prompt 的 Lighting 句 | 問題不在補光，而在補光的方向、色溫與場景主光無關（R5 Somi 暖臉配冷灰街景、Tammy 大廳裡的均勻正面光），人像像另外打光。 | 補光可以用，但要和主光同方向、同色溫，臉的亮度不脫離環境（R6-3）；prompt 寫效果，不寫器材名詞。 | 24 | H-iris-chen、H-luna-tanaka、H-somi-oh、H-coco-wu、H-mia-huang、H-yuna-kim、H-tammy-chou、H-rin-ayase、H-rainie-hsu、H-miu-shiraishi、H-jia-seo、H-yerin-han、V-iris-chen、V-luna-tanaka、V-somi-oh、V-coco-wu、V-mia-huang、V-yuna-kim、V-tammy-chou、V-rin-ayase、V-rainie-hsu、V-miu-shiraishi、V-jia-seo、V-yerin-han |
+| 每套都寫「主光＋畫面外反光板／柔光／柔光箱」；R4 把器材字改寫成「臉從前方被柔和、清楚地照亮」這類效果句 | 條件 | 各套 light.補光、prompt 的 Lighting 句 | 問題不在補光，而在補光的方向、色溫與場景主光無關（R5 Somi 暖臉配冷灰街景、Tammy 大廳裡的均勻正面光），人像像另外打光。 | 補光可以用（R6-3）：判準是人物與環境的光向、亮暗、色彩、陰影、接觸與反射是否可信、人物不浮貼；不要求同源或同色溫，同色溫也不保證融合；prompt 寫效果，不寫器材名詞。 | 24 | H-iris-chen、H-luna-tanaka、H-somi-oh、H-coco-wu、H-mia-huang、H-yuna-kim、H-tammy-chou、H-rin-ayase、H-rainie-hsu、H-miu-shiraishi、H-jia-seo、H-yerin-han、V-iris-chen、V-luna-tanaka、V-somi-oh、V-coco-wu、V-mia-huang、V-yuna-kim、V-tammy-chou、V-rin-ayase、V-rainie-hsu、V-miu-shiraishi、V-jia-seo、V-yerin-han |
 | 用膝蓋高度或腰部高度「輕仰」拉長腿 | 條件 | 各套 cam.angle | 問題不在輕仰，而在不分畫面一律用來拉長腿，且沒有和地平線、留白、物件透視一起考慮（R5 Tammy 顯得高大壓迫）。 | 相機高度依畫面決定並寫出約略高度，與留白、地平線一致（R6-4，§6 核算）。 | 5 | H-iris-chen、H-tammy-chou、V-luna-tanaka、V-tammy-chou、V-yerin-han |
 | 插腰、雙手放腰頭、把道具舉到肩高等展示型手部 | 條件 | 各套 hands | 問題不在插腰，而在沒有動作、和情境無關的定格（R5 Tammy 插腰直臂提包、Somi 肩高攤掌接雪）。 | 姿態可以指導、插腰可以用；判斷在那一張是否好看、自然，一張一個主要動作（R6-6）。 | 6 | H-iris-chen、H-mia-huang、H-tammy-chou、V-iris-chen、V-somi-oh、V-tammy-chou |
 | 以大型可接觸道具撐起構圖（球車、繫船柱、吊床、長椅、貴妃椅、庭園長椅、玻璃欄杆、吧台） | 條件 | 各套 scene、pose、hands | 人和大型物件的尺度、接觸點、透視都要正確；不必要時就是風險（R5 Yerin 球車、Rin 繫船柱、Jia 長椅）。 | 必要才留，留下時寫明接觸方式（R6-7）；吧台、欄杆、貴妃椅這類背景結構或簡單接觸可保留。 | 8 | H-somi-oh、H-tammy-chou、H-rin-ayase、H-rainie-hsu、H-jia-seo、H-yerin-han、V-rin-ayase、V-miu-shiraishi |
@@ -269,8 +284,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 |---|---|---|
 | R6-1 | 先設計畫面，再放人 | 每套先寫一句話畫面，並寫出「這張最吸引人的地方」：要指出具體的光、色、構圖、動作或神情，不能只寫自然、安靜、電影感或風景漂亮。再回答「她為什麼在這裡」。 |
 | R6-2 | 景別與人物占比（設計參考） | 占比的定義：全身與坐姿全身＝髮頂到腳底占畫高，頭頂留白＋人物＋腳下留白＝100%；膝上、大腿、腰上、胸上等裁切景別＝髮頂到畫面下緣（＝100%－頭頂留白），人景比例改看人物位置與占畫寬；斜躺＝頭到腳占畫寬。數字依每張畫面決定，不設統一值；prompt 不寫百分比，改寫景別、相機距離、焦段與人物位置。廢止「全身與坐姿約 85%」。 |
-| R6-3 | 光線要講得通（可以補光） | 主光要有可信來源（太陽、窗、檯燈、燈籠、吊燈、壁燈、櫥窗）。補光、反光與調光都可以用，但方向與色溫要和主光一致，臉的亮度不能脫離環境；不要再得到「暖臉貼冷背景」。prompt 寫光的效果，不寫器材名詞，避免器材入鏡。 |
-| R6-4 | 相機高度依畫面決定 | 平視、輕仰、輕俯都可以；寫出約略高度，並和留白、地平線一致：地平線或水平線不穿過頭頸；輕仰不作為拉長腿的固定手段。 |
+| R6-3 | 光線要講得通（可以補光） | 主光要有可信來源（太陽、窗、檯燈、燈籠、吊燈、壁燈、櫥窗）。補光、反光與調光都可以用，不要求和主光同源或同色溫；判準是人物與環境的光向、亮暗、色彩、陰影、接觸與反射是否可信，人物不浮貼在環境上（R5 Somi 的「暖臉貼冷背景」就是不可信的例子）。同色溫不等於融合。prompt 寫光的效果，不寫器材名詞，避免器材入鏡。 |
+| R6-4 | 相機高度依畫面決定 | 平視、輕仰、輕俯都可以；寫出約略高度，並和留白一致；輕仰不作為拉長腿的固定手段。線條要分清楚：海面與平地的地平線、水平地面上平行線的消失點，都在相機視線高度，可由相機高度推算；對岸水線、樹線、坡道與天際線受距離與地形影響，只寫設計意圖（例如上三分之一、避開頭部）與估計，不稱幾何驗證。 |
 | R6-5 | 服裝依這張畫面判斷 | 看服裝與鞋在這張的季節、地點、活動與配色裡是否漂亮、協調。短裙、不加外套、高飽和都不是失敗本身；換長裙、加外套、縮小人物也不是通用解答。 |
 | R6-6 | 姿態可以指導，一張一個主要動作 | 允許有意識的姿態指導（插腰、看鏡頭、坐姿、倚靠都可以），判斷在這張是否好看、自然；一張只安排一個主要動作，不疊走路＋拎東西＋碰帽＋回頭這類多重動作，也不為了顯得自然刻意安排接花瓣之類的小動作。 |
 | R6-7 | 大型道具只在必要時保留 | 球車、繫船柱、吊床、長椅等大型可接觸物件，不必要就移除；保留時寫明尺寸與接觸方式。吧台、欄杆、貴妃椅這類背景結構或簡單接觸可保留。 |
@@ -298,18 +313,18 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 3 月 | H-miu-shiraishi | 坐姿全身｜約45度斜側（朝畫面左）｜臉正面・看鏡頭｜坐姿時的腰部高度・平視 | 局部修改 | 保留臥室、晨光與緞面套裝；改為坐在床上抱著立起的膝、近景，神情改成剛醒的放鬆笑容（不歪頭），維持明確的成年感。 |
 | 4 月 | H-tammy-chou | 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜膝蓋高度・輕仰 | 局部修改 | 保留花園與粉色洋裝；拿掉長椅，改為沿步道迎面走來大笑，人物約 55% 畫高，相機在腰部高度平視。 |
 | 5 月 | H-yerin-han | 坐姿全身｜約45度斜側（朝畫面左）｜臉正面・看鏡頭｜坐姿時的腰部高度・平視 | 整案重寫 | Penny 退回：人與球車尺度失衡、透視不合理、姿態做作。移除球車，一個動作：雙手扶著立在草上的球桿站定。 |
-| 6 月 | H-coco-wu | 膝上｜約30度斜側（朝畫面右）｜臉正面・看鏡頭｜胸口高度・平視 | 保留設計 | 依修訂規則沒有需要改的設計；prompt 只套共用格式（結尾句、鞋、身材目的句改為畫面重點、補光寫成與夕陽同色溫）。 |
-| 7 月 | H-mia-huang | 大腿中段以上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜胸口高度・平視 | 局部修改 | 保留場景、服裝、插腰與眨眼；改為腰上近景（H 款缺近景），棉花糖拿在下巴旁，主光改為頭頂的暖色串燈（補光同色溫）。 |
+| 6 月 | H-coco-wu | 膝上｜約30度斜側（朝畫面右）｜臉正面・看鏡頭｜胸口高度・平視 | 保留設計 | 依修訂規則沒有需要改的設計；prompt 只套共用格式（結尾句、鞋、身材目的句改為畫面重點、補光寫成和夕陽花田講得通）。 |
+| 7 月 | H-mia-huang | 大腿中段以上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜胸口高度・平視 | 局部修改 | 保留場景、服裝、插腰與眨眼；改為腰上近景（H 款缺近景），棉花糖拿在下巴旁，主光改為頭頂的暖色串燈（可加補光，R6-3）。 |
 | 8 月 | H-iris-chen | 全身｜正面｜臉正面・看鏡頭｜膝蓋高度・輕仰 | 局部修改 | 這是 H-Iris 企劃（尚未生成），不是已接受的 V-Iris 照片；保留姿勢、服裝與看鏡頭，人物改約 63% 畫高，相機改臀部高度平視，讓海平線落在她臀部的高度。 |
 | 9 月 | H-jia-seo | 坐姿全身｜側面（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側的湖面與遠岸｜坐姿時的腰部高度・平視 | 整案重寫 | Penny 退回：人物過大、服裝與情境不合、人景構圖失衡。保留湖畔，以平台斜線、對岸線與光線設計構圖，人物縮小但保留辨識。 |
 | 10 月 | H-luna-tanaka | 全身｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・平視 | 局部修改 | 保留所有 Penny 指定項目；只把人物改約 63% 畫高，讓緣側、拉門與紅葉共同構圖。 |
-| 11 月 | H-somi-oh | 膝上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜腰部高度・平視 | 局部修改 | 保留 Penny 已接受的店、服裝、姿勢與大笑；主光改為她上方的暖色吊燈（補光同色溫），「搭景」改為營業前的真實小店。 |
-| 12 月 | H-rainie-hsu | 膝上｜正面｜臉正面・看鏡頭｜腰部高度・平視 | 局部修改 | 保留 Penny 已接受的露台、洋裝、姿勢與直視；主光改為露台牆上的暖色壁燈（補光同色溫）。 |
+| 11 月 | H-somi-oh | 膝上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜腰部高度・平視 | 局部修改 | 保留 Penny 已接受的店、服裝、姿勢與大笑；主光改為她上方的暖色吊燈（可加補光，R6-3），「搭景」改為營業前的真實小店。 |
+| 12 月 | H-rainie-hsu | 膝上｜正面｜臉正面・看鏡頭｜腰部高度・平視 | 局部修改 | 保留 Penny 已接受的露台、洋裝、姿勢與直視；主光改為露台牆上的暖色壁燈（可加補光，R6-3）。 |
 | 1 月 | V-tammy-chou | 大腿中段以上｜正面｜臉正面・看鏡頭｜腰部高度・輕仰 | 整案重寫 | Penny 退回：姿勢僵硬、提包難看、過於商業女強人擺拍。保留新年夜老飯店，改為落地燈旁的絲絨扶手椅，主光是檯燈。 |
 | 2 月 | V-jia-seo | 全身｜約45度斜側（朝畫面右）｜臉正面・看鏡頭｜臀部高度・平視 | 局部修改 | 保留溫室、服裝、插腰與看鏡頭；拿掉碰葉子，人物改約 58% 畫高讓鋼骨與植物入鏡。 |
-| 3 月 | V-mia-huang | 胸上｜約30度斜側（朝畫面右）｜三分之二側臉・看鏡頭｜眼睛高度・輕俯 | 保留設計 | 構圖、姿勢、服裝、光的方向都保留；prompt 只套共用格式，並把主光寫成身旁的紙燈籠（同方向、同色溫）。 |
+| 3 月 | V-mia-huang | 胸上｜約30度斜側（朝畫面右）｜三分之二側臉・看鏡頭｜眼睛高度・輕俯 | 保留設計 | 構圖、姿勢、服裝、光的方向都保留；prompt 只套共用格式，並把主光寫成身旁的紙燈籠（方向與暖色不變，只交代來源）。 |
 | 4 月 | V-miu-shiraishi | 坐姿全身｜約30度斜側（朝畫面右）｜三分之二側臉・不看鏡頭：看畫面右側開滿白花的果樹｜坐姿時的腰部高度・平視 | 整案重寫 | 構圖靠吊床對角線成立，移除吊床後要重做：坐在木平台台階上、身後一整棵開白花的果樹。 |
-| 5 月 | V-rainie-hsu | 膝上｜約30度斜側（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側前方的街燈｜腰部高度・平視 | 局部修改 | 保留構想、服裝與姿勢；主光改為她身旁櫥窗的暖光（補光同色溫），改全身讓濕路倒影與靴子入鏡（V 款節奏見 §5.2）。 |
+| 5 月 | V-rainie-hsu | 膝上｜約30度斜側（朝畫面左）｜三分之二側臉・不看鏡頭：看畫面左側前方的街燈｜腰部高度・平視 | 局部修改 | 保留構想、服裝與姿勢；主光改為她身旁櫥窗的暖光（可加補光，R6-3），改全身讓濕路倒影與靴子入鏡（V 款節奏見 §5.2）。 |
 | 6 月 | V-luna-tanaka | 全身｜正面｜臉正面・看鏡頭｜膝蓋高度・輕仰 | 局部修改 | 保留服裝、姿勢與看鏡頭；改為膝上、站在紫陽花叢之間，相機胸口高度平視（和 V-Jia 的全身溫室錯開）。 |
 | 7 月 | V-coco-wu | 坐姿到水面｜正面｜臉正面・看鏡頭｜坐姿時的胸口高度・平視 | 保留設計 | 依修訂規則沒有需要改的設計；prompt 只套共用格式。 |
 | 8 月 | V-yerin-han | 膝上｜約30度斜側（朝畫面左）｜臉正面・看鏡頭｜臀部高度・輕仰 | 局部修改 | 設計本身成立，但和 9 月已接受的 V-Iris 幾乎同型（夕陽逆光、中景、看鏡頭大笑、白上衣）；改為日落後的餘暉、走在淺浪中的全身、不看鏡頭。 |
@@ -379,7 +394,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 | 位置 | 問題 | 修正 |
 |---|---|---|
-| 全套 | v1 重建稿 23 份中 16 份是全身或坐姿全身、約 35–55% 畫高；5 份膝上寫成約 60–65%（裁切景別不可能）。 | 依畫面分近／中／遠（§5.2 分布）；裁切景別的占比改為 100%－頭頂留白。 |
+| 全套 | v1 重建稿 23 份中 16 份是全身或坐姿全身、約 35–55% 畫高；5 份膝上寫成約 60–65% 卻沒寫頭頂留白，占比和配置對不起來。 | 依畫面分近／中／遠（§5.2 分布）；裁切景別的占比定義為 100%－頭頂留白，每套寫出自己的配置（不設固定門檻）。 |
 | 直式 8–9 月 | V-Yerin 與已接受的 V-Iris 幾乎同型：夕陽逆光、中景、看鏡頭笑、白上衣。 | V-Iris 不改；V-Yerin 改日落後餘暉、遠景、走在淺浪、不看鏡頭。 |
 | 直式 10–11 月 | v1 的 V-Rin（走進迴廊）與 V-Yuna（停在銀杏大道）都是全身＋長縱深透視＋暖色低陽。 | V-Rin 改膝上、硬光光影為主體、臉迎光不看鏡頭。 |
 | 直式 2 月與 6 月 | V-Jia（溫室）與 V-Luna（紫陽花）都是被植物圍住的全身靜立看鏡頭。 | V-Luna 改膝上、站在齊腰花叢中；V-Jia 維持全身。 |
@@ -420,7 +435,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 2. 人景比例與主次 | 斜躺全身橫跨約八成七畫寬，人體是主體，窗與天際線是背景；作為人像主導的畫面成立。 |
 | 3. 服裝、鞋、動作與場景 | 酒紅緞面中長洋裝、赤腳在飯店套房合理；側躺 S 形是身材表現，但在夕陽窗邊是好看的慵懶姿態（不判為失敗）。 |
 | 4. 透視、接觸點與物件尺度 | 貴妃椅是簡單的平面接觸；風險在上方手放大腿、腿交疊的細節。 |
-| 5. 光線、配色與完成度 | 落地窗夕陽是主光；左側柔光只要是同色溫的弱補光即可。 |
+| 5. 光線、配色與完成度 | 落地窗夕陽是主光；左側柔光可作弱補光，只要她身上的亮暗方向仍跟著窗光（R6-3）。 |
 | 6. 套框可行性 | 16:9 頭腳貼近左右邊，需留左右空間。 |
 | 7. 結論 | 局部修改：保留斜躺、窗光、洋裝與看窗外；人物改占約七成畫寬、頭腳兩側留白，簡化手部（一手撐肘、一手自然放在腰側）。 |
 | 8. 這張最吸引人的地方（v2） | 夕陽從落地窗橫照過她整個身體，酒紅緞面在光裡像液體一樣流動；她看著城市而不是鏡頭，慵懶得很私密。 |
@@ -434,7 +449,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 2. 人景比例與主次 | 坐姿全身約八成四，房間只剩邊；全身半倚讓畫面像床上的商品照。 |
 | 3. 服裝、鞋、動作與場景 | 緞面細肩小可愛＋短褲在早晨臥室合理（Owner 已接受，床上題材不判為不合格）；立膝伸腿、歪頭甜笑的組合偏向擺拍。 |
 | 4. 透視、接觸點與物件尺度 | 床與枕頭是背景結構，坐姿接觸簡單。 |
-| 5. 光線、配色與完成度 | 白紗簾晨光是主光；右側白色反光可作同色溫補光。 |
+| 5. 光線、配色與完成度 | 白紗簾晨光是主光；右側白色反光可作補光（R6-3）。 |
 | 6. 套框可行性 | 16:9 可行。 |
 | 7. 結論 | 局部修改：保留臥室、晨光與緞面套裝；改為坐在床上抱著立起的膝、近景，神情改成剛醒的放鬆笑容（不歪頭），維持明確的成年感。 |
 | 8. 這張最吸引人的地方（v2） | 白紗簾把晨光濾成一整片柔白，緞面和床單只差一點亮度；她抱著膝坐在光裡，剛醒的鬆弛笑容讓畫面親密又乾淨。 |
@@ -476,9 +491,9 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 2. 人景比例與主次 | 膝上置中，花壟引導線收到人物；人像主導、背景可讀。 |
 | 3. 服裝、鞋、動作與場景 | 白色亞麻洋裝、草帽拿在手上，與初夏花田一致；塞頭髮配瞇眼大笑是自然的一個動作。 |
 | 4. 透視、接觸點與物件尺度 | 無大型道具；胸口平視。 |
-| 5. 光線、配色與完成度 | 身後夕陽是主光；前方補光與夕陽同色溫時成立（同 V-Iris 的做法）。 |
+| 5. 光線、配色與完成度 | 身後夕陽是主光；前方補光只要不搶過夕陽輪廓、臉的亮暗與暖色仍和花田講得通就成立（同 V-Iris 的做法）。 |
 | 6. 套框可行性 | 16:9 可行；地平線避開裁切帶。 |
-| 7. 結論 | 保留設計：依修訂規則沒有需要改的設計；prompt 只套共用格式（結尾句、鞋、身材目的句改為畫面重點、補光寫成與夕陽同色溫）。 |
+| 7. 結論 | 保留設計：依修訂規則沒有需要改的設計；prompt 只套共用格式（結尾句、鞋、身材目的句改為畫面重點、補光寫成和夕陽花田講得通）。 |
 | 8. 這張最吸引人的地方（v2） | 對稱的花壟一路收攏到她身後的夕陽，她拿著草帽瞇眼大笑，整張是被暖光包住的紫與金。 |
 
 #### H-mia-huang｜Mia｜7 月｜16:9｜局部修改
@@ -492,7 +507,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 4. 透視、接觸點與物件尺度 | 無大型接觸道具。 |
 | 5. 光線、配色與完成度 | 主光是「畫面外右前方的大型柔光」，背景是黃昏光點：臉和環境是兩套光，沒有交代來源。 |
 | 6. 套框可行性 | 16:9 可行。 |
-| 7. 結論 | 局部修改：保留場景、服裝、插腰與眨眼；改為腰上近景（H 款缺近景），棉花糖拿在下巴旁，主光改為頭頂的暖色串燈（補光同色溫）。 |
+| 7. 結論 | 局部修改：保留場景、服裝、插腰與眨眼；改為腰上近景（H 款缺近景），棉花糖拿在下巴旁，主光改為頭頂的暖色串燈（可加補光，R6-3）。 |
 | 8. 這張最吸引人的地方（v2） | 黃昏的粉紫天色和碼頭燈泡把背景化成糖果色光點，她拿著一團粉色棉花糖對鏡頭眨眼，像一個夏天的玩笑。 |
 
 #### H-iris-chen｜Iris｜8 月｜16:9｜局部修改
@@ -548,7 +563,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 4. 透視、接觸點與物件尺度 | 吧台與高腳椅是背景結構，接觸簡單。 |
 | 5. 光線、配色與完成度 | 主光「前右方頭部高度的大型暖色柔光箱」、場景寫「搭景」：讀起來是棚拍；店內吊燈沒有被當成光源。 |
 | 6. 套框可行性 | 16:9 可行。 |
-| 7. 結論 | 局部修改：保留 Penny 已接受的店、服裝、姿勢與大笑；主光改為她上方的暖色吊燈（補光同色溫），「搭景」改為營業前的真實小店。 |
+| 7. 結論 | 局部修改：保留 Penny 已接受的店、服裝、姿勢與大笑；主光改為她上方的暖色吊燈（可加補光，R6-3），「搭景」改為營業前的真實小店。 |
 | 8. 這張最吸引人的地方（v2） | 暖橘磁磚、紅皮高腳椅和她鏽橘的針織是同一個色系，整張像一碗熱湯；她靠著吧台笑到眼睛彎成月牙，是全年最有人味的一頁。 |
 
 #### H-rainie-hsu｜Rainie｜12 月｜16:9｜局部修改
@@ -562,7 +577,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 4. 透視、接觸點與物件尺度 | 玻璃欄杆是背景結構，接觸只有手與背。 |
 | 5. 光線、配色與完成度 | 主光「左前方頭部高度的大型明亮柔光箱」在露台上沒有來源，和城市夜色是兩套光。 |
 | 6. 套框可行性 | 16:9 可行。 |
-| 7. 結論 | 局部修改：保留 Penny 已接受的露台、洋裝、姿勢與直視；主光改為露台牆上的暖色壁燈（補光同色溫）。 |
+| 7. 結論 | 局部修改：保留 Penny 已接受的露台、洋裝、姿勢與直視；主光改為露台牆上的暖色壁燈（可加補光，R6-3）。 |
 | 8. 這張最吸引人的地方（v2） | 腳下城市燈海化成暖金散景，她一身血紅緞面靠著玻璃欄杆直視鏡頭，用全年最有氣場的一張收尾。 |
 
 #### V-tammy-chou｜Tammy｜1 月｜3:4｜整案重寫
@@ -604,7 +619,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 4. 透視、接觸點與物件尺度 | 無大型道具；眼睛高度輕俯，近景合理。 |
 | 5. 光線、配色與完成度 | 「畫面外左前方柔和暖色主光」：場景裡就有燈籠，只要寫明是她身旁的燈籠即可。 |
 | 6. 套框可行性 | 3:4 可行。 |
-| 7. 結論 | 保留設計：構圖、姿勢、服裝、光的方向都保留；prompt 只套共用格式，並把主光寫成身旁的紙燈籠（同方向、同色溫）。 |
+| 7. 結論 | 保留設計：構圖、姿勢、服裝、光的方向都保留；prompt 只套共用格式，並把主光寫成身旁的紙燈籠（方向與暖色不變，只交代來源）。 |
 | 8. 這張最吸引人的地方（v2） | 頭上交錯的櫻花被燈籠照成暖粉色、夜空是深藍；這是直式款唯一貼近臉的一張，花枝框住她露肩的甜笑。 |
 
 #### V-miu-shiraishi｜Miu｜4 月｜3:4｜整案重寫
@@ -632,7 +647,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 | 4. 透視、接觸點與物件尺度 | 無大型道具。 |
 | 5. 光線、配色與完成度 | 主光「畫面外左前方大型柔光」沒有來源；櫥窗與街燈就在場景裡。 |
 | 6. 套框可行性 | 3:4 可行。 |
-| 7. 結論 | 局部修改：保留構想、服裝與姿勢；主光改為她身旁櫥窗的暖光（補光同色溫），改全身讓濕路倒影與靴子入鏡（V 款節奏見 §5.2）。 |
+| 7. 結論 | 局部修改：保留構想、服裝與姿勢；主光改為她身旁櫥窗的暖光（可加補光，R6-3），改全身讓濕路倒影與靴子入鏡（V 款節奏見 §5.2）。 |
 | 8. 這張最吸引人的地方（v2） | 濕亮的路面把櫥窗暖光和街燈冷光各倒映一次，她一身黑站在兩種光之間看著遠處的街燈，是直式款最安靜的一張夜景。 |
 
 #### V-luna-tanaka｜Luna｜6 月｜3:4｜局部修改
@@ -735,35 +750,35 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 ## 6. 設計卡與構圖核算
 
-**怎麼讀這些數字：** 焦段與距離都是全片幅等效的設計參考，用來確認占比、留白、相機高度與套框互相合理；prompt 只拿來當透視提示，不保證模型精準遵守。成品尺寸＝人物占比×進框後的原圖高度（直式 160 mm；橫式 192×108 mm 原圖、框內 104 mm；斜躺以畫寬 192 mm 計）。距離＝可見範圍×焦段÷（畫面高×占比）；可見範圍依身高乘景別比例估計（全身 1.00、膝上 0.72、腰上 0.42、胸上 0.30、坐椅 0.75、坐台階 0.65、坐地 0.55、坐姿半身 0.50、斜躺 0.95）。相機俯仰＝相機高度與「平視時應在的高度」的差；地平線位置＝相機高度在畫面中的位置（由上往下）。
+**怎麼讀這些數字：** 焦段與距離都是全片幅等效的設計參考，用來確認占比、留白、相機高度與套框互相合理；prompt 只拿來當透視提示，不保證模型精準遵守。成品尺寸＝人物占比×進框後的原圖高度（直式 160 mm；橫式 192×108 mm 原圖、框內 104 mm；斜躺以畫寬 192 mm 計）。距離＝可見範圍×焦段÷（畫面高×占比）；可見範圍依身高乘景別比例估計（全身 1.00、膝上 0.72、腰上 0.42、胸上 0.30、坐椅 0.75、坐台階 0.65、坐地 0.55、坐姿半身 0.50、斜躺 0.95）。相機俯仰＝相機高度與「平視時應在的高度」的差。線條分三類：海平線與平地地平線、水平地面上的消失點，都在相機視線高度，可推算位置（由上往下）；對岸水線、樹線、坡道受距離與地形影響，只寫設計意圖與估計，不稱幾何驗證。
 
 **最低安全邊界（下限）：** 直式 3:4 不裁切，頭頂與腳下各至少 3%；橫式 16:9 上下共裁 4 mm，頭頂至少 6%、腳下至少 5%，地平線避開上下 2 mm 帶。下表「預期配置」是各套實際設計的位置，和下限分開。
 
 | 套別 | 景別 | 景別類型 | 焦段 | 人物占比 | 預期配置 | 距離（核算） | 成品人物高度（mm） | 她的位置畫面涵蓋（寬×高） | 相機高度與俯仰 | 地平線／消失點 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| V-tammy-chou | 中 | 坐姿全身 | 50mm | 58–66% | 頭頂 22%＋人物 62%＋腳下 16% | 約 3.0 m（2.8–3.2） | 93–106 mm（頭約 17） | 1.5×1.9 m | 0.80 m（她坐著時腰到胸口之間）向下約 3° | — |
-| V-rin-ayase | 中 | 膝上 | 50mm | 86–90% | 頭頂 12%＋人物 88%（下緣裁在景別線） | 約 2.1 m（2.1–2.2） | 138–144 mm（頭約 25） | 1.0×1.4 m | 1.20 m（胸口高度）向下約 2° | 迴廊消失點：由上 46% |
-| V-somi-oh | 遠 | 全身 | 50mm | 40–45% | 頭頂 35%＋人物 43%＋腳下 22% | 約 5.9 m（5.6–6.3） | 64–72 mm（頭約 9） | 2.8×3.7 m | 1.15 m（胸口高度）平視 | 街道消失點：由上 47% |
-| H-yerin-han | 遠 | 全身 | 85mm | 55–60% | 頭頂 22%＋人物 58%＋腳下 20% | 約 12.3 m（11.9–13.0） | 59–65 mm（頭約 8） | 5.2×2.9 m | 1.00 m（腰部高度）平視 | 地平線（被樹林遮住，樹線在其上方）：由上 46% |
-| H-jia-seo | 遠 | 坐姿全身 | 50mm | 42–48% | 頭頂 42%＋人物 44%＋腳下 14% | 約 5.2 m（4.8–5.4） | 45–52 mm（頭約 11） | 3.7×2.1 m | 1.10 m（略高於她坐著的頭頂、微微向下）向下約 4° | 對岸線（水平線）：由上 34% |
-| H-iris-chen | 遠 | 全身 | 50mm | 60–66% | 頭頂 16%＋人物 63%＋腳下 21% | 約 6.3 m（6.1–6.7） | 65–71 mm（頭約 9） | 4.6×2.6 m | 0.80 m（臀部高度）平視 | 海平線：由上 48% |
+| V-tammy-chou | 中 | 坐姿全身 | 50mm | 58–66% | 頭頂 22%＋人物 62%＋腳下 16% | 約 3.0 m（2.8–3.2） | 93–106 mm（頭約 17） | 1.5×1.9 m | 0.80 m（她坐著時的胸口高度）向下約 3° | — |
+| V-rin-ayase | 中 | 膝上 | 50mm | 86–90% | 頭頂 12%＋人物 88%（下緣裁在景別線） | 約 2.1 m（2.1–2.2） | 138–144 mm（頭約 25） | 1.0×1.4 m | 1.20 m（胸口高度）向下約 2° | 迴廊地面的消失點：由上 46%（推算） |
+| V-somi-oh | 遠 | 全身 | 50mm | 40–45% | 頭頂 35%＋人物 43%＋腳下 22% | 約 5.9 m（5.6–6.3） | 64–72 mm（頭約 9） | 2.8×3.7 m | 1.15 m（胸口高度）平視 | 上坡街道：估計約 47%（不是幾何驗證） |
+| H-yerin-han | 遠 | 全身 | 85mm | 55–60% | 頭頂 22%＋人物 58%＋腳下 20% | 約 12.3 m（11.9–13.0） | 59–65 mm（頭約 8） | 5.2×2.9 m | 1.00 m（腰部高度）平視 | 遠方樹線：估計約 46%（不是幾何驗證） |
+| H-jia-seo | 遠 | 坐姿全身 | 50mm | 42–48% | 頭頂 42%＋人物 44%＋腳下 14% | 約 5.2 m（4.8–5.4） | 45–52 mm（頭約 11） | 3.7×2.1 m | 1.10 m（略高於她坐著的頭頂、微微向下）向下約 4° | 對岸水線與樹線：估計約 34%（不是幾何驗證） |
+| H-iris-chen | 遠 | 全身 | 50mm | 60–66% | 頭頂 16%＋人物 63%＋腳下 21% | 約 6.3 m（6.1–6.7） | 65–71 mm（頭約 9） | 4.6×2.6 m | 0.80 m（臀部高度）平視 | 海平線：由上 48%（推算） |
 | H-luna-tanaka | 遠 | 全身 | 50mm | 60–66% | 頭頂 17%＋人物 63%＋腳下 20% | 約 6.1 m（5.8–6.4） | 65–71 mm（頭約 9） | 4.4×2.5 m | 0.80 m（臀部高度）平視 | — |
 | H-somi-oh | 中 | 膝上 | 70mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 4.5 m（4.4–4.6） | 95–99 mm（頭約 18） | 2.3×1.3 m | 1.00 m（腰部高度）向上約 1° | — |
-| H-coco-wu | 中 | 膝上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 5.3 m（5.2–5.4） | 95–99 mm（頭約 18） | 2.2×1.3 m | 1.10 m（胸口高度）平視 | 地平線：由上 48% |
-| H-mia-huang | 近 | 腰上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 3.1 m（3.1–3.2） | 95–99 mm（頭約 30） | 1.3×0.7 m | 1.20 m（胸口高度）向上約 2° | 海平線：由上 64% |
+| H-coco-wu | 中 | 膝上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 5.3 m（5.2–5.4） | 95–99 mm（頭約 18） | 2.2×1.3 m | 1.10 m（胸口高度）平視 | 花田盡頭與樹列：估計約 48%（不是幾何驗證） |
+| H-mia-huang | 近 | 腰上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 3.1 m（3.1–3.2） | 95–99 mm（頭約 30） | 1.3×0.7 m | 1.20 m（胸口高度）向上約 2° | 海平線：由上 64%（推算） |
 | H-yuna-kim | 中 | 膝上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 5.6 m（5.5–5.8） | 95–99 mm（頭約 18） | 2.4×1.3 m | 1.20 m（胸口高度）平視 | — |
 | H-tammy-chou | 遠 | 全身 | 85mm | 52–58% | 頭頂 25%＋人物 55%＋腳下 20% | 約 12.2 m（11.6–12.9） | 56–63 mm（頭約 8） | 5.2×2.9 m | 1.00 m（腰部高度）平視 | — |
 | H-rin-ayase | 中 | 斜躺全身 | 50mm | 66–74% | 左 14%＋人物 70%＋右 16%（占畫寬） | 約 3.1 m（3.0–3.3） | 127–142 mm | 2.3×1.3 m | 0.85 m（略高於她斜躺時的頭部・輕俯） | — |
-| H-rainie-hsu | 中 | 膝上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 5.5 m（5.4–5.7） | 95–99 mm（頭約 18） | 2.3×1.3 m | 1.00 m（腰部高度）向上約 1° | 城市地平線：由上 59% |
+| H-rainie-hsu | 中 | 膝上 | 85mm | 88–92% | 頭頂 10%＋人物 90%（下緣裁在景別線） | 約 5.5 m（5.4–5.7） | 95–99 mm（頭約 18） | 2.3×1.3 m | 1.00 m（腰部高度）向上約 1° | 遠方地平線（城市燈海的盡頭）：由上 59%（推算） |
 | H-miu-shiraishi | 近 | 坐姿半身 | 50mm | 85–90% | 頭頂 12%＋人物 88%（下緣裁在景別線） | 約 2.2 m（2.1–2.3） | 92–97 mm（頭約 25） | 1.6×0.9 m | 0.50 m（她坐姿的胸口高度，相對床面）向下約 1° | — |
 | V-luna-tanaka | 中 | 膝上 | 85mm | 86–90% | 頭頂 12%＋人物 88%（下緣裁在景別線） | 約 3.4 m（3.3–3.4） | 138–144 mm（頭約 25） | 1.0×1.3 m | 1.10 m（胸口高度）平視 | — |
 | V-coco-wu | 中 | 坐姿到水面 | 70mm | 78–84% | 頭頂 12%＋人物 80%＋腳下 8% | 約 2.4 m（2.3–2.4） | 125–134 mm（頭約 30） | 0.8×1.1 m | 0.60 m（她坐姿的胸口高度，相對水面）向下約 3° | — |
 | V-mia-huang | 近 | 胸上 | 85mm | 90–94% | 頭頂 8%＋人物 92%（下緣裁在景別線） | 約 1.4 m（1.4–1.4） | 144–150 mm（頭約 64） | 0.4×0.5 m | 1.45 m（眼睛高度・輕俯）向下約 3° | — |
-| V-yuna-kim | 遠 | 全身 | 85mm | 55–62% | 頭頂 28%＋人物 58%＋腳下 14% | 約 7.7 m（7.2–8.1） | 88–99 mm（頭約 12） | 2.2×2.9 m | 1.00 m（腰部高度）平視 | 大道消失點：由上 51% |
-| V-rainie-hsu | 遠 | 全身 | 50mm | 52–58% | 頭頂 24%＋人物 55%＋腳下 21% | 約 4.7 m（4.4–5.0） | 83–93 mm（頭約 11） | 2.2×3.0 m | 1.00 m（腰部高度）向下約 2° | 街道消失點：由上 46% |
+| V-yuna-kim | 遠 | 全身 | 85mm | 55–62% | 頭頂 28%＋人物 58%＋腳下 14% | 約 7.7 m（7.2–8.1） | 88–99 mm（頭約 12） | 2.2×2.9 m | 1.00 m（腰部高度）平視 | 大道地面的消失點：由上 51%（推算） |
+| V-rainie-hsu | 遠 | 全身 | 50mm | 52–58% | 頭頂 24%＋人物 55%＋腳下 21% | 約 4.7 m（4.4–5.0） | 83–93 mm（頭約 11） | 2.2×3.0 m | 1.00 m（腰部高度）向下約 2° | 街道地面的消失點：由上 46%（推算） |
 | V-miu-shiraishi | 遠 | 坐姿全身 | 50mm | 52–58% | 頭頂 30%＋人物 55%＋腳下 15% | 約 2.9 m（2.7–3.0） | 83–93 mm（頭約 18） | 1.4×1.8 m | 0.80 m（她坐著時的胸口高度）向下約 3° | — |
 | V-jia-seo | 遠 | 全身 | 50mm | 55–62% | 頭頂 26%＋人物 58%＋腳下 16% | 約 4.5 m（4.2–4.8） | 88–99 mm（頭約 12） | 2.2×2.9 m | 1.00 m（腰部高度）平視 | — |
-| V-yerin-han | 遠 | 全身 | 50mm | 45–52% | 頭頂 38%＋人物 48%＋腳下 14% | 約 5.5 m（5.1–5.9） | 72–83 mm（頭約 10） | 2.7×3.5 m | 0.90 m（臀部高度）向上約 4° | 海平線：由上 61% |
+| V-yerin-han | 遠 | 全身 | 50mm | 45–52% | 頭頂 38%＋人物 48%＋腳下 14% | 約 5.5 m（5.1–5.9） | 72–83 mm（頭約 10） | 2.7×3.5 m | 0.90 m（臀部高度）向上約 4° | 海平線：由上 61%（推算） |
 
 ### V-tammy-chou｜Tammy｜1 月｜整案重寫｜第一批
 
@@ -771,26 +786,26 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 |---|---|
 | 一句話畫面 | 新年夜，老飯店酒廊安靜下來的角落：她側坐在深藍綠絲絨扶手椅裡，身旁一盞黃銅落地燈把她和椅子照成一小圈暖光，背後的高窗是深藍夜色與城市光點。 |
 | 這張最吸引人的地方 | 落地燈的暖光只照亮她和絲絨扶手椅這一小圈，背後的窗是深藍夜色和城市光點；香檳色緞面在燈下發亮，她窩在椅子裡對鏡頭笑，像跨年派對散場後只屬於她的一刻。 |
-| 視覺主次與構圖理由 | 燈與椅子圈出的那一小塊暖光是主體；人物在中央略偏左，燈罩在右側她頭部的高度，窗與遠處吊燈只是暗背景。 |
+| 視覺主次與構圖理由 | 燈與椅子圈出的那一小塊暖光是主體；人物在中央略偏左，燈罩在畫面右側、她頭部的高度，窗與遠處吊燈只是暗背景。 |
 | 景別 | 坐姿全身（髮頂上方到鞋下方）（中景；坐在椅子上：髮頂到腳底） |
-| 人物位置 | 中央略偏左；落地燈罩在右側、與她頭部同高 |
+| 人物位置 | 中央略偏左；落地燈罩在畫面右側、與她頭部同高 |
 | 人物占比（設計參考） | 58–66%（占畫高） |
 | 預期配置 | 頭頂 22%＋人物 62%＋腳下 16% |
 | 最低安全邊界 | 頭頂 ≥3%、腳下 ≥3% |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 3.0 m（占比範圍對應 2.8–3.2 m）；她的位置畫面涵蓋約 1.5 m 寬 × 1.9 m 高 |
-| 相機高度 | 約 0.80 m（她坐著時腰到胸口之間）；依預期配置，平視時相機應在約 0.66 m；所以相機需向下約 3° |
+| 相機高度 | 約 0.80 m（她坐著時的胸口高度）；依預期配置，平視時相機應在約 0.66 m；所以相機需向下約 3° |
 | 地平線／消失點 | —（畫面中沒有明顯地平線，或為近景） |
 | 成品人物高度 | 93–106 mm（直式框高 160 mm）；頭部約 17 mm |
 | 服裝與鞋 | 香檳色真絲緞面斜裁細肩帶中長洋裝、小金色垂墜耳環、金色細帶高跟鞋；不拿包、不拿杯。 |
 | 主要動作 | 側坐在扶手椅裡、雙腿交疊，一手手臂沿著捲邊扶手放鬆，對鏡頭溫暖、放鬆地笑——像派對剛散場。一個姿態，沒有其他動作。 |
-| 光源、明暗與色彩 | 主光是她右側的黃銅落地燈（暖、柔，約在頭部高度），照亮臉、肩與緞面；從相機方向加一層和燈同色溫的柔和補光，讓暗側的臉保持清楚；房間其餘部分落入暖暗，窗外維持深藍。色彩：香檳、深藍綠、黃銅金、夜藍。 |
+| 光源、明暗與色彩 | 主光是畫面右側的黃銅落地燈（暖、柔，約在她頭部高度），照亮臉、肩與緞面；從相機方向加一層柔和補光，讓暗側的臉保持清楚，但落地燈仍是她身上最亮、方向最明確的光；房間其餘部分落入暖暗，窗外維持深藍。色彩：香檳、深藍綠、黃銅金、夜藍。 |
 | 背景整理 | 老飯店酒廊：深藍綠絲絨扶手椅、黃銅落地燈與打褶奶油色燈罩、高窗外失焦的城市光點（沒有招牌字）、遠處一盞水晶吊燈的微光；酒廊沒有其他人。 |
 | 保留的部分 | 新年夜老飯店的方向（1 月）；人設身分句（canon）不變。 |
 | 涉及 Owner 已定項目 | 無（白色西裝洋裝、提包與大廳站姿都不是 Penny 指定項目）。 |
 
 **最可能失敗的地方與降低風險：**
 
-- 臉的光又變成看不出來源的正面光 → 寫明落地燈是主光、補光和燈同色溫；生成後看臉的亮暗方向是否和燈一致。
+- 臉的光又變成看不出來源的正面光 → 寫明畫面右側的落地燈是主光、補光只讓暗側不死黑；生成後看臉的亮暗方向、陰影，和椅子、牆面上的燈光是否一致。
 - 緞面過亮或像塑膠 → 寫明柔光、緞面有自然的高光與皺褶。
 - 手與扶手的接觸 → 只放一隻手臂在捲邊扶手上，另一手放在膝上，不拿東西。
 - 窗外出現招牌文字 → 寫明只有失焦光點、沒有文字。
@@ -798,7 +813,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 **prompt 草稿**（身分句逐字沿用 CAL_21（canon 不改），其後依本設計重寫；焦段與距離是全片幅等效的透視提示，不保證模型精準遵守；本輪不送出、不報價，下一次生成的範圍與費用另行確認。）：
 
 ```text
-A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a champagne silk-satin slip midi dress cut on the bias with thin straps, small gold drop earrings and strappy gold heels, and she holds nothing. Setting: New Year's Eve in a quiet corner of a grand old hotel lounge, a deep teal velvet armchair with rolled arms beside a brass floor lamp with a pleated cream fabric shade, tall windows behind with a deep-blue night and soft out-of-focus city lights with no signs, a crystal chandelier glowing faintly far back in the room, nobody else in the lounge. Moment: she sits sideways in the armchair with her legs crossed, one arm resting along the rolled armrest and the other hand on her knee, and smiles at the camera, warm and relaxed, as if the party has just ended. Shot: seated full-length, from a little above her head to just below her heels, the armchair and the lamp beside her. Camera: vertical 3:4, at about her seated chest height, a 50mm lens from about 3 metres, natural perspective with straight vertical lines. Composition: the armchair sits a little left of centre, the glowing lamp shade on the right at the height of her head, the dark window and the city lights in the upper background, a little floor below her heels. Light: the floor lamp is the key light, warm and soft from her right at head height, lighting her face, shoulders and the satin; a gentle fill from the camera side in the same warm colour keeps the shadow side of her face clear; the rest of the room falls into warm darkness and the window stays deep blue; champagne, teal, brass gold and night blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
+A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a champagne silk-satin slip midi dress cut on the bias with thin straps, small gold drop earrings and strappy gold heels, and she holds nothing. Setting: New Year's Eve in a quiet corner of a grand old hotel lounge, a deep teal velvet armchair with rolled arms beside a brass floor lamp with a pleated cream fabric shade, tall windows behind with a deep-blue night and soft out-of-focus city lights with no signs, a crystal chandelier glowing faintly far back in the room, nobody else in the lounge. Moment: she sits sideways in the armchair with her legs crossed, one arm resting along the rolled armrest and the other hand on her knee, and smiles at the camera, warm and relaxed, as if the party has just ended. Shot: seated full-length, from a little above her head to just below her heels, the armchair and the lamp beside her. Camera: vertical 3:4, at about her seated chest height, a 50mm lens from about 3 metres, natural perspective with straight vertical lines. Composition: the armchair sits a little left of centre, the glowing lamp shade on the right at the height of her head, the dark window and the city lights in the upper background, a little floor below her heels. Light: the floor lamp is the key light, warm and soft from the right of the frame at the height of her head, lighting her face, shoulders and the satin; a gentle fill from the camera side keeps the shadow side of her face clear while the lamp stays the brightest, most directional light on her; the rest of the room falls into warm darkness and the window stays deep blue; champagne, teal, brass gold and night blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
 ```
 
 ### V-rin-ayase｜Rin｜10 月｜整案重寫｜第一批
@@ -815,7 +830,7 @@ A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almon
 | 最低安全邊界 | 頭頂 ≥3%（裁切景別，下緣不切在關節） |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 2.1 m（占比範圍對應 2.1–2.2 m）；她的位置畫面涵蓋約 1.0 m 寬 × 1.4 m 高 |
 | 相機高度 | 約 1.20 m（胸口高度）；依預期配置，平視時相機應在約 1.14 m；所以相機需向下約 2° |
-| 地平線／消失點 | 迴廊消失點：約在畫面由上往下 46%，不穿過頭頸 |
+| 地平線／消失點 | 迴廊地面的消失點：約在畫面由上往下 46%（幾何推算：在相機視線高度，前提是地面水平、線條與地面平行），不穿過頭頸 |
 | 成品人物高度 | 138–144 mm（直式框高 160 mm；裁切景別為髮頂到下緣的可見部分）；頭部約 25 mm |
 | 服裝與鞋 | 黑色細針織方領中長洋裝（腰身柔和收合）、駝色羊毛長大衣披在肩上（不穿袖）、小金色圈耳環、黑色尖頭皮革踝靴；低髮髻（人設）。 |
 | 主要動作 | 肩膀靠著石柱站在一道陽光裡，把臉轉向光，眼簾半垂，帶著安靜、私密的淺笑。一個姿態，不走路、不看鏡頭。 |
@@ -841,20 +856,20 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 
 | 項目 | 內容 |
 |---|---|
-| 一句話畫面 | 藍調時刻的溫泉街正在下雪：她手插口袋慢慢走上坡，剛好走到最近的一盞燈籠下，抬頭看著燈籠光裡飄落的雪笑了出來。 |
+| 一句話畫面 | 藍調時刻的溫泉街正在下雪：她手插口袋沿緩坡朝相機慢慢走下來，剛好走到最近的一盞燈籠下，抬頭看著燈籠光裡飄落的雪笑了出來。 |
 | 這張最吸引人的地方 | 藍調時刻的雪街只有燈籠下那一圈是暖的，她剛好走進最近的那圈光，抬頭看雪笑了；她臉上的暖和身邊雪地、木牆上的暖是同一盞燈籠，不是另外打的光。 |
 | 視覺主次與構圖理由 | 雪街、屋簷與燈籠是畫面；她在中央偏右、比例縮小，正好站在最近那盞燈籠的光圈裡——人和那圈暖光是視覺焦點，其餘是藍色的街。 |
 | 景別 | 全身（髮頂上方到靴底下方）（遠景；全身站姿：髮頂到腳底） |
-| 人物位置 | 中央偏右，最近的燈籠掛在她右前上方；街道與更多燈籠往左上方退 |
+| 人物位置 | 中央偏右，最近的燈籠掛在她前上方（畫面右上）；街道在她身後沿緩坡往左上方升高退遠 |
 | 人物占比（設計參考） | 40–45%（占畫高） |
 | 預期配置 | 頭頂 35%＋人物 43%＋腳下 22% |
 | 最低安全邊界 | 頭頂 ≥3%、腳下 ≥3% |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 5.9 m（占比範圍對應 5.6–6.3 m）；她的位置畫面涵蓋約 2.8 m 寬 × 3.7 m 高 |
 | 相機高度 | 約 1.15 m（胸口高度）；依預期配置，平視時相機應在約 1.05 m；差距在 1° 內，即平視 |
-| 地平線／消失點 | 街道消失點：約在畫面由上往下 47%，不穿過頭頸 |
+| 地平線／消失點 | 上坡街道：估計，不是幾何驗證。街道在她身後沿緩坡升高；地平線被街屋遮住，估計在畫面由上約 47%（她胸口附近）；上坡路的消失點比地平線高，視坡度而定，未計算。設計意圖：街道與燈籠往左上方退，不從頭部後方穿過。 |
 | 成品人物高度 | 64–72 mm（直式框高 160 mm）；頭部約 9 mm |
 | 服裝與鞋 | 深蔓越莓紅羊毛長大衣（敞開）、象牙白羅紋針織迷你洋裝、白色及膝長靴、小珍珠耳環（Owner 已接受的造型；只把亮紅改成較深的蔓越莓紅）。 |
-| 主要動作 | 雙手插在大衣口袋、慢慢走上坡，在燈籠下抬頭看雪，露出驚喜的小笑，眼睛睜開。一個動作：走路抬頭。 |
+| 主要動作 | 雙手插在大衣口袋、沿緩坡朝相機慢慢走下來，在燈籠下抬頭看雪，露出驚喜的小笑，眼睛睜開。一個動作：走路抬頭。 |
 | 光源、明暗與色彩 | 主光是最近的那盞紙燈籠：暖琥珀光落在她的臉、大衣，也落在她周圍的雪地與木牆上（同一圈光）；藍調天空照亮其餘一切，包括她背向燈籠的一側——人和街共用同一組冷暖光，不另外打臉。色彩：深藍、暖琥珀、低飽和蔓越莓紅、象牙白。 |
 | 背景整理 | 低矮木造旅館、素面無字的紙燈籠、石溝冒著薄蒸氣、緩坡路面一層新雪；沒有招牌、交通標誌與電線；街上沒有其他人。 |
 | 保留的部分 | Penny 指定可保留的溫泉街雪景方向；Owner 已接受的大衣＋針織迷你＋白長靴造型；人設身分句不變。 |
@@ -862,7 +877,7 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 
 **最可能失敗的地方與降低風險：**
 
-- 又得到暖臉貼冷背景 → 寫明燈籠光同時落在她和周圍雪地、木牆上，背光側是藍色天光；生成後看雪地上的光圈是否和臉上的暖光同源。
+- 又得到暖臉貼冷背景 → 寫明燈籠光同時落在她和周圍雪地、木牆上，背光側是藍色天光；生成後看雪地與木牆上的暖光圈，和她臉上的暖光方向、亮暗是否一致。
 - 天色又變成白天 → 寫明 blue hour、燈籠已點亮。
 - 人物縮小後辨識度 → 臉朝上迎向燈籠光、三分之二側臉；成品人物約 64–72 mm 高（頭部尺寸見 §6 核算），生成後以套框確認辨識。
 - 燈籠或店面出現文字 → 寫明素面無字、沒有招牌。
@@ -870,14 +885,14 @@ A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an ov
 **prompt 草稿**（身分句逐字沿用 CAL_21（canon 不改），其後依本設計重寫；焦段與距離是全片幅等效的透視提示，不保證模型精準遵守；本輪不送出、不報價，下一次生成的範圍與費用另行確認。）：
 
 ```text
-A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat worn open over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. Setting: a small hot-spring town street at blue hour in gentle snowfall, low wooden inns with warm plain paper lanterns that have no lettering hanging from the eaves, thin steam rising from a stone gutter, a thin layer of fresh snow on the gently rising road, no signs, no traffic signs and no wires, nobody else on the street. Moment: she walks slowly up the street with her hands in her coat pockets, right beneath the nearest lantern, and looks up at the snow drifting through its glow with a small, delighted smile, her eyes open. Shot: full-length, her figure filling a little under half the frame height, with the eaves and the lantern above her and the snowy road below. Camera: vertical 3:4, at her chest height, a 50mm lens from about 6 metres, natural perspective. Composition: she walks right of centre with the nearest lantern hanging just above and in front of her, the snowy street and more lanterns receding toward the upper left, open dusk sky above the rooftops, snowy road in the lower part of the frame. Light: the nearest lantern is her key light: its warm amber glow falls on her face and coat and on the snow and the wooden wall around her in the same pool of light; the deep-blue dusk sky lights everything else, including the side of her turned away from the lantern, so she and the street share the same warm-and-cool light; muted cranberry, ivory, warm amber and deep blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
+A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat worn open over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. Setting: a small hot-spring town street at blue hour in gentle snowfall, low wooden inns with warm plain paper lanterns that have no lettering hanging from the eaves, thin steam rising from a stone gutter, a thin layer of fresh snow on the road, which rises gently away from the camera, no signs, no traffic signs and no wires, nobody else on the street. Moment: she walks slowly down the gently sloping street toward the camera with her hands in her coat pockets, right beneath the nearest lantern, and looks up at the snow drifting through its glow with a small, delighted smile, her eyes open. Shot: full-length, her figure filling a little under half the frame height, with the eaves and the lantern above her and the snowy road below. Camera: vertical 3:4, at her chest height, a 50mm lens from about 6 metres, natural perspective. Composition: she walks right of centre with the nearest lantern hanging just above and in front of her toward the upper right, the snowy street rising behind her and receding toward the upper left with more lanterns, open dusk sky above the rooftops, snowy road in the lower part of the frame. Light: the nearest lantern is her key light: its warm amber glow falls on her face and coat and on the snow and the wooden wall around her in the same pool of light; the deep-blue dusk sky lights everything else, including the side of her turned away from the lantern, so she and the street share the same warm-and-cool light; muted cranberry, ivory, warm amber and deep blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
 ```
 
 ### H-yerin-han｜Yerin｜5 月｜整案重寫｜第一批
 
 | 項目 | 內容 |
 |---|---|
-| 一句話畫面 | 五月清晨的球道邊：她把一支球桿立在草上、雙手疊在握把上站定，望向下一洞；側光把草上的露水和她的輪廓一起點亮。 |
+| 一句話畫面 | 五月清晨的球道邊：她把一支球桿立在草上、雙手疊在握把上站定，望向下一洞；從她前方斜照的晨光把草上的露水和她的臉一起點亮。 |
 | 這張最吸引人的地方 | 清晨的側光把草上的露水和她的輪廓一起點亮，白 polo 與天空藍裙在整片新綠中很乾淨；她扶著球桿看向下一洞，是開球前最篤定的一刻。 |
 | 視覺主次與構圖理由 | 球道與一排新綠樹林是空間，人物在左三分之一、身體朝右，右側留出球道的開闊。 |
 | 景別 | 全身（帽頂上方到鞋下方）（遠景；全身站姿：髮頂到腳底） |
@@ -887,11 +902,11 @@ A 24-year-old adult Korean woman with her natural fair skin tone and round cheek
 | 最低安全邊界 | 頭頂 ≥6%、腳下 ≥5% |
 | 焦段與距離（全片幅等效，設計參考） | 85mm，約 12.3 m（占比範圍對應 11.9–13.0 m）；她的位置畫面涵蓋約 5.2 m 寬 × 2.9 m 高 |
 | 相機高度 | 約 1.00 m（腰部高度）；依預期配置，平視時相機應在約 0.88 m；差距在 1° 內，即平視 |
-| 地平線／消失點 | 地平線（被樹林遮住，樹線在其上方）：約在畫面由上往下 46%，不穿過頭頸 |
+| 地平線／消失點 | 遠方樹線：估計，不是幾何驗證。地平線被樹林遮住，估計在畫面由上約 46%（她腰部附近）；樹線高度取決於樹高與距離，資料不足，未計算。設計意圖：樹林是柔焦的背景帶，頭部靠景深和樹林分開。 |
 | 成品人物高度 | 59–65 mm（橫式原圖高 108 mm、框內 104 mm）；頭部約 8 mm |
 | 服裝與鞋 | 白色無袖貼身針織高爾夫 polo、淺天空藍百褶高爾夫裙、白色高爾夫鞋、素面白色球帽、小金色耳針；一支球桿。 |
 | 主要動作 | 球桿桿頭立在她面前的草上，雙手輕疊在握把上（約在臀部高度），重心在一腳，望向球道遠端，帶著輕鬆、篤定的笑。一個姿態：扶桿站定（不走路、不碰帽、不回頭）。 |
-| 光源、明暗與色彩 | 主光是左側低角度的晨光（側前方），清爽、有方向，草上露水發亮、影子拉長；加一層和晨光同色溫的柔和補光，讓帽簷下的眼睛清楚。色彩：新綠、白、淺天空藍。 |
+| 光源、明暗與色彩 | 主光是畫面右側、她視線前方的低角度晨光（側前光），清爽、有方向，照亮她的臉與身體正面，草上露水發亮、影子往她身後拉長；可加柔和補光讓帽簷下的眼睛清楚（R6-3）。色彩：新綠、白、淺天空藍。 |
 | 背景整理 | 亮綠球道、遠方一排枝葉茂密的春天樹林、開闊天空；沒有球車、沒有帶字的旗桿或標牌；沒有其他人。 |
 | 保留的部分 | 5 月、高爾夫服裝與人設身分句不變。 |
 | 涉及 Owner 已定項目 | 無（移除球車屬本輪授權內的重規劃，回應 Penny 指出的尺度失衡，見 §8 D5）。 |
@@ -901,12 +916,12 @@ A 24-year-old adult Korean woman with her natural fair skin tone and round cheek
 - 球桿長度與握法錯誤 → 寫明一支球桿、桿頭在草上、握把在臀部高度、雙手疊在握把上。
 - 又出現球車或其他大型車輛 → 寫明 no golf carts。
 - 樹沒有葉子、季節不對 → 寫明 fully leafed late-spring trees。
-- 帽簷陰影遮眼 → 側前方晨光＋同色溫補光；生成後以原圖 100% 看眼睛。
+- 帽簷陰影遮眼 → 晨光在她前方低角度斜照進帽簷下，可加補光；生成後以原圖 100% 看眼睛。
 
 **prompt 草稿**（身分句逐字沿用 CAL_21（canon 不改），其後依本設計重寫；焦段與距離是全片幅等效的透視提示，不保證模型精準遵守；本輪不送出、不報價，下一次生成的範圍與費用另行確認。）：
 
 ```text
-A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white sleeveless fitted knit golf polo, a pale sky-blue pleated golf skirt, white golf shoes and small gold studs. Setting: the edge of a fairway on a clear late-spring morning, bright green grass with dew still on it, fully leafed late-spring trees along the far side, open sky, no golf carts, no flags or signs with text, nobody else around. Moment: she stands on the grass with the head of a single golf club resting on the ground in front of her and both hands stacked lightly on top of its grip at hip height, her weight on one leg, looking down the fairway toward the next hole with an easy, confident smile. Shot: full-length, from a little above her cap to below her shoes, with plenty of fairway and trees around her. Camera: horizontal 16:9, at her waist height, an 85mm lens from about 12 metres, natural perspective. Composition: she stands on the left third of the frame with her body angled to the right, the fairway opening out ahead of her on the right, the line of trees across the upper middle, clear space above her cap and below her shoes. Light: the low morning sun from the left lights her from the side and slightly in front, crisp and directional, with long soft shadows across the grass and sparkles of dew; a soft fill in the same morning colour keeps her eyes clear under the cap brim; fresh green, white and pale sky blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
+A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white sleeveless fitted knit golf polo, a pale sky-blue pleated golf skirt, white golf shoes and small gold studs. Setting: the edge of a fairway on a clear late-spring morning, bright green grass with dew still on it, fully leafed late-spring trees along the far side, open sky, no golf carts, no flags or signs with text, nobody else around. Moment: she stands on the grass with the head of a single golf club resting on the ground in front of her and both hands stacked lightly on top of its grip at hip height, her weight on one leg, looking down the fairway toward the next hole with an easy, confident smile. Shot: full-length, from a little above her cap to below her shoes, with plenty of fairway and trees around her. Camera: horizontal 16:9, at her waist height, an 85mm lens from about 12 metres, natural perspective. Composition: she stands on the left third of the frame with her body angled to the right, the fairway opening out ahead of her on the right, the line of trees across the upper middle, clear space above her cap and below her shoes. Light: the low morning sun from the right of the frame, ahead of her, lights her face and the front of her body from the side, crisp and directional, with long soft shadows stretching behind her across the grass and sparkles of dew; a soft fill keeps her eyes clear under the cap brim; fresh green, white and pale sky blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
 ```
 
 ### H-jia-seo｜Jia｜9 月｜整案重寫｜第一批
@@ -923,11 +938,11 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 | 最低安全邊界 | 頭頂 ≥6%、腳下 ≥5% |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 5.2 m（占比範圍對應 4.8–5.4 m）；她的位置畫面涵蓋約 3.7 m 寬 × 2.1 m 高 |
 | 相機高度 | 約 1.10 m（略高於她坐著的頭頂、微微向下）；依預期配置，平視時相機應在約 0.76 m；所以相機需向下約 4° |
-| 地平線／消失點 | 對岸線（水平線）：約在畫面由上往下 34%，不穿過頭頸 |
+| 地平線／消失點 | 對岸水線與樹線：估計，不是幾何驗證。若對岸在數百公尺外，對岸水線接近地平線，估計在畫面由上約 34%；樹線在其上方，高度取決於樹高與距離，未計算。設計意圖：對岸線橫在上三分之一、在她頭頂上方，不穿過頭部。 |
 | 成品人物高度 | 45–52 mm（橫式原圖高 108 mm、框內 104 mm）；頭部約 11 mm |
 | 服裝與鞋 | 深酒紅細針織長洋裝（及踝）、柔軟的米白開襟從一邊肩膀滑下、棕色皮革平底涼鞋、小銀圈耳環。長裙坐下時順著木板鋪開，和平台斜線一起引導視線。 |
 | 主要動作 | 雙腿側收坐在平台盡頭的木板上，一手撐在身旁木板，望向湖面，冷靜、若有所思的淺笑；臉是三分之二側臉、朝向相機一側。一個姿態，不回頭。 |
-| 光源、明暗與色彩 | 主光是日落後明亮的天空：柔和、均勻地從左前方照亮她的臉，湖面與她的頭髮帶一點粉色反光；對岸樹林比天空暗。可加同色調的柔和補光保持臉部清楚。色彩：粉、淡紫、湖灰藍、米白、深酒紅。 |
+| 光源、明暗與色彩 | 主光是日落後的天光：太陽剛落在畫面左側的對岸後方，那一側的天空最亮；她面向左側的湖面，臉由這片亮的天空柔和照亮，湖面與她的頭髮帶一點粉色反光；對岸樹林比天空暗。可加柔和補光保持臉部清楚（R6-3）。色彩：粉、淡紫、湖灰藍、米白、深酒紅。 |
 | 背景整理 | 淺色木平台、平靜湖面、對岸開始轉黃的樹林；沒有長椅；沒有其他人。 |
 | 保留的部分 | Penny 指定可保留的湖畔方向（9 月）；人設身分句不變。 |
 | 涉及 Owner 已定項目 | 無（繞頸短裙不是 Penny 指定項目）。 |
@@ -935,14 +950,14 @@ A 26-year-old adult Korean woman with her natural fair skin tone, bright defined
 **最可能失敗的地方與降低風險：**
 
 - 人太小、臉看不清 → 臉朝向亮的天空、三分之二側臉；成品人物約 45–52 mm 高（頭部尺寸見 §6 核算）；生成後以套框確認辨識。
-- 對岸線切過頭部 → 相機略高於她的頭、微微向下，對岸線落在上三分之一、頭頂上方（§6 核算）。
+- 對岸線切過頭部 → 相機略高於她的頭、微微向下；設計意圖是對岸線落在上三分之一、頭頂上方。實際位置受對岸距離與地形影響，§6 只列估計，不是幾何驗證；生成後實圖確認。
 - 又變成回頭看鏡頭 → 寫明看湖面、三分之二側臉。
 - 長裙與開襟顯得厚重 → 寫明細針織、開襟柔軟滑落，長裙順著木板鋪開。
 
 **prompt 草稿**（身分句逐字沿用 CAL_21（canon 不改），其後依本設計重寫；焦段與距離是全片幅等效的透視提示，不保證模型精準遵守；本輪不送出、不報價，下一次生成的範圍與費用另行確認。）：
 
 ```text
-A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a deep wine-red fine-knit long dress that falls to her ankles, a soft cream cardigan slipping off one shoulder, flat brown leather sandals and small silver hoop earrings. Setting: a quiet lake in early autumn just after sunset, a pale wooden deck running out over the still water, the far shore lined with trees just turning yellow, the sky and the lake glowing soft pink and lavender with the afterglow, no bench, nobody else around. Moment: she sits at the far end of the deck with her legs folded to one side and her long skirt spreading over the boards, one hand resting on the boards beside her, gazing out across the lake with a calm, thoughtful half-smile, her face in three-quarter profile toward the camera. Shot: seated full-length, her seated figure filling a little under half the frame height, with the deck, the lake and the far shore around her. Camera: horizontal 16:9, from a little above her seated head height, angled slightly down, a 50mm lens from about 5 metres, natural perspective. Composition: the deck runs in from the lower right corner toward the middle of the frame; she sits at its end on the right third, her face and figure clear and recognisable; the far shore lies across the upper third, above her head and never crossing it; the glowing water fills the left side. Light: the bright afterglow sky lights her face softly and evenly from the front left, with a faint pink sheen on the water and on her hair; the far shore is darker against the sky; soft pink, lavender, lake blue-grey, cream and deep wine. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
+A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a deep wine-red fine-knit long dress that falls to her ankles, a soft cream cardigan slipping off one shoulder, flat brown leather sandals and small silver hoop earrings. Setting: a quiet lake in early autumn just after sunset, a pale wooden deck running out over the still water, the far shore lined with trees just turning yellow, the sky and the lake glowing soft pink and lavender with the afterglow, no bench, nobody else around. Moment: she sits at the far end of the deck with her legs folded to one side and her long skirt spreading over the boards, one hand resting on the boards beside her, gazing out across the lake with a calm, thoughtful half-smile, her face in three-quarter profile toward the camera. Shot: seated full-length, her seated figure filling a little under half the frame height, with the deck, the lake and the far shore around her. Camera: horizontal 16:9, from a little above her seated head height, angled slightly down, a 50mm lens from about 5 metres, natural perspective. Composition: the deck runs in diagonally from the lower right corner and ends on the right third, where she sits, her face and figure clear and recognisable; the far shore lies across the upper third, above her head and never crossing it; the glowing water fills the left side. Light: the sun has just set beyond the far shore on the left of the frame, and the brightest part of the afterglow sky there lights her face softly as she looks toward it, with a faint pink sheen on the water and on her hair; the far shore is darker against the sky; soft pink, lavender, lake blue-grey, cream and deep wine. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook.
 ```
 
 ### H-iris-chen｜Iris｜8 月｜局部修改
@@ -959,11 +974,11 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥6%、腳下 ≥5% |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 6.3 m（占比範圍對應 6.1–6.7 m）；她的位置畫面涵蓋約 4.6 m 寬 × 2.6 m 高 |
 | 相機高度 | 約 0.80 m（臀部高度）；依預期配置，平視時相機應在約 0.75 m；差距在 1° 內，即平視 |
-| 地平線／消失點 | 海平線：約在畫面由上往下 48%，不穿過頭頸 |
+| 地平線／消失點 | 海平線：約在畫面由上往下 48%（幾何推算：在相機視線高度，前提是海面或平地延伸到遠處），不穿過頭頸 |
 | 成品人物高度 | 65–71 mm（橫式原圖高 108 mm、框內 104 mm）；頭部約 9 mm |
 | 服裝與鞋 | 向日葵黃平口馬甲短上衣、同色低腰迷你裙、白色平底繫帶涼鞋、細金鍊與耳針（不改）。 |
 | 主要動作 | 雙手輕放在低腰裙腰頭兩側、重心在一腳，迎著海風燦笑看鏡頭（姿勢不改，風吹起頭髮）。 |
-| 光源、明暗與色彩 | 主光是左前上方上午斜陽；可用同色溫補光柔化陰影。色彩：向日葵黃、湖水綠、淺岩灰。 |
+| 光源、明暗與色彩 | 主光是左前上方上午斜陽；可用補光柔化陰影（R6-3）。色彩：向日葵黃、湖水綠、淺岩灰。 |
 | 背景整理 | 平坦淺色岩台、透明湖水綠海灣、遠處綠色岬角；沒有其他人。 |
 | 保留的部分 | H-Iris 企劃的岩岸海灣、8 月、服裝、姿勢與看鏡頭（V-Iris 已接受照片不受影響）。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -991,7 +1006,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 65–71 mm（橫式原圖高 108 mm、框內 104 mm）；頭部約 9 mm |
 | 服裝與鞋 | 低飽和藕粉色正絹小紋和服、深梅色名古屋帶、白足袋與低跟草履、小珍珠髮夾、小香袋（全部不改）。 |
 | 主要動作 | 雙手在腰帶下方輕捧小香袋；身體約 30 度斜側、臉轉向鏡頭淺笑（Penny 指定，不改）。 |
-| 光源、明暗與色彩 | 主光是穿過松枝的秋日午後斜陽；補光保持同色溫。色彩：藕粉、深梅、白砂、紅葉。 |
+| 光源、明暗與色彩 | 主光是穿過松枝的秋日午後斜陽；可加補光（R6-3）。色彩：藕粉、深梅、白砂、紅葉。 |
 | 背景整理 | 當代整潔的日式宅邸：緣側、敞開的拉門、白砂、修剪的松、一棵紅葉；沒有其他人。 |
 | 保留的部分 | Penny 指定的香袋與手部、和服、庭院、看鏡頭。 |
 | 涉及 Owner 已定項目 | 無（只改人物占比）。 |
@@ -1019,14 +1034,14 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 95–99 mm（橫式原圖高 108 mm、框內 104 mm；裁切景別為髮頂到下緣的可見部分）；頭部約 18 mm |
 | 服裝與鞋 | 奶油色合身羅紋短開襟（敞開）、鏽橘方領細肩小可愛、鏽橘高腰針織迷你裙、棕色有跟樂福鞋（寫入 prompt）、紅色琺瑯小愛心耳環（不改）。 |
 | 主要動作 | 一側臀部輕靠吧台、一手放在吧台邊、一手把頭髮塞到耳後，月牙眼大笑（不改）。 |
-| 光源、明暗與色彩 | 主光是她上方偏前的暖色吊燈與店內燈；加和吊燈同色溫的柔和補光讓臉清楚；拿掉柔光箱寫法。色彩：暖橘、紅、奶油。 |
+| 光源、明暗與色彩 | 主光是她上方偏前的暖色吊燈與店內燈；可加柔和補光讓臉清楚，吊燈仍是吧台與她身上最明確的光；拿掉柔光箱寫法。色彩：暖橘、紅、奶油。 |
 | 背景整理 | 營業前的真實小店：暖橘磁磚吧台、紅色皮面高腳椅、素面磁磚牆（沒有菜單文字）、右緣一小盤失焦炸雞（不改）。 |
 | 保留的部分 | Penny 已接受的 v2 主方向：小吃店、服裝、姿勢、大笑、構圖。 |
 | 涉及 Owner 已定項目 | 無（只改光源描述與「搭景」用語）。 |
 
 **最可能失敗的地方與降低風險：**
 
-- 吊燈下臉暗 → 寫明她站在吊燈正下方偏前、補光同色溫。
+- 吊燈下臉暗 → 寫明她站在吊燈正下方偏前，吊燈的暖光也落在吧台與高腳椅上。
 - 菜單文字 → 寫明素面磁磚牆。
 
 ### H-coco-wu｜Coco｜6 月｜保留設計
@@ -1043,11 +1058,11 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥6%（裁切景別，下緣不切在關節） |
 | 焦段與距離（全片幅等效，設計參考） | 85mm，約 5.3 m（占比範圍對應 5.2–5.4 m）；她的位置畫面涵蓋約 2.2 m 寬 × 1.3 m 高 |
 | 相機高度 | 約 1.10 m（胸口高度）；依預期配置，平視時相機應在約 1.07 m；差距在 1° 內，即平視 |
-| 地平線／消失點 | 地平線：約在畫面由上往下 48%，不穿過頭頸 |
+| 地平線／消失點 | 花田盡頭與樹列：估計，不是幾何驗證。若花田平坦且延伸夠遠，花田盡頭接近地平線，估計在畫面由上約 48%（她腰部附近）；樹列在其上方，未計算。設計意圖：花壟收攏到她身後，樹列不碰到頭部。 |
 | 成品人物高度 | 95–99 mm（橫式原圖高 108 mm、框內 104 mm；裁切景別為髮頂到下緣的可見部分）；頭部約 18 mm |
 | 服裝與鞋 | 白色亞麻細肩洋裝、白色雛菊髮夾、草帽拿在身側、白色平底涼鞋（寫入 prompt）。 |
 | 主要動作 | 一手拿草帽、一手把頭髮塞到耳後，瞇眼大笑（不改）。 |
-| 光源、明暗與色彩 | 主光是身後低角度夕陽的暖色輪廓光；前方補光保持和夕陽同色溫、不比輪廓光亮（同 V-Iris 的做法）。色彩：薰衣草紫、暖金、白。 |
+| 光源、明暗與色彩 | 主光是身後低角度夕陽的暖色輪廓光；前方補光不搶過輪廓光，臉的暖色與亮暗仍和夕陽花田講得通（同 V-Iris 的做法）。色彩：薰衣草紫、暖金、白。 |
 | 背景整理 | 花壟自然、不完全整齊；地平線上幾棵柔綠樹；沒有其他人。 |
 | 保留的部分 | 全部設計（Owner 已接受）；prompt 只套共用格式。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1071,18 +1086,18 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥6%（裁切景別，下緣不切在關節） |
 | 焦段與距離（全片幅等效，設計參考） | 85mm，約 3.1 m（占比範圍對應 3.1–3.2 m）；她的位置畫面涵蓋約 1.3 m 寬 × 0.7 m 高 |
 | 相機高度 | 約 1.20 m（胸口高度）；依預期配置，平視時相機應在約 1.30 m；所以相機需向上約 2° |
-| 地平線／消失點 | 海平線：約在畫面由上往下 64%，不穿過頭頸 |
+| 地平線／消失點 | 海平線：約在畫面由上往下 64%（幾何推算：在相機視線高度，前提是海面或平地延伸到遠處），不穿過頭頸 |
 | 成品人物高度 | 95–99 mm（橫式原圖高 108 mm、框內 104 mm；裁切景別為髮頂到下緣的可見部分）；頭部約 30 mm |
 | 服裝與鞋 | 粉色緞面心形領馬甲上衣、白色高腰 A 字迷你裙、白色厚底涼鞋（寫入 prompt）、小珍珠耳環、細銀手鍊；一團拳頭大小的粉色棉花糖。 |
 | 主要動作 | 一手插腰（保留）、一手把棉花糖拿在下巴旁，對鏡頭俏皮地眨眼。一個動作：眨眼；棉花糖從肩高放低到下巴旁。 |
-| 光源、明暗與色彩 | 主光是她頭頂一串暖色燈泡，暖光落在臉、頭髮與緞面上；加同色溫補光；黃昏天光是背景的藍紫。色彩：粉、藍紫、暖金。 |
+| 光源、明暗與色彩 | 主光是她頭頂一串暖色燈泡，暖光落在臉、頭髮與緞面上；可加補光（R6-3）；黃昏天光是背景的藍紫。色彩：粉、藍紫、暖金。 |
 | 背景整理 | 木棧道與欄杆、粉紫晚霞與海面、失焦的遊樂設施光點；沒有招牌字；沒有其他人。 |
 | 保留的部分 | 遊樂碼頭、服裝、插腰、眨眼（Owner 已接受）。 |
 | 涉及 Owner 已定項目 | 無（景別與光源屬本輪授權內調整）。 |
 
 **最可能失敗的地方與降低風險：**
 
-- 燈泡光太弱、臉暗 → 寫明她就站在一串燈泡下、補光同色溫。
+- 燈泡光太弱、臉暗 → 寫明她就站在一串燈泡下，燈泡的暖光也落在欄杆與棧道上。
 - 棉花糖尺寸 → 寫明拳頭大小。
 
 ### H-yuna-kim｜Yuna｜1 月｜局部修改
@@ -1131,7 +1146,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 56–63 mm（橫式原圖高 108 mm、框內 104 mm）；頭部約 8 mm |
 | 服裝與鞋 | 熱粉色方領羅紋針織貼身迷你洋裝（Penny 同意的方向）、白色尖頭露跟高跟鞋、金色圈耳環、細金手鍊。 |
 | 主要動作 | 沿步道迎面走來、步幅小，笑出聲看著鏡頭。一個動作：走路；拿掉長椅與插腰，不回頭、不撥頭髮。 |
-| 光源、明暗與色彩 | 主光是左側午後春陽（側逆），花木透光；可加同色溫補光。色彩：熱粉、白、綠。 |
+| 光源、明暗與色彩 | 主光是左側午後春陽（側逆），花木透光；可加補光（R6-3）。色彩：熱粉、白、綠。 |
 | 背景整理 | 平整石板步道、修剪整齊的綠籬、白色花木與鬱金香；移除庭園長椅；沒有其他人。 |
 | 保留的部分 | 花園露台、4 月、Penny 同意的粉色針織洋裝與白色高跟鞋。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1159,7 +1174,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 127–142 mm（斜躺身長，畫寬 192 mm） |
 | 服裝與鞋 | 深酒紅真絲緞面垂墜領細肩中長洋裝、赤腳（室內）、細金鍊項鍊與耳針（不改）。 |
 | 主要動作 | 側躺，下方前臂撐在椅墊上、上方的手自然放在腰側，雙腿微彎交疊，望向窗外夕陽。手部簡化，其餘不改。 |
-| 光源、明暗與色彩 | 主光是右側落地窗的低角度夕陽；可加同色溫的弱補光。色彩：酒紅、暖金、深綠絲絨。 |
+| 光源、明暗與色彩 | 主光是右側落地窗的低角度夕陽；可加弱補光（R6-3）。色彩：酒紅、暖金、深綠絲絨。 |
 | 背景整理 | 整齊的套房、窗框直線、柔焦的天際線；沒有文字。 |
 | 保留的部分 | 套房、夕陽窗光、斜躺、洋裝、看窗外（Owner 已接受）。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1183,11 +1198,11 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥6%（裁切景別，下緣不切在關節） |
 | 焦段與距離（全片幅等效，設計參考） | 85mm，約 5.5 m（占比範圍對應 5.4–5.7 m）；她的位置畫面涵蓋約 2.3 m 寬 × 1.3 m 高 |
 | 相機高度 | 約 1.00 m（腰部高度）；依預期配置，平視時相機應在約 1.12 m；所以相機需向上約 1° |
-| 地平線／消失點 | 城市地平線：約在畫面由上往下 59%，不穿過頭頸 |
+| 地平線／消失點 | 遠方地平線（城市燈海的盡頭）：約在畫面由上往下 59%（幾何推算：在相機視線高度，前提是海面或平地延伸到遠處），不穿過頭頸；露台高度讓地平線下降很少（百公尺高約 0.3°），仍以相機視線高度推算；近處城市燈光都在地平線下方。 |
 | 成品人物高度 | 95–99 mm（橫式原圖高 108 mm、框內 104 mm；裁切景別為髮頂到下緣的可見部分）；頭部約 18 mm |
 | 服裝與鞋 | 血紅緞面馬甲迷你洋裝（大腿高衩）、黑色細帶高跟涼鞋（寫入 prompt）、大型銀色垂墜耳環、細銀手環；不加外套（Owner 已接受的造型）。 |
 | 主要動作 | 背靠玻璃欄杆、雙手放在身後欄杆上，一腿從高衩往前，直視鏡頭壞笑（不改）。 |
-| 光源、明暗與色彩 | 主光是她左側露台牆上的暖色壁燈（頭部高度）；加同色溫的柔和補光；城市冷暖散景作背景；拿掉柔光箱寫法。色彩：血紅、夜藍、暖金。 |
+| 光源、明暗與色彩 | 主光是她左側露台牆上的暖色壁燈（頭部高度）；可加柔和補光（R6-3）；城市冷暖散景作背景；拿掉柔光箱寫法。色彩：血紅、夜藍、暖金。 |
 | 背景整理 | 低矮乾淨的玻璃欄杆、深色石材地面、壁燈、城市燈海散景；沒有其他物件。 |
 | 保留的部分 | Penny 已接受的 v2 主方向：露台、紅色緞面洋裝、姿勢、直視鏡頭。 |
 | 涉及 Owner 已定項目 | 無（不加外套，見 §8 D4）。 |
@@ -1243,7 +1258,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 138–144 mm（直式框高 160 mm；裁切景別為髮頂到下緣的可見部分）；頭部約 25 mm |
 | 服裝與鞋 | 淺鼠尾草綠棉質洋裝（心形領、貼身上身、微蓬迷你裙）、米色低跟繫帶涼鞋（寫入 prompt）、細金手鍊（不改）。 |
 | 主要動作 | 雙手輕輕交握在身後，對鏡頭溫柔地笑（不改）。 |
-| 光源、明暗與色彩 | 主光是雨後明亮陰天的大面積柔光，青苔與花微濕發亮；可加同色溫補光。色彩：鼠尾草綠、白、苔綠。 |
+| 光源、明暗與色彩 | 主光是雨後明亮陰天的大面積柔光，青苔與花微濕發亮；可加補光（R6-3）。色彩：鼠尾草綠、白、苔綠。 |
 | 背景整理 | 老町家木籬笆、青苔、白色紫陽花、頭上楓枝；沒有其他人。 |
 | 保留的部分 | 町家後院、紫陽花、服裝、姿勢、看鏡頭、6 月。 |
 | 涉及 Owner 已定項目 | 無（景別與相機高度屬本輪授權內調整）。 |
@@ -1271,7 +1286,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 125–134 mm（直式框高 160 mm）；頭部約 30 mm |
 | 服裝與鞋 | 薄荷綠羅紋三角比基尼與側綁下著、敞開的淺紫透膚短袖罩衫、白色雛菊髮夾；赤腳（泡在水裡）。 |
 | 主要動作 | 雙手撐在身後池邊，仰頭、歪頭瞇眼大笑（不改）。 |
-| 光源、明暗與色彩 | 主光是左前上方晚上午的陽光；補光與陽光同色溫。色彩：湖水綠、薄荷、淺紫、米色石材。 |
+| 光源、明暗與色彩 | 主光是左前上方晚上午的陽光；可加補光（R6-3）。色彩：湖水綠、薄荷、淺紫、米色石材。 |
 | 背景整理 | 淺米色石材池畔、收起的白色陽傘；沒有其他人。 |
 | 保留的部分 | 全部設計（Penny 已接受的 v2 主方向）；prompt 只套共用格式。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1323,11 +1338,11 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥3%、腳下 ≥3% |
 | 焦段與距離（全片幅等效，設計參考） | 85mm，約 7.7 m（占比範圍對應 7.2–8.1 m）；她的位置畫面涵蓋約 2.2 m 寬 × 2.9 m 高 |
 | 相機高度 | 約 1.00 m（腰部高度）；依預期配置，平視時相機應在約 1.04 m；差距在 1° 內，即平視 |
-| 地平線／消失點 | 大道消失點：約在畫面由上往下 51%，不穿過頭頸 |
+| 地平線／消失點 | 大道地面的消失點：約在畫面由上往下 51%（幾何推算：在相機視線高度，前提是地面水平、線條與地面平行），不穿過頭頸 |
 | 成品人物高度 | 88–99 mm（直式框高 160 mm）；頭部約 12 mm |
 | 服裝與鞋 | 奶油色毛呢短外套與同色高腰迷你裙、黑色及膝皮長靴、小黑色素面肩背包、小珍珠耳環（不改）。 |
 | 主要動作 | 停步，一手拉著肩上背帶，望向大道深處若有所思地笑。拿掉手指拿銀杏葉。 |
-| 光源、明暗與色彩 | 主光是銀杏樹後方的低角度午後陽光（頭髮暖色輪廓）；補光同色溫。色彩：金黃、奶油、黑。 |
+| 光源、明暗與色彩 | 主光是銀杏樹後方的低角度午後陽光（頭髮暖色輪廓）；可加補光（R6-3）。色彩：金黃、奶油、黑。 |
 | 背景整理 | 兩旁金黃銀杏、鋪滿落葉的人行道、失焦的低矮現代建築；沒有文字；沒有其他人。 |
 | 保留的部分 | 題材、服裝、停步與視線、11 月。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1351,11 +1366,11 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥3%、腳下 ≥3% |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 4.7 m（占比範圍對應 4.4–5.0 m）；她的位置畫面涵蓋約 2.2 m 寬 × 3.0 m 高 |
 | 相機高度 | 約 1.00 m（腰部高度）；依預期配置，平視時相機應在約 0.87 m；所以相機需向下約 2° |
-| 地平線／消失點 | 街道消失點：約在畫面由上往下 46%，不穿過頭頸 |
+| 地平線／消失點 | 街道地面的消失點：約在畫面由上往下 46%（幾何推算：在相機視線高度，前提是地面水平、線條與地面平行），不穿過頭頸 |
 | 成品人物高度 | 83–93 mm（直式框高 160 mm）；頭部約 11 mm |
 | 服裝與鞋 | 黑色緞面繞頸迷你洋裝、黑色長版皮革風衣（敞開）、黑色細跟尖頭短靴（入鏡）、大型銀色垂墜耳環（不改）。 |
 | 主要動作 | 停步，一手拉著敞開的風衣衣襟在腰間，看向左前方的街燈，放鬆、微啟唇（不改）。 |
-| 光源、明暗與色彩 | 主光是她右側櫥窗的暖光（照亮半張臉）；可加同色溫補光；遠處街燈冷光與濕路倒影。色彩：黑、暖琥珀、冷藍。 |
+| 光源、明暗與色彩 | 主光是她右側櫥窗的暖光（照亮半張臉）；可加補光（R6-3）；遠處街燈冷光與濕路倒影。色彩：黑、暖琥珀、冷藍。 |
 | 背景整理 | 已打烊的店面、霧面素玻璃櫥窗、濕亮人行道；沒有文字；沒有其他人。 |
 | 保留的部分 | 構想、服裝、動作、5 月。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1383,7 +1398,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 83–93 mm（直式框高 160 mm）；頭部約 18 mm |
 | 服裝與鞋 | 杏桃色棉緞細肩短洋裝（心形領、裙長大腿中段）、白色細帶平底涼鞋、小珍珠耳環（服裝沿用已接受企劃）。 |
 | 主要動作 | 坐在第二級木階上，雙膝併攏斜放、雙腳踩在第一級，前臂輕靠在膝上、身體微微前傾，對鏡頭明亮地笑。一個姿態，不接花瓣。 |
-| 光源、明暗與色彩 | 主光是薄雲下的春日上午天光（柔、亮），花樹透光；可加同色溫的柔和補光。色彩：杏桃、白、新綠、淺木色。 |
+| 光源、明暗與色彩 | 主光是薄雲下的春日上午天光（柔、亮），花樹透光；可加柔和補光（R6-3）。色彩：杏桃、白、新綠、淺木色。 |
 | 背景整理 | 別墅木平台與三級寬木階、開白花的果樹、新綠樹籬；沒有吊床、沒有文字。 |
 | 保留的部分 | 4 月、別墅春日方向、洋裝與人設身分句不變。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1411,7 +1426,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 成品人物高度 | 88–99 mm（直式框高 160 mm）；頭部約 12 mm |
 | 服裝與鞋 | 白色無袖立領貼身短上衣、薄荷鼠尾草綠緞面高腰窄裙（開衩）、白色細帶涼鞋、細銀耳針（不改）。 |
 | 主要動作 | 站在石板小徑上、重心在一腳，一手插在裙腰上，另一手自然垂下，冷靜柔和地看著鏡頭。拿掉碰葉子。 |
-| 光源、明暗與色彩 | 主光是玻璃屋頂的大面積漫射天光；可加同色溫補光。色彩：深淺綠、白、薄荷。 |
+| 光源、明暗與色彩 | 主光是玻璃屋頂的大面積漫射天光；可加補光（R6-3）。色彩：深淺綠、白、薄荷。 |
 | 背景整理 | 白色鋼骨溫室、垂直線保持垂直、龜背芋葉約手臂長、石板小徑；沒有其他人。 |
 | 保留的部分 | 溫室、服裝、插腰、看鏡頭、2 月。 |
 | 涉及 Owner 已定項目 | 無。 |
@@ -1435,7 +1450,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 最低安全邊界 | 頭頂 ≥3%、腳下 ≥3% |
 | 焦段與距離（全片幅等效，設計參考） | 50mm，約 5.5 m（占比範圍對應 5.1–5.9 m）；她的位置畫面涵蓋約 2.7 m 寬 × 3.5 m 高 |
 | 相機高度 | 約 0.90 m（臀部高度）；依預期配置，平視時相機應在約 1.27 m；所以相機需向上約 4° |
-| 地平線／消失點 | 海平線：約在畫面由上往下 61%，不穿過頭頸 |
+| 地平線／消失點 | 海平線：約在畫面由上往下 61%（幾何推算：在相機視線高度，前提是海面或平地延伸到遠處），不穿過頭頸 |
 | 成品人物高度 | 72–83 mm（直式框高 160 mm）；頭部約 10 mm |
 | 服裝與鞋 | 白色圓領羅紋貼身背心迷你洋裝、小金色圈耳環；赤腳（海灘），一手拎著一雙白色涼鞋。 |
 | 主要動作 | 走在淺浪裡、浪打到腳踝，一手拎涼鞋，低頭看浪笑。一個動作：走在浪裡（不撥頭髮、不看鏡頭）。 |
@@ -1456,11 +1471,11 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 項目 | 要回答的問題 | 不通過時 |
 |---|---|---|
 | 畫面與吸引點 | 一句話說得出畫面嗎？「這張最吸引人的地方」是否指出具體的光、色、構圖、動作或神情（不是自然、安靜、電影感、風景漂亮）？ | 說不出具體吸引點 → 不進入 prompt。 |
-| 構圖核算 | 景別、占比、預期配置（頭頂＋人物＋腳下＝100%）、焦段、距離、相機高度與地平線是否互相一致？是否不低於最低安全邊界？（§6 數字是全片幅等效的設計參考） | 數字互相矛盾或低於安全邊界 → 重寫。 |
+| 構圖核算 | 景別、占比、預期配置（頭頂＋人物＋腳下＝100%）、焦段、距離、相機高度與地平線是否互相一致？是否不低於最低安全邊界？（§6 數字是全片幅等效的設計參考；地平線與水平地面的消失點可推算，對岸線、樹線、坡道只能估計） | 數字互相矛盾或低於安全邊界 → 重寫。 |
 | 服裝情境 | 衣服與鞋在這張的季節、地點、活動與配色裡好不好看、協不協調？鞋有寫嗎？ | 在畫面裡看起來不合 → 依這張調整（不是一律換長裙、加外套）。 |
 | 姿態 | 一張一個主要動作嗎？在這張是否好看、自然？有沒有為了顯得自然而刻意加的小動作？ | 多重動作或刻意小動作 → 精簡。 |
 | 尺度與接觸 | 有大型可接觸道具嗎？必要嗎？尺寸與接觸方式寫清楚了嗎？ | 不必要的大型道具 → 移除。 |
-| 光線 | 主光有可信來源嗎？補光的方向與色溫和主光一致嗎？臉的亮度和環境相符嗎？ | 臉像另外打光（暖臉貼冷背景）→ 改寫。 |
+| 光線 | 主光有可信來源嗎？人物與環境的光向、亮暗、色彩、陰影、接觸與反射是否可信？（補光可以用，不要求同源或同色溫；同色溫也不保證融合） | 人物像浮貼在環境上（例如暖臉貼冷背景）→ 改寫。 |
 | 節奏 | 和同一本相鄰月份比，景別、光線、視線與動作是否重複？ | 相鄰重複 → 調整其中一項。 |
 | prompt 用語 | 沒有百分比、沒有身材展示目的句、沒有「fashion editorial」、沒有器材名詞、沒有「unretouched／unposed／available light」；場景寫明素面無字；結尾是寫真集收尾句？ | 有 → 改寫。 |
 
@@ -1469,7 +1484,7 @@ A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small
 | 順序 | 要看的事 | 不通過時 |
 |---|---|---|
 | 1. 第一眼 | 縮小到手機一半大小看整張：好看嗎？像寫真集的一頁，還是商品照、形象照、合成照？ | 不好看或像商品／合成 → 退回，後面不必再看。 |
-| 2. 人景融合 | 光向、陰影、色溫、景深是否一致？補光是否和主光同源？人物邊緣有沒有去背感？ | 人像另外打光或貼上去 → 退回。 |
+| 2. 人景融合 | 人物與環境的光向、亮暗、色彩、陰影、接觸與反射是否可信？景深是否一致？人物邊緣有沒有去背、浮貼感？（補光本身不是退回理由） | 人像另外打光或貼上去 → 退回。 |
 | 3. 比例與透視 | 人與物件、建築的尺度合理嗎？地平線與相機高度一致嗎？接觸點（坐、靠、扶、站）真實嗎？ | 尺度或透視錯 → 退回。 |
 | 4. 姿態與神情 | 自然、有動機嗎？是不是僵硬、做作或扭曲？成年角色的神情是否成熟？ | 做作、僵硬 → 退回。 |
 | 5. 構圖與套框 | 主體位置、留白、套框後頭頂與腳下是否不低於最低安全邊界？ | 套框切到臉、髮頂或腳 → 退回或記錄裁切方案。 |
@@ -1492,8 +1507,70 @@ v1 的 D1–D5 是提案，主管沒有代 Penny 採用。本版逐項確認是�
 
 **尚待 Penny 決定：無。** 照片生成後仍由 Penny 看圖決定接受或修改；下一次生成的範圍與費用另行確認。
 
-## 9. 本輪範圍
+## 9. 下一步單張試拍計畫（提案，不執行）：V-somi-oh
 
+**狀態：** 提案，未執行；本輪沒有呼叫任何生成或報價工具。下一次生成的範圍與費用待主管與 Penny 確認。
+
+**為什麼最適合驗證新的寫真方向：**
+
+1. Penny 對 Somi 的退回重點（人物過大、動作突兀、人景像合成、色彩對比不協調）正是第一批最核心的失敗；這張直接檢驗新企劃能不能修正它們。
+2. 同一角色、同一個 Soul、同一個場景方向（Penny 指定保留雪街），可以和 R5 那張直接對照；差異主要來自企劃，而不是換了題材。
+3. 光線整合最難：燈籠是主光、藍調天光是環境光，兩者要同時落在人和街上。這張通過，「人景共用可信的光」這條原則才有說服力。
+4. 同時檢驗人物縮小後的辨識度（成品 64–72 mm、頭部約 9 mm）、單一動作、色彩調整（深蔓越莓紅）。
+5. 直式 3:4 放進 120×160 mm 不裁切，套框判讀單純。
+
+**能驗證：**
+
+- 人物縮小到約 40–45% 畫高後，成品尺寸下的辨識度與吸引力
+- 最近燈籠＋藍調天光能否讓人與街共用光，不再暖臉貼冷背景
+- 深蔓越莓紅大衣在冷暖夜色中的色彩協調
+- 單一動作（走路抬頭看雪）是否自然
+- 燈籠、店面素面無字的控制
+- prompt 的景別、相機與構圖描述能否大致落實（只作觀察，不視為精準控制）
+
+**不能代表：**
+
+- 橫式 16:9 構圖與上下 4 mm 裁切帶（H-Jia、H-Yerin 等）
+- 室內燈光下的臉部（V-Tammy）與硬光光影（V-Rin）
+- 白天高調、強光或水邊反光的場景
+- 坐姿、倚靠家具或道具的接觸點，以及近景
+- 其他角色 Soul 的身分一致性與暖季服裝
+- 一張結果不代表其餘 22 套；通過只表示這個方向可以續做下一張
+
+**模型、設定與張數：**
+
+| 項目 | 內容 |
+|---|---|
+| 模型 | soul_2（Higgsfield Soul V2；R5 回傳 text2image_soul_v2） |
+| Soul | somi-oh 既有 Soul（與 R5 同一個；ID 只在 profile.json 與私有執行紀錄，不公開） |
+| 品質／比例 | 2k／3:4 |
+| 張數／請求 | count 1、1 次請求（不自動重試） |
+| unlim／參考圖／style | 否／無／不傳 |
+| 存放 | 不指定（偏好 auto_create_project false） |
+| prompt | CAL_23 §6 V-Somi prompt 草稿（v3），主管覆核後的版本逐字送出 |
+| 預期輸出 | R5 同設定實際輸出 1536×2048 px；放進 120×160 mm 約 325 ppi（工作目標 300 ppi）。 |
+
+**費用資訊：** R5 同模型、同設定（soul_2、2k、3:4、count 1）的報價 0.12 與實扣 0.12（依時窗及唯一任務推定），見 data/cal_m4_batch1_run.json。 建議授權上限 0.12 credits。價格可能變動；本輪未呼叫任何報價或生成工具。送出前只在確認「不扣款、不建立任務」時才做報價預檢；若報價工具會產生付費或生成，不呼叫，改以授權上限 0.12 控管，超出即停止。工具沒有強制扣款上限，不宣稱平台保證。
+
+**生成後流程：**
+
+1. 只送 1 次請求；失敗、逾時或結果不明先查原任務，不自動重試、不補送。
+2. 執行者依 CAL_23 §7.2 審美自查：先看整張（第一眼、人景融合、比例與透視、姿態與神情），任一項失敗即判退回；再看套框、技術細節與 ppi。
+3. 送主管實際看圖覆核（不是只讀自查表）。
+4. 最後由 Penny 看圖決定接受或修改；執行者自查與主管覆核都不等於 Penny 接受。
+
+**其他候選為什麼不先試：**
+
+- H-Jia：能驗證橫式與小人物，但光線整合（餘暉均勻天光）比 Somi 容易，對「人景像合成」的檢驗較弱；適合作第二張。
+- V-Tammy：室內燈光與姿態可驗證，但場景與造型全換，和 R5 的對照性較低。
+- V-Rin：硬光光影難度高，失敗時較難分辨是企劃還是硬光本身的風險。
+- H-Yerin：移除球車後風險最低，但能驗證的新方向最少。
+
+**之後：** 通過後再決定下一張；建議第二張用 H-Jia，驗證橫式構圖、裁切帶與小人物。不一次安排 5 張。
+
+## 10. 本輪範圍
+
+- 單張試拍只提計畫，沒有呼叫任何生成或報價工具；不一次安排 5 張。
 - 只做分析、企劃重建與送審：生成 0、修圖 0、訓練 0、付費操作 0、部署 0；不啟動下一批、不改已接受的 V-Iris、不合併 main。
 - 人物 canon、身分、已定案月份都不改；第一批 prompt 的身分句逐字沿用 CAL_21。
 - 舊照片、舊企劃、v1 提案、測試與扣款證據保留，不覆蓋、不刪除。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。
