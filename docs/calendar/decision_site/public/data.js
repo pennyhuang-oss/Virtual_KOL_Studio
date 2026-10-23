@@ -6720,7 +6720,7 @@ window.CAL_DATA = {
     },
     {
      "kind": "Owner 決定",
-     "new": "已生成 6、已接受 1（V-iris-chen）、退回 5、其餘 23 套待製作；24 套重審提案待主管覆核",
+     "new": "24 套＝已接受 1（V-iris-chen）＋退回待重規劃 5＋尚未生成 18；待完成合計 23；累計已生成 6 張（另計）；24 套重審提案待主管覆核",
      "old": "{\"sets_final\": 24, \"generated\": 6, \"accepted\": 1, \"pending_owner_review\": 5, \"remaining\": 18, \"accepted_sets\": [\"V-iris-chen\"], \"pending_sets\": [\"V-tammy-chou\", \"V-rin-ayase\", \"V-somi-oh\", \"H-yerin-han\", \"H-jia-seo\"], \"batch1\": \"generated-pending-owner-review\"}",
      "where": "status.production"
     },
@@ -6735,13 +6735,26 @@ window.CAL_DATA = {
      "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審中（提案待主管覆核）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
      "old": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用；M-4 R5 依授權生成第一批 5 位各 1 張（放在目前檢視頁，待 Penny 看圖）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
      "where": "meta.status"
+    },
+    {
+     "kind": "欄位定義（M-4 R6 REVISE）",
+     "new": "sets_total 24＝accepted 1＋rejected_replan 5＋not_generated 18；to_complete 23（待完成合計）；generated_cumulative 6（另計）；數值不變，只改欄位與用語",
+     "old": "generated 6／accepted 1／owner_rejected 5／remaining 23（「其餘 23」與已接受、退回並列，分類重疊）",
+     "where": "status.production"
     }
    ],
    "doc": "docs/calendar/CAL_23_M4_R6_REPLAN.md",
    "from_commit": "4bc31d35ca2981c3d48583ddc9ebbd770f6176af",
    "owner": "docs/calendar/data/cal_m4_owner_r6.json",
+   "progress_line": "24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。",
    "replan": "docs/calendar/data/cal_m4_r6_replan.json",
-   "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：已生成 6、已接受 1、退回 5、其餘 23 套待製作。企劃版本升為 shoot-plan-v12。"
+   "revise": {
+    "note": "主管 M-4 R6 覆核 REVISE（維持 R6）：重審規則與重建稿修訂為 replan-r6-v2；24 套原文仍不改，待主管覆核。",
+    "replan_version": "replan-r6-v2",
+    "status": "proposed-pending-supervisor-review",
+    "supervisor": "docs/calendar/data/cal_m4_supervisor_r6.json"
+   },
+   "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。企劃版本升為 shoot-plan-v12。"
   },
   "meta": {
    "aaliya_sources": {
@@ -7530,7 +7543,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "92ee6791a6125a99e343453557f09b7a0ed28dea",
+  "plan_blob": "f0dd0da827ce6ef4f439209db4a0f2cd8d89dcb5",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -8416,7 +8429,7 @@ window.CAL_DATA = {
   "revision": {
    "from_commit": "4bc31d35ca2981c3d48583ddc9ebbd770f6176af",
    "from_version": "shoot-plan-v11",
-   "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：已生成 6、已接受 1、退回 5、其餘 23 套待製作。企劃版本升為 shoot-plan-v12。"
+   "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。企劃版本升為 shoot-plan-v12。"
   },
   "round": "M-4 R6",
   "sets": [
@@ -12846,9 +12859,18 @@ window.CAL_DATA = {
      "V-iris-chen"
     ],
     "batch1": "owner-rejected-r6",
-    "generated": 6,
-    "owner_rejected": 5,
+    "definitions": {
+     "accepted": "已生成且 Penny 已接受（V-iris-chen）",
+     "generated_cumulative": "累計已生成張數＝accepted＋rejected_replan（另計，不與上列相加）",
+     "not_generated": "尚未生成的套數",
+     "rejected_replan": "已生成、Penny 退回，待重規劃（第一批 5 張）",
+     "sets_total": "24 套月面＝accepted＋rejected_replan＋not_generated（三類互斥）",
+     "to_complete": "待完成合計＝rejected_replan＋not_generated（不是互斥分類的一類）"
+    },
+    "generated_cumulative": 6,
+    "not_generated": 18,
     "pending_owner_review": 0,
+    "rejected_replan": 5,
     "rejected_sets": [
      "V-tammy-chou",
      "V-rin-ayase",
@@ -12856,9 +12878,9 @@ window.CAL_DATA = {
      "H-yerin-han",
      "H-jia-seo"
     ],
-    "remaining": 23,
     "review_r6": "proposed-pending-supervisor-review",
-    "sets_final": 24
+    "sets_total": 24,
+    "to_complete": 23
    },
    "revised": [],
    "supervisor_verified": [

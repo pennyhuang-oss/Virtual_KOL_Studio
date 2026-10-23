@@ -28,12 +28,21 @@ BATCH = os.path.join(CAL, 'data', 'cal_m4_batch1_prep.json')
 OUT22 = os.path.join(CAL, 'CAL_22_M4_BATCH1_RESULTS.md')
 RUN = os.path.join(CAL, 'data', 'cal_m4_batch1_run.json')
 AUTH = os.path.join(CAL, 'data', 'cal_m4_auth_r5.json')
-FIRST_LINE = 'TASK-CAL-001／M-4／R6｜全套寫真企劃重審｜送審報告'
+FIRST_LINE = 'TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛盾｜送審報告'
 FIRST_20 = 'TASK-CAL-001／M-4／R4｜V-Iris 首試準備、首試前核查、單張首試與定案（Penny 接受）'
 FIRST_19 = 'TASK-CAL-001／M-3／R2｜24套雙款獨立寫真企劃｜送審報告'   # R2 的決策紀錄，標題不改
 ORIGIN_ZH = {'new': '新企劃', 'accepted-v2-main': 'Penny 已接受的 v2 主方向', 'accepted-v2-alt': 'Penny 採用的 v2 替代方向'}
 BOOK_ZH = {'H': '橫式款', 'V': '直式款'}
 ST_ZH = {'accepted': '已接受', 'owner_revised': '依owner指定修訂，待主管核對落實', 'supervisor_verified': '依owner指示修訂，主管覆核通過'}
+
+
+def progress(d):
+    """24 套進度：三類互斥（已接受＋退回待重規劃＋尚未生成）；待完成合計與累計已生成另計。"""
+    PR = d['status']['production']
+    assert PR['accepted'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24
+    assert PR['to_complete'] == PR['rejected_replan'] + PR['not_generated'] and PR['generated_cumulative'] == PR['accepted'] + PR['rejected_replan']
+    return (f"{PR['sets_total']} 套＝已接受 {PR['accepted']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；"
+            f"待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計）。")
 
 
 def cell(s):
@@ -74,7 +83,7 @@ def render18(d):
          f"> M-4 R2 狀態（歷史）：{d['m4_prep']['r2']['status']}{d['m4_prep']['r2']['verdict']}",
          f"> M-4 R4 狀態（歷史）：{d['m4_prep']['r4']['status']}（{d['m4_prep']['r4']['supersedes']}）；首試紀錄見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。",
          "> M-4 R5 狀態（歷史）：第一批 5 位各生成 1 張並上線審圖；生成準備見 `CAL_21_M4_BATCH1_PREP.md`，結果與扣款見 `CAL_22_M4_BATCH1_RESULTS.md`。",
-         f"> **M-4 R6 狀態：{d['m4r6']['batch1_line']} 已生成 {d['status']['production']['generated']} 張、已接受 {d['status']['production']['accepted']} 張、退回 {d['status']['production']['owner_rejected']} 張、其餘 {d['status']['production']['remaining']} 套待製作。以下 24 套是採用重審提案前的原文。**", '',
+         f"> **M-4 R6 狀態：{d['m4r6']['batch1_line']} {progress(d)}以下 24 套是採用重審提案前的原文。**", '',
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],
@@ -380,7 +389,7 @@ def render21(d, B):
          f"> 資料檔：`data/cal_m4_batch1_prep.json`（{B['version']}，{B['written_on']}）與 `data/cal_m3_shoot_plan.json`（{d['version']}）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準；5 份 prompt 由產生器核對「已接受企劃原文＋下列光線句改寫」後才排版。",
          f"> **本輪生成 {B['counts']['generated']}、修圖 {B['counts']['retouched']}、訓練 {B['counts']['trainings']}、扣 credits {B['counts']['credits']}；唯讀查詢 {B['counts']['readonly_queries']} 次（含不扣款報價預檢 {B['counts']['quote_prechecks']} 次）。**", '',
          '## 0. 依據與範圍', '', f"- {B['basis']['owner']}", f"- {B['basis']['not_authorized']}",
-         f"- V-Iris：{d['m4_prep']['r4']['status']}（M-4 R4；{d['m4_prep']['r4']['supersedes']}）。目前進度（M-4 R5）：24 套定稿、已生成 {d['status']['production']['generated']}、已接受 {d['status']['production']['accepted']}、待 Penny 看圖 {d['status']['production']['pending_owner_review']}、其餘 {d['status']['production']['remaining']} 套待製作。", '',
+         f"- V-Iris：{d['m4_prep']['r4']['status']}（M-4 R4；{d['m4_prep']['r4']['supersedes']}）。目前進度：{progress(d)}", '',
          '## 1. 5 位總覽（依送出順序）', '']
     L += table(['#', '角色', '套別', '月份', '比例', '景別（企劃）', '推薦理由', '選這一款的理由'],
                [[x['order'], x['name'], x['id'], f"{x['month']} 月", x['ratio'], x['cam_line'], x['why_pick'], x['why_ratio']] for x in X])

@@ -6,7 +6,7 @@
  "revision": {
   "from_version": "shoot-plan-v11",
   "from_commit": "4bc31d35ca2981c3d48583ddc9ebbd770f6176af",
-  "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：已生成 6、已接受 1、退回 5、其餘 23 套待製作。企劃版本升為 shoot-plan-v12。"
+  "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。企劃版本升為 shoot-plan-v12。"
  },
  "meta": {
   "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審",
@@ -455,12 +455,13 @@
   "iris_first": "accepted-by-owner",
   "owner_decisions_open": 0,
   "production": {
-   "sets_final": 24,
-   "generated": 6,
+   "sets_total": 24,
    "accepted": 1,
-   "owner_rejected": 5,
+   "rejected_replan": 5,
+   "not_generated": 18,
+   "to_complete": 23,
+   "generated_cumulative": 6,
    "pending_owner_review": 0,
-   "remaining": 23,
    "accepted_sets": [
     "V-iris-chen"
    ],
@@ -472,7 +473,15 @@
     "H-jia-seo"
    ],
    "batch1": "owner-rejected-r6",
-   "review_r6": "proposed-pending-supervisor-review"
+   "review_r6": "proposed-pending-supervisor-review",
+   "definitions": {
+    "sets_total": "24 套月面＝accepted＋rejected_replan＋not_generated（三類互斥）",
+    "accepted": "已生成且 Penny 已接受（V-iris-chen）",
+    "rejected_replan": "已生成、Penny 退回，待重規劃（第一批 5 張）",
+    "not_generated": "尚未生成的套數",
+    "to_complete": "待完成合計＝rejected_replan＋not_generated（不是互斥分類的一類）",
+    "generated_cumulative": "累計已生成張數＝accepted＋rejected_replan（另計，不與上列相加）"
+   }
   }
  },
  "accepted_notes": {
@@ -7975,7 +7984,7 @@
  },
  "m4r6": {
   "from_commit": "4bc31d35ca2981c3d48583ddc9ebbd770f6176af",
-  "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：已生成 6、已接受 1、退回 5、其餘 23 套待製作。企劃版本升為 shoot-plan-v12。",
+  "summary": "依 M-4 R6（Penny 決定，主管轉交）：第一批 5 張全部「想修改」、接受 0，逐張記為「Penny 退回／待重規劃」；V-Iris 已接受保留。M-4 R5 記為「生成與部署完成；第一批照片 Owner 全數退回」，不是品質驗收通過。24 套企劃全面重審（執行者提案見 data/cal_m4_r6_replan.json 與 CAL_23，待主管覆核）；採用前 24 套原文不改。進度：24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。企劃版本升為 shoot-plan-v12。",
   "owner": "docs/calendar/data/cal_m4_owner_r6.json",
   "replan": "docs/calendar/data/cal_m4_r6_replan.json",
   "doc": "docs/calendar/CAL_23_M4_R6_REPLAN.md",
@@ -7991,7 +8000,7 @@
     "kind": "Owner 決定",
     "where": "status.production",
     "old": "{\"sets_final\": 24, \"generated\": 6, \"accepted\": 1, \"pending_owner_review\": 5, \"remaining\": 18, \"accepted_sets\": [\"V-iris-chen\"], \"pending_sets\": [\"V-tammy-chou\", \"V-rin-ayase\", \"V-somi-oh\", \"H-yerin-han\", \"H-jia-seo\"], \"batch1\": \"generated-pending-owner-review\"}",
-    "new": "已生成 6、已接受 1（V-iris-chen）、退回 5、其餘 23 套待製作；24 套重審提案待主管覆核"
+    "new": "24 套＝已接受 1（V-iris-chen）＋退回待重規劃 5＋尚未生成 18；待完成合計 23；累計已生成 6 張（另計）；24 套重審提案待主管覆核"
    },
    {
     "kind": "狀態文字",
@@ -8004,7 +8013,20 @@
     "where": "meta.status",
     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 依授權生成 V-Iris 首試 1 張，M-4 R4 Penny 接受、直接採用；M-4 R5 依授權生成第一批 5 位各 1 張（放在目前檢視頁，待 Penny 看圖）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審中（提案待主管覆核）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID"
+   },
+   {
+    "kind": "欄位定義（M-4 R6 REVISE）",
+    "where": "status.production",
+    "old": "generated 6／accepted 1／owner_rejected 5／remaining 23（「其餘 23」與已接受、退回並列，分類重疊）",
+    "new": "sets_total 24＝accepted 1＋rejected_replan 5＋not_generated 18；to_complete 23（待完成合計）；generated_cumulative 6（另計）；數值不變，只改欄位與用語"
    }
-  ]
+  ],
+  "revise": {
+   "supervisor": "docs/calendar/data/cal_m4_supervisor_r6.json",
+   "replan_version": "replan-r6-v2",
+   "status": "proposed-pending-supervisor-review",
+   "note": "主管 M-4 R6 覆核 REVISE（維持 R6）：重審規則與重建稿修訂為 replan-r6-v2；24 套原文仍不改，待主管覆核。"
+  },
+  "progress_line": "24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。"
  }
 }
