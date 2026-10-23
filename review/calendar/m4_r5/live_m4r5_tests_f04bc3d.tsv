@@ -1,0 +1,80 @@
+PASS	主管 R5 指令逐字保存；範圍 5 套、每套 1 次、共最多 5 次、額度 0.60	
+PASS	私有執行紀錄：5 次提交意圖、5 次送出（各一個工作 ID、不重複）、5 次終態 completed，依名單順序；送出都在提交意圖之後	
+PASS	重啟處理有紀錄：第 5 張送出前查過沒有重複提交	
+PASS	送出 prompt：V-Rin＝CAL_21 原文只換授權的景別句；其餘 4 份逐字等於 CAL_21；sha256 與提交意圖相同	
+PASS	設定：soul_2、2k、count 1、use_unlim false、無參考圖、不傳 style_id；比例 3:4×3、16:9×2	
+PASS	原圖 5 張：sha256 與紀錄相同、像素 1536×2048×3／2048×1152×2、私有原檔保留工作 ID 文字區塊	
+PASS	扣款：每張精確報價 0.12、時窗內 Soul V2 −0.12 一筆、無退款；合計 0.60 ≤ 額度 0.60；歸屬「依時窗及唯一任務推定」	
+PASS	15 分鐘複查有紀錄：本批無遲到扣款或退款；之後另一筆 Soul V2 判定不屬本批（依時間與任務 ID）	
+PASS	結果資料檔不含工作 ID 或 Soul ID	
+PASS	驗收：5 張都記錄身分髮型、身材、服裝、手腳、表情視線、場景、光線、構圖、質感與主管指定重點；不寫量測三圍或罩杯	
+PASS	ppi：直式 325、橫式 271 標「低於 300 工作目標」，不重生、不放大	
+PASS	企劃 shoot-plan-v11（M-4 R5）：已生成 6、已接受 1、待 Penny 看圖 5、其餘 18；累計 credits 0.72	
+PASS	24 套企劃、月份、M-4 R2/R4 紀錄與 b5cbe1c 相同	
+PASS	既有證據、R4 準備資料、owner 紀錄、CAL_19 不刪不改	
+PASS	CAL_22：第一行 R5 報告；5 份最終送出文字逐字在文件；V-Rin 修改前後；逐筆扣款與 15 分鐘複查；ppi 271 低於目標	
+PASS	CAL_21 保留 R4 準備內容，標「M-4 R5 已依本文件生成」	
+PASS	公開資料夾沒有任何 Soul ID 或工作 ID（含去連字號寫法；6 個 Soul＋首試與第一批工作 ID）	
+PASS	目前檢視頁資料沒有 prompt、交易、repo 路徑或 ID	
+PASS	公開原圖 5 張：沒有文字中繼資料區塊，像素與私有原檔相同（builder --check 已逐位元組重現）	
+PASS	公開頁面沒有交易原始資料（時間、他人交易列）	
+PASS	[desktop] 主頁：5 位導覽＋一位的照片、回饋、看圖提醒、套框、本批回饋、已接受紀錄、歷史連結；只有 2 張圖（照片與套框），沒有網格或表格	高 2413px（2.7 屏）
+PASS	[desktop] 進度一行：已生成 6、已接受 1、待你看 5、其餘 18	
+PASS	[desktop] 導覽 5 位依序（Tammy、Rin、Somi、Yerin、Jia），預設第 1 位、全部「未回覆」	
+PASS	[desktop] 主頁沒有 prompt、費用或交易資料	
+PASS	[desktop] 新頁面沒有寫入任何回饋鍵（未回覆不建立資料）	
+PASS	[desktop] 照片在第一屏	top 257
+PASS	[desktop] 切到 Rin：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #V-rin-ayase	
+PASS	[desktop] 切到 Somi：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #V-somi-oh	
+PASS	[desktop] 切到 Yerin：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #H-yerin-han	
+PASS	[desktop] 切到 Jia：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #H-jia-seo	
+PASS	[desktop] 切到 Tammy：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #V-tammy-chou	
+PASS	[desktop] Tammy 大圖→原尺寸（原圖 1536 px 寬），Esc 關閉	
+PASS	[desktop] Jia 大圖→原尺寸（原圖 2048 px 寬），Esc 關閉	
+PASS	[desktop] 套框預覽（Jia 橫式 1304 px）可放大、關閉；標「不是印刷核准」；註明 271 ppi 低於工作目標	
+PASS	[desktop] 下載 Yerin 原圖：H-yerin-han_M4R5_2048x1152.png、與發佈檔相同、沒有文字區塊與工作 ID	
+PASS	[desktop] 回饋存成一張一個鍵：Tammy 接受、Rin 想修改＋備註、Somi 只有備註、Yerin 與 Jia 沒有資料	
+PASS	[desktop] 導覽狀態即時更新：接受／想修改／未回覆×3（只寫備註仍是未回覆）	
+PASS	[desktop] 只寫備註的那張註明「目前不算接受」	
+PASS	[desktop] 重新載入後停在同一位（Somi）、回饋保留	
+PASS	[desktop] 「複製本批回饋」：剪貼簿內容＝畫面文字；5 張逐張列出，未回覆標「不算接受」、合計 1／1／3	已複製。
+PASS	[desktop] 摘要：已回覆 2／5	
+PASS	[desktop] 已接受紀錄：V-Iris 已接受（Penny，M-4 R4）、不需回覆；沒有回饋選項	
+PASS	[desktop] Iris 看大圖與下載原圖（V-iris-chen_M4_accepted_1536x2048.png）	
+PASS	[desktop] 主頁沒有水平溢出	0
+PASS	[desktop] 互動後舊的三筆 localStorage（企劃回饋、素材選擇、R3 回饋）位元組不變；新增的只有本批鍵	
+PASS	[desktop] 歷史頁：R3 回饋仍只讀顯示；狀態列寫第一批 5 位已生成、待 Penny 看圖；24 套企劃卡仍在	
+PASS	[desktop] 歷史頁沒有水平溢出（全部展開）	0
+PASS	[desktop] 素材頁：Iris 的選擇照舊	
+PASS	[desktop] 走完三頁後舊資料仍不變	
+PASS	[desktop] 沒有 JS 錯誤	
+PASS	[mobile390] 主頁：5 位導覽＋一位的照片、回饋、看圖提醒、套框、本批回饋、已接受紀錄、歷史連結；只有 2 張圖（照片與套框），沒有網格或表格	高 3308px（3.9 屏）
+PASS	[mobile390] 進度一行：已生成 6、已接受 1、待你看 5、其餘 18	
+PASS	[mobile390] 導覽 5 位依序（Tammy、Rin、Somi、Yerin、Jia），預設第 1 位、全部「未回覆」	
+PASS	[mobile390] 主頁沒有 prompt、費用或交易資料	
+PASS	[mobile390] 新頁面沒有寫入任何回饋鍵（未回覆不建立資料）	
+PASS	[mobile390] 照片在第一屏	top 407
+PASS	[mobile390] 切到 Rin：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #V-rin-ayase	
+PASS	[mobile390] 切到 Somi：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #V-somi-oh	
+PASS	[mobile390] 切到 Yerin：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #H-yerin-han	
+PASS	[mobile390] 切到 Jia：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #H-jia-seo	
+PASS	[mobile390] 切到 Tammy：只顯示這一位（2 張圖）、標題、套框、看圖提醒、下載檔名都對；網址記住 #V-tammy-chou	
+PASS	[mobile390] Tammy 大圖→原尺寸（原圖 1536 px 寬），Esc 關閉	
+PASS	[mobile390] Jia 大圖→原尺寸（原圖 2048 px 寬），Esc 關閉	
+PASS	[mobile390] 套框預覽（Jia 橫式 1304 px）可放大、關閉；標「不是印刷核准」；註明 271 ppi 低於工作目標	
+PASS	[mobile390] 下載 Yerin 原圖：H-yerin-han_M4R5_2048x1152.png、與發佈檔相同、沒有文字區塊與工作 ID	
+PASS	[mobile390] 回饋存成一張一個鍵：Tammy 接受、Rin 想修改＋備註、Somi 只有備註、Yerin 與 Jia 沒有資料	
+PASS	[mobile390] 導覽狀態即時更新：接受／想修改／未回覆×3（只寫備註仍是未回覆）	
+PASS	[mobile390] 只寫備註的那張註明「目前不算接受」	
+PASS	[mobile390] 重新載入後停在同一位（Somi）、回饋保留	
+PASS	[mobile390] 「複製本批回饋」：剪貼簿內容＝畫面文字；5 張逐張列出，未回覆標「不算接受」、合計 1／1／3	已複製。
+PASS	[mobile390] 摘要：已回覆 2／5	
+PASS	[mobile390] 已接受紀錄：V-Iris 已接受（Penny，M-4 R4）、不需回覆；沒有回饋選項	
+PASS	[mobile390] Iris 看大圖與下載原圖（V-iris-chen_M4_accepted_1536x2048.png）	
+PASS	[mobile390] 主頁沒有水平溢出	0
+PASS	[mobile390] 互動後舊的三筆 localStorage（企劃回饋、素材選擇、R3 回饋）位元組不變；新增的只有本批鍵	
+PASS	[mobile390] 歷史頁：R3 回饋仍只讀顯示；狀態列寫第一批 5 位已生成、待 Penny 看圖；24 套企劃卡仍在	
+PASS	[mobile390] 歷史頁沒有水平溢出（全部展開）	0
+PASS	[mobile390] 素材頁：Iris 的選擇照舊	
+PASS	[mobile390] 走完三頁後舊資料仍不變	
+PASS	[mobile390] 沒有 JS 錯誤	

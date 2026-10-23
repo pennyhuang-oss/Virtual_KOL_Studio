@@ -2,8 +2,8 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 
 # M-4 R5 送審紀錄
 
-- **選片頁網址**：https://cal2027-decision-production.up.railway.app/shoot.html（**尚未更新**：Railway 平台暫停建置，線上仍是上一版 `b5cbe1c`，見 §6）
-- **待部署成果 SHA**：`f04bc3d06c28ece44983f2f7ddd740021c33aa33`（選片頁；照片固定成果 `a95e52feb0858f28de7ffbd6a105215d8f961f87`；原圖與私有紀錄 `b7784f697883b99c28aaf85b9c36c2c3b3415415`；基準：成果 `b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b`、送審 `d09975652a751dd17a45d2aaf5c83b4dc4b18f5c`）
+- **選片頁網址**：https://cal2027-decision-production.up.railway.app/shoot.html（**已上線**：2026-10-23 13:26 UTC 部署成功，線上 page-commit＝`f04bc3d`，見 §6）
+- **部署成果 SHA**：`f04bc3d06c28ece44983f2f7ddd740021c33aa33`（選片頁；照片固定成果 `a95e52feb0858f28de7ffbd6a105215d8f961f87`；原圖與私有紀錄 `b7784f697883b99c28aaf85b9c36c2c3b3415415`；基準：成果 `b5cbe1c563df4a6252cc842ceeaccc2d358e2e6b`、送審 `d09975652a751dd17a45d2aaf5c83b4dc4b18f5c`）
 - **集中紀錄**：`docs/calendar/CAL_22_M4_BATCH1_RESULTS.md`（最終送出文字、差異、驗收、像素與 ppi、逐筆扣款）。資料：`docs/calendar/data/cal_m4_batch1_run.json`；主管指令逐字：`docs/calendar/data/cal_m4_auth_r5.json`；私有執行紀錄（含工作 ID）：`review/calendar/m4_r5/execution_log.json`。
 - 以下是執行者自測，不是主管覆核；部署不等於核准；照片接受與否由 Penny 在審圖頁決定。
 
@@ -62,7 +62,9 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 
 ## 6. 部署與驗證
 
-**狀態：未部署成功。** 只更新 `cal2027-decision`，5 次部署呼叫都被 Railway 拒絕，錯誤訊息相同：`Deploys have been paused temporarily`。
+**狀態：已部署成功（2026-10-23）。** deployment `3bfa145c-3276-47a4-86c3-548aa8ee04a5`，SUCCESS，來源 `f04bc3d06c28ece44983f2f7ddd740021c33aa33`，線上 page-commit 相符。之前 10-21～10-22 的 7 次部署都因 Railway 平台事故被拒（下表）。
+
+（歷史）只更新 `cal2027-decision`，5 次部署呼叫都被 Railway 拒絕，錯誤訊息相同：`Deploys have been paused temporarily`。
 
 | # | 時間（UTC，約） | 部署來源 | 結果 |
 |---|---|---|---|
@@ -73,6 +75,7 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 | 5 | 09:01 | `f04bc3d` | 同上（之前有限等待 20 分鐘，每 2 分鐘看一次狀態頁，仍未恢復） |
 | 6 | 10-22 04:58 | `f04bc3d` | 同上。部署前先查：沒有進行中或新的部署（最新仍是 8116b9c3 SUCCESS／b5cbe1c、pendingWork 空）；連接器已重新連上同一帳號（pennyhuang-oss）與同一 project／service。被拒後停止重試 |
 | 7 | 10-22 06:50 | `f04bc3d` | 拒絕，錯誤訊息改為：`Deploys have been paused due to an upstream issue`。部署前先查：帳號 pennyhuang-oss、同一 project／service；沒有進行中或新的部署（最新仍是 8116b9c3 SUCCESS／b5cbe1c、pendingWork 空）；線上 page-commit＝b5cbe1c。狀態頁 06:29 UTC 公告 Pro 與 Enterprise 已可建置，但本次仍被拒；工作區類型為 personal，工具查不到方案別。被拒後停止重試，沒有背景監看 |
+| 8 | 10-23 13:13 | `f04bc3d` | **成功**。部署前先查：沒有進行中或新的部署（最新仍是 8116b9c3 SUCCESS／b5cbe1c、pendingWork 空），線上＝b5cbe1c。建立 deployment `3bfa145c-3276-47a4-86c3-548aa8ee04a5`（13:13:20 建立，BUILDING 約 13 分鐘），13:26:41 SUCCESS；舊部署 8116b9c3 隨後轉為 REMOVED。只部署這一次 |
 
 - 平台狀態（10-22 04:57 UTC）：事故升級為「Railway Platform Outage — Major Outage」；Railway 依安全揭露作廢所有 API token（04:17）；建置只先開放 Enterprise（04:00 起），其他方案分批恢復中，04:52 公告「持續為其他方案恢復建置，05:30 UTC 前再更新」。
 - 平台狀態（10-21）：status.railway.com「Builds are temporarily paused — Partial Outage」，Builds（US West、EU West、Southeast Asia、US East）、API、Support 都列為受影響；07:24 UTC 開始調查，08:28 UTC 更新「後端也有問題，仍在調查」。不是本專案設定或程式錯誤。
@@ -89,6 +92,20 @@ TASK-CAL-001／M-4／R5｜Railway 選片與回饋頁部署收尾｜送審報告
 2. 等線上 `shoot.html` 的 page-commit 變成 `f04bc3d`，`list-deployments` 記下 deployment ID 與狀態。
 3. 線上驗收：5 張照片實際載入（naturalWidth）、放大與原尺寸、接受／想修改與備註、重新整理保留、複製內容與畫面一致、桌機與 390px 無水平溢出、舊資料不變（同一測試設定檔）、公開檔無私有 ID。
 4. 更新本節與送審報告。
+
+### 6a. 線上驗收（2026-10-23，Claude 自測；不是主管獨立覆核，也不是 Penny 接受）
+
+| 項目 | 結果 | 證據 |
+|---|---|---|
+| 部署狀態與版本 | deployment `3bfa145c-3276-47a4-86c3-548aa8ee04a5` SUCCESS（13:26:41 UTC）；來源 `f04bc3d`；5 個 HTML 頁的 page-commit 都是 `f04bc3d06c28ece44983f2f7ddd740021c33aa33` | `m4_r5/live_bytes_check_f04bc3d.txt` |
+| 線上檔案 | 686 個檔與本機（同一版本）sha256 相同，不符 0 | 同上 |
+| 線上定向驗收（獨立測試瀏覽器，不是 Penny 的瀏覽器） | 80/80 PASS：5 位導覽（姓名、月份、直橫）；一次一位、5 張實際載入、完整不裁切；放大、原尺寸、下載；接受／想修改、備註、未回覆狀態；重新整理保留；複製內容與畫面一致（任務、頁面版本 f04bc3d、照片版本、已回覆／未回覆數）；未回覆不算接受；桌機 1366 與 390px 無水平溢出；舊三筆 localStorage 不變、V-Iris 已接受紀錄保留；公開內容無 Soul ID、工作 ID、交易原始資料；無 JS 錯誤 | `m4_r5/live_m4r5_tests_f04bc3d.tsv` |
+| 部署前後保留（同一個舊測試設定檔） | 部署前（b5cbe1c）6/6、部署後（f04bc3d）6/6；打開新頁不寫任何新鍵 | `m4_r5/upgrade_predeploy_b5cbe1c.tsv`、`m4_r5/upgrade_postdeploy_f04bc3d.tsv` |
+| kol-catalog | 首頁與存檔相同（44,801 bytes）；Railway 上最新部署仍是 2026-09-24 的 eabb3a25 | `m4_r5/live_bytes_check_f04bc3d.txt` |
+| 截圖 | 桌機第一屏、390px 第一屏、回饋與複製後的桌機與 390px 全頁 | `m4_r5/live_desktop_first_screen.jpg`、`m4_r5/live_mobile390_first_screen.jpg`、`m4_r5/live_desktop_after_feedback.jpg`、`m4_r5/live_mobile390_full_after_feedback.jpg` |
+
+- 驗收用的「接受／想修改／備註」只寫進測試瀏覽器，Penny 的瀏覽器沒有任何回饋；5 張照片仍待 Penny 選片，沒有任何一張標為接受。
+- 其他 service 未動；未改存取設定、未新增登入或付費服務、未另建網站、未合併 main。生成 0、修圖 0、訓練 0。
 
 ## 7. 主管覆核：部署停止點（來源：Penny 轉交的主管回覆，2026-10-21）
 
