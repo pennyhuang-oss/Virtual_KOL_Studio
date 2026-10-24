@@ -1,0 +1,245 @@
+{
+ "note": "M-4 R8 主管覆核後的構圖控制流程唯讀查核——私有紀錄（含 Soul ID 與任務 ID，只留在 repo，不公開；公開資料 docs/calendar/data/cal_m4_r8_flow_check.json 不含 ID）。",
+ "task": "TASK-CAL-001／M-4／R8｜主管看圖覆核與構圖控制流程查核",
+ "date": "2026-10-24",
+ "rules": "不上傳、不建任務、不付費；只用 models_explore、工具 schema、get_cost 唯讀報價、show_characters status（自家 Somi Soul）、官方說明頁。沒有列出 Elements（會看到同工作區其他元素）。",
+ "before": {
+  "at": "報價前（2026-10-24，14:09:29Z 收到任務後、14:20:00Z 之前）",
+  "tx_newest": "2026-10-24T13:55:11.761531Z Higgsfield Soul V2 -0.12 spend（R8 本案）",
+  "jobs_newest": "c081c7f7-8807-40a9-a072-e161a002b632（R8 任務，completed）"
+ },
+ "readonly_calls": [
+  {
+   "tool": "models_explore get",
+   "model": "soul_2",
+   "finding": "quality 1.5k/2k；style_id「Compatible with soul_id, but not medias/image references」；soul_id optional；medias image max 1 role image；比例 1:1,16:9,9:16,4:3,3:4,3:2,2:3；unlim available false"
+  },
+  {
+   "tool": "models_explore get",
+   "model": "soul_cinematic",
+   "finding": "quality 1.5k/2k；soul_id optional；medias image max 1；比例另含 21:9"
+  },
+  {
+   "tool": "models_explore get",
+   "model": "nano_banana_pro",
+   "finding": "resolution 1k/2k/4k；medias role image_references；比例含 3:4"
+  },
+  {
+   "tool": "models_explore get",
+   "model": "nano_banana_2",
+   "finding": "resolution 1k/2k/4k；is_inpaint（restrict the edit to the supplied mask）；medias roles image_references, mask"
+  },
+  {
+   "tool": "models_explore get",
+   "model": "gpt_image_2",
+   "finding": "resolution 1k/2k/4k；quality low/medium/high；medias role image"
+  },
+  {
+   "tool": "models_explore get",
+   "model": "gpt_image_2_5",
+   "finding": "variant flare/sunburst；quality low..max；resolution 1k/2k/4k；medias role image_references"
+  },
+  {
+   "tool": "models_explore get",
+   "model": "seedream_v4_5",
+   "finding": "quality basic/high；medias role image_references"
+  },
+  {
+   "tool": "models_explore recommend",
+   "query": "keep a trained character identity while following the composition / pose / framing of a reference image",
+   "finding": "排序 soul_2、nano_banana_pro、flux_3_image、autosprite、gpt_image_2_5；只是關鍵字評分，不是能力證明"
+  },
+  {
+   "tool": "tool schema",
+   "name": "outpaint_image",
+   "finding": "params：image_id（上傳 media_id 或已完成圖片任務 job_id）、aspect_ratio、width/height（選填）、get_cost；不收 prompt、count；沒有錨點／方向參數"
+  },
+  {
+   "tool": "tool schema",
+   "name": "show_reference_elements / manage_reference_elements",
+   "finding": "create 需要 medias（上傳或圖片任務）；prompt 內嵌 <<<element_id>>>；支援 nano_banana_pro、nano_banana_2、gpt_image_2、seedream_v4_5、seedream_v5_lite、cinematic_studio_2_5；Soul V2 不在名單"
+  },
+  {
+   "tool": "tool schema",
+   "name": "show_characters",
+   "finding": "Trained Soul 只能用於 soul_2、soul_cinematic；一次一個 soul_id；其他模型要用 Elements"
+  },
+  {
+   "tool": "show_characters status",
+   "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+   "finding": "somi-oh-soul-v1-5img-20260904 ready／completed；回傳沒有 Element 連結欄位"
+  },
+  {
+   "tool": "show_generations（只看本案 R8、R7 兩筆，size 2）",
+   "finding": "R8 任務 params：style General strength 1、style_strength 1、custom_reference（Soul）strength 1——後台有強度欄位，MCP schema 沒有可設定的參數"
+  }
+ ],
+ "quotes": [
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "soul_2",
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "medias": [
+     {
+      "value": "c081c7f7-8807-40a9-a072-e161a002b632",
+      "role": "image"
+     }
+    ],
+    "prompt": "cost check only",
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "count": 1,
+    "use_unlim": false
+   },
+   "result": {
+    "credits": 1,
+    "credits_exact": 0.12
+   }
+  },
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "soul_2",
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "medias": [
+     {
+      "value": "c081c7f7-8807-40a9-a072-e161a002b632",
+      "role": "image"
+     }
+    ],
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "count": 1,
+    "use_unlim": false,
+    "prompt": "（不傳）"
+   },
+   "result": {
+    "credits": 1,
+    "credits_exact": 0.12
+   }
+  },
+  {
+   "tool": "outpaint_image get_cost",
+   "params": {
+    "image_id": "c081c7f7-8807-40a9-a072-e161a002b632",
+    "aspect_ratio": "3:4"
+   },
+   "result": {
+    "credits": 2,
+    "credits_exact": 2
+   }
+  },
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false
+   },
+   "result": {
+    "credits": 2,
+    "credits_exact": 2
+   }
+  },
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "1k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false
+   },
+   "result": {
+    "credits": 2,
+    "credits_exact": 2
+   }
+  },
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "nano_banana_2",
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false
+   },
+   "result": {
+    "credits": 2,
+    "credits_exact": 2
+   }
+  },
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "gpt_image_2_5",
+    "resolution": "2k",
+    "quality": "high",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false
+   },
+   "result": {
+    "credits": 2.75,
+    "credits_exact": 2.75
+   }
+  },
+  {
+   "tool": "generate_image get_cost",
+   "params": {
+    "model": "seedream_v4_5",
+    "quality": "basic",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false
+   },
+   "result": {
+    "credits": 1,
+    "credits_exact": 1
+   }
+  }
+ ],
+ "after": {
+  "tx_newest": "仍是 2026-10-24T13:55:11.761531Z Higgsfield Soul V2 -0.12（沒有新交易）",
+  "jobs_newest": "仍是 c081c7f7-8807-40a9-a072-e161a002b632（沒有新任務）",
+  "conclusion": "8 次報價都沒有建立任務、沒有扣款。"
+ },
+ "web": [
+  {
+   "url": "https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-use-soul-to-generate-images",
+   "dateModified": "2026-09-09",
+   "fetched": "2026-10-24"
+  },
+  {
+   "url": "https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-create-and-use-a-soul-id-character",
+   "dateModified": "2026-09-02",
+   "fetched": "2026-10-24"
+  },
+  {
+   "url": "https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-use-nano-banana",
+   "dateModified": "2026-09-09",
+   "fetched": "2026-10-24"
+  },
+  {
+   "url": "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially",
+   "dateModified": "2026-09-12",
+   "fetched": "2026-10-24"
+  },
+  {
+   "url": "https://higgsfield.ai/blog/SOUL-2.0-Realistic-AI-Image-Generator-for-Creative-Direction",
+   "fetched": "2026-10-24",
+   "note": "HTTP 404；只有搜尋摘要，不採為證據"
+  }
+ ],
+ "counts": {
+  "generated": 0,
+  "retouched": 0,
+  "trained": 0,
+  "paid": 0,
+  "uploaded": 0,
+  "deployed": 0
+ }
+}

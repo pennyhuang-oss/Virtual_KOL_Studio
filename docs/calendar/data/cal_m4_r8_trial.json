@@ -122,7 +122,7 @@
   "why": "第 2、6 項改善或通過；但第 1 項（前腳貼邊、靴下無雪）與第 4 項（讀不出抬頭看雪）不通過，第 3 項仍有文字與電線，另外出現白色相紙邊框。依 CAL_24，必要要求未全部達成。",
   "not": "這是 Claude 自查，不是主管看圖覆核，也不是 Penny 接受。"
  },
- "status": "待主管及 Penny 審圖",
+ "status": "主管建議退回（REVISE），Penny 未接受",
  "uncontrolled": [
   {
    "k": "人物大小與腳下留白",
@@ -166,5 +166,11 @@
   "trainings": 0,
   "credits": 0.12,
   "deploys": 0
+ },
+ "supervisor_review": {
+  "file": "docs/calendar/data/cal_m4_supervisor_r8.json",
+  "conclusion": "REVISE，不建議採用；Penny 尚未接受。",
+  "status": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受",
+  "note": "上方 must／verdict 等是 Claude 自查原文，保留不改；主管結論另存。主管指出白框不能算腳下留白、白邊成因未確認（收尾句只是待查假設）。"
  }
 }
