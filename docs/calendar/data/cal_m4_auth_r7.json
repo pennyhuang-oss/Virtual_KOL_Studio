@@ -1,0 +1,41 @@
+{
+ "note": "M-4 R7 Penny 授權與主管指令（逐字）。授權只限 V-somi-oh 12 月直式 1 張、最多 1 次請求、費用上限 0.12 credits；不授權其他生成或自動重試。本檔只在 repo。",
+ "task": "TASK-CAL-001／M-4／R7｜Somi 單張試拍",
+ "received": "2026-10-24T12:49:27Z",
+ "source": "Penny 授權，經主管（ChatGPT）指令轉交",
+ "base": {
+  "result": "8d0e457ce47e46bf82344bf14c4205e0acecdd1d",
+  "review": "58c698dc3b6f5753ca6af428f0219079f4dbc209",
+  "head_at_receipt": "58c698dc3b6f5753ca6af428f0219079f4dbc209",
+  "supervisor": "R6 v3 PASS（只代表企劃重審完成，不是照片接受）"
+ },
+ "scope": {
+  "set": "V-somi-oh",
+  "month": 12,
+  "ratio": "3:4",
+  "images_max": 1,
+  "requests_max": 1,
+  "retry": false,
+  "budget_credits": 0.12,
+  "model": "soul_2",
+  "soul": "somi-oh 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+  "quality": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "use_unlim": false,
+  "medias": "none",
+  "style_id": "none",
+  "training": false,
+  "prompt_source": "8d0e457 docs/calendar/CAL_23_M4_R6_REPLAN.md §6 V-somi-oh（＝cal_m4_r6_replan.json v3 同欄位）逐字",
+  "prompt_sha256": "ae3fb51cc18e41e273e7a5678dd542be1ea93989be27ead524f9476807843d4d"
+ },
+ "rules": [
+  "送出前確認 Soul ready 與設定。",
+  "只用不扣款、不建任務的報價預檢；本次設定的有效報價必須 ≤0.12 才送出；無法確認價格、超額或報價會建任務就停止回報。舊報價不視為本次價格保證。",
+  "提交前保存意圖與 prompt；取得任務 ID 後立即保存（私有紀錄）。",
+  "失敗、逾時或結果不明，先查原任務；不自動重試、不補送。記錄實際扣款與歸屬依據。",
+  "無論自查通過或退回，都交付這唯一一張；不隱藏失敗、不自行再生。保留原圖，另提供不含私有識別碼的顯示版與套框預覽。",
+  "本輪不部署網站；修圖 0、訓練 0；不啟動 H-Jia 或其他照片、不改已接受 V-Iris、不合併 main、不聯絡廠商。"
+ ],
+ "verbatim": "TASK-CAL-001／M-4／R7｜Somi 單張試拍\n\nPenny 授權：\n僅生成 V-Somi 12月直式 1張，最多1次請求，\n本次費用上限0.12 credits。不授權其他生成或自動重試。\n\n主管已覆核R6 v3 PASS：\n成果8d0e457ce47e46bf82344bf14c4205e0acecdd1d\n送審紀錄58c698dc3b6f5753ca6af428f0219079f4dbc209\n此PASS只代表企劃重審完成，不是照片接受。\n\nRepo：pennyhuang-oss/Virtual_KOL_Studio\n分支：claude/epic-carson-n5w0qu\n先確認目前HEAD，不回退。\n\n【生成】\n使用上述固定成果CAL_23 §6的V-Somi v3 prompt，\n逐字送出，不另加姿勢、光線或風格句。\n使用既有somi-oh Soul：\nsoul_2、2k、3:4、count 1；\n不用unlim、不加參考圖、不傳style、不訓練。\n\n送出前確認Soul ready及設定。\n只使用不扣款、不建任務的報價預檢。\n必須取得本次設定的有效報價且≤0.12才送出；\n無法確認價格、超額或報價會建任務，就停止回報。\n舊報價不視為本次價格保證。\n\n提交前保存意圖與prompt，取得任務ID後立即保存。\n失敗、逾時或結果不明，先查原任務；\n不自動重試、不補送。記錄實際扣款與歸屬依據。\n\n【看圖與交付】\n完成後先實際看圖，檢查：\n整體美感、人景融合、比例、配色、自然姿態、\nSomi身分辨識，以及120×160mm套框效果。\n不以數字或技術通過取代審美判斷。\n\n無論自查通過或退回，都交付這唯一一張結果；\n不可隱藏失敗，也不可自行再生。\n保留原圖，提供不含私有識別碼的顯示版與套框預覽。\n\n優先在回覆中直接附圖供Penny與主管查看，\n不要只給私有GitHub圖片連結。\n若環境無法附圖，清楚回報交付限制，不宣稱已可看圖。\n本輪不部署網站。\n\ncommit並push原分支，單一程式碼框回報：\n固定SHA、實際prompt、設定、請求與扣款、\n自查結論、圖片位置及未完成事項。\n私有Soul／任務ID只存私有紀錄，不公開。\n\n生成最多1張；修圖0、訓練0。\n不啟動H-Jia或其他照片、不改已接受V-Iris、\n不合併main、不聯絡廠商。\n完成後停止，交ChatGPT實際看圖覆核，\n最後由Penny決定接受或修改。"
+}

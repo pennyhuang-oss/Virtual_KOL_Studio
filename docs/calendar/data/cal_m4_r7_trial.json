@@ -1,0 +1,135 @@
+{
+ "note": "M-4 R7 V-Somi 單張試拍結果（公開可讀版，不含 Soul／任務 ID 與交易原始列；私有紀錄在 review/calendar/m4_r7/execution_log.json）。自查是執行者自查，不是主管覆核，也不是 Penny 接受。",
+ "task": "TASK-CAL-001／M-4／R7｜Somi 單張試拍",
+ "round": "M-4 R7",
+ "written_on": "2026-10-24",
+ "basis": {
+  "plan_result": "8d0e457ce47e46bf82344bf14c4205e0acecdd1d",
+  "plan_review": "58c698dc3b6f5753ca6af428f0219079f4dbc209",
+  "auth": "docs/calendar/data/cal_m4_auth_r7.json"
+ },
+ "set": "V-somi-oh",
+ "month": 12,
+ "ratio": "3:4",
+ "prompt": {
+  "source": "8d0e457 CAL_23 §6 V-somi-oh v3 prompt（逐字，未加任何句子）",
+  "sha256": "ae3fb51cc18e41e273e7a5678dd542be1ea93989be27ead524f9476807843d4d",
+  "text": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat worn open over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. Setting: a small hot-spring town street at blue hour in gentle snowfall, low wooden inns with warm plain paper lanterns that have no lettering hanging from the eaves, thin steam rising from a stone gutter, a thin layer of fresh snow on the road, which rises gently away from the camera, no signs, no traffic signs and no wires, nobody else on the street. Moment: she walks slowly down the gently sloping street toward the camera with her hands in her coat pockets, right beneath the nearest lantern, and looks up at the snow drifting through its glow with a small, delighted smile, her eyes open. Shot: full-length, her figure filling a little under half the frame height, with the eaves and the lantern above her and the snowy road below. Camera: vertical 3:4, at her chest height, a 50mm lens from about 6 metres, natural perspective. Composition: she walks right of centre with the nearest lantern hanging just above and in front of her toward the upper right, the snowy street rising behind her and receding toward the upper left with more lanterns, open dusk sky above the rooftops, snowy road in the lower part of the frame. Light: the nearest lantern is her key light: its warm amber glow falls on her face and coat and on the snow and the wooden wall around her in the same pool of light; the deep-blue dusk sky lights everything else, including the side of her turned away from the lantern, so she and the street share the same warm-and-cool light; muted cranberry, ivory, warm amber and deep blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook."
+ },
+ "request": {
+  "model": "soul_2（回傳 text2image_soul_v2）",
+  "soul": "somi-oh 既有 Soul（ready；ID 只在 profile.json 與私有紀錄）",
+  "quality": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "use_unlim": false,
+  "medias": "無",
+  "style_id": "不傳（後台套用預設 General）",
+  "folder": "不指定（auto_create_project false）",
+  "training": false
+ },
+ "precheck": {
+  "soul": "ready",
+  "model": "soul_2 支援 2k、3:4；unlim 不可用",
+  "quote": {
+   "method": "generate_image get_cost（只回傳價格）",
+   "credits": 1,
+   "credits_exact": 0.12,
+   "budget": 0.12,
+   "within_budget": true
+  },
+  "readonly_evidence": "報價前後交易最新一列與任務清單最新一筆都沒變，報價沒有建立任務、沒有扣款。"
+ },
+ "run": {
+  "requests": 1,
+  "retries": 0,
+  "status": "completed",
+  "polls": 2,
+  "submitted": "2026-10-24T12:55Z",
+  "completed": "2026-10-24T12:56Z"
+ },
+ "charge": {
+  "charged": 0.12,
+  "refunds": 0,
+  "vs_quote": "等於報價 0.12，未超過上限 0.12",
+  "attribution": "依時窗及唯一任務推定：送出後只有一列 Soul V2 −0.12（2026-10-24T12:55:35Z），時間與本任務建立時間一致；同一時窗沒有其他 soul_2 任務（交易明細沒有任務 ID，不標成直接對帳）。"
+ },
+ "result": {
+  "original": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r7.png",
+  "px": [
+   1536,
+   2048
+  ],
+  "bytes": 4116397,
+  "sha256": "d38dcc55aae6df29a72d70c184da7256c690819db04ed88fb5afc789883ca6db",
+  "original_note": "原圖保留不改；PNG 內有一段生成平台任務 ID（tEXt），只在私有原檔。",
+  "view": "review/calendar/m4_r7/V-somi-oh_m4r7_view.jpg（1200×1600，無中繼資料）",
+  "frame": "review/calendar/m4_r7/V-somi-oh_m4r7_frame_V_120x160.jpg（120×160 mm 套框預覽，無中繼資料）",
+  "ppi": "1536×2048 放進 120×160 mm 不裁切，約 325 ppi（工作目標 300 ppi）"
+ },
+ "measured": {
+  "head_top": "約在畫面由上 33%（原圖 y≈681）",
+  "feet": "左靴靴底貼近下緣；右腳靴底超出原圖下緣（被切掉）",
+  "occupancy": "人物至少占畫高 67%（腳超出下緣），成品至少約 107 mm；企劃 40–45%（64–72 mm）",
+  "bottom_margin": "0%（低於最低安全邊界 3%）",
+  "vanishing_point": "街道消失點約在畫面由上一半附近、她胸口高度，與企劃一致"
+ },
+ "review": [
+  {
+   "k": "1. 第一眼",
+   "result": "部分通過",
+   "note": "藍調雪街、點亮的燈籠、深蔓越莓紅大衣與象牙白洋裝，整張有寫真氣氛，比 R5 白天灰街明顯進步；但最近燈籠上的大字與兩側招牌字樣第一眼就看得到，讓畫面像商店街街拍。"
+  },
+  {
+   "k": "2. 人景融合",
+   "result": "大致通過",
+   "note": "天色是藍調時刻、燈籠亮著，右側木牆有燈籠暖光，她的臉與大衣也偏暖，人與街的冷暖光大致一致，不再是 R5 的暖臉貼冷灰白天。但她周圍雪地上看不出燈籠光圈，臉部受光偏均勻，仍有一點正面打光感。"
+  },
+  {
+   "k": "3. 比例與透視",
+   "result": "通過",
+   "note": "人與房屋、街道尺度合理；街道往左上退遠，透視自然；消失點約在她胸口高度。"
+  },
+  {
+   "k": "4. 姿態與神情",
+   "result": "部分通過",
+   "note": "雙手插口袋朝鏡頭走、步態自然、微笑自然；但看鏡頭，不是企劃的「抬頭看燈籠光裡的雪」，比較像模特兒走向鏡頭。"
+  },
+  {
+   "k": "5. 構圖與套框",
+   "result": "不通過",
+   "note": "人物位置（中央偏右）、燈籠在右上、街道往左上退遠都符合；但人物至少占畫高 67%（企劃 40–45%），右腳靴底被原圖下緣切掉，腳下留白 0%，低於最低安全邊界；裁切無法補回。"
+  },
+  {
+   "k": "6. 技術細節",
+   "result": "不通過",
+   "note": "最近燈籠有韓文大字、兩側多塊招牌有字樣，左側有電線（prompt 都寫明不要）；雪量很少、石溝蒸氣沒出現；手在口袋內、臉與手指沒有變形。文字在最顯眼的位置，印刷不能用，本輪不授權修圖。"
+  },
+  {
+   "k": "7. 解析度",
+   "result": "通過",
+   "note": "約 325 ppi。"
+  }
+ ],
+ "identity": "明亮橘棕髮、圓臉、酒窩笑，和 Somi 一致、可辨識；狼尾層次不明顯，偏層次中長髮。",
+ "palette": "深蔓越莓紅、象牙白、白靴、暖琥珀燈光、藍調天空；配色協調，紅大衣不再壓過街景。",
+ "verdict": {
+  "self": "自查不通過（建議退回）",
+  "why": "1–4 項大致改善（比 R5 進步），但第 5 項人物過大且右腳被切、第 6 項燈籠與招牌出現文字，都是印刷不能用的問題；本輪不修圖、不重生。",
+  "not": "這是 Claude 自查，不是主管看圖覆核，也不是 Penny 接受。"
+ },
+ "learned": [
+  "有效：藍調時刻與點亮燈籠、深蔓越莓紅配色、燈籠當主光讓人景冷暖一致、人物在右側與燈籠右上的位置關係，都比 R5 好。",
+  "沒落實：人物占比（prompt 的「a little under half the frame height」與「about 6 metres」沒有被遵守，模型仍偏向放大人物）；「抬頭看雪」的動作；無字要求（R5 與 R7 連續兩次在燈籠與招牌出現文字）。",
+  "只記錄觀察，不在本輪改企劃或重生；是否調整、如何調整等主管看圖覆核後決定。"
+ ],
+ "counts": {
+  "generated": 1,
+  "requests": 1,
+  "retries": 0,
+  "retouched": 0,
+  "trainings": 0,
+  "credits": 0.12,
+  "deploys": 0
+ }
+}

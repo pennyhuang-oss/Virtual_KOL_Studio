@@ -1,0 +1,147 @@
+{
+ "note": "M-4 R7 V-Somi 單張試拍的私有執行紀錄（含 Soul／任務 ID 與交易原始列；不放公開頁）。送出前先寫提交意圖，避免中斷後重複提交。",
+ "events": [
+  {
+   "t": "2026-10-24T12:51:19Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r7.json",
+   "set": "V-somi-oh",
+   "requests_max": 1,
+   "budget_credits": 0.12
+  },
+  {
+   "t": "2026-10-24T12:51:19Z",
+   "step": "prompt",
+   "source": "8d0e457:docs/calendar/CAL_23_M4_R6_REPLAN.md §6 V-somi-oh",
+   "prompt_sha256": "ae3fb51cc18e41e273e7a5678dd542be1ea93989be27ead524f9476807843d4d",
+   "chars": 2143,
+   "prompt": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat worn open over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. Setting: a small hot-spring town street at blue hour in gentle snowfall, low wooden inns with warm plain paper lanterns that have no lettering hanging from the eaves, thin steam rising from a stone gutter, a thin layer of fresh snow on the road, which rises gently away from the camera, no signs, no traffic signs and no wires, nobody else on the street. Moment: she walks slowly down the gently sloping street toward the camera with her hands in her coat pockets, right beneath the nearest lantern, and looks up at the snow drifting through its glow with a small, delighted smile, her eyes open. Shot: full-length, her figure filling a little under half the frame height, with the eaves and the lantern above her and the snowy road below. Camera: vertical 3:4, at her chest height, a 50mm lens from about 6 metres, natural perspective. Composition: she walks right of centre with the nearest lantern hanging just above and in front of her toward the upper right, the snowy street rising behind her and receding toward the upper left with more lanterns, open dusk sky above the rooftops, snowy road in the lower part of the frame. Light: the nearest lantern is her key light: its warm amber glow falls on her face and coat and on the snow and the wooden wall around her in the same pool of light; the deep-blue dusk sky lights everything else, including the side of her turned away from the lantern, so she and the street share the same warm-and-cool light; muted cranberry, ivory, warm amber and deep blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook."
+  },
+  {
+   "t": "2026-10-24T12:53:55Z",
+   "step": "pre-check",
+   "soul": {
+    "name": "somi-oh-soul-v1-5img-20260904",
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "status": "ready",
+    "raw_status": "completed"
+   },
+   "model_params": "soul_2：quality 1.5k/2k（預設 2k）、比例含 3:4、style_id 選填、參考圖最多 1；unlim available false",
+   "preferences": {
+    "auto_create_project": false
+   },
+   "folder_id": "不指定"
+  },
+  {
+   "t": "2026-10-24T12:53:55Z",
+   "step": "quote（get_cost，唯讀）",
+   "settings": {
+    "model": "soul_2",
+    "soul": "somi-oh",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "ae3fb51cc18e41e273e7a5678dd542be1ea93989be27ead524f9476807843d4d",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "budget": 0.12,
+   "within_budget": true,
+   "readonly_evidence": "報價前後交易最新一列都是 2026-10-23T05:10:54.803596Z Seed Audio 1.0 −2.9（他人任務）；任務清單最新一筆前後相同（10-22 他人圖片任務），報價沒有建立任務、沒有扣款。",
+   "tx_boundary": {
+    "newest_row": "2026-10-23T05:10:54.803596Z Seed Audio 1.0 -2.9 spend",
+    "soul_v2_rows_in_top10": 0
+   },
+   "inflight_soul2_jobs": 0
+  },
+  {
+   "t": "2026-10-24T12:53:55Z",
+   "step": "intent",
+   "set": "V-somi-oh",
+   "request": 1,
+   "retry": false,
+   "note": "即將送出唯一一次請求；若中斷或結果不明，先查任務清單與交易，不重送。"
+  },
+  {
+   "t": "2026-10-24T12:55:40Z",
+   "step": "submitted",
+   "set": "V-somi-oh",
+   "job_id": "895d5a61-33f1-4466-839a-b4d6de830395",
+   "status": "pending",
+   "model_echo": "text2image_soul_v2",
+   "echo": {
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "soul_name": "somi-oh-soul-v1-5img-20260904",
+    "prompt_equals_sent": true
+   },
+   "requests_used": 1
+  },
+  {
+   "t": "2026-10-24T12:56:29Z",
+   "step": "terminal",
+   "job_id": "895d5a61-33f1-4466-839a-b4d6de830395",
+   "status": "completed",
+   "polls": 2,
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261024_125535_895d5a61-33f1-4466-839a-b4d6de830395.png",
+   "job_meta": {
+    "width": 1536,
+    "height": 2048,
+    "seed": 857823,
+    "quality_field": "1080p",
+    "style": "General（後台預設，未由請求傳入）",
+    "enhance_prompt": false,
+    "created_at_epoch": 1792846535.152773
+   }
+  },
+  {
+   "t": "2026-10-24T12:56:29Z",
+   "step": "saved",
+   "path": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r7.png",
+   "bytes": 4116397,
+   "sha256": "d38dcc55aae6df29a72d70c184da7256c690819db04ed88fb5afc789883ca6db",
+   "px": [
+    1536,
+    2048
+   ],
+   "png_text_chunks": "hf-job-id（只在私有原檔；顯示版與套框預覽移除）"
+  },
+  {
+   "t": "2026-10-24T12:56:29Z",
+   "step": "charge",
+   "rows": [
+    {
+     "at": "2026-10-24T12:55:35.273297Z",
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": [],
+   "window": "2026-10-23T05:10:54.803596Z（送出前最新一列）到查詢時",
+   "soul2_jobs_in_window": [
+    "895d5a61-33f1-4466-839a-b4d6de830395"
+   ],
+   "others_in_window": "無",
+   "vs_quote": "等於報價 0.12；未超過上限 0.12",
+   "attribution": "依時窗及唯一任務推定：扣款時間 12:55:35.273Z 與任務建立時間 1792846535.15（12:55:35Z）一致，時窗內只有這一個 soul_2 任務（交易明細沒有任務 ID，不標成直接對帳）"
+  },
+  {
+   "t": "2026-10-24T13:10:00Z",
+   "step": "self-review",
+   "verdict": "自查不通過（建議退回）",
+   "files": [
+    "review/calendar/m4_r7/V-somi-oh_m4r7_view.jpg（1200×1600，無中繼資料）",
+    "review/calendar/m4_r7/V-somi-oh_m4r7_frame_V_120x160.jpg（120×160 mm 套框預覽，無中繼資料）"
+   ],
+   "public_copies_ids": "顯示版與套框預覽不含任務或 Soul ID（已檢查）"
+  }
+ ]
+}
