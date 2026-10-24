@@ -1,0 +1,42 @@
+{
+ "note": "M-4 R8 Penny 授權與主管指令（逐字）。授權只限 V-somi-oh 1 張、最多 1 次請求、費用上限 0.12 credits；不授權自動重試、補生或其他角色生成。本檔只在 repo。",
+ "task": "TASK-CAL-001／M-4／R8｜Somi 精簡 prompt 單張測試",
+ "received": "2026-10-24T13:52:37Z",
+ "source": "Penny 授權，經主管（ChatGPT）指令轉交",
+ "base": {
+  "result": "efa00c84f0bea359b937c35db08a1a4ec37d8ee7",
+  "review": "0784cd4e356db9d314e7b2cec6729f39da6db1b6",
+  "head_at_receipt": "0784cd4e356db9d314e7b2cec6729f39da6db1b6",
+  "supervisor": "CAL_24 後續單張測試方案 PASS（不是照片接受）"
+ },
+ "scope": {
+  "set": "V-somi-oh",
+  "images_max": 1,
+  "requests_max": 1,
+  "retry": false,
+  "budget_credits": 0.12,
+  "model": "soul_2",
+  "soul": "somi-oh 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+  "quality": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "use_unlim": false,
+  "medias": "none",
+  "style_id": "none",
+  "training": false,
+  "prompt_source": "efa00c8 CAL_24 §5（＝cal_m4_r7_followup.json prompt.text）",
+  "prompt_base_sha256": "1707a72f354dd1d1dc61b50376f0deb21654fee3d9be232f299fb65776f2a7f2",
+  "prompt_edits": [
+   {
+    "from": "wide photograph",
+    "to": "environmental full-length portrait"
+   },
+   {
+    "from": "a short way from the camera",
+    "to": "seen from a comfortable distance, with the street clearly surrounding her"
+   }
+  ],
+  "prompt_final_sha256": "05cc53038c25e3a330c3c69cd3540d0342ef55917a36229208dc99bbf74b494e"
+ },
+ "verbatim": "TASK-CAL-001／M-4／R8｜Somi 精簡 prompt 單張測試\n\nPenny授權：\n僅V-Somi 1張、最多1次請求，費用上限0.12 credits。\n不授權自動重試、補生或其他角色生成。\n\nRepo：pennyhuang-oss/Virtual_KOL_Studio\n分支：claude/epic-carson-n5w0qu\n方案成果：efa00c84f0bea359b937c35db08a1a4ec37d8ee7\n送審紀錄：0784cd4e356db9d314e7b2cec6729f39da6db1b6\n\n主管已讀CAL_24，後續單張測試方案PASS。\n此PASS不是照片接受。\n\n使用固定成果CAL_24 §5的prompt，只作兩處授權修改：\n1. “wide photograph”\n   → “environmental full-length portrait”\n2. “a short way from the camera”\n   → “seen from a comfortable distance, with the street clearly surrounding her”\n其餘逐字保留。保存最終全文與hash，不另加描述。\n\n設定：\nsoul_2、既有somi-oh Soul、2k、3:4、count 1。\n不用unlim、不加參考圖、不傳style、不訓練。\n送出前確認Soul ready，取得不扣款、不建任務的最新報價。\n報價≤0.12才送出；價格無法確認或超額即停止。\n\n提交前保存意圖；取得任務ID立即保存。\n失敗、逾時或結果不明先查原任務，不補送。\n記錄實際扣款，區分直接對帳與依時窗推定。\n\n生成後實際看圖：\n- 整體是否漂亮、有寫真完成度。\n- 人物與街景配置是否平衡，雙靴完整、下方有雪地。\n- 沒有搶戲的大燈籠、招牌或雜物。\n- 讀得出抬頭看雪，Somi可辨識，人景光色可信。\n- 保留藍調與酒紅／象牙白配色。\n依CAL_24區分必要要求與可容許變化，\n不因細節偏離prompt就自動判美感失敗。\n\n無論通過或失敗，都交付唯一結果，不隱藏、不再生成。\n保留原圖，製作無私有ID的顯示版與120×160mm套框預覽，\n直接附圖，不只提供私有GitHub連結。\n不修圖、不部署網站。\n\n同步累計生成與費用，照片狀態維持待主管及Penny審圖。\ncommit並push原分支，單一程式碼框回報：\n固定SHA、最終prompt、設定、請求與扣款、\n自查結果、圖片位置及未完成事項。\n\n若本次仍未通過，停止純文字重試，\n列出未受控制的項目，後續再查構圖參考流程；\n本輪不自行換模型或啟動其他流程。\n\n不啟動H-Jia、不改已接受V-Iris、不合併main。\n完成後交ChatGPT實際看圖，最後由Penny決定。"
+}

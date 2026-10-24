@@ -1,0 +1,170 @@
+{
+ "note": "M-4 R8 V-Somi 精簡 prompt 單張測試結果（公開可讀版，不含 Soul／任務 ID 與交易原始列；私有紀錄在 review/calendar/m4_r8/execution_log.json）。自查是執行者自查，不是主管覆核，也不是 Penny 接受。",
+ "task": "TASK-CAL-001／M-4／R8｜Somi 精簡 prompt 單張測試",
+ "round": "M-4 R8",
+ "written_on": "2026-10-24",
+ "basis": {
+  "plan_result": "efa00c84f0bea359b937c35db08a1a4ec37d8ee7",
+  "plan_review": "0784cd4e356db9d314e7b2cec6729f39da6db1b6",
+  "auth": "docs/calendar/data/cal_m4_auth_r8.json"
+ },
+ "set": "V-somi-oh",
+ "month": 12,
+ "ratio": "3:4",
+ "prompt": {
+  "source": "efa00c8 CAL_24 §5，只做兩處授權修改",
+  "base_sha256": "1707a72f354dd1d1dc61b50376f0deb21654fee3d9be232f299fb65776f2a7f2",
+  "edits": [
+   {
+    "from": "wide photograph",
+    "to": "environmental full-length portrait"
+   },
+   {
+    "from": "a short way from the camera",
+    "to": "seen from a comfortable distance, with the street clearly surrounding her"
+   }
+  ],
+  "sha256": "05cc53038c25e3a330c3c69cd3540d0342ef55917a36229208dc99bbf74b494e",
+  "text": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. A quiet, environmental full-length portrait of a snowy hot-spring town street at blue hour, with snow falling softly. Low wooden inns with closed sliding doors line the street, and small warm paper lanterns glow along the eaves, receding into the distance. She stands in the middle of the street seen from a comfortable distance, with the street clearly surrounding her, in the soft glow of the lanterns, and tilts her face up to watch the falling snow with a small smile, not looking at the camera. Framing from top to bottom: a narrow band of rooftops and deep-blue sky, then the lantern-lit street with her whole figure, then open snowy road in front of her; both boots are fully in frame with snow below them. The warm lantern glow touches her face, her coat and the snow around her, and the rest of the scene stays cool blue. Vertical 3:4, eye level, natural perspective. A clean street with no shop signs, posters, wires, pipes or clutter. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading, finished like a page from a high-end photobook."
+ },
+ "request": {
+  "model": "soul_2（回傳 text2image_soul_v2）",
+  "soul": "somi-oh 既有 Soul（ready；ID 只在 profile.json 與私有紀錄）",
+  "quality": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "use_unlim": false,
+  "medias": "無",
+  "style_id": "不傳（後台套用預設 General）",
+  "folder": "不指定",
+  "training": false
+ },
+ "precheck": {
+  "soul": "ready",
+  "quote": {
+   "method": "generate_image get_cost（只回傳價格）",
+   "credits": 1,
+   "credits_exact": 0.12,
+   "budget": 0.12,
+   "within_budget": true
+  },
+  "readonly_evidence": "報價前後交易最新一列與任務清單最新一筆都沒變（都是 R7 那筆），報價沒有建任務、沒有扣款。"
+ },
+ "run": {
+  "requests": 1,
+  "retries": 0,
+  "status": "completed",
+  "polls": 2,
+  "submitted": "2026-10-24T13:55Z",
+  "completed": "2026-10-24T13:55Z"
+ },
+ "charge": {
+  "charged": 0.12,
+  "refunds": 0,
+  "vs_quote": "等於報價 0.12，未超過上限",
+  "basis": "依時窗推定（不是直接對帳）",
+  "attribution": "送出後只有一列 Soul V2 −0.12（2026-10-24T13:55:11Z），時間與任務建立時間一致；同時窗沒有其他 soul_2 任務；交易明細沒有任務 ID，所以不標成直接對帳。"
+ },
+ "result": {
+  "original": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r8.png",
+  "px": [
+   1536,
+   2048
+  ],
+  "bytes": 4347473,
+  "sha256": "d17029915e562e4e2154522f4fe32bf11220208695e55ff2e6b5c815cce024cb",
+  "original_note": "原圖保留不改；PNG 內有一段生成平台任務 ID（tEXt），只在私有原檔。",
+  "view": "review/calendar/m4_r8/V-somi-oh_m4r8_view.jpg（1200×1600，無中繼資料）",
+  "frame": "review/calendar/m4_r8/V-somi-oh_m4r8_frame_V_120x160.jpg（120×160 mm 套框預覽，無中繼資料）"
+ },
+ "measured": {
+  "white_border": "整張外圍有一圈白色相紙邊框：上 44、下 42、左 99、右 84 px（原圖）；照片區約 1353×1962 px",
+  "head_top": "約在照片區由上 23%",
+  "feet": "前腳靴底壓在照片區下緣（白邊上），靴下沒有雪地；後腳完整",
+  "if_cropped": "若裁掉白邊再取 3:4：照片區寬 1353 px → 高 1804 px，放進 120 mm 寬約 286 ppi（低於 300 ppi 工作目標），前腳靴底仍貼下緣"
+ },
+ "must": [
+  {
+   "k": "1. 雙靴完整、靴下有雪地",
+   "result": "不通過",
+   "note": "後腳完整；前腳靴底剛好壓在照片區下緣（白邊），靴下沒有雪地。"
+  },
+  {
+   "k": "2. 空間配置平衡",
+   "result": "大致通過",
+   "note": "天空只剩一條、沒有近景大燈籠，街道往中央深處退，人物在中間，比 R7 平衡；人物仍偏大（約照片區高度 77%），下方雪地不足。"
+  },
+  {
+   "k": "3. 沒有搶戲的大型物件、文字或雜物",
+   "result": "部分通過",
+   "note": "近景大燈籠消失；但左緣一盞燈籠有大字、右側有字的布招與招牌箱，天空有電線，右側有腳踏車與紅桶。比 R7 不搶戲，但仍可見。"
+  },
+  {
+   "k": "4. 讀得出抬頭看雪的瞬間",
+   "result": "不通過",
+   "note": "沒有看鏡頭（有改善），但她轉頭看向畫面右側、一手在衣領旁，像走路時回眸的造型照，讀不出抬頭看雪。"
+  },
+  {
+   "k": "5. Somi 可辨識、成年；人景光色可信",
+   "result": "大致通過",
+   "note": "橘棕髮、圓臉、酒窩笑，可辨識且成年。臉部受光偏均勻柔和，周圍雪地看不出燈籠暖光圈，人物略亮於街景，但沒有明顯浮貼。"
+  },
+  {
+   "k": "6. 藍調時刻與酒紅／象牙白配色",
+   "result": "通過",
+   "note": "深藍天色、點亮的小燈籠、深蔓越莓紅大衣、象牙白針織與白靴，配色協調。"
+  }
+ ],
+ "may_vary": "人物在中間（可容許）、大衣扣起下襬開（可容許）、臉的角度、雪量、燈籠數量都在可容許範圍，不列為失敗。",
+ "new_issue": "整張多了一圈白色相紙邊框，不是任何一項可容許變化；成品必須滿版，這張要裁切才可用，裁後約 286 ppi 且前腳仍貼邊。邊框很可能和收尾句「finished like a page from a high-end photobook」有關（推測，未驗證）；這句是 24 套共用收尾句，需要主管一併考量。",
+ "verdict": {
+  "self": "自查不通過",
+  "why": "第 2、6 項改善或通過；但第 1 項（前腳貼邊、靴下無雪）與第 4 項（讀不出抬頭看雪）不通過，第 3 項仍有文字與電線，另外出現白色相紙邊框。依 CAL_24，必要要求未全部達成。",
+  "not": "這是 Claude 自查，不是主管看圖覆核，也不是 Penny 接受。"
+ },
+ "status": "待主管及 Penny 審圖",
+ "uncontrolled": [
+  {
+   "k": "人物大小與腳下留白",
+   "history": "R5 約 80% 且右靴出界；R7 至少 67% 且右靴被切；R8 約占照片區 77%、前腳貼邊",
+   "note": "數字描述（R7）與由上到下的畫面描述（R8）都沒有把人物縮小、留出靴下雪地。"
+  },
+  {
+   "k": "文字（燈籠、招牌）",
+   "history": "R5、R7、R8 都出現",
+   "note": "逐項寫「無字」（R5、R7）和改成「關著的木拉門＋一句排除招牌」（R8）都沒有完全擋住；R8 文字變小、不在視覺中心。"
+  },
+  {
+   "k": "電線",
+   "history": "R5、R7、R8 都出現",
+   "note": "prompt 每次都排除電線，仍出現。"
+  },
+  {
+   "k": "動作與視線",
+   "history": "R5 抬眼看雪但肩高攤掌；R7 看鏡頭；R8 轉頭看側邊",
+   "note": "「抬頭看雪」在 R7、R8 都沒落實。"
+  },
+  {
+   "k": "白色相紙邊框（新）",
+   "history": "R8 首次出現",
+   "note": "可能與「a page from a high-end photobook」收尾句有關（推測）。"
+  }
+ ],
+ "controlled": [
+  "藍調時刻與點亮的燈籠（R7、R8）",
+  "深蔓越莓紅／象牙白／白靴配色（R7、R8）",
+  "移除近景大燈籠、天空只留一條（R8）",
+  "不看鏡頭（R8）",
+  "Somi 身分可辨識（R5、R7、R8）"
+ ],
+ "next": "依指示停止純文字重試。後續先唯讀查構圖參考流程（soul_2 帶 Soul 時能否同時用 1 張參考圖、身分保持、費用），並請主管考量共用收尾句；本輪不換模型、不建任務、不啟動其他流程。",
+ "counts": {
+  "generated": 1,
+  "requests": 1,
+  "retries": 0,
+  "retouched": 0,
+  "trainings": 0,
+  "credits": 0.12,
+  "deploys": 0
+ }
+}

@@ -5475,11 +5475,11 @@ window.CAL_DATA = {
    ]
   },
   "counts": {
-   "credits": 0.84,
-   "generated": 7,
+   "credits": 0.96,
+   "generated": 8,
    "trainings": 0
   },
-  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。",
+  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；待主管及 Penny 審圖；累計生成 8、credits 0.96。",
   "execution": {
    "cost": {
     "facts": [
@@ -6792,6 +6792,32 @@ window.CAL_DATA = {
    "supervisor": "docs/calendar/data/cal_m4_supervisor_r7.json",
    "trial": "docs/calendar/data/cal_m4_r7_trial.json"
   },
+  "m4r8": {
+   "auth": "docs/calendar/data/cal_m4_auth_r8.json",
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "{\"generated\": 8, \"credits\": 0.96, \"trainings\": 0}",
+     "old": "{\"generated\": 7, \"credits\": 0.84, \"trainings\": 0}",
+     "where": "counts"
+    },
+    {
+     "kind": "事實同步",
+     "new": "generated_cumulative 8（generated_log 加 M-4 R8 1）；V-Somi 加「R8 試拍待主管及 Penny 審圖」",
+     "old": "generated_cumulative 7；V-Somi：R5 退回；R7 主管建議退回，Penny 未接受",
+     "where": "status.production"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，待主管及 Penny 審圖；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "where": "meta.status"
+    }
+   ],
+   "from_commit": "0784cd4e356db9d314e7b2cec6729f39da6db1b6",
+   "status_line": "M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12）；Claude 自查不通過（白色相紙邊框、前腳貼邊、讀不出抬頭看雪）；待主管及 Penny 審圖。24 套完成分類不變。",
+   "trial": "docs/calendar/data/cal_m4_r8_trial.json"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -6805,7 +6831,7 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，待主管及 Penny 審圖；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
    "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審"
   },
   "month_rules": [
@@ -7579,7 +7605,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "394b0f59ff002fe01ca2a5429ec49635f286d950",
+  "plan_blob": "56dd199933a6e7d129b9fb8d98b696f339838e27",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -12897,7 +12923,7 @@ window.CAL_DATA = {
     "batch1": "owner-rejected-r6",
     "definitions": {
      "accepted": "已生成且 Penny 已接受（V-iris-chen）",
-     "generated_cumulative": "累計已生成張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＝7）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加",
+     "generated_cumulative": "累計已生成張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＝8）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加",
      "not_generated": "尚未生成的套數",
      "pending_owner_review": "24 套層級正在等 Penny 看圖的套數；試拍照片的狀態另見 set_notes",
      "rejected_replan": "已生成、Penny 退回，待重規劃（第一批 5 張）",
@@ -12905,11 +12931,12 @@ window.CAL_DATA = {
      "sets_total": "24 套月面＝accepted＋rejected_replan＋not_generated（三類互斥）",
      "to_complete": "待完成合計＝rejected_replan＋not_generated（不是互斥分類的一類）"
     },
-    "generated_cumulative": 7,
+    "generated_cumulative": 8,
     "generated_log": {
      "M-4 R2": 1,
      "M-4 R5": 5,
-     "M-4 R7": 1
+     "M-4 R7": 1,
+     "M-4 R8": 1
     },
     "not_generated": 18,
     "pending_owner_review": 0,
@@ -12923,7 +12950,7 @@ window.CAL_DATA = {
     ],
     "review_r6": "proposed-pending-supervisor-review",
     "set_notes": {
-     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受"
+     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 試拍待主管及 Penny 審圖"
     },
     "sets_total": 24,
     "to_complete": 23
