@@ -10,7 +10,7 @@
  },
  "meta": {
   "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審",
-  "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審中（提案待主管覆核）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+  "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
   "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
   "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
   "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
@@ -460,7 +460,12 @@
    "rejected_replan": 5,
    "not_generated": 18,
    "to_complete": 23,
-   "generated_cumulative": 6,
+   "generated_cumulative": 7,
+   "generated_log": {
+    "M-4 R2": 1,
+    "M-4 R5": 5,
+    "M-4 R7": 1
+   },
    "pending_owner_review": 0,
    "accepted_sets": [
     "V-iris-chen"
@@ -480,7 +485,12 @@
     "rejected_replan": "已生成、Penny 退回，待重規劃（第一批 5 張）",
     "not_generated": "尚未生成的套數",
     "to_complete": "待完成合計＝rejected_replan＋not_generated（不是互斥分類的一類）",
-    "generated_cumulative": "累計已生成張數＝accepted＋rejected_replan（另計，不與上列相加）"
+    "generated_cumulative": "累計已生成張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＝7）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加",
+    "pending_owner_review": "24 套層級正在等 Penny 看圖的套數；試拍照片的狀態另見 set_notes",
+    "set_notes": "單套的照片歷程（不改變上列 24 套完成分類）"
+   },
+   "set_notes": {
+    "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受"
    }
   }
  },
@@ -5986,8 +5996,8 @@
  "questions": [],
  "ref_note": "參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。既有照片也不是新構圖的成品。",
  "counts": {
-  "generated": 6,
-  "credits": 0.72,
+  "generated": 7,
+  "credits": 0.84,
   "trainings": 0
  },
  "r5": {
@@ -7804,7 +7814,7 @@
    }
   ]
  },
- "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。",
+ "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。",
  "auth_m4r2": {
   "round": "M-4 R2",
   "recorded_on": "2026-10-20",
@@ -8028,5 +8038,41 @@
    "note": "主管 M-4 R6 覆核 REVISE（維持 R6）：重審規則與重建稿修訂為 replan-r6-v2；24 套原文仍不改，待主管覆核。"
   },
   "progress_line": "24 套＝已接受 1＋退回待重規劃 5＋尚未生成 18；待完成合計 23（累計已生成 6 張，另計）。"
+ },
+ "m4r7": {
+  "from_commit": "58c698dc3b6f5753ca6af428f0219079f4dbc209",
+  "photo_commit": "ab747b6d5174996d21622d1080a6e5f0a7f8e95b",
+  "record_commit": "15a5a02129bd6f0cb753cb80d4a0ad7ac582909a",
+  "auth": "docs/calendar/data/cal_m4_auth_r7.json",
+  "trial": "docs/calendar/data/cal_m4_r7_trial.json",
+  "supervisor": "docs/calendar/data/cal_m4_supervisor_r7.json",
+  "followup": "docs/calendar/data/cal_m4_r7_followup.json",
+  "status_line": "M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12）；Claude 自查不通過，主管實際看圖 REVISE、不建議採用；Penny 未接受。24 套完成分類不變（V-Somi 仍是退回待重規劃）。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "counts",
+    "old": "{\"generated\": 6, \"credits\": 0.72, \"trainings\": 0}",
+    "new": "{\"generated\": 7, \"credits\": 0.84, \"trainings\": 0}"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.generated_cumulative",
+    "old": "6（定義為已接受＋退回待重規劃）",
+    "new": "7（＝generated_log：R2 1＋R5 5＋R7 1；和 24 套完成狀態分開計算）"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.set_notes",
+    "old": "（無）",
+    "new": "V-somi-oh：R5 退回；R7 主管建議退回，Penny 未接受"
+   },
+   {
+    "kind": "狀態文字",
+    "where": "meta.status",
+    "old": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審中（提案待主管覆核）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+    "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID"
+   }
+  ]
  }
 }

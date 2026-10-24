@@ -40,7 +40,7 @@ def progress(d):
     """24 套進度：三類互斥（已接受＋退回待重規劃＋尚未生成）；待完成合計與累計已生成另計。"""
     PR = d['status']['production']
     assert PR['accepted'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24
-    assert PR['to_complete'] == PR['rejected_replan'] + PR['not_generated'] and PR['generated_cumulative'] == PR['accepted'] + PR['rejected_replan']
+    assert PR['to_complete'] == PR['rejected_replan'] + PR['not_generated'] and PR['generated_cumulative'] == sum(PR['generated_log'].values()) >= PR['accepted'] + PR['rejected_replan']
     return (f"{PR['sets_total']} 套＝已接受 {PR['accepted']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；"
             f"待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計）。")
 
@@ -84,6 +84,7 @@ def render18(d):
          f"> M-4 R4 狀態（歷史）：{d['m4_prep']['r4']['status']}（{d['m4_prep']['r4']['supersedes']}）；首試紀錄見 `CAL_20_M4_IRIS_FIRST_TEST_PREP.md`。",
          "> M-4 R5 狀態（歷史）：第一批 5 位各生成 1 張並上線審圖；生成準備見 `CAL_21_M4_BATCH1_PREP.md`，結果與扣款見 `CAL_22_M4_BATCH1_RESULTS.md`。",
          f"> **M-4 R6 狀態：{d['m4r6']['batch1_line']} {progress(d)}以下 24 套是採用重審提案前的原文。**", '',
+         *([f"> **{d['m4r7']['status_line']}** 試拍紀錄見 `data/cal_m4_r7_trial.json`，主管結論見 `data/cal_m4_supervisor_r7.json`，後續測試方案見 `CAL_24_M4_R7_SOMI_FOLLOWUP.md`。", ''] if 'm4r7' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

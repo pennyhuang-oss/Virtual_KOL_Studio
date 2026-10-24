@@ -131,5 +131,11 @@
   "trainings": 0,
   "credits": 0.12,
   "deploys": 0
+ },
+ "supervisor_review": {
+  "file": "docs/calendar/data/cal_m4_supervisor_r7.json",
+  "conclusion": "REVISE，不建議採用；Penny 尚未接受。配色、人景融合改善，但構圖與寫真完成度仍未通過。",
+  "status": "R5 退回；R7 主管建議退回，Penny 未接受",
+  "note": "以上 review／verdict／learned 是 Claude 自查原文，保留不改；主管結論另存。主管指出燈籠主光只能標「部分有效」，不稱已可靠驗證。"
  }
 }

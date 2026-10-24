@@ -183,7 +183,7 @@ def render(P, O, SUP, X):
     T = X['trial']
     assert T['set'] in BATCH1 and T['request']['count'] == 1 and T['request']['requests'] == 1 and T['cost']['proposed_cap'] == T['cost']['r5_quote'] and len(T['flow']) == 4, '單張試拍：一張、一次請求、不自動重試'
     assert PR['accepted'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24 and PR['to_complete'] == PR['rejected_replan'] + PR['not_generated']
-    assert PR['generated_cumulative'] == PR['accepted'] + PR['rejected_replan'] and PR['rejected_sets'] == BATCH1
+    assert PR['generated_cumulative'] == sum(PR['generated_log'].values()) >= PR['accepted'] + PR['rejected_replan'] and PR['rejected_sets'] == BATCH1
     # ---- 核對：結論、設計卡、節奏 ----
     assert [r['id'] for r in X['review']] == order == [r['id'] for r in X['rhythm']] and len(order) == 24
     assert all(V[i]['verdict'] in LEVELS for i in order) and [i for i in order if V[i]['verdict'] == LEVELS[0]] == ['V-iris-chen']
