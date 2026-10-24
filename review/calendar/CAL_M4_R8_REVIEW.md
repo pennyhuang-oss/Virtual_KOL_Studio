@@ -1,3 +1,49 @@
+TASK-CAL-001／M-4／R8｜主管看圖覆核與構圖控制流程查核｜送審報告
+
+# M-4 R8 送審紀錄（主管看圖覆核後的構圖控制流程唯讀查核）
+
+- **固定成果 commit**：`3159528b914af76260da8a56853323dd257e1aa9`（被覆核的照片成果 `de17da5`、紀錄 `9b14b2b`）
+- **主管結論（逐字另存）**：`docs/calendar/data/cal_m4_supervisor_r8.json`。REVISE，不建議採用；Penny 尚未接受。和 Claude 自查（`cal_m4_r8_trial.json`）分開保存；自查原文沒改，只加了指向主管結論的欄位與狀態行。
+- **收尾句來源**：「finished like a page from a high-end photobook」由 Claude 在 R6 REVISE 依主管「寫真集完成度」的意見寫成，之後沿用；主管表示該用語來自主管建議。兩者都記錄。白邊與這句的關係仍是待查假設，沒有證實。
+- **本輪**：新增生成 0、修圖 0、訓練 0、上傳 0、付費操作 0、部署 0；唯一原圖保留，沒有修改，也沒有改成已接受；沒有純文字重試，沒有啟動 H-Jia。
+
+## 1. 事實同步
+
+- V-Somi 照片歷程：「R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受」（`status.production.set_notes`）。主管建議退回不是 Penny 決定。
+- 累計生成 8、credits 0.96，不變；24 套完成分類：已接受 1、退回待重規劃 5、尚未生成 18，不變。
+- 同步位置：企劃資料 `meta.status`、`counts_note`、`status.production.set_notes`、`m4r8`（加照片與紀錄 commit、主管結論、查核資料路徑與變更列）；CAL_18 的 R8 狀態行；選片頁資料 `data.js` 只在 repo 重建，沒有部署（新增的兩個 R8 commit SHA 已加進建置檢查的允許清單，它們不是私有 ID）。
+- 檢查：CAL_18–22 `--check` PASS、CAL_23 `--check` PASS（CAL_19 與先前版本逐字相同）、建置 `--check` PASS（671 檔，公開檔無私有識別碼、無交易原始資料）。
+
+## 2. 唯讀能力查核（`docs/calendar/CAL_25_M4_R8_FLOW_CHECK.md` §2）
+
+- 方法：MCP 模型 schema、工具說明、8 次 get_cost 唯讀報價（前後交易最新一列與任務清單最新一筆都沒變）、Higgsfield 官方說明頁。沒有上傳、沒有建任務、沒有付費，也沒有列出 Elements。私有紀錄 `review/calendar/m4_r8/flow_check_log.json`。
+- 結論摘要：
+  - Soul ID 可與參考圖並用（官方說明＋報價被接受）；並用後身分是否保持未確認。
+  - 參考圖是「primary direction」（官方），影響範圍混合、未拆分；網頁介面加參考圖時 prompt 不可用；MCP 送出的 prompt 是否生效未確認。
+  - Soul 沒有參考強度、姿勢、構圖參數（schema）；後台有強度欄位但無法設定。
+  - 費用（唯讀報價）：Soul＋參考 0.12、外擴 2、Nano Banana Pro 2、Nano Banana 2 2、GPT Image 2.5 high 2.75、Seedream 4.5 basic 1。
+  - 官方身分保持說明：同一人但非逐像素相同、極端風格或角度會小幅漂移；身材保持官方沒寫。
+
+## 3. 路徑與推薦（CAL_25 §3–§5）
+
+- A. 構圖底稿＋Soul 參考（推薦）；B. 構圖底稿＋Element 換人；C. 既有成品外擴＋遮罩清理（只當收尾工具）。
+- 下一次測試（提案，未執行）：只做 A 的第 1 步，一張無身分的構圖底稿（Nano Banana Pro 2k 3:4，報價 2；或 Seedream 4.5 basic，報價 1），1 次請求、不重試；底稿交主管及 Penny 看過後，第 2 步（Soul＋底稿參考，報價 0.12）另行授權。
+- 雙靴與雪地、人景主次、背景整理、白邊與版面、避免他人臉、驗收與停止點：見 CAL_25 §5。
+
+## 4. 需 Penny 決定
+
+見 CAL_25 §7：是否授權下一次測試與上限、底稿模型、是否允許一次唯讀 Elements 列表、是否允許向 Higgsfield 支援詢問。
+
+## 5. 必要閱讀清單
+
+- `docs/calendar/data/cal_m4_supervisor_r8.json`
+- `docs/calendar/CAL_25_M4_R8_FLOW_CHECK.md`
+- `docs/calendar/data/cal_m4_r8_flow_check.json`
+- `docs/calendar/data/cal_m4_r8_trial.json`
+- `review/calendar/m4_r8/V-somi-oh_m4r8_view.jpg`、`review/calendar/m4_r8/V-somi-oh_m4r8_frame_V_120x160.jpg`
+
+## 前一版紀錄（R8 單張測試，`9b14b2b`；原文保留）
+
 TASK-CAL-001／M-4／R8｜Somi 精簡 prompt 單張測試｜送審報告
 
 # M-4 R8 送審紀錄：V-Somi 精簡 prompt 單張測試
