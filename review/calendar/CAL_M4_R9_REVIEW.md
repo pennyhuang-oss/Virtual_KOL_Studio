@@ -1,3 +1,45 @@
+TASK-CAL-001／M-4／R9｜底稿退回與有限收尾｜送審報告
+
+# M-4 R9 送審紀錄（主管退回底稿後的有限收尾）
+
+- **固定成果 commit**：`9a9830e870cd0b6a122b301a105d00f9c9159691`（被覆核的底稿成果 `790b020`、紀錄 `103b20f`）
+- **主管結論（逐字另存）**：`docs/calendar/data/cal_m4_supervisor_r9.json`。REVISE，底稿不通過，不得送 Soul 第二步。和 Claude 自查（`cal_m4_r9_draft.json`）分開保存；自查原文沒改，只加了指向主管結論與模型核對的欄位和狀態行。
+- **主管自述另存**：主管表示前次審稿沒有抓出 Top／Middle／Bottom 分段描述的拼接風險；CAL_25 §5.1 的分段寫法由 Claude 撰寫。兩者分開記錄。
+- **狀態**：主管退回底稿，Penny 未接受。唯一原圖、Claude 自查原文與扣款證據保留不改。
+- **本輪**：新增生成 0、修圖 0、訓練 0、付費 0、部署 0；沒有拼接補救、沒有送第二步。
+
+## 1. 事實同步
+
+- 計數不變：月面照片生成 8、credits 0.96；構圖底稿生成 1、credits 2；合計 2.96。24 套完成分類不變（已接受 1，只有 V-Iris；退回待重規劃 5；尚未生成 18）。
+- V-Somi 照片歷程：R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿（非 Somi 成品、不算月面照片）主管退回，Penny 未接受。
+- 同步位置：企劃資料 `meta.status`、`set_notes`、`m4r9`（加底稿與紀錄 commit、主管結論、修訂資料與變更列）；CAL_18 的 R9 狀態行；選片頁資料 `data.js` 只在 repo 重建，沒有部署（新增的兩個 R9 commit SHA 已加進建置檢查的允許清單）。
+- 檢查：CAL_18–22 `--check` PASS、CAL_23 `--check` PASS（CAL_19 逐字不變）、建置 `--check` PASS（671 檔，公開檔無私有識別碼、無交易原始資料）。
+
+## 2. 模型名稱唯讀核對（CAL_26 §2）
+
+- 請求的模型：nano_banana_pro（已確認；送出參數與回傳）。
+- 交易計費名稱：Nano Banana Pro −2（已確認；歸屬本任務是依時窗推定）。
+- 任務紀錄 model 欄位：nano_banana_2（已確認；四種唯讀查詢一致）。
+- schema 與官方名稱：兩者是不同 ID 與名稱，沒有找到互為別名的官方對應。
+- 實際後端模型：未確認。不推測為別名，也不判定送錯。只查本任務；沒有讀他人作品、沒有建測試任務、沒有聯絡支援。
+
+## 3. 修訂 prompt（CAL_26 §3–§7；未執行）
+
+- 全文與 sha256 `3f5c858f…ee79321` 在 `docs/calendar/data/cal_m4_r9_followup.json`。
+- 主要刪改：刪除 Top／Middle／Bottom 分段寫法，改成一個相機位置沿巷道看、同一片雪地從前景延伸、屋簷連成一線；拿掉與相機方向矛盾的「由右往左」；「bottom of the picture」改成她和相機之間的空間；寫明燈籠照到臉；人物、服裝、配色、背景整理逐字保留。
+- 刪掉分段寫法只是避開一個可能成因，不是已找到確定成因。
+- 下一次單張測試：nano_banana_pro、2k、3:4、count 1、1 次請求、不重試；費用參考是 R9 唯讀報價 2，舊報價不代表新增授權。
+
+## 4. 必要閱讀清單
+
+- `docs/calendar/data/cal_m4_supervisor_r9.json`
+- `docs/calendar/CAL_26_M4_R9_DRAFT_REVISION.md`
+- `docs/calendar/data/cal_m4_r9_followup.json`
+- `docs/calendar/data/cal_m4_r9_draft.json`
+- `review/calendar/m4_r9/V-somi-oh_m4r9_draft_view.jpg`、`review/calendar/m4_r9/V-somi-oh_m4r9_draft_frame_V_120x160.jpg`
+
+## 前一版紀錄（R9 構圖底稿單張測試，`103b20f`；原文保留）
+
 TASK-CAL-001／M-4／R9｜Somi 構圖底稿單張測試｜送審報告
 
 # M-4 R9 送審紀錄：V-Somi 構圖底稿單張測試（構圖底稿，非 Somi 成品）
