@@ -121,7 +121,7 @@
  "verdict": "Claude 自查不通過：第 1、3 項不通過，第二步前置條件沒有成立。依指示本輪停止，不送第二步、不重試。",
  "observation": "三段拼接可能和 prompt 用「Top of the picture:／Middle:／Bottom third:」分段描述畫面有關——這只是本次觀察的推測，沒有證實；也不代表 Nano Banana Pro 或路徑 A 已證實無效。只有一張樣本，不能判斷發生率。",
  "not_somi": "人物是 prompt 描述出的替身（成年韓國女性、橘棕狼尾剪髮、指定服裝），不是已建模的 Somi，沒有做身分比對，也不能冒充成品。",
- "status": "構圖底稿，Claude 自查不通過；待主管及 Penny 看底稿。第二步未授權、未執行。",
+ "status": "主管退回底稿（REVISE），Penny 未接受；不得送第二步",
  "counts": {
   "draft_generated": 1,
   "draft_credits": 2,
@@ -132,5 +132,15 @@
   "trainings": 0,
   "uploads": 0,
   "deploys": 0
+ },
+ "supervisor_review": {
+  "file": "docs/calendar/data/cal_m4_supervisor_r9.json",
+  "conclusion": "REVISE，底稿不通過，不得送 Soul 第二步。",
+  "status": "主管退回底稿，Penny 未接受",
+  "note": "上方 checks／verdict／observation 是 Claude 自查原文，保留不改；主管結論另存。"
+ },
+ "model_check": {
+  "file": "docs/calendar/data/cal_m4_r9_followup.json（model_check）",
+  "summary": "請求 nano_banana_pro、計費名稱 Nano Banana Pro、任務紀錄 model 欄位 nano_banana_2；實際後端模型未確認。"
  }
 }

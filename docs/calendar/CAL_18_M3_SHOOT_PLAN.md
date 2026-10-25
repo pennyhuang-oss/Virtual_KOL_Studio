@@ -3,7 +3,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 # CAL_18 — M-3 24 套雙款寫真企劃、攝影設計與印刷構圖（shoot-plan-v12）
 
 > 資料檔：`data/cal_m3_shoot_plan.json`（shoot-plan-v12，M-4 R6，2026-10-21）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。
-> **M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），待主管及 Penny 看底稿；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID。** 生成數 8、credits 0.96、訓練數 0；構圖底稿另計：生成 1、credits 2（不是月面照片）（M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。）
+> **M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID。** 生成數 8、credits 0.96、訓練數 0；構圖底稿另計：生成 1、credits 2（不是月面照片）（M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。）
 > R4 狀態（歷史）：8 套已接受、16 套修訂待 Penny 定案；兩本月份人選排序已確認；版面（照片框）尚未定案；生成與費用都未授權。R2 的 Owner 決策逐字紀錄見 `CAL_19_M3_R2_OWNER_DECISION.md`。
 > R5：只修資料一致性與措辭（見 0b），沒有攝影方向變更。
 > R6 狀態（歷史）：22 套已接受；H-jia-seo、H-luna-tanaka 兩套新推薦待 Penny 定案；兩本月份與工作照片框已接受（工作版型，不是廠商規格、印刷安全或成品核准）。
@@ -18,7 +18,7 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12）；Claude 自查不通過，主管實際看圖 REVISE、不建議採用；Penny 未接受。純文字重試停止，改做構圖控制流程唯讀查核（CAL_25）。24 套完成分類不變（V-Somi 仍是退回待重規劃）。** 測試紀錄見 `data/cal_m4_r8_trial.json`，主管結論見 `data/cal_m4_supervisor_r8.json`，構圖控制流程查核見 `CAL_25_M4_R8_FLOW_CHECK.md`。
 
-> **M-4 R9：V-Somi 構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2）；構圖底稿，非 Somi 成品，不算月面照片；Claude 自查不通過（畫面是上下三段拼接，人與巷道不在同一空間）；待主管及 Penny 看底稿，第二步未授權。24 套完成分類不變。** 底稿紀錄見 `data/cal_m4_r9_draft.json`。
+> **M-4 R9：V-Somi 構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2）；構圖底稿，非 Somi 成品，不算月面照片；Claude 自查不通過，主管實際看圖 REVISE（三段拼接、空間不連續），退回底稿、不得送第二步；Penny 未接受。修訂 prompt 只準備、未執行（CAL_26）。24 套完成分類不變。** 底稿紀錄見 `data/cal_m4_r9_draft.json`，主管結論見 `data/cal_m4_supervisor_r9.json`，修訂 prompt 見 `CAL_26_M4_R9_DRAFT_REVISION.md`。
 
 ## 0. 版本
 

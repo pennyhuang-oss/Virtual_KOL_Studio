@@ -1,0 +1,128 @@
+{
+ "note": "M-4 R9 主管退回底稿後的修訂 prompt 與模型名稱核對（Claude 提案，未執行；不是生成授權）。不含任務 ID；私有核對紀錄在 review/calendar/m4_r9/execution_log.json。",
+ "task": "TASK-CAL-001／M-4／R9｜底稿退回與有限收尾",
+ "written_on": "2026-10-25",
+ "basis": {
+  "result": "790b020fa15dabfb44acea7d21524c470e0215ba",
+  "record": "103b20f0dfca2f2967846df2477024298d1fda3c",
+  "supervisor": "docs/calendar/data/cal_m4_supervisor_r9.json",
+  "r9_prompt_sha256": "80b09f0887071b099898dc8226b3e39f359b47229e52934387fb7a04259a8327"
+ },
+ "model_check": {
+  "date": "2026-10-25",
+  "scope": "只查本任務的送出參數與回傳、任務詳情、交易列、模型 schema 與官方說明頁；沒有讀他人作品、沒有建立測試任務、沒有聯絡支援，一次查完。",
+  "requested": {
+   "value": "nano_banana_pro",
+   "status": "已確認",
+   "source": "送出參數；送出回傳的 model 也是 nano_banana_pro"
+  },
+  "billing": {
+   "value": "Nano Banana Pro（−2）",
+   "status": "已確認（歸屬本任務是依時窗推定）",
+   "source": "交易列 2026-10-25T13:27:20Z"
+  },
+  "job_record": {
+   "value": "nano_banana_2",
+   "status": "已確認",
+   "source": "任務輪詢、任務清單、依 ID 查詢與單筆顯示四處一致；任務詳情 params 沒有另外的 model 欄位"
+  },
+  "schema_and_official": {
+   "value": "nano_banana_pro＝Nano Banana Pro；nano_banana_2＝Nano Banana 2；兩者是不同 ID 與名稱；官方說明頁也列為不同模型",
+   "status": "已確認；沒有找到兩者互為別名的官方對應"
+  },
+  "backend_actual": {
+   "value": "未確認",
+   "note": "唯讀資料只能確認前三項；不推測為別名，也不判定送錯。2k 3:4 報價兩者都是 2，價格無法區分；不拿他人任務比對輸出。"
+  }
+ },
+ "prompt": {
+  "text": "One continuous, atmospheric winter photograph, taken from a single camera position at eye level, standing in a quiet hot-spring town lane at blue hour in gentle snowfall and looking along it with natural perspective. The lane runs away from the camera and bends gently to the left between old dark-timber inns with closed wooden lattice doors; their snow-laden eaves recede in one line under a deep-blue evening sky, and a few small plain paper lanterns glow beneath them, getting smaller into the distance. The same smooth, fresh snow covers the ground all the way from the foreground, where it is untouched, back along the lane. A 24-year-old adult Korean woman with honey-orange brown hair in a layered wolf cut, wearing a long deep-cranberry wool coat over an ivory knit mini dress and white knee-high boots, walks slowly along the lane with her hands in her coat pockets, glancing up at the falling snow with a soft smile, her face in three-quarter view. She is a modest figure a little right of centre, part of the street rather than in front of it; her whole body is visible, both boots stand on the snow, and open snow stretches between her and the camera. The nearest lantern lights her face, her coat and the snow around her with warm amber light; everything else stays cool blue. It is a quiet pedestrian lane: plain timber walls, lattice doors, lanterns and snow are all there is.",
+  "sha256": "3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321",
+  "words": 242,
+  "r9_words": 225,
+  "status": "準備，未執行"
+ },
+ "changes": [
+  {
+   "r9": "A photograph of a quiet hot-spring town lane at blue hour in gentle snowfall, seen at eye level from across the lane, with natural perspective.",
+   "new": "One continuous, atmospheric winter photograph, taken from a single camera position at eye level, standing in a quiet hot-spring town lane at blue hour in gentle snowfall and looking along it with natural perspective.",
+   "why": "用一句話說明是一張連續照片，不列禁止詞。R9 同時寫「從巷道對面看」和「巷道往左退」，等於兩種視角；改成一個相機位置沿巷道看。「atmospheric winter」保留寫真氛圍。"
+  },
+  {
+   "r9": "Top of the picture: snow-laden wooden eaves and a strip of deep-blue evening sky. Middle: the lane recedes to the left between old dark-timber inns with closed wooden lattice doors; a few small plain paper lanterns glow under the eaves, getting smaller into the distance. Bottom third: smooth fresh snow covering the lane, untouched in the foreground.",
+   "new": "The lane runs away from the camera and bends gently to the left between old dark-timber inns with closed wooden lattice doors; their snow-laden eaves recede in one line under a deep-blue evening sky, and a few small plain paper lanterns glow beneath them, getting smaller into the distance. The same smooth, fresh snow covers the ground all the way from the foreground, where it is untouched, back along the lane.",
+   "why": "刪除 Top／Middle／Bottom 分段版面寫法（可能與三段拼接有關，未證實）；同樣的元素改成同一空間的描述：同一條巷道、屋簷連成一條往遠處退的線、同一片雪地從前景延伸到巷道深處。保留屋簷、深藍天空、木格門、小燈籠、未踩過的前景新雪。"
+  },
+  {
+   "r9": "walks slowly from right to left along the lane with her hands in her coat pockets, glancing up at the falling snow, her face in three-quarter view.",
+   "new": "walks slowly along the lane with her hands in her coat pockets, glancing up at the falling snow with a soft smile, her face in three-quarter view.",
+   "why": "相機沿巷道看時，「由右往左」等於橫越巷道，和沿巷道走矛盾；R9 也沒照做，行走方向不是驗收項目，所以拿掉。「with a soft smile」寫明 R9 已改善的抬頭神情，避免變得平淡。"
+  },
+  {
+   "r9": "She is a modest figure a little right of centre, with the lane opening out ahead of her; her whole body is visible, both boots stand on the snow, and a wide stretch of snow lies between her boots and the bottom of the picture.",
+   "new": "She is a modest figure a little right of centre, part of the street rather than in front of it; her whole body is visible, both boots stand on the snow, and open snow stretches between her and the camera.",
+   "why": "「bottom of the picture」是畫面版面用語，改成她和相機之間的空間；「part of the street rather than in front of it」表達人與街道共同構圖。「lane opening out ahead of her」依賴已拿掉的行走方向，一併刪除。沒有加百分比或距離。"
+  },
+  {
+   "r9": "The nearest lantern casts a warm amber pool of light on her and on the snow around her;",
+   "new": "The nearest lantern lights her face, her coat and the snow around her with warm amber light;",
+   "why": "R9 臉部受光偏中性；光色設計不變，只寫明燈籠照到臉。"
+  },
+  {
+   "r9": "（其餘：人物年齡與外型、服裝、「everything else stays cool blue」、最後一句背景整理）",
+   "new": "逐字保留",
+   "why": "R9 較成功的人物、服裝、配色與背景整理不動。"
+  }
+ ],
+ "verify": [
+  "主要：拿掉分段寫法、改成單一相機位置後，這一張是否是一個連續空間（沒有接縫，屋頂、巷道、地面與人物在同一透視）。",
+  "同時看 R9 已改善的部分是否保留：背景乾淨、中小人物、完整雙靴、抬頭看雪的神情、藍調與暖燈配色。",
+  "整張是否有寫真吸引力，不是只做到空間正確（交主管及 Penny 看圖判斷）。"
+ ],
+ "not_verify": [
+  "身分（沒有 Soul，人物仍是替身，不是 Somi 成品）",
+  "第二步",
+  "分段寫法是否就是成因：一張沒有接縫，也只代表這一次沒有出現，不能證實成因",
+  "發生率（只有一張）"
+ ],
+ "risks": [
+  "仍可能出現拼接、分格、白邊或頁面式版面；R8 白邊與 R9 三段拼接的成因都未確認。",
+  "實際後端模型未確認（任務紀錄欄位是 nano_banana_2）；結果好壞無法歸因到模型。",
+  "相機沿巷道看，人物可能變大、置中或背對；行走方向不指定，可能變成朝鏡頭走的擺拍感。",
+  "前景雪地可能仍窄（不設門檻，只看圖判斷）。",
+  "燈籠可能仍不是臉部主光；燈籠上可能有小字。",
+  "輸出 1792×2400 不是精確 3:4，套框要從上緣裁 11 px（約 379 ppi）。"
+ ],
+ "next_test": {
+  "status": "參考，不是授權；需 Penny 另行授權新增支出",
+  "model": "nano_banana_pro",
+  "resolution": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "medias": "none",
+  "soul": "none",
+  "use_unlim": false,
+  "training": false,
+  "requests": 1,
+  "retries": 0,
+  "cost_reference": "R9 唯讀報價 2（2026-10-25）、實扣 2；舊報價不代表新增授權，送出前要重新唯讀報價並確認不超過新授權上限。",
+  "record": "送出後照 R9 記錄送出參數、回傳 model、任務紀錄 model 欄位與交易名稱。",
+  "stop": "不論結果都停，交主管及 Penny 看圖；不送第二步、不重試、不修圖、不拼接補救。"
+ },
+ "counts": {
+  "generated": 0,
+  "retouched": 0,
+  "trained": 0,
+  "paid": 0,
+  "deployed": 0,
+  "month_photo": {
+   "generated": 8,
+   "credits": 0.96
+  },
+  "draft": {
+   "generated": 1,
+   "credits": 2
+  },
+  "all_credits": 2.96
+ }
+}

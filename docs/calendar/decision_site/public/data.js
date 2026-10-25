@@ -6882,10 +6882,32 @@ window.CAL_DATA = {
      "new": "……加「M-4 R9：構圖底稿 1 張……另計在 draft_counts；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。」",
      "old": "……M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。",
      "where": "counts_note"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受",
+     "old": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 只生成構圖底稿 1 張（非 Somi 成品、不算月面照片），待主管及 Penny 看底稿",
+     "where": "status.production.set_notes"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-4 R9：V-Somi 構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2）；構圖底稿，非 Somi 成品，不算月面照片；Claude 自查不通過，主管實際看圖 REVISE（三段拼接、空間不連續），退回底稿、不得送第二步；Penny 未接受。修訂 prompt 只準備、未執行（CAL_26）。24 套完成分類不變。",
+     "old": "M-4 R9：V-Somi 構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2）；構圖底稿，非 Somi 成品，不算月面照片；Claude 自查不通過（畫面是上下三段拼接，人與巷道不在同一空間）；待主管及 Penny 看底稿，第二步未授權。24 套完成分類不變。",
+     "where": "m4r9.status_line"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），待主管及 Penny 看底稿；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "where": "meta.status"
     }
    ],
+   "followup": "docs/calendar/data/cal_m4_r9_followup.json",
    "from_commit": "fa2cd6bad3f4f8337d374b2042e6f0a3a9d2024d",
-   "status_line": "M-4 R9：V-Somi 構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2）；構圖底稿，非 Somi 成品，不算月面照片；Claude 自查不通過（畫面是上下三段拼接，人與巷道不在同一空間）；待主管及 Penny 看底稿，第二步未授權。24 套完成分類不變。",
+   "photo_commit": "790b020fa15dabfb44acea7d21524c470e0215ba",
+   "record_commit": "103b20f0dfca2f2967846df2477024298d1fda3c",
+   "status_line": "M-4 R9：V-Somi 構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2）；構圖底稿，非 Somi 成品，不算月面照片；Claude 自查不通過，主管實際看圖 REVISE（三段拼接、空間不連續），退回底稿、不得送第二步；Penny 未接受。修訂 prompt 只準備、未執行（CAL_26）。24 套完成分類不變。",
+   "supervisor": "docs/calendar/data/cal_m4_supervisor_r9.json",
    "trial": "docs/calendar/data/cal_m4_r9_draft.json"
   },
   "meta": {
@@ -6901,7 +6923,7 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），待主管及 Penny 看底稿；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
    "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審"
   },
   "month_rules": [
@@ -7675,7 +7697,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "7e36cd81502a952224cae3cf705d0b83bbcc4e81",
+  "plan_blob": "54635d1002ec3526c6326beb9265874e0b6ab824",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -13029,7 +13051,7 @@ window.CAL_DATA = {
     ],
     "review_r6": "proposed-pending-supervisor-review",
     "set_notes": {
-     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 只生成構圖底稿 1 張（非 Somi 成品、不算月面照片），待主管及 Penny 看底稿"
+     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受"
     },
     "sets_total": 24,
     "to_complete": 23

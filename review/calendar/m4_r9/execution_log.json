@@ -130,6 +130,26 @@
    ],
    "vs_quote": "與唯讀報價 2 相同",
    "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款時間與任務建立時間同一秒，時窗內只有本任務。"
+  },
+  {
+   "t": "2026-10-25T18:50:00Z",
+   "step": "model-name check（唯讀，R9 主管覆核後）",
+   "requested": {
+    "value": "nano_banana_pro",
+    "source": "送出參數 params.model；送出回傳 results[0].model＝nano_banana_pro（同一次呼叫的回傳）"
+   },
+   "billing": {
+    "value": "Nano Banana Pro",
+    "source": "transactions：2026-10-25T13:27:20.155696Z Nano Banana Pro −2（依時窗推定屬本任務；交易列沒有任務 ID）"
+   },
+   "job_record_model_field": {
+    "value": "nano_banana_2",
+    "source": "jobs_wait、show_generations、show_generation_by_ids（只查本任務 b5518c00-b45e-4664-8fa5-9abee87c93de）與 job_display 都寫 nano_banana_2；任務詳情 params 沒有另外的 model 欄位（只有 prompt、aspect_ratio、input_images、width 1792、height 2400、resolution 2k、batch_size 1）"
+   },
+   "schema": "models_explore get：nano_banana_pro＝「Nano Banana Pro」（resolution 預設 2k）；nano_banana_2＝「Nano Banana 2」（resolution 預設 1k，另有 is_inpaint 與 mask）；兩者是不同的 ID 與名稱。search「nano banana」只回傳 nano_banana_2_1。2k 3:4 唯讀報價兩者都是 2（R8 查核），價格無法區分。",
+   "official": "官方說明 Nano Banana 頁（2026-09-09 更新）把 Nano Banana、Nano Banana Pro、Nano Banana 2、Nano Banana 2 Lite 列為不同模型；沒有找到 Pro 與 2 是同一模型或別名的官方對應。",
+   "backend_actual": "未確認：唯讀資料只能確認請求、計費名稱與任務紀錄欄位；無法確認實際後端模型。不推測為別名，也不判定送錯。",
+   "not_done": "沒有讀他人作品（不拿其他任務比對輸出尺寸）、沒有建立測試任務、沒有聯絡支援；一次查完，沒有持續輪詢。"
   }
  ]
 }

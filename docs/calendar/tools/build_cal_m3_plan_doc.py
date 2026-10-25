@@ -88,7 +88,7 @@ def render18(d):
          f"> **M-4 R6 狀態：{d['m4r6']['batch1_line']} {progress(d)}以下 24 套是採用重審提案前的原文。**", '',
          *([f"> **{d['m4r7']['status_line']}** 試拍紀錄見 `data/cal_m4_r7_trial.json`，主管結論見 `data/cal_m4_supervisor_r7.json`，後續測試方案見 `CAL_24_M4_R7_SOMI_FOLLOWUP.md`。", ''] if 'm4r7' in d else []),
          *([f"> **{d['m4r8']['status_line']}** 測試紀錄見 `data/cal_m4_r8_trial.json`，主管結論見 `data/cal_m4_supervisor_r8.json`，構圖控制流程查核見 `CAL_25_M4_R8_FLOW_CHECK.md`。", ''] if 'm4r8' in d else []),
-         *([f"> **{d['m4r9']['status_line']}** 底稿紀錄見 `data/cal_m4_r9_draft.json`。", ''] if 'm4r9' in d else []),
+         *([f"> **{d['m4r9']['status_line']}** 底稿紀錄見 `data/cal_m4_r9_draft.json`，主管結論見 `data/cal_m4_supervisor_r9.json`，修訂 prompt 見 `CAL_26_M4_R9_DRAFT_REVISION.md`。", ''] if 'm4r9' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],
