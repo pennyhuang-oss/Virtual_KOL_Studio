@@ -1,0 +1,136 @@
+{
+ "note": "M-4 R9 構圖底稿單張測試紀錄（Claude 自查；不含任務 ID）。構圖底稿，非 Somi 成品：人物不是已建模的 Somi，不能當月面照片，也不改變 24 套分類。私有執行紀錄 review/calendar/m4_r9/execution_log.json。",
+ "task": "TASK-CAL-001／M-4／R9｜Somi 構圖底稿單張測試",
+ "round": "M-4 R9",
+ "written_on": "2026-10-25",
+ "basis": {
+  "plan_result": "3159528b914af76260da8a56853323dd257e1aa9",
+  "plan_review": "fa2cd6bad3f4f8337d374b2042e6f0a3a9d2024d",
+  "auth": "docs/calendar/data/cal_m4_auth_r9.json",
+  "plan": "CAL_25 §5.1（路徑 A 第 1 步）"
+ },
+ "kind": "構圖底稿（非 Somi 成品）",
+ "set_context": "V-somi-oh（2027 年 12 月）",
+ "ratio": "3:4",
+ "prompt": {
+  "source": "3159528 CAL_25 §5.1",
+  "base_sha256": "95009f19062b7ab0f70421a9bc967469f20d14ccb4b438b161a3cfeacee56b88",
+  "edits": [
+   {
+    "from": "A young Korean woman",
+    "to": "A 24-year-old adult Korean woman"
+   }
+  ],
+  "sha256": "80b09f0887071b099898dc8226b3e39f359b47229e52934387fb7a04259a8327",
+  "words": 225,
+  "text": "A photograph of a quiet hot-spring town lane at blue hour in gentle snowfall, seen at eye level from across the lane, with natural perspective. Top of the picture: snow-laden wooden eaves and a strip of deep-blue evening sky. Middle: the lane recedes to the left between old dark-timber inns with closed wooden lattice doors; a few small plain paper lanterns glow under the eaves, getting smaller into the distance. Bottom third: smooth fresh snow covering the lane, untouched in the foreground. A 24-year-old adult Korean woman with honey-orange brown hair in a layered wolf cut, wearing a long deep-cranberry wool coat over an ivory knit mini dress and white knee-high boots, walks slowly from right to left along the lane with her hands in her coat pockets, glancing up at the falling snow, her face in three-quarter view. She is a modest figure a little right of centre, with the lane opening out ahead of her; her whole body is visible, both boots stand on the snow, and a wide stretch of snow lies between her boots and the bottom of the picture. The nearest lantern casts a warm amber pool of light on her and on the snow around her; everything else stays cool blue. It is a quiet pedestrian lane: plain timber walls, lattice doors, lanterns and snow are all there is."
+ },
+ "request": {
+  "model": "nano_banana_pro",
+  "resolution": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "medias": "none",
+  "soul": "none",
+  "use_unlim": false,
+  "folder": "不指定（auto_create_project false）",
+  "training": false
+ },
+ "precheck": {
+  "preferences": "auto_create_project false",
+  "inflight": "沒有進行中任務",
+  "quote": "get_cost 唯讀報價 2（≤ 上限 2）；報價前後交易最新一列與任務清單最新一筆都沒變，報價沒有建任務、沒有扣款"
+ },
+ "run": {
+  "requests": 1,
+  "retries": 0,
+  "polls": 2,
+  "status": "completed",
+  "note": "送出後工作程序重啟；重啟後立即保存任務 ID，查原任務取結果，沒有補送。",
+  "model_label": "送出參數、送出回傳與交易名稱都是 Nano Banana Pro；任務清單的 model 欄位寫 nano_banana_2。實際由哪個模型繪製無法從唯讀資料確認，記為未確認。"
+ },
+ "charge": {
+  "rows": [
+   {
+    "at": "2026-10-25T13:27:20Z",
+    "name": "Nano Banana Pro",
+    "credits": -2
+   }
+  ],
+  "refunds": 0,
+  "vs_quote": "與報價相同",
+  "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款與任務建立同一秒，時窗內只有本任務。"
+ },
+ "result": {
+  "original": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r9_composition_draft.png",
+  "original_note": "唯一原圖，不改、私有（檔內含平台任務 ID 與 AI 生成標記 IPTC DigitalSourceType trainedAlgorithmicMedia、Credit「Made with Google AI」）",
+  "sha256": "c0812665e9003102cc18c5e41734a67fb2be27af1d8f904324f621c01b3924c6",
+  "px": [
+   1792,
+   2400
+  ],
+  "view": "review/calendar/m4_r9/V-somi-oh_m4r9_draft_view.jpg",
+  "view_note": "1200 寬＋下方「構圖底稿，非 Somi 成品」標示帶；照片像素不改；無中繼資料",
+  "frame": "review/calendar/m4_r9/V-somi-oh_m4r9_draft_frame_V_120x160.jpg",
+  "frame_note": "1792×2400 不是精確 3:4（0.747）；放入框前從上緣裁 11 px 成 1792×2389；寬 120 mm 約 379 ppi；無中繼資料"
+ },
+ "measured": {
+  "panel_seams_rows": [
+   799,
+   1599
+  ],
+  "panel_note": "相鄰列差值在第 799／800 列 52.7、第 1599／1600 列 39.9（其他列中位數 3.2），剛好在高度 1/3、2/3：上下三段拼接",
+  "white_border": "無：四邊都是影像內容",
+  "figure_height_ratio": "約 47%（髮頂約第 1205 列到前靴底約第 2327 列）",
+  "figure_center_x": "約寬度 70%",
+  "boot_bottom_margin": "前靴底離下緣約 73 px（3.0%）；套框裁切後約 3.1%"
+ },
+ "aesthetic": "單看每一段，材質與光色有寫真質感：厚雪屋頂、木格門、地燈籠，深蔓越莓紅大衣和藍調協調。但整張不是一張照片，而是上下三段拼接：屋頂近景（上 1/3）、巷道遠景（中 1/3）、雪地與人物（下 1/3），各段距離和透視不同；人物跨過第二條接縫，上半身背後是格子門，下半身背後換成木牆與地燈籠。讀起來像分鏡或拼貼頁，不像寫真集裡的一張照片。",
+ "checks": [
+  {
+   "k": "1. 滿版，無相紙框、頁面或文字版面",
+   "result": "不通過",
+   "seen": "沒有白邊或相紙框，也沒有文字版面；但畫面是三段拼接，接縫在高度 1/3、2/3，屬於頁面式版面。"
+  },
+  {
+   "k": "2. 雙靴完整，靴下有清楚雪地",
+   "result": "部分通過",
+   "seen": "雙靴完整、站在雪上；前靴底離下緣約 73 px（3.0%），靴下雪地很窄，不是 prompt 寫的「一大段雪地」。"
+  },
+  {
+   "k": "3. 人與巷道共同構圖，比例與空間平衡",
+   "result": "不通過",
+   "seen": "巷道在中段另一個畫面，人物站在下段雪地，兩者不是同一個空間；人物約占高度 47%、中心約在寬度 70%，偏右明顯。整張無法當成一個空間判讀平衡。"
+  },
+  {
+   "k": "4. 背景乾淨，無搶戲的招牌、電線、車或桶子",
+   "result": "大致通過",
+   "seen": "沒有招牌、電線、車輛或桶子；簷下燈籠和地燈籠上有小字，有雨水管，都不搶戲。"
+  },
+  {
+   "k": "5. 讀得出抬頭看雪的瞬間，姿態自然",
+   "result": "部分通過",
+   "seen": "雙手插口袋、微笑往左上看，姿態自然；但是她朝鏡頭方向走（不是 prompt 寫的由右往左），視線讀成看左上方某處，不一定讀成看雪。"
+  },
+  {
+   "k": "6. 藍調、暖燈及酒紅／象牙白配色協調，人景融合",
+   "result": "部分通過",
+   "seen": "藍調、暖色燈籠、酒紅／象牙白／白靴配色協調；地燈籠在她右側雪地有暖光，但臉部受光偏中性、均勻（頭髮有暖色邊光），看不出燈籠是她的主光；人景融合被分段接縫打斷。"
+  }
+ ],
+ "verdict": "Claude 自查不通過：第 1、3 項不通過，第二步前置條件沒有成立。依指示本輪停止，不送第二步、不重試。",
+ "observation": "三段拼接可能和 prompt 用「Top of the picture:／Middle:／Bottom third:」分段描述畫面有關——這只是本次觀察的推測，沒有證實；也不代表 Nano Banana Pro 或路徑 A 已證實無效。只有一張樣本，不能判斷發生率。",
+ "not_somi": "人物是 prompt 描述出的替身（成年韓國女性、橘棕狼尾剪髮、指定服裝），不是已建模的 Somi，沒有做身分比對，也不能冒充成品。",
+ "status": "構圖底稿，Claude 自查不通過；待主管及 Penny 看底稿。第二步未授權、未執行。",
+ "counts": {
+  "draft_generated": 1,
+  "draft_credits": 2,
+  "month_photo_generated_cumulative": 8,
+  "month_photo_credits_cumulative": 0.96,
+  "all_credits_cumulative": 2.96,
+  "retouched": 0,
+  "trainings": 0,
+  "uploads": 0,
+  "deploys": 0
+ }
+}

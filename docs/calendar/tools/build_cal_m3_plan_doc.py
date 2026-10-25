@@ -42,7 +42,8 @@ def progress(d):
     assert PR['accepted'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24
     assert PR['to_complete'] == PR['rejected_replan'] + PR['not_generated'] and PR['generated_cumulative'] == sum(PR['generated_log'].values()) >= PR['accepted'] + PR['rejected_replan']
     return (f"{PR['sets_total']} 套＝已接受 {PR['accepted']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；"
-            f"待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計）。")
+            f"待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計"
+            + (f"；構圖底稿另計 {PR['drafts']['generated']} 張，不是月面照片" if 'drafts' in PR else '') + '）。')
 
 
 def cell(s):
@@ -74,7 +75,8 @@ def render18(d):
     PR = d['printing']
     L = [FIRST_LINE, '', f"# CAL_18 — M-3 24 套雙款寫真企劃、攝影設計與印刷構圖（{d['version']}）", '',
          f"> 資料檔：`data/cal_m3_shoot_plan.json`（{d['version']}，{d['round']}，{d['written_on']}）。本文件由 `tools/build_cal_m3_plan_doc.py` 產生，內容以資料檔為準。",
-         f"> **{m['status']}。** 生成數 {d['counts']['generated']}、credits {d['counts']['credits']}、訓練數 {d['counts']['trainings']}（{d['counts_note']}）",
+         f"> **{m['status']}。** 生成數 {d['counts']['generated']}、credits {d['counts']['credits']}、訓練數 {d['counts']['trainings']}"
+         + (f"；構圖底稿另計：生成 {d['draft_counts']['generated']}、credits {d['draft_counts']['credits']}（不是月面照片）" if 'draft_counts' in d else '') + f"（{d['counts_note']}）",
          '> R4 狀態（歷史）：8 套已接受、16 套修訂待 Penny 定案；兩本月份人選排序已確認；版面（照片框）尚未定案；生成與費用都未授權。R2 的 Owner 決策逐字紀錄見 `CAL_19_M3_R2_OWNER_DECISION.md`。',
          '> R5：只修資料一致性與措辭（見 0b），沒有攝影方向變更。',
          '> R6 狀態（歷史）：22 套已接受；H-jia-seo、H-luna-tanaka 兩套新推薦待 Penny 定案；兩本月份與工作照片框已接受（工作版型，不是廠商規格、印刷安全或成品核准）。',
@@ -86,6 +88,7 @@ def render18(d):
          f"> **M-4 R6 狀態：{d['m4r6']['batch1_line']} {progress(d)}以下 24 套是採用重審提案前的原文。**", '',
          *([f"> **{d['m4r7']['status_line']}** 試拍紀錄見 `data/cal_m4_r7_trial.json`，主管結論見 `data/cal_m4_supervisor_r7.json`，後續測試方案見 `CAL_24_M4_R7_SOMI_FOLLOWUP.md`。", ''] if 'm4r7' in d else []),
          *([f"> **{d['m4r8']['status_line']}** 測試紀錄見 `data/cal_m4_r8_trial.json`，主管結論見 `data/cal_m4_supervisor_r8.json`，構圖控制流程查核見 `CAL_25_M4_R8_FLOW_CHECK.md`。", ''] if 'm4r8' in d else []),
+         *([f"> **{d['m4r9']['status_line']}** 底稿紀錄見 `data/cal_m4_r9_draft.json`。", ''] if 'm4r9' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

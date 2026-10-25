@@ -259,7 +259,7 @@ def render(P, O, SUP, X):
     L += ['', f"- 第一批：{O['decision']['batch1_summary']}"]
     L += [f"- {s}：{v}" for s, v in O['decision']['batch1'].items()]
     L += [f"- Iris：{O['decision']['iris']}", f"- 範圍：{O['decision']['scope']}", f"- M-4 R5：{O['decision']['r5_status']}",
-          f"- 進度：{PR['sets_total']} 套＝已接受 {PR['accepted']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計）。",
+          f"- 進度：{PR['sets_total']} 套＝已接受 {PR['accepted']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計" + (f"；構圖底稿另計 {PR['drafts']['generated']} 張，不是月面照片" if 'drafts' in PR else '') + "）。",
           f"- 主管 v2 覆核範圍：{SV2['scope']}", f"- 本輪限制：{SV2['limits']}",
           f"- Penny 頁面原文：{O['page_copy']['note']}", '',
           '**Penny 逐張重點（主管摘要，轉交自 R6 指令；不是 Penny 頁面原文）：**', '']

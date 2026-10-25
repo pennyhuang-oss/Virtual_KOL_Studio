@@ -1,0 +1,135 @@
+{
+ "note": "M-4 R9 私有執行紀錄（含任務 ID；只留在 repo，不公開）。構圖底稿，人物不是已建模的 Somi，不是月面成品。",
+ "events": [
+  {
+   "t": "2026-10-25T13:14:01Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r9.json",
+   "kind": "構圖底稿",
+   "requests_max": 1,
+   "budget_credits": 2
+  },
+  {
+   "t": "2026-10-25T13:14:30Z",
+   "step": "prompt",
+   "source": "3159528 CAL_25 §5.1（cal_m4_r8_flow_check.json next_test.step1.prompt）",
+   "base_sha256": "95009f19062b7ab0f70421a9bc967469f20d14ccb4b438b161a3cfeacee56b88",
+   "edits": [
+    {
+     "from": "A young Korean woman",
+     "to": "A 24-year-old adult Korean woman"
+    }
+   ],
+   "final_sha256": "80b09f0887071b099898dc8226b3e39f359b47229e52934387fb7a04259a8327",
+   "chars": 1275,
+   "words": 225,
+   "prompt": "A photograph of a quiet hot-spring town lane at blue hour in gentle snowfall, seen at eye level from across the lane, with natural perspective. Top of the picture: snow-laden wooden eaves and a strip of deep-blue evening sky. Middle: the lane recedes to the left between old dark-timber inns with closed wooden lattice doors; a few small plain paper lanterns glow under the eaves, getting smaller into the distance. Bottom third: smooth fresh snow covering the lane, untouched in the foreground. A 24-year-old adult Korean woman with honey-orange brown hair in a layered wolf cut, wearing a long deep-cranberry wool coat over an ivory knit mini dress and white knee-high boots, walks slowly from right to left along the lane with her hands in her coat pockets, glancing up at the falling snow, her face in three-quarter view. She is a modest figure a little right of centre, with the lane opening out ahead of her; her whole body is visible, both boots stand on the snow, and a wide stretch of snow lies between her boots and the bottom of the picture. The nearest lantern casts a warm amber pool of light on her and on the snow around her; everything else stays cool blue. It is a quiet pedestrian lane: plain timber walls, lattice doors, lanterns and snow are all there is."
+  },
+  {
+   "t": "2026-10-25T13:15:00Z",
+   "step": "pre-check",
+   "preferences": {
+    "auto_create_project": false
+   },
+   "folder_id": "不指定",
+   "model_params": "nano_banana_pro：resolution 1k/2k/4k（預設 2k）；medias image_references；比例含 3:4；unlim available false",
+   "inflight": "任務清單最新 3 筆都是 completed（最新一筆為 R8 任務 c081c7f7-8807-40a9-a072-e161a002b632），沒有進行中任務；第 3 筆是帳號內其他活動的任務，只看到狀態，不記錄內容",
+   "tx_boundary": {
+    "newest_row": "2026-10-24T13:55:11.761531Z Higgsfield Soul V2 -0.12 spend（R8）"
+   }
+  },
+  {
+   "t": "2026-10-25T13:16:00Z",
+   "step": "quote（get_cost，唯讀）",
+   "settings": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "soul": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "80b09f0887071b099898dc8226b3e39f359b47229e52934387fb7a04259a8327",
+   "quote": {
+    "credits": 2,
+    "credits_exact": 2
+   },
+   "budget": 2,
+   "within_budget": true,
+   "readonly_evidence": "報價後（2026-10-25T13:20Z，工作程序重啟後複查）交易最新一列仍是 2026-10-24T13:55:11.761531Z Soul V2 −0.12（R8）；任務清單最新一筆仍是 R8 任務。報價沒有建立任務、沒有扣款。"
+  },
+  {
+   "t": "2026-10-25T13:20:20Z",
+   "step": "intent",
+   "kind": "構圖底稿",
+   "request": "generate_image nano_banana_pro 2k 3:4 count 1 use_unlim false，prompt＝final_sha256 80b09f08…",
+   "retry": "不重試；逾時或結果不明先查原任務，不補送",
+   "note": "送出前保存意圖；任務 ID 取得後立即寫入下一筆"
+  },
+  {
+   "t": "2026-10-25T13:27:31Z",
+   "step": "submitted",
+   "job_id": "b5518c00-b45e-4664-8fa5-9abee87c93de",
+   "status": "pending",
+   "model_echo": "nano_banana_pro",
+   "echo": {
+    "aspect_ratio": "3:4",
+    "resolution": "2k",
+    "prompt": "與 final_sha256 80b09f08… 全文相同（回傳 params.prompt）"
+   },
+   "requests_used": 1,
+   "note": "送出後工作程序重啟；任務 ID 在重啟後立即寫入（未補送）"
+  },
+  {
+   "t": "2026-10-25T13:29:12Z",
+   "step": "terminal",
+   "job_id": "b5518c00-b45e-4664-8fa5-9abee87c93de",
+   "status": "completed",
+   "polls": 2,
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261025_132720_b5518c00-b45e-4664-8fa5-9abee87c93de.png",
+   "job_meta": {
+    "width": 1792,
+    "height": 2400,
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "input_images": [],
+    "created_at": "2026-10-25T13:27:20.101196Z",
+    "model_field": "nano_banana_2"
+   },
+   "model_label_discrepancy": "送出時 model＝nano_banana_pro，送出回傳 model＝nano_banana_pro，交易名稱＝Nano Banana Pro；但 jobs_wait 與任務清單的 model 欄位寫 nano_banana_2。實際由哪個模型繪製無法從唯讀資料確認，記為未確認，不自行解釋。"
+  },
+  {
+   "t": "2026-10-25T13:29:12Z",
+   "step": "saved",
+   "path": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r9_composition_draft.png",
+   "bytes": 6251934,
+   "sha256": "c0812665e9003102cc18c5e41734a67fb2be27af1d8f904324f621c01b3924c6",
+   "px": [
+    1792,
+    2400
+   ],
+   "png_text_chunks": "hf-job-id；IPTC／XMP：DigitalSourceType trainedAlgorithmicMedia、photoshop:Credit「Made with Google AI」"
+  },
+  {
+   "t": "2026-10-25T13:29:12Z",
+   "step": "charge",
+   "rows": [
+    {
+     "created_at": "2026-10-25T13:27:20.155696Z",
+     "display_name": "Nano Banana Pro",
+     "credits": -2,
+     "action": "spend"
+    }
+   ],
+   "refunds": 0,
+   "window": "送出前最新一列 2026-10-24T13:55:11.761531Z → 送出後只多這一列",
+   "jobs_in_window": [
+    "b5518c00-b45e-4664-8fa5-9abee87c93de（建立 2026-10-25T13:27:20.101196Z）"
+   ],
+   "vs_quote": "與唯讀報價 2 相同",
+   "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款時間與任務建立時間同一秒，時窗內只有本任務。"
+  }
+ ]
+}

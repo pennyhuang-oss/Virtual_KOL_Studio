@@ -1,0 +1,39 @@
+{
+ "note": "M-4 R9 Penny 授權與主管指令（逐字）。授權只限 Nano Banana Pro 構圖底稿 1 張、最多 1 次請求、費用上限 2 credits；不授權第二步 Soul 生成、自動重試或其他支出。底稿人物不是已建模的 Somi，不是月面成品。本檔只在 repo。",
+ "task": "TASK-CAL-001／M-4／R9｜Somi 構圖底稿單張測試",
+ "received": "2026-10-25T13:14:01Z",
+ "source": "Penny 授權，經主管（ChatGPT）指令轉交",
+ "base": {
+  "result": "3159528b914af76260da8a56853323dd257e1aa9",
+  "review": "fa2cd6bad3f4f8337d374b2042e6f0a3a9d2024d",
+  "head_at_receipt": "fa2cd6bad3f4f8337d374b2042e6f0a3a9d2024d",
+  "supervisor": "流程查核 PASS；路徑 A 只是待實證方案；本輪只做構圖底稿，不做第二步"
+ },
+ "scope": {
+  "kind": "構圖底稿（非 Somi 成品）",
+  "set_context": "V-somi-oh（2027 年 12 月）",
+  "images_max": 1,
+  "requests_max": 1,
+  "retry": false,
+  "budget_credits": 2,
+  "model": "nano_banana_pro",
+  "resolution": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "use_unlim": false,
+  "medias": "none",
+  "soul": "none",
+  "training": false,
+  "second_step": "不授權（另行授權，不能自動接續）",
+  "prompt_source": "3159528 CAL_25 §5.1（＝cal_m4_r8_flow_check.json next_test.step1.prompt）",
+  "prompt_base_sha256": "95009f19062b7ab0f70421a9bc967469f20d14ccb4b438b161a3cfeacee56b88",
+  "prompt_edits": [
+   {
+    "from": "A young Korean woman",
+    "to": "A 24-year-old adult Korean woman"
+   }
+  ],
+  "prompt_final_sha256": "80b09f0887071b099898dc8226b3e39f359b47229e52934387fb7a04259a8327"
+ },
+ "verbatim": "TASK-CAL-001／M-4／R9｜Somi 構圖底稿單張測試\n\nPenny授權：\n僅用Nano Banana Pro生成1張構圖底稿，\n最多1次請求，費用上限2 credits。\n不授權第二步Soul生成、自動重試或其他支出。\n\nRepo：pennyhuang-oss/Virtual_KOL_Studio\n分支：claude/epic-carson-n5w0qu\n方案成果：3159528b914af76260da8a56853323dd257e1aa9\n送審紀錄：fa2cd6bad3f4f8337d374b2042e6f0a3a9d2024d\n先確認HEAD，不回退、不覆蓋。\n\n【主管覆核】\n流程查核PASS；路徑A只是待實證方案。\nSoul參考圖＋Soul ID有官方支援說明，\n但構圖保持、替身臉影響及MCP prompt是否生效未驗證。\n本輪只做構圖底稿，不做第二步。\n\n【固定輸入】\n使用固定成果CAL_25 §5.1底稿prompt，\n只將“A young Korean woman”改為\n“A 24-year-old adult Korean woman”；\n其餘逐字保留，保存最終全文及hash。\n\nnano_banana_pro、2k、3:4、count 1；\n無參考圖、無Soul、不用unlim、不訓練。\n這是構圖底稿，人物不是已建模Somi，不得冒充成品。\n\n【報價與請求】\n先用不扣款、不建任務的唯讀報價確認≤2 credits。\n無法確認或超額即停止，不自行改模型。\n保存提交意圖；任務ID取得後立即保存。\n逾時或結果不明先查原任務，不補送。\n記錄實際扣款，區分直接對帳與時窗推定。\n\n【看圖要求】\n必須實際看圖，先評整張寫真美感，再逐項：\n1. 滿版，無相紙框、頁面或文字版面。\n2. 雙靴完整，靴下有清楚雪地。\n3. 人與巷道共同構圖，比例與空間平衡。\n4. 背景乾淨，無搶戲的招牌、電線、車或桶子。\n5. 讀得出抬頭看雪的瞬間，姿態自然。\n6. 藍調、暖燈及酒紅／象牙白配色協調，人景融合。\n\n六項均為第二步的前置條件；本輪不論通過與否都停。\n不把數字符合當成美感通過。\n失敗只記本次觀察，不宣稱模型或流程已證實無效。\n\n【交付】\n保留原圖；提供無私有ID顯示版與120×160mm套框，\n直接附圖，不只給私有GitHub連結。\n明確標示「構圖底稿，非Somi成品」。\n\n同步底稿生成次數與實際費用，\n和月面成品、24套接受狀態分開計算。\n已接受仍只有V-Iris，不變。\n\ncommit並push原分支。\n用單一程式碼框回報：\n成果SHA、最終prompt、設定、請求與扣款、\n逐項自查、圖片位置與未完成事項。\n自查不是主管驗收或Penny接受。\n\n不修圖、不重試、不部署、不列Elements、\n不聯絡支援、不啟動第二步或H-Jia、不合併main。\n完成後交ChatGPT與Penny看底稿。\n第二步另行授權，不能自動接續。"
+}
