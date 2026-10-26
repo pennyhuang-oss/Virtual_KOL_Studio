@@ -1,0 +1,164 @@
+{
+ "note": "M-4 R11 私有執行紀錄（含 Soul ID 與任務 ID；只留在 repo，不公開）。V-Somi Soul 第二步＋R10 構圖參考單張測試。",
+ "events": [
+  {
+   "t": "2026-10-26T14:35:45Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r11.json",
+   "requests_max": 1,
+   "budget_credits": 0.12
+  },
+  {
+   "t": "2026-10-26T14:36:30Z",
+   "step": "prompt",
+   "source": "3159528 CAL_25 §5.2（cal_m4_r8_flow_check.json next_test.step2.prompt；R10 送審提案第二步 prompt），逐字",
+   "sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7",
+   "edits": [],
+   "chars": 645,
+   "words": 118,
+   "prompt": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. She walks slowly along a snowy hot-spring town lane at blue hour with her hands in her coat pockets, glancing up at the falling snow, in the warm glow of a small paper lantern."
+  },
+  {
+   "t": "2026-10-26T14:37:00Z",
+   "step": "reference mapping",
+   "file": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png",
+   "sha256": "deafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8",
+   "png_hf_job_id": "db5c6a9e-974a-4191-b855-80ea689028f1",
+   "media": {
+    "value": "db5c6a9e-974a-4191-b855-80ea689028f1",
+    "role": "image"
+   },
+   "note": "原圖檔內的 hf-job-id 與 R10 任務相同，所以用該原任務作 role image；沒有上傳，沒有用顯示版或套框預覽，沒有改圖或裁切。"
+  },
+  {
+   "t": "2026-10-26T14:38:00Z",
+   "step": "pre-check",
+   "soul": {
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "name": "somi-oh-soul-v1-5img-20260904",
+    "status": "ready",
+    "raw_status": "completed"
+   },
+   "preferences": {
+    "auto_create_project": false
+   },
+   "inflight": "任務清單最新 2 筆都是 completed（最新為 R10 底稿任務）；沒有本輪未釐清的提交",
+   "tx_boundary": {
+    "newest_row": "2026-10-26T14:06:36.251092Z Nano Banana Pro -2（R10 底稿）"
+   }
+  },
+  {
+   "t": "2026-10-26T14:39:00Z",
+   "step": "quote（get_cost，唯讀）",
+   "settings": {
+    "model": "soul_2",
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "medias": [
+     {
+      "value": "db5c6a9e-974a-4191-b855-80ea689028f1",
+      "role": "image"
+     }
+    ],
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "style_id": "none"
+   },
+   "prompt_sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "budget": 0.12,
+   "within_budget": true,
+   "readonly_evidence": "報價後交易最新一列仍是 2026-10-26T14:06:36.251092Z（R10 底稿）；報價沒有扣款。工具接受 soul_id＋參考圖的組合（報價層級）。"
+  },
+  {
+   "t": "2026-10-26T14:39:03Z",
+   "step": "intent",
+   "request": {
+    "model": "soul_2",
+    "soul": "somi-oh（ID 見 pre-check）",
+    "medias": [
+     {
+      "value": "db5c6a9e-974a-4191-b855-80ea689028f1",
+      "role": "image"
+     }
+    ],
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "style_id": "none",
+    "prompt_sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7"
+   },
+   "retry": "不重試；逾時、重啟或結果不明先查原任務，不補送；工具若拒絕此組合即停止，不移除 Soul 或參考圖改送"
+  },
+  {
+   "t": "2026-10-26T14:39:35Z",
+   "step": "submitted",
+   "job_id": "02b7a9f0-5dc5-49ca-8995-6caf6b8cafb8",
+   "status": "pending",
+   "returned_model": "text2image_soul_v2",
+   "echo": {
+    "reference_images": [
+     "db5c6a9e-974a-4191-b855-80ea689028f1"
+    ],
+    "medias": [
+     {
+      "role": "image",
+      "type": "image_job",
+      "id": "db5c6a9e-974a-4191-b855-80ea689028f1",
+      "url": "…/hf_20261026_140636_db5c6a9e-974a-4191-b855-80ea689028f1.png（R10 原圖）"
+     }
+    ],
+    "soul_reference": "somi-oh-soul-v1-5img-20260904",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "prompt": "與 sha256 5cf5ca71… 全文相同"
+   },
+   "requests_used": 1
+  },
+  {
+   "t": "2026-10-26T14:42:08Z",
+   "step": "terminal",
+   "job_id": "02b7a9f0-5dc5-49ca-8995-6caf6b8cafb8",
+   "status": "completed",
+   "polls": 3,
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261026_143929_02b7a9f0-5dc5-49ca-8995-6caf6b8cafb8.png",
+   "job_model_field": "text2image_soul_v2"
+  },
+  {
+   "t": "2026-10-26T14:42:08Z",
+   "step": "saved",
+   "path": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r11.png",
+   "bytes": 4096818,
+   "sha256": "856fa42f172b738df4129fd96e1c905853619281de603a0c35f900666562f3f5",
+   "px": [
+    1536,
+    2048
+   ],
+   "png_text_chunks": "hf-job-id"
+  },
+  {
+   "t": "2026-10-26T14:42:08Z",
+   "step": "charge",
+   "rows": [
+    {
+     "created_at": "2026-10-26T14:39:29.185127Z",
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": 0,
+   "window": "送出前最新一列 2026-10-26T14:06:36.251092Z（R10 底稿）→ 送出後只多這一列",
+   "jobs_in_window": [
+    "02b7a9f0-5dc5-49ca-8995-6caf6b8cafb8（結果檔名時間 14:39:29）"
+   ],
+   "vs_quote": "與唯讀報價 0.12 相同",
+   "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款與任務結果時間同一秒，時窗內只有本任務。"
+  }
+ ]
+}

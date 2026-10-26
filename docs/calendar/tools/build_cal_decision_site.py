@@ -319,11 +319,11 @@ def build_m3(mat):
     P = json.loads(raw)
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
-    assert P['counts'] == {'generated': 8, 'credits': 0.96, 'trainings': 0}, 'M-4 R2 生成 1 張；M-4 R5 第一批 5 張（每位 1 次請求）；M-4 R7、R8 V-Somi 試拍各 1 張'
+    assert P['counts'] == {'generated': 9, 'credits': 1.08, 'trainings': 0}, 'M-4 R2 生成 1 張；M-4 R5 第一批 5 張（每位 1 次請求）；M-4 R7、R8、R11 V-Somi 試拍各 1 張'
     assert P.get('draft_counts') == {'generated': 2, 'credits': 4} == {k: P['status']['production']['drafts'][k] for k in ('generated', 'credits')}, 'M-4 R9、R10 構圖底稿各 1 張另計，不併入月面照片'
     assert P['version'] == 'shoot-plan-v12' and P['revision']['from_version'] == 'shoot-plan-v11'
     PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板）；M-4 R6：第一批 5 張 Penny 全數退回，24 套重審提案待主管覆核
-    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['sets_total'], PR['accepted'], PR['rejected_replan'], PR['not_generated'], PR['to_complete'], PR['generated_cumulative'], PR['pending_owner_review']) == (24, 1, 5, 18, 23, 8, 0)
+    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen'] and (PR['sets_total'], PR['accepted'], PR['rejected_replan'], PR['not_generated'], PR['to_complete'], PR['generated_cumulative'], PR['pending_owner_review']) == (24, 1, 5, 18, 23, 9, 0)
     assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'owner-rejected-r6' and P['batch1']['sets'] == PR['rejected_sets'] == BATCH1_SETS
     acc, ver = P['status']['accepted'], P['status']['supervisor_verified']
     assert P['status']['m3'] == 'complete' and len(acc) == 23 and ver == ['H-luna-tanaka'] and not P['status']['revised'], 'M-4 R1 狀態不對'
@@ -402,7 +402,7 @@ def build_m3(mat):
             P['m4r2']['from_commit'], P['m4r4']['from_commit'], P['m4r5']['from_commit'], P['m4r6']['from_commit'],
             P['m4r7']['from_commit'], P['m4r7']['photo_commit'], P['m4r7']['record_commit'],
             P['m4r8']['from_commit'], P['m4r8']['photo_commit'], P['m4r8']['record_commit'], P['m4r9']['from_commit'],
-            P['m4r9']['photo_commit'], P['m4r9']['record_commit'], P['m4r10']['from_commit']}   # commit SHA，不是私有 ID
+            P['m4r9']['photo_commit'], P['m4r9']['record_commit'], P['m4r10']['from_commit'], P['m4r11']['from_commit']}   # commit SHA，不是私有 ID
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}

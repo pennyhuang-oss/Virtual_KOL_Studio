@@ -1,0 +1,173 @@
+{
+ "note": "M-4 R11 V-Somi Soul 第二步＋R10 構圖參考單張測試紀錄（Claude 自查；不含 Soul ID、任務 ID）。私有執行紀錄 review/calendar/m4_r11/execution_log.json。",
+ "task": "TASK-CAL-001／M-4／R11｜Somi Soul＋R10構圖參考單張測試",
+ "round": "M-4 R11",
+ "written_on": "2026-10-26",
+ "basis": {
+  "draft_result": "7851aa9a4a75498cf7528a6853fb32f9dc7fc54c",
+  "draft_review": "a2dbb2e65fe25236b3790c0c94b3ba0fc2c15b76",
+  "auth": "docs/calendar/data/cal_m4_auth_r11.json",
+  "proposal": "docs/calendar/data/cal_m4_r10_draft.json step2_proposal"
+ },
+ "set": "V-somi-oh",
+ "month": 12,
+ "ratio": "3:4",
+ "reference": {
+  "file": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png",
+  "sha256": "deafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8",
+  "how": "用 R10 原任務作 role image（原圖檔內的平台任務 ID 與 R10 任務相同；送出回傳的參考圖網址也是 R10 原圖）；沒有上傳、沒有用顯示版或套框預覽、沒有改圖或裁切"
+ },
+ "prompt": {
+  "source": "3159528 CAL_25 §5.2（R10 送審提案第二步 prompt），逐字",
+  "sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7",
+  "words": 118,
+  "text": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. She walks slowly along a snowy hot-spring town lane at blue hour with her hands in her coat pockets, glancing up at the falling snow, in the warm glow of a small paper lantern.",
+  "effect": "MCP 送出的 prompt 是否生效未確認；本次結果也不能判定"
+ },
+ "request": {
+  "model": "soul_2",
+  "soul": "somi-oh 既有 Soul（送出前確認 ready）",
+  "medias": "1 張構圖參考（R10 底稿原任務）",
+  "quality": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "style_id": "none",
+  "use_unlim": false,
+  "training": false
+ },
+ "precheck": {
+  "soul": "ready",
+  "inflight": "沒有本輪未釐清的提交",
+  "quote": "get_cost 唯讀報價 0.12（≤ 上限 0.12）；報價後交易最新一列沒變；工具接受 soul_id＋參考圖組合"
+ },
+ "run": {
+  "requests": 1,
+  "retries": 0,
+  "polls": 3,
+  "status": "completed",
+  "returned_model": "text2image_soul_v2"
+ },
+ "charge": {
+  "rows": [
+   {
+    "at": "2026-10-26T14:39:29Z",
+    "name": "Higgsfield Soul V2",
+    "credits": -0.12
+   }
+  ],
+  "refunds": 0,
+  "vs_quote": "與報價相同",
+  "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款與結果檔時間同一秒，時窗內只有本任務。"
+ },
+ "result": {
+  "original": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r11.png",
+  "original_note": "唯一原圖，不改、私有（檔內含平台任務 ID）",
+  "sha256": "856fa42f172b738df4129fd96e1c905853619281de603a0c35f900666562f3f5",
+  "px": [
+   1536,
+   2048
+  ],
+  "view": "review/calendar/m4_r11/V-somi-oh_m4r11_view.jpg",
+  "frame": "review/calendar/m4_r11/V-somi-oh_m4r11_frame_V_120x160.jpg",
+  "frame_note": "1536×2048 是 3:4，不裁切；寬 120 mm 約 325 ppi；無中繼資料",
+  "compare": "review/calendar/m4_r11/V-somi-oh_m4r10_vs_m4r11_compare.jpg",
+  "compare_note": "上排 R10 底稿（替身，非 Somi）與 R11 結果；下排臉部：Somi identity_master、R10 替身、R11；無中繼資料"
+ },
+ "measured": {
+  "seams": "沒有接縫（相鄰列差值最大 8.1，中位數 2.9）",
+  "white_border": "無",
+  "figure_height_ratio": "約 69%（R10 底稿約 60%）",
+  "figure_center_x": "約寬度 50%（R10 底稿約 67%）",
+  "boot_bottom_margin": "前靴底離下緣約 21 px（1.0%），低於 3% 工作下限（R10 底稿約 4.8%）",
+  "note": "數字只記錄，不當美感判斷依據"
+ },
+ "A_composition": {
+  "result": "明顯退步",
+  "items": [
+   {
+    "k": "連續空間",
+    "seen": "保住：沒有接縫，四邊都是影像。"
+   },
+   {
+    "k": "人物站位與大小",
+    "seen": "改變：從底稿的右側、約 60% 高，變成畫面正中、約 69% 高，正面朝鏡頭走；兩側巷道對稱夾住人物。"
+   },
+   {
+    "k": "完整雙靴與腳下留白",
+    "seen": "靴子換成白色繫帶短靴；前靴底幾乎貼到下緣（約 1.0%），腳下沒有留白。"
+   },
+   {
+    "k": "巷道主次",
+    "seen": "巷道仍往遠處延伸、看得到遠山，但人物站在正中擋住消失點，巷道退成背景。"
+   },
+   {
+    "k": "藍調暖燈",
+    "seen": "保留：藍調天色與多盞暖色燈籠。"
+   },
+   {
+    "k": "背景整理",
+    "seen": "退步：出現架空電線與電線桿、紅色水桶與垃圾桶，近處燈籠上有類文字的大字，底稿裡都沒有。"
+   }
+  ]
+ },
+ "B_identity": {
+  "result": "未確認（傾向比底稿替身更接近 Somi）",
+  "compared": "實際打開 kols/somi-oh/identity/identity_master.jpg，與 R10 底稿替身及 R11 結果並排比較（見對照圖下排）",
+  "seen": [
+   "與 identity_master 相近：杏眼雙眼皮、眉形、鼻樑與唇形的方向相近；瀏海加層次狼尾的髮型方向相近。",
+   "與 identity_master 不同：臉型較窄、顴骨與下巴線條較明顯（master 臉較圓潤）；髮色偏紅（master 是蜂蜜棕）。",
+   "與 R10 替身相比：明顯不是同一張臉（替身眼睛較細、臉較圓、瀏海較齊），沒有看到替身的臉被帶入。",
+   "臉是四分之三側、在原圖中約 200 px 寬，加上臉型差異，不能確定是 Somi；不因橘髮或微笑判定。"
+  ]
+ },
+ "C_quality": {
+  "result": "未達寫真成品",
+  "items": [
+   {
+    "k": "整張美感",
+    "seen": "藍調雪巷、暖燈與大衣上的落雪有氛圍，人物神情自然；但構圖置中、背景雜物多，完成度低於底稿。"
+   },
+   {
+    "k": "人景融合",
+    "seen": "光線一致、可信；人物像走在街景前方，不像底稿那樣在街道之中。"
+   },
+   {
+    "k": "姿態",
+    "seen": "雙手插口袋朝鏡頭走，微笑看畫面右方；讀成走路回頭看，不太讀成抬頭看雪。"
+   },
+   {
+    "k": "服裝與雙靴",
+    "seen": "深酒紅大衣（質感變成毛圈粗呢）、象牙白針織洋裝正確；靴子錯誤：白色繫帶短靴，不是及膝長靴；珍珠耳環看不清，未確認。"
+   },
+   {
+    "k": "白邊／拼接",
+    "seen": "沒有。"
+   },
+   {
+    "k": "技術瑕疵",
+    "seen": "燈籠上有類文字的大字；沒有看到明顯的手腳變形。"
+   },
+   {
+    "k": "尺寸與 ppi",
+    "seen": "1536×2048（3:4），120×160 mm 約 325 ppi。"
+   }
+  ]
+ },
+ "classification": "兩者都未保住：構圖明顯退步；Somi 身分未確認（不能算保住）。",
+ "observation": "這一次的結果看起來像參考圖只影響了場景主題（雪巷、藍調、燈籠、大衣顏色），沒有保住站位、大小與背景整理；prompt 寫的及膝長靴也沒有出現。只有一張，不能證明參考圖或 prompt 的作用，也不能證明流程穩定或無效。",
+ "verdict": "Claude 自查不通過（構圖退步、靴子錯誤、身分未確認）。這是 Claude 自查，不是主管驗收或 Penny 接受；本輪停止，不修圖、不重試。",
+ "status": "Soul 第二步測試，Claude 自查不通過；待主管及 Penny 看圖",
+ "counts": {
+  "generated": 1,
+  "credits": 0.12,
+  "month_photo_generated_cumulative": 9,
+  "month_photo_credits_cumulative": 1.08,
+  "drafts_cumulative": 2,
+  "draft_credits_cumulative": 4,
+  "all_credits_cumulative": 5.08,
+  "retouched": 0,
+  "trainings": 0,
+  "uploads": 0,
+  "deploys": 0
+ }
+}

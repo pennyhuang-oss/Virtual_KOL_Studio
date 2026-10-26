@@ -1,0 +1,35 @@
+{
+ "note": "M-4 R11 Penny 授權與主管指令（逐字）。授權只限 Soul 第二步 1 張、最多 1 次請求、費用上限 0.12 credits；不授權重試、補生或其他支出。本檔只在 repo。",
+ "task": "TASK-CAL-001／M-4／R11｜Somi Soul＋R10構圖參考單張測試",
+ "received": "2026-10-26T14:35:45Z",
+ "source": "Penny 授權，經主管（ChatGPT）指令轉交",
+ "base": {
+  "draft_result": "7851aa9a4a75498cf7528a6853fb32f9dc7fc54c",
+  "review": "a2dbb2e65fe25236b3790c0c94b3ba0fc2c15b76",
+  "head_at_receipt": "a2dbb2e65fe25236b3790c0c94b3ba0fc2c15b76",
+  "supervisor": "R10 底稿 PASS，可作第二步構圖參考（不是 Somi 成品接受，也不是流程穩定性證明）"
+ },
+ "scope": {
+  "set": "V-somi-oh（2027 年 12 月）",
+  "images_max": 1,
+  "requests_max": 1,
+  "retry": false,
+  "budget_credits": 0.12,
+  "model": "soul_2",
+  "soul": "somi-oh 既有 Soul（ID 只在 profile.json 與私有執行紀錄）",
+  "quality": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "style_id": "none",
+  "use_unlim": false,
+  "training": false,
+  "reference": {
+   "file": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png",
+   "sha256": "deafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8",
+   "use": "優先用 R10 原任務作 role image；不用有標示帶的顯示版或套框預覽；不改圖、不裁切、不上傳其他素材"
+  },
+  "prompt_source": "3159528 CAL_25 §5.2（R10 送審提案第二步 prompt），逐字",
+  "prompt_sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7"
+ },
+ "verbatim": "TASK-CAL-001／M-4／R11｜Somi Soul＋R10構圖參考單張測試\n\nPenny授權：\n僅執行Soul第二步1張、最多1次請求，\n費用上限0.12 credits。不授權重試、補生或其他支出。\n\nRepo：pennyhuang-oss/Virtual_KOL_Studio\n分支：claude/epic-carson-n5w0qu\n底稿成果：7851aa9a4a75498cf7528a6853fb32f9dc7fc54c\n紀錄：a2dbb2e65fe25236b3790c0c94b3ba0fc2c15b76\n先確認HEAD，不回退、不覆蓋。\n\n【主管實際看圖結論】\nR10底稿PASS，可作第二步構圖參考。\n這不是Somi成品接受，也不是流程穩定性證明。\n保留底稿，不再為人物偏大、靴色或燈籠小字重新生成。\n\n【輸入】\n參考圖使用R10唯一原始底稿：\nkols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png\nsha256：\ndeafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8\n\n優先使用該原任務作role image。\n不得使用有標示帶的顯示版或套框預覽作參考。\n若工具必須上傳，僅允許上傳這張底稿的必要副本；\n不得改圖、裁切或上傳其他素材。\n\n設定：\nsoul_2、既有somi-oh Soul、2k、3:4、count 1；\n1張構圖參考，不傳style、不用unlim、不訓練。\n\n逐字使用R10送審提案中的第二步prompt：\n來源3159528 CAL_25 §5.2\nsha256：\n5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7\n\nMCP prompt是否生效仍未確認；\n照實記錄，不把它當成必然能修正參考圖的指令。\n工具若拒絕此組合，停止，不自行移除Soul或參考圖改送。\n\n【報價與請求】\n確認Soul ready及沒有本輪尚未釐清的提交。\n使用不扣款、不建任務的最新報價，≤0.12才送出。\n無法確認或超額即停止。\n提交前保存意圖、prompt、設定及參考圖對應；\n取得任務ID立即保存。\n逾時、重啟或結果不明，查原任務，不補送。\n記錄實際扣款及歸屬依據。\n\n【實際看圖驗收】\n分開判斷：\nA. 構圖保持：\n連續空間、人物站位與大小、完整雙靴與腳下留白、\n巷道主次、藍調暖燈、背景整理是否保留。\n不要求像素完全相同，但不能明顯退步。\n\nB. 身分保持：\n實際打開Somi的identity_master.jpg，\n與底稿替身及本次結果比較。\n核對臉型、眼鼻唇、髮色髮型與整體辨識；\n不能只因橘髮、圓臉就判定是Somi。\n角度或尺寸不足以判斷時，標未確認。\n\nC. 成品品質：\n整張寫真美感、人景融合、姿態、\n服裝與雙靴、白邊／拼接及技術瑕疵。\n尺寸與套框ppi照實記錄。\n\n結果分成：\n- 構圖與Somi身分都保住。\n- 構圖保住、身分未保住或未確認。\n- 身分保住、構圖退步。\n- 兩者都未保住。\n一次結果不證明流程穩定，也不能判定prompt是否生效。\n\n【交付與停止】\n無論結果都交付唯一圖片，不修圖、不重試。\n保留原圖，製作無私有ID顯示版與120×160mm套框，\n直接附圖；另附R10底稿與結果對照，\n清楚標示底稿替身和Somi測試結果。\n\n同步實際生成與費用：\n底稿仍2張／4 credits；\n本次Soul生成與月面候選歷程另記。\n24套接受分類不變，不標成Penny接受。\n\ncommit並push原分支，用單一程式碼框回報：\n固定SHA、輸入與hash、設定、請求與扣款、\nA/B/C看圖結論、證據位置及未完成事項。\n自查不是主管驗收或Penny接受。\n\n完成後停止。\n不啟動H-Jia或其他月份、不部署、\n不改已接受V-Iris、不合併main、不聯絡支援。\n交ChatGPT實際看圖，再由Penny決定接受或修改。"
+}
