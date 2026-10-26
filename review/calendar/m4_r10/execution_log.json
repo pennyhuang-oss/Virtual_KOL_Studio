@@ -1,0 +1,173 @@
+{
+ "note": "M-4 R10 私有執行紀錄（含任務 ID；只留在 repo，不公開）。構圖底稿，人物不是已建模的 Somi，不是月面成品。",
+ "events": [
+  {
+   "t": "2026-10-26T13:29:39Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r10.json",
+   "kind": "構圖底稿",
+   "requests_max": 1,
+   "budget_credits": 2
+  },
+  {
+   "t": "2026-10-26T13:30:00Z",
+   "step": "prompt",
+   "source": "9a9830e CAL_26 §3（cal_m4_r9_followup.json prompt.text；與 CAL_26 §3 程式碼框逐字相同）",
+   "sha256": "3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321",
+   "edits": [],
+   "chars": 1392,
+   "words": 242,
+   "prompt": "One continuous, atmospheric winter photograph, taken from a single camera position at eye level, standing in a quiet hot-spring town lane at blue hour in gentle snowfall and looking along it with natural perspective. The lane runs away from the camera and bends gently to the left between old dark-timber inns with closed wooden lattice doors; their snow-laden eaves recede in one line under a deep-blue evening sky, and a few small plain paper lanterns glow beneath them, getting smaller into the distance. The same smooth, fresh snow covers the ground all the way from the foreground, where it is untouched, back along the lane. A 24-year-old adult Korean woman with honey-orange brown hair in a layered wolf cut, wearing a long deep-cranberry wool coat over an ivory knit mini dress and white knee-high boots, walks slowly along the lane with her hands in her coat pockets, glancing up at the falling snow with a soft smile, her face in three-quarter view. She is a modest figure a little right of centre, part of the street rather than in front of it; her whole body is visible, both boots stand on the snow, and open snow stretches between her and the camera. The nearest lantern lights her face, her coat and the snow around her with warm amber light; everything else stays cool blue. It is a quiet pedestrian lane: plain timber walls, lattice doors, lanterns and snow are all there is."
+  },
+  {
+   "t": "2026-10-26T13:31:00Z",
+   "step": "pre-check",
+   "preferences": {
+    "auto_create_project": false
+   },
+   "folder_id": "不指定",
+   "model_params": "nano_banana_pro：resolution 1k/2k/4k（預設 2k）；medias image_references；比例含 3:4；unlim available false",
+   "inflight": "任務清單最新 2 筆都是 completed，沒有進行中任務；最新一筆是帳號內其他活動的任務（2026-10-26T02:16Z 建立），只看到狀態，不記錄內容、不拿來比對",
+   "tx_boundary": {
+    "newest_row": "2026-10-26T02:16:13.438411Z Nano Banana Pro -2 spend（帳號內其他活動，不屬本案）",
+    "prev_row": "2026-10-25T13:27:20.155696Z Nano Banana Pro -2（R9 本案）"
+   }
+  },
+  {
+   "t": "2026-10-26T14:00:00Z",
+   "step": "quote（get_cost，唯讀）",
+   "settings": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "soul": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321",
+   "quote": {
+    "credits": 2,
+    "credits_exact": 2
+   },
+   "budget": 2,
+   "within_budget": true,
+   "readonly_evidence": "報價後（工作程序重啟後複查）交易最新一列仍是 2026-10-26T02:16:13.438411Z，任務清單最新一筆不變；報價沒有建立任務、沒有扣款。送出的 prompt 與固定文字 hash 相同。"
+  },
+  {
+   "t": "2026-10-26T14:06:06Z",
+   "step": "intent",
+   "kind": "構圖底稿",
+   "request": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "prompt_sha256": "3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321"
+   },
+   "retry": "不重試；重啟、逾時或結果不明先查原任務，不補送"
+  },
+  {
+   "t": "2026-10-26T14:06:41Z",
+   "step": "submitted",
+   "job_id": "db5c6a9e-974a-4191-b855-80ea689028f1",
+   "status": "pending",
+   "returned_model": "nano_banana_pro",
+   "echo": {
+    "aspect_ratio": "3:4",
+    "resolution": "2k",
+    "prompt": "與 sha256 3f5c858f… 全文相同"
+   },
+   "requests_used": 1
+  },
+  {
+   "t": "2026-10-26T14:10:34Z",
+   "step": "terminal",
+   "job_id": "db5c6a9e-974a-4191-b855-80ea689028f1",
+   "status": "completed",
+   "polls": 9,
+   "note": "約 3 分鐘完成（比 R9 久）；只輪詢原任務，沒有補送",
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261026_140636_db5c6a9e-974a-4191-b855-80ea689028f1.png",
+   "job_meta": {
+    "width": 1792,
+    "height": 2400,
+    "resolution": "2k",
+    "aspect_ratio": "3:4",
+    "input_images": [],
+    "created_at": "2026-10-26T14:06:36.106144Z"
+   }
+  },
+  {
+   "t": "2026-10-26T14:10:34Z",
+   "step": "model names",
+   "requested": "nano_banana_pro（送出參數）",
+   "returned": "nano_banana_pro（送出回傳 results[0].model）",
+   "job_record": "nano_banana_2（jobs_wait 每次輪詢與 show_generation_by_ids 都是）",
+   "billing": "Nano Banana Pro（交易列）",
+   "backend_actual": "未確認；與 R9 相同的不一致，不推測、不持續查"
+  },
+  {
+   "t": "2026-10-26T14:10:34Z",
+   "step": "saved",
+   "path": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png",
+   "bytes": 6695377,
+   "sha256": "deafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8",
+   "px": [
+    1792,
+    2400
+   ],
+   "png_text_chunks": "hf-job-id；IPTC／XMP：DigitalSourceType trainedAlgorithmicMedia、Credit「Made with Google AI」"
+  },
+  {
+   "t": "2026-10-26T14:10:34Z",
+   "step": "charge",
+   "rows": [
+    {
+     "created_at": "2026-10-26T14:06:36.251092Z",
+     "display_name": "Nano Banana Pro",
+     "credits": -2,
+     "action": "spend"
+    }
+   ],
+   "refunds": 0,
+   "window": "送出前最新一列 2026-10-26T02:16:13.438411Z（他人活動）→ 送出後只多這一列",
+   "jobs_in_window": [
+    "db5c6a9e-974a-4191-b855-80ea689028f1（建立 2026-10-26T14:06:36.106144Z）"
+   ],
+   "vs_quote": "與唯讀報價 2 相同",
+   "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款與任務建立同一秒，時窗內只有本任務。"
+  },
+  {
+   "t": "2026-10-26T14:12:51Z",
+   "step": "step-2 proposal quote（get_cost，唯讀；不送出）",
+   "soul": {
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "name": "somi-oh-soul-v1-5img-20260904",
+    "status": "ready",
+    "raw_status": "completed"
+   },
+   "params": {
+    "model": "soul_2",
+    "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "medias": [
+     {
+      "value": "db5c6a9e-974a-4191-b855-80ea689028f1",
+      "role": "image"
+     }
+    ],
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "count": 1,
+    "use_unlim": false,
+    "prompt_sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7（3159528 CAL_25 §5.2 逐字）"
+   },
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "readonly_evidence": "報價後交易最新一列仍是 2026-10-26T14:06:36.251092Z（本案底稿），任務清單最新一筆仍是本案底稿任務；沒有建立任務、沒有扣款。"
+  }
+ ]
+}

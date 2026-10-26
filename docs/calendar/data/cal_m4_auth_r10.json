@@ -1,0 +1,34 @@
+{
+ "note": "M-4 R10 Penny 授權與主管指令（逐字）。授權只限構圖底稿 1 張、最多 1 次請求、費用上限 2 credits；不授權 Soul 第二步、自動重試、補生或其他支出。底稿人物不是已建模的 Somi，不是月面成品。本檔只在 repo。",
+ "task": "TASK-CAL-001／M-4／R10｜Somi 連續空間底稿單張測試",
+ "received": "2026-10-26T13:29:39Z",
+ "source": "Penny 授權，經主管（ChatGPT）指令轉交",
+ "base": {
+  "result": "9a9830e870cd0b6a122b301a105d00f9c9159691",
+  "review": "b5ad00b50a47e403798ece67252c619bcff82b86",
+  "head_at_receipt": "b5ad00b50a47e403798ece67252c619bcff82b86",
+  "supervisor": "R9 有限收尾 PASS；CAL_26 修訂 prompt 可進入單張測試（不是照片接受，也不是兩步流程驗證成功）"
+ },
+ "scope": {
+  "kind": "構圖底稿（非 Somi 成品）",
+  "set_context": "V-somi-oh（2027 年 12 月）",
+  "images_max": 1,
+  "requests_max": 1,
+  "retry": false,
+  "budget_credits": 2,
+  "model": "nano_banana_pro",
+  "resolution": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "use_unlim": false,
+  "medias": "none",
+  "soul": "none",
+  "training": false,
+  "folder": "不指定",
+  "second_step": "不授權",
+  "prompt_source": "9a9830e CAL_26 §3（＝cal_m4_r9_followup.json prompt.text），逐字",
+  "prompt_sha256": "3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321",
+  "prompt_edits": []
+ },
+ "verbatim": "TASK-CAL-001／M-4／R10｜Somi 連續空間底稿單張測試\n\nPenny授權：\n僅生成1張構圖底稿、最多1次請求，費用上限2 credits。\n不授權Soul第二步、自動重試、補生或其他支出。\n\nRepo：pennyhuang-oss/Virtual_KOL_Studio\n分支：claude/epic-carson-n5w0qu\n方案成果：9a9830e870cd0b6a122b301a105d00f9c9159691\n紀錄：b5ad00b50a47e403798ece67252c619bcff82b86\n先確認HEAD，不回退、不覆蓋舊紀錄。\n\n【主管覆核】\nR9有限收尾PASS，CAL_26修訂prompt可進入單張測試。\n這不是照片接受，也不是兩步流程驗證成功。\n實際後端模型仍未確認，結果只代表本次工具路徑的觀察。\n\n【固定輸入】\n逐字使用上述固定成果CAL_26 §3 prompt。\nsha256：\n3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321\n不另加風格、構圖、否定詞或收尾句。\n\n設定：\nnano_banana_pro、2k、3:4、count 1；\n無參考圖、無Soul、不用unlim、不訓練、不指定資料夾。\n\n【報價與請求】\n使用不扣款、不建任務的最新唯讀報價；\n確認≤2 credits才送出。無法確認或超額即停止。\n提交前保存意圖與最終輸入；\n取得任務ID後立即保存。\n若重啟、逾時或結果不明，查原任務，不補送。\n\n分開記錄：\n請求模型、回傳model、任務紀錄model、交易計費名稱。\n名稱仍不一致就保留未確認，不猜測、不持續輪詢。\n記錄實際扣款，區分直接對帳與時窗推定。\n\n【實際看圖】\n先看整張是否漂亮、具有寫真完成度，再核對：\n1. 單一連續空間：無拼接，建築、巷道、人物與地面透視一致。\n2. 滿版無白框、分格或頁面式版面。\n3. 雙靴完整，下方有自然、足夠的雪地。\n4. 人景共同構圖，人物不擠邊，背景不搶戲。\n5. 抬頭看雪的神情自然，人景光色可信。\n6. 背景整理與酒紅／象牙白／藍調配色保留。\n\n不得以數字符合取代審美判斷。\n無論通過或失敗，都交付唯一結果，不再生成或修圖。\n一次成功不能證明拼接成因，也不能證明流程穩定。\n\n【交付】\n保留原圖，製作無私有ID的顯示版與120×160mm套框，\n直接附圖，標明「構圖底稿，非Somi成品」。\n依實際尺寸製作預覽，不預設一定輸出1792×2400。\n\n同步：\n月面照片仍生成8、credits 0.96；\n底稿依本次實際結果與扣款增加，獨立計數。\n不改24套接受分類，不冒充Penny接受。\n\ncommit並push原分支。\n用單一程式碼框回報固定SHA、prompt與hash、\n設定、模型名稱紀錄、請求與扣款、自查、\n圖片位置及未完成事項。\n\n【接續條件】\n底稿通過：提出以這張底稿接Somi Soul的單次測試輸入、\n最新可取得的費用資訊與風險，供主管覆核；不實際送出。\n底稿失敗：停止本路徑的文字微調，整理未解問題，\n不自行再安排一張同類試拍。\n\n不啟動Soul第二步、H-Jia或其他角色；\n不修圖、不部署、不改已接受V-Iris、\n不合併main、不聯絡支援。\n完成後交ChatGPT與Penny實際看圖。"
+}

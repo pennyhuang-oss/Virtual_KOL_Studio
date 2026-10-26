@@ -1,0 +1,171 @@
+{
+ "note": "M-4 R10 連續空間構圖底稿單張測試紀錄（Claude 自查；不含任務 ID）。構圖底稿，非 Somi 成品：人物不是已建模的 Somi，不算月面照片，也不改變 24 套分類。私有執行紀錄 review/calendar/m4_r10/execution_log.json。",
+ "task": "TASK-CAL-001／M-4／R10｜Somi 連續空間底稿單張測試",
+ "round": "M-4 R10",
+ "written_on": "2026-10-26",
+ "basis": {
+  "plan_result": "9a9830e870cd0b6a122b301a105d00f9c9159691",
+  "plan_review": "b5ad00b50a47e403798ece67252c619bcff82b86",
+  "auth": "docs/calendar/data/cal_m4_auth_r10.json",
+  "plan": "CAL_26 §3"
+ },
+ "kind": "構圖底稿（非 Somi 成品）",
+ "set_context": "V-somi-oh（2027 年 12 月）",
+ "ratio": "3:4",
+ "prompt": {
+  "source": "9a9830e CAL_26 §3，逐字（沒有加風格、構圖、否定詞或收尾句）",
+  "sha256": "3f5c858f5f8b7c1b667be5dca9cf39d8765053f04f7e4efdb654b652dee79321",
+  "words": 242,
+  "text": "One continuous, atmospheric winter photograph, taken from a single camera position at eye level, standing in a quiet hot-spring town lane at blue hour in gentle snowfall and looking along it with natural perspective. The lane runs away from the camera and bends gently to the left between old dark-timber inns with closed wooden lattice doors; their snow-laden eaves recede in one line under a deep-blue evening sky, and a few small plain paper lanterns glow beneath them, getting smaller into the distance. The same smooth, fresh snow covers the ground all the way from the foreground, where it is untouched, back along the lane. A 24-year-old adult Korean woman with honey-orange brown hair in a layered wolf cut, wearing a long deep-cranberry wool coat over an ivory knit mini dress and white knee-high boots, walks slowly along the lane with her hands in her coat pockets, glancing up at the falling snow with a soft smile, her face in three-quarter view. She is a modest figure a little right of centre, part of the street rather than in front of it; her whole body is visible, both boots stand on the snow, and open snow stretches between her and the camera. The nearest lantern lights her face, her coat and the snow around her with warm amber light; everything else stays cool blue. It is a quiet pedestrian lane: plain timber walls, lattice doors, lanterns and snow are all there is."
+ },
+ "request": {
+  "model": "nano_banana_pro",
+  "resolution": "2k",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "medias": "none",
+  "soul": "none",
+  "use_unlim": false,
+  "folder": "不指定（auto_create_project false）",
+  "training": false
+ },
+ "precheck": {
+  "preferences": "auto_create_project false",
+  "inflight": "沒有進行中任務",
+  "quote": "get_cost 唯讀報價 2（≤ 上限 2）；報價前後交易最新一列與任務清單最新一筆都沒變，報價沒有建任務、沒有扣款"
+ },
+ "run": {
+  "requests": 1,
+  "retries": 0,
+  "polls": 9,
+  "status": "completed",
+  "note": "報價後工作程序重啟；重啟後複查報價沒有建任務、沒有扣款，再保存意圖、送出 1 次、立即保存任務 ID。約 3 分鐘完成，只輪詢原任務，沒有補送。"
+ },
+ "model_names": {
+  "requested": "nano_banana_pro",
+  "returned": "nano_banana_pro（送出回傳）",
+  "job_record": "nano_banana_2（任務輪詢與依 ID 查詢）",
+  "billing": "Nano Banana Pro",
+  "backend_actual": "未確認（與 R9 相同的不一致；不推測、不持續查）"
+ },
+ "charge": {
+  "rows": [
+   {
+    "at": "2026-10-26T14:06:36Z",
+    "name": "Nano Banana Pro",
+    "credits": -2
+   }
+  ],
+  "refunds": 0,
+  "vs_quote": "與報價相同",
+  "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款與任務建立同一秒，時窗內只有本任務。"
+ },
+ "result": {
+  "original": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png",
+  "original_note": "唯一原圖，不改、私有（檔內含平台任務 ID 與 AI 生成標記）",
+  "sha256": "deafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8",
+  "px": [
+   1792,
+   2400
+  ],
+  "view": "review/calendar/m4_r10/V-somi-oh_m4r10_draft_view.jpg",
+  "view_note": "1200 寬＋下方「構圖底稿，非 Somi 成品」標示帶；照片像素不改；無中繼資料",
+  "frame": "review/calendar/m4_r10/V-somi-oh_m4r10_draft_frame_V_120x160.jpg",
+  "frame_note": "依實際輸出 1792×2400（不是精確 3:4）製作：放入框前從上緣裁 11 px 成 1792×2389；寬 120 mm 約 379 ppi；無中繼資料"
+ },
+ "measured": {
+  "seams": "沒有接縫：相鄰列差值最大 6.9（中位數 3.8）、相鄰欄最大 10.7（中位數 4.1），沒有 R9 那種 40–50 的跳變",
+  "white_border": "無：四邊都是影像內容",
+  "figure_height_ratio": "約 60%（髮頂約第 845 列到前靴底約第 2285 列）",
+  "figure_center_x": "約寬度 67%；大衣右緣離右邊約 20%",
+  "boot_bottom_margin": "前靴底離下緣約 115 px（4.8%）",
+  "note": "數字只記錄，不當美感通過依據"
+ },
+ "aesthetic": "整張是一張連續的照片，而且好看：相機站在巷道裡沿路看，兩側木造旅館、厚雪屋簷與遠山形成一點透視，雪地從前景一路延伸到巷底，地燈籠與簷下紙燈籠在藍調裡點出暖色。她走在巷道右側、背後是旅館木格門，大衣上有落雪，微笑抬頭，人和街道在同一個空間與同一組光線裡，有寫真完成度。比較像經典雪鄉旅遊寫真，略帶明信片感；人物比 prompt 寫的「modest figure」大。",
+ "checks": [
+  {
+   "k": "1. 單一連續空間：無拼接，建築、巷道、人物與地面透視一致",
+   "result": "通過",
+   "seen": "沒有接縫；兩側建築、屋簷線、巷道與雪地都收向同一個消失點，人物站在同一地面上，腳下陰影方向一致。"
+  },
+  {
+   "k": "2. 滿版無白框、分格或頁面式版面",
+   "result": "通過",
+   "seen": "四邊都是影像，沒有白框、分格或頁面式版面，也沒有文字版面。"
+  },
+  {
+   "k": "3. 雙靴完整，下方有自然、足夠的雪地",
+   "result": "大致通過",
+   "seen": "雙靴完整、站在雪上，前靴底下方有一段自然雪地與陰影（約 4.8%）；後腳靴子下段偏米色，和前腳白靴不完全一致。"
+  },
+  {
+   "k": "4. 人景共同構圖，人物不擠邊，背景不搶戲",
+   "result": "大致通過",
+   "seen": "左半是往遠處延伸的巷道，人物在右半、背後是旅館，彼此構成同一畫面；人物不擠邊。人物約占高度 60%，比「modest figure」大；右上的大紙燈籠離她很近，側面有小字，但不搶過人物。"
+  },
+  {
+   "k": "5. 抬頭看雪的神情自然，人景光色可信",
+   "result": "通過",
+   "seen": "雙手插口袋、微笑往左上看，雪花落在大衣上，讀得出看雪的瞬間；右側燈籠的暖光落在臉和大衣上，其他部分是藍調，可信。朝鏡頭方向走，略有擺拍感。"
+  },
+  {
+   "k": "6. 背景整理與酒紅／象牙白／藍調配色保留",
+   "result": "通過",
+   "seen": "沒有招牌、電線、車或桶子；只有木牆、格子門、燈籠、雨水管與雪；深蔓越莓紅大衣、象牙白針織、白靴與藍調協調。"
+  }
+ ],
+ "verdict": "Claude 自查：底稿層級通過（1、2、5、6 通過；3、4 大致通過，附註人物偏大與後腳靴色）。這是 Claude 自查，不是主管驗收或 Penny 接受；第二步未授權、未送出。",
+ "observation": "本次是一張連續空間的照片；這只代表這一次沒有出現拼接，不能證明 R9 拼接的成因就是分段寫法，也不能證明流程穩定。實際後端模型仍未確認。",
+ "not_somi": "人物是 prompt 描述出的替身（成年韓國女性、橘棕狼尾剪髮、指定服裝），不是已建模的 Somi，沒有做身分比對，也不能冒充成品。",
+ "step2_proposal": {
+  "status": "提案，供主管覆核；未送出、未授權",
+  "settings": {
+   "model": "soul_2",
+   "soul": "somi-oh 既有 Soul（2026-10-26 唯讀查詢 ready）",
+   "medias": "本張 R10 底稿（平台任務 ID 只在私有紀錄；role image）",
+   "quality": "2k",
+   "aspect_ratio": "3:4",
+   "count": 1,
+   "style_id": "不傳（與參考圖不相容）",
+   "use_unlim": false,
+   "requests": 1,
+   "retries": 0
+  },
+  "prompt": {
+   "source": "3159528 CAL_25 §5.2 逐字（身分 canon 句＋服裝＋動作；構圖、背景、光線交給底稿）",
+   "sha256": "5cf5ca7146fdd2f31fbceb6d75f344d762473432faf87ac260d78057a5304cb7",
+   "text": "A 24-year-old adult Korean woman with her natural fair skin tone and round cheeks that dimple when she smiles, bright honey-orange brown hair in a layered Korean wolf cut. Curvy figure, 161 cm tall, bust 91 cm, waist 58 cm, hips 90 cm, F cup, full chest and slim waist. Light makeup with a glossy lip, her cheeks flushed pink from the cold. She wears a long deep-cranberry wool coat over an ivory ribbed knit mini dress, white knee-high boots and small pearl earrings. She walks slowly along a snowy hot-spring town lane at blue hour with her hands in her coat pockets, glancing up at the falling snow, in the warm glow of a small paper lantern."
+  },
+  "cost": "2026-10-26 唯讀報價 0.12（soul_2＋Somi Soul＋本張底稿參考＋上列 prompt、2k、3:4）；報價前後沒有新交易或任務。不代表授權，送出前要重新報價。",
+  "acceptance": [
+   "底稿的 1–6 項沒有變差（連續空間、滿版、雙靴與雪地、人景構圖、看雪神情與光色、背景與配色）",
+   "臉是 Somi（對照 kols/somi-oh/identity/identity_master.jpg），成年，沒有底稿替身的臉混入",
+   "服裝正確：深蔓越莓紅大衣、象牙白針織迷你洋裝、白色及膝長靴、小珍珠耳環",
+   "實際輸出尺寸與 120×160 mm 套框 ppi 照實記錄"
+  ],
+  "risks": [
+   "官方說明：參考圖是主要方向；網頁介面加參考圖時 prompt 不可用。MCP 送出的 prompt 是否生效未確認。",
+   "底稿替身的臉比 CAL_25 原本設想的大（人物約占高度 60%），可帶入的臉部細節較多；Soul ID 能否蓋過替身臉未驗證。",
+   "第三方說法：掛 Soul ID 時參考圖的姿勢與服裝可能被忽略；構圖能否保持未驗證。",
+   "style_id 不能與參考圖並用，會套用後台預設風格；R8 的白色相紙邊成因未確認，仍可能再出現。",
+   "底稿的小瑕疵（後腳靴色偏米、燈籠側面小字、人物偏大）可能被一起帶入。",
+   "Somi 的 Soul 以 5 張訓練，少於官方建議；全身與身材保持未驗證。",
+   "一次結果不能證明兩步流程穩定。"
+  ],
+  "stop": "只送 1 次、不重試；報價高於新授權上限、Soul 不是 ready、或有進行中的同類任務就不送；不論結果都交主管及 Penny 看圖。"
+ },
+ "status": "構圖底稿 Claude 自查通過（底稿層級）；待主管及 Penny 看底稿；第二步未授權",
+ "counts": {
+  "draft_generated": 1,
+  "draft_credits": 2,
+  "drafts_cumulative": 2,
+  "draft_credits_cumulative": 4,
+  "month_photo_generated_cumulative": 8,
+  "month_photo_credits_cumulative": 0.96,
+  "all_credits_cumulative": 4.96,
+  "retouched": 0,
+  "trainings": 0,
+  "uploads": 0,
+  "deploys": 0
+ }
+}
