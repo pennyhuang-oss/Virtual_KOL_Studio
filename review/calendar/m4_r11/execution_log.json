@@ -159,6 +159,24 @@
    ],
    "vs_quote": "與唯讀報價 0.12 相同",
    "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；扣款與任務結果時間同一秒，時窗內只有本任務。"
+  },
+  {
+   "t": "2026-10-26T16:05:23Z",
+   "step": "post-review evidence（R12 唯讀查核時讀到本案任務紀錄）",
+   "job_id": "02b7a9f0-5dc5-49ca-8995-6caf6b8cafb8",
+   "job_record": {
+    "params.prompt": "不是我們送出的 prompt，而是一段描述參考圖的自動文字（開頭 'A straight-on, full-body medium shot shows a young Asian woman…'，內含 'glossy white go-go boots'、'chin-length, honey-brown hair'、'framed symmetrically'），結尾附 'HEX VALUES: [...]' 色票",
+    "enhance_prompt": true,
+    "seed": 723227,
+    "quality": "1080p",
+    "width": 1536,
+    "height": 2048,
+    "image_reference": "db5c6a9e-974a-4191-b855-80ea689028f1（R10 原圖）",
+    "style": "General（後台預設）",
+    "custom_reference": "somi-oh-soul-v1-5img-20260904"
+   },
+   "vs_submit_echo": "送出回傳的 params.prompt 是我們的 prompt；任務紀錄裡存的是自動描述",
+   "reading": "本案任務紀錄顯示：加參考圖時，後台把 prompt 換成參考圖的自動描述並開啟 enhance_prompt。我們的 prompt 是否還有任何作用：未確認。"
   }
  ]
 }

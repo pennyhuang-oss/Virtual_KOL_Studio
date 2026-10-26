@@ -156,7 +156,7 @@
  "classification": "兩者都未保住：構圖明顯退步；Somi 身分未確認（不能算保住）。",
  "observation": "這一次的結果看起來像參考圖只影響了場景主題（雪巷、藍調、燈籠、大衣顏色），沒有保住站位、大小與背景整理；prompt 寫的及膝長靴也沒有出現。只有一張，不能證明參考圖或 prompt 的作用，也不能證明流程穩定或無效。",
  "verdict": "Claude 自查不通過（構圖退步、靴子錯誤、身分未確認）。這是 Claude 自查，不是主管驗收或 Penny 接受；本輪停止，不修圖、不重試。",
- "status": "Soul 第二步測試，Claude 自查不通過；待主管及 Penny 看圖",
+ "status": "主管建議退回（REVISE），Penny 未接受；Soul＋構圖參考暫不作量產流程",
  "counts": {
   "generated": 1,
   "credits": 0.12,
@@ -169,5 +169,17 @@
   "trainings": 0,
   "uploads": 0,
   "deploys": 0
+ },
+ "supervisor_review": {
+  "file": "docs/calendar/data/cal_m4_supervisor_r11.json",
+  "conclusion": "R11 REVISE，不建議採用，Penny 尚未接受。",
+  "note": "上方 A／B／C 與 verdict 是 Claude 自查原文，保留不改；主管結論另存。"
+ },
+ "post_review_evidence": {
+  "found_on": "2026-10-26（R12 唯讀查核）",
+  "source": "本案 R11 任務紀錄（只讀本案任務）",
+  "fact": "任務紀錄存的 prompt 不是我們送出的 prompt，而是描述參考圖的自動文字（寫成正面對稱構圖、white go-go boots、chin-length honey-brown hair），附 HEX 色票，enhance_prompt 為 true；送出回傳時顯示的仍是我們的 prompt。",
+  "status": "已確認（任務紀錄）：後台存的生成描述被替換；我們的 prompt 是否還有任何作用：未確認",
+  "note": "可能解釋短靴與正面置中構圖，但只是一張樣本，不改寫上方 Claude 自查原文。"
  }
 }

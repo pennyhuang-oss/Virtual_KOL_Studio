@@ -1,0 +1,203 @@
+{
+ "note": "M-4 R12 保留 R10 底稿的身分編輯流程準備（Claude 提案，未執行；不是生成授權）。不含 Element ID、任務 ID；ID 只在 kols/somi-oh/profile.json 與私有紀錄 review/calendar/m4_r12/execution_log.json。",
+ "task": "TASK-CAL-001／M-4／R12｜保留底稿的身分編輯流程準備",
+ "written_on": "2026-10-26",
+ "basis": {
+  "r11_result": "59634553d956a96c066cb266bc66697ab901d2f8",
+  "r11_record": "30d7fee2e395ba0f124ef6b49f5ab39d47afe0dc",
+  "draft_result": "7851aa9a4a75498cf7528a6853fb32f9dc7fc54c",
+  "supervisor": "docs/calendar/data/cal_m4_supervisor_r11.json"
+ },
+ "capability": [
+  {
+   "q": "基底圖＋身分參考能否同時輸入",
+   "answer": "可以送出：Nano Banana 2 的 medias 有 image_references（可放底稿任務）；Element 工具說明寫 nano_banana_2 支援 prompt 內嵌 Element 佔位符、後台自動注入 Element 圖。唯讀報價（底稿參考＋Element 佔位符＋is_inpaint）被接受、2 credits。官方說明 Nano Banana 頁寫可放多張參考、每張用途寫在 prompt。",
+   "status": "schema 支援：已確認；報價層級接受：已確認；實際效果：未實測",
+   "sources": [
+    "MCP models_explore get nano_banana_2（2026-10-26）",
+    "show_reference_elements 工具說明",
+    "get_cost 唯讀報價",
+    "官方說明 Nano Banana 頁 https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-use-nano-banana（頁面更新 2026-09-09）"
+   ]
+  },
+  {
+   "q": "mask／inpaint 能否與身分參考並用",
+   "answer": "schema 上 mask 與 image_references 是同一個 medias 欄位的兩種 role，is_inpaint 另為參數，沒有寫互斥；Element 佔位符走 prompt。官方說明沒有寫 Nano Banana 2 的遮罩編輯能否同時用身分參考。遮罩要先上傳才能放進 medias，本輪沒有上傳，所以「遮罩＋Element＋底稿」三者一起的組合連報價都沒有驗到。",
+   "status": "schema 沒有禁止：已確認；三者並用：未確認、未實測",
+   "sources": [
+    "MCP models_explore get nano_banana_2",
+    "show_reference_elements 工具說明",
+    "官方說明 Nano Banana 頁 https://higgsfield.ai/creator-hub/help-center/ai-models/how-do-i-use-nano-banana"
+   ]
+  },
+  {
+   "q": "遮罩外像素是否保證保留",
+   "answer": "MCP schema 對 is_inpaint 的描述是「Whether to restrict the edit to the supplied mask」，是限制編輯範圍的開關，沒有寫遮罩外像素逐點不變。Higgsfield 部落格（2025-12-11，行銷文）說 Nano Banana Pro Inpaint「Everything outside the mask is protected with pixel-level precision」，但那是網頁介面的 Pro Inpaint 工具；MCP 的 nano_banana_pro 沒有 mask 欄位。遮罩顏色定義（白＝編輯？）官方沒寫，第三方說法是白色＝編輯區。",
+   "status": "保證保留：未確認（只能實測比對）；遮罩顏色定義：未確認",
+   "sources": [
+    "MCP models_explore get nano_banana_2、nano_banana_pro",
+    "Higgsfield 部落格 https://higgsfield.ai/blog/Top-Editing-Tool-in-2025-Nano-Banana-Pro-Inpaint（行銷文，不當保證）"
+   ]
+  },
+  {
+   "q": "能否直接使用本案 Somi 既有 Element",
+   "answer": "可以引用：依 kols/somi-oh/profile.json 的 reference_element_id 唯讀查詢 1 筆（沒有列出其他素材），名稱 somi-face-only-v1、status completed、類別 character；描述寫明只用於臉部身分，身材與服裝要由文字決定。Element 圖與本機 kols/somi-oh/identity/element_face_tight.jpg 逐位元相同。Somi 的 Soul 訓練圖當初也是以這個 Element 錨定臉部生成的（generation_notes.md）。",
+   "status": "Element 存在且可用（completed）：已確認；在 Nano Banana 2 編輯中的身分保真度：未實測",
+   "sources": [
+    "show_reference_elements get（2026-10-26）",
+    "kols/somi-oh/profile.json、generation_notes.md"
+   ]
+  },
+  {
+   "q": "解析度、比例、參考數量與費用",
+   "answer": "Nano Banana 2：resolution 1k／2k／4k（預設 1k），比例含 auto 與 3:4；參考張數 schema 沒寫上限，官方說明寫 Pro／2 系列最多 14 張。唯讀報價：nano_banana_2 2k 3:4＋底稿參考＋Element 佔位符＋is_inpaint＝2；只有底稿參考＝2（2026-10-26，遮罩未含在報價內）。R9／R10 任務紀錄 model 欄位是 nano_banana_2、2k 3:4 輸出 1792×2400，所以編輯輸出可能同尺寸，但未確認。遮罩上傳是否收費：未確認。",
+   "status": "schema 與報價：已確認；輸出尺寸與上傳費用：未確認",
+   "sources": [
+    "MCP models_explore get",
+    "get_cost 唯讀報價",
+    "R9／R10 本案任務紀錄"
+   ]
+  },
+  {
+   "q": "附帶發現：Soul＋參考圖時 prompt 被替換",
+   "answer": "R11 本案任務紀錄存的 prompt 是描述參考圖的自動文字（寫成正面對稱構圖、white go-go boots），附 HEX 色票，enhance_prompt 為 true；送出回傳時顯示的仍是我們的 prompt。這和官方說明「加參考圖時 prompt 欄位不可用」方向一致。Nano Banana 2 的 R9／R10 任務紀錄 prompt 則與送出相同（當時沒有參考圖）。",
+   "status": "R11 任務紀錄被替換：已確認；Nano Banana 2 加參考圖時是否也會替換：未確認",
+   "sources": [
+    "R11、R9、R10 本案任務紀錄"
+   ]
+  }
+ ],
+ "edit_scope": {
+  "decision": "只編輯臉、瀏海、髮際線與上頸；不動外圍髮型輪廓與髮長、大衣領、毛衣領口與背景，也不換整個身體。",
+  "reasons": [
+   "身分差異集中在臉：替身臉較圓寬、眼睛較細、笑法不同；Somi 基準是杏眼雙眼皮、直鼻、柔和唇形。",
+   "瀏海是 Somi 的身分規則之一（露眉的空氣瀏海），替身是厚齊瀏海，所以瀏海與髮際線要一起改。",
+   "外圍頭髮的顏色與長度已接近 Somi：identity_master 的紀錄本身也寫「髮色仍偏銅橘」，替身的銅橘色與長度在可接受範圍；保留外圍輪廓可避免改到背景與髮梢接縫。",
+   "上頸納入範圍，讓新的下巴線能自然接到脖子；毛衣領口與大衣不動。",
+   "遮罩邊界全在頭髮與皮膚內，不碰背景；整個遮罩約占全圖 0.62%。"
+  ],
+  "body": {
+   "acceptable": "底稿身形被長大衣遮住，看得到的腿長與比例自然，以月曆寫真來說可接受。",
+   "not_measurable": [
+    "身高 161 cm：畫面沒有可量測的比例尺，無法確認",
+    "胸圍、腰圍、臀圍與 F cup：被大衣遮住，無法由圖片判斷",
+    "canon 的 curvy figure：無法由這張圖確認"
+   ],
+   "note": "只換臉不代表身高、體態與 canon 全部正確；這些另列為無法量測。"
+  }
+ },
+ "test_package": {
+  "status": "提案，未執行；需要 Penny 授權新增支出與 1 次上傳",
+  "base": {
+   "file": "kols/somi-oh/images/calendar_2027_drafts/V-somi-oh_m4r10_composition_draft.png",
+   "sha256": "deafd136c4a26996c44ef7b9134186009de11c967493c72037aeec0df07cb3c8",
+   "px": [
+    1792,
+    2400
+   ],
+   "use": "以 R10 原任務作 image_references（原圖檔內的平台任務 ID 與 R10 任務相同），不上傳底稿"
+  },
+  "identity": {
+   "element": "Somi 既有 Element somi-face-only-v1（ID 在 kols/somi-oh/profile.json reference_element_id）",
+   "element_image": "kols/somi-oh/identity/element_face_tight.jpg",
+   "element_image_sha256": "28145eae6d48cad2acb42a7dd400c5dc9a0e5e7782039f8781ca3432962f943b",
+   "comparison_only": "kols/somi-oh/identity/identity_master.jpg",
+   "identity_master_sha256": "da0cb2c77c22c54cc9a30f324f1a4d1a1776d7f8cc8b1283dce1ac60d0820bdc",
+   "crop_copy": "不需要：Element 已在平台上，用佔位符引用即可，不另上傳臉部裁切"
+  },
+  "mask": {
+   "file": "review/calendar/m4_r12/V-somi-oh_m4r12_edit_mask_1792x2400.png",
+   "sha256": "d0586a6d440565378e5cd5b4b49df8df5c03d2399771b5be81c9342fa1c94fae",
+   "px": [
+    1792,
+    2400
+   ],
+   "format": "8 位元灰階 PNG；白（255）＝編輯，黑（0）＝保留；不羽化",
+   "shape": "橢圓，中心 (1210, 956)，半徑 84×100 px，約占全圖 0.62%",
+   "upload": "送出前需上傳這 1 個遮罩檔（media_upload → PUT → media_confirm）；本輪未上傳",
+   "color_note": "Higgsfield 沒寫遮罩顏色定義；若平台定義相反，背景會被重畫，屬於停止點"
+  },
+  "prompt": {
+   "text": "In the street photograph, change only the masked area. Give the young woman the face of <<<SOMI_ELEMENT_ID>>>: her face shape, eyes, brows, nose and lips, with light see-through bangs that show her brows. Keep the same head angle and three-quarter view, the upward glance toward the falling snow and a soft smile, and keep her existing hair colour and the outer shape of her hair. Match the photograph exactly: warm amber lantern light from the right on her face, cool blue evening light on the shadow side, and the same softness, grain and sharpness, so the face sits naturally in the scene. Everything outside the mask stays as it is.",
+   "sha256_template": "e59fc4a9d0394814cc9f12637eea769ef9be840f47785c3cb9a058a128f94575",
+   "placeholder": "送出時把 <<<SOMI_ELEMENT_ID>>> 換成 profile.json 的 reference_element_id（Element 佔位符語法），其餘逐字",
+   "words": 110
+  },
+  "params": {
+   "model": "nano_banana_2",
+   "resolution": "2k",
+   "aspect_ratio": "3:4",
+   "is_inpaint": true,
+   "count": 1,
+   "use_unlim": false,
+   "medias": [
+    "R10 底稿任務（role image_references）",
+    "上傳後的遮罩（role mask）"
+   ],
+   "folder": "不指定",
+   "requests": 1,
+   "retries": 0
+  },
+  "quote": {
+   "value": 2,
+   "date": "2026-10-26",
+   "scope": "nano_banana_2 2k 3:4＋R10 底稿參考＋Element 佔位符＋is_inpaint（遮罩未含）",
+   "note": "送出前要在遮罩上傳後重新唯讀報價；舊報價不代表授權"
+  },
+  "cap_suggestion": "1 次請求、上限 2 credits（重新報價 ≤2 才送）、上傳 1 個遮罩檔；不重試",
+  "stop": [
+   "遮罩上傳失敗或平台不接受遮罩＋Element＋底稿的組合 → 停止，不改用其他模型或全圖重畫",
+   "重新報價 >2 或結果不明 → 停止；查原任務，不補送",
+   "結果只送 1 次；不論好壞都不重試、不修圖"
+  ]
+ },
+ "acceptance": [
+  {
+   "k": "1. 背景與構圖保持",
+   "how": "與 R10 原圖逐像素比對（同尺寸時）：遮罩外擴 16 px 以外的差異圖、平均差與明顯改動的像素比例只記錄；再實際看巷道、燈籠、雪地、人物站位與大小、雙靴與腳下留白（R10 約 4.8%）、大衣與毛衣。遮罩外有看得出的改動就判失敗。尺寸不同時改用縮放後看圖比對，並註明無法逐像素比對。"
+  },
+  {
+   "k": "2. 編輯邊界融合",
+   "how": "放大看遮罩邊界：瀏海與兩側頭髮的接續、臉與脖子的膚色、右側燈籠暖光的方向與強度、銳利度與顆粒是否一致；有接縫、光暈、色塊或像貼上去就判失敗。"
+  },
+  {
+   "k": "3. 身分比對",
+   "how": "與 identity_master 及 Element 圖並排：臉型（較圓潤柔和）、杏眼雙眼皮與臥蠶、眉形、直鼻、唇形、露眉空氣瀏海逐項看；不能只因橘髮或微笑判定。臉約 200 px 寬的四分之三側面，看不清就標未確認，不自動放行。"
+  },
+  {
+   "k": "4. 整張美感",
+   "how": "整張仍要好看：抬頭看雪的神情自然、不僵硬或像面具，人景光色一致；只有臉像但整張變差也不通過。"
+  },
+  {
+   "k": "5. 體態與 canon",
+   "how": "另列：身高、三圍、F cup 由圖片無法量測；只記錄看得到的比例是否自然，不宣稱 canon 全部正確。"
+  }
+ ],
+ "alternative": {
+  "when": "只在平台不接受遮罩＋身分參考，且 Penny 另行授權時",
+  "route": "nano_banana_pro 以 R10 底稿＋Somi Element 做整張編輯（prompt 要求只換臉）",
+  "label": "這是整張重畫，不是局部修改；背景、站位、靴子都可能改變，要用同樣的差異圖與看圖驗收",
+  "quote": "nano_banana_pro 2k 唯讀報價 2（2026-10-24／25 查詢；未針對此組合重新報價）"
+ },
+ "penny_decisions": [
+  "是否授權一次 Nano Banana 2 遮罩編輯：1 次請求、上限 2 credits、上傳 1 個遮罩檔、不重試",
+  "編輯範圍：同意只改臉、瀏海、髮際線與上頸（保留外圍頭髮），或改成整個頭髮也換",
+  "平台若拒絕遮罩＋身分參考：維持停止（建議），或另行授權整張重畫的替代路線"
+ ],
+ "counts": {
+  "generated": 0,
+  "paid_edits": 0,
+  "trainings": 0,
+  "uploads": 0,
+  "deploys": 0,
+  "month_photo": {
+   "generated": 9,
+   "credits": 1.08
+  },
+  "draft": {
+   "generated": 2,
+   "credits": 4
+  },
+  "all_credits": 5.08
+ }
+}

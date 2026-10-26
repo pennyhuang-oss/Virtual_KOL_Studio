@@ -6639,11 +6639,38 @@ window.CAL_DATA = {
      "new": "……加「M-4 R11：……月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。」",
      "old": "……兩者合計 credits 4.96。",
      "where": "counts_note"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受",
+     "old": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過（構圖退步、靴子錯誤、身分未確認），待主管及 Penny 看圖",
+     "where": "status.production.set_notes"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12）；Claude 自查不通過，主管實際看圖 REVISE、不建議採用；Penny 未接受。Soul＋構圖參考暫不作量產流程。24 套完成分類不變（V-Somi 仍是退回待重規劃）。",
+     "old": "M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12）；Claude 自查不通過（構圖明顯退步、靴子變短靴、Somi 身分未確認）；待主管及 Penny 看圖。24 套完成分類不變（V-Somi 仍是退回待重規劃）。",
+     "where": "m4r11.status_line"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，待主管及 Penny 看圖；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "where": "meta.status"
     }
    ],
    "from_commit": "a2dbb2e65fe25236b3790c0c94b3ba0fc2c15b76",
-   "status_line": "M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12）；Claude 自查不通過（構圖明顯退步、靴子變短靴、Somi 身分未確認）；待主管及 Penny 看圖。24 套完成分類不變（V-Somi 仍是退回待重規劃）。",
+   "photo_commit": "59634553d956a96c066cb266bc66697ab901d2f8",
+   "record_commit": "30d7fee2e395ba0f124ef6b49f5ab39d47afe0dc",
+   "status_line": "M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12）；Claude 自查不通過，主管實際看圖 REVISE、不建議採用；Penny 未接受。Soul＋構圖參考暫不作量產流程。24 套完成分類不變（V-Somi 仍是退回待重規劃）。",
+   "supervisor": "docs/calendar/data/cal_m4_supervisor_r11.json",
    "trial": "docs/calendar/data/cal_m4_r11_trial.json"
+  },
+  "m4r12": {
+   "changes": [],
+   "from_commit": "30d7fee2e395ba0f124ef6b49f5ab39d47afe0dc",
+   "prep": "docs/calendar/data/cal_m4_r12_edit_prep.json",
+   "status_line": "M-4 R12：只準備保留 R10 底稿的身分編輯測試包（Nano Banana 2 遮罩編輯＋Somi 既有 Element）；生成 0、付費 0、上傳 0；待主管覆核、Penny 授權。"
   },
   "m4r2": {
    "changes": [
@@ -6993,7 +7020,7 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，待主管及 Penny 看圖；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
    "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審"
   },
   "month_rules": [
@@ -7767,7 +7794,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "e74dc2f48d444f53e1647c3fdd93be25066b04e6",
+  "plan_blob": "1f6b077911c906d9f071abd23a55580347aad8a8",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -13123,7 +13150,7 @@ window.CAL_DATA = {
     ],
     "review_r6": "proposed-pending-supervisor-review",
     "set_notes": {
-     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過（構圖退步、靴子錯誤、身分未確認），待主管及 Penny 看圖"
+     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受"
     },
     "sets_total": 24,
     "to_complete": 23
