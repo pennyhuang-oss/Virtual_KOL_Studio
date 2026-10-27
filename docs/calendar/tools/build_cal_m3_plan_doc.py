@@ -100,6 +100,7 @@ def render18(d):
          *([f"> **{d['m4r17']['status_line']}** 主管比較與 Penny 原話見 `data/cal_m4_supervisor_r16.json`。", ''] if 'm4r17' in d else []),
          *([f"> **{d['m4r17b']['status_line']}** Penny 原話見 `data/cal_m4_owner_r17b.json`。", ''] if 'm4r17b' in d else []),
          *([f"> **{d['m4r18']['status_line']}** 試拍紀錄見 `data/cal_m4_r18_trial.json`。", ''] if 'm4r18' in d else []),
+         *([f"> **{d['m4r19']['status_line']}** Penny 原話見 `data/cal_m4_owner_r19.json`，主管覆核見 `data/cal_m4_supervisor_r18.json`，Yerin 修訂見 `data/cal_m4_r19_followup.json`。", ''] if 'm4r19' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

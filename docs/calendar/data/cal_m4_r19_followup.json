@@ -1,0 +1,32 @@
+{
+ "note": "M-4 R19：R18 覆核後的有限收尾。不含 ID。本輪生成 0、報價 0、付費 0、上傳 0、部署 0。",
+ "date": "2026-10-27",
+ "owner": "docs/calendar/data/cal_m4_owner_r19.json",
+ "supervisor": "docs/calendar/data/cal_m4_supervisor_r18.json",
+ "yerin_prompt_v2": {
+  "from": {
+   "path": "docs/calendar/data/cal_m4_r13_cards.json",
+   "commit": "bd84cf97a7310afa672d506895e09c8d73220408",
+   "sha256": "5bb8c2c7aa6ffc84a8761b44be9581e2c0a49e5253a6374ac43ccce5e7ba3ca9",
+   "words": 346
+  },
+  "edit": {
+   "old": "Moment: she stands on the grass with the head of a single golf club resting on the ground in front of her and both hands stacked lightly on top of its grip at hip height, her weight on one leg, looking down the fairway toward the next hole with an easy, confident smile.",
+   "new": "Moment: she stands upright with both feet flat on the grass about hip-width apart and her weight settled evenly, holding a single golf club loosely in one hand with its head resting lightly on the grass beside her foot, her other arm relaxed at her side, looking down the fairway toward the next hole with an easy, confident smile."
+  },
+  "text": "A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white sleeveless fitted knit golf polo, a pale sky-blue pleated golf skirt, white golf shoes and small gold studs. Setting: the edge of a fairway on a clear late-spring morning, bright green grass with dew still on it, fully leafed late-spring trees along the far side, open sky, no golf carts, no flags or signs with text, nobody else around. Moment: she stands upright with both feet flat on the grass about hip-width apart and her weight settled evenly, holding a single golf club loosely in one hand with its head resting lightly on the grass beside her foot, her other arm relaxed at her side, looking down the fairway toward the next hole with an easy, confident smile. Shot: full-length, from a little above her cap to below her shoes, with plenty of fairway and trees around her. Camera: horizontal 16:9, at her waist height, an 85mm lens from about 12 metres, natural perspective. Composition: she stands on the left third of the frame with her body angled to the right, the fairway opening out ahead of her on the right, the line of trees across the upper middle, clear space above her cap and below her shoes. Light: the low morning sun from the right of the frame, ahead of her, lights her face and the front of her body from the side, crisp and directional, with long soft shadows stretching behind her across the grass and sparkles of dew; a soft fill keeps her eyes clear under the cap brim; fresh green, white and pale sky blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.",
+  "sha256": "b746f171f9e58642dd2bbdc9026da8b54ca296c69952b424c66110dd037d3a11",
+  "words": 352,
+  "changes": [
+   "只改 Moment 一句：雙腳平放在草地、與髖同寬、重心平均，取代「重心在一腳」",
+   "球桿改為一手輕握、桿頭輕放在腳邊草地，不再雙手疊壓在握把上，避免倚桿與側傾",
+   "另一隻手臂自然垂放在身側（回應 Penny 指出的「一隻手張開」），不另加手勢",
+   "保留：服裝、春季球場、清爽配色、望向球道的神情、其餘描述逐字不變"
+  ],
+  "not_changed": "人景比例（Penny 指出「人物大小比例跟後面的風景也很奇怪」）本輪依主管範圍未改 prompt 的景別與相機描述，列為待主管決定的事項",
+  "next_test": "Soul 2＋Yerin 既有 Soul、2k、16:9、count 1，約 0.12 credits（本輪不報價、不生成）"
+ },
+ "jia_feedback_pending": "Penny 指出腳懸空在湖面上不合理、應整個收在木板上，以及人物與畫面比例奇怪；本輪主管未要求準備 Jia 修訂，只記錄",
+ "print_note": "R18 兩張 2048×1152 放 192 mm 寬約 271 ppi，低於 300 ppi 工作目標；照實保留，不宣稱已符合交印要求",
+ "counts": "不變：月面照片 14 張 1.68 credits；構圖底稿 2 張 4 credits；已接受 3（V-Iris、V-Tammy R14、V-Rin R14）"
+}
