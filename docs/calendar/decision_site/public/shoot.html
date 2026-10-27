@@ -6,32 +6,34 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="referrer" content="no-referrer">
 <meta name="page-commit" content="__PAGE_COMMIT__">
-<title>目前檢視｜2027 KOL 桌曆</title>
+<title>選片｜2027 KOL 桌曆</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="app.css">
-<link rel="stylesheet" href="review.css">
+<link rel="stylesheet" href="pick.css">
 </head>
-<body class="review">
+<body class="pickpage">
 <header class="top">
   <div class="wrap">
     <p class="meta tline" id="tline">TASK-CAL-001</p>
-    <h1>目前檢視：第一批 5 位看圖</h1>
-    <p class="prog" id="prog"></p>
-    <p class="meta"><a href="history.html" id="hist-top">已定稿企劃／歷史紀錄 →</a>｜<a href="index.html">素材選擇頁</a></p>
+    <h1 id="title">2027 桌曆選片</h1>
+    <p class="intro" id="intro"></p>
+    <p class="prog" id="prog" aria-live="polite"></p>
+    <p class="meta"><a href="#copy">全部回饋與複製 ↓</a>｜<a href="#acc">已接受 ↓</a>｜<a href="history.html">已定稿企劃／歷史紀錄 →</a></p>
   </div>
 </header>
-<noscript><p class="wrap warn">本頁需要開啟 JavaScript 才能顯示照片與進度。</p></noscript>
-<main id="app" class="wrap rv"></main>
+<noscript><p class="wrap warn">本頁需要開啟 JavaScript 才能顯示照片與選項。</p></noscript>
+<main id="app" class="wrap"></main>
 <footer class="wrap foot"><p class="meta">頁面版本 <code id="pagever"></code>｜公開可讀、不需登入。</p></footer>
 <div id="viewer" class="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="viewer-cap">
   <div class="viewer-bar">
     <span id="viewer-cap"></span>
+    <button type="button" class="btn ghost" id="viewer-other" hidden>看另一張</button>
     <button type="button" class="btn ghost" id="viewer-mode">原尺寸</button>
     <button type="button" class="btn" id="viewer-close" aria-label="關閉放大檢視">關閉 ✕</button>
   </div>
   <div class="viewer-body" id="viewer-body"><img id="viewer-img" alt=""></div>
 </div>
-<script src="review-data.js"></script>
-<script src="review.js"></script>
+<script src="pick-data.js"></script>
+<script src="pick.js"></script>
 </body>
 </html>

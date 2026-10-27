@@ -5475,11 +5475,11 @@ window.CAL_DATA = {
    ]
   },
   "counts": {
-   "credits": 1.68,
-   "generated": 14,
+   "credits": 6.48,
+   "generated": 54,
    "trainings": 0
   },
-  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。 M-4 R10：連續空間構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（累計生成 2、credits 4）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 4.96。 M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。 M-4 R14：Tammy、Rin 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 11、credits 1.32；構圖底稿仍是 2 張、4 credits；合計 credits 5.32。 M-4 R16：Penny 接受 Tammy R14；Rin 修訂版 1 張（Soul 純文字，1 次請求、實扣 0.12，依時窗推定）；月面照片累計生成 12、credits 1.44；構圖底稿仍是 2 張、4 credits；合計 credits 5.44。 M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 14、credits 1.68；構圖底稿仍是 2 張、4 credits；合計 credits 5.68。",
+  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。 M-4 R10：連續空間構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（累計生成 2、credits 4）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 4.96。 M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。 M-4 R14：Tammy、Rin 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 11、credits 1.32；構圖底稿仍是 2 張、4 credits；合計 credits 5.32。 M-4 R16：Penny 接受 Tammy R14；Rin 修訂版 1 張（Soul 純文字，1 次請求、實扣 0.12，依時窗推定）；月面照片累計生成 12、credits 1.44；構圖底稿仍是 2 張、4 credits；合計 credits 5.44。 M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 14、credits 1.68；構圖底稿仍是 2 張、4 credits；合計 credits 5.68。 M-4 R20：剩餘 20 套各 2 張候選（40 張，Soul 純文字，40 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 54、credits 6.48；構圖底稿仍是 2 張、4 credits；合計 credits 10.48。",
   "draft_counts": {
    "credits": 4,
    "generated": 2
@@ -7017,6 +7017,231 @@ window.CAL_DATA = {
    "from_commit": "706618f66707087e9a27dbb94f9ee3b9d256fd6f",
    "summary": "依 M-4 R2 指令：同步主管對 R1 的覆核（歸屬用語、刪除顯示值推論、預算不是平台上限），保存 Penny 的限定授權，並記錄 V-Iris 單張首試結果（部分通過，待主管覆核；照片不放公開頁）。24 套拍攝內容與 prompt 不變；企劃版本升為 shoot-plan-v9。"
   },
+  "m4r20": {
+   "auth": "docs/calendar/data/cal_m4_auth_r20.json",
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "{\"generated\": 54, \"credits\": 6.48, \"trainings\": 0}",
+     "old": "{\"generated\": 14, \"credits\": 1.68, \"trainings\": 0}",
+     "where": "counts"
+    },
+    {
+     "kind": "事實同步",
+     "new": "1",
+     "old": "3",
+     "where": "status.production.rejected_replan"
+    },
+    {
+     "kind": "事實同步",
+     "new": "0",
+     "old": "18",
+     "where": "status.production.not_generated"
+    },
+    {
+     "kind": "事實同步",
+     "new": "21",
+     "old": "21",
+     "where": "status.production.to_complete"
+    },
+    {
+     "kind": "事實同步",
+     "new": "54",
+     "old": "14",
+     "where": "status.production.generated_cumulative"
+    },
+    {
+     "kind": "事實同步",
+     "new": "20",
+     "old": "0",
+     "where": "status.production.pending_owner_review"
+    },
+    {
+     "kind": "事實同步",
+     "new": "[\"V-somi-oh\"]",
+     "old": "[\"V-somi-oh\", \"H-yerin-han\", \"H-jia-seo\"]",
+     "where": "status.production.rejected_sets"
+    },
+    {
+     "kind": "事實同步",
+     "new": "\"M-4 R20\": 40",
+     "old": "（無 M-4 R20）",
+     "where": "status.production.generated_log"
+    },
+    {
+     "kind": "事實同步",
+     "new": "20 套 R20 候選待 Penny 選片",
+     "old": "（新欄位）",
+     "where": "status.production.pick_sets"
+    },
+    {
+     "kind": "事實同步",
+     "new": "24 套月面＝accepted＋pending_owner_review＋rejected_replan＋not_generated（四類互斥；M-4 R20 起加入 pending_owner_review）",
+     "old": "24 套月面＝accepted＋rejected_replan＋not_generated（三類互斥）",
+     "where": "status.production.definitions.sets_total"
+    },
+    {
+     "kind": "事實同步",
+     "new": "已生成、Penny 退回，待重規劃且目前沒有新候選（M-4 R20 後只剩 V-somi-oh，本輪暫不處理）",
+     "old": "已生成、Penny 退回，待重規劃（第一批 5 張中尚未被接受的；目前 V-somi-oh、H-yerin-han、H-jia-seo）",
+     "where": "status.production.definitions.rejected_replan"
+    },
+    {
+     "kind": "事實同步",
+     "new": "待完成合計＝pending_owner_review＋rejected_replan＋not_generated（不是互斥分類的一類）",
+     "old": "待完成合計＝rejected_replan＋not_generated（不是互斥分類的一類）",
+     "where": "status.production.definitions.to_complete"
+    },
+    {
+     "kind": "事實同步",
+     "new": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＝54）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "old": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＝14）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "where": "status.production.definitions.generated_cumulative"
+    },
+    {
+     "kind": "事實同步",
+     "new": "已有新候選、等 Penny 在選片頁選擇的套數（M-4 R20：20 套，見 pick_sets）；未選擇不算接受",
+     "old": "24 套層級正在等 Penny 看圖的套數；試拍照片的狀態另見 set_notes",
+     "where": "status.production.definitions.pending_owner_review"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；雪林、白霧與服裝到位；A 下緣切在小腿，比膝上略寬。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-yuna-kim"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 斜躺全身、B 側坐；夕陽窗光與酒紅緞面到位；B 構圖下方地面偏空。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-rin-ayase"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 抱膝近景、B 床緣雙腳踩地；晨光柔和；B 雙手位置接近扠腰，略刻意。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-miu-shiraishi"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 走向鏡頭、B 停步站定；花園、白花與桃紅洋裝到位；兩張差異不大。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-tammy-chou"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（清爽感與尺度到位；一腳懸空倚桿的姿勢不自然，遠處又出現球車與旗桿）；待主管看圖，Penny 未決定；R19：主管 REVISE（抬腳、側傾、扶桿組合刻意）；Penny 不接受（原話：姿勢做作、一隻手張開不合理、人物與背景比例奇怪）；已備姿態修訂 prompt（雙腳落地、一手輕握球桿），未生成；R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：雙腳落地、球桿頭輕放草地不承重，手指自然；人物比 R18 小（A 約占畫高七成多、B 約五成），球道與樹一起構圖；A 左側遠處仍有一支旗桿。待 Penny 選擇，未接受",
+     "old": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（清爽感與尺度到位；一腳懸空倚桿的姿勢不自然，遠處又出現球車與旗桿）；待主管看圖，Penny 未決定；R19：主管 REVISE（抬腳、側傾、扶桿組合刻意）；Penny 不接受（原話：姿勢做作、一隻手張開不合理、人物與背景比例奇怪）；已備姿態修訂 prompt（雙腳落地、一手輕握球桿），未生成",
+     "where": "status.production.set_notes.H-yerin-han"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；薰衣草田與夕陽逆光到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-coco-wu"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 腰上、B 大腿中；燈串、摩天輪與晚霞到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-mia-huang"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；海灣、岩台與向日葵黃到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-iris-chen"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（晚霞湖面與平台構圖好看；人物比例偏大、看鏡頭、太陽未落）；待主管看圖，Penny 未決定；R19：主管保留候選（寫於 Penny 表態前）；Penny 不接受（原話：腳懸空在湖面上不合理、應收在木板上，人物與畫面比例奇怪）；R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：臀部、雙腿、雙腳與涼鞋都在木板上，讀得出平台與湖景；人物仍偏大（未到「人小景大」），坐位靠近平台邊緣；太陽仍在對岸地平線上（設計是日落後）。待 Penny 選擇，未接受",
+     "old": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（晚霞湖面與平台構圖好看；人物比例偏大、看鏡頭、太陽未落）；待主管看圖，Penny 未決定；R19：主管保留候選（寫於 Penny 表態前）；Penny 不接受（原話：腳懸空在湖面上不合理、應收在木板上，人物與畫面比例奇怪）",
+     "where": "status.production.set_notes.H-jia-seo"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身和服、香袋、庭院到位；B 膝上的和服下襬變短、露出腿部，和服長度不對。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-luna-tanaka"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-somi-oh"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；夜景、壁燈與紅緞到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.H-rainie-hsu"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；溫室、白色鋼架與龜背芋到位；臉部略偏娃娃感。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-jia-seo"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：夜櫻、燈籠與紫色洋裝到位；A 取景比計畫寬（計畫胸上，實際到大腿）；燈籠上有類似文字的筆畫。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-mia-huang"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：坐階梯、白花樹與杏色洋裝到位；兩張背景都出現吊床（設計寫不要吊床）。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-miu-shiraishi"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；雨後街道、暖窗光與倒影到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-rainie-hsu"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；雨後繡球花庭院到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-luna-tanaka"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 後仰大笑、B 前傾雙手放膝；泳池與水光到位。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-coco-wu"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 走在淺水、B 停步仰望；粉紫天空與海面到位；B 海平線上露出太陽（設計是無強逆光）。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-yerin-han"
+    },
+    {
+     "kind": "事實同步",
+     "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；銀杏大道到位；街上有韓文招牌與路面字（設計是無字）。待 Penny 選擇，未接受",
+     "old": "（無）",
+     "where": "status.production.set_notes.V-yuna-kim"
+    },
+    {
+     "kind": "事實同步",
+     "new": "追加：…M-4 R20 … 合計 credits 10.48。",
+     "old": "（尾句）…合計 credits 5.68。",
+     "where": "counts_note"
+    },
+    {
+     "kind": "事實同步",
+     "new": "…；M-4 R20 … 全部上選片頁待 Penny 選擇；V-somi-oh 暫不處理；已接受仍 3 套；沒有上傳…",
+     "old": "…；已接受仍 3 套；沒有上傳…",
+     "where": "meta.status"
+    }
+   ],
+   "from_commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+   "pick": "docs/calendar/data/cal_pick_r20.json",
+   "status_line": "M-4 R20：剩餘 20 套各生成 A、B 兩張候選（Soul 純文字，40 次請求、各實扣 0.12，合計 4.80）；全部上選片頁，待 Penny 選擇；V-somi-oh 暫不處理。接受數不變（3）。",
+   "trial": "docs/calendar/data/cal_m4_r20_trial.json"
+  },
   "m4r4": {
    "changes": [
     {
@@ -7311,7 +7536,7 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；M-4 R18 依授權生成 Yerin、Jia 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查兩張皆部分通過，待主管看圖、Penny 未決定；M-4 R19 Penny 兩張 R18 都不接受，只備 Yerin 姿態修訂 prompt（生成 0）；已接受仍 3 套；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；M-4 R18 依授權生成 Yerin、Jia 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查兩張皆部分通過，待主管看圖、Penny 未決定；M-4 R19 Penny 兩張 R18 都不接受，只備 Yerin 姿態修訂 prompt（生成 0）；M-4 R20 依授權為剩餘 20 套各生成 A、B 兩張候選（40 次請求、實扣 4.80），全部上選片頁待 Penny 選擇；V-somi-oh 暫不處理；已接受仍 3 套；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
    "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審"
   },
   "month_rules": [
@@ -8085,7 +8310,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "cc58739e900b140d64b6f0f5c051d13784305da3",
+  "plan_blob": "b3d9596607c69e3aaacde2252fc17da55f711230",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -13406,13 +13631,13 @@ window.CAL_DATA = {
     "definitions": {
      "accepted": "已生成且 Penny 已接受（V-iris-chen；V-tammy-chou 於 M-4 R16、V-rin-ayase 於 M-4 R17 後接受各自的 R14 試拍）",
      "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",
-     "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＝14）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＝54）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
      "not_generated": "尚未生成的套數",
-     "pending_owner_review": "24 套層級正在等 Penny 看圖的套數；試拍照片的狀態另見 set_notes",
-     "rejected_replan": "已生成、Penny 退回，待重規劃（第一批 5 張中尚未被接受的；目前 V-somi-oh、H-yerin-han、H-jia-seo）",
+     "pending_owner_review": "已有新候選、等 Penny 在選片頁選擇的套數（M-4 R20：20 套，見 pick_sets）；未選擇不算接受",
+     "rejected_replan": "已生成、Penny 退回，待重規劃且目前沒有新候選（M-4 R20 後只剩 V-somi-oh，本輪暫不處理）",
      "set_notes": "單套的照片歷程（不改變上列 24 套完成分類）",
-     "sets_total": "24 套月面＝accepted＋rejected_replan＋not_generated（三類互斥）",
-     "to_complete": "待完成合計＝rejected_replan＋not_generated（不是互斥分類的一類）"
+     "sets_total": "24 套月面＝accepted＋pending_owner_review＋rejected_replan＋not_generated（四類互斥；M-4 R20 起加入 pending_owner_review）",
+     "to_complete": "待完成合計＝pending_owner_review＋rejected_replan＋not_generated（不是互斥分類的一類）"
     },
     "drafts": {
      "credits": 4,
@@ -13423,32 +13648,71 @@ window.CAL_DATA = {
      },
      "note": "M-4 R9 V-Somi 構圖底稿（實扣 2，主管退回）；M-4 R10 V-Somi 連續空間構圖底稿（Nano Banana Pro，1 次請求，實扣 2，依時窗推定；Claude 自查通過，待主管及 Penny 看底稿）"
     },
-    "generated_cumulative": 14,
+    "generated_cumulative": 54,
     "generated_log": {
      "M-4 R11": 1,
      "M-4 R14": 2,
      "M-4 R16": 1,
      "M-4 R18": 2,
      "M-4 R2": 1,
+     "M-4 R20": 40,
      "M-4 R5": 5,
      "M-4 R7": 1,
      "M-4 R8": 1
     },
-    "not_generated": 18,
-    "pending_owner_review": 0,
-    "rejected_replan": 3,
-    "rejected_sets": [
-     "V-somi-oh",
+    "not_generated": 0,
+    "pending_owner_review": 20,
+    "pick_sets": [
+     "H-yuna-kim",
+     "H-rin-ayase",
+     "H-miu-shiraishi",
+     "H-tammy-chou",
      "H-yerin-han",
-     "H-jia-seo"
+     "H-coco-wu",
+     "H-mia-huang",
+     "H-iris-chen",
+     "H-jia-seo",
+     "H-luna-tanaka",
+     "H-somi-oh",
+     "H-rainie-hsu",
+     "V-jia-seo",
+     "V-mia-huang",
+     "V-miu-shiraishi",
+     "V-rainie-hsu",
+     "V-luna-tanaka",
+     "V-coco-wu",
+     "V-yerin-han",
+     "V-yuna-kim"
+    ],
+    "rejected_replan": 1,
+    "rejected_sets": [
+     "V-somi-oh"
     ],
     "review_r6": "proposed-pending-supervisor-review",
     "set_notes": {
-     "H-jia-seo": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（晚霞湖面與平台構圖好看；人物比例偏大、看鏡頭、太陽未落）；待主管看圖，Penny 未決定；R19：主管保留候選（寫於 Penny 表態前）；Penny 不接受（原話：腳懸空在湖面上不合理、應收在木板上，人物與畫面比例奇怪）",
-     "H-yerin-han": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（清爽感與尺度到位；一腳懸空倚桿的姿勢不自然，遠處又出現球車與旗桿）；待主管看圖，Penny 未決定；R19：主管 REVISE（抬腳、側傾、扶桿組合刻意）；Penny 不接受（原話：姿勢做作、一隻手張開不合理、人物與背景比例奇怪）；已備姿態修訂 prompt（雙腳落地、一手輕握球桿），未生成",
+     "H-coco-wu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；薰衣草田與夕陽逆光到位。待 Penny 選擇，未接受",
+     "H-iris-chen": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；海灣、岩台與向日葵黃到位。待 Penny 選擇，未接受",
+     "H-jia-seo": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（晚霞湖面與平台構圖好看；人物比例偏大、看鏡頭、太陽未落）；待主管看圖，Penny 未決定；R19：主管保留候選（寫於 Penny 表態前）；Penny 不接受（原話：腳懸空在湖面上不合理、應收在木板上，人物與畫面比例奇怪）；R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：臀部、雙腿、雙腳與涼鞋都在木板上，讀得出平台與湖景；人物仍偏大（未到「人小景大」），坐位靠近平台邊緣；太陽仍在對岸地平線上（設計是日落後）。待 Penny 選擇，未接受",
+     "H-luna-tanaka": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身和服、香袋、庭院到位；B 膝上的和服下襬變短、露出腿部，和服長度不對。待 Penny 選擇，未接受",
+     "H-mia-huang": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 腰上、B 大腿中；燈串、摩天輪與晚霞到位。待 Penny 選擇，未接受",
+     "H-miu-shiraishi": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 抱膝近景、B 床緣雙腳踩地；晨光柔和；B 雙手位置接近扠腰，略刻意。待 Penny 選擇，未接受",
+     "H-rainie-hsu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；夜景、壁燈與紅緞到位。待 Penny 選擇，未接受",
+     "H-rin-ayase": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 斜躺全身、B 側坐；夕陽窗光與酒紅緞面到位；B 構圖下方地面偏空。待 Penny 選擇，未接受",
+     "H-somi-oh": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。待 Penny 選擇，未接受",
+     "H-tammy-chou": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 走向鏡頭、B 停步站定；花園、白花與桃紅洋裝到位；兩張差異不大。待 Penny 選擇，未接受",
+     "H-yerin-han": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（清爽感與尺度到位；一腳懸空倚桿的姿勢不自然，遠處又出現球車與旗桿）；待主管看圖，Penny 未決定；R19：主管 REVISE（抬腳、側傾、扶桿組合刻意）；Penny 不接受（原話：姿勢做作、一隻手張開不合理、人物與背景比例奇怪）；已備姿態修訂 prompt（雙腳落地、一手輕握球桿），未生成；R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：雙腳落地、球桿頭輕放草地不承重，手指自然；人物比 R18 小（A 約占畫高七成多、B 約五成），球道與樹一起構圖；A 左側遠處仍有一支旗桿。待 Penny 選擇，未接受",
+     "H-yuna-kim": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；雪林、白霧與服裝到位；A 下緣切在小腿，比膝上略寬。待 Penny 選擇，未接受",
+     "V-coco-wu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 後仰大笑、B 前傾雙手放膝；泳池與水光到位。待 Penny 選擇，未接受",
+     "V-jia-seo": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；溫室、白色鋼架與龜背芋到位；臉部略偏娃娃感。待 Penny 選擇，未接受",
+     "V-luna-tanaka": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；雨後繡球花庭院到位。待 Penny 選擇，未接受",
+     "V-mia-huang": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：夜櫻、燈籠與紫色洋裝到位；A 取景比計畫寬（計畫胸上，實際到大腿）；燈籠上有類似文字的筆畫。待 Penny 選擇，未接受",
+     "V-miu-shiraishi": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：坐階梯、白花樹與杏色洋裝到位；兩張背景都出現吊床（設計寫不要吊床）。待 Penny 選擇，未接受",
+     "V-rainie-hsu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；雨後街道、暖窗光與倒影到位。待 Penny 選擇，未接受",
      "V-rin-ayase": "R5 退回；R14 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查不通過（主題光帶沒落在臉上、平光、看鏡頭，景別比計畫寬、靴尖貼下緣）；待主管看圖，Penny 未表態；R15 主管覆核：REVISE，暫不推薦採用（柱子搶眼、雙臂垂下、正面看鏡頭偏僵，光影沒有組織人物與場景），Penny 未決定；已備修訂 prompt（膝上、迎光、柱子作側邊框景），未生成；R16 修訂版 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（景別拉近、光落在人身上、手勢鬆開；仍看鏡頭、柱子偏寬）；待主管看圖，Penny 未決定；R17：Penny 原話「Rin 的第一張，我覺得還比較好」（暫按 R14 理解，記為版本偏好，未正式接受）；主管比較推薦 R14；R14 為優先候選，R16 保留紀錄、不替換；R17 後：Penny 正式接受 R14（Penny 原話「Rin R14 接受」）",
      "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）；R13 第二次：遮罩已依主管要求對照原圖調整（涵蓋下顎與上頸、離開背景），遮罩白黑定義與上傳費用仍無法確認，依停止規則未上傳、未送出、未扣款",
-     "V-tammy-chou": "R5 退回；R14 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（氣氛與光色到位，姿勢偏端坐、腳尖貼下緣）；待主管看圖，Penny 未表態；R15 主管覆核：保留候選（光色、衣著、場景與人物關係明顯改善；仍稍端正、燈罩醒目、一隻腳被原圖下緣截斷），待 Penny 決定，未接受；R16：Penny 接受 R14 這張（Penny 原話「Tammy 接受」）"
+     "V-tammy-chou": "R5 退回；R14 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（氣氛與光色到位，姿勢偏端坐、腳尖貼下緣）；待主管看圖，Penny 未表態；R15 主管覆核：保留候選（光色、衣著、場景與人物關係明顯改善；仍稍端正、燈罩醒目、一隻腳被原圖下緣截斷），待 Penny 決定，未接受；R16：Penny 接受 R14 這張（Penny 原話「Tammy 接受」）",
+     "V-yerin-han": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 走在淺水、B 停步仰望；粉紫天空與海面到位；B 海平線上露出太陽（設計是無強逆光）。待 Penny 選擇，未接受",
+     "V-yuna-kim": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；銀杏大道到位；街上有韓文招牌與路面字（設計是無字）。待 Penny 選擇，未接受"
     },
     "sets_total": 24,
     "to_complete": 21

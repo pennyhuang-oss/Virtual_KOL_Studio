@@ -1,0 +1,65 @@
+/* 選片頁（shoot.html，M-4 R20 起）：照片優先、A／B 並排；基本樣式沿用 app.css */
+body.pickpage { padding-bottom: 16px; }
+.tline { font-weight: 600; color: #333; }
+.intro { margin: .2em 0; font-size: .95rem; }
+.prog { margin: .2em 0; font-size: 1rem; font-weight: 600; color: #0b57d0; }
+.foot { margin: 8px auto 24px; }
+
+/* 導覽：橫式／直式分頁＋月份與角色 */
+.pn { margin: 12px 0 4px; }
+.tabs { display: flex; gap: 6px; margin-bottom: 8px; }
+.tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; font: inherit; font-weight: 700; font-size: 1rem; border: 1px solid #c9c6bf; border-radius: 8px; padding: 8px 10px; background: #fff; color: inherit; cursor: pointer; min-height: 44px; }
+.tab span { font-weight: 400; font-size: .82rem; color: #555; }
+.tab.on { border-color: #0b57d0; box-shadow: inset 0 0 0 1px #0b57d0; background: #eef3fd; }
+.pn ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.pn-b { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; width: 100%; box-sizing: border-box; text-align: left; border: 1px solid #c9c6bf; border-radius: 8px; padding: 6px 8px; background: #fff; font: inherit; color: inherit; cursor: pointer; min-height: 44px; text-decoration: none; }
+.pn-b.on { border-color: #0b57d0; box-shadow: inset 0 0 0 1px #0b57d0; background: #eef3fd; }
+.pn-b.other { background: #f4f3f0; color: #555; }
+.pn-b span { color: #444; font-size: .88rem; }
+.st { font-style: normal; font-size: .78rem; font-weight: 700; padding: 0 6px; border-radius: 4px; background: #eee; color: #555; white-space: nowrap; }
+.st.accept { background: #0b6b3a; color: #fff; }
+.st.edit { background: #7a5a00; color: #fff; }
+.st.done { background: #d7eadf; color: #0b6b3a; }
+.st.wait { background: #ececec; color: #666; }
+h2 .st { margin-left: 10px; vertical-align: middle; font-size: .85rem; }
+
+/* 一套：A、B 完整顯示（不裁切） */
+.abpair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.cand { margin: 0; min-width: 0; }
+.zoom { display: block; position: relative; width: 100%; padding: 0; border: 0; border-radius: 8px; overflow: hidden; background: #e8e6e1; cursor: zoom-in; }
+.zoom img { display: block; width: 100%; height: auto; }
+.abpair-V .zoom img { max-height: 78vh; width: auto; max-width: 100%; margin: 0 auto; }
+.ab { position: absolute; left: 8px; top: 8px; min-width: 1.6em; text-align: center; background: rgba(17, 17, 17, .82); color: #fff; font-weight: 800; font-size: 1.25rem; line-height: 1.5; padding: 0 8px; border-radius: 6px; }
+.cand figcaption { font-size: .88rem; margin-top: 6px; color: #444; overflow-wrap: anywhere; }
+.ab-t { display: inline-block; background: #111; color: #fff; border-radius: 4px; padding: 0 8px; font-size: 1rem; }
+.lnk { font: inherit; font-size: .88rem; background: none; border: 0; padding: 0; color: #0b57d0; text-decoration: underline; cursor: pointer; }
+
+/* 選擇與備註 */
+.ch { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0 8px; }
+.opt { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #c9c6bf; border-radius: 8px; padding: 8px 14px; background: #fff; font-weight: 700; cursor: pointer; min-height: 44px; box-sizing: border-box; }
+.opt:has(input:checked) { border-color: #0b57d0; background: #eef3fd; }
+.btn.sm { font-size: .82rem; padding: 6px 10px; }
+.btn[disabled] { opacity: .45; cursor: default; }
+.nl { display: block; font-size: .9rem; margin: 4px 0; }
+#fb-note, #cp-text { display: block; width: 100%; box-sizing: border-box; font: inherit; font-size: .95rem; padding: 8px; border: 1px solid #c9c6bf; border-radius: 8px; }
+#cp-text { font-size: .85rem; background: #fafafa; }
+.acts { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.td-h { margin: 0 0 6px; }
+
+/* 已接受 */
+.accs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.acc { margin: 0; min-width: 0; }
+.acc figcaption { font-size: .88rem; margin-top: 6px; }
+.ok { color: #0b6b3a; font-weight: 700; }
+.hist h2 { font-size: 1.05rem; }
+
+@media (max-width: 760px) {
+  .pn ol { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+  .pn-b { padding: 4px 6px; }
+  .pn-b span { font-size: .8rem; }
+  .abpair-H { grid-template-columns: minmax(0, 1fr); }
+  .abpair-V { gap: 8px; }
+  .ab { font-size: 1.05rem; }
+  .opt { flex: 1 1 100%; }
+  .accs { gap: 8px; }
+}

@@ -20,7 +20,7 @@
   M-4 R5：第一批 5 張（一次看一位；原圖去文字區塊、顯示版、套框預覽位元組不變），V-Iris 移到「已接受紀錄」（只留原圖與顯示版）。
 不生成、不外擴、不增強、不修圖、不重新下載。
 
-輸出：docs/calendar/decision_site/public/img/{z,t,review}/、public/data.js、public/review-data.js、decision_site/ASSET_MANIFEST.json
+輸出：docs/calendar/decision_site/public/img/{z,t,review,pick}/、public/data.js、public/review-data.js、public/pick-data.js、decision_site/ASSET_MANIFEST.json
 用法：python3 docs/calendar/tools/build_cal_decision_site.py --hf-dir <取回快取> --clean-dir <R3 清理輸出>   # 產生
       python3 docs/calendar/tools/build_cal_decision_site.py --check [--hf-dir ... --clean-dir ...]  # 核對
 """
@@ -319,12 +319,12 @@ def build_m3(mat):
     P = json.loads(raw)
     roster = json.loads(wt_bytes(ROSTER_FILE))
     assert [p['pid'] for p in P['people']] == roster['list'], '企劃與名單紀錄不一致'
-    assert P['counts'] == {'generated': 14, 'credits': 1.68, 'trainings': 0}, 'M-4 R2 生成 1 張；M-4 R5 第一批 5 張（每位 1 次請求）；M-4 R7、R8、R11 V-Somi 試拍各 1 張；M-4 R14 Tammy、Rin 各 1 張；M-4 R16 Rin 1 張；M-4 R18 Yerin、Jia 各 1 張'
+    assert P['counts'] == {'generated': 54, 'credits': 6.48, 'trainings': 0}, 'M-4 R2 生成 1 張；M-4 R5 第一批 5 張（每位 1 次請求）；M-4 R7、R8、R11 V-Somi 試拍各 1 張；M-4 R14 Tammy、Rin 各 1 張；M-4 R16 Rin 1 張；M-4 R18 Yerin、Jia 各 1 張；M-4 R20 20 套各 2 張'
     assert P.get('draft_counts') == {'generated': 2, 'credits': 4} == {k: P['status']['production']['drafts'][k] for k in ('generated', 'credits')}, 'M-4 R9、R10 構圖底稿各 1 張另計，不併入月面照片'
     assert P['version'] == 'shoot-plan-v12' and P['revision']['from_version'] == 'shoot-plan-v11'
     PR = P['status']['production']  # M-4 R4：Penny 接受 V-Iris（含反光板）；M-4 R6：第一批 5 張 Penny 全數退回，24 套重審提案待主管覆核
-    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen', 'V-tammy-chou', 'V-rin-ayase'] and (PR['sets_total'], PR['accepted'], PR['rejected_replan'], PR['not_generated'], PR['to_complete'], PR['generated_cumulative'], PR['pending_owner_review']) == (24, 3, 3, 18, 21, 14, 0)
-    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'owner-rejected-r6' and P['batch1']['sets'] == BATCH1_SETS and PR['rejected_sets'] == [s for s in BATCH1_SETS if s not in PR['accepted_sets']]  # M-4 R16：Penny 接受 Tammy R14；R17 後接受 Rin R14
+    assert P['status']['iris_first'] == 'accepted-by-owner' and PR['accepted_sets'] == ['V-iris-chen', 'V-tammy-chou', 'V-rin-ayase'] and (PR['sets_total'], PR['accepted'], PR['rejected_replan'], PR['not_generated'], PR['to_complete'], PR['generated_cumulative'], PR['pending_owner_review']) == (24, 3, 1, 0, 21, 54, 20)
+    assert P['m4_prep']['r4']['status'].startswith('Penny 接受') and P['batch1']['status'] == 'owner-rejected-r6' and P['batch1']['sets'] == BATCH1_SETS and PR['rejected_sets'] == [s for s in BATCH1_SETS if s not in PR['accepted_sets'] + PR['pick_sets']]  # M-4 R16：Penny 接受 Tammy R14；R17 後接受 Rin R14；R20：Yerin、Jia 有新候選
     acc, ver = P['status']['accepted'], P['status']['supervisor_verified']
     assert P['status']['m3'] == 'complete' and len(acc) == 23 and ver == ['H-luna-tanaka'] and not P['status']['revised'], 'M-4 R1 狀態不對'
     assert sorted(acc + ver) == sorted(x['id'] for x in P['sets'])
@@ -407,7 +407,7 @@ def build_m3(mat):
             P['m4r13b']['from_commit'], P['m4r14']['from_commit'],
             P['m4r15']['from_commit'], P['m4r16']['from_commit'],
             P['m4r17']['from_commit'], P['m4r17b']['from_commit'],
-            P['m4r18']['from_commit'], P['m4r19']['from_commit']}   # commit SHA，不是私有 ID
+            P['m4r18']['from_commit'], P['m4r19']['from_commit'], P['m4r20']['from_commit']}   # commit SHA，不是私有 ID
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
@@ -516,9 +516,12 @@ def public_secrets():
     out = set()
     for pid in ['iris-chen'] + [ph['src']['path'].split('/')[1] for ph in R['batch']['photos']]:
         out.add(json.loads(wt_bytes(f'kols/{pid}/profile.json'))['ai_assets']['training_images_v1']['soul_training']['soul_id'])
-    for log in ('review/calendar/m4_r2/execution_log.json', 'review/calendar/m4_r5/execution_log.json'):
+    logs = sorted(f'review/calendar/{d}/execution_log.json' for d in os.listdir(os.path.join(ROOT, 'review', 'calendar'))
+                  if d.startswith('m4_r') and os.path.isfile(os.path.join(ROOT, 'review', 'calendar', d, 'execution_log.json')))
+    assert 'review/calendar/m4_r20/execution_log.json' in logs  # M-4 R20 起：所有 M-4 私有執行紀錄的 UUID（含 12 位的 Soul ID 與全部任務 ID）
+    for log in logs:
         out |= set(re.findall(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', wt_bytes(log).decode()))
-    for ph in R['batch']['photos'] + R['accepted']:
+    for ph in R['batch']['photos'] + R['accepted'] + list(pick_photos(json.loads(wt_bytes(PICK_FILE)))):
         for t, c in png_chunks(review_src(ph['src'])):
             if t in PNG_TEXT:
                 out.add(c[8:-4].split(b'\0', 1)[1].decode('latin-1'))
@@ -572,6 +575,82 @@ def build_review():
     for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易', '扣款', 'natural skin texture', 'lighting:', 'she wears', 'prompt'):  # 主頁不放長 prompt 與費用
         assert bad not in text.lower(), bad
     assert not re.search(r'[0-9a-f]{8,}', text), '檢視頁資料出現疑似 ID'
+    return pub
+
+
+# ---------- 選片頁（shoot.html，M-4 R20 起）——每套 A、B 兩張候選＋已接受＋待處理 ----------
+# 資料 data/cal_pick_r20.json（人寫，從工作目錄讀）；圖片從資料檔記錄的 commit 讀原圖 PNG 並核對 sha256，公開兩種 JPEG（不帶任何中繼資料）：
+# - 顯示版：等比縮小（長邊 1600 px，JPEG q88）；完整版：原尺寸（JPEG q92），供放大檢視。不修圖、不裁切、不重新生成。
+# 每張候選綁定固定圖片識別 img_id（<套別>-R20-<A|B>）；頁面回饋鍵 cal2027-pick-r20-v1:<套別>，存的是 img_id，換圖就不再套用舊回饋。
+# 公開資料不放 prompt、自查、費用、執行紀錄、Soul ID、任務 ID 或 repo 路徑。
+PICK_FILE = 'docs/calendar/data/cal_pick_r20.json'
+PICK_DIR = os.path.join(PUB, 'img', 'pick')
+
+
+def pick_imgs(x):
+    """一張照片的公開檔：[(檔名, 位元組, manifest 欄位)]；產生與 --check 共用。"""
+    png = review_src(x['src'])
+    clean, removed = png_strip_text(png)
+    assert removed == ['tEXt'], removed
+    im = Image.open(io.BytesIO(clean))
+    assert list(im.size) == x['px'] and not im.info, x['img_id']
+    rgb = im.convert('RGB')
+    view, _ = hires_bytes(png)
+    vim = Image.open(io.BytesIO(view))
+    src = {'set': x['set'], 'img_id': x['img_id'], 'source': f'{x["src"]["commit"]}:{x["src"]["path"]}', 'source_sha256': x['src']['sha256']}
+    return [(x['img_id'] + '_view.jpg', view, {'kind': 'pick_preview', **src, 'op': f'原圖 {im.width}×{im.height} 等比縮小至 {vim.width}×{vim.height}（Lanczos，JPEG q88，不帶中繼資料）'}),
+            (x['img_id'] + '.jpg', jpeg(rgb, 92), {'kind': 'pick_full', **src, 'op': f'原圖 {im.width}×{im.height} 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）'})]
+
+
+def pick_photos(K):
+    for s in K['sets']:
+        for c in s['candidates']:
+            yield {**c, 'set': s['set']}
+    yield from K['accepted']
+
+
+def pick_outputs(K):
+    return [o for x in pick_photos(K) for o in pick_imgs(x)]
+
+
+def build_pick():
+    raw = wt_bytes(PICK_FILE)
+    K = json.loads(raw)
+    P = json.loads(wt_bytes(M3_FILE))
+    PR = P['status']['production']
+    ids = [s['set'] for s in K['sets']]
+    assert K['round'] == 'M-4 R20' and K['key_prefix'] == 'cal2027-pick-r20-v1:' and ids == PR['pick_sets'] and len(ids) == PR['pending_owner_review'] == 20
+    assert [a['set'] for a in K['accepted']] == PR['accepted_sets'] and [p['set'] for p in K['pending']] == PR['rejected_sets'] == ['V-somi-oh']
+    assert not set(ids) & set(PR['accepted_sets'] + PR['rejected_sets']), '已接受與待處理的套數不放進候選'
+    plan = {x['id']: x for x in P['sets']}
+    for s in K['sets'] + K['accepted'] + K['pending']:
+        q = plan[s['set']]
+        assert (s['book'], s['month'], s['name']) == (q['book'], q['month'], q['name']), s['set']
+    for s in K['sets']:
+        assert [c['v'] for c in s['candidates']] == ['A', 'B'] and all(c['img_id'] == f"{s['set']}-R20-{c['v']}" for c in s['candidates'])
+    all_ids = [x['img_id'] for x in pick_photos(K)]
+    assert len(all_ids) == len(set(all_ids)) == 43
+    os.makedirs(PICK_DIR, exist_ok=True)
+    for fn in os.listdir(PICK_DIR):
+        os.remove(os.path.join(PICK_DIR, fn))
+    files = {}
+    for name, data, meta in pick_outputs(K):
+        with open(os.path.join(PICK_DIR, name), 'wb') as f:
+            f.write(data)
+        MANIFEST.append({'published': f'public/img/pick/{name}', 'sha256': sha256(data), **meta})
+        im = Image.open(io.BytesIO(data))
+        files.setdefault(meta['img_id'], {})[{'pick_preview': 'view', 'pick_full': 'full'}[meta['kind']]] = {
+            'src': f'img/pick/{name}', 'w': im.width, 'h': im.height, 'bytes': len(data)}
+    pub = json.loads(raw)
+    pub.pop('note')
+    for x in [c for s in pub['sets'] for c in s['candidates']] + pub['accepted']:
+        x.pop('src')
+        x['img'] = files[x['img_id']]
+        assert set(x['img']) == {'view', 'full'}
+    text = json.dumps(pub, ensure_ascii=False)
+    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', '交易', '扣款', '自查', 'natural skin texture', 'she wears', 'prompt', 'png'):
+        assert bad not in text.lower(), bad
+    assert not re.search(r'[0-9a-f]{8,}', text), '選片頁資料出現疑似 ID'
     return pub
 
 
@@ -809,6 +888,10 @@ def main():
         'images': IMAGES,
     }
     review = build_review()
+    pick = build_pick()
+    with open(os.path.join(PUB, 'pick-data.js'), 'w', encoding='utf-8') as f:
+        f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r20.json\n')
+        f.write('window.CAL_PICK = ' + json.dumps(pick, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     with open(os.path.join(PUB, 'review-data.js'), 'w', encoding='utf-8') as f:
         f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。目前檢視頁（shoot.html）的資料，來源 docs/calendar/data/cal_review_current.json\n')
         f.write('window.CAL_REVIEW = ' + json.dumps(review, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
@@ -816,7 +899,7 @@ def main():
         f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。資料來源：固定成果 commit ' + FIXED + '\n')
         f.write('window.CAL_DATA = ' + json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     man = {'generated_by': 'docs/calendar/tools/build_cal_decision_site.py', 'fixed_sha': FIXED,
-           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小；review_*＝目前檢視頁的照片（review_png 只移除 PNG 文字中繼資料區塊、review_preview 等比縮小、review_copy 位元組不變）。沒有生成、外擴、增強或修圖。本檔不對外提供。',
+           'note': '只發佈下列檔案。copy＝與固定 commit 的同一路徑位元組相同（source_blob＝git blob）；crop＝從固定 commit 的拼圖純裁切（低解析選圖參考）；hires_preview＝可核對來源的原圖等比縮小（不含 job_id）；thumbnail＝等比縮小；review_*＝M-4 R5 檢視頁的照片（review_png 只移除 PNG 文字中繼資料區塊、review_preview 等比縮小、review_copy 位元組不變）；pick_*＝選片頁的照片（pick_preview 等比縮小、pick_full 原尺寸 JPEG，皆不帶中繼資料）。沒有生成、外擴、增強或修圖。本檔不對外提供。',
            'files': MANIFEST}
     with open(os.path.join(SITE, 'ASSET_MANIFEST.json'), 'w', encoding='utf-8') as f:
         json.dump(man, f, ensure_ascii=False, indent=1)
@@ -837,6 +920,7 @@ def check(hf_dir=None, clean_dir=None):
     D140 = {r['file']: r for r in load_json('data/cal_r2_daily140_jobs.json')['rows']}
     not_recomputed = []
     RV = {f'public/img/review/{n}': (d, m) for n, d, m in review_outputs(json.loads(wt_bytes(REVIEW_FILE)))}
+    PK = {f'public/img/pick/{n}': (d, m) for n, d, m in pick_outputs(json.loads(wt_bytes(PICK_FILE)))}
     for e in man['files']:
         p = os.path.join(SITE, e['published'])
         listed.add(os.path.relpath(p, PUB))
@@ -853,6 +937,9 @@ def check(hf_dir=None, clean_dir=None):
         if e['kind'].startswith('review_'):
             if e['published'] not in RV or RV[e['published']][0] != data or RV[e['published']][1]['kind'] != e['kind']:
                 print('目前檢視頁圖片無法重現', e['published']); bad += 1
+        if e['kind'].startswith('pick_'):
+            if e['published'] not in PK or PK[e['published']][0] != data or PK[e['published']][1]['kind'] != e['kind'] or Image.open(io.BytesIO(data)).info.get('exif'):
+                print('選片頁圖片無法重現', e['published']); bad += 1
         if e['kind'] == 'crop':
             src = Image.open(io.BytesIO(git_bytes(e['source'][len(CAL):]))).convert('RGB')
             if jpeg(src.crop(tuple(e['box_px'])), 95) != data:
@@ -872,7 +959,7 @@ def check(hf_dir=None, clean_dir=None):
                 if hires_bytes(src)[0] != data:
                     print('高解析預覽無法重現', e['published']); bad += 1
     on_disk = set()
-    for d in ('z', 't', 'review'):
+    for d in ('z', 't', 'review', 'pick'):
         for fn in os.listdir(os.path.join(PUB, 'img', d)):
             on_disk.add(f'img/{d}/{fn}')
     extra = on_disk - listed
@@ -880,6 +967,8 @@ def check(hf_dir=None, clean_dir=None):
         print('manifest 以外的圖片：', sorted(extra)); bad += 1
     if set(RV) - {e['published'] for e in man['files']}:
         print('目前檢視頁圖片未發佈：', sorted(set(RV) - {e['published'] for e in man['files']})); bad += 1
+    if set(PK) - {e['published'] for e in man['files']}:
+        print('選片頁圖片未發佈：', sorted(set(PK) - {e['published'] for e in man['files']})); bad += 1
     hits = scan_public(public_secrets())
     if hits:
         print('公開檔含私有識別碼：', hits); bad += 1
@@ -888,7 +977,8 @@ def check(hf_dir=None, clean_dir=None):
         print('公開檔出現交易原始資料：', TX_RAW.search(pubtext).group(0)); bad += 1
     n = {k: sum(e['kind'] == k for e in man['files']) for k in ('copy', 'crop', 'hires_preview', 'thumbnail')}
     nr = sum(e['kind'].startswith('review_') for e in man['files'])
-    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、目前檢視頁 {nr}），問題 {bad}；公開檔無私有識別碼、無交易原始資料'
+    npk = sum(e['kind'].startswith('pick_') for e in man['files'])
+    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、舊檢視頁 {nr}、選片頁 {npk}），問題 {bad}；公開檔無私有識別碼、無交易原始資料'
           + (f'；未提供快取、只核對 sha256 的高解析預覽：{", ".join(not_recomputed)}' if not_recomputed else ''))
     return 1 if bad else 0
 

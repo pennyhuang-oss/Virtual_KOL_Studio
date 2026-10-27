@@ -1,0 +1,118 @@
+{
+ "note": "M-4 R20 批次製作紀錄（公開可讀的摘要；不含 Soul ID、任務 ID 與交易原始列）。Claude 自查不是主管覆核，也不是 Penny 決定；失敗或有瑕疵的照片也保留供選片，不重生。",
+ "round": "M-4 R20",
+ "written_on": "2026-10-27",
+ "auth": "docs/calendar/data/cal_m4_auth_r20.json",
+ "prompts": "docs/calendar/data/cal_m4_r20_prompts.json",
+ "photo_commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+ "scope": "剩餘 20 套（尚未生成的 18 套＋H-yerin-han、H-jia-seo）各 A、B 兩張；V-somi-oh 暫不處理；已接受 V-iris-chen、V-tammy-chou、V-rin-ayase 不重生。H-somi-oh 屬尚未生成的 18 套，照授權生成。",
+ "settings": "各人既有 Soul、soul_2、2k；橫式 16:9（2048×1152）、直式 3:4（1536×2048）；無參考圖、不傳 style（平台預設 General）、不用 unlim、不訓練；enhance_prompt false（抽查 4 筆任務紀錄）。",
+ "prompt_fix_before_submit": "送出前自查：姿態改動的 B 版有兩張鏡頭／配置句沒跟著改，送出前修正（H-rin-ayase B：as she reclines→seated head height；H-somi-oh B：waist height→seated chest height、stands→sits on the nearest stool）；修正後才建立任務。",
+ "counts": {
+  "requests": 40,
+  "images": 40,
+  "retries": 0,
+  "extra_generations": 0,
+  "rejected_submissions_no_job": 4,
+  "rejected_note": "第 1 批送 12 件時平台同時進行上限 8 件，4 件被拒、未建立任務、未扣款；之後依上限每批 8 件依序送出原 prompt（不是重試或補生）。"
+ },
+ "cost": {
+  "quote_each": 0.12,
+  "cap_each": 0.12,
+  "cap_total": 4.8,
+  "charged_total": 4.8,
+  "charged_rows": "40 列 Higgsfield Soul V2，每列 −0.12",
+  "attribution": "依時窗推定（只看本批送出時段的 Soul V2 列，他人其他模型列不檢視、不歸入）",
+  "balance_before": 1309.87,
+  "balance_after": 1305.07
+ },
+ "downloads": "40/40 原圖尺寸與任務識別相符；原圖存 kols/<人設>/images/calendar_2027_batch1/<套別>_m4r20_<A|B>.png（私有，含平台文字區塊；公開版去除）。",
+ "self_review": [
+  {
+   "set": "H-yuna-kim",
+   "v": "A 膝上、B 全身；雪林、白霧與服裝到位；A 下緣切在小腿，比膝上略寬。"
+  },
+  {
+   "set": "H-rin-ayase",
+   "v": "A 斜躺全身、B 側坐；夕陽窗光與酒紅緞面到位；B 構圖下方地面偏空。"
+  },
+  {
+   "set": "H-miu-shiraishi",
+   "v": "A 抱膝近景、B 床緣雙腳踩地；晨光柔和；B 雙手位置接近扠腰，略刻意。"
+  },
+  {
+   "set": "H-tammy-chou",
+   "v": "A 走向鏡頭、B 停步站定；花園、白花與桃紅洋裝到位；兩張差異不大。"
+  },
+  {
+   "set": "H-yerin-han",
+   "v": "雙腳落地、球桿頭輕放草地不承重，手指自然；人物比 R18 小（A 約占畫高七成多、B 約五成），球道與樹一起構圖；A 左側遠處仍有一支旗桿。"
+  },
+  {
+   "set": "H-coco-wu",
+   "v": "A 膝上、B 全身；薰衣草田與夕陽逆光到位。"
+  },
+  {
+   "set": "H-mia-huang",
+   "v": "A 腰上、B 大腿中；燈串、摩天輪與晚霞到位。"
+  },
+  {
+   "set": "H-iris-chen",
+   "v": "A 全身、B 膝上；海灣、岩台與向日葵黃到位。"
+  },
+  {
+   "set": "H-jia-seo",
+   "v": "臀部、雙腿、雙腳與涼鞋都在木板上，讀得出平台與湖景；人物仍偏大（未到「人小景大」），坐位靠近平台邊緣；太陽仍在對岸地平線上（設計是日落後）。"
+  },
+  {
+   "set": "H-luna-tanaka",
+   "v": "A 全身和服、香袋、庭院到位；B 膝上的和服下襬變短、露出腿部，和服長度不對。"
+  },
+  {
+   "set": "H-somi-oh",
+   "v": "A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。"
+  },
+  {
+   "set": "H-rainie-hsu",
+   "v": "A 膝上、B 全身；夜景、壁燈與紅緞到位。"
+  },
+  {
+   "set": "V-jia-seo",
+   "v": "A 全身、B 膝上；溫室、白色鋼架與龜背芋到位；臉部略偏娃娃感。"
+  },
+  {
+   "set": "V-mia-huang",
+   "v": "夜櫻、燈籠與紫色洋裝到位；A 取景比計畫寬（計畫胸上，實際到大腿）；燈籠上有類似文字的筆畫。"
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "v": "坐階梯、白花樹與杏色洋裝到位；兩張背景都出現吊床（設計寫不要吊床）。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "A 全身、B 膝上；雨後街道、暖窗光與倒影到位。"
+  },
+  {
+   "set": "V-luna-tanaka",
+   "v": "A 膝上、B 全身；雨後繡球花庭院到位。"
+  },
+  {
+   "set": "V-coco-wu",
+   "v": "A 後仰大笑、B 前傾雙手放膝；泳池與水光到位。"
+  },
+  {
+   "set": "V-yerin-han",
+   "v": "A 走在淺水、B 停步仰望；粉紫天空與海面到位；B 海平線上露出太陽（設計是無強逆光）。"
+  },
+  {
+   "set": "V-yuna-kim",
+   "v": "A 全身、B 膝上；銀杏大道到位；街上有韓文招牌與路面字（設計是無字）。"
+  }
+ ],
+ "self_review_summary": "40 張全部保留供選片。Yerin 姿勢與手指改善、人景比例比 R18 好但 A 仍偏大；Jia 腳與涼鞋全在木板上，但人物仍偏大、太陽未落；H-Luna B 和服過短；H-Somi、V-Yuna 背景出現文字；V-Miu 出現吊床。依指令不重生、不修圖，等 Penny 在選片頁決定。",
+ "not_done": [
+  "不重生、不補生、不付費修圖",
+  "不改 canon、Soul ID、人設或月份",
+  "接受數不變（3），Penny 選擇前不增加"
+ ]
+}
