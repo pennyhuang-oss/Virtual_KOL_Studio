@@ -405,7 +405,8 @@ def build_m3(mat):
             P['m4r9']['photo_commit'], P['m4r9']['record_commit'], P['m4r10']['from_commit'], P['m4r11']['from_commit'],
             P['m4r11']['photo_commit'], P['m4r11']['record_commit'], P['m4r12']['from_commit'], P['m4r13']['from_commit'],
             P['m4r13b']['from_commit'], P['m4r14']['from_commit'],
-            P['m4r15']['from_commit'], P['m4r16']['from_commit']}   # commit SHA，不是私有 ID
+            P['m4r15']['from_commit'], P['m4r16']['from_commit'],
+            P['m4r17']['from_commit']}   # commit SHA，不是私有 ID
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}

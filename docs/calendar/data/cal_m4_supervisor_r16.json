@@ -1,0 +1,21 @@
+{
+ "note": "M-4 R16 主管實際看圖覆核與 Penny 版本偏好（逐字保存）。主管結論與 Claude 自查（cal_m4_r16_trial.json self_check）分開；Penny 的話記為版本偏好，不是正式接受。",
+ "task": "TASK-CAL-001／M-4／R17｜Rin 版本比較與選片收尾",
+ "received": "2026-10-27",
+ "reviewed": {
+  "result_commit": "706ecdfbe27da32217d5fbc36af53d2e0c61171f",
+  "record_commit": "2391237676c88880764ab2d1250469c4c7e9dd7f",
+  "viewed": [
+   "review/calendar/m4_r16/V-rin-ayase_m4r16_view.jpg",
+   "review/calendar/m4_r16/V-rin-ayase_m4r14_vs_m4r16_compare.jpg"
+  ]
+ },
+ "penny_verbatim": "Rin 的第一張，我覺得還比較好",
+ "penny_reading": "暫按 R14 第一張迴廊版理解，記為版本偏好，不記為正式接受",
+ "supervisor": "比較推薦 R14。其拱廊延伸、地面光影及人物配置比 R16 完整；R16 拉近後石柱更壓迫，新增手勢與景別調整沒有提升整張美感。R14 原圖截鞋的問題仍保留記錄。",
+ "decision": {
+  "V-rin-ayase": "R14 為優先候選；R16 保留紀錄、不替換 R14；不再為了符合 prompt 自動重生或修圖；未正式接受、不增加接受數",
+  "V-tammy-chou": "R14 已由 Penny 接受（R16），不再標為候選"
+ },
+ "verbatim": "TASK-CAL-001／M-4／R17｜Rin 版本比較與選片收尾\n\nPenny 原話：「Rin 的第一張，我覺得還比較好」\n逐字保存。暫按 R14 第一張迴廊版理解，\n記為版本偏好，不擅自記為正式接受。\n\n主管已實際看過 R16 與 R14／R16 對照：\n比較推薦 R14。其拱廊延伸、地面光影及人物配置\n比 R16 完整；R16 拉近後石柱更壓迫，\n新增手勢與景別調整沒有提升整張美感。\nR14 原圖截鞋的問題仍保留記錄。\n\nRin 以 R14 作優先候選；R16 保留紀錄，不替換 R14。\n不再為了符合 prompt 自動重生或修圖。\nTammy R14 已由 Penny 接受，不再標為候選。\n\n本輪只做必要狀態同步，簡短回報即可；\n不另寫企劃、不重跑無關檢查、不貼完整 prompt。\n生成、修圖、上傳、付費、部署皆為 0。\n未接受的照片不得增加接受數。"
+}
