@@ -1,0 +1,92 @@
+{
+ "note": "M-4 R14 Tammy、Rin 重製試拍結果（不含 ID；私有紀錄在 review/calendar/m4_r14/execution_log.json）。",
+ "date": "2026-10-27",
+ "auth": "docs/calendar/data/cal_m4_auth_r14.json",
+ "prompts": {
+  "path": "docs/calendar/data/cal_m4_r13_cards.json",
+  "commit": "bd84cf97a7310afa672d506895e09c8d73220408",
+  "V-tammy-chou": {
+   "sha256": "9c17fe21db59b9e26d0c0793e4bfa48dc19a55d723a61f838250d8f7e7cccb2b",
+   "words": 366
+  },
+  "V-rin-ayase": {
+   "sha256": "fa6975f39db1eb51006004d278910b57e800243acebdfe4945e47a33723e3eeb",
+   "words": 349
+  },
+  "edits": "無（逐字，與既有 hash 相同）"
+ },
+ "settings": "各用本人既有 Soul（status ready）、soul_2、2k、3:4、count 1；不加參考圖、不傳 style、不用 unlim、不訓練",
+ "pre_check": "兩個 Soul 皆 ready；本案自有紀錄沒有進行中或重複的任務（為了不讀帳號內其他人的作品，不翻任務清單）；兩張各自唯讀報價 0.12，都在上限內",
+ "requests": {
+  "V-tammy-chou": 1,
+  "V-rin-ayase": 1
+ },
+ "charge": {
+  "V-tammy-chou": 0.12,
+  "V-rin-ayase": 0.12,
+  "total": 0.24,
+  "attribution": "依時窗推定，不是直接對帳：送出後只多兩列 Higgsfield Soul V2 −0.12，時間各與結果檔名同一秒；帳號同時段另有他人的非 Soul 使用，未計入"
+ },
+ "job_record": "兩個任務紀錄的 prompt 都與送出文字相同，enhance_prompt=false（沒有像 R11 那樣被換成自動描述）；後端紀錄另有 style「General」強度 1（我們沒有傳 style，屬後端預設）與 quality 欄位 1080p（請求 2k；實際輸出 1536×2048，與以往 Soul 2k 相同）",
+ "outputs": {
+  "V-tammy-chou": {
+   "original": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r14.png",
+   "sha256": "f4b1b1d43ec1aecd20bf35fc5bfd74a930aa6d39a62aa2764e45680cd9792943",
+   "px": [
+    1536,
+    2048
+   ],
+   "view": "review/calendar/m4_r14/V-tammy-chou_m4r14_view.jpg",
+   "frame": "review/calendar/m4_r14/V-tammy-chou_m4r14_frame_V_120x160.jpg",
+   "compare_r5": "review/calendar/m4_r14/V-tammy-chou_m4r5_vs_m4r14_compare.jpg",
+   "view_sha256": "84a78a7d5c507136ce8a1b330d870d4a79c1875a7915833b39797db8593cb239",
+   "frame_sha256": "9ea08f2c226bc155644af5065a2f323c5f49bc43676a82a3d04fb9f9771bdda4",
+   "compare_r5_sha256": "af29c6519e8b5ba7f4792753a5e035ebc96286621ebfeeff808c3a1d4daf35d0"
+  },
+  "V-rin-ayase": {
+   "original": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r14.png",
+   "sha256": "6be6d9d88e3b8e0cf94c482ec52e8c824f0c05182520a4f34f4fe41868e530a2",
+   "px": [
+    1536,
+    2048
+   ],
+   "view": "review/calendar/m4_r14/V-rin-ayase_m4r14_view.jpg",
+   "frame": "review/calendar/m4_r14/V-rin-ayase_m4r14_frame_V_120x160.jpg",
+   "compare_r5": "review/calendar/m4_r14/V-rin-ayase_m4r5_vs_m4r14_compare.jpg",
+   "view_sha256": "8e9cf1b8fa77aefa704530aaf4c41480af27d68d7d81622285074c3c522c0b48",
+   "frame_sha256": "c34da722b9101f2451c2e8c2c34c03fb0c51ec81dedeacad02d9d03a71ce3a1c",
+   "compare_r5_sha256": "6b72c458528d906d5bd6c87bcefb4d2a03f3a3d77fd693024a21be2fa4c759a4"
+  }
+ },
+ "self_check": {
+  "V-tammy-chou": {
+   "verdict": "部分通過（Claude 自查）：畫面乾淨、有夜晚酒廊的冷暖對比，比 R5 放鬆很多；但姿勢仍偏正面端坐，散場後的親密感不夠，腳尖貼到下緣",
+   "album_worthy": "接近，但還不是成品：氣氛、光色、身分都對；要不要收，取決於能否接受偏端坐的姿勢與腳貼邊",
+   "identity": "與 Soul 訓練圖、R5 是同一人；臉部自然、無變形",
+   "scene_blend": "人與扶手椅、落地燈尺度合理；燈罩略高於頭部（計畫是在頭部高度）；吊燈出現在窗前上方，不在房間遠處，影響小",
+   "pose": "雙腿交疊、一手搭捲邊扶手、一手放膝上，符合；但身體正對相機端坐，不是側坐；笑容溫和，不僵硬，但仍有擺拍感",
+   "outfit_context": "香檳細肩帶中長洋裝、金色細帶涼跟鞋、不拿東西，符合；布料偏霧面，不太像真絲緞面",
+   "light_colour": "右側落地燈為暖主光，臉部亮暗方向與燈一致，不是無來源正面光；窗外深藍、房間暖暗；香檳、深藍綠、黃銅金、夜藍都到位",
+   "proportion_contact": "手指、手與扶手接觸自然；腳與鞋帶正常",
+   "frame": "3:4 不裁切、約 325 ppi；頭頂在 3% 線內側；腳尖低於下緣 3% 安全線、貼邊（計畫是腳跟下方留一點地板）",
+   "technical": "清晰、無招牌字、無相紙白邊、無雜物"
+  },
+  "V-rin-ayase": {
+   "verdict": "不通過（Claude 自查）：這張的重點是光影和人一起構成畫面，但沒有做到。她站在均勻的陰影裡，臉是平光，陽光只在左側地面形成光條；她看鏡頭，沒有迎光、也沒有半垂眼。結果又變成人站在迴廊前的時裝或旅遊照",
+   "album_worthy": "目前不建議收：人物、服裝與場景都乾淨好看，但缺少這張的主題光影",
+   "identity": "與 identity_master、R5 是同一人；臉部清晰、無變形",
+   "scene_blend": "靠在石柱前，柱與拱的尺度合理，垂直線大致直；但光帶沒落在人物身上，人與背景各自成立",
+   "pose": "背／肩靠柱站，自然；大衣披肩不穿袖，符合；雙手自然垂放；看鏡頭（計畫是臉轉向光、眼簾半垂）",
+   "outfit_context": "黑色細肩帶方領長洋裝、駝色大衣、黑色尖頭踝靴、低髮髻，符合",
+   "light_colour": "黑、駝、砂岩金、酒紅棕髮色對；但左側低角度硬光沒有打在臉上，臉是柔和平光",
+   "proportion_contact": "手、靴、靠柱接觸自然",
+   "frame": "3:4 不裁切、約 325 ppi；景別是全身到靴子，比計畫的膝上寬；靴尖低於下緣 3% 安全線、貼邊",
+   "technical": "清晰、無招牌字、無相紙白邊、無雜物；左上角天花板有一盞燈具，不擾"
+  }
+ },
+ "status": {
+  "supervisor": "待主管看圖",
+  "penny": "未表態（不是接受）"
+ },
+ "not_done": "沒有重試、補生、修圖、部署；沒有改 V-Iris、沒有合併 main、沒有聯絡廠商；Yerin、Jia、Somi 本輪 0"
+}

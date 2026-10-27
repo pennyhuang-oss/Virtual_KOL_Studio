@@ -1,0 +1,22 @@
+{
+ "note": "M-4 R14 Penny 授權與主管指令（摘要，全文見對話送審紀錄）。不含 ID。",
+ "task": "TASK-CAL-001／M-4／R14｜Tammy、Rin 各一張重製試拍",
+ "received": "2026-10-27",
+ "head_at_start": "aa082219b02ccb8fd7bc43185d55e75eae3b2797",
+ "scope": {
+  "generate": "V-tammy-chou、V-rin-ayase 各生成 1 張，各限 1 次請求；每張上限 0.12 credits，總上限 0.24；不重試、不補生、不挪用 Somi 原有預算",
+  "prompt": "cal_m4_r13_cards.json 固定版本 bd84cf9 的兩份 prompt，核對既有 hash；不另加風格句、不重寫方案",
+  "settings": "各用本人既有 Soul、soul_2、2k、3:4、count 1；不加參考圖、不傳 style、不用 unlim、不訓練",
+  "pre_send": "Soul ready、沒有重複或進行中的本案任務、重新唯讀報價；超過 0.12 就停止該張，不改模型或縮減設定",
+  "independent": "兩張各自執行，不因其中一張失敗就取消另一張",
+  "deliver": "每張完整顯示版、套框預覽、與各自 R5 退回照片對照；自查失敗也交付、不重生；主管覆核與 Penny 接受分開記錄",
+  "not_authorized": "重試、補生、其他付費、部署、改 V-Iris、合併 main、聯絡廠商"
+ },
+ "supervisor": [
+  "R13 第二次停止送出符合前輪條件",
+  "Somi 遮罩流程暫停：不再重查相同文件、不上傳、不付費",
+  "Tammy、Rin 製作方案 PASS，執行本輪試拍",
+  "Yerin、Jia 本輪不生成；取消「一定要等 Somi 成功」的前置條件",
+  "不新增一輪企劃或送審文件才開始工作"
+ ]
+}

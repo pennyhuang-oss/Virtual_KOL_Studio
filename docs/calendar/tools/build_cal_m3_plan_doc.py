@@ -94,6 +94,7 @@ def render18(d):
          *([f"> **{d['m4r12']['status_line']}** 測試包見 `data/cal_m4_r12_edit_prep.json`。", ''] if 'm4r12' in d else []),
          *([f"> **{d['m4r13']['status_line']}** 前置核對見 `data/cal_m4_r13_somi_precheck.json`，製作卡見 `CAL_27_M4_R13_NEXT_CARDS.md`。", ''] if 'm4r13' in d else []),
          *([f"> **{d['m4r13b']['status_line']}** 前置核對與遮罩見 `data/cal_m4_r13b_somi_precheck.json`。", ''] if 'm4r13b' in d else []),
+         *([f"> **{d['m4r14']['status_line']}** 試拍紀錄見 `data/cal_m4_r14_trial.json`。", ''] if 'm4r14' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

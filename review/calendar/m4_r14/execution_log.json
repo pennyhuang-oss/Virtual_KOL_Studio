@@ -1,0 +1,261 @@
+{
+ "note": "M-4 R14 私有執行紀錄（含 Soul ID 與任務 ID；只留在 repo，不公開）。",
+ "events": [
+  {
+   "t": "2026-10-27T08:14:00Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r14.json",
+   "requests_max_each": 1,
+   "budget_each": 0.12,
+   "budget_total": 0.24
+  },
+  {
+   "t": "2026-10-27T08:14:30Z",
+   "step": "prompt",
+   "set": "V-tammy-chou",
+   "source": "bd84cf97a7310afa672d506895e09c8d73220408 docs/calendar/data/cal_m4_r13_cards.json",
+   "sha256": "9c17fe21db59b9e26d0c0793e4bfa48dc19a55d723a61f838250d8f7e7cccb2b",
+   "words": 366,
+   "edits": [],
+   "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a champagne silk-satin slip midi dress cut on the bias with thin straps, small gold drop earrings and strappy gold heels, and she holds nothing. Setting: New Year's Eve in a quiet corner of a grand old hotel lounge, a deep teal velvet armchair with rolled arms beside a brass floor lamp with a pleated cream fabric shade, tall windows behind with a deep-blue night and soft out-of-focus city lights with no signs, a crystal chandelier glowing faintly far back in the room, nobody else in the lounge. Moment: she sits sideways in the armchair with her legs crossed, one arm resting along the rolled armrest and the other hand on her knee, and smiles at the camera, warm and relaxed, as if the party has just ended. Shot: seated full-length, from a little above her head to just below her heels, the armchair and the lamp beside her. Camera: vertical 3:4, at about her seated chest height, a 50mm lens from about 3 metres, natural perspective with straight vertical lines. Composition: the armchair sits a little left of centre, the glowing lamp shade on the right at the height of her head, the dark window and the city lights in the upper background, a little floor below her heels. Light: the floor lamp is the key light, warm and soft from the right of the frame at the height of her head, lighting her face, shoulders and the satin; a gentle fill from the camera side keeps the shadow side of her face clear while the lamp stays the brightest, most directional light on her; the rest of the room falls into warm darkness and the window stays deep blue; champagne, teal, brass gold and night blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading."
+  },
+  {
+   "t": "2026-10-27T08:14:30Z",
+   "step": "prompt",
+   "set": "V-rin-ayase",
+   "source": "bd84cf97a7310afa672d506895e09c8d73220408 docs/calendar/data/cal_m4_r13_cards.json",
+   "sha256": "fa6975f39db1eb51006004d278910b57e800243acebdfe4945e47a33723e3eeb",
+   "words": 349,
+   "edits": [],
+   "prompt": "A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a black fine-knit square-neck midi dress with a softly fitted waist, a camel wool coat draped over her shoulders with her arms out of the sleeves, small gold hoop earrings and black pointed leather ankle boots. Setting: an old sandstone arcade beside a courtyard on an autumn late afternoon, a row of round arches receding into the distance, a few yellow leaves on the smooth stone floor, plain walls with no signs, clean and calm, nobody else around. Moment: she leans one shoulder against a sandstone column, standing in a band of low sunlight that falls between two arches, and turns her face into the light with her eyes half-lowered and a calm, private half-smile. Shot: from a little above her head to just below her knees, the column beside her and the arcade receding behind her. Camera: vertical 3:4, at her chest height, a 50mm lens from about 2 metres, natural perspective with straight vertical lines. Composition: she stands right of centre against the column at the right edge, the receding arches and their alternating bands of light and shadow filling the left side. Light: hard low autumn sun from the left comes through the arch and lays a warm band of light across her face, shoulders and the camel coat, while her lower body and the arcade behind her fall into cool shade with bright stripes on the floor; the sunlit stone floor bounces a little warm light back into the shadows; black, camel, sandstone gold and the wine-red of her hair. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading."
+  },
+  {
+   "t": "2026-10-27T08:15:00Z",
+   "step": "pre-check",
+   "souls": {
+    "V-tammy-chou": {
+     "soul_id": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+     "name": "tammy-chou-soul-v1-5img-20260904",
+     "status": "ready",
+     "raw_status": "completed"
+    },
+    "V-rin-ayase": {
+     "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+     "name": "rin-ayase-soul-v1-5img-20260904",
+     "status": "ready",
+     "raw_status": "completed"
+    }
+   },
+   "preferences": {
+    "auto_create_project": false
+   },
+   "inflight": "本案自有紀錄：R2–R11 已送任務全部是終態；R12、R13 沒有送出；R14 尚未送出任何任務。為了不讀帳號內其他人的作品，不翻任務清單。",
+   "tx_boundary": {
+    "newest_row": "2026-10-27T08:12:51.963716Z Grok Image 2.0 -2.5 spend（不是本案；帳號內 08:05–08:12 另有 4 列 Seedream 5.0 Flash -0.5，也不是本案）"
+   }
+  },
+  {
+   "t": "2026-10-27T08:16:10Z",
+   "step": "quote（get_cost，唯讀）",
+   "set": "V-tammy-chou",
+   "settings": {
+    "model": "soul_2",
+    "soul": "tammy-chou",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "9c17fe21db59b9e26d0c0793e4bfa48dc19a55d723a61f838250d8f7e7cccb2b",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "budget": 0.12,
+   "within_budget": true
+  },
+  {
+   "t": "2026-10-27T08:16:40Z",
+   "step": "intent",
+   "set": "V-tammy-chou",
+   "request": 1,
+   "retry": false,
+   "note": "即將送出 Tammy 唯一一次請求；中斷或結果不明先查原任務與交易，不重送。"
+  },
+  {
+   "t": "2026-10-27T08:17:05Z",
+   "step": "submitted",
+   "set": "V-tammy-chou",
+   "job_id": "6a4f2aee-2c78-4376-996d-7e545a297eae",
+   "status": "pending",
+   "model_echo": "text2image_soul_v2",
+   "echo": {
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "soul_id": "5069a35a-dd85-4161-8d0f-952bccbe676d",
+    "soul_name": "tammy-chou-soul-v1-5img-20260904",
+    "prompt_equals_sent": true
+   },
+   "requests_used": 1
+  },
+  {
+   "t": "2026-10-27T08:18:00Z",
+   "step": "quote（get_cost，唯讀）",
+   "set": "V-rin-ayase",
+   "settings": {
+    "model": "soul_2",
+    "soul": "rin-ayase",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "fa6975f39db1eb51006004d278910b57e800243acebdfe4945e47a33723e3eeb",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "budget": 0.12,
+   "within_budget": true
+  },
+  {
+   "t": "2026-10-27T08:18:20Z",
+   "step": "intent",
+   "set": "V-rin-ayase",
+   "request": 1,
+   "retry": false,
+   "note": "即將送出 Rin 唯一一次請求；與 Tammy 各自執行；中斷或結果不明先查原任務與交易，不重送。"
+  },
+  {
+   "t": "2026-10-27T08:18:50Z",
+   "step": "submitted",
+   "set": "V-rin-ayase",
+   "job_id": "52bf7d95-7de2-417c-aa68-1943a146663c",
+   "status": "pending",
+   "model_echo": "text2image_soul_v2",
+   "echo": {
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+    "soul_name": "rin-ayase-soul-v1-5img-20260904",
+    "prompt_equals_sent": true
+   },
+   "requests_used": 1
+  },
+  {
+   "t": "2026-10-27T08:19:20Z",
+   "step": "terminal",
+   "set": "V-tammy-chou",
+   "job_id": "6a4f2aee-2c78-4376-996d-7e545a297eae",
+   "status": "completed",
+   "polls": 1,
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261027_081829_6a4f2aee-2c78-4376-996d-7e545a297eae.png",
+   "job_model_field": "text2image_soul_v2"
+  },
+  {
+   "t": "2026-10-27T08:19:40Z",
+   "step": "saved",
+   "set": "V-tammy-chou",
+   "path": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r14.png",
+   "bytes": 3493239,
+   "sha256": "f4b1b1d43ec1aecd20bf35fc5bfd74a930aa6d39a62aa2764e45680cd9792943",
+   "px": [
+    1536,
+    2048
+   ],
+   "png_text_chunks": "hf-job-id"
+  },
+  {
+   "t": "2026-10-27T08:20:10Z",
+   "step": "terminal",
+   "set": "V-rin-ayase",
+   "job_id": "52bf7d95-7de2-417c-aa68-1943a146663c",
+   "status": "completed",
+   "polls": 2,
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261027_081951_52bf7d95-7de2-417c-aa68-1943a146663c.png",
+   "job_model_field": "text2image_soul_v2"
+  },
+  {
+   "t": "2026-10-27T08:20:30Z",
+   "step": "saved",
+   "set": "V-rin-ayase",
+   "path": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r14.png",
+   "bytes": 4358608,
+   "sha256": "6be6d9d88e3b8e0cf94c482ec52e8c824f0c05182520a4f34f4fe41868e530a2",
+   "px": [
+    1536,
+    2048
+   ],
+   "png_text_chunks": "hf-job-id"
+  },
+  {
+   "t": "2026-10-27T08:20:45Z",
+   "step": "charge",
+   "rows": [
+    {
+     "created_at": "2026-10-27T08:18:29.773448Z",
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend",
+     "set": "V-tammy-chou"
+    },
+    {
+     "created_at": "2026-10-27T08:19:51.950799Z",
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend",
+     "set": "V-rin-ayase"
+    }
+   ],
+   "refunds": 0,
+   "window": "送出前最新一列 2026-10-27T08:12:51.963716Z（Grok Image 2.0，不是本案）→ 之後只多這兩列 Soul V2",
+   "vs_quote": "各與唯讀報價 0.12 相同，合計 0.24",
+   "attribution": "依時窗推定，不是直接對帳：交易列沒有任務 ID；兩列時間分別與結果檔名時間 08:18:29、08:19:51 同一秒；帳號同時段有其他人的非 Soul 使用，只看 Soul V2 列"
+  },
+  {
+   "t": "2026-10-27T08:21:00Z",
+   "step": "job record（show_generation_by_ids，只查本案兩個任務）",
+   "records": {
+    "V-tammy-chou": {
+     "params.prompt": "與送出文字相同（逐句比對）",
+     "enhance_prompt": false,
+     "seed": 549530,
+     "quality_field": "1080p（請求 2k；輸出 1536×2048，與以往 Soul 2k 相同）",
+     "style": "General（style_id 3db34ab5…，strength 1；我們沒有傳 style，這是後端預設）",
+     "custom_reference": "tammy-chou Soul，strength 1",
+     "medias": "無"
+    },
+    "V-rin-ayase": {
+     "params.prompt": "與送出文字相同（逐句比對）",
+     "enhance_prompt": false,
+     "seed": 434683,
+     "quality_field": "1080p（同上）",
+     "style": "General（後端預設，同上）",
+     "custom_reference": "rin-ayase Soul，strength 1",
+     "medias": "無"
+    }
+   },
+   "note": "這次沒有像 R11（Soul＋參考圖）那樣把 prompt 換成自動描述"
+  },
+  {
+   "t": "2026-10-27T08:40:00Z",
+   "step": "deliverables",
+   "files": [
+    "review/calendar/m4_r14/V-tammy-chou_m4r14_view.jpg",
+    "review/calendar/m4_r14/V-tammy-chou_m4r14_frame_V_120x160.jpg",
+    "review/calendar/m4_r14/V-tammy-chou_m4r5_vs_m4r14_compare.jpg",
+    "review/calendar/m4_r14/V-rin-ayase_m4r14_view.jpg",
+    "review/calendar/m4_r14/V-rin-ayase_m4r14_frame_V_120x160.jpg",
+    "review/calendar/m4_r14/V-rin-ayase_m4r5_vs_m4r14_compare.jpg"
+   ],
+   "self_check": "docs/calendar/data/cal_m4_r14_trial.json self_check",
+   "stop": "兩張完成後停止，不重試、不補生"
+  }
+ ]
+}
