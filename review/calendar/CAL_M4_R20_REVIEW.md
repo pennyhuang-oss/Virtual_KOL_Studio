@@ -4,7 +4,7 @@ TASK-CAL-001／M-4／R20｜批次製作並部署 Railway 選片頁｜執行紀�
 
 - 起點 HEAD：`fdfa4cd7636e54af8ed822ea6fc0e75c1654e8b0`
 - 原圖與生成紀錄 commit：`cf615afc7bf50e981cbb3c5fb933d7fb37690ddd`
-- 選片頁成果 commit（部署用）：見本檔所在 commit 的上一個 commit（部署結果另記於 `review/calendar/m4_r20/deploy.json`）
+- 選片頁成果 commit（部署用）：`ff4063100e3ef5f06a2dc4c994b8847eb3315707`；cal2027-decision 部署 1 次、狀態 SUCCESS，線上頁面版本 ff40631，線上 Playwright 驗收全數通過（`review/calendar/m4_r20/deploy.json`）
 - 本輪：生成 40（20 套 × A、B，各 1 次請求）、實扣 4.80（40 × 0.12，依時窗推定）；重試 0、補生 0、修圖 0、上傳 0、訓練 0
 
 ## 範圍

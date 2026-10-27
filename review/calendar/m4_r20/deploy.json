@@ -1,0 +1,17 @@
+{
+ "note": "M-4 R20 選片頁部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/shoot.html",
+ "commit": "ff4063100e3ef5f06a2dc4c994b8847eb3315707",
+ "deploy_triggered_utc": "2026-10-27T10:38:14Z",
+ "deploy_status": "SUCCESS",
+ "deploy_finished_utc": "2026-10-27T10:47:19Z",
+ "deploys_triggered": 1,
+ "live_page_commit": "ff4063100e3ef5f06a2dc4c994b8847eb3315707",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）",
+  "result": "全數通過",
+  "items": ["20 套候選、3 已接受、1 待處理", "40 張候選載入、A／B 標示與圖片識別對應正確", "43 張原尺寸完整版可取得", "放大、原尺寸、A／B 互切、關閉", "選擇與備註、重新整理後保留", "清除選擇改回未回覆", "圖片識別不符的舊回饋不套用", "複製全部回饋（角色、月份、圖片版本、選擇、備註；未回覆不算接受）", "舊 localStorage 鍵不變", "手機無橫向捲動、可選擇、可放大", "頁面無錯誤"],
+  "public_images": "線上 80 個候選圖檔（顯示版＋原尺寸）無中繼資料、無平台任務識別、無 Soul／任務 ID"
+ }
+}
