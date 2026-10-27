@@ -1,0 +1,17 @@
+{
+ "note": "Penny 正式接受 V-rin-ayase R14（Owner 原話，逐字保存）。不含 ID。",
+ "received": "2026-10-27",
+ "penny_verbatim": "Rin R14 接受",
+ "context": "R17 記為版本偏好後，Penny 再看一次 R14 完整圖與套框，回覆正式接受",
+ "accepted": {
+  "set": "V-rin-ayase",
+  "photo": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r14.png",
+  "sha256": "6be6d9d88e3b8e0cf94c482ec52e8c824f0c05182520a4f34f4fe41868e530a2",
+  "round": "M-4 R14"
+ },
+ "kept_on_record": [
+  "R14 原圖下緣切到一隻靴子鞋頭（R15 紀錄）",
+  "R16 修訂版保留紀錄，不替換 R14"
+ ],
+ "not_done": "生成 0、修圖 0、上傳 0、付費 0、部署 0"
+}
