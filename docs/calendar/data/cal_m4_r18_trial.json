@@ -1,0 +1,89 @@
+{
+ "note": "M-4 R18 Yerin、Jia 重製試拍結果（不含 ID；私有紀錄在 review/calendar/m4_r18/execution_log.json）。",
+ "date": "2026-10-27",
+ "auth": "docs/calendar/data/cal_m4_auth_r18.json",
+ "prompts": {
+  "path": "docs/calendar/data/cal_m4_r13_cards.json",
+  "commit": "bd84cf97a7310afa672d506895e09c8d73220408",
+  "H-yerin-han": {
+   "sha256": "5bb8c2c7aa6ffc84a8761b44be9581e2c0a49e5253a6374ac43ccce5e7ba3ca9",
+   "words": 346
+  },
+  "H-jia-seo": {
+   "sha256": "1669f5e427317092d40689aa51d7e2a33dcfecdba66f3adc1d70896093d0c2f8",
+   "words": 377
+  },
+  "edits": "無（逐字）"
+ },
+ "settings": "各用本人既有 Soul（ready）、soul_2、2k、16:9、count 1；無參考圖、不傳 style、不用 unlim；兩位各自的單張測試，不代表流程已穩定",
+ "requests": {
+  "H-yerin-han": 1,
+  "H-jia-seo": 1
+ },
+ "charge": {
+  "H-yerin-han": 0.12,
+  "H-jia-seo": 0.12,
+  "total": 0.24,
+  "attribution": "依時窗推定，不是直接對帳：送出後只多兩列 Higgsfield Soul V2 −0.12（09:20:52、09:23:15），時間各與結果檔名同一秒；帳號同時段另有他人的非 Soul 使用，未計入"
+ },
+ "job_record": "兩個任務紀錄的 prompt 都與送出文字相同、enhance_prompt=false（沒有被改寫）；後端另記 style「General」（預設，我們沒傳）與 quality 欄位 1080p（實際輸出 2048×1152）",
+ "outputs": {
+  "H-yerin-han": {
+   "original": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r18.png",
+   "sha256": "d8371f60d8eae5f0e9178bfdd88d074744421daffa1341beaa6bc869eb9780ca",
+   "px": [
+    2048,
+    1152
+   ],
+   "view": "review/calendar/m4_r18/H-yerin-han_m4r18_view.jpg",
+   "frame": "review/calendar/m4_r18/H-yerin-han_m4r18_frame_H_192x104.jpg",
+   "compare_r5": "review/calendar/m4_r18/H-yerin-han_m4r5_vs_m4r18_compare.jpg",
+   "view_sha256": "162cd587d6d36d81f98f4f56e76678768c1088a2703d0ae77c910696c9d9f1db",
+   "frame_sha256": "e4a99682019f21019f8a0f7edcf2a953b3b3c1429ac7c82b7261e7f37fe38e46",
+   "compare_r5_sha256": "b8d6d1df3556a7ed3f1f4bd39ac2cb168eb1245617173dc911db32c9b3aa89e3"
+  },
+  "H-jia-seo": {
+   "original": "kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r18.png",
+   "sha256": "44926eb4e2b75269de8edb1d314d3a46926e858414a2a09d07d250f1c4a531d4",
+   "px": [
+    2048,
+    1152
+   ],
+   "view": "review/calendar/m4_r18/H-jia-seo_m4r18_view.jpg",
+   "frame": "review/calendar/m4_r18/H-jia-seo_m4r18_frame_H_192x104.jpg",
+   "compare_r5": "review/calendar/m4_r18/H-jia-seo_m4r5_vs_m4r18_compare.jpg",
+   "view_sha256": "61882beaeca2278cf4ed6e34d21698730c1e2d6e51e194e1200dc37e22bc0d0b",
+   "frame_sha256": "7005bbf537595e0c26626a83bcedbed524544414444ba664719a9e4a8833e2ef",
+   "compare_r5_sha256": "bbb362f77992cb2d4d0fdc61cda4f431e26bf09184701ead99bade6710e336cf"
+  }
+ },
+ "self_check": {
+  "H-yerin-han": {
+   "verdict": "部分通過（Claude 自查）：清晨球道的清爽感與人景尺度到位、比 R5 球車照好很多；但姿勢不自然，遠處又出現球車與旗桿",
+   "appeal": "畫面明亮清新（新綠、白、淺天藍），雙手疊在握把上自然；整張的弱點在下半身姿勢：一腳屈膝抬起懸空、身體倚向斜放的球桿，像擺拍、重心不穩",
+   "scale": "人與草地、樹林尺度合理；左側遠處樹線前有一台球車與一支旗桿（prompt 寫 no golf carts、no flags），球車比例看起來大致合理，但仍是多出來的物件；右側有一個小黃色標示牌",
+   "club_contact": "雙手疊在握把上、手指正常；桿頭在她右前方著地，桿長合理",
+   "gaze_light": "頭轉向左後方對鏡頭笑，不是望向球道；晨光柔和、方向感不強；左下草地有大量白色亮點（露水），也可能被看成碎屑",
+   "composition": "人物在畫面中央偏左（約寬度 38–55%），不是左三分之一；人物約占高度九成，比計畫的「周圍大量球道」大",
+   "identity": "與 identity_master、R5 是同一人",
+   "frame": "套框上下各裁約 2 mm，帽頂與鞋都在框內；2048×1152 放 192 mm 寬約 271 ppi（與 R5 相同）",
+   "technical": "清晰，臉、手正常；無文字招牌"
+  },
+  "H-jia-seo": {
+   "verdict": "部分通過（Claude 自查）：寫真美感高，湖面、平台與人物共同構圖成立；偏離處是人物比例偏大、看鏡頭、太陽還沒落下",
+   "appeal": "粉紫晚霞與夕陽倒影、淺色平台斜線、酒紅洋裝與米白開襟和場景色調協調，安靜有氛圍；四張重製中整體最接近可收的一張",
+   "composition": "湖面在左、平台從右下斜入、人物坐在平台邊緣；人物約占高度八成，比計畫的「不到一半」大，人物份量偏重，但風景仍清楚",
+   "outfit_context": "酒紅細肩帶長洋裝、米白開襟從肩滑下、棕色平底涼鞋、銀圈耳環，合情境",
+   "pose": "坐在平台邊、雙腳垂向水面、一手撐在身後木板，自然（不是計畫的雙腿側收）；回頭看鏡頭，不是望向湖面",
+   "light": "太陽還在地平線上（計畫是剛落下）；臉部是柔和正面光，比黃昏環境略亮，有一點另外補光的感覺",
+   "identity": "與 identity_master、R5 是同一人，藍黑髮內層薄荷綠可見",
+   "frame": "套框上裁約 3.8 mm、下裁約 0.2 mm，頭與腳都在框內；約 271 ppi",
+   "technical": "清晰，手、腳、涼鞋正常；對岸有小屋與船，不擾"
+  }
+ },
+ "status": {
+  "supervisor": "待主管看圖",
+  "penny": "未決定"
+ },
+ "not_done": "沒有重試、補生、修圖、部署；Somi 未動；已接受的 V-Iris、V-Tammy R14、V-Rin R14 未動"
+}

@@ -5475,11 +5475,11 @@ window.CAL_DATA = {
    ]
   },
   "counts": {
-   "credits": 1.44,
-   "generated": 12,
+   "credits": 1.68,
+   "generated": 14,
    "trainings": 0
   },
-  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。 M-4 R10：連續空間構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（累計生成 2、credits 4）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 4.96。 M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。 M-4 R14：Tammy、Rin 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 11、credits 1.32；構圖底稿仍是 2 張、4 credits；合計 credits 5.32。 M-4 R16：Penny 接受 Tammy R14；Rin 修訂版 1 張（Soul 純文字，1 次請求、實扣 0.12，依時窗推定）；月面照片累計生成 12、credits 1.44；構圖底稿仍是 2 張、4 credits；合計 credits 5.44。",
+  "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。 M-4 R10：連續空間構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（累計生成 2、credits 4）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 4.96。 M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。 M-4 R14：Tammy、Rin 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 11、credits 1.32；構圖底稿仍是 2 張、4 credits；合計 credits 5.32。 M-4 R16：Penny 接受 Tammy R14；Rin 修訂版 1 張（Soul 純文字，1 次請求、實扣 0.12，依時窗推定）；月面照片累計生成 12、credits 1.44；構圖底稿仍是 2 張、4 credits；合計 credits 5.44。 M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 14、credits 1.68；構圖底稿仍是 2 張、4 credits；合計 credits 5.68。",
   "draft_counts": {
    "credits": 4,
    "generated": 2
@@ -6898,6 +6898,50 @@ window.CAL_DATA = {
    "owner": "docs/calendar/data/cal_m4_owner_r17b.json",
    "status_line": "M-4 R17 後：Penny 正式接受 Rin R14（原話「Rin R14 接受」）；已接受 3 套（V-Iris、V-Tammy、V-Rin），退回待重規劃 3、尚未生成 18、待完成 21。R16 保留紀錄、不替換；R14 截靴問題保留紀錄。生成 0、付費 0。"
   },
+  "m4r18": {
+   "auth": "docs/calendar/data/cal_m4_auth_r18.json",
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "{\"generated\": 14, \"credits\": 1.68, \"trainings\": 0}",
+     "old": "{\"generated\": 12, \"credits\": 1.44, \"trainings\": 0}",
+     "where": "counts"
+    },
+    {
+     "kind": "事實同步",
+     "new": "14（generated_log 加 M-4 R18 2）",
+     "old": "12",
+     "where": "status.production.generated_cumulative／generated_log"
+    },
+    {
+     "kind": "定義文字",
+     "new": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＝14）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "old": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＝12）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "where": "status.production.definitions.generated_cumulative"
+    },
+    {
+     "kind": "事實同步",
+     "new": "H-yerin-han：R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（清爽感與尺度到位；一腳懸空倚桿的姿勢不自然，遠處又出現球車與旗桿）；待主管看圖，Penny 未決定；H-jia-seo：R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（晚霞湖面與平台構圖好看；人物比例偏大、看鏡頭、太陽未落）；待主管看圖，Penny 未決定",
+     "old": "（H-yerin-han、H-jia-seo 原本沒有加註）",
+     "where": "status.production.set_notes"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；M-4 R18 依授權生成 Yerin、Jia 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查兩張皆部分通過，待主管看圖、Penny 未決定；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "where": "meta.status"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "……加「M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 14、credits 1.68；構圖底稿仍是 2 張、4 credits；合計 credits 5.68。」",
+     "old": "……合計 credits 5.44。",
+     "where": "counts_note"
+    }
+   ],
+   "from_commit": "e82ed45e136a2d12502bde01a72bf63cbdf0b26b",
+   "status_line": "M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，prompt 取自 bd84cf9 逐字；各 1 次請求、各實扣 0.12，合計 0.24）；Claude 自查兩張皆部分通過（Yerin 清爽但姿勢不自然、遠處有球車；Jia 寫真美感高但人物偏大、看鏡頭）；待主管看圖、Penny 未決定。接受數不變（3）。",
+   "trial": "docs/calendar/data/cal_m4_r18_trial.json"
+  },
   "m4r2": {
    "changes": [
     {
@@ -7246,7 +7290,7 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；M-4 R18 依授權生成 Yerin、Jia 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查兩張皆部分通過，待主管看圖、Penny 未決定；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
    "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審"
   },
   "month_rules": [
@@ -8020,7 +8064,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "bf36c4a37f1569e847a188cde5cdf68a52bd3fd8",
+  "plan_blob": "afdb0b9440c5b6f2e29c5e2042970d559b66d9cc",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -13341,7 +13385,7 @@ window.CAL_DATA = {
     "definitions": {
      "accepted": "已生成且 Penny 已接受（V-iris-chen；V-tammy-chou 於 M-4 R16、V-rin-ayase 於 M-4 R17 後接受各自的 R14 試拍）",
      "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",
-     "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＝12）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＝14）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
      "not_generated": "尚未生成的套數",
      "pending_owner_review": "24 套層級正在等 Penny 看圖的套數；試拍照片的狀態另見 set_notes",
      "rejected_replan": "已生成、Penny 退回，待重規劃（第一批 5 張中尚未被接受的；目前 V-somi-oh、H-yerin-han、H-jia-seo）",
@@ -13358,11 +13402,12 @@ window.CAL_DATA = {
      },
      "note": "M-4 R9 V-Somi 構圖底稿（實扣 2，主管退回）；M-4 R10 V-Somi 連續空間構圖底稿（Nano Banana Pro，1 次請求，實扣 2，依時窗推定；Claude 自查通過，待主管及 Penny 看底稿）"
     },
-    "generated_cumulative": 12,
+    "generated_cumulative": 14,
     "generated_log": {
      "M-4 R11": 1,
      "M-4 R14": 2,
      "M-4 R16": 1,
+     "M-4 R18": 2,
      "M-4 R2": 1,
      "M-4 R5": 5,
      "M-4 R7": 1,
@@ -13378,6 +13423,8 @@ window.CAL_DATA = {
     ],
     "review_r6": "proposed-pending-supervisor-review",
     "set_notes": {
+     "H-jia-seo": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（晚霞湖面與平台構圖好看；人物比例偏大、看鏡頭、太陽未落）；待主管看圖，Penny 未決定",
+     "H-yerin-han": "R5 退回；R18 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（清爽感與尺度到位；一腳懸空倚桿的姿勢不自然，遠處又出現球車與旗桿）；待主管看圖，Penny 未決定",
      "V-rin-ayase": "R5 退回；R14 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查不通過（主題光帶沒落在臉上、平光、看鏡頭，景別比計畫寬、靴尖貼下緣）；待主管看圖，Penny 未表態；R15 主管覆核：REVISE，暫不推薦採用（柱子搶眼、雙臂垂下、正面看鏡頭偏僵，光影沒有組織人物與場景），Penny 未決定；已備修訂 prompt（膝上、迎光、柱子作側邊框景），未生成；R16 修訂版 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（景別拉近、光落在人身上、手勢鬆開；仍看鏡頭、柱子偏寬）；待主管看圖，Penny 未決定；R17：Penny 原話「Rin 的第一張，我覺得還比較好」（暫按 R14 理解，記為版本偏好，未正式接受）；主管比較推薦 R14；R14 為優先候選，R16 保留紀錄、不替換；R17 後：Penny 正式接受 R14（Penny 原話「Rin R14 接受」）",
      "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）；R13 第二次：遮罩已依主管要求對照原圖調整（涵蓋下顎與上頸、離開背景），遮罩白黑定義與上傳費用仍無法確認，依停止規則未上傳、未送出、未扣款",
      "V-tammy-chou": "R5 退回；R14 重製試拍 1 張（Soul 純文字，實扣 0.12），Claude 自查部分通過（氣氛與光色到位，姿勢偏端坐、腳尖貼下緣）；待主管看圖，Penny 未表態；R15 主管覆核：保留候選（光色、衣著、場景與人物關係明顯改善；仍稍端正、燈罩醒目、一隻腳被原圖下緣截斷），待 Penny 決定，未接受；R16：Penny 接受 R14 這張（Penny 原話「Tammy 接受」）"

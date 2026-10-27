@@ -1,0 +1,14 @@
+{
+ "note": "M-4 R18 Penny 授權與主管指令（摘要，全文見對話送審紀錄）。不含 ID。",
+ "task": "TASK-CAL-001／M-4／R18｜Yerin、Jia 各一張重製試拍",
+ "received": "2026-10-27",
+ "head_at_start": "e82ed45e136a2d12502bde01a72bf63cbdf0b26b",
+ "scope": {
+  "generate": "H-yerin-han、H-jia-seo 各 1 張、各 1 次請求；每張上限 0.12，合計上限 0.24；不重試、不補生、不付費修圖",
+  "prompt": "cal_m4_r13_cards.json @ bd84cf9 的 H-yerin-han、H-jia-seo 已覆核設計與 prompt，不另開企劃重審",
+  "settings": "各用本人既有 Soul、soul_2、2k、16:9、count 1；無參考圖、不傳 style、不用 unlim",
+  "note": "兩位各自的單張測試，不宣稱流程已穩定",
+  "not_authorized": "重試、補生、付費修圖、部署、合併 main、聯絡廠商、Somi"
+ },
+ "settled": "V-Iris、V-Tammy R14、V-Rin R14 已接受；保留原圖與已知問題，不重開修改；Rin R16 不替換 R14"
+}
