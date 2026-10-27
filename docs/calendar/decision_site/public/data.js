@@ -6693,6 +6693,27 @@ window.CAL_DATA = {
    "precheck": "docs/calendar/data/cal_m4_r13_somi_precheck.json",
    "status_line": "M-4 R13：Somi 遮罩身分編輯前置條件未成立（遮罩白黑定義沒有官方確認），依停止規則沒有上傳、沒有送出、沒有扣款；交出其餘四位製作卡（CAL_27），建議下一批 Tammy、Rin 各 1 張 Soul 純文字（合計約 0.24）。24 套完成分類不變。"
   },
+  "m4r13b": {
+   "auth": "docs/calendar/data/cal_m4_auth_r13b.json",
+   "cards": "docs/calendar/data/cal_m4_r13_cards.json",
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）；R13 第二次：遮罩已依主管要求對照原圖調整（涵蓋下顎與上頸、離開背景），遮罩白黑定義與上傳費用仍無法確認，依停止規則未上傳、未送出、未扣款",
+     "old": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）",
+     "where": "status.production.set_notes"
+    },
+    {
+     "kind": "狀態文字",
+     "new": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "old": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+     "where": "meta.status"
+    }
+   ],
+   "from_commit": "0a38302eec2282e65d411fb9e39ef1159a83f60f",
+   "precheck": "docs/calendar/data/cal_m4_r13b_somi_precheck.json",
+   "status_line": "M-4 R13 第二次：主管 R12 覆核局部編輯方向 PASS；遮罩已對照原圖調整（涵蓋下顎與上頸、離開背景與外圍髮型），prompt 改為 adult woman；但遮罩白黑定義仍沒有官方或唯讀來源可確認、上傳費用也未確認（不含遮罩唯讀報價已達上限 2），依停止規則沒有上傳、沒有送出、沒有扣款。四位簡明製作卡見 CAL_27；建議下一批仍為 Tammy、Rin 各 1 張 Soul 純文字（合計約 0.24）。24 套完成分類與計數不變。"
+  },
   "m4r2": {
    "changes": [
     {
@@ -7041,7 +7062,7 @@ window.CAL_DATA = {
    "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
    "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
    "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
-   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+   "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
    "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審"
   },
   "month_rules": [
@@ -7815,7 +7836,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "a0e988027c67eb7a7a13de0e431dc1a6a41f3acd",
+  "plan_blob": "3d4708a204a7ef318d926301f719dc7bf1f30552",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -13171,7 +13192,7 @@ window.CAL_DATA = {
     ],
     "review_r6": "proposed-pending-supervisor-review",
     "set_notes": {
-     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）"
+     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）；R13 第二次：遮罩已依主管要求對照原圖調整（涵蓋下顎與上頸、離開背景），遮罩白黑定義與上傳費用仍無法確認，依停止規則未上傳、未送出、未扣款"
     },
     "sets_total": 24,
     "to_complete": 23

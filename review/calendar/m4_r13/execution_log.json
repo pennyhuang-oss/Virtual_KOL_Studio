@@ -1,0 +1,70 @@
+{
+ "note": "M-4 R13 第二次 私有執行紀錄（含 Element ID 與 R10 任務 ID；只留在 repo，不公開）。本輪沒有上傳、沒有送出、沒有扣款。",
+ "events": [
+  {
+   "t": "2026-10-27T06:40:00Z",
+   "step": "head",
+   "head": "0a38302eec2282e65d411fb9e39ef1159a83f60f",
+   "tree": "clean"
+  },
+  {
+   "t": "2026-10-27T06:42:00Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r13b.json",
+   "requests_max": 1,
+   "budget_credits": 2,
+   "uploads_max": 1
+  },
+  {
+   "t": "2026-10-27T06:50:00Z",
+   "step": "mask",
+   "file": "review/calendar/m4_r13/V-somi-oh_m4r13_edit_mask_1792x2400.png",
+   "sha256": "b19057febd7f0e881a85fbbf8db343c996cfa63989bf7ebbddf11192d492a587",
+   "replaces_r12_sha256": "d0586a6d440565378e5cd5b4b49df8df5c03d2399771b5be81c9342fa1c94fae"
+  },
+  {
+   "t": "2026-10-27T06:55:00Z",
+   "step": "semantics_check",
+   "result": "無法確認",
+   "sources": "見 docs/calendar/data/cal_m4_r13b_somi_precheck.json checks[2]"
+  },
+  {
+   "t": "2026-10-27T06:58:00Z",
+   "step": "prompt_prepared",
+   "public_sha256": "3aecf30413059f311030f3f06d1fba96219594b30308db12210e7e81c1855ff0",
+   "filled_sha256": "35a9f47d99c642b878979390334973514785c585da20adb8e0545f83d0443ea3",
+   "filled_text": "In the street photograph, change only the masked area. Give the adult woman the face of <<<24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e>>>: her face shape, eyes, brows, nose and lips, with light see-through bangs that show her brows. Keep the same head angle and three-quarter view, the upward glance toward the falling snow and a soft smile, and keep her existing hair colour and the outer shape of her hair. Match the photograph exactly: warm amber lantern light from the right on her face, cool blue evening light on the shadow side, and the same softness, grain and sharpness, so the face sits naturally in the scene. Everything outside the mask stays as it is.",
+   "element_id": "24da65a9-16fe-4fa7-a9ee-4b4ec88a8e5e"
+  },
+  {
+   "t": "2026-10-27T07:00:00Z",
+   "step": "get_cost（唯讀，不送出）",
+   "params": {
+    "model": "nano_banana_2",
+    "aspect_ratio": "3:4",
+    "resolution": "2k",
+    "count": 1,
+    "is_inpaint": true,
+    "use_unlim": false,
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "db5c6a9e-974a-4191-b855-80ea689028f1"
+     }
+    ],
+    "prompt_sha256": "35a9f47d99c642b878979390334973514785c585da20adb8e0545f83d0443ea3",
+    "get_cost": true,
+    "mask": "未附（未上傳）"
+   },
+   "result": {
+    "credits": 2,
+    "credits_exact": 2
+   }
+  },
+  {
+   "t": "2026-10-27T07:01:00Z",
+   "step": "decision",
+   "result": "停止：遮罩黑白定義與上傳費用無法確認；沒有上傳、沒有送出、沒有扣款"
+  }
+ ]
+}

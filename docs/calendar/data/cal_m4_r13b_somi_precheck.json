@@ -1,0 +1,254 @@
+{
+ "note": "M-4 R13 第二次：Somi 遮罩身分編輯送出前核對（未送出）。不含 ID；私有紀錄在 review/calendar/m4_r13/execution_log.json。",
+ "date": "2026-10-27",
+ "supervisor_r12": "局部編輯方向 PASS（主管結論，不是 Penny 接受）",
+ "mask": {
+  "file": "review/calendar/m4_r13/V-somi-oh_m4r13_edit_mask_1792x2400.png",
+  "sha256": "b19057febd7f0e881a85fbbf8db343c996cfa63989bf7ebbddf11192d492a587",
+  "preview": "review/calendar/m4_r13/V-somi-oh_m4r13_edit_area.jpg",
+  "preview_sha256": "4f854d258b8ef536c77f6c5b0b24f98afda81c5de1e351f9cd90ba80dda3d003",
+  "script": "review/calendar/m4_r13/make_mask_r13b.py",
+  "format": "1792×2400（與 R10 原圖同尺寸）、8 位元灰階 PNG；白 255＝擬編輯、黑 0＝保留（平台定義未確認）",
+  "white_px": 27195,
+  "white_pct": 0.632,
+  "bbox_xyxy": [
+   1137,
+   856,
+   1297,
+   1073
+  ],
+  "method": "蛋形（中心 1212,958；橫半徑 86；上半徑 104、下半徑 116）∩ 頭部暖色輪廓平滑後內縮 10 px；與背景（頭部輪廓外）最近距離 11 px",
+  "replaces": {
+   "file": "review/calendar/m4_r12/V-somi-oh_m4r12_edit_mask_1792x2400.png",
+   "sha256": "d0586a6d440565378e5cd5b4b49df8df5c03d2399771b5be81c9342fa1c94fae",
+   "bbox_xyxy": [
+    1126,
+    856,
+    1294,
+    1056
+   ],
+   "note": "R12 舊遮罩保留不刪"
+  },
+  "why_changed": [
+   "R12 橢圓在眼睛到臉頰高度（y≈950–990）左緣 x≈1126–1131，正好貼到左側外圍頭髮輪廓與背景交界；新版左緣 x≈1137–1146，離背景至少 10 px，只留在臉旁的髮絲裡",
+   "R12 橢圓下緣 y=1056，在 y≈1040–1050 只寬到 x≈1164–1256／1181–1239，下顎角與頸部銜接貼在邊界上，Somi 較長的 V 形下顎沒有空間；新版下緣延到 y=1073（下巴 y≈1023 以下約 50 px、毛衣領口 y≈1100 以上約 27 px），y=1040 寬 x1152–1272、y=1050 寬 x1160–1264",
+   "右側維持在臉頰外約 25–35 px 的頭髮內（x≤1297，外圍髮型輪廓約 x1316–1329）；頂端 y=856 仍在頭頂髮際線下方、外圍輪廓內 10 px 以上"
+  ],
+  "kept_out": "背景、外圍髮型輪廓（左側一條髮絲、右側外圍髮量、頭頂輪廓）、大衣領、毛衣領口、身體",
+  "left_margin_note": "左臉頰到背景只有約 20 px 頭髮，新版左緣離目前臉頰輪廓約 0–10 px；Somi 臉型比替身窄，輪廓會往內收，不需往外擴；若要往外擴就會碰到外圍髮型，依指示不做",
+  "rows_sample": {
+   "860": {
+    "new": [
+     1201,
+     1240
+    ],
+    "old": [
+     1186,
+     1234
+    ],
+    "head": [
+     1174,
+     1277
+    ]
+   },
+   "880": {
+    "new": [
+     1172,
+     1268
+    ],
+    "old": [
+     1155,
+     1265
+    ],
+    "head": [
+     1154,
+     1296
+    ]
+   },
+   "900": {
+    "new": [
+     1159,
+     1283
+    ],
+    "old": [
+     1140,
+     1280
+    ],
+    "head": [
+     1145,
+     1310
+    ]
+   },
+   "920": {
+    "new": [
+     1153,
+     1292
+    ],
+    "old": [
+     1132,
+     1288
+    ],
+    "head": [
+     1139,
+     1315
+    ]
+   },
+   "940": {
+    "new": [
+     1146,
+     1296
+    ],
+    "old": [
+     1127,
+     1293
+    ],
+    "head": [
+     1132,
+     1319
+    ]
+   },
+   "960": {
+    "new": [
+     1137,
+     1297
+    ],
+    "old": [
+     1126,
+     1294
+    ],
+    "head": [
+     1127,
+     1323
+    ]
+   },
+   "980": {
+    "new": [
+     1139,
+     1296
+    ],
+    "old": [
+     1128,
+     1292
+    ],
+    "head": [
+     1127,
+     1326
+    ]
+   },
+   "1000": {
+    "new": [
+     1144,
+     1292
+    ],
+    "old": [
+     1135,
+     1285
+    ],
+    "head": [
+     1132,
+     1326
+    ]
+   },
+   "1020": {
+    "new": [
+     1144,
+     1284
+    ],
+    "old": [
+     1145,
+     1275
+    ],
+    "head": [
+     1132,
+     1320
+    ]
+   },
+   "1040": {
+    "new": [
+     1152,
+     1272
+    ],
+    "old": [
+     1164,
+     1256
+    ],
+    "head": [
+     1126,
+     1318
+    ]
+   },
+   "1060": {
+    "new": [
+     1172,
+     1252
+    ],
+    "old": null,
+    "head": [
+     1104,
+     1318
+    ]
+   },
+   "1080": {
+    "new": null,
+    "old": null,
+    "head": [
+     1086,
+     1334
+    ]
+   }
+  }
+ },
+ "checks": [
+  {
+   "k": "遮罩覆蓋臉型與下顎銜接、不碰背景衣領外圍髮型",
+   "result": "是（已小幅調整）",
+   "evidence": "見 mask.why_changed 與示意圖"
+  },
+  {
+   "k": "Element 引用語法",
+   "result": "確認",
+   "evidence": "Higgsfield 工具說明（show_reference_elements）：在 generate_image 的 params.prompt 內嵌 <<<element_id>>>，後端自動帶入 Element 圖並改寫成 @element_name；不要放進 medias；支援 nano_banana_2。本輪 prompt 用此寫法。"
+  },
+  {
+   "k": "遮罩黑白定義",
+   "result": "無法確認 → 停止付費操作",
+   "evidence": "本輪新查：nano_banana_2 模型說明（medias 角色 image_references／mask；is_inpaint「Whether to restrict the edit to the supplied mask.」，沒有寫黑白）；Higgsfield 打包工作流程清單（12 個，沒有遮罩或 inpaint 工作流程）；Marketplace apps 搜尋 inpaint／mask（0 筆）；官方 API 文件 docs.higgsfield.ai 首頁與完整頁面目錄（llms.txt，沒有 inpaint／mask 頁）；官方 OpenAPI 規格 openapi.json（全文沒有 mask、inpaint 字樣）；官方 SDK 頁（只有文字生成範例）；Higgsfield 官方部落格〈Nano Banana Pro Inpaint〉2025-12-11（只寫用筆刷塗要改的區域、「The mask defines the editing zone」，沒有檔案格式或顏色）。R13 第一次已查：工具說明、官方 image-editing 頁、Nano Banana 說明頁、打包工作流程檔。只有第三方（Hugging Face Diffusers、Astria）寫白＝編輯，Stability AI 舊版 API 相反（黑＝替換），可見各家不同，不能套用。"
+  },
+  {
+   "k": "遮罩上傳費用",
+   "result": "未確認",
+   "evidence": "官方文件與工具說明都沒寫；repo 以往上傳沒有對應扣款列（依時窗推定，不是官方說明）"
+  },
+  {
+   "k": "完整組合報價（含實際遮罩）",
+   "result": "未做",
+   "evidence": "遮罩定義未確認，依停止規則沒有上傳遮罩，取不到遮罩 media，無法含遮罩報價"
+  },
+  {
+   "k": "不含遮罩的唯讀報價（最新）",
+   "result": "2 credits",
+   "evidence": "nano_banana_2、2k、3:4、count 1、is_inpaint true、R10 原任務作 image_references、prompt 內含 Somi Element 佔位符、不用 unlim；get_cost 只報價不送出。報價已等於上限 2，上傳若有任何費用就會超過"
+  }
+ ],
+ "prompt": {
+  "text": "In the street photograph, change only the masked area. Give the adult woman the face of <<<SOMI_ELEMENT_ID>>>: her face shape, eyes, brows, nose and lips, with light see-through bangs that show her brows. Keep the same head angle and three-quarter view, the upward glance toward the falling snow and a soft smile, and keep her existing hair colour and the outer shape of her hair. Match the photograph exactly: warm amber lantern light from the right on her face, cool blue evening light on the shadow side, and the same softness, grain and sharpness, so the face sits naturally in the scene. Everything outside the mask stays as it is.",
+  "sha256": "3aecf30413059f311030f3f06d1fba96219594b30308db12210e7e81c1855ff0",
+  "words": 110,
+  "from": "docs/calendar/data/cal_m4_r12_edit_prep.json test_package.prompt.text（sha256 e59fc4a9…f94575，固定 commit d154bde0dc033369f81c24f8ec3f91fc4d14447e）",
+  "diff": [
+   {
+    "old": "young woman",
+    "new": "adult woman",
+    "why": "Owner／主管指定"
+   }
+  ],
+  "mask_related_wording": "無：遮罩調整只改範圍，prompt 原本就寫 change only the masked area、保留髮色與外圍髮型、其餘不變，不需改字",
+  "at_send": "<<<SOMI_ELEMENT_ID>>> 換成 kols/somi-oh/profile.json 的 reference_element_id；填入後的全文與 hash 只在私有紀錄"
+ },
+ "decision": "停止：遮罩黑白定義沒有官方或唯讀來源可確認，上傳費用也未確認；依指示沒有上傳、沒有送出、沒有扣款；不改整張重畫、不換模型、不走其他付費路徑。遮罩、prompt 與設定都已備妥，Penny 決定後可直接執行。",
+ "for_penny": [
+  "選項 A：接受「白＝編輯」這個業界慣例但未經 Higgsfield 官方確認的風險，並同意上傳費用依以往紀錄（依時窗推定）視為 0、或把上限放寬到 2＋實際上傳費用 → 上傳 1 個遮罩、含遮罩唯讀報價 ≤ 上限才送 1 次。若平台定義相反，結果會是臉不變、其他地方被重畫，一眼可看出，算失敗，2 credits 白花，不補送。",
+  "選項 B：不走遮罩編輯，Somi 維持待定，先做 Tammy、Rin（合計約 0.24）。"
+ ],
+ "counts": "不變：月面照片 9 張 1.08 credits；構圖底稿另計 2 張 4 credits；訓練 0"
+}
