@@ -1,0 +1,149 @@
+{
+ "note": "M-4 R16 私有執行紀錄（含 Soul ID 與任務 ID；只留在 repo，不公開）。",
+ "events": [
+  {
+   "t": "2026-10-27T08:42:00Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r16.json",
+   "requests_max": 1,
+   "budget_credits": 0.12
+  },
+  {
+   "t": "2026-10-27T08:42:30Z",
+   "step": "prompt",
+   "set": "V-rin-ayase",
+   "source": "374a7b8 docs/calendar/data/cal_m4_r15_followup.json rin_prompt_v2.text（sha256 f178e919…cf898）",
+   "edits": [
+    {
+     "old": "Shot: knee-up, from a little above her head to just below her knees; her feet are out of the frame.",
+     "new": "Shot: knee-up, from a little above her head to just above her knees; her feet are out of the frame."
+    },
+    {
+     "old": "so her face is the brightest part of the picture, with crisp natural shadows;",
+     "new": "so her face is the focal point of the picture, its highlights keeping their detail, with crisp natural shadows;"
+    }
+   ],
+   "sha256": "8a10d7add7eea9d5efc414889a25c3de523a4734a58e4356eface0990f243762",
+   "words": 347,
+   "prompt": "Late autumn afternoon in an old sandstone arcade beside a courtyard. A 25-year-old adult Japanese woman stands in a band of low, hard sunlight between two arches and turns her face toward the sun on the left, eyes softly half-closed, with a calm, private half-smile; her body is angled toward the light, one shoulder resting against a sandstone column, one hand loosely holding the edge of her coat at her chest. She has natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, and long deep wine-red brown hair in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a slim waist. She wears a black fine-knit square-neck midi dress, a camel wool coat draped over her shoulders with her arms out of the sleeves, and small gold hoop earrings. Light: the sun lays a warm band across her face, neck and shoulders, so her face is the focal point of the picture, its highlights keeping their detail, with crisp natural shadows; the sunlit floor bounces a little warm light into the shade. Setting: plain walls with no signs, a few yellow leaves, nobody else around; on the left behind her, a row of round arches recedes into cool shade striped with sunlight. Shot: knee-up, from a little above her head to just above her knees; her feet are out of the frame. Camera: vertical 3:4, at her chest height, a 50mm lens from about 2 metres, natural perspective with straight vertical lines. Composition: she stands slightly right of centre and fills most of the frame height; the column is only a narrow strip of shaded stone at the right edge, partly cut off by the frame, so it frames her without drawing the eye. Colours: black, camel, sandstone gold and the wine-red of her hair. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading."
+  },
+  {
+   "t": "2026-10-27T08:43:30Z",
+   "step": "pre-check",
+   "soul": {
+    "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+    "name": "rin-ayase-soul-v1-5img-20260904",
+    "status": "ready",
+    "raw_status": "completed"
+   },
+   "inflight": "本案自有紀錄：R14 兩個任務皆已完成；R15 沒有送出；R16 尚未送出",
+   "tx_boundary": {
+    "newest_row": "2026-10-27T08:25:03.309053Z Seedream 5.0 Flash -0.5（不是本案）；最新本案列 2026-10-27T08:19:51.950799Z Soul V2 -0.12（R14 Rin）"
+   }
+  },
+  {
+   "t": "2026-10-27T08:44:00Z",
+   "step": "quote（get_cost，唯讀）",
+   "set": "V-rin-ayase",
+   "settings": {
+    "model": "soul_2",
+    "soul": "rin-ayase",
+    "quality": "2k",
+    "aspect_ratio": "3:4",
+    "count": 1,
+    "use_unlim": false,
+    "medias": "none",
+    "style_id": "none",
+    "folder_id": "none"
+   },
+   "prompt_sha256": "8a10d7add7eea9d5efc414889a25c3de523a4734a58e4356eface0990f243762",
+   "quote": {
+    "credits": 1,
+    "credits_exact": 0.12
+   },
+   "budget": 0.12,
+   "within_budget": true
+  },
+  {
+   "t": "2026-10-27T08:45:05Z",
+   "step": "intent",
+   "set": "V-rin-ayase",
+   "request": 1,
+   "retry": false,
+   "note": "即將送出唯一一次請求；中斷或結果不明先查原任務與交易，不重送。"
+  },
+  {
+   "t": "2026-10-27T08:45:28Z",
+   "step": "submitted",
+   "set": "V-rin-ayase",
+   "job_id": "7c514ef0-996b-4155-981f-cd24aa18afca",
+   "status": "pending",
+   "model_echo": "text2image_soul_v2",
+   "echo": {
+    "aspect_ratio": "3:4",
+    "quality": "2k",
+    "soul_id": "34b7fd71-c8dd-4d6a-983e-881b1d012219",
+    "soul_name": "rin-ayase-soul-v1-5img-20260904",
+    "prompt_equals_sent": true
+   },
+   "requests_used": 1
+  },
+  {
+   "t": "2026-10-27T08:46:10Z",
+   "step": "terminal",
+   "set": "V-rin-ayase",
+   "job_id": "7c514ef0-996b-4155-981f-cd24aa18afca",
+   "status": "completed",
+   "polls": 2,
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261027_084521_7c514ef0-996b-4155-981f-cd24aa18afca.png",
+   "job_model_field": "text2image_soul_v2"
+  },
+  {
+   "t": "2026-10-27T08:46:30Z",
+   "step": "saved",
+   "path": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r16.png",
+   "bytes": 4670899,
+   "sha256": "503de80e233ae4c0bbfa74ddf0b0c012a422411839ad37246428339161066d35",
+   "px": [
+    1536,
+    2048
+   ],
+   "png_text_chunks": "hf-job-id"
+  },
+  {
+   "t": "2026-10-27T08:46:40Z",
+   "step": "charge",
+   "rows": [
+    {
+     "created_at": "2026-10-27T08:45:21.673746Z",
+     "display_name": "Higgsfield Soul V2",
+     "credits": -0.12,
+     "action": "spend"
+    }
+   ],
+   "refunds": 0,
+   "window": "送出前最新一列 08:25:03（Seedream，非本案）→ 之後只多這一列",
+   "vs_quote": "與唯讀報價 0.12 相同",
+   "attribution": "依時窗推定"
+  },
+  {
+   "t": "2026-10-27T08:46:50Z",
+   "step": "job record（只查本案任務）",
+   "params.prompt": "與送出文字相同",
+   "enhance_prompt": false,
+   "seed": 324658,
+   "style": "General（後端預設）",
+   "quality_field": "1080p"
+  },
+  {
+   "t": "2026-10-27T08:55:00Z",
+   "step": "deliverables",
+   "files": [
+    "review/calendar/m4_r16/V-rin-ayase_m4r16_view.jpg",
+    "review/calendar/m4_r16/V-rin-ayase_m4r16_frame_V_120x160.jpg",
+    "review/calendar/m4_r16/V-rin-ayase_m4r14_vs_m4r16_compare.jpg"
+   ],
+   "stop": "完成後停止，不重試、不補生"
+  }
+ ]
+}

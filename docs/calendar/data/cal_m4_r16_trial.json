@@ -1,0 +1,68 @@
+{
+ "note": "M-4 R16 Rin 修訂版單張試拍結果（不含 ID；私有紀錄在 review/calendar/m4_r16/execution_log.json）。",
+ "date": "2026-10-27",
+ "auth": "docs/calendar/data/cal_m4_auth_r16.json",
+ "prompt": {
+  "from": {
+   "path": "docs/calendar/data/cal_m4_r15_followup.json",
+   "field": "rin_prompt_v2.text",
+   "commit": "374a7b8",
+   "sha256": "f178e919d7015b082bf1e1d7de272e374974f093fd98808dba2104b0050cf898"
+  },
+  "edits": [
+   {
+    "old": "Shot: knee-up, from a little above her head to just below her knees; her feet are out of the frame.",
+    "new": "Shot: knee-up, from a little above her head to just above her knees; her feet are out of the frame."
+   },
+   {
+    "old": "so her face is the brightest part of the picture, with crisp natural shadows;",
+    "new": "so her face is the focal point of the picture, its highlights keeping their detail, with crisp natural shadows;"
+   }
+  ],
+  "edits_why": [
+   "裁切下緣統一在膝蓋上方、刪除膝蓋下方的矛盾描述（主管指定）",
+   "臉部作為視覺焦點、保留高光細節，不要求臉是全畫面最亮處（主管指定）"
+  ],
+  "text": "Late autumn afternoon in an old sandstone arcade beside a courtyard. A 25-year-old adult Japanese woman stands in a band of low, hard sunlight between two arches and turns her face toward the sun on the left, eyes softly half-closed, with a calm, private half-smile; her body is angled toward the light, one shoulder resting against a sandstone column, one hand loosely holding the edge of her coat at her chest. She has natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, and long deep wine-red brown hair in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a slim waist. She wears a black fine-knit square-neck midi dress, a camel wool coat draped over her shoulders with her arms out of the sleeves, and small gold hoop earrings. Light: the sun lays a warm band across her face, neck and shoulders, so her face is the focal point of the picture, its highlights keeping their detail, with crisp natural shadows; the sunlit floor bounces a little warm light into the shade. Setting: plain walls with no signs, a few yellow leaves, nobody else around; on the left behind her, a row of round arches recedes into cool shade striped with sunlight. Shot: knee-up, from a little above her head to just above her knees; her feet are out of the frame. Camera: vertical 3:4, at her chest height, a 50mm lens from about 2 metres, natural perspective with straight vertical lines. Composition: she stands slightly right of centre and fills most of the frame height; the column is only a narrow strip of shaded stone at the right edge, partly cut off by the frame, so it frames her without drawing the eye. Colours: black, camel, sandstone gold and the wine-red of her hair. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.",
+  "sha256": "8a10d7add7eea9d5efc414889a25c3de523a4734a58e4356eface0990f243762",
+  "words": 347
+ },
+ "settings": "Rin 既有 Soul（ready）、soul_2、2k、3:4、count 1；無參考圖、不傳 style、不用 unlim",
+ "pre_check": "Soul ready；本案沒有進行中或重複任務；唯讀報價 0.12，在上限內",
+ "requests": 1,
+ "charge": {
+  "credits": 0.12,
+  "attribution": "依時窗推定，不是直接對帳：送出後只多一列 Higgsfield Soul V2 −0.12，時間 08:45:21 與結果檔名同一秒；帳號同時段另有他人的非 Soul 使用，未計入"
+ },
+ "job_record": "任務紀錄的 prompt 與送出文字相同，enhance_prompt=false（沒有被改寫）；後端另記 style「General」強度 1（我們沒傳，屬預設）與 quality 欄位 1080p（實際輸出 1536×2048）",
+ "output": {
+  "original": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r16.png",
+  "sha256": "503de80e233ae4c0bbfa74ddf0b0c012a422411839ad37246428339161066d35",
+  "px": [
+   1536,
+   2048
+  ],
+  "view": "review/calendar/m4_r16/V-rin-ayase_m4r16_view.jpg",
+  "frame": "review/calendar/m4_r16/V-rin-ayase_m4r16_frame_V_120x160.jpg",
+  "compare_r14": "review/calendar/m4_r16/V-rin-ayase_m4r14_vs_m4r16_compare.jpg",
+  "view_sha256": "8b7e91ee04433d9e592f6038cdeabc8313f962be1332c879dcd06a7009407e42",
+  "frame_sha256": "9a09206dd875fa58f34027871f513a7fbb17c023c0346cc9f1a32207fb86e880",
+  "compare_r14_sha256": "c76bca3b005af7e6e6fd41098cd96ea96f70794e8cc547dc4f57704a53c55dd2"
+ },
+ "self_check": {
+  "verdict": "部分通過（Claude 自查）：比 R14 明顯好看。景別拉近、光真正落在人身上、手勢讓姿態鬆開；仍看鏡頭而不是迎光半閉眼，柱子比計畫的「一窄條」寬",
+  "appeal": "整張有秋日午後的溫度與私密感，人物是畫面主角，已接近可收的寫真；是否收由主管看圖、Penny 決定",
+  "facing_light": "未達：她正面看鏡頭、淺笑，沒有轉向光、也沒有半閉眼；表情自然不僵",
+  "light_on_person": "有：暖色陽光落在臉、頸、肩與大衣，臉部高光保有細節；光偏柔和，不是很硬的光帶；左側地面有陽光條紋",
+  "blend": "肩靠石柱自然，人與迴廊同一光線，人景融合比 R14 好",
+  "column": "仍偏大：石柱占右側約三分之一，雖在暖光中、紋理好看、也是她倚靠的支點，但不是計畫中被畫面切掉的一窄條",
+  "pose_identity": "一手輕抓胸前大衣邊、一手在下方扶著大衣，雙臂不再垂直下垂；與 identity_master、R14 是同一人",
+  "framing": "頭頂留白適中；下緣約在大腿到膝蓋之間、腳不入鏡，沒有截斷問題；3:4 不裁切、約 325 ppi",
+  "technical": "清晰，臉、手細節正常；無招牌字、無白邊、無雜物；左上角兩盞吊燈屬場景；左手處大衣看起來可能有一側穿袖，與「披肩不穿袖」略有出入，屬小問題"
+ },
+ "status": {
+  "supervisor": "待主管看圖",
+  "penny": "未決定"
+ },
+ "not_done": "沒有重試、補生、修圖、部署；沒有改 V-Iris、沒有合併 main；其他角色未動"
+}

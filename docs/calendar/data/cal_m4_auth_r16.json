@@ -1,0 +1,22 @@
+{
+ "note": "M-4 R16 Penny 決定與授權、主管覆核（摘要，全文見對話送審紀錄）。不含 ID。",
+ "task": "TASK-CAL-001／M-4／R16｜Rin 修訂版單張試拍",
+ "received": "2026-10-27",
+ "head_at_start": "a51f597aa39f56973ff9d6f07f75e86950bfd544",
+ "penny_decision_verbatim": "Tammy 接受，Rin 用修訂版再試一張",
+ "penny_decision": {
+  "V-tammy-chou": "Penny 接受 R14 這張（Penny 本人在本輪訊息開頭的原話；R16 指令中「Tammy 維持候選、待 Penny 決定」是在她決定前寫的，以 Penny 原話為準）",
+  "V-rin-ayase": "Penny 授權用修訂版 prompt 再試 1 張"
+ },
+ "scope": {
+  "generate": "僅 V-rin-ayase 1 張、1 次請求、上限 0.12 credits；不重試、不補生、不付費修圖",
+  "prompt": "以 374a7b8 cal_m4_r15_followup.json rin_prompt_v2.text 為基準，只修正兩處：裁切下緣統一在膝蓋上方、刪除膝蓋下方的矛盾描述；臉部作為視覺焦點並保留高光細節，不要求臉是全畫面最亮處",
+  "settings": "Rin 既有 Soul、soul_2、2k、3:4、count 1；無參考圖、不傳 style、不用 unlim",
+  "not_authorized": "重試、補生、付費修圖、部署、改 V-Iris、合併 main、其他角色"
+ },
+ "supervisor": [
+  "R15 有限收尾 PASS",
+  "Rin 修訂方向 PASS",
+  "兩處直接修正後記錄最終文字與 hash，不再送方案審查"
+ ]
+}
