@@ -1,0 +1,108 @@
+TASK-CAL-001／M-4／R13｜停止反覆前置，交付Somi測試結果與其餘四位製作準備｜送審報告
+
+# CAL_27 — M-4 R13 其餘四位製作卡（不生成）
+
+> 依 CAL_23 replan-r6-v3（主管 R6 v3 PASS）整理，不重寫企劃；資料：`data/cal_m4_r13_cards.json`。本輪生成 0、付費 0。不假定 Somi 的方法適用所有角色。
+
+## V-tammy-chou（直式，1 月）
+
+- 畫面構想：新年夜，老飯店酒廊安靜下來的角落：她側坐在深藍綠絲絨扶手椅裡，身旁一盞黃銅落地燈把她和椅子照成一小圈暖光，背後的高窗是深藍夜色與城市光點。
+- 人物與場景關係：燈與椅子圈出的那一小塊暖光是主體；人物在中央略偏左，燈罩在畫面右側、她頭部的高度，窗與遠處吊燈只是暗背景。
+- 主要姿態：側坐在扶手椅裡、雙腿交疊，一手手臂沿著捲邊扶手放鬆，對鏡頭溫暖、放鬆地笑——像派對剛散場。一個姿態，沒有其他動作。
+- 服裝：香檳色真絲緞面斜裁細肩帶中長洋裝、小金色垂墜耳環、金色細帶高跟鞋；不拿包、不拿杯。
+- 光色：主光是畫面右側的黃銅落地燈（暖、柔，約在她頭部高度），照亮臉、肩與緞面；從相機方向加一層柔和補光，讓暗側的臉保持清楚，但落地燈仍是她身上最亮、方向最明確的光；房間其餘部分落入暖暗，窗外維持深藍。色彩：香檳、深藍綠、黃銅金、夜藍。
+- 建議製作路徑：Soul 2＋Tammy 既有 Soul，純文字一次生成（不加參考圖）。中景坐姿、人物占畫面大，構圖對模型較不敏感；本案唯一被 Penny 接受的照片（V-Iris）也是 Soul 純文字。Soul＋參考圖在 R11 會把 prompt 換成參考圖的自動描述，不採用。
+- 設定：soul_2、Tammy Soul、2k、3:4、count 1、不傳 style、不用 unlim
+- 費用參考：0.12（Soul 2 2k 單張；以往唯讀報價與實扣皆 0.12，送出前重新報價）
+- prompt 來源：CAL_23 replan-r6-v3（主管 R6 v3 PASS）逐字，只刪最後一句的「finished like a page from a high-end photobook」（R8 白邊的待查假設；R10 不寫這句時沒有白邊，但這不是證實）；366 個英文詞，sha256 `9c17fe21db59b9e26d0c0793e4bfa48dc19a55d723a61f838250d8f7e7cccb2b`
+
+```
+A 24-year-old adult Taiwanese woman with her natural fair skin tone, round almond eyes with visible aegyo-sal, shimmer eyeshadow and jelly-glossy lips, long voluminous big-wave hair in milk-tea golden brown with light money-piece highlights at the front. Curvy figure, 160 cm tall, bust 90 cm, waist 57 cm, hips 89 cm, E cup, a full chest and a slim waist. She wears a champagne silk-satin slip midi dress cut on the bias with thin straps, small gold drop earrings and strappy gold heels, and she holds nothing. Setting: New Year's Eve in a quiet corner of a grand old hotel lounge, a deep teal velvet armchair with rolled arms beside a brass floor lamp with a pleated cream fabric shade, tall windows behind with a deep-blue night and soft out-of-focus city lights with no signs, a crystal chandelier glowing faintly far back in the room, nobody else in the lounge. Moment: she sits sideways in the armchair with her legs crossed, one arm resting along the rolled armrest and the other hand on her knee, and smiles at the camera, warm and relaxed, as if the party has just ended. Shot: seated full-length, from a little above her head to just below her heels, the armchair and the lamp beside her. Camera: vertical 3:4, at about her seated chest height, a 50mm lens from about 3 metres, natural perspective with straight vertical lines. Composition: the armchair sits a little left of centre, the glowing lamp shade on the right at the height of her head, the dark window and the city lights in the upper background, a little floor below her heels. Light: the floor lamp is the key light, warm and soft from the right of the frame at the height of her head, lighting her face, shoulders and the satin; a gentle fill from the camera side keeps the shadow side of her face clear while the lamp stays the brightest, most directional light on her; the rest of the room falls into warm darkness and the window stays deep blue; champagne, teal, brass gold and night blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.
+```
+
+- 尚未驗證的風險：
+  - 臉的光又變成看不出來源的正面光：寫明畫面右側的落地燈是主光、補光只讓暗側不死黑；生成後看臉的亮暗方向、陰影，和椅子、牆面上的燈光是否一致。
+  - 緞面過亮或像塑膠：寫明柔光、緞面有自然的高光與皺褶。
+  - 手與扶手的接觸：只放一隻手臂在捲邊扶手上，另一手放在膝上，不拿東西。
+  - 窗外出現招牌文字：寫明只有失焦光點、沒有文字。
+  - R5 第一批同一位已被 Penny 退回；這版是重寫後的新方案，還沒有生成過
+  - Soul 純文字可能又出現招牌字、雜物或相紙邊框
+
+## V-rin-ayase（直式，10 月）
+
+- 畫面構想：秋天傍晚的石造迴廊：低斜的硬光從拱洞切進來，在她臉上、身上和地上畫出一道道明暗；她肩靠石柱，把臉轉向光、眼簾半垂。
+- 人物與場景關係：光影是主體：她的臉和上身落在亮帶裡，下半身與身後迴廊落在陰影裡，遠處的拱一明一暗往左上退；石柱在右緣框住她。
+- 主要姿態：肩膀靠著石柱站在一道陽光裡，把臉轉向光，眼簾半垂，帶著安靜、私密的淺笑。一個姿態，不走路、不看鏡頭。
+- 服裝：黑色細針織方領中長洋裝（腰身柔和收合）、駝色羊毛長大衣披在肩上（不穿袖）、小金色圈耳環、黑色尖頭皮革踝靴；低髮髻（人設）。
+- 光色：主光是左側低角度的秋陽硬光，穿過拱洞成為一道暖色光帶落在她的臉、肩與大衣上；被陽光照亮的砂岩地面把一點暖光反回陰影；迴廊其餘部分是冷色陰影與地上的亮條紋。色彩：黑、駝、砂岩金、酒紅棕髮色。
+- 建議製作路徑：Soul 2＋Rin 既有 Soul，純文字一次生成（不加參考圖）。膝上近景、人物占畫面約九成，主要難點是光影而不是人景比例；Soul 對身分最可靠。
+- 設定：soul_2、Rin Soul、2k、3:4、count 1、不傳 style、不用 unlim
+- 費用參考：0.12（同上）
+- prompt 來源：CAL_23 replan-r6-v3（主管 R6 v3 PASS）逐字，只刪最後一句的「finished like a page from a high-end photobook」（R8 白邊的待查假設；R10 不寫這句時沒有白邊，但這不是證實）；349 個英文詞，sha256 `fa6975f39db1eb51006004d278910b57e800243acebdfe4945e47a33723e3eeb`
+
+```
+A 25-year-old adult Japanese woman with her natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, long deep wine-red brown hair pinned in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a full chest, a slim waist and long legs. She wears a black fine-knit square-neck midi dress with a softly fitted waist, a camel wool coat draped over her shoulders with her arms out of the sleeves, small gold hoop earrings and black pointed leather ankle boots. Setting: an old sandstone arcade beside a courtyard on an autumn late afternoon, a row of round arches receding into the distance, a few yellow leaves on the smooth stone floor, plain walls with no signs, clean and calm, nobody else around. Moment: she leans one shoulder against a sandstone column, standing in a band of low sunlight that falls between two arches, and turns her face into the light with her eyes half-lowered and a calm, private half-smile. Shot: from a little above her head to just below her knees, the column beside her and the arcade receding behind her. Camera: vertical 3:4, at her chest height, a 50mm lens from about 2 metres, natural perspective with straight vertical lines. Composition: she stands right of centre against the column at the right edge, the receding arches and their alternating bands of light and shadow filling the left side. Light: hard low autumn sun from the left comes through the arch and lays a warm band of light across her face, shoulders and the camel coat, while her lower body and the arcade behind her fall into cool shade with bright stripes on the floor; the sunlit stone floor bounces a little warm light back into the shadows; black, camel, sandstone gold and the wine-red of her hair. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.
+```
+
+- 尚未驗證的風險：
+  - 變成普通大衣旅遊照：大衣披肩不穿袖、黑色針織、膝上景別、臉迎光半閉眼；光帶要落在臉上。
+  - 硬光讓眼窩全黑：寫明光帶落在臉上、地面反光補進陰影。
+  - 拱與柱的數量、透視扭曲：寫明一排圓拱、垂直線保持垂直。
+  - 再次出現髒亂或工業物件：寫明乾淨、素淨，不放繩索、木樁等道具。
+  - R5 第一批同一位已被 Penny 退回；這版是重寫後的新方案，還沒有生成過
+  - Soul 純文字可能又出現招牌字、雜物或相紙邊框
+
+## H-yerin-han（橫式，5 月）
+
+- 畫面構想：五月清晨的球道邊：她把一支球桿立在草上、雙手疊在握把上站定，望向下一洞；從她前方斜照的晨光把草上的露水和她的臉一起點亮。
+- 人物與場景關係：球道與一排新綠樹林是空間，人物在左三分之一、身體朝右，右側留出球道的開闊。
+- 主要姿態：球桿桿頭立在她面前的草上，雙手輕疊在握把上（約在臀部高度），重心在一腳，望向球道遠端，帶著輕鬆、篤定的笑。一個姿態：扶桿站定（不走路、不碰帽、不回頭）。
+- 服裝：白色無袖貼身針織高爾夫 polo、淺天空藍百褶高爾夫裙、白色高爾夫鞋、素面白色球帽、小金色耳針；一支球桿。
+- 光色：主光是畫面右側、她視線前方的低角度晨光（側前光），清爽、有方向，照亮她的臉與身體正面，草上露水發亮、影子往她身後拉長；可加柔和補光讓帽簷下的眼睛清楚（R6-3）。色彩：新綠、白、淺天空藍。
+- 建議製作路徑：暫緩：全身遠景，等 Somi 的身分編輯方法有結果再定。全身人物在球道左三分之一，人景比例與背景整理是 R5–R11 反覆失敗的同類問題；純文字 Soul 控不住構圖，Soul＋參考圖在 R11 失敗，遮罩換臉尚未實測。
+- 設定：若日後採用「Nano Banana Pro 構圖底稿＋身分編輯」：底稿 nano_banana_pro 2k 16:9，身分步驟方法待定
+- 費用參考：底稿 2＋身分步驟（遮罩編輯約 2，或 Soul 0.12；方法未定）
+- prompt 來源：CAL_23 replan-r6-v3（主管 R6 v3 PASS）逐字，只刪最後一句的「finished like a page from a high-end photobook」（R8 白邊的待查假設；R10 不寫這句時沒有白邊，但這不是證實）；346 個英文詞，sha256 `5bb8c2c7aa6ffc84a8761b44be9581e2c0a49e5253a6374ac43ccce5e7ba3ca9`
+
+```
+A 26-year-old adult Korean woman with her natural fair skin tone, bright defined features and a wide open smile, light sun-protective makeup and a bright lip, long flax-brown hair with golden face-framing highlights in a low ponytail pulled through the back of a plain white cap. Curvy athletic figure with soft feminine lines, 170 cm tall, bust 90 cm, waist 60 cm, hips 93 cm, E cup, long legs and a slim waist. She wears a white sleeveless fitted knit golf polo, a pale sky-blue pleated golf skirt, white golf shoes and small gold studs. Setting: the edge of a fairway on a clear late-spring morning, bright green grass with dew still on it, fully leafed late-spring trees along the far side, open sky, no golf carts, no flags or signs with text, nobody else around. Moment: she stands on the grass with the head of a single golf club resting on the ground in front of her and both hands stacked lightly on top of its grip at hip height, her weight on one leg, looking down the fairway toward the next hole with an easy, confident smile. Shot: full-length, from a little above her cap to below her shoes, with plenty of fairway and trees around her. Camera: horizontal 16:9, at her waist height, an 85mm lens from about 12 metres, natural perspective. Composition: she stands on the left third of the frame with her body angled to the right, the fairway opening out ahead of her on the right, the line of trees across the upper middle, clear space above her cap and below her shoes. Light: the low morning sun from the right of the frame, ahead of her, lights her face and the front of her body from the side, crisp and directional, with long soft shadows stretching behind her across the grass and sparkles of dew; a soft fill keeps her eyes clear under the cap brim; fresh green, white and pale sky blue. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.
+```
+
+- 尚未驗證的風險：
+  - 球桿長度與握法錯誤：寫明一支球桿、桿頭在草上、握把在臀部高度、雙手疊在握把上。
+  - 又出現球車或其他大型車輛：寫明 no golf carts。
+  - 樹沒有葉子、季節不對：寫明 fully leafed late-spring trees。
+  - 帽簷陰影遮眼：晨光在她前方低角度斜照進帽簷下，可加補光；生成後以原圖 100% 看眼睛。
+  - R5 第一批同一位已被 Penny 退回；這版還沒有生成過
+  - 純文字 Soul 控不住遠景人景比例（Somi R7、R8 已見）
+
+## H-jia-seo（橫式，9 月）
+
+- 畫面構想：初秋，太陽剛落下的湖：天空和湖面同時發出粉紫色的光，淺色木平台從右下斜伸進湖裡，她坐在盡頭望著湖，米白開襟從一邊肩膀滑下。
+- 人物與場景關係：平台斜線把視線送到她身上；她坐在右三分之一、平台盡頭；對岸線橫在上三分之一、在她頭頂上方留出空隙；左半是發光的水面。人不大，但所有引導線都收到她身上。
+- 主要姿態：雙腿側收坐在平台盡頭的木板上，一手撐在身旁木板，望向湖面，冷靜、若有所思的淺笑；臉是三分之二側臉、朝向相機一側。一個姿態，不回頭。
+- 服裝：深酒紅細針織長洋裝（及踝）、柔軟的米白開襟從一邊肩膀滑下、棕色皮革平底涼鞋、小銀圈耳環。長裙坐下時順著木板鋪開，和平台斜線一起引導視線。
+- 光色：主光是日落後的天光：太陽剛落在畫面左側的對岸後方，那一側的天空最亮；她面向左側的湖面，臉由這片亮的天空柔和照亮，湖面與她的頭髮帶一點粉色反光；對岸樹林比天空暗。可加柔和補光保持臉部清楚（R6-3）。色彩：粉、淡紫、湖灰藍、米白、深酒紅。
+- 建議製作路徑：暫緩：人物最小的遠景坐姿，等身分編輯方法有結果再定。人物只占畫面約四成五高、臉更小，構圖與身分都最難；profile 沒有記錄 Element（Soul 有），若走 Element 路線要先確認。
+- 設定：同 Yerin；另需確認 Jia 的 Element
+- 費用參考：底稿 2＋身分步驟（方法未定）
+- prompt 來源：CAL_23 replan-r6-v3（主管 R6 v3 PASS）逐字，只刪最後一句的「finished like a page from a high-end photobook」（R8 白邊的待查假設；R10 不寫這句時沒有白邊，但這不是證實）；377 個英文詞，sha256 `1669f5e427317092d40689aa51d7e2a33dcfecdba66f3adc1d70896093d0c2f8`
+
+```
+A 22-year-old adult Korean woman with her natural fair, cool-toned skin, a small face, straight shoulders and long narrow upturned eyes, dewy no-makeup makeup with a soft brown liner and gradient lips, long cool blue-black hair tucked behind one ear so its mint-green inner layer shows. Slim, long-legged figure with soft feminine curves, 168 cm tall, bust 85 cm, waist 58 cm, hips 90 cm, C cup, a slim waist and long legs. She wears a deep wine-red fine-knit long dress that falls to her ankles, a soft cream cardigan slipping off one shoulder, flat brown leather sandals and small silver hoop earrings. Setting: a quiet lake in early autumn just after sunset, a pale wooden deck running out over the still water, the far shore lined with trees just turning yellow, the sky and the lake glowing soft pink and lavender with the afterglow, no bench, nobody else around. Moment: she sits at the far end of the deck with her legs folded to one side and her long skirt spreading over the boards, one hand resting on the boards beside her, gazing out across the lake with a calm, thoughtful half-smile, her face in three-quarter profile toward the camera. Shot: seated full-length, her seated figure filling a little under half the frame height, with the deck, the lake and the far shore around her. Camera: horizontal 16:9, from a little above her seated head height, angled slightly down, a 50mm lens from about 5 metres, natural perspective. Composition: the deck runs in diagonally from the lower right corner and ends on the right third, where she sits, her face and figure clear and recognisable; the far shore lies across the upper third, above her head and never crossing it; the glowing water fills the left side. Light: the sun has just set beyond the far shore on the left of the frame, and the brightest part of the afterglow sky there lights her face softly as she looks toward it, with a faint pink sheen on the water and on her hair; the far shore is darker against the sky; soft pink, lavender, lake blue-grey, cream and deep wine. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.
+```
+
+- 尚未驗證的風險：
+  - 人太小、臉看不清：臉朝向亮的天空、三分之二側臉；成品人物約 45–52 mm 高（頭部尺寸見 §6 核算）；生成後以套框確認辨識。
+  - 對岸線切過頭部：相機略高於她的頭、微微向下；設計意圖是對岸線落在上三分之一、頭頂上方。實際位置受對岸距離與地形影響，§6 只列估計，不是幾何驗證；生成後實圖確認。
+  - 又變成回頭看鏡頭：寫明看湖面、三分之二側臉。
+  - 長裙與開襟顯得厚重：寫明細針織、開襟柔軟滑落，長裙順著木板鋪開。
+  - R5 第一批同一位已被 Penny 退回；這版還沒有生成過
+  - 純文字 Soul 控不住遠景人景比例（Somi R7、R8 已見）
+
+## 下一個小批次建議
+
+- 名單：V-tammy-chou、V-rin-ayase
+- 理由：兩位都是中近景，身分走已有證據的 Soul 純文字路線，費用低；Yerin、Jia 是遠景，等身分編輯方法有結果再排。不假定 Somi 的方法適用所有角色。
+- 費用：每位 1 次請求 0.12，合計 0.24 credits（送出前重新唯讀報價）
+- 另選：若 Penny 接受遮罩黑白定義的風險並授權 Somi 遮罩編輯：另加 2 credits，合計 2.24

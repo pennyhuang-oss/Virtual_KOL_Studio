@@ -1,0 +1,33 @@
+{
+ "note": "M-4 R13 Somi 遮罩編輯：前置條件核對結果（未送出）。不含 ID。",
+ "date": "2026-10-27",
+ "checks": [
+  {
+   "k": "遮罩是否覆蓋預定編輯區",
+   "result": "是",
+   "evidence": "review/calendar/m4_r12/V-somi-oh_m4r12_edit_mask_1792x2400.png（sha256 d0586a6d…1c94fae，與 R12 相同）；示意圖 V-somi-oh_m4r12_edit_area.jpg：橢圓涵蓋臉、瀏海、髮際線與上頸，邊界在頭髮與皮膚內、不碰背景。"
+  },
+  {
+   "k": "Element 佔位符是否符合工具要求",
+   "result": "是",
+   "evidence": "工具說明：在 params.prompt 內嵌 <<<element_id>>>，不要放進 medias；測試包 prompt 用的正是這個寫法。"
+  },
+  {
+   "k": "遮罩白黑定義",
+   "result": "無法確認 → 停止",
+   "evidence": "已查：nano_banana_2 schema（mask role、is_inpaint 說明「Whether to restrict the edit to the supplied mask」）、generate_image／media_upload 工具說明、Higgsfield 官方 image-editing 頁（只寫用筆刷塗要改的區域）、官方說明 Nano Banana 頁、Higgsfield 打包工作流程檔（thumbnail-generation、product-photoshoot refinement-pass，都沒有遮罩格式）。只有第三方文章與業界慣例寫白色＝編輯；沒有 Higgsfield 官方定義。"
+  },
+  {
+   "k": "上傳是否另產生費用",
+   "result": "未確認",
+   "evidence": "media_upload 工具說明沒有寫費用；repo 以往多次上傳的紀錄沒有對應的扣款列（扣款只出現在生成與訓練），但沒有官方說明。"
+  },
+  {
+   "k": "完整輸入唯讀報價",
+   "result": "未做",
+   "evidence": "遮罩語義未確認，依停止規則沒有上傳遮罩，所以無法用含遮罩的完整輸入報價。R12 不含遮罩的唯讀報價是 2。"
+  }
+ ],
+ "decision": "停止：沒有上傳、沒有送出、沒有扣款；不改用整張生成或其他模型。",
+ "for_penny": "若 Penny 接受「白色＝編輯」這個未經官方確認的慣例風險，可另行授權：上傳 1 個遮罩檔、含遮罩重新唯讀報價 ≤2 才送 1 次。若平台實際定義相反，結果會是背景與身體被重畫、臉不變；這可以從結果直接看出，屬於失敗，2 credits 會白花。"
+}
