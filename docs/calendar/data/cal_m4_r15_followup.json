@@ -1,0 +1,55 @@
+{
+ "note": "M-4 R15：R14 主管覆核後的有限收尾。不含 ID。本輪生成 0、付費 0、上傳 0、部署 0。",
+ "date": "2026-10-27",
+ "supervisor": "docs/calendar/data/cal_m4_supervisor_r14.json",
+ "framing": {
+  "note": "依主管要求把四件事分開記錄；3% 線只是本案工作參考，不是廠商裁切線，越線本身不算失敗",
+  "V-tammy-chou": {
+   "original_cut": "是：著地的那隻腳（畫面左側）腳掌與鞋底被原圖下緣切掉，只看得到腳踝與鞋帶；交疊抬起的那隻腳完整，腳尖離下緣只有約 10–20 px",
+   "tight_below_feet": "是：腳下沒有地板留白（企劃寫腳跟下方留一點地板）",
+   "working_line": "越過下緣 3% 工作線（約 61 px）",
+   "frame_result": "原圖 3:4，直接放進 120×160 mm 框、不另裁切；套框後看到的截斷就是原圖本身的截斷，套框沒有再切掉東西"
+  },
+  "V-rin-ayase": {
+   "original_cut": "是：畫面左側那隻靴子的鞋頭被原圖下緣切掉；另一隻完整，鞋尖離下緣約 29 px（約 1.4%）",
+   "tight_below_feet": "是：腳下幾乎沒有地面留白",
+   "working_line": "越過下緣 3% 工作線",
+   "frame_result": "同上，3:4 直接放入、不另裁切",
+   "plan_deviation": "景別拍成全身，比企劃的膝上寬；這是 prompt 偏離，和照片品質分開看"
+  }
+ },
+ "claude_self_check_ref": "cal_m4_r14_trial.json self_check（R14 Claude 自查原文保留不改）",
+ "rin_prompt_v2": {
+  "path": "docs/calendar/data/cal_m4_r15_followup.json rin_prompt_v2.text",
+  "from": {
+   "path": "docs/calendar/data/cal_m4_r13_cards.json",
+   "commit": "bd84cf97a7310afa672d506895e09c8d73220408",
+   "sha256": "fa6975f39db1eb51006004d278910b57e800243acebdfe4945e47a33723e3eeb",
+   "words": 349
+  },
+  "text": "Late autumn afternoon in an old sandstone arcade beside a courtyard. A 25-year-old adult Japanese woman stands in a band of low, hard sunlight between two arches and turns her face toward the sun on the left, eyes softly half-closed, with a calm, private half-smile; her body is angled toward the light, one shoulder resting against a sandstone column, one hand loosely holding the edge of her coat at her chest. She has natural fair, cool-toned skin, an oval face with long narrow eyes and a straight nose, a clean base with precise eyeliner and a muted rose-red lip, and long deep wine-red brown hair in a loose, soft low chignon with a few strands framing her face. Curvy figure, 166 cm tall, bust 92 cm, waist 58 cm, hips 90 cm, F cup, a slim waist. She wears a black fine-knit square-neck midi dress, a camel wool coat draped over her shoulders with her arms out of the sleeves, and small gold hoop earrings. Light: the sun lays a warm band across her face, neck and shoulders, so her face is the brightest part of the picture, with crisp natural shadows; the sunlit floor bounces a little warm light into the shade. Setting: plain walls with no signs, a few yellow leaves, nobody else around; on the left behind her, a row of round arches recedes into cool shade striped with sunlight. Shot: knee-up, from a little above her head to just below her knees; her feet are out of the frame. Camera: vertical 3:4, at her chest height, a 50mm lens from about 2 metres, natural perspective with straight vertical lines. Composition: she stands slightly right of centre and fills most of the frame height; the column is only a narrow strip of shaded stone at the right edge, partly cut off by the frame, so it frames her without drawing the eye. Colours: black, camel, sandstone gold and the wine-red of her hair. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.",
+  "sha256": "f178e919d7015b082bf1e1d7de272e374974f093fd98808dba2104b0050cf898",
+  "words": 342,
+  "changes": [
+   "迎光的神情與姿態移到最前面：站在拱間的低角度硬光裡、臉轉向左側的太陽、眼睛半閉、安靜淺笑、身體朝光斜站",
+   "雙臂不再垂下：只加一個簡單手勢——一手輕抓胸前的大衣邊（不另加複雜動作）",
+   "光要落在她身上：寫明暖光帶落在臉、頸、肩，臉是全畫面最亮的地方",
+   "景別明確定為膝上：從頭頂略上方到膝蓋下方，腳不入鏡；刪掉踝靴的描述，避免為了拍鞋拉成全身",
+   "柱子改成側邊框景：只在右緣露出一窄條、在柔和陰影裡、部分被畫面切掉，不搶人物",
+   "減少重複：光、拱、柱的重複描述合併；刪掉 long legs、a full chest 等重複身形字（身高三圍與罩杯保留）",
+   "保留：迴廊與庭院、黑色細針織方領中長洋裝、駝色大衣披肩不穿袖、小金圈耳環、低髮髻、秋日硬光從左側來、色彩"
+  ],
+  "not_changed": "其他三位與全套企劃不動；不另加風格句"
+ },
+ "next_test": {
+  "set": "V-rin-ayase",
+  "route": "Soul 2＋Rin 既有 Soul，純文字 1 次（2k、3:4、count 1、不加參考圖、不傳 style、不用 unlim）",
+  "cost_reference": "0.12 credits（R14 同設定唯讀報價與實扣皆 0.12；送出前重新唯讀報價）",
+  "status": "本輪不生成；等 Penny 授權"
+ },
+ "penny_choices": [
+  "Tammy R14：接受，或不接受（主管保留候選）",
+  "Rin：是否授權用修訂版 prompt 再試 1 張（約 0.12）"
+ ],
+ "counts": "不變：月面照片 11 張 1.32 credits；構圖底稿 2 張 4 credits；已接受仍只有 V-Iris"
+}

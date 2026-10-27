@@ -1,0 +1,31 @@
+{
+ "note": "M-4 R14 主管實際看圖覆核（逐字，含 R15 指令全文）。主管結論與 Claude 自查（cal_m4_r14_trial.json self_check）分開保存；Penny 尚未決定。",
+ "task": "TASK-CAL-001／M-4／R15｜R14 主管覆核與有限收尾",
+ "received": "2026-10-27",
+ "source": "主管（ChatGPT）實際看圖覆核意見，經 Penny 轉交",
+ "reviewed": {
+  "result_commit": "cb1db65090dc2ddc767cc45ad8fa23617fdf9377",
+  "record_commit": "7f9f39668b3541fe8cdb2c04dcb893051877104e",
+  "viewed": [
+   "review/calendar/m4_r14/V-tammy-chou_m4r14_view.jpg",
+   "review/calendar/m4_r14/V-tammy-chou_m4r14_frame_V_120x160.jpg",
+   "review/calendar/m4_r14/V-tammy-chou_m4r5_vs_m4r14_compare.jpg",
+   "review/calendar/m4_r14/V-rin-ayase_m4r14_view.jpg",
+   "review/calendar/m4_r14/V-rin-ayase_m4r14_frame_V_120x160.jpg",
+   "review/calendar/m4_r14/V-rin-ayase_m4r5_vs_m4r14_compare.jpg"
+  ]
+ },
+ "conclusion": {
+  "V-tammy-chou": "保留候選，待 Penny 決定，未接受。光色、衣著、場景與人物關係明顯改善，姿態較自然；仍稍端正，燈罩醒目；其中一隻腳被原圖下緣截斷。不要自行重生，也不要把「未完全符合企劃」當成重生理由。",
+  "V-rin-ayase": "REVISE，暫不推薦採用，Penny 未決定。服裝與場景搭配改善，尺度沒有明顯異常；但柱子搶眼、雙臂垂下及正面看鏡頭讓畫面偏僵，光影沒有真正組織人物與場景，寫真吸引力仍不足。"
+ },
+ "rules": [
+  "3% 線是工作參考，不是廠商裁切線；分開記錄原圖截斷、腳下緊迫、工作線與實際套框結果，不得只憑越線判失敗",
+  "prompt 偏離與照片品質分開判斷"
+ ],
+ "status": {
+  "V-tammy-chou": "主管保留候選，待 Penny 決定（未接受）",
+  "V-rin-ayase": "主管建議修改（REVISE），Penny 未決定"
+ },
+ "verbatim": "TASK-CAL-001／M-4／R15｜R14 主管覆核與有限收尾\n\n主管已實際看過固定成果 cb1db65 的兩張顯示版、\n套框及 R5／R14 對照。\n\n一、主管結論\nTammy：保留候選，待 Penny 決定，未接受。\n光色、衣著、場景與人物關係明顯改善，姿態較自然。\n仍稍端正，燈罩醒目；其中一隻腳被原圖下緣截斷。\n不要自行重生，也不要把「未完全符合企劃」當成重生理由。\n\nRin：REVISE，暫不推薦採用，Penny 未決定。\n服裝與場景搭配改善，尺度沒有明顯異常；\n但柱子搶眼、雙臂垂下及正面看鏡頭讓畫面偏僵，\n光影沒有真正組織人物與場景，寫真吸引力仍不足。\n\n3% 線是工作參考，不是廠商裁切線。\n分開記錄原圖截斷、腳下緊迫、工作線與實際套框結果，\n不得只憑越線判失敗。\nprompt 偏離與照片品質也要分開判斷。\n\n二、本輪交付\n直接在回覆顯示 Tammy、Rin 的完整新圖，\n再附前後對照。不要只交檔案路徑。\n讓 Penny 能直接選，不部署網站。\n\nRin 只做一次必要的 prompt 修訂：\n保留迴廊、黑色洋裝、駝色大衣與秋日硬光方向；\n把人物迎光的神情與姿態放在描述前段，\n減少重複描述，明確選定膝上景別，\n避免再次為了完整拍鞋而拉成全身。\n柱子作為側邊框景，避免壓過人物。\n不要增加另一組複雜動作，也不重寫全套企劃。\n\n修訂全文存 repo，回覆只用幾句中文說明改動，\n附路徑與 hash，不貼完整 prompt。\n列出下一次單張測試的費用參考；本輪不生成。\n\n三、紀錄\n主管意見與 Claude 自查分開保存。\nTammy 標為主管保留候選、待 Penny 決定；\nRin 標為主管建議修改、Penny 未決定。\n不增加接受數、不改寫舊紀錄。\n\n只做相關的必要同步與檢查，\n不要再開一輪大型企劃、重跑無關全套檢查。\n\n本輪生成、付費編輯、上傳、部署皆為 0。\n不重試、不改 V-Iris、不啟動其他角色、不合併 main。\n回覆以圖片、結論、待 Penny 選擇為主。"
+}
