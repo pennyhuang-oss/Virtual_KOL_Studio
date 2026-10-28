@@ -1,0 +1,36 @@
+{
+ "note": "M-4 R22 授權摘要（Penny 送出 R22 指令即授權；本檔不含 Soul ID、任務 ID）",
+ "round": "M-4 R22",
+ "written_on": "2026-10-28",
+ "head_at_start": "f7c63da",
+ "owner_page_version": "537fa19",
+ "generation": {
+  "sets": [
+   "H-mia-huang（新夏日場景重做）",
+   "H-somi-oh（改善候選，不取代已選 R21 B）",
+   "V-rainie-hsu（視線與腿長修正；身分來源檢查後未列阻塞）",
+   "V-somi-oh（冬季雪景，兩種景別）"
+  ],
+  "per_set_max": 2,
+  "max_images": 8,
+  "cap_each": 0.12,
+  "cap_total": 0.96,
+  "retry": "不自動重試、不補生、不訓練、不新建 Soul、不換人"
+ },
+ "local": {
+  "items": [
+   "H-luna-tanaka R21 A（提亮、適度飽和、背光臉局部提亮）",
+   "V-miu-shiraishi R20 B（從未修改原圖重做；保留 R21 色調方向、恢復柔和質感）"
+  ],
+  "how": "本機修正各 1 個版本，另存衍生檔、不覆蓋原圖；不使用付費修圖"
+ },
+ "settings": "各用本人既有 Soul、soul_2、2k；橫 16:9、直 3:4；無參考圖、不傳 style、不用 unlim",
+ "site": "更新既有 cal2027-decision（原網址）；不改存取設定、不新增服務",
+ "not_authorized": [
+  "合併 main",
+  "聯絡廠商",
+  "付費修圖",
+  "訓練或新建 Soul",
+  "自動重試或補生"
+ ]
+}

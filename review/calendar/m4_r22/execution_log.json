@@ -1,0 +1,282 @@
+{
+ "note": "M-4 R22 私有執行紀錄（含 Soul ID 與任務 ID；只留在 repo，不公開）。",
+ "events": [
+  {
+   "t": "2026-10-28T06:49:59Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r22.json",
+   "items_max": 8,
+   "budget_each": 0.12,
+   "budget_total": 0.96
+  },
+  {
+   "t": "2026-10-28T06:49:59Z",
+   "step": "souls",
+   "checked": "3 位 Soul 皆 status ready（show_characters status）；V-Somi 用 somi-oh 同一 Soul",
+   "map": {
+    "mia-huang": "e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4",
+    "somi-oh": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+    "rainie-hsu": "a4a000fe-fd96-4c36-97ff-0df9358a9b47"
+   }
+  },
+  {
+   "t": "2026-10-28T06:49:59Z",
+   "step": "quote（get_cost，唯讀）",
+   "samples": [
+    {
+     "set": "H-mia-huang",
+     "aspect": "16:9",
+     "credits_exact": 0.12
+    },
+    {
+     "set": "V-rainie-hsu",
+     "aspect": "3:4",
+     "credits_exact": 0.12
+    }
+   ],
+   "estimate": {
+    "items": 8,
+    "each": 0.12,
+    "total": 0.96,
+    "within_cap": true
+   },
+   "balance": 1261.39
+  },
+  {
+   "t": "2026-10-28T06:49:59Z",
+   "step": "tx_boundary",
+   "newest_row": "2026-10-28T05:55:50.088648Z（R21 第 3 批 Soul V2 列）；R21 之後無新列，餘額 1261.39 與 R21 結束時相同；本案只看之後送出時段的 Soul V2 列"
+  },
+  {
+   "t": "2026-10-28T06:49:59Z",
+   "step": "ledger",
+   "items": [
+    {
+     "index": 0,
+     "set": "H-mia-huang",
+     "v": "A",
+     "soul_id": "e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4",
+     "aspect": "16:9",
+     "prompt_sha256": "d6e9fce05b807b422de8cd511e46a2d831ff1f33e6522d8ea780f719ae994be3",
+     "job_id": "d55e8151-a14b-400c-a816-2e408db1e5ac",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r22_A.png",
+     "sha256": "f3e56ef6b850546abfa3cce7d7cb6af519183be5b3beddc9bae6f477028181d3",
+     "size": [
+      2048,
+      1152
+     ],
+     "bytes": 2764962,
+     "downloaded_at": "2026-10-28T06:51:51Z"
+    },
+    {
+     "index": 1,
+     "set": "H-mia-huang",
+     "v": "B",
+     "soul_id": "e2f562ba-2c3f-4e50-b9be-f8854dcb6ab4",
+     "aspect": "16:9",
+     "prompt_sha256": "3485dcb06b8767eed1c6b49458c5539fb77e7e1fe96e3a8131c856c340ce94c1",
+     "job_id": "3d545061-8fca-4509-9595-f0fc52ac6db6",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r22_B.png",
+     "sha256": "ebee8defe53b4c6898fa412dd0ef950a7584f893e3af7481fddfb29c26a5911f",
+     "size": [
+      2048,
+      1152
+     ],
+     "bytes": 2833137,
+     "downloaded_at": "2026-10-28T06:51:53Z"
+    },
+    {
+     "index": 2,
+     "set": "H-somi-oh",
+     "v": "A",
+     "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+     "aspect": "16:9",
+     "prompt_sha256": "a026a5ad9dd65abfea83d5efb32e38920c25655d53525a55f0a533654ddd7458",
+     "job_id": "1a8cd7d6-c26d-4998-be35-f8ac20e7cccd",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_A.png",
+     "sha256": "3aacdb4da101b8519940d032afc85571ac10c46e1e55daa9f857d4afa82c0337",
+     "size": [
+      2048,
+      1152
+     ],
+     "bytes": 3853160,
+     "downloaded_at": "2026-10-28T06:51:54Z"
+    },
+    {
+     "index": 3,
+     "set": "H-somi-oh",
+     "v": "B",
+     "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+     "aspect": "16:9",
+     "prompt_sha256": "8e77a4e99ad25a539cd76366b43c4447f10340d0289278abfac387fd71fa27c5",
+     "job_id": "d6e56a1b-6036-4888-bb4b-a56a3ded80b4",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_B.png",
+     "sha256": "9b792b3e550ddc5221f1236b1fc3cf3b317baed0ad7cad73e1c49c637fdf843a",
+     "size": [
+      2048,
+      1152
+     ],
+     "bytes": 4322508,
+     "downloaded_at": "2026-10-28T06:51:55Z"
+    },
+    {
+     "index": 4,
+     "set": "V-rainie-hsu",
+     "v": "A",
+     "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+     "aspect": "3:4",
+     "prompt_sha256": "21d5d71de9a45fdc0968def73eff903bc2ce1d4b7dbcc1b04ed01188e323e22e",
+     "job_id": "2b46adc5-32fd-4d32-b86d-1009fa04a489",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_A.png",
+     "sha256": "ceab0c3bb8ef18c13fcae704563413cb7fb540b996a7bb78b8160ea02717f33a",
+     "size": [
+      1536,
+      2048
+     ],
+     "bytes": 3617466,
+     "downloaded_at": "2026-10-28T06:51:56Z"
+    },
+    {
+     "index": 5,
+     "set": "V-rainie-hsu",
+     "v": "B",
+     "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+     "aspect": "3:4",
+     "prompt_sha256": "2cda4ebd1e9a459ef2af78e71d18d5c661b3c06247422c459fd922edf2dc7552",
+     "job_id": "ed545720-fc9a-48b4-b66f-ebbe368b8ef5",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_B.png",
+     "sha256": "e62f2eef4d52b5bf60ad7a2e3ac5741b0df11849ff3eedbe8c3c7d3ac81ab0c3",
+     "size": [
+      1536,
+      2048
+     ],
+     "bytes": 3660175,
+     "downloaded_at": "2026-10-28T06:51:57Z"
+    },
+    {
+     "index": 6,
+     "set": "V-somi-oh",
+     "v": "A",
+     "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+     "aspect": "3:4",
+     "prompt_sha256": "3e7095c8eca9d3e0309f5caeca2fece40c278bd1799ebef840407628f2a0752c",
+     "job_id": "e904b886-9003-49b8-bd35-e39bbc10aaae",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r22_A.png",
+     "sha256": "2088ca64679a2ec0c9135b176347c0a46ad4dd3fa5eaf1c5bbc09e7f39415862",
+     "size": [
+      1536,
+      2048
+     ],
+     "bytes": 3873583,
+     "downloaded_at": "2026-10-28T06:51:59Z"
+    },
+    {
+     "index": 7,
+     "set": "V-somi-oh",
+     "v": "B",
+     "soul_id": "c7915888-e566-4c9d-bc26-4bf40ab35c4c",
+     "aspect": "3:4",
+     "prompt_sha256": "d98613e0153358e5013416a9e6ecd81a43e5ad08977391239cc182c5b91ca8d7",
+     "job_id": "8d5baea8-caa2-4914-aa05-a22fa99330a8",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r22_B.png",
+     "sha256": "c07a71d21cb6b9adbda1221006b80f1f7a783bad4c7286a93ae4a300508e8150",
+     "size": [
+      1536,
+      2048
+     ],
+     "bytes": 4060528,
+     "downloaded_at": "2026-10-28T06:52:00Z"
+    }
+   ]
+  },
+  {
+   "t": "2026-10-28T06:49:59Z",
+   "step": "intent",
+   "batch": 1,
+   "indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "tool": "generate_image_batch",
+   "note": "平台同時進行上限 8 件，一批送出；送出前保存意圖，結果不明查原任務、不重送"
+  },
+  {
+   "t": "2026-10-28T06:51:09Z",
+   "step": "submit_result",
+   "batch": 1,
+   "submitted": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "rejected_no_job": []
+  },
+  {
+   "t": "2026-10-28T06:52:12Z",
+   "step": "job_result",
+   "batch": 1,
+   "terminal": {
+    "completed": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   }
+  },
+  {
+   "t": "2026-10-28T06:52:12Z",
+   "step": "charges",
+   "method": "依時窗推定：只看 tx_boundary 之後、本批送出時段的 Higgsfield Soul V2 列；他人其他模型列不檢視、不歸入",
+   "spend_rows": 8,
+   "each": -0.12,
+   "spend_total": -0.96,
+   "refund_rows": 0,
+   "net": -0.96,
+   "groups_utc": [
+    "06:51:02–06:51:04 ×8"
+   ],
+   "balance_before": 1261.39,
+   "balance_after": 1260.43,
+   "within_budget": true
+  },
+  {
+   "t": "2026-10-28T06:52:12Z",
+   "step": "downloads",
+   "count": 8,
+   "missing": [],
+   "check": "尺寸（16:9＝2048×1152、3:4＝1536×2048）與 PNG hf-job-id 文字區塊＝清冊任務 ID，8/8 相符"
+  }
+ ]
+}

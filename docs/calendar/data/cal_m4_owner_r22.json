@@ -1,0 +1,129 @@
+{
+ "note": "M-4 R22 Owner 決定紀錄（依 R22 指令；Penny 在選片頁版本 537fa19 的回饋）。來源接受與衍生修改版接受分開記錄；Owner 備註逐字保存，不改寫成執行者判斷。R20 頁面原文另存在 cal_m4_owner_r21.json 的 page_copy，與本輪決定分開。",
+ "round": "M-4 R22",
+ "written_on": "2026-10-28",
+ "page_version": "537fa19",
+ "page_copy": {
+  "status": "R21 選片頁（537fa19）「複製全部回饋」原文未隨 R22 指令交來；本紀錄依 R22 指令第一節整理，不以摘要冒充頁面原文",
+  "text": null
+ },
+ "final_new": [
+  {
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R21-1",
+   "version": "R21 改善候選 1",
+   "kind": "source",
+   "note": "接受原生成圖"
+  },
+  {
+   "set": "H-miu-shiraishi",
+   "img_id": "H-miu-shiraishi-R21-A",
+   "version": "R21 A",
+   "kind": "source",
+   "note": "接受原生成圖"
+  },
+  {
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R21-A",
+   "version": "R21 A",
+   "kind": "source",
+   "note": "接受原生成圖"
+  },
+  {
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R21-A",
+   "version": "R21 A",
+   "kind": "source",
+   "note": "接受原生成圖"
+  },
+  {
+   "set": "H-coco-wu",
+   "img_id": "H-coco-wu-R20-A-G21",
+   "version": "R20 A 的 R21 調色版",
+   "kind": "derived",
+   "note": "接受的是衍生調色版本身（來源 R20 版另記為已選定來源）"
+  },
+  {
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R21-A",
+   "version": "R21 A",
+   "kind": "source",
+   "note": "接受原生成圖"
+  },
+  {
+   "set": "V-luna-tanaka",
+   "img_id": "V-luna-tanaka-R20-B-G21",
+   "version": "R20 B 的 R21 調色版",
+   "kind": "derived",
+   "note": "接受的是衍生調色版本身（來源 R20 版另記為已選定來源）"
+  },
+  {
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R21-A",
+   "version": "R21 A",
+   "kind": "source",
+   "note": "接受原生成圖"
+  }
+ ],
+ "final_earlier": [
+  "H-yuna-kim",
+  "H-iris-chen",
+  "H-jia-seo",
+  "H-rainie-hsu",
+  "V-mia-huang",
+  "V-coco-wu",
+  "V-yerin-han",
+  "V-iris-chen",
+  "V-tammy-chou",
+  "V-rin-ayase"
+ ],
+ "final_total": 18,
+ "selected_source_edit_pending": [
+  {
+   "set": "H-luna-tanaka",
+   "source_img_id": "H-luna-tanaka-R21-A",
+   "source_accepted": true,
+   "derived_accepted": false,
+   "edit": "本輪本機調色修正版待 Penny 確認"
+  },
+  {
+   "set": "H-somi-oh",
+   "source_img_id": "H-somi-oh-R21-B",
+   "source_accepted": true,
+   "derived_accepted": false,
+   "edit": "本輪 2 張自然抓拍改善候選，不自動替換 R21 B"
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "source_img_id": "V-miu-shiraishi-R20-B",
+   "source_accepted": true,
+   "derived_accepted": false,
+   "edit": "R21 調色版退回（太銳化）；本輪從未修改的 R20 B 重做修正版待 Penny 確認"
+  }
+ ],
+ "pending": [
+  "H-mia-huang",
+  "V-rainie-hsu",
+  "V-somi-oh"
+ ],
+ "counts": {
+  "final": 18,
+  "edit_pending": 3,
+  "pending": 3,
+  "total": 24
+ },
+ "owner_notes_verbatim": {
+  "H-mia-huang": "這組還是一樣啊，背景太假了，不如重新設定背景",
+  "H-luna-tanaka": "明亮度跟飽和度都要提升，調色要更好看一點，整體畫面太暗淡了，尤其是人臉背光很黑，要更明亮一點",
+  "H-somi-oh": "這張的背景比較自然，色調也很好，但是姿勢太做作了，一點都不自然，在這種大自然環境，就用抓拍好看的動作吧",
+  "V-miu-shiraishi": "這個色調還行，但是變得有點太銳化了，不像原版柔和了",
+  "V-rainie-hsu": "還是一樣啊，眼睛到底是有什麼問題？是脫窗嗎？眼睛還是鬥雞眼啊，腿還是很短啊"
+ },
+ "instruction_verbatim": "TASK-CAL-001／M-4／R22｜剩餘項目集中修正與 Railway 更新\n\nPenny 送出本指令即授權：\nH-Mia、H-Somi、V-Rainie、V-Somi 各最多 2 張，\n共最多 8 張，每張上限 0.12、總上限 0.96 credits。\n另作 H-Luna、V-Miu 本機調色修正，不使用付費編輯。\n不自動重試、不額外補生、不訓練。\n\n一、Owner 決定與進度\n依頁面版本 537fa19 的回饋：\n定案：\nH-Rin R21-1、H-Miu R21-A、H-Tammy R21-A、\nH-Yerin R21-A、H-Coco R20-A-G21、\nV-Jia R21-A、V-Luna R20-B-G21、V-Yuna R21-A。\n連同既有 10 套，共 18 套定案。\n\n選定來源、修改待確認：\nH-Luna R21-A、H-Somi R21-B、V-Miu R20-B。\n另外待處理：\nH-Mia、V-Rainie、V-Somi。\n24 套＝18 定案＋3 修改待確認＋3 待選定。\n來源接受與衍生修改版接受分開記錄。\n\n以下 Owner 備註為原話，不改寫成執行者判斷：\nH-Mia：\n「這組還是一樣啊，背景太假了，不如重新設定背景」\nH-Luna：\n「明亮度跟飽和度都要提升，調色要更好看一點，整體畫面太暗淡了，尤其是人臉背光很黑，要更明亮一點」\nH-Somi：\n「這張的背景比較自然，色調也很好，但是姿勢太做作了，一點都不自然，在這種大自然環境，就用抓拍好看的動作吧」\nV-Miu：\n「這個色調還行，但是變得有點太銳化了，不像原版柔和了」\nV-Rainie：\n「還是一樣啊，眼睛到底是有什麼問題？是脫窗嗎？眼睛還是鬥雞眼啊，腿還是很短啊」\n\n二、本機處理\nH-Luna：\n從 R21 A 原圖另存調色版。\n提高整體明亮度與適度飽和度，\n局部提亮背光臉部，保留自然明暗及膚色，\n避免整張提亮後背景過曝或臉像貼上去。\n人物、動作、服裝與場景不變。\n\nV-Miu：\n從未修改的 R20 B 原圖重新製作。\n保留 Owner 認可的 R21 色調方向，\n恢復原圖柔和質感。\n先檢查 R21 處理、縮圖與網站顯示是否增加銳利感；\n不預設一定是某個參數造成。\n不加銳化、清晰度或強局部對比，\n不以整張模糊掩蓋問題，也不抹掉臉部細節。\n原尺寸與網站顯示尺寸都並排檢查。\n各交一個修正版，不覆蓋原圖。\n\n三、生成候選\nH-Mia：\n捨棄反覆失敗的舊背景配置，\n重新設定可信的夏日場景。\n不要再用相似假布景換句話重生。\n先處理地點、光源、人物接觸及景深的一致性，\n再安排自然有吸引力的動作。\n不改角色與月份；必要服裝調整需記錄理由。\n兩張採同一新設計，變化一項主要安排。\n\nH-Somi：\nR21 B 是 Owner 選定基準，保留。\n延續芒草原、服裝與已認可的色調，\n改成身體放鬆、動作連貫的自然抓拍瞬間。\n避免為展示身材而扭腰、插腰或刻意抬腳。\n不要靠增加多個動作來表達自然。\n新圖為改善候選，不自動替換 B。\n\nV-Rainie：\n先實際檢查 identity_master、既有訓練參考，\n以及 R20／R21 原尺寸臉部：\n分清楚視線方向、眼球位置、臉部角度與透視，\n記錄問題是否在基準中已存在，不猜測成因。\n\n不要再次只寫「雙眼看鏡頭」就送出。\n調整為能清楚判讀自然視線的臉部角度，\n避免瞳孔異常內聚；\n以合理相機高度、距離及腿部姿態呈現長腿，\n不靠極端仰拍、廣角拉伸或縮小頭部。\n保留既有角色與月份。\n\n若現有身分來源本身不足以支持合理修正，\n列為阻塞，該套不花費；其餘項目繼續。\n不訓練、不另建 Soul、不擅自換人。\n\nV-Somi：\n這輪一併處理，不再無限擱置。\n回看 R5／R7／R8／R11 的失敗，\n不原樣重送、不再研究遮罩或引用未驗證流程。\n\n沿用冬季雪景、酒紅／象牙白服裝方向，\n以既有 Soul 製作兩種較簡單、不同景別的照片：\n一張以人物神情與雪景氛圍為主，\n另一張以完整人物與雪街共同構圖為主。\n各只安排一個自然動作，避免過多競爭描述。\n不使用分段版面語言或 photobook page 收尾句。\n不得把構圖底稿替身當作 Somi 成品。\n\n四、執行\n本人既有 Soul、soul_2、2k，\n依既定橫直比例；無參考圖、不傳 style、不用 unlim。\n開始前重新唯讀報價，核對 ready 及任務清單。\n單張或總額超上限就停止超額項目。\n小量併行，保存意圖與任務 ID，\n未知結果查原任務，不補送。\n個別阻塞不拖住其餘項目。\n\n五、交付與部署\n自查整張美感、身分、人景融合、自然姿態與技術細節，\n失敗也保留供選片，不自行補生。\n\n完成後直接更新既有 cal2027-decision，\n沿用：\nhttps://cal2027-decision-production.up.railway.app/shoot.html\n\n集中顯示本輪待確認項目：\nH-Mia、V-Rainie、V-Somi：A／B／都想修改。\nH-Somi：保留 R21 B／新候選1／新候選2／仍想修改。\nH-Luna、V-Miu：原版／本輪修正版比較與回饋。\n\n18 套定案放已選區，不要求重新選擇。\n保留歷史圖片與所有回饋，\n新候選綁定新版本，不繼承舊接受狀態。\n保留備註、重新整理保存、放大及複製全部回饋。\n頁面只看成果，不放 prompt 或技術報告。\n\n部署後實際確認載圖、版本、回饋保存及手機操作。\n只更新既有服務，不新增付費服務或改存取設定。\n批次結束後統一同步與執行必要檢查。\n不合併 main、不聯絡廠商。\n\n六、補存 R20 Owner 原文\n以下為先前交接缺件的原始回饋，\n逐字補入 R20 Owner 紀錄，與本輪決定分開保存。\n這是補存既有決定，不是重開選片。\n\nTASK-CAL-001｜M-4 R20 選片回饋（頁面版本 ff40631）\n【橫式】\n1 月｜Yuna｜H-yuna-kim：接受 B（圖片 H-yuna-kim-R20-B）\n2 月｜Rin｜H-rin-ayase：接受 A（圖片 H-rin-ayase-R20-A）\n   備註：A這個橫躺的姿勢很好，但是他的手部動作又太僵硬，如果是這種橫躺在貴妃椅上的樣子，身體就要整體更慵懶自然一點的橫躺在椅子上，手部不要這麼僵硬的擺著\n3 月｜Miu｜H-miu-shiraishi：兩張都想修改（圖片 H-miu-shiraishi-R20-A、H-miu-shiraishi-R20-B）\n   備註：兩張動作都很奇怪，可以性感撩人一點，而且他身材好像跟設定不符合\n4 月｜Tammy｜H-tammy-chou：兩張都想修改（圖片 H-tammy-chou-R20-A、H-tammy-chou-R20-B）\n   備註：兩張臉都很怪，跑掉了，而且這件衣服顏色在這個場景太突兀了，他的動作也很普通無聊\n5 月｜Yerin｜H-yerin-han：兩張都想修改（圖片 H-yerin-han-R20-A、H-yerin-han-R20-B）\n   備註：兩張動作都很刻意，不如讓他坐在草地上很享受陽光草地的樣子，不要拿著球竿裝模作樣\n6 月｜Coco｜H-coco-wu：接受 A（圖片 H-coco-wu-R20-A）\n   備註：明亮度跟飽和度調整一下，整體畫面太暗淡了，這樣印刷出來不好看\n7 月｜Mia｜H-mia-huang：兩張都想修改（圖片 H-mia-huang-R20-A、H-mia-huang-R20-B）\n   備註：這個場景實在太假了，一看就是AI，連人物都像Ｐ上去一樣\n8 月｜Iris｜H-iris-chen：接受 A（圖片 H-iris-chen-R20-A）\n9 月｜Jia｜H-jia-seo：接受 B（圖片 H-jia-seo-R20-B）\n10 月｜Luna｜H-luna-tanaka：兩張都想修改（圖片 H-luna-tanaka-R20-A、H-luna-tanaka-R20-B）\n   備註：A其實很好，但是他的動作太死板了，要講幾次這是寫真，不是隨隨便便拍的，要有氛圍感！！！！！\n11 月｜Somi｜H-somi-oh：兩張都想修改（圖片 H-somi-oh-R20-A、H-somi-oh-R20-B）\n   備註：場景很怪，他的動作也很怪！！！！！！！誰會在炸雞店拍這種寫真？乾脆重新規劃這張圖，捨去掉原本這個設定\n12 月｜Rainie｜H-rainie-hsu：接受 B（圖片 H-rainie-hsu-R20-B）\n【直式】\n2 月｜Jia｜V-jia-seo：兩張都想修改（圖片 V-jia-seo-R20-A、V-jia-seo-R20-B）\n   備註：奇怪的場景，奇怪的畫面比例和構圖，動作死板無趣，超爛，重新規劃這張的設定，原本這個實在太爛了\n3 月｜Mia｜V-mia-huang：接受 A（圖片 V-mia-huang-R20-A）\n4 月｜Miu｜V-miu-shiraishi：接受 B（圖片 V-miu-shiraishi-R20-B）\n   備註：這張不錯，但是能不能調整明亮度跟飽和度，用成跟A一樣，A的整體色調就很好，但是B的整體畫面太暗淡了，這樣印刷出來不好看\n5 月｜Rainie｜V-rainie-hsu：兩張都想修改（圖片 V-rainie-hsu-R20-A、V-rainie-hsu-R20-B）\n   備註：為什麼他眼睛跟鬥雞眼一樣，眼神都無法聚焦，好像他眼睛有問題一樣，然後這個拍攝視角讓他看起來腿很短，但他不是長腿美女嗎？\n6 月｜Luna｜V-luna-tanaka：接受 B（圖片 V-luna-tanaka-R20-B）\n   備註：把明亮度跟飽和度提高一點，整體都很好，就是畫面太暗顏色太不飽和了，這樣印刷出來不好看\n7 月｜Coco｜V-coco-wu：接受 B（圖片 V-coco-wu-R20-B）\n8 月｜Yerin｜V-yerin-han：接受 A（圖片 V-yerin-han-R20-A）\n11 月｜Yuna｜V-yuna-kim：兩張都想修改（圖片 V-yuna-kim-R20-A、V-yuna-kim-R20-B）\n   備註：場景很好，但他的動作太死板了，就算是街拍，美女也要有好看的街拍姿勢吧？但要自然一點的，像是隨意抓拍到的瞬間\n合計 20 套：已回覆 20（接受 A 5、接受 B 6、兩張都想修改 9）、未回覆 0（未回覆不算接受）。",
+ "report_rule_note": "Penny 另於 R22 進行中要求：完成後須在同一對話主動回報（選片網址、完成與缺件、數量與費用、部署與版本、下一步、主管精簡回報）",
+ "rules": [
+  "18 套定案不要求重新選擇",
+  "新候選綁定新圖片識別，不繼承舊接受狀態",
+  "修改版未經 Penny 確認前不宣稱已接受"
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "note": "M-4 R22 生成紀錄（公開可讀的摘要；不含 Soul ID、任務 ID 與交易原始列）。Claude 自查不是主管覆核，也不是 Penny 決定；有瑕疵的照片也保留供選片，不重生、不補生。",
+ "round": "M-4 R22",
+ "written_on": "2026-10-28",
+ "auth": "docs/calendar/data/cal_m4_auth_r22.json",
+ "prompts": "docs/calendar/data/cal_m4_r22_prompts.json",
+ "grading": "docs/calendar/data/cal_m4_r22_grading.json",
+ "owner": "docs/calendar/data/cal_m4_owner_r22.json",
+ "settings": "各人既有 Soul（3 個皆 ready；V-Somi 與 H-Somi 同一 Soul）、soul_2、2k；橫式 16:9、直式 3:4；無參考圖、不傳 style、不用 unlim、不訓練。",
+ "counts": {
+  "requests": 8,
+  "images": 8,
+  "blocked": 0,
+  "retries": 0,
+  "extra_generations": 0
+ },
+ "cost": {
+  "quote_each": 0.12,
+  "cap_total": 0.96,
+  "spend_rows": 8,
+  "refund_rows": 0,
+  "charged_net": 0.96,
+  "attribution": "依時窗推定（只看本批送出時段的 Soul V2 列）",
+  "balance_before": 1261.39,
+  "balance_after": 1260.43
+ },
+ "v_rainie_identity_check": {
+  "sources": "沒有 identity_master；檢查 Soul 訓練圖（13 張）與錨點、R20／R21 四張原尺寸臉部",
+  "finding": "基準中沒有鬥雞眼；訓練圖多為 3/4 側臉、視線看手機或往下，正面直視鏡頭的樣本少。R20／R21 四張是頭轉向一側、同時要求眼睛看鏡頭，遠側眼球偏向鼻側，看起來內聚。",
+  "decision": "身分來源足以支持修正，不列阻塞：視線順著臉的方向、不要求直視鏡頭；腰高平視、85mm 遠距離全身；短版夾克取代長風衣讓腿線完整",
+  "result": "R22 兩張原尺寸檢查：A 視線與臉同向，B 雖看鏡頭但兩眼平行，皆無內聚"
+ },
+ "self_review": [
+  {
+   "set": "H-mia-huang",
+   "v": "A",
+   "img_id": "H-mia-huang-R22-A",
+   "v_text": "真實的海灘黃金時刻：沙地、沙丘草、平靜海面與漸層天空一致，坐在沙上、手撐沙地，接觸與陰影可信，不再像假布景；人物自然開心。夕陽落在畫面內左上（設計寫在畫外）；雙腿往前伸而不是收向一側；上衣成了無肩帶款。"
+  },
+  {
+   "set": "H-mia-huang",
+   "v": "B",
+   "img_id": "H-mia-huang-R22-B",
+   "v_text": "同一海灘：赤腳在潮線濕沙上邁步、一手撥髮對鏡頭笑，全身比例自然、腳印與濕沙反光可信。上衣從馬甲變成細肩帶短版上衣（服裝漂移）；撥髮手勢略有擺拍感。"
+  },
+  {
+   "set": "H-somi-oh",
+   "v": "A",
+   "img_id": "H-somi-oh-R22-1",
+   "v_text": "芒草原與服裝延續 R21 B；沿小徑朝鏡頭走來、雙手自然垂放、自然微笑，沒有扭腰、插腰或抬腳。沒照設計出現風吹髮絲大笑；開襟衫敞開（設計寫扣上）；畫面比 R21 B 灰、偏霧，暖色較少；下緣切到靴子。"
+  },
+  {
+   "set": "H-somi-oh",
+   "v": "B",
+   "img_id": "H-somi-oh-R22-2",
+   "v_text": "走在芒草小徑、一手輕觸草穗、側看微笑，像抓拍到的一瞬間，逆光暖色接近 R21 B；動作單純連貫。沒有照設計低頭看草；手臂外伸略帶表演感。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "A",
+   "img_id": "V-rainie-hsu-R22-A",
+   "v_text": "臉與視線一起轉向畫面左側遠方，原尺寸檢查兩眼瞳孔方向一致、沒有內聚；腰高平視、遠距離，腿長比例自然，沒有仰拍拉伸或頭部縮小；短版皮夾克讓腿線完整。遠處有一位小路人與一個小藍色標牌（設計寫無人）；耳環變成小金色款。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "B",
+   "img_id": "V-rainie-hsu-R22-B",
+   "v_text": "倚著櫥窗框、雙腿交叉，腿長比例自然；臉接近正面、眼睛看鏡頭（沒照設計低頭），原尺寸檢查兩眼平行、沒有鬥雞眼。夾克滑到手臂上；耳環變成小金色款。"
+  },
+  {
+   "set": "V-somi-oh",
+   "v": "A",
+   "img_id": "V-somi-oh-R22-A",
+   "v_text": "雪夜溫泉小鎮、紙燈籠與石溝蒸氣，抬頭看燈籠旁的雪、開心地笑，雪花落在頭髮上，神情與氛圍是重點；酒紅大衣＋象牙白針織洋裝。景別成了大腿以上（設計寫胸上）；燈籠與招牌上出現無意義的韓文字（設計句漏寫「素面、無字」，是執行者疏漏）；路面雪較少。"
+  },
+  {
+   "set": "V-somi-oh",
+   "v": "B",
+   "img_id": "V-somi-oh-R22-B",
+   "v_text": "雙手插口袋沿雪街走來、微笑，全身與燈籠旅館街景共同構圖，白色長靴、酒紅大衣完整；身分與 Somi 一致。燈籠與招牌同樣有無意義的韓文字；臉部燈籠暖光偏弱、整體偏藍灰。"
+  }
+ ],
+ "self_review_summary": "8 張全部保留供選片。H-Mia 兩張背景改成真實海灘、人景一致；H-Somi 兩張是放鬆的走路抓拍（B 較接近 R21 B 色調），不自動替換 R21 B；V-Rainie 兩張眼睛正常、腿長比例自然；V-Somi 兩張完成冬季雪景兩種景別，但燈籠與招牌有無意義文字（執行者 prompt 疏漏），A 景別比設計寬。",
+ "not_done": [
+  "不重生、不補生、不付費修圖",
+  "不改 canon、Soul ID、人設或月份",
+  "修改版與新候選不宣稱已接受"
+ ]
+}

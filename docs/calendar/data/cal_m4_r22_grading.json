@@ -1,0 +1,111 @@
+{
+ "note": "M-4 R22 本機修正紀錄：只調明暗與色彩，不改臉、身體、服裝、姿態或場景；衍生檔另存，原圖不動；不使用付費生成或付費編輯；各交一個修正版。螢幕上變亮不代表印刷效果，交印仍另行確認。",
+ "round": "M-4 R22",
+ "script": "review/calendar/m4_r22/process.py（共用 review/calendar/m4_r21/grade.py 的亮度、統計與膚色遮罩函式）",
+ "items": [
+  {
+   "set": "H-luna-tanaka",
+   "v": "A",
+   "img_id": "H-luna-tanaka-R21-A-G22",
+   "source": "kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_A.png",
+   "output": "kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_A_grade_r22.png",
+   "why": "Penny：明亮度跟飽和度都要提升，人臉背光很黑要更明亮",
+   "params": {
+    "gamma": 0.8,
+    "vibrance": 0.14,
+    "skin_vibrance": 0.04,
+    "face": {
+     "center": [
+      1080,
+      285
+     ],
+     "radii": [
+      125,
+      160
+     ],
+     "feather": 90,
+     "gamma": 0.78
+    }
+   },
+   "before": {
+    "Y_p5": 0.095,
+    "Y_p50": 0.348,
+    "Y_p95": 0.664,
+    "Y_mean": 0.358,
+    "sat_mean": 0.314,
+    "clipped_pct": 0.02,
+    "crushed_pct": 0.0
+   },
+   "after": {
+    "Y_p5": 0.155,
+    "Y_p50": 0.433,
+    "Y_p95": 0.723,
+    "Y_mean": 0.433,
+    "sat_mean": 0.329,
+    "clipped_pct": 0.02,
+    "crushed_pct": 0.0
+   },
+   "detail_ratio_full": 0.932,
+   "detail_ratio_site_view": 0.924,
+   "contrast_ratio": 0.981,
+   "face_Y_median_before_after": [
+    0.277,
+    0.448
+   ],
+   "source_sha256": "c78cd8acecfa539f6bfcd9028b0e17ed760fbb6f036706691baac80e6d3054b3",
+   "output_sha256": "582112bdd6c79fd67ced0a8cad388f9e8280c9ed374a4a7237406a2f8f490a17",
+   "how": "整體明暗曲線 gamma 0.80（暗部與中間調提亮）＋自然飽和度 0.14（膚色只 0.04）；背光的臉以大範圍柔邊橢圓（羽化 90 px、smoothstep 無硬邊）在整體提亮之上再柔和提亮（gamma 0.78）；提升不把色版推過 1、0.9 以上高光柔肩；不加銳化或局部對比",
+   "result": "中位亮度 0.348→0.433、臉部中位亮度 0.277→0.448；剪白比例維持 0.02%（背景不過曝）；細節能量比 0.93（提亮後陰影雜訊相對變淡，沒有額外銳化）"
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "v": "B",
+   "img_id": "V-miu-shiraishi-R20-B-G22",
+   "source": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B.png",
+   "output": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B_grade_r22.png",
+   "why": "Penny：色調還行，但變得有點太銳化，不像原版柔和",
+   "params": {
+    "gamma": 0.95,
+    "vibrance": 0.11,
+    "skin_vibrance": 0.03
+   },
+   "before": {
+    "Y_p5": 0.063,
+    "Y_p50": 0.481,
+    "Y_p95": 0.805,
+    "Y_mean": 0.468,
+    "sat_mean": 0.248,
+    "clipped_pct": 0.06,
+    "crushed_pct": 1.48
+   },
+   "after": {
+    "Y_p5": 0.072,
+    "Y_p50": 0.499,
+    "Y_p95": 0.814,
+    "Y_mean": 0.483,
+    "sat_mean": 0.257,
+    "clipped_pct": 0.06,
+    "crushed_pct": 1.26
+   },
+   "detail_ratio_full": 0.988,
+   "detail_ratio_site_view": 0.987,
+   "contrast_ratio": 0.996,
+   "source_sha256": "6d6df147bbc285b18338d15429ef7372169efa4ecdca2cc58b401d8961dfb1ef",
+   "output_sha256": "8a62285bf470d79ce4bc6dfd2d015e4015961dc1e2346b3cf14205b694794aec",
+   "how": "從未修改的 R20 B 原圖重做：明暗曲線 gamma 0.95（只輕提中間調）＋自然飽和度 0.11（膚色 0.03）；不做分位數匹配、不拉對比、不加銳化、不整張模糊",
+   "result": "中位亮度 0.481→0.499、平均飽和 0.248→0.257；細節能量比原尺寸 0.991、網站顯示尺寸 0.987，對比比 0.996，質感與原圖相同",
+   "sharpness_check": {
+    "question": "R21 調色版看起來變銳利，原因在 R21 處理、縮圖或網站顯示？",
+    "r21_grade_vs_r20_original": {
+     "detail_ratio_full": 1.401,
+     "detail_ratio_site_view": 1.373,
+     "contrast_ratio": 1.128
+    },
+    "site_pipeline": "選片頁顯示版與放大版由 builder 以 LANCZOS 縮放（長邊 1600／原尺寸）產生，原版與調色版走同一路徑，沒有銳化或清晰度步驟；縮放對兩者影響相同",
+    "finding": "銳利感在原尺寸就已存在（細節能量 +40%、整體對比 +13%），網站顯示尺寸比例相同（+37%）；來源是 R21 依同套 A 的亮度分位數匹配時拉開了暗部到亮部的對比，不是縮圖或網站顯示造成",
+    "r22_fix": "改用輕微明暗曲線＋自然飽和度，不再做分位數匹配；原尺寸與網站顯示尺寸並排檢查，細節與對比都回到原圖水準"
+   }
+  }
+ ],
+ "compare": "原尺寸局部與網站顯示尺寸皆並排檢查（比較圖只留在工作區，不進 repo）"
+}
