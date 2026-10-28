@@ -1,0 +1,28 @@
+{
+ "note": "M-4 R24 選片頁部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/shoot.html",
+ "commit": "0097adaf0927d920a29070ad2b45454c00150f01",
+ "deploy_triggered_utc": "2026-10-28T09:49:43Z",
+ "deploy_status": "SUCCESS",
+ "deploy_finished_utc": "2026-10-28T09:59:00Z",
+ "deploys_triggered": 1,
+ "live_page_commit": "0097adaf0927d920a29070ad2b45454c00150f01",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）",
+  "result": "全數通過（25 項）",
+  "items": [
+   "本輪只有 V-Rainie（接受 A／接受 B／兩張都想修改＋備註），附前幾輪 8 張（只看不選）",
+   "已選 23 套全部定案，H-Somi 為調色版；無待處理",
+   "33 張照片的顯示版與原尺寸完整版皆可取得",
+   "放大、原尺寸、A／B 切換、前幾輪放大",
+   "選擇與備註、重新整理後保留；清除改回未回覆",
+   "R22、R23 的回饋與圖片識別不符的回饋不套用",
+   "複製全部回饋（選擇、圖片版本、備註、本輪；未回覆不算接受）",
+   "R20–R23 與更舊的 localStorage 鍵不變",
+   "手機無橫向捲動、可選擇、可放大、可複製",
+   "頁面無錯誤；公開資料無 prompt、模型、錨點或技術分析字樣"
+  ],
+  "public_images": "線上 33 張照片 × 2 版（66 檔）無中繼資料、無平台任務識別、無私有 ID（比對全部 M-4 私有執行紀錄的 111 個 UUID）"
+ }
+}
