@@ -14,7 +14,7 @@ TASK-CAL-001／M-4／R21｜Owner 回饋修正批次與 Railway 更新｜Claude �
 
 起點 HEAD：0286b9a　原圖／調色 commit：03eb250　選片頁成果 commit（部署用）：537fa19　紀錄 commit：本檔所在 commit
 本輪：送出 20、產出 19、實扣淨額 2.28（20 × 0.12 − 退款 0.12，依時窗推定）；重試 0、補生 0、付費修圖 0；本機調色 3
-Railway：只更新既有 cal2027-decision，部署進行中（線上驗收後補記）；其他服務未動
+Railway：只更新既有 cal2027-decision，部署 1 次 SUCCESS；其他服務未動
 
 一、Owner 回饋與選定
 - Penny 頁面「複製全部回饋」原文（ff40631）沒有隨 R21 指令交來：Owner 紀錄 page_copy 標「交接缺件」、text 留空，不用摘要代替；R21 指令全文逐字存 instruction_verbatim
@@ -45,7 +45,7 @@ Railway：只更新既有 cal2027-decision，部署進行中（線上驗收後�
 - 下方「已選」14 套只看不選（4 套標修改待確認）；V-Somi 標待處理
 - 新回饋鍵 cal2027-pick-r21-v1:<套別>，綁定圖片識別、對不上不套用；R20 與更舊的鍵不讀、不寫、不刪；備註、重新整理保存與複製全部回饋保留
 - 頁面不放 prompt、設計理由或技術報告；公開圖去除中繼資料
-- 線上驗收：部署進行中（線上驗收後補記）；本機 Playwright 驗收（桌機 1280、手機 390）全數通過
+- 線上驗收：部署 1 次 SUCCESS、線上頁面版本 537fa19；線上 Playwright 驗收（桌機 1280、手機 390）全數通過：圖片載入、版本對應、放大、選擇、備註保存、複製、手機操作；線上 72 個圖檔無中繼資料與 ID（review/calendar/m4_r21/deploy.json）
 
 六、計數與檢查
 - 月面照片累計 73 張／8.76 credits；構圖底稿 2 張／4 credits；合計 12.76

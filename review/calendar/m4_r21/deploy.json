@@ -1,0 +1,17 @@
+{
+ "note": "M-4 R21 選片頁部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/shoot.html",
+ "commit": "537fa19764a8ec247bff4e3d338972fd793ec3a9",
+ "deploy_triggered_utc": "2026-10-28T06:07:20Z",
+ "deploy_status": "SUCCESS",
+ "deploy_finished_utc": "2026-10-28T06:19:09Z",
+ "deploys_triggered": 1,
+ "live_page_commit": "537fa19764a8ec247bff4e3d338972fd793ec3a9",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）",
+  "result": "全數通過",
+  "items": ["本輪 13 項（新候選 9、H-Rin 改善 1、調色 3）、已選 14、待處理 V-Somi", "27 個照片位置與圖片識別、標籤對應正確；H-Miu B 顯示缺件", "36 張原尺寸完整版可取得", "放大、原尺寸、同一項內依序切換", "選擇與備註、重新整理後保留；清除選擇改回未回覆", "R20 的回饋與圖片識別不符的回饋不套用到新圖", "複製全部回饋（角色、月份、類型、選擇、圖片版本、備註；未回覆不算接受）", "R20 與更舊的 localStorage 鍵不變", "已選區 14 張載入、4 套標修改待確認、沒有選項", "手機無橫向捲動、可選擇、可放大", "頁面無錯誤"],
+  "public_images": "線上 36 張照片 × 2 版（72 檔）無中繼資料、無平台任務識別、無 Soul／任務 ID"
+ }
+}
