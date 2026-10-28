@@ -1,0 +1,47 @@
+{
+ "note": "M-4 R23 本機調色紀錄：只調明暗與色彩，不改人物、動作、服裝或背景；衍生檔另存，原圖不動；不使用付費生成或付費編輯；一個調色版。螢幕上變亮不代表印刷效果，交印仍另行確認。",
+ "round": "M-4 R23",
+ "script": "review/calendar/m4_r23/process.py（共用 m4_r22／m4_r21 的亮度、統計、膚色遮罩與高光柔肩函式）",
+ "items": [
+  {
+   "set": "H-somi-oh",
+   "v": "2",
+   "img_id": "H-somi-oh-R22-2-G23",
+   "source": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_B.png",
+   "output": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_B_grade_r23.png",
+   "why": "Penny：色調調整一下，明亮度跟飽和度提升一點，現在畫面有點太暗淡了",
+   "params": {
+    "gamma": 0.86,
+    "vibrance": 0.14,
+    "skin_vibrance": 0.04
+   },
+   "how": "明暗曲線 gamma 0.86（提亮暗部與中間調）＋自然飽和度 0.14（膚色只 0.04）；提升不把色版推過 1、0.9 以上高光柔肩；不做分位數匹配、不加銳化或局部對比、不整張模糊",
+   "before": {
+    "Y_p5": 0.124,
+    "Y_p50": 0.381,
+    "Y_p95": 0.938,
+    "Y_mean": 0.467,
+    "sat_mean": 0.396,
+    "clipped_pct": 4.82,
+    "crushed_pct": 0.0
+   },
+   "after": {
+    "Y_p5": 0.166,
+    "Y_p50": 0.436,
+    "Y_p95": 0.944,
+    "Y_mean": 0.509,
+    "sat_mean": 0.409,
+    "clipped_pct": 4.82,
+    "crushed_pct": 0.0
+   },
+   "detail_ratio_full": 0.97,
+   "detail_ratio_site_view": 0.972,
+   "contrast_ratio": 0.954,
+   "highlight_detail_ratio": 0.874,
+   "result": "中位亮度 0.381→0.436、平均飽和 0.396→0.409；剪白比例維持 4.82%（夕陽本身）；細節能量比原尺寸 0.970、網站尺寸 0.972，整體對比比 0.954（沒有變銳利）；最亮區（亮度 >0.85）的變化幅度保留 87%，逆光天空與草穗高光仍有層次",
+   "source_sha256": "9b792b3e550ddc5221f1236b1fc3cf3b317baed0ad7cad73e1c49c637fdf843a",
+   "output_sha256": "4b0b17033f2276f070813913d2d9317f0853267ae50d996caeb9a153fa27d974"
+  }
+ ],
+ "compare": "原尺寸局部與網站顯示尺寸皆並排檢查（比較圖只留在工作區，不進 repo）"
+}

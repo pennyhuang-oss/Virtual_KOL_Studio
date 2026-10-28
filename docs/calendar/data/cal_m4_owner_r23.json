@@ -1,0 +1,71 @@
+{
+ "note": "M-4 R23 Owner 決定紀錄（依 R23 指令；Penny 在選片頁版本 fbf5674 的完整回饋）。Owner 原話逐字保存；執行者分析另存在 cal_m4_r23_rainie_check.json，不混入本檔。R21 頁面原文補存在 cal_m4_owner_r22.json 的 page_copy。",
+ "round": "M-4 R23",
+ "written_on": "2026-10-28",
+ "page_version": "fbf5674",
+ "page_copy": {
+  "status": "R22 選片頁（fbf5674）「複製全部回饋」原文未隨 R23 指令交來；本紀錄依 R23 指令第一節整理，不以摘要冒充頁面原文",
+  "text": null
+ },
+ "final_new": [
+  {
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R22-A",
+   "kind": "source"
+  },
+  {
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R21-A-G22",
+   "kind": "derived",
+   "note": "接受的是 R22 本機修正版本身（來源 R21 A 已於 R22 選定）"
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-B-G22",
+   "kind": "derived",
+   "note": "接受的是 R22 本機修正版本身（來源 R20 B 已於 R21 選定）"
+  },
+  {
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R22-B",
+   "kind": "source"
+  }
+ ],
+ "final_total": 22,
+ "selected_source_edit_pending": [
+  {
+   "set": "H-somi-oh",
+   "source_img_id": "H-somi-oh-R22-2",
+   "source_accepted": true,
+   "derived_accepted": false,
+   "edit": "Penny 改選 R22-2 為來源；本輪本機調色版待確認",
+   "previous_source": "H-somi-oh-R21-B（R22 選定，本輪改選）"
+  }
+ ],
+ "rejected": [
+  {
+   "set": "V-rainie-hsu",
+   "img_ids": [
+    "V-rainie-hsu-R22-A",
+    "V-rainie-hsu-R22-B"
+   ],
+   "next": "先核對身分來源，再以新場景重製"
+  }
+ ],
+ "counts": {
+  "final": 22,
+  "edit_pending": 1,
+  "remake": 1,
+  "total": 24
+ },
+ "owner_notes_verbatim": {
+  "H-somi-oh": "色調調整一下，明亮度跟飽和度提升一點，現在畫面有點太暗淡了",
+  "V-rainie-hsu": "換個場景試試吧，怎麼這個人物的眼睛都很有問題啊，一直都是脫窗、鬥雞眼的樣子，但之前她生成的其他圖片不會這樣啊，這個角色最早期生成的自拍或他拍，眼睛都很正常啊，為什麼這一批生成出來眼睛都有問題？是不是套用到錯的參考圖？或是這個場景、服裝不適合？？"
+ },
+ "instruction_verbatim": "TASK-CAL-001／M-4／R23｜最後兩項修正、Rainie 身分查核與 Railway 更新\n\nPenny 送出本指令即授權：\nV-Rainie 最多 2 張、各 1 次請求，\n每張上限 0.12、總上限 0.24 credits。\nH-Somi 作本機調色，不使用付費編輯。\n不重試、不補生、不訓練。\n\n一、Owner 決定\n依 R22 頁面 fbf5674 的完整回饋：\n定案：\nH-Mia R22-A、\nH-Luna R21-A-G22、\nV-Miu R20-B-G22、\nV-Somi R22-B。\n加上既有 18 套，共 22 套定案。\n\nH-Somi 改選 R22-2，來源選定、調色待確認。\nV-Rainie R22 A／B 全退回。\n24＝22 定案＋1 調色待確認＋1 待重製。\n\nOwner 原話：\nH-Somi：\n「色調調整一下，明亮度跟飽和度提升一點，現在畫面有點太暗淡了」\n\nV-Rainie：\n「換個場景試試吧，怎麼這個人物的眼睛都很有問題啊，一直都是脫窗、鬥雞眼的樣子，但之前她生成的其他圖片不會這樣啊，這個角色最早期生成的自拍或他拍，眼睛都很正常啊，為什麼這一批生成出來眼睛都有問題？是不是套用到錯的參考圖？或是這個場景、服裝不適合？？」\n\n原話與執行者分析分開保存。\n\n二、H-Somi 調色\n從 R22-2 原圖另存一個調色版。\n提高明亮度與適度飽和度，保持自然膚色、\n高光細節與原圖柔和感。\n不增加銳化、清晰度或強局部對比。\n不改人物、動作、服裝、背景，不覆蓋原圖。\n網站提供原版／調色版比較。\n\n三、Rainie：先核對，再生成\n只查本角色、本案所需資料：\n\n1. 找出早期眼睛正常、身分可辨認的\n   1–2 張既有自拍或他拍，實際看原圖。\n2. 核對那些圖片可取得的生成紀錄，\n   與 R20／R21／R22 的實際 soul_id、\n   角色對應及 profile 紀錄是否一致。\n   名稱相同不等於 ID 相同。\n3. 核對本批實際任務的參考圖、Element、\n   prompt、改寫狀態與其他已記錄設定；\n   分清楚真的送入的參考，與只供人工比對的圖片。\n4. 若早期任務資料不存在，照實列未確認，\n   不推測一定是同模型、同 Soul 或同設定。\n5. 實際比較眼球方向、瞳孔位置與臉部角度，\n   不只看髮色或五官大方向。\n   不把場景、服裝或某個 prompt 詞當成已證實成因。\n\n若發現用了錯的既有 Soul，改回可確認的正確 Soul，\n記錄更正；不得新建、重訓或擅自替換角色。\n若身分來源仍無法確認，停止該項付費，\n交代具體缺口，不盲目再送兩張。\n\n四、Rainie 新候選\n查核可繼續後，依 Owner 指示捨棄本批反覆失敗的場景，\n換一個簡單、可信、適合 5 月的日常寫真場景。\n服裝合情境，保留角色 canon；\n不靠極端機位或繁複燈光製造效果。\n\nA：以自然神情、可清楚判讀雙眼的中近景為主。\nB：以自然姿態與長腿比例協調的較遠景為主。\n同一新場景與服裝方向，各一個主要動作。\n採合理相機距離，不拉伸身體、不極端仰拍；\n眼神清楚自然，不堆疊互相矛盾的凝視指令。\n\n本人確認正確的既有 Soul、soul_2、2k、3:4；\n無參考圖、不傳 style、不用 unlim。\n重新唯讀報價，超單張或總上限就停止。\n保存送出意圖與任務 ID；\n結果不明查原任務，不補送。\n\n自查必須用原尺寸臉部，\n與早期正常圖片並排比較。\n失敗也保留，不自行重生。\n查核結論區分已確認、未確認與推測。\n\n五、更新 Railway\n完成後直接更新既有 cal2027-decision 並部署，\n網址：\nhttps://cal2027-decision-production.up.railway.app/shoot.html\n\n本輪待確認只集中顯示：\n- H-Somi：原版／調色版與備註。\n- V-Rainie：A／B／兩張都想修改與備註。\n如 Rainie 阻塞，清楚標示未產出。\n\n22 套定案保留，不要求重新選。\n保留歷史圖片與所有回饋，\n新圖不得自動繼承舊接受狀態。\n頁面只放成果與選片操作，不放技術查核長文。\n確認線上載圖、版本、保存、複製及手機操作。\n\n六、完成後必須主動回報\n完成或遇到阻塞，都必須在同一工作對話主動回報，\n不等 Penny 追問，不只更新 repo 就停止。\n\n先提供：\n1. 可點開的 Railway 選片網址。\n2. 實際完成與缺件項目。\n3. 生成／調色數量、實際費用。\n4. 部署結果與線上版本。\n5. Penny 接下來要確認什麼。\n\n最後附一段可直接複製給 ChatGPT 的精簡主管回報，\n包含成果／紀錄 commit、Rainie 查核結論、\n檢查結果與阻塞。\n不貼完整 prompt，不以「詳見檔案」代替回報。\n只做必要同步與相關檢查。\n不動定案照片、不合併 main、不聯絡廠商。\n\n七、補存先前缺件：R21 頁面原文\n以下逐字補存，與本輪決定分開，\n不再要求 Penny 重貼：\n\nTASK-CAL-001｜M-4 R21 選片回饋（頁面版本 537fa19）\n【橫式】\n2 月｜Rin｜H-rin-ayase｜改善候選：改用新候選 1（圖片 H-rin-ayase-R21-1）\n3 月｜Miu｜H-miu-shiraishi｜新候選：接受 A（圖片 H-miu-shiraishi-R21-A）\n4 月｜Tammy｜H-tammy-chou｜新候選：接受 A（圖片 H-tammy-chou-R21-A）\n5 月｜Yerin｜H-yerin-han｜新候選：接受 A（圖片 H-yerin-han-R21-A）\n6 月｜Coco｜H-coco-wu｜調色比較：用調色版（圖片 H-coco-wu-R20-A-G21）\n7 月｜Mia｜H-mia-huang｜新候選：兩張都想修改（圖片 H-mia-huang-R21-A、H-mia-huang-R21-B）\n   備註：這組還是一樣啊，背景太假了，不如重新設定背景\n10 月｜Luna｜H-luna-tanaka｜新候選：接受 A（圖片 H-luna-tanaka-R21-A）\n   備註：明亮度跟飽和度都要提升，調色要更好看一點，整體畫面太暗淡了，尤其是人臉背光很黑，要更明亮一點\n11 月｜Somi｜H-somi-oh｜新候選：接受 B（圖片 H-somi-oh-R21-B）\n   備註：這張的背景比較自然，色調也很好，但是姿勢太做作了，一點都不自然，在這種大自然環境，就用抓拍好看的動作吧\n【直式】\n2 月｜Jia｜V-jia-seo｜新候選：接受 A（圖片 V-jia-seo-R21-A）\n4 月｜Miu｜V-miu-shiraishi｜調色比較：調色還想修改（圖片 V-miu-shiraishi-R20-B、V-miu-shiraishi-R20-B-G21）\n   備註：這個色調還行，但是變得有點太銳化了，不像原版柔和了\n5 月｜Rainie｜V-rainie-hsu｜新候選：兩張都想修改（圖片 V-rainie-hsu-R21-A、V-rainie-hsu-R21-B）\n   備註：還是一樣啊，眼睛到底是有什麼問題？是脫窗嗎？眼睛還是鬥雞眼啊，腿還是很短啊\n6 月｜Luna｜V-luna-tanaka｜調色比較：用調色版（圖片 V-luna-tanaka-R20-B-G21）\n11 月｜Yuna｜V-yuna-kim｜新候選：接受 A（圖片 V-yuna-kim-R21-A）\n合計本輪 13 項：已回覆 13、未回覆 0（未回覆不算接受）。已選 14 套不在本次回饋內。",
+ "rules": [
+  "22 套定案不要求重新選擇",
+  "新圖綁定新圖片識別，不繼承舊接受狀態",
+  "修改版未經 Penny 確認前不宣稱已接受"
+ ]
+}

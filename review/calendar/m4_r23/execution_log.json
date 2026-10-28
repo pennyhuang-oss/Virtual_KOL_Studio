@@ -1,0 +1,163 @@
+{
+ "note": "M-4 R23 私有執行紀錄（含 Soul ID 與任務 ID；只留在 repo，不公開）。",
+ "events": [
+  {
+   "t": "2026-10-28T07:30:00Z",
+   "step": "rainie_identity_check",
+   "soul_used_r20_r22": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+   "profile_current": "a4a000fe-fd96-4c36-97ff-0df9358a9b47（training_images_v2.soul_training，ready）",
+   "profile_deprecated": "994e33d2-7df1-47da-8478-7a6fd849fa33（training_images_v1，未在本案使用）",
+   "sampled_jobs": {
+    "V-rainie R20 A": "bc2e1967-a12e-41e9-abff-7aad90a56322",
+    "V-rainie R21 A": "16144239-aa9f-42d0-b1fc-8059e2b34399",
+    "V-rainie R22 A": "2b46adc5-32fd-4d32-b86d-1009fa04a489",
+    "V-rainie R22 B": "ed545720-fc9a-48b4-b66f-ebbe368b8ef5",
+    "R5 起始畫面（早期 Soul）": "3ed7e08a-0031-447b-8034-5f8cd28fafbd",
+    "R10 起始畫面 v2（早期 Soul）": "063becaa-f31a-4486-8863-5d7af3bff8b3",
+    "訓練集 v2 02 自拍（Seedream＋Element）": "d394eee3-ab4e-4db2-9510-54c701f02acc"
+   },
+   "job_record_fields": "model text2image_soul_v2；custom_reference {id: null, name: Rainie Hsu v2, url: …/00ef0b8a-fbe5-4ba9-b824-23d3736b976e.png（＝show_characters status 的 thumbnail）, strength 1}；enhance_prompt false；style General（3db34ab5-3439-4317-9e03-08dc30852e69）；無 input_images／reference_elements（Soul 任務）",
+   "element_v2": "a469f98d-11ae-42f3-8580-220d94cd473a（只用於訓練集 v2 的 Seedream 任務）",
+   "file_match": "dance_clone_r5/start_frame.png、dance_clone_r10/start_frame_v2.png 與平台結果逐像素相同（MAE 0）；training_v2/02 內嵌 hf-job-id＝d394eee3"
+  },
+  {
+   "t": "2026-10-28T07:47:50Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r23.json",
+   "items_max": 2,
+   "budget_each": 0.12,
+   "budget_total": 0.24
+  },
+  {
+   "t": "2026-10-28T07:47:50Z",
+   "step": "souls",
+   "checked": "Rainie Hsu v2 status ready（show_characters status）；與 profile 目前 Soul 相同",
+   "map": {
+    "rainie-hsu": "a4a000fe-fd96-4c36-97ff-0df9358a9b47"
+   }
+  },
+  {
+   "t": "2026-10-28T07:47:50Z",
+   "step": "quote（get_cost，唯讀）",
+   "samples": [
+    {
+     "set": "V-rainie-hsu",
+     "aspect": "3:4",
+     "credits_exact": 0.12
+    }
+   ],
+   "estimate": {
+    "items": 2,
+    "each": 0.12,
+    "total": 0.24,
+    "within_cap": true
+   },
+   "balance": 1182.43,
+   "balance_note": "餘額比 R22 結束時（1260.43）少，是帳號其他非本案的 Seedance 2.0 支出；不檢視、不歸入"
+  },
+  {
+   "t": "2026-10-28T07:47:50Z",
+   "step": "tx_boundary",
+   "newest_row": "2026-10-28T07:30:18.437080Z（非本案 Seedance 2.0 列）；本案只看之後送出時段的 Soul V2 列"
+  },
+  {
+   "t": "2026-10-28T07:47:50Z",
+   "step": "ledger",
+   "items": [
+    {
+     "index": 0,
+     "set": "V-rainie-hsu",
+     "v": "A",
+     "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+     "aspect": "3:4",
+     "prompt_sha256": "b4e351c369a090205f1825fc462ddd673ffc279e8cc54eb22659361750aed38b",
+     "job_id": "40611bd8-cafd-4ca8-aa01-74142f6521f1",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_A.png",
+     "sha256": "1c537b2727f2e9bb83a347ff09c1a206a873276025dca01f97549fdee2e802e0",
+     "size": [
+      1536,
+      2048
+     ],
+     "bytes": 4746981,
+     "downloaded_at": "2026-10-28T07:49:12Z"
+    },
+    {
+     "index": 1,
+     "set": "V-rainie-hsu",
+     "v": "B",
+     "soul_id": "a4a000fe-fd96-4c36-97ff-0df9358a9b47",
+     "aspect": "3:4",
+     "prompt_sha256": "a8f1107848044ffd0d3c37fc58f0314c235a4c48032a27e832f831186b68d306",
+     "job_id": "bb0abe03-75d0-4367-ae25-7eed2b69532b",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_B.png",
+     "sha256": "343ebe91d550ddddf4f21ccf743d4d00a3745fa8fbd8fb87b21edcd195238ce9",
+     "size": [
+      1536,
+      2048
+     ],
+     "bytes": 5322359,
+     "downloaded_at": "2026-10-28T07:49:13Z"
+    }
+   ]
+  },
+  {
+   "t": "2026-10-28T07:47:50Z",
+   "step": "intent",
+   "batch": 1,
+   "indices": [
+    0,
+    1
+   ],
+   "tool": "generate_image_batch",
+   "note": "各 1 次請求；送出前保存意圖，結果不明查原任務、不重送"
+  },
+  {
+   "t": "2026-10-28T07:48:42Z",
+   "step": "submit_result",
+   "batch": 1,
+   "submitted": [
+    0,
+    1
+   ],
+   "rejected_no_job": []
+  },
+  {
+   "t": "2026-10-28T07:49:29Z",
+   "step": "job_result",
+   "batch": 1,
+   "terminal": {
+    "completed": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "t": "2026-10-28T07:49:29Z",
+   "step": "charges",
+   "method": "依時窗推定：只看 tx_boundary 之後、本批送出時段的 Higgsfield Soul V2 列；他人其他模型列不檢視、不歸入",
+   "spend_rows": 2,
+   "each": -0.12,
+   "spend_total": -0.24,
+   "refund_rows": 0,
+   "net": -0.24,
+   "groups_utc": [
+    "07:48:34–07:48:35 ×2"
+   ],
+   "balance_before": 1182.43,
+   "balance_after": 1182.19,
+   "within_budget": true
+  },
+  {
+   "t": "2026-10-28T07:49:29Z",
+   "step": "downloads",
+   "count": 2,
+   "missing": [],
+   "check": "尺寸 1536×2048 與 PNG hf-job-id＝清冊任務 ID，2/2 相符"
+  }
+ ]
+}

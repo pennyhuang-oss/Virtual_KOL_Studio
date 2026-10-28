@@ -1,0 +1,49 @@
+{
+ "note": "M-4 R23 生成紀錄（公開可讀的摘要；不含 Soul ID、任務 ID 與交易原始列）。Claude 自查不是主管覆核，也不是 Penny 決定；照片全部保留供選片，不重生、不補生。",
+ "round": "M-4 R23",
+ "written_on": "2026-10-28",
+ "auth": "docs/calendar/data/cal_m4_auth_r23.json",
+ "prompts": "docs/calendar/data/cal_m4_r23_prompts.json",
+ "grading": "docs/calendar/data/cal_m4_r23_grading.json",
+ "owner": "docs/calendar/data/cal_m4_owner_r23.json",
+ "rainie_check": "docs/calendar/data/cal_m4_r23_rainie_check.json",
+ "settings": "Rainie 確認正確的既有 Soul（ready，與 profile 目前 Soul 相同）、soul_2、2k、直式 3:4；無參考圖、不傳 style、不用 unlim、不訓練。",
+ "counts": {
+  "requests": 2,
+  "images": 2,
+  "blocked": 0,
+  "retries": 0,
+  "extra_generations": 0
+ },
+ "cost": {
+  "quote_each": 0.12,
+  "cap_total": 0.24,
+  "spend_rows": 2,
+  "refund_rows": 0,
+  "charged_net": 0.24,
+  "attribution": "依時窗推定（只看本批送出時段的 Soul V2 列）",
+  "balance_before": 1182.43,
+  "balance_after": 1182.19
+ },
+ "self_review": [
+  {
+   "set": "V-rainie-hsu",
+   "v": "A",
+   "img_id": "V-rainie-hsu-R23-A",
+   "v_text": "5 月午後林蔭巷弄、白牆咖啡館邊，拿冰拿鐵、正面看鏡頭微笑，日常可信。原尺寸臉部：眼睛寬約 63 px（與早期正常圖 64–68 px 相同等級），雙眼瞳孔都在眼睛中央、方向一致，和早期正常圖並排看不出內聚。景別比設計寬（到大腿、設計是腰上），相機略高於視線；眼線仍有上揚（這個 Soul 一貫如此）。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "B",
+   "img_id": "V-rainie-hsu-R23-B",
+   "v_text": "同一巷弄全身、朝鏡頭慢慢走、看鏡頭微笑；人物占滿畫高、腳在下緣，平視中焦距，腿長比例自然，沒有仰拍拉伸或頭部縮小。臉較小（眼睛寬約 36 px），原尺寸看雙眼方向一致、沒有明顯內聚，但細節比 A 少。鞋子成了繫踝涼跟鞋（設計是尖頭高跟）。"
+  }
+ ],
+ "compare_with_early": "自查用原尺寸臉部與早期正常圖（訓練集 v2 自拍、R5 起始畫面）並排；量測方法同 cal_m4_r23_rainie_check.json",
+ "self_review_summary": "2 張全保留。A 眼睛清楚自然、與早期正常圖同等；B 長腿比例自然、眼睛正常但較小。換場景、臉朝鏡頭、只寫一個凝視指令、A 放大臉部後，本輪沒有出現先前的內聚現象——但只有 2 張，不能據此證實成因。",
+ "not_done": [
+  "不重生、不補生、不付費修圖",
+  "不改 canon、Soul ID、人設或月份",
+  "新圖不宣稱已接受"
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "note": "M-4 R23 V-Rainie 身分來源與任務設定查核（公開摘要，不含 Soul ID、任務 ID）。Owner 原話另存 cal_m4_owner_r23.json；本檔是執行者分析，分成已確認、未確認、推測三類。",
+ "round": "M-4 R23",
+ "written_on": "2026-10-28",
+ "early_normal": [
+  {
+   "file": "kols/rainie-hsu/images/training_v2/02_mirror_selfie_outfit_check.png",
+   "what": "早期自拍（2026-08-05，Soul 訓練集 v2 的一張）",
+   "route": "Seedream 4.5＋Reference Element（錨點 v2＝face_reference/candidate_02.png）；不是 Soul 產出",
+   "record": "原圖內嵌的任務識別與平台任務紀錄一致；紀錄顯示 Element 錨點 v2、無其他輸入圖",
+   "eyes": "雙眼看鏡頭、瞳孔位置對稱，正常",
+   "eye_width_px": 67.9,
+   "face_height_of_frame": 0.164,
+   "image_px": [
+    1440,
+    2560
+   ]
+  },
+  {
+   "file": "kols/rainie-hsu/images/dance_clone_r5/start_frame.png",
+   "what": "早期他拍（2026-08-07，R5 舞蹈克隆起始畫面）",
+   "route": "soul_2＋Soul「Rainie Hsu v2」，無參考圖",
+   "record": "原圖沒有內嵌任務識別；從平台取回該任務結果，與 repo 檔案逐像素相同（差異 0）",
+   "eyes": "正面、雙眼看鏡頭，瞳孔位置對稱，正常",
+   "eye_width_px": 63.6,
+   "face_height_of_frame": 0.173,
+   "image_px": [
+    1152,
+    2048
+   ]
+  }
+ ],
+ "confirmed": [
+  "R20、R21、R22 的 V-Rainie 6 張與 H-Rainie R20 2 張，送出時都用同一個 Soul（清冊記錄），與 profile.json 目前標示 ready 的 training_images_v2 Soul 一致；舊的 v1 Soul 在 profile 標為 deprecated，本案沒有用過",
+  "抽查 R20 A、R21 A、R22 A、R22 B 的平台任務紀錄：模型 Soul V2；身分參考名稱「Rainie Hsu v2」，參考圖網址等於該 Soul 目前的縮圖；強度 1；沒有任何輸入圖或 Reference Element；prompt 改寫（enhance_prompt）關閉；style 是平台預設 General（我們沒有傳 style）；prompt 與送出的全文相同",
+  "早期 Soul 產出（R5 起始畫面 2026-08-07、R10 起始畫面 2026-08-08）的任務紀錄：同一個身分參考名稱與網址、同一個預設 style、prompt 改寫關閉、沒有輸入圖——與本批設定相同",
+  "本批沒有套用參考圖；「只供人工比對的圖片」（訓練圖、錨點）從未送入本批任務",
+  "早期自拍（訓練集 v2）是 Seedream 4.5＋錨點 Element 生成的，不是 Soul 產出；它們是這個 Soul 的訓練來源",
+  "v1 錨點（candidate_01）與 v2 錨點（candidate_02）是兩張不同的臉（2026-08-05 換錨點時已記錄「換錨點＝換臉」）；目前 Rainie 的臉對應 v2",
+  "並排量測（同一臉部偵測工具）：早期正常圖的眼睛寬度 64–90 px、臉高佔畫面 16–21%；月曆 V-Rainie R20–R22 六張只有 32–46 px、臉高 12–14%（R22 兩張最小，約 32–34 px）",
+  "目視原尺寸眼部：早期 4 張正面看鏡頭的圖雙眼正常；R14 起始畫面（3/4 側臉、44 px）與月曆 R20 A 可見一眼瞳孔偏向鼻側"
+ ],
+ "unconfirmed": [
+  "平台任務紀錄的身分參考欄位沒有顯示 Soul ID（為空），Soul 的對應是由我方清冊與「參考圖網址＝該 Soul 縮圖」兩點確認，不是平台直接給出的 ID",
+  "H-Rainie R20 兩張臉太小，臉部偵測抓不到，沒有納入量測",
+  "平台內部是否在 8 月到 10 月間更新過 Soul V2 模型本身：紀錄看不出來，未確認"
+ ],
+ "speculation": [
+  "眼睛問題較可能和「臉在畫面中太小」有關：全身直式構圖讓眼睛只有 30–40 px，模型畫瞳孔的細節不足；加上頭轉向一側、視線另指一處時更容易出錯（R14、R20 A）。這是推測，沒有對照實驗證實",
+  "場景、服裝或某個 prompt 詞都沒有被證實是成因，不當作已知原因"
+ ],
+ "decision": "身分來源可確認（正確的既有 Soul、未用錯參考），不列阻塞；依 Owner 指示換新場景重製 2 張。設計上讓 A 的臉在畫面中夠大（中近景，眼睛預估 60 px 以上），臉與視線都朝向鏡頭、只寫一個凝視指令；B 全身取景讓人物占滿畫高，同樣正面看鏡頭。",
+ "measured": {
+  "early_v2_anchor": {
+   "eye_width_px": 77.5,
+   "face_height_of_frame": 0.182,
+   "image_px": [
+    1440,
+    2560
+   ]
+  },
+  "early_v2_02_selfie": {
+   "eye_width_px": 67.9,
+   "face_height_of_frame": 0.164,
+   "image_px": [
+    1440,
+    2560
+   ]
+  },
+  "early_v2_08_selfie": {
+   "eye_width_px": 90.1,
+   "face_height_of_frame": 0.205,
+   "image_px": [
+    1440,
+    2560
+   ]
+  },
+  "early_v2_12_selfie": {
+   "eye_width_px": 77.9,
+   "face_height_of_frame": 0.188,
+   "image_px": [
+    1440,
+    2560
+   ]
+  },
+  "soul_r5_start": {
+   "eye_width_px": 63.6,
+   "face_height_of_frame": 0.173,
+   "image_px": [
+    1152,
+    2048
+   ]
+  },
+  "soul_r5_start_v2": {
+   "eye_width_px": 66.2,
+   "face_height_of_frame": 0.175,
+   "image_px": [
+    1152,
+    2048
+   ]
+  },
+  "soul_r10_start_v2": {
+   "eye_width_px": 72.5,
+   "face_height_of_frame": 0.202,
+   "image_px": [
+    1152,
+    2048
+   ]
+  },
+  "soul_r14_start": {
+   "eye_width_px": 44.0,
+   "face_height_of_frame": 0.158,
+   "image_px": [
+    1152,
+    2048
+   ]
+  },
+  "V_R20_A": {
+   "eye_width_px": 41.4,
+   "face_height_of_frame": 0.125,
+   "image_px": [
+    1536,
+    2048
+   ]
+  },
+  "V_R20_B": {
+   "eye_width_px": 46.1,
+   "face_height_of_frame": 0.132,
+   "image_px": [
+    1536,
+    2048
+   ]
+  },
+  "V_R21_A": {
+   "eye_width_px": 40.3,
+   "face_height_of_frame": 0.125,
+   "image_px": [
+    1536,
+    2048
+   ]
+  },
+  "V_R21_B": {
+   "eye_width_px": 44.2,
+   "face_height_of_frame": 0.138,
+   "image_px": [
+    1536,
+    2048
+   ]
+  },
+  "V_R22_A": {
+   "eye_width_px": 32.4,
+   "face_height_of_frame": 0.116,
+   "image_px": [
+    1536,
+    2048
+   ]
+  },
+  "V_R22_B": {
+   "eye_width_px": 34.2,
+   "face_height_of_frame": 0.119,
+   "image_px": [
+    1536,
+    2048
+   ]
+  }
+ },
+ "tool": "docs/calendar/tools/cal_face_lib.py 的臉部特徵點（眼角距離換算眼睛寬度、臉部範圍換算臉高比例）；瞳孔位置的自動量測對這類細微偏移不敏感，結論以原尺寸目視並排為準"
+}

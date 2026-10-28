@@ -1,0 +1,33 @@
+{
+ "note": "M-4 R23 授權摘要（Penny 送出 R23 指令即授權；本檔不含 Soul ID、任務 ID）",
+ "round": "M-4 R23",
+ "written_on": "2026-10-28",
+ "head_at_start": "04b1a87",
+ "owner_page_version": "fbf5674",
+ "generation": {
+  "sets": [
+   "V-rainie-hsu（新場景重製；先核對身分來源，可確認才送出）"
+  ],
+  "max_images": 2,
+  "requests_each": 1,
+  "cap_each": 0.12,
+  "cap_total": 0.24,
+  "retry": "不重試、不補生、不訓練、不新建 Soul、不換人"
+ },
+ "local": {
+  "items": [
+   "H-somi-oh R22-2（提高明亮度與適度飽和度）"
+  ],
+  "how": "本機調色 1 個版本，另存衍生檔、不覆蓋原圖；不使用付費編輯"
+ },
+ "settings": "本人確認正確的既有 Soul、soul_2、2k、3:4；無參考圖、不傳 style、不用 unlim",
+ "site": "更新既有 cal2027-decision（原網址）；不改存取設定、不新增服務",
+ "not_authorized": [
+  "合併 main",
+  "聯絡廠商",
+  "付費修圖",
+  "訓練或新建 Soul",
+  "自動重試或補生",
+  "動已定案照片"
+ ]
+}

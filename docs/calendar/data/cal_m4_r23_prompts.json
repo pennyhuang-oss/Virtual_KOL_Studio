@@ -1,0 +1,30 @@
+{
+ "note": "M-4 R23 送出 prompt 清單（公開可讀；不含 Soul ID 與任務 ID）。",
+ "round": "M-4 R23",
+ "generator": "review/calendar/m4_r23/specs.py＋assemble.py（身分段落沿用 R20–R22）",
+ "end_line": "Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.",
+ "items": [
+  {
+   "set": "V-rainie-hsu",
+   "v": "A",
+   "month": 5,
+   "ratio": "3:4",
+   "change": "中近景（腰上）：正對鏡頭、拿一杯冰拿鐵在腰間、自然微笑；臉在畫面中夠大，雙眼清楚",
+   "note": "Owner 要求換場景：捨棄 R20–R22 的雨夜街道、櫥窗與皮衣，改成 5 月晴朗午後的安靜林蔭巷弄（日常寫真）；樹蔭下的柔和天光正面照臉，不用夜間混光。服裝保留角色 canon（貼身、精心打扮、高跟鞋、首飾），改成適合白天的白色細肩帶方領短洋裝。A 中近景、B 全身，同一場景與服裝，各一個主要動作；兩張都只寫「看著鏡頭」一個凝視指令，臉也正對鏡頭。",
+   "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a fitted ivory square-neck mini dress with thin straps, a slim gold chain necklace, small gold hoop earrings and nude pointed-toe heels. Setting: a quiet tree-lined lane in Taipei on a sunny afternoon in May, fresh green leaves overhead, a small café with a plain white wall and a wooden bench, a few potted plants, no signs or text, nobody else around. Moment: she stands facing the camera by the white café wall, holding a takeaway iced latte in one hand at her waist, and smiles softly, looking into the camera. Shot: waist-up, from a little above her head to just below her waist. Camera: vertical 3:4, at her eye level, level, an 85mm lens from about 2.2 metres, shallow depth of field, natural perspective. Composition: her face in the upper third, slightly left of centre, the white wall and soft green leaves behind her. Light: she is in the open shade of the trees, the bright open sky in front of her lighting her face softly and evenly; sunlight falls on the leaves and the lane behind her; fresh green, ivory, warm skin tones and soft gold. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.",
+   "sha256": "b4e351c369a090205f1825fc462ddd673ffc279e8cc54eb22659361750aed38b",
+   "words": 269
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "B",
+   "month": 5,
+   "ratio": "3:4",
+   "change": "全身較遠景：沿巷弄慢慢朝鏡頭走來、雙手自然放鬆、看鏡頭微笑；人物占滿畫高，腿長比例自然",
+   "note": "Owner 要求換場景：捨棄 R20–R22 的雨夜街道、櫥窗與皮衣，改成 5 月晴朗午後的安靜林蔭巷弄（日常寫真）；樹蔭下的柔和天光正面照臉，不用夜間混光。服裝保留角色 canon（貼身、精心打扮、高跟鞋、首飾），改成適合白天的白色細肩帶方領短洋裝。A 中近景、B 全身，同一場景與服裝，各一個主要動作；兩張都只寫「看著鏡頭」一個凝視指令，臉也正對鏡頭。",
+   "prompt": "A 24-year-old adult Taiwanese woman with her natural fair skin tone, high cheekbones and a sculpted jaw, soft-glam makeup with a soft brown liner close to the lash line, long straight jet-black hair worn sleek and glossy with a deep side part. Curvy figure, 165 cm tall, bust 94 cm, waist 59 cm, hips 92 cm, F cup, full chest and slim waist. She wears a fitted ivory square-neck mini dress with thin straps, a slim gold chain necklace, small gold hoop earrings and nude pointed-toe heels. Setting: a quiet tree-lined lane in Taipei on a sunny afternoon in May, fresh green leaves overhead, a small café with a plain white wall and a wooden bench, a few potted plants, no signs or text, nobody else around. Moment: she walks slowly toward the camera along the lane with her arms relaxed, smiling and looking into the camera. Shot: full-length, from just above her head to just below her heels, her figure filling most of the frame height, her feet near the bottom edge. Camera: vertical 3:4, at her waist height, level, an 85mm lens from about 6.5 metres, natural perspective with natural body proportions. Composition: she walks in the centre of the lane, the green trees and the white café wall softly out of focus on either side. Light: she is in the open shade of the trees, the bright open sky in front of her lighting her face softly and evenly; sunlight falls on the leaves and the lane behind her; fresh green, ivory, warm skin tones and soft gold. Natural skin texture with visible pores, believable light that belongs to the scene, refined colour grading.",
+   "sha256": "a8f1107848044ffd0d3c37fc58f0314c235a4c48032a27e832f831186b68d306",
+   "words": 277
+  }
+ ]
+}
