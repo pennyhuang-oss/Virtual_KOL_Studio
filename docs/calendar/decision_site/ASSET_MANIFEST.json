@@ -5697,206 +5697,6 @@
    "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
   },
   {
-   "published": "public/img/pick/V-rainie-hsu-R24-A_view.jpg",
-   "sha256": "0370960611b759765bce019047e62f95f73b1374553ca7ac78997fbd467649a4",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R24-A",
-   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_A.png",
-   "source_sha256": "27d1d31b2253ec236ed651006afa95a29b111fbf7c8905ba6f007ae14ef3a4b3",
-   "op": "原圖 1728×2304 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R24-A.jpg",
-   "sha256": "dfad2f0d4024ad445e060748f35be2ccc7fad795c5b867016d696c8d85d92092",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R24-A",
-   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_A.png",
-   "source_sha256": "27d1d31b2253ec236ed651006afa95a29b111fbf7c8905ba6f007ae14ef3a4b3",
-   "op": "原圖 1728×2304 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R24-B_view.jpg",
-   "sha256": "58656c21c1f6e5e121a8a2d76f1c207c90ed4dd1de6dab8368c68f2cec458931",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R24-B",
-   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_B.png",
-   "source_sha256": "8dc8bf7abe6df5b7faaca489f004eed00df905862d4c28052bfbb6de2692de96",
-   "op": "原圖 1728×2304 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R24-B.jpg",
-   "sha256": "9b7b1074de8f93e7cbd89ac7643b240fb15e0a3fffba18d596edf483c673f71f",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R24-B",
-   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_B.png",
-   "source_sha256": "8dc8bf7abe6df5b7faaca489f004eed00df905862d4c28052bfbb6de2692de96",
-   "op": "原圖 1728×2304 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R20-A_view.jpg",
-   "sha256": "1058d3eabf103f21af4100d139cad699e1ab52d2e0945b9f94f0573490c2009c",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R20-A",
-   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_A.png",
-   "source_sha256": "9c2cdfe4004cc270f30c5867dd8708c4fecd7aa8b81dcdb33aeb46d2e0e9b61d",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R20-A.jpg",
-   "sha256": "62e5a07554bcac1082a98ba5db24f6a1e9d0f4863615740b447e040fac7eeb28",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R20-A",
-   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_A.png",
-   "source_sha256": "9c2cdfe4004cc270f30c5867dd8708c4fecd7aa8b81dcdb33aeb46d2e0e9b61d",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R20-B_view.jpg",
-   "sha256": "dd9c7f63ae5596ff0cde17b904cca30c0c4422ed51570f9eed3162ed5bcbc708",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R20-B",
-   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_B.png",
-   "source_sha256": "688cb14416c11ee9bc431912a6193f5b30e712a499c8a4b481e3ea778e9b8dfa",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R20-B.jpg",
-   "sha256": "65620025d19c78d0af83e68d66d80160bcc694a779525823f8b0340f4be7e9dd",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R20-B",
-   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_B.png",
-   "source_sha256": "688cb14416c11ee9bc431912a6193f5b30e712a499c8a4b481e3ea778e9b8dfa",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R21-A_view.jpg",
-   "sha256": "f83f75b316e6a0b619e68d8c48e30a09bbc4b76a868a7eeb105a88f7ced74103",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R21-A",
-   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_A.png",
-   "source_sha256": "9b607c3fdec235360065aa69ad8876ac71fe9f17b24dedb7c8631ff2db9260b7",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R21-A.jpg",
-   "sha256": "48b8dec5df5bd4f7202bd17e074f9213d1a4c554e00769596acb2d5e79c31da6",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R21-A",
-   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_A.png",
-   "source_sha256": "9b607c3fdec235360065aa69ad8876ac71fe9f17b24dedb7c8631ff2db9260b7",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R21-B_view.jpg",
-   "sha256": "192c41bd562f8a717714e19d0b53f57e01ca1c9d065e49e3c5f5f55d3a94af79",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R21-B",
-   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_B.png",
-   "source_sha256": "fcbb892fef0f9362fef24ba37c299230da1a330c4c7d092821afd6d4f95d2ee4",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R21-B.jpg",
-   "sha256": "92e3f0cdefb8fd62d13ef7ba684ddb54a66ad290d7a16aa29c59f9d6cd6f41e1",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R21-B",
-   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_B.png",
-   "source_sha256": "fcbb892fef0f9362fef24ba37c299230da1a330c4c7d092821afd6d4f95d2ee4",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R22-A_view.jpg",
-   "sha256": "5aaded058e093d5fac543377a56922a13e2042ba94ba930aa1a5cf680dd27d3d",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R22-A",
-   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_A.png",
-   "source_sha256": "ceab0c3bb8ef18c13fcae704563413cb7fb540b996a7bb78b8160ea02717f33a",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R22-A.jpg",
-   "sha256": "004f296e755b1a0e7801d91e29108f8004520de6609da7575b8aaf99dde6db5f",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R22-A",
-   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_A.png",
-   "source_sha256": "ceab0c3bb8ef18c13fcae704563413cb7fb540b996a7bb78b8160ea02717f33a",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R22-B_view.jpg",
-   "sha256": "c910a5c956f95673ec07a4dcd31931a266073ec2da22fe75df1c9c793e561a33",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R22-B",
-   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_B.png",
-   "source_sha256": "e62f2eef4d52b5bf60ad7a2e3ac5741b0df11849ff3eedbe8c3c7d3ac81ab0c3",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R22-B.jpg",
-   "sha256": "04b67d625ed74877f106ddf22e9220c66415dbd8cb1ba778ac0f2cb923ec3875",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R22-B",
-   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_B.png",
-   "source_sha256": "e62f2eef4d52b5bf60ad7a2e3ac5741b0df11849ff3eedbe8c3c7d3ac81ab0c3",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R23-A_view.jpg",
-   "sha256": "b09241a2b0eb14ae65b4c164ccbe6a35ff015593f28d80dca3a8f0a387734d9c",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R23-A",
-   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_A.png",
-   "source_sha256": "1c537b2727f2e9bb83a347ff09c1a206a873276025dca01f97549fdee2e802e0",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R23-A.jpg",
-   "sha256": "ee961b790e11cfb2b581ba368c4d3996b16056aa8ccae69cb12ded6c8e5e722e",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R23-A",
-   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_A.png",
-   "source_sha256": "1c537b2727f2e9bb83a347ff09c1a206a873276025dca01f97549fdee2e802e0",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R23-B_view.jpg",
-   "sha256": "0a2f58ef6017ecdbd33e909ee0e7673e9aa7700500a160fc3c7be6759101ece6",
-   "kind": "pick_preview",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R23-B",
-   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_B.png",
-   "source_sha256": "343ebe91d550ddddf4f21ccf743d4d00a3745fa8fbd8fb87b21edcd195238ce9",
-   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
-  },
-  {
-   "published": "public/img/pick/V-rainie-hsu-R23-B.jpg",
-   "sha256": "5e39d8dbc20de3940502ca72b6df9a51e67558df734f79022bc0a30a00f98c69",
-   "kind": "pick_full",
-   "set": "V-rainie-hsu",
-   "img_id": "V-rainie-hsu-R23-B",
-   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_B.png",
-   "source_sha256": "343ebe91d550ddddf4f21ccf743d4d00a3745fa8fbd8fb87b21edcd195238ce9",
-   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
-  },
-  {
    "published": "public/img/pick/H-yuna-kim-R20-B_view.jpg",
    "sha256": "cad6643eb9c9579d9b4e793502572fe33515a356d801c1b33c2bf8fd3805e925",
    "kind": "pick_preview",
@@ -6217,6 +6017,26 @@
    "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
   },
   {
+   "published": "public/img/pick/V-rainie-hsu-R24-A_view.jpg",
+   "sha256": "0370960611b759765bce019047e62f95f73b1374553ca7ac78997fbd467649a4",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R24-A",
+   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_A.png",
+   "source_sha256": "27d1d31b2253ec236ed651006afa95a29b111fbf7c8905ba6f007ae14ef3a4b3",
+   "op": "原圖 1728×2304 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R24-A.jpg",
+   "sha256": "dfad2f0d4024ad445e060748f35be2ccc7fad795c5b867016d696c8d85d92092",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R24-A",
+   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_A.png",
+   "source_sha256": "27d1d31b2253ec236ed651006afa95a29b111fbf7c8905ba6f007ae14ef3a4b3",
+   "op": "原圖 1728×2304 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
    "published": "public/img/pick/V-luna-tanaka-R20-B-G21_view.jpg",
    "sha256": "33f3f85093f2e549e69f800fbf60c4772e1300b592e898be224071ee7e4a5a3a",
    "kind": "pick_preview",
@@ -6354,6 +6174,1346 @@
    "img_id": "V-somi-oh-R22-B",
    "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r22_B.png",
    "source_sha256": "c07a71d21cb6b9adbda1221006b80f1f7a783bad4c7286a93ae4a300508e8150",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yuna-kim-R20-A_view.jpg",
+   "sha256": "cee022e0db6f45a3dc44710d2a997ec4ff3b5df70deeccf09bdd45f8d5763f72",
+   "kind": "pick_preview",
+   "set": "H-yuna-kim",
+   "img_id": "H-yuna-kim-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yuna-kim/images/calendar_2027_batch1/H-yuna-kim_m4r20_A.png",
+   "source_sha256": "11f24d93c646b3bb3503bece293103b9e613533db4edc1417ac6471e5d45549e",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yuna-kim-R20-A.jpg",
+   "sha256": "5a46da4e6c850e668dec0bd7d3e035fec712fa8cbb9867b16b5de1db29cf762e",
+   "kind": "pick_full",
+   "set": "H-yuna-kim",
+   "img_id": "H-yuna-kim-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yuna-kim/images/calendar_2027_batch1/H-yuna-kim_m4r20_A.png",
+   "source_sha256": "11f24d93c646b3bb3503bece293103b9e613533db4edc1417ac6471e5d45549e",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rin-ayase-R20-A_view.jpg",
+   "sha256": "3fbcdfc5a9d26a3656f9eb8ff5497a8457ec956c7c7f434e91a7aae56101c3f1",
+   "kind": "pick_preview",
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r20_A.png",
+   "source_sha256": "f1edef7bc1daaad6ad5de5173eb06d6dbea9893e006f1956a81e223667d591dd",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rin-ayase-R20-A.jpg",
+   "sha256": "15af95b3efbf5da404dc974b6b2791b7e50916b653f98cd863f77ee5c855e6bd",
+   "kind": "pick_full",
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r20_A.png",
+   "source_sha256": "f1edef7bc1daaad6ad5de5173eb06d6dbea9893e006f1956a81e223667d591dd",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rin-ayase-R20-B_view.jpg",
+   "sha256": "1747a16e7f68647f03a8765b89095c69b98174dedfd7bcb9a2b555344adde655",
+   "kind": "pick_preview",
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r20_B.png",
+   "source_sha256": "6c71248ebea4b918780e53af1bc26f856f8c4e96f2e50b254e3ced5ff97b3af7",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rin-ayase-R20-B.jpg",
+   "sha256": "7cf29606f0cb008c1272527470de359c3130be276810fea5af2ab049cfb165a6",
+   "kind": "pick_full",
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r20_B.png",
+   "source_sha256": "6c71248ebea4b918780e53af1bc26f856f8c4e96f2e50b254e3ced5ff97b3af7",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rin-ayase-R21-2_view.jpg",
+   "sha256": "619fb9b58b3c91975014083a82372c77d3d3aadcf0b38a614bcbac9fbb989ff4",
+   "kind": "pick_preview",
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R21-2",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r21_B.png",
+   "source_sha256": "79f53de41e219bbbbd038d233e8c768271cf07c72a83d86b05c1c5ddfa2ae8e7",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rin-ayase-R21-2.jpg",
+   "sha256": "fe63f1bd777a91737f0b4ad6ea78b5c0beab44517b186200bfbeb1840086d4f5",
+   "kind": "pick_full",
+   "set": "H-rin-ayase",
+   "img_id": "H-rin-ayase-R21-2",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r21_B.png",
+   "source_sha256": "79f53de41e219bbbbd038d233e8c768271cf07c72a83d86b05c1c5ddfa2ae8e7",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-miu-shiraishi-R20-A_view.jpg",
+   "sha256": "e3730d210a7aa48b4c9c215ef2a21d5da1bf0ffce0d3b2651af20f3082cfaa2e",
+   "kind": "pick_preview",
+   "set": "H-miu-shiraishi",
+   "img_id": "H-miu-shiraishi-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/H-miu-shiraishi_m4r20_A.png",
+   "source_sha256": "3f7972c582b5d366f23869527d1329ec6d329cbbb539591029b7fe8d8af714c4",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-miu-shiraishi-R20-A.jpg",
+   "sha256": "3f94d76ad61bbedd81dd440b035c10b6e950be385b48e7df07e4518cf6454eaa",
+   "kind": "pick_full",
+   "set": "H-miu-shiraishi",
+   "img_id": "H-miu-shiraishi-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/H-miu-shiraishi_m4r20_A.png",
+   "source_sha256": "3f7972c582b5d366f23869527d1329ec6d329cbbb539591029b7fe8d8af714c4",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-miu-shiraishi-R20-B_view.jpg",
+   "sha256": "db33b6b916da226634cf65a92905d16578945067bf10158aff6b22cf24f24463",
+   "kind": "pick_preview",
+   "set": "H-miu-shiraishi",
+   "img_id": "H-miu-shiraishi-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/H-miu-shiraishi_m4r20_B.png",
+   "source_sha256": "2d0d1bacfa44ce6716add83d34c184f8546cb00887c0744b594ca7f2b62a38f2",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-miu-shiraishi-R20-B.jpg",
+   "sha256": "0133ddbba1af25e00b8a3eab306674fa7ea7bdc715b59a89954057def731343b",
+   "kind": "pick_full",
+   "set": "H-miu-shiraishi",
+   "img_id": "H-miu-shiraishi-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/H-miu-shiraishi_m4r20_B.png",
+   "source_sha256": "2d0d1bacfa44ce6716add83d34c184f8546cb00887c0744b594ca7f2b62a38f2",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-tammy-chou-R20-A_view.jpg",
+   "sha256": "cc7a682624a43fe57cd8c76ff71b7acecee758036a2a05edbbadc2d082064cdb",
+   "kind": "pick_preview",
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r20_A.png",
+   "source_sha256": "68700cd528add558f35a3716f8d4a0acfe1b0f09842c8a1aae964966f81fb778",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-tammy-chou-R20-A.jpg",
+   "sha256": "66a9f93047ab12b373ffe4ae279230a9de3ca66da7eb5839cabe375d514dc37e",
+   "kind": "pick_full",
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r20_A.png",
+   "source_sha256": "68700cd528add558f35a3716f8d4a0acfe1b0f09842c8a1aae964966f81fb778",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-tammy-chou-R20-B_view.jpg",
+   "sha256": "b8c907cf1e85bb8e0b6873fa2287f35cffbfc7456d13a6ed8c6c0b6d36cdd512",
+   "kind": "pick_preview",
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r20_B.png",
+   "source_sha256": "a24ae7a9f6a7ec0e185d767be20a8e68766cb1231171ef5259cd24e054a6755e",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-tammy-chou-R20-B.jpg",
+   "sha256": "343d0a2bed2846bc0b38f6e0920d621f7eff6dfd31d6a47141589ec2335f7e2c",
+   "kind": "pick_full",
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r20_B.png",
+   "source_sha256": "a24ae7a9f6a7ec0e185d767be20a8e68766cb1231171ef5259cd24e054a6755e",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-tammy-chou-R21-B_view.jpg",
+   "sha256": "5e2ee84fe6ae1cc97137010a0a3149fb9639a987a39d353bcad4e4e6439a4360",
+   "kind": "pick_preview",
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r21_B.png",
+   "source_sha256": "7fedb77fde80ddac6931665a99f9a210ea30e6d554f25b99a9b8ff080ea44699",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-tammy-chou-R21-B.jpg",
+   "sha256": "5315837a1d39100c33cbb970408ca77524a962a7d4b5734a590edd0448b2b932",
+   "kind": "pick_full",
+   "set": "H-tammy-chou",
+   "img_id": "H-tammy-chou-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r21_B.png",
+   "source_sha256": "7fedb77fde80ddac6931665a99f9a210ea30e6d554f25b99a9b8ff080ea44699",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R5_view.jpg",
+   "sha256": "8db650054d86c92febb00e99bcb18716c3636f0753969406b00e5f1e0924ca31",
+   "kind": "pick_preview",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+   "source_sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R5.jpg",
+   "sha256": "b2bfe829ef13ff0a8af451a54c90e3ae1c7758b5e0498d4f410c9e04277db89a",
+   "kind": "pick_full",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r5.png",
+   "source_sha256": "90ba5ebb763ee8b47f022f2d64cf215c9422d7530ceb1bc0ce635925f1c3db8a",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R18_view.jpg",
+   "sha256": "d2213d83ea3ba70ad068a520a2ca7244ad033d551bf5c3c16371a1665c46dd8d",
+   "kind": "pick_preview",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R18",
+   "source": "998a565f7735bb3159e9a3d3b92fe1845f548eda:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r18.png",
+   "source_sha256": "d8371f60d8eae5f0e9178bfdd88d074744421daffa1341beaa6bc869eb9780ca",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R18.jpg",
+   "sha256": "b72d7d408180f167bbb3c57d9aea20c9e5bd59ab235f4145e2420ed001119ddf",
+   "kind": "pick_full",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R18",
+   "source": "998a565f7735bb3159e9a3d3b92fe1845f548eda:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r18.png",
+   "source_sha256": "d8371f60d8eae5f0e9178bfdd88d074744421daffa1341beaa6bc869eb9780ca",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R20-A_view.jpg",
+   "sha256": "7eb443689e60c353d0c593c299b0a8ef9e5d550b9f8caab5e5567f823eae75d6",
+   "kind": "pick_preview",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r20_A.png",
+   "source_sha256": "4ab8eb24ac834d25957aa332e2b3eaa74b6d17afb5705043c6ab367f3d87e6a9",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R20-A.jpg",
+   "sha256": "d2c961693f98fae74cd71758068ac0558dc285a8c6ffcbdd979102d34d6adba1",
+   "kind": "pick_full",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r20_A.png",
+   "source_sha256": "4ab8eb24ac834d25957aa332e2b3eaa74b6d17afb5705043c6ab367f3d87e6a9",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R20-B_view.jpg",
+   "sha256": "4d801cb872a6593dc1a0a4cd92b01cddf8392378b55be1fb8b2830b70a85ac7b",
+   "kind": "pick_preview",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r20_B.png",
+   "source_sha256": "85210de1e18703694db16c275f1a41cd75c3da3d368f33b0e3f84e23aca91bca",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R20-B.jpg",
+   "sha256": "4ebaebfad5480b5225ead6e3234ba63f649821887fb3fe3a164dfbace4290dc5",
+   "kind": "pick_full",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r20_B.png",
+   "source_sha256": "85210de1e18703694db16c275f1a41cd75c3da3d368f33b0e3f84e23aca91bca",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R21-B_view.jpg",
+   "sha256": "076a42ffbcc47227b6ce5d9757a43d9aab517fe64e10c4ad36ef4ea82084fb0a",
+   "kind": "pick_preview",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r21_B.png",
+   "source_sha256": "918db730b2248be1e280a213fb80a08bb8591be81a7e4b17895ed616a1255aea",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-yerin-han-R21-B.jpg",
+   "sha256": "6b478d896df4671cf0cc58819371b28ac057ee46f71d248faaef265269dc4c95",
+   "kind": "pick_full",
+   "set": "H-yerin-han",
+   "img_id": "H-yerin-han-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r21_B.png",
+   "source_sha256": "918db730b2248be1e280a213fb80a08bb8591be81a7e4b17895ed616a1255aea",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-coco-wu-R20-A_view.jpg",
+   "sha256": "c4a5166ba291a4d34cbf1339f9d67de0fa9764120e8f9c53d7854125f18d484f",
+   "kind": "pick_preview",
+   "set": "H-coco-wu",
+   "img_id": "H-coco-wu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A.png",
+   "source_sha256": "7d51265052a253b0974dbc3a4fc5ca5cba44d56ec5088ae7465f6e9a5a4ebdda",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-coco-wu-R20-A.jpg",
+   "sha256": "b6eda0994c328a35df073699ee6082c43f09c2e6701fa0487449ead3d1e40b78",
+   "kind": "pick_full",
+   "set": "H-coco-wu",
+   "img_id": "H-coco-wu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A.png",
+   "source_sha256": "7d51265052a253b0974dbc3a4fc5ca5cba44d56ec5088ae7465f6e9a5a4ebdda",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-coco-wu-R20-B_view.jpg",
+   "sha256": "778e3046f99040d39466d3d7a59bcc9cd15b608e621f1c47fde46e27e6da9bab",
+   "kind": "pick_preview",
+   "set": "H-coco-wu",
+   "img_id": "H-coco-wu-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_B.png",
+   "source_sha256": "377dccb3bf09ff52f1c5e0dacfb2c05da9c131d3b4c1be8686e5512256741cba",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-coco-wu-R20-B.jpg",
+   "sha256": "21f33c00e0a9cd94e99b06966ba0d1e3e401c9faefe4a8ab03b0335ef89b70ab",
+   "kind": "pick_full",
+   "set": "H-coco-wu",
+   "img_id": "H-coco-wu-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_B.png",
+   "source_sha256": "377dccb3bf09ff52f1c5e0dacfb2c05da9c131d3b4c1be8686e5512256741cba",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R20-A_view.jpg",
+   "sha256": "5ac08fedb6ca2a5f68799503943c7a8e83ea721cab5c9a2a969dcaa2b7da3582",
+   "kind": "pick_preview",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r20_A.png",
+   "source_sha256": "971daa9aed967d980f2f19344ffa84255571b779cd3bb9ee583febaeb4f267ff",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R20-A.jpg",
+   "sha256": "b9d52968cbc035000b7c91bf385f997025163a5aeeba098d539a82c3cca5b30f",
+   "kind": "pick_full",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r20_A.png",
+   "source_sha256": "971daa9aed967d980f2f19344ffa84255571b779cd3bb9ee583febaeb4f267ff",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R20-B_view.jpg",
+   "sha256": "67794a5f320c6b52cc1de6c5fab31d35d27a42b6990a8ae4942598f1c8de1cd4",
+   "kind": "pick_preview",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r20_B.png",
+   "source_sha256": "72f8ef2c7267fd2946b57a7595d82d43af14fc1c14c8b49f4647c54005c1ce0a",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R20-B.jpg",
+   "sha256": "bfe1cd26d529a8d6c7835336fbc4e0890526f7ccdc52b5b732b14deae4cb767f",
+   "kind": "pick_full",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r20_B.png",
+   "source_sha256": "72f8ef2c7267fd2946b57a7595d82d43af14fc1c14c8b49f4647c54005c1ce0a",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R21-A_view.jpg",
+   "sha256": "ca2fb15aa5688b737bd263b66d52e308990783de940f697fa0fa3948df3b8011",
+   "kind": "pick_preview",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r21_A.png",
+   "source_sha256": "ceebc72ea3f43e248d49663447112265bd3094d4a35e4e72f5c801f5fa95cfc6",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R21-A.jpg",
+   "sha256": "bf3fe20e8b627a2a5c90ce2a5bbdb128c825f12cef5197736511a3ae89fa5c45",
+   "kind": "pick_full",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r21_A.png",
+   "source_sha256": "ceebc72ea3f43e248d49663447112265bd3094d4a35e4e72f5c801f5fa95cfc6",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R21-B_view.jpg",
+   "sha256": "3b811215ee53967e890eac88b5a66c2bdaf521b62c8bddabfdcedf6f7a1fd36f",
+   "kind": "pick_preview",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r21_B.png",
+   "source_sha256": "0422d7e222322ffc0f74d327c011d31faf8a61434956d2e1ad0885ca70b41e5d",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R21-B.jpg",
+   "sha256": "823cf8c425168fc804cf6c578dcd9b8072061422ccd46484488ea5752d868b8b",
+   "kind": "pick_full",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r21_B.png",
+   "source_sha256": "0422d7e222322ffc0f74d327c011d31faf8a61434956d2e1ad0885ca70b41e5d",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R22-B_view.jpg",
+   "sha256": "3772b0b79890dcb9db6edfc627054081cc0884f7e6c93ff51c37445f14e1366b",
+   "kind": "pick_preview",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R22-B",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r22_B.png",
+   "source_sha256": "ebee8defe53b4c6898fa412dd0ef950a7584f893e3af7481fddfb29c26a5911f",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-mia-huang-R22-B.jpg",
+   "sha256": "8907390b55d0111778ee34b02cc173cf16be7b98123acfaf801f0f25d6e510e5",
+   "kind": "pick_full",
+   "set": "H-mia-huang",
+   "img_id": "H-mia-huang-R22-B",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r22_B.png",
+   "source_sha256": "ebee8defe53b4c6898fa412dd0ef950a7584f893e3af7481fddfb29c26a5911f",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-iris-chen-R20-B_view.jpg",
+   "sha256": "b06ab687349b8fd60750dfeb351cdcd59ade3258e846327ab5815981162a54c4",
+   "kind": "pick_preview",
+   "set": "H-iris-chen",
+   "img_id": "H-iris-chen-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/iris-chen/images/calendar_2027_batch1/H-iris-chen_m4r20_B.png",
+   "source_sha256": "2be2071091fe2103f3f29f9956868ee4e6958b7491871d4294746186d52274d4",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-iris-chen-R20-B.jpg",
+   "sha256": "46f77f25bb5094357ebe05bc23d3b5bf6d92584beba5d9584ee1d96dffe64f14",
+   "kind": "pick_full",
+   "set": "H-iris-chen",
+   "img_id": "H-iris-chen-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/iris-chen/images/calendar_2027_batch1/H-iris-chen_m4r20_B.png",
+   "source_sha256": "2be2071091fe2103f3f29f9956868ee4e6958b7491871d4294746186d52274d4",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-jia-seo-R5_view.jpg",
+   "sha256": "d2bb86d65828cb90ba2ef6871d61f12e5aede09b0a84ae73b26a0d550210745e",
+   "kind": "pick_preview",
+   "set": "H-jia-seo",
+   "img_id": "H-jia-seo-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+   "source_sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-jia-seo-R5.jpg",
+   "sha256": "f9066c3d1a26cfdc3652b9834267d5b6b5b268996cb9741c545632df1577e7c9",
+   "kind": "pick_full",
+   "set": "H-jia-seo",
+   "img_id": "H-jia-seo-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r5.png",
+   "source_sha256": "76284f2f9d0cae2788ede31d882ca678aba50fcf5d64f29ea929d2d776b4c431",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-jia-seo-R18_view.jpg",
+   "sha256": "c20af956b184465c3f5c2da9d901b2a2ef964a0c972ffdfc43ae1ca284de859c",
+   "kind": "pick_preview",
+   "set": "H-jia-seo",
+   "img_id": "H-jia-seo-R18",
+   "source": "998a565f7735bb3159e9a3d3b92fe1845f548eda:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r18.png",
+   "source_sha256": "44926eb4e2b75269de8edb1d314d3a46926e858414a2a09d07d250f1c4a531d4",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-jia-seo-R18.jpg",
+   "sha256": "742fd7e64c542c24b863a22fef0d848306a8c508dbb322c66c9ab1a4a91d2ee7",
+   "kind": "pick_full",
+   "set": "H-jia-seo",
+   "img_id": "H-jia-seo-R18",
+   "source": "998a565f7735bb3159e9a3d3b92fe1845f548eda:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r18.png",
+   "source_sha256": "44926eb4e2b75269de8edb1d314d3a46926e858414a2a09d07d250f1c4a531d4",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-jia-seo-R20-A_view.jpg",
+   "sha256": "5ffa481f4453388a06205ae982f71c8d56651ba80c938379c101725a39e240b0",
+   "kind": "pick_preview",
+   "set": "H-jia-seo",
+   "img_id": "H-jia-seo-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r20_A.png",
+   "source_sha256": "6a705d4aa01b186361c9bdb4825ce3a4d103a10a799afe04cd0042509f3795d9",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-jia-seo-R20-A.jpg",
+   "sha256": "60978b69f77eca5645075a49e9d002ac7c9f8e1f4b0c6522fb785937c6f95372",
+   "kind": "pick_full",
+   "set": "H-jia-seo",
+   "img_id": "H-jia-seo-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r20_A.png",
+   "source_sha256": "6a705d4aa01b186361c9bdb4825ce3a4d103a10a799afe04cd0042509f3795d9",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R20-A_view.jpg",
+   "sha256": "b3372e354b47c4fd7d61902cf1f6e0b26c6313cf9a568e7d34269dd24e1912a5",
+   "kind": "pick_preview",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r20_A.png",
+   "source_sha256": "8123cce1133b3aa39b27e3969634c6626458027766279dcd1275245928905541",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R20-A.jpg",
+   "sha256": "8f3b5b2200393af222dd2a526a8c8e14df0a1c9f44ba875268117813ed7bb9b9",
+   "kind": "pick_full",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r20_A.png",
+   "source_sha256": "8123cce1133b3aa39b27e3969634c6626458027766279dcd1275245928905541",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R20-B_view.jpg",
+   "sha256": "1973af9fa3a2b427c4623c1c209e0f863706f13b27eb4bcf17addac4e7071d9a",
+   "kind": "pick_preview",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r20_B.png",
+   "source_sha256": "a5cd7b910f97f3f0963abb0c7de91a59dea8513f8fbaf5e3e5b366f3723f2e4e",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R20-B.jpg",
+   "sha256": "a1c38ffb35a56a35309029ee5073742ea780278482cc38357cdb4cb6b562efed",
+   "kind": "pick_full",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r20_B.png",
+   "source_sha256": "a5cd7b910f97f3f0963abb0c7de91a59dea8513f8fbaf5e3e5b366f3723f2e4e",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R21-A_view.jpg",
+   "sha256": "0a52130425f150f2f7dd269cd41d12a83808708ccce39f2215ea4efccb63740c",
+   "kind": "pick_preview",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_A.png",
+   "source_sha256": "c78cd8acecfa539f6bfcd9028b0e17ed760fbb6f036706691baac80e6d3054b3",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R21-A.jpg",
+   "sha256": "5d3f966ab88d91ffa0c586e72e3eb98afc672e3ba0fd90e871b77e057c545190",
+   "kind": "pick_full",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_A.png",
+   "source_sha256": "c78cd8acecfa539f6bfcd9028b0e17ed760fbb6f036706691baac80e6d3054b3",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R21-B_view.jpg",
+   "sha256": "48b3372153089c37f24da728807042bfbbc39ba0c066e9d10e4157f742e9e82e",
+   "kind": "pick_preview",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_B.png",
+   "source_sha256": "fd62f129b71bc0dfbf4e50508a5e0e489f2b3417e3f1eacb67d8c6c491926b1c",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-luna-tanaka-R21-B.jpg",
+   "sha256": "53a8eab2f380ae210a8d8b70f429934e5e2c7377d8b45cc21b0c1d39e9bc5b2c",
+   "kind": "pick_full",
+   "set": "H-luna-tanaka",
+   "img_id": "H-luna-tanaka-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_B.png",
+   "source_sha256": "fd62f129b71bc0dfbf4e50508a5e0e489f2b3417e3f1eacb67d8c6c491926b1c",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R20-A_view.jpg",
+   "sha256": "f31bea0a6fa7e4f6c0160279fe4430d8240a2cdd4230c204e2df96ac643616b7",
+   "kind": "pick_preview",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r20_A.png",
+   "source_sha256": "8772082e83ba51747b747686d8d489f4afbe0577985c51c05276550fddd0032f",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R20-A.jpg",
+   "sha256": "52a66ac287d405b14b2c2bb1f00468d750578d78c2b64df82c5bd38585264d33",
+   "kind": "pick_full",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r20_A.png",
+   "source_sha256": "8772082e83ba51747b747686d8d489f4afbe0577985c51c05276550fddd0032f",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R20-B_view.jpg",
+   "sha256": "9ad5a6f95457824beb67dbbe5fd5876cfb5e6425e28dc7a4a32efb8915359d25",
+   "kind": "pick_preview",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r20_B.png",
+   "source_sha256": "eb1aa0bd891a18d8d2c980bd10e6be9e946111d73049b637a44aade94ffa214e",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R20-B.jpg",
+   "sha256": "d3c1982ad6fa2a0df50d10aca17e1fdf7a1df4f835cc8259fafa2c5d8ceb8598",
+   "kind": "pick_full",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r20_B.png",
+   "source_sha256": "eb1aa0bd891a18d8d2c980bd10e6be9e946111d73049b637a44aade94ffa214e",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R21-A_view.jpg",
+   "sha256": "a70e421c8b2fb1b3f062905a23674f0f5ecdcbfb3a934d6cbc74796247a6ab1f",
+   "kind": "pick_preview",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r21_A.png",
+   "source_sha256": "586c8056f7aeea3c9d1500d91634461d87c7cfbc6de10875fc43bcfc0ae233a6",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R21-A.jpg",
+   "sha256": "372ec86f1d5a6b096d4154a055e350a8cb9cfd8b21c215c9eb716c7eed2d9514",
+   "kind": "pick_full",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r21_A.png",
+   "source_sha256": "586c8056f7aeea3c9d1500d91634461d87c7cfbc6de10875fc43bcfc0ae233a6",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R21-B_view.jpg",
+   "sha256": "53e7bc5e5e020b0f2be7f0de7556eed9c136780ac77931d217530f224efe02bd",
+   "kind": "pick_preview",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r21_B.png",
+   "source_sha256": "b6990ff81e572e2caf9940e263cacbd51d531def99d246ce76307d73586abdab",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R21-B.jpg",
+   "sha256": "dfc42a90e2e3f115269a2b96f3671b206de9f946e226b1464330c9b1ad8050ce",
+   "kind": "pick_full",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r21_B.png",
+   "source_sha256": "b6990ff81e572e2caf9940e263cacbd51d531def99d246ce76307d73586abdab",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R22-1_view.jpg",
+   "sha256": "3b55b34e43969981794be24219cd80b292a748f3f56d625654f798e77c708bde",
+   "kind": "pick_preview",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R22-1",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_A.png",
+   "source_sha256": "3aacdb4da101b8519940d032afc85571ac10c46e1e55daa9f857d4afa82c0337",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R22-1.jpg",
+   "sha256": "99e3e86c3e796ea6f272da5d3fccbd5968be8280f3377b462901c44acf3f2aa5",
+   "kind": "pick_full",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R22-1",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_A.png",
+   "source_sha256": "3aacdb4da101b8519940d032afc85571ac10c46e1e55daa9f857d4afa82c0337",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R22-2_view.jpg",
+   "sha256": "8361228790f50c0562fa8dad5b5530e02717150e093363f5a8bb07931d861687",
+   "kind": "pick_preview",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R22-2",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_B.png",
+   "source_sha256": "9b792b3e550ddc5221f1236b1fc3cf3b317baed0ad7cad73e1c49c637fdf843a",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-somi-oh-R22-2.jpg",
+   "sha256": "4e66b0ddf31e9370272d501ba05e62939a9080e964e100f892937b568a87a5d0",
+   "kind": "pick_full",
+   "set": "H-somi-oh",
+   "img_id": "H-somi-oh-R22-2",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_B.png",
+   "source_sha256": "9b792b3e550ddc5221f1236b1fc3cf3b317baed0ad7cad73e1c49c637fdf843a",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rainie-hsu-R20-A_view.jpg",
+   "sha256": "382d773bc47de8c7aa768ef317faf3a2544b9fecc16bc1d21d5e3e579beb20a8",
+   "kind": "pick_preview",
+   "set": "H-rainie-hsu",
+   "img_id": "H-rainie-hsu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/H-rainie-hsu_m4r20_A.png",
+   "source_sha256": "98dc0ca9d5aff9c248ac4cc2f85ce45f4fa75d5289da50eb9767ea4854e9c657",
+   "op": "原圖 2048×1152 等比縮小至 1600×900（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/H-rainie-hsu-R20-A.jpg",
+   "sha256": "992c1cc5c4bc7900b4bb8caf8271e0d3abd701bc83e7f20e4c9c38c55f27265f",
+   "kind": "pick_full",
+   "set": "H-rainie-hsu",
+   "img_id": "H-rainie-hsu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/H-rainie-hsu_m4r20_A.png",
+   "source_sha256": "98dc0ca9d5aff9c248ac4cc2f85ce45f4fa75d5289da50eb9767ea4854e9c657",
+   "op": "原圖 2048×1152 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-tammy-chou-R5_view.jpg",
+   "sha256": "4876a4e3421005c7a2f88badbe8a0d73cbcfe24fa6d66910888bb33c23753444",
+   "kind": "pick_preview",
+   "set": "V-tammy-chou",
+   "img_id": "V-tammy-chou-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+   "source_sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-tammy-chou-R5.jpg",
+   "sha256": "35676a82edcc49ebcef0659ca0e5d1f267885b1a595795a7a2a44f7964c63d27",
+   "kind": "pick_full",
+   "set": "V-tammy-chou",
+   "img_id": "V-tammy-chou-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r5.png",
+   "source_sha256": "f421e4a2cdbc1d9ccbb553fe6d88d6a7d712f812a2e571bf8d70e8ad025048b9",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-jia-seo-R20-A_view.jpg",
+   "sha256": "55a7b0117c6017bcbb9eefc622f1811ad46a6c44c4d08d9de991b7e36a4e54f5",
+   "kind": "pick_preview",
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r20_A.png",
+   "source_sha256": "684a5e65cfef746a01b0deac5a4c6a122d1eb07a5677c02e6aba2d503f9e3548",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-jia-seo-R20-A.jpg",
+   "sha256": "3c693c8563596a5debfa6638c69f16612c3794b016a953d6bf3e2702f4a9d889",
+   "kind": "pick_full",
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r20_A.png",
+   "source_sha256": "684a5e65cfef746a01b0deac5a4c6a122d1eb07a5677c02e6aba2d503f9e3548",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-jia-seo-R20-B_view.jpg",
+   "sha256": "cd40667fb08bb5c01a44d04fb4a2c5a725811f87e6a88f8819fa9dc89e67dc0a",
+   "kind": "pick_preview",
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r20_B.png",
+   "source_sha256": "8661ff2e37774c686b1427a8de2c6ae605e90284a970a6d355622f76141afcf9",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-jia-seo-R20-B.jpg",
+   "sha256": "706f2c096b9d677c5bf8d6d3fb66dc49ea4efbb081649781891aee1fcb726f48",
+   "kind": "pick_full",
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r20_B.png",
+   "source_sha256": "8661ff2e37774c686b1427a8de2c6ae605e90284a970a6d355622f76141afcf9",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-jia-seo-R21-B_view.jpg",
+   "sha256": "9895a1e89e3ea93bc3ad172743ece2104c7cf2be01709f0ab6d7ced3da285af4",
+   "kind": "pick_preview",
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r21_B.png",
+   "source_sha256": "62824d6fc541ac8aa46241035fe197656020cb6874dae43d80503bbe0ffec607",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-jia-seo-R21-B.jpg",
+   "sha256": "673e1b1856e82c318465daf7fab54f357d4e43030a5e61c278dea71d8fc81032",
+   "kind": "pick_full",
+   "set": "V-jia-seo",
+   "img_id": "V-jia-seo-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r21_B.png",
+   "source_sha256": "62824d6fc541ac8aa46241035fe197656020cb6874dae43d80503bbe0ffec607",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-mia-huang-R20-B_view.jpg",
+   "sha256": "bc13691df47521f1569682084526cd3e2ed5d72082990309d25c965a4004af71",
+   "kind": "pick_preview",
+   "set": "V-mia-huang",
+   "img_id": "V-mia-huang-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/mia-huang/images/calendar_2027_batch1/V-mia-huang_m4r20_B.png",
+   "source_sha256": "7d97900729e1b09a362669d29a9e712a2ad58eb63ed49d81599f5da09eae9bab",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-mia-huang-R20-B.jpg",
+   "sha256": "79cafad2a61423d4832c935522225fd9b7b30864d427565bce59c2b57c7b07e3",
+   "kind": "pick_full",
+   "set": "V-mia-huang",
+   "img_id": "V-mia-huang-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/mia-huang/images/calendar_2027_batch1/V-mia-huang_m4r20_B.png",
+   "source_sha256": "7d97900729e1b09a362669d29a9e712a2ad58eb63ed49d81599f5da09eae9bab",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-miu-shiraishi-R20-A_view.jpg",
+   "sha256": "fb98cd4c4a4b7eb03148a000c160a267e10ca84f11e3e2583828c4a8be1df90a",
+   "kind": "pick_preview",
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_A.png",
+   "source_sha256": "7628e5320e1d979a180c32269520171cdc7a6fd97cd1533f8f115f9a4739db60",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-miu-shiraishi-R20-A.jpg",
+   "sha256": "e49875d9fbaf067844335ca8893f6511547b6909fa426cf4e85ce207b0ec959c",
+   "kind": "pick_full",
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_A.png",
+   "source_sha256": "7628e5320e1d979a180c32269520171cdc7a6fd97cd1533f8f115f9a4739db60",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-miu-shiraishi-R20-B_view.jpg",
+   "sha256": "887ae3658ddbbebe7c4b49924c953c00c3b5799061305a16bda079ec8b2d1eef",
+   "kind": "pick_preview",
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B.png",
+   "source_sha256": "6d6df147bbc285b18338d15429ef7372169efa4ecdca2cc58b401d8961dfb1ef",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-miu-shiraishi-R20-B.jpg",
+   "sha256": "83d9d2011bbf2cafa693db2e38ec9f060fc29663957f4becc55a189cd859e5be",
+   "kind": "pick_full",
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B.png",
+   "source_sha256": "6d6df147bbc285b18338d15429ef7372169efa4ecdca2cc58b401d8961dfb1ef",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-miu-shiraishi-R20-B-G21_view.jpg",
+   "sha256": "9ff1048127a866a00681f43bf85e90057621669c30d642f32ae95c4807e871c0",
+   "kind": "pick_preview",
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-B-G21",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B_grade_r21.png",
+   "source_sha256": "2e22a18f0807250896c9a0254d74c028a2bafb4ebee02d6dde7c24e041990112",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-miu-shiraishi-R20-B-G21.jpg",
+   "sha256": "a17f75a917a3ac279f2e1f4e5951511ae8dc796fd5b745295f3cc9c515a49486",
+   "kind": "pick_full",
+   "set": "V-miu-shiraishi",
+   "img_id": "V-miu-shiraishi-R20-B-G21",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B_grade_r21.png",
+   "source_sha256": "2e22a18f0807250896c9a0254d74c028a2bafb4ebee02d6dde7c24e041990112",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R20-A_view.jpg",
+   "sha256": "1058d3eabf103f21af4100d139cad699e1ab52d2e0945b9f94f0573490c2009c",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_A.png",
+   "source_sha256": "9c2cdfe4004cc270f30c5867dd8708c4fecd7aa8b81dcdb33aeb46d2e0e9b61d",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R20-A.jpg",
+   "sha256": "62e5a07554bcac1082a98ba5db24f6a1e9d0f4863615740b447e040fac7eeb28",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_A.png",
+   "source_sha256": "9c2cdfe4004cc270f30c5867dd8708c4fecd7aa8b81dcdb33aeb46d2e0e9b61d",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R20-B_view.jpg",
+   "sha256": "dd9c7f63ae5596ff0cde17b904cca30c0c4422ed51570f9eed3162ed5bcbc708",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_B.png",
+   "source_sha256": "688cb14416c11ee9bc431912a6193f5b30e712a499c8a4b481e3ea778e9b8dfa",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R20-B.jpg",
+   "sha256": "65620025d19c78d0af83e68d66d80160bcc694a779525823f8b0340f4be7e9dd",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r20_B.png",
+   "source_sha256": "688cb14416c11ee9bc431912a6193f5b30e712a499c8a4b481e3ea778e9b8dfa",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R21-A_view.jpg",
+   "sha256": "f83f75b316e6a0b619e68d8c48e30a09bbc4b76a868a7eeb105a88f7ced74103",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_A.png",
+   "source_sha256": "9b607c3fdec235360065aa69ad8876ac71fe9f17b24dedb7c8631ff2db9260b7",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R21-A.jpg",
+   "sha256": "48b8dec5df5bd4f7202bd17e074f9213d1a4c554e00769596acb2d5e79c31da6",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R21-A",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_A.png",
+   "source_sha256": "9b607c3fdec235360065aa69ad8876ac71fe9f17b24dedb7c8631ff2db9260b7",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R21-B_view.jpg",
+   "sha256": "192c41bd562f8a717714e19d0b53f57e01ca1c9d065e49e3c5f5f55d3a94af79",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_B.png",
+   "source_sha256": "fcbb892fef0f9362fef24ba37c299230da1a330c4c7d092821afd6d4f95d2ee4",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R21-B.jpg",
+   "sha256": "92e3f0cdefb8fd62d13ef7ba684ddb54a66ad290d7a16aa29c59f9d6cd6f41e1",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_B.png",
+   "source_sha256": "fcbb892fef0f9362fef24ba37c299230da1a330c4c7d092821afd6d4f95d2ee4",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R22-A_view.jpg",
+   "sha256": "5aaded058e093d5fac543377a56922a13e2042ba94ba930aa1a5cf680dd27d3d",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R22-A",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_A.png",
+   "source_sha256": "ceab0c3bb8ef18c13fcae704563413cb7fb540b996a7bb78b8160ea02717f33a",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R22-A.jpg",
+   "sha256": "004f296e755b1a0e7801d91e29108f8004520de6609da7575b8aaf99dde6db5f",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R22-A",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_A.png",
+   "source_sha256": "ceab0c3bb8ef18c13fcae704563413cb7fb540b996a7bb78b8160ea02717f33a",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R22-B_view.jpg",
+   "sha256": "c910a5c956f95673ec07a4dcd31931a266073ec2da22fe75df1c9c793e561a33",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R22-B",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_B.png",
+   "source_sha256": "e62f2eef4d52b5bf60ad7a2e3ac5741b0df11849ff3eedbe8c3c7d3ac81ab0c3",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R22-B.jpg",
+   "sha256": "04b67d625ed74877f106ddf22e9220c66415dbd8cb1ba778ac0f2cb923ec3875",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R22-B",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r22_B.png",
+   "source_sha256": "e62f2eef4d52b5bf60ad7a2e3ac5741b0df11849ff3eedbe8c3c7d3ac81ab0c3",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R23-A_view.jpg",
+   "sha256": "b09241a2b0eb14ae65b4c164ccbe6a35ff015593f28d80dca3a8f0a387734d9c",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R23-A",
+   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_A.png",
+   "source_sha256": "1c537b2727f2e9bb83a347ff09c1a206a873276025dca01f97549fdee2e802e0",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R23-A.jpg",
+   "sha256": "ee961b790e11cfb2b581ba368c4d3996b16056aa8ccae69cb12ded6c8e5e722e",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R23-A",
+   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_A.png",
+   "source_sha256": "1c537b2727f2e9bb83a347ff09c1a206a873276025dca01f97549fdee2e802e0",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R23-B_view.jpg",
+   "sha256": "0a2f58ef6017ecdbd33e909ee0e7673e9aa7700500a160fc3c7be6759101ece6",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R23-B",
+   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_B.png",
+   "source_sha256": "343ebe91d550ddddf4f21ccf743d4d00a3745fa8fbd8fb87b21edcd195238ce9",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R23-B.jpg",
+   "sha256": "5e39d8dbc20de3940502ca72b6df9a51e67558df734f79022bc0a30a00f98c69",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R23-B",
+   "source": "dab82fe6d3586fef6e13fc621a4d52618f356c30:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r23_B.png",
+   "source_sha256": "343ebe91d550ddddf4f21ccf743d4d00a3745fa8fbd8fb87b21edcd195238ce9",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R24-B_view.jpg",
+   "sha256": "58656c21c1f6e5e121a8a2d76f1c207c90ed4dd1de6dab8368c68f2cec458931",
+   "kind": "pick_preview",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R24-B",
+   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_B.png",
+   "source_sha256": "8dc8bf7abe6df5b7faaca489f004eed00df905862d4c28052bfbb6de2692de96",
+   "op": "原圖 1728×2304 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rainie-hsu-R24-B.jpg",
+   "sha256": "9b7b1074de8f93e7cbd89ac7643b240fb15e0a3fffba18d596edf483c673f71f",
+   "kind": "pick_full",
+   "set": "V-rainie-hsu",
+   "img_id": "V-rainie-hsu-R24-B",
+   "source": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461:kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_B.png",
+   "source_sha256": "8dc8bf7abe6df5b7faaca489f004eed00df905862d4c28052bfbb6de2692de96",
+   "op": "原圖 1728×2304 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-luna-tanaka-R20-A_view.jpg",
+   "sha256": "8ab34efae9bfeb0584802df1ec64a5c929e06720b1908475f611502cd4a19633",
+   "kind": "pick_preview",
+   "set": "V-luna-tanaka",
+   "img_id": "V-luna-tanaka-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_A.png",
+   "source_sha256": "75ef8e7a47d488e64d67731575d2a5af4f48be6098d3e1c4662c4257e55d86cb",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-luna-tanaka-R20-A.jpg",
+   "sha256": "bb992bb3ec709a7149ecb2d491d5d7809bc7663324f63d0e0cfa8407d6b5a7e8",
+   "kind": "pick_full",
+   "set": "V-luna-tanaka",
+   "img_id": "V-luna-tanaka-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_A.png",
+   "source_sha256": "75ef8e7a47d488e64d67731575d2a5af4f48be6098d3e1c4662c4257e55d86cb",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-luna-tanaka-R20-B_view.jpg",
+   "sha256": "89a219313ff1c6a6fa2717a67f415fe1ce57e724437aaaee5a8cd6b60cbf6d94",
+   "kind": "pick_preview",
+   "set": "V-luna-tanaka",
+   "img_id": "V-luna-tanaka-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B.png",
+   "source_sha256": "0a24346a6aab22657d62bfe84132bc53e845fdf9a664c1c3d76bb61ec6fdd870",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-luna-tanaka-R20-B.jpg",
+   "sha256": "78b20c2a02c5f7ec12d61bb11a203e6eba0a5149f70649105a08377db2008970",
+   "kind": "pick_full",
+   "set": "V-luna-tanaka",
+   "img_id": "V-luna-tanaka-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B.png",
+   "source_sha256": "0a24346a6aab22657d62bfe84132bc53e845fdf9a664c1c3d76bb61ec6fdd870",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-coco-wu-R20-A_view.jpg",
+   "sha256": "23d257941eebed37f3ace74807b3ff9b3e16e06c49ec291291a2231fcded8ed6",
+   "kind": "pick_preview",
+   "set": "V-coco-wu",
+   "img_id": "V-coco-wu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/coco-wu/images/calendar_2027_batch1/V-coco-wu_m4r20_A.png",
+   "source_sha256": "2782f9be963b7e4cf16e88f99962cdaccf5ad6369a8f49a697dd76d1af080756",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-coco-wu-R20-A.jpg",
+   "sha256": "d428bfce19397f12cc3778e02cfe96e4fefeada6c00bf8dae32926c00bcc5e5a",
+   "kind": "pick_full",
+   "set": "V-coco-wu",
+   "img_id": "V-coco-wu-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/coco-wu/images/calendar_2027_batch1/V-coco-wu_m4r20_A.png",
+   "source_sha256": "2782f9be963b7e4cf16e88f99962cdaccf5ad6369a8f49a697dd76d1af080756",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yerin-han-R20-B_view.jpg",
+   "sha256": "2fba16611edb189ae6e3776e65ddb5152664b542a163102ef46fbc8e76e1960c",
+   "kind": "pick_preview",
+   "set": "V-yerin-han",
+   "img_id": "V-yerin-han-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yerin-han/images/calendar_2027_batch1/V-yerin-han_m4r20_B.png",
+   "source_sha256": "a50a218b82fe98cc0e9c333d0c77e6ac37e7d0326f85f1e56866756c27878e28",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yerin-han-R20-B.jpg",
+   "sha256": "f09aa0060f29a4531e5808d017fdbae66c512c555428cef1762e2bba8dc8a7a8",
+   "kind": "pick_full",
+   "set": "V-yerin-han",
+   "img_id": "V-yerin-han-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yerin-han/images/calendar_2027_batch1/V-yerin-han_m4r20_B.png",
+   "source_sha256": "a50a218b82fe98cc0e9c333d0c77e6ac37e7d0326f85f1e56866756c27878e28",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rin-ayase-R5_view.jpg",
+   "sha256": "b628e68ad1a7b3039859c61a2b790d1d119a79106d8dcfccbba5d49c882dfaaa",
+   "kind": "pick_preview",
+   "set": "V-rin-ayase",
+   "img_id": "V-rin-ayase-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+   "source_sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rin-ayase-R5.jpg",
+   "sha256": "7ff06ca4cdd7316f8a86d93b6692fa256e428e6c93ba0527389589fd55a0c2aa",
+   "kind": "pick_full",
+   "set": "V-rin-ayase",
+   "img_id": "V-rin-ayase-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r5.png",
+   "source_sha256": "2f3ad506233d727a03cf88ff3290b27469fe10c7f9f6197ed2bc70a9315810e4",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rin-ayase-R16_view.jpg",
+   "sha256": "06ac75e1fb66fd3aa6d16e1241faa1da495452553fde196065d6c7630e7fcc2a",
+   "kind": "pick_preview",
+   "set": "V-rin-ayase",
+   "img_id": "V-rin-ayase-R16",
+   "source": "706ecdfbe27da32217d5fbc36af53d2e0c61171f:kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r16.png",
+   "source_sha256": "503de80e233ae4c0bbfa74ddf0b0c012a422411839ad37246428339161066d35",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-rin-ayase-R16.jpg",
+   "sha256": "e34a7435bb614dbf829ca4f1b81886237dd5fa3d3fca9c083de365573758c128",
+   "kind": "pick_full",
+   "set": "V-rin-ayase",
+   "img_id": "V-rin-ayase-R16",
+   "source": "706ecdfbe27da32217d5fbc36af53d2e0c61171f:kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r16.png",
+   "source_sha256": "503de80e233ae4c0bbfa74ddf0b0c012a422411839ad37246428339161066d35",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yuna-kim-R20-A_view.jpg",
+   "sha256": "ce5760f2370db164010744e86581d5ba227275fda0f20d133cc8ce8ef75c8c7b",
+   "kind": "pick_preview",
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r20_A.png",
+   "source_sha256": "d3664b9f04e0a8feb501549d0e13b5db12a4f46e2dfe59b25b32495af79992cb",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yuna-kim-R20-A.jpg",
+   "sha256": "c2ef2d0b9bbc5d2d0ba3ee5b80a9e3f8e4d863ec0bbbe414cc028a451f62c4dd",
+   "kind": "pick_full",
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R20-A",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r20_A.png",
+   "source_sha256": "d3664b9f04e0a8feb501549d0e13b5db12a4f46e2dfe59b25b32495af79992cb",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yuna-kim-R20-B_view.jpg",
+   "sha256": "76901c290e60a2eeffa513caca3cfd9b643f3f1d35b9d72245abf933cf5c4928",
+   "kind": "pick_preview",
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r20_B.png",
+   "source_sha256": "5daf20642f1a3fab2e7ff3b6f7c874e74ef06100cad58fd7fa7590b072c5007c",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yuna-kim-R20-B.jpg",
+   "sha256": "5792702e05a0e8995f9fae252b4b08d9fd085bb79ab3cb25960189ef507c031a",
+   "kind": "pick_full",
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R20-B",
+   "source": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd:kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r20_B.png",
+   "source_sha256": "5daf20642f1a3fab2e7ff3b6f7c874e74ef06100cad58fd7fa7590b072c5007c",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yuna-kim-R21-B_view.jpg",
+   "sha256": "434f26d56d0ec72ab4077f5000c3b260eca539e6180dacc87f10b4c46c0cbaf6",
+   "kind": "pick_preview",
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r21_B.png",
+   "source_sha256": "9b90efbb536b53876fdb6e8fc275d80e6136d9a24b513f1aa1b20cc0038ad662",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-yuna-kim-R21-B.jpg",
+   "sha256": "096bd177d2f202f136767906def0b48d89e7038876c60542f064742d9acd8a1b",
+   "kind": "pick_full",
+   "set": "V-yuna-kim",
+   "img_id": "V-yuna-kim-R21-B",
+   "source": "03eb250c4baedbae4dc85b85594bf17ca229872e:kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r21_B.png",
+   "source_sha256": "9b90efbb536b53876fdb6e8fc275d80e6136d9a24b513f1aa1b20cc0038ad662",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R5_view.jpg",
+   "sha256": "32010db58e8acee7ae345607b43ac757cc509e08b38191bf37b43f61449ab89f",
+   "kind": "pick_preview",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+   "source_sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R5.jpg",
+   "sha256": "8b5535cc609334f743b3075b3542cf327cf2b85abcbb1f5c9f1cf4d5b7352b69",
+   "kind": "pick_full",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R5",
+   "source": "b7784f697883b99c28aaf85b9c36c2c3b3415415:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r5.png",
+   "source_sha256": "0fd5382cd1db3d5089a4998b2b43cba985edfeed17a998e46b58314fab060561",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R7_view.jpg",
+   "sha256": "7e90638e4b88564df8a167bdd41235498d61d1a9a1ff6806c3f34a638fcadffb",
+   "kind": "pick_preview",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R7",
+   "source": "ab747b6d5174996d21622d1080a6e5f0a7f8e95b:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r7.png",
+   "source_sha256": "d38dcc55aae6df29a72d70c184da7256c690819db04ed88fb5afc789883ca6db",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R7.jpg",
+   "sha256": "61d4d43734d5351f77aa31916269ebac4ecb2dbff4cd6bc3af9c65f03573ba06",
+   "kind": "pick_full",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R7",
+   "source": "ab747b6d5174996d21622d1080a6e5f0a7f8e95b:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r7.png",
+   "source_sha256": "d38dcc55aae6df29a72d70c184da7256c690819db04ed88fb5afc789883ca6db",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R8_view.jpg",
+   "sha256": "83958f3a0d008b2abe0ebaa1878a9bbf37c0be19f9af484996b9011774a9b6ac",
+   "kind": "pick_preview",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R8",
+   "source": "de17da5d91d9622632ff56dd7f9717dfed2387c4:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r8.png",
+   "source_sha256": "d17029915e562e4e2154522f4fe32bf11220208695e55ff2e6b5c815cce024cb",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R8.jpg",
+   "sha256": "5c634b6376c6721b59abbd6ca4d67d6f90d09aa5d68b5685ceb76e1c3717bfd8",
+   "kind": "pick_full",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R8",
+   "source": "de17da5d91d9622632ff56dd7f9717dfed2387c4:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r8.png",
+   "source_sha256": "d17029915e562e4e2154522f4fe32bf11220208695e55ff2e6b5c815cce024cb",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R11_view.jpg",
+   "sha256": "d409def8bfeed4f6cb9b8a22af29fb23bfca47d6df04eac986d7e9b336c60a1f",
+   "kind": "pick_preview",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R11",
+   "source": "59634553d956a96c066cb266bc66697ab901d2f8:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r11.png",
+   "source_sha256": "856fa42f172b738df4129fd96e1c905853619281de603a0c35f900666562f3f5",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R11.jpg",
+   "sha256": "0a766c8559a64512f05311cd675416f5adf286639a811707d7fb01ce85398e0e",
+   "kind": "pick_full",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R11",
+   "source": "59634553d956a96c066cb266bc66697ab901d2f8:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r11.png",
+   "source_sha256": "856fa42f172b738df4129fd96e1c905853619281de603a0c35f900666562f3f5",
+   "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R22-A_view.jpg",
+   "sha256": "c93a7589cdf99cc21e4e392dc8ac293d4aa47a6951ba091b6d43fc6ab64faef0",
+   "kind": "pick_preview",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R22-A",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r22_A.png",
+   "source_sha256": "2088ca64679a2ec0c9135b176347c0a46ad4dd3fa5eaf1c5bbc09e7f39415862",
+   "op": "原圖 1536×2048 等比縮小至 1200×1600（Lanczos，JPEG q88，不帶中繼資料）"
+  },
+  {
+   "published": "public/img/pick/V-somi-oh-R22-A.jpg",
+   "sha256": "569fe1a8a811357d7d383cc9b878b6242ba0c284011255c2264d130147d3434a",
+   "kind": "pick_full",
+   "set": "V-somi-oh",
+   "img_id": "V-somi-oh-R22-A",
+   "source": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810:kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r22_A.png",
+   "source_sha256": "2088ca64679a2ec0c9135b176347c0a46ad4dd3fa5eaf1c5bbc09e7f39415862",
    "op": "原圖 1536×2048 原尺寸轉 JPEG q92（不裁切、不縮放，不帶中繼資料）"
   }
  ]

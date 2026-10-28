@@ -43,6 +43,9 @@ h2 .st { margin-left: 10px; vertical-align: middle; font-size: .85rem; }
 /* 放大檢視列的按鈕：hidden 時真的隱藏（.btn 的 display 會蓋過預設的 hidden） */
 .viewer-bar .btn[hidden] { display: none; }
 
+/* 定案模式（M-4 R25）：桌機沿用已選區 3 欄；手機橫式 2 欄、直式 3 欄 */
+#final-hist .past summary { font-weight: 600; }
+
 /* 前幾輪的照片（收合，只看不選） */
 .past { margin: 4px 0 10px; border: 1px solid #e0ded8; border-radius: 8px; padding: 6px 10px; background: #faf9f6; }
 .past summary { cursor: pointer; font-weight: 700; font-size: .92rem; min-height: 32px; display: flex; align-items: center; }
@@ -80,6 +83,8 @@ h2 .st { margin-left: 10px; vertical-align: middle; font-size: .85rem; }
   .ab { font-size: 1.05rem; }
   .opt { flex: 1 1 100%; }
   .accs { gap: 8px; }
+  .accs-H { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .accs-V { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .pgrid-H { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pgrid-V { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }

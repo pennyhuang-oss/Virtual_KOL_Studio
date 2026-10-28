@@ -1,4 +1,5 @@
-// 2027 KOL 桌曆｜選片頁（shoot.html）。M-4 R22 起：上方集中本輪待確認項目（新候選 A／B、改善候選、修正版比較），
+// 2027 KOL 桌曆｜選片頁（shoot.html）。M-4 R25 起資料為定案模式（mode: final）：只顯示 24 套已選定照片與收合的歷史候選，不收集回饋、不讀寫瀏覽器資料。
+// 以下選片模式（M-4 R22–R24）保留，資料不是 final 時使用：上方集中本輪待確認項目（新候選 A／B、改善候選、修正版比較），
 // 每項附前幾輪的照片（只看不選）；下方「已選」區只看不選。資料來自 pick-data.js（目前產生自 data/cal_pick_r24.json，第五輪）。
 // 每項的回饋存在這台裝置的瀏覽器，識別鍵是資料裡的 key_prefix＋<套別>（R24：cal2027-pick-r24-v1:），內容記下當時看的圖片識別（img_id）；圖片識別對不上就不套用。
 // 只讀寫這個前綴；前幾輪 cal2027-pick-r20-v1:… 到 -r23-v1:… 與其他舊鍵（cal2027-batch1-v1:…、cal2027-review-v1:…、企劃與素材頁的鍵）不讀、不寫、不刪。
@@ -7,11 +8,79 @@
 (() => {
   const K = window.CAL_PICK;
   const app = document.getElementById('app');
-  if (!K || !K.items || !K.items.length) { app.textContent = '資料載入失敗。'; return; }
-
   const $ = (s, r = document) => r.querySelector(s);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const PAGE_COMMIT = (() => { const v = ($('meta[name="page-commit"]') || {}).content || ''; return /^[0-9a-f]{7,40}$/.test(v) ? v : ''; })();
+  if (K && K.mode === 'final' && K.final && K.final.length) { renderFinal(); return; }
+  if (!K || !K.items || !K.items.length) { app.textContent = '資料載入失敗。'; return; }
+
+  // ---------- 定案模式：24 套已選定，依橫式／直式、月份排列；歷史候選收合；只看、可放大，沒有選項或回饋 ----------
+  function renderFinal() {
+    const FIN = K.final, HIS = K.history || [];
+    const views = [];   // 放大檢視用：[顯示版, 完整版, 說明]
+    const add = (p, cap) => { views.push([p.img.view, p.img.full, cap]); return views.length - 1; };
+    const lab = s => `${s.book_zh} ${s.month} 月｜${s.name}`;
+    const img = (p, alt) => `<img src="${esc(p.img.view.src)}" width="${p.img.view.w}" height="${p.img.view.h}" alt="${esc(alt)}" loading="lazy">`;
+    const card = s => {
+      const k = add(s, `${lab(s)}｜${s.label}`);
+      return `<figure class="acc"><button type="button" class="zoom" data-f="${k}" aria-label="放大：${esc(lab(s))}">${img(s, lab(s))}</button>` +
+        `<figcaption><b>${s.month} 月｜${esc(s.name)}</b><br><span class="ok">${esc(s.label)}</span></figcaption></figure>`;
+    };
+    const book = (b, zh) => {
+      const xs = FIN.filter(s => s.book === b).sort((x, y) => x.month - y.month);
+      return `<section class="sec" id="final-${b}"><h2>${zh}（${xs.length} 套，已選定）</h2><div class="accs accs-${b}">${xs.map(card).join('')}</div></section>`;
+    };
+    const past = HIS.map(h => `<details class="past"><summary>${esc(lab(h))}（${h.photos.length} 張）</summary><div class="pgrid pgrid-${h.book}">` +
+      h.photos.map(p => { const k = add(p, `${lab(h)}｜以前的候選：${p.v}`); return `<figure class="pc"><button type="button" class="zoom" data-f="${k}" aria-label="放大 ${esc(p.v)}：${esc(lab(h))}">${img(p, `${lab(h)} ${p.v}`)}</button><figcaption>${esc(p.v)}</figcaption></figure>`; }).join('') +
+      '</div></details>').join('');
+    app.innerHTML = book('H', '橫式') + book('V', '直式') +
+      `<section class="sec" id="final-hist"><h2>歷史候選（只看，不用再選）</h2>${past}</section>` +
+      `<section class="sec hist"><h2><a href="${esc((K.history_link || {}).href || 'history.html')}">${esc((K.history_link || {}).label || '歷史紀錄')} →</a></h2></section>`;
+    document.title = `${K.title}｜2027 KOL 桌曆`;
+    $('#tline').textContent = `${K.task}｜${K.round}`;
+    $('#title').textContent = K.title;
+    $('#intro').textContent = K.intro;
+    $('#prog').textContent = `${FIN.length}／${FIN.length} 套已選定。${K.status_note || ''}`;
+    const tl = $('#toplinks');
+    if (tl) tl.innerHTML = '<a href="#final-H">橫式 ↓</a>｜<a href="#final-V">直式 ↓</a>｜<a href="#final-hist">歷史候選 ↓</a>｜<a href="history.html">已定稿企劃／歷史紀錄 →</a>';
+    $('#pagever').textContent = PAGE_COMMIT || '本機預覽（未部署）';
+    // 放大檢視：先看顯示版，「原尺寸」改看完整版
+    const viewer = $('#viewer'), vimg = $('#viewer-img'), vcap = $('#viewer-cap'), vmode = $('#viewer-mode'), vbody = $('#viewer-body');
+    $('#viewer-other').hidden = true;
+    let vk = -1, lastBtn = null, pushed = false;
+    const show = (k, nat) => {
+      const v = views[k]; if (!v) return;
+      vk = k; const m = nat ? v[1] : v[0];
+      vimg.src = m.src; vimg.width = m.w; vimg.height = m.h; vimg.alt = v[2];
+      vcap.textContent = `${v[2]}｜${nat ? '原尺寸' : '顯示'} ${m.w}×${m.h} px` + (nat ? '' : '；按「原尺寸」看完整解析度');
+      viewer.classList.toggle('natural', nat); vmode.textContent = nat ? '符合畫面' : '原尺寸';
+    };
+    const close = fromPop => {
+      if (viewer.hidden) return;
+      viewer.hidden = true; vimg.removeAttribute('src'); document.documentElement.classList.remove('noscroll');
+      if (pushed && !fromPop) { pushed = false; history.back(); }
+      pushed = false;
+      if (lastBtn && document.body.contains(lastBtn)) lastBtn.focus({ preventScroll: true });
+    };
+    const toggle = ev => {
+      const nat = !viewer.classList.contains('natural');
+      let fx = 0.5, fy = 0.5;
+      if (ev && ev.target === vimg) { const r = vimg.getBoundingClientRect(); fx = (ev.clientX - r.left) / r.width; fy = (ev.clientY - r.top) / r.height; }
+      show(vk, nat);
+      if (nat) { vbody.scrollLeft = Math.max(0, fx * vimg.width - vbody.clientWidth / 2); vbody.scrollTop = Math.max(0, fy * vimg.height - vbody.clientHeight / 2); }
+    };
+    app.addEventListener('click', e => {
+      const z = e.target.closest('[data-f]'); if (!z) return;
+      show(+z.dataset.f, false); lastBtn = z; viewer.hidden = false; document.documentElement.classList.add('noscroll');
+      try { history.pushState({ viewer: 1 }, ''); pushed = true; } catch (err) { pushed = false; }
+      $('#viewer-close').focus({ preventScroll: true });
+    });
+    $('#viewer-close').addEventListener('click', () => close(false));
+    vmode.addEventListener('click', () => toggle(null));
+    vimg.addEventListener('click', toggle);
+    window.addEventListener('popstate', () => close(true));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(false); });
+  }
   const ITEMS = K.items, SEL = K.selected || [], PEND = K.pending || [];
   const BOOKS = [['H', '橫式'], ['V', '直式']];
   const label = s => `${s.book_zh} ${s.month} 月｜${s.name}`;
