@@ -1,0 +1,40 @@
+{
+ "note": "M-4 R25 定案相簿部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/shoot.html",
+ "commit": "62b87c00802efabc67ab57d46edae1f1d6bdccbb",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-10-28T10:14:41Z",
+   "status": "FAILED",
+   "stage": "BUILD_IMAGE",
+   "detail": "建置記錄只有第一行、沒有錯誤訊息；平台未提供診斷"
+  },
+  {
+   "id_note": "第 2 次（同一 commit 重新建置，排除平台暫時性錯誤）",
+   "triggered_utc": "2026-10-28T10:25:50Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-10-28T10:33:44Z"
+  }
+ ],
+ "note_size": "本版服務目錄約 196 MB（之前成功的版本 140–158 MB）；第 2 次同 commit 成功，判斷第 1 次是平台暫時性建置失敗，非程式錯誤（未證實與大小有關）",
+ "live_page_commit": "62b87c00802efabc67ab57d46edae1f1d6bdccbb",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）",
+  "result": "全數通過（18 項）",
+  "items": [
+   "定案模式：24 套、沒有待選項目、選項、備註或複製回饋",
+   "標題「24 套已選定」、註明選片完成不是印前檢查或交印核准",
+   "橫式 12、直式 12 依月份，逐張與唯一定案清單（cal_m4_final_r25.json）的圖片識別對應、全部載入",
+   "5 套調色／修正版顯示為衍生版",
+   "定案 24＋歷史候選 67 的顯示版與完整版皆可取得",
+   "放大與原尺寸檢視、關閉",
+   "歷史候選 23 套預設收合、可展開與放大",
+   "舊回饋與瀏覽器資料不變（頁面不讀寫）",
+   "手機無橫向捲動、可展開、可放大",
+   "頁面無錯誤；公開資料無 prompt、模型、任務、費用或技術報告字樣"
+  ],
+  "public_images": "線上 91 張照片 × 2 版（182 檔）無中繼資料、無平台任務識別、無私有 ID（比對全部 M-4 私有執行紀錄的 111 個 UUID）"
+ }
+}
