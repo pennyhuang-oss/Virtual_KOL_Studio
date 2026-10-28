@@ -1,0 +1,129 @@
+{
+ "note": "M-4 R21 本機調色紀錄：只調明暗與色彩（明暗曲線、自然飽和度、高光柔肩），不改臉、身體、服裝、姿態或場景；衍生檔另存，原圖不動；不使用付費生成或付費編輯。螢幕上變亮不代表印刷效果，交印仍另行確認。",
+ "round": "M-4 R21",
+ "script": "review/calendar/m4_r21/grade.py",
+ "items": [
+  {
+   "set": "H-coco-wu",
+   "v": "A",
+   "source": "kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A.png",
+   "output": "kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A_grade_r21.png",
+   "why": "Penny：提高明亮度與飽和度，改善暗淡感",
+   "params": {
+    "gamma": 0.84,
+    "vibrance": 0.16,
+    "skin_vibrance": 0.05,
+    "warmth": 0.0
+   },
+   "how": {
+    "curve": "gamma 0.84",
+    "vibrance_used": 0.16
+   },
+   "before": {
+    "Y_p5": 0.103,
+    "Y_p50": 0.322,
+    "Y_p95": 0.939,
+    "Y_mean": 0.366,
+    "sat_mean": 0.277,
+    "clipped_pct": 3.8,
+    "crushed_pct": 0.0
+   },
+   "after": {
+    "Y_p5": 0.148,
+    "Y_p50": 0.387,
+    "Y_p95": 0.943,
+    "Y_mean": 0.421,
+    "sat_mean": 0.297,
+    "clipped_pct": 3.8,
+    "crushed_pct": 0.0
+   },
+   "output_sha256": "fb7d5c3fee84a689482ee6734a4748d7e55dc3756c82368e8eee424d60e396ca",
+   "source_sha256": "7d51265052a253b0974dbc3a4fc5ca5cba44d56ec5088ae7465f6e9a5a4ebdda"
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "v": "B",
+   "source": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B.png",
+   "output": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B_grade_r21.png",
+   "why": "Penny：保留 B 的人物與構圖，以 A 的整體明暗、色彩作視覺參考，改善 B 的暗淡感",
+   "params": {
+    "match": "A",
+    "match_strength": 0.85,
+    "vibrance": 0.1,
+    "skin_vibrance": 0.04,
+    "warmth": 0.0
+   },
+   "how": {
+    "curve": "percentile match to A",
+    "vibrance_used": 0.205
+   },
+   "before": {
+    "Y_p5": 0.063,
+    "Y_p50": 0.481,
+    "Y_p95": 0.805,
+    "Y_mean": 0.468,
+    "sat_mean": 0.248,
+    "clipped_pct": 0.06,
+    "crushed_pct": 1.48
+   },
+   "after": {
+    "Y_p5": 0.075,
+    "Y_p50": 0.49,
+    "Y_p95": 0.867,
+    "Y_mean": 0.48,
+    "sat_mean": 0.263,
+    "clipped_pct": 0.06,
+    "crushed_pct": 0.04
+   },
+   "reference_A": {
+    "Y_p5": 0.077,
+    "Y_p50": 0.491,
+    "Y_p95": 0.878,
+    "Y_mean": 0.483,
+    "sat_mean": 0.274,
+    "clipped_pct": 0.09,
+    "crushed_pct": 0.07
+   },
+   "output_sha256": "2e22a18f0807250896c9a0254d74c028a2bafb4ebee02d6dde7c24e041990112",
+   "source_sha256": "6d6df147bbc285b18338d15429ef7372169efa4ecdca2cc58b401d8961dfb1ef"
+  },
+  {
+   "set": "V-luna-tanaka",
+   "v": "B",
+   "source": "kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B.png",
+   "output": "kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B_grade_r21.png",
+   "why": "Penny：適度提高明亮度與飽和度",
+   "params": {
+    "gamma": 0.88,
+    "vibrance": 0.08,
+    "skin_vibrance": 0.03,
+    "warmth": 0.0
+   },
+   "how": {
+    "curve": "gamma 0.88",
+    "vibrance_used": 0.08
+   },
+   "before": {
+    "Y_p5": 0.076,
+    "Y_p50": 0.275,
+    "Y_p95": 0.747,
+    "Y_mean": 0.326,
+    "sat_mean": 0.39,
+    "clipped_pct": 0.03,
+    "crushed_pct": 0.0
+   },
+   "after": {
+    "Y_p5": 0.104,
+    "Y_p50": 0.322,
+    "Y_p95": 0.773,
+    "Y_mean": 0.364,
+    "sat_mean": 0.402,
+    "clipped_pct": 0.03,
+    "crushed_pct": 0.0
+   },
+   "output_sha256": "73ed1e092171e472efabd9f2cf41b6517621f75dcce380ca8f14b38647927920",
+   "source_sha256": "0a24346a6aab22657d62bfe84132bc53e845fdf9a664c1c3d76bb61ec6fdd870"
+  }
+ ],
+ "method": "逐張設定：H-Coco A 用 gamma 0.84＋自然飽和度 0.16；V-Miu B 以同套 A 的亮度分位數為目標做 85% 匹配（最亮處只小幅提升）＋自然飽和度（依 A 的平均飽和度補足）；V-Luna B 用 gamma 0.88＋自然飽和度 0.08。三張共通：膚色區只小幅提升飽和、提升不把色版推過 1、0.9 以上高光柔肩（原本已剪白的像素不動）。"
+}

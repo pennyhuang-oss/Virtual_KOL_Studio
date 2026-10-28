@@ -1,0 +1,59 @@
+{
+ "note": "M-4 R21 授權摘要（Penny 送出 R21 指令即授權；本檔不含 Soul ID、任務 ID）",
+ "round": "M-4 R21",
+ "written_on": "2026-10-28",
+ "head_at_start": "0286b9a8e1600c821507103716f08bbd5a6da7c2",
+ "generation": {
+  "sets": [
+   "H-rin-ayase（改善候選，不取代已選 R20 A）",
+   "H-miu-shiraishi",
+   "H-tammy-chou",
+   "H-yerin-han",
+   "H-mia-huang",
+   "H-luna-tanaka",
+   "H-somi-oh",
+   "V-jia-seo",
+   "V-rainie-hsu",
+   "V-yuna-kim"
+  ],
+  "per_set": 2,
+  "max_images": 20,
+  "cap_each": 0.12,
+  "cap_total": 2.4,
+  "retry": "不自動重試、不額外補生"
+ },
+ "grading": {
+  "items": [
+   "H-coco-wu R20 A",
+   "V-miu-shiraishi R20 B（以 R20 A 的明暗與色彩作視覺參考）",
+   "V-luna-tanaka R20 B"
+  ],
+  "how": "本機調色各 1 個候選，另存衍生檔、不覆蓋原圖；只調色；不使用付費生成或付費編輯"
+ },
+ "keep": [
+  "H-yuna-kim R20 B",
+  "H-iris-chen R20 A",
+  "H-jia-seo R20 B",
+  "H-rainie-hsu R20 B",
+  "V-mia-huang R20 A",
+  "V-coco-wu R20 B",
+  "V-yerin-han R20 A",
+  "V-iris-chen（M-4 R2）",
+  "V-tammy-chou R14",
+  "V-rin-ayase R14"
+ ],
+ "selected_pending_edit": [
+  "H-rin-ayase R20 A",
+  "H-coco-wu R20 A",
+  "V-miu-shiraishi R20 B",
+  "V-luna-tanaka R20 B"
+ ],
+ "settings": "各用本人既有 Soul、soul_2、2k；比例依既定橫直式；無參考圖、不傳 style、不用 unlim、不訓練",
+ "site": "生成後直接更新並部署既有 cal2027-decision（原網址），不另等部署授權；不改存取設定、不新增付費服務",
+ "not_authorized": [
+  "V-somi-oh",
+  "合併 main",
+  "聯絡廠商",
+  "付費生成以外的付費編輯"
+ ]
+}
