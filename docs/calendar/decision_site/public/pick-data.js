@@ -1,10 +1,10 @@
-// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r21.json
+// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r22.json
 window.CAL_PICK = {
  "history": {
   "href": "history.html",
   "label": "已定稿企劃／歷史紀錄"
  },
- "intro": "上方是本輪要你確認的 13 項：9 套新候選、H-Rin 的改善候選、3 張調色。已選定的照片放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
+ "intro": "上方是本輪要你確認的 6 項：H-Mia、V-Rainie、V-Somi 的新候選，H-Somi 的改善候選，H-Luna、V-Miu 的修正版。已定案的 18 套放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
  "items": [
   {
    "book": "H",
@@ -13,289 +13,97 @@ window.CAL_PICK = {
     {
      "img": {
       "full": {
-       "bytes": 365402,
+       "bytes": 407987,
        "h": 1152,
-       "src": "img/pick/H-rin-ayase-R21-1.jpg",
+       "src": "img/pick/H-mia-huang-R22-A.jpg",
        "w": 2048
       },
       "view": {
-       "bytes": 194257,
+       "bytes": 226492,
        "h": 900,
-       "src": "img/pick/H-rin-ayase-R21-1_view.jpg",
+       "src": "img/pick/H-mia-huang-R22-A_view.jpg",
        "w": 1600
       }
      },
-     "img_id": "H-rin-ayase-R21-1",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "新候選 1",
-     "version": "M-4 R21"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 319565,
-       "h": 1152,
-       "src": "img/pick/H-rin-ayase-R21-2.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 172880,
-       "h": 900,
-       "src": "img/pick/H-rin-ayase-R21-2_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-rin-ayase-R21-2",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "新候選 2",
-     "version": "M-4 R21"
-    }
-   ],
-   "kind": "rin",
-   "month": 2,
-   "name": "Rin",
-   "original": {
-    "img": {
-     "full": {
-      "bytes": 312403,
-      "h": 1152,
-      "src": "img/pick/H-rin-ayase-R20-A.jpg",
-      "w": 2048
-     },
-     "view": {
-      "bytes": 169163,
-      "h": 900,
-      "src": "img/pick/H-rin-ayase-R20-A_view.jpg",
-      "w": 1600
-     }
-    },
-    "img_id": "H-rin-ayase-R20-A",
-    "px": [
-     2048,
-     1152
-    ],
-    "v": "原 A",
-    "version": "M-4 R20"
-   },
-   "set": "H-rin-ayase"
-  },
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "candidates": [
-    {
-     "img": {
-      "full": {
-       "bytes": 453342,
-       "h": 1152,
-       "src": "img/pick/H-miu-shiraishi-R21-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 228599,
-       "h": 900,
-       "src": "img/pick/H-miu-shiraishi-R21-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-miu-shiraishi-R21-A",
+     "img_id": "H-mia-huang-R22-A",
      "px": [
       2048,
       1152
      ],
      "v": "A",
-     "version": "M-4 R21"
-    },
-    {
-     "img_id": "H-miu-shiraishi-R21-B",
-     "missing": true,
-     "missing_label": "這張沒有產出（平台內容審查擋下），依指令不補生",
-     "v": "B",
-     "version": "M-4 R21"
-    }
-   ],
-   "kind": "ab",
-   "month": 3,
-   "name": "Miu",
-   "set": "H-miu-shiraishi"
-  },
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "candidates": [
-    {
-     "img": {
-      "full": {
-       "bytes": 775031,
-       "h": 1152,
-       "src": "img/pick/H-tammy-chou-R21-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 443075,
-       "h": 900,
-       "src": "img/pick/H-tammy-chou-R21-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-tammy-chou-R21-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "A",
-     "version": "M-4 R21"
+     "version": "M-4 R22"
     },
     {
      "img": {
       "full": {
-       "bytes": 610831,
+       "bytes": 419234,
        "h": 1152,
-       "src": "img/pick/H-tammy-chou-R21-B.jpg",
+       "src": "img/pick/H-mia-huang-R22-B.jpg",
        "w": 2048
       },
       "view": {
-       "bytes": 346243,
+       "bytes": 226087,
        "h": 900,
-       "src": "img/pick/H-tammy-chou-R21-B_view.jpg",
+       "src": "img/pick/H-mia-huang-R22-B_view.jpg",
        "w": 1600
       }
      },
-     "img_id": "H-tammy-chou-R21-B",
+     "img_id": "H-mia-huang-R22-B",
      "px": [
       2048,
       1152
      ],
      "v": "B",
-     "version": "M-4 R21"
+     "version": "M-4 R22"
     }
    ],
-   "kind": "ab",
-   "month": 4,
-   "name": "Tammy",
-   "set": "H-tammy-chou"
-  },
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "candidates": [
+   "history": [
     {
      "img": {
       "full": {
-       "bytes": 651397,
+       "bytes": 339387,
        "h": 1152,
-       "src": "img/pick/H-yerin-han-R21-A.jpg",
+       "src": "img/pick/H-mia-huang-R20-A.jpg",
        "w": 2048
       },
       "view": {
-       "bytes": 356519,
+       "bytes": 193580,
        "h": 900,
-       "src": "img/pick/H-yerin-han-R21-A_view.jpg",
+       "src": "img/pick/H-mia-huang-R20-A_view.jpg",
        "w": 1600
       }
      },
-     "img_id": "H-yerin-han-R21-A",
+     "img_id": "H-mia-huang-R20-A",
      "px": [
       2048,
       1152
      ],
-     "v": "A",
-     "version": "M-4 R21"
+     "v": "R20 A",
+     "version": "M-4 R20"
     },
     {
      "img": {
       "full": {
-       "bytes": 627538,
+       "bytes": 380209,
        "h": 1152,
-       "src": "img/pick/H-yerin-han-R21-B.jpg",
+       "src": "img/pick/H-mia-huang-R20-B.jpg",
        "w": 2048
       },
       "view": {
-       "bytes": 345335,
+       "bytes": 217291,
        "h": 900,
-       "src": "img/pick/H-yerin-han-R21-B_view.jpg",
+       "src": "img/pick/H-mia-huang-R20-B_view.jpg",
        "w": 1600
       }
      },
-     "img_id": "H-yerin-han-R21-B",
+     "img_id": "H-mia-huang-R20-B",
      "px": [
       2048,
       1152
      ],
-     "v": "B",
-     "version": "M-4 R21"
-    }
-   ],
-   "kind": "ab",
-   "month": 5,
-   "name": "Yerin",
-   "set": "H-yerin-han"
-  },
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "grade_label": "提高明亮度與飽和度",
-   "graded": {
-    "img": {
-     "full": {
-      "bytes": 647006,
-      "h": 1152,
-      "src": "img/pick/H-coco-wu-R20-A-G21.jpg",
-      "w": 2048
-     },
-     "view": {
-      "bytes": 376448,
-      "h": 900,
-      "src": "img/pick/H-coco-wu-R20-A-G21_view.jpg",
-      "w": 1600
-     }
+     "v": "R20 B",
+     "version": "M-4 R20"
     },
-    "img_id": "H-coco-wu-R20-A-G21",
-    "px": [
-     2048,
-     1152
-    ],
-    "v": "調色版",
-    "version": "M-4 R21 調色"
-   },
-   "kind": "grade",
-   "month": 6,
-   "name": "Coco",
-   "original": {
-    "img": {
-     "full": {
-      "bytes": 628982,
-      "h": 1152,
-      "src": "img/pick/H-coco-wu-R20-A.jpg",
-      "w": 2048
-     },
-     "view": {
-      "bytes": 365941,
-      "h": 900,
-      "src": "img/pick/H-coco-wu-R20-A_view.jpg",
-      "w": 1600
-     }
-    },
-    "img_id": "H-coco-wu-R20-A",
-    "px": [
-     2048,
-     1152
-    ],
-    "v": "原版",
-    "version": "M-4 R20"
-   },
-   "set": "H-coco-wu"
-  },
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "candidates": [
     {
      "img": {
       "full": {
@@ -316,7 +124,7 @@ window.CAL_PICK = {
       2048,
       1152
      ],
-     "v": "A",
+     "v": "R21 A",
      "version": "M-4 R21"
     },
     {
@@ -339,7 +147,7 @@ window.CAL_PICK = {
       2048,
       1152
      ],
-     "v": "B",
+     "v": "R21 B",
      "version": "M-4 R21"
     }
    ],
@@ -351,29 +159,76 @@ window.CAL_PICK = {
   {
    "book": "H",
    "book_zh": "橫式",
-   "candidates": [
+   "graded": {
+    "img": {
+     "full": {
+      "bytes": 638694,
+      "h": 1152,
+      "src": "img/pick/H-luna-tanaka-R21-A-G22.jpg",
+      "w": 2048
+     },
+     "view": {
+      "bytes": 355062,
+      "h": 900,
+      "src": "img/pick/H-luna-tanaka-R21-A-G22_view.jpg",
+      "w": 1600
+     }
+    },
+    "img_id": "H-luna-tanaka-R21-A-G22",
+    "px": [
+     2048,
+     1152
+    ],
+    "v": "本輪修正版",
+    "version": "M-4 R22 修正"
+   },
+   "hint": "你選定 R21 A；修正版只調明暗與色彩（整體提亮、適度提高飽和度、背光的臉局部提亮），人物與畫面不變。螢幕上的亮度不代表印刷效果，交印前會再確認。",
+   "history": [
     {
      "img": {
       "full": {
-       "bytes": 627511,
+       "bytes": 844835,
        "h": 1152,
-       "src": "img/pick/H-luna-tanaka-R21-A.jpg",
+       "src": "img/pick/H-luna-tanaka-R20-A.jpg",
        "w": 2048
       },
       "view": {
-       "bytes": 348790,
+       "bytes": 451691,
        "h": 900,
-       "src": "img/pick/H-luna-tanaka-R21-A_view.jpg",
+       "src": "img/pick/H-luna-tanaka-R20-A_view.jpg",
        "w": 1600
       }
      },
-     "img_id": "H-luna-tanaka-R21-A",
+     "img_id": "H-luna-tanaka-R20-A",
      "px": [
       2048,
       1152
      ],
-     "v": "A",
-     "version": "M-4 R21"
+     "v": "R20 A",
+     "version": "M-4 R20"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 655899,
+       "h": 1152,
+       "src": "img/pick/H-luna-tanaka-R20-B.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 365279,
+       "h": 900,
+       "src": "img/pick/H-luna-tanaka-R20-B_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-luna-tanaka-R20-B",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "R20 B",
+     "version": "M-4 R20"
     },
     {
      "img": {
@@ -395,19 +250,137 @@ window.CAL_PICK = {
       2048,
       1152
      ],
-     "v": "B",
+     "v": "R21 B",
      "version": "M-4 R21"
     }
    ],
-   "kind": "ab",
+   "kind": "grade",
    "month": 10,
    "name": "Luna",
+   "original": {
+    "img": {
+     "full": {
+      "bytes": 627511,
+      "h": 1152,
+      "src": "img/pick/H-luna-tanaka-R21-A.jpg",
+      "w": 2048
+     },
+     "view": {
+      "bytes": 348790,
+      "h": 900,
+      "src": "img/pick/H-luna-tanaka-R21-A_view.jpg",
+      "w": 1600
+     }
+    },
+    "img_id": "H-luna-tanaka-R21-A",
+    "px": [
+     2048,
+     1152
+    ],
+    "v": "原版",
+    "version": "M-4 R21"
+   },
    "set": "H-luna-tanaka"
   },
   {
    "book": "H",
    "book_zh": "橫式",
    "candidates": [
+    {
+     "img": {
+      "full": {
+       "bytes": 685480,
+       "h": 1152,
+       "src": "img/pick/H-somi-oh-R22-1.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 379154,
+       "h": 900,
+       "src": "img/pick/H-somi-oh-R22-1_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-somi-oh-R22-1",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "新候選 1",
+     "version": "M-4 R22"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 836405,
+       "h": 1152,
+       "src": "img/pick/H-somi-oh-R22-2.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 461109,
+       "h": 900,
+       "src": "img/pick/H-somi-oh-R22-2_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-somi-oh-R22-2",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "新候選 2",
+     "version": "M-4 R22"
+    }
+   ],
+   "hint": "R21 B 是你選定的照片，保留不替換；新候選 1、2 是同一片芒草原的自然抓拍，只是改善候選。",
+   "history": [
+    {
+     "img": {
+      "full": {
+       "bytes": 392344,
+       "h": 1152,
+       "src": "img/pick/H-somi-oh-R20-A.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 219934,
+       "h": 900,
+       "src": "img/pick/H-somi-oh-R20-A_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-somi-oh-R20-A",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "R20 A",
+     "version": "M-4 R20"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 441908,
+       "h": 1152,
+       "src": "img/pick/H-somi-oh-R20-B.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 244139,
+       "h": 900,
+       "src": "img/pick/H-somi-oh-R20-B_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-somi-oh-R20-B",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "R20 B",
+     "version": "M-4 R20"
+    },
     {
      "img": {
       "full": {
@@ -428,121 +401,113 @@ window.CAL_PICK = {
       2048,
       1152
      ],
-     "v": "A",
-     "version": "M-4 R21"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 749396,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R21-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 414716,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R21-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R21-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "B",
+     "v": "R21 A",
      "version": "M-4 R21"
     }
    ],
-   "kind": "ab",
+   "kind": "improve",
    "month": 11,
    "name": "Somi",
+   "original": {
+    "img": {
+     "full": {
+      "bytes": 749396,
+      "h": 1152,
+      "src": "img/pick/H-somi-oh-R21-B.jpg",
+      "w": 2048
+     },
+     "view": {
+      "bytes": 414716,
+      "h": 900,
+      "src": "img/pick/H-somi-oh-R21-B_view.jpg",
+      "w": 1600
+     }
+    },
+    "img_id": "H-somi-oh-R21-B",
+    "px": [
+     2048,
+     1152
+    ],
+    "v": "R21 B",
+    "version": "M-4 R21"
+   },
    "set": "H-somi-oh"
   },
   {
    "book": "V",
    "book_zh": "直式",
-   "candidates": [
-    {
-     "img": {
-      "full": {
-       "bytes": 358515,
-       "h": 2048,
-       "src": "img/pick/V-jia-seo-R21-A.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 181438,
-       "h": 1600,
-       "src": "img/pick/V-jia-seo-R21-A_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-jia-seo-R21-A",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "A",
-     "version": "M-4 R21"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 358353,
-       "h": 2048,
-       "src": "img/pick/V-jia-seo-R21-B.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 179395,
-       "h": 1600,
-       "src": "img/pick/V-jia-seo-R21-B_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-jia-seo-R21-B",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "B",
-     "version": "M-4 R21"
-    }
-   ],
-   "kind": "ab",
-   "month": 2,
-   "name": "Jia",
-   "set": "V-jia-seo"
-  },
-  {
-   "book": "V",
-   "book_zh": "直式",
-   "grade_label": "參考 A 的明暗與色彩，提亮 B",
    "graded": {
     "img": {
      "full": {
-      "bytes": 827115,
+      "bytes": 778788,
       "h": 2048,
-      "src": "img/pick/V-miu-shiraishi-R20-B-G21.jpg",
+      "src": "img/pick/V-miu-shiraishi-R20-B-G22.jpg",
       "w": 1536
      },
      "view": {
-      "bytes": 460945,
+      "bytes": 435336,
       "h": 1600,
-      "src": "img/pick/V-miu-shiraishi-R20-B-G21_view.jpg",
+      "src": "img/pick/V-miu-shiraishi-R20-B-G22_view.jpg",
       "w": 1200
      }
     },
-    "img_id": "V-miu-shiraishi-R20-B-G21",
+    "img_id": "V-miu-shiraishi-R20-B-G22",
     "px": [
      1536,
      2048
     ],
-    "v": "調色版",
-    "version": "M-4 R21 調色"
+    "v": "本輪修正版",
+    "version": "M-4 R22 修正"
    },
+   "hint": "你選定 R20 B；上一輪的調色版變得太銳利，這次從原版重新調：保留上一輪的明亮色調方向，維持原本的柔和質感，人物與畫面不變。螢幕上的亮度不代表印刷效果，交印前會再確認。",
+   "history": [
+    {
+     "img": {
+      "full": {
+       "bytes": 1041442,
+       "h": 2048,
+       "src": "img/pick/V-miu-shiraishi-R20-A.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 562201,
+       "h": 1600,
+       "src": "img/pick/V-miu-shiraishi-R20-A_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-miu-shiraishi-R20-A",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R20 A",
+     "version": "M-4 R20"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 827115,
+       "h": 2048,
+       "src": "img/pick/V-miu-shiraishi-R20-B-G21.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 460945,
+       "h": 1600,
+       "src": "img/pick/V-miu-shiraishi-R20-B-G21_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-miu-shiraishi-R20-B-G21",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R21 調色版",
+     "version": "M-4 R21 調色"
+    }
+   ],
    "kind": "grade",
    "month": 4,
    "name": "Miu",
@@ -578,6 +543,100 @@ window.CAL_PICK = {
     {
      "img": {
       "full": {
+       "bytes": 533061,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R22-A.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 303169,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R22-A_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R22-A",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "A",
+     "version": "M-4 R22"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 517825,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R22-B.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 290776,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R22-B_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R22-B",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "B",
+     "version": "M-4 R22"
+    }
+   ],
+   "history": [
+    {
+     "img": {
+      "full": {
+       "bytes": 479797,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R20-A.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 269414,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R20-A_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R20-A",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R20 A",
+     "version": "M-4 R20"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 466835,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R20-B.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 265053,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R20-B_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R20-B",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R20 B",
+     "version": "M-4 R20"
+    },
+    {
+     "img": {
+      "full": {
        "bytes": 545733,
        "h": 2048,
        "src": "img/pick/V-rainie-hsu-R21-A.jpg",
@@ -595,7 +654,7 @@ window.CAL_PICK = {
       1536,
       2048
      ],
-     "v": "A",
+     "v": "R21 A",
      "version": "M-4 R21"
     },
     {
@@ -618,7 +677,7 @@ window.CAL_PICK = {
       1536,
       2048
      ],
-     "v": "B",
+     "v": "R21 B",
      "version": "M-4 R21"
     }
    ],
@@ -630,127 +689,159 @@ window.CAL_PICK = {
   {
    "book": "V",
    "book_zh": "直式",
-   "grade_label": "適度提高明亮度與飽和度",
-   "graded": {
-    "img": {
-     "full": {
-      "bytes": 979991,
-      "h": 2048,
-      "src": "img/pick/V-luna-tanaka-R20-B-G21.jpg",
-      "w": 1536
-     },
-     "view": {
-      "bytes": 540280,
-      "h": 1600,
-      "src": "img/pick/V-luna-tanaka-R20-B-G21_view.jpg",
-      "w": 1200
-     }
-    },
-    "img_id": "V-luna-tanaka-R20-B-G21",
-    "px": [
-     1536,
-     2048
-    ],
-    "v": "調色版",
-    "version": "M-4 R21 調色"
-   },
-   "kind": "grade",
-   "month": 6,
-   "name": "Luna",
-   "original": {
-    "img": {
-     "full": {
-      "bytes": 959377,
-      "h": 2048,
-      "src": "img/pick/V-luna-tanaka-R20-B.jpg",
-      "w": 1536
-     },
-     "view": {
-      "bytes": 529158,
-      "h": 1600,
-      "src": "img/pick/V-luna-tanaka-R20-B_view.jpg",
-      "w": 1200
-     }
-    },
-    "img_id": "V-luna-tanaka-R20-B",
-    "px": [
-     1536,
-     2048
-    ],
-    "v": "原版",
-    "version": "M-4 R20"
-   },
-   "set": "V-luna-tanaka"
-  },
-  {
-   "book": "V",
-   "book_zh": "直式",
    "candidates": [
     {
      "img": {
       "full": {
-       "bytes": 780730,
+       "bytes": 590347,
        "h": 2048,
-       "src": "img/pick/V-yuna-kim-R21-A.jpg",
+       "src": "img/pick/V-somi-oh-R22-A.jpg",
        "w": 1536
       },
       "view": {
-       "bytes": 452022,
+       "bytes": 333414,
        "h": 1600,
-       "src": "img/pick/V-yuna-kim-R21-A_view.jpg",
+       "src": "img/pick/V-somi-oh-R22-A_view.jpg",
        "w": 1200
       }
      },
-     "img_id": "V-yuna-kim-R21-A",
+     "img_id": "V-somi-oh-R22-A",
      "px": [
       1536,
       2048
      ],
      "v": "A",
-     "version": "M-4 R21"
+     "version": "M-4 R22"
     },
     {
      "img": {
       "full": {
-       "bytes": 666974,
+       "bytes": 622761,
        "h": 2048,
-       "src": "img/pick/V-yuna-kim-R21-B.jpg",
+       "src": "img/pick/V-somi-oh-R22-B.jpg",
        "w": 1536
       },
       "view": {
-       "bytes": 385906,
+       "bytes": 348388,
        "h": 1600,
-       "src": "img/pick/V-yuna-kim-R21-B_view.jpg",
+       "src": "img/pick/V-somi-oh-R22-B_view.jpg",
        "w": 1200
       }
      },
-     "img_id": "V-yuna-kim-R21-B",
+     "img_id": "V-somi-oh-R22-B",
      "px": [
       1536,
       2048
      ],
      "v": "B",
-     "version": "M-4 R21"
+     "version": "M-4 R22"
+    }
+   ],
+   "hint": "冬季雪景兩種景別：A 以神情與雪景氣氛為主，B 是完整人物與雪街。",
+   "history": [
+    {
+     "img": {
+      "full": {
+       "bytes": 835998,
+       "h": 2048,
+       "src": "img/pick/V-somi-oh-R5.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 469224,
+       "h": 1600,
+       "src": "img/pick/V-somi-oh-R5_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-somi-oh-R5",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R5 試拍",
+     "version": "M-4 R5"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 628967,
+       "h": 2048,
+       "src": "img/pick/V-somi-oh-R7.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 340689,
+       "h": 1600,
+       "src": "img/pick/V-somi-oh-R7_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-somi-oh-R7",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R7 試拍",
+     "version": "M-4 R7"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 627913,
+       "h": 2048,
+       "src": "img/pick/V-somi-oh-R8.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 303710,
+       "h": 1600,
+       "src": "img/pick/V-somi-oh-R8_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-somi-oh-R8",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R8 試拍",
+     "version": "M-4 R8"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 639174,
+       "h": 2048,
+       "src": "img/pick/V-somi-oh-R11.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 356647,
+       "h": 1600,
+       "src": "img/pick/V-somi-oh-R11_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-somi-oh-R11",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R11 試拍",
+     "version": "M-4 R11"
     }
    ],
    "kind": "ab",
-   "month": 11,
-   "name": "Yuna",
-   "set": "V-yuna-kim"
-  }
- ],
- "key_prefix": "cal2027-pick-r21-v1:",
- "pending": [
-  {
-   "book": "V",
-   "book_zh": "直式",
    "month": 12,
    "name": "Somi",
-   "set": "V-somi-oh",
-   "v": "待處理：本輪不處理，沒有新候選；先前的照片不列入選片。"
+   "set": "V-somi-oh"
   }
  ],
- "round": "M-4 R21",
+ "key_prefix": "cal2027-pick-r22-v1:",
+ "pending": [],
+ "round": "M-4 R22",
+ "sel_note": "18 套定案；另外 3 套已選定來源照片，修改版在上方等你確認。",
  "selected": [
   {
    "book": "H",
@@ -784,22 +875,147 @@ window.CAL_PICK = {
   {
    "book": "H",
    "book_zh": "橫式",
-   "edit_pending": true,
-   "img_ref": "H-rin-ayase-R20-A",
-   "label": "Penny 選定 R20 A（改善候選待確認，見上方）",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 365402,
+     "h": 1152,
+     "src": "img/pick/H-rin-ayase-R21-1.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 194257,
+     "h": 900,
+     "src": "img/pick/H-rin-ayase-R21-1_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-rin-ayase-R21-1",
+   "label": "Penny 定案 R21 新候選 1",
    "month": 2,
    "name": "Rin",
-   "set": "H-rin-ayase"
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-rin-ayase",
+   "version": "M-4 R21"
   },
   {
    "book": "H",
    "book_zh": "橫式",
-   "edit_pending": true,
-   "img_ref": "H-coco-wu-R20-A",
-   "label": "Penny 選定 R20 A（調色待確認，見上方）",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 453342,
+     "h": 1152,
+     "src": "img/pick/H-miu-shiraishi-R21-A.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 228599,
+     "h": 900,
+     "src": "img/pick/H-miu-shiraishi-R21-A_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-miu-shiraishi-R21-A",
+   "label": "Penny 定案 R21 A",
+   "month": 3,
+   "name": "Miu",
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-miu-shiraishi",
+   "version": "M-4 R21"
+  },
+  {
+   "book": "H",
+   "book_zh": "橫式",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 775031,
+     "h": 1152,
+     "src": "img/pick/H-tammy-chou-R21-A.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 443075,
+     "h": 900,
+     "src": "img/pick/H-tammy-chou-R21-A_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-tammy-chou-R21-A",
+   "label": "Penny 定案 R21 A",
+   "month": 4,
+   "name": "Tammy",
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-tammy-chou",
+   "version": "M-4 R21"
+  },
+  {
+   "book": "H",
+   "book_zh": "橫式",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 651397,
+     "h": 1152,
+     "src": "img/pick/H-yerin-han-R21-A.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 356519,
+     "h": 900,
+     "src": "img/pick/H-yerin-han-R21-A_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-yerin-han-R21-A",
+   "label": "Penny 定案 R21 A",
+   "month": 5,
+   "name": "Yerin",
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-yerin-han",
+   "version": "M-4 R21"
+  },
+  {
+   "book": "H",
+   "book_zh": "橫式",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 647006,
+     "h": 1152,
+     "src": "img/pick/H-coco-wu-R20-A-G21.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 376448,
+     "h": 900,
+     "src": "img/pick/H-coco-wu-R20-A-G21_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-coco-wu-R20-A-G21",
+   "label": "Penny 定案 R20 A 調色版",
    "month": 6,
    "name": "Coco",
-   "set": "H-coco-wu"
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-coco-wu",
+   "version": "M-4 R21 調色"
   },
   {
    "book": "H",
@@ -858,6 +1074,26 @@ window.CAL_PICK = {
    ],
    "set": "H-jia-seo",
    "version": "M-4 R20"
+  },
+  {
+   "book": "H",
+   "book_zh": "橫式",
+   "edit_pending": true,
+   "img_ref": "H-luna-tanaka-R21-A",
+   "label": "Penny 選定 R21 A（修正版待確認，見上方）",
+   "month": 10,
+   "name": "Luna",
+   "set": "H-luna-tanaka"
+  },
+  {
+   "book": "H",
+   "book_zh": "橫式",
+   "edit_pending": true,
+   "img_ref": "H-somi-oh-R21-B",
+   "label": "Penny 選定 R21 B（改善候選待確認，見上方）",
+   "month": 11,
+   "name": "Somi",
+   "set": "H-somi-oh"
   },
   {
    "book": "H",
@@ -923,6 +1159,35 @@ window.CAL_PICK = {
    "edit_pending": false,
    "img": {
     "full": {
+     "bytes": 358515,
+     "h": 2048,
+     "src": "img/pick/V-jia-seo-R21-A.jpg",
+     "w": 1536
+    },
+    "view": {
+     "bytes": 181438,
+     "h": 1600,
+     "src": "img/pick/V-jia-seo-R21-A_view.jpg",
+     "w": 1200
+    }
+   },
+   "img_id": "V-jia-seo-R21-A",
+   "label": "Penny 定案 R21 A",
+   "month": 2,
+   "name": "Jia",
+   "px": [
+    1536,
+    2048
+   ],
+   "set": "V-jia-seo",
+   "version": "M-4 R21"
+  },
+  {
+   "book": "V",
+   "book_zh": "直式",
+   "edit_pending": false,
+   "img": {
+    "full": {
      "bytes": 757881,
      "h": 2048,
      "src": "img/pick/V-mia-huang-R20-A.jpg",
@@ -951,7 +1216,7 @@ window.CAL_PICK = {
    "book_zh": "直式",
    "edit_pending": true,
    "img_ref": "V-miu-shiraishi-R20-B",
-   "label": "Penny 選定 R20 B（調色待確認，見上方）",
+   "label": "Penny 選定 R20 B（修正版待確認，見上方）",
    "month": 4,
    "name": "Miu",
    "set": "V-miu-shiraishi"
@@ -959,12 +1224,31 @@ window.CAL_PICK = {
   {
    "book": "V",
    "book_zh": "直式",
-   "edit_pending": true,
-   "img_ref": "V-luna-tanaka-R20-B",
-   "label": "Penny 選定 R20 B（調色待確認，見上方）",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 979991,
+     "h": 2048,
+     "src": "img/pick/V-luna-tanaka-R20-B-G21.jpg",
+     "w": 1536
+    },
+    "view": {
+     "bytes": 540280,
+     "h": 1600,
+     "src": "img/pick/V-luna-tanaka-R20-B-G21_view.jpg",
+     "w": 1200
+    }
+   },
+   "img_id": "V-luna-tanaka-R20-B-G21",
+   "label": "Penny 定案 R20 B 調色版",
    "month": 6,
    "name": "Luna",
-   "set": "V-luna-tanaka"
+   "px": [
+    1536,
+    2048
+   ],
+   "set": "V-luna-tanaka",
+   "version": "M-4 R21 調色"
   },
   {
    "book": "V",
@@ -1081,11 +1365,40 @@ window.CAL_PICK = {
    ],
    "set": "V-rin-ayase",
    "version": "M-4 R14"
+  },
+  {
+   "book": "V",
+   "book_zh": "直式",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 780730,
+     "h": 2048,
+     "src": "img/pick/V-yuna-kim-R21-A.jpg",
+     "w": 1536
+    },
+    "view": {
+     "bytes": 452022,
+     "h": 1600,
+     "src": "img/pick/V-yuna-kim-R21-A_view.jpg",
+     "w": 1200
+    }
+   },
+   "img_id": "V-yuna-kim-R21-A",
+   "label": "Penny 定案 R21 A",
+   "month": 11,
+   "name": "Yuna",
+   "px": [
+    1536,
+    2048
+   ],
+   "set": "V-yuna-kim",
+   "version": "M-4 R21"
   }
  ],
- "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。第一輪（R20）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
+ "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。第一輪（R20）、第二輪（R21）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
  "task": "TASK-CAL-001",
- "title": "2027 桌曆選片｜第二輪",
- "version": "pick-r21-v1",
+ "title": "2027 桌曆選片｜第三輪",
+ "version": "pick-r22-v1",
  "written_on": "2026-10-28"
 };

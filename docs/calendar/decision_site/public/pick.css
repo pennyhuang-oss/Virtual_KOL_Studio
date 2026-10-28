@@ -1,4 +1,4 @@
-/* 選片頁（shoot.html，M-4 R20 起）：照片優先、A／B 並排；基本樣式沿用 app.css */
+/* 選片頁（shoot.html，M-4 R20 起；R22 加前幾輪照片收合區）：照片優先、A／B 並排；基本樣式沿用 app.css */
 body.pickpage { padding-bottom: 16px; }
 .tline { font-weight: 600; color: #333; }
 .intro { margin: .2em 0; font-size: .95rem; }
@@ -40,6 +40,18 @@ h2 .st { margin-left: 10px; vertical-align: middle; font-size: .85rem; }
 .ab-t { display: inline-block; background: #111; color: #fff; border-radius: 4px; padding: 0 8px; font-size: 1rem; }
 .lnk { font: inherit; font-size: .88rem; background: none; border: 0; padding: 0; color: #0b57d0; text-decoration: underline; cursor: pointer; }
 
+/* 放大檢視列的按鈕：hidden 時真的隱藏（.btn 的 display 會蓋過預設的 hidden） */
+.viewer-bar .btn[hidden] { display: none; }
+
+/* 前幾輪的照片（收合，只看不選） */
+.past { margin: 4px 0 10px; border: 1px solid #e0ded8; border-radius: 8px; padding: 6px 10px; background: #faf9f6; }
+.past summary { cursor: pointer; font-weight: 700; font-size: .92rem; min-height: 32px; display: flex; align-items: center; }
+.pgrid { display: grid; gap: 8px; margin: 8px 0 4px; }
+.pgrid-H { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.pgrid-V { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.pc { margin: 0; min-width: 0; }
+.pc figcaption { font-size: .82rem; margin-top: 4px; color: #555; }
+
 /* 選擇與備註 */
 .ch { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0 8px; }
 .opt { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #c9c6bf; border-radius: 8px; padding: 8px 14px; background: #fff; font-weight: 700; cursor: pointer; min-height: 44px; box-sizing: border-box; }
@@ -68,4 +80,6 @@ h2 .st { margin-left: 10px; vertical-align: middle; font-size: .85rem; }
   .ab { font-size: 1.05rem; }
   .opt { flex: 1 1 100%; }
   .accs { gap: 8px; }
+  .pgrid-H { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pgrid-V { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }

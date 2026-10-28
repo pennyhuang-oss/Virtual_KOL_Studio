@@ -1,7 +1,7 @@
-// 2027 KOL 桌曆｜選片頁（shoot.html）。M-4 R21 起為第二輪：上方集中本輪待確認項目（新候選 A／B、H-Rin 改善候選、調色比較），
-// 下方「已選」區只看不選。資料來自 pick-data.js（產生自 data/cal_pick_r21.json）。
-// 每項的回饋存在這台裝置的瀏覽器，識別鍵 cal2027-pick-r21-v1:<套別>，內容記下當時看的圖片識別（img_id）；圖片識別對不上就不套用。
-// 只讀寫這個前綴；第一輪 cal2027-pick-r20-v1:… 與其他舊鍵（cal2027-batch1-v1:…、cal2027-review-v1:…、企劃與素材頁的鍵）不讀、不寫、不刪。
+// 2027 KOL 桌曆｜選片頁（shoot.html）。M-4 R22 為第三輪：上方集中本輪待確認項目（新候選 A／B、改善候選、修正版比較），
+// 每項附前幾輪的照片（只看不選）；下方「已選」區只看不選。資料來自 pick-data.js（產生自 data/cal_pick_r22.json）。
+// 每項的回饋存在這台裝置的瀏覽器，識別鍵 cal2027-pick-r22-v1:<套別>，內容記下當時看的圖片識別（img_id）；圖片識別對不上就不套用。
+// 只讀寫這個前綴；前幾輪 cal2027-pick-r20-v1:…、cal2027-pick-r21-v1:… 與其他舊鍵（cal2027-batch1-v1:…、cal2027-review-v1:…、企劃與素材頁的鍵）不讀、不寫、不刪。
 // 未回覆不算接受。沒有追蹤或分析，回饋不會自動送出。
 'use strict';
 (() => {
@@ -15,21 +15,21 @@
   const ITEMS = K.items, SEL = K.selected || [], PEND = K.pending || [];
   const BOOKS = [['H', '橫式'], ['V', '直式']];
   const label = s => `${s.book_zh} ${s.month} 月｜${s.name}`;
-  const KIND_TAG = { ab: '新候選', rin: '改善候選', grade: '調色比較' };
+  const KIND_TAG = { ab: '新候選', improve: '改善候選', grade: '修正版比較' };
 
   // 每一項顯示的照片與選項
-  const photos = it => it.kind === 'ab' ? it.candidates : it.kind === 'rin' ? [it.original, ...it.candidates] : [it.original, it.graded];
+  const photos = it => it.kind === 'ab' ? it.candidates : it.kind === 'improve' ? [it.original, ...it.candidates] : [it.original, it.graded];
   const shown = it => photos(it).filter(p => !p.missing);
   function options(it) {
-    if (it.kind === 'rin') return [['keep', '保留原 A'], ['1', '改用新候選 1'], ['2', '改用新候選 2'], ['edit', '仍想修改']];
-    if (it.kind === 'grade') return [['graded', '用調色版'], ['orig', '維持原版'], ['edit', '調色還想修改']];
+    if (it.kind === 'improve') return [['keep', `保留 ${it.original.v}`], ['1', '改用新候選 1'], ['2', '改用新候選 2'], ['edit', '仍想修改']];
+    if (it.kind === 'grade') return [['graded', `用${it.graded.v}`], ['orig', '維持原版'], ['edit', '還想修改']];
     const ok = it.candidates.filter(c => !c.missing);
     return [...ok.map(c => [c.v, `接受 ${c.v}`]), ['edit', ok.length > 1 ? '兩張都想修改' : '想修改']];
   }
   const optText = (it, v) => (options(it).find(o => o[0] === v) || [, ''])[1];
   function picked(it, v) {   // 選擇對應的圖片識別（複製回饋用）
     if (it.kind === 'ab') { const c = it.candidates.find(x => x.v === v); return c ? [c.img_id] : shown(it).map(p => p.img_id); }
-    if (it.kind === 'rin') return v === 'keep' ? [it.original.img_id] : v === '1' || v === '2' ? [it.candidates[+v - 1].img_id] : shown(it).map(p => p.img_id);
+    if (it.kind === 'improve') return v === 'keep' ? [it.original.img_id] : v === '1' || v === '2' ? [it.candidates[+v - 1].img_id] : shown(it).map(p => p.img_id);
     return v === 'graded' ? [it.graded.img_id] : v === 'orig' ? [it.original.img_id] : shown(it).map(p => p.img_id);
   }
 
@@ -93,8 +93,8 @@
     const it = ITEMS[cur], f = fb(it);
     document.title = `${label(it)}｜選片｜2027 KOL 桌曆`;
     const ph = photos(it);
-    const hint = it.kind === 'rin' ? '<p class="note">原 A 是你上一輪選定的照片，保留不替換；新候選 1、2 只是改善候選。</p>'
-      : it.kind === 'grade' ? `<p class="note">你上一輪選定這張；調色版只調明暗與色彩（${esc(it.grade_label)}），人物與畫面不變。螢幕上的亮度不代表印刷效果，交印前會再確認。</p>` : '';
+    const hint = it.hint ? `<p class="note">${esc(it.hint)}</p>` : '';
+    const past = it.history || [];
     app.innerHTML = `${navHtml()}
 <section class="sec set" id="set" aria-label="${esc(label(it))}">
 <h2>${esc(label(it))}<span class="kind">${KIND_TAG[it.kind]}</span><i class="${stCls(f.v)}" id="set-st">${esc(stText(it, f.v))}</i></h2>
@@ -104,6 +104,7 @@ ${hint}
 ${options(it).map(([v, t]) => `<label class="opt"><input type="radio" name="fb-v" value="${v}"${f.v === v ? ' checked' : ''}> ${esc(t)}</label>`).join('\n')}
 <button type="button" class="btn ghost sm" id="fb-clear"${f.v ? '' : ' disabled'}>清除選擇（改回未回覆）</button>
 </div>
+${past.length ? `<details class="past"><summary>前幾輪的照片（${past.length} 張，只看不選）</summary><div class="pgrid pgrid-${it.book}">${past.map((p, k) => `<figure class="pc"><button type="button" class="zoom" data-img="h${k}" aria-label="放大 ${esc(p.v)}：${esc(label(it))}"><img src="${esc(p.img.view.src)}" width="${p.img.view.w}" height="${p.img.view.h}" alt="${esc(label(it))} ${esc(p.v)}" loading="lazy"></button><figcaption>${esc(p.v)}</figcaption></figure>`).join('')}</div></details>` : ''}
 <label class="nl" for="fb-note">備註（具體想改哪裡、或任何意見；可留空）</label>
 <textarea id="fb-note" rows="3" maxlength="2000">${esc(f.note)}</textarea>
 <p class="note" id="fb-saved" aria-live="polite">${savedText(f)}</p>
@@ -116,12 +117,13 @@ ${options(it).map(([v, t]) => `<label class="opt"><input type="radio" name="fb-v
 <textarea id="cp-text" rows="8" readonly aria-label="全部回饋文字"></textarea>
 </section>
 <section class="sec" id="sel"><h2>已選（${SEL.length} 套，不用重選）</h2>
+${K.sel_note ? `<p class="td-h">${esc(K.sel_note)}</p>` : ''}
 <div class="accs">${SEL.map((s, i) => { const p = s.img || (refOf(s.img_ref) || {}).img; return `<figure class="acc"><button type="button" class="zoom" data-img="sel${i}" aria-label="放大：${esc(label(s))}"><img src="${esc(p.view.src)}" width="${p.view.w}" height="${p.view.h}" alt="${esc(label(s))}" loading="lazy"></button>
 <figcaption><b>${esc(label(s))}</b><br><span class="${s.edit_pending ? 'pendtag' : 'ok'}">${esc(s.label)}</span></figcaption></figure>`; }).join('')}</div>
 </section>
-<section class="sec" id="pend"><h2>待處理</h2>
+${PEND.length ? `<section class="sec" id="pend"><h2>待處理</h2>
 ${PEND.map(p => `<p class="td-h"><b>${esc(label(p))}</b>｜${esc(p.v)}</p>`).join('')}
-</section>
+</section>` : ''}
 <section class="sec hist"><h2><a href="${esc(K.history.href)}">${esc(K.history.label)} →</a></h2></section>`;
     updateCopy();
   }
@@ -208,6 +210,8 @@ ${PEND.map(p => `<p class="td-h"><b>${esc(label(p))}</b>｜${esc(p.v)}</p>`).joi
     const it = ITEMS[cur];
     const m = /^sel(\d+)$/.exec(key || '');
     if (m) { const s = SEL[+m[1]]; const p = s && (s.img ? s : refOf(s.img_ref)); return p ? [p.img.view, p.img.full, `${label(s)}｜${s.label}`] : null; }
+    const h = /^h(\d+)$/.exec(key || '');
+    if (h) { const p = (it.history || [])[+h[1]]; return p ? [p.img.view, p.img.full, `${label(it)}｜前幾輪：${p.v}`] : null; }
     const p = photos(it)[+key];
     return p && !p.missing ? [p.img.view, p.img.full, `${label(it)}｜${p.v}（圖片 ${p.img_id}）`] : null;
   }
@@ -274,7 +278,7 @@ ${PEND.map(p => `<p class="td-h"><b>${esc(label(p))}</b>｜${esc(p.v)}</p>`).joi
   app.addEventListener('focusout', e => { if (e.target.id === 'fb-note') { clearTimeout(tmr); onChoice(false); } });
   $('#viewer-close').addEventListener('click', () => closeViewer(false));
   vmode.addEventListener('click', () => toggleMode(null));
-  vother.addEventListener('click', () => { const nk = nextKey(vk); if (nk !== null) show(nk, viewer.classList.contains('natural')); });
+  vother.addEventListener('click', () => { const nk = /^\d+$/.test(vk || '') ? nextKey(vk) : null; if (nk !== null) show(nk, viewer.classList.contains('natural')); });
   vimg.addEventListener('click', toggleMode);
   window.addEventListener('popstate', () => closeViewer(true));
   window.addEventListener('hashchange', () => { const i = idx(decodeURIComponent(location.hash.slice(1))); if (i >= 0 && i !== cur) { cur = -1; go(i, false); } });
