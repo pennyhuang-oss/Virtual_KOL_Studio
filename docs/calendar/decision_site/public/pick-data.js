@@ -1,339 +1,38 @@
-// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r22.json
+// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r23.json
 window.CAL_PICK = {
  "history": {
   "href": "history.html",
   "label": "已定稿企劃／歷史紀錄"
  },
- "intro": "上方是本輪要你確認的 6 項：H-Mia、V-Rainie、V-Somi 的新候選，H-Somi 的改善候選，H-Luna、V-Miu 的修正版。已定案的 18 套放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
+ "intro": "本輪只剩 2 項要你確認：H-Somi 的調色版，和 V-Rainie 換場景後的新候選。已定案的 22 套放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
  "items": [
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "candidates": [
-    {
-     "img": {
-      "full": {
-       "bytes": 407987,
-       "h": 1152,
-       "src": "img/pick/H-mia-huang-R22-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 226492,
-       "h": 900,
-       "src": "img/pick/H-mia-huang-R22-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-mia-huang-R22-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "A",
-     "version": "M-4 R22"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 419234,
-       "h": 1152,
-       "src": "img/pick/H-mia-huang-R22-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 226087,
-       "h": 900,
-       "src": "img/pick/H-mia-huang-R22-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-mia-huang-R22-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "B",
-     "version": "M-4 R22"
-    }
-   ],
-   "history": [
-    {
-     "img": {
-      "full": {
-       "bytes": 339387,
-       "h": 1152,
-       "src": "img/pick/H-mia-huang-R20-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 193580,
-       "h": 900,
-       "src": "img/pick/H-mia-huang-R20-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-mia-huang-R20-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R20 A",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 380209,
-       "h": 1152,
-       "src": "img/pick/H-mia-huang-R20-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 217291,
-       "h": 900,
-       "src": "img/pick/H-mia-huang-R20-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-mia-huang-R20-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R20 B",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 461773,
-       "h": 1152,
-       "src": "img/pick/H-mia-huang-R21-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 263455,
-       "h": 900,
-       "src": "img/pick/H-mia-huang-R21-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-mia-huang-R21-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R21 A",
-     "version": "M-4 R21"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 432948,
-       "h": 1152,
-       "src": "img/pick/H-mia-huang-R21-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 245602,
-       "h": 900,
-       "src": "img/pick/H-mia-huang-R21-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-mia-huang-R21-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R21 B",
-     "version": "M-4 R21"
-    }
-   ],
-   "kind": "ab",
-   "month": 7,
-   "name": "Mia",
-   "set": "H-mia-huang"
-  },
   {
    "book": "H",
    "book_zh": "橫式",
    "graded": {
     "img": {
      "full": {
-      "bytes": 638694,
+      "bytes": 839394,
       "h": 1152,
-      "src": "img/pick/H-luna-tanaka-R21-A-G22.jpg",
+      "src": "img/pick/H-somi-oh-R22-2-G23.jpg",
       "w": 2048
      },
      "view": {
-      "bytes": 355062,
+      "bytes": 463145,
       "h": 900,
-      "src": "img/pick/H-luna-tanaka-R21-A-G22_view.jpg",
+      "src": "img/pick/H-somi-oh-R22-2-G23_view.jpg",
       "w": 1600
      }
     },
-    "img_id": "H-luna-tanaka-R21-A-G22",
+    "img_id": "H-somi-oh-R22-2-G23",
     "px": [
      2048,
      1152
     ],
-    "v": "本輪修正版",
-    "version": "M-4 R22 修正"
+    "v": "調色版",
+    "version": "M-4 R23 調色"
    },
-   "hint": "你選定 R21 A；修正版只調明暗與色彩（整體提亮、適度提高飽和度、背光的臉局部提亮），人物與畫面不變。螢幕上的亮度不代表印刷效果，交印前會再確認。",
-   "history": [
-    {
-     "img": {
-      "full": {
-       "bytes": 844835,
-       "h": 1152,
-       "src": "img/pick/H-luna-tanaka-R20-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 451691,
-       "h": 900,
-       "src": "img/pick/H-luna-tanaka-R20-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-luna-tanaka-R20-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R20 A",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 655899,
-       "h": 1152,
-       "src": "img/pick/H-luna-tanaka-R20-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 365279,
-       "h": 900,
-       "src": "img/pick/H-luna-tanaka-R20-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-luna-tanaka-R20-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R20 B",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 762292,
-       "h": 1152,
-       "src": "img/pick/H-luna-tanaka-R21-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 421660,
-       "h": 900,
-       "src": "img/pick/H-luna-tanaka-R21-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-luna-tanaka-R21-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R21 B",
-     "version": "M-4 R21"
-    }
-   ],
-   "kind": "grade",
-   "month": 10,
-   "name": "Luna",
-   "original": {
-    "img": {
-     "full": {
-      "bytes": 627511,
-      "h": 1152,
-      "src": "img/pick/H-luna-tanaka-R21-A.jpg",
-      "w": 2048
-     },
-     "view": {
-      "bytes": 348790,
-      "h": 900,
-      "src": "img/pick/H-luna-tanaka-R21-A_view.jpg",
-      "w": 1600
-     }
-    },
-    "img_id": "H-luna-tanaka-R21-A",
-    "px": [
-     2048,
-     1152
-    ],
-    "v": "原版",
-    "version": "M-4 R21"
-   },
-   "set": "H-luna-tanaka"
-  },
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "candidates": [
-    {
-     "img": {
-      "full": {
-       "bytes": 685480,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R22-1.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 379154,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R22-1_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R22-1",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "新候選 1",
-     "version": "M-4 R22"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 836405,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R22-2.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 461109,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R22-2_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R22-2",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "新候選 2",
-     "version": "M-4 R22"
-    }
-   ],
-   "hint": "R21 B 是你選定的照片，保留不替換；新候選 1、2 是同一片芒草原的自然抓拍，只是改善候選。",
+   "hint": "你改選 R22 新候選 2；調色版只調明暗與色彩（提高明亮度與適度飽和度），人物、動作、服裝與背景不變。螢幕上的亮度不代表印刷效果，交印前會再確認。",
    "history": [
     {
      "img": {
@@ -403,138 +102,81 @@ window.CAL_PICK = {
      ],
      "v": "R21 A",
      "version": "M-4 R21"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 749396,
+       "h": 1152,
+       "src": "img/pick/H-somi-oh-R21-B.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 414716,
+       "h": 900,
+       "src": "img/pick/H-somi-oh-R21-B_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-somi-oh-R21-B",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "R21 B",
+     "version": "M-4 R21"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 685480,
+       "h": 1152,
+       "src": "img/pick/H-somi-oh-R22-1.jpg",
+       "w": 2048
+      },
+      "view": {
+       "bytes": 379154,
+       "h": 900,
+       "src": "img/pick/H-somi-oh-R22-1_view.jpg",
+       "w": 1600
+      }
+     },
+     "img_id": "H-somi-oh-R22-1",
+     "px": [
+      2048,
+      1152
+     ],
+     "v": "R22 新候選 1",
+     "version": "M-4 R22"
     }
    ],
-   "kind": "improve",
+   "kind": "grade",
    "month": 11,
    "name": "Somi",
    "original": {
     "img": {
      "full": {
-      "bytes": 749396,
+      "bytes": 836405,
       "h": 1152,
-      "src": "img/pick/H-somi-oh-R21-B.jpg",
+      "src": "img/pick/H-somi-oh-R22-2.jpg",
       "w": 2048
      },
      "view": {
-      "bytes": 414716,
+      "bytes": 461109,
       "h": 900,
-      "src": "img/pick/H-somi-oh-R21-B_view.jpg",
+      "src": "img/pick/H-somi-oh-R22-2_view.jpg",
       "w": 1600
      }
     },
-    "img_id": "H-somi-oh-R21-B",
+    "img_id": "H-somi-oh-R22-2",
     "px": [
      2048,
      1152
     ],
-    "v": "R21 B",
-    "version": "M-4 R21"
+    "v": "原版",
+    "version": "M-4 R22"
    },
    "set": "H-somi-oh"
-  },
-  {
-   "book": "V",
-   "book_zh": "直式",
-   "graded": {
-    "img": {
-     "full": {
-      "bytes": 778788,
-      "h": 2048,
-      "src": "img/pick/V-miu-shiraishi-R20-B-G22.jpg",
-      "w": 1536
-     },
-     "view": {
-      "bytes": 435336,
-      "h": 1600,
-      "src": "img/pick/V-miu-shiraishi-R20-B-G22_view.jpg",
-      "w": 1200
-     }
-    },
-    "img_id": "V-miu-shiraishi-R20-B-G22",
-    "px": [
-     1536,
-     2048
-    ],
-    "v": "本輪修正版",
-    "version": "M-4 R22 修正"
-   },
-   "hint": "你選定 R20 B；上一輪的調色版變得太銳利，這次從原版重新調：保留上一輪的明亮色調方向，維持原本的柔和質感，人物與畫面不變。螢幕上的亮度不代表印刷效果，交印前會再確認。",
-   "history": [
-    {
-     "img": {
-      "full": {
-       "bytes": 1041442,
-       "h": 2048,
-       "src": "img/pick/V-miu-shiraishi-R20-A.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 562201,
-       "h": 1600,
-       "src": "img/pick/V-miu-shiraishi-R20-A_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-miu-shiraishi-R20-A",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "R20 A",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 827115,
-       "h": 2048,
-       "src": "img/pick/V-miu-shiraishi-R20-B-G21.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 460945,
-       "h": 1600,
-       "src": "img/pick/V-miu-shiraishi-R20-B-G21_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-miu-shiraishi-R20-B-G21",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "R21 調色版",
-     "version": "M-4 R21 調色"
-    }
-   ],
-   "kind": "grade",
-   "month": 4,
-   "name": "Miu",
-   "original": {
-    "img": {
-     "full": {
-      "bytes": 776447,
-      "h": 2048,
-      "src": "img/pick/V-miu-shiraishi-R20-B.jpg",
-      "w": 1536
-     },
-     "view": {
-      "bytes": 433933,
-      "h": 1600,
-      "src": "img/pick/V-miu-shiraishi-R20-B_view.jpg",
-      "w": 1200
-     }
-    },
-    "img_id": "V-miu-shiraishi-R20-B",
-    "px": [
-     1536,
-     2048
-    ],
-    "v": "原版",
-    "version": "M-4 R20"
-   },
-   "set": "V-miu-shiraishi"
   },
   {
    "book": "V",
@@ -543,50 +185,51 @@ window.CAL_PICK = {
     {
      "img": {
       "full": {
-       "bytes": 533061,
+       "bytes": 834339,
        "h": 2048,
-       "src": "img/pick/V-rainie-hsu-R22-A.jpg",
+       "src": "img/pick/V-rainie-hsu-R23-A.jpg",
        "w": 1536
       },
       "view": {
-       "bytes": 303169,
+       "bytes": 480086,
        "h": 1600,
-       "src": "img/pick/V-rainie-hsu-R22-A_view.jpg",
+       "src": "img/pick/V-rainie-hsu-R23-A_view.jpg",
        "w": 1200
       }
      },
-     "img_id": "V-rainie-hsu-R22-A",
+     "img_id": "V-rainie-hsu-R23-A",
      "px": [
       1536,
       2048
      ],
      "v": "A",
-     "version": "M-4 R22"
+     "version": "M-4 R23"
     },
     {
      "img": {
       "full": {
-       "bytes": 517825,
+       "bytes": 999106,
        "h": 2048,
-       "src": "img/pick/V-rainie-hsu-R22-B.jpg",
+       "src": "img/pick/V-rainie-hsu-R23-B.jpg",
        "w": 1536
       },
       "view": {
-       "bytes": 290776,
+       "bytes": 578441,
        "h": 1600,
-       "src": "img/pick/V-rainie-hsu-R22-B_view.jpg",
+       "src": "img/pick/V-rainie-hsu-R23-B_view.jpg",
        "w": 1200
       }
      },
-     "img_id": "V-rainie-hsu-R22-B",
+     "img_id": "V-rainie-hsu-R23-B",
      "px": [
       1536,
       2048
      ],
      "v": "B",
-     "version": "M-4 R22"
+     "version": "M-4 R23"
     }
    ],
+   "hint": "換成 5 月午後的林蔭巷弄：A 是看得清楚雙眼的中近景，B 是看得出腿長比例的全身。",
    "history": [
     {
      "img": {
@@ -679,169 +322,64 @@ window.CAL_PICK = {
      ],
      "v": "R21 B",
      "version": "M-4 R21"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 533061,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R22-A.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 303169,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R22-A_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R22-A",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R22 A",
+     "version": "M-4 R22"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 517825,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R22-B.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 290776,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R22-B_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R22-B",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R22 B",
+     "version": "M-4 R22"
     }
    ],
    "kind": "ab",
    "month": 5,
    "name": "Rainie",
    "set": "V-rainie-hsu"
-  },
-  {
-   "book": "V",
-   "book_zh": "直式",
-   "candidates": [
-    {
-     "img": {
-      "full": {
-       "bytes": 590347,
-       "h": 2048,
-       "src": "img/pick/V-somi-oh-R22-A.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 333414,
-       "h": 1600,
-       "src": "img/pick/V-somi-oh-R22-A_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-somi-oh-R22-A",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "A",
-     "version": "M-4 R22"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 622761,
-       "h": 2048,
-       "src": "img/pick/V-somi-oh-R22-B.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 348388,
-       "h": 1600,
-       "src": "img/pick/V-somi-oh-R22-B_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-somi-oh-R22-B",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "B",
-     "version": "M-4 R22"
-    }
-   ],
-   "hint": "冬季雪景兩種景別：A 以神情與雪景氣氛為主，B 是完整人物與雪街。",
-   "history": [
-    {
-     "img": {
-      "full": {
-       "bytes": 835998,
-       "h": 2048,
-       "src": "img/pick/V-somi-oh-R5.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 469224,
-       "h": 1600,
-       "src": "img/pick/V-somi-oh-R5_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-somi-oh-R5",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "R5 試拍",
-     "version": "M-4 R5"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 628967,
-       "h": 2048,
-       "src": "img/pick/V-somi-oh-R7.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 340689,
-       "h": 1600,
-       "src": "img/pick/V-somi-oh-R7_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-somi-oh-R7",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "R7 試拍",
-     "version": "M-4 R7"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 627913,
-       "h": 2048,
-       "src": "img/pick/V-somi-oh-R8.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 303710,
-       "h": 1600,
-       "src": "img/pick/V-somi-oh-R8_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-somi-oh-R8",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "R8 試拍",
-     "version": "M-4 R8"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 639174,
-       "h": 2048,
-       "src": "img/pick/V-somi-oh-R11.jpg",
-       "w": 1536
-      },
-      "view": {
-       "bytes": 356647,
-       "h": 1600,
-       "src": "img/pick/V-somi-oh-R11_view.jpg",
-       "w": 1200
-      }
-     },
-     "img_id": "V-somi-oh-R11",
-     "px": [
-      1536,
-      2048
-     ],
-     "v": "R11 試拍",
-     "version": "M-4 R11"
-    }
-   ],
-   "kind": "ab",
-   "month": 12,
-   "name": "Somi",
-   "set": "V-somi-oh"
   }
  ],
- "key_prefix": "cal2027-pick-r22-v1:",
+ "key_prefix": "cal2027-pick-r23-v1:",
  "pending": [],
- "round": "M-4 R22",
- "sel_note": "18 套定案；另外 3 套已選定來源照片，修改版在上方等你確認。",
+ "round": "M-4 R23",
+ "sel_note": "22 套定案；H-Somi 已選定 R22 新候選 2，調色版在上方等你確認。",
  "selected": [
   {
    "book": "H",
@@ -1023,6 +561,35 @@ window.CAL_PICK = {
    "edit_pending": false,
    "img": {
     "full": {
+     "bytes": 407987,
+     "h": 1152,
+     "src": "img/pick/H-mia-huang-R22-A.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 226492,
+     "h": 900,
+     "src": "img/pick/H-mia-huang-R22-A_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-mia-huang-R22-A",
+   "label": "Penny 定案 R22 A",
+   "month": 7,
+   "name": "Mia",
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-mia-huang",
+   "version": "M-4 R22"
+  },
+  {
+   "book": "H",
+   "book_zh": "橫式",
+   "edit_pending": false,
+   "img": {
+    "full": {
      "bytes": 503883,
      "h": 1152,
      "src": "img/pick/H-iris-chen-R20-A.jpg",
@@ -1078,19 +645,38 @@ window.CAL_PICK = {
   {
    "book": "H",
    "book_zh": "橫式",
-   "edit_pending": true,
-   "img_ref": "H-luna-tanaka-R21-A",
-   "label": "Penny 選定 R21 A（修正版待確認，見上方）",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 638694,
+     "h": 1152,
+     "src": "img/pick/H-luna-tanaka-R21-A-G22.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 355062,
+     "h": 900,
+     "src": "img/pick/H-luna-tanaka-R21-A-G22_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-luna-tanaka-R21-A-G22",
+   "label": "Penny 定案 R21 A 修正版",
    "month": 10,
    "name": "Luna",
-   "set": "H-luna-tanaka"
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-luna-tanaka",
+   "version": "M-4 R22 修正"
   },
   {
    "book": "H",
    "book_zh": "橫式",
    "edit_pending": true,
-   "img_ref": "H-somi-oh-R21-B",
-   "label": "Penny 選定 R21 B（改善候選待確認，見上方）",
+   "img_ref": "H-somi-oh-R22-2",
+   "label": "Penny 選定 R22 新候選 2（調色待確認，見上方）",
    "month": 11,
    "name": "Somi",
    "set": "H-somi-oh"
@@ -1214,12 +800,31 @@ window.CAL_PICK = {
   {
    "book": "V",
    "book_zh": "直式",
-   "edit_pending": true,
-   "img_ref": "V-miu-shiraishi-R20-B",
-   "label": "Penny 選定 R20 B（修正版待確認，見上方）",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 778788,
+     "h": 2048,
+     "src": "img/pick/V-miu-shiraishi-R20-B-G22.jpg",
+     "w": 1536
+    },
+    "view": {
+     "bytes": 435336,
+     "h": 1600,
+     "src": "img/pick/V-miu-shiraishi-R20-B-G22_view.jpg",
+     "w": 1200
+    }
+   },
+   "img_id": "V-miu-shiraishi-R20-B-G22",
+   "label": "Penny 定案 R20 B 修正版",
    "month": 4,
    "name": "Miu",
-   "set": "V-miu-shiraishi"
+   "px": [
+    1536,
+    2048
+   ],
+   "set": "V-miu-shiraishi",
+   "version": "M-4 R22 修正"
   },
   {
    "book": "V",
@@ -1394,11 +999,40 @@ window.CAL_PICK = {
    ],
    "set": "V-yuna-kim",
    "version": "M-4 R21"
+  },
+  {
+   "book": "V",
+   "book_zh": "直式",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 622761,
+     "h": 2048,
+     "src": "img/pick/V-somi-oh-R22-B.jpg",
+     "w": 1536
+    },
+    "view": {
+     "bytes": 348388,
+     "h": 1600,
+     "src": "img/pick/V-somi-oh-R22-B_view.jpg",
+     "w": 1200
+    }
+   },
+   "img_id": "V-somi-oh-R22-B",
+   "label": "Penny 定案 R22 B",
+   "month": 12,
+   "name": "Somi",
+   "px": [
+    1536,
+    2048
+   ],
+   "set": "V-somi-oh",
+   "version": "M-4 R22"
   }
  ],
- "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。第一輪（R20）、第二輪（R21）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
+ "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。前幾輪（R20、R21、R22）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
  "task": "TASK-CAL-001",
- "title": "2027 桌曆選片｜第三輪",
- "version": "pick-r22-v1",
+ "title": "2027 桌曆選片｜第四輪",
+ "version": "pick-r23-v1",
  "written_on": "2026-10-28"
 };
