@@ -10,7 +10,7 @@
  },
  "meta": {
   "task": "TASK-CAL-001／M-4／R6｜第一批全數退回與全套寫真企劃重審",
-  "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；M-4 R18 依授權生成 Yerin、Jia 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查兩張皆部分通過，待主管看圖、Penny 未決定；M-4 R19 Penny 兩張 R18 都不接受，只備 Yerin 姿態修訂 prompt（生成 0）；M-4 R20 依授權為剩餘 20 套各生成 A、B 兩張候選（40 次請求、實扣 4.80），全部上選片頁待 Penny 選擇；V-somi-oh 暫不處理；M-4 R21 Penny 在 R20 選片頁選定 11 套（其中 4 套另有修改），連同先前 3 套共 14 套已選定；退回的 9 套與 H-Rin 改善候選重做（20 次請求、產出 19、實扣淨額 2.28），3 張本機調色，全部上選片頁待 Penny 確認；M-4 R22 Penny 在 R21 選片頁定案 8 套，連同先前共 18 套定案；3 套選定來源、修改待確認，3 套待選；生成 8 張（H-Mia、H-Somi、V-Rainie、V-Somi 各 2，實扣 0.96）與 2 張本機修正，全部上選片頁待 Penny 確認；M-4 R23 Penny 在 R22 選片頁定案 4 套，連同先前共 22 套定案；H-Somi 改選 R22 新候選 2、調色待確認；V-Rainie 查核身分來源後換場景重製 2 張（實扣 0.24）；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
+  "status": "M-3 企劃沒有生成任何圖片；M-4 R2 生成 V-Iris 首試 1 張，M-4 R4 Penny 接受；M-4 R5 生成第一批 5 張，M-4 R6 Penny 全數退回（想修改 5、接受 0），24 套企劃重審完成（主管 R6 v3 PASS，只代表企劃）；M-4 R7 V-Somi 單張試拍 1 張，主管建議退回、Penny 未接受；M-4 R8 V-Somi 精簡 prompt 測試 1 張，主管建議退回、Penny 未接受；之後只做構圖控制流程唯讀查核（生成 0）；M-4 R9 依授權生成構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查不通過（三段拼接），主管退回底稿、Penny 未接受，不送第二步；修訂 prompt 只準備、未執行；M-4 R10 依授權用修訂 prompt 生成連續空間構圖底稿 1 張（非 Somi 成品），Claude 自查通過（底稿層級），主管 PASS 作第二步構圖參考；M-4 R11 依授權用 Soul＋R10 參考生成 V-Somi 1 張，Claude 自查不通過，主管建議退回、Penny 未接受，Soul＋構圖參考暫不作量產流程；M-4 R12 只準備保留 R10 底稿的身分編輯測試包（生成 0、上傳 0）；M-4 R13 遮罩編輯因遮罩白黑定義無法確認而未送出（生成 0、扣款 0），並交出 Tammy、Rin、Yerin、Jia 製作卡；M-4 R13 第二次依主管 R12 覆核調整遮罩、備妥 adult woman 版 prompt，但遮罩白黑定義與上傳費用仍無法確認，未上傳、未送出（生成 0、扣款 0），並交出四位簡明製作卡；M-4 R14 依授權生成 Tammy、Rin 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查 Tammy 部分通過、Rin 不通過，待主管看圖、Penny 未表態；Somi 遮罩流程暫停；M-4 R15 主管覆核 R14：Tammy 保留候選、待 Penny 決定，Rin 建議修改、Penny 未決定；只備 Rin 修訂 prompt（生成 0）；M-4 R16 Penny 接受 Tammy R14（已接受 2 套：V-Iris、V-Tammy）；Rin 修訂版生成 1 張（1 次請求、實扣 0.12），Claude 自查部分通過，待主管看圖、Penny 未決定；M-4 R17 Rin 以 R14 為優先候選（Penny 版本偏好、主管比較推薦），R16 保留紀錄，未正式接受；之後 Penny 正式接受 Rin R14（已接受 3 套：V-Iris、V-Tammy、V-Rin）；M-4 R18 依授權生成 Yerin、Jia 重製試拍各 1 張（各 1 次請求、各實扣 0.12），Claude 自查兩張皆部分通過，待主管看圖、Penny 未決定；M-4 R19 Penny 兩張 R18 都不接受，只備 Yerin 姿態修訂 prompt（生成 0）；M-4 R20 依授權為剩餘 20 套各生成 A、B 兩張候選（40 次請求、實扣 4.80），全部上選片頁待 Penny 選擇；V-somi-oh 暫不處理；M-4 R21 Penny 在 R20 選片頁選定 11 套（其中 4 套另有修改），連同先前 3 套共 14 套已選定；退回的 9 套與 H-Rin 改善候選重做（20 次請求、產出 19、實扣淨額 2.28），3 張本機調色，全部上選片頁待 Penny 確認；M-4 R22 Penny 在 R21 選片頁定案 8 套，連同先前共 18 套定案；3 套選定來源、修改待確認，3 套待選；生成 8 張（H-Mia、H-Somi、V-Rainie、V-Somi 各 2，實扣 0.96）與 2 張本機修正，全部上選片頁待 Penny 確認；M-4 R23 Penny 在 R22 選片頁定案 4 套，連同先前共 22 套定案；H-Somi 改選 R22 新候選 2、調色待確認；V-Rainie 查核身分來源後換場景重製 2 張（實扣 0.24）；M-4 R24 Penny 接受 H-Somi 調色版，共 23 套定案；V-Rainie 回歸 canon、改用早期 Seedream＋既有身分錨點流程生成 2 張（實扣 2），待 Penny 選擇；沒有上傳、訓練、修圖，也沒有改 canon 或 Soul ID",
   "roster": "roster-v1（docs/calendar/data/cal_m1_owner_roster.json）",
   "material_page_commit": "b8108eb648a46a57e3bb4dc2158cf878c23d7963",
   "calendar_baseline": "4fd3995cd75f726b19cb55c9c7f1e62a11a3cc45",
@@ -456,11 +456,11 @@
   "owner_decisions_open": 0,
   "production": {
    "sets_total": 24,
-   "accepted": 22,
+   "accepted": 23,
    "rejected_replan": 0,
    "not_generated": 0,
-   "to_complete": 2,
-   "generated_cumulative": 83,
+   "to_complete": 1,
+   "generated_cumulative": 85,
    "generated_log": {
     "M-4 R2": 1,
     "M-4 R5": 5,
@@ -473,7 +473,8 @@
     "M-4 R20": 40,
     "M-4 R21": 19,
     "M-4 R22": 8,
-    "M-4 R23": 2
+    "M-4 R23": 2,
+    "M-4 R24": 2
    },
    "pending_owner_review": 1,
    "accepted_sets": [
@@ -498,22 +499,23 @@
     "H-mia-huang",
     "H-luna-tanaka",
     "V-miu-shiraishi",
-    "V-somi-oh"
+    "V-somi-oh",
+    "H-somi-oh"
    ],
    "rejected_sets": [],
    "batch1": "owner-rejected-r6",
    "review_r6": "proposed-pending-supervisor-review",
    "definitions": {
     "sets_total": "24 套月面＝accepted＋selected_pending_edit＋pending_owner_review＋rejected_replan＋not_generated（五類互斥；M-4 R21 起加入 selected_pending_edit）",
-    "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版）",
+    "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版）",
     "rejected_replan": "已生成、Penny 退回，待重規劃且目前沒有新候選（M-4 R22 起為 0：V-somi-oh 本輪有新候選）",
     "not_generated": "尚未生成的套數",
     "to_complete": "待完成合計＝selected_pending_edit＋pending_owner_review＋rejected_replan＋not_generated（不是互斥分類的一類）",
-    "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＝83）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
-    "pending_owner_review": "已有新候選、等 Penny 在選片頁選擇的套數（M-4 R23：V-Rainie 1 套，見 pick_sets）；未選擇不算接受",
+    "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＋R24 2＝85）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+    "pending_owner_review": "已有新候選、等 Penny 在選片頁選擇的套數（M-4 R24：V-Rainie 1 套，見 pick_sets）；未選擇不算接受",
     "set_notes": "單套的照片歷程（不改變上列 24 套完成分類）",
     "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",
-    "selected_pending_edit": "Penny 已選定來源照片、但另有指定修改；修改版待 Penny 確認，未接受；不撤銷她的選擇（M-4 R23：H-Somi 改選 R22 新候選 2，調色版待確認）",
+    "selected_pending_edit": "Penny 已選定來源照片、但另有指定修改；修改版待 Penny 確認，未接受；不撤銷她的選擇（M-4 R24：0 套）",
     "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄"
    },
    "set_notes": {
@@ -530,12 +532,12 @@
     "H-mia-huang": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 腰上、B 大腿中；燈串、摩天輪與晚霞到位。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 認為背景仍太假；改成真實夏日海灘重做新候選 2 張，待 Penny 選擇；R23：Penny 在 R22 選片頁（fbf5674）定案 H-mia-huang-R22-A",
     "H-iris-chen": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；海灣、岩台與向日葵黃到位。待 Penny 選擇，未接受；R21：Penny 在選片頁選定 R20 A（依 R21 指令整理；頁面原文交接缺件），不重生",
     "H-luna-tanaka": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身和服、香袋、庭院到位；B 膝上的和服下襬變短、露出腿部，和服長度不對。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 選定 R21 A 為來源，另要求提亮（背光的臉更明亮）；本輪做 1 張本機修正版，待 Penny 確認，未接受；R23：Penny 在 R22 選片頁（fbf5674）定案 H-luna-tanaka-R21-A-G22（本機修正版本身）",
-    "H-somi-oh": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 選定 R21 B 為來源，姿勢太做作；本輪生成 2 張自然抓拍改善候選，不自動替換 R21 B，待 Penny 確認；R23：Penny 改選 R22 新候選 2 為來源（R21 B 不再是選定來源），要求提高明亮度與飽和度；本輪做 1 張本機調色版，待 Penny 確認，未接受",
+    "H-somi-oh": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 選定 R21 B 為來源，姿勢太做作；本輪生成 2 張自然抓拍改善候選，不自動替換 R21 B，待 Penny 確認；R23：Penny 改選 R22 新候選 2 為來源（R21 B 不再是選定來源），要求提高明亮度與飽和度；本輪做 1 張本機調色版，待 Penny 確認，未接受；R24：Penny 正式接受 R22-2 的調色版 H-somi-oh-R22-2-G23（調色版本身）",
     "H-rainie-hsu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；夜景、壁燈與紅緞到位。待 Penny 選擇，未接受；R21：Penny 在選片頁選定 R20 B（依 R21 指令整理；頁面原文交接缺件），不重生",
     "V-jia-seo": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；溫室、白色鋼架與龜背芋到位；臉部略偏娃娃感。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 在 R21 選片頁（537fa19）定案 V-jia-seo-R21-A",
     "V-mia-huang": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：夜櫻、燈籠與紫色洋裝到位；A 取景比計畫寬（計畫胸上，實際到大腿）；燈籠上有類似文字的筆畫。待 Penny 選擇，未接受；R21：Penny 在選片頁選定 R20 A（依 R21 指令整理；頁面原文交接缺件），不重生",
     "V-miu-shiraishi": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：坐階梯、白花樹與杏色洋裝到位；兩張背景都出現吊床（設計寫不要吊床）。待 Penny 選擇，未接受；R21：Penny 選定 R20 B，另有修改（保留 B 的人物與構圖，以 A 的整體明暗、色彩作視覺參考，改善 B 的暗淡感）；本輪做 1 張本機調色候選，待 Penny 確認，未接受；R22：Penny 認為 R21 調色版太銳化、不像原版柔和；本輪從未修改的 R20 B 重做 1 張本機修正版，待 Penny 確認，未接受；R23：Penny 在 R22 選片頁（fbf5674）定案 V-miu-shiraishi-R20-B-G22（本機修正版本身）",
-    "V-rainie-hsu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；雨後街道、暖窗光與倒影到位。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 認為眼睛仍像鬥雞眼、腿仍短；檢查身分來源後（基準無鬥雞眼）改為視線順著臉的方向、腰高平視遠距離全身，重做新候選 2 張，待 Penny 選擇；R23：Penny 兩張 R22 都退回；先查核身分來源（R20–R22 與早期 Soul 產出是同一個既有 Soul、未用參考圖），再換 5 月林蔭巷弄日常場景重製新候選 2 張，待 Penny 選擇",
+    "V-rainie-hsu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；雨後街道、暖窗光與倒影到位。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 認為眼睛仍像鬥雞眼、腿仍短；檢查身分來源後（基準無鬥雞眼）改為視線順著臉的方向、腰高平視遠距離全身，重做新候選 2 張，待 Penny 選擇；R23：Penny 兩張 R22 都退回；先查核身分來源（R20–R22 與早期 Soul 產出是同一個既有 Soul、未用參考圖），再換 5 月林蔭巷弄日常場景重製新候選 2 張，待 Penny 選擇；R24：Penny 兩張 R23 都退回（比例頭大身小）；回歸 canon，改用早期成功的 Seedream 4.5＋既有身分錨點 Element 流程，5 月頂樓露台站姿／行走全身各 1 張（各 1 credit），R20–R23 圖片不作任何輸入，待 Penny 選擇",
     "V-luna-tanaka": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 膝上、B 全身；雨後繡球花庭院到位。待 Penny 選擇，未接受；R21：Penny 選定 R20 B，另有修改（適度提高明亮度與飽和度）；本輪做 1 張本機調色候選，待 Penny 確認，未接受；R22：Penny 在 R21 選片頁（537fa19）定案 V-luna-tanaka-R20-B-G21（調色衍生版本身）",
     "V-coco-wu": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 後仰大笑、B 前傾雙手放膝；泳池與水光到位。待 Penny 選擇，未接受；R21：Penny 在選片頁選定 R20 B（依 R21 指令整理；頁面原文交接缺件），不重生",
     "V-yerin-han": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 走在淺水、B 停步仰望；粉紫天空與海面到位；B 海平線上露出太陽（設計是無強逆光）。待 Penny 選擇，未接受；R21：Penny 在選片頁選定 R20 A（依 R21 指令整理；頁面原文交接缺件），不重生",
@@ -553,10 +555,8 @@
    "pick_sets": [
     "V-rainie-hsu"
    ],
-   "selected_pending_edit": 1,
-   "selected_edit_sets": [
-    "H-somi-oh"
-   ],
+   "selected_pending_edit": 0,
+   "selected_edit_sets": [],
    "accepted_versions": {
     "H-rin-ayase": "H-rin-ayase-R21-1",
     "H-miu-shiraishi": "H-miu-shiraishi-R21-A",
@@ -569,7 +569,8 @@
     "H-mia-huang": "H-mia-huang-R22-A",
     "H-luna-tanaka": "H-luna-tanaka-R21-A-G22",
     "V-miu-shiraishi": "V-miu-shiraishi-R20-B-G22",
-    "V-somi-oh": "V-somi-oh-R22-B"
+    "V-somi-oh": "V-somi-oh-R22-B",
+    "H-somi-oh": "H-somi-oh-R22-2-G23"
    }
   }
  },
@@ -6075,8 +6076,8 @@
  "questions": [],
  "ref_note": "參考照片都是既有照片，只按標示的用途參考（表情／場景／服裝材質／身分），不是新企劃的成品，也不會照抄；身材一律以設定數字為準。既有照片也不是新構圖的成品。",
  "counts": {
-  "generated": 83,
-  "credits": 9.96,
+  "generated": 85,
+  "credits": 11.96,
   "trainings": 0
  },
  "r5": {
@@ -7893,7 +7894,7 @@
    }
   ]
  },
- "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。 M-4 R10：連續空間構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（累計生成 2、credits 4）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 4.96。 M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。 M-4 R14：Tammy、Rin 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 11、credits 1.32；構圖底稿仍是 2 張、4 credits；合計 credits 5.32。 M-4 R16：Penny 接受 Tammy R14；Rin 修訂版 1 張（Soul 純文字，1 次請求、實扣 0.12，依時窗推定）；月面照片累計生成 12、credits 1.44；構圖底稿仍是 2 張、4 credits；合計 credits 5.44。 M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 14、credits 1.68；構圖底稿仍是 2 張、4 credits；合計 credits 5.68。 M-4 R20：剩餘 20 套各 2 張候選（40 張，Soul 純文字，40 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 54、credits 6.48；構圖底稿仍是 2 張、4 credits；合計 credits 10.48。 M-4 R21：修正批次 20 次請求、產出 19 張（1 張被平台擋下、已退款），實扣淨額 2.28（依時窗推定）；另 3 張本機調色不計費；月面照片累計生成 73、credits 8.76；構圖底稿仍是 2 張、4 credits；合計 credits 12.76。 M-4 R22：4 套各 2 張（8 次請求、各實扣 0.12，依時窗推定），另 2 張本機修正不計費；月面照片累計生成 81、credits 9.72；構圖底稿仍是 2 張、4 credits；合計 credits 13.72。 M-4 R23：V-Rainie 2 張（2 次請求、各實扣 0.12，依時窗推定），另 H-Somi 1 張本機調色不計費；月面照片累計生成 83、credits 9.96；構圖底稿仍是 2 張、4 credits；合計 credits 13.96。",
+ "counts_note": "M-3 企劃階段生成 0；M-4 R2 依授權生成 V-Iris 首試 1 張（實扣 0.12，依時窗及唯一任務推定）。M-4 R4：Penny 接受這張、直接採用（已生成 1、已接受 1、其餘 23 套待製作）；下一批 5 位只做準備，生成 0、扣款 0。 M-4 R5：第一批 5 位各生成 1 張（5 次請求、實扣 0.60，依時窗及唯一任務推定），待 Penny 看圖；累計生成 6、credits 0.72。 M-4 R6：第一批 5 張 Penny 全數退回（不是品質驗收通過）；本輪生成 0、扣款 0。 M-4 R7：V-Somi 單張試拍 1 張（1 次請求、實扣 0.12，依時窗及唯一任務推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 7、credits 0.84。 M-4 R8：V-Somi 精簡 prompt 單張測試 1 張（1 次請求、實扣 0.12，依時窗推定）；主管實際看圖建議退回（REVISE），Penny 未接受；累計生成 8、credits 0.96。 M-4 R8 主管覆核後：只做構圖控制流程唯讀查核，生成 0、扣款 0。 M-4 R9：構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（生成 1、credits 2）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 2.96。 M-4 R10：連續空間構圖底稿 1 張（Nano Banana Pro，1 次請求、實扣 2，依時窗推定），非 Somi 成品，另計在 draft_counts（累計生成 2、credits 4）；月面照片累計仍是生成 8、credits 0.96；兩者合計 credits 4.96。 M-4 R11：V-Somi Soul＋R10 構圖參考 1 張（1 次請求、實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 9、credits 1.08；構圖底稿仍是 2 張、4 credits；合計 credits 5.08。 M-4 R14：Tammy、Rin 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定），算月面候選；月面照片累計生成 11、credits 1.32；構圖底稿仍是 2 張、4 credits；合計 credits 5.32。 M-4 R16：Penny 接受 Tammy R14；Rin 修訂版 1 張（Soul 純文字，1 次請求、實扣 0.12，依時窗推定）；月面照片累計生成 12、credits 1.44；構圖底稿仍是 2 張、4 credits；合計 credits 5.44。 M-4 R18：Yerin、Jia 重製試拍各 1 張（Soul 純文字，各 1 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 14、credits 1.68；構圖底稿仍是 2 張、4 credits；合計 credits 5.68。 M-4 R20：剩餘 20 套各 2 張候選（40 張，Soul 純文字，40 次請求、各實扣 0.12，依時窗推定）；月面照片累計生成 54、credits 6.48；構圖底稿仍是 2 張、4 credits；合計 credits 10.48。 M-4 R21：修正批次 20 次請求、產出 19 張（1 張被平台擋下、已退款），實扣淨額 2.28（依時窗推定）；另 3 張本機調色不計費；月面照片累計生成 73、credits 8.76；構圖底稿仍是 2 張、4 credits；合計 credits 12.76。 M-4 R22：4 套各 2 張（8 次請求、各實扣 0.12，依時窗推定），另 2 張本機修正不計費；月面照片累計生成 81、credits 9.72；構圖底稿仍是 2 張、4 credits；合計 credits 13.72。 M-4 R23：V-Rainie 2 張（2 次請求、各實扣 0.12，依時窗推定），另 H-Somi 1 張本機調色不計費；月面照片累計生成 83、credits 9.96；構圖底稿仍是 2 張、4 credits；合計 credits 13.96。 M-4 R24：V-Rainie 2 張改用 Seedream 4.5＋既有身分錨點（2 次請求、各實扣 1，依時窗推定）；月面照片累計生成 85、credits 11.96；構圖底稿仍是 2 張、4 credits；合計 credits 15.96。",
  "auth_m4r2": {
   "round": "M-4 R2",
   "recorded_on": "2026-10-20",
@@ -9522,6 +9523,136 @@
     "where": "meta.status",
     "old": "…全部上選片頁待 Penny 確認；沒有上傳…",
     "new": "…M-4 R23 … 22 套定案 … V-Rainie 重製 2 張；沒有上傳…"
+   }
+  ]
+ },
+ "m4r24": {
+  "from_commit": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461",
+  "auth": "docs/calendar/data/cal_m4_auth_r24.json",
+  "owner": "docs/calendar/data/cal_m4_owner_r24.json",
+  "trial": "docs/calendar/data/cal_m4_r24_trial.json",
+  "pick": "docs/calendar/data/cal_pick_r24.json",
+  "status_line": "M-4 R24：Penny 接受 H-Somi 調色版，共 23 套定案；V-Rainie 回歸 canon，改用早期成功的 Seedream 4.5＋既有身分錨點流程生成站姿、行走全身各 1 張（實扣 2），待 Penny 選擇。R22 頁面原文已逐字補存。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "counts",
+    "old": "{\"generated\": 83, \"credits\": 9.96, \"trainings\": 0}",
+    "new": "{\"generated\": 85, \"credits\": 11.96, \"trainings\": 0}"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.accepted",
+    "old": "22",
+    "new": "23"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.selected_pending_edit",
+    "old": "1",
+    "new": "0"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.pending_owner_review",
+    "old": "1",
+    "new": "1"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.rejected_replan",
+    "old": "0",
+    "new": "0"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.not_generated",
+    "old": "0",
+    "new": "0"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.to_complete",
+    "old": "2",
+    "new": "1"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.generated_cumulative",
+    "old": "83",
+    "new": "85"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.accepted_sets",
+    "old": "[\"V-iris-chen\", \"V-tammy-chou\", \"V-rin-ayase\", \"H-yuna-kim\", \"H-iris-chen\", \"H-jia-seo\", \"H-rainie-hsu\", \"V-mia-huang\", \"V-coco-wu\", \"V-yerin-han\", \"H-rin-ayase\", \"H-miu-shiraishi\", \"H-tammy-chou\", \"H-yerin-han\", \"H-coco-wu\", \"V-jia-seo\", \"V-luna-tanaka\", \"V-yuna-kim\", \"H-mia-huang\", \"H-luna-tanaka\", \"V-miu-shiraishi\", \"V-somi-oh\"]",
+    "new": "[\"V-iris-chen\", \"V-tammy-chou\", \"V-rin-ayase\", \"H-yuna-kim\", \"H-iris-chen\", \"H-jia-seo\", \"H-rainie-hsu\", \"V-mia-huang\", \"V-coco-wu\", \"V-yerin-han\", \"H-rin-ayase\", \"H-miu-shiraishi\", \"H-tammy-chou\", \"H-yerin-han\", \"H-coco-wu\", \"V-jia-seo\", \"V-luna-tanaka\", \"V-yuna-kim\", \"H-mia-huang\", \"H-luna-tanaka\", \"V-miu-shiraishi\", \"V-somi-oh\", \"H-somi-oh\"]"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.selected_edit_sets",
+    "old": "[\"H-somi-oh\"]",
+    "new": "[]"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.generated_log",
+    "old": "（無 M-4 R24）",
+    "new": "\"M-4 R24\": 2（Seedream 4.5＋既有身分錨點，各 1 credit）"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.accepted_versions",
+    "old": "{\"H-rin-ayase\": \"H-rin-ayase-R21-1\", \"H-miu-shiraishi\": \"H-miu-shiraishi-R21-A\", \"H-tammy-chou\": \"H-tammy-chou-R21-A\", \"H-yerin-han\": \"H-yerin-han-R21-A\", \"H-coco-wu\": \"H-coco-wu-R20-A-G21\", \"V-jia-seo\": \"V-jia-seo-R21-A\", \"V-luna-tanaka\": \"V-luna-tanaka-R20-B-G21\", \"V-yuna-kim\": \"V-yuna-kim-R21-A\", \"H-mia-huang\": \"H-mia-huang-R22-A\", \"H-luna-tanaka\": \"H-luna-tanaka-R21-A-G22\", \"V-miu-shiraishi\": \"V-miu-shiraishi-R20-B-G22\", \"V-somi-oh\": \"V-somi-oh-R22-B\"}",
+    "new": "{\"H-rin-ayase\": \"H-rin-ayase-R21-1\", \"H-miu-shiraishi\": \"H-miu-shiraishi-R21-A\", \"H-tammy-chou\": \"H-tammy-chou-R21-A\", \"H-yerin-han\": \"H-yerin-han-R21-A\", \"H-coco-wu\": \"H-coco-wu-R20-A-G21\", \"V-jia-seo\": \"V-jia-seo-R21-A\", \"V-luna-tanaka\": \"V-luna-tanaka-R20-B-G21\", \"V-yuna-kim\": \"V-yuna-kim-R21-A\", \"H-mia-huang\": \"H-mia-huang-R22-A\", \"H-luna-tanaka\": \"H-luna-tanaka-R21-A-G22\", \"V-miu-shiraishi\": \"V-miu-shiraishi-R20-B-G22\", \"V-somi-oh\": \"V-somi-oh-R22-B\", \"H-somi-oh\": \"H-somi-oh-R22-2-G23\"}"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.accepted",
+    "old": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版）",
+    "new": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版）"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.selected_pending_edit",
+    "old": "Penny 已選定來源照片、但另有指定修改；修改版待 Penny 確認，未接受；不撤銷她的選擇（M-4 R23：H-Somi 改選 R22 新候選 2，調色版待確認）",
+    "new": "Penny 已選定來源照片、但另有指定修改；修改版待 Penny 確認，未接受；不撤銷她的選擇（M-4 R24：0 套）"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.pending_owner_review",
+    "old": "已有新候選、等 Penny 在選片頁選擇的套數（M-4 R23：V-Rainie 1 套，見 pick_sets）；未選擇不算接受",
+    "new": "已有新候選、等 Penny 在選片頁選擇的套數（M-4 R24：V-Rainie 1 套，見 pick_sets）；未選擇不算接受"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.generated_cumulative",
+    "old": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＝83）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+    "new": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＋R24 2＝85）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.set_notes.H-somi-oh",
+    "old": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 選定 R21 B 為來源，姿勢太做作；本輪生成 2 張自然抓拍改善候選，不自動替換 R21 B，待 Penny 確認；R23：Penny 改選 R22 新候選 2 為來源（R21 B 不再是選定來源），要求提高明亮度與飽和度；本輪做 1 張本機調色版，待 Penny 確認，未接受",
+    "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 倚吧台、單腳抬起，姿勢偏刻意；B 側坐高腳椅較自然；兩張牆面與招牌都出現韓文字（設計是無字）。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 選定 R21 B 為來源，姿勢太做作；本輪生成 2 張自然抓拍改善候選，不自動替換 R21 B，待 Penny 確認；R23：Penny 改選 R22 新候選 2 為來源（R21 B 不再是選定來源），要求提高明亮度與飽和度；本輪做 1 張本機調色版，待 Penny 確認，未接受；R24：Penny 正式接受 R22-2 的調色版 H-somi-oh-R22-2-G23（調色版本身）"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.set_notes.V-rainie-hsu",
+    "old": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；雨後街道、暖窗光與倒影到位。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 認為眼睛仍像鬥雞眼、腿仍短；檢查身分來源後（基準無鬥雞眼）改為視線順著臉的方向、腰高平視遠距離全身，重做新候選 2 張，待 Penny 選擇；R23：Penny 兩張 R22 都退回；先查核身分來源（R20–R22 與早期 Soul 產出是同一個既有 Soul、未用參考圖），再換 5 月林蔭巷弄日常場景重製新候選 2 張，待 Penny 選擇",
+    "new": "R20：A、B 兩張候選（Soul 純文字，各實扣 0.12），已上選片頁；Claude 自查：A 全身、B 膝上；雨後街道、暖窗光與倒影到位。待 Penny 選擇，未接受；R21：Penny 兩張 R20 都想修改；依回饋重做新候選 2 張，待 Penny 選擇；R22：Penny 認為眼睛仍像鬥雞眼、腿仍短；檢查身分來源後（基準無鬥雞眼）改為視線順著臉的方向、腰高平視遠距離全身，重做新候選 2 張，待 Penny 選擇；R23：Penny 兩張 R22 都退回；先查核身分來源（R20–R22 與早期 Soul 產出是同一個既有 Soul、未用參考圖），再換 5 月林蔭巷弄日常場景重製新候選 2 張，待 Penny 選擇；R24：Penny 兩張 R23 都退回（比例頭大身小）；回歸 canon，改用早期成功的 Seedream 4.5＋既有身分錨點 Element 流程，5 月頂樓露台站姿／行走全身各 1 張（各 1 credit），R20–R23 圖片不作任何輸入，待 Penny 選擇"
+   },
+   {
+    "kind": "事實同步",
+    "where": "counts_note",
+    "old": "（尾句）…合計 credits 13.96。",
+    "new": "追加：…M-4 R24 … 合計 credits 15.96。"
+   },
+   {
+    "kind": "事實同步",
+    "where": "meta.status",
+    "old": "…V-Rainie 重製 2 張；沒有上傳…",
+    "new": "…M-4 R24 … 23 套定案 … V-Rainie Seedream＋錨點 2 張；沒有上傳…"
    }
   ]
  }

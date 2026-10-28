@@ -1,183 +1,11 @@
-// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r23.json
+// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r24.json
 window.CAL_PICK = {
  "history": {
   "href": "history.html",
   "label": "已定稿企劃／歷史紀錄"
  },
- "intro": "本輪只剩 2 項要你確認：H-Somi 的調色版，和 V-Rainie 換場景後的新候選。已定案的 22 套放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
+ "intro": "本輪只剩 V-Rainie 要你選：接受 A、接受 B，或兩張都想修改。其餘 23 套都已定案，放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
  "items": [
-  {
-   "book": "H",
-   "book_zh": "橫式",
-   "graded": {
-    "img": {
-     "full": {
-      "bytes": 839394,
-      "h": 1152,
-      "src": "img/pick/H-somi-oh-R22-2-G23.jpg",
-      "w": 2048
-     },
-     "view": {
-      "bytes": 463145,
-      "h": 900,
-      "src": "img/pick/H-somi-oh-R22-2-G23_view.jpg",
-      "w": 1600
-     }
-    },
-    "img_id": "H-somi-oh-R22-2-G23",
-    "px": [
-     2048,
-     1152
-    ],
-    "v": "調色版",
-    "version": "M-4 R23 調色"
-   },
-   "hint": "你改選 R22 新候選 2；調色版只調明暗與色彩（提高明亮度與適度飽和度），人物、動作、服裝與背景不變。螢幕上的亮度不代表印刷效果，交印前會再確認。",
-   "history": [
-    {
-     "img": {
-      "full": {
-       "bytes": 392344,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R20-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 219934,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R20-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R20-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R20 A",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 441908,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R20-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 244139,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R20-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R20-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R20 B",
-     "version": "M-4 R20"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 717398,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R21-A.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 384540,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R21-A_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R21-A",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R21 A",
-     "version": "M-4 R21"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 749396,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R21-B.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 414716,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R21-B_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R21-B",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R21 B",
-     "version": "M-4 R21"
-    },
-    {
-     "img": {
-      "full": {
-       "bytes": 685480,
-       "h": 1152,
-       "src": "img/pick/H-somi-oh-R22-1.jpg",
-       "w": 2048
-      },
-      "view": {
-       "bytes": 379154,
-       "h": 900,
-       "src": "img/pick/H-somi-oh-R22-1_view.jpg",
-       "w": 1600
-      }
-     },
-     "img_id": "H-somi-oh-R22-1",
-     "px": [
-      2048,
-      1152
-     ],
-     "v": "R22 新候選 1",
-     "version": "M-4 R22"
-    }
-   ],
-   "kind": "grade",
-   "month": 11,
-   "name": "Somi",
-   "original": {
-    "img": {
-     "full": {
-      "bytes": 836405,
-      "h": 1152,
-      "src": "img/pick/H-somi-oh-R22-2.jpg",
-      "w": 2048
-     },
-     "view": {
-      "bytes": 461109,
-      "h": 900,
-      "src": "img/pick/H-somi-oh-R22-2_view.jpg",
-      "w": 1600
-     }
-    },
-    "img_id": "H-somi-oh-R22-2",
-    "px": [
-     2048,
-     1152
-    ],
-    "v": "原版",
-    "version": "M-4 R22"
-   },
-   "set": "H-somi-oh"
-  },
   {
    "book": "V",
    "book_zh": "直式",
@@ -185,51 +13,51 @@ window.CAL_PICK = {
     {
      "img": {
       "full": {
-       "bytes": 834339,
-       "h": 2048,
-       "src": "img/pick/V-rainie-hsu-R23-A.jpg",
-       "w": 1536
+       "bytes": 553320,
+       "h": 2304,
+       "src": "img/pick/V-rainie-hsu-R24-A.jpg",
+       "w": 1728
       },
       "view": {
-       "bytes": 480086,
+       "bytes": 221164,
        "h": 1600,
-       "src": "img/pick/V-rainie-hsu-R23-A_view.jpg",
+       "src": "img/pick/V-rainie-hsu-R24-A_view.jpg",
        "w": 1200
       }
      },
-     "img_id": "V-rainie-hsu-R23-A",
+     "img_id": "V-rainie-hsu-R24-A",
      "px": [
-      1536,
-      2048
+      1728,
+      2304
      ],
      "v": "A",
-     "version": "M-4 R23"
+     "version": "M-4 R24"
     },
     {
      "img": {
       "full": {
-       "bytes": 999106,
-       "h": 2048,
-       "src": "img/pick/V-rainie-hsu-R23-B.jpg",
-       "w": 1536
+       "bytes": 573362,
+       "h": 2304,
+       "src": "img/pick/V-rainie-hsu-R24-B.jpg",
+       "w": 1728
       },
       "view": {
-       "bytes": 578441,
+       "bytes": 232540,
        "h": 1600,
-       "src": "img/pick/V-rainie-hsu-R23-B_view.jpg",
+       "src": "img/pick/V-rainie-hsu-R24-B_view.jpg",
        "w": 1200
       }
      },
-     "img_id": "V-rainie-hsu-R23-B",
+     "img_id": "V-rainie-hsu-R24-B",
      "px": [
-      1536,
-      2048
+      1728,
+      2304
      ],
      "v": "B",
-     "version": "M-4 R23"
+     "version": "M-4 R24"
     }
    ],
-   "hint": "換成 5 月午後的林蔭巷弄：A 是看得清楚雙眼的中近景，B 是看得出腿長比例的全身。",
+   "hint": "5 月傍晚的頂樓露台：A 是自然站姿，B 是自然行走的瞬間，兩張都是全身。",
    "history": [
     {
      "img": {
@@ -368,6 +196,52 @@ window.CAL_PICK = {
      ],
      "v": "R22 B",
      "version": "M-4 R22"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 834339,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R23-A.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 480086,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R23-A_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R23-A",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R23 A",
+     "version": "M-4 R23"
+    },
+    {
+     "img": {
+      "full": {
+       "bytes": 999106,
+       "h": 2048,
+       "src": "img/pick/V-rainie-hsu-R23-B.jpg",
+       "w": 1536
+      },
+      "view": {
+       "bytes": 578441,
+       "h": 1600,
+       "src": "img/pick/V-rainie-hsu-R23-B_view.jpg",
+       "w": 1200
+      }
+     },
+     "img_id": "V-rainie-hsu-R23-B",
+     "px": [
+      1536,
+      2048
+     ],
+     "v": "R23 B",
+     "version": "M-4 R23"
     }
    ],
    "kind": "ab",
@@ -376,10 +250,10 @@ window.CAL_PICK = {
    "set": "V-rainie-hsu"
   }
  ],
- "key_prefix": "cal2027-pick-r23-v1:",
+ "key_prefix": "cal2027-pick-r24-v1:",
  "pending": [],
- "round": "M-4 R23",
- "sel_note": "22 套定案；H-Somi 已選定 R22 新候選 2，調色版在上方等你確認。",
+ "round": "M-4 R24",
+ "sel_note": "23 套都已定案。",
  "selected": [
   {
    "book": "H",
@@ -674,12 +548,31 @@ window.CAL_PICK = {
   {
    "book": "H",
    "book_zh": "橫式",
-   "edit_pending": true,
-   "img_ref": "H-somi-oh-R22-2",
-   "label": "Penny 選定 R22 新候選 2（調色待確認，見上方）",
+   "edit_pending": false,
+   "img": {
+    "full": {
+     "bytes": 839394,
+     "h": 1152,
+     "src": "img/pick/H-somi-oh-R22-2-G23.jpg",
+     "w": 2048
+    },
+    "view": {
+     "bytes": 463145,
+     "h": 900,
+     "src": "img/pick/H-somi-oh-R22-2-G23_view.jpg",
+     "w": 1600
+    }
+   },
+   "img_id": "H-somi-oh-R22-2-G23",
+   "label": "Penny 定案 R22 新候選 2 調色版",
    "month": 11,
    "name": "Somi",
-   "set": "H-somi-oh"
+   "px": [
+    2048,
+    1152
+   ],
+   "set": "H-somi-oh",
+   "version": "M-4 R23 調色"
   },
   {
    "book": "H",
@@ -1030,9 +923,9 @@ window.CAL_PICK = {
    "version": "M-4 R22"
   }
  ],
- "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。前幾輪（R20、R21、R22）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
+ "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。前幾輪（R20–R23）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
  "task": "TASK-CAL-001",
- "title": "2027 桌曆選片｜第四輪",
- "version": "pick-r23-v1",
+ "title": "2027 桌曆選片｜第五輪",
+ "version": "pick-r24-v1",
  "written_on": "2026-10-28"
 };
