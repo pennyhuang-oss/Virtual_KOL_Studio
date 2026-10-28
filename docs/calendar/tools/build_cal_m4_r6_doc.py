@@ -182,7 +182,8 @@ def render(P, O, SUP, X):
     assert SV2['verbatim'].startswith('TASK-CAL-001／M-4／R6｜v2 主管覆核與有限收尾') and SV2['reviewed']['result_commit'] == X['supersedes']['commit'] == X['history'][1]['commit']
     T = X['trial']
     assert T['set'] in BATCH1 and T['request']['count'] == 1 and T['request']['requests'] == 1 and T['cost']['proposed_cap'] == T['cost']['r5_quote'] and len(T['flow']) == 4, '單張試拍：一張、一次請求、不自動重試'
-    assert PR['accepted'] + PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24 and PR['to_complete'] == PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated']
+    se = PR.get('selected_pending_edit', 0)  # M-4 R21：已選定、修改待確認
+    assert PR['accepted'] + se + PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24 and PR['to_complete'] == se + PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated']
     assert PR['generated_cumulative'] == sum(PR['generated_log'].values()) >= PR['accepted'] + PR['rejected_replan'] and PR['rejected_sets'] == [x for x in BATCH1 if x not in PR['accepted_sets'] + PR.get('pick_sets', [])]  # M-4 R20：Yerin、Jia 有新候選，移到待選片
     # ---- 核對：結論、設計卡、節奏 ----
     assert [r['id'] for r in X['review']] == order == [r['id'] for r in X['rhythm']] and len(order) == 24
@@ -259,7 +260,7 @@ def render(P, O, SUP, X):
     L += ['', f"- 第一批：{O['decision']['batch1_summary']}"]
     L += [f"- {s}：{v}" for s, v in O['decision']['batch1'].items()]
     L += [f"- Iris：{O['decision']['iris']}", f"- 範圍：{O['decision']['scope']}", f"- M-4 R5：{O['decision']['r5_status']}",
-          f"- 進度：{PR['sets_total']} 套＝已接受 {PR['accepted']}＋待 Penny 選片 {PR['pending_owner_review']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計" + (f"；構圖底稿另計 {PR['drafts']['generated']} 張，不是月面照片" if 'drafts' in PR else '') + "）。",
+          f"- 進度：{PR['sets_total']} 套＝已接受 {PR['accepted']}＋已選定待確認修改 {PR.get('selected_pending_edit', 0)}＋待 Penny 選片 {PR['pending_owner_review']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計" + (f"；構圖底稿另計 {PR['drafts']['generated']} 張，不是月面照片" if 'drafts' in PR else '') + "）。",
           f"- 主管 v2 覆核範圍：{SV2['scope']}", f"- 本輪限制：{SV2['limits']}",
           f"- Penny 頁面原文：{O['page_copy']['note']}", '',
           '**Penny 逐張重點（主管摘要，轉交自 R6 指令；不是 Penny 頁面原文）：**', '']

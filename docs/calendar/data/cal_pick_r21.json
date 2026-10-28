@@ -1,0 +1,767 @@
+{
+ "note": "選片頁（shoot.html）資料：M-4 R21 本輪待確認 13 項（9 套新候選、H-Rin 改善候選、3 張調色）＋已選 14 套＋待處理 V-Somi。圖片從 src 記錄的 commit 讀檔並核對 sha256，公開版去除中繼資料。頁面不放 prompt、設計理由、自查、費用或執行紀錄。",
+ "version": "pick-r21-v1",
+ "task": "TASK-CAL-001",
+ "round": "M-4 R21",
+ "written_on": "2026-10-28",
+ "key_prefix": "cal2027-pick-r21-v1:",
+ "title": "2027 桌曆選片｜第二輪",
+ "intro": "上方是本輪要你確認的 13 項：9 套新候選、H-Rin 的改善候選、3 張調色。已選定的照片放在下方「已選」區，不用重選。未選擇維持「未回覆」，不算接受。",
+ "store_note": "選擇與備註只存在這台裝置的瀏覽器；看完請按「複製全部回饋」貼給我們。第一輪（R20）的回饋仍保留在這台瀏覽器裡，沒有清除，也不會套到新圖。",
+ "items": [
+  {
+   "set": "H-rin-ayase",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 2,
+   "name": "Rin",
+   "kind": "rin",
+   "original": {
+    "v": "原 A",
+    "img_id": "H-rin-ayase-R20-A",
+    "version": "M-4 R20",
+    "px": [
+     2048,
+     1152
+    ],
+    "src": {
+     "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+     "path": "kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r20_A.png",
+     "sha256": "f1edef7bc1daaad6ad5de5173eb06d6dbea9893e006f1956a81e223667d591dd"
+    }
+   },
+   "candidates": [
+    {
+     "v": "新候選 1",
+     "img_id": "H-rin-ayase-R21-1",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r21_A.png",
+      "sha256": "c468a6b14382e1225040d04886492db996fc3a180de7310fd81fa879c5176092"
+     }
+    },
+    {
+     "v": "新候選 2",
+     "img_id": "H-rin-ayase-R21-2",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r21_B.png",
+      "sha256": "79f53de41e219bbbbd038d233e8c768271cf07c72a83d86b05c1c5ddfa2ae8e7"
+     }
+    }
+   ]
+  },
+  {
+   "set": "H-miu-shiraishi",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 3,
+   "name": "Miu",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "H-miu-shiraishi-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/miu-shiraishi/images/calendar_2027_batch1/H-miu-shiraishi_m4r21_A.png",
+      "sha256": "82e9f95c388bbf6b8a91aa029592a657b9bd06c37def539bd151a6dd7ba7e72e"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "H-miu-shiraishi-R21-B",
+     "version": "M-4 R21",
+     "missing": true,
+     "missing_label": "這張沒有產出（平台內容審查擋下），依指令不補生"
+    }
+   ]
+  },
+  {
+   "set": "H-tammy-chou",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 4,
+   "name": "Tammy",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "H-tammy-chou-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r21_A.png",
+      "sha256": "8137a0f6942b55bf079f6b7945f938d3cd3329017cefa3051eb37b7d1ac85eef"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "H-tammy-chou-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r21_B.png",
+      "sha256": "7fedb77fde80ddac6931665a99f9a210ea30e6d554f25b99a9b8ff080ea44699"
+     }
+    }
+   ]
+  },
+  {
+   "set": "H-yerin-han",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 5,
+   "name": "Yerin",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "H-yerin-han-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r21_A.png",
+      "sha256": "4cd5c8b93082e98eeb9db69ba1febbb6fc99ada65feb6549ac3657f3a0e65d7d"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "H-yerin-han-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r21_B.png",
+      "sha256": "918db730b2248be1e280a213fb80a08bb8591be81a7e4b17895ed616a1255aea"
+     }
+    }
+   ]
+  },
+  {
+   "set": "H-coco-wu",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 6,
+   "name": "Coco",
+   "kind": "grade",
+   "grade_label": "提高明亮度與飽和度",
+   "original": {
+    "v": "原版",
+    "img_id": "H-coco-wu-R20-A",
+    "version": "M-4 R20",
+    "px": [
+     2048,
+     1152
+    ],
+    "src": {
+     "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+     "path": "kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A.png",
+     "sha256": "7d51265052a253b0974dbc3a4fc5ca5cba44d56ec5088ae7465f6e9a5a4ebdda"
+    }
+   },
+   "graded": {
+    "v": "調色版",
+    "img_id": "H-coco-wu-R20-A-G21",
+    "version": "M-4 R21 調色",
+    "px": [
+     2048,
+     1152
+    ],
+    "src": {
+     "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+     "path": "kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A_grade_r21.png",
+     "sha256": "fb7d5c3fee84a689482ee6734a4748d7e55dc3756c82368e8eee424d60e396ca"
+    }
+   }
+  },
+  {
+   "set": "H-mia-huang",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 7,
+   "name": "Mia",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "H-mia-huang-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r21_A.png",
+      "sha256": "ceebc72ea3f43e248d49663447112265bd3094d4a35e4e72f5c801f5fa95cfc6"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "H-mia-huang-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r21_B.png",
+      "sha256": "0422d7e222322ffc0f74d327c011d31faf8a61434956d2e1ad0885ca70b41e5d"
+     }
+    }
+   ]
+  },
+  {
+   "set": "H-luna-tanaka",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 10,
+   "name": "Luna",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "H-luna-tanaka-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_A.png",
+      "sha256": "c78cd8acecfa539f6bfcd9028b0e17ed760fbb6f036706691baac80e6d3054b3"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "H-luna-tanaka-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_B.png",
+      "sha256": "fd62f129b71bc0dfbf4e50508a5e0e489f2b3417e3f1eacb67d8c6c491926b1c"
+     }
+    }
+   ]
+  },
+  {
+   "set": "H-somi-oh",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 11,
+   "name": "Somi",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "H-somi-oh-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r21_A.png",
+      "sha256": "586c8056f7aeea3c9d1500d91634461d87c7cfbc6de10875fc43bcfc0ae233a6"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "H-somi-oh-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      2048,
+      1152
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r21_B.png",
+      "sha256": "b6990ff81e572e2caf9940e263cacbd51d531def99d246ce76307d73586abdab"
+     }
+    }
+   ]
+  },
+  {
+   "set": "V-jia-seo",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 2,
+   "name": "Jia",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "V-jia-seo-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      1536,
+      2048
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r21_A.png",
+      "sha256": "a22ec236e8d611810acb8d61ded5b6c1386a9bf2b66421d71062c8f9fb9e7905"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "V-jia-seo-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      1536,
+      2048
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r21_B.png",
+      "sha256": "62824d6fc541ac8aa46241035fe197656020cb6874dae43d80503bbe0ffec607"
+     }
+    }
+   ]
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 4,
+   "name": "Miu",
+   "kind": "grade",
+   "grade_label": "參考 A 的明暗與色彩，提亮 B",
+   "original": {
+    "v": "原版",
+    "img_id": "V-miu-shiraishi-R20-B",
+    "version": "M-4 R20",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+     "path": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B.png",
+     "sha256": "6d6df147bbc285b18338d15429ef7372169efa4ecdca2cc58b401d8961dfb1ef"
+    }
+   },
+   "graded": {
+    "v": "調色版",
+    "img_id": "V-miu-shiraishi-R20-B-G21",
+    "version": "M-4 R21 調色",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+     "path": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B_grade_r21.png",
+     "sha256": "2e22a18f0807250896c9a0254d74c028a2bafb4ebee02d6dde7c24e041990112"
+    }
+   }
+  },
+  {
+   "set": "V-rainie-hsu",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 5,
+   "name": "Rainie",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "V-rainie-hsu-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      1536,
+      2048
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_A.png",
+      "sha256": "9b607c3fdec235360065aa69ad8876ac71fe9f17b24dedb7c8631ff2db9260b7"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "V-rainie-hsu-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      1536,
+      2048
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r21_B.png",
+      "sha256": "fcbb892fef0f9362fef24ba37c299230da1a330c4c7d092821afd6d4f95d2ee4"
+     }
+    }
+   ]
+  },
+  {
+   "set": "V-luna-tanaka",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 6,
+   "name": "Luna",
+   "kind": "grade",
+   "grade_label": "適度提高明亮度與飽和度",
+   "original": {
+    "v": "原版",
+    "img_id": "V-luna-tanaka-R20-B",
+    "version": "M-4 R20",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+     "path": "kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B.png",
+     "sha256": "0a24346a6aab22657d62bfe84132bc53e845fdf9a664c1c3d76bb61ec6fdd870"
+    }
+   },
+   "graded": {
+    "v": "調色版",
+    "img_id": "V-luna-tanaka-R20-B-G21",
+    "version": "M-4 R21 調色",
+    "px": [
+     1536,
+     2048
+    ],
+    "src": {
+     "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+     "path": "kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B_grade_r21.png",
+     "sha256": "73ed1e092171e472efabd9f2cf41b6517621f75dcce380ca8f14b38647927920"
+    }
+   }
+  },
+  {
+   "set": "V-yuna-kim",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 11,
+   "name": "Yuna",
+   "kind": "ab",
+   "candidates": [
+    {
+     "v": "A",
+     "img_id": "V-yuna-kim-R21-A",
+     "version": "M-4 R21",
+     "px": [
+      1536,
+      2048
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r21_A.png",
+      "sha256": "b73edfe95224b9ecc3ee5add9bb7dacb95260641956076a4f92a7b3041333c77"
+     }
+    },
+    {
+     "v": "B",
+     "img_id": "V-yuna-kim-R21-B",
+     "version": "M-4 R21",
+     "px": [
+      1536,
+      2048
+     ],
+     "src": {
+      "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+      "path": "kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r21_B.png",
+      "sha256": "9b90efbb536b53876fdb6e8fc275d80e6136d9a24b513f1aa1b20cc0038ad662"
+     }
+    }
+   ]
+  }
+ ],
+ "selected": [
+  {
+   "set": "H-yuna-kim",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 1,
+   "name": "Yuna",
+   "img_id": "H-yuna-kim-R20-B",
+   "version": "M-4 R20",
+   "px": [
+    2048,
+    1152
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/yuna-kim/images/calendar_2027_batch1/H-yuna-kim_m4r20_B.png",
+    "sha256": "d193186c87b18c4cfbde9f9043dae7de7ea7511416de135ac4eeffdd11dce809"
+   },
+   "label": "Penny 選定 R20 B",
+   "edit_pending": false
+  },
+  {
+   "set": "H-rin-ayase",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 2,
+   "name": "Rin",
+   "img_ref": "H-rin-ayase-R20-A",
+   "label": "Penny 選定 R20 A（改善候選待確認，見上方）",
+   "edit_pending": true
+  },
+  {
+   "set": "H-coco-wu",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 6,
+   "name": "Coco",
+   "img_ref": "H-coco-wu-R20-A",
+   "label": "Penny 選定 R20 A（調色待確認，見上方）",
+   "edit_pending": true
+  },
+  {
+   "set": "H-iris-chen",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 8,
+   "name": "Iris",
+   "img_id": "H-iris-chen-R20-A",
+   "version": "M-4 R20",
+   "px": [
+    2048,
+    1152
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/iris-chen/images/calendar_2027_batch1/H-iris-chen_m4r20_A.png",
+    "sha256": "276d560f7ada5e752f112d06e3c5d75b4444694811738acd67199f4de7ac1b99"
+   },
+   "label": "Penny 選定 R20 A",
+   "edit_pending": false
+  },
+  {
+   "set": "H-jia-seo",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 9,
+   "name": "Jia",
+   "img_id": "H-jia-seo-R20-B",
+   "version": "M-4 R20",
+   "px": [
+    2048,
+    1152
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r20_B.png",
+    "sha256": "0ca136ba7b4c10479a0f5d0c0c888b5337eda7c0ab8ca223a5915f8067daecc0"
+   },
+   "label": "Penny 選定 R20 B",
+   "edit_pending": false
+  },
+  {
+   "set": "H-rainie-hsu",
+   "book": "H",
+   "book_zh": "橫式",
+   "month": 12,
+   "name": "Rainie",
+   "img_id": "H-rainie-hsu-R20-B",
+   "version": "M-4 R20",
+   "px": [
+    2048,
+    1152
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/rainie-hsu/images/calendar_2027_batch1/H-rainie-hsu_m4r20_B.png",
+    "sha256": "2d439cb7ce2d20550bf26497b7011db430368ae0997e69aa0aa49a2e667d1051"
+   },
+   "label": "Penny 選定 R20 B",
+   "edit_pending": false
+  },
+  {
+   "set": "V-tammy-chou",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 1,
+   "name": "Tammy",
+   "img_id": "V-tammy-chou-R14",
+   "version": "M-4 R14",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "cb1db65090dc2ddc767cc45ad8fa23617fdf9377",
+    "path": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r14.png",
+    "sha256": "f4b1b1d43ec1aecd20bf35fc5bfd74a930aa6d39a62aa2764e45680cd9792943"
+   },
+   "label": "已接受（Penny，M-4 R16）",
+   "edit_pending": false
+  },
+  {
+   "set": "V-mia-huang",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 3,
+   "name": "Mia",
+   "img_id": "V-mia-huang-R20-A",
+   "version": "M-4 R20",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/mia-huang/images/calendar_2027_batch1/V-mia-huang_m4r20_A.png",
+    "sha256": "414d7e2222fb95dbbee475ccfcf8c079c6369b50a0663aee3a02aa84c394ddc9"
+   },
+   "label": "Penny 選定 R20 A",
+   "edit_pending": false
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 4,
+   "name": "Miu",
+   "img_ref": "V-miu-shiraishi-R20-B",
+   "label": "Penny 選定 R20 B（調色待確認，見上方）",
+   "edit_pending": true
+  },
+  {
+   "set": "V-luna-tanaka",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 6,
+   "name": "Luna",
+   "img_ref": "V-luna-tanaka-R20-B",
+   "label": "Penny 選定 R20 B（調色待確認，見上方）",
+   "edit_pending": true
+  },
+  {
+   "set": "V-coco-wu",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 7,
+   "name": "Coco",
+   "img_id": "V-coco-wu-R20-B",
+   "version": "M-4 R20",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/coco-wu/images/calendar_2027_batch1/V-coco-wu_m4r20_B.png",
+    "sha256": "1c2f5b905d8280289910ae91fcf144f8b82b9b4940300a23682eb6eb2d8be233"
+   },
+   "label": "Penny 選定 R20 B",
+   "edit_pending": false
+  },
+  {
+   "set": "V-yerin-han",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 8,
+   "name": "Yerin",
+   "img_id": "V-yerin-han-R20-A",
+   "version": "M-4 R20",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "path": "kols/yerin-han/images/calendar_2027_batch1/V-yerin-han_m4r20_A.png",
+    "sha256": "494aca0db58ab9fcf9cb5783e2040212db8ed5cb3b61b2d101e575026c46e2b1"
+   },
+   "label": "Penny 選定 R20 A",
+   "edit_pending": false
+  },
+  {
+   "set": "V-iris-chen",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 9,
+   "name": "Iris",
+   "img_id": "V-iris-chen-M4R2",
+   "version": "M-4 R2 首試",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "32fec1df14071be27858d038b88304eaff67a31a",
+    "path": "kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+    "sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76"
+   },
+   "label": "已接受（Penny，M-4 R4）",
+   "edit_pending": false
+  },
+  {
+   "set": "V-rin-ayase",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 10,
+   "name": "Rin",
+   "img_id": "V-rin-ayase-R14",
+   "version": "M-4 R14",
+   "px": [
+    1536,
+    2048
+   ],
+   "src": {
+    "commit": "cb1db65090dc2ddc767cc45ad8fa23617fdf9377",
+    "path": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r14.png",
+    "sha256": "6be6d9d88e3b8e0cf94c482ec52e8c824f0c05182520a4f34f4fe41868e530a2"
+   },
+   "label": "已接受（Penny，M-4 R17 後）",
+   "edit_pending": false
+  }
+ ],
+ "pending": [
+  {
+   "set": "V-somi-oh",
+   "book": "V",
+   "book_zh": "直式",
+   "month": 12,
+   "name": "Somi",
+   "v": "待處理：本輪不處理，沒有新候選；先前的照片不列入選片。"
+  }
+ ],
+ "history": {
+  "href": "history.html",
+  "label": "已定稿企劃／歷史紀錄"
+ }
+}

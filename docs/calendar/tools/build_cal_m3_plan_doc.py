@@ -37,11 +37,12 @@ ST_ZH = {'accepted': '已接受', 'owner_revised': '依owner指定修訂，待�
 
 
 def progress(d):
-    """24 套進度：四類互斥（已接受＋待 Penny 選片＋退回待重規劃＋尚未生成；M-4 R20 起加入待選片）；待完成合計與累計已生成另計。"""
+    """24 套進度：五類互斥（已接受＋已選定待確認修改＋待 Penny 選片＋退回待重規劃＋尚未生成；M-4 R20 起加入待選片、R21 起加入已選定待確認修改）；待完成合計與累計已生成另計。"""
     PR = d['status']['production']
-    assert PR['accepted'] + PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24
-    assert PR['to_complete'] == PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated'] and PR['generated_cumulative'] == sum(PR['generated_log'].values()) >= PR['accepted'] + PR['rejected_replan']
-    return (f"{PR['sets_total']} 套＝已接受 {PR['accepted']}＋待 Penny 選片 {PR['pending_owner_review']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；"
+    se = PR.get('selected_pending_edit', 0)
+    assert PR['accepted'] + se + PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated'] == PR['sets_total'] == 24
+    assert PR['to_complete'] == se + PR['pending_owner_review'] + PR['rejected_replan'] + PR['not_generated'] and PR['generated_cumulative'] == sum(PR['generated_log'].values()) >= PR['accepted'] + PR['rejected_replan']
+    return (f"{PR['sets_total']} 套＝已接受 {PR['accepted']}＋已選定待確認修改 {se}＋待 Penny 選片 {PR['pending_owner_review']}＋退回待重規劃 {PR['rejected_replan']}＋尚未生成 {PR['not_generated']}；"
             f"待完成合計 {PR['to_complete']}（累計已生成 {PR['generated_cumulative']} 張，另計"
             + (f"；構圖底稿另計 {PR['drafts']['generated']} 張，不是月面照片" if 'drafts' in PR else '') + '）。')
 
@@ -102,6 +103,7 @@ def render18(d):
          *([f"> **{d['m4r18']['status_line']}** 試拍紀錄見 `data/cal_m4_r18_trial.json`。", ''] if 'm4r18' in d else []),
          *([f"> **{d['m4r19']['status_line']}** Penny 原話見 `data/cal_m4_owner_r19.json`，主管覆核見 `data/cal_m4_supervisor_r18.json`，Yerin 修訂見 `data/cal_m4_r19_followup.json`。", ''] if 'm4r19' in d else []),
          *([f"> **{d['m4r20']['status_line']}** 授權見 `data/cal_m4_auth_r20.json`，製作與自查紀錄見 `data/cal_m4_r20_trial.json`，選片頁資料見 `data/cal_pick_r20.json`。", ''] if 'm4r20' in d else []),
+         *([f"> **{d['m4r21']['status_line']}** Owner 紀錄見 `data/cal_m4_owner_r21.json`，授權見 `data/cal_m4_auth_r21.json`，製作與自查見 `data/cal_m4_r21_trial.json`，調色見 `data/cal_m4_r21_grading.json`，選片頁資料見 `data/cal_pick_r21.json`。", ''] if 'm4r21' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

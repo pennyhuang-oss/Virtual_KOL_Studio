@@ -1,0 +1,104 @@
+{
+ "note": "M-4 R21 Owner 回饋紀錄。Penny 在選片頁（頁面版本 ff40631）按「複製全部回饋」的原文沒有隨 R21 指令交來，page_copy 標交接缺件、不以摘要代替；本輪依 R21 指令（Penny 送出，逐字存於 instruction_verbatim）整理選定來源與修改待確認，分析另列。",
+ "round": "M-4 R21",
+ "written_on": "2026-10-28",
+ "page_version": "ff40631",
+ "page_copy": {
+  "status": "交接缺件：Penny 頁面「複製全部回饋」原文（含圖片識別、選擇與備註）未隨 R21 指令交來；待 Penny 補貼後逐字存入 text，不改寫",
+  "text": null
+ },
+ "instruction_verbatim": "TASK-CAL-001／M-4／R21｜Owner 回饋修正批次與 Railway 更新\n\nPenny 送出本指令即授權：\n9 套退回照片各生成 2 張，H-Rin 另生成 2 張改善候選，\n共最多 20 張，每張上限 0.12，生成總上限 2.40 credits。\n另對指定 3 張作本機調色，不使用付費生成或付費編輯。\n不自動重試、不額外補生。\n\n一、Owner 原始回饋\n將 Penny 本輪完整選片回饋逐字保存，\n包含頁面版本 ff40631、圖片識別、選擇與備註。\n分析與原文分開，不用摘要取代原文。\n\n本輪選定 11 套，加上既有 3 套，共 14 套已有選定版本。\n其中 H-Rin、H-Coco、V-Miu、V-Luna 尚有指定修改。\n分開記錄「Owner 選定來源」與「修改待確認」，\n不要撤銷她的選擇，也不要宣稱修改版已接受。\n其餘未選定 10 套＝本輪退回 9＋V-Somi。\n\n二、保留、不重生\nH-Yuna B、H-Iris A、H-Jia B、H-Rainie B、\nV-Mia A、V-Coco B、V-Yerin A，\n以及先前已接受的 V-Iris、V-Tammy、V-Rin。\n保留唯一原圖及歷程。\n\n三、本機調色 3 張\nH-Coco A：提高明亮度與飽和度，改善暗淡感。\nV-Miu B：保留 B 的人物與構圖，以 A 的整體明暗、\n色彩作視覺參考，改善 B 的暗淡感。\nV-Luna B：適度提高明亮度與飽和度。\n\n各做 1 個調色候選，另存衍生檔，不覆蓋原圖。\n只調色，不改臉、身體、服裝、姿態或場景。\n逐張調整，不套同一組固定數值；\n保持膚色自然、高光與暗部細節，避免過飽和。\n網站提供原版／調色版比較。\n不宣稱螢幕變亮就保證印刷效果，交印仍另行確認。\n\n四、生成 10 套 × 2 張\n沿用已定月份、角色與 canon；\n以 Penny 最新回饋優先於舊設計。\n直接完成必要設計與 prompt 修訂後執行，\n不先停下交一輪純企劃報告。\n\n1. H-Rin\nR20 A 是 Owner 選定基準，保留不替換。\n延續貴妃椅橫躺、服裝與氛圍，\n改善整體放鬆程度、肩肘腕與手指的支撐關係；\n像舒服地休息，不是僵硬擺放手臂。\n新圖只是改善候選，不自動取代已選 A。\n\n2. H-Miu\n保留成年角色及已定床上題材，\n設計更性感撩人、自然且有寫真吸引力的姿態。\n核對既有身分與體態參考；\n不得只憑 prompt 含三圍就宣稱體態符合。\n\n3. H-Tammy\n優先修正臉部身分。\n重新處理衣服與場景配色；舊粉色要求不能壓過\nPenny 最新「顏色突兀」的回饋。\n姿態要有明確情緒與畫面吸引力，避免普通站姿。\n\n4. H-Yerin\n依 Penny 新方向：坐在草地上享受陽光與球場。\n移除球桿及裝作打球的動作。\n身體、雙腿與手有自然承托，人景比例協調。\n\n5. H-Mia\n重做可信的場景與人景光線關係，\n避免假布景、過度堆疊裝飾及人物浮貼感。\n以同一空間、可理解的主光與接觸關係安排畫面。\n\n6. H-Luna\n保留 A 已成立的場景、服裝及整體方向，\n改進僵硬動作，營造自然且有情緒的瞬間。\n保留已定香袋元素，避免展示商品式捧著；\n和服穿著與下襬合理。\n\n7. H-Somi\n依 Owner 明確指示捨棄炸雞店設定，重新設計。\n先選適合角色、11 月與寫真氛圍的場景，\n再安排服裝、動作及光色，不沿用舊店景硬修。\n兩張屬同一新設計的不同候選。\n\n8. V-Jia\n依 Owner 指示捨棄舊設定，重新設計。\n先建立漂亮且可信的人景構圖，\n再安排自然有吸引力的姿態；\n不沿用原場景與比例問題。\n\n9. V-Rainie\n修正眼神不聚焦與視線異常。\n避免讓腿顯短的拍攝位置及透視；\n以自然人體比例呈現長腿，不靠拉伸或畸變。\n原圖檢查雙眼方向與臉部身分。\n\n10. V-Yuna\n保留 Owner 認可的場景，\n改成自然好看的街拍瞬間；\n不要只是站定看鏡頭，也不要添加一串競爭動作。\n\n每套兩張應有實質差異，\n選擇不同自然姿態或合理取景即可，\n不把已被否決的問題換句話重複生成。\n\n五、執行控制\n各用本人既有 Soul、soul_2、2k，\n比例依既定橫直式；無參考圖、不傳 style、不用 unlim。\n送出前核對清單、Soul ready、重新唯讀報價。\n單張或整批超上限就停止超額項目。\n小量併行，保存送出意圖與任務 ID；\n不明結果查原任務，不重送。\n個別阻塞不拖住其餘項目。\n\n六、自查與 Railway 交付\n先看美感、身分、自然姿態、人景融合，\n再看手腳、接觸與技術細節。\n失敗也保留，不自行補生。\n\n完成後直接更新既有 cal2027-decision 並部署，\n不再等待另一輪部署授權。\n維持原網址：\nhttps://cal2027-decision-production.up.railway.app/shoot.html\n\n頁面只呈現圖片、角色月份、選項及備註：\n- 已定案照片放已選區。\n- 9 套新候選可選 A／B／都想修改。\n- H-Rin 可選保留原 A／新候選 1／新候選 2／仍想修改。\n- 3 套調色可比較原版／調色版並回饋。\n- 本輪待確認項目清楚集中，不讓 Penny 重選已定案照片。\n\n保留 R20 所有回饋，新候選綁定新圖片版本；\n不得把舊接受紀錄自動套到新圖。\n保留備註、重新整理保存及複製全部回饋功能。\n網站不放 prompt、設計理由或技術報告。\n\n只更新既有服務，不改存取設定、不新增付費服務。\n部署後實際確認圖片、版本對應、選擇、\n備註保存、複製與手機操作。\n\n七、收尾\n完整 prompt、修改與執行紀錄留 repo，\n批次完成後統一同步、做必要檢查。\n最終回覆以選片網址、實際完成數、費用及缺件為主。\nV-Somi 不動、不合併 main、不聯絡廠商。\n",
+ "derived_from": "R21 指令第一、二、三、四節（不是 Penny 頁面原文）",
+ "selected": [
+  {
+   "set": "H-yuna-kim",
+   "source_img_id": "H-yuna-kim-R20-B",
+   "edit_pending": false
+  },
+  {
+   "set": "H-iris-chen",
+   "source_img_id": "H-iris-chen-R20-A",
+   "edit_pending": false
+  },
+  {
+   "set": "H-jia-seo",
+   "source_img_id": "H-jia-seo-R20-B",
+   "edit_pending": false
+  },
+  {
+   "set": "H-rainie-hsu",
+   "source_img_id": "H-rainie-hsu-R20-B",
+   "edit_pending": false
+  },
+  {
+   "set": "V-mia-huang",
+   "source_img_id": "V-mia-huang-R20-A",
+   "edit_pending": false
+  },
+  {
+   "set": "V-coco-wu",
+   "source_img_id": "V-coco-wu-R20-B",
+   "edit_pending": false
+  },
+  {
+   "set": "V-yerin-han",
+   "source_img_id": "V-yerin-han-R20-A",
+   "edit_pending": false
+  },
+  {
+   "set": "H-rin-ayase",
+   "source_img_id": "H-rin-ayase-R20-A",
+   "edit_pending": true,
+   "edit_request": "延續貴妃椅橫躺、服裝與氛圍，改善整體放鬆程度、肩肘腕與手指的支撐關係；像舒服地休息，不是僵硬擺放手臂"
+  },
+  {
+   "set": "H-coco-wu",
+   "source_img_id": "H-coco-wu-R20-A",
+   "edit_pending": true,
+   "edit_request": "提高明亮度與飽和度，改善暗淡感"
+  },
+  {
+   "set": "V-miu-shiraishi",
+   "source_img_id": "V-miu-shiraishi-R20-B",
+   "edit_pending": true,
+   "edit_request": "保留 B 的人物與構圖，以 A 的整體明暗、色彩作視覺參考，改善 B 的暗淡感"
+  },
+  {
+   "set": "V-luna-tanaka",
+   "source_img_id": "V-luna-tanaka-R20-B",
+   "edit_pending": true,
+   "edit_request": "適度提高明亮度與飽和度"
+  }
+ ],
+ "earlier_accepted": [
+  "V-iris-chen",
+  "V-tammy-chou",
+  "V-rin-ayase"
+ ],
+ "rejected_r20": [
+  "H-miu-shiraishi",
+  "H-tammy-chou",
+  "H-yerin-han",
+  "H-mia-huang",
+  "H-luna-tanaka",
+  "H-somi-oh",
+  "V-jia-seo",
+  "V-rainie-hsu",
+  "V-yuna-kim"
+ ],
+ "pending": [
+  "V-somi-oh"
+ ],
+ "counts": {
+  "selected_this_round": 11,
+  "earlier_accepted": 3,
+  "selected_total": 14,
+  "edit_pending": 4,
+  "rejected_this_round": 9,
+  "not_selected_total": 10
+ },
+ "rules": [
+  "不撤銷 Penny 的選擇；修改版（H-Rin 新候選、3 張調色）是待確認候選，不宣稱已接受",
+  "R20 回饋保留，不套用到新圖片版本"
+ ]
+}

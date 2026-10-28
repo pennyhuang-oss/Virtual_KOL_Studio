@@ -1,0 +1,158 @@
+{
+ "note": "M-4 R21 修正批次製作紀錄（公開可讀的摘要；不含 Soul ID、任務 ID 與交易原始列）。Claude 自查不是主管覆核，也不是 Penny 決定；失敗或有瑕疵的照片也保留供選片，不重生。",
+ "round": "M-4 R21",
+ "written_on": "2026-10-28",
+ "auth": "docs/calendar/data/cal_m4_auth_r21.json",
+ "prompts": "docs/calendar/data/cal_m4_r21_prompts.json",
+ "grading": "docs/calendar/data/cal_m4_r21_grading.json",
+ "owner": "docs/calendar/data/cal_m4_owner_r21.json",
+ "photo_commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+ "settings": "各人既有 Soul（10 個皆 ready）、soul_2、2k；橫式 16:9、直式 3:4；無參考圖、不傳 style、不用 unlim、不訓練。",
+ "counts": {
+  "requests": 20,
+  "images": 19,
+  "blocked": 1,
+  "retries": 0,
+  "extra_generations": 0
+ },
+ "blocked": "H-miu-shiraishi B（跪坐撩髮、肩帶滑落）被平台內容審查擋下，無產出、已退款；依指令不重試、不補生。",
+ "cost": {
+  "quote_each": 0.12,
+  "cap_total": 2.4,
+  "spend_rows": 20,
+  "refund_rows": 1,
+  "charged_net": 2.28,
+  "attribution": "依時窗推定（只看本批送出時段的 Soul V2 列）",
+  "balance_before": 1263.67,
+  "balance_after": 1261.39
+ },
+ "self_review": [
+  {
+   "set": "H-rin-ayase",
+   "v": "A",
+   "img_id": "H-rin-ayase-R21-1",
+   "v_text": "頭靠抱枕、手背輕托臉側、另一手放在大腿，肩肘腕有承托，比 R20 A 放鬆；夕陽窗景與服裝延續。"
+  },
+  {
+   "set": "H-rin-ayase",
+   "v": "B",
+   "img_id": "H-rin-ayase-R21-2",
+   "v_text": "側身半躺、一膝立起，雙手放在腿與椅墊上，放鬆自然；沒有照設計把手臂搭上椅背、頭也沒有靠抱枕。"
+  },
+  {
+   "set": "H-miu-shiraishi",
+   "v": "A",
+   "img_id": "H-miu-shiraishi-R21-A",
+   "v_text": "趴床、前臂撐起、小腿抬起交叉、肩帶滑落，慵懶撩人且自然；目視對照身分基準與 5 張訓練圖：臉型、髮色髮型一致，嬌小與上圍比例相近（趴姿看不到完整腰臀，體態只能部分核對）；腳底朝鏡頭稍搶眼。"
+  },
+  {
+   "set": "H-miu-shiraishi",
+   "v": "B",
+   "img_id": "H-miu-shiraishi-R21-B",
+   "v_text": "平台內容審查擋下（無產出、已退款），依指令不重試、不補生；本套只有 1 張新候選。"
+  },
+  {
+   "set": "H-tammy-chou",
+   "v": "A",
+   "img_id": "H-tammy-chou-R21-A",
+   "v_text": "紫藤下捧花聞香、閉眼微笑，奶油色洋裝與紫藤、綠籬配色協調，不再突兀，情緒明確；但臉部是仰起的側面且閉眼，身分不易判斷；下方腿部姿勢不明確。"
+  },
+  {
+   "set": "H-tammy-chou",
+   "v": "B",
+   "img_id": "H-tammy-chou-R21-B",
+   "v_text": "整張畫面轉了 90 度（人物橫躺在橫幅裡），不能直接作橫式使用；轉正後看，心形臉與挑染長髮和身分基準相符度高、回眸姿態有吸引力。"
+  },
+  {
+   "set": "H-yerin-han",
+   "v": "A",
+   "img_id": "H-yerin-han-R21-A",
+   "v_text": "坐在草地、雙手撐後、仰臉閉眼曬太陽，身體與手有承托、無球桿，人景比例協調；左後方仍有一支旗桿（設計寫無旗）。"
+  },
+  {
+   "set": "H-yerin-han",
+   "v": "B",
+   "img_id": "H-yerin-han-R21-B",
+   "v_text": "坐在草地、一手撐地、一手扶帽簷對鏡頭笑，自然；雙腿往前伸而非收向一側；遠處有小旗桿。"
+  },
+  {
+   "set": "H-mia-huang",
+   "v": "A",
+   "img_id": "H-mia-huang-R21-A",
+   "v_text": "夕陽為主光、倚著木欄杆，人景光線一致，不再像假布景；一腳屈起踩著欄杆、俏皮；摩天輪在遠處。"
+  },
+  {
+   "set": "H-mia-huang",
+   "v": "B",
+   "img_id": "H-mia-huang-R21-B",
+   "v_text": "走在棧道上、晚霞為主光，透視與接觸自然；人物在畫面偏小居中。"
+  },
+  {
+   "set": "H-luna-tanaka",
+   "v": "A",
+   "img_id": "H-luna-tanaka-R21-A",
+   "v_text": "從緣側走上踏石、回頭微笑，香袋自然垂在手邊、不像展示商品；和服長及腳踝；比 R20 A 自然。"
+  },
+  {
+   "set": "H-luna-tanaka",
+   "v": "B",
+   "img_id": "H-luna-tanaka-R21-B",
+   "v_text": "楓樹下抬手、香袋垂在另一手，和服長度正確；抬手動作較像打招呼、沒有落葉可接。"
+  },
+  {
+   "set": "H-somi-oh",
+   "v": "A",
+   "img_id": "H-somi-oh-R21-A",
+   "v_text": "新場景：11 月芒草原黃金時刻，小徑上回頭笑、手輕掃草穗，秋天氛圍與暖橘奶油配色協調；手臂伸展略擺拍。"
+  },
+  {
+   "set": "H-somi-oh",
+   "v": "B",
+   "img_id": "H-somi-oh-R21-B",
+   "v_text": "同一新設計：雙手縮袖放在胸前、笑眼看鏡頭，逆光溫暖。"
+  },
+  {
+   "set": "V-jia-seo",
+   "v": "A",
+   "img_id": "V-jia-seo-R21-A",
+   "v_text": "新場景：白色美術館、落地窗冬光，靠窗框站立，人景構圖乾淨可信；左側窗框占比稍大。"
+  },
+  {
+   "set": "V-jia-seo",
+   "v": "B",
+   "img_id": "V-jia-seo-R21-B",
+   "v_text": "同一新設計：側坐白色長凳、雙腿交疊回頭微笑，畫作在後，構圖漂亮。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "A",
+   "img_id": "V-rainie-hsu-R21-A",
+   "v_text": "低機位、朝鏡頭跨步，腿長比例自然、沒有拉伸變形；雙眼看鏡頭、對焦一致；遠處招牌有小字。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "B",
+   "img_id": "V-rainie-hsu-R21-B",
+   "v_text": "倚發光櫥窗、一膝抬起，雙眼看鏡頭，腿部比例自然；外套與抬起的腿交疊處略亂。"
+  },
+  {
+   "set": "V-yuna-kim",
+   "v": "A",
+   "img_id": "V-yuna-kim-R21-A",
+   "v_text": "朝鏡頭走、撥頭髮，街拍感自然；街邊招牌與路面仍有韓文字（較 R20 模糊）。"
+  },
+  {
+   "set": "V-yuna-kim",
+   "v": "B",
+   "img_id": "V-yuna-kim-R21-B",
+   "v_text": "撥頭髮站定看鏡頭，沒有照設計低頭看落葉，仍偏站定；背景有招牌字。"
+  }
+ ],
+ "self_review_summary": "19 張全部保留供選片。H-Tammy B 整張轉了 90 度、不能直接作橫式；H-Miu B 被平台擋下缺件；H-Yerin 兩張遠處仍有旗桿；V-Yuna 背景仍有招牌字、B 偏站定。其餘各套方向大致照 Penny 回饋改善。",
+ "not_done": [
+  "不重生、不補生、不付費修圖",
+  "不改 canon、Soul ID、人設或月份",
+  "V-Somi 不動",
+  "接受數只依 Penny 的選定紀錄調整，修改版不宣稱已接受"
+ ]
+}
