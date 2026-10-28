@@ -4,8 +4,12 @@
  "written_on": "2026-10-28",
  "page_version": "fbf5674",
  "page_copy": {
-  "status": "R22 選片頁（fbf5674）「複製全部回饋」原文未隨 R23 指令交來；本紀錄依 R23 指令第一節整理，不以摘要冒充頁面原文",
-  "text": null
+  "status": "已補存（M-4 R24）：Penny 於 R24 指令第七節交來 R22 頁面（fbf5674）「複製全部回饋」原文，逐字存入 text；與 R24 決定分開保存",
+  "status_r23": "R22 選片頁（fbf5674）「複製全部回饋」原文未隨 R23 指令交來；本紀錄依 R23 指令第一節整理，不以摘要冒充頁面原文",
+  "filled_by": "M-4 R24",
+  "page_version": "fbf5674",
+  "text": "TASK-CAL-001｜M-4 R22 選片回饋（頁面版本 fbf5674）\n【橫式】\n7 月｜Mia｜H-mia-huang｜新候選：接受 A（圖片 H-mia-huang-R22-A）\n10 月｜Luna｜H-luna-tanaka｜修正版比較：用本輪修正版（圖片 H-luna-tanaka-R21-A-G22）\n11 月｜Somi｜H-somi-oh｜改善候選：改用新候選 2（圖片 H-somi-oh-R22-2）\n   備註：色調調整一下，明亮度跟飽和度提升一點，現在畫面有點太暗淡了\n【直式】\n4 月｜Miu｜V-miu-shiraishi｜修正版比較：用本輪修正版（圖片 V-miu-shiraishi-R20-B-G22）\n5 月｜Rainie｜V-rainie-hsu｜新候選：兩張都想修改（圖片 V-rainie-hsu-R22-A、V-rainie-hsu-R22-B）\n   備註：換個場景試試吧，怎麼這個人物的眼睛都很有問題啊，一直都是脫窗、鬥雞眼的樣子，但之前她生成的其他圖片不會這樣啊，這個角色最早期生成的自拍或他拍，眼睛都很正常啊，為什麼這一批生成出來眼睛都有問題？是不是套用到錯的參考圖？或是這個場景、服裝不適合？？\n12 月｜Somi｜V-somi-oh｜新候選：接受 B（圖片 V-somi-oh-R22-B）\n合計本輪 6 項：已回覆 6、未回覆 0（未回覆不算接受）。已選 21 套不在本次回饋內。",
+  "text_sha256": "33fc5efb00679580b18014935647aa92ffa7e83e09a198895cc8d1e0533ba174"
  },
  "final_new": [
   {

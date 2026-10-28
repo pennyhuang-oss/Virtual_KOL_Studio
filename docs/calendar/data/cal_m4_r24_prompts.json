@@ -1,0 +1,32 @@
+{
+ "note": "M-4 R24 送出 prompt 清單（公開可讀；身分錨點以 <<<ANCHOR>>> 代替，不含 Element ID 與任務 ID；sha256 是實際送出全文的雜湊）。",
+ "round": "M-4 R24",
+ "generator": "review/calendar/m4_r24/specs.py＋assemble.py",
+ "model": "Seedream 4.5（seedream_v4_5），quality basic，3:4；身分只由既有 Reference Element（錨點 v2）提供",
+ "items": [
+  {
+   "set": "V-rainie-hsu",
+   "v": "A",
+   "month": 5,
+   "ratio": "3:4",
+   "model": "seedream_v4_5",
+   "change": "自然站姿：在露台欄杆邊放鬆站著、重心在一腳、一手輕放欄杆，看鏡頭微笑（全身）",
+   "note": "回歸 canon：成年、貼身緞面洋裝＋大腿高衩、誇張金飾、高跟鞋（style_vibe）；黑長直髮側分、近乎無痕的淺棕眼線不上揚、透亮唇彩（face_type／eyes）；沙漏身材與長腿（figure、腿長占比）。5 月傍晚的台北頂樓露台，符合她夜生活出門前的角色風格；場景簡單可信。身分只由既有錨點 Element v2 提供；不使用 R20–R23 任何圖片。",
+   "prompt_public": "<<<ANCHOR>>> as a 24-year-old adult Taiwanese woman with fair, luminous skin and an hourglass figure, a full bust, a cinched waist, curved hips and long legs, her long straight jet-black hair sleek and glossy with a deep side part; barely-there soft brown eyeliner close to the lash line with no wing, and a sheer natural tinted lip balm. She wears a fitted champagne satin midi dress with a thigh-high slit, gold statement drop earrings and strappy gold high heels. Setting: a rooftop terrace in Taipei on a warm May evening just before sunset, a glass railing, potted olive trees and low lounge chairs, the city skyline soft in the haze behind her, nobody else around. She stands relaxed by the railing with her weight on one leg and one hand resting lightly on the rail, smiling at the camera. A full-length photograph taken by a friend standing about five metres away with a 50mm lens at chest height, level, showing her whole figure from head to heels with space around her, natural perspective, vertical 3:4. Warm low sunlight from the side, soft and even on her face, a gentle golden glow across the terrace. A natural, realistic photograph with natural adult body proportions.",
+   "prompt_sha256": "28a8592df3cc925e08a605fc8459b9393c15aef77592fafec530b6875c40009f",
+   "words": 203
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "B",
+   "month": 5,
+   "ratio": "3:4",
+   "model": "seedream_v4_5",
+   "change": "自然行走：走過露台朝鏡頭走來、雙手自然放鬆，看鏡頭微笑（全身）",
+   "note": "回歸 canon：成年、貼身緞面洋裝＋大腿高衩、誇張金飾、高跟鞋（style_vibe）；黑長直髮側分、近乎無痕的淺棕眼線不上揚、透亮唇彩（face_type／eyes）；沙漏身材與長腿（figure、腿長占比）。5 月傍晚的台北頂樓露台，符合她夜生活出門前的角色風格；場景簡單可信。身分只由既有錨點 Element v2 提供；不使用 R20–R23 任何圖片。",
+   "prompt_public": "<<<ANCHOR>>> as a 24-year-old adult Taiwanese woman with fair, luminous skin and an hourglass figure, a full bust, a cinched waist, curved hips and long legs, her long straight jet-black hair sleek and glossy with a deep side part; barely-there soft brown eyeliner close to the lash line with no wing, and a sheer natural tinted lip balm. She wears a fitted champagne satin midi dress with a thigh-high slit, gold statement drop earrings and strappy gold high heels. Setting: a rooftop terrace in Taipei on a warm May evening just before sunset, a glass railing, potted olive trees and low lounge chairs, the city skyline soft in the haze behind her, nobody else around. She walks across the terrace toward the camera mid-stride, her arms relaxed at her sides, smiling at the camera. A full-length photograph taken by a friend standing about six metres away with a 50mm lens at chest height, level, showing her whole figure from head to heels with space around her, natural perspective, vertical 3:4. Warm low sunlight from the side, soft and even on her face, a gentle golden glow across the terrace. A natural, realistic photograph with natural adult body proportions.",
+   "prompt_sha256": "f1bbae775b38297aa2f411bb52799577dc1eeba8fe94c21c225a6ff8d004e286",
+   "words": 198
+  }
+ ]
+}

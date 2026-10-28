@@ -1,0 +1,186 @@
+{
+ "note": "M-4 R24 私有執行紀錄（含 Element ID、媒體 ID 與任務 ID；只留在 repo，不公開）。",
+ "events": [
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "authorization",
+   "file": "docs/calendar/data/cal_m4_auth_r24.json",
+   "items_max": 2,
+   "cap_total_credits": 2
+  },
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "flow_check",
+   "early_record": "訓練集 v2 02 自拍：任務 d394eee3-ab4e-4db2-9510-54c701f02acc；平台紀錄 model seedream_v4_5、quality basic、9:16、input_images 空、reference_elements＝[a469f98d-11ae-42f3-8580-220d94cd473a rainie-hsu-anchor-v2，media 144e8193-3d08-4551-92d4-0a4825cedf3d]；prompt 以 <<<a469f98d-…>>> 開頭（R23 查核時取得）",
+   "element_now": "show_reference_elements get：a469f98d-11ae-42f3-8580-220d94cd473a，name rainie-hsu-anchor-v2，category character，status completed，media 144e8193-3d08-4551-92d4-0a4825cedf3d",
+   "anchor_file": "Element 媒體下載後與 kols/rainie-hsu/images/face_reference/candidate_02.png 位元組相同（sha256 相同、像素差 0）",
+   "model_now": "models_explore get seedream_v4_5：可用；quality basic／high；aspect 含 3:4；medias role image_references",
+   "input_method": "工具說明：在 params.prompt 內嵌 <<<element_id>>>，後端自動注入錨點圖並改寫為 @element_name；不放 medias／input_images（與早期任務紀錄一致）",
+   "not_used": "v1 Element ae0d8287-af47-4f9d-b357-19a477abd00d（錨點 candidate_01，另一張臉）不使用；Soul 不使用"
+  },
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "quote（get_cost，唯讀，完整參數含 Element 佔位）",
+   "samples": [
+    {
+     "v": "A",
+     "credits_exact": 1
+    },
+    {
+     "v": "B",
+     "credits_exact": 1
+    }
+   ],
+   "params": "seedream_v4_5、quality basic、3:4、count 1、use_unlim false",
+   "estimate": {
+    "items": 2,
+    "each": 1,
+    "total": 2,
+    "within_cap": true
+   },
+   "balance": 1095.19
+  },
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "tx_boundary",
+   "newest_row": "2026-10-28T09:34:56.222958Z（非本案 Nano Banana Pro 列）；09:29:38 有一列非本案 Seedream 4.5（送出前已存在，不歸入）；本案只看送出時段的 Seedream 4.5 列"
+  },
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "inputs",
+   "element_id": "a469f98d-11ae-42f3-8580-220d94cd473a",
+   "items": [
+    {
+     "index": 0,
+     "v": "A",
+     "model": "seedream_v4_5",
+     "quality": "basic",
+     "aspect_ratio": "3:4",
+     "count": 1,
+     "use_unlim": false,
+     "prompt": "<<<a469f98d-11ae-42f3-8580-220d94cd473a>>> as a 24-year-old adult Taiwanese woman with fair, luminous skin and an hourglass figure, a full bust, a cinched waist, curved hips and long legs, her long straight jet-black hair sleek and glossy with a deep side part; barely-there soft brown eyeliner close to the lash line with no wing, and a sheer natural tinted lip balm. She wears a fitted champagne satin midi dress with a thigh-high slit, gold statement drop earrings and strappy gold high heels. Setting: a rooftop terrace in Taipei on a warm May evening just before sunset, a glass railing, potted olive trees and low lounge chairs, the city skyline soft in the haze behind her, nobody else around. She stands relaxed by the railing with her weight on one leg and one hand resting lightly on the rail, smiling at the camera. A full-length photograph taken by a friend standing about five metres away with a 50mm lens at chest height, level, showing her whole figure from head to heels with space around her, natural perspective, vertical 3:4. Warm low sunlight from the side, soft and even on her face, a gentle golden glow across the terrace. A natural, realistic photograph with natural adult body proportions.",
+     "prompt_sha256": "28a8592df3cc925e08a605fc8459b9393c15aef77592fafec530b6875c40009f"
+    },
+    {
+     "index": 1,
+     "v": "B",
+     "model": "seedream_v4_5",
+     "quality": "basic",
+     "aspect_ratio": "3:4",
+     "count": 1,
+     "use_unlim": false,
+     "prompt": "<<<a469f98d-11ae-42f3-8580-220d94cd473a>>> as a 24-year-old adult Taiwanese woman with fair, luminous skin and an hourglass figure, a full bust, a cinched waist, curved hips and long legs, her long straight jet-black hair sleek and glossy with a deep side part; barely-there soft brown eyeliner close to the lash line with no wing, and a sheer natural tinted lip balm. She wears a fitted champagne satin midi dress with a thigh-high slit, gold statement drop earrings and strappy gold high heels. Setting: a rooftop terrace in Taipei on a warm May evening just before sunset, a glass railing, potted olive trees and low lounge chairs, the city skyline soft in the haze behind her, nobody else around. She walks across the terrace toward the camera mid-stride, her arms relaxed at her sides, smiling at the camera. A full-length photograph taken by a friend standing about six metres away with a 50mm lens at chest height, level, showing her whole figure from head to heels with space around her, natural perspective, vertical 3:4. Warm low sunlight from the side, soft and even on her face, a gentle golden glow across the terrace. A natural, realistic photograph with natural adult body proportions.",
+     "prompt_sha256": "f1bbae775b38297aa2f411bb52799577dc1eeba8fe94c21c225a6ff8d004e286"
+    }
+   ]
+  },
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "ledger",
+   "items": [
+    {
+     "index": 0,
+     "set": "V-rainie-hsu",
+     "v": "A",
+     "model": "seedream_v4_5",
+     "element_id": "a469f98d-11ae-42f3-8580-220d94cd473a",
+     "aspect": "3:4",
+     "prompt_sha256": "28a8592df3cc925e08a605fc8459b9393c15aef77592fafec530b6875c40009f",
+     "job_id": "58b9da54-bd74-4ee5-b815-566b5209e70d",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_A.png",
+     "sha256": "27d1d31b2253ec236ed651006afa95a29b111fbf7c8905ba6f007ae14ef3a4b3",
+     "size": [
+      1728,
+      2304
+     ],
+     "bytes": 5238576,
+     "hf_job_id_chunk": "58b9da54-bd74-4ee5-b815-566b5209e70d",
+     "downloaded_at": "2026-10-28T09:39:15Z"
+    },
+    {
+     "index": 1,
+     "set": "V-rainie-hsu",
+     "v": "B",
+     "model": "seedream_v4_5",
+     "element_id": "a469f98d-11ae-42f3-8580-220d94cd473a",
+     "aspect": "3:4",
+     "prompt_sha256": "f1bbae775b38297aa2f411bb52799577dc1eeba8fe94c21c225a6ff8d004e286",
+     "job_id": "4bb04904-b42c-4dcc-ab17-47cf9305f7bf",
+     "status": "downloaded",
+     "batch": 1,
+     "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_B.png",
+     "sha256": "8dc8bf7abe6df5b7faaca489f004eed00df905862d4c28052bfbb6de2692de96",
+     "size": [
+      1728,
+      2304
+     ],
+     "bytes": 5562254,
+     "hf_job_id_chunk": "4bb04904-b42c-4dcc-ab17-47cf9305f7bf",
+     "downloaded_at": "2026-10-28T09:39:16Z"
+    }
+   ]
+  },
+  {
+   "t": "2026-10-28T09:37:49Z",
+   "step": "intent",
+   "batch": 1,
+   "indices": [
+    0,
+    1
+   ],
+   "tool": "generate_image_batch",
+   "note": "各 1 次請求；送出前保存輸入與意圖，結果不明查原任務、不重送"
+  },
+  {
+   "t": "2026-10-28T09:38:22Z",
+   "step": "submit_result",
+   "batch": 1,
+   "submitted": [
+    0,
+    1
+   ],
+   "rejected_no_job": []
+  },
+  {
+   "t": "2026-10-28T09:39:28Z",
+   "step": "job_result",
+   "batch": 1,
+   "terminal": {
+    "completed": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "t": "2026-10-28T09:39:28Z",
+   "step": "job_record_check",
+   "result": "兩個任務的平台紀錄：model seedream_v4_5、quality basic、3:4、1728×2304、input_images 空、reference_elements＝[a469f98d-11ae-42f3-8580-220d94cd473a rainie-hsu-anchor-v2，media 144e8193-3d08-4551-92d4-0a4825cedf3d]、prompt 與送出全文相同——與早期訓練集 v2 任務的輸入方式一致"
+  },
+  {
+   "t": "2026-10-28T09:39:28Z",
+   "step": "charges",
+   "method": "依時窗推定：只看送出時段（09:38）的 Seedream 4.5 列；送出前已存在的 09:27、09:29 Seedream 4.5 列與其他模型列不歸入",
+   "spend_rows": 2,
+   "each": -1,
+   "spend_total": -2,
+   "refund_rows": 0,
+   "net": -2,
+   "groups_utc": [
+    "09:38:16–09:38:17 ×2"
+   ],
+   "balance_before": 1095.19,
+   "balance_after": 1093.19,
+   "within_budget": true
+  },
+  {
+   "t": "2026-10-28T09:39:28Z",
+   "step": "downloads",
+   "count": 2,
+   "missing": [],
+   "check": "3:4（1728×2304）與 PNG hf-job-id＝清冊任務 ID，2/2 相符"
+  }
+ ]
+}

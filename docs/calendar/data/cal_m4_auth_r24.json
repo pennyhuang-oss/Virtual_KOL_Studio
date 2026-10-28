@@ -1,0 +1,25 @@
+{
+ "note": "M-4 R24 授權摘要（Penny 送出 R24 指令即授權；本檔不含 Element ID、任務 ID）",
+ "round": "M-4 R24",
+ "written_on": "2026-10-28",
+ "head_at_start": "2b8b37a",
+ "owner_page_version": "a606112",
+ "generation": {
+  "sets": [
+   "V-rainie-hsu（回歸 canon；早期成功的 Seedream＋既有身分錨點流程）"
+  ],
+  "max_images": 2,
+  "requests_each": 1,
+  "cap_total_credits": 2,
+  "quote": "送出前須取得完整唯讀報價；超額不送、不換模型湊預算",
+  "retry": "不重試、不補生、不訓練、不新建身分素材；流程無法確認時停止，不退回 Soul 純文字"
+ },
+ "site": "完成後更新既有 cal2027-decision（原網址）",
+ "not_authorized": [
+  "合併 main",
+  "聯絡廠商",
+  "訓練或新建 Soul／Element／身分素材",
+  "自動重試或補生",
+  "動已定案照片"
+ ]
+}

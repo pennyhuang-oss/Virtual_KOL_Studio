@@ -1,0 +1,79 @@
+{
+ "note": "M-4 R24 生成紀錄（公開可讀的摘要；不含 Element ID、任務 ID 與交易原始列）。Claude 自查不是主管覆核，也不是 Penny 決定；照片全部保留供選片，不重生、不補生。",
+ "round": "M-4 R24",
+ "written_on": "2026-10-28",
+ "auth": "docs/calendar/data/cal_m4_auth_r24.json",
+ "prompts": "docs/calendar/data/cal_m4_r24_prompts.json",
+ "owner": "docs/calendar/data/cal_m4_owner_r24.json",
+ "canon_check": {
+  "sources": [
+   "kols/rainie-hsu/profile.json identity.appearance",
+   "kols/rainie-hsu/character.md 身分背景"
+  ],
+  "used": [
+   "24 歲成年台灣女性",
+   "白皙透亮膚色",
+   "沙漏身材：胸型飽滿、腰線收緊、臀部曲線、腿長（canon 腿長占身高 48.5%；不在 prompt 寫數字）",
+   "黑色長直髮、油亮順滑、深側分",
+   "近乎無痕的淺棕眼線、不上揚；透亮自然唇彩",
+   "風格：貼身洋裝、大腿高衩、誇張飾品、高跟鞋（glam nightlife）"
+  ],
+  "not_changed": "沒有為了迎合失敗結果而改人設"
+ },
+ "flow": {
+  "model": "Seedream 4.5（seedream_v4_5），quality basic，3:4，輸出 1728×2304",
+  "identity": "既有 Reference Element「rainie-hsu-anchor-v2」（錨點圖＝face_reference/candidate_02.png，位元組相同）；在 prompt 開頭以佔位符嵌入，後端自動注入錨點圖；沒有其他輸入圖",
+  "same_as_early": "與早期訓練集 v2（2026-08-05）的任務紀錄一致：同一模型、同一 Element 與錨點媒體、輸入圖為空、以 prompt 佔位符嵌入；比例由 9:16 改 3:4",
+  "anchor_role": "錨點只提供身分（臉）；場景、服裝、動作、構圖與人體比例依 canon 重新設計，未搬用早期照片的身體或自拍透視",
+  "not_used": "R20–R23 任何圖片都沒有作為輸入、構圖範本或比例依據；沒有使用 Soul；沒有新建或重訓任何身分素材",
+  "verified": "送出後讀回兩個任務的平台紀錄，模型、Element、空輸入圖與 prompt 皆與送出內容相同"
+ },
+ "counts": {
+  "requests": 2,
+  "images": 2,
+  "blocked": 0,
+  "retries": 0,
+  "extra_generations": 0
+ },
+ "cost": {
+  "quote": "完整唯讀報價（含 Element 佔位）每張 1 credit、2 張共 2 credits，未超過總上限 2",
+  "spend_rows": 2,
+  "each": 1,
+  "charged_net": 2,
+  "attribution": "依時窗推定（只看送出時段的 Seedream 4.5 列；送出前已存在的同模型列不歸入）",
+  "balance_before": 1095.19,
+  "balance_after": 1093.19
+ },
+ "body_check": {
+  "method": "第一眼看整個人體：頭、肩、軀幹、骨盆、腿的關係；另以分割與臉部特徵點量「頭身比」（髮頂到下巴為一頭，含頭髮與高跟鞋，量測為約略值）",
+  "heads": {
+   "R24 A": "約 7.0 頭身",
+   "R24 B": "約 7.7 頭身",
+   "R23 B（退回）": "約 5.8 頭身",
+   "R22 A（退回）": "約 6.1 頭身",
+   "R20 A（退回）": "約 5.1 頭身"
+  },
+  "reading": "R20–R23 失敗圖量出來只有 5–6 頭身，與 Penny「頭大身體小」的觀察一致；R24 兩張落在成年女性穿高跟鞋全身照的正常範圍"
+ },
+ "self_review": [
+  {
+   "set": "V-rainie-hsu",
+   "v": "A",
+   "img_id": "V-rainie-hsu-R24-A",
+   "v_text": "人體比例：頭、肩、軀幹、骨盆與腿的關係自然，成年女性比例，沒有頭大身小；手搭欄杆、雙腳在腳踝處交叉站立，重心自然。身分：臉型、眉眼、鼻唇與錨點一致；雙眼看鏡頭、方向一致、無內聚。人景融合：頂樓露台夕陽光線一致，背景可見台北 101。注意：身形偏纖細，胸型不如 canon 的「飽滿」；頭髮成了中分（設計是深側分）；眼線仍有一點點外眼角上揚（比 Soul 產出淡很多）；腳離下緣很近；交叉腿略有擺姿感。"
+  },
+  {
+   "set": "V-rainie-hsu",
+   "v": "B",
+   "img_id": "V-rainie-hsu-R24-B",
+   "v_text": "人體比例：自然的行走瞬間，步伐、骨盆與雙腿銜接自然，雙手放鬆，頭身比例正常，沒有頭大身小或刻意拉腿。身分：與錨點一致，開心笑容、雙眼看鏡頭、方向一致。人景融合：逆光夕陽、地面影子方向一致。注意：腿看起來偏長（約 7.7 頭身，含高跟鞋，屬時尚照常見範圍）；身形偏纖細、胸型不如 canon 飽滿；頭髮中分；鞋尖離下緣很近。"
+  }
+ ],
+ "self_review_summary": "2 張全保留。依 canon 重新設計、改用早期成功的 Seedream＋既有錨點流程後，兩張都是比例協調的成年女性全身照，沒有先前的頭大身小或眼睛內聚；主要落差是身形比 canon 纖細、頭髮中分。",
+ "not_done": [
+  "不重生、不補生、不付費修圖",
+  "不改 canon、人設或月份",
+  "沒有新建或重訓身分素材",
+  "新圖不宣稱已接受"
+ ]
+}
