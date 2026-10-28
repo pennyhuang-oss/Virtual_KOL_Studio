@@ -1,0 +1,29 @@
+{
+ "note": "M-4 R23 選片頁部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/shoot.html",
+ "commit": "a6061126901037db5d1a1be5ad1d499c0e9158d2",
+ "deploy_triggered_utc": "2026-10-28T07:55:13Z",
+ "deploy_status": "SUCCESS",
+ "deploy_finished_utc": "2026-10-28T08:06:19Z",
+ "deploys_triggered": 1,
+ "live_page_commit": "a6061126901037db5d1a1be5ad1d499c0e9158d2",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）",
+  "result": "全數通過（31 項）",
+  "items": [
+   "本輪 2 項（H-Somi 原版／調色版、V-Rainie A／B）、已選 23（定案 22＋調色待確認 1）、無待處理",
+   "照片位置與圖片識別、標籤對應正確；前幾輪照片（H-Somi 5、V-Rainie 6）收合、可展開、可放大",
+   "37 張照片的顯示版與原尺寸完整版皆可取得",
+   "放大、原尺寸、同一項內切換；前幾輪照片放大時不顯示「看另一張」",
+   "選擇與備註、重新整理後保留；清除選擇改回未回覆",
+   "R21、R22 的回饋與圖片識別不符的回饋不套用到新圖",
+   "複製全部回饋（角色、月份、類型、選擇、圖片版本、備註；未回覆不算接受）",
+   "R20–R22 與更舊的 localStorage 鍵不變",
+   "已選區 23 張載入、1 套標待確認、沒有選項",
+   "手機無橫向捲動、可選擇、可放大、可複製",
+   "頁面無錯誤"
+  ],
+  "public_images": "線上 37 張照片 × 2 版（74 檔）無中繼資料、無平台任務識別、無 Soul／任務 ID（比對全部 M-4 私有執行紀錄的 107 個 UUID）"
+ }
+}
