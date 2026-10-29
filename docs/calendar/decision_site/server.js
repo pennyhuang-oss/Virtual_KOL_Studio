@@ -10,7 +10,7 @@ const PORT = Number(process.env.PORT) || 8080;
 const COMMIT = /^[0-9a-f]{7,40}$/.test(process.env.RAILWAY_GIT_COMMIT_SHA || '') ? process.env.RAILWAY_GIT_COMMIT_SHA : '';
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
-  '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8' };
+  '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8', '.pdf': 'application/pdf' };
 
 const BASE_HEADERS = {
   'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet, noimageindex',
@@ -51,6 +51,8 @@ const server = http.createServer((req, res) => {
   const isImg = type.startsWith('image/');
   const headers = { ...BASE_HEADERS, 'Content-Type': type,
     'Cache-Control': isImg ? 'public, max-age=3600' : 'no-cache' };
+  // 排版預覽 PDF（M-5 R26 起）：一律下載，不在頁面內嵌開啟；檔名只用英數
+  if (type === 'application/pdf') headers['Content-Disposition'] = `attachment; filename="${path.basename(file).replace(/[^A-Za-z0-9._-]/g, '_')}"`;
   if (file.endsWith('.html')) {
     const html = fs.readFileSync(file, 'utf8').replace('__PAGE_COMMIT__', COMMIT || 'unknown');
     res.writeHead(200, headers);

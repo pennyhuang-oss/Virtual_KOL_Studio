@@ -1,0 +1,7775 @@
+{
+ "note": "程式產生（docs/calendar/tools/build_cal_m5_layout.py），請勿手改。兩款桌曆排版預覽：工作版、非交印核准、未經廠商確認。",
+ "round": "M-5 R26",
+ "status": {
+  "owner_selection": "complete（R25，24／24）",
+  "layout_preview": "ready_for_owner_review（R26 工作版，待 Penny 看）",
+  "layout_acceptance": "not_given（排版接受與照片接受分開記錄）",
+  "prepress_check": "in_progress（R26 已做尺寸、裁切、ppi、日期、PDF 核對；廠商項目未確認）",
+  "print_approval": "not_given（未製作交印檔、未聯絡廠商、未打樣）"
+ },
+ "photo_source": {
+  "final_list": "docs/calendar/data/cal_m4_final_r25.json",
+  "commit": "62b87c00802efabc67ab57d46edae1f1d6bdccbb",
+  "sets": [
+   {
+    "book": "H",
+    "month": 1,
+    "set": "H-yuna-kim",
+    "img_id": "H-yuna-kim-R20-B",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/yuna-kim/images/calendar_2027_batch1/H-yuna-kim_m4r20_B.png",
+    "sha256": "d193186c87b18c4cfbde9f9043dae7de7ea7511416de135ac4eeffdd11dce809",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Yuna Kim"
+   },
+   {
+    "book": "H",
+    "month": 2,
+    "set": "H-rin-ayase",
+    "img_id": "H-rin-ayase-R21-1",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/rin-ayase/images/calendar_2027_batch1/H-rin-ayase_m4r21_A.png",
+    "sha256": "c468a6b14382e1225040d04886492db996fc3a180de7310fd81fa879c5176092",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Rin Ayase"
+   },
+   {
+    "book": "H",
+    "month": 3,
+    "set": "H-miu-shiraishi",
+    "img_id": "H-miu-shiraishi-R21-A",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/miu-shiraishi/images/calendar_2027_batch1/H-miu-shiraishi_m4r21_A.png",
+    "sha256": "82e9f95c388bbf6b8a91aa029592a657b9bd06c37def539bd151a6dd7ba7e72e",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Miu Shiraishi"
+   },
+   {
+    "book": "H",
+    "month": 4,
+    "set": "H-tammy-chou",
+    "img_id": "H-tammy-chou-R21-A",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/tammy-chou/images/calendar_2027_batch1/H-tammy-chou_m4r21_A.png",
+    "sha256": "8137a0f6942b55bf079f6b7945f938d3cd3329017cefa3051eb37b7d1ac85eef",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Tammy Chou"
+   },
+   {
+    "book": "H",
+    "month": 5,
+    "set": "H-yerin-han",
+    "img_id": "H-yerin-han-R21-A",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/yerin-han/images/calendar_2027_batch1/H-yerin-han_m4r21_A.png",
+    "sha256": "4cd5c8b93082e98eeb9db69ba1febbb6fc99ada65feb6549ac3657f3a0e65d7d",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Yerin Han"
+   },
+   {
+    "book": "H",
+    "month": 6,
+    "set": "H-coco-wu",
+    "img_id": "H-coco-wu-R20-A-G21",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/coco-wu/images/calendar_2027_batch1/H-coco-wu_m4r20_A_grade_r21.png",
+    "sha256": "fb7d5c3fee84a689482ee6734a4748d7e55dc3756c82368e8eee424d60e396ca",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Coco Wu"
+   },
+   {
+    "book": "H",
+    "month": 7,
+    "set": "H-mia-huang",
+    "img_id": "H-mia-huang-R22-A",
+    "commit": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810",
+    "file": "kols/mia-huang/images/calendar_2027_batch1/H-mia-huang_m4r22_A.png",
+    "sha256": "f3e56ef6b850546abfa3cce7d7cb6af519183be5b3beddc9bae6f477028181d3",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Mia Huang"
+   },
+   {
+    "book": "H",
+    "month": 8,
+    "set": "H-iris-chen",
+    "img_id": "H-iris-chen-R20-A",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/iris-chen/images/calendar_2027_batch1/H-iris-chen_m4r20_A.png",
+    "sha256": "276d560f7ada5e752f112d06e3c5d75b4444694811738acd67199f4de7ac1b99",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Iris Chen"
+   },
+   {
+    "book": "H",
+    "month": 9,
+    "set": "H-jia-seo",
+    "img_id": "H-jia-seo-R20-B",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/jia-seo/images/calendar_2027_batch1/H-jia-seo_m4r20_B.png",
+    "sha256": "0ca136ba7b4c10479a0f5d0c0c888b5337eda7c0ab8ca223a5915f8067daecc0",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Jia Seo"
+   },
+   {
+    "book": "H",
+    "month": 10,
+    "set": "H-luna-tanaka",
+    "img_id": "H-luna-tanaka-R21-A-G22",
+    "commit": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810",
+    "file": "kols/luna-tanaka/images/calendar_2027_batch1/H-luna-tanaka_m4r21_A_grade_r22.png",
+    "sha256": "582112bdd6c79fd67ced0a8cad388f9e8280c9ed374a4a7237406a2f8f490a17",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Luna Tanaka"
+   },
+   {
+    "book": "H",
+    "month": 11,
+    "set": "H-somi-oh",
+    "img_id": "H-somi-oh-R22-2-G23",
+    "commit": "dab82fe6d3586fef6e13fc621a4d52618f356c30",
+    "file": "kols/somi-oh/images/calendar_2027_batch1/H-somi-oh_m4r22_B_grade_r23.png",
+    "sha256": "4b0b17033f2276f070813913d2d9317f0853267ae50d996caeb9a153fa27d974",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Somi Oh"
+   },
+   {
+    "book": "H",
+    "month": 12,
+    "set": "H-rainie-hsu",
+    "img_id": "H-rainie-hsu-R20-B",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/rainie-hsu/images/calendar_2027_batch1/H-rainie-hsu_m4r20_B.png",
+    "sha256": "2d439cb7ce2d20550bf26497b7011db430368ae0997e69aa0aa49a2e667d1051",
+    "px": [
+     2048,
+     1152
+    ],
+    "person": "Rainie Hsu"
+   },
+   {
+    "book": "V",
+    "month": 1,
+    "set": "V-tammy-chou",
+    "img_id": "V-tammy-chou-R14",
+    "commit": "cb1db65090dc2ddc767cc45ad8fa23617fdf9377",
+    "file": "kols/tammy-chou/images/calendar_2027_batch1/V-tammy-chou_m4r14.png",
+    "sha256": "f4b1b1d43ec1aecd20bf35fc5bfd74a930aa6d39a62aa2764e45680cd9792943",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Tammy Chou"
+   },
+   {
+    "book": "V",
+    "month": 2,
+    "set": "V-jia-seo",
+    "img_id": "V-jia-seo-R21-A",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/jia-seo/images/calendar_2027_batch1/V-jia-seo_m4r21_A.png",
+    "sha256": "a22ec236e8d611810acb8d61ded5b6c1386a9bf2b66421d71062c8f9fb9e7905",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Jia Seo"
+   },
+   {
+    "book": "V",
+    "month": 3,
+    "set": "V-mia-huang",
+    "img_id": "V-mia-huang-R20-A",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/mia-huang/images/calendar_2027_batch1/V-mia-huang_m4r20_A.png",
+    "sha256": "414d7e2222fb95dbbee475ccfcf8c079c6369b50a0663aee3a02aa84c394ddc9",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Mia Huang"
+   },
+   {
+    "book": "V",
+    "month": 4,
+    "set": "V-miu-shiraishi",
+    "img_id": "V-miu-shiraishi-R20-B-G22",
+    "commit": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810",
+    "file": "kols/miu-shiraishi/images/calendar_2027_batch1/V-miu-shiraishi_m4r20_B_grade_r22.png",
+    "sha256": "8a62285bf470d79ce4bc6dfd2d015e4015961dc1e2346b3cf14205b694794aec",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Miu Shiraishi"
+   },
+   {
+    "book": "V",
+    "month": 5,
+    "set": "V-rainie-hsu",
+    "img_id": "V-rainie-hsu-R24-A",
+    "commit": "106edbfc9eb55f288a3aa3aff0cd309b4cee6461",
+    "file": "kols/rainie-hsu/images/calendar_2027_batch1/V-rainie-hsu_m4r24_A.png",
+    "sha256": "27d1d31b2253ec236ed651006afa95a29b111fbf7c8905ba6f007ae14ef3a4b3",
+    "px": [
+     1728,
+     2304
+    ],
+    "person": "Rainie Hsu"
+   },
+   {
+    "book": "V",
+    "month": 6,
+    "set": "V-luna-tanaka",
+    "img_id": "V-luna-tanaka-R20-B-G21",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/luna-tanaka/images/calendar_2027_batch1/V-luna-tanaka_m4r20_B_grade_r21.png",
+    "sha256": "73ed1e092171e472efabd9f2cf41b6517621f75dcce380ca8f14b38647927920",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Luna Tanaka"
+   },
+   {
+    "book": "V",
+    "month": 7,
+    "set": "V-coco-wu",
+    "img_id": "V-coco-wu-R20-B",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/coco-wu/images/calendar_2027_batch1/V-coco-wu_m4r20_B.png",
+    "sha256": "1c2f5b905d8280289910ae91fcf144f8b82b9b4940300a23682eb6eb2d8be233",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Coco Wu"
+   },
+   {
+    "book": "V",
+    "month": 8,
+    "set": "V-yerin-han",
+    "img_id": "V-yerin-han-R20-A",
+    "commit": "cf615afc7bf50e981cbb3c5fb933d7fb37690ddd",
+    "file": "kols/yerin-han/images/calendar_2027_batch1/V-yerin-han_m4r20_A.png",
+    "sha256": "494aca0db58ab9fcf9cb5783e2040212db8ed5cb3b61b2d101e575026c46e2b1",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Yerin Han"
+   },
+   {
+    "book": "V",
+    "month": 9,
+    "set": "V-iris-chen",
+    "img_id": "V-iris-chen-M4R2",
+    "commit": "32fec1df14071be27858d038b88304eaff67a31a",
+    "file": "kols/iris-chen/images/calendar_2027_m4_r2/V-iris-chen_m4r2_first_test.png",
+    "sha256": "fe1391d945c0b31ed513e9042727c5f0ec8c95e8ab103feb36e34b5d3389ab76",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Iris Chen"
+   },
+   {
+    "book": "V",
+    "month": 10,
+    "set": "V-rin-ayase",
+    "img_id": "V-rin-ayase-R14",
+    "commit": "cb1db65090dc2ddc767cc45ad8fa23617fdf9377",
+    "file": "kols/rin-ayase/images/calendar_2027_batch1/V-rin-ayase_m4r14.png",
+    "sha256": "6be6d9d88e3b8e0cf94c482ec52e8c824f0c05182520a4f34f4fe41868e530a2",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Rin Ayase"
+   },
+   {
+    "book": "V",
+    "month": 11,
+    "set": "V-yuna-kim",
+    "img_id": "V-yuna-kim-R21-A",
+    "commit": "03eb250c4baedbae4dc85b85594bf17ca229872e",
+    "file": "kols/yuna-kim/images/calendar_2027_batch1/V-yuna-kim_m4r21_A.png",
+    "sha256": "b73edfe95224b9ecc3ee5add9bb7dacb95260641956076a4f92a7b3041333c77",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Yuna Kim"
+   },
+   {
+    "book": "V",
+    "month": 12,
+    "set": "V-somi-oh",
+    "img_id": "V-somi-oh-R22-B",
+    "commit": "ba5f988db58b8a7be69a3b7eb47ba5809e0bb810",
+    "file": "kols/somi-oh/images/calendar_2027_batch1/V-somi-oh_m4r22_B.png",
+    "sha256": "c07a71d21cb6b9adbda1221006b80f1f7a783bad4c7286a93ae4a300508e8150",
+    "px": [
+     1536,
+     2048
+    ],
+    "person": "Somi Oh"
+   }
+  ]
+ },
+ "spec": {
+  "official": [
+   {
+    "k": "成品尺寸（裁切線）",
+    "H": "200×151 mm",
+    "V": "140×200 mm",
+    "src": "商品頁（2026-10-29 唯讀重查仍相同）；CAL_01 §1"
+   },
+   {
+    "k": "頁數",
+    "H": "14 張／28 面",
+    "V": "16 張／32 面",
+    "src": "商品頁（2026-10-29 重查相同）；編輯器 no_of_side"
+   },
+   {
+    "k": "最後一面",
+    "H": "條碼頁，不可編輯",
+    "V": "條碼頁，不可編輯",
+    "src": "商品頁「請注意」第 2 點"
+   },
+   {
+    "k": "出血",
+    "H": "四邊各 2 mm（含出血畫布 204×155 mm）",
+    "V": "四邊各 2 mm（144×204 mm）",
+    "src": "編輯器設定 bleedMargin（2026-10-08 擷取）"
+   },
+   {
+    "k": "編輯器安全框",
+    "H": "裁切線內 上 10、右 2、下 2、左 2 mm",
+    "V": "0 mm",
+    "src": "編輯器設定 safeMargin"
+   },
+   {
+    "k": "裝訂",
+    "H": "黑色雙環線圈（上緣）、黑底板",
+    "V": "黑色雙環線圈（上緣）、黃褐色底板",
+    "src": "商品頁規格"
+   },
+   {
+    "k": "設計稿要求",
+    "H": "重要文字／圖放在安全框內；圖面超出裁切線並延伸到出血線",
+    "V": "同左",
+    "src": "客製編輯須知 Q1（2026-10-29 重讀）"
+   },
+   {
+    "k": "檔案格式",
+    "H": "JPG、JPEG、PNG、AI、PDF",
+    "V": "同左",
+    "src": "客製編輯須知 Q3"
+   },
+   {
+    "k": "解析度",
+    "H": "編輯器設定 imageDPI 300；只顯示「好／標準／差」三級，沒有公開數字門檻",
+    "V": "同左",
+    "src": "編輯器設定；客製編輯須知 Q2"
+   },
+   {
+    "k": "色彩",
+    "H": "成品以 CMYK 四色印刷，色差 ±10% 內為合格（參照 ISO 12647-2）；上傳 RGB 如何轉換沒有說明、沒有指定 ICC",
+    "V": "同左",
+    "src": "客製編輯須知 Q3（只答格式）、Q10"
+   },
+   {
+    "k": "單檔上限",
+    "H": "說明頁 300MB；編輯器設定值 30（未標單位）",
+    "V": "同左",
+    "src": "客製編輯須知 Q7；編輯器設定（兩處不一致）"
+   },
+   {
+    "k": "範本頁序",
+    "H": "面 1 封面；面 2–25 每月兩面；26–27 MEMO；28 條碼",
+    "V": "面 1 封面；2–25 每月兩面（照片面→大格面）；26–30 MEMO；31 全年年曆；32 條碼",
+    "src": "廠商 2027 範本 8385／8364／8404（CAL_01 §3.2）"
+   }
+  ],
+  "owner": [
+   {
+    "k": "照片",
+    "v": "24 張定案（R25 cal_m4_final_r25.json，Penny 選定）；本輪不重開選片、不換版本"
+   },
+   {
+    "k": "月份與人選",
+    "v": "兩本月份排序維持既定（R6）"
+   },
+   {
+    "k": "工作照片框",
+    "v": "R6 接受：橫式 192×104 mm（生成 16:9）、直式 120×160 mm（生成 3:4）；是工作版型，不是廠商規格或印刷核准"
+   },
+   {
+    "k": "已接受的調色",
+    "v": "5 張衍生檔（H-Coco、V-Luna、H-Luna、V-Miu、H-Somi）定案的是調色／修正版本身，本輪原樣使用"
+   }
+  ],
+  "defaults": [
+   {
+    "k": "日期資料",
+    "v": "自繪；只用人事總處 116 年辦公日曆表；紅字含補假；不加農曆；不用廠商日期素材（CAL_10 §4 技術預設，Penny 知悉、未另行表示意見）"
+   },
+   {
+    "k": "頁序",
+    "v": "照片面在前、大格面在後（同範本 8364／8404）；整本一致（CAL_10 §4）"
+   },
+   {
+    "k": "週起始",
+    "v": "週日起始（台灣慣例、廠商台灣日期素材同樣週日起始；Owner 未另定）"
+   },
+   {
+    "k": "線圈區",
+    "v": "畫布上緣 0–12 mm 不放臉與文字（假設；編輯器線圈示意量得 8.9／9.7 mm，不是書面規格）"
+   },
+   {
+    "k": "品牌",
+    "v": "封面品牌名稱、Logo、QR 未定（決策 D 未回答）→ 佔位"
+   }
+  ],
+  "assumed": [
+   {
+    "k": "紙張正反面拼版",
+    "v": "假設 H1：第 k 張＝面 2k−1（正）／面 2k（背）——符合 14／16 張；若成立，照片面會在紙張背面（CAL_13）。PDF 單面正向逐面排列，不旋轉"
+   },
+   {
+    "k": "背面是否自動旋轉 180°",
+    "v": "未知；未自行旋轉任何面"
+   },
+   {
+    "k": "直式文字安全區",
+    "v": "廠商安全框 0；本案自訂裁切線內 3 mm、上緣 12 mm"
+   },
+   {
+    "k": "色彩",
+    "v": "來源 PNG 沒有 ICC／gAMA／sRGB 標記（未標記 RGB），以 sRGB 顯示；PDF 照片為 DeviceRGB，沒有轉 CMYK"
+   }
+  ],
+  "unknown": [
+   "線圈實際寬度、打孔位置與裝訂區（書面規格）",
+   "編輯器面號與實體紙張正反面的對應、背面是否自動旋轉",
+   "「好／標準／差」對應的 ppi 門檻（橫式約 271 ppi 能否歸為好或標準）",
+   "RGB→CMYK 由誰轉、用哪個描述檔；實際色差與暗部（要打樣）",
+   "交件方式（編輯器逐面上傳或整份 PDF）、單檔上限 300MB 或 30",
+   "試做紙材、數量、交件期限（Penny 已知有免費試做；細節待廠商）"
+  ]
+ },
+ "fonts": "預覽用字型：中文 文泉驛正黑（WenQuanYi Zen Hei）、數字與英文 DejaVu Sans／Sans Bold；皆為開放授權、已嵌入 PDF（子集）。正式字型未定。",
+ "dates": {
+  "source": "行政院人事行政總處《中華民國116年（西元2027年）政府行政機關辦公日曆表》xlsx（https://www.dgpa.gov.tw/information?uid=30&pid=12982），下載 2026-10-08",
+  "week_start": "週日",
+  "red": "紅字＝行政院人事行政總處 116 年辦公日曆表放假日（含週末與補假）",
+  "lunar": "不加（CAL_10 §4）",
+  "holiday_names": "不加（只用紅字；本輪不擴充）",
+  "makeup_workdays": "116 年辦公日曆表沒有補班日"
+ },
+ "formats": {
+  "H": {
+   "zh": "橫式",
+   "sku": "YFP-CA01",
+   "W": 204,
+   "H": 155,
+   "faces": 28,
+   "trim": 2,
+   "vendor_safe": [
+    4,
+    12,
+    200,
+    151
+   ],
+   "text_safe": [
+    4,
+    12,
+    200,
+    151
+   ],
+   "text_safe_note": "廠商編輯器安全框（裁切線內上 10、其餘 2 mm）",
+   "coil_assumed": 12,
+   "coil_measured": 8.9,
+   "photo": {
+    "B": [
+     6,
+     14,
+     198,
+     122
+    ],
+    "A": [
+     6,
+     14,
+     198,
+     118
+    ]
+   }
+  },
+  "V": {
+   "zh": "直式",
+   "sku": "YFP-CA08",
+   "W": 144,
+   "H": 204,
+   "faces": 32,
+   "trim": 2,
+   "vendor_safe": [
+    2,
+    2,
+    142,
+    202
+   ],
+   "text_safe": [
+    5,
+    12,
+    139,
+    199
+   ],
+   "text_safe_note": "廠商安全框為 0；本案自訂文字安全區：裁切線內 3 mm、上緣避開 12 mm 線圈假設區",
+   "coil_assumed": 12,
+   "coil_measured": 9.7,
+   "photo": {
+    "V": [
+     12,
+     16,
+     132,
+     176
+    ]
+   }
+  }
+ },
+ "recommendation": {
+  "H_frame": "B",
+  "H_frame_text": "橫式照片框推薦改為完整 16:9（192×108 mm）：12 張都不裁切、構圖與人體完整，日期條區從 27 mm 縮為 23 mm；有效解析度不變（約 271 ppi）。R6 接受的 192×104 mm 套框版本並列比較，待 Penny 決定，未悄悄定案。",
+  "layout": "兩款整本一致：照片面＝照片＋月份＋單行日期條；大格面＝月份標題＋7×6 大格（數字在格子左上、留書寫空間）；週日起始、放假日紅字；封面為 12 張縮圖＋品牌佔位；MEMO 與條碼頁依範本。"
+ },
+ "crops_H": {
+  "H-yuna-kim": {
+   "month": 1,
+   "subject_top_px": 151,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 0,
+   "bottom_edge": "cut",
+   "visual_note": "靴子在原圖下緣已被截斷",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0
+   }
+  },
+  "H-rin-ayase": {
+   "month": 2,
+   "subject_top_px": 307,
+   "subject_bottom_gap_px": 179,
+   "seg_bottom_gap_px": 179,
+   "bottom_edge": "whole",
+   "visual_note": "斜躺在沙發上，腳在畫面內、下方空間充足",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0,
+    "alt": null
+   }
+  },
+  "H-miu-shiraishi": {
+   "month": 3,
+   "subject_top_px": 134,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 0,
+   "bottom_edge": "cut",
+   "visual_note": "趴在床上，枕頭與身體在原圖下緣已被截斷",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0
+   }
+  },
+  "H-tammy-chou": {
+   "month": 4,
+   "subject_top_px": 168,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 0,
+   "bottom_edge": "cut",
+   "visual_note": "跪姿的腿在原圖下緣已被截斷",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0
+   }
+  },
+  "H-yerin-han": {
+   "month": 5,
+   "subject_top_px": 106,
+   "subject_bottom_gap_px": 29,
+   "seg_bottom_gap_px": 29,
+   "bottom_edge": "whole",
+   "visual_note": "坐姿，球鞋完整在畫面內",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0,
+    "alt": null
+   }
+  },
+  "H-coco-wu": {
+   "month": 6,
+   "subject_top_px": 58,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 0,
+   "bottom_edge": "cut",
+   "visual_note": "膝蓋以下與草帽在原圖下緣已被截斷",
+   "A": {
+    "top": 25,
+    "bottom": 18,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 18
+   }
+  },
+  "H-mia-huang": {
+   "month": 7,
+   "subject_top_px": 174,
+   "subject_bottom_gap_px": 44,
+   "seg_bottom_gap_px": 44,
+   "bottom_edge": "whole",
+   "visual_note": "坐在沙灘，赤腳完整在畫面內",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0,
+    "alt": null
+   }
+  },
+  "H-iris-chen": {
+   "month": 8,
+   "subject_top_px": 61,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 0,
+   "bottom_edge": "cut",
+   "visual_note": "雙腳在原圖下緣已被截斷",
+   "A": {
+    "top": 28,
+    "bottom": 15,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 15
+   }
+  },
+  "H-jia-seo": {
+   "month": 9,
+   "subject_top_px": 265,
+   "subject_bottom_gap_px": 47,
+   "seg_bottom_gap_px": 47,
+   "bottom_edge": "whole",
+   "visual_note": "坐姿，涼鞋完整在畫面內",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0,
+    "alt": null
+   }
+  },
+  "H-luna-tanaka": {
+   "month": 10,
+   "subject_top_px": 191,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 3,
+   "bottom_edge": "cut",
+   "visual_note": "前腳完整；後腳在原圖下緣已被截掉一部分",
+   "A": {
+    "top": 43,
+    "bottom": 0,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 0
+   }
+  },
+  "H-somi-oh": {
+   "month": 11,
+   "subject_top_px": 40,
+   "subject_bottom_gap_px": 0,
+   "seg_bottom_gap_px": 9,
+   "bottom_edge": "cut",
+   "visual_note": "靴子在原圖下緣已被截斷（R25 記的「下方約 6.7% 空間」有誤：分割遮罩漏了靴底）",
+   "A": {
+    "top": 7,
+    "bottom": 36,
+    "cuts_subject_px": 0,
+    "extra_on_truncated_px": 36
+   }
+  },
+  "H-rainie-hsu": {
+   "month": 12,
+   "subject_top_px": 36,
+   "subject_bottom_gap_px": 5,
+   "seg_bottom_gap_px": 5,
+   "bottom_edge": "whole",
+   "visual_note": "站姿，涼鞋鞋底離原圖下緣約 5 px",
+   "A": {
+    "top": 38,
+    "bottom": 5,
+    "cuts_subject_px": 2,
+    "extra_on_truncated_px": 0,
+    "alt": {
+     "top": 36,
+     "bottom": 7
+    }
+   }
+  }
+ },
+ "pages": {
+  "H": [
+   {
+    "face": 1,
+    "role": "cover",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [
+     {
+      "box_mm": [
+       8.0,
+       42.24218749999999,
+       52.75,
+       67.4140625
+      ],
+      "role": "cover_thumb",
+      "set": "H-yuna-kim",
+      "img_id": "H-yuna-kim-R20-B",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       55.75,
+       42.24218749999999,
+       100.5,
+       67.4140625
+      ],
+      "role": "cover_thumb",
+      "set": "H-rin-ayase",
+      "img_id": "H-rin-ayase-R21-1",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       103.5,
+       42.24218749999999,
+       148.25,
+       67.4140625
+      ],
+      "role": "cover_thumb",
+      "set": "H-miu-shiraishi",
+      "img_id": "H-miu-shiraishi-R21-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       151.25,
+       42.24218749999999,
+       196.0,
+       67.4140625
+      ],
+      "role": "cover_thumb",
+      "set": "H-tammy-chou",
+      "img_id": "H-tammy-chou-R21-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       8.0,
+       73.61406249999999,
+       52.75,
+       98.78593749999999
+      ],
+      "role": "cover_thumb",
+      "set": "H-yerin-han",
+      "img_id": "H-yerin-han-R21-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       55.75,
+       73.61406249999999,
+       100.5,
+       98.78593749999999
+      ],
+      "role": "cover_thumb",
+      "set": "H-coco-wu",
+      "img_id": "H-coco-wu-R20-A-G21",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       103.5,
+       73.61406249999999,
+       148.25,
+       98.78593749999999
+      ],
+      "role": "cover_thumb",
+      "set": "H-mia-huang",
+      "img_id": "H-mia-huang-R22-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       151.25,
+       73.61406249999999,
+       196.0,
+       98.78593749999999
+      ],
+      "role": "cover_thumb",
+      "set": "H-iris-chen",
+      "img_id": "H-iris-chen-R20-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       8.0,
+       104.9859375,
+       52.75,
+       130.1578125
+      ],
+      "role": "cover_thumb",
+      "set": "H-jia-seo",
+      "img_id": "H-jia-seo-R20-B",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       55.75,
+       104.9859375,
+       100.5,
+       130.1578125
+      ],
+      "role": "cover_thumb",
+      "set": "H-luna-tanaka",
+      "img_id": "H-luna-tanaka-R21-A-G22",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       103.5,
+       104.9859375,
+       148.25,
+       130.1578125
+      ],
+      "role": "cover_thumb",
+      "set": "H-somi-oh",
+      "img_id": "H-somi-oh-R22-2-G23",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     },
+     {
+      "box_mm": [
+       151.25,
+       104.9859375,
+       196.0,
+       130.1578125
+      ],
+      "role": "cover_thumb",
+      "set": "H-rainie-hsu",
+      "img_id": "H-rainie-hsu-R20-B",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 529
+     }
+    ],
+    "lattices": [],
+    "n_texts": 16,
+    "min_text_pt": 4.82,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "H/f01_v.jpg",
+    "full": "H/f01_f.jpg"
+   },
+   {
+    "face": 2,
+    "role": "photo",
+    "month": 1,
+    "set": "H-yuna-kim",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-yuna-kim",
+      "img_id": "H-yuna-kim-R20-B",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 1,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f02_v.jpg",
+    "full": "H/f02_f.jpg"
+   },
+   {
+    "face": 3,
+    "role": "grid",
+    "month": 1,
+    "set": "H-yuna-kim",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 1,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f03_v.jpg",
+    "full": "H/f03_f.jpg"
+   },
+   {
+    "face": 4,
+    "role": "photo",
+    "month": 2,
+    "set": "H-rin-ayase",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-rin-ayase",
+      "img_id": "H-rin-ayase-R21-1",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 2,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 28,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 61,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f04_v.jpg",
+    "full": "H/f04_f.jpg"
+   },
+   {
+    "face": 5,
+    "role": "grid",
+    "month": 2,
+    "set": "H-rin-ayase",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 2,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 41,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f05_v.jpg",
+    "full": "H/f05_f.jpg"
+   },
+   {
+    "face": 6,
+    "role": "photo",
+    "month": 3,
+    "set": "H-miu-shiraishi",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-miu-shiraishi",
+      "img_id": "H-miu-shiraishi-R21-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 3,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f06_v.jpg",
+    "full": "H/f06_f.jpg"
+   },
+   {
+    "face": 7,
+    "role": "grid",
+    "month": 3,
+    "set": "H-miu-shiraishi",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 3,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f07_v.jpg",
+    "full": "H/f07_f.jpg"
+   },
+   {
+    "face": 8,
+    "role": "photo",
+    "month": 4,
+    "set": "H-tammy-chou",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-tammy-chou",
+      "img_id": "H-tammy-chou-R21-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 4,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 30,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 65,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f08_v.jpg",
+    "full": "H/f08_f.jpg"
+   },
+   {
+    "face": 9,
+    "role": "grid",
+    "month": 4,
+    "set": "H-tammy-chou",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 4,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f09_v.jpg",
+    "full": "H/f09_f.jpg"
+   },
+   {
+    "face": 10,
+    "role": "photo",
+    "month": 5,
+    "set": "H-yerin-han",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-yerin-han",
+      "img_id": "H-yerin-han-R21-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 5,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f10_v.jpg",
+    "full": "H/f10_f.jpg"
+   },
+   {
+    "face": 11,
+    "role": "grid",
+    "month": 5,
+    "set": "H-yerin-han",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 5,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f11_v.jpg",
+    "full": "H/f11_f.jpg"
+   },
+   {
+    "face": 12,
+    "role": "photo",
+    "month": 6,
+    "set": "H-coco-wu",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-coco-wu",
+      "img_id": "H-coco-wu-R20-A-G21",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 6,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 30,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 65,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f12_v.jpg",
+    "full": "H/f12_f.jpg"
+   },
+   {
+    "face": 13,
+    "role": "grid",
+    "month": 6,
+    "set": "H-coco-wu",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 6,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f13_v.jpg",
+    "full": "H/f13_f.jpg"
+   },
+   {
+    "face": 14,
+    "role": "photo",
+    "month": 7,
+    "set": "H-mia-huang",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-mia-huang",
+      "img_id": "H-mia-huang-R22-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 7,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f14_v.jpg",
+    "full": "H/f14_f.jpg"
+   },
+   {
+    "face": 15,
+    "role": "grid",
+    "month": 7,
+    "set": "H-mia-huang",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 7,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f15_v.jpg",
+    "full": "H/f15_f.jpg"
+   },
+   {
+    "face": 16,
+    "role": "photo",
+    "month": 8,
+    "set": "H-iris-chen",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-iris-chen",
+      "img_id": "H-iris-chen-R20-A",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 8,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f16_v.jpg",
+    "full": "H/f16_f.jpg"
+   },
+   {
+    "face": 17,
+    "role": "grid",
+    "month": 8,
+    "set": "H-iris-chen",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 8,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f17_v.jpg",
+    "full": "H/f17_f.jpg"
+   },
+   {
+    "face": 18,
+    "role": "photo",
+    "month": 9,
+    "set": "H-jia-seo",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-jia-seo",
+      "img_id": "H-jia-seo-R20-B",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 9,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 30,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 65,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f18_v.jpg",
+    "full": "H/f18_f.jpg"
+   },
+   {
+    "face": 19,
+    "role": "grid",
+    "month": 9,
+    "set": "H-jia-seo",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 9,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f19_v.jpg",
+    "full": "H/f19_f.jpg"
+   },
+   {
+    "face": 20,
+    "role": "photo",
+    "month": 10,
+    "set": "H-luna-tanaka",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-luna-tanaka",
+      "img_id": "H-luna-tanaka-R21-A-G22",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 10,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f20_v.jpg",
+    "full": "H/f20_f.jpg"
+   },
+   {
+    "face": 21,
+    "role": "grid",
+    "month": 10,
+    "set": "H-luna-tanaka",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 10,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f21_v.jpg",
+    "full": "H/f21_f.jpg"
+   },
+   {
+    "face": 22,
+    "role": "photo",
+    "month": 11,
+    "set": "H-somi-oh",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-somi-oh",
+      "img_id": "H-somi-oh-R22-2-G23",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 11,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 30,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 65,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f22_v.jpg",
+    "full": "H/f22_f.jpg"
+   },
+   {
+    "face": 23,
+    "role": "grid",
+    "month": 11,
+    "set": "H-somi-oh",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 11,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f23_v.jpg",
+    "full": "H/f23_f.jpg"
+   },
+   {
+    "face": 24,
+    "role": "photo",
+    "month": 12,
+    "set": "H-rainie-hsu",
+    "variant": "B",
+    "photos": [
+     {
+      "box_mm": [
+       6,
+       14,
+       198,
+       122
+      ],
+      "role": "photo",
+      "set": "H-rainie-hsu",
+      "img_id": "H-rainie-hsu-R20-B",
+      "source_px": [
+       2048,
+       1152
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       2048,
+       1152
+      ],
+      "eff_ppi": 270.9,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 12,
+      "x0": 52,
+      "cw": 4.7097,
+      "n": 31,
+      "wd_band": [
+       125.975,
+       129.425
+      ],
+      "d_band": [
+       130.25,
+       134.15
+      ],
+      "wd_em": 2.3,
+      "d_em": 3.0
+     }
+    ],
+    "n_texts": 67,
+    "min_text_pt": 4.82,
+    "min_date_pt": 8.5,
+    "issues": [],
+    "view": "H/f24_v.jpg",
+    "full": "H/f24_f.jpg"
+   },
+   {
+    "face": 25,
+    "role": "grid",
+    "month": 12,
+    "set": "H-rainie-hsu",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 12,
+      "box": [
+       8,
+       28,
+       196,
+       146
+      ],
+      "head_h": 6.5,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.3,
+      "head_em": 2.9,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.82,
+    "min_date_pt": 12.19,
+    "issues": [],
+    "view": "H/f25_v.jpg",
+    "full": "H/f25_f.jpg"
+   },
+   {
+    "face": 26,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.82,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "H/f26_v.jpg",
+    "full": "H/f26_f.jpg"
+   },
+   {
+    "face": 27,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.82,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "H/f27_v.jpg",
+    "full": "H/f27_f.jpg"
+   },
+   {
+    "face": 28,
+    "role": "barcode",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 4,
+    "min_text_pt": 4.82,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "H/f28_v.jpg",
+    "full": "H/f28_f.jpg"
+   }
+  ],
+  "V": [
+   {
+    "face": 1,
+    "role": "cover",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [
+     {
+      "box_mm": [
+       8.0,
+       44.8,
+       37.75,
+       84.46666666666667
+      ],
+      "role": "cover_thumb",
+      "set": "V-tammy-chou",
+      "img_id": "V-tammy-chou-R14",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       40.75,
+       44.8,
+       70.5,
+       84.46666666666667
+      ],
+      "role": "cover_thumb",
+      "set": "V-jia-seo",
+      "img_id": "V-jia-seo-R21-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       73.5,
+       44.8,
+       103.25,
+       84.46666666666667
+      ],
+      "role": "cover_thumb",
+      "set": "V-mia-huang",
+      "img_id": "V-mia-huang-R20-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       106.25,
+       44.8,
+       136.0,
+       84.46666666666667
+      ],
+      "role": "cover_thumb",
+      "set": "V-miu-shiraishi",
+      "img_id": "V-miu-shiraishi-R20-B-G22",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       8.0,
+       90.46666666666667,
+       37.75,
+       130.13333333333333
+      ],
+      "role": "cover_thumb",
+      "set": "V-rainie-hsu",
+      "img_id": "V-rainie-hsu-R24-A",
+      "source_px": [
+       1728,
+       2304
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1728,
+       2304
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       40.75,
+       90.46666666666667,
+       70.5,
+       130.13333333333333
+      ],
+      "role": "cover_thumb",
+      "set": "V-luna-tanaka",
+      "img_id": "V-luna-tanaka-R20-B-G21",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       73.5,
+       90.46666666666667,
+       103.25,
+       130.13333333333333
+      ],
+      "role": "cover_thumb",
+      "set": "V-coco-wu",
+      "img_id": "V-coco-wu-R20-B",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       106.25,
+       90.46666666666667,
+       136.0,
+       130.13333333333333
+      ],
+      "role": "cover_thumb",
+      "set": "V-yerin-han",
+      "img_id": "V-yerin-han-R20-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       8.0,
+       136.13333333333333,
+       37.75,
+       175.79999999999998
+      ],
+      "role": "cover_thumb",
+      "set": "V-iris-chen",
+      "img_id": "V-iris-chen-M4R2",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       40.75,
+       136.13333333333333,
+       70.5,
+       175.79999999999998
+      ],
+      "role": "cover_thumb",
+      "set": "V-rin-ayase",
+      "img_id": "V-rin-ayase-R14",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       73.5,
+       136.13333333333333,
+       103.25,
+       175.79999999999998
+      ],
+      "role": "cover_thumb",
+      "set": "V-yuna-kim",
+      "img_id": "V-yuna-kim-R21-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     },
+     {
+      "box_mm": [
+       106.25,
+       136.13333333333333,
+       136.0,
+       175.79999999999998
+      ],
+      "role": "cover_thumb",
+      "set": "V-somi-oh",
+      "img_id": "V-somi-oh-R22-B",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": null,
+      "resampled_up": false,
+      "thumb_px": 351
+     }
+    ],
+    "lattices": [],
+    "n_texts": 16,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f01_v.jpg",
+    "full": "V/f01_f.jpg"
+   },
+   {
+    "face": 2,
+    "role": "photo",
+    "month": 1,
+    "set": "V-tammy-chou",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-tammy-chou",
+      "img_id": "V-tammy-chou-R14",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 1,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f02_v.jpg",
+    "full": "V/f02_f.jpg"
+   },
+   {
+    "face": 3,
+    "role": "grid",
+    "month": 1,
+    "set": "V-tammy-chou",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 1,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f03_v.jpg",
+    "full": "V/f03_f.jpg"
+   },
+   {
+    "face": 4,
+    "role": "photo",
+    "month": 2,
+    "set": "V-jia-seo",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-jia-seo",
+      "img_id": "V-jia-seo-R21-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 2,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 28,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 60,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f04_v.jpg",
+    "full": "V/f04_f.jpg"
+   },
+   {
+    "face": 5,
+    "role": "grid",
+    "month": 2,
+    "set": "V-jia-seo",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 2,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 41,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f05_v.jpg",
+    "full": "V/f05_f.jpg"
+   },
+   {
+    "face": 6,
+    "role": "photo",
+    "month": 3,
+    "set": "V-mia-huang",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-mia-huang",
+      "img_id": "V-mia-huang-R20-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 3,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f06_v.jpg",
+    "full": "V/f06_f.jpg"
+   },
+   {
+    "face": 7,
+    "role": "grid",
+    "month": 3,
+    "set": "V-mia-huang",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 3,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f07_v.jpg",
+    "full": "V/f07_f.jpg"
+   },
+   {
+    "face": 8,
+    "role": "photo",
+    "month": 4,
+    "set": "V-miu-shiraishi",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-miu-shiraishi",
+      "img_id": "V-miu-shiraishi-R20-B-G22",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 4,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 30,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 64,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f08_v.jpg",
+    "full": "V/f08_f.jpg"
+   },
+   {
+    "face": 9,
+    "role": "grid",
+    "month": 4,
+    "set": "V-miu-shiraishi",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 4,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f09_v.jpg",
+    "full": "V/f09_f.jpg"
+   },
+   {
+    "face": 10,
+    "role": "photo",
+    "month": 5,
+    "set": "V-rainie-hsu",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-rainie-hsu",
+      "img_id": "V-rainie-hsu-R24-A",
+      "source_px": [
+       1728,
+       2304
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1728,
+       2304
+      ],
+      "eff_ppi": 365.8,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 5,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f10_v.jpg",
+    "full": "V/f10_f.jpg"
+   },
+   {
+    "face": 11,
+    "role": "grid",
+    "month": 5,
+    "set": "V-rainie-hsu",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 5,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f11_v.jpg",
+    "full": "V/f11_f.jpg"
+   },
+   {
+    "face": 12,
+    "role": "photo",
+    "month": 6,
+    "set": "V-luna-tanaka",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-luna-tanaka",
+      "img_id": "V-luna-tanaka-R20-B-G21",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 6,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 30,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 64,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f12_v.jpg",
+    "full": "V/f12_f.jpg"
+   },
+   {
+    "face": 13,
+    "role": "grid",
+    "month": 6,
+    "set": "V-luna-tanaka",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 6,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f13_v.jpg",
+    "full": "V/f13_f.jpg"
+   },
+   {
+    "face": 14,
+    "role": "photo",
+    "month": 7,
+    "set": "V-coco-wu",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-coco-wu",
+      "img_id": "V-coco-wu-R20-B",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 7,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f14_v.jpg",
+    "full": "V/f14_f.jpg"
+   },
+   {
+    "face": 15,
+    "role": "grid",
+    "month": 7,
+    "set": "V-coco-wu",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 7,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f15_v.jpg",
+    "full": "V/f15_f.jpg"
+   },
+   {
+    "face": 16,
+    "role": "photo",
+    "month": 8,
+    "set": "V-yerin-han",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-yerin-han",
+      "img_id": "V-yerin-han-R20-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 8,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f16_v.jpg",
+    "full": "V/f16_f.jpg"
+   },
+   {
+    "face": 17,
+    "role": "grid",
+    "month": 8,
+    "set": "V-yerin-han",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 8,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f17_v.jpg",
+    "full": "V/f17_f.jpg"
+   },
+   {
+    "face": 18,
+    "role": "photo",
+    "month": 9,
+    "set": "V-iris-chen",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-iris-chen",
+      "img_id": "V-iris-chen-M4R2",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 9,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 30,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 64,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f18_v.jpg",
+    "full": "V/f18_f.jpg"
+   },
+   {
+    "face": 19,
+    "role": "grid",
+    "month": 9,
+    "set": "V-iris-chen",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 9,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f19_v.jpg",
+    "full": "V/f19_f.jpg"
+   },
+   {
+    "face": 20,
+    "role": "photo",
+    "month": 10,
+    "set": "V-rin-ayase",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-rin-ayase",
+      "img_id": "V-rin-ayase-R14",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 10,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f20_v.jpg",
+    "full": "V/f20_f.jpg"
+   },
+   {
+    "face": 21,
+    "role": "grid",
+    "month": 10,
+    "set": "V-rin-ayase",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 10,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f21_v.jpg",
+    "full": "V/f21_f.jpg"
+   },
+   {
+    "face": 22,
+    "role": "photo",
+    "month": 11,
+    "set": "V-yuna-kim",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-yuna-kim",
+      "img_id": "V-yuna-kim-R21-A",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 11,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 30,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 64,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f22_v.jpg",
+    "full": "V/f22_f.jpg"
+   },
+   {
+    "face": 23,
+    "role": "grid",
+    "month": 11,
+    "set": "V-yuna-kim",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 11,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 43,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f23_v.jpg",
+    "full": "V/f23_f.jpg"
+   },
+   {
+    "face": 24,
+    "role": "photo",
+    "month": 12,
+    "set": "V-somi-oh",
+    "variant": "V",
+    "photos": [
+     {
+      "box_mm": [
+       12,
+       16,
+       132,
+       176
+      ],
+      "role": "photo",
+      "set": "V-somi-oh",
+      "img_id": "V-somi-oh-R22-B",
+      "source_px": [
+       1536,
+       2048
+      ],
+      "crop_px": {
+       "top": 0,
+       "bottom": 0,
+       "left": 0,
+       "right": 0
+      },
+      "native_px": [
+       1536,
+       2048
+      ],
+      "eff_ppi": 325.1,
+      "resampled_up": false
+     }
+    ],
+    "lattices": [
+     {
+      "type": "strip",
+      "m": 12,
+      "x0": 12,
+      "cw": 3.871,
+      "n": 31,
+      "wd_band": [
+       187.275,
+       190.125
+      ],
+      "d_band": [
+       191.708,
+       194.893
+      ],
+      "wd_em": 1.9,
+      "d_em": 2.45
+     }
+    ],
+    "n_texts": 66,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.94,
+    "issues": [],
+    "view": "V/f24_v.jpg",
+    "full": "V/f24_f.jpg"
+   },
+   {
+    "face": 25,
+    "role": "grid",
+    "month": 12,
+    "set": "V-somi-oh",
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 12,
+      "box": [
+       8,
+       28,
+       136,
+       193
+      ],
+      "head_h": 6.0,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 4.0,
+      "head_em": 2.7,
+      "align": "tl"
+     }
+    ],
+    "n_texts": 44,
+    "min_text_pt": 4.11,
+    "min_date_pt": 11.34,
+    "issues": [],
+    "view": "V/f25_v.jpg",
+    "full": "V/f25_f.jpg"
+   },
+   {
+    "face": 26,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f26_v.jpg",
+    "full": "V/f26_f.jpg"
+   },
+   {
+    "face": 27,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f27_v.jpg",
+    "full": "V/f27_f.jpg"
+   },
+   {
+    "face": 28,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f28_v.jpg",
+    "full": "V/f28_f.jpg"
+   },
+   {
+    "face": 29,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f29_v.jpg",
+    "full": "V/f29_f.jpg"
+   },
+   {
+    "face": 30,
+    "role": "memo",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 2,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f30_v.jpg",
+    "full": "V/f30_f.jpg"
+   },
+   {
+    "face": 31,
+    "role": "year",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [
+     {
+      "type": "grid",
+      "m": 1,
+      "box": [
+       8.0,
+       34.0,
+       48.0,
+       66.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 2,
+      "box": [
+       52.0,
+       34.0,
+       92.0,
+       66.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 3,
+      "box": [
+       96.0,
+       34.0,
+       136.0,
+       66.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 4,
+      "box": [
+       8.0,
+       74.0,
+       48.0,
+       106.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 5,
+      "box": [
+       52.0,
+       74.0,
+       92.0,
+       106.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 6,
+      "box": [
+       96.0,
+       74.0,
+       136.0,
+       106.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 7,
+      "box": [
+       8.0,
+       114.0,
+       48.0,
+       146.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 8,
+      "box": [
+       52.0,
+       114.0,
+       92.0,
+       146.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 9,
+      "box": [
+       96.0,
+       114.0,
+       136.0,
+       146.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 10,
+      "box": [
+       8.0,
+       154.0,
+       48.0,
+       186.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 11,
+      "box": [
+       52.0,
+       154.0,
+       92.0,
+       186.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     },
+     {
+      "type": "grid",
+      "m": 12,
+      "box": [
+       96.0,
+       154.0,
+       136.0,
+       186.0
+      ],
+      "head_h": 3.6,
+      "cols": 7,
+      "rows": 6,
+      "digit_em": 2.3,
+      "head_em": 2.0,
+      "align": "c"
+     }
+    ],
+    "n_texts": 465,
+    "min_text_pt": 4.11,
+    "min_date_pt": 6.52,
+    "issues": [],
+    "view": "V/f31_v.jpg",
+    "full": "V/f31_f.jpg"
+   },
+   {
+    "face": 32,
+    "role": "barcode",
+    "month": null,
+    "set": null,
+    "variant": null,
+    "photos": [],
+    "lattices": [],
+    "n_texts": 4,
+    "min_text_pt": 4.11,
+    "min_date_pt": null,
+    "issues": [],
+    "view": "V/f32_v.jpg",
+    "full": "V/f32_f.jpg"
+   }
+  ]
+ },
+ "compare_A": [
+  {
+   "face": 2,
+   "role": "photo",
+   "month": 1,
+   "set": "H-yuna-kim",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-yuna-kim",
+     "img_id": "H-yuna-kim-R20-B",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 1,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m01_A_v.jpg",
+   "full": "cmp/H_m01_A_f.jpg"
+  },
+  {
+   "face": 4,
+   "role": "photo",
+   "month": 2,
+   "set": "H-rin-ayase",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-rin-ayase",
+     "img_id": "H-rin-ayase-R21-1",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 2,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 28,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 61,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m02_A_v.jpg",
+   "full": "cmp/H_m02_A_f.jpg"
+  },
+  {
+   "face": 6,
+   "role": "photo",
+   "month": 3,
+   "set": "H-miu-shiraishi",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-miu-shiraishi",
+     "img_id": "H-miu-shiraishi-R21-A",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 3,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m03_A_v.jpg",
+   "full": "cmp/H_m03_A_f.jpg"
+  },
+  {
+   "face": 8,
+   "role": "photo",
+   "month": 4,
+   "set": "H-tammy-chou",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-tammy-chou",
+     "img_id": "H-tammy-chou-R21-A",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 4,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 30,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 65,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m04_A_v.jpg",
+   "full": "cmp/H_m04_A_f.jpg"
+  },
+  {
+   "face": 10,
+   "role": "photo",
+   "month": 5,
+   "set": "H-yerin-han",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-yerin-han",
+     "img_id": "H-yerin-han-R21-A",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 5,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m05_A_v.jpg",
+   "full": "cmp/H_m05_A_f.jpg"
+  },
+  {
+   "face": 12,
+   "role": "photo",
+   "month": 6,
+   "set": "H-coco-wu",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-coco-wu",
+     "img_id": "H-coco-wu-R20-A-G21",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 25,
+      "bottom": 18,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 6,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 30,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 65,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m06_A_v.jpg",
+   "full": "cmp/H_m06_A_f.jpg"
+  },
+  {
+   "face": 14,
+   "role": "photo",
+   "month": 7,
+   "set": "H-mia-huang",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-mia-huang",
+     "img_id": "H-mia-huang-R22-A",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 7,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m07_A_v.jpg",
+   "full": "cmp/H_m07_A_f.jpg"
+  },
+  {
+   "face": 16,
+   "role": "photo",
+   "month": 8,
+   "set": "H-iris-chen",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-iris-chen",
+     "img_id": "H-iris-chen-R20-A",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 28,
+      "bottom": 15,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 8,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m08_A_v.jpg",
+   "full": "cmp/H_m08_A_f.jpg"
+  },
+  {
+   "face": 18,
+   "role": "photo",
+   "month": 9,
+   "set": "H-jia-seo",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-jia-seo",
+     "img_id": "H-jia-seo-R20-B",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 9,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 30,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 65,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m09_A_v.jpg",
+   "full": "cmp/H_m09_A_f.jpg"
+  },
+  {
+   "face": 20,
+   "role": "photo",
+   "month": 10,
+   "set": "H-luna-tanaka",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-luna-tanaka",
+     "img_id": "H-luna-tanaka-R21-A-G22",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 43,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 10,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m10_A_v.jpg",
+   "full": "cmp/H_m10_A_f.jpg"
+  },
+  {
+   "face": 22,
+   "role": "photo",
+   "month": 11,
+   "set": "H-somi-oh",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-somi-oh",
+     "img_id": "H-somi-oh-R22-2-G23",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 7,
+      "bottom": 36,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 11,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 30,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 65,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m11_A_v.jpg",
+   "full": "cmp/H_m11_A_f.jpg"
+  },
+  {
+   "face": 24,
+   "role": "photo",
+   "month": 12,
+   "set": "H-rainie-hsu",
+   "variant": "A",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-rainie-hsu",
+     "img_id": "H-rainie-hsu-R20-B",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 38,
+      "bottom": 5,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 12,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m12_A_v.jpg",
+   "full": "cmp/H_m12_A_f.jpg"
+  },
+  {
+   "face": 24,
+   "role": "photo",
+   "month": 12,
+   "set": "H-rainie-hsu",
+   "variant": "A2",
+   "photos": [
+    {
+     "box_mm": [
+      6,
+      14,
+      198,
+      118
+     ],
+     "role": "photo",
+     "set": "H-rainie-hsu",
+     "img_id": "H-rainie-hsu-R20-B",
+     "source_px": [
+      2048,
+      1152
+     ],
+     "crop_px": {
+      "top": 36,
+      "bottom": 7,
+      "left": 0,
+      "right": 0
+     },
+     "native_px": [
+      2048,
+      1109
+     ],
+     "eff_ppi": 270.9,
+     "resampled_up": false
+    }
+   ],
+   "lattices": [
+    {
+     "type": "strip",
+     "m": 12,
+     "x0": 52,
+     "cw": 4.7097,
+     "n": 31,
+     "wd_band": [
+      121.975,
+      125.425
+     ],
+     "d_band": [
+      126.25,
+      130.15
+     ],
+     "wd_em": 2.3,
+     "d_em": 3.0
+    }
+   ],
+   "n_texts": 67,
+   "min_text_pt": 4.82,
+   "min_date_pt": 8.5,
+   "issues": [],
+   "view": "cmp/H_m12_A2_v.jpg",
+   "full": "cmp/H_m12_A2_f.jpg"
+  }
+ ],
+ "zooms": [
+  {
+   "set": "H-rainie-hsu",
+   "variant": "B",
+   "edge": "top",
+   "file": "cmp/zoom_rainie_B_top.png",
+   "box_mm": [
+    93.19,
+    12.5,
+    111.94,
+    22
+   ]
+  },
+  {
+   "set": "H-rainie-hsu",
+   "variant": "B",
+   "edge": "bottom",
+   "file": "cmp/zoom_rainie_B_bottom.png",
+   "box_mm": [
+    96.0,
+    114,
+    109.12,
+    123.5
+   ]
+  },
+  {
+   "set": "H-rainie-hsu",
+   "variant": "A",
+   "edge": "top",
+   "file": "cmp/zoom_rainie_A_top.png",
+   "box_mm": [
+    93.19,
+    12.5,
+    111.94,
+    22
+   ]
+  },
+  {
+   "set": "H-rainie-hsu",
+   "variant": "A",
+   "edge": "bottom",
+   "file": "cmp/zoom_rainie_A_bottom.png",
+   "box_mm": [
+    96.0,
+    110,
+    109.12,
+    119.5
+   ]
+  },
+  {
+   "set": "H-rainie-hsu",
+   "variant": "A2",
+   "edge": "top",
+   "file": "cmp/zoom_rainie_A2_top.png",
+   "box_mm": [
+    93.19,
+    12.5,
+    111.94,
+    22
+   ]
+  },
+  {
+   "set": "H-rainie-hsu",
+   "variant": "A2",
+   "edge": "bottom",
+   "file": "cmp/zoom_rainie_A2_bottom.png",
+   "box_mm": [
+    96.0,
+    110,
+    109.12,
+    119.5
+   ]
+  },
+  {
+   "set": "H-somi-oh",
+   "variant": "B",
+   "edge": "top",
+   "file": "cmp/zoom_somi_B_top.png",
+   "box_mm": [
+    86.62,
+    12.5,
+    109.12,
+    22
+   ]
+  },
+  {
+   "set": "H-somi-oh",
+   "variant": "B",
+   "edge": "bottom",
+   "file": "cmp/zoom_somi_B_bottom.png",
+   "box_mm": [
+    88.5,
+    114,
+    105.38,
+    123.5
+   ]
+  },
+  {
+   "set": "H-somi-oh",
+   "variant": "A",
+   "edge": "top",
+   "file": "cmp/zoom_somi_A_top.png",
+   "box_mm": [
+    86.62,
+    12.5,
+    109.12,
+    22
+   ]
+  },
+  {
+   "set": "H-somi-oh",
+   "variant": "A",
+   "edge": "bottom",
+   "file": "cmp/zoom_somi_A_bottom.png",
+   "box_mm": [
+    88.5,
+    110,
+    105.38,
+    119.5
+   ]
+  }
+ ],
+ "date_check": {
+  "method": "把兩份 PDF 用 pdftoppm 以 300 dpi 點陣化，依格線幾何切出每一格（不用渲染時記下的文字位置），以同字型字形比對讀出數字／星期，以墨色判定紅黑；期望值用 calendar.monthdayscalendar 另行推算（渲染用 datetime），紅字依人事總處放假日。日期條另核對本月沒有的日子為空白。",
+  "faces": 62,
+  "cells": 4058,
+  "dates_read": 2221,
+  "min_score": 0.745,
+  "failures": 0,
+  "per_face": [
+   {
+    "face": 2,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 3,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 4,
+    "cells": 62,
+    "dates_read": 28,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 5,
+    "cells": 49,
+    "dates_read": 28,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 6,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 7,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 8,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 9,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 10,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 11,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 12,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 13,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 14,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 15,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 16,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 17,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.801,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 18,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 19,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 20,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 21,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 22,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 23,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 24,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 25,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.817,
+    "failures": [],
+    "book": "H"
+   },
+   {
+    "face": 2,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 3,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 4,
+    "cells": 62,
+    "dates_read": 28,
+    "min_score": 0.79,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 5,
+    "cells": 49,
+    "dates_read": 28,
+    "min_score": 0.876,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 6,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.79,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 7,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.876,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 8,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 9,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 10,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 11,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 12,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.79,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 13,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.876,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 14,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 15,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 16,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 17,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 18,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 19,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 20,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 21,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 22,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.79,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 23,
+    "cells": 49,
+    "dates_read": 30,
+    "min_score": 0.876,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 24,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.781,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 25,
+    "cells": 49,
+    "dates_read": 31,
+    "min_score": 0.874,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 31,
+    "cells": 588,
+    "dates_read": 365,
+    "min_score": 0.745,
+    "failures": [],
+    "book": "V"
+   },
+   {
+    "face": 2,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 4,
+    "cells": 62,
+    "dates_read": 28,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 6,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 8,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 10,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 12,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 14,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 16,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 18,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 20,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 22,
+    "cells": 62,
+    "dates_read": 30,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 24,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   },
+   {
+    "face": 24,
+    "cells": 62,
+    "dates_read": 31,
+    "min_score": 0.829,
+    "failures": [],
+    "book": "A"
+   }
+  ],
+  "negative_test": {
+   "face": 3,
+   "month": 1,
+   "tampered": {
+    "black_to_red": 5,
+    "erased": 11,
+    "replaced": [
+     15,
+     16
+    ]
+   },
+   "caught": [
+    "r1c2",
+    "r2c1",
+    "r2c5"
+   ],
+   "missed": [],
+   "false_alarms": [],
+   "pass": true
+  }
+ },
+ "pdf": {
+  "H": {
+   "pages": 28,
+   "page_info": [
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 529,
+       "h": 298,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": [
+      {
+       "w": 2048,
+       "h": 1152,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      204.0,
+      155.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      202.0,
+      153.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      204.0,
+      155.0
+     ],
+     "images": []
+    }
+   ],
+   "fonts": [
+    "AAAAAA+DejaVuSans-Bold TrueType WinAnsi yes yes yes 57 0",
+    "AAAAAA+DejaVuSans TrueType WinAnsi yes yes yes 61 0",
+    "AAAAAA+WenQuanYiZenHei-0 TrueType WinAnsi yes yes yes 65 0"
+   ],
+   "meta": {
+    "/Author": "Virtual KOL Studio",
+    "/CreationDate": "D:20000101000000+00'00'",
+    "/Creator": "docs/calendar/tools/build_cal_m5_layout.py",
+    "/Keywords": "preview only; not approved for print; vendor specs unconfirmed",
+    "/ModDate": "D:20000101000000+00'00'",
+    "/Producer": "ReportLab PDF Library - (opensource)",
+    "/Subject": "版面預覽｜非交印核准｜未經廠商確認｜工作版（TASK-CAL-001 M-5 R26）",
+    "/Title": "2027 橫式桌曆（200×151 mm）版面預覽 R26｜非交印核准",
+    "/Trapped": "/False"
+   }
+  },
+  "V": {
+   "pages": 32,
+   "page_info": [
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      },
+      {
+       "w": 351,
+       "h": 468,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1728,
+       "h": 2304,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": [
+      {
+       "w": 1536,
+       "h": 2048,
+       "filter": "['/DCTDecode']",
+       "cs": "/DeviceRGB"
+      }
+     ]
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    },
+    {
+     "media_mm": [
+      144.0,
+      204.0
+     ],
+     "trim_mm": [
+      2.0,
+      2.0,
+      142.0,
+      202.0
+     ],
+     "bleed_mm": [
+      0.0,
+      0.0,
+      144.0,
+      204.0
+     ],
+     "images": []
+    }
+   ],
+   "fonts": [
+    "AAAAAA+DejaVuSans-Bold TrueType WinAnsi yes yes yes 61 0",
+    "AAAAAA+DejaVuSans TrueType WinAnsi yes yes yes 65 0",
+    "AAAAAA+WenQuanYiZenHei-0 TrueType WinAnsi yes yes yes 69 0"
+   ],
+   "meta": {
+    "/Author": "Virtual KOL Studio",
+    "/CreationDate": "D:20000101000000+00'00'",
+    "/Creator": "docs/calendar/tools/build_cal_m5_layout.py",
+    "/Keywords": "preview only; not approved for print; vendor specs unconfirmed",
+    "/ModDate": "D:20000101000000+00'00'",
+    "/Producer": "ReportLab PDF Library - (opensource)",
+    "/Subject": "版面預覽｜非交印核准｜未經廠商確認｜工作版（TASK-CAL-001 M-5 R26）",
+    "/Title": "2027 直式桌曆（140×200 mm）版面預覽 R26｜非交印核准",
+    "/Trapped": "/False"
+   }
+  }
+ },
+ "files": [
+  {
+   "path": "H/f01_f.jpg",
+   "bytes": 535581,
+   "sha256": "91aed4630dc47a462b77dc78bf85d3e37c7fdd22a1c1c9d51a87d2fd49c13be4"
+  },
+  {
+   "path": "H/f01_v.jpg",
+   "bytes": 167592,
+   "sha256": "5c7e472e411a719912d43596c25792903cd45029d1d338c6f951dd6676e80ec3"
+  },
+  {
+   "path": "H/f02_f.jpg",
+   "bytes": 441962,
+   "sha256": "6c976184d9218514c4568f294f9d458631abf40786e0360e39254fa8667cf5f2"
+  },
+  {
+   "path": "H/f02_v.jpg",
+   "bytes": 155617,
+   "sha256": "eeaaa997c7bd03e1500668de074eb86613224fe96b8295f5fe5516daca1cfa42"
+  },
+  {
+   "path": "H/f03_f.jpg",
+   "bytes": 163649,
+   "sha256": "b36cbdae415a14394d942c8e5ac3db09cbafc5770996bb1852f3dd327f412e45"
+  },
+  {
+   "path": "H/f03_v.jpg",
+   "bytes": 56895,
+   "sha256": "2ee8e808a09624be2d528185f755c7741d66d71273f07fcb578f865ea3aedfa7"
+  },
+  {
+   "path": "H/f04_f.jpg",
+   "bytes": 355709,
+   "sha256": "54b666241a3a0c6dda675b253dee0bc19f1e81cfc84f362192e5f2dedc513540"
+  },
+  {
+   "path": "H/f04_v.jpg",
+   "bytes": 122085,
+   "sha256": "7fa7480b2af3bee622d2e0a400ee47ac829b487907702970d6c4bc248dd88b93"
+  },
+  {
+   "path": "H/f05_f.jpg",
+   "bytes": 161257,
+   "sha256": "1cec27ee30e7223e66560a36517d4cc55f77c0a03d17b21b34d4e955abfed8c2"
+  },
+  {
+   "path": "H/f05_v.jpg",
+   "bytes": 56428,
+   "sha256": "1489bd6bee41a4182c82c9b0023e63b3a937b7f3088ac2fbbb276d11abb91760"
+  },
+  {
+   "path": "H/f06_f.jpg",
+   "bytes": 415475,
+   "sha256": "1eeb49ab1bf83259552b6b78012bac4f9587f529c1db94f5c1aeff3e5757adc7"
+  },
+  {
+   "path": "H/f06_v.jpg",
+   "bytes": 131727,
+   "sha256": "c36319ab2bada3fd99ea72ba5f8e51e828e1f1603c604fa371ac1b81a68877c1"
+  },
+  {
+   "path": "H/f07_f.jpg",
+   "bytes": 163805,
+   "sha256": "8f942ab54ebd6da7688fdcc6acdbb0a35cefc87d4b33c06abb9ef7ccb66e663c"
+  },
+  {
+   "path": "H/f07_v.jpg",
+   "bytes": 57381,
+   "sha256": "c47850231b057592387fbd48918f97890acd32ccba419114a5997a443ab8e5b8"
+  },
+  {
+   "path": "H/f08_f.jpg",
+   "bytes": 698382,
+   "sha256": "abb6fea4969a54b725714bb1d0017eed6843d232a29afefd678df27a4650020c"
+  },
+  {
+   "path": "H/f08_v.jpg",
+   "bytes": 249366,
+   "sha256": "4386b39f78d8df16bf2b7cf9406f9e20fd2450a0b6d91f178a9732fff8eb0179"
+  },
+  {
+   "path": "H/f09_f.jpg",
+   "bytes": 162241,
+   "sha256": "61538be502880a234470c1c4e4fe87c8c946c4e5711bc0ed53954df713c9c858"
+  },
+  {
+   "path": "H/f09_v.jpg",
+   "bytes": 56449,
+   "sha256": "8a807b1409a34753c7df0ca776281d58b9a2a9ad24b8f9ab038b0fb4b8436351"
+  },
+  {
+   "path": "H/f10_f.jpg",
+   "bytes": 577378,
+   "sha256": "9d3c0e048144b760d10b303e8cb69c6e0525215fbbfc3140c67ccb87f2fbbdc1"
+  },
+  {
+   "path": "H/f10_v.jpg",
+   "bytes": 196614,
+   "sha256": "2fe0f31bf3292cff234216af2fe84e3adfdec275aa617c95cfbac3487d87a493"
+  },
+  {
+   "path": "H/f11_f.jpg",
+   "bytes": 162466,
+   "sha256": "8c78e9e7ee2ed39a5ccd286b8322a1537c5db3fd0cc50b7ace89145383c77547"
+  },
+  {
+   "path": "H/f11_v.jpg",
+   "bytes": 56578,
+   "sha256": "8a176844e38a7ec230b23d85d5edce3da22fa335b4a85c104608a86e426f3e76"
+  },
+  {
+   "path": "H/f12_f.jpg",
+   "bytes": 600966,
+   "sha256": "1910759772aa31deb0eb71f6ee06c3604d32ef3e3384b8367ba6df32cddc8ab9"
+  },
+  {
+   "path": "H/f12_v.jpg",
+   "bytes": 217913,
+   "sha256": "6d478b9876b5b6905851ca28761eb25638e5f42c92dac405c29f701a5d8a4d41"
+  },
+  {
+   "path": "H/f13_f.jpg",
+   "bytes": 162028,
+   "sha256": "ca9adb0622eddc735e6221bb72d3637038544ca13550209f4590df7aca5be328"
+  },
+  {
+   "path": "H/f13_v.jpg",
+   "bytes": 56309,
+   "sha256": "79cb794a84301b31e66953d0d73735fd504e4d7c3f6e0d0de17619128931fa92"
+  },
+  {
+   "path": "H/f14_f.jpg",
+   "bytes": 395123,
+   "sha256": "b0b6bb8f63ffc5bc3c04a9ec6abe0032c07a12f95d7c02d04c1cecd2812e9c0d"
+  },
+  {
+   "path": "H/f14_v.jpg",
+   "bytes": 138334,
+   "sha256": "94674b662d364dbdf4e1ccb01433274c0b34f03983422c96b76ff55d9fd57fab"
+  },
+  {
+   "path": "H/f15_f.jpg",
+   "bytes": 162366,
+   "sha256": "1668dc52cca595e191751dc5caaa5b8f8013adf0c69bae370f0b5690f96196f5"
+  },
+  {
+   "path": "H/f15_v.jpg",
+   "bytes": 56426,
+   "sha256": "46bed5f62f71786f997b363e2c2dcb4baf231b54b58c747af7386b853d6cfabe"
+  },
+  {
+   "path": "H/f16_f.jpg",
+   "bytes": 462294,
+   "sha256": "06f4092be0c1a809208dad804e446b83da233472ca69834579beca7be30688b8"
+  },
+  {
+   "path": "H/f16_v.jpg",
+   "bytes": 152392,
+   "sha256": "677a253d52bf0313fd98bb026885795f43e48cf3f1b49ee3718a14c4265e21d6"
+  },
+  {
+   "path": "H/f17_f.jpg",
+   "bytes": 163700,
+   "sha256": "59b711d7cacd76ee0b29bf0a00a7e6af016b032c90334e45a53771844e179a33"
+  },
+  {
+   "path": "H/f17_v.jpg",
+   "bytes": 57105,
+   "sha256": "dbf9edf817d92a16bdaa582893ce041bdf85832c1ce384f8d22f5cd0b87a3261"
+  },
+  {
+   "path": "H/f18_f.jpg",
+   "bytes": 337791,
+   "sha256": "226024927fdbff9e17798e4cc46e526be92aca6744976ff5c2b8929573395f9a"
+  },
+  {
+   "path": "H/f18_v.jpg",
+   "bytes": 114822,
+   "sha256": "9e5fd7a8c559ad3ec10813dcb92638d458a16bb9e4a93352d89c731c4f62dc1f"
+  },
+  {
+   "path": "H/f19_f.jpg",
+   "bytes": 164033,
+   "sha256": "00e4bae29196f2c1281ebbc31f48449d28b75190d282eca6868fb5d0e5ea8574"
+  },
+  {
+   "path": "H/f19_v.jpg",
+   "bytes": 57271,
+   "sha256": "4de0e98493bffd0359666c4eb5a46d625fbe74a9b9ada7aa862b0d7c7c186868"
+  },
+  {
+   "path": "H/f20_f.jpg",
+   "bytes": 580785,
+   "sha256": "3f4184edb43cdef6e83fd205d744c1b32a2e8166aa3c476bfa9c7b621635b1ae"
+  },
+  {
+   "path": "H/f20_v.jpg",
+   "bytes": 201655,
+   "sha256": "8cf39a5f780d4d6dca2690437b8ae5f21518c543524b953e863a10268cca7294"
+  },
+  {
+   "path": "H/f21_f.jpg",
+   "bytes": 164907,
+   "sha256": "29ac499ec7c0d2ad770596b272aa0b5b0b3554cdabffb6a193289141d022e953"
+  },
+  {
+   "path": "H/f21_v.jpg",
+   "bytes": 57475,
+   "sha256": "7ee15474a56292dcbeeeb9f88cf3c8c1e9666ab6765336924101b8d879ce810d"
+  },
+  {
+   "path": "H/f22_f.jpg",
+   "bytes": 723702,
+   "sha256": "6c87bc5806ac84733a5349a568ff8b5a62ccdcd8bef52020c1233d2c7ec14bd0"
+  },
+  {
+   "path": "H/f22_v.jpg",
+   "bytes": 241423,
+   "sha256": "98ec0050209f8e83a286b744836a093bf9f26d863d07a5d95127fad9e520b59e"
+  },
+  {
+   "path": "H/f23_f.jpg",
+   "bytes": 162050,
+   "sha256": "97f7f32a9d1311dcc615307875cb30ebcf7455593b8aa45b4d67d48574f17d1b"
+  },
+  {
+   "path": "H/f23_v.jpg",
+   "bytes": 56315,
+   "sha256": "16babddb3bedefb591a59148c0052829e8d1be6ba8d58c6e6043f97a8e854d63"
+  },
+  {
+   "path": "H/f24_f.jpg",
+   "bytes": 360966,
+   "sha256": "5432c722fd9fc93af9438d407c54ef9fa8096a77656e3dc45456d6200954ca37"
+  },
+  {
+   "path": "H/f24_v.jpg",
+   "bytes": 129940,
+   "sha256": "5752f0f7b2a03ce65417272c13e9a0fedec08a523fc0724a30c0b171b361d307"
+  },
+  {
+   "path": "H/f25_f.jpg",
+   "bytes": 164540,
+   "sha256": "5fdd7a628b04d9568bf3c4e956c8f434a4a04bf9ddf0c8f648d53b862c1c938a"
+  },
+  {
+   "path": "H/f25_v.jpg",
+   "bytes": 57419,
+   "sha256": "209461966c0901640d096d3fe7be3db068cc894ff209fc87531d182d806f8b97"
+  },
+  {
+   "path": "H/f26_f.jpg",
+   "bytes": 130246,
+   "sha256": "fdefb72d746f6b61ab4e22d20a6b26c8b7d884f3729b009e1ab5aec8c687fea5"
+  },
+  {
+   "path": "H/f26_v.jpg",
+   "bytes": 42613,
+   "sha256": "aaba68f272fafee8f75f2c8bb0db72670b99e75585dd142f2f21d1678ed6aa02"
+  },
+  {
+   "path": "H/f27_f.jpg",
+   "bytes": 130220,
+   "sha256": "d0d7faa6c368cc8bcf47fbe44bb33f72e69fe78d95ac86d9e185b17ae2b5b1a2"
+  },
+  {
+   "path": "H/f27_v.jpg",
+   "bytes": 42607,
+   "sha256": "928e03cbe30202fe37ddbe87a06ee0617b1ecdc4682cc9a51bb0540bdd00c6a3"
+  },
+  {
+   "path": "H/f28_f.jpg",
+   "bytes": 95903,
+   "sha256": "5c1530cebcc5693619a2030169d3a907b440eb9ce851a5c5c4d781523ffd8fed"
+  },
+  {
+   "path": "H/f28_v.jpg",
+   "bytes": 28314,
+   "sha256": "864cf6869736f47bb7a8fe3cf5b66be2e917b961af94a2c47bf300e6fad9b6bd"
+  },
+  {
+   "path": "V/f01_f.jpg",
+   "bytes": 523947,
+   "sha256": "2cf7faf829281cea5188a08b51c8181b0b03cb1bb0b3855f2eb255c8a032ec43"
+  },
+  {
+   "path": "V/f01_v.jpg",
+   "bytes": 174313,
+   "sha256": "f276c42b9f9fc1cfe9e59b35a4d6dd7e0453c1aefadaf34a68bffb9b5f42d759"
+  },
+  {
+   "path": "V/f02_f.jpg",
+   "bytes": 314193,
+   "sha256": "e439f317dbb87689e9a7d4d48fe1e3e2d6fe1bbd6d66f8632ca52d9b321b9615"
+  },
+  {
+   "path": "V/f02_v.jpg",
+   "bytes": 103328,
+   "sha256": "3c21adf2883fc6fe672c037d6007f43a48b4684baae471658ab30d1fc220f60a"
+  },
+  {
+   "path": "V/f03_f.jpg",
+   "bytes": 151307,
+   "sha256": "84f87f815788886fa10dcff7ab50ddf5e7e720c6dd90335c80f9c5d3fb71921c"
+  },
+  {
+   "path": "V/f03_v.jpg",
+   "bytes": 50095,
+   "sha256": "a08e927e41bb2f29c27bc007d1d649f797fca5d51f0987eaa29cddf7318e4c6b"
+  },
+  {
+   "path": "V/f04_f.jpg",
+   "bytes": 273456,
+   "sha256": "0c3f01f8d62287a4632dcda02b4ea434c630ead5ecae01c65f342e30c3ee09d0"
+  },
+  {
+   "path": "V/f04_v.jpg",
+   "bytes": 89048,
+   "sha256": "5e9d5ccf7e3ba5d89842d4e4898b645f5a7c6df657671dd0f57c9956db9ca67f"
+  },
+  {
+   "path": "V/f05_f.jpg",
+   "bytes": 147713,
+   "sha256": "eb347b5421b47c7c58f11de13e204ba6388ffab7d746d15a91858b08b94c4c6b"
+  },
+  {
+   "path": "V/f05_v.jpg",
+   "bytes": 48721,
+   "sha256": "c06f285788461210396128522453f0439660e11fb5ccce63edf022e1306b529b"
+  },
+  {
+   "path": "V/f06_f.jpg",
+   "bytes": 551818,
+   "sha256": "a9de922076db111b304a66d80593989424b2795d2355dbb549df74d4e987fea5"
+  },
+  {
+   "path": "V/f06_v.jpg",
+   "bytes": 184501,
+   "sha256": "bafa13c9fbaeba608ec78c6bc7047f777ef780d1040ae73c62b9cce0e9cd917a"
+  },
+  {
+   "path": "V/f07_f.jpg",
+   "bytes": 151434,
+   "sha256": "f70b1d20b3a0bf0795860dc9b4a1177a1626a132d3888ef3e96d8fb8017f7e10"
+  },
+  {
+   "path": "V/f07_v.jpg",
+   "bytes": 50036,
+   "sha256": "5f9ade8cc30ac85d15a916488b6e485fde0ab42b4e6e6af5ebff5bb788f0c648"
+  },
+  {
+   "path": "V/f08_f.jpg",
+   "bytes": 564266,
+   "sha256": "53c0f7485d248927f312df1be7af35cb8e839bacfeec991fb00195182ae69faf"
+  },
+  {
+   "path": "V/f08_v.jpg",
+   "bytes": 187113,
+   "sha256": "366280d6ef5e2105be4af33cd7436df922200ccf2341e6f7584df7dafd18e443"
+  },
+  {
+   "path": "V/f09_f.jpg",
+   "bytes": 149473,
+   "sha256": "0a695b4e0c39329dc34fbba3839bc235b38c506093ace6210ccbe7ad8cb8bb4d"
+  },
+  {
+   "path": "V/f09_v.jpg",
+   "bytes": 49578,
+   "sha256": "7303732bb6571d220960cb90e72700c54ac79447b531794a024440b2c269d953"
+  },
+  {
+   "path": "V/f10_f.jpg",
+   "bytes": 311159,
+   "sha256": "073b1769be0f74d2fb1c4ba6cb55951b6a5ab96a796f8e0dfc55b9b5540d4d4f"
+  },
+  {
+   "path": "V/f10_v.jpg",
+   "bytes": 113597,
+   "sha256": "45998bbbcdfcb0e88326acc707f31bf40e4a1ca6d20693955c82226a8815b46c"
+  },
+  {
+   "path": "V/f11_f.jpg",
+   "bytes": 151091,
+   "sha256": "6eff905dc52e2912514d6d0159352eac918eb146ea600e8ad5150d327fdd5a70"
+  },
+  {
+   "path": "V/f11_v.jpg",
+   "bytes": 49890,
+   "sha256": "f97d6cb43208423c54d01482d60346672d96bce56742aa8ad618cd3c175763c5"
+  },
+  {
+   "path": "V/f12_f.jpg",
+   "bytes": 692073,
+   "sha256": "fe53d3f192b484ffc2ba50d8620137c389b00d239171ad6fcedc3b75548d5706"
+  },
+  {
+   "path": "V/f12_v.jpg",
+   "bytes": 225740,
+   "sha256": "a56afd3d077cc8c8f6edca575ffd03fd123b71ed83e6025a00100b003b6ac04a"
+  },
+  {
+   "path": "V/f13_f.jpg",
+   "bytes": 149492,
+   "sha256": "45f8ff9a6c3476164f5f86f2aad4987a0fb032c1cd659d9b556eba8b385776f8"
+  },
+  {
+   "path": "V/f13_v.jpg",
+   "bytes": 49590,
+   "sha256": "3f63eea826071216c3ee4af42cb1950e8848abb17290047302d16c905220573c"
+  },
+  {
+   "path": "V/f14_f.jpg",
+   "bytes": 465303,
+   "sha256": "b798e8a00695094cd722771e8b80e42cb157daa149c138a7d7b1dacc81df79bd"
+  },
+  {
+   "path": "V/f14_v.jpg",
+   "bytes": 165237,
+   "sha256": "6569e4e6c564c347a5337d10fe0808d976dce0a85a0471fbb252108465b3cf41"
+  },
+  {
+   "path": "V/f15_f.jpg",
+   "bytes": 149780,
+   "sha256": "7e1b62efea5d50ab03ebb175a8c94d6a6fd374031914948fdeef33576d5daf85"
+  },
+  {
+   "path": "V/f15_v.jpg",
+   "bytes": 49337,
+   "sha256": "97585adfafc98e90e6cbdc19dbc5b171d2bd65b3e25fe88537f156dd198799a3"
+  },
+  {
+   "path": "V/f16_f.jpg",
+   "bytes": 386800,
+   "sha256": "679d4df0d6b7a45d6ae1e37a2a0e5870772d1dba6979f0bf08909401dd503bc9"
+  },
+  {
+   "path": "V/f16_v.jpg",
+   "bytes": 116655,
+   "sha256": "e94d2fdfa392c5ee749f021f0d24b7341e49f25030d32736edac164c0b76893c"
+  },
+  {
+   "path": "V/f17_f.jpg",
+   "bytes": 151732,
+   "sha256": "2ea54ba4c0aa0a2cd467db5f1fd3c19104f02f53cc8cfd2d4a8eca7ff39283f7"
+  },
+  {
+   "path": "V/f17_v.jpg",
+   "bytes": 50080,
+   "sha256": "3a56da520287cfbeb59d7289829d4d8f04fd6e350ef3490403a3050938f177ed"
+  },
+  {
+   "path": "V/f18_f.jpg",
+   "bytes": 534428,
+   "sha256": "8d0d2823bd3bafc5eac2afb13943a04694c4d19fb84ea1ab1e8ca274c06049af"
+  },
+  {
+   "path": "V/f18_v.jpg",
+   "bytes": 171962,
+   "sha256": "1ed985905a6bd7b1a2bb403db01bedb75eacdc8f921f1ab787cb4361fdc0bdb5"
+  },
+  {
+   "path": "V/f19_f.jpg",
+   "bytes": 151951,
+   "sha256": "2b49f795fe74a7a86f388d35c88e33fcaa2fb5be90d0839f21d22a090d76b01c"
+  },
+  {
+   "path": "V/f19_v.jpg",
+   "bytes": 50108,
+   "sha256": "c5102549b8ac78a2c1d18b6b980af3660007534b4e9e0c9e41a42291f55666a0"
+  },
+  {
+   "path": "V/f20_f.jpg",
+   "bytes": 486388,
+   "sha256": "74524649cf2ee86906a883d66345e7a9808de2db05d1bd8bcfc2975bebdf0d20"
+  },
+  {
+   "path": "V/f20_v.jpg",
+   "bytes": 151367,
+   "sha256": "6c87f67201065aefa2d1aca3d1d50a695925e34111e1373c77475565fb8c8bc2"
+  },
+  {
+   "path": "V/f21_f.jpg",
+   "bytes": 152287,
+   "sha256": "d79aa29ab0cecddb9fc98329d34dfa5ea9888f5b18f326abba224d3d45b2c55c"
+  },
+  {
+   "path": "V/f21_v.jpg",
+   "bytes": 50241,
+   "sha256": "a58c94fc185659a6fa6d8cf39f45479461597fe0d990f626d12edd6e42720417"
+  },
+  {
+   "path": "V/f22_f.jpg",
+   "bytes": 579615,
+   "sha256": "d6befc6da83a17e567241d0c331872861d63ee4c7c5a67bbad55a0b6d43c50b7"
+  },
+  {
+   "path": "V/f22_v.jpg",
+   "bytes": 199154,
+   "sha256": "46e798e19969b472c0041be462d48e3a02a90fe4c0ff17870b00e56f643d7115"
+  },
+  {
+   "path": "V/f23_f.jpg",
+   "bytes": 148661,
+   "sha256": "2e1286d4a8dc738ad20fd4b4be9ba577c2adad617ea0647e69aec474d25ff6d2"
+  },
+  {
+   "path": "V/f23_v.jpg",
+   "bytes": 49036,
+   "sha256": "a841d16a56fcd84cd3b81193427a6c0e25b599045cb9f750be33f37bbecc6b8b"
+  },
+  {
+   "path": "V/f24_f.jpg",
+   "bytes": 460303,
+   "sha256": "4d5e2808902e7afb5d0dc51b508c44c442c3370c48c0c38731f58c2895aabc6e"
+  },
+  {
+   "path": "V/f24_v.jpg",
+   "bytes": 155869,
+   "sha256": "fe455b139cd63fac9cb116bde7202c34e3322ac312903c2fee40d560aaf51fe1"
+  },
+  {
+   "path": "V/f25_f.jpg",
+   "bytes": 150248,
+   "sha256": "d75b8b2aa49c677136d2a34f1943b4744ebab8e785418be59728b5bcf5546735"
+  },
+  {
+   "path": "V/f25_v.jpg",
+   "bytes": 49946,
+   "sha256": "1060f8157d97fd1b03a7b63a4080bfe484896f67474ab8aa10c7f3dce89df822"
+  },
+  {
+   "path": "V/f26_f.jpg",
+   "bytes": 121545,
+   "sha256": "1636e2f4875a7e6d862ea3caf916f382b092703030d38ac1191d19490e68507f"
+  },
+  {
+   "path": "V/f26_v.jpg",
+   "bytes": 40852,
+   "sha256": "4c0c08050107911a0a03100c6bf5e00ec35fe56d06c8d762a2edd3d6a7a64ebf"
+  },
+  {
+   "path": "V/f27_f.jpg",
+   "bytes": 121531,
+   "sha256": "d34823ac8f1f89373348b3d49a56a20ab849cdb9fe0c41bad9ce9b8d7e24d65f"
+  },
+  {
+   "path": "V/f27_v.jpg",
+   "bytes": 40849,
+   "sha256": "318c099ced6a03b687f9e45ed56b7133996dbae196739ff2ad7f67d38c6cf710"
+  },
+  {
+   "path": "V/f28_f.jpg",
+   "bytes": 121542,
+   "sha256": "78e7d357bda106fa8e8dc64d9caccbc303c2a1d3c31fcf1377cbac4d01007b27"
+  },
+  {
+   "path": "V/f28_v.jpg",
+   "bytes": 40852,
+   "sha256": "e9dffebf4037c8603b8e3decd712289b16a871eaa63cfe00adcc48e6b1a7b567"
+  },
+  {
+   "path": "V/f29_f.jpg",
+   "bytes": 121549,
+   "sha256": "4a874da4870e43a3bdad02631811bd70c93835220786195f60b8bb1fe40a45b4"
+  },
+  {
+   "path": "V/f29_v.jpg",
+   "bytes": 40850,
+   "sha256": "a62bf6629ed26e829e1c2f7ec632be9af8012ca9f9bb99510a4f660bf66b4838"
+  },
+  {
+   "path": "V/f30_f.jpg",
+   "bytes": 121549,
+   "sha256": "7d118445c525baad0fe1a6d5aeac8f7171153cc55fb65ab59d873d54866ea8f7"
+  },
+  {
+   "path": "V/f30_v.jpg",
+   "bytes": 40854,
+   "sha256": "5cb167ae8839a19e640da6ea666217252df458fdcefb226f54ae4675b3b8d260"
+  },
+  {
+   "path": "V/f31_f.jpg",
+   "bytes": 302272,
+   "sha256": "20f91c754e1788da226473957d346f910d8ddb512058a07728ffca420163aaf0"
+  },
+  {
+   "path": "V/f31_v.jpg",
+   "bytes": 116292,
+   "sha256": "b37a68b104bb8aeefe68cb8e419f6efd6147b988eb394d77651fedfd14b99833"
+  },
+  {
+   "path": "V/f32_f.jpg",
+   "bytes": 91375,
+   "sha256": "311d52b5b3d47e45ada73201f8dcbbcb6a7e4eb0cbc593ea7dd95eee190b1232"
+  },
+  {
+   "path": "V/f32_v.jpg",
+   "bytes": 26632,
+   "sha256": "985050199826098cbdc62f0e11cbe4a756eac62bd71162df4ae9a27ff15962f3"
+  },
+  {
+   "path": "cal2027_H_layout_preview_R26.pdf",
+   "bytes": 11445541,
+   "sha256": "e61da37de474a8771e70e01103065bf64d02c8379df05a5a29686a4363c12027"
+  },
+  {
+   "path": "cal2027_V_layout_preview_R26.pdf",
+   "bytes": 13709148,
+   "sha256": "a21708b910c10b8e0a100b4316511358aaa66c47383d880adc4af0c70249562d"
+  },
+  {
+   "path": "cmp/H_m01_A_f.jpg",
+   "bytes": 422626,
+   "sha256": "f0ed073d38d184b71a204a34f1f2410261e8f9a59258d40550a60d273a427e5f"
+  },
+  {
+   "path": "cmp/H_m01_A_v.jpg",
+   "bytes": 148150,
+   "sha256": "e0de51a24b021af24fdda7d1694eec0f966f4f175ceddffd338ea042d290c549"
+  },
+  {
+   "path": "cmp/H_m02_A_f.jpg",
+   "bytes": 350840,
+   "sha256": "9e9dc95e0f0aaf7ab402c465cb68bf5f6b030684e2f0d8ed64b5cd5a51139eb1"
+  },
+  {
+   "path": "cmp/H_m02_A_v.jpg",
+   "bytes": 120088,
+   "sha256": "4bfcf7a373a71e5a2e2b6474171f938692a8f935bf3a072427a2f11e387cd3d9"
+  },
+  {
+   "path": "cmp/H_m03_A_f.jpg",
+   "bytes": 407503,
+   "sha256": "87c24f70155acbf7fa73aac66da262f83cf7deb31c8b8f7f578e3e3e5e096bff"
+  },
+  {
+   "path": "cmp/H_m03_A_v.jpg",
+   "bytes": 129943,
+   "sha256": "4c3acf087069126b5c5e2df94c7988ba97f8492ab5cdcf63bcc6339d707a5e6a"
+  },
+  {
+   "path": "cmp/H_m04_A_f.jpg",
+   "bytes": 675284,
+   "sha256": "030b42f388e6b23e8503a1266ba9345682d93f6418f52f1b5de9f57f783a3e4d"
+  },
+  {
+   "path": "cmp/H_m04_A_v.jpg",
+   "bytes": 241032,
+   "sha256": "c12678f27dc57e9078b4ddf6b77cfbd11c9cdf79291f91a9040e817036cf723f"
+  },
+  {
+   "path": "cmp/H_m05_A_f.jpg",
+   "bytes": 563535,
+   "sha256": "9215a0058c76b90893a46eaed7e7e41a174be4380803b10d9a67d621217ee261"
+  },
+  {
+   "path": "cmp/H_m05_A_v.jpg",
+   "bytes": 191500,
+   "sha256": "087685ac663538794371499781b3e0505ea060966acc09968f84618b95588c33"
+  },
+  {
+   "path": "cmp/H_m06_A_f.jpg",
+   "bytes": 589175,
+   "sha256": "4b2c5408eb436c3d5320bb209551ae95aebb6f7c68b6b8e401281a9a8e26e1ba"
+  },
+  {
+   "path": "cmp/H_m06_A_v.jpg",
+   "bytes": 213679,
+   "sha256": "12344980e5604150619f6f2865aa2dae546490d2285114a603c72e9e213cb223"
+  },
+  {
+   "path": "cmp/H_m07_A_f.jpg",
+   "bytes": 392800,
+   "sha256": "59c88db66c2decc4470528bdb6da512cf14133d20352176f025a7a84aaac1371"
+  },
+  {
+   "path": "cmp/H_m07_A_v.jpg",
+   "bytes": 137977,
+   "sha256": "a002eaae9a13d514a7ccc4841558053f1d8e8548d1ca599a37910cf02289ed21"
+  },
+  {
+   "path": "cmp/H_m08_A_f.jpg",
+   "bytes": 452966,
+   "sha256": "47c62fdc342deda9c4cb56e486f1a3b3ca896c1a7264a94ddc6e1db423eb2cac"
+  },
+  {
+   "path": "cmp/H_m08_A_v.jpg",
+   "bytes": 149668,
+   "sha256": "42d284228dea4e41acdf89143e8b8e40557883135c185d4bd0d6db9ec846ac92"
+  },
+  {
+   "path": "cmp/H_m09_A_f.jpg",
+   "bytes": 335697,
+   "sha256": "b3289d7b7f8ffd3e9479c33d06d037273d896c62609c6a0dc5d60f7dbea7761e"
+  },
+  {
+   "path": "cmp/H_m09_A_v.jpg",
+   "bytes": 113916,
+   "sha256": "84a92068ea56b2ec1bebc4fdfae1b37683d14099fe599b912e0126571c52a78d"
+  },
+  {
+   "path": "cmp/H_m10_A_f.jpg",
+   "bytes": 560472,
+   "sha256": "24f8f3f561a069a1c015bbd2e1f76f97c19f8b5c71d3dd7545d64b5e153473ad"
+  },
+  {
+   "path": "cmp/H_m10_A_v.jpg",
+   "bytes": 194375,
+   "sha256": "a4f7d33a270e31af269ab0d460f3abf274cd030e5bfe554b73c210d5533db80d"
+  },
+  {
+   "path": "cmp/H_m11_A_f.jpg",
+   "bytes": 701903,
+   "sha256": "dea2a9a26b1d1ac1db0404c1d2d36f26c3c67ae395a7dfec956bc8ba7fb76c7e"
+  },
+  {
+   "path": "cmp/H_m11_A_v.jpg",
+   "bytes": 234081,
+   "sha256": "d9e2dcc692eb4e2d17ecfbdb7a7e74767bea0a1f0d5a637c91f87032d65cec1c"
+  },
+  {
+   "path": "cmp/H_m12_A2_f.jpg",
+   "bytes": 356384,
+   "sha256": "8ca2e81f9dcce3b1b7aba353b963133a83450d8a2b646c6422dc8ba7026ccc86"
+  },
+  {
+   "path": "cmp/H_m12_A2_v.jpg",
+   "bytes": 128838,
+   "sha256": "be51b73639602b315427225ed21a6e418fe71ee943e55c44d4e1729610ed977f"
+  },
+  {
+   "path": "cmp/H_m12_A_f.jpg",
+   "bytes": 357225,
+   "sha256": "db57ca56618e4d33e69fe496d8f427094276e9c78f23ba6265ba58eb6c03be53"
+  },
+  {
+   "path": "cmp/H_m12_A_v.jpg",
+   "bytes": 128775,
+   "sha256": "8dfc78d2f98a27e0ab5371c8c7535006072cea72788b3bf29a08ec127dc22a97"
+  },
+  {
+   "path": "cmp/zoom_rainie_A2_bottom.png",
+   "bytes": 16363,
+   "sha256": "bebb586288747d6d334aaa6c81068b91ee5c6c178754277b617d5b799e6416dc"
+  },
+  {
+   "path": "cmp/zoom_rainie_A2_top.png",
+   "bytes": 18025,
+   "sha256": "67f3c6108617e1070639a6d1ebd28efb1ee3d8157af42b426625905beb3cbda8"
+  },
+  {
+   "path": "cmp/zoom_rainie_A_bottom.png",
+   "bytes": 16408,
+   "sha256": "75f02679e47073c70f2e3a01b6e18e1343058e2e25829c2d4c907fadc0313041"
+  },
+  {
+   "path": "cmp/zoom_rainie_A_top.png",
+   "bytes": 18264,
+   "sha256": "83ece884185b044857d6e8cdf60dfdf688d9c81f890932c4ee9cd696d7ca3d11"
+  },
+  {
+   "path": "cmp/zoom_rainie_B_bottom.png",
+   "bytes": 16576,
+   "sha256": "119d920d498c565dd1c10709c317570578f408964a63a7c72843e32f8d998698"
+  },
+  {
+   "path": "cmp/zoom_rainie_B_top.png",
+   "bytes": 14098,
+   "sha256": "544ae681d54551add7cd16ce7ca3333865688e0e5419542b0209f35249573372"
+  },
+  {
+   "path": "cmp/zoom_somi_A_bottom.png",
+   "bytes": 29500,
+   "sha256": "d21b52865c7ba4e420bb340634d0fdca364ce4b8411e755360f19a70fe44ab68"
+  },
+  {
+   "path": "cmp/zoom_somi_A_top.png",
+   "bytes": 22021,
+   "sha256": "114b53204776a1d7d9ba5b7f71ec9c1fa9aa8f5befb35c5c23db5b1d031841fb"
+  },
+  {
+   "path": "cmp/zoom_somi_B_bottom.png",
+   "bytes": 29430,
+   "sha256": "beb37a67f3945270379ad74a1c8f3e81cd32db4e63c948d3d9e5d5368d685e1b"
+  },
+  {
+   "path": "cmp/zoom_somi_B_top.png",
+   "bytes": 20005,
+   "sha256": "90d72ee158ea21bccd69f050db2f53df9dc86b23803eab9fea2e19a1bc9db0a2"
+  }
+ ]
+}

@@ -42,7 +42,7 @@
     $('#intro').textContent = K.intro;
     $('#prog').textContent = `${FIN.length}／${FIN.length} 套已選定。${K.status_note || ''}`;
     const tl = $('#toplinks');
-    if (tl) tl.innerHTML = '<a href="#final-H">橫式 ↓</a>｜<a href="#final-V">直式 ↓</a>｜<a href="#final-hist">歷史候選 ↓</a>｜<a href="history.html">已定稿企劃／歷史紀錄 →</a>';
+    if (tl) tl.innerHTML = '<a href="layout.html"><b>排版預覽（M-5 R26）→</b></a>｜<a href="#final-H">橫式 ↓</a>｜<a href="#final-V">直式 ↓</a>｜<a href="#final-hist">歷史候選 ↓</a>｜<a href="history.html">已定稿企劃／歷史紀錄 →</a>';
     $('#pagever').textContent = PAGE_COMMIT || '本機預覽（未部署）';
     // 放大檢視：先看顯示版，「原尺寸」改看完整版
     const viewer = $('#viewer'), vimg = $('#viewer-img'), vcap = $('#viewer-cap'), vmode = $('#viewer-mode'), vbody = $('#viewer-body');

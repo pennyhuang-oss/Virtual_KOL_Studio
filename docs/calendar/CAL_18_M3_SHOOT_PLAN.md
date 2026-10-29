@@ -56,6 +56,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-4 R25：Penny 接受 V-Rainie R24-A，24 套全部定案（橫式 12、直式 12，唯一定案清單 cal_m4_final_r25.json）；選片完成，尚未印前檢查或交印核准。橫式有效約 271 ppi（低於 300 工作目標）、直式約 325–366 ppi；本輪生成 0。R23 頁面原文已逐字補存。** 唯一定案清單見 `data/cal_m4_final_r25.json`（含路徑、hash、接受依據、有效 ppi 與缺口），Owner 紀錄見 `data/cal_m4_owner_r25.json`（R23 頁面原文補存於 `data/cal_m4_owner_r24.json`），定案相簿資料見 `data/cal_pick_r25.json`。
 
+> **M-5 R26：兩款排版預覽完成（橫式 28 面、直式 32 面，實際 mm 尺寸 PDF，標為預覽、非交印核准），待 Penny 看；橫式推薦改用完整 16:9（192×108 mm）照片框、與 R6 的 192×104 套框並列比較，未定案。照片沿用 24 張定案，不需重新接受；排版接受另記。本輪生成 0、付費 0。** 排版預覽資料（規格、頁面、裁切比較、日期讀回核對、PDF 核對）見 `data/cal_m5_layout_r26.json` 與 `CAL_28_M5_R26_LAYOUT.generated.md`，Owner 指令見 `data/cal_m5_owner_r26.json`，排版頁文字見 `data/cal_layout_r26_page.json`。
+
 ## 0. 版本
 
 | 項目 | 內容 |

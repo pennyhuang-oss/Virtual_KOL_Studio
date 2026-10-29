@@ -8398,6 +8398,51 @@ window.CAL_DATA = {
    "supervisor": "docs/calendar/data/cal_m4_supervisor_r9.json",
    "trial": "docs/calendar/data/cal_m4_r9_draft.json"
   },
+  "m5r26": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "in_progress",
+     "old": "not_started",
+     "where": "status.production.prepress_check"
+    },
+    {
+     "kind": "事實同步",
+     "new": "ready_for_owner_review",
+     "old": "（無）",
+     "where": "status.production.layout_preview"
+    },
+    {
+     "kind": "事實同步",
+     "new": "not_given",
+     "old": "（無）",
+     "where": "status.production.layout_acceptance"
+    },
+    {
+     "kind": "事實同步",
+     "new": "docs/calendar/data/cal_m5_layout_r26.json",
+     "old": "（無）",
+     "where": "status.production.layout_file"
+    },
+    {
+     "kind": "事實同步",
+     "new": "印前檢查（套框、有效 ppi、色彩、版型、日期等）狀態；M-4 R25 只列尺寸與缺口；M-5 R26 起進行中（已做排版預覽、裁切、ppi、日期與 PDF 核對；廠商項目、打樣未確認）",
+     "old": "印前檢查（套框、有效 ppi、色彩、版型等）狀態；M-4 R25 只列尺寸與缺口，尚未開始",
+     "where": "status.production.definitions.prepress_check"
+    },
+    {
+     "kind": "事實同步",
+     "new": "新增兩個定義",
+     "old": "（無）",
+     "where": "status.production.definitions.layout_preview／layout_acceptance"
+    }
+   ],
+   "from_commit": "0ac62ca410f61852383ecb78cf5b00691ac24897",
+   "layout": "docs/calendar/data/cal_m5_layout_r26.json",
+   "owner": "docs/calendar/data/cal_m5_owner_r26.json",
+   "page": "docs/calendar/data/cal_layout_r26_page.json",
+   "status_line": "M-5 R26：兩款排版預覽完成（橫式 28 面、直式 32 面，實際 mm 尺寸 PDF，標為預覽、非交印核准），待 Penny 看；橫式推薦改用完整 16:9（192×108 mm）照片框、與 R6 的 192×104 套框並列比較，未定案。照片沿用 24 張定案，不需重新接受；排版接受另記。本輪生成 0、付費 0。"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9185,7 +9230,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "5a779bbb6d026ebca023d62d7125a6fba21233a1",
+  "plan_blob": "d393fb70b1a49a73ecaf2792d276ad3fcbd40f9e",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14545,10 +14590,12 @@ window.CAL_DATA = {
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
      "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",
      "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＋R24 2＝85）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
+     "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；not_given＝Penny 尚未接受排版",
+     "layout_preview": "排版預覽狀態；M-5 R26 兩款完整頁面預覽與 PDF 完成，待 Penny 看（工作版、非交印核准）",
      "not_generated": "尚未生成的套數",
      "owner_selection": "Owner 選片狀態；complete＝24 套都由 Penny 選定。不等於印前檢查或交印核准",
      "pending_owner_review": "已有新候選、等 Penny 在選片頁選擇的套數；M-4 R25 起為 0（24 套全部定案）",
-     "prepress_check": "印前檢查（套框、有效 ppi、色彩、版型等）狀態；M-4 R25 只列尺寸與缺口，尚未開始",
+     "prepress_check": "印前檢查（套框、有效 ppi、色彩、版型、日期等）狀態；M-4 R25 只列尺寸與缺口；M-5 R26 起進行中（已做排版預覽、裁切、ppi、日期與 PDF 核對；廠商項目、打樣未確認）",
      "print_approval": "交印核准狀態；未製作、未送出交印檔，未核准",
      "rejected_replan": "已生成、Penny 退回，待重規劃且目前沒有新候選（M-4 R22 起為 0：V-somi-oh 本輪有新候選）",
      "selected_pending_edit": "Penny 已選定來源照片、但另有指定修改；修改版待 Penny 確認，未接受；不撤銷她的選擇（M-4 R24：0 套）",
@@ -14582,11 +14629,14 @@ window.CAL_DATA = {
      "M-4 R7": 1,
      "M-4 R8": 1
     },
+    "layout_acceptance": "not_given",
+    "layout_file": "docs/calendar/data/cal_m5_layout_r26.json",
+    "layout_preview": "ready_for_owner_review",
     "not_generated": 0,
     "owner_selection": "complete",
     "pending_owner_review": 0,
     "pick_sets": [],
-    "prepress_check": "not_started",
+    "prepress_check": "in_progress",
     "print_approval": "not_given",
     "rejected_replan": 0,
     "rejected_sets": [],

@@ -519,8 +519,10 @@
     "selected_pending_edit": "Penny 已選定來源照片、但另有指定修改；修改版待 Penny 確認，未接受；不撤銷她的選擇（M-4 R24：0 套）",
     "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
     "owner_selection": "Owner 選片狀態；complete＝24 套都由 Penny 選定。不等於印前檢查或交印核准",
-    "prepress_check": "印前檢查（套框、有效 ppi、色彩、版型等）狀態；M-4 R25 只列尺寸與缺口，尚未開始",
-    "print_approval": "交印核准狀態；未製作、未送出交印檔，未核准"
+    "prepress_check": "印前檢查（套框、有效 ppi、色彩、版型、日期等）狀態；M-4 R25 只列尺寸與缺口；M-5 R26 起進行中（已做排版預覽、裁切、ppi、日期與 PDF 核對；廠商項目、打樣未確認）",
+    "print_approval": "交印核准狀態；未製作、未送出交印檔，未核准",
+    "layout_preview": "排版預覽狀態；M-5 R26 兩款完整頁面預覽與 PDF 完成，待 Penny 看（工作版、非交印核准）",
+    "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；not_given＝Penny 尚未接受排版"
    },
    "set_notes": {
     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）；R13 第二次：遮罩已依主管要求對照原圖調整（涵蓋下顎與上頸、離開背景），遮罩白黑定義與上傳費用仍無法確認，依停止規則未上傳、未送出、未扣款；R22：依指令一併處理：用既有 Soul 純文字生成冬季雪景兩種景別新候選 2 張（不沿用遮罩或底稿流程），待 Penny 選擇；R23：Penny 在 R22 選片頁（fbf5674）定案 V-somi-oh-R22-B",
@@ -577,8 +579,11 @@
    },
    "final_list": "docs/calendar/data/cal_m4_final_r25.json",
    "owner_selection": "complete",
-   "prepress_check": "not_started",
-   "print_approval": "not_given"
+   "prepress_check": "in_progress",
+   "print_approval": "not_given",
+   "layout_preview": "ready_for_owner_review",
+   "layout_acceptance": "not_given",
+   "layout_file": "docs/calendar/data/cal_m5_layout_r26.json"
   }
  },
  "accepted_notes": {
@@ -9765,6 +9770,51 @@
     "where": "meta.status",
     "old": "…V-Rainie Seedream＋錨點 2 張，待 Penny 選擇；沒有上傳…",
     "new": "…M-4 R25 24 套全部由 Penny 選定（選片完成）；沒有上傳…"
+   }
+  ]
+ },
+ "m5r26": {
+  "from_commit": "0ac62ca410f61852383ecb78cf5b00691ac24897",
+  "owner": "docs/calendar/data/cal_m5_owner_r26.json",
+  "layout": "docs/calendar/data/cal_m5_layout_r26.json",
+  "page": "docs/calendar/data/cal_layout_r26_page.json",
+  "status_line": "M-5 R26：兩款排版預覽完成（橫式 28 面、直式 32 面，實際 mm 尺寸 PDF，標為預覽、非交印核准），待 Penny 看；橫式推薦改用完整 16:9（192×108 mm）照片框、與 R6 的 192×104 套框並列比較，未定案。照片沿用 24 張定案，不需重新接受；排版接受另記。本輪生成 0、付費 0。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "status.production.prepress_check",
+    "old": "not_started",
+    "new": "in_progress"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.layout_preview",
+    "old": "（無）",
+    "new": "ready_for_owner_review"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.layout_acceptance",
+    "old": "（無）",
+    "new": "not_given"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.layout_file",
+    "old": "（無）",
+    "new": "docs/calendar/data/cal_m5_layout_r26.json"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.prepress_check",
+    "old": "印前檢查（套框、有效 ppi、色彩、版型等）狀態；M-4 R25 只列尺寸與缺口，尚未開始",
+    "new": "印前檢查（套框、有效 ppi、色彩、版型、日期等）狀態；M-4 R25 只列尺寸與缺口；M-5 R26 起進行中（已做排版預覽、裁切、ppi、日期與 PDF 核對；廠商項目、打樣未確認）"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.layout_preview／layout_acceptance",
+    "old": "（無）",
+    "new": "新增兩個定義"
    }
   ]
  }

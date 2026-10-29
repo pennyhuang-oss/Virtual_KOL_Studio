@@ -407,7 +407,7 @@ def build_m3(mat):
             P['m4r13b']['from_commit'], P['m4r14']['from_commit'],
             P['m4r15']['from_commit'], P['m4r16']['from_commit'],
             P['m4r17']['from_commit'], P['m4r17b']['from_commit'],
-            P['m4r18']['from_commit'], P['m4r19']['from_commit'], P['m4r20']['from_commit'], P['m4r21']['from_commit'], P['m4r22']['from_commit'], P['m4r23']['from_commit'], P['m4r24']['from_commit'], P['m4r25']['from_commit']}   # commit SHA，不是私有 ID
+            P['m4r18']['from_commit'], P['m4r19']['from_commit'], P['m4r20']['from_commit'], P['m4r21']['from_commit'], P['m4r22']['from_commit'], P['m4r23']['from_commit'], P['m4r24']['from_commit'], P['m4r25']['from_commit'], P['m5r26']['from_commit']}   # commit SHA，不是私有 ID
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
@@ -639,7 +639,8 @@ def build_pick():
     PR = P['status']['production']
     assert K['round'] == 'M-4 R25' and K['mode'] == 'final' and 'items' not in K and 'key_prefix' not in K   # 定案相簿不收集回饋、不讀寫瀏覽器資料
     FN = json.loads(wt_bytes(FINAL_FILE))
-    assert PR['owner_selection'] == 'complete' and PR['prepress_check'] == 'not_started' and PR['print_approval'] == 'not_given' and PR['final_list'] == FINAL_FILE
+    assert PR['owner_selection'] == 'complete' and PR['prepress_check'] == 'in_progress' and PR['print_approval'] == 'not_given' and PR['final_list'] == FINAL_FILE
+    assert PR['layout_preview'] == 'ready_for_owner_review' and PR['layout_acceptance'] == 'not_given' and PR['layout_file'] == LAYOUT_FILE   # M-5 R26：排版接受與照片接受分開
     assert PR['pick_sets'] == [] and PR['selected_edit_sets'] == [] and PR['rejected_sets'] == [] and sorted(PR['accepted_sets']) == sorted(x['id'] for x in P['sets'])
     fin = K['final']
     assert len(fin) == 24 and [(f['book'], f['month']) for f in fin] == [(b, m) for b in 'HV' for m in range(1, 13)], '橫式、直式各 1–12 月，無缺月、無重複'
@@ -687,6 +688,91 @@ def build_review_hist():
     text = json.dumps(H, ensure_ascii=False)
     assert not re.search(r'[0-9a-f]{8,}', text) and not any(b in text.lower() for b in ('kols/', 'job', 'soul'))
     return H['items']
+
+
+# ---------- 排版預覽頁（layout.html，M-5 R26 起）----------
+# 頁面圖、比較圖與兩份 PDF 由 docs/calendar/tools/build_cal_m5_layout.py 產生在 public/layout/，檔案清單與 sha256 記在 data/cal_m5_layout_r26.json；
+# 這裡只核對檔案（位元組相同、清單外不得有檔）並組出頁面資料 layout-data.js。頁面文字與選項來自人寫的 data/cal_layout_r26_page.json。
+# 回饋鍵 cal2027-layout-r26-v1 只存排版回饋，與選片回饋分開；其他舊鍵不讀、不寫、不刪。公開資料不放 repo 路徑、sha256 或來源 commit。
+LAYOUT_FILE = 'docs/calendar/data/cal_m5_layout_r26.json'
+LAYOUT_PAGE = 'docs/calendar/data/cal_layout_r26_page.json'
+LAYOUT_DIR = os.path.join(PUB, 'layout')
+LAYOUT_JS_HEAD = ('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。排版預覽頁（layout.html）的資料，'
+                  '來源 docs/calendar/data/cal_m5_layout_r26.json 與 cal_layout_r26_page.json\nwindow.CAL_LAYOUT = ')
+LAYOUT_ROLE = {'cover': '封面', 'photo': '照片面', 'grid': '大格面', 'memo': 'MEMO', 'year': '全年年曆', 'barcode': '條碼頁（廠商固定）'}
+
+
+def layout_files_diff(L):
+    want = {x['path']: x['sha256'] for x in L['files']}
+    disk = {}
+    for d, _, fs in os.walk(LAYOUT_DIR):
+        for fn in fs:
+            p = os.path.join(d, fn)
+            disk[os.path.relpath(p, LAYOUT_DIR)] = sha256(open(p, 'rb').read())
+    return sorted(set(want.items()) ^ set(disk.items()))
+
+
+def build_layout():
+    L = json.loads(wt_bytes(LAYOUT_FILE))
+    G = json.loads(wt_bytes(LAYOUT_PAGE))
+    FN = json.loads(wt_bytes(FINAL_FILE))
+    assert L['round'] == G['round'] == 'M-5 R26' and G['feedback_key'] == 'cal2027-layout-r26-v1'
+    assert L['photo_source']['final_list'] == FINAL_FILE and [(s['set'], s['img_id'], s['sha256']) for s in L['photo_source']['sets']] == \
+        [(s['set'], s['img_id'], s['sha256']) for s in FN['sets']], '排版用的 24 張與唯一定案清單一致'
+    diff = layout_files_diff(L)
+    assert not diff, f'排版預覽檔案與紀錄不同：{diff[:5]}'
+    dc = L['date_check']
+    assert dc['failures'] == 0 and dc['negative_test']['pass'] and dc['dates_read'] == 365 * 6 + 31, '日期讀回核對全過'
+    assert [p['face'] for p in L['pages']['H']] == list(range(1, 29)) and [p['face'] for p in L['pages']['V']] == list(range(1, 33))
+    assert not any(p['issues'] for k in 'HV' for p in L['pages'][k]) and not any(p['issues'] for p in L['compare_A'])
+    person = {s['set']: s['person'] for s in L['photo_source']['sets']}
+
+    def img(rel):
+        im = Image.open(os.path.join(LAYOUT_DIR, rel))
+        return {'src': 'layout/' + rel, 'w': im.width, 'h': im.height}
+
+    def page(p):
+        ph = next((x for x in p['photos'] if x['role'] == 'photo'), None)
+        return {'face': p['face'], 'role': p['role'], 'role_zh': LAYOUT_ROLE[p['role']], 'month': p['month'], 'person': person.get(p['set']),
+                'view': img(p['view']), 'full': img(p['full']), 'photo_box': ph['box_mm'] if ph else None}
+    A = {p['month']: p for p in L['compare_A'] if p['variant'] == 'A'}
+    mm = 104 / 1109
+    months = []
+    for sid, c in L['crops_H'].items():
+        a = c['A']
+        if a['cuts_subject_px']:
+            note = f"放進 192×104 框一定會切到 {a['cuts_subject_px']} px：推薦切在髮頂（深色頭髮對夜空，約 {a['cuts_subject_px'] * mm:.1f} mm）；另一排法切鞋底。"
+        elif a['extra_on_truncated_px']:
+            note = f"髮頂上方空間不夠，只能裁 {a['top']} px；其餘 {a['bottom']} px 從下緣裁。{c['visual_note']}，所以會再多裁約 {a['bottom'] * mm:.1f} mm。"
+        else:
+            note = '只裁掉頭頂上方的空白，人物不受影響。'
+        months.append({'month': c['month'], 'set': sid, 'person': person[sid], 'A': page(A[c['month']]), 'note': note})
+    lab = {'B': '完整 16:9（推薦）', 'A': '192×104 套框', 'A2': '192×104 套框・另一排法'}
+    zooms = []
+    for z in L['zooms']:
+        g = next((x for x in zooms if x['set'] == z['set']), None)
+        if g is None:
+            g = {'set': z['set'], 'person': person[z['set']], 'month': L['crops_H'][z['set']]['month'], 'rows': {}}
+            zooms.append(g)
+        g['rows'].setdefault(z['edge'], []).append({'variant': z['variant'], 'label': lab[z['variant']], **img(z['file'])})
+    pdf = {}
+    for k in 'HV':
+        f = L['formats'][k]
+        name = f'cal2027_{k}_layout_preview_R26.pdf'
+        pdf[k] = {'href': 'layout/' + name, 'size_mb': round(os.path.getsize(os.path.join(LAYOUT_DIR, name)) / 1048576, 1), 'pages': L['pdf'][k]['pages'],
+                  'trim': f"{f['W'] - 2 * f['trim']}×{f['H'] - 2 * f['trim']} mm", 'canvas': f"{f['W']}×{f['H']} mm"}
+    fmts = {k: {x: L['formats'][k][x] for x in ('zh', 'W', 'H', 'trim', 'coil_assumed', 'coil_measured')} |
+            {'safe': L['formats'][k]['vendor_safe' if k == 'H' else 'text_safe'],
+             'safe_label': '廠商安全框' if k == 'H' else '文字安全區（本案自訂；廠商安全框為 0）'} for k in 'HV'}
+    pub = {**{k: G[k] for k in ('task', 'round', 'title', 'intro', 'status_note', 'feedback_key', 'decisions', 'pending', 'recommended', 'vendor')},
+           'pdf': pdf, 'formats': fmts, 'pages': {k: [page(p) for p in L['pages'][k]] for k in 'HV'},
+           'compare': {'months': months, 'zooms': zooms},
+           'date_note': f"日期已從輸出的 PDF 逐格讀回核對：{dc['dates_read']} 個日期、錯誤 {dc['failures']}。"}
+    text = json.dumps(pub, ensure_ascii=False)
+    for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', 'prompt', 'docs/'):
+        assert bad not in text.lower(), bad
+    assert not re.search(r'[0-9a-f]{8,}', text), '排版頁資料出現疑似 ID'
+    return pub
 
 
 # ---------- 資料 ----------
@@ -916,6 +1002,9 @@ def main():
     }
     review = build_review()
     pick = build_pick()
+    lay = build_layout()
+    with open(os.path.join(PUB, 'layout-data.js'), 'w', encoding='utf-8') as f:
+        f.write(LAYOUT_JS_HEAD + json.dumps(lay, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
     with open(os.path.join(PUB, 'pick-data.js'), 'w', encoding='utf-8') as f:
         f.write('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。選片頁（shoot.html）的資料，來源 docs/calendar/data/cal_pick_r25.json（定案相簿）\n')
         f.write('window.CAL_PICK = ' + json.dumps(pick, ensure_ascii=False, indent=1, sort_keys=True) + ';\n')
@@ -996,6 +1085,16 @@ def check(hf_dir=None, clean_dir=None):
         print('目前檢視頁圖片未發佈：', sorted(set(RV) - {e['published'] for e in man['files']})); bad += 1
     if set(PK) - {e['published'] for e in man['files']}:
         print('選片頁圖片未發佈：', sorted(set(PK) - {e['published'] for e in man['files']})); bad += 1
+    LY = json.loads(wt_bytes(LAYOUT_FILE))
+    ld = layout_files_diff(LY)
+    if ld:
+        print('排版預覽檔案與紀錄不同：', ld[:5]); bad += 1
+    try:
+        lay_js = LAYOUT_JS_HEAD + json.dumps(build_layout(), ensure_ascii=False, indent=1, sort_keys=True) + ';\n'
+        if open(os.path.join(PUB, 'layout-data.js'), encoding='utf-8').read() != lay_js:
+            print('layout-data.js 無法重現'); bad += 1
+    except AssertionError as e:
+        print('排版預覽資料檢查失敗：', e); bad += 1
     hits = scan_public(public_secrets())
     if hits:
         print('公開檔含私有識別碼：', hits); bad += 1
@@ -1005,7 +1104,7 @@ def check(hf_dir=None, clean_dir=None):
     n = {k: sum(e['kind'] == k for e in man['files']) for k in ('copy', 'crop', 'hires_preview', 'thumbnail')}
     nr = sum(e['kind'].startswith('review_') for e in man['files'])
     npk = sum(e['kind'].startswith('pick_') for e in man['files'])
-    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、舊檢視頁 {nr}、選片頁 {npk}），問題 {bad}；公開檔無私有識別碼、無交易原始資料'
+    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、舊檢視頁 {nr}、選片頁 {npk}）＋排版預覽 {len(LY["files"])} 檔，問題 {bad}；公開檔無私有識別碼、無交易原始資料'
           + (f'；未提供快取、只核對 sha256 的高解析預覽：{", ".join(not_recomputed)}' if not_recomputed else ''))
     return 1 if bad else 0
 

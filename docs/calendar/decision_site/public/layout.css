@@ -1,0 +1,91 @@
+/* 排版預覽頁（layout.html，M-5 R26 起）：頁面優先；基本樣式沿用 app.css */
+body.laypage { padding-bottom: 16px; }
+.tline { font-weight: 600; color: #333; }
+.intro { margin: .2em 0; font-size: .95rem; }
+.foot { margin: 8px auto 24px; }
+
+/* 下載與待決 */
+.dls { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 10px; }
+.btn.dl { font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; }
+.pend { margin: .2em 0 .6em; padding-left: 1.4em; }
+.pend li { margin: .25em 0; font-weight: 600; }
+details.more { margin: 6px 0; }
+details.more ul { margin: .3em 0; padding-left: 1.2em; font-size: .92rem; }
+
+/* 導覽：橫式／直式、月份、照片框切換、參考線 */
+.navsec { position: sticky; top: 0; z-index: 10; padding-top: 10px; padding-bottom: 10px; }
+.tabs { display: flex; gap: 6px; margin-bottom: 8px; }
+.tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; font: inherit; font-weight: 700; font-size: 1rem; border: 1px solid #c9c6bf; border-radius: 8px; padding: 6px 10px; background: #fff; color: inherit; cursor: pointer; min-height: 44px; }
+.tab span { font-weight: 400; font-size: .8rem; color: #555; }
+.tab.on { border-color: #0b57d0; box-shadow: inset 0 0 0 1px #0b57d0; background: #eef3fd; }
+.mnav { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 5px; }
+.mchip { display: inline-flex; align-items: center; min-height: 34px; padding: 2px 10px; border: 1px solid #c9c6bf; border-radius: 999px; background: #fff; text-decoration: none; color: inherit; font-size: .88rem; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-top: 8px; }
+.fsw { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.fsw-l { font-size: .9rem; font-weight: 600; }
+.seg { font: inherit; font-size: .88rem; border: 1px solid #c9c6bf; border-radius: 6px; padding: 6px 10px; background: #fff; color: inherit; cursor: pointer; min-height: 38px; }
+.seg.on { border-color: #0b57d0; background: #eef3fd; box-shadow: inset 0 0 0 1px #0b57d0; font-weight: 700; }
+.gsw { display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; cursor: pointer; min-height: 38px; }
+.gsw input { width: 20px; height: 20px; }
+.legend { font-size: .8rem; color: #444; margin: 6px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 4px; }
+.legend[hidden] { display: none; }
+.lg { display: inline-block; width: 14px; height: 10px; margin-left: 8px; border: 2px solid; vertical-align: middle; }
+.lg-coil { background: rgba(230, 140, 20, .35); border-color: #c26a00; }
+.lg-trim { border-color: #c62828; border-style: dashed; }
+.lg-safe { border-color: #2e7d32; }
+.lg-photo { border-color: #1d4ed8; }
+
+/* 每月：照片面＋大格面 */
+.mcard { border: 1px solid #e2dfd8; border-radius: 10px; padding: 10px; margin: 14px 0; background: #fcfcfa; scroll-margin-top: 170px; min-width: 0; }
+.mcard h3 { margin: 0 0 8px; }
+.spread { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.spread.one { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
+.spread-V.one { max-width: 380px; }
+.spread.many { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.spread-V.many { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.face { margin: 0; min-width: 0; }
+.face .zoom { border: 1px solid #cfccc5; border-radius: 4px; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.face.is-a .zoom { outline: 3px solid #d98200; outline-offset: 1px; }
+.face figcaption { font-size: .82rem; }
+.cnote { font-size: .88rem; background: #fff4e0; border-left: 4px solid #d98200; padding: 6px 10px; margin: 8px 0; }
+.nl { display: block; font-size: .88rem; margin: 8px 0 0; color: #333; }
+.nl textarea { display: block; margin-top: 2px; }
+
+/* 參考線（只在網站顯示，PDF 沒有） */
+svg.guides { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+svg.guides rect, svg.guides line { vector-effect: non-scaling-stroke; fill: none; stroke-width: 1.5; }
+svg.guides .g-coil { fill: rgba(230, 140, 20, .28); stroke: #c26a00; stroke-dasharray: 4 3; }
+svg.guides .g-coilm { stroke: #c26a00; stroke-dasharray: 2 2; }
+svg.guides .g-trim { stroke: #c62828; stroke-dasharray: 5 3; }
+svg.guides .g-safe { stroke: #2e7d32; }
+svg.guides .g-photo { stroke: #1d4ed8; stroke-width: 2; }
+
+/* 上下緣放大比較 */
+.zd { margin: 8px 0; border: 1px solid #e0ded8; border-radius: 8px; padding: 6px 10px; background: #fff; }
+.zd summary { font-size: .92rem; }
+.zh { margin: 8px 0 4px; font-size: .88rem; font-weight: 700; }
+.zrow { display: flex; flex-wrap: wrap; gap: 10px; }
+.zf { margin: 0; min-width: 0; flex: 1 1 200px; max-width: 360px; }
+.zoom.px img { image-rendering: pixelated; }
+
+/* 回饋 */
+.dq { border: 1px solid #e2dfd8; border-radius: 8px; padding: 6px 10px 10px; margin: 12px 0; min-width: 0; }
+.dq legend { font-weight: 700; padding: 0 4px; }
+.dq .opt { display: flex; align-items: flex-start; gap: 8px; border: 1px solid #c9c6bf; border-radius: 8px; padding: 8px 12px; margin: 6px 0; background: #fff; cursor: pointer; min-height: 44px; }
+.dq .opt:has(input:checked) { border-color: #0b57d0; background: #eef3fd; }
+.dq .opt input { width: 20px; height: 20px; flex: none; margin: 2px 0 0; }
+.dq .opt span { font-weight: 600; }
+.dq .opt small { display: block; font-weight: 400; color: #444; font-size: .85rem; }
+.rec { font-style: normal; font-size: .75rem; background: #a40000; color: #fff; border-radius: 4px; padding: 0 6px; margin-left: 8px; vertical-align: middle; }
+.lnk { font: inherit; font-size: .85rem; background: none; border: 0; padding: 0; color: #0b57d0; text-decoration: underline; cursor: pointer; }
+.acts { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; }
+#cp-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+
+@media (max-width: 760px) {
+  .spread-H { grid-template-columns: minmax(0, 1fr); }
+  .spread-V { gap: 8px; }
+  .mcard { padding: 8px; scroll-margin-top: 12px; }
+  .navsec { position: static; padding: 8px 10px; }
+  .mchip { min-height: 32px; padding: 2px 8px; font-size: .84rem; }
+  .btn.dl { width: 100%; }
+}
