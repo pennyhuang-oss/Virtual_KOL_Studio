@@ -1,0 +1,35 @@
+{
+ "note": "M-5 R26 排版預覽部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html",
+ "pdf": {
+  "H": "https://cal2027-decision-production.up.railway.app/layout/cal2027_H_layout_preview_R26.pdf",
+  "V": "https://cal2027-decision-production.up.railway.app/layout/cal2027_V_layout_preview_R26.pdf"
+ },
+ "commit": "5a82bf930a0a666ee9f3c2096f2a707b48d83911",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-10-29T12:06:37Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-10-29T12:13:50Z"
+  }
+ ],
+ "note_size": "本版服務目錄約 244 MB（R25 約 196 MB；新增排版預覽 158 檔約 61 MB）；一次建置成功",
+ "live_page_commit": "5a82bf930a0a666ee9f3c2096f2a707b48d83911",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（排版頁 34 項、定案相簿回歸 18 項；158 檔 sha256 全符）",
+  "items": [
+   "資料：橫式 28 面、直式 32 面、排版回饋鍵 cal2027-layout-r26-v1；公開資料無 UUID、prompt、模型、任務、費用、repo 路徑",
+   "兩份 PDF 可下載：application/pdf、attachment、位元組與紀錄相同；下載按鈕檔名正確",
+   "橫式 12 個月照片面＝面 2m、大格面＝面 2m+1，28 面都在、人名對應定案清單；直式 32 面全部載入",
+   "照片框切換：12 個月照片面換成 192×104 套框比較版；Rainie、Somi 說明與上下緣放大比較（10 張）",
+   "參考線開關、放大與 300 dpi 原尺寸、關閉",
+   "3 題選擇與逐月／整體備註重新整理後保留；複製全部回饋（未選標未選、照片接受另記）；清除一題",
+   "只寫 cal2027-layout-r26-v1，舊鍵原樣保留；桌機與手機無 JS 錯誤；手機無橫向捲動",
+   "定案相簿保留 24 套、頂部連到排版預覽；R25 相簿 18 項回歸測試全過"
+  ],
+  "public_files": "線上 public/layout 158 檔逐檔下載，sha256 與 cal_m5_layout_r26.json 紀錄相同；圖片無 EXIF／文字區塊／ICC；無平台任務識別、無私有 ID（比對全部 M-4 私有執行紀錄的 111 個 UUID）"
+ }
+}
