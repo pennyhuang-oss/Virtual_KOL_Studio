@@ -524,11 +524,12 @@
     "layout_preview": "排版預覽狀態；M-5 R26 兩款完整頁面預覽與 PDF 完成；M-5 R27 起 owner_reviewed＝Penny 已看過並回覆（工作版、非交印核准）",
     "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；M-5 R27 起 accepted＝Penny 接受 R26 頁面（5a82bf9）的推薦排法：橫式照片框完整 16:9（192×108 mm）、橫式與直式推薦排法。排版接受不等於交印核准",
     "layout_acceptance_record": "Penny 接受排版的原話紀錄",
-    "cover": "封面狀態；M-5 R27 候選 4 張；M-5 R28 起 r27_all_rejected_single_identity_test＝Penny 退回 R27 全部 4 張（無已選封面、無已接受方向），只做了 H-A 裡 Coco 的單人身分測試（不是完成的封面）",
+    "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
     "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
     "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
     "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
-    "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加"
+    "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
+    "cover_local_fix_log": "封面本機修正次數（每輪；免費、不生成、不上傳），與生成張數、局部身分編輯次數分開計算"
    },
    "set_notes": {
     "V-somi-oh": "R5 退回；R7 主管建議退回，Penny 未接受；R8 主管建議退回，Penny 未接受；R9 構圖底稿 1 張（非 Somi 成品、不算月面照片）主管退回，Penny 未接受；R10 連續空間構圖底稿 1 張（非 Somi 成品、不算月面照片），Claude 自查通過，待主管及 Penny 看底稿；R11 Soul＋R10 構圖參考 1 張（月面候選），Claude 自查不通過；主管建議退回（REVISE），Penny 未接受；R13 遮罩身分編輯未送出（遮罩白黑定義無法確認，依停止規則不送）；R13 第二次：遮罩已依主管要求對照原圖調整（涵蓋下顎與上頸、離開背景），遮罩白黑定義與上傳費用仍無法確認，依停止規則未上傳、未送出、未扣款；R22：依指令一併處理：用既有 Soul 純文字生成冬季雪景兩種景別新候選 2 張（不沿用遮罩或底稿流程），待 Penny 選擇；R23：Penny 在 R22 選片頁（fbf5674）定案 V-somi-oh-R22-B",
@@ -591,7 +592,7 @@
    "layout_acceptance": "accepted",
    "layout_file": "docs/calendar/data/cal_m5_layout_r26.json",
    "layout_acceptance_record": "docs/calendar/data/cal_m5_owner_r27.json",
-   "cover": "r27_all_rejected_single_identity_test",
+   "cover": "r29_single_fix_owner_check",
    "cover_file": "docs/calendar/data/cal_m5_cover_r27.json",
    "cover_generated_log": {
     "M-5 R27": 4
@@ -602,6 +603,9 @@
    },
    "cover_edit_log": {
     "M-5 R28": 1
+   },
+   "cover_local_fix_log": {
+    "M-5 R29": 1
    }
   }
  },
@@ -9977,6 +9981,40 @@
     "where": "status.production.definitions.cover_edit_log",
     "old": "（無）",
     "new": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加"
+   }
+  ]
+ },
+ "m5r29": {
+  "from_commit": "f98c88bb526227a7a91748f22a92cf198ac759b5",
+  "owner": "docs/calendar/data/cal_m5_owner_r29.json",
+  "trial": "docs/calendar/data/cal_m5_r29_trial.json",
+  "fix": "docs/calendar/data/cal_m5_r29_skin.json",
+  "page": "docs/calendar/data/cal_cover_r29_page.json",
+  "status_line": "M-5 R29：主管看圖覆核 R28（Coco 臉部身分明顯恢復、方向部分通過；胸口／右手／腿比臉深）。本輪只做本機免費修正（生成 0、付費 0、上傳 0）：從 R28 另存膚色修正版，只調 Coco 的脖子＋胸口、右手、雙腿（含 R28 漏蓋的左小腿下段）的色相、飽和度與小幅明暗；臉與其他人不動。胸口與手已和臉連貫，腿仍略深。更正 R28 紀錄：回填範圍內誤含 Rainie 前臂與 Mia 腳背各一小塊；生成失敗的臉部尺寸等只是可能因素；重做率 30% 只是情境假設。待 Penny 確認單人效果；不批准其他角色或另一款封面。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "status.production.cover",
+    "old": "r27_all_rejected_single_identity_test",
+    "new": "r29_single_fix_owner_check"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.cover_local_fix_log",
+    "old": "（無）",
+    "new": "{\"M-5 R29\": 1}"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.cover",
+    "old": "封面狀態；M-5 R27 候選 4 張；M-5 R28 起 r27_all_rejected_single_identity_test＝Penny 退回 R27 全部 4 張（無已選封面、無已接受方向），只做了 H-A 裡 Coco 的單人身分測試（不是完成的封面）",
+    "new": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.cover_local_fix_log",
+    "old": "（無）",
+    "new": "封面本機修正次數（每輪；免費、不生成、不上傳），與生成張數、局部身分編輯次數分開計算"
    }
   ]
  }

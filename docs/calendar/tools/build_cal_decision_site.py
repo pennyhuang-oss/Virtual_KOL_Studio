@@ -407,7 +407,7 @@ def build_m3(mat):
             P['m4r13b']['from_commit'], P['m4r14']['from_commit'],
             P['m4r15']['from_commit'], P['m4r16']['from_commit'],
             P['m4r17']['from_commit'], P['m4r17b']['from_commit'],
-            P['m4r18']['from_commit'], P['m4r19']['from_commit'], P['m4r20']['from_commit'], P['m4r21']['from_commit'], P['m4r22']['from_commit'], P['m4r23']['from_commit'], P['m4r24']['from_commit'], P['m4r25']['from_commit'], P['m5r26']['from_commit'], P['m5r27']['from_commit'], P['m5r28']['from_commit']}   # commit SHA，不是私有 ID
+            P['m4r18']['from_commit'], P['m4r19']['from_commit'], P['m4r20']['from_commit'], P['m4r21']['from_commit'], P['m4r22']['from_commit'], P['m4r23']['from_commit'], P['m4r24']['from_commit'], P['m4r25']['from_commit'], P['m5r26']['from_commit'], P['m5r27']['from_commit'], P['m5r28']['from_commit'], P['m5r29']['from_commit']}   # commit SHA，不是私有 ID
     hexes = set(re.findall(r'(?<![0-9a-z])[0-9a-f]{8,}(?:-[0-9a-f]{4,})*', json.dumps(P, ensure_ascii=False)))
     assert hexes <= shas, f'企劃資料出現疑似 ID：{sorted(hexes - shas)}'  # 不放 Soul ID、job_id（連 repo 內的來源欄位也檢查）
     return {**pub, 'plan_file': M3_FILE, 'plan_blob': blob_of(raw), 'aaliya_img': aal}
@@ -645,7 +645,8 @@ def build_pick():
     FN = json.loads(wt_bytes(FINAL_FILE))
     assert PR['owner_selection'] == 'complete' and PR['prepress_check'] == 'in_progress' and PR['print_approval'] == 'not_given' and PR['final_list'] == FINAL_FILE
     assert PR['layout_preview'] == 'owner_reviewed' and PR['layout_acceptance'] == 'accepted' and PR['layout_file'] == LAYOUT_FILE   # M-5 R26：排版接受與照片接受分開；R27 Penny 接受
-    assert PR['layout_acceptance_record'] == COVER_OWNER and PR['cover'] == 'r27_all_rejected_single_identity_test' and PR['cover_file'] == COVER_FILE   # M-5 R28：R27 全退回
+    assert PR['layout_acceptance_record'] == COVER_OWNER and PR['cover'] == 'r29_single_fix_owner_check' and PR['cover_file'] == COVER_FILE   # M-5 R28 R27 全退回；R29 單人修正待 Penny 確認
+    assert PR['cover_local_fix_log'] == {'M-5 R29': 1}
     assert PR['generated_cumulative'] == 85 and PR['cover_generated_log'] == {'M-5 R27': 4} and PR['cover_edit_log'] == {'M-5 R28': 1}   # 封面張數另計，不併入月面照片
     assert PR['pick_sets'] == [] and PR['selected_edit_sets'] == [] and PR['rejected_sets'] == [] and sorted(PR['accepted_sets']) == sorted(x['id'] for x in P['sets'])
     fin = K['final']
@@ -792,7 +793,7 @@ COVER_IDENT = 'docs/calendar/data/cal_m5_r27_identity.json'
 COVER_OWNER = 'docs/calendar/data/cal_m5_owner_r27.json'
 COVER_DIR = os.path.join(PUB, 'cover')
 COVER_JS_HEAD = ('// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。排版頁（layout.html）封面比較區的資料，'
-                 '來源 docs/calendar/data/cal_m5_cover_r27.json、cal_m5_r27_trial.json、cal_cover_r27_page.json 與 M-5 R28 的 cal_m5_r28_*.json、cal_cover_r28_page.json\nwindow.CAL_COVER = ')
+                 '來源 docs/calendar/data/cal_m5_cover_r27.json、cal_m5_r27_trial.json、cal_cover_r27_page.json、M-5 R28／R29 的 cal_m5_r28_*.json、cal_m5_r29_*.json 與頁面文字\nwindow.CAL_COVER = ')
 CHECK_MARK = {'pass': '通過', 'partial': '部分', 'fail': '未通過'}
 # M-5 R28：R27 四張 Owner 已退回；H-A 裡 Coco 的單人身分測試（build_cal_m5_coco_r28.py 產生 public/cover28/）
 R28_FILE = 'docs/calendar/data/cal_m5_r28_coco_test.json'
@@ -800,6 +801,12 @@ R28_PAGE = 'docs/calendar/data/cal_cover_r28_page.json'
 R28_TRIAL = 'docs/calendar/data/cal_m5_r28_trial.json'
 R28_OWNER = 'docs/calendar/data/cal_m5_owner_r28.json'
 R28_DIR = os.path.join(PUB, 'cover28')
+# M-5 R29：Coco 單人膚色修正（本機、免費；build_cal_m5_coco_r29.py 產生 public/cover29/）
+R29_FILE = 'docs/calendar/data/cal_m5_r29_skin.json'
+R29_PAGE = 'docs/calendar/data/cal_cover_r29_page.json'
+R29_TRIAL = 'docs/calendar/data/cal_m5_r29_trial.json'
+R29_OWNER = 'docs/calendar/data/cal_m5_owner_r29.json'
+R29_DIR = os.path.join(PUB, 'cover29')
 
 
 def cover_files_diff(C, d=COVER_DIR):
@@ -876,6 +883,30 @@ def build_cover():
                                   'after': {'view': img8('r28_after_v.jpg'), 'full': img8('r28_after_f.jpg')},
                                   'crop_before': img8('r28_crop_before.jpg'), 'crop_after': img8('r28_crop_after.jpg'),
                                   'face': img8('r28_face_cmp.jpg'), 'region': img8('r28_region_v.jpg'), 'diffmap': img8('r28_diff_v.jpg')}}})
+    # M-5 R29：單人膚色修正的效果確認（只有「可以／還要修改」與備註；不是封面接受）
+    Z = json.loads(wt_bytes(R29_FILE))
+    P9 = json.loads(wt_bytes(R29_PAGE))
+    T9 = json.loads(wt_bytes(R29_TRIAL))
+    O9 = json.loads(wt_bytes(R29_OWNER))
+    assert Z['round'] == P9['round'] == T9['round'] == O9['round'] == 'M-5 R29' and P9['feedback_key'] == 'cal2027-cover-r29-v1'
+    assert O9['authorization']['generation'] == O9['authorization']['paid'] == O9['authorization']['upload'] == 0
+    assert [o['label'] for o in P9['options']] == ['單人修正效果可以', '還要修改（寫在備註）'] and O9['page_options'] == ['單人修正效果可以', '還要修改']
+    d9 = cover_files_diff(Z, R29_DIR)
+    assert not d9, f'R29 修正版檔案與紀錄不同：{d9[:5]}'
+    assert Z['diff']['vs_r28_changed_outside_skin_mask_px'] == 0 and Z['diff']['vs_r27_changed_outside_crop_px'] == 0, '修正只在 Coco 皮膚範圍內'
+
+    def img9(fn):
+        im = Image.open(os.path.join(R29_DIR, fn))
+        return {'src': 'cover29/' + fn, 'w': im.width, 'h': im.height}
+    pub.update({'round': P9['round'], 'title': P9['title'], 'intro': P9['intro'],
+                'fix': {k: P9[k] for k in ('fix_label', 'fix_title', 'fix_scope', 'fix_changed', 'fix_remaining', 'options', 'feedback_key', 'note_label', 'r28_label')} | {
+                    'verdict_text': T9['verdict_text'],
+                    'checks': [{'area': c['area'], 'result': c['result'], 'note': c['note']} for c in T9['checks']],
+                    'corrections': [f"{c['what']}：{c['measured']}。{c['fix']}" for c in T9['r28_corrections']],
+                    'imgs': {'before': pub['test']['imgs']['after'], 'after': {'view': img9('r29_after_v.jpg'), 'full': img9('r29_after_f.jpg')},
+                             'coverscale': img9('r29_coverscale.jpg'), 'face': img9('r29_face_cmp.jpg'),
+                             'parts': [{'k': k, 'zh': zh, **img9(f'r29_part_{k}.jpg')} for k, zh in (('neck_chest', '脖子與胸口'), ('hand', '右手'), ('legs', '腿'), ('face', '臉'))],
+                             'mask': img9('r29_mask_v.jpg'), 'diffmap': img9('r29_diff_v.jpg')}}})
     text = json.dumps(pub, ensure_ascii=False)
     for bad in ('kols/', 'job', 'soul', 'review/calendar', 'credit', 'prompt', 'docs/', 'nano', 'media', 'image 1', 'she wears'):
         assert bad not in text.lower(), bad
@@ -1213,6 +1244,10 @@ def check(hf_dir=None, clean_dir=None):
     cd8 = cover_files_diff(C8, R28_DIR)
     if cd8:
         print('R28 單人測試檔案與紀錄不同：', cd8[:5]); bad += 1
+    C9 = json.loads(wt_bytes(R29_FILE))
+    cd9 = cover_files_diff(C9, R29_DIR)
+    if cd9:
+        print('R29 修正版檔案與紀錄不同：', cd9[:5]); bad += 1
     try:
         cov_js = COVER_JS_HEAD + json.dumps(build_cover(), ensure_ascii=False, indent=1, sort_keys=True) + ';\n'
         if open(os.path.join(PUB, 'cover-data.js'), encoding='utf-8').read() != cov_js:
@@ -1228,7 +1263,7 @@ def check(hf_dir=None, clean_dir=None):
     n = {k: sum(e['kind'] == k for e in man['files']) for k in ('copy', 'crop', 'hires_preview', 'thumbnail')}
     nr = sum(e['kind'].startswith('review_') for e in man['files'])
     npk = sum(e['kind'].startswith('pick_') for e in man['files'])
-    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、舊檢視頁 {nr}、選片頁 {npk}）＋排版預覽 {len(LY["files"])} 檔＋封面候選 {len(CV["files"])} 檔＋單人測試 {len(C8["files"])} 檔，問題 {bad}；公開檔無私有識別碼、無交易原始資料'
+    print(f'{"FAIL" if bad else "PASS"}: {len(man["files"])} 檔（copy {n["copy"]}、crop {n["crop"]}、高解析預覽 {n["hires_preview"]}、thumbnail {n["thumbnail"]}、舊檢視頁 {nr}、選片頁 {npk}）＋排版預覽 {len(LY["files"])} 檔＋封面候選 {len(CV["files"])} 檔＋單人測試 {len(C8["files"])} 檔＋單人修正 {len(C9["files"])} 檔，問題 {bad}；公開檔無私有識別碼、無交易原始資料'
           + (f'；未提供快取、只核對 sha256 的高解析預覽：{", ".join(not_recomputed)}' if not_recomputed else ''))
     return 1 if bad else 0
 

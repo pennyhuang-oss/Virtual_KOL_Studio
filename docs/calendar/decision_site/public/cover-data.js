@@ -1,4 +1,4 @@
-// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。排版頁（layout.html）封面比較區的資料，來源 docs/calendar/data/cal_m5_cover_r27.json、cal_m5_r27_trial.json、cal_cover_r27_page.json 與 M-5 R28 的 cal_m5_r28_*.json、cal_cover_r28_page.json
+// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。排版頁（layout.html）封面比較區的資料，來源 docs/calendar/data/cal_m5_cover_r27.json、cal_m5_r27_trial.json、cal_cover_r27_page.json、M-5 R28／R29 的 cal_m5_r28_*.json、cal_m5_r29_*.json 與頁面文字
 window.CAL_COVER = {
  "accepted": {
   "items": [
@@ -629,6 +629,141 @@ window.CAL_COVER = {
  },
  "cover_note": "照片本身沒有文字；「2027」與 DESK CALENDAR 是本機排上去的，沒有放品牌或 Logo（品牌名稱未提供）。頁面含 2 mm 出血；開「參考線」可看裁切線、線圈假設區與安全區。",
  "feedback_key": "cal2027-cover-r27-v1",
+ "fix": {
+  "checks": [
+   {
+    "area": "臉",
+    "note": "五官、髮型與身分基準一致（與 R28 相同）",
+    "result": "未改動"
+   },
+   {
+    "area": "脖子",
+    "note": "下巴到脖子沒有接縫，色調和臉一致",
+    "result": "自然"
+   },
+   {
+    "area": "胸口",
+    "note": "不再偏橙，和臉、脖子連貫；鎖骨陰影與項鍊保留，衣領邊緣沒有色暈",
+    "result": "自然"
+   },
+   {
+    "area": "右手",
+    "note": "和臉、胸口同一色調；手指陰影保留，袖口與裙子邊緣沒有滲色",
+    "result": "自然"
+   },
+   {
+    "area": "腿",
+    "note": "橙色明顯減少、左小腿下段已接上；在椅前陰影裡仍比臉深一些，放大看像偏小麥色，封面尺寸不明顯；鞋口邊緣乾淨",
+    "result": "大致自然，仍略深"
+   },
+   {
+    "area": "相鄰人物",
+    "note": "Rainie 前臂與 Mia 腳背已排除在本輪修正外（量測只剩 JPEG 誤差）；其他人與背景本輪 0 像素改動",
+    "result": "本輪未改動"
+   }
+  ],
+  "corrections": [
+   "R28 回填範圍蓋到 Rainie 前臂一小塊（Coco 頭髮後方，約 4,000 像素）：該處被編輯結果取代，與 R27 原圖平均差 13.9/255、37% 像素差超過 10。本輪未還原（不在授權範圍）；可免費還原成 R27 原圖，待決",
+   "R28 回填範圍蓋到 Mia 腳背一小塊（約 3,900 像素）：與 R27 原圖平均差 2.3/255，目視幾乎相同。本輪未還原；可一併還原，待決",
+   "R28 回填範圍沒有蓋到 Coco 左小腿下段與腳踝：這一截仍是 R27 原圖的深膚色。本輪已用本機調色處理（屬 Coco 可見皮膚）",
+   "R28 紀錄「其他 11 人與背景 0 像素改動」：0 是「回填範圍外」的量測；回填範圍內含上述兩小塊別人。更正為「回填範圍外 0 改動；範圍內誤含 Rainie 前臂與 Mia 腳背各一小塊」"
+  ],
+  "feedback_key": "cal2027-cover-r29-v1",
+  "fix_changed": "比上一輪多做的事：胸口、右手、腿的膚色調得和臉一致（降低偏橙、稍微提亮，保留原本的光影）；臉、頭髮、衣服、其他人都沒動。",
+  "fix_label": "單人效果確認，非完成封面",
+  "fix_remaining": "還剩的問題：腿在椅子前的陰影裡，仍比臉略深一些，放大看得出來；封面尺寸不明顯。",
+  "fix_scope": "這是單人效果確認：只問 Coco 這一個人修得好不好。不等於接受整張封面，也不代表授權修正其他角色或另一款封面。H-A 只是測試底圖，R27 四張仍是你已退回的。",
+  "fix_title": "Coco 單人修正：膚色調順後的效果",
+  "imgs": {
+   "after": {
+    "full": {
+     "h": 3584,
+     "src": "cover29/r29_after_f.jpg",
+     "w": 4800
+    },
+    "view": {
+     "h": 1195,
+     "src": "cover29/r29_after_v.jpg",
+     "w": 1600
+    }
+   },
+   "before": {
+    "full": {
+     "h": 3584,
+     "src": "cover28/r28_after_f.jpg",
+     "w": 4800
+    },
+    "view": {
+     "h": 1195,
+     "src": "cover28/r28_after_v.jpg",
+     "w": 1600
+    }
+   },
+   "coverscale": {
+    "h": 924,
+    "src": "cover29/r29_coverscale.jpg",
+    "w": 1068
+   },
+   "diffmap": {
+    "h": 1195,
+    "src": "cover29/r29_diff_v.jpg",
+    "w": 1600
+   },
+   "face": {
+    "h": 394,
+    "src": "cover29/r29_face_cmp.jpg",
+    "w": 730
+   },
+   "mask": {
+    "h": 875,
+    "src": "cover29/r29_mask_v.jpg",
+    "w": 520
+   },
+   "parts": [
+    {
+     "h": 324,
+     "k": "neck_chest",
+     "src": "cover29/r29_part_neck_chest.jpg",
+     "w": 730,
+     "zh": "脖子與胸口"
+    },
+    {
+     "h": 234,
+     "k": "hand",
+     "src": "cover29/r29_part_hand.jpg",
+     "w": 590,
+     "zh": "右手"
+    },
+    {
+     "h": 624,
+     "k": "legs",
+     "src": "cover29/r29_part_legs.jpg",
+     "w": 1090,
+     "zh": "腿"
+    },
+    {
+     "h": 374,
+     "k": "face",
+     "src": "cover29/r29_part_face.jpg",
+     "w": 650,
+     "zh": "臉"
+    }
+   ]
+  },
+  "note_label": "備註（例如哪裡還不自然）",
+  "options": [
+   {
+    "label": "單人修正效果可以",
+    "v": "ok"
+   },
+   {
+    "label": "還要修改（寫在備註）",
+    "v": "edit"
+   }
+  ],
+  "r28_label": "R28 單人身分測試（上一輪的技術紀錄）",
+  "verdict_text": "胸口、右手和臉已自然連貫；腿的橙色明顯減少並和小腿下段接上，但仍比臉略深（陰影位置合理，放大看得出）。本機調整到這裡已接近極限，再提亮腿會變灰變平；是否接受交給 Penny 判斷。"
+ },
  "formats": {
   "H": {
    "H": 155,
@@ -666,7 +801,7 @@ window.CAL_COVER = {
   "無法判定"
  ],
  "history_label": "R26 排版回饋（你在這台裝置填過的內容，保留不動）",
- "intro": "R27 四張封面你已全部退回。這一輪只做一個技術測試：把 H-A 裡的 Coco 換回本人；不是完成的封面，H-A 也不代表你接受它的構圖。下面是你已接受的內頁排版。",
+ "intro": "這一輪只把上一輪 Coco 的膚色在本機調順（免費、沒有重新生成）。請看 Coco 這一個人的效果；這不是完成的封面。下面是你已接受的內頁排版。",
  "made": "4 張候選（橫式、直式各 A／B），每張 1 次生成；12 位用各自的身分參考圖一起送入。",
  "r26_cover_label": "R26 暫用封面（12 張縮圖；正式封面尚未決定）",
  "r27": {
@@ -680,7 +815,7 @@ window.CAL_COVER = {
   "note": "你的回饋原文已存檔；這 4 張不再提供選擇。",
   "title": "R27 封面候選（4 張，Owner 已全部退回）"
  },
- "round": "M-5 R28",
+ "round": "M-5 R29",
  "task": "TASK-CAL-001",
  "test": {
   "checks": [
@@ -696,7 +831,7 @@ window.CAL_COVER = {
    },
    {
     "item": "其餘 11 人、姿態、服裝、背景及構圖是否被改動",
-    "note": "量測：裁切範圍外與遮罩外的像素完全沒變；Coco 的姿勢、頭部角度、衣服、項鍊、鞋子維持原樣",
+    "note": "量測：裁切範圍外與遮罩外的像素完全沒變；Coco 的姿勢、頭部角度、衣服、項鍊、鞋子維持原樣（M-5 R29 更正：回填範圍外 0 改動；但回填範圍內誤含 Rainie 前臂約 4,000 像素〔平均差 13.9/255〕與 Mia 腳背約 3,900 像素〔平均差 2.3/255〕）",
     "result": "通過"
    },
    {
@@ -766,5 +901,5 @@ window.CAL_COVER = {
   "verdict": "未通過",
   "verdict_text": "依「任何一項不過就記失敗」：第 2 項膚色一致性只算部分通過，整體記失敗。可以確定的是：臉部身分這一項成功（第 1 項），範圍也確實只限 Coco 本人（第 3 項）。未繼續修其他人。"
  },
- "title": "2027 桌曆｜封面（單人身分測試）與排版"
+ "title": "2027 桌曆｜封面（Coco 單人效果確認）與排版"
 };

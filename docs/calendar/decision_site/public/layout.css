@@ -130,3 +130,12 @@ details.hist > summary { font-weight: 700; }
 details.r27 > summary { font-weight: 700; }
 .fbq { margin: .3em 0; padding-left: 1.2em; font-size: .9rem; }
 #test-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+
+/* M-5 R29：Coco 單人修正效果確認 */
+.tsec.fix { border-color: #8fb5e8; background: #f6f9ff; }
+.tf.wide { max-width: 980px; }
+.tf.mid { max-width: 620px; }
+.tparts { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 980px; }
+details.r28 > summary { font-weight: 700; }
+#fix-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+@media (max-width: 760px) { .tparts { grid-template-columns: minmax(0, 1fr); } }

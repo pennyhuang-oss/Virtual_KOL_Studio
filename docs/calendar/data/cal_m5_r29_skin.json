@@ -1,0 +1,191 @@
+{
+ "round": "M-5 R29",
+ "note": "Coco 單人校正的本機膚色修正版（從 R28 結果另存，不覆蓋 R28）。只改脖子＋胸口、右手、雙腿的皮膚；臉、頭髮、衣服、背景、其他人不動。生成 0、付費 0、上傳 0。",
+ "source": {
+  "r27_sha256": "278ce0954d3a5527c418a25de527a0cb82fe9f5e958ea27eede2c9ce38aae6f5",
+  "r28_edit_sha256": "724d675fbc9baf50d827539f90951f422343e77080a00af76a71c008de377e5d"
+ },
+ "method": "分割遮罩（mediapipe 身體皮膚）∩ R28 回填範圍 → 只留 Coco 的大塊 → 引導濾波柔邊；CIELAB：a/b 的低頻色偏換成目標、細部保留；L 整塊小幅提升；不銳化",
+ "parts": {
+  "neck_chest": {
+   "before_Lab": [
+    56.6,
+    19.2,
+    27.8
+   ],
+   "after_Lab": [
+    60.9,
+    15.0,
+    22.6
+   ],
+   "target_ab": [
+    15.0,
+    22.5
+   ],
+   "dL": 4.5,
+   "sigma_px": 22,
+   "mask_sha256": "2a6c516fb0ecb010b328d46786e472ce16fcd59b9cc2db43c4f293ed8711b2a1",
+   "mask_px": 46754
+  },
+  "hand": {
+   "before_Lab": [
+    51.1,
+    25.3,
+    25.8
+   ],
+   "after_Lab": [
+    55.7,
+    17.5,
+    22.6
+   ],
+   "target_ab": [
+    17.0,
+    22.5
+   ],
+   "dL": 5.0,
+   "sigma_px": 14,
+   "mask_sha256": "e4f13e64973e36dc52337211c19aea2cb34dc201661e916389a1cf08b9f3be3c",
+   "mask_px": 10061
+  },
+  "legs": {
+   "before_Lab": [
+    49.3,
+    23.7,
+    26.6
+   ],
+   "after_Lab": [
+    55.2,
+    17.0,
+    23.0
+   ],
+   "target_ab": [
+    17.0,
+    23.0
+   ],
+   "dL": 6.0,
+   "sigma_px": 26,
+   "mask_sha256": "505965a735b4e8fac1e5d2198ae3f1f15606a298b87a689249f84224cfd04180",
+   "mask_px": 76682
+  },
+  "lower_shin": {
+   "before_Lab": [
+    50.4,
+    20.8,
+    25.1
+   ],
+   "after_Lab": [
+    57.6,
+    17.1,
+    23.1
+   ],
+   "target_ab": [
+    17.0,
+    23.0
+   ],
+   "dL": 7.63,
+   "sigma_px": 20,
+   "mask_sha256": "96f3d38032b2d119fb69d9b7919a22de78d03d329b9a3b72785872d76150b132",
+   "mask_px": 11458
+  }
+ },
+ "diff": {
+  "tolerance": "任一通道差 > 3（0–255）才算改動",
+  "vs_r28_changed_px": 128873,
+  "vs_r28_changed_outside_skin_mask_px": 0,
+  "skin_mask_px": 144127,
+  "vs_r27_changed_outside_r28_region_px": 6270,
+  "vs_r27_changed_outside_crop_px": 0
+ },
+ "files": [
+  {
+   "path": "r29_after_f.jpg",
+   "sha256": "2c049dd4636acd3a67ce53270d971749ff2ac76d40c56b2cb0781e475bfc7a3f",
+   "px": [
+    4800,
+    3584
+   ],
+   "bytes": 1611890
+  },
+  {
+   "path": "r29_after_v.jpg",
+   "sha256": "e155443b5a095a886b6b086e0f8b6a1baa59ec287f204904271f4e41acf96c30",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 235978
+  },
+  {
+   "path": "r29_coverscale.jpg",
+   "sha256": "671967bcc5efbd476bae7ebeee6b27723f654f7db7f04574b09bf1aef746a8b9",
+   "px": [
+    1068,
+    924
+   ],
+   "bytes": 221563
+  },
+  {
+   "path": "r29_diff_v.jpg",
+   "sha256": "940832698eef29e7e54a7b2a7953ecf87a006e13fa5abbfc819df6add97946d0",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 36018
+  },
+  {
+   "path": "r29_face_cmp.jpg",
+   "sha256": "654a86dda99aa6f80744b516b742a6f56908e4db7a4dd6618eab41105a8cab28",
+   "px": [
+    730,
+    394
+   ],
+   "bytes": 61373
+  },
+  {
+   "path": "r29_mask_v.jpg",
+   "sha256": "601de71db3ef5b5ce9641030e88f628fc6e02cefd7aac08334bca85098ca838c",
+   "px": [
+    520,
+    875
+   ],
+   "bytes": 16191
+  },
+  {
+   "path": "r29_part_face.jpg",
+   "sha256": "b9afde3b99dca6f54af4f24bc7cf88bd2f1982068f855761343c6441e18c01f2",
+   "px": [
+    650,
+    374
+   ],
+   "bytes": 62277
+  },
+  {
+   "path": "r29_part_hand.jpg",
+   "sha256": "bcaf7f7364c23106162c847ae4223aa3b5427b8b1fe0f47d05c8c79e2d1d0c78",
+   "px": [
+    590,
+    234
+   ],
+   "bytes": 28673
+  },
+  {
+   "path": "r29_part_legs.jpg",
+   "sha256": "1abbdb5aee6b2272cad3946244610e0435cea495c095cb7ffff54d8038018482",
+   "px": [
+    1090,
+    624
+   ],
+   "bytes": 103985
+  },
+  {
+   "path": "r29_part_neck_chest.jpg",
+   "sha256": "998a1917c9f524d06f8ebb830fd4d4de6eb47427304aba4db6091a70c81064de",
+   "px": [
+    730,
+    324
+   ],
+   "bytes": 48926
+  }
+ ]
+}

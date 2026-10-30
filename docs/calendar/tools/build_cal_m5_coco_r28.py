@@ -105,14 +105,11 @@ def row(ims, gap=10):
     return out
 
 
-def build(raw_dir, edit_path, edit_sha, pub, data_path):
-    if os.path.isdir(pub):
-        shutil.rmtree(pub)
-    os.makedirs(pub)
+def compose(raw_dir, edit_path, edit_sha):
+    """R28 的回填合成（無損、可重現）；R29 本機膚色修正也從這裡的 result 出發。"""
     R = json.load(open(os.path.join(ROOT, REGION), encoding='utf-8'))
     orig, _ = load(os.path.join(raw_dir, 'cover_H-A.png'), SRC_SHA)
     edit_raw, esha = load(edit_path, edit_sha)
-    ref, _ = load(os.path.join(ROOT, REF), REF_SHA)
     x0, y0, x1, y1 = R['crop']
     cw, ch = x1 - x0, y1 - y0
     oc = orig.crop((x0, y0, x1, y1))
@@ -124,6 +121,20 @@ def build(raw_dir, edit_path, edit_sha, pub, data_path):
     comp_c = (O * (1 - mask[..., None]) + E * mask[..., None]).round().clip(0, 255).astype(np.uint8)
     result = orig.copy()
     result.paste(Image.fromarray(comp_c), (x0, y0))
+    return {'R': R, 'orig': orig, 'result': result, 'oc': oc, 'ed': ed, 'mask': mask, 'comp_c': comp_c, 'O': O, 'E': E,
+            'M': M, 'cc': cc, 'keep_share': keep_share, 'edit_raw': edit_raw, 'esha': esha}
+
+
+def build(raw_dir, edit_path, edit_sha, pub, data_path):
+    if os.path.isdir(pub):
+        shutil.rmtree(pub)
+    os.makedirs(pub)
+    K = compose(raw_dir, edit_path, edit_sha)
+    R, orig, result, oc, ed, mask, comp_c, O, E = (K[k] for k in ('R', 'orig', 'result', 'oc', 'ed', 'mask', 'comp_c', 'O', 'E'))
+    M, cc, keep_share, edit_raw, esha = (K[k] for k in ('M', 'cc', 'keep_share', 'edit_raw', 'esha'))
+    ref, _ = load(os.path.join(ROOT, REF), REF_SHA)
+    x0, y0, x1, y1 = R['crop']
+    cw, ch = x1 - x0, y1 - y0
     # 差異紀錄（原生像素）
     A, B = np.asarray(orig), np.asarray(result)
     ch_all = changed(A, B)

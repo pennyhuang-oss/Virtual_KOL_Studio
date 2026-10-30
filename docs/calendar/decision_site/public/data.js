@@ -8586,6 +8586,40 @@ window.CAL_DATA = {
    "test": "docs/calendar/data/cal_m5_r28_coco_test.json",
    "trial": "docs/calendar/data/cal_m5_r28_trial.json"
   },
+  "m5r29": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "r29_single_fix_owner_check",
+     "old": "r27_all_rejected_single_identity_test",
+     "where": "status.production.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "{\"M-5 R29\": 1}",
+     "old": "（無）",
+     "where": "status.production.cover_local_fix_log"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+     "old": "封面狀態；M-5 R27 候選 4 張；M-5 R28 起 r27_all_rejected_single_identity_test＝Penny 退回 R27 全部 4 張（無已選封面、無已接受方向），只做了 H-A 裡 Coco 的單人身分測試（不是完成的封面）",
+     "where": "status.production.definitions.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面本機修正次數（每輪；免費、不生成、不上傳），與生成張數、局部身分編輯次數分開計算",
+     "old": "（無）",
+     "where": "status.production.definitions.cover_local_fix_log"
+    }
+   ],
+   "fix": "docs/calendar/data/cal_m5_r29_skin.json",
+   "from_commit": "f98c88bb526227a7a91748f22a92cf198ac759b5",
+   "owner": "docs/calendar/data/cal_m5_owner_r29.json",
+   "page": "docs/calendar/data/cal_cover_r29_page.json",
+   "status_line": "M-5 R29：主管看圖覆核 R28（Coco 臉部身分明顯恢復、方向部分通過；胸口／右手／腿比臉深）。本輪只做本機免費修正（生成 0、付費 0、上傳 0）：從 R28 另存膚色修正版，只調 Coco 的脖子＋胸口、右手、雙腿（含 R28 漏蓋的左小腿下段）的色相、飽和度與小幅明暗；臉與其他人不動。胸口與手已和臉連貫，腿仍略深。更正 R28 紀錄：回填範圍內誤含 Rainie 前臂與 Mia 腳背各一小塊；生成失敗的臉部尺寸等只是可能因素；重做率 30% 只是情境假設。待 Penny 確認單人效果；不批准其他角色或另一款封面。",
+   "trial": "docs/calendar/data/cal_m5_r29_trial.json"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9373,7 +9407,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "5b378e0c214df5f507eef69e9b2d23c4148f7391",
+  "plan_blob": "f0f1586847702c09183f357bce387f5467d56e00",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14728,7 +14762,7 @@ window.CAL_DATA = {
      "V-yuna-kim": "V-yuna-kim-R21-A"
     },
     "batch1": "owner-rejected-r6",
-    "cover": "r27_all_rejected_single_identity_test",
+    "cover": "r29_single_fix_owner_check",
     "cover_credits_log": {
      "M-5 R27": 16,
      "M-5 R28": 2
@@ -14740,14 +14774,18 @@ window.CAL_DATA = {
     "cover_generated_log": {
      "M-5 R27": 4
     },
+    "cover_local_fix_log": {
+     "M-5 R29": 1
+    },
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R27 候選 4 張；M-5 R28 起 r27_all_rejected_single_identity_test＝Penny 退回 R27 全部 4 張（無已選封面、無已接受方向），只做了 H-A 裡 Coco 的單人身分測試（不是完成的封面）",
+     "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
      "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
      "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
      "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
+     "cover_local_fix_log": "封面本機修正次數（每輪；免費、不生成、不上傳），與生成張數、局部身分編輯次數分開計算",
      "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",
      "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＋R24 2＝85）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
      "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；M-5 R27 起 accepted＝Penny 接受 R26 頁面（5a82bf9）的推薦排法：橫式照片框完整 16:9（192×108 mm）、橫式與直式推薦排法。排版接受不等於交印核准",
