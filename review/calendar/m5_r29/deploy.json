@@ -1,0 +1,29 @@
+{
+ "note": "M-5 R29 部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "e2e4188475a0f1922f71dfb9fddb9c1472ee63a9",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-10-30T10:14:31Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-10-30T10:25:18Z"
+  }
+ ],
+ "live_page_commit": "e2e4188475a0f1922f71dfb9fddb9c1472ee63a9",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 61 項、定案相簿回歸 18 項；單人修正 10 檔、單人測試 9 檔、R27 封面 16 檔、排版 158 檔 sha256 全符）",
+  "items": [
+   "#cover 最上方是「單人效果確認，非完成封面」：註明不等於接受封面、不授權其他角色",
+   "選項只有「單人修正效果可以」「還要修改（寫在備註）」＋備註＋複製；新鍵 cal2027-cover-r29-v1",
+   "R28／R29 全圖前後切換，可放大到原尺寸 4800 px；封面尺寸比對；Coco 臉、脖子胸口、右手、腿前後並排；臉與身分基準對照",
+   "技術說明、改動範圍圖、差異圖收在展開區；R28 單人測試、R27 已退回收在各自展開區，R28 備註原樣顯示",
+   "選擇與備註重新整理後保留；只寫 cal2027-cover-r29-v1 與 R26 排版鍵，R27／R28 封面鍵、選片等舊鍵原樣保留",
+   "內頁：排版已接受、PDF 下載、28／32 面、照片框比較、參考線、放大全部如前；24 套定案相簿回歸 18 項全過",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動"
+  ],
+  "public_files": "線上 cover29 10 檔、cover28 9 檔、cover 16 檔、layout 158 檔逐檔 sha256 相同；圖片無 EXIF／ICC／註解；cover-data.js 與 repo 相同；選片頁 182 檔無私有 ID；無平台任務識別、無私有 ID（比對 M-4／M-5 私有紀錄 130 個 UUID 與 CDN 帳號路徑）"
+ }
+}
