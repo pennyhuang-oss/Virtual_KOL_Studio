@@ -1,0 +1,16 @@
+{
+ "note": "排版頁（layout.html#cover）M-5 R28 的文字（人寫）：R27 四張標 Owner 已退回；Coco 單人身分測試的說明。圖片由 docs/calendar/tools/build_cal_m5_coco_r28.py 產生，驗收見 cal_m5_r28_trial.json。",
+ "round": "M-5 R28",
+ "title": "2027 桌曆｜封面（單人身分測試）與排版",
+ "intro": "R27 四張封面你已全部退回。這一輪只做一個技術測試：把 H-A 裡的 Coco 換回本人；不是完成的封面，H-A 也不代表你接受它的構圖。下面是你已接受的內頁排版。",
+ "test_label": "單人身分測試，非完成封面",
+ "test_title": "H-A 裡的 Coco：單人身分校正測試",
+ "test_scope": "只重畫 Coco 一個人（頭髮臉部到胸口、右手、雙腿）；其他 11 人與背景沒有經過重新生成。H-A 只是測試底圖，不代表接受它的構圖、服裝或方向。",
+ "feedback_key": "cal2027-cover-r28-v1",
+ "note_label": "對這次 Coco 單人測試的備註（只記錄意見，不是接受封面）",
+ "r27_label": "Owner 已退回",
+ "r27_title": "R27 封面候選（4 張，Owner 已全部退回）",
+ "r27_note": "你的回饋原文已存檔；這 4 張不再提供選擇。",
+ "not_finished": "完整 12 人流程沒有授權、也沒有開始；要不要做、怎麼做，等主管與你決定。",
+ "r26_cover_label": "R26 暫用封面（12 張縮圖；正式封面尚未決定）"
+}

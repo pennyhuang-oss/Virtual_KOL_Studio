@@ -8539,6 +8539,53 @@ window.CAL_DATA = {
    "status_line": "M-5 R27：Penny 接受 R26 排版（橫式完整 16:9 192×108 mm、兩款推薦排法；排版接受不等於交印核准）。12 人團體封面生成 4 張候選（橫式 A／B、直式 A／B，各 1 次請求、實扣 16 credits、上傳 0、未重試），本機排上「2027」後放到排版頁供 Penny 選。Claude 自查：4 張都是 12 人同場，但沒有一張能確認 12 人身分（H-A、V-A、V-B 各有 1–2 位明顯換成別人；H-B 3 位看不清），不可定案；未補生、未修臉。月面照片 24 張不動。",
    "trial": "docs/calendar/data/cal_m5_r27_trial.json"
   },
+  "m5r28": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "r27_all_rejected_single_identity_test",
+     "old": "candidates_ready_for_owner_choice",
+     "where": "status.production.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "{\"M-5 R27\": 16, \"M-5 R28\": 2}",
+     "old": "{\"M-5 R27\": 16}",
+     "where": "status.production.cover_credits_log"
+    },
+    {
+     "kind": "事實同步",
+     "new": "{\"M-5 R28\": 1}",
+     "old": "（無）",
+     "where": "status.production.cover_edit_log"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面狀態；M-5 R27 候選 4 張；M-5 R28 起 r27_all_rejected_single_identity_test＝Penny 退回 R27 全部 4 張（無已選封面、無已接受方向），只做了 H-A 裡 Coco 的單人身分測試（不是完成的封面）",
+     "old": "封面狀態；M-5 R27 起 candidates_ready_for_owner_choice＝12 人團體封面候選（橫式 A／B、直式 A／B）已排版放上網站，等 Penny 選；Claude 自查身分未全數確認，沒有一張可定案。不等於 Owner 接受",
+     "where": "status.production.definitions.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
+     "old": "封面生成實扣 credits（每輪；上傳身分參考圖 0）",
+     "where": "status.production.definitions.cover_credits_log"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
+     "old": "（無）",
+     "where": "status.production.definitions.cover_edit_log"
+    }
+   ],
+   "from_commit": "9aa94f94f50cf5367987deb39b138648fbc63301",
+   "input_audit": "docs/calendar/data/cal_m5_r28_input_audit.json",
+   "owner": "docs/calendar/data/cal_m5_owner_r28.json",
+   "page": "docs/calendar/data/cal_cover_r28_page.json",
+   "status_line": "M-5 R28：Penny 退回 R27 全部 4 張封面（全部人臉不符），無已選封面或方向；24 張月面照片與兩款內頁排版維持已接受。R27 輸入查核：清單與平台接收都正確（12 張參考、順序、檔案內容一致），失敗在生成結果。H-A 裡 Coco 單人身分測試 1 次（實扣 2 credits、上傳 0）：臉部身分成功、其他 11 人與背景零改動，但臉比胸口／手／小腿白，膚色一致性只算部分通過 → 依規則整體記失敗；未修其他人，12 人流程只估算、待主管與 Penny 決定。",
+   "test": "docs/calendar/data/cal_m5_r28_coco_test.json",
+   "trial": "docs/calendar/data/cal_m5_r28_trial.json"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9326,7 +9373,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "fc7dfcd83b2449bc624b9007425decf0ecea4b8b",
+  "plan_blob": "5b378e0c214df5f507eef69e9b2d23c4148f7391",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14681,9 +14728,13 @@ window.CAL_DATA = {
      "V-yuna-kim": "V-yuna-kim-R21-A"
     },
     "batch1": "owner-rejected-r6",
-    "cover": "candidates_ready_for_owner_choice",
+    "cover": "r27_all_rejected_single_identity_test",
     "cover_credits_log": {
-     "M-5 R27": 16
+     "M-5 R27": 16,
+     "M-5 R28": 2
+    },
+    "cover_edit_log": {
+     "M-5 R28": 1
     },
     "cover_file": "docs/calendar/data/cal_m5_cover_r27.json",
     "cover_generated_log": {
@@ -14692,8 +14743,9 @@ window.CAL_DATA = {
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R27 起 candidates_ready_for_owner_choice＝12 人團體封面候選（橫式 A／B、直式 A／B）已排版放上網站，等 Penny 選；Claude 自查身分未全數確認，沒有一張可定案。不等於 Owner 接受",
-     "cover_credits_log": "封面生成實扣 credits（每輪；上傳身分參考圖 0）",
+     "cover": "封面狀態；M-5 R27 候選 4 張；M-5 R28 起 r27_all_rejected_single_identity_test＝Penny 退回 R27 全部 4 張（無已選封面、無已接受方向），只做了 H-A 裡 Coco 的單人身分測試（不是完成的封面）",
+     "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
+     "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
      "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
      "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",

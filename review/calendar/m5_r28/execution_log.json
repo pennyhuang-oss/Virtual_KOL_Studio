@@ -1,0 +1,120 @@
+{
+ "note": "M-5 R28 私有執行紀錄（含平台 media／任務 ID 與結果網址；不公開）",
+ "round": "M-5 R28",
+ "baseline": {
+  "checked_utc": "2026-10-30T09:05Z",
+  "balance_before": 754.09,
+  "latest_tx_before_utc": "2026-10-30T08:07:50Z（R27 最後一張，已歸入 R27）"
+ },
+ "r27_input_audit": {
+  "source": "job_display 回傳的 params.input_images（4 個任務逐一查）",
+  "result": "4 個任務的 input_images 都是同樣 12 個 media、順序同 R27 uploads（image_no 1–12）；Rin、Miu、Tammy、Yerin、Jia、Somi 的網址是平台自動縮小的 _resize.jpg（1536×2048）",
+  "jobs": {
+   "H-A": "5e1260b5-80aa-4fa2-829b-af39df913dd5",
+   "H-B": "4435cc45-8e84-47f3-b32a-0dafbb1c16d8",
+   "V-A": "61417d44-ed4d-4ce3-99f7-eff64d691b0a",
+   "V-B": "10238d4b-f70d-451b-a3a9-dbc9533da29d"
+  },
+  "media_order": [
+   "db34c8c5-5b83-4722-b98e-2451bb90bded",
+   "7a2b3b85-7bc5-48bb-95c8-3a5fec778bef（_resize）",
+   "86eec0ab-602f-4276-b8f4-12290de9f01c（_resize）",
+   "b50447be-2e14-4367-99b0-9ee44101374f（_resize）",
+   "3e5051a6-19cf-4332-99c8-7aef89997094（_resize）",
+   "b4814492-56b5-4ba1-a1ee-aefdcad24956",
+   "32aa73f7-d7a9-4b79-a8fd-a746a66d8583",
+   "6e5d687d-ddcf-4861-94bd-7740c09fd344",
+   "47f8db50-d3bb-4a53-b262-ad43d7d72c5d（_resize）",
+   "65971ba1-c99a-4082-a7fd-40a10972a91e",
+   "ba49c484-90f1-4152-b7b0-9653ec35388c（_resize）",
+   "119a66bd-d95a-448c-a0af-0643615424eb"
+  ],
+  "downloads": "18 個檔（12 個原檔＋6 個 _resize）逐一下載比對，結果見 docs/calendar/data/cal_m5_r28_input_audit.json"
+ },
+ "coco_ref_reuse": {
+  "media_id": "b4814492-56b5-4ba1-a1ee-aefdcad24956",
+  "file": "review/calendar/m5_r27/refs/ref06_coco-wu.jpg",
+  "sha256": "bcfe9fed346c55584db1c86e2308abbdb79135bb5212c97c721eb72d82308c36",
+  "note": "R27 已上傳、平台存檔與本機位元組相同；本輪沿用，不重新上傳"
+ },
+ "base_crop": {
+  "file": "scratchpad m5r28/work/base_crop_H-A_coco.png（由 review/calendar/m5_r28/prep.py 從 R27 H-A 原圖裁出，可重現）",
+  "sha256": "710f372b26c68a6ca57515a5f53df8e31f9ac592ff4eb0da88a38d9a94b880f2",
+  "px": [
+   945,
+   1680
+  ],
+  "crop": [
+   3430,
+   1475,
+   4375,
+   3155
+  ]
+ },
+ "steps": [],
+ "upload": {
+  "file": "base_crop_H-A_coco.png",
+  "sha256": "710f372b26c68a6ca57515a5f53df8e31f9ac592ff4eb0da88a38d9a94b880f2",
+  "media_id": "1fecd999-7a7d-4f0f-be33-5e65019297e7",
+  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/1fecd999-7a7d-4f0f-be33-5e65019297e7.png",
+  "put_http": "200",
+  "confirm": "uploaded",
+  "verify": "平台存檔下載後 sha256 與本機相同",
+  "cost": "交易清單無新增列（最新仍是 2026-10-30T08:07:50Z R27）→ 0 credits"
+ },
+ "quote": {
+  "utc": "2026-10-30T09:06:43Z",
+  "model": "nano_banana_pro",
+  "resolution": "2k",
+  "aspect_ratio": "9:16",
+  "inputs": [
+   "Image 1＝base crop（1fecd999…）",
+   "Image 2＝Coco ref（b4814492…，R27 既有）"
+  ],
+  "prompt_file": "review/calendar/m5_r28/prompt.txt",
+  "prompt_sha256": "42d2d56e5a1335545703475a616276a212f1bcef940084939581ef10d588dd4f",
+  "credits": 2,
+  "total_planned": 2,
+  "cap": 4,
+  "note": "用實際輸入與最終 prompt 唯讀報價；上傳 0；合計 2 ≤ 4"
+ },
+ "submission": {
+  "intent_utc": "2026-10-30T09:06:43Z",
+  "status": "completed",
+  "rule": "只送 1 次；結果不明查原任務，不補送",
+  "job_id": "98e5830a-29b3-4a68-82fd-2eda3da4e4c3",
+  "submitted_utc": "2026-10-30T09:07:07Z",
+  "echo_check": "平台回傳 params：model nano_banana_pro、aspect 9:16、resolution 2k、reference_images 2 個依序＝base crop、Coco ref；prompt 與 prompt.txt 相同",
+  "platform_model_field": "nano_banana_2（平台內部名稱；交易列顯示 Nano Banana Pro）",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261030_090701_98e5830a-29b3-4a68-82fd-2eda3da4e4c3.png",
+  "result_created_utc": "2026-10-30T09:07:01Z",
+  "local_original": {
+   "path": "scratchpad m5r28/raw/coco_edit.png（含平台任務識別中繼資料，不進 git、不公開）",
+   "sha256": "724d675fbc9baf50d827539f90951f422343e77080a00af76a71c008de377e5d",
+   "px": [
+    1536,
+    2752
+   ],
+   "bytes": 5095550
+  }
+ },
+ "transactions": {
+  "checked_utc": "2026-10-30T09:08Z",
+  "rows": [
+   {
+    "display_name": "Nano Banana Pro",
+    "credits": -2,
+    "created_at": "2026-10-30T09:07:01.958805Z"
+   }
+  ],
+  "total_credits": 2,
+  "attribution": "基準點（R27 最後一列 08:07:50）之後只有這 1 列；上傳 0",
+  "balance_expected_after": 752.09
+ },
+ "completion": {
+  "completed": 1,
+  "failed": 0,
+  "retries": 0,
+  "extra_generation": 0
+ }
+}

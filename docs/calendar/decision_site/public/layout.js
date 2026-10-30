@@ -1,6 +1,7 @@
 // 2027 KOL 桌曆｜排版預覽頁（layout.html，M-5 R26 起）。資料來自 layout-data.js 與 cover-data.js（程式產生）。
 // 依橫式／直式、月份看實際頁面（PDF 點陣化後的圖），可放大、開關參考線；橫式可切換「完整 16:9（推薦）」與「192×104 套框」比較。
-// M-5 R27 起最上面加「封面候選」：橫式、直式各 A／B，可選 A／B／都想修改並寫備註；回饋鍵 cal2027-cover-r27-v1（只放封面選擇，不自動算 Owner 接受）。
+// M-5 R27 起最上面是封面區（#cover）。M-5 R28：R27 四張 Owner 已全部退回（只展示、不再提供選擇；R27 的鍵 cal2027-cover-r27-v1 不讀、不寫、不刪）；
+// 新增「單人身分測試，非完成封面」：前後切換、放大、備註（鍵 cal2027-cover-r28-v1，只存備註；沒有任何接受封面的選項）。
 // R26 的排版回饋（鍵 cal2027-layout-r26-v1）原樣保留在頁面下方；其他鍵（選片、企劃、素材頁）不讀、不寫、不刪。
 // 沒有追蹤或分析，回饋不會自動送出；未選不算接受。
 'use strict';
@@ -26,17 +27,18 @@
   };
   let st = load();
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) { /* 無痕或停用儲存時只在本頁有效 */ } };
-  // 封面選擇（另一個鍵）：dec＝{H, V}、notes＝{H, V, general}
-  const CKEY = C ? C.feedback_key : '';
-  const cload = () => {
-    if (!C) return blank();
+  // 單人身分測試的備註（另一個鍵，只有 notes）
+  const TKEY = C && C.test ? C.test.feedback_key : '';
+  const tload = () => {
+    if (!TKEY) return { notes: {} };
     try {
-      const v = JSON.parse(localStorage.getItem(CKEY) || 'null');
-      return v && typeof v === 'object' ? { dec: v.dec && typeof v.dec === 'object' ? v.dec : {}, notes: v.notes && typeof v.notes === 'object' ? v.notes : {} } : blank();
-    } catch (e) { return blank(); }
+      const v = JSON.parse(localStorage.getItem(TKEY) || 'null');
+      return v && typeof v === 'object' && v.notes && typeof v.notes === 'object' ? { notes: v.notes } : { notes: {} };
+    } catch (e) { return { notes: {} }; }
   };
-  const cst = cload();
-  const csave = () => { try { localStorage.setItem(CKEY, JSON.stringify(cst)); } catch (e) { /* 同上 */ } };
+  const tst = tload();
+  const tsave = () => { try { localStorage.setItem(TKEY, JSON.stringify(tst)); } catch (e) { /* 同上 */ } };
+  let ba = 'after';   // 前後切換：after＝R28 結果、before＝R27 原本
 
   let book = /^#V/.test(location.hash) ? 'V' : 'H';
   let frame = 'B';     // 橫式照片面顯示哪個版本：B＝完整 16:9（推薦）、A＝192×104 套框
@@ -73,57 +75,51 @@
   const coverLegend = () => `<p class="legend"${guides ? '' : ' hidden'}><span class="lg lg-coil"></span>線圈假設區（上緣 12 mm）` +
     `<span class="lg lg-trim"></span>裁切線<span class="lg lg-safe"></span>安全區（橫式＝${esc(L.formats.H.safe_label)}；直式＝${esc(L.formats.V.safe_label)}）</p>`;
 
-  // ---------- 封面候選（M-5 R27） ----------
-  const optLabel = (k, v) => {
-    const o = C.options.find(x => x.v === v); if (!o) return '（未選）';
-    const c = C.cards[k].find(x => x.dir === v);
-    return c ? `${o.label}（${c.dir_zh}）` : o.label;
-  };
-  function coverCard(k, c) {
-    const cap = `${BOOK_ZH[k]}封面 ${c.dir}｜${c.dir_zh}`;
-    const nP = addView({ view: c.photo, full: c.photo }, `${cap}｜照片原圖（無文字）`);
+  // ---------- 封面區：R28 單人身分測試＋R27 已退回 ----------
+  const MARK = { '通過': '✓', '部分': '△', '未通過': '✗' };
+  function r27Card(k, c) {
+    const cap = `R27 ${BOOK_ZH[k]}封面 ${c.dir}｜${c.dir_zh}（Owner 已退回）`;
     const nI = addView({ view: c.ids, full: c.ids }, `${cap}｜臉部對照（左＝身分參考、右＝封面）`);
-    const cnt = C.grades.map(g => `${g} ${c.counts[g]}`).join('｜');
-    const fl = c.flagged.length ? `<br>需注意：${c.flagged.map(x => `${esc(x.name)}（${esc(x.grade)}）`).join('、')}` : '';
-    const mark = { '通過': '✓', '部分': '△', '未通過': '✗' };
-    return `<article class="ccard" id="cover-${c.id}"><h4>${c.dir}｜${esc(c.dir_zh)}</h4>` +
-      faceFig({ ...c.page, face: 'cover' }, k, `${cap}（含 2 mm 出血）`) +
-      `<p class="cverdict"><b>${esc(c.verdict)}</b><br>身分判讀：${esc(cnt)}${fl}</p>` +
-      `<div class="cbtns"><button type="button" class="btn ghost" data-f="${nP}">看照片原圖（無文字）</button><button type="button" class="btn ghost" data-f="${nI}">臉部對照（12 人）</button></div>` +
-      `<details class="more"><summary>7 項檢查</summary><ul class="chk">${c.checks.map(x => `<li><span class="mk">${mark[x.result] || ''} ${esc(x.result)}</span>｜${esc(x.item)}<small>${esc(x.note)}</small></li>`).join('')}</ul></details>` +
-      `<details class="more"><summary>12 人逐一判讀</summary><ul class="ppl">${c.people.map(x => `<li><b>${esc(x.name)}</b>｜${esc(x.grade)}<small>${esc(x.note)}</small></li>`).join('')}</ul></details></article>`;
+    return `<article class="ccard rej" id="cover-${c.id}"><h4>${c.dir}｜${esc(c.dir_zh)} <em class="badge">${esc(C.r27.label)}</em></h4>` +
+      faceFig({ ...c.page, face: 'cover' }, k, cap) +
+      `<div class="cbtns"><button type="button" class="btn ghost" data-f="${nI}">臉部對照（12 人）</button></div></article>`;
+  }
+  function testSection() {
+    const T = C.test, I = T.imgs;
+    const nB = addView(I.before, 'R27 H-A 原本（全圖）'), nA = addView(I.after, 'R28 結果（全圖，只改了 Coco）');
+    const cur = ba === 'after' ? [I.after, nA, 'R28 結果（只改了 Coco）'] : [I.before, nB, 'R27 H-A 原本'];
+    const one = (im, cap) => { const n = addView({ view: im, full: im }, cap); return `<figure class="tf"><button type="button" class="zoom" data-f="${n}" aria-label="放大：${esc(cap)}"><img src="${esc(im.src)}" width="${im.w}" height="${im.h}" alt="${esc(cap)}" loading="lazy"></button><figcaption>${esc(cap)}</figcaption></figure>`; };
+    return `<div class="tsec" id="cover-test"><h3>${esc(T.title)} <em class="badge test">${esc(T.label)}</em></h3>` +
+      `<p class="note">${esc(T.scope)}</p>` +
+      `<p class="cverdict"><b>Claude 自查：${esc(T.verdict)}</b>　${esc(T.verdict_text)}</p>` +
+      `<div class="fsw" role="group" aria-label="前後切換"><span class="fsw-l">全圖：</span>` +
+      `<button type="button" class="seg${ba === 'before' ? ' on' : ''}" data-ba="before" aria-pressed="${ba === 'before'}">R27 原本</button>` +
+      `<button type="button" class="seg${ba === 'after' ? ' on' : ''}" data-ba="after" aria-pressed="${ba === 'after'}">R28 結果</button></div>` +
+      `<figure class="tf big"><button type="button" class="zoom" id="ba-zoom" data-f="${cur[1]}" aria-label="放大：${esc(cur[2])}"><img id="ba-img" src="${esc(cur[0].view.src)}" width="${cur[0].view.w}" height="${cur[0].view.h}" alt="${esc(cur[2])}"></button>` +
+      `<figcaption id="ba-cap">${esc(cur[2])}｜點圖放大；放大後按「原尺寸」看完整解析度</figcaption></figure>` +
+      `<h4>Coco 臉部：身分基準｜R27 原本｜R28 結果</h4>${one(I.face, 'Coco 臉部對照')}` +
+      `<h4>Coco 周圍：原本｜結果</h4><div class="tpair">${one(I.crop_before, 'Coco 周圍｜R27 原本')}${one(I.crop_after, 'Coco 周圍｜R28 結果')}</div>` +
+      `<details class="more"><summary>4 項檢查與改動範圍</summary><ul class="chk">${T.checks.map(x => `<li><span class="mk">${MARK[x.result] || ''} ${esc(x.result)}</span>｜${esc(x.item)}<small>${esc(x.note)}</small></li>`).join('')}</ul>` +
+      `<p class="note">${esc(T.diff)}</p><div class="tpair">${one(I.region, '改動範圍：藍框＝送去編輯的裁切、紅線＝回填範圍')}${one(I.diffmap, '全圖差異：白＝有改動的像素')}</div></details>` +
+      `<p class="note">${esc(T.not_finished)}</p>` +
+      `<label class="nl">${esc(T.note_label)}<textarea rows="3" data-tnote="coco" placeholder="例如：像不像 Coco、哪裡不自然（可留白）">${esc(tst.notes.coco || '')}</textarea></label>` +
+      `<div class="acts"><button type="button" class="btn" id="test-copy">複製備註</button></div>` +
+      `<textarea id="test-text" rows="5" readonly aria-label="備註文字"></textarea></div>`;
   }
   function coverSection() {
-    if (!C) return '';
-    const grp = k => {
-      const f = C.formats[k];
-      return `<div class="cgroup" id="cover-${k}"><h3>${BOOK_ZH[k]}封面（成品 ${f.W - 2 * f.trim}×${f.H - 2 * f.trim} mm）</h3>` +
-        `<div class="cgrid cgrid-${k}">${C.cards[k].map(c => coverCard(k, c)).join('')}</div>` +
-        `<fieldset class="dq"><legend>${BOOK_ZH[k]}封面選哪一張？</legend>` + C.options.map(o =>
-          `<label class="opt"><input type="radio" name="cov-${k}" value="${esc(o.v)}"${cst.dec[k] === o.v ? ' checked' : ''}> <span>${esc(optLabel(k, o.v))}</span></label>`).join('') +
-        `<button type="button" class="lnk" data-cclear="${k}">清除這題</button></fieldset>` + cnote(k, `${BOOK_ZH[k]}封面備註`) + '</div>';
-    };
-    return `<section class="sec" id="cover"><h2>封面候選：請選擇</h2><p class="warn">${esc(C.cover_status)}</p>` +
-      `<p class="note">${esc(C.made)}${esc(C.cover_note)}</p>` +
+    if (!C || !C.test) return '';
+    const grp = k => `<div class="cgroup" id="cover-${k}"><h4>${BOOK_ZH[k]}</h4><div class="cgrid cgrid-${k}">${C.cards[k].map(c => r27Card(k, c)).join('')}</div></div>`;
+    return `<section class="sec" id="cover"><h2>封面</h2>` + testSection() +
+      `<details class="more r27" id="cover-r27"><summary>${esc(C.r27.title)}</summary>` +
+      `<p class="note">${esc(C.r27.note)}</p><ul class="fbq">${C.r27.feedback.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` +
       `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
-      grp('H') + grp('V') + cnote('general', '封面整體備註') +
-      `<div class="acts"><button type="button" class="btn" id="cover-copy">複製封面回饋</button></div>` +
-      `<textarea id="cover-text" rows="7" readonly aria-label="封面回饋文字"></textarea></section>`;
+      grp('H') + grp('V') + '</details></section>';
   }
-  function cnote(key, label) {
-    const v = cst.notes[key] || '';
-    return `<label class="nl">${esc(label)}<textarea rows="2" data-cnote="${esc(key)}" placeholder="想改什麼就寫在這裡（可留白）">${esc(v)}</textarea></label>`;
+  function testText() {
+    return [`${C.task}／${C.round}｜Coco 單人身分測試備註（頁面版本 ${PAGE_COMMIT || '本機預覽'}）`,
+      `這是${C.test.label}；只記錄意見，不是接受封面。`, `備註：${(tst.notes.coco || '').trim() || '（無）'}`].join('\n');
   }
-  function coverText() {
-    const lines = [`${C.task}／${C.round}｜封面回饋（頁面版本 ${PAGE_COMMIT || '本機預覽'}）`, '新候選不是 Owner 接受；這裡只記錄 Penny 的選擇與備註。'];
-    ['H', 'V'].forEach(k => {
-      lines.push(`${BOOK_ZH[k]}封面：${optLabel(k, cst.dec[k])}`);
-      if ((cst.notes[k] || '').trim()) lines.push(`${BOOK_ZH[k]}備註：${cst.notes[k].trim()}`);
-    });
-    lines.push(`整體備註：${(cst.notes.general || '').trim() || '（無）'}`);
-    return lines.join('\n');
-  }
-  const refreshCover = () => { const t = $('#cover-text'); if (t && C) t.value = coverText(); };
+  const refreshCover = () => { const t = $('#test-text'); if (t && C && C.test) t.value = testText(); };
 
   // ---------- 各區 ----------
   function topSection() {
@@ -238,15 +234,25 @@
     if (fr) { if (fr.dataset.frame !== frame) { frame = fr.dataset.frame; render(true); } return; }
     const cl = e.target.closest('[data-clear]');
     if (cl) { delete st.dec[cl.dataset.clear]; save(); app.querySelectorAll(`input[name="dec-${cl.dataset.clear}"]`).forEach(i => { i.checked = false; }); refreshCopy(); return; }
-    const ccl = e.target.closest('[data-cclear]');
-    if (ccl) { delete cst.dec[ccl.dataset.cclear]; csave(); app.querySelectorAll(`input[name="cov-${ccl.dataset.cclear}"]`).forEach(i => { i.checked = false; }); refreshCover(); return; }
-    const cp = e.target.closest('#copy, #cover-copy');
+    const bab = e.target.closest('[data-ba]');
+    if (bab) {
+      if (bab.dataset.ba !== ba) {
+        ba = bab.dataset.ba;
+        const I = C.test.imgs, im = I[ba].view, cap = ba === 'after' ? 'R28 結果（只改了 Coco）' : 'R27 H-A 原本';
+        const img = $('#ba-img'); img.src = im.src; img.alt = cap;
+        $('#ba-zoom').dataset.f = String(addView(I[ba], ba === 'after' ? 'R28 結果（全圖，只改了 Coco）' : 'R27 H-A 原本（全圖）'));
+        $('#ba-cap').textContent = `${cap}｜點圖放大；放大後按「原尺寸」看完整解析度`;
+        app.querySelectorAll('[data-ba]').forEach(b => { const on = b.dataset.ba === ba; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+      }
+      return;
+    }
+    const cp = e.target.closest('#copy, #test-copy');
     if (cp) {
-      const isC = cp.id === 'cover-copy';
-      const box = $(isC ? '#cover-text' : '#cp-text');
-      const t = isC ? coverText() : feedbackText();
+      const isC = cp.id === 'test-copy';
+      const box = $(isC ? '#test-text' : '#cp-text');
+      const t = isC ? testText() : feedbackText();
       box.value = t;
-      const done = ok => toast(ok ? (isC ? '已複製封面回饋' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
+      const done = ok => toast(ok ? (isC ? '已複製備註' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => done(true), () => { box.select(); done(false); });
       else { box.select(); done(false); }
       return;
@@ -262,14 +268,13 @@
       addGuides(app); return;
     }
     if (e.target.type === 'radio' && e.target.name.startsWith('dec-')) { st.dec[e.target.name.slice(4)] = e.target.value; save(); refreshCopy(); }
-    if (e.target.type === 'radio' && e.target.name.startsWith('cov-')) { cst.dec[e.target.name.slice(4)] = e.target.value; csave(); refreshCover(); }
   });
   app.addEventListener('input', e => {
-    const ck = e.target.dataset && e.target.dataset.cnote;
-    if (ck != null) {
+    const tk = e.target.dataset && e.target.dataset.tnote;
+    if (tk != null) {
       const v = e.target.value;
-      if (v.trim()) cst.notes[ck] = v; else delete cst.notes[ck];
-      csave(); refreshCover(); return;
+      if (v.trim()) tst.notes[tk] = v; else delete tst.notes[tk];
+      tsave(); refreshCover(); return;
     }
     const k = e.target.dataset && e.target.dataset.note;
     if (k == null) return;

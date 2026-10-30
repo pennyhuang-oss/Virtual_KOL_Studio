@@ -60,6 +60,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-5 R27：Penny 接受 R26 排版（橫式完整 16:9 192×108 mm、兩款推薦排法；排版接受不等於交印核准）。12 人團體封面生成 4 張候選（橫式 A／B、直式 A／B，各 1 次請求、實扣 16 credits、上傳 0、未重試），本機排上「2027」後放到排版頁供 Penny 選。Claude 自查：4 張都是 12 人同場，但沒有一張能確認 12 人身分（H-A、V-A、V-B 各有 1–2 位明顯換成別人；H-B 3 位看不清），不可定案；未補生、未修臉。月面照片 24 張不動。** Owner 指令與排版接受原話見 `data/cal_m5_owner_r27.json`，12 人身分對照見 `data/cal_m5_r27_identity.json`，生成指令見 `data/cal_m5_r27_prompts.json`，逐張驗收見 `data/cal_m5_r27_trial.json`，封面排版見 `data/cal_m5_cover_r27.json`，封面比較區文字見 `data/cal_cover_r27_page.json`。
 
+> **M-5 R28：Penny 退回 R27 全部 4 張封面（全部人臉不符），無已選封面或方向；24 張月面照片與兩款內頁排版維持已接受。R27 輸入查核：清單與平台接收都正確（12 張參考、順序、檔案內容一致），失敗在生成結果。H-A 裡 Coco 單人身分測試 1 次（實扣 2 credits、上傳 0）：臉部身分成功、其他 11 人與背景零改動，但臉比胸口／手／小腿白，膚色一致性只算部分通過 → 依規則整體記失敗；未修其他人，12 人流程只估算、待主管與 Penny 決定。** Owner 退回原話見 `data/cal_m5_owner_r28.json`，R27 輸入查核見 `data/cal_m5_r28_input_audit.json`，單人測試驗收與 12 人流程估算見 `data/cal_m5_r28_trial.json`，回填與差異紀錄見 `data/cal_m5_r28_coco_test.json`。
+
 ## 0. 版本
 
 | 項目 | 內容 |

@@ -1,0 +1,284 @@
+{
+ "round": "M-5 R28",
+ "note": "H-A 裡 Coco 的單人身分校正測試（裁切編輯→只在 Coco 本人範圍回填同一張照片）。不是完成的封面，也不代表 Penny 接受 H-A。",
+ "source_sha256": "278ce0954d3a5527c418a25de527a0cb82fe9f5e958ea27eede2c9ce38aae6f5",
+ "edit_sha256": "724d675fbc9baf50d827539f90951f422343e77080a00af76a71c008de377e5d",
+ "edit_px": [
+  1536,
+  2752
+ ],
+ "crop": [
+  3430,
+  1475,
+  4375,
+  3155
+ ],
+ "crop_px": [
+  945,
+  1680
+ ],
+ "parts": {
+  "head_hair_neck_chest": [
+   [
+    3600,
+    1545
+   ],
+   [
+    3700,
+    1520
+   ],
+   [
+    3820,
+    1528
+   ],
+   [
+    3935,
+    1575
+   ],
+   [
+    3990,
+    1690
+   ],
+   [
+    4000,
+    1840
+   ],
+   [
+    3975,
+    1945
+   ],
+   [
+    3900,
+    2000
+   ],
+   [
+    3830,
+    2075
+   ],
+   [
+    3700,
+    2075
+   ],
+   [
+    3640,
+    2000
+   ],
+   [
+    3575,
+    1950
+   ],
+   [
+    3548,
+    1840
+   ],
+   [
+    3552,
+    1680
+   ]
+  ],
+  "right_hand": [
+   [
+    3680,
+    2215
+   ],
+   [
+    3800,
+    2205
+   ],
+   [
+    3905,
+    2250
+   ],
+   [
+    3905,
+    2345
+   ],
+   [
+    3800,
+    2355
+   ],
+   [
+    3680,
+    2335
+   ]
+  ],
+  "legs_feet": [
+   [
+    3790,
+    2580
+   ],
+   [
+    3880,
+    2560
+   ],
+   [
+    4000,
+    2575
+   ],
+   [
+    4100,
+    2650
+   ],
+   [
+    4200,
+    2725
+   ],
+   [
+    4290,
+    2790
+   ],
+   [
+    4300,
+    2915
+   ],
+   [
+    4200,
+    2925
+   ],
+   [
+    4060,
+    2895
+   ],
+   [
+    4015,
+    2960
+   ],
+   [
+    4010,
+    3125
+   ],
+   [
+    3860,
+    3135
+   ],
+   [
+    3835,
+    3000
+   ],
+   [
+    3810,
+    2850
+   ],
+   [
+    3790,
+    2700
+   ]
+  ]
+ },
+ "feather_px": 14,
+ "alignment": {
+  "method": "OpenCV ECC 仿射對位（只看目標遮罩外擴 40 px 以外的區域）",
+  "matrix": [
+   [
+    1.00789,
+    1e-05,
+    -3.72143
+   ],
+   [
+    -4e-05,
+    0.99996,
+    0.06811
+   ]
+  ],
+  "correlation": 0.9992,
+  "region_used_share": 0.565
+ },
+ "diff": {
+  "tolerance": "任一通道差 > 3（0–255）才算改動",
+  "outside_crop_changed_px": 0,
+  "outside_crop_px": 15615600,
+  "crop_outside_mask_changed_px": 0,
+  "crop_outside_mask_px": 1099622,
+  "mask_px": 487978,
+  "mask_changed_px": 330248,
+  "mask_share_of_image": 0.02837
+ },
+ "model_drift_unused": {
+  "crop_outside_mask_mean_abs_diff": 3.09,
+  "crop_outside_mask_share_over_20": 0.0009,
+  "mia-huang_face_mean_abs_diff_in_edit": 3.58
+ },
+ "files": [
+  {
+   "path": "r28_after_f.jpg",
+   "sha256": "04dd1be2052e057ed44ae44efd3bd31937c143d5d37ace4e8f44327eb98da737",
+   "px": [
+    4800,
+    3584
+   ],
+   "bytes": 1612544
+  },
+  {
+   "path": "r28_after_v.jpg",
+   "sha256": "c2cf99848f31e6c5d24c1e3f9009fbed333487423a3db2b8563b4ee332852429",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 236249
+  },
+  {
+   "path": "r28_before_f.jpg",
+   "sha256": "73e81ecaa21c9c8ec9861aa74a61d1f712a660fd3746d4b67cc3f01b24502621",
+   "px": [
+    4800,
+    3584
+   ],
+   "bytes": 1613259
+  },
+  {
+   "path": "r28_before_v.jpg",
+   "sha256": "76823f67fd7d7e5d5e7a0790804f73b498e4848080fa180a98d3b412c5d3a806",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 236200
+  },
+  {
+   "path": "r28_crop_after.jpg",
+   "sha256": "cb4a64dcbcb0a0c66bde5d14e619cbb04dfd0529616373383bec5850656c6644",
+   "px": [
+    945,
+    1680
+   ],
+   "bytes": 247333
+  },
+  {
+   "path": "r28_crop_before.jpg",
+   "sha256": "ce36a73ea9e888d905e63b9607c0436c4da73a8b6cdf392bc319f49c0601057b",
+   "px": [
+    945,
+    1680
+   ],
+   "bytes": 247966
+  },
+  {
+   "path": "r28_diff_v.jpg",
+   "sha256": "5038a7e3b7a07cf99e58c5148d0a769a5cac16e2f6da5423f80cd1c004aaf0f1",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 56542
+  },
+  {
+   "path": "r28_face_cmp.jpg",
+   "sha256": "38c03269aac0764ef139620f4b3676c36aa12d3f9f91060b574f618d668f541c",
+   "px": [
+    1100,
+    396
+   ],
+   "bytes": 88778
+  },
+  {
+   "path": "r28_region_v.jpg",
+   "sha256": "a83a84c64a9cafcf1318a33498568315e69d6cf6c6e20de49efc567aa2f1bf7e",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 245817
+  }
+ ]
+}

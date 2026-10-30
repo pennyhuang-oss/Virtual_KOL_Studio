@@ -1,0 +1,308 @@
+{
+ "round": "M-5 R28",
+ "note": "R27 四個封面任務的實際輸入查核（只查本案 4 個任務）。資料來源：平台任務紀錄回傳的 input_images（ID、順序、網址）＋逐張下載的實際檔案與本機參考圖比對。任務 ID 與 media ID 只在私有執行紀錄。",
+ "levels": {
+  "list_correct": {
+   "result": "pass",
+   "what": "我們送出的清單：4 個任務都送 12 張、依 Image 1–12 順序，每張對應的角色與身分對照表、prompt 的「Image N = 名字」一致；4 份 prompt 的 Image 對應段落相同"
+  },
+  "tool_received": {
+   "result": "pass",
+   "what": "平台任務紀錄回傳的 input_images：4 個任務都是同樣 12 個 media、順序與清單相同；平台存的 12 個檔案與本機參考圖位元組完全相同。其中 6 張 1728×2304 的 identity_master（Rin、Miu、Tammy、Yerin、Jia、Somi）平台改用自動縮小的 1536×2048 版本給模型，內容相同（平均像素差約 0.13/255、相關係數 1.0）"
+  },
+  "model_internal_use": {
+   "result": "unconfirmed",
+   "what": "模型內部如何使用 12 張參考（是否再縮小、如何對應到畫面中的人）平台沒有公開，無法查核"
+  },
+  "result_fidelity": {
+   "result": "fail",
+   "what": "4 張結果的臉都沒有保住身分（Penny 判定全部人臉不符）。報價被接受、任務完成都不代表身分成功"
+  }
+ },
+ "prompt_mapping": {
+  "checked": "Image 1–12 名單在 4 份 prompt 與平台回傳的 prompt 中逐一核對一致；prompt 全文的 sha256 對照送出紀錄（cal_m5_r27_prompts.json）",
+  "prompt_sha256": {
+   "H-A": "695ad8ff0d9e5e15fb49c61c8f9018ff40cbf5bbaf528295baa4bfa522ec84f6",
+   "H-B": "778cbd98338b4a0dc3e8c745b1e5bf3f5aa04d6acf07771b1ac64a955c4177ad",
+   "V-A": "5e43b57d50d9bcb60ee0abf26faaf4b0e3c0c0b1e130f226ec373d300e241bb1",
+   "V-B": "3f01ecc84477ce36dbbf72f70f56af1991a3821ebb5fc7f4788b96e67de04f5e"
+  }
+ },
+ "inputs": [
+  {
+   "image_no": 1,
+   "set": "yuna-kim",
+   "name": "Yuna Kim",
+   "source": "kols/yuna-kim/images/face_reference/ref_01.webp",
+   "source_sha256": "3c4ec5f85b869a20cbd3878a97ef80786e6a693dd77f2031c0c8f5e35149dea6",
+   "ref_file": "review/calendar/m5_r27/refs/ref01_yuna-kim.jpg",
+   "ref_sha256": "6dc21dac2efce721db71197a36a581811bc434765b5686e4473b55c6e44699ca",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    801,
+    1069
+   ],
+   "fed_to_model": "stored file as uploaded",
+   "fed_px": [
+    801,
+    1069
+   ],
+   "fed_vs_ref": {
+    "identical_bytes": true
+   }
+  },
+  {
+   "image_no": 2,
+   "set": "rin-ayase",
+   "name": "Rin Ayase",
+   "source": "kols/rin-ayase/identity/identity_master.jpg",
+   "source_sha256": "5142fbd12205332a2ddd01d3d7e35921942247240765d3ca066b2fded9ed6f3b",
+   "ref_file": "review/calendar/m5_r27/refs/ref02_rin-ayase.jpg",
+   "ref_sha256": "07c9393e06d33b3295bde8c9f2811c158ed464c82a49b5b409b4c7dd488b1124",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1728,
+    2304
+   ],
+   "fed_to_model": "platform-resized copy",
+   "fed_px": [
+    1536,
+    2048
+   ],
+   "fed_vs_ref": {
+    "mean_abs_diff_0_255": 0.13,
+    "corr": 1.0
+   }
+  },
+  {
+   "image_no": 3,
+   "set": "miu-shiraishi",
+   "name": "Miu Shiraishi",
+   "source": "kols/miu-shiraishi/identity/identity_master.jpg",
+   "source_sha256": "d48821a5cda10712eb94bceae85cac9d22ddd31496a5549a73c1f46705386dc8",
+   "ref_file": "review/calendar/m5_r27/refs/ref03_miu-shiraishi.jpg",
+   "ref_sha256": "b82ce4719c37818ec34a5ba3d3f2f24de1df8787e440457e476f81f0d9f9ea23",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1728,
+    2304
+   ],
+   "fed_to_model": "platform-resized copy",
+   "fed_px": [
+    1536,
+    2048
+   ],
+   "fed_vs_ref": {
+    "mean_abs_diff_0_255": 0.13,
+    "corr": 1.0
+   }
+  },
+  {
+   "image_no": 4,
+   "set": "tammy-chou",
+   "name": "Tammy Chou",
+   "source": "kols/tammy-chou/identity/identity_master.jpg",
+   "source_sha256": "008234773b0fa71209cac1f874b8ca34a03020d9f09b449062c5ead69801036b",
+   "ref_file": "review/calendar/m5_r27/refs/ref04_tammy-chou.jpg",
+   "ref_sha256": "d5ed3b31fe0ff98989afbb4381651b40f167ac8c4b6bf2d1db902268701c9248",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1728,
+    2304
+   ],
+   "fed_to_model": "platform-resized copy",
+   "fed_px": [
+    1536,
+    2048
+   ],
+   "fed_vs_ref": {
+    "mean_abs_diff_0_255": 0.14,
+    "corr": 1.0
+   }
+  },
+  {
+   "image_no": 5,
+   "set": "yerin-han",
+   "name": "Yerin Han",
+   "source": "kols/yerin-han/identity/identity_master.jpg",
+   "source_sha256": "4c337caf4529ccbc4f3f9fa3b75c251442e5daf1197f710cdd3a16d60204f895",
+   "ref_file": "review/calendar/m5_r27/refs/ref05_yerin-han.jpg",
+   "ref_sha256": "46514107312b2c3f72f57d2e945ad45b45a55ffe6821c0e986a879ce66c36a85",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1728,
+    2304
+   ],
+   "fed_to_model": "platform-resized copy",
+   "fed_px": [
+    1536,
+    2048
+   ],
+   "fed_vs_ref": {
+    "mean_abs_diff_0_255": 0.14,
+    "corr": 1.0
+   }
+  },
+  {
+   "image_no": 6,
+   "set": "coco-wu",
+   "name": "Coco Wu",
+   "source": "kols/coco-wu/images/face_reference/candidate_01.png",
+   "source_sha256": "5db11c2bb565a5ee114f8aefde74786c84c6cafb521f70d4e365d5bffdf46eae",
+   "ref_file": "review/calendar/m5_r27/refs/ref06_coco-wu.jpg",
+   "ref_sha256": "bcfe9fed346c55584db1c86e2308abbdb79135bb5212c97c721eb72d82308c36",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1029,
+    1372
+   ],
+   "fed_to_model": "stored file as uploaded",
+   "fed_px": [
+    1029,
+    1372
+   ],
+   "fed_vs_ref": {
+    "identical_bytes": true
+   }
+  },
+  {
+   "image_no": 7,
+   "set": "mia-huang",
+   "name": "Mia Huang",
+   "source": "kols/mia-huang/images/face_reference/candidate_02.png",
+   "source_sha256": "5b86ceebc15fa2c362eb018cc97fee63c1c4751e6882a2fadb84fc417d2879a1",
+   "ref_file": "review/calendar/m5_r27/refs/ref07_mia-huang.jpg",
+   "ref_sha256": "b1244a675755ad644cf524795843edc5416c2f9855bea859e7794f29556210e9",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    768,
+    1024
+   ],
+   "fed_to_model": "stored file as uploaded",
+   "fed_px": [
+    768,
+    1024
+   ],
+   "fed_vs_ref": {
+    "identical_bytes": true
+   }
+  },
+  {
+   "image_no": 8,
+   "set": "iris-chen",
+   "name": "Iris Chen",
+   "source": "kols/iris-chen/images/training_v1/05_cafe_window_01.webp",
+   "source_sha256": "240c56f64ec5efc6114b75fa6a6c31f74d8b141b8e3b17e3516ae4fc3d23c550",
+   "ref_file": "review/calendar/m5_r27/refs/ref08_iris-chen.jpg",
+   "ref_sha256": "83b65439a0a5c0198a89aff0ee72bb0aa49c9eaf25762bf08ba1dfe598f776c0",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1317,
+    1756
+   ],
+   "fed_to_model": "stored file as uploaded",
+   "fed_px": [
+    1317,
+    1756
+   ],
+   "fed_vs_ref": {
+    "identical_bytes": true
+   }
+  },
+  {
+   "image_no": 9,
+   "set": "jia-seo",
+   "name": "Jia Seo",
+   "source": "kols/jia-seo/identity/identity_master.jpg",
+   "source_sha256": "0c287ecb0d262691dfd90a798908174a13435ba2af6d3cf053593bc3c0a1847c",
+   "ref_file": "review/calendar/m5_r27/refs/ref09_jia-seo.jpg",
+   "ref_sha256": "26ffbf4c97de207a91c7762a65eb5ca5357e0af3272d527392084f1e0ac433f1",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1728,
+    2304
+   ],
+   "fed_to_model": "platform-resized copy",
+   "fed_px": [
+    1536,
+    2048
+   ],
+   "fed_vs_ref": {
+    "mean_abs_diff_0_255": 0.12,
+    "corr": 1.0
+   }
+  },
+  {
+   "image_no": 10,
+   "set": "luna-tanaka",
+   "name": "Luna Tanaka",
+   "source": "kols/luna-tanaka/images/face_reference/ref_04.webp",
+   "source_sha256": "e732b5af354cc34eb7fb8a96977010bf65939b78c5e7822434201561b3fa4211",
+   "ref_file": "review/calendar/m5_r27/refs/ref10_luna-tanaka.jpg",
+   "ref_sha256": "ddb87b30788fd844aaa88c7f353dad32c14100c7b74fc5b8c4f16288524aa3f8",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    761,
+    1015
+   ],
+   "fed_to_model": "stored file as uploaded",
+   "fed_px": [
+    761,
+    1015
+   ],
+   "fed_vs_ref": {
+    "identical_bytes": true
+   }
+  },
+  {
+   "image_no": 11,
+   "set": "somi-oh",
+   "name": "Somi Oh",
+   "source": "kols/somi-oh/identity/identity_master.jpg",
+   "source_sha256": "da0cb2c77c22c54cc9a30f324f1a4d1a1776d7f8cc8b1283dce1ac60d0820bdc",
+   "ref_file": "review/calendar/m5_r27/refs/ref11_somi-oh.jpg",
+   "ref_sha256": "6973ee88d842f10561a42349202adc49f1b95929d0aca43c5a4f8a1e49ffc062",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    1728,
+    2304
+   ],
+   "fed_to_model": "platform-resized copy",
+   "fed_px": [
+    1536,
+    2048
+   ],
+   "fed_vs_ref": {
+    "mean_abs_diff_0_255": 0.14,
+    "corr": 1.0
+   }
+  },
+  {
+   "image_no": 12,
+   "set": "rainie-hsu",
+   "name": "Rainie Hsu",
+   "source": "kols/rainie-hsu/images/face_reference/candidate_02.png",
+   "source_sha256": "16934358e178efcba5da88e2e5224eef352bb61f80ebfceb4e36f64fdea42420",
+   "ref_file": "review/calendar/m5_r27/refs/ref12_rainie-hsu.jpg",
+   "ref_sha256": "d0f2a977dcc6abd6e3aa0600eea878a7640eb53d29674ca2b3c1b871ea0b6974",
+   "platform_stored_bytes_same": true,
+   "platform_stored_px": [
+    800,
+    1067
+   ],
+   "fed_to_model": "stored file as uploaded",
+   "fed_px": [
+    800,
+    1067
+   ],
+   "fed_vs_ref": {
+    "identical_bytes": true
+   }
+  }
+ ],
+ "cause": [
+  "輸入沒有送錯：清單、平台接收與檔案內容都正確，問題出在生成結果",
+  "一次生成 12 個人、每張臉在 4800 px 寬的畫面裡只有約 160–170 px（成品上約 7–8 mm），模型對每個人只能「大致參考」12 張圖，臉會回到通用長相；Coco 甚至被換成不同族裔的人",
+  "R27 自查把「髮型髮色對、臉不像」記成「部分相符」，太寬鬆；這等於用髮色代替臉部比對。依 Penny 的判定，應記為全部不符"
+ ]
+}

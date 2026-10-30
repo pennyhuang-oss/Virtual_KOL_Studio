@@ -115,3 +115,18 @@ details.hist > summary { font-weight: 700; }
   .cgrid-V { gap: 8px; }
   .ccard { padding: 8px; }
 }
+
+/* M-5 R28：單人身分測試（非完成封面）與 R27 已退回 */
+.badge { font-style: normal; font-size: .75rem; font-weight: 700; border-radius: 4px; padding: 1px 7px; margin-left: 6px; vertical-align: middle; background: #6b6b6b; color: #fff; white-space: nowrap; }
+.badge.test { background: #b45309; }
+.ccard.rej { opacity: .92; }
+.tsec { border: 2px solid #e2b77a; border-radius: 10px; padding: 10px 12px; background: #fffaf1; margin: 8px 0 16px; scroll-margin-top: 12px; }
+.tsec h3 { margin: .2em 0 .4em; }
+.tsec h4 { margin: 14px 0 6px; font-size: .98rem; }
+.tf { margin: 6px 0; min-width: 0; }
+.tf figcaption { font-size: .82rem; }
+.tf.big { max-width: 980px; }
+.tpair { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
+details.r27 > summary { font-weight: 700; }
+.fbq { margin: .3em 0; padding-left: 1.2em; font-size: .9rem; }
+#test-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
