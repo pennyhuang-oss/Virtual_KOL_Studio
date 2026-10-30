@@ -1,0 +1,31 @@
+{
+ "note": "M-5 R27 封面選擇部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "b63d56fe0116a3f97f912dbc9c2e393927de3ebc",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-10-30T08:33:44Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-10-30T08:44:27Z"
+  }
+ ],
+ "note_size": "新增封面候選 16 檔約 11.4 MB；一次建置成功",
+ "live_page_commit": "b63d56fe0116a3f97f912dbc9c2e393927de3ebc",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 57 項、定案相簿回歸 18 項；封面 16 檔、排版 158 檔 sha256 全符）",
+  "items": [
+   "封面資料：橫式、直式各 A／B，封面回饋鍵 cal2027-cover-r27-v1；公開資料無 UUID、hash、prompt、模型、任務、費用、repo 路徑",
+   "封面比較區在頁面最上方；註明目前不能定案、未放品牌或 Logo；4 張封面頁載入，每張標「不可定案」與身分判讀數字、需注意名單",
+   "放大：封面 300 dpi 原尺寸（橫式 2409 px）、無字原圖（原生解析度）、12 人臉部對照；參考線（線圈區、裁切線、安全區）與內頁開關同步",
+   "封面預設未選；A／B／都想修改與備註重新整理後保留；複製封面回饋（含「新候選不是 Owner 接受」）；清除一題",
+   "封面操作不動 R26 排版回饋；R26 回饋收在歷史區、原樣顯示；只寫 cal2027-cover-r27-v1 與 R26 排版鍵，選片等舊鍵原樣保留",
+   "內頁：排版已接受 3 項、註明不等於交印核准；兩份 PDF 下載、28／32 面、照片框比較、參考線、放大全部如 R26",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動；手機橫式封面上下排、直式並排、可放大",
+   "定案相簿保留 24 套；R25 相簿 18 項回歸測試全過"
+  ],
+  "public_files": "線上 public/cover 16 檔與 public/layout 158 檔逐檔下載，sha256 與紀錄相同；圖片無 EXIF／ICC／註解；cover-data.js 與 repo 相同；無平台任務識別、無私有 ID（封面比對 M-4／M-5 私有紀錄 128 個 UUID 與 CDN 帳號路徑；選片頁 182 圖同樣無）"
+ }
+}
