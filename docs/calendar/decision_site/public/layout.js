@@ -1,10 +1,12 @@
-// 2027 KOL 桌曆｜排版預覽頁（layout.html，M-5 R26 起）。資料來自 layout-data.js（程式產生）。
+// 2027 KOL 桌曆｜排版預覽頁（layout.html，M-5 R26 起）。資料來自 layout-data.js 與 cover-data.js（程式產生）。
 // 依橫式／直式、月份看實際頁面（PDF 點陣化後的圖），可放大、開關參考線；橫式可切換「完整 16:9（推薦）」與「192×104 套框」比較。
-// 回饋只存在這台裝置的瀏覽器，鍵是資料裡的 feedback_key（cal2027-layout-r26-v1），只放排版回饋，與選片回饋分開；
-// 其他鍵（選片、企劃、素材頁）不讀、不寫、不刪。沒有追蹤或分析，回饋不會自動送出；未選不算接受。
+// M-5 R27 起最上面加「封面候選」：橫式、直式各 A／B，可選 A／B／都想修改並寫備註；回饋鍵 cal2027-cover-r27-v1（只放封面選擇，不自動算 Owner 接受）。
+// R26 的排版回饋（鍵 cal2027-layout-r26-v1）原樣保留在頁面下方；其他鍵（選片、企劃、素材頁）不讀、不寫、不刪。
+// 沒有追蹤或分析，回饋不會自動送出；未選不算接受。
 'use strict';
 (() => {
   const L = window.CAL_LAYOUT;
+  const C = window.CAL_COVER && window.CAL_COVER.cards ? window.CAL_COVER : null;
   const app = document.getElementById('app');
   const $ = (s, r = document) => r.querySelector(s);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -24,6 +26,17 @@
   };
   let st = load();
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) { /* 無痕或停用儲存時只在本頁有效 */ } };
+  // 封面選擇（另一個鍵）：dec＝{H, V}、notes＝{H, V, general}
+  const CKEY = C ? C.feedback_key : '';
+  const cload = () => {
+    if (!C) return blank();
+    try {
+      const v = JSON.parse(localStorage.getItem(CKEY) || 'null');
+      return v && typeof v === 'object' ? { dec: v.dec && typeof v.dec === 'object' ? v.dec : {}, notes: v.notes && typeof v.notes === 'object' ? v.notes : {} } : blank();
+    } catch (e) { return blank(); }
+  };
+  const cst = cload();
+  const csave = () => { try { localStorage.setItem(CKEY, JSON.stringify(cst)); } catch (e) { /* 同上 */ } };
 
   let book = /^#V/.test(location.hash) ? 'V' : 'H';
   let frame = 'B';     // 橫式照片面顯示哪個版本：B＝完整 16:9（推薦）、A＝192×104 套框
@@ -57,14 +70,69 @@
       fig.querySelector('.zoom').appendChild(svg);
     });
   }
+  const coverLegend = () => `<p class="legend"${guides ? '' : ' hidden'}><span class="lg lg-coil"></span>線圈假設區（上緣 12 mm）` +
+    `<span class="lg lg-trim"></span>裁切線<span class="lg lg-safe"></span>安全區（橫式＝${esc(L.formats.H.safe_label)}；直式＝${esc(L.formats.V.safe_label)}）</p>`;
+
+  // ---------- 封面候選（M-5 R27） ----------
+  const optLabel = (k, v) => {
+    const o = C.options.find(x => x.v === v); if (!o) return '（未選）';
+    const c = C.cards[k].find(x => x.dir === v);
+    return c ? `${o.label}（${c.dir_zh}）` : o.label;
+  };
+  function coverCard(k, c) {
+    const cap = `${BOOK_ZH[k]}封面 ${c.dir}｜${c.dir_zh}`;
+    const nP = addView({ view: c.photo, full: c.photo }, `${cap}｜照片原圖（無文字）`);
+    const nI = addView({ view: c.ids, full: c.ids }, `${cap}｜臉部對照（左＝身分參考、右＝封面）`);
+    const cnt = C.grades.map(g => `${g} ${c.counts[g]}`).join('｜');
+    const fl = c.flagged.length ? `<br>需注意：${c.flagged.map(x => `${esc(x.name)}（${esc(x.grade)}）`).join('、')}` : '';
+    const mark = { '通過': '✓', '部分': '△', '未通過': '✗' };
+    return `<article class="ccard" id="cover-${c.id}"><h4>${c.dir}｜${esc(c.dir_zh)}</h4>` +
+      faceFig({ ...c.page, face: 'cover' }, k, `${cap}（含 2 mm 出血）`) +
+      `<p class="cverdict"><b>${esc(c.verdict)}</b><br>身分判讀：${esc(cnt)}${fl}</p>` +
+      `<div class="cbtns"><button type="button" class="btn ghost" data-f="${nP}">看照片原圖（無文字）</button><button type="button" class="btn ghost" data-f="${nI}">臉部對照（12 人）</button></div>` +
+      `<details class="more"><summary>7 項檢查</summary><ul class="chk">${c.checks.map(x => `<li><span class="mk">${mark[x.result] || ''} ${esc(x.result)}</span>｜${esc(x.item)}<small>${esc(x.note)}</small></li>`).join('')}</ul></details>` +
+      `<details class="more"><summary>12 人逐一判讀</summary><ul class="ppl">${c.people.map(x => `<li><b>${esc(x.name)}</b>｜${esc(x.grade)}<small>${esc(x.note)}</small></li>`).join('')}</ul></details></article>`;
+  }
+  function coverSection() {
+    if (!C) return '';
+    const grp = k => {
+      const f = C.formats[k];
+      return `<div class="cgroup" id="cover-${k}"><h3>${BOOK_ZH[k]}封面（成品 ${f.W - 2 * f.trim}×${f.H - 2 * f.trim} mm）</h3>` +
+        `<div class="cgrid cgrid-${k}">${C.cards[k].map(c => coverCard(k, c)).join('')}</div>` +
+        `<fieldset class="dq"><legend>${BOOK_ZH[k]}封面選哪一張？</legend>` + C.options.map(o =>
+          `<label class="opt"><input type="radio" name="cov-${k}" value="${esc(o.v)}"${cst.dec[k] === o.v ? ' checked' : ''}> <span>${esc(optLabel(k, o.v))}</span></label>`).join('') +
+        `<button type="button" class="lnk" data-cclear="${k}">清除這題</button></fieldset>` + cnote(k, `${BOOK_ZH[k]}封面備註`) + '</div>';
+    };
+    return `<section class="sec" id="cover"><h2>封面候選：請選擇</h2><p class="warn">${esc(C.cover_status)}</p>` +
+      `<p class="note">${esc(C.made)}${esc(C.cover_note)}</p>` +
+      `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
+      grp('H') + grp('V') + cnote('general', '封面整體備註') +
+      `<div class="acts"><button type="button" class="btn" id="cover-copy">複製封面回饋</button></div>` +
+      `<textarea id="cover-text" rows="7" readonly aria-label="封面回饋文字"></textarea></section>`;
+  }
+  function cnote(key, label) {
+    const v = cst.notes[key] || '';
+    return `<label class="nl">${esc(label)}<textarea rows="2" data-cnote="${esc(key)}" placeholder="想改什麼就寫在這裡（可留白）">${esc(v)}</textarea></label>`;
+  }
+  function coverText() {
+    const lines = [`${C.task}／${C.round}｜封面回饋（頁面版本 ${PAGE_COMMIT || '本機預覽'}）`, '新候選不是 Owner 接受；這裡只記錄 Penny 的選擇與備註。'];
+    ['H', 'V'].forEach(k => {
+      lines.push(`${BOOK_ZH[k]}封面：${optLabel(k, cst.dec[k])}`);
+      if ((cst.notes[k] || '').trim()) lines.push(`${BOOK_ZH[k]}備註：${cst.notes[k].trim()}`);
+    });
+    lines.push(`整體備註：${(cst.notes.general || '').trim() || '（無）'}`);
+    return lines.join('\n');
+  }
+  const refreshCover = () => { const t = $('#cover-text'); if (t && C) t.value = coverText(); };
 
   // ---------- 各區 ----------
   function topSection() {
     const P = L.pdf;
     const dl = k => `<a class="btn dl" href="${esc(P[k].href)}" download>${BOOK_ZH[k]} PDF（${P[k].pages} 頁，成品 ${esc(P[k].trim)}，含出血 ${esc(P[k].canvas)}，${P[k].size_mb} MB）</a>`;
-    return `<section class="sec" id="dl"><h2>下載排版預覽 PDF</h2><div class="dls">${dl('H')}${dl('V')}</div>` +
-      `<p class="warn">${esc(L.status_note)}</p>` +
-      `<h3>待 Penny 決定</h3><ol class="pend">${L.pending.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` +
+    const acc = C ? `<div class="acc"><h3>${esc(C.accepted.title)}</h3><ul>${C.accepted.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul><p class="note">${esc(C.accepted.scope)}</p></div>`
+      : `<h3>待 Penny 決定</h3><ol class="pend">${L.pending.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`;
+    return `<section class="sec" id="dl"><h2>內頁排版預覽 PDF</h2><div class="dls">${dl('H')}${dl('V')}</div>` +
+      `<p class="warn">${esc(L.status_note)}</p>` + acc +
       `<details class="more"><summary>推薦排法（目前預覽與 PDF 用的）</summary><ul>${L.recommended.map(x => `<li>${esc(x)}</li>`).join('')}</ul><p class="note">${esc(L.date_note)}</p></details>` +
       `<details class="more"><summary>仍需廠商確認或打樣的事（本輪不聯絡廠商、不打樣）</summary><ul>${L.vendor.map(x => `<li>${esc(x)}</li>`).join('')}</ul></details></section>`;
   }
@@ -77,7 +145,7 @@
       `<button type="button" class="seg${frame === 'B' ? ' on' : ''}" data-frame="B" aria-pressed="${frame === 'B'}">完整 16:9（推薦）</button>` +
       `<button type="button" class="seg${frame === 'A' ? ' on' : ''}" data-frame="A" aria-pressed="${frame === 'A'}">192×104 套框</button></div>` : '';
     return `<section class="sec navsec" id="nav"><div class="tabs">${tabs}</div><ol class="mnav">${months}</ol>` +
-      `<div class="tools">${fsw}<label class="gsw"><input type="checkbox" id="gsw"${guides ? ' checked' : ''}> 顯示參考線</label></div>` +
+      `<div class="tools">${fsw}<label class="gsw"><input type="checkbox" id="gsw" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>` +
       `<p class="legend"${guides ? '' : ' hidden'}><span class="lg lg-coil"></span>線圈假設區（上緣 12 mm；虛線＝編輯器示意約 ${L.formats[book].coil_measured} mm）` +
       `<span class="lg lg-trim"></span>裁切線<span class="lg lg-safe"></span>${esc(L.formats[book].safe_label)}<span class="lg lg-photo"></span>照片框</p></section>`;
   }
@@ -121,7 +189,7 @@
     const others = P.filter(p => ['memo', 'year', 'barcode'].includes(p.role));
     return `<section class="sec" id="pages"><h2>${BOOK_ZH[book]}：實際頁面（${P.length} 面，依範本頁序）</h2>` +
       `<p class="note">每月兩面：照片面在前、大格面在後。紙張正反面怎麼拼、背面會不會轉向還沒跟廠商確認，所以這裡和 PDF 都是一面一面正向排列。</p>` +
-      `<article class="mcard" id="${book}-cover"><h3>封面（面 1）</h3><div class="spread spread-${book} one">${faceFig(cov, book, `${BOOK_ZH[book]}｜面 1 封面（品牌名稱是佔位）`)}</div>${note(`${book}-cover`, `${BOOK_ZH[book]}封面備註`)}</article>` +
+      `<article class="mcard" id="${book}-cover"><h3>封面（面 1）</h3><div class="spread spread-${book} one">${faceFig(cov, book, C ? `${BOOK_ZH[book]}｜面 1 ${C.r26_cover_label}` : `${BOOK_ZH[book]}｜面 1 封面（品牌名稱是佔位）`)}</div>${note(`${book}-cover`, `${BOOK_ZH[book]}封面備註`)}</article>` +
       Array.from({ length: 12 }, (_, i) => monthCard(i + 1)).join('') +
       `<article class="mcard" id="${book}-other"><h3>其他頁</h3><div class="spread spread-${book} many">${others.map(p => faceFig(p, book, `${BOOK_ZH[book]}｜面 ${p.face} ${p.role_zh}`)).join('')}</div>${note(`${book}-other`, `${BOOK_ZH[book]}其他頁備註`)}</article></section>`;
   }
@@ -130,10 +198,12 @@
     const dec = L.decisions.map(d => `<fieldset class="dq"><legend>${esc(d.q)}</legend>` + d.options.map(o =>
       `<label class="opt"><input type="radio" name="dec-${esc(d.id)}" value="${esc(o.v)}"${st.dec[d.id] === o.v ? ' checked' : ''}> <span>${esc(o.label)}${o.rec ? '<em class="rec">推薦</em>' : ''}${o.note ? `<small>${esc(o.note)}</small>` : ''}</span></label>`).join('') +
       `<button type="button" class="lnk" data-clear="${esc(d.id)}">清除這題</button></fieldset>`).join('');
-    return `<section class="sec" id="fb"><h2>排版回饋</h2><p class="note">只針對排版；照片沿用 24 張定案，不用重新接受。沒選的題目不算接受。</p>${dec}` +
+    const body = `<p class="note">只針對排版；照片沿用 24 張定案，不用重新接受。沒選的題目不算接受。</p>${dec}` +
       note('H-general', '橫式整體備註') + note('V-general', '直式整體備註') +
       `<div class="acts"><button type="button" class="btn" id="copy">複製全部回饋</button></div>` +
-      `<textarea id="cp-text" rows="9" readonly aria-label="回饋文字"></textarea></section>`;
+      `<textarea id="cp-text" rows="9" readonly aria-label="回饋文字"></textarea>`;
+    return C ? `<section class="sec" id="fb"><details class="more hist"><summary>${esc(C.history_label)}</summary>${body}</details></section>`
+      : `<section class="sec" id="fb"><h2>排版回饋</h2>${body}</section>`;
   }
 
   // ---------- 回饋文字 ----------
@@ -154,9 +224,10 @@
   function render(keepScroll) {
     const y = window.scrollY;
     views.length = 0;
-    app.innerHTML = topSection() + navSection() + bookSection() + fbSection();
+    app.innerHTML = coverSection() + topSection() + navSection() + bookSection() + fbSection();
     addGuides(app);
     refreshCopy();
+    refreshCover();
     if (keepScroll) window.scrollTo(0, y);
   }
 
@@ -167,22 +238,39 @@
     if (fr) { if (fr.dataset.frame !== frame) { frame = fr.dataset.frame; render(true); } return; }
     const cl = e.target.closest('[data-clear]');
     if (cl) { delete st.dec[cl.dataset.clear]; save(); app.querySelectorAll(`input[name="dec-${cl.dataset.clear}"]`).forEach(i => { i.checked = false; }); refreshCopy(); return; }
-    if (e.target.closest('#copy')) {
-      const t = feedbackText();
-      $('#cp-text').value = t;
-      const done = ok => toast(ok ? '已複製全部回饋' : '無法自動複製，請在下方文字框手動選取複製');
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => done(true), () => { $('#cp-text').select(); done(false); });
-      else { $('#cp-text').select(); done(false); }
+    const ccl = e.target.closest('[data-cclear]');
+    if (ccl) { delete cst.dec[ccl.dataset.cclear]; csave(); app.querySelectorAll(`input[name="cov-${ccl.dataset.cclear}"]`).forEach(i => { i.checked = false; }); refreshCover(); return; }
+    const cp = e.target.closest('#copy, #cover-copy');
+    if (cp) {
+      const isC = cp.id === 'cover-copy';
+      const box = $(isC ? '#cover-text' : '#cp-text');
+      const t = isC ? coverText() : feedbackText();
+      box.value = t;
+      const done = ok => toast(ok ? (isC ? '已複製封面回饋' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => done(true), () => { box.select(); done(false); });
+      else { box.select(); done(false); }
       return;
     }
     const z = e.target.closest('[data-f]');
     if (z) openViewer(+z.dataset.f, z);
   });
   app.addEventListener('change', e => {
-    if (e.target.id === 'gsw') { guides = e.target.checked; const lg = $('.legend'); if (lg) lg.hidden = !guides; addGuides(app); return; }
+    if (e.target.matches('[data-guides]')) {
+      guides = e.target.checked;
+      app.querySelectorAll('[data-guides]').forEach(i => { i.checked = guides; });
+      app.querySelectorAll('.legend').forEach(lg => { lg.hidden = !guides; });
+      addGuides(app); return;
+    }
     if (e.target.type === 'radio' && e.target.name.startsWith('dec-')) { st.dec[e.target.name.slice(4)] = e.target.value; save(); refreshCopy(); }
+    if (e.target.type === 'radio' && e.target.name.startsWith('cov-')) { cst.dec[e.target.name.slice(4)] = e.target.value; csave(); refreshCover(); }
   });
   app.addEventListener('input', e => {
+    const ck = e.target.dataset && e.target.dataset.cnote;
+    if (ck != null) {
+      const v = e.target.value;
+      if (v.trim()) cst.notes[ck] = v; else delete cst.notes[ck];
+      csave(); refreshCover(); return;
+    }
     const k = e.target.dataset && e.target.dataset.note;
     if (k == null) return;
     const v = e.target.value;
@@ -197,7 +285,7 @@
     const v = views[k]; if (!v) return;
     vk = k; const m = nat ? v[1] : v[0];
     vimg.src = m.src; vimg.width = m.w; vimg.height = m.h; vimg.alt = v[2];
-    vcap.textContent = `${v[2]}｜${nat ? '原尺寸' : '顯示'} ${m.w}×${m.h} px` + (nat ? '' : '；按「原尺寸」看 300 dpi 完整解析度');
+    vcap.textContent = `${v[2]}｜${nat ? '原尺寸' : '顯示'} ${m.w}×${m.h} px` + (nat ? '' : v[0] === v[1] ? '；按「原尺寸」看完整解析度' : '；按「原尺寸」看 300 dpi 完整解析度');
     viewer.classList.toggle('natural', nat); vmode.textContent = nat ? '符合畫面' : '原尺寸';
   };
   function openViewer(k, btn) {
@@ -225,10 +313,10 @@
   window.addEventListener('popstate', () => close(true));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(false); });
 
-  document.title = `${L.title}｜2027 KOL 桌曆`;
-  $('#tline').textContent = `${L.task}｜${L.round}`;
-  $('#title').textContent = L.title;
-  $('#intro').textContent = L.intro;
+  document.title = `${C ? C.title : L.title}｜2027 KOL 桌曆`;
+  $('#tline').textContent = `${L.task}｜${C ? C.round : L.round}`;
+  $('#title').textContent = C ? C.title : L.title;
+  $('#intro').textContent = C ? C.intro : L.intro;
   $('#pagever').textContent = PAGE_COMMIT || '本機預覽（未部署）';
   render(false);
   if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }

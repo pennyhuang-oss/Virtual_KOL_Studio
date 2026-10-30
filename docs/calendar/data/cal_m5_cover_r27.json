@@ -1,0 +1,671 @@
+{
+ "round": "M-5 R27",
+ "note": "12 人團體封面 4 張候選的本機排版（由 docs/calendar/tools/build_cal_m5_cover.py 產生）。照片不含文字；「2027」與 DESK CALENDAR 由本機排上去。未提供品牌名稱，不放品牌或 Logo。這是候選預覽，不是 Owner 接受、也不是交印核准。",
+ "source_sha256": {
+  "H-A": "278ce0954d3a5527c418a25de527a0cb82fe9f5e958ea27eede2c9ce38aae6f5",
+  "H-B": "7f4e118566c9d5a6df5c03e712d89572bd8506af7f2f2d00b459343b2a668f16",
+  "V-A": "960a23ab3acacd7c569d4f3dcb0ab1f6e965789debc63d07dd2ecc1003aecd1f",
+  "V-B": "d3da281b41bfe00be55bbe8961580da23bb4af1b5b48d155f6fde93c0bc558e3"
+ },
+ "fonts": "預覽用字型：Inter Display Light（2027）／Inter Medium（DESK CALENDAR），開放授權（SIL OFL）；正式字型未定。",
+ "formats": {
+  "H": {
+   "zh": "橫式",
+   "W": 204,
+   "H": 155,
+   "trim": 2,
+   "coil_assumed": 12,
+   "safe": [
+    4,
+    12,
+    200,
+    151
+   ],
+   "safe_label": "廠商安全框",
+   "trim_mm": [
+    200,
+    151
+   ]
+  },
+  "V": {
+   "zh": "直式",
+   "W": 144,
+   "H": 204,
+   "trim": 2,
+   "coil_assumed": 12,
+   "safe": [
+    5,
+    12,
+    139,
+    199
+   ],
+   "safe_label": "文字安全區（本案自訂）",
+   "trim_mm": [
+    140,
+    200
+   ]
+  }
+ },
+ "rules": {
+  "head_range": "臉框往上加 0.9 倍臉高、左右各加 0.35 倍臉寬",
+  "title_clearance_mm": 2.0,
+  "face_edge_mm": 3.0,
+  "wall_check": "標題框內與牆面中位色 RGB 距離 > 40 的像素比例 ≤ 0.01",
+  "coil_margin_mm": 2
+ },
+ "fit": "照片等比縮放到含出血畫布高度、左右置中裁切；不放大、不調色、不修圖",
+ "covers": [
+  {
+   "id": "H-A",
+   "kind": "H",
+   "direction": "A",
+   "src_px": [
+    4800,
+    3584
+   ],
+   "geometry": {
+    "canvas_px": [
+     2409,
+     1831
+    ],
+    "scaled_w": 2452,
+    "off_px": 21,
+    "mm_per_src": 0.043247767857142856,
+    "crop_lr_mm": 1.79,
+    "eff_ppi": 587
+   },
+   "title_box_mm": [
+    81.3,
+    15.0,
+    122.7,
+    34.2
+   ],
+   "title_to_nearest_head_mm": 8.0,
+   "highest_head_top_mm": 35.6,
+   "wall_ratio": 0.0,
+   "face_h_mm": {
+    "min": 7.6,
+    "median": 8.1,
+    "max": 8.5
+   },
+   "faces_mm": {
+    "yuna-kim": [
+     77.2,
+     51.0,
+     83.9,
+     58.6
+    ],
+    "rin-ayase": [
+     56.5,
+     48.4,
+     63.3,
+     56.2
+    ],
+    "miu-shiraishi": [
+     58.7,
+     86.7,
+     66.7,
+     95.1
+    ],
+    "tammy-chou": [
+     41.3,
+     60.1,
+     48.3,
+     68.1
+    ],
+    "yerin-han": [
+     23.2,
+     43.2,
+     30.8,
+     51.8
+    ],
+    "coco-wu": [
+     157.1,
+     70.9,
+     164.2,
+     79.0
+    ],
+    "mia-huang": [
+     142.1,
+     88.9,
+     149.5,
+     97.2
+    ],
+    "iris-chen": [
+     88.6,
+     63.0,
+     95.3,
+     70.7
+    ],
+    "jia-seo": [
+     119.0,
+     49.2,
+     125.7,
+     57.0
+    ],
+    "luna-tanaka": [
+     108.6,
+     66.5,
+     115.8,
+     74.7
+    ],
+    "somi-oh": [
+     138.8,
+     51.3,
+     145.8,
+     59.2
+    ],
+    "rainie-hsu": [
+     174.6,
+     50.5,
+     181.8,
+     58.6
+    ]
+   },
+   "issues": [],
+   "files": {
+    "cover_H-A_f.jpg": "4520cd6aa9b0cc76b0369ad1db6e6d5cd37fc8c3379d5d10548cb5c57a70ea5c",
+    "cover_H-A_v.jpg": "e7e77817e79efafee8c3b935f10195fa24ec1fcd2ccd3866d65c119e1f1c38f3",
+    "photo_H-A.jpg": "73e81ecaa21c9c8ec9861aa74a61d1f712a660fd3746d4b67cc3f01b24502621",
+    "ids_H-A.jpg": "eb7ca9679cc7da8fad9174dda24a6935d571c99b58f4a84bc809ae5d77164c0d"
+   }
+  },
+  {
+   "id": "H-B",
+   "kind": "H",
+   "direction": "B",
+   "src_px": [
+    4800,
+    3584
+   ],
+   "geometry": {
+    "canvas_px": [
+     2409,
+     1831
+    ],
+    "scaled_w": 2452,
+    "off_px": 21,
+    "mm_per_src": 0.043247767857142856,
+    "crop_lr_mm": 1.79,
+    "eff_ppi": 587
+   },
+   "title_box_mm": [
+    81.3,
+    15.0,
+    122.7,
+    34.2
+   ],
+   "title_to_nearest_head_mm": 2.4,
+   "highest_head_top_mm": 31.3,
+   "wall_ratio": 0.0,
+   "face_h_mm": {
+    "min": 6.8,
+    "median": 7.8,
+    "max": 8.6
+   },
+   "faces_mm": {
+    "yuna-kim": [
+     77.6,
+     43.3,
+     83.5,
+     50.2
+    ],
+    "rin-ayase": [
+     123.3,
+     42.9,
+     129.3,
+     49.8
+    ],
+    "miu-shiraishi": [
+     165.1,
+     52.2,
+     172.2,
+     59.8
+    ],
+    "tammy-chou": [
+     59.2,
+     65.7,
+     66.8,
+     73.5
+    ],
+    "yerin-han": [
+     186.6,
+     40.9,
+     194.0,
+     48.9
+    ],
+    "coco-wu": [
+     108.4,
+     69.2,
+     115.8,
+     76.5
+    ],
+    "mia-huang": [
+     76.5,
+     84.9,
+     84.0,
+     93.2
+    ],
+    "iris-chen": [
+     97.2,
+     64.5,
+     103.9,
+     72.4
+    ],
+    "jia-seo": [
+     43.0,
+     46.7,
+     49.5,
+     54.5
+    ],
+    "luna-tanaka": [
+     132.0,
+     84.1,
+     140.0,
+     92.7
+    ],
+    "somi-oh": [
+     146.3,
+     65.6,
+     153.3,
+     73.7
+    ],
+    "rainie-hsu": [
+     17.9,
+     38.3,
+     24.5,
+     46.1
+    ]
+   },
+   "issues": [],
+   "files": {
+    "cover_H-B_f.jpg": "b14493f3b107afbede6e52e01b2bbe8b85f22353988ee65dde0314f0a967ae8a",
+    "cover_H-B_v.jpg": "5e54777d38ab7d1f9b80f727ae89a6cd385ab94062de6d091fe8fddd4bb5da48",
+    "photo_H-B.jpg": "b6a3f97de7accd160dc40f6c26cd73962223746c8fd9bf21e615c5e08445d02e",
+    "ids_H-B.jpg": "fc0f1f9a131547c6139810b048e78918f38538bb1f2f325695dedcf32f49b7dc"
+   }
+  },
+  {
+   "id": "V-A",
+   "kind": "V",
+   "direction": "A",
+   "src_px": [
+    3584,
+    4800
+   ],
+   "geometry": {
+    "canvas_px": [
+     1701,
+     2409
+    ],
+    "scaled_w": 1799,
+    "off_px": 49,
+    "mm_per_src": 0.0425,
+    "crop_lr_mm": 4.16,
+    "eff_ppi": 598
+   },
+   "title_box_mm": [
+    40.95,
+    17.0,
+    103.05,
+    44.6
+   ],
+   "title_to_nearest_head_mm": 2.5,
+   "highest_head_top_mm": 47.1,
+   "wall_ratio": 0.0,
+   "face_h_mm": {
+    "min": 8.2,
+    "median": 8.8,
+    "max": 10.0
+   },
+   "faces_mm": {
+    "yuna-kim": [
+     54.6,
+     93.7,
+     62.0,
+     102.2
+    ],
+    "rin-ayase": [
+     40.8,
+     60.3,
+     47.8,
+     68.7
+    ],
+    "miu-shiraishi": [
+     15.5,
+     121.2,
+     24.3,
+     131.2
+    ],
+    "tammy-chou": [
+     28.5,
+     84.6,
+     36.3,
+     93.4
+    ],
+    "yerin-han": [
+     61.7,
+     55.0,
+     69.2,
+     63.6
+    ],
+    "coco-wu": [
+     94.9,
+     125.9,
+     104.4,
+     135.9
+    ],
+    "mia-huang": [
+     108.0,
+     128.4,
+     117.4,
+     138.0
+    ],
+    "iris-chen": [
+     77.7,
+     94.9,
+     85.2,
+     103.7
+    ],
+    "jia-seo": [
+     84.7,
+     59.2,
+     91.8,
+     67.4
+    ],
+    "luna-tanaka": [
+     35.9,
+     123.8,
+     44.7,
+     133.6
+    ],
+    "somi-oh": [
+     96.1,
+     93.8,
+     103.4,
+     102.5
+    ],
+    "rainie-hsu": [
+     110.2,
+     67.0,
+     117.1,
+     75.4
+    ]
+   },
+   "issues": [],
+   "files": {
+    "cover_V-A_f.jpg": "6857fa6e859755fe7eaabe1a19614fa53bd5830559b9ecc6ac4048b3066d741b",
+    "cover_V-A_v.jpg": "fcd95bbc22fc9dcfe74791ce2bce8cad1daab7b89d6b762912b9ed4a88c9d266",
+    "photo_V-A.jpg": "fe846b33350d683b42a61adfd915ffe2791108f125d5b7a6b42e75b488a6e341",
+    "ids_V-A.jpg": "165ba8b4fdc6d82f7ec2e24b4a38ba279e6ff5830748f7f11e12857215e83ef8"
+   }
+  },
+  {
+   "id": "V-B",
+   "kind": "V",
+   "direction": "B",
+   "src_px": [
+    3584,
+    4800
+   ],
+   "geometry": {
+    "canvas_px": [
+     1701,
+     2409
+    ],
+    "scaled_w": 1799,
+    "off_px": 49,
+    "mm_per_src": 0.0425,
+    "crop_lr_mm": 4.16,
+    "eff_ppi": 598
+   },
+   "title_box_mm": [
+    40.95,
+    17.0,
+    103.05,
+    44.6
+   ],
+   "title_to_nearest_head_mm": 11.0,
+   "highest_head_top_mm": 55.6,
+   "wall_ratio": 0.0,
+   "face_h_mm": {
+    "min": 6.9,
+    "median": 7.6,
+    "max": 9.8
+   },
+   "faces_mm": {
+    "yuna-kim": [
+     78.2,
+     64.7,
+     84.2,
+     71.7
+    ],
+    "rin-ayase": [
+     60.8,
+     62.9,
+     66.7,
+     70.0
+    ],
+    "miu-shiraishi": [
+     123.2,
+     80.5,
+     129.5,
+     87.8
+    ],
+    "tammy-chou": [
+     50.8,
+     92.4,
+     57.0,
+     99.9
+    ],
+    "yerin-han": [
+     39.8,
+     62.7,
+     45.7,
+     69.7
+    ],
+    "coco-wu": [
+     85.4,
+     126.8,
+     93.4,
+     136.6
+    ],
+    "mia-huang": [
+     107.5,
+     125.2,
+     114.9,
+     134.1
+    ],
+    "iris-chen": [
+     68.5,
+     91.9,
+     75.1,
+     99.4
+    ],
+    "jia-seo": [
+     20.2,
+     78.1,
+     26.2,
+     85.4
+    ],
+    "luna-tanaka": [
+     33.8,
+     125.3,
+     40.3,
+     133.9
+    ],
+    "somi-oh": [
+     88.7,
+     92.7,
+     95.2,
+     100.6
+    ],
+    "rainie-hsu": [
+     98.5,
+     62.5,
+     104.9,
+     70.1
+    ]
+   },
+   "issues": [],
+   "files": {
+    "cover_V-B_f.jpg": "76d80044cc92b21d32cafb2f88ace65e568cf266a9fd1dc998151177fd3dbe36",
+    "cover_V-B_v.jpg": "fe30b796223c5bba11766cb232b7e2fc95ceb4cbc308868254a7fda7616564aa",
+    "photo_V-B.jpg": "7173ac0a3b44998c93a0ebed3803e6a8509798825595d70573fb1c1638c688ab",
+    "ids_V-B.jpg": "6ad5362e35cd8e3812d380edb7fa523bc44d7f4d68193690dc91f8be1d75958a"
+   }
+  }
+ ],
+ "files": [
+  {
+   "path": "cover_H-A_f.jpg",
+   "sha256": "4520cd6aa9b0cc76b0369ad1db6e6d5cd37fc8c3379d5d10548cb5c57a70ea5c",
+   "px": [
+    2409,
+    1831
+   ],
+   "bytes": 532594
+  },
+  {
+   "path": "cover_H-A_v.jpg",
+   "sha256": "e7e77817e79efafee8c3b935f10195fa24ec1fcd2ccd3866d65c119e1f1c38f3",
+   "px": [
+    1204,
+    916
+   ],
+   "bytes": 163391
+  },
+  {
+   "path": "ids_H-A.jpg",
+   "sha256": "eb7ca9679cc7da8fad9174dda24a6935d571c99b58f4a84bc809ae5d77164c0d",
+   "px": [
+    1810,
+    790
+   ],
+   "bytes": 307365
+  },
+  {
+   "path": "photo_H-A.jpg",
+   "sha256": "73e81ecaa21c9c8ec9861aa74a61d1f712a660fd3746d4b67cc3f01b24502621",
+   "px": [
+    4800,
+    3584
+   ],
+   "bytes": 1613259
+  },
+  {
+   "path": "cover_H-B_f.jpg",
+   "sha256": "b14493f3b107afbede6e52e01b2bbe8b85f22353988ee65dde0314f0a967ae8a",
+   "px": [
+    2409,
+    1831
+   ],
+   "bytes": 651951
+  },
+  {
+   "path": "cover_H-B_v.jpg",
+   "sha256": "5e54777d38ab7d1f9b80f727ae89a6cd385ab94062de6d091fe8fddd4bb5da48",
+   "px": [
+    1204,
+    916
+   ],
+   "bytes": 189371
+  },
+  {
+   "path": "ids_H-B.jpg",
+   "sha256": "fc0f1f9a131547c6139810b048e78918f38538bb1f2f325695dedcf32f49b7dc",
+   "px": [
+    1810,
+    790
+   ],
+   "bytes": 300348
+  },
+  {
+   "path": "photo_H-B.jpg",
+   "sha256": "b6a3f97de7accd160dc40f6c26cd73962223746c8fd9bf21e615c5e08445d02e",
+   "px": [
+    4800,
+    3584
+   ],
+   "bytes": 2003161
+  },
+  {
+   "path": "cover_V-A_f.jpg",
+   "sha256": "6857fa6e859755fe7eaabe1a19614fa53bd5830559b9ecc6ac4048b3066d741b",
+   "px": [
+    1701,
+    2409
+   ],
+   "bytes": 546627
+  },
+  {
+   "path": "cover_V-A_v.jpg",
+   "sha256": "fcd95bbc22fc9dcfe74791ce2bce8cad1daab7b89d6b762912b9ed4a88c9d266",
+   "px": [
+    850,
+    1204
+   ],
+   "bytes": 164197
+  },
+  {
+   "path": "ids_V-A.jpg",
+   "sha256": "165ba8b4fdc6d82f7ec2e24b4a38ba279e6ff5830748f7f11e12857215e83ef8",
+   "px": [
+    1810,
+    790
+   ],
+   "bytes": 309980
+  },
+  {
+   "path": "photo_V-A.jpg",
+   "sha256": "fe846b33350d683b42a61adfd915ffe2791108f125d5b7a6b42e75b488a6e341",
+   "px": [
+    3584,
+    4800
+   ],
+   "bytes": 1785437
+  },
+  {
+   "path": "cover_V-B_f.jpg",
+   "sha256": "76d80044cc92b21d32cafb2f88ace65e568cf266a9fd1dc998151177fd3dbe36",
+   "px": [
+    1701,
+    2409
+   ],
+   "bytes": 673337
+  },
+  {
+   "path": "cover_V-B_v.jpg",
+   "sha256": "fe30b796223c5bba11766cb232b7e2fc95ceb4cbc308868254a7fda7616564aa",
+   "px": [
+    850,
+    1204
+   ],
+   "bytes": 185069
+  },
+  {
+   "path": "ids_V-B.jpg",
+   "sha256": "6ad5362e35cd8e3812d380edb7fa523bc44d7f4d68193690dc91f8be1d75958a",
+   "px": [
+    1810,
+    790
+   ],
+   "bytes": 299006
+  },
+  {
+   "path": "photo_V-B.jpg",
+   "sha256": "7173ac0a3b44998c93a0ebed3803e6a8509798825595d70573fb1c1638c688ab",
+   "px": [
+    3584,
+    4800
+   ],
+   "bytes": 2274477
+  }
+ ],
+ "identity_verdict": {
+  "H-A": "不可定案：12 人身分未能全部確認",
+  "H-B": "不可定案：12 人身分未能全部確認",
+  "V-A": "不可定案：12 人身分未能全部確認",
+  "V-B": "不可定案：12 人身分未能全部確認"
+ }
+}

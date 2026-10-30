@@ -1,0 +1,330 @@
+{
+ "note": "12 人封面身分對照：角色—身分來源—每張封面的畫面位置。來源只裁切頭肩、不修圖；月面照片未當成臉部參考。",
+ "round": "M-5 R27",
+ "rows": [
+  {
+   "image_no": 1,
+   "set": "yuna-kim",
+   "name": "Yuna Kim",
+   "source": "kols/yuna-kim/images/face_reference/ref_01.webp",
+   "source_sha256": "3c4ec5f85b869a20cbd3878a97ef80786e6a693dd77f2031c0c8f5e35149dea6",
+   "why": "Soul 訓練用臉部參考（ref_01，正面）",
+   "crop_box_px": [
+    584,
+    240,
+    1385,
+    1309
+   ],
+   "file": "review/calendar/m5_r27/refs/ref01_yuna-kim.jpg",
+   "sha256": "6dc21dac2efce721db71197a36a581811bc434765b5686e4473b55c6e44699ca",
+   "look": "collarbone-length dark brown-black hair with soft airy waves; calm, cool, elegant expression; tall and slender",
+   "wear": {
+    "A": "an ivory tailored blazer and matching wide-leg trousers over a cream silk camisole",
+    "B": "an ivory silk shirt dress with a slim belt"
+   },
+   "position": {
+    "H-A": "standing left of center, slightly behind the plinth",
+    "V-A": "middle, seated on the bench left of center, legs crossed",
+    "H-B": "standing behind the sofa left of center, one hand on the sofa back",
+    "V-B": "back, standing behind the sofa right of center"
+   }
+  },
+  {
+   "image_no": 2,
+   "set": "rin-ayase",
+   "name": "Rin Ayase",
+   "source": "kols/rin-ayase/identity/identity_master.jpg",
+   "source_sha256": "5142fbd12205332a2ddd01d3d7e35921942247240765d3ca066b2fded9ed6f3b",
+   "why": "identity_master（Penny 2026-09-01 核准）",
+   "crop_box_px": [
+    0,
+    0,
+    1728,
+    2304
+   ],
+   "file": "review/calendar/m5_r27/refs/ref02_rin-ayase.jpg",
+   "sha256": "07c9393e06d33b3295bde8c9f2811c158ed464c82a49b5b409b4c7dd488b1124",
+   "look": "long deep wine-red hair in soft waves; mature, poised, gentle smile",
+   "wear": {
+    "A": "a champagne satin bias-cut slip midi dress with a soft cowl neckline",
+    "B": "a champagne satin one-shoulder midi dress"
+   },
+   "position": {
+    "H-A": "standing just behind Tammy, one hand resting lightly on Tammy's shoulder",
+    "V-A": "back row on a low riser, left, standing",
+    "H-B": "standing behind the sofa right of center, raising her glass slightly",
+    "V-B": "back, standing behind the sofa left of center, holding a glass"
+   }
+  },
+  {
+   "image_no": 3,
+   "set": "miu-shiraishi",
+   "name": "Miu Shiraishi",
+   "source": "kols/miu-shiraishi/identity/identity_master.jpg",
+   "source_sha256": "d48821a5cda10712eb94bceae85cac9d22ddd31496a5549a73c1f46705386dc8",
+   "why": "identity_master（Penny 2026-09-01 核准）",
+   "crop_box_px": [
+    0,
+    0,
+    1728,
+    2304
+   ],
+   "file": "review/calendar/m5_r27/refs/ref03_miu-shiraishi.jpg",
+   "sha256": "b82ce4719c37818ec34a5ba3d3f2f24de1df8787e440457e476f81f0d9f9ea23",
+   "look": "platinum ash-blonde shoulder-length bob with airy see-through bangs; sweet, small and petite",
+   "wear": {
+    "A": "a cream puff-sleeve mini dress with a square neckline",
+    "B": "a cream satin babydoll mini dress"
+   },
+   "position": {
+    "H-A": "sitting on the floor in front of the plinth, legs folded to one side, leaning toward Tammy",
+    "V-A": "front, left, sitting on the floor with her legs folded to the side",
+    "H-B": "perched on the right arm of the sofa",
+    "V-B": "middle, perched on the right arm of the sofa"
+   }
+  },
+  {
+   "image_no": 4,
+   "set": "tammy-chou",
+   "name": "Tammy Chou",
+   "source": "kols/tammy-chou/identity/identity_master.jpg",
+   "source_sha256": "008234773b0fa71209cac1f874b8ca34a03020d9f09b449062c5ead69801036b",
+   "why": "identity_master（Penny 2026-09-01 核准）",
+   "crop_box_px": [
+    0,
+    0,
+    1728,
+    2304
+   ],
+   "file": "review/calendar/m5_r27/refs/ref04_tammy-chou.jpg",
+   "sha256": "d5ed3b31fe0ff98989afbb4381651b40f167ac8c4b6bf2d1db902268701c9248",
+   "look": "long honey-caramel blonde hair in big airy waves with lighter face-framing pieces; chic and confident",
+   "wear": {
+    "A": "an oat-beige one-shoulder satin midi dress",
+    "B": "an oat satin wrap midi dress"
+   },
+   "position": {
+    "H-A": "seated sideways on the left end of the low plinth, legs crossed",
+    "V-A": "middle, seated on the left end of a long cream bench",
+    "H-B": "sitting on the left end of the sofa, legs crossed",
+    "V-B": "middle, sitting on the left part of the sofa"
+   }
+  },
+  {
+   "image_no": 5,
+   "set": "yerin-han",
+   "name": "Yerin Han",
+   "source": "kols/yerin-han/identity/identity_master.jpg",
+   "source_sha256": "4c337caf4529ccbc4f3f9fa3b75c251442e5daf1197f710cdd3a16d60204f895",
+   "why": "identity_master（Penny 2026-09-01 核准）",
+   "crop_box_px": [
+    0,
+    0,
+    1728,
+    2304
+   ],
+   "file": "review/calendar/m5_r27/refs/ref05_yerin-han.jpg",
+   "sha256": "46514107312b2c3f72f57d2e945ad45b45a55ffe6821c0e986a879ce66c36a85",
+   "look": "long straight flaxen-brown hair with blonde face-framing streaks; sporty, bright smile; the tallest of the group",
+   "wear": {
+    "A": "an ivory sleeveless fine-knit top tucked into cream high-waisted wide trousers",
+    "B": "an ivory satin halter top with cream wide-leg trousers"
+   },
+   "position": {
+    "H-A": "far left, standing, one hand loosely in her trouser pocket",
+    "V-A": "back row on the riser, center-left, standing, tallest",
+    "H-B": "far right, standing, one shoulder leaning on the wall",
+    "V-B": "back, standing behind the sofa on the left"
+   }
+  },
+  {
+   "image_no": 6,
+   "set": "coco-wu",
+   "name": "Coco Wu",
+   "source": "kols/coco-wu/images/face_reference/candidate_01.png",
+   "source_sha256": "5db11c2bb565a5ee114f8aefde74786c84c6cafb521f70d4e365d5bffdf46eae",
+   "why": "Reference Element 錨點原圖（coco-wu-anchor-c01；使用者核准送訓）",
+   "crop_box_px": [
+    380,
+    176,
+    1409,
+    1548
+   ],
+   "file": "review/calendar/m5_r27/refs/ref06_coco-wu.jpg",
+   "sha256": "bcfe9fed346c55584db1c86e2308abbdb79135bb5212c97c721eb72d82308c36",
+   "look": "long dark brown curly waves with wispy bangs; bubbly, the widest smile; petite",
+   "wear": {
+    "A": "a champagne satin slip mini dress with a cropped cream cardigan",
+    "B": "a champagne satin slip mini dress with fine straps"
+   },
+   "position": {
+    "H-A": "sitting in a rounded cream lounge chair on the right",
+    "V-A": "front, center-right, sitting on the floor with her knees drawn up",
+    "H-B": "sitting on the sofa next to Iris, leaning her head toward Iris",
+    "V-B": "front, center, sitting on the rug, laughing"
+   }
+  },
+  {
+   "image_no": 7,
+   "set": "mia-huang",
+   "name": "Mia Huang",
+   "source": "kols/mia-huang/images/face_reference/candidate_02.png",
+   "source_sha256": "5b86ceebc15fa2c362eb018cc97fee63c1c4751e6882a2fadb84fc417d2879a1",
+   "why": "Reference Element 錨點原圖（使用者核准送訓）",
+   "crop_box_px": [
+    279,
+    433,
+    1047,
+    1457
+   ],
+   "file": "review/calendar/m5_r27/refs/ref07_mia-huang.jpg",
+   "sha256": "b1244a675755ad644cf524795843edc5416c2f9855bea859e7794f29556210e9",
+   "look": "shoulder-length ash-brown loose waves with one pastel-pink face-framing streak; playful; petite",
+   "wear": {
+    "A": "an ivory fitted knit top with an oat pleated mini skirt",
+    "B": "a cream fitted knit mini dress with short puff sleeves"
+   },
+   "position": {
+    "H-A": "sitting on the floor in front of Coco's chair, legs to the side",
+    "V-A": "front, right, sitting on the floor and leaning against Coco's shoulder",
+    "H-B": "sitting on the rug in front of Tammy, leaning back against the sofa",
+    "V-B": "front, right, sitting on the rug, leaning toward Coco"
+   }
+  },
+  {
+   "image_no": 8,
+   "set": "iris-chen",
+   "name": "Iris Chen",
+   "source": "kols/iris-chen/images/training_v1/05_cafe_window_01.webp",
+   "source_sha256": "240c56f64ec5efc6114b75fa6a6c31f74d8b141b8e3b17e3516ae4fc3d23c550",
+   "why": "Soul 訓練集 training_v1（正面近景）",
+   "crop_box_px": [
+    287,
+    202,
+    1604,
+    1958
+   ],
+   "file": "review/calendar/m5_r27/refs/ref08_iris-chen.jpg",
+   "sha256": "83b65439a0a5c0198a89aff0ee72bb0aa49c9eaf25762bf08ba1dfe598f776c0",
+   "look": "long silky straight black hair worn down; round sweet face with a bright girl-next-door smile",
+   "wear": {
+    "A": "a cream off-shoulder fine-knit top with a champagne satin midi skirt",
+    "B": "a champagne satin square-neck midi dress"
+   },
+   "position": {
+    "H-A": "seated in the middle of the plinth, hands on her knees, smiling",
+    "V-A": "middle, seated on the bench right of center, smiling",
+    "H-B": "sitting in the middle of the sofa, laughing",
+    "V-B": "middle, sitting in the center of the sofa, smiling"
+   }
+  },
+  {
+   "image_no": 9,
+   "set": "jia-seo",
+   "name": "Jia Seo",
+   "source": "kols/jia-seo/identity/identity_master.jpg",
+   "source_sha256": "0c287ecb0d262691dfd90a798908174a13435ba2af6d3cf053593bc3c0a1847c",
+   "why": "identity_master（Penny 2026-09-01 核准）",
+   "crop_box_px": [
+    0,
+    0,
+    1728,
+    2304
+   ],
+   "file": "review/calendar/m5_r27/refs/ref09_jia-seo.jpg",
+   "sha256": "26ffbf4c97de207a91c7762a65eb5ca5357e0af3272d527392084f1e0ac433f1",
+   "look": "shoulder-length straight blue-black hair with a mint-green inner layer showing at the ends; cool and composed",
+   "wear": {
+    "A": "an oat cropped blazer with matching straight trousers over an ivory bandeau top",
+    "B": "an ivory satin blazer dress"
+   },
+   "position": {
+    "H-A": "standing right of center behind the plinth, one hand on her hip",
+    "V-A": "back row on the riser, center-right, standing",
+    "H-B": "sitting on the left arm of the sofa, turned toward Rainie",
+    "V-B": "middle, perched on the left arm of the sofa"
+   }
+  },
+  {
+   "image_no": 10,
+   "set": "luna-tanaka",
+   "name": "Luna Tanaka",
+   "source": "kols/luna-tanaka/images/face_reference/ref_04.webp",
+   "source_sha256": "e732b5af354cc34eb7fb8a96977010bf65939b78c5e7822434201561b3fa4211",
+   "why": "Soul 訓練用臉部參考（ref_04，正面）",
+   "crop_box_px": [
+    632,
+    329,
+    1393,
+    1344
+   ],
+   "file": "review/calendar/m5_r27/refs/ref10_luna-tanaka.jpg",
+   "sha256": "ddb87b30788fd844aaa88c7f353dad32c14100c7b74fc5b8c4f16288524aa3f8",
+   "look": "chin-length straight black bob with blunt bangs; gentle and quiet; the smallest of the group",
+   "wear": {
+    "A": "an ivory lace short-sleeve blouse with a cream pleated midi skirt",
+    "B": "a cream chiffon blouse with a champagne satin midi skirt"
+   },
+   "position": {
+    "H-A": "sitting on a low cream ottoman in front, just right of center",
+    "V-A": "front, center-left, sitting on a low cream ottoman",
+    "H-B": "sitting on the rug in front, right of center, holding a glass with both hands",
+    "V-B": "front, left, sitting on the rug with her legs folded to the side"
+   }
+  },
+  {
+   "image_no": 11,
+   "set": "somi-oh",
+   "name": "Somi Oh",
+   "source": "kols/somi-oh/identity/identity_master.jpg",
+   "source_sha256": "da0cb2c77c22c54cc9a30f324f1a4d1a1776d7f8cc8b1283dce1ac60d0820bdc",
+   "why": "identity_master（Penny 2026-09-01 核准）",
+   "crop_box_px": [
+    0,
+    0,
+    1728,
+    2304
+   ],
+   "file": "review/calendar/m5_r27/refs/ref11_somi-oh.jpg",
+   "sha256": "6973ee88d842f10561a42349202adc49f1b95929d0aca43c5a4f8a1e49ffc062",
+   "look": "bright copper-orange layered wolf-cut hair; cheerful, open laugh",
+   "wear": {
+    "A": "an oat cropped jacket with a matching mini skirt over a cream top",
+    "B": "an oat satin camisole with a matching midi skirt"
+   },
+   "position": {
+    "H-A": "perched on the right end of the plinth, laughing toward Coco",
+    "V-A": "middle, seated on the right end of the bench, turning toward Iris and laughing",
+    "H-B": "sitting on the right part of the sofa, mid-laugh",
+    "V-B": "middle, sitting on the right part of the sofa, laughing"
+   }
+  },
+  {
+   "image_no": 12,
+   "set": "rainie-hsu",
+   "name": "Rainie Hsu",
+   "source": "kols/rainie-hsu/images/face_reference/candidate_02.png",
+   "source_sha256": "16934358e178efcba5da88e2e5224eef352bb61f80ebfceb4e36f64fdea42420",
+   "why": "Reference Element v2 錨點原圖（rainie-hsu-anchor-v2；R24 核對）",
+   "crop_box_px": [
+    340,
+    196,
+    1140,
+    1263
+   ],
+   "file": "review/calendar/m5_r27/refs/ref12_rainie-hsu.jpg",
+   "sha256": "d0f2a977dcc6abd6e3aa0600eea878a7640eb53d29674ca2b3c1b871ea0b6974",
+   "look": "very long glossy jet-black straight hair with a deep side part; glamorous, defined makeup; hourglass figure",
+   "wear": {
+    "A": "a champagne satin strapless fitted maxi dress with a side slit",
+    "B": "a champagne satin cowl-neck slip maxi dress with a side slit"
+   },
+   "position": {
+    "H-A": "far right, standing and leaning one hand on the arm of Coco's chair",
+    "V-A": "back row, right, sitting on the edge of the riser with one leg extended",
+    "H-B": "far left, standing beside the floor lamp, holding a champagne glass",
+    "V-B": "back, standing behind the sofa on the right, one hand on the sofa back"
+   }
+  }
+ ]
+}

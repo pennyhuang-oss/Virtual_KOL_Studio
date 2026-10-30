@@ -1,0 +1,170 @@
+{
+ "H-A": {
+  "yerin-han": {
+   "auto": 0
+  },
+  "tammy-chou": {
+   "auto": 1
+  },
+  "rin-ayase": {
+   "auto": 2
+  },
+  "miu-shiraishi": {
+   "auto": 3
+  },
+  "yuna-kim": {
+   "auto": 4
+  },
+  "iris-chen": {
+   "auto": 5
+  },
+  "luna-tanaka": {
+   "auto": 6
+  },
+  "jia-seo": {
+   "auto": 7
+  },
+  "somi-oh": {
+   "auto": 8
+  },
+  "mia-huang": {
+   "auto": 9
+  },
+  "coco-wu": {
+   "auto": 10
+  },
+  "rainie-hsu": {
+   "auto": 11
+  }
+ },
+ "H-B": {
+  "rainie-hsu": {
+   "auto": 0
+  },
+  "tammy-chou": {
+   "auto": 1
+  },
+  "mia-huang": {
+   "auto": 2
+  },
+  "yuna-kim": {
+   "auto": 3
+  },
+  "iris-chen": {
+   "auto": 4
+  },
+  "coco-wu": {
+   "auto": 5
+  },
+  "rin-ayase": {
+   "auto": 6
+  },
+  "luna-tanaka": {
+   "auto": 7
+  },
+  "somi-oh": {
+   "auto": 8
+  },
+  "miu-shiraishi": {
+   "auto": 9
+  },
+  "yerin-han": {
+   "auto": 10
+  },
+  "jia-seo": {
+   "manual": [
+    1110,
+    1170,
+    150
+   ]
+  }
+ },
+ "V-A": {
+  "miu-shiraishi": {
+   "auto": 0
+  },
+  "tammy-chou": {
+   "auto": 1
+  },
+  "luna-tanaka": {
+   "auto": 2
+  },
+  "rin-ayase": {
+   "auto": 3
+  },
+  "yuna-kim": {
+   "auto": 4
+  },
+  "yerin-han": {
+   "auto": 5
+  },
+  "iris-chen": {
+   "auto": 6
+  },
+  "jia-seo": {
+   "auto": 7
+  },
+  "coco-wu": {
+   "auto": 8
+  },
+  "mia-huang": {
+   "auto": 9
+  },
+  "rainie-hsu": {
+   "auto": 10
+  },
+  "somi-oh": {
+   "manual": [
+    2445,
+    2310,
+    170
+   ]
+  }
+ },
+ "V-B": {
+  "jia-seo": {
+   "auto": 0
+  },
+  "luna-tanaka": {
+   "auto": 1
+  },
+  "yerin-han": {
+   "auto": 2
+  },
+  "tammy-chou": {
+   "auto": 3
+  },
+  "rin-ayase": {
+   "auto": 4
+  },
+  "iris-chen": {
+   "auto": 5
+  },
+  "yuna-kim": {
+   "auto": 6
+  },
+  "coco-wu": {
+   "auto": 7
+  },
+  "somi-oh": {
+   "auto": 8
+  },
+  "miu-shiraishi": {
+   "auto": 9
+  },
+  "rainie-hsu": {
+   "manual": [
+    2490,
+    1560,
+    150
+   ]
+  },
+  "mia-huang": {
+   "manual": [
+    2715,
+    3050,
+    175
+   ]
+  }
+ }
+}

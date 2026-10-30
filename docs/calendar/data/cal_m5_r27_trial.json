@@ -1,0 +1,472 @@
+{
+ "round": "M-5 R27",
+ "recorded_on": "2026-10-30",
+ "note": "12 人團體封面 4 張候選的逐張驗收（Claude 自查，非主管覆核、非 Owner 接受）。身分判讀：把每位的身分參考臉與封面上的臉並排比對；只看臉，不用髮色代替臉部比對；看不清的標無法判定。等級：相符＝能確認是同一人；部分相符＝髮型與大致特徵接近，但不能確認是同一人；不符＝明顯是別人；無法判定＝閉眼、側臉或遮擋。",
+ "grades": [
+  "相符",
+  "部分相符",
+  "不符",
+  "無法判定"
+ ],
+ "generation": {
+  "covers": 4,
+  "requests": 4,
+  "retries": 0,
+  "extra_generation": 0,
+  "credits": 16,
+  "credit_cap": 16,
+  "upload_credits": 0,
+  "model_label": "Nano Banana Pro",
+  "resolution": "4k",
+  "aspect": {
+   "H": "4:3",
+   "V": "3:4"
+  },
+  "px": {
+   "H": [
+    4800,
+    3584
+   ],
+   "V": [
+    3584,
+    4800
+   ]
+  },
+  "identity_inputs": "12 張身分參考圖（每人 1 張，依對照表 Image 1–12 順序），同一次請求送入；沒有用 Soul，也沒有用單一角色生成所有人"
+ },
+ "covers": {
+  "H-A": {
+   "kind": "H",
+   "direction": "A",
+   "people_count": 12,
+   "identity_counts": {
+    "相符": 0,
+    "部分相符": 9,
+    "不符": 2,
+    "無法判定": 1
+   },
+   "identity": {
+    "yuna-kim": {
+     "grade": "部分相符",
+     "note": "髮型髮色相符；臉較圓、笑容不同，無法確認同一人"
+    },
+    "rin-ayase": {
+     "grade": "部分相符",
+     "note": "酒紅長髮相符；五官接近但不足以確認"
+    },
+    "miu-shiraishi": {
+     "grade": "部分相符",
+     "note": "淺金短髮與瀏海相符；臉型略圓"
+    },
+    "tammy-chou": {
+     "grade": "部分相符",
+     "note": "金色長捲髮相符；五官接近但不足以確認"
+    },
+    "yerin-han": {
+     "grade": "不符",
+     "note": "多了厚瀏海、少了淺色挑染，臉型與五官不同"
+    },
+    "coco-wu": {
+     "grade": "不符",
+     "note": "換成另一位不同族裔的人，與基準臉完全不同"
+    },
+    "mia-huang": {
+     "grade": "部分相符",
+     "note": "灰棕捲髮與粉色挑染（少量）相符；五官接近但不足以確認"
+    },
+    "iris-chen": {
+     "grade": "部分相符",
+     "note": "黑長髮相符；五官接近但不足以確認"
+    },
+    "jia-seo": {
+     "grade": "部分相符",
+     "note": "深藍黑髮相符，但少了藍綠內層挑染；五官接近但不足以確認"
+    },
+    "luna-tanaka": {
+     "grade": "部分相符",
+     "note": "黑色齊瀏海鮑伯相符，臉型接近"
+    },
+    "somi-oh": {
+     "grade": "無法判定",
+     "note": "閉眼大笑，看不到眼睛"
+    },
+    "rainie-hsu": {
+     "grade": "部分相符",
+     "note": "黑長髮相符；眉眼特徵不明顯，無法確認"
+    }
+   },
+   "checks": [
+    {
+     "no": 1,
+     "item": "恰好 12 人，無重複、漏人或額外人物",
+     "result": "pass",
+     "note": "12 人；髮色各不相同，無重複或額外人物"
+    },
+    {
+     "no": 2,
+     "item": "每位臉部可辨識，與對照表對應",
+     "result": "fail",
+     "note": "部分相符 9、不符 2（Yerin、Coco）、無法判定 1（Somi）；相符 0"
+    },
+    {
+     "no": 3,
+     "item": "沒有串臉、換人、多人長同一張臉",
+     "result": "fail",
+     "note": "Coco 換成另一位不同族裔的人；Yerin 髮型與臉型改變；多位臉型與笑容趨同"
+    },
+    {
+     "no": 4,
+     "item": "人體比例、手腳、遮擋與接觸合理",
+     "result": "pass",
+     "note": "未見多手多腳或錯位；坐、站、席地的接觸合理"
+    },
+    {
+     "no": 5,
+     "item": "服裝同系列，人物仍有個性",
+     "result": "pass",
+     "note": "象牙白／燕麥色同系列，緞面洋裝、西裝、裙裝、長褲剪裁各異"
+    },
+    {
+     "no": 6,
+     "item": "真正是同場團體寫真，光線與空間一致",
+     "result": "pass",
+     "note": "同一棚景，窗光方向與地面陰影一致"
+    },
+    {
+     "no": 7,
+     "item": "整張有封面吸引力，縮到成品尺寸仍可讀",
+     "result": "pass",
+     "note": "左右展開、高低自然；上方約三分之一乾淨牆面放標題"
+    }
+   ],
+   "finalizable": false,
+   "verdict": "不可定案：12 人身分未能全部確認"
+  },
+  "H-B": {
+   "kind": "H",
+   "direction": "B",
+   "people_count": 12,
+   "identity_counts": {
+    "相符": 0,
+    "部分相符": 9,
+    "不符": 0,
+    "無法判定": 3
+   },
+   "identity": {
+    "yuna-kim": {
+     "grade": "部分相符",
+     "note": "髮型髮色相符；五官接近但不足以確認"
+    },
+    "rin-ayase": {
+     "grade": "部分相符",
+     "note": "酒紅長髮相符；臉較成熟，無法確認"
+    },
+    "miu-shiraishi": {
+     "grade": "部分相符",
+     "note": "淺金短髮與瀏海相符；唇形較厚"
+    },
+    "tammy-chou": {
+     "grade": "部分相符",
+     "note": "金色長捲髮相符；五官接近但不足以確認"
+    },
+    "yerin-han": {
+     "grade": "部分相符",
+     "note": "多了瀏海；臉型接近但不足以確認"
+    },
+    "coco-wu": {
+     "grade": "部分相符",
+     "note": "東亞臉、瀏海相符，但改成捲髮、頭部傾斜，無法確認"
+    },
+    "mia-huang": {
+     "grade": "部分相符",
+     "note": "灰棕髮與粉色挑染相符；五官接近但不足以確認"
+    },
+    "iris-chen": {
+     "grade": "無法判定",
+     "note": "大笑且側轉，眼睛半閉"
+    },
+    "jia-seo": {
+     "grade": "無法判定",
+     "note": "側臉，只看到半邊"
+    },
+    "luna-tanaka": {
+     "grade": "部分相符",
+     "note": "黑色齊瀏海鮑伯相符，臉型與眼型很接近"
+    },
+    "somi-oh": {
+     "grade": "無法判定",
+     "note": "瞇眼大笑，看不清五官"
+    },
+    "rainie-hsu": {
+     "grade": "部分相符",
+     "note": "黑長髮與眉型接近；少了基準照的眼妝，無法確認"
+    }
+   },
+   "checks": [
+    {
+     "no": 1,
+     "item": "恰好 12 人，無重複、漏人或額外人物",
+     "result": "pass",
+     "note": "12 人；無重複或額外人物"
+    },
+    {
+     "no": 2,
+     "item": "每位臉部可辨識，與對照表對應",
+     "result": "fail",
+     "note": "部分相符 9、不符 0、無法判定 3（Iris、Jia、Somi）；相符 0"
+    },
+    {
+     "no": 3,
+     "item": "沒有串臉、換人、多人長同一張臉",
+     "result": "partial",
+     "note": "沒有明顯換成他人；Yerin 多了瀏海、Coco 改成捲髮；多位臉型趨同"
+    },
+    {
+     "no": 4,
+     "item": "人體比例、手腳、遮擋與接觸合理",
+     "result": "partial",
+     "note": "左下多人腿部交疊，放大看歸屬大致合理但擁擠"
+    },
+    {
+     "no": 5,
+     "item": "服裝同系列，人物仍有個性",
+     "result": "pass",
+     "note": "香檳／象牙緞面同系列，剪裁各異"
+    },
+    {
+     "no": 6,
+     "item": "真正是同場團體寫真，光線與空間一致",
+     "result": "pass",
+     "note": "同一室內，暖色燈光一致"
+    },
+    {
+     "no": 7,
+     "item": "整張有封面吸引力，縮到成品尺寸仍可讀",
+     "result": "partial",
+     "note": "有坐有站、有互動；少量香檳杯與果盤，兩位舉杯稍像展示動作"
+    }
+   ],
+   "finalizable": false,
+   "verdict": "不可定案：12 人身分未能全部確認"
+  },
+  "V-A": {
+   "kind": "V",
+   "direction": "A",
+   "people_count": 12,
+   "identity_counts": {
+    "相符": 0,
+    "部分相符": 9,
+    "不符": 2,
+    "無法判定": 1
+   },
+   "identity": {
+    "yuna-kim": {
+     "grade": "部分相符",
+     "note": "髮型髮色相符；臉較寬，無法確認"
+    },
+    "rin-ayase": {
+     "grade": "部分相符",
+     "note": "酒紅長髮相符；五官接近但不足以確認"
+    },
+    "miu-shiraishi": {
+     "grade": "部分相符",
+     "note": "淺金短髮與瀏海相符；臉型略寬"
+    },
+    "tammy-chou": {
+     "grade": "不符",
+     "note": "膚色偏深、五官與基準不同"
+    },
+    "yerin-han": {
+     "grade": "部分相符",
+     "note": "有淺色挑染但多了瀏海；臉型接近但不足以確認"
+    },
+    "coco-wu": {
+     "grade": "部分相符",
+     "note": "東亞臉、瀏海相符，但髮型改成大捲，無法確認"
+    },
+    "mia-huang": {
+     "grade": "部分相符",
+     "note": "灰棕髮與粉色挑染相符；頭部傾斜"
+    },
+    "iris-chen": {
+     "grade": "部分相符",
+     "note": "黑長髮相符；五官接近但不足以確認"
+    },
+    "jia-seo": {
+     "grade": "部分相符",
+     "note": "深藍黑髮與藍綠挑染相符；五官較銳利"
+    },
+    "luna-tanaka": {
+     "grade": "部分相符",
+     "note": "黑色齊瀏海鮑伯相符，臉型接近"
+    },
+    "somi-oh": {
+     "grade": "無法判定",
+     "note": "側轉大笑，看不到正臉"
+    },
+    "rainie-hsu": {
+     "grade": "不符",
+     "note": "膚色偏深、五官與基準不同"
+    }
+   },
+   "checks": [
+    {
+     "no": 1,
+     "item": "恰好 12 人，無重複、漏人或額外人物",
+     "result": "pass",
+     "note": "12 人；無重複或額外人物"
+    },
+    {
+     "no": 2,
+     "item": "每位臉部可辨識，與對照表對應",
+     "result": "fail",
+     "note": "部分相符 9、不符 2（Tammy、Rainie）、無法判定 1（Somi）；相符 0"
+    },
+    {
+     "no": 3,
+     "item": "沒有串臉、換人、多人長同一張臉",
+     "result": "fail",
+     "note": "Tammy、Rainie 換成不同長相（膚色偏深、五官不同）"
+    },
+    {
+     "no": 4,
+     "item": "人體比例、手腳、遮擋與接觸合理",
+     "result": "partial",
+     "note": "左緣一條腿與高跟鞋從 Miu 身後伸出、位置不自然；左右緣肢體太靠邊，會落在裁切／出血區"
+    },
+    {
+     "no": 5,
+     "item": "服裝同系列，人物仍有個性",
+     "result": "pass",
+     "note": "象牙白／燕麥色同系列"
+    },
+    {
+     "no": 6,
+     "item": "真正是同場團體寫真，光線與空間一致",
+     "result": "pass",
+     "note": "同一棚景，光線一致"
+    },
+    {
+     "no": 7,
+     "item": "整張有封面吸引力，縮到成品尺寸仍可讀",
+     "result": "pass",
+     "note": "前後三層高低清楚，不是橫圖裁直；上方留白足"
+    }
+   ],
+   "finalizable": false,
+   "verdict": "不可定案：12 人身分未能全部確認"
+  },
+  "V-B": {
+   "kind": "V",
+   "direction": "B",
+   "people_count": 12,
+   "identity_counts": {
+    "相符": 0,
+    "部分相符": 3,
+    "不符": 1,
+    "無法判定": 8
+   },
+   "identity": {
+    "yuna-kim": {
+     "grade": "部分相符",
+     "note": "四分之三側臉；髮型髮色相符"
+    },
+    "rin-ayase": {
+     "grade": "部分相符",
+     "note": "四分之三側臉；酒紅長髮相符"
+    },
+    "miu-shiraishi": {
+     "grade": "無法判定",
+     "note": "接近側臉"
+    },
+    "tammy-chou": {
+     "grade": "無法判定",
+     "note": "側轉、瞇眼笑"
+    },
+    "yerin-han": {
+     "grade": "無法判定",
+     "note": "側轉，多了瀏海"
+    },
+    "coco-wu": {
+     "grade": "不符",
+     "note": "換成另一位不同族裔的人"
+    },
+    "mia-huang": {
+     "grade": "無法判定",
+     "note": "側臉"
+    },
+    "iris-chen": {
+     "grade": "部分相符",
+     "note": "四分之三側臉；黑長髮相符"
+    },
+    "jia-seo": {
+     "grade": "無法判定",
+     "note": "側轉，藍綠挑染幾乎看不到"
+    },
+    "luna-tanaka": {
+     "grade": "無法判定",
+     "note": "側臉且頭髮遮住"
+    },
+    "somi-oh": {
+     "grade": "無法判定",
+     "note": "瞇眼大笑，看不清五官"
+    },
+    "rainie-hsu": {
+     "grade": "無法判定",
+     "note": "側臉"
+    }
+   },
+   "checks": [
+    {
+     "no": 1,
+     "item": "恰好 12 人，無重複、漏人或額外人物",
+     "result": "pass",
+     "note": "12 人；無重複或額外人物"
+    },
+    {
+     "no": 2,
+     "item": "每位臉部可辨識，與對照表對應",
+     "result": "fail",
+     "note": "部分相符 3、不符 1（Coco）、無法判定 8（Miu、Tammy、Yerin、Mia、Jia、Luna、Somi、Rainie）；相符 0"
+    },
+    {
+     "no": 3,
+     "item": "沒有串臉、換人、多人長同一張臉",
+     "result": "fail",
+     "note": "Coco 換成另一位不同族裔的人"
+    },
+    {
+     "no": 4,
+     "item": "人體比例、手腳、遮擋與接觸合理",
+     "result": "partial",
+     "note": "Jia 的腳伸到左緣裁切區；其餘坐姿合理"
+    },
+    {
+     "no": 5,
+     "item": "服裝同系列，人物仍有個性",
+     "result": "pass",
+     "note": "香檳／象牙緞面同系列"
+    },
+    {
+     "no": 6,
+     "item": "真正是同場團體寫真，光線與空間一致",
+     "result": "pass",
+     "note": "同一室內，燈光一致"
+    },
+    {
+     "no": 7,
+     "item": "整張有封面吸引力，縮到成品尺寸仍可讀",
+     "result": "partial",
+     "note": "互動自然、最像聚會瞬間；但多數臉側轉，封面上認不出是誰"
+    }
+   ],
+   "finalizable": false,
+   "verdict": "不可定案：12 人身分未能全部確認"
+  }
+ },
+ "summary": {
+  "finalizable_covers": 0,
+  "all_12_confirmed_any": false,
+  "statement": "4 張都是 12 人同場合照、服裝同系列、光線一致，但沒有一張能確認 12 人身分：H-A、V-A、V-B 各有 1–2 位明顯換成別人；H-B 沒有明顯換人，但 3 位看不清、其餘 9 位只能算部分相符。依指示不能標為可定案的 12 人封面；未自動補生或修臉。"
+ }
+}

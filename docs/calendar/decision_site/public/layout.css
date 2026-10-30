@@ -89,3 +89,29 @@ svg.guides .g-photo { stroke: #1d4ed8; stroke-width: 2; }
   .mchip { min-height: 32px; padding: 2px 8px; font-size: .84rem; }
   .btn.dl { width: 100%; }
 }
+
+/* 封面候選（M-5 R27）：橫式、直式各 A／B 並排，選 A／B／都想修改 */
+.cgroup { margin: 14px 0 20px; scroll-margin-top: 12px; }
+.cgrid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.cgrid-V { max-width: 760px; }
+.ccard { border: 1px solid #e2dfd8; border-radius: 10px; padding: 10px; background: #fcfcfa; min-width: 0; scroll-margin-top: 12px; }
+.ccard h4 { margin: 0 0 6px; font-size: 1.02rem; }
+.cverdict { font-size: .88rem; margin: 8px 0 4px; }
+.cverdict b { color: #a40000; }
+.cbtns { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.cbtns .btn { min-height: 40px; font-size: .88rem; }
+.chk, .ppl { margin: .3em 0; padding-left: 1.1em; font-size: .86rem; }
+.chk li, .ppl li { margin: .3em 0; }
+.chk small, .ppl small { display: block; color: #444; }
+.chk .mk { font-weight: 700; }
+.acc { border: 1px solid #b7d7b9; background: #f1f8f1; border-radius: 8px; padding: 6px 12px; margin: 8px 0; }
+.acc h3 { margin: .3em 0; font-size: 1rem; }
+.acc ul { margin: .2em 0; padding-left: 1.2em; font-weight: 600; }
+details.hist > summary { font-weight: 700; }
+#cover-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+
+@media (max-width: 760px) {
+  .cgrid-H { grid-template-columns: minmax(0, 1fr); }
+  .cgrid-V { gap: 8px; }
+  .ccard { padding: 8px; }
+}

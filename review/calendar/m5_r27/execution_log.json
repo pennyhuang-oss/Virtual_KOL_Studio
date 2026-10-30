@@ -1,0 +1,369 @@
+{
+ "note": "M-5 R27 私有執行紀錄（含平台 media／任務 ID；不公開）",
+ "round": "M-5 R27",
+ "baseline": {
+  "balance_before": 770.09,
+  "latest_tx_before_utc": "2026-10-29T13:08:01Z（非本案 Seed Audio，不歸入）"
+ },
+ "uploads": [
+  {
+   "image_no": 1,
+   "set": "yuna-kim",
+   "file": "review/calendar/m5_r27/refs/ref01_yuna-kim.jpg",
+   "sha256": "6dc21dac2efce721db71197a36a581811bc434765b5686e4473b55c6e44699ca",
+   "media_id": "db34c8c5-5b83-4722-b98e-2451bb90bded",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/db34c8c5-5b83-4722-b98e-2451bb90bded.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:01Z"
+  },
+  {
+   "image_no": 2,
+   "set": "rin-ayase",
+   "file": "review/calendar/m5_r27/refs/ref02_rin-ayase.jpg",
+   "sha256": "07c9393e06d33b3295bde8c9f2811c158ed464c82a49b5b409b4c7dd488b1124",
+   "media_id": "7a2b3b85-7bc5-48bb-95c8-3a5fec778bef",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/7a2b3b85-7bc5-48bb-95c8-3a5fec778bef.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:02Z"
+  },
+  {
+   "image_no": 3,
+   "set": "miu-shiraishi",
+   "file": "review/calendar/m5_r27/refs/ref03_miu-shiraishi.jpg",
+   "sha256": "b82ce4719c37818ec34a5ba3d3f2f24de1df8787e440457e476f81f0d9f9ea23",
+   "media_id": "86eec0ab-602f-4276-b8f4-12290de9f01c",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/86eec0ab-602f-4276-b8f4-12290de9f01c.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:03Z"
+  },
+  {
+   "image_no": 4,
+   "set": "tammy-chou",
+   "file": "review/calendar/m5_r27/refs/ref04_tammy-chou.jpg",
+   "sha256": "d5ed3b31fe0ff98989afbb4381651b40f167ac8c4b6bf2d1db902268701c9248",
+   "media_id": "b50447be-2e14-4367-99b0-9ee44101374f",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/b50447be-2e14-4367-99b0-9ee44101374f.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:04Z"
+  },
+  {
+   "image_no": 5,
+   "set": "yerin-han",
+   "file": "review/calendar/m5_r27/refs/ref05_yerin-han.jpg",
+   "sha256": "46514107312b2c3f72f57d2e945ad45b45a55ffe6821c0e986a879ce66c36a85",
+   "media_id": "3e5051a6-19cf-4332-99c8-7aef89997094",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/3e5051a6-19cf-4332-99c8-7aef89997094.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:06Z"
+  },
+  {
+   "image_no": 6,
+   "set": "coco-wu",
+   "file": "review/calendar/m5_r27/refs/ref06_coco-wu.jpg",
+   "sha256": "bcfe9fed346c55584db1c86e2308abbdb79135bb5212c97c721eb72d82308c36",
+   "media_id": "b4814492-56b5-4ba1-a1ee-aefdcad24956",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/b4814492-56b5-4ba1-a1ee-aefdcad24956.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:07Z"
+  },
+  {
+   "image_no": 7,
+   "set": "mia-huang",
+   "file": "review/calendar/m5_r27/refs/ref07_mia-huang.jpg",
+   "sha256": "b1244a675755ad644cf524795843edc5416c2f9855bea859e7794f29556210e9",
+   "media_id": "32aa73f7-d7a9-4b79-a8fd-a746a66d8583",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/32aa73f7-d7a9-4b79-a8fd-a746a66d8583.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:08Z"
+  },
+  {
+   "image_no": 8,
+   "set": "iris-chen",
+   "file": "review/calendar/m5_r27/refs/ref08_iris-chen.jpg",
+   "sha256": "83b65439a0a5c0198a89aff0ee72bb0aa49c9eaf25762bf08ba1dfe598f776c0",
+   "media_id": "6e5d687d-ddcf-4861-94bd-7740c09fd344",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/6e5d687d-ddcf-4861-94bd-7740c09fd344.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:08Z"
+  },
+  {
+   "image_no": 9,
+   "set": "jia-seo",
+   "file": "review/calendar/m5_r27/refs/ref09_jia-seo.jpg",
+   "sha256": "26ffbf4c97de207a91c7762a65eb5ca5357e0af3272d527392084f1e0ac433f1",
+   "media_id": "47f8db50-d3bb-4a53-b262-ad43d7d72c5d",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/47f8db50-d3bb-4a53-b262-ad43d7d72c5d.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:09Z"
+  },
+  {
+   "image_no": 10,
+   "set": "luna-tanaka",
+   "file": "review/calendar/m5_r27/refs/ref10_luna-tanaka.jpg",
+   "sha256": "ddb87b30788fd844aaa88c7f353dad32c14100c7b74fc5b8c4f16288524aa3f8",
+   "media_id": "65971ba1-c99a-4082-a7fd-40a10972a91e",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/65971ba1-c99a-4082-a7fd-40a10972a91e.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:10Z"
+  },
+  {
+   "image_no": 11,
+   "set": "somi-oh",
+   "file": "review/calendar/m5_r27/refs/ref11_somi-oh.jpg",
+   "sha256": "6973ee88d842f10561a42349202adc49f1b95929d0aca43c5a4f8a1e49ffc062",
+   "media_id": "ba49c484-90f1-4152-b7b0-9653ec35388c",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/ba49c484-90f1-4152-b7b0-9653ec35388c.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:11Z"
+  },
+  {
+   "image_no": 12,
+   "set": "rainie-hsu",
+   "file": "review/calendar/m5_r27/refs/ref12_rainie-hsu.jpg",
+   "sha256": "d0f2a977dcc6abd6e3aa0600eea878a7640eb53d29674ca2b3c1b871ea0b6974",
+   "media_id": "119a66bd-d95a-448c-a0af-0643615424eb",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/119a66bd-d95a-448c-a0af-0643615424eb.jpg",
+   "put_http": "200",
+   "put_utc": "2026-10-30T07:54:12Z"
+  }
+ ],
+ "quotes": [
+  {
+   "cover": "H-A",
+   "utc": "2026-10-30T07:58:11Z",
+   "model": "nano_banana_pro",
+   "resolution": "4k",
+   "aspect_ratio": "4:3",
+   "n_refs": 12,
+   "prompt_sha256": "695ad8ff0d9e5e15fb49c61c8f9018ff40cbf5bbaf528295baa4bfa522ec84f6",
+   "credits": 4,
+   "note": "唯讀報價，用實際 12 張身分輸入與最終 prompt"
+  },
+  {
+   "cover": "H-B",
+   "utc": "2026-10-30T08:02:11Z",
+   "model": "nano_banana_pro",
+   "resolution": "4k",
+   "aspect_ratio": "4:3",
+   "n_refs": 12,
+   "prompt_sha256": "778cbd98338b4a0dc3e8c745b1e5bf3f5aa04d6acf07771b1ac64a955c4177ad",
+   "credits": 4
+  },
+  {
+   "cover": "V-A",
+   "utc": "2026-10-30T08:03:59Z",
+   "model": "nano_banana_pro",
+   "resolution": "4k",
+   "aspect_ratio": "3:4",
+   "n_refs": 12,
+   "prompt_sha256": "5e43b57d50d9bcb60ee0abf26faaf4b0e3c0c0b1e130f226ec373d300e241bb1",
+   "credits": 4
+  },
+  {
+   "cover": "V-B",
+   "utc": "2026-10-30T08:05:37Z",
+   "model": "nano_banana_pro",
+   "resolution": "4k",
+   "aspect_ratio": "3:4",
+   "n_refs": 12,
+   "prompt_sha256": "3f01ecc84477ce36dbbf72f70f56af1991a3821ebb5fc7f4788b96e67de04f5e",
+   "credits": 4
+  }
+ ],
+ "submissions": [
+  {
+   "cover": "H-A",
+   "intent_utc": "2026-10-30T07:58:11Z",
+   "status": "completed",
+   "prompt_sha256": "695ad8ff0d9e5e15fb49c61c8f9018ff40cbf5bbaf528295baa4bfa522ec84f6",
+   "aspect_ratio": "4:3",
+   "resolution": "4k",
+   "media_order": [
+    "yuna-kim",
+    "rin-ayase",
+    "miu-shiraishi",
+    "tammy-chou",
+    "yerin-han",
+    "coco-wu",
+    "mia-huang",
+    "iris-chen",
+    "jia-seo",
+    "luna-tanaka",
+    "somi-oh",
+    "rainie-hsu"
+   ],
+   "job_id": "5e1260b5-80aa-4fa2-829b-af39df913dd5",
+   "submitted_utc": "2026-10-30T07:58:59Z",
+   "echo_check": "平台回傳 params：model nano_banana_pro、aspect 4:3、resolution 4k、reference_images 12 個依 Image 1–12 順序",
+   "platform_model_field": "nano_banana_2（平台內部名稱；交易列顯示 Nano Banana Pro）",
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261030_075853_5e1260b5-80aa-4fa2-829b-af39df913dd5.png",
+   "result_created_utc": "2026-10-30T07:58:53Z",
+   "local_original": {
+    "path": "scratchpad m5r27/raw/cover_H-A.png（含平台任務識別中繼資料，不進 git、不公開）",
+    "sha256": "278ce0954d3a5527c418a25de527a0cb82fe9f5e958ea27eede2c9ce38aae6f5",
+    "bytes": 18548175,
+    "px": [
+     4800,
+     3584
+    ]
+   }
+  },
+  {
+   "cover": "H-B",
+   "intent_utc": "2026-10-30T08:02:11Z",
+   "status": "completed",
+   "prompt_sha256": "778cbd98338b4a0dc3e8c745b1e5bf3f5aa04d6acf07771b1ac64a955c4177ad",
+   "aspect_ratio": "4:3",
+   "resolution": "4k",
+   "media_order": [
+    "yuna-kim",
+    "rin-ayase",
+    "miu-shiraishi",
+    "tammy-chou",
+    "yerin-han",
+    "coco-wu",
+    "mia-huang",
+    "iris-chen",
+    "jia-seo",
+    "luna-tanaka",
+    "somi-oh",
+    "rainie-hsu"
+   ],
+   "job_id": "4435cc45-8e84-47f3-b32a-0dafbb1c16d8",
+   "submitted_utc": "2026-10-30T08:03:22Z",
+   "echo_check": "平台回傳 params：aspect 4:3、resolution 4k、reference_images 12 個依 Image 1–12 順序",
+   "platform_model_field": "nano_banana_2（平台內部名稱；交易列顯示 Nano Banana Pro）",
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261030_080317_4435cc45-8e84-47f3-b32a-0dafbb1c16d8.png",
+   "result_created_utc": "2026-10-30T08:03:17Z",
+   "local_original": {
+    "path": "scratchpad m5r27/raw/cover_H-B.png（含平台任務識別中繼資料，不進 git、不公開）",
+    "sha256": "7f4e118566c9d5a6df5c03e712d89572bd8506af7f2f2d00b459343b2a668f16",
+    "bytes": 28248397,
+    "px": [
+     4800,
+     3584
+    ]
+   }
+  },
+  {
+   "cover": "V-A",
+   "intent_utc": "2026-10-30T08:03:59Z",
+   "status": "completed",
+   "prompt_sha256": "5e43b57d50d9bcb60ee0abf26faaf4b0e3c0c0b1e130f226ec373d300e241bb1",
+   "aspect_ratio": "3:4",
+   "resolution": "4k",
+   "media_order": [
+    "yuna-kim",
+    "rin-ayase",
+    "miu-shiraishi",
+    "tammy-chou",
+    "yerin-han",
+    "coco-wu",
+    "mia-huang",
+    "iris-chen",
+    "jia-seo",
+    "luna-tanaka",
+    "somi-oh",
+    "rainie-hsu"
+   ],
+   "job_id": "61417d44-ed4d-4ce3-99f7-eff64d691b0a",
+   "submitted_utc": "2026-10-30T08:05:02Z",
+   "echo_check": "平台回傳 params：aspect 3:4、resolution 4k、reference_images 12 個依 Image 1–12 順序",
+   "platform_model_field": "nano_banana_2（平台內部名稱；交易列顯示 Nano Banana Pro）",
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261030_080456_61417d44-ed4d-4ce3-99f7-eff64d691b0a.png",
+   "result_created_utc": "2026-10-30T08:04:56Z",
+   "local_original": {
+    "path": "scratchpad m5r27/raw/cover_V-A.png（含平台任務識別中繼資料，不進 git、不公開）",
+    "sha256": "960a23ab3acacd7c569d4f3dcb0ab1f6e965789debc63d07dd2ecc1003aecd1f",
+    "bytes": 26265091,
+    "px": [
+     3584,
+     4800
+    ]
+   }
+  },
+  {
+   "cover": "V-B",
+   "intent_utc": "2026-10-30T08:05:37Z",
+   "status": "completed",
+   "prompt_sha256": "3f01ecc84477ce36dbbf72f70f56af1991a3821ebb5fc7f4788b96e67de04f5e",
+   "aspect_ratio": "3:4",
+   "resolution": "4k",
+   "media_order": [
+    "yuna-kim",
+    "rin-ayase",
+    "miu-shiraishi",
+    "tammy-chou",
+    "yerin-han",
+    "coco-wu",
+    "mia-huang",
+    "iris-chen",
+    "jia-seo",
+    "luna-tanaka",
+    "somi-oh",
+    "rainie-hsu"
+   ],
+   "job_id": "10238d4b-f70d-451b-a3a9-dbc9533da29d",
+   "submitted_utc": "2026-10-30T08:07:55Z",
+   "echo_check": "平台回傳 params：aspect 3:4、resolution 4k、reference_images 12 個依 Image 1–12 順序",
+   "platform_model_field": "nano_banana_2（平台內部名稱；交易列顯示 Nano Banana Pro）",
+   "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EwEMQfGwzQsWNyf2tb24nCPjXS/hf_20261030_080750_10238d4b-f70d-451b-a3a9-dbc9533da29d.png",
+   "result_created_utc": "2026-10-30T08:07:50Z",
+   "local_original": {
+    "path": "scratchpad m5r27/raw/cover_V-B.png（含平台任務識別中繼資料，不進 git、不公開）",
+    "sha256": "d3da281b41bfe00be55bbe8961580da23bb4af1b5b48d155f6fde93c0bc558e3",
+    "bytes": 29330705,
+    "px": [
+     3584,
+     4800
+    ]
+   }
+  }
+ ],
+ "upload_cost": {
+  "checked_utc": "2026-10-30T07:58:11Z",
+  "result": "上傳 12 張後交易清單沒有新增任何列（最新仍是 2026-10-29T13:08:01Z 的非本案項目）→ 上傳 0 credits"
+ },
+ "plan": {
+  "per_cover_credits": 4,
+  "covers": 4,
+  "total_planned": 16,
+  "cap": 16,
+  "rule": "每張報價→存意圖→送出 1 次→立刻存任務 ID；累計超過 16 即停"
+ },
+ "transactions": {
+  "checked_utc": "2026-10-30T08:15Z",
+  "rows": [
+   {
+    "display_name": "Nano Banana Pro",
+    "credits": -4,
+    "created_at": "2026-10-30T07:58:53.850344Z"
+   },
+   {
+    "display_name": "Nano Banana Pro",
+    "credits": -4,
+    "created_at": "2026-10-30T08:03:17.927484Z"
+   },
+   {
+    "display_name": "Nano Banana Pro",
+    "credits": -4,
+    "created_at": "2026-10-30T08:04:56.973415Z"
+   },
+   {
+    "display_name": "Nano Banana Pro",
+    "credits": -4,
+    "created_at": "2026-10-30T08:07:50.574970Z"
+   }
+  ],
+  "total_credits": 16,
+  "attribution": "依時間窗與模型列歸入；基準點之後只有這 4 列；上傳 0",
+  "after_balance_expected": 754.09
+ },
+ "completion": {
+  "jobs_wait_utc": "2026-10-30T08:15Z",
+  "completed": 4,
+  "failed": 0,
+  "retries": 0,
+  "extra_generation": 0
+ }
+}

@@ -58,6 +58,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-5 R26：兩款排版預覽完成（橫式 28 面、直式 32 面，實際 mm 尺寸 PDF，標為預覽、非交印核准），待 Penny 看；橫式推薦改用完整 16:9（192×108 mm）照片框、與 R6 的 192×104 套框並列比較，未定案。照片沿用 24 張定案，不需重新接受；排版接受另記。本輪生成 0、付費 0。** 排版預覽資料（規格、頁面、裁切比較、日期讀回核對、PDF 核對）見 `data/cal_m5_layout_r26.json` 與 `CAL_28_M5_R26_LAYOUT.generated.md`，Owner 指令見 `data/cal_m5_owner_r26.json`，排版頁文字見 `data/cal_layout_r26_page.json`。
 
+> **M-5 R27：Penny 接受 R26 排版（橫式完整 16:9 192×108 mm、兩款推薦排法；排版接受不等於交印核准）。12 人團體封面生成 4 張候選（橫式 A／B、直式 A／B，各 1 次請求、實扣 16 credits、上傳 0、未重試），本機排上「2027」後放到排版頁供 Penny 選。Claude 自查：4 張都是 12 人同場，但沒有一張能確認 12 人身分（H-A、V-A、V-B 各有 1–2 位明顯換成別人；H-B 3 位看不清），不可定案；未補生、未修臉。月面照片 24 張不動。** Owner 指令與排版接受原話見 `data/cal_m5_owner_r27.json`，12 人身分對照見 `data/cal_m5_r27_identity.json`，生成指令見 `data/cal_m5_r27_prompts.json`，逐張驗收見 `data/cal_m5_r27_trial.json`，封面排版見 `data/cal_m5_cover_r27.json`，封面比較區文字見 `data/cal_cover_r27_page.json`。
+
 ## 0. 版本
 
 | 項目 | 內容 |
