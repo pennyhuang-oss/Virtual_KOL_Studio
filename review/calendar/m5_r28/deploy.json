@@ -1,0 +1,29 @@
+{
+ "note": "M-5 R28 部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "9048c8719095cd2afe0cdf5eb0e73a5897ef8ab7",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-10-30T09:20:50Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-10-30T09:29:13Z"
+  }
+ ],
+ "live_page_commit": "9048c8719095cd2afe0cdf5eb0e73a5897ef8ab7",
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 58 項、定案相簿回歸 18 項；單人測試 9 檔、R27 封面 16 檔、排版 158 檔 sha256 全符）",
+  "items": [
+   "#cover 最上方是「單人身分測試，非完成封面」：標示 H-A 不代表接受、Claude 自查未通過、12 人流程未授權",
+   "封面區沒有任何選擇按鈕或接受封面的選項；只有備註（鍵 cal2027-cover-r28-v1）與複製",
+   "全圖前後切換（R27 原本／R28 結果），放大到原尺寸 4800 px；Coco 臉部對照、周圍前後並排、4 項檢查、改動範圍與差異圖",
+   "R27 四張收在「Owner 已全部退回」區、每張標 Owner 已退回、顯示退回原話；參考線仍可開",
+   "備註重新整理後保留；只寫 cal2027-cover-r28-v1 與 R26 排版鍵，R27 封面鍵、選片等舊鍵原樣保留",
+   "內頁：排版已接受、PDF 下載、28／32 面、照片框比較、參考線、放大全部如前；24 套定案相簿回歸 18 項全過",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動"
+  ],
+  "public_files": "線上 cover28 9 檔、cover 16 檔、layout 158 檔逐檔 sha256 相同；圖片無 EXIF／ICC／註解；cover-data.js 與 repo 相同；無平台任務識別、無私有 ID（比對 M-4／M-5 私有紀錄 130 個 UUID 與 CDN 帳號路徑）"
+ }
+}
