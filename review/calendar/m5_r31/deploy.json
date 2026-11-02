@@ -1,0 +1,34 @@
+{
+ "note": "M-5 R31 部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "9df3d6259e616439d52a37a99b67527ccb4253cd",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-11-02T09:04:32Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-11-02T09:12:45Z"
+  }
+ ],
+ "live_page_commit": "9df3d6259e616439d52a37a99b67527ccb4253cd",
+ "pdf_urls": {
+  "H": "https://cal2027-decision-production.up.railway.app/cover31/cal2027_H_cover_preview_R31.pdf",
+  "V": "https://cal2027-decision-production.up.railway.app/cover31/cal2027_V_cover_preview_R31.pdf"
+ },
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 62 項、定案相簿回歸 18 項；非人物封面 10 檔、R30 14、R29 10、R28 9、R27 16、排版 158 檔 sha256 全符）",
+  "items": [
+   "#cover 最上方是「非人物封面候選」：標「候選，未接受」與「不等於交印核准」；主要區只有封面圖與方向名稱（A｜四季光影、B｜極簡典藏）",
+   "橫式、直式各 A／B 並排載入；放大到原尺寸（橫式 2410 px、直式 1701 px＝300 dpi）；參考線在 4 張都畫出線圈區、裁切線、安全區",
+   "每款三個選項（選 A／選 B／都想修改）＋各自備註＋整體備註＋複製回饋；預設未選，舊回合的選擇不沿用；新鍵 cal2027-cover-r31-v1",
+   "兩份完整預覽 PDF 可下載（attachment），位元組與紀錄相同（橫式 29 頁、直式 33 頁）",
+   "人物封面收在「人物封面紀錄（Owner 未接受，已停止）」：Owner 原話、R30／R29 當時回饋只讀、R28 測試與 R27 四張各自收合並標未接受",
+   "選擇與備註重新整理後保留；只寫 cal2027-cover-r31-v1 與 R26 排版鍵，R27–R30 封面鍵、選片等舊鍵原樣保留",
+   "內頁：排版已接受、R26 PDF 下載、28／32 面、照片框比較、參考線、放大全部如前；24 套定案相簿回歸 18 項全過",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動、手機可點選與放大"
+  ],
+  "public_files": "線上 cover31 10 檔（含 2 份 PDF）、cover30 14、cover29 10、cover28 9、cover 16、layout 158 檔逐檔 sha256 相同；圖片無 EXIF／ICC／註解；cover-data.js 與 repo 相同；選片頁 182 檔無私有 ID"
+ }
+}
