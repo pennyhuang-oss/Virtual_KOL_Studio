@@ -8683,6 +8683,29 @@ window.CAL_DATA = {
    "status_line": "M-5 R31：Owner 表示人物封面「全部都不像本人」，人物團體封面與 Coco 單人校正均未接受，人物封面停止（紀錄保留）。改做非人物封面：橫式、直式各 A｜四季光影、B｜極簡典藏共 4 張（原創向量、漸層、光影與字體排版；生成 0、付費 0、未購買素材；字型為 SIL OFL 並嵌入）。另出兩份完整預覽 PDF（封面 A、B＋已接受內頁），R26 正式預覽不覆蓋。待 Penny 選 A／B 或寫修改；24 張月面照片與兩款內頁排版維持定案。",
    "trial": "docs/calendar/data/cal_m5_r31_trial.json"
   },
+  "m5r32": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "r32_seasons_brand_candidates",
+     "old": "r31_non_person_candidates",
+     "where": "status.production.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 起 r32_seasons_brand_candidates＝橫式淺色、直式深色各 2 個加入兌心科技品牌的版本已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
+     "old": "封面狀態；M-5 R28–R30 的人物團體封面與 Coco 單人校正 Owner 均未接受；M-5 R31 起 r31_non_person_candidates＝非人物封面 4 張候選（橫式、直式各 A 四季光影／B 極簡典藏）已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
+     "where": "status.production.definitions.cover"
+    }
+   ],
+   "covers": "docs/calendar/data/cal_m5_cover_r32.json",
+   "design": "docs/calendar/data/cal_m5_r32_design.json",
+   "from_commit": "895ba18bb4a3078d53755b39e40d5c43c067f60e",
+   "owner": "docs/calendar/data/cal_m5_owner_r32.json",
+   "page": "docs/calendar/data/cal_cover_r32_page.json",
+   "source": "docs/calendar/cover_r32/",
+   "status_line": "M-5 R32：Owner 決定橫式、直式都用 R31 A 四季光影，橫式淺色、直式深色（近黑深藍底、局部光影），並加入兌心科技 Logo 與「兌心科技 Insight Software」，品牌主色為藍。本輪做出橫式淺色、直式深色各 2 個版本（同一背景，只差年份與品牌區編排）；Logo 取自官網向量，深色版白色 Logo 為待確認的衍生版。每張候選一份完整預覽 PDF（橫式 28 面、直式 32 面）。生成 0、付費 0；待 Penny 選擇；24 張照片與內頁排版不改。"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9470,7 +9493,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "4bd9f95aa86294616a8465770f972b48a7e1f25a",
+  "plan_blob": "1541b8f956f9a7a5ab1bdee7302580c53a4e0f97",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14825,7 +14848,7 @@ window.CAL_DATA = {
      "V-yuna-kim": "V-yuna-kim-R21-A"
     },
     "batch1": "owner-rejected-r6",
-    "cover": "r31_non_person_candidates",
+    "cover": "r32_seasons_brand_candidates",
     "cover_credits_log": {
      "M-5 R27": 16,
      "M-5 R28": 2
@@ -14845,7 +14868,7 @@ window.CAL_DATA = {
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R28–R30 的人物團體封面與 Coco 單人校正 Owner 均未接受；M-5 R31 起 r31_non_person_candidates＝非人物封面 4 張候選（橫式、直式各 A 四季光影／B 極簡典藏）已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
+     "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 起 r32_seasons_brand_candidates＝橫式淺色、直式深色各 2 個加入兌心科技品牌的版本已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
      "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
      "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",

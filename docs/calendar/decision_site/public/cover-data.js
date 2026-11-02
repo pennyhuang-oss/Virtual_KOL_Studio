@@ -1017,14 +1017,15 @@ window.CAL_COVER = {
   "無法判定"
  ],
  "history_label": "R26 排版回饋（你在這台裝置填過的內容，保留不動）",
- "intro": "人物封面已停止。這一輪改做不放人物的封面：橫式、直式各 A、B 兩張，請各選一張，或寫下想修改的地方。下面是你已接受的內頁排版。",
+ "intro": "橫式淺色、直式深色各兩個版本，差在年份與品牌區的位置。請各選一個，或寫下想修改的地方。下面是你已接受的內頁排版。",
  "made": "4 張候選（橫式、直式各 A／B），每張 1 次生成；12 位用各自的身分參考圖一起送入。",
  "person_history": {
   "label": "人物封面紀錄（Owner 未接受，已停止）",
   "note": "以下是 R27–R30 的人物團體封面與 Coco 單人測試，都沒有被接受，只保留紀錄；之前的選擇與備註原樣保留，不會帶到這一輪。",
+  "outer_label": "先前的封面紀錄（R31 非人物候選、人物封面；未接受）",
   "owner_words": "全部都不像本人啊。如果這個方式做不出來的話就不要勉強，看有沒有什麼別的替代方案？如果不放人物照片，用什麼方式做封面比較好？"
  },
- "r26_cover_label": "R26 暫用封面（人物縮圖，未採用；封面請看上方非人物候選）",
+ "r26_cover_label": "R26 暫用封面（人物縮圖，未採用；封面請看上方候選）",
  "r27": {
   "feedback": [
    "橫式封面：都想修改（寫在備註）",
@@ -1152,7 +1153,134 @@ window.CAL_COVER = {
   "pdf_label": "完整預覽 PDF（第 1 頁 A、第 2 頁 B，其後是已接受內頁）",
   "scope": "選擇只代表封面方向，不等於交印核准；印刷細節仍要廠商確認與打樣（本輪不打樣）。"
  },
- "round": "M-5 R31",
+ "r31_history_label": "R31 非人物封面候選（你選了 A 四季光影；本輪據此調整）",
+ "r32": {
+  "cards": {
+   "H": [
+    {
+     "id": "H-L1",
+     "page": {
+      "full": {
+       "h": 1831,
+       "src": "cover32/cover_H-L1_f.jpg",
+       "w": 2410
+      },
+      "view": {
+       "h": 916,
+       "src": "cover32/cover_H-L1_v.jpg",
+       "w": 1205
+      }
+     },
+     "pdf": {
+      "href": "cover32/cal2027_H-L1_preview_R32.pdf",
+      "pages": 28,
+      "size_mb": 10.8
+     },
+     "title": "版本 1｜年份右下、品牌左下",
+     "ver": "1"
+    },
+    {
+     "id": "H-L2",
+     "page": {
+      "full": {
+       "h": 1831,
+       "src": "cover32/cover_H-L2_f.jpg",
+       "w": 2410
+      },
+      "view": {
+       "h": 916,
+       "src": "cover32/cover_H-L2_v.jpg",
+       "w": 1205
+      }
+     },
+     "pdf": {
+      "href": "cover32/cal2027_H-L2_preview_R32.pdf",
+      "pages": 28,
+      "size_mb": 10.8
+     },
+     "title": "版本 2｜品牌在年份上方",
+     "ver": "2"
+    }
+   ],
+   "V": [
+    {
+     "id": "V-D1",
+     "page": {
+      "full": {
+       "h": 2410,
+       "src": "cover32/cover_V-D1_f.jpg",
+       "w": 1701
+      },
+      "view": {
+       "h": 1205,
+       "src": "cover32/cover_V-D1_v.jpg",
+       "w": 850
+      }
+     },
+     "pdf": {
+      "href": "cover32/cal2027_V-D1_preview_R32.pdf",
+      "pages": 32,
+      "size_mb": 13.0
+     },
+     "title": "版本 1｜靠左排列",
+     "ver": "1"
+    },
+    {
+     "id": "V-D2",
+     "page": {
+      "full": {
+       "h": 2410,
+       "src": "cover32/cover_V-D2_f.jpg",
+       "w": 1701
+      },
+      "view": {
+       "h": 1205,
+       "src": "cover32/cover_V-D2_v.jpg",
+       "w": 850
+      }
+     },
+     "pdf": {
+      "href": "cover32/cal2027_V-D2_preview_R32.pdf",
+      "pages": 32,
+      "size_mb": 13.0
+     },
+     "title": "版本 2｜置中排列",
+     "ver": "2"
+    }
+   ]
+  },
+  "cover_title": "四季光影＋兌心科技",
+  "feedback_key": "cal2027-cover-r32-09fbe3",
+  "groups": {
+   "H": "橫式淺色",
+   "V": "直式深色"
+  },
+  "img_ver": "09fbe3",
+  "label": "候選，未接受",
+  "logo_note": "直式深色版的白色 Logo 是用官網 Logo 改成白色的版本，請一併確認。",
+  "note_labels": {
+   "H": "橫式備註（例如想改哪裡）",
+   "V": "直式備註",
+   "general": "整體備註"
+  },
+  "options": [
+   {
+    "label": "選版本 1",
+    "v": "1"
+   },
+   {
+    "label": "選版本 2",
+    "v": "2"
+   },
+   {
+    "label": "都想修改",
+    "v": "edit"
+   }
+  ],
+  "pdf_label": "完整預覽 PDF",
+  "scope": "選擇只代表封面版本，不等於交印核准；印刷細節仍要廠商確認與打樣（本輪不打樣）。"
+ },
+ "round": "M-5 R32",
  "task": "TASK-CAL-001",
  "test": {
   "checks": [
@@ -1238,5 +1366,5 @@ window.CAL_COVER = {
   "verdict": "未通過",
   "verdict_text": "依「任何一項不過就記失敗」：第 2 項膚色一致性只算部分通過，整體記失敗。可以確定的是：臉部身分這一項成功（第 1 項），範圍也確實只限 Coco 本人（第 3 項）。未繼續修其他人。"
  },
- "title": "2027 桌曆｜封面（非人物候選）與排版"
+ "title": "2027 桌曆｜封面（四季光影＋兌心科技）與排版"
 };

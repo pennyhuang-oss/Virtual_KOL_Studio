@@ -114,6 +114,7 @@ def render18(d):
          *([f"> **{d['m5r29']['status_line']}** 主管覆核與指令見 `data/cal_m5_owner_r29.json`，本機修正驗收與 R28 更正見 `data/cal_m5_r29_trial.json`，修正參數與差異見 `data/cal_m5_r29_skin.json`。", ''] if 'm5r29' in d else []),
          *([f"> **{d['m5r30']['status_line']}** 主管覆核與指令見 `data/cal_m5_owner_r30.json`，還原驗收、按人物歸屬的數字與 R28／R29 更正見 `data/cal_m5_r30_trial.json`，還原方法與無損比對見 `data/cal_m5_r30_restore.json`。", ''] if 'm5r30' in d else []),
          *([f"> **{d['m5r31']['status_line']}** Owner 決定與指令見 `data/cal_m5_owner_r31.json`，4 張候選與預覽 PDF 紀錄見 `data/cal_m5_cover_r31.json`，自查見 `data/cal_m5_r31_trial.json`，可編輯來源在 `cover_r31/`。", ''] if 'm5r31' in d else []),
+         *([f"> **{d['m5r32']['status_line']}** Owner 決定見 `data/cal_m5_owner_r32.json`，設計分析與自查見 `data/cal_m5_r32_design.json`，候選與預覽 PDF 紀錄見 `data/cal_m5_cover_r32.json`，可編輯來源在 `cover_r32/`。", ''] if 'm5r32' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

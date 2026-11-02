@@ -80,6 +80,17 @@
     } catch (e) { return { dec: {}, notes: {} }; }
   })();
   const qsave = () => { try { localStorage.setItem(QKEY, JSON.stringify(qst)); } catch (e) { /* 同上 */ } };
+  // M-5 R32 四季光影品牌版選擇（新鍵＝cal2027-cover-r32-＋圖片版本）：dec＝{H,V}（'1'|'2'|'edit'）、notes＝{H,V,general}
+  const Q2KEY = C && C.r32 ? C.r32.feedback_key : '';
+  const q2 = (() => {
+    if (!Q2KEY) return { dec: {}, notes: {} };
+    try {
+      const v = JSON.parse(localStorage.getItem(Q2KEY) || 'null');
+      const obj = x => (x && typeof x === 'object' && !Array.isArray(x) ? x : {});
+      return v && typeof v === 'object' ? { dec: obj(v.dec), notes: obj(v.notes) } : { dec: {}, notes: {} };
+    } catch (e) { return { dec: {}, notes: {} }; }
+  })();
+  const q2save = () => { try { localStorage.setItem(Q2KEY, JSON.stringify(q2)); } catch (e) { /* 同上 */ } };
 
   let book = /^#V/.test(location.hash) ? 'V' : 'H';
   let frame = 'B';     // 橫式照片面顯示哪個版本：B＝完整 16:9（推薦）、A＝192×104 套框
@@ -207,6 +218,39 @@
       `<div class="acts"><button type="button" class="btn" id="r31-copy">複製回饋</button></div>` +
       `<textarea id="r31-text" rows="7" readonly aria-label="回饋文字"></textarea></div>`;
   }
+  function r32Card(k, c) {
+    const G = C.r32, cap = `${G.groups[k]}｜${c.title}（候選）`;
+    return `<article class="ccard" id="r32-${c.id}"><h4>${esc(c.title)}</h4>` + faceFig({ ...c.page, face: 'cover' }, k, cap) +
+      `<p class="pdfl"><a class="btn dl" id="r32-pdf-${c.id}" href="${esc(c.pdf.href)}" download>${esc(G.pdf_label)}｜${c.pdf.pages} 面、${c.pdf.size_mb} MB</a></p></article>`;
+  }
+  function r32Section() {
+    const G = C.r32;
+    const grp = k => `<div class="cgroup" id="r32-${k}"><h4>${esc(G.groups[k])}</h4><div class="cgrid cgrid-${k}">${G.cards[k].map(c => r32Card(k, c)).join('')}</div>` +
+      `<fieldset class="dq"><legend>${esc(G.groups[k])}選哪一個版本？</legend>` + G.options.map(o =>
+        `<label class="opt"><input type="radio" name="r32-${k}" value="${esc(o.v)}"${q2.dec[k] === o.v ? ' checked' : ''}> <span>${esc(o.label)}</span></label>`).join('') +
+      `<button type="button" class="lnk" data-r32clear="${k}">清除</button></fieldset>` +
+      `<label class="nl">${esc(G.note_labels[k])}<textarea rows="2" data-r32note="${k}" placeholder="可留白">${esc(q2.notes[k] || '')}</textarea></label></div>`;
+    return `<div class="tsec r31 r32" id="cover-r32"><h3>${esc(G.cover_title)} <em class="badge test">${esc(G.label)}</em></h3>` +
+      `<p class="note">${esc(G.scope)}</p>` +
+      `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
+      grp('H') + grp('V') + `<p class="note">${esc(G.logo_note)}</p>` +
+      `<label class="nl">${esc(G.note_labels.general)}<textarea rows="2" data-r32note="general" placeholder="可留白">${esc(q2.notes.general || '')}</textarea></label>` +
+      `<div class="acts"><button type="button" class="btn" id="r32-copy">複製全部封面回饋</button></div>` +
+      `<textarea id="r32-text" rows="8" readonly aria-label="回饋文字"></textarea></div>`;
+  }
+  function r32Text() {
+    const G = C.r32, n = k => (q2.notes[k] || '').trim() || '（無）';
+    const lab = k => { const v = q2.dec[k]; if (v === 'edit') return '都想修改'; const c = G.cards[k].find(x => x.ver === v); return c ? `選版本 ${v}（${c.id}｜${c.title}）` : '（未選）'; };
+    return [`${C.task}／${C.round}｜封面選擇（頁面版本 ${PAGE_COMMIT || '本機預覽'}；圖片版本 ${G.img_ver}）`, '選擇只代表封面版本，不等於交印核准。',
+      `${G.groups.H}：${lab('H')}`, `${G.groups.V}：${lab('V')}`, `${G.groups.H}備註：${n('H')}`, `${G.groups.V}備註：${n('V')}`, `整體備註：${n('general')}`].join('\n');
+  }
+  function r31RO() {
+    const Q = C.r31, lab = v => (v === 'edit' ? '都想修改' : v ? `${v}｜${Q.dirs[v]}` : '（未選）');
+    const imgs = k => Q.cards[k].map(c => fig(c.page.view, `R31 ${BOOK_ZH[k]} ${c.dir}｜${c.dir_zh}`)).join('');
+    return `<div class="tsec" id="cover-r31ro"><p class="cverdict" id="r31-saved"><b>你在 R31 的選擇：</b>橫式 ${esc(lab(qst.dec.H))}｜直式 ${esc(lab(qst.dec.V))}` +
+      `｜備註：${esc(['H', 'V', 'general'].map(k => (qst.notes[k] || '').trim()).filter(Boolean).join('／') || '（無）')}</p>` +
+      `<div class="tparts">${imgs('H')}${imgs('V')}</div></div>`;
+  }
   function r31Text() {
     const Q = C.r31, lab = v => (v === 'edit' ? '都想修改' : v ? `${v}｜${Q.dirs[v]}` : '（未選）'), n = k => (qst.notes[k] || '').trim() || '（無）';
     return [`${C.task}／${C.round}｜非人物封面選擇（頁面版本 ${PAGE_COMMIT || '本機預覽'}）`, '選擇只代表封面方向，不等於交印核准。',
@@ -231,8 +275,22 @@
       `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
       grp('H') + grp('V') + '</details>';
   }
+  function personHist() {
+    const PH = C.person_history;
+    return `<details class="more hist" id="cover-hist"><summary>${esc(PH.label)}</summary><p class="note">${esc(PH.note)}</p><p class="note">Owner 原話：「${esc(PH.owner_words)}」</p>` +
+      `<details class="more r30" id="cover-r30h"><summary>R30 Coco 單人效果確認（未接受）</summary>` + fix30Section() + '</details>' +
+      (C.fix29 ? `<details class="more r29" id="cover-r29h"><summary>${esc(C.fix.r29_label)}（未接受）</summary>` + fix29Section() + '</details>' : '') +
+      `<details class="more r28" id="cover-r28h"><summary>${esc(C.fix.r28_label)}（未接受）</summary>` + testSection() + '</details>' +
+      r27Block() + '</details>';
+  }
   function coverSection() {
     if (!C || !C.test) return '';
+    if (C.r32) {
+      return `<section class="sec" id="cover"><h2>封面</h2>` + r32Section() +
+        `<details class="more hist" id="cover-old"><summary>${esc(C.person_history.outer_label)}</summary>` +
+        `<details class="more r31h" id="cover-r31h"><summary>${esc(C.r31_history_label)}</summary>` + r31RO() + '</details>' +
+        personHist() + '</details></section>';
+    }
     if (C.r31) {
       const PH = C.person_history;
       return `<section class="sec" id="cover"><h2>封面</h2>` + r31Section() +
@@ -259,6 +317,7 @@
     const t = $('#test-text'); if (t && C && C.test) t.value = testText();
     const f = $('#fix-text'); if (f && C && C.fix) f.value = fixText();
     const q = $('#r31-text'); if (q && C && C.r31) q.value = r31Text();
+    const q2t = $('#r32-text'); if (q2t && C && C.r32) q2t.value = r32Text();
   };
 
   // ---------- 各區 ----------
@@ -386,6 +445,8 @@
       }
       return;
     }
+    const q2c = e.target.closest('[data-r32clear]');
+    if (q2c) { const k = q2c.dataset.r32clear; delete q2.dec[k]; q2save(); app.querySelectorAll(`input[name="r32-${k}"]`).forEach(i => { i.checked = false; }); refreshCover(); return; }
     const qc = e.target.closest('[data-r31clear]');
     if (qc) { const k = qc.dataset.r31clear; delete qst.dec[k]; qsave(); app.querySelectorAll(`input[name="r31-${k}"]`).forEach(i => { i.checked = false; }); refreshCover(); return; }
     if (e.target.closest('[data-fclear]')) { fst.dec = ''; fsave(); app.querySelectorAll('input[name="fix"]').forEach(i => { i.checked = false; }); refreshCover(); return; }
@@ -401,13 +462,13 @@
       }
       return;
     }
-    const cp = e.target.closest('#copy, #test-copy, #fix-copy, #r31-copy');
+    const cp = e.target.closest('#copy, #test-copy, #fix-copy, #r31-copy, #r32-copy');
     if (cp) {
-      const kind = cp.id === 'r31-copy' ? 'r31' : cp.id === 'fix-copy' ? 'fix' : cp.id === 'test-copy' ? 'test' : 'layout';
-      const box = $({ r31: '#r31-text', fix: '#fix-text', test: '#test-text', layout: '#cp-text' }[kind]);
-      const t = kind === 'r31' ? r31Text() : kind === 'fix' ? fixText() : kind === 'test' ? testText() : feedbackText();
+      const kind = cp.id === 'r32-copy' ? 'r32' : cp.id === 'r31-copy' ? 'r31' : cp.id === 'fix-copy' ? 'fix' : cp.id === 'test-copy' ? 'test' : 'layout';
+      const box = $({ r32: '#r32-text', r31: '#r31-text', fix: '#fix-text', test: '#test-text', layout: '#cp-text' }[kind]);
+      const t = kind === 'r32' ? r32Text() : kind === 'r31' ? r31Text() : kind === 'fix' ? fixText() : kind === 'test' ? testText() : feedbackText();
       box.value = t;
-      const done = ok => toast(ok ? (kind === 'r31' || kind === 'fix' ? '已複製回饋' : kind === 'test' ? '已複製備註' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
+      const done = ok => toast(ok ? (kind === 'r32' ? '已複製全部封面回饋' : kind === 'r31' || kind === 'fix' ? '已複製回饋' : kind === 'test' ? '已複製備註' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => done(true), () => { box.select(); done(false); });
       else { box.select(); done(false); }
       return;
@@ -424,9 +485,16 @@
     }
     if (e.target.type === 'radio' && e.target.name.startsWith('dec-')) { st.dec[e.target.name.slice(4)] = e.target.value; save(); refreshCopy(); }
     if (e.target.type === 'radio' && e.target.name === 'fix') { fst.dec = e.target.value; fsave(); refreshCover(); }
+    if (e.target.type === 'radio' && e.target.name.startsWith('r32-')) { q2.dec[e.target.name.slice(4)] = e.target.value; q2save(); refreshCover(); }
     if (e.target.type === 'radio' && e.target.name.startsWith('r31-')) { qst.dec[e.target.name.slice(4)] = e.target.value; qsave(); refreshCover(); }
   });
   app.addEventListener('input', e => {
+    const q2k = e.target.dataset && e.target.dataset.r32note;
+    if (q2k != null) {
+      const v = e.target.value;
+      if (v.trim()) q2.notes[q2k] = v; else delete q2.notes[q2k];
+      q2save(); refreshCover(); return;
+    }
     const qk = e.target.dataset && e.target.dataset.r31note;
     if (qk != null) {
       const v = e.target.value;

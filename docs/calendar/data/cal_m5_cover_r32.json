@@ -1,0 +1,442 @@
+{
+ "round": "M-5 R32",
+ "note": "四季光影淺深雙款＋兌心科技品牌：橫式淺色版本 1／2、直式深色版本 1／2；每款兩個版本共用同一張背景。生成 0、付費 0、未購買素材；候選未接受，R26 正式預覽不覆蓋。",
+ "logo": {
+  "source_url": "https://www.insight-software.com/template/img/tw/logo/logo01.svg",
+  "file": "brand/insight-software-logo-official.svg",
+  "sha256": "f7c3ff90ff069faaf60d1f961b5e08e4c697b3a06f5a14d46c947b92a5fcc05a",
+  "official": "官網 logo01.svg：藍色圖示（#2B33F2）＋深色兩行字標「Insight Software」（#231815）；向量原樣、等比縮放",
+  "light_use": "橫式淺色兩版用官方原色",
+  "dark_use": "直式深色兩版用同一組向量路徑改填白色的設計衍生版——官網沒有找到官方反白檔；待 Owner 確認，不是官方版本",
+  "not_used": "官網同目錄的 logo02.svg 是另一家公司的標誌（非兌心科技），未使用"
+ },
+ "palette": {
+  "brand_blue": "#2B33F2",
+  "wordmark": "#231815",
+  "light": {
+   "year": "#1E2A78",
+   "cjk": "#1E2A78",
+   "rule": "#1E2A78"
+  },
+  "dark": {
+   "year": "#E6ECFF",
+   "cjk": "#FFFFFF",
+   "rule": "#C9D4FF",
+   "logo": "#FFFFFF"
+  }
+ },
+ "fonts": [
+  {
+   "key": "year",
+   "file": "CormorantGaramond-Light-LF.ttf",
+   "family": "Cormorant Garamond Light",
+   "license": "OFL-CormorantGaramond.txt",
+   "note": "與 R31 相同（Google Fonts 開源庫 Cormorant Garamond；固定 wght 300、齊線數字預設、只留拉丁字元）"
+  },
+  {
+   "key": "cjk",
+   "file": "NotoSansTC-Medium-subset.ttf",
+   "family": "Noto Sans TC Medium",
+   "license": "OFL-NotoSansTC.txt",
+   "upstream": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf",
+   "upstream_sha256": "864727d210d54f2537bbe23b3a839436c3992af72de9322af5270897246bd44f",
+   "note": "可變字型固定為 wght 500，只保留「兌心科技」與基本拉丁字元"
+  }
+ ],
+ "formats": {
+  "H": {
+   "zh": "橫式",
+   "W": 204,
+   "H": 155,
+   "trim": 2,
+   "coil": 12,
+   "safe": [
+    4,
+    12,
+    200,
+    151
+   ],
+   "text_margin_mm": 3.0
+  },
+  "V": {
+   "zh": "直式",
+   "W": 144,
+   "H": 204,
+   "trim": 2,
+   "coil": 12,
+   "safe": [
+    5,
+    12,
+    139,
+    199
+   ],
+   "text_margin_mm": 3.0
+  }
+ },
+ "covers": [
+  {
+   "id": "H-L1",
+   "kind": "H",
+   "tone": "light",
+   "version": 1,
+   "layout": "年份右下；品牌區在左下，底線與年份對齊",
+   "source": "H-L1.svg",
+   "source_sha256": "044e5a1b361ad9d925e534e34f2ff3618aad7e6ddf34f9a41a10c6092684e861",
+   "px": [
+    2410,
+    1831
+   ],
+   "logo": "official_colors",
+   "checks": {
+    "year_ink_mm": [
+     103.46,
+     109.94,
+     186.79,
+     140.6
+    ],
+    "brand_box_mm": [
+     15.5,
+     133.02,
+     67.16,
+     140.0
+    ],
+    "year_in_safe": true,
+    "brand_in_safe": true,
+    "clear_gap_mm": 36.3,
+    "logo_width_mm": 30.0,
+    "logo_height_mm": 6.98,
+    "wordmark_cap_height_mm": 2.91,
+    "cjk_glyph_height_mm": 3.28,
+    "year_digit_height_mm": 30.66
+   }
+  },
+  {
+   "id": "H-L2",
+   "kind": "H",
+   "tone": "light",
+   "version": 2,
+   "layout": "年份與品牌疊成一組：品牌在年份正上方、右緣對齊",
+   "source": "H-L2.svg",
+   "source_sha256": "e5fd0c484906ba55c302d2aec28a80849d10954e136f63180cda606f2d6a72ae",
+   "px": [
+    2410,
+    1831
+   ],
+   "logo": "official_colors",
+   "checks": {
+    "year_ink_mm": [
+     110.65,
+     112.55,
+     186.94,
+     140.55
+    ],
+    "brand_box_mm": [
+     143.38,
+     94.45,
+     188.5,
+     100.5
+    ],
+    "year_in_safe": true,
+    "brand_in_safe": true,
+    "clear_gap_mm": 12.05,
+    "logo_width_mm": 26.0,
+    "logo_height_mm": 6.05,
+    "wordmark_cap_height_mm": 2.52,
+    "cjk_glyph_height_mm": 2.9,
+    "year_digit_height_mm": 28.0
+   }
+  },
+  {
+   "id": "V-D1",
+   "kind": "V",
+   "tone": "dark",
+   "version": 1,
+   "layout": "年份左下；品牌區在年份下方、左緣對齊",
+   "source": "V-D1.svg",
+   "source_sha256": "974cfa54105da404a4a09dade4f7ae4d9f962a5844d78064543a626e4561ff21",
+   "px": [
+    1701,
+    2410
+   ],
+   "logo": "derivative_white",
+   "checks": {
+    "year_ink_mm": [
+     14.89,
+     147.24,
+     94.7,
+     176.57
+    ],
+    "brand_box_mm": [
+     15.0,
+     185.22,
+     61.75,
+     191.5
+    ],
+    "year_in_safe": true,
+    "brand_in_safe": true,
+    "clear_gap_mm": 8.65,
+    "logo_width_mm": 27.0,
+    "logo_height_mm": 6.28,
+    "wordmark_cap_height_mm": 2.62,
+    "cjk_glyph_height_mm": 3.0,
+    "year_digit_height_mm": 29.33
+   }
+  },
+  {
+   "id": "V-D2",
+   "kind": "V",
+   "tone": "dark",
+   "version": 2,
+   "layout": "置中排列：年份在下方三分之一、品牌區在底部置中",
+   "source": "V-D2.svg",
+   "source_sha256": "1f90ea477cd95cd736647e3c39f45dec37b1311002ca4956a5f2226825f90144",
+   "px": [
+    1701,
+    2410
+   ],
+   "logo": "derivative_white",
+   "checks": {
+    "year_ink_mm": [
+     35.5,
+     145.86,
+     108.27,
+     172.52
+    ],
+    "brand_box_mm": [
+     49.44,
+     185.45,
+     94.56,
+     191.5
+    ],
+    "year_in_safe": true,
+    "brand_in_safe": true,
+    "clear_gap_mm": 12.93,
+    "logo_width_mm": 26.0,
+    "logo_height_mm": 6.05,
+    "wordmark_cap_height_mm": 2.52,
+    "cjk_glyph_height_mm": 2.9,
+    "year_digit_height_mm": 26.66
+   }
+  }
+ ],
+ "pdf": {
+  "H-L1": {
+   "path": "cal2027_H-L1_preview_R32.pdf",
+   "pages": 28,
+   "media_mm": [
+    204.0,
+    155.0
+   ],
+   "trim_mm": [
+    2.0,
+    2.0,
+    202.0,
+    153.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 1.1,
+   "interior_from": "cal2027_H_layout_preview_R26.pdf",
+   "bytes": 11347290
+  },
+  "H-L2": {
+   "path": "cal2027_H-L2_preview_R32.pdf",
+   "pages": 28,
+   "media_mm": [
+    204.0,
+    155.0
+   ],
+   "trim_mm": [
+    2.0,
+    2.0,
+    202.0,
+    153.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 1.15,
+   "interior_from": "cal2027_H_layout_preview_R26.pdf",
+   "bytes": 11346325
+  },
+  "V-D1": {
+   "path": "cal2027_V-D1_preview_R32.pdf",
+   "pages": 32,
+   "media_mm": [
+    144.0,
+    204.0
+   ],
+   "trim_mm": [
+    2.0,
+    2.0,
+    142.0,
+    202.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 1.41,
+   "interior_from": "cal2027_V_layout_preview_R26.pdf",
+   "bytes": 13628357
+  },
+  "V-D2": {
+   "path": "cal2027_V-D2_preview_R32.pdf",
+   "pages": 32,
+   "media_mm": [
+    144.0,
+    204.0
+   ],
+   "trim_mm": [
+    2.0,
+    2.0,
+    142.0,
+    202.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 1.47,
+   "interior_from": "cal2027_V_layout_preview_R26.pdf",
+   "bytes": 13628009
+  }
+ },
+ "files": [
+  {
+   "path": "cal2027_H-L1_preview_R32.pdf",
+   "sha256": "790726773a141a3a802e51fab17b34da7d1a044bc2603d9ecfdb4553260511f1",
+   "bytes": 11347290
+  },
+  {
+   "path": "cal2027_H-L2_preview_R32.pdf",
+   "sha256": "c8c00d153a321fbc8b1c455c8d546f4f890fa79a12e5ba826045063fbe8a2f01",
+   "bytes": 11346325
+  },
+  {
+   "path": "cal2027_V-D1_preview_R32.pdf",
+   "sha256": "98d1e6d6f2b33fa055e6724cd4f4e3869bf139a12bd337cd45f59a44e391121a",
+   "bytes": 13628357
+  },
+  {
+   "path": "cal2027_V-D2_preview_R32.pdf",
+   "sha256": "dead01ac694d79f12d07f4a8b571043c849fbd3960ae41c6a39cd6c5500d9a17",
+   "bytes": 13628009
+  },
+  {
+   "path": "cover_H-L1_f.jpg",
+   "sha256": "cbe8e043b8d29becd422c1fdfe58c278d1d7859f7efabae7134825093c79b999",
+   "bytes": 316239,
+   "px": [
+    2410,
+    1831
+   ]
+  },
+  {
+   "path": "cover_H-L1_v.jpg",
+   "sha256": "1ad7fe5d876c50e2a0e2d9e831e86c9d4d208282b2727c4aa5989848fcef8a87",
+   "bytes": 66688,
+   "px": [
+    1205,
+    916
+   ]
+  },
+  {
+   "path": "cover_H-L2_f.jpg",
+   "sha256": "19e8487f16835cd84feb9797110cd48b7cd6838a6e61b73adee9a16bebf8989f",
+   "bytes": 312241,
+   "px": [
+    2410,
+    1831
+   ]
+  },
+  {
+   "path": "cover_H-L2_v.jpg",
+   "sha256": "232ac770c74ca3ec31ba0b851a50ecb9d48990f3f27e000be1cadba003a4a181",
+   "bytes": 64641,
+   "px": [
+    1205,
+    916
+   ]
+  },
+  {
+   "path": "cover_V-D1_f.jpg",
+   "sha256": "dcc52fb2fca00be844144b7ce232da3c4370ba3c8bc04c5ebdf8f5080fef2be2",
+   "bytes": 362248,
+   "px": [
+    1701,
+    2410
+   ]
+  },
+  {
+   "path": "cover_V-D1_v.jpg",
+   "sha256": "f19a784afcac904a630221dcbea4c702200b4336fc0600768419334c73757f3a",
+   "bytes": 87552,
+   "px": [
+    850,
+    1205
+   ]
+  },
+  {
+   "path": "cover_V-D2_f.jpg",
+   "sha256": "cbb10fda662a17d20336d03cc426159cb92c24452f26fa61bb9b8b59ed04ce76",
+   "bytes": 359378,
+   "px": [
+    1701,
+    2410
+   ]
+  },
+  {
+   "path": "cover_V-D2_v.jpg",
+   "sha256": "2cf76f8fc091163fb3c9786c5984da1de4d47eb33fddf03982a76f01ba1f747f",
+   "bytes": 85908,
+   "px": [
+    850,
+    1205
+   ]
+  }
+ ]
+}

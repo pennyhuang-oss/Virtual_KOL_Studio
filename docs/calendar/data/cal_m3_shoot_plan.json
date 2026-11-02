@@ -524,7 +524,7 @@
     "layout_preview": "排版預覽狀態；M-5 R26 兩款完整頁面預覽與 PDF 完成；M-5 R27 起 owner_reviewed＝Penny 已看過並回覆（工作版、非交印核准）",
     "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；M-5 R27 起 accepted＝Penny 接受 R26 頁面（5a82bf9）的推薦排法：橫式照片框完整 16:9（192×108 mm）、橫式與直式推薦排法。排版接受不等於交印核准",
     "layout_acceptance_record": "Penny 接受排版的原話紀錄",
-    "cover": "封面狀態；M-5 R28–R30 的人物團體封面與 Coco 單人校正 Owner 均未接受；M-5 R31 起 r31_non_person_candidates＝非人物封面 4 張候選（橫式、直式各 A 四季光影／B 極簡典藏）已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
+    "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 起 r32_seasons_brand_candidates＝橫式淺色、直式深色各 2 個加入兌心科技品牌的版本已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
     "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
     "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
     "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
@@ -593,7 +593,7 @@
    "layout_acceptance": "accepted",
    "layout_file": "docs/calendar/data/cal_m5_layout_r26.json",
    "layout_acceptance_record": "docs/calendar/data/cal_m5_owner_r27.json",
-   "cover": "r31_non_person_candidates",
+   "cover": "r32_seasons_brand_candidates",
    "cover_file": "docs/calendar/data/cal_m5_cover_r27.json",
    "cover_generated_log": {
     "M-5 R27": 4
@@ -10081,6 +10081,29 @@
     "where": "status.production.definitions.cover_person_track",
     "old": "（無）",
     "new": "人物封面路線；M-5 R31 Owner 表示「全部都不像本人」後停止（不再修臉、不換模型試拍、不追加人物生成），歷史紀錄保留"
+   }
+  ]
+ },
+ "m5r32": {
+  "from_commit": "895ba18bb4a3078d53755b39e40d5c43c067f60e",
+  "owner": "docs/calendar/data/cal_m5_owner_r32.json",
+  "design": "docs/calendar/data/cal_m5_r32_design.json",
+  "covers": "docs/calendar/data/cal_m5_cover_r32.json",
+  "page": "docs/calendar/data/cal_cover_r32_page.json",
+  "source": "docs/calendar/cover_r32/",
+  "status_line": "M-5 R32：Owner 決定橫式、直式都用 R31 A 四季光影，橫式淺色、直式深色（近黑深藍底、局部光影），並加入兌心科技 Logo 與「兌心科技 Insight Software」，品牌主色為藍。本輪做出橫式淺色、直式深色各 2 個版本（同一背景，只差年份與品牌區編排）；Logo 取自官網向量，深色版白色 Logo 為待確認的衍生版。每張候選一份完整預覽 PDF（橫式 28 面、直式 32 面）。生成 0、付費 0；待 Penny 選擇；24 張照片與內頁排版不改。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "status.production.cover",
+    "old": "r31_non_person_candidates",
+    "new": "r32_seasons_brand_candidates"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.cover",
+    "old": "封面狀態；M-5 R28–R30 的人物團體封面與 Coco 單人校正 Owner 均未接受；M-5 R31 起 r31_non_person_candidates＝非人物封面 4 張候選（橫式、直式各 A 四季光影／B 極簡典藏）已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
+    "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 起 r32_seasons_brand_candidates＝橫式淺色、直式深色各 2 個加入兌心科技品牌的版本已放上網站，等 Penny 選擇；候選不等於接受或交印核准"
    }
   ]
  }

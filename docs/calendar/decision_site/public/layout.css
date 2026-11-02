@@ -153,3 +153,9 @@ table.bp th:first-child, table.bp td:first-child { text-align: left; white-space
 .pdfl .btn.dl { font-size: .86rem; white-space: normal; text-align: left; }
 details.hist > summary, details.r30 > summary { font-weight: 700; }
 #r31-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+
+/* M-5 R32：四季光影＋兌心科技品牌版 */
+.tsec.r32 .ccard .pdfl { margin-top: 4px; }
+.tsec.r32 .ccard .pdfl .btn.dl { min-height: 38px; font-size: .82rem; width: 100%; }
+details.r31h > summary { font-weight: 700; }
+#r32-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
