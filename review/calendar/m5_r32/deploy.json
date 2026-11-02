@@ -1,0 +1,38 @@
+{
+ "note": "M-5 R32 部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "386f9af42ee9a876d066b09b8688c88e22a9f2b7",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "triggered_utc": "2026-11-02T10:43:45Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-11-02T10:51:37Z"
+  }
+ ],
+ "live_page_commit": "386f9af42ee9a876d066b09b8688c88e22a9f2b7",
+ "feedback_key": "cal2027-cover-r32-09fbe3",
+ "pdf_urls": {
+  "H-L1": "https://cal2027-decision-production.up.railway.app/cover32/cal2027_H-L1_preview_R32.pdf",
+  "H-L2": "https://cal2027-decision-production.up.railway.app/cover32/cal2027_H-L2_preview_R32.pdf",
+  "V-D1": "https://cal2027-decision-production.up.railway.app/cover32/cal2027_V-D1_preview_R32.pdf",
+  "V-D2": "https://cal2027-decision-production.up.railway.app/cover32/cal2027_V-D2_preview_R32.pdf"
+ },
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 83 項、定案相簿回歸 18 項；cover32 12、cover31 10、cover30 14、cover29 10、cover28 9、cover 16、layout 158 檔 sha256 全符）",
+  "items": [
+   "#cover 最上方是「四季光影＋兌心科技」：標「候選，未接受」與「不等於交印核准」；主要區沒有 prompt 或技術長文",
+   "橫式淺色版本 1／2、直式深色版本 1／2 並排載入；4 張都可放大到原尺寸（橫式 2410 px、直式 1701 px＝300 dpi）；參考線在 4 張都畫出線圈區、裁切線、安全區",
+   "每款三個選項（選版本 1／選版本 2／都想修改）＋各自備註＋整體備註；預設未選，R31 的選擇不沿用",
+   "「複製全部封面回饋」含頁面版本（386f9af…）、圖片版本 09fbe3、候選 ID（H-L1 等）、選擇與備註；剪貼簿內容與文字框相同",
+   "4 份完整預覽 PDF 在各自卡片下可下載（attachment），位元組與紀錄相同（橫式 28 面、直式 32 面）",
+   "選擇與備註重新整理後保留（桌機與手機）；只寫新鍵 cal2027-cover-r32-09fbe3 與 R26 排版鍵，R27–R31 封面鍵、選片等舊鍵原樣保留",
+   "R31 候選（當時的選擇只讀）與人物封面（R30／R29 回饋只讀、R28、R27）收在「先前的封面紀錄」並預設收合",
+   "內頁：排版已接受、R26 PDF、28／32 面、照片框比較、參考線、放大全部如前；24 套定案相簿回歸 18 項全過",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動、手機可點選、放大與複製"
+  ],
+  "public_files": "線上逐檔 sha256 相同、圖片無 EXIF／ICC／註解、無私有 ID（對照 130 個私有識別碼）；cover-data.js、layout.js、layout.css、layout-data.js 與 repo 相同；healthz ok"
+ }
+}
