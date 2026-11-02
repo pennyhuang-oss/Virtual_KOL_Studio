@@ -1,0 +1,258 @@
+{
+ "round": "M-5 R30",
+ "note": "從 R29 結果另存（R27／R28／R29 不覆蓋）：R28 回填範圍內不屬於 Coco 的像素還原成 R27 原圖；補齊 R29 腳踝漏調。生成 0、付費 0、上傳 0。",
+ "source": {
+  "r27_sha256": "278ce0954d3a5527c418a25de527a0cb82fe9f5e958ea27eede2c9ce38aae6f5",
+  "r28_edit_sha256": "724d675fbc9baf50d827539f90951f422343e77080a00af76a71c008de377e5d",
+  "zones_sha256": "82218552efd30d55089e1dde3c05507cd72e75856af8d2f44d370cee529bb9d7",
+  "masks_sha256": {
+   "ankle.png": "b0cd67a69998234100087122de98db8f018f1fc432622042e6f2d2d4a30339fc",
+   "cls_r27.png": "e76ef26b73de796f857d7bcb1e42c1b2dc05e45e95d00c369b1205570a9cadc5",
+   "cls_r30.png": "07c71c90c6cef9395474d2e25d6eb9255add938347645afd8c52dd54cfe07024",
+   "coco_r27.png": "695c95e404dc7658503d02d520c1fc4a297c53f41917343f371fc8b79aca30b0",
+   "coco_r30.png": "798fbe90a85c822d800c0b6aaa7f3f0df603a8e1efe21979799fa936a3501e5f"
+  }
+ },
+ "master": {
+  "what": "無損主檔（RGB 4800×3584，PNG，不進 git；可用本工具從私有原圖重建）",
+  "pixels_sha256": "c40345266dd808c941aaac855a75d8c2e19afccbea792807a164632e1d44950e"
+ },
+ "method": {
+  "attribution": "分割（頭髮、臉、皮膚、衣服）＋人工範圍（鄰人位置、分割漏掉的鞋與裙擺）＋舊捲髮淡髮暈偵測 → R27 舊 Coco、目前新 Coco 的範圍；聯集外擴過渡帶＝Coco 實際編輯範圍",
+  "restore": "範圍外直接用 R27 像素；聯集外 4–10 px 過渡；舊 Coco 有、新 Coco 沒有的露出區只能用編輯結果，低頻色偏按類別（牆、皮膚、衣服）對齊旁邊已還原的 R27（σ 18 px）",
+  "ankle": "R29 小腿下段修正矩形右緣（x＝4078）外的一條：同樣 a/b 目標；明暗取相鄰已修正皮膚修正量的平滑延伸；權重與 R29 遮罩互補"
+ },
+ "ankle": {
+  "rect": [
+   4060,
+   2860,
+   4125,
+   3100
+  ],
+  "px": 8471,
+  "target_ab": [
+   17.0,
+   23.0
+  ],
+  "dL_range": [
+   7.2,
+   7.56
+  ],
+  "before_Lab": [
+   47.2,
+   18.5,
+   25.3
+  ],
+  "after_Lab": [
+   54.3,
+   17.2,
+   23.2
+  ]
+ },
+ "restore": {
+  "coco_r27_px": 392753,
+  "coco_r30_px": 367486,
+  "edit_range_px": 375445,
+  "revealed_px": 33872,
+  "band_px": [
+   4,
+   10
+  ],
+  "sigma_D_px": 18
+ },
+ "by_person": [
+  {
+   "key": "somi_sleeve",
+   "zh": "Somi 左袖（含旁邊牆面）",
+   "r28_overreach_px": 9069,
+   "r28_overreach_gt3_px": 2122,
+   "r28_overreach_mean_abs_diff": 2.7,
+   "restored_px": 5948,
+   "restored_still_changed_px": 0,
+   "band_px": 3121,
+   "band_mean_abs_diff_r30": 2.25,
+   "revealed_px": 15457
+  },
+  {
+   "key": "rainie_arm",
+   "zh": "Rainie 手臂與洋裝（含旁邊牆面）",
+   "r28_overreach_px": 16887,
+   "r28_overreach_gt3_px": 8486,
+   "r28_overreach_mean_abs_diff": 3.86,
+   "restored_px": 11405,
+   "restored_still_changed_px": 0,
+   "band_px": 5482,
+   "band_mean_abs_diff_r30": 2.66,
+   "revealed_px": 13835
+  },
+  {
+   "key": "mia_foot",
+   "zh": "Mia 腳背、鞋與褲管（含旁邊地板）",
+   "r28_overreach_px": 15508,
+   "r28_overreach_gt3_px": 9319,
+   "r28_overreach_mean_abs_diff": 4.57,
+   "restored_px": 15508,
+   "restored_still_changed_px": 0,
+   "band_px": 0,
+   "band_mean_abs_diff_r30": 0,
+   "revealed_px": 0
+  },
+  {
+   "key": "background",
+   "zh": "其他背景（牆、椅子、地板）",
+   "r28_overreach_px": 87872,
+   "r28_overreach_gt3_px": 55406,
+   "r28_overreach_mean_abs_diff": 4.9,
+   "restored_px": 67777,
+   "restored_still_changed_px": 0,
+   "band_px": 20095,
+   "band_mean_abs_diff_r30": 3.58,
+   "revealed_px": 4580
+  }
+ ],
+ "diff": {
+  "tolerance": "無損主檔逐像素比對，門檻 0（任一通道有差就算改動）；另列差 > 3 的數量",
+  "edit_range_px": 375445,
+  "vs_r27_changed_px": 352518,
+  "vs_r27_changed_gt3_px": 297272,
+  "vs_r27_changed_outside_edit_range_px": 0,
+  "r29_vs_r27_changed_outside_edit_range_px": 100638,
+  "vs_r29_changed_px": 166413
+ },
+ "jpeg": {
+  "note": "網站上的 JPEG（品質 90）解碼後與無損主檔的差，以及在 Coco 範圍外與 R27 原圖的差；這是壓縮誤差，主檔零差異只以無損像素為準",
+  "vs_master_mean": 1.618,
+  "vs_master_max": 28,
+  "vs_master_gt3_share": 0.0463,
+  "outside_edit_range_vs_r27_mean": 1.604,
+  "outside_edit_range_vs_r27_max": 21
+ },
+ "files": [
+  {
+   "path": "r30_after_f.jpg",
+   "sha256": "c39c2fc8425e30f8032a0ed85ade1e45b86b863d6dd93995c2e14429f6f5f412",
+   "px": [
+    4800,
+    3584
+   ],
+   "bytes": 1612813
+  },
+  {
+   "path": "r30_after_v.jpg",
+   "sha256": "1be075d96a6a7ae49d787c294941f6dbd999b9a7926418875edf5441467302fc",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 235921
+  },
+  {
+   "path": "r30_coverscale.jpg",
+   "sha256": "257d674a860ba618b7e992c347912c950d1b3547ea639be650f1ce222840d3f5",
+   "px": [
+    1068,
+    924
+   ],
+   "bytes": 222084
+  },
+  {
+   "path": "r30_diff_v.jpg",
+   "sha256": "b0b8e5fcd29b272c845449db83a29d93c835f7b2edc3c917c4c8fa445934f601",
+   "px": [
+    1600,
+    1195
+   ],
+   "bytes": 39541
+  },
+  {
+   "path": "r30_face_cmp.jpg",
+   "sha256": "b98201053658720d3701223618a2f3da2934ca3286ddec5b8509c659d38609eb",
+   "px": [
+    730,
+    394
+   ],
+   "bytes": 61029
+  },
+  {
+   "path": "r30_fix_ankle.jpg",
+   "sha256": "9e6dd56966da4633132ee83af045a9bce500c4b173f773d3ed9887a453045c75",
+   "px": [
+    920,
+    494
+   ],
+   "bytes": 55937
+  },
+  {
+   "path": "r30_fix_mia.jpg",
+   "sha256": "e788c63a40c8d486975f7b8924d07f104670538f7e2d85a036760cdef7bcf780",
+   "px": [
+    1055,
+    289
+   ],
+   "bytes": 48772
+  },
+  {
+   "path": "r30_fix_rainie.jpg",
+   "sha256": "8c337c9f2f3c0d1ca09f37e0344b55701dc263c3ebb4604ae8e3efda3c9ba6e9",
+   "px": [
+    980,
+    954
+   ],
+   "bytes": 131337
+  },
+  {
+   "path": "r30_fix_somi.jpg",
+   "sha256": "0c825bac0c2781fbfbb4d188a3b26c42d0534f884ccf3dabb377dc42e4cca88e",
+   "px": [
+    980,
+    754
+   ],
+   "bytes": 107307
+  },
+  {
+   "path": "r30_part_face.jpg",
+   "sha256": "ec771cfd67a8d6455b1e8a0da045daa952c6f5a4dbe0f8304ccee5160d17301c",
+   "px": [
+    650,
+    374
+   ],
+   "bytes": 58552
+  },
+  {
+   "path": "r30_part_hand.jpg",
+   "sha256": "6f155cb50ace7db5b84b4986d0a4ad96ef54c85071f55f714d6390bfd7db5e35",
+   "px": [
+    590,
+    234
+   ],
+   "bytes": 29224
+  },
+  {
+   "path": "r30_part_legs.jpg",
+   "sha256": "6e72722bdf21cbab3c2e36a474ce7ec028b35bea6c0fe8f08ad4d03b6f3f393a",
+   "px": [
+    1090,
+    624
+   ],
+   "bytes": 107171
+  },
+  {
+   "path": "r30_part_neck_chest.jpg",
+   "sha256": "873ab0e699d62ba6474010ec2cd06d57d4bfe3145c534973e50d7e1e9a7829ae",
+   "px": [
+    730,
+    324
+   ],
+   "bytes": 50070
+  },
+  {
+   "path": "r30_range_v.jpg",
+   "sha256": "dec21ec2cae0629dbbca71697a95061d28f232513f50ee1e0b8008782c5cf92d",
+   "px": [
+    520,
+    875
+   ],
+   "bytes": 81743
+  }
+ ]
+}

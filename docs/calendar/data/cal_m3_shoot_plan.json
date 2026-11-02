@@ -524,7 +524,7 @@
     "layout_preview": "排版預覽狀態；M-5 R26 兩款完整頁面預覽與 PDF 完成；M-5 R27 起 owner_reviewed＝Penny 已看過並回覆（工作版、非交印核准）",
     "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；M-5 R27 起 accepted＝Penny 接受 R26 頁面（5a82bf9）的推薦排法：橫式照片框完整 16:9（192×108 mm）、橫式與直式推薦排法。排版接受不等於交印核准",
     "layout_acceptance_record": "Penny 接受排版的原話紀錄",
-    "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+    "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 Coco 單人本機膚色修正版放上網站；M-5 R30 起 r30_single_fix_owner_check＝已還原 R28 誤改的其他人與背景、等 Penny 確認 Coco「單人修正效果」；不等於接受整張封面或授權其他角色修正",
     "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
     "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
     "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
@@ -592,7 +592,7 @@
    "layout_acceptance": "accepted",
    "layout_file": "docs/calendar/data/cal_m5_layout_r26.json",
    "layout_acceptance_record": "docs/calendar/data/cal_m5_owner_r27.json",
-   "cover": "r29_single_fix_owner_check",
+   "cover": "r30_single_fix_owner_check",
    "cover_file": "docs/calendar/data/cal_m5_cover_r27.json",
    "cover_generated_log": {
     "M-5 R27": 4
@@ -605,7 +605,8 @@
     "M-5 R28": 1
    },
    "cover_local_fix_log": {
-    "M-5 R29": 1
+    "M-5 R29": 1,
+    "M-5 R30": 1
    }
   }
  },
@@ -10015,6 +10016,34 @@
     "where": "status.production.definitions.cover_local_fix_log",
     "old": "（無）",
     "new": "封面本機修正次數（每輪；免費、不生成、不上傳），與生成張數、局部身分編輯次數分開計算"
+   }
+  ]
+ },
+ "m5r30": {
+  "from_commit": "0c2a3364f4a774a6a50302916b5d2037444ed4a1",
+  "owner": "docs/calendar/data/cal_m5_owner_r30.json",
+  "trial": "docs/calendar/data/cal_m5_r30_trial.json",
+  "restore": "docs/calendar/data/cal_m5_r30_restore.json",
+  "page": "docs/calendar/data/cal_cover_r30_page.json",
+  "status_line": "M-5 R30：主管看圖覆核 R29（膚色改善，可交 Owner 確認單人效果；腿保留現有明暗）。本輪只做本機免費還原（生成 0、付費 0、上傳 0）：按人物歸屬重查 R28 回填範圍，除 Rainie 手臂、Mia 腳背外還有 Somi 左袖與牆、椅子、地板被改到，全部從 R27 原圖還原；舊捲髮換掉後露出的地方只能用編輯結果並對齊色調；補平 R29 腳踝接縫。無損主檔相對 R27：Coco 實際編輯範圍外 0 改動。R28「其餘 11 人保持」改記未通過。待 Penny 確認 Coco 單人效果；不批准其他角色或另一款封面。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "status.production.cover",
+    "old": "r29_single_fix_owner_check",
+    "new": "r30_single_fix_owner_check"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.cover_local_fix_log",
+    "old": "{\"M-5 R29\": 1}",
+    "new": "{\"M-5 R29\": 1, \"M-5 R30\": 1}"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.cover",
+    "old": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+    "new": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 Coco 單人本機膚色修正版放上網站；M-5 R30 起 r30_single_fix_owner_check＝已還原 R28 誤改的其他人與背景、等 Penny 確認 Coco「單人修正效果」；不等於接受整張封面或授權其他角色修正"
    }
   ]
  }

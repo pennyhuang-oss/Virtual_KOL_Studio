@@ -1,4 +1,4 @@
-// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。排版頁（layout.html）封面比較區的資料，來源 docs/calendar/data/cal_m5_cover_r27.json、cal_m5_r27_trial.json、cal_cover_r27_page.json、M-5 R28／R29 的 cal_m5_r28_*.json、cal_m5_r29_*.json 與頁面文字
+// 程式產生（docs/calendar/tools/build_cal_decision_site.py），不要手改。排版頁（layout.html）封面比較區的資料，來源 docs/calendar/data/cal_m5_cover_r27.json、cal_m5_r27_trial.json、cal_cover_r27_page.json、M-5 R28／R29／R30 的 cal_m5_r28_*.json、cal_m5_r29_*.json、cal_m5_r30_*.json 與頁面文字
 window.CAL_COVER = {
  "accepted": {
   "items": [
@@ -630,6 +630,222 @@ window.CAL_COVER = {
  "cover_note": "照片本身沒有文字；「2027」與 DESK CALENDAR 是本機排上去的，沒有放品牌或 Logo（品牌名稱未提供）。頁面含 2 mm 出血；開「參考線」可看裁切線、線圈假設區與安全區。",
  "feedback_key": "cal2027-cover-r27-v1",
  "fix": {
+  "ba": {
+   "after": "R30 目前",
+   "after_cap": "R30 目前結果",
+   "before": "R27 原圖",
+   "before_cap": "R27 原圖（Coco 修正前）"
+  },
+  "by_person": [
+   {
+    "band": "3,121",
+    "over": "9,069",
+    "restored": "5,948",
+    "revealed": "15,457",
+    "who": "Somi 左袖（含旁邊牆面）"
+   },
+   {
+    "band": "5,482",
+    "over": "16,887",
+    "restored": "11,405",
+    "revealed": "13,835",
+    "who": "Rainie 手臂與洋裝（含旁邊牆面）"
+   },
+   {
+    "band": "0",
+    "over": "15,508",
+    "restored": "15,508",
+    "revealed": "0",
+    "who": "Mia 腳背、鞋與褲管（含旁邊地板）"
+   },
+   {
+    "band": "20,095",
+    "over": "87,872",
+    "restored": "67,777",
+    "revealed": "4,580",
+    "who": "其他背景（牆、椅子、地板）"
+   }
+  ],
+  "checks": [
+   {
+    "area": "Coco 本人",
+    "note": "臉、頭髮、五官、髮夾、項鍊、衣服與 R29 的膚色明暗都和 R29 相同；身分基準對照不變",
+    "result": "未改動"
+   },
+   {
+    "area": "Rainie 手臂",
+    "note": "手臂上段與靠洋裝的外側換回原圖；靠 Coco 頭髮那半邊在 R27 被舊捲髮蓋住，只能用編輯結果（色調已對齊）。舊捲髮外圍的淡髮暈與細髮絲沒有被帶回來，手臂上、手臂與牆的交界沒有接縫",
+    "result": "已還原（可還原的部分）"
+   },
+   {
+    "area": "Somi 左袖",
+    "note": "R28 範圍內只有袖子外側一條是 R27 原本露出的，已換回原圖；靠 Coco 那一側在 R27 被舊捲髮蓋住或帶著捲髮陰影，只能用編輯結果（色調已對齊）；袖子上看不出交界",
+    "result": "已還原（可還原的部分）"
+   },
+   {
+    "area": "Mia 腳背、鞋與褲管",
+    "note": "整塊和 R27 原圖逐像素相同",
+    "result": "已還原"
+   },
+   {
+    "area": "牆、椅子、地板",
+    "note": "腿和鞋四周的椅面紋理換回原圖，沒有光暈或色圈；只有緊貼 Coco 的 4–10 px 過渡帶是混合的",
+    "result": "已還原"
+   },
+   {
+    "area": "Coco 腳踝",
+    "note": "R29 的直線接縫消失，腳踝與小腿同一色調；明暗沿用相鄰已修正皮膚（ΔL 約 7.2–7.6），沒有另外提亮",
+    "result": "接縫已補平"
+   },
+   {
+    "area": "封面尺寸整體",
+    "note": "縮到成品尺寸和 R29 看起來一樣，Coco 與旁邊的人光線、清晰度一致",
+    "result": "自然"
+   }
+  ],
+  "compare_label": "前後比較（R27 原圖 ↔ R30 目前）",
+  "corrections": [
+   "R28 第 3 項「其餘 11 人是否被改動」：原記「通過」→ 未通過——回填範圍內誤改 Somi 左袖 9,069 px、Rainie 手臂與洋裝 16,887 px、Mia 腳背／鞋／褲管 15,508 px、背景 87,872 px（各含旁邊牆面或地板）；R30 已還原",
+   "R29 對 R28 的更正：原記「只列 Rainie 前臂約 4,000 px、Mia 腳背約 3,900 px」→ 補 Somi 左袖與背景；Rainie 那段是上臂；改用按人物歸屬的數字（上一列）",
+   "R29 腿部檢查：原記「沒有提到接縫」→ R29 腳踝右側有一條直的接縫（修正框邊緣），R30 已補平"
+  ],
+  "diff": "無損主檔逐像素和 R27 原圖比（門檻 0）：Coco 實際編輯範圍（新舊 Coco 聯集加外圍 4–10 px 過渡帶，共 375,445 像素）以外改動 0 像素；R29 在同一範圍外有 100,638 像素不同。網站上的 JPEG 有壓縮誤差（和無損主檔平均差 1.618／255），不拿來證明零差異。",
+  "feedback_key": "cal2027-cover-r30-v1",
+  "fix_changed": "和上一版比：Coco 本人沒有再改（臉、頭髮、膚色明暗都一樣）。只把上一輪不小心改到的 Somi 袖子、Rainie 手臂、Mia 的腳和牆、椅子、地板還原成原圖，並補平 Coco 腳踝一條沒調到的接縫。",
+  "fix_label": "只確認 Coco，不是接受整張封面",
+  "fix_remaining": "還剩的小地方：腿在椅子前的陰影裡仍比臉略深（依主管指示保留）；Coco 右側髮尾旁有一小塊灰色紋理、右肩頭髮下有一塊模糊陰影，放大才看得出，封面尺寸不明顯。",
+  "fix_scope": "這裡只問 Coco 這一個人修得好不好。選「可以」不等於接受整張封面，也不代表授權修正其他角色或另一款封面。H-A 只是測試底圖，R27 四張仍是你已退回的。",
+  "fix_title": "Coco 單人修正：目前結果",
+  "imgs": {
+   "after": {
+    "full": {
+     "h": 3584,
+     "src": "cover30/r30_after_f.jpg",
+     "w": 4800
+    },
+    "view": {
+     "h": 1195,
+     "src": "cover30/r30_after_v.jpg",
+     "w": 1600
+    }
+   },
+   "before": {
+    "full": {
+     "h": 3584,
+     "src": "cover28/r28_before_f.jpg",
+     "w": 4800
+    },
+    "view": {
+     "h": 1195,
+     "src": "cover28/r28_before_v.jpg",
+     "w": 1600
+    }
+   },
+   "coverscale": {
+    "h": 924,
+    "src": "cover30/r30_coverscale.jpg",
+    "w": 1068
+   },
+   "diffmap": {
+    "h": 1195,
+    "src": "cover30/r30_diff_v.jpg",
+    "w": 1600
+   },
+   "face": {
+    "h": 394,
+    "src": "cover30/r30_face_cmp.jpg",
+    "w": 730
+   },
+   "fixes": [
+    {
+     "h": 954,
+     "k": "rainie",
+     "src": "cover30/r30_fix_rainie.jpg",
+     "w": 980,
+     "zh": "Rainie 手臂"
+    },
+    {
+     "h": 754,
+     "k": "somi",
+     "src": "cover30/r30_fix_somi.jpg",
+     "w": 980,
+     "zh": "Somi 左袖"
+    },
+    {
+     "h": 289,
+     "k": "mia",
+     "src": "cover30/r30_fix_mia.jpg",
+     "w": 1055,
+     "zh": "Mia 腳背與鞋"
+    },
+    {
+     "h": 494,
+     "k": "ankle",
+     "src": "cover30/r30_fix_ankle.jpg",
+     "w": 920,
+     "zh": "Coco 腳踝（R29 接縫）"
+    }
+   ],
+   "parts": [
+    {
+     "h": 374,
+     "k": "face",
+     "src": "cover30/r30_part_face.jpg",
+     "w": 650,
+     "zh": "臉"
+    },
+    {
+     "h": 324,
+     "k": "neck_chest",
+     "src": "cover30/r30_part_neck_chest.jpg",
+     "w": 730,
+     "zh": "脖子與胸口"
+    },
+    {
+     "h": 234,
+     "k": "hand",
+     "src": "cover30/r30_part_hand.jpg",
+     "w": 590,
+     "zh": "右手"
+    },
+    {
+     "h": 624,
+     "k": "legs",
+     "src": "cover30/r30_part_legs.jpg",
+     "w": 1090,
+     "zh": "腿"
+    }
+   ],
+   "range": {
+    "h": 875,
+    "src": "cover30/r30_range_v.jpg",
+    "w": 520
+   }
+  },
+  "note_label": "備註（選「還要修改」時請寫哪裡）",
+  "options": [
+   {
+    "label": "單人修正效果可以",
+    "v": "ok"
+   },
+   {
+    "label": "還要修改",
+    "v": "edit"
+   }
+  ],
+  "parts_label": "Coco 局部原尺寸（左 R27 原圖、右 R30 目前）",
+  "principle": "「量測範圍外 0 改動」只代表範圍外沒變，不等於其他人物沒被改；之後的檢查一律按人物歸屬（誰的像素被改了、改了多少）確認",
+  "r28_label": "R28 單人身分測試（上一輪的技術紀錄）",
+  "r29_label": "R29 上一版（膚色修正）與你當時的回饋",
+  "remaining": [
+   "腿在椅子前的陰影裡仍比臉略深（主管已指示保留現有明暗）",
+   "Coco 右側髮尾與 Rainie 手臂之間有一小塊灰色半透明紋理（約 40×40 px），R28 編輯結果本來就有；原尺寸看得出，封面尺寸不明顯；本輪未處理",
+   "Coco 右肩（開襟衫上）頭髮下方有一塊模糊深色陰影，R28 起就有；放大看得出，封面尺寸不明顯；本輪未處理"
+  ],
+  "tech_label": "技術紀錄（不需要判斷）",
+  "verdict_text": "R28 誤改的其他人與背景已還原成 R27 原圖（無損主檔逐像素核對：Coco 實際編輯範圍外 0 改動），並補平 R29 腳踝接縫；Coco 本人沒有再改。可以交 Penny 確認單人效果。"
+ },
+ "fix29": {
   "checks": [
    {
     "area": "臉",
@@ -801,7 +1017,7 @@ window.CAL_COVER = {
   "無法判定"
  ],
  "history_label": "R26 排版回饋（你在這台裝置填過的內容，保留不動）",
- "intro": "這一輪只把上一輪 Coco 的膚色在本機調順（免費、沒有重新生成）。請看 Coco 這一個人的效果；這不是完成的封面。下面是你已接受的內頁排版。",
+ "intro": "這一輪把上一輪不小心改到的旁邊的人和背景還原成原圖（免費、沒有重新生成）。請只看 Coco 這一個人修得好不好；這不是完成的封面。下面是你已接受的內頁排版。",
  "made": "4 張候選（橫式、直式各 A／B），每張 1 次生成；12 位用各自的身分參考圖一起送入。",
  "r26_cover_label": "R26 暫用封面（12 張縮圖；正式封面尚未決定）",
  "r27": {
@@ -815,7 +1031,7 @@ window.CAL_COVER = {
   "note": "你的回饋原文已存檔；這 4 張不再提供選擇。",
   "title": "R27 封面候選（4 張，Owner 已全部退回）"
  },
- "round": "M-5 R29",
+ "round": "M-5 R30",
  "task": "TASK-CAL-001",
  "test": {
   "checks": [
@@ -831,8 +1047,8 @@ window.CAL_COVER = {
    },
    {
     "item": "其餘 11 人、姿態、服裝、背景及構圖是否被改動",
-    "note": "量測：裁切範圍外與遮罩外的像素完全沒變；Coco 的姿勢、頭部角度、衣服、項鍊、鞋子維持原樣（M-5 R29 更正：回填範圍外 0 改動；但回填範圍內誤含 Rainie 前臂約 4,000 像素〔平均差 13.9/255〕與 Mia 腳背約 3,900 像素〔平均差 2.3/255〕）",
-    "result": "通過"
+    "note": "量測：裁切範圍外與遮罩外的像素完全沒變；Coco 的姿勢、頭部角度、衣服、項鍊、鞋子維持原樣（M-5 R29 更正：回填範圍外 0 改動；但回填範圍內誤含 Rainie 前臂約 4,000 像素〔平均差 13.9/255〕與 Mia 腳背約 3,900 像素〔平均差 2.3/255〕）（M-5 R30 更正，原記「通過」：未通過——回填範圍內誤改 Somi 左袖 9,069 px、Rainie 手臂與洋裝 16,887 px、Mia 腳背／鞋／褲管 15,508 px、背景 87,872 px（各含旁邊牆面或地板）；R30 已還原。「量測範圍外 0 改動」不等於其他人物 0 改動，之後按人物歸屬檢查。）",
+    "result": "未通過"
    },
    {
     "item": "全圖縮到封面尺寸是否仍自然好看",

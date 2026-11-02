@@ -41,7 +41,7 @@
   const tst = tload();
   const tsave = () => { try { localStorage.setItem(TKEY, JSON.stringify(tst)); } catch (e) { /* 同上 */ } };
   let ba = 'after';   // 前後切換：after＝R28 結果、before＝R27 原本
-  // R29 單人修正效果確認（另一個鍵）：dec＝'ok'|'edit'、notes＝{coco}
+  // 單人修正效果確認（每輪一個新鍵，M-5 R30 起 cal2027-cover-r30-v1）：dec＝'ok'|'edit'、notes＝{coco}
   const FKEY = C && C.fix ? C.fix.feedback_key : '';
   const fload = () => {
     if (!FKEY) return { dec: '', notes: {} };
@@ -52,7 +52,16 @@
   };
   const fst = fload();
   const fsave = () => { try { localStorage.setItem(FKEY, JSON.stringify(fst)); } catch (e) { /* 同上 */ } };
-  let fba = 'after';   // R29 前後切換：after＝R29 修正版、before＝R28 結果
+  let fba = 'after';   // 前後切換：after＝本輪目前結果、before＝R27 原圖
+  // R29 當時的回饋（舊鍵，只讀不寫；本輪不繼承它的選擇）
+  const F9KEY = C && C.fix29 ? C.fix29.feedback_key : '';
+  const f9 = (() => {
+    if (!F9KEY) return { dec: '', notes: {} };
+    try {
+      const v = JSON.parse(localStorage.getItem(F9KEY) || 'null');
+      return v && typeof v === 'object' ? { dec: typeof v.dec === 'string' ? v.dec : '', notes: v.notes && typeof v.notes === 'object' ? v.notes : {} } : { dec: '', notes: {} };
+    } catch (e) { return { dec: '', notes: {} }; }
+  })();
 
   let book = /^#V/.test(location.hash) ? 'V' : 'H';
   let frame = 'B';     // 橫式照片面顯示哪個版本：B＝完整 16:9（推薦）、A＝192×104 套框
@@ -120,43 +129,58 @@
       `<div class="acts"><button type="button" class="btn" id="test-copy">複製備註</button></div>` +
       `<textarea id="test-text" rows="5" readonly aria-label="備註文字"></textarea></div>`;
   }
+  const fig = (im, cap, cls) => { const n = addView({ view: im, full: im }, cap); return `<figure class="tf${cls ? ' ' + cls : ''}"><button type="button" class="zoom" data-f="${n}" aria-label="放大：${esc(cap)}"><img src="${esc(im.src)}" width="${im.w}" height="${im.h}" alt="${esc(cap)}" loading="lazy"></button><figcaption>${esc(cap)}</figcaption></figure>`; };
   function fixSection() {
-    const F = C.fix, I = F.imgs;
-    const cur = fba === 'after' ? [I.after, 'R29 修正版（只調了 Coco 的膚色）'] : [I.before, 'R28 結果（調色前）'];
+    const F = C.fix, I = F.imgs, B = F.ba;
+    const cur = fba === 'after' ? [I.after, B.after_cap] : [I.before, B.before_cap];
     const nCur = addView(cur[0], cur[1] + '（全圖）');
-    const one = (im, cap, cls) => { const n = addView({ view: im, full: im }, cap); return `<figure class="tf${cls ? ' ' + cls : ''}"><button type="button" class="zoom" data-f="${n}" aria-label="放大：${esc(cap)}"><img src="${esc(im.src)}" width="${im.w}" height="${im.h}" alt="${esc(cap)}" loading="lazy"></button><figcaption>${esc(cap)}</figcaption></figure>`; };
     return `<div class="tsec fix" id="cover-fix"><h3>${esc(F.fix_title)} <em class="badge test">${esc(F.fix_label)}</em></h3>` +
       `<p class="warn">${esc(F.fix_scope)}</p>` +
-      `<div class="fsw" role="group" aria-label="全圖前後"><span class="fsw-l">全圖：</span>` +
-      `<button type="button" class="seg${fba === 'before' ? ' on' : ''}" data-fba="before" aria-pressed="${fba === 'before'}">R28 調色前</button>` +
-      `<button type="button" class="seg${fba === 'after' ? ' on' : ''}" data-fba="after" aria-pressed="${fba === 'after'}">R29 修正版</button></div>` +
+      `<div class="fsw" role="group" aria-label="${esc(F.compare_label)}"><span class="fsw-l">全圖：</span>` +
+      `<button type="button" class="seg${fba === 'after' ? ' on' : ''}" data-fba="after" aria-pressed="${fba === 'after'}">${esc(B.after)}</button>` +
+      `<button type="button" class="seg${fba === 'before' ? ' on' : ''}" data-fba="before" aria-pressed="${fba === 'before'}">${esc(B.before)}</button></div>` +
       `<figure class="tf big"><button type="button" class="zoom" id="fba-zoom" data-f="${nCur}" aria-label="放大：${esc(cur[1])}"><img id="fba-img" src="${esc(cur[0].view.src)}" width="${cur[0].view.w}" height="${cur[0].view.h}" alt="${esc(cur[1])}"></button>` +
       `<figcaption id="fba-cap">${esc(cur[1])}｜點圖放大；放大後按「原尺寸」看完整解析度</figcaption></figure>` +
-      `<h4>Coco 放大比較（封面尺寸：左 R28、右 R29）</h4>${one(I.coverscale, 'Coco 周圍｜封面尺寸｜R28 → R29', 'wide')}` +
-      `<h4>局部原尺寸（左 R28、右 R29）</h4><div class="tparts">${I.parts.map(p => one(p, `${p.zh}｜R28 → R29`)).join('')}</div>` +
-      `<h4>臉部與身分基準</h4>${one(I.face, '身分基準（Coco）｜R29 修正版（臉沒有調）', 'mid')}` +
+      `<h4>臉部與身分基準</h4>${fig(I.face, `身分基準（Coco）｜${B.after}`, 'mid')}` +
+      `<h4>${esc(F.compare_label)}｜封面尺寸</h4>${fig(I.coverscale, `Coco 周圍｜封面尺寸｜${B.before} → ${B.after}`, 'wide')}` +
+      `<h4>${esc(F.parts_label)}</h4><div class="tparts">${I.parts.map(p => fig(p, `${p.zh}｜${B.before} → ${B.after}`)).join('')}</div>` +
       `<p class="note">${esc(F.fix_changed)}</p><p class="note"><b>${esc(F.fix_remaining)}</b></p>` +
-      `<fieldset class="dq"><legend>Coco 這個人修得如何？（只問單人效果）</legend>` + F.options.map(o =>
+      `<fieldset class="dq"><legend>Coco 這個人修得如何？（只確認 Coco）</legend>` + F.options.map(o =>
         `<label class="opt"><input type="radio" name="fix" value="${esc(o.v)}"${fst.dec === o.v ? ' checked' : ''}> <span>${esc(o.label)}</span></label>`).join('') +
       `<button type="button" class="lnk" data-fclear="1">清除</button></fieldset>` +
       `<label class="nl">${esc(F.note_label)}<textarea rows="3" data-fnote="coco" placeholder="可留白">${esc(fst.notes.coco || '')}</textarea></label>` +
       `<div class="acts"><button type="button" class="btn" id="fix-copy">複製回饋</button></div>` +
       `<textarea id="fix-text" rows="5" readonly aria-label="回饋文字"></textarea>` +
-      `<details class="more"><summary>技術檢查與差異（可略過）</summary><p class="note">${esc(F.verdict_text)}</p>` +
+      `<details class="more" id="fix-tech"><summary>${esc(F.tech_label)}</summary><p class="note">${esc(F.verdict_text)}</p>` +
       `<ul class="chk">${F.checks.map(x => `<li><span class="mk">${esc(x.area)}｜${esc(x.result)}</span><small>${esc(x.note)}</small></li>`).join('')}</ul>` +
-      `<p class="note">上一輪（R28）紀錄更正：</p><ul class="chk">${F.corrections.map(x => `<li><small>${esc(x)}</small></li>`).join('')}</ul>` +
-      `<div class="tpair">${one(I.mask, '本輪調色範圍（白＝Coco 的皮膚）')}${one(I.diffmap, '本輪改動的像素（白＝有改動）')}</div></details></div>`;
+      `<div class="tscroll"><table class="bp"><thead><tr><th>誰</th><th>R28 誤改</th><th>直接還原成 R27</th><th>緊貼 Coco 的過渡帶</th><th>舊捲髮換掉後露出</th></tr></thead><tbody>` +
+      F.by_person.map(r => `<tr><td>${esc(r.who)}</td><td>${r.over}</td><td>${r.restored}</td><td>${r.band}</td><td>${r.revealed}</td></tr>`).join('') + `</tbody></table></div>` +
+      `<p class="note">單位：像素。${esc(F.diff)}</p><p class="note">${esc(F.principle)}</p>` +
+      `<p class="note">紀錄更正：</p><ul class="chk">${F.corrections.map(x => `<li><small>${esc(x)}</small></li>`).join('')}</ul>` +
+      `<p class="note">還剩、本輪未處理：</p><ul class="chk">${F.remaining.map(x => `<li><small>${esc(x)}</small></li>`).join('')}</ul>` +
+      `<div class="tparts">${I.fixes.map(p => fig(p, `${p.zh}｜R27 原圖｜R29｜R30`)).join('')}</div>` +
+      `<div class="tpair">${fig(I.range, 'Coco 實際編輯範圍（藍）：範圍外全部是 R27 原圖')}${fig(I.diffmap, '和 R27 原圖不同的像素（白）')}</div></details></div>`;
+  }
+  function fix29Section() {
+    const F = C.fix29, I = F.imgs, o = F.options.find(x => x.v === f9.dec);
+    return `<div class="tsec" id="cover-fix29"><p class="note">${esc(F.fix_title)}｜${esc(F.fix_label)}。這是上一版；你在那一版留下的回饋原樣保留，本輪的選擇另外記，不會自動沿用。</p>` +
+      `<p class="cverdict" id="fix29-saved"><b>你在 R29 的回饋：</b>${esc(o ? o.label : '（未選）')}｜備註：${esc((f9.notes.coco || '').trim() || '（無）')}</p>` +
+      `${fig(I.coverscale, 'R29｜Coco 周圍｜封面尺寸｜R28 → R29', 'wide')}` +
+      `<div class="tparts">${I.parts.map(p => fig(p, `R29｜${p.zh}｜R28 → R29`)).join('')}</div>` +
+      `<p class="note">${esc(F.verdict_text)}</p></div>`;
   }
   function fixText() {
     const o = C.fix.options.find(x => x.v === fst.dec);
     return [`${C.task}／${C.round}｜Coco 單人修正效果確認（頁面版本 ${PAGE_COMMIT || '本機預覽'}）`,
-      '這是單人效果確認，不等於接受整張封面或授權全部角色修正。',
+      '只確認 Coco 這一個人，不代表接受整張封面，也不授權修正其他角色或另一款封面。',
       `單人修正效果：${o ? o.label : '（未選）'}`, `備註：${(fst.notes.coco || '').trim() || '（無）'}`].join('\n');
   }
   function coverSection() {
     if (!C || !C.test) return '';
     const grp = k => `<div class="cgroup" id="cover-${k}"><h4>${BOOK_ZH[k]}</h4><div class="cgrid cgrid-${k}">${C.cards[k].map(c => r27Card(k, c)).join('')}</div></div>`;
-    return `<section class="sec" id="cover"><h2>封面</h2>` + (C.fix ? fixSection() + `<details class="more r28" id="cover-r28h"><summary>${esc(C.fix.r28_label)}</summary>` + testSection() + '</details>' : testSection()) +
+    return `<section class="sec" id="cover"><h2>封面</h2>` + (C.fix ? fixSection() +
+      (C.fix29 ? `<details class="more r29" id="cover-r29h"><summary>${esc(C.fix.r29_label)}</summary>` + fix29Section() + '</details>' : '') +
+      `<details class="more r28" id="cover-r28h"><summary>${esc(C.fix.r28_label)}</summary>` + testSection() + '</details>' : testSection()) +
       `<details class="more r27" id="cover-r27"><summary>${esc(C.r27.title)}</summary>` +
       `<p class="note">${esc(C.r27.note)}</p><ul class="fbq">${C.r27.feedback.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` +
       `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
@@ -288,7 +312,7 @@
     if (fbb) {
       if (fbb.dataset.fba !== fba) {
         fba = fbb.dataset.fba;
-        const I = C.fix.imgs, im = I[fba].view, cap = fba === 'after' ? 'R29 修正版（只調了 Coco 的膚色）' : 'R28 結果（調色前）';
+        const I = C.fix.imgs, im = I[fba].view, cap = fba === 'after' ? C.fix.ba.after_cap : C.fix.ba.before_cap;
         const img = $('#fba-img'); img.src = im.src; img.alt = cap;
         $('#fba-zoom').dataset.f = String(addView(I[fba], cap + '（全圖）'));
         $('#fba-cap').textContent = `${cap}｜點圖放大；放大後按「原尺寸」看完整解析度`;

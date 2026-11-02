@@ -139,3 +139,9 @@ details.r27 > summary { font-weight: 700; }
 details.r28 > summary { font-weight: 700; }
 #fix-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
 @media (max-width: 760px) { .tparts { grid-template-columns: minmax(0, 1fr); } }
+details.r29 > summary { font-weight: 700; }
+#fix29-saved { background: #f6f6f6; }
+.tscroll { overflow-x: auto; max-width: 980px; }
+table.bp { border-collapse: collapse; font-size: .82rem; min-width: 520px; }
+table.bp th, table.bp td { border: 1px solid #ddd; padding: 4px 6px; text-align: right; white-space: nowrap; }
+table.bp th:first-child, table.bp td:first-child { text-align: left; white-space: normal; }

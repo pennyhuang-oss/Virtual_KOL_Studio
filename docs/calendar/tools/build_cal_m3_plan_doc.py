@@ -112,6 +112,7 @@ def render18(d):
          *([f"> **{d['m5r27']['status_line']}** Owner 指令與排版接受原話見 `data/cal_m5_owner_r27.json`，12 人身分對照見 `data/cal_m5_r27_identity.json`，生成指令見 `data/cal_m5_r27_prompts.json`，逐張驗收見 `data/cal_m5_r27_trial.json`，封面排版見 `data/cal_m5_cover_r27.json`，封面比較區文字見 `data/cal_cover_r27_page.json`。", ''] if 'm5r27' in d else []),
          *([f"> **{d['m5r28']['status_line']}** Owner 退回原話見 `data/cal_m5_owner_r28.json`，R27 輸入查核見 `data/cal_m5_r28_input_audit.json`，單人測試驗收與 12 人流程估算見 `data/cal_m5_r28_trial.json`，回填與差異紀錄見 `data/cal_m5_r28_coco_test.json`。", ''] if 'm5r28' in d else []),
          *([f"> **{d['m5r29']['status_line']}** 主管覆核與指令見 `data/cal_m5_owner_r29.json`，本機修正驗收與 R28 更正見 `data/cal_m5_r29_trial.json`，修正參數與差異見 `data/cal_m5_r29_skin.json`。", ''] if 'm5r29' in d else []),
+         *([f"> **{d['m5r30']['status_line']}** 主管覆核與指令見 `data/cal_m5_owner_r30.json`，還原驗收、按人物歸屬的數字與 R28／R29 更正見 `data/cal_m5_r30_trial.json`，還原方法與無損比對見 `data/cal_m5_r30_restore.json`。", ''] if 'm5r30' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

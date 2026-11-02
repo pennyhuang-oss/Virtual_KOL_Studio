@@ -8620,6 +8620,34 @@ window.CAL_DATA = {
    "status_line": "M-5 R29：主管看圖覆核 R28（Coco 臉部身分明顯恢復、方向部分通過；胸口／右手／腿比臉深）。本輪只做本機免費修正（生成 0、付費 0、上傳 0）：從 R28 另存膚色修正版，只調 Coco 的脖子＋胸口、右手、雙腿（含 R28 漏蓋的左小腿下段）的色相、飽和度與小幅明暗；臉與其他人不動。胸口與手已和臉連貫，腿仍略深。更正 R28 紀錄：回填範圍內誤含 Rainie 前臂與 Mia 腳背各一小塊；生成失敗的臉部尺寸等只是可能因素；重做率 30% 只是情境假設。待 Penny 確認單人效果；不批准其他角色或另一款封面。",
    "trial": "docs/calendar/data/cal_m5_r29_trial.json"
   },
+  "m5r30": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "r30_single_fix_owner_check",
+     "old": "r29_single_fix_owner_check",
+     "where": "status.production.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "{\"M-5 R29\": 1, \"M-5 R30\": 1}",
+     "old": "{\"M-5 R29\": 1}",
+     "where": "status.production.cover_local_fix_log"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 Coco 單人本機膚色修正版放上網站；M-5 R30 起 r30_single_fix_owner_check＝已還原 R28 誤改的其他人與背景、等 Penny 確認 Coco「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+     "old": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+     "where": "status.production.definitions.cover"
+    }
+   ],
+   "from_commit": "0c2a3364f4a774a6a50302916b5d2037444ed4a1",
+   "owner": "docs/calendar/data/cal_m5_owner_r30.json",
+   "page": "docs/calendar/data/cal_cover_r30_page.json",
+   "restore": "docs/calendar/data/cal_m5_r30_restore.json",
+   "status_line": "M-5 R30：主管看圖覆核 R29（膚色改善，可交 Owner 確認單人效果；腿保留現有明暗）。本輪只做本機免費還原（生成 0、付費 0、上傳 0）：按人物歸屬重查 R28 回填範圍，除 Rainie 手臂、Mia 腳背外還有 Somi 左袖與牆、椅子、地板被改到，全部從 R27 原圖還原；舊捲髮換掉後露出的地方只能用編輯結果並對齊色調；補平 R29 腳踝接縫。無損主檔相對 R27：Coco 實際編輯範圍外 0 改動。R28「其餘 11 人保持」改記未通過。待 Penny 確認 Coco 單人效果；不批准其他角色或另一款封面。",
+   "trial": "docs/calendar/data/cal_m5_r30_trial.json"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9407,7 +9435,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "f0f1586847702c09183f357bce387f5467d56e00",
+  "plan_blob": "5b0c6714a6dd45d4e78ae24eda5dcd9529271238",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14762,7 +14790,7 @@ window.CAL_DATA = {
      "V-yuna-kim": "V-yuna-kim-R21-A"
     },
     "batch1": "owner-rejected-r6",
-    "cover": "r29_single_fix_owner_check",
+    "cover": "r30_single_fix_owner_check",
     "cover_credits_log": {
      "M-5 R27": 16,
      "M-5 R28": 2
@@ -14775,12 +14803,13 @@ window.CAL_DATA = {
      "M-5 R27": 4
     },
     "cover_local_fix_log": {
-     "M-5 R29": 1
+     "M-5 R29": 1,
+     "M-5 R30": 1
     },
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 r29_single_fix_owner_check＝Coco 單人本機膚色修正版已放上網站，等 Penny 確認「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+     "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 Coco 單人本機膚色修正版放上網站；M-5 R30 起 r30_single_fix_owner_check＝已還原 R28 誤改的其他人與背景、等 Penny 確認 Coco「單人修正效果」；不等於接受整張封面或授權其他角色修正",
      "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
      "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
