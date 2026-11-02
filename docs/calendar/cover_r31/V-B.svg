@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 204" width="144mm" height="204mm">
+<title>2027 桌曆封面候選 V-B｜B 極簡典藏（直式，含 2 mm 出血）</title>
+<style>@font-face{font-family:'Bodoni Moda 96pt';src:url('fonts/BodoniModa-96-Regular.ttf')}@font-face{font-family:'Inter Medium';src:url('fonts/Inter-Medium.ttf')}.txt text{font-kerning:none;font-feature-settings:'kern' 0,'liga' 0}</style>
+<defs>
+<radialGradient id="ground" cx="0.3" cy="0.25" r="0.8" gradientTransform="translate(0.3 0.25) scale(1 1) translate(-0.3 -0.25)">
+<stop offset="0" stop-color="#2B2F37"/><stop offset="0.45" stop-color="#22252C"/><stop offset="1" stop-color="#16181D"/></radialGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0.25" stop-color="#F3EBDD" stop-opacity="0"/><stop offset="0.42" stop-color="#F3EBDD" stop-opacity="0.045"/><stop offset="0.55" stop-color="#F3EBDD" stop-opacity="0"/></linearGradient>
+<filter id="grain" x="0" y="0" width="144" height="204" filterUnits="userSpaceOnUse">
+ <feTurbulence type="fractalNoise" baseFrequency="3.0" numOctaves="1" seed="7"/><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<g id="art">
+<rect width="144" height="204" fill="url(#ground)"/>
+<rect width="144" height="204" fill="url(#sheen)"/>
+<rect width="144" height="204" filter="url(#grain)" opacity="0.05" style="mix-blend-mode:screen"/>
+</g>
+<g class="vec"><line x1="14" y1="182" x2="130" y2="182" stroke="#EDE5D7" stroke-width="0.18" stroke-opacity="0.6"/></g>
+<defs><linearGradient id="ink" gradientUnits="userSpaceOnUse" x1="0" y1="60" x2="0" y2="175"><stop offset="0" stop-color="#F4EEE3"/><stop offset="1" stop-color="#E4DACA"/></linearGradient></defs>
+<g class="txt">
+<text x="12.5" y="113" font-family="&apos;Bodoni Moda 96pt&apos;" font-size="74" letter-spacing="-0.8" fill="url(#ink)">20</text>
+<text x="12.5" y="174" font-family="&apos;Bodoni Moda 96pt&apos;" font-size="74" letter-spacing="-0.8" fill="url(#ink)">27</text>
+<text x="97.548" y="189.5" font-family="&apos;Inter Medium&apos;" font-size="2.3" letter-spacing="1.1" fill="#EDE5D7" fill-opacity="0.78">DESK CALENDAR</text>
+</g>
+</svg>

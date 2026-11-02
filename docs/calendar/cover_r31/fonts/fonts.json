@@ -1,0 +1,14 @@
+{
+ "cormorant": {
+  "upstream_sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+  "file_sha256": "b2a2d440bd3a6f4a35b587588e31e6413044d49a049348f0d83286b41683c402"
+ },
+ "bodoni": {
+  "upstream_sha256": "550f5e34ee0a828d7941b1fe9bc58b34e5260d3f33a61532e6d0a0114e79a5cf",
+  "file_sha256": "ec3a7e4b13000aed69178d5c4faeda309982e8d8bb64c9aac7c81051f87b2436"
+ },
+ "inter": {
+  "upstream_sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+  "file_sha256": "506ff3ff4cd89d0b07374fdd9fcc7cea1c63b995d7b85843b6047bd43d1c2756"
+ }
+}

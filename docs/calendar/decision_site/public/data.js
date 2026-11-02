@@ -8648,6 +8648,41 @@ window.CAL_DATA = {
    "status_line": "M-5 R30：主管看圖覆核 R29（膚色改善，可交 Owner 確認單人效果；腿保留現有明暗）。本輪只做本機免費還原（生成 0、付費 0、上傳 0）：按人物歸屬重查 R28 回填範圍，除 Rainie 手臂、Mia 腳背外還有 Somi 左袖與牆、椅子、地板被改到，全部從 R27 原圖還原；舊捲髮換掉後露出的地方只能用編輯結果並對齊色調；補平 R29 腳踝接縫。無損主檔相對 R27：Coco 實際編輯範圍外 0 改動。R28「其餘 11 人保持」改記未通過。待 Penny 確認 Coco 單人效果；不批准其他角色或另一款封面。",
    "trial": "docs/calendar/data/cal_m5_r30_trial.json"
   },
+  "m5r31": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "r31_non_person_candidates",
+     "old": "r30_single_fix_owner_check",
+     "where": "status.production.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "stopped",
+     "old": "（無）",
+     "where": "status.production.cover_person_track"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面狀態；M-5 R28–R30 的人物團體封面與 Coco 單人校正 Owner 均未接受；M-5 R31 起 r31_non_person_candidates＝非人物封面 4 張候選（橫式、直式各 A 四季光影／B 極簡典藏）已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
+     "old": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 Coco 單人本機膚色修正版放上網站；M-5 R30 起 r30_single_fix_owner_check＝已還原 R28 誤改的其他人與背景、等 Penny 確認 Coco「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+     "where": "status.production.definitions.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "人物封面路線；M-5 R31 Owner 表示「全部都不像本人」後停止（不再修臉、不換模型試拍、不追加人物生成），歷史紀錄保留",
+     "old": "（無）",
+     "where": "status.production.definitions.cover_person_track"
+    }
+   ],
+   "covers": "docs/calendar/data/cal_m5_cover_r31.json",
+   "from_commit": "f82eee4d467ffd9eba2ed5a1a6d819eaea0b839a",
+   "owner": "docs/calendar/data/cal_m5_owner_r31.json",
+   "page": "docs/calendar/data/cal_cover_r31_page.json",
+   "source": "docs/calendar/cover_r31/",
+   "status_line": "M-5 R31：Owner 表示人物封面「全部都不像本人」，人物團體封面與 Coco 單人校正均未接受，人物封面停止（紀錄保留）。改做非人物封面：橫式、直式各 A｜四季光影、B｜極簡典藏共 4 張（原創向量、漸層、光影與字體排版；生成 0、付費 0、未購買素材；字型為 SIL OFL 並嵌入）。另出兩份完整預覽 PDF（封面 A、B＋已接受內頁），R26 正式預覽不覆蓋。待 Penny 選 A／B 或寫修改；24 張月面照片與兩款內頁排版維持定案。",
+   "trial": "docs/calendar/data/cal_m5_r31_trial.json"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9435,7 +9470,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "5b0c6714a6dd45d4e78ae24eda5dcd9529271238",
+  "plan_blob": "4bd9f95aa86294616a8465770f972b48a7e1f25a",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14790,7 +14825,7 @@ window.CAL_DATA = {
      "V-yuna-kim": "V-yuna-kim-R21-A"
     },
     "batch1": "owner-rejected-r6",
-    "cover": "r30_single_fix_owner_check",
+    "cover": "r31_non_person_candidates",
     "cover_credits_log": {
      "M-5 R27": 16,
      "M-5 R28": 2
@@ -14806,15 +14841,17 @@ window.CAL_DATA = {
      "M-5 R29": 1,
      "M-5 R30": 1
     },
+    "cover_person_track": "stopped",
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R28 起 R27 四張 Owner 全退回、無已接受底圖；M-5 R29 起 Coco 單人本機膚色修正版放上網站；M-5 R30 起 r30_single_fix_owner_check＝已還原 R28 誤改的其他人與背景、等 Penny 確認 Coco「單人修正效果」；不等於接受整張封面或授權其他角色修正",
+     "cover": "封面狀態；M-5 R28–R30 的人物團體封面與 Coco 單人校正 Owner 均未接受；M-5 R31 起 r31_non_person_candidates＝非人物封面 4 張候選（橫式、直式各 A 四季光影／B 極簡典藏）已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
      "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
      "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
      "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
      "cover_local_fix_log": "封面本機修正次數（每輪；免費、不生成、不上傳），與生成張數、局部身分編輯次數分開計算",
+     "cover_person_track": "人物封面路線；M-5 R31 Owner 表示「全部都不像本人」後停止（不再修臉、不換模型試拍、不追加人物生成），歷史紀錄保留",
      "drafts": "構圖底稿（不是月面照片、人物不是已建模的角色）：張數＝drafts.log 加總、credits 另計；不計入 generated_cumulative，也不改變 24 套分類",
      "generated_cumulative": "累計已生成的月面照片（含試拍）張數＝generated_log 加總（M-4 R2 1＋R5 5＋R7 1＋R8 1＋R11 1＋R14 2＋R16 1＋R18 2＋R20 40＋R21 19＋R22 8＋R23 2＋R24 2＝85）；只記實際發生的生成，和 24 套完成狀態分開計算，不與上列相加；構圖底稿另計在 drafts",
      "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；M-5 R27 起 accepted＝Penny 接受 R26 頁面（5a82bf9）的推薦排法：橫式照片框完整 16:9（192×108 mm）、橫式與直式推薦排法。排版接受不等於交印核准",

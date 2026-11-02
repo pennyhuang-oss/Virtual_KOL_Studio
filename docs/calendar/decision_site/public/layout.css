@@ -145,3 +145,11 @@ details.r29 > summary { font-weight: 700; }
 table.bp { border-collapse: collapse; font-size: .82rem; min-width: 520px; }
 table.bp th, table.bp td { border: 1px solid #ddd; padding: 4px 6px; text-align: right; white-space: nowrap; }
 table.bp th:first-child, table.bp td:first-child { text-align: left; white-space: normal; }
+
+/* M-5 R31：非人物封面候選 */
+.tsec.r31 { border-color: #c9c3b8; background: #fbfaf7; }
+.tsec.r31 .cgroup { border-top: 1px solid #ece8e1; padding-top: 10px; }
+.pdfl { margin: 6px 0 2px; }
+.pdfl .btn.dl { font-size: .86rem; white-space: normal; text-align: left; }
+details.hist > summary, details.r30 > summary { font-weight: 700; }
+#r31-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
