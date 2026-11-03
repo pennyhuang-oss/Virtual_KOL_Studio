@@ -111,6 +111,16 @@
     } catch (e) { return { dec: '', notes: {} }; }
   })();
   const q4save = () => { try { localStorage.setItem(Q4KEY, JSON.stringify(q4)); } catch (e) { /* 同上 */ } };
+  // M-5 R35 橫式年份光暈確認（新鍵＝cal2027-cover-r35-＋修正版圖片版本）：dec＝'glow'|'orig'|'edit'、notes＝{H}
+  const Q5KEY = C && C.r35 ? C.r35.feedback_key : '';
+  const q5 = (() => {
+    if (!Q5KEY) return { dec: '', notes: {} };
+    try {
+      const v = JSON.parse(localStorage.getItem(Q5KEY) || 'null');
+      return v && typeof v === 'object' ? { dec: typeof v.dec === 'string' ? v.dec : '', notes: v.notes && typeof v.notes === 'object' && !Array.isArray(v.notes) ? v.notes : {} } : { dec: '', notes: {} };
+    } catch (e) { return { dec: '', notes: {} }; }
+  })();
+  const q5save = () => { try { localStorage.setItem(Q5KEY, JSON.stringify(q5)); } catch (e) { /* 同上 */ } };
 
   let book = /^#V/.test(location.hash) ? 'V' : 'H';
   let frame = 'B';     // 橫式照片面顯示哪個版本：B＝完整 16:9（推薦）、A＝192×104 套框
@@ -264,6 +274,36 @@
     return [`${C.task}／${C.round}｜封面選擇（頁面版本 ${PAGE_COMMIT || '本機預覽'}；圖片版本 ${G.img_ver}）`, '選擇只代表封面版本，不等於交印核准。',
       `${G.groups.H}：${lab('H')}`, `${G.groups.V}：${lab('V')}`, `${G.groups.H}備註：${n('H')}`, `${G.groups.V}備註：${n('V')}`, `整體備註：${n('general')}`].join('\n');
   }
+  function r35Section() {
+    const G = C.r35;
+    const pdfl = (k, P) => `<p class="pdfl"><a class="btn dl" id="r35-pdf-${k}" href="${esc(P.href)}" download>${esc(G.pdf_label[k])}｜${P.pages} 面、${P.size_mb} MB</a></p>`;
+    const hcard = (k, X, title) => `<article class="ccard" id="r35-H-${k}"><h4>${esc(title)}</h4>` + faceFig({ ...X.page, face: 'cover' }, 'H', `${G.h_title}｜${title}`) +
+      `<p class="zl">${esc(G.zoom_label)}</p>` + fig(X.zoom, `${title}｜${G.zoom_label}`, 'zoomcrop') + pdfl(k, X.pdf) + '</article>';
+    return `<div class="tsec r31 r32 r33 r34 r35" id="cover-r35"><h3>${esc(G.cover_title)}</h3><p class="note">${esc(G.scope)}</p>` +
+      `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
+      `<div class="cgroup" id="r35-V"><h4>${esc(G.v_title)} <em class="badge ok">${esc(G.v_badge)}</em></h4>` +
+      `<div class="cgrid cgrid-V one"><article class="ccard acc" id="r35-V-acc">` + faceFig({ ...G.v.page, face: 'cover' }, 'V', `${G.v_title}（${G.v_badge}）`) +
+      `<p class="note">${esc(G.v_note)}</p>` + pdfl('V', G.v.pdf) + '</article></div></div>' +
+      `<div class="cgroup" id="r35-H"><h4>${esc(G.h_title)} <em class="badge test">${esc(G.h_badge)}</em></h4><p class="note">${esc(G.h_note)}</p>` +
+      `<div class="cgrid cgrid-H">${hcard('orig', G.orig, G.orig_title)}${hcard('glow', G.glow, G.glow_title)}</div>` +
+      `<fieldset class="dq"><legend>橫式年份要用哪一個？</legend>` + G.options.map(o =>
+        `<label class="opt"><input type="radio" name="r35-H" value="${esc(o.v)}"${q5.dec === o.v ? ' checked' : ''}> <span>${esc(o.label)}</span></label>`).join('') +
+      `<button type="button" class="lnk" data-r35clear="H">清除</button></fieldset>` +
+      `<label class="nl">${esc(G.note_label)}<textarea rows="3" data-r35note="H" placeholder="可留白">${esc(q5.notes.H || '')}</textarea></label></div>` +
+      `<div class="acts"><button type="button" class="btn" id="r35-copy">複製封面回饋</button></div>` +
+      `<textarea id="r35-text" rows="6" readonly aria-label="回饋文字"></textarea></div>`;
+  }
+  function r35Text() {
+    const G = C.r35, o = G.options.find(x => x.v === q5.dec), id = { glow: G.glow.id, orig: G.orig.id }[q5.dec];
+    return [`${C.task}／${C.round}｜封面確認（頁面版本 ${PAGE_COMMIT || '本機預覽'}；圖片版本 ${G.img_ver}）`, '只代表封面確認，不等於交印核准。',
+      `直式：${G.v.id}（${G.v_title}）已接受，不需選擇`, `橫式：${o ? o.label : '（未選）'}${id ? `（${id}）` : ''}`,
+      `橫式備註：${(q5.notes.H || '').trim() || '（無）'}`].join('\n');
+  }
+  function r34RO() {
+    const G = C.r34, o = G.options.find(x => x.v === q4.dec), id = { A: G.a.id, B: G.b.id }[q4.dec];
+    return `<div class="tsec" id="cover-r34ro"><p class="cverdict" id="r34-saved"><b>你在 R34 的選擇：</b>${esc(o ? o.label : '（未選）')}${id ? `（${esc(q4.dec)}｜${esc(id)}）` : ''}｜備註：${esc((q4.notes.V || '').trim() || '（無）')}</p>` +
+      `<div class="tparts">${fig(G.a.zoom, `R34 ${G.a_title}｜${G.zoom_label}`)}${fig(G.b.zoom, `R34 ${G.b_title}｜${G.zoom_label}`)}</div></div>`;
+  }
   function r34Section() {
     const G = C.r34;
     const pdfl = (k, P) => `<p class="pdfl"><a class="btn dl" id="r34-pdf-${k}" href="${esc(P.href)}" download>${esc(G.pdf_label[k])}｜${P.pages} 面、${P.size_mb} MB</a></p>`;
@@ -368,6 +408,15 @@
   }
   function coverSection() {
     if (!C || !C.test) return '';
+    if (C.r35) {
+      return `<section class="sec" id="cover"><h2>封面</h2>` + r35Section() +
+        `<details class="more hist" id="cover-old"><summary>${esc(C.person_history.outer_label)}</summary>` +
+        `<details class="more r34h" id="cover-r34h"><summary>${esc(C.r34_history_label)}</summary>` + r34RO() + '</details>' +
+        `<details class="more r33h" id="cover-r33h"><summary>${esc(C.r33_history_label)}</summary>` + r33RO() + '</details>' +
+        `<details class="more r32h" id="cover-r32h"><summary>${esc(C.r32_history_label)}</summary>` + r32RO() + '</details>' +
+        `<details class="more r31h" id="cover-r31h"><summary>${esc(C.r31_history_label)}</summary>` + r31RO() + '</details>' +
+        personHist() + '</details></section>';
+    }
     if (C.r34) {
       return `<section class="sec" id="cover"><h2>封面</h2>` + r34Section() +
         `<details class="more hist" id="cover-old"><summary>${esc(C.person_history.outer_label)}</summary>` +
@@ -418,6 +467,7 @@
     const q2t = $('#r32-text'); if (q2t && C && C.r32) q2t.value = r32Text();
     const q3t = $('#r33-text'); if (q3t && C && C.r33) q3t.value = r33Text();
     const q4t = $('#r34-text'); if (q4t && C && C.r34) q4t.value = r34Text();
+    const q5t = $('#r35-text'); if (q5t && C && C.r35) q5t.value = r35Text();
   };
 
   // ---------- 各區 ----------
@@ -545,6 +595,7 @@
       }
       return;
     }
+    if (e.target.closest('[data-r35clear]')) { q5.dec = ''; q5save(); app.querySelectorAll('input[name="r35-H"]').forEach(i => { i.checked = false; }); refreshCover(); return; }
     if (e.target.closest('[data-r34clear]')) { q4.dec = ''; q4save(); app.querySelectorAll('input[name="r34-V"]').forEach(i => { i.checked = false; }); refreshCover(); return; }
     if (e.target.closest('[data-r33clear]')) { q3.dec = ''; q3save(); app.querySelectorAll('input[name="r33-V"]').forEach(i => { i.checked = false; }); refreshCover(); return; }
     const q2c = e.target.closest('[data-r32clear]');
@@ -564,13 +615,13 @@
       }
       return;
     }
-    const cp = e.target.closest('#copy, #test-copy, #fix-copy, #r31-copy, #r32-copy, #r33-copy, #r34-copy');
+    const cp = e.target.closest('#copy, #test-copy, #fix-copy, #r31-copy, #r32-copy, #r33-copy, #r34-copy, #r35-copy');
     if (cp) {
-      const kind = cp.id === 'r34-copy' ? 'r34' : cp.id === 'r33-copy' ? 'r33' : cp.id === 'r32-copy' ? 'r32' : cp.id === 'r31-copy' ? 'r31' : cp.id === 'fix-copy' ? 'fix' : cp.id === 'test-copy' ? 'test' : 'layout';
-      const box = $({ r34: '#r34-text', r33: '#r33-text', r32: '#r32-text', r31: '#r31-text', fix: '#fix-text', test: '#test-text', layout: '#cp-text' }[kind]);
-      const t = kind === 'r34' ? r34Text() : kind === 'r33' ? r33Text() : kind === 'r32' ? r32Text() : kind === 'r31' ? r31Text() : kind === 'fix' ? fixText() : kind === 'test' ? testText() : feedbackText();
+      const kind = cp.id === 'r35-copy' ? 'r35' : cp.id === 'r34-copy' ? 'r34' : cp.id === 'r33-copy' ? 'r33' : cp.id === 'r32-copy' ? 'r32' : cp.id === 'r31-copy' ? 'r31' : cp.id === 'fix-copy' ? 'fix' : cp.id === 'test-copy' ? 'test' : 'layout';
+      const box = $({ r35: '#r35-text', r34: '#r34-text', r33: '#r33-text', r32: '#r32-text', r31: '#r31-text', fix: '#fix-text', test: '#test-text', layout: '#cp-text' }[kind]);
+      const t = kind === 'r35' ? r35Text() : kind === 'r34' ? r34Text() : kind === 'r33' ? r33Text() : kind === 'r32' ? r32Text() : kind === 'r31' ? r31Text() : kind === 'fix' ? fixText() : kind === 'test' ? testText() : feedbackText();
       box.value = t;
-      const done = ok => toast(ok ? (kind === 'r34' || kind === 'r33' ? '已複製封面回饋' : kind === 'r32' ? '已複製全部封面回饋' : kind === 'r31' || kind === 'fix' ? '已複製回饋' : kind === 'test' ? '已複製備註' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
+      const done = ok => toast(ok ? (kind === 'r35' || kind === 'r34' || kind === 'r33' ? '已複製封面回饋' : kind === 'r32' ? '已複製全部封面回饋' : kind === 'r31' || kind === 'fix' ? '已複製回饋' : kind === 'test' ? '已複製備註' : '已複製全部回饋') : '無法自動複製，請在下方文字框手動選取複製');
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => done(true), () => { box.select(); done(false); });
       else { box.select(); done(false); }
       return;
@@ -587,12 +638,19 @@
     }
     if (e.target.type === 'radio' && e.target.name.startsWith('dec-')) { st.dec[e.target.name.slice(4)] = e.target.value; save(); refreshCopy(); }
     if (e.target.type === 'radio' && e.target.name === 'fix') { fst.dec = e.target.value; fsave(); refreshCover(); }
+    if (e.target.type === 'radio' && e.target.name === 'r35-H') { q5.dec = e.target.value; q5save(); refreshCover(); }
     if (e.target.type === 'radio' && e.target.name === 'r34-V') { q4.dec = e.target.value; q4save(); refreshCover(); }
     if (e.target.type === 'radio' && e.target.name === 'r33-V') { q3.dec = e.target.value; q3save(); refreshCover(); }
     if (e.target.type === 'radio' && e.target.name.startsWith('r32-')) { q2.dec[e.target.name.slice(4)] = e.target.value; q2save(); refreshCover(); }
     if (e.target.type === 'radio' && e.target.name.startsWith('r31-')) { qst.dec[e.target.name.slice(4)] = e.target.value; qsave(); refreshCover(); }
   });
   app.addEventListener('input', e => {
+    const q5k = e.target.dataset && e.target.dataset.r35note;
+    if (q5k != null) {
+      const v = e.target.value;
+      if (v.trim()) q5.notes[q5k] = v; else delete q5.notes[q5k];
+      q5save(); refreshCover(); return;
+    }
     const q4k = e.target.dataset && e.target.dataset.r34note;
     if (q4k != null) {
       const v = e.target.value;

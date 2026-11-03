@@ -177,3 +177,13 @@ details.r32h > summary { font-weight: 700; }
 .tsec.r34 figure.tf.zoomcrop figcaption { display: none; }
 #r34-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
 details.r33h > summary { font-weight: 700; }
+
+/* M-5 R35：直式已接受、橫式年份光暈比較 */
+.cgrid-V.one { grid-template-columns: minmax(0, 1fr); max-width: 380px; }
+.tsec.r35 .zl { margin: 8px 0 2px; font-size: .82rem; color: #555; }
+.tsec.r35 figure.tf.zoomcrop { margin: 0; }
+.tsec.r35 figure.tf.zoomcrop img { width: 100%; height: auto; border-radius: 4px; }
+.tsec.r35 figure.tf.zoomcrop figcaption { display: none; }
+#r35-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+details.r34h > summary { font-weight: 700; }
+@media (max-width: 760px) { .tsec.r35 .cgrid-H { grid-template-columns: minmax(0, 1fr); } }

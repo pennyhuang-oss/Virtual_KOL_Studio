@@ -1017,12 +1017,12 @@ window.CAL_COVER = {
   "無法判定"
  ],
  "history_label": "R26 排版回饋（你在這台裝置填過的內容，保留不動）",
- "intro": "橫式封面已定案。直式請比較 Logo 圖示用白色還是藍色。下面是你已接受的內頁排版。",
+ "intro": "直式封面已定案。橫式請比較年份加了輕微光暈的修正版。下面是你已接受的內頁排版。",
  "made": "4 張候選（橫式、直式各 A／B），每張 1 次生成；12 位用各自的身分參考圖一起送入。",
  "person_history": {
   "label": "人物封面紀錄（Owner 未接受，已停止）",
   "note": "以下是 R27–R30 的人物團體封面與 Coco 單人測試，都沒有被接受，只保留紀錄；之前的選擇與備註原樣保留，不會帶到這一輪。",
-  "outer_label": "先前的封面紀錄（R33 修正版、R32 品牌版、R31 非人物候選、人物封面）",
+  "outer_label": "先前的封面紀錄（R34 藍白比較、R33 修正版、R32 品牌版、R31 非人物候選、人物封面）",
   "owner_words": "全部都不像本人啊。如果這個方式做不出來的話就不要勉強，看有沒有什麼別的替代方案？如果不放人物照片，用什麼方式做封面比較好？"
  },
  "r26_cover_label": "R26 暫用封面（人物縮圖，未採用；封面請看上方）",
@@ -1475,7 +1475,113 @@ window.CAL_COVER = {
   "v_title": "直式深色｜Logo 圖示比較",
   "zoom_label": "品牌區放大"
  },
- "round": "M-5 R34",
+ "r34_history_label": "R34 直式 Logo 藍白比較（你選了藍色圖示）",
+ "r35": {
+  "cover_title": "四季光影＋兌心科技",
+  "feedback_key": "cal2027-cover-r35-f319e4",
+  "glow": {
+   "id": "H-L1-R35G",
+   "page": {
+    "full": {
+     "h": 1831,
+     "src": "cover35/cover_H-L1-R35G_f.jpg",
+     "w": 2410
+    },
+    "view": {
+     "h": 916,
+     "src": "cover35/cover_H-L1-R35G_v.jpg",
+     "w": 1205
+    }
+   },
+   "pdf": {
+    "href": "cover35/cal2027_H_preview_R35.pdf",
+    "pages": 28,
+    "size_mb": 10.8
+   },
+   "zoom": {
+    "h": 992,
+    "src": "cover35/year_H-L1-R35G_600dpi.jpg",
+    "w": 2363
+   }
+  },
+  "glow_title": "光暈修正版",
+  "h_badge": "待確認",
+  "h_note": "只替 2027 加了輕微的淡藍柔光，其他都和原版一樣。下方是年份放大，可點開看。",
+  "h_title": "橫式淺色｜年份光暈比較",
+  "img_ver": "f319e4",
+  "note_label": "橫式備註（例如想改哪裡）",
+  "options": [
+   {
+    "label": "接受光暈修正版",
+    "v": "glow"
+   },
+   {
+    "label": "維持原版",
+    "v": "orig"
+   },
+   {
+    "label": "還要修改",
+    "v": "edit"
+   }
+  ],
+  "orig": {
+   "id": "H-L1",
+   "page": {
+    "full": {
+     "h": 1831,
+     "src": "cover32/cover_H-L1_f.jpg",
+     "w": 2410
+    },
+    "view": {
+     "h": 916,
+     "src": "cover32/cover_H-L1_v.jpg",
+     "w": 1205
+    }
+   },
+   "pdf": {
+    "href": "cover33/cal2027_H_preview_R33.pdf",
+    "pages": 28,
+    "size_mb": 10.8
+   },
+   "zoom": {
+    "h": 992,
+    "src": "cover35/year_H-L1_600dpi.jpg",
+    "w": 2363
+   }
+  },
+  "orig_title": "原版",
+  "pdf_label": {
+   "V": "直式完整預覽 PDF",
+   "glow": "修正版 PDF（待確認）",
+   "orig": "原版 PDF"
+  },
+  "scope": "封面確認不等於交印核准；螢幕上的顏色和印刷會有差異。",
+  "v": {
+   "id": "V-D2-R34B",
+   "page": {
+    "full": {
+     "h": 2410,
+     "src": "cover34/cover_V-D2-R34B_f.jpg",
+     "w": 1701
+    },
+    "view": {
+     "h": 1205,
+     "src": "cover34/cover_V-D2-R34B_v.jpg",
+     "w": 850
+    }
+   },
+   "pdf": {
+    "href": "cover35/cal2027_V_preview_R35.pdf",
+    "pages": 32,
+    "size_mb": 13.0
+   }
+  },
+  "v_badge": "已接受",
+  "v_note": "已定案，不再修改。",
+  "v_title": "直式深色｜版本 2（藍色圖示）",
+  "zoom_label": "年份放大"
+ },
+ "round": "M-5 R35",
  "task": "TASK-CAL-001",
  "test": {
   "checks": [
@@ -1561,5 +1667,5 @@ window.CAL_COVER = {
   "verdict": "未通過",
   "verdict_text": "依「任何一項不過就記失敗」：第 2 項膚色一致性只算部分通過，整體記失敗。可以確定的是：臉部身分這一項成功（第 1 項），範圍也確實只限 Coco 本人（第 3 項）。未繼續修其他人。"
  },
- "title": "2027 桌曆｜封面（橫式已接受、直式 Logo 藍白比較）與排版"
+ "title": "2027 桌曆｜封面（直式已接受、橫式年份光暈比較）與排版"
 };
