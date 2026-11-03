@@ -8,9 +8,8 @@
   "horizontal": "H-L1（橫式淺色 版本 1｜年份右下、品牌左下）：Owner 接受，定案，不再修改",
   "vertical": "V-D2（直式深色 版本 2｜置中排列）：Owner 選定編排方向；本輪修正版待 Owner 確認，不標為最終接受",
   "vertical_changes": [
-   "Logo：不用 R32 自行改白的透明底 Logo，改用 Penny 提供的藍色圓底、白色圖示與白色 Insight Software 字樣那款完整 Logo",
    "年份 2027：改為與深藍底有對比的金黃色系（柔和香檳金至暖金黃），加輕微、收斂的光暈，字形本體清楚",
-   "其他文字：中文可用柔白或淡金；建立年份、Logo、中文的層次，不再全部同色"
+   "Logo 與「兌心科技」：依 Owner 本輪最後決定，維持 R32 V-D2 原本的白色 Logo 字樣與白色中文（藍色圓底 Logo 試放後 Owner 認為不協調，不採用）"
   ],
   "unchanged": "24 張月面照片、已接受內頁排版不變；深藍光影背景、置中編排、整體留白保留",
   "print_approval": "封面接受與交印核准分開；目前沒有交印核准"
@@ -54,6 +53,31 @@
   "message_verbatim": "這個logo也給你做參考",
   "file": "docs/calendar/cover_r33/brand/insight-software-logo-circle.png",
   "sha256": "859e51e7ddf0e9a4c7cccc0a725d5e5ae9a134c15110b0fcdbdbdc8056665416",
-  "note": "Penny 在 R33 進行中附上的圖檔（藍色圓底、白色圖示與白色 Insight Software 字樣），原樣保存"
- }
+  "note": "原樣保存；試放後依 Owner 決定未採用"
+ },
+ "owner_messages_during_round": [
+  {
+   "at": "2026-11-03",
+   "verbatim": "這個logo也給你做參考",
+   "note": "附上藍色圓底、白色圖示與白色 Insight Software 字樣的 Logo 圖檔（原樣保存於 docs/calendar/cover_r33/brand/insight-software-logo-circle.png）"
+  },
+  {
+   "at": "2026-11-03",
+   "verbatim": "我覺得如果加入那個logo就不要這麼大，看起來很突兀",
+   "note": "看到直徑 22 mm 的試放後"
+  },
+  {
+   "at": "2026-11-03",
+   "verbatim": "要注意整體畫面的比例和協調感，因為那個logo的藍底滿醒目的，過大會很難看"
+  },
+  {
+   "at": "2026-11-03",
+   "verbatim": "我覺得現在加上這個logo有點不好看，這個藍底的logo有點不搭，重新規劃一下怎麼呈現好了"
+  },
+  {
+   "at": "2026-11-03",
+   "verbatim": "乾脆就維持原本白色的logo字樣，2027的字體改變而已",
+   "note": "回覆三種品牌區改法（A 金色單色 Logo、B 淺色名牌、C 封面只放中文）時的決定：直式品牌區維持 R32 的白色 Logo 與白色中文，只改 2027"
+  }
+ ]
 }

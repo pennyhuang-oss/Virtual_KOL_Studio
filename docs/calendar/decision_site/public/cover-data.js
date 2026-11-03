@@ -1283,7 +1283,7 @@ window.CAL_COVER = {
  "r32_history_label": "R32 四季光影＋兌心科技（你選了橫式版本 1、直式版本 2）",
  "r33": {
   "cover_title": "四季光影＋兌心科技",
-  "feedback_key": "cal2027-cover-r33-cfb3cc",
+  "feedback_key": "cal2027-cover-r33-5faa09",
   "h": {
    "id": "H-L1",
    "page": {
@@ -1307,7 +1307,7 @@ window.CAL_COVER = {
   "h_badge": "已接受",
   "h_note": "已定案，不再修改。",
   "h_title": "橫式淺色｜版本 1",
-  "img_ver": "cfb3cc",
+  "img_ver": "5faa09",
   "logo_note": "",
   "note_label": "直式備註（例如想改哪裡）",
   "options": [
@@ -1363,8 +1363,8 @@ window.CAL_COVER = {
   "v_badge": "待確認",
   "v_changes": [
    "2027 改成柔和的香檳金到暖金黃，加一點光暈",
-   "Logo 換成你提供的藍色圓底白字那款（原檔原樣放入）",
-   "「兌心科技」改成淡香檳白"
+   "Logo 與「兌心科技」照你的決定，維持原本的白色",
+   "背景、位置與大小都和前一版一樣"
   ],
   "v_prev_title": "前一版（R32）",
   "v_title": "直式深色｜版本 2 修正版"

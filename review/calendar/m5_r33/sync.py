@@ -21,7 +21,7 @@ chg('status.production.cover', pr['cover'], 'r33_h_accepted_v_revision_pending')
 pr['cover'] = 'r33_h_accepted_v_revision_pending'
 D = pr['definitions']
 v = ('封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；'
-     'M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（金色年份、藍色圓底 Logo）已放上網站，等 Penny 確認；'
+     'M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（只把年份改成金色）已放上網站，等 Penny 確認；'
      '封面接受不等於交印核准')
 chg('status.production.definitions.cover', D['cover'], v)
 D['cover'] = v
@@ -32,8 +32,8 @@ P['m5r33'] = {
     'covers': 'docs/calendar/data/cal_m5_cover_r33.json',
     'page': 'docs/calendar/data/cal_cover_r33_page.json',
     'source': 'docs/calendar/cover_r33/',
-    'status_line': 'M-5 R33：Owner 接受橫式 H-L1（定案）；直式選 V-D2 編排並要求修改。本輪直式修正版：2027 改為柔和香檳金到暖金黃的漸層，加輕微光暈；'
-                   '「兌心科技」改為淡香檳白；拿掉 R32 改白的 Logo，換成 Penny 本輪提供的藍色圓底白字 Logo 原檔（原樣等比放入，直徑 22 mm）。'
+    'status_line': 'M-5 R33：Owner 接受橫式 H-L1（定案）；直式選 V-D2 編排並要求修改。本輪直式修正版：2027 改為柔和香檳金到暖金黃的漸層，加輕微光暈。'
+                   'Penny 本輪提供藍色圓底白字 Logo，試放後 Owner 認為不協調，決定維持 R32 原本的白色 Logo 與白色中文，只改 2027。'
                    '兩份完整預覽 PDF（橫式 28 面用 H-L1、直式 32 面用修正版）。生成 0、付費 0；直式待 Penny 確認；24 張照片與內頁排版不改。',
     'changes': changes,
 }

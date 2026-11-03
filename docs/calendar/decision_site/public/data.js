@@ -8716,7 +8716,7 @@ window.CAL_DATA = {
     },
     {
      "kind": "事實同步",
-     "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（金色年份、藍色圓底 Logo）已放上網站，等 Penny 確認；封面接受不等於交印核准",
+     "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（只把年份改成金色）已放上網站，等 Penny 確認；封面接受不等於交印核准",
      "old": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 起 r32_seasons_brand_candidates＝橫式淺色、直式深色各 2 個加入兌心科技品牌的版本已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
      "where": "status.production.definitions.cover"
     }
@@ -8727,7 +8727,7 @@ window.CAL_DATA = {
    "owner": "docs/calendar/data/cal_m5_owner_r33.json",
    "page": "docs/calendar/data/cal_cover_r33_page.json",
    "source": "docs/calendar/cover_r33/",
-   "status_line": "M-5 R33：Owner 接受橫式 H-L1（定案）；直式選 V-D2 編排並要求修改。本輪直式修正版：2027 改為柔和香檳金到暖金黃的漸層，加輕微光暈；「兌心科技」改為淡香檳白；拿掉 R32 改白的 Logo，換成 Penny 本輪提供的藍色圓底白字 Logo 原檔（原樣等比放入，直徑 22 mm）。兩份完整預覽 PDF（橫式 28 面用 H-L1、直式 32 面用修正版）。生成 0、付費 0；直式待 Penny 確認；24 張照片與內頁排版不改。"
+   "status_line": "M-5 R33：Owner 接受橫式 H-L1（定案）；直式選 V-D2 編排並要求修改。本輪直式修正版：2027 改為柔和香檳金到暖金黃的漸層，加輕微光暈。Penny 本輪提供藍色圓底白字 Logo，試放後 Owner 認為不協調，決定維持 R32 原本的白色 Logo 與白色中文，只改 2027。兩份完整預覽 PDF（橫式 28 面用 H-L1、直式 32 面用修正版）。生成 0、付費 0；直式待 Penny 確認；24 張照片與內頁排版不改。"
   },
   "meta": {
    "aaliya_sources": {
@@ -9516,7 +9516,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "fd9c941fcc5f5db1163bf18c5a703f0bb5520a4e",
+  "plan_blob": "71b425e50c927bbaa94b2b465ea3d5ac790dd81f",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14891,7 +14891,7 @@ window.CAL_DATA = {
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（金色年份、藍色圓底 Logo）已放上網站，等 Penny 確認；封面接受不等於交印核准",
+     "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（只把年份改成金色）已放上網站，等 Penny 確認；封面接受不等於交印核准",
      "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
      "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",

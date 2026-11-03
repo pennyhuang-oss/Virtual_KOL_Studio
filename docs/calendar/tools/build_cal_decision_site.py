@@ -1039,7 +1039,7 @@ def build_cover():
     V3 = G3['vertical']
     assert V3['id'] == 'V-D2-R33' and V3['status'] == 'pending_owner' and G3['horizontal']['id'] == 'H-L1' and G3['horizontal']['status'] == 'accepted'
     assert V3['checks']['year_in_safe'] and V3['checks']['brand_in_safe'], '年份與品牌區須在安全區內'
-    assert G3['logo']['found'] or P3['logo_note'], 'Logo 原檔未到位時頁面須註明'
+    assert G3['vertical']['checks']['same_as_r32_except_year'] and not G3['logo']['circle_logo']['used'], 'R33 直式：品牌區維持 R32 白色 Logo（Owner 決定）'
     for k, pdf in G3['pdf'].items():
         assert pdf['pages'] == {'H': 28, 'V': 32}[k] and pdf['interior_pages_same_as_r26'] and all(f['emb'] == 'yes' and f['sub'] == 'yes' for f in pdf['cover_fonts']) and pdf['cover_vs_preview_mean_abs_diff'] < 3
     v3sha = {x['path']: x['sha256'] for x in G3['files']}
@@ -1057,7 +1057,7 @@ def build_cover():
     pub.update({'round': P3['round'], 'title': P3['title'], 'intro': P3['intro'], 'r26_cover_label': P3['r26_cover_label'],
                 'r33': {k: P3[k] for k in ('cover_title', 'scope', 'h_title', 'h_badge', 'h_note', 'v_title', 'v_badge', 'v_prev_title', 'v_changes',
                                            'options', 'note_label', 'pdf_label')} | {
-                    'logo_note': '' if G3['logo']['found'] else P3['logo_note'],
+                    'logo_note': P3['logo_note'],
                     'feedback_key': P3['feedback_prefix'] + imgver3, 'img_ver': imgver3,
                     'h': {'id': 'H-L1', 'page': {'view': img3('cover32', 'cover_H-L1_v.jpg'), 'full': img3('cover32', 'cover_H-L1_f.jpg')}, 'pdf': pdf3('H')},
                     'v': {'id': V3['id'], 'page': {'view': img3('cover33', 'cover_V-D2-R33_v.jpg'), 'full': img3('cover33', 'cover_V-D2-R33_f.jpg')}, 'pdf': pdf3('V'),

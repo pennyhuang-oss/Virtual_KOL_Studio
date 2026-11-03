@@ -1,6 +1,6 @@
 {
  "round": "M-5 R33",
- "note": "橫式 H-L1 Owner 已接受（沿用 R32，不改）；直式 V-D2 修正版一張（金色年份＋收斂光暈、Penny 提供的藍色圓底 Logo），待 Owner 確認。生成 0、付費 0、未購買素材；R32 檔案不覆蓋。",
+ "note": "橫式 H-L1 Owner 已接受（沿用 R32，不改）；直式 V-D2 修正版一張：只把 2027 改成金色＋收斂光暈，品牌區依 Owner 決定維持 R32 白色 Logo，待 Owner 確認。生成 0、付費 0、未購買素材；R32 檔案不覆蓋。",
  "horizontal": {
   "id": "H-L1",
   "status": "accepted",
@@ -15,7 +15,7 @@
   "base": "V-D2",
   "status": "pending_owner",
   "source": "V-D2-R33.svg",
-  "source_sha256": "1cf09e580fa48172441c3d87f486515e789ea34e591fe3324e9516461b2f6576",
+  "source_sha256": "f1901193a1ec0d9d55b8c80edad62d152ff29d9f1ed1664323ae46fcc84da01a",
   "px": [
    1701,
    2410
@@ -23,26 +23,24 @@
   "checks": {
    "year_ink_mm": [
     35.5,
-    137.86,
+    145.86,
     108.27,
-    164.52
+    172.52
    ],
    "brand_box_mm": [
-    51.57,
-    173.0,
-    92.43,
-    195.0
+    49.44,
+    185.45,
+    94.56,
+    191.5
    ],
    "year_in_safe": true,
    "brand_in_safe": true,
-   "clear_gap_mm": 8.48,
+   "clear_gap_mm": 12.93,
    "year_digit_height_mm": 26.66,
-   "logo_diameter_mm": 22.0,
-   "logo_wordmark_cap_height_mm": 1.65,
-   "logo_effective_ppi": 924,
-   "cjk_glyph_height_mm": 3.28,
-   "year_center_x_mm": 71.89,
-   "brand_center_x_mm": 72.0
+   "logo_width_mm": 26.0,
+   "wordmark_cap_height_mm": 2.52,
+   "cjk_glyph_height_mm": 2.9,
+   "same_as_r32_except_year": true
   },
   "palette": {
    "year_gold_gradient": [
@@ -76,18 +74,23 @@
      }
     ]
    },
-   "cjk": "#EDE4CF"
+   "brand": "R32 V-D2 原樣：{\"year\": \"#E6ECFF\", \"cjk\": \"#FFFFFF\", \"rule\": \"#C9D4FF\", \"logo\": \"#FFFFFF\"}"
   },
   "background": "與 R32 V-D2 相同（build_cal_m5_cover_r32.dark_art）"
  },
  "logo": {
-  "wanted": "Owner 指定：藍色圓底、白色圖示與白色 Insight Software 字樣的完整 Logo（Penny 提供的那款）",
-  "found": true,
-  "source": "Penny 在 R33 進行中直接提供（2026-11-03，訊息原文「這個logo也給你做參考」）；原檔原樣保存，未重畫、未改色、未加圓",
-  "file": "brand/insight-software-logo-circle.png",
-  "sha256": "859e51e7ddf0e9a4c7cccc0a725d5e5ae9a134c15110b0fcdbdbdc8056665416",
-  "format": "800×800 PNG（RGBA）；圓外透明；藍色 #2B33F2（與官網 Logo 圖示同色）",
-  "verified": "和官方 YouTube、Facebook 頭像（同一款排法、白底藍圖示黑字）逐像素比對：圖示與字樣重疊率約 98%（差異只在邊緣反鋸齒）；和官網長條 logo01.svg 的比例不同（圓形款的圖示與兩行字距另有排法），所以不能用長條 Logo 加藍圓代替"
+  "used": "R32 V-D2 的同一個白色 Logo：官網 logo01.svg 向量（等比、不重畫）改填白色的設計衍生版，非官方反白檔",
+  "decision": "Owner 本輪決定維持原本白色 Logo（2026-11-03 原話：「乾脆就維持原本白色的logo字樣，2027的字體改變而已」）",
+  "official_source": "https://www.insight-software.com/template/img/tw/logo/logo01.svg",
+  "official_sha256": "f7c3ff90ff069faaf60d1f961b5e08e4c697b3a06f5a14d46c947b92a5fcc05a",
+  "circle_logo": {
+   "file": "brand/insight-software-logo-circle.png",
+   "sha256": "859e51e7ddf0e9a4c7cccc0a725d5e5ae9a134c15110b0fcdbdbdc8056665416",
+   "source": "Penny 在 R33 進行中提供（原話「這個logo也給你做參考」）；800×800 PNG、圓外透明、藍 #2B33F2",
+   "verified": "和官方 YouTube、Facebook 頭像同一排法，圖示與字樣重疊率約 98%",
+   "tried": "試放直徑 22 mm → 15 mm 後，Owner 認為藍底 Logo 在深藍畫面上不協調（「這個藍底的logo有點不搭」），未採用；原檔保留作紀錄",
+   "used": false
+  }
  },
  "fonts": [
   {
@@ -179,10 +182,10 @@
      "sub": "yes"
     }
    ],
-   "cover_vs_preview_mean_abs_diff": 1.15,
+   "cover_vs_preview_mean_abs_diff": 1.13,
    "interior_from": "cal2027_V_layout_preview_R26.pdf",
    "interior_pages_same_as_r26": true,
-   "bytes": 13653076
+   "bytes": 13638852
   }
  },
  "files": [
@@ -193,13 +196,13 @@
   },
   {
    "path": "cal2027_V_preview_R33.pdf",
-   "sha256": "614c0f13d9ec99e837bcfd95d984ff206a6cd52b041799e23d5c0abda722f681",
-   "bytes": 13653076
+   "sha256": "0282f7649581e89428f8ea737a8c76067de042d42aae584d3439b9b86b4637cf",
+   "bytes": 13638852
   },
   {
    "path": "cover_V-D2-R33_f.jpg",
-   "sha256": "39899f1795b586a3954342d198cc7c9b5fdf754fe97c48e0ed5a84269d2e017f",
-   "bytes": 361097,
+   "sha256": "69fc96216f99d46b919e246501ad0979346a37dd28caecc8dd3f8e9e3dd57277",
+   "bytes": 363198,
    "px": [
     1701,
     2410
@@ -207,8 +210,8 @@
   },
   {
    "path": "cover_V-D2-R33_v.jpg",
-   "sha256": "9a8aaa8188d6ec74e7540939ed9da7274bbc49242b64493a1c9b59ed513727cc",
-   "bytes": 87079,
+   "sha256": "57cbf7655b6ac8661c49835730df17f39a5d6a4243d4c20f497630725dc37257",
+   "bytes": 87168,
    "px": [
     850,
     1205
