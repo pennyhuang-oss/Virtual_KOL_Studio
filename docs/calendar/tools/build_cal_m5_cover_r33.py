@@ -100,7 +100,7 @@ def _font(k):
     return 'R33-' + k
 
 
-def cover_pdf(art_jpg, path):
+def cover_pdf(art_jpg, path, icon=None):
     """直式封面一頁：背景（含年份光暈）＝300 dpi JPEG；金色年份＝向量字形裁切＋線性漸層；中文、細線、白色 Logo 為向量（同 R32）；字型子集嵌入。"""
     from fontTools.svgLib.path import parse_path
     from reportlab import rl_config
@@ -147,7 +147,7 @@ def cover_pdf(art_jpg, path):
     for cls, d in R32.logo_paths():
         p = c.beginPath()
         parse_path(d, R32._RLPen(p, x0, ly0, s, H))
-        c.setFillColor(HexColor(D['logo']))
+        c.setFillColor(HexColor(icon if (icon and cls == 'st0') else D['logo']))   # icon：R34 比較版把圖示（st0）填回官方藍；預設全白＝R33
         c.drawPath(p, stroke=0, fill=1, fillMode=FILL_EVEN_ODD if cls == 'st0' else FILL_NON_ZERO)
     c.showPage()
     c.save()

@@ -524,7 +524,7 @@
     "layout_preview": "排版預覽狀態；M-5 R26 兩款完整頁面預覽與 PDF 完成；M-5 R27 起 owner_reviewed＝Penny 已看過並回覆（工作版、非交印核准）",
     "layout_acceptance": "排版接受狀態，與照片接受（owner_selection）分開記錄；M-5 R27 起 accepted＝Penny 接受 R26 頁面（5a82bf9）的推薦排法：橫式照片框完整 16:9（192×108 mm）、橫式與直式推薦排法。排版接受不等於交印核准",
     "layout_acceptance_record": "Penny 接受排版的原話紀錄",
-    "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（只把年份改成金色）已放上網站，等 Penny 確認；封面接受不等於交印核准",
+    "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 直式修正版（金色年份、白色 Logo）；M-5 R34 起 r34_v_logo_icon_compare＝橫式 H-L1 已接受（定案），直式 Logo 圖示白色（A）／官方藍（B）比較已放上網站，等 Penny 選；比較不等於接受直式封面；封面接受不等於交印核准",
     "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",
     "cover_generated_log": "封面生成張數（每輪）；與月面照片 generated_cumulative、構圖底稿 drafts 分開計算，不相加",
     "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
@@ -593,7 +593,7 @@
    "layout_acceptance": "accepted",
    "layout_file": "docs/calendar/data/cal_m5_layout_r26.json",
    "layout_acceptance_record": "docs/calendar/data/cal_m5_owner_r27.json",
-   "cover": "r33_h_accepted_v_revision_pending",
+   "cover": "r34_v_logo_icon_compare",
    "cover_file": "docs/calendar/data/cal_m5_cover_r27.json",
    "cover_generated_log": {
     "M-5 R27": 4
@@ -10127,6 +10127,29 @@
     "where": "status.production.definitions.cover",
     "old": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 起 r32_seasons_brand_candidates＝橫式淺色、直式深色各 2 個加入兌心科技品牌的版本已放上網站，等 Penny 選擇；候選不等於接受或交印核准",
     "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（只把年份改成金色）已放上網站，等 Penny 確認；封面接受不等於交印核准"
+   }
+  ]
+ },
+ "m5r34": {
+  "from_commit": "71a729677d6848a595627e63799fd42fb775d1ed",
+  "owner": "docs/calendar/data/cal_m5_owner_r34.json",
+  "design": "docs/calendar/data/cal_m5_r34_design.json",
+  "covers": "docs/calendar/data/cal_m5_cover_r34.json",
+  "page": "docs/calendar/data/cal_cover_r34_page.json",
+  "source": "docs/calendar/cover_r34/",
+  "status_line": "M-5 R34：Owner「那試做看看，我再進行比較」。直式以 R33 為基底，只把 Logo 左側圖示由白色填回官網原色 #2B33F2（英文字標與「兌心科技」維持白色、其餘不變），與 R33 白色圖示版並排比較；藍色版另出直式完整預覽 PDF（32 面）。生成 0、付費 0；只是比較，不代表接受直式封面；橫式 H-L1 已接受不變。",
+  "changes": [
+   {
+    "kind": "事實同步",
+    "where": "status.production.cover",
+    "old": "r33_h_accepted_v_revision_pending",
+    "new": "r34_v_logo_icon_compare"
+   },
+   {
+    "kind": "事實同步",
+    "where": "status.production.definitions.cover",
+    "old": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 起 r33_h_accepted_v_revision_pending＝橫式 H-L1 已接受（定案），直式 V-D2 修正版（只把年份改成金色）已放上網站，等 Penny 確認；封面接受不等於交印核准",
+    "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 直式修正版（金色年份、白色 Logo）；M-5 R34 起 r34_v_logo_icon_compare＝橫式 H-L1 已接受（定案），直式 Logo 圖示白色（A）／官方藍（B）比較已放上網站，等 Penny 選；比較不等於接受直式封面；封面接受不等於交印核准"
    }
   ]
  }

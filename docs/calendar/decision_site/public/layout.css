@@ -169,3 +169,11 @@ details.r31h > summary { font-weight: 700; }
 .lnote { font-size: .88rem; background: #fff7e6; border: 1px solid #f0d49a; border-radius: 8px; padding: 8px 10px; margin: 6px 0 10px; }
 #r33-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
 details.r32h > summary { font-weight: 700; }
+
+/* M-5 R34：直式 Logo 圖示白／藍比較 */
+.tsec.r34 .zl { margin: 8px 0 2px; font-size: .82rem; color: #555; }
+.tsec.r34 figure.tf.zoomcrop { margin: 0; }
+.tsec.r34 figure.tf.zoomcrop img { width: 100%; height: auto; border-radius: 4px; }
+.tsec.r34 figure.tf.zoomcrop figcaption { display: none; }
+#r34-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+details.r33h > summary { font-weight: 700; }

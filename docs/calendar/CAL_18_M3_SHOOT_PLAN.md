@@ -72,6 +72,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-5 R33：Owner 接受橫式 H-L1（定案）；直式選 V-D2 編排並要求修改。本輪直式修正版：2027 改為柔和香檳金到暖金黃的漸層，加輕微光暈。Penny 本輪提供藍色圓底白字 Logo，試放後 Owner 認為不協調，決定維持 R32 原本的白色 Logo 與白色中文，只改 2027。兩份完整預覽 PDF（橫式 28 面用 H-L1、直式 32 面用修正版）。生成 0、付費 0；直式待 Penny 確認；24 張照片與內頁排版不改。** Owner 回饋原文見 `data/cal_m5_owner_r33.json`，設計分析與自查見 `data/cal_m5_r33_design.json`，修正版與預覽 PDF 紀錄見 `data/cal_m5_cover_r33.json`，可編輯來源與 Logo 查找紀錄在 `cover_r33/`。
 
+> **M-5 R34：Owner「那試做看看，我再進行比較」。直式以 R33 為基底，只把 Logo 左側圖示由白色填回官網原色 #2B33F2（英文字標與「兌心科技」維持白色、其餘不變），與 R33 白色圖示版並排比較；藍色版另出直式完整預覽 PDF（32 面）。生成 0、付費 0；只是比較，不代表接受直式封面；橫式 H-L1 已接受不變。** Owner 指令見 `data/cal_m5_owner_r34.json`，比較紀錄與辨識度量測見 `data/cal_m5_r34_design.json`，比較版與預覽 PDF 紀錄見 `data/cal_m5_cover_r34.json`，可編輯來源在 `cover_r34/`。
+
 ## 0. 版本
 
 | 項目 | 內容 |

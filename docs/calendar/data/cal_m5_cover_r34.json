@@ -1,0 +1,141 @@
+{
+ "round": "M-5 R34",
+ "note": "直式 Logo 藍白比較：A＝R33 白色圖示（public/cover33，不動）；B＝只把圖示填回官方藍 #2B33F2，其餘與 R33 相同。只試做比較，不代表接受直式封面。生成 0、付費 0。",
+ "a": {
+  "id": "V-D2-R33",
+  "label": "白色圖示",
+  "preview": {
+   "view": "cover33/cover_V-D2-R33_v.jpg",
+   "full": "cover33/cover_V-D2-R33_f.jpg"
+  },
+  "pdf": "cover33/cal2027_V_preview_R33.pdf",
+  "brand_zoom": "brand_A_600dpi.jpg"
+ },
+ "b": {
+  "id": "V-D2-R34B",
+  "label": "藍色圖示",
+  "source": "V-D2-R34B.svg",
+  "source_sha256": "f775f8841153568fc8cc6b58d8fa7e003925269ffbad4a2937beaf543b2bde79",
+  "brand_zoom": "brand_B_600dpi.jpg"
+ },
+ "icon_color": {
+  "official_file": "docs/calendar/cover_r32/brand/insight-software-logo-official.svg",
+  "official_sha256": "f7c3ff90ff069faaf60d1f961b5e08e4c697b3a06f5a14d46c947b92a5fcc05a",
+  "st0_fill_in_file": "#2B33F2",
+  "used": "#2B33F2"
+ },
+ "only_change": "圖示（logo01.svg 的 st0 路徑）填色 #FFFFFF → #2B33F2；英文字標、「兌心科技」、細線、金色 2027、背景、排版、尺寸、間距不變；無圓底、光暈、描邊、陰影",
+ "compare": {
+  "changed_px": 2487,
+  "changed_bbox_px": [
+   584,
+   2199,
+   682,
+   2258
+  ],
+  "icon_box_px": [
+   582,
+   2197,
+   683,
+   2260
+  ],
+  "changed_outside_icon_box_px": 0,
+  "icon_box_mm": [
+   49.44,
+   186.22,
+   57.65,
+   191.12
+  ],
+  "icon_size_mm": [
+   8.21,
+   4.9
+  ],
+  "icon_core_px": 2065,
+  "icon_color_rendered_B": "#2B33F2",
+  "background_around_icon": "#0D111E",
+  "contrast_ratio_A_white_icon": 18.8,
+  "contrast_ratio_B_blue_icon": 2.56,
+  "contrast_ratio_B_wordmark_white": 18.8
+ },
+ "brand_zoom_mm": [
+  44.0,
+  181.0,
+  100.0,
+  196.0
+ ],
+ "brand_zoom_px": [
+  1322,
+  354
+ ],
+ "pdf": {
+  "path": "cal2027_V_preview_V-D2-R34B.pdf",
+  "pages": 32,
+  "trim_mm": [
+   2.0,
+   2.0,
+   142.0,
+   202.0
+  ],
+  "cover_fonts": [
+   {
+    "name": "CormorantGaramond-Light",
+    "subset_tag": true,
+    "emb": "yes",
+    "sub": "yes"
+   },
+   {
+    "name": "NotoSansTC-Medium",
+    "subset_tag": true,
+    "emb": "yes",
+    "sub": "yes"
+   }
+  ],
+  "cover_vs_preview_mean_abs_diff": 1.12,
+  "interior_pages_same_as_r26": true,
+  "cover_stream_lines_differ_from_r33": 1,
+  "bytes": 13638845
+ },
+ "files": [
+  {
+   "path": "brand_A_600dpi.jpg",
+   "sha256": "f76f723a36c60ced8e69779cf394a33cb3aa72628e0f59dff1c0442c0d6f25b3",
+   "bytes": 68459,
+   "px": [
+    1322,
+    354
+   ]
+  },
+  {
+   "path": "brand_B_600dpi.jpg",
+   "sha256": "bcc398e383512807ca4f2c8f586e2bd4fcaad10f2aa544990cca12c65c339a2a",
+   "bytes": 68691,
+   "px": [
+    1322,
+    354
+   ]
+  },
+  {
+   "path": "cal2027_V_preview_V-D2-R34B.pdf",
+   "sha256": "8d4915e02d423f089604e4371b97bfd35b6cf3787353ede24a68eb204839c67d",
+   "bytes": 13638845
+  },
+  {
+   "path": "cover_V-D2-R34B_f.jpg",
+   "sha256": "316e5d19473af071884fe330f165e2c942af6a2b42554754d50a7c0e7e40db5d",
+   "bytes": 362572,
+   "px": [
+    1701,
+    2410
+   ]
+  },
+  {
+   "path": "cover_V-D2-R34B_v.jpg",
+   "sha256": "28752660604644045b961a1f3de3c06fc95f71eac2c195bcf9226de7df7364d6",
+   "bytes": 86924,
+   "px": [
+    850,
+    1205
+   ]
+  }
+ ]
+}

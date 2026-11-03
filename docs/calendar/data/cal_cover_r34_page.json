@@ -1,0 +1,28 @@
+{
+ "note": "排版頁（layout.html#cover）M-5 R34 的文字（人寫）：橫式 H-L1 已接受；直式 Logo 圖示白／藍比較。圖片與 PDF 由 build_cal_m5_cover_r34.py 產生（A 沿用 R33）。",
+ "round": "M-5 R34",
+ "title": "2027 桌曆｜封面（橫式已接受、直式 Logo 藍白比較）與排版",
+ "intro": "橫式封面已定案。直式請比較 Logo 圖示用白色還是藍色。下面是你已接受的內頁排版。",
+ "cover_title": "四季光影＋兌心科技",
+ "scope": "只是比較，不代表接受直式封面，也不等於交印核准；螢幕上的顏色和印刷會有差異。",
+ "h_title": "橫式淺色｜版本 1",
+ "h_badge": "已接受",
+ "h_note": "已定案，不再修改。",
+ "v_title": "直式深色｜Logo 圖示比較",
+ "v_badge": "比較中",
+ "v_note": "兩張只差 Logo 左邊的圖示顏色，其他都一樣。下方是品牌區放大，可點開看。",
+ "a_title": "A｜白色圖示",
+ "b_title": "B｜藍色圖示",
+ "zoom_label": "品牌區放大",
+ "options": [
+  {"v": "A", "label": "選白色圖示"},
+  {"v": "B", "label": "選藍色圖示"},
+  {"v": "edit", "label": "都想修改"}
+ ],
+ "feedback_prefix": "cal2027-cover-r34-",
+ "note_label": "直式備註（例如想改哪裡）",
+ "pdf_label": {"H": "橫式完整預覽 PDF", "A": "白色圖示版 PDF", "B": "藍色圖示版 PDF"},
+ "history_label": "先前的封面紀錄（R33 修正版、R32 品牌版、R31 非人物候選、人物封面）",
+ "r33_label": "R33 直式修正版（白色圖示；當時待確認）",
+ "r26_cover_label": "R26 暫用封面（人物縮圖，未採用；封面請看上方）"
+}
