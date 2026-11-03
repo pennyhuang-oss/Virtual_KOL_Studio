@@ -159,3 +159,13 @@ details.hist > summary, details.r30 > summary { font-weight: 700; }
 .tsec.r32 .ccard .pdfl .btn.dl { min-height: 38px; font-size: .82rem; width: 100%; }
 details.r31h > summary { font-weight: 700; }
 #r32-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+
+/* M-5 R33：橫式已接受、直式修正版確認 */
+.badge.ok { background: #15803d; }
+.cgrid-H.one { grid-template-columns: minmax(0, 1fr); max-width: 620px; }
+.tsec.r33 .ccard.acc { border-color: #9fd3b0; }
+.tsec.r33 .ccard.prev { opacity: .9; }
+.tsec.r33 .chg { margin: 2px 0 8px; }
+.lnote { font-size: .88rem; background: #fff7e6; border: 1px solid #f0d49a; border-radius: 8px; padding: 8px 10px; margin: 6px 0 10px; }
+#r33-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
+details.r32h > summary { font-weight: 700; }

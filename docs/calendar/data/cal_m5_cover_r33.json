@@ -1,0 +1,218 @@
+{
+ "round": "M-5 R33",
+ "note": "橫式 H-L1 Owner 已接受（沿用 R32，不改）；直式 V-D2 修正版一張（金色年份＋收斂光暈、Penny 提供的藍色圓底 Logo），待 Owner 確認。生成 0、付費 0、未購買素材；R32 檔案不覆蓋。",
+ "horizontal": {
+  "id": "H-L1",
+  "status": "accepted",
+  "preview": {
+   "view": "cover32/cover_H-L1_v.jpg",
+   "full": "cover32/cover_H-L1_f.jpg"
+  },
+  "note": "封面與 R32 H-L1 相同（PDF 第 1 頁直接取自 R32 H-L1 完整預覽 PDF）"
+ },
+ "vertical": {
+  "id": "V-D2-R33",
+  "base": "V-D2",
+  "status": "pending_owner",
+  "source": "V-D2-R33.svg",
+  "source_sha256": "1cf09e580fa48172441c3d87f486515e789ea34e591fe3324e9516461b2f6576",
+  "px": [
+   1701,
+   2410
+  ],
+  "checks": {
+   "year_ink_mm": [
+    35.5,
+    137.86,
+    108.27,
+    164.52
+   ],
+   "brand_box_mm": [
+    51.57,
+    173.0,
+    92.43,
+    195.0
+   ],
+   "year_in_safe": true,
+   "brand_in_safe": true,
+   "clear_gap_mm": 8.48,
+   "year_digit_height_mm": 26.66,
+   "logo_diameter_mm": 22.0,
+   "logo_wordmark_cap_height_mm": 1.65,
+   "logo_effective_ppi": 924,
+   "cjk_glyph_height_mm": 3.28,
+   "year_center_x_mm": 71.89,
+   "brand_center_x_mm": 72.0
+  },
+  "palette": {
+   "year_gold_gradient": [
+    [
+     0.0,
+     "#F7EBCB"
+    ],
+    [
+     0.34,
+     "#EDD49E"
+    ],
+    [
+     0.7,
+     "#DFBB78"
+    ],
+    [
+     1.0,
+     "#CDA764"
+    ]
+   ],
+   "year_glow": {
+    "color": "#E6C27F",
+    "layers": [
+     {
+      "blur_mm": 2.0,
+      "opacity": 0.42
+     },
+     {
+      "blur_mm": 0.6,
+      "opacity": 0.24
+     }
+    ]
+   },
+   "cjk": "#EDE4CF"
+  },
+  "background": "與 R32 V-D2 相同（build_cal_m5_cover_r32.dark_art）"
+ },
+ "logo": {
+  "wanted": "Owner 指定：藍色圓底、白色圖示與白色 Insight Software 字樣的完整 Logo（Penny 提供的那款）",
+  "found": true,
+  "source": "Penny 在 R33 進行中直接提供（2026-11-03，訊息原文「這個logo也給你做參考」）；原檔原樣保存，未重畫、未改色、未加圓",
+  "file": "brand/insight-software-logo-circle.png",
+  "sha256": "859e51e7ddf0e9a4c7cccc0a725d5e5ae9a134c15110b0fcdbdbdc8056665416",
+  "format": "800×800 PNG（RGBA）；圓外透明；藍色 #2B33F2（與官網 Logo 圖示同色）",
+  "verified": "和官方 YouTube、Facebook 頭像（同一款排法、白底藍圖示黑字）逐像素比對：圖示與字樣重疊率約 98%（差異只在邊緣反鋸齒）；和官網長條 logo01.svg 的比例不同（圓形款的圖示與兩行字距另有排法），所以不能用長條 Logo 加藍圓代替"
+ },
+ "fonts": [
+  {
+   "key": "year",
+   "file": "CormorantGaramond-Light-LF.ttf",
+   "family": "Cormorant Garamond Light",
+   "license": "OFL-CormorantGaramond.txt"
+  },
+  {
+   "key": "cjk",
+   "file": "NotoSansTC-Medium-subset.ttf",
+   "family": "Noto Sans TC Medium",
+   "license": "OFL-NotoSansTC.txt"
+  }
+ ],
+ "format": {
+  "zh": "直式",
+  "W": 144,
+  "H": 204,
+  "trim": 2,
+  "coil": 12,
+  "safe": [
+   5,
+   12,
+   139,
+   199
+  ],
+  "text_margin_mm": 3.0
+ },
+ "pdf": {
+  "H": {
+   "path": "cal2027_H_preview_R33.pdf",
+   "cover": "H-L1",
+   "pages": 28,
+   "media_mm": [
+    204.0,
+    155.0
+   ],
+   "trim_mm": [
+    2.0,
+    2.0,
+    202.0,
+    153.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 1.2,
+   "interior_from": "cal2027_H_layout_preview_R26.pdf",
+   "interior_pages_same_as_r26": true,
+   "bytes": 11347316
+  },
+  "V": {
+   "path": "cal2027_V_preview_R33.pdf",
+   "cover": "V-D2-R33",
+   "pages": 32,
+   "media_mm": [
+    144.0,
+    204.0
+   ],
+   "trim_mm": [
+    2.0,
+    2.0,
+    142.0,
+    202.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 1.15,
+   "interior_from": "cal2027_V_layout_preview_R26.pdf",
+   "interior_pages_same_as_r26": true,
+   "bytes": 13653076
+  }
+ },
+ "files": [
+  {
+   "path": "cal2027_H_preview_R33.pdf",
+   "sha256": "6a4c1a6e035120a04353d31f4b5c476b25d5cba45446f6a21da0693787d72cc7",
+   "bytes": 11347316
+  },
+  {
+   "path": "cal2027_V_preview_R33.pdf",
+   "sha256": "614c0f13d9ec99e837bcfd95d984ff206a6cd52b041799e23d5c0abda722f681",
+   "bytes": 13653076
+  },
+  {
+   "path": "cover_V-D2-R33_f.jpg",
+   "sha256": "39899f1795b586a3954342d198cc7c9b5fdf754fe97c48e0ed5a84269d2e017f",
+   "bytes": 361097,
+   "px": [
+    1701,
+    2410
+   ]
+  },
+  {
+   "path": "cover_V-D2-R33_v.jpg",
+   "sha256": "9a8aaa8188d6ec74e7540939ed9da7274bbc49242b64493a1c9b59ed513727cc",
+   "bytes": 87079,
+   "px": [
+    850,
+    1205
+   ]
+  }
+ ]
+}
