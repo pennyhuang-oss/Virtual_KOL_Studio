@@ -1,0 +1,46 @@
+{
+ "note": "M-5 R33 部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "32302806a0f847bb27cbb7c19f73089da88fd9cf",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "commit": "ac55e5c980c17576858fbd8782ac05e6a7b6bfe5",
+   "triggered_utc": "2026-11-03T06:21:04Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-11-03T06:27:39Z",
+   "note": "藍色圓底 Logo（直徑 22 mm）版；上線後 Owner 認為不協調，已由第 2 次取代"
+  },
+  {
+   "id_note": "第 2 次",
+   "commit": "32302806a0f847bb27cbb7c19f73089da88fd9cf",
+   "triggered_utc": "2026-11-03T06:36:05Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-11-03T06:45:50Z",
+   "note": "依 Owner 決定：直式維持 R32 白色 Logo，只把 2027 改成金色"
+  }
+ ],
+ "live_page_commit": "32302806a0f847bb27cbb7c19f73089da88fd9cf",
+ "feedback_key": "cal2027-cover-r33-5faa09",
+ "pdf_urls": {
+  "H": "https://cal2027-decision-production.up.railway.app/cover33/cal2027_H_preview_R33.pdf",
+  "V": "https://cal2027-decision-production.up.railway.app/cover33/cal2027_V_preview_R33.pdf"
+ },
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 72 項、定案相簿回歸 18 項；cover33 4、cover32 12、cover31 10、cover30 14、cover29 10、cover28 9、cover 16、layout 158 檔 sha256 全符）",
+  "items": [
+   "#cover 最上方：橫式 H-L1 標「已接受」、不再要求選擇；直式修正版標「待確認」，旁邊放 R32 前一版比較；主要區沒有 prompt、技術字或費用",
+   "三張圖都可放大到原尺寸（橫式 2410 px、直式 1701 px＝300 dpi）；參考線在三張都畫出線圈區、裁切線、安全區",
+   "直式兩個選項（接受本輪修正版／還要修改）＋備註；預設未選，不沿用 R32 的選擇；新鍵 cal2027-cover-r33-5faa09 綁修正版圖片",
+   "「複製封面回饋」含頁面版本（3230280…）、圖片版本 5faa09、候選識別（H-L1、V-D2-R33）、選擇與備註；剪貼簿內容與文字框相同",
+   "兩份完整預覽 PDF 可下載（attachment）、位元組與紀錄相同：橫式 28 面（封面 H-L1）、直式 32 面（封面 V-D2-R33）",
+   "選擇與備註重新整理後保留（桌機與手機）；只寫新鍵與 R26 排版鍵，R27–R32 封面鍵、選片等舊鍵原樣保留",
+   "R32（當時的選擇只讀）、R31（只讀）與人物封面收在「先前的封面紀錄」並預設收合",
+   "內頁：排版已接受、R26 PDF、28／32 面、照片框比較、參考線、放大全部如前；24 套定案相簿回歸 18 項全過",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動、手機可點選、放大與複製"
+  ],
+  "public_files": "線上逐檔 sha256 相同、圖片無 EXIF／ICC／註解、無私有 ID（對照 130 個私有識別碼）；cover-data.js、layout.js、layout.css、layout-data.js 與 repo 相同；healthz ok"
+ }
+}
