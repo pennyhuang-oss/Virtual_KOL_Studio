@@ -1,0 +1,38 @@
+{
+ "note": "M-5 R35 部署紀錄（只更新既有 cal2027-decision 服務；其他 Railway 服務未動、未新增付費服務、未改存取設定）",
+ "service": "cal2027-decision",
+ "url": "https://cal2027-decision-production.up.railway.app/layout.html#cover",
+ "commit": "6add91528468166a3cf0b75984e49b9faa53d2d6",
+ "deploys": [
+  {
+   "id_note": "第 1 次",
+   "commit": "6add91528468166a3cf0b75984e49b9faa53d2d6",
+   "triggered_utc": "2026-11-03T10:03:26Z",
+   "status": "SUCCESS",
+   "finished_utc": "2026-11-03T10:10:52Z"
+  }
+ ],
+ "live_page_commit": "6add91528468166a3cf0b75984e49b9faa53d2d6",
+ "feedback_key": "cal2027-cover-r35-f319e4",
+ "pdf_urls": {
+  "V_accepted": "https://cal2027-decision-production.up.railway.app/cover35/cal2027_V_preview_R35.pdf",
+  "H_glow": "https://cal2027-decision-production.up.railway.app/cover35/cal2027_H_preview_R35.pdf",
+  "H_orig": "https://cal2027-decision-production.up.railway.app/cover33/cal2027_H_preview_R33.pdf"
+ },
+ "live_checks": {
+  "tool": "Playwright（桌機 1280×900、手機 390×844）＋逐檔下載核對",
+  "result": "全數通過（封面＋排版頁 79 項、定案相簿回歸 18 項；cover35 6、cover34 5、cover33 4、cover32 12、cover31 10、cover30 14、cover29 10、cover28 9、cover 16、layout 158 檔 sha256 全符）",
+  "items": [
+   "#cover 最上方：直式 V-D2-R34B（藍色圖示）標「已接受」、可放大與開 PDF、不需選擇",
+   "橫式原版／光暈修正版並排，標「待確認」；全圖可放大到 2410 px（300 dpi），年份局部（600 dpi）可點開；參考線三張封面都畫出",
+   "三個選項（接受光暈修正版／維持原版／還要修改）＋備註；預設未選，不沿用舊選擇；新鍵 cal2027-cover-r35-f319e4 綁修正版圖片",
+   "「複製封面回饋」含頁面版本（6add915…）、圖片版本 f319e4、版本識別（V-D2-R34B、H-L1-R35G／H-L1）、選擇與備註；剪貼簿與文字框相同",
+   "直式 32 面（封面 V-D2-R34B）、橫式修正版 28 面、橫式原版 28 面三份 PDF 可下載（attachment），位元組與紀錄相同",
+   "選擇與備註重新整理後保留（桌機與手機）；只寫新鍵與 R26 排版鍵，R27–R34 封面鍵、選片等舊鍵原樣保留",
+   "R34、R33、R32、R31 與人物封面收在「先前的封面紀錄」並預設收合，當時回饋只讀",
+   "內頁、R26 PDF、照片框比較、參考線、放大如前；24 套定案相簿回歸 18 項全過",
+   "桌機與手機無 JS 錯誤、手機無橫向捲動、手機可點選、放大年份與直式、複製"
+  ],
+  "public_files": "線上逐檔 sha256 相同（第一次逐檔下載時連線中斷一次，重跑後全部相同）、圖片無 EXIF／ICC／註解、無私有 ID（對照 130 個私有識別碼）；cover-data.js、layout.js、layout.css、layout-data.js 與 repo 相同；healthz ok"
+ }
+}
