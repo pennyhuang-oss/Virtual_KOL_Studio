@@ -8798,6 +8798,28 @@ window.CAL_DATA = {
    "source": "docs/calendar/cover_r36/",
    "status_line": "M-5 R36：Owner 要求橫式年份「像直式那種有光線的字」。加強版 H-L1-R36L：字形內部上緣亮藍、往下漸深到原本深藍的受光漸層，加上上強下弱的淡藍外光；其餘與已接受 H-L1 相同；與 R35 並排比較，待 Penny 確認。橫式 28 面完整預覽 PDF。直式 V-D2-R34B 已定案不動。生成 0、付費 0；封面接受不等於交印核准。"
   },
+  "m5r37": {
+   "changes": [
+    {
+     "kind": "事實同步",
+     "new": "r37_both_accepted_final_preview",
+     "old": "r36_v_accepted_h_lit_pending",
+     "where": "status.production.cover"
+    },
+    {
+     "kind": "事實同步",
+     "new": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31～R36 非人物封面迭代；M-5 R37 起 r37_both_accepted_final_preview＝雙款封面 Owner 已接受（定案）：橫式 H-L1-R36L（年份光感加強版）、直式 V-D2-R34B（金色年份、藍色圖示）；定案預覽 PDF 與印前檢查完成（CAL_29）；廠商規格、打樣與交印核准仍待確認；封面接受不等於交印核准",
+     "old": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 直式修正版；M-5 R34 直式 Logo 藍白比較；M-5 R35 直式 V-D2-R34B 定案、橫式年份輕光暈；M-5 R36 起 r36_v_accepted_h_lit_pending＝直式 V-D2-R34B 已接受（定案）；橫式 H-L1 年份光感加強版 H-L1-R36L（字內受光漸層＋淡藍外光）已放上網站與 R35 比較，等 Penny 確認；封面接受不等於交印核准",
+     "where": "status.production.definitions.cover"
+    }
+   ],
+   "final": "docs/calendar/data/cal_m5_final_r37.json",
+   "from_commit": "6e8940c80ea36ea0609a8dd30c6c90100b7a1efd",
+   "owner": "docs/calendar/data/cal_m5_owner_r37.json",
+   "page": "docs/calendar/data/cal_cover_r37_page.json",
+   "preflight": "docs/calendar/CAL_29_M5_R37_FINAL_PREFLIGHT.generated.md",
+   "status_line": "M-5 R37：Owner 接受橫式加強版 H-L1-R36L，直式 V-D2-R34B 已接受——雙款封面定案。以已驗證預覽 PDF 逐頁原樣產生「定案預覽」（橫式 28 面、直式 32 面），完成可做的印前檢查（尺寸、出血、頁序、內頁一致、字型嵌入、照片解析度與色彩）；線圈／打孔、正背面、解析度門檻、CMYK／ICC、交件規格與打樣待廠商確認。不是交印檔，交印待 Penny 另行核准。生成 0、付費 0。"
+  },
   "meta": {
    "aaliya_sources": {
     "catalog_branch": "claude/kol-dashboard-catalog-gqw9jz",
@@ -9585,7 +9607,7 @@ window.CAL_DATA = {
    },
    "summary": "R7：23 套已接受（R4 的 8 套＋R6 的 14 套＋R7 的 H-jia-seo），拍攝內容與 prompt 不變；H-luna-tanaka 依 Penny 指定只把手部改為雙手輕捧日式小香袋，其他攝影欄位不變，中文與英文 prompt 由同一份設定產生並檢查。M-4 R1 主管結論：M-3 完成；H-Luna 依 owner 指示修訂、主管覆核通過（Penny 沒有看過修訂後的版本）。"
   },
-  "plan_blob": "3962900e303d83250647589d3eef8cdaeb39666f",
+  "plan_blob": "b5d8f76e9853d6939a8bdeeb2ab99860c19e9cba",
   "plan_file": "docs/calendar/data/cal_m3_shoot_plan.json",
   "printing": {
    "accepted_impact": {
@@ -14940,7 +14962,7 @@ window.CAL_DATA = {
      "V-yuna-kim": "V-yuna-kim-R21-A"
     },
     "batch1": "owner-rejected-r6",
-    "cover": "r36_v_accepted_h_lit_pending",
+    "cover": "r37_both_accepted_final_preview",
     "cover_credits_log": {
      "M-5 R27": 16,
      "M-5 R28": 2
@@ -14960,7 +14982,7 @@ window.CAL_DATA = {
     "definitions": {
      "accepted": "已生成且 Penny 已定案（V-iris-chen、V-tammy-chou R14、V-rin-ayase R14；M-4 R21 起另含 R20 選片頁選定的 7 套；M-4 R22 起另含 R21 選片頁定案的 8 套，定案版本見 accepted_versions，其中 H-Coco、V-Luna 定案的是調色衍生版；M-4 R23 起另含 R22 選片頁定案的 4 套，其中 H-Luna、V-Miu 定案的是 R22 本機修正版；M-4 R24 起另含 H-Somi，定案的是 R23 本機調色版；M-4 R25 起另含 V-Rainie R24-A，24 套全部定案，唯一定案清單見 final_list）",
      "accepted_versions": "M-4 R22 起定案的套別與定案圖片識別；來源接受與衍生修改版接受分開記錄",
-     "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31 非人物候選中 Owner 選 A 四季光影；M-5 R32 品牌版中 Owner 接受橫式 H-L1、直式選 V-D2 編排；M-5 R33 直式修正版；M-5 R34 直式 Logo 藍白比較；M-5 R35 直式 V-D2-R34B 定案、橫式年份輕光暈；M-5 R36 起 r36_v_accepted_h_lit_pending＝直式 V-D2-R34B 已接受（定案）；橫式 H-L1 年份光感加強版 H-L1-R36L（字內受光漸層＋淡藍外光）已放上網站與 R35 比較，等 Penny 確認；封面接受不等於交印核准",
+     "cover": "封面狀態；M-5 R28–R30 人物封面 Owner 未接受；M-5 R31～R36 非人物封面迭代；M-5 R37 起 r37_both_accepted_final_preview＝雙款封面 Owner 已接受（定案）：橫式 H-L1-R36L（年份光感加強版）、直式 V-D2-R34B（金色年份、藍色圖示）；定案預覽 PDF 與印前檢查完成（CAL_29）；廠商規格、打樣與交印核准仍待確認；封面接受不等於交印核准",
      "cover_credits_log": "封面實扣 credits（每輪；上傳 0）：R27 生成 16、R28 單人身分編輯 2",
      "cover_edit_log": "封面局部身分編輯次數（每輪）；與封面生成張數 cover_generated_log、月面照片 generated_cumulative 分開計算，不相加",
      "cover_file": "封面候選排版資料（版面、標題位置與檢查、檔案 hash）",

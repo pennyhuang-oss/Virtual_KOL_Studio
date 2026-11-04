@@ -1,0 +1,627 @@
+{
+ "round": "M-5 R37",
+ "note": "雙款封面定案：橫式 H-L1-R36L、直式 V-D2-R34B（Owner 已接受）。定案預覽 PDF 為已驗證預覽 PDF 的逐頁原樣複製（只換文件標題）。不是交印檔；交印仍待 Penny 另行核准。不改設計、不重生。",
+ "books": {
+  "H": {
+   "cover": "H-L1-R36L",
+   "cover_desc": "橫式淺色 版本 1，年份光感加強版（R36）",
+   "status": "owner_accepted",
+   "preview": {
+    "view": "cover36/cover_H-L1-R36L_v.jpg",
+    "full": "cover36/cover_H-L1-R36L_f.jpg"
+   },
+   "source": {
+    "file": "cover36/cal2027_H_preview_R36.pdf",
+    "sha256": "e672b8fe6fe7c08e87a5ca94d72ab3742fde6760d91840b739886c4eb8cfa36e",
+    "bytes": 11361611,
+    "commit": "f1b2947bacc95f96803df80c86fcf7a43a32404b"
+   },
+   "final_preview": {
+    "file": "cover37/cal2027_H_final_preview.pdf",
+    "sha256": "23b32c22c106119b4439a0da55d523bb8b275dbfe4e44bdad002a6115ba146d1",
+    "bytes": 11362017,
+    "pages_identical_to_source": true,
+    "metadata_title": "2027 桌曆 橫式 定案預覽（封面 H-L1-R36L，Owner 已接受）"
+   },
+   "checks": {
+    "pages": 28,
+    "pages_expected": 28,
+    "pages_ok": true,
+    "canvas_mm": [
+     204,
+     155
+    ],
+    "trim_mm": [
+     200,
+     151
+    ],
+    "bleed_mm_each_side": 2,
+    "media_ok": true,
+    "trim_ok": true,
+    "bleed_ok": true,
+    "rotation": [
+     0
+    ],
+    "cover_page_is_accepted_version": true,
+    "interior_same_as_r26_accepted": true,
+    "page_order": [
+     {
+      "face": 1,
+      "role": "cover",
+      "month": null
+     },
+     {
+      "face": 2,
+      "role": "photo",
+      "month": 1
+     },
+     {
+      "face": 3,
+      "role": "grid",
+      "month": 1
+     },
+     {
+      "face": 4,
+      "role": "photo",
+      "month": 2
+     },
+     {
+      "face": 5,
+      "role": "grid",
+      "month": 2
+     },
+     {
+      "face": 6,
+      "role": "photo",
+      "month": 3
+     },
+     {
+      "face": 7,
+      "role": "grid",
+      "month": 3
+     },
+     {
+      "face": 8,
+      "role": "photo",
+      "month": 4
+     },
+     {
+      "face": 9,
+      "role": "grid",
+      "month": 4
+     },
+     {
+      "face": 10,
+      "role": "photo",
+      "month": 5
+     },
+     {
+      "face": 11,
+      "role": "grid",
+      "month": 5
+     },
+     {
+      "face": 12,
+      "role": "photo",
+      "month": 6
+     },
+     {
+      "face": 13,
+      "role": "grid",
+      "month": 6
+     },
+     {
+      "face": 14,
+      "role": "photo",
+      "month": 7
+     },
+     {
+      "face": 15,
+      "role": "grid",
+      "month": 7
+     },
+     {
+      "face": 16,
+      "role": "photo",
+      "month": 8
+     },
+     {
+      "face": 17,
+      "role": "grid",
+      "month": 8
+     },
+     {
+      "face": 18,
+      "role": "photo",
+      "month": 9
+     },
+     {
+      "face": 19,
+      "role": "grid",
+      "month": 9
+     },
+     {
+      "face": 20,
+      "role": "photo",
+      "month": 10
+     },
+     {
+      "face": 21,
+      "role": "grid",
+      "month": 10
+     },
+     {
+      "face": 22,
+      "role": "photo",
+      "month": 11
+     },
+     {
+      "face": 23,
+      "role": "grid",
+      "month": 11
+     },
+     {
+      "face": 24,
+      "role": "photo",
+      "month": 12
+     },
+     {
+      "face": 25,
+      "role": "grid",
+      "month": 12
+     },
+     {
+      "face": 26,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 27,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 28,
+      "role": "barcode",
+      "month": null
+     }
+    ],
+    "fonts": [
+     {
+      "name": "CormorantGaramond-Light",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "NotoSansTC-Medium",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "DejaVuSans-Bold",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "DejaVuSans",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "WenQuanYiZenHei-0",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     }
+    ],
+    "fonts_all_embedded_subset": true,
+    "images": {
+     "count": 13,
+     "colors": [
+      "rgb"
+     ],
+     "encodings": [
+      "jpeg"
+     ],
+     "smask": 0,
+     "cover_art_ppi": [
+      300
+     ],
+     "photo_pages": 12,
+     "photo_ppi_min": 271,
+     "photo_ppi_max": 271
+    },
+    "photo_frame_mm": [
+     192,
+     108
+    ],
+    "photo_eff_ppi_from_r26": [
+     270.9,
+     270.9
+    ],
+    "photo_resampled_up": false,
+    "transparency": {
+     "1": [
+      0.55
+     ]
+    },
+    "output_intents": false,
+    "pdf_version": "PDF-1.4",
+    "cover_text_safe": {
+     "year_in_safe": true,
+     "brand_in_safe": true,
+     "note": "年份與品牌區位置與 R32 相同；字形外框在文字安全區內再留 3 mm、避開上緣 12 mm 線圈假設區"
+    },
+    "text_safe_mm": [
+     4,
+     12,
+     200,
+     151
+    ],
+    "vendor_safe_mm": [
+     4,
+     12,
+     200,
+     151
+    ],
+    "coil_assumed_mm": 12,
+    "coil_measured_mm": 8.9
+   }
+  },
+  "V": {
+   "cover": "V-D2-R34B",
+   "cover_desc": "直式深色 版本 2，金色年份、藍色圖示（R34 B）",
+   "status": "owner_accepted",
+   "preview": {
+    "view": "cover34/cover_V-D2-R34B_v.jpg",
+    "full": "cover34/cover_V-D2-R34B_f.jpg"
+   },
+   "source": {
+    "file": "cover35/cal2027_V_preview_R35.pdf",
+    "sha256": "73776b11adf8b3a29b96abbb461f761beba28353c097fb2b0f7ead7821c7101b",
+    "bytes": 13638822,
+    "commit": "6add91528468166a3cf0b75984e49b9faa53d2d6"
+   },
+   "final_preview": {
+    "file": "cover37/cal2027_V_final_preview.pdf",
+    "sha256": "21f1b4faf1ed049d2820c09fb47baa399749106730ea71e2ff180e0b685271d6",
+    "bytes": 13639301,
+    "pages_identical_to_source": true,
+    "metadata_title": "2027 桌曆 直式 定案預覽（封面 V-D2-R34B，Owner 已接受）"
+   },
+   "checks": {
+    "pages": 32,
+    "pages_expected": 32,
+    "pages_ok": true,
+    "canvas_mm": [
+     144,
+     204
+    ],
+    "trim_mm": [
+     140,
+     200
+    ],
+    "bleed_mm_each_side": 2,
+    "media_ok": true,
+    "trim_ok": true,
+    "bleed_ok": true,
+    "rotation": [
+     0
+    ],
+    "cover_page_is_accepted_version": true,
+    "interior_same_as_r26_accepted": true,
+    "page_order": [
+     {
+      "face": 1,
+      "role": "cover",
+      "month": null
+     },
+     {
+      "face": 2,
+      "role": "photo",
+      "month": 1
+     },
+     {
+      "face": 3,
+      "role": "grid",
+      "month": 1
+     },
+     {
+      "face": 4,
+      "role": "photo",
+      "month": 2
+     },
+     {
+      "face": 5,
+      "role": "grid",
+      "month": 2
+     },
+     {
+      "face": 6,
+      "role": "photo",
+      "month": 3
+     },
+     {
+      "face": 7,
+      "role": "grid",
+      "month": 3
+     },
+     {
+      "face": 8,
+      "role": "photo",
+      "month": 4
+     },
+     {
+      "face": 9,
+      "role": "grid",
+      "month": 4
+     },
+     {
+      "face": 10,
+      "role": "photo",
+      "month": 5
+     },
+     {
+      "face": 11,
+      "role": "grid",
+      "month": 5
+     },
+     {
+      "face": 12,
+      "role": "photo",
+      "month": 6
+     },
+     {
+      "face": 13,
+      "role": "grid",
+      "month": 6
+     },
+     {
+      "face": 14,
+      "role": "photo",
+      "month": 7
+     },
+     {
+      "face": 15,
+      "role": "grid",
+      "month": 7
+     },
+     {
+      "face": 16,
+      "role": "photo",
+      "month": 8
+     },
+     {
+      "face": 17,
+      "role": "grid",
+      "month": 8
+     },
+     {
+      "face": 18,
+      "role": "photo",
+      "month": 9
+     },
+     {
+      "face": 19,
+      "role": "grid",
+      "month": 9
+     },
+     {
+      "face": 20,
+      "role": "photo",
+      "month": 10
+     },
+     {
+      "face": 21,
+      "role": "grid",
+      "month": 10
+     },
+     {
+      "face": 22,
+      "role": "photo",
+      "month": 11
+     },
+     {
+      "face": 23,
+      "role": "grid",
+      "month": 11
+     },
+     {
+      "face": 24,
+      "role": "photo",
+      "month": 12
+     },
+     {
+      "face": 25,
+      "role": "grid",
+      "month": 12
+     },
+     {
+      "face": 26,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 27,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 28,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 29,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 30,
+      "role": "memo",
+      "month": null
+     },
+     {
+      "face": 31,
+      "role": "year",
+      "month": null
+     },
+     {
+      "face": 32,
+      "role": "barcode",
+      "month": null
+     }
+    ],
+    "fonts": [
+     {
+      "name": "CormorantGaramond-Light",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "NotoSansTC-Medium",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "DejaVuSans-Bold",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "DejaVuSans",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     },
+     {
+      "name": "WenQuanYiZenHei-0",
+      "subset": true,
+      "emb": "yes",
+      "sub": "yes"
+     }
+    ],
+    "fonts_all_embedded_subset": true,
+    "images": {
+     "count": 13,
+     "colors": [
+      "rgb"
+     ],
+     "encodings": [
+      "jpeg"
+     ],
+     "smask": 0,
+     "cover_art_ppi": [
+      300
+     ],
+     "photo_pages": 12,
+     "photo_ppi_min": 325,
+     "photo_ppi_max": 366
+    },
+    "photo_frame_mm": [
+     120,
+     160
+    ],
+    "photo_eff_ppi_from_r26": [
+     325.1,
+     365.8
+    ],
+    "photo_resampled_up": false,
+    "transparency": {
+     "1": [
+      0.55
+     ]
+    },
+    "output_intents": false,
+    "pdf_version": "PDF-1.4",
+    "cover_text_safe": {
+     "year_in_safe": true,
+     "brand_in_safe": true,
+     "note": "年份與品牌區位置與 R32 相同；字形外框在文字安全區內再留 3 mm、避開上緣 12 mm 線圈假設區"
+    },
+    "text_safe_mm": [
+     5,
+     12,
+     139,
+     199
+    ],
+    "vendor_safe_mm": [
+     2,
+     2,
+     142,
+     202
+    ],
+    "coil_assumed_mm": 12,
+    "coil_measured_mm": 9.7
+   }
+  }
+ },
+ "vendor_pending": [
+  {
+   "item": "線圈／打孔",
+   "detail": "線圈實際寬度、打孔位置與裝訂區沒有書面規格；本案以畫布上緣 12 mm 為線圈假設區（編輯器示意量得橫式 8.9、直式 9.7 mm），需廠商確認"
+  },
+  {
+   "item": "正背面與旋轉",
+   "detail": "編輯器面號與實體紙張正反面的對應、背面是否自動旋轉 180° 未知；本 PDF 單面正向逐面排列，未旋轉任何面"
+  },
+  {
+   "item": "解析度要求",
+   "detail": "編輯器只顯示「好／標準／差」三級、沒有公開數字門檻；橫式照片有效約 271 ppi、直式約 325–366 ppi，未放大；300 ppi 是本案工作目標，不是廠商門檻"
+  },
+  {
+   "item": "RGB／CMYK 與 ICC",
+   "detail": "成品以 CMYK 四色印刷；本 PDF 圖片為 DeviceRGB、沒有嵌入 ICC 描述檔、沒有輸出意圖；由誰轉 CMYK、用哪個描述檔需廠商確認"
+  },
+  {
+   "item": "交件規格",
+   "detail": "交件方式（編輯器逐面上傳或整份 PDF）、是否需要 PDF/X、裁切標記、單檔上限（說明頁 300MB／編輯器設定值 30）待廠商確認；本 PDF 為 PDF 1.4、無裁切標記"
+  },
+  {
+   "item": "透明",
+   "detail": "兩款封面的品牌區細分隔線用 55% 不透明度（PDF 透明度設定）；其餘為不透明圖片與向量；RIP 是否需要先平面化待廠商確認"
+  }
+ ],
+ "proof_focus": [
+  {
+   "book": "橫式",
+   "item": "淺色四季光影漸層（大面積淺色、細膩色階是否有斷層或偏色）"
+  },
+  {
+   "book": "橫式",
+   "item": "藍色年份光感（字內由亮藍到深藍的漸層、淡藍外光是否保留、筆畫是否清楚）"
+  },
+  {
+   "book": "直式",
+   "item": "深色暗部（近黑深藍的層次是否塌黑、有無色偏）"
+  },
+  {
+   "book": "直式",
+   "item": "金色年份（香檳金到暖金黃的漸層與輕微光暈；印刷金色是 CMYK 色，不是燙金）"
+  },
+  {
+   "book": "直式",
+   "item": "小尺寸藍色圖示（約 8.2×4.9 mm 的品牌藍圖示在深底上的辨識度）"
+  }
+ ],
+ "not_judged": "沒有實際打樣，不判定印刷效果通過；螢幕預覽不等於印刷效果",
+ "files": [
+  {
+   "path": "cal2027_H_final_preview.pdf",
+   "sha256": "23b32c22c106119b4439a0da55d523bb8b275dbfe4e44bdad002a6115ba146d1",
+   "bytes": 11362017
+  },
+  {
+   "path": "cal2027_V_final_preview.pdf",
+   "sha256": "21f1b4faf1ed049d2820c09fb47baa399749106730ea71e2ff180e0b685271d6",
+   "bytes": 13639301
+  }
+ ]
+}

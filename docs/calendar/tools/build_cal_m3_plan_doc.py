@@ -119,6 +119,7 @@ def render18(d):
          *([f"> **{d['m5r34']['status_line']}** Owner 指令見 `data/cal_m5_owner_r34.json`，比較紀錄與辨識度量測見 `data/cal_m5_r34_design.json`，比較版與預覽 PDF 紀錄見 `data/cal_m5_cover_r34.json`，可編輯來源在 `cover_r34/`。", ''] if 'm5r34' in d else []),
          *([f"> **{d['m5r35']['status_line']}** Owner 決定與指令見 `data/cal_m5_owner_r35.json`，修改紀錄與自查見 `data/cal_m5_r35_design.json`，修正版與預覽 PDF 紀錄見 `data/cal_m5_cover_r35.json`，可編輯來源在 `cover_r35/`。", ''] if 'm5r35' in d else []),
          *([f"> **{d['m5r36']['status_line']}** Owner 回饋與指令見 `data/cal_m5_owner_r36.json`，修改紀錄與量測見 `data/cal_m5_r36_design.json`，加強版與預覽 PDF 紀錄見 `data/cal_m5_cover_r36.json`，可編輯來源在 `cover_r36/`。", ''] if 'm5r36' in d else []),
+         *([f"> **{d['m5r37']['status_line']}** Owner 回饋與指令見 `data/cal_m5_owner_r37.json`，定案預覽與印前檢查見 `data/cal_m5_final_r37.json` 與 `CAL_29_M5_R37_FINAL_PREFLIGHT.generated.md`。", ''] if 'm5r37' in d else []),
          '## 0. 版本', '']
     L += table(['項目', '內容'], [['名單', f"{m['roster']}；不換人"], ['上一版企劃', f"{d['revision']['from_version']}（commit `{d['revision']['from_commit']}`）"],
                                   ['這一版', d['revision']['summary']], ['M-4 R2（歷史）', f"{d['m4r2']['summary']}（基準 commit `{d['m4r2']['from_commit']}`）"], ['M-4 R1（歷史）', f"{d['m4r1']['summary']}（基準 commit `{d['m4r1']['from_commit']}`）"], ['R7（歷史）', f"{d['r7']['summary']}（基準 commit `{d['r7']['from_commit']}`）"], ['R6（歷史）', f"{d['r6']['summary']}（基準 commit `{d['r6']['from_commit']}`）"],

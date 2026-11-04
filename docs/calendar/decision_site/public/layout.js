@@ -284,6 +284,21 @@
     return [`${C.task}／${C.round}｜封面選擇（頁面版本 ${PAGE_COMMIT || '本機預覽'}；圖片版本 ${G.img_ver}）`, '選擇只代表封面版本，不等於交印核准。',
       `${G.groups.H}：${lab('H')}`, `${G.groups.V}：${lab('V')}`, `${G.groups.H}備註：${n('H')}`, `${G.groups.V}備註：${n('V')}`, `整體備註：${n('general')}`].join('\n');
   }
+  function r37Section() {
+    const G = C.r37;
+    const card = (k, X, title) => `<article class="ccard acc" id="r37-${k}"><h4>${esc(title)} <em class="badge ok">${esc(G.badge)}</em></h4>` +
+      faceFig({ ...X.page, face: 'cover' }, k, title) +
+      `<p class="pdfl"><a class="btn dl" id="r37-pdf-${k}" href="${esc(X.pdf.href)}" download>${esc(G.pdf_label[k])}｜${X.pdf.pages} 面、${X.pdf.size_mb} MB</a></p></article>`;
+    return `<div class="tsec r31 r37" id="cover-r37"><h3>${esc(G.cover_title)}</h3><p class="note">${esc(G.scope)}</p>` +
+      `<div class="tools"><label class="gsw"><input type="checkbox" data-guides${guides ? ' checked' : ''}> 顯示參考線</label></div>${coverLegend()}` +
+      `<div class="cgrid r37grid">${card('H', G.h, G.h_title)}${card('V', G.v, G.v_title)}</div>` +
+      `<details class="more" id="r37-pending"><summary>${esc(G.pending_title)}</summary><ul class="chk">${G.pending.map(x => `<li>${esc(x)}</li>`).join('')}</ul></details></div>`;
+  }
+  function r36RO() {
+    const G = C.r36, o = G.options.find(x => x.v === q6.dec), id = { r36: G.r36.id, r35: G.r35.id }[q6.dec];
+    return `<div class="tsec" id="cover-r36ro"><p class="cverdict" id="r36-saved"><b>你在 R36 的回饋：</b>${esc(o ? o.label : '（未選）')}${id ? `（${esc(id)}）` : ''}｜備註：${esc((q6.notes.H || '').trim() || '（無）')}</p>` +
+      `<div class="tparts">${fig(G.r35.zoom, `R36 比較｜${G.r35_title}｜${G.zoom_label}`)}${fig(G.r36.zoom, `R36 比較｜${G.r36_title}｜${G.zoom_label}`)}</div></div>`;
+  }
   function r36Section() {
     const G = C.r36;
     const pdfl = (k, P) => `<p class="pdfl"><a class="btn dl" id="r36-pdf-${k}" href="${esc(P.href)}" download>${esc(G.pdf_label[k])}｜${P.pages} 面、${P.size_mb} MB</a></p>`;
@@ -448,6 +463,17 @@
   }
   function coverSection() {
     if (!C || !C.test) return '';
+    if (C.r37) {
+      return `<section class="sec" id="cover"><h2>封面</h2>` + r37Section() +
+        `<details class="more hist" id="cover-old"><summary>${esc(C.person_history.outer_label)}</summary>` +
+        `<details class="more r36h" id="cover-r36h"><summary>${esc(C.r36_history_label)}</summary>` + r36RO() + '</details>' +
+        `<details class="more r35h" id="cover-r35h"><summary>${esc(C.r35_history_label)}</summary>` + r35RO() + '</details>' +
+        `<details class="more r34h" id="cover-r34h"><summary>${esc(C.r34_history_label)}</summary>` + r34RO() + '</details>' +
+        `<details class="more r33h" id="cover-r33h"><summary>${esc(C.r33_history_label)}</summary>` + r33RO() + '</details>' +
+        `<details class="more r32h" id="cover-r32h"><summary>${esc(C.r32_history_label)}</summary>` + r32RO() + '</details>' +
+        `<details class="more r31h" id="cover-r31h"><summary>${esc(C.r31_history_label)}</summary>` + r31RO() + '</details>' +
+        personHist() + '</details></section>';
+    }
     if (C.r36) {
       return `<section class="sec" id="cover"><h2>封面</h2>` + r36Section() +
         `<details class="more hist" id="cover-old"><summary>${esc(C.person_history.outer_label)}</summary>` +

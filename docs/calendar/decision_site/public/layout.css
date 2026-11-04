@@ -196,3 +196,9 @@ details.r34h > summary { font-weight: 700; }
 #r36-text { display: block; width: 100%; font-size: .85rem; background: #fafafa; }
 details.r35h > summary { font-weight: 700; }
 @media (max-width: 760px) { .tsec.r36 .cgrid-H { grid-template-columns: minmax(0, 1fr); } }
+
+/* M-5 R37：雙款封面定案 */
+.r37grid { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); align-items: start; }
+@media (max-width: 760px) { .r37grid { grid-template-columns: minmax(0, 1fr); } }
+#r37-pending { margin-top: 10px; }
+details.r36h > summary { font-weight: 700; }

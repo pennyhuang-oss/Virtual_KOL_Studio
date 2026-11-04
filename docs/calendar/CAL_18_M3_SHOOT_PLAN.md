@@ -78,6 +78,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-5 R36：Owner 要求橫式年份「像直式那種有光線的字」。加強版 H-L1-R36L：字形內部上緣亮藍、往下漸深到原本深藍的受光漸層，加上上強下弱的淡藍外光；其餘與已接受 H-L1 相同；與 R35 並排比較，待 Penny 確認。橫式 28 面完整預覽 PDF。直式 V-D2-R34B 已定案不動。生成 0、付費 0；封面接受不等於交印核准。** Owner 回饋與指令見 `data/cal_m5_owner_r36.json`，修改紀錄與量測見 `data/cal_m5_r36_design.json`，加強版與預覽 PDF 紀錄見 `data/cal_m5_cover_r36.json`，可編輯來源在 `cover_r36/`。
 
+> **M-5 R37：Owner 接受橫式加強版 H-L1-R36L，直式 V-D2-R34B 已接受——雙款封面定案。以已驗證預覽 PDF 逐頁原樣產生「定案預覽」（橫式 28 面、直式 32 面），完成可做的印前檢查（尺寸、出血、頁序、內頁一致、字型嵌入、照片解析度與色彩）；線圈／打孔、正背面、解析度門檻、CMYK／ICC、交件規格與打樣待廠商確認。不是交印檔，交印待 Penny 另行核准。生成 0、付費 0。** Owner 回饋與指令見 `data/cal_m5_owner_r37.json`，定案預覽與印前檢查見 `data/cal_m5_final_r37.json` 與 `CAL_29_M5_R37_FINAL_PREFLIGHT.generated.md`。
+
 ## 0. 版本
 
 | 項目 | 內容 |
