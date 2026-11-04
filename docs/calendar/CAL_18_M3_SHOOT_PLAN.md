@@ -76,6 +76,8 @@ TASK-CAL-001／M-4／R6｜主管覆核 REVISE｜修正重審規則與構圖矛�
 
 > **M-5 R35：Owner 選定直式 B｜V-D2-R34B（「現在這樣就很好了，不用再改了」），直式封面正式接受、定案。橫式 H-L1 只替 2027 加細緻輕微的淡藍柔光（H-L1-R35G），其餘與已接受版相同，修正版待 Penny 確認。兩份完整預覽 PDF（橫式 28 面用修正版、直式 32 面用 V-D2-R34B）。生成 0、付費 0；兩款封面接受不等於交印核准。** Owner 決定與指令見 `data/cal_m5_owner_r35.json`，修改紀錄與自查見 `data/cal_m5_r35_design.json`，修正版與預覽 PDF 紀錄見 `data/cal_m5_cover_r35.json`，可編輯來源在 `cover_r35/`。
 
+> **M-5 R36：Owner 要求橫式年份「像直式那種有光線的字」。加強版 H-L1-R36L：字形內部上緣亮藍、往下漸深到原本深藍的受光漸層，加上上強下弱的淡藍外光；其餘與已接受 H-L1 相同；與 R35 並排比較，待 Penny 確認。橫式 28 面完整預覽 PDF。直式 V-D2-R34B 已定案不動。生成 0、付費 0；封面接受不等於交印核准。** Owner 回饋與指令見 `data/cal_m5_owner_r36.json`，修改紀錄與量測見 `data/cal_m5_r36_design.json`，加強版與預覽 PDF 紀錄見 `data/cal_m5_cover_r36.json`，可編輯來源在 `cover_r36/`。
+
 ## 0. 版本
 
 | 項目 | 內容 |

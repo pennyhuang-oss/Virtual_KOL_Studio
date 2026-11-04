@@ -1,0 +1,217 @@
+{
+ "round": "M-5 R36",
+ "note": "橫式 H-L1 年份光感加強版 H-L1-R36L（字內受光漸層＋上強下弱淡藍外光），待 Owner 確認；R35 保留供比較；直式 V-D2-R34B 已定案不動。生成 0、付費 0。",
+ "horizontal": {
+  "base": "H-L1",
+  "compare_with": "H-L1-R35G",
+  "id": "H-L1-R36L",
+  "status": "pending_owner",
+  "source": "H-L1-R36L.svg",
+  "source_sha256": "2d0575b6da33dde0ad03a30b287aafd97a463b776943a0d7fbf5644a7330f99d",
+  "px": [
+   2410,
+   1831
+  ],
+  "fill_gradient": [
+   {
+    "offset": 0.0,
+    "color": "#7A92F2"
+   },
+   {
+    "offset": 0.22,
+    "color": "#5770E0"
+   },
+   {
+    "offset": 0.5,
+    "color": "#30419F"
+   },
+   {
+    "offset": 0.75,
+    "color": "#1E2A78"
+   },
+   {
+    "offset": 1.0,
+    "color": "#1E2A78"
+   }
+  ],
+  "glow_fill": [
+   {
+    "offset": 0.0,
+    "color": "#8CA3F0",
+    "opacity": 1.0
+   },
+   {
+    "offset": 0.55,
+    "color": "#8CA3F0",
+    "opacity": 0.6
+   },
+   {
+    "offset": 1.0,
+    "color": "#8CA3F0",
+    "opacity": 0.25
+   }
+  ],
+  "glow_layers": [
+   {
+    "blur_mm": 3.4,
+    "paint": "#F5F8FF",
+    "opacity": 0.6
+   },
+   {
+    "blur_mm": 2.0,
+    "paint": "url(#yglowg)",
+    "opacity": 0.55
+   },
+   {
+    "blur_mm": 0.7,
+    "paint": "#6F88E4",
+    "opacity": 0.18
+   }
+  ],
+  "unchanged": "年份字型、大小、位置；背景、Logo、公司名稱、品牌區與其他元素",
+  "diff_vs_r35": {
+   "changed_px": 414024,
+   "changed_bbox_mm": [
+    97.6,
+    103.61,
+    193.17,
+    147.54
+   ],
+   "allowed_zone_mm": [
+    92.43,
+    98.87,
+    197.82,
+    151.6
+   ],
+   "changed_outside_zone_px": 0,
+   "max_channel_change": 122
+  },
+  "diff_vs_r32": {
+   "changed_px": 434556,
+   "changed_bbox_mm": [
+    97.6,
+    103.61,
+    193.17,
+    147.54
+   ],
+   "allowed_zone_mm": [
+    92.43,
+    98.87,
+    197.82,
+    151.6
+   ],
+   "changed_outside_zone_px": 0,
+   "max_channel_change": 122
+  },
+  "lit_at_cover_size": {
+   "view_px": [
+    1205,
+    916
+   ],
+   "year_ink_px": 11933,
+   "top_quarter_luma": 129.7,
+   "bottom_quarter_luma": 45.2,
+   "orig_top_quarter_luma": 45.3,
+   "orig_bottom_quarter_luma": 45.2,
+   "top_mean_color": "#677FE8",
+   "bottom_mean_color": "#1E2A78"
+  },
+  "lit_at_cover_size_r35": {
+   "view_px": [
+    1205,
+    916
+   ],
+   "year_ink_px": 11933,
+   "top_quarter_luma": 45.3,
+   "bottom_quarter_luma": 45.2,
+   "orig_top_quarter_luma": 45.3,
+   "orig_bottom_quarter_luma": 45.2,
+   "top_mean_color": "#1E2A78",
+   "bottom_mean_color": "#1E2A78"
+  },
+  "year_zoom": {
+   "r35": "cover35/year_H-L1-R35G_600dpi.jpg",
+   "r36": "year_H-L1-R36L_600dpi.jpg"
+  },
+  "year_zoom_mm": [
+   96.0,
+   104.0,
+   196.0,
+   146.0
+  ],
+  "year_zoom_px": [
+   2363,
+   992
+  ]
+ },
+ "vertical": {
+  "id": "V-D2-R34B",
+  "status": "accepted",
+  "note": "已定案，不動；完整預覽 PDF 沿用 cover35/cal2027_V_preview_R35.pdf"
+ },
+ "pdf": {
+  "H": {
+   "path": "cal2027_H_preview_R36.pdf",
+   "cover": "H-L1-R36L",
+   "pages": 28,
+   "trim_mm": [
+    2.0,
+    2.0,
+    202.0,
+    153.0
+   ],
+   "cover_fonts": [
+    {
+     "name": "CormorantGaramond-Light",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    },
+    {
+     "name": "NotoSansTC-Medium",
+     "subset_tag": true,
+     "emb": "yes",
+     "sub": "yes"
+    }
+   ],
+   "cover_vs_preview_mean_abs_diff": 0.96,
+   "year_vector_gradient": true,
+   "interior_pages_same_as_r26": true,
+   "bytes": 11361611
+  }
+ },
+ "files": [
+  {
+   "path": "cal2027_H_preview_R36.pdf",
+   "sha256": "e672b8fe6fe7c08e87a5ca94d72ab3742fde6760d91840b739886c4eb8cfa36e",
+   "bytes": 11361611
+  },
+  {
+   "path": "cover_H-L1-R36L_f.jpg",
+   "sha256": "b885d4557c1dd613aa22598e92763f1b1d773599a084b6af8329717f36ce71b7",
+   "bytes": 316981,
+   "px": [
+    2410,
+    1831
+   ]
+  },
+  {
+   "path": "cover_H-L1-R36L_v.jpg",
+   "sha256": "ade87194deddf88516b95d2dfc59de0f2aa7a97b4cb15afea5600c4cee95097d",
+   "bytes": 66589,
+   "px": [
+    1205,
+    916
+   ]
+  },
+  {
+   "path": "year_H-L1-R36L_600dpi.jpg",
+   "sha256": "d37111d11e9b58858352bcba16cc566e343dd95c39075a5b6f2aaa9128ceeb70",
+   "bytes": 245453,
+   "px": [
+    2363,
+    992
+   ]
+  }
+ ]
+}

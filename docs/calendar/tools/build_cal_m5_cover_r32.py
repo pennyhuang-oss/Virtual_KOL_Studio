@@ -319,7 +319,7 @@ class _RLPen:
         pass
 
 
-def cover_pdf(cid, art_jpg, path):
+def cover_pdf(cid, art_jpg, path, year_grad=None):
     """封面一頁：畫面＝300 dpi JPEG；年份、中文名稱、細線與 Logo 都是向量；字型以 TrueType 子集嵌入。"""
     from fontTools.svgLib.path import parse_path
     from reportlab import rl_config
@@ -347,6 +347,16 @@ def cover_pdf(cid, art_jpg, path):
         to = c.beginText(g['x'] * PT, (H - g['y']) * PT)
         to.setFont('R32-' + key, size * PT)
         to.setCharSpace(ls * PT)
+        if key == 'year' and year_grad:
+            # year_grad（R36 起）：年份字形當裁切路徑，畫上下線性漸層（向量）；預設 None＝單色（R32～R35 不變）
+            c.saveState()
+            to.setTextRenderMode(7)
+            to.textOut(s)
+            c.drawText(to)
+            gy0, gy1 = g['ink'][1], g['ink'][3]
+            c.linearGradient(0, (H - gy0) * PT, 0, (H - gy1) * PT, [HexColor(cc) for _, cc in year_grad], [o for o, _ in year_grad], extend=True)
+            c.restoreState()
+            continue
         to.setFillColor(HexColor(col))
         to.textOut(s)
         c.drawText(to)
