@@ -1,0 +1,72 @@
+{
+  "task": "TASK-CAL-001 / M-5 / R38 vendor editor audit",
+  "checked_at": "2026-11-06 (Asia/Taipei)",
+  "vendor": "永豐雲端印刷網 https://new.cloudw2p.com/",
+  "browser": "Penny's local Chrome via Claude in Chrome extension (logged-in session; no credentials read)",
+  "source_files": {
+    "H": {"file": "cal2027_H_final_preview.pdf", "sha256": "23b32c22c106119b4439a0da55d523bb8b275dbfe4e44bdad002a6115ba146d1", "pages": 28,
+          "MediaBox_mm": [204.0, 155.0], "BleedBox_mm": [0, 0, 204.0, 155.0], "TrimBox_mm": [2.0, 2.0, 202.0, 153.0], "CropBox": null, "ArtBox": null},
+    "V": {"file": "cal2027_V_final_preview.pdf", "sha256": "21f1b4faf1ed049d2820c09fb47baa399749106730ea71e2ff180e0b685271d6", "pages": 32,
+          "MediaBox_mm": [144.0, 204.0], "BleedBox_mm": [0, 0, 144.0, 204.0], "TrimBox_mm": [2.0, 2.0, 142.0, 202.0], "CropBox": null, "ArtBox": null}
+  },
+  "products": {
+    "H": {"name": "經典橫式桌曆(少量數位印)", "sku": "YFP-CA01", "url": "https://new.cloudw2p.com/classic-horizontal-calendar.html",
+          "size": "200x151mm", "pages": "14張/28頁 (only option)", "papers": {"一級卡250P": 250, "原儷薄卡(象牙質感)230P": 260},
+          "binding": "黑底板/黑色線圈（黑雙環圈）", "moq": 1, "print": "數位印刷", "lead_time": "10個工作天出貨（頁面顯示預計 2026/11/20 出貨）",
+          "price_rule_observed": "qty 1/5/10/20/50/100 線性（無量價）", "finishing_options": "none offered"},
+    "V": {"name": "經典直式桌曆(少量數位印)", "sku": "YFP-CA08", "url": "https://new.cloudw2p.com/classicverticalcalendar.html",
+          "size": "140x200mm", "pages": "16張/32頁 (only option)", "papers": {"凝雪映畫紙240P": 270},
+          "binding": "黃褐色底板/黑色線圈（黑雙環圈）", "moq": 1, "print": "數位印刷", "lead_time": "10個工作天出貨（頁面顯示預計 2026/11/20 出貨）",
+          "price_rule_observed": "qty 1/2/5/10/50 線性", "finishing_options": "none offered"},
+    "not_matching": {"簡約直式桌曆(底板可印字) YFP-CA05": "140x200mm 但 13張/26頁，不符本案 32 面"}
+  },
+  "editor_geometry": {
+    "H": {"document_mm": [204.0, 155.0], "cut_line_mm_from_bleed_edge": 2.0, "trim_mm": [200.0, 151.0],
+          "safe_frame_bleed_coords_mm": {"x": [4.0, 200.0], "y": [12.0, 151.0]},
+          "safe_frame_from_trim_mm": {"top": 10.0, "left": 2.0, "right": 2.0, "bottom": 2.0},
+          "coil_overlay": {"keepinoutput": "false", "opaque_y_mm_from_bleed_top": [0.0, 8.8], "opaque_x_mm": [4.2, 198.1]}},
+    "V": {"document_mm": [144.0, 204.0], "cut_line_mm_from_bleed_edge": 2.0, "trim_mm": [140.0, 200.0],
+          "safe_frame": "safeMarginRect display:none, same as cut line (no separate safe frame shown)",
+          "coil_overlay": {"keepinoutput": "false", "opaque_y_mm_from_bleed_top": [0.0, 9.6]}},
+    "help_text": "出血、裁切與安全範圍為示意，實際範圍會因商品與印刷方式不同而有些許誤差（約1-2 mm）"
+  },
+  "content_vs_vendor_frames": {
+    "H": "p02–p28 內容 x 6.0–198.0、y 14.0–150.74（出血座標）全部在安全框內；p01 封面「2027」文字框底 153.2 超出安全框，但實際字形墨色底緣 140.46 mm，距安全框底 10.54 mm",
+    "V": "p01–p32 內容全部在裁切線內，上緣最小 14.66 mm（線圈示意 9.6 mm 之下），底緣最大 198.69 mm（距裁切 3.3 mm）"
+  },
+  "pdf_import": {
+    "behavior": "多頁 PDF 上傳後拆成每頁一張 RGB PNG（檔名 *.pdf-N.png），尺寸 = 出血尺寸 @300 ppi：H 2409x1831、V 1701x2409；文字不保留為向量",
+    "placement": "點縮圖即放入目前頁並自動滿版至出血（H 204.00x155.05 mm / V 144x204 mm）",
+    "gallery_order": "多批上傳時，後上傳的批次排在清單前面；批次內依頁序",
+    "gallery_persistence": "已上傳的圖片清單不跨編輯器工作階段保存；重開作品後清單為空、版權勾選需重勾",
+    "png_upload_600ppi_test": "H p03 600 ppi PNG（4819x3662）上傳後清單記錄原尺寸 4819x3662（未降採樣；未放入作品）",
+    "print_quality_indicator": "封面、H 照片面 p02 皆顯示「好」；說明視窗未提供數值門檻",
+    "color_vs_source": {
+      "H_p01": {"whole_mean_absdiff": 0.31, "light_gradient": 0.0, "year_glow": 1.19, "brand": 0.5, "region_avg_equal": true},
+      "V_p01": {"whole_mean_absdiff": 0.53, "gold_year": 0.57, "brand_icon": 0.39, "dark_top": 1.1, "region_avg_equal": true},
+      "note": "0–255 尺度；最大差值只在向量字邊緣反鋸齒。屬螢幕／檔案層級比對，不代表 CMYK 印刷結果"
+    }
+  },
+  "test_drafts": {
+    "CAL2027_R38_TEST_H": {"design_id": 26673, "product_id": 9722, "faces_filled": "1–27 依序（對應交印 PDF 第 1–27 頁）", "face_28": "空白（條碼頁）", "paper": "一級卡250P", "verified_after_reopen": true},
+    "CAL2027_R38_TEST_V": {"design_id": 26674, "product_id": 9723, "faces_filled": "1–31 依序", "face_32": "空白（條碼頁）", "paper": "凝雪映畫紙240P", "verified_after_reopen": true},
+    "location": "會員中心 > 我的設計（未加入購物袋、未下單）"
+  },
+  "save_behavior": {
+    "first_save_H": "第一次儲存時停在第 26 面（剛在第 28 面放入並刪除測試圖）→ 重開後第 26 面內容遺失，第 1–3 面正常",
+    "second_save_H": "先切回第 1 面再儲存（覆蓋同一作品）→ 重開逐面核對 27 面全部正確",
+    "V_save": "放完後切回第 1 面再儲存 → 重開逐面核對 31 面全部正確"
+  },
+  "barcode_page": {"official": "最後一頁為條碼頁，不可編輯（商品頁說明、編輯器提示窗）",
+                   "observed": "第 28 面顯示「本頁為條碼頁 不可編輯」覆蓋字，但實測仍可放入圖片（已刪除）"},
+  "vendor_preview_download": {"button": "眼睛圖示 > 下載預覽", "file": "preview.pdf（TCPDF 6.3.5）", "pages": 28, "page_mm": [204, 155],
+                              "content": "每頁 771x586 px（約 96 ppi）+ 永豐浮水印 + 線圈示意；所有框 = 204x155"},
+  "proofing": {"official_proof_service": "未找到（站內搜尋「打樣」只出現無關商品）",
+               "paper_samples": "只有名片／貼紙／DM 紙樣（運費 80 元），不含 一級卡250P、原儷薄卡230P、凝雪映畫紙240P",
+               "color_tolerance_official": "印刷成品色差 ±10% 內為合格；不同批次略有差異；色差不構成退換貨要件",
+               "rush": "不接受急件", "after_payment": "付款成功即進入製作，無法變更", "shipping": "僅宅配；全站滿千免運（未滿千運費金額頁面未列）"},
+  "built_in_templates": {"H_templates": 56, "V_templates": 39, "design_panel_items": 640, "design_panel_categories": 44,
+                         "calendar_related_items": 180,
+                         "date_design_format": "透明背景 PNG，2027 年 12 個月各一張（例 H 正面滿版 3213x2441 px），靜態圖、非自動月曆",
+                         "official_warning": "更換「設計版型」會取代所有設計且無法復原；「設計」可選「只新增設計」或「新增並取代現有設計」"}
+}
