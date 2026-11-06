@@ -1,0 +1,1688 @@
+{
+ "note": "程式產生（docs/calendar/tools/build_cal_m5_proof_r39.py），請勿手改。試印候選、尚未核准下單。",
+ "round": "M-5 R39",
+ "books": {
+  "H": {
+   "source": "docs/calendar/decision_site/public/cover37/cal2027_H_final_preview.pdf",
+   "source_sha256": "23b32c22c106119b4439a0da55d523bb8b275dbfe4e44bdad002a6115ba146d1",
+   "output": "docs/calendar/proof_r39/cal2027_H_R39_試印候選_尚未核准下單.pdf",
+   "output_sha256": "ff219212d2c1ed8199478fc6a537957211ff9553f7d8497abaf5b62b1a4f2b0a",
+   "pages": 27,
+   "vendor_faces": 28,
+   "vendor_last_face": "印廠條碼頁（不上傳、保持空白；產品仍為 28 面）",
+   "cover": "H-L1-R36L",
+   "cover_image_sha256": [
+    "6ae7ce09b1e68e16ca5eb6d2b75277673b56cd22ed7b0033fb378468ecaa072e"
+   ],
+   "page_size_mm": [
+    204.0,
+    155.0
+   ],
+   "trimbox_mm": [
+    2.0,
+    2.0,
+    202.0,
+    153.0
+   ],
+   "bleed_each_side_mm": 2.0,
+   "markers_removed": 26,
+   "removed": [
+    {
+     "face": 2,
+     "text": "版面預覽 R26｜非交印核准｜面 2／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 3,
+     "text": "版面預覽 R26｜非交印核准｜面 3／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 4,
+     "text": "版面預覽 R26｜非交印核准｜面 4／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 5,
+     "text": "版面預覽 R26｜非交印核准｜面 5／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 6,
+     "text": "版面預覽 R26｜非交印核准｜面 6／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 7,
+     "text": "版面預覽 R26｜非交印核准｜面 7／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 8,
+     "text": "版面預覽 R26｜非交印核准｜面 8／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 9,
+     "text": "版面預覽 R26｜非交印核准｜面 9／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      168.8,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 10,
+     "text": "版面預覽 R26｜非交印核准｜面 10／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 11,
+     "text": "版面預覽 R26｜非交印核准｜面 11／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 12,
+     "text": "版面預覽 R26｜非交印核准｜面 12／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 13,
+     "text": "版面預覽 R26｜非交印核准｜面 13／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 14,
+     "text": "版面預覽 R26｜非交印核准｜面 14／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 15,
+     "text": "版面預覽 R26｜非交印核准｜面 15／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 16,
+     "text": "版面預覽 R26｜非交印核准｜面 16／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 17,
+     "text": "版面預覽 R26｜非交印核准｜面 17／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 18,
+     "text": "版面預覽 R26｜非交印核准｜面 18／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 19,
+     "text": "版面預覽 R26｜非交印核准｜面 19／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 20,
+     "text": "版面預覽 R26｜非交印核准｜面 20／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 21,
+     "text": "版面預覽 R26｜非交印核准｜面 21／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 22,
+     "text": "版面預覽 R26｜非交印核准｜面 22／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 23,
+     "text": "版面預覽 R26｜非交印核准｜面 23／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 24,
+     "text": "版面預覽 R26｜非交印核准｜面 24／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 25,
+     "text": "版面預覽 R26｜非交印核准｜面 25／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 26,
+     "text": "版面預覽 R26｜非交印核准｜面 26／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    },
+    {
+     "face": 27,
+     "text": "版面預覽 R26｜非交印核准｜面 27／28",
+     "size_pt": 4.82,
+     "bbox_mm": [
+      167.78,
+      149.04,
+      198.0,
+      150.74
+     ]
+    }
+   ],
+   "fonts": [
+    "AAAAAA+CormorantGaramond-Light (ttf)",
+    "AAAAAA+DejaVuSans (ttf)",
+    "AAAAAA+DejaVuSans-Bold (ttf)",
+    "AAAAAA+NotoSansTC-Medium (ttf)",
+    "AAAAAA+WenQuanYiZenHei-0 (ttf)"
+   ],
+   "page_roles": [
+    "cover",
+    "strip-01",
+    "grid-01",
+    "strip-02",
+    "grid-02",
+    "strip-03",
+    "grid-03",
+    "strip-04",
+    "grid-04",
+    "strip-05",
+    "grid-05",
+    "strip-06",
+    "grid-06",
+    "strip-07",
+    "grid-07",
+    "strip-08",
+    "grid-08",
+    "strip-09",
+    "grid-09",
+    "strip-10",
+    "grid-10",
+    "strip-11",
+    "grid-11",
+    "strip-12",
+    "grid-12",
+    "memo",
+    "memo"
+   ],
+   "date_check": {
+    "method": "讀 PDF 文字層，依表頭位置定行、依列定週；期望值用 calendar（週日起始）與人事總處 116 年辦公日曆（365 天、放假 121 天）",
+    "pages": 24,
+    "cells": 814,
+    "failures": 0,
+    "per_page": [
+     {
+      "page": 2,
+      "type": "strip",
+      "months": [
+       1
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 3,
+      "type": "grid",
+      "months": [
+       1
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 4,
+      "type": "strip",
+      "months": [
+       2
+      ],
+      "cells": 28,
+      "failures": 0
+     },
+     {
+      "page": 5,
+      "type": "grid",
+      "months": [
+       2
+      ],
+      "cells": 35,
+      "failures": 0
+     },
+     {
+      "page": 6,
+      "type": "strip",
+      "months": [
+       3
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 7,
+      "type": "grid",
+      "months": [
+       3
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 8,
+      "type": "strip",
+      "months": [
+       4
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 9,
+      "type": "grid",
+      "months": [
+       4
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 10,
+      "type": "strip",
+      "months": [
+       5
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 11,
+      "type": "grid",
+      "months": [
+       5
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 12,
+      "type": "strip",
+      "months": [
+       6
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 13,
+      "type": "grid",
+      "months": [
+       6
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 14,
+      "type": "strip",
+      "months": [
+       7
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 15,
+      "type": "grid",
+      "months": [
+       7
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 16,
+      "type": "strip",
+      "months": [
+       8
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 17,
+      "type": "grid",
+      "months": [
+       8
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 18,
+      "type": "strip",
+      "months": [
+       9
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 19,
+      "type": "grid",
+      "months": [
+       9
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 20,
+      "type": "strip",
+      "months": [
+       10
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 21,
+      "type": "grid",
+      "months": [
+       10
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 22,
+      "type": "strip",
+      "months": [
+       11
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 23,
+      "type": "grid",
+      "months": [
+       11
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 24,
+      "type": "strip",
+      "months": [
+       12
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 25,
+      "type": "grid",
+      "months": [
+       12
+      ],
+      "cells": 38,
+      "failures": 0
+     }
+    ]
+   },
+   "same_as_source_except_marker": [
+    {
+     "page": 1,
+     "marker_removed": 0,
+     "spans_kept": 2,
+     "images": 1,
+     "changed_px_200dpi": 0,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 2,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1515,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 3,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1525,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 4,
+     "marker_removed": 1,
+     "spans_kept": 60,
+     "images": 1,
+     "changed_px_200dpi": 1514,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 5,
+     "marker_removed": 1,
+     "spans_kept": 40,
+     "images": 0,
+     "changed_px_200dpi": 1528,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 6,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1526,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 7,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1506,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 8,
+     "marker_removed": 1,
+     "spans_kept": 64,
+     "images": 1,
+     "changed_px_200dpi": 1532,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 9,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1524,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 10,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1556,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 11,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1541,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 12,
+     "marker_removed": 1,
+     "spans_kept": 64,
+     "images": 1,
+     "changed_px_200dpi": 1551,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 13,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1561,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 14,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1550,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 15,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1564,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 16,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1562,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 17,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1542,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 18,
+     "marker_removed": 1,
+     "spans_kept": 64,
+     "images": 1,
+     "changed_px_200dpi": 1568,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 19,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1560,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 20,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1566,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 21,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1551,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 22,
+     "marker_removed": 1,
+     "spans_kept": 64,
+     "images": 1,
+     "changed_px_200dpi": 1561,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 23,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1571,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 24,
+     "marker_removed": 1,
+     "spans_kept": 66,
+     "images": 1,
+     "changed_px_200dpi": 1560,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 25,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1574,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 26,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1572,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 27,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1552,
+     "changed_px_outside_marker": 0
+    }
+   ]
+  },
+  "V": {
+   "source": "docs/calendar/decision_site/public/cover37/cal2027_V_final_preview.pdf",
+   "source_sha256": "21f1b4faf1ed049d2820c09fb47baa399749106730ea71e2ff180e0b685271d6",
+   "output": "docs/calendar/proof_r39/cal2027_V_R39_試印候選_尚未核准下單.pdf",
+   "output_sha256": "8b736a9cc059198a32eb6395bf8ad70fe373468340d127ea93c894a218eaa11e",
+   "pages": 31,
+   "vendor_faces": 32,
+   "vendor_last_face": "印廠條碼頁（不上傳、保持空白；產品仍為 32 面）",
+   "cover": "V-D2-R34B",
+   "cover_image_sha256": [
+    "d14ebf400a4ec09bd7151a4743b147b819e83590644b8ab55eff60a1bc7d499e"
+   ],
+   "page_size_mm": [
+    144.0,
+    204.0
+   ],
+   "trimbox_mm": [
+    2.0,
+    2.0,
+    142.0,
+    202.0
+   ],
+   "bleed_each_side_mm": 2.0,
+   "markers_removed": 30,
+   "removed": [
+    {
+     "face": 2,
+     "text": "版面預覽 R26｜非交印核准｜面 2／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      107.1,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 3,
+     "text": "版面預覽 R26｜非交印核准｜面 3／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      111.1,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 4,
+     "text": "版面預覽 R26｜非交印核准｜面 4／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      107.1,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 5,
+     "text": "版面預覽 R26｜非交印核准｜面 5／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      111.1,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 6,
+     "text": "版面預覽 R26｜非交印核准｜面 6／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      107.1,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 7,
+     "text": "版面預覽 R26｜非交印核准｜面 7／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      111.1,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 8,
+     "text": "版面預覽 R26｜非交印核准｜面 8／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      107.1,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 9,
+     "text": "版面預覽 R26｜非交印核准｜面 9／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      111.1,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 10,
+     "text": "版面預覽 R26｜非交印核准｜面 10／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 11,
+     "text": "版面預覽 R26｜非交印核准｜面 11／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 12,
+     "text": "版面預覽 R26｜非交印核准｜面 12／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 13,
+     "text": "版面預覽 R26｜非交印核准｜面 13／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 14,
+     "text": "版面預覽 R26｜非交印核准｜面 14／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 15,
+     "text": "版面預覽 R26｜非交印核准｜面 15／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 16,
+     "text": "版面預覽 R26｜非交印核准｜面 16／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 17,
+     "text": "版面預覽 R26｜非交印核准｜面 17／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 18,
+     "text": "版面預覽 R26｜非交印核准｜面 18／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 19,
+     "text": "版面預覽 R26｜非交印核准｜面 19／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 20,
+     "text": "版面預覽 R26｜非交印核准｜面 20／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 21,
+     "text": "版面預覽 R26｜非交印核准｜面 21／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 22,
+     "text": "版面預覽 R26｜非交印核准｜面 22／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 23,
+     "text": "版面預覽 R26｜非交印核准｜面 23／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 24,
+     "text": "版面預覽 R26｜非交印核准｜面 24／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      106.23,
+      197.24,
+      132.0,
+      198.69
+     ]
+    },
+    {
+     "face": 25,
+     "text": "版面預覽 R26｜非交印核准｜面 25／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 26,
+     "text": "版面預覽 R26｜非交印核准｜面 26／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 27,
+     "text": "版面預覽 R26｜非交印核准｜面 27／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 28,
+     "text": "版面預覽 R26｜非交印核准｜面 28／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 29,
+     "text": "版面預覽 R26｜非交印核准｜面 29／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 30,
+     "text": "版面預覽 R26｜非交印核准｜面 30／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    },
+    {
+     "face": 31,
+     "text": "版面預覽 R26｜非交印核准｜面 31／32",
+     "size_pt": 4.11,
+     "bbox_mm": [
+      110.23,
+      197.24,
+      136.0,
+      198.69
+     ]
+    }
+   ],
+   "fonts": [
+    "AAAAAA+CormorantGaramond-Light (ttf)",
+    "AAAAAA+DejaVuSans (ttf)",
+    "AAAAAA+DejaVuSans-Bold (ttf)",
+    "AAAAAA+NotoSansTC-Medium (ttf)",
+    "AAAAAA+WenQuanYiZenHei-0 (ttf)"
+   ],
+   "page_roles": [
+    "cover",
+    "strip-01",
+    "grid-01",
+    "strip-02",
+    "grid-02",
+    "strip-03",
+    "grid-03",
+    "strip-04",
+    "grid-04",
+    "strip-05",
+    "grid-05",
+    "strip-06",
+    "grid-06",
+    "strip-07",
+    "grid-07",
+    "strip-08",
+    "grid-08",
+    "strip-09",
+    "grid-09",
+    "strip-10",
+    "grid-10",
+    "strip-11",
+    "grid-11",
+    "strip-12",
+    "grid-12",
+    "memo",
+    "memo",
+    "memo",
+    "memo",
+    "memo",
+    "year"
+   ],
+   "date_check": {
+    "method": "讀 PDF 文字層，依表頭位置定行、依列定週；期望值用 calendar（週日起始）與人事總處 116 年辦公日曆（365 天、放假 121 天）",
+    "pages": 25,
+    "cells": 1263,
+    "failures": 0,
+    "per_page": [
+     {
+      "page": 2,
+      "type": "strip",
+      "months": [
+       1
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 3,
+      "type": "grid",
+      "months": [
+       1
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 4,
+      "type": "strip",
+      "months": [
+       2
+      ],
+      "cells": 28,
+      "failures": 0
+     },
+     {
+      "page": 5,
+      "type": "grid",
+      "months": [
+       2
+      ],
+      "cells": 35,
+      "failures": 0
+     },
+     {
+      "page": 6,
+      "type": "strip",
+      "months": [
+       3
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 7,
+      "type": "grid",
+      "months": [
+       3
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 8,
+      "type": "strip",
+      "months": [
+       4
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 9,
+      "type": "grid",
+      "months": [
+       4
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 10,
+      "type": "strip",
+      "months": [
+       5
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 11,
+      "type": "grid",
+      "months": [
+       5
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 12,
+      "type": "strip",
+      "months": [
+       6
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 13,
+      "type": "grid",
+      "months": [
+       6
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 14,
+      "type": "strip",
+      "months": [
+       7
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 15,
+      "type": "grid",
+      "months": [
+       7
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 16,
+      "type": "strip",
+      "months": [
+       8
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 17,
+      "type": "grid",
+      "months": [
+       8
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 18,
+      "type": "strip",
+      "months": [
+       9
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 19,
+      "type": "grid",
+      "months": [
+       9
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 20,
+      "type": "strip",
+      "months": [
+       10
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 21,
+      "type": "grid",
+      "months": [
+       10
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 22,
+      "type": "strip",
+      "months": [
+       11
+      ],
+      "cells": 30,
+      "failures": 0
+     },
+     {
+      "page": 23,
+      "type": "grid",
+      "months": [
+       11
+      ],
+      "cells": 37,
+      "failures": 0
+     },
+     {
+      "page": 24,
+      "type": "strip",
+      "months": [
+       12
+      ],
+      "cells": 31,
+      "failures": 0
+     },
+     {
+      "page": 25,
+      "type": "grid",
+      "months": [
+       12
+      ],
+      "cells": 38,
+      "failures": 0
+     },
+     {
+      "page": 31,
+      "type": "year",
+      "months": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "cells": 449,
+      "failures": 0
+     }
+    ]
+   },
+   "same_as_source_except_marker": [
+    {
+     "page": 1,
+     "marker_removed": 0,
+     "spans_kept": 2,
+     "images": 1,
+     "changed_px_200dpi": 0,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 2,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1184,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 3,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1184,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 4,
+     "marker_removed": 1,
+     "spans_kept": 59,
+     "images": 1,
+     "changed_px_200dpi": 1185,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 5,
+     "marker_removed": 1,
+     "spans_kept": 40,
+     "images": 0,
+     "changed_px_200dpi": 1185,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 6,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1190,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 7,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1170,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 8,
+     "marker_removed": 1,
+     "spans_kept": 63,
+     "images": 1,
+     "changed_px_200dpi": 1194,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 9,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1186,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 10,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1229,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 11,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1204,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 12,
+     "marker_removed": 1,
+     "spans_kept": 63,
+     "images": 1,
+     "changed_px_200dpi": 1224,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 13,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1219,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 14,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1225,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 15,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1220,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 16,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1230,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 17,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1205,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 18,
+     "marker_removed": 1,
+     "spans_kept": 63,
+     "images": 1,
+     "changed_px_200dpi": 1234,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 19,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1221,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 20,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1239,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 21,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1213,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 22,
+     "marker_removed": 1,
+     "spans_kept": 63,
+     "images": 1,
+     "changed_px_200dpi": 1234,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 23,
+     "marker_removed": 1,
+     "spans_kept": 42,
+     "images": 0,
+     "changed_px_200dpi": 1228,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 24,
+     "marker_removed": 1,
+     "spans_kept": 65,
+     "images": 1,
+     "changed_px_200dpi": 1235,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 25,
+     "marker_removed": 1,
+     "spans_kept": 43,
+     "images": 0,
+     "changed_px_200dpi": 1229,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 26,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1232,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 27,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1214,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 28,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1236,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 29,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1230,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 30,
+     "marker_removed": 1,
+     "spans_kept": 1,
+     "images": 0,
+     "changed_px_200dpi": 1232,
+     "changed_px_outside_marker": 0
+    },
+    {
+     "page": 31,
+     "marker_removed": 1,
+     "spans_kept": 464,
+     "images": 0,
+     "changed_px_200dpi": 1219,
+     "changed_px_outside_marker": 0
+    }
+   ]
+  }
+ }
+}
